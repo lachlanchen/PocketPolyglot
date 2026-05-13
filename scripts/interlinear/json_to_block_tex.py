@@ -41,6 +41,8 @@ def render_tokens(tokens: list[dict[str, str]], ruby_cmd: str, breakable: bool =
 
 
 def brace(text: str) -> str:
+    if not text:
+        return "{}"
     return "{%\n" + text + "\n}"
 
 

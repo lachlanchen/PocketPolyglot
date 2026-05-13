@@ -97,6 +97,7 @@ chunks_jsonl="$work_dir/chunks/chunks.jsonl"
 manifest="$work_dir/chunks/manifest.json"
 chunk_json_dir="$work_dir/interlinear/chunks"
 assembled_json="data/interlinear/$book_id.json"
+preview_json="$work_dir/preview/$book_id.partial.json"
 if [[ -z "$output_pdf" ]]; then
   if [[ "$title_zh" == "$title_ja" ]]; then
     output_pdf="build/interlinear-block/${title_zh}.pdf"
@@ -141,7 +142,7 @@ if [[ "$skip_codex" -eq 0 ]]; then
     bash "$root/scripts/interlinear/compile_interlinear_book.sh"
     --manifest "$manifest"
     --chunk-dir "$chunk_json_dir"
-    --output-json "$assembled_json"
+    --output-json "$preview_json"
     --book-title-zh "$title_zh"
     --book-title-zh-reading "$title_zh_reading"
     --book-title-ja "$title_ja"
