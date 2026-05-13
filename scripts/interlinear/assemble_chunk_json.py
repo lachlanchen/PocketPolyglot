@@ -5,14 +5,20 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from collections import OrderedDict
 from pathlib import Path
 from typing import Any
 
 
-def plain_tokens(text: str, reading: str = "") -> list[dict[str, str]]:
+HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
+
+
+def plain_tokens(text: str, reading: str = "", *, reading_only_for_han: bool = False) -> list[dict[str, str]]:
     if not text:
         return []
+    if reading_only_for_han and not HAN_RE.search(text):
+        reading = ""
     return [{"t": text, "r": reading}]
 
 
@@ -132,7 +138,7 @@ def main() -> int:
         "mode": "zh_main_ja_comment",
         "title": {
             "zh": plain_tokens(args.book_title_zh, args.book_title_zh_reading),
-            "ja": plain_tokens(args.book_title_ja, args.book_title_ja_reading),
+            "ja": plain_tokens(args.book_title_ja, args.book_title_ja_reading, reading_only_for_han=True),
         },
         "source": source,
         "sections": section_list,

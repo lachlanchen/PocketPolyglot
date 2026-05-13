@@ -12,6 +12,8 @@ from typing import Any
 
 
 SPACE_RE = re.compile(r"\s+")
+HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
+SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
 
 
 def normalize(text: str) -> str:
@@ -22,13 +24,66 @@ def token_text(tokens: list[dict[str, Any]]) -> str:
     return "".join(str(token.get("t", "")) for token in tokens)
 
 
+def validate_token_shape(tokens: Any, where: str, errors: list[str]) -> bool:
+    if not isinstance(tokens, list):
+        errors.append(f"{where}: must be a token list")
+        return False
+    ok = True
+    for token_index, token in enumerate(tokens):
+        if not isinstance(token, dict) or "t" not in token:
+            errors.append(f"{where}[{token_index}]: token must contain t")
+            ok = False
+    return ok
+
+
+def validate_zh_tokens(tokens: Any, where: str, errors: list[str]) -> None:
+    if not validate_token_shape(tokens, where, errors):
+        return
+    for token_index, token in enumerate(tokens):
+        text = str(token.get("t", ""))
+        reading = str(token.get("r", ""))
+        has_han = bool(HAN_RE.search(text))
+        is_single_han = bool(SINGLE_HAN_RE.fullmatch(text))
+        if has_han and not is_single_han:
+            errors.append(f"{where}[{token_index}]: Chinese Han tokens must be exactly one character")
+        if is_single_han and not reading:
+            errors.append(f"{where}[{token_index}]: Chinese Han token needs pinyin")
+        if reading and not is_single_han:
+            errors.append(f"{where}[{token_index}]: pinyin may only be attached to one Chinese Han character")
+
+
+def validate_ja_tokens(tokens: Any, where: str, errors: list[str]) -> None:
+    if not validate_token_shape(tokens, where, errors):
+        return
+    for token_index, token in enumerate(tokens):
+        text = str(token.get("t", ""))
+        reading = str(token.get("r", ""))
+        has_kanji = bool(HAN_RE.search(text))
+        is_single_kanji = bool(SINGLE_HAN_RE.fullmatch(text))
+        if has_kanji and not is_single_kanji:
+            errors.append(f"{where}[{token_index}]: Japanese kanji tokens must be exactly one kanji character")
+        if is_single_kanji and not reading:
+            errors.append(f"{where}[{token_index}]: Japanese kanji token needs furigana")
+        if reading and not is_single_kanji:
+            errors.append(f"{where}[{token_index}]: furigana may only be attached to one Japanese kanji character")
+
+
+def validate_named_tokens(node: dict[str, Any], where: str, errors: list[str]) -> None:
+    if "title_zh" in node:
+        validate_zh_tokens(node.get("title_zh"), f"{where}.title_zh", errors)
+    if "title_ja" in node:
+        validate_ja_tokens(node.get("title_ja"), f"{where}.title_ja", errors)
+    if "place_zh" in node:
+        validate_zh_tokens(node.get("place_zh"), f"{where}.place_zh", errors)
+    if "place_ja" in node:
+        validate_ja_tokens(node.get("place_ja"), f"{where}.place_ja", errors)
+
+
 def validate_unit(unit: dict[str, Any], where: str, errors: list[str]) -> str:
     if "zh" not in unit or not isinstance(unit["zh"], list):
         errors.append(f"{where}: missing zh token list")
         return ""
-    for token_index, token in enumerate(unit["zh"]):
-        if not isinstance(token, dict) or "t" not in token:
-            errors.append(f"{where}.zh[{token_index}]: token must contain t")
+    validate_zh_tokens(unit["zh"], f"{where}.zh", errors)
     ja = unit.get("ja")
     if not isinstance(ja, list) or len(ja) != 2:
         errors.append(f"{where}: ja must contain exactly two line arrays")
@@ -37,9 +92,7 @@ def validate_unit(unit: dict[str, Any], where: str, errors: list[str]) -> str:
             if not isinstance(line, list):
                 errors.append(f"{where}.ja[{line_index}]: line must be a token list")
                 continue
-            for token_index, token in enumerate(line):
-                if not isinstance(token, dict) or "t" not in token:
-                    errors.append(f"{where}.ja[{line_index}][{token_index}]: token must contain t")
+            validate_ja_tokens(line, f"{where}.ja[{line_index}]", errors)
     zh_text = token_text(unit["zh"])
     if unit.get("source_text") and normalize(zh_text) != normalize(str(unit["source_text"])):
         errors.append(f"{where}: zh tokens do not reconstruct source_text")
@@ -53,10 +106,17 @@ def validate_interlinear(data: dict[str, Any]) -> list[str]:
     if not isinstance(data.get("sections"), list):
         errors.append("sections must be a list")
         return errors
+    title = data.get("title", {})
+    if isinstance(title, dict):
+        validate_zh_tokens(title.get("zh", []), "title.zh", errors)
+        validate_ja_tokens(title.get("ja", []), "title.ja", errors)
 
     for section_index, section in enumerate(data["sections"]):
+        validate_named_tokens(section, f"sections[{section_index}]", errors)
         for subsection_index, subsection in enumerate(section.get("subsections", [])):
+            validate_named_tokens(subsection, f"sections[{section_index}].subsections[{subsection_index}]", errors)
             for story_index, story in enumerate(subsection.get("stories", [])):
+                validate_named_tokens(story, f"sections[{section_index}].subsections[{subsection_index}].stories[{story_index}]", errors)
                 for paragraph_index, paragraph in enumerate(story.get("paragraphs", [])):
                     where = f"sections[{section_index}].subsections[{subsection_index}].stories[{story_index}].paragraphs[{paragraph_index}]"
                     units = paragraph.get("units")

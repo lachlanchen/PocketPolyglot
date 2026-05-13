@@ -13,12 +13,19 @@ from pathlib import Path
 from typing import Any
 
 from codex_chunk_worker import compact, extract_json, flatten_zh, load_chunks, run_codex
+from validate_interlinear_json import validate_ja_tokens, validate_named_tokens, validate_zh_tokens
 
 
 def validate_chunk(source: dict[str, Any], result: dict[str, Any]) -> list[str]:
     errors: list[str] = []
     if result.get("chunk_id") != source["chunk_id"]:
         errors.append(f"chunk_id mismatch: expected {source['chunk_id']!r}")
+    for key in ("section", "subsection", "story"):
+        node = result.get(key)
+        if not isinstance(node, dict):
+            errors.append(f"{key}: must be an object")
+        else:
+            validate_named_tokens(node, key, errors)
     expected_ids = [paragraph["id"] for paragraph in source["paragraphs"]]
     paragraphs = result.get("paragraphs")
     if not isinstance(paragraphs, list):
@@ -38,8 +45,13 @@ def validate_chunk(source: dict[str, Any], result: dict[str, Any]) -> list[str]:
         if not paragraph.get("units"):
             errors.append(f"{paragraph_id}: missing units")
         for unit_index, unit in enumerate(paragraph.get("units", [])):
-            if len(unit.get("ja", [])) != 2:
+            validate_zh_tokens(unit.get("zh", []), f"{paragraph_id}.units[{unit_index}].zh", errors)
+            ja = unit.get("ja", [])
+            if len(ja) != 2:
                 errors.append(f"{paragraph_id}.units[{unit_index}]: ja must have exactly two lines")
+            else:
+                validate_ja_tokens(ja[0], f"{paragraph_id}.units[{unit_index}].ja[0]", errors)
+                validate_ja_tokens(ja[1], f"{paragraph_id}.units[{unit_index}].ja[1]", errors)
     return errors
 
 
@@ -83,10 +95,10 @@ def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = 
               "units": [
                 {{
                   "source_text": "exact Chinese sentence or sentence group from the paragraph",
-                  "zh": [{{"t":"Chinese token","r":"pinyin with tone marks"}}],
+                  "zh": [{{"t":"one Chinese Han character","r":"that character's pinyin with tone mark"}}],
                   "ja": [
-                    [{{"t":"Japanese original token","r":"furigana for every kanji token, empty for kana/punctuation"}}],
-                    [{{"t":"Japanese original token","r":"furigana for every kanji token, empty for kana/punctuation"}}]
+                    [{{"t":"one Japanese kanji OR kana/punctuation run","r":"furigana only for one kanji, empty otherwise"}}],
+                    [{{"t":"one Japanese kanji OR kana/punctuation run","r":"furigana only for one kanji, empty otherwise"}}]
                   ]
                 }}
               ]
@@ -98,12 +110,12 @@ def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = 
         - Preserve every Chinese source paragraph. Do not omit, summarize, reorder, or rewrite the Chinese.
         - For each paragraph, joining all zh token "t" values across all units must reconstruct the paragraph text exactly, apart from whitespace.
         - Split the Chinese into natural reading units, usually sentence by sentence. Keep each unit readable as continuous Chinese prose.
-        - Put pinyin with tone marks in every Chinese token where a reading is meaningful. Punctuation may use an empty reading.
+        - Chinese tokenization is strict: every Chinese Han character must be its own token with pinyin, e.g. "先生" becomes [{{"t":"先","r":"xiān"}},{{"t":"生","r":"sheng"}}]. Never attach pinyin to a multi-character Chinese word or phrase. Punctuation, Arabic numerals, Latin text, and spaces use empty reading.
         - For each Chinese unit, find the corresponding Japanese original wording in the provided Japanese reference paragraphs for the same story/chapter. Split that Japanese correspondence into exactly two short visual rows.
         - If a Chinese unit is a translator note or editorial note that is not in the Japanese original, write a concise Japanese note for that unit and keep it visibly note-like.
-        - Give furigana for every Japanese kanji or kanji compound. Kana and punctuation should use an empty reading.
+        - Japanese tokenization is strict: every kanji character must be its own token with furigana, and furigana may appear only on one-kanji tokens. Kana, okurigana, punctuation, spaces, and Latin text must have empty reading. Example: "先生と私" becomes [{{"t":"先","r":"せん"}},{{"t":"生","r":"せい"}},{{"t":"と","r":""}},{{"t":"私","r":"わたし"}}]. Example: "書くだけ" becomes [{{"t":"書","r":"か"}},{{"t":"くだけ","r":""}}].
         - Keep ids exactly as provided below.
-        - Use the provided section/subsection/story ids and titles. Chinese title readings need pinyin; Japanese title readings need furigana.
+        - Use the provided section/subsection/story ids and titles. Apply the same strict per-Han-character/per-kanji-character ruby rules to all titles and place fields.
         {error_block}
 
         Chunk metadata:

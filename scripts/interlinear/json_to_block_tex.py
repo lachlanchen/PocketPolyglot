@@ -29,10 +29,13 @@ def tex_escape(text: str) -> str:
 def render_tokens(tokens: list[dict[str, str]], ruby_cmd: str, breakable: bool = False) -> str:
     parts: list[str] = []
     for token in tokens:
-        text = tex_escape(token.get("t", ""))
+        raw_text = token.get("t", "")
+        text = tex_escape(raw_text)
         ruby = tex_escape(token.get("r", ""))
         if ruby:
             parts.append(rf"\{ruby_cmd}{{{text}}}{{{ruby}}}")
+        elif breakable:
+            parts.append(r"\allowbreak{}".join(tex_escape(ch) for ch in raw_text))
         else:
             parts.append(text)
         if breakable:
