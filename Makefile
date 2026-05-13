@@ -7,7 +7,7 @@ WORKERS ?= 4
 INTERLINEAR_DATA ?= data/interlinear/sample.json
 PAIRED_DATA ?= data/paired/source.md
 
-.PHONY: sample paired interlinear interlinear-run compare kokoro-md kokoro-tmux ocr-sample ocr-all clean
+.PHONY: sample paired interlinear interlinear-run compare kokoro-md kokoro-tmux kokoro-bilingual-md kokoro-bilingual-tmux ocr-sample ocr-all clean
 
 sample: paired
 
@@ -24,6 +24,16 @@ kokoro-md:
 
 kokoro-tmux:
 	prompt_tools/interlinear-book/start-book-tmux.sh --no-attach -- --epub sources/心.epub --book-id kokoro --title-zh 心 --title-zh-reading xīn --title-ja 心 --title-ja-reading こころ --model gpt-5.5 --reasoning high
+
+kokoro-bilingual-md:
+	python scripts/books/epub_to_markdown.py sources/心.epub --raw-output books/kokoro/markdown/book.raw.md --clean-output books/kokoro/markdown/book.md --start-heading 总序
+	python scripts/books/epub_to_markdown.py "sources/夏目 漱石 作品全集.epub" --raw-output books/natsume-complete/markdown/book.raw.md --clean-output books/natsume-complete/markdown/book.md
+	python scripts/books/extract_markdown_section.py books/kokoro/markdown/book.md --start-heading 心 --output books/kokoro/markdown/zh.md
+	python scripts/books/extract_markdown_section.py books/natsume-complete/markdown/book.md --start-heading "第25章 こころ (新字新仮名)" --output books/kokoro/markdown/ja.section.md
+	python scripts/books/normalize_kokoro_jp_markdown.py books/kokoro/markdown/ja.section.md --output books/kokoro/markdown/ja.md --title こころ
+
+kokoro-bilingual-tmux:
+	prompt_tools/interlinear-book/start-bilingual-book-tmux.sh --no-attach -- --zh-epub sources/心.epub --jp-epub "sources/夏目 漱石 作品全集.epub" --book-id kokoro --title-zh 心 --title-zh-reading xīn --title-ja こころ --title-ja-reading こころ --model gpt-5.5 --reasoning high
 
 build/paired/source.tex: $(PAIRED_DATA) scripts/paired/md_to_tex.py
 	python scripts/paired/md_to_tex.py $(PAIRED_DATA) -o build/paired/source.tex

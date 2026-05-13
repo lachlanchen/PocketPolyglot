@@ -29,3 +29,28 @@ tail -f books/kokoro/work/logs/*.log
 If the job is interrupted after a Codex session has already been created, restart
 with `--resume-last` after the `--` separator. Existing valid chunk JSON files
 are skipped automatically.
+
+## Bilingual Japanese Source Mode
+
+Use this mode when a Chinese translation and the Japanese original are both
+available. The Chinese text remains the main continuous text; Codex uses the
+Japanese source Markdown as the comment source instead of freely translating the
+Chinese.
+
+```sh
+prompt_tools/interlinear-book/start-bilingual-book-tmux.sh --kill --no-attach -- \
+  --zh-epub sources/心.epub \
+  --jp-epub "sources/夏目 漱石 作品全集.epub" \
+  --book-id kokoro \
+  --title-zh 心 \
+  --title-zh-reading xīn \
+  --title-ja こころ \
+  --title-ja-reading こころ \
+  --model gpt-5.5 \
+  --reasoning high
+```
+
+The pipeline writes extracted source Markdown to `books/kokoro/markdown/zh.md`
+and `books/kokoro/markdown/ja.md`, chunk work under
+`books/kokoro/work/bilingual/`, assembled JSON to `data/interlinear/kokoro.json`,
+and the pocket PDF to `build/interlinear-block/book.pdf`.

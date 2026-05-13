@@ -31,6 +31,8 @@ def main() -> int:
     parser.add_argument("--book-title-ja-reading", default="こころ")
     parser.add_argument("--source-markdown", required=True)
     parser.add_argument("--source-epub", required=True)
+    parser.add_argument("--source-markdown-ja", default="")
+    parser.add_argument("--source-epub-ja", default="")
     args = parser.parse_args()
 
     manifest = load_json(Path(args.manifest))
@@ -88,6 +90,27 @@ def main() -> int:
         section = {**section, "subsections": subsection_list}
         section_list.append(section)
 
+    source = {
+        "source_epub": args.source_epub,
+        "source_markdown": args.source_markdown,
+        "source_sha256": manifest["source_sha256"],
+        "paragraph_count": manifest["paragraph_count"],
+        "chunk_count": manifest["chunk_count"],
+        "note": "Generated chunk by chunk from cleaned Markdown. Paragraph source_text fields are kept for validation.",
+    }
+    if args.source_markdown_ja:
+        source["source_markdown_ja"] = args.source_markdown_ja
+    if args.source_epub_ja:
+        source["source_epub_ja"] = args.source_epub_ja
+    if manifest.get("source_sha256_zh"):
+        source["source_sha256_zh"] = manifest["source_sha256_zh"]
+    if manifest.get("source_sha256_ja"):
+        source["source_sha256_ja"] = manifest["source_sha256_ja"]
+    if manifest.get("jp_paragraph_count") is not None:
+        source["jp_paragraph_count"] = manifest["jp_paragraph_count"]
+    if manifest.get("mode") == "bilingual_source":
+        source["note"] = "Generated from Chinese Markdown while using Japanese original Markdown as the comment source. Paragraph source_text fields are kept for validation."
+
     data = {
         "schema_version": "0.2",
         "mode": "zh_main_ja_comment",
@@ -95,14 +118,7 @@ def main() -> int:
             "zh": plain_tokens(args.book_title_zh, args.book_title_zh_reading),
             "ja": plain_tokens(args.book_title_ja, args.book_title_ja_reading),
         },
-        "source": {
-            "source_epub": args.source_epub,
-            "source_markdown": args.source_markdown,
-            "source_sha256": manifest["source_sha256"],
-            "paragraph_count": manifest["paragraph_count"],
-            "chunk_count": manifest["chunk_count"],
-            "note": "Generated chunk by chunk from cleaned Markdown. Paragraph source_text fields are kept for validation.",
-        },
+        "source": source,
         "sections": section_list,
     }
 

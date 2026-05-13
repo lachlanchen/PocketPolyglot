@@ -1,0 +1,171 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+usage() {
+  cat <<'USAGE'
+Usage: prompt_tools/interlinear-book/run-bilingual-book-pipeline.sh [options]
+
+Convert Chinese and Japanese EPUB/Markdown sources into a Chinese-main,
+Japanese-original-comment interlinear pocket book. The worker uses one
+resumable Codex session and processes chunks in order.
+
+Options:
+  --zh-epub <path>          Chinese EPUB input (default: sources/心.epub)
+  --jp-epub <path>          Japanese anthology EPUB input
+  --book-id <id>            stable book id (default: kokoro)
+  --jp-source-id <id>       Japanese full Markdown folder id (default: natsume-complete)
+  --title-zh <text>         Chinese book title (default: 心)
+  --title-zh-reading <pin>  pinyin for title (default: xīn)
+  --title-ja <text>         Japanese title (default: こころ)
+  --title-ja-reading <txt>  furigana for title (default: こころ)
+  --zh-start-heading <text> source section heading in Chinese Markdown (default: 心)
+  --jp-start-heading <text> source section heading in Japanese Markdown
+  --max-chars <n>           max Chinese source characters per chunk (default: 1400)
+  --model <name>            Codex model (default: gpt-5.5)
+  --reasoning <level>       low|medium|high|xhigh (default: high)
+  --max-chunks <n>          process only first n chunks; 0 means all
+  --start-index <n>         start at 1-based chunk index (default: 1)
+  --skip-codex              only convert/split/assemble existing chunks
+  --resume-last             resume newest Codex session for first missing chunk
+  --no-commit               skip git commit at the end
+  -h, --help                show help
+USAGE
+}
+
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+zh_epub="sources/心.epub"
+jp_epub="sources/夏目 漱石 作品全集.epub"
+book_id="kokoro"
+jp_source_id="natsume-complete"
+title_zh="心"
+title_zh_reading="xīn"
+title_ja="こころ"
+title_ja_reading="こころ"
+zh_start_heading="心"
+jp_start_heading="第25章 こころ (新字新仮名)"
+max_chars=1400
+model="${ZHJPBOOK_CODEX_MODEL:-gpt-5.5}"
+reasoning="${ZHJPBOOK_CODEX_REASONING:-high}"
+max_chunks=0
+start_index=1
+skip_codex=0
+resume_last=0
+do_commit=1
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --zh-epub) zh_epub="${2:-}"; shift 2 ;;
+    --jp-epub) jp_epub="${2:-}"; shift 2 ;;
+    --book-id) book_id="${2:-}"; shift 2 ;;
+    --jp-source-id) jp_source_id="${2:-}"; shift 2 ;;
+    --title-zh) title_zh="${2:-}"; shift 2 ;;
+    --title-zh-reading) title_zh_reading="${2:-}"; shift 2 ;;
+    --title-ja) title_ja="${2:-}"; shift 2 ;;
+    --title-ja-reading) title_ja_reading="${2:-}"; shift 2 ;;
+    --zh-start-heading) zh_start_heading="${2:-}"; shift 2 ;;
+    --jp-start-heading) jp_start_heading="${2:-}"; shift 2 ;;
+    --max-chars) max_chars="${2:-}"; shift 2 ;;
+    --model) model="${2:-}"; shift 2 ;;
+    --reasoning) reasoning="${2:-}"; shift 2 ;;
+    --max-chunks) max_chunks="${2:-0}"; shift 2 ;;
+    --start-index) start_index="${2:-1}"; shift 2 ;;
+    --skip-codex) skip_codex=1; shift ;;
+    --resume-last) resume_last=1; shift ;;
+    --no-commit) do_commit=0; shift ;;
+    -h|--help) usage; exit 0 ;;
+    *) echo "Unknown option: $1" >&2; usage >&2; exit 1 ;;
+  esac
+done
+
+cd "$root"
+
+zh_raw_md="books/$book_id/markdown/book.raw.md"
+zh_clean_md="books/$book_id/markdown/book.md"
+zh_section_md="books/$book_id/markdown/zh.md"
+jp_raw_md="books/$jp_source_id/markdown/book.raw.md"
+jp_clean_md="books/$jp_source_id/markdown/book.md"
+jp_section_md="books/$book_id/markdown/ja.section.md"
+jp_markdown="books/$book_id/markdown/ja.md"
+work_dir="books/$book_id/work/bilingual"
+chunks_jsonl="$work_dir/chunks/chunks.jsonl"
+manifest="$work_dir/chunks/manifest.json"
+chunk_json_dir="$work_dir/interlinear/chunks"
+assembled_json="data/interlinear/$book_id.json"
+
+mkdir -p "books/$book_id/markdown" "books/$jp_source_id/markdown" "$work_dir" "$chunk_json_dir" "data/interlinear"
+
+python scripts/books/epub_to_markdown.py "$zh_epub" \
+  --raw-output "$zh_raw_md" \
+  --clean-output "$zh_clean_md" \
+  --start-heading 总序
+
+python scripts/books/epub_to_markdown.py "$jp_epub" \
+  --raw-output "$jp_raw_md" \
+  --clean-output "$jp_clean_md"
+
+python scripts/books/extract_markdown_section.py "$zh_clean_md" \
+  --start-heading "$zh_start_heading" \
+  --output "$zh_section_md"
+
+python scripts/books/extract_markdown_section.py "$jp_clean_md" \
+  --start-heading "$jp_start_heading" \
+  --output "$jp_section_md"
+
+python scripts/books/normalize_kokoro_jp_markdown.py "$jp_section_md" \
+  --output "$jp_markdown" \
+  --title "$title_ja"
+
+python scripts/interlinear/chunk_bilingual_markdown_book.py \
+  --zh-markdown "$zh_section_md" \
+  --ja-markdown "$jp_markdown" \
+  --book-id "$book_id" \
+  --chunks-jsonl "$chunks_jsonl" \
+  --manifest "$manifest" \
+  --max-chars "$max_chars"
+
+if [[ "$skip_codex" -eq 0 ]]; then
+  codex_worker_cmd=(
+    python scripts/interlinear/codex_bilingual_chunk_worker.py
+    --chunks-jsonl "$chunks_jsonl" \
+    --output-dir "$chunk_json_dir" \
+    --work-dir "$work_dir/codex" \
+    --model "$model" \
+    --reasoning "$reasoning" \
+    --max-chunks "$max_chunks" \
+    --start-index "$start_index"
+  )
+  if [[ "$resume_last" -eq 1 ]]; then
+    codex_worker_cmd+=(--resume-last)
+  fi
+  "${codex_worker_cmd[@]}"
+fi
+
+python scripts/interlinear/assemble_chunk_json.py \
+  --manifest "$manifest" \
+  --chunk-dir "$chunk_json_dir" \
+  --output "$assembled_json" \
+  --book-title-zh "$title_zh" \
+  --book-title-zh-reading "$title_zh_reading" \
+  --book-title-ja "$title_ja" \
+  --book-title-ja-reading "$title_ja_reading" \
+  --source-markdown "$zh_section_md" \
+  --source-epub "$zh_epub" \
+  --source-markdown-ja "$jp_markdown" \
+  --source-epub-ja "$jp_epub"
+
+python scripts/interlinear/validate_interlinear_json.py "$assembled_json"
+make interlinear INTERLINEAR_DATA="$assembled_json"
+
+if [[ "$do_commit" -eq 1 ]]; then
+  git add .gitignore Makefile README.md scripts prompt_tools books/"$book_id"/markdown books/"$jp_source_id"/markdown/book.md data/interlinear/"$book_id".json
+  if ! git diff --cached --quiet; then
+    git commit -m "Build bilingual $book_id interlinear source"
+  else
+    echo "No tracked changes to commit."
+  fi
+fi
+
+echo "Chinese Markdown:  $zh_section_md"
+echo "Japanese Markdown: $jp_markdown"
+echo "JSON:              $assembled_json"
+echo "PDF:               build/interlinear-block/book.pdf"
