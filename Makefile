@@ -6,8 +6,13 @@ PSM ?= 4
 WORKERS ?= 4
 INTERLINEAR_DATA ?= data/interlinear/sample.json
 PAIRED_DATA ?= data/paired/source.md
+JP_MAIN_AUTHOR ?= 夏目漱石
+JP_MAIN_CURATOR ?= AgInTiFlow curated
+JP_MAIN_URL ?= https://flow.lazying.art
+JP_MAIN_POWERED_BY ?= powered by LazyingArt
+JP_MAIN_COVER ?=
 
-.PHONY: sample paired interlinear interlinear-run compare kokoro-md kokoro-tmux kokoro-bilingual-md kokoro-bilingual-tmux kokoro-jp-ocr-md ocr-sample ocr-all clean
+.PHONY: sample paired interlinear interlinear-run interlinear-jp-main compare kokoro-md kokoro-tmux kokoro-bilingual-md kokoro-bilingual-tmux kokoro-jp-ocr-md ocr-sample ocr-all clean
 
 sample: paired
 
@@ -17,7 +22,9 @@ interlinear: build/interlinear-block/book.pdf
 
 interlinear-run: build/interlinear-run/book.pdf
 
-compare: interlinear interlinear-run
+interlinear-jp-main: build/interlinear-jp-main/book.pdf
+
+compare: interlinear interlinear-run interlinear-jp-main
 
 kokoro-md:
 	python scripts/books/epub_to_markdown.py sources/心.epub --raw-output books/kokoro/markdown/book.raw.md --clean-output books/kokoro/markdown/book.md --start-heading 总序
@@ -62,6 +69,14 @@ build/interlinear-run/book.pdf: build/interlinear-run/source.tex tex/interlinear
 	xelatex -interaction=nonstopmode -halt-on-error -output-directory=build/interlinear-run tex/interlinear-run/book.tex
 	xelatex -interaction=nonstopmode -halt-on-error -output-directory=build/interlinear-run tex/interlinear-run/book.tex
 
+build/interlinear-jp-main/source.tex: $(INTERLINEAR_DATA) scripts/interlinear/json_to_jp_main_tex.py
+	python scripts/interlinear/json_to_jp_main_tex.py $(INTERLINEAR_DATA) -o build/interlinear-jp-main/source.tex --author "$(JP_MAIN_AUTHOR)" --curated-by "$(JP_MAIN_CURATOR)" --curated-url "$(JP_MAIN_URL)" --powered-by "$(JP_MAIN_POWERED_BY)" --cover-image "$(JP_MAIN_COVER)"
+
+build/interlinear-jp-main/book.pdf: build/interlinear-jp-main/source.tex tex/interlinear-jp-main/book.tex tex/interlinear-jp-main/style.tex
+	mkdir -p build/interlinear-jp-main
+	xelatex -interaction=nonstopmode -halt-on-error -output-directory=build/interlinear-jp-main tex/interlinear-jp-main/book.tex
+	xelatex -interaction=nonstopmode -halt-on-error -output-directory=build/interlinear-jp-main tex/interlinear-jp-main/book.tex
+
 ocr-sample:
 	python scripts/ocr/pdf_to_markdown.py "$(PDF)" --pages "$(PAGES)" --lang "$(OCR_LANG)" --psm "$(PSM)" --dpi "$(DPI)" --workers "$(WORKERS)" --output ocr/sample-pages.md
 
@@ -69,6 +84,6 @@ ocr-all:
 	python scripts/ocr/pdf_to_markdown.py "$(PDF)" --pages all --lang "$(OCR_LANG)" --psm "$(PSM)" --dpi "$(DPI)" --workers "$(WORKERS)" --output ocr/book.md
 
 clean:
-	rm -rf build/paired build/interlinear-block build/interlinear-run build/legacy build/preview
+	rm -rf build/paired build/interlinear-block build/interlinear-run build/interlinear-jp-main build/legacy build/preview
 	rm -f build/*.aux build/*.log build/*.out build/*.toc build/*.xdv build/*.fls build/*.fdb_latexmk build/*.pdf build/*.tex
 	rm -rf scripts/**/__pycache__

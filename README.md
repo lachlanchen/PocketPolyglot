@@ -28,6 +28,14 @@ make interlinear-run
 
 The PDF is written to `build/interlinear-run/book.pdf`. Both interlinear layouts use `data/interlinear/sample.json`.
 
+Build the Japanese-main/Chinese-comment layout from the same interlinear JSON:
+
+```sh
+make interlinear-jp-main
+```
+
+The PDF is written to `build/interlinear-jp-main/book.pdf`. Use `JP_MAIN_COVER=assets/covers/kokoro-jp-main/kokoro-cover.jpeg` to include the prepared Kokoro cover image.
+
 Convert `sources/心.epub` to Markdown:
 
 ```sh
@@ -103,6 +111,8 @@ Chinese is the main row. Japanese is intentionally split into two short rows so 
 
 The block layout in `tex/interlinear-block/` gives every sentence its own Chinese row plus Japanese note. The run-in layout in `tex/interlinear-run/` makes sentence units flow back-to-back; the Japanese note starts at the same horizontal point as its Chinese unit and wraps inside the measured Chinese-unit width.
 
+The Japanese-main layout in `tex/interlinear-jp-main/` uses the same JSON without changing the source data: Japanese ruby text becomes the main continuous text, and the Chinese pinyin text becomes the smaller comment line under each reading unit.
+
 The default page is A6 pocket size. To use two columns in the paired demo instead, uncomment `\PairLayoutSideBySide` in `tex/paired/book.tex`.
 
 ## Repository Layout
@@ -113,9 +123,11 @@ data/paired/           simple paired Markdown demo
 scripts/interlinear/   JSON-to-TeX renderers
 scripts/ocr/           OCR helper
 scripts/paired/        paired Markdown and ruby helpers
+assets/covers/         tracked cover images for compiled editions
 prompt_tools/          tmux/Codex long-running book pipelines
 tex/interlinear-block/ previous sentence-block layout
 tex/interlinear-run/   new back-to-back main-text layout
+tex/interlinear-jp-main/ Japanese-main/Chinese-comment layout
 tex/paired/            simple paired reader demo
 ocr/                   reviewed OCR Markdown
 sources/               local scanned PDFs, ignored by Git
