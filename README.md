@@ -28,6 +28,20 @@ make interlinear-run
 
 The PDF is written to `build/interlinear-run/book.pdf`. Both interlinear layouts use `data/interlinear/sample.json`.
 
+Convert `sources/心.epub` to Markdown:
+
+```sh
+make kokoro-md
+```
+
+Run the full Codex-assisted `心` interlinear pipeline in tmux:
+
+```sh
+make kokoro-tmux
+```
+
+The worker uses `gpt-5.5` with high reasoning, resumes one Codex session chunk by chunk, writes `books/kokoro/markdown/book.md`, assembles `data/interlinear/kokoro.json`, and compiles with the `interlinear-block` style to `build/interlinear-block/book.pdf`.
+
 Run OCR on a few pages of the scanned PDF:
 
 ```sh
@@ -91,6 +105,7 @@ data/paired/           simple paired Markdown demo
 scripts/interlinear/   JSON-to-TeX renderers
 scripts/ocr/           OCR helper
 scripts/paired/        paired Markdown and ruby helpers
+prompt_tools/          tmux/Codex long-running book pipelines
 tex/interlinear-block/ previous sentence-block layout
 tex/interlinear-run/   new back-to-back main-text layout
 tex/paired/            simple paired reader demo

@@ -1,6 +1,8 @@
 # Large scanned source files
 *.pdf
 *.PDF
+*.epub
+*.EPUB
 
 # TeX/build outputs
 /build/
@@ -22,6 +24,9 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
+
+# Long-running book generation scratch space
+books/*/work/
 
 # Editor/system noise
 *~
