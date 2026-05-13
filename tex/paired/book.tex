@@ -1,0 +1,33 @@
+\documentclass[UTF8,fontset=none,10pt,openany]{ctexbook}
+
+\input{tex/paired/style.tex}
+
+\newcommand{\BookTitle}{中日對讀袖珍本}
+\newcommand{\BookSubtitle}{main text with notes}
+
+\title{\BookTitle}
+\author{}
+\date{}
+
+\begin{document}
+\frontmatter
+\thispagestyle{empty}
+\vspace*{0.18\textheight}
+{\centering
+  {\zhfont\Huge \BookTitle\par}
+  \vspace{0.8em}
+  {\sffamily\small \BookSubtitle\par}
+}
+\clearpage
+
+\tableofcontents
+\mainmatter
+
+% Toggle these as needed:
+% \HideAnnotations
+% \PairLayoutSideBySide
+\PairLayoutStacked
+
+\input{build/paired/source.tex}
+
+\end{document}

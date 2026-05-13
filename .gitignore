@@ -1,0 +1,28 @@
+# Large scanned source files
+*.pdf
+*.PDF
+
+# TeX/build outputs
+/build/
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.xdv
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Editor/system noise
+*~
+.DS_Store
