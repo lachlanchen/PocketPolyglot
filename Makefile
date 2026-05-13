@@ -7,7 +7,7 @@ WORKERS ?= 4
 INTERLINEAR_DATA ?= data/interlinear/sample.json
 PAIRED_DATA ?= data/paired/source.md
 
-.PHONY: sample paired interlinear interlinear-run compare kokoro-md kokoro-tmux kokoro-bilingual-md kokoro-bilingual-tmux ocr-sample ocr-all clean
+.PHONY: sample paired interlinear interlinear-run compare kokoro-md kokoro-tmux kokoro-bilingual-md kokoro-bilingual-tmux kokoro-jp-ocr-md ocr-sample ocr-all clean
 
 sample: paired
 
@@ -34,6 +34,9 @@ kokoro-bilingual-md:
 
 kokoro-bilingual-tmux:
 	prompt_tools/interlinear-book/start-bilingual-book-tmux.sh --no-attach -- --zh-epub sources/心.epub --jp-epub "sources/夏目 漱石 作品全集.epub" --book-id kokoro --title-zh 心 --title-zh-reading xīn --title-ja こころ --title-ja-reading こころ --model gpt-5.5 --reasoning high
+
+kokoro-jp-ocr-md:
+	python scripts/books/ocr_image_epub_to_markdown.py sources/こころ.epub --output books/kokoro-jp/markdown/book.md --title こころ --lang jpn_vert --psm 5
 
 build/paired/source.tex: $(PAIRED_DATA) scripts/paired/md_to_tex.py
 	python scripts/paired/md_to_tex.py $(PAIRED_DATA) -o build/paired/source.tex

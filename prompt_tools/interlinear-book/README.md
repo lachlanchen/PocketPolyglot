@@ -54,3 +54,17 @@ The pipeline writes extracted source Markdown to `books/kokoro/markdown/zh.md`
 and `books/kokoro/markdown/ja.md`, chunk work under
 `books/kokoro/work/bilingual/`, assembled JSON to `data/interlinear/kokoro.json`,
 and the pocket PDF to `build/interlinear-block/book.pdf`.
+
+## Image-Only Japanese EPUBs
+
+`sources/こころ.epub` is a fixed-layout manga adaptation
+(`こころ -まんがで読破- 1巻`), not a selectable-text Japanese novel EPUB. Convert
+it separately with OCR when you need review Markdown:
+
+```sh
+make kokoro-jp-ocr-md
+```
+
+That writes page-based OCR Markdown to `books/kokoro-jp/markdown/book.md`. It is
+useful for inspection, but the faithful interlinear novel pipeline should use a
+Japanese text source such as chapter 25 from `sources/夏目 漱石 作品全集.epub`.
