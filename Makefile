@@ -33,7 +33,7 @@ kokoro-bilingual-md:
 	python scripts/books/normalize_kokoro_jp_markdown.py books/kokoro/markdown/ja.section.md --output books/kokoro/markdown/ja.md --title こころ
 
 kokoro-bilingual-tmux:
-	prompt_tools/interlinear-book/start-bilingual-book-tmux.sh --no-attach -- --zh-epub sources/心.epub --jp-epub "sources/夏目 漱石 作品全集.epub" --book-id kokoro --title-zh 心 --title-zh-reading xīn --title-ja こころ --title-ja-reading こころ --model gpt-5.5 --reasoning high
+	prompt_tools/interlinear-book/start-bilingual-book-tmux.sh --no-attach -- --zh-epub sources/心.epub --jp-epub "sources/夏目 漱石 作品全集.epub" --book-id kokoro --title-zh 心 --title-zh-reading xīn --title-ja こころ --title-ja-reading こころ --model gpt-5.5 --reasoning xhigh --output-pdf "build/interlinear-block/心（こころ）.pdf"
 
 kokoro-jp-ocr-md:
 	python scripts/books/ocr_image_epub_to_markdown.py sources/こころ.epub --output books/kokoro-jp/markdown/book.md --title こころ --lang jpn_vert --psm 5

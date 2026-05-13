@@ -42,6 +42,14 @@ make kokoro-tmux
 
 The worker uses `gpt-5.5` with high reasoning, resumes one Codex session chunk by chunk, writes `books/kokoro/markdown/book.md`, assembles `data/interlinear/kokoro.json`, and compiles with the `interlinear-block` style to `build/interlinear-block/book.pdf`.
 
+Run the bilingual-source `心（こころ）` pipeline with Chinese as main text and the Japanese original as comment text:
+
+```sh
+make kokoro-bilingual-tmux
+```
+
+This uses `gpt-5.5` with `xhigh` reasoning, compiles a partial preview after every completed chunk, and writes the named PDF to `build/interlinear-block/心（こころ）.pdf`.
+
 Run OCR on a few pages of the scanned PDF:
 
 ```sh

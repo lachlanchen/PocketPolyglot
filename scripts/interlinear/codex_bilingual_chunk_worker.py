@@ -5,6 +5,8 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
+import subprocess
 import sys
 import textwrap
 from pathlib import Path
@@ -127,6 +129,7 @@ def main() -> int:
     parser.add_argument("--start-index", type=int, default=1, help="1-based chunk index")
     parser.add_argument("--retries", type=int, default=2)
     parser.add_argument("--resume-last", action="store_true", help="resume the newest Codex session for the first missing chunk")
+    parser.add_argument("--after-chunk-command", default="", help="shell command to run after each newly written valid chunk")
     args = parser.parse_args()
 
     cwd = Path.cwd()
@@ -141,7 +144,7 @@ def main() -> int:
         selected = selected[: args.max_chunks]
 
     first_codex_call = not args.resume_last
-    for chunk in selected:
+    for selected_index, chunk in enumerate(selected, start=args.start_index):
         final_path = output_dir / f"{chunk['chunk_id']}.json"
         if final_path.exists():
             try:
@@ -183,6 +186,16 @@ def main() -> int:
 
             final_path.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             print(f"wrote {final_path}")
+            if args.after_chunk_command:
+                env = os.environ.copy()
+                env.update(
+                    {
+                        "ZHJPBOOK_CHUNK_ID": chunk["chunk_id"],
+                        "ZHJPBOOK_CHUNK_INDEX": str(selected_index),
+                        "ZHJPBOOK_CHUNK_PATH": str(final_path),
+                    }
+                )
+                subprocess.run(args.after_chunk_command, shell=True, check=True, cwd=cwd, env=env)
             break
         else:
             raise RuntimeError(f"failed {chunk['chunk_id']} after retries")

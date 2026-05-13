@@ -47,13 +47,15 @@ prompt_tools/interlinear-book/start-bilingual-book-tmux.sh --kill --no-attach --
   --title-ja こころ \
   --title-ja-reading こころ \
   --model gpt-5.5 \
-  --reasoning high
+  --reasoning xhigh \
+  --output-pdf "build/interlinear-block/心（こころ）.pdf"
 ```
 
 The pipeline writes extracted source Markdown to `books/kokoro/markdown/zh.md`
 and `books/kokoro/markdown/ja.md`, chunk work under
 `books/kokoro/work/bilingual/`, assembled JSON to `data/interlinear/kokoro.json`,
-and the pocket PDF to `build/interlinear-block/book.pdf`.
+and a named pocket PDF to `build/interlinear-block/心（こころ）.pdf`. By default it
+also compiles a partial preview PDF after every newly completed chunk.
 
 ## Image-Only Japanese EPUBs
 

@@ -18,7 +18,7 @@ Example:
   prompt_tools/interlinear-book/start-bilingual-book-tmux.sh --kill --no-attach -- \\
     --zh-epub sources/心.epub \\
     --jp-epub "sources/夏目 漱石 作品全集.epub" \\
-    --book-id kokoro --model gpt-5.5 --reasoning high
+    --book-id kokoro --model gpt-5.5 --reasoning xhigh
 USAGE
 }
 

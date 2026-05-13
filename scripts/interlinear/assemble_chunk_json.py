@@ -33,15 +33,24 @@ def main() -> int:
     parser.add_argument("--source-epub", required=True)
     parser.add_argument("--source-markdown-ja", default="")
     parser.add_argument("--source-epub-ja", default="")
+    parser.add_argument("--allow-missing", action="store_true", help="skip missing chunk files for partial preview builds")
     args = parser.parse_args()
 
     manifest = load_json(Path(args.manifest))
     chunk_dir = Path(args.chunk_dir)
 
     sections: "OrderedDict[str, dict[str, Any]]" = OrderedDict()
+    missing_chunks: list[str] = []
+    assembled_chunk_count = 0
     for item in manifest["chunks"]:
         chunk_path = chunk_dir / f"{item['chunk_id']}.json"
+        if not chunk_path.exists():
+            if args.allow_missing:
+                missing_chunks.append(item["chunk_id"])
+                continue
+            raise FileNotFoundError(chunk_path)
         chunk = load_json(chunk_path)
+        assembled_chunk_count += 1
 
         section = chunk["section"]
         subsection = chunk["subsection"]
@@ -90,14 +99,21 @@ def main() -> int:
         section = {**section, "subsections": subsection_list}
         section_list.append(section)
 
+    if assembled_chunk_count == 0:
+        raise RuntimeError("no chunk JSON files were assembled")
+
     source = {
         "source_epub": args.source_epub,
         "source_markdown": args.source_markdown,
         "source_sha256": manifest["source_sha256"],
         "paragraph_count": manifest["paragraph_count"],
-        "chunk_count": manifest["chunk_count"],
+        "chunk_count": assembled_chunk_count,
+        "total_chunk_count": manifest["chunk_count"],
         "note": "Generated chunk by chunk from cleaned Markdown. Paragraph source_text fields are kept for validation.",
     }
+    if missing_chunks:
+        source["missing_chunk_count"] = len(missing_chunks)
+        source["missing_chunks"] = missing_chunks
     if args.source_markdown_ja:
         source["source_markdown_ja"] = args.source_markdown_ja
     if args.source_epub_ja:

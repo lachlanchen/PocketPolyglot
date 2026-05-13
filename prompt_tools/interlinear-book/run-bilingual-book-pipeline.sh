@@ -22,10 +22,12 @@ Options:
   --jp-start-heading <text> source section heading in Japanese Markdown
   --max-chars <n>           max Chinese source characters per chunk (default: 1400)
   --model <name>            Codex model (default: gpt-5.5)
-  --reasoning <level>       low|medium|high|xhigh (default: high)
+  --reasoning <level>       low|medium|high|xhigh (default: xhigh)
   --max-chunks <n>          process only first n chunks; 0 means all
   --start-index <n>         start at 1-based chunk index (default: 1)
+  --output-pdf <path>       named PDF path (default: build/interlinear-block/<title>.pdf)
   --skip-codex              only convert/split/assemble existing chunks
+  --no-compile-each-chunk   do not compile partial preview PDF after each chunk
   --resume-last             resume newest Codex session for first missing chunk
   --no-commit               skip git commit at the end
   -h, --help                show help
@@ -45,10 +47,12 @@ zh_start_heading="心"
 jp_start_heading="第25章 こころ (新字新仮名)"
 max_chars=1400
 model="${ZHJPBOOK_CODEX_MODEL:-gpt-5.5}"
-reasoning="${ZHJPBOOK_CODEX_REASONING:-high}"
+reasoning="${ZHJPBOOK_CODEX_REASONING:-xhigh}"
 max_chunks=0
 start_index=1
+output_pdf=""
 skip_codex=0
+compile_each_chunk=1
 resume_last=0
 do_commit=1
 
@@ -69,7 +73,9 @@ while [[ $# -gt 0 ]]; do
     --reasoning) reasoning="${2:-}"; shift 2 ;;
     --max-chunks) max_chunks="${2:-0}"; shift 2 ;;
     --start-index) start_index="${2:-1}"; shift 2 ;;
+    --output-pdf) output_pdf="${2:-}"; shift 2 ;;
     --skip-codex) skip_codex=1; shift ;;
+    --no-compile-each-chunk) compile_each_chunk=0; shift ;;
     --resume-last) resume_last=1; shift ;;
     --no-commit) do_commit=0; shift ;;
     -h|--help) usage; exit 0 ;;
@@ -91,6 +97,13 @@ chunks_jsonl="$work_dir/chunks/chunks.jsonl"
 manifest="$work_dir/chunks/manifest.json"
 chunk_json_dir="$work_dir/interlinear/chunks"
 assembled_json="data/interlinear/$book_id.json"
+if [[ -z "$output_pdf" ]]; then
+  if [[ "$title_zh" == "$title_ja" ]]; then
+    output_pdf="build/interlinear-block/${title_zh}.pdf"
+  else
+    output_pdf="build/interlinear-block/${title_zh}（${title_ja}）.pdf"
+  fi
+fi
 
 mkdir -p "books/$book_id/markdown" "books/$jp_source_id/markdown" "$work_dir" "$chunk_json_dir" "data/interlinear"
 
@@ -124,6 +137,24 @@ python scripts/interlinear/chunk_bilingual_markdown_book.py \
   --max-chars "$max_chars"
 
 if [[ "$skip_codex" -eq 0 ]]; then
+  compile_cmd=(
+    bash "$root/scripts/interlinear/compile_interlinear_book.sh"
+    --manifest "$manifest"
+    --chunk-dir "$chunk_json_dir"
+    --output-json "$assembled_json"
+    --book-title-zh "$title_zh"
+    --book-title-zh-reading "$title_zh_reading"
+    --book-title-ja "$title_ja"
+    --book-title-ja-reading "$title_ja_reading"
+    --source-markdown "$zh_section_md"
+    --source-epub "$zh_epub"
+    --source-markdown-ja "$jp_markdown"
+    --source-epub-ja "$jp_epub"
+    --output-pdf "$output_pdf"
+    --allow-missing
+  )
+  printf -v after_chunk_command '%q ' "${compile_cmd[@]}"
+
   codex_worker_cmd=(
     python scripts/interlinear/codex_bilingual_chunk_worker.py
     --chunks-jsonl "$chunks_jsonl" \
@@ -134,16 +165,19 @@ if [[ "$skip_codex" -eq 0 ]]; then
     --max-chunks "$max_chunks" \
     --start-index "$start_index"
   )
+  if [[ "$compile_each_chunk" -eq 1 ]]; then
+    codex_worker_cmd+=(--after-chunk-command "$after_chunk_command")
+  fi
   if [[ "$resume_last" -eq 1 ]]; then
     codex_worker_cmd+=(--resume-last)
   fi
   "${codex_worker_cmd[@]}"
 fi
 
-python scripts/interlinear/assemble_chunk_json.py \
+bash scripts/interlinear/compile_interlinear_book.sh \
   --manifest "$manifest" \
   --chunk-dir "$chunk_json_dir" \
-  --output "$assembled_json" \
+  --output-json "$assembled_json" \
   --book-title-zh "$title_zh" \
   --book-title-zh-reading "$title_zh_reading" \
   --book-title-ja "$title_ja" \
@@ -151,10 +185,8 @@ python scripts/interlinear/assemble_chunk_json.py \
   --source-markdown "$zh_section_md" \
   --source-epub "$zh_epub" \
   --source-markdown-ja "$jp_markdown" \
-  --source-epub-ja "$jp_epub"
-
-python scripts/interlinear/validate_interlinear_json.py "$assembled_json"
-make interlinear INTERLINEAR_DATA="$assembled_json"
+  --source-epub-ja "$jp_epub" \
+  --output-pdf "$output_pdf"
 
 if [[ "$do_commit" -eq 1 ]]; then
   git add .gitignore Makefile README.md scripts prompt_tools books/"$book_id"/markdown books/"$jp_source_id"/markdown/book.md data/interlinear/"$book_id".json
@@ -168,4 +200,4 @@ fi
 echo "Chinese Markdown:  $zh_section_md"
 echo "Japanese Markdown: $jp_markdown"
 echo "JSON:              $assembled_json"
-echo "PDF:               build/interlinear-block/book.pdf"
+echo "PDF:               $output_pdf"
