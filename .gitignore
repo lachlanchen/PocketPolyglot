@@ -16,6 +16,8 @@
 *.toc
 *.xdv
 build/**/source.tex
+build/legacy/
+build/preview/
 
 # Python caches and local environments
 __pycache__/
@@ -29,6 +31,9 @@ books/*/work/**/logs/
 books/*/work/**/preview/
 books/*/work/**/rejected*/
 books/*/work/**/stale*/
+books/*/work/ocr-sample/
+books/*/work/chunks/
+books/*/work/interlinear/
 books/*/markdown/*.raw.md
 .aginti/
 .aginti-sessions/
