@@ -161,6 +161,7 @@ def review_chunk(source: dict[str, Any], data: dict[str, Any]) -> list[str]:
                     f"{paragraph_id}: too few interlinear units for sentence-level reading "
                     f"({len(units)} units for {sentence_count} sentence endings)"
                 )
+        paragraph_is_note = is_editorial_note(source_text)
         if not isinstance(units, list):
             continue
         for unit_index, unit in enumerate(units):
@@ -184,7 +185,7 @@ def review_chunk(source: dict[str, Any], data: dict[str, Any]) -> list[str]:
                 errors.append(f"{unit_where}: Japanese correspondence is too short for the Chinese unit")
             if ja_text:
                 duplicate_ja[ja_text] = duplicate_ja.get(ja_text, 0) + 1
-            if reference_text and len(ja_text) >= 5 and not is_editorial_note(zh_text):
+            if reference_text and len(ja_text) >= 5 and not paragraph_is_note and not is_editorial_note(zh_text):
                 ref_pos = reference_text.find(ja_text)
                 if ref_pos < 0:
                     errors.append(f"{unit_where}: Japanese comment text is not found in the supplied original reference")
