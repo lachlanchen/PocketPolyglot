@@ -14,6 +14,7 @@ from typing import Any
 SPACE_RE = re.compile(r"\s+")
 HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
+PLACEHOLDER_JA = {"注", "注。", "。"}
 
 
 def normalize(text: str) -> str:
@@ -22,6 +23,12 @@ def normalize(text: str) -> str:
 
 def token_text(tokens: list[dict[str, Any]]) -> str:
     return "".join(str(token.get("t", "")) for token in tokens)
+
+
+def ja_lines_text(ja: Any) -> str:
+    if not isinstance(ja, list):
+        return ""
+    return "".join(token_text(line) for line in ja if isinstance(line, list))
 
 
 def validate_token_shape(tokens: Any, where: str, errors: list[str]) -> bool:
@@ -93,6 +100,11 @@ def validate_unit(unit: dict[str, Any], where: str, errors: list[str]) -> str:
                 errors.append(f"{where}.ja[{line_index}]: line must be a token list")
                 continue
             validate_ja_tokens(line, f"{where}.ja[{line_index}]", errors)
+        ja_text = normalize(ja_lines_text(ja))
+        if not ja_text:
+            errors.append(f"{where}: Japanese comment is empty")
+        if ja_text in PLACEHOLDER_JA:
+            errors.append(f"{where}: Japanese comment is a placeholder, not aligned text")
     zh_text = token_text(unit["zh"])
     if unit.get("source_text") and normalize(zh_text) != normalize(str(unit["source_text"])):
         errors.append(f"{where}: zh tokens do not reconstruct source_text")
@@ -123,7 +135,10 @@ def validate_interlinear(data: dict[str, Any]) -> list[str]:
                     if not isinstance(units, list) or not units:
                         errors.append(f"{where}: missing units")
                         continue
-                    rebuilt = "".join(validate_unit(unit, f"{where}.units[{unit_index}]", errors) for unit_index, unit in enumerate(units))
+                    rebuilt_parts: list[str] = []
+                    for unit_index, unit in enumerate(units):
+                        rebuilt_parts.append(validate_unit(unit, f"{where}.units[{unit_index}]", errors))
+                    rebuilt = "".join(rebuilt_parts)
                     if paragraph.get("source_text") and normalize(rebuilt) != normalize(str(paragraph["source_text"])):
                         errors.append(f"{where}: units do not reconstruct paragraph source_text")
     return errors

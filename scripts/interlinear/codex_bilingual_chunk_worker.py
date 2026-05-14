@@ -13,7 +13,9 @@ from pathlib import Path
 from typing import Any
 
 from codex_chunk_worker import compact, extract_json, flatten_zh, load_chunks, run_codex
-from validate_interlinear_json import validate_ja_tokens, validate_named_tokens, validate_zh_tokens
+from validate_interlinear_json import ja_lines_text, normalize, validate_ja_tokens, validate_named_tokens, validate_zh_tokens
+
+PLACEHOLDER_JA = {"注", "注。", "。"}
 
 
 def validate_chunk(source: dict[str, Any], result: dict[str, Any]) -> list[str]:
@@ -34,6 +36,8 @@ def validate_chunk(source: dict[str, Any], result: dict[str, Any]) -> list[str]:
     if got_ids != expected_ids:
         errors.append(f"paragraph id/order mismatch: expected {expected_ids}, got {got_ids}")
     source_by_id = {paragraph["id"]: paragraph["text"] for paragraph in source["paragraphs"]}
+    chunk_zh_texts: list[str] = []
+    chunk_ja_texts: list[str] = []
     for paragraph in paragraphs:
         paragraph_id = paragraph.get("id")
         if paragraph_id not in source_by_id:
@@ -46,12 +50,23 @@ def validate_chunk(source: dict[str, Any], result: dict[str, Any]) -> list[str]:
             errors.append(f"{paragraph_id}: missing units")
         for unit_index, unit in enumerate(paragraph.get("units", [])):
             validate_zh_tokens(unit.get("zh", []), f"{paragraph_id}.units[{unit_index}].zh", errors)
+            chunk_zh_texts.append("".join(str(token.get("t", "")) for token in unit.get("zh", [])))
             ja = unit.get("ja", [])
             if len(ja) != 2:
                 errors.append(f"{paragraph_id}.units[{unit_index}]: ja must have exactly two lines")
             else:
                 validate_ja_tokens(ja[0], f"{paragraph_id}.units[{unit_index}].ja[0]", errors)
                 validate_ja_tokens(ja[1], f"{paragraph_id}.units[{unit_index}].ja[1]", errors)
+                ja_text = normalize(ja_lines_text(ja))
+                chunk_ja_texts.append(ja_text)
+                if not ja_text:
+                    errors.append(f"{paragraph_id}.units[{unit_index}]: Japanese comment is empty")
+                if ja_text in PLACEHOLDER_JA:
+                    errors.append(f"{paragraph_id}.units[{unit_index}]: Japanese comment is a placeholder, not aligned text")
+    chunk_zh_len = len(normalize("".join(chunk_zh_texts)))
+    chunk_ja_len = len(normalize("".join(chunk_ja_texts)))
+    if chunk_zh_len >= 120 and chunk_ja_len / chunk_zh_len < 0.18:
+        errors.append(f"{source['chunk_id']}: Japanese coverage is too low ({chunk_ja_len}/{chunk_zh_len} chars)")
     return errors
 
 
@@ -112,6 +127,8 @@ def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = 
         - Split the Chinese into natural reading units, usually sentence by sentence. Keep each unit readable as continuous Chinese prose.
         - Chinese tokenization is strict: every Chinese Han character must be its own token with pinyin, e.g. "先生" becomes [{{"t":"先","r":"xiān"}},{{"t":"生","r":"sheng"}}]. Never attach pinyin to a multi-character Chinese word or phrase. Punctuation, Arabic numerals, Latin text, and spaces use empty reading.
         - For each Chinese unit, find the corresponding Japanese original wording in the provided Japanese reference paragraphs for the same story/chapter. Split that Japanese correspondence into exactly two short visual rows.
+        - The Japanese comment for every unit must contain real aligned Japanese. Never leave Japanese rows empty. Never use placeholders such as "注", "注。", "日本語", or a generic marker.
+        - Across the chunk, Japanese text must have reasonable coverage of the Chinese units. If the Japanese reference does not include enough source text for this chunk, say so by failing the task rather than fabricating placeholders.
         - If a Chinese unit is a translator note or editorial note that is not in the Japanese original, write a concise Japanese note for that unit and keep it visibly note-like.
         - Japanese tokenization is strict: every kanji character must be its own token with furigana, and furigana may appear only on one-kanji tokens. Kana, okurigana, punctuation, spaces, and Latin text must have empty reading. Example: "先生と私" becomes [{{"t":"先","r":"せん"}},{{"t":"生","r":"せい"}},{{"t":"と","r":""}},{{"t":"私","r":"わたし"}}]. Example: "書くだけ" becomes [{{"t":"書","r":"か"}},{{"t":"くだけ","r":""}}].
         - Keep ids exactly as provided below.
