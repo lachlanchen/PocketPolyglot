@@ -6,8 +6,8 @@ usage() {
 Usage: prompt_tools/interlinear-book/run-bilingual-book-pipeline.sh [options]
 
 Convert Chinese and Japanese EPUB/Markdown sources into a Chinese-main,
-Japanese-original-comment interlinear pocket book. The worker uses one
-resumable Codex session and processes chunks in order.
+Japanese-original-comment interlinear pocket book. The worker uses fresh
+isolated Codex calls and processes chunks in order.
 
 Options:
   --zh-epub <path>          Chinese EPUB input (default: sources/心.epub)
@@ -20,7 +20,7 @@ Options:
   --title-ja-reading <txt>  furigana for title (default: こころ)
   --zh-start-heading <text> source section heading in Chinese Markdown (default: 心)
   --jp-start-heading <text> source section heading in Japanese Markdown
-  --max-chars <n>           max Chinese source characters per chunk (default: 1400)
+  --max-chars <n>           max Chinese source characters per chunk (default: 450)
   --model <name>            Codex model (default: gpt-5.5)
   --reasoning <level>       low|medium|high|xhigh (default: xhigh)
   --max-chunks <n>          process only first n chunks; 0 means all
@@ -28,7 +28,7 @@ Options:
   --output-pdf <path>       named PDF path (default: build/interlinear-block/<title>.pdf)
   --skip-codex              only convert/split/assemble existing chunks
   --no-compile-each-chunk   do not compile partial preview PDF after each chunk
-  --resume-last             resume newest Codex session for first missing chunk
+  --resume-last             accepted for old callers; bilingual calls stay isolated
   --no-commit               skip git commit at the end
   -h, --help                show help
 USAGE
@@ -45,7 +45,7 @@ title_ja="こころ"
 title_ja_reading="こころ"
 zh_start_heading="心"
 jp_start_heading="第25章 こころ (新字新仮名)"
-max_chars=1400
+max_chars=450
 model="${ZHJPBOOK_CODEX_MODEL:-gpt-5.5}"
 reasoning="${ZHJPBOOK_CODEX_REASONING:-xhigh}"
 max_chunks=0
@@ -154,7 +154,21 @@ if [[ "$skip_codex" -eq 0 ]]; then
     --output-pdf "$output_pdf"
     --allow-missing
   )
-  printf -v after_chunk_command '%q ' "${compile_cmd[@]}"
+  printf -v compile_cmd_text '%q ' "${compile_cmd[@]}"
+  after_chunk_command="$compile_cmd_text"
+  if [[ "$do_commit" -eq 1 ]]; then
+    commit_cmd=(
+      bash "$root/scripts/interlinear/commit_interlinear_progress.sh"
+      --book-id "$book_id"
+      --manifest "$manifest"
+      --chunks-jsonl "$chunks_jsonl"
+      --chunk-dir "$chunk_json_dir"
+      --pdf "$output_pdf"
+      --pdf "build/interlinear-block/book.pdf"
+    )
+    printf -v commit_cmd_text '%q ' "${commit_cmd[@]}"
+    after_chunk_command="${compile_cmd_text}&& ${commit_cmd_text}"
+  fi
 
   codex_worker_cmd=(
     python scripts/interlinear/codex_bilingual_chunk_worker.py
@@ -190,6 +204,14 @@ bash scripts/interlinear/compile_interlinear_book.sh \
   --output-pdf "$output_pdf"
 
 if [[ "$do_commit" -eq 1 ]]; then
+  bash scripts/interlinear/commit_interlinear_progress.sh \
+    --book-id "$book_id" \
+    --manifest "$manifest" \
+    --chunks-jsonl "$chunks_jsonl" \
+    --chunk-dir "$chunk_json_dir" \
+    --pdf "$output_pdf" \
+    --pdf "build/interlinear-block/book.pdf"
+
   git add .gitignore Makefile README.md scripts prompt_tools books/"$book_id"/markdown books/"$jp_source_id"/markdown/book.md data/interlinear/"$book_id".json
   if ! git diff --cached --quiet; then
     git commit -m "Build bilingual $book_id interlinear source"
