@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run one resumable Codex session to align bilingual chunks into JSON."""
+"""Run isolated Codex calls to align bilingual chunks into JSON."""
 
 from __future__ import annotations
 
@@ -224,7 +224,11 @@ def main() -> int:
     parser.add_argument("--max-chunks", type=int, default=0, help="0 means all chunks")
     parser.add_argument("--start-index", type=int, default=1, help="1-based chunk index")
     parser.add_argument("--retries", type=int, default=2)
-    parser.add_argument("--resume-last", action="store_true", help="resume the newest Codex session for the first missing chunk")
+    parser.add_argument(
+        "--resume-last",
+        action="store_true",
+        help="deprecated: kept for old scripts; bilingual chunk calls intentionally start fresh",
+    )
     parser.add_argument("--after-chunk-command", default="", help="shell command to run after each newly written valid chunk")
     args = parser.parse_args()
 
@@ -239,7 +243,6 @@ def main() -> int:
     if args.max_chunks:
         selected = selected[: args.max_chunks]
 
-    first_codex_call = not args.resume_last
     for selected_index, chunk in enumerate(selected, start=args.start_index):
         final_path = output_dir / f"{chunk['chunk_id']}.json"
         if final_path.exists():
@@ -262,8 +265,7 @@ def main() -> int:
             prompt_path.write_text(prompt, encoding="utf-8")
 
             print(f"codex bilingual {chunk['chunk_id']} attempt {attempt}")
-            run_codex(prompt, message_path, log_path, first=first_codex_call, model=args.model, reasoning=args.reasoning, cwd=cwd)
-            first_codex_call = False
+            run_codex(prompt, message_path, log_path, first=True, model=args.model, reasoning=args.reasoning, cwd=cwd)
 
             try:
                 result = extract_json(message_path.read_text(encoding="utf-8"))

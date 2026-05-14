@@ -1,11 +1,8 @@
-# Large scanned source files
-*.pdf
-*.PDF
-*.epub
-*.EPUB
+# Original source media
+/sources/**
+!/sources/README.md
 
-# TeX/build outputs
-/build/
+# Regenerable TeX intermediates
 *.aux
 *.bbl
 *.bcf
@@ -18,6 +15,7 @@
 *.synctex.gz
 *.toc
 *.xdv
+build/**/source.tex
 
 # Python caches and local environments
 __pycache__/
@@ -26,7 +24,11 @@ __pycache__/
 venv/
 
 # Long-running book generation scratch space
-books/*/work/
+books/*/work/**/codex*/
+books/*/work/**/logs/
+books/*/work/**/preview/
+books/*/work/**/rejected*/
+books/*/work/**/stale*/
 books/*/markdown/*.raw.md
 .aginti/
 .aginti-sessions/
