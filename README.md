@@ -109,6 +109,14 @@ Use `data/interlinear/sample.json` when the book should read continuously in Chi
 
 Chinese is the main row. Japanese is intentionally split into two short rows so it works like a running comment rather than a second equal text column.
 
+Tokens may also carry an optional grammar role for colorized annotated editions:
+
+```json
+{"t": "我", "r": "wǒ", "g": "zhu"}
+```
+
+Supported role keys are `zhu`/`subject`, `wei`/`predicate`/`verb`, `bin`/`object`, `ding`/`attributive`, `zhuang`/`adverbial`, `bu`/`complement`, `topic`, and `function`/`particle`. The renderer treats this as a display layer only; text and readings stay unchanged, so an annotated JSON can be validated against the same source text.
+
 The block layout in `tex/interlinear-block/` gives every sentence its own Chinese row plus Japanese note. The run-in layout in `tex/interlinear-run/` makes sentence units flow back-to-back; the Japanese note starts at the same horizontal point as its Chinese unit and wraps inside the measured Chinese-unit width.
 
 The Japanese-main layout in `tex/interlinear-jp-main/` uses the same JSON without changing the source data: Japanese ruby text becomes the main continuous text, and the Chinese pinyin text becomes the smaller comment line under each reading unit.

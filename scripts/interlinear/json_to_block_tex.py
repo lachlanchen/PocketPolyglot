@@ -26,18 +26,33 @@ def tex_escape(text: str) -> str:
     return "".join(replacements.get(ch, ch) for ch in text)
 
 
+def token_role(token: dict[str, str]) -> str:
+    role = token.get("g") or token.get("role") or token.get("syntax") or ""
+    if isinstance(role, dict):
+        role = role.get("role", "")
+    return str(role)
+
+
+def wrap_role(text: str, role: str) -> str:
+    if not role:
+        return text
+    return rf"\Gram{{{tex_escape(role)}}}{{{text}}}"
+
+
 def render_tokens(tokens: list[dict[str, str]], ruby_cmd: str, breakable: bool = False) -> str:
     parts: list[str] = []
     for token in tokens:
         raw_text = token.get("t", "")
         text = tex_escape(raw_text)
         ruby = tex_escape(token.get("r", ""))
+        role = token_role(token)
         if ruby:
-            parts.append(rf"\{ruby_cmd}{{{text}}}{{{ruby}}}")
+            rendered = rf"\{ruby_cmd}{{{text}}}{{{ruby}}}"
         elif breakable:
-            parts.append(r"\allowbreak{}".join(tex_escape(ch) for ch in raw_text))
+            rendered = r"\allowbreak{}".join(tex_escape(ch) for ch in raw_text)
         else:
-            parts.append(text)
+            rendered = text
+        parts.append(wrap_role(rendered, role))
         if breakable:
             parts.append(r"\allowbreak{}")
     return "".join(parts)

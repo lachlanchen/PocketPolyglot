@@ -33,6 +33,14 @@
 \definecolor{BookNote}{HTML}{4D463E}
 \definecolor{BookRule}{HTML}{B9B0A5}
 \definecolor{BookRed}{HTML}{7E2F24}
+\definecolor{GramZhu}{HTML}{13795B}
+\definecolor{GramWei}{HTML}{B23A48}
+\definecolor{GramBin}{HTML}{286DA8}
+\definecolor{GramDing}{HTML}{7C58A5}
+\definecolor{GramZhuang}{HTML}{A96523}
+\definecolor{GramBu}{HTML}{1D7F91}
+\definecolor{GramTopic}{HTML}{8A6532}
+\definecolor{GramFunction}{HTML}{6D6D6D}
 
 \hypersetup{colorlinks=true,linkcolor=BookRed,urlcolor=BookRed}
 
@@ -95,6 +103,32 @@
 
 \NewDocumentCommand{\zhpy}{m m}{\RubyFixed{{\zhfont #1}}{{\sffamily #2}}}
 \NewDocumentCommand{\jpruby}{m m}{\RubyWide{{\jpfont #1}}{{\jpfont #2}}}
+
+\ExplSyntaxOn
+\cs_new_protected:Npn \zhjp_gram_color:n #1
+  {
+    \str_case:nn { #1 }
+      {
+        { zhu } { \color{GramZhu} }
+        { subject } { \color{GramZhu} }
+        { wei } { \color{GramWei} }
+        { predicate } { \color{GramWei} }
+        { verb } { \color{GramWei} }
+        { bin } { \color{GramBin} }
+        { object } { \color{GramBin} }
+        { ding } { \color{GramDing} }
+        { attributive } { \color{GramDing} }
+        { zhuang } { \color{GramZhuang} }
+        { adverbial } { \color{GramZhuang} }
+        { bu } { \color{GramBu} }
+        { complement } { \color{GramBu} }
+        { topic } { \color{GramTopic} }
+        { function } { \color{GramFunction} }
+        { particle } { \color{GramFunction} }
+      }
+  }
+\NewDocumentCommand{\Gram}{m m}{\group_begin:\zhjp_gram_color:n { #1 } #2\group_end:}
+\ExplSyntaxOff
 
 \newcommand{\ZHRun}[1]{{\zhfont\fontsize{9.45pt}{15pt}\selectfont\color{BookInk}#1}}
 \newcommand{\JARun}[1]{{\jpfont\fontsize{6.75pt}{9.3pt}\selectfont\color{BookNote}#1}}
