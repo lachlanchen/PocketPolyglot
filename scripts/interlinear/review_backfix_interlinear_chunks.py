@@ -20,11 +20,12 @@ from codex_chunk_worker import extract_json, load_chunks, run_codex
 from normalize_grammar_roles import cleanup_components, normalize_node
 from validate_interlinear_json import ja_lines_text, normalize
 
-PROMPT_VERSION = "broad-post-merge-review-v2"
+PROMPT_VERSION = "broad-post-merge-review-v3"
 CONTENT_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaffぁ-ゟ゠-ヿA-Za-z0-9]")
 HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 SENTENCE_END_RE = re.compile(r"[。！？!?]")
 PUNCT_RE = re.compile(r"^[\s，。！？、；：,.!?;:「」『』（）()《》〈〉“”‘’…—-]+$")
+EDITORIAL_NOTE_RE = re.compile(r"^[（(]?\s*\d+\s*[.．、)]")
 
 
 def canonical_json(data: Any) -> str:
@@ -93,6 +94,11 @@ def role_counts(tokens: list[dict[str, Any]]) -> dict[str, int]:
         if role:
             counts[role] = counts.get(role, 0) + 1
     return counts
+
+
+def is_editorial_note(text: str) -> bool:
+    compact = normalize(text)
+    return bool(EDITORIAL_NOTE_RE.match(compact)) or any(marker in compact for marker in ("译者", "译注", "注释", "注："))
 
 
 def add_role_collapse_issues(
@@ -178,7 +184,7 @@ def review_chunk(source: dict[str, Any], data: dict[str, Any]) -> list[str]:
                 errors.append(f"{unit_where}: Japanese correspondence is too short for the Chinese unit")
             if ja_text:
                 duplicate_ja[ja_text] = duplicate_ja.get(ja_text, 0) + 1
-            if reference_text and len(ja_text) >= 5 and not any(marker in zh_text for marker in ("译者", "注")):
+            if reference_text and len(ja_text) >= 5 and not is_editorial_note(zh_text):
                 ref_pos = reference_text.find(ja_text)
                 if ref_pos < 0:
                     errors.append(f"{unit_where}: Japanese comment text is not found in the supplied original reference")
@@ -229,6 +235,7 @@ def repair_prompt(source: dict[str, Any], current: dict[str, Any], issues: list[
         - Match the major Chinese and Japanese components roughly with the same roles/colors.
         - Treat visible pages that become one color as a serious data bug: it usually means the chunk or paragraph assigns nearly every token the same "g" role.
         - Check for the full set of quality failures a reader would see in the PDF: missing source text, missing Japanese, duplicated Japanese comments, Japanese from the wrong chapter, Japanese paraphrase instead of original wording, oversized units that are not line-based, unbalanced two-line comments, missing pinyin/furigana, furigana on kana or multi-kanji tokens, pinyin on multi-character Chinese tokens, and role/color mismatch between corresponding Chinese and Japanese phrases.
+        - Treat numbered Chinese footnotes such as "1.鸟取：..." or "2.江户：..." as editorial notes. They may use concise Japanese note text instead of original-source quotation, but must still be complete, readable, ruby-annotated, and role-colored.
         - Do not merely make validation pass. Make the result read like a clean interlinear book page: continuous Chinese main text, sentence-by-sentence Japanese correspondence, correct ruby/readings, and varied but meaningful grammar colors.
 
         Review failures to fix:
