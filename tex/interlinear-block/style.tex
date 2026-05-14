@@ -132,6 +132,18 @@
 \NewDocumentCommand{\Gram}{m m}{\group_begin:\zhjp_gram_color:n { #1 } #2\group_end:}
 \ExplSyntaxOff
 
+\newcommand{\GrammarLegend}{%
+  {\sffamily\fontsize{5.8pt}{7pt}\selectfont
+  \textcolor{GramZhu}{主 subject}\quad
+  \textcolor{GramWei}{谓 predicate}\quad
+  \textcolor{GramBin}{宾 object}\quad
+  \textcolor{GramDing}{定 attributive}\quad
+  \textcolor{GramZhuang}{状 adverbial}\quad
+  \textcolor{GramBu}{补 complement}\quad
+  \textcolor{GramTopic}{题 topic}\quad
+  \textcolor{GramFunction}{虚 function}}%
+}
+
 \newcommand{\ZHMain}[1]{{\zhfont\fontsize{9.85pt}{16pt}\selectfont\color{BookInk}#1}}
 \newcommand{\JAComm}[1]{{\jpfont\fontsize{7.25pt}{11.3pt}\selectfont\color{BookNote}#1}}
 \newcommand{\TinyLabel}[1]{{\sffamily\bfseries\fontsize{5.8pt}{5.8pt}\selectfont\textcolor{BookRed}{#1}}}
@@ -140,7 +152,7 @@
   \frontmatter
   \thispagestyle{empty}
   \vspace*{0.16\textheight}
-  {\centering{\zhfont\Huge #1\par}\vspace{0.8em}{\jpfont\small #2\par}}
+  {\centering{\zhfont\Huge #1\par}\vspace{0.8em}{\jpfont\small #2\par}\vfill\GrammarLegend\par}
   \clearpage
   \mainmatter
 }

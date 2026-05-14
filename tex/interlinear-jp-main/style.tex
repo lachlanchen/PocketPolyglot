@@ -135,6 +135,18 @@
 \NewDocumentCommand{\Gram}{m m}{\group_begin:\zhjp_gram_color:n { #1 } #2\group_end:}
 \ExplSyntaxOff
 
+\newcommand{\GrammarLegend}{%
+  {\sffamily\fontsize{5.8pt}{7pt}\selectfont
+  \textcolor{GramZhu}{主 subject}\quad
+  \textcolor{GramWei}{谓 predicate}\quad
+  \textcolor{GramBin}{宾 object}\quad
+  \textcolor{GramDing}{定 attributive}\quad
+  \textcolor{GramZhuang}{状 adverbial}\quad
+  \textcolor{GramBu}{补 complement}\quad
+  \textcolor{GramTopic}{题 topic}\quad
+  \textcolor{GramFunction}{虚 function}}%
+}
+
 \newcommand{\JPMainText}[1]{{\jpfont\fontsize{9.7pt}{15.5pt}\selectfont\color{BookInk}#1}}
 \newcommand{\ZHCommentText}[1]{{\zhfont\fontsize{6.95pt}{10.4pt}\selectfont\color{BookNote}#1}}
 \newcommand{\TinyLabel}[1]{{\sffamily\bfseries\fontsize{5.8pt}{5.8pt}\selectfont\textcolor{BookRed}{#1}}}
@@ -158,7 +170,7 @@
   \restoregeometry
   \thispagestyle{empty}
   \vspace*{0.20\textheight}
-  {\centering{\jpfont\Huge #1\par}\vspace{0.55em}{\zhfont\Large #2\par}\vspace{1.5em}{\jpfont #3\par}\vfill{\sffamily\fontsize{6pt}{8pt}\selectfont #4\par\href{#5}{#5}\par #6\par}}
+  {\centering{\jpfont\Huge #1\par}\vspace{0.55em}{\zhfont\Large #2\par}\vspace{1.5em}{\jpfont #3\par}\vfill\GrammarLegend\par\vspace{1.2em}{\sffamily\fontsize{6pt}{8pt}\selectfont #4\par\href{#5}{#5}\par #6\par}}
   \clearpage
   \mainmatter
 }

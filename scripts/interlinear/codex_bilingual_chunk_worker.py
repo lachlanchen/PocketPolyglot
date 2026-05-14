@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import subprocess
 import sys
 import textwrap
@@ -16,6 +17,39 @@ from codex_chunk_worker import compact, extract_json, flatten_zh, load_chunks, r
 from validate_interlinear_json import ja_lines_text, normalize, validate_ja_tokens, validate_named_tokens, validate_zh_tokens
 
 PLACEHOLDER_JA = {"注", "注。", "。"}
+SENTENCE_END_RE = re.compile(r"[。！？!?]")
+CONTENT_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaffぁ-ゟ゠-ヿA-Za-z0-9]")
+GRAMMAR_ROLES = {"zhu", "wei", "bin", "ding", "zhuang", "bu", "topic", "function"}
+ZH_UNIT_HARD_MAX = 128
+ZH_UNIT_MULTI_SENTENCE_MAX = 82
+JA_COMMENT_LINE_MAX = 54
+
+
+def zh_unit_text(unit: dict[str, Any]) -> str:
+    return "".join(str(token.get("t", "")) for token in unit.get("zh", []))
+
+
+def token_text(tokens: list[dict[str, Any]]) -> str:
+    return "".join(str(token.get("t", "")) for token in tokens)
+
+
+def needs_grammar_role(text: str) -> bool:
+    return bool(CONTENT_RE.search(text))
+
+
+def validate_grammar_tokens(tokens: Any, where: str, errors: list[str]) -> None:
+    if not isinstance(tokens, list):
+        return
+    for token_index, token in enumerate(tokens):
+        if not isinstance(token, dict):
+            continue
+        text = str(token.get("t", ""))
+        role = str(token.get("g", "")).strip().lower()
+        if needs_grammar_role(text) and not role:
+            errors.append(f"{where}[{token_index}]: content token needs grammar role g")
+        if role and role not in GRAMMAR_ROLES:
+            allowed = ", ".join(sorted(GRAMMAR_ROLES))
+            errors.append(f"{where}[{token_index}]: unsupported grammar role {role!r}; use one of {allowed}")
 
 
 def validate_chunk(source: dict[str, Any], result: dict[str, Any]) -> list[str]:
@@ -49,20 +83,40 @@ def validate_chunk(source: dict[str, Any], result: dict[str, Any]) -> list[str]:
         if not paragraph.get("units"):
             errors.append(f"{paragraph_id}: missing units")
         for unit_index, unit in enumerate(paragraph.get("units", [])):
-            validate_zh_tokens(unit.get("zh", []), f"{paragraph_id}.units[{unit_index}].zh", errors)
-            chunk_zh_texts.append("".join(str(token.get("t", "")) for token in unit.get("zh", [])))
+            unit_where = f"{paragraph_id}.units[{unit_index}]"
+            zh_where = f"{unit_where}.zh"
+            validate_zh_tokens(unit.get("zh", []), zh_where, errors)
+            validate_grammar_tokens(unit.get("zh", []), zh_where, errors)
+            zh_text = zh_unit_text(unit)
+            chunk_zh_texts.append(zh_text)
+            sentence_end_count = len(SENTENCE_END_RE.findall(zh_text))
+            if len(zh_text) > ZH_UNIT_HARD_MAX or (
+                len(zh_text) > ZH_UNIT_MULTI_SENTENCE_MAX and sentence_end_count >= 2
+            ):
+                errors.append(
+                    f"{unit_where}: Chinese unit is too broad; split sentence-by-sentence or clause-by-clause"
+                )
             ja = unit.get("ja", [])
             if len(ja) != 2:
-                errors.append(f"{paragraph_id}.units[{unit_index}]: ja must have exactly two lines")
+                errors.append(f"{unit_where}: ja must have exactly two lines")
             else:
-                validate_ja_tokens(ja[0], f"{paragraph_id}.units[{unit_index}].ja[0]", errors)
-                validate_ja_tokens(ja[1], f"{paragraph_id}.units[{unit_index}].ja[1]", errors)
+                for line_index, line in enumerate(ja):
+                    line_where = f"{unit_where}.ja[{line_index}]"
+                    validate_ja_tokens(line, line_where, errors)
+                    validate_grammar_tokens(line, line_where, errors)
+                    if not isinstance(line, list):
+                        continue
+                    line_text = normalize(token_text(line))
+                    if len(line_text) > JA_COMMENT_LINE_MAX:
+                        errors.append(
+                            f"{line_where}: Japanese comment row is too long ({len(line_text)} chars); split/rebalance the unit"
+                        )
                 ja_text = normalize(ja_lines_text(ja))
                 chunk_ja_texts.append(ja_text)
                 if not ja_text:
-                    errors.append(f"{paragraph_id}.units[{unit_index}]: Japanese comment is empty")
+                    errors.append(f"{unit_where}: Japanese comment is empty")
                 if ja_text in PLACEHOLDER_JA:
-                    errors.append(f"{paragraph_id}.units[{unit_index}]: Japanese comment is a placeholder, not aligned text")
+                    errors.append(f"{unit_where}: Japanese comment is a placeholder, not aligned text")
     chunk_zh_len = len(normalize("".join(chunk_zh_texts)))
     chunk_ja_len = len(normalize("".join(chunk_ja_texts)))
     if chunk_zh_len >= 120 and chunk_ja_len / chunk_zh_len < 0.18:
@@ -73,7 +127,12 @@ def validate_chunk(source: dict[str, Any], result: dict[str, Any]) -> list[str]:
 def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = None) -> str:
     error_block = ""
     if previous_errors:
-        error_block = "\nPrevious output failed validation. Fix these issues exactly:\n" + "\n".join(f"- {error}" for error in previous_errors)
+        shown_errors = previous_errors[:80]
+        error_block = "\nPrevious output failed validation. Fix these issues exactly:\n" + "\n".join(
+            f"- {error}" for error in shown_errors
+        )
+        if len(previous_errors) > len(shown_errors):
+            error_block += f"\n- ... {len(previous_errors) - len(shown_errors)} additional validation errors omitted"
 
     metadata = {
         key: chunk[key]
@@ -110,10 +169,10 @@ def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = 
               "units": [
                 {{
                   "source_text": "exact Chinese sentence or sentence group from the paragraph",
-                  "zh": [{{"t":"one Chinese Han character","r":"that character's pinyin with tone mark"}}],
+                  "zh": [{{"t":"one Chinese Han character","r":"that character's pinyin with tone mark","g":"grammar role"}}],
                   "ja": [
-                    [{{"t":"one Japanese kanji OR kana/punctuation run","r":"furigana only for one kanji, empty otherwise"}}],
-                    [{{"t":"one Japanese kanji OR kana/punctuation run","r":"furigana only for one kanji, empty otherwise"}}]
+                    [{{"t":"one Japanese kanji OR kana/punctuation run","r":"furigana only for one kanji, empty otherwise","g":"grammar role"}}],
+                    [{{"t":"one Japanese kanji OR kana/punctuation run","r":"furigana only for one kanji, empty otherwise","g":"grammar role"}}]
                   ]
                 }}
               ]
@@ -125,12 +184,19 @@ def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = 
         - Preserve every Chinese source paragraph. Do not omit, summarize, reorder, or rewrite the Chinese.
         - For each paragraph, joining all zh token "t" values across all units must reconstruct the paragraph text exactly, apart from whitespace.
         - Split the Chinese into natural reading units, usually sentence by sentence. Keep each unit readable as continuous Chinese prose.
+        - Line-based pairing requirement: one unit should be one Chinese sentence, or one tightly bound sentence fragment when the sentence/comment is very long. Do not put a whole paragraph into one unit. If a paragraph has multiple sentence-ending punctuation marks, make multiple units in the same order.
+        - Target each Chinese unit at roughly 18-65 Chinese characters. A unit longer than 90 characters should normally be split by clause. A unit longer than 128 characters will be rejected.
         - Chinese tokenization is strict: every Chinese Han character must be its own token with pinyin, e.g. "先生" becomes [{{"t":"先","r":"xiān"}},{{"t":"生","r":"sheng"}}]. Never attach pinyin to a multi-character Chinese word or phrase. Punctuation, Arabic numerals, Latin text, and spaces use empty reading.
         - For each Chinese unit, find the corresponding Japanese original wording in the provided Japanese reference paragraphs for the same story/chapter. Split that Japanese correspondence into exactly two short visual rows.
+        - Keep each Japanese comment row short: no row should exceed 54 visible Japanese characters. If a row would be longer, split the Chinese unit into smaller sentence/clause units or rebalance the two rows.
         - The Japanese comment for every unit must contain real aligned Japanese. Never leave Japanese rows empty. Never use placeholders such as "注", "注。", "日本語", or a generic marker.
         - Across the chunk, Japanese text must have reasonable coverage of the Chinese units. If the Japanese reference does not include enough source text for this chunk, say so by failing the task rather than fabricating placeholders.
         - If a Chinese unit is a translator note or editorial note that is not in the Japanese original, write a concise Japanese note for that unit and keep it visibly note-like.
         - Japanese tokenization is strict: every kanji character must be its own token with furigana, and furigana may appear only on one-kanji tokens. Kana, okurigana, punctuation, spaces, and Latin text must have empty reading. Example: "先生と私" becomes [{{"t":"先","r":"せん"}},{{"t":"生","r":"せい"}},{{"t":"と","r":""}},{{"t":"私","r":"わたし"}}]. Example: "書くだけ" becomes [{{"t":"書","r":"か"}},{{"t":"くだけ","r":""}}].
+        - Grammar analysis is mandatory. Every Chinese and Japanese content token must include "g" with exactly one of these roles:
+          zhu = subject/主语, wei = predicate or verbal/adjectival core/谓语, bin = object/宾语, ding = attributive or noun modifier/定语, zhuang = adverbial/time/place/manner/状语, bu = complement/result/direction/degree/补语, topic = discourse topic/theme, function = particle/auxiliary/conjunction/punctuation/function word.
+        - All tokens belonging to the same word or grammar component must use the same "g" value so the PDF colors that whole word/component consistently. For Chinese multi-character words, repeat the same "g" on each one-character token. For Japanese kanji plus okurigana, give the kanji token and the kana run the same "g" when they form one word.
+        - Do not invent other grammar labels such as noun, adjective, modifier, subject-object, punct, or unknown.
         - Keep ids exactly as provided below.
         - Use the provided section/subsection/story ids and titles. Apply the same strict per-Han-character/per-kanji-character ruby rules to all titles and place fields.
         {error_block}
