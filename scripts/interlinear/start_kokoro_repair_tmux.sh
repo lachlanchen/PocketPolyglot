@@ -19,7 +19,7 @@ fi
 
 tmux new-session -d -s "$session" -n repair "
 cd '$root' &&
-python scripts/interlinear/codex_bilingual_chunk_worker.py \
+python -u scripts/interlinear/codex_bilingual_chunk_worker.py \
   --chunks-jsonl books/kokoro/work/bilingual/chunks/chunks.jsonl \
   --output-dir books/kokoro/work/bilingual/interlinear/chunks \
   --work-dir books/kokoro/work/bilingual/codex-repair \
