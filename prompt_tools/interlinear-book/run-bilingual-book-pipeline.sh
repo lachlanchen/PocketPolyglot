@@ -23,12 +23,14 @@ Options:
   --chunk-mode <mode>       paragraph|size (default: paragraph)
   --max-chars <n>           max Chinese source characters per chunk in size mode (default: 450)
   --reference-scope <scope> chapter|subsection|section JP context (default: chapter)
+  --artifact-dir <path>     reusable paragraph artifact store
   --model <name>            Codex model (default: gpt-5.5)
   --reasoning <level>       low|medium|high|xhigh (default: xhigh)
   --max-chunks <n>          process only first n chunks; 0 means all
   --start-index <n>         start at 1-based chunk index (default: 1)
   --output-pdf <path>       named PDF path (default: build/interlinear-block/<title>.pdf)
   --skip-codex              only convert/split/assemble existing chunks
+  --no-hydrate              do not prefill chunks from paragraph artifacts
   --no-compile-each-chunk   do not compile partial preview PDF after each chunk
   --resume-last             accepted for old callers; bilingual calls stay isolated
   --no-commit               skip git commit at the end
@@ -50,12 +52,14 @@ jp_start_heading="第25章 こころ (新字新仮名)"
 chunk_mode="paragraph"
 max_chars=450
 reference_scope="chapter"
+artifact_dir=""
 model="${ZHJPBOOK_CODEX_MODEL:-gpt-5.5}"
 reasoning="${ZHJPBOOK_CODEX_REASONING:-xhigh}"
 max_chunks=0
 start_index=1
 output_pdf=""
 skip_codex=0
+hydrate=1
 compile_each_chunk=1
 resume_last=0
 do_commit=1
@@ -75,12 +79,14 @@ while [[ $# -gt 0 ]]; do
     --chunk-mode) chunk_mode="${2:-}"; shift 2 ;;
     --max-chars) max_chars="${2:-}"; shift 2 ;;
     --reference-scope) reference_scope="${2:-}"; shift 2 ;;
+    --artifact-dir) artifact_dir="${2:-}"; shift 2 ;;
     --model) model="${2:-}"; shift 2 ;;
     --reasoning) reasoning="${2:-}"; shift 2 ;;
     --max-chunks) max_chunks="${2:-0}"; shift 2 ;;
     --start-index) start_index="${2:-1}"; shift 2 ;;
     --output-pdf) output_pdf="${2:-}"; shift 2 ;;
     --skip-codex) skip_codex=1; shift ;;
+    --no-hydrate) hydrate=0; shift ;;
     --no-compile-each-chunk) compile_each_chunk=0; shift ;;
     --resume-last) resume_last=1; shift ;;
     --no-commit) do_commit=0; shift ;;
@@ -104,6 +110,7 @@ manifest="$work_dir/chunks/manifest.json"
 chunk_json_dir="$work_dir/interlinear/chunks"
 assembled_json="data/interlinear/$book_id.json"
 preview_json="$work_dir/preview/$book_id.partial.json"
+artifact_dir="${artifact_dir:-data/interlinear/$book_id/artifacts/paragraphs}"
 if [[ -z "$output_pdf" ]]; then
   if [[ "$title_zh" == "$title_ja" ]]; then
     output_pdf="build/interlinear-block/${title_zh}.pdf"
@@ -145,6 +152,17 @@ python scripts/interlinear/chunk_bilingual_markdown_book.py \
   --reference-scope "$reference_scope" \
   --max-chars "$max_chars"
 
+if [[ "$hydrate" -eq 1 ]]; then
+  python scripts/interlinear/hydrate_chunks_from_artifacts.py \
+    --chunks-jsonl "$chunks_jsonl" \
+    --artifact-dir "$artifact_dir" \
+    --output-dir "$chunk_json_dir" \
+    --require-feature translation \
+    --require-feature zh_ruby \
+    --require-feature ja_ruby \
+    --require-feature grammar
+fi
+
 if [[ "$skip_codex" -eq 0 ]]; then
   compile_cmd=(
     bash "$root/scripts/interlinear/compile_interlinear_book.sh"
@@ -171,6 +189,7 @@ if [[ "$skip_codex" -eq 0 ]]; then
       --manifest "$manifest"
       --chunks-jsonl "$chunks_jsonl"
       --chunk-dir "$chunk_json_dir"
+      --artifact-dir "$artifact_dir"
       --pdf "$output_pdf"
       --pdf "build/interlinear-block/book.pdf"
     )
@@ -217,6 +236,7 @@ if [[ "$do_commit" -eq 1 ]]; then
     --manifest "$manifest" \
     --chunks-jsonl "$chunks_jsonl" \
     --chunk-dir "$chunk_json_dir" \
+    --artifact-dir "$artifact_dir" \
     --pdf "$output_pdf" \
     --pdf "build/interlinear-block/book.pdf"
 

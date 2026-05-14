@@ -124,6 +124,14 @@ The Japanese-main layout in `tex/interlinear-jp-main/` uses the same JSON withou
 
 For bilingual source books, prepare both `books/<book-id>/markdown/zh.md` and `books/<book-id>/markdown/ja.md`. The chunker preserves each Chinese paragraph as its own task by default, while the Japanese reference is intentionally broader chapter context so the Codex worker can find the matching original passage instead of trusting a fragile sentence-range estimate.
 
+Completed bilingual work is also exported into paragraph artifacts:
+
+```text
+data/interlinear/<book-id>/artifacts/paragraphs/
+```
+
+Those artifacts store each paragraph's aligned text, pinyin/furigana, and grammar roles independently from any chunk split. Future runs hydrate new chunk files from the artifact store before calling Codex, so changing from grouped chunks to paragraph chunks does not restart finished work from zero.
+
 The default page is A6 pocket size. To use two columns in the paired demo instead, uncomment `\PairLayoutSideBySide` in `tex/paired/book.tex`.
 
 ## Repository Layout
