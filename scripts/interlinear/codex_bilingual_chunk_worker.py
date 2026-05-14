@@ -152,7 +152,7 @@ def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = 
         f"""
         You are preparing one chunk of a Chinese-main / Japanese-comment pocket interlinear edition of Natsume Soseki's Kokoro.
 
-        Use the Chinese translation as the continuous main text. Use the supplied Japanese original reference for the Japanese comment lines. Do not make a free Japanese translation when the original Japanese reference contains the corresponding passage.
+        Use the Chinese translation as the continuous main text. Use the supplied Japanese original reference for the Japanese comment lines. The reference is intentionally a rough chapter-level context, not a precomputed sentence match; locate the corresponding original Japanese wording yourself. Do not make a free Japanese translation when the original Japanese reference contains the corresponding passage.
 
         Return exactly one JSON object and no Markdown fences, no explanation.
 
@@ -187,7 +187,7 @@ def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = 
         - Line-based pairing requirement: one unit should be one Chinese sentence, or one tightly bound sentence fragment when the sentence/comment is very long. Do not put a whole paragraph into one unit. If a paragraph has multiple sentence-ending punctuation marks, make multiple units in the same order.
         - Target each Chinese unit at roughly 18-65 Chinese characters. A unit longer than 90 characters should normally be split by clause. A unit longer than 128 characters will be rejected.
         - Chinese tokenization is strict: every Chinese Han character must be its own token with pinyin, e.g. "先生" becomes [{{"t":"先","r":"xiān"}},{{"t":"生","r":"sheng"}}]. Never attach pinyin to a multi-character Chinese word or phrase. Punctuation, Arabic numerals, Latin text, and spaces use empty reading.
-        - For each Chinese unit, find the corresponding Japanese original wording in the provided Japanese reference paragraphs for the same story/chapter. Split that Japanese correspondence into exactly two short visual rows.
+        - For each Chinese unit, find the corresponding Japanese original wording in the provided Japanese reference paragraphs for the same rough chapter/reference scope. Split that Japanese correspondence into exactly two short visual rows.
         - Keep each Japanese comment row short: no row should exceed 54 visible Japanese characters. If a row would be longer, split the Chinese unit into smaller sentence/clause units or rebalance the two rows.
         - The Japanese comment for every unit must contain real aligned Japanese. Never leave Japanese rows empty. Never use placeholders such as "注", "注。", "日本語", or a generic marker.
         - Across the chunk, Japanese text must have reasonable coverage of the Chinese units. If the Japanese reference does not include enough source text for this chunk, say so by failing the task rather than fabricating placeholders.
@@ -208,7 +208,7 @@ def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = 
         Chinese source paragraphs:
         {json.dumps(chunk['paragraphs'], ensure_ascii=False, indent=2)}
 
-        Japanese original reference paragraphs for the same story/chapter:
+        Japanese original reference paragraphs for the same rough chapter/reference scope:
         {json.dumps(chunk.get('jp_reference', []), ensure_ascii=False, indent=2)}
         """
     ).strip()

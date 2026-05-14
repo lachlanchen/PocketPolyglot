@@ -57,6 +57,7 @@ make kokoro-bilingual-tmux
 ```
 
 This uses `gpt-5.5` with `xhigh` reasoning, compiles a partial preview after every completed chunk, and writes the named PDF to `build/interlinear-block/心（こころ）.pdf`.
+Future bilingual runs default to one Chinese source paragraph per chunk and attach Japanese original context at the chapter/story level. Use `--chunk-mode size --max-chars 450` only when you intentionally want grouped paragraphs.
 
 Run OCR on a few pages of the scanned PDF:
 
@@ -120,6 +121,8 @@ Supported role keys are `zhu`/`subject`, `wei`/`predicate`/`verb`, `bin`/`object
 The block layout in `tex/interlinear-block/` gives every sentence its own Chinese row plus Japanese note. The run-in layout in `tex/interlinear-run/` makes sentence units flow back-to-back; the Japanese note starts at the same horizontal point as its Chinese unit and wraps inside the measured Chinese-unit width.
 
 The Japanese-main layout in `tex/interlinear-jp-main/` uses the same JSON without changing the source data: Japanese ruby text becomes the main continuous text, and the Chinese pinyin text becomes the smaller comment line under each reading unit.
+
+For bilingual source books, prepare both `books/<book-id>/markdown/zh.md` and `books/<book-id>/markdown/ja.md`. The chunker preserves each Chinese paragraph as its own task by default, while the Japanese reference is intentionally broader chapter context so the Codex worker can find the matching original passage instead of trusting a fragile sentence-range estimate.
 
 The default page is A6 pocket size. To use two columns in the paired demo instead, uncomment `\PairLayoutSideBySide` in `tex/paired/book.tex`.
 

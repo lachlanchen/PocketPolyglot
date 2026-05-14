@@ -9,6 +9,8 @@ start_index="${START_INDEX:-1}"
 model="${MODEL:-gpt-5.5}"
 reasoning="${REASONING:-xhigh}"
 max_chars="${MAX_CHARS:-450}"
+chunk_mode="${CHUNK_MODE:-paragraph}"
+reference_scope="${REFERENCE_SCOPE:-chapter}"
 rechunk="${RECHUNK:-1}"
 work_dir="books/kokoro/work/bilingual"
 chunks_jsonl="$work_dir/chunks/chunks.jsonl"
@@ -30,6 +32,8 @@ if [[ "$rechunk" != "0" ]]; then
     --book-id kokoro \
     --chunks-jsonl "$chunks_jsonl" \
     --manifest "$manifest" \
+    --chunk-mode "$chunk_mode" \
+    --reference-scope "$reference_scope" \
     --max-chars "$max_chars"
 fi
 
@@ -50,3 +54,5 @@ python -u scripts/interlinear/codex_bilingual_chunk_worker.py \
 
 echo "tmux: $session"
 echo "log: $log_path"
+echo "chunk_mode: $chunk_mode"
+echo "reference_scope: $reference_scope"

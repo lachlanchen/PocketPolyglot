@@ -81,7 +81,33 @@ def parse_markdown(path: Path, book_id: str) -> list[dict[str, Any]]:
     return paragraphs
 
 
-def make_chunks(paragraphs: list[dict[str, Any]], book_id: str, max_chars: int) -> list[dict[str, Any]]:
+def chunk_from_paragraphs(book_id: str, chunk_index: int, paragraphs: list[dict[str, Any]]) -> dict[str, Any]:
+    first = paragraphs[0]
+    return {
+        "chunk_id": f"{book_id}-chunk-{chunk_index:04d}",
+        "section_id": first["section_id"],
+        "section_title": first["section_title"],
+        "subsection_id": first["subsection_id"],
+        "subsection_title": first["subsection_title"],
+        "story_id": first["story_id"],
+        "story_title": first["story_title"],
+        "story_index": first["story_index"],
+        "paragraphs": paragraphs,
+    }
+
+
+def make_paragraph_chunks(paragraphs: list[dict[str, Any]], book_id: str) -> list[dict[str, Any]]:
+    return [chunk_from_paragraphs(book_id, index, [paragraph]) for index, paragraph in enumerate(paragraphs, start=1)]
+
+
+def make_chunks(
+    paragraphs: list[dict[str, Any]], book_id: str, max_chars: int, *, chunk_mode: str = "size"
+) -> list[dict[str, Any]]:
+    if chunk_mode == "paragraph":
+        return make_paragraph_chunks(paragraphs, book_id)
+    if chunk_mode != "size":
+        raise ValueError(f"unknown chunk mode: {chunk_mode}")
+
     chunks: list[dict[str, Any]] = []
     current: list[dict[str, Any]] = []
     current_chars = 0
@@ -91,20 +117,7 @@ def make_chunks(paragraphs: list[dict[str, Any]], book_id: str, max_chars: int) 
         nonlocal current, current_chars, current_path
         if not current:
             return
-        first = current[0]
-        chunks.append(
-            {
-                "chunk_id": f"{book_id}-chunk-{len(chunks) + 1:04d}",
-                "section_id": first["section_id"],
-                "section_title": first["section_title"],
-                "subsection_id": first["subsection_id"],
-                "subsection_title": first["subsection_title"],
-                "story_id": first["story_id"],
-                "story_title": first["story_title"],
-                "story_index": first["story_index"],
-                "paragraphs": current,
-            }
-        )
+        chunks.append(chunk_from_paragraphs(book_id, len(chunks) + 1, current))
         current = []
         current_chars = 0
         current_path = None
@@ -128,11 +141,12 @@ def main() -> int:
     parser.add_argument("--chunks-jsonl", required=True)
     parser.add_argument("--manifest", required=True)
     parser.add_argument("--max-chars", type=int, default=1800)
+    parser.add_argument("--chunk-mode", choices=["size", "paragraph"], default="size")
     args = parser.parse_args()
 
     markdown = Path(args.markdown)
     paragraphs = parse_markdown(markdown, args.book_id)
-    chunks = make_chunks(paragraphs, args.book_id, args.max_chars)
+    chunks = make_chunks(paragraphs, args.book_id, args.max_chars, chunk_mode=args.chunk_mode)
 
     chunks_path = Path(args.chunks_jsonl)
     manifest_path = Path(args.manifest)
@@ -145,6 +159,8 @@ def main() -> int:
         "markdown": str(markdown),
         "source_sha256": hashlib.sha256(markdown.read_bytes()).hexdigest(),
         "paragraph_count": len(paragraphs),
+        "chunk_mode": args.chunk_mode,
+        "max_chars": args.max_chars if args.chunk_mode == "size" else None,
         "chunk_count": len(chunks),
         "chunks_jsonl": str(chunks_path),
         "chunks": [

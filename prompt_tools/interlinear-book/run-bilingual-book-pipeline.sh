@@ -20,7 +20,9 @@ Options:
   --title-ja-reading <txt>  furigana for title (default: こころ)
   --zh-start-heading <text> source section heading in Chinese Markdown (default: 心)
   --jp-start-heading <text> source section heading in Japanese Markdown
-  --max-chars <n>           max Chinese source characters per chunk (default: 450)
+  --chunk-mode <mode>       paragraph|size (default: paragraph)
+  --max-chars <n>           max Chinese source characters per chunk in size mode (default: 450)
+  --reference-scope <scope> chapter|subsection|section JP context (default: chapter)
   --model <name>            Codex model (default: gpt-5.5)
   --reasoning <level>       low|medium|high|xhigh (default: xhigh)
   --max-chunks <n>          process only first n chunks; 0 means all
@@ -45,7 +47,9 @@ title_ja="こころ"
 title_ja_reading="こころ"
 zh_start_heading="心"
 jp_start_heading="第25章 こころ (新字新仮名)"
+chunk_mode="paragraph"
 max_chars=450
+reference_scope="chapter"
 model="${ZHJPBOOK_CODEX_MODEL:-gpt-5.5}"
 reasoning="${ZHJPBOOK_CODEX_REASONING:-xhigh}"
 max_chunks=0
@@ -68,7 +72,9 @@ while [[ $# -gt 0 ]]; do
     --title-ja-reading) title_ja_reading="${2:-}"; shift 2 ;;
     --zh-start-heading) zh_start_heading="${2:-}"; shift 2 ;;
     --jp-start-heading) jp_start_heading="${2:-}"; shift 2 ;;
+    --chunk-mode) chunk_mode="${2:-}"; shift 2 ;;
     --max-chars) max_chars="${2:-}"; shift 2 ;;
+    --reference-scope) reference_scope="${2:-}"; shift 2 ;;
     --model) model="${2:-}"; shift 2 ;;
     --reasoning) reasoning="${2:-}"; shift 2 ;;
     --max-chunks) max_chunks="${2:-0}"; shift 2 ;;
@@ -135,6 +141,8 @@ python scripts/interlinear/chunk_bilingual_markdown_book.py \
   --book-id "$book_id" \
   --chunks-jsonl "$chunks_jsonl" \
   --manifest "$manifest" \
+  --chunk-mode "$chunk_mode" \
+  --reference-scope "$reference_scope" \
   --max-chars "$max_chars"
 
 if [[ "$skip_codex" -eq 0 ]]; then
