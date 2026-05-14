@@ -20,7 +20,7 @@ from codex_chunk_worker import extract_json, load_chunks, run_codex
 from normalize_grammar_roles import cleanup_components, normalize_node
 from validate_interlinear_json import ja_lines_text, normalize
 
-PROMPT_VERSION = "broad-post-merge-review-v1"
+PROMPT_VERSION = "broad-post-merge-review-v2"
 CONTENT_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaffぁ-ゟ゠-ヿA-Za-z0-9]")
 HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 SENTENCE_END_RE = re.compile(r"[。！？!?]")
@@ -141,6 +141,13 @@ def review_chunk(source: dict[str, Any], data: dict[str, Any]) -> list[str]:
         units = paragraph.get("units", [])
         paragraph_id = paragraph.get("id", f"paragraphs[{paragraph_index}]")
         source_text = str(paragraph.get("source_text", ""))
+        paragraph_counts = {"zh": {}, "ja": {}, "both": {}}
+
+        def add_paragraph_counts(lang: str, counts: dict[str, int]) -> None:
+            for role, count in counts.items():
+                paragraph_counts[lang][role] = paragraph_counts[lang].get(role, 0) + count
+                paragraph_counts["both"][role] = paragraph_counts["both"].get(role, 0) + count
+
         if isinstance(units, list):
             sentence_count = len(SENTENCE_END_RE.findall(source_text))
             if sentence_count >= 4 and len(units) < max(2, math.ceil(sentence_count * 0.45)):
@@ -160,6 +167,8 @@ def review_chunk(source: dict[str, Any], data: dict[str, Any]) -> list[str]:
             ja_counts = role_counts(ja_tokens)
             add_counts("zh", zh_counts)
             add_counts("ja", ja_counts)
+            add_paragraph_counts("zh", zh_counts)
+            add_paragraph_counts("ja", ja_counts)
             add_role_collapse_issues(zh_counts, f"{unit_where}.zh", errors, minimum=34, max_ratio=0.92, min_roles=2)
             add_role_collapse_issues(ja_counts, f"{unit_where}.ja", errors, minimum=34, max_ratio=0.92, min_roles=2)
 
@@ -181,6 +190,14 @@ def review_chunk(source: dict[str, Any], data: dict[str, Any]) -> list[str]:
                 reading = str(token.get("r", ""))
                 if reading and HAN_RE.search(reading):
                     errors.append(f"{unit_where}.ja token {token_index}: furigana contains kanji")
+            for token_index, token in enumerate(zh_tokens):
+                reading = str(token.get("r", ""))
+                if reading and (HAN_RE.search(reading) or re.search(r"\d", reading)):
+                    errors.append(f"{unit_where}.zh token {token_index}: pinyin must use tone marks, not Han or tone digits")
+
+        add_role_collapse_issues(paragraph_counts["zh"], f"{paragraph_id}.zh", errors, minimum=70, max_ratio=0.86, min_roles=3)
+        add_role_collapse_issues(paragraph_counts["ja"], f"{paragraph_id}.ja", errors, minimum=70, max_ratio=0.86, min_roles=3)
+        add_role_collapse_issues(paragraph_counts["both"], paragraph_id, errors, minimum=120, max_ratio=0.84, min_roles=3)
 
     for text, count in duplicate_ja.items():
         if count >= 3 and len(text) >= 5:
@@ -210,6 +227,9 @@ def repair_prompt(source: dict[str, Any], current: dict[str, Any], issues: list[
         - Use one English grammar role in "g" for every content token.
         - Avoid color collapse: a whole sentence/chunk must not become one dominant role such as all predicate.
         - Match the major Chinese and Japanese components roughly with the same roles/colors.
+        - Treat visible pages that become one color as a serious data bug: it usually means the chunk or paragraph assigns nearly every token the same "g" role.
+        - Check for the full set of quality failures a reader would see in the PDF: missing source text, missing Japanese, duplicated Japanese comments, Japanese from the wrong chapter, Japanese paraphrase instead of original wording, oversized units that are not line-based, unbalanced two-line comments, missing pinyin/furigana, furigana on kana or multi-kanji tokens, pinyin on multi-character Chinese tokens, and role/color mismatch between corresponding Chinese and Japanese phrases.
+        - Do not merely make validation pass. Make the result read like a clean interlinear book page: continuous Chinese main text, sentence-by-sentence Japanese correspondence, correct ruby/readings, and varied but meaningful grammar colors.
 
         Review failures to fix:
         {shown_issues}
