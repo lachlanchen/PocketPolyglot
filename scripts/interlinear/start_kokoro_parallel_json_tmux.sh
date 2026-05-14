@@ -60,7 +60,7 @@ merge_once() {
     --candidate-dir '$candidate_dir' \
     --canonical-dir books/kokoro/work/bilingual/interlinear/chunks \
     --merged-dir '$merged_dir' \
-    --after-merge-command 'bash scripts/interlinear/compile_kokoro_both_previews.sh'
+    --after-merge-command 'bash scripts/interlinear/review_compile_kokoro_merged.sh'
 }
 
 while true; do

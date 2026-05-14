@@ -11,4 +11,5 @@ exec bash scripts/interlinear/commit_interlinear_progress.sh \
   --pdf "build/interlinear-jp-main/こころ（心）.pdf" \
   --pdf "build/interlinear-jp-main/book.pdf" \
   --extra "books/kokoro/work/bilingual/grammar-role-repair/state.json" \
+  --extra "books/kokoro/work/bilingual/review-backfix-state.json" \
   --message-prefix "Update Kokoro interlinear progress"

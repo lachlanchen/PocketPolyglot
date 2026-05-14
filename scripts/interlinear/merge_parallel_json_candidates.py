@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import shutil
 import subprocess
 from pathlib import Path
@@ -51,6 +52,7 @@ def main() -> int:
     rejected_dir.mkdir(parents=True, exist_ok=True)
 
     merged = 0
+    merged_ids: list[str] = []
     known_ids = {chunk["chunk_id"] for chunk in sources}
     for stray_path in sorted(candidate_dir.glob("*.json")):
         if stray_path.stem not in known_ids:
@@ -85,13 +87,23 @@ def main() -> int:
         tmp_path.replace(canonical_path)
         shutil.move(str(candidate_path), merged_dir / candidate_path.name)
         merged += 1
+        merged_ids.append(chunk_id)
         print(f"merged {chunk_id}")
         if args.max_merge and merged >= args.max_merge:
             break
 
     print(f"merged_count={merged}")
     if merged and args.after_merge_command:
-        subprocess.run(args.after_merge_command, shell=True, check=True)
+        env = os.environ.copy()
+        env.update(
+            {
+                "ZHJPBOOK_MERGED_CHUNKS": " ".join(merged_ids),
+                "ZHJPBOOK_MERGED_COUNT": str(merged),
+                "ZHJPBOOK_FIRST_MERGED": merged_ids[0],
+                "ZHJPBOOK_LAST_MERGED": merged_ids[-1],
+            }
+        )
+        subprocess.run(args.after_merge_command, shell=True, check=True, env=env)
     return 0
 
 
