@@ -108,7 +108,7 @@ work_dir="books/$book_id/work/bilingual"
 chunks_jsonl="$work_dir/chunks/chunks.jsonl"
 manifest="$work_dir/chunks/manifest.json"
 chunk_json_dir="$work_dir/interlinear/chunks"
-assembled_json="data/interlinear/$book_id.json"
+assembled_json="data/interlinear/$book_id/assembled/current.json"
 preview_json="$work_dir/preview/$book_id.partial.json"
 artifact_dir="${artifact_dir:-data/interlinear/$book_id/artifacts/paragraphs}"
 if [[ -z "$output_pdf" ]]; then
@@ -119,7 +119,7 @@ if [[ -z "$output_pdf" ]]; then
   fi
 fi
 
-mkdir -p "books/$book_id/markdown" "books/$jp_source_id/markdown" "$work_dir" "$chunk_json_dir" "data/interlinear"
+mkdir -p "books/$book_id/markdown" "books/$jp_source_id/markdown" "$work_dir" "$chunk_json_dir" "$(dirname "$assembled_json")"
 
 python scripts/books/epub_to_markdown.py "$zh_epub" \
   --raw-output "$zh_raw_md" \
@@ -240,7 +240,7 @@ if [[ "$do_commit" -eq 1 ]]; then
     --pdf "$output_pdf" \
     --pdf "build/interlinear-block/book.pdf"
 
-  git add .gitignore Makefile README.md scripts prompt_tools books/"$book_id"/markdown books/"$jp_source_id"/markdown/book.md data/interlinear/"$book_id".json
+  git add .gitignore Makefile README.md scripts prompt_tools books/"$book_id"/markdown books/"$jp_source_id"/markdown/book.md data/interlinear/"$book_id"/assembled
   if ! git diff --cached --quiet; then
     git commit -m "Build bilingual $book_id interlinear source"
   else

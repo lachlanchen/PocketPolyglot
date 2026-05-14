@@ -76,9 +76,9 @@ work_dir="books/$book_id/work"
 chunks_jsonl="$work_dir/chunks/chunks.jsonl"
 manifest="$work_dir/chunks/manifest.json"
 chunk_json_dir="$work_dir/interlinear/chunks"
-assembled_json="data/interlinear/$book_id.json"
+assembled_json="data/interlinear/$book_id/assembled/current.json"
 
-mkdir -p "books/$book_id/markdown" "$work_dir" "$chunk_json_dir" "data/interlinear"
+mkdir -p "books/$book_id/markdown" "$work_dir" "$chunk_json_dir" "$(dirname "$assembled_json")"
 
 python scripts/books/epub_to_markdown.py "$epub" \
   --raw-output "$raw_md" \
@@ -123,7 +123,7 @@ python scripts/interlinear/validate_interlinear_json.py "$assembled_json"
 make interlinear INTERLINEAR_DATA="$assembled_json"
 
 if [[ "$do_commit" -eq 1 ]]; then
-  git add .gitignore Makefile README.md scripts prompt_tools books/"$book_id"/markdown data/interlinear/"$book_id".json
+  git add .gitignore Makefile README.md scripts prompt_tools books/"$book_id"/markdown data/interlinear/"$book_id"/assembled
   if ! git diff --cached --quiet; then
     git commit -m "Add $book_id interlinear book pipeline output"
   else

@@ -53,9 +53,11 @@ prompt_tools/interlinear-book/start-bilingual-book-tmux.sh --kill --no-attach --
 
 The pipeline writes extracted source Markdown to `books/kokoro/markdown/zh.md`
 and `books/kokoro/markdown/ja.md`, chunk work under
-`books/kokoro/work/bilingual/`, assembled JSON to `data/interlinear/kokoro.json`,
-and a named pocket PDF to `build/interlinear-block/心（こころ）.pdf`. By default it
-also compiles a partial preview PDF after every newly completed chunk.
+`books/kokoro/work/bilingual/`, assembled JSON to
+`data/interlinear/kokoro/assembled/current.json`, reusable paragraph artifacts to
+`data/interlinear/kokoro/artifacts/paragraphs/`, and a named pocket PDF to
+`build/interlinear-block/心（こころ）.pdf`. By default it also compiles a partial
+preview PDF after every newly completed chunk.
 
 ## Image-Only Japanese EPUBs
 

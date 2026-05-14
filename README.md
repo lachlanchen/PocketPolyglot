@@ -48,7 +48,7 @@ Run the full Codex-assisted `心` interlinear pipeline in tmux:
 make kokoro-tmux
 ```
 
-The worker uses `gpt-5.5` with high reasoning, resumes one Codex session chunk by chunk, writes `books/kokoro/markdown/book.md`, assembles `data/interlinear/kokoro.json`, and compiles with the `interlinear-block` style to `build/interlinear-block/book.pdf`.
+The worker uses `gpt-5.5` with high reasoning, resumes one Codex session chunk by chunk, writes `books/kokoro/markdown/book.md`, assembles `data/interlinear/kokoro/assembled/current.json`, and compiles with the `interlinear-block` style to `build/interlinear-block/book.pdf`.
 
 Run the bilingual-source `心（こころ）` pipeline with Chinese as main text and the Japanese original as comment text:
 
@@ -138,6 +138,8 @@ The default page is A6 pocket size. To use two columns in the paired demo instea
 
 ```text
 data/interlinear/      structured JSON corpus
+data/interlinear/*/assembled/ current assembled book JSON
+data/interlinear/*/legacy/ archived older assembled JSON versions
 data/paired/           simple paired Markdown demo
 scripts/interlinear/   JSON-to-TeX renderers
 scripts/ocr/           OCR helper
