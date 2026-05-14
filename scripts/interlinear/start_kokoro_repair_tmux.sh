@@ -8,6 +8,12 @@ session="${1:-zhjpbook-repair}"
 start_index="${START_INDEX:-1}"
 model="${MODEL:-gpt-5.5}"
 reasoning="${REASONING:-xhigh}"
+max_chars="${MAX_CHARS:-450}"
+rechunk="${RECHUNK:-1}"
+work_dir="books/kokoro/work/bilingual"
+chunks_jsonl="$work_dir/chunks/chunks.jsonl"
+manifest="$work_dir/chunks/manifest.json"
+chunk_dir="$work_dir/interlinear/chunks"
 log_dir="books/kokoro/work/logs"
 mkdir -p "$log_dir"
 log_path="$log_dir/${session}_$(date +%Y%m%d_%H%M%S).log"
@@ -17,11 +23,21 @@ if tmux has-session -t "$session" 2>/dev/null; then
   exit 1
 fi
 
+if [[ "$rechunk" != "0" ]]; then
+  python scripts/interlinear/chunk_bilingual_markdown_book.py \
+    --zh-markdown books/kokoro/markdown/zh.md \
+    --ja-markdown books/kokoro/markdown/ja.md \
+    --book-id kokoro \
+    --chunks-jsonl "$chunks_jsonl" \
+    --manifest "$manifest" \
+    --max-chars "$max_chars"
+fi
+
 tmux new-session -d -s "$session" -n repair "
 cd '$root' &&
 python -u scripts/interlinear/codex_bilingual_chunk_worker.py \
-  --chunks-jsonl books/kokoro/work/bilingual/chunks/chunks.jsonl \
-  --output-dir books/kokoro/work/bilingual/interlinear/chunks \
+  --chunks-jsonl '$chunks_jsonl' \
+  --output-dir '$chunk_dir' \
   --work-dir books/kokoro/work/bilingual/codex-repair \
   --model '$model' \
   --reasoning '$reasoning' \
