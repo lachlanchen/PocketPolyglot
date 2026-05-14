@@ -1,0 +1,255 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kokoro",
+  "paragraph_id": "kokoro-zh-p00469",
+  "source_text": "“今天我是斥候长。”",
+  "source_sha256": "ac31206aa9c95d38de7f4448d5386fef45fa3d6c0eb95cc1fe1891863c766c3b",
+  "source_normalized_sha256": "ac31206aa9c95d38de7f4448d5386fef45fa3d6c0eb95cc1fe1891863c766c3b",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 19,
+    "grammar_token_total": 19,
+    "unit_count": 1
+  },
+  "source_chunk_id": "kokoro-chunk-0082",
+  "source_manifest_sha256": "4fcb40821ed69568eacbd6bf62b7d53874d6fe6fe7133150a5e744c45527959e",
+  "section": {
+    "id": "心",
+    "title_zh": [
+      {
+        "t": "心",
+        "r": "xīn",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "こころ",
+        "r": "",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "上-先生和我",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng",
+        "g": "topic"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "先",
+        "r": "xiān",
+        "g": "topic"
+      },
+      {
+        "t": "生",
+        "r": "sheng",
+        "g": "topic"
+      },
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "topic"
+      },
+      {
+        "t": "我",
+        "r": "wǒ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう",
+        "g": "topic"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "先",
+        "r": "せん",
+        "g": "topic"
+      },
+      {
+        "t": "生",
+        "r": "せい",
+        "g": "topic"
+      },
+      {
+        "t": "と",
+        "r": "",
+        "g": "topic"
+      },
+      {
+        "t": "私",
+        "r": "わたし",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "心-上-先生和我-二十八",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "八",
+        "r": "bā",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "八",
+        "r": "はち",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kokoro-zh-p00469",
+    "source_text": "“今天我是斥候长。”",
+    "units": [
+      {
+        "source_text": "“今天我是斥候长。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "今",
+            "r": "jīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "斥",
+            "r": "chì",
+            "g": "complement"
+          },
+          {
+            "t": "候",
+            "r": "hòu",
+            "g": "complement"
+          },
+          {
+            "t": "长",
+            "r": "zhǎng",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "今",
+              "r": "いま",
+              "g": "adverbial"
+            },
+            {
+              "t": "斥",
+              "r": "せっ",
+              "g": "complement"
+            },
+            {
+              "t": "候",
+              "r": "こう",
+              "g": "complement"
+            },
+            {
+              "t": "長",
+              "r": "ちょう",
+              "g": "complement"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "なってる",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "ところなんだよ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

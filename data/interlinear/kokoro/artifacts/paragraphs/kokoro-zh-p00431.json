@@ -1,0 +1,255 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kokoro",
+  "paragraph_id": "kokoro-zh-p00431",
+  "source_text": "“你看我像个财主吗？”",
+  "source_sha256": "f535510c373d30d8fe4e13b2c3be73bb653c2fa1b6f99c89804481f78be2f5d8",
+  "source_normalized_sha256": "f535510c373d30d8fe4e13b2c3be73bb653c2fa1b6f99c89804481f78be2f5d8",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 19,
+    "grammar_token_total": 19,
+    "unit_count": 1
+  },
+  "source_chunk_id": "kokoro-chunk-0078",
+  "source_manifest_sha256": "4fcb40821ed69568eacbd6bf62b7d53874d6fe6fe7133150a5e744c45527959e",
+  "section": {
+    "id": "心",
+    "title_zh": [
+      {
+        "t": "心",
+        "r": "xīn",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "こころ",
+        "r": "",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "上-先生和我",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng",
+        "g": "topic"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "先",
+        "r": "xiān",
+        "g": "topic"
+      },
+      {
+        "t": "生",
+        "r": "sheng",
+        "g": "topic"
+      },
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "function"
+      },
+      {
+        "t": "我",
+        "r": "wǒ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう",
+        "g": "topic"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "先",
+        "r": "せん",
+        "g": "topic"
+      },
+      {
+        "t": "生",
+        "r": "せい",
+        "g": "topic"
+      },
+      {
+        "t": "と",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "私",
+        "r": "わたし",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "心-上-先生和我-二十七",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "七",
+        "r": "しち",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kokoro-zh-p00431",
+    "source_text": "“你看我像个财主吗？”",
+    "units": [
+      {
+        "source_text": "“你看我像个财主吗？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "object"
+          },
+          {
+            "t": "像",
+            "r": "xiàng",
+            "g": "predicate"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "attributive"
+          },
+          {
+            "t": "财",
+            "r": "cái",
+            "g": "complement"
+          },
+          {
+            "t": "主",
+            "r": "zhǔ",
+            "g": "complement"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "？”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "財",
+              "r": "ざい",
+              "g": "complement"
+            },
+            {
+              "t": "産",
+              "r": "さん",
+              "g": "complement"
+            },
+            {
+              "t": "家",
+              "r": "か",
+              "g": "complement"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "complement"
+            }
+          ],
+          [
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "えますか」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

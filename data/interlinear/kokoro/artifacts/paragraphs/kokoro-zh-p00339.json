@@ -1,0 +1,387 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kokoro",
+  "paragraph_id": "kokoro-zh-p00339",
+  "source_text": "“是啊。我倒是真希望能代替他呢。他呕吐吗？”",
+  "source_sha256": "320bebb4b738c219fe4daf90c33eaed3081c731e13c8c3b6304eb9a91d6f33a5",
+  "source_normalized_sha256": "320bebb4b738c219fe4daf90c33eaed3081c731e13c8c3b6304eb9a91d6f33a5",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 41,
+    "grammar_token_total": 41,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kokoro-chunk-0060",
+  "source_manifest_sha256": "4fcb40821ed69568eacbd6bf62b7d53874d6fe6fe7133150a5e744c45527959e",
+  "section": {
+    "id": "心",
+    "title_zh": [
+      {
+        "t": "心",
+        "r": "xīn",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "こころ",
+        "r": "",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "上-先生和我",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng",
+        "g": "topic"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "先",
+        "r": "xiān",
+        "g": "topic"
+      },
+      {
+        "t": "生",
+        "r": "sheng",
+        "g": "topic"
+      },
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "topic"
+      },
+      {
+        "t": "我",
+        "r": "wǒ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう",
+        "g": "topic"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "先",
+        "r": "せん",
+        "g": "topic"
+      },
+      {
+        "t": "生",
+        "r": "せい",
+        "g": "topic"
+      },
+      {
+        "t": "と",
+        "r": "",
+        "g": "topic"
+      },
+      {
+        "t": "私",
+        "r": "わたし",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "心-上-先生和我-二十一",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kokoro-zh-p00339",
+    "source_text": "“是啊。我倒是真希望能代替他呢。他呕吐吗？”",
+    "units": [
+      {
+        "source_text": "“是啊。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "そう",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "さね",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我倒是真希望能代替他呢。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "倒",
+            "r": "dào",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "adverbial"
+          },
+          {
+            "t": "真",
+            "r": "zhēn",
+            "g": "adverbial"
+          },
+          {
+            "t": "希",
+            "r": "xī",
+            "g": "predicate"
+          },
+          {
+            "t": "望",
+            "r": "wàng",
+            "g": "predicate"
+          },
+          {
+            "t": "能",
+            "r": "néng",
+            "g": "adverbial"
+          },
+          {
+            "t": "代",
+            "r": "dài",
+            "g": "predicate"
+          },
+          {
+            "t": "替",
+            "r": "tì",
+            "g": "predicate"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "object"
+          },
+          {
+            "t": "呢",
+            "r": "ne",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "代",
+              "r": "かわ",
+              "g": "predicate"
+            },
+            {
+              "t": "られれば",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "代",
+              "r": "かわ",
+              "g": "predicate"
+            },
+            {
+              "t": "ってあげても",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "好",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "いが",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "他呕吐吗？”",
+        "zh": [
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "呕",
+            "r": "ǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "吐",
+            "r": "tù",
+            "g": "predicate"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "――",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "嘔",
+              "r": "おう",
+              "g": "subject"
+            },
+            {
+              "t": "気",
+              "r": "き",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "あるんですか",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,461 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kokoro",
+  "paragraph_id": "kokoro-zh-p00475",
+  "source_text": "“咱们该回去了。天虽然长了，可这么舒适，竟不知不觉地黑下来了。”",
+  "source_sha256": "fe3bdcbc60584d36b453ca34525288fc5f9242deadd067d3d73f350593031e0a",
+  "source_normalized_sha256": "fe3bdcbc60584d36b453ca34525288fc5f9242deadd067d3d73f350593031e0a",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 58,
+    "grammar_token_total": 58,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kokoro-chunk-0083",
+  "source_manifest_sha256": "4fcb40821ed69568eacbd6bf62b7d53874d6fe6fe7133150a5e744c45527959e",
+  "section": {
+    "id": "心",
+    "title_zh": [
+      {
+        "t": "心",
+        "r": "xīn",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "こころ",
+        "r": "",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "上-先生和我",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng",
+        "g": "topic"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "先",
+        "r": "xiān",
+        "g": "topic"
+      },
+      {
+        "t": "生",
+        "r": "sheng",
+        "g": "topic"
+      },
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "topic"
+      },
+      {
+        "t": "我",
+        "r": "wǒ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう",
+        "g": "topic"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "先",
+        "r": "せん",
+        "g": "topic"
+      },
+      {
+        "t": "生",
+        "r": "せい",
+        "g": "topic"
+      },
+      {
+        "t": "と",
+        "r": "",
+        "g": "topic"
+      },
+      {
+        "t": "私",
+        "r": "わたし",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "心-上-先生和我-二十九",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "九",
+        "r": "jiǔ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "九",
+        "r": "きゅう",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kokoro-zh-p00475",
+    "source_text": "“咱们该回去了。天虽然长了，可这么舒适，竟不知不觉地黑下来了。”",
+    "units": [
+      {
+        "source_text": "“咱们该回去了。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "咱",
+            "r": "zán",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          },
+          {
+            "t": "该",
+            "r": "gāi",
+            "g": "predicate"
+          },
+          {
+            "t": "回",
+            "r": "huí",
+            "g": "predicate"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "もう",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "そろそろ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "帰",
+              "r": "かえ",
+              "g": "predicate"
+            },
+            {
+              "t": "りましょう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "天虽然长了，可这么舒适，竟不知不觉地黑下来了。”",
+        "zh": [
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "subject"
+          },
+          {
+            "t": "虽",
+            "r": "suī",
+            "g": "function"
+          },
+          {
+            "t": "然",
+            "r": "rán",
+            "g": "function"
+          },
+          {
+            "t": "长",
+            "r": "cháng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "function"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "adverbial"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "adverbial"
+          },
+          {
+            "t": "舒",
+            "r": "shū",
+            "g": "complement"
+          },
+          {
+            "t": "适",
+            "r": "shì",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "竟",
+            "r": "jìng",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "知",
+            "r": "zhī",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "觉",
+            "r": "jué",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "黑",
+            "r": "hēi",
+            "g": "predicate"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "complement"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "大",
+              "r": "だい",
+              "g": "adverbial"
+            },
+            {
+              "t": "分",
+              "r": "ぶ",
+              "g": "adverbial"
+            },
+            {
+              "t": "日",
+              "r": "ひ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "永",
+              "r": "なが",
+              "g": "predicate"
+            },
+            {
+              "t": "くなったようだが",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "やっぱりこう",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "安",
+              "r": "あん",
+              "g": "complement"
+            },
+            {
+              "t": "閑",
+              "r": "かん",
+              "g": "complement"
+            },
+            {
+              "t": "としているうちには",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "いつの",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "間",
+              "r": "ま",
+              "g": "adverbial"
+            },
+            {
+              "t": "にか",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "暮",
+              "r": "く",
+              "g": "predicate"
+            },
+            {
+              "t": "れて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "行",
+              "r": "い",
+              "g": "complement"
+            },
+            {
+              "t": "くんだね",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

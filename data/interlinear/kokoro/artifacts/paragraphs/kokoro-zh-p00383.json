@@ -1,0 +1,451 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kokoro",
+  "paragraph_id": "kokoro-zh-p00383",
+  "source_text": "我心里踏实了一些。先生一直观察着我的表情，然后又补了一句：",
+  "source_sha256": "44c79144ffde9cd42b8c473fcc6724a702bf88dec0b948c768ced608b9d824ee",
+  "source_normalized_sha256": "44c79144ffde9cd42b8c473fcc6724a702bf88dec0b948c768ced608b9d824ee",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 56,
+    "grammar_token_total": 56,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kokoro-chunk-0070",
+  "source_manifest_sha256": "4fcb40821ed69568eacbd6bf62b7d53874d6fe6fe7133150a5e744c45527959e",
+  "section": {
+    "id": "心",
+    "title_zh": [
+      {
+        "t": "心",
+        "r": "xīn",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "こころ",
+        "r": "",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "上-先生和我",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng",
+        "g": "topic"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "先",
+        "r": "xiān",
+        "g": "topic"
+      },
+      {
+        "t": "生",
+        "r": "sheng",
+        "g": "topic"
+      },
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "topic"
+      },
+      {
+        "t": "我",
+        "r": "wǒ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう",
+        "g": "topic"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "先",
+        "r": "せん",
+        "g": "topic"
+      },
+      {
+        "t": "生",
+        "r": "せい",
+        "g": "topic"
+      },
+      {
+        "t": "と",
+        "r": "",
+        "g": "topic"
+      },
+      {
+        "t": "私",
+        "r": "わたし",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "心-上-先生和我-二十四",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "四",
+        "r": "し",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kokoro-zh-p00383",
+    "source_text": "我心里踏实了一些。先生一直观察着我的表情，然后又补了一句：",
+    "units": [
+      {
+        "source_text": "我心里踏实了一些。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "心",
+            "r": "xīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "踏",
+            "r": "tā",
+            "g": "predicate"
+          },
+          {
+            "t": "实",
+            "r": "shi",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "complement"
+          },
+          {
+            "t": "些",
+            "r": "xiē",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "やや",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "安",
+              "r": "あん",
+              "g": "predicate"
+            },
+            {
+              "t": "心",
+              "r": "しん",
+              "g": "predicate"
+            },
+            {
+              "t": "した",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "先生一直观察着我的表情，然后又补了一句：",
+        "zh": [
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "subject"
+          },
+          {
+            "t": "生",
+            "r": "sheng",
+            "g": "subject"
+          },
+          {
+            "t": "一",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "直",
+            "r": "zhí",
+            "g": "adverbial"
+          },
+          {
+            "t": "观",
+            "r": "guān",
+            "g": "predicate"
+          },
+          {
+            "t": "察",
+            "r": "chá",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "表",
+            "r": "biǎo",
+            "g": "object"
+          },
+          {
+            "t": "情",
+            "r": "qíng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "然",
+            "r": "rán",
+            "g": "adverbial"
+          },
+          {
+            "t": "后",
+            "r": "hòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "补",
+            "r": "bǔ",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "object"
+          },
+          {
+            "t": "句",
+            "r": "jù",
+            "g": "object"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "変",
+              "r": "へん",
+              "g": "object"
+            },
+            {
+              "t": "化",
+              "r": "か",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "凝",
+              "r": "じっ",
+              "g": "predicate"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "ていた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "先",
+              "r": "せん",
+              "g": "subject"
+            },
+            {
+              "t": "生",
+              "r": "せい",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "それから",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "こう",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "付",
+              "r": "つ",
+              "g": "predicate"
+            },
+            {
+              "t": "け",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "足",
+              "r": "た",
+              "g": "predicate"
+            },
+            {
+              "t": "した",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
