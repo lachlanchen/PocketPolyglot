@@ -12,6 +12,8 @@ model="${MODEL:-gpt-5.5}"
 reasoning="${REASONING:-xhigh}"
 resume_after_repair="${RESUME_AFTER_REPAIR:-1}"
 resume_start_index="${RESUME_START_INDEX:-26}"
+resume_mode="${RESUME_MODE:-parallel-json}"
+resume_workers="${RESUME_WORKERS:-10}"
 work_dir="books/kokoro/work/bilingual/grammar-role-repair"
 log_dir="books/kokoro/work/logs"
 mkdir -p "$log_dir" "$work_dir"
@@ -25,7 +27,11 @@ fi
 
 resume_cmd="true"
 if [[ "$resume_after_repair" == "1" ]]; then
-  resume_cmd="RECHUNK=0 START_INDEX='$resume_start_index' bash scripts/interlinear/start_kokoro_repair_tmux.sh zhjpbook-repair"
+  if [[ "$resume_mode" == "parallel-json" ]]; then
+    resume_cmd="START_INDEX='$resume_start_index' WORKERS='$resume_workers' bash scripts/interlinear/start_kokoro_parallel_json_tmux.sh zhjpbook-parallel-json"
+  else
+    resume_cmd="RECHUNK=0 START_INDEX='$resume_start_index' bash scripts/interlinear/start_kokoro_repair_tmux.sh zhjpbook-repair"
+  fi
 fi
 
 cat > "$run_script" <<EOF
@@ -63,3 +69,5 @@ echo "end_index: $end_index"
 echo "max_chunks: $max_chunks"
 echo "resume_after_repair: $resume_after_repair"
 echo "resume_start_index: $resume_start_index"
+echo "resume_mode: $resume_mode"
+echo "resume_workers: $resume_workers"
