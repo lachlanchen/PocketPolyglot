@@ -1,0 +1,331 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kokoro",
+  "paragraph_id": "kokoro-zh-p00604",
+  "source_text": "这倒是闻所未闻的新鲜事，我觉得有点纳闷。",
+  "source_sha256": "601cd10a6cf7364b8bb5edd8af9b8a83b739d743fe57c415b6ba2e1c2fd6359e",
+  "source_normalized_sha256": "601cd10a6cf7364b8bb5edd8af9b8a83b739d743fe57c415b6ba2e1c2fd6359e",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 36,
+    "grammar_token_total": 36,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kokoro-chunk-0101",
+  "source_manifest_sha256": "4fcb40821ed69568eacbd6bf62b7d53874d6fe6fe7133150a5e744c45527959e",
+  "section": {
+    "id": "心",
+    "title_zh": [
+      {
+        "t": "心",
+        "r": "xīn"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "こころ",
+        "r": ""
+      }
+    ]
+  },
+  "subsection": {
+    "id": "上-先生和我",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng"
+      },
+      {
+        "t": " ",
+        "r": ""
+      },
+      {
+        "t": "先",
+        "r": "xiān"
+      },
+      {
+        "t": "生",
+        "r": "sheng"
+      },
+      {
+        "t": "和",
+        "r": "hé"
+      },
+      {
+        "t": "我",
+        "r": "wǒ"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう"
+      },
+      {
+        "t": " ",
+        "r": ""
+      },
+      {
+        "t": "先",
+        "r": "せん"
+      },
+      {
+        "t": "生",
+        "r": "せい"
+      },
+      {
+        "t": "と",
+        "r": ""
+      },
+      {
+        "t": "私",
+        "r": "わたし"
+      }
+    ]
+  },
+  "story": {
+    "id": "心-上-先生和我-三十五",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān"
+      },
+      {
+        "t": "十",
+        "r": "shí"
+      },
+      {
+        "t": "五",
+        "r": "wǔ"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん"
+      },
+      {
+        "t": "十",
+        "r": "じゅう"
+      },
+      {
+        "t": "五",
+        "r": "ご"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kokoro-zh-p00604",
+    "source_text": "这倒是闻所未闻的新鲜事，我觉得有点纳闷。",
+    "units": [
+      {
+        "source_text": "这倒是闻所未闻的新鲜事，",
+        "zh": [
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "倒",
+            "r": "dào",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "闻",
+            "r": "wén",
+            "g": "attributive"
+          },
+          {
+            "t": "所",
+            "r": "suǒ",
+            "g": "function"
+          },
+          {
+            "t": "未",
+            "r": "wèi",
+            "g": "adverbial"
+          },
+          {
+            "t": "闻",
+            "r": "wén",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "新",
+            "r": "xīn",
+            "g": "object"
+          },
+          {
+            "t": "鲜",
+            "r": "xiān",
+            "g": "object"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "知",
+              "r": "ち",
+              "g": "subject"
+            },
+            {
+              "t": "識",
+              "r": "しき",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "adverbial"
+            },
+            {
+              "t": "にとって",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "新",
+              "r": "あたら",
+              "g": "predicate"
+            },
+            {
+              "t": "しいものであった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我觉得有点纳闷。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "觉",
+            "r": "jué",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "纳",
+            "r": "nà",
+            "g": "object"
+          },
+          {
+            "t": "闷",
+            "r": "mèn",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "不",
+              "r": "ふ",
+              "g": "predicate"
+            },
+            {
+              "t": "思",
+              "r": "し",
+              "g": "predicate"
+            },
+            {
+              "t": "議",
+              "r": "ぎ",
+              "g": "predicate"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "思",
+              "r": "おも",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

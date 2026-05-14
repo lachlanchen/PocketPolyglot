@@ -1,0 +1,230 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kokoro",
+  "paragraph_id": "kokoro-zh-p00627",
+  "source_text": "“谁先死呢？”",
+  "source_sha256": "09655d9ba55dfb80a6e91a653aa41bcb7d959124538703153eecdf5ab6de0146",
+  "source_normalized_sha256": "09655d9ba55dfb80a6e91a653aa41bcb7d959124538703153eecdf5ab6de0146",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 14,
+    "grammar_token_total": 14,
+    "unit_count": 1
+  },
+  "source_chunk_id": "kokoro-chunk-0106",
+  "source_manifest_sha256": "4fcb40821ed69568eacbd6bf62b7d53874d6fe6fe7133150a5e744c45527959e",
+  "section": {
+    "id": "心",
+    "title_zh": [
+      {
+        "t": "心",
+        "r": "xīn",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "こころ",
+        "r": "",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "上-先生和我",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "先",
+        "r": "xiān",
+        "g": "topic"
+      },
+      {
+        "t": "生",
+        "r": "sheng",
+        "g": "topic"
+      },
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "function"
+      },
+      {
+        "t": "我",
+        "r": "wǒ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "先",
+        "r": "せん",
+        "g": "topic"
+      },
+      {
+        "t": "生",
+        "r": "せい",
+        "g": "topic"
+      },
+      {
+        "t": "と",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "私",
+        "r": "わたし",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "心-上-先生和我-三十六",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "六",
+        "r": "liù",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "六",
+        "r": "ろく",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kokoro-zh-p00627",
+    "source_text": "“谁先死呢？”",
+    "units": [
+      {
+        "source_text": "“谁先死呢？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "谁",
+            "r": "shéi",
+            "g": "subject"
+          },
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "死",
+            "r": "sǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "呢",
+            "r": "ne",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「どっちが",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "先",
+              "r": "さき",
+              "g": "adverbial"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "死",
+              "r": "し",
+              "g": "predicate"
+            },
+            {
+              "t": "ぬ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "だろう",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

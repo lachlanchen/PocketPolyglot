@@ -1,0 +1,491 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kokoro",
+  "paragraph_id": "kokoro-zh-p00598",
+  "source_text": "我刚要站起来告辞，只好又坐了下来。在谈话告一段落之前，我一直充当他们两个人这段对话的听客。",
+  "source_sha256": "7f4999fde98b15ac3dd1182144dcc8a8633af3b63ec0a7f8183ae25a9e2c05d0",
+  "source_normalized_sha256": "7f4999fde98b15ac3dd1182144dcc8a8633af3b63ec0a7f8183ae25a9e2c05d0",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 68,
+    "grammar_token_total": 68,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kokoro-chunk-0101",
+  "source_manifest_sha256": "4fcb40821ed69568eacbd6bf62b7d53874d6fe6fe7133150a5e744c45527959e",
+  "section": {
+    "id": "心",
+    "title_zh": [
+      {
+        "t": "心",
+        "r": "xīn"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "こころ",
+        "r": ""
+      }
+    ]
+  },
+  "subsection": {
+    "id": "上-先生和我",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng"
+      },
+      {
+        "t": " ",
+        "r": ""
+      },
+      {
+        "t": "先",
+        "r": "xiān"
+      },
+      {
+        "t": "生",
+        "r": "sheng"
+      },
+      {
+        "t": "和",
+        "r": "hé"
+      },
+      {
+        "t": "我",
+        "r": "wǒ"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう"
+      },
+      {
+        "t": " ",
+        "r": ""
+      },
+      {
+        "t": "先",
+        "r": "せん"
+      },
+      {
+        "t": "生",
+        "r": "せい"
+      },
+      {
+        "t": "と",
+        "r": ""
+      },
+      {
+        "t": "私",
+        "r": "わたし"
+      }
+    ]
+  },
+  "story": {
+    "id": "心-上-先生和我-三十五",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān"
+      },
+      {
+        "t": "十",
+        "r": "shí"
+      },
+      {
+        "t": "五",
+        "r": "wǔ"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん"
+      },
+      {
+        "t": "十",
+        "r": "じゅう"
+      },
+      {
+        "t": "五",
+        "r": "ご"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kokoro-zh-p00598",
+    "source_text": "我刚要站起来告辞，只好又坐了下来。在谈话告一段落之前，我一直充当他们两个人这段对话的听客。",
+    "units": [
+      {
+        "source_text": "我刚要站起来告辞，只好又坐了下来。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "刚",
+            "r": "gāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "adverbial"
+          },
+          {
+            "t": "站",
+            "r": "zhàn",
+            "g": "predicate"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "complement"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "告",
+            "r": "gào",
+            "g": "predicate"
+          },
+          {
+            "t": "辞",
+            "r": "cí",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "只",
+            "r": "zhǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "坐",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "complement"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "立",
+              "r": "た",
+              "g": "predicate"
+            },
+            {
+              "t": "て",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "掛",
+              "r": "か",
+              "g": "predicate"
+            },
+            {
+              "t": "けた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "腰",
+              "r": "こし",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "また",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "おろして、",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "在谈话告一段落之前，我一直充当他们两个人这段对话的听客。",
+        "zh": [
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "function"
+          },
+          {
+            "t": "谈",
+            "r": "tán",
+            "g": "attributive"
+          },
+          {
+            "t": "话",
+            "r": "huà",
+            "g": "attributive"
+          },
+          {
+            "t": "告",
+            "r": "gào",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "object"
+          },
+          {
+            "t": "段",
+            "r": "duàn",
+            "g": "object"
+          },
+          {
+            "t": "落",
+            "r": "luò",
+            "g": "object"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "function"
+          },
+          {
+            "t": "前",
+            "r": "qián",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "一",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "直",
+            "r": "zhí",
+            "g": "adverbial"
+          },
+          {
+            "t": "充",
+            "r": "chōng",
+            "g": "predicate"
+          },
+          {
+            "t": "当",
+            "r": "dāng",
+            "g": "predicate"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "attributive"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "attributive"
+          },
+          {
+            "t": "两",
+            "r": "liǎng",
+            "g": "attributive"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "attributive"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "attributive"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "attributive"
+          },
+          {
+            "t": "段",
+            "r": "duàn",
+            "g": "attributive"
+          },
+          {
+            "t": "对",
+            "r": "duì",
+            "g": "attributive"
+          },
+          {
+            "t": "话",
+            "r": "huà",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "听",
+            "r": "tīng",
+            "g": "object"
+          },
+          {
+            "t": "客",
+            "r": "kè",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "話",
+              "r": "はなし",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "区",
+              "r": "く",
+              "g": "subject"
+            },
+            {
+              "t": "切",
+              "r": "ぎ",
+              "g": "subject"
+            },
+            {
+              "t": "りの",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "付",
+              "r": "つ",
+              "g": "predicate"
+            },
+            {
+              "t": "くまで",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "二",
+              "r": "ふた",
+              "g": "attributive"
+            },
+            {
+              "t": "人",
+              "r": "り",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "相",
+              "r": "あい",
+              "g": "object"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "object"
+            },
+            {
+              "t": "になっていた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

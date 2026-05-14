@@ -1,0 +1,306 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kokoro",
+  "paragraph_id": "kokoro-zh-p00671",
+  "source_text": "“你怎么都有理啊。”父亲不高兴了。",
+  "source_sha256": "3db90816cd98f852c4087bf764e36ca51443a4694f2f2e7c584f3e8fa02cb45d",
+  "source_normalized_sha256": "3db90816cd98f852c4087bf764e36ca51443a4694f2f2e7c584f3e8fa02cb45d",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 30,
+    "grammar_token_total": 30,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kokoro-chunk-0114",
+  "source_manifest_sha256": "4fcb40821ed69568eacbd6bf62b7d53874d6fe6fe7133150a5e744c45527959e",
+  "section": {
+    "id": "心",
+    "title_zh": [
+      {
+        "t": "心",
+        "r": "xīn",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "こころ",
+        "r": "",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "中-父母亲和我",
+    "title_zh": [
+      {
+        "t": "中",
+        "r": "zhōng",
+        "g": "topic"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "父",
+        "r": "fù",
+        "g": "topic"
+      },
+      {
+        "t": "母",
+        "r": "mǔ",
+        "g": "topic"
+      },
+      {
+        "t": "亲",
+        "r": "qīn",
+        "g": "topic"
+      },
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "topic"
+      },
+      {
+        "t": "我",
+        "r": "wǒ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "中",
+        "r": "ちゅう",
+        "g": "topic"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "両",
+        "r": "りょう",
+        "g": "topic"
+      },
+      {
+        "t": "親",
+        "r": "しん",
+        "g": "topic"
+      },
+      {
+        "t": "と",
+        "r": "",
+        "g": "topic"
+      },
+      {
+        "t": "私",
+        "r": "わたし",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "心-中-父母亲和我-三",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kokoro-zh-p00671",
+    "source_text": "“你怎么都有理啊。”父亲不高兴了。",
+    "units": [
+      {
+        "source_text": "“你怎么都有理啊。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "怎",
+            "r": "zěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "adverbial"
+          },
+          {
+            "t": "都",
+            "r": "dōu",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "理",
+            "r": "lǐ",
+            "g": "object"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「そう",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "理",
+              "r": "り",
+              "g": "object"
+            },
+            {
+              "t": "屈",
+              "r": "くつ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "いわれると",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "困",
+              "r": "こま",
+              "g": "predicate"
+            },
+            {
+              "t": "る」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "父亲不高兴了。",
+        "zh": [
+          {
+            "t": "父",
+            "r": "fù",
+            "g": "subject"
+          },
+          {
+            "t": "亲",
+            "r": "qīn",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "predicate"
+          },
+          {
+            "t": "高",
+            "r": "gāo",
+            "g": "predicate"
+          },
+          {
+            "t": "兴",
+            "r": "xìng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "父",
+              "r": "ちち",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "苦",
+              "r": "にが",
+              "g": "predicate"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "顔",
+              "r": "かお",
+              "g": "object"
+            },
+            {
+              "t": "をした。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

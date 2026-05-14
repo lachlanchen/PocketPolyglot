@@ -1,0 +1,271 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kokoro",
+  "paragraph_id": "kokoro-zh-p00599",
+  "source_text": "“你怎么想？”先生问我。",
+  "source_sha256": "c09d917b10650e910e54857231c864ca67912543a8d8f6b58a4e1c4e34ee29dd",
+  "source_normalized_sha256": "c09d917b10650e910e54857231c864ca67912543a8d8f6b58a4e1c4e34ee29dd",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 24,
+    "grammar_token_total": 24,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kokoro-chunk-0101",
+  "source_manifest_sha256": "4fcb40821ed69568eacbd6bf62b7d53874d6fe6fe7133150a5e744c45527959e",
+  "section": {
+    "id": "心",
+    "title_zh": [
+      {
+        "t": "心",
+        "r": "xīn"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "こころ",
+        "r": ""
+      }
+    ]
+  },
+  "subsection": {
+    "id": "上-先生和我",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng"
+      },
+      {
+        "t": " ",
+        "r": ""
+      },
+      {
+        "t": "先",
+        "r": "xiān"
+      },
+      {
+        "t": "生",
+        "r": "sheng"
+      },
+      {
+        "t": "和",
+        "r": "hé"
+      },
+      {
+        "t": "我",
+        "r": "wǒ"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう"
+      },
+      {
+        "t": " ",
+        "r": ""
+      },
+      {
+        "t": "先",
+        "r": "せん"
+      },
+      {
+        "t": "生",
+        "r": "せい"
+      },
+      {
+        "t": "と",
+        "r": ""
+      },
+      {
+        "t": "私",
+        "r": "わたし"
+      }
+    ]
+  },
+  "story": {
+    "id": "心-上-先生和我-三十五",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān"
+      },
+      {
+        "t": "十",
+        "r": "shí"
+      },
+      {
+        "t": "五",
+        "r": "wǔ"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん"
+      },
+      {
+        "t": "十",
+        "r": "じゅう"
+      },
+      {
+        "t": "五",
+        "r": "ご"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kokoro-zh-p00599",
+    "source_text": "“你怎么想？”先生问我。",
+    "units": [
+      {
+        "source_text": "“你怎么想？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "怎",
+            "r": "zěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "adverbial"
+          },
+          {
+            "t": "想",
+            "r": "xiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "君",
+              "r": "きみ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "どう",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "思",
+              "r": "おも",
+              "g": "predicate"
+            },
+            {
+              "t": "います」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "先生问我。",
+        "zh": [
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "subject"
+          },
+          {
+            "t": "生",
+            "r": "sheng",
+            "g": "subject"
+          },
+          {
+            "t": "问",
+            "r": "wèn",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "と",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "先",
+              "r": "せん",
+              "g": "subject"
+            },
+            {
+              "t": "生",
+              "r": "せい",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "聞",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "いた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

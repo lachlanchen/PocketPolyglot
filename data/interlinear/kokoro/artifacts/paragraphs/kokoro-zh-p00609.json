@@ -1,0 +1,311 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kokoro",
+  "paragraph_id": "kokoro-zh-p00609",
+  "source_text": "夫人笑了起来：“顺便把地皮也给我吧。”",
+  "source_sha256": "429498c3a0285e9a963931a5e868a8b1718b506fee8566ca399208d59f615fbf",
+  "source_normalized_sha256": "429498c3a0285e9a963931a5e868a8b1718b506fee8566ca399208d59f615fbf",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 32,
+    "grammar_token_total": 32,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kokoro-chunk-0101",
+  "source_manifest_sha256": "4fcb40821ed69568eacbd6bf62b7d53874d6fe6fe7133150a5e744c45527959e",
+  "section": {
+    "id": "心",
+    "title_zh": [
+      {
+        "t": "心",
+        "r": "xīn"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "こころ",
+        "r": ""
+      }
+    ]
+  },
+  "subsection": {
+    "id": "上-先生和我",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng"
+      },
+      {
+        "t": " ",
+        "r": ""
+      },
+      {
+        "t": "先",
+        "r": "xiān"
+      },
+      {
+        "t": "生",
+        "r": "sheng"
+      },
+      {
+        "t": "和",
+        "r": "hé"
+      },
+      {
+        "t": "我",
+        "r": "wǒ"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう"
+      },
+      {
+        "t": " ",
+        "r": ""
+      },
+      {
+        "t": "先",
+        "r": "せん"
+      },
+      {
+        "t": "生",
+        "r": "せい"
+      },
+      {
+        "t": "と",
+        "r": ""
+      },
+      {
+        "t": "私",
+        "r": "わたし"
+      }
+    ]
+  },
+  "story": {
+    "id": "心-上-先生和我-三十五",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān"
+      },
+      {
+        "t": "十",
+        "r": "shí"
+      },
+      {
+        "t": "五",
+        "r": "wǔ"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん"
+      },
+      {
+        "t": "十",
+        "r": "じゅう"
+      },
+      {
+        "t": "五",
+        "r": "ご"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kokoro-zh-p00609",
+    "source_text": "夫人笑了起来：“顺便把地皮也给我吧。”",
+    "units": [
+      {
+        "source_text": "夫人笑了起来：",
+        "zh": [
+          {
+            "t": "夫",
+            "r": "fū",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "笑",
+            "r": "xiào",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "complement"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "奥",
+              "r": "おく",
+              "g": "subject"
+            },
+            {
+              "t": "さんは",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "笑",
+              "r": "わら",
+              "g": "predicate"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "出",
+              "r": "だ",
+              "g": "predicate"
+            },
+            {
+              "t": "した。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "“顺便把地皮也给我吧。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "顺",
+            "r": "shùn",
+            "g": "adverbial"
+          },
+          {
+            "t": "便",
+            "r": "biàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "object"
+          },
+          {
+            "t": "皮",
+            "r": "pí",
+            "g": "object"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "给",
+            "r": "gěi",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "object"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ついでに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "地",
+              "r": "じ",
+              "g": "object"
+            },
+            {
+              "t": "面",
+              "r": "めん",
+              "g": "object"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "下",
+              "r": "くだ",
+              "g": "predicate"
+            },
+            {
+              "t": "さいよ」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
