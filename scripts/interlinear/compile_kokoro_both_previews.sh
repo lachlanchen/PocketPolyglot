@@ -47,3 +47,7 @@ bash scripts/interlinear/compile_jp_main_book.sh \
   --cover-image "assets/covers/kokoro-jp-main/kokoro-cover.jpeg" \
   --output-pdf "build/interlinear-jp-main/こころ（心）.pdf" \
   --allow-missing
+
+if [[ "${COMMIT_PROGRESS:-1}" != "0" ]]; then
+  bash scripts/interlinear/commit_kokoro_progress.sh
+fi
