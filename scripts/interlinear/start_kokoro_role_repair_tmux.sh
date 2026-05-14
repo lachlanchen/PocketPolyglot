@@ -16,6 +16,7 @@ work_dir="books/kokoro/work/bilingual/grammar-role-repair"
 log_dir="books/kokoro/work/logs"
 mkdir -p "$log_dir" "$work_dir"
 log_path="$log_dir/${session}_$(date +%Y%m%d_%H%M%S).log"
+run_script="$work_dir/${session}.run.sh"
 
 if tmux has-session -t "$session" 2>/dev/null; then
   echo "tmux session already exists: $session" >&2
@@ -27,7 +28,9 @@ if [[ "$resume_after_repair" == "1" ]]; then
   resume_cmd="RECHUNK=0 START_INDEX='$resume_start_index' bash scripts/interlinear/start_kokoro_repair_tmux.sh zhjpbook-repair"
 fi
 
-tmux new-session -d -s "$session" -n role-repair "bash -lc \"
+cat > "$run_script" <<EOF
+#!/usr/bin/env bash
+set -o pipefail
 cd '$root' &&
 python -u scripts/interlinear/codex_grammar_role_repair_worker.py \
   --manifest books/kokoro/work/bilingual/chunks/manifest.json \
@@ -47,10 +50,14 @@ if [[ \$status -eq 0 ]]; then
   $resume_cmd
 fi
 exit \$status
-\""
+EOF
+chmod +x "$run_script"
+
+tmux new-session -d -s "$session" -n role-repair "bash '$run_script'"
 
 echo "tmux: $session"
 echo "log: $log_path"
+echo "run_script: $run_script"
 echo "start_index: $start_index"
 echo "end_index: $end_index"
 echo "max_chunks: $max_chunks"
