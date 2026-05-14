@@ -27,10 +27,7 @@ def tex_escape(text: str) -> str:
 
 
 def token_role(token: dict[str, str]) -> str:
-    role = token.get("g") or token.get("role") or token.get("syntax") or ""
-    if isinstance(role, dict):
-        role = role.get("role", "")
-    return str(role)
+    return str(token.get("g") or "")
 
 
 def wrap_role(text: str, role: str) -> str:

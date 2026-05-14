@@ -51,6 +51,10 @@ def validate_token_shape(tokens: Any, where: str, errors: list[str]) -> bool:
             errors.append(f"{where}[{token_index}]: token must contain t")
             ok = False
             continue
+        legacy_keys = sorted({"role", "syntax"}.intersection(token))
+        if legacy_keys:
+            errors.append(f"{where}[{token_index}]: use only g for grammar role, not {', '.join(legacy_keys)}")
+            ok = False
         role = token.get("g")
         if role and str(role) not in GRAMMAR_ROLES:
             allowed = ", ".join(sorted(GRAMMAR_ROLES))

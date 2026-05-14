@@ -28,6 +28,29 @@ ROLE_ALIASES = {
     "particle": "function",
 }
 
+JP_COMPONENT_MARKERS = {
+    "は",
+    "が",
+    "を",
+    "に",
+    "へ",
+    "で",
+    "と",
+    "も",
+    "の",
+    "から",
+    "まで",
+    "より",
+    "には",
+    "では",
+    "にも",
+    "でも",
+    "とは",
+    "へは",
+    "をも",
+}
+ZH_COMPONENT_MARKERS = {"的", "地", "得"}
+
 
 def normalize_role(value: Any) -> str:
     if isinstance(value, dict):
@@ -59,6 +82,44 @@ def normalize_node(node: Any) -> int:
     return changed
 
 
+def cleanup_component_tokens(tokens: Any, *, lang: str) -> int:
+    if not isinstance(tokens, list):
+        return 0
+    changed = 0
+    previous_role = ""
+    markers = JP_COMPONENT_MARKERS if lang == "ja" else ZH_COMPONENT_MARKERS
+    for token in tokens:
+        if not isinstance(token, dict):
+            continue
+        text = str(token.get("t", "")).strip()
+        role = normalize_role(token.get("g", ""))
+        if role == "function" and text in markers and previous_role and previous_role != "function":
+            token["g"] = previous_role
+            changed += 1
+            role = previous_role
+        if role and role != "function" and text:
+            previous_role = role
+    return changed
+
+
+def cleanup_components(node: Any) -> int:
+    changed = 0
+    if isinstance(node, dict):
+        if isinstance(node.get("zh"), list):
+            changed += cleanup_component_tokens(node["zh"], lang="zh")
+        ja = node.get("ja")
+        if isinstance(ja, list):
+            for line in ja:
+                changed += cleanup_component_tokens(line, lang="ja")
+        for key, value in node.items():
+            if key not in {"zh", "ja"}:
+                changed += cleanup_components(value)
+    elif isinstance(node, list):
+        for value in node:
+            changed += cleanup_components(value)
+    return changed
+
+
 def iter_json_paths(paths: list[Path]) -> list[Path]:
     found: list[Path] = []
     for path in paths:
@@ -72,6 +133,11 @@ def iter_json_paths(paths: list[Path]) -> list[Path]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("paths", nargs="+", help="JSON file or directory paths")
+    parser.add_argument(
+        "--sync-components",
+        action="store_true",
+        help="make attached particles/markers inherit the previous major component role",
+    )
     args = parser.parse_args()
 
     changed_files = 0
@@ -79,6 +145,8 @@ def main() -> int:
     for path in iter_json_paths([Path(item) for item in args.paths]):
         data = json.loads(path.read_text(encoding="utf-8"))
         changed = normalize_node(data)
+        if args.sync_components:
+            changed += cleanup_components(data)
         if changed:
             path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             changed_files += 1
