@@ -1,0 +1,687 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kokoro",
+  "paragraph_id": "kokoro-zh-p00312",
+  "source_text": "“这也是不能说的。可是一个人仅仅因为失去一个好朋友，就会发生那么大的变化吗？这是我最想知道的，所以想请你帮我判断一下。”",
+  "source_sha256": "72dfcc19b4dccdf9719246468ad3de16f7b7d00473cb930fadf62aa4dfa2950d",
+  "source_normalized_sha256": "72dfcc19b4dccdf9719246468ad3de16f7b7d00473cb930fadf62aa4dfa2950d",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 103,
+    "grammar_token_total": 103,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kokoro-chunk-0055",
+  "source_manifest_sha256": "4fcb40821ed69568eacbd6bf62b7d53874d6fe6fe7133150a5e744c45527959e",
+  "section": {
+    "id": "心",
+    "title_zh": [
+      {
+        "t": "心",
+        "r": "xīn",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "こころ",
+        "r": "",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "上-先生和我",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng",
+        "g": "topic"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "先",
+        "r": "xiān",
+        "g": "topic"
+      },
+      {
+        "t": "生",
+        "r": "sheng",
+        "g": "topic"
+      },
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "topic"
+      },
+      {
+        "t": "我",
+        "r": "wǒ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう",
+        "g": "topic"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "先",
+        "r": "せん",
+        "g": "topic"
+      },
+      {
+        "t": "生",
+        "r": "せい",
+        "g": "topic"
+      },
+      {
+        "t": "と",
+        "r": "",
+        "g": "topic"
+      },
+      {
+        "t": "私",
+        "r": "わたし",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "心-上-先生和我-十九",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "九",
+        "r": "jiǔ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "九",
+        "r": "きゅう",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kokoro-zh-p00312",
+    "source_text": "“这也是不能说的。可是一个人仅仅因为失去一个好朋友，就会发生那么大的变化吗？这是我最想知道的，所以想请你帮我判断一下。”",
+    "units": [
+      {
+        "source_text": "“这也是不能说的。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "能",
+            "r": "néng",
+            "g": "predicate"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「それも",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "いわない",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "事",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "になってるから",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "いいません",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "可是一个人仅仅因为失去一个好朋友，就会发生那么大的变化吗？",
+        "zh": [
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "subject"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "仅",
+            "r": "jǐn",
+            "g": "adverbial"
+          },
+          {
+            "t": "仅",
+            "r": "jǐn",
+            "g": "adverbial"
+          },
+          {
+            "t": "因",
+            "r": "yīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "为",
+            "r": "wèi",
+            "g": "adverbial"
+          },
+          {
+            "t": "失",
+            "r": "shī",
+            "g": "predicate"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "object"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "object"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "朋",
+            "r": "péng",
+            "g": "object"
+          },
+          {
+            "t": "友",
+            "r": "yǒu",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "predicate"
+          },
+          {
+            "t": "发",
+            "r": "fā",
+            "g": "predicate"
+          },
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "predicate"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "attributive"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "attributive"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "变",
+            "r": "biàn",
+            "g": "predicate"
+          },
+          {
+            "t": "化",
+            "r": "huà",
+            "g": "predicate"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "しかし",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "人",
+              "r": "にん",
+              "g": "subject"
+            },
+            {
+              "t": "間",
+              "r": "げん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "親",
+              "r": "しん",
+              "g": "object"
+            },
+            {
+              "t": "友",
+              "r": "ゆう",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "object"
+            },
+            {
+              "t": "人",
+              "r": "り",
+              "g": "object"
+            },
+            {
+              "t": "亡",
+              "r": "な",
+              "g": "predicate"
+            },
+            {
+              "t": "くした",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "だけで、",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "そんなに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "変",
+              "r": "へん",
+              "g": "predicate"
+            },
+            {
+              "t": "化",
+              "r": "か",
+              "g": "predicate"
+            },
+            {
+              "t": "できる",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "ものでしょうか。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "这是我最想知道的，所以想请你帮我判断一下。”",
+        "zh": [
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "最",
+            "r": "zuì",
+            "g": "adverbial"
+          },
+          {
+            "t": "想",
+            "r": "xiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "知",
+            "r": "zhī",
+            "g": "predicate"
+          },
+          {
+            "t": "道",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "所",
+            "r": "suǒ",
+            "g": "function"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "function"
+          },
+          {
+            "t": "想",
+            "r": "xiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "请",
+            "r": "qǐng",
+            "g": "predicate"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "object"
+          },
+          {
+            "t": "帮",
+            "r": "bāng",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "object"
+          },
+          {
+            "t": "判",
+            "r": "pàn",
+            "g": "predicate"
+          },
+          {
+            "t": "断",
+            "r": "duàn",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "complement"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "それが",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "知",
+              "r": "し",
+              "g": "predicate"
+            },
+            {
+              "t": "りたくって",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "堪",
+              "r": "たま",
+              "g": "predicate"
+            },
+            {
+              "t": "らないんです。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "だから",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "そこを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "adverbial"
+            },
+            {
+              "t": "つ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "あなたに",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "判",
+              "r": "はん",
+              "g": "predicate"
+            },
+            {
+              "t": "断",
+              "r": "だん",
+              "g": "predicate"
+            },
+            {
+              "t": "して",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "頂",
+              "r": "いただ",
+              "g": "predicate"
+            },
+            {
+              "t": "きたいと",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "思",
+              "r": "おも",
+              "g": "predicate"
+            },
+            {
+              "t": "うの",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

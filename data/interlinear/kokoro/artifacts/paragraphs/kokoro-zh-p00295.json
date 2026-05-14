@@ -1,0 +1,602 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kokoro",
+  "paragraph_id": "kokoro-zh-p00295",
+  "source_text": "“你怎么想？”夫人问，“他是因为我才变成那样的，还是像你所说的，是人生观什么的促使他变成那样的？请你毫不隐瞒地告诉我吧。”",
+  "source_sha256": "7b13fdf508c5095e7db4c07507c7df4a4bc7f38ed7436019bd9b9e10946a8fb3",
+  "source_normalized_sha256": "7b13fdf508c5095e7db4c07507c7df4a4bc7f38ed7436019bd9b9e10946a8fb3",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 86,
+    "grammar_token_total": 86,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kokoro-chunk-0053",
+  "source_manifest_sha256": "4fcb40821ed69568eacbd6bf62b7d53874d6fe6fe7133150a5e744c45527959e",
+  "section": {
+    "id": "心",
+    "title_zh": [
+      {
+        "t": "心",
+        "r": "xīn",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "こころ",
+        "r": "",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "上-先生和我",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "先",
+        "r": "xiān",
+        "g": "topic"
+      },
+      {
+        "t": "生",
+        "r": "sheng",
+        "g": "topic"
+      },
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "function"
+      },
+      {
+        "t": "我",
+        "r": "wǒ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "先",
+        "r": "せん",
+        "g": "topic"
+      },
+      {
+        "t": "生",
+        "r": "せい",
+        "g": "topic"
+      },
+      {
+        "t": "と",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "私",
+        "r": "わたし",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "心-上-先生和我-十九",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "九",
+        "r": "jiǔ",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "九",
+        "r": "きゅう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kokoro-zh-p00295",
+    "source_text": "“你怎么想？”夫人问，“他是因为我才变成那样的，还是像你所说的，是人生观什么的促使他变成那样的？请你毫不隐瞒地告诉我吧。”",
+    "units": [
+      {
+        "source_text": "“你怎么想？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "怎",
+            "r": "zěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "adverbial"
+          },
+          {
+            "t": "想",
+            "r": "xiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "あなた",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "どう",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "思",
+              "r": "おも",
+              "g": "predicate"
+            },
+            {
+              "t": "って？」",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "と",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "聞",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "いた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "夫人问，“他是因为我才变成那样的，还是像你所说的，是人生观什么的促使他变成那样的？",
+        "zh": [
+          {
+            "t": "夫",
+            "r": "fū",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "问",
+            "r": "wèn",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "因",
+            "r": "yīn",
+            "g": "function"
+          },
+          {
+            "t": "为",
+            "r": "wèi",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "object"
+          },
+          {
+            "t": "才",
+            "r": "cái",
+            "g": "adverbial"
+          },
+          {
+            "t": "变",
+            "r": "biàn",
+            "g": "predicate"
+          },
+          {
+            "t": "成",
+            "r": "chéng",
+            "g": "predicate"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "complement"
+          },
+          {
+            "t": "样",
+            "r": "yàng",
+            "g": "complement"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "像",
+            "r": "xiàng",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "所",
+            "r": "suǒ",
+            "g": "function"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "subject"
+          },
+          {
+            "t": "观",
+            "r": "guān",
+            "g": "subject"
+          },
+          {
+            "t": "什",
+            "r": "shén",
+            "g": "function"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "function"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "subject"
+          },
+          {
+            "t": "促",
+            "r": "cù",
+            "g": "predicate"
+          },
+          {
+            "t": "使",
+            "r": "shǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "object"
+          },
+          {
+            "t": "变",
+            "r": "biàn",
+            "g": "predicate"
+          },
+          {
+            "t": "成",
+            "r": "chéng",
+            "g": "predicate"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "complement"
+          },
+          {
+            "t": "样",
+            "r": "yàng",
+            "g": "complement"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "complement"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "object"
+            },
+            {
+              "t": "からああなったのか、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "それとも",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "あなた",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "のいう",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "subject"
+            },
+            {
+              "t": "世",
+              "r": "せい",
+              "g": "subject"
+            },
+            {
+              "t": "観",
+              "r": "かん",
+              "g": "subject"
+            },
+            {
+              "t": "とか",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "何",
+              "r": "なん",
+              "g": "subject"
+            },
+            {
+              "t": "とかいうものから、ああなったのか。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "请你毫不隐瞒地告诉我吧。”",
+        "zh": [
+          {
+            "t": "请",
+            "r": "qǐng",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "毫",
+            "r": "háo",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "隐",
+            "r": "yǐn",
+            "g": "adverbial"
+          },
+          {
+            "t": "瞒",
+            "r": "mán",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "告",
+            "r": "gào",
+            "g": "predicate"
+          },
+          {
+            "t": "诉",
+            "r": "sù",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "object"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "隠",
+              "r": "かく",
+              "g": "adverbial"
+            },
+            {
+              "t": "さずいって",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "頂",
+              "r": "ちょう",
+              "g": "predicate"
+            },
+            {
+              "t": "戴",
+              "r": "だい",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

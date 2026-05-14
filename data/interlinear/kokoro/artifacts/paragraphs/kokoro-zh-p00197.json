@@ -1,0 +1,291 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kokoro",
+  "paragraph_id": "kokoro-zh-p00197",
+  "source_text": "“不要过于迷恋我。”先生说。",
+  "source_sha256": "f1d48dde99f42cf35b74e561b800d35b978308ba09c1f191ed529efdfadc6471",
+  "source_normalized_sha256": "f1d48dde99f42cf35b74e561b800d35b978308ba09c1f191ed529efdfadc6471",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 26,
+    "grammar_token_total": 26,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kokoro-chunk-0040",
+  "source_manifest_sha256": "4fcb40821ed69568eacbd6bf62b7d53874d6fe6fe7133150a5e744c45527959e",
+  "section": {
+    "id": "心",
+    "title_zh": [
+      {
+        "t": "心",
+        "r": "xīn",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "こころ",
+        "r": "",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "上-先生和我",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng",
+        "g": "topic"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "先",
+        "r": "xiān",
+        "g": "topic"
+      },
+      {
+        "t": "生",
+        "r": "sheng",
+        "g": "topic"
+      },
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "topic"
+      },
+      {
+        "t": "我",
+        "r": "wǒ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう",
+        "g": "topic"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "先",
+        "r": "せん",
+        "g": "topic"
+      },
+      {
+        "t": "生",
+        "r": "せい",
+        "g": "topic"
+      },
+      {
+        "t": "と",
+        "r": "",
+        "g": "topic"
+      },
+      {
+        "t": "私",
+        "r": "わたし",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "心-上-先生和我-十四",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "四",
+        "r": "し",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kokoro-zh-p00197",
+    "source_text": "“不要过于迷恋我。”先生说。",
+    "units": [
+      {
+        "source_text": "“不要过于迷恋我。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "predicate"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "predicate"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "adverbial"
+          },
+          {
+            "t": "于",
+            "r": "yú",
+            "g": "adverbial"
+          },
+          {
+            "t": "迷",
+            "r": "mí",
+            "g": "predicate"
+          },
+          {
+            "t": "恋",
+            "r": "liàn",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "あんまり",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "逆",
+              "r": "のぼ",
+              "g": "predicate"
+            },
+            {
+              "t": "上",
+              "r": "せ",
+              "g": "predicate"
+            },
+            {
+              "t": "ちゃ",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "いけません",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "先生说。",
+        "zh": [
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "subject"
+          },
+          {
+            "t": "生",
+            "r": "sheng",
+            "g": "subject"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "先",
+              "r": "せん",
+              "g": "subject"
+            },
+            {
+              "t": "生",
+              "r": "せい",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "いった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
