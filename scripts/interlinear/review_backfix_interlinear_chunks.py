@@ -234,11 +234,14 @@ def repair_prompt(source: dict[str, Any], current: dict[str, Any], issues: list[
         Review failures to fix:
         {shown_issues}
 
-        Current merged JSON to repair:
-        {json.dumps(current, ensure_ascii=False, indent=2)}
-
-        Source/reference prompt for this chunk:
+        Authoritative source/reference prompt for this chunk:
         {base_prompt}
+
+        Defective current merged JSON for salvage only:
+        - You may reuse correct readings, token boundaries, and pairings from this JSON.
+        - When this JSON conflicts with the authoritative source/reference prompt or the review failures, ignore this JSON.
+        - In particular, do not preserve a bad role distribution such as all predicate just because it appears below.
+        {json.dumps(current, ensure_ascii=False, indent=2)}
         """
     ).strip()
 
