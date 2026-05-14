@@ -49,7 +49,37 @@ JP_COMPONENT_MARKERS = {
     "へは",
     "をも",
 }
+JP_ATTACHED_SUFFIXES = (
+    "さんを",
+    "さんが",
+    "さんは",
+    "だのに",
+    "だの",
+    "などを",
+    "などに",
+    "など",
+    "を",
+    "が",
+    "は",
+    "に",
+    "へ",
+    "で",
+    "と",
+    "も",
+    "の",
+    "から",
+    "まで",
+    "より",
+    "には",
+    "では",
+    "にも",
+    "でも",
+    "とは",
+    "へは",
+    "をも",
+)
 ZH_COMPONENT_MARKERS = {"的", "地", "得"}
+ZH_ASPECT_MARKERS = {"了", "着", "过"}
 
 
 def normalize_role(value: Any) -> str:
@@ -93,7 +123,9 @@ def cleanup_component_tokens(tokens: Any, *, lang: str) -> int:
             continue
         text = str(token.get("t", "")).strip()
         role = normalize_role(token.get("g", ""))
-        if role == "function" and text in markers and previous_role and previous_role != "function":
+        is_attached_jp = lang == "ja" and any(text.endswith(suffix) for suffix in JP_ATTACHED_SUFFIXES)
+        is_attached_zh = lang == "zh" and text in ZH_ASPECT_MARKERS and previous_role in {"predicate", "attributive"}
+        if role == "function" and (text in markers or is_attached_jp or is_attached_zh) and previous_role and previous_role != "function":
             token["g"] = previous_role
             changed += 1
             role = previous_role
@@ -102,15 +134,50 @@ def cleanup_component_tokens(tokens: Any, *, lang: str) -> int:
     return changed
 
 
+def promote_jp_list_objects(tokens: Any) -> int:
+    if not isinstance(tokens, list):
+        return 0
+    changed = 0
+    for index, token in enumerate(tokens):
+        if not isinstance(token, dict):
+            continue
+        text = str(token.get("t", "")).strip()
+        if "だの" not in text and "など" not in text:
+            continue
+        cursor = index - 1
+        touched = False
+        while cursor >= 0:
+            previous = tokens[cursor]
+            if not isinstance(previous, dict) or normalize_role(previous.get("g", "")) != "adverbial":
+                break
+            previous["g"] = "object"
+            changed += 1
+            touched = True
+            cursor -= 1
+        if touched and normalize_role(token.get("g", "")) != "object":
+            token["g"] = "object"
+            changed += 1
+    return changed
+
+
+def cleanup_unit_components(unit: dict[str, Any]) -> int:
+    changed = 0
+    if isinstance(unit.get("zh"), list):
+        changed += cleanup_component_tokens(unit["zh"], lang="zh")
+    ja = unit.get("ja")
+    if isinstance(ja, list):
+        for line in ja:
+            changed += cleanup_component_tokens(line, lang="ja")
+            changed += promote_jp_list_objects(line)
+            changed += cleanup_component_tokens(line, lang="ja")
+    return changed
+
+
 def cleanup_components(node: Any) -> int:
     changed = 0
     if isinstance(node, dict):
-        if isinstance(node.get("zh"), list):
-            changed += cleanup_component_tokens(node["zh"], lang="zh")
-        ja = node.get("ja")
-        if isinstance(ja, list):
-            for line in ja:
-                changed += cleanup_component_tokens(line, lang="ja")
+        if isinstance(node.get("zh"), list) or isinstance(node.get("ja"), list):
+            changed += cleanup_unit_components(node)
         for key, value in node.items():
             if key not in {"zh", "ja"}:
                 changed += cleanup_components(value)

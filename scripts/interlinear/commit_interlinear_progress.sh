@@ -17,6 +17,7 @@ Options:
   --progress-json <path>  tracked progress JSON
   --artifact-dir <path>   tracked paragraph artifact directory
   --pdf <path>            generated PDF to include; may be repeated
+  --extra <path>          extra tracked artifact to include if it exists; may be repeated
   --message-prefix <text> commit message prefix
   -h, --help              show help
 USAGE
@@ -32,6 +33,7 @@ progress_json=""
 artifact_dir=""
 message_prefix=""
 pdfs=()
+extras=()
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -43,6 +45,7 @@ while [[ $# -gt 0 ]]; do
     --progress-json) progress_json="${2:-}"; shift 2 ;;
     --artifact-dir) artifact_dir="${2:-}"; shift 2 ;;
     --pdf) pdfs+=("${2:-}"); shift 2 ;;
+    --extra) extras+=("${2:-}"); shift 2 ;;
     --message-prefix) message_prefix="${2:-}"; shift 2 ;;
     -h|--help) usage; exit 0 ;;
     *) echo "Unknown option: $1" >&2; usage >&2; exit 1 ;;
@@ -88,6 +91,11 @@ pathspecs=("$tracked_dir" "$progress_json" "$artifact_dir" "$manifest" "$chunks_
 for pdf in "${pdfs[@]}"; do
   if [[ -f "$pdf" ]]; then
     pathspecs+=("$pdf")
+  fi
+done
+for extra in "${extras[@]}"; do
+  if [[ -e "$extra" ]]; then
+    pathspecs+=("$extra")
   fi
 done
 

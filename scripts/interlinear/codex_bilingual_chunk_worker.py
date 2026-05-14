@@ -14,6 +14,7 @@ from pathlib import Path
 from typing import Any
 
 from codex_chunk_worker import compact, extract_json, flatten_zh, load_chunks, run_codex
+from normalize_grammar_roles import cleanup_components, normalize_node
 from validate_interlinear_json import ja_lines_text, normalize, validate_ja_tokens, validate_named_tokens, validate_zh_tokens
 
 PLACEHOLDER_JA = {"注", "注。", "。"}
@@ -205,7 +206,7 @@ def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = 
         - Do not use automatic pinyin, furigana, morphological, or grammar tagging libraries/tools such as pypinyin, kakasi, MeCab, Sudachi, fugashi, or similar packages. The readings and grammar roles must be supplied by your own linguistic reasoning.
         - Unified component analysis is mandatory. Every Chinese and Japanese content token must include "g" with exactly one English role: subject, predicate, object, attributive, adverbial, complement, topic, or function.
         - Use "g" as the single visual grammar-component role across both languages. Do not add a second color role, alias role, component id, or separate syntax field.
-        - Assign the same "g" to corresponding major components when reasonable, even when Chinese and Japanese express that component with different local syntax. For example, a Japanese topic/case particle attached to a subject/topic/object/adverbial phrase normally inherits that phrase's role instead of becoming function. Use function for punctuation, conjunctions, standalone auxiliaries, and tokens that are not part of a larger semantic component.
+        - Assign the same "g" to corresponding major components when reasonable, even when Chinese and Japanese express that component with different local syntax. A Japanese は/が phrase that functions as the paired sentence subject should normally be subject; reserve topic for a real discourse topic that is not simply the sentence subject. A Japanese topic/case/list particle attached to a subject/object/adverbial phrase inherits that phrase's role instead of becoming function. List markers such as だの, など, や, and と inherit the listed phrase role; if the listed events/things correspond to Chinese objects, use object for the whole listed phrase.
         - For Chinese multi-character words, repeat the same "g" on each one-character token. For Japanese kanji plus okurigana or attached particles inside the same major component, use the same "g" so the PDF colors that whole component consistently.
         - Do not use Chinese role aliases such as zhu, wei, bin, ding, zhuang, or bu. Do not invent labels such as noun, adjective, modifier, subject-object, punct, or unknown.
         - Keep ids exactly as provided below.
@@ -284,6 +285,8 @@ def main() -> int:
                 print("; ".join(errors), file=sys.stderr)
                 continue
 
+            normalize_node(result)
+            cleanup_components(result)
             errors = validate_chunk(chunk, result)
             if errors:
                 print(f"validation failed for {chunk['chunk_id']}: {'; '.join(errors)}", file=sys.stderr)
