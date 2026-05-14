@@ -26,6 +26,17 @@ def load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def manifest_chunk_errors(item: dict[str, Any], chunk: dict[str, Any]) -> list[str]:
+    errors: list[str] = []
+    if chunk.get("chunk_id") != item["chunk_id"]:
+        errors.append(f"chunk_id is {chunk.get('chunk_id')!r}")
+    expected_paragraph_ids = item.get("paragraph_ids", [])
+    got_paragraph_ids = [paragraph.get("id") for paragraph in chunk.get("paragraphs", [])]
+    if got_paragraph_ids != expected_paragraph_ids:
+        errors.append(f"paragraph ids are stale: expected {expected_paragraph_ids}, got {got_paragraph_ids}")
+    return errors
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", required=True)
@@ -47,6 +58,7 @@ def main() -> int:
 
     sections: "OrderedDict[str, dict[str, Any]]" = OrderedDict()
     missing_chunks: list[str] = []
+    stale_chunks: list[dict[str, Any]] = []
     assembled_chunk_count = 0
     for item in manifest["chunks"]:
         chunk_path = chunk_dir / f"{item['chunk_id']}.json"
@@ -56,6 +68,12 @@ def main() -> int:
                 continue
             raise FileNotFoundError(chunk_path)
         chunk = load_json(chunk_path)
+        manifest_errors = manifest_chunk_errors(item, chunk)
+        if manifest_errors:
+            if args.allow_missing:
+                stale_chunks.append({"chunk_id": item["chunk_id"], "errors": manifest_errors})
+                continue
+            raise ValueError(f"{chunk_path}: " + "; ".join(manifest_errors))
         assembled_chunk_count += 1
 
         section = chunk["section"]
@@ -120,6 +138,9 @@ def main() -> int:
     if missing_chunks:
         source["missing_chunk_count"] = len(missing_chunks)
         source["missing_chunks"] = missing_chunks
+    if stale_chunks:
+        source["stale_chunk_count"] = len(stale_chunks)
+        source["stale_chunks"] = stale_chunks
     if args.source_markdown_ja:
         source["source_markdown_ja"] = args.source_markdown_ja
     if args.source_epub_ja:

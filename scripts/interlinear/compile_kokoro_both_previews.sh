@@ -9,6 +9,10 @@ chunk_dir="books/kokoro/work/bilingual/interlinear/chunks"
 zh_json="books/kokoro/work/bilingual/preview/kokoro.partial.json"
 jp_json="books/kokoro/work/bilingual/preview/kokoro.jp-main.partial.json"
 
+python scripts/interlinear/report_interlinear_progress.py \
+  --manifest "$manifest" \
+  --chunk-dir "$chunk_dir"
+
 bash scripts/interlinear/compile_interlinear_book.sh \
   --manifest "$manifest" \
   --chunk-dir "$chunk_dir" \
