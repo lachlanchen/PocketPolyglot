@@ -33,12 +33,12 @@
 \definecolor{BookNote}{HTML}{4D463E}
 \definecolor{BookRule}{HTML}{B9B0A5}
 \definecolor{BookRed}{HTML}{7E2F24}
-\definecolor{GramZhu}{HTML}{13795B}
-\definecolor{GramWei}{HTML}{B23A48}
-\definecolor{GramBin}{HTML}{286DA8}
-\definecolor{GramDing}{HTML}{7C58A5}
-\definecolor{GramZhuang}{HTML}{A96523}
-\definecolor{GramBu}{HTML}{1D7F91}
+\definecolor{GramSubject}{HTML}{13795B}
+\definecolor{GramPredicate}{HTML}{B23A48}
+\definecolor{GramObject}{HTML}{286DA8}
+\definecolor{GramAttributive}{HTML}{7C58A5}
+\definecolor{GramAdverbial}{HTML}{A96523}
+\definecolor{GramComplement}{HTML}{1D7F91}
 \definecolor{GramTopic}{HTML}{8A6532}
 \definecolor{GramFunction}{HTML}{6D6D6D}
 
@@ -109,22 +109,14 @@
   {
     \str_case:nn { #1 }
       {
-        { zhu } { \color{GramZhu} }
-        { subject } { \color{GramZhu} }
-        { wei } { \color{GramWei} }
-        { predicate } { \color{GramWei} }
-        { verb } { \color{GramWei} }
-        { bin } { \color{GramBin} }
-        { object } { \color{GramBin} }
-        { ding } { \color{GramDing} }
-        { attributive } { \color{GramDing} }
-        { zhuang } { \color{GramZhuang} }
-        { adverbial } { \color{GramZhuang} }
-        { bu } { \color{GramBu} }
-        { complement } { \color{GramBu} }
+        { subject } { \color{GramSubject} }
+        { predicate } { \color{GramPredicate} }
+        { object } { \color{GramObject} }
+        { attributive } { \color{GramAttributive} }
+        { adverbial } { \color{GramAdverbial} }
+        { complement } { \color{GramComplement} }
         { topic } { \color{GramTopic} }
         { function } { \color{GramFunction} }
-        { particle } { \color{GramFunction} }
       }
   }
 \NewDocumentCommand{\Gram}{m m}{\group_begin:\zhjp_gram_color:n { #1 } #2\group_end:}

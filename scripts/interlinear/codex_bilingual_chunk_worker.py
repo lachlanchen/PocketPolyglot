@@ -19,7 +19,16 @@ from validate_interlinear_json import ja_lines_text, normalize, validate_ja_toke
 PLACEHOLDER_JA = {"注", "注。", "。"}
 SENTENCE_END_RE = re.compile(r"[。！？!?]")
 CONTENT_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaffぁ-ゟ゠-ヿA-Za-z0-9]")
-GRAMMAR_ROLES = {"zhu", "wei", "bin", "ding", "zhuang", "bu", "topic", "function"}
+GRAMMAR_ROLES = {
+    "subject",
+    "predicate",
+    "object",
+    "attributive",
+    "adverbial",
+    "complement",
+    "topic",
+    "function",
+}
 ZH_UNIT_HARD_MAX = 128
 ZH_UNIT_MULTI_SENTENCE_MAX = 82
 JA_COMMENT_LINE_MAX = 54
@@ -169,10 +178,10 @@ def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = 
               "units": [
                 {{
                   "source_text": "exact Chinese sentence or sentence group from the paragraph",
-                  "zh": [{{"t":"one Chinese Han character","r":"that character's pinyin with tone mark","g":"grammar role"}}],
+                  "zh": [{{"t":"one Chinese Han character","r":"that character's pinyin with tone mark","g":"English component role"}}],
                   "ja": [
-                    [{{"t":"one Japanese kanji OR kana/punctuation run","r":"furigana only for one kanji, empty otherwise","g":"grammar role"}}],
-                    [{{"t":"one Japanese kanji OR kana/punctuation run","r":"furigana only for one kanji, empty otherwise","g":"grammar role"}}]
+                    [{{"t":"one Japanese kanji OR kana/punctuation run","r":"furigana only for one kanji, empty otherwise","g":"English component role"}}],
+                    [{{"t":"one Japanese kanji OR kana/punctuation run","r":"furigana only for one kanji, empty otherwise","g":"English component role"}}]
                   ]
                 }}
               ]
@@ -194,10 +203,11 @@ def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = 
         - If a Chinese unit is a translator note or editorial note that is not in the Japanese original, write a concise Japanese note for that unit and keep it visibly note-like.
         - Japanese tokenization is strict: every kanji character must be its own token with furigana, and furigana may appear only on one-kanji tokens. Kana, okurigana, punctuation, spaces, and Latin text must have empty reading. Example: "先生と私" becomes [{{"t":"先","r":"せん"}},{{"t":"生","r":"せい"}},{{"t":"と","r":""}},{{"t":"私","r":"わたし"}}]. Example: "書くだけ" becomes [{{"t":"書","r":"か"}},{{"t":"くだけ","r":""}}].
         - Do not use automatic pinyin, furigana, morphological, or grammar tagging libraries/tools such as pypinyin, kakasi, MeCab, Sudachi, fugashi, or similar packages. The readings and grammar roles must be supplied by your own linguistic reasoning.
-        - Grammar analysis is mandatory. Every Chinese and Japanese content token must include "g" with exactly one of these roles:
-          zhu = subject/主语, wei = predicate or verbal/adjectival core/谓语, bin = object/宾语, ding = attributive or noun modifier/定语, zhuang = adverbial/time/place/manner/状语, bu = complement/result/direction/degree/补语, topic = discourse topic/theme, function = particle/auxiliary/conjunction/punctuation/function word.
-        - All tokens belonging to the same word or grammar component must use the same "g" value so the PDF colors that whole word/component consistently. For Chinese multi-character words, repeat the same "g" on each one-character token. For Japanese kanji plus okurigana, give the kanji token and the kana run the same "g" when they form one word.
-        - Do not invent other grammar labels such as noun, adjective, modifier, subject-object, punct, or unknown.
+        - Unified component analysis is mandatory. Every Chinese and Japanese content token must include "g" with exactly one English role: subject, predicate, object, attributive, adverbial, complement, topic, or function.
+        - Use "g" as the single visual grammar-component role across both languages. Do not add a second color role, alias role, component id, or separate syntax field.
+        - Assign the same "g" to corresponding major components when reasonable, even when Chinese and Japanese express that component with different local syntax. For example, a Japanese topic/case particle attached to a subject/topic/object/adverbial phrase normally inherits that phrase's role instead of becoming function. Use function for punctuation, conjunctions, standalone auxiliaries, and tokens that are not part of a larger semantic component.
+        - For Chinese multi-character words, repeat the same "g" on each one-character token. For Japanese kanji plus okurigana or attached particles inside the same major component, use the same "g" so the PDF colors that whole component consistently.
+        - Do not use Chinese role aliases such as zhu, wei, bin, ding, zhuang, or bu. Do not invent labels such as noun, adjective, modifier, subject-object, punct, or unknown.
         - Keep ids exactly as provided below.
         - Use the provided section/subsection/story ids and titles. Apply the same strict per-Han-character/per-kanji-character ruby rules to all titles and place fields.
         {error_block}

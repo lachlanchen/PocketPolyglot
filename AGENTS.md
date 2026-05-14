@@ -16,7 +16,7 @@ python scripts/interlinear/report_interlinear_progress.py \
 
 ## Coding Style & Naming Conventions
 
-Python scripts use 4-space indentation, `argparse` CLIs, `pathlib.Path`, UTF-8 text IO, and `snake_case` names. Keep scripts executable when they are intended as commands. TeX macros use descriptive PascalCase-style names such as `\InterUnit` and `\JpMainUnit`. JSON token fields are short and stable: `t` for text, `r` for reading, and optional `g` for grammar role.
+Python scripts use 4-space indentation, `argparse` CLIs, `pathlib.Path`, UTF-8 text IO, and `snake_case` names. Keep scripts executable when they are intended as commands. TeX macros use descriptive PascalCase-style names such as `\InterUnit` and `\JpMainUnit`. JSON token fields are short and stable: `t` for text, `r` for reading, and optional `g` for the English grammar-component role (`subject`, `predicate`, `object`, `attributive`, `adverbial`, `complement`, `topic`, or `function`).
 
 ## Testing Guidelines
 

@@ -115,10 +115,10 @@ Chinese is the main row. Japanese is intentionally split into two short rows so 
 Tokens may also carry an optional grammar role for colorized annotated editions:
 
 ```json
-{"t": "我", "r": "wǒ", "g": "zhu"}
+{"t": "我", "r": "wǒ", "g": "subject"}
 ```
 
-Supported role keys are `zhu`/`subject`, `wei`/`predicate`/`verb`, `bin`/`object`, `ding`/`attributive`, `zhuang`/`adverbial`, `bu`/`complement`, `topic`, and `function`/`particle`. The renderer treats this as a display layer only; text and readings stay unchanged, so an annotated JSON can be validated against the same source text.
+Supported role keys are English-only: `subject`, `predicate`, `object`, `attributive`, `adverbial`, `complement`, `topic`, and `function`. Use `g` as the single visual grammar-component role across both languages; attached particles and markers can inherit the major component role when that gives a clearer aligned color. The renderer treats this as a display layer only; text and readings stay unchanged, so an annotated JSON can be validated against the same source text.
 
 The block layout in `tex/interlinear-block/` gives every sentence its own Chinese row plus Japanese note. The run-in layout in `tex/interlinear-run/` makes sentence units flow back-to-back; the Japanese note starts at the same horizontal point as its Chinese unit and wraps inside the measured Chinese-unit width.
 

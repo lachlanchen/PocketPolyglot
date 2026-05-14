@@ -15,6 +15,16 @@ SPACE_RE = re.compile(r"\s+")
 HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
 PLACEHOLDER_JA = {"注", "注。", "。"}
+GRAMMAR_ROLES = {
+    "subject",
+    "predicate",
+    "object",
+    "attributive",
+    "adverbial",
+    "complement",
+    "topic",
+    "function",
+}
 
 
 def normalize(text: str) -> str:
@@ -40,6 +50,11 @@ def validate_token_shape(tokens: Any, where: str, errors: list[str]) -> bool:
         if not isinstance(token, dict) or "t" not in token:
             errors.append(f"{where}[{token_index}]: token must contain t")
             ok = False
+            continue
+        role = token.get("g")
+        if role and str(role) not in GRAMMAR_ROLES:
+            allowed = ", ".join(sorted(GRAMMAR_ROLES))
+            errors.append(f"{where}[{token_index}]: unsupported grammar role {role!r}; use one of {allowed}")
     return ok
 
 
