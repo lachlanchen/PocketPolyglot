@@ -1,0 +1,250 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kokoro",
+  "paragraph_id": "kokoro-zh-p00794",
+  "source_text": "“我爸怎样了？”我问。",
+  "source_sha256": "3e9d72e63d635fb1b885165016822164048fa50ce2168c20b617abb2e44f7226",
+  "source_normalized_sha256": "3e9d72e63d635fb1b885165016822164048fa50ce2168c20b617abb2e44f7226",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 19,
+    "grammar_token_total": 19,
+    "unit_count": 1
+  },
+  "source_chunk_id": "kokoro-chunk-0137",
+  "source_manifest_sha256": "4fcb40821ed69568eacbd6bf62b7d53874d6fe6fe7133150a5e744c45527959e",
+  "section": {
+    "id": "心",
+    "title_zh": [
+      {
+        "t": "心",
+        "r": "xīn",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "こころ",
+        "r": "",
+        "g": "subject"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "中-父母亲和我",
+    "title_zh": [
+      {
+        "t": "中",
+        "r": "zhōng",
+        "g": "attributive"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "父",
+        "r": "fù",
+        "g": "subject"
+      },
+      {
+        "t": "母",
+        "r": "mǔ",
+        "g": "subject"
+      },
+      {
+        "t": "亲",
+        "r": "qīn",
+        "g": "subject"
+      },
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "function"
+      },
+      {
+        "t": "我",
+        "r": "wǒ",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "中",
+        "r": "ちゅう",
+        "g": "attributive"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "両",
+        "r": "りょう",
+        "g": "subject"
+      },
+      {
+        "t": "親",
+        "r": "しん",
+        "g": "subject"
+      },
+      {
+        "t": "と",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "私",
+        "r": "わたし",
+        "g": "subject"
+      }
+    ]
+  },
+  "story": {
+    "id": "心-中-父母亲和我-十一",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kokoro-zh-p00794",
+    "source_text": "“我爸怎样了？”我问。",
+    "units": [
+      {
+        "source_text": "“我爸怎样了？”我问。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "爸",
+            "r": "bà",
+            "g": "subject"
+          },
+          {
+            "t": "怎",
+            "r": "zěn",
+            "g": "predicate"
+          },
+          {
+            "t": "样",
+            "r": "yàng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "问",
+            "r": "wèn",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「お",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "父",
+              "r": "とう",
+              "g": "subject"
+            },
+            {
+              "t": "さんは？」",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "と",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "聞",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "いた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

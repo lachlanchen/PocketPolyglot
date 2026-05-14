@@ -1,0 +1,356 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kokoro",
+  "paragraph_id": "kokoro-zh-p00772",
+  "source_text": "“他怎么老是这样渴呀？看来他精神还不错哪。”",
+  "source_sha256": "ee28807e7dcf5a7801e116216b5514959b7bc6745c36d7d8192ceb1548769cb5",
+  "source_normalized_sha256": "ee28807e7dcf5a7801e116216b5514959b7bc6745c36d7d8192ceb1548769cb5",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 40,
+    "grammar_token_total": 40,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kokoro-chunk-0132",
+  "source_manifest_sha256": "4fcb40821ed69568eacbd6bf62b7d53874d6fe6fe7133150a5e744c45527959e",
+  "section": {
+    "id": "心",
+    "title_zh": [
+      {
+        "t": "心",
+        "r": "xīn",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "こころ",
+        "r": "",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "中-父母亲和我",
+    "title_zh": [
+      {
+        "t": "中",
+        "r": "zhōng",
+        "g": "topic"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "父",
+        "r": "fù",
+        "g": "topic"
+      },
+      {
+        "t": "母",
+        "r": "mǔ",
+        "g": "topic"
+      },
+      {
+        "t": "亲",
+        "r": "qīn",
+        "g": "topic"
+      },
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "topic"
+      },
+      {
+        "t": "我",
+        "r": "wǒ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "中",
+        "r": "ちゅう",
+        "g": "topic"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "両",
+        "r": "りょう",
+        "g": "topic"
+      },
+      {
+        "t": "親",
+        "r": "しん",
+        "g": "topic"
+      },
+      {
+        "t": "と",
+        "r": "",
+        "g": "topic"
+      },
+      {
+        "t": "私",
+        "r": "わたし",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "心-中-父母亲和我-九",
+    "title_zh": [
+      {
+        "t": "九",
+        "r": "jiǔ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "九",
+        "r": "きゅう",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kokoro-zh-p00772",
+    "source_text": "“他怎么老是这样渴呀？看来他精神还不错哪。”",
+    "units": [
+      {
+        "source_text": "“他怎么老是这样渴呀？",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "怎",
+            "r": "zěn",
+            "g": "predicate"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "predicate"
+          },
+          {
+            "t": "老",
+            "r": "lǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "predicate"
+          },
+          {
+            "t": "样",
+            "r": "yàng",
+            "g": "predicate"
+          },
+          {
+            "t": "渴",
+            "r": "kě",
+            "g": "predicate"
+          },
+          {
+            "t": "呀",
+            "r": "ya",
+            "g": "predicate"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "どうして",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "こう",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "渇",
+              "r": "かわ",
+              "g": "predicate"
+            },
+            {
+              "t": "くのかね",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "看来他精神还不错哪。”",
+        "zh": [
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "adverbial"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "精",
+            "r": "jīng",
+            "g": "subject"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "subject"
+          },
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "predicate"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "predicate"
+          },
+          {
+            "t": "错",
+            "r": "cuò",
+            "g": "predicate"
+          },
+          {
+            "t": "哪",
+            "r": "na",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "やっぱり",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "心",
+              "r": "こころ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "丈",
+              "r": "じょう",
+              "g": "subject"
+            },
+            {
+              "t": "夫",
+              "r": "ぶ",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "所",
+              "r": "ところ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "あるのかも",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "知",
+              "r": "し",
+              "g": "predicate"
+            },
+            {
+              "t": "れないよ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

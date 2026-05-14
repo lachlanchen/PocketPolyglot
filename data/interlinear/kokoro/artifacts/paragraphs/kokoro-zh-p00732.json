@@ -1,0 +1,414 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kokoro",
+  "paragraph_id": "kokoro-zh-p00732",
+  "source_text": "“是吗？那就赶快发出去吧。这种事就算别人不督促，自己也该早点着手的。”",
+  "source_sha256": "ba0ca7cc72aa74f11f7af33f9a5bb5299613c9affa64423fa6ba11d95974c0c6",
+  "source_normalized_sha256": "ba0ca7cc72aa74f11f7af33f9a5bb5299613c9affa64423fa6ba11d95974c0c6",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 55,
+    "grammar_token_total": 55,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kokoro-chunk-0126",
+  "source_manifest_sha256": "4fcb40821ed69568eacbd6bf62b7d53874d6fe6fe7133150a5e744c45527959e",
+  "section": {
+    "id": "心",
+    "title_zh": [
+      {
+        "t": "心",
+        "r": "xīn"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "こころ",
+        "r": ""
+      }
+    ]
+  },
+  "subsection": {
+    "id": "中-父母亲和我",
+    "title_zh": [
+      {
+        "t": "中",
+        "r": "zhōng"
+      },
+      {
+        "t": " ",
+        "r": ""
+      },
+      {
+        "t": "父",
+        "r": "fù"
+      },
+      {
+        "t": "母",
+        "r": "mǔ"
+      },
+      {
+        "t": "亲",
+        "r": "qīn"
+      },
+      {
+        "t": "和",
+        "r": "hé"
+      },
+      {
+        "t": "我",
+        "r": "wǒ"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "中",
+        "r": "ちゅう"
+      },
+      {
+        "t": " ",
+        "r": ""
+      },
+      {
+        "t": "両",
+        "r": "りょう"
+      },
+      {
+        "t": "親",
+        "r": "しん"
+      },
+      {
+        "t": "と",
+        "r": ""
+      },
+      {
+        "t": "私",
+        "r": "わたし"
+      }
+    ]
+  },
+  "story": {
+    "id": "心-中-父母亲和我-七",
+    "title_zh": [
+      {
+        "t": "七",
+        "r": "qī"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "七",
+        "r": "しち"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kokoro-zh-p00732",
+    "source_text": "“是吗？那就赶快发出去吧。这种事就算别人不督促，自己也该早点着手的。”",
+    "units": [
+      {
+        "source_text": "“是吗？那就赶快发出去吧。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "adverbial"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "赶",
+            "r": "gǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "快",
+            "r": "kuài",
+            "g": "adverbial"
+          },
+          {
+            "t": "发",
+            "r": "fā",
+            "g": "predicate"
+          },
+          {
+            "t": "出",
+            "r": "chū",
+            "g": "complement"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "complement"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「そうかい、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "それじゃ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "早",
+              "r": "はや",
+              "g": "adverbial"
+            },
+            {
+              "t": "くお",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "出",
+              "r": "だ",
+              "g": "predicate"
+            },
+            {
+              "t": "し。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "这种事就算别人不督促，自己也该早点着手的。”",
+        "zh": [
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "object"
+          },
+          {
+            "t": "种",
+            "r": "zhǒng",
+            "g": "object"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "算",
+            "r": "suàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "别",
+            "r": "bié",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "督",
+            "r": "dū",
+            "g": "predicate"
+          },
+          {
+            "t": "促",
+            "r": "cù",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "自",
+            "r": "zì",
+            "g": "subject"
+          },
+          {
+            "t": "己",
+            "r": "jǐ",
+            "g": "subject"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "该",
+            "r": "gāi",
+            "g": "adverbial"
+          },
+          {
+            "t": "早",
+            "r": "zǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "着",
+            "r": "zhuó",
+            "g": "predicate"
+          },
+          {
+            "t": "手",
+            "r": "shǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そんな",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "事",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "他",
+              "r": "ほか",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "気",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "付",
+              "r": "つ",
+              "g": "predicate"
+            },
+            {
+              "t": "けないでも、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "自",
+              "r": "じ",
+              "g": "subject"
+            },
+            {
+              "t": "分",
+              "r": "ぶん",
+              "g": "subject"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "早",
+              "r": "はや",
+              "g": "adverbial"
+            },
+            {
+              "t": "くやるものだよ」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

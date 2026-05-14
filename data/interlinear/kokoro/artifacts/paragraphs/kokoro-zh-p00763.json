@@ -1,0 +1,301 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kokoro",
+  "paragraph_id": "kokoro-zh-p00763",
+  "source_text": "“是啊，推迟了几天。”我答道。",
+  "source_sha256": "ab6399f76b6589ebcc91d5be5706d100f8deb21022b52e060bf4fd8ffdf64662",
+  "source_normalized_sha256": "ab6399f76b6589ebcc91d5be5706d100f8deb21022b52e060bf4fd8ffdf64662",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 29,
+    "grammar_token_total": 29,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kokoro-chunk-0131",
+  "source_manifest_sha256": "4fcb40821ed69568eacbd6bf62b7d53874d6fe6fe7133150a5e744c45527959e",
+  "section": {
+    "id": "心",
+    "title_zh": [
+      {
+        "t": "心",
+        "r": "xīn",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "こころ",
+        "r": "",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "中-父母亲和我",
+    "title_zh": [
+      {
+        "t": "中",
+        "r": "zhōng",
+        "g": "object"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "父",
+        "r": "fù",
+        "g": "object"
+      },
+      {
+        "t": "母",
+        "r": "mǔ",
+        "g": "object"
+      },
+      {
+        "t": "亲",
+        "r": "qīn",
+        "g": "object"
+      },
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "object"
+      },
+      {
+        "t": "我",
+        "r": "wǒ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "中",
+        "r": "ちゅう",
+        "g": "object"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "両",
+        "r": "りょう",
+        "g": "object"
+      },
+      {
+        "t": "親",
+        "r": "しん",
+        "g": "object"
+      },
+      {
+        "t": "と",
+        "r": "",
+        "g": "object"
+      },
+      {
+        "t": "私",
+        "r": "わたし",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "心-中-父母亲和我-九",
+    "title_zh": [
+      {
+        "t": "九",
+        "r": "jiǔ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "九",
+        "r": "きゅう",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kokoro-zh-p00763",
+    "source_text": "“是啊，推迟了几天。”我答道。",
+    "units": [
+      {
+        "source_text": "“是啊，推迟了几天。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "推",
+            "r": "tuī",
+            "g": "predicate"
+          },
+          {
+            "t": "迟",
+            "r": "chí",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "几",
+            "r": "jǐ",
+            "g": "complement"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ええ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "少",
+              "r": "すこ",
+              "g": "adverbial"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "延",
+              "r": "の",
+              "g": "predicate"
+            },
+            {
+              "t": "ばしました",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我答道。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "答",
+            "r": "dá",
+            "g": "predicate"
+          },
+          {
+            "t": "道",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "と",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "答",
+              "r": "こた",
+              "g": "predicate"
+            },
+            {
+              "t": "えた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

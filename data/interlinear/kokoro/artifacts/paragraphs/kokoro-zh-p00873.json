@@ -1,0 +1,235 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kokoro",
+  "paragraph_id": "kokoro-zh-p00873",
+  "source_text": "父亲开始说胡话了。",
+  "source_sha256": "e3ebb64bae7428562a90b59bba2041e3a6e330d6737f0451a45dcd795bf802af",
+  "source_normalized_sha256": "e3ebb64bae7428562a90b59bba2041e3a6e330d6737f0451a45dcd795bf802af",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 16,
+    "grammar_token_total": 16,
+    "unit_count": 1
+  },
+  "source_chunk_id": "kokoro-chunk-0152",
+  "source_manifest_sha256": "4fcb40821ed69568eacbd6bf62b7d53874d6fe6fe7133150a5e744c45527959e",
+  "section": {
+    "id": "心",
+    "title_zh": [
+      {
+        "t": "心",
+        "r": "xīn",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "こころ",
+        "r": "",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "中-父母亲和我",
+    "title_zh": [
+      {
+        "t": "中",
+        "r": "zhōng",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "父",
+        "r": "fù",
+        "g": "attributive"
+      },
+      {
+        "t": "母",
+        "r": "mǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "亲",
+        "r": "qīn",
+        "g": "attributive"
+      },
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "function"
+      },
+      {
+        "t": "我",
+        "r": "wǒ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "中",
+        "r": "ちゅう",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "両",
+        "r": "りょう",
+        "g": "attributive"
+      },
+      {
+        "t": "親",
+        "r": "しん",
+        "g": "attributive"
+      },
+      {
+        "t": "と",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "私",
+        "r": "わたし",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "心-中-父母亲和我-十六",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "object"
+      },
+      {
+        "t": "六",
+        "r": "liù",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "object"
+      },
+      {
+        "t": "六",
+        "r": "ろく",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kokoro-zh-p00873",
+    "source_text": "父亲开始说胡话了。",
+    "units": [
+      {
+        "source_text": "父亲开始说胡话了。",
+        "zh": [
+          {
+            "t": "父",
+            "r": "fù",
+            "g": "subject"
+          },
+          {
+            "t": "亲",
+            "r": "qīn",
+            "g": "subject"
+          },
+          {
+            "t": "开",
+            "r": "kāi",
+            "g": "adverbial"
+          },
+          {
+            "t": "始",
+            "r": "shǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "胡",
+            "r": "hú",
+            "g": "object"
+          },
+          {
+            "t": "话",
+            "r": "huà",
+            "g": "object"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "父",
+              "r": "ちち",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "時",
+              "r": "とき",
+              "g": "adverbial"
+            },
+            {
+              "t": "々",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "囈",
+              "r": "うわ",
+              "g": "object"
+            },
+            {
+              "t": "語",
+              "r": "ごと",
+              "g": "object"
+            },
+            {
+              "t": "をいうようになった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
