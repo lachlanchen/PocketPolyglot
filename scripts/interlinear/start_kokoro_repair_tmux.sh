@@ -11,7 +11,6 @@ reasoning="${REASONING:-xhigh}"
 max_chars="${MAX_CHARS:-450}"
 chunk_mode="${CHUNK_MODE:-paragraph}"
 reference_scope="${REFERENCE_SCOPE:-chapter}"
-rechunk="${RECHUNK:-1}"
 work_dir="books/kokoro/work/bilingual"
 chunks_jsonl="$work_dir/chunks/chunks.jsonl"
 manifest="$work_dir/chunks/manifest.json"
@@ -20,12 +19,26 @@ log_dir="books/kokoro/work/logs"
 mkdir -p "$log_dir"
 log_path="$log_dir/${session}_$(date +%Y%m%d_%H%M%S).log"
 
+if [[ -v RECHUNK ]]; then
+  rechunk="$RECHUNK"
+elif [[ -f "$manifest" && -f "$chunks_jsonl" ]]; then
+  rechunk=0
+else
+  rechunk=1
+fi
+
 if tmux has-session -t "$session" 2>/dev/null; then
   echo "tmux session already exists: $session" >&2
   exit 1
 fi
 
 if [[ "$rechunk" != "0" ]]; then
+  existing_chunks="$(find "$chunk_dir" -maxdepth 1 -name '*.json' 2>/dev/null | wc -l)"
+  if [[ "$existing_chunks" -gt 0 && "${CONFIRM_RECHUNK:-0}" != "1" ]]; then
+    echo "Refusing to rechunk: $chunk_dir already contains $existing_chunks generated chunks." >&2
+    echo "Use RECHUNK=0 to resume the current manifest, or CONFIRM_RECHUNK=1 to intentionally rebuild it." >&2
+    exit 1
+  fi
   python scripts/interlinear/chunk_bilingual_markdown_book.py \
     --zh-markdown books/kokoro/markdown/zh.md \
     --ja-markdown books/kokoro/markdown/ja.md \
@@ -54,5 +67,6 @@ python -u scripts/interlinear/codex_bilingual_chunk_worker.py \
 
 echo "tmux: $session"
 echo "log: $log_path"
+echo "rechunk: $rechunk"
 echo "chunk_mode: $chunk_mode"
 echo "reference_scope: $reference_scope"
