@@ -36,6 +36,8 @@ make interlinear-jp-main
 
 The PDF is written to `build/interlinear-jp-main/book.pdf`. Use `JP_MAIN_COVER=assets/covers/kokoro-jp-main/kokoro-cover.jpeg` to include the prepared Kokoro cover image.
 
+For paired-language book work, the expected deliverable is both reading directions whenever renderers exist. For Kokoro this means the Chinese-main/Japanese-comment PDF and the Japanese-main/Chinese-comment PDF are compiled after every accepted chunk.
+
 Convert `sources/心.epub` to Markdown:
 
 ```sh

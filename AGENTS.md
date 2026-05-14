@@ -28,4 +28,4 @@ Commit messages are short imperative summaries, e.g. `Reject stale chunks in int
 
 ## Agent-Specific Instructions
 
-Do not commit original PDFs or EPUBs from `sources/`. Do not trust partial PDF page counts unless progress confirms current-manifest coverage. For long-running generation, keep tmux sessions observable and prefer resumable scripts in `prompt_tools/` or `scripts/interlinear/`.
+Do not commit original PDFs or EPUBs from `sources/`. Do not trust partial PDF page counts unless progress confirms current-manifest coverage. For paired-language books, compile both reading directions at each checkpoint whenever renderers exist, e.g. ZH-main/JP-comment and JP-main/ZH-comment. If a new pair such as EN-JP lacks a reverse renderer, treat the reverse compile path as required pipeline work before calling the book complete. For long-running generation, keep tmux sessions observable and prefer resumable scripts in `prompt_tools/` or `scripts/interlinear/`.
