@@ -368,6 +368,7 @@ def main() -> int:
     parser.add_argument("--model", default="gpt-5.5")
     parser.add_argument("--reasoning", default="xhigh")
     parser.add_argument("--retries", type=int, default=2)
+    parser.add_argument("--codex-timeout-seconds", type=int, default=7200)
     parser.add_argument("--review-only", action="store_true")
     args = parser.parse_args()
 
@@ -434,8 +435,17 @@ def main() -> int:
             prompt_path.write_text(prompt, encoding="utf-8")
 
             print(f"codex broad backfix {chunk_id} attempt {attempt}")
-            run_codex(prompt, message_path, log_path, first=True, model=args.model, reasoning=args.reasoning, cwd=cwd)
             try:
+                run_codex(
+                    prompt,
+                    message_path,
+                    log_path,
+                    first=True,
+                    model=args.model,
+                    reasoning=args.reasoning,
+                    cwd=cwd,
+                    timeout_seconds=args.codex_timeout_seconds,
+                )
                 candidate = extract_json(message_path.read_text(encoding="utf-8"))
                 normalize_node(candidate)
                 cleanup_components(candidate)

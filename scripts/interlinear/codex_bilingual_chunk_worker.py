@@ -242,6 +242,7 @@ def main() -> int:
     parser.add_argument("--max-chunks", type=int, default=0, help="0 means all chunks")
     parser.add_argument("--start-index", type=int, default=1, help="1-based chunk index")
     parser.add_argument("--retries", type=int, default=2)
+    parser.add_argument("--codex-timeout-seconds", type=int, default=7200)
     parser.add_argument(
         "--resume-last",
         action="store_true",
@@ -283,7 +284,21 @@ def main() -> int:
             prompt_path.write_text(prompt, encoding="utf-8")
 
             print(f"codex bilingual {chunk['chunk_id']} attempt {attempt}")
-            run_codex(prompt, message_path, log_path, first=True, model=args.model, reasoning=args.reasoning, cwd=cwd)
+            try:
+                run_codex(
+                    prompt,
+                    message_path,
+                    log_path,
+                    first=True,
+                    model=args.model,
+                    reasoning=args.reasoning,
+                    cwd=cwd,
+                    timeout_seconds=args.codex_timeout_seconds,
+                )
+            except Exception as exc:
+                errors = [f"codex failed: {exc}"]
+                print("; ".join(errors), file=sys.stderr)
+                continue
 
             try:
                 result = extract_json(message_path.read_text(encoding="utf-8"))

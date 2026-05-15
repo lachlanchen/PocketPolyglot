@@ -11,6 +11,7 @@ end_index="${END_INDEX:-0}"
 max_chunks_per_worker="${MAX_CHUNKS_PER_WORKER:-0}"
 model="${MODEL:-gpt-5.5}"
 reasoning="${REASONING:-xhigh}"
+codex_timeout_seconds="${CODEX_TIMEOUT_SECONDS:-7200}"
 review_merge_interval="${REVIEW_MERGE_INTERVAL:-300}"
 
 raw_chunk_dir="books/snow-country/work/bilingual/interlinear/chunks"
@@ -61,6 +62,7 @@ for i in \$(seq 1 '$review_workers'); do
     --start-index '$start_index' \
     ${end_arg[*]} \
     --max-chunks '$max_chunks_per_worker' \
+    --codex-timeout-seconds '$codex_timeout_seconds' \
     --retries 2 \
     --idle-sleep 30 \
     --done-file '$review_done_file' \
@@ -113,4 +115,5 @@ echo "start_index: $start_index"
 echo "end_index: $end_index"
 echo "max_chunks_per_worker: $max_chunks_per_worker"
 echo "review_merge_interval: $review_merge_interval"
+echo "codex_timeout_seconds: $codex_timeout_seconds"
 echo "run_script: $run_script"

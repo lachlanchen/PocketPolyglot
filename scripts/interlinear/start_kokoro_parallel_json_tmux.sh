@@ -11,6 +11,7 @@ end_index="${END_INDEX:-0}"
 max_chunks_per_worker="${MAX_CHUNKS_PER_WORKER:-0}"
 model="${MODEL:-gpt-5.5}"
 reasoning="${REASONING:-xhigh}"
+codex_timeout_seconds="${CODEX_TIMEOUT_SECONDS:-7200}"
 merge_interval="${MERGE_INTERVAL:-180}"
 work_root="books/kokoro/work/bilingual/parallel-json"
 candidate_dir="$work_root/candidates"
@@ -27,6 +28,10 @@ fi
 end_arg=()
 if [[ "$end_index" != "0" ]]; then
   end_arg=(--end-index "$end_index")
+fi
+retry_failed_arg=()
+if [[ "${RETRY_FAILED:-0}" == "1" ]]; then
+  retry_failed_arg=(--retry-failed)
 fi
 
 cat > "$run_script" <<EOF
@@ -49,6 +54,8 @@ for i in \$(seq 1 '$workers'); do
     --start-index '$start_index' \
     ${end_arg[*]} \
     --max-chunks '$max_chunks_per_worker' \
+    --codex-timeout-seconds '$codex_timeout_seconds' \
+    ${retry_failed_arg[*]} \
     --retries 4 \
     > "$work_root/logs/\$worker_id.log" 2>&1 &
   pids+=("\$!")
@@ -91,4 +98,5 @@ echo "start_index: $start_index"
 echo "end_index: $end_index"
 echo "max_chunks_per_worker: $max_chunks_per_worker"
 echo "merge_interval: $merge_interval"
+echo "codex_timeout_seconds: $codex_timeout_seconds"
 echo "run_script: $run_script"

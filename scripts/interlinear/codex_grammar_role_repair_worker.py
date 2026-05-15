@@ -201,6 +201,7 @@ def main() -> int:
     parser.add_argument("--end-index", type=int)
     parser.add_argument("--max-chunks", type=int, default=0)
     parser.add_argument("--retries", type=int, default=2)
+    parser.add_argument("--codex-timeout-seconds", type=int, default=7200)
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--after-chunk-command", default="")
     args = parser.parse_args()
@@ -246,8 +247,17 @@ def main() -> int:
             prompt_path.write_text(prompt, encoding="utf-8")
 
             print(f"codex grammar repair {chunk_id} attempt {attempt}")
-            run_codex(prompt, message_path, log_path, first=True, model=args.model, reasoning=args.reasoning, cwd=cwd)
             try:
+                run_codex(
+                    prompt,
+                    message_path,
+                    log_path,
+                    first=True,
+                    model=args.model,
+                    reasoning=args.reasoning,
+                    cwd=cwd,
+                    timeout_seconds=args.codex_timeout_seconds,
+                )
                 response = extract_json(message_path.read_text(encoding="utf-8"))
                 if response.get("chunk_id") != chunk_id:
                     raise ValueError(f"chunk_id mismatch: {response.get('chunk_id')!r}")

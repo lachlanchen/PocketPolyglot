@@ -8,6 +8,7 @@ session="${1:-zhjpbook-repair}"
 start_index="${START_INDEX:-1}"
 model="${MODEL:-gpt-5.5}"
 reasoning="${REASONING:-xhigh}"
+codex_timeout_seconds="${CODEX_TIMEOUT_SECONDS:-7200}"
 max_chars="${MAX_CHARS:-450}"
 chunk_mode="${CHUNK_MODE:-paragraph}"
 reference_scope="${REFERENCE_SCOPE:-chapter}"
@@ -60,6 +61,7 @@ python -u scripts/interlinear/codex_bilingual_chunk_worker.py \
   --reasoning '$reasoning' \
   --start-index '$start_index' \
   --max-chunks 0 \
+  --codex-timeout-seconds '$codex_timeout_seconds' \
   --retries 4 \
   --after-chunk-command 'bash scripts/interlinear/compile_kokoro_both_previews.sh' \
   2>&1 | tee '$log_path'
@@ -70,3 +72,4 @@ echo "log: $log_path"
 echo "rechunk: $rechunk"
 echo "chunk_mode: $chunk_mode"
 echo "reference_scope: $reference_scope"
+echo "codex_timeout_seconds: $codex_timeout_seconds"

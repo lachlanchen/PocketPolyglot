@@ -101,6 +101,7 @@ def main() -> int:
     parser.add_argument("--max-chunks", type=int, default=0, help="0 means no per-worker limit")
     parser.add_argument("--retries", type=int, default=2)
     parser.add_argument("--claim-ttl-seconds", type=int, default=21600)
+    parser.add_argument("--codex-timeout-seconds", type=int, default=7200)
     parser.add_argument("--idle-sleep", type=int, default=30)
     parser.add_argument("--done-file", required=True, help="when present and no work is claimable, exit")
     args = parser.parse_args()
@@ -176,9 +177,18 @@ def main() -> int:
                     prompt_path.write_text(prompt, encoding="utf-8")
 
                     print(f"{args.worker_id}: codex review backfix {chunk_id} attempt {attempt}", flush=True)
-                    run_codex(prompt, message_path, log_path, first=True, model=args.model, reasoning=args.reasoning, cwd=cwd)
                     candidate: dict[str, Any] | None = None
                     try:
+                        run_codex(
+                            prompt,
+                            message_path,
+                            log_path,
+                            first=True,
+                            model=args.model,
+                            reasoning=args.reasoning,
+                            cwd=cwd,
+                            timeout_seconds=args.codex_timeout_seconds,
+                        )
                         candidate = extract_json(message_path.read_text(encoding="utf-8"))
                         normalize_node(candidate)
                         cleanup_components(candidate)

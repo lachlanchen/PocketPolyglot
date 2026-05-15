@@ -13,6 +13,7 @@ fi
 model="${MODEL:-gpt-5.5}"
 reasoning="${REASONING:-xhigh}"
 retries="${REVIEW_RETRIES:-2}"
+codex_timeout_seconds="${CODEX_TIMEOUT_SECONDS:-7200}"
 
 python scripts/interlinear/review_backfix_interlinear_chunks.py \
   --chunks-jsonl books/no-longer-human/work/bilingual/chunks/chunks.jsonl \
@@ -22,6 +23,7 @@ python scripts/interlinear/review_backfix_interlinear_chunks.py \
   --chunk-ids "$chunks" \
   --model "$model" \
   --reasoning "$reasoning" \
+  --codex-timeout-seconds "$codex_timeout_seconds" \
   --retries "$retries"
 
 COMMIT_PROGRESS=0 bash scripts/interlinear/compile_no_longer_human_both_previews.sh

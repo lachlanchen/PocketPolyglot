@@ -156,9 +156,20 @@ def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = 
     ).strip()
 
 
-def run_codex(prompt: str, output_message: Path, log_path: Path, *, first: bool, model: str, reasoning: str, cwd: Path) -> None:
+def run_codex(
+    prompt: str,
+    output_message: Path,
+    log_path: Path,
+    *,
+    first: bool,
+    model: str,
+    reasoning: str,
+    cwd: Path,
+    timeout_seconds: int = 0,
+) -> None:
     output_message.parent.mkdir(parents=True, exist_ok=True)
     log_path.parent.mkdir(parents=True, exist_ok=True)
+    output_message.unlink(missing_ok=True)
     common = [
         "-m",
         model,
@@ -175,7 +186,19 @@ def run_codex(prompt: str, output_message: Path, log_path: Path, *, first: bool,
     with log_path.open("a", encoding="utf-8") as log:
         log.write("\n\n===== CODEX COMMAND =====\n")
         log.write(" ".join(cmd) + "\n")
-        proc = subprocess.run(cmd, input=prompt, text=True, cwd=cwd, stdout=log, stderr=subprocess.STDOUT)
+        try:
+            proc = subprocess.run(
+                cmd,
+                input=prompt,
+                text=True,
+                cwd=cwd,
+                stdout=log,
+                stderr=subprocess.STDOUT,
+                timeout=timeout_seconds if timeout_seconds > 0 else None,
+            )
+        except subprocess.TimeoutExpired as exc:
+            log.write(f"\n===== CODEX TIMEOUT after {timeout_seconds}s =====\n")
+            raise RuntimeError(f"codex timed out after {timeout_seconds}s; see {log_path}") from exc
     if proc.returncode != 0:
         raise RuntimeError(f"codex exited with {proc.returncode}; see {log_path}")
 
@@ -190,6 +213,7 @@ def main() -> int:
     parser.add_argument("--max-chunks", type=int, default=0, help="0 means all chunks")
     parser.add_argument("--start-index", type=int, default=1, help="1-based chunk index")
     parser.add_argument("--retries", type=int, default=2)
+    parser.add_argument("--codex-timeout-seconds", type=int, default=0, help="0 means no timeout")
     parser.add_argument("--resume-last", action="store_true", help="resume the newest Codex session for the first missing chunk")
     args = parser.parse_args()
 
@@ -227,8 +251,22 @@ def main() -> int:
             prompt_path.write_text(prompt, encoding="utf-8")
 
             print(f"codex {chunk['chunk_id']} attempt {attempt}")
-            run_codex(prompt, message_path, log_path, first=first_codex_call, model=args.model, reasoning=args.reasoning, cwd=cwd)
-            first_codex_call = False
+            try:
+                run_codex(
+                    prompt,
+                    message_path,
+                    log_path,
+                    first=first_codex_call,
+                    model=args.model,
+                    reasoning=args.reasoning,
+                    cwd=cwd,
+                    timeout_seconds=args.codex_timeout_seconds,
+                )
+                first_codex_call = False
+            except Exception as exc:
+                errors = [f"codex failed: {exc}"]
+                print("; ".join(errors), file=sys.stderr)
+                continue
 
             try:
                 result = extract_json(message_path.read_text(encoding="utf-8"))
