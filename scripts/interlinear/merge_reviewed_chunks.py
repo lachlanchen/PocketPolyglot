@@ -108,7 +108,9 @@ def main() -> int:
                 "ZHJPBOOK_LAST_REVIEWED": merged_ids[-1],
             }
         )
-        subprocess.run(args.after_merge_command, shell=True, check=True, env=env)
+        result = subprocess.run(args.after_merge_command, shell=True, env=env)
+        if result.returncode:
+            print(f"after_merge_command_failed={result.returncode}")
     return 0
 
 

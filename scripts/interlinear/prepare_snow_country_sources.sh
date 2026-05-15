@@ -42,7 +42,7 @@ python scripts/interlinear/chunk_bilingual_markdown_book.py \
   --book-title-zh "雪国" \
   --book-title-zh-reading "xuě guó" \
   --book-title-ja "雪国" \
-  --book-title-ja-reading "ゆきぐに" \
+  --book-title-ja-reading "ゆき ぐに" \
   --author "川端康成" \
   --book-description "川端康成《雪国》 / Kawabata Yasunari's Snow Country" \
   --chunks-jsonl "$work_dir/chunks/chunks.jsonl" \

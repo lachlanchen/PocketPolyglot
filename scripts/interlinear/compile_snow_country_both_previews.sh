@@ -20,7 +20,7 @@ bash scripts/interlinear/compile_interlinear_book.sh \
   --book-title-zh "雪国" \
   --book-title-zh-reading "xuě guó" \
   --book-title-ja "雪国" \
-  --book-title-ja-reading "ゆきぐに" \
+  --book-title-ja-reading "ゆき ぐに" \
   --source-markdown "books/snow-country/markdown/zh.md" \
   --source-epub "sources/snow-country/雪国.epub" \
   --source-markdown-ja "books/snow-country/markdown/ja.md" \
@@ -35,7 +35,7 @@ bash scripts/interlinear/compile_jp_main_book.sh \
   --book-title-zh "雪国" \
   --book-title-zh-reading "xuě guó" \
   --book-title-ja "雪国" \
-  --book-title-ja-reading "ゆきぐに" \
+  --book-title-ja-reading "ゆき ぐに" \
   --source-markdown "books/snow-country/markdown/zh.md" \
   --source-epub "sources/snow-country/雪国.epub" \
   --source-markdown-ja "books/snow-country/markdown/ja.md" \

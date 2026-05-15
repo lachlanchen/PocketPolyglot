@@ -19,6 +19,13 @@ def plain_tokens(text: str, reading: str = "", *, reading_only_for_han: bool = F
         return []
     if reading_only_for_han and not HAN_RE.search(text):
         reading = ""
+    han_chars = HAN_RE.findall(text)
+    reading_parts = [part for part in reading.split() if part]
+    if han_chars and len(han_chars) == len(text) and (not reading or len(reading_parts) == len(han_chars)):
+        return [
+            {"t": char, **({"r": reading_parts[index]} if reading_parts else {})}
+            for index, char in enumerate(han_chars)
+        ]
     return [{"t": text, "r": reading}]
 
 
