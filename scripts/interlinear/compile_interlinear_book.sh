@@ -20,6 +20,7 @@ Options:
   --source-epub <path>           Chinese source EPUB
   --source-markdown-ja <path>    Japanese source Markdown
   --source-epub-ja <path>        Japanese source EPUB
+  --cover-image <path>           workspace-relative cover image path
   --build-dir <path>             TeX/PDF build directory
   --color-mode <mode>            color or blackwhite
   --output-pdf <path>            named PDF path
@@ -42,6 +43,7 @@ source_markdown=""
 source_epub=""
 source_markdown_ja=""
 source_epub_ja=""
+cover_image=""
 output_pdf=""
 allow_missing=0
 
@@ -58,6 +60,7 @@ while [[ $# -gt 0 ]]; do
     --source-epub) source_epub="${2:-}"; shift 2 ;;
     --source-markdown-ja) source_markdown_ja="${2:-}"; shift 2 ;;
     --source-epub-ja) source_epub_ja="${2:-}"; shift 2 ;;
+    --cover-image) cover_image="${2:-}"; shift 2 ;;
     --build-dir) build_dir="${2:-}"; shift 2 ;;
     --color-mode) color_mode="${2:-}"; shift 2 ;;
     --output-pdf) output_pdf="${2:-}"; shift 2 ;;
@@ -81,6 +84,9 @@ case "$color_mode" in
   color|blackwhite) ;;
   *) echo "Invalid --color-mode: $color_mode" >&2; exit 1 ;;
 esac
+if [[ "$color_mode" == "blackwhite" ]]; then
+  cover_image=""
+fi
 
 assemble_cmd=(
   python scripts/interlinear/assemble_chunk_json.py
@@ -111,6 +117,7 @@ python scripts/interlinear/validate_interlinear_json.py "$output_json"
 mkdir -p "$build_dir"
 python scripts/interlinear/json_to_block_tex.py "$output_json" \
   -o "$build_dir/source.tex" \
+  --cover-image "$cover_image" \
   --color-mode "$color_mode"
 xelatex -interaction=nonstopmode -halt-on-error -jobname=book -output-directory="$build_dir" \
   "\\def\\InterlinearSource{$build_dir/source.tex}\\input{tex/interlinear-block/book.tex}"

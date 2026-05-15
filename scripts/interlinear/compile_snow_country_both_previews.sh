@@ -9,6 +9,7 @@ chunk_dir="${SNOW_CHUNK_DIR:-books/snow-country/work/bilingual/reviewed/chunks}"
 zh_json="books/snow-country/work/bilingual/preview/snow-country.partial.json"
 jp_json="books/snow-country/work/bilingual/preview/snow-country.jp-main.partial.json"
 build_root="${SNOW_BUILD_ROOT:-build/snow-country}"
+cover_image="assets/covers/snow-country/snow-country-cover.png"
 
 python scripts/interlinear/report_interlinear_progress.py \
   --manifest "$manifest" \
@@ -26,6 +27,7 @@ bash scripts/interlinear/compile_interlinear_book.sh \
   --source-epub "sources/snow-country/雪国.epub" \
   --source-markdown-ja "books/snow-country/markdown/ja.md" \
   --source-epub-ja "sources/snow-country/雪国(1).epub" \
+  --cover-image "$cover_image" \
   --build-dir "$build_root/zh-main/color" \
   --color-mode color \
   --output-pdf "$build_root/zh-main/color/雪国（ゆきぐに）.pdf" \
@@ -43,6 +45,7 @@ bash scripts/interlinear/compile_interlinear_book.sh \
   --source-epub "sources/snow-country/雪国.epub" \
   --source-markdown-ja "books/snow-country/markdown/ja.md" \
   --source-epub-ja "sources/snow-country/雪国(1).epub" \
+  --cover-image "$cover_image" \
   --build-dir "$build_root/zh-main/blackwhite" \
   --color-mode blackwhite \
   --output-pdf "$build_root/zh-main/blackwhite/雪国（ゆきぐに）.pdf" \
@@ -64,6 +67,7 @@ bash scripts/interlinear/compile_jp_main_book.sh \
   --curated-by "AgInTiFlow curated" \
   --curated-url "https://flow.lazying.art" \
   --powered-by "powered by LazyingArt" \
+  --cover-image "$cover_image" \
   --build-dir "$build_root/jp-main/color" \
   --color-mode color \
   --output-pdf "$build_root/jp-main/color/雪国（中文注）.pdf" \
@@ -85,6 +89,7 @@ bash scripts/interlinear/compile_jp_main_book.sh \
   --curated-by "AgInTiFlow curated" \
   --curated-url "https://flow.lazying.art" \
   --powered-by "powered by LazyingArt" \
+  --cover-image "$cover_image" \
   --build-dir "$build_root/jp-main/blackwhite" \
   --color-mode blackwhite \
   --output-pdf "$build_root/jp-main/blackwhite/雪国（中文注）.pdf" \

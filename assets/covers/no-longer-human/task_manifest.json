@@ -1,0 +1,21 @@
+{
+  "tool": "generate_image",
+  "provider": "grsai",
+  "host": "https://grsaiapi.com",
+  "model": "nano-banana-2",
+  "outputDir": "assets/covers/no-longer-human",
+  "promptFile": "assets/covers/no-longer-human/prompt.txt",
+  "requestPayloadRedacted": "assets/covers/no-longer-human/request_payload.redacted.json",
+  "status": "succeeded",
+  "createdAt": "2026-05-15T06:29:28.572Z",
+  "taskId": "6-26af5af0-f90a-4d80-8846-a46daca3b76c",
+  "submittedAt": "2026-05-15T06:29:29.364Z",
+  "finishedAt": "2026-05-15T06:30:27.756Z",
+  "downloadedFiles": [
+    {
+      "path": "assets/covers/no-longer-human/no-longer-human-cover.png",
+      "bytes": 7412063,
+      "sha256": "ecadd938cb3f2b37e7cb841cc96d0b058888e7244e65850617e758421d201e50"
+    }
+  ]
+}

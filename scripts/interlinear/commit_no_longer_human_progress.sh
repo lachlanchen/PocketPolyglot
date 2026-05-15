@@ -13,4 +13,5 @@ exec bash scripts/interlinear/commit_interlinear_progress.sh \
   --pdf "build/no-longer-human/zh-main/blackwhite/人間失格（にんげんしっかく）.pdf" \
   --pdf "build/no-longer-human/jp-main/color/人間失格（中文注）.pdf" \
   --pdf "build/no-longer-human/jp-main/blackwhite/人間失格（中文注）.pdf" \
+  --extra "assets/covers/no-longer-human" \
   --message-prefix "Update No Longer Human interlinear progress"

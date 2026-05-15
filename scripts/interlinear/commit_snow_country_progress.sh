@@ -13,4 +13,5 @@ exec bash scripts/interlinear/commit_interlinear_progress.sh \
   --pdf "build/snow-country/zh-main/blackwhite/雪国（ゆきぐに）.pdf" \
   --pdf "build/snow-country/jp-main/color/雪国（中文注）.pdf" \
   --pdf "build/snow-country/jp-main/blackwhite/雪国（中文注）.pdf" \
+  --extra "assets/covers/snow-country" \
   --message-prefix "Update Snow Country interlinear progress"
