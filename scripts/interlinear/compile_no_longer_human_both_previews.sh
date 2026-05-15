@@ -21,7 +21,7 @@ bash scripts/interlinear/compile_interlinear_book.sh \
   --book-title-zh "人間失格" \
   --book-title-zh-reading "rén jiān shī gé" \
   --book-title-ja "人間失格" \
-  --book-title-ja-reading "にんげん しっかく" \
+  --book-title-ja-reading "にん げん しっ かく" \
   --source-markdown "books/no-longer-human/markdown/zh.md" \
   --source-epub "sources/no-longer-human/人間失格-2.pdf" \
   --source-markdown-ja "books/no-longer-human/markdown/ja.md" \
@@ -38,7 +38,7 @@ bash scripts/interlinear/compile_interlinear_book.sh \
   --book-title-zh "人間失格" \
   --book-title-zh-reading "rén jiān shī gé" \
   --book-title-ja "人間失格" \
-  --book-title-ja-reading "にんげん しっかく" \
+  --book-title-ja-reading "にん げん しっ かく" \
   --source-markdown "books/no-longer-human/markdown/zh.md" \
   --source-epub "sources/no-longer-human/人間失格-2.pdf" \
   --source-markdown-ja "books/no-longer-human/markdown/ja.md" \
@@ -55,7 +55,7 @@ bash scripts/interlinear/compile_jp_main_book.sh \
   --book-title-zh "人間失格" \
   --book-title-zh-reading "rén jiān shī gé" \
   --book-title-ja "人間失格" \
-  --book-title-ja-reading "にんげん しっかく" \
+  --book-title-ja-reading "にん げん しっ かく" \
   --source-markdown "books/no-longer-human/markdown/zh.md" \
   --source-epub "sources/no-longer-human/人間失格-2.pdf" \
   --source-markdown-ja "books/no-longer-human/markdown/ja.md" \
@@ -76,7 +76,7 @@ bash scripts/interlinear/compile_jp_main_book.sh \
   --book-title-zh "人間失格" \
   --book-title-zh-reading "rén jiān shī gé" \
   --book-title-ja "人間失格" \
-  --book-title-ja-reading "にんげん しっかく" \
+  --book-title-ja-reading "にん げん しっ かく" \
   --source-markdown "books/no-longer-human/markdown/zh.md" \
   --source-epub "sources/no-longer-human/人間失格-2.pdf" \
   --source-markdown-ja "books/no-longer-human/markdown/ja.md" \

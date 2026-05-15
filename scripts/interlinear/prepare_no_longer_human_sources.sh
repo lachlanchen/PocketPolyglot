@@ -33,7 +33,7 @@ python scripts/interlinear/chunk_bilingual_markdown_book.py \
   --book-title-zh "人間失格" \
   --book-title-zh-reading "rén jiān shī gé" \
   --book-title-ja "人間失格" \
-  --book-title-ja-reading "にんげん しっかく" \
+  --book-title-ja-reading "にん げん しっ かく" \
   --author "太宰治" \
   --book-description "太宰治《人間失格》 / Dazai Osamu's No Longer Human" \
   --chunks-jsonl "$work_dir/chunks/chunks.jsonl" \
