@@ -30,6 +30,7 @@ PUNCT_RE = re.compile(r"^[\s，。！？、；：,.!?;:「」『』（）()《�
 EDITORIAL_NOTE_RE = re.compile(r"^[（(]?\s*\d+\s*[.．、)]")
 INLINE_NOTE_RE = re.compile(r"[［\[].{4,}?[］\]]")
 REFERENCE_SKELETON_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaffァ-ヿA-Za-z0-9]")
+RUBY_READING_CHARS = r"[ぁ-ゟァ-ヿ]*"
 
 
 def canonical_json(data: Any) -> str:
@@ -132,6 +133,15 @@ def reference_skeleton(text: str) -> str:
     return reference_skeleton_with_positions(text)[0]
 
 
+def ruby_insensitive_pattern(text: str) -> str:
+    parts: list[str] = []
+    for char in normalize(text):
+        parts.append(re.escape(char))
+        if HAN_RE.fullmatch(char):
+            parts.append(RUBY_READING_CHARS)
+    return "".join(parts)
+
+
 def reference_match_pos(
     reference_text: str,
     reference_skel: str,
@@ -145,6 +155,11 @@ def reference_match_pos(
     exact_pos = reference_text.find(compact, min_pos)
     if exact_pos >= 0:
         return exact_pos
+
+    if HAN_RE.search(compact):
+        ruby_match = re.search(ruby_insensitive_pattern(compact), reference_text[min_pos:])
+        if ruby_match:
+            return min_pos + ruby_match.start()
 
     skel = reference_skeleton(compact)
     if len(skel) < 4:
