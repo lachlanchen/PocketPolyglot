@@ -98,6 +98,68 @@
       "book_description": "Murasaki Shikibu, The Tale of Genji; modern Chinese source with generated Japanese comment text.",
       "chunk_mode": "paragraph",
       "reference_scope": "chapter"
+    },
+    {
+      "book_id": "chumon-no-ooi-ryoriten",
+      "status": "launchable",
+      "task_mode": "zh_main_with_ja_source_reference",
+      "source_language": "zh",
+      "source_type": "epub",
+      "source_path": "sources/注文の多い料理店/要求太多的餐馆【其实说宫泽贤治的真正读者，还是大人......】.epub",
+      "ja_source_path": "sources/注文の多い料理店/注文の多い料理店－宮沢賢治童話集１－（新装版） (講談社青い鳥文庫).epub",
+      "start_heading": "要求太多的餐馆",
+      "ja_start_heading": "注文の多い料理店",
+      "book_title_zh": "要求太多的餐馆",
+      "book_title_zh_reading": "yāo qiú tài duō de cān guǎn",
+      "book_title_ja": "注文の多い料理店",
+      "book_title_ja_reading": "ちゅう もん の おお い りょう り てん",
+      "author": "宮沢賢治",
+      "author_reading_zh": "gōng zé xián zhì",
+      "author_reading_ja": "みや ざわ けん じ",
+      "book_description": "Miyazawa Kenji, The Restaurant of Many Orders. Chinese source is the main text; Japanese EPUB reference is used when matching stories exist.",
+      "chunk_mode": "paragraph",
+      "reference_scope": "chapter",
+      "title_map": {
+        "要求太多的餐馆": "注文の多い料理店",
+        "狼林、笸箩林与盗林": "狼森と笊森、盗森",
+        "渡过雪原": "雪渡り",
+        "渡过雪原之一（小狐狸绀三郎）": "雪渡り その一（小ぎつねの紺三郎）",
+        "渡过雪原之二（狐狸小学校的幻灯会）": "雪渡り その二（きつね小学校の幻灯会）",
+        "君鼠": "クねずみ"
+      }
+    },
+    {
+      "book_id": "ginga-tetsudo",
+      "status": "launchable",
+      "task_mode": "zh_main_with_ja_source_reference",
+      "source_language": "zh",
+      "source_type": "epub",
+      "source_path": "sources/銀河鉄道の夜/银河铁道之夜.epub",
+      "local_ja_source_path": "sources/銀河鉄道の夜/銀河鉄道の夜.epub",
+      "ja_source_url": "https://www.aozora.gr.jp/cards/000081/files/456_ruby_145.zip",
+      "start_heading": "一、下午课",
+      "ja_start_text": "一、午后の授業",
+      "book_title_zh": "银河铁道之夜",
+      "book_title_zh_reading": "yín hé tiě dào zhī yè",
+      "book_title_ja": "銀河鉄道の夜",
+      "book_title_ja_reading": "ぎん が てつ どう の よる",
+      "author": "宮沢賢治",
+      "author_reading_zh": "gōng zé xián zhì",
+      "author_reading_ja": "みや ざわ けん じ",
+      "book_description": "Miyazawa Kenji, Night on the Galactic Railroad. Chinese EPUB is the main text; Japanese reference markdown is prepared from the Aozora Bunko text because the supplied Japanese EPUB is fixed-layout images.",
+      "chunk_mode": "paragraph",
+      "reference_scope": "chapter",
+      "title_map": {
+        "一、下午课": "一、午后の授業",
+        "二、活字印刷厂": "二、活版所",
+        "三、家": "三、家",
+        "四、半人马星节之夜": "四、ケンタウル祭の夜",
+        "五、天气轮柱": "五、天気輪の柱",
+        "六、银河站": "六、銀河ステーション",
+        "七、北十字星和普利奥新海岸": "七、北十字とプリオシン海岸",
+        "八、捕鸟人": "八、鳥を捕る人",
+        "九、乔万尼的车票": "九、ジョバンニの切符"
+      }
     }
   ]
 }

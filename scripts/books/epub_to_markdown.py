@@ -11,6 +11,7 @@ from pathlib import Path
 
 
 LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]+\)")
+RT_RE = re.compile(r"<rt[^>]*>.*?</rt>", re.IGNORECASE)
 TAG_RE = re.compile(r"<[^>]+>")
 HEADING_RE = re.compile(r"^#{1,6}\s+")
 
@@ -26,6 +27,7 @@ def run_pandoc(epub: Path, raw_output: Path) -> None:
 def clean_line(line: str) -> str:
     line = line.replace("\u00a0", " ")
     line = LINK_RE.sub(r"\1", line)
+    line = RT_RE.sub("", line)
     line = TAG_RE.sub("", line)
     line = html.unescape(line)
     line = line.replace("\u3000", " ")

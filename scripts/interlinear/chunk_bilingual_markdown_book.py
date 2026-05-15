@@ -15,6 +15,13 @@ from chunk_markdown_book import make_chunks, parse_markdown
 
 
 PART_ORDER = {"上": 1, "中": 2, "下": 3}
+FOOTNOTE_RE = re.compile(r"\[[0-9０-９]+\]|\[\\\[[0-9０-９]+\\\]\]\([^)]*\)")
+
+
+def normalize_title(title: str) -> str:
+    title = FOOTNOTE_RE.sub("", title or "")
+    title = re.sub(r"\s+", " ", title)
+    return title.strip()
 
 
 def part_index(title: str) -> int:
@@ -38,9 +45,44 @@ def reference_key(paragraph: dict[str, Any], scope: str) -> str:
     raise ValueError(f"unknown reference scope: {scope}")
 
 
+def title_for_scope(paragraph: dict[str, Any], scope: str) -> str:
+    if scope == "chapter":
+        return normalize_title(paragraph.get("story_title", ""))
+    if scope == "subsection":
+        return normalize_title(paragraph.get("subsection_title", ""))
+    if scope == "section":
+        return normalize_title(paragraph.get("section_title", ""))
+    raise ValueError(f"unknown reference scope: {scope}")
+
+
+def mapped_reference_keys(chunk: dict[str, Any], reference_scope: str, title_map: dict[str, Any]) -> list[str]:
+    direct = reference_key(chunk, reference_scope)
+    title = title_for_scope(chunk, reference_scope)
+    normalized_map = {normalize_title(key): value for key, value in title_map.items()}
+    mapped = normalized_map.get(title, [])
+    if isinstance(mapped, str):
+        mapped_titles = [mapped]
+    elif isinstance(mapped, list):
+        mapped_titles = [str(item) for item in mapped]
+    else:
+        mapped_titles = []
+
+    keys = [direct]
+    if reference_scope in {"chapter", "subsection"}:
+        prefix = f"{part_index(chunk.get('subsection_title', ''))}:"
+        keys.extend(f"{prefix}{mapped_title}" for mapped_title in mapped_titles)
+    else:
+        keys.extend(mapped_titles)
+    return keys
+
+
 def attach_japanese_reference(
-    chunks: list[dict[str, Any]], jp_paragraphs: list[dict[str, Any]], reference_scope: str
+    chunks: list[dict[str, Any]],
+    jp_paragraphs: list[dict[str, Any]],
+    reference_scope: str,
+    title_map: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
+    title_map = title_map or {}
     jp_by_reference: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for paragraph in jp_paragraphs:
         jp_by_reference[reference_key(paragraph, reference_scope)].append(
@@ -56,11 +98,19 @@ def attach_japanese_reference(
     enriched: list[dict[str, Any]] = []
     for chunk in chunks:
         key = reference_key(chunk, reference_scope)
+        refs: list[dict[str, Any]] = []
+        resolved_key = key
+        for candidate_key in mapped_reference_keys(chunk, reference_scope, title_map):
+            refs = jp_by_reference.get(candidate_key, [])
+            if refs:
+                resolved_key = candidate_key
+                break
         item = dict(chunk)
         item["paired_story_key"] = chapter_key(chunk)
         item["paired_reference_key"] = key
+        item["resolved_jp_reference_key"] = resolved_key
         item["jp_reference_scope"] = reference_scope
-        item["jp_reference"] = jp_by_reference.get(key, [])
+        item["jp_reference"] = refs
         item["jp_reference_char_count"] = sum(len(paragraph["text"]) for paragraph in item["jp_reference"])
         enriched.append(item)
     return enriched
@@ -112,10 +162,15 @@ def main() -> int:
         default="chapter",
         help="amount of Japanese original context attached to each Chinese chunk",
     )
+    parser.add_argument(
+        "--title-map-json",
+        help="optional JSON object mapping Chinese section/subsection/story titles to Japanese titles",
+    )
     args = parser.parse_args()
 
     zh_markdown = Path(args.zh_markdown)
     ja_markdown = Path(args.ja_markdown)
+    title_map = json.loads(Path(args.title_map_json).read_text(encoding="utf-8")) if args.title_map_json else {}
     zh_paragraphs = parse_markdown(zh_markdown, f"{args.book_id}-zh")
     ja_paragraphs = parse_markdown(ja_markdown, f"{args.book_id}-ja")
     chunks = add_book_metadata(
@@ -123,6 +178,7 @@ def main() -> int:
             make_chunks(zh_paragraphs, args.book_id, args.max_chars, chunk_mode=args.chunk_mode),
             ja_paragraphs,
             args.reference_scope,
+            title_map,
         ),
         {
             "book_title_zh": args.book_title_zh,
@@ -155,6 +211,7 @@ def main() -> int:
         "chunk_mode": args.chunk_mode,
         "max_chars": args.max_chars if args.chunk_mode == "size" else None,
         "jp_reference_scope": args.reference_scope,
+        "title_map_json": str(Path(args.title_map_json)) if args.title_map_json else "",
         "chunk_count": len(chunks),
         "chunks_jsonl": str(chunks_path),
         "missing_jp_reference_chunks": missing_reference,
