@@ -25,6 +25,8 @@ Options:
   --curated-url <url>            curator URL
   --powered-by <text>            powered-by line
   --cover-image <path>           workspace-relative cover image path
+  --build-dir <path>             TeX/PDF build directory
+  --color-mode <mode>            color or blackwhite
   --output-pdf <path>            named PDF path
   --allow-missing                build from available chunks only
   -h, --help                     show help
@@ -35,6 +37,8 @@ root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 manifest=""
 chunk_dir=""
 output_json=""
+build_dir="build/interlinear-jp-main"
+color_mode="color"
 book_title_zh="心"
 book_title_zh_reading="xīn"
 book_title_ja="こころ"
@@ -69,6 +73,8 @@ while [[ $# -gt 0 ]]; do
     --curated-url) curated_url="${2:-}"; shift 2 ;;
     --powered-by) powered_by="${2:-}"; shift 2 ;;
     --cover-image) cover_image="${2:-}"; shift 2 ;;
+    --build-dir) build_dir="${2:-}"; shift 2 ;;
+    --color-mode) color_mode="${2:-}"; shift 2 ;;
     --output-pdf) output_pdf="${2:-}"; shift 2 ;;
     --allow-missing) allow_missing=1; shift ;;
     -h|--help) usage; exit 0 ;;
@@ -85,6 +91,11 @@ for required in manifest chunk_dir output_json source_markdown source_epub outpu
 done
 
 cd "$root"
+
+case "$color_mode" in
+  color|blackwhite) ;;
+  *) echo "Invalid --color-mode: $color_mode" >&2; exit 1 ;;
+esac
 
 assemble_cmd=(
   python scripts/interlinear/assemble_chunk_json.py
@@ -111,14 +122,27 @@ fi
 
 "${assemble_cmd[@]}"
 python scripts/interlinear/validate_interlinear_json.py "$output_json"
-make interlinear-jp-main \
-  INTERLINEAR_DATA="$output_json" \
-  JP_MAIN_AUTHOR="$author" \
-  JP_MAIN_CURATOR="$curated_by" \
-  JP_MAIN_URL="$curated_url" \
-  JP_MAIN_POWERED_BY="$powered_by" \
-  JP_MAIN_COVER="$cover_image"
 
+if [[ "$color_mode" == "blackwhite" ]]; then
+  cover_image=""
+fi
+
+mkdir -p "$build_dir"
+python scripts/interlinear/json_to_jp_main_tex.py "$output_json" \
+  -o "$build_dir/source.tex" \
+  --author "$author" \
+  --curated-by "$curated_by" \
+  --curated-url "$curated_url" \
+  --powered-by "$powered_by" \
+  --cover-image "$cover_image" \
+  --color-mode "$color_mode"
+xelatex -interaction=nonstopmode -halt-on-error -jobname=book -output-directory="$build_dir" \
+  "\\def\\JpMainSource{$build_dir/source.tex}\\input{tex/interlinear-jp-main/book.tex}"
+xelatex -interaction=nonstopmode -halt-on-error -jobname=book -output-directory="$build_dir" \
+  "\\def\\JpMainSource{$build_dir/source.tex}\\input{tex/interlinear-jp-main/book.tex}"
 mkdir -p "$(dirname "$output_pdf")"
-cp build/interlinear-jp-main/book.pdf "$output_pdf"
+cp "$build_dir/book.pdf" "$output_pdf"
+if [[ "$output_pdf" != "$build_dir/book.pdf" ]]; then
+  rm -f "$build_dir/book.pdf"
+fi
 echo "PDF: $output_pdf"

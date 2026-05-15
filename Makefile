@@ -12,7 +12,7 @@ JP_MAIN_URL ?= https://flow.lazying.art
 JP_MAIN_POWERED_BY ?= powered by LazyingArt
 JP_MAIN_COVER ?=
 
-.PHONY: sample paired interlinear interlinear-run interlinear-jp-main compare kokoro-md kokoro-tmux kokoro-bilingual-md kokoro-bilingual-tmux kokoro-jp-ocr-md snow-country-prepare snow-country-tmux snow-country-after-kokoro snow-country-compile ocr-sample ocr-all clean
+.PHONY: sample paired interlinear interlinear-run interlinear-jp-main compare kokoro-md kokoro-tmux kokoro-bilingual-md kokoro-bilingual-tmux kokoro-compile kokoro-jp-ocr-md snow-country-prepare snow-country-tmux snow-country-after-kokoro snow-country-compile ocr-sample ocr-all clean
 
 sample: paired
 
@@ -40,7 +40,10 @@ kokoro-bilingual-md:
 	python scripts/books/normalize_kokoro_jp_markdown.py books/kokoro/markdown/ja.section.md --output books/kokoro/markdown/ja.md --title こころ
 
 kokoro-bilingual-tmux:
-	prompt_tools/interlinear-book/start-bilingual-book-tmux.sh --no-attach -- --zh-epub sources/心.epub --jp-epub "sources/夏目 漱石 作品全集.epub" --book-id kokoro --title-zh 心 --title-zh-reading xīn --title-ja こころ --title-ja-reading こころ --model gpt-5.5 --reasoning xhigh --output-pdf "build/interlinear-block/心（こころ）.pdf"
+	prompt_tools/interlinear-book/start-bilingual-book-tmux.sh --no-attach -- --zh-epub sources/心.epub --jp-epub "sources/夏目 漱石 作品全集.epub" --book-id kokoro --title-zh 心 --title-zh-reading xīn --title-ja こころ --title-ja-reading こころ --model gpt-5.5 --reasoning xhigh --output-pdf "build/kokoro/zh-main/color/心（こころ）.pdf"
+
+kokoro-compile:
+	bash scripts/interlinear/compile_kokoro_both_previews.sh
 
 kokoro-jp-ocr-md:
 	python scripts/books/ocr_image_epub_to_markdown.py sources/こころ.epub --output books/kokoro-jp/markdown/book.md --title こころ --lang jpn_vert --psm 5

@@ -21,7 +21,7 @@
 }
 
 \setmainfont{TeX Gyre Pagella}
-\setsansfont{TeX Gyre Heros}
+\setsansfont{Noto Sans}
 \setmonofont{TeX Gyre Cursor}
 \setCJKmainfont{Noto Serif CJK SC}
 \setCJKsansfont{Noto Sans CJK SC}
@@ -44,6 +44,26 @@
 \definecolor{GramFunction}{HTML}{6D6D6D}
 
 \hypersetup{colorlinks=true,linkcolor=BookRed,urlcolor=BookRed}
+
+\newif\ifBWMode
+\BWModefalse
+\newcommand{\BlackWhiteMode}{%
+  \BWModetrue
+  \hypersetup{linkcolor=black,urlcolor=black}%
+  \colorlet{BookInk}{black}%
+  \colorlet{BookNote}{black}%
+  \colorlet{BookRule}{black!55}%
+  \colorlet{BookRed}{black}%
+  \colorlet{BookFaint}{black!8}%
+  \colorlet{GramSubject}{black}%
+  \colorlet{GramPredicate}{black}%
+  \colorlet{GramObject}{black}%
+  \colorlet{GramAttributive}{black}%
+  \colorlet{GramAdverbial}{black}%
+  \colorlet{GramComplement}{black}%
+  \colorlet{GramTopic}{black}%
+  \colorlet{GramFunction}{black}%
+}
 
 \pagestyle{fancy}
 \fancyhf{}
