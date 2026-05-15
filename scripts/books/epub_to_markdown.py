@@ -36,10 +36,17 @@ def clean_line(line: str) -> str:
     return line
 
 
-def clean_markdown(raw_text: str, start_heading: str | None = None) -> str:
+def clean_markdown(raw_text: str, start_heading: str | None = None, start_text: str | None = None) -> str:
     lines = raw_text.splitlines()
     start = 0
-    if start_heading:
+    if start_text:
+        wanted = start_text.strip()
+        for index, line in enumerate(lines):
+            cleaned = clean_line(line)
+            if cleaned == wanted:
+                start = index
+                break
+    elif start_heading:
         wanted = start_heading.strip()
         for index, line in enumerate(lines):
             cleaned = clean_line(line)
@@ -79,6 +86,7 @@ def main() -> int:
     parser.add_argument("--raw-output", required=True, help="raw Pandoc Markdown")
     parser.add_argument("--clean-output", required=True, help="cleaned Markdown")
     parser.add_argument("--start-heading", help="first heading to keep, e.g. 总序")
+    parser.add_argument("--start-text", help="first plain cleaned line to keep, e.g. 第一章")
     args = parser.parse_args()
 
     epub = Path(args.epub)
@@ -88,7 +96,7 @@ def main() -> int:
     run_pandoc(epub, raw_output)
     raw_text = raw_output.read_text(encoding="utf-8")
     clean_output.parent.mkdir(parents=True, exist_ok=True)
-    clean_output.write_text(clean_markdown(raw_text, args.start_heading), encoding="utf-8")
+    clean_output.write_text(clean_markdown(raw_text, args.start_heading, args.start_text), encoding="utf-8")
     return 0
 
 
