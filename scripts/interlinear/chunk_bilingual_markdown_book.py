@@ -66,6 +66,19 @@ def attach_japanese_reference(
     return enriched
 
 
+def add_book_metadata(chunks: list[dict[str, Any]], metadata: dict[str, str]) -> list[dict[str, Any]]:
+    if not any(metadata.values()):
+        return chunks
+    enriched: list[dict[str, Any]] = []
+    for chunk in chunks:
+        item = dict(chunk)
+        for key, value in metadata.items():
+            if value:
+                item[key] = value
+        enriched.append(item)
+    return enriched
+
+
 def combined_sha256(paths: list[Path]) -> str:
     digest = hashlib.sha256()
     for path in paths:
@@ -78,6 +91,12 @@ def main() -> int:
     parser.add_argument("--zh-markdown", required=True)
     parser.add_argument("--ja-markdown", required=True)
     parser.add_argument("--book-id", required=True)
+    parser.add_argument("--book-title-zh", default="")
+    parser.add_argument("--book-title-zh-reading", default="")
+    parser.add_argument("--book-title-ja", default="")
+    parser.add_argument("--book-title-ja-reading", default="")
+    parser.add_argument("--author", default="")
+    parser.add_argument("--book-description", default="")
     parser.add_argument("--chunks-jsonl", required=True)
     parser.add_argument("--manifest", required=True)
     parser.add_argument("--max-chars", type=int, default=1400)
@@ -99,10 +118,20 @@ def main() -> int:
     ja_markdown = Path(args.ja_markdown)
     zh_paragraphs = parse_markdown(zh_markdown, f"{args.book_id}-zh")
     ja_paragraphs = parse_markdown(ja_markdown, f"{args.book_id}-ja")
-    chunks = attach_japanese_reference(
-        make_chunks(zh_paragraphs, args.book_id, args.max_chars, chunk_mode=args.chunk_mode),
-        ja_paragraphs,
-        args.reference_scope,
+    chunks = add_book_metadata(
+        attach_japanese_reference(
+            make_chunks(zh_paragraphs, args.book_id, args.max_chars, chunk_mode=args.chunk_mode),
+            ja_paragraphs,
+            args.reference_scope,
+        ),
+        {
+            "book_title_zh": args.book_title_zh,
+            "book_title_zh_reading": args.book_title_zh_reading,
+            "book_title_ja": args.book_title_ja,
+            "book_title_ja_reading": args.book_title_ja_reading,
+            "author": args.author,
+            "book_description": args.book_description,
+        },
     )
 
     missing_reference = [chunk["chunk_id"] for chunk in chunks if not chunk["jp_reference"]]
@@ -129,6 +158,12 @@ def main() -> int:
         "chunk_count": len(chunks),
         "chunks_jsonl": str(chunks_path),
         "missing_jp_reference_chunks": missing_reference,
+        "book_title_zh": args.book_title_zh,
+        "book_title_zh_reading": args.book_title_zh_reading,
+        "book_title_ja": args.book_title_ja,
+        "book_title_ja_reading": args.book_title_ja_reading,
+        "author": args.author,
+        "book_description": args.book_description,
         "chunks": [
             {
                 "chunk_id": chunk["chunk_id"],

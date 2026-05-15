@@ -144,23 +144,28 @@ def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = 
         if len(previous_errors) > len(shown_errors):
             error_block += f"\n- ... {len(previous_errors) - len(shown_errors)} additional validation errors omitted"
 
-    metadata = {
-        key: chunk[key]
-        for key in (
-            "chunk_id",
-            "section_id",
-            "section_title",
-            "subsection_id",
-            "subsection_title",
-            "story_id",
-            "story_title",
-            "paired_story_key",
-        )
-    }
+    metadata_keys = (
+        "chunk_id",
+        "section_id",
+        "section_title",
+        "subsection_id",
+        "subsection_title",
+        "story_id",
+        "story_title",
+        "paired_story_key",
+        "book_title_zh",
+        "book_title_zh_reading",
+        "book_title_ja",
+        "book_title_ja_reading",
+        "author",
+        "book_description",
+    )
+    metadata = {key: chunk[key] for key in metadata_keys if key in chunk}
+    work_description = chunk.get("book_description") or "Natsume Soseki's Kokoro"
 
     return textwrap.dedent(
         f"""
-        You are preparing one chunk of a Chinese-main / Japanese-comment pocket interlinear edition of Natsume Soseki's Kokoro.
+        You are preparing one chunk of a Chinese-main / Japanese-comment pocket interlinear edition of {work_description}.
 
         Use the Chinese translation as the continuous main text. Use the supplied Japanese original reference for the Japanese comment lines. The reference is intentionally a rough chapter-level context, not a precomputed sentence match; locate the corresponding original Japanese wording yourself. Do not make a free Japanese translation when the original Japanese reference contains the corresponding passage.
 

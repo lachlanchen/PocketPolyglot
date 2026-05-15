@@ -12,7 +12,7 @@ JP_MAIN_URL ?= https://flow.lazying.art
 JP_MAIN_POWERED_BY ?= powered by LazyingArt
 JP_MAIN_COVER ?=
 
-.PHONY: sample paired interlinear interlinear-run interlinear-jp-main compare kokoro-md kokoro-tmux kokoro-bilingual-md kokoro-bilingual-tmux kokoro-jp-ocr-md ocr-sample ocr-all clean
+.PHONY: sample paired interlinear interlinear-run interlinear-jp-main compare kokoro-md kokoro-tmux kokoro-bilingual-md kokoro-bilingual-tmux kokoro-jp-ocr-md snow-country-prepare snow-country-tmux snow-country-after-kokoro snow-country-compile ocr-sample ocr-all clean
 
 sample: paired
 
@@ -44,6 +44,18 @@ kokoro-bilingual-tmux:
 
 kokoro-jp-ocr-md:
 	python scripts/books/ocr_image_epub_to_markdown.py sources/こころ.epub --output books/kokoro-jp/markdown/book.md --title こころ --lang jpn_vert --psm 5
+
+snow-country-prepare:
+	bash scripts/interlinear/prepare_snow_country_sources.sh
+
+snow-country-tmux:
+	bash scripts/interlinear/start_snow_country_parallel_json_tmux.sh
+
+snow-country-after-kokoro:
+	bash scripts/interlinear/start_snow_country_after_kokoro_tmux.sh
+
+snow-country-compile:
+	bash scripts/interlinear/compile_snow_country_both_previews.sh
 
 build/paired/source.tex: $(PAIRED_DATA) scripts/paired/md_to_tex.py
 	python scripts/paired/md_to_tex.py $(PAIRED_DATA) -o build/paired/source.tex
