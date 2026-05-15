@@ -1,0 +1,18 @@
+{
+  "tool": "aginti_attempt_then_openai_images_fallback",
+  "agintiStatus": "attempted; GRS/Venice image provider credentials were unavailable in the active shell and the AgInTi image task did not finish",
+  "provider": "openai",
+  "model": "gpt-image-1",
+  "outputDir": "assets/covers/sichuan-folk-stories-vol1",
+  "promptFile": "assets/covers/sichuan-folk-stories-vol1/prompt.txt",
+  "requestPayloadRedacted": "assets/covers/sichuan-folk-stories-vol1/request_payload.redacted.json",
+  "status": "succeeded",
+  "downloadedFiles": [
+    {
+      "path": "assets/covers/sichuan-folk-stories-vol1/sichuan-folk-stories-cover.png",
+      "bytes": 3589366,
+      "sha256": "c0c475ed7cd2ebd5aa018ab8690b92dbccb17e2b25412928c3f8d6459802a021"
+    }
+  ],
+  "finishedAt": "2026-05-15T17:05:52+08:00"
+}
