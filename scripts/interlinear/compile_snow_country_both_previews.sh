@@ -5,7 +5,7 @@ root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$root"
 
 manifest="books/snow-country/work/bilingual/chunks/manifest.json"
-chunk_dir="books/snow-country/work/bilingual/interlinear/chunks"
+chunk_dir="${SNOW_CHUNK_DIR:-books/snow-country/work/bilingual/reviewed/chunks}"
 zh_json="books/snow-country/work/bilingual/preview/snow-country.partial.json"
 jp_json="books/snow-country/work/bilingual/preview/snow-country.jp-main.partial.json"
 
