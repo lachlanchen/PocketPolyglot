@@ -13,6 +13,7 @@ from typing import Any
 
 from codex_chunk_worker import load_chunks
 from normalize_grammar_roles import cleanup_components, normalize_node
+from reference_windows import expand_adjacent_jp_references
 from review_backfix_interlinear_chunks import review_chunk
 
 
@@ -48,7 +49,7 @@ def main() -> int:
     parser.add_argument("--max-merge", type=int, default=0, help="0 means merge all currently contiguous reviewed candidates")
     args = parser.parse_args()
 
-    sources = load_chunks(Path(args.chunks_jsonl))
+    sources = expand_adjacent_jp_references(load_chunks(Path(args.chunks_jsonl)))
     accepted_dir = Path(args.candidate_dir) / "accepted"
     final_dir = Path(args.final_dir)
     merged_dir = Path(args.merged_dir)

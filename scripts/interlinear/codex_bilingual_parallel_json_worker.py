@@ -14,6 +14,7 @@ from typing import Any
 from codex_chunk_worker import extract_json, load_chunks, run_codex
 from codex_bilingual_chunk_worker import prompt_for_chunk, validate_chunk
 from normalize_grammar_roles import cleanup_components, normalize_node
+from reference_windows import expand_adjacent_jp_references
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -92,7 +93,7 @@ def main() -> int:
     args = parser.parse_args()
 
     cwd = Path.cwd()
-    chunks = load_chunks(Path(args.chunks_jsonl))
+    chunks = expand_adjacent_jp_references(load_chunks(Path(args.chunks_jsonl)))
     canonical_dir = Path(args.canonical_dir)
     candidate_dir = Path(args.candidate_dir)
     work_dir = Path(args.work_dir)

@@ -15,6 +15,7 @@ from typing import Any
 
 from codex_chunk_worker import compact, extract_json, flatten_zh, load_chunks, run_codex
 from normalize_grammar_roles import cleanup_components, normalize_node
+from reference_windows import expand_adjacent_jp_references
 from validate_interlinear_json import ja_lines_text, normalize, validate_ja_tokens, validate_named_tokens, validate_zh_tokens
 
 PLACEHOLDER_JA = {"注", "注。", "。"}
@@ -249,7 +250,7 @@ def main() -> int:
     args = parser.parse_args()
 
     cwd = Path.cwd()
-    chunks = load_chunks(Path(args.chunks_jsonl))
+    chunks = expand_adjacent_jp_references(load_chunks(Path(args.chunks_jsonl)))
     output_dir = Path(args.output_dir)
     work_dir = Path(args.work_dir)
     output_dir.mkdir(parents=True, exist_ok=True)

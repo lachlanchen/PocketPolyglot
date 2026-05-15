@@ -18,6 +18,7 @@ from typing import Any
 from codex_bilingual_chunk_worker import GRAMMAR_ROLES, prompt_for_chunk, validate_chunk
 from codex_chunk_worker import extract_json, load_chunks, run_codex
 from normalize_grammar_roles import cleanup_components, normalize_node
+from reference_windows import expand_adjacent_jp_references
 from validate_interlinear_json import ja_lines_text, normalize
 
 PROMPT_VERSION = "broad-post-merge-review-v3"
@@ -334,7 +335,10 @@ def main() -> int:
     state = load_state(state_path)
     state["prompt_version"] = PROMPT_VERSION
     state.setdefault("chunks", {})
-    sources = {chunk["chunk_id"]: chunk for chunk in load_chunks(Path(args.chunks_jsonl))}
+    sources = {
+        chunk["chunk_id"]: chunk
+        for chunk in expand_adjacent_jp_references(load_chunks(Path(args.chunks_jsonl)))
+    }
     chunk_ids = parse_chunk_ids(args.chunk_id + args.chunk_ids)
     if not chunk_ids:
         chunk_ids = sorted(path.stem for path in chunk_dir.glob("*.json"))
