@@ -134,10 +134,29 @@ def make_chunks(
     return chunks
 
 
+def add_book_metadata(chunks: list[dict[str, Any]], metadata: dict[str, str]) -> list[dict[str, Any]]:
+    if not any(metadata.values()):
+        return chunks
+    enriched: list[dict[str, Any]] = []
+    for chunk in chunks:
+        item = dict(chunk)
+        for key, value in metadata.items():
+            if value:
+                item[key] = value
+        enriched.append(item)
+    return enriched
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("markdown", help="cleaned Markdown input")
     parser.add_argument("--book-id", required=True)
+    parser.add_argument("--book-title-zh", default="")
+    parser.add_argument("--book-title-zh-reading", default="")
+    parser.add_argument("--book-title-ja", default="")
+    parser.add_argument("--book-title-ja-reading", default="")
+    parser.add_argument("--author", default="")
+    parser.add_argument("--book-description", default="")
     parser.add_argument("--chunks-jsonl", required=True)
     parser.add_argument("--manifest", required=True)
     parser.add_argument("--max-chars", type=int, default=1800)
@@ -146,7 +165,17 @@ def main() -> int:
 
     markdown = Path(args.markdown)
     paragraphs = parse_markdown(markdown, args.book_id)
-    chunks = make_chunks(paragraphs, args.book_id, args.max_chars, chunk_mode=args.chunk_mode)
+    chunks = add_book_metadata(
+        make_chunks(paragraphs, args.book_id, args.max_chars, chunk_mode=args.chunk_mode),
+        {
+            "book_title_zh": args.book_title_zh,
+            "book_title_zh_reading": args.book_title_zh_reading,
+            "book_title_ja": args.book_title_ja,
+            "book_title_ja_reading": args.book_title_ja_reading,
+            "author": args.author,
+            "book_description": args.book_description,
+        },
+    )
 
     chunks_path = Path(args.chunks_jsonl)
     manifest_path = Path(args.manifest)
@@ -163,6 +192,12 @@ def main() -> int:
         "max_chars": args.max_chars if args.chunk_mode == "size" else None,
         "chunk_count": len(chunks),
         "chunks_jsonl": str(chunks_path),
+        "book_title_zh": args.book_title_zh,
+        "book_title_zh_reading": args.book_title_zh_reading,
+        "book_title_ja": args.book_title_ja,
+        "book_title_ja_reading": args.book_title_ja_reading,
+        "author": args.author,
+        "book_description": args.book_description,
         "chunks": [
             {
                 "chunk_id": chunk["chunk_id"],

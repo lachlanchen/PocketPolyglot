@@ -163,12 +163,36 @@ def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = 
     )
     metadata = {key: chunk[key] for key in metadata_keys if key in chunk}
     work_description = chunk.get("book_description") or "Natsume Soseki's Kokoro"
+    has_jp_reference = bool(chunk.get("jp_reference"))
+    source_instruction = (
+        "Use the Chinese translation as the continuous main text. Use the supplied Japanese original reference "
+        "for the Japanese comment lines. The reference is intentionally a rough chapter-level context, not a "
+        "precomputed sentence match; locate the corresponding original Japanese wording yourself. Do not make "
+        "a free Japanese translation when the original Japanese reference contains the corresponding passage."
+        if has_jp_reference
+        else "Use the Chinese source as the continuous main text. No Japanese original reference is supplied "
+        "for this book; create faithful, natural Japanese comment lines directly from each Chinese unit. "
+        "Keep the Japanese close enough that a reader can compare the two languages sentence by sentence."
+    )
+    ja_source_requirement = (
+        "- For each Chinese unit, find the corresponding Japanese original wording in the provided Japanese reference paragraphs for the same rough chapter/reference scope. Split that Japanese correspondence into exactly two short visual rows.\n"
+        "- Some Japanese references may come from vertically typeset ruby PDFs where a reading gloss was extracted inline before its kanji, for example \"はかま袴\", \"い謂わば\", or \"とういす籐椅子\". Treat those as ruby extraction artifacts: output the real Japanese wording with one-kanji tokens and furigana, not duplicated kana plus kanji.\n"
+        "- Across the chunk, Japanese text must have reasonable coverage of the Chinese units. If the Japanese reference does not include enough source text for this chunk, say so by failing the task rather than fabricating placeholders."
+        if has_jp_reference
+        else "- For each Chinese unit, write a faithful natural Japanese translation/comment. Split that Japanese correspondence into exactly two short visual rows.\n"
+        "- Since this is a Chinese-source-only book, do not reject the task for missing Japanese original reference and do not fabricate source quotations. The Japanese must be your own accurate sentence-level rendering of the Chinese."
+    )
+    reference_payload_label = (
+        "Japanese original reference paragraphs for the same rough chapter/reference scope:"
+        if has_jp_reference
+        else "Japanese original reference paragraphs: [] (none supplied; translate from the Chinese source)"
+    )
 
     return textwrap.dedent(
         f"""
         You are preparing one chunk of a Chinese-main / Japanese-comment pocket interlinear edition of {work_description}.
 
-        Use the Chinese translation as the continuous main text. Use the supplied Japanese original reference for the Japanese comment lines. The reference is intentionally a rough chapter-level context, not a precomputed sentence match; locate the corresponding original Japanese wording yourself. Do not make a free Japanese translation when the original Japanese reference contains the corresponding passage.
+        {source_instruction}
 
         Return exactly one JSON object and no Markdown fences, no explanation.
 
@@ -203,11 +227,9 @@ def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = 
         - Line-based pairing requirement: one unit should be one Chinese sentence, or one tightly bound sentence fragment when the sentence/comment is very long. Do not put a whole paragraph into one unit. If a paragraph has multiple sentence-ending punctuation marks, make multiple units in the same order.
         - Target each Chinese unit at roughly 18-65 Chinese characters. A unit longer than 90 characters should normally be split by clause. A unit longer than 128 characters will be rejected.
         - Chinese tokenization is strict: every Chinese Han character must be its own token with pinyin, e.g. "先生" becomes [{{"t":"先","r":"xiān"}},{{"t":"生","r":"sheng"}}]. Never attach pinyin to a multi-character Chinese word or phrase. Punctuation, Arabic numerals, Latin text, and spaces use empty reading.
-        - For each Chinese unit, find the corresponding Japanese original wording in the provided Japanese reference paragraphs for the same rough chapter/reference scope. Split that Japanese correspondence into exactly two short visual rows.
-        - Some Japanese references may come from vertically typeset ruby PDFs where a reading gloss was extracted inline before its kanji, for example "はかま袴", "い謂わば", or "とういす籐椅子". Treat those as ruby extraction artifacts: output the real Japanese wording with one-kanji tokens and furigana, not duplicated kana plus kanji.
+        {ja_source_requirement}
         - Keep each Japanese comment row short: no row should exceed 54 visible Japanese characters. If a row would be longer, split the Chinese unit into smaller sentence/clause units or rebalance the two rows.
         - The Japanese comment for every unit must contain real aligned Japanese. Never leave Japanese rows empty. Never use placeholders such as "注", "注。", "日本語", or a generic marker.
-        - Across the chunk, Japanese text must have reasonable coverage of the Chinese units. If the Japanese reference does not include enough source text for this chunk, say so by failing the task rather than fabricating placeholders.
         - If a Chinese unit is a translator note or editorial note that is not in the Japanese original, write a concise Japanese note for that unit and keep it visibly note-like.
         - Japanese tokenization is strict: every kanji character must be its own token with furigana, and furigana may appear only on one-kanji tokens. Kana, okurigana, punctuation, spaces, and Latin text must have empty reading. Example: "先生と私" becomes [{{"t":"先","r":"せん"}},{{"t":"生","r":"せい"}},{{"t":"と","r":""}},{{"t":"私","r":"わたし"}}]. Example: "書くだけ" becomes [{{"t":"書","r":"か"}},{{"t":"くだけ","r":""}}].
         - Do not use automatic pinyin, furigana, morphological, or grammar tagging libraries/tools such as pypinyin, kakasi, MeCab, Sudachi, fugashi, or similar packages. The readings and grammar roles must be supplied by your own linguistic reasoning.
@@ -226,7 +248,7 @@ def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = 
         Chinese source paragraphs:
         {json.dumps(chunk['paragraphs'], ensure_ascii=False, indent=2)}
 
-        Japanese original reference paragraphs for the same rough chapter/reference scope:
+        {reference_payload_label}
         {json.dumps(chunk.get('jp_reference', []), ensure_ascii=False, indent=2)}
         """
     ).strip()

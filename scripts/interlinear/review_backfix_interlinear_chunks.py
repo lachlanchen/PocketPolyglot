@@ -313,6 +313,17 @@ def review_chunk(source: dict[str, Any], data: dict[str, Any]) -> list[str]:
 def repair_prompt(source: dict[str, Any], current: dict[str, Any], issues: list[str]) -> str:
     base_prompt = prompt_for_chunk(source, issues)
     shown_issues = "\n".join(f"- {issue}" for issue in issues[:120])
+    has_jp_reference = bool(source.get("jp_reference"))
+    japanese_source_rule = (
+        "- Use the supplied Japanese original reference as the comment text, in the correct original order."
+        if has_jp_reference
+        else "- No Japanese original reference is supplied for this book. Write faithful, natural Japanese comment text from the Chinese source and keep it sentence-aligned."
+    )
+    japanese_wrong_source_rule = (
+        "Japanese from the wrong chapter, Japanese paraphrase instead of original wording,"
+        if has_jp_reference
+        else "Japanese that mistranslates, omits, or over-summarizes the Chinese source,"
+    )
     return textwrap.dedent(
         f"""
         You are backfixing a merged interlinear chunk that failed broad post-merge review.
@@ -322,14 +333,14 @@ def repair_prompt(source: dict[str, Any], current: dict[str, Any], issues: list[
         Fix every class of issue, not only grammar:
         - Preserve every Chinese paragraph exactly and keep paragraph ids/order exact.
         - Split at sentence or short clause level so the interline is line-based and readable.
-        - Use the supplied Japanese original reference as the comment text, in the correct original order.
+        {japanese_source_rule}
         - Ensure every Chinese Han token has pinyin on its own single-character token.
         - Ensure every Japanese kanji has furigana on its own single-kanji token only.
         - Use one English grammar role in "g" for every content token.
         - Avoid color collapse: a whole sentence/chunk must not become one dominant role such as all predicate.
         - Match the major Chinese and Japanese components roughly with the same roles/colors.
         - Treat visible pages that become one color as a serious data bug: it usually means the chunk or paragraph assigns nearly every token the same "g" role.
-        - Check for the full set of quality failures a reader would see in the PDF: missing source text, missing Japanese, duplicated Japanese comments, Japanese from the wrong chapter, Japanese paraphrase instead of original wording, oversized units that are not line-based, unbalanced two-line comments, missing pinyin/furigana, furigana on kana or multi-kanji tokens, pinyin on multi-character Chinese tokens, and role/color mismatch between corresponding Chinese and Japanese phrases.
+        - Check for the full set of quality failures a reader would see in the PDF: missing source text, missing Japanese, duplicated Japanese comments, {japanese_wrong_source_rule} oversized units that are not line-based, unbalanced two-line comments, missing pinyin/furigana, furigana on kana or multi-kanji tokens, pinyin on multi-character Chinese tokens, and role/color mismatch between corresponding Chinese and Japanese phrases.
         - Treat numbered Chinese footnotes such as "1.鸟取：..." or "2.江户：..." as editorial notes. They may use concise Japanese note text instead of original-source quotation, but must still be complete, readable, ruby-annotated, and role-colored.
         - Do not merely make validation pass. Make the result read like a clean interlinear book page: continuous Chinese main text, sentence-by-sentence Japanese correspondence, correct ruby/readings, and varied but meaningful grammar colors.
 
