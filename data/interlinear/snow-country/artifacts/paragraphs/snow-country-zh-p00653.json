@@ -1,0 +1,199 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "snow-country",
+  "paragraph_id": "snow-country-zh-p00653",
+  "source_text": "“是啊。那是芭茅。”",
+  "source_sha256": "6a6a0e36a36182299861ba1b025820477ab8e97dd612f1260147ef71f6874c2a",
+  "source_normalized_sha256": "6a6a0e36a36182299861ba1b025820477ab8e97dd612f1260147ef71f6874c2a",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 18,
+    "grammar_token_total": 18,
+    "unit_count": 2
+  },
+  "source_chunk_id": "snow-country-chunk-0653",
+  "source_manifest_sha256": "d02ddd49a319af1305a83854af8d72ec60d0bb2943dc097462835b3e60dcf59f",
+  "section": {
+    "id": "06",
+    "title_zh": [
+      {
+        "t": "0",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "6",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "0",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "6",
+        "r": "",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "06-intro",
+    "title_zh": [
+      {
+        "t": "0",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "6",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "0",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "6",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "snow-country-zh-p00653",
+    "source_text": "“是啊。那是芭茅。”",
+    "units": [
+      {
+        "source_text": "“是啊。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "はい",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "那是芭茅。”",
+        "zh": [
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "芭",
+            "r": "bā",
+            "g": "object"
+          },
+          {
+            "t": "茅",
+            "r": "máo",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "あれは",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "萱",
+              "r": "かや",
+              "g": "object"
+            },
+            {
+              "t": "かや",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "でございますよ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
