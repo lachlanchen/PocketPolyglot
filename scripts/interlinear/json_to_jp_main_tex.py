@@ -69,6 +69,10 @@ def brace(text: str) -> str:
     return "{%\n" + text + "\n}"
 
 
+def plain_tokens(tokens: list[dict[str, str]]) -> str:
+    return "".join(str(token.get("t", "")) for token in tokens)
+
+
 def emit_unit(unit: dict[str, Any]) -> str:
     ja = render_ja_lines(unit)
     zh = render_tokens(unit["zh"], "zhpy", breakable=True)
@@ -95,6 +99,7 @@ def convert(
         cover_image = ""
     out.extend(
         [
+            rf"\JpMainPdfMeta{{{tex_escape(plain_tokens(data['title']['ja']))}}}{{{tex_escape(plain_tokens(data['title']['zh']))}}}{{{tex_escape(author)}}}",
             rf"\JpMainTitle{brace(title_ja)}{brace(title_zh)}{{{tex_escape(author)}}}{{{tex_escape(curated_by)}}}{{{tex_escape(curated_url)}}}{{{tex_escape(powered_by)}}}{{{tex_escape(cover_image)}}}",
             "",
         ]

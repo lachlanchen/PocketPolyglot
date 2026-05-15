@@ -164,9 +164,13 @@
 \newcommand{\ZHCommentText}[1]{{\zhfont\fontsize{6.95pt}{10.4pt}\selectfont\color{BookNote}#1}}
 \newcommand{\TinyLabel}[1]{{\sffamily\bfseries\fontsize{5.8pt}{5.8pt}\selectfont\textcolor{BookRed}{#1}}}
 
+\NewDocumentCommand{\JpMainPdfMeta}{m m m}{%
+  \hypersetup{pdftitle={#1 / #2},pdfauthor={#3}}%
+}
+
 \NewDocumentCommand{\JpMainTitle}{m m m m m m m}{%
   \frontmatter
-  \hypersetup{pdftitle={こころ / 心},pdfauthor={#3}}%
+  \hypersetup{pdfauthor={#3}}%
   \thispagestyle{empty}%
   \newgeometry{margin=0pt}%
   \if\relax\detokenize{#7}\relax

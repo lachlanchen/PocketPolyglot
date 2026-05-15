@@ -27,8 +27,10 @@ python scripts/interlinear/review_backfix_interlinear_chunks.py \
 COMMIT_PROGRESS=0 bash scripts/interlinear/compile_snow_country_both_previews.sh
 
 for pdf in \
-  "build/interlinear-block/雪国（ゆきぐに）.pdf" \
-  "build/interlinear-jp-main/雪国（中文注）.pdf"
+  "build/snow-country/zh-main/color/雪国（ゆきぐに）.pdf" \
+  "build/snow-country/zh-main/blackwhite/雪国（ゆきぐに）.pdf" \
+  "build/snow-country/jp-main/color/雪国（中文注）.pdf" \
+  "build/snow-country/jp-main/blackwhite/雪国（中文注）.pdf"
 do
   if [[ ! -s "$pdf" ]]; then
     echo "Missing or empty PDF: $pdf" >&2

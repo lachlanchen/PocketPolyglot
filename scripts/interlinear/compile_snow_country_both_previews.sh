@@ -8,6 +8,7 @@ manifest="books/snow-country/work/bilingual/chunks/manifest.json"
 chunk_dir="${SNOW_CHUNK_DIR:-books/snow-country/work/bilingual/reviewed/chunks}"
 zh_json="books/snow-country/work/bilingual/preview/snow-country.partial.json"
 jp_json="books/snow-country/work/bilingual/preview/snow-country.jp-main.partial.json"
+build_root="${SNOW_BUILD_ROOT:-build/snow-country}"
 
 python scripts/interlinear/report_interlinear_progress.py \
   --manifest "$manifest" \
@@ -25,7 +26,26 @@ bash scripts/interlinear/compile_interlinear_book.sh \
   --source-epub "sources/snow-country/雪国.epub" \
   --source-markdown-ja "books/snow-country/markdown/ja.md" \
   --source-epub-ja "sources/snow-country/雪国(1).epub" \
-  --output-pdf "build/interlinear-block/雪国（ゆきぐに）.pdf" \
+  --build-dir "$build_root/zh-main/color" \
+  --color-mode color \
+  --output-pdf "$build_root/zh-main/color/雪国（ゆきぐに）.pdf" \
+  --allow-missing
+
+bash scripts/interlinear/compile_interlinear_book.sh \
+  --manifest "$manifest" \
+  --chunk-dir "$chunk_dir" \
+  --output-json "$zh_json" \
+  --book-title-zh "雪国" \
+  --book-title-zh-reading "xuě guó" \
+  --book-title-ja "雪国" \
+  --book-title-ja-reading "ゆき ぐに" \
+  --source-markdown "books/snow-country/markdown/zh.md" \
+  --source-epub "sources/snow-country/雪国.epub" \
+  --source-markdown-ja "books/snow-country/markdown/ja.md" \
+  --source-epub-ja "sources/snow-country/雪国(1).epub" \
+  --build-dir "$build_root/zh-main/blackwhite" \
+  --color-mode blackwhite \
+  --output-pdf "$build_root/zh-main/blackwhite/雪国（ゆきぐに）.pdf" \
   --allow-missing
 
 bash scripts/interlinear/compile_jp_main_book.sh \
@@ -44,7 +64,30 @@ bash scripts/interlinear/compile_jp_main_book.sh \
   --curated-by "AgInTiFlow curated" \
   --curated-url "https://flow.lazying.art" \
   --powered-by "powered by LazyingArt" \
-  --output-pdf "build/interlinear-jp-main/雪国（中文注）.pdf" \
+  --build-dir "$build_root/jp-main/color" \
+  --color-mode color \
+  --output-pdf "$build_root/jp-main/color/雪国（中文注）.pdf" \
+  --allow-missing
+
+bash scripts/interlinear/compile_jp_main_book.sh \
+  --manifest "$manifest" \
+  --chunk-dir "$chunk_dir" \
+  --output-json "$jp_json" \
+  --book-title-zh "雪国" \
+  --book-title-zh-reading "xuě guó" \
+  --book-title-ja "雪国" \
+  --book-title-ja-reading "ゆき ぐに" \
+  --source-markdown "books/snow-country/markdown/zh.md" \
+  --source-epub "sources/snow-country/雪国.epub" \
+  --source-markdown-ja "books/snow-country/markdown/ja.md" \
+  --source-epub-ja "sources/snow-country/雪国(1).epub" \
+  --author "川端康成" \
+  --curated-by "AgInTiFlow curated" \
+  --curated-url "https://flow.lazying.art" \
+  --powered-by "powered by LazyingArt" \
+  --build-dir "$build_root/jp-main/blackwhite" \
+  --color-mode blackwhite \
+  --output-pdf "$build_root/jp-main/blackwhite/雪国（中文注）.pdf" \
   --allow-missing
 
 if [[ "${COMMIT_PROGRESS:-1}" != "0" ]]; then

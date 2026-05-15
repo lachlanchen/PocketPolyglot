@@ -61,6 +61,10 @@ def brace(text: str) -> str:
     return "{%\n" + text + "\n}"
 
 
+def plain_tokens(tokens: list[dict[str, str]]) -> str:
+    return "".join(str(token.get("t", "")) for token in tokens)
+
+
 def emit_unit(unit: dict[str, Any]) -> str:
     zh = render_tokens(unit["zh"], "zhpy", breakable=True)
     ja_lines = unit.get("ja", [])
@@ -77,6 +81,7 @@ def convert(data: dict[str, Any], *, color_mode: str = "color") -> str:
         out.append(r"\BlackWhiteMode")
     out.extend(
         [
+            rf"\InterPdfMeta{{{tex_escape(plain_tokens(data['title']['zh']))}}}{{{tex_escape(plain_tokens(data['title']['ja']))}}}",
             rf"\InterTitle{brace(render_tokens(data['title']['zh'], 'zhpy'))}{brace(render_tokens(data['title']['ja'], 'jpruby'))}",
             "",
         ]
