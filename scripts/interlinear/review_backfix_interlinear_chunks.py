@@ -136,9 +136,15 @@ def reference_skeleton(text: str) -> str:
 def ruby_insensitive_pattern(text: str) -> str:
     parts: list[str] = []
     for char in normalize(text):
-        parts.append(re.escape(char))
         if HAN_RE.fullmatch(char):
+            # Source EPUB text may flatten ruby either after or before the base
+            # kanji, e.g. 氷柱つらら or ほ惚. Generated chunks keep only the
+            # base kanji in `t`, so tolerate both source forms.
             parts.append(RUBY_READING_CHARS)
+            parts.append(re.escape(char))
+            parts.append(RUBY_READING_CHARS)
+        else:
+            parts.append(re.escape(char))
     return "".join(parts)
 
 
