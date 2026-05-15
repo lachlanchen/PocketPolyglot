@@ -26,6 +26,7 @@ HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 SENTENCE_END_RE = re.compile(r"[。！？!?]")
 PUNCT_RE = re.compile(r"^[\s，。！？、；：,.!?;:「」『』（）()《》〈〉“”‘’…—-]+$")
 EDITORIAL_NOTE_RE = re.compile(r"^[（(]?\s*\d+\s*[.．、)]")
+REFERENCE_SKELETON_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaffァ-ヿA-Za-z0-9]")
 
 
 def canonical_json(data: Any) -> str:
@@ -101,6 +102,31 @@ def is_editorial_note(text: str) -> bool:
     return bool(EDITORIAL_NOTE_RE.match(compact)) or any(marker in compact for marker in ("译者", "译注", "注释", "注："))
 
 
+def reference_skeleton(text: str) -> str:
+    """Compare Japanese source text while ignoring inline kana ruby readings.
+
+    Some EPUB/Markdown sources flatten ruby as base kanji followed by kana,
+    e.g. 軒のき端ば or 氷柱つらら. Generated JSON stores the base text in
+    `t` and the reading in `r`, so exact substring matching would reject
+    correct chunks. The skeleton keeps kanji, katakana, Latin, and digits for
+    a conservative fallback match after exact matching fails.
+    """
+
+    return "".join(REFERENCE_SKELETON_RE.findall(normalize(text)))
+
+
+def reference_match_pos(reference_text: str, reference_skel: str, text: str) -> int:
+    compact = normalize(text)
+    exact_pos = reference_text.find(compact)
+    if exact_pos >= 0:
+        return exact_pos
+
+    skel = reference_skeleton(compact)
+    if len(skel) < 4:
+        return -1
+    return reference_skel.find(skel)
+
+
 def add_role_collapse_issues(
     counts: dict[str, int],
     where: str,
@@ -134,6 +160,7 @@ def add_role_collapse_issues(
 def review_chunk(source: dict[str, Any], data: dict[str, Any]) -> list[str]:
     errors = validate_chunk(source, data)
     reference_text = normalize("".join(str(item.get("text", "")) for item in source.get("jp_reference", [])))
+    reference_skel = reference_skeleton(reference_text)
     chunk_counts = {"zh": {}, "ja": {}, "both": {}}
     last_ref_pos = -1
     duplicate_ja: dict[str, int] = {}
@@ -186,7 +213,7 @@ def review_chunk(source: dict[str, Any], data: dict[str, Any]) -> list[str]:
             if ja_text:
                 duplicate_ja[ja_text] = duplicate_ja.get(ja_text, 0) + 1
             if reference_text and len(ja_text) >= 5 and not paragraph_is_note and not is_editorial_note(zh_text):
-                ref_pos = reference_text.find(ja_text)
+                ref_pos = reference_match_pos(reference_text, reference_skel, ja_text)
                 if ref_pos < 0:
                     errors.append(f"{unit_where}: Japanese comment text is not found in the supplied original reference")
                 elif ref_pos + 8 < last_ref_pos:
