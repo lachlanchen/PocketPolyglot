@@ -45,6 +45,23 @@ progress_value() {
   awk -F= -v key="$1" '$1 == key {print $2}' <<<"$2"
 }
 
+progress_is_complete() {
+  local progress="$1"
+  local manifest_chunks valid_chunks stale_chunks missing_chunks first_missing
+  manifest_chunks="$(progress_value manifest_chunks "$progress")"
+  valid_chunks="$(progress_value valid_chunks "$progress")"
+  stale_chunks="$(progress_value stale_chunks "$progress")"
+  missing_chunks="$(progress_value missing_chunks "$progress")"
+  first_missing="$(progress_value first_missing "$progress")"
+
+  [[ -n "$manifest_chunks" ]] \
+    && [[ "$manifest_chunks" != "0" ]] \
+    && [[ "$manifest_chunks" == "$valid_chunks" ]] \
+    && [[ "${stale_chunks:-}" == "0" ]] \
+    && [[ "${missing_chunks:-}" == "0" ]] \
+    && [[ -z "$first_missing" ]]
+}
+
 chunk_number() {
   local chunk_id="$1"
   local n="${chunk_id##*-}"
@@ -272,6 +289,12 @@ while true; do
   echo "latest_commit=$(git log -1 --oneline 2>/dev/null || true)"
   echo "marker=$marker"
   echo "unchanged_for=${unchanged_for}s"
+  if progress_is_complete "$progress"; then
+    echo "book_complete=1"
+    echo "monitor exiting; no worker restart needed"
+    exit 0
+  fi
+
   if tmux has-session -t "$worker_session" 2>/dev/null; then
     echo "worker_session=active"
   else
