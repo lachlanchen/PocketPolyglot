@@ -26,6 +26,7 @@ HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 SENTENCE_END_RE = re.compile(r"[。！？!?]")
 PUNCT_RE = re.compile(r"^[\s，。！？、；：,.!?;:「」『』（）()《》〈〉“”‘’…—-]+$")
 EDITORIAL_NOTE_RE = re.compile(r"^[（(]?\s*\d+\s*[.．、)]")
+INLINE_NOTE_RE = re.compile(r"[［\[].{4,}?[］\]]")
 REFERENCE_SKELETON_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaffァ-ヿA-Za-z0-9]")
 
 
@@ -99,7 +100,11 @@ def role_counts(tokens: list[dict[str, Any]]) -> dict[str, int]:
 
 def is_editorial_note(text: str) -> bool:
     compact = normalize(text)
-    return bool(EDITORIAL_NOTE_RE.match(compact)) or any(marker in compact for marker in ("译者", "译注", "注释", "注："))
+    return (
+        bool(EDITORIAL_NOTE_RE.match(compact))
+        or bool(INLINE_NOTE_RE.search(compact))
+        or any(marker in compact for marker in ("译者", "译注", "注释", "注："))
+    )
 
 
 def reference_skeleton(text: str) -> str:
