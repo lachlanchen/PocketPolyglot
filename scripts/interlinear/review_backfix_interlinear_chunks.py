@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import bisect
 import hashlib
 import json
 import math
@@ -136,16 +137,20 @@ def reference_match_pos(
     reference_skel: str,
     reference_skel_positions: list[int],
     text: str,
+    *,
+    min_pos: int = 0,
 ) -> int:
     compact = normalize(text)
-    exact_pos = reference_text.find(compact)
+    min_pos = max(0, min_pos)
+    exact_pos = reference_text.find(compact, min_pos)
     if exact_pos >= 0:
         return exact_pos
 
     skel = reference_skeleton(compact)
     if len(skel) < 4:
         return -1
-    skel_pos = reference_skel.find(skel)
+    min_skel_pos = bisect.bisect_left(reference_skel_positions, min_pos)
+    skel_pos = reference_skel.find(skel, min_skel_pos)
     if skel_pos < 0 or skel_pos >= len(reference_skel_positions):
         return -1
     return reference_skel_positions[skel_pos]
@@ -237,7 +242,13 @@ def review_chunk(source: dict[str, Any], data: dict[str, Any]) -> list[str]:
             if ja_text:
                 duplicate_ja[ja_text] = duplicate_ja.get(ja_text, 0) + 1
             if reference_text and len(ja_text) >= 5 and not paragraph_is_note and not is_editorial_note(zh_text):
-                ref_pos = reference_match_pos(reference_text, reference_skel, reference_skel_positions, ja_text)
+                ref_pos = reference_match_pos(
+                    reference_text,
+                    reference_skel,
+                    reference_skel_positions,
+                    ja_text,
+                    min_pos=max(0, last_ref_pos - 8),
+                )
                 if ref_pos < 0:
                     errors.append(f"{unit_where}: Japanese comment text is not found in the supplied original reference")
                 elif ref_pos + 8 < last_ref_pos:
