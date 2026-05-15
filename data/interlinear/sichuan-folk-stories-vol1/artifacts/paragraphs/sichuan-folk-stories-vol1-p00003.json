@@ -1,0 +1,1449 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p00003",
+  "source_text": "天高了,地厚了,盘古王也老掉牙了.传说他在死的时候,叹了口气,就形成了风云;哼了--声,就形成了打雷:滩了几颗眼泪水,就形成了十.他死后,左眼变成了太阳,右眼变成了月亮,四肢变成了山脉,血液变成了江河,肌肉变成了田土,头发变成了星辰,皮毛变成了草木,他的尸体变成了世间万物。",
+  "source_sha256": "ceabf23fe3dd424ea5784ed1f5d4f0572f5d0bdfa4b2dde05a5a366281962222",
+  "source_normalized_sha256": "ceabf23fe3dd424ea5784ed1f5d4f0572f5d0bdfa4b2dde05a5a366281962222",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 230,
+    "grammar_token_total": 230,
+    "unit_count": 5
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0003",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "神话",
+    "title_zh": [
+      {
+        "t": "神",
+        "r": "shén",
+        "g": "topic"
+      },
+      {
+        "t": "话",
+        "r": "huà",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "神",
+        "r": "しん",
+        "g": "topic"
+      },
+      {
+        "t": "話",
+        "r": "わ",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "开天辟地神话",
+    "title_zh": [
+      {
+        "t": "开",
+        "r": "kāi",
+        "g": "attributive"
+      },
+      {
+        "t": "天",
+        "r": "tiān",
+        "g": "object"
+      },
+      {
+        "t": "辟",
+        "r": "pì",
+        "g": "attributive"
+      },
+      {
+        "t": "地",
+        "r": "dì",
+        "g": "object"
+      },
+      {
+        "t": "神",
+        "r": "shén",
+        "g": "topic"
+      },
+      {
+        "t": "话",
+        "r": "huà",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "天",
+        "r": "てん",
+        "g": "object"
+      },
+      {
+        "t": "地",
+        "r": "ち",
+        "g": "object"
+      },
+      {
+        "t": "開",
+        "r": "かい",
+        "g": "attributive"
+      },
+      {
+        "t": "闢",
+        "r": "びゃく",
+        "g": "attributive"
+      },
+      {
+        "t": "神",
+        "r": "しん",
+        "g": "topic"
+      },
+      {
+        "t": "話",
+        "r": "わ",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "神话-开天辟地神话-001-古开天地奉节县",
+    "title_zh": [
+      {
+        "t": "001. ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "adverbial"
+      },
+      {
+        "t": "开",
+        "r": "kāi",
+        "g": "predicate"
+      },
+      {
+        "t": "天",
+        "r": "tiān",
+        "g": "object"
+      },
+      {
+        "t": "地",
+        "r": "dì",
+        "g": "object"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "奉",
+        "r": "fèng",
+        "g": "attributive"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "attributive"
+      },
+      {
+        "t": "县",
+        "r": "xiàn",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "001. ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "古",
+        "r": "ふる",
+        "g": "adverbial"
+      },
+      {
+        "t": "く",
+        "r": "",
+        "g": "adverbial"
+      },
+      {
+        "t": "天",
+        "r": "てん",
+        "g": "object"
+      },
+      {
+        "t": "地",
+        "r": "ち",
+        "g": "object"
+      },
+      {
+        "t": "を",
+        "r": "",
+        "g": "object"
+      },
+      {
+        "t": "開",
+        "r": "ひら",
+        "g": "predicate"
+      },
+      {
+        "t": "く",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "奉",
+        "r": "ほう",
+        "g": "attributive"
+      },
+      {
+        "t": "節",
+        "r": "せつ",
+        "g": "attributive"
+      },
+      {
+        "t": "県",
+        "r": "けん",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p00003",
+    "source_text": "天高了,地厚了,盘古王也老掉牙了.传说他在死的时候,叹了口气,就形成了风云;哼了--声,就形成了打雷:滩了几颗眼泪水,就形成了十.他死后,左眼变成了太阳,右眼变成了月亮,四肢变成了山脉,血液变成了江河,肌肉变成了田土,头发变成了星辰,皮毛变成了草木,他的尸体变成了世间万物。",
+    "units": [
+      {
+        "source_text": "天高了,地厚了,盘古王也老掉牙了.",
+        "zh": [
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "subject"
+          },
+          {
+            "t": "高",
+            "r": "gāo",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "subject"
+          },
+          {
+            "t": "厚",
+            "r": "hòu",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "盘",
+            "r": "pán",
+            "g": "subject"
+          },
+          {
+            "t": "古",
+            "r": "gǔ",
+            "g": "subject"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "subject"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "老",
+            "r": "lǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "掉",
+            "r": "diào",
+            "g": "predicate"
+          },
+          {
+            "t": "牙",
+            "r": "yá",
+            "g": "object"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": ".",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "高",
+              "r": "たか",
+              "g": "predicate"
+            },
+            {
+              "t": "くなり、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "地",
+              "r": "ち",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "厚",
+              "r": "あつ",
+              "g": "predicate"
+            },
+            {
+              "t": "くなり、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "盤",
+              "r": "ばん",
+              "g": "subject"
+            },
+            {
+              "t": "古",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "王",
+              "r": "おう",
+              "g": "subject"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "歯",
+              "r": "は",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "抜",
+              "r": "ぬ",
+              "g": "predicate"
+            },
+            {
+              "t": "けるほど",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "老",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "いた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "传说他在死的时候,叹了口气,就形成了风云;",
+        "zh": [
+          {
+            "t": "传",
+            "r": "chuán",
+            "g": "predicate"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "死",
+            "r": "sǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "时",
+            "r": "shí",
+            "g": "adverbial"
+          },
+          {
+            "t": "候",
+            "r": "hou",
+            "g": "adverbial"
+          },
+          {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "叹",
+            "r": "tàn",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "口",
+            "r": "kǒu",
+            "g": "object"
+          },
+          {
+            "t": "气",
+            "r": "qì",
+            "g": "object"
+          },
+          {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "形",
+            "r": "xíng",
+            "g": "predicate"
+          },
+          {
+            "t": "成",
+            "r": "chéng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "风",
+            "r": "fēng",
+            "g": "object"
+          },
+          {
+            "t": "云",
+            "r": "yún",
+            "g": "object"
+          },
+          {
+            "t": ";",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "伝",
+              "r": "つた",
+              "g": "predicate"
+            },
+            {
+              "t": "えによると、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "死",
+              "r": "し",
+              "g": "adverbial"
+            },
+            {
+              "t": "ぬとき、",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "ひとつため",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "息",
+              "r": "いき",
+              "g": "object"
+            },
+            {
+              "t": "をつくと、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "風",
+              "r": "かぜ",
+              "g": "object"
+            },
+            {
+              "t": "雲",
+              "r": "くも",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "生",
+              "r": "しょう",
+              "g": "predicate"
+            },
+            {
+              "t": "じた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "哼了--声,就形成了打雷:",
+        "zh": [
+          {
+            "t": "哼",
+            "r": "hēng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "--",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "声",
+            "r": "shēng",
+            "g": "object"
+          },
+          {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "形",
+            "r": "xíng",
+            "g": "predicate"
+          },
+          {
+            "t": "成",
+            "r": "chéng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "打",
+            "r": "dǎ",
+            "g": "object"
+          },
+          {
+            "t": "雷",
+            "r": "léi",
+            "g": "object"
+          },
+          {
+            "t": ":",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "うなり",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "声",
+              "r": "ごえ",
+              "g": "object"
+            },
+            {
+              "t": "をひと",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "声",
+              "r": "こえ",
+              "g": "object"
+            },
+            {
+              "t": "あげると、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "それが",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "雷",
+              "r": "かみなり",
+              "g": "object"
+            },
+            {
+              "t": "になった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "滩了几颗眼泪水,就形成了十.",
+        "zh": [
+          {
+            "t": "滩",
+            "r": "tān",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "几",
+            "r": "jǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "颗",
+            "r": "kē",
+            "g": "function"
+          },
+          {
+            "t": "眼",
+            "r": "yǎn",
+            "g": "object"
+          },
+          {
+            "t": "泪",
+            "r": "lèi",
+            "g": "object"
+          },
+          {
+            "t": "水",
+            "r": "shuǐ",
+            "g": "object"
+          },
+          {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "形",
+            "r": "xíng",
+            "g": "predicate"
+          },
+          {
+            "t": "成",
+            "r": "chéng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "十",
+            "r": "shí",
+            "g": "object"
+          },
+          {
+            "t": ".",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "いくつかの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "涙",
+              "r": "なみだ",
+              "g": "object"
+            },
+            {
+              "t": "のしずくをこぼすと、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "それが",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "十",
+              "r": "じゅう",
+              "g": "object"
+            },
+            {
+              "t": "になった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "他死后,左眼变成了太阳,右眼变成了月亮,四肢变成了山脉,血液变成了江河,肌肉变成了田土,头发变成了星辰,皮毛变成了草木,他的尸体变成了世间万物。",
+        "zh": [
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "死",
+            "r": "sǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "后",
+            "r": "hòu",
+            "g": "adverbial"
+          },
+          {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "左",
+            "r": "zuǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "眼",
+            "r": "yǎn",
+            "g": "subject"
+          },
+          {
+            "t": "变",
+            "r": "biàn",
+            "g": "predicate"
+          },
+          {
+            "t": "成",
+            "r": "chéng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "太",
+            "r": "tài",
+            "g": "object"
+          },
+          {
+            "t": "阳",
+            "r": "yáng",
+            "g": "object"
+          },
+          {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "右",
+            "r": "yòu",
+            "g": "attributive"
+          },
+          {
+            "t": "眼",
+            "r": "yǎn",
+            "g": "subject"
+          },
+          {
+            "t": "变",
+            "r": "biàn",
+            "g": "predicate"
+          },
+          {
+            "t": "成",
+            "r": "chéng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "月",
+            "r": "yuè",
+            "g": "object"
+          },
+          {
+            "t": "亮",
+            "r": "liang",
+            "g": "object"
+          },
+          {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "四",
+            "r": "sì",
+            "g": "subject"
+          },
+          {
+            "t": "肢",
+            "r": "zhī",
+            "g": "subject"
+          },
+          {
+            "t": "变",
+            "r": "biàn",
+            "g": "predicate"
+          },
+          {
+            "t": "成",
+            "r": "chéng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "山",
+            "r": "shān",
+            "g": "object"
+          },
+          {
+            "t": "脉",
+            "r": "mài",
+            "g": "object"
+          },
+          {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "血",
+            "r": "xuè",
+            "g": "subject"
+          },
+          {
+            "t": "液",
+            "r": "yè",
+            "g": "subject"
+          },
+          {
+            "t": "变",
+            "r": "biàn",
+            "g": "predicate"
+          },
+          {
+            "t": "成",
+            "r": "chéng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "江",
+            "r": "jiāng",
+            "g": "object"
+          },
+          {
+            "t": "河",
+            "r": "hé",
+            "g": "object"
+          },
+          {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "肌",
+            "r": "jī",
+            "g": "subject"
+          },
+          {
+            "t": "肉",
+            "r": "ròu",
+            "g": "subject"
+          },
+          {
+            "t": "变",
+            "r": "biàn",
+            "g": "predicate"
+          },
+          {
+            "t": "成",
+            "r": "chéng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "田",
+            "r": "tián",
+            "g": "object"
+          },
+          {
+            "t": "土",
+            "r": "tǔ",
+            "g": "object"
+          },
+          {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "头",
+            "r": "tóu",
+            "g": "subject"
+          },
+          {
+            "t": "发",
+            "r": "fa",
+            "g": "subject"
+          },
+          {
+            "t": "变",
+            "r": "biàn",
+            "g": "predicate"
+          },
+          {
+            "t": "成",
+            "r": "chéng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "星",
+            "r": "xīng",
+            "g": "object"
+          },
+          {
+            "t": "辰",
+            "r": "chén",
+            "g": "object"
+          },
+          {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "皮",
+            "r": "pí",
+            "g": "subject"
+          },
+          {
+            "t": "毛",
+            "r": "máo",
+            "g": "subject"
+          },
+          {
+            "t": "变",
+            "r": "biàn",
+            "g": "predicate"
+          },
+          {
+            "t": "成",
+            "r": "chéng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "草",
+            "r": "cǎo",
+            "g": "object"
+          },
+          {
+            "t": "木",
+            "r": "mù",
+            "g": "object"
+          },
+          {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "尸",
+            "r": "shī",
+            "g": "subject"
+          },
+          {
+            "t": "体",
+            "r": "tǐ",
+            "g": "subject"
+          },
+          {
+            "t": "变",
+            "r": "biàn",
+            "g": "predicate"
+          },
+          {
+            "t": "成",
+            "r": "chéng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "世",
+            "r": "shì",
+            "g": "attributive"
+          },
+          {
+            "t": "间",
+            "r": "jiān",
+            "g": "attributive"
+          },
+          {
+            "t": "万",
+            "r": "wàn",
+            "g": "object"
+          },
+          {
+            "t": "物",
+            "r": "wù",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "死",
+              "r": "し",
+              "g": "adverbial"
+            },
+            {
+              "t": "後",
+              "r": "ご",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "左",
+              "r": "ひだり",
+              "g": "attributive"
+            },
+            {
+              "t": "目",
+              "r": "め",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "太",
+              "r": "たい",
+              "g": "object"
+            },
+            {
+              "t": "陽",
+              "r": "よう",
+              "g": "object"
+            },
+            {
+              "t": "に、",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "右",
+              "r": "みぎ",
+              "g": "attributive"
+            },
+            {
+              "t": "目",
+              "r": "め",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "月",
+              "r": "つき",
+              "g": "object"
+            },
+            {
+              "t": "になり、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "四",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "肢",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "山",
+              "r": "さん",
+              "g": "object"
+            },
+            {
+              "t": "脈",
+              "r": "みゃく",
+              "g": "object"
+            },
+            {
+              "t": "に、",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "血",
+              "r": "ち",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "川",
+              "r": "かわ",
+              "g": "object"
+            },
+            {
+              "t": "に、",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "肉",
+              "r": "にく",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "田",
+              "r": "た",
+              "g": "object"
+            },
+            {
+              "t": "畑",
+              "r": "はた",
+              "g": "object"
+            },
+            {
+              "t": "に、",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "髪",
+              "r": "かみ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "星",
+              "r": "ほし",
+              "g": "object"
+            },
+            {
+              "t": "々に、",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "皮",
+              "r": "ひ",
+              "g": "subject"
+            },
+            {
+              "t": "毛",
+              "r": "もう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "草",
+              "r": "くさ",
+              "g": "object"
+            },
+            {
+              "t": "木",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "に、",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "亡",
+              "r": "な",
+              "g": "subject"
+            },
+            {
+              "t": "きがらは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "世",
+              "r": "せ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "万",
+              "r": "ばん",
+              "g": "object"
+            },
+            {
+              "t": "物",
+              "r": "ぶつ",
+              "g": "object"
+            },
+            {
+              "t": "となった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
