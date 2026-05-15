@@ -165,21 +165,21 @@
   \hypersetup{pdftitle={#2 / #1}}%
 }
 
-\NewDocumentCommand{\InterTitle}{m m m}{%
+\NewDocumentCommand{\InterTitle}{m m m m}{%
   \frontmatter
   \thispagestyle{empty}
-  \if\relax\detokenize{#3}\relax
+  \if\relax\detokenize{#4}\relax
   \else
     \newgeometry{margin=0pt}%
-    \IfFileExists{#3}{%
-      \noindent\includegraphics[width=\paperwidth,height=\paperheight]{#3}\par
+    \IfFileExists{#4}{%
+      \noindent\includegraphics[width=\paperwidth,height=\paperheight]{#4}\par
       \clearpage
     }{}%
     \restoregeometry
   \fi
   \thispagestyle{empty}
   \vspace*{0.16\textheight}
-  {\centering{\zhfont\Huge #1\par}\vspace{0.8em}{\jpfont\small #2\par}\vfill\GrammarLegend\par}
+  {\centering{\zhfont\Huge #1\par}\vspace{0.8em}{\jpfont\small #2\par}\vspace{1.1em}{\jpfont\normalsize #3\par}\vfill\GrammarLegend\par}
   \clearpage
   \mainmatter
 }

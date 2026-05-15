@@ -23,6 +23,8 @@ bash scripts/interlinear/compile_interlinear_book.sh \
   --book-title-zh-reading "rén jiān shī gé" \
   --book-title-ja "人間失格" \
   --book-title-ja-reading "にん げん しっ かく" \
+  --author "太宰治" \
+  --author-reading "だざい おさむ" \
   --source-markdown "books/no-longer-human/markdown/zh.md" \
   --source-epub "sources/no-longer-human/人間失格-2.pdf" \
   --source-markdown-ja "books/no-longer-human/markdown/ja.md" \
@@ -41,6 +43,8 @@ bash scripts/interlinear/compile_interlinear_book.sh \
   --book-title-zh-reading "rén jiān shī gé" \
   --book-title-ja "人間失格" \
   --book-title-ja-reading "にん げん しっ かく" \
+  --author "太宰治" \
+  --author-reading "だざい おさむ" \
   --source-markdown "books/no-longer-human/markdown/zh.md" \
   --source-epub "sources/no-longer-human/人間失格-2.pdf" \
   --source-markdown-ja "books/no-longer-human/markdown/ja.md" \
@@ -64,6 +68,7 @@ bash scripts/interlinear/compile_jp_main_book.sh \
   --source-markdown-ja "books/no-longer-human/markdown/ja.md" \
   --source-epub-ja "sources/no-longer-human/人間失格.pdf" \
   --author "太宰治" \
+  --author-reading "だざい おさむ" \
   --curated-by "AgInTiFlow curated" \
   --curated-url "https://flow.lazying.art" \
   --powered-by "powered by LazyingArt" \
@@ -86,6 +91,7 @@ bash scripts/interlinear/compile_jp_main_book.sh \
   --source-markdown-ja "books/no-longer-human/markdown/ja.md" \
   --source-epub-ja "sources/no-longer-human/人間失格.pdf" \
   --author "太宰治" \
+  --author-reading "だざい おさむ" \
   --curated-by "AgInTiFlow curated" \
   --curated-url "https://flow.lazying.art" \
   --powered-by "powered by LazyingArt" \

@@ -16,6 +16,8 @@ Options:
   --book-title-zh-reading <pin>  Chinese title pinyin
   --book-title-ja <text>         Japanese title
   --book-title-ja-reading <txt>  Japanese title reading
+  --author <text>                author name for title page
+  --author-reading <txt>         author ruby reading, split by spaces
   --source-markdown <path>       Chinese source Markdown
   --source-epub <path>           Chinese source EPUB
   --source-markdown-ja <path>    Japanese source Markdown
@@ -39,6 +41,8 @@ book_title_zh="心"
 book_title_zh_reading="xīn"
 book_title_ja="こころ"
 book_title_ja_reading="こころ"
+author=""
+author_reading=""
 source_markdown=""
 source_epub=""
 source_markdown_ja=""
@@ -56,6 +60,8 @@ while [[ $# -gt 0 ]]; do
     --book-title-zh-reading) book_title_zh_reading="${2:-}"; shift 2 ;;
     --book-title-ja) book_title_ja="${2:-}"; shift 2 ;;
     --book-title-ja-reading) book_title_ja_reading="${2:-}"; shift 2 ;;
+    --author) author="${2:-}"; shift 2 ;;
+    --author-reading) author_reading="${2:-}"; shift 2 ;;
     --source-markdown) source_markdown="${2:-}"; shift 2 ;;
     --source-epub) source_epub="${2:-}"; shift 2 ;;
     --source-markdown-ja) source_markdown_ja="${2:-}"; shift 2 ;;
@@ -117,6 +123,8 @@ python scripts/interlinear/validate_interlinear_json.py "$output_json"
 mkdir -p "$build_dir"
 python scripts/interlinear/json_to_block_tex.py "$output_json" \
   -o "$build_dir/source.tex" \
+  --author "$author" \
+  --author-reading "$author_reading" \
   --cover-image "$cover_image" \
   --color-mode "$color_mode"
 xelatex -interaction=nonstopmode -halt-on-error -jobname=book -output-directory="$build_dir" \

@@ -21,6 +21,7 @@ Options:
   --source-markdown-ja <path>    Japanese source Markdown
   --source-epub-ja <path>        Japanese source EPUB
   --author <text>                author name for title/metadata
+  --author-reading <txt>         author ruby reading, split by spaces
   --curated-by <text>            curator line
   --curated-url <url>            curator URL
   --powered-by <text>            powered-by line
@@ -48,6 +49,7 @@ source_epub=""
 source_markdown_ja=""
 source_epub_ja=""
 author="夏目漱石"
+author_reading=""
 curated_by="AgInTiFlow curated"
 curated_url="https://flow.lazying.art"
 powered_by="powered by LazyingArt"
@@ -69,6 +71,7 @@ while [[ $# -gt 0 ]]; do
     --source-markdown-ja) source_markdown_ja="${2:-}"; shift 2 ;;
     --source-epub-ja) source_epub_ja="${2:-}"; shift 2 ;;
     --author) author="${2:-}"; shift 2 ;;
+    --author-reading) author_reading="${2:-}"; shift 2 ;;
     --curated-by) curated_by="${2:-}"; shift 2 ;;
     --curated-url) curated_url="${2:-}"; shift 2 ;;
     --powered-by) powered_by="${2:-}"; shift 2 ;;
@@ -131,6 +134,7 @@ mkdir -p "$build_dir"
 python scripts/interlinear/json_to_jp_main_tex.py "$output_json" \
   -o "$build_dir/source.tex" \
   --author "$author" \
+  --author-reading "$author_reading" \
   --curated-by "$curated_by" \
   --curated-url "$curated_url" \
   --powered-by "$powered_by" \

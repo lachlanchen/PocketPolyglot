@@ -23,6 +23,8 @@ bash scripts/interlinear/compile_interlinear_book.sh \
   --book-title-zh-reading "xuě guó" \
   --book-title-ja "雪国" \
   --book-title-ja-reading "ゆき ぐに" \
+  --author "川端康成" \
+  --author-reading "かわばた やすなり" \
   --source-markdown "books/snow-country/markdown/zh.md" \
   --source-epub "sources/snow-country/雪国.epub" \
   --source-markdown-ja "books/snow-country/markdown/ja.md" \
@@ -41,6 +43,8 @@ bash scripts/interlinear/compile_interlinear_book.sh \
   --book-title-zh-reading "xuě guó" \
   --book-title-ja "雪国" \
   --book-title-ja-reading "ゆき ぐに" \
+  --author "川端康成" \
+  --author-reading "かわばた やすなり" \
   --source-markdown "books/snow-country/markdown/zh.md" \
   --source-epub "sources/snow-country/雪国.epub" \
   --source-markdown-ja "books/snow-country/markdown/ja.md" \
@@ -64,6 +68,7 @@ bash scripts/interlinear/compile_jp_main_book.sh \
   --source-markdown-ja "books/snow-country/markdown/ja.md" \
   --source-epub-ja "sources/snow-country/雪国(1).epub" \
   --author "川端康成" \
+  --author-reading "かわばた やすなり" \
   --curated-by "AgInTiFlow curated" \
   --curated-url "https://flow.lazying.art" \
   --powered-by "powered by LazyingArt" \
@@ -86,6 +91,7 @@ bash scripts/interlinear/compile_jp_main_book.sh \
   --source-markdown-ja "books/snow-country/markdown/ja.md" \
   --source-epub-ja "sources/snow-country/雪国(1).epub" \
   --author "川端康成" \
+  --author-reading "かわばた やすなり" \
   --curated-by "AgInTiFlow curated" \
   --curated-url "https://flow.lazying.art" \
   --powered-by "powered by LazyingArt" \

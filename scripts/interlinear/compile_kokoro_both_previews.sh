@@ -9,6 +9,7 @@ chunk_dir="books/kokoro/work/bilingual/interlinear/chunks"
 zh_json="books/kokoro/work/bilingual/preview/kokoro.partial.json"
 jp_json="books/kokoro/work/bilingual/preview/kokoro.jp-main.partial.json"
 build_root="${KOKORO_BUILD_ROOT:-build/kokoro}"
+cover_image="assets/covers/kokoro-jp-main/kokoro-cover.jpeg"
 
 python scripts/interlinear/report_interlinear_progress.py \
   --manifest "$manifest" \
@@ -22,10 +23,13 @@ bash scripts/interlinear/compile_interlinear_book.sh \
   --book-title-zh-reading "xīn" \
   --book-title-ja "こころ" \
   --book-title-ja-reading "こころ" \
+  --author "夏目漱石" \
+  --author-reading "なつめ そうせき" \
   --source-markdown "books/kokoro/markdown/zh.md" \
   --source-epub "sources/心.epub" \
   --source-markdown-ja "books/kokoro/markdown/ja.md" \
   --source-epub-ja "sources/夏目 漱石 作品全集.epub" \
+  --cover-image "$cover_image" \
   --build-dir "$build_root/zh-main/color" \
   --color-mode color \
   --output-pdf "$build_root/zh-main/color/心（こころ）.pdf" \
@@ -39,10 +43,13 @@ bash scripts/interlinear/compile_interlinear_book.sh \
   --book-title-zh-reading "xīn" \
   --book-title-ja "こころ" \
   --book-title-ja-reading "こころ" \
+  --author "夏目漱石" \
+  --author-reading "なつめ そうせき" \
   --source-markdown "books/kokoro/markdown/zh.md" \
   --source-epub "sources/心.epub" \
   --source-markdown-ja "books/kokoro/markdown/ja.md" \
   --source-epub-ja "sources/夏目 漱石 作品全集.epub" \
+  --cover-image "$cover_image" \
   --build-dir "$build_root/zh-main/blackwhite" \
   --color-mode blackwhite \
   --output-pdf "$build_root/zh-main/blackwhite/心（こころ）.pdf" \
@@ -61,10 +68,11 @@ bash scripts/interlinear/compile_jp_main_book.sh \
   --source-markdown-ja "books/kokoro/markdown/ja.md" \
   --source-epub-ja "sources/夏目 漱石 作品全集.epub" \
   --author "夏目漱石" \
+  --author-reading "なつめ そうせき" \
   --curated-by "AgInTiFlow curated" \
   --curated-url "https://flow.lazying.art" \
   --powered-by "powered by LazyingArt" \
-  --cover-image "assets/covers/kokoro-jp-main/kokoro-cover.jpeg" \
+  --cover-image "$cover_image" \
   --build-dir "$build_root/jp-main/color" \
   --color-mode color \
   --output-pdf "$build_root/jp-main/color/こころ（心）.pdf" \
@@ -83,10 +91,11 @@ bash scripts/interlinear/compile_jp_main_book.sh \
   --source-markdown-ja "books/kokoro/markdown/ja.md" \
   --source-epub-ja "sources/夏目 漱石 作品全集.epub" \
   --author "夏目漱石" \
+  --author-reading "なつめ そうせき" \
   --curated-by "AgInTiFlow curated" \
   --curated-url "https://flow.lazying.art" \
   --powered-by "powered by LazyingArt" \
-  --cover-image "assets/covers/kokoro-jp-main/kokoro-cover.jpeg" \
+  --cover-image "$cover_image" \
   --build-dir "$build_root/jp-main/blackwhite" \
   --color-mode blackwhite \
   --output-pdf "$build_root/jp-main/blackwhite/こころ（心）.pdf" \
