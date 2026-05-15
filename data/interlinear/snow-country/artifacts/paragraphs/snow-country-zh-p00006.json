@@ -1,0 +1,229 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "snow-country",
+  "paragraph_id": "snow-country-zh-p00006",
+  "source_text": "“站长先生，是我。您好啊！”",
+  "source_sha256": "e8b7495482eab0c6d6f594d82f490b812496bec19fac8ff0f224f3086848b8b1",
+  "source_normalized_sha256": "e8b7495482eab0c6d6f594d82f490b812496bec19fac8ff0f224f3086848b8b1",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 28,
+    "grammar_token_total": 28,
+    "unit_count": 2
+  },
+  "source_chunk_id": "snow-country-chunk-0006",
+  "source_manifest_sha256": "d02ddd49a319af1305a83854af8d72ec60d0bb2943dc097462835b3e60dcf59f",
+  "section": {
+    "id": "01",
+    "title_zh": [
+      {
+        "t": "01",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "01",
+        "r": "",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "01-intro",
+    "title_zh": [
+      {
+        "t": "01",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "01",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "snow-country-zh-p00006",
+    "source_text": "“站长先生，是我。您好啊！”",
+    "units": [
+      {
+        "source_text": "“站长先生，是我。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "站",
+            "r": "zhàn",
+            "g": "topic"
+          },
+          {
+            "t": "长",
+            "r": "zhǎng",
+            "g": "topic"
+          },
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "topic"
+          },
+          {
+            "t": "生",
+            "r": "sheng",
+            "g": "topic"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "駅",
+              "r": "えき",
+              "g": "topic"
+            },
+            {
+              "t": "長",
+              "r": "ちょう",
+              "g": "topic"
+            },
+            {
+              "t": "さん、",
+              "r": "",
+              "g": "topic"
+            }
+          ],
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "です、",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "您好啊！”",
+        "zh": [
+          {
+            "t": "您",
+            "r": "nín",
+            "g": "subject"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "御",
+              "r": "ご",
+              "g": "subject"
+            },
+            {
+              "t": "ご",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "機",
+              "r": "き",
+              "g": "subject"
+            },
+            {
+              "t": "き",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "嫌",
+              "r": "げん",
+              "g": "subject"
+            },
+            {
+              "t": "げん",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "よろしゅうございます",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
