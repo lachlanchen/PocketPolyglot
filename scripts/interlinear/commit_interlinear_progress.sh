@@ -87,7 +87,7 @@ python scripts/interlinear/export_paragraph_artifacts.py \
   --chunk-dir "$chunk_dir" \
   --output-dir "$artifact_dir"
 
-pathspecs=("$tracked_dir" "$progress_json" "$artifact_dir" "$manifest" "$chunks_jsonl" "$chunk_dir")
+pathspecs=("$tracked_dir" "$progress_json" "$artifact_dir" "$manifest" "$chunks_jsonl")
 for pdf in "${pdfs[@]}"; do
   if [[ -f "$pdf" ]]; then
     pathspecs+=("$pdf")
