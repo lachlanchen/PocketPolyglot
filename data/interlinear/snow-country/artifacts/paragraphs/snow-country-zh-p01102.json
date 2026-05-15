@@ -1,0 +1,119 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "snow-country",
+  "paragraph_id": "snow-country-zh-p01102",
+  "source_text": "麻雀在上面",
+  "source_sha256": "fa7f1c5e6b4f5df2b9bd37bc1749e4219b72e5e1fb7dced1053fc9bd6ce17b76",
+  "source_normalized_sha256": "fa7f1c5e6b4f5df2b9bd37bc1749e4219b72e5e1fb7dced1053fc9bd6ce17b76",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 9,
+    "grammar_token_total": 9,
+    "unit_count": 1
+  },
+  "source_chunk_id": "snow-country-chunk-1102",
+  "source_manifest_sha256": "d02ddd49a319af1305a83854af8d72ec60d0bb2943dc097462835b3e60dcf59f",
+  "section": {
+    "id": "09",
+    "title_zh": [
+      {
+        "t": "09",
+        "r": ""
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "09",
+        "r": ""
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "09-intro",
+    "title_zh": [
+      {
+        "t": "09",
+        "r": ""
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "09",
+        "r": ""
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "snow-country-zh-p01102",
+    "source_text": "麻雀在上面",
+    "units": [
+      {
+        "source_text": "麻雀在上面",
+        "zh": [
+          {
+            "t": "麻",
+            "r": "má",
+            "g": "subject"
+          },
+          {
+            "t": "雀",
+            "r": "què",
+            "g": "subject"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "complement"
+          },
+          {
+            "t": "面",
+            "r": "miàn",
+            "g": "complement"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "上",
+              "r": "うえ",
+              "g": "complement"
+            },
+            {
+              "t": "から",
+              "r": "",
+              "g": "complement"
+            }
+          ],
+          [
+            {
+              "t": "雀",
+              "r": "すずめ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

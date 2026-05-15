@@ -1,0 +1,123 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "snow-country",
+  "paragraph_id": "snow-country-zh-p01100",
+  "source_text": "乌鸦在下面",
+  "source_sha256": "a9652731b6f8b7743eaffc1722a265682a0520704857fe4c0d8e08b43f8728cf",
+  "source_normalized_sha256": "a9652731b6f8b7743eaffc1722a265682a0520704857fe4c0d8e08b43f8728cf",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 9,
+    "grammar_token_total": 9,
+    "unit_count": 1
+  },
+  "source_chunk_id": "snow-country-chunk-1100",
+  "source_manifest_sha256": "d02ddd49a319af1305a83854af8d72ec60d0bb2943dc097462835b3e60dcf59f",
+  "section": {
+    "id": "09",
+    "title_zh": [
+      {
+        "t": "09",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "09",
+        "r": "",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "09-intro",
+    "title_zh": [
+      {
+        "t": "09",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "09",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "snow-country-zh-p01100",
+    "source_text": "乌鸦在下面",
+    "units": [
+      {
+        "source_text": "乌鸦在下面",
+        "zh": [
+          {
+            "t": "乌",
+            "r": "wū",
+            "g": "subject"
+          },
+          {
+            "t": "鸦",
+            "r": "yā",
+            "g": "subject"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "complement"
+          },
+          {
+            "t": "面",
+            "r": "miàn",
+            "g": "complement"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "下",
+              "r": "した",
+              "g": "complement"
+            },
+            {
+              "t": "から",
+              "r": "",
+              "g": "complement"
+            }
+          ],
+          [
+            {
+              "t": "烏",
+              "r": "からす",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

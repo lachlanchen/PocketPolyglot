@@ -1,0 +1,286 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "snow-country",
+  "paragraph_id": "snow-country-zh-p00945",
+  "source_text": "“我要回去。我有伴嘛。洗澡用具哪儿去啦？”",
+  "source_sha256": "733cabcfb52fe2f32bc4d58ead038c2fcfe7f0740a4cb2e6a3a242c1513f16a8",
+  "source_normalized_sha256": "733cabcfb52fe2f32bc4d58ead038c2fcfe7f0740a4cb2e6a3a242c1513f16a8",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 38,
+    "grammar_token_total": 38,
+    "unit_count": 3
+  },
+  "source_chunk_id": "snow-country-chunk-0945",
+  "source_manifest_sha256": "d02ddd49a319af1305a83854af8d72ec60d0bb2943dc097462835b3e60dcf59f",
+  "section": {
+    "id": "08",
+    "title_zh": [
+      {
+        "t": "08",
+        "r": ""
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "08",
+        "r": ""
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "08-intro",
+    "title_zh": [
+      {
+        "t": "08",
+        "r": ""
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "08",
+        "r": ""
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "snow-country-zh-p00945",
+    "source_text": "“我要回去。我有伴嘛。洗澡用具哪儿去啦？”",
+    "units": [
+      {
+        "source_text": "“我要回去。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "predicate"
+          },
+          {
+            "t": "回",
+            "r": "huí",
+            "g": "predicate"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "帰",
+              "r": "かえ",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "る",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我有伴嘛。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "伴",
+            "r": "bàn",
+            "g": "object"
+          },
+          {
+            "t": "嘛",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "連",
+              "r": "つ",
+              "g": "object"
+            },
+            {
+              "t": "れが",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "あんのよ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "洗澡用具哪儿去啦？”",
+        "zh": [
+          {
+            "t": "洗",
+            "r": "xǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "澡",
+            "r": "zǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "用",
+            "r": "yòng",
+            "g": "attributive"
+          },
+          {
+            "t": "具",
+            "r": "jù",
+            "g": "object"
+          },
+          {
+            "t": "哪",
+            "r": "nǎ",
+            "g": "adverbial"
+          },
+          {
+            "t": "儿",
+            "r": "ér",
+            "g": "adverbial"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "predicate"
+          },
+          {
+            "t": "啦",
+            "r": "la",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "お",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "湯",
+              "r": "ゆ",
+              "g": "object"
+            },
+            {
+              "t": "道",
+              "r": "どう",
+              "g": "object"
+            },
+            {
+              "t": "具",
+              "r": "ぐ",
+              "g": "object"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "どこへ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "行",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
