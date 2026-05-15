@@ -107,7 +107,7 @@ def is_editorial_note(text: str) -> bool:
     )
 
 
-def reference_skeleton(text: str) -> str:
+def reference_skeleton_with_positions(text: str) -> tuple[str, list[int]]:
     """Compare Japanese source text while ignoring inline kana ruby readings.
 
     Some EPUB/Markdown sources flatten ruby as base kanji followed by kana,
@@ -117,10 +117,25 @@ def reference_skeleton(text: str) -> str:
     a conservative fallback match after exact matching fails.
     """
 
-    return "".join(REFERENCE_SKELETON_RE.findall(normalize(text)))
+    chars: list[str] = []
+    positions: list[int] = []
+    for index, char in enumerate(normalize(text)):
+        if REFERENCE_SKELETON_RE.fullmatch(char):
+            chars.append(char)
+            positions.append(index)
+    return "".join(chars), positions
 
 
-def reference_match_pos(reference_text: str, reference_skel: str, text: str) -> int:
+def reference_skeleton(text: str) -> str:
+    return reference_skeleton_with_positions(text)[0]
+
+
+def reference_match_pos(
+    reference_text: str,
+    reference_skel: str,
+    reference_skel_positions: list[int],
+    text: str,
+) -> int:
     compact = normalize(text)
     exact_pos = reference_text.find(compact)
     if exact_pos >= 0:
@@ -129,7 +144,10 @@ def reference_match_pos(reference_text: str, reference_skel: str, text: str) -> 
     skel = reference_skeleton(compact)
     if len(skel) < 4:
         return -1
-    return reference_skel.find(skel)
+    skel_pos = reference_skel.find(skel)
+    if skel_pos < 0 or skel_pos >= len(reference_skel_positions):
+        return -1
+    return reference_skel_positions[skel_pos]
 
 
 def add_role_collapse_issues(
@@ -165,7 +183,7 @@ def add_role_collapse_issues(
 def review_chunk(source: dict[str, Any], data: dict[str, Any]) -> list[str]:
     errors = validate_chunk(source, data)
     reference_text = normalize("".join(str(item.get("text", "")) for item in source.get("jp_reference", [])))
-    reference_skel = reference_skeleton(reference_text)
+    reference_skel, reference_skel_positions = reference_skeleton_with_positions(reference_text)
     chunk_counts = {"zh": {}, "ja": {}, "both": {}}
     last_ref_pos = -1
     duplicate_ja: dict[str, int] = {}
@@ -218,7 +236,7 @@ def review_chunk(source: dict[str, Any], data: dict[str, Any]) -> list[str]:
             if ja_text:
                 duplicate_ja[ja_text] = duplicate_ja.get(ja_text, 0) + 1
             if reference_text and len(ja_text) >= 5 and not paragraph_is_note and not is_editorial_note(zh_text):
-                ref_pos = reference_match_pos(reference_text, reference_skel, ja_text)
+                ref_pos = reference_match_pos(reference_text, reference_skel, reference_skel_positions, ja_text)
                 if ref_pos < 0:
                     errors.append(f"{unit_where}: Japanese comment text is not found in the supplied original reference")
                 elif ref_pos + 8 < last_ref_pos:
