@@ -27,7 +27,7 @@ CONTENT_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaffぁ-ゟ゠-ヿ
 HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 SENTENCE_END_RE = re.compile(r"[。！？!?]")
 PUNCT_RE = re.compile(r"^[\s，。！？、；：,.!?;:「」『』（）()《》〈〉“”‘’…—-]+$")
-EDITORIAL_NOTE_RE = re.compile(r"^[（(]?\s*\d+\s*[.．、)]")
+EDITORIAL_NOTE_RE = re.compile(r"^(?:[（(]?\s*\d+\s*[.．、)]|[［\[]\s*\d+\s*[］\]])")
 INLINE_NOTE_RE = re.compile(r"[［\[].{4,}?[］\]]")
 REFERENCE_SKELETON_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaffァ-ヿA-Za-z0-9]")
 RUBY_READING_CHARS = r"[ぁ-ゟァ-ヿ]*"
@@ -263,16 +263,27 @@ def review_chunk(source: dict[str, Any], data: dict[str, Any]) -> list[str]:
             if ja_text:
                 duplicate_ja[ja_text] = duplicate_ja.get(ja_text, 0) + 1
             if reference_text and len(ja_text) >= 5 and not paragraph_is_note and not is_editorial_note(zh_text):
+                min_match_pos = max(0, last_ref_pos - 8)
                 ref_pos = reference_match_pos(
                     reference_text,
                     reference_skel,
                     reference_skel_positions,
                     ja_text,
-                    min_pos=max(0, last_ref_pos - 8),
+                    min_pos=min_match_pos,
                 )
+                if ref_pos < 0 and last_ref_pos >= 0:
+                    local_ref_pos = reference_match_pos(
+                        reference_text,
+                        reference_skel,
+                        reference_skel_positions,
+                        ja_text,
+                        min_pos=0,
+                    )
+                    if local_ref_pos >= 0 and local_ref_pos + 420 >= last_ref_pos:
+                        ref_pos = local_ref_pos
                 if ref_pos < 0:
                     errors.append(f"{unit_where}: Japanese comment text is not found in the supplied original reference")
-                elif ref_pos + 8 < last_ref_pos:
+                elif ref_pos + 420 < last_ref_pos:
                     errors.append(f"{unit_where}: Japanese correspondence moves backward in the original reference")
                 else:
                     last_ref_pos = max(last_ref_pos, ref_pos)
