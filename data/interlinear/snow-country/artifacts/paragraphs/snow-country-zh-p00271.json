@@ -1,0 +1,335 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "snow-country",
+  "paragraph_id": "snow-country-zh-p00271",
+  "source_text": "“这是什么玩意儿！他妈的，妈的！我累极了，这是什么玩意儿！”",
+  "source_sha256": "76a32030d67653613169e910d4bf335432d398ceeb85bdb1e955f0d50248dcfa",
+  "source_normalized_sha256": "76a32030d67653613169e910d4bf335432d398ceeb85bdb1e955f0d50248dcfa",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 47,
+    "grammar_token_total": 47,
+    "unit_count": 3
+  },
+  "source_chunk_id": "snow-country-chunk-0271",
+  "source_manifest_sha256": "d02ddd49a319af1305a83854af8d72ec60d0bb2943dc097462835b3e60dcf59f",
+  "section": {
+    "id": "03",
+    "title_zh": [
+      {
+        "t": "03",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "03",
+        "r": "",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "03-intro",
+    "title_zh": [
+      {
+        "t": "03",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "03",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "snow-country-zh-p00271",
+    "source_text": "“这是什么玩意儿！他妈的，妈的！我累极了，这是什么玩意儿！”",
+    "units": [
+      {
+        "source_text": "“这是什么玩意儿！",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "什",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "object"
+          },
+          {
+            "t": "玩",
+            "r": "wán",
+            "g": "object"
+          },
+          {
+            "t": "意",
+            "r": "yì",
+            "g": "object"
+          },
+          {
+            "t": "儿",
+            "r": "ér",
+            "g": "object"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "なんだ",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "こんな",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "もの",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "他妈的，妈的！",
+        "zh": [
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "predicate"
+          },
+          {
+            "t": "妈",
+            "r": "mā",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "妈",
+            "r": "mā",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "畜",
+              "r": "ちく",
+              "g": "predicate"
+            },
+            {
+              "t": "生",
+              "r": "しょう",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "畜",
+              "r": "ちく",
+              "g": "predicate"
+            },
+            {
+              "t": "生",
+              "r": "しょう",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我累极了，这是什么玩意儿！”",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "累",
+            "r": "lèi",
+            "g": "predicate"
+          },
+          {
+            "t": "极",
+            "r": "jí",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "什",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "object"
+          },
+          {
+            "t": "玩",
+            "r": "wán",
+            "g": "object"
+          },
+          {
+            "t": "意",
+            "r": "yì",
+            "g": "object"
+          },
+          {
+            "t": "儿",
+            "r": "ér",
+            "g": "object"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "だるい",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "よ",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "こんな",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "もの",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
