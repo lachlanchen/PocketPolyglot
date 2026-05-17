@@ -17,9 +17,10 @@ work_root="books/$book_id/work/bilingual/sanitizer"
 raw_chunk_dir="books/$book_id/work/bilingual/interlinear/chunks"
 reviewed_chunk_dir="books/$book_id/work/bilingual/reviewed/chunks"
 log_dir="books/$book_id/work/logs"
+session_log_dir="$work_root/logs/$session"
 run_script="$work_root/${session}.run.sh"
 
-mkdir -p "$work_root" "$work_root/logs" "$raw_chunk_dir" "$reviewed_chunk_dir" "$log_dir"
+mkdir -p "$work_root" "$session_log_dir" "$raw_chunk_dir" "$reviewed_chunk_dir" "$log_dir"
 
 if [[ ! -f "books/$book_id/work/bilingual/chunks/chunks.jsonl" ]]; then
   echo "Sichuan folk story chunks are missing; run scripts/interlinear/prepare_sichuan_folk_sources.sh first." >&2
@@ -40,7 +41,7 @@ cat > "$run_script" <<EOF
 #!/usr/bin/env bash
 set -euo pipefail
 cd '$root'
-mkdir -p '$work_root/logs'
+mkdir -p '$session_log_dir'
 
 pids=()
 for i in \$(seq 1 '$workers'); do
@@ -61,7 +62,7 @@ for i in \$(seq 1 '$workers'); do
     --codex-timeout-seconds '$codex_timeout_seconds' \
     ${retry_failed_arg[*]} \
     --retries 2 \
-    > "$work_root/logs/\$worker_id.log" 2>&1 &
+    > "$session_log_dir/\$worker_id.log" 2>&1 &
   pids+=("\$!")
 done
 

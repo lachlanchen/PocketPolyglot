@@ -28,6 +28,7 @@ class Paths:
     review_candidates: Path
     review_merged: Path
     review_rejected: Path
+    sanitizer_shared: Path
     monitor_dir: Path
 
 
@@ -45,6 +46,7 @@ def paths_for(book_id: str) -> Paths:
         review_candidates=work / "parallel-review" / "candidates",
         review_merged=work / "parallel-review" / "merged",
         review_rejected=work / "parallel-review" / "merge-rejected",
+        sanitizer_shared=work / "sanitizer" / "shared",
         monitor_dir=Path("books") / book_id / "work" / "monitor",
     )
 
@@ -92,6 +94,12 @@ def progress(manifest: Path, chunk_dir: Path) -> dict[str, str]:
 
 def count_json(path: Path) -> int:
     return sum(1 for _ in path.glob("*.json")) if path.exists() else 0
+
+
+def first_json_name(path: Path) -> str:
+    if not path.exists():
+        return ""
+    return next((item.name for item in sorted(path.glob("*.json"))), "")
 
 
 def latest_mtime(paths: list[Path]) -> float:
@@ -160,6 +168,12 @@ def health(
             "merge_rejected": count_json(paths.review_rejected),
             "stale_claims": [str(p) for p in stale_claims(paths.review_candidates, claim_ttl_seconds)],
         },
+        "sanitizer": {
+            "failed": count_json(paths.sanitizer_shared / "failed"),
+            "first_failed": first_json_name(paths.sanitizer_shared / "failed"),
+            "claims": len(stale_claims(paths.sanitizer_shared, 0)),
+            "stale_claims": [str(p) for p in stale_claims(paths.sanitizer_shared, claim_ttl_seconds)],
+        },
         "worker_session_active": tmux_active(worker_session),
         "review_session_active": tmux_active(review_session),
         "latest_mtime": latest_mtime(
@@ -174,7 +188,7 @@ def health(
     }
     if complete(reviewed):
         data["status"] = "complete"
-    elif gen_failed or review_failed:
+    elif gen_failed or review_failed or data["sanitizer"]["failed"]:
         data["status"] = "needs_repair"
     elif not data["worker_session_active"] and not data["review_session_active"]:
         data["status"] = "stopped"
@@ -208,6 +222,11 @@ def print_health(data: dict[str, Any]) -> None:
         "review="
         f"accepted:{data['review']['accepted']} failed:{data['review']['failed']} "
         f"rejected:{data['review']['rejected']} stale_claims:{len(data['review']['stale_claims'])}"
+    )
+    print(
+        "sanitizer="
+        f"failed:{data['sanitizer']['failed']} first_failed:{data['sanitizer']['first_failed']} "
+        f"claims:{data['sanitizer']['claims']} stale_claims:{len(data['sanitizer']['stale_claims'])}"
     )
     print(f"worker_session_active={int(data['worker_session_active'])}")
     print(f"review_session_active={int(data['review_session_active'])}")

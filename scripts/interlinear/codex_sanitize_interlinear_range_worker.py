@@ -61,6 +61,10 @@ def release_claim(claim_dir: Path, chunk_id: str) -> None:
     shutil.rmtree(claim_dir / chunk_id, ignore_errors=True)
 
 
+def clear_failed(failed_dir: Path, chunk_id: str) -> None:
+    (failed_dir / f"{chunk_id}.json").unlink(missing_ok=True)
+
+
 def selected_chunks(
     chunks: list[dict[str, Any]],
     start_index: int,
@@ -157,6 +161,7 @@ def main() -> int:
             if not issues:
                 for directory in write_dirs:
                     write_json(directory / f"{chunk_id}.json", data)
+                clear_failed(failed_dir, chunk_id)
                 write_json(
                     status_dir / f"{chunk_id}.json",
                     status_record("ok", worker_id=args.worker_id, input=str(input_path), input_sha=json_sha(data)),
@@ -214,6 +219,7 @@ def main() -> int:
 
                     for directory in write_dirs:
                         write_json(directory / f"{chunk_id}.json", candidate)
+                    clear_failed(failed_dir, chunk_id)
                     write_json(
                         status_dir / f"{chunk_id}.json",
                         status_record(
