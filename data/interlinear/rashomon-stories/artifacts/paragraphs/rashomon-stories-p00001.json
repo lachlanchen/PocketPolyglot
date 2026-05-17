@@ -1,0 +1,461 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "rashomon-stories",
+  "paragraph_id": "rashomon-stories-p00001",
+  "source_text": "是一日的傍晚的事。有一个家将，在罗生门下待着雨住。",
+  "source_sha256": "cfb841c6d1fd2dd914a0f9d69732ddda731db65c455c1a89bc1a6578f09d8041",
+  "source_normalized_sha256": "cfb841c6d1fd2dd914a0f9d69732ddda731db65c455c1a89bc1a6578f09d8041",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 52,
+    "grammar_token_total": 52,
+    "unit_count": 2
+  },
+  "source_chunk_id": "rashomon-stories-chunk-0001",
+  "source_manifest_sha256": "6aeecbd0292e941457ba02abb30b877e08e4febecd68df2d5cdc37ba72e9dc96",
+  "section": {
+    "id": "第一章-人性篇",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      },
+      {
+        "t": "性",
+        "r": "xìng",
+        "g": "attributive"
+      },
+      {
+        "t": "篇",
+        "r": "piān",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "attributive"
+      },
+      {
+        "t": "性",
+        "r": "せい",
+        "g": "attributive"
+      },
+      {
+        "t": "篇",
+        "r": "へん",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "罗生门",
+    "title_zh": [
+      {
+        "t": "罗",
+        "r": "luó",
+        "g": "object"
+      },
+      {
+        "t": "生",
+        "r": "shēng",
+        "g": "object"
+      },
+      {
+        "t": "门",
+        "r": "mén",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "羅",
+        "r": "ら",
+        "g": "object"
+      },
+      {
+        "t": "生",
+        "r": "しょう",
+        "g": "object"
+      },
+      {
+        "t": "門",
+        "r": "もん",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "第一章-人性篇-罗生门-intro",
+    "title_zh": [
+      {
+        "t": "罗",
+        "r": "luó",
+        "g": "object"
+      },
+      {
+        "t": "生",
+        "r": "shēng",
+        "g": "object"
+      },
+      {
+        "t": "门",
+        "r": "mén",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "羅",
+        "r": "ら",
+        "g": "object"
+      },
+      {
+        "t": "生",
+        "r": "しょう",
+        "g": "object"
+      },
+      {
+        "t": "門",
+        "r": "もん",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "rashomon-stories-p00001",
+    "source_text": "是一日的傍晚的事。有一个家将，在罗生门下待着雨住。",
+    "units": [
+      {
+        "source_text": "是一日的傍晚的事。",
+        "zh": [
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "attributive"
+          },
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "傍",
+            "r": "bàng",
+            "g": "attributive"
+          },
+          {
+            "t": "晚",
+            "r": "wǎn",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "それは、",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "ある",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "日",
+              "r": "ひ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "暮",
+              "r": "く",
+              "g": "attributive"
+            },
+            {
+              "t": "れ",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "方",
+              "r": "がた",
+              "g": "attributive"
+            },
+            {
+              "t": "のこと",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "である",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "有一个家将，在罗生门下待着雨住。",
+        "zh": [
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "attributive"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "attributive"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "subject"
+          },
+          {
+            "t": "将",
+            "r": "jiàng",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "罗",
+            "r": "luó",
+            "g": "adverbial"
+          },
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "adverbial"
+          },
+          {
+            "t": "门",
+            "r": "mén",
+            "g": "adverbial"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "adverbial"
+          },
+          {
+            "t": "待",
+            "r": "dài",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "predicate"
+          },
+          {
+            "t": "雨",
+            "r": "yǔ",
+            "g": "object"
+          },
+          {
+            "t": "住",
+            "r": "zhù",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "attributive"
+            },
+            {
+              "t": "人",
+              "r": "り",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "下",
+              "r": "げ",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "にん",
+              "g": "subject"
+            },
+            {
+              "t": "が、",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "羅",
+              "r": "ら",
+              "g": "adverbial"
+            },
+            {
+              "t": "生",
+              "r": "しょう",
+              "g": "adverbial"
+            },
+            {
+              "t": "門",
+              "r": "もん",
+              "g": "adverbial"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "下",
+              "r": "した",
+              "g": "adverbial"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "雨",
+              "r": "あめ",
+              "g": "object"
+            },
+            {
+              "t": "のやむのを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "待",
+              "r": "ま",
+              "g": "predicate"
+            },
+            {
+              "t": "っていた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
