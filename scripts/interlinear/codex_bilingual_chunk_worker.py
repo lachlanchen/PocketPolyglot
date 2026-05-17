@@ -14,7 +14,7 @@ from pathlib import Path
 from typing import Any
 
 from codex_chunk_worker import compact, extract_json, flatten_zh, load_chunks, run_codex
-from normalize_grammar_roles import cleanup_components, normalize_node
+from normalize_grammar_roles import cleanup_components, normalize_node, normalize_ruby_token_shapes
 from reference_windows import expand_adjacent_jp_references
 from validate_interlinear_json import ja_lines_text, normalize, validate_ja_tokens, validate_named_tokens, validate_zh_tokens
 
@@ -367,6 +367,7 @@ def main() -> int:
                 continue
 
             normalize_node(result)
+            normalize_ruby_token_shapes(result)
             cleanup_components(result)
             errors = validate_chunk(chunk, result)
             if errors:

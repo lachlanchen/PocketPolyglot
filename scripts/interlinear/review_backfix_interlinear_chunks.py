@@ -24,7 +24,7 @@ from codex_bilingual_chunk_worker import (
     validate_chunk,
 )
 from codex_chunk_worker import extract_json, load_chunks, run_codex
-from normalize_grammar_roles import cleanup_components, normalize_node
+from normalize_grammar_roles import cleanup_components, normalize_node, normalize_ruby_token_shapes
 from reference_windows import expand_adjacent_jp_references
 from validate_interlinear_json import ja_lines_text, normalize
 
@@ -442,6 +442,7 @@ def main() -> int:
 
         data = load_json(chunk_path)
         normalize_node(data)
+        normalize_ruby_token_shapes(data)
         cleanup_components(data)
         issues = review_chunk(source, data)
         if not issues:
@@ -488,6 +489,7 @@ def main() -> int:
                 )
                 candidate = extract_json(message_path.read_text(encoding="utf-8"))
                 normalize_node(candidate)
+                normalize_ruby_token_shapes(candidate)
                 cleanup_components(candidate)
                 validation = review_chunk(source, candidate)
                 if validation:

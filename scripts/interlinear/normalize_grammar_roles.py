@@ -5,8 +5,12 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from pathlib import Path
 from typing import Any
+
+HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
+SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
 
 
 ROLE_ALIASES = {
@@ -112,6 +116,80 @@ def normalize_node(node: Any) -> int:
     return changed
 
 
+def split_reading_token(token: dict[str, Any], *, lang: str) -> tuple[list[dict[str, Any]], int]:
+    text = str(token.get("t", ""))
+    reading = str(token.get("r", ""))
+    if not reading:
+        return [token], 0
+    han_matches = list(HAN_RE.finditer(text))
+    if not han_matches:
+        new_token = dict(token)
+        new_token["r"] = ""
+        return [new_token], 1
+    if len(han_matches) == 1 and not SINGLE_HAN_RE.fullmatch(text):
+        match = han_matches[0]
+        role = token.get("g", "")
+        parts: list[dict[str, Any]] = []
+        prefix = text[: match.start()]
+        suffix = text[match.end() :]
+        if prefix:
+            parts.append({"t": prefix, "r": "", **({"g": role} if role else {})})
+        kanji = dict(token)
+        kanji["t"] = match.group(0)
+        parts.append(kanji)
+        if suffix:
+            parts.append({"t": suffix, "r": "", **({"g": role} if role else {})})
+        return parts, 1
+    if lang == "zh" and all(HAN_RE.fullmatch(char) for char in text):
+        reading_parts = [part for part in reading.split() if part]
+        if len(reading_parts) == len(text):
+            role = token.get("g", "")
+            return [
+                {"t": char, "r": reading_parts[index], **({"g": role} if role else {})}
+                for index, char in enumerate(text)
+            ], 1
+    return [token], 0
+
+
+def normalize_ruby_token_list(tokens: Any, *, lang: str) -> int:
+    if not isinstance(tokens, list):
+        return 0
+    changed = 0
+    rebuilt: list[Any] = []
+    for token in tokens:
+        if not isinstance(token, dict):
+            rebuilt.append(token)
+            continue
+        split, token_changed = split_reading_token(token, lang=lang)
+        rebuilt.extend(split)
+        changed += token_changed
+    if changed:
+        tokens[:] = rebuilt
+    return changed
+
+
+def normalize_ruby_token_shapes(node: Any) -> int:
+    changed = 0
+    if isinstance(node, dict):
+        for key in ("title_zh", "place_zh", "zh"):
+            if isinstance(node.get(key), list):
+                changed += normalize_ruby_token_list(node[key], lang="zh")
+        for key in ("title_ja", "place_ja"):
+            if isinstance(node.get(key), list):
+                changed += normalize_ruby_token_list(node[key], lang="ja")
+        ja = node.get("ja")
+        if isinstance(ja, list):
+            for line in ja:
+                changed += normalize_ruby_token_list(line, lang="ja")
+        for key, value in node.items():
+            if key not in {"title_zh", "place_zh", "zh", "title_ja", "place_ja", "ja"}:
+                changed += normalize_ruby_token_shapes(value)
+    elif isinstance(node, list):
+        for value in node:
+            changed += normalize_ruby_token_shapes(value)
+    return changed
+
+
 def cleanup_component_tokens(tokens: Any, *, lang: str) -> int:
     if not isinstance(tokens, list):
         return 0
@@ -212,6 +290,7 @@ def main() -> int:
     for path in iter_json_paths([Path(item) for item in args.paths]):
         data = json.loads(path.read_text(encoding="utf-8"))
         changed = normalize_node(data)
+        changed += normalize_ruby_token_shapes(data)
         if args.sync_components:
             changed += cleanup_components(data)
         if changed:

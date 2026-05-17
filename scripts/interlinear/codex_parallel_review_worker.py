@@ -13,7 +13,7 @@ from pathlib import Path
 from typing import Any
 
 from codex_chunk_worker import extract_json, load_chunks, log_mentions_usage_limit, run_codex
-from normalize_grammar_roles import cleanup_components, normalize_node
+from normalize_grammar_roles import cleanup_components, normalize_node, normalize_ruby_token_shapes
 from reference_windows import expand_adjacent_jp_references
 from review_backfix_interlinear_chunks import json_sha, repair_prompt, review_chunk
 
@@ -33,6 +33,7 @@ def valid_reviewed(path: Path, source: dict[str, Any]) -> bool:
     try:
         data = load_json(path)
         normalize_node(data)
+        normalize_ruby_token_shapes(data)
         cleanup_components(data)
         return not review_chunk(source, data)
     except Exception:
@@ -154,6 +155,7 @@ def main() -> int:
         try:
             data = load_json(raw_path)
             normalize_node(data)
+            normalize_ruby_token_shapes(data)
             cleanup_components(data)
             issues = review_chunk(source, data)
             if not issues:
@@ -191,6 +193,7 @@ def main() -> int:
                         )
                         candidate = extract_json(message_path.read_text(encoding="utf-8"))
                         normalize_node(candidate)
+                        normalize_ruby_token_shapes(candidate)
                         cleanup_components(candidate)
                         validation = review_chunk(source, candidate)
                         if validation:

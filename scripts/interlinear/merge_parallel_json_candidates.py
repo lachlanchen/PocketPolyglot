@@ -13,7 +13,7 @@ from typing import Any
 
 from codex_chunk_worker import load_chunks
 from codex_bilingual_chunk_worker import validate_chunk
-from normalize_grammar_roles import cleanup_components, normalize_node
+from normalize_grammar_roles import cleanup_components, normalize_node, normalize_ruby_token_shapes
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -26,6 +26,7 @@ def is_valid_existing(path: Path, source: dict[str, Any]) -> bool:
     try:
         data = load_json(path)
         normalize_node(data)
+        normalize_ruby_token_shapes(data)
         cleanup_components(data)
         return not validate_chunk(source, data)
     except Exception:
@@ -71,6 +72,7 @@ def main() -> int:
         try:
             data = load_json(candidate_path)
             normalize_node(data)
+            normalize_ruby_token_shapes(data)
             cleanup_components(data)
             errors = validate_chunk(source, data)
         except Exception as exc:
