@@ -24,6 +24,7 @@ fi
 
 source_path="$(jq -r '.source_path' "$plan")"
 source_markdown="$(jq -r '.source_markdown' "$plan")"
+manifest="$(jq -r '.chunks_manifest' "$plan")"
 chunk_dir="$(jq -r '.reviewed_chunk_dir' "$plan")"
 title_zh="$(jq -r '.book_title_zh' "$plan")"
 title_zh_reading="$(jq -r '.book_title_zh_reading' "$plan")"
@@ -43,61 +44,90 @@ if [[ ! -d "$chunk_dir" ]]; then
 fi
 
 mkdir -p "build/$book_id/zh-main/color" "build/$book_id/zh-main/blackwhite" \
-  "build/$book_id/jp-main/color" "build/$book_id/jp-main/blackwhite"
+  "build/$book_id/jp-main/color" "build/$book_id/jp-main/blackwhite" \
+  "books/$book_id/work/bilingual/preview"
 
 bash scripts/interlinear/compile_interlinear_book.sh \
+  --manifest "$manifest" \
   --chunk-dir "$chunk_dir" \
+  --output-json "books/$book_id/work/bilingual/preview/$book_id.partial.json" \
   --source-epub "$source_path" \
   --source-markdown "$source_markdown" \
+  --book-title-zh "$title_zh" \
+  --book-title-zh-reading "$title_zh_reading" \
+  --book-title-ja "$title_ja" \
+  --book-title-ja-reading "$title_ja_reading" \
   --output-pdf "build/$book_id/zh-main/color/${title_zh}（日文注）.pdf" \
-  --tex-output "build/$book_id/zh-main/color/${title_zh}（日文注）.tex" \
-  --book-title "$title_zh" \
-  --book-title-reading "$title_zh_reading" \
   --author "$author" \
   --author-reading "$author_reading_zh" \
-  --curator "AgInTiFlow curated with https://flow.lazying.art powered by LazyingArt" \
   --cover-image "$cover_image" \
-  --color
+  --build-dir "build/$book_id/zh-main/color" \
+  --color-mode color \
+  --allow-missing
+cp "build/$book_id/zh-main/color/source.tex" "build/$book_id/zh-main/color/${title_zh}（日文注）.tex"
 
 bash scripts/interlinear/compile_interlinear_book.sh \
+  --manifest "$manifest" \
   --chunk-dir "$chunk_dir" \
+  --output-json "books/$book_id/work/bilingual/preview/$book_id.partial.json" \
   --source-epub "$source_path" \
   --source-markdown "$source_markdown" \
+  --book-title-zh "$title_zh" \
+  --book-title-zh-reading "$title_zh_reading" \
+  --book-title-ja "$title_ja" \
+  --book-title-ja-reading "$title_ja_reading" \
   --output-pdf "build/$book_id/zh-main/blackwhite/${title_zh}（日文注・黑白）.pdf" \
-  --tex-output "build/$book_id/zh-main/blackwhite/${title_zh}（日文注・黑白）.tex" \
-  --book-title "$title_zh" \
-  --book-title-reading "$title_zh_reading" \
   --author "$author" \
   --author-reading "$author_reading_zh" \
-  --curator "AgInTiFlow curated with https://flow.lazying.art powered by LazyingArt" \
-  --cover-image "$cover_image"
-
-bash scripts/interlinear/compile_jp_main_book.sh \
-  --chunk-dir "$chunk_dir" \
-  --source-epub "$source_path" \
-  --source-markdown "$source_markdown" \
-  --output-pdf "build/$book_id/jp-main/color/${title_ja}（中文注）.pdf" \
-  --tex-output "build/$book_id/jp-main/color/${title_ja}（中文注）.tex" \
-  --book-title "$title_ja" \
-  --book-title-reading "$title_ja_reading" \
-  --author "$author" \
-  --author-reading "$author_reading_ja" \
-  --curator "AgInTiFlow curated with https://flow.lazying.art powered by LazyingArt" \
   --cover-image "$cover_image" \
-  --color
+  --build-dir "build/$book_id/zh-main/blackwhite" \
+  --color-mode blackwhite \
+  --allow-missing
+cp "build/$book_id/zh-main/blackwhite/source.tex" "build/$book_id/zh-main/blackwhite/${title_zh}（日文注・黑白）.tex"
 
 bash scripts/interlinear/compile_jp_main_book.sh \
+  --manifest "$manifest" \
   --chunk-dir "$chunk_dir" \
+  --output-json "books/$book_id/work/bilingual/preview/$book_id.jp-main.partial.json" \
   --source-epub "$source_path" \
   --source-markdown "$source_markdown" \
-  --output-pdf "build/$book_id/jp-main/blackwhite/${title_ja}（中文注・黑白）.pdf" \
-  --tex-output "build/$book_id/jp-main/blackwhite/${title_ja}（中文注・黑白）.tex" \
-  --book-title "$title_ja" \
-  --book-title-reading "$title_ja_reading" \
+  --book-title-zh "$title_zh" \
+  --book-title-zh-reading "$title_zh_reading" \
+  --book-title-ja "$title_ja" \
+  --book-title-ja-reading "$title_ja_reading" \
+  --output-pdf "build/$book_id/jp-main/color/${title_ja}（中文注）.pdf" \
   --author "$author" \
   --author-reading "$author_reading_ja" \
-  --curator "AgInTiFlow curated with https://flow.lazying.art powered by LazyingArt" \
-  --cover-image "$cover_image"
+  --curated-by "AgInTiFlow curated" \
+  --curated-url "https://flow.lazying.art" \
+  --powered-by "powered by LazyingArt" \
+  --cover-image "$cover_image" \
+  --build-dir "build/$book_id/jp-main/color" \
+  --color-mode color \
+  --allow-missing
+cp "build/$book_id/jp-main/color/source.tex" "build/$book_id/jp-main/color/${title_ja}（中文注）.tex"
+
+bash scripts/interlinear/compile_jp_main_book.sh \
+  --manifest "$manifest" \
+  --chunk-dir "$chunk_dir" \
+  --output-json "books/$book_id/work/bilingual/preview/$book_id.jp-main.partial.json" \
+  --source-epub "$source_path" \
+  --source-markdown "$source_markdown" \
+  --book-title-zh "$title_zh" \
+  --book-title-zh-reading "$title_zh_reading" \
+  --book-title-ja "$title_ja" \
+  --book-title-ja-reading "$title_ja_reading" \
+  --output-pdf "build/$book_id/jp-main/blackwhite/${title_ja}（中文注・黑白）.pdf" \
+  --author "$author" \
+  --author-reading "$author_reading_ja" \
+  --curated-by "AgInTiFlow curated" \
+  --curated-url "https://flow.lazying.art" \
+  --powered-by "powered by LazyingArt" \
+  --cover-image "$cover_image" \
+  --build-dir "build/$book_id/jp-main/blackwhite" \
+  --color-mode blackwhite \
+  --allow-missing
+cp "build/$book_id/jp-main/blackwhite/source.tex" "build/$book_id/jp-main/blackwhite/${title_ja}（中文注・黑白）.tex"
 
 if [[ "${COMMIT_PROGRESS:-1}" == "1" ]]; then
   bash scripts/interlinear/commit_prepared_book_progress.sh "$book_id"
