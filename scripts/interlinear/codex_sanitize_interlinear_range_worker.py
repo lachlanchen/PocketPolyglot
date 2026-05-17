@@ -135,6 +135,7 @@ def main() -> int:
     for _index, source in selected_chunks(chunks, args.start_index, args.end_index):
         chunk_id = source["chunk_id"]
         if all(reviewed_ok(directory / f"{chunk_id}.json", source) for directory in write_dirs):
+            (failed_dir / f"{chunk_id}.json").unlink(missing_ok=True)
             continue
         if not args.retry_failed and (failed_dir / f"{chunk_id}.json").exists():
             continue
