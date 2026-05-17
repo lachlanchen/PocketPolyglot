@@ -1,0 +1,922 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "rashomon-stories",
+  "paragraph_id": "rashomon-stories-p00064",
+  "source_text": "“夫君，事已至此，你我缘分已尽。我会一死了之，但是……但是你也不能活着。你目睹了我的耻辱，我无法忍受你一个人这样活下去。”",
+  "source_sha256": "b8f1e5437555af6d75510bb8ba0e3cfd31f720571f74c300913a6742652286bd",
+  "source_normalized_sha256": "b8f1e5437555af6d75510bb8ba0e3cfd31f720571f74c300913a6742652286bd",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 125,
+    "grammar_token_total": 125,
+    "unit_count": 3
+  },
+  "source_chunk_id": "rashomon-stories-chunk-0064",
+  "source_manifest_sha256": "6aeecbd0292e941457ba02abb30b877e08e4febecd68df2d5cdc37ba72e9dc96",
+  "section": {
+    "id": "第一章-人性篇",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      },
+      {
+        "t": "性",
+        "r": "xìng",
+        "g": "attributive"
+      },
+      {
+        "t": "篇",
+        "r": "piān",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "attributive"
+      },
+      {
+        "t": "間",
+        "r": "かん",
+        "g": "attributive"
+      },
+      {
+        "t": "性",
+        "r": "せい",
+        "g": "attributive"
+      },
+      {
+        "t": "篇",
+        "r": "へん",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "竹林中",
+    "title_zh": [
+      {
+        "t": "竹",
+        "r": "zhú",
+        "g": "attributive"
+      },
+      {
+        "t": "林",
+        "r": "lín",
+        "g": "attributive"
+      },
+      {
+        "t": "中",
+        "r": "zhōng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "竹",
+        "r": "たけ",
+        "g": "attributive"
+      },
+      {
+        "t": "林",
+        "r": "ばやし",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "中",
+        "r": "なか",
+        "g": "function"
+      }
+    ]
+  },
+  "story": {
+    "id": "第一章-人性篇-竹林中-来到清水寺的女人的忏悔",
+    "title_zh": [
+      {
+        "t": "来",
+        "r": "lái",
+        "g": "attributive"
+      },
+      {
+        "t": "到",
+        "r": "dào",
+        "g": "attributive"
+      },
+      {
+        "t": "清",
+        "r": "qīng",
+        "g": "object"
+      },
+      {
+        "t": "水",
+        "r": "shuǐ",
+        "g": "object"
+      },
+      {
+        "t": "寺",
+        "r": "sì",
+        "g": "object"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "function"
+      },
+      {
+        "t": "女",
+        "r": "nǚ",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "function"
+      },
+      {
+        "t": "忏",
+        "r": "chàn",
+        "g": "object"
+      },
+      {
+        "t": "悔",
+        "r": "huǐ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "清",
+        "r": "きよ",
+        "g": "object"
+      },
+      {
+        "t": "水",
+        "r": "みず",
+        "g": "object"
+      },
+      {
+        "t": "寺",
+        "r": "でら",
+        "g": "object"
+      },
+      {
+        "t": "に",
+        "r": "",
+        "g": "object"
+      },
+      {
+        "t": "来",
+        "r": "き",
+        "g": "attributive"
+      },
+      {
+        "t": "た",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "女",
+        "r": "おんな",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "懺",
+        "r": "ざん",
+        "g": "object"
+      },
+      {
+        "t": "悔",
+        "r": "げ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "rashomon-stories-p00064",
+    "source_text": "“夫君，事已至此，你我缘分已尽。我会一死了之，但是……但是你也不能活着。你目睹了我的耻辱，我无法忍受你一个人这样活下去。”",
+    "units": [
+      {
+        "source_text": "“夫君，事已至此，你我缘分已尽。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "夫",
+            "r": "fū",
+            "g": "subject"
+          },
+          {
+            "t": "君",
+            "r": "jūn",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "subject"
+          },
+          {
+            "t": "已",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "至",
+            "r": "zhì",
+            "g": "predicate"
+          },
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "缘",
+            "r": "yuán",
+            "g": "subject"
+          },
+          {
+            "t": "分",
+            "r": "fèn",
+            "g": "subject"
+          },
+          {
+            "t": "已",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "尽",
+            "r": "jìn",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "あなた",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "事",
+              "r": "こと",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "ここまで",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "至",
+              "r": "いた",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "以",
+              "r": "い",
+              "g": "function"
+            },
+            {
+              "t": "上",
+              "r": "じょう",
+              "g": "function"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "あなた",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "縁",
+              "r": "えん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "もう",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "尽",
+              "r": "つ",
+              "g": "predicate"
+            },
+            {
+              "t": "きました",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我会一死了之，但是……但是你也不能活着。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "adverbial"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "adverbial"
+          },
+          {
+            "t": "死",
+            "r": "sǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "liǎo",
+            "g": "complement"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "但",
+            "r": "dàn",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "但",
+            "r": "dàn",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "能",
+            "r": "néng",
+            "g": "adverbial"
+          },
+          {
+            "t": "活",
+            "r": "huó",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "死",
+              "r": "し",
+              "g": "predicate"
+            },
+            {
+              "t": "んで",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "終",
+              "r": "お",
+              "g": "complement"
+            },
+            {
+              "t": "わらせます",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "しかし",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "…",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "…",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "しかし",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "あなた",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "生",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "きて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "いけません",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "你目睹了我的耻辱，我无法忍受你一个人这样活下去。”",
+        "zh": [
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "目",
+            "r": "mù",
+            "g": "predicate"
+          },
+          {
+            "t": "睹",
+            "r": "dǔ",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "耻",
+            "r": "chǐ",
+            "g": "object"
+          },
+          {
+            "t": "辱",
+            "r": "rǔ",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "无",
+            "r": "wú",
+            "g": "adverbial"
+          },
+          {
+            "t": "法",
+            "r": "fǎ",
+            "g": "adverbial"
+          },
+          {
+            "t": "忍",
+            "r": "rěn",
+            "g": "predicate"
+          },
+          {
+            "t": "受",
+            "r": "shòu",
+            "g": "predicate"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "attributive"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "attributive"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "adverbial"
+          },
+          {
+            "t": "样",
+            "r": "yàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "活",
+            "r": "huó",
+            "g": "predicate"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "complement"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "あなた",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "恥",
+              "r": "ち",
+              "g": "object"
+            },
+            {
+              "t": "辱",
+              "r": "じょく",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "目",
+              "r": "め",
+              "g": "predicate"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "しました",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "あなた",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "attributive"
+            },
+            {
+              "t": "人",
+              "r": "り",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "こうして",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "生",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "きる",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "のに",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "耐",
+              "r": "た",
+              "g": "predicate"
+            },
+            {
+              "t": "えられません",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
