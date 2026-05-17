@@ -1,0 +1,276 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "rashomon-stories",
+  "paragraph_id": "rashomon-stories-p00888",
+  "source_text": "“不了，今天就算啦。哎呀！”",
+  "source_sha256": "846c215adbb3bd014c41cd4302d501908726dbd42ed6c200b156f28c9a6bd492",
+  "source_normalized_sha256": "846c215adbb3bd014c41cd4302d501908726dbd42ed6c200b156f28c9a6bd492",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 21,
+    "grammar_token_total": 21,
+    "unit_count": 2
+  },
+  "source_chunk_id": "rashomon-stories-chunk-0888",
+  "source_manifest_sha256": "6aeecbd0292e941457ba02abb30b877e08e4febecd68df2d5cdc37ba72e9dc96",
+  "section": {
+    "id": "第四章-终点篇",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "终",
+        "r": "zhōng",
+        "g": "attributive"
+      },
+      {
+        "t": "点",
+        "r": "diǎn",
+        "g": "attributive"
+      },
+      {
+        "t": "篇",
+        "r": "piān",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "終",
+        "r": "しゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "点",
+        "r": "てん",
+        "g": "attributive"
+      },
+      {
+        "t": "篇",
+        "r": "へん",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "河童",
+    "title_zh": [
+      {
+        "t": "河",
+        "r": "hé",
+        "g": "function"
+      },
+      {
+        "t": "童",
+        "r": "tóng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "河",
+        "r": "かっ",
+        "g": "function"
+      },
+      {
+        "t": "童",
+        "r": "ぱ",
+        "g": "function"
+      }
+    ]
+  },
+  "story": {
+    "id": "第四章-终点篇-河童-十",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "rashomon-stories-p00888",
+    "source_text": "“不了，今天就算啦。哎呀！”",
+    "units": [
+      {
+        "source_text": "“不了，今天就算啦。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "liǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "今",
+            "r": "jīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "算",
+            "r": "suàn",
+            "g": "predicate"
+          },
+          {
+            "t": "啦",
+            "r": "la",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「いや、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "今",
+              "r": "きょ",
+              "g": "adverbial"
+            },
+            {
+              "t": "日",
+              "r": "う",
+              "g": "adverbial"
+            },
+            {
+              "t": "はもう",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "やめておこう。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "哎呀！”",
+        "zh": [
+          {
+            "t": "哎",
+            "r": "āi",
+            "g": "predicate"
+          },
+          {
+            "t": "呀",
+            "r": "ya",
+            "g": "predicate"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ああっ",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "！」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
