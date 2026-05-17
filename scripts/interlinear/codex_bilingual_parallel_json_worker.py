@@ -12,7 +12,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from codex_chunk_worker import extract_json, load_chunks, run_codex
+from codex_chunk_worker import extract_json, load_chunks, log_mentions_usage_limit, run_codex
 from codex_bilingual_chunk_worker import prompt_for_chunk, validate_chunk
 from normalize_grammar_roles import cleanup_components, normalize_node
 from reference_windows import expand_adjacent_jp_references
@@ -169,6 +169,13 @@ def main() -> int:
                     cleanup_components(result)
                     errors = validate_chunk(chunk, result)
                 except Exception as exc:
+                    if log_mentions_usage_limit(log_path):
+                        write_json(
+                            status_dir / f"{chunk_id}.json",
+                            status_record("usage_limit", worker_id=args.worker_id, attempt=attempt),
+                        )
+                        print(f"{args.worker_id}: usage limit detected; stopping worker", flush=True)
+                        return 86
                     errors = [f"codex, parse, normalize, or validate step failed: {exc}"]
 
                 if errors:

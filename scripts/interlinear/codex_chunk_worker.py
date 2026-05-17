@@ -13,6 +13,26 @@ from typing import Any
 
 from validate_interlinear_json import validate_ja_tokens, validate_named_tokens, validate_zh_tokens
 
+USAGE_LIMIT_MARKERS = (
+    "you've hit your usage limit",
+    "you have hit your usage limit",
+    "usage limit",
+    "purchase more credits",
+    "try again at",
+)
+
+
+def mentions_usage_limit(text: str) -> bool:
+    lowered = text.lower()
+    return any(marker in lowered for marker in USAGE_LIMIT_MARKERS)
+
+
+def log_mentions_usage_limit(path: Path) -> bool:
+    try:
+        return mentions_usage_limit(path.read_text(encoding="utf-8", errors="replace")[-8000:])
+    except OSError:
+        return False
+
 
 def load_chunks(path: Path) -> list[dict[str, Any]]:
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]

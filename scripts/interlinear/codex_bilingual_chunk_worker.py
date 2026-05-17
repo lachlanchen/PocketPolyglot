@@ -44,6 +44,24 @@ def token_text(tokens: list[dict[str, Any]]) -> str:
     return "".join(str(token.get("t", "")) for token in tokens)
 
 
+def source_requires_ocr_correction(source: dict[str, Any]) -> bool:
+    return bool(source.get("requires_ocr_correction"))
+
+
+def paragraph_target_text(paragraph: dict[str, Any], *, fallback: str = "") -> str:
+    corrected = str(paragraph.get("corrected_text", "")).strip()
+    if corrected:
+        return corrected
+    return str(fallback if fallback else paragraph.get("source_text", ""))
+
+
+def unit_target_text(unit: dict[str, Any]) -> str:
+    corrected = str(unit.get("corrected_text", "")).strip()
+    if corrected:
+        return corrected
+    return str(unit.get("source_text", ""))
+
+
 def needs_grammar_role(text: str) -> bool:
     return bool(CONTENT_RE.search(text))
 
@@ -81,16 +99,21 @@ def validate_chunk(source: dict[str, Any], result: dict[str, Any]) -> list[str]:
     if got_ids != expected_ids:
         errors.append(f"paragraph id/order mismatch: expected {expected_ids}, got {got_ids}")
     source_by_id = {paragraph["id"]: paragraph["text"] for paragraph in source["paragraphs"]}
+    require_ocr_correction = source_requires_ocr_correction(source)
     chunk_zh_texts: list[str] = []
     chunk_ja_texts: list[str] = []
     for paragraph in paragraphs:
         paragraph_id = paragraph.get("id")
         if paragraph_id not in source_by_id:
             continue
-        if compact(paragraph.get("source_text", "")) != compact(source_by_id[paragraph_id]):
+        source_text = source_by_id[paragraph_id]
+        if compact(paragraph.get("source_text", "")) != compact(source_text):
             errors.append(f"{paragraph_id}: paragraph source_text changed")
-        if compact(flatten_zh(paragraph)) != compact(source_by_id[paragraph_id]):
-            errors.append(f"{paragraph_id}: zh tokens do not reconstruct source paragraph")
+        if require_ocr_correction and "corrected_text" not in paragraph:
+            errors.append(f"{paragraph_id}: corrected_text is required for OCR-reviewed source")
+        target_text = paragraph_target_text(paragraph, fallback=source_text)
+        if compact(flatten_zh(paragraph)) != compact(target_text):
+            errors.append(f"{paragraph_id}: zh tokens do not reconstruct corrected paragraph")
         if not paragraph.get("units"):
             errors.append(f"{paragraph_id}: missing units")
         for unit_index, unit in enumerate(paragraph.get("units", [])):
@@ -99,6 +122,9 @@ def validate_chunk(source: dict[str, Any], result: dict[str, Any]) -> list[str]:
             validate_zh_tokens(unit.get("zh", []), zh_where, errors)
             validate_grammar_tokens(unit.get("zh", []), zh_where, errors)
             zh_text = zh_unit_text(unit)
+            unit_target = unit_target_text(unit)
+            if unit_target and compact(zh_text) != compact(unit_target):
+                errors.append(f"{unit_where}: zh tokens do not reconstruct unit source_text/corrected_text")
             chunk_zh_texts.append(zh_text)
             sentence_end_count = len(SENTENCE_END_RE.findall(zh_text))
             if len(zh_text) > ZH_UNIT_HARD_MAX or (
@@ -187,6 +213,16 @@ def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = 
         if has_jp_reference
         else "Japanese original reference paragraphs: [] (none supplied; translate from the Chinese source)"
     )
+    ocr_instruction = ""
+    paragraph_corrected_shape = ""
+    if source_requires_ocr_correction(chunk):
+        paragraph_corrected_shape = '\n              "corrected_text": "clean corrected Chinese paragraph; same as source_text if no OCR correction is needed",'
+        ocr_instruction = """
+        - This Chinese source comes from OCR and may contain recognition errors. Keep "source_text" as the exact OCR paragraph, but use "corrected_text" and the zh tokens as the clean reader-facing Chinese text.
+        - Correct only clear OCR/normalization errors: wrong but visually similar characters, broken punctuation, accidental Latin/ASCII garbage, repeated page debris, and line-join artifacts. Do not summarize, modernize dialect, invent missing story content, or silently delete meaningful words.
+        - If the OCR is uncertain, make the smallest plausible correction that preserves the story. If no correction is needed, set corrected_text equal to source_text.
+        - For each paragraph, joining all zh token "t" values across all units must reconstruct corrected_text exactly, apart from whitespace. The paragraph source_text must still reproduce the provided OCR source exactly.
+        """
 
     return textwrap.dedent(
         f"""
@@ -205,10 +241,10 @@ def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = 
           "paragraphs": [
             {{
               "id": "source paragraph id",
-              "source_text": "exact source paragraph",
+              "source_text": "exact source paragraph",{paragraph_corrected_shape}
               "units": [
                 {{
-                  "source_text": "exact Chinese sentence or sentence group from the paragraph",
+                  "source_text": "exact reader-facing Chinese sentence or sentence group from corrected_text/source_text",
                   "zh": [{{"t":"one Chinese Han character","r":"that character's pinyin with tone mark","g":"English component role"}}],
                   "ja": [
                     [{{"t":"one Japanese kanji OR kana/punctuation run","r":"furigana only for one kanji, empty otherwise","g":"English component role"}}],
@@ -221,8 +257,9 @@ def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = 
         }}
 
         Hard requirements:
-        - Preserve every Chinese source paragraph. Do not omit, summarize, reorder, or rewrite the Chinese.
-        - For each paragraph, joining all zh token "t" values across all units must reconstruct the paragraph text exactly, apart from whitespace.
+        - Preserve every Chinese source paragraph in source_text. Do not omit, summarize, or reorder paragraphs.
+        {ocr_instruction}
+        - For non-OCR-cleanup chunks, joining all zh token "t" values across all units must reconstruct the paragraph source text exactly, apart from whitespace.
         - Split the Chinese into natural reading units, usually sentence by sentence. Keep each unit readable as continuous Chinese prose.
         - Line-based pairing requirement: one unit should be one Chinese sentence, or one tightly bound sentence fragment when the sentence/comment is very long. Do not put a whole paragraph into one unit. If a paragraph has multiple sentence-ending punctuation marks, make multiple units in the same order.
         - Target each Chinese unit at roughly 18-65 Chinese characters. A unit longer than 90 characters should normally be split by clause. A unit longer than 128 characters will be rejected.

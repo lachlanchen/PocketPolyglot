@@ -16,7 +16,13 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from codex_bilingual_chunk_worker import GRAMMAR_ROLES, prompt_for_chunk, validate_chunk
+from codex_bilingual_chunk_worker import (
+    GRAMMAR_ROLES,
+    paragraph_target_text,
+    prompt_for_chunk,
+    source_requires_ocr_correction,
+    validate_chunk,
+)
 from codex_chunk_worker import extract_json, load_chunks, run_codex
 from normalize_grammar_roles import cleanup_components, normalize_node
 from reference_windows import expand_adjacent_jp_references
@@ -31,6 +37,8 @@ EDITORIAL_NOTE_RE = re.compile(r"^(?:[（(]?\s*\d+\s*[.．、)]|[［\[]\s*\d+\s*
 INLINE_NOTE_RE = re.compile(r"[［\[].{4,}?[］\]]")
 REFERENCE_SKELETON_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaffァ-ヿA-Za-z0-9]")
 RUBY_READING_CHARS = r"[ぁ-ゟァ-ヿ]*"
+ASCII_GARBAGE_RE = re.compile(r"[A-Za-z][A-Za-z0-9_/|\\<>@#$%^&*=+~`]{5,}")
+OCR_DEBRIS_RE = re.compile(r"[|<>@#$%^&*=+~`]{2,}|�|□|■")
 
 
 def canonical_json(data: Any) -> str:
@@ -108,6 +116,20 @@ def is_editorial_note(text: str) -> bool:
         or bool(INLINE_NOTE_RE.search(compact))
         or any(marker in compact for marker in ("译者", "译注", "注释", "注："))
     )
+
+
+def ocr_noise_issues(text: str, where: str) -> list[str]:
+    issues: list[str] = []
+    compact = normalize(text)
+    if OCR_DEBRIS_RE.search(compact):
+        issues.append(f"{where}: corrected_text still contains OCR debris symbols")
+    if ASCII_GARBAGE_RE.search(compact):
+        issues.append(f"{where}: corrected_text still contains likely OCR ASCII garbage")
+    cjk_count = sum(1 for char in compact if HAN_RE.fullmatch(char))
+    ascii_count = sum(1 for char in compact if char.isascii() and char.isalnum())
+    if cjk_count >= 20 and ascii_count >= max(8, int(cjk_count * 0.08)):
+        issues.append(f"{where}: corrected_text has too much ASCII noise for a Chinese source paragraph")
+    return issues
 
 
 def reference_skeleton_with_positions(text: str) -> tuple[str, list[int]]:
@@ -224,6 +246,7 @@ def review_chunk(source: dict[str, Any], data: dict[str, Any]) -> list[str]:
         units = paragraph.get("units", [])
         paragraph_id = paragraph.get("id", f"paragraphs[{paragraph_index}]")
         source_text = str(paragraph.get("source_text", ""))
+        target_text = paragraph_target_text(paragraph, fallback=source_text)
         paragraph_counts = {"zh": {}, "ja": {}, "both": {}}
 
         def add_paragraph_counts(lang: str, counts: dict[str, int]) -> None:
@@ -232,13 +255,18 @@ def review_chunk(source: dict[str, Any], data: dict[str, Any]) -> list[str]:
                 paragraph_counts["both"][role] = paragraph_counts["both"].get(role, 0) + count
 
         if isinstance(units, list):
-            sentence_count = len(SENTENCE_END_RE.findall(source_text))
+            sentence_count = len(SENTENCE_END_RE.findall(target_text))
             if sentence_count >= 4 and len(units) < max(2, math.ceil(sentence_count * 0.45)):
                 errors.append(
                     f"{paragraph_id}: too few interlinear units for sentence-level reading "
                     f"({len(units)} units for {sentence_count} sentence endings)"
                 )
-        paragraph_is_note = is_editorial_note(source_text)
+        if source_requires_ocr_correction(source):
+            if "corrected_text" not in paragraph:
+                errors.append(f"{paragraph_id}: missing corrected_text for OCR source")
+            else:
+                errors.extend(ocr_noise_issues(target_text, paragraph_id))
+        paragraph_is_note = is_editorial_note(target_text)
         if not isinstance(units, list):
             continue
         for unit_index, unit in enumerate(units):
@@ -331,7 +359,8 @@ def repair_prompt(source: dict[str, Any], current: dict[str, Any], issues: list[
         Return the full corrected chunk JSON only. No Markdown fences and no explanation.
 
         Fix every class of issue, not only grammar:
-        - Preserve every Chinese paragraph exactly and keep paragraph ids/order exact.
+        - Preserve every original Chinese OCR/source paragraph exactly in paragraph.source_text and keep paragraph ids/order exact.
+        - If this source requires OCR cleanup, keep paragraph.corrected_text as the reader-facing corrected Chinese and make the zh tokens reconstruct corrected_text, not the noisy OCR. Correct clear OCR errors, punctuation breaks, accidental ASCII garbage, and page debris without summarizing or inventing story content.
         - Split at sentence or short clause level so the interline is line-based and readable.
         {japanese_source_rule}
         - Ensure every Chinese Han token has pinyin on its own single-character token.
@@ -340,9 +369,9 @@ def repair_prompt(source: dict[str, Any], current: dict[str, Any], issues: list[
         - Avoid color collapse: a whole sentence/chunk must not become one dominant role such as all predicate.
         - Match the major Chinese and Japanese components roughly with the same roles/colors.
         - Treat visible pages that become one color as a serious data bug: it usually means the chunk or paragraph assigns nearly every token the same "g" role.
-        - Check for the full set of quality failures a reader would see in the PDF: missing source text, missing Japanese, duplicated Japanese comments, {japanese_wrong_source_rule} oversized units that are not line-based, unbalanced two-line comments, missing pinyin/furigana, furigana on kana or multi-kanji tokens, pinyin on multi-character Chinese tokens, and role/color mismatch between corresponding Chinese and Japanese phrases.
+        - Check for the full set of quality failures a reader would see in the PDF: unresolved OCR errors in Chinese, missing source text, missing Japanese, duplicated Japanese comments, {japanese_wrong_source_rule} oversized units that are not line-based, unbalanced two-line comments, missing pinyin/furigana, furigana on kana or multi-kanji tokens, pinyin on multi-character Chinese tokens, and role/color mismatch between corresponding Chinese and Japanese phrases.
         - Treat numbered Chinese footnotes such as "1.鸟取：..." or "2.江户：..." as editorial notes. They may use concise Japanese note text instead of original-source quotation, but must still be complete, readable, ruby-annotated, and role-colored.
-        - Do not merely make validation pass. Make the result read like a clean interlinear book page: continuous Chinese main text, sentence-by-sentence Japanese correspondence, correct ruby/readings, and varied but meaningful grammar colors.
+        - Do not merely make validation pass. Make the result read like a clean interlinear book page: corrected continuous Chinese main text, sentence-by-sentence Japanese correspondence, correct ruby/readings, and varied but meaningful grammar colors.
 
         Review failures to fix:
         {shown_issues}

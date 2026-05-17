@@ -134,7 +134,7 @@ def make_chunks(
     return chunks
 
 
-def add_book_metadata(chunks: list[dict[str, Any]], metadata: dict[str, str]) -> list[dict[str, Any]]:
+def add_book_metadata(chunks: list[dict[str, Any]], metadata: dict[str, Any]) -> list[dict[str, Any]]:
     if not any(metadata.values()):
         return chunks
     enriched: list[dict[str, Any]] = []
@@ -157,6 +157,11 @@ def main() -> int:
     parser.add_argument("--book-title-ja-reading", default="")
     parser.add_argument("--author", default="")
     parser.add_argument("--book-description", default="")
+    parser.add_argument(
+        "--requires-ocr-correction",
+        action="store_true",
+        help="mark chunks so interlinear generation keeps source_text but renders corrected_text",
+    )
     parser.add_argument("--chunks-jsonl", required=True)
     parser.add_argument("--manifest", required=True)
     parser.add_argument("--max-chars", type=int, default=1800)
@@ -174,6 +179,7 @@ def main() -> int:
             "book_title_ja_reading": args.book_title_ja_reading,
             "author": args.author,
             "book_description": args.book_description,
+            "requires_ocr_correction": args.requires_ocr_correction,
         },
     )
 
@@ -198,6 +204,7 @@ def main() -> int:
         "book_title_ja_reading": args.book_title_ja_reading,
         "author": args.author,
         "book_description": args.book_description,
+        "requires_ocr_correction": args.requires_ocr_correction,
         "chunks": [
             {
                 "chunk_id": chunk["chunk_id"],

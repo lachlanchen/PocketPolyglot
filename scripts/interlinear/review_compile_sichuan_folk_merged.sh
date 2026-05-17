@@ -12,7 +12,7 @@ if [[ -z "$chunks" ]]; then
 fi
 
 model="${MODEL:-gpt-5.5}"
-reasoning="${REASONING:-xhigh}"
+reasoning="${REASONING:-medium}"
 retries="${REVIEW_RETRIES:-2}"
 codex_timeout_seconds="${CODEX_TIMEOUT_SECONDS:-7200}"
 

@@ -41,6 +41,14 @@ def ja_lines_text(ja: Any) -> str:
     return "".join(token_text(line) for line in ja if isinstance(line, list))
 
 
+def text_target(node: dict[str, Any]) -> str:
+    """Return the text that rendered tokens are expected to reconstruct."""
+    corrected = str(node.get("corrected_text", "")).strip()
+    if corrected:
+        return corrected
+    return str(node.get("source_text", ""))
+
+
 def validate_token_shape(tokens: Any, where: str, errors: list[str]) -> bool:
     if not isinstance(tokens, list):
         errors.append(f"{where}: must be a token list")
@@ -125,8 +133,9 @@ def validate_unit(unit: dict[str, Any], where: str, errors: list[str]) -> str:
         if ja_text in PLACEHOLDER_JA:
             errors.append(f"{where}: Japanese comment is a placeholder, not aligned text")
     zh_text = token_text(unit["zh"])
-    if unit.get("source_text") and normalize(zh_text) != normalize(str(unit["source_text"])):
-        errors.append(f"{where}: zh tokens do not reconstruct source_text")
+    target = text_target(unit)
+    if target and normalize(zh_text) != normalize(target):
+        errors.append(f"{where}: zh tokens do not reconstruct corrected/source text")
     return zh_text
 
 
@@ -158,8 +167,9 @@ def validate_interlinear(data: dict[str, Any]) -> list[str]:
                     for unit_index, unit in enumerate(units):
                         rebuilt_parts.append(validate_unit(unit, f"{where}.units[{unit_index}]", errors))
                     rebuilt = "".join(rebuilt_parts)
-                    if paragraph.get("source_text") and normalize(rebuilt) != normalize(str(paragraph["source_text"])):
-                        errors.append(f"{where}: units do not reconstruct paragraph source_text")
+                    target = text_target(paragraph)
+                    if target and normalize(rebuilt) != normalize(target):
+                        errors.append(f"{where}: units do not reconstruct paragraph corrected/source text")
     return errors
 
 

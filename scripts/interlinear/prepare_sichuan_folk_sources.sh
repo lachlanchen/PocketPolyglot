@@ -50,6 +50,7 @@ python scripts/interlinear/chunk_markdown_book.py "$clean_markdown" \
   --book-title-ja-reading "ちゅう ごく みん かん こ じ しゅう せい し せん かん じょう" \
   --author "钟敬文主编" \
   --book-description "中国民间故事集成 四川卷 上 / Sichuan volume one of the Chinese folk-story collection" \
+  --requires-ocr-correction \
   --chunks-jsonl "$work_dir/chunks/chunks.jsonl" \
   --manifest "$work_dir/chunks/manifest.json" \
   --chunk-mode "$chunk_mode" \
