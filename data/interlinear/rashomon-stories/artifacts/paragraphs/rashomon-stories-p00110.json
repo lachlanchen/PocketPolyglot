@@ -1,0 +1,601 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "rashomon-stories",
+  "paragraph_id": "rashomon-stories-p00110",
+  "source_text": "“我适才听说，你们在讲很有意思的事情呢。”忠左卫门也开始搭话。",
+  "source_sha256": "f791c637f8538960031c2a3f594b800190a37613288251344a2259df75aed054",
+  "source_normalized_sha256": "f791c637f8538960031c2a3f594b800190a37613288251344a2259df75aed054",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 59,
+    "grammar_token_total": 59,
+    "unit_count": 2
+  },
+  "source_chunk_id": "rashomon-stories-chunk-0110",
+  "source_manifest_sha256": "6aeecbd0292e941457ba02abb30b877e08e4febecd68df2d5cdc37ba72e9dc96",
+  "section": {
+    "id": "第一章-人性篇",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      },
+      {
+        "t": "性",
+        "r": "xìng",
+        "g": "attributive"
+      },
+      {
+        "t": "篇",
+        "r": "piān",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "人",
+        "r": "にん",
+        "g": "attributive"
+      },
+      {
+        "t": "間",
+        "r": "げん",
+        "g": "attributive"
+      },
+      {
+        "t": "性",
+        "r": "せい",
+        "g": "attributive"
+      },
+      {
+        "t": "編",
+        "r": "へん",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "大石内藏助的一天",
+    "title_zh": [
+      {
+        "t": "大",
+        "r": "dà",
+        "g": "attributive"
+      },
+      {
+        "t": "石",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "内",
+        "r": "nèi",
+        "g": "attributive"
+      },
+      {
+        "t": "藏",
+        "r": "cáng",
+        "g": "attributive"
+      },
+      {
+        "t": "助",
+        "r": "zhù",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "attributive"
+      },
+      {
+        "t": "天",
+        "r": "tiān",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "大",
+        "r": "おお",
+        "g": "attributive"
+      },
+      {
+        "t": "石",
+        "r": "いし",
+        "g": "attributive"
+      },
+      {
+        "t": "内",
+        "r": "くら",
+        "g": "attributive"
+      },
+      {
+        "t": "蔵",
+        "r": "の",
+        "g": "attributive"
+      },
+      {
+        "t": "助",
+        "r": "すけ",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "attributive"
+      },
+      {
+        "t": "日",
+        "r": "にち",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "第一章-人性篇-大石内藏助的一天-intro",
+    "title_zh": [
+      {
+        "t": "大",
+        "r": "dà",
+        "g": "attributive"
+      },
+      {
+        "t": "石",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "内",
+        "r": "nèi",
+        "g": "attributive"
+      },
+      {
+        "t": "藏",
+        "r": "cáng",
+        "g": "attributive"
+      },
+      {
+        "t": "助",
+        "r": "zhù",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "attributive"
+      },
+      {
+        "t": "天",
+        "r": "tiān",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "大",
+        "r": "おお",
+        "g": "attributive"
+      },
+      {
+        "t": "石",
+        "r": "いし",
+        "g": "attributive"
+      },
+      {
+        "t": "内",
+        "r": "くら",
+        "g": "attributive"
+      },
+      {
+        "t": "蔵",
+        "r": "の",
+        "g": "attributive"
+      },
+      {
+        "t": "助",
+        "r": "すけ",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "attributive"
+      },
+      {
+        "t": "日",
+        "r": "にち",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "rashomon-stories-p00110",
+    "source_text": "“我适才听说，你们在讲很有意思的事情呢。”忠左卫门也开始搭话。",
+    "units": [
+      {
+        "source_text": "“我适才听说，你们在讲很有意思的事情呢。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "适",
+            "r": "shì",
+            "g": "adverbial"
+          },
+          {
+            "t": "才",
+            "r": "cái",
+            "g": "adverbial"
+          },
+          {
+            "t": "听",
+            "r": "tīng",
+            "g": "predicate"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "讲",
+            "r": "jiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "很",
+            "r": "hěn",
+            "g": "attributive"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "attributive"
+          },
+          {
+            "t": "意",
+            "r": "yì",
+            "g": "attributive"
+          },
+          {
+            "t": "思",
+            "r": "si",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "情",
+            "r": "qing",
+            "g": "object"
+          },
+          {
+            "t": "呢",
+            "r": "ne",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "たった",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "今",
+              "r": "いま",
+              "g": "adverbial"
+            },
+            {
+              "t": "聞",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "きました、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "あなた",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "方",
+              "r": "がた",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "面",
+              "r": "おも",
+              "g": "attributive"
+            },
+            {
+              "t": "白",
+              "r": "しろ",
+              "g": "attributive"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "事",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "話",
+              "r": "はな",
+              "g": "predicate"
+            },
+            {
+              "t": "しているそうですね。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "忠左卫门也开始搭话。",
+        "zh": [
+          {
+            "t": "忠",
+            "r": "zhōng",
+            "g": "subject"
+          },
+          {
+            "t": "左",
+            "r": "zuǒ",
+            "g": "subject"
+          },
+          {
+            "t": "卫",
+            "r": "wèi",
+            "g": "subject"
+          },
+          {
+            "t": "门",
+            "r": "mén",
+            "g": "subject"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "开",
+            "r": "kāi",
+            "g": "predicate"
+          },
+          {
+            "t": "始",
+            "r": "shǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "搭",
+            "r": "dā",
+            "g": "predicate"
+          },
+          {
+            "t": "话",
+            "r": "huà",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "忠",
+              "r": "ちゅう",
+              "g": "subject"
+            },
+            {
+              "t": "左",
+              "r": "ざ",
+              "g": "subject"
+            },
+            {
+              "t": "衛",
+              "r": "え",
+              "g": "subject"
+            },
+            {
+              "t": "門",
+              "r": "もん",
+              "g": "subject"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "話",
+              "r": "はなし",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "加",
+              "r": "くわ",
+              "g": "predicate"
+            },
+            {
+              "t": "わり",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "始",
+              "r": "はじ",
+              "g": "predicate"
+            },
+            {
+              "t": "めた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
