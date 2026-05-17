@@ -212,9 +212,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00088",
       "source_text": "正当玉皇想不出办法来时,地上的土地车萨来向玉皇大帝京报说,*凡间的人晚上行路干活都不方便,是不是将太阳和月亮分开,一个白天出来,--个晚上出来哟?",
+      "corrected_text": "正当玉皇想不出办法来时，地上的土地车萨来向玉皇大帝禀报说：“凡间的人晚上行路干活都不方便，是不是将太阳和月亮分开，一个白天出来，一个晚上出来哟？”",
       "units": [
         {
-          "source_text": "正当玉皇想不出办法来时,地上的土地车萨来向玉皇大帝京报说,*",
+          "source_text": "正当玉皇想不出办法来时，地上的土地车萨来向玉皇大帝禀报说：",
           "zh": [
             {
               "t": "正",
@@ -272,7 +273,7 @@
               "g": "adverbial"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -342,8 +343,8 @@
               "g": "adverbial"
             },
             {
-              "t": "京",
-              "r": "jīng",
+              "t": "禀",
+              "r": "bǐng",
               "g": "predicate"
             },
             {
@@ -357,12 +358,7 @@
               "g": "predicate"
             },
             {
-              "t": ",",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "*",
+              "t": "：",
               "r": "",
               "g": "function"
             }
@@ -405,7 +401,7 @@
                 "g": "predicate"
               },
               {
-                "t": "いつけずにいた",
+                "t": "いつかずにいた",
                 "r": "",
                 "g": "predicate"
               },
@@ -472,22 +468,27 @@
                 "g": "adverbial"
               },
               {
-                "t": "へ",
+                "t": "に",
                 "r": "",
                 "g": "adverbial"
               },
               {
-                "t": "報",
-                "r": "ほう",
+                "t": "申",
+                "r": "もう",
                 "g": "predicate"
               },
               {
-                "t": "告",
-                "r": "こく",
+                "t": "し",
+                "r": "",
                 "g": "predicate"
               },
               {
-                "t": "して",
+                "t": "上",
+                "r": "あ",
+                "g": "predicate"
+              },
+              {
+                "t": "げて",
                 "r": "",
                 "g": "predicate"
               },
@@ -497,40 +498,35 @@
                 "g": "predicate"
               },
               {
-                "t": "った",
+                "t": "った。",
                 "r": "",
                 "g": "predicate"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": "*",
-                "r": "",
-                "g": "function"
               }
             ]
           ]
         },
         {
-          "source_text": "凡间的人晚上行路干活都不方便,",
+          "source_text": "“凡间的人晚上行路干活都不方便，",
           "zh": [
+            {
+              "t": "“",
+              "r": "",
+              "g": "function"
+            },
             {
               "t": "凡",
               "r": "fán",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "间",
               "r": "jiān",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "的",
               "r": "de",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "人",
@@ -575,20 +571,20 @@
             {
               "t": "不",
               "r": "bù",
-              "g": "predicate"
+              "g": "adverbial"
             },
             {
               "t": "方",
               "r": "fāng",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "便",
               "r": "biàn",
-              "g": "predicate"
+              "g": "complement"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             }
@@ -598,17 +594,17 @@
               {
                 "t": "下",
                 "r": "げ",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "界",
                 "r": "かい",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "の",
                 "r": "",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "人",
@@ -626,9 +622,9 @@
                 "g": "adverbial"
               },
               {
-                "t": "、",
+                "t": "に",
                 "r": "",
-                "g": "function"
+                "g": "adverbial"
               },
               {
                 "t": "道",
@@ -642,7 +638,7 @@
               },
               {
                 "t": "行",
-                "r": "ゆ",
+                "r": "い",
                 "g": "predicate"
               },
               {
@@ -670,28 +666,23 @@
               {
                 "t": "不",
                 "r": "ふ",
-                "g": "predicate"
+                "g": "complement"
               },
               {
                 "t": "便",
                 "r": "べん",
-                "g": "predicate"
+                "g": "complement"
               },
               {
-                "t": "です",
+                "t": "です、",
                 "r": "",
-                "g": "predicate"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
+                "g": "complement"
               }
             ]
           ]
         },
         {
-          "source_text": "是不是将太阳和月亮分开,",
+          "source_text": "是不是将太阳和月亮分开，",
           "zh": [
             {
               "t": "是",
@@ -749,7 +740,7 @@
               "g": "predicate"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             }
@@ -789,20 +780,20 @@
                 "g": "predicate"
               },
               {
-                "t": "けてはどうでしょう",
+                "t": "けてみては",
                 "r": "",
                 "g": "predicate"
               },
               {
-                "t": "、",
+                "t": "どうでしょう、",
                 "r": "",
-                "g": "function"
+                "g": "predicate"
               }
             ]
           ]
         },
         {
-          "source_text": "一个白天出来,--个晚上出来哟?",
+          "source_text": "一个白天出来，一个晚上出来哟？”",
           "zh": [
             {
               "t": "一",
@@ -835,14 +826,14 @@
               "g": "predicate"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
             {
-              "t": "--",
-              "r": "",
-              "g": "function"
+              "t": "一",
+              "r": "yí",
+              "g": "subject"
             },
             {
               "t": "个",
@@ -875,7 +866,12 @@
               "g": "function"
             },
             {
-              "t": "?",
+              "t": "？",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "”",
               "r": "",
               "g": "function"
             }
@@ -908,14 +904,9 @@
                 "g": "predicate"
               },
               {
-                "t": "て",
+                "t": "て、",
                 "r": "",
                 "g": "predicate"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
               }
             ],
             [
@@ -950,14 +941,9 @@
                 "g": "predicate"
               },
               {
-                "t": "るのですか",
+                "t": "るようにしては？",
                 "r": "",
                 "g": "predicate"
-              },
-              {
-                "t": "？",
-                "r": "",
-                "g": "function"
               }
             ]
           ]

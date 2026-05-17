@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 73,
-    "grammar_token_total": 73,
+    "token_total": 78,
+    "grammar_token_total": 78,
     "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0001",
@@ -233,9 +233,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00001",
     "source_text": "很旱以前，世上没有天和地，整个世问是浑浑沌沌，委气腾腾的，到处是黔黔的一团。",
+    "corrected_text": "很早以前，世上没有天和地，整个世间是浑浑沌沌，雾气腾腾的，到处是黑黢黢的一团。",
     "units": [
       {
-        "source_text": "很旱以前，世上没有天和地，",
+        "source_text": "很早以前，世上没有天和地，",
         "zh": [
           {
             "t": "很",
@@ -243,8 +244,8 @@
             "g": "adverbial"
           },
           {
-            "t": "旱",
-            "r": "hàn",
+            "t": "早",
+            "r": "zǎo",
             "g": "adverbial"
           },
           {
@@ -376,17 +377,17 @@
         ]
       },
       {
-        "source_text": "整个世问是浑浑沌沌，委气腾腾的，",
+        "source_text": "整个世间是浑浑沌沌，雾气腾腾的，",
         "zh": [
           {
             "t": "整",
             "r": "zhěng",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "个",
             "r": "gè",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "世",
@@ -394,8 +395,8 @@
             "g": "subject"
           },
           {
-            "t": "问",
-            "r": "wèn",
+            "t": "间",
+            "r": "jiān",
             "g": "subject"
           },
           {
@@ -406,22 +407,22 @@
           {
             "t": "浑",
             "r": "hún",
-            "g": "predicate"
+            "g": "complement"
           },
           {
             "t": "浑",
             "r": "hún",
-            "g": "predicate"
+            "g": "complement"
           },
           {
             "t": "沌",
             "r": "dùn",
-            "g": "predicate"
+            "g": "complement"
           },
           {
             "t": "沌",
             "r": "dùn",
-            "g": "predicate"
+            "g": "complement"
           },
           {
             "t": "，",
@@ -429,14 +430,14 @@
             "g": "function"
           },
           {
-            "t": "委",
-            "r": "wěi",
-            "g": "predicate"
+            "t": "雾",
+            "r": "wù",
+            "g": "subject"
           },
           {
             "t": "气",
             "r": "qì",
-            "g": "predicate"
+            "g": "subject"
           },
           {
             "t": "腾",
@@ -474,12 +475,12 @@
             {
               "t": "全",
               "r": "ぜん",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "体",
               "r": "たい",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "は",
@@ -489,15 +490,15 @@
             {
               "t": "混",
               "r": "こん",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "沌",
               "r": "とん",
-              "g": "predicate"
+              "g": "complement"
             },
             {
-              "t": "として",
+              "t": "としていて",
               "r": "",
               "g": "predicate"
             },
@@ -509,9 +510,29 @@
           ],
           [
             {
-              "t": "もやがもうもうと",
+              "t": "霧",
+              "r": "きり",
+              "g": "subject"
+            },
+            {
+              "t": "のような",
               "r": "",
-              "g": "predicate"
+              "g": "subject"
+            },
+            {
+              "t": "気",
+              "r": "き",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "もうもうと",
+              "r": "",
+              "g": "adverbial"
             },
             {
               "t": "立",
@@ -532,7 +553,7 @@
         ]
       },
       {
-        "source_text": "到处是黔黔的一团。",
+        "source_text": "到处是黑黢黢的一团。",
         "zh": [
           {
             "t": "到",
@@ -550,13 +571,18 @@
             "g": "predicate"
           },
           {
-            "t": "黔",
-            "r": "qián",
+            "t": "黑",
+            "r": "hēi",
             "g": "attributive"
           },
           {
-            "t": "黔",
-            "r": "qián",
+            "t": "黢",
+            "r": "qū",
+            "g": "attributive"
+          },
+          {
+            "t": "黢",
+            "r": "qū",
             "g": "attributive"
           },
           {
@@ -567,12 +593,12 @@
           {
             "t": "一",
             "r": "yī",
-            "g": "complement"
+            "g": "object"
           },
           {
             "t": "团",
             "r": "tuán",
-            "g": "complement"
+            "g": "object"
           },
           {
             "t": "。",
@@ -612,12 +638,12 @@
             {
               "t": "一",
               "r": "ひと",
-              "g": "complement"
+              "g": "object"
             },
             {
               "t": "つのかたまり",
               "r": "",
-              "g": "complement"
+              "g": "object"
             },
             {
               "t": "だった",

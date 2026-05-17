@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 81,
-    "grammar_token_total": 81,
+    "token_total": 85,
+    "grammar_token_total": 85,
     "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0241",
@@ -283,9 +283,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00241",
     "source_text": "很早以前,地上还没有人烟,只有飞禽走兽。海里住着各类水族,龙族 -家世代称土。",
+    "corrected_text": "很早以前，地上还没有人烟，只有飞禽走兽。海里住着各类水族，龙族一家世代称王。",
     "units": [
       {
-        "source_text": "很早以前,地上还没有人烟,只有飞禽走兽。",
+        "source_text": "很早以前，地上还没有人烟，只有飞禽走兽。",
         "zh": [
           {
             "t": "很",
@@ -308,7 +309,7 @@
             "g": "adverbial"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -348,7 +349,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -441,7 +442,7 @@
               "g": "object"
             },
             {
-              "t": "なく",
+              "t": "なかった",
               "r": "",
               "g": "predicate"
             },
@@ -453,9 +454,24 @@
           ],
           [
             {
+              "t": "いるのは",
+              "r": "",
+              "g": "predicate"
+            },
+            {
               "t": "ただ",
               "r": "",
               "g": "adverbial"
+            },
+            {
+              "t": "飛",
+              "r": "と",
+              "g": "object"
+            },
+            {
+              "t": "ぶ",
+              "r": "",
+              "g": "object"
             },
             {
               "t": "鳥",
@@ -468,17 +484,22 @@
               "g": "object"
             },
             {
+              "t": "走",
+              "r": "はし",
+              "g": "object"
+            },
+            {
+              "t": "る",
+              "r": "",
+              "g": "object"
+            },
+            {
               "t": "獣",
               "r": "けもの",
               "g": "object"
             },
             {
-              "t": "だけが",
-              "r": "",
-              "g": "object"
-            },
-            {
-              "t": "いた",
+              "t": "だけだった",
               "r": "",
               "g": "predicate"
             },
@@ -491,7 +512,7 @@
         ]
       },
       {
-        "source_text": "海里住着各类水族,龙族 -家世代称土。",
+        "source_text": "海里住着各类水族，龙族一家世代称王。",
         "zh": [
           {
             "t": "海",
@@ -534,7 +555,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -549,14 +570,9 @@
             "g": "subject"
           },
           {
-            "t": " ",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "-",
-            "r": "",
-            "g": "function"
+            "t": "一",
+            "r": "yī",
+            "g": "subject"
           },
           {
             "t": "家",
@@ -579,8 +595,8 @@
             "g": "predicate"
           },
           {
-            "t": "土",
-            "r": "tǔ",
+            "t": "王",
+            "r": "wáng",
             "g": "object"
           },
           {
@@ -689,22 +705,22 @@
               "g": "adverbial"
             },
             {
-              "t": "土",
-              "r": "つち",
+              "t": "王",
+              "r": "おう",
               "g": "object"
             },
             {
-              "t": "と",
+              "t": "を",
               "r": "",
               "g": "object"
             },
             {
-              "t": "呼",
-              "r": "よ",
+              "t": "称",
+              "r": "しょう",
               "g": "predicate"
             },
             {
-              "t": "ばれていた",
+              "t": "してきた",
               "r": "",
               "g": "predicate"
             },

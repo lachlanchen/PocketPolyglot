@@ -187,9 +187,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00328",
       "source_text": "讲述者:杨学模男 39岁农民小学果录者:杜志榜男 38岁文化专干初中采录时间、地点:1988 十 9月于巴县广阳钙",
+      "corrected_text": "讲述者:杨学模，男，39岁，农民，小学。采录者:杜志榜，男，38岁，文化专干，初中。采录时间、地点:1988年9月于巴县广阳镇。",
       "units": [
         {
-          "source_text": "讲述者:杨学模男 39岁农民小学",
+          "source_text": "讲述者:杨学模，男，39岁，农民，小学。",
           "zh": [
             {
               "t": "讲",
@@ -214,37 +215,47 @@
             {
               "t": "杨",
               "r": "yáng",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "学",
               "r": "xué",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "模",
               "r": "mó",
-              "g": "object"
+              "g": "subject"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "男",
               "r": "nán",
-              "g": "object"
+              "g": "attributive"
             },
             {
-              "t": " ",
+              "t": "，",
               "r": "",
               "g": "function"
             },
             {
               "t": "39",
               "r": "",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "岁",
               "r": "suì",
-              "g": "object"
+              "g": "attributive"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "农",
@@ -257,14 +268,24 @@
               "g": "object"
             },
             {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "小",
               "r": "xiǎo",
-              "g": "object"
+              "g": "complement"
             },
             {
               "t": "学",
               "r": "xué",
-              "g": "object"
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
@@ -292,17 +313,22 @@
               {
                 "t": "楊",
                 "r": "よう",
-                "g": "object"
+                "g": "subject"
               },
               {
                 "t": "学",
                 "r": "がく",
-                "g": "object"
+                "g": "subject"
               },
               {
                 "t": "模",
                 "r": "も",
-                "g": "object"
+                "g": "subject"
+              },
+              {
+                "t": "は",
+                "r": "",
+                "g": "subject"
               },
               {
                 "t": "、",
@@ -312,12 +338,12 @@
               {
                 "t": "男",
                 "r": "だん",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "性",
                 "r": "せい",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "、",
@@ -327,18 +353,20 @@
               {
                 "t": "39",
                 "r": "",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "歳",
                 "r": "さい",
-                "g": "object"
+                "g": "attributive"
               },
               {
-                "t": "、",
+                "t": "。",
                 "r": "",
                 "g": "function"
-              },
+              }
+            ],
+            [
               {
                 "t": "農",
                 "r": "のう",
@@ -350,36 +378,39 @@
                 "g": "object"
               },
               {
-                "t": "。",
+                "t": "で",
+                "r": "",
+                "g": "object"
+              },
+              {
+                "t": "、",
                 "r": "",
                 "g": "function"
-              }
-            ],
-            [
+              },
               {
                 "t": "小",
                 "r": "しょう",
-                "g": "object"
+                "g": "complement"
               },
               {
                 "t": "学",
                 "r": "がっ",
-                "g": "object"
+                "g": "complement"
               },
               {
                 "t": "校",
                 "r": "こう",
-                "g": "object"
+                "g": "complement"
               },
               {
                 "t": "程",
                 "r": "てい",
-                "g": "object"
+                "g": "complement"
               },
               {
                 "t": "度",
                 "r": "ど",
-                "g": "object"
+                "g": "complement"
               },
               {
                 "t": "。",
@@ -390,11 +421,11 @@
           ]
         },
         {
-          "source_text": "果录者:杜志榜男 38岁文化专干初中",
+          "source_text": "采录者:杜志榜，男，38岁，文化专干，初中。",
           "zh": [
             {
-              "t": "果",
-              "r": "guǒ",
+              "t": "采",
+              "r": "cǎi",
               "g": "topic"
             },
             {
@@ -415,37 +446,47 @@
             {
               "t": "杜",
               "r": "dù",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "志",
               "r": "zhì",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "榜",
               "r": "bǎng",
-              "g": "object"
+              "g": "subject"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "男",
               "r": "nán",
-              "g": "object"
+              "g": "attributive"
             },
             {
-              "t": " ",
+              "t": "，",
               "r": "",
               "g": "function"
             },
             {
               "t": "38",
               "r": "",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "岁",
               "r": "suì",
-              "g": "object"
+              "g": "attributive"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "文",
@@ -468,21 +509,31 @@
               "g": "object"
             },
             {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "初",
               "r": "chū",
-              "g": "object"
+              "g": "complement"
             },
             {
               "t": "中",
               "r": "zhōng",
-              "g": "object"
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
             [
               {
-                "t": "記",
-                "r": "き",
+                "t": "採",
+                "r": "さい",
                 "g": "topic"
               },
               {
@@ -503,17 +554,22 @@
               {
                 "t": "杜",
                 "r": "と",
-                "g": "object"
+                "g": "subject"
               },
               {
                 "t": "志",
                 "r": "し",
-                "g": "object"
+                "g": "subject"
               },
               {
                 "t": "榜",
                 "r": "ぼう",
-                "g": "object"
+                "g": "subject"
+              },
+              {
+                "t": "は",
+                "r": "",
+                "g": "subject"
               },
               {
                 "t": "、",
@@ -523,12 +579,12 @@
               {
                 "t": "男",
                 "r": "だん",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "性",
                 "r": "せい",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "、",
@@ -538,12 +594,12 @@
               {
                 "t": "38",
                 "r": "",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "歳",
                 "r": "さい",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "。",
@@ -583,6 +639,11 @@
                 "g": "object"
               },
               {
+                "t": "で",
+                "r": "",
+                "g": "object"
+              },
+              {
                 "t": "、",
                 "r": "",
                 "g": "function"
@@ -590,27 +651,27 @@
               {
                 "t": "中",
                 "r": "ちゅう",
-                "g": "object"
+                "g": "complement"
               },
               {
                 "t": "学",
                 "r": "がっ",
-                "g": "object"
+                "g": "complement"
               },
               {
                 "t": "校",
                 "r": "こう",
-                "g": "object"
+                "g": "complement"
               },
               {
                 "t": "程",
                 "r": "てい",
-                "g": "object"
+                "g": "complement"
               },
               {
                 "t": "度",
                 "r": "ど",
-                "g": "object"
+                "g": "complement"
               },
               {
                 "t": "。",
@@ -621,7 +682,7 @@
           ]
         },
         {
-          "source_text": "采录时间、地点:1988 十 9月于巴县广阳钙",
+          "source_text": "采录时间、地点:1988年9月于巴县广阳镇。",
           "zh": [
             {
               "t": "采",
@@ -666,37 +727,27 @@
             {
               "t": "1988",
               "r": "",
-              "g": "object"
+              "g": "adverbial"
             },
             {
-              "t": " ",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "十",
-              "r": "shí",
-              "g": "object"
-            },
-            {
-              "t": " ",
-              "r": "",
-              "g": "function"
+              "t": "年",
+              "r": "nián",
+              "g": "adverbial"
             },
             {
               "t": "9",
               "r": "",
-              "g": "object"
+              "g": "adverbial"
             },
             {
               "t": "月",
               "r": "yuè",
-              "g": "object"
+              "g": "adverbial"
             },
             {
               "t": "于",
               "r": "yú",
-              "g": "object"
+              "g": "function"
             },
             {
               "t": "巴",
@@ -719,9 +770,14 @@
               "g": "object"
             },
             {
-              "t": "钙",
-              "r": "gài",
+              "t": "镇",
+              "r": "zhèn",
               "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
@@ -769,22 +825,22 @@
               {
                 "t": "1988",
                 "r": "",
-                "g": "object"
+                "g": "adverbial"
               },
               {
                 "t": "年",
                 "r": "ねん",
-                "g": "object"
+                "g": "adverbial"
               },
               {
                 "t": "9",
                 "r": "",
-                "g": "object"
+                "g": "adverbial"
               },
               {
                 "t": "月",
                 "r": "がつ",
-                "g": "object"
+                "g": "adverbial"
               },
               {
                 "t": "、",
@@ -814,7 +870,12 @@
                 "g": "object"
               },
               {
-                "t": "ガイにて",
+                "t": "鎮",
+                "r": "ちん",
+                "g": "object"
+              },
+              {
+                "t": "にて",
                 "r": "",
                 "g": "object"
               },

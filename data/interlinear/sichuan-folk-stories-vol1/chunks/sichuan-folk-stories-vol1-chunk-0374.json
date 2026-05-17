@@ -247,12 +247,18 @@
     {
       "id": "sichuan-folk-stories-vol1-p00374",
       "source_text": "1 打光巴董,赤身裸体。",
+      "corrected_text": "1. 打光巴董，赤身裸体。",
       "units": [
         {
-          "source_text": "1 打光巴董,赤身裸体。",
+          "source_text": "1. 打光巴董，赤身裸体。",
           "zh": [
             {
               "t": "1",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": ".",
               "r": "",
               "g": "function"
             },
@@ -264,25 +270,25 @@
             {
               "t": "打",
               "r": "dǎ",
-              "g": "predicate"
+              "g": "topic"
             },
             {
               "t": "光",
               "r": "guāng",
-              "g": "complement"
+              "g": "topic"
             },
             {
               "t": "巴",
               "r": "bā",
-              "g": "complement"
+              "g": "topic"
             },
             {
               "t": "董",
               "r": "dǒng",
-              "g": "complement"
+              "g": "topic"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -320,29 +326,14 @@
                 "g": "function"
               },
               {
-                "t": " ",
+                "t": ".",
                 "r": "",
                 "g": "function"
               },
               {
-                "t": "すっかり",
+                "t": " 「だこうばとう」は、",
                 "r": "",
-                "g": "adverbial"
-              },
-              {
-                "t": "丸",
-                "r": "まる",
-                "g": "predicate"
-              },
-              {
-                "t": "裸",
-                "r": "はだか",
-                "g": "predicate"
-              },
-              {
-                "t": "で、",
-                "r": "",
-                "g": "predicate"
+                "g": "topic"
               }
             ],
             [
@@ -357,19 +348,24 @@
                 "g": "predicate"
               },
               {
-                "t": "の",
+                "t": "という",
                 "r": "",
                 "g": "predicate"
               },
               {
-                "t": "身",
+                "t": "意",
+                "r": "い",
+                "g": "predicate"
+              },
+              {
+                "t": "味",
                 "r": "み",
                 "g": "predicate"
               },
               {
-                "t": "だった。",
+                "t": "。",
                 "r": "",
-                "g": "predicate"
+                "g": "function"
               }
             ]
           ]

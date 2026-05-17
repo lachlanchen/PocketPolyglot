@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 71,
-    "grammar_token_total": 71,
-    "unit_count": 1
+    "token_total": 72,
+    "grammar_token_total": 72,
+    "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0165",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -239,7 +239,7 @@
       {
         "t": "と",
         "r": "",
-        "g": "subject"
+        "g": "function"
       },
       {
         "t": "雄",
@@ -283,9 +283,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00165",
     "source_text": "很久以前,太阳,月亮和公鸡是三弟兄,太阳是大哥,月亮是二哥,公鸡是么弟。",
+    "corrected_text": "很久以前，太阳、月亮和公鸡是三弟兄，太阳是大哥，月亮是二哥，公鸡是么弟。",
     "units": [
       {
-        "source_text": "很久以前,太阳,月亮和公鸡是三弟兄,太阳是大哥,月亮是二哥,公鸡是么弟。",
+        "source_text": "很久以前，太阳、月亮和公鸡是三弟兄，",
         "zh": [
           {
             "t": "很",
@@ -308,7 +309,7 @@
             "g": "adverbial"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -323,7 +324,7 @@
             "g": "subject"
           },
           {
-            "t": ",",
+            "t": "、",
             "r": "",
             "g": "function"
           },
@@ -340,7 +341,7 @@
           {
             "t": "和",
             "r": "hé",
-            "g": "subject"
+            "g": "function"
           },
           {
             "t": "公",
@@ -373,97 +374,7 @@
             "g": "object"
           },
           {
-            "t": ",",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "太",
-            "r": "tài",
-            "g": "subject"
-          },
-          {
-            "t": "阳",
-            "r": "yáng",
-            "g": "subject"
-          },
-          {
-            "t": "是",
-            "r": "shì",
-            "g": "predicate"
-          },
-          {
-            "t": "大",
-            "r": "dà",
-            "g": "object"
-          },
-          {
-            "t": "哥",
-            "r": "gē",
-            "g": "object"
-          },
-          {
-            "t": ",",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "月",
-            "r": "yuè",
-            "g": "subject"
-          },
-          {
-            "t": "亮",
-            "r": "liang",
-            "g": "subject"
-          },
-          {
-            "t": "是",
-            "r": "shì",
-            "g": "predicate"
-          },
-          {
-            "t": "二",
-            "r": "èr",
-            "g": "object"
-          },
-          {
-            "t": "哥",
-            "r": "gē",
-            "g": "object"
-          },
-          {
-            "t": ",",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "公",
-            "r": "gōng",
-            "g": "subject"
-          },
-          {
-            "t": "鸡",
-            "r": "jī",
-            "g": "subject"
-          },
-          {
-            "t": "是",
-            "r": "shì",
-            "g": "predicate"
-          },
-          {
-            "t": "么",
-            "r": "mó",
-            "g": "object"
-          },
-          {
-            "t": "弟",
-            "r": "dì",
-            "g": "object"
-          },
-          {
-            "t": "。",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -496,9 +407,9 @@
               "g": "subject"
             },
             {
-              "t": "、",
+              "t": "と",
               "r": "",
-              "g": "function"
+              "g": "subject"
             },
             {
               "t": "月",
@@ -506,9 +417,9 @@
               "g": "subject"
             },
             {
-              "t": "、",
+              "t": "と",
               "r": "",
-              "g": "function"
+              "g": "subject"
             },
             {
               "t": "雄",
@@ -524,7 +435,9 @@
               "t": "は",
               "r": "",
               "g": "subject"
-            },
+            }
+          ],
+          [
             {
               "t": "三",
               "r": "さん",
@@ -546,16 +459,113 @@
               "g": "object"
             },
             {
-              "t": "で",
+              "t": "だった",
               "r": "",
               "g": "predicate"
             },
             {
-              "t": "、",
+              "t": "。",
               "r": "",
               "g": "function"
             }
-          ],
+          ]
+        ]
+      },
+      {
+        "source_text": "太阳是大哥，月亮是二哥，公鸡是么弟。",
+        "zh": [
+          {
+            "t": "太",
+            "r": "tài",
+            "g": "subject"
+          },
+          {
+            "t": "阳",
+            "r": "yáng",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "object"
+          },
+          {
+            "t": "哥",
+            "r": "gē",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "月",
+            "r": "yuè",
+            "g": "subject"
+          },
+          {
+            "t": "亮",
+            "r": "liang",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "二",
+            "r": "èr",
+            "g": "object"
+          },
+          {
+            "t": "哥",
+            "r": "gē",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "公",
+            "r": "gōng",
+            "g": "subject"
+          },
+          {
+            "t": "鸡",
+            "r": "jī",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "么",
+            "r": "yāo",
+            "g": "object"
+          },
+          {
+            "t": "弟",
+            "r": "dì",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
           [
             {
               "t": "太",
@@ -608,10 +618,17 @@
               "g": "object"
             },
             {
+              "t": "で",
+              "r": "",
+              "g": "predicate"
+            },
+            {
               "t": "、",
               "r": "",
               "g": "function"
-            },
+            }
+          ],
+          [
             {
               "t": "雄",
               "r": "おん",

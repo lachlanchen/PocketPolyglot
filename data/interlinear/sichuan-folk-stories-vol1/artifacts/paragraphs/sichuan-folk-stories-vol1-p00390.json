@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 125,
-    "grammar_token_total": 125,
+    "token_total": 128,
+    "grammar_token_total": 128,
     "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0390",
@@ -293,9 +293,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00390",
     "source_text": "还古那阵,洪水潮天过后,水慢慢地消了,地也慢慢现出来了,草啊树子啊越长越多，那阵人就舍穿树叶子、吃野果子过日子,没得粮食吃。",
+    "corrected_text": "还古那阵，洪水潮天过后，水慢慢地消了，地也慢慢现出来了，草啊树子啊越长越多，那阵人就只穿树叶子、吃野果子过日子，没得粮食吃。",
     "units": [
       {
-        "source_text": "还古那阵,洪水潮天过后,水慢慢地消了,",
+        "source_text": "还古那阵，洪水潮天过后，水慢慢地消了，",
         "zh": [
           {
             "t": "还",
@@ -318,7 +319,7 @@
             "g": "adverbial"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -353,7 +354,7 @@
             "g": "function"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -388,7 +389,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -406,7 +407,7 @@
               "g": "adverbial"
             },
             {
-              "t": "その",
+              "t": "のその",
               "r": "",
               "g": "adverbial"
             },
@@ -478,7 +479,7 @@
               "g": "subject"
             },
             {
-              "t": "しだいに",
+              "t": "ゆっくり",
               "r": "",
               "g": "adverbial"
             },
@@ -501,7 +502,7 @@
         ]
       },
       {
-        "source_text": "地也慢慢现出来了,草啊树子啊越长越多，",
+        "source_text": "地也慢慢现出来了，草啊树子啊越长越多，",
         "zh": [
           {
             "t": "地",
@@ -541,10 +542,10 @@
           {
             "t": "了",
             "r": "le",
-            "g": "function"
+            "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -622,12 +623,22 @@
               "g": "adverbial"
             },
             {
+              "t": "姿",
+              "r": "すがた",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
               "t": "現",
               "r": "あらわ",
               "g": "predicate"
             },
             {
-              "t": "れてきて",
+              "t": "し",
               "r": "",
               "g": "predicate"
             },
@@ -669,12 +680,12 @@
               "g": "predicate"
             },
             {
-              "t": "増",
-              "r": "ふ",
+              "t": "多",
+              "r": "おお",
               "g": "complement"
             },
             {
-              "t": "えた",
+              "t": "くなった",
               "r": "",
               "g": "complement"
             },
@@ -687,7 +698,7 @@
         ]
       },
       {
-        "source_text": "那阵人就舍穿树叶子、吃野果子过日子,没得粮食吃。",
+        "source_text": "那阵人就只穿树叶子、吃野果子过日子，没得粮食吃。",
         "zh": [
           {
             "t": "那",
@@ -710,8 +721,8 @@
             "g": "adverbial"
           },
           {
-            "t": "舍",
-            "r": "shě",
+            "t": "只",
+            "r": "zhǐ",
             "g": "adverbial"
           },
           {
@@ -775,7 +786,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -940,7 +951,12 @@
               "g": "object"
             },
             {
-              "t": "なかった",
+              "t": "食",
+              "r": "た",
+              "g": "predicate"
+            },
+            {
+              "t": "べられなかった",
               "r": "",
               "g": "predicate"
             },

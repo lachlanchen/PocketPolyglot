@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 7,
-    "grammar_token_total": 7,
+    "token_total": 8,
+    "grammar_token_total": 8,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0111",
@@ -227,6 +227,7 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00111",
     "source_text": "六 2",
+    "corrected_text": "六 2",
     "units": [
       {
         "source_text": "六 2",
@@ -244,7 +245,7 @@
           {
             "t": "2",
             "r": "",
-            "g": "function"
+            "g": "object"
           }
         ],
         "ja": [
@@ -262,23 +263,28 @@
             {
               "t": "2",
               "r": "",
-              "g": "function"
+              "g": "object"
             }
           ],
           [
             {
               "t": "という",
               "r": "",
-              "g": "predicate"
+              "g": "function"
             },
             {
-              "t": "記",
-              "r": "き",
+              "t": "頁",
+              "r": "ページ",
+              "g": "attributive"
+            },
+            {
+              "t": "断",
+              "r": "だん",
               "g": "object"
             },
             {
-              "t": "号",
-              "r": "ごう",
+              "t": "片",
+              "r": "ぺん",
               "g": "object"
             }
           ]

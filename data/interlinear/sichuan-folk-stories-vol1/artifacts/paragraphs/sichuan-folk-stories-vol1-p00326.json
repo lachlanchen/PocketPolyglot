@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 71,
-    "grammar_token_total": 71,
+    "token_total": 74,
+    "grammar_token_total": 74,
     "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0326",
@@ -223,13 +223,14 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00326",
     "source_text": "嫌人氏转身对火龙太子说;太子,你教我吧.火龙太子就把出火口诀教给他了。",
+    "corrected_text": "燧人氏转身对火龙太子说：“太子，你教我吧。”火龙太子就把出火口诀教给他了。",
     "units": [
       {
-        "source_text": "嫌人氏转身对火龙太子说;",
+        "source_text": "燧人氏转身对火龙太子说：",
         "zh": [
           {
-            "t": "嫌",
-            "r": "xián",
+            "t": "燧",
+            "r": "suì",
             "g": "subject"
           },
           {
@@ -283,7 +284,7 @@
             "g": "predicate"
           },
           {
-            "t": ";",
+            "t": "：",
             "r": "",
             "g": "function"
           }
@@ -291,8 +292,8 @@
         "ja": [
           [
             {
-              "t": "嫌",
-              "r": "けん",
+              "t": "燧",
+              "r": "すい",
               "g": "subject"
             },
             {
@@ -361,8 +362,13 @@
         ]
       },
       {
-        "source_text": "太子,你教我吧.",
+        "source_text": "“太子，你教我吧。”",
         "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
           {
             "t": "太",
             "r": "tài",
@@ -374,7 +380,7 @@
             "g": "subject"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -399,13 +405,23 @@
             "g": "function"
           },
           {
-            "t": ".",
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
             "r": "",
             "g": "function"
           }
         ],
         "ja": [
           [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
             {
               "t": "太",
               "r": "たい",
@@ -439,7 +455,7 @@
               "g": "predicate"
             },
             {
-              "t": "えてください。",
+              "t": "えてください。」",
               "r": "",
               "g": "predicate"
             }
@@ -477,7 +493,7 @@
           {
             "t": "把",
             "r": "bǎ",
-            "g": "object"
+            "g": "function"
           },
           {
             "t": "出",
@@ -550,7 +566,7 @@
             {
               "t": "はすぐ、",
               "r": "",
-              "g": "subject"
+              "g": "adverbial"
             },
             {
               "t": "火",

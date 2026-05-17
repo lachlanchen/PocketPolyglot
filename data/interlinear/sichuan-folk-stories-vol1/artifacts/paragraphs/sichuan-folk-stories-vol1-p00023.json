@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 145,
-    "grammar_token_total": 145,
-    "unit_count": 2
+    "token_total": 159,
+    "grammar_token_total": 159,
+    "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0023",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -50,22 +50,22 @@
       {
         "t": "开",
         "r": "kāi",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "天",
         "r": "tiān",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "辟",
         "r": "pì",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "地",
         "r": "dì",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "神",
@@ -82,22 +82,22 @@
       {
         "t": "天",
         "r": "てん",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "地",
         "r": "ち",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "開",
         "r": "かい",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "闢",
         "r": "びゃく",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "神",
@@ -238,9 +238,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00023",
     "source_text": "（崇庆县）讲述者:吴道士男 85岁私皂5年有果录者:毛削澄男 64岁膛休教师大学柯华男 45岁文化馆干部大学采录时间.地点:1984 年 5月于崇庆县城。",
+    "corrected_text": "（崇庆县）讲述者：吴道士，男，85岁，私塾5年。采录者：毛训澄，男，64岁，退休教师，大学；柯华，男，45岁，文化馆干部，大学。采录时间、地点：1984年5月于崇庆县城。",
     "units": [
       {
-        "source_text": "（崇庆县）讲述者:吴道士男 85岁私皂5年有果录者:",
+        "source_text": "（崇庆县）讲述者：吴道士，男，85岁，私塾5年。",
         "zh": [
           {
             "t": "（",
@@ -283,7 +284,7 @@
             "g": "topic"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -303,12 +304,17 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "男",
             "r": "nán",
             "g": "complement"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -323,14 +329,19 @@
             "g": "complement"
           },
           {
-            "t": "私",
-            "r": "sī",
-            "g": "complement"
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
-            "t": "皂",
-            "r": "zào",
-            "g": "complement"
+            "t": "私",
+            "r": "sī",
+            "g": "attributive"
+          },
+          {
+            "t": "塾",
+            "r": "shú",
+            "g": "attributive"
           },
           {
             "t": "5",
@@ -343,27 +354,7 @@
             "g": "complement"
           },
           {
-            "t": "有",
-            "r": "yǒu",
-            "g": "topic"
-          },
-          {
-            "t": "果",
-            "r": "guǒ",
-            "g": "topic"
-          },
-          {
-            "t": "录",
-            "r": "lù",
-            "g": "topic"
-          },
-          {
-            "t": "者",
-            "r": "zhě",
-            "g": "topic"
-          },
-          {
-            "t": ":",
+            "t": "。",
             "r": "",
             "g": "function"
           }
@@ -434,7 +425,9 @@
               "t": "、",
               "r": "",
               "g": "function"
-            },
+            }
+          ],
+          [
             {
               "t": "男",
               "r": "だん",
@@ -456,25 +449,23 @@
               "g": "complement"
             },
             {
-              "t": "。",
+              "t": "、",
               "r": "",
               "g": "function"
-            }
-          ],
-          [
+            },
             {
               "t": "私",
               "r": "し",
-              "g": "complement"
+              "g": "attributive"
             },
             {
               "t": "塾",
               "r": "じゅく",
-              "g": "complement"
+              "g": "attributive"
             },
             {
-              "t": "五",
-              "r": "ご",
+              "t": "5",
+              "r": "",
               "g": "complement"
             },
             {
@@ -486,7 +477,206 @@
               "t": "。",
               "r": "",
               "g": "function"
-            },
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "采录者：毛训澄，男，64岁，退休教师，大学；柯华，男，45岁，文化馆干部，大学。",
+        "zh": [
+          {
+            "t": "采",
+            "r": "cǎi",
+            "g": "topic"
+          },
+          {
+            "t": "录",
+            "r": "lù",
+            "g": "topic"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "topic"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "毛",
+            "r": "máo",
+            "g": "subject"
+          },
+          {
+            "t": "训",
+            "r": "xùn",
+            "g": "subject"
+          },
+          {
+            "t": "澄",
+            "r": "chéng",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "男",
+            "r": "nán",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "64",
+            "r": "",
+            "g": "complement"
+          },
+          {
+            "t": "岁",
+            "r": "suì",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "退",
+            "r": "tuì",
+            "g": "attributive"
+          },
+          {
+            "t": "休",
+            "r": "xiū",
+            "g": "attributive"
+          },
+          {
+            "t": "教",
+            "r": "jiào",
+            "g": "complement"
+          },
+          {
+            "t": "师",
+            "r": "shī",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "complement"
+          },
+          {
+            "t": "学",
+            "r": "xué",
+            "g": "complement"
+          },
+          {
+            "t": "；",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "柯",
+            "r": "kē",
+            "g": "subject"
+          },
+          {
+            "t": "华",
+            "r": "huá",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "男",
+            "r": "nán",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "45",
+            "r": "",
+            "g": "complement"
+          },
+          {
+            "t": "岁",
+            "r": "suì",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "文",
+            "r": "wén",
+            "g": "attributive"
+          },
+          {
+            "t": "化",
+            "r": "huà",
+            "g": "attributive"
+          },
+          {
+            "t": "馆",
+            "r": "guǎn",
+            "g": "attributive"
+          },
+          {
+            "t": "干",
+            "r": "gàn",
+            "g": "complement"
+          },
+          {
+            "t": "部",
+            "r": "bù",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "complement"
+          },
+          {
+            "t": "学",
+            "r": "xué",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
             {
               "t": "採",
               "r": "さい",
@@ -506,143 +696,185 @@
               "t": "：",
               "r": "",
               "g": "function"
+            },
+            {
+              "t": "毛",
+              "r": "もう",
+              "g": "subject"
+            },
+            {
+              "t": "訓",
+              "r": "くん",
+              "g": "subject"
+            },
+            {
+              "t": "澄",
+              "r": "ちょう",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "男",
+              "r": "だん",
+              "g": "complement"
+            },
+            {
+              "t": "性",
+              "r": "せい",
+              "g": "complement"
+            },
+            {
+              "t": "64",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "歳",
+              "r": "さい",
+              "g": "complement"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "退",
+              "r": "たい",
+              "g": "attributive"
+            },
+            {
+              "t": "職",
+              "r": "しょく",
+              "g": "attributive"
+            },
+            {
+              "t": "教",
+              "r": "きょう",
+              "g": "complement"
+            },
+            {
+              "t": "師",
+              "r": "し",
+              "g": "complement"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "大",
+              "r": "だい",
+              "g": "complement"
+            },
+            {
+              "t": "学",
+              "r": "がく",
+              "g": "complement"
+            },
+            {
+              "t": "；",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "柯",
+              "r": "か",
+              "g": "subject"
+            },
+            {
+              "t": "華",
+              "r": "か",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "男",
+              "r": "だん",
+              "g": "complement"
+            },
+            {
+              "t": "性",
+              "r": "せい",
+              "g": "complement"
+            },
+            {
+              "t": "45",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "歳",
+              "r": "さい",
+              "g": "complement"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "文",
+              "r": "ぶん",
+              "g": "attributive"
+            },
+            {
+              "t": "化",
+              "r": "か",
+              "g": "attributive"
+            },
+            {
+              "t": "館",
+              "r": "かん",
+              "g": "attributive"
+            },
+            {
+              "t": "幹",
+              "r": "かん",
+              "g": "complement"
+            },
+            {
+              "t": "部",
+              "r": "ぶ",
+              "g": "complement"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "大",
+              "r": "だい",
+              "g": "complement"
+            },
+            {
+              "t": "学",
+              "r": "がく",
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ]
         ]
       },
       {
-        "source_text": "毛削澄男 64岁膛休教师大学柯华男 45岁文化馆干部大学采录时间.地点:1984 年 5月于崇庆县城。",
+        "source_text": "采录时间、地点：1984年5月于崇庆县城。",
         "zh": [
-          {
-            "t": "毛",
-            "r": "máo",
-            "g": "subject"
-          },
-          {
-            "t": "削",
-            "r": "xuē",
-            "g": "subject"
-          },
-          {
-            "t": "澄",
-            "r": "chéng",
-            "g": "subject"
-          },
-          {
-            "t": "男",
-            "r": "nán",
-            "g": "complement"
-          },
-          {
-            "t": " ",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "64",
-            "r": "",
-            "g": "complement"
-          },
-          {
-            "t": "岁",
-            "r": "suì",
-            "g": "complement"
-          },
-          {
-            "t": "膛",
-            "r": "táng",
-            "g": "complement"
-          },
-          {
-            "t": "休",
-            "r": "xiū",
-            "g": "complement"
-          },
-          {
-            "t": "教",
-            "r": "jiào",
-            "g": "complement"
-          },
-          {
-            "t": "师",
-            "r": "shī",
-            "g": "complement"
-          },
-          {
-            "t": "大",
-            "r": "dà",
-            "g": "complement"
-          },
-          {
-            "t": "学",
-            "r": "xué",
-            "g": "complement"
-          },
-          {
-            "t": "柯",
-            "r": "kē",
-            "g": "subject"
-          },
-          {
-            "t": "华",
-            "r": "huá",
-            "g": "subject"
-          },
-          {
-            "t": "男",
-            "r": "nán",
-            "g": "complement"
-          },
-          {
-            "t": " ",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "45",
-            "r": "",
-            "g": "complement"
-          },
-          {
-            "t": "岁",
-            "r": "suì",
-            "g": "complement"
-          },
-          {
-            "t": "文",
-            "r": "wén",
-            "g": "complement"
-          },
-          {
-            "t": "化",
-            "r": "huà",
-            "g": "complement"
-          },
-          {
-            "t": "馆",
-            "r": "guǎn",
-            "g": "complement"
-          },
-          {
-            "t": "干",
-            "r": "gàn",
-            "g": "complement"
-          },
-          {
-            "t": "部",
-            "r": "bù",
-            "g": "complement"
-          },
-          {
-            "t": "大",
-            "r": "dà",
-            "g": "complement"
-          },
-          {
-            "t": "学",
-            "r": "xué",
-            "g": "complement"
-          },
           {
             "t": "采",
             "r": "cǎi",
@@ -664,7 +896,7 @@
             "g": "topic"
           },
           {
-            "t": ".",
+            "t": "、",
             "r": "",
             "g": "function"
           },
@@ -679,7 +911,7 @@
             "g": "topic"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -689,19 +921,9 @@
             "g": "adverbial"
           },
           {
-            "t": " ",
-            "r": "",
-            "g": "function"
-          },
-          {
             "t": "年",
             "r": "nián",
             "g": "adverbial"
-          },
-          {
-            "t": " ",
-            "r": "",
-            "g": "function"
           },
           {
             "t": "5",
@@ -747,178 +969,6 @@
         "ja": [
           [
             {
-              "t": "毛",
-              "r": "もう",
-              "g": "subject"
-            },
-            {
-              "t": "削",
-              "r": "さく",
-              "g": "subject"
-            },
-            {
-              "t": "澄",
-              "r": "ちょう",
-              "g": "subject"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "男",
-              "r": "だん",
-              "g": "complement"
-            },
-            {
-              "t": "性",
-              "r": "せい",
-              "g": "complement"
-            },
-            {
-              "t": "64",
-              "r": "",
-              "g": "complement"
-            },
-            {
-              "t": "歳",
-              "r": "さい",
-              "g": "complement"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "退",
-              "r": "たい",
-              "g": "complement"
-            },
-            {
-              "t": "職",
-              "r": "しょく",
-              "g": "complement"
-            },
-            {
-              "t": "教",
-              "r": "きょう",
-              "g": "complement"
-            },
-            {
-              "t": "師",
-              "r": "し",
-              "g": "complement"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "大",
-              "r": "だい",
-              "g": "complement"
-            },
-            {
-              "t": "学",
-              "r": "がく",
-              "g": "complement"
-            },
-            {
-              "t": "；",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "柯",
-              "r": "か",
-              "g": "subject"
-            },
-            {
-              "t": "華",
-              "r": "か",
-              "g": "subject"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "男",
-              "r": "だん",
-              "g": "complement"
-            },
-            {
-              "t": "性",
-              "r": "せい",
-              "g": "complement"
-            },
-            {
-              "t": "45",
-              "r": "",
-              "g": "complement"
-            },
-            {
-              "t": "歳",
-              "r": "さい",
-              "g": "complement"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            }
-          ],
-          [
-            {
-              "t": "文",
-              "r": "ぶん",
-              "g": "complement"
-            },
-            {
-              "t": "化",
-              "r": "か",
-              "g": "complement"
-            },
-            {
-              "t": "館",
-              "r": "かん",
-              "g": "complement"
-            },
-            {
-              "t": "幹",
-              "r": "かん",
-              "g": "complement"
-            },
-            {
-              "t": "部",
-              "r": "ぶ",
-              "g": "complement"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "大",
-              "r": "だい",
-              "g": "complement"
-            },
-            {
-              "t": "学",
-              "r": "がく",
-              "g": "complement"
-            },
-            {
-              "t": "。",
-              "r": "",
-              "g": "function"
-            },
-            {
               "t": "採",
               "r": "さい",
               "g": "topic"
@@ -931,6 +981,11 @@
             {
               "t": "時",
               "r": "じ",
+              "g": "topic"
+            },
+            {
+              "t": "期",
+              "r": "き",
               "g": "topic"
             },
             {
@@ -952,7 +1007,9 @@
               "t": "：",
               "r": "",
               "g": "function"
-            },
+            }
+          ],
+          [
             {
               "t": "1984",
               "r": "",

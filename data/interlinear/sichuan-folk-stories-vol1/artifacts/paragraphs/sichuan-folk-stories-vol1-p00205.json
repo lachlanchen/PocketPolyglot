@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 107,
-    "grammar_token_total": 107,
+    "token_total": 119,
+    "grammar_token_total": 119,
     "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0205",
@@ -110,22 +110,7 @@
     "id": "神话-图腾祖先神话-025-人和龙中江县",
     "title_zh": [
       {
-        "t": "0",
-        "r": "",
-        "g": "function"
-      },
-      {
-        "t": "2",
-        "r": "",
-        "g": "function"
-      },
-      {
-        "t": "5",
-        "r": "",
-        "g": "function"
-      },
-      {
-        "t": ". ",
+        "t": "025. ",
         "r": "",
         "g": "function"
       },
@@ -223,9 +208,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00205",
     "source_text": "讲述者:黄仙花女 86岁农民私昧采录者:吴起男 18岁中江师校学生采隶时间、地点 1986 年8月5日于中江上县商店乡",
+    "corrected_text": "讲述者：黄仙花，女，86岁，农民，文盲。采录者：吴起男，18岁，中江师校学生。采录时间、地点：1986年8月5日于中江县商店乡。",
     "units": [
       {
-        "source_text": "讲述者:黄仙花女 86岁农民私昧",
+        "source_text": "讲述者：黄仙花，女，86岁，农民，文盲。",
         "zh": [
           {
             "t": "讲",
@@ -243,7 +229,7 @@
             "g": "function"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -263,12 +249,17 @@
             "g": "subject"
           },
           {
-            "t": "女",
-            "r": "nǚ",
-            "g": "subject"
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
-            "t": " ",
+            "t": "女",
+            "r": "nǚ",
+            "g": "attributive"
+          },
+          {
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -283,6 +274,11 @@
             "g": "attributive"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "农",
             "r": "nóng",
             "g": "attributive"
@@ -293,14 +289,24 @@
             "g": "attributive"
           },
           {
-            "t": "私",
-            "r": "sī",
-            "g": "attributive"
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
-            "t": "昧",
-            "r": "mèi",
-            "g": "attributive"
+            "t": "文",
+            "r": "wén",
+            "g": "complement"
+          },
+          {
+            "t": "盲",
+            "r": "máng",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -341,9 +347,14 @@
               "g": "subject"
             },
             {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "女",
-              "r": "じょ",
-              "g": "subject"
+              "r": "おんな",
+              "g": "attributive"
             }
           ],
           [
@@ -373,22 +384,22 @@
               "g": "attributive"
             },
             {
-              "t": "、「",
+              "t": "、",
               "r": "",
               "g": "function"
             },
             {
-              "t": "私",
-              "r": "し",
-              "g": "attributive"
+              "t": "文",
+              "r": "もん",
+              "g": "complement"
             },
             {
-              "t": "昧",
-              "r": "まい",
-              "g": "attributive"
+              "t": "盲",
+              "r": "もう",
+              "g": "complement"
             },
             {
-              "t": "」",
+              "t": "。",
               "r": "",
               "g": "function"
             }
@@ -396,7 +407,7 @@
         ]
       },
       {
-        "source_text": "采录者:吴起男 18岁中江师校学生",
+        "source_text": "采录者：吴起男，18岁，中江师校学生。",
         "zh": [
           {
             "t": "采",
@@ -414,7 +425,7 @@
             "g": "function"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -434,7 +445,7 @@
             "g": "subject"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -447,6 +458,11 @@
             "t": "岁",
             "r": "suì",
             "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "中",
@@ -471,12 +487,17 @@
           {
             "t": "学",
             "r": "xué",
-            "g": "attributive"
+            "g": "complement"
           },
           {
             "t": "生",
             "r": "shēng",
-            "g": "attributive"
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -566,23 +587,28 @@
             {
               "t": "の",
               "r": "",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "学",
               "r": "がく",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "生",
               "r": "せい",
-              "g": "attributive"
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ]
         ]
       },
       {
-        "source_text": "采隶时间、地点 1986 年8月5日于中江上县商店乡",
+        "source_text": "采录时间、地点：1986年8月5日于中江县商店乡。",
         "zh": [
           {
             "t": "采",
@@ -590,8 +616,8 @@
             "g": "function"
           },
           {
-            "t": "隶",
-            "r": "lì",
+            "t": "录",
+            "r": "lù",
             "g": "function"
           },
           {
@@ -620,7 +646,7 @@
             "g": "function"
           },
           {
-            "t": " ",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -628,11 +654,6 @@
             "t": "1986",
             "r": "",
             "g": "adverbial"
-          },
-          {
-            "t": " ",
-            "r": "",
-            "g": "function"
           },
           {
             "t": "年",
@@ -662,7 +683,7 @@
           {
             "t": "于",
             "r": "yú",
-            "g": "adverbial"
+            "g": "function"
           },
           {
             "t": "中",
@@ -672,11 +693,6 @@
           {
             "t": "江",
             "r": "jiāng",
-            "g": "adverbial"
-          },
-          {
-            "t": "上",
-            "r": "shàng",
             "g": "adverbial"
           },
           {
@@ -698,6 +714,11 @@
             "t": "乡",
             "r": "xiāng",
             "g": "adverbial"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -770,6 +791,11 @@
           ],
           [
             {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "中",
               "r": "ちゅう",
               "g": "adverbial"
@@ -777,11 +803,6 @@
             {
               "t": "江",
               "r": "こう",
-              "g": "adverbial"
-            },
-            {
-              "t": "上",
-              "r": "じょう",
               "g": "adverbial"
             },
             {
@@ -807,7 +828,12 @@
             {
               "t": "にて",
               "r": "",
-              "g": "adverbial"
+              "g": "function"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ]
         ]

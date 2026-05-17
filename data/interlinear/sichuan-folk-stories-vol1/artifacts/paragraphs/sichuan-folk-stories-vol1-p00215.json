@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 124,
-    "grammar_token_total": 124,
+    "token_total": 144,
+    "grammar_token_total": 144,
     "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0215",
@@ -80,13 +80,8 @@
     ],
     "title_ja": [
       {
-        "t": "図",
-        "r": "と",
-        "g": "topic"
-      },
-      {
-        "t": "騰",
-        "r": "とう",
+        "t": "トーテム",
+        "r": "",
         "g": "topic"
       },
       {
@@ -233,9 +228,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00215",
     "source_text": "讲述者:罗桩英女 31岁巴县前进化工厂家属高中采康者:金社度男 48岁忠兴乡文化专干高中李子硕男 56岁文化干部高中",
+    "corrected_text": "讲述者：罗桩英，女，31岁，巴县前进化工厂家属，高中。采录者：金社度，男，48岁，忠兴乡文化专干，高中；李子硕，男，56岁，文化干部，高中。",
     "units": [
       {
-        "source_text": "讲述者:罗桩英女 31岁巴县前进化工厂家属高中",
+        "source_text": "讲述者：罗桩英，女，31岁，巴县前进化工厂家属，高中。",
         "zh": [
           {
             "t": "讲",
@@ -253,7 +249,7 @@
             "g": "subject"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -273,12 +269,17 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "女",
             "r": "nǚ",
             "g": "attributive"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -298,39 +299,44 @@
             "g": "attributive"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "巴",
             "r": "bā",
-            "g": "attributive"
+            "g": "adverbial"
           },
           {
             "t": "县",
             "r": "xiàn",
-            "g": "attributive"
+            "g": "adverbial"
           },
           {
             "t": "前",
             "r": "qián",
-            "g": "attributive"
+            "g": "adverbial"
           },
           {
             "t": "进",
             "r": "jìn",
-            "g": "attributive"
+            "g": "adverbial"
           },
           {
             "t": "化",
             "r": "huà",
-            "g": "attributive"
+            "g": "object"
           },
           {
             "t": "工",
             "r": "gōng",
-            "g": "attributive"
+            "g": "object"
           },
           {
             "t": "厂",
             "r": "chǎng",
-            "g": "attributive"
+            "g": "object"
           },
           {
             "t": "家",
@@ -343,6 +349,11 @@
             "g": "object"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "高",
             "r": "gāo",
             "g": "complement"
@@ -351,6 +362,11 @@
             "t": "中",
             "r": "zhōng",
             "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -397,7 +413,12 @@
             },
             {
               "t": "女",
-              "r": "おんな",
+              "r": "じょ",
+              "g": "attributive"
+            },
+            {
+              "t": "性",
+              "r": "せい",
               "g": "attributive"
             },
             {
@@ -420,42 +441,42 @@
             {
               "t": "巴",
               "r": "は",
-              "g": "attributive"
+              "g": "adverbial"
             },
             {
               "t": "県",
               "r": "けん",
-              "g": "attributive"
+              "g": "adverbial"
             },
             {
               "t": "前",
               "r": "ぜん",
-              "g": "attributive"
+              "g": "adverbial"
             },
             {
               "t": "進",
               "r": "しん",
-              "g": "attributive"
+              "g": "adverbial"
             },
             {
               "t": "化",
               "r": "か",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "工",
               "r": "こう",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "場",
               "r": "じょう",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "の",
               "r": "",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "家",
@@ -496,7 +517,7 @@
         ]
       },
       {
-        "source_text": "采康者:金社度男 48岁忠兴乡文化专干高中",
+        "source_text": "采录者：金社度，男，48岁，忠兴乡文化专干，高中；",
         "zh": [
           {
             "t": "采",
@@ -504,8 +525,8 @@
             "g": "attributive"
           },
           {
-            "t": "康",
-            "r": "kāng",
+            "t": "录",
+            "r": "lù",
             "g": "attributive"
           },
           {
@@ -514,7 +535,7 @@
             "g": "subject"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -534,12 +555,17 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "男",
             "r": "nán",
             "g": "attributive"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -559,19 +585,24 @@
             "g": "attributive"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "忠",
             "r": "zhōng",
-            "g": "attributive"
+            "g": "adverbial"
           },
           {
             "t": "兴",
             "r": "xīng",
-            "g": "attributive"
+            "g": "adverbial"
           },
           {
             "t": "乡",
             "r": "xiāng",
-            "g": "attributive"
+            "g": "adverbial"
           },
           {
             "t": "文",
@@ -594,6 +625,11 @@
             "g": "object"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "高",
             "r": "gāo",
             "g": "complement"
@@ -602,6 +638,11 @@
             "t": "中",
             "r": "zhōng",
             "g": "complement"
+          },
+          {
+            "t": "；",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -612,8 +653,8 @@
               "g": "attributive"
             },
             {
-              "t": "康",
-              "r": "こう",
+              "t": "録",
+              "r": "ろく",
               "g": "attributive"
             },
             {
@@ -648,7 +689,12 @@
             },
             {
               "t": "男",
-              "r": "おとこ",
+              "r": "だん",
+              "g": "attributive"
+            },
+            {
+              "t": "性",
+              "r": "せい",
               "g": "attributive"
             },
             {
@@ -671,22 +717,22 @@
             {
               "t": "忠",
               "r": "ちゅう",
-              "g": "attributive"
+              "g": "adverbial"
             },
             {
               "t": "興",
               "r": "こう",
-              "g": "attributive"
+              "g": "adverbial"
             },
             {
               "t": "郷",
               "r": "きょう",
-              "g": "attributive"
+              "g": "adverbial"
             },
             {
               "t": "の",
               "r": "",
-              "g": "attributive"
+              "g": "adverbial"
             },
             {
               "t": "文",
@@ -704,8 +750,18 @@
               "g": "object"
             },
             {
+              "t": "任",
+              "r": "にん",
+              "g": "object"
+            },
+            {
               "t": "幹",
               "r": "かん",
+              "g": "object"
+            },
+            {
+              "t": "部",
+              "r": "ぶ",
               "g": "object"
             },
             {
@@ -737,7 +793,7 @@
         ]
       },
       {
-        "source_text": "李子硕男 56岁文化干部高中",
+        "source_text": "李子硕，男，56岁，文化干部，高中。",
         "zh": [
           {
             "t": "李",
@@ -755,12 +811,17 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "男",
             "r": "nán",
             "g": "attributive"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -778,6 +839,11 @@
             "t": "岁",
             "r": "suì",
             "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "文",
@@ -800,6 +866,11 @@
             "g": "object"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "高",
             "r": "gāo",
             "g": "complement"
@@ -808,6 +879,11 @@
             "t": "中",
             "r": "zhōng",
             "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -834,7 +910,12 @@
             },
             {
               "t": "男",
-              "r": "おとこ",
+              "r": "だん",
+              "g": "attributive"
+            },
+            {
+              "t": "性",
+              "r": "せい",
               "g": "attributive"
             },
             {

@@ -5,21 +5,25 @@
     "title_zh": [
       {
         "t": "神",
-        "r": "shén"
+        "r": "shén",
+        "g": "attributive"
       },
       {
         "t": "话",
-        "r": "huà"
+        "r": "huà",
+        "g": "object"
       }
     ],
     "title_ja": [
       {
         "t": "神",
-        "r": "しん"
+        "r": "しん",
+        "g": "attributive"
       },
       {
         "t": "話",
-        "r": "わ"
+        "r": "わ",
+        "g": "object"
       }
     ]
   },
@@ -28,45 +32,55 @@
     "title_zh": [
       {
         "t": "动",
-        "r": "dòng"
+        "r": "dòng",
+        "g": "attributive"
       },
       {
         "t": "植",
-        "r": "zhí"
+        "r": "zhí",
+        "g": "attributive"
       },
       {
         "t": "物",
-        "r": "wù"
+        "r": "wù",
+        "g": "attributive"
       },
       {
         "t": "神",
-        "r": "shén"
+        "r": "shén",
+        "g": "attributive"
       },
       {
         "t": "话",
-        "r": "huà"
+        "r": "huà",
+        "g": "object"
       }
     ],
     "title_ja": [
       {
         "t": "動",
-        "r": "どう"
+        "r": "どう",
+        "g": "attributive"
       },
       {
         "t": "植",
-        "r": "しょく"
+        "r": "しょく",
+        "g": "attributive"
       },
       {
         "t": "物",
-        "r": "ぶつ"
+        "r": "ぶつ",
+        "g": "attributive"
       },
       {
         "t": "神",
-        "r": "しん"
+        "r": "しん",
+        "g": "attributive"
       },
       {
         "t": "話",
-        "r": "わ"
+        "r": "わ",
+        "g": "object"
       }
     ]
   },
@@ -75,65 +89,80 @@
     "title_zh": [
       {
         "t": "020. ",
-        "r": ""
+        "r": "",
+        "g": "function"
       },
       {
         "t": "牛",
-        "r": "niú"
+        "r": "niú",
+        "g": "subject"
       },
       {
         "t": "为",
-        "r": "wèi"
+        "r": "wèi",
+        "g": "adverbial"
       },
       {
         "t": "什",
-        "r": "shén"
+        "r": "shén",
+        "g": "adverbial"
       },
       {
         "t": "么",
-        "r": "me"
+        "r": "me",
+        "g": "adverbial"
       },
       {
         "t": "要",
-        "r": "yào"
+        "r": "yào",
+        "g": "predicate"
       },
       {
         "t": "喷",
-        "r": "pēn"
+        "r": "pēn",
+        "g": "predicate"
       },
       {
         "t": "草",
-        "r": "cǎo"
+        "r": "cǎo",
+        "g": "object"
       }
     ],
     "title_ja": [
       {
         "t": "020. ",
-        "r": ""
+        "r": "",
+        "g": "function"
       },
       {
         "t": "牛",
-        "r": "うし"
+        "r": "うし",
+        "g": "subject"
       },
       {
         "t": "はなぜ",
-        "r": ""
+        "r": "",
+        "g": "adverbial"
       },
       {
         "t": "草",
-        "r": "くさ"
+        "r": "くさ",
+        "g": "object"
       },
       {
         "t": "を",
-        "r": ""
+        "r": "",
+        "g": "object"
       },
       {
         "t": "噴",
-        "r": "ふ"
+        "r": "ふ",
+        "g": "predicate"
       },
       {
         "t": "くのか",
-        "r": ""
+        "r": "",
+        "g": "predicate"
       }
     ],
     "place_zh": [],
@@ -143,9 +172,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00159",
       "source_text": "这事给玉皇大帝晓得啦,就把牛践到面前问:你下去咋个撤草籽的?",
+      "corrected_text": "这事给玉皇大帝晓得啦，就把牛喊到面前问：你下去咋个撒草籽的？",
       "units": [
         {
-          "source_text": "这事给玉皇大帝晓得啦,就把牛践到面前问:",
+          "source_text": "这事给玉皇大帝晓得啦，就把牛喊到面前问：",
           "zh": [
             {
               "t": "这",
@@ -198,7 +228,7 @@
               "g": "function"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -218,8 +248,8 @@
               "g": "object"
             },
             {
-              "t": "践",
-              "r": "jiàn",
+              "t": "喊",
+              "r": "hǎn",
               "g": "predicate"
             },
             {
@@ -243,7 +273,7 @@
               "g": "predicate"
             },
             {
-              "t": ":",
+              "t": "：",
               "r": "",
               "g": "function"
             }
@@ -313,7 +343,7 @@
                 "g": "complement"
               },
               {
-                "t": "へ",
+                "t": "に",
                 "r": "",
                 "g": "complement"
               },
@@ -323,17 +353,17 @@
                 "g": "predicate"
               },
               {
-                "t": "びつけて",
+                "t": "んで",
                 "r": "",
                 "g": "predicate"
               },
               {
-                "t": "問",
-                "r": "と",
+                "t": "尋",
+                "r": "たず",
                 "g": "predicate"
               },
               {
-                "t": "うた。",
+                "t": "ねた。",
                 "r": "",
                 "g": "predicate"
               }
@@ -341,7 +371,7 @@
           ]
         },
         {
-          "source_text": "你下去咋个撤草籽的?",
+          "source_text": "你下去咋个撒草籽的？",
           "zh": [
             {
               "t": "你",
@@ -369,8 +399,8 @@
               "g": "adverbial"
             },
             {
-              "t": "撤",
-              "r": "chè",
+              "t": "撒",
+              "r": "sǎ",
               "g": "predicate"
             },
             {
@@ -389,7 +419,7 @@
               "g": "object"
             },
             {
-              "t": "?",
+              "t": "？",
               "r": "",
               "g": "function"
             }
@@ -404,22 +434,22 @@
               {
                 "t": "下",
                 "r": "した",
-                "g": "complement"
+                "g": "predicate"
               },
               {
                 "t": "へ",
                 "r": "",
-                "g": "complement"
+                "g": "predicate"
               },
               {
                 "t": "行",
                 "r": "い",
-                "g": "predicate"
+                "g": "complement"
               },
               {
                 "t": "って、",
                 "r": "",
-                "g": "predicate"
+                "g": "complement"
               }
             ],
             [
@@ -449,7 +479,12 @@
                 "g": "object"
               },
               {
-                "t": "まいたのか。",
+                "t": "撒",
+                "r": "ま",
+                "g": "predicate"
+              },
+              {
+                "t": "いたのか。",
                 "r": "",
                 "g": "predicate"
               }

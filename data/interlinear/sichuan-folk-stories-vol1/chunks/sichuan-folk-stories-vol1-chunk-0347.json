@@ -217,9 +217,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00347",
       "source_text": "讲述者:谢治中男 75岁巴县走马乡工农民农村不识字",
+      "corrected_text": "讲述者：谢治中，男，75岁，巴县走马乡工农民，农村不识字",
       "units": [
         {
-          "source_text": "讲述者:谢治中男 75岁巴县走马乡工农民农村不识字",
+          "source_text": "讲述者：谢治中，男，75岁，",
           "zh": [
             {
               "t": "讲",
@@ -237,7 +238,7 @@
               "g": "attributive"
             },
             {
-              "t": ":",
+              "t": "：",
               "r": "",
               "g": "function"
             },
@@ -257,12 +258,17 @@
               "g": "subject"
             },
             {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "男",
               "r": "nán",
               "g": "attributive"
             },
             {
-              "t": " ",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -282,69 +288,9 @@
               "g": "attributive"
             },
             {
-              "t": "巴",
-              "r": "bā",
-              "g": "attributive"
-            },
-            {
-              "t": "县",
-              "r": "xiàn",
-              "g": "attributive"
-            },
-            {
-              "t": "走",
-              "r": "zǒu",
-              "g": "attributive"
-            },
-            {
-              "t": "马",
-              "r": "mǎ",
-              "g": "attributive"
-            },
-            {
-              "t": "乡",
-              "r": "xiāng",
-              "g": "attributive"
-            },
-            {
-              "t": "工",
-              "r": "gōng",
-              "g": "attributive"
-            },
-            {
-              "t": "农",
-              "r": "nóng",
-              "g": "attributive"
-            },
-            {
-              "t": "民",
-              "r": "mín",
-              "g": "subject"
-            },
-            {
-              "t": "农",
-              "r": "nóng",
-              "g": "adverbial"
-            },
-            {
-              "t": "村",
-              "r": "cūn",
-              "g": "adverbial"
-            },
-            {
-              "t": "不",
-              "r": "bù",
-              "g": "adverbial"
-            },
-            {
-              "t": "识",
-              "r": "shí",
-              "g": "predicate"
-            },
-            {
-              "t": "字",
-              "r": "zì",
-              "g": "object"
+              "t": "，",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
@@ -388,7 +334,9 @@
                 "t": "、",
                 "r": "",
                 "g": "function"
-              },
+              }
+            ],
+            [
               {
                 "t": "男",
                 "r": "だん",
@@ -414,7 +362,84 @@
                 "r": "",
                 "g": "function"
               }
-            ],
+            ]
+          ]
+        },
+        {
+          "source_text": "巴县走马乡工农民，农村不识字",
+          "zh": [
+            {
+              "t": "巴",
+              "r": "bā",
+              "g": "attributive"
+            },
+            {
+              "t": "县",
+              "r": "xiàn",
+              "g": "attributive"
+            },
+            {
+              "t": "走",
+              "r": "zǒu",
+              "g": "attributive"
+            },
+            {
+              "t": "马",
+              "r": "mǎ",
+              "g": "attributive"
+            },
+            {
+              "t": "乡",
+              "r": "xiāng",
+              "g": "attributive"
+            },
+            {
+              "t": "工",
+              "r": "gōng",
+              "g": "subject"
+            },
+            {
+              "t": "农",
+              "r": "nóng",
+              "g": "subject"
+            },
+            {
+              "t": "民",
+              "r": "mín",
+              "g": "subject"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "农",
+              "r": "nóng",
+              "g": "adverbial"
+            },
+            {
+              "t": "村",
+              "r": "cūn",
+              "g": "adverbial"
+            },
+            {
+              "t": "不",
+              "r": "bù",
+              "g": "adverbial"
+            },
+            {
+              "t": "识",
+              "r": "shí",
+              "g": "predicate"
+            },
+            {
+              "t": "字",
+              "r": "zì",
+              "g": "object"
+            }
+          ],
+          "ja": [
             [
               {
                 "t": "巴",
@@ -449,12 +474,12 @@
               {
                 "t": "工",
                 "r": "こう",
-                "g": "attributive"
+                "g": "subject"
               },
               {
                 "t": "農",
                 "r": "のう",
-                "g": "attributive"
+                "g": "subject"
               },
               {
                 "t": "民",
@@ -465,7 +490,9 @@
                 "t": "、",
                 "r": "",
                 "g": "function"
-              },
+              }
+            ],
+            [
               {
                 "t": "農",
                 "r": "のう",

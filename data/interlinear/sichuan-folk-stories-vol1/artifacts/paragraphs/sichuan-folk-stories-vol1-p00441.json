@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 38,
-    "grammar_token_total": 38,
+    "token_total": 39,
+    "grammar_token_total": 39,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0441",
@@ -290,7 +290,7 @@
     "source_text": "不叫茶,具晓得嚼起它深嘴,就叫它*涩.",
     "units": [
       {
-        "source_text": "不叫茶,具晓得嚼起它深嘴,就叫它*涩.",
+        "source_text": "不叫茶，只晓得嚼起它涩嘴，就叫它“涩”。",
         "zh": [
           {
             "t": "不",
@@ -308,13 +308,13 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
           {
-            "t": "具",
-            "r": "jù",
+            "t": "只",
+            "r": "zhǐ",
             "g": "adverbial"
           },
           {
@@ -324,7 +324,7 @@
           },
           {
             "t": "得",
-            "r": "dé",
+            "r": "de",
             "g": "predicate"
           },
           {
@@ -343,8 +343,8 @@
             "g": "object"
           },
           {
-            "t": "深",
-            "r": "shēn",
+            "t": "涩",
+            "r": "sè",
             "g": "complement"
           },
           {
@@ -353,7 +353,7 @@
             "g": "complement"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -373,7 +373,7 @@
             "g": "object"
           },
           {
-            "t": "*",
+            "t": "“",
             "r": "",
             "g": "function"
           },
@@ -383,7 +383,12 @@
             "g": "object"
           },
           {
-            "t": ".",
+            "t": "”",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "。",
             "r": "",
             "g": "function"
           }
@@ -488,8 +493,10 @@
               "g": "predicate"
             }
           ]
-        ]
+        ],
+        "corrected_text": "不叫茶，只晓得嚼起它涩嘴，就叫它“涩”。"
       }
-    ]
+    ],
+    "corrected_text": "不叫茶，只晓得嚼起它涩嘴，就叫它“涩”。"
   }
 }

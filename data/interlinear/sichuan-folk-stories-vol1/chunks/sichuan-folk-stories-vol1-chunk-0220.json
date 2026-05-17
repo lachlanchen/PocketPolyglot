@@ -182,9 +182,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00220",
       "source_text": "齐莫,受罪.可怜.恼火:痛苦。",
+      "corrected_text": "齐莫：受罪、可怜、恼火、痛苦。",
       "units": [
         {
-          "source_text": "齐莫,受罪.",
+          "source_text": "齐莫：受罪、可怜、恼火、痛苦。",
           "zh": [
             {
               "t": "齐",
@@ -197,22 +198,67 @@
               "g": "topic"
             },
             {
-              "t": ",",
+              "t": "：",
               "r": "",
               "g": "function"
             },
             {
               "t": "受",
               "r": "shòu",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "罪",
               "r": "zuì",
+              "g": "object"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "可",
+              "r": "kě",
+              "g": "complement"
+            },
+            {
+              "t": "怜",
+              "r": "lián",
+              "g": "complement"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "恼",
+              "r": "nǎo",
               "g": "predicate"
             },
             {
-              "t": ".",
+              "t": "火",
+              "r": "huǒ",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "痛",
+              "r": "tòng",
+              "g": "complement"
+            },
+            {
+              "t": "苦",
+              "r": "kǔ",
+              "g": "complement"
+            },
+            {
+              "t": "。",
               "r": "",
               "g": "function"
             }
@@ -228,9 +274,7 @@
                 "t": "、",
                 "r": "",
                 "g": "function"
-              }
-            ],
-            [
+              },
               {
                 "t": "苦",
                 "r": "くる",
@@ -244,112 +288,27 @@
               {
                 "t": "受",
                 "r": "う",
-                "g": "predicate"
+                "g": "object"
               },
               {
                 "t": "けること",
                 "r": "",
-                "g": "predicate"
+                "g": "object"
               },
               {
-                "t": "。",
+                "t": "、",
                 "r": "",
                 "g": "function"
-              }
-            ]
-          ]
-        },
-        {
-          "source_text": "可怜.",
-          "zh": [
-            {
-              "t": "可",
-              "r": "kě",
-              "g": "predicate"
-            },
-            {
-              "t": "怜",
-              "r": "lián",
-              "g": "predicate"
-            },
-            {
-              "t": ".",
-              "r": "",
-              "g": "function"
-            }
-          ],
-          "ja": [
-            [
-              {
-                "t": "かわいそうなこと",
-                "r": "",
-                "g": "predicate"
               },
-              {
-                "t": "。",
-                "r": "",
-                "g": "function"
-              }
-            ],
-            [
               {
                 "t": "哀",
                 "r": "あわ",
-                "g": "predicate"
+                "g": "complement"
               },
               {
-                "t": "れである",
+                "t": "れなこと",
                 "r": "",
-                "g": "predicate"
-              },
-              {
-                "t": "。",
-                "r": "",
-                "g": "function"
-              }
-            ]
-          ]
-        },
-        {
-          "source_text": "恼火:痛苦。",
-          "zh": [
-            {
-              "t": "恼",
-              "r": "nǎo",
-              "g": "topic"
-            },
-            {
-              "t": "火",
-              "r": "huǒ",
-              "g": "topic"
-            },
-            {
-              "t": ":",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "痛",
-              "r": "tòng",
-              "g": "predicate"
-            },
-            {
-              "t": "苦",
-              "r": "kǔ",
-              "g": "predicate"
-            },
-            {
-              "t": "。",
-              "r": "",
-              "g": "function"
-            }
-          ],
-          "ja": [
-            [
-              {
-                "t": "ナオフオとは",
-                "r": "",
-                "g": "topic"
+                "g": "complement"
               },
               {
                 "t": "、",
@@ -359,19 +318,44 @@
             ],
             [
               {
-                "t": "つらく",
+                "t": "腹",
+                "r": "はら",
+                "g": "predicate"
+              },
+              {
+                "t": "立",
+                "r": "だ",
+                "g": "predicate"
+              },
+              {
+                "t": "たしく",
                 "r": "",
                 "g": "predicate"
+              },
+              {
+                "t": "、",
+                "r": "",
+                "g": "function"
+              },
+              {
+                "t": "痛",
+                "r": "いた",
+                "g": "complement"
+              },
+              {
+                "t": "ましく",
+                "r": "",
+                "g": "complement"
               },
               {
                 "t": "苦",
                 "r": "くる",
-                "g": "predicate"
+                "g": "complement"
               },
               {
                 "t": "しいこと",
                 "r": "",
-                "g": "predicate"
+                "g": "complement"
               },
               {
                 "t": "。",

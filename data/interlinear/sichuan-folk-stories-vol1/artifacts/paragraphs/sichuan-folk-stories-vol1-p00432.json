@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 171,
-    "grammar_token_total": 171,
+    "token_total": 173,
+    "grammar_token_total": 173,
     "unit_count": 5
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0432",
@@ -233,9 +233,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00432",
     "source_text": "神农回来,正是秋风秋雨渐渐凉的时候,人们听说神农拿回救万民的宝贝,都来看他。有个女子看中了他,要和他成亲。他不干,人些功他,他才答应了.这就是后来人们成亲要人做媒的来历。",
+    "corrected_text": "神农回来，正是秋风秋雨渐渐凉的时候，人们听说神农拿回救万民的宝贝，都来看他。有个女子看中了他，要和他成亲。他不干，人们劝他，他才答应了。这就是后来人们成亲要人做媒的来历。",
     "units": [
       {
-        "source_text": "神农回来,正是秋风秋雨渐渐凉的时候,",
+        "source_text": "神农回来，正是秋风秋雨渐渐凉的时候，",
         "zh": [
           {
             "t": "神",
@@ -258,14 +259,14 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
           {
             "t": "正",
             "r": "zhèng",
-            "g": "predicate"
+            "g": "adverbial"
           },
           {
             "t": "是",
@@ -310,7 +311,7 @@
           {
             "t": "的",
             "r": "de",
-            "g": "complement"
+            "g": "predicate"
           },
           {
             "t": "时",
@@ -323,7 +324,7 @@
             "g": "complement"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -401,7 +402,7 @@
         ]
       },
       {
-        "source_text": "人们听说神农拿回救万民的宝贝,都来看他。",
+        "source_text": "人们听说神农拿回救万民的宝贝，都来看他。",
         "zh": [
           {
             "t": "人",
@@ -474,7 +475,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -642,7 +643,7 @@
         ]
       },
       {
-        "source_text": "有个女子看中了他,要和他成亲。",
+        "source_text": "有个女子看中了他，要和他成亲。",
         "zh": [
           {
             "t": "有",
@@ -685,7 +686,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -803,7 +804,7 @@
         ]
       },
       {
-        "source_text": "他不干,人些功他,他才答应了.",
+        "source_text": "他不干，人们劝他，他才答应了。",
         "zh": [
           {
             "t": "他",
@@ -821,7 +822,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -831,13 +832,13 @@
             "g": "subject"
           },
           {
-            "t": "些",
-            "r": "xiē",
-            "g": "adverbial"
+            "t": "们",
+            "r": "men",
+            "g": "subject"
           },
           {
-            "t": "功",
-            "r": "gōng",
+            "t": "劝",
+            "r": "quàn",
             "g": "predicate"
           },
           {
@@ -846,7 +847,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -876,7 +877,7 @@
             "g": "predicate"
           },
           {
-            "t": ".",
+            "t": "。",
             "r": "",
             "g": "function"
           }
@@ -914,9 +915,9 @@
               "g": "subject"
             },
             {
-              "t": "々があれこれ",
+              "t": "々が",
               "r": "",
-              "g": "adverbial"
+              "g": "subject"
             },
             {
               "t": "彼",
@@ -924,17 +925,27 @@
               "g": "object"
             },
             {
-              "t": "に",
+              "t": "を",
               "r": "",
               "g": "object"
             },
             {
-              "t": "働",
-              "r": "はたら",
+              "t": "説",
+              "r": "と",
               "g": "predicate"
             },
             {
-              "t": "きかけて、",
+              "t": "き",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "伏",
+              "r": "ふ",
+              "g": "predicate"
+            },
+            {
+              "t": "せ、",
               "r": "",
               "g": "predicate"
             }
@@ -984,7 +995,7 @@
           {
             "t": "就",
             "r": "jiù",
-            "g": "predicate"
+            "g": "adverbial"
           },
           {
             "t": "是",

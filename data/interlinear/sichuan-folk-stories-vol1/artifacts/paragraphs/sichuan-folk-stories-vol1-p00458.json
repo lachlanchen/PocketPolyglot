@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 13,
-    "grammar_token_total": 13,
+    "token_total": 14,
+    "grammar_token_total": 14,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0458",
@@ -55,12 +55,12 @@
       {
         "t": "文",
         "r": "wén",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "化",
         "r": "huà",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "起",
@@ -92,12 +92,12 @@
       {
         "t": "文",
         "r": "ぶん",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "化",
         "r": "か",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "起",
@@ -258,6 +258,7 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00458",
     "source_text": "（巴县）",
+    "corrected_text": "（巴县）",
     "units": [
       {
         "source_text": "（巴县）",
@@ -310,22 +311,27 @@
             {
               "t": "採",
               "r": "さい",
-              "g": "predicate"
+              "g": "attributive"
             },
             {
               "t": "集",
               "r": "しゅう",
-              "g": "predicate"
+              "g": "attributive"
             },
             {
               "t": "地",
               "r": "ち",
-              "g": "object"
+              "g": "topic"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "topic"
             },
             {
               "t": "名",
-              "r": "めい",
-              "g": "object"
+              "r": "な",
+              "g": "topic"
             },
             {
               "t": "。",

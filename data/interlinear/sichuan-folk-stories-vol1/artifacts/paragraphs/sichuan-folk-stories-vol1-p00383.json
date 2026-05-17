@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 26,
-    "grammar_token_total": 26,
+    "token_total": 28,
+    "grammar_token_total": 28,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0383",
@@ -258,9 +258,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00383",
     "source_text": "伏闵想了一-想,说:好吧。",
+    "corrected_text": "伏义想了一想，说：好吧。",
     "units": [
       {
-        "source_text": "伏闵想了一-想,说:好吧。",
+        "source_text": "伏义想了一想，说：好吧。",
         "zh": [
           {
             "t": "伏",
@@ -268,8 +269,8 @@
             "g": "subject"
           },
           {
-            "t": "闵",
-            "r": "mǐn",
+            "t": "义",
+            "r": "yì",
             "g": "subject"
           },
           {
@@ -285,12 +286,7 @@
           {
             "t": "一",
             "r": "yī",
-            "g": "predicate"
-          },
-          {
-            "t": "-",
-            "r": "",
-            "g": "predicate"
+            "g": "adverbial"
           },
           {
             "t": "想",
@@ -298,7 +294,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -308,7 +304,7 @@
             "g": "predicate"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -320,7 +316,7 @@
           {
             "t": "吧",
             "r": "ba",
-            "g": "object"
+            "g": "function"
           },
           {
             "t": "。",
@@ -336,8 +332,8 @@
               "g": "subject"
             },
             {
-              "t": "闵",
-              "r": "びん",
+              "t": "義",
+              "r": "ぎ",
               "g": "subject"
             },
             {
@@ -346,7 +342,12 @@
               "g": "subject"
             },
             {
-              "t": "しばらく",
+              "t": "少",
+              "r": "すこ",
+              "g": "adverbial"
+            },
+            {
+              "t": "し",
               "r": "",
               "g": "adverbial"
             },
@@ -356,7 +357,7 @@
               "g": "predicate"
             },
             {
-              "t": "えて",
+              "t": "えて、",
               "r": "",
               "g": "predicate"
             },
@@ -378,7 +379,12 @@
           ],
           [
             {
-              "t": "よかろう",
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "よし",
               "r": "",
               "g": "object"
             },
@@ -388,12 +394,17 @@
               "g": "function"
             },
             {
-              "t": "と",
+              "t": "そうしよう",
               "r": "",
               "g": "object"
             },
             {
               "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
               "r": "",
               "g": "function"
             }

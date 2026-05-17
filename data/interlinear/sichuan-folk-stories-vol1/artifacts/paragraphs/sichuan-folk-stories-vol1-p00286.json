@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 131,
-    "grammar_token_total": 131,
-    "unit_count": 2
+    "token_total": 133,
+    "grammar_token_total": 133,
+    "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0286",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -223,9 +223,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00286",
     "source_text": "伏冻和妹妹住在天上,看到地上这样悲惨,就偷偷个此下凡。下凡来了,要吃没吃,要穿没穿,要住没住,累了鞭岩窝,俄了喝泉水,人慢慢个儿两兄妹都长大了。",
+    "corrected_text": "伏义和妹妹住在天上，看到地上这样悲惨，就偷偷地下凡。下凡来了，要吃没吃，要穿没穿，要住没住，累了钻岩窝，饿了喝泉水，慢慢个儿两兄妹都长大了。",
     "units": [
       {
-        "source_text": "伏冻和妹妹住在天上,看到地上这样悲惨,就偷偷个此下凡。",
+        "source_text": "伏义和妹妹住在天上，看到地上这样悲惨，就偷偷地下凡。",
         "zh": [
           {
             "t": "伏",
@@ -233,8 +234,8 @@
             "g": "subject"
           },
           {
-            "t": "冻",
-            "r": "dòng",
+            "t": "义",
+            "r": "yì",
             "g": "subject"
           },
           {
@@ -273,19 +274,19 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
           {
             "t": "看",
             "r": "kàn",
-            "g": "adverbial"
+            "g": "predicate"
           },
           {
             "t": "到",
             "r": "dào",
-            "g": "adverbial"
+            "g": "predicate"
           },
           {
             "t": "地",
@@ -310,15 +311,15 @@
           {
             "t": "悲",
             "r": "bēi",
-            "g": "predicate"
+            "g": "complement"
           },
           {
             "t": "惨",
             "r": "cǎn",
-            "g": "predicate"
+            "g": "complement"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -338,13 +339,8 @@
             "g": "adverbial"
           },
           {
-            "t": "个",
-            "r": "gè",
-            "g": "function"
-          },
-          {
-            "t": "此",
-            "r": "cǐ",
+            "t": "地",
+            "r": "de",
             "g": "adverbial"
           },
           {
@@ -371,8 +367,8 @@
               "g": "subject"
             },
             {
-              "t": "凍",
-              "r": "とう",
+              "t": "義",
+              "r": "ぎ",
               "g": "subject"
             },
             {
@@ -435,22 +431,22 @@
             {
               "t": "惨",
               "r": "さん",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "状",
               "r": "じょう",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "を",
               "r": "",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "見",
               "r": "み",
-              "g": "adverbial"
+              "g": "predicate"
             },
             {
               "t": "て、こっそり",
@@ -476,7 +472,7 @@
         ]
       },
       {
-        "source_text": "下凡来了,要吃没吃,要穿没穿,要住没住,累了鞭岩窝,俄了喝泉水,人慢慢个儿两兄妹都长大了。",
+        "source_text": "下凡来了，要吃没吃，要穿没穿，要住没住，",
         "zh": [
           {
             "t": "下",
@@ -499,7 +495,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -524,7 +520,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -549,7 +545,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -574,132 +570,7 @@
             "g": "object"
           },
           {
-            "t": ",",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "累",
-            "r": "lèi",
-            "g": "adverbial"
-          },
-          {
-            "t": "了",
-            "r": "le",
-            "g": "adverbial"
-          },
-          {
-            "t": "鞭",
-            "r": "biān",
-            "g": "predicate"
-          },
-          {
-            "t": "岩",
-            "r": "yán",
-            "g": "object"
-          },
-          {
-            "t": "窝",
-            "r": "wō",
-            "g": "object"
-          },
-          {
-            "t": ",",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "俄",
-            "r": "é",
-            "g": "adverbial"
-          },
-          {
-            "t": "了",
-            "r": "le",
-            "g": "adverbial"
-          },
-          {
-            "t": "喝",
-            "r": "hē",
-            "g": "predicate"
-          },
-          {
-            "t": "泉",
-            "r": "quán",
-            "g": "object"
-          },
-          {
-            "t": "水",
-            "r": "shuǐ",
-            "g": "object"
-          },
-          {
-            "t": ",",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "人",
-            "r": "rén",
-            "g": "subject"
-          },
-          {
-            "t": "慢",
-            "r": "màn",
-            "g": "adverbial"
-          },
-          {
-            "t": "慢",
-            "r": "màn",
-            "g": "adverbial"
-          },
-          {
-            "t": "个",
-            "r": "gè",
-            "g": "function"
-          },
-          {
-            "t": "儿",
-            "r": "ér",
-            "g": "function"
-          },
-          {
-            "t": "两",
-            "r": "liǎng",
-            "g": "attributive"
-          },
-          {
-            "t": "兄",
-            "r": "xiōng",
-            "g": "subject"
-          },
-          {
-            "t": "妹",
-            "r": "mèi",
-            "g": "subject"
-          },
-          {
-            "t": "都",
-            "r": "dōu",
-            "g": "adverbial"
-          },
-          {
-            "t": "长",
-            "r": "zhǎng",
-            "g": "predicate"
-          },
-          {
-            "t": "大",
-            "r": "dà",
-            "g": "complement"
-          },
-          {
-            "t": "了",
-            "r": "le",
-            "g": "function"
-          },
-          {
-            "t": "。",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -750,10 +621,22 @@
               "t": "も",
               "r": "",
               "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "着",
+              "r": "き",
+              "g": "object"
             },
             {
-              "t": "衣",
-              "r": "ころも",
+              "t": "る",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "物",
+              "r": "もの",
               "g": "object"
             },
             {
@@ -781,7 +664,134 @@
               "r": "",
               "g": "predicate"
             }
-          ],
+          ]
+        ]
+      },
+      {
+        "source_text": "累了钻岩窝，饿了喝泉水，慢慢个儿两兄妹都长大了。",
+        "zh": [
+          {
+            "t": "累",
+            "r": "lèi",
+            "g": "adverbial"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "adverbial"
+          },
+          {
+            "t": "钻",
+            "r": "zuān",
+            "g": "predicate"
+          },
+          {
+            "t": "岩",
+            "r": "yán",
+            "g": "object"
+          },
+          {
+            "t": "窝",
+            "r": "wō",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "饿",
+            "r": "è",
+            "g": "adverbial"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "adverbial"
+          },
+          {
+            "t": "喝",
+            "r": "hē",
+            "g": "predicate"
+          },
+          {
+            "t": "泉",
+            "r": "quán",
+            "g": "object"
+          },
+          {
+            "t": "水",
+            "r": "shuǐ",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "慢",
+            "r": "màn",
+            "g": "adverbial"
+          },
+          {
+            "t": "慢",
+            "r": "màn",
+            "g": "adverbial"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "adverbial"
+          },
+          {
+            "t": "儿",
+            "r": "ér",
+            "g": "adverbial"
+          },
+          {
+            "t": "两",
+            "r": "liǎng",
+            "g": "attributive"
+          },
+          {
+            "t": "兄",
+            "r": "xiōng",
+            "g": "subject"
+          },
+          {
+            "t": "妹",
+            "r": "mèi",
+            "g": "subject"
+          },
+          {
+            "t": "都",
+            "r": "dōu",
+            "g": "adverbial"
+          },
+          {
+            "t": "长",
+            "r": "zhǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
           [
             {
               "t": "疲",
@@ -809,8 +819,8 @@
               "g": "object"
             },
             {
-              "t": "籠",
-              "r": "こも",
+              "t": "潜",
+              "r": "もぐ",
               "g": "predicate"
             },
             {
@@ -819,7 +829,7 @@
               "g": "predicate"
             },
             {
-              "t": "餓",
+              "t": "飢",
               "r": "う",
               "g": "adverbial"
             },
@@ -854,9 +864,16 @@
               "g": "predicate"
             },
             {
-              "t": "み、",
+              "t": "んだ。",
               "r": "",
               "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "そうして",
+              "r": "",
+              "g": "adverbial"
             },
             {
               "t": "二",
@@ -884,7 +901,12 @@
               "g": "subject"
             },
             {
-              "t": "はだんだん",
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "だんだん",
               "r": "",
               "g": "adverbial"
             },
@@ -896,7 +918,7 @@
             {
               "t": "きくなった。",
               "r": "",
-              "g": "predicate"
+              "g": "complement"
             }
           ]
         ]

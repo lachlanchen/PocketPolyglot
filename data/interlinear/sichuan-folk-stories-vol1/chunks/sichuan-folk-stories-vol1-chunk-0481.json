@@ -145,7 +145,7 @@
       {
         "t": "与",
         "r": "yǔ",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": "养",
@@ -165,17 +165,17 @@
       {
         "t": "新",
         "r": "xīn",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "津",
         "r": "jīn",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "县",
         "r": "xiàn",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "）",
@@ -222,7 +222,7 @@
       {
         "t": "と",
         "r": "",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": "養",
@@ -242,17 +242,17 @@
       {
         "t": "新",
         "r": "しん",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "津",
         "r": "しん",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "県",
         "r": "けん",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "）",
@@ -267,9 +267,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00481",
       "source_text": "讲述者:黄替元男 76岁太平乡轩结村农民三年私束采了隶者:李兴五男 54岁县文化馆干部中师采录时间.地点:1986 年 7 月于新津县太平乡团结村黄海云家",
+      "corrected_text": "讲述者:黄替元 男 76岁 太平乡团结村农民 私塾三年 采录者:李兴五 男 54岁 县文化馆干部 中师 采录时间、地点:1986年7月于新津县太平乡团结村黄海云家",
       "units": [
         {
-          "source_text": "讲述者:黄替元男 76岁太平乡轩结村农民三年私束",
+          "source_text": "讲述者:黄替元 男 76岁 太平乡团结村农民 私塾三年",
           "zh": [
             {
               "t": "讲",
@@ -307,6 +308,11 @@
               "g": "subject"
             },
             {
+              "t": " ",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "男",
               "r": "nán",
               "g": "complement"
@@ -327,6 +333,11 @@
               "g": "complement"
             },
             {
+              "t": " ",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "太",
               "r": "tài",
               "g": "attributive"
@@ -342,8 +353,8 @@
               "g": "attributive"
             },
             {
-              "t": "轩",
-              "r": "xuān",
+              "t": "团",
+              "r": "tuán",
               "g": "attributive"
             },
             {
@@ -367,14 +378,9 @@
               "g": "complement"
             },
             {
-              "t": "三",
-              "r": "sān",
-              "g": "complement"
-            },
-            {
-              "t": "年",
-              "r": "nián",
-              "g": "complement"
+              "t": " ",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "私",
@@ -382,8 +388,18 @@
               "g": "complement"
             },
             {
-              "t": "束",
-              "r": "shù",
+              "t": "塾",
+              "r": "shú",
+              "g": "complement"
+            },
+            {
+              "t": "三",
+              "r": "sān",
+              "g": "complement"
+            },
+            {
+              "t": "年",
+              "r": "nián",
               "g": "complement"
             }
           ],
@@ -453,11 +469,6 @@
                 "t": "歳",
                 "r": "さい",
                 "g": "complement"
-              },
-              {
-                "t": "。",
-                "r": "",
-                "g": "function"
               }
             ],
             [
@@ -477,8 +488,8 @@
                 "g": "attributive"
               },
               {
-                "t": "軒",
-                "r": "けん",
+                "t": "団",
+                "r": "だん",
                 "g": "attributive"
               },
               {
@@ -540,21 +551,21 @@
           ]
         },
         {
-          "source_text": "采了隶者:李兴五男 54岁县文化馆干部中师",
+          "source_text": "采录者:李兴五 男 54岁 县文化馆干部 中师",
           "zh": [
+            {
+              "t": " ",
+              "r": "",
+              "g": "function"
+            },
             {
               "t": "采",
               "r": "cǎi",
               "g": "topic"
             },
             {
-              "t": "了",
-              "r": "le",
-              "g": "topic"
-            },
-            {
-              "t": "隶",
-              "r": "lì",
+              "t": "录",
+              "r": "lù",
               "g": "topic"
             },
             {
@@ -583,6 +594,11 @@
               "g": "subject"
             },
             {
+              "t": " ",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "男",
               "r": "nán",
               "g": "complement"
@@ -601,6 +617,11 @@
               "t": "岁",
               "r": "suì",
               "g": "complement"
+            },
+            {
+              "t": " ",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "县",
@@ -631,6 +652,11 @@
               "t": "部",
               "r": "bù",
               "g": "complement"
+            },
+            {
+              "t": " ",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "中",
@@ -709,11 +735,6 @@
                 "t": "歳",
                 "r": "さい",
                 "g": "complement"
-              },
-              {
-                "t": "。",
-                "r": "",
-                "g": "function"
               }
             ],
             [
@@ -776,8 +797,13 @@
           ]
         },
         {
-          "source_text": "采录时间.地点:1986 年 7 月于新津县太平乡团结村黄海云家",
+          "source_text": "采录时间、地点:1986年7月于新津县太平乡团结村黄海云家",
           "zh": [
+            {
+              "t": " ",
+              "r": "",
+              "g": "function"
+            },
             {
               "t": "采",
               "r": "cǎi",
@@ -799,7 +825,7 @@
               "g": "topic"
             },
             {
-              "t": ".",
+              "t": "、",
               "r": "",
               "g": "function"
             },
@@ -824,29 +850,14 @@
               "g": "adverbial"
             },
             {
-              "t": " ",
-              "r": "",
-              "g": "function"
-            },
-            {
               "t": "年",
               "r": "nián",
               "g": "adverbial"
             },
             {
-              "t": " ",
-              "r": "",
-              "g": "function"
-            },
-            {
               "t": "7",
               "r": "",
               "g": "adverbial"
-            },
-            {
-              "t": " ",
-              "r": "",
-              "g": "function"
             },
             {
               "t": "月",
@@ -856,7 +867,7 @@
             {
               "t": "于",
               "r": "yú",
-              "g": "adverbial"
+              "g": "function"
             },
             {
               "t": "新",
@@ -906,17 +917,17 @@
             {
               "t": "黄",
               "r": "huáng",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "海",
               "r": "hǎi",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "云",
               "r": "yún",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "家",
@@ -985,11 +996,6 @@
                 "t": "月",
                 "r": "がつ",
                 "g": "adverbial"
-              },
-              {
-                "t": "。",
-                "r": "",
-                "g": "function"
               }
             ],
             [
@@ -1046,17 +1052,17 @@
               {
                 "t": "黄",
                 "r": "こう",
-                "g": "adverbial"
+                "g": "attributive"
               },
               {
                 "t": "海",
                 "r": "かい",
-                "g": "adverbial"
+                "g": "attributive"
               },
               {
-                "t": "云",
+                "t": "雲",
                 "r": "うん",
-                "g": "adverbial"
+                "g": "attributive"
               },
               {
                 "t": "宅",

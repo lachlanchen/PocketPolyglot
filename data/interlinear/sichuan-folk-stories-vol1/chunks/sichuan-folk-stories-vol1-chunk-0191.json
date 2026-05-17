@@ -192,20 +192,11 @@
     {
       "id": "sichuan-folk-stories-vol1-p00191",
       "source_text": "0，皮搭嘴下:疫务不堪，",
+      "corrected_text": "皮搭嘴下，疲惫不堪，",
       "units": [
         {
-          "source_text": "0，皮搭嘴下:疫务不堪，",
+          "source_text": "皮搭嘴下，疲惫不堪，",
           "zh": [
-            {
-              "t": "0",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "，",
-              "r": "",
-              "g": "function"
-            },
             {
               "t": "皮",
               "r": "pí",
@@ -214,7 +205,7 @@
             {
               "t": "搭",
               "r": "dā",
-              "g": "subject"
+              "g": "predicate"
             },
             {
               "t": "嘴",
@@ -224,22 +215,22 @@
             {
               "t": "下",
               "r": "xià",
-              "g": "adverbial"
+              "g": "complement"
             },
             {
-              "t": ":",
+              "t": "，",
               "r": "",
               "g": "function"
             },
             {
-              "t": "疫",
-              "r": "yì",
-              "g": "subject"
+              "t": "疲",
+              "r": "pí",
+              "g": "predicate"
             },
             {
-              "t": "务",
-              "r": "wù",
-              "g": "subject"
+              "t": "惫",
+              "r": "bèi",
+              "g": "predicate"
             },
             {
               "t": "不",
@@ -249,7 +240,7 @@
             {
               "t": "堪",
               "r": "kān",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "，",
@@ -260,66 +251,51 @@
           "ja": [
             [
               {
-                "t": "0、",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": "皮",
-                "r": "ひ",
-                "g": "subject"
-              },
-              {
-                "t": "搭",
-                "r": "とう",
-                "g": "subject"
-              },
-              {
-                "t": "の",
-                "r": "",
-                "g": "subject"
-              },
-              {
                 "t": "口",
                 "r": "くち",
                 "g": "object"
               },
               {
-                "t": "元",
-                "r": "もと",
+                "t": "もと",
+                "r": "",
                 "g": "object"
               },
               {
-                "t": "で、",
+                "t": "を",
                 "r": "",
-                "g": "adverbial"
-              }
-            ],
-            [
-              {
-                "t": "疫",
-                "r": "えき",
-                "g": "subject"
+                "g": "object"
               },
               {
-                "t": "務",
-                "r": "む",
-                "g": "subject"
-              },
-              {
-                "t": "は",
-                "r": "",
-                "g": "subject"
-              },
-              {
-                "t": "耐",
+                "t": "垂",
                 "r": "た",
                 "g": "predicate"
               },
               {
-                "t": "えがたいほどだった、",
+                "t": "らし、",
                 "r": "",
                 "g": "predicate"
+              }
+            ],
+            [
+              {
+                "t": "疲",
+                "r": "つか",
+                "g": "predicate"
+              },
+              {
+                "t": "れ",
+                "r": "",
+                "g": "predicate"
+              },
+              {
+                "t": "果",
+                "r": "は",
+                "g": "complement"
+              },
+              {
+                "t": "てていた、",
+                "r": "",
+                "g": "complement"
               }
             ]
           ]

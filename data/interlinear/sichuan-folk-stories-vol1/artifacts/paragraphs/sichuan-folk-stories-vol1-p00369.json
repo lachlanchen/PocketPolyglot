@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 39,
-    "grammar_token_total": 39,
+    "token_total": 44,
+    "grammar_token_total": 44,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0369",
@@ -223,7 +223,7 @@
       },
       {
         "t": "衣",
-        "r": "ころも",
+        "r": "い",
         "g": "attributive"
       },
       {
@@ -268,27 +268,28 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00369",
     "source_text": "采录着:景星明男 37岁文化专干高中",
+    "corrected_text": "采录者：景星明，男，37岁，文化专干，高中。",
     "units": [
       {
-        "source_text": "采录着:景星明男 37岁文化专干高中",
+        "source_text": "采录者：景星明，男，37岁，文化专干，高中。",
         "zh": [
           {
             "t": "采",
             "r": "cǎi",
-            "g": "predicate"
+            "g": "topic"
           },
           {
             "t": "录",
             "r": "lù",
-            "g": "predicate"
+            "g": "topic"
           },
           {
-            "t": "着",
-            "r": "zhe",
-            "g": "predicate"
+            "t": "者",
+            "r": "zhě",
+            "g": "topic"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -308,12 +309,17 @@
             "g": "subject"
           },
           {
-            "t": "男",
-            "r": "nán",
-            "g": "subject"
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
-            "t": " ",
+            "t": "男",
+            "r": "nán",
+            "g": "complement"
+          },
+          {
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -333,14 +339,19 @@
             "g": "attributive"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "文",
             "r": "wén",
-            "g": "attributive"
+            "g": "object"
           },
           {
             "t": "化",
             "r": "huà",
-            "g": "attributive"
+            "g": "object"
           },
           {
             "t": "专",
@@ -353,14 +364,24 @@
             "g": "object"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "高",
             "r": "gāo",
-            "g": "attributive"
+            "g": "complement"
           },
           {
             "t": "中",
             "r": "zhōng",
-            "g": "object"
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -368,17 +389,17 @@
             {
               "t": "採",
               "r": "さい",
-              "g": "predicate"
+              "g": "topic"
             },
             {
               "t": "録",
               "r": "ろく",
-              "g": "predicate"
+              "g": "topic"
             },
             {
               "t": "者",
               "r": "しゃ",
-              "g": "function"
+              "g": "topic"
             },
             {
               "t": "：",
@@ -408,12 +429,12 @@
             {
               "t": "男",
               "r": "だん",
-              "g": "subject"
+              "g": "complement"
             },
             {
               "t": "性",
               "r": "せい",
-              "g": "subject"
+              "g": "complement"
             },
             {
               "t": "、37",
@@ -426,7 +447,7 @@
               "g": "attributive"
             },
             {
-              "t": "、",
+              "t": "。",
               "r": "",
               "g": "function"
             }
@@ -435,12 +456,12 @@
             {
               "t": "文",
               "r": "ぶん",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "化",
               "r": "か",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "専",
@@ -460,17 +481,17 @@
             {
               "t": "高",
               "r": "こう",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "中",
               "r": "ちゅう",
-              "g": "object"
+              "g": "complement"
             },
             {
               "t": "卒",
               "r": "そつ",
-              "g": "object"
+              "g": "complement"
             },
             {
               "t": "。",

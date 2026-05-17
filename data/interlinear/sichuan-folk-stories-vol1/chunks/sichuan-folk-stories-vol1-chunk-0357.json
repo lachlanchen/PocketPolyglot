@@ -182,9 +182,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00357",
       "source_text": "跟我来,你看了过后,回到人间就照夭个做。",
+      "corrected_text": "跟我来，你看了过后，回到人间就照这个做。",
       "units": [
         {
-          "source_text": "跟我来,你看了过后,回到人间就照夭个做。",
+          "source_text": "跟我来，你看了过后，",
           "zh": [
             {
               "t": "跟",
@@ -202,7 +203,7 @@
               "g": "predicate"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -214,12 +215,12 @@
             {
               "t": "看",
               "r": "kàn",
-              "g": "adverbial"
+              "g": "predicate"
             },
             {
               "t": "了",
               "r": "le",
-              "g": "adverbial"
+              "g": "predicate"
             },
             {
               "t": "过",
@@ -232,57 +233,7 @@
               "g": "adverbial"
             },
             {
-              "t": ",",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "回",
-              "r": "huí",
-              "g": "adverbial"
-            },
-            {
-              "t": "到",
-              "r": "dào",
-              "g": "adverbial"
-            },
-            {
-              "t": "人",
-              "r": "rén",
-              "g": "adverbial"
-            },
-            {
-              "t": "间",
-              "r": "jiān",
-              "g": "adverbial"
-            },
-            {
-              "t": "就",
-              "r": "jiù",
-              "g": "adverbial"
-            },
-            {
-              "t": "照",
-              "r": "zhào",
-              "g": "adverbial"
-            },
-            {
-              "t": "夭",
-              "r": "yāo",
-              "g": "adverbial"
-            },
-            {
-              "t": "个",
-              "r": "ge",
-              "g": "adverbial"
-            },
-            {
-              "t": "做",
-              "r": "zuò",
-              "g": "predicate"
-            },
-            {
-              "t": "。",
+              "t": "，",
               "r": "",
               "g": "function"
             }
@@ -305,19 +256,21 @@
                 "g": "predicate"
               },
               {
-                "t": "なさい",
+                "t": "なさい、",
                 "r": "",
                 "g": "predicate"
-              },
+              }
+            ],
+            [
               {
-                "t": "、",
+                "t": "あなたが",
                 "r": "",
-                "g": "function"
+                "g": "subject"
               },
               {
                 "t": "見",
                 "r": "み",
-                "g": "adverbial"
+                "g": "predicate"
               },
               {
                 "t": "終",
@@ -325,54 +278,103 @@
                 "g": "adverbial"
               },
               {
-                "t": "えたら",
+                "t": "わったら、",
                 "r": "",
                 "g": "adverbial"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
               }
-            ],
+            ]
+          ]
+        },
+        {
+          "source_text": "回到人间就照这个做。",
+          "zh": [
+            {
+              "t": "回",
+              "r": "huí",
+              "g": "predicate"
+            },
+            {
+              "t": "到",
+              "r": "dào",
+              "g": "complement"
+            },
+            {
+              "t": "人",
+              "r": "rén",
+              "g": "object"
+            },
+            {
+              "t": "间",
+              "r": "jiān",
+              "g": "object"
+            },
+            {
+              "t": "就",
+              "r": "jiù",
+              "g": "adverbial"
+            },
+            {
+              "t": "照",
+              "r": "zhào",
+              "g": "adverbial"
+            },
+            {
+              "t": "这",
+              "r": "zhè",
+              "g": "object"
+            },
+            {
+              "t": "个",
+              "r": "ge",
+              "g": "object"
+            },
+            {
+              "t": "做",
+              "r": "zuò",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          "ja": [
             [
               {
                 "t": "人",
                 "r": "にん",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "間",
                 "r": "げん",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "界",
                 "r": "かい",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "へ",
                 "r": "",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "戻",
                 "r": "もど",
-                "g": "adverbial"
+                "g": "predicate"
               },
               {
-                "t": "って",
+                "t": "ったら、",
                 "r": "",
-                "g": "adverbial"
-              },
+                "g": "complement"
+              }
+            ],
+            [
               {
-                "t": "、",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": "そのとおりに",
+                "t": "このとおりに",
                 "r": "",
                 "g": "adverbial"
               },

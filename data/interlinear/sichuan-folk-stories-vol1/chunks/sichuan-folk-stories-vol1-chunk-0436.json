@@ -212,9 +212,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00436",
       "source_text": "罗杜美女 31岁巴县前进化工厂家属高中采录时间、地点:1988 年8月于巴县广阳转",
+      "corrected_text": "罗杜美女，31岁，巴县前进化工厂家属，高中。采录时间、地点：1988年8月于巴县广阳镇。",
       "units": [
         {
-          "source_text": "罗杜美女 31岁巴县前进化工厂家属高中",
+          "source_text": "罗杜美女，31岁，巴县前进化工厂家属，高中。",
           "zh": [
             {
               "t": "罗",
@@ -237,24 +238,29 @@
               "g": "subject"
             },
             {
-              "t": " ",
+              "t": "，",
               "r": "",
               "g": "function"
             },
             {
               "t": "3",
               "r": "",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "1",
               "r": "",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "岁",
               "r": "suì",
-              "g": "attributive"
+              "g": "complement"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "巴",
@@ -294,22 +300,32 @@
             {
               "t": "家",
               "r": "jiā",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "属",
               "r": "shǔ",
-              "g": "attributive"
+              "g": "object"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "高",
               "r": "gāo",
-              "g": "object"
+              "g": "complement"
             },
             {
               "t": "中",
               "r": "zhōng",
-              "g": "object"
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
@@ -326,7 +342,7 @@
               },
               {
                 "t": "美",
-                "r": "み",
+                "r": "び",
                 "g": "subject"
               },
               {
@@ -342,12 +358,12 @@
               {
                 "t": "31",
                 "r": "",
-                "g": "attributive"
+                "g": "complement"
               },
               {
                 "t": "歳",
                 "r": "さい",
-                "g": "attributive"
+                "g": "complement"
               },
               {
                 "t": "。",
@@ -392,14 +408,19 @@
                 "g": "attributive"
               },
               {
+                "t": "の",
+                "r": "",
+                "g": "attributive"
+              },
+              {
                 "t": "家",
                 "r": "か",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "族",
                 "r": "ぞく",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "、",
@@ -409,17 +430,17 @@
               {
                 "t": "高",
                 "r": "こう",
-                "g": "object"
+                "g": "complement"
               },
               {
                 "t": "校",
                 "r": "こう",
-                "g": "object"
+                "g": "complement"
               },
               {
                 "t": "卒",
                 "r": "そつ",
-                "g": "object"
+                "g": "complement"
               },
               {
                 "t": "。",
@@ -430,7 +451,7 @@
           ]
         },
         {
-          "source_text": "采录时间、地点:1988 年8月于巴县广阳转",
+          "source_text": "采录时间、地点：1988年8月于巴县广阳镇。",
           "zh": [
             {
               "t": "采",
@@ -468,7 +489,7 @@
               "g": "subject"
             },
             {
-              "t": ":",
+              "t": "：",
               "r": "",
               "g": "function"
             },
@@ -491,11 +512,6 @@
               "t": "8",
               "r": "",
               "g": "adverbial"
-            },
-            {
-              "t": " ",
-              "r": "",
-              "g": "function"
             },
             {
               "t": "年",
@@ -538,9 +554,14 @@
               "g": "adverbial"
             },
             {
-              "t": "转",
-              "r": "zhuǎn",
-              "g": "predicate"
+              "t": "镇",
+              "r": "zhèn",
+              "g": "adverbial"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
@@ -633,19 +654,14 @@
                 "g": "adverbial"
               },
               {
-                "t": "にて",
-                "r": "",
+                "t": "鎮",
+                "r": "ちん",
                 "g": "adverbial"
               },
               {
-                "t": "転",
-                "r": "てん",
-                "g": "predicate"
-              },
-              {
-                "t": "載",
-                "r": "さい",
-                "g": "predicate"
+                "t": "にて",
+                "r": "",
+                "g": "adverbial"
               },
               {
                 "t": "。",

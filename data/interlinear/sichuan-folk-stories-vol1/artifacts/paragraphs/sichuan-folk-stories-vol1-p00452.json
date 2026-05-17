@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 67,
-    "grammar_token_total": 67,
+    "token_total": 68,
+    "grammar_token_total": 68,
     "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0452",
@@ -177,7 +177,7 @@
       {
         "t": "和",
         "r": "hé",
-        "g": "function"
+        "g": "subject"
       },
       {
         "t": "（",
@@ -338,9 +338,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00452",
     "source_text": "我叫生姜,哪个都不敢惹我,牛羊吃了我烂心肝,虎豹磁了我从脚杆。",
+    "corrected_text": "我叫生姜，哪个都不敢惹我，牛羊吃了我烂心肝，虎豹碰了我肿脚杆。",
     "units": [
       {
-        "source_text": "我叫生姜,哪个都不敢惹我,",
+        "source_text": "我叫生姜，哪个都不敢惹我，",
         "zh": [
           {
             "t": "我",
@@ -363,7 +364,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -403,7 +404,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -476,7 +477,7 @@
         ]
       },
       {
-        "source_text": "牛羊吃了我烂心肝,虎豹磁了我从脚杆。",
+        "source_text": "牛羊吃了我烂心肝，虎豹碰了我肿脚杆。",
         "zh": [
           {
             "t": "牛",
@@ -519,7 +520,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -534,8 +535,8 @@
             "g": "subject"
           },
           {
-            "t": "磁",
-            "r": "cí",
+            "t": "碰",
+            "r": "pèng",
             "g": "predicate"
           },
           {
@@ -549,9 +550,9 @@
             "g": "object"
           },
           {
-            "t": "从",
-            "r": "cóng",
-            "g": "adverbial"
+            "t": "肿",
+            "r": "zhǒng",
+            "g": "predicate"
           },
           {
             "t": "脚",
@@ -684,12 +685,17 @@
               "g": "object"
             },
             {
-              "t": "から",
+              "t": "が",
               "r": "",
-              "g": "adverbial"
+              "g": "object"
             },
             {
-              "t": "やられる。",
+              "t": "腫",
+              "r": "は",
+              "g": "predicate"
+            },
+            {
+              "t": "れる。",
               "r": "",
               "g": "predicate"
             }

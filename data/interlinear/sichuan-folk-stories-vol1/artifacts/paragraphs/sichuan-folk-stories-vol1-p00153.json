@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 107,
-    "grammar_token_total": 107,
-    "unit_count": 2
+    "token_total": 113,
+    "grammar_token_total": 113,
+    "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0153",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -238,9 +238,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00153",
     "source_text": "从此,管草种的那个神仙就被玉帝打下见间变成了牛。牛天天在地上哨草吃,但草太多了,它水远也哨不完,也就水远回不到天上，",
+    "corrected_text": "从此，管草种的那个神仙就被玉帝打下人间变成了牛。牛天天在地上嚼草吃，但草太多了，它永远也嚼不完，也就永远回不到天上。",
     "units": [
       {
-        "source_text": "从此,管草种的那个神仙就被玉帝打下见间变成了牛。",
+        "source_text": "从此，管草种的那个神仙就被玉帝打下人间变成了牛。",
         "zh": [
           {
             "t": "从",
@@ -253,7 +254,7 @@
             "g": "adverbial"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -328,14 +329,14 @@
             "g": "complement"
           },
           {
-            "t": "见",
-            "r": "jiàn",
-            "g": "complement"
+            "t": "人",
+            "r": "rén",
+            "g": "object"
           },
           {
             "t": "间",
             "r": "jiān",
-            "g": "complement"
+            "g": "object"
           },
           {
             "t": "变",
@@ -438,14 +439,19 @@
               "g": "subject"
             },
             {
-              "t": "下",
-              "r": "した",
-              "g": "complement"
+              "t": "人",
+              "r": "にん",
+              "g": "object"
+            },
+            {
+              "t": "間",
+              "r": "げん",
+              "g": "object"
             },
             {
               "t": "へ",
               "r": "",
-              "g": "complement"
+              "g": "object"
             },
             {
               "t": "打",
@@ -481,7 +487,7 @@
         ]
       },
       {
-        "source_text": "牛天天在地上哨草吃,但草太多了,它水远也哨不完,也就水远回不到天上，",
+        "source_text": "牛天天在地上嚼草吃，但草太多了，",
         "zh": [
           {
             "t": "牛",
@@ -514,8 +520,8 @@
             "g": "adverbial"
           },
           {
-            "t": "哨",
-            "r": "shào",
+            "t": "嚼",
+            "r": "jiáo",
             "g": "predicate"
           },
           {
@@ -529,7 +535,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -557,96 +563,6 @@
             "t": "了",
             "r": "le",
             "g": "predicate"
-          },
-          {
-            "t": ",",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "它",
-            "r": "tā",
-            "g": "subject"
-          },
-          {
-            "t": "水",
-            "r": "shuǐ",
-            "g": "adverbial"
-          },
-          {
-            "t": "远",
-            "r": "yuǎn",
-            "g": "adverbial"
-          },
-          {
-            "t": "也",
-            "r": "yě",
-            "g": "adverbial"
-          },
-          {
-            "t": "哨",
-            "r": "shào",
-            "g": "predicate"
-          },
-          {
-            "t": "不",
-            "r": "bù",
-            "g": "complement"
-          },
-          {
-            "t": "完",
-            "r": "wán",
-            "g": "complement"
-          },
-          {
-            "t": ",",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "也",
-            "r": "yě",
-            "g": "adverbial"
-          },
-          {
-            "t": "就",
-            "r": "jiù",
-            "g": "adverbial"
-          },
-          {
-            "t": "水",
-            "r": "shuǐ",
-            "g": "adverbial"
-          },
-          {
-            "t": "远",
-            "r": "yuǎn",
-            "g": "adverbial"
-          },
-          {
-            "t": "回",
-            "r": "huí",
-            "g": "predicate"
-          },
-          {
-            "t": "不",
-            "r": "bù",
-            "g": "complement"
-          },
-          {
-            "t": "到",
-            "r": "dào",
-            "g": "complement"
-          },
-          {
-            "t": "天",
-            "r": "tiān",
-            "g": "object"
-          },
-          {
-            "t": "上",
-            "r": "shàng",
-            "g": "object"
           },
           {
             "t": "，",
@@ -700,14 +616,16 @@
               "t": "を",
               "r": "",
               "g": "object"
-            },
+            }
+          ],
+          [
             {
-              "t": "口",
-              "r": "くち",
+              "t": "噛",
+              "r": "か",
               "g": "predicate"
             },
             {
-              "t": "にして",
+              "t": "んで",
               "r": "",
               "g": "predicate"
             },
@@ -720,9 +638,7 @@
               "t": "べたが、",
               "r": "",
               "g": "predicate"
-            }
-          ],
-          [
+            },
             {
               "t": "草",
               "r": "くさ",
@@ -739,9 +655,113 @@
               "g": "predicate"
             },
             {
-              "t": "く、",
+              "t": "かったので、",
               "r": "",
               "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "它永远也嚼不完，也就永远回不到天上。",
+        "zh": [
+          {
+            "t": "它",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "永",
+            "r": "yǒng",
+            "g": "adverbial"
+          },
+          {
+            "t": "远",
+            "r": "yuǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "嚼",
+            "r": "jiáo",
+            "g": "predicate"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "complement"
+          },
+          {
+            "t": "完",
+            "r": "wán",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "永",
+            "r": "yǒng",
+            "g": "adverbial"
+          },
+          {
+            "t": "远",
+            "r": "yuǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "回",
+            "r": "huí",
+            "g": "predicate"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "complement"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "complement"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "object"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "それを",
+              "r": "",
+              "g": "object"
             },
             {
               "t": "いつまでも",
@@ -749,12 +769,12 @@
               "g": "adverbial"
             },
             {
-              "t": "食",
-              "r": "た",
+              "t": "噛",
+              "r": "か",
               "g": "predicate"
             },
             {
-              "t": "べ",
+              "t": "み",
               "r": "",
               "g": "predicate"
             },
@@ -764,9 +784,31 @@
               "g": "complement"
             },
             {
-              "t": "くせず、",
+              "t": "くすことができず、",
               "r": "",
               "g": "complement"
+            }
+          ],
+          [
+            {
+              "t": "そのため",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "永",
+              "r": "えい",
+              "g": "adverbial"
+            },
+            {
+              "t": "遠",
+              "r": "えん",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
             },
             {
               "t": "天",
@@ -789,7 +831,7 @@
               "g": "predicate"
             },
             {
-              "t": "れなかった、",
+              "t": "れなくなった。",
               "r": "",
               "g": "predicate"
             }

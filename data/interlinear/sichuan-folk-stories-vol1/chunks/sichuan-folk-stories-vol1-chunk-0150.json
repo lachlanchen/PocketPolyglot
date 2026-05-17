@@ -33,17 +33,17 @@
       {
         "t": "动",
         "r": "dòng",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "植",
         "r": "zhí",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "物",
         "r": "wù",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "神",
@@ -60,17 +60,17 @@
       {
         "t": "動",
         "r": "どう",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "植",
         "r": "しょく",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "物",
         "r": "ぶつ",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "神",
@@ -187,9 +187,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00150",
       "source_text": "有一回,玉皇大帝又出来巡天。他听到地上的人喊叫声很大,就伸起脑壳往下看。他看到那些庄稼汉在地头扯草,汗水长流,还有很多人光着背峭,背上的皮都晒裂了.他心肠一软,就问管草种的那个神仙:地上为啥长那么多的草哇?",
+      "corrected_text": "有一回，玉皇大帝又出来巡天。他听到地上的人喊叫声很大，就伸起脑壳往下看。他看到那些庄稼汉在地头扯草，汗水长流，还有很多人光着背脊，背上的皮都晒裂了。他心肠一软，就问管草种的那个神仙：地上为啥长那么多的草哇？",
       "units": [
         {
-          "source_text": "有一回,玉皇大帝又出来巡天。",
+          "source_text": "有一回，玉皇大帝又出来巡天。",
           "zh": [
             {
               "t": "有",
@@ -207,7 +208,7 @@
               "g": "adverbial"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -337,7 +338,7 @@
                 "g": "predicate"
               },
               {
-                "t": "た",
+                "t": "てきた",
                 "r": "",
                 "g": "predicate"
               },
@@ -350,7 +351,7 @@
           ]
         },
         {
-          "source_text": "他听到地上的人喊叫声很大,就伸起脑壳往下看。",
+          "source_text": "他听到地上的人喊叫声很大，就伸起脑壳往下看。",
           "zh": [
             {
               "t": "他",
@@ -370,32 +371,32 @@
             {
               "t": "地",
               "r": "dì",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "上",
               "r": "shàng",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "的",
               "r": "de",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "人",
               "r": "rén",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "喊",
               "r": "hǎn",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "叫",
               "r": "jiào",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "声",
@@ -405,15 +406,15 @@
             {
               "t": "很",
               "r": "hěn",
-              "g": "object"
+              "g": "complement"
             },
             {
               "t": "大",
               "r": "dà",
-              "g": "object"
+              "g": "complement"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -478,37 +479,27 @@
               {
                 "t": "地",
                 "r": "ち",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "上",
                 "r": "じょう",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "の",
                 "r": "",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "人",
                 "r": "ひと",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "たちの",
                 "r": "",
-                "g": "object"
-              },
-              {
-                "t": "大",
-                "r": "おお",
-                "g": "object"
-              },
-              {
-                "t": "きな",
-                "r": "",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "叫",
@@ -526,9 +517,19 @@
                 "g": "object"
               },
               {
-                "t": "を",
+                "t": "が",
                 "r": "",
                 "g": "object"
+              },
+              {
+                "t": "大",
+                "r": "おお",
+                "g": "complement"
+              },
+              {
+                "t": "きいのを",
+                "r": "",
+                "g": "complement"
               },
               {
                 "t": "聞",
@@ -578,7 +579,17 @@
                 "g": "adverbial"
               },
               {
-                "t": "のぞいた",
+                "t": "見",
+                "r": "み",
+                "g": "predicate"
+              },
+              {
+                "t": "下",
+                "r": "お",
+                "g": "predicate"
+              },
+              {
+                "t": "ろした",
                 "r": "",
                 "g": "predicate"
               },
@@ -591,7 +602,7 @@
           ]
         },
         {
-          "source_text": "他看到那些庄稼汉在地头扯草,汗水长流,还有很多人光着背峭,背上的皮都晒裂了.",
+          "source_text": "他看到那些庄稼汉在地头扯草，汗水长流，还有很多人光着背脊，背上的皮都晒裂了。",
           "zh": [
             {
               "t": "他",
@@ -659,7 +670,7 @@
               "g": "object"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -676,7 +687,7 @@
             {
               "t": "长",
               "r": "cháng",
-              "g": "predicate"
+              "g": "adverbial"
             },
             {
               "t": "流",
@@ -684,7 +695,7 @@
               "g": "predicate"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -701,12 +712,12 @@
             {
               "t": "很",
               "r": "hěn",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "多",
               "r": "duō",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "人",
@@ -729,12 +740,12 @@
               "g": "object"
             },
             {
-              "t": "峭",
-              "r": "qiào",
+              "t": "脊",
+              "r": "jǐ",
               "g": "object"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -771,15 +782,15 @@
             {
               "t": "裂",
               "r": "liè",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "了",
               "r": "le",
-              "g": "predicate"
+              "g": "function"
             },
             {
-              "t": ".",
+              "t": "。",
               "r": "",
               "g": "function"
             }
@@ -889,29 +900,44 @@
               {
                 "t": "続",
                 "r": "つづ",
+                "g": "complement"
+              },
+              {
+                "t": "けるのを",
+                "r": "",
+                "g": "complement"
+              },
+              {
+                "t": "見",
+                "r": "み",
                 "g": "predicate"
               },
               {
-                "t": "け",
+                "t": "た",
                 "r": "",
                 "g": "predicate"
               },
               {
-                "t": "、",
+                "t": "。",
                 "r": "",
                 "g": "function"
               }
             ],
             [
               {
+                "t": "さらに",
+                "r": "",
+                "g": "adverbial"
+              },
+              {
                 "t": "多",
                 "r": "おお",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "くの",
                 "r": "",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "人",
@@ -924,18 +950,13 @@
                 "g": "subject"
               },
               {
-                "t": "裸",
-                "r": "はだか",
-                "g": "object"
-              },
-              {
-                "t": "の",
-                "r": "",
-                "g": "object"
-              },
-              {
                 "t": "背",
                 "r": "せ",
+                "g": "object"
+              },
+              {
+                "t": "中",
+                "r": "なか",
                 "g": "object"
               },
               {
@@ -944,7 +965,17 @@
                 "g": "object"
               },
               {
-                "t": "さらし",
+                "t": "むき",
+                "r": "",
+                "g": "predicate"
+              },
+              {
+                "t": "出",
+                "r": "だ",
+                "g": "predicate"
+              },
+              {
+                "t": "し",
                 "r": "",
                 "g": "predicate"
               },
@@ -989,34 +1020,19 @@
                 "g": "predicate"
               },
               {
-                "t": "けて",
+                "t": "け",
                 "r": "",
                 "g": "predicate"
               },
               {
                 "t": "裂",
                 "r": "さ",
-                "g": "predicate"
+                "g": "complement"
               },
               {
-                "t": "けた",
+                "t": "けていた",
                 "r": "",
-                "g": "predicate"
-              },
-              {
-                "t": "のを",
-                "r": "",
-                "g": "object"
-              },
-              {
-                "t": "見",
-                "r": "み",
-                "g": "predicate"
-              },
-              {
-                "t": "た",
-                "r": "",
-                "g": "predicate"
+                "g": "complement"
               },
               {
                 "t": "。",
@@ -1027,7 +1043,7 @@
           ]
         },
         {
-          "source_text": "他心肠一软,就问管草种的那个神仙:地上为啥长那么多的草哇?",
+          "source_text": "他心肠一软，就问管草种的那个神仙：地上为啥长那么多的草哇？",
           "zh": [
             {
               "t": "他",
@@ -1055,7 +1071,7 @@
               "g": "predicate"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -1072,22 +1088,22 @@
             {
               "t": "管",
               "r": "guǎn",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "草",
               "r": "cǎo",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "种",
               "r": "zhǒng",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "的",
               "r": "de",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "那",
@@ -1110,7 +1126,7 @@
               "g": "object"
             },
             {
-              "t": ":",
+              "t": "：",
               "r": "",
               "g": "function"
             },
@@ -1142,22 +1158,22 @@
             {
               "t": "那",
               "r": "nà",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "么",
               "r": "me",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "多",
               "r": "duō",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "的",
               "r": "de",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "草",
@@ -1170,7 +1186,7 @@
               "g": "function"
             },
             {
-              "t": "?",
+              "t": "？",
               "r": "",
               "g": "function"
             }
@@ -1215,32 +1231,32 @@
               {
                 "t": "草",
                 "r": "くさ",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "の",
                 "r": "",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "種",
                 "r": "たね",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "を",
                 "r": "",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "司",
                 "r": "つかさど",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "るその",
                 "r": "",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "神",
@@ -1290,24 +1306,24 @@
                 "g": "adverbial"
               },
               {
-                "t": "どうして",
+                "t": "なぜ",
                 "r": "",
                 "g": "adverbial"
               },
               {
                 "t": "あんなに",
                 "r": "",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "多",
                 "r": "おお",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "くの",
                 "r": "",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "草",
@@ -1330,7 +1346,12 @@
                 "g": "predicate"
               },
               {
-                "t": "、と。",
+                "t": "、と",
+                "r": "",
+                "g": "predicate"
+              },
+              {
+                "t": "。",
                 "r": "",
                 "g": "function"
               }

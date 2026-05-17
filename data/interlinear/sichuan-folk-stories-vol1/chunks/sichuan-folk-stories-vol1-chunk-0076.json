@@ -185,12 +185,7 @@
         "g": "function"
       },
       {
-        "t": "0",
-        "r": "",
-        "g": "function"
-      },
-      {
-        "t": ". ",
+        "t": "0. ",
         "r": "",
         "g": "function"
       },
@@ -207,7 +202,7 @@
       {
         "t": "と",
         "r": "",
-        "g": "function"
+        "g": "subject"
       },
       {
         "t": "月",
@@ -247,9 +242,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00076",
       "source_text": "张德清男 24岁乡小学坟师中专采耿时间、.地点:1987 年 10 月于万源县升沁乡",
+      "corrected_text": "张德清，男，24岁，乡小学教师，中专。采录时间、地点：1987年10月于万源县升沁乡",
       "units": [
         {
-          "source_text": "张德清男 24岁乡小学坟师",
+          "source_text": "张德清，男，24岁，乡小学教师，中专。",
           "zh": [
             {
               "t": "张",
@@ -267,12 +263,17 @@
               "g": "subject"
             },
             {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "男",
               "r": "nán",
               "g": "predicate"
             },
             {
-              "t": " ",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -292,6 +293,11 @@
               "g": "predicate"
             },
             {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "乡",
               "r": "xiāng",
               "g": "attributive"
@@ -307,14 +313,34 @@
               "g": "attributive"
             },
             {
-              "t": "坟",
-              "r": "fén",
+              "t": "教",
+              "r": "jiào",
               "g": "predicate"
             },
             {
               "t": "师",
               "r": "shī",
               "g": "predicate"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "中",
+              "r": "zhōng",
+              "g": "complement"
+            },
+            {
+              "t": "专",
+              "r": "zhuān",
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
@@ -335,7 +361,7 @@
                 "g": "subject"
               },
               {
-                "t": "、",
+                "t": "は",
                 "r": "",
                 "g": "subject"
               },
@@ -392,14 +418,34 @@
                 "g": "attributive"
               },
               {
-                "t": "坟",
-                "r": "ふん",
+                "t": "教",
+                "r": "きょう",
                 "g": "predicate"
               },
               {
                 "t": "師",
                 "r": "し",
                 "g": "predicate"
+              },
+              {
+                "t": "、",
+                "r": "",
+                "g": "function"
+              },
+              {
+                "t": "中",
+                "r": "ちゅう",
+                "g": "complement"
+              },
+              {
+                "t": "専",
+                "r": "せん",
+                "g": "complement"
+              },
+              {
+                "t": "卒",
+                "r": "そつ",
+                "g": "complement"
               },
               {
                 "t": "。",
@@ -410,27 +456,17 @@
           ]
         },
         {
-          "source_text": "中专采耿时间、.地点:1987 年 10 月于万源县升沁乡",
+          "source_text": "采录时间、地点：1987年10月于万源县升沁乡",
           "zh": [
-            {
-              "t": "中",
-              "r": "zhōng",
-              "g": "predicate"
-            },
-            {
-              "t": "专",
-              "r": "zhuān",
-              "g": "predicate"
-            },
             {
               "t": "采",
               "r": "cǎi",
-              "g": "predicate"
+              "g": "attributive"
             },
             {
-              "t": "耿",
-              "r": "gěng",
-              "g": "predicate"
+              "t": "录",
+              "r": "lù",
+              "g": "attributive"
             },
             {
               "t": "时",
@@ -448,11 +484,6 @@
               "g": "function"
             },
             {
-              "t": ".",
-              "r": "",
-              "g": "function"
-            },
-            {
               "t": "地",
               "r": "dì",
               "g": "object"
@@ -463,132 +494,102 @@
               "g": "object"
             },
             {
-              "t": ":",
+              "t": "：",
               "r": "",
               "g": "function"
             },
             {
               "t": "1",
               "r": "",
-              "g": "predicate"
+              "g": "adverbial"
             },
             {
               "t": "9",
               "r": "",
-              "g": "predicate"
+              "g": "adverbial"
             },
             {
               "t": "8",
               "r": "",
-              "g": "predicate"
+              "g": "adverbial"
             },
             {
               "t": "7",
               "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": " ",
-              "r": "",
-              "g": "function"
+              "g": "adverbial"
             },
             {
               "t": "年",
               "r": "nián",
-              "g": "predicate"
-            },
-            {
-              "t": " ",
-              "r": "",
-              "g": "function"
+              "g": "adverbial"
             },
             {
               "t": "1",
               "r": "",
-              "g": "predicate"
+              "g": "adverbial"
             },
             {
               "t": "0",
               "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": " ",
-              "r": "",
-              "g": "function"
+              "g": "adverbial"
             },
             {
               "t": "月",
               "r": "yuè",
-              "g": "predicate"
+              "g": "adverbial"
             },
             {
               "t": "于",
               "r": "yú",
-              "g": "adverbial"
+              "g": "function"
             },
             {
               "t": "万",
               "r": "wàn",
-              "g": "adverbial"
+              "g": "complement"
             },
             {
               "t": "源",
               "r": "yuán",
-              "g": "adverbial"
+              "g": "complement"
             },
             {
               "t": "县",
               "r": "xiàn",
-              "g": "adverbial"
+              "g": "complement"
             },
             {
               "t": "升",
               "r": "shēng",
-              "g": "adverbial"
+              "g": "complement"
             },
             {
               "t": "沁",
               "r": "qìn",
-              "g": "adverbial"
+              "g": "complement"
             },
             {
               "t": "乡",
               "r": "xiāng",
-              "g": "adverbial"
+              "g": "complement"
             }
           ],
           "ja": [
             [
               {
-                "t": "中",
-                "r": "ちゅう",
-                "g": "predicate"
-              },
-              {
-                "t": "専",
-                "r": "せん",
-                "g": "predicate"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
-              },
-              {
                 "t": "採",
                 "r": "さい",
-                "g": "predicate"
+                "g": "attributive"
               },
               {
-                "t": "耿",
-                "r": "こう",
-                "g": "predicate"
+                "t": "録",
+                "r": "ろく",
+                "g": "attributive"
               },
               {
                 "t": "の",
                 "r": "",
-                "g": "predicate"
+                "g": "attributive"
               },
               {
                 "t": "時",
@@ -596,27 +597,27 @@
                 "g": "object"
               },
               {
-                "t": "間",
-                "r": "かん",
+                "t": "期",
+                "r": "き",
                 "g": "object"
               },
               {
-                "t": "・",
+                "t": "と",
                 "r": "",
-                "g": "function"
-              },
-              {
-                "t": "地",
-                "r": "ち",
                 "g": "object"
               },
               {
-                "t": "点",
-                "r": "てん",
+                "t": "場",
+                "r": "ば",
                 "g": "object"
               },
               {
-                "t": "。",
+                "t": "所",
+                "r": "しょ",
+                "g": "object"
+              },
+              {
+                "t": "：",
                 "r": "",
                 "g": "function"
               }
@@ -625,22 +626,22 @@
               {
                 "t": "1987",
                 "r": "",
-                "g": "predicate"
+                "g": "adverbial"
               },
               {
                 "t": "年",
                 "r": "ねん",
-                "g": "predicate"
+                "g": "adverbial"
               },
               {
                 "t": "10",
                 "r": "",
-                "g": "predicate"
+                "g": "adverbial"
               },
               {
                 "t": "月",
                 "r": "がつ",
-                "g": "predicate"
+                "g": "adverbial"
               },
               {
                 "t": "、",
@@ -650,37 +651,37 @@
               {
                 "t": "万",
                 "r": "ばん",
-                "g": "adverbial"
+                "g": "complement"
               },
               {
                 "t": "源",
                 "r": "げん",
-                "g": "adverbial"
+                "g": "complement"
               },
               {
                 "t": "県",
                 "r": "けん",
-                "g": "adverbial"
+                "g": "complement"
               },
               {
                 "t": "升",
                 "r": "しょう",
-                "g": "adverbial"
+                "g": "complement"
               },
               {
                 "t": "沁",
                 "r": "しん",
-                "g": "adverbial"
+                "g": "complement"
               },
               {
                 "t": "郷",
                 "r": "ごう",
-                "g": "adverbial"
+                "g": "complement"
               },
               {
                 "t": "にて",
                 "r": "",
-                "g": "adverbial"
+                "g": "complement"
               },
               {
                 "t": "。",

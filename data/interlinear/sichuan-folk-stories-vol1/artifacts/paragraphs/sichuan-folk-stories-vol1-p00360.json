@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 16,
-    "grammar_token_total": 16,
+    "token_total": 17,
+    "grammar_token_total": 17,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0360",
@@ -233,9 +233,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00360",
     "source_text": "没得,就母亲和我。",
+    "corrected_text": "没得，就母亲和我。",
     "units": [
       {
-        "source_text": "没得,就母亲和我。",
+        "source_text": "没得，就母亲和我。",
         "zh": [
           {
             "t": "没",
@@ -244,11 +245,11 @@
           },
           {
             "t": "得",
-            "r": "de",
+            "r": "dé",
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -288,10 +289,15 @@
             {
               "t": "何",
               "r": "なに",
-              "g": "predicate"
+              "g": "object"
             },
             {
-              "t": "もなかった、",
+              "t": "も",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "なかった、",
               "r": "",
               "g": "predicate"
             }

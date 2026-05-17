@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 168,
-    "grammar_token_total": 168,
+    "token_total": 175,
+    "grammar_token_total": 175,
     "unit_count": 4
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0477",
@@ -283,6 +283,7 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00477",
     "source_text": "西陵圣母摆酒宴为国王的归来压惊贺喜,公主去向国王敬酒。突然,典下暴晒的花白马皮史的一声飞上磺来,起公主就飞出官殴,飞到一棵大桑树上去了。国王吓得脸色",
+    "corrected_text": "西陵圣母摆酒宴为国王的归来压惊贺喜,公主去向国王敬酒。突然,殿下暴晒的花白马皮吱的一声飞上殿来,裹起公主就飞出宫殿,飞到一棵大桑树上去了。国王吓得脸色",
     "units": [
       {
         "source_text": "西陵圣母摆酒宴为国王的归来压惊贺喜,公主去向国王敬酒。",
@@ -471,49 +472,9 @@
               "g": "adverbial"
             },
             {
-              "t": "りを",
+              "t": "りに",
               "r": "",
               "g": "adverbial"
-            },
-            {
-              "t": "迎",
-              "r": "むか",
-              "g": "predicate"
-            },
-            {
-              "t": "え、",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "驚",
-              "r": "おどろ",
-              "g": "object"
-            },
-            {
-              "t": "きを",
-              "r": "",
-              "g": "object"
-            },
-            {
-              "t": "鎮",
-              "r": "しず",
-              "g": "predicate"
-            },
-            {
-              "t": "め",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "祝",
-              "r": "いわ",
-              "g": "attributive"
-            },
-            {
-              "t": "いの",
-              "r": "",
-              "g": "attributive"
             },
             {
               "t": "酒",
@@ -543,6 +504,36 @@
           ],
           [
             {
+              "t": "驚",
+              "r": "おどろ",
+              "g": "object"
+            },
+            {
+              "t": "きを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "鎮",
+              "r": "しず",
+              "g": "predicate"
+            },
+            {
+              "t": "めて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "祝",
+              "r": "いわ",
+              "g": "predicate"
+            },
+            {
+              "t": "い、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
               "t": "公",
               "r": "こう",
               "g": "subject"
@@ -568,7 +559,7 @@
               "g": "adverbial"
             },
             {
-              "t": "のもとへ",
+              "t": "へ",
               "r": "",
               "g": "adverbial"
             },
@@ -606,7 +597,7 @@
         ]
       },
       {
-        "source_text": "突然,典下暴晒的花白马皮史的一声飞上磺来,",
+        "source_text": "突然,殿下暴晒的花白马皮吱的一声飞上殿来,",
         "zh": [
           {
             "t": "突",
@@ -624,8 +615,8 @@
             "g": "function"
           },
           {
-            "t": "典",
-            "r": "diǎn",
+            "t": "殿",
+            "r": "diàn",
             "g": "attributive"
           },
           {
@@ -669,8 +660,8 @@
             "g": "subject"
           },
           {
-            "t": "史",
-            "r": "shǐ",
+            "t": "吱",
+            "r": "zhī",
             "g": "adverbial"
           },
           {
@@ -699,8 +690,8 @@
             "g": "complement"
           },
           {
-            "t": "磺",
-            "r": "huáng",
+            "t": "殿",
+            "r": "diàn",
             "g": "complement"
           },
           {
@@ -732,13 +723,18 @@
               "g": "function"
             },
             {
-              "t": "典",
-              "r": "てん",
+              "t": "殿",
+              "r": "との",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
               "g": "attributive"
             },
             {
               "t": "下",
-              "r": "か",
+              "r": "した",
               "g": "attributive"
             },
             {
@@ -763,7 +759,7 @@
             },
             {
               "t": "白",
-              "r": "しろ",
+              "r": "じろ",
               "g": "attributive"
             },
             {
@@ -789,7 +785,7 @@
           ],
           [
             {
-              "t": "シッと",
+              "t": "きしっと",
               "r": "",
               "g": "adverbial"
             },
@@ -814,18 +810,13 @@
               "g": "adverbial"
             },
             {
-              "t": "磺",
-              "r": "こう",
-              "g": "complement"
-            },
-            {
-              "t": "の",
-              "r": "",
+              "t": "殿",
+              "r": "でん",
               "g": "complement"
             },
             {
               "t": "上",
-              "r": "うえ",
+              "r": "じょう",
               "g": "complement"
             },
             {
@@ -839,16 +830,41 @@
               "g": "predicate"
             },
             {
-              "t": "んできて、",
+              "t": "び",
               "r": "",
               "g": "predicate"
+            },
+            {
+              "t": "上",
+              "r": "あ",
+              "g": "predicate"
+            },
+            {
+              "t": "がって",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "来",
+              "r": "き",
+              "g": "complement"
+            },
+            {
+              "t": "て、",
+              "r": "",
+              "g": "complement"
             }
           ]
         ]
       },
       {
-        "source_text": "起公主就飞出官殴,飞到一棵大桑树上去了。",
+        "source_text": "裹起公主就飞出宫殿,飞到一棵大桑树上去了。",
         "zh": [
+          {
+            "t": "裹",
+            "r": "guǒ",
+            "g": "predicate"
+          },
           {
             "t": "起",
             "r": "qǐ",
@@ -880,13 +896,13 @@
             "g": "complement"
           },
           {
-            "t": "官",
-            "r": "guān",
+            "t": "宫",
+            "r": "gōng",
             "g": "complement"
           },
           {
-            "t": "殴",
-            "r": "ōu",
+            "t": "殿",
+            "r": "diàn",
             "g": "complement"
           },
           {
@@ -917,7 +933,7 @@
           {
             "t": "大",
             "r": "dà",
-            "g": "complement"
+            "g": "attributive"
           },
           {
             "t": "桑",
@@ -963,23 +979,43 @@
               "g": "object"
             },
             {
-              "t": "をさらって、",
+              "t": "を",
               "r": "",
               "g": "object"
             },
             {
-              "t": "そのまま",
+              "t": "包",
+              "r": "つつ",
+              "g": "predicate"
+            },
+            {
+              "t": "み",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "込",
+              "r": "こ",
+              "g": "predicate"
+            },
+            {
+              "t": "むと、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "すぐ",
               "r": "",
               "g": "adverbial"
             },
             {
-              "t": "官",
-              "r": "かん",
+              "t": "宮",
+              "r": "きゅう",
               "g": "complement"
             },
             {
-              "t": "殴",
-              "r": "おう",
+              "t": "殿",
+              "r": "でん",
               "g": "complement"
             },
             {
@@ -1027,12 +1063,12 @@
             {
               "t": "大",
               "r": "おお",
-              "g": "complement"
+              "g": "attributive"
             },
             {
               "t": "きな",
               "r": "",
-              "g": "complement"
+              "g": "attributive"
             },
             {
               "t": "桑",

@@ -167,19 +167,25 @@
     {
       "id": "sichuan-folk-stories-vol1-p00045",
       "source_text": "LT，女娲尺说文。文部）:*古之神荃女,代万物者也。",
+      "corrected_text": "女娲氏，《说文·女部》：“古之神圣女，化万物者也。”",
       "units": [
         {
-          "source_text": "LT，女娲尺说文。",
+          "source_text": "女娲氏，《说文·女部》：",
           "zh": [
             {
-              "t": "L",
-              "r": "",
-              "g": "function"
+              "t": "女",
+              "r": "nǚ",
+              "g": "topic"
             },
             {
-              "t": "T",
-              "r": "",
-              "g": "function"
+              "t": "娲",
+              "r": "wā",
+              "g": "topic"
+            },
+            {
+              "t": "氏",
+              "r": "shì",
+              "g": "topic"
             },
             {
               "t": "，",
@@ -187,32 +193,42 @@
               "g": "function"
             },
             {
-              "t": "女",
-              "r": "nǚ",
-              "g": "subject"
-            },
-            {
-              "t": "娲",
-              "r": "wā",
-              "g": "subject"
-            },
-            {
-              "t": "尺",
-              "r": "chǐ",
-              "g": "predicate"
+              "t": "《",
+              "r": "",
+              "g": "adverbial"
             },
             {
               "t": "说",
               "r": "shuō",
-              "g": "object"
+              "g": "adverbial"
             },
             {
               "t": "文",
               "r": "wén",
-              "g": "object"
+              "g": "adverbial"
             },
             {
-              "t": "。",
+              "t": "·",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "女",
+              "r": "nǚ",
+              "g": "adverbial"
+            },
+            {
+              "t": "部",
+              "r": "bù",
+              "g": "adverbial"
+            },
+            {
+              "t": "》",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "：",
               "r": "",
               "g": "function"
             }
@@ -220,100 +236,70 @@
           "ja": [
             [
               {
-                "t": "LT",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
-              },
-              {
                 "t": "女",
                 "r": "じょ",
-                "g": "subject"
+                "g": "topic"
               },
               {
                 "t": "媧",
                 "r": "か",
-                "g": "subject"
+                "g": "topic"
               },
               {
-                "t": "について",
+                "t": "氏",
+                "r": "し",
+                "g": "topic"
+              },
+              {
+                "t": "は、",
                 "r": "",
-                "g": "subject"
+                "g": "topic"
               }
             ],
             [
               {
                 "t": "『",
                 "r": "",
-                "g": "object"
+                "g": "adverbial"
               },
               {
                 "t": "説",
                 "r": "せつ",
-                "g": "object"
+                "g": "adverbial"
               },
               {
                 "t": "文",
                 "r": "もん",
-                "g": "object"
+                "g": "adverbial"
               },
               {
                 "t": "』",
                 "r": "",
-                "g": "object"
-              },
-              {
-                "t": "に",
-                "r": "",
                 "g": "adverbial"
               },
               {
-                "t": "尺",
-                "r": "しゃく",
-                "g": "predicate"
+                "t": "女",
+                "r": "じょ",
+                "g": "adverbial"
               },
               {
-                "t": "とある",
-                "r": "",
-                "g": "predicate"
+                "t": "部",
+                "r": "ぶ",
+                "g": "adverbial"
               },
               {
-                "t": "。",
+                "t": "にいう：",
                 "r": "",
-                "g": "function"
+                "g": "adverbial"
               }
             ]
           ]
         },
         {
-          "source_text": "文部）:*古之神荃女,代万物者也。",
+          "source_text": "“古之神圣女，化万物者也。”",
           "zh": [
             {
-              "t": "文",
-              "r": "wén",
-              "g": "attributive"
-            },
-            {
-              "t": "部",
-              "r": "bù",
-              "g": "attributive"
-            },
-            {
-              "t": "）",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": ":",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "*",
+              "t": "“",
               "r": "",
               "g": "function"
             },
@@ -333,9 +319,9 @@
               "g": "attributive"
             },
             {
-              "t": "荃",
-              "r": "quán",
-              "g": "subject"
+              "t": "圣",
+              "r": "shèng",
+              "g": "attributive"
             },
             {
               "t": "女",
@@ -343,13 +329,13 @@
               "g": "subject"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
             {
-              "t": "代",
-              "r": "dài",
+              "t": "化",
+              "r": "huà",
               "g": "predicate"
             },
             {
@@ -365,7 +351,7 @@
             {
               "t": "者",
               "r": "zhě",
-              "g": "function"
+              "g": "complement"
             },
             {
               "t": "也",
@@ -376,22 +362,17 @@
               "t": "。",
               "r": "",
               "g": "function"
+            },
+            {
+              "t": "”",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
             [
               {
-                "t": "文",
-                "r": "ぶん",
-                "g": "attributive"
-              },
-              {
-                "t": "部",
-                "r": "ぶ",
-                "g": "attributive"
-              },
-              {
-                "t": "）:*",
+                "t": "「",
                 "r": "",
                 "g": "function"
               },
@@ -407,26 +388,26 @@
               },
               {
                 "t": "神",
-                "r": "かみ",
+                "r": "しん",
                 "g": "attributive"
               },
               {
-                "t": "たる",
+                "t": "聖",
+                "r": "せい",
+                "g": "attributive"
+              },
+              {
+                "t": "なる",
                 "r": "",
                 "g": "attributive"
               },
               {
-                "t": "荃",
-                "r": "せん",
-                "g": "subject"
-              },
-              {
                 "t": "女",
-                "r": "じょ",
+                "r": "おんな",
                 "g": "subject"
               },
               {
-                "t": "は",
+                "t": "で、",
                 "r": "",
                 "g": "subject"
               }
@@ -443,32 +424,32 @@
                 "g": "object"
               },
               {
-                "t": "に",
+                "t": "を",
                 "r": "",
                 "g": "object"
               },
               {
-                "t": "代",
+                "t": "化",
                 "r": "か",
                 "g": "predicate"
               },
               {
-                "t": "わる",
+                "t": "育",
+                "r": "いく",
+                "g": "predicate"
+              },
+              {
+                "t": "する",
                 "r": "",
                 "g": "predicate"
               },
               {
                 "t": "者",
                 "r": "もの",
-                "g": "function"
+                "g": "complement"
               },
               {
-                "t": "である",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": "。",
+                "t": "である。」",
                 "r": "",
                 "g": "function"
               }

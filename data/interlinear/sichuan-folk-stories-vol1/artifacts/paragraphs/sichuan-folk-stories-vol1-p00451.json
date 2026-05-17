@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 41,
-    "grammar_token_total": 41,
+    "token_total": 42,
+    "grammar_token_total": 42,
     "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0451",
@@ -177,7 +177,7 @@
       {
         "t": "和",
         "r": "hé",
-        "g": "function"
+        "g": "object"
       },
       {
         "t": "（",
@@ -338,9 +338,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00451",
     "source_text": "神农看了看生姜,问,你是哪个,有哈本事呀?",
+    "corrected_text": "神农看了看生姜，问：“你是哪个，有啥本事呀？”",
     "units": [
       {
-        "source_text": "神农看了看生姜,问,",
+        "source_text": "神农看了看生姜，问：",
         "zh": [
           {
             "t": "神",
@@ -378,7 +379,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -388,7 +389,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "：",
             "r": "",
             "g": "function"
           }
@@ -428,7 +429,7 @@
           ],
           [
             {
-              "t": "ちらりと",
+              "t": "じっと",
               "r": "",
               "g": "adverbial"
             },
@@ -456,8 +457,13 @@
         ]
       },
       {
-        "source_text": "你是哪个,有哈本事呀?",
+        "source_text": "“你是哪个，有啥本事呀？”",
         "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
           {
             "t": "你",
             "r": "nǐ",
@@ -479,7 +485,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -489,9 +495,9 @@
             "g": "predicate"
           },
           {
-            "t": "哈",
-            "r": "hā",
-            "g": "object"
+            "t": "啥",
+            "r": "shá",
+            "g": "attributive"
           },
           {
             "t": "本",
@@ -509,7 +515,7 @@
             "g": "function"
           },
           {
-            "t": "?",
+            "t": "？”",
             "r": "",
             "g": "function"
           }
@@ -517,7 +523,7 @@
         "ja": [
           [
             {
-              "t": "おまえ",
+              "t": "「おまえ",
               "r": "",
               "g": "subject"
             },
@@ -534,7 +540,7 @@
             {
               "t": "だ、",
               "r": "",
-              "g": "function"
+              "g": "predicate"
             }
           ],
           [
@@ -559,7 +565,7 @@
               "g": "object"
             },
             {
-              "t": "あるのか。",
+              "t": "あるのだ？」",
               "r": "",
               "g": "predicate"
             }

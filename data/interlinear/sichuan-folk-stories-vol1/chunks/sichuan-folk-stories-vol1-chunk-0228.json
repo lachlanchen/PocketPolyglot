@@ -165,22 +165,22 @@
       {
         "t": "兄",
         "r": "xiōng",
-        "g": "attributive"
+        "g": "subject"
       },
       {
         "t": "妹",
         "r": "mèi",
-        "g": "attributive"
+        "g": "subject"
       },
       {
         "t": "造",
         "r": "zào",
-        "g": "attributive"
+        "g": "predicate"
       },
       {
         "t": "人",
         "r": "rén",
-        "g": "attributive"
+        "g": "object"
       }
     ],
     "title_ja": [
@@ -212,12 +212,12 @@
       {
         "t": "兄",
         "r": "きょう",
-        "g": "attributive"
+        "g": "subject"
       },
       {
         "t": "妹",
         "r": "だい",
-        "g": "attributive"
+        "g": "subject"
       },
       {
         "t": "、",
@@ -227,22 +227,22 @@
       {
         "t": "人",
         "r": "ひと",
-        "g": "attributive"
+        "g": "object"
       },
       {
         "t": "を",
         "r": "",
-        "g": "attributive"
+        "g": "object"
       },
       {
         "t": "造",
         "r": "つく",
-        "g": "attributive"
+        "g": "predicate"
       },
       {
         "t": "る",
         "r": "",
-        "g": "attributive"
+        "g": "predicate"
       }
     ],
     "place_zh": [],
@@ -252,9 +252,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00228",
       "source_text": "从此以后,人死后都要打锣打鼓送上山去,据说就是在还那管山仙人的泥巴。",
+      "corrected_text": "从此以后，人死后都要打锣打鼓送上山去，据说就是在还那管山仙人的泥巴。",
       "units": [
         {
-          "source_text": "从此以后,人死后都要打锣打鼓送上山去,",
+          "source_text": "从此以后，人死后都要打锣打鼓送上山去，",
           "zh": [
             {
               "t": "从",
@@ -277,7 +278,7 @@
               "g": "adverbial"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -347,7 +348,7 @@
               "g": "complement"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             }
@@ -412,13 +413,8 @@
                 "g": "adverbial"
               },
               {
-                "t": "銅",
-                "r": "どら",
-                "g": "object"
-              },
-              {
-                "t": "鑼",
-                "r": "ら",
+                "t": "鉦",
+                "r": "かね",
                 "g": "object"
               },
               {
@@ -442,12 +438,12 @@
                 "g": "object"
               },
               {
-                "t": "打",
-                "r": "う",
+                "t": "鳴",
+                "r": "な",
                 "g": "predicate"
               },
               {
-                "t": "って",
+                "t": "らして",
                 "r": "",
                 "g": "predicate"
               },
@@ -485,12 +481,12 @@
             {
               "t": "据",
               "r": "jù",
-              "g": "function"
+              "g": "adverbial"
             },
             {
               "t": "说",
               "r": "shuō",
-              "g": "function"
+              "g": "adverbial"
             },
             {
               "t": "就",
@@ -563,12 +559,12 @@
               {
                 "t": "伝",
                 "r": "つた",
-                "g": "function"
+                "g": "adverbial"
               },
               {
-                "t": "えによれば",
+                "t": "えでは",
                 "r": "",
-                "g": "function"
+                "g": "adverbial"
               },
               {
                 "t": "、",

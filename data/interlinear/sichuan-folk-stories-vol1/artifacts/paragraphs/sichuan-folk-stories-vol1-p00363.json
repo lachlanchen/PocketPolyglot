@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 33,
-    "grammar_token_total": 33,
-    "unit_count": 1
+    "token_total": 34,
+    "grammar_token_total": 34,
+    "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0363",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -153,15 +153,7 @@
         "r": "ぬの"
       },
       {
-        "t": "はどのようにして",
-        "r": ""
-      },
-      {
-        "t": "来",
-        "r": "き"
-      },
-      {
-        "t": "たのか",
+        "t": "はどのようにしてできたか",
         "r": ""
       }
     ],
@@ -171,9 +163,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00363",
     "source_text": "这样,人们才学会了织布,穿上了衣交。",
+    "corrected_text": "这样,人们才学会了织布,穿上了衣裳。",
     "units": [
       {
-        "source_text": "这样,人们才学会了织布,穿上了衣交。",
+        "source_text": "这样,人们才学会了织布,",
         "zh": [
           {
             "t": "这",
@@ -234,7 +227,68 @@
             "t": ",",
             "r": "",
             "g": "function"
-          },
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "こうして、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "subject"
+            },
+            {
+              "t": "々は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "ようやく",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "布",
+              "r": "ぬの",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "織",
+              "r": "お",
+              "g": "object"
+            },
+            {
+              "t": "ることを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "覚",
+              "r": "おぼ",
+              "g": "predicate"
+            },
+            {
+              "t": "え、",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "穿上了衣裳。",
+        "zh": [
           {
             "t": "穿",
             "r": "chuān",
@@ -256,8 +310,8 @@
             "g": "object"
           },
           {
-            "t": "交",
-            "r": "jiāo",
+            "t": "裳",
+            "r": "shang",
             "g": "object"
           },
           {
@@ -268,58 +322,6 @@
         ],
         "ja": [
           [
-            {
-              "t": "こうして、",
-              "r": "",
-              "g": "adverbial"
-            },
-            {
-              "t": "人",
-              "r": "ひと",
-              "g": "subject"
-            },
-            {
-              "t": "々",
-              "r": "",
-              "g": "subject"
-            },
-            {
-              "t": "はようやく",
-              "r": "",
-              "g": "adverbial"
-            },
-            {
-              "t": "布",
-              "r": "ぬの",
-              "g": "object"
-            },
-            {
-              "t": "を",
-              "r": "",
-              "g": "object"
-            },
-            {
-              "t": "織",
-              "r": "お",
-              "g": "object"
-            },
-            {
-              "t": "ることを",
-              "r": "",
-              "g": "object"
-            }
-          ],
-          [
-            {
-              "t": "覚",
-              "r": "おぼ",
-              "g": "predicate"
-            },
-            {
-              "t": "え、",
-              "r": "",
-              "g": "predicate"
-            },
             {
               "t": "衣",
               "r": "い",
@@ -338,10 +340,17 @@
             {
               "t": "身",
               "r": "み",
-              "g": "predicate"
+              "g": "complement"
             },
             {
-              "t": "につけるようになった。",
+              "t": "につける",
+              "r": "",
+              "g": "complement"
+            }
+          ],
+          [
+            {
+              "t": "ようになった。",
               "r": "",
               "g": "predicate"
             }

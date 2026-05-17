@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 92,
-    "grammar_token_total": 92,
+    "token_total": 93,
+    "grammar_token_total": 93,
     "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0354",
@@ -212,14 +212,14 @@
         "g": "adverbial"
       },
       {
-        "t": "来",
-        "r": "き",
+        "t": "生",
+        "r": "う",
         "g": "predicate"
       },
       {
-        "t": "たのか",
+        "t": "まれたのか",
         "r": "",
-        "g": "function"
+        "g": "predicate"
       }
     ],
     "place_zh": [],
@@ -228,9 +228,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00354",
     "source_text": "王母老娘听到了,赶忙出来问他做啥子。轩边说:你们天上有乱个好的布,我也想要-点来制件衣装。",
+    "corrected_text": "王母老娘听到了，赶忙出来问他做啥子。轩辕说：你们天上有恁个好的布，我也想要一点来制件衣装。",
     "units": [
       {
-        "source_text": "王母老娘听到了,赶忙出来问他做啥子。",
+        "source_text": "王母老娘听到了，赶忙出来问他做啥子。",
         "zh": [
           {
             "t": "王",
@@ -268,7 +269,7 @@
             "g": "function"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -336,8 +337,8 @@
               "g": "subject"
             },
             {
-              "t": "娘",
-              "r": "にゃん",
+              "t": "老",
+              "r": "ろう",
               "g": "subject"
             },
             {
@@ -385,7 +386,7 @@
             {
               "t": "て",
               "r": "",
-              "g": "function"
+              "g": "predicate"
             },
             {
               "t": "来",
@@ -425,13 +426,13 @@
             {
               "t": "ねた。",
               "r": "",
-              "g": "function"
+              "g": "predicate"
             }
           ]
         ]
       },
       {
-        "source_text": "轩边说:你们天上有乱个好的布,我也想要-点来制件衣装。",
+        "source_text": "轩辕说：你们天上有恁个好的布，我也想要一点来制件衣装。",
         "zh": [
           {
             "t": "轩",
@@ -439,8 +440,8 @@
             "g": "subject"
           },
           {
-            "t": "边",
-            "r": "biān",
+            "t": "辕",
+            "r": "yuán",
             "g": "subject"
           },
           {
@@ -449,7 +450,7 @@
             "g": "predicate"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -479,8 +480,8 @@
             "g": "predicate"
           },
           {
-            "t": "乱",
-            "r": "luàn",
+            "t": "恁",
+            "r": "nèn",
             "g": "attributive"
           },
           {
@@ -504,7 +505,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -529,9 +530,9 @@
             "g": "predicate"
           },
           {
-            "t": "-",
-            "r": "",
-            "g": "function"
+            "t": "一",
+            "r": "yì",
+            "g": "object"
           },
           {
             "t": "点",
@@ -577,8 +578,8 @@
               "g": "subject"
             },
             {
-              "t": "辺",
-              "r": "へん",
+              "t": "轅",
+              "r": "えん",
               "g": "subject"
             },
             {
@@ -592,7 +593,7 @@
               "g": "predicate"
             },
             {
-              "t": "った。",
+              "t": "った。「",
               "r": "",
               "g": "function"
             },
@@ -637,7 +638,7 @@
               "g": "object"
             },
             {
-              "t": "ある、",
+              "t": "ある。",
               "r": "",
               "g": "predicate"
             }
@@ -669,9 +670,9 @@
               "g": "predicate"
             },
             {
-              "t": "しい。",
+              "t": "しい、",
               "r": "",
-              "g": "function"
+              "g": "predicate"
             },
             {
               "t": "それで",
@@ -679,8 +680,13 @@
               "g": "adverbial"
             },
             {
-              "t": "服",
-              "r": "ふく",
+              "t": "衣",
+              "r": "い",
+              "g": "object"
+            },
+            {
+              "t": "装",
+              "r": "しょう",
               "g": "object"
             },
             {
@@ -704,7 +710,7 @@
               "g": "predicate"
             },
             {
-              "t": "りたい。",
+              "t": "りたい」。",
               "r": "",
               "g": "predicate"
             }

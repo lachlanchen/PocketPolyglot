@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 53,
-    "grammar_token_total": 53,
+    "token_total": 58,
+    "grammar_token_total": 58,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0336",
@@ -203,9 +203,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00336",
     "source_text": "讲述者:杨学模男 39岁巴县广阳镇泥河村农民小学",
+    "corrected_text": "讲述者：杨学模，男，39岁，巴县广阳镇泥河村农民，小学。",
     "units": [
       {
-        "source_text": "讲述者:杨学模男 39岁巴县广阳镇泥河村农民小学",
+        "source_text": "讲述者：杨学模，男，39岁，巴县广阳镇泥河村农民，小学。",
         "zh": [
           {
             "t": "讲",
@@ -223,7 +224,7 @@
             "g": "subject"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -243,12 +244,17 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "男",
             "r": "nán",
             "g": "attributive"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -261,6 +267,11 @@
             "t": "岁",
             "r": "suì",
             "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "巴",
@@ -313,14 +324,24 @@
             "g": "object"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "小",
             "r": "xiǎo",
-            "g": "object"
+            "g": "complement"
           },
           {
             "t": "学",
             "r": "xué",
-            "g": "object"
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -460,22 +481,22 @@
             {
               "t": "小",
               "r": "しょう",
-              "g": "object"
+              "g": "complement"
             },
             {
               "t": "学",
               "r": "がく",
-              "g": "object"
+              "g": "complement"
             },
             {
               "t": "校",
               "r": "こう",
-              "g": "object"
+              "g": "complement"
             },
             {
               "t": "卒",
               "r": "そつ",
-              "g": "object"
+              "g": "complement"
             },
             {
               "t": "。",

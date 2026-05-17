@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 57,
-    "grammar_token_total": 57,
+    "token_total": 58,
+    "grammar_token_total": 58,
     "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0015",
@@ -22,21 +22,25 @@
     "title_zh": [
       {
         "t": "神",
-        "r": "shén"
+        "r": "shén",
+        "g": "attributive"
       },
       {
         "t": "话",
-        "r": "huà"
+        "r": "huà",
+        "g": "object"
       }
     ],
     "title_ja": [
       {
         "t": "神",
-        "r": "しん"
+        "r": "しん",
+        "g": "attributive"
       },
       {
         "t": "話",
-        "r": "わ"
+        "r": "わ",
+        "g": "object"
       }
     ]
   },
@@ -45,53 +49,65 @@
     "title_zh": [
       {
         "t": "开",
-        "r": "kāi"
+        "r": "kāi",
+        "g": "predicate"
       },
       {
         "t": "天",
-        "r": "tiān"
+        "r": "tiān",
+        "g": "object"
       },
       {
         "t": "辟",
-        "r": "pì"
+        "r": "pì",
+        "g": "predicate"
       },
       {
         "t": "地",
-        "r": "dì"
+        "r": "dì",
+        "g": "object"
       },
       {
         "t": "神",
-        "r": "shén"
+        "r": "shén",
+        "g": "attributive"
       },
       {
         "t": "话",
-        "r": "huà"
+        "r": "huà",
+        "g": "object"
       }
     ],
     "title_ja": [
       {
         "t": "天",
-        "r": "てん"
+        "r": "てん",
+        "g": "object"
       },
       {
         "t": "地",
-        "r": "ち"
+        "r": "ち",
+        "g": "object"
       },
       {
         "t": "開",
-        "r": "かい"
+        "r": "かい",
+        "g": "predicate"
       },
       {
         "t": "闢",
-        "r": "びゃく"
+        "r": "びゃく",
+        "g": "predicate"
       },
       {
         "t": "神",
-        "r": "しん"
+        "r": "しん",
+        "g": "attributive"
       },
       {
         "t": "話",
-        "r": "わ"
+        "r": "わ",
+        "g": "object"
       }
     ]
   },
@@ -100,129 +116,160 @@
     "title_zh": [
       {
         "t": "0",
-        "r": ""
+        "r": "",
+        "g": "function"
       },
       {
         "t": "0",
-        "r": ""
+        "r": "",
+        "g": "function"
       },
       {
         "t": "1",
-        "r": ""
+        "r": "",
+        "g": "function"
       },
       {
         "t": ".",
-        "r": ""
+        "r": "",
+        "g": "function"
       },
       {
         "t": " ",
-        "r": ""
+        "r": "",
+        "g": "function"
       },
       {
         "t": "古",
-        "r": "gǔ"
+        "r": "gǔ",
+        "g": "subject"
       },
       {
         "t": "开",
-        "r": "kāi"
+        "r": "kāi",
+        "g": "predicate"
       },
       {
         "t": "天",
-        "r": "tiān"
+        "r": "tiān",
+        "g": "object"
       },
       {
         "t": "地",
-        "r": "dì"
+        "r": "dì",
+        "g": "object"
       },
       {
         "t": "（",
-        "r": ""
+        "r": "",
+        "g": "function"
       },
       {
         "t": "奉",
-        "r": "fèng"
+        "r": "fèng",
+        "g": "attributive"
       },
       {
         "t": "节",
-        "r": "jié"
+        "r": "jié",
+        "g": "attributive"
       },
       {
         "t": "县",
-        "r": "xiàn"
+        "r": "xiàn",
+        "g": "object"
       },
       {
         "t": "）",
-        "r": ""
+        "r": "",
+        "g": "function"
       }
     ],
     "title_ja": [
       {
         "t": "0",
-        "r": ""
+        "r": "",
+        "g": "function"
       },
       {
         "t": "0",
-        "r": ""
+        "r": "",
+        "g": "function"
       },
       {
         "t": "1",
-        "r": ""
+        "r": "",
+        "g": "function"
       },
       {
         "t": ".",
-        "r": ""
+        "r": "",
+        "g": "function"
       },
       {
         "t": " ",
-        "r": ""
+        "r": "",
+        "g": "function"
       },
       {
         "t": "古",
-        "r": "こ"
+        "r": "こ",
+        "g": "subject"
       },
       {
         "t": "く",
-        "r": ""
+        "r": "",
+        "g": "subject"
       },
       {
         "t": "天",
-        "r": "てん"
+        "r": "てん",
+        "g": "object"
       },
       {
         "t": "地",
-        "r": "ち"
+        "r": "ち",
+        "g": "object"
       },
       {
         "t": "を",
-        "r": ""
+        "r": "",
+        "g": "object"
       },
       {
         "t": "開",
-        "r": "ひら"
+        "r": "ひら",
+        "g": "predicate"
       },
       {
         "t": "く",
-        "r": ""
+        "r": "",
+        "g": "predicate"
       },
       {
         "t": "（",
-        "r": ""
+        "r": "",
+        "g": "function"
       },
       {
         "t": "奉",
-        "r": "ほう"
+        "r": "ほう",
+        "g": "attributive"
       },
       {
         "t": "節",
-        "r": "せつ"
+        "r": "せつ",
+        "g": "attributive"
       },
       {
         "t": "県",
-        "r": "けん"
+        "r": "けん",
+        "g": "object"
       },
       {
         "t": "）",
-        "r": ""
+        "r": "",
+        "g": "function"
       }
     ],
     "place_zh": [],
@@ -231,9 +278,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00015",
     "source_text": "盘各公开名,最后，出戏叫么台,此处指长得没完没了，",
+    "corrected_text": "盘古公开名，最后，出戏叫么台，此处指长得没完没了，",
     "units": [
       {
-        "source_text": "盘各公开名,最后，",
+        "source_text": "盘古公开名，最后，",
         "zh": [
           {
             "t": "盘",
@@ -241,8 +289,8 @@
             "g": "subject"
           },
           {
-            "t": "各",
-            "r": "gè",
+            "t": "古",
+            "r": "gǔ",
             "g": "subject"
           },
           {
@@ -261,7 +309,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -314,12 +362,12 @@
               "g": "object"
             },
             {
-              "t": "開",
-              "r": "ひら",
+              "t": "明",
+              "r": "あ",
               "g": "predicate"
             },
             {
-              "t": "き",
+              "t": "かし",
               "r": "",
               "g": "predicate"
             },
@@ -354,7 +402,7 @@
         ]
       },
       {
-        "source_text": "出戏叫么台,",
+        "source_text": "出戏叫么台，",
         "zh": [
           {
             "t": "出",
@@ -382,7 +430,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -437,7 +485,7 @@
               "g": "predicate"
             },
             {
-              "t": "ぶ",
+              "t": "ばれる",
               "r": "",
               "g": "predicate"
             },
@@ -528,7 +576,12 @@
           ],
           [
             {
-              "t": "きりがないことを",
+              "t": "終",
+              "r": "お",
+              "g": "complement"
+            },
+            {
+              "t": "わりがないことを",
               "r": "",
               "g": "complement"
             },

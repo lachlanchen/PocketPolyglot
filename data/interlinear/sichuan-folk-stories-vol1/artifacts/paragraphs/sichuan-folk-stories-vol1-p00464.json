@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 75,
-    "grammar_token_total": 75,
+    "token_total": 86,
+    "grammar_token_total": 86,
     "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0464",
@@ -243,9 +243,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00464",
     "source_text": "金祥度男 48岁叫兴乡文化专干 高中采录时间、.地点:1986 年5月于巴县齐古乡",
+    "corrected_text": "金祥度，男，48岁，叫兴乡文化专干，高中。采录时间、地点：1986年5月于巴县齐古乡。",
     "units": [
       {
-        "source_text": "金祥度男 48岁叫兴乡文化专干 高中",
+        "source_text": "金祥度，男，48岁，叫兴乡文化专干，高中。",
         "zh": [
           {
             "t": "金",
@@ -263,12 +264,17 @@
             "g": "subject"
           },
           {
-            "t": "男",
-            "r": "nán",
-            "g": "subject"
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
-            "t": " ",
+            "t": "男",
+            "r": "nán",
+            "g": "attributive"
+          },
+          {
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -286,6 +292,11 @@
             "t": "岁",
             "r": "suì",
             "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "叫",
@@ -323,19 +334,24 @@
             "g": "object"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
           {
             "t": "高",
             "r": "gāo",
-            "g": "object"
+            "g": "complement"
           },
           {
             "t": "中",
             "r": "zhōng",
-            "g": "object"
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -362,8 +378,13 @@
             },
             {
               "t": "男",
-              "r": "おとこ",
-              "g": "subject"
+              "r": "だん",
+              "g": "attributive"
+            },
+            {
+              "t": "性",
+              "r": "せい",
+              "g": "attributive"
             },
             {
               "t": "、48",
@@ -418,8 +439,18 @@
               "g": "object"
             },
             {
+              "t": "任",
+              "r": "にん",
+              "g": "object"
+            },
+            {
               "t": "幹",
               "r": "かん",
+              "g": "object"
+            },
+            {
+              "t": "部",
+              "r": "ぶ",
               "g": "object"
             },
             {
@@ -430,23 +461,28 @@
             {
               "t": "高",
               "r": "こう",
-              "g": "object"
+              "g": "complement"
             },
             {
-              "t": "中",
-              "r": "ちゅう",
-              "g": "object"
+              "t": "校",
+              "r": "こう",
+              "g": "complement"
             },
             {
               "t": "卒",
               "r": "そつ",
-              "g": "object"
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ]
         ]
       },
       {
-        "source_text": "采录时间、.地点:1986 年5月于巴县齐古乡",
+        "source_text": "采录时间、地点：1986年5月于巴县齐古乡。",
         "zh": [
           {
             "t": "采",
@@ -474,11 +510,6 @@
             "g": "function"
           },
           {
-            "t": ".",
-            "r": "",
-            "g": "function"
-          },
-          {
             "t": "地",
             "r": "dì",
             "g": "subject"
@@ -489,7 +520,7 @@
             "g": "subject"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -512,11 +543,6 @@
             "t": "6",
             "r": "",
             "g": "object"
-          },
-          {
-            "t": " ",
-            "r": "",
-            "g": "function"
           },
           {
             "t": "年",
@@ -562,6 +588,11 @@
             "t": "乡",
             "r": "xiāng",
             "g": "adverbial"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -620,6 +651,11 @@
               "t": "月",
               "r": "がつ",
               "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           [
@@ -652,6 +688,11 @@
               "t": "にて",
               "r": "",
               "g": "adverbial"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ]
         ]

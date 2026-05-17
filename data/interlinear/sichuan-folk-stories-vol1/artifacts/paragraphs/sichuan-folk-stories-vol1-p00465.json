@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 68,
-    "grammar_token_total": 68,
+    "token_total": 70,
+    "grammar_token_total": 70,
     "unit_count": 4
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0465",
@@ -197,12 +197,7 @@
         "g": "function"
       },
       {
-        "t": "7",
-        "r": "",
-        "g": "function"
-      },
-      {
-        "t": ". ",
+        "t": "7. ",
         "r": "",
         "g": "function"
       },
@@ -268,9 +263,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00465",
     "source_text": "已讨:摘取.护料权心;心贤救,善良.电夺权:饼类食物。",
+    "corrected_text": "已讨：摘取。护料权心；心贤救，善良。电夺权：饼类食物。",
     "units": [
       {
-        "source_text": "已讨:摘取.",
+        "source_text": "已讨：摘取。",
         "zh": [
           {
             "t": "已",
@@ -283,7 +279,7 @@
             "g": "predicate"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -298,7 +294,7 @@
             "g": "predicate"
           },
           {
-            "t": ".",
+            "t": "。",
             "r": "",
             "g": "function"
           }
@@ -311,12 +307,12 @@
               "g": "adverbial"
             },
             {
-              "t": "討",
-              "r": "う",
+              "t": "求",
+              "r": "もと",
               "g": "predicate"
             },
             {
-              "t": "った",
+              "t": "めた",
               "r": "",
               "g": "predicate"
             },
@@ -327,11 +323,6 @@
             }
           ],
           [
-            {
-              "t": "そして",
-              "r": "",
-              "g": "function"
-            },
             {
               "t": "摘",
               "r": "つ",
@@ -348,7 +339,7 @@
               "g": "predicate"
             },
             {
-              "t": "った。",
+              "t": "ること。",
               "r": "",
               "g": "predicate"
             }
@@ -356,7 +347,7 @@
         ]
       },
       {
-        "source_text": "护料权心;",
+        "source_text": "护料权心；",
         "zh": [
           {
             "t": "护",
@@ -379,7 +370,7 @@
             "g": "object"
           },
           {
-            "t": ";",
+            "t": "；",
             "r": "",
             "g": "function"
           }
@@ -434,7 +425,7 @@
               "g": "predicate"
             },
             {
-              "t": "った。",
+              "t": "る。",
               "r": "",
               "g": "predicate"
             }
@@ -442,7 +433,7 @@
         ]
       },
       {
-        "source_text": "心贤救,善良.",
+        "source_text": "心贤救，善良。",
         "zh": [
           {
             "t": "心",
@@ -460,7 +451,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -475,7 +466,7 @@
             "g": "predicate"
           },
           {
-            "t": ".",
+            "t": "。",
             "r": "",
             "g": "function"
           }
@@ -498,7 +489,7 @@
               "g": "predicate"
             },
             {
-              "t": "く",
+              "t": "く、",
               "r": "",
               "g": "predicate"
             },
@@ -508,9 +499,14 @@
               "g": "predicate"
             },
             {
-              "t": "い、",
+              "t": "いがある",
               "r": "",
               "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           [
@@ -525,15 +521,20 @@
               "g": "predicate"
             },
             {
-              "t": "であった。",
+              "t": "である",
               "r": "",
               "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ]
         ]
       },
       {
-        "source_text": "电夺权:饼类食物。",
+        "source_text": "电夺权：饼类食物。",
         "zh": [
           {
             "t": "电",
@@ -551,7 +552,7 @@
             "g": "object"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -609,9 +610,14 @@
               "g": "predicate"
             },
             {
-              "t": "った。",
+              "t": "う",
               "r": "",
               "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           [
@@ -646,9 +652,9 @@
               "g": "object"
             },
             {
-              "t": "である。",
+              "t": "。",
               "r": "",
-              "g": "predicate"
+              "g": "function"
             }
           ]
         ]

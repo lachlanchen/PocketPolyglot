@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 136,
-    "grammar_token_total": 136,
+    "token_total": 148,
+    "grammar_token_total": 148,
     "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0306",
@@ -23,7 +23,7 @@
       {
         "t": "神",
         "r": "shén",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "话",
@@ -35,7 +35,7 @@
       {
         "t": "神",
         "r": "しん",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "話",
@@ -90,7 +90,7 @@
       {
         "t": "神",
         "r": "shén",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "话",
@@ -147,7 +147,7 @@
       {
         "t": "神",
         "r": "しん",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "話",
@@ -303,9 +303,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00306",
     "source_text": "讲述者:徐绅民女 61岁米易县黄革乡农民不识字采录者:张勇男 28岁来易县文化馆干部高中采录时间、地点:1986 年 6月于米易县黄午乡",
+    "corrected_text": "讲述者：徐绅民，女，61岁，米易县黄革乡农民，不识字。采录者：张勇，男，28岁，米易县文化馆干部，高中。采录时间、地点：1986年6月于米易县黄革乡。",
     "units": [
       {
-        "source_text": "讲述者:徐绅民女 61岁米易县黄革乡农民不识字",
+        "source_text": "讲述者：徐绅民，女，61岁，米易县黄革乡农民，不识字。",
         "zh": [
           {
             "t": "讲",
@@ -323,7 +324,7 @@
             "g": "subject"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -343,12 +344,17 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "女",
             "r": "nǚ",
             "g": "subject"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -366,6 +372,11 @@
             "t": "岁",
             "r": "suì",
             "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "米",
@@ -408,6 +419,11 @@
             "g": "object"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "不",
             "r": "bù",
             "g": "adverbial"
@@ -421,6 +437,11 @@
             "t": "字",
             "r": "zì",
             "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -451,7 +472,7 @@
               "g": "subject"
             },
             {
-              "t": "綳",
+              "t": "紳",
               "r": "しん",
               "g": "subject"
             },
@@ -548,7 +569,7 @@
               "g": "object"
             },
             {
-              "t": "は",
+              "t": "が",
               "r": "",
               "g": "object"
             },
@@ -558,7 +579,7 @@
               "g": "predicate"
             },
             {
-              "t": "めない",
+              "t": "めない。",
               "r": "",
               "g": "predicate"
             }
@@ -566,7 +587,7 @@
         ]
       },
       {
-        "source_text": "采录者:张勇男 28岁来易县文化馆干部高中",
+        "source_text": "采录者：张勇，男，28岁，米易县文化馆干部，高中。",
         "zh": [
           {
             "t": "采",
@@ -584,7 +605,7 @@
             "g": "subject"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -599,12 +620,17 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "男",
             "r": "nán",
             "g": "subject"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -624,8 +650,13 @@
             "g": "attributive"
           },
           {
-            "t": "来",
-            "r": "lái",
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "米",
+            "r": "mǐ",
             "g": "attributive"
           },
           {
@@ -664,6 +695,11 @@
             "g": "object"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "高",
             "r": "gāo",
             "g": "attributive"
@@ -671,7 +707,12 @@
           {
             "t": "中",
             "r": "zhōng",
-            "g": "attributive"
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -739,8 +780,8 @@
           ],
           [
             {
-              "t": "来",
-              "r": "らい",
+              "t": "米",
+              "r": "べい",
               "g": "attributive"
             },
             {
@@ -796,18 +837,23 @@
             {
               "t": "校",
               "r": "こう",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "卒",
               "r": "そつ",
-              "g": "attributive"
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ]
         ]
       },
       {
-        "source_text": "采录时间、地点:1986 年 6月于米易县黄午乡",
+        "source_text": "采录时间、地点：1986年6月于米易县黄革乡。",
         "zh": [
           {
             "t": "采",
@@ -845,7 +891,7 @@
             "g": "object"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -870,19 +916,9 @@
             "g": "adverbial"
           },
           {
-            "t": " ",
-            "r": "",
-            "g": "function"
-          },
-          {
             "t": "年",
             "r": "nián",
             "g": "adverbial"
-          },
-          {
-            "t": " ",
-            "r": "",
-            "g": "function"
           },
           {
             "t": "6",
@@ -920,14 +956,19 @@
             "g": "adverbial"
           },
           {
-            "t": "午",
-            "r": "wǔ",
+            "t": "革",
+            "r": "gé",
             "g": "adverbial"
           },
           {
             "t": "乡",
             "r": "xiāng",
             "g": "adverbial"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -1020,8 +1061,8 @@
               "g": "adverbial"
             },
             {
-              "t": "午",
-              "r": "ご",
+              "t": "革",
+              "r": "かく",
               "g": "adverbial"
             },
             {
@@ -1030,7 +1071,7 @@
               "g": "adverbial"
             },
             {
-              "t": "にて",
+              "t": "にて。",
               "r": "",
               "g": "function"
             }

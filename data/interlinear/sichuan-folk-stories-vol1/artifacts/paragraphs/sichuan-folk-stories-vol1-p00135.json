@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 77,
-    "grammar_token_total": 77,
+    "token_total": 79,
+    "grammar_token_total": 79,
     "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0135",
@@ -50,22 +50,22 @@
       {
         "t": "自",
         "r": "zì",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "然",
         "r": "rán",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "天",
         "r": "tiān",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "象",
         "r": "xiàng",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "神",
@@ -82,22 +82,22 @@
       {
         "t": "自",
         "r": "し",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "然",
         "r": "ぜん",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "天",
         "r": "てん",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "象",
         "r": "しょう",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "神",
@@ -239,7 +239,7 @@
       {
         "t": "いのか",
         "r": "",
-        "g": "function"
+        "g": "predicate"
       },
       {
         "t": "（",
@@ -273,18 +273,14 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00135",
     "source_text": "有果录者:徐登检陈趋男文化馆干部采录时间、地点:1987 年 3 月于屏山县夏滨乡",
+    "corrected_text": "采录者：徐登检、陈趋男，文化馆干部。采录时间、地点：1987年3月于屏山县夏滨乡。",
     "units": [
       {
-        "source_text": "有果录者:徐登检陈趋男文化馆干部",
+        "source_text": "采录者：徐登检、陈趋男，文化馆干部。",
         "zh": [
           {
-            "t": "有",
-            "r": "yǒu",
-            "g": "attributive"
-          },
-          {
-            "t": "果",
-            "r": "guǒ",
+            "t": "采",
+            "r": "cǎi",
             "g": "attributive"
           },
           {
@@ -295,10 +291,10 @@
           {
             "t": "者",
             "r": "zhě",
-            "g": "attributive"
+            "g": "subject"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -318,6 +314,11 @@
             "g": "subject"
           },
           {
+            "t": "、",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "陈",
             "r": "chén",
             "g": "subject"
@@ -331,6 +332,11 @@
             "t": "男",
             "r": "nán",
             "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "文",
@@ -356,18 +362,18 @@
             "t": "部",
             "r": "bù",
             "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
           [
             {
-              "t": "有",
-              "r": "ゆう",
-              "g": "attributive"
-            },
-            {
-              "t": "果",
-              "r": "か",
+              "t": "採",
+              "r": "さい",
               "g": "attributive"
             },
             {
@@ -378,7 +384,7 @@
             {
               "t": "者",
               "r": "しゃ",
-              "g": "attributive"
+              "g": "subject"
             },
             {
               "t": "：",
@@ -417,7 +423,7 @@
             },
             {
               "t": "男",
-              "r": "だん",
+              "r": "なん",
               "g": "subject"
             }
           ],
@@ -461,7 +467,7 @@
         ]
       },
       {
-        "source_text": "采录时间、地点:1987 年 3 月于屏山县夏滨乡",
+        "source_text": "采录时间、地点：1987年3月于屏山县夏滨乡。",
         "zh": [
           {
             "t": "采",
@@ -499,7 +505,7 @@
             "g": "object"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -524,29 +530,14 @@
             "g": "adverbial"
           },
           {
-            "t": " ",
-            "r": "",
-            "g": "function"
-          },
-          {
             "t": "年",
             "r": "nián",
             "g": "adverbial"
           },
           {
-            "t": " ",
-            "r": "",
-            "g": "function"
-          },
-          {
             "t": "3",
             "r": "",
             "g": "adverbial"
-          },
-          {
-            "t": " ",
-            "r": "",
-            "g": "function"
           },
           {
             "t": "月",
@@ -587,6 +578,11 @@
             "t": "乡",
             "r": "xiāng",
             "g": "adverbial"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [

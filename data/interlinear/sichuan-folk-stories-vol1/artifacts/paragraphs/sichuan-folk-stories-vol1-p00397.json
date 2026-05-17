@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 45,
-    "grammar_token_total": 45,
+    "token_total": 50,
+    "grammar_token_total": 50,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0397",
@@ -212,12 +212,7 @@
         "g": "function"
       },
       {
-        "t": "0",
-        "r": "",
-        "g": "function"
-      },
-      {
-        "t": ". ",
+        "t": "0. ",
         "r": "",
         "g": "function"
       },
@@ -298,9 +293,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00397",
     "source_text": "采录者:严小华男 30岁文化专干 大专金祥度",
+    "corrected_text": "采录者：严小华，男，30岁，文化专干，大专，金祥度",
     "units": [
       {
-        "source_text": "采录者:严小华男 30岁文化专干 大专金祥度",
+        "source_text": "采录者：严小华，男，30岁，文化专干，大专，金祥度",
         "zh": [
           {
             "t": "采",
@@ -318,7 +314,7 @@
             "g": "subject"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -338,12 +334,17 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "男",
             "r": "nán",
             "g": "attributive"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -361,6 +362,11 @@
             "t": "岁",
             "r": "suì",
             "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "文",
@@ -383,7 +389,7 @@
             "g": "object"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -396,6 +402,11 @@
             "t": "专",
             "r": "zhuān",
             "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "金",

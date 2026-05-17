@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 40,
-    "grammar_token_total": 40,
+    "token_total": 42,
+    "grammar_token_total": 42,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0415",
@@ -228,12 +228,18 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00415",
     "source_text": "2 直见扳:拼命挣扎-名吊吊儿,穆.",
+    "corrected_text": "2. 直见扳：拼命挣扎，又名吊吊儿、穆。",
     "units": [
       {
-        "source_text": "2 直见扳:拼命挣扎-名吊吊儿,穆.",
+        "source_text": "2. 直见扳：拼命挣扎，又名吊吊儿、穆。",
         "zh": [
           {
             "t": "2",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": ".",
             "r": "",
             "g": "function"
           },
@@ -258,7 +264,7 @@
             "g": "topic"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -283,9 +289,14 @@
             "g": "predicate"
           },
           {
-            "t": "-",
+            "t": "，",
             "r": "",
             "g": "function"
+          },
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
           },
           {
             "t": "名",
@@ -308,7 +319,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "、",
             "r": "",
             "g": "function"
           },
@@ -318,7 +329,7 @@
             "g": "object"
           },
           {
-            "t": ".",
+            "t": "。",
             "r": "",
             "g": "function"
           }
@@ -327,6 +338,11 @@
           [
             {
               "t": "2",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": ".",
               "r": "",
               "g": "function"
             },
@@ -356,12 +372,7 @@
               "g": "topic"
             },
             {
-              "t": "」",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "は",
+              "t": "」とは",
               "r": "",
               "g": "topic"
             },
@@ -393,19 +404,9 @@
           ],
           [
             {
-              "t": "別",
-              "r": "べつ",
-              "g": "predicate"
-            },
-            {
-              "t": "名",
-              "r": "めい",
-              "g": "predicate"
-            },
-            {
-              "t": "は",
+              "t": "また",
               "r": "",
-              "g": "predicate"
+              "g": "adverbial"
             },
             {
               "t": "「",
@@ -438,9 +439,19 @@
               "g": "object"
             },
             {
-              "t": "」",
+              "t": "」とも",
               "r": "",
-              "g": "function"
+              "g": "object"
+            },
+            {
+              "t": "呼",
+              "r": "よ",
+              "g": "predicate"
+            },
+            {
+              "t": "ぶ",
+              "r": "",
+              "g": "predicate"
             },
             {
               "t": "。",

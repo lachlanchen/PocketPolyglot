@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 109,
-    "grammar_token_total": 109,
+    "token_total": 110,
+    "grammar_token_total": 110,
     "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0315",
@@ -238,9 +238,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00315",
     "source_text": "女娲娘娘一听,如五雷必顶,双手播脸悲协地器了。随后,她拉着身边一个人说:和孩子,再仔细看看,我是不是你的妈妈??",
+    "corrected_text": "女娲娘娘一听，如五雷轰顶，双手捂脸悲伤地哭了。随后，她拉着身边一个人说：好孩子，再仔细看看，我是不是你的妈妈？",
     "units": [
       {
-        "source_text": "女娲娘娘一听,如五雷必顶,双手播脸悲协地器了。",
+        "source_text": "女娲娘娘一听，如五雷轰顶，双手捂脸悲伤地哭了。",
         "zh": [
           {
             "t": "女",
@@ -264,7 +265,7 @@
           },
           {
             "t": "一",
-            "r": "yī",
+            "r": "yì",
             "g": "adverbial"
           },
           {
@@ -273,7 +274,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -293,17 +294,17 @@
             "g": "subject"
           },
           {
-            "t": "必",
-            "r": "bì",
+            "t": "轰",
+            "r": "hōng",
             "g": "predicate"
           },
           {
             "t": "顶",
             "r": "dǐng",
-            "g": "predicate"
+            "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -318,8 +319,8 @@
             "g": "adverbial"
           },
           {
-            "t": "播",
-            "r": "bō",
+            "t": "捂",
+            "r": "wǔ",
             "g": "predicate"
           },
           {
@@ -333,8 +334,8 @@
             "g": "adverbial"
           },
           {
-            "t": "协",
-            "r": "xié",
+            "t": "伤",
+            "r": "shāng",
             "g": "adverbial"
           },
           {
@@ -343,8 +344,8 @@
             "g": "adverbial"
           },
           {
-            "t": "器",
-            "r": "qì",
+            "t": "哭",
+            "r": "kū",
             "g": "predicate"
           },
           {
@@ -491,7 +492,7 @@
         ]
       },
       {
-        "source_text": "随后,她拉着身边一个人说:和孩子,再仔细看看,我是不是你的妈妈??",
+        "source_text": "随后，她拉着身边一个人说：好孩子，再仔细看看，我是不是你的妈妈？",
         "zh": [
           {
             "t": "随",
@@ -504,7 +505,7 @@
             "g": "adverbial"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -554,14 +555,14 @@
             "g": "predicate"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
           {
-            "t": "和",
-            "r": "hé",
-            "g": "function"
+            "t": "好",
+            "r": "hǎo",
+            "g": "object"
           },
           {
             "t": "孩",
@@ -574,7 +575,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -604,7 +605,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -620,7 +621,7 @@
           },
           {
             "t": "不",
-            "r": "bù",
+            "r": "bú",
             "g": "predicate"
           },
           {
@@ -631,12 +632,12 @@
           {
             "t": "你",
             "r": "nǐ",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "的",
             "r": "de",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "妈",
@@ -649,12 +650,7 @@
             "g": "object"
           },
           {
-            "t": "?",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "?",
+            "t": "？",
             "r": "",
             "g": "function"
           }
@@ -744,9 +740,9 @@
           ],
           [
             {
-              "t": "「",
+              "t": "「いい",
               "r": "",
-              "g": "function"
+              "g": "object"
             },
             {
               "t": "子",
@@ -789,9 +785,19 @@
               "g": "subject"
             },
             {
-              "t": "はあなたの",
+              "t": "は",
               "r": "",
               "g": "subject"
+            },
+            {
+              "t": "あなたの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "お",
+              "r": "",
+              "g": "attributive"
             },
             {
               "t": "母",
@@ -799,7 +805,7 @@
               "g": "object"
             },
             {
-              "t": "さんではないのか??」",
+              "t": "さんではないの？」",
               "r": "",
               "g": "predicate"
             }

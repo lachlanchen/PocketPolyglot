@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 79,
-    "grammar_token_total": 79,
-    "unit_count": 2
+    "token_total": 81,
+    "grammar_token_total": 81,
+    "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0198",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -147,7 +147,7 @@
       {
         "t": "和",
         "r": "hé",
-        "g": "function"
+        "g": "attributive"
       },
       {
         "t": "上",
@@ -204,7 +204,7 @@
       {
         "t": "と",
         "r": "",
-        "g": "function"
+        "g": "attributive"
       },
       {
         "t": "上",
@@ -228,9 +228,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00198",
     "source_text": "仅通楼:通,整个，禄,通模指两山之间的地带.中打负线,赔地跟踪。",
+    "corrected_text": "仅通楼：通，整个；禄，通模指两山之间的地带。中打负线，赔地跟踪。",
     "units": [
       {
-        "source_text": "仅通楼:通,整个，禄,通模指两山之间的地带.",
+        "source_text": "仅通楼：通，整个；",
         "zh": [
           {
             "t": "仅",
@@ -248,7 +249,7 @@
             "g": "attributive"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -258,7 +259,7 @@
             "g": "subject"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -273,17 +274,108 @@
             "g": "predicate"
           },
           {
-            "t": "，",
+            "t": "；",
             "r": "",
             "g": "function"
-          },
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "注",
+              "r": "ちゅう",
+              "g": "function"
+            },
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "僅",
+              "r": "きん",
+              "g": "attributive"
+            },
+            {
+              "t": "通",
+              "r": "つう",
+              "g": "attributive"
+            },
+            {
+              "t": "楼",
+              "r": "ろう",
+              "g": "attributive"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "通",
+              "r": "つう",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "全",
+              "r": "ぜん",
+              "g": "predicate"
+            },
+            {
+              "t": "体",
+              "r": "たい",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "表",
+              "r": "あらわ",
+              "g": "predicate"
+            },
+            {
+              "t": "す",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "禄，通模指两山之间的地带。",
+        "zh": [
           {
             "t": "禄",
             "r": "lù",
             "g": "subject"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -338,89 +430,12 @@
             "g": "object"
           },
           {
-            "t": ".",
+            "t": "。",
             "r": "",
             "g": "function"
           }
         ],
         "ja": [
-          [
-            {
-              "t": "注",
-              "r": "ちゅう",
-              "g": "function"
-            },
-            {
-              "t": "：",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "僅",
-              "r": "きん",
-              "g": "attributive"
-            },
-            {
-              "t": "通",
-              "r": "つう",
-              "g": "attributive"
-            },
-            {
-              "t": "楼",
-              "r": "ろう",
-              "g": "attributive"
-            },
-            {
-              "t": "。",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "通",
-              "r": "つう",
-              "g": "subject"
-            },
-            {
-              "t": "は",
-              "r": "",
-              "g": "subject"
-            },
-            {
-              "t": "「",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "全",
-              "r": "ぜん",
-              "g": "predicate"
-            },
-            {
-              "t": "体",
-              "r": "たい",
-              "g": "predicate"
-            },
-            {
-              "t": "」",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "の",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "意",
-              "r": "い",
-              "g": "predicate"
-            },
-            {
-              "t": "。",
-              "r": "",
-              "g": "function"
-            }
-          ],
           [
             {
               "t": "禄",
@@ -448,6 +463,11 @@
               "g": "subject"
             },
             {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "二",
               "r": "ふた",
               "g": "attributive"
@@ -466,7 +486,9 @@
               "t": "の",
               "r": "",
               "g": "attributive"
-            },
+            }
+          ],
+          [
             {
               "t": "間",
               "r": "あいだ",
@@ -511,7 +533,7 @@
         ]
       },
       {
-        "source_text": "中打负线,赔地跟踪。",
+        "source_text": "中打负线，赔地跟踪。",
         "zh": [
           {
             "t": "中",
@@ -534,7 +556,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -597,7 +619,7 @@
               "g": "predicate"
             },
             {
-              "t": "つ",
+              "t": "ち",
               "r": "",
               "g": "predicate"
             },

@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 83,
-    "grammar_token_total": 83,
+    "token_total": 84,
+    "grammar_token_total": 84,
     "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0386",
@@ -243,9 +243,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00386",
     "source_text": "伏闵看见好蛛结网,心里突然开了窍。他跑到山上找了一些记矢来当做绳子,像帆蛛",
+    "corrected_text": "伏羲看见蜘蛛结网，心里突然开了窍。他跑到山上找了一些藤条来当做绳子，像蜘蛛",
     "units": [
       {
-        "source_text": "伏闵看见好蛛结网,心里突然开了窍。",
+        "source_text": "伏羲看见蜘蛛结网，心里突然开了窍。",
         "zh": [
           {
             "t": "伏",
@@ -253,8 +254,8 @@
             "g": "subject"
           },
           {
-            "t": "闵",
-            "r": "mǐn",
+            "t": "羲",
+            "r": "xī",
             "g": "subject"
           },
           {
@@ -268,8 +269,8 @@
             "g": "predicate"
           },
           {
-            "t": "好",
-            "r": "hǎo",
+            "t": "蜘",
+            "r": "zhī",
             "g": "object"
           },
           {
@@ -288,7 +289,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -325,7 +326,7 @@
           {
             "t": "窍",
             "r": "qiào",
-            "g": "predicate"
+            "g": "object"
           },
           {
             "t": "。",
@@ -341,8 +342,8 @@
               "g": "subject"
             },
             {
-              "t": "閔",
-              "r": "びん",
+              "t": "羲",
+              "r": "ぎ",
               "g": "subject"
             },
             {
@@ -351,13 +352,13 @@
               "g": "subject"
             },
             {
-              "t": "好",
-              "r": "こう",
+              "t": "蜘",
+              "r": "ち",
               "g": "object"
             },
             {
               "t": "蛛",
-              "r": "しゅ",
+              "r": "ちゅ",
               "g": "object"
             },
             {
@@ -446,7 +447,7 @@
         ]
       },
       {
-        "source_text": "他跑到山上找了一些记矢来当做绳子,像帆蛛",
+        "source_text": "他跑到山上找了一些藤条来当做绳子，像蜘蛛",
         "zh": [
           {
             "t": "他",
@@ -494,13 +495,13 @@
             "g": "attributive"
           },
           {
-            "t": "记",
-            "r": "jì",
+            "t": "藤",
+            "r": "téng",
             "g": "object"
           },
           {
-            "t": "矢",
-            "r": "shǐ",
+            "t": "条",
+            "r": "tiáo",
             "g": "object"
           },
           {
@@ -529,7 +530,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -539,8 +540,8 @@
             "g": "adverbial"
           },
           {
-            "t": "帆",
-            "r": "fān",
+            "t": "蜘",
+            "r": "zhī",
             "g": "adverbial"
           },
           {
@@ -597,18 +598,23 @@
               "g": "function"
             },
             {
-              "t": "いくらかの",
+              "t": "少",
+              "r": "すこ",
+              "g": "attributive"
+            },
+            {
+              "t": "しの",
               "r": "",
               "g": "attributive"
             },
             {
-              "t": "記",
-              "r": "き",
+              "t": "藤",
+              "r": "ふじ",
               "g": "object"
             },
             {
-              "t": "矢",
-              "r": "や",
+              "t": "蔓",
+              "r": "づる",
               "g": "object"
             },
             {
@@ -664,13 +670,13 @@
               "g": "function"
             },
             {
-              "t": "帆",
-              "r": "はん",
+              "t": "蜘",
+              "r": "ち",
               "g": "adverbial"
             },
             {
               "t": "蛛",
-              "r": "しゅ",
+              "r": "ちゅ",
               "g": "adverbial"
             },
             {

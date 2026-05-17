@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 93,
-    "grammar_token_total": 93,
+    "token_total": 95,
+    "grammar_token_total": 95,
     "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0445",
@@ -207,12 +207,7 @@
         "g": "function"
       },
       {
-        "t": "5",
-        "r": "",
-        "g": "function"
-      },
-      {
-        "t": ". ",
+        "t": "5. ",
         "r": "",
         "g": "function"
       },
@@ -288,9 +283,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00445",
     "source_text": "扬雄4方言）云;吧西南人谴茶口芒。这与讲述人所训,其音相近。灌县（今都汇卉市）是中川机路冯",
+    "corrected_text": "扬雄《方言》云：“巴西南人谓茶曰蔎。”这与讲述人所说，其音相近。灌县（今都江堰市）是中川机路冯",
     "units": [
       {
-        "source_text": "扬雄4方言）云;吧西南人谴茶口芒。",
+        "source_text": "扬雄《方言》云：“巴西南人谓茶曰蔎。”",
         "zh": [
           {
             "t": "扬",
@@ -303,7 +299,7 @@
             "g": "subject"
           },
           {
-            "t": "4",
+            "t": "《",
             "r": "",
             "g": "function"
           },
@@ -318,7 +314,7 @@
             "g": "object"
           },
           {
-            "t": "）",
+            "t": "》",
             "r": "",
             "g": "function"
           },
@@ -328,14 +324,19 @@
             "g": "predicate"
           },
           {
-            "t": ";",
+            "t": "：",
             "r": "",
             "g": "function"
           },
           {
-            "t": "吧",
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "巴",
             "r": "bā",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "西",
@@ -353,8 +354,8 @@
             "g": "subject"
           },
           {
-            "t": "谴",
-            "r": "qiǎn",
+            "t": "谓",
+            "r": "wèi",
             "g": "predicate"
           },
           {
@@ -363,17 +364,22 @@
             "g": "object"
           },
           {
-            "t": "口",
-            "r": "kǒu",
-            "g": "function"
+            "t": "曰",
+            "r": "yuē",
+            "g": "predicate"
           },
           {
-            "t": "芒",
-            "r": "máng",
+            "t": "蔎",
+            "r": "shè",
             "g": "object"
           },
           {
             "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
             "r": "",
             "g": "function"
           }
@@ -406,7 +412,7 @@
               "g": "object"
             },
             {
-              "t": "』にいう。",
+              "t": "』にはこうある。",
               "r": "",
               "g": "predicate"
             }
@@ -415,12 +421,12 @@
             {
               "t": "巴",
               "r": "は",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "の",
               "r": "",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "西",
@@ -448,27 +454,27 @@
               "g": "object"
             },
             {
-              "t": "を「",
+              "t": "を",
               "r": "",
               "g": "object"
             },
             {
-              "t": "芒",
-              "r": "ぼう",
+              "t": "蔎",
+              "r": "せつ",
               "g": "object"
             },
             {
-              "t": "」と",
+              "t": "と",
               "r": "",
               "g": "object"
             },
             {
-              "t": "称",
-              "r": "しょう",
+              "t": "呼",
+              "r": "よ",
               "g": "predicate"
             },
             {
-              "t": "した。",
+              "t": "ぶ。",
               "r": "",
               "g": "predicate"
             }
@@ -476,7 +482,7 @@
         ]
       },
       {
-        "source_text": "这与讲述人所训,其音相近。",
+        "source_text": "这与讲述人所说，其音相近。",
         "zh": [
           {
             "t": "这",
@@ -509,12 +515,12 @@
             "g": "function"
           },
           {
-            "t": "训",
-            "r": "xùn",
+            "t": "说",
+            "r": "shuō",
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -567,17 +573,17 @@
               "g": "attributive"
             },
             {
-              "t": "が",
+              "t": "の",
               "r": "",
               "g": "attributive"
             },
             {
-              "t": "説",
-              "r": "と",
+              "t": "話",
+              "r": "はなし",
               "g": "object"
             },
             {
-              "t": "くところと",
+              "t": "と",
               "r": "",
               "g": "object"
             }
@@ -622,7 +628,7 @@
         ]
       },
       {
-        "source_text": "灌县（今都汇卉市）是中川机路冯",
+        "source_text": "灌县（今都江堰市）是中川机路冯",
         "zh": [
           {
             "t": "灌",
@@ -650,13 +656,13 @@
             "g": "attributive"
           },
           {
-            "t": "汇",
-            "r": "huì",
+            "t": "江",
+            "r": "jiāng",
             "g": "attributive"
           },
           {
-            "t": "卉",
-            "r": "huì",
+            "t": "堰",
+            "r": "yàn",
             "g": "attributive"
           },
           {
@@ -733,13 +739,13 @@
               "g": "attributive"
             },
             {
-              "t": "匯",
-              "r": "かい",
+              "t": "江",
+              "r": "こう",
               "g": "attributive"
             },
             {
-              "t": "卉",
-              "r": "き",
+              "t": "堰",
+              "r": "えん",
               "g": "attributive"
             },
             {

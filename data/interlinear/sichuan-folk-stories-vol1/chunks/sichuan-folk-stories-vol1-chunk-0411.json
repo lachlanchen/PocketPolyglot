@@ -217,9 +217,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00411",
       "source_text": "采录者:摩太仁男 22岁梁平县礼让乡文化站干部高中采录夺间.地点:1985 竹 11月7日于梁平县礼让乡礼让村",
+      "corrected_text": "采录者:摩太仁，男，22岁，梁平县礼让乡文化站干部，高中。采录时间、地点:1985年11月7日于梁平县礼让乡礼让村",
       "units": [
         {
-          "source_text": "采录者:摩太仁男 22岁梁平县礼让乡文化站干部高中采录夺间.",
+          "source_text": "采录者:摩太仁，男，22岁，梁平县礼让乡文化站干部，高中。",
           "zh": [
             {
               "t": "采",
@@ -257,12 +258,17 @@
               "g": "subject"
             },
             {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "男",
               "r": "nán",
               "g": "subject"
             },
             {
-              "t": " ",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -280,6 +286,11 @@
               "t": "岁",
               "r": "suì",
               "g": "attributive"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "梁",
@@ -314,60 +325,45 @@
             {
               "t": "文",
               "r": "wén",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "化",
               "r": "huà",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "站",
               "r": "zhàn",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "干",
               "r": "gàn",
-              "g": "attributive"
+              "g": "predicate"
             },
             {
               "t": "部",
               "r": "bù",
-              "g": "attributive"
+              "g": "predicate"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "高",
               "r": "gāo",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "中",
               "r": "zhōng",
-              "g": "attributive"
+              "g": "complement"
             },
             {
-              "t": "采",
-              "r": "cǎi",
-              "g": "predicate"
-            },
-            {
-              "t": "录",
-              "r": "lù",
-              "g": "predicate"
-            },
-            {
-              "t": "夺",
-              "r": "duó",
-              "g": "object"
-            },
-            {
-              "t": "间",
-              "r": "jiān",
-              "g": "object"
-            },
-            {
-              "t": ".",
+              "t": "。",
               "r": "",
               "g": "function"
             }
@@ -410,8 +406,18 @@
                 "g": "subject"
               },
               {
+                "t": "、",
+                "r": "",
+                "g": "function"
+              },
+              {
                 "t": "男",
-                "r": "なん",
+                "r": "だん",
+                "g": "subject"
+              },
+              {
+                "t": "性",
+                "r": "せい",
                 "g": "subject"
               },
               {
@@ -469,27 +475,27 @@
               {
                 "t": "文",
                 "r": "ぶん",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "化",
                 "r": "か",
-                "g": "attributive"
+                "g": "object"
               },
               {
-                "t": "ステーション",
-                "r": "",
-                "g": "attributive"
+                "t": "站",
+                "r": "たん",
+                "g": "object"
               },
               {
                 "t": "幹",
                 "r": "かん",
-                "g": "attributive"
+                "g": "predicate"
               },
               {
                 "t": "部",
                 "r": "ぶ",
-                "g": "attributive"
+                "g": "predicate"
               },
               {
                 "t": "、",
@@ -499,47 +505,12 @@
               {
                 "t": "高",
                 "r": "こう",
-                "g": "attributive"
+                "g": "complement"
               },
               {
                 "t": "卒",
                 "r": "そつ",
-                "g": "attributive"
-              },
-              {
-                "t": "。",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": "採",
-                "r": "さい",
-                "g": "predicate"
-              },
-              {
-                "t": "録",
-                "r": "ろく",
-                "g": "predicate"
-              },
-              {
-                "t": "「",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": "奪",
-                "r": "だつ",
-                "g": "object"
-              },
-              {
-                "t": "間",
-                "r": "かん",
-                "g": "object"
-              },
-              {
-                "t": "」",
-                "r": "",
-                "g": "function"
+                "g": "complement"
               },
               {
                 "t": "。",
@@ -550,8 +521,33 @@
           ]
         },
         {
-          "source_text": "地点:1985 竹 11月7日于梁平县礼让乡礼让村",
+          "source_text": "采录时间、地点:1985年11月7日于梁平县礼让乡礼让村",
           "zh": [
+            {
+              "t": "采",
+              "r": "cǎi",
+              "g": "topic"
+            },
+            {
+              "t": "录",
+              "r": "lù",
+              "g": "topic"
+            },
+            {
+              "t": "时",
+              "r": "shí",
+              "g": "topic"
+            },
+            {
+              "t": "间",
+              "r": "jiān",
+              "g": "topic"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
             {
               "t": "地",
               "r": "dì",
@@ -588,19 +584,9 @@
               "g": "adverbial"
             },
             {
-              "t": " ",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "竹",
-              "r": "zhú",
+              "t": "年",
+              "r": "nián",
               "g": "adverbial"
-            },
-            {
-              "t": " ",
-              "r": "",
-              "g": "function"
             },
             {
               "t": "1",
@@ -630,64 +616,89 @@
             {
               "t": "于",
               "r": "yú",
-              "g": "adverbial"
+              "g": "predicate"
             },
             {
               "t": "梁",
               "r": "liáng",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "平",
               "r": "píng",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "县",
               "r": "xiàn",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "礼",
               "r": "lǐ",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "让",
               "r": "ràng",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "乡",
               "r": "xiāng",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "礼",
               "r": "lǐ",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "让",
               "r": "ràng",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "村",
               "r": "cūn",
-              "g": "adverbial"
+              "g": "object"
             }
           ],
           "ja": [
             [
               {
-                "t": "地",
-                "r": "ち",
+                "t": "採",
+                "r": "さい",
                 "g": "topic"
               },
               {
-                "t": "点",
-                "r": "てん",
+                "t": "録",
+                "r": "ろく",
+                "g": "topic"
+              },
+              {
+                "t": "日",
+                "r": "にち",
+                "g": "topic"
+              },
+              {
+                "t": "時",
+                "r": "じ",
+                "g": "topic"
+              },
+              {
+                "t": "・",
+                "r": "",
+                "g": "function"
+              },
+              {
+                "t": "場",
+                "r": "ば",
+                "g": "topic"
+              },
+              {
+                "t": "所",
+                "r": "しょ",
                 "g": "topic"
               },
               {
@@ -701,19 +712,9 @@
                 "g": "adverbial"
               },
               {
-                "t": " ",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": "竹",
-                "r": "たけ",
+                "t": "年",
+                "r": "ねん",
                 "g": "adverbial"
-              },
-              {
-                "t": " ",
-                "r": "",
-                "g": "function"
               },
               {
                 "t": "11",
@@ -745,52 +746,52 @@
               {
                 "t": "梁",
                 "r": "りょう",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "平",
                 "r": "へい",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "県",
                 "r": "けん",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "礼",
                 "r": "れい",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "譲",
                 "r": "じょう",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "郷",
                 "r": "きょう",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "礼",
                 "r": "れい",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "譲",
                 "r": "じょう",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "村",
                 "r": "そん",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "にて",
                 "r": "",
-                "g": "adverbial"
+                "g": "predicate"
               },
               {
                 "t": "。",

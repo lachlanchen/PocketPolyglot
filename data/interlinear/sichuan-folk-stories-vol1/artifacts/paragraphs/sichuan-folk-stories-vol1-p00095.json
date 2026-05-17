@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 23,
-    "grammar_token_total": 23,
+    "token_total": 25,
+    "grammar_token_total": 25,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0095",
@@ -166,7 +166,7 @@
       },
       {
         "t": "亮",
-        "r": "liang",
+        "r": "liàng",
         "g": "attributive"
       },
       {
@@ -288,9 +288,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00095",
     "source_text": "（人理麻,调查,过问,",
+    "corrected_text": "（人理麻，调查，过问，",
     "units": [
       {
-        "source_text": "（人理麻,调查,过问,",
+        "source_text": "（人理麻，调查，过问，",
         "zh": [
           {
             "t": "（",
@@ -313,7 +314,7 @@
             "g": "subject"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -328,7 +329,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -343,7 +344,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -371,7 +372,7 @@
               "g": "subject"
             },
             {
-              "t": "、",
+              "t": "が",
               "r": "",
               "g": "subject"
             },
@@ -386,9 +387,9 @@
               "g": "predicate"
             },
             {
-              "t": "、",
+              "t": "し、",
               "r": "",
-              "g": "function"
+              "g": "predicate"
             }
           ],
           [
@@ -408,9 +409,19 @@
               "g": "predicate"
             },
             {
-              "t": "り、",
+              "t": "りを",
               "r": "",
-              "g": "function"
+              "g": "object"
+            },
+            {
+              "t": "行",
+              "r": "おこな",
+              "g": "predicate"
+            },
+            {
+              "t": "い、",
+              "r": "",
+              "g": "predicate"
             }
           ]
         ]

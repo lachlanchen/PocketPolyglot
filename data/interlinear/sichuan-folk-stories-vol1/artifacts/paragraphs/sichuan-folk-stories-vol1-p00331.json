@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 166,
-    "grammar_token_total": 166,
+    "token_total": 167,
+    "grammar_token_total": 167,
     "unit_count": 4
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0331",
@@ -75,12 +75,12 @@
       {
         "t": "神",
         "r": "shén",
-        "g": "attributive"
+        "g": "object"
       },
       {
         "t": "话",
         "r": "huà",
-        "g": "attributive"
+        "g": "object"
       }
     ],
     "title_ja": [
@@ -112,12 +112,12 @@
       {
         "t": "神",
         "r": "しん",
-        "g": "attributive"
+        "g": "object"
       },
       {
         "t": "話",
         "r": "わ",
-        "g": "attributive"
+        "g": "object"
       }
     ]
   },
@@ -228,9 +228,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00331",
     "source_text": "很古的时候,人些没得衣服穿,也没得房子仁。有一年冬天,落了几天几夜大雪,冻死了很多人。有个叫有巢氏的人,看到人些遭冻死惩个多,就想哪个才役得脱寒冷哟?想来想去想不出办法。",
+    "corrected_text": "很古的时候,人些没得衣服穿,也没得房子住。有一年冬天,落了几天几夜大雪,冻死了很多人。有个叫有巢氏的人,看到人些遭冻死恁个多,就想哪个才躲得脱寒冷哟?想来想去想不出办法。",
     "units": [
       {
-        "source_text": "很古的时候,人些没得衣服穿,也没得房子仁。",
+        "source_text": "很古的时候,人些没得衣服穿,也没得房子住。",
         "zh": [
           {
             "t": "很",
@@ -328,8 +329,8 @@
             "g": "object"
           },
           {
-            "t": "仁",
-            "r": "rén",
+            "t": "住",
+            "r": "zhù",
             "g": "predicate"
           },
           {
@@ -381,8 +382,8 @@
               "g": "object"
             },
             {
-              "t": "衣",
-              "r": "ころも",
+              "t": "服",
+              "r": "ふく",
               "g": "object"
             },
             {
@@ -639,7 +640,17 @@
           ],
           [
             {
-              "t": "たくさんの",
+              "t": "とても",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "多",
+              "r": "おお",
+              "g": "attributive"
+            },
+            {
+              "t": "くの",
               "r": "",
               "g": "attributive"
             },
@@ -682,7 +693,7 @@
         ]
       },
       {
-        "source_text": "有个叫有巢氏的人,看到人些遭冻死惩个多,就想哪个才役得脱寒冷哟?",
+        "source_text": "有个叫有巢氏的人,看到人些遭冻死恁个多,就想哪个才躲得脱寒冷哟?",
         "zh": [
           {
             "t": "有",
@@ -692,7 +703,7 @@
           {
             "t": "个",
             "r": "gè",
-            "g": "subject"
+            "g": "function"
           },
           {
             "t": "叫",
@@ -765,8 +776,8 @@
             "g": "predicate"
           },
           {
-            "t": "惩",
-            "r": "chéng",
+            "t": "恁",
+            "r": "nèn",
             "g": "complement"
           },
           {
@@ -810,8 +821,8 @@
             "g": "adverbial"
           },
           {
-            "t": "役",
-            "r": "yì",
+            "t": "躲",
+            "r": "duǒ",
             "g": "predicate"
           },
           {
@@ -918,12 +929,7 @@
               "g": "predicate"
             },
             {
-              "t": "ぬ",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "のを",
+              "t": "ぬのを",
               "r": "",
               "g": "predicate"
             },
@@ -945,7 +951,7 @@
           ],
           [
             {
-              "t": "どうすれば",
+              "t": "どうしたら",
               "r": "",
               "g": "object"
             },

@@ -175,54 +175,40 @@
     {
       "id": "sichuan-folk-stories-vol1-p00089",
       "source_text": "丁呆玉下目辽区介习从者者百姓奉月这为月神，农访月初和月末晚上月亮星弯刀形,小孩不能指月亮,否则要被月神制",
+      "corrected_text": "听老人们讲，从前百姓奉月亮为月神，农历月初和月末晚上月亮呈弯刀形，小孩不能指月亮，否则要被月神治。",
       "units": [
         {
-          "source_text": "丁呆玉下目辽区介习从者者百姓奉月这为月神，",
+          "source_text": "听老人们讲，从前百姓奉月亮为月神，",
           "zh": [
             {
-              "t": "丁",
-              "r": "dīng",
-              "g": "adverbial"
+              "t": "听",
+              "r": "tīng",
+              "g": "predicate"
             },
             {
-              "t": "呆",
-              "r": "dāi",
-              "g": "adverbial"
+              "t": "老",
+              "r": "lǎo",
+              "g": "subject"
             },
             {
-              "t": "玉",
-              "r": "yù",
-              "g": "adverbial"
+              "t": "人",
+              "r": "rén",
+              "g": "subject"
             },
             {
-              "t": "下",
-              "r": "xià",
-              "g": "adverbial"
+              "t": "们",
+              "r": "men",
+              "g": "subject"
             },
             {
-              "t": "目",
-              "r": "mù",
-              "g": "adverbial"
+              "t": "讲",
+              "r": "jiǎng",
+              "g": "predicate"
             },
             {
-              "t": "辽",
-              "r": "liáo",
-              "g": "adverbial"
-            },
-            {
-              "t": "区",
-              "r": "qū",
-              "g": "adverbial"
-            },
-            {
-              "t": "介",
-              "r": "jiè",
-              "g": "adverbial"
-            },
-            {
-              "t": "习",
-              "r": "xí",
-              "g": "adverbial"
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "从",
@@ -230,13 +216,8 @@
               "g": "adverbial"
             },
             {
-              "t": "者",
-              "r": "zhě",
-              "g": "adverbial"
-            },
-            {
-              "t": "者",
-              "r": "zhě",
+              "t": "前",
+              "r": "qián",
               "g": "adverbial"
             },
             {
@@ -260,8 +241,8 @@
               "g": "object"
             },
             {
-              "t": "这",
-              "r": "zhè",
+              "t": "亮",
+              "r": "liàng",
               "g": "object"
             },
             {
@@ -288,30 +269,37 @@
           "ja": [
             [
               {
-                "t": "その",
+                "t": "老",
+                "r": "ろう",
+                "g": "subject"
+              },
+              {
+                "t": "人",
+                "r": "じん",
+                "g": "subject"
+              },
+              {
+                "t": "たちの",
                 "r": "",
-                "g": "adverbial"
+                "g": "subject"
               },
               {
-                "t": "地",
-                "r": "ち",
-                "g": "adverbial"
+                "t": "話",
+                "r": "はなし",
+                "g": "predicate"
               },
               {
-                "t": "に",
+                "t": "では、",
                 "r": "",
-                "g": "adverbial"
+                "g": "function"
               },
               {
-                "t": "伝",
-                "r": "つた",
+                "t": "昔",
+                "r": "むかし",
                 "g": "adverbial"
-              },
-              {
-                "t": "わるところでは、",
-                "r": "",
-                "g": "adverbial"
-              },
+              }
+            ],
+            [
               {
                 "t": "民",
                 "r": "たみ",
@@ -321,9 +309,7 @@
                 "t": "は",
                 "r": "",
                 "g": "subject"
-              }
-            ],
-            [
+              },
               {
                 "t": "月",
                 "r": "つき",
@@ -355,7 +341,12 @@
                 "g": "complement"
               },
               {
-                "t": "あがめ、",
+                "t": "崇",
+                "r": "あが",
+                "g": "predicate"
+              },
+              {
+                "t": "め、",
                 "r": "",
                 "g": "predicate"
               }
@@ -363,7 +354,7 @@
           ]
         },
         {
-          "source_text": "农访月初和月末晚上月亮星弯刀形,",
+          "source_text": "农历月初和月末晚上月亮呈弯刀形，",
           "zh": [
             {
               "t": "农",
@@ -371,8 +362,8 @@
               "g": "adverbial"
             },
             {
-              "t": "访",
-              "r": "fǎng",
+              "t": "历",
+              "r": "lì",
               "g": "adverbial"
             },
             {
@@ -388,7 +379,7 @@
             {
               "t": "和",
               "r": "hé",
-              "g": "adverbial"
+              "g": "function"
             },
             {
               "t": "月",
@@ -421,8 +412,8 @@
               "g": "subject"
             },
             {
-              "t": "星",
-              "r": "xīng",
+              "t": "呈",
+              "r": "chéng",
               "g": "predicate"
             },
             {
@@ -433,15 +424,15 @@
             {
               "t": "刀",
               "r": "dāo",
-              "g": "complement"
+              "g": "object"
             },
             {
               "t": "形",
               "r": "xíng",
-              "g": "complement"
+              "g": "object"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             }
@@ -528,25 +519,30 @@
               {
                 "t": "刀",
                 "r": "かたな",
-                "g": "complement"
+                "g": "object"
               },
               {
                 "t": "の",
                 "r": "",
-                "g": "complement"
+                "g": "object"
               },
               {
                 "t": "形",
                 "r": "かたち",
-                "g": "complement"
+                "g": "object"
               },
               {
                 "t": "を",
                 "r": "",
-                "g": "complement"
+                "g": "object"
               },
               {
-                "t": "し、",
+                "t": "呈",
+                "r": "てい",
+                "g": "predicate"
+              },
+              {
+                "t": "する。",
                 "r": "",
                 "g": "predicate"
               }
@@ -554,7 +550,7 @@
           ]
         },
         {
-          "source_text": "小孩不能指月亮,否则要被月神制",
+          "source_text": "小孩不能指月亮，否则要被月神治。",
           "zh": [
             {
               "t": "小",
@@ -592,7 +588,7 @@
               "g": "object"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -627,9 +623,14 @@
               "g": "adverbial"
             },
             {
-              "t": "制",
+              "t": "治",
               "r": "zhì",
               "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
@@ -660,7 +661,7 @@
                 "g": "predicate"
               },
               {
-                "t": "してはならず、",
+                "t": "さしてはならず、",
                 "r": "",
                 "g": "predicate"
               }
@@ -697,7 +698,7 @@
                 "g": "predicate"
               },
               {
-                "t": "せられる",
+                "t": "せられる。",
                 "r": "",
                 "g": "predicate"
               }

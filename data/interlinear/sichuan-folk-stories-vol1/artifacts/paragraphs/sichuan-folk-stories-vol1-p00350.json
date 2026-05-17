@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 44,
-    "grammar_token_total": 44,
-    "unit_count": 1
+    "token_total": 46,
+    "grammar_token_total": 46,
+    "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0350",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -23,7 +23,7 @@
       {
         "t": "神",
         "r": "shén",
-        "g": "subject"
+        "g": "attributive"
       },
       {
         "t": "话",
@@ -35,7 +35,7 @@
       {
         "t": "神",
         "r": "しん",
-        "g": "subject"
+        "g": "attributive"
       },
       {
         "t": "話",
@@ -75,7 +75,7 @@
       {
         "t": "神",
         "r": "shén",
-        "g": "subject"
+        "g": "attributive"
       },
       {
         "t": "话",
@@ -107,7 +107,7 @@
       {
         "t": "神",
         "r": "しん",
-        "g": "subject"
+        "g": "attributive"
       },
       {
         "t": "話",
@@ -218,24 +218,25 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00350",
     "source_text": "工胡林树,青内木的一种,民间叫大叶子衣网",
+    "corrected_text": "工胡林树，青冈木的一种，民间叫大叶子衣树",
     "units": [
       {
-        "source_text": "工胡林树,青内木的一种,民间叫大叶子衣网",
+        "source_text": "工胡林树，青冈木的一种，",
         "zh": [
           {
             "t": "工",
             "r": "gōng",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "胡",
             "r": "hú",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "林",
             "r": "lín",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "树",
@@ -243,7 +244,7 @@
             "g": "subject"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -253,8 +254,8 @@
             "g": "attributive"
           },
           {
-            "t": "内",
-            "r": "nèi",
+            "t": "冈",
+            "r": "gāng",
             "g": "attributive"
           },
           {
@@ -278,10 +279,86 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
-          },
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "工",
+              "r": "こう",
+              "g": "attributive"
+            },
+            {
+              "t": "胡",
+              "r": "こ",
+              "g": "attributive"
+            },
+            {
+              "t": "林",
+              "r": "りん",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "木",
+              "r": "き",
+              "g": "subject"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "青",
+              "r": "せい",
+              "g": "attributive"
+            },
+            {
+              "t": "岡",
+              "r": "こう",
+              "g": "attributive"
+            },
+            {
+              "t": "木",
+              "r": "ぼく",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "一",
+              "r": "いっ",
+              "g": "object"
+            },
+            {
+              "t": "種",
+              "r": "しゅ",
+              "g": "object"
+            },
+            {
+              "t": "で、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "民间叫大叶子衣树",
+        "zh": [
           {
             "t": "民",
             "r": "mín",
@@ -318,79 +395,12 @@
             "g": "object"
           },
           {
-            "t": "网",
-            "r": "wǎng",
+            "t": "树",
+            "r": "shù",
             "g": "object"
           }
         ],
         "ja": [
-          [
-            {
-              "t": "工",
-              "r": "こう",
-              "g": "subject"
-            },
-            {
-              "t": "胡",
-              "r": "こ",
-              "g": "subject"
-            },
-            {
-              "t": "林",
-              "r": "りん",
-              "g": "subject"
-            },
-            {
-              "t": "の",
-              "r": "",
-              "g": "subject"
-            },
-            {
-              "t": "木",
-              "r": "き",
-              "g": "subject"
-            },
-            {
-              "t": "は、",
-              "r": "",
-              "g": "subject"
-            },
-            {
-              "t": "青",
-              "r": "せい",
-              "g": "attributive"
-            },
-            {
-              "t": "内",
-              "r": "ない",
-              "g": "attributive"
-            },
-            {
-              "t": "木",
-              "r": "ぼく",
-              "g": "object"
-            },
-            {
-              "t": "の",
-              "r": "",
-              "g": "object"
-            },
-            {
-              "t": "一",
-              "r": "いっ",
-              "g": "object"
-            },
-            {
-              "t": "種",
-              "r": "しゅ",
-              "g": "object"
-            },
-            {
-              "t": "で、",
-              "r": "",
-              "g": "function"
-            }
-          ],
           [
             {
               "t": "民",
@@ -409,27 +419,39 @@
             },
             {
               "t": "大",
-              "r": "だい",
+              "r": "おお",
+              "g": "object"
+            },
+            {
+              "t": "きな",
+              "r": "",
               "g": "object"
             },
             {
               "t": "葉",
-              "r": "よう",
+              "r": "は",
               "g": "object"
             },
             {
-              "t": "子",
-              "r": "し",
+              "t": "の",
+              "r": "",
               "g": "object"
-            },
+            }
+          ],
+          [
             {
               "t": "衣",
-              "r": "い",
+              "r": "ころも",
               "g": "object"
             },
             {
-              "t": "網",
-              "r": "もう",
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "木",
+              "r": "き",
               "g": "object"
             },
             {
@@ -443,7 +465,7 @@
               "g": "predicate"
             },
             {
-              "t": "ばれる。",
+              "t": "ばれている。",
               "r": "",
               "g": "predicate"
             }

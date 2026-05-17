@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 36,
-    "grammar_token_total": 36,
+    "token_total": 39,
+    "grammar_token_total": 39,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0443",
@@ -47,11 +47,6 @@
   "subsection": {
     "id": "文化起源神话",
     "title_zh": [
-      {
-        "t": ".",
-        "r": "",
-        "g": "function"
-      },
       {
         "t": "文",
         "r": "wén",
@@ -160,7 +155,7 @@
         "g": "object"
       },
       {
-        "t": "《",
+        "t": "（",
         "r": "",
         "g": "function"
       },
@@ -175,8 +170,8 @@
         "g": "attributive"
       },
       {
-        "t": "拭",
-        "r": "shì",
+        "t": "堰",
+        "r": "yàn",
         "g": "attributive"
       },
       {
@@ -207,9 +202,9 @@
         "g": "subject"
       },
       {
-        "t": "、",
+        "t": "が",
         "r": "",
-        "g": "function"
+        "g": "subject"
       },
       {
         "t": "茶",
@@ -232,7 +227,7 @@
         "g": "predicate"
       },
       {
-        "t": "《",
+        "t": "（",
         "r": "",
         "g": "function"
       },
@@ -247,8 +242,8 @@
         "g": "attributive"
       },
       {
-        "t": "拭",
-        "r": "しょく",
+        "t": "堰",
+        "r": "えん",
         "g": "attributive"
       },
       {
@@ -257,7 +252,7 @@
         "g": "attributive"
       },
       {
-        "t": "》",
+        "t": "）",
         "r": "",
         "g": "function"
       }
@@ -268,9 +263,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00443",
     "source_text": "采水者:王纯五男 56岁文化馆干部大学",
+    "corrected_text": "采录者:王纯五男 56岁文化馆干部大学",
     "units": [
       {
-        "source_text": "采水者:王纯五男 56岁文化馆干部大学",
+        "source_text": "采录者:王纯五男 56岁文化馆干部大学",
         "zh": [
           {
             "t": "采",
@@ -278,8 +274,8 @@
             "g": "attributive"
           },
           {
-            "t": "水",
-            "r": "shuǐ",
+            "t": "录",
+            "r": "lù",
             "g": "attributive"
           },
           {
@@ -355,12 +351,12 @@
           {
             "t": "大",
             "r": "dà",
-            "g": "attributive"
+            "g": "complement"
           },
           {
             "t": "学",
             "r": "xué",
-            "g": "attributive"
+            "g": "complement"
           }
         ],
         "ja": [
@@ -371,8 +367,8 @@
               "g": "attributive"
             },
             {
-              "t": "水",
-              "r": "すい",
+              "t": "録",
+              "r": "ろく",
               "g": "attributive"
             },
             {
@@ -407,7 +403,12 @@
             },
             {
               "t": "男",
-              "r": "おとこ",
+              "r": "だん",
+              "g": "attributive"
+            },
+            {
+              "t": "性",
+              "r": "せい",
               "g": "attributive"
             },
             {
@@ -438,6 +439,11 @@
               "g": "attributive"
             },
             {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
               "t": "幹",
               "r": "かん",
               "g": "object"
@@ -455,12 +461,17 @@
             {
               "t": "大",
               "r": "だい",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "学",
               "r": "がく",
-              "g": "attributive"
+              "g": "complement"
+            },
+            {
+              "t": "卒",
+              "r": "そつ",
+              "g": "complement"
             }
           ]
         ]

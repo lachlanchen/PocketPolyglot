@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 36,
-    "grammar_token_total": 36,
+    "token_total": 39,
+    "grammar_token_total": 39,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0134",
@@ -195,9 +195,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00134",
     "source_text": "讲述者:徐云华男 67岁农民不识字",
+    "corrected_text": "讲述者：徐云华，男，67岁，农民，不识字",
     "units": [
       {
-        "source_text": "讲述者:徐云华男 67岁农民不识字",
+        "source_text": "讲述者：徐云华，男，67岁，农民，不识字",
         "zh": [
           {
             "t": "讲",
@@ -215,7 +216,7 @@
             "g": "topic"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -235,24 +236,34 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "男",
             "r": "nán",
             "g": "predicate"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
           {
             "t": "67",
             "r": "",
-            "g": "predicate"
+            "g": "attributive"
           },
           {
             "t": "岁",
             "r": "suì",
-            "g": "predicate"
+            "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "农",
@@ -263,6 +274,11 @@
             "t": "民",
             "r": "mín",
             "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "不",
@@ -340,17 +356,12 @@
             {
               "t": "67",
               "r": "",
-              "g": "predicate"
+              "g": "attributive"
             },
             {
               "t": "歳",
               "r": "さい",
-              "g": "predicate"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
+              "g": "attributive"
             }
           ],
           [
@@ -375,7 +386,7 @@
               "g": "object"
             },
             {
-              "t": "が",
+              "t": "を",
               "r": "",
               "g": "object"
             },

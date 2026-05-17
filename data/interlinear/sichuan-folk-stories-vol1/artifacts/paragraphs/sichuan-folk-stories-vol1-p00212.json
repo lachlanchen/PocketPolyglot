@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 33,
-    "grammar_token_total": 33,
+    "token_total": 35,
+    "grammar_token_total": 35,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0212",
@@ -80,13 +80,8 @@
     ],
     "title_ja": [
       {
-        "t": "図",
-        "r": "と",
-        "g": "attributive"
-      },
-      {
-        "t": "騰",
-        "r": "てん",
+        "t": "トーテム",
+        "r": "",
         "g": "attributive"
       },
       {
@@ -147,7 +142,7 @@
       {
         "t": "和",
         "r": "hé",
-        "g": "function"
+        "g": "subject"
       },
       {
         "t": "龙",
@@ -214,7 +209,7 @@
       {
         "t": "と",
         "r": "",
-        "g": "function"
+        "g": "subject"
       },
       {
         "t": "竜",
@@ -253,9 +248,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00212",
     "source_text": "众仙说:干脆,让人死蛇来脱壳吧!",
+    "corrected_text": "众仙说：“干脆，让人死，蛇来脱壳吧！”",
     "units": [
       {
-        "source_text": "众仙说:干脆,让人死蛇来脱壳吧!",
+        "source_text": "众仙说：“干脆，让人死，蛇来脱壳吧！”",
         "zh": [
           {
             "t": "众",
@@ -273,7 +269,12 @@
             "g": "predicate"
           },
           {
-            "t": ":",
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "“",
             "r": "",
             "g": "function"
           },
@@ -288,7 +289,7 @@
             "g": "adverbial"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -306,6 +307,11 @@
             "t": "死",
             "r": "sǐ",
             "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "蛇",
@@ -333,7 +339,12 @@
             "g": "function"
           },
           {
-            "t": "!",
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
             "r": "",
             "g": "function"
           }
@@ -361,14 +372,9 @@
               "g": "predicate"
             },
             {
-              "t": "った",
+              "t": "った。「",
               "r": "",
               "g": "predicate"
-            },
-            {
-              "t": "。「",
-              "r": "",
-              "g": "function"
             },
             {
               "t": "いっそ、",

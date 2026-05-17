@@ -58,17 +58,17 @@
       {
         "t": "再",
         "r": "zài",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "繁",
         "r": "fán",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "衍",
         "r": "yǎn",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "神",
@@ -110,17 +110,17 @@
       {
         "t": "再",
         "r": "さい",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "繁",
         "r": "はん",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "衍",
         "r": "えん",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "神",
@@ -165,27 +165,27 @@
       {
         "t": "女",
         "r": "nǚ",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "娲",
         "r": "wā",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "娘",
         "r": "niáng",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "娘",
         "r": "niang",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "的",
         "r": "de",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": "眼",
@@ -222,27 +222,27 @@
       {
         "t": "女",
         "r": "じょ",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "媧",
         "r": "か",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "娘",
         "r": "にゃん",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "娘",
         "r": "にゃん",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "の",
         "r": "",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": "涙",
@@ -257,9 +257,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00319",
       "source_text": "刘树措男 50岁文化干部大学当隶时间、地点,1986 年8 月于扼阳市中区",
+      "corrected_text": "刘树措，男，50岁，文化干部，大学。采录时间、地点：1986年8月于德阳市中区",
       "units": [
         {
-          "source_text": "刘树措男 50岁文化干部大学",
+          "source_text": "刘树措，男，50岁，文化干部，大学。",
           "zh": [
             {
               "t": "刘",
@@ -277,59 +278,79 @@
               "g": "subject"
             },
             {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "男",
               "r": "nán",
               "g": "predicate"
             },
             {
-              "t": " ",
+              "t": "，",
               "r": "",
               "g": "function"
             },
             {
               "t": "5",
               "r": "",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "0",
               "r": "",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "岁",
               "r": "suì",
-              "g": "predicate"
+              "g": "complement"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "文",
               "r": "wén",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "化",
               "r": "huà",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "干",
               "r": "gàn",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "部",
               "r": "bù",
-              "g": "predicate"
+              "g": "object"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "大",
               "r": "dà",
-              "g": "predicate"
+              "g": "attributive"
             },
             {
               "t": "学",
               "r": "xué",
-              "g": "predicate"
+              "g": "attributive"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
@@ -367,34 +388,34 @@
               {
                 "t": "、50",
                 "r": "",
-                "g": "predicate"
+                "g": "complement"
               },
               {
                 "t": "歳",
                 "r": "さい",
-                "g": "predicate"
+                "g": "complement"
               }
             ],
             [
               {
                 "t": "文",
                 "r": "ぶん",
-                "g": "predicate"
+                "g": "object"
               },
               {
                 "t": "化",
                 "r": "か",
-                "g": "predicate"
+                "g": "object"
               },
               {
                 "t": "幹",
                 "r": "かん",
-                "g": "predicate"
+                "g": "object"
               },
               {
                 "t": "部",
                 "r": "ぶ",
-                "g": "predicate"
+                "g": "object"
               },
               {
                 "t": "、",
@@ -404,32 +425,37 @@
               {
                 "t": "大",
                 "r": "だい",
-                "g": "predicate"
+                "g": "attributive"
               },
               {
                 "t": "学",
                 "r": "がく",
-                "g": "predicate"
+                "g": "attributive"
               },
               {
                 "t": "卒",
                 "r": "そつ",
-                "g": "predicate"
+                "g": "attributive"
+              },
+              {
+                "t": "。",
+                "r": "",
+                "g": "function"
               }
             ]
           ]
         },
         {
-          "source_text": "当隶时间、地点,1986 年8 月于扼阳市中区",
+          "source_text": "采录时间、地点：1986年8月于德阳市中区",
           "zh": [
             {
-              "t": "当",
-              "r": "dāng",
+              "t": "采",
+              "r": "cǎi",
               "g": "attributive"
             },
             {
-              "t": "隶",
-              "r": "lì",
+              "t": "录",
+              "r": "lù",
               "g": "attributive"
             },
             {
@@ -458,7 +484,7 @@
               "g": "object"
             },
             {
-              "t": ",",
+              "t": "：",
               "r": "",
               "g": "function"
             },
@@ -483,11 +509,6 @@
               "g": "adverbial"
             },
             {
-              "t": " ",
-              "r": "",
-              "g": "function"
-            },
-            {
               "t": "年",
               "r": "nián",
               "g": "adverbial"
@@ -496,11 +517,6 @@
               "t": "8",
               "r": "",
               "g": "adverbial"
-            },
-            {
-              "t": " ",
-              "r": "",
-              "g": "function"
             },
             {
               "t": "月",
@@ -513,8 +529,8 @@
               "g": "adverbial"
             },
             {
-              "t": "扼",
-              "r": "è",
+              "t": "德",
+              "r": "dé",
               "g": "adverbial"
             },
             {
@@ -608,8 +624,8 @@
                 "g": "function"
               },
               {
-                "t": "扼",
-                "r": "やく",
+                "t": "徳",
+                "r": "とく",
                 "g": "adverbial"
               },
               {

@@ -237,6 +237,7 @@
     {
       "id": "sichuan-folk-stories-vol1-p00234",
       "source_text": "民人本",
+      "corrected_text": "民人本",
       "units": [
         {
           "source_text": "民人本",
@@ -244,17 +245,17 @@
             {
               "t": "民",
               "r": "mín",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "人",
               "r": "rén",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "本",
               "r": "běn",
-              "g": "object"
+              "g": "predicate"
             }
           ],
           "ja": [
@@ -262,34 +263,34 @@
               {
                 "t": "民",
                 "r": "たみ",
-                "g": "object"
+                "g": "subject"
               },
               {
-                "t": "である",
+                "t": "は",
                 "r": "",
-                "g": "object"
-              },
-              {
-                "t": "人",
-                "r": "ひと",
-                "g": "object"
-              },
-              {
-                "t": "々の",
-                "r": "",
-                "g": "object"
+                "g": "subject"
               }
             ],
             [
               {
-                "t": "本",
-                "r": "もと",
-                "g": "object"
+                "t": "人",
+                "r": "ひと",
+                "g": "attributive"
               },
               {
-                "t": "。",
+                "t": "の",
                 "r": "",
-                "g": "function"
+                "g": "attributive"
+              },
+              {
+                "t": "本",
+                "r": "もと",
+                "g": "predicate"
+              },
+              {
+                "t": "である",
+                "r": "",
+                "g": "predicate"
               }
             ]
           ]

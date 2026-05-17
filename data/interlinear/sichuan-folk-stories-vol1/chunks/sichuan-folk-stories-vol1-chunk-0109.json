@@ -212,9 +212,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00109",
       "source_text": "讲述者:李美仁男 68岁农民小学秆业采录者:村隙元男 29岁农民高中采录时间、地点:1985 年8月1日于万县市长岭乡侍家村",
+      "corrected_text": "讲述者：李美仁，男，68岁，农民，小学肄业。采录者：村隙元，男，29岁，农民，高中。采录时间、地点：1985年8月1日于万县市长岭乡侍家村。",
       "units": [
         {
-          "source_text": "讲述者:李美仁男 68岁农民小学秆业",
+          "source_text": "讲述者：李美仁，男，68岁，农民，小学肄业。",
           "zh": [
             {
               "t": "讲",
@@ -232,7 +233,7 @@
               "g": "attributive"
             },
             {
-              "t": ":",
+              "t": "：",
               "r": "",
               "g": "function"
             },
@@ -252,12 +253,17 @@
               "g": "subject"
             },
             {
-              "t": "男",
-              "r": "nán",
-              "g": "subject"
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
-              "t": " ",
+              "t": "男",
+              "r": "nán",
+              "g": "attributive"
+            },
+            {
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -277,34 +283,49 @@
               "g": "attributive"
             },
             {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "农",
               "r": "nóng",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "民",
               "r": "mín",
-              "g": "attributive"
+              "g": "object"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "小",
               "r": "xiǎo",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "学",
               "r": "xué",
-              "g": "attributive"
+              "g": "complement"
             },
             {
-              "t": "秆",
-              "r": "gǎn",
+              "t": "肄",
+              "r": "yì",
               "g": "predicate"
             },
             {
               "t": "业",
               "r": "yè",
               "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
@@ -352,12 +373,12 @@
               {
                 "t": "男",
                 "r": "だん",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "性",
                 "r": "せい",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "、",
@@ -365,18 +386,8 @@
                 "g": "function"
               },
               {
-                "t": "六",
-                "r": "ろく",
-                "g": "attributive"
-              },
-              {
-                "t": "十",
-                "r": "じゅう",
-                "g": "attributive"
-              },
-              {
-                "t": "八",
-                "r": "はっ",
+                "t": "68",
+                "r": "",
                 "g": "attributive"
               },
               {
@@ -389,12 +400,12 @@
               {
                 "t": "農",
                 "r": "のう",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "民",
                 "r": "みん",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "、",
@@ -404,21 +415,26 @@
               {
                 "t": "小",
                 "r": "しょう",
-                "g": "attributive"
+                "g": "complement"
               },
               {
                 "t": "学",
-                "r": "がく",
-                "g": "attributive"
+                "r": "がっ",
+                "g": "complement"
               },
               {
-                "t": "秆",
-                "r": "かん",
+                "t": "校",
+                "r": "こう",
+                "g": "complement"
+              },
+              {
+                "t": "中",
+                "r": "ちゅう",
                 "g": "predicate"
               },
               {
-                "t": "業",
-                "r": "ぎょう",
+                "t": "退",
+                "r": "たい",
                 "g": "predicate"
               },
               {
@@ -430,7 +446,7 @@
           ]
         },
         {
-          "source_text": "采录者:村隙元男 29岁农民高中",
+          "source_text": "采录者：村隙元，男，29岁，农民，高中。",
           "zh": [
             {
               "t": "采",
@@ -448,7 +464,7 @@
               "g": "attributive"
             },
             {
-              "t": ":",
+              "t": "：",
               "r": "",
               "g": "function"
             },
@@ -468,12 +484,17 @@
               "g": "subject"
             },
             {
-              "t": "男",
-              "r": "nán",
-              "g": "subject"
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
-              "t": " ",
+              "t": "男",
+              "r": "nán",
+              "g": "attributive"
+            },
+            {
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -493,24 +514,39 @@
               "g": "attributive"
             },
             {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "农",
               "r": "nóng",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "民",
               "r": "mín",
-              "g": "attributive"
+              "g": "object"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "高",
               "r": "gāo",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "中",
               "r": "zhōng",
-              "g": "attributive"
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
@@ -558,12 +594,12 @@
               {
                 "t": "男",
                 "r": "だん",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "性",
                 "r": "せい",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "、",
@@ -571,18 +607,8 @@
                 "g": "function"
               },
               {
-                "t": "二",
-                "r": "に",
-                "g": "attributive"
-              },
-              {
-                "t": "十",
-                "r": "じゅう",
-                "g": "attributive"
-              },
-              {
-                "t": "九",
-                "r": "きゅう",
+                "t": "29",
+                "r": "",
                 "g": "attributive"
               },
               {
@@ -595,12 +621,12 @@
               {
                 "t": "農",
                 "r": "のう",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "民",
                 "r": "みん",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "、",
@@ -610,27 +636,27 @@
               {
                 "t": "高",
                 "r": "こう",
-                "g": "attributive"
+                "g": "complement"
               },
               {
                 "t": "校",
                 "r": "こう",
-                "g": "attributive"
+                "g": "complement"
               },
               {
                 "t": "卒",
                 "r": "そつ",
-                "g": "attributive"
+                "g": "complement"
               },
               {
                 "t": "程",
                 "r": "てい",
-                "g": "attributive"
+                "g": "complement"
               },
               {
                 "t": "度",
                 "r": "ど",
-                "g": "attributive"
+                "g": "complement"
               },
               {
                 "t": "。",
@@ -641,7 +667,7 @@
           ]
         },
         {
-          "source_text": "采录时间、地点:1985 年8月1日于万县市长岭乡侍家村",
+          "source_text": "采录时间、地点：1985年8月1日于万县市长岭乡侍家村。",
           "zh": [
             {
               "t": "采",
@@ -679,7 +705,7 @@
               "g": "attributive"
             },
             {
-              "t": ":",
+              "t": "：",
               "r": "",
               "g": "function"
             },
@@ -702,11 +728,6 @@
               "t": "5",
               "r": "",
               "g": "adverbial"
-            },
-            {
-              "t": " ",
-              "r": "",
-              "g": "function"
             },
             {
               "t": "年",
@@ -741,47 +762,52 @@
             {
               "t": "万",
               "r": "wàn",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "县",
               "r": "xiàn",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "市",
               "r": "shì",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "长",
               "r": "cháng",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "岭",
               "r": "lǐng",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "乡",
               "r": "xiāng",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "侍",
               "r": "shì",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "家",
               "r": "jiā",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "村",
               "r": "cūn",
-              "g": "adverbial"
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
@@ -861,47 +887,47 @@
               {
                 "t": "万",
                 "r": "ばん",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "県",
                 "r": "けん",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "市",
                 "r": "し",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "長",
                 "r": "ちょう",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "嶺",
                 "r": "れい",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "郷",
                 "r": "きょう",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "侍",
                 "r": "じ",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "家",
                 "r": "か",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "村",
                 "r": "そん",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "にて",

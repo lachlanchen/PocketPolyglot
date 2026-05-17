@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 75,
-    "grammar_token_total": 75,
+    "token_total": 81,
+    "grammar_token_total": 81,
     "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0370",
@@ -253,9 +253,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00370",
     "source_text": "李子硝男 56岁巴县文化馆干部高中采录时间.地点:1986 省 5 月于巴县丰羔乡",
+    "corrected_text": "李子硝，男，56岁，巴县文化馆干部，高中。采录时间、地点：1986年5月于巴县丰高乡。",
     "units": [
       {
-        "source_text": "李子硝男 56岁巴县文化馆干部高中",
+        "source_text": "李子硝，男，56岁，巴县文化馆干部，高中。",
         "zh": [
           {
             "t": "李",
@@ -273,12 +274,17 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "男",
             "r": "nán",
             "g": "complement"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -291,6 +297,11 @@
             "t": "岁",
             "r": "suì",
             "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "巴",
@@ -320,12 +331,17 @@
           {
             "t": "干",
             "r": "gàn",
-            "g": "complement"
+            "g": "object"
           },
           {
             "t": "部",
             "r": "bù",
-            "g": "complement"
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "高",
@@ -336,6 +352,11 @@
             "t": "中",
             "r": "zhōng",
             "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -420,12 +441,12 @@
             {
               "t": "幹",
               "r": "かん",
-              "g": "complement"
+              "g": "object"
             },
             {
               "t": "部",
               "r": "ぶ",
-              "g": "complement"
+              "g": "object"
             },
             {
               "t": "、",
@@ -456,7 +477,7 @@
         ]
       },
       {
-        "source_text": "采录时间.地点:1986 省 5 月于巴县丰羔乡",
+        "source_text": "采录时间、地点：1986年5月于巴县丰高乡。",
         "zh": [
           {
             "t": "采",
@@ -479,7 +500,7 @@
             "g": "topic"
           },
           {
-            "t": ".",
+            "t": "、",
             "r": "",
             "g": "function"
           },
@@ -494,7 +515,7 @@
             "g": "topic"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -504,29 +525,14 @@
             "g": "adverbial"
           },
           {
-            "t": " ",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "省",
-            "r": "shěng",
+            "t": "年",
+            "r": "nián",
             "g": "adverbial"
-          },
-          {
-            "t": " ",
-            "r": "",
-            "g": "function"
           },
           {
             "t": "5",
             "r": "",
             "g": "adverbial"
-          },
-          {
-            "t": " ",
-            "r": "",
-            "g": "function"
           },
           {
             "t": "月",
@@ -554,7 +560,7 @@
             "g": "adverbial"
           },
           {
-            "t": "羔",
+            "t": "高",
             "r": "gāo",
             "g": "adverbial"
           },
@@ -562,6 +568,11 @@
             "t": "乡",
             "r": "xiāng",
             "g": "adverbial"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -649,7 +660,7 @@
               "g": "adverbial"
             },
             {
-              "t": "羔",
+              "t": "高",
               "r": "こう",
               "g": "adverbial"
             },

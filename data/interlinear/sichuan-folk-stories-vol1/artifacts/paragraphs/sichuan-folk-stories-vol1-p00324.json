@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 125,
-    "grammar_token_total": 125,
+    "token_total": 127,
+    "grammar_token_total": 127,
     "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0324",
@@ -223,13 +223,14 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00324",
     "source_text": "王帝一听,觉得有道理,就吓人去把火龙太子喊来.火龙太子来了,玉帝对他说人间没得火不行,把你那十根火龙须拿一根给凤人氏吧。",
+    "corrected_text": "玉帝一听，觉得有道理，就差人去把火龙太子喊来。火龙太子来了，玉帝对他说人间没得火不行，把你那十根火龙须拿一根给燧人氏吧。",
     "units": [
       {
-        "source_text": "王帝一听,觉得有道理,就吓人去把火龙太子喊来.",
+        "source_text": "玉帝一听，觉得有道理，就差人去把火龙太子喊来。",
         "zh": [
           {
-            "t": "王",
-            "r": "wáng",
+            "t": "玉",
+            "r": "yù",
             "g": "subject"
           },
           {
@@ -248,7 +249,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -265,7 +266,7 @@
           {
             "t": "有",
             "r": "yǒu",
-            "g": "object"
+            "g": "predicate"
           },
           {
             "t": "道",
@@ -278,7 +279,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -288,8 +289,8 @@
             "g": "adverbial"
           },
           {
-            "t": "吓",
-            "r": "xià",
+            "t": "差",
+            "r": "chāi",
             "g": "predicate"
           },
           {
@@ -338,7 +339,7 @@
             "g": "complement"
           },
           {
-            "t": ".",
+            "t": "。",
             "r": "",
             "g": "function"
           }
@@ -346,8 +347,8 @@
         "ja": [
           [
             {
-              "t": "王",
-              "r": "おう",
+              "t": "玉",
+              "r": "ぎょく",
               "g": "subject"
             },
             {
@@ -413,7 +414,17 @@
               "g": "object"
             },
             {
-              "t": "をやって",
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "遣",
+              "r": "や",
+              "g": "predicate"
+            },
+            {
+              "t": "って",
               "r": "",
               "g": "predicate"
             },
@@ -466,7 +477,7 @@
         ]
       },
       {
-        "source_text": "火龙太子来了,玉帝对他说人间没得火不行,",
+        "source_text": "火龙太子来了，玉帝对他说人间没得火不行，",
         "zh": [
           {
             "t": "火",
@@ -499,7 +510,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -564,7 +575,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -664,9 +675,9 @@
               "g": "subject"
             },
             {
-              "t": "に",
+              "t": "には",
               "r": "",
-              "g": "adverbial"
+              "g": "subject"
             },
             {
               "t": "火",
@@ -679,9 +690,9 @@
               "g": "object"
             },
             {
-              "t": "ないと",
+              "t": "なくては",
               "r": "",
-              "g": "predicate"
+              "g": "adverbial"
             },
             {
               "t": "困",
@@ -697,7 +708,7 @@
         ]
       },
       {
-        "source_text": "把你那十根火龙须拿一根给凤人氏吧。",
+        "source_text": "把你那十根火龙须拿一根给燧人氏吧。",
         "zh": [
           {
             "t": "把",
@@ -760,8 +771,8 @@
             "g": "predicate"
           },
           {
-            "t": "凤",
-            "r": "fèng",
+            "t": "燧",
+            "r": "suì",
             "g": "object"
           },
           {
@@ -799,7 +810,7 @@
             },
             {
               "t": "本",
-              "r": "ほん",
+              "r": "ぽん",
               "g": "attributive"
             },
             {
@@ -855,8 +866,8 @@
               "g": "predicate"
             },
             {
-              "t": "鳳",
-              "r": "ほう",
+              "t": "燧",
+              "r": "すい",
               "g": "object"
             },
             {

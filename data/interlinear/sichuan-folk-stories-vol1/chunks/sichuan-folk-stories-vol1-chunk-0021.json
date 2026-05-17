@@ -33,22 +33,22 @@
       {
         "t": "开",
         "r": "kāi",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "天",
         "r": "tiān",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "辟",
         "r": "pì",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "地",
         "r": "dì",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "神",
@@ -65,22 +65,22 @@
       {
         "t": "天",
         "r": "てん",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "地",
         "r": "ち",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "開",
         "r": "かい",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "闢",
         "r": "びゃく",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "神",
@@ -105,22 +105,22 @@
       {
         "t": "古",
         "r": "gǔ",
-        "g": "topic"
+        "g": "adverbial"
       },
       {
         "t": "开",
         "r": "kāi",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "天",
         "r": "tiān",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "地",
         "r": "dì",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "（",
@@ -157,37 +157,37 @@
       {
         "t": "古",
         "r": "ふる",
-        "g": "topic"
+        "g": "adverbial"
       },
       {
         "t": "く",
         "r": "",
-        "g": "topic"
+        "g": "adverbial"
       },
       {
         "t": "天",
         "r": "てん",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "地",
         "r": "ち",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "を",
         "r": "",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "開",
         "r": "ひら",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "く",
         "r": "",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "（",
@@ -222,23 +222,19 @@
     {
       "id": "sichuan-folk-stories-vol1-p00021",
       "source_text": "也混郑时期,指古人怒象中的世界开辟前的状态《白虎遭。天地）云混沌相连，视之不匈,昕之不辣.",
+      "corrected_text": "混沌时期，指古人想象中的世界开辟前的状态。《白虎通·天地》云：混沌相连，视之不见，听之不闻。",
       "units": [
         {
-          "source_text": "也混郑时期,指古人怒象中的世界开辟前的状态《白虎遭。",
+          "source_text": "混沌时期，指古人想象中的世界开辟前的状态。",
           "zh": [
-            {
-              "t": "也",
-              "r": "yě",
-              "g": "subject"
-            },
             {
               "t": "混",
               "r": "hùn",
               "g": "subject"
             },
             {
-              "t": "郑",
-              "r": "zhèng",
+              "t": "沌",
+              "r": "dùn",
               "g": "subject"
             },
             {
@@ -252,7 +248,7 @@
               "g": "subject"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -264,32 +260,32 @@
             {
               "t": "古",
               "r": "gǔ",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "人",
               "r": "rén",
-              "g": "object"
+              "g": "attributive"
             },
             {
-              "t": "怒",
-              "r": "nù",
-              "g": "object"
+              "t": "想",
+              "r": "xiǎng",
+              "g": "attributive"
             },
             {
               "t": "象",
               "r": "xiàng",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "中",
               "r": "zhōng",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "的",
               "r": "de",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "世",
@@ -304,22 +300,22 @@
             {
               "t": "开",
               "r": "kāi",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "辟",
               "r": "pì",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "前",
               "r": "qián",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "的",
               "r": "de",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "状",
@@ -332,26 +328,6 @@
               "g": "object"
             },
             {
-              "t": "《",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "白",
-              "r": "bái",
-              "g": "adverbial"
-            },
-            {
-              "t": "虎",
-              "r": "hǔ",
-              "g": "adverbial"
-            },
-            {
-              "t": "遭",
-              "r": "zāo",
-              "g": "adverbial"
-            },
-            {
               "t": "。",
               "r": "",
               "g": "function"
@@ -359,21 +335,6 @@
           ],
           "ja": [
             [
-              {
-                "t": "（",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": "注",
-                "r": "ちゅう",
-                "g": "function"
-              },
-              {
-                "t": "）",
-                "r": "",
-                "g": "function"
-              },
               {
                 "t": "混",
                 "r": "こん",
@@ -412,32 +373,32 @@
               {
                 "t": "古",
                 "r": "こ",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "人",
                 "r": "じん",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "が",
                 "r": "",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "想",
                 "r": "そう",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "像",
                 "r": "ぞう",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "した",
                 "r": "",
-                "g": "object"
+                "g": "attributive"
               }
             ],
             [
@@ -454,22 +415,22 @@
               {
                 "t": "開",
                 "r": "かい",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "闢",
                 "r": "びゃく",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "前",
                 "r": "まえ",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "の",
                 "r": "",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "状",
@@ -500,7 +461,141 @@
                 "t": "。",
                 "r": "",
                 "g": "function"
-              },
+              }
+            ]
+          ]
+        },
+        {
+          "source_text": "《白虎通·天地》云：混沌相连，视之不见，听之不闻。",
+          "zh": [
+            {
+              "t": "《",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "白",
+              "r": "bái",
+              "g": "adverbial"
+            },
+            {
+              "t": "虎",
+              "r": "hǔ",
+              "g": "adverbial"
+            },
+            {
+              "t": "通",
+              "r": "tōng",
+              "g": "adverbial"
+            },
+            {
+              "t": "·",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "天",
+              "r": "tiān",
+              "g": "adverbial"
+            },
+            {
+              "t": "地",
+              "r": "dì",
+              "g": "adverbial"
+            },
+            {
+              "t": "》",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "云",
+              "r": "yún",
+              "g": "predicate"
+            },
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "混",
+              "r": "hùn",
+              "g": "subject"
+            },
+            {
+              "t": "沌",
+              "r": "dùn",
+              "g": "subject"
+            },
+            {
+              "t": "相",
+              "r": "xiāng",
+              "g": "adverbial"
+            },
+            {
+              "t": "连",
+              "r": "lián",
+              "g": "predicate"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "视",
+              "r": "shì",
+              "g": "predicate"
+            },
+            {
+              "t": "之",
+              "r": "zhī",
+              "g": "object"
+            },
+            {
+              "t": "不",
+              "r": "bú",
+              "g": "complement"
+            },
+            {
+              "t": "见",
+              "r": "jiàn",
+              "g": "complement"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "听",
+              "r": "tīng",
+              "g": "predicate"
+            },
+            {
+              "t": "之",
+              "r": "zhī",
+              "g": "object"
+            },
+            {
+              "t": "不",
+              "r": "bù",
+              "g": "complement"
+            },
+            {
+              "t": "闻",
+              "r": "wén",
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          "ja": [
+            [
               {
                 "t": "『",
                 "r": "",
@@ -522,116 +617,7 @@
                 "g": "adverbial"
               },
               {
-                "t": "』",
-                "r": "",
-                "g": "function"
-              }
-            ]
-          ]
-        },
-        {
-          "source_text": "天地）云混沌相连，视之不匈,昕之不辣.",
-          "zh": [
-            {
-              "t": "天",
-              "r": "tiān",
-              "g": "adverbial"
-            },
-            {
-              "t": "地",
-              "r": "dì",
-              "g": "adverbial"
-            },
-            {
-              "t": "）",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "云",
-              "r": "yún",
-              "g": "predicate"
-            },
-            {
-              "t": "混",
-              "r": "hùn",
-              "g": "object"
-            },
-            {
-              "t": "沌",
-              "r": "dùn",
-              "g": "object"
-            },
-            {
-              "t": "相",
-              "r": "xiāng",
-              "g": "object"
-            },
-            {
-              "t": "连",
-              "r": "lián",
-              "g": "object"
-            },
-            {
-              "t": "，",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "视",
-              "r": "shì",
-              "g": "object"
-            },
-            {
-              "t": "之",
-              "r": "zhī",
-              "g": "object"
-            },
-            {
-              "t": "不",
-              "r": "bù",
-              "g": "object"
-            },
-            {
-              "t": "匈",
-              "r": "xiōng",
-              "g": "object"
-            },
-            {
-              "t": ",",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "昕",
-              "r": "xīn",
-              "g": "object"
-            },
-            {
-              "t": "之",
-              "r": "zhī",
-              "g": "object"
-            },
-            {
-              "t": "不",
-              "r": "bù",
-              "g": "object"
-            },
-            {
-              "t": "辣",
-              "r": "là",
-              "g": "object"
-            },
-            {
-              "t": ".",
-              "r": "",
-              "g": "function"
-            }
-          ],
-          "ja": [
-            [
-              {
-                "t": "「",
+                "t": "・",
                 "r": "",
                 "g": "function"
               },
@@ -646,14 +632,9 @@
                 "g": "adverbial"
               },
               {
-                "t": "」",
+                "t": "』",
                 "r": "",
                 "g": "function"
-              },
-              {
-                "t": "篇",
-                "r": "へん",
-                "g": "adverbial"
               },
               {
                 "t": "には",
@@ -661,47 +642,52 @@
                 "g": "adverbial"
               },
               {
-                "t": "「",
+                "t": "、",
                 "r": "",
                 "g": "function"
               },
               {
                 "t": "混",
                 "r": "こん",
-                "g": "object"
+                "g": "subject"
               },
               {
                 "t": "沌",
                 "r": "とん",
-                "g": "object"
+                "g": "subject"
               },
               {
                 "t": "は",
                 "r": "",
-                "g": "object"
+                "g": "subject"
+              },
+              {
+                "t": "互",
+                "r": "たが",
+                "g": "adverbial"
+              },
+              {
+                "t": "いに",
+                "r": "",
+                "g": "adverbial"
               },
               {
                 "t": "連",
                 "r": "つら",
-                "g": "object"
+                "g": "predicate"
               },
               {
-                "t": "なり",
+                "t": "なる",
                 "r": "",
-                "g": "object"
+                "g": "predicate"
               },
               {
-                "t": "合",
-                "r": "あ",
-                "g": "object"
-              },
-              {
-                "t": "い",
+                "t": "とある",
                 "r": "",
-                "g": "object"
+                "g": "predicate"
               },
               {
-                "t": "、",
+                "t": "。",
                 "r": "",
                 "g": "function"
               }
@@ -710,22 +696,32 @@
               {
                 "t": "見",
                 "r": "み",
-                "g": "object"
+                "g": "predicate"
               },
               {
                 "t": "ても",
+                "r": "",
+                "g": "predicate"
+              },
+              {
+                "t": "それ",
+                "r": "",
+                "g": "object"
+              },
+              {
+                "t": "は",
                 "r": "",
                 "g": "object"
               },
               {
                 "t": "見",
                 "r": "み",
-                "g": "object"
+                "g": "complement"
               },
               {
                 "t": "えず",
                 "r": "",
-                "g": "object"
+                "g": "complement"
               },
               {
                 "t": "、",
@@ -735,32 +731,32 @@
               {
                 "t": "聞",
                 "r": "き",
-                "g": "object"
+                "g": "predicate"
               },
               {
                 "t": "いても",
+                "r": "",
+                "g": "predicate"
+              },
+              {
+                "t": "それ",
+                "r": "",
+                "g": "object"
+              },
+              {
+                "t": "は",
                 "r": "",
                 "g": "object"
               },
               {
                 "t": "聞",
                 "r": "き",
-                "g": "object"
+                "g": "complement"
               },
               {
                 "t": "こえない",
                 "r": "",
-                "g": "object"
-              },
-              {
-                "t": "」",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": "とある",
-                "r": "",
-                "g": "predicate"
+                "g": "complement"
               },
               {
                 "t": "。",

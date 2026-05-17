@@ -192,54 +192,55 @@
     {
       "id": "sichuan-folk-stories-vol1-p00346",
       "source_text": "玉皇大帝旨传下来的时候,轩边正在打睦睡.这--喊.他眼睛都没睁,坐在那里就上了天。所以,传说轩连皇帝是睡着了死的。",
+      "corrected_text": "玉皇大帝旨传下来的时候，轩辕正在打瞌睡。这一喊，他眼睛都没睁，坐在那里就上了天。所以，传说轩辕皇帝是睡着了死的。",
       "units": [
         {
-          "source_text": "玉皇大帝旨传下来的时候,轩边正在打睦睡.",
+          "source_text": "玉皇大帝旨传下来的时候，轩辕正在打瞌睡。",
           "zh": [
             {
               "t": "玉",
               "r": "yù",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "皇",
               "r": "huáng",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "大",
               "r": "dà",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "帝",
               "r": "dì",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "旨",
               "r": "zhǐ",
-              "g": "adverbial"
+              "g": "subject"
             },
             {
               "t": "传",
               "r": "chuán",
-              "g": "adverbial"
+              "g": "predicate"
             },
             {
               "t": "下",
               "r": "xià",
-              "g": "adverbial"
+              "g": "complement"
             },
             {
               "t": "来",
               "r": "lái",
-              "g": "adverbial"
+              "g": "complement"
             },
             {
               "t": "的",
               "r": "de",
-              "g": "adverbial"
+              "g": "complement"
             },
             {
               "t": "时",
@@ -252,7 +253,7 @@
               "g": "adverbial"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -262,8 +263,8 @@
               "g": "subject"
             },
             {
-              "t": "边",
-              "r": "biān",
+              "t": "辕",
+              "r": "yuán",
               "g": "subject"
             },
             {
@@ -282,17 +283,17 @@
               "g": "predicate"
             },
             {
-              "t": "睦",
-              "r": "mù",
-              "g": "predicate"
+              "t": "瞌",
+              "r": "kē",
+              "g": "object"
             },
             {
               "t": "睡",
               "r": "shuì",
-              "g": "predicate"
+              "g": "object"
             },
             {
-              "t": ".",
+              "t": "。",
               "r": "",
               "g": "function"
             }
@@ -302,57 +303,47 @@
               {
                 "t": "玉",
                 "r": "ぎょく",
-                "g": "adverbial"
+                "g": "attributive"
               },
               {
                 "t": "皇",
                 "r": "こう",
-                "g": "adverbial"
+                "g": "attributive"
               },
               {
                 "t": "大",
-                "r": "たい",
-                "g": "adverbial"
+                "r": "だい",
+                "g": "attributive"
               },
               {
                 "t": "帝",
                 "r": "てい",
-                "g": "adverbial"
+                "g": "attributive"
               },
               {
                 "t": "の",
                 "r": "",
-                "g": "adverbial"
+                "g": "attributive"
               },
               {
                 "t": "旨",
                 "r": "むね",
-                "g": "adverbial"
+                "g": "subject"
               },
               {
                 "t": "が",
                 "r": "",
-                "g": "adverbial"
+                "g": "subject"
               },
               {
                 "t": "下",
                 "r": "くだ",
-                "g": "adverbial"
+                "g": "predicate"
               },
               {
-                "t": "って",
+                "t": "ってきた",
                 "r": "",
-                "g": "adverbial"
-              },
-              {
-                "t": "来",
-                "r": "き",
-                "g": "adverbial"
-              },
-              {
-                "t": "た",
-                "r": "",
-                "g": "adverbial"
+                "g": "predicate"
               },
               {
                 "t": "時",
@@ -372,8 +363,8 @@
                 "g": "subject"
               },
               {
-                "t": "辺",
-                "r": "へん",
+                "t": "轅",
+                "r": "えん",
                 "g": "subject"
               },
               {
@@ -394,7 +385,7 @@
               {
                 "t": "眠",
                 "r": "ねむ",
-                "g": "predicate"
+                "g": "object"
               },
               {
                 "t": "りをしていた",
@@ -410,7 +401,7 @@
           ]
         },
         {
-          "source_text": "这--喊.",
+          "source_text": "这一喊，他眼睛都没睁，坐在那里就上了天。",
           "zh": [
             {
               "t": "这",
@@ -418,9 +409,9 @@
               "g": "adverbial"
             },
             {
-              "t": "--",
-              "r": "",
-              "g": "function"
+              "t": "一",
+              "r": "yī",
+              "g": "adverbial"
             },
             {
               "t": "喊",
@@ -428,56 +419,10 @@
               "g": "predicate"
             },
             {
-              "t": ".",
+              "t": "，",
               "r": "",
               "g": "function"
-            }
-          ],
-          "ja": [
-            [
-              {
-                "t": "このひと",
-                "r": "",
-                "g": "adverbial"
-              },
-              {
-                "t": "声",
-                "r": "こえ",
-                "g": "adverbial"
-              },
-              {
-                "t": "で",
-                "r": "",
-                "g": "adverbial"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
-              }
-            ],
-            [
-              {
-                "t": "呼",
-                "r": "よ",
-                "g": "predicate"
-              },
-              {
-                "t": "ばれた",
-                "r": "",
-                "g": "predicate"
-              },
-              {
-                "t": "。",
-                "r": "",
-                "g": "function"
-              }
-            ]
-          ]
-        },
-        {
-          "source_text": "他眼睛都没睁,坐在那里就上了天。",
-          "zh": [
+            },
             {
               "t": "他",
               "r": "tā",
@@ -509,7 +454,7 @@
               "g": "predicate"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -561,6 +506,31 @@
           ],
           "ja": [
             [
+              {
+                "t": "その",
+                "r": "",
+                "g": "adverbial"
+              },
+              {
+                "t": "一",
+                "r": "ひと",
+                "g": "adverbial"
+              },
+              {
+                "t": "声",
+                "r": "こえ",
+                "g": "predicate"
+              },
+              {
+                "t": "で",
+                "r": "",
+                "g": "predicate"
+              },
+              {
+                "t": "、",
+                "r": "",
+                "g": "function"
+              },
               {
                 "t": "彼",
                 "r": "かれ",
@@ -614,6 +584,11 @@
                 "g": "adverbial"
               },
               {
+                "t": "すぐ",
+                "r": "",
+                "g": "adverbial"
+              },
+              {
                 "t": "天",
                 "r": "てん",
                 "g": "complement"
@@ -629,7 +604,7 @@
                 "g": "predicate"
               },
               {
-                "t": "った",
+                "t": "ってしまった",
                 "r": "",
                 "g": "predicate"
               },
@@ -642,7 +617,7 @@
           ]
         },
         {
-          "source_text": "所以,传说轩连皇帝是睡着了死的。",
+          "source_text": "所以，传说轩辕皇帝是睡着了死的。",
           "zh": [
             {
               "t": "所",
@@ -655,7 +630,7 @@
               "g": "adverbial"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -675,8 +650,8 @@
               "g": "subject"
             },
             {
-              "t": "连",
-              "r": "lián",
+              "t": "辕",
+              "r": "yuán",
               "g": "subject"
             },
             {
@@ -758,8 +733,8 @@
                 "g": "subject"
               },
               {
-                "t": "連",
-                "r": "れん",
+                "t": "轅",
+                "r": "えん",
                 "g": "subject"
               },
               {
@@ -800,7 +775,7 @@
                 "g": "predicate"
               },
               {
-                "t": "という",
+                "t": "のだという",
                 "r": "",
                 "g": "function"
               },

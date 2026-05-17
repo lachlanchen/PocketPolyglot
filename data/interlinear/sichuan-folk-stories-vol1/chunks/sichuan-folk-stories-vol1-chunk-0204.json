@@ -33,22 +33,22 @@
       {
         "t": "图",
         "r": "tú",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "腾",
         "r": "téng",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "祖",
         "r": "zǔ",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "先",
         "r": "xiān",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "神",
@@ -65,17 +65,17 @@
       {
         "t": "トーテム",
         "r": "",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "祖",
         "r": "そ",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "先",
         "r": "せん",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "神",
@@ -120,12 +120,12 @@
       {
         "t": "中",
         "r": "zhōng",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "江",
         "r": "jiāng",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "县",
@@ -167,12 +167,12 @@
       {
         "t": "中",
         "r": "ちゅう",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "江",
         "r": "こう",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "県",
@@ -192,9 +192,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00204",
       "source_text": "以后,人为纪念和龙的友谊,常常用龙给自己的孩子取名字;龙也忘不了人类,常常回来帮助人捕鼠握虫。",
+      "corrected_text": "以后，人为纪念和龙的友谊，常常用龙给自己的孩子取名字；龙也忘不了人类，常常回来帮助人捕鼠捉虫。",
       "units": [
         {
-          "source_text": "以后,人为纪念和龙的友谊,常常用龙给自己的孩子取名字;",
+          "source_text": "以后，人为纪念和龙的友谊，常常用龙给自己的孩子取名字；",
           "zh": [
             {
               "t": "以",
@@ -207,7 +208,7 @@
               "g": "adverbial"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -234,30 +235,30 @@
             {
               "t": "和",
               "r": "hé",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "龙",
               "r": "lóng",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "的",
               "r": "de",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "友",
               "r": "yǒu",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "谊",
               "r": "yì",
-              "g": "adverbial"
+              "g": "object"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -279,7 +280,7 @@
             {
               "t": "龙",
               "r": "lóng",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "给",
@@ -327,7 +328,7 @@
               "g": "object"
             },
             {
-              "t": ";",
+              "t": "；",
               "r": "",
               "g": "function"
             }
@@ -360,39 +361,29 @@
                 "g": "subject"
               },
               {
-                "t": "人",
-                "r": "ひと",
-                "g": "adverbial"
-              },
-              {
-                "t": "と",
-                "r": "",
-                "g": "adverbial"
-              },
-              {
                 "t": "龍",
                 "r": "りゅう",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "との",
                 "r": "",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "友",
                 "r": "ゆう",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "情",
                 "r": "じょう",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "を",
                 "r": "",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "記",
@@ -424,22 +415,22 @@
               {
                 "t": "龍",
                 "r": "りゅう",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "の",
                 "r": "",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "字",
                 "r": "じ",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "で",
                 "r": "",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "自",
@@ -462,13 +453,18 @@
                 "g": "complement"
               },
               {
-                "t": "に",
+                "t": "どもに",
                 "r": "",
                 "g": "complement"
               },
               {
                 "t": "名",
                 "r": "な",
+                "g": "object"
+              },
+              {
+                "t": "前",
+                "r": "まえ",
                 "g": "object"
               },
               {
@@ -490,7 +486,7 @@
           ]
         },
         {
-          "source_text": "龙也忘不了人类,常常回来帮助人捕鼠握虫。",
+          "source_text": "龙也忘不了人类，常常回来帮助人捕鼠捉虫。",
           "zh": [
             {
               "t": "龙",
@@ -528,7 +524,7 @@
               "g": "object"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -578,8 +574,8 @@
               "g": "object"
             },
             {
-              "t": "握",
-              "r": "wò",
+              "t": "捉",
+              "r": "zhuō",
               "g": "object"
             },
             {
@@ -626,7 +622,7 @@
                 "g": "predicate"
               },
               {
-                "t": "れることができず",
+                "t": "れられず",
                 "r": "",
                 "g": "predicate"
               },
@@ -693,7 +689,7 @@
                 "g": "object"
               },
               {
-                "t": "取",
+                "t": "捕",
                 "r": "と",
                 "g": "object"
               },

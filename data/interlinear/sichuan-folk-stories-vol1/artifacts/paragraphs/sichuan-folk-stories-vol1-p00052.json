@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 14,
-    "grammar_token_total": 14,
+    "token_total": 16,
+    "grammar_token_total": 16,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0052",
@@ -50,22 +50,22 @@
       {
         "t": "开",
         "r": "kāi",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "天",
         "r": "tiān",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "辟",
         "r": "pì",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "地",
         "r": "dì",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "神",
@@ -82,22 +82,22 @@
       {
         "t": "天",
         "r": "てん",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "地",
         "r": "ち",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "開",
         "r": "かい",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "闢",
         "r": "びゃく",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "神",
@@ -115,12 +115,7 @@
     "id": "神话-开天辟地神话-006-女娲造人",
     "title_zh": [
       {
-        "t": "006",
-        "r": "",
-        "g": "function"
-      },
-      {
-        "t": ". ",
+        "t": "006. ",
         "r": "",
         "g": "function"
       },
@@ -147,12 +142,7 @@
     ],
     "title_ja": [
       {
-        "t": "006",
-        "r": "",
-        "g": "function"
-      },
-      {
-        "t": ". ",
+        "t": "006. ",
         "r": "",
         "g": "function"
       },
@@ -198,6 +188,7 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00052",
     "source_text": "（德昌县）",
+    "corrected_text": "（德昌县）",
     "units": [
       {
         "source_text": "（德昌县）",
@@ -210,12 +201,12 @@
           {
             "t": "德",
             "r": "dé",
-            "g": "topic"
+            "g": "attributive"
           },
           {
             "t": "昌",
             "r": "chāng",
-            "g": "topic"
+            "g": "attributive"
           },
           {
             "t": "县",
@@ -238,12 +229,12 @@
             {
               "t": "徳",
               "r": "とく",
-              "g": "topic"
+              "g": "attributive"
             },
             {
               "t": "昌",
               "r": "しょう",
-              "g": "topic"
+              "g": "attributive"
             },
             {
               "t": "県",
@@ -258,23 +249,33 @@
           ],
           [
             {
-              "t": "の",
-              "r": "",
-              "g": "topic"
+              "t": "採",
+              "r": "さい",
+              "g": "object"
+            },
+            {
+              "t": "録",
+              "r": "ろく",
+              "g": "object"
             },
             {
               "t": "地",
               "r": "ち",
-              "g": "topic"
+              "g": "object"
             },
             {
-              "t": "名",
-              "r": "めい",
-              "g": "topic"
+              "t": "を",
+              "r": "",
+              "g": "object"
             },
             {
-              "t": "注",
-              "r": "ちゅう",
+              "t": "示",
+              "r": "しめ",
+              "g": "predicate"
+            },
+            {
+              "t": "す。",
+              "r": "",
               "g": "predicate"
             }
           ]

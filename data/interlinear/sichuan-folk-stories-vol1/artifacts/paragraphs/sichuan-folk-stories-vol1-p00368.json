@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 37,
-    "grammar_token_total": 37,
+    "token_total": 42,
+    "grammar_token_total": 42,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0368",
@@ -238,9 +238,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00368",
     "source_text": "讲述者:陈继娜女 28岁文化志干高中",
+    "corrected_text": "讲述者：陈继娜，女，28岁，文化程度高中。",
     "units": [
       {
-        "source_text": "讲述者:陈继娜女 28岁文化志干高中",
+        "source_text": "讲述者：陈继娜，女，28岁，文化程度高中。",
         "zh": [
           {
             "t": "讲",
@@ -258,7 +259,7 @@
             "g": "attributive"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -278,12 +279,17 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "女",
             "r": "nǚ",
             "g": "attributive"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -298,6 +304,11 @@
             "g": "attributive"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "文",
             "r": "wén",
             "g": "attributive"
@@ -308,24 +319,29 @@
             "g": "attributive"
           },
           {
-            "t": "志",
-            "r": "zhì",
-            "g": "attributive"
+            "t": "程",
+            "r": "chéng",
+            "g": "object"
           },
           {
-            "t": "干",
-            "r": "gàn",
-            "g": "attributive"
+            "t": "度",
+            "r": "dù",
+            "g": "object"
           },
           {
             "t": "高",
             "r": "gāo",
-            "g": "attributive"
+            "g": "complement"
           },
           {
             "t": "中",
             "r": "zhōng",
-            "g": "attributive"
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -379,9 +395,12 @@
               "t": "性",
               "r": "せい",
               "g": "attributive"
-            }
-          ],
-          [
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
             {
               "t": "28",
               "r": "",
@@ -393,10 +412,12 @@
               "g": "attributive"
             },
             {
-              "t": "、",
+              "t": "。",
               "r": "",
               "g": "function"
-            },
+            }
+          ],
+          [
             {
               "t": "文",
               "r": "ぶん",
@@ -408,34 +429,34 @@
               "g": "attributive"
             },
             {
-              "t": "志",
-              "r": "し",
-              "g": "attributive"
+              "t": "程",
+              "r": "てい",
+              "g": "object"
             },
             {
-              "t": "幹",
-              "r": "かん",
-              "g": "attributive"
+              "t": "度",
+              "r": "ど",
+              "g": "object"
             },
             {
-              "t": "部",
-              "r": "ぶ",
-              "g": "attributive"
-            },
-            {
-              "t": "、",
+              "t": "は",
               "r": "",
-              "g": "function"
+              "g": "object"
             },
             {
               "t": "高",
               "r": "こう",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "中",
               "r": "ちゅう",
-              "g": "attributive"
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ]
         ]

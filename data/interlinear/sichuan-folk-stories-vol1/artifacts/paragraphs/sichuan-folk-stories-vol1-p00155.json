@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 52,
-    "grammar_token_total": 52,
+    "token_total": 54,
+    "grammar_token_total": 54,
     "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0155",
@@ -233,9 +233,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00155",
     "source_text": "附记:采录者听老人讲述,后回忆整理，附:异文",
+    "corrected_text": "附记：采录者听老人讲述，后回忆整理，附：异文",
     "units": [
       {
-        "source_text": "附记:采录者听老人讲述,后回忆整理，",
+        "source_text": "附记：采录者听老人讲述，后回忆整理，",
         "zh": [
           {
             "t": "附",
@@ -248,7 +249,7 @@
             "g": "function"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -293,7 +294,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -381,17 +382,15 @@
               "g": "object"
             },
             {
-              "t": "語",
-              "r": "かた",
-              "g": "predicate"
+              "t": "話",
+              "r": "はなし",
+              "g": "object"
             },
             {
-              "t": "りを",
+              "t": "を",
               "r": "",
-              "g": "predicate"
-            }
-          ],
-          [
+              "g": "object"
+            },
             {
               "t": "聞",
               "r": "き",
@@ -401,7 +400,9 @@
               "t": "き、",
               "r": "",
               "g": "predicate"
-            },
+            }
+          ],
+          [
             {
               "t": "後",
               "r": "あと",
@@ -423,7 +424,17 @@
               "g": "predicate"
             },
             {
-              "t": "により",
+              "t": "に",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "基",
+              "r": "もと",
+              "g": "predicate"
+            },
+            {
+              "t": "づいて",
               "r": "",
               "g": "predicate"
             },
@@ -446,7 +457,7 @@
         ]
       },
       {
-        "source_text": "附:异文",
+        "source_text": "附：异文",
         "zh": [
           {
             "t": "附",
@@ -454,7 +465,7 @@
             "g": "function"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },

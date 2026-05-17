@@ -247,9 +247,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00280",
       "source_text": "哥哥提出拜天地成亲,妹妹还是不干。她要再看 -次。他们又各自息上一座大山,用石头锤川锤,又经过九九八十-天,用锤出的火星点人嵌了两堆大火。妹妹要看升上去的青烟是不是能搅在一起。奇色,两股青烟升上- -两丈高以后,就搅在一起了。",
+      "corrected_text": "哥哥提出拜天地成亲，妹妹还是不干。她要再看一次。他们又各自爬上一座大山，用石头锤呀锤，又经过九九八十一天，用锤出的火星点燃了两堆大火。妹妹要看升上去的青烟是不是能搅在一起。奇怪，两股青烟升上一两丈高以后，就搅在一起了。",
       "units": [
         {
-          "source_text": "哥哥提出拜天地成亲,妹妹还是不干。",
+          "source_text": "哥哥提出拜天地成亲，妹妹还是不干。",
           "zh": [
             {
               "t": "哥",
@@ -297,7 +298,7 @@
               "g": "object"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -323,7 +324,7 @@
             },
             {
               "t": "不",
-              "r": "bú",
+              "r": "bù",
               "g": "predicate"
             },
             {
@@ -455,7 +456,7 @@
           ]
         },
         {
-          "source_text": "她要再看 -次。",
+          "source_text": "她要再看一次。",
           "zh": [
             {
               "t": "她",
@@ -478,14 +479,9 @@
               "g": "predicate"
             },
             {
-              "t": " ",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "-",
-              "r": "",
-              "g": "function"
+              "t": "一",
+              "r": "yí",
+              "g": "complement"
             },
             {
               "t": "次",
@@ -523,12 +519,12 @@
               {
                 "t": "一",
                 "r": "いち",
-                "g": "adverbial"
+                "g": "complement"
               },
               {
                 "t": "度",
                 "r": "ど",
-                "g": "adverbial"
+                "g": "complement"
               },
               {
                 "t": "、",
@@ -566,7 +562,7 @@
           ]
         },
         {
-          "source_text": "他们又各自息上一座大山,用石头锤川锤,",
+          "source_text": "他们又各自爬上一座大山，用石头锤呀锤，",
           "zh": [
             {
               "t": "他",
@@ -594,8 +590,8 @@
               "g": "adverbial"
             },
             {
-              "t": "息",
-              "r": "xī",
+              "t": "爬",
+              "r": "pá",
               "g": "predicate"
             },
             {
@@ -624,7 +620,7 @@
               "g": "complement"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -649,9 +645,9 @@
               "g": "predicate"
             },
             {
-              "t": "川",
-              "r": "chuān",
-              "g": "predicate"
+              "t": "呀",
+              "r": "ya",
+              "g": "function"
             },
             {
               "t": "锤",
@@ -659,7 +655,7 @@
               "g": "predicate"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             }
@@ -697,7 +693,7 @@
                 "g": "complement"
               },
               {
-                "t": "に",
+                "t": "へ",
                 "r": "",
                 "g": "complement"
               },
@@ -729,27 +725,32 @@
                 "g": "adverbial"
               },
               {
+                "t": "何",
+                "r": "なん",
+                "g": "adverbial"
+              },
+              {
+                "t": "度",
+                "r": "ど",
+                "g": "adverbial"
+              },
+              {
+                "t": "も",
+                "r": "",
+                "g": "adverbial"
+              },
+              {
                 "t": "打",
                 "r": "う",
                 "g": "predicate"
               },
               {
-                "t": "っては",
+                "t": "った",
                 "r": "",
                 "g": "predicate"
               },
               {
-                "t": "打",
-                "r": "う",
-                "g": "predicate"
-              },
-              {
-                "t": "ち",
-                "r": "",
-                "g": "predicate"
-              },
-              {
-                "t": "、",
+                "t": "。",
                 "r": "",
                 "g": "function"
               }
@@ -757,7 +758,7 @@
           ]
         },
         {
-          "source_text": "又经过九九八十-天,用锤出的火星点人嵌了两堆大火。",
+          "source_text": "又经过九九八十一天，用锤出的火星点燃了两堆大火。",
           "zh": [
             {
               "t": "又",
@@ -795,9 +796,9 @@
               "g": "adverbial"
             },
             {
-              "t": "-",
-              "r": "",
-              "g": "function"
+              "t": "一",
+              "r": "yī",
+              "g": "adverbial"
             },
             {
               "t": "天",
@@ -805,7 +806,7 @@
               "g": "adverbial"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -817,27 +818,27 @@
             {
               "t": "锤",
               "r": "chuí",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "出",
               "r": "chū",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "的",
               "r": "de",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "火",
               "r": "huǒ",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "星",
               "r": "xīng",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "点",
@@ -845,13 +846,8 @@
               "g": "predicate"
             },
             {
-              "t": "人",
-              "r": "rén",
-              "g": "predicate"
-            },
-            {
-              "t": "嵌",
-              "r": "qiàn",
+              "t": "燃",
+              "r": "rán",
               "g": "predicate"
             },
             {
@@ -890,6 +886,16 @@
               {
                 "t": "さらに",
                 "r": "",
+                "g": "adverbial"
+              },
+              {
+                "t": "九",
+                "r": "きゅう",
+                "g": "adverbial"
+              },
+              {
+                "t": "九",
+                "r": "きゅう",
                 "g": "adverbial"
               },
               {
@@ -937,37 +943,37 @@
               {
                 "t": "打",
                 "r": "う",
-                "g": "adverbial"
+                "g": "attributive"
               },
               {
                 "t": "ち",
                 "r": "",
-                "g": "adverbial"
+                "g": "attributive"
               },
               {
                 "t": "出",
                 "r": "だ",
-                "g": "adverbial"
+                "g": "attributive"
               },
               {
                 "t": "した",
                 "r": "",
-                "g": "adverbial"
+                "g": "attributive"
               },
               {
                 "t": "火",
                 "r": "ひ",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "花",
                 "r": "ばな",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "で",
                 "r": "",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "二",
@@ -985,13 +991,8 @@
                 "g": "object"
               },
               {
-                "t": "きな",
-                "r": "",
-                "g": "object"
-              },
-              {
                 "t": "火",
-                "r": "ひ",
+                "r": "び",
                 "g": "object"
               },
               {
@@ -1038,22 +1039,22 @@
             {
               "t": "升",
               "r": "shēng",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "上",
               "r": "shàng",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "去",
               "r": "qù",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "的",
               "r": "de",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "青",
@@ -1124,19 +1125,14 @@
                 "g": "subject"
               },
               {
-                "t": "、",
-                "r": "",
-                "g": "function"
-              },
-              {
                 "t": "昇",
                 "r": "のぼ",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "っていく",
                 "r": "",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "青",
@@ -1181,14 +1177,9 @@
                 "g": "predicate"
               },
               {
-                "t": "ざる",
+                "t": "ざれるかを",
                 "r": "",
                 "g": "predicate"
-              },
-              {
-                "t": "かを",
-                "r": "",
-                "g": "object"
               },
               {
                 "t": "見",
@@ -1209,7 +1200,7 @@
           ]
         },
         {
-          "source_text": "奇色,两股青烟升上- -两丈高以后,",
+          "source_text": "奇怪，两股青烟升上一两丈高以后，",
           "zh": [
             {
               "t": "奇",
@@ -1217,12 +1208,12 @@
               "g": "adverbial"
             },
             {
-              "t": "色",
-              "r": "sè",
+              "t": "怪",
+              "r": "guài",
               "g": "adverbial"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -1257,19 +1248,9 @@
               "g": "predicate"
             },
             {
-              "t": "-",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": " ",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "-",
-              "r": "",
-              "g": "function"
+              "t": "一",
+              "r": "yī",
+              "g": "complement"
             },
             {
               "t": "两",
@@ -1297,7 +1278,7 @@
               "g": "complement"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             }
@@ -1397,7 +1378,7 @@
                 "g": "predicate"
               },
               {
-                "t": "ると",
+                "t": "ったあと",
                 "r": "",
                 "g": "predicate"
               },

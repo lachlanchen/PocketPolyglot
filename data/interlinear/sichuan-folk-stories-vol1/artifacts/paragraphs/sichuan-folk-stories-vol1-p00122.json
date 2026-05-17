@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 27,
-    "grammar_token_total": 27,
+    "token_total": 28,
+    "grammar_token_total": 28,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0122",
@@ -50,22 +50,22 @@
       {
         "t": "自",
         "r": "zì",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "然",
         "r": "rán",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "天",
         "r": "tiān",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "象",
         "r": "xiàng",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "神",
@@ -82,22 +82,22 @@
       {
         "t": "自",
         "r": "し",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "然",
         "r": "ぜん",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "天",
         "r": "てん",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "象",
         "r": "しょう",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "神",
@@ -203,72 +203,68 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00122",
     "source_text": "赎站秃袍和人乡 Ze 允儿|",
+    "corrected_text": "选自《巴县民间文学集成》",
     "units": [
       {
-        "source_text": "赎站秃袍和人乡 Ze 允儿|",
+        "source_text": "选自《巴县民间文学集成》",
         "zh": [
           {
-            "t": "赎",
-            "r": "shú",
+            "t": "选",
+            "r": "xuǎn",
             "g": "predicate"
           },
           {
-            "t": "站",
-            "r": "zhàn",
-            "g": "object"
+            "t": "自",
+            "r": "zì",
+            "g": "predicate"
           },
           {
-            "t": "秃",
-            "r": "tū",
+            "t": "《",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "巴",
+            "r": "bā",
             "g": "attributive"
           },
           {
-            "t": "袍",
-            "r": "páo",
-            "g": "object"
-          },
-          {
-            "t": "和",
-            "r": "hé",
-            "g": "function"
-          },
-          {
-            "t": "人",
-            "r": "rén",
+            "t": "县",
+            "r": "xiàn",
             "g": "attributive"
           },
           {
-            "t": "乡",
-            "r": "xiāng",
+            "t": "民",
+            "r": "mín",
+            "g": "attributive"
+          },
+          {
+            "t": "间",
+            "r": "jiān",
+            "g": "attributive"
+          },
+          {
+            "t": "文",
+            "r": "wén",
             "g": "object"
           },
           {
-            "t": " ",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "Ze",
-            "r": "",
+            "t": "学",
+            "r": "xué",
             "g": "object"
           },
           {
-            "t": " ",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "允",
-            "r": "yǔn",
+            "t": "集",
+            "r": "jí",
             "g": "object"
           },
           {
-            "t": "儿",
-            "r": "ér",
+            "t": "成",
+            "r": "chéng",
             "g": "object"
           },
           {
-            "t": "|",
+            "t": "》",
             "r": "",
             "g": "function"
           }
@@ -276,81 +272,81 @@
         "ja": [
           [
             {
-              "t": "贖",
-              "r": "あがな",
-              "g": "predicate"
+              "t": "出",
+              "r": "しゅっ",
+              "g": "subject"
             },
             {
-              "t": "いの",
+              "t": "典",
+              "r": "てん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
               "r": "",
-              "g": "predicate"
+              "g": "subject"
             },
             {
-              "t": "駅",
-              "r": "えき",
-              "g": "object"
-            },
-            {
-              "t": "、",
+              "t": "『",
               "r": "",
               "g": "function"
             },
             {
-              "t": "禿",
+              "t": "巴",
               "r": "は",
               "g": "attributive"
             },
             {
-              "t": "げた",
-              "r": "",
+              "t": "県",
+              "r": "けん",
               "g": "attributive"
-            },
-            {
-              "t": "袍",
-              "r": "ほう",
-              "g": "object"
-            },
-            {
-              "t": "と",
-              "r": "",
-              "g": "object"
             }
           ],
           [
             {
-              "t": "人",
-              "r": "ひと",
+              "t": "民",
+              "r": "みん",
               "g": "attributive"
             },
             {
-              "t": "の",
-              "r": "",
+              "t": "間",
+              "r": "かん",
               "g": "attributive"
             },
             {
-              "t": "郷",
-              "r": "さと",
+              "t": "文",
+              "r": "ぶん",
               "g": "object"
             },
             {
-              "t": " Ze ",
+              "t": "学",
+              "r": "がく",
+              "g": "object"
+            },
+            {
+              "t": "集",
+              "r": "しゅう",
+              "g": "object"
+            },
+            {
+              "t": "成",
+              "r": "せい",
+              "g": "object"
+            },
+            {
+              "t": "』より",
               "r": "",
-              "g": "object"
+              "g": "adverbial"
             },
             {
-              "t": "允",
-              "r": "いん",
-              "g": "object"
+              "t": "採",
+              "r": "さい",
+              "g": "predicate"
             },
             {
-              "t": "児",
-              "r": "じ",
-              "g": "object"
-            },
-            {
-              "t": "|",
-              "r": "",
-              "g": "function"
+              "t": "録",
+              "r": "ろく",
+              "g": "predicate"
             },
             {
               "t": "。",

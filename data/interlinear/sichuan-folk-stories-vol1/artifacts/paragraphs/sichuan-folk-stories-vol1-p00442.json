@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 32,
-    "grammar_token_total": 32,
+    "token_total": 36,
+    "grammar_token_total": 36,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0442",
@@ -197,11 +197,6 @@
         "g": "subject"
       },
       {
-        "t": "お",
-        "r": "",
-        "g": "object"
-      },
-      {
         "t": "茶",
         "r": "ちゃ",
         "g": "object"
@@ -258,13 +253,14 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00442",
     "source_text": "诽述者:和孙击光胃 61岁农民私焊",
+    "corrected_text": "讲述者：和孙击光胃，61岁，农民，私塾",
     "units": [
       {
-        "source_text": "诽述者:和孙击光胃 61岁农民私焊",
+        "source_text": "讲述者：和孙击光胃，61岁，农民，私塾",
         "zh": [
           {
-            "t": "诽",
-            "r": "fěi",
+            "t": "讲",
+            "r": "jiǎng",
             "g": "attributive"
           },
           {
@@ -278,7 +274,7 @@
             "g": "attributive"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -308,7 +304,7 @@
             "g": "subject"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -323,24 +319,34 @@
             "g": "attributive"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "农",
             "r": "nóng",
-            "g": "attributive"
+            "g": "object"
           },
           {
             "t": "民",
             "r": "mín",
-            "g": "attributive"
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "私",
             "r": "sī",
-            "g": "attributive"
+            "g": "complement"
           },
           {
-            "t": "焊",
-            "r": "hàn",
-            "g": "attributive"
+            "t": "塾",
+            "r": "shú",
+            "g": "complement"
           }
         ],
         "ja": [
@@ -410,12 +416,12 @@
             {
               "t": "農",
               "r": "のう",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "民",
               "r": "みん",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "、",
@@ -425,12 +431,17 @@
             {
               "t": "私",
               "r": "し",
-              "g": "attributive"
+              "g": "complement"
             },
             {
-              "t": "焊",
-              "r": "かん",
-              "g": "attributive"
+              "t": "塾",
+              "r": "じゅく",
+              "g": "complement"
+            },
+            {
+              "t": "出",
+              "r": "で",
+              "g": "complement"
             }
           ]
         ]

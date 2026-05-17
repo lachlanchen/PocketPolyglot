@@ -222,9 +222,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00317",
       "source_text": "于是,人们的眼睛,经过女娲娘娘用自己泪水涂抹,都复明了.但女娲娘娘由于耗尽了心血,终于倒下了,。她的四肢成了山脉.河流.湖泊;她的身体成了天地.星辰。那江河里流不断的水,就是女娲娘娘的眼泪。",
+      "corrected_text": "于是，人们的眼睛，经过女娲娘娘用自己泪水涂抹，都复明了。但女娲娘娘由于耗尽了心血，终于倒下了。她的四肢成了山脉、河流、湖泊；她的身体成了天地、星辰。那江河里流不断的水，就是女娲娘娘的眼泪。",
       "units": [
         {
-          "source_text": "于是,人们的眼睛,经过女娲娘娘用自己泪水涂抹,都复明了.",
+          "source_text": "于是，人们的眼睛，经过女娲娘娘用自己泪水涂抹，都复明了。",
           "zh": [
             {
               "t": "于",
@@ -237,7 +238,7 @@
               "g": "adverbial"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -267,7 +268,7 @@
               "g": "subject"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -319,25 +320,25 @@
             {
               "t": "泪",
               "r": "lèi",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "水",
               "r": "shuǐ",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "涂",
               "r": "tú",
-              "g": "adverbial"
+              "g": "predicate"
             },
             {
               "t": "抹",
               "r": "mǒ",
-              "g": "adverbial"
+              "g": "predicate"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -362,7 +363,7 @@
               "g": "predicate"
             },
             {
-              "t": ".",
+              "t": "。",
               "r": "",
               "g": "function"
             }
@@ -447,30 +448,30 @@
               {
                 "t": "涙",
                 "r": "なみだ",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "で",
                 "r": "",
-                "g": "adverbial"
-              },
+                "g": "object"
+              }
+            ],
+            [
               {
                 "t": "塗",
                 "r": "ぬ",
-                "g": "adverbial"
+                "g": "predicate"
               },
               {
-                "t": "ってくれ",
+                "t": "ってくれたので",
                 "r": "",
-                "g": "adverbial"
+                "g": "predicate"
               },
               {
                 "t": "、",
                 "r": "",
                 "g": "function"
-              }
-            ],
-            [
+              },
               {
                 "t": "みな",
                 "r": "",
@@ -505,7 +506,7 @@
           ]
         },
         {
-          "source_text": "但女娲娘娘由于耗尽了心血,终于倒下了,。",
+          "source_text": "但女娲娘娘由于耗尽了心血，终于倒下了。",
           "zh": [
             {
               "t": "但",
@@ -545,30 +546,30 @@
             {
               "t": "耗",
               "r": "hào",
-              "g": "adverbial"
+              "g": "predicate"
             },
             {
               "t": "尽",
               "r": "jìn",
-              "g": "adverbial"
+              "g": "predicate"
             },
             {
               "t": "了",
               "r": "le",
-              "g": "adverbial"
+              "g": "predicate"
             },
             {
               "t": "心",
               "r": "xīn",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "血",
               "r": "xuè",
-              "g": "adverbial"
+              "g": "object"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -596,11 +597,6 @@
               "t": "了",
               "r": "le",
               "g": "predicate"
-            },
-            {
-              "t": ",",
-              "r": "",
-              "g": "function"
             },
             {
               "t": "。",
@@ -648,37 +644,37 @@
               {
                 "t": "心",
                 "r": "しん",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "血",
                 "r": "けつ",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "を",
                 "r": "",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "使",
                 "r": "つか",
-                "g": "adverbial"
+                "g": "predicate"
               },
               {
                 "t": "い",
                 "r": "",
-                "g": "adverbial"
+                "g": "predicate"
               },
               {
                 "t": "尽",
                 "r": "つ",
-                "g": "adverbial"
+                "g": "predicate"
               },
               {
                 "t": "くしたため",
                 "r": "",
-                "g": "adverbial"
+                "g": "predicate"
               },
               {
                 "t": "、",
@@ -711,7 +707,7 @@
           ]
         },
         {
-          "source_text": "她的四肢成了山脉.河流.湖泊;",
+          "source_text": "她的四肢成了山脉、河流、湖泊；",
           "zh": [
             {
               "t": "她",
@@ -754,7 +750,7 @@
               "g": "complement"
             },
             {
-              "t": ".",
+              "t": "、",
               "r": "",
               "g": "function"
             },
@@ -769,7 +765,7 @@
               "g": "complement"
             },
             {
-              "t": ".",
+              "t": "、",
               "r": "",
               "g": "function"
             },
@@ -784,7 +780,7 @@
               "g": "complement"
             },
             {
-              "t": ";",
+              "t": "；",
               "r": "",
               "g": "function"
             }
@@ -834,7 +830,7 @@
                 "g": "function"
               },
               {
-                "t": "川",
+                "t": "河",
                 "r": "かわ",
                 "g": "complement"
               },
@@ -849,12 +845,7 @@
                 "g": "complement"
               },
               {
-                "t": "と",
-                "r": "",
-                "g": "complement"
-              },
-              {
-                "t": "なり",
+                "t": "となり",
                 "r": "",
                 "g": "predicate"
               },
@@ -867,7 +858,7 @@
           ]
         },
         {
-          "source_text": "她的身体成了天地.星辰。",
+          "source_text": "她的身体成了天地、星辰。",
           "zh": [
             {
               "t": "她",
@@ -910,7 +901,7 @@
               "g": "complement"
             },
             {
-              "t": ".",
+              "t": "、",
               "r": "",
               "g": "function"
             },
@@ -980,12 +971,7 @@
                 "g": "complement"
               },
               {
-                "t": "に",
-                "r": "",
-                "g": "complement"
-              },
-              {
-                "t": "なった",
+                "t": "になった",
                 "r": "",
                 "g": "predicate"
               },
@@ -998,7 +984,7 @@
           ]
         },
         {
-          "source_text": "那江河里流不断的水,就是女娲娘娘的眼泪。",
+          "source_text": "那江河里流不断的水，就是女娲娘娘的眼泪。",
           "zh": [
             {
               "t": "那",
@@ -1023,22 +1009,22 @@
             {
               "t": "流",
               "r": "liú",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "不",
               "r": "bù",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "断",
               "r": "duàn",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "的",
               "r": "de",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "水",
@@ -1046,14 +1032,14 @@
               "g": "subject"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
             {
               "t": "就",
               "r": "jiù",
-              "g": "predicate"
+              "g": "adverbial"
             },
             {
               "t": "是",
@@ -1109,39 +1095,39 @@
                 "g": "subject"
               },
               {
-                "t": "江",
-                "r": "こう",
-                "g": "subject"
-              },
-              {
                 "t": "河",
-                "r": "が",
+                "r": "か",
                 "g": "subject"
               },
               {
-                "t": "に",
+                "t": "川",
+                "r": "せん",
+                "g": "subject"
+              },
+              {
+                "t": "を",
                 "r": "",
                 "g": "subject"
               },
               {
                 "t": "絶",
                 "r": "た",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "えず",
                 "r": "",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "流",
                 "r": "なが",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "れる",
                 "r": "",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "水",

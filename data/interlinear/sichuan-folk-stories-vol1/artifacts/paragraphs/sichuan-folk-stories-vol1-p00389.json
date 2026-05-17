@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 86,
-    "grammar_token_total": 86,
-    "unit_count": 2
+    "token_total": 88,
+    "grammar_token_total": 88,
+    "unit_count": 4
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0389",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -268,9 +268,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00389",
     "source_text": "讲述者:李诚生采录者:际钨男 4岁文化干部大专采录时间、地点:六十年代有来孙于中江县",
+    "corrected_text": "讲述者:李诚生采录者:际钨 男 44岁文化干部大专采录时间、地点:六十年代以来采于中江县",
     "units": [
       {
-        "source_text": "讲述者:李诚生采录者:际钨男 4岁文化干部大专",
+        "source_text": "讲述者:李诚生",
         "zh": [
           {
             "t": "讲",
@@ -306,7 +307,53 @@
             "t": "生",
             "r": "shēng",
             "g": "subject"
-          },
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "語",
+              "r": "かた",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "subject"
+            },
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "李",
+              "r": "り",
+              "g": "subject"
+            },
+            {
+              "t": "誠",
+              "r": "せい",
+              "g": "subject"
+            },
+            {
+              "t": "生",
+              "r": "せい",
+              "g": "subject"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "采录者:际钨 男 44岁文化干部大专",
+        "zh": [
           {
             "t": "采",
             "r": "cǎi",
@@ -338,14 +385,24 @@
             "g": "subject"
           },
           {
+            "t": " ",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "男",
             "r": "nán",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": " ",
             "r": "",
             "g": "function"
+          },
+          {
+            "t": "4",
+            "r": "",
+            "g": "attributive"
           },
           {
             "t": "4",
@@ -370,12 +427,12 @@
           {
             "t": "干",
             "r": "gàn",
-            "g": "attributive"
+            "g": "object"
           },
           {
             "t": "部",
             "r": "bù",
-            "g": "attributive"
+            "g": "object"
           },
           {
             "t": "大",
@@ -385,51 +442,11 @@
           {
             "t": "专",
             "r": "zhuān",
-            "g": "attributive"
+            "g": "object"
           }
         ],
         "ja": [
           [
-            {
-              "t": "語",
-              "r": "かた",
-              "g": "predicate"
-            },
-            {
-              "t": "り",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "手",
-              "r": "て",
-              "g": "subject"
-            },
-            {
-              "t": "：",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "李",
-              "r": "り",
-              "g": "subject"
-            },
-            {
-              "t": "誠",
-              "r": "せい",
-              "g": "subject"
-            },
-            {
-              "t": "生",
-              "r": "せい",
-              "g": "subject"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            },
             {
               "t": "採",
               "r": "さい",
@@ -449,9 +466,7 @@
               "t": "：",
               "r": "",
               "g": "function"
-            }
-          ],
-          [
+            },
             {
               "t": "際",
               "r": "さい",
@@ -461,14 +476,21 @@
               "t": "鎢",
               "r": "う",
               "g": "subject"
-            },
+            }
+          ],
+          [
             {
               "t": "男",
               "r": "だん",
-              "g": "subject"
+              "g": "attributive"
             },
             {
-              "t": "、4",
+              "t": "性",
+              "r": "せい",
+              "g": "attributive"
+            },
+            {
+              "t": "、44",
               "r": "",
               "g": "attributive"
             },
@@ -495,12 +517,12 @@
             {
               "t": "幹",
               "r": "かん",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "部",
               "r": "ぶ",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "、",
@@ -515,13 +537,13 @@
             {
               "t": "専",
               "r": "せん",
-              "g": "attributive"
+              "g": "object"
             }
           ]
         ]
       },
       {
-        "source_text": "采录时间、地点:六十年代有来孙于中江县",
+        "source_text": "采录时间、地点:六十年代以来",
         "zh": [
           {
             "t": "采",
@@ -584,38 +606,13 @@
             "g": "adverbial"
           },
           {
-            "t": "有",
-            "r": "yǒu",
-            "g": "predicate"
+            "t": "以",
+            "r": "yǐ",
+            "g": "adverbial"
           },
           {
             "t": "来",
             "r": "lái",
-            "g": "object"
-          },
-          {
-            "t": "孙",
-            "r": "sūn",
-            "g": "object"
-          },
-          {
-            "t": "于",
-            "r": "yú",
-            "g": "adverbial"
-          },
-          {
-            "t": "中",
-            "r": "zhōng",
-            "g": "adverbial"
-          },
-          {
-            "t": "江",
-            "r": "jiāng",
-            "g": "adverbial"
-          },
-          {
-            "t": "县",
-            "r": "xiàn",
             "g": "adverbial"
           }
         ],
@@ -660,7 +657,9 @@
               "t": "：",
               "r": "",
               "g": "function"
-            },
+            }
+          ],
+          [
             {
               "t": "六",
               "r": "ろく",
@@ -680,29 +679,51 @@
               "t": "代",
               "r": "だい",
               "g": "adverbial"
-            }
-          ],
-          [
+            },
             {
-              "t": "有",
-              "r": "ゆう",
-              "g": "object"
+              "t": "以",
+              "r": "い",
+              "g": "adverbial"
             },
             {
               "t": "来",
               "r": "らい",
-              "g": "object"
-            },
-            {
-              "t": "孫",
-              "r": "そん",
-              "g": "object"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            },
+              "g": "adverbial"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "采于中江县",
+        "zh": [
+          {
+            "t": "采",
+            "r": "cǎi",
+            "g": "predicate"
+          },
+          {
+            "t": "于",
+            "r": "yú",
+            "g": "adverbial"
+          },
+          {
+            "t": "中",
+            "r": "zhōng",
+            "g": "adverbial"
+          },
+          {
+            "t": "江",
+            "r": "jiāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "县",
+            "r": "xiàn",
+            "g": "adverbial"
+          }
+        ],
+        "ja": [
+          [
             {
               "t": "中",
               "r": "ちゅう",
@@ -719,9 +740,26 @@
               "g": "adverbial"
             },
             {
-              "t": "にて",
+              "t": "で",
               "r": "",
               "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "採",
+              "r": "さい",
+              "g": "predicate"
+            },
+            {
+              "t": "録",
+              "r": "ろく",
+              "g": "predicate"
+            },
+            {
+              "t": "された",
+              "r": "",
+              "g": "predicate"
             }
           ]
         ]

@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 74,
-    "grammar_token_total": 74,
+    "token_total": 76,
+    "grammar_token_total": 76,
     "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0289",
@@ -202,7 +202,7 @@
       {
         "t": "与",
         "r": "yǔ",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": "石",
@@ -264,7 +264,7 @@
       {
         "t": "と",
         "r": "",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": "石",
@@ -278,10 +278,16 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00289",
     "source_text": "们各人抱一该,把它滚下坡去,如果两肩麻子在山下合拢了,就是天老爷成全我们成闲。",
+    "corrected_text": "我们各人抱一个，把它滚下坡去，如果两个磨子在山下合拢了，就是天老爷成全我们成婚。",
     "units": [
       {
-        "source_text": "们各人抱一该,把它滚下坡去,",
+        "source_text": "我们各人抱一个，把它滚下坡去，",
         "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
           {
             "t": "们",
             "r": "men",
@@ -308,12 +314,12 @@
             "g": "object"
           },
           {
-            "t": "该",
-            "r": "gāi",
+            "t": "个",
+            "r": "gè",
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -348,7 +354,7 @@
             "g": "complement"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -356,7 +362,12 @@
         "ja": [
           [
             {
-              "t": "それぞれが",
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "たちはそれぞれ",
               "r": "",
               "g": "subject"
             },
@@ -413,7 +424,7 @@
               "g": "predicate"
             },
             {
-              "t": "がしていく。",
+              "t": "がしていく、",
               "r": "",
               "g": "predicate"
             }
@@ -421,7 +432,7 @@
         ]
       },
       {
-        "source_text": "如果两肩麻子在山下合拢了,",
+        "source_text": "如果两个磨子在山下合拢了，",
         "zh": [
           {
             "t": "如",
@@ -439,13 +450,13 @@
             "g": "subject"
           },
           {
-            "t": "肩",
-            "r": "jiān",
+            "t": "个",
+            "r": "gè",
             "g": "subject"
           },
           {
-            "t": "麻",
-            "r": "má",
+            "t": "磨",
+            "r": "mó",
             "g": "subject"
           },
           {
@@ -484,7 +495,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -557,7 +568,7 @@
         ]
       },
       {
-        "source_text": "就是天老爷成全我们成闲。",
+        "source_text": "就是天老爷成全我们成婚。",
         "zh": [
           {
             "t": "就",
@@ -610,8 +621,8 @@
             "g": "complement"
           },
           {
-            "t": "闲",
-            "r": "xián",
+            "t": "婚",
+            "r": "hūn",
             "g": "complement"
           },
           {
@@ -625,7 +636,7 @@
             {
               "t": "それは",
               "r": "",
-              "g": "function"
+              "g": "predicate"
             },
             {
               "t": "天",

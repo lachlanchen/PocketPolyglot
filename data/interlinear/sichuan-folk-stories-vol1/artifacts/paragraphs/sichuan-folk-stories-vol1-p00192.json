@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 54,
-    "grammar_token_total": 54,
+    "token_total": 61,
+    "grammar_token_total": 61,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0192",
@@ -80,13 +80,8 @@
     ],
     "title_ja": [
       {
-        "t": "図",
-        "r": "と",
-        "g": "attributive"
-      },
-      {
-        "t": "騰",
-        "r": "てん",
+        "t": "トーテム",
+        "r": "",
         "g": "attributive"
       },
       {
@@ -233,9 +228,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00192",
     "source_text": "之中,剩下的鸟族人见大势已去,全都逃到深山老林去了。",
+    "corrected_text": "之中，剩下的鸟族人见大势已去，全都逃到深山老林去了。",
     "units": [
       {
-        "source_text": "之中,剩下的鸟族人见大势已去,全都逃到深山老林去了。",
+        "source_text": "之中，剩下的鸟族人见大势已去，全都逃到深山老林去了。",
         "zh": [
           {
             "t": "之",
@@ -248,7 +244,7 @@
             "g": "complement"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -308,7 +304,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -424,9 +420,7 @@
               "t": "は",
               "r": "",
               "g": "subject"
-            }
-          ],
-          [
+            },
             {
               "t": "大",
               "r": "たい",
@@ -443,12 +437,17 @@
               "g": "subject"
             },
             {
-              "t": "去",
-              "r": "さ",
+              "t": "すでに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "決",
+              "r": "けっ",
               "g": "predicate"
             },
             {
-              "t": "ったと",
+              "t": "したと",
               "r": "",
               "g": "predicate"
             },
@@ -461,10 +460,12 @@
               "t": "て、",
               "r": "",
               "g": "function"
-            },
+            }
+          ],
+          [
             {
-              "t": "皆",
-              "r": "みな",
+              "t": "みな",
+              "r": "",
               "g": "adverbial"
             },
             {
@@ -493,6 +494,16 @@
               "g": "object"
             },
             {
+              "t": "古",
+              "r": "ふる",
+              "g": "attributive"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "attributive"
+            },
+            {
               "t": "森",
               "r": "もり",
               "g": "object"
@@ -508,9 +519,29 @@
               "g": "predicate"
             },
             {
-              "t": "げていった。",
+              "t": "げ",
               "r": "",
               "g": "predicate"
+            },
+            {
+              "t": "込",
+              "r": "こ",
+              "g": "predicate"
+            },
+            {
+              "t": "んで",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "行",
+              "r": "い",
+              "g": "complement"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "function"
             }
           ]
         ]

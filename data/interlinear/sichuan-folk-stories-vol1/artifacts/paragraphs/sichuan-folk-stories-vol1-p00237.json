@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 39,
-    "grammar_token_total": 39,
+    "token_total": 42,
+    "grammar_token_total": 42,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0237",
@@ -273,9 +273,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00237",
     "source_text": "讲述者:李远成男 52岁农民不识字",
+    "corrected_text": "讲述者：李远成，男，52岁，农民，不识字",
     "units": [
       {
-        "source_text": "讲述者:李远成男 52岁农民不识字",
+        "source_text": "讲述者：李远成，男，52岁，农民，不识字",
         "zh": [
           {
             "t": "讲",
@@ -293,7 +294,7 @@
             "g": "subject"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -313,12 +314,17 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "男",
             "r": "nán",
             "g": "attributive"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -333,6 +339,11 @@
             "g": "attributive"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "农",
             "r": "nóng",
             "g": "attributive"
@@ -341,6 +352,11 @@
             "t": "民",
             "r": "mín",
             "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "不",
@@ -443,14 +459,9 @@
               "g": "subject"
             },
             {
-              "t": "で",
+              "t": "で、",
               "r": "",
               "g": "subject"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
             },
             {
               "t": "文",

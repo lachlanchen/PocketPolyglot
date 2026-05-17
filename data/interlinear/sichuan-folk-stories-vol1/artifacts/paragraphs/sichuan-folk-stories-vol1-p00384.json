@@ -238,9 +238,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00384",
     "source_text": "龙王以为伏闹上了当,便带着乌龟丞相高高兴兴地回去了,伏冻也带着儿孙们癌让了。",
+    "corrected_text": "龙王以为伏羲上了当，便带着乌龟丞相高高兴兴地回去了，伏羲也带着儿孙们撤退了。",
     "units": [
       {
-        "source_text": "龙王以为伏闹上了当,便带着乌龟丞相高高兴兴地回去了,",
+        "source_text": "龙王以为伏羲上了当，便带着乌龟丞相高高兴兴地回去了，",
         "zh": [
           {
             "t": "龙",
@@ -265,12 +266,12 @@
           {
             "t": "伏",
             "r": "fú",
-            "g": "subject"
+            "g": "object"
           },
           {
-            "t": "闹",
-            "r": "nào",
-            "g": "subject"
+            "t": "羲",
+            "r": "xī",
+            "g": "object"
           },
           {
             "t": "上",
@@ -288,7 +289,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -300,12 +301,12 @@
           {
             "t": "带",
             "r": "dài",
-            "g": "adverbial"
+            "g": "predicate"
           },
           {
             "t": "着",
             "r": "zhe",
-            "g": "adverbial"
+            "g": "predicate"
           },
           {
             "t": "乌",
@@ -368,7 +369,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -393,25 +394,25 @@
             {
               "t": "伏",
               "r": "ふく",
-              "g": "subject"
+              "g": "object"
             },
             {
-              "t": "鬧",
-              "r": "どう",
-              "g": "subject"
+              "t": "羲",
+              "r": "ぎ",
+              "g": "object"
             },
             {
               "t": "が",
               "r": "",
-              "g": "subject"
+              "g": "object"
             },
             {
-              "t": "だまされた",
-              "r": "",
+              "t": "罠",
+              "r": "わな",
               "g": "predicate"
             },
             {
-              "t": "と",
+              "t": "にかかったと",
               "r": "",
               "g": "predicate"
             },
@@ -460,17 +461,12 @@
             {
               "t": "連",
               "r": "つ",
-              "g": "adverbial"
+              "g": "predicate"
             },
             {
               "t": "れて",
               "r": "",
-              "g": "adverbial"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
+              "g": "predicate"
             },
             {
               "t": "喜",
@@ -501,7 +497,7 @@
         ]
       },
       {
-        "source_text": "伏冻也带着儿孙们癌让了。",
+        "source_text": "伏羲也带着儿孙们撤退了。",
         "zh": [
           {
             "t": "伏",
@@ -509,8 +505,8 @@
             "g": "subject"
           },
           {
-            "t": "冻",
-            "r": "dòng",
+            "t": "羲",
+            "r": "xī",
             "g": "subject"
           },
           {
@@ -521,12 +517,12 @@
           {
             "t": "带",
             "r": "dài",
-            "g": "adverbial"
+            "g": "predicate"
           },
           {
             "t": "着",
             "r": "zhe",
-            "g": "adverbial"
+            "g": "predicate"
           },
           {
             "t": "儿",
@@ -544,13 +540,13 @@
             "g": "object"
           },
           {
-            "t": "癌",
-            "r": "ái",
+            "t": "撤",
+            "r": "chè",
             "g": "predicate"
           },
           {
-            "t": "让",
-            "r": "ràng",
+            "t": "退",
+            "r": "tuì",
             "g": "predicate"
           },
           {
@@ -572,8 +568,8 @@
               "g": "subject"
             },
             {
-              "t": "凍",
-              "r": "とう",
+              "t": "羲",
+              "r": "ぎ",
               "g": "subject"
             },
             {
@@ -592,24 +588,19 @@
               "g": "object"
             },
             {
-              "t": "たち",
-              "r": "",
-              "g": "object"
-            },
-            {
-              "t": "を",
+              "t": "たちを",
               "r": "",
               "g": "object"
             },
             {
               "t": "連",
               "r": "つ",
-              "g": "adverbial"
+              "g": "predicate"
             },
             {
               "t": "れて",
               "r": "",
-              "g": "adverbial"
+              "g": "predicate"
             },
             {
               "t": "、",
@@ -621,12 +612,12 @@
             {
               "t": "身",
               "r": "み",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "を",
               "r": "",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "引",
@@ -634,7 +625,17 @@
               "g": "predicate"
             },
             {
-              "t": "いていった",
+              "t": "いて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "退",
+              "r": "しりぞ",
+              "g": "predicate"
+            },
+            {
+              "t": "いた",
               "r": "",
               "g": "predicate"
             },

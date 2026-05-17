@@ -135,8 +135,8 @@
         "g": "topic"
       },
       {
-        "t": "殖",
-        "r": "しょく",
+        "t": "衍",
+        "r": "えん",
         "g": "topic"
       },
       {
@@ -232,9 +232,19 @@
         "g": "topic"
       },
       {
-        "t": "さまの",
-        "r": "",
+        "t": "娘",
+        "r": "にゃん",
         "g": "topic"
+      },
+      {
+        "t": "娘",
+        "r": "にゃん",
+        "g": "topic"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "function"
       },
       {
         "t": "涙",
@@ -248,6 +258,7 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00318",
     "source_text": "讲述者:胡能才男 61岁农民不识字采了录者,胡世用男 21岁教师中师",
+    "corrected_text": "讲述者:胡能才男 61岁农民不识字 采录者:胡世用男 21岁教师中师",
     "units": [
       {
         "source_text": "讲述者:胡能才男 61岁农民不识字",
@@ -377,7 +388,12 @@
             },
             {
               "t": "男",
-              "r": "おとこ",
+              "r": "だん",
+              "g": "attributive"
+            },
+            {
+              "t": "性",
+              "r": "せい",
               "g": "attributive"
             },
             {
@@ -451,16 +467,16 @@
         ]
       },
       {
-        "source_text": "采了录者,胡世用男 21岁教师中师",
+        "source_text": "采录者:胡世用男 21岁教师中师",
         "zh": [
+          {
+            "t": " ",
+            "r": "",
+            "g": "function"
+          },
           {
             "t": "采",
             "r": "cǎi",
-            "g": "topic"
-          },
-          {
-            "t": "了",
-            "r": "le",
             "g": "topic"
           },
           {
@@ -474,7 +490,7 @@
             "g": "topic"
           },
           {
-            "t": ",",
+            "t": ":",
             "r": "",
             "g": "function"
           },
@@ -526,12 +542,12 @@
           {
             "t": "中",
             "r": "zhōng",
-            "g": "predicate"
+            "g": "complement"
           },
           {
             "t": "师",
             "r": "shī",
-            "g": "predicate"
+            "g": "complement"
           }
         ],
         "ja": [
@@ -578,7 +594,12 @@
             },
             {
               "t": "男",
-              "r": "おとこ",
+              "r": "だん",
+              "g": "attributive"
+            },
+            {
+              "t": "性",
+              "r": "せい",
               "g": "attributive"
             },
             {
@@ -626,32 +647,27 @@
             {
               "t": "中",
               "r": "ちゅう",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "等",
               "r": "とう",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "師",
               "r": "し",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "範",
               "r": "はん",
-              "g": "predicate"
+              "g": "complement"
             },
             {
-              "t": "出",
-              "r": "しゅっ",
-              "g": "predicate"
-            },
-            {
-              "t": "身",
-              "r": "しん",
-              "g": "predicate"
+              "t": "卒",
+              "r": "そつ",
+              "g": "complement"
             },
             {
               "t": "。",

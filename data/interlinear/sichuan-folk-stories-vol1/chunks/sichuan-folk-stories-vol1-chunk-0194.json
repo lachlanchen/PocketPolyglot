@@ -33,22 +33,22 @@
       {
         "t": "图",
         "r": "tú",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "腾",
         "r": "téng",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "祖",
         "r": "zǔ",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "先",
         "r": "xiān",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "神",
@@ -65,17 +65,17 @@
       {
         "t": "トーテム",
         "r": "",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "祖",
         "r": "そ",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "先",
         "r": "せん",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "神",
@@ -212,9 +212,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00194",
       "source_text": "讲述者:能祥君,男 26岁巴县单谭乡洽寺村农民高中采录音:李子硕男 54岁巴县文化馆干部高中采录时间、地点:1988 年 7 月于巴县民间文学业成办公室",
+      "corrected_text": "讲述者：能祥君，男，26岁。巴县单谭乡洽寺村农民，高中。采录者：李子硕，男，54岁，巴县文化馆干部，高中。采录时间、地点：1988年7月于巴县民间文学集成办公室。",
       "units": [
         {
-          "source_text": "讲述者:能祥君,男 26岁",
+          "source_text": "讲述者：能祥君，男，26岁。",
           "zh": [
             {
               "t": "讲",
@@ -232,7 +233,7 @@
               "g": "attributive"
             },
             {
-              "t": ":",
+              "t": "：",
               "r": "",
               "g": "function"
             },
@@ -252,7 +253,7 @@
               "g": "subject"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -262,7 +263,7 @@
               "g": "attributive"
             },
             {
-              "t": " ",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -280,6 +281,11 @@
               "t": "岁",
               "r": "suì",
               "g": "attributive"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
@@ -323,7 +329,12 @@
             [
               {
                 "t": "男",
-                "r": "おとこ",
+                "r": "だん",
+                "g": "attributive"
+              },
+              {
+                "t": "性",
+                "r": "せい",
                 "g": "attributive"
               },
               {
@@ -340,12 +351,17 @@
                 "t": "歳",
                 "r": "さい",
                 "g": "attributive"
+              },
+              {
+                "t": "。",
+                "r": "",
+                "g": "function"
               }
             ]
           ]
         },
         {
-          "source_text": "巴县单谭乡洽寺村农民高中采录音:李子硕男 54岁",
+          "source_text": "巴县单谭乡洽寺村农民，高中。",
           "zh": [
             {
               "t": "巴",
@@ -398,74 +414,24 @@
               "g": "subject"
             },
             {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "高",
               "r": "gāo",
-              "g": "predicate"
+              "g": "attributive"
             },
             {
               "t": "中",
               "r": "zhōng",
-              "g": "predicate"
+              "g": "attributive"
             },
             {
-              "t": "采",
-              "r": "cǎi",
-              "g": "predicate"
-            },
-            {
-              "t": "录",
-              "r": "lù",
-              "g": "predicate"
-            },
-            {
-              "t": "音",
-              "r": "yīn",
-              "g": "predicate"
-            },
-            {
-              "t": ":",
+              "t": "。",
               "r": "",
               "g": "function"
-            },
-            {
-              "t": "李",
-              "r": "lǐ",
-              "g": "subject"
-            },
-            {
-              "t": "子",
-              "r": "zǐ",
-              "g": "subject"
-            },
-            {
-              "t": "硕",
-              "r": "shuò",
-              "g": "subject"
-            },
-            {
-              "t": "男",
-              "r": "nán",
-              "g": "attributive"
-            },
-            {
-              "t": " ",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "5",
-              "r": "",
-              "g": "attributive"
-            },
-            {
-              "t": "4",
-              "r": "",
-              "g": "attributive"
-            },
-            {
-              "t": "岁",
-              "r": "suì",
-              "g": "attributive"
             }
           ],
           "ja": [
@@ -514,7 +480,9 @@
                 "t": "の",
                 "r": "",
                 "g": "attributive"
-              },
+              }
+            ],
+            [
               {
                 "t": "農",
                 "r": "のう",
@@ -524,95 +492,108 @@
                 "t": "民",
                 "r": "みん",
                 "g": "subject"
-              }
-            ],
-            [
+              },
+              {
+                "t": "、",
+                "r": "",
+                "g": "function"
+              },
               {
                 "t": "高",
                 "r": "こう",
-                "g": "predicate"
+                "g": "attributive"
               },
               {
                 "t": "中",
                 "r": "ちゅう",
-                "g": "predicate"
-              },
-              {
-                "t": "が",
-                "r": "",
-                "g": "predicate"
-              },
-              {
-                "t": "採",
-                "r": "さい",
-                "g": "predicate"
-              },
-              {
-                "t": "録",
-                "r": "ろく",
-                "g": "predicate"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": "録",
-                "r": "ろく",
-                "g": "predicate"
-              },
-              {
-                "t": "音",
-                "r": "おん",
-                "g": "predicate"
-              },
-              {
-                "t": "：",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": "李",
-                "r": "り",
-                "g": "subject"
-              },
-              {
-                "t": "子",
-                "r": "し",
-                "g": "subject"
-              },
-              {
-                "t": "碩",
-                "r": "せき",
-                "g": "subject"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": "男",
-                "r": "おとこ",
                 "g": "attributive"
               },
               {
-                "t": "54",
-                "r": "",
+                "t": "卒",
+                "r": "そつ",
                 "g": "attributive"
               },
               {
-                "t": "歳",
-                "r": "さい",
-                "g": "attributive"
+                "t": "。",
+                "r": "",
+                "g": "function"
               }
             ]
           ]
         },
         {
-          "source_text": "巴县文化馆干部高中采录时间、地点:1988 年 7 月于巴县民间文学业成办公室",
+          "source_text": "采录者：李子硕，男，54岁，巴县文化馆干部，高中。",
           "zh": [
+            {
+              "t": "采",
+              "r": "cǎi",
+              "g": "attributive"
+            },
+            {
+              "t": "录",
+              "r": "lù",
+              "g": "attributive"
+            },
+            {
+              "t": "者",
+              "r": "zhě",
+              "g": "attributive"
+            },
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "李",
+              "r": "lǐ",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "zǐ",
+              "g": "subject"
+            },
+            {
+              "t": "硕",
+              "r": "shuò",
+              "g": "subject"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "男",
+              "r": "nán",
+              "g": "attributive"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "5",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "4",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "岁",
+              "r": "suì",
+              "g": "attributive"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
             {
               "t": "巴",
               "r": "bā",
@@ -641,32 +622,178 @@
             {
               "t": "干",
               "r": "gàn",
-              "g": "subject"
+              "g": "object"
             },
             {
               "t": "部",
               "r": "bù",
-              "g": "subject"
+              "g": "object"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "高",
               "r": "gāo",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "中",
               "r": "zhōng",
-              "g": "subject"
+              "g": "attributive"
             },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          "ja": [
+            [
+              {
+                "t": "採",
+                "r": "さい",
+                "g": "attributive"
+              },
+              {
+                "t": "録",
+                "r": "ろく",
+                "g": "attributive"
+              },
+              {
+                "t": "者",
+                "r": "しゃ",
+                "g": "attributive"
+              },
+              {
+                "t": "：",
+                "r": "",
+                "g": "function"
+              },
+              {
+                "t": "李",
+                "r": "り",
+                "g": "subject"
+              },
+              {
+                "t": "子",
+                "r": "し",
+                "g": "subject"
+              },
+              {
+                "t": "碩",
+                "r": "せき",
+                "g": "subject"
+              },
+              {
+                "t": "、",
+                "r": "",
+                "g": "function"
+              },
+              {
+                "t": "男",
+                "r": "だん",
+                "g": "attributive"
+              },
+              {
+                "t": "性",
+                "r": "せい",
+                "g": "attributive"
+              },
+              {
+                "t": "、",
+                "r": "",
+                "g": "function"
+              },
+              {
+                "t": "54",
+                "r": "",
+                "g": "attributive"
+              },
+              {
+                "t": "歳",
+                "r": "さい",
+                "g": "attributive"
+              }
+            ],
+            [
+              {
+                "t": "巴",
+                "r": "は",
+                "g": "attributive"
+              },
+              {
+                "t": "県",
+                "r": "けん",
+                "g": "attributive"
+              },
+              {
+                "t": "文",
+                "r": "ぶん",
+                "g": "attributive"
+              },
+              {
+                "t": "化",
+                "r": "か",
+                "g": "attributive"
+              },
+              {
+                "t": "館",
+                "r": "かん",
+                "g": "attributive"
+              },
+              {
+                "t": "幹",
+                "r": "かん",
+                "g": "object"
+              },
+              {
+                "t": "部",
+                "r": "ぶ",
+                "g": "object"
+              },
+              {
+                "t": "、",
+                "r": "",
+                "g": "function"
+              },
+              {
+                "t": "高",
+                "r": "こう",
+                "g": "attributive"
+              },
+              {
+                "t": "中",
+                "r": "ちゅう",
+                "g": "attributive"
+              },
+              {
+                "t": "卒",
+                "r": "そつ",
+                "g": "attributive"
+              },
+              {
+                "t": "。",
+                "r": "",
+                "g": "function"
+              }
+            ]
+          ]
+        },
+        {
+          "source_text": "采录时间、地点：1988年7月于巴县民间文学集成办公室。",
+          "zh": [
             {
               "t": "采",
               "r": "cǎi",
-              "g": "predicate"
+              "g": "attributive"
             },
             {
               "t": "录",
               "r": "lù",
-              "g": "predicate"
+              "g": "attributive"
             },
             {
               "t": "时",
@@ -694,7 +821,7 @@
               "g": "object"
             },
             {
-              "t": ":",
+              "t": "：",
               "r": "",
               "g": "function"
             },
@@ -719,29 +846,14 @@
               "g": "adverbial"
             },
             {
-              "t": " ",
-              "r": "",
-              "g": "function"
-            },
-            {
               "t": "年",
               "r": "nián",
               "g": "adverbial"
             },
             {
-              "t": " ",
-              "r": "",
-              "g": "function"
-            },
-            {
               "t": "7",
               "r": "",
               "g": "adverbial"
-            },
-            {
-              "t": " ",
-              "r": "",
-              "g": "function"
             },
             {
               "t": "月",
@@ -784,8 +896,8 @@
               "g": "adverbial"
             },
             {
-              "t": "业",
-              "r": "yè",
+              "t": "集",
+              "r": "jí",
               "g": "adverbial"
             },
             {
@@ -807,77 +919,25 @@
               "t": "室",
               "r": "shì",
               "g": "adverbial"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
             [
               {
-                "t": "巴",
-                "r": "は",
-                "g": "attributive"
-              },
-              {
-                "t": "県",
-                "r": "けん",
-                "g": "attributive"
-              },
-              {
-                "t": "文",
-                "r": "ぶん",
-                "g": "attributive"
-              },
-              {
-                "t": "化",
-                "r": "か",
-                "g": "attributive"
-              },
-              {
-                "t": "館",
-                "r": "かん",
-                "g": "attributive"
-              },
-              {
-                "t": "幹",
-                "r": "かん",
-                "g": "subject"
-              },
-              {
-                "t": "部",
-                "r": "ぶ",
-                "g": "subject"
-              },
-              {
-                "t": "の",
-                "r": "",
-                "g": "subject"
-              },
-              {
-                "t": "高",
-                "r": "こう",
-                "g": "subject"
-              },
-              {
-                "t": "中",
-                "r": "ちゅう",
-                "g": "subject"
-              },
-              {
-                "t": "が",
-                "r": "",
-                "g": "subject"
-              },
-              {
                 "t": "採",
                 "r": "さい",
-                "g": "predicate"
+                "g": "attributive"
               },
               {
                 "t": "録",
                 "r": "ろく",
-                "g": "predicate"
-              }
-            ],
-            [
+                "g": "attributive"
+              },
               {
                 "t": "時",
                 "r": "じ",
@@ -932,7 +992,9 @@
                 "t": "、",
                 "r": "",
                 "g": "function"
-              },
+              }
+            ],
+            [
               {
                 "t": "巴",
                 "r": "は",
@@ -964,8 +1026,8 @@
                 "g": "adverbial"
               },
               {
-                "t": "業",
-                "r": "ぎょう",
+                "t": "集",
+                "r": "しゅう",
                 "g": "adverbial"
               },
               {
@@ -992,6 +1054,11 @@
                 "t": "にて",
                 "r": "",
                 "g": "adverbial"
+              },
+              {
+                "t": "。",
+                "r": "",
+                "g": "function"
               }
             ]
           ]

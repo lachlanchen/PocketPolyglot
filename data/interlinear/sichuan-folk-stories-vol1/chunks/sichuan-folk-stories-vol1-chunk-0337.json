@@ -38,12 +38,12 @@
       {
         "t": "文",
         "r": "wén",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "化",
         "r": "huà",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "起",
@@ -75,12 +75,12 @@
       {
         "t": "文",
         "r": "ぶん",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "化",
         "r": "か",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "起",
@@ -192,9 +192,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00337",
       "source_text": "采录者;村志杭男 38岁已县广阳镇文化专干初中采录时间、.地点:1988 年8月于巴县广阳镇",
+      "corrected_text": "采录者：村志杭，男，38岁，巴县广阳镇文化专干，初中。采录时间、地点：1988年8月于巴县广阳镇",
       "units": [
         {
-          "source_text": "采录者;村志杭男 38岁已县广阳镇文化专干初中",
+          "source_text": "采录者：村志杭，男，38岁，巴县广阳镇文化专干，初中。",
           "zh": [
             {
               "t": "采",
@@ -212,7 +213,7 @@
               "g": "topic"
             },
             {
-              "t": ";",
+              "t": "：",
               "r": "",
               "g": "function"
             },
@@ -232,28 +233,38 @@
               "g": "subject"
             },
             {
-              "t": "男",
-              "r": "nán",
-              "g": "subject"
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
-              "t": " ",
+              "t": "男",
+              "r": "nán",
+              "g": "attributive"
+            },
+            {
+              "t": "，",
               "r": "",
               "g": "function"
             },
             {
               "t": "38",
               "r": "",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "岁",
               "r": "suì",
-              "g": "subject"
+              "g": "attributive"
             },
             {
-              "t": "已",
-              "r": "yǐ",
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "巴",
+              "r": "bā",
               "g": "predicate"
             },
             {
@@ -279,22 +290,27 @@
             {
               "t": "文",
               "r": "wén",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "化",
               "r": "huà",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "专",
               "r": "zhuān",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "干",
               "r": "gàn",
-              "g": "predicate"
+              "g": "object"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "初",
@@ -305,6 +321,11 @@
               "t": "中",
               "r": "zhōng",
               "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
@@ -352,12 +373,12 @@
               {
                 "t": "男",
                 "r": "だん",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "性",
                 "r": "せい",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "、",
@@ -367,12 +388,12 @@
               {
                 "t": "38",
                 "r": "",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "歳",
                 "r": "さい",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "。",
@@ -382,8 +403,8 @@
             ],
             [
               {
-                "t": "已",
-                "r": "い",
+                "t": "巴",
+                "r": "は",
                 "g": "predicate"
               },
               {
@@ -414,32 +435,32 @@
               {
                 "t": "文",
                 "r": "ぶん",
-                "g": "predicate"
+                "g": "object"
               },
               {
                 "t": "化",
                 "r": "か",
-                "g": "predicate"
+                "g": "object"
               },
               {
                 "t": "専",
                 "r": "せん",
-                "g": "predicate"
+                "g": "object"
               },
               {
                 "t": "任",
                 "r": "にん",
-                "g": "predicate"
+                "g": "object"
               },
               {
                 "t": "職",
                 "r": "しょく",
-                "g": "predicate"
+                "g": "object"
               },
               {
                 "t": "員",
                 "r": "いん",
-                "g": "predicate"
+                "g": "object"
               },
               {
                 "t": "、",
@@ -470,7 +491,7 @@
           ]
         },
         {
-          "source_text": "采录时间、.地点:1988 年8月于巴县广阳镇",
+          "source_text": "采录时间、地点：1988年8月于巴县广阳镇",
           "zh": [
             {
               "t": "采",
@@ -498,11 +519,6 @@
               "g": "function"
             },
             {
-              "t": ".",
-              "r": "",
-              "g": "function"
-            },
-            {
               "t": "地",
               "r": "dì",
               "g": "topic"
@@ -513,7 +529,7 @@
               "g": "topic"
             },
             {
-              "t": ":",
+              "t": "：",
               "r": "",
               "g": "function"
             },
@@ -521,11 +537,6 @@
               "t": "1988",
               "r": "",
               "g": "adverbial"
-            },
-            {
-              "t": " ",
-              "r": "",
-              "g": "function"
             },
             {
               "t": "年",
@@ -545,32 +556,32 @@
             {
               "t": "于",
               "r": "yú",
-              "g": "adverbial"
+              "g": "predicate"
             },
             {
               "t": "巴",
               "r": "bā",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "县",
               "r": "xiàn",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "广",
               "r": "guǎng",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "阳",
               "r": "yáng",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "镇",
               "r": "zhèn",
-              "g": "adverbial"
+              "g": "object"
             }
           ],
           "ja": [
@@ -645,32 +656,32 @@
               {
                 "t": "巴",
                 "r": "は",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "県",
                 "r": "けん",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "広",
                 "r": "こう",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "陽",
                 "r": "よう",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "鎮",
                 "r": "ちん",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "にて",
                 "r": "",
-                "g": "adverbial"
+                "g": "predicate"
               },
               {
                 "t": "。",

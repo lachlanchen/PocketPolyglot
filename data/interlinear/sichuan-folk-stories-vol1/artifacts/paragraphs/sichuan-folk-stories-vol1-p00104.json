@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 68,
-    "grammar_token_total": 68,
+    "token_total": 70,
+    "grammar_token_total": 70,
     "unit_count": 4
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0104",
@@ -178,6 +178,7 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00104",
     "source_text": "现在的太阳。那八个火球遭射碎了,一块块的在天上际来际去,它们就是现在的星星",
+    "corrected_text": "现在的太阳。那八个火球遭射碎了，一块块的在天上飞来飞去，它们就是现在的星星",
     "units": [
       {
         "source_text": "现在的太阳。",
@@ -246,7 +247,7 @@
         ]
       },
       {
-        "source_text": "那八个火球遭射碎了,",
+        "source_text": "那八个火球遭射碎了，",
         "zh": [
           {
             "t": "那",
@@ -294,7 +295,7 @@
             "g": "function"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -354,7 +355,12 @@
               "g": "complement"
             },
             {
-              "t": "け、",
+              "t": "け",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "、",
               "r": "",
               "g": "function"
             }
@@ -362,7 +368,7 @@
         ]
       },
       {
-        "source_text": "一块块的在天上际来际去,",
+        "source_text": "一块块的在天上飞来飞去，",
         "zh": [
           {
             "t": "一",
@@ -400,8 +406,8 @@
             "g": "adverbial"
           },
           {
-            "t": "际",
-            "r": "jì",
+            "t": "飞",
+            "r": "fēi",
             "g": "predicate"
           },
           {
@@ -410,8 +416,8 @@
             "g": "predicate"
           },
           {
-            "t": "际",
-            "r": "jì",
+            "t": "飞",
+            "r": "fēi",
             "g": "predicate"
           },
           {
@@ -420,7 +426,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -455,7 +461,7 @@
           ],
           [
             {
-              "t": "こちらへあちらへと",
+              "t": "あちらこちらへ",
               "r": "",
               "g": "predicate"
             },
@@ -475,7 +481,12 @@
               "g": "predicate"
             },
             {
-              "t": "い、",
+              "t": "い",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
               "r": "",
               "g": "function"
             }

@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 118,
-    "grammar_token_total": 118,
+    "token_total": 120,
+    "grammar_token_total": 120,
     "unit_count": 4
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0344",
@@ -228,9 +228,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00344",
     "source_text": "说完,七仙女就升天了。轩边气尝了,他 -屁股坐在地上。想啊,想啊,我哪个才能转去得到呢?玉皇大帝没有下旨来,我硬是回去不到了哦!",
+    "corrected_text": "说完，七仙女就升天了。轩转气惨了，他一屁股坐在地上。想啊，想啊，我哪个才能转去得到呢？玉皇大帝没有下旨来，我硬是回去不到了哦！",
     "units": [
       {
-        "source_text": "说完,七仙女就升天了。",
+        "source_text": "说完，七仙女就升天了。",
         "zh": [
           {
             "t": "说",
@@ -243,7 +244,7 @@
             "g": "complement"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -308,11 +309,11 @@
             {
               "t": "えると、",
               "r": "",
-              "g": "function"
+              "g": "complement"
             },
             {
               "t": "七",
-              "r": "なな",
+              "r": "しち",
               "g": "subject"
             },
             {
@@ -361,7 +362,7 @@
         ]
       },
       {
-        "source_text": "轩边气尝了,他 -屁股坐在地上。",
+        "source_text": "轩转气惨了，他一屁股坐在地上。",
         "zh": [
           {
             "t": "轩",
@@ -369,8 +370,8 @@
             "g": "subject"
           },
           {
-            "t": "边",
-            "r": "biān",
+            "t": "转",
+            "r": "zhuǎn",
             "g": "subject"
           },
           {
@@ -379,17 +380,17 @@
             "g": "predicate"
           },
           {
-            "t": "尝",
-            "r": "cháng",
-            "g": "predicate"
+            "t": "惨",
+            "r": "cǎn",
+            "g": "complement"
           },
           {
             "t": "了",
             "r": "le",
-            "g": "predicate"
+            "g": "function"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -399,14 +400,9 @@
             "g": "subject"
           },
           {
-            "t": " ",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "-",
-            "r": "",
-            "g": "function"
+            "t": "一",
+            "r": "yī",
+            "g": "adverbial"
           },
           {
             "t": "屁",
@@ -452,14 +448,19 @@
               "g": "subject"
             },
             {
-              "t": "辺",
-              "r": "ぺん",
+              "t": "転",
+              "r": "てん",
               "g": "subject"
             },
             {
               "t": "は",
               "r": "",
               "g": "subject"
+            },
+            {
+              "t": "ひどく",
+              "r": "",
+              "g": "complement"
             },
             {
               "t": "腹",
@@ -494,12 +495,7 @@
               "g": "subject"
             },
             {
-              "t": "尻",
-              "r": "しり",
-              "g": "adverbial"
-            },
-            {
-              "t": "を",
+              "t": "どかっと",
               "r": "",
               "g": "adverbial"
             },
@@ -514,7 +510,7 @@
               "g": "complement"
             },
             {
-              "t": "につけて",
+              "t": "に",
               "r": "",
               "g": "complement"
             },
@@ -524,7 +520,7 @@
               "g": "predicate"
             },
             {
-              "t": "った。",
+              "t": "りこんだ。",
               "r": "",
               "g": "predicate"
             }
@@ -532,7 +528,7 @@
         ]
       },
       {
-        "source_text": "想啊,想啊,我哪个才能转去得到呢?",
+        "source_text": "想啊，想啊，我哪个才能转去得到呢？",
         "zh": [
           {
             "t": "想",
@@ -545,7 +541,7 @@
             "g": "function"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -560,7 +556,7 @@
             "g": "function"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -615,7 +611,7 @@
             "g": "function"
           },
           {
-            "t": "?",
+            "t": "？",
             "r": "",
             "g": "function"
           }
@@ -675,15 +671,15 @@
               "g": "predicate"
             },
             {
-              "t": "れるのだろうか。",
+              "t": "ってこられるのだろうか。",
               "r": "",
-              "g": "function"
+              "g": "complement"
             }
           ]
         ]
       },
       {
-        "source_text": "玉皇大帝没有下旨来,我硬是回去不到了哦!",
+        "source_text": "玉皇大帝没有下旨来，我硬是回去不到了哦！",
         "zh": [
           {
             "t": "玉",
@@ -731,7 +727,7 @@
             "g": "complement"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -781,7 +777,7 @@
             "g": "function"
           },
           {
-            "t": "!",
+            "t": "！",
             "r": "",
             "g": "function"
           }
@@ -800,7 +796,7 @@
             },
             {
               "t": "大",
-              "r": "たいてい",
+              "r": "だい",
               "g": "subject"
             },
             {
@@ -814,13 +810,13 @@
               "g": "subject"
             },
             {
-              "t": "お",
-              "r": "",
+              "t": "命",
+              "r": "めい",
               "g": "object"
             },
             {
-              "t": "旨",
-              "r": "むね",
+              "t": "令",
+              "r": "れい",
               "g": "object"
             },
             {
@@ -834,9 +830,9 @@
               "g": "predicate"
             },
             {
-              "t": "さないので、",
+              "t": "してこないから、",
               "r": "",
-              "g": "function"
+              "g": "complement"
             }
           ],
           [
@@ -861,9 +857,19 @@
               "g": "predicate"
             },
             {
-              "t": "れなくなったぞ！",
+              "t": "って",
               "r": "",
               "g": "predicate"
+            },
+            {
+              "t": "行",
+              "r": "い",
+              "g": "complement"
+            },
+            {
+              "t": "けなくなったぞ！",
+              "r": "",
+              "g": "complement"
             }
           ]
         ]

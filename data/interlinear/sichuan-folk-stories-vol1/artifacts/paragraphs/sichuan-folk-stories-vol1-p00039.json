@@ -23,7 +23,7 @@
       {
         "t": "神",
         "r": "shén",
-        "g": "subject"
+        "g": "attributive"
       },
       {
         "t": "话",
@@ -35,7 +35,7 @@
       {
         "t": "神",
         "r": "しん",
-        "g": "subject"
+        "g": "attributive"
       },
       {
         "t": "話",
@@ -50,7 +50,7 @@
       {
         "t": "开",
         "r": "kāi",
-        "g": "attributive"
+        "g": "predicate"
       },
       {
         "t": "天",
@@ -60,7 +60,7 @@
       {
         "t": "辟",
         "r": "pì",
-        "g": "attributive"
+        "g": "predicate"
       },
       {
         "t": "地",
@@ -70,7 +70,7 @@
       {
         "t": "神",
         "r": "shén",
-        "g": "subject"
+        "g": "attributive"
       },
       {
         "t": "话",
@@ -92,17 +92,17 @@
       {
         "t": "開",
         "r": "かい",
-        "g": "attributive"
+        "g": "predicate"
       },
       {
         "t": "闢",
         "r": "びゃく",
-        "g": "attributive"
+        "g": "predicate"
       },
       {
         "t": "神",
         "r": "しん",
-        "g": "subject"
+        "g": "attributive"
       },
       {
         "t": "話",
@@ -147,7 +147,7 @@
       {
         "t": "和",
         "r": "hé",
-        "g": "function"
+        "g": "subject"
       },
       {
         "t": "地",
@@ -228,9 +228,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00039",
     "source_text": "讲述者:王绍华女 55岁迁休医务人员中专采录者:寇天男 63岁文化馆干部大专采录时间、邮点:1988 年9月于大已县晋原镇",
+    "corrected_text": "讲述者:王绍华女 55岁退休医务人员中专采录者:寇天男 63岁文化馆干部大专采录时间、地点:1988 年9月于大邑县晋原镇",
     "units": [
       {
-        "source_text": "讲述者:王绍华女 55岁迁休医务人员中专",
+        "source_text": "讲述者:王绍华女 55岁退休医务人员中专",
         "zh": [
           {
             "t": "讲",
@@ -293,8 +294,8 @@
             "g": "attributive"
           },
           {
-            "t": "迁",
-            "r": "qiān",
+            "t": "退",
+            "r": "tuì",
             "g": "attributive"
           },
           {
@@ -408,28 +409,23 @@
               "g": "attributive"
             },
             {
+              "t": "した",
+              "r": "",
+              "g": "attributive"
+            },
+            {
               "t": "医",
               "r": "い",
               "g": "attributive"
             },
             {
-              "t": "療",
-              "r": "りょう",
+              "t": "務",
+              "r": "む",
               "g": "attributive"
             },
             {
-              "t": "従",
-              "r": "じゅう",
-              "g": "object"
-            },
-            {
-              "t": "事",
-              "r": "じ",
-              "g": "object"
-            },
-            {
-              "t": "者",
-              "r": "しゃ",
+              "t": "員",
+              "r": "いん",
               "g": "object"
             },
             {
@@ -634,6 +630,11 @@
               "g": "attributive"
             },
             {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
               "t": "幹",
               "r": "かん",
               "g": "object"
@@ -667,7 +668,7 @@
         ]
       },
       {
-        "source_text": "采录时间、邮点:1988 年9月于大已县晋原镇",
+        "source_text": "采录时间、地点:1988 年9月于大邑县晋原镇",
         "zh": [
           {
             "t": "采",
@@ -695,8 +696,8 @@
             "g": "function"
           },
           {
-            "t": "邮",
-            "r": "yóu",
+            "t": "地",
+            "r": "dì",
             "g": "subject"
           },
           {
@@ -760,8 +761,8 @@
             "g": "complement"
           },
           {
-            "t": "已",
-            "r": "yǐ",
+            "t": "邑",
+            "r": "yì",
             "g": "complement"
           },
           {
@@ -850,8 +851,8 @@
               "g": "complement"
             },
             {
-              "t": "已",
-              "r": "い",
+              "t": "邑",
+              "r": "ゆう",
               "g": "complement"
             },
             {

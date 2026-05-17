@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 189,
-    "grammar_token_total": 189,
-    "unit_count": 4
+    "token_total": 200,
+    "grammar_token_total": 200,
+    "unit_count": 5
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0392",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -268,9 +268,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00392",
     "source_text": "有 天,神农皇帝见太阳出来热热烘烘的,就把正宫娘娘喊起 -路出去要。他们两个走到点种籽那块儿,看到长出来的苗苗上结起了籽籽,风…-吹,播摇摆摆的好逗人喜次风!仔细 -看哪,哪个尽是些张起口口的空壳壳哟?它们吃吧?",
+    "corrected_text": "有一天，神农皇帝见太阳出来热热烘烘的，就把正宫娘娘喊起一路出去耍。他们两个走到点种籽那块儿，看到长出来的苗苗上结起了籽籽，风一吹，摇摇摆摆的好逗人喜欢！仔细一看哪，哪个尽是些张起口口的空壳壳哟？它们吃啥？",
     "units": [
       {
-        "source_text": "有 天,神农皇帝见太阳出来热热烘烘的,就把正宫娘娘喊起 -路出去要。",
+        "source_text": "有一天，神农皇帝见太阳出来热热烘烘的，就把正宫娘娘喊起一路出去耍。",
         "zh": [
           {
             "t": "有",
@@ -278,9 +279,9 @@
             "g": "adverbial"
           },
           {
-            "t": " ",
-            "r": "",
-            "g": "function"
+            "t": "一",
+            "r": "yì",
+            "g": "adverbial"
           },
           {
             "t": "天",
@@ -288,7 +289,7 @@
             "g": "adverbial"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -363,7 +364,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -408,9 +409,9 @@
             "g": "predicate"
           },
           {
-            "t": " -",
-            "r": "",
-            "g": "function"
+            "t": "一",
+            "r": "yí",
+            "g": "adverbial"
           },
           {
             "t": "路",
@@ -428,8 +429,8 @@
             "g": "predicate"
           },
           {
-            "t": "要",
-            "r": "yào",
+            "t": "耍",
+            "r": "shuǎ",
             "g": "predicate"
           },
           {
@@ -496,7 +497,7 @@
               "g": "object"
             },
             {
-              "t": "暑",
+              "t": "熱",
               "r": "あつ",
               "g": "object"
             },
@@ -608,22 +609,22 @@
               "g": "complement"
             },
             {
+              "t": "遊",
+              "r": "あそ",
+              "g": "predicate"
+            },
+            {
+              "t": "びに",
+              "r": "",
+              "g": "predicate"
+            },
+            {
               "t": "出",
               "r": "で",
               "g": "predicate"
             },
             {
-              "t": "て",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "行",
-              "r": "い",
-              "g": "predicate"
-            },
-            {
-              "t": "った",
+              "t": "た",
               "r": "",
               "g": "predicate"
             },
@@ -636,7 +637,7 @@
         ]
       },
       {
-        "source_text": "他们两个走到点种籽那块儿,看到长出来的苗苗上结起了籽籽,风…-吹,播摇摆摆的好逗人喜次风!",
+        "source_text": "他们两个走到点种籽那块儿，看到长出来的苗苗上结起了籽籽，",
         "zh": [
           {
             "t": "他",
@@ -699,7 +700,7 @@
             "g": "complement"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -736,21 +737,21 @@
           {
             "t": "苗",
             "r": "miáo",
-            "g": "complement"
+            "g": "object"
           },
           {
             "t": "苗",
             "r": "miáo",
-            "g": "complement"
+            "g": "object"
           },
           {
             "t": "上",
             "r": "shàng",
-            "g": "complement"
+            "g": "object"
           },
           {
             "t": "结",
-            "r": "jié",
+            "r": "jiē",
             "g": "predicate"
           },
           {
@@ -766,95 +767,15 @@
           {
             "t": "籽",
             "r": "zǐ",
-            "g": "subject"
+            "g": "object"
           },
           {
             "t": "籽",
             "r": "zǐ",
-            "g": "subject"
-          },
-          {
-            "t": ",",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "风",
-            "r": "fēng",
-            "g": "subject"
-          },
-          {
-            "t": "…-",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "吹",
-            "r": "chuī",
-            "g": "predicate"
-          },
-          {
-            "t": ",",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "播",
-            "r": "bō",
-            "g": "predicate"
-          },
-          {
-            "t": "摇",
-            "r": "yáo",
-            "g": "predicate"
-          },
-          {
-            "t": "摆",
-            "r": "bǎi",
-            "g": "predicate"
-          },
-          {
-            "t": "摆",
-            "r": "bǎi",
-            "g": "predicate"
-          },
-          {
-            "t": "的",
-            "r": "de",
-            "g": "predicate"
-          },
-          {
-            "t": "好",
-            "r": "hǎo",
-            "g": "adverbial"
-          },
-          {
-            "t": "逗",
-            "r": "dòu",
-            "g": "predicate"
-          },
-          {
-            "t": "人",
-            "r": "rén",
             "g": "object"
           },
           {
-            "t": "喜",
-            "r": "xǐ",
-            "g": "predicate"
-          },
-          {
-            "t": "次",
-            "r": "cì",
-            "g": "predicate"
-          },
-          {
-            "t": "风",
-            "r": "fēng",
-            "g": "predicate"
-          },
-          {
-            "t": "!",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -882,7 +803,22 @@
               "g": "complement"
             },
             {
-              "t": "をまいたあたりまで",
+              "t": "をまいた",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "場",
+              "r": "ば",
+              "g": "complement"
+            },
+            {
+              "t": "所",
+              "r": "しょ",
+              "g": "complement"
+            },
+            {
+              "t": "まで",
               "r": "",
               "g": "complement"
             },
@@ -892,47 +828,7 @@
               "g": "predicate"
             },
             {
-              "t": "くと",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "伸",
-              "r": "の",
-              "g": "attributive"
-            },
-            {
-              "t": "びた",
-              "r": "",
-              "g": "attributive"
-            },
-            {
-              "t": "苗",
-              "r": "なえ",
-              "g": "complement"
-            },
-            {
-              "t": "に",
-              "r": "",
-              "g": "complement"
-            },
-            {
-              "t": "実",
-              "r": "み",
-              "g": "subject"
-            },
-            {
-              "t": "が",
-              "r": "",
-              "g": "subject"
-            },
-            {
-              "t": "つき",
+              "t": "き",
               "r": "",
               "g": "predicate"
             },
@@ -942,6 +838,140 @@
               "g": "function"
             }
           ],
+          [
+            {
+              "t": "伸",
+              "r": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "びてきた",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "苗",
+              "r": "なえ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "実",
+              "r": "み",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "ついているのを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "た",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "风一吹，摇摇摆摆的好逗人喜欢！",
+        "zh": [
+          {
+            "t": "风",
+            "r": "fēng",
+            "g": "subject"
+          },
+          {
+            "t": "一",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "吹",
+            "r": "chuī",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "摇",
+            "r": "yáo",
+            "g": "adverbial"
+          },
+          {
+            "t": "摇",
+            "r": "yáo",
+            "g": "adverbial"
+          },
+          {
+            "t": "摆",
+            "r": "bǎi",
+            "g": "adverbial"
+          },
+          {
+            "t": "摆",
+            "r": "bǎi",
+            "g": "adverbial"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "逗",
+            "r": "dòu",
+            "g": "predicate"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "object"
+          },
+          {
+            "t": "喜",
+            "r": "xǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "欢",
+            "r": "huan",
+            "g": "predicate"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
           [
             {
               "t": "風",
@@ -974,10 +1004,17 @@
               "g": "function"
             },
             {
+              "t": "それは",
+              "r": "",
+              "g": "subject"
+            },
+            {
               "t": "ゆらゆら",
               "r": "",
               "g": "adverbial"
-            },
+            }
+          ],
+          [
             {
               "t": "揺",
               "r": "ゆ",
@@ -989,6 +1026,11 @@
               "g": "predicate"
             },
             {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "人",
               "r": "ひと",
               "g": "object"
@@ -997,6 +1039,11 @@
               "t": "を",
               "r": "",
               "g": "object"
+            },
+            {
+              "t": "たいそう",
+              "r": "",
+              "g": "adverbial"
             },
             {
               "t": "喜",
@@ -1017,7 +1064,7 @@
         ]
       },
       {
-        "source_text": "仔细 -看哪,哪个尽是些张起口口的空壳壳哟?",
+        "source_text": "仔细一看哪，哪个尽是些张起口口的空壳壳哟？",
         "zh": [
           {
             "t": "仔",
@@ -1030,9 +1077,9 @@
             "g": "adverbial"
           },
           {
-            "t": " -",
-            "r": "",
-            "g": "function"
+            "t": "一",
+            "r": "yí",
+            "g": "adverbial"
           },
           {
             "t": "看",
@@ -1042,10 +1089,10 @@
           {
             "t": "哪",
             "r": "na",
-            "g": "predicate"
+            "g": "function"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -1120,7 +1167,7 @@
             "g": "function"
           },
           {
-            "t": "?",
+            "t": "？",
             "r": "",
             "g": "function"
           }
@@ -1146,6 +1193,11 @@
               "t": "、",
               "r": "",
               "g": "function"
+            },
+            {
+              "t": "なんと",
+              "r": "",
+              "g": "adverbial"
             },
             {
               "t": "どれも",
@@ -1180,7 +1232,7 @@
               "g": "object"
             },
             {
-              "t": "の",
+              "t": "っぽの",
               "r": "",
               "g": "object"
             },
@@ -1208,7 +1260,7 @@
         ]
       },
       {
-        "source_text": "它们吃吧?",
+        "source_text": "它们吃啥？",
         "zh": [
           {
             "t": "它",
@@ -1226,12 +1278,12 @@
             "g": "predicate"
           },
           {
-            "t": "吧",
-            "r": "ba",
-            "g": "function"
+            "t": "啥",
+            "r": "shá",
+            "g": "object"
           },
           {
-            "t": "?",
+            "t": "？",
             "r": "",
             "g": "function"
           }
@@ -1239,19 +1291,29 @@
         "ja": [
           [
             {
-              "t": "それらは",
+              "t": "これらは",
               "r": "",
               "g": "subject"
             }
           ],
           [
             {
+              "t": "何",
+              "r": "なに",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
               "t": "食",
               "r": "た",
               "g": "predicate"
             },
             {
-              "t": "べるのだろうか",
+              "t": "べたのだろうか",
               "r": "",
               "g": "predicate"
             },

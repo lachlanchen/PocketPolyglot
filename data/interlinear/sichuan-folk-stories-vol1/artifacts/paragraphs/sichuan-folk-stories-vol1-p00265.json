@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 141,
-    "grammar_token_total": 141,
+    "token_total": 155,
+    "grammar_token_total": 155,
     "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0265",
@@ -263,13 +263,14 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00265",
     "source_text": "呈述考:邓华轧女 46岁瑞县城关镇二轻印刷厂工人小学采有灵才:范方教女 22岁瑞县养护段工人初中采录时间、.地点:1987 年 10 月于瑞县文化馆",
+    "corrected_text": "讲述者:邓华轧女，46岁，瑞县城关镇二轻印刷厂工人，小学。采录者:范方教女，22岁，瑞县养护段工人，初中。采录时间、地点:1987年10月于瑞县文化馆。",
     "units": [
       {
-        "source_text": "呈述考:邓华轧女 46岁瑞县城关镇二轻印刷厂工人小学",
+        "source_text": "讲述者:邓华轧女，46岁，瑞县城关镇二轻印刷厂工人，小学。",
         "zh": [
           {
-            "t": "呈",
-            "r": "chéng",
+            "t": "讲",
+            "r": "jiǎng",
             "g": "attributive"
           },
           {
@@ -278,8 +279,8 @@
             "g": "attributive"
           },
           {
-            "t": "考",
-            "r": "kǎo",
+            "t": "者",
+            "r": "zhě",
             "g": "attributive"
           },
           {
@@ -308,7 +309,7 @@
             "g": "attributive"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -326,6 +327,11 @@
             "t": "岁",
             "r": "suì",
             "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "瑞",
@@ -388,6 +394,11 @@
             "g": "object"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "小",
             "r": "xiǎo",
             "g": "attributive"
@@ -396,23 +407,28 @@
             "t": "学",
             "r": "xué",
             "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
           [
             {
-              "t": "呈",
-              "r": "てい",
+              "t": "語",
+              "r": "かた",
               "g": "attributive"
             },
             {
-              "t": "述",
-              "r": "じゅつ",
+              "t": "り",
+              "r": "",
               "g": "attributive"
             },
             {
-              "t": "考",
-              "r": "こう",
+              "t": "手",
+              "r": "て",
               "g": "attributive"
             },
             {
@@ -518,6 +534,11 @@
               "g": "object"
             },
             {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
               "t": "労",
               "r": "ろう",
               "g": "object"
@@ -546,12 +567,27 @@
               "t": "学",
               "r": "がく",
               "g": "object"
+            },
+            {
+              "t": "校",
+              "r": "こう",
+              "g": "object"
+            },
+            {
+              "t": "卒",
+              "r": "そつ",
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ]
         ]
       },
       {
-        "source_text": "采有灵才:范方教女 22岁瑞县养护段工人初中",
+        "source_text": "采录者:范方教女，22岁，瑞县养护段工人，初中。",
         "zh": [
           {
             "t": "采",
@@ -559,18 +595,13 @@
             "g": "attributive"
           },
           {
-            "t": "有",
-            "r": "yǒu",
+            "t": "录",
+            "r": "lù",
             "g": "attributive"
           },
           {
-            "t": "灵",
-            "r": "líng",
-            "g": "attributive"
-          },
-          {
-            "t": "才",
-            "r": "cái",
+            "t": "者",
+            "r": "zhě",
             "g": "attributive"
           },
           {
@@ -599,7 +630,7 @@
             "g": "attributive"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -617,6 +648,11 @@
             "t": "岁",
             "r": "suì",
             "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "瑞",
@@ -641,7 +677,7 @@
           {
             "t": "段",
             "r": "duàn",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "工",
@@ -654,6 +690,11 @@
             "g": "object"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "初",
             "r": "chū",
             "g": "attributive"
@@ -662,6 +703,11 @@
             "t": "中",
             "r": "zhōng",
             "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -672,18 +718,13 @@
               "g": "attributive"
             },
             {
-              "t": "有",
-              "r": "ゆう",
+              "t": "録",
+              "r": "ろく",
               "g": "attributive"
             },
             {
-              "t": "霊",
-              "r": "れい",
-              "g": "attributive"
-            },
-            {
-              "t": "才",
-              "r": "さい",
+              "t": "者",
+              "r": "しゃ",
               "g": "attributive"
             },
             {
@@ -756,12 +797,12 @@
             {
               "t": "段",
               "r": "だん",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "の",
               "r": "",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "労",
@@ -784,20 +825,35 @@
               "g": "function"
             },
             {
-              "t": "初",
-              "r": "しょ",
+              "t": "中",
+              "r": "ちゅう",
               "g": "attributive"
             },
             {
-              "t": "中",
-              "r": "ちゅう",
+              "t": "学",
+              "r": "がく",
               "g": "object"
+            },
+            {
+              "t": "校",
+              "r": "こう",
+              "g": "object"
+            },
+            {
+              "t": "卒",
+              "r": "そつ",
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ]
         ]
       },
       {
-        "source_text": "采录时间、.地点:1987 年 10 月于瑞县文化馆",
+        "source_text": "采录时间、地点:1987年10月于瑞县文化馆。",
         "zh": [
           {
             "t": "采",
@@ -821,11 +877,6 @@
           },
           {
             "t": "、",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": ".",
             "r": "",
             "g": "function"
           },
@@ -865,19 +916,9 @@
             "g": "adverbial"
           },
           {
-            "t": " ",
-            "r": "",
-            "g": "function"
-          },
-          {
             "t": "年",
             "r": "nián",
             "g": "adverbial"
-          },
-          {
-            "t": " ",
-            "r": "",
-            "g": "function"
           },
           {
             "t": "1",
@@ -888,11 +929,6 @@
             "t": "0",
             "r": "",
             "g": "adverbial"
-          },
-          {
-            "t": " ",
-            "r": "",
-            "g": "function"
           },
           {
             "t": "月",
@@ -928,6 +964,11 @@
             "t": "馆",
             "r": "guǎn",
             "g": "adverbial"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -1023,6 +1064,11 @@
               "t": "にて",
               "r": "",
               "g": "adverbial"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ]
         ]

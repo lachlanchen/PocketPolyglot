@@ -33,12 +33,12 @@
       {
         "t": "图",
         "r": "tú",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "腾",
         "r": "téng",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "祖",
@@ -65,7 +65,7 @@
       {
         "t": "トーテム",
         "r": "",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "祖",
@@ -95,7 +95,7 @@
       {
         "t": "023.",
         "r": "",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": " ",
@@ -115,7 +115,7 @@
       {
         "t": "和",
         "r": "hé",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": "上",
@@ -137,7 +137,7 @@
       {
         "t": "023.",
         "r": "",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": " ",
@@ -157,7 +157,7 @@
       {
         "t": "と",
         "r": "",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": "上",
@@ -182,9 +182,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00197",
       "source_text": "罗杜美女 31岁巴县兰进化工厂家属高中采妆时间、地点:198R 年7月于巴县业成办公室",
+      "corrected_text": "罗杜美，女，31岁，巴县兰进化工厂家属，高中。采录时间、地点：1982年7月于巴县业成办公室。",
       "units": [
         {
-          "source_text": "罗杜美女 31岁巴县兰进化工厂家属高中采妆时间、地点:198R 年7月于巴县业成办公室",
+          "source_text": "罗杜美，女，31岁，巴县兰进化工厂家属，高中。",
           "zh": [
             {
               "t": "罗",
@@ -202,12 +203,17 @@
               "g": "subject"
             },
             {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "女",
               "r": "nǚ",
               "g": "attributive"
             },
             {
-              "t": " ",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -220,6 +226,11 @@
               "t": "岁",
               "r": "suì",
               "g": "attributive"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "巴",
@@ -259,127 +270,32 @@
             {
               "t": "家",
               "r": "jiā",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "属",
               "r": "shǔ",
-              "g": "attributive"
+              "g": "object"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "高",
               "r": "gāo",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "中",
               "r": "zhōng",
-              "g": "attributive"
+              "g": "complement"
             },
             {
-              "t": "采",
-              "r": "cǎi",
-              "g": "topic"
-            },
-            {
-              "t": "妆",
-              "r": "zhuāng",
-              "g": "topic"
-            },
-            {
-              "t": "时",
-              "r": "shí",
-              "g": "topic"
-            },
-            {
-              "t": "间",
-              "r": "jiān",
-              "g": "topic"
-            },
-            {
-              "t": "、",
+              "t": "。",
               "r": "",
               "g": "function"
-            },
-            {
-              "t": "地",
-              "r": "dì",
-              "g": "topic"
-            },
-            {
-              "t": "点",
-              "r": "diǎn",
-              "g": "topic"
-            },
-            {
-              "t": ":",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "198R",
-              "r": "",
-              "g": "adverbial"
-            },
-            {
-              "t": " ",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "年",
-              "r": "nián",
-              "g": "adverbial"
-            },
-            {
-              "t": "7",
-              "r": "",
-              "g": "adverbial"
-            },
-            {
-              "t": "月",
-              "r": "yuè",
-              "g": "adverbial"
-            },
-            {
-              "t": "于",
-              "r": "yú",
-              "g": "adverbial"
-            },
-            {
-              "t": "巴",
-              "r": "bā",
-              "g": "adverbial"
-            },
-            {
-              "t": "县",
-              "r": "xiàn",
-              "g": "adverbial"
-            },
-            {
-              "t": "业",
-              "r": "yè",
-              "g": "adverbial"
-            },
-            {
-              "t": "成",
-              "r": "chéng",
-              "g": "adverbial"
-            },
-            {
-              "t": "办",
-              "r": "bàn",
-              "g": "adverbial"
-            },
-            {
-              "t": "公",
-              "r": "gōng",
-              "g": "adverbial"
-            },
-            {
-              "t": "室",
-              "r": "shì",
-              "g": "adverbial"
             }
           ],
           "ja": [
@@ -396,7 +312,7 @@
               },
               {
                 "t": "美",
-                "r": "み",
+                "r": "び",
                 "g": "subject"
               },
               {
@@ -428,7 +344,9 @@
                 "t": "。",
                 "r": "",
                 "g": "function"
-              },
+              }
+            ],
+            [
               {
                 "t": "巴",
                 "r": "は",
@@ -472,12 +390,12 @@
               {
                 "t": "家",
                 "r": "か",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "族",
                 "r": "ぞく",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "、",
@@ -487,19 +405,136 @@
               {
                 "t": "高",
                 "r": "こう",
-                "g": "attributive"
+                "g": "complement"
               },
               {
                 "t": "校",
                 "r": "こう",
-                "g": "attributive"
+                "g": "complement"
+              },
+              {
+                "t": "卒",
+                "r": "そつ",
+                "g": "complement"
               },
               {
                 "t": "。",
                 "r": "",
                 "g": "function"
               }
-            ],
+            ]
+          ]
+        },
+        {
+          "source_text": "采录时间、地点：1982年7月于巴县业成办公室。",
+          "zh": [
+            {
+              "t": "采",
+              "r": "cǎi",
+              "g": "topic"
+            },
+            {
+              "t": "录",
+              "r": "lù",
+              "g": "topic"
+            },
+            {
+              "t": "时",
+              "r": "shí",
+              "g": "topic"
+            },
+            {
+              "t": "间",
+              "r": "jiān",
+              "g": "topic"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "地",
+              "r": "dì",
+              "g": "topic"
+            },
+            {
+              "t": "点",
+              "r": "diǎn",
+              "g": "topic"
+            },
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "1982",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "年",
+              "r": "nián",
+              "g": "adverbial"
+            },
+            {
+              "t": "7",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "月",
+              "r": "yuè",
+              "g": "adverbial"
+            },
+            {
+              "t": "于",
+              "r": "yú",
+              "g": "function"
+            },
+            {
+              "t": "巴",
+              "r": "bā",
+              "g": "adverbial"
+            },
+            {
+              "t": "县",
+              "r": "xiàn",
+              "g": "adverbial"
+            },
+            {
+              "t": "业",
+              "r": "yè",
+              "g": "adverbial"
+            },
+            {
+              "t": "成",
+              "r": "chéng",
+              "g": "adverbial"
+            },
+            {
+              "t": "办",
+              "r": "bàn",
+              "g": "object"
+            },
+            {
+              "t": "公",
+              "r": "gōng",
+              "g": "object"
+            },
+            {
+              "t": "室",
+              "r": "shì",
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          "ja": [
             [
               {
                 "t": "採",
@@ -537,7 +572,7 @@
                 "g": "topic"
               },
               {
-                "t": "：198R",
+                "t": "は、1982",
                 "r": "",
                 "g": "adverbial"
               },
@@ -557,10 +592,12 @@
                 "g": "adverbial"
               },
               {
-                "t": "、",
+                "t": "。",
                 "r": "",
                 "g": "function"
-              },
+              }
+            ],
+            [
               {
                 "t": "巴",
                 "r": "は",
@@ -584,22 +621,37 @@
               {
                 "t": "事",
                 "r": "じ",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "務",
                 "r": "む",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "所",
                 "r": "しょ",
-                "g": "adverbial"
+                "g": "object"
               },
               {
-                "t": "にて。",
+                "t": "にて",
                 "r": "",
-                "g": "adverbial"
+                "g": "function"
+              },
+              {
+                "t": "採",
+                "r": "さい",
+                "g": "predicate"
+              },
+              {
+                "t": "録",
+                "r": "ろく",
+                "g": "predicate"
+              },
+              {
+                "t": "。",
+                "r": "",
+                "g": "function"
               }
             ]
           ]

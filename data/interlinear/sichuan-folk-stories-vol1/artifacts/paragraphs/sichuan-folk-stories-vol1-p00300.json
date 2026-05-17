@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 112,
-    "grammar_token_total": 112,
+    "token_total": 119,
+    "grammar_token_total": 119,
     "unit_count": 4
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0300",
@@ -258,44 +258,40 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00300",
     "source_text": "玉姑南,地上上涨大水,淹殉了所有的生灵，天,月亮对太阳说光地上冷清清的,不好要,干脆我兄妹成婚造地上的人烟。太阳",
+    "corrected_text": "很久前，地上涨大水，淹死了所有的生灵。一天，月亮对太阳说：“地上光冷清清的，不好耍，干脆我兄妹成婚造地上的人烟。”太阳",
     "units": [
       {
-        "source_text": "玉姑南,地上上涨大水,淹殉了所有的生灵，",
+        "source_text": "很久前，地上涨大水，淹死了所有的生灵。",
         "zh": [
           {
-            "t": "玉",
-            "r": "yù",
+            "t": "很",
+            "r": "hěn",
             "g": "adverbial"
           },
           {
-            "t": "姑",
-            "r": "gū",
+            "t": "久",
+            "r": "jiǔ",
             "g": "adverbial"
           },
           {
-            "t": "南",
-            "r": "nán",
+            "t": "前",
+            "r": "qián",
             "g": "adverbial"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
           {
             "t": "地",
             "r": "dì",
-            "g": "adverbial"
+            "g": "subject"
           },
           {
             "t": "上",
             "r": "shàng",
-            "g": "adverbial"
-          },
-          {
-            "t": "上",
-            "r": "shàng",
-            "g": "predicate"
+            "g": "subject"
           },
           {
             "t": "涨",
@@ -305,15 +301,15 @@
           {
             "t": "大",
             "r": "dà",
-            "g": "subject"
+            "g": "object"
           },
           {
             "t": "水",
             "r": "shuǐ",
-            "g": "subject"
+            "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -323,14 +319,14 @@
             "g": "predicate"
           },
           {
-            "t": "殉",
-            "r": "xùn",
-            "g": "predicate"
+            "t": "死",
+            "r": "sǐ",
+            "g": "complement"
           },
           {
             "t": "了",
             "r": "le",
-            "g": "predicate"
+            "g": "function"
           },
           {
             "t": "所",
@@ -358,7 +354,7 @@
             "g": "object"
           },
           {
-            "t": "，",
+            "t": "。",
             "r": "",
             "g": "function"
           }
@@ -366,54 +362,49 @@
         "ja": [
           [
             {
-              "t": "玉",
-              "r": "ぎょく",
-              "g": "adverbial"
-            },
-            {
-              "t": "姑",
-              "r": "こ",
-              "g": "adverbial"
-            },
-            {
-              "t": "南",
-              "r": "なん",
-              "g": "adverbial"
-            },
-            {
-              "t": "のころ、",
+              "t": "ずっと",
               "r": "",
               "g": "adverbial"
+            },
+            {
+              "t": "昔",
+              "r": "むかし",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "地",
               "r": "ち",
-              "g": "adverbial"
+              "g": "subject"
             },
             {
               "t": "上",
               "r": "じょう",
-              "g": "adverbial"
+              "g": "subject"
             },
             {
               "t": "では",
               "r": "",
-              "g": "adverbial"
+              "g": "subject"
             },
             {
               "t": "大",
               "r": "おお",
-              "g": "subject"
+              "g": "object"
             },
             {
               "t": "水",
               "r": "みず",
-              "g": "subject"
+              "g": "object"
             },
             {
               "t": "が",
               "r": "",
-              "g": "subject"
+              "g": "object"
             },
             {
               "t": "増",
@@ -438,14 +429,34 @@
               "g": "object"
             },
             {
-              "t": "きものを",
+              "t": "き",
               "r": "",
               "g": "object"
             },
             {
-              "t": "のみこんだ",
+              "t": "物",
+              "r": "もの",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "のみ",
               "r": "",
               "g": "predicate"
+            },
+            {
+              "t": "殺",
+              "r": "ころ",
+              "g": "complement"
+            },
+            {
+              "t": "した",
+              "r": "",
+              "g": "complement"
             },
             {
               "t": "。",
@@ -456,15 +467,20 @@
         ]
       },
       {
-        "source_text": "天,月亮对太阳说光地上冷清清的,不好要,",
+        "source_text": "一天，月亮对太阳说：“地上光冷清清的，不好耍，",
         "zh": [
+          {
+            "t": "一",
+            "r": "yì",
+            "g": "adverbial"
+          },
           {
             "t": "天",
             "r": "tiān",
             "g": "adverbial"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -499,9 +515,14 @@
             "g": "predicate"
           },
           {
-            "t": "光",
-            "r": "guāng",
-            "g": "adverbial"
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "地",
@@ -512,6 +533,11 @@
             "t": "上",
             "r": "shàng",
             "g": "subject"
+          },
+          {
+            "t": "光",
+            "r": "guāng",
+            "g": "adverbial"
           },
           {
             "t": "冷",
@@ -534,14 +560,14 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
           {
             "t": "不",
             "r": "bù",
-            "g": "predicate"
+            "g": "adverbial"
           },
           {
             "t": "好",
@@ -549,12 +575,12 @@
             "g": "predicate"
           },
           {
-            "t": "要",
-            "r": "yào",
+            "t": "耍",
+            "r": "shuǎ",
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -562,14 +588,19 @@
         "ja": [
           [
             {
-              "t": "天",
-              "r": "てん",
+              "t": "ある",
+              "r": "",
               "g": "adverbial"
             },
             {
-              "t": "で、",
-              "r": "",
+              "t": "日",
+              "r": "ひ",
               "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "月",
@@ -614,6 +645,11 @@
           ],
           [
             {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "地",
               "r": "ち",
               "g": "subject"
@@ -634,20 +670,20 @@
               "g": "adverbial"
             },
             {
-              "t": "ひっそりとして、つまらない、と",
-              "r": "",
+              "t": "寂",
+              "r": "さび",
               "g": "predicate"
             },
             {
-              "t": "。",
+              "t": "しくて、つまらない、",
               "r": "",
-              "g": "function"
+              "g": "predicate"
             }
           ]
         ]
       },
       {
-        "source_text": "干脆我兄妹成婚造地上的人烟。",
+        "source_text": "干脆我兄妹成婚造地上的人烟。”",
         "zh": [
           {
             "t": "干",
@@ -718,6 +754,11 @@
             "t": "。",
             "r": "",
             "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -740,11 +781,6 @@
             {
               "t": "兄",
               "r": "あに",
-              "g": "subject"
-            },
-            {
-              "t": "と",
-              "r": "",
               "g": "subject"
             },
             {
@@ -820,7 +856,7 @@
               "g": "predicate"
             },
             {
-              "t": "。",
+              "t": "。」",
               "r": "",
               "g": "function"
             }

@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 82,
-    "grammar_token_total": 82,
+    "token_total": 91,
+    "grammar_token_total": 91,
     "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0230",
@@ -248,16 +248,16 @@
       },
       {
         "t": "兄",
-        "r": "きょう",
+        "r": "けい",
         "g": "subject"
       },
       {
         "t": "妹",
-        "r": "だい",
+        "r": "まい",
         "g": "subject"
       },
       {
-        "t": "が",
+        "t": "の",
         "r": "",
         "g": "subject"
       },
@@ -267,17 +267,12 @@
         "g": "object"
       },
       {
-        "t": "を",
-        "r": "",
-        "g": "object"
-      },
-      {
         "t": "造",
-        "r": "つく",
+        "r": "づく",
         "g": "predicate"
       },
       {
-        "t": "る",
+        "t": "り",
         "r": "",
         "g": "predicate"
       }
@@ -288,9 +283,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00230",
     "source_text": "采录者:邓文康男 32岁乡文化专干初中采录时间、地点:1986 年8月于简阳县壮滨乡",
+    "corrected_text": "采录者：邓文康，男，32岁，乡文化专干，初中。采录时间、地点：1986年8月于简阳县壮滨乡。",
     "units": [
       {
-        "source_text": "采录者:邓文康男 32岁乡文化专干初中",
+        "source_text": "采录者：邓文康，男，32岁，乡文化专干，初中。",
         "zh": [
           {
             "t": "采",
@@ -308,7 +304,7 @@
             "g": "attributive"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -328,12 +324,17 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "男",
             "r": "nán",
             "g": "subject"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -351,6 +352,11 @@
             "t": "岁",
             "r": "suì",
             "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "乡",
@@ -378,6 +384,11 @@
             "g": "object"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "初",
             "r": "chū",
             "g": "object"
@@ -386,6 +397,11 @@
             "t": "中",
             "r": "zhōng",
             "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -439,9 +455,12 @@
               "t": "性",
               "r": "せい",
               "g": "subject"
-            }
-          ],
-          [
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
             {
               "t": "32",
               "r": "",
@@ -451,12 +470,9 @@
               "t": "歳",
               "r": "さい",
               "g": "attributive"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            },
+            }
+          ],
+          [
             {
               "t": "郷",
               "r": "ごう",
@@ -506,12 +522,22 @@
               "t": "中",
               "r": "ちゅう",
               "g": "object"
+            },
+            {
+              "t": "卒",
+              "r": "そつ",
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ]
         ]
       },
       {
-        "source_text": "采录时间、地点:1986 年8月于简阳县壮滨乡",
+        "source_text": "采录时间、地点：1986年8月于简阳县壮滨乡。",
         "zh": [
           {
             "t": "采",
@@ -549,7 +575,7 @@
             "g": "attributive"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -572,11 +598,6 @@
             "t": "6",
             "r": "",
             "g": "adverbial"
-          },
-          {
-            "t": " ",
-            "r": "",
-            "g": "function"
           },
           {
             "t": "年",
@@ -627,6 +648,11 @@
             "t": "乡",
             "r": "xiāng",
             "g": "adverbial"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -727,6 +753,11 @@
               "t": "にて",
               "r": "",
               "g": "adverbial"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ]
         ]

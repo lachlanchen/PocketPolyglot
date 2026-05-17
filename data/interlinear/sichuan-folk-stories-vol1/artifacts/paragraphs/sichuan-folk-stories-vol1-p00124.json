@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 38,
-    "grammar_token_total": 38,
+    "token_total": 43,
+    "grammar_token_total": 43,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0124",
@@ -198,9 +198,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00124",
     "source_text": "传说雷很喜欢喝酒,喝了酒就要发酒疯。",
+    "corrected_text": "传说雷很喜欢喝酒，喝了酒就要发酒疯。",
     "units": [
       {
-        "source_text": "传说雷很喜欢喝酒,喝了酒就要发酒疯。",
+        "source_text": "传说雷很喜欢喝酒，喝了酒就要发酒疯。",
         "zh": [
           {
             "t": "传",
@@ -243,7 +244,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -378,22 +379,47 @@
               "g": "adverbial"
             },
             {
-              "t": "酔",
-              "r": "よ",
+              "t": "酒",
+              "r": "さけ",
+              "g": "object"
+            },
+            {
+              "t": "癖",
+              "r": "ぐせ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "悪",
+              "r": "わる",
               "g": "predicate"
             },
             {
-              "t": "って",
+              "t": "い",
               "r": "",
               "g": "predicate"
             },
             {
-              "t": "暴",
-              "r": "あば",
+              "t": "騒",
+              "r": "さわ",
               "g": "predicate"
             },
             {
-              "t": "れだした。",
+              "t": "ぎを",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "起",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "こした。",
               "r": "",
               "g": "predicate"
             }

@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 483,
-    "grammar_token_total": 483,
-    "unit_count": 10
+    "token_total": 487,
+    "grammar_token_total": 487,
+    "unit_count": 9
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0190",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -188,9 +188,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00190",
     "source_text": "第一天,天刚麻麻亮,虎族人打开寨门,放出两只猛虎,随后大队披虎皮,能皮、狼皮的人就条了出去。鸟族人攻了几天,一个二个皮措史焉 的,正在山坡上睡随睡。突然多守子里头冲出一群一群的猛虎,还有能呀狼蚜,数者数不清,吓得和起来亡命朝山下跑,那两只虎见鸟族人就咬,后面的虎兵见人就杀。一写饭的工夫,鸟族人就死伤了--大半。那些跑得快的,刚测跑到山脚丢,柑林头又杀出一支虎兵,先是一阵乱箭射,接着又是--阵冲杀,没得几个逃脱了的.这一仗,鸟族几千人的队伍都遭除脱了,连他们的头头也死在乱入",
+    "corrected_text": "第一天，天刚麻麻亮，虎族人打开寨门，放出两只猛虎，随后大队披虎皮、熊皮、狼皮的人就冲了出去。鸟族人攻了几天，一个二个疲惫不堪的，正在山坡上睡瞌睡。突然寨子里头冲出一群一群的猛虎，还有熊呀狼呀，数也数不清，吓得喊起来亡命朝山下跑，那两只虎见鸟族人就咬，后面的虎兵见人就杀。一顿饭的工夫，鸟族人就死伤了一大半。那些跑得快的，刚刚跑到山脚底，树林头又杀出一支虎兵，先是一阵乱箭射，接着又是一阵冲杀，没得几个逃脱了的。这一仗，鸟族几千人的队伍都遭除脱了，连他们的头头也死在乱刀下",
     "units": [
       {
-        "source_text": "第一天,天刚麻麻亮,虎族人打开寨门,放出两只猛虎,",
+        "source_text": "第一天，天刚麻麻亮，虎族人打开寨门，放出两只猛虎，",
         "zh": [
           {
             "t": "第",
@@ -208,7 +209,7 @@
             "g": "adverbial"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -238,7 +239,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -278,7 +279,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -313,7 +314,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -341,8 +342,8 @@
               "g": "function"
             },
             {
-              "t": "夜",
-              "r": "よる",
+              "t": "空",
+              "r": "そら",
               "g": "subject"
             },
             {
@@ -351,15 +352,22 @@
               "g": "subject"
             },
             {
+              "t": "ほのかに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
               "t": "明",
-              "r": "あ",
+              "r": "あか",
               "g": "predicate"
             },
             {
-              "t": "けそめると、",
+              "t": "るくなると、",
               "r": "",
               "g": "predicate"
-            },
+            }
+          ],
+          [
             {
               "t": "虎",
               "r": "とら",
@@ -376,17 +384,20 @@
               "g": "subject"
             },
             {
-              "t": "者",
-              "r": "もの",
+              "t": "人",
+              "r": "ひと",
               "g": "subject"
             },
             {
-              "t": "たちは",
+              "t": "々",
               "r": "",
               "g": "subject"
-            }
-          ],
-          [
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
             {
               "t": "砦",
               "r": "とりで",
@@ -453,17 +464,7 @@
               "g": "predicate"
             },
             {
-              "t": "ち",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "出",
-              "r": "だ",
-              "g": "predicate"
-            },
-            {
-              "t": "した。",
+              "t": "った。",
               "r": "",
               "g": "predicate"
             }
@@ -471,7 +472,7 @@
         ]
       },
       {
-        "source_text": "随后大队披虎皮,能皮、狼皮的人就条了出去。",
+        "source_text": "随后大队披虎皮、熊皮、狼皮的人就冲了出去。",
         "zh": [
           {
             "t": "随",
@@ -496,32 +497,32 @@
           {
             "t": "披",
             "r": "pī",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "虎",
             "r": "hǔ",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "皮",
             "r": "pí",
-            "g": "subject"
+            "g": "attributive"
           },
           {
-            "t": ",",
+            "t": "、",
             "r": "",
             "g": "function"
           },
           {
-            "t": "能",
-            "r": "néng",
-            "g": "subject"
+            "t": "熊",
+            "r": "xióng",
+            "g": "attributive"
           },
           {
             "t": "皮",
             "r": "pí",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "、",
@@ -531,17 +532,17 @@
           {
             "t": "狼",
             "r": "láng",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "皮",
             "r": "pí",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "的",
             "r": "de",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "人",
@@ -554,8 +555,8 @@
             "g": "adverbial"
           },
           {
-            "t": "条",
-            "r": "tiáo",
+            "t": "冲",
+            "r": "chōng",
             "g": "predicate"
           },
           {
@@ -594,62 +595,52 @@
             {
               "t": "虎",
               "r": "とら",
-              "g": "subject"
-            },
-            {
-              "t": "の",
-              "r": "",
-              "g": "subject"
-            },
-            {
-              "t": "皮",
-              "r": "かわ",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "や",
               "r": "",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "熊",
               "r": "くま",
-              "g": "subject"
+              "g": "attributive"
             },
             {
-              "t": "の",
+              "t": "や",
               "r": "",
-              "g": "subject"
-            },
-            {
-              "t": "皮",
-              "r": "かわ",
-              "g": "subject"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
+              "g": "attributive"
             },
             {
               "t": "狼",
               "r": "おおかみ",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "の",
               "r": "",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "皮",
               "r": "かわ",
-              "g": "subject"
+              "g": "attributive"
             },
             {
-              "t": "をまとった",
+              "t": "を",
               "r": "",
-              "g": "subject"
+              "g": "attributive"
+            },
+            {
+              "t": "着",
+              "r": "き",
+              "g": "attributive"
+            },
+            {
+              "t": "た",
+              "r": "",
+              "g": "attributive"
             }
           ],
           [
@@ -679,7 +670,7 @@
               "g": "subject"
             },
             {
-              "t": "すぐ",
+              "t": "すぐに",
               "r": "",
               "g": "adverbial"
             },
@@ -696,18 +687,18 @@
             {
               "t": "出",
               "r": "だ",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "していった。",
               "r": "",
-              "g": "predicate"
+              "g": "complement"
             }
           ]
         ]
       },
       {
-        "source_text": "鸟族人攻了几天,一个二个皮措史焉 的,正在山坡上睡随睡。",
+        "source_text": "鸟族人攻了几天，一个二个疲惫不堪的，正在山坡上睡瞌睡。",
         "zh": [
           {
             "t": "鸟",
@@ -745,57 +736,57 @@
             "g": "complement"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
           {
             "t": "一",
             "r": "yí",
-            "g": "adverbial"
+            "g": "subject"
           },
           {
             "t": "个",
             "r": "gè",
-            "g": "adverbial"
+            "g": "subject"
           },
           {
             "t": "二",
             "r": "èr",
-            "g": "adverbial"
+            "g": "subject"
           },
           {
             "t": "个",
             "r": "gè",
-            "g": "adverbial"
+            "g": "subject"
           },
           {
-            "t": "皮",
+            "t": "疲",
             "r": "pí",
             "g": "predicate"
           },
           {
-            "t": "措",
-            "r": "cuò",
+            "t": "惫",
+            "r": "bèi",
             "g": "predicate"
           },
           {
-            "t": "史",
-            "r": "shǐ",
-            "g": "predicate"
+            "t": "不",
+            "r": "bù",
+            "g": "complement"
           },
           {
-            "t": "焉",
-            "r": "yān",
-            "g": "predicate"
+            "t": "堪",
+            "r": "kān",
+            "g": "complement"
           },
           {
             "t": "的",
             "r": "de",
-            "g": "predicate"
+            "g": "complement"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -830,14 +821,14 @@
             "g": "predicate"
           },
           {
-            "t": "随",
-            "r": "suí",
-            "g": "predicate"
+            "t": "瞌",
+            "r": "kē",
+            "g": "object"
           },
           {
             "t": "睡",
             "r": "shuì",
-            "g": "predicate"
+            "g": "object"
           },
           {
             "t": "。",
@@ -863,12 +854,17 @@
               "g": "subject"
             },
             {
-              "t": "者",
-              "r": "もの",
+              "t": "人",
+              "r": "ひと",
               "g": "subject"
             },
             {
-              "t": "たちは",
+              "t": "々",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "は",
               "r": "",
               "g": "subject"
             },
@@ -883,7 +879,7 @@
               "g": "complement"
             },
             {
-              "t": "か",
+              "t": "も",
               "r": "",
               "g": "complement"
             },
@@ -912,27 +908,27 @@
             {
               "t": "一",
               "r": "ひと",
-              "g": "adverbial"
+              "g": "subject"
             },
             {
               "t": "人",
               "r": "り",
-              "g": "adverbial"
+              "g": "subject"
             },
             {
               "t": "二",
               "r": "ふた",
-              "g": "adverbial"
+              "g": "subject"
             },
             {
               "t": "人",
               "r": "り",
-              "g": "adverbial"
+              "g": "subject"
             },
             {
               "t": "と",
               "r": "",
-              "g": "adverbial"
+              "g": "subject"
             },
             {
               "t": "疲",
@@ -940,28 +936,28 @@
               "g": "predicate"
             },
             {
-              "t": "れ",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "果",
-              "r": "は",
-              "g": "predicate"
-            },
-            {
-              "t": "てて",
+              "t": "れきって、",
               "r": "",
               "g": "predicate"
             },
             {
               "t": "山",
-              "r": "さん",
+              "r": "やま",
               "g": "adverbial"
             },
             {
-              "t": "腹",
-              "r": "ぷく",
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "斜",
+              "r": "しゃ",
+              "g": "adverbial"
+            },
+            {
+              "t": "面",
+              "r": "めん",
               "g": "adverbial"
             },
             {
@@ -970,30 +966,25 @@
               "g": "adverbial"
             },
             {
+              "t": "居",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
               "t": "眠",
               "r": "ねむ",
-              "g": "predicate"
+              "g": "object"
             },
             {
-              "t": "り",
+              "t": "りしていた。",
               "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "込",
-              "r": "こ",
-              "g": "predicate"
-            },
-            {
-              "t": "んでいた。",
-              "r": "",
-              "g": "predicate"
+              "g": "object"
             }
           ]
         ]
       },
       {
-        "source_text": "突然多守子里头冲出一群一群的猛虎,还有能呀狼蚜,数者数不清,",
+        "source_text": "突然寨子里头冲出一群一群的猛虎，还有熊呀狼呀，数也数不清，",
         "zh": [
           {
             "t": "突",
@@ -1006,13 +997,8 @@
             "g": "adverbial"
           },
           {
-            "t": "多",
-            "r": "duō",
-            "g": "adverbial"
-          },
-          {
-            "t": "守",
-            "r": "shǒu",
+            "t": "寨",
+            "r": "zhài",
             "g": "adverbial"
           },
           {
@@ -1076,7 +1062,7 @@
             "g": "subject"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -1091,8 +1077,8 @@
             "g": "predicate"
           },
           {
-            "t": "能",
-            "r": "néng",
+            "t": "熊",
+            "r": "xióng",
             "g": "subject"
           },
           {
@@ -1106,12 +1092,12 @@
             "g": "subject"
           },
           {
-            "t": "蚜",
-            "r": "yá",
+            "t": "呀",
+            "r": "ya",
             "g": "subject"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -1121,9 +1107,9 @@
             "g": "predicate"
           },
           {
-            "t": "者",
-            "r": "zhě",
-            "g": "predicate"
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
           },
           {
             "t": "数",
@@ -1133,15 +1119,15 @@
           {
             "t": "不",
             "r": "bù",
-            "g": "predicate"
+            "g": "complement"
           },
           {
             "t": "清",
             "r": "qīng",
-            "g": "predicate"
+            "g": "complement"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -1189,7 +1175,17 @@
               "g": "subject"
             },
             {
-              "t": "れをなした",
+              "t": "れ",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "群",
+              "r": "む",
+              "g": "subject"
+            },
+            {
+              "t": "れの",
               "r": "",
               "g": "subject"
             },
@@ -1266,15 +1262,25 @@
               "g": "predicate"
             },
             {
-              "t": "えきれないほどだった。",
+              "t": "えても",
               "r": "",
               "g": "predicate"
+            },
+            {
+              "t": "数",
+              "r": "かぞ",
+              "g": "predicate"
+            },
+            {
+              "t": "えきれなかった。",
+              "r": "",
+              "g": "complement"
             }
           ]
         ]
       },
       {
-        "source_text": "吓得和起来亡命朝山下跑,那两只虎见鸟族人就咬,后面的虎兵见人就杀。",
+        "source_text": "吓得喊起来亡命朝山下跑，那两只虎见鸟族人就咬，后面的虎兵见人就杀。",
         "zh": [
           {
             "t": "吓",
@@ -1287,9 +1293,9 @@
             "g": "predicate"
           },
           {
-            "t": "和",
-            "r": "hé",
-            "g": "predicate"
+            "t": "喊",
+            "r": "hǎn",
+            "g": "complement"
           },
           {
             "t": "起",
@@ -1332,7 +1338,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -1387,7 +1393,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -1445,6 +1451,16 @@
         "ja": [
           [
             {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "らは",
+              "r": "",
+              "g": "subject"
+            },
+            {
               "t": "驚",
               "r": "おどろ",
               "g": "predicate"
@@ -1455,19 +1471,14 @@
               "g": "predicate"
             },
             {
-              "t": "声",
-              "r": "こえ",
-              "g": "object"
+              "t": "叫",
+              "r": "さけ",
+              "g": "complement"
             },
             {
-              "t": "を",
+              "t": "び、",
               "r": "",
-              "g": "object"
-            },
-            {
-              "t": "あげ、",
-              "r": "",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "命",
@@ -1500,17 +1511,12 @@
               "g": "predicate"
             },
             {
-              "t": "げたが、",
+              "t": "げた。",
               "r": "",
               "g": "predicate"
             }
           ],
           [
-            {
-              "t": "あの",
-              "r": "",
-              "g": "subject"
-            },
             {
               "t": "二",
               "r": "に",
@@ -1557,7 +1563,7 @@
               "g": "adverbial"
             },
             {
-              "t": "ると",
+              "t": "れば",
               "r": "",
               "g": "adverbial"
             },
@@ -1579,11 +1585,6 @@
             {
               "t": "ろの",
               "r": "",
-              "g": "subject"
-            },
-            {
-              "t": "虎",
-              "r": "とら",
               "g": "subject"
             },
             {
@@ -1612,7 +1613,7 @@
               "g": "adverbial"
             },
             {
-              "t": "ると",
+              "t": "れば",
               "r": "",
               "g": "adverbial"
             },
@@ -1630,16 +1631,16 @@
         ]
       },
       {
-        "source_text": "一写饭的工夫,鸟族人就死伤了--大半。",
+        "source_text": "一顿饭的工夫，鸟族人就死伤了一大半。",
         "zh": [
           {
             "t": "一",
-            "r": "yì",
+            "r": "yí",
             "g": "adverbial"
           },
           {
-            "t": "写",
-            "r": "xiě",
+            "t": "顿",
+            "r": "dùn",
             "g": "adverbial"
           },
           {
@@ -1663,7 +1664,7 @@
             "g": "adverbial"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -1703,9 +1704,9 @@
             "g": "predicate"
           },
           {
-            "t": "--",
-            "r": "",
-            "g": "function"
+            "t": "一",
+            "r": "yí",
+            "g": "complement"
           },
           {
             "t": "大",
@@ -1727,7 +1728,7 @@
           [
             {
               "t": "飯",
-              "r": "はん",
+              "r": "めし",
               "g": "object"
             },
             {
@@ -1783,23 +1784,38 @@
               "g": "subject"
             },
             {
-              "t": "者",
-              "r": "もの",
+              "t": "人",
+              "r": "ひと",
               "g": "subject"
             },
             {
-              "t": "たちは",
+              "t": "々",
               "r": "",
               "g": "subject"
             },
             {
-              "t": "大",
-              "r": "たい",
-              "g": "complement"
+              "t": "は",
+              "r": "",
+              "g": "subject"
             },
             {
               "t": "半",
               "r": "はん",
+              "g": "complement"
+            },
+            {
+              "t": "数",
+              "r": "すう",
+              "g": "complement"
+            },
+            {
+              "t": "以",
+              "r": "い",
+              "g": "complement"
+            },
+            {
+              "t": "上",
+              "r": "じょう",
               "g": "complement"
             },
             {
@@ -1826,7 +1842,7 @@
         ]
       },
       {
-        "source_text": "那些跑得快的,刚测跑到山脚丢,",
+        "source_text": "那些跑得快的，刚刚跑到山脚底，树林头又杀出一支虎兵，",
         "zh": [
           {
             "t": "那",
@@ -1841,17 +1857,17 @@
           {
             "t": "跑",
             "r": "pǎo",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "得",
             "r": "de",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "快",
             "r": "kuài",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "的",
@@ -1859,7 +1875,7 @@
             "g": "subject"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -1869,8 +1885,8 @@
             "g": "adverbial"
           },
           {
-            "t": "测",
-            "r": "cè",
+            "t": "刚",
+            "r": "gāng",
             "g": "adverbial"
           },
           {
@@ -1894,114 +1910,18 @@
             "g": "complement"
           },
           {
-            "t": "丢",
-            "r": "diū",
+            "t": "底",
+            "r": "dǐ",
             "g": "complement"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
-          }
-        ],
-        "ja": [
-          [
-            {
-              "t": "逃",
-              "r": "に",
-              "g": "subject"
-            },
-            {
-              "t": "げ",
-              "r": "",
-              "g": "subject"
-            },
-            {
-              "t": "足",
-              "r": "あし",
-              "g": "subject"
-            },
-            {
-              "t": "の",
-              "r": "",
-              "g": "subject"
-            },
-            {
-              "t": "速",
-              "r": "はや",
-              "g": "subject"
-            },
-            {
-              "t": "い",
-              "r": "",
-              "g": "subject"
-            },
-            {
-              "t": "者",
-              "r": "もの",
-              "g": "subject"
-            },
-            {
-              "t": "たちが、",
-              "r": "",
-              "g": "subject"
-            }
-          ],
-          [
-            {
-              "t": "ようやく",
-              "r": "",
-              "g": "adverbial"
-            },
-            {
-              "t": "山",
-              "r": "やま",
-              "g": "complement"
-            },
-            {
-              "t": "の",
-              "r": "",
-              "g": "complement"
-            },
-            {
-              "t": "麓",
-              "r": "ふもと",
-              "g": "complement"
-            },
-            {
-              "t": "まで",
-              "r": "",
-              "g": "complement"
-            },
-            {
-              "t": "逃",
-              "r": "に",
-              "g": "predicate"
-            },
-            {
-              "t": "げ",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "着",
-              "r": "つ",
-              "g": "predicate"
-            },
-            {
-              "t": "くと、",
-              "r": "",
-              "g": "predicate"
-            }
-          ]
-        ]
-      },
-      {
-        "source_text": "柑林头又杀出一支虎兵,先是一阵乱箭射,",
-        "zh": [
+          },
           {
-            "t": "柑",
-            "r": "gān",
+            "t": "树",
+            "r": "shù",
             "g": "adverbial"
           },
           {
@@ -2050,47 +1970,7 @@
             "g": "subject"
           },
           {
-            "t": ",",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "先",
-            "r": "xiān",
-            "g": "adverbial"
-          },
-          {
-            "t": "是",
-            "r": "shì",
-            "g": "adverbial"
-          },
-          {
-            "t": "一",
-            "r": "yí",
-            "g": "adverbial"
-          },
-          {
-            "t": "阵",
-            "r": "zhèn",
-            "g": "adverbial"
-          },
-          {
-            "t": "乱",
-            "r": "luàn",
-            "g": "object"
-          },
-          {
-            "t": "箭",
-            "r": "jiàn",
-            "g": "object"
-          },
-          {
-            "t": "射",
-            "r": "shè",
-            "g": "predicate"
-          },
-          {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -2098,8 +1978,90 @@
         "ja": [
           [
             {
-              "t": "柑",
-              "r": "かん",
+              "t": "逃",
+              "r": "に",
+              "g": "attributive"
+            },
+            {
+              "t": "げ",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "足",
+              "r": "あし",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "速",
+              "r": "はや",
+              "g": "attributive"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "者",
+              "r": "もの",
+              "g": "subject"
+            },
+            {
+              "t": "たちが、",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "ちょうど",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "山",
+              "r": "やま",
+              "g": "complement"
+            },
+            {
+              "t": "裾",
+              "r": "すそ",
+              "g": "complement"
+            },
+            {
+              "t": "まで",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "逃",
+              "r": "に",
+              "g": "predicate"
+            },
+            {
+              "t": "げ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "着",
+              "r": "つ",
+              "g": "predicate"
+            },
+            {
+              "t": "くと、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "林",
+              "r": "はやし",
               "g": "adverbial"
             },
             {
@@ -2108,12 +2070,12 @@
               "g": "adverbial"
             },
             {
-              "t": "林",
-              "r": "はやし",
+              "t": "中",
+              "r": "なか",
               "g": "adverbial"
             },
             {
-              "t": "のあたりから",
+              "t": "から",
               "r": "",
               "g": "adverbial"
             },
@@ -2168,14 +2130,156 @@
               "g": "predicate"
             },
             {
-              "t": "し、",
+              "t": "してきた。",
               "r": "",
               "g": "predicate"
             }
-          ],
+          ]
+        ]
+      },
+      {
+        "source_text": "先是一阵乱箭射，接着又是一阵冲杀，没得几个逃脱了的。",
+        "zh": [
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "adverbial"
+          },
+          {
+            "t": "阵",
+            "r": "zhèn",
+            "g": "adverbial"
+          },
+          {
+            "t": "乱",
+            "r": "luàn",
+            "g": "object"
+          },
+          {
+            "t": "箭",
+            "r": "jiàn",
+            "g": "object"
+          },
+          {
+            "t": "射",
+            "r": "shè",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "接",
+            "r": "jiē",
+            "g": "adverbial"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "adverbial"
+          },
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "adverbial"
+          },
+          {
+            "t": "阵",
+            "r": "zhèn",
+            "g": "adverbial"
+          },
+          {
+            "t": "冲",
+            "r": "chōng",
+            "g": "predicate"
+          },
+          {
+            "t": "杀",
+            "r": "shā",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "dé",
+            "g": "predicate"
+          },
+          {
+            "t": "几",
+            "r": "jǐ",
+            "g": "subject"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "subject"
+          },
+          {
+            "t": "逃",
+            "r": "táo",
+            "g": "attributive"
+          },
+          {
+            "t": "脱",
+            "r": "tuō",
+            "g": "attributive"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
           [
             {
-              "t": "まず",
+              "t": "初",
+              "r": "はじ",
+              "g": "adverbial"
+            },
+            {
+              "t": "めに",
               "r": "",
               "g": "adverbial"
             },
@@ -2218,106 +2322,7 @@
               "t": "かけ、",
               "r": "",
               "g": "predicate"
-            }
-          ]
-        ]
-      },
-      {
-        "source_text": "接着又是--阵冲杀,没得几个逃脱了的.",
-        "zh": [
-          {
-            "t": "接",
-            "r": "jiē",
-            "g": "adverbial"
-          },
-          {
-            "t": "着",
-            "r": "zhe",
-            "g": "adverbial"
-          },
-          {
-            "t": "又",
-            "r": "yòu",
-            "g": "adverbial"
-          },
-          {
-            "t": "是",
-            "r": "shì",
-            "g": "adverbial"
-          },
-          {
-            "t": "--",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "阵",
-            "r": "zhèn",
-            "g": "adverbial"
-          },
-          {
-            "t": "冲",
-            "r": "chōng",
-            "g": "predicate"
-          },
-          {
-            "t": "杀",
-            "r": "shā",
-            "g": "predicate"
-          },
-          {
-            "t": ",",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "没",
-            "r": "méi",
-            "g": "predicate"
-          },
-          {
-            "t": "得",
-            "r": "de",
-            "g": "predicate"
-          },
-          {
-            "t": "几",
-            "r": "jǐ",
-            "g": "subject"
-          },
-          {
-            "t": "个",
-            "r": "gè",
-            "g": "subject"
-          },
-          {
-            "t": "逃",
-            "r": "táo",
-            "g": "subject"
-          },
-          {
-            "t": "脱",
-            "r": "tuō",
-            "g": "subject"
-          },
-          {
-            "t": "了",
-            "r": "le",
-            "g": "subject"
-          },
-          {
-            "t": "的",
-            "r": "de",
-            "g": "subject"
-          },
-          {
-            "t": ".",
-            "r": "",
-            "g": "function"
-          }
-        ],
-        "ja": [
-          [
+            },
             {
               "t": "続",
               "r": "つづ",
@@ -2329,37 +2334,12 @@
               "g": "adverbial"
             },
             {
-              "t": "また",
-              "r": "",
-              "g": "adverbial"
-            },
-            {
-              "t": "ひとしきり",
-              "r": "",
-              "g": "adverbial"
-            },
-            {
               "t": "突",
-              "r": "とつ",
+              "r": "つ",
               "g": "predicate"
             },
             {
-              "t": "撃",
-              "r": "げき",
-              "g": "predicate"
-            },
-            {
-              "t": "して",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "斬",
-              "r": "き",
-              "g": "predicate"
-            },
-            {
-              "t": "り",
+              "t": "っ",
               "r": "",
               "g": "predicate"
             },
@@ -2369,7 +2349,17 @@
               "g": "predicate"
             },
             {
-              "t": "み、",
+              "t": "んで",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "斬",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "りかかった。",
               "r": "",
               "g": "predicate"
             }
@@ -2378,12 +2368,22 @@
             {
               "t": "逃",
               "r": "に",
-              "g": "subject"
+              "g": "attributive"
             },
             {
-              "t": "げおおせた",
+              "t": "げ",
               "r": "",
-              "g": "subject"
+              "g": "attributive"
+            },
+            {
+              "t": "延",
+              "r": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "びた",
+              "r": "",
+              "g": "attributive"
             },
             {
               "t": "者",
@@ -2396,9 +2396,19 @@
               "g": "subject"
             },
             {
-              "t": "ほとんど",
+              "t": "何",
+              "r": "なん",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "にん",
+              "g": "subject"
+            },
+            {
+              "t": "も",
               "r": "",
-              "g": "adverbial"
+              "g": "subject"
             },
             {
               "t": "いなかった。",
@@ -2409,7 +2419,7 @@
         ]
       },
       {
-        "source_text": "这一仗,鸟族几千人的队伍都遭除脱了,连他们的头头也死在乱入",
+        "source_text": "这一仗，鸟族几千人的队伍都遭除脱了，连他们的头头也死在乱刀下",
         "zh": [
           {
             "t": "这",
@@ -2427,7 +2437,7 @@
             "g": "adverbial"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -2444,22 +2454,22 @@
           {
             "t": "几",
             "r": "jǐ",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "千",
             "r": "qiān",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "人",
             "r": "rén",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "的",
             "r": "de",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "队",
@@ -2497,7 +2507,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -2552,8 +2562,13 @@
             "g": "adverbial"
           },
           {
-            "t": "入",
-            "r": "rù",
+            "t": "刀",
+            "r": "dāo",
+            "g": "adverbial"
+          },
+          {
+            "t": "下",
+            "r": "xià",
             "g": "adverbial"
           }
         ],
@@ -2590,24 +2605,29 @@
               "g": "subject"
             },
             {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
               "t": "数",
               "r": "すう",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "千",
               "r": "せん",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "人",
               "r": "にん",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "の",
               "r": "",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "隊",
@@ -2630,22 +2650,17 @@
               "g": "adverbial"
             },
             {
-              "t": "消",
-              "r": "け",
+              "t": "壊",
+              "r": "かい",
               "g": "predicate"
             },
             {
-              "t": "し",
-              "r": "",
+              "t": "滅",
+              "r": "めつ",
               "g": "predicate"
             },
             {
-              "t": "去",
-              "r": "さ",
-              "g": "predicate"
-            },
-            {
-              "t": "られ、",
+              "t": "させられ、",
               "r": "",
               "g": "predicate"
             }
@@ -2663,16 +2678,11 @@
             },
             {
               "t": "頭",
-              "r": "とう",
+              "r": "かしら",
               "g": "subject"
             },
             {
-              "t": "目",
-              "r": "もく",
-              "g": "subject"
-            },
-            {
-              "t": "までも",
+              "t": "までが",
               "r": "",
               "g": "subject"
             },
@@ -2682,8 +2692,8 @@
               "g": "adverbial"
             },
             {
-              "t": "戦",
-              "r": "せん",
+              "t": "刃",
+              "r": "ば",
               "g": "adverbial"
             },
             {
@@ -2692,8 +2702,8 @@
               "g": "adverbial"
             },
             {
-              "t": "中",
-              "r": "なか",
+              "t": "下",
+              "r": "した",
               "g": "adverbial"
             },
             {

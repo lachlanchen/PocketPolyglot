@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 53,
-    "grammar_token_total": 53,
-    "unit_count": 2
+    "token_total": 57,
+    "grammar_token_total": 57,
+    "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0379",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -253,9 +253,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00379",
     "source_text": "龙王气冲冲地说尽你们吃哈子,我管得到?就是不准你们所鱼。",
+    "corrected_text": "龙王气冲冲地说：“任你们吃啥子，我管得到？就是不准你们捉鱼。”",
     "units": [
       {
-        "source_text": "龙王气冲冲地说尽你们吃哈子,我管得到?",
+        "source_text": "龙王气冲冲地说：",
         "zh": [
           {
             "t": "龙",
@@ -293,8 +294,69 @@
             "g": "predicate"
           },
           {
-            "t": "尽",
-            "r": "jìn",
+            "t": "：",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "竜",
+              "r": "りゅう",
+              "g": "subject"
+            },
+            {
+              "t": "王",
+              "r": "おう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "かんかんに",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "怒",
+              "r": "おこ",
+              "g": "adverbial"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "“任你们吃啥子，我管得到？",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "任",
+            "r": "rèn",
             "g": "adverbial"
           },
           {
@@ -313,8 +375,8 @@
             "g": "predicate"
           },
           {
-            "t": "哈",
-            "r": "hā",
+            "t": "啥",
+            "r": "shá",
             "g": "object"
           },
           {
@@ -323,7 +385,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -348,7 +410,7 @@
             "g": "complement"
           },
           {
-            "t": "?",
+            "t": "？",
             "r": "",
             "g": "function"
           }
@@ -356,42 +418,10 @@
         "ja": [
           [
             {
-              "t": "竜",
-              "r": "りゅう",
-              "g": "subject"
-            },
-            {
-              "t": "王",
-              "r": "おう",
-              "g": "subject"
-            },
-            {
-              "t": "は",
-              "r": "",
-              "g": "subject"
-            },
-            {
-              "t": "かんかんになって",
-              "r": "",
-              "g": "adverbial"
-            },
-            {
-              "t": "言",
-              "r": "い",
-              "g": "predicate"
-            },
-            {
-              "t": "った",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "。",
+              "t": "「",
               "r": "",
               "g": "function"
-            }
-          ],
-          [
+            },
             {
               "t": "おまえたちが",
               "r": "",
@@ -413,35 +443,37 @@
               "g": "predicate"
             },
             {
-              "t": "べようと、",
+              "t": "べても、",
               "r": "",
               "g": "predicate"
-            },
+            }
+          ],
+          [
             {
               "t": "わしが",
               "r": "",
               "g": "subject"
             },
             {
-              "t": "構",
-              "r": "かま",
+              "t": "口",
+              "r": "くち",
               "g": "predicate"
             },
             {
-              "t": "うものか",
-              "r": "",
+              "t": "出",
+              "r": "だ",
               "g": "predicate"
             },
             {
-              "t": "?",
+              "t": "しできるものか。",
               "r": "",
-              "g": "function"
+              "g": "predicate"
             }
           ]
         ]
       },
       {
-        "source_text": "就是不准你们所鱼。",
+        "source_text": "就是不准你们捉鱼。”",
         "zh": [
           {
             "t": "就",
@@ -474,8 +506,8 @@
             "g": "object"
           },
           {
-            "t": "所",
-            "r": "suǒ",
+            "t": "捉",
+            "r": "zhuō",
             "g": "complement"
           },
           {
@@ -487,29 +519,34 @@
             "t": "。",
             "r": "",
             "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
           [
             {
-              "t": "ただし",
+              "t": "ただ",
               "r": "",
               "g": "adverbial"
             },
             {
               "t": "おまえたちが",
               "r": "",
-              "g": "subject"
+              "g": "object"
             },
             {
               "t": "魚",
               "r": "さかな",
-              "g": "object"
+              "g": "complement"
             },
             {
               "t": "を",
               "r": "",
-              "g": "object"
+              "g": "complement"
             }
           ],
           [
@@ -529,14 +566,9 @@
               "g": "predicate"
             },
             {
-              "t": "さない",
+              "t": "さない」",
               "r": "",
               "g": "predicate"
-            },
-            {
-              "t": "。",
-              "r": "",
-              "g": "function"
             }
           ]
         ]

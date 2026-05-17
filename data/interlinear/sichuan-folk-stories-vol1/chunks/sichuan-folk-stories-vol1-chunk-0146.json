@@ -33,22 +33,22 @@
       {
         "t": "自",
         "r": "zì",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "然",
         "r": "rán",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "天",
         "r": "tiān",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "象",
         "r": "xiàng",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "神",
@@ -65,22 +65,22 @@
       {
         "t": "自",
         "r": "し",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "然",
         "r": "ぜん",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "天",
         "r": "てん",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "象",
         "r": "しょう",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "神",
@@ -125,17 +125,17 @@
       {
         "t": "的",
         "r": "de",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": "来",
         "r": "lái",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "历",
         "r": "lì",
-        "g": "topic"
+        "g": "predicate"
       }
     ],
     "title_ja": [
@@ -167,17 +167,17 @@
       {
         "t": "の",
         "r": "",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": "由",
         "r": "ゆ",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "来",
         "r": "らい",
-        "g": "topic"
+        "g": "predicate"
       }
     ],
     "place_zh": [],
@@ -187,9 +187,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00146",
       "source_text": "讲述者:叶笋全男民间艺人读过私整果录者:邓软男 63岁脖体教师有果录时间.地点:1952 年 12 月于孝县,1986 年回忆整理",
+      "corrected_text": "讲述者:叶笋全 男 民间艺人 读过私塾 采录者:邓软 男 63岁 集体教师 采录时间、地点:1952 年 12 月于孝县,1986 年回忆整理",
       "units": [
         {
-          "source_text": "讲述者:叶笋全男民间艺人读过私整",
+          "source_text": "讲述者:叶笋全 男 民间艺人 读过私塾",
           "zh": [
             {
               "t": "讲",
@@ -227,29 +228,44 @@
               "g": "subject"
             },
             {
+              "t": " ",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "男",
               "r": "nán",
               "g": "attributive"
             },
             {
+              "t": " ",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "民",
               "r": "mín",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "间",
               "r": "jiān",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "艺",
               "r": "yì",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "人",
               "r": "rén",
-              "g": "predicate"
+              "g": "object"
+            },
+            {
+              "t": " ",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "读",
@@ -267,8 +283,8 @@
               "g": "object"
             },
             {
-              "t": "整",
-              "r": "zhěng",
+              "t": "塾",
+              "r": "shú",
               "g": "object"
             }
           ],
@@ -291,11 +307,6 @@
               },
               {
                 "t": ":",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": " ",
                 "r": "",
                 "g": "function"
               },
@@ -337,22 +348,22 @@
               {
                 "t": "民",
                 "r": "みん",
-                "g": "predicate"
+                "g": "object"
               },
               {
                 "t": "間",
                 "r": "かん",
-                "g": "predicate"
+                "g": "object"
               },
               {
                 "t": "芸",
                 "r": "げい",
-                "g": "predicate"
+                "g": "object"
               },
               {
                 "t": "人",
                 "r": "じん",
-                "g": "predicate"
+                "g": "object"
               },
               {
                 "t": "。",
@@ -364,17 +375,17 @@
               {
                 "t": "私",
                 "r": "し",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "塾",
                 "r": "じゅく",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "で",
                 "r": "",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "学",
@@ -395,11 +406,11 @@
           ]
         },
         {
-          "source_text": "果录者:邓软男 63岁脖体教师",
+          "source_text": "采录者:邓软 男 63岁 集体教师",
           "zh": [
             {
-              "t": "果",
-              "r": "guǒ",
+              "t": "采",
+              "r": "cǎi",
               "g": "topic"
             },
             {
@@ -428,6 +439,11 @@
               "g": "subject"
             },
             {
+              "t": " ",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "男",
               "r": "nán",
               "g": "attributive"
@@ -448,24 +464,29 @@
               "g": "attributive"
             },
             {
-              "t": "脖",
-              "r": "bó",
-              "g": "predicate"
+              "t": " ",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "集",
+              "r": "jí",
+              "g": "object"
             },
             {
               "t": "体",
               "r": "tǐ",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "教",
               "r": "jiào",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "师",
               "r": "shī",
-              "g": "predicate"
+              "g": "object"
             }
           ],
           "ja": [
@@ -487,11 +508,6 @@
               },
               {
                 "t": ":",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": " ",
                 "r": "",
                 "g": "function"
               },
@@ -543,37 +559,27 @@
             ],
             [
               {
-                "t": "脖",
-                "r": "ぼ",
-                "g": "predicate"
+                "t": "集",
+                "r": "しゅう",
+                "g": "object"
               },
               {
                 "t": "体",
                 "r": "たい",
-                "g": "predicate"
+                "g": "object"
               },
               {
                 "t": "教",
                 "r": "きょう",
-                "g": "predicate"
+                "g": "object"
               },
               {
                 "t": "師",
                 "r": "し",
-                "g": "predicate"
+                "g": "object"
               },
               {
-                "t": "と",
-                "r": "",
-                "g": "predicate"
-              },
-              {
-                "t": "記",
-                "r": "しる",
-                "g": "predicate"
-              },
-              {
-                "t": "されている",
+                "t": "である",
                 "r": "",
                 "g": "predicate"
               },
@@ -586,16 +592,11 @@
           ]
         },
         {
-          "source_text": "有果录时间.地点:1952 年 12 月于孝县,",
+          "source_text": "采录时间、地点:1952 年 12 月于孝县,",
           "zh": [
             {
-              "t": "有",
-              "r": "yǒu",
-              "g": "topic"
-            },
-            {
-              "t": "果",
-              "r": "guǒ",
+              "t": "采",
+              "r": "cǎi",
               "g": "topic"
             },
             {
@@ -614,7 +615,7 @@
               "g": "topic"
             },
             {
-              "t": ".",
+              "t": "、",
               "r": "",
               "g": "function"
             },
@@ -676,12 +677,12 @@
             {
               "t": "孝",
               "r": "xiào",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "县",
               "r": "xiàn",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": ",",
@@ -732,11 +733,6 @@
                 "g": "function"
               },
               {
-                "t": " ",
-                "r": "",
-                "g": "function"
-              },
-              {
                 "t": "1952",
                 "r": "",
                 "g": "adverbial"
@@ -766,12 +762,12 @@
               {
                 "t": "孝",
                 "r": "こう",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "県",
                 "r": "けん",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "にて",
@@ -779,7 +775,17 @@
                 "g": "adverbial"
               },
               {
-                "t": "、",
+                "t": "採",
+                "r": "さい",
+                "g": "predicate"
+              },
+              {
+                "t": "録",
+                "r": "ろく",
+                "g": "predicate"
+              },
+              {
+                "t": "。",
                 "r": "",
                 "g": "function"
               }

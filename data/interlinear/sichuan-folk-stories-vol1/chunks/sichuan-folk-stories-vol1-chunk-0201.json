@@ -5,21 +5,25 @@
     "title_zh": [
       {
         "t": "神",
-        "r": "shén"
+        "r": "shén",
+        "g": "attributive"
       },
       {
         "t": "话",
-        "r": "huà"
+        "r": "huà",
+        "g": "object"
       }
     ],
     "title_ja": [
       {
         "t": "神",
-        "r": "しん"
+        "r": "しん",
+        "g": "attributive"
       },
       {
         "t": "話",
-        "r": "わ"
+        "r": "わ",
+        "g": "object"
       }
     ]
   },
@@ -28,49 +32,60 @@
     "title_zh": [
       {
         "t": "图",
-        "r": "tú"
+        "r": "tú",
+        "g": "attributive"
       },
       {
         "t": "腾",
-        "r": "téng"
+        "r": "téng",
+        "g": "attributive"
       },
       {
         "t": "祖",
-        "r": "zǔ"
+        "r": "zǔ",
+        "g": "attributive"
       },
       {
         "t": "先",
-        "r": "xiān"
+        "r": "xiān",
+        "g": "attributive"
       },
       {
         "t": "神",
-        "r": "shén"
+        "r": "shén",
+        "g": "attributive"
       },
       {
         "t": "话",
-        "r": "huà"
+        "r": "huà",
+        "g": "object"
       }
     ],
     "title_ja": [
       {
         "t": "トーテム",
-        "r": ""
+        "r": "",
+        "g": "attributive"
       },
       {
         "t": "祖",
-        "r": "そ"
+        "r": "そ",
+        "g": "attributive"
       },
       {
         "t": "先",
-        "r": "せん"
+        "r": "せん",
+        "g": "attributive"
       },
       {
         "t": "神",
-        "r": "しん"
+        "r": "しん",
+        "g": "attributive"
       },
       {
         "t": "話",
-        "r": "わ"
+        "r": "わ",
+        "g": "object"
       }
     ]
   },
@@ -79,77 +94,95 @@
     "title_zh": [
       {
         "t": "025. ",
-        "r": ""
+        "r": "",
+        "g": "function"
       },
       {
         "t": "人",
-        "r": "rén"
+        "r": "rén",
+        "g": "subject"
       },
       {
         "t": "和",
-        "r": "hé"
+        "r": "hé",
+        "g": "subject"
       },
       {
         "t": "龙",
-        "r": "lóng"
+        "r": "lóng",
+        "g": "subject"
       },
       {
         "t": "（",
-        "r": ""
+        "r": "",
+        "g": "function"
       },
       {
         "t": "中",
-        "r": "zhōng"
+        "r": "zhōng",
+        "g": "attributive"
       },
       {
         "t": "江",
-        "r": "jiāng"
+        "r": "jiāng",
+        "g": "attributive"
       },
       {
         "t": "县",
-        "r": "xiàn"
+        "r": "xiàn",
+        "g": "object"
       },
       {
         "t": "）",
-        "r": ""
+        "r": "",
+        "g": "function"
       }
     ],
     "title_ja": [
       {
         "t": "025. ",
-        "r": ""
+        "r": "",
+        "g": "function"
       },
       {
         "t": "人",
-        "r": "ひと"
+        "r": "ひと",
+        "g": "subject"
       },
       {
         "t": "と",
-        "r": ""
+        "r": "",
+        "g": "subject"
       },
       {
         "t": "龍",
-        "r": "りゅう"
+        "r": "りゅう",
+        "g": "subject"
       },
       {
         "t": "（",
-        "r": ""
+        "r": "",
+        "g": "function"
       },
       {
         "t": "中",
-        "r": "ちゅう"
+        "r": "ちゅう",
+        "g": "attributive"
       },
       {
         "t": "江",
-        "r": "こう"
+        "r": "こう",
+        "g": "attributive"
       },
       {
         "t": "県",
-        "r": "けん"
+        "r": "けん",
+        "g": "object"
       },
       {
         "t": "）",
-        "r": ""
+        "r": "",
+        "g": "function"
       }
     ],
     "place_zh": [],
@@ -159,9 +192,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00201",
       "source_text": "传说古代人类和禽兽语言相通,能互相帮助,甚至结成亲友.其中,人类和龙的关系最为亲密。龙甘愿为人类看守庄稼和房屋,人类有什么好吃的也分给它们吃。后来,人和龙不仅成了亲家,还搬到一块儿住,成了一家人，",
+      "corrected_text": "传说古代人类和禽兽语言相通，能互相帮助，甚至结成亲友。其中，人类和龙的关系最为亲密。龙甘愿为人类看守庄稼和房屋，人类有什么好吃的也分给它们吃。后来，人和龙不仅成了亲家，还搬到一块儿住，成了一家人，",
       "units": [
         {
-          "source_text": "传说古代人类和禽兽语言相通,能互相帮助,甚至结成亲友.",
+          "source_text": "传说古代人类和禽兽语言相通，能互相帮助，甚至结成亲友。",
           "zh": [
             {
               "t": "传",
@@ -186,27 +220,27 @@
             {
               "t": "人",
               "r": "rén",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "类",
               "r": "lèi",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "和",
               "r": "hé",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "禽",
               "r": "qín",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "兽",
               "r": "shòu",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "语",
@@ -229,7 +263,7 @@
               "g": "predicate"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -259,7 +293,7 @@
               "g": "predicate"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -294,7 +328,7 @@
               "g": "complement"
             },
             {
-              "t": ".",
+              "t": "。",
               "r": "",
               "g": "function"
             }
@@ -307,14 +341,9 @@
                 "g": "adverbial"
               },
               {
-                "t": "えによれば",
+                "t": "えによれば、",
                 "r": "",
                 "g": "adverbial"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
               },
               {
                 "t": "古",
@@ -334,32 +363,32 @@
               {
                 "t": "人",
                 "r": "にん",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "間",
                 "r": "げん",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "と",
                 "r": "",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "鳥",
                 "r": "ちょう",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "獣",
                 "r": "じゅう",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "の",
                 "r": "",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "言",
@@ -392,14 +421,9 @@
                 "g": "predicate"
               },
               {
-                "t": "い",
+                "t": "い、",
                 "r": "",
                 "g": "predicate"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
               }
             ],
             [
@@ -429,19 +453,9 @@
                 "g": "predicate"
               },
               {
-                "t": "うことができ",
+                "t": "い、さらに",
                 "r": "",
                 "g": "predicate"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": "さらには",
-                "r": "",
-                "g": "adverbial"
               },
               {
                 "t": "親",
@@ -454,7 +468,7 @@
                 "g": "complement"
               },
               {
-                "t": "にも",
+                "t": "にまで",
                 "r": "",
                 "g": "complement"
               },
@@ -472,7 +486,7 @@
           ]
         },
         {
-          "source_text": "其中,人类和龙的关系最为亲密。",
+          "source_text": "其中，人类和龙的关系最为亲密。",
           "zh": [
             {
               "t": "其",
@@ -485,34 +499,34 @@
               "g": "adverbial"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
             {
               "t": "人",
               "r": "rén",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "类",
               "r": "lèi",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "和",
               "r": "hé",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "龙",
               "r": "lóng",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "的",
               "r": "de",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "关",
@@ -563,39 +577,34 @@
                 "g": "adverbial"
               },
               {
-                "t": "でも",
+                "t": "でも、",
                 "r": "",
                 "g": "adverbial"
               },
               {
-                "t": "、",
-                "r": "",
-                "g": "function"
-              },
-              {
                 "t": "人",
                 "r": "にん",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "間",
                 "r": "げん",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "と",
                 "r": "",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "龍",
                 "r": "りゅう",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "の",
                 "r": "",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "関",
@@ -643,7 +652,7 @@
           ]
         },
         {
-          "source_text": "龙甘愿为人类看守庄稼和房屋,人类有什么好吃的也分给它们吃。",
+          "source_text": "龙甘愿为人类看守庄稼和房屋，人类有什么好吃的也分给它们吃。",
           "zh": [
             {
               "t": "龙",
@@ -711,7 +720,7 @@
               "g": "object"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -864,14 +873,9 @@
                 "g": "predicate"
               },
               {
-                "t": "り",
+                "t": "り、",
                 "r": "",
                 "g": "predicate"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
               }
             ],
             [
@@ -934,7 +938,7 @@
           ]
         },
         {
-          "source_text": "后来,人和龙不仅成了亲家,还搬到一块儿住,成了一家人，",
+          "source_text": "后来，人和龙不仅成了亲家，还搬到一块儿住，成了一家人，",
           "zh": [
             {
               "t": "后",
@@ -947,7 +951,7 @@
               "g": "adverbial"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -997,7 +1001,7 @@
               "g": "complement"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -1037,7 +1041,7 @@
               "g": "predicate"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -1125,24 +1129,9 @@
                 "g": "complement"
               },
               {
-                "t": "に",
-                "r": "",
-                "g": "complement"
-              },
-              {
-                "t": "なった",
+                "t": "になっただけでなく、",
                 "r": "",
                 "g": "predicate"
-              },
-              {
-                "t": "だけでなく",
-                "r": "",
-                "g": "adverbial"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
               }
             ],
             [
@@ -1177,14 +1166,9 @@
                 "g": "predicate"
               },
               {
-                "t": "み",
+                "t": "み、",
                 "r": "",
                 "g": "predicate"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
               },
               {
                 "t": "一",
@@ -1207,12 +1191,7 @@
                 "g": "complement"
               },
               {
-                "t": "に",
-                "r": "",
-                "g": "complement"
-              },
-              {
-                "t": "なった",
+                "t": "になった",
                 "r": "",
                 "g": "predicate"
               },

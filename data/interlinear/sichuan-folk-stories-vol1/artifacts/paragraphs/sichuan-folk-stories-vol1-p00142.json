@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 73,
-    "grammar_token_total": 73,
+    "token_total": 80,
+    "grammar_token_total": 80,
     "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0142",
@@ -193,9 +193,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00142",
     "source_text": "动;她再把镜子磨划磨荡,便发出又隆隆的响声,虫子一下都被懂死上。可是,镜子越麻赵38、",
+    "corrected_text": "动；她再把镜子磨呀磨荡，便又发出隆隆的响声，虫子一下都被震死了。可是，镜子越磨越亮。",
     "units": [
       {
-        "source_text": "动;她再把镜子磨划磨荡,便发出又隆隆的响声,",
+        "source_text": "动；她再把镜子磨呀磨荡，便又发出隆隆的响声，",
         "zh": [
           {
             "t": "动",
@@ -203,7 +204,7 @@
             "g": "predicate"
           },
           {
-            "t": ";",
+            "t": "；",
             "r": "",
             "g": "function"
           },
@@ -238,9 +239,9 @@
             "g": "predicate"
           },
           {
-            "t": "划",
-            "r": "huà",
-            "g": "predicate"
+            "t": "呀",
+            "r": "ya",
+            "g": "function"
           },
           {
             "t": "磨",
@@ -253,13 +254,18 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
           {
             "t": "便",
             "r": "biàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "又",
+            "r": "yòu",
             "g": "adverbial"
           },
           {
@@ -271,11 +277,6 @@
             "t": "出",
             "r": "chū",
             "g": "complement"
-          },
-          {
-            "t": "又",
-            "r": "yòu",
-            "g": "adverbial"
           },
           {
             "t": "隆",
@@ -303,7 +304,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -351,35 +352,45 @@
               "g": "object"
             },
             {
-              "t": "こすり",
+              "t": "こすって",
               "r": "",
               "g": "predicate"
-            }
-          ],
-          [
+            },
             {
               "t": "揺",
               "r": "ゆ",
               "g": "predicate"
             },
             {
-              "t": "すり、またゴロゴロという",
+              "t": "すり、",
               "r": "",
               "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "するとまた、",
+              "r": "",
+              "g": "adverbial"
             },
             {
-              "t": "音",
-              "r": "おと",
+              "t": "ゴロゴロという",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "響",
+              "r": "ひび",
               "g": "object"
             },
             {
-              "t": "を",
+              "t": "きを",
               "r": "",
               "g": "object"
             },
             {
-              "t": "出",
-              "r": "だ",
+              "t": "発",
+              "r": "はっ",
               "g": "predicate"
             },
             {
@@ -391,7 +402,7 @@
         ]
       },
       {
-        "source_text": "虫子一下都被懂死上。",
+        "source_text": "虫子一下都被震死了。",
         "zh": [
           {
             "t": "虫",
@@ -424,8 +435,8 @@
             "g": "function"
           },
           {
-            "t": "懂",
-            "r": "dǒng",
+            "t": "震",
+            "r": "zhèn",
             "g": "predicate"
           },
           {
@@ -434,9 +445,9 @@
             "g": "complement"
           },
           {
-            "t": "上",
-            "r": "shàng",
-            "g": "complement"
+            "t": "了",
+            "r": "le",
+            "g": "function"
           },
           {
             "t": "。",
@@ -474,12 +485,12 @@
           ],
           [
             {
-              "t": "押",
-              "r": "お",
+              "t": "震",
+              "r": "ふる",
               "g": "predicate"
             },
             {
-              "t": "しつぶされるように",
+              "t": "えにやられて",
               "r": "",
               "g": "predicate"
             },
@@ -497,7 +508,7 @@
         ]
       },
       {
-        "source_text": "可是,镜子越麻赵38、",
+        "source_text": "可是，镜子越磨越亮。",
         "zh": [
           {
             "t": "可",
@@ -510,7 +521,7 @@
             "g": "function"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -530,22 +541,22 @@
             "g": "adverbial"
           },
           {
-            "t": "麻",
-            "r": "má",
+            "t": "磨",
+            "r": "mó",
             "g": "predicate"
           },
           {
-            "t": "赵",
-            "r": "zhào",
+            "t": "越",
+            "r": "yuè",
+            "g": "adverbial"
+          },
+          {
+            "t": "亮",
+            "r": "liàng",
             "g": "complement"
           },
           {
-            "t": "38",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "、",
+            "t": "。",
             "r": "",
             "g": "function"
           }
@@ -568,26 +579,51 @@
               "g": "subject"
             },
             {
-              "t": "ますます",
-              "r": "",
-              "g": "adverbial"
-            }
-          ],
-          [
+              "t": "磨",
+              "r": "みが",
+              "g": "predicate"
+            },
             {
-              "t": "しびれたようになった",
+              "t": "けば",
               "r": "",
               "g": "predicate"
             },
             {
-              "t": "趙",
-              "r": "ちょう",
+              "t": "磨",
+              "r": "みが",
+              "g": "predicate"
+            },
+            {
+              "t": "くほど",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "ますます",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "明",
+              "r": "あか",
               "g": "complement"
             },
             {
-              "t": "38、",
+              "t": "るく",
               "r": "",
-              "g": "function"
+              "g": "complement"
+            },
+            {
+              "t": "光",
+              "r": "ひか",
+              "g": "complement"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "complement"
             }
           ]
         ]

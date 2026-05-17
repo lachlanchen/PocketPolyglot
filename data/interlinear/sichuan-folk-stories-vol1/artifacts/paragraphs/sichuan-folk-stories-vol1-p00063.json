@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 45,
-    "grammar_token_total": 45,
+    "token_total": 52,
+    "grammar_token_total": 52,
     "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0063",
@@ -298,9 +298,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00063",
     "source_text": "所以,世上有人后也就同时有杂婆娘的.偷男人的。",
+    "corrected_text": "所以，世上有人后也就同时有杂婆娘的，偷男人的。",
     "units": [
       {
-        "source_text": "所以,世上有人后也就同时有杂婆娘的.",
+        "source_text": "所以，世上有人后也就同时有杂婆娘的，",
         "zh": [
           {
             "t": "所",
@@ -313,7 +314,7 @@
             "g": "adverbial"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -370,7 +371,7 @@
           {
             "t": "杂",
             "r": "zá",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "婆",
@@ -388,7 +389,7 @@
             "g": "object"
           },
           {
-            "t": ".",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -431,9 +432,19 @@
               "g": "object"
             },
             {
-              "t": "できてから、",
+              "t": "できた",
               "r": "",
               "g": "predicate"
+            },
+            {
+              "t": "後",
+              "r": "あと",
+              "g": "adverbial"
+            },
+            {
+              "t": "には、",
+              "r": "",
+              "g": "adverbial"
             }
           ],
           [
@@ -453,9 +464,29 @@
               "g": "adverbial"
             },
             {
-              "t": "ふしだらな",
+              "t": "身",
+              "r": "み",
+              "g": "attributive"
+            },
+            {
+              "t": "持",
+              "r": "も",
+              "g": "attributive"
+            },
+            {
+              "t": "ちの",
               "r": "",
-              "g": "object"
+              "g": "attributive"
+            },
+            {
+              "t": "悪",
+              "r": "わる",
+              "g": "attributive"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "attributive"
             },
             {
               "t": "女",
@@ -468,7 +499,7 @@
               "g": "object"
             },
             {
-              "t": "いた。",
+              "t": "いた、",
               "r": "",
               "g": "predicate"
             }
@@ -517,19 +548,19 @@
               "g": "object"
             },
             {
-              "t": "こっそり",
+              "t": "ひそかに",
               "r": "",
               "g": "adverbial"
             }
           ],
           [
             {
-              "t": "盗",
-              "r": "ぬす",
+              "t": "奪",
+              "r": "うば",
               "g": "predicate"
             },
             {
-              "t": "むような",
+              "t": "うような",
               "r": "",
               "g": "predicate"
             },
@@ -539,7 +570,12 @@
               "g": "object"
             },
             {
-              "t": "だ。",
+              "t": "も",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "いた。",
               "r": "",
               "g": "predicate"
             }

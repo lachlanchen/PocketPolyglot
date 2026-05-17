@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 13,
-    "grammar_token_total": 13,
+    "token_total": 16,
+    "grammar_token_total": 16,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0248",
@@ -263,9 +263,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00248",
     "source_text": "（琪县）",
+    "corrected_text": "（璧县）",
     "units": [
       {
-        "source_text": "（琪县）",
+        "source_text": "（璧县）",
         "zh": [
           {
             "t": "（",
@@ -273,8 +274,8 @@
             "g": "function"
           },
           {
-            "t": "琪",
-            "r": "qí",
+            "t": "璧",
+            "r": "bì",
             "g": "attributive"
           },
           {
@@ -296,8 +297,8 @@
               "g": "function"
             },
             {
-              "t": "琪",
-              "r": "き",
+              "t": "璧",
+              "r": "へき",
               "g": "attributive"
             },
             {
@@ -313,29 +314,44 @@
           ],
           [
             {
+              "t": "採",
+              "r": "さい",
+              "g": "attributive"
+            },
+            {
+              "t": "録",
+              "r": "ろく",
+              "g": "attributive"
+            },
+            {
               "t": "地",
               "r": "ち",
               "g": "attributive"
             },
             {
-              "t": "名",
-              "r": "めい",
-              "g": "attributive"
+              "t": "を",
+              "r": "",
+              "g": "object"
             },
             {
-              "t": "の",
+              "t": "示",
+              "r": "しめ",
+              "g": "predicate"
+            },
+            {
+              "t": "す",
               "r": "",
-              "g": "attributive"
+              "g": "predicate"
             },
             {
               "t": "注",
               "r": "ちゅう",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "記",
               "r": "き",
-              "g": "predicate"
+              "g": "object"
             }
           ]
         ]

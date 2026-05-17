@@ -50,12 +50,12 @@
       {
         "t": "洪",
         "r": "hóng",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "水",
         "r": "shuǐ",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": ".",
@@ -65,27 +65,27 @@
       {
         "t": "人",
         "r": "rén",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "类",
         "r": "lèi",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "再",
         "r": "zài",
-        "g": "topic"
+        "g": "adverbial"
       },
       {
         "t": "繁",
         "r": "fán",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "衍",
         "r": "yǎn",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "神",
@@ -102,12 +102,12 @@
       {
         "t": "洪",
         "r": "こう",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "水",
         "r": "ずい",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "・",
@@ -117,27 +117,27 @@
       {
         "t": "人",
         "r": "じん",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "類",
         "r": "るい",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "再",
         "r": "さい",
-        "g": "topic"
+        "g": "adverbial"
       },
       {
         "t": "繁",
         "r": "はん",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "殖",
         "r": "しょく",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "神",
@@ -182,32 +182,32 @@
       {
         "t": "伏",
         "r": "fú",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "义",
         "r": "yì",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "兄",
         "r": "xiōng",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "妹",
         "r": "mèi",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "造",
         "r": "zào",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "人",
         "r": "rén",
-        "g": "topic"
+        "g": "object"
       }
     ],
     "title_ja": [
@@ -239,42 +239,47 @@
       {
         "t": "伏",
         "r": "ふく",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "義",
         "r": "ぎ",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "兄",
         "r": "きょう",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "妹",
         "r": "だい",
-        "g": "topic"
+        "g": "subject"
       },
       {
-        "t": "の",
+        "t": "が",
         "r": "",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "人",
         "r": "ひと",
-        "g": "topic"
+        "g": "object"
+      },
+      {
+        "t": "を",
+        "r": "",
+        "g": "object"
       },
       {
         "t": "造",
-        "r": "づく",
-        "g": "topic"
+        "r": "つく",
+        "g": "predicate"
       },
       {
-        "t": "り",
+        "t": "る",
         "r": "",
-        "g": "topic"
+        "g": "predicate"
       }
     ],
     "place_zh": [],
@@ -283,9 +288,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00240",
     "source_text": "附:异文二",
+    "corrected_text": "附：异文二",
     "units": [
       {
-        "source_text": "附:异文二",
+        "source_text": "附：异文二",
         "zh": [
           {
             "t": "附",
@@ -293,7 +299,7 @@
             "g": "function"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },

@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 82,
-    "grammar_token_total": 82,
+    "token_total": 92,
+    "grammar_token_total": 92,
     "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0348",
@@ -218,9 +218,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00348",
     "source_text": "采录者:严小华男 30岁巴县走马乡文化专干 大专李子硕男 56岁文化干部襄中",
+    "corrected_text": "采录者：严小华，男，30岁，巴县走马乡文化专干，大专；李子硕，男，56岁，文化干部，高中",
     "units": [
       {
-        "source_text": "采录者:严小华男 30岁巴县走马乡文化专干 大专",
+        "source_text": "采录者：严小华，男，30岁，巴县走马乡文化专干，大专；",
         "zh": [
           {
             "t": "采",
@@ -238,7 +239,7 @@
             "g": "topic"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -258,12 +259,17 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "男",
             "r": "nán",
             "g": "subject"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -276,6 +282,11 @@
             "t": "岁",
             "r": "suì",
             "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "巴",
@@ -305,12 +316,12 @@
           {
             "t": "文",
             "r": "wén",
-            "g": "predicate"
+            "g": "object"
           },
           {
             "t": "化",
             "r": "huà",
-            "g": "predicate"
+            "g": "object"
           },
           {
             "t": "专",
@@ -323,19 +334,24 @@
             "g": "predicate"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
           {
             "t": "大",
             "r": "dà",
-            "g": "attributive"
+            "g": "complement"
           },
           {
             "t": "专",
             "r": "zhuān",
-            "g": "attributive"
+            "g": "complement"
+          },
+          {
+            "t": "；",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -406,7 +422,7 @@
               "g": "attributive"
             },
             {
-              "t": "、",
+              "t": "。",
               "r": "",
               "g": "function"
             }
@@ -445,12 +461,12 @@
             {
               "t": "文",
               "r": "ぶん",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "化",
               "r": "か",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "専",
@@ -478,19 +494,19 @@
               "g": "function"
             },
             {
-              "t": "大",
-              "r": "だい",
-              "g": "attributive"
+              "t": "短",
+              "r": "たん",
+              "g": "complement"
             },
             {
-              "t": "専",
-              "r": "せん",
-              "g": "attributive"
+              "t": "大",
+              "r": "だい",
+              "g": "complement"
             },
             {
               "t": "卒",
               "r": "そつ",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "。",
@@ -501,7 +517,7 @@
         ]
       },
       {
-        "source_text": "李子硕男 56岁文化干部襄中",
+        "source_text": "李子硕，男，56岁，文化干部，高中",
         "zh": [
           {
             "t": "李",
@@ -519,12 +535,17 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "男",
             "r": "nán",
             "g": "subject"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -539,14 +560,19 @@
             "g": "attributive"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "文",
             "r": "wén",
-            "g": "predicate"
+            "g": "object"
           },
           {
             "t": "化",
             "r": "huà",
-            "g": "predicate"
+            "g": "object"
           },
           {
             "t": "干",
@@ -559,8 +585,13 @@
             "g": "predicate"
           },
           {
-            "t": "襄",
-            "r": "xiāng",
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "高",
+            "r": "gāo",
             "g": "complement"
           },
           {
@@ -617,7 +648,7 @@
               "g": "attributive"
             },
             {
-              "t": "、",
+              "t": "。",
               "r": "",
               "g": "function"
             }
@@ -626,12 +657,12 @@
             {
               "t": "文",
               "r": "ぶん",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "化",
               "r": "か",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "幹",
@@ -649,13 +680,18 @@
               "g": "function"
             },
             {
-              "t": "襄",
-              "r": "じょう",
+              "t": "高",
+              "r": "こう",
               "g": "complement"
             },
             {
-              "t": "中",
-              "r": "ちゅう",
+              "t": "校",
+              "r": "こう",
+              "g": "complement"
+            },
+            {
+              "t": "卒",
+              "r": "そつ",
               "g": "complement"
             },
             {

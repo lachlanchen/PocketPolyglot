@@ -63,13 +63,8 @@
     ],
     "title_ja": [
       {
-        "t": "図",
-        "r": "と",
-        "g": "attributive"
-      },
-      {
-        "t": "騰",
-        "r": "とう",
+        "t": "トーテム",
+        "r": "",
         "g": "attributive"
       },
       {
@@ -130,7 +125,7 @@
       {
         "t": "和",
         "r": "hé",
-        "g": "function"
+        "g": "subject"
       },
       {
         "t": "龙",
@@ -177,7 +172,7 @@
       {
         "t": "と",
         "r": "",
-        "g": "function"
+        "g": "subject"
       },
       {
         "t": "竜",
@@ -217,9 +212,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00209",
       "source_text": "那阵的蛇不脱壳,跟这阵的人…样,活一些年后就死了。",
+      "corrected_text": "那阵的蛇不脱壳，跟这阵的人一样，活一些年后就死了。",
       "units": [
         {
-          "source_text": "那阵的蛇不脱壳,跟这阵的人…样,活一些年后就死了。",
+          "source_text": "那阵的蛇不脱壳，跟这阵的人一样，活一些年后就死了。",
           "zh": [
             {
               "t": "那",
@@ -257,7 +253,7 @@
               "g": "object"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -287,17 +283,17 @@
               "g": "adverbial"
             },
             {
-              "t": "…",
-              "r": "",
-              "g": "function"
+              "t": "一",
+              "r": "yí",
+              "g": "complement"
             },
             {
               "t": "样",
               "r": "yàng",
-              "g": "adverbial"
+              "g": "complement"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -409,16 +405,16 @@
               {
                 "t": "同",
                 "r": "おな",
-                "g": "adverbial"
+                "g": "complement"
               },
               {
                 "t": "じように、",
                 "r": "",
-                "g": "adverbial"
+                "g": "complement"
               },
               {
-                "t": "何",
-                "r": "なん",
+                "t": "数",
+                "r": "すう",
                 "g": "complement"
               },
               {
@@ -427,19 +423,24 @@
                 "g": "complement"
               },
               {
-                "t": "か",
-                "r": "",
-                "g": "complement"
-              },
-              {
                 "t": "生",
                 "r": "い",
                 "g": "predicate"
               },
               {
-                "t": "きたあと",
+                "t": "きた",
                 "r": "",
                 "g": "predicate"
+              },
+              {
+                "t": "後",
+                "r": "あと",
+                "g": "adverbial"
+              },
+              {
+                "t": "に",
+                "r": "",
+                "g": "adverbial"
               },
               {
                 "t": "死",

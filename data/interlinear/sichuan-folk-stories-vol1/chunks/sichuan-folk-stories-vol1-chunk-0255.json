@@ -247,9 +247,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00255",
       "source_text": "妹妹说不行啊,我们是一个奶头吊大的亲兄妹,咋个能作夫妻啊?",
+      "corrected_text": "妹妹说不行啊，我们是一个奶头吊大的亲兄妹，咋个能作夫妻啊？",
       "units": [
         {
-          "source_text": "妹妹说不行啊,我们是一个奶头吊大的亲兄妹,咋个能作夫妻啊?",
+          "source_text": "妹妹说不行啊，",
           "zh": [
             {
               "t": "妹",
@@ -282,10 +283,71 @@
               "g": "function"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
-            },
+            }
+          ],
+          "ja": [
+            [
+              {
+                "t": "妹",
+                "r": "いもうと",
+                "g": "subject"
+              },
+              {
+                "t": "は",
+                "r": "",
+                "g": "subject"
+              },
+              {
+                "t": "「",
+                "r": "",
+                "g": "function"
+              },
+              {
+                "t": "だめ",
+                "r": "",
+                "g": "object"
+              },
+              {
+                "t": "だよ",
+                "r": "",
+                "g": "function"
+              },
+              {
+                "t": "」",
+                "r": "",
+                "g": "function"
+              }
+            ],
+            [
+              {
+                "t": "と",
+                "r": "",
+                "g": "object"
+              },
+              {
+                "t": "言",
+                "r": "い",
+                "g": "predicate"
+              },
+              {
+                "t": "った",
+                "r": "",
+                "g": "predicate"
+              },
+              {
+                "t": "。",
+                "r": "",
+                "g": "function"
+              }
+            ]
+          ]
+        },
+        {
+          "source_text": "我们是一个奶头吊大的亲兄妹，",
+          "zh": [
             {
               "t": "我",
               "r": "wǒ",
@@ -344,91 +406,21 @@
             {
               "t": "兄",
               "r": "xiōng",
-              "g": "complement"
+              "g": "object"
             },
             {
               "t": "妹",
               "r": "mèi",
-              "g": "complement"
+              "g": "object"
             },
             {
-              "t": ",",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "咋",
-              "r": "zǎ",
-              "g": "adverbial"
-            },
-            {
-              "t": "个",
-              "r": "gè",
-              "g": "adverbial"
-            },
-            {
-              "t": "能",
-              "r": "néng",
-              "g": "predicate"
-            },
-            {
-              "t": "作",
-              "r": "zuò",
-              "g": "predicate"
-            },
-            {
-              "t": "夫",
-              "r": "fū",
-              "g": "complement"
-            },
-            {
-              "t": "妻",
-              "r": "qī",
-              "g": "complement"
-            },
-            {
-              "t": "啊",
-              "r": "a",
-              "g": "function"
-            },
-            {
-              "t": "?",
+              "t": "，",
               "r": "",
               "g": "function"
             }
           ],
           "ja": [
             [
-              {
-                "t": "妹",
-                "r": "いもうと",
-                "g": "subject"
-              },
-              {
-                "t": "は",
-                "r": "",
-                "g": "subject"
-              },
-              {
-                "t": "「",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": "だめ",
-                "r": "",
-                "g": "object"
-              },
-              {
-                "t": "よ",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
-              },
               {
                 "t": "私",
                 "r": "わたし",
@@ -455,17 +447,7 @@
                 "g": "attributive"
               },
               {
-                "t": "を",
-                "r": "",
-                "g": "attributive"
-              },
-              {
-                "t": "吸",
-                "r": "す",
-                "g": "attributive"
-              },
-              {
-                "t": "って",
+                "t": "で",
                 "r": "",
                 "g": "attributive"
               },
@@ -478,7 +460,9 @@
                 "t": "った",
                 "r": "",
                 "g": "attributive"
-              },
+              }
+            ],
+            [
               {
                 "t": "実",
                 "r": "じつ",
@@ -492,24 +476,71 @@
               {
                 "t": "兄",
                 "r": "けい",
-                "g": "complement"
+                "g": "object"
               },
               {
                 "t": "妹",
                 "r": "まい",
-                "g": "complement"
+                "g": "object"
               },
               {
-                "t": "で",
+                "t": "なのに",
                 "r": "",
-                "g": "complement"
+                "g": "object"
               },
               {
                 "t": "、",
                 "r": "",
                 "g": "function"
               }
-            ],
+            ]
+          ]
+        },
+        {
+          "source_text": "咋个能作夫妻啊？",
+          "zh": [
+            {
+              "t": "咋",
+              "r": "zǎ",
+              "g": "adverbial"
+            },
+            {
+              "t": "个",
+              "r": "ge",
+              "g": "adverbial"
+            },
+            {
+              "t": "能",
+              "r": "néng",
+              "g": "predicate"
+            },
+            {
+              "t": "作",
+              "r": "zuò",
+              "g": "predicate"
+            },
+            {
+              "t": "夫",
+              "r": "fū",
+              "g": "object"
+            },
+            {
+              "t": "妻",
+              "r": "qī",
+              "g": "object"
+            },
+            {
+              "t": "啊",
+              "r": "a",
+              "g": "function"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          "ja": [
             [
               {
                 "t": "どうして",
@@ -519,18 +550,20 @@
               {
                 "t": "夫",
                 "r": "ふう",
-                "g": "complement"
+                "g": "object"
               },
               {
                 "t": "婦",
                 "r": "ふ",
-                "g": "complement"
+                "g": "object"
               },
               {
                 "t": "に",
                 "r": "",
-                "g": "complement"
-              },
+                "g": "object"
+              }
+            ],
+            [
               {
                 "t": "なれる",
                 "r": "",
@@ -542,24 +575,14 @@
                 "g": "predicate"
               },
               {
-                "t": "？」",
+                "t": "だろう",
+                "r": "",
+                "g": "predicate"
+              },
+              {
+                "t": "か",
                 "r": "",
                 "g": "function"
-              },
-              {
-                "t": "と",
-                "r": "",
-                "g": "object"
-              },
-              {
-                "t": "言",
-                "r": "い",
-                "g": "predicate"
-              },
-              {
-                "t": "った",
-                "r": "",
-                "g": "predicate"
               },
               {
                 "t": "。",

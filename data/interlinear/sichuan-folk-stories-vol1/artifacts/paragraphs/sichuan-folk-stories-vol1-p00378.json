@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 86,
-    "grammar_token_total": 86,
+    "token_total": 87,
+    "grammar_token_total": 87,
     "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0378",
@@ -278,9 +278,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00378",
     "source_text": "伏闵没被龙王的话吓倒,理直气壮地反问龙王术你不准我们所鱼,那我们吃啥子喃?",
+    "corrected_text": "伏义没被龙王的话吓倒，理直气壮地反问龙王：“你不准我们打鱼，那我们吃啥子喃？”",
     "units": [
       {
-        "source_text": "伏闵没被龙王的话吓倒,",
+        "source_text": "伏义没被龙王的话吓倒，",
         "zh": [
           {
             "t": "伏",
@@ -288,8 +289,8 @@
             "g": "subject"
           },
           {
-            "t": "闵",
-            "r": "mǐn",
+            "t": "义",
+            "r": "yì",
             "g": "subject"
           },
           {
@@ -333,7 +334,7 @@
             "g": "complement"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -346,8 +347,8 @@
               "g": "subject"
             },
             {
-              "t": "閔",
-              "r": "びん",
+              "t": "義",
+              "r": "ぎ",
               "g": "subject"
             },
             {
@@ -398,12 +399,12 @@
               "g": "adverbial"
             },
             {
-              "t": "おびえ",
-              "r": "",
+              "t": "怖",
+              "r": "こわ",
               "g": "predicate"
             },
             {
-              "t": "なかった",
+              "t": "がらなかった",
               "r": "",
               "g": "complement"
             },
@@ -416,7 +417,7 @@
         ]
       },
       {
-        "source_text": "理直气壮地反问龙王术你不准我们所鱼,",
+        "source_text": "理直气壮地反问龙王：",
         "zh": [
           {
             "t": "理",
@@ -464,47 +465,7 @@
             "g": "object"
           },
           {
-            "t": "术",
-            "r": "shù",
-            "g": "function"
-          },
-          {
-            "t": "你",
-            "r": "nǐ",
-            "g": "subject"
-          },
-          {
-            "t": "不",
-            "r": "bù",
-            "g": "adverbial"
-          },
-          {
-            "t": "准",
-            "r": "zhǔn",
-            "g": "predicate"
-          },
-          {
-            "t": "我",
-            "r": "wǒ",
-            "g": "object"
-          },
-          {
-            "t": "们",
-            "r": "men",
-            "g": "object"
-          },
-          {
-            "t": "所",
-            "r": "suǒ",
-            "g": "object"
-          },
-          {
-            "t": "鱼",
-            "r": "yú",
-            "g": "object"
-          },
-          {
-            "t": ",",
+            "t": "：",
             "r": "",
             "g": "function"
           }
@@ -545,7 +506,9 @@
               "t": "と",
               "r": "",
               "g": "adverbial"
-            },
+            }
+          ],
+          [
             {
               "t": "竜",
               "r": "りゅう",
@@ -582,11 +545,108 @@
               "g": "predicate"
             },
             {
-              "t": "、",
+              "t": "。",
               "r": "",
               "g": "function"
             }
-          ],
+          ]
+        ]
+      },
+      {
+        "source_text": "“你不准我们打鱼，那我们吃啥子喃？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "准",
+            "r": "zhǔn",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "object"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "object"
+          },
+          {
+            "t": "打",
+            "r": "dǎ",
+            "g": "object"
+          },
+          {
+            "t": "鱼",
+            "r": "yú",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "adverbial"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          },
+          {
+            "t": "吃",
+            "r": "chī",
+            "g": "predicate"
+          },
+          {
+            "t": "啥",
+            "r": "shá",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "喃",
+            "r": "nán",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
           [
             {
               "t": "「",
@@ -638,54 +698,7 @@
               "r": "",
               "g": "predicate"
             }
-          ]
-        ]
-      },
-      {
-        "source_text": "那我们吃啥子喃?",
-        "zh": [
-          {
-            "t": "那",
-            "r": "nà",
-            "g": "adverbial"
-          },
-          {
-            "t": "我",
-            "r": "wǒ",
-            "g": "subject"
-          },
-          {
-            "t": "们",
-            "r": "men",
-            "g": "subject"
-          },
-          {
-            "t": "吃",
-            "r": "chī",
-            "g": "predicate"
-          },
-          {
-            "t": "啥",
-            "r": "shá",
-            "g": "object"
-          },
-          {
-            "t": "子",
-            "r": "zi",
-            "g": "object"
-          },
-          {
-            "t": "喃",
-            "r": "nán",
-            "g": "function"
-          },
-          {
-            "t": "?",
-            "r": "",
-            "g": "function"
-          }
-        ],
-        "ja": [
+          ],
           [
             {
               "t": "それなら",
@@ -706,9 +719,7 @@
               "t": "は",
               "r": "",
               "g": "subject"
-            }
-          ],
-          [
+            },
             {
               "t": "何",
               "r": "なに",
@@ -725,17 +736,12 @@
               "g": "predicate"
             },
             {
-              "t": "べればいいのか",
+              "t": "べるのか",
               "r": "",
               "g": "predicate"
             },
             {
               "t": "」",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "と。",
               "r": "",
               "g": "function"
             }

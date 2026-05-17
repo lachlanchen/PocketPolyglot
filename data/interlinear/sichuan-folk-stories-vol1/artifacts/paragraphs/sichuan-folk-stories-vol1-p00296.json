@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 60,
-    "grammar_token_total": 60,
-    "unit_count": 1
+    "token_total": 63,
+    "grammar_token_total": 63,
+    "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0296",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -258,9 +258,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00296",
     "source_text": "遇到大风大雨,猴子淋来遭不住,就拣些树枝枝树叶叶来,搭个棚棚遮两。",
+    "corrected_text": "遇到大风大雨，猴子淋来遭不住，就拣些树枝枝树叶叶来，搭个棚棚遮雨。",
     "units": [
       {
-        "source_text": "遇到大风大雨,猴子淋来遭不住,就拣些树枝枝树叶叶来,搭个棚棚遮两。",
+        "source_text": "遇到大风大雨，猴子淋来遭不住，",
         "zh": [
           {
             "t": "遇",
@@ -293,7 +294,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -333,10 +334,86 @@
             "g": "complement"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
-          },
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "attributive"
+            },
+            {
+              "t": "風",
+              "r": "かぜ",
+              "g": "object"
+            },
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "attributive"
+            },
+            {
+              "t": "雨",
+              "r": "あめ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "遭",
+              "r": "あ",
+              "g": "predicate"
+            },
+            {
+              "t": "うと、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "猿",
+              "r": "さる",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "濡",
+              "r": "ぬ",
+              "g": "predicate"
+            },
+            {
+              "t": "れて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "耐",
+              "r": "た",
+              "g": "predicate"
+            },
+            {
+              "t": "えられなかった。",
+              "r": "",
+              "g": "complement"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "就拣些树枝枝树叶叶来，搭个棚棚遮雨。",
+        "zh": [
           {
             "t": "就",
             "r": "jiù",
@@ -388,7 +465,7 @@
             "g": "complement"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -418,8 +495,8 @@
             "g": "predicate"
           },
           {
-            "t": "两",
-            "r": "liǎng",
+            "t": "雨",
+            "r": "yǔ",
             "g": "object"
           },
           {
@@ -431,67 +508,10 @@
         "ja": [
           [
             {
-              "t": "大",
-              "r": "おお",
-              "g": "attributive"
-            },
-            {
-              "t": "風",
-              "r": "かぜ",
-              "g": "object"
-            },
-            {
-              "t": "と",
+              "t": "そこで",
               "r": "",
-              "g": "object"
+              "g": "adverbial"
             },
-            {
-              "t": "大",
-              "r": "おお",
-              "g": "attributive"
-            },
-            {
-              "t": "雨",
-              "r": "あめ",
-              "g": "object"
-            },
-            {
-              "t": "にあうと、",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "猿",
-              "r": "さる",
-              "g": "subject"
-            },
-            {
-              "t": "は",
-              "r": "",
-              "g": "subject"
-            },
-            {
-              "t": "濡",
-              "r": "ぬ",
-              "g": "predicate"
-            },
-            {
-              "t": "れて",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "耐",
-              "r": "た",
-              "g": "predicate"
-            },
-            {
-              "t": "えられず、",
-              "r": "",
-              "g": "predicate"
-            }
-          ],
-          [
             {
               "t": "木",
               "r": "き",
@@ -531,7 +551,9 @@
               "t": "ってきて、",
               "r": "",
               "g": "complement"
-            },
+            }
+          ],
+          [
             {
               "t": "小",
               "r": "こ",
@@ -548,12 +570,12 @@
               "g": "object"
             },
             {
-              "t": "掛",
-              "r": "か",
+              "t": "作",
+              "r": "つく",
               "g": "predicate"
             },
             {
-              "t": "け、",
+              "t": "り、",
               "r": "",
               "g": "predicate"
             },
@@ -563,7 +585,12 @@
               "g": "object"
             },
             {
-              "t": "よけにした。",
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "よけた。",
               "r": "",
               "g": "predicate"
             }

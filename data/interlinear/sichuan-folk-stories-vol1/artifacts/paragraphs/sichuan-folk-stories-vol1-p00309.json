@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 115,
-    "grammar_token_total": 115,
+    "token_total": 116,
+    "grammar_token_total": 116,
     "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0309",
@@ -228,9 +228,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00309",
     "source_text": "女娲娘娘看到人类被水沥死十分焦急,便不辞辛劳到处采集五色石子,终于把天补好。她劳累过度,面黄肌瘦,再也不像从前那样神采焕发了。",
+    "corrected_text": "女娲娘娘看到人类被水淹死十分焦急,便不辞辛劳到处采集五色石子,终于把天补好。她劳累过度,面黄肌瘦,再也不像从前那样神采焕发了。",
     "units": [
       {
-        "source_text": "女娲娘娘看到人类被水沥死十分焦急,",
+        "source_text": "女娲娘娘看到人类被水淹死十分焦急,",
         "zh": [
           {
             "t": "女",
@@ -275,22 +276,22 @@
           {
             "t": "被",
             "r": "bèi",
-            "g": "object"
+            "g": "function"
           },
           {
             "t": "水",
             "r": "shuǐ",
-            "g": "object"
+            "g": "adverbial"
           },
           {
-            "t": "沥",
-            "r": "lì",
-            "g": "object"
+            "t": "淹",
+            "r": "yān",
+            "g": "predicate"
           },
           {
             "t": "死",
             "r": "sǐ",
-            "g": "object"
+            "g": "complement"
           },
           {
             "t": "十",
@@ -353,22 +354,24 @@
             {
               "t": "水",
               "r": "みず",
-              "g": "object"
+              "g": "adverbial"
             },
             {
-              "t": "で",
+              "t": "にのまれて",
               "r": "",
-              "g": "object"
-            },
+              "g": "adverbial"
+            }
+          ],
+          [
             {
               "t": "死",
               "r": "し",
-              "g": "object"
+              "g": "complement"
             },
             {
               "t": "んでいくのを",
               "r": "",
-              "g": "object"
+              "g": "complement"
             },
             {
               "t": "見",
@@ -376,14 +379,7 @@
               "g": "predicate"
             },
             {
-              "t": "て、",
-              "r": "",
-              "g": "predicate"
-            }
-          ],
-          [
-            {
-              "t": "たいへん",
+              "t": "て、たいへん",
               "r": "",
               "g": "adverbial"
             },
@@ -527,12 +523,7 @@
               "g": "adverbial"
             },
             {
-              "t": "をいとわず、",
-              "r": "",
-              "g": "adverbial"
-            },
-            {
-              "t": "あちこちで",
+              "t": "をいとわず、あちこちで",
               "r": "",
               "g": "adverbial"
             },
@@ -647,7 +638,7 @@
           {
             "t": "面",
             "r": "miàn",
-            "g": "predicate"
+            "g": "subject"
           },
           {
             "t": "黄",
@@ -657,7 +648,7 @@
           {
             "t": "肌",
             "r": "jī",
-            "g": "predicate"
+            "g": "subject"
           },
           {
             "t": "瘦",
@@ -702,37 +693,37 @@
           {
             "t": "那",
             "r": "nà",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
             "t": "样",
             "r": "yàng",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
             "t": "神",
             "r": "shén",
-            "g": "complement"
+            "g": "object"
           },
           {
             "t": "采",
             "r": "cǎi",
-            "g": "complement"
+            "g": "object"
           },
           {
             "t": "焕",
             "r": "huàn",
-            "g": "complement"
+            "g": "predicate"
           },
           {
             "t": "发",
             "r": "fā",
-            "g": "complement"
+            "g": "predicate"
           },
           {
             "t": "了",
             "r": "le",
-            "g": "function"
+            "g": "predicate"
           },
           {
             "t": "。",
@@ -780,17 +771,17 @@
             {
               "t": "顔",
               "r": "かお",
-              "g": "predicate"
+              "g": "subject"
             },
             {
               "t": "色",
               "r": "いろ",
-              "g": "predicate"
+              "g": "subject"
             },
             {
               "t": "は",
               "r": "",
-              "g": "predicate"
+              "g": "subject"
             },
             {
               "t": "悪",
@@ -798,7 +789,7 @@
               "g": "predicate"
             },
             {
-              "t": "くやせこけ、",
+              "t": "く、やせこけ、",
               "r": "",
               "g": "predicate"
             }
@@ -817,20 +808,35 @@
             {
               "t": "のような",
               "r": "",
-              "g": "adverbial"
+              "g": "attributive"
+            },
+            {
+              "t": "生",
+              "r": "い",
+              "g": "object"
+            },
+            {
+              "t": "き",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "生",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "きした",
+              "r": "",
+              "g": "predicate"
             },
             {
               "t": "輝",
               "r": "かがや",
-              "g": "complement"
+              "g": "object"
             },
             {
-              "t": "きは",
-              "r": "",
-              "g": "complement"
-            },
-            {
-              "t": "なかった。",
+              "t": "きはなかった。",
               "r": "",
               "g": "predicate"
             }

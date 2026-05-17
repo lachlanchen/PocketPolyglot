@@ -232,9 +232,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00213",
       "source_text": "玉皇点点脑壳说性传虽,就优个办1",
+      "corrected_text": "玉皇点点脑壳说：这件事，就有个办法。",
       "units": [
         {
-          "source_text": "玉皇点点脑壳说性传虽,就优个办1",
+          "source_text": "玉皇点点脑壳说：这件事，就有个办法。",
           "zh": [
             {
               "t": "玉",
@@ -272,22 +273,27 @@
               "g": "predicate"
             },
             {
-              "t": "性",
-              "r": "xìng",
-              "g": "object"
+              "t": "：",
+              "r": "",
+              "g": "function"
             },
             {
-              "t": "传",
-              "r": "chuán",
-              "g": "object"
+              "t": "这",
+              "r": "zhè",
+              "g": "attributive"
             },
             {
-              "t": "虽",
-              "r": "suī",
-              "g": "object"
+              "t": "件",
+              "r": "jiàn",
+              "g": "attributive"
             },
             {
-              "t": ",",
+              "t": "事",
+              "r": "shì",
+              "g": "topic"
+            },
+            {
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -297,22 +303,27 @@
               "g": "adverbial"
             },
             {
-              "t": "优",
-              "r": "yōu",
+              "t": "有",
+              "r": "yǒu",
               "g": "predicate"
             },
             {
               "t": "个",
               "r": "gè",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "办",
               "r": "bàn",
-              "g": "predicate"
+              "g": "object"
             },
             {
-              "t": "1",
+              "t": "法",
+              "r": "fǎ",
+              "g": "object"
+            },
+            {
+              "t": "。",
               "r": "",
               "g": "function"
             }
@@ -345,16 +356,9 @@
                 "g": "object"
               },
               {
-                "t": "こくりとうなずき、",
+                "t": "こくこくとうなずいて",
                 "r": "",
                 "g": "predicate"
-              }
-            ],
-            [
-              {
-                "t": "そう",
-                "r": "",
-                "g": "adverbial"
               },
               {
                 "t": "言",
@@ -362,44 +366,56 @@
                 "g": "predicate"
               },
               {
-                "t": "って、",
+                "t": "った。",
                 "r": "",
                 "g": "predicate"
+              }
+            ],
+            [
+              {
+                "t": "この",
+                "r": "",
+                "g": "attributive"
+              },
+              {
+                "t": "事",
+                "r": "こと",
+                "g": "topic"
+              },
+              {
+                "t": "なら、",
+                "r": "",
+                "g": "topic"
+              },
+              {
+                "t": "すぐに",
+                "r": "",
+                "g": "adverbial"
               },
               {
                 "t": "一",
                 "r": "ひと",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "つ",
                 "r": "",
+                "g": "attributive"
+              },
+              {
+                "t": "方",
+                "r": "ほう",
                 "g": "object"
               },
               {
-                "t": "手",
-                "r": "て",
+                "t": "法",
+                "r": "ほう",
                 "g": "object"
               },
               {
-                "t": "を",
-                "r": "",
-                "g": "object"
-              },
-              {
-                "t": "打",
-                "r": "う",
-                "g": "predicate"
-              },
-              {
-                "t": "った",
+                "t": "がある。",
                 "r": "",
                 "g": "predicate"
-              },
-              {
-                "t": "1",
-                "r": "",
-                "g": "function"
               }
             ]
           ]

@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 59,
-    "grammar_token_total": 59,
+    "token_total": 60,
+    "grammar_token_total": 60,
     "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0256",
@@ -50,12 +50,12 @@
       {
         "t": "洪",
         "r": "hóng",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "水",
         "r": "shuǐ",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": ".",
@@ -75,17 +75,17 @@
       {
         "t": "再",
         "r": "zài",
-        "g": "object"
+        "g": "adverbial"
       },
       {
         "t": "繁",
         "r": "fán",
-        "g": "object"
+        "g": "predicate"
       },
       {
         "t": "衍",
         "r": "yǎn",
-        "g": "object"
+        "g": "predicate"
       },
       {
         "t": "神",
@@ -102,12 +102,12 @@
       {
         "t": "洪",
         "r": "こう",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "水",
         "r": "ずい",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "・",
@@ -127,17 +127,17 @@
       {
         "t": "再",
         "r": "さい",
-        "g": "object"
+        "g": "adverbial"
       },
       {
         "t": "繁",
         "r": "はん",
-        "g": "object"
+        "g": "predicate"
       },
       {
         "t": "殖",
         "r": "しょく",
-        "g": "object"
+        "g": "predicate"
       },
       {
         "t": "神",
@@ -182,7 +182,7 @@
       {
         "t": "和",
         "r": "hé",
-        "g": "object"
+        "g": "function"
       },
       {
         "t": "女",
@@ -224,7 +224,7 @@
       {
         "t": "と",
         "r": "",
-        "g": "object"
+        "g": "function"
       },
       {
         "t": "女",
@@ -243,9 +243,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00256",
     "source_text": "哥哥说地上只留下我们两个人了,我们不结成夫妻,人烟就会灭绝呀!",
+    "corrected_text": "哥哥说地上只留下我们两个人了，我们不结成夫妻，人烟就会灭绝呀！",
     "units": [
       {
-        "source_text": "哥哥说地上只留下我们两个人了,",
+        "source_text": "哥哥说地上只留下我们两个人了，",
         "zh": [
           {
             "t": "哥",
@@ -290,27 +291,27 @@
           {
             "t": "我",
             "r": "wǒ",
-            "g": "subject"
+            "g": "object"
           },
           {
             "t": "们",
             "r": "men",
-            "g": "subject"
+            "g": "object"
           },
           {
             "t": "两",
             "r": "liǎng",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "个",
             "r": "gè",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "人",
             "r": "rén",
-            "g": "subject"
+            "g": "object"
           },
           {
             "t": "了",
@@ -318,7 +319,7 @@
             "g": "function"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -370,27 +371,27 @@
             {
               "t": "私",
               "r": "わたし",
-              "g": "subject"
+              "g": "object"
             },
             {
               "t": "たち",
               "r": "",
-              "g": "subject"
+              "g": "object"
             },
             {
               "t": "二",
               "r": "ふた",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "人",
               "r": "り",
-              "g": "subject"
+              "g": "object"
             },
             {
               "t": "だけが",
               "r": "",
-              "g": "subject"
+              "g": "object"
             },
             {
               "t": "残",
@@ -398,7 +399,7 @@
               "g": "predicate"
             },
             {
-              "t": "り",
+              "t": "った",
               "r": "",
               "g": "predicate"
             },
@@ -411,7 +412,7 @@
         ]
       },
       {
-        "source_text": "我们不结成夫妻,人烟就会灭绝呀!",
+        "source_text": "我们不结成夫妻，人烟就会灭绝呀！",
         "zh": [
           {
             "t": "我",
@@ -449,7 +450,7 @@
             "g": "complement"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -489,7 +490,7 @@
             "g": "function"
           },
           {
-            "t": "!",
+            "t": "！",
             "r": "",
             "g": "function"
           }
@@ -542,6 +543,11 @@
               "t": "は",
               "r": "",
               "g": "subject"
+            },
+            {
+              "t": "きっと",
+              "r": "",
+              "g": "adverbial"
             },
             {
               "t": "絶",

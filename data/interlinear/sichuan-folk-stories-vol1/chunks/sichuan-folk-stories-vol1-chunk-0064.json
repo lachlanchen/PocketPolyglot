@@ -98,12 +98,7 @@
     "id": "神话-开天辟地神话-007-无极老祖造人绵竹县",
     "title_zh": [
       {
-        "t": "007",
-        "r": "",
-        "g": "function"
-      },
-      {
-        "t": ". ",
+        "t": "007. ",
         "r": "",
         "g": "function"
       },
@@ -165,12 +160,7 @@
     ],
     "title_ja": [
       {
-        "t": "007",
-        "r": "",
-        "g": "function"
-      },
-      {
-        "t": ". ",
+        "t": "007. ",
         "r": "",
         "g": "function"
       },
@@ -252,27 +242,28 @@
     {
       "id": "sichuan-folk-stories-vol1-p00064",
       "source_text": "讲述者:叶朋云男 50岁农民小学采录者:王仲蛮男 30岁农民小学采录时间.地点:1987 年3月7日于师竹县遭道乡",
+      "corrected_text": "讲述者：叶朋云，男，50岁，农民，小学。采录者：王仲蛮，男，30岁，农民，小学。采录时间、地点：1987年3月7日于绵竹县遵道乡。",
       "units": [
         {
-          "source_text": "讲述者:叶朋云男 50岁农民小学",
+          "source_text": "讲述者：叶朋云，男，50岁，农民，小学。",
           "zh": [
             {
               "t": "讲",
               "r": "jiǎng",
-              "g": "attributive"
+              "g": "topic"
             },
             {
               "t": "述",
               "r": "shù",
-              "g": "attributive"
+              "g": "topic"
             },
             {
               "t": "者",
               "r": "zhě",
-              "g": "attributive"
+              "g": "topic"
             },
             {
-              "t": ":",
+              "t": "：",
               "r": "",
               "g": "function"
             },
@@ -292,12 +283,17 @@
               "g": "subject"
             },
             {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "男",
               "r": "nán",
               "g": "attributive"
             },
             {
-              "t": " ",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -312,24 +308,39 @@
               "g": "attributive"
             },
             {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "农",
               "r": "nóng",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "民",
               "r": "mín",
-              "g": "attributive"
+              "g": "object"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "小",
               "r": "xiǎo",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "学",
               "r": "xué",
-              "g": "attributive"
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
@@ -337,17 +348,17 @@
               {
                 "t": "語",
                 "r": "かた",
-                "g": "attributive"
+                "g": "topic"
               },
               {
                 "t": "り",
                 "r": "",
-                "g": "attributive"
+                "g": "topic"
               },
               {
                 "t": "手",
                 "r": "て",
-                "g": "attributive"
+                "g": "topic"
               },
               {
                 "t": "：",
@@ -404,12 +415,12 @@
               {
                 "t": "農",
                 "r": "のう",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "民",
                 "r": "みん",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "、",
@@ -419,46 +430,56 @@
               {
                 "t": "小",
                 "r": "しょう",
-                "g": "attributive"
+                "g": "complement"
               },
               {
                 "t": "学",
                 "r": "がく",
-                "g": "attributive"
+                "g": "complement"
               },
               {
                 "t": "校",
                 "r": "こう",
-                "g": "attributive"
+                "g": "complement"
               },
               {
-                "t": "卒",
-                "r": "そつ",
-                "g": "attributive"
+                "t": "程",
+                "r": "てい",
+                "g": "complement"
+              },
+              {
+                "t": "度",
+                "r": "ど",
+                "g": "complement"
+              },
+              {
+                "t": "。",
+                "r": "",
+                "g": "function"
               }
             ]
           ]
         },
         {
-          "source_text": "采录者:王仲蛮男 30岁农民小学",
+          "source_text": "采录者：王仲蛮，男，30岁，农民，小学。",
           "zh": [
             {
               "t": "采",
               "r": "cǎi",
-              "g": "attributive"
+              "g": "topic"
             },
             {
               "t": "录",
               "r": "lù",
-              "g": "attributive"
+              "g": "topic"
             },
             {
               "t": "者",
               "r": "zhě",
-              "g": "attributive"
+              "g": "topic"
             },
             {
-              "t": ":",
+              "t": "：",
               "r": "",
               "g": "function"
             },
@@ -478,12 +499,17 @@
               "g": "subject"
             },
             {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "男",
               "r": "nán",
               "g": "attributive"
             },
             {
-              "t": " ",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -498,24 +524,39 @@
               "g": "attributive"
             },
             {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "农",
               "r": "nóng",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "民",
               "r": "mín",
-              "g": "attributive"
+              "g": "object"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "小",
               "r": "xiǎo",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "学",
               "r": "xué",
-              "g": "attributive"
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
@@ -523,17 +564,17 @@
               {
                 "t": "採",
                 "r": "さい",
-                "g": "attributive"
+                "g": "topic"
               },
               {
                 "t": "録",
                 "r": "ろく",
-                "g": "attributive"
+                "g": "topic"
               },
               {
                 "t": "者",
                 "r": "しゃ",
-                "g": "attributive"
+                "g": "topic"
               },
               {
                 "t": "：",
@@ -590,12 +631,12 @@
               {
                 "t": "農",
                 "r": "のう",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "民",
                 "r": "みん",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "、",
@@ -605,66 +646,76 @@
               {
                 "t": "小",
                 "r": "しょう",
-                "g": "attributive"
+                "g": "complement"
               },
               {
                 "t": "学",
                 "r": "がく",
-                "g": "attributive"
+                "g": "complement"
               },
               {
                 "t": "校",
                 "r": "こう",
-                "g": "attributive"
+                "g": "complement"
               },
               {
-                "t": "卒",
-                "r": "そつ",
-                "g": "attributive"
+                "t": "程",
+                "r": "てい",
+                "g": "complement"
+              },
+              {
+                "t": "度",
+                "r": "ど",
+                "g": "complement"
+              },
+              {
+                "t": "。",
+                "r": "",
+                "g": "function"
               }
             ]
           ]
         },
         {
-          "source_text": "采录时间.地点:1987 年3月7日于师竹县遭道乡",
+          "source_text": "采录时间、地点：1987年3月7日于绵竹县遵道乡。",
           "zh": [
             {
               "t": "采",
               "r": "cǎi",
-              "g": "attributive"
+              "g": "topic"
             },
             {
               "t": "录",
               "r": "lù",
-              "g": "attributive"
+              "g": "topic"
             },
             {
               "t": "时",
               "r": "shí",
-              "g": "attributive"
+              "g": "topic"
             },
             {
               "t": "间",
               "r": "jiān",
-              "g": "attributive"
+              "g": "topic"
             },
             {
-              "t": ".",
+              "t": "、",
               "r": "",
               "g": "function"
             },
             {
               "t": "地",
               "r": "dì",
-              "g": "attributive"
+              "g": "topic"
             },
             {
               "t": "点",
               "r": "diǎn",
-              "g": "attributive"
+              "g": "topic"
             },
             {
-              "t": ":",
+              "t": "：",
               "r": "",
               "g": "function"
             },
@@ -672,11 +723,6 @@
               "t": "1987",
               "r": "",
               "g": "adverbial"
-            },
-            {
-              "t": " ",
-              "r": "",
-              "g": "function"
             },
             {
               "t": "年",
@@ -706,37 +752,42 @@
             {
               "t": "于",
               "r": "yú",
-              "g": "adverbial"
+              "g": "predicate"
             },
             {
-              "t": "师",
-              "r": "shī",
-              "g": "adverbial"
+              "t": "绵",
+              "r": "mián",
+              "g": "complement"
             },
             {
               "t": "竹",
               "r": "zhú",
-              "g": "adverbial"
+              "g": "complement"
             },
             {
               "t": "县",
               "r": "xiàn",
-              "g": "adverbial"
+              "g": "complement"
             },
             {
-              "t": "遭",
-              "r": "zāo",
-              "g": "adverbial"
+              "t": "遵",
+              "r": "zūn",
+              "g": "complement"
             },
             {
               "t": "道",
               "r": "dào",
-              "g": "adverbial"
+              "g": "complement"
             },
             {
               "t": "乡",
               "r": "xiāng",
-              "g": "adverbial"
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
@@ -744,22 +795,22 @@
               {
                 "t": "採",
                 "r": "さい",
-                "g": "attributive"
+                "g": "topic"
               },
               {
                 "t": "録",
                 "r": "ろく",
-                "g": "attributive"
+                "g": "topic"
               },
               {
                 "t": "時",
                 "r": "じ",
-                "g": "attributive"
+                "g": "topic"
               },
               {
                 "t": "間",
                 "r": "かん",
-                "g": "attributive"
+                "g": "topic"
               },
               {
                 "t": "・",
@@ -769,12 +820,12 @@
               {
                 "t": "場",
                 "r": "ば",
-                "g": "attributive"
+                "g": "topic"
               },
               {
                 "t": "所",
                 "r": "しょ",
-                "g": "attributive"
+                "g": "topic"
               },
               {
                 "t": "：",
@@ -814,39 +865,44 @@
             ],
             [
               {
-                "t": "師",
-                "r": "し",
-                "g": "adverbial"
+                "t": "綿",
+                "r": "めん",
+                "g": "complement"
               },
               {
                 "t": "竹",
                 "r": "ちく",
-                "g": "adverbial"
+                "g": "complement"
               },
               {
                 "t": "県",
                 "r": "けん",
-                "g": "adverbial"
+                "g": "complement"
               },
               {
-                "t": "遭",
-                "r": "そう",
-                "g": "adverbial"
+                "t": "遵",
+                "r": "じゅん",
+                "g": "complement"
               },
               {
                 "t": "道",
                 "r": "どう",
-                "g": "adverbial"
+                "g": "complement"
               },
               {
                 "t": "郷",
                 "r": "きょう",
-                "g": "adverbial"
+                "g": "complement"
               },
               {
                 "t": "にて",
                 "r": "",
-                "g": "adverbial"
+                "g": "predicate"
+              },
+              {
+                "t": "。",
+                "r": "",
+                "g": "function"
               }
             ]
           ]

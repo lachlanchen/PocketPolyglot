@@ -172,27 +172,28 @@
     {
       "id": "sichuan-folk-stories-vol1-p00048",
       "source_text": "齐述者:书香廉男 60岁医生中专采录者:吴良再男 21岁农民高中罗永成田 54岁干部中专采录时间地点,1987 年5月17日于广汉县文化馆。",
+      "corrected_text": "讲述者：书香廉，男，60岁，医生，中专。采录者：吴良再，男，21岁，农民，高中；罗永成，男，54岁，干部，中专。采录时间地点：1987年5月17日于广汉县文化馆。",
       "units": [
         {
-          "source_text": "齐述者:书香廉男 60岁医生中专",
+          "source_text": "讲述者：书香廉，男，60岁，医生，中专。",
           "zh": [
             {
-              "t": "齐",
-              "r": "qí",
-              "g": "attributive"
+              "t": "讲",
+              "r": "jiǎng",
+              "g": "topic"
             },
             {
               "t": "述",
               "r": "shù",
-              "g": "attributive"
+              "g": "topic"
             },
             {
               "t": "者",
               "r": "zhě",
-              "g": "attributive"
+              "g": "topic"
             },
             {
-              "t": ":",
+              "t": "：",
               "r": "",
               "g": "function"
             },
@@ -212,12 +213,17 @@
               "g": "subject"
             },
             {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "男",
               "r": "nán",
               "g": "attributive"
             },
             {
-              "t": " ",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -232,52 +238,57 @@
               "g": "attributive"
             },
             {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "医",
               "r": "yī",
-              "g": "attributive"
+              "g": "predicate"
             },
             {
               "t": "生",
               "r": "shēng",
-              "g": "attributive"
+              "g": "predicate"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "中",
               "r": "zhōng",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "专",
               "r": "zhuān",
-              "g": "attributive"
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
             [
               {
-                "t": "共",
-                "r": "きょう",
-                "g": "attributive"
+                "t": "語",
+                "r": "かた",
+                "g": "topic"
               },
               {
-                "t": "同",
-                "r": "どう",
-                "g": "attributive"
+                "t": "り",
+                "r": "",
+                "g": "topic"
               },
               {
-                "t": "口",
-                "r": "こう",
-                "g": "attributive"
-              },
-              {
-                "t": "述",
-                "r": "じゅつ",
-                "g": "attributive"
-              },
-              {
-                "t": "者",
-                "r": "しゃ",
-                "g": "attributive"
+                "t": "手",
+                "r": "て",
+                "g": "topic"
               },
               {
                 "t": "：",
@@ -303,9 +314,7 @@
                 "t": "、",
                 "r": "",
                 "g": "function"
-              }
-            ],
-            [
+              },
               {
                 "t": "男",
                 "r": "だん",
@@ -327,34 +336,41 @@
                 "g": "attributive"
               },
               {
-                "t": "、",
+                "t": "。",
                 "r": "",
                 "g": "function"
-              },
+              }
+            ],
+            [
               {
                 "t": "医",
                 "r": "い",
-                "g": "attributive"
+                "g": "predicate"
               },
               {
                 "t": "師",
                 "r": "し",
-                "g": "attributive"
+                "g": "predicate"
               },
               {
-                "t": "、",
+                "t": "で、",
                 "r": "",
-                "g": "function"
+                "g": "predicate"
               },
               {
                 "t": "中",
                 "r": "ちゅう",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "専",
                 "r": "せん",
-                "g": "attributive"
+                "g": "object"
+              },
+              {
+                "t": "卒",
+                "r": "そつ",
+                "g": "object"
               },
               {
                 "t": "。",
@@ -365,25 +381,25 @@
           ]
         },
         {
-          "source_text": "采录者:吴良再男 21岁农民高中罗永成田 54岁干部中专",
+          "source_text": "采录者：吴良再，男，21岁，农民，高中；罗永成，男，54岁，干部，中专。",
           "zh": [
             {
               "t": "采",
               "r": "cǎi",
-              "g": "attributive"
+              "g": "topic"
             },
             {
               "t": "录",
               "r": "lù",
-              "g": "attributive"
+              "g": "topic"
             },
             {
               "t": "者",
               "r": "zhě",
-              "g": "attributive"
+              "g": "topic"
             },
             {
-              "t": ":",
+              "t": "：",
               "r": "",
               "g": "function"
             },
@@ -403,12 +419,17 @@
               "g": "subject"
             },
             {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "男",
               "r": "nán",
               "g": "attributive"
             },
             {
-              "t": " ",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -423,24 +444,39 @@
               "g": "attributive"
             },
             {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "农",
               "r": "nóng",
-              "g": "attributive"
+              "g": "predicate"
             },
             {
               "t": "民",
               "r": "mín",
-              "g": "attributive"
+              "g": "predicate"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "高",
               "r": "gāo",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "中",
               "r": "zhōng",
-              "g": "attributive"
+              "g": "object"
+            },
+            {
+              "t": "；",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "罗",
@@ -458,12 +494,17 @@
               "g": "subject"
             },
             {
-              "t": "田",
-              "r": "tián",
-              "g": "subject"
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
-              "t": " ",
+              "t": "男",
+              "r": "nán",
+              "g": "attributive"
+            },
+            {
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -478,24 +519,39 @@
               "g": "attributive"
             },
             {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "干",
               "r": "gàn",
-              "g": "attributive"
+              "g": "predicate"
             },
             {
               "t": "部",
               "r": "bù",
-              "g": "attributive"
+              "g": "predicate"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "中",
               "r": "zhōng",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "专",
               "r": "zhuān",
-              "g": "attributive"
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
@@ -503,17 +559,17 @@
               {
                 "t": "採",
                 "r": "さい",
-                "g": "attributive"
+                "g": "topic"
               },
               {
                 "t": "録",
                 "r": "ろく",
-                "g": "attributive"
+                "g": "topic"
               },
               {
                 "t": "者",
                 "r": "しゃ",
-                "g": "attributive"
+                "g": "topic"
               },
               {
                 "t": "：",
@@ -568,12 +624,12 @@
               {
                 "t": "農",
                 "r": "のう",
-                "g": "attributive"
+                "g": "predicate"
               },
               {
                 "t": "民",
                 "r": "みん",
-                "g": "attributive"
+                "g": "predicate"
               },
               {
                 "t": "、",
@@ -583,12 +639,12 @@
               {
                 "t": "高",
                 "r": "こう",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "卒",
                 "r": "そつ",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "。",
@@ -610,11 +666,6 @@
               {
                 "t": "成",
                 "r": "せい",
-                "g": "subject"
-              },
-              {
-                "t": "田",
-                "r": "でん",
                 "g": "subject"
               },
               {
@@ -650,12 +701,12 @@
               {
                 "t": "幹",
                 "r": "かん",
-                "g": "attributive"
+                "g": "predicate"
               },
               {
                 "t": "部",
                 "r": "ぶ",
-                "g": "attributive"
+                "g": "predicate"
               },
               {
                 "t": "、",
@@ -665,12 +716,17 @@
               {
                 "t": "中",
                 "r": "ちゅう",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "専",
                 "r": "せん",
-                "g": "attributive"
+                "g": "object"
+              },
+              {
+                "t": "卒",
+                "r": "そつ",
+                "g": "object"
               },
               {
                 "t": "。",
@@ -681,40 +737,40 @@
           ]
         },
         {
-          "source_text": "采录时间地点,1987 年5月17日于广汉县文化馆。",
+          "source_text": "采录时间地点：1987年5月17日于广汉县文化馆。",
           "zh": [
             {
               "t": "采",
               "r": "cǎi",
-              "g": "attributive"
+              "g": "topic"
             },
             {
               "t": "录",
               "r": "lù",
-              "g": "attributive"
+              "g": "topic"
             },
             {
               "t": "时",
               "r": "shí",
-              "g": "attributive"
+              "g": "topic"
             },
             {
               "t": "间",
               "r": "jiān",
-              "g": "attributive"
+              "g": "topic"
             },
             {
               "t": "地",
               "r": "dì",
-              "g": "attributive"
+              "g": "topic"
             },
             {
               "t": "点",
               "r": "diǎn",
-              "g": "attributive"
+              "g": "topic"
             },
             {
-              "t": ",",
+              "t": "：",
               "r": "",
               "g": "function"
             },
@@ -722,11 +778,6 @@
               "t": "1987",
               "r": "",
               "g": "adverbial"
-            },
-            {
-              "t": " ",
-              "r": "",
-              "g": "function"
             },
             {
               "t": "年",
@@ -756,37 +807,37 @@
             {
               "t": "于",
               "r": "yú",
-              "g": "adverbial"
+              "g": "function"
             },
             {
               "t": "广",
               "r": "guǎng",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "汉",
               "r": "hàn",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "县",
               "r": "xiàn",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "文",
               "r": "wén",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "化",
               "r": "huà",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "馆",
               "r": "guǎn",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "。",
@@ -799,42 +850,42 @@
               {
                 "t": "採",
                 "r": "さい",
-                "g": "attributive"
+                "g": "topic"
               },
               {
                 "t": "録",
                 "r": "ろく",
-                "g": "attributive"
+                "g": "topic"
               },
               {
                 "t": "の",
                 "r": "",
-                "g": "attributive"
+                "g": "topic"
               },
               {
                 "t": "時",
                 "r": "じ",
-                "g": "attributive"
+                "g": "topic"
               },
               {
                 "t": "間",
                 "r": "かん",
-                "g": "attributive"
+                "g": "topic"
               },
               {
                 "t": "と",
                 "r": "",
-                "g": "attributive"
+                "g": "topic"
               },
               {
                 "t": "場",
                 "r": "ば",
-                "g": "attributive"
+                "g": "topic"
               },
               {
                 "t": "所",
                 "r": "しょ",
-                "g": "attributive"
+                "g": "topic"
               },
               {
                 "t": "：1987",
@@ -876,37 +927,37 @@
               {
                 "t": "広",
                 "r": "こう",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "漢",
                 "r": "かん",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "県",
                 "r": "けん",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "文",
                 "r": "ぶん",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "化",
                 "r": "か",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "館",
                 "r": "かん",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "にて",
                 "r": "",
-                "g": "adverbial"
+                "g": "function"
               },
               {
                 "t": "。",

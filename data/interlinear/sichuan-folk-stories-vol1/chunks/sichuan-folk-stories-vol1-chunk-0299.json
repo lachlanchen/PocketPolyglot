@@ -6,24 +6,24 @@
       {
         "t": "神",
         "r": "shén",
-        "g": "subject"
+        "g": "attributive"
       },
       {
         "t": "话",
         "r": "huà",
-        "g": "subject"
+        "g": "object"
       }
     ],
     "title_ja": [
       {
         "t": "神",
         "r": "しん",
-        "g": "subject"
+        "g": "attributive"
       },
       {
         "t": "話",
         "r": "わ",
-        "g": "subject"
+        "g": "object"
       }
     ]
   },
@@ -48,37 +48,37 @@
       {
         "t": "人",
         "r": "rén",
-        "g": "attributive"
+        "g": "subject"
       },
       {
         "t": "类",
         "r": "lèi",
-        "g": "attributive"
+        "g": "subject"
       },
       {
         "t": "再",
         "r": "zài",
-        "g": "attributive"
+        "g": "adverbial"
       },
       {
         "t": "繁",
         "r": "fán",
-        "g": "attributive"
+        "g": "predicate"
       },
       {
         "t": "衍",
         "r": "yǎn",
-        "g": "attributive"
+        "g": "predicate"
       },
       {
         "t": "神",
         "r": "shén",
-        "g": "subject"
+        "g": "attributive"
       },
       {
         "t": "话",
         "r": "huà",
-        "g": "subject"
+        "g": "object"
       }
     ],
     "title_ja": [
@@ -100,37 +100,37 @@
       {
         "t": "人",
         "r": "じん",
-        "g": "attributive"
+        "g": "subject"
       },
       {
         "t": "類",
         "r": "るい",
-        "g": "attributive"
+        "g": "subject"
       },
       {
         "t": "再",
         "r": "さい",
-        "g": "attributive"
+        "g": "adverbial"
       },
       {
         "t": "繁",
         "r": "はん",
-        "g": "attributive"
+        "g": "predicate"
       },
       {
         "t": "衍",
         "r": "えん",
-        "g": "attributive"
+        "g": "predicate"
       },
       {
         "t": "神",
         "r": "しん",
-        "g": "subject"
+        "g": "attributive"
       },
       {
         "t": "話",
         "r": "わ",
-        "g": "subject"
+        "g": "object"
       }
     ]
   },
@@ -272,6 +272,7 @@
     {
       "id": "sichuan-folk-stories-vol1-p00299",
       "source_text": "从前,太阳和月亮是两兄妹,太阳是妹妹,月亮是哥哥.有一天,上天的神仙发息了,天",
+      "corrected_text": "从前,太阳和月亮是两兄妹,太阳是妹妹,月亮是哥哥.有一天,上天的神仙发怒了,天",
       "units": [
         {
           "source_text": "从前,太阳和月亮是两兄妹,太阳是妹妹,月亮是哥哥.",
@@ -452,7 +453,7 @@
               {
                 "t": "で、",
                 "r": "",
-                "g": "function"
+                "g": "predicate"
               }
             ],
             [
@@ -505,7 +506,7 @@
           ]
         },
         {
-          "source_text": "有一天,上天的神仙发息了,天",
+          "source_text": "有一天,上天的神仙发怒了,天",
           "zh": [
             {
               "t": "有",
@@ -514,7 +515,7 @@
             },
             {
               "t": "一",
-              "r": "yī",
+              "r": "yì",
               "g": "adverbial"
             },
             {
@@ -558,8 +559,8 @@
               "g": "predicate"
             },
             {
-              "t": "息",
-              "r": "xī",
+              "t": "怒",
+              "r": "nù",
               "g": "predicate"
             },
             {
@@ -628,28 +629,18 @@
             ],
             [
               {
-                "t": "腹",
-                "r": "はら",
+                "t": "怒",
+                "r": "おこ",
                 "g": "predicate"
               },
               {
-                "t": "を",
+                "t": "って、",
                 "r": "",
                 "g": "predicate"
               },
               {
-                "t": "立",
-                "r": "た",
-                "g": "predicate"
-              },
-              {
-                "t": "て、",
-                "r": "",
-                "g": "predicate"
-              },
-              {
-                "t": "天",
-                "r": "てん",
+                "t": "空",
+                "r": "そら",
                 "g": "subject"
               },
               {

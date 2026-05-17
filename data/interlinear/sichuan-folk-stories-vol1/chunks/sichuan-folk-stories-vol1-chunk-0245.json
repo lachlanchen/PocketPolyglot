@@ -63,12 +63,12 @@
       {
         "t": "繁",
         "r": "fán",
-        "g": "attributive"
+        "g": "predicate"
       },
       {
         "t": "衍",
         "r": "yǎn",
-        "g": "attributive"
+        "g": "predicate"
       },
       {
         "t": "神",
@@ -115,12 +115,12 @@
       {
         "t": "繁",
         "r": "はん",
-        "g": "attributive"
+        "g": "predicate"
       },
       {
         "t": "衍",
         "r": "えん",
-        "g": "attributive"
+        "g": "predicate"
       },
       {
         "t": "神",
@@ -262,6 +262,7 @@
     {
       "id": "sichuan-folk-stories-vol1-p00245",
       "source_text": "讲述者:张世美男 62岁农民小学采好者:张吉檀男 22岁农民高中",
+      "corrected_text": "讲述者:张世美男 62岁农民小学采录者:张吉檀男 22岁农民高中",
       "units": [
         {
           "source_text": "讲述者:张世美男 62岁农民小学",
@@ -329,22 +330,22 @@
             {
               "t": "农",
               "r": "nóng",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "民",
               "r": "mín",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "小",
               "r": "xiǎo",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "学",
               "r": "xué",
-              "g": "attributive"
+              "g": "complement"
             }
           ],
           "ja": [
@@ -414,12 +415,12 @@
               {
                 "t": "農",
                 "r": "のう",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "民",
                 "r": "みん",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "、",
@@ -429,28 +430,18 @@
               {
                 "t": "小",
                 "r": "しょう",
-                "g": "attributive"
+                "g": "complement"
               },
               {
                 "t": "学",
                 "r": "がく",
-                "g": "attributive"
-              },
-              {
-                "t": "校",
-                "r": "こう",
-                "g": "attributive"
-              },
-              {
-                "t": "卒",
-                "r": "そつ",
-                "g": "attributive"
+                "g": "complement"
               }
             ]
           ]
         },
         {
-          "source_text": "采好者:张吉檀男 22岁农民高中",
+          "source_text": "采录者:张吉檀男 22岁农民高中",
           "zh": [
             {
               "t": "采",
@@ -458,8 +449,8 @@
               "g": "function"
             },
             {
-              "t": "好",
-              "r": "hǎo",
+              "t": "录",
+              "r": "lù",
               "g": "function"
             },
             {
@@ -515,22 +506,22 @@
             {
               "t": "农",
               "r": "nóng",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "民",
               "r": "mín",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "高",
               "r": "gāo",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "中",
               "r": "zhōng",
-              "g": "attributive"
+              "g": "complement"
             }
           ],
           "ja": [
@@ -600,12 +591,12 @@
               {
                 "t": "農",
                 "r": "のう",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "民",
                 "r": "みん",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "、",
@@ -615,17 +606,12 @@
               {
                 "t": "高",
                 "r": "こう",
-                "g": "attributive"
+                "g": "complement"
               },
               {
                 "t": "校",
                 "r": "こう",
-                "g": "attributive"
-              },
-              {
-                "t": "卒",
-                "r": "そつ",
-                "g": "attributive"
+                "g": "complement"
               }
             ]
           ]

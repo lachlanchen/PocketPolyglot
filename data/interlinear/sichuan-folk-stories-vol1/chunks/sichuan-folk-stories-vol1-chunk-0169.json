@@ -232,9 +232,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00169",
       "source_text": "公鸡被月亮从天上推到地上以后,它非常想念太阳哥醒.,它每天早展在太阳哥哥出门",
+      "corrected_text": "公鸡被月亮从天上推到地上以后，它非常想念太阳哥哥，它每天早晨在太阳哥哥出门",
       "units": [
         {
-          "source_text": "公鸡被月亮从天上推到地上以后,它非常想念太阳哥醒.,",
+          "source_text": "公鸡被月亮从天上推到地上以后，它非常想念太阳哥哥，",
           "zh": [
             {
               "t": "公",
@@ -307,7 +308,7 @@
               "g": "adverbial"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -352,17 +353,12 @@
               "g": "object"
             },
             {
-              "t": "醒",
-              "r": "xǐng",
+              "t": "哥",
+              "r": "ge",
               "g": "object"
             },
             {
-              "t": ".",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             }
@@ -435,12 +431,17 @@
                 "g": "predicate"
               },
               {
-                "t": "とされたあと、",
+                "t": "とされてから、",
                 "r": "",
                 "g": "predicate"
               }
             ],
             [
+              {
+                "t": "それは",
+                "r": "",
+                "g": "subject"
+              },
               {
                 "t": "太",
                 "r": "たい",
@@ -482,7 +483,7 @@
                 "g": "predicate"
               },
               {
-                "t": "った。",
+                "t": "った、",
                 "r": "",
                 "g": "predicate"
               }
@@ -490,7 +491,7 @@
           ]
         },
         {
-          "source_text": "它每天早展在太阳哥哥出门",
+          "source_text": "它每天早晨在太阳哥哥出门",
           "zh": [
             {
               "t": "它",
@@ -513,8 +514,8 @@
               "g": "adverbial"
             },
             {
-              "t": "展",
-              "r": "zhǎn",
+              "t": "晨",
+              "r": "chén",
               "g": "adverbial"
             },
             {
@@ -525,22 +526,22 @@
             {
               "t": "太",
               "r": "tài",
-              "g": "adverbial"
+              "g": "subject"
             },
             {
               "t": "阳",
               "r": "yáng",
-              "g": "adverbial"
+              "g": "subject"
             },
             {
               "t": "哥",
               "r": "gē",
-              "g": "adverbial"
+              "g": "subject"
             },
             {
               "t": "哥",
               "r": "ge",
-              "g": "adverbial"
+              "g": "subject"
             },
             {
               "t": "出",
@@ -571,11 +572,6 @@
                 "g": "adverbial"
               },
               {
-                "t": "の",
-                "r": "",
-                "g": "adverbial"
-              },
-              {
                 "t": "朝",
                 "r": "あさ",
                 "g": "adverbial"
@@ -595,32 +591,32 @@
               {
                 "t": "太",
                 "r": "たい",
-                "g": "adverbial"
+                "g": "subject"
               },
               {
                 "t": "陽",
                 "r": "よう",
-                "g": "adverbial"
+                "g": "subject"
               },
               {
                 "t": "兄",
                 "r": "にい",
-                "g": "adverbial"
+                "g": "subject"
               },
               {
                 "t": "さんが",
                 "r": "",
-                "g": "adverbial"
+                "g": "subject"
               },
               {
                 "t": "家",
                 "r": "いえ",
-                "g": "predicate"
+                "g": "object"
               },
               {
                 "t": "を",
                 "r": "",
-                "g": "predicate"
+                "g": "object"
               },
               {
                 "t": "出",
@@ -628,7 +624,7 @@
                 "g": "predicate"
               },
               {
-                "t": "るところにいた。",
+                "t": "るところにいた",
                 "r": "",
                 "g": "predicate"
               }

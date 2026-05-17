@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 124,
-    "grammar_token_total": 124,
-    "unit_count": 3
+    "token_total": 133,
+    "grammar_token_total": 133,
+    "unit_count": 4
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0060",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -235,9 +235,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00060",
     "source_text": "这时,从天上降下-个神仙,叫无极老祖。他手下还有两个徒弟。无极老祖叫他两个徒弟去做泥巴娃儿,大徒弟做女的,小徒弟做男的，",
+    "corrected_text": "这时，从天上降下一个神仙，叫无极老祖。他手下还有两个徒弟。无极老祖叫他两个徒弟去做泥巴娃儿，大徒弟做女的，小徒弟做男的，",
     "units": [
       {
-        "source_text": "这时,从天上降下-个神仙,叫无极老祖。",
+        "source_text": "这时，从天上降下一个神仙，叫无极老祖。",
         "zh": [
           {
             "t": "这",
@@ -250,7 +251,7 @@
             "g": "adverbial"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -280,27 +281,27 @@
             "g": "predicate"
           },
           {
-            "t": "-",
-            "r": "",
-            "g": "object"
+            "t": "一",
+            "r": "yī",
+            "g": "subject"
           },
           {
             "t": "个",
             "r": "gè",
-            "g": "object"
+            "g": "subject"
           },
           {
             "t": "神",
             "r": "shén",
-            "g": "object"
+            "g": "subject"
           },
           {
             "t": "仙",
             "r": "xiān",
-            "g": "object"
+            "g": "subject"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -355,32 +356,32 @@
             {
               "t": "一",
               "r": "ひと",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "人",
               "r": "り",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "の",
               "r": "",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "仙",
               "r": "せん",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "人",
               "r": "にん",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "が",
               "r": "",
-              "g": "object"
+              "g": "subject"
             }
           ],
           [
@@ -420,17 +421,12 @@
               "g": "object"
             },
             {
-              "t": "名",
-              "r": "な",
+              "t": "呼",
+              "r": "よ",
               "g": "predicate"
             },
             {
-              "t": "乗",
-              "r": "の",
-              "g": "predicate"
-            },
-            {
-              "t": "った。",
+              "t": "ばれた。",
               "r": "",
               "g": "predicate"
             }
@@ -443,7 +439,7 @@
           {
             "t": "他",
             "r": "tā",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "手",
@@ -496,21 +492,21 @@
             {
               "t": "彼",
               "r": "かれ",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "の",
               "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "手",
+              "r": "て",
               "g": "subject"
             },
             {
-              "t": "配",
-              "r": "はい",
-              "g": "subject"
-            },
-            {
-              "t": "下",
-              "r": "か",
+              "t": "元",
+              "r": "もと",
               "g": "subject"
             },
             {
@@ -559,7 +555,7 @@
         ]
       },
       {
-        "source_text": "无极老祖叫他两个徒弟去做泥巴娃儿,大徒弟做女的,小徒弟做男的，",
+        "source_text": "无极老祖叫他两个徒弟去做泥巴娃儿，",
         "zh": [
           {
             "t": "无",
@@ -589,7 +585,7 @@
           {
             "t": "他",
             "r": "tā",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "两",
@@ -638,77 +634,7 @@
           },
           {
             "t": "儿",
-            "r": "r",
-            "g": "object"
-          },
-          {
-            "t": ",",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "大",
-            "r": "dà",
-            "g": "subject"
-          },
-          {
-            "t": "徒",
-            "r": "tú",
-            "g": "subject"
-          },
-          {
-            "t": "弟",
-            "r": "dì",
-            "g": "subject"
-          },
-          {
-            "t": "做",
-            "r": "zuò",
-            "g": "predicate"
-          },
-          {
-            "t": "女",
-            "r": "nǚ",
-            "g": "object"
-          },
-          {
-            "t": "的",
-            "r": "de",
-            "g": "object"
-          },
-          {
-            "t": ",",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "小",
-            "r": "xiǎo",
-            "g": "subject"
-          },
-          {
-            "t": "徒",
-            "r": "tú",
-            "g": "subject"
-          },
-          {
-            "t": "弟",
-            "r": "dì",
-            "g": "subject"
-          },
-          {
-            "t": "做",
-            "r": "zuò",
-            "g": "predicate"
-          },
-          {
-            "t": "男",
-            "r": "nán",
-            "g": "object"
-          },
-          {
-            "t": "的",
-            "r": "de",
+            "r": "ér",
             "g": "object"
           },
           {
@@ -745,6 +671,21 @@
               "g": "subject"
             },
             {
+              "t": "自",
+              "r": "じ",
+              "g": "attributive"
+            },
+            {
+              "t": "分",
+              "r": "ぶん",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
               "t": "二",
               "r": "ふた",
               "g": "object"
@@ -770,10 +711,12 @@
               "g": "object"
             },
             {
-              "t": "に",
+              "t": "に、",
               "r": "",
               "g": "object"
-            },
+            }
+          ],
+          [
             {
               "t": "泥",
               "r": "どろ",
@@ -805,16 +748,103 @@
               "g": "predicate"
             },
             {
-              "t": "らせ、",
+              "t": "りに",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "行",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "かせ、",
               "r": "",
               "g": "predicate"
             }
-          ],
+          ]
+        ]
+      },
+      {
+        "source_text": "大徒弟做女的，小徒弟做男的，",
+        "zh": [
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "attributive"
+          },
+          {
+            "t": "徒",
+            "r": "tú",
+            "g": "subject"
+          },
+          {
+            "t": "弟",
+            "r": "dì",
+            "g": "subject"
+          },
+          {
+            "t": "做",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "女",
+            "r": "nǚ",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "徒",
+            "r": "tú",
+            "g": "subject"
+          },
+          {
+            "t": "弟",
+            "r": "dì",
+            "g": "subject"
+          },
+          {
+            "t": "做",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "男",
+            "r": "nán",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
           [
             {
               "t": "兄",
               "r": "あに",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "弟",
@@ -837,19 +867,36 @@
               "g": "object"
             },
             {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "object"
+            },
+            {
               "t": "を",
               "r": "",
               "g": "object"
             },
             {
-              "t": "、",
-              "r": "",
-              "g": "function"
+              "t": "作",
+              "r": "つく",
+              "g": "predicate"
             },
+            {
+              "t": "り、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
             {
               "t": "弟",
               "r": "おとうと",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "弟",
@@ -872,6 +919,16 @@
               "g": "object"
             },
             {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "object"
+            },
+            {
               "t": "を",
               "r": "",
               "g": "object"
@@ -882,7 +939,7 @@
               "g": "predicate"
             },
             {
-              "t": "った。",
+              "t": "った、",
               "r": "",
               "g": "predicate"
             }

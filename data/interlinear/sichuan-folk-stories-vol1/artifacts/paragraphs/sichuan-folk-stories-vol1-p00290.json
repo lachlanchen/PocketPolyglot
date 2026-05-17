@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 150,
-    "grammar_token_total": 150,
+    "token_total": 152,
+    "grammar_token_total": 152,
     "unit_count": 5
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0290",
@@ -248,9 +248,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00290",
     "source_text": "妹妹同意了.。哥哥拿上面那块先和下山去,妹拿后面那块跟倒丢下山去.两记廊子一滚一跳,滚下去就碰起火了。两兄妹好欢喜呵!哪晓得,两房磨子磁了一下,又液开了。",
+    "corrected_text": "妹妹同意了。哥哥拿上面那块先滚下山去，妹拿后面那块跟倒丢下山去。两记磨子一滚一跳，滚下去就碰起火了。两兄妹好欢喜呵！哪晓得，两房磨子碰了一下，又滚开了。",
     "units": [
       {
-        "source_text": "妹妹同意了.。",
+        "source_text": "妹妹同意了。",
         "zh": [
           {
             "t": "妹",
@@ -276,11 +277,6 @@
             "t": "了",
             "r": "le",
             "g": "predicate"
-          },
-          {
-            "t": ".",
-            "r": "",
-            "g": "function"
           },
           {
             "t": "。",
@@ -320,13 +316,13 @@
             {
               "t": "した。",
               "r": "",
-              "g": "function"
+              "g": "predicate"
             }
           ]
         ]
       },
       {
-        "source_text": "哥哥拿上面那块先和下山去,妹拿后面那块跟倒丢下山去.",
+        "source_text": "哥哥拿上面那块先滚下山去，妹拿后面那块跟倒丢下山去。",
         "zh": [
           {
             "t": "哥",
@@ -369,8 +365,8 @@
             "g": "adverbial"
           },
           {
-            "t": "和",
-            "r": "huò",
+            "t": "滚",
+            "r": "gǔn",
             "g": "predicate"
           },
           {
@@ -389,7 +385,7 @@
             "g": "complement"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -454,7 +450,7 @@
             "g": "complement"
           },
           {
-            "t": ".",
+            "t": "。",
             "r": "",
             "g": "function"
           }
@@ -569,7 +565,7 @@
               "g": "adverbial"
             },
             {
-              "t": "けて",
+              "t": "いて",
               "r": "",
               "g": "adverbial"
             },
@@ -607,7 +603,7 @@
         ]
       },
       {
-        "source_text": "两记廊子一滚一跳,滚下去就碰起火了。",
+        "source_text": "两记磨子一滚一跳，滚下去就碰起火了。",
         "zh": [
           {
             "t": "两",
@@ -620,8 +616,8 @@
             "g": "attributive"
           },
           {
-            "t": "廊",
-            "r": "láng",
+            "t": "磨",
+            "r": "mò",
             "g": "subject"
           },
           {
@@ -650,7 +646,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -705,21 +701,21 @@
             {
               "t": "二",
               "r": "ふた",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "つの",
               "r": "",
-              "g": "subject"
-            },
-            {
-              "t": "丸",
-              "r": "まる",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "石",
               "r": "いし",
+              "g": "subject"
+            },
+            {
+              "t": "臼",
+              "r": "うす",
               "g": "subject"
             },
             {
@@ -728,7 +724,12 @@
               "g": "subject"
             },
             {
-              "t": "ごろごろ",
+              "t": "転",
+              "r": "ころ",
+              "g": "predicate"
+            },
+            {
+              "t": "がり",
               "r": "",
               "g": "predicate"
             },
@@ -793,7 +794,7 @@
         ]
       },
       {
-        "source_text": "两兄妹好欢喜呵!",
+        "source_text": "两兄妹好欢喜呵！",
         "zh": [
           {
             "t": "两",
@@ -831,7 +832,7 @@
             "g": "function"
           },
           {
-            "t": "!",
+            "t": "！",
             "r": "",
             "g": "function"
           }
@@ -851,7 +852,7 @@
             {
               "t": "二",
               "r": "ふた",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "人",
@@ -884,7 +885,7 @@
         ]
       },
       {
-        "source_text": "哪晓得,两房磨子磁了一下,又液开了。",
+        "source_text": "哪晓得，两房磨子碰了一下，又滚开了。",
         "zh": [
           {
             "t": "哪",
@@ -902,7 +903,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -927,8 +928,8 @@
             "g": "subject"
           },
           {
-            "t": "磁",
-            "r": "cí",
+            "t": "碰",
+            "r": "pèng",
             "g": "predicate"
           },
           {
@@ -947,7 +948,7 @@
             "g": "adverbial"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -957,8 +958,8 @@
             "g": "adverbial"
           },
           {
-            "t": "液",
-            "r": "yè",
+            "t": "滚",
+            "r": "gǔn",
             "g": "predicate"
           },
           {
@@ -1032,7 +1033,7 @@
               "g": "adverbial"
             },
             {
-              "t": "くっついたが、",
+              "t": "ぶつかっただけで、",
               "r": "",
               "g": "predicate"
             },
@@ -1042,14 +1043,24 @@
               "g": "adverbial"
             },
             {
-              "t": "離",
-              "r": "はな",
+              "t": "転",
+              "r": "ころ",
               "g": "predicate"
             },
             {
-              "t": "れてしまった。",
+              "t": "がり",
               "r": "",
-              "g": "function"
+              "g": "predicate"
+            },
+            {
+              "t": "離",
+              "r": "はな",
+              "g": "complement"
+            },
+            {
+              "t": "れた。",
+              "r": "",
+              "g": "complement"
             }
           ]
         ]

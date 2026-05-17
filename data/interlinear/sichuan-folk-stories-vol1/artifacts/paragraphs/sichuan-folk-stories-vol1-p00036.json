@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 89,
-    "grammar_token_total": 89,
+    "token_total": 94,
+    "grammar_token_total": 94,
     "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0036",
@@ -193,9 +193,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00036",
     "source_text": "俩趴下身子,钻进洞里使劲用背去项洞壁,最后站了起来。接着他们又各人项一方,使尽全",
+    "corrected_text": "俩趴下身子，钻进洞里使劲用背去顶洞壁，最后站了起来。接着他们又各人顶一方，使尽全",
     "units": [
       {
-        "source_text": "俩趴下身子,钻进洞里使劲用背去项洞壁,最后站了起来。",
+        "source_text": "俩趴下身子，钻进洞里使劲用背去顶洞壁，最后站了起来。",
         "zh": [
           {
             "t": "俩",
@@ -223,7 +224,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -273,8 +274,8 @@
             "g": "adverbial"
           },
           {
-            "t": "项",
-            "r": "xiàng",
+            "t": "顶",
+            "r": "dǐng",
             "g": "predicate"
           },
           {
@@ -288,7 +289,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -433,6 +434,11 @@
               "g": "object"
             },
             {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
               "t": "壁",
               "r": "かべ",
               "g": "object"
@@ -448,9 +454,19 @@
               "g": "predicate"
             },
             {
-              "t": "し、",
+              "t": "し",
               "r": "",
-              "g": "function"
+              "g": "predicate"
+            },
+            {
+              "t": "上",
+              "r": "あ",
+              "g": "complement"
+            },
+            {
+              "t": "げ、",
+              "r": "",
+              "g": "complement"
             },
             {
               "t": "最",
@@ -491,7 +507,7 @@
         ]
       },
       {
-        "source_text": "接着他们又各人项一方,使尽全",
+        "source_text": "接着他们又各人顶一方，使尽全",
         "zh": [
           {
             "t": "接",
@@ -529,8 +545,8 @@
             "g": "adverbial"
           },
           {
-            "t": "项",
-            "r": "xiàng",
+            "t": "顶",
+            "r": "dǐng",
             "g": "predicate"
           },
           {
@@ -544,7 +560,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -629,9 +645,19 @@
               "g": "predicate"
             },
             {
-              "t": "し、",
+              "t": "し",
               "r": "",
-              "g": "function"
+              "g": "predicate"
+            },
+            {
+              "t": "上",
+              "r": "あ",
+              "g": "complement"
+            },
+            {
+              "t": "げ、",
+              "r": "",
+              "g": "complement"
             },
             {
               "t": "全",
@@ -654,7 +680,7 @@
               "g": "adverbial"
             },
             {
-              "t": "くして",
+              "t": "くし",
               "r": "",
               "g": "adverbial"
             }

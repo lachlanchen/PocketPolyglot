@@ -48,12 +48,12 @@
       {
         "t": "人",
         "r": "rén",
-        "g": "attributive"
+        "g": "subject"
       },
       {
         "t": "类",
         "r": "lèi",
-        "g": "attributive"
+        "g": "subject"
       },
       {
         "t": "再",
@@ -63,12 +63,12 @@
       {
         "t": "繁",
         "r": "fán",
-        "g": "attributive"
+        "g": "predicate"
       },
       {
         "t": "衍",
         "r": "yǎn",
-        "g": "attributive"
+        "g": "predicate"
       },
       {
         "t": "神",
@@ -100,27 +100,27 @@
       {
         "t": "人",
         "r": "じん",
-        "g": "attributive"
+        "g": "subject"
       },
       {
         "t": "類",
         "r": "るい",
-        "g": "attributive"
+        "g": "subject"
       },
       {
         "t": "再",
         "r": "さい",
-        "g": "attributive"
+        "g": "adverbial"
       },
       {
         "t": "繁",
         "r": "はん",
-        "g": "attributive"
+        "g": "predicate"
       },
       {
         "t": "衍",
         "r": "えん",
-        "g": "attributive"
+        "g": "predicate"
       },
       {
         "t": "神",
@@ -206,18 +206,18 @@
       },
       {
         "t": "兄",
-        "r": "きょう",
+        "r": "けい",
         "g": "subject"
       },
       {
         "t": "妹",
-        "r": "だい",
+        "r": "まい",
         "g": "subject"
       },
       {
-        "t": "、",
+        "t": "が",
         "r": "",
-        "g": "function"
+        "g": "subject"
       },
       {
         "t": "人",
@@ -247,9 +247,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00246",
       "source_text": "张式德男 48岁文化馆干部南中采录时间、地点:1986 年于西充县金山乡",
+      "corrected_text": "张式德，男，48岁，文化馆干部。南中采录，时间、地点：1986年于西充县金山乡",
       "units": [
         {
-          "source_text": "张式德男 48岁文化馆干部",
+          "source_text": "张式德，男，48岁，文化馆干部。",
           "zh": [
             {
               "t": "张",
@@ -267,12 +268,17 @@
               "g": "subject"
             },
             {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "男",
               "r": "nán",
               "g": "predicate"
             },
             {
-              "t": " ",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -285,6 +291,11 @@
               "t": "岁",
               "r": "suì",
               "g": "attributive"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "文",
@@ -304,12 +315,17 @@
             {
               "t": "干",
               "r": "gàn",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "部",
               "r": "bù",
-              "g": "predicate"
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
@@ -379,18 +395,23 @@
               {
                 "t": "幹",
                 "r": "かん",
-                "g": "predicate"
+                "g": "object"
               },
               {
                 "t": "部",
                 "r": "ぶ",
-                "g": "predicate"
+                "g": "object"
+              },
+              {
+                "t": "。",
+                "r": "",
+                "g": "function"
               }
             ]
           ]
         },
         {
-          "source_text": "南中采录时间、地点:1986 年于西充县金山乡",
+          "source_text": "南中采录，时间、地点：1986年于西充县金山乡",
           "zh": [
             {
               "t": "南",
@@ -411,6 +432,11 @@
               "t": "录",
               "r": "lù",
               "g": "predicate"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "时",
@@ -438,7 +464,7 @@
               "g": "object"
             },
             {
-              "t": ":",
+              "t": "：",
               "r": "",
               "g": "function"
             },
@@ -446,11 +472,6 @@
               "t": "1986",
               "r": "",
               "g": "adverbial"
-            },
-            {
-              "t": " ",
-              "r": "",
-              "g": "function"
             },
             {
               "t": "年",
@@ -506,7 +527,7 @@
                 "g": "subject"
               },
               {
-                "t": "による",
+                "t": "が",
                 "r": "",
                 "g": "subject"
               },
@@ -519,6 +540,11 @@
                 "t": "録",
                 "r": "ろく",
                 "g": "predicate"
+              },
+              {
+                "t": "、",
+                "r": "",
+                "g": "function"
               },
               {
                 "t": "時",
