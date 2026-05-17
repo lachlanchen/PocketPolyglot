@@ -5,9 +5,11 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
 import textwrap
+import time
 from pathlib import Path
 from typing import Any
 
@@ -32,6 +34,30 @@ def log_mentions_usage_limit(path: Path) -> bool:
         return mentions_usage_limit(path.read_text(encoding="utf-8", errors="replace")[-8000:])
     except OSError:
         return False
+
+
+def env_int(name: str, default: int) -> int:
+    raw = os.environ.get(name, "").strip()
+    if not raw:
+        return default
+    try:
+        return max(0, int(raw))
+    except ValueError:
+        return default
+
+
+def usage_limit_wait_enabled() -> bool:
+    raw = os.environ.get("CODEX_USAGE_LIMIT_WAIT", "1").strip().lower()
+    return raw not in {"0", "false", "no", "off"}
+
+
+def log_text_since(path: Path, start_size: int) -> str:
+    try:
+        with path.open("rb") as handle:
+            handle.seek(start_size)
+            return handle.read().decode("utf-8", errors="replace")
+    except OSError:
+        return ""
 
 
 def load_chunks(path: Path) -> list[dict[str, Any]]:
@@ -203,23 +229,55 @@ def run_codex(
         cmd = ["codex", "exec", "--cd", str(cwd), *common, "-"]
     else:
         cmd = ["codex", "exec", "resume", "--last", *common, "-"]
-    with log_path.open("a", encoding="utf-8") as log:
-        log.write("\n\n===== CODEX COMMAND =====\n")
-        log.write(" ".join(cmd) + "\n")
-        try:
-            proc = subprocess.run(
-                cmd,
-                input=prompt,
-                text=True,
-                cwd=cwd,
-                stdout=log,
-                stderr=subprocess.STDOUT,
-                timeout=timeout_seconds if timeout_seconds > 0 else None,
+
+    wait_seconds = env_int("CODEX_USAGE_LIMIT_WAIT_SECONDS", 3600)
+    max_wait_seconds = env_int("CODEX_USAGE_LIMIT_MAX_WAIT_SECONDS", 0)
+    waited_seconds = 0
+    attempt = 0
+    while True:
+        attempt += 1
+        output_message.unlink(missing_ok=True)
+        start_size = log_path.stat().st_size if log_path.exists() else 0
+        with log_path.open("a", encoding="utf-8") as log:
+            log.write(f"\n\n===== CODEX COMMAND attempt {attempt} =====\n")
+            log.write(" ".join(cmd) + "\n")
+            try:
+                proc = subprocess.run(
+                    cmd,
+                    input=prompt,
+                    text=True,
+                    cwd=cwd,
+                    stdout=log,
+                    stderr=subprocess.STDOUT,
+                    timeout=timeout_seconds if timeout_seconds > 0 else None,
+                )
+            except subprocess.TimeoutExpired as exc:
+                log.write(f"\n===== CODEX TIMEOUT after {timeout_seconds}s =====\n")
+                raise RuntimeError(f"codex timed out after {timeout_seconds}s; see {log_path}") from exc
+
+        new_log = log_text_since(log_path, start_size)
+        if proc.returncode == 0 and not mentions_usage_limit(new_log):
+            return
+        if mentions_usage_limit(new_log):
+            if not usage_limit_wait_enabled() or wait_seconds <= 0:
+                raise RuntimeError(f"codex usage limit detected; wait disabled; see {log_path}")
+            if max_wait_seconds > 0 and waited_seconds >= max_wait_seconds:
+                raise RuntimeError(f"codex usage limit persisted for {waited_seconds}s; see {log_path}")
+            sleep_for = wait_seconds
+            if max_wait_seconds > 0:
+                sleep_for = min(sleep_for, max_wait_seconds - waited_seconds)
+            if sleep_for <= 0:
+                raise RuntimeError(f"codex usage limit persisted for {waited_seconds}s; see {log_path}")
+            waited_seconds += sleep_for
+            message = (
+                f"codex usage limit detected; sleeping {sleep_for}s before retry "
+                f"(total_wait={waited_seconds}s)"
             )
-        except subprocess.TimeoutExpired as exc:
-            log.write(f"\n===== CODEX TIMEOUT after {timeout_seconds}s =====\n")
-            raise RuntimeError(f"codex timed out after {timeout_seconds}s; see {log_path}") from exc
-    if proc.returncode != 0:
+            print(message, flush=True)
+            with log_path.open("a", encoding="utf-8") as log:
+                log.write(f"\n===== {message} =====\n")
+            time.sleep(sleep_for)
+            continue
         raise RuntimeError(f"codex exited with {proc.returncode}; see {log_path}")
 
 
