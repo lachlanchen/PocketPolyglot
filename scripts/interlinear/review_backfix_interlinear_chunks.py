@@ -126,9 +126,9 @@ def ocr_noise_issues(text: str, where: str) -> list[str]:
     if ASCII_GARBAGE_RE.search(compact):
         issues.append(f"{where}: corrected_text still contains likely OCR ASCII garbage")
     cjk_count = sum(1 for char in compact if HAN_RE.fullmatch(char))
-    ascii_count = sum(1 for char in compact if char.isascii() and char.isalnum())
-    if cjk_count >= 20 and ascii_count >= max(8, int(cjk_count * 0.08)):
-        issues.append(f"{where}: corrected_text has too much ASCII noise for a Chinese source paragraph")
+    ascii_letter_count = sum(1 for char in compact if char.isascii() and char.isalpha())
+    if cjk_count >= 20 and ascii_letter_count >= max(8, int(cjk_count * 0.08)):
+        issues.append(f"{where}: corrected_text has too much ASCII letter noise for a Chinese source paragraph")
     return issues
 
 
