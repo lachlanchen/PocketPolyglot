@@ -1,0 +1,188 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p00574",
+  "source_text": "柏木谈完了。",
+  "source_sha256": "baf913ee5d68d703adfc018d142bf2e1994e4fff41ee0900059b190141301430",
+  "source_normalized_sha256": "baf913ee5d68d703adfc018d142bf2e1994e4fff41ee0900059b190141301430",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 14,
+    "grammar_token_total": 14,
+    "unit_count": 1
+  },
+  "source_chunk_id": "kinkakuji-chunk-0574",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第四章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第四章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p00574",
+    "source_text": "柏木谈完了。",
+    "units": [
+      {
+        "source_text": "柏木谈完了。",
+        "zh": [
+          {
+            "t": "柏",
+            "r": "bǎi",
+            "g": "subject"
+          },
+          {
+            "t": "木",
+            "r": "mù",
+            "g": "subject"
+          },
+          {
+            "t": "谈",
+            "r": "tán",
+            "g": "predicate"
+          },
+          {
+            "t": "完",
+            "r": "wán",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "柏",
+              "r": "かし",
+              "g": "subject"
+            },
+            {
+              "t": "木",
+              "r": "わぎ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "話",
+              "r": "はな",
+              "g": "predicate"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "終",
+              "r": "お",
+              "g": "complement"
+            },
+            {
+              "t": "えた",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
