@@ -1,0 +1,334 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p00372",
+  "source_text": "\"众生得道，它即得救。不得道，即把它斩掉。\"",
+  "source_sha256": "6e87b263e5ee838c729256689f009bdd635edc87db71967b1940a72b71156545",
+  "source_normalized_sha256": "6e87b263e5ee838c729256689f009bdd635edc87db71967b1940a72b71156545",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 41,
+    "grammar_token_total": 41,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kinkakuji-chunk-0372",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第三章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第三章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p00372",
+    "source_text": "\"众生得道，它即得救。不得道，即把它斩掉。\"",
+    "units": [
+      {
+        "source_text": "\"众生得道，它即得救。",
+        "zh": [
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "众",
+            "r": "zhòng",
+            "g": "subject"
+          },
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "subject"
+          },
+          {
+            "t": "得",
+            "r": "dé",
+            "g": "predicate"
+          },
+          {
+            "t": "道",
+            "r": "dào",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "它",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "即",
+            "r": "jí",
+            "g": "adverbial"
+          },
+          {
+            "t": "得",
+            "r": "dé",
+            "g": "predicate"
+          },
+          {
+            "t": "救",
+            "r": "jiù",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "衆",
+              "r": "しゅう",
+              "g": "subject"
+            },
+            {
+              "t": "生",
+              "r": "じょう",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "道",
+              "r": "みち",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "得",
+              "r": "え",
+              "g": "predicate"
+            },
+            {
+              "t": "れば、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "それも",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "救",
+              "r": "すく",
+              "g": "predicate"
+            },
+            {
+              "t": "われる。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "不得道，即把它斩掉。\"",
+        "zh": [
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "得",
+            "r": "dé",
+            "g": "predicate"
+          },
+          {
+            "t": "道",
+            "r": "dào",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "即",
+            "r": "jí",
+            "g": "adverbial"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "它",
+            "r": "tā",
+            "g": "object"
+          },
+          {
+            "t": "斩",
+            "r": "zhǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "掉",
+            "r": "diào",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "道",
+              "r": "みち",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "得",
+              "r": "え",
+              "g": "predicate"
+            },
+            {
+              "t": "なければ、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "それを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "斬",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "捨",
+              "r": "す",
+              "g": "predicate"
+            },
+            {
+              "t": "てる。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
