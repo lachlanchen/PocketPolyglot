@@ -1,0 +1,647 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sishu-jizhu",
+  "paragraph_id": "sishu-jizhu-p00018",
+  "source_text": "右傳之三章。釋止於至善。 〈 此章內自引 淇澳《詩》 以下，舊本誤在誠意章下。 〉",
+  "source_sha256": "c425e675d2d55b8909039c5888587c29076101718a0aedac952c8e1ea055af31",
+  "source_normalized_sha256": "88834d3bf98424b72b91ebb0985a6f720e30f75894faea58499524153ecbe8b6",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 80,
+    "grammar_token_total": 80,
+    "unit_count": 3
+  },
+  "source_chunk_id": "sishu-jizhu-chunk-0018",
+  "source_manifest_sha256": "902fd7de6fd94b7b6470c3b24ad1e74c7d4ed1530715997cf2895f57004e6622",
+  "section": {
+    "id": "四書章句集註",
+    "title_zh": [
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "topic"
+      },
+      {
+        "t": "書",
+        "r": "shū",
+        "g": "topic"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "topic"
+      },
+      {
+        "t": "句",
+        "r": "jù",
+        "g": "topic"
+      },
+      {
+        "t": "集",
+        "r": "jí",
+        "g": "topic"
+      },
+      {
+        "t": "註",
+        "r": "zhù",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "四",
+        "r": "し",
+        "g": "topic"
+      },
+      {
+        "t": "書",
+        "r": "しょ",
+        "g": "topic"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "topic"
+      },
+      {
+        "t": "句",
+        "r": "く",
+        "g": "topic"
+      },
+      {
+        "t": "集",
+        "r": "しっ",
+        "g": "topic"
+      },
+      {
+        "t": "注",
+        "r": "ちゅう",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "大學章句",
+    "title_zh": [
+      {
+        "t": "大",
+        "r": "dà",
+        "g": "topic"
+      },
+      {
+        "t": "學",
+        "r": "xué",
+        "g": "topic"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "topic"
+      },
+      {
+        "t": "句",
+        "r": "jù",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "大",
+        "r": "だい",
+        "g": "topic"
+      },
+      {
+        "t": "学",
+        "r": "がく",
+        "g": "topic"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "topic"
+      },
+      {
+        "t": "句",
+        "r": "く",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "四書章句集註-大學章句-intro",
+    "title_zh": [
+      {
+        "t": "大",
+        "r": "dà",
+        "g": "topic"
+      },
+      {
+        "t": "學",
+        "r": "xué",
+        "g": "topic"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "topic"
+      },
+      {
+        "t": "句",
+        "r": "jù",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "大",
+        "r": "だい",
+        "g": "topic"
+      },
+      {
+        "t": "学",
+        "r": "がく",
+        "g": "topic"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "topic"
+      },
+      {
+        "t": "句",
+        "r": "く",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sishu-jizhu-p00018",
+    "source_text": "右傳之三章。釋止於至善。 〈 此章內自引 淇澳《詩》 以下，舊本誤在誠意章下。 〉",
+    "units": [
+      {
+        "source_text": "右傳之三章。",
+        "zh": [
+          {
+            "t": "右",
+            "r": "yòu",
+            "g": "subject"
+          },
+          {
+            "t": "傳",
+            "r": "zhuàn",
+            "g": "attributive"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "function"
+          },
+          {
+            "t": "三",
+            "r": "sān",
+            "g": "attributive"
+          },
+          {
+            "t": "章",
+            "r": "zhāng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "右",
+              "r": "みぎ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "伝",
+              "r": "でん",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "第",
+              "r": "だい",
+              "g": "attributive"
+            },
+            {
+              "t": "三",
+              "r": "さん",
+              "g": "attributive"
+            },
+            {
+              "t": "章",
+              "r": "しょう",
+              "g": "object"
+            },
+            {
+              "t": "である。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "釋止於至善。",
+        "zh": [
+          {
+            "t": "釋",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "止",
+            "r": "zhǐ",
+            "g": "object"
+          },
+          {
+            "t": "於",
+            "r": "yú",
+            "g": "object"
+          },
+          {
+            "t": "至",
+            "r": "zhì",
+            "g": "object"
+          },
+          {
+            "t": "善",
+            "r": "shàn",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "至",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "善",
+              "r": "ぜん",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "止",
+              "r": "とど",
+              "g": "object"
+            },
+            {
+              "t": "まる」を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "解",
+              "r": "かい",
+              "g": "predicate"
+            },
+            {
+              "t": "釈",
+              "r": "しゃく",
+              "g": "predicate"
+            },
+            {
+              "t": "する。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": " 〈 此章內自引 淇澳《詩》 以下，舊本誤在誠意章下。 〉",
+        "zh": [
+          {
+            "t": " ",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "〈",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": " ",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "章",
+            "r": "zhāng",
+            "g": "object"
+          },
+          {
+            "t": "內",
+            "r": "nèi",
+            "g": "adverbial"
+          },
+          {
+            "t": "自",
+            "r": "zì",
+            "g": "adverbial"
+          },
+          {
+            "t": "引",
+            "r": "yǐn",
+            "g": "predicate"
+          },
+          {
+            "t": " ",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "淇",
+            "r": "qí",
+            "g": "object"
+          },
+          {
+            "t": "澳",
+            "r": "yù",
+            "g": "object"
+          },
+          {
+            "t": "《",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "詩",
+            "r": "shī",
+            "g": "object"
+          },
+          {
+            "t": "》",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": " ",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "舊",
+            "r": "jiù",
+            "g": "subject"
+          },
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "subject"
+          },
+          {
+            "t": "誤",
+            "r": "wù",
+            "g": "adverbial"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "誠",
+            "r": "chéng",
+            "g": "object"
+          },
+          {
+            "t": "意",
+            "r": "yì",
+            "g": "object"
+          },
+          {
+            "t": "章",
+            "r": "zhāng",
+            "g": "object"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": " ",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "〉",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "〈",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "この",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "章",
+              "r": "しょう",
+              "g": "object"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "自",
+              "r": "みずか",
+              "g": "adverbial"
+            },
+            {
+              "t": "ら",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "引",
+              "r": "ひ",
+              "g": "predicate"
+            },
+            {
+              "t": "く「",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "淇",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "澳",
+              "r": "いく",
+              "g": "object"
+            },
+            {
+              "t": "」の『",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "詩",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "』",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "以",
+              "r": "い",
+              "g": "adverbial"
+            },
+            {
+              "t": "下",
+              "r": "か",
+              "g": "adverbial"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "旧",
+              "r": "きゅう",
+              "g": "subject"
+            },
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "subject"
+            },
+            {
+              "t": "では",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "誤",
+              "r": "あやま",
+              "g": "adverbial"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "誠",
+              "r": "せい",
+              "g": "object"
+            },
+            {
+              "t": "意",
+              "r": "い",
+              "g": "object"
+            },
+            {
+              "t": "章",
+              "r": "しょう",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "下",
+              "r": "した",
+              "g": "complement"
+            },
+            {
+              "t": "にあった。〉",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

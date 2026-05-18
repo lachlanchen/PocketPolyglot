@@ -31,9 +31,9 @@ CLASSICAL_BOOKS: dict[str, dict[str, Any]] = {
         "book_description": "Zhu Xi, Collected Commentaries on the Four Books; Chinese Wikisource text with generated Japanese comment lines. The NDL kana-attached scan is kept as a local visual reference.",
         "source_kind": "html",
         "source_language": "zh",
-        "source_path": "sources/四書章句集註（維基文庫） - 朱熹.json",
-        "html_json": "sources/四書章句集註（維基文庫） - 朱熹.json",
-        "local_ja_source_path": "sources/四書 仮名附（NDL公開） - 朱熹 集注・後藤嘉幸 点.pdf",
+        "source_path": "sources/sishu/四書章句集註（維基文庫） - 朱熹.json",
+        "html_json": "sources/sishu/四書章句集註（維基文庫） - 朱熹.json",
+        "local_ja_source_path": "sources/sishu/四書 仮名附（NDL公開） - 朱熹 集注・後藤嘉幸 点.pdf",
         "chunk_mode": "paragraph",
         "reference_scope": "chapter",
     },
@@ -49,12 +49,12 @@ CLASSICAL_BOOKS: dict[str, dict[str, Any]] = {
         "book_description": "Sima Qian, Records of the Grand Historian. Chinese main text is prepared from the CText public-domain export, with Japanese Wikisource chapter references attached by chapter order.",
         "source_kind": "html",
         "source_language": "zh",
-        "source_path": "sources/史記（中國哲學書電子化計劃） - 司馬遷.json",
-        "html_json": "sources/史記（中國哲學書電子化計劃） - 司馬遷.json",
-        "ja_source_path": "sources/史記（日本語ウィキソース） - 司馬遷.json",
-        "ja_html_json": "sources/史記（日本語ウィキソース） - 司馬遷.json",
-        "secondary_zh_source_path": "sources/史記（維基文庫文言文） - 司馬遷.json",
-        "local_scan_source_path": "sources/史記三家注 【漢】司馬遷 （中華書局，1959）.pdf",
+        "source_path": "sources/shiji/史記（中國哲學書電子化計劃） - 司馬遷.json",
+        "html_json": "sources/shiji/史記（中國哲學書電子化計劃） - 司馬遷.json",
+        "ja_source_path": "sources/shiji/史記（日本語ウィキソース） - 司馬遷.json",
+        "ja_html_json": "sources/shiji/史記（日本語ウィキソース） - 司馬遷.json",
+        "secondary_zh_source_path": "sources/shiji/史記（維基文庫文言文） - 司馬遷.json",
+        "local_scan_source_path": "sources/shiji/史記三家注 【漢】司馬遷 （中華書局，1959）.pdf",
         "chunk_mode": "paragraph",
         "reference_scope": "chapter",
     },
@@ -70,11 +70,11 @@ CLASSICAL_BOOKS: dict[str, dict[str, Any]] = {
         "book_description": "Kojiki. Chinese Wikisource PDF text is the main text; Japanese comment lines are generated from the Chinese source until a clean Japanese OCR/reference source is added.",
         "source_kind": "pdf_text",
         "source_language": "zh",
-        "source_path": "sources/古事記.pdf",
+        "source_path": "sources/kojiki/古事記.pdf",
         "pdf_start_text": "臣安萬侣言：",
         "pdf_start_heading": "序",
-        "local_ja_source_path": "sources/古事記 (2).pdf",
-        "local_en_source_path": "sources/Kojiki_ Records Of Ancient Matters.pdf",
+        "local_ja_source_path": "sources/kojiki/古事記 (2).pdf",
+        "local_en_source_path": "sources/kojiki/Kojiki_ Records Of Ancient Matters.pdf",
         "chunk_mode": "paragraph",
         "reference_scope": "chapter",
     },
@@ -398,12 +398,16 @@ def prepare_book(book: dict[str, Any], *, force: bool) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--book-id", action="append", choices=sorted(CLASSICAL_BOOKS), help="prepare one book; repeatable")
+    parser.add_argument("--output-suffix", default="", help="append a suffix to generated book ids, e.g. -aginti")
     parser.add_argument("--force", action="store_true")
     args = parser.parse_args()
     selected = args.book_id or ["sishu-jizhu", "shiji", "kojiki"]
     for book_id in selected:
-        print(f"== {book_id} ==", flush=True)
-        prepare_book(CLASSICAL_BOOKS[book_id], force=args.force)
+        book = dict(CLASSICAL_BOOKS[book_id])
+        if args.output_suffix:
+            book["book_id"] = f"{book['book_id']}{args.output_suffix}"
+        print(f"== {book['book_id']} ==", flush=True)
+        prepare_book(book, force=args.force)
     return 0
 
 

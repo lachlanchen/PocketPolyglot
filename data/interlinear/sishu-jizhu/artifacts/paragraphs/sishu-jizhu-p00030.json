@@ -1,0 +1,376 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sishu-jizhu",
+  "paragraph_id": "sishu-jizhu-p00030",
+  "source_text": "右傳之九章。釋齊家治國。",
+  "source_sha256": "7f9efe5944bb862c1e0cbdf041926f8c94859b024cea512ed44725dbdf0b57e5",
+  "source_normalized_sha256": "7f9efe5944bb862c1e0cbdf041926f8c94859b024cea512ed44725dbdf0b57e5",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 33,
+    "grammar_token_total": 33,
+    "unit_count": 2
+  },
+  "source_chunk_id": "sishu-jizhu-chunk-0030",
+  "source_manifest_sha256": "902fd7de6fd94b7b6470c3b24ad1e74c7d4ed1530715997cf2895f57004e6622",
+  "section": {
+    "id": "四書章句集註",
+    "title_zh": [
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "attributive"
+      },
+      {
+        "t": "書",
+        "r": "shū",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "attributive"
+      },
+      {
+        "t": "句",
+        "r": "jù",
+        "g": "attributive"
+      },
+      {
+        "t": "集",
+        "r": "jí",
+        "g": "predicate"
+      },
+      {
+        "t": "註",
+        "r": "zhù",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "四",
+        "r": "し",
+        "g": "attributive"
+      },
+      {
+        "t": "書",
+        "r": "しょ",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "attributive"
+      },
+      {
+        "t": "句",
+        "r": "く",
+        "g": "attributive"
+      },
+      {
+        "t": "集",
+        "r": "しっ",
+        "g": "predicate"
+      },
+      {
+        "t": "注",
+        "r": "ちゅう",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "大學章句",
+    "title_zh": [
+      {
+        "t": "大",
+        "r": "dà",
+        "g": "attributive"
+      },
+      {
+        "t": "學",
+        "r": "xué",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "predicate"
+      },
+      {
+        "t": "句",
+        "r": "jù",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "大",
+        "r": "だい",
+        "g": "attributive"
+      },
+      {
+        "t": "學",
+        "r": "がく",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "predicate"
+      },
+      {
+        "t": "句",
+        "r": "く",
+        "g": "predicate"
+      }
+    ]
+  },
+  "story": {
+    "id": "四書章句集註-大學章句-intro",
+    "title_zh": [
+      {
+        "t": "大",
+        "r": "dà",
+        "g": "attributive"
+      },
+      {
+        "t": "學",
+        "r": "xué",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "predicate"
+      },
+      {
+        "t": "句",
+        "r": "jù",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "大",
+        "r": "だい",
+        "g": "attributive"
+      },
+      {
+        "t": "學",
+        "r": "がく",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "predicate"
+      },
+      {
+        "t": "句",
+        "r": "く",
+        "g": "predicate"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sishu-jizhu-p00030",
+    "source_text": "右傳之九章。釋齊家治國。",
+    "units": [
+      {
+        "source_text": "右傳之九章。",
+        "zh": [
+          {
+            "t": "右",
+            "r": "yòu",
+            "g": "subject"
+          },
+          {
+            "t": "傳",
+            "r": "zhuàn",
+            "g": "predicate"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "predicate"
+          },
+          {
+            "t": "九",
+            "r": "jiǔ",
+            "g": "predicate"
+          },
+          {
+            "t": "章",
+            "r": "zhāng",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "以",
+              "r": "い",
+              "g": "subject"
+            },
+            {
+              "t": "上",
+              "r": "じょう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "伝",
+              "r": "でん",
+              "g": "predicate"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "第",
+              "r": "だい",
+              "g": "predicate"
+            },
+            {
+              "t": "九",
+              "r": "きゅう",
+              "g": "predicate"
+            },
+            {
+              "t": "章",
+              "r": "しょう",
+              "g": "predicate"
+            },
+            {
+              "t": "である",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "釋齊家治國。",
+        "zh": [
+          {
+            "t": "釋",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "齊",
+            "r": "qí",
+            "g": "object"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "object"
+          },
+          {
+            "t": "治",
+            "r": "zhì",
+            "g": "object"
+          },
+          {
+            "t": "國",
+            "r": "guó",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "家",
+              "r": "いえ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "斉",
+              "r": "ととの",
+              "g": "object"
+            },
+            {
+              "t": "え、",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "国",
+              "r": "くに",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "治",
+              "r": "おさ",
+              "g": "object"
+            },
+            {
+              "t": "めることを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "釈",
+              "r": "しゃく",
+              "g": "predicate"
+            },
+            {
+              "t": "す",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
