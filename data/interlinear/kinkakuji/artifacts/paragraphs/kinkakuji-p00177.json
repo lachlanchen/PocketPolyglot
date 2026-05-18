@@ -1,0 +1,605 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p00177",
+  "source_text": "没有看见任何海景。只有波涛、濡湿的黑岩和雨。浇上了油的灵枢现出鲜艳的木原色，被雨点敲打着。",
+  "source_sha256": "337caa4965d4bcddc678e34a6b7a624dffff15c33d21dc87f11a3c0bdd55e4ce",
+  "source_normalized_sha256": "337caa4965d4bcddc678e34a6b7a624dffff15c33d21dc87f11a3c0bdd55e4ce",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 93,
+    "grammar_token_total": 93,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kinkakuji-chunk-0177",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第二章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "二",
+        "r": "に",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第二章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "二",
+        "r": "に",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p00177",
+    "source_text": "没有看见任何海景。只有波涛、濡湿的黑岩和雨。浇上了油的灵枢现出鲜艳的木原色，被雨点敲打着。",
+    "units": [
+      {
+        "source_text": "没有看见任何海景。",
+        "zh": [
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "predicate"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "predicate"
+          },
+          {
+            "t": "见",
+            "r": "jiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "任",
+            "r": "rèn",
+            "g": "object"
+          },
+          {
+            "t": "何",
+            "r": "hé",
+            "g": "object"
+          },
+          {
+            "t": "海",
+            "r": "hǎi",
+            "g": "object"
+          },
+          {
+            "t": "景",
+            "r": "jǐng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "どんな",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "海",
+              "r": "うみ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "景",
+              "r": "けい",
+              "g": "object"
+            },
+            {
+              "t": "色",
+              "r": "しき",
+              "g": "object"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "えなかった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "只有波涛、濡湿的黑岩和雨。",
+        "zh": [
+          {
+            "t": "只",
+            "r": "zhǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "波",
+            "r": "bō",
+            "g": "subject"
+          },
+          {
+            "t": "涛",
+            "r": "tāo",
+            "g": "subject"
+          },
+          {
+            "t": "、",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "濡",
+            "r": "rú",
+            "g": "attributive"
+          },
+          {
+            "t": "湿",
+            "r": "shī",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "黑",
+            "r": "hēi",
+            "g": "attributive"
+          },
+          {
+            "t": "岩",
+            "r": "yán",
+            "g": "subject"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "subject"
+          },
+          {
+            "t": "雨",
+            "r": "yǔ",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ただ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "波",
+              "r": "は",
+              "g": "subject"
+            },
+            {
+              "t": "濤",
+              "r": "とう",
+              "g": "subject"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "濡",
+              "r": "ぬ",
+              "g": "attributive"
+            },
+            {
+              "t": "れた",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "黒",
+              "r": "くろ",
+              "g": "attributive"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "岩",
+              "r": "いわ",
+              "g": "subject"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "雨",
+              "r": "あめ",
+              "g": "subject"
+            },
+            {
+              "t": "だけが",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "あった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "浇上了油的灵枢现出鲜艳的木原色，被雨点敲打着。",
+        "zh": [
+          {
+            "t": "浇",
+            "r": "jiāo",
+            "g": "attributive"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "attributive"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "attributive"
+          },
+          {
+            "t": "油",
+            "r": "yóu",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "灵",
+            "r": "líng",
+            "g": "subject"
+          },
+          {
+            "t": "枢",
+            "r": "shū",
+            "g": "subject"
+          },
+          {
+            "t": "现",
+            "r": "xiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "出",
+            "r": "chū",
+            "g": "predicate"
+          },
+          {
+            "t": "鲜",
+            "r": "xiān",
+            "g": "attributive"
+          },
+          {
+            "t": "艳",
+            "r": "yàn",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "木",
+            "r": "mù",
+            "g": "object"
+          },
+          {
+            "t": "原",
+            "r": "yuán",
+            "g": "object"
+          },
+          {
+            "t": "色",
+            "r": "sè",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "被",
+            "r": "bèi",
+            "g": "function"
+          },
+          {
+            "t": "雨",
+            "r": "yǔ",
+            "g": "subject"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "subject"
+          },
+          {
+            "t": "敲",
+            "r": "qiāo",
+            "g": "predicate"
+          },
+          {
+            "t": "打",
+            "r": "dǎ",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "油",
+              "r": "あぶら",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "塗",
+              "r": "ぬ",
+              "g": "attributive"
+            },
+            {
+              "t": "られた",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "霊",
+              "r": "れい",
+              "g": "subject"
+            },
+            {
+              "t": "柩",
+              "r": "きゅう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "鮮",
+              "r": "あざ",
+              "g": "attributive"
+            },
+            {
+              "t": "やかな",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "木",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "地",
+              "r": "じ",
+              "g": "object"
+            },
+            {
+              "t": "色",
+              "r": "いろ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "現",
+              "r": "あらわ",
+              "g": "predicate"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "雨",
+              "r": "あま",
+              "g": "subject"
+            },
+            {
+              "t": "粒",
+              "r": "つぶ",
+              "g": "subject"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "叩",
+              "r": "たた",
+              "g": "predicate"
+            },
+            {
+              "t": "かれていた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,460 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p00176",
+  "source_text": "钻出隧道，便到达火葬场。工人们在做火葬的准备工作。我们在隧道里避雨。",
+  "source_sha256": "b47784a3b440dbdeb0cdc82753f7417794f26548db638eb3462f902f3c4a25c7",
+  "source_normalized_sha256": "b47784a3b440dbdeb0cdc82753f7417794f26548db638eb3462f902f3c4a25c7",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 64,
+    "grammar_token_total": 64,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kinkakuji-chunk-0176",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第二章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "二",
+        "r": "に",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第二章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "二",
+        "r": "に",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p00176",
+    "source_text": "钻出隧道，便到达火葬场。工人们在做火葬的准备工作。我们在隧道里避雨。",
+    "units": [
+      {
+        "source_text": "钻出隧道，便到达火葬场。",
+        "zh": [
+          {
+            "t": "钻",
+            "r": "zuān",
+            "g": "predicate"
+          },
+          {
+            "t": "出",
+            "r": "chū",
+            "g": "predicate"
+          },
+          {
+            "t": "隧",
+            "r": "suì",
+            "g": "object"
+          },
+          {
+            "t": "道",
+            "r": "dào",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "便",
+            "r": "biàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "达",
+            "r": "dá",
+            "g": "predicate"
+          },
+          {
+            "t": "火",
+            "r": "huǒ",
+            "g": "object"
+          },
+          {
+            "t": "葬",
+            "r": "zàng",
+            "g": "object"
+          },
+          {
+            "t": "场",
+            "r": "chǎng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "トンネルを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "抜",
+              "r": "ぬ",
+              "g": "predicate"
+            },
+            {
+              "t": "けると、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "すぐ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "火",
+              "r": "か",
+              "g": "object"
+            },
+            {
+              "t": "葬",
+              "r": "そう",
+              "g": "object"
+            },
+            {
+              "t": "場",
+              "r": "ば",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "着",
+              "r": "つ",
+              "g": "predicate"
+            },
+            {
+              "t": "いた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "工人们在做火葬的准备工作。",
+        "zh": [
+          {
+            "t": "工",
+            "r": "gōng",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "做",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "火",
+            "r": "huǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "葬",
+            "r": "zàng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "准",
+            "r": "zhǔn",
+            "g": "object"
+          },
+          {
+            "t": "备",
+            "r": "bèi",
+            "g": "object"
+          },
+          {
+            "t": "工",
+            "r": "gōng",
+            "g": "object"
+          },
+          {
+            "t": "作",
+            "r": "zuò",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "作",
+              "r": "さ",
+              "g": "subject"
+            },
+            {
+              "t": "業",
+              "r": "ぎょう",
+              "g": "subject"
+            },
+            {
+              "t": "員",
+              "r": "いん",
+              "g": "subject"
+            },
+            {
+              "t": "たちは、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "火",
+              "r": "か",
+              "g": "attributive"
+            },
+            {
+              "t": "葬",
+              "r": "そう",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "準",
+              "r": "じゅん",
+              "g": "object"
+            },
+            {
+              "t": "備",
+              "r": "び",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "していた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我们在隧道里避雨。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "隧",
+            "r": "suì",
+            "g": "adverbial"
+          },
+          {
+            "t": "道",
+            "r": "dào",
+            "g": "adverbial"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "避",
+            "r": "bì",
+            "g": "predicate"
+          },
+          {
+            "t": "雨",
+            "r": "yǔ",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "たちは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "トンネルの",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "中",
+              "r": "なか",
+              "g": "adverbial"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "雨",
+              "r": "あめ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "避",
+              "r": "さ",
+              "g": "predicate"
+            },
+            {
+              "t": "けていた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

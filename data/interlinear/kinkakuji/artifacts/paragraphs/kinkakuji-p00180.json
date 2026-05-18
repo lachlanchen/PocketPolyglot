@@ -1,0 +1,605 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p00180",
+  "source_text": "我望了望身旁的母亲。母亲双手抓着念珠，站立在那里。她的脸僵硬，而身子仿佛凝固、缩小了，甚至可以放在掌上。",
+  "source_sha256": "da778bcc8132d38a66be87d9b74f6a3163fad120b8d78d1917223038313daf33",
+  "source_normalized_sha256": "da778bcc8132d38a66be87d9b74f6a3163fad120b8d78d1917223038313daf33",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 93,
+    "grammar_token_total": 93,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kinkakuji-chunk-0180",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第二章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "二",
+        "r": "に",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第二章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "二",
+        "r": "に",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p00180",
+    "source_text": "我望了望身旁的母亲。母亲双手抓着念珠，站立在那里。她的脸僵硬，而身子仿佛凝固、缩小了，甚至可以放在掌上。",
+    "units": [
+      {
+        "source_text": "我望了望身旁的母亲。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "望",
+            "r": "wàng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "望",
+            "r": "wàng",
+            "g": "predicate"
+          },
+          {
+            "t": "身",
+            "r": "shēn",
+            "g": "attributive"
+          },
+          {
+            "t": "旁",
+            "r": "páng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "母",
+            "r": "mǔ",
+            "g": "object"
+          },
+          {
+            "t": "亲",
+            "r": "qīn",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "そばの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "母",
+              "r": "はは",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "やった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "母亲双手抓着念珠，站立在那里。",
+        "zh": [
+          {
+            "t": "母",
+            "r": "mǔ",
+            "g": "subject"
+          },
+          {
+            "t": "亲",
+            "r": "qīn",
+            "g": "subject"
+          },
+          {
+            "t": "双",
+            "r": "shuāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "手",
+            "r": "shǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "抓",
+            "r": "zhuā",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "predicate"
+          },
+          {
+            "t": "念",
+            "r": "niàn",
+            "g": "object"
+          },
+          {
+            "t": "珠",
+            "r": "zhū",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "站",
+            "r": "zhàn",
+            "g": "predicate"
+          },
+          {
+            "t": "立",
+            "r": "lì",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "complement"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "complement"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "母",
+              "r": "はは",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "両",
+              "r": "りょう",
+              "g": "adverbial"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "adverbial"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "数",
+              "r": "じゅ",
+              "g": "object"
+            },
+            {
+              "t": "珠",
+              "r": "ず",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "握",
+              "r": "にぎ",
+              "g": "predicate"
+            },
+            {
+              "t": "り、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "そこに",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "立",
+              "r": "た",
+              "g": "predicate"
+            },
+            {
+              "t": "っていた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "她的脸僵硬，而身子仿佛凝固、缩小了，甚至可以放在掌上。",
+        "zh": [
+          {
+            "t": "她",
+            "r": "tā",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "脸",
+            "r": "liǎn",
+            "g": "subject"
+          },
+          {
+            "t": "僵",
+            "r": "jiāng",
+            "g": "predicate"
+          },
+          {
+            "t": "硬",
+            "r": "yìng",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "而",
+            "r": "ér",
+            "g": "function"
+          },
+          {
+            "t": "身",
+            "r": "shēn",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "subject"
+          },
+          {
+            "t": "仿",
+            "r": "fǎng",
+            "g": "adverbial"
+          },
+          {
+            "t": "佛",
+            "r": "fú",
+            "g": "adverbial"
+          },
+          {
+            "t": "凝",
+            "r": "níng",
+            "g": "predicate"
+          },
+          {
+            "t": "固",
+            "r": "gù",
+            "g": "predicate"
+          },
+          {
+            "t": "、",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "缩",
+            "r": "suō",
+            "g": "predicate"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "甚",
+            "r": "shèn",
+            "g": "adverbial"
+          },
+          {
+            "t": "至",
+            "r": "zhì",
+            "g": "adverbial"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "predicate"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "放",
+            "r": "fàng",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "complement"
+          },
+          {
+            "t": "掌",
+            "r": "zhǎng",
+            "g": "complement"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "彼",
+              "r": "かの",
+              "g": "attributive"
+            },
+            {
+              "t": "女",
+              "r": "じょ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "顔",
+              "r": "かお",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "こわばり、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "体",
+              "r": "からだ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "凝",
+              "r": "こ",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "固",
+              "r": "かた",
+              "g": "predicate"
+            },
+            {
+              "t": "まり",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "縮",
+              "r": "ちぢ",
+              "g": "predicate"
+            },
+            {
+              "t": "み、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "掌",
+              "r": "てのひら",
+              "g": "complement"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "載",
+              "r": "の",
+              "g": "predicate"
+            },
+            {
+              "t": "るほどだった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
