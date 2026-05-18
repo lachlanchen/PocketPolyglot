@@ -1,0 +1,245 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p00438",
+  "source_text": "\"噢！夹——克。兹·科尔德！\"",
+  "source_sha256": "1f5aef41b1c97764e6d410abe54feb0919bf051db102131da460e8dc86f333a0",
+  "source_normalized_sha256": "1f5aef41b1c97764e6d410abe54feb0919bf051db102131da460e8dc86f333a0",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 21,
+    "grammar_token_total": 21,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kinkakuji-chunk-0438",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第三章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第三章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p00438",
+    "source_text": "\"噢！夹——克。兹·科尔德！\"",
+    "units": [
+      {
+        "source_text": "\"噢！",
+        "zh": [
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "噢",
+            "r": "ō",
+            "g": "predicate"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「おお",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "！",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "夹——克。",
+        "zh": [
+          {
+            "t": "夹",
+            "r": "jiā",
+            "g": "object"
+          },
+          {
+            "t": "—",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "—",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "克",
+            "r": "kè",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ジャーーック",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "兹·科尔德！\"",
+        "zh": [
+          {
+            "t": "兹",
+            "r": "zī",
+            "g": "object"
+          },
+          {
+            "t": "·",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "科",
+            "r": "kē",
+            "g": "object"
+          },
+          {
+            "t": "尔",
+            "r": "ěr",
+            "g": "object"
+          },
+          {
+            "t": "德",
+            "r": "dé",
+            "g": "object"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ズ・コルド",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "！ 」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
