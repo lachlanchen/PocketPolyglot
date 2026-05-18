@@ -1,0 +1,450 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p00804",
+  "source_text": "\"嗯。\"柏木摆齐剪好了的燕子花，瞧了瞧说，\"这还杀得不够呐。\"",
+  "source_sha256": "d9ed2199a68d6d2fe91f6cc05d03ee960b26aa12ce884900384c9118ec41a4fd",
+  "source_normalized_sha256": "d9ed2199a68d6d2fe91f6cc05d03ee960b26aa12ce884900384c9118ec41a4fd",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 62,
+    "grammar_token_total": 62,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kinkakuji-chunk-0804",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第六章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "六",
+        "r": "liù",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "六",
+        "r": "ろく",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第六章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "六",
+        "r": "liù",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "六",
+        "r": "ろく",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p00804",
+    "source_text": "\"嗯。\"柏木摆齐剪好了的燕子花，瞧了瞧说，\"这还杀得不够呐。\"",
+    "units": [
+      {
+        "source_text": "\"嗯。\"柏木摆齐剪好了的燕子花，",
+        "zh": [
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "嗯",
+            "r": "èn",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "柏",
+            "r": "bǎi",
+            "g": "subject"
+          },
+          {
+            "t": "木",
+            "r": "mù",
+            "g": "subject"
+          },
+          {
+            "t": "摆",
+            "r": "bǎi",
+            "g": "predicate"
+          },
+          {
+            "t": "齐",
+            "r": "qí",
+            "g": "complement"
+          },
+          {
+            "t": "剪",
+            "r": "jiǎn",
+            "g": "attributive"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "燕",
+            "r": "yàn",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "花",
+            "r": "huā",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "うん",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。」",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "柏",
+              "r": "かしわ",
+              "g": "subject"
+            },
+            {
+              "t": "木",
+              "r": "ぎ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "切",
+              "r": "き",
+              "g": "attributive"
+            },
+            {
+              "t": "りそろえた",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "燕",
+              "r": "かきつばた",
+              "g": "object"
+            },
+            {
+              "t": "子",
+              "r": "かきつばた",
+              "g": "object"
+            },
+            {
+              "t": "花",
+              "r": "かきつばた",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "並",
+              "r": "なら",
+              "g": "predicate"
+            },
+            {
+              "t": "べ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "瞧了瞧说，",
+        "zh": [
+          {
+            "t": "瞧",
+            "r": "qiáo",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "瞧",
+            "r": "qiáo",
+            "g": "predicate"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ちょっと",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "眺",
+              "r": "なが",
+              "g": "predicate"
+            },
+            {
+              "t": "めて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "から",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "こう",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "\"这还杀得不够呐。\"",
+        "zh": [
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "adverbial"
+          },
+          {
+            "t": "杀",
+            "r": "shā",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "complement"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "complement"
+          },
+          {
+            "t": "够",
+            "r": "gòu",
+            "g": "complement"
+          },
+          {
+            "t": "呐",
+            "r": "na",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "これは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "まだ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "殺",
+              "r": "ころ",
+              "g": "predicate"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "足",
+              "r": "た",
+              "g": "complement"
+            },
+            {
+              "t": "りないな",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "。」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,305 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p00818",
+  "source_text": "\"美极了！在哪儿学的了？\"我问道。",
+  "source_sha256": "3be6ae38615c8768f414ec7663d0906ebcd861ec90efcd4a559ec94809a72597",
+  "source_normalized_sha256": "3be6ae38615c8768f414ec7663d0906ebcd861ec90efcd4a559ec94809a72597",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 33,
+    "grammar_token_total": 33,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kinkakuji-chunk-0818",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第六章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "六",
+        "r": "liù",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "六",
+        "r": "ろく",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第六章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "六",
+        "r": "liù",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "六",
+        "r": "ろく",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p00818",
+    "source_text": "\"美极了！在哪儿学的了？\"我问道。",
+    "units": [
+      {
+        "source_text": "\"美极了！",
+        "zh": [
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "美",
+            "r": "měi",
+            "g": "predicate"
+          },
+          {
+            "t": "极",
+            "r": "jí",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "美",
+              "r": "うつく",
+              "g": "predicate"
+            },
+            {
+              "t": "しい！",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "なんて",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "事",
+              "r": "ごと",
+              "g": "predicate"
+            },
+            {
+              "t": "なんだ！",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "在哪儿学的了？\"",
+        "zh": [
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "哪",
+            "r": "nǎ",
+            "g": "adverbial"
+          },
+          {
+            "t": "儿",
+            "r": "ér",
+            "g": "adverbial"
+          },
+          {
+            "t": "学",
+            "r": "xué",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "どこで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "習",
+              "r": "なら",
+              "g": "predicate"
+            },
+            {
+              "t": "ったの？",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "どこで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "覚",
+              "r": "おぼ",
+              "g": "predicate"
+            },
+            {
+              "t": "えたんだ？",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我问道。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "问",
+            "r": "wèn",
+            "g": "predicate"
+          },
+          {
+            "t": "道",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "尋",
+              "r": "たず",
+              "g": "predicate"
+            },
+            {
+              "t": "ねた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
