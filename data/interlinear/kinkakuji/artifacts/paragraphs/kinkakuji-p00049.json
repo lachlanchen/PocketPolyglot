@@ -1,0 +1,701 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p00049",
+  "source_text": "库蚊叮了我的脚。鸡鸣四起。我迎亮着了看路上，远处立着一个朦胧的白影。疑是拂晓的曙光，却原来是有为子。",
+  "source_sha256": "e7fd5dad900401ce3f7d4bdbd736180ea7d7ec5d0808be6996868055f2860595",
+  "source_normalized_sha256": "e7fd5dad900401ce3f7d4bdbd736180ea7d7ec5d0808be6996868055f2860595",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 110,
+    "grammar_token_total": 110,
+    "unit_count": 4
+  },
+  "source_chunk_id": "kinkakuji-chunk-0049",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第一章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第一章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p00049",
+    "source_text": "库蚊叮了我的脚。鸡鸣四起。我迎亮着了看路上，远处立着一个朦胧的白影。疑是拂晓的曙光，却原来是有为子。",
+    "units": [
+      {
+        "source_text": "库蚊叮了我的脚。",
+        "zh": [
+          {
+            "t": "库",
+            "r": "kù",
+            "g": "subject"
+          },
+          {
+            "t": "蚊",
+            "r": "wén",
+            "g": "subject"
+          },
+          {
+            "t": "叮",
+            "r": "dīng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "脚",
+            "r": "jiǎo",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "家",
+              "r": "いえ",
+              "g": "subject"
+            },
+            {
+              "t": "蚊",
+              "r": "か",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "足",
+              "r": "あし",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "刺",
+              "r": "さ",
+              "g": "predicate"
+            },
+            {
+              "t": "した",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "鸡鸣四起。",
+        "zh": [
+          {
+            "t": "鸡",
+            "r": "jī",
+            "g": "attributive"
+          },
+          {
+            "t": "鸣",
+            "r": "míng",
+            "g": "subject"
+          },
+          {
+            "t": "四",
+            "r": "sì",
+            "g": "adverbial"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "鶏",
+              "r": "にわとり",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "鳴",
+              "r": "な",
+              "g": "subject"
+            },
+            {
+              "t": "き",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "声",
+              "r": "ごえ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "四",
+              "r": "し",
+              "g": "adverbial"
+            },
+            {
+              "t": "方",
+              "r": "ほう",
+              "g": "adverbial"
+            },
+            {
+              "t": "から",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "起",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "こった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我迎亮着了看路上，远处立着一个朦胧的白影。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "迎",
+            "r": "yíng",
+            "g": "adverbial"
+          },
+          {
+            "t": "亮",
+            "r": "liàng",
+            "g": "object"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "adverbial"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "predicate"
+          },
+          {
+            "t": "路",
+            "r": "lù",
+            "g": "object"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "远",
+            "r": "yuǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "处",
+            "r": "chù",
+            "g": "adverbial"
+          },
+          {
+            "t": "立",
+            "r": "lì",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "attributive"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "attributive"
+          },
+          {
+            "t": "朦",
+            "r": "méng",
+            "g": "attributive"
+          },
+          {
+            "t": "胧",
+            "r": "lóng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "白",
+            "r": "bái",
+            "g": "attributive"
+          },
+          {
+            "t": "影",
+            "r": "yǐng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "明",
+              "r": "あか",
+              "g": "object"
+            },
+            {
+              "t": "るみ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "迎",
+              "r": "むか",
+              "g": "adverbial"
+            },
+            {
+              "t": "えつつ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "道",
+              "r": "みち",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "ると",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "遠",
+              "r": "とお",
+              "g": "adverbial"
+            },
+            {
+              "t": "くに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "ぼんやりした",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "白",
+              "r": "しろ",
+              "g": "attributive"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "影",
+              "r": "かげ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "立",
+              "r": "た",
+              "g": "predicate"
+            },
+            {
+              "t": "っていた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "疑是拂晓的曙光，却原来是有为子。",
+        "zh": [
+          {
+            "t": "疑",
+            "r": "yí",
+            "g": "predicate"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "拂",
+            "r": "fú",
+            "g": "attributive"
+          },
+          {
+            "t": "晓",
+            "r": "xiǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "曙",
+            "r": "shǔ",
+            "g": "object"
+          },
+          {
+            "t": "光",
+            "r": "guāng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "却",
+            "r": "què",
+            "g": "adverbial"
+          },
+          {
+            "t": "原",
+            "r": "yuán",
+            "g": "adverbial"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "subject"
+          },
+          {
+            "t": "为",
+            "r": "wéi",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "夜",
+              "r": "よ",
+              "g": "attributive"
+            },
+            {
+              "t": "明",
+              "r": "あ",
+              "g": "attributive"
+            },
+            {
+              "t": "けの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "曙",
+              "r": "しょ",
+              "g": "object"
+            },
+            {
+              "t": "光",
+              "r": "こう",
+              "g": "object"
+            },
+            {
+              "t": "かと",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "思",
+              "r": "おも",
+              "g": "predicate"
+            },
+            {
+              "t": "ったが",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "実",
+              "r": "じつ",
+              "g": "adverbial"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "有",
+              "r": "う",
+              "g": "subject"
+            },
+            {
+              "t": "為",
+              "r": "い",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "だった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

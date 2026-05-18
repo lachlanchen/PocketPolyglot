@@ -1,0 +1,660 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p00024",
+  "source_text": "大家扭着身子笑了起来。嘲笑这种东西是这样的耀眼。对我来说，同班同学那种少年期特有的残酷的笑声，犹如洒满阳光的叶丛那样璀璨夺目。",
+  "source_sha256": "c1df179faf3583e9b83f5ae802356a19702c49ba4629cae67395619c715c6189",
+  "source_normalized_sha256": "c1df179faf3583e9b83f5ae802356a19702c49ba4629cae67395619c715c6189",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 104,
+    "grammar_token_total": 104,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kinkakuji-chunk-0024",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第一章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第一章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p00024",
+    "source_text": "大家扭着身子笑了起来。嘲笑这种东西是这样的耀眼。对我来说，同班同学那种少年期特有的残酷的笑声，犹如洒满阳光的叶丛那样璀璨夺目。",
+    "units": [
+      {
+        "source_text": "大家扭着身子笑了起来。",
+        "zh": [
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "subject"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "subject"
+          },
+          {
+            "t": "扭",
+            "r": "niǔ",
+            "g": "adverbial"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "adverbial"
+          },
+          {
+            "t": "身",
+            "r": "shēn",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "笑",
+            "r": "xiào",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "complement"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "みんなは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "身",
+              "r": "み",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "よじって、",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "笑",
+              "r": "わら",
+              "g": "predicate"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "出",
+              "r": "だ",
+              "g": "complement"
+            },
+            {
+              "t": "した。",
+              "r": "",
+              "g": "complement"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "嘲笑这种东西是这样的耀眼。",
+        "zh": [
+          {
+            "t": "嘲",
+            "r": "cháo",
+            "g": "subject"
+          },
+          {
+            "t": "笑",
+            "r": "xiào",
+            "g": "subject"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "种",
+            "r": "zhǒng",
+            "g": "subject"
+          },
+          {
+            "t": "东",
+            "r": "dōng",
+            "g": "subject"
+          },
+          {
+            "t": "西",
+            "r": "xi",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "adverbial"
+          },
+          {
+            "t": "样",
+            "r": "yàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "耀",
+            "r": "yào",
+            "g": "predicate"
+          },
+          {
+            "t": "眼",
+            "r": "yǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "嘲",
+              "r": "ちょう",
+              "g": "subject"
+            },
+            {
+              "t": "笑",
+              "r": "しょう",
+              "g": "subject"
+            },
+            {
+              "t": "というものは、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "こんなにも",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "まぶしい。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "对我来说，同班同学那种少年期特有的残酷的笑声，犹如洒满阳光的叶丛那样璀璨夺目。",
+        "zh": [
+          {
+            "t": "对",
+            "r": "duì",
+            "g": "adverbial"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "adverbial"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "同",
+            "r": "tóng",
+            "g": "attributive"
+          },
+          {
+            "t": "班",
+            "r": "bān",
+            "g": "attributive"
+          },
+          {
+            "t": "同",
+            "r": "tóng",
+            "g": "attributive"
+          },
+          {
+            "t": "学",
+            "r": "xué",
+            "g": "attributive"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "attributive"
+          },
+          {
+            "t": "种",
+            "r": "zhǒng",
+            "g": "attributive"
+          },
+          {
+            "t": "少",
+            "r": "shào",
+            "g": "attributive"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "attributive"
+          },
+          {
+            "t": "期",
+            "r": "qī",
+            "g": "attributive"
+          },
+          {
+            "t": "特",
+            "r": "tè",
+            "g": "attributive"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "残",
+            "r": "cán",
+            "g": "attributive"
+          },
+          {
+            "t": "酷",
+            "r": "kù",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "笑",
+            "r": "xiào",
+            "g": "subject"
+          },
+          {
+            "t": "声",
+            "r": "shēng",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "犹",
+            "r": "yóu",
+            "g": "predicate"
+          },
+          {
+            "t": "如",
+            "r": "rú",
+            "g": "predicate"
+          },
+          {
+            "t": "洒",
+            "r": "sǎ",
+            "g": "attributive"
+          },
+          {
+            "t": "满",
+            "r": "mǎn",
+            "g": "attributive"
+          },
+          {
+            "t": "阳",
+            "r": "yáng",
+            "g": "object"
+          },
+          {
+            "t": "光",
+            "r": "guāng",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "叶",
+            "r": "yè",
+            "g": "object"
+          },
+          {
+            "t": "丛",
+            "r": "cóng",
+            "g": "object"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "adverbial"
+          },
+          {
+            "t": "样",
+            "r": "yàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "璀",
+            "r": "cuǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "璨",
+            "r": "càn",
+            "g": "predicate"
+          },
+          {
+            "t": "夺",
+            "r": "duó",
+            "g": "predicate"
+          },
+          {
+            "t": "目",
+            "r": "mù",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "adverbial"
+            },
+            {
+              "t": "にとって、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "同",
+              "r": "どう",
+              "g": "attributive"
+            },
+            {
+              "t": "級",
+              "r": "きゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "生",
+              "r": "せい",
+              "g": "attributive"
+            },
+            {
+              "t": "たちの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "少",
+              "r": "しょう",
+              "g": "attributive"
+            },
+            {
+              "t": "年",
+              "r": "ねん",
+              "g": "attributive"
+            },
+            {
+              "t": "期",
+              "r": "き",
+              "g": "attributive"
+            },
+            {
+              "t": "特",
+              "r": "とく",
+              "g": "attributive"
+            },
+            {
+              "t": "有",
+              "r": "ゆう",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "残",
+              "r": "ざん",
+              "g": "attributive"
+            },
+            {
+              "t": "酷",
+              "r": "こく",
+              "g": "attributive"
+            },
+            {
+              "t": "な",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "笑",
+              "r": "わら",
+              "g": "subject"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "声",
+              "r": "ごえ",
+              "g": "subject"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "陽",
+              "r": "よう",
+              "g": "object"
+            },
+            {
+              "t": "光",
+              "r": "こう",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "浴",
+              "r": "あ",
+              "g": "attributive"
+            },
+            {
+              "t": "びた",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "葉",
+              "r": "は",
+              "g": "object"
+            },
+            {
+              "t": "群",
+              "r": "むら",
+              "g": "object"
+            },
+            {
+              "t": "のように",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "きらめいた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
