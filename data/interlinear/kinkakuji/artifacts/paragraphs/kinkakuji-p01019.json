@@ -1,0 +1,499 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p01019",
+  "source_text": "女人说着递出一张薄纸来，然后又把拉门关上。纸的一角上被女人的手指濡湿了。",
+  "source_sha256": "9d25d7ca936fe71b4ecd6679e030bca27e4116f642355652d6009e46e4ef151e",
+  "source_normalized_sha256": "9d25d7ca936fe71b4ecd6679e030bca27e4116f642355652d6009e46e4ef151e",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 74,
+    "grammar_token_total": 74,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kinkakuji-chunk-1019",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第七章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第七章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p01019",
+    "source_text": "女人说着递出一张薄纸来，然后又把拉门关上。纸的一角上被女人的手指濡湿了。",
+    "units": [
+      {
+        "source_text": "女人说着递出一张薄纸来，然后又把拉门关上。",
+        "zh": [
+          {
+            "t": "女",
+            "r": "nǚ",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "adverbial"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "adverbial"
+          },
+          {
+            "t": "递",
+            "r": "dì",
+            "g": "predicate"
+          },
+          {
+            "t": "出",
+            "r": "chū",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "object"
+          },
+          {
+            "t": "张",
+            "r": "zhāng",
+            "g": "object"
+          },
+          {
+            "t": "薄",
+            "r": "báo",
+            "g": "object"
+          },
+          {
+            "t": "纸",
+            "r": "zhǐ",
+            "g": "object"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "然",
+            "r": "rán",
+            "g": "adverbial"
+          },
+          {
+            "t": "后",
+            "r": "hòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "拉",
+            "r": "lā",
+            "g": "object"
+          },
+          {
+            "t": "门",
+            "r": "mén",
+            "g": "object"
+          },
+          {
+            "t": "关",
+            "r": "guān",
+            "g": "predicate"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "女",
+              "r": "おんな",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "話",
+              "r": "はな",
+              "g": "adverbial"
+            },
+            {
+              "t": "しながら",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "object"
+            },
+            {
+              "t": "枚",
+              "r": "まい",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "薄",
+              "r": "うす",
+              "g": "object"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "紙",
+              "r": "かみ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "差",
+              "r": "さ",
+              "g": "predicate"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "出",
+              "r": "だ",
+              "g": "predicate"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "それから",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "また",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "引",
+              "r": "ひ",
+              "g": "object"
+            },
+            {
+              "t": "き",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "戸",
+              "r": "と",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "閉",
+              "r": "し",
+              "g": "predicate"
+            },
+            {
+              "t": "めた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "纸的一角上被女人的手指濡湿了。",
+        "zh": [
+          {
+            "t": "纸",
+            "r": "zhǐ",
+            "g": "subject"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "subject"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "subject"
+          },
+          {
+            "t": "角",
+            "r": "jiǎo",
+            "g": "subject"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "subject"
+          },
+          {
+            "t": "被",
+            "r": "bèi",
+            "g": "function"
+          },
+          {
+            "t": "女",
+            "r": "nǚ",
+            "g": "adverbial"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "adverbial"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "手",
+            "r": "shǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "指",
+            "r": "zhǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "濡",
+            "r": "rú",
+            "g": "predicate"
+          },
+          {
+            "t": "湿",
+            "r": "shī",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "紙",
+              "r": "かみ",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "subject"
+            },
+            {
+              "t": "隅",
+              "r": "ぐう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "女",
+              "r": "おんな",
+              "g": "adverbial"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "指",
+              "r": "ゆび",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "濡",
+              "r": "ぬ",
+              "g": "predicate"
+            },
+            {
+              "t": "れていた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

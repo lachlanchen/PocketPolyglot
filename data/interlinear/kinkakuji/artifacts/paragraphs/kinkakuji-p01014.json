@@ -1,0 +1,173 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p01014",
+  "source_text": "\"几号？\"",
+  "source_sha256": "49c8ec05b5174e87b54f4627666f7e6a597ee1823af5325a564d56eaf6eec21c",
+  "source_normalized_sha256": "49c8ec05b5174e87b54f4627666f7e6a597ee1823af5325a564d56eaf6eec21c",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 11,
+    "grammar_token_total": 11,
+    "unit_count": 1
+  },
+  "source_chunk_id": "kinkakuji-chunk-1014",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第七章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第七章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p01014",
+    "source_text": "\"几号？\"",
+    "units": [
+      {
+        "source_text": "\"几号？\"",
+        "zh": [
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "几",
+            "r": "jǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "号",
+            "r": "hào",
+            "g": "predicate"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "何",
+              "r": "なん",
+              "g": "predicate"
+            },
+            {
+              "t": "日",
+              "r": "にち",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "ですか",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
