@@ -12,7 +12,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from codex_chunk_worker import extract_json, load_chunks, log_mentions_usage_limit, run_codex
+from codex_chunk_worker import extract_json, load_chunks, mentions_usage_limit, run_codex
 from normalize_grammar_roles import cleanup_components, normalize_node, normalize_ruby_token_shapes
 from reference_windows import expand_adjacent_jp_references
 from review_backfix_interlinear_chunks import json_sha, repair_prompt, review_chunk
@@ -199,7 +199,7 @@ def main() -> int:
                         if validation:
                             raise ValueError("; ".join(validation[:80]))
                     except Exception as exc:
-                        if log_mentions_usage_limit(log_path):
+                        if mentions_usage_limit(str(exc)):
                             write_json(
                                 status_dir / f"{chunk_id}.json",
                                 status_record("usage_limit", worker_id=args.worker_id, attempt=attempt),
