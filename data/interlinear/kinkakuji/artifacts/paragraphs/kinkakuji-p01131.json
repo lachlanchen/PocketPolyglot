@@ -1,0 +1,214 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p01131",
+  "source_text": "\"钱？向朋友借呗。\"",
+  "source_sha256": "b996fb050eb6e95ea935020b689c5bb782362bf56e7896eb9eaa848e7992fa32",
+  "source_normalized_sha256": "b996fb050eb6e95ea935020b689c5bb782362bf56e7896eb9eaa848e7992fa32",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 17,
+    "grammar_token_total": 17,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kinkakuji-chunk-1131",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第八章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "八",
+        "r": "bā",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "八",
+        "r": "はち",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第八章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "八",
+        "r": "bā",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "八",
+        "r": "はち",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p01131",
+    "source_text": "\"钱？向朋友借呗。\"",
+    "units": [
+      {
+        "source_text": "\"钱？",
+        "zh": [
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "钱",
+            "r": "qián",
+            "g": "object"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "金",
+              "r": "かね",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "のことか？",
+              "r": "",
+              "g": "object"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "向朋友借呗。\"",
+        "zh": [
+          {
+            "t": "向",
+            "r": "xiàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "朋",
+            "r": "péng",
+            "g": "adverbial"
+          },
+          {
+            "t": "友",
+            "r": "yǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "借",
+            "r": "jiè",
+            "g": "predicate"
+          },
+          {
+            "t": "呗",
+            "r": "bei",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "友",
+              "r": "ゆう",
+              "g": "adverbial"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "adverbial"
+            },
+            {
+              "t": "から",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "借",
+              "r": "か",
+              "g": "predicate"
+            },
+            {
+              "t": "りればいい。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
