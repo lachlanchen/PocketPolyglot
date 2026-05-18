@@ -28,7 +28,7 @@ from normalize_grammar_roles import cleanup_components, normalize_node, normaliz
 from reference_windows import expand_adjacent_jp_references
 from validate_interlinear_json import ja_lines_text, normalize
 
-PROMPT_VERSION = "broad-post-merge-review-v3"
+PROMPT_VERSION = "broad-post-merge-review-v4"
 CONTENT_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaffぁ-ゟ゠-ヿA-Za-z0-9]")
 HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 SENTENCE_END_RE = re.compile(r"[。！？!?]")
@@ -361,6 +361,9 @@ def repair_prompt(source: dict[str, Any], current: dict[str, Any], issues: list[
         Fix every class of issue, not only grammar:
         - Preserve every original Chinese OCR/source paragraph exactly in paragraph.source_text and keep paragraph ids/order exact.
         - If this source requires OCR cleanup, keep paragraph.corrected_text as the reader-facing corrected Chinese and make the zh tokens reconstruct corrected_text, not the noisy OCR. Correct clear OCR errors, punctuation breaks, accidental ASCII garbage, and page debris without summarizing or inventing story content.
+        - For OCR cleanup, actively repair character-level nonsense by context: compare the story title, place, neighboring sentences, and supplied reference window; fix plausible misrecognized Chinese characters, broken names, broken idioms, and sentence fragments. Do not translate or preserve OCR garbage as if it were real prose.
+        - When OCR damage is obvious but the exact original is uncertain, choose the most conservative fluent Chinese reading that preserves the event, people, place, and sequence. Mark only paragraph.source_text as the raw evidence; paragraph.corrected_text and zh tokens must be clean reader text.
+        - Do not let OCR noise leak into Japanese. Japanese comment text should correspond to corrected_text and the supplied reference/order, not to garbled OCR.
         - Split at sentence or short clause level so the interline is line-based and readable.
         {japanese_source_rule}
         - Ensure every Chinese Han token has pinyin on its own single-character token.
