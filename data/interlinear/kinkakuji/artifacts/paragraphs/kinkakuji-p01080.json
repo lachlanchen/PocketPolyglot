@@ -1,0 +1,384 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p01080",
+  "source_text": "我步入一块旱地。环顾四周，是一片荒凉的土地。",
+  "source_sha256": "6731312fd73dda23dfdd48ac7ad60707cfa75033970ed59d1ec3dc2bc8c54a7e",
+  "source_normalized_sha256": "6731312fd73dda23dfdd48ac7ad60707cfa75033970ed59d1ec3dc2bc8c54a7e",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 51,
+    "grammar_token_total": 51,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kinkakuji-chunk-1080",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第七章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第七章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p01080",
+    "source_text": "我步入一块旱地。环顾四周，是一片荒凉的土地。",
+    "units": [
+      {
+        "source_text": "我步入一块旱地。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "步",
+            "r": "bù",
+            "g": "predicate"
+          },
+          {
+            "t": "入",
+            "r": "rù",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "attributive"
+          },
+          {
+            "t": "块",
+            "r": "kuài",
+            "g": "attributive"
+          },
+          {
+            "t": "旱",
+            "r": "hàn",
+            "g": "object"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "一",
+              "r": "いっ",
+              "g": "attributive"
+            },
+            {
+              "t": "片",
+              "r": "ぺん",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "乾",
+              "r": "かわ",
+              "g": "attributive"
+            },
+            {
+              "t": "いた",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "土",
+              "r": "と",
+              "g": "object"
+            },
+            {
+              "t": "地",
+              "r": "ち",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "入",
+              "r": "はい",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "环顾四周，是一片荒凉的土地。",
+        "zh": [
+          {
+            "t": "环",
+            "r": "huán",
+            "g": "adverbial"
+          },
+          {
+            "t": "顾",
+            "r": "gù",
+            "g": "adverbial"
+          },
+          {
+            "t": "四",
+            "r": "sì",
+            "g": "adverbial"
+          },
+          {
+            "t": "周",
+            "r": "zhōu",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "attributive"
+          },
+          {
+            "t": "片",
+            "r": "piàn",
+            "g": "attributive"
+          },
+          {
+            "t": "荒",
+            "r": "huāng",
+            "g": "attributive"
+          },
+          {
+            "t": "凉",
+            "r": "liáng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "土",
+            "r": "tǔ",
+            "g": "object"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "四",
+              "r": "し",
+              "g": "adverbial"
+            },
+            {
+              "t": "方",
+              "r": "ほう",
+              "g": "adverbial"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "adverbial"
+            },
+            {
+              "t": "回",
+              "r": "まわ",
+              "g": "adverbial"
+            },
+            {
+              "t": "すと",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "そこ",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "荒",
+              "r": "こう",
+              "g": "attributive"
+            },
+            {
+              "t": "涼",
+              "r": "りょう",
+              "g": "attributive"
+            },
+            {
+              "t": "とした",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "土",
+              "r": "と",
+              "g": "object"
+            },
+            {
+              "t": "地",
+              "r": "ち",
+              "g": "object"
+            },
+            {
+              "t": "だった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

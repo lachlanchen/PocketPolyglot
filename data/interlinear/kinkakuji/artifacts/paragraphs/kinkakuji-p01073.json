@@ -1,0 +1,404 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p01073",
+  "source_text": "\"他大概是在钓鲻鱼吧。倘使是垂钓鲻鱼，那么这就说明距河口已经不远了。\"",
+  "source_sha256": "e3d3a7625328d69033f515b56c9169369b4c216b6cb1f821bed14f30bb1acba1",
+  "source_normalized_sha256": "e3d3a7625328d69033f515b56c9169369b4c216b6cb1f821bed14f30bb1acba1",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 55,
+    "grammar_token_total": 55,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kinkakuji-chunk-1073",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第七章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第七章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p01073",
+    "source_text": "\"他大概是在钓鲻鱼吧。倘使是垂钓鲻鱼，那么这就说明距河口已经不远了。\"",
+    "units": [
+      {
+        "source_text": "\"他大概是在钓鲻鱼吧。",
+        "zh": [
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "adverbial"
+          },
+          {
+            "t": "概",
+            "r": "gài",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "钓",
+            "r": "diào",
+            "g": "predicate"
+          },
+          {
+            "t": "鲻",
+            "r": "zī",
+            "g": "object"
+          },
+          {
+            "t": "鱼",
+            "r": "yú",
+            "g": "object"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "たぶん",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "ボラを",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "釣",
+              "r": "つ",
+              "g": "predicate"
+            },
+            {
+              "t": "っている",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "のだろう",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "倘使是垂钓鲻鱼，那么这就说明距河口已经不远了。\"",
+        "zh": [
+          {
+            "t": "倘",
+            "r": "tǎng",
+            "g": "adverbial"
+          },
+          {
+            "t": "使",
+            "r": "shǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "垂",
+            "r": "chuí",
+            "g": "predicate"
+          },
+          {
+            "t": "钓",
+            "r": "diào",
+            "g": "predicate"
+          },
+          {
+            "t": "鲻",
+            "r": "zī",
+            "g": "object"
+          },
+          {
+            "t": "鱼",
+            "r": "yú",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "adverbial"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "adverbial"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "明",
+            "r": "míng",
+            "g": "predicate"
+          },
+          {
+            "t": "距",
+            "r": "jù",
+            "g": "predicate"
+          },
+          {
+            "t": "河",
+            "r": "hé",
+            "g": "object"
+          },
+          {
+            "t": "口",
+            "r": "kǒu",
+            "g": "object"
+          },
+          {
+            "t": "已",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "经",
+            "r": "jīng",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "远",
+            "r": "yuǎn",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "もし",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "ボラ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "釣",
+              "r": "つ",
+              "g": "predicate"
+            },
+            {
+              "t": "りなら、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "河",
+              "r": "か",
+              "g": "object"
+            },
+            {
+              "t": "口",
+              "r": "こう",
+              "g": "object"
+            },
+            {
+              "t": "までもう",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "遠",
+              "r": "とお",
+              "g": "complement"
+            },
+            {
+              "t": "くないということだ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
