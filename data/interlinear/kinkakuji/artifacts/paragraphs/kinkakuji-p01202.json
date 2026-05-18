@@ -1,0 +1,510 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p01202",
+  "source_text": "\"这里的钞票很整洁吧。老师有个洁癖，每隔三天就让副司拿零钱到银行去兑换新票。\"",
+  "source_sha256": "12d2dbce380bb649791eda53d7d7c683724e98005f8864687ca58438782c8f9a",
+  "source_normalized_sha256": "12d2dbce380bb649791eda53d7d7c683724e98005f8864687ca58438782c8f9a",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 74,
+    "grammar_token_total": 74,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kinkakuji-chunk-1202",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第八章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "八",
+        "r": "bā",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "八",
+        "r": "はち",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第八章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "八",
+        "r": "bā",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "八",
+        "r": "はち",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p01202",
+    "source_text": "\"这里的钞票很整洁吧。老师有个洁癖，每隔三天就让副司拿零钱到银行去兑换新票。\"",
+    "units": [
+      {
+        "source_text": "\"这里的钞票很整洁吧。",
+        "zh": [
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "subject"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "subject"
+          },
+          {
+            "t": "钞",
+            "r": "chāo",
+            "g": "subject"
+          },
+          {
+            "t": "票",
+            "r": "piào",
+            "g": "subject"
+          },
+          {
+            "t": "很",
+            "r": "hěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "整",
+            "r": "zhěng",
+            "g": "predicate"
+          },
+          {
+            "t": "洁",
+            "r": "jié",
+            "g": "predicate"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「ここのお",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "札",
+              "r": "さつ",
+              "g": "subject"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "とても",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "清",
+              "r": "きよ",
+              "g": "predicate"
+            },
+            {
+              "t": "潔",
+              "r": "けつ",
+              "g": "predicate"
+            },
+            {
+              "t": "でしょう。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "老师有个洁癖，",
+        "zh": [
+          {
+            "t": "老",
+            "r": "lǎo",
+            "g": "subject"
+          },
+          {
+            "t": "师",
+            "r": "shī",
+            "g": "subject"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "个",
+            "r": "ge",
+            "g": "object"
+          },
+          {
+            "t": "洁",
+            "r": "jié",
+            "g": "object"
+          },
+          {
+            "t": "癖",
+            "r": "pǐ",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "老",
+              "r": "ろう",
+              "g": "subject"
+            },
+            {
+              "t": "師",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "には、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "潔",
+              "r": "けっ",
+              "g": "object"
+            },
+            {
+              "t": "癖",
+              "r": "ぺき",
+              "g": "object"
+            },
+            {
+              "t": "があります、",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "每隔三天就让副司拿零钱到银行去兑换新票。\"",
+        "zh": [
+          {
+            "t": "每",
+            "r": "měi",
+            "g": "adverbial"
+          },
+          {
+            "t": "隔",
+            "r": "gé",
+            "g": "adverbial"
+          },
+          {
+            "t": "三",
+            "r": "sān",
+            "g": "adverbial"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "让",
+            "r": "ràng",
+            "g": "predicate"
+          },
+          {
+            "t": "副",
+            "r": "fù",
+            "g": "object"
+          },
+          {
+            "t": "司",
+            "r": "sī",
+            "g": "object"
+          },
+          {
+            "t": "拿",
+            "r": "ná",
+            "g": "predicate"
+          },
+          {
+            "t": "零",
+            "r": "líng",
+            "g": "object"
+          },
+          {
+            "t": "钱",
+            "r": "qián",
+            "g": "object"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "adverbial"
+          },
+          {
+            "t": "银",
+            "r": "yín",
+            "g": "adverbial"
+          },
+          {
+            "t": "行",
+            "r": "háng",
+            "g": "adverbial"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "predicate"
+          },
+          {
+            "t": "兑",
+            "r": "duì",
+            "g": "predicate"
+          },
+          {
+            "t": "换",
+            "r": "huàn",
+            "g": "predicate"
+          },
+          {
+            "t": "新",
+            "r": "xīn",
+            "g": "object"
+          },
+          {
+            "t": "票",
+            "r": "piào",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "三",
+              "r": "みっ",
+              "g": "adverbial"
+            },
+            {
+              "t": "日",
+              "r": "か",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "adverbial"
+            },
+            {
+              "t": "度",
+              "r": "ど",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "副",
+              "r": "ふく",
+              "g": "object"
+            },
+            {
+              "t": "司",
+              "r": "す",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "小",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "銭",
+              "r": "ぜに",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "持",
+              "r": "も",
+              "g": "predicate"
+            },
+            {
+              "t": "たせ、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "銀",
+              "r": "ぎん",
+              "g": "adverbial"
+            },
+            {
+              "t": "行",
+              "r": "こう",
+              "g": "adverbial"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "新",
+              "r": "しん",
+              "g": "object"
+            },
+            {
+              "t": "札",
+              "r": "さつ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "替",
+              "r": "か",
+              "g": "predicate"
+            },
+            {
+              "t": "えさせます。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
