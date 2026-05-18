@@ -58,7 +58,7 @@ mkdir -p \
   "$review_root" "$review_root/logs" "$review_candidate_dir" "$review_merged_dir" "$review_rejected_dir" \
   "$reviewed_chunk_dir" "$log_dir"
 
-if tmux has-session -t "$session" 2>/dev/null; then
+if tmux has-session -t "=$session" 2>/dev/null; then
   echo "tmux session already exists: $session" >&2
   exit 1
 fi

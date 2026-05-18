@@ -22,6 +22,9 @@ DEFAULT_QUEUE = [
     "no-longer-human",
     "rashomon-stories",
     "kinkakuji",
+    "sishu-jizhu",
+    "shiji",
+    "kojiki",
     "woman-in-the-dunes",
     "genji-modern",
     "chumon-no-ooi-ryoriten",
@@ -49,7 +52,7 @@ def run(cmd: list[str], *, env: dict[str, str] | None = None, quiet: bool = Fals
 def tmux_active(session: str) -> bool:
     return (
         subprocess.run(
-            ["tmux", "has-session", "-t", session],
+            ["tmux", "has-session", "-t", f"={session}"],
             cwd=ROOT,
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,

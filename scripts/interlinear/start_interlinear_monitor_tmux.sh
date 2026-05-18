@@ -23,7 +23,7 @@ reviewed_stage="${REVIEWED_STAGE:-1}"
 monitor_dir="books/$book_id/work/monitor"
 mkdir -p "$monitor_dir"
 
-if tmux has-session -t "$session" 2>/dev/null; then
+if tmux has-session -t "=$session" 2>/dev/null; then
   echo "tmux monitor already exists: $session"
   exit 0
 fi

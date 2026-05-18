@@ -60,7 +60,7 @@ def run(cmd: list[str], *, env: dict[str, str] | None = None, quiet: bool = Fals
 def tmux_active(session: str) -> bool:
     if not session:
         return False
-    return subprocess.run(["tmux", "has-session", "-t", session], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode == 0
+    return subprocess.run(["tmux", "has-session", "-t", f"={session}"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode == 0
 
 
 def parse_report(text: str) -> dict[str, str]:

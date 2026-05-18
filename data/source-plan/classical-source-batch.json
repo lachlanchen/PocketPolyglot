@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "description": "Classical public-domain source queue prepared from local generated HTML/PDF text sources.",
+  "default_model": "gpt-5.5",
+  "default_reasoning": "medium",
+  "queue_after": "kinkakuji",
+  "books": [
+    {
+      "book_id": "sishu-jizhu",
+      "status": "launchable",
+      "source_language": "zh",
+      "source_type": "html",
+      "source_path": "sources/四書章句集註（維基文庫） - 朱熹.json",
+      "local_ja_source_path": "sources/四書 仮名附（NDL公開） - 朱熹 集注・後藤嘉幸 点.pdf",
+      "book_title_zh": "四書章句集註",
+      "book_title_ja": "四書章句集注",
+      "author": "朱熹",
+      "task_mode": "zh_main_generate_jp_comment"
+    },
+    {
+      "book_id": "shiji",
+      "status": "launchable",
+      "source_language": "zh",
+      "source_type": "html",
+      "source_path": "sources/史記（中國哲學書電子化計劃） - 司馬遷.json",
+      "secondary_zh_source_path": "sources/史記（維基文庫文言文） - 司馬遷.json",
+      "ja_source_path": "sources/史記（日本語ウィキソース） - 司馬遷.json",
+      "local_scan_source_path": "sources/史記三家注 【漢】司馬遷 （中華書局，1959）.pdf",
+      "book_title_zh": "史記",
+      "book_title_ja": "史記",
+      "author": "司馬遷",
+      "task_mode": "zh_main_with_ja_source_reference"
+    },
+    {
+      "book_id": "kojiki",
+      "status": "launchable",
+      "source_language": "zh",
+      "source_type": "pdf_text",
+      "source_path": "sources/古事記.pdf",
+      "local_ja_source_path": "sources/古事記 (2).pdf",
+      "local_en_source_path": "sources/Kojiki_ Records Of Ancient Matters.pdf",
+      "book_title_zh": "古事記",
+      "book_title_ja": "古事記",
+      "author": "太安萬侶・稗田阿礼",
+      "task_mode": "zh_main_generate_jp_comment"
+    }
+  ]
+}

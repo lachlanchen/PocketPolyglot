@@ -15,12 +15,12 @@ reasoning="${REASONING:-medium}"
 log_dir="books/$ready_book_id/work/monitor"
 mkdir -p "$log_dir"
 
-if tmux has-session -t "$session" 2>/dev/null; then
+if tmux has-session -t "=$session" 2>/dev/null; then
   echo "tmux prepared queue already exists: $session"
   exit 0
 fi
 
-book_ids="${BOOK_IDS:-kinkakuji woman-in-the-dunes genji-modern chumon-no-ooi-ryoriten ginga-tetsudo}"
+book_ids="${BOOK_IDS:-kinkakuji sishu-jizhu shiji kojiki woman-in-the-dunes genji-modern chumon-no-ooi-ryoriten ginga-tetsudo}"
 book_args=()
 read -r -a ids <<< "$book_ids"
 for id in "${ids[@]}"; do
