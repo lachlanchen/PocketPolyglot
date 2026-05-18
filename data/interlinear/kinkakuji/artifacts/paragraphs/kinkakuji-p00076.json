@@ -1,0 +1,901 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p00076",
+  "source_text": "金刚院的佛殿建在更高处。过了独木桥，右侧是王重塔，左侧是枫林，再往里走，就可以看见巍然的一百零五级缀满苦踪的石阶。这是石灰石台阶，容易沿跤。",
+  "source_sha256": "c55137b857bd96fd8325cba800009d4c329ca4ec8545184be926f9f64d04ac7a",
+  "source_normalized_sha256": "c55137b857bd96fd8325cba800009d4c329ca4ec8545184be926f9f64d04ac7a",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 150,
+    "grammar_token_total": 150,
+    "unit_count": 4
+  },
+  "source_chunk_id": "kinkakuji-chunk-0076",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第一章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第一章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p00076",
+    "source_text": "金刚院的佛殿建在更高处。过了独木桥，右侧是王重塔，左侧是枫林，再往里走，就可以看见巍然的一百零五级缀满苦踪的石阶。这是石灰石台阶，容易沿跤。",
+    "units": [
+      {
+        "source_text": "金刚院的佛殿建在更高处。",
+        "zh": [
+          {
+            "t": "金",
+            "r": "jīn",
+            "g": "attributive"
+          },
+          {
+            "t": "刚",
+            "r": "gāng",
+            "g": "attributive"
+          },
+          {
+            "t": "院",
+            "r": "yuàn",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "佛",
+            "r": "fó",
+            "g": "subject"
+          },
+          {
+            "t": "殿",
+            "r": "diàn",
+            "g": "subject"
+          },
+          {
+            "t": "建",
+            "r": "jiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "complement"
+          },
+          {
+            "t": "更",
+            "r": "gèng",
+            "g": "complement"
+          },
+          {
+            "t": "高",
+            "r": "gāo",
+            "g": "complement"
+          },
+          {
+            "t": "处",
+            "r": "chù",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "金",
+              "r": "きん",
+              "g": "attributive"
+            },
+            {
+              "t": "剛",
+              "r": "ごう",
+              "g": "attributive"
+            },
+            {
+              "t": "院",
+              "r": "いん",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "仏",
+              "r": "ぶつ",
+              "g": "subject"
+            },
+            {
+              "t": "殿",
+              "r": "でん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "さらに",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "高",
+              "r": "たか",
+              "g": "complement"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "所",
+              "r": "ところ",
+              "g": "complement"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "建",
+              "r": "た",
+              "g": "predicate"
+            },
+            {
+              "t": "っている",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "过了独木桥，右侧是王重塔，左侧是枫林，",
+        "zh": [
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "独",
+            "r": "dú",
+            "g": "object"
+          },
+          {
+            "t": "木",
+            "r": "mù",
+            "g": "object"
+          },
+          {
+            "t": "桥",
+            "r": "qiáo",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "右",
+            "r": "yòu",
+            "g": "subject"
+          },
+          {
+            "t": "侧",
+            "r": "cè",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "object"
+          },
+          {
+            "t": "重",
+            "r": "chóng",
+            "g": "object"
+          },
+          {
+            "t": "塔",
+            "r": "tǎ",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "左",
+            "r": "zuǒ",
+            "g": "subject"
+          },
+          {
+            "t": "侧",
+            "r": "cè",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "枫",
+            "r": "fēng",
+            "g": "object"
+          },
+          {
+            "t": "林",
+            "r": "lín",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "丸",
+              "r": "まる",
+              "g": "object"
+            },
+            {
+              "t": "木",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "橋",
+              "r": "ばし",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "渡",
+              "r": "わた",
+              "g": "predicate"
+            },
+            {
+              "t": "ると",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "右",
+              "r": "みぎ",
+              "g": "subject"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "subject"
+            },
+            {
+              "t": "には",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "王",
+              "r": "おう",
+              "g": "object"
+            },
+            {
+              "t": "重",
+              "r": "ちょう",
+              "g": "object"
+            },
+            {
+              "t": "塔",
+              "r": "とう",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "あり",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "左",
+              "r": "ひだり",
+              "g": "subject"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "subject"
+            },
+            {
+              "t": "には",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "楓",
+              "r": "かえで",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "林",
+              "r": "はやし",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "ある",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "再往里走，就可以看见巍然的一百零五级缀满苦踪的石阶。",
+        "zh": [
+          {
+            "t": "再",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "往",
+            "r": "wǎng",
+            "g": "adverbial"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "走",
+            "r": "zǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "predicate"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "predicate"
+          },
+          {
+            "t": "见",
+            "r": "jiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "巍",
+            "r": "wēi",
+            "g": "attributive"
+          },
+          {
+            "t": "然",
+            "r": "rán",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "attributive"
+          },
+          {
+            "t": "百",
+            "r": "bǎi",
+            "g": "attributive"
+          },
+          {
+            "t": "零",
+            "r": "líng",
+            "g": "attributive"
+          },
+          {
+            "t": "五",
+            "r": "wǔ",
+            "g": "attributive"
+          },
+          {
+            "t": "级",
+            "r": "jí",
+            "g": "attributive"
+          },
+          {
+            "t": "缀",
+            "r": "zhuì",
+            "g": "attributive"
+          },
+          {
+            "t": "满",
+            "r": "mǎn",
+            "g": "attributive"
+          },
+          {
+            "t": "苦",
+            "r": "kǔ",
+            "g": "attributive"
+          },
+          {
+            "t": "踪",
+            "r": "zōng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "石",
+            "r": "shí",
+            "g": "object"
+          },
+          {
+            "t": "阶",
+            "r": "jiē",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "さらに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "奥",
+              "r": "おく",
+              "g": "adverbial"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "進",
+              "r": "すす",
+              "g": "predicate"
+            },
+            {
+              "t": "むと",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "堂",
+              "r": "どう",
+              "g": "attributive"
+            },
+            {
+              "t": "々",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "とした",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "百",
+              "r": "ひゃく",
+              "g": "attributive"
+            },
+            {
+              "t": "五",
+              "r": "ご",
+              "g": "attributive"
+            },
+            {
+              "t": "段",
+              "r": "だん",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "苦",
+              "r": "く",
+              "g": "attributive"
+            },
+            {
+              "t": "渋",
+              "r": "じゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "跡",
+              "r": "あと",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "満",
+              "r": "み",
+              "g": "attributive"
+            },
+            {
+              "t": "たした",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "石",
+              "r": "いし",
+              "g": "object"
+            },
+            {
+              "t": "段",
+              "r": "だん",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "える",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "这是石灰石台阶，容易沿跤。",
+        "zh": [
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "石",
+            "r": "shí",
+            "g": "object"
+          },
+          {
+            "t": "灰",
+            "r": "huī",
+            "g": "object"
+          },
+          {
+            "t": "石",
+            "r": "shí",
+            "g": "object"
+          },
+          {
+            "t": "台",
+            "r": "tái",
+            "g": "object"
+          },
+          {
+            "t": "阶",
+            "r": "jiē",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "容",
+            "r": "róng",
+            "g": "predicate"
+          },
+          {
+            "t": "易",
+            "r": "yì",
+            "g": "predicate"
+          },
+          {
+            "t": "沿",
+            "r": "yán",
+            "g": "complement"
+          },
+          {
+            "t": "跤",
+            "r": "jiāo",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "これは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "石",
+              "r": "せっ",
+              "g": "object"
+            },
+            {
+              "t": "灰",
+              "r": "かい",
+              "g": "object"
+            },
+            {
+              "t": "石",
+              "r": "せき",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "階",
+              "r": "かい",
+              "g": "object"
+            },
+            {
+              "t": "段",
+              "r": "だん",
+              "g": "object"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "滑",
+              "r": "すべ",
+              "g": "predicate"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "転",
+              "r": "ころ",
+              "g": "complement"
+            },
+            {
+              "t": "びやすい",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
