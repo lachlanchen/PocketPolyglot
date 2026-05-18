@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 82,
-    "grammar_token_total": 82,
-    "unit_count": 2
+    "token_total": 85,
+    "grammar_token_total": 85,
+    "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0643",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -283,6 +283,7 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00643",
     "source_text": "很早以前,天上突然出现了十个太阳.地工到处热喷喷的,田土进履,大河小河现了底",
+    "corrected_text": "很早以前,天上突然出现了十个太阳.地上到处热喷喷的,田土龟裂,大河小河见了底",
     "units": [
       {
         "source_text": "很早以前,天上突然出现了十个太阳.",
@@ -461,7 +462,7 @@
         ]
       },
       {
-        "source_text": "地工到处热喷喷的,田土进履,大河小河现了底",
+        "source_text": "地上到处热喷喷的,",
         "zh": [
           {
             "t": "地",
@@ -469,8 +470,8 @@
             "g": "subject"
           },
           {
-            "t": "工",
-            "r": "gōng",
+            "t": "上",
+            "r": "shàng",
             "g": "subject"
           },
           {
@@ -507,7 +508,68 @@
             "t": ",",
             "r": "",
             "g": "function"
-          },
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "地",
+              "r": "ち",
+              "g": "subject"
+            },
+            {
+              "t": "上",
+              "r": "じょう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "どこも",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "熱",
+              "r": "ねつ",
+              "g": "predicate"
+            },
+            {
+              "t": "気",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "噴",
+              "r": "ふ",
+              "g": "predicate"
+            },
+            {
+              "t": "いていた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "田土龟裂,大河小河见了底",
+        "zh": [
           {
             "t": "田",
             "r": "tián",
@@ -519,13 +581,13 @@
             "g": "subject"
           },
           {
-            "t": "进",
-            "r": "jìn",
+            "t": "龟",
+            "r": "guī",
             "g": "predicate"
           },
           {
-            "t": "履",
-            "r": "lǚ",
+            "t": "裂",
+            "r": "liè",
             "g": "predicate"
           },
           {
@@ -554,8 +616,8 @@
             "g": "subject"
           },
           {
-            "t": "现",
-            "r": "xiàn",
+            "t": "见",
+            "r": "jiàn",
             "g": "predicate"
           },
           {
@@ -570,58 +632,6 @@
           }
         ],
         "ja": [
-          [
-            {
-              "t": "地",
-              "r": "ち",
-              "g": "subject"
-            },
-            {
-              "t": "面",
-              "r": "めん",
-              "g": "subject"
-            },
-            {
-              "t": "は",
-              "r": "",
-              "g": "subject"
-            },
-            {
-              "t": "どこも",
-              "r": "",
-              "g": "adverbial"
-            },
-            {
-              "t": "熱",
-              "r": "ねつ",
-              "g": "predicate"
-            },
-            {
-              "t": "気",
-              "r": "き",
-              "g": "predicate"
-            },
-            {
-              "t": "を",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "噴",
-              "r": "ふ",
-              "g": "predicate"
-            },
-            {
-              "t": "き",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            }
-          ],
           [
             {
               "t": "田",
@@ -667,19 +677,16 @@
               "t": "、",
               "r": "",
               "g": "function"
-            },
+            }
+          ],
+          [
             {
               "t": "大",
               "r": "おお",
               "g": "attributive"
             },
             {
-              "t": "小",
-              "r": "しょう",
-              "g": "attributive"
-            },
-            {
-              "t": "の",
+              "t": "きな",
               "r": "",
               "g": "attributive"
             },
@@ -689,7 +696,27 @@
               "g": "subject"
             },
             {
-              "t": "は",
+              "t": "も",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "小",
+              "r": "ちい",
+              "g": "attributive"
+            },
+            {
+              "t": "さな",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "川",
+              "r": "かわ",
+              "g": "subject"
+            },
+            {
+              "t": "も",
               "r": "",
               "g": "subject"
             },

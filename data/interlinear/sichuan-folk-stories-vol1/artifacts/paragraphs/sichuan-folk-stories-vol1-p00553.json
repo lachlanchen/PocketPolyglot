@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 61,
-    "grammar_token_total": 61,
+    "token_total": 64,
+    "grammar_token_total": 64,
     "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0553",
@@ -152,7 +152,7 @@
       {
         "t": "是",
         "r": "shì",
-        "g": "predicate"
+        "g": "function"
       },
       {
         "t": "怎",
@@ -233,9 +233,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00553",
     "source_text": "女娲赶忙说要不得,要不得。照你鲈个说,女的少了就妙,那二天人些把女的生多",
+    "corrected_text": "女娲赶忙说要不得，要不得。照你啷个说，女的少了就妙，那一天人些把女的生多",
     "units": [
       {
-        "source_text": "女娲赶忙说要不得,要不得。",
+        "source_text": "女娲赶忙说要不得，要不得。",
         "zh": [
           {
             "t": "女",
@@ -274,11 +275,11 @@
           },
           {
             "t": "得",
-            "r": "de",
+            "r": "dé",
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -294,7 +295,7 @@
           },
           {
             "t": "得",
-            "r": "de",
+            "r": "dé",
             "g": "predicate"
           },
           {
@@ -311,8 +312,8 @@
               "g": "subject"
             },
             {
-              "t": "カ",
-              "r": "",
+              "t": "媧",
+              "r": "か",
               "g": "subject"
             },
             {
@@ -333,7 +334,12 @@
           ],
           [
             {
-              "t": "それはいけない、いけない、と。",
+              "t": "それはいけない、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "いけない、と。",
               "r": "",
               "g": "predicate"
             }
@@ -341,7 +347,7 @@
         ]
       },
       {
-        "source_text": "照你鲈个说,女的少了就妙,",
+        "source_text": "照你啷个说，女的少了就妙，",
         "zh": [
           {
             "t": "照",
@@ -354,14 +360,14 @@
             "g": "attributive"
           },
           {
-            "t": "鲈",
-            "r": "lú",
+            "t": "啷",
+            "r": "lāng",
             "g": "attributive"
           },
           {
             "t": "个",
             "r": "gè",
-            "g": "function"
+            "g": "attributive"
           },
           {
             "t": "说",
@@ -369,7 +375,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -404,7 +410,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -434,7 +440,7 @@
             {
               "t": "だと、",
               "r": "",
-              "g": "function"
+              "g": "predicate"
             }
           ],
           [
@@ -454,15 +460,30 @@
               "g": "predicate"
             },
             {
-              "t": "なければよいことになるが、",
+              "t": "なければ",
               "r": "",
               "g": "predicate"
+            },
+            {
+              "t": "結",
+              "r": "けっ",
+              "g": "adverbial"
+            },
+            {
+              "t": "構",
+              "r": "こう",
+              "g": "adverbial"
+            },
+            {
+              "t": "ということになるが、",
+              "r": "",
+              "g": "function"
             }
           ]
         ]
       },
       {
-        "source_text": "那二天人些把女的生多",
+        "source_text": "那一天人些把女的生多",
         "zh": [
           {
             "t": "那",
@@ -470,8 +491,8 @@
             "g": "adverbial"
           },
           {
-            "t": "二",
-            "r": "èr",
+            "t": "一",
+            "r": "yī",
             "g": "adverbial"
           },
           {
@@ -518,7 +539,7 @@
         "ja": [
           [
             {
-              "t": "そうするといつか",
+              "t": "そうしたらいつか",
               "r": "",
               "g": "adverbial"
             },
@@ -528,12 +549,7 @@
               "g": "subject"
             },
             {
-              "t": "々",
-              "r": "",
-              "g": "subject"
-            },
-            {
-              "t": "は",
+              "t": "々は",
               "r": "",
               "g": "subject"
             }
@@ -565,7 +581,7 @@
               "g": "predicate"
             },
             {
-              "t": "むことになる。",
+              "t": "むことになる",
               "r": "",
               "g": "predicate"
             }

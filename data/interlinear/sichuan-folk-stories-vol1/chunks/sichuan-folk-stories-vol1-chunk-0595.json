@@ -217,9 +217,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00595",
       "source_text": "嫦娥高兴地说注你再射几个下来吧呈",
+      "corrected_text": "嫦娥高兴地说：“你再射几个下来吧！”",
       "units": [
         {
-          "source_text": "嫦娥高兴地说注",
+          "source_text": "嫦娥高兴地说：",
           "zh": [
             {
               "t": "嫦",
@@ -252,8 +253,8 @@
               "g": "predicate"
             },
             {
-              "t": "注",
-              "r": "zhù",
+              "t": "：",
+              "r": "",
               "g": "function"
             }
           ],
@@ -295,8 +296,13 @@
           ]
         },
         {
-          "source_text": "你再射几个下来吧呈",
+          "source_text": "“你再射几个下来吧！”",
           "zh": [
+            {
+              "t": "“",
+              "r": "",
+              "g": "function"
+            },
             {
               "t": "你",
               "r": "nǐ",
@@ -338,8 +344,13 @@
               "g": "function"
             },
             {
-              "t": "呈",
-              "r": "chéng",
+              "t": "！",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "”",
+              "r": "",
               "g": "function"
             }
           ],

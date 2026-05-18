@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 73,
-    "grammar_token_total": 73,
+    "token_total": 75,
+    "grammar_token_total": 75,
     "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0503",
@@ -152,17 +152,17 @@
       {
         "t": "尝",
         "r": "cháng",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "百",
         "r": "bǎi",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "草",
         "r": "cǎo",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "（",
@@ -172,12 +172,12 @@
       {
         "t": "高",
         "r": "gāo",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "县",
         "r": "xiàn",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "）",
@@ -187,7 +187,7 @@
       {
         "t": "Zamy/heept",
         "r": "",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "传",
@@ -234,27 +234,27 @@
       {
         "t": "百",
         "r": "ひゃく",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "草",
         "r": "そう",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "を",
         "r": "",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "嘗",
         "r": "な",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "める",
         "r": "",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "（",
@@ -264,12 +264,12 @@
       {
         "t": "高",
         "r": "こう",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "県",
         "r": "けん",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "）",
@@ -279,6 +279,16 @@
       {
         "t": "Zamy/heept",
         "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "topic"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
         "g": "topic"
       }
     ],
@@ -288,6 +298,7 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00503",
     "source_text": "远古时候,人类生活很艰苦,有很多疾病给人类带来痛苦。这些疾病是昨个来的呢?",
+    "corrected_text": "远古时候,人类生活很艰苦,有很多疾病给人类带来痛苦。这些疾病是咋个来的呢?",
     "units": [
       {
         "source_text": "远古时候,人类生活很艰苦,有很多疾病给人类带来痛苦。",
@@ -340,7 +351,7 @@
           {
             "t": "很",
             "r": "hěn",
-            "g": "predicate"
+            "g": "adverbial"
           },
           {
             "t": "艰",
@@ -365,12 +376,12 @@
           {
             "t": "很",
             "r": "hěn",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "多",
             "r": "duō",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "疾",
@@ -481,12 +492,12 @@
               "g": "predicate"
             },
             {
-              "t": "しく",
+              "t": "しかった",
               "r": "",
               "g": "predicate"
             },
             {
-              "t": "、",
+              "t": "。",
               "r": "",
               "g": "function"
             }
@@ -495,12 +506,12 @@
             {
               "t": "多",
               "r": "おお",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "くの",
               "r": "",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "病",
@@ -513,7 +524,7 @@
               "g": "subject"
             },
             {
-              "t": "あって",
+              "t": "あり",
               "r": "",
               "g": "predicate"
             },
@@ -566,7 +577,7 @@
         ]
       },
       {
-        "source_text": "这些疾病是昨个来的呢?",
+        "source_text": "这些疾病是咋个来的呢?",
         "zh": [
           {
             "t": "这",
@@ -594,14 +605,14 @@
             "g": "predicate"
           },
           {
-            "t": "昨",
-            "r": "zuó",
-            "g": "complement"
+            "t": "咋",
+            "r": "zǎ",
+            "g": "adverbial"
           },
           {
             "t": "个",
             "r": "ge",
-            "g": "complement"
+            "g": "adverbial"
           },
           {
             "t": "来",
@@ -654,9 +665,19 @@
               "g": "adverbial"
             },
             {
-              "t": "どこから",
+              "t": "どうして",
               "r": "",
-              "g": "complement"
+              "g": "adverbial"
+            },
+            {
+              "t": "生",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "まれて",
+              "r": "",
+              "g": "predicate"
             },
             {
               "t": "来",

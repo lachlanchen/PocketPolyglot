@@ -257,9 +257,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00525",
       "source_text": "4，闻疹宝:蛤时。",
+      "corrected_text": "4，问诊宝：蛤蚧。",
       "units": [
         {
-          "source_text": "4，闻疹宝:蛤时。",
+          "source_text": "4，问诊宝：蛤蚧。",
           "zh": [
             {
               "t": "4",
@@ -272,33 +273,33 @@
               "g": "function"
             },
             {
-              "t": "闻",
-              "r": "wén",
-              "g": "predicate"
+              "t": "问",
+              "r": "wèn",
+              "g": "attributive"
             },
             {
-              "t": "疹",
+              "t": "诊",
               "r": "zhěn",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "宝",
               "r": "bǎo",
-              "g": "object"
+              "g": "subject"
             },
             {
-              "t": ":",
+              "t": "：",
               "r": "",
               "g": "function"
             },
             {
               "t": "蛤",
               "r": "gé",
-              "g": "attributive"
+              "g": "object"
             },
             {
-              "t": "时",
-              "r": "shí",
+              "t": "蚧",
+              "r": "jiè",
               "g": "object"
             },
             {
@@ -320,29 +321,24 @@
                 "g": "function"
               },
               {
-                "t": "疹",
+                "t": "問",
+                "r": "もん",
+                "g": "attributive"
+              },
+              {
+                "t": "診",
                 "r": "しん",
-                "g": "object"
+                "g": "attributive"
+              },
+              {
+                "t": "の",
+                "r": "",
+                "g": "attributive"
               },
               {
                 "t": "宝",
-                "r": "ぽう",
-                "g": "object"
-              },
-              {
-                "t": "を",
-                "r": "",
-                "g": "object"
-              },
-              {
-                "t": "聞",
-                "r": "き",
-                "g": "predicate"
-              },
-              {
-                "t": "く",
-                "r": "",
-                "g": "predicate"
+                "r": "たから",
+                "g": "subject"
               },
               {
                 "t": "：",
@@ -353,17 +349,12 @@
             [
               {
                 "t": "蛤",
-                "r": "はまぐり",
-                "g": "attributive"
+                "r": "ごう",
+                "g": "object"
               },
               {
-                "t": "の",
-                "r": "",
-                "g": "attributive"
-              },
-              {
-                "t": "時",
-                "r": "とき",
+                "t": "蚧",
+                "r": "かい",
                 "g": "object"
               },
               {

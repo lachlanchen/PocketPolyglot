@@ -232,9 +232,19 @@
         "g": "subject"
       },
       {
-        "t": "はどうしてできたのか",
+        "t": "はどうして",
         "r": "",
+        "g": "adverbial"
+      },
+      {
+        "t": "来",
+        "r": "き",
         "g": "predicate"
+      },
+      {
+        "t": "たのか",
+        "r": "",
+        "g": "function"
       },
       {
         "t": "（",
@@ -268,9 +278,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00577",
     "source_text": "真的?",
+    "corrected_text": "真的？",
     "units": [
       {
-        "source_text": "真的?",
+        "source_text": "真的？",
         "zh": [
           {
             "t": "真",
@@ -283,7 +294,7 @@
             "g": "predicate"
           },
           {
-            "t": "?",
+            "t": "？",
             "r": "",
             "g": "function"
           }
@@ -310,10 +321,10 @@
             {
               "t": "そうなのか",
               "r": "",
-              "g": "predicate"
+              "g": "function"
             },
             {
-              "t": "?",
+              "t": "？",
               "r": "",
               "g": "function"
             }

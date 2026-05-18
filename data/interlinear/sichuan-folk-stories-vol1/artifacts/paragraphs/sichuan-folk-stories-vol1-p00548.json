@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 122,
-    "grammar_token_total": 122,
-    "unit_count": 2
+    "token_total": 128,
+    "grammar_token_total": 128,
+    "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0548",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -248,9 +248,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00548",
     "source_text": "仓颜有个毛病,他看不起女的,扣认为好多坏事都和女人有关。他在造字的时候就秽了心,把那些意思不好的字,拿来给女人拼在 起,人些也认为就是优个的。",
+    "corrected_text": "仓颉有个毛病，他看不起女的，他认为好多坏事都和女人有关。他在造字的时候就坏了心，把那些意思不好的字，拿来给女人拼在一起，人们也认为就是这样的。",
     "units": [
       {
-        "source_text": "仓颜有个毛病,他看不起女的,扣认为好多坏事都和女人有关。",
+        "source_text": "仓颉有个毛病，他看不起女的，他认为好多坏事都和女人有关。",
         "zh": [
           {
             "t": "仓",
@@ -258,8 +259,8 @@
             "g": "subject"
           },
           {
-            "t": "颜",
-            "r": "yán",
+            "t": "颉",
+            "r": "jié",
             "g": "subject"
           },
           {
@@ -283,7 +284,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -318,13 +319,13 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
           {
-            "t": "扣",
-            "r": "kòu",
+            "t": "他",
+            "r": "tā",
             "g": "subject"
           },
           {
@@ -401,8 +402,8 @@
               "g": "subject"
             },
             {
-              "t": "顔",
-              "r": "がん",
+              "t": "頡",
+              "r": "けつ",
               "g": "subject"
             },
             {
@@ -463,9 +464,14 @@
           ],
           [
             {
-              "t": "そのうえ",
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
               "r": "",
-              "g": "adverbial"
+              "g": "subject"
             },
             {
               "t": "多",
@@ -493,7 +499,7 @@
               "g": "subject"
             },
             {
-              "t": "は",
+              "t": "が",
               "r": "",
               "g": "subject"
             },
@@ -509,11 +515,16 @@
             },
             {
               "t": "関",
-              "r": "かか",
+              "r": "かん",
               "g": "predicate"
             },
             {
-              "t": "わると",
+              "t": "係",
+              "r": "けい",
+              "g": "predicate"
+            },
+            {
+              "t": "すると",
               "r": "",
               "g": "predicate"
             },
@@ -531,7 +542,7 @@
         ]
       },
       {
-        "source_text": "他在造字的时候就秽了心,把那些意思不好的字,拿来给女人拼在 起,人些也认为就是优个的。",
+        "source_text": "他在造字的时候就坏了心，把那些意思不好的字，拿来给女人拼在一起，",
         "zh": [
           {
             "t": "他",
@@ -574,8 +585,8 @@
             "g": "adverbial"
           },
           {
-            "t": "秽",
-            "r": "huì",
+            "t": "坏",
+            "r": "huài",
             "g": "predicate"
           },
           {
@@ -589,7 +600,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -621,7 +632,7 @@
           {
             "t": "不",
             "r": "bù",
-            "g": "attributive"
+            "g": "adverbial"
           },
           {
             "t": "好",
@@ -639,7 +650,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -679,9 +690,9 @@
             "g": "predicate"
           },
           {
-            "t": " ",
-            "r": "",
-            "g": "function"
+            "t": "一",
+            "r": "yì",
+            "g": "complement"
           },
           {
             "t": "起",
@@ -689,62 +700,7 @@
             "g": "complement"
           },
           {
-            "t": ",",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "人",
-            "r": "rén",
-            "g": "subject"
-          },
-          {
-            "t": "些",
-            "r": "xiē",
-            "g": "subject"
-          },
-          {
-            "t": "也",
-            "r": "yě",
-            "g": "adverbial"
-          },
-          {
-            "t": "认",
-            "r": "rèn",
-            "g": "predicate"
-          },
-          {
-            "t": "为",
-            "r": "wéi",
-            "g": "predicate"
-          },
-          {
-            "t": "就",
-            "r": "jiù",
-            "g": "adverbial"
-          },
-          {
-            "t": "是",
-            "r": "shì",
-            "g": "predicate"
-          },
-          {
-            "t": "优",
-            "r": "yōu",
-            "g": "object"
-          },
-          {
-            "t": "个",
-            "r": "gè",
-            "g": "object"
-          },
-          {
-            "t": "的",
-            "r": "de",
-            "g": "object"
-          },
-          {
-            "t": "。",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -777,7 +733,7 @@
               "g": "attributive"
             },
             {
-              "t": "るとき、",
+              "t": "るときに、",
               "r": "",
               "g": "adverbial"
             },
@@ -792,7 +748,12 @@
               "g": "object"
             },
             {
-              "t": "けがしていた。",
+              "t": "悪",
+              "r": "わる",
+              "g": "predicate"
+            },
+            {
+              "t": "くした。",
               "r": "",
               "g": "predicate"
             }
@@ -814,14 +775,14 @@
               "g": "attributive"
             },
             {
-              "t": "悪",
-              "r": "わる",
-              "g": "attributive"
+              "t": "良",
+              "r": "よ",
+              "g": "adverbial"
             },
             {
-              "t": "い",
+              "t": "くない",
               "r": "",
-              "g": "attributive"
+              "g": "adverbial"
             },
             {
               "t": "字",
@@ -829,7 +790,7 @@
               "g": "object"
             },
             {
-              "t": "を",
+              "t": "を、",
               "r": "",
               "g": "object"
             },
@@ -849,10 +810,74 @@
               "g": "predicate"
             },
             {
-              "t": "びつけ、",
+              "t": "びつけた。",
               "r": "",
               "g": "predicate"
-            },
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "人们也认为就是这样的。",
+        "zh": [
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "认",
+            "r": "rèn",
+            "g": "predicate"
+          },
+          {
+            "t": "为",
+            "r": "wéi",
+            "g": "predicate"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "object"
+          },
+          {
+            "t": "样",
+            "r": "yàng",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
             {
               "t": "人",
               "r": "ひと",
@@ -869,7 +894,19 @@
               "g": "subject"
             },
             {
-              "t": "そうだと",
+              "t": "また、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "まさに",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "そういうものだと",
               "r": "",
               "g": "object"
             },
@@ -879,7 +916,7 @@
               "g": "predicate"
             },
             {
-              "t": "った。",
+              "t": "うようになった。",
               "r": "",
               "g": "predicate"
             }

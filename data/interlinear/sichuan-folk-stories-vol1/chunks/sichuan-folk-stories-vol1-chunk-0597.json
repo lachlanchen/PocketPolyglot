@@ -6,24 +6,24 @@
       {
         "t": "神",
         "r": "shén",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "话",
         "r": "huà",
-        "g": "topic"
+        "g": "object"
       }
     ],
     "title_ja": [
       {
         "t": "神",
         "r": "しん",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "話",
         "r": "わ",
-        "g": "topic"
+        "g": "object"
       }
     ]
   },
@@ -33,69 +33,69 @@
       {
         "t": "神",
         "r": "shén",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "和",
         "r": "hé",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": "英",
         "r": "yīng",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "雄",
         "r": "xióng",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "神",
         "r": "shén",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "话",
         "r": "huà",
-        "g": "topic"
+        "g": "object"
       }
     ],
     "title_ja": [
       {
         "t": "神",
         "r": "かみ",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "と",
         "r": "",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": "英",
         "r": "えい",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "雄",
         "r": "ゆう",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "の",
         "r": "",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "神",
         "r": "しん",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "話",
         "r": "わ",
-        "g": "topic"
+        "g": "object"
       }
     ]
   },
@@ -150,13 +150,8 @@
         "g": "function"
       },
       {
-        "t": "太",
-        "r": "たい",
-        "g": "object"
-      },
-      {
-        "t": "陽",
-        "r": "よう",
+        "t": "日",
+        "r": "ひ",
         "g": "object"
       },
       {
@@ -182,13 +177,14 @@
     {
       "id": "sichuan-folk-stories-vol1-p00597",
       "source_text": "录媳说，这样吧!我织一张白纱巾,你把它射上天去,蒙住 个太阳,不就好了吗",
+      "corrected_text": "羿媳说，这样吧！我织一张白纱巾，你把它射上天去，蒙住一个太阳，不就好了吗？",
       "units": [
         {
-          "source_text": "录媳说，这样吧!",
+          "source_text": "羿媳说，这样吧！",
           "zh": [
             {
-              "t": "录",
-              "r": "lù",
+              "t": "羿",
+              "r": "yì",
               "g": "subject"
             },
             {
@@ -222,7 +218,7 @@
               "g": "function"
             },
             {
-              "t": "!",
+              "t": "！",
               "r": "",
               "g": "function"
             }
@@ -230,13 +226,18 @@
           "ja": [
             [
               {
-                "t": "録",
-                "r": "ろく",
+                "t": "羿",
+                "r": "げい",
                 "g": "subject"
               },
               {
-                "t": "媳",
-                "r": "せき",
+                "t": "の",
+                "r": "",
+                "g": "subject"
+              },
+              {
+                "t": "嫁",
+                "r": "よめ",
                 "g": "subject"
               },
               {
@@ -275,7 +276,7 @@
           ]
         },
         {
-          "source_text": "我织一张白纱巾,你把它射上天去,蒙住 个太阳,不就好了吗",
+          "source_text": "我织一张白纱巾，你把它射上天去，",
           "zh": [
             {
               "t": "我",
@@ -313,7 +314,7 @@
               "g": "object"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -353,68 +354,8 @@
               "g": "complement"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
-              "g": "function"
-            },
-            {
-              "t": "蒙",
-              "r": "méng",
-              "g": "predicate"
-            },
-            {
-              "t": "住",
-              "r": "zhù",
-              "g": "predicate"
-            },
-            {
-              "t": " ",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "个",
-              "r": "gè",
-              "g": "attributive"
-            },
-            {
-              "t": "太",
-              "r": "tài",
-              "g": "object"
-            },
-            {
-              "t": "阳",
-              "r": "yáng",
-              "g": "object"
-            },
-            {
-              "t": ",",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "不",
-              "r": "bú",
-              "g": "adverbial"
-            },
-            {
-              "t": "就",
-              "r": "jiù",
-              "g": "adverbial"
-            },
-            {
-              "t": "好",
-              "r": "hǎo",
-              "g": "predicate"
-            },
-            {
-              "t": "了",
-              "r": "le",
-              "g": "predicate"
-            },
-            {
-              "t": "吗",
-              "r": "ma",
               "g": "function"
             }
           ],
@@ -503,8 +444,8 @@
                 "g": "object"
               },
               {
-                "t": "空",
-                "r": "そら",
+                "t": "天",
+                "r": "てん",
                 "g": "complement"
               },
               {
@@ -523,7 +464,7 @@
                 "g": "predicate"
               },
               {
-                "t": "げ",
+                "t": "げて",
                 "r": "",
                 "g": "predicate"
               },
@@ -531,7 +472,81 @@
                 "t": "、",
                 "r": "",
                 "g": "function"
-              },
+              }
+            ]
+          ]
+        },
+        {
+          "source_text": "蒙住一个太阳，不就好了吗？",
+          "zh": [
+            {
+              "t": "蒙",
+              "r": "méng",
+              "g": "predicate"
+            },
+            {
+              "t": "住",
+              "r": "zhù",
+              "g": "predicate"
+            },
+            {
+              "t": "一",
+              "r": "yí",
+              "g": "attributive"
+            },
+            {
+              "t": "个",
+              "r": "gè",
+              "g": "attributive"
+            },
+            {
+              "t": "太",
+              "r": "tài",
+              "g": "object"
+            },
+            {
+              "t": "阳",
+              "r": "yáng",
+              "g": "object"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "不",
+              "r": "bú",
+              "g": "adverbial"
+            },
+            {
+              "t": "就",
+              "r": "jiù",
+              "g": "adverbial"
+            },
+            {
+              "t": "好",
+              "r": "hǎo",
+              "g": "predicate"
+            },
+            {
+              "t": "了",
+              "r": "le",
+              "g": "predicate"
+            },
+            {
+              "t": "吗",
+              "r": "ma",
+              "g": "function"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          "ja": [
+            [
               {
                 "t": "太",
                 "r": "たい",
@@ -563,14 +578,41 @@
                 "g": "predicate"
               },
               {
-                "t": "えば",
+                "t": "い",
                 "r": "",
                 "g": "predicate"
               },
               {
-                "t": "いいでしょう",
+                "t": "隠",
+                "r": "かく",
+                "g": "predicate"
+              },
+              {
+                "t": "せば",
                 "r": "",
                 "g": "predicate"
+              },
+              {
+                "t": "、",
+                "r": "",
+                "g": "function"
+              }
+            ],
+            [
+              {
+                "t": "それで",
+                "r": "",
+                "g": "adverbial"
+              },
+              {
+                "t": "よくなるではありませんか",
+                "r": "",
+                "g": "predicate"
+              },
+              {
+                "t": "？",
+                "r": "",
+                "g": "function"
               }
             ]
           ]

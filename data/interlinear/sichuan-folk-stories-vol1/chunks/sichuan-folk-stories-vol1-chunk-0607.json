@@ -38,17 +38,17 @@
       {
         "t": "和",
         "r": "hé",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": "英",
         "r": "yīng",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "雄",
         "r": "xióng",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "神",
@@ -70,17 +70,17 @@
       {
         "t": "と",
         "r": "",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": "英",
         "r": "えい",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "雄",
         "r": "ゆう",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "神",
@@ -182,9 +182,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00607",
       "source_text": "太阳藏哪里去了呢?原来,他见九个哥哥丢了命,就渔下地,藏在水叶菜凯下面。听说习不再射它的时候,才回到天上。",
+      "corrected_text": "太阳藏哪里去了呢？原来，他见九个哥哥丢了命，就溜下地，藏在水叶菜叶下面。听说习不再射它的时候，才回到天上。",
       "units": [
         {
-          "source_text": "太阳藏哪里去了呢?",
+          "source_text": "太阳藏哪里去了呢？",
           "zh": [
             {
               "t": "太",
@@ -204,22 +205,22 @@
             {
               "t": "哪",
               "r": "nǎ",
-              "g": "adverbial"
+              "g": "complement"
             },
             {
               "t": "里",
               "r": "lǐ",
-              "g": "adverbial"
+              "g": "complement"
             },
             {
               "t": "去",
               "r": "qù",
-              "g": "complement"
+              "g": "predicate"
             },
             {
               "t": "了",
               "r": "le",
-              "g": "function"
+              "g": "predicate"
             },
             {
               "t": "呢",
@@ -227,7 +228,7 @@
               "g": "function"
             },
             {
-              "t": "?",
+              "t": "？",
               "r": "",
               "g": "function"
             }
@@ -252,7 +253,7 @@
               {
                 "t": "どこへ",
                 "r": "",
-                "g": "adverbial"
+                "g": "complement"
               }
             ],
             [
@@ -267,7 +268,7 @@
                 "g": "predicate"
               },
               {
-                "t": "のか。",
+                "t": "のだろうか。",
                 "r": "",
                 "g": "function"
               }
@@ -275,7 +276,7 @@
           ]
         },
         {
-          "source_text": "原来,他见九个哥哥丢了命,就渔下地,藏在水叶菜凯下面。",
+          "source_text": "原来，他见九个哥哥丢了命，就溜下地，藏在水叶菜叶下面。",
           "zh": [
             {
               "t": "原",
@@ -288,7 +289,7 @@
               "g": "adverbial"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -325,12 +326,12 @@
             {
               "t": "丢",
               "r": "diū",
-              "g": "object"
+              "g": "predicate"
             },
             {
               "t": "了",
               "r": "le",
-              "g": "object"
+              "g": "predicate"
             },
             {
               "t": "命",
@@ -338,7 +339,7 @@
               "g": "object"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -348,8 +349,8 @@
               "g": "adverbial"
             },
             {
-              "t": "渔",
-              "r": "yú",
+              "t": "溜",
+              "r": "liū",
               "g": "predicate"
             },
             {
@@ -363,7 +364,7 @@
               "g": "complement"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -380,22 +381,22 @@
             {
               "t": "水",
               "r": "shuǐ",
-              "g": "complement"
+              "g": "attributive"
             },
             {
               "t": "叶",
               "r": "yè",
-              "g": "complement"
+              "g": "attributive"
             },
             {
               "t": "菜",
               "r": "cài",
-              "g": "complement"
+              "g": "attributive"
             },
             {
-              "t": "凯",
-              "r": "kǎi",
-              "g": "complement"
+              "t": "叶",
+              "r": "yè",
+              "g": "object"
             },
             {
               "t": "下",
@@ -466,14 +467,14 @@
                 "g": "object"
               },
               {
-                "t": "落",
-                "r": "お",
-                "g": "object"
+                "t": "失",
+                "r": "うしな",
+                "g": "predicate"
               },
               {
-                "t": "としたのを",
+                "t": "うのを",
                 "r": "",
-                "g": "object"
+                "g": "predicate"
               },
               {
                 "t": "見",
@@ -498,13 +499,13 @@
                 "g": "complement"
               },
               {
-                "t": "に",
+                "t": "へ",
                 "r": "",
                 "g": "complement"
               },
               {
-                "t": "潜",
-                "r": "もぐ",
+                "t": "降",
+                "r": "お",
                 "g": "predicate"
               },
               {
@@ -515,32 +516,32 @@
               {
                 "t": "水",
                 "r": "すい",
-                "g": "complement"
+                "g": "attributive"
               },
               {
                 "t": "葉",
                 "r": "よう",
-                "g": "complement"
+                "g": "attributive"
               },
               {
                 "t": "菜",
                 "r": "さい",
-                "g": "complement"
+                "g": "attributive"
               },
               {
                 "t": "の",
                 "r": "",
-                "g": "complement"
+                "g": "attributive"
               },
               {
-                "t": "覆",
-                "r": "おお",
-                "g": "complement"
+                "t": "葉",
+                "r": "は",
+                "g": "object"
               },
               {
-                "t": "いの",
+                "t": "の",
                 "r": "",
-                "g": "complement"
+                "g": "object"
               },
               {
                 "t": "下",
@@ -566,7 +567,7 @@
           ]
         },
         {
-          "source_text": "听说习不再射它的时候,才回到天上。",
+          "source_text": "听说习不再射它的时候，才回到天上。",
           "zh": [
             {
               "t": "听",
@@ -619,7 +620,7 @@
               "g": "adverbial"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -692,12 +693,27 @@
                 "g": "adverbial"
               },
               {
-                "t": "いてから、",
+                "t": "いて、",
                 "r": "",
                 "g": "adverbial"
               }
             ],
             [
+              {
+                "t": "その",
+                "r": "",
+                "g": "adverbial"
+              },
+              {
+                "t": "時",
+                "r": "とき",
+                "g": "adverbial"
+              },
+              {
+                "t": "になって",
+                "r": "",
+                "g": "adverbial"
+              },
               {
                 "t": "ようやく",
                 "r": "",

@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 130,
-    "grammar_token_total": 130,
+    "token_total": 132,
+    "grammar_token_total": 132,
     "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0497",
@@ -203,13 +203,14 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00497",
     "source_text": "进述者:能祥车男 26岁巴县症谭乡坊寺村农民高中采录者:罗桂美女 31岁巴县前进化工厂家属高中采录时间、地点:1988 年7月于巴县查洞镇",
+    "corrected_text": "讲述者:熊祥车 男 26岁巴县石滩乡方寺村农民高中 采录者:罗桂美 女 31岁巴县前进化工厂家属高中 采录时间、地点:1988年7月于巴县查洞镇",
     "units": [
       {
-        "source_text": "进述者:能祥车男 26岁巴县症谭乡坊寺村农民高中",
+        "source_text": "讲述者:熊祥车 男 26岁巴县石滩乡方寺村农民高中",
         "zh": [
           {
-            "t": "进",
-            "r": "jìn",
+            "t": "讲",
+            "r": "jiǎng",
             "g": "function"
           },
           {
@@ -228,8 +229,8 @@
             "g": "function"
           },
           {
-            "t": "能",
-            "r": "néng",
+            "t": "熊",
+            "r": "xióng",
             "g": "subject"
           },
           {
@@ -241,6 +242,11 @@
             "t": "车",
             "r": "chē",
             "g": "subject"
+          },
+          {
+            "t": " ",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "男",
@@ -273,13 +279,13 @@
             "g": "attributive"
           },
           {
-            "t": "症",
-            "r": "zhèng",
+            "t": "石",
+            "r": "shí",
             "g": "attributive"
           },
           {
-            "t": "谭",
-            "r": "tán",
+            "t": "滩",
+            "r": "tān",
             "g": "attributive"
           },
           {
@@ -288,8 +294,8 @@
             "g": "attributive"
           },
           {
-            "t": "坊",
-            "r": "fáng",
+            "t": "方",
+            "r": "fāng",
             "g": "attributive"
           },
           {
@@ -315,12 +321,12 @@
           {
             "t": "高",
             "r": "gāo",
-            "g": "object"
+            "g": "complement"
           },
           {
             "t": "中",
             "r": "zhōng",
-            "g": "object"
+            "g": "complement"
           }
         ],
         "ja": [
@@ -346,8 +352,8 @@
               "g": "function"
             },
             {
-              "t": "能",
-              "r": "のう",
+              "t": "熊",
+              "r": "ゆう",
               "g": "subject"
             },
             {
@@ -367,13 +373,18 @@
             },
             {
               "t": "男",
-              "r": "おとこ",
+              "r": "だん",
               "g": "subject"
             },
             {
               "t": "性",
               "r": "せい",
               "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "26",
@@ -398,12 +409,12 @@
               "g": "attributive"
             },
             {
-              "t": "症",
-              "r": "しょう",
+              "t": "石",
+              "r": "せき",
               "g": "attributive"
             },
             {
-              "t": "譚",
+              "t": "灘",
               "r": "たん",
               "g": "attributive"
             },
@@ -413,8 +424,8 @@
               "g": "attributive"
             },
             {
-              "t": "坊",
-              "r": "ぼう",
+              "t": "方",
+              "r": "ほう",
               "g": "attributive"
             },
             {
@@ -450,19 +461,24 @@
             {
               "t": "高",
               "r": "こう",
-              "g": "object"
+              "g": "complement"
             },
             {
               "t": "卒",
               "r": "そつ",
-              "g": "object"
+              "g": "complement"
             }
           ]
         ]
       },
       {
-        "source_text": "采录者:罗桂美女 31岁巴县前进化工厂家属高中",
+        "source_text": " 采录者:罗桂美 女 31岁巴县前进化工厂家属高中",
         "zh": [
+          {
+            "t": " ",
+            "r": "",
+            "g": "function"
+          },
           {
             "t": "采",
             "r": "cǎi",
@@ -497,6 +513,11 @@
             "t": "美",
             "r": "měi",
             "g": "subject"
+          },
+          {
+            "t": " ",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "女",
@@ -566,12 +587,12 @@
           {
             "t": "高",
             "r": "gāo",
-            "g": "object"
+            "g": "complement"
           },
           {
             "t": "中",
             "r": "zhōng",
-            "g": "object"
+            "g": "complement"
           }
         ],
         "ja": [
@@ -625,6 +646,11 @@
               "t": "性",
               "r": "せい",
               "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "31",
@@ -696,19 +722,24 @@
             {
               "t": "高",
               "r": "こう",
-              "g": "object"
+              "g": "complement"
             },
             {
               "t": "卒",
               "r": "そつ",
-              "g": "object"
+              "g": "complement"
             }
           ]
         ]
       },
       {
-        "source_text": "采录时间、地点:1988 年7月于巴县查洞镇",
+        "source_text": " 采录时间、地点:1988年7月于巴县查洞镇",
         "zh": [
+          {
+            "t": " ",
+            "r": "",
+            "g": "function"
+          },
           {
             "t": "采",
             "r": "cǎi",
@@ -753,11 +784,6 @@
             "t": "1988",
             "r": "",
             "g": "adverbial"
-          },
-          {
-            "t": " ",
-            "r": "",
-            "g": "function"
           },
           {
             "t": "年",

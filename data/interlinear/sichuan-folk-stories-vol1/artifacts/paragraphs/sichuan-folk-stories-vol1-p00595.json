@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 28,
-    "grammar_token_total": 28,
+    "token_total": 30,
+    "grammar_token_total": 30,
     "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0595",
@@ -233,9 +233,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00595",
     "source_text": "嫦娥高兴地说注你再射几个下来吧呈",
+    "corrected_text": "嫦娥高兴地说：“你再射几个下来吧！”",
     "units": [
       {
-        "source_text": "嫦娥高兴地说注",
+        "source_text": "嫦娥高兴地说：",
         "zh": [
           {
             "t": "嫦",
@@ -268,8 +269,8 @@
             "g": "predicate"
           },
           {
-            "t": "注",
-            "r": "zhù",
+            "t": "：",
+            "r": "",
             "g": "function"
           }
         ],
@@ -311,8 +312,13 @@
         ]
       },
       {
-        "source_text": "你再射几个下来吧呈",
+        "source_text": "“你再射几个下来吧！”",
         "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
           {
             "t": "你",
             "r": "nǐ",
@@ -354,8 +360,13 @@
             "g": "function"
           },
           {
-            "t": "呈",
-            "r": "chéng",
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
             "g": "function"
           }
         ],

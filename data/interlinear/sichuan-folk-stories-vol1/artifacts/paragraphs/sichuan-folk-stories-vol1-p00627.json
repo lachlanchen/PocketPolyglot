@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 137,
-    "grammar_token_total": 137,
+    "token_total": 147,
+    "grammar_token_total": 147,
     "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0627",
@@ -23,24 +23,24 @@
       {
         "t": "神",
         "r": "shén",
-        "g": "subject"
+        "g": "attributive"
       },
       {
         "t": "话",
         "r": "huà",
-        "g": "subject"
+        "g": "object"
       }
     ],
     "title_ja": [
       {
         "t": "神",
         "r": "しん",
-        "g": "subject"
+        "g": "attributive"
       },
       {
         "t": "話",
         "r": "わ",
-        "g": "subject"
+        "g": "object"
       }
     ]
   },
@@ -75,7 +75,7 @@
       {
         "t": "话",
         "r": "huà",
-        "g": "attributive"
+        "g": "object"
       }
     ],
     "title_ja": [
@@ -112,7 +112,7 @@
       {
         "t": "話",
         "r": "わ",
-        "g": "attributive"
+        "g": "object"
       }
     ]
   },
@@ -233,9 +233,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00627",
     "source_text": "讲述者:王应光男 69岁书县五布乡拟客村农民小学采孙者:粱昌明男 37岁巴县五布乡文化站干部初中采承时间、.地点:1987 第 10 月于巴县五布乡",
+    "corrected_text": "讲述者：王应光，男，69岁，巴县五布乡拟客村农民，小学。采录者：梁昌明，男，37岁，巴县五布乡文化站干部，初中。采录时间、地点：1987年10月于巴县五布乡",
     "units": [
       {
-        "source_text": "讲述者:王应光男 69岁书县五布乡拟客村农民小学",
+        "source_text": "讲述者：王应光，男，69岁，巴县五布乡拟客村农民，小学。",
         "zh": [
           {
             "t": "讲",
@@ -253,7 +254,7 @@
             "g": "subject"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -273,12 +274,17 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "男",
             "r": "nán",
             "g": "attributive"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -293,8 +299,13 @@
             "g": "attributive"
           },
           {
-            "t": "书",
-            "r": "shū",
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "巴",
+            "r": "bā",
             "g": "attributive"
           },
           {
@@ -335,22 +346,32 @@
           {
             "t": "农",
             "r": "nóng",
-            "g": "attributive"
+            "g": "object"
           },
           {
             "t": "民",
             "r": "mín",
-            "g": "attributive"
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "小",
             "r": "xiǎo",
-            "g": "attributive"
+            "g": "complement"
           },
           {
             "t": "学",
             "r": "xué",
-            "g": "attributive"
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -371,7 +392,7 @@
               "g": "subject"
             },
             {
-              "t": ":",
+              "t": "：",
               "r": "",
               "g": "function"
             },
@@ -397,7 +418,7 @@
             },
             {
               "t": "男",
-              "r": "おとこ",
+              "r": "だん",
               "g": "attributive"
             },
             {
@@ -418,8 +439,8 @@
           ],
           [
             {
-              "t": "書",
-              "r": "しょ",
+              "t": "巴",
+              "r": "は",
               "g": "attributive"
             },
             {
@@ -465,12 +486,12 @@
             {
               "t": "農",
               "r": "のう",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "民",
               "r": "みん",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "、",
@@ -480,28 +501,28 @@
             {
               "t": "小",
               "r": "しょう",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "学",
               "r": "がく",
-              "g": "attributive"
-            },
-            {
-              "t": "校",
-              "r": "こう",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "卒",
               "r": "そつ",
-              "g": "attributive"
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ]
         ]
       },
       {
-        "source_text": "采孙者:粱昌明男 37岁巴县五布乡文化站干部初中",
+        "source_text": "采录者：梁昌明，男，37岁，巴县五布乡文化站干部，初中。",
         "zh": [
           {
             "t": "采",
@@ -509,8 +530,8 @@
             "g": "attributive"
           },
           {
-            "t": "孙",
-            "r": "sūn",
+            "t": "录",
+            "r": "lù",
             "g": "attributive"
           },
           {
@@ -519,12 +540,12 @@
             "g": "subject"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
           {
-            "t": "粱",
+            "t": "梁",
             "r": "liáng",
             "g": "subject"
           },
@@ -539,12 +560,17 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "男",
             "r": "nán",
             "g": "attributive"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -557,6 +583,11 @@
             "t": "岁",
             "r": "suì",
             "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "巴",
@@ -601,22 +632,32 @@
           {
             "t": "干",
             "r": "gàn",
-            "g": "attributive"
+            "g": "object"
           },
           {
             "t": "部",
             "r": "bù",
-            "g": "attributive"
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "初",
             "r": "chū",
-            "g": "attributive"
+            "g": "complement"
           },
           {
             "t": "中",
             "r": "zhōng",
-            "g": "attributive"
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -627,8 +668,8 @@
               "g": "attributive"
             },
             {
-              "t": "集",
-              "r": "しゅう",
+              "t": "録",
+              "r": "ろく",
               "g": "attributive"
             },
             {
@@ -637,12 +678,12 @@
               "g": "subject"
             },
             {
-              "t": ":",
+              "t": "：",
               "r": "",
               "g": "function"
             },
             {
-              "t": "粱",
+              "t": "梁",
               "r": "りょう",
               "g": "subject"
             },
@@ -731,12 +772,12 @@
             {
               "t": "幹",
               "r": "かん",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "部",
               "r": "ぶ",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "、",
@@ -746,23 +787,28 @@
             {
               "t": "初",
               "r": "しょ",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "中",
               "r": "ちゅう",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "卒",
               "r": "そつ",
-              "g": "attributive"
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ]
         ]
       },
       {
-        "source_text": "采承时间、.地点:1987 第 10 月于巴县五布乡",
+        "source_text": "采录时间、地点：1987年10月于巴县五布乡",
         "zh": [
           {
             "t": "采",
@@ -770,8 +816,8 @@
             "g": "attributive"
           },
           {
-            "t": "承",
-            "r": "chéng",
+            "t": "录",
+            "r": "lù",
             "g": "attributive"
           },
           {
@@ -790,11 +836,6 @@
             "g": "function"
           },
           {
-            "t": ".",
-            "r": "",
-            "g": "function"
-          },
-          {
             "t": "地",
             "r": "dì",
             "g": "subject"
@@ -805,7 +846,7 @@
             "g": "subject"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -815,29 +856,14 @@
             "g": "adverbial"
           },
           {
-            "t": " ",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "第",
-            "r": "dì",
+            "t": "年",
+            "r": "nián",
             "g": "adverbial"
-          },
-          {
-            "t": " ",
-            "r": "",
-            "g": "function"
           },
           {
             "t": "10",
             "r": "",
             "g": "adverbial"
-          },
-          {
-            "t": " ",
-            "r": "",
-            "g": "function"
           },
           {
             "t": "月",
@@ -852,27 +878,27 @@
           {
             "t": "巴",
             "r": "bā",
-            "g": "adverbial"
+            "g": "complement"
           },
           {
             "t": "县",
             "r": "xiàn",
-            "g": "adverbial"
+            "g": "complement"
           },
           {
             "t": "五",
             "r": "wǔ",
-            "g": "adverbial"
+            "g": "complement"
           },
           {
             "t": "布",
             "r": "bù",
-            "g": "adverbial"
+            "g": "complement"
           },
           {
             "t": "乡",
             "r": "xiāng",
-            "g": "adverbial"
+            "g": "complement"
           }
         ],
         "ja": [
@@ -913,7 +939,7 @@
               "g": "subject"
             },
             {
-              "t": ":",
+              "t": "：",
               "r": "",
               "g": "function"
             }
@@ -947,32 +973,32 @@
             {
               "t": "巴",
               "r": "は",
-              "g": "adverbial"
+              "g": "complement"
             },
             {
               "t": "県",
               "r": "けん",
-              "g": "adverbial"
+              "g": "complement"
             },
             {
               "t": "五",
               "r": "ご",
-              "g": "adverbial"
+              "g": "complement"
             },
             {
               "t": "布",
               "r": "ふ",
-              "g": "adverbial"
+              "g": "complement"
             },
             {
               "t": "郷",
               "r": "きょう",
-              "g": "adverbial"
+              "g": "complement"
             },
             {
               "t": "にて",
               "r": "",
-              "g": "adverbial"
+              "g": "complement"
             }
           ]
         ]

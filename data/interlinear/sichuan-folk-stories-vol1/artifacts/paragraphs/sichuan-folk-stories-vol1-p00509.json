@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 15,
-    "grammar_token_total": 15,
+    "token_total": 17,
+    "grammar_token_total": 17,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0509",
@@ -125,87 +125,190 @@
     "id": "神话-文化起源神话-051-神农尝百草高县Zamyheept传说神农生下来后全身透明自己能看清自己的心肝肠肺那会儿世",
     "title_zh": [
       {
+        "t": "0",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "5",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "1",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
         "t": "神",
-        "r": "shén"
+        "r": "shén",
+        "g": "subject"
       },
       {
         "t": "农",
-        "r": "nóng"
+        "r": "nóng",
+        "g": "subject"
       },
       {
         "t": "尝",
-        "r": "cháng"
+        "r": "cháng",
+        "g": "predicate"
       },
       {
         "t": "百",
-        "r": "bǎi"
+        "r": "bǎi",
+        "g": "object"
       },
       {
         "t": "草",
-        "r": "cǎo"
+        "r": "cǎo",
+        "g": "object"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "高",
+        "r": "gāo",
+        "g": "attributive"
+      },
+      {
+        "t": "县",
+        "r": "xiàn",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
       }
     ],
     "title_ja": [
       {
+        "t": "0",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "5",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "1",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ". ",
+        "r": "",
+        "g": "function"
+      },
+      {
         "t": "神",
-        "r": "しん"
+        "r": "しん",
+        "g": "subject"
       },
       {
         "t": "農",
-        "r": "のう"
+        "r": "のう",
+        "g": "subject"
       },
       {
         "t": "、",
-        "r": ""
+        "r": "",
+        "g": "function"
       },
       {
         "t": "百",
-        "r": "ひゃく"
+        "r": "ひゃく",
+        "g": "object"
       },
       {
         "t": "草",
-        "r": "そう"
+        "r": "そう",
+        "g": "object"
       },
       {
         "t": "を",
-        "r": ""
+        "r": "",
+        "g": "object"
       },
       {
         "t": "嘗",
-        "r": "な"
+        "r": "な",
+        "g": "predicate"
       },
       {
         "t": "める",
-        "r": ""
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "高",
+        "r": "こう",
+        "g": "attributive"
+      },
+      {
+        "t": "県",
+        "r": "けん",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
       }
     ],
     "place_zh": [
       {
         "t": "高",
-        "r": "gāo"
+        "r": "gāo",
+        "g": "attributive"
       },
       {
         "t": "县",
-        "r": "xiàn"
+        "r": "xiàn",
+        "g": "attributive"
       }
     ],
     "place_ja": [
       {
         "t": "高",
-        "r": "こう"
+        "r": "こう",
+        "g": "attributive"
       },
       {
         "t": "県",
-        "r": "けん"
+        "r": "けん",
+        "g": "attributive"
       }
     ]
   },
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00509",
     "source_text": "站:本",
+    "corrected_text": "站：本",
     "units": [
       {
-        "source_text": "站:本",
+        "source_text": "站：本",
         "zh": [
           {
             "t": "站",
@@ -213,7 +316,7 @@
             "g": "subject"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -264,11 +367,21 @@
               "t": "」",
               "r": "",
               "g": "function"
+            },
+            {
+              "t": "とある",
+              "r": "",
+              "g": "predicate"
             }
           ],
           [
             {
-              "t": "とある",
+              "t": "残",
+              "r": "のこ",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
               "r": "",
               "g": "predicate"
             },

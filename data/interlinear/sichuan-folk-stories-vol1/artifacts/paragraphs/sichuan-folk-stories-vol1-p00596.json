@@ -13,7 +13,7 @@
     "grammar": true,
     "token_total": 106,
     "grammar_token_total": 106,
-    "unit_count": 4
+    "unit_count": 5
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0596",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -228,9 +228,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00596",
     "source_text": "后弹-连射了七个太阳下来,还剩两个，净谣说:记这两个太阳留在天上,为人间造福吧!后弹说光天不可有二日啊1",
+    "corrected_text": "后弹一连射了七个太阳下来，还剩两个，净谣说：把这两个太阳留在天上，为人间造福吧！后弹说：光天不可有二日啊！",
     "units": [
       {
-        "source_text": "后弹-连射了七个太阳下来,",
+        "source_text": "后弹一连射了七个太阳下来，",
         "zh": [
           {
             "t": "后",
@@ -243,9 +244,9 @@
             "g": "subject"
           },
           {
-            "t": "-",
-            "r": "",
-            "g": "function"
+            "t": "一",
+            "r": "yì",
+            "g": "adverbial"
           },
           {
             "t": "连",
@@ -293,7 +294,7 @@
             "g": "complement"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -412,7 +413,7 @@
               "g": "object"
             },
             {
-              "t": "つ",
+              "t": "つが",
               "r": "",
               "g": "object"
             }
@@ -432,7 +433,7 @@
         ]
       },
       {
-        "source_text": "净谣说:记这两个太阳留在天上,为人间造福吧!",
+        "source_text": "净谣说：把这两个太阳留在天上，",
         "zh": [
           {
             "t": "净",
@@ -450,13 +451,13 @@
             "g": "predicate"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
           {
-            "t": "记",
-            "r": "jì",
+            "t": "把",
+            "r": "bǎ",
             "g": "function"
           },
           {
@@ -505,42 +506,7 @@
             "g": "complement"
           },
           {
-            "t": ",",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "为",
-            "r": "wèi",
-            "g": "adverbial"
-          },
-          {
-            "t": "人",
-            "r": "rén",
-            "g": "adverbial"
-          },
-          {
-            "t": "间",
-            "r": "jiān",
-            "g": "adverbial"
-          },
-          {
-            "t": "造",
-            "r": "zào",
-            "g": "predicate"
-          },
-          {
-            "t": "福",
-            "r": "fú",
-            "g": "object"
-          },
-          {
-            "t": "吧",
-            "r": "ba",
-            "g": "function"
-          },
-          {
-            "t": "!",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -615,10 +581,54 @@
               "g": "predicate"
             },
             {
-              "t": "し、",
+              "t": "して、",
               "r": "",
               "g": "predicate"
-            },
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "为人间造福吧！",
+        "zh": [
+          {
+            "t": "为",
+            "r": "wèi",
+            "g": "adverbial"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "adverbial"
+          },
+          {
+            "t": "间",
+            "r": "jiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "造",
+            "r": "zào",
+            "g": "predicate"
+          },
+          {
+            "t": "福",
+            "r": "fú",
+            "g": "object"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
             {
               "t": "人",
               "r": "ひと",
@@ -635,10 +645,12 @@
               "g": "adverbial"
             },
             {
-              "t": "に",
+              "t": "のために",
               "r": "",
               "g": "adverbial"
-            },
+            }
+          ],
+          [
             {
               "t": "福",
               "r": "ふく",
@@ -650,7 +662,7 @@
               "g": "object"
             },
             {
-              "t": "もたらそう」。",
+              "t": "もたらしましょう」。",
               "r": "",
               "g": "predicate"
             }
@@ -658,7 +670,7 @@
         ]
       },
       {
-        "source_text": "后弹说光天不可有二日啊1",
+        "source_text": "后弹说：光天不可有二日啊！",
         "zh": [
           {
             "t": "后",
@@ -674,6 +686,11 @@
             "t": "说",
             "r": "shuō",
             "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "光",
@@ -716,7 +733,7 @@
             "g": "function"
           },
           {
-            "t": "1",
+            "t": "！",
             "r": "",
             "g": "function"
           }
@@ -744,9 +761,9 @@
               "g": "predicate"
             },
             {
-              "t": "った。",
+              "t": "った。「",
               "r": "",
-              "g": "predicate"
+              "g": "function"
             },
             {
               "t": "明",
@@ -791,14 +808,9 @@
               "g": "object"
             },
             {
-              "t": "あってはならないのだ",
+              "t": "あってはならないのだ」。",
               "r": "",
               "g": "predicate"
-            },
-            {
-              "t": "1",
-              "r": "",
-              "g": "function"
             }
           ]
         ]

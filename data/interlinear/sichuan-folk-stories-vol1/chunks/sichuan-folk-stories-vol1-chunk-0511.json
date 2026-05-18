@@ -217,9 +217,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00511",
       "source_text": "神农在位的时候,天底下病痛很多。神农焦倒了,就到处去找药。",
+      "corrected_text": "神农在位的时候，天底下病痛很多。神农焦倒了，就到处去找药。",
       "units": [
         {
-          "source_text": "神农在位的时候,天底下病痛很多。",
+          "source_text": "神农在位的时候，天底下病痛很多。",
           "zh": [
             {
               "t": "神",
@@ -257,7 +258,7 @@
               "g": "adverbial"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -289,7 +290,7 @@
             {
               "t": "很",
               "r": "hěn",
-              "g": "predicate"
+              "g": "adverbial"
             },
             {
               "t": "多",
@@ -400,7 +401,7 @@
           ]
         },
         {
-          "source_text": "神农焦倒了,就到处去找药。",
+          "source_text": "神农焦倒了，就到处去找药。",
           "zh": [
             {
               "t": "神",
@@ -420,15 +421,15 @@
             {
               "t": "倒",
               "r": "dǎo",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "了",
               "r": "le",
-              "g": "predicate"
+              "g": "function"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -499,6 +500,11 @@
                 "t": "り",
                 "r": "",
                 "g": "predicate"
+              },
+              {
+                "t": "きって",
+                "r": "",
+                "g": "complement"
               },
               {
                 "t": "、",

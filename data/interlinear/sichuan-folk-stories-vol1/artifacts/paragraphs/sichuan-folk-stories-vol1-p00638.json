@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 81,
-    "grammar_token_total": 81,
+    "token_total": 84,
+    "grammar_token_total": 84,
     "unit_count": 5
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0638",
@@ -28,7 +28,7 @@
       {
         "t": "话",
         "r": "huà",
-        "g": "attributive"
+        "g": "object"
       }
     ],
     "title_ja": [
@@ -40,7 +40,7 @@
       {
         "t": "話",
         "r": "わ",
-        "g": "attributive"
+        "g": "object"
       }
     ]
   },
@@ -228,9 +228,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00638",
     "source_text": "赶紧放箭去射,可越射映娥飞得越高,好后竟《到月亮里头去了.后界失去了嫦娥,又去了",
+    "corrected_text": "赶紧放箭去射，可越射嫦娥飞得越高，最后竟飞到月亮里头去了。后羿失去了嫦娥，又去了",
     "units": [
       {
-        "source_text": "赶紧放箭去射,",
+        "source_text": "赶紧放箭去射，",
         "zh": [
           {
             "t": "赶",
@@ -263,7 +264,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -308,15 +309,15 @@
               "g": "predicate"
             },
             {
-              "t": "たが、",
+              "t": "かけたが、",
               "r": "",
-              "g": "function"
+              "g": "predicate"
             }
           ]
         ]
       },
       {
-        "source_text": "可越射映娥飞得越高,",
+        "source_text": "可越射嫦娥飞得越高，",
         "zh": [
           {
             "t": "可",
@@ -334,8 +335,8 @@
             "g": "predicate"
           },
           {
-            "t": "映",
-            "r": "yìng",
+            "t": "嫦",
+            "r": "cháng",
             "g": "subject"
           },
           {
@@ -364,7 +365,7 @@
             "g": "complement"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -394,13 +395,13 @@
             {
               "t": "るほど、",
               "r": "",
-              "g": "function"
+              "g": "predicate"
             }
           ],
           [
             {
-              "t": "映",
-              "r": "えい",
+              "t": "嫦",
+              "r": "じょう",
               "g": "subject"
             },
             {
@@ -436,17 +437,17 @@
             {
               "t": "んだ、",
               "r": "",
-              "g": "function"
+              "g": "predicate"
             }
           ]
         ]
       },
       {
-        "source_text": "好后竟《到月亮里头去了.",
+        "source_text": "最后竟飞到月亮里头去了。",
         "zh": [
           {
-            "t": "好",
-            "r": "hǎo",
+            "t": "最",
+            "r": "zuì",
             "g": "adverbial"
           },
           {
@@ -460,9 +461,9 @@
             "g": "adverbial"
           },
           {
-            "t": "《",
-            "r": "",
-            "g": "function"
+            "t": "飞",
+            "r": "fēi",
+            "g": "predicate"
           },
           {
             "t": "到",
@@ -500,7 +501,7 @@
             "g": "predicate"
           },
           {
-            "t": ".",
+            "t": "。",
             "r": "",
             "g": "function"
           }
@@ -508,13 +509,18 @@
         "ja": [
           [
             {
-              "t": "その",
-              "r": "",
+              "t": "最",
+              "r": "さい",
               "g": "adverbial"
             },
             {
               "t": "後",
-              "r": "あと",
+              "r": "ご",
+              "g": "adverbial"
+            },
+            {
+              "t": "には",
+              "r": "",
               "g": "adverbial"
             },
             {
@@ -545,6 +551,16 @@
               "g": "complement"
             },
             {
+              "t": "飛",
+              "r": "と",
+              "g": "predicate"
+            },
+            {
+              "t": "んで",
+              "r": "",
+              "g": "predicate"
+            },
+            {
               "t": "行",
               "r": "い",
               "g": "predicate"
@@ -552,13 +568,13 @@
             {
               "t": "ってしまった。",
               "r": "",
-              "g": "function"
+              "g": "predicate"
             }
           ]
         ]
       },
       {
-        "source_text": "后界失去了嫦娥,",
+        "source_text": "后羿失去了嫦娥，",
         "zh": [
           {
             "t": "后",
@@ -566,8 +582,8 @@
             "g": "subject"
           },
           {
-            "t": "界",
-            "r": "jiè",
+            "t": "羿",
+            "r": "yì",
             "g": "subject"
           },
           {
@@ -596,7 +612,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -609,8 +625,8 @@
               "g": "subject"
             },
             {
-              "t": "界",
-              "r": "かい",
+              "t": "羿",
+              "r": "げい",
               "g": "subject"
             },
             {
@@ -643,7 +659,7 @@
             {
               "t": "ってしまい、",
               "r": "",
-              "g": "function"
+              "g": "predicate"
             }
           ]
         ]
@@ -684,7 +700,7 @@
             {
               "t": "ってしまった",
               "r": "",
-              "g": "function"
+              "g": "predicate"
             }
           ]
         ]

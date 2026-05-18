@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 117,
-    "grammar_token_total": 117,
-    "unit_count": 2
+    "token_total": 120,
+    "grammar_token_total": 120,
+    "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0629",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -233,9 +233,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00629",
     "source_text": "很入以前,有个暴君叫后界。自从他射掉万个太阳后,就自以为天下无敌了,经常背着他那张射太阳的神弓,带兵攻打外族部落。",
+    "corrected_text": "很久以前，有个暴君叫后羿。自从他射掉九个太阳后，就自以为天下无敌了，经常背着他那张射太阳的神弓，带兵攻打外族部落。",
     "units": [
       {
-        "source_text": "很入以前,有个暴君叫后界。",
+        "source_text": "很久以前，有个暴君叫后羿。",
         "zh": [
           {
             "t": "很",
@@ -243,8 +244,8 @@
             "g": "adverbial"
           },
           {
-            "t": "入",
-            "r": "rù",
+            "t": "久",
+            "r": "jiǔ",
             "g": "adverbial"
           },
           {
@@ -258,7 +259,7 @@
             "g": "adverbial"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -275,7 +276,7 @@
           {
             "t": "暴",
             "r": "bào",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "君",
@@ -285,7 +286,7 @@
           {
             "t": "叫",
             "r": "jiào",
-            "g": "object"
+            "g": "predicate"
           },
           {
             "t": "后",
@@ -293,8 +294,8 @@
             "g": "object"
           },
           {
-            "t": "界",
-            "r": "jiè",
+            "t": "羿",
+            "r": "yì",
             "g": "object"
           },
           {
@@ -323,24 +324,24 @@
             {
               "t": "後",
               "r": "こう",
-              "g": "subject"
+              "g": "object"
             },
             {
-              "t": "界",
-              "r": "かい",
-              "g": "subject"
+              "t": "羿",
+              "r": "げい",
+              "g": "object"
             },
             {
               "t": "という",
               "r": "",
-              "g": "subject"
+              "g": "object"
             }
           ],
           [
             {
               "t": "暴",
               "r": "ぼう",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "君",
@@ -366,7 +367,7 @@
         ]
       },
       {
-        "source_text": "自从他射掉万个太阳后,就自以为天下无敌了,经常背着他那张射太阳的神弓,带兵攻打外族部落。",
+        "source_text": "自从他射掉九个太阳后，就自以为天下无敌了，",
         "zh": [
           {
             "t": "自",
@@ -394,8 +395,8 @@
             "g": "predicate"
           },
           {
-            "t": "万",
-            "r": "wàn",
+            "t": "九",
+            "r": "jiǔ",
             "g": "object"
           },
           {
@@ -419,7 +420,7 @@
             "g": "adverbial"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -469,10 +470,141 @@
             "g": "function"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
-          },
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "九",
+              "r": "きゅう",
+              "g": "object"
+            },
+            {
+              "t": "つの",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "太",
+              "r": "たい",
+              "g": "object"
+            },
+            {
+              "t": "陽",
+              "r": "よう",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "射",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "落",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "としてから",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "自",
+              "r": "じ",
+              "g": "predicate"
+            },
+            {
+              "t": "分",
+              "r": "ぶん",
+              "g": "predicate"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "complement"
+            },
+            {
+              "t": "下",
+              "r": "か",
+              "g": "complement"
+            },
+            {
+              "t": "無",
+              "r": "む",
+              "g": "complement"
+            },
+            {
+              "t": "敵",
+              "r": "てき",
+              "g": "complement"
+            },
+            {
+              "t": "だと",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "思",
+              "r": "おも",
+              "g": "predicate"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "込",
+              "r": "こ",
+              "g": "predicate"
+            },
+            {
+              "t": "んだ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "经常背着他那张射太阳的神弓，带兵攻打外族部落。",
+        "zh": [
           {
             "t": "经",
             "r": "jīng",
@@ -539,7 +671,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -592,124 +724,17 @@
         "ja": [
           [
             {
-              "t": "彼",
-              "r": "かれ",
-              "g": "subject"
-            },
-            {
-              "t": "は",
-              "r": "",
-              "g": "subject"
-            },
-            {
-              "t": "一",
-              "r": "いち",
-              "g": "object"
-            },
-            {
-              "t": "万",
-              "r": "まん",
-              "g": "object"
-            },
-            {
-              "t": "個",
-              "r": "こ",
-              "g": "object"
-            },
-            {
-              "t": "の",
-              "r": "",
-              "g": "object"
-            },
-            {
-              "t": "太",
-              "r": "たい",
-              "g": "object"
-            },
-            {
-              "t": "陽",
-              "r": "よう",
-              "g": "object"
-            },
-            {
-              "t": "を",
-              "r": "",
-              "g": "object"
-            },
-            {
-              "t": "射",
-              "r": "い",
-              "g": "predicate"
-            },
-            {
-              "t": "落",
-              "r": "お",
-              "g": "predicate"
-            },
-            {
-              "t": "としてから",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "天",
-              "r": "てん",
-              "g": "complement"
-            },
-            {
-              "t": "下",
-              "r": "か",
-              "g": "complement"
-            },
-            {
-              "t": "無",
-              "r": "む",
-              "g": "complement"
-            },
-            {
-              "t": "敵",
-              "r": "てき",
-              "g": "complement"
-            },
-            {
-              "t": "だと",
-              "r": "",
-              "g": "complement"
-            },
-            {
-              "t": "思",
-              "r": "おも",
-              "g": "predicate"
-            },
-            {
-              "t": "い",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "込",
-              "r": "こ",
-              "g": "predicate"
-            },
-            {
-              "t": "み",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            }
-          ],
-          [
-            {
               "t": "いつも",
               "r": "",
               "g": "adverbial"
             },
             {
-              "t": "その",
+              "t": "彼",
+              "r": "かれ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
               "r": "",
               "g": "attributive"
             },
@@ -772,7 +797,9 @@
               "t": "、",
               "r": "",
               "g": "function"
-            },
+            }
+          ],
+          [
             {
               "t": "兵",
               "r": "へい",

@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 88,
-    "grammar_token_total": 88,
+    "token_total": 91,
+    "grammar_token_total": 91,
     "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0608",
@@ -223,9 +223,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00608",
     "source_text": "后来,不管天气再热,太阳再毒,也晒不死水叶菜,据说这是太阳在报答水叶菜的救命之恩呢。（高县）",
+    "corrected_text": "后来，不管天气再热，太阳再毒，也晒不死水叶菜，据说这是太阳在报答水叶菜的救命之恩呢。（高县）",
     "units": [
       {
-        "source_text": "后来,不管天气再热,太阳再毒,也晒不死水叶菜,",
+        "source_text": "后来，不管天气再热，太阳再毒，也晒不死水叶菜，",
         "zh": [
           {
             "t": "后",
@@ -238,7 +239,7 @@
             "g": "adverbial"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -273,7 +274,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -298,7 +299,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -338,7 +339,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -346,12 +347,17 @@
         "ja": [
           [
             {
-              "t": "後",
-              "r": "のち",
+              "t": "その",
+              "r": "",
               "g": "adverbial"
             },
             {
-              "t": "には、",
+              "t": "後",
+              "r": "ご",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
               "r": "",
               "g": "function"
             },
@@ -408,12 +414,12 @@
               "g": "adverbial"
             },
             {
-              "t": "強",
-              "r": "つよ",
+              "t": "烈",
+              "r": "はげ",
               "g": "predicate"
             },
             {
-              "t": "くても、",
+              "t": "しくても、",
               "r": "",
               "g": "predicate"
             },
@@ -453,7 +459,7 @@
               "g": "complement"
             },
             {
-              "t": "らせることはなかった、",
+              "t": "らせなかった、",
               "r": "",
               "g": "complement"
             }
@@ -466,12 +472,12 @@
           {
             "t": "据",
             "r": "jù",
-            "g": "function"
+            "g": "adverbial"
           },
           {
             "t": "说",
             "r": "shuō",
-            "g": "function"
+            "g": "adverbial"
           },
           {
             "t": "这",
@@ -562,7 +568,17 @@
         "ja": [
           [
             {
-              "t": "それは、",
+              "t": "伝",
+              "r": "つた",
+              "g": "adverbial"
+            },
+            {
+              "t": "えによれば、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "これは",
               "r": "",
               "g": "subject"
             },

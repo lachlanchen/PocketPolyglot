@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 138,
-    "grammar_token_total": 138,
+    "token_total": 149,
+    "grammar_token_total": 149,
     "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0562",
@@ -55,12 +55,12 @@
       {
         "t": "文",
         "r": "wén",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "化",
         "r": "huà",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "起",
@@ -92,12 +92,12 @@
       {
         "t": "文",
         "r": "ぶん",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "化",
         "r": "か",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "起",
@@ -228,13 +228,14 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00562",
     "source_text": "进述者:罗桂英女 31岁巴县前进化工厂职工家属高中采斌者:李子硕男 54岁巴县文化馆干部高中采录时间.地点:1988 年4月于巴县龟润镇",
+    "corrected_text": "讲述者:罗桂英，女，31岁，巴县前进化工厂职工家属，高中。采录者:李子硕，男，54岁，巴县文化馆干部，高中。采录时间、地点:1988年4月于巴县鱼洞镇。",
     "units": [
       {
-        "source_text": "进述者:罗桂英女 31岁巴县前进化工厂职工家属高中",
+        "source_text": "讲述者:罗桂英，女，31岁，巴县前进化工厂职工家属，高中。",
         "zh": [
           {
-            "t": "进",
-            "r": "jìn",
+            "t": "讲",
+            "r": "jiǎng",
             "g": "function"
           },
           {
@@ -255,72 +256,82 @@
           {
             "t": "罗",
             "r": "luó",
-            "g": "object"
+            "g": "subject"
           },
           {
             "t": "桂",
             "r": "guì",
-            "g": "object"
+            "g": "subject"
           },
           {
             "t": "英",
             "r": "yīng",
-            "g": "object"
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "女",
             "r": "nǚ",
-            "g": "object"
+            "g": "attributive"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
           {
             "t": "31",
             "r": "",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "岁",
             "r": "suì",
-            "g": "object"
+            "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "巴",
             "r": "bā",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "县",
             "r": "xiàn",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "前",
             "r": "qián",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "进",
             "r": "jìn",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "化",
             "r": "huà",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "工",
             "r": "gōng",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "厂",
             "r": "chǎng",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "职",
@@ -343,14 +354,24 @@
             "g": "object"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "高",
             "r": "gāo",
-            "g": "object"
+            "g": "complement"
           },
           {
             "t": "中",
             "r": "zhōng",
-            "g": "object"
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -378,17 +399,17 @@
             {
               "t": "羅",
               "r": "ら",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "桂",
               "r": "けい",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "英",
               "r": "えい",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "、",
@@ -398,12 +419,12 @@
             {
               "t": "女",
               "r": "じょ",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "性",
               "r": "せい",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "、",
@@ -413,12 +434,12 @@
             {
               "t": "31",
               "r": "",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "歳",
               "r": "さい",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "。",
@@ -430,42 +451,37 @@
             {
               "t": "巴",
               "r": "は",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "県",
               "r": "けん",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "前",
               "r": "ぜん",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "進",
               "r": "しん",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "化",
               "r": "か",
-              "g": "object"
-            },
-            {
-              "t": "学",
-              "r": "がく",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "工",
               "r": "こう",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "場",
               "r": "じょう",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "職",
@@ -500,17 +516,17 @@
             {
               "t": "高",
               "r": "こう",
-              "g": "object"
+              "g": "complement"
             },
             {
               "t": "校",
               "r": "こう",
-              "g": "object"
+              "g": "complement"
             },
             {
               "t": "卒",
               "r": "そつ",
-              "g": "object"
+              "g": "complement"
             },
             {
               "t": "。",
@@ -521,7 +537,7 @@
         ]
       },
       {
-        "source_text": "采斌者:李子硕男 54岁巴县文化馆干部高中",
+        "source_text": "采录者:李子硕，男，54岁，巴县文化馆干部，高中。",
         "zh": [
           {
             "t": "采",
@@ -529,8 +545,8 @@
             "g": "function"
           },
           {
-            "t": "斌",
-            "r": "bīn",
+            "t": "录",
+            "r": "lù",
             "g": "function"
           },
           {
@@ -546,62 +562,72 @@
           {
             "t": "李",
             "r": "lǐ",
-            "g": "object"
+            "g": "subject"
           },
           {
             "t": "子",
             "r": "zǐ",
-            "g": "object"
+            "g": "subject"
           },
           {
             "t": "硕",
             "r": "shuò",
-            "g": "object"
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "男",
             "r": "nán",
-            "g": "object"
+            "g": "attributive"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
           {
             "t": "54",
             "r": "",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "岁",
             "r": "suì",
-            "g": "object"
+            "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "巴",
             "r": "bā",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "县",
             "r": "xiàn",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "文",
             "r": "wén",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "化",
             "r": "huà",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "馆",
             "r": "guǎn",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "干",
@@ -614,14 +640,24 @@
             "g": "object"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "高",
             "r": "gāo",
-            "g": "object"
+            "g": "complement"
           },
           {
             "t": "中",
             "r": "zhōng",
-            "g": "object"
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -649,17 +685,17 @@
             {
               "t": "李",
               "r": "り",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "子",
               "r": "し",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "碩",
               "r": "せき",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "、",
@@ -669,12 +705,12 @@
             {
               "t": "男",
               "r": "だん",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "性",
               "r": "せい",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "、",
@@ -684,12 +720,12 @@
             {
               "t": "54",
               "r": "",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "歳",
               "r": "さい",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "。",
@@ -701,27 +737,32 @@
             {
               "t": "巴",
               "r": "は",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "県",
               "r": "けん",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "文",
               "r": "ぶん",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "化",
               "r": "か",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "館",
               "r": "かん",
-              "g": "object"
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
             },
             {
               "t": "幹",
@@ -741,17 +782,17 @@
             {
               "t": "高",
               "r": "こう",
-              "g": "object"
+              "g": "complement"
             },
             {
               "t": "校",
               "r": "こう",
-              "g": "object"
+              "g": "complement"
             },
             {
               "t": "卒",
               "r": "そつ",
-              "g": "object"
+              "g": "complement"
             },
             {
               "t": "。",
@@ -762,7 +803,7 @@
         ]
       },
       {
-        "source_text": "采录时间.地点:1988 年4月于巴县龟润镇",
+        "source_text": "采录时间、地点:1988年4月于巴县鱼洞镇。",
         "zh": [
           {
             "t": "采",
@@ -785,7 +826,7 @@
             "g": "function"
           },
           {
-            "t": ".",
+            "t": "、",
             "r": "",
             "g": "function"
           },
@@ -807,27 +848,22 @@
           {
             "t": "1988",
             "r": "",
-            "g": "complement"
-          },
-          {
-            "t": " ",
-            "r": "",
-            "g": "function"
+            "g": "adverbial"
           },
           {
             "t": "年",
             "r": "nián",
-            "g": "complement"
+            "g": "adverbial"
           },
           {
             "t": "4",
             "r": "",
-            "g": "complement"
+            "g": "adverbial"
           },
           {
             "t": "月",
             "r": "yuè",
-            "g": "complement"
+            "g": "adverbial"
           },
           {
             "t": "于",
@@ -845,19 +881,24 @@
             "g": "complement"
           },
           {
-            "t": "龟",
-            "r": "guī",
+            "t": "鱼",
+            "r": "yú",
             "g": "complement"
           },
           {
-            "t": "润",
-            "r": "rùn",
+            "t": "洞",
+            "r": "dòng",
             "g": "complement"
           },
           {
             "t": "镇",
             "r": "zhèn",
             "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -905,22 +946,22 @@
             {
               "t": "1988",
               "r": "",
-              "g": "complement"
+              "g": "adverbial"
             },
             {
               "t": "年",
               "r": "ねん",
-              "g": "complement"
+              "g": "adverbial"
             },
             {
               "t": "4",
               "r": "",
-              "g": "complement"
+              "g": "adverbial"
             },
             {
               "t": "月",
               "r": "がつ",
-              "g": "complement"
+              "g": "adverbial"
             },
             {
               "t": "、",
@@ -940,13 +981,13 @@
               "g": "complement"
             },
             {
-              "t": "亀",
-              "r": "き",
+              "t": "魚",
+              "r": "ぎょ",
               "g": "complement"
             },
             {
-              "t": "潤",
-              "r": "じゅん",
+              "t": "洞",
+              "r": "どう",
               "g": "complement"
             },
             {

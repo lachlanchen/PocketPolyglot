@@ -13,7 +13,7 @@
     "grammar": true,
     "token_total": 97,
     "grammar_token_total": 97,
-    "unit_count": 2
+    "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0493",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -147,22 +147,22 @@
       {
         "t": "神",
         "r": "shén",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "农",
         "r": "nóng",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "传",
         "r": "chuán",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "药",
         "r": "yào",
-        "g": "topic"
+        "g": "object"
       }
     ],
     "title_ja": [
@@ -177,49 +177,44 @@
         "g": "function"
       },
       {
-        "t": "0",
-        "r": "",
-        "g": "function"
-      },
-      {
-        "t": ". ",
+        "t": "0. ",
         "r": "",
         "g": "function"
       },
       {
         "t": "神",
         "r": "しん",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "農",
         "r": "のう",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "が",
         "r": "",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "薬",
         "r": "くすり",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "を",
         "r": "",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "伝",
         "r": "つた",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "える",
         "r": "",
-        "g": "topic"
+        "g": "predicate"
       }
     ],
     "place_zh": [],
@@ -228,9 +223,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00493",
     "source_text": "很早以前的人,要是遇到生疮害病、摔倒扯倒恼火很了的话,十有九个都只有等死,特别是那些小娃儿,更容易成短命鬼。",
+    "corrected_text": "很早以前的人，要是遇到生疮害病、摔倒扯倒恼火很了的话，十有九个都只有等死，特别是那些小娃儿，更容易成短命鬼。",
     "units": [
       {
-        "source_text": "很早以前的人,要是遇到生疮害病、摔倒扯倒恼火很了的话,",
+        "source_text": "很早以前的人，要是遇到生疮害病、摔倒扯倒恼火很了的话，",
         "zh": [
           {
             "t": "很",
@@ -255,7 +251,7 @@
           {
             "t": "的",
             "r": "de",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
             "t": "人",
@@ -263,7 +259,7 @@
             "g": "subject"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -335,12 +331,12 @@
           {
             "t": "恼",
             "r": "nǎo",
-            "g": "object"
+            "g": "complement"
           },
           {
             "t": "火",
             "r": "huǒ",
-            "g": "object"
+            "g": "complement"
           },
           {
             "t": "很",
@@ -363,7 +359,7 @@
             "g": "function"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -383,7 +379,7 @@
             {
               "t": "の",
               "r": "",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "人",
@@ -396,12 +392,7 @@
               "g": "subject"
             },
             {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "もし",
+              "t": "、もし",
               "r": "",
               "g": "function"
             },
@@ -428,7 +419,7 @@
               "g": "predicate"
             },
             {
-              "t": "ったり",
+              "t": "い、",
               "r": "",
               "g": "predicate"
             },
@@ -438,7 +429,7 @@
               "g": "object"
             },
             {
-              "t": "んで",
+              "t": "んだりして",
               "r": "",
               "g": "object"
             },
@@ -450,23 +441,18 @@
             {
               "t": "困",
               "r": "こま",
-              "g": "object"
+              "g": "complement"
             },
             {
-              "t": "ったりすると",
+              "t": "ったなら、",
               "r": "",
-              "g": "object"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
+              "g": "complement"
             }
           ]
         ]
       },
       {
-        "source_text": "十有九个都只有等死,特别是那些小娃儿,更容易成短命鬼。",
+        "source_text": "十有九个都只有等死，",
         "zh": [
           {
             "t": "十",
@@ -506,7 +492,7 @@
           {
             "t": "等",
             "r": "děng",
-            "g": "object"
+            "g": "predicate"
           },
           {
             "t": "死",
@@ -514,10 +500,81 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
-          },
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "十",
+              "r": "じゅう",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "にん",
+              "g": "subject"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "九",
+              "r": "きゅう",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "にん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、ただ",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "死",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "待",
+              "r": "ま",
+              "g": "predicate"
+            },
+            {
+              "t": "つしかなかった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "特别是那些小娃儿，更容易成短命鬼。",
+        "zh": [
           {
             "t": "特",
             "r": "tè",
@@ -559,7 +616,7 @@
             "g": "subject"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -607,76 +664,19 @@
         "ja": [
           [
             {
-              "t": "十",
-              "r": "じゅう",
-              "g": "subject"
-            },
-            {
-              "t": "人",
-              "r": "にん",
-              "g": "subject"
+              "t": "特",
+              "r": "とく",
+              "g": "adverbial"
             },
             {
               "t": "に",
               "r": "",
-              "g": "subject"
-            },
-            {
-              "t": "九",
-              "r": "きゅう",
-              "g": "subject"
-            },
-            {
-              "t": "人",
-              "r": "にん",
-              "g": "subject"
-            },
-            {
-              "t": "は",
-              "r": "",
-              "g": "subject"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "ただ",
-              "r": "",
               "g": "adverbial"
             },
             {
-              "t": "死",
-              "r": "し",
-              "g": "object"
-            },
-            {
-              "t": "を",
+              "t": "そうした",
               "r": "",
-              "g": "object"
-            },
-            {
-              "t": "待",
-              "r": "ま",
-              "g": "predicate"
-            },
-            {
-              "t": "つしかなく",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            }
-          ],
-          [
-            {
-              "t": "とりわけ",
-              "r": "",
-              "g": "adverbial"
+              "g": "subject"
             },
             {
               "t": "小",
@@ -702,7 +702,9 @@
               "t": "、",
               "r": "",
               "g": "function"
-            },
+            }
+          ],
+          [
             {
               "t": "なおさら",
               "r": "",
@@ -719,12 +721,17 @@
               "g": "object"
             },
             {
-              "t": "に",
+              "t": "の",
               "r": "",
               "g": "object"
             },
             {
-              "t": "なりやすかった",
+              "t": "身",
+              "r": "み",
+              "g": "object"
+            },
+            {
+              "t": "になりやすかった",
               "r": "",
               "g": "predicate"
             },

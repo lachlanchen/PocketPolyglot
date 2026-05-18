@@ -182,24 +182,25 @@
     {
       "id": "sichuan-folk-stories-vol1-p00539",
       "source_text": "做生的时候,先把梧桐树砍下来截成三节,尖尖的一节和头头的一节都不用,专门皮用中间那--节。是按天,地,人三才做成金童头.玉女腰的模样,要经过七七四十九天才能做成。",
+      "corrected_text": "做琴的时候，先把梧桐树砍下来截成三节，尖尖的一节和头头的一节都不用，专门只用中间那一节。是按天、地、人三才做成金童头、玉女腰的模样，要经过七七四十九天才能做成。",
       "units": [
         {
-          "source_text": "做生的时候,先把梧桐树砍下来截成三节,",
+          "source_text": "做琴的时候，先把梧桐树砍下来截成三节，",
           "zh": [
             {
               "t": "做",
               "r": "zuò",
-              "g": "adverbial"
+              "g": "predicate"
             },
             {
-              "t": "生",
-              "r": "shēng",
-              "g": "adverbial"
+              "t": "琴",
+              "r": "qín",
+              "g": "object"
             },
             {
               "t": "的",
               "r": "de",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "时",
@@ -212,7 +213,7 @@
               "g": "adverbial"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -224,7 +225,7 @@
             {
               "t": "把",
               "r": "bǎ",
-              "g": "object"
+              "g": "function"
             },
             {
               "t": "梧",
@@ -277,7 +278,7 @@
               "g": "complement"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             }
@@ -287,22 +288,22 @@
               {
                 "t": "琴",
                 "r": "こと",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "を",
                 "r": "",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "作",
                 "r": "つく",
-                "g": "adverbial"
+                "g": "predicate"
               },
               {
                 "t": "る",
                 "r": "",
-                "g": "adverbial"
+                "g": "predicate"
               },
               {
                 "t": "時",
@@ -310,12 +311,7 @@
                 "g": "adverbial"
               },
               {
-                "t": "は",
-                "r": "",
-                "g": "adverbial"
-              },
-              {
-                "t": "、",
+                "t": "は、",
                 "r": "",
                 "g": "function"
               },
@@ -397,12 +393,7 @@
                 "g": "predicate"
               },
               {
-                "t": "け",
-                "r": "",
-                "g": "predicate"
-              },
-              {
-                "t": "、",
+                "t": "け、",
                 "r": "",
                 "g": "function"
               }
@@ -410,22 +401,22 @@
           ]
         },
         {
-          "source_text": "尖尖的一节和头头的一节都不用,专门皮用中间那--节。",
+          "source_text": "尖尖的一节和头头的一节都不用，专门只用中间那一节。",
           "zh": [
             {
               "t": "尖",
               "r": "jiān",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "尖",
               "r": "jiān",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "的",
               "r": "de",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "一",
@@ -440,22 +431,22 @@
             {
               "t": "和",
               "r": "hé",
-              "g": "object"
+              "g": "function"
             },
             {
               "t": "头",
               "r": "tóu",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "头",
               "r": "tóu",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "的",
               "r": "de",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "一",
@@ -483,7 +474,7 @@
               "g": "predicate"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -498,8 +489,8 @@
               "g": "adverbial"
             },
             {
-              "t": "皮",
-              "r": "pí",
+              "t": "只",
+              "r": "zhǐ",
               "g": "adverbial"
             },
             {
@@ -510,12 +501,12 @@
             {
               "t": "中",
               "r": "zhōng",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "间",
               "r": "jiān",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "那",
@@ -523,9 +514,9 @@
               "g": "object"
             },
             {
-              "t": "--",
-              "r": "",
-              "g": "function"
+              "t": "一",
+              "r": "yī",
+              "g": "object"
             },
             {
               "t": "节",
@@ -543,17 +534,17 @@
               {
                 "t": "先",
                 "r": "せん",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "端",
                 "r": "たん",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "の",
                 "r": "",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "一",
@@ -573,17 +564,17 @@
               {
                 "t": "根",
                 "r": "ね",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "元",
                 "r": "もと",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "の",
                 "r": "",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "一",
@@ -606,14 +597,9 @@
                 "g": "predicate"
               },
               {
-                "t": "わず",
+                "t": "わず、",
                 "r": "",
                 "g": "predicate"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
               }
             ],
             [
@@ -625,22 +611,22 @@
               {
                 "t": "真",
                 "r": "ま",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "ん",
                 "r": "",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "中",
                 "r": "なか",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "の",
                 "r": "",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "その",
@@ -681,7 +667,7 @@
           ]
         },
         {
-          "source_text": "是按天,地,人三才做成金童头.玉女腰的模样,",
+          "source_text": "是按天、地、人三才做成金童头、玉女腰的模样，",
           "zh": [
             {
               "t": "是",
@@ -696,37 +682,37 @@
             {
               "t": "天",
               "r": "tiān",
-              "g": "adverbial"
+              "g": "object"
             },
             {
-              "t": ",",
+              "t": "、",
               "r": "",
               "g": "function"
             },
             {
               "t": "地",
               "r": "dì",
-              "g": "adverbial"
+              "g": "object"
             },
             {
-              "t": ",",
+              "t": "、",
               "r": "",
               "g": "function"
             },
             {
               "t": "人",
               "r": "rén",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "三",
               "r": "sān",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "才",
               "r": "cái",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "做",
@@ -741,12 +727,12 @@
             {
               "t": "金",
               "r": "jīn",
-              "g": "complement"
+              "g": "attributive"
             },
             {
               "t": "童",
               "r": "tóng",
-              "g": "complement"
+              "g": "attributive"
             },
             {
               "t": "头",
@@ -754,19 +740,19 @@
               "g": "complement"
             },
             {
-              "t": ".",
+              "t": "、",
               "r": "",
               "g": "function"
             },
             {
               "t": "玉",
               "r": "yù",
-              "g": "complement"
+              "g": "attributive"
             },
             {
               "t": "女",
               "r": "nǚ",
-              "g": "complement"
+              "g": "attributive"
             },
             {
               "t": "腰",
@@ -789,7 +775,7 @@
               "g": "complement"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             }
@@ -799,7 +785,7 @@
               {
                 "t": "天",
                 "r": "てん",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "、",
@@ -809,7 +795,7 @@
               {
                 "t": "地",
                 "r": "ち",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "、",
@@ -819,22 +805,22 @@
               {
                 "t": "人",
                 "r": "じん",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "の",
                 "r": "",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "三",
                 "r": "さん",
-                "g": "adverbial"
+                "g": "attributive"
               },
               {
                 "t": "才",
                 "r": "さい",
-                "g": "adverbial"
+                "g": "attributive"
               },
               {
                 "t": "に",
@@ -847,12 +833,7 @@
                 "g": "adverbial"
               },
               {
-                "t": "って",
-                "r": "",
-                "g": "adverbial"
-              },
-              {
-                "t": "、",
+                "t": "って、",
                 "r": "",
                 "g": "function"
               }
@@ -861,17 +842,17 @@
               {
                 "t": "金",
                 "r": "きん",
-                "g": "complement"
+                "g": "attributive"
               },
               {
                 "t": "童",
                 "r": "どう",
-                "g": "complement"
+                "g": "attributive"
               },
               {
                 "t": "の",
                 "r": "",
-                "g": "complement"
+                "g": "attributive"
               },
               {
                 "t": "頭",
@@ -886,17 +867,17 @@
               {
                 "t": "玉",
                 "r": "ぎょく",
-                "g": "complement"
+                "g": "attributive"
               },
               {
                 "t": "女",
                 "r": "じょ",
-                "g": "complement"
+                "g": "attributive"
               },
               {
                 "t": "の",
                 "r": "",
-                "g": "complement"
+                "g": "attributive"
               },
               {
                 "t": "腰",
@@ -924,14 +905,9 @@
                 "g": "predicate"
               },
               {
-                "t": "り",
+                "t": "り、",
                 "r": "",
                 "g": "predicate"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
               }
             ]
           ]
@@ -947,42 +923,42 @@
             {
               "t": "经",
               "r": "jīng",
-              "g": "adverbial"
+              "g": "predicate"
             },
             {
               "t": "过",
               "r": "guò",
-              "g": "adverbial"
+              "g": "predicate"
             },
             {
               "t": "七",
               "r": "qī",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "七",
               "r": "qī",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "四",
               "r": "sì",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "十",
               "r": "shí",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "九",
               "r": "jiǔ",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "天",
               "r": "tiān",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "才",
@@ -1015,52 +991,47 @@
               {
                 "t": "七",
                 "r": "しち",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "七",
                 "r": "しち",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "四",
                 "r": "し",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "十",
                 "r": "じゅう",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "九",
                 "r": "く",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "日",
                 "r": "にち",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "を",
                 "r": "",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "経",
                 "r": "へ",
-                "g": "adverbial"
+                "g": "predicate"
               },
               {
-                "t": "てはじめて",
+                "t": "てはじめて、",
                 "r": "",
                 "g": "adverbial"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
               }
             ],
             [
@@ -1077,12 +1048,12 @@
               {
                 "t": "上",
                 "r": "あ",
-                "g": "predicate"
+                "g": "complement"
               },
               {
                 "t": "げることができる",
                 "r": "",
-                "g": "predicate"
+                "g": "complement"
               },
               {
                 "t": "。",

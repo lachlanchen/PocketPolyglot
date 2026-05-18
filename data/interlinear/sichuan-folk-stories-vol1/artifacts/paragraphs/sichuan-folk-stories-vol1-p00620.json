@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 88,
-    "grammar_token_total": 88,
+    "token_total": 98,
+    "grammar_token_total": 98,
     "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0620",
@@ -253,9 +253,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00620",
     "source_text": "采录者:陈朝友男 46岁巴县接龙区文化专干高中李子硕男 56岁已县文化馆干部高中",
+    "corrected_text": "采录者：陈朝友，男，46岁，巴县接龙区文化专干，高中。李子硕，男，56岁，巴县文化馆干部，高中。",
     "units": [
       {
-        "source_text": "采录者:陈朝友男 46岁巴县接龙区文化专干高中",
+        "source_text": "采录者：陈朝友，男，46岁，巴县接龙区文化专干，高中。",
         "zh": [
           {
             "t": "采",
@@ -273,7 +274,7 @@
             "g": "topic"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -293,12 +294,17 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "男",
             "r": "nán",
             "g": "attributive"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -316,6 +322,11 @@
             "t": "岁",
             "r": "suì",
             "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "巴",
@@ -363,6 +374,11 @@
             "g": "object"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "高",
             "r": "gāo",
             "g": "complement"
@@ -371,6 +387,11 @@
             "t": "中",
             "r": "zhōng",
             "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -521,7 +542,7 @@
         ]
       },
       {
-        "source_text": "李子硕男 56岁已县文化馆干部高中",
+        "source_text": "李子硕，男，56岁，巴县文化馆干部，高中。",
         "zh": [
           {
             "t": "李",
@@ -539,12 +560,17 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "男",
             "r": "nán",
             "g": "attributive"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -564,8 +590,13 @@
             "g": "attributive"
           },
           {
-            "t": "已",
-            "r": "yǐ",
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "巴",
+            "r": "bā",
             "g": "attributive"
           },
           {
@@ -599,6 +630,11 @@
             "g": "object"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "高",
             "r": "gāo",
             "g": "complement"
@@ -607,6 +643,11 @@
             "t": "中",
             "r": "zhōng",
             "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -664,8 +705,8 @@
           ],
           [
             {
-              "t": "已",
-              "r": "い",
+              "t": "巴",
+              "r": "は",
               "g": "attributive"
             },
             {

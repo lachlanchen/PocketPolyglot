@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 33,
-    "grammar_token_total": 33,
+    "token_total": 39,
+    "grammar_token_total": 39,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0535",
@@ -193,9 +193,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00535",
     "source_text": "讲述者:刘长兴男 71岁农民私束",
+    "corrected_text": "讲述者：刘长兴，男，71岁，农民，私塾。",
     "units": [
       {
-        "source_text": "讲述者:刘长兴男 71岁农民私束",
+        "source_text": "讲述者：刘长兴，男，71岁，农民，私塾。",
         "zh": [
           {
             "t": "讲",
@@ -213,7 +214,7 @@
             "g": "subject"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -233,12 +234,17 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "男",
             "r": "nán",
             "g": "attributive"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -253,6 +259,11 @@
             "g": "attributive"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "农",
             "r": "nóng",
             "g": "attributive"
@@ -263,14 +274,24 @@
             "g": "attributive"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "私",
             "r": "sī",
             "g": "attributive"
           },
           {
-            "t": "束",
-            "r": "shù",
+            "t": "塾",
+            "r": "shú",
             "g": "attributive"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -368,9 +389,14 @@
               "g": "attributive"
             },
             {
-              "t": "束",
-              "r": "そく",
+              "t": "塾",
+              "r": "じゅく",
               "g": "attributive"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ]
         ]

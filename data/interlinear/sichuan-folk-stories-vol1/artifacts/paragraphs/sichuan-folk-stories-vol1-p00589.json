@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 14,
-    "grammar_token_total": 14,
+    "token_total": 15,
+    "grammar_token_total": 15,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0589",
@@ -197,9 +197,9 @@
         "g": "subject"
       },
       {
-        "t": "、",
+        "t": "が",
         "r": "",
-        "g": "function"
+        "g": "subject"
       },
       {
         "t": "太",
@@ -233,9 +233,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00589",
     "source_text": "宙紧:一直，",
+    "corrected_text": "宙紧：一直。",
     "units": [
       {
-        "source_text": "宙紧:一直，",
+        "source_text": "宙紧：一直。",
         "zh": [
           {
             "t": "宙",
@@ -248,7 +249,7 @@
             "g": "topic"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -263,7 +264,7 @@
             "g": "predicate"
           },
           {
-            "t": "，",
+            "t": "。",
             "r": "",
             "g": "function"
           }
@@ -286,12 +287,7 @@
               "g": "topic"
             },
             {
-              "t": "」",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "は",
+              "t": "」とは",
               "r": "",
               "g": "topic"
             },
@@ -303,12 +299,22 @@
           ],
           [
             {
-              "t": "ずっと",
+              "t": "ずっとという",
               "r": "",
               "g": "predicate"
             },
             {
-              "t": "、",
+              "t": "意",
+              "r": "い",
+              "g": "object"
+            },
+            {
+              "t": "味",
+              "r": "み",
+              "g": "object"
+            },
+            {
+              "t": "。",
               "r": "",
               "g": "function"
             }

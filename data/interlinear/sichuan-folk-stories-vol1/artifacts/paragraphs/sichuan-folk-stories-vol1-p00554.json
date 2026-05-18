@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 52,
-    "grammar_token_total": 52,
-    "unit_count": 2
+    "token_total": 60,
+    "grammar_token_total": 60,
+    "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0554",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -213,9 +213,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00554",
     "source_text": "有契攻.发洛村王从说为商放的风刘,以子的创造才。",
+    "corrected_text": "有仓颉，发明文字，传说为黄帝的史官，以鸟兽的足迹创造字。",
     "units": [
       {
-        "source_text": "有契攻.",
+        "source_text": "有仓颉，发明文字，",
         "zh": [
           {
             "t": "有",
@@ -223,17 +224,42 @@
             "g": "predicate"
           },
           {
-            "t": "契",
-            "r": "qì",
+            "t": "仓",
+            "r": "cāng",
+            "g": "subject"
+          },
+          {
+            "t": "颉",
+            "r": "jié",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "发",
+            "r": "fā",
+            "g": "predicate"
+          },
+          {
+            "t": "明",
+            "r": "míng",
+            "g": "predicate"
+          },
+          {
+            "t": "文",
+            "r": "wén",
             "g": "object"
           },
           {
-            "t": "攻",
-            "r": "gōng",
+            "t": "字",
+            "r": "zì",
             "g": "object"
           },
           {
-            "t": ".",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -241,29 +267,59 @@
         "ja": [
           [
             {
-              "t": "契",
-              "r": "けい",
-              "g": "object"
+              "t": "倉",
+              "r": "そう",
+              "g": "subject"
             },
             {
-              "t": "攻",
-              "r": "こう",
-              "g": "object"
+              "t": "頡",
+              "r": "けつ",
+              "g": "subject"
             },
             {
               "t": "という",
               "r": "",
-              "g": "object"
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "subject"
+            },
+            {
+              "t": "がいて、",
+              "r": "",
+              "g": "predicate"
             }
           ],
           [
             {
-              "t": "者",
-              "r": "もの",
+              "t": "文",
+              "r": "も",
               "g": "object"
             },
             {
-              "t": "がいた。",
+              "t": "字",
+              "r": "じ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "発",
+              "r": "はつ",
+              "g": "predicate"
+            },
+            {
+              "t": "明",
+              "r": "めい",
+              "g": "predicate"
+            },
+            {
+              "t": "した。",
               "r": "",
               "g": "predicate"
             }
@@ -271,37 +327,17 @@
         ]
       },
       {
-        "source_text": "发洛村王从说为商放的风刘,以子的创造才。",
+        "source_text": "传说为黄帝的史官，",
         "zh": [
           {
-            "t": "发",
-            "r": "fā",
-            "g": "subject"
-          },
-          {
-            "t": "洛",
-            "r": "luò",
-            "g": "subject"
-          },
-          {
-            "t": "村",
-            "r": "cūn",
-            "g": "subject"
-          },
-          {
-            "t": "王",
-            "r": "wáng",
-            "g": "subject"
-          },
-          {
-            "t": "从",
-            "r": "cóng",
+            "t": "传",
+            "r": "chuán",
             "g": "adverbial"
           },
           {
             "t": "说",
             "r": "shuō",
-            "g": "predicate"
+            "g": "adverbial"
           },
           {
             "t": "为",
@@ -309,63 +345,129 @@
             "g": "predicate"
           },
           {
-            "t": "商",
-            "r": "shāng",
-            "g": "object"
+            "t": "黄",
+            "r": "huáng",
+            "g": "attributive"
           },
           {
-            "t": "放",
-            "r": "fàng",
-            "g": "predicate"
+            "t": "帝",
+            "r": "dì",
+            "g": "attributive"
           },
           {
             "t": "的",
             "r": "de",
-            "g": "predicate"
+            "g": "attributive"
           },
           {
-            "t": "风",
-            "r": "fēng",
+            "t": "史",
+            "r": "shǐ",
             "g": "object"
           },
           {
-            "t": "刘",
-            "r": "liú",
+            "t": "官",
+            "r": "guān",
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
-          },
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "伝",
+              "r": "つた",
+              "g": "adverbial"
+            },
+            {
+              "t": "えによれば、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "黄",
+              "r": "こう",
+              "g": "attributive"
+            },
+            {
+              "t": "帝",
+              "r": "てい",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "史",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "官",
+              "r": "かん",
+              "g": "object"
+            },
+            {
+              "t": "であったという。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "以鸟兽的足迹创造字。",
+        "zh": [
           {
             "t": "以",
             "r": "yǐ",
             "g": "adverbial"
           },
           {
-            "t": "子",
-            "r": "zǐ",
-            "g": "object"
+            "t": "鸟",
+            "r": "niǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "兽",
+            "r": "shòu",
+            "g": "attributive"
           },
           {
             "t": "的",
             "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "足",
+            "r": "zú",
+            "g": "object"
+          },
+          {
+            "t": "迹",
+            "r": "jì",
             "g": "object"
           },
           {
             "t": "创",
             "r": "chuàng",
-            "g": "attributive"
+            "g": "predicate"
           },
           {
             "t": "造",
             "r": "zào",
-            "g": "attributive"
+            "g": "predicate"
           },
           {
-            "t": "才",
-            "r": "cái",
+            "t": "字",
+            "r": "zì",
             "g": "object"
           },
           {
@@ -377,70 +479,45 @@
         "ja": [
           [
             {
-              "t": "発",
-              "r": "はつ",
-              "g": "subject"
+              "t": "鳥",
+              "r": "とり",
+              "g": "attributive"
             },
             {
-              "t": "洛",
-              "r": "らく",
-              "g": "subject"
+              "t": "や",
+              "r": "",
+              "g": "attributive"
             },
             {
-              "t": "村",
-              "r": "そん",
-              "g": "subject"
+              "t": "獣",
+              "r": "けもの",
+              "g": "attributive"
             },
             {
               "t": "の",
               "r": "",
-              "g": "subject"
+              "g": "attributive"
             },
             {
-              "t": "王",
-              "r": "おう",
-              "g": "subject"
+              "t": "足",
+              "r": "あし",
+              "g": "object"
             },
             {
-              "t": "は、",
-              "r": "",
-              "g": "subject"
+              "t": "跡",
+              "r": "あと",
+              "g": "object"
             },
             {
-              "t": "伝",
-              "r": "つた",
-              "g": "predicate"
-            },
-            {
-              "t": "え",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "によれば",
+              "t": "をもとに、",
               "r": "",
               "g": "adverbial"
             }
           ],
           [
             {
-              "t": "商",
-              "r": "しょう",
-              "g": "object"
-            },
-            {
-              "t": "に",
-              "r": "",
-              "g": "object"
-            },
-            {
-              "t": "風",
-              "r": "ふう",
-              "g": "object"
-            },
-            {
-              "t": "劉",
-              "r": "りゅう",
+              "t": "字",
+              "r": "じ",
               "g": "object"
             },
             {
@@ -449,49 +526,24 @@
               "g": "object"
             },
             {
-              "t": "放",
-              "r": "はな",
-              "g": "predicate"
-            },
-            {
-              "t": "ち、",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "子",
-              "r": "こ",
-              "g": "object"
-            },
-            {
-              "t": "の",
-              "r": "",
-              "g": "object"
-            },
-            {
               "t": "創",
-              "r": "そう",
-              "g": "attributive"
+              "r": "つく",
+              "g": "predicate"
             },
             {
-              "t": "造",
-              "r": "ぞう",
-              "g": "attributive"
-            },
-            {
-              "t": "の",
-              "r": "",
-              "g": "attributive"
-            },
-            {
-              "t": "才",
-              "r": "さい",
-              "g": "object"
-            },
-            {
-              "t": "によった。",
+              "t": "り",
               "r": "",
               "g": "predicate"
+            },
+            {
+              "t": "出",
+              "r": "だ",
+              "g": "complement"
+            },
+            {
+              "t": "した。",
+              "r": "",
+              "g": "complement"
             }
           ]
         ]

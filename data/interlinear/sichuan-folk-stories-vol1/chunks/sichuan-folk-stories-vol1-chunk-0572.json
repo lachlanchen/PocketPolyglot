@@ -38,12 +38,12 @@
       {
         "t": "文",
         "r": "wén",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "化",
         "r": "huà",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "起",
@@ -75,12 +75,12 @@
       {
         "t": "文",
         "r": "ぶん",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "化",
         "r": "か",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "起",
@@ -123,24 +123,19 @@
         "g": "function"
       },
       {
-        "t": ".",
-        "r": "",
-        "g": "function"
-      },
-      {
-        "t": " ",
+        "t": ". ",
         "r": "",
         "g": "function"
       },
       {
         "t": "下",
         "r": "xià",
-        "g": "subject"
+        "g": "topic"
       },
       {
         "t": "是",
         "r": "shì",
-        "g": "predicate"
+        "g": "function"
       },
       {
         "t": "怎",
@@ -212,7 +207,7 @@
       {
         "t": "下",
         "r": "した",
-        "g": "subject"
+        "g": "topic"
       },
       {
         "t": "はどうして",
@@ -262,9 +257,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00572",
       "source_text": "什么盐?",
+      "corrected_text": "什么盐？",
       "units": [
         {
-          "source_text": "什么盐?",
+          "source_text": "什么盐？",
           "zh": [
             {
               "t": "什",
@@ -282,7 +278,7 @@
               "g": "object"
             },
             {
-              "t": "?",
+              "t": "？",
               "r": "",
               "g": "function"
             }
@@ -304,7 +300,7 @@
               {
                 "t": "なのか。",
                 "r": "",
-                "g": "function"
+                "g": "predicate"
               }
             ]
           ]

@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 146,
-    "grammar_token_total": 146,
+    "token_total": 149,
+    "grammar_token_total": 149,
     "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0600",
@@ -23,24 +23,24 @@
       {
         "t": "神",
         "r": "shén",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "话",
         "r": "huà",
-        "g": "topic"
+        "g": "object"
       }
     ],
     "title_ja": [
       {
         "t": "神",
         "r": "しん",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "話",
         "r": "わ",
-        "g": "topic"
+        "g": "object"
       }
     ]
   },
@@ -50,69 +50,69 @@
       {
         "t": "神",
         "r": "shén",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "和",
         "r": "hé",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": "英",
         "r": "yīng",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "雄",
         "r": "xióng",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "神",
         "r": "shén",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "话",
         "r": "huà",
-        "g": "topic"
+        "g": "object"
       }
     ],
     "title_ja": [
       {
         "t": "神",
         "r": "かみ",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "と",
         "r": "",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": "英",
         "r": "えい",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "雄",
         "r": "ゆう",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "の",
         "r": "",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "神",
         "r": "しん",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "話",
         "r": "わ",
-        "g": "topic"
+        "g": "object"
       }
     ]
   },
@@ -131,7 +131,7 @@
       },
       {
         "t": "弹",
-        "r": "tán",
+        "r": "dàn",
         "g": "subject"
       },
       {
@@ -162,9 +162,9 @@
         "g": "subject"
       },
       {
-        "t": "、",
+        "t": "が",
         "r": "",
-        "g": "function"
+        "g": "subject"
       },
       {
         "t": "日",
@@ -193,9 +193,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00600",
     "source_text": "讲述悍:黄水表凡 58风绵竹县马是乡农民不识字果康者:王伸蛮男 30几绵竹县马尾乡农氏高小采录时间.地点:1987 年上月3日于绵竹县马尼乡",
+    "corrected_text": "讲述者:黄水表，58岁，绵竹县马尾乡农民，不识字。采录者:王伸蛮，男，30几岁，绵竹县马尾乡农民，高小。采录时间、地点:1987年4月3日于绵竹县马尾乡",
     "units": [
       {
-        "source_text": "讲述悍:黄水表凡 58风绵竹县马是乡农民不识字",
+        "source_text": "讲述者:黄水表，58岁，绵竹县马尾乡农民，不识字。",
         "zh": [
           {
             "t": "讲",
@@ -208,8 +209,8 @@
             "g": "function"
           },
           {
-            "t": "悍",
-            "r": "hàn",
+            "t": "者",
+            "r": "zhě",
             "g": "function"
           },
           {
@@ -233,12 +234,7 @@
             "g": "subject"
           },
           {
-            "t": "凡",
-            "r": "fán",
-            "g": "subject"
-          },
-          {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -248,9 +244,14 @@
             "g": "attributive"
           },
           {
-            "t": "风",
-            "r": "fēng",
+            "t": "岁",
+            "r": "suì",
             "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "绵",
@@ -273,8 +274,8 @@
             "g": "attributive"
           },
           {
-            "t": "是",
-            "r": "shì",
+            "t": "尾",
+            "r": "wěi",
             "g": "attributive"
           },
           {
@@ -293,9 +294,14 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "不",
             "r": "bù",
-            "g": "predicate"
+            "g": "adverbial"
           },
           {
             "t": "识",
@@ -306,6 +312,11 @@
             "t": "字",
             "r": "zì",
             "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -326,17 +337,7 @@
               "g": "function"
             },
             {
-              "t": "らしき",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "欄",
-              "r": "らん",
-              "g": "function"
-            },
-            {
-              "t": ": ",
+              "t": ":",
               "r": "",
               "g": "function"
             },
@@ -353,11 +354,6 @@
             {
               "t": "表",
               "r": "ひょう",
-              "g": "subject"
-            },
-            {
-              "t": "凡",
-              "r": "ぼん",
               "g": "subject"
             },
             {
@@ -403,8 +399,8 @@
               "g": "attributive"
             },
             {
-              "t": "是",
-              "r": "ぜ",
+              "t": "尾",
+              "r": "び",
               "g": "attributive"
             },
             {
@@ -438,39 +434,34 @@
               "g": "object"
             },
             {
-              "t": "は",
+              "t": "を",
               "r": "",
               "g": "object"
             },
             {
-              "t": "読",
-              "r": "よ",
+              "t": "知",
+              "r": "し",
               "g": "predicate"
             },
             {
-              "t": "めない",
+              "t": "らない。",
               "r": "",
               "g": "predicate"
-            },
-            {
-              "t": "。",
-              "r": "",
-              "g": "function"
             }
           ]
         ]
       },
       {
-        "source_text": "果康者:王伸蛮男 30几绵竹县马尾乡农氏高小",
+        "source_text": "采录者:王伸蛮，男，30几岁，绵竹县马尾乡农民，高小。",
         "zh": [
           {
-            "t": "果",
-            "r": "guǒ",
+            "t": "采",
+            "r": "cǎi",
             "g": "function"
           },
           {
-            "t": "康",
-            "r": "kāng",
+            "t": "录",
+            "r": "lù",
             "g": "function"
           },
           {
@@ -499,12 +490,17 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "男",
             "r": "nán",
             "g": "attributive"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -517,6 +513,16 @@
             "t": "几",
             "r": "jǐ",
             "g": "attributive"
+          },
+          {
+            "t": "岁",
+            "r": "suì",
+            "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "绵",
@@ -551,34 +557,44 @@
           {
             "t": "农",
             "r": "nóng",
-            "g": "object"
+            "g": "subject"
           },
           {
-            "t": "氏",
-            "r": "shì",
-            "g": "object"
+            "t": "民",
+            "r": "mín",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "高",
             "r": "gāo",
-            "g": "object"
+            "g": "complement"
           },
           {
             "t": "小",
             "r": "xiǎo",
-            "g": "object"
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
           [
             {
-              "t": "果",
-              "r": "か",
+              "t": "採",
+              "r": "さい",
               "g": "function"
             },
             {
-              "t": "康",
-              "r": "こう",
+              "t": "録",
+              "r": "ろく",
               "g": "function"
             },
             {
@@ -587,17 +603,7 @@
               "g": "function"
             },
             {
-              "t": "の",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "欄",
-              "r": "らん",
-              "g": "function"
-            },
-            {
-              "t": ": ",
+              "t": ":",
               "r": "",
               "g": "function"
             },
@@ -632,12 +638,7 @@
               "g": "attributive"
             },
             {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "30",
+              "t": "、30",
               "r": "",
               "g": "attributive"
             },
@@ -696,37 +697,32 @@
             {
               "t": "農",
               "r": "のう",
-              "g": "object"
+              "g": "subject"
             },
             {
-              "t": "氏",
-              "r": "し",
-              "g": "object"
+              "t": "民",
+              "r": "みん",
+              "g": "subject"
+            },
+            {
+              "t": "で、",
+              "r": "",
+              "g": "subject"
             },
             {
               "t": "高",
               "r": "こう",
-              "g": "object"
+              "g": "complement"
             },
             {
               "t": "小",
               "r": "しょう",
-              "g": "object"
+              "g": "complement"
             },
             {
-              "t": "と",
-              "r": "",
-              "g": "object"
-            },
-            {
-              "t": "記",
-              "r": "しる",
-              "g": "predicate"
-            },
-            {
-              "t": "される",
-              "r": "",
-              "g": "predicate"
+              "t": "卒",
+              "r": "そつ",
+              "g": "complement"
             },
             {
               "t": "。",
@@ -737,7 +733,7 @@
         ]
       },
       {
-        "source_text": "采录时间.地点:1987 年上月3日于绵竹县马尼乡",
+        "source_text": "采录时间、地点:1987年4月3日于绵竹县马尾乡",
         "zh": [
           {
             "t": "采",
@@ -760,7 +756,7 @@
             "g": "function"
           },
           {
-            "t": ".",
+            "t": "、",
             "r": "",
             "g": "function"
           },
@@ -785,18 +781,13 @@
             "g": "adverbial"
           },
           {
-            "t": " ",
-            "r": "",
-            "g": "function"
-          },
-          {
             "t": "年",
             "r": "nián",
             "g": "adverbial"
           },
           {
-            "t": "上",
-            "r": "shàng",
+            "t": "4",
+            "r": "",
             "g": "adverbial"
           },
           {
@@ -822,32 +813,32 @@
           {
             "t": "绵",
             "r": "mián",
-            "g": "adverbial"
+            "g": "object"
           },
           {
             "t": "竹",
             "r": "zhú",
-            "g": "adverbial"
+            "g": "object"
           },
           {
             "t": "县",
             "r": "xiàn",
-            "g": "adverbial"
+            "g": "object"
           },
           {
             "t": "马",
             "r": "mǎ",
-            "g": "adverbial"
+            "g": "object"
           },
           {
-            "t": "尼",
-            "r": "ní",
-            "g": "adverbial"
+            "t": "尾",
+            "r": "wěi",
+            "g": "object"
           },
           {
             "t": "乡",
             "r": "xiāng",
-            "g": "adverbial"
+            "g": "object"
           }
         ],
         "ja": [
@@ -888,7 +879,7 @@
               "g": "function"
             },
             {
-              "t": ": ",
+              "t": ":",
               "r": "",
               "g": "function"
             },
@@ -903,13 +894,13 @@
               "g": "adverbial"
             },
             {
-              "t": "上",
-              "r": "じょう",
+              "t": "4",
+              "r": "",
               "g": "adverbial"
             },
             {
               "t": "月",
-              "r": "げつ",
+              "r": "がつ",
               "g": "adverbial"
             },
             {
@@ -923,7 +914,7 @@
               "g": "adverbial"
             },
             {
-              "t": "、",
+              "t": "。",
               "r": "",
               "g": "function"
             }
@@ -932,37 +923,47 @@
             {
               "t": "綿",
               "r": "めん",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "竹",
               "r": "ちく",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "県",
               "r": "けん",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "馬",
               "r": "ば",
-              "g": "adverbial"
+              "g": "object"
             },
             {
-              "t": "尼",
-              "r": "に",
-              "g": "adverbial"
+              "t": "尾",
+              "r": "び",
+              "g": "object"
             },
             {
               "t": "郷",
               "r": "きょう",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "にて",
               "r": "",
-              "g": "adverbial"
+              "g": "object"
+            },
+            {
+              "t": "採",
+              "r": "さい",
+              "g": "predicate"
+            },
+            {
+              "t": "録",
+              "r": "ろく",
+              "g": "predicate"
             },
             {
               "t": "。",

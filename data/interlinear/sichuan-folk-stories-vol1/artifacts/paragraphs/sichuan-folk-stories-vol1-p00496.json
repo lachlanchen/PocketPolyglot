@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 118,
-    "grammar_token_total": 118,
-    "unit_count": 2
+    "token_total": 122,
+    "grammar_token_total": 122,
+    "unit_count": 4
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0496",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -233,9 +233,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00496",
     "source_text": "白硼子老头走后,人些就一样一样地扯来试,硬是灵验,医-个好一个.有人说老头儿就是白龙变的,大家喊他神龙,传久了就叫成神农了。",
+    "corrected_text": "白胡子老头走后，人些就一样一样地扯来试，硬是灵验，医一个好一个。有人说老头儿就是白龙变的，大家喊他神龙，传久了就叫成神农了。",
     "units": [
       {
-        "source_text": "白硼子老头走后,人些就一样一样地扯来试,硬是灵验,医-个好一个.",
+        "source_text": "白胡子老头走后，人些就一样一样地扯来试，",
         "zh": [
           {
             "t": "白",
@@ -243,8 +244,8 @@
             "g": "attributive"
           },
           {
-            "t": "硼",
-            "r": "péng",
+            "t": "胡",
+            "r": "hú",
             "g": "attributive"
           },
           {
@@ -273,7 +274,7 @@
             "g": "adverbial"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -333,67 +334,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "硬",
-            "r": "yìng",
-            "g": "adverbial"
-          },
-          {
-            "t": "是",
-            "r": "shì",
-            "g": "adverbial"
-          },
-          {
-            "t": "灵",
-            "r": "líng",
-            "g": "predicate"
-          },
-          {
-            "t": "验",
-            "r": "yàn",
-            "g": "predicate"
-          },
-          {
-            "t": ",",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "医",
-            "r": "yī",
-            "g": "predicate"
-          },
-          {
-            "t": "-",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "个",
-            "r": "gè",
-            "g": "object"
-          },
-          {
-            "t": "好",
-            "r": "hǎo",
-            "g": "predicate"
-          },
-          {
-            "t": "一",
-            "r": "yī",
-            "g": "object"
-          },
-          {
-            "t": "个",
-            "r": "gè",
-            "g": "object"
-          },
-          {
-            "t": ".",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -402,21 +343,11 @@
           [
             {
               "t": "白",
-              "r": "はく",
+              "r": "しろ",
               "g": "attributive"
             },
             {
-              "t": "硼",
-              "r": "ほう",
-              "g": "attributive"
-            },
-            {
-              "t": "子",
-              "r": "し",
-              "g": "attributive"
-            },
-            {
-              "t": "の",
+              "t": "ひげの",
               "r": "",
               "g": "attributive"
             },
@@ -441,12 +372,7 @@
               "g": "predicate"
             },
             {
-              "t": "ったあと",
-              "r": "",
-              "g": "adverbial"
-            },
-            {
-              "t": "、",
+              "t": "ったあと、",
               "r": "",
               "g": "function"
             }
@@ -488,12 +414,106 @@
               "g": "predicate"
             },
             {
+              "t": "来",
+              "r": "き",
+              "g": "complement"
+            },
+            {
+              "t": "て",
+              "r": "",
+              "g": "complement"
+            },
+            {
               "t": "試",
               "r": "ため",
               "g": "predicate"
             },
             {
-              "t": "し、ほんとうによく",
+              "t": "し、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "硬是灵验，医一个好一个。",
+        "zh": [
+          {
+            "t": "硬",
+            "r": "yìng",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "adverbial"
+          },
+          {
+            "t": "灵",
+            "r": "líng",
+            "g": "predicate"
+          },
+          {
+            "t": "验",
+            "r": "yàn",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "医",
+            "r": "yī",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "object"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "object"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "object"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "adverbial"
+            },
+            {
+              "t": "当",
+              "r": "とう",
+              "g": "adverbial"
+            },
+            {
+              "t": "によく",
               "r": "",
               "g": "adverbial"
             },
@@ -506,6 +526,18 @@
               "t": "き、",
               "r": "",
               "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "object"
+            },
+            {
+              "t": "人",
+              "r": "り",
+              "g": "object"
             },
             {
               "t": "治",
@@ -541,7 +573,7 @@
         ]
       },
       {
-        "source_text": "有人说老头儿就是白龙变的,大家喊他神龙,传久了就叫成神农了。",
+        "source_text": "有人说老头儿就是白龙变的，",
         "zh": [
           {
             "t": "有",
@@ -570,7 +602,7 @@
           },
           {
             "t": "儿",
-            "r": "r",
+            "r": "ér",
             "g": "subject"
           },
           {
@@ -604,10 +636,86 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
-          },
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ある",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "subject"
+            },
+            {
+              "t": "は、あの",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "老",
+              "r": "ろう",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "subject"
+            },
+            {
+              "t": "こそ",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "白",
+              "r": "はく",
+              "g": "object"
+            },
+            {
+              "t": "竜",
+              "r": "りゅう",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "化",
+              "r": "ば",
+              "g": "predicate"
+            },
+            {
+              "t": "けたものだと",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "い、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "大家喊他神龙，传久了就叫成神农了。",
+        "zh": [
           {
             "t": "大",
             "r": "dà",
@@ -639,7 +747,7 @@
             "g": "complement"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -697,73 +805,6 @@
         "ja": [
           [
             {
-              "t": "ある",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "人",
-              "r": "ひと",
-              "g": "subject"
-            },
-            {
-              "t": "は、あの",
-              "r": "",
-              "g": "subject"
-            },
-            {
-              "t": "老",
-              "r": "ろう",
-              "g": "subject"
-            },
-            {
-              "t": "人",
-              "r": "じん",
-              "g": "subject"
-            },
-            {
-              "t": "こそ",
-              "r": "",
-              "g": "adverbial"
-            },
-            {
-              "t": "白",
-              "r": "はく",
-              "g": "object"
-            },
-            {
-              "t": "竜",
-              "r": "りゅう",
-              "g": "object"
-            },
-            {
-              "t": "が",
-              "r": "",
-              "g": "object"
-            },
-            {
-              "t": "化",
-              "r": "ば",
-              "g": "predicate"
-            },
-            {
-              "t": "けたものだと",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "言",
-              "r": "い",
-              "g": "predicate"
-            },
-            {
-              "t": "い、",
-              "r": "",
-              "g": "function"
-            }
-          ],
-          [
-            {
               "t": "皆",
               "r": "みな",
               "g": "subject"
@@ -807,7 +848,9 @@
               "t": "び、",
               "r": "",
               "g": "function"
-            },
+            }
+          ],
+          [
             {
               "t": "伝",
               "r": "つた",

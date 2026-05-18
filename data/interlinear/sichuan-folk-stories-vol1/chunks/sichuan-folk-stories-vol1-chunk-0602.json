@@ -6,7 +6,7 @@
       {
         "t": "神",
         "r": "shén",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "话",
@@ -18,7 +18,7 @@
       {
         "t": "神",
         "r": "しん",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "話",
@@ -43,17 +43,17 @@
       {
         "t": "英",
         "r": "yīng",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "雄",
         "r": "xióng",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "神",
         "r": "shén",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "话",
@@ -75,17 +75,17 @@
       {
         "t": "英",
         "r": "えい",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "雄",
         "r": "ゆう",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "神",
         "r": "しん",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "話",
@@ -212,9 +212,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00602",
       "source_text": "很二很古的时候,天上有十个太阳,他们是亲兄弟,都是玉皇K帝的儿子。",
+      "corrected_text": "很久很久的时候，天上有十个太阳，他们是亲兄弟，都是玉皇大帝的儿子。",
       "units": [
         {
-          "source_text": "很二很古的时候,天上有十个太阳,",
+          "source_text": "很久很久的时候，天上有十个太阳，",
           "zh": [
             {
               "t": "很",
@@ -222,8 +223,8 @@
               "g": "adverbial"
             },
             {
-              "t": "二",
-              "r": "èr",
+              "t": "久",
+              "r": "jiǔ",
               "g": "adverbial"
             },
             {
@@ -232,8 +233,8 @@
               "g": "adverbial"
             },
             {
-              "t": "古",
-              "r": "gǔ",
+              "t": "久",
+              "r": "jiǔ",
               "g": "adverbial"
             },
             {
@@ -252,7 +253,7 @@
               "g": "adverbial"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -292,7 +293,7 @@
               "g": "object"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             }
@@ -305,14 +306,24 @@
                 "g": "adverbial"
               },
               {
-                "t": "古",
-                "r": "ふる",
+                "t": "遠",
+                "r": "とお",
                 "g": "adverbial"
               },
               {
-                "t": "いころ、",
+                "t": "い",
                 "r": "",
                 "g": "adverbial"
+              },
+              {
+                "t": "昔",
+                "r": "むかし",
+                "g": "adverbial"
+              },
+              {
+                "t": "、",
+                "r": "",
+                "g": "function"
               }
             ],
             [
@@ -328,7 +339,12 @@
               },
               {
                 "t": "十",
-                "r": "とお",
+                "r": "じゅう",
+                "g": "object"
+              },
+              {
+                "t": "個",
+                "r": "こ",
                 "g": "object"
               },
               {
@@ -355,7 +371,7 @@
           ]
         },
         {
-          "source_text": "他们是亲兄弟,都是玉皇K帝的儿子。",
+          "source_text": "他们是亲兄弟，都是玉皇大帝的儿子。",
           "zh": [
             {
               "t": "他",
@@ -388,7 +404,7 @@
               "g": "object"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -413,8 +429,8 @@
               "g": "attributive"
             },
             {
-              "t": "K",
-              "r": "",
+              "t": "大",
+              "r": "dà",
               "g": "attributive"
             },
             {
@@ -498,8 +514,8 @@
                 "g": "attributive"
               },
               {
-                "t": "K",
-                "r": "",
+                "t": "大",
+                "r": "だい",
                 "g": "attributive"
               },
               {

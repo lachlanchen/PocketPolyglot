@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 85,
-    "grammar_token_total": 85,
-    "unit_count": 1
+    "token_total": 87,
+    "grammar_token_total": 87,
+    "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0549",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -243,9 +243,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00549",
     "source_text": "女娲圣母看仓颜造的妖啊,奸啊这些字,就生气了,质问仓颜:你这个人的心好不平啊!",
+    "corrected_text": "女娲圣母看仓颉造的妖啊、奸啊这些字，就生气了，质问仓颉：“你这个人的心好不平啊！”",
     "units": [
       {
-        "source_text": "女娲圣母看仓颜造的妖啊,奸啊这些字,就生气了,质问仓颜:你这个人的心好不平啊!",
+        "source_text": "女娲圣母看仓颉造的妖啊、奸啊这些字，就生气了，",
         "zh": [
           {
             "t": "女",
@@ -278,8 +279,8 @@
             "g": "attributive"
           },
           {
-            "t": "颜",
-            "r": "yán",
+            "t": "颉",
+            "r": "jié",
             "g": "attributive"
           },
           {
@@ -300,10 +301,10 @@
           {
             "t": "啊",
             "r": "a",
-            "g": "function"
+            "g": "object"
           },
           {
-            "t": ",",
+            "t": "、",
             "r": "",
             "g": "function"
           },
@@ -315,7 +316,7 @@
           {
             "t": "啊",
             "r": "a",
-            "g": "function"
+            "g": "object"
           },
           {
             "t": "这",
@@ -333,7 +334,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -358,10 +359,141 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
-          },
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "女",
+              "r": "じょ",
+              "g": "subject"
+            },
+            {
+              "t": "媧",
+              "r": "か",
+              "g": "subject"
+            },
+            {
+              "t": "聖",
+              "r": "せい",
+              "g": "subject"
+            },
+            {
+              "t": "母",
+              "r": "ぼ",
+              "g": "subject"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "倉",
+              "r": "そう",
+              "g": "attributive"
+            },
+            {
+              "t": "頡",
+              "r": "けつ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "作",
+              "r": "つく",
+              "g": "attributive"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "妖",
+              "r": "よう",
+              "g": "object"
+            },
+            {
+              "t": "」や「",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "奸",
+              "r": "かん",
+              "g": "object"
+            },
+            {
+              "t": "」などの",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "字",
+              "r": "じ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "て、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "すぐに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "腹",
+              "r": "はら",
+              "g": "predicate"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "立",
+              "r": "た",
+              "g": "predicate"
+            },
+            {
+              "t": "てた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "质问仓颉：“你这个人的心好不平啊！”",
+        "zh": [
           {
             "t": "质",
             "r": "zhì",
@@ -378,12 +510,17 @@
             "g": "object"
           },
           {
-            "t": "颜",
-            "r": "yán",
+            "t": "颉",
+            "r": "jié",
             "g": "object"
           },
           {
-            "t": ":",
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "“",
             "r": "",
             "g": "function"
           },
@@ -425,7 +562,7 @@
           {
             "t": "不",
             "r": "bù",
-            "g": "adverbial"
+            "g": "predicate"
           },
           {
             "t": "平",
@@ -438,7 +575,12 @@
             "g": "function"
           },
           {
-            "t": "!",
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
             "r": "",
             "g": "function"
           }
@@ -446,145 +588,13 @@
         "ja": [
           [
             {
-              "t": "女",
-              "r": "じょ",
-              "g": "subject"
-            },
-            {
-              "t": "媧",
-              "r": "か",
-              "g": "subject"
-            },
-            {
-              "t": "聖",
-              "r": "せい",
-              "g": "subject"
-            },
-            {
-              "t": "母",
-              "r": "ぼ",
-              "g": "subject"
-            },
-            {
-              "t": "は",
-              "r": "",
-              "g": "subject"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "倉",
-              "r": "そう",
-              "g": "attributive"
-            },
-            {
-              "t": "顔",
-              "r": "がん",
-              "g": "attributive"
-            },
-            {
-              "t": "が",
-              "r": "",
-              "g": "attributive"
-            },
-            {
-              "t": "作",
-              "r": "つく",
-              "g": "attributive"
-            },
-            {
-              "t": "った",
-              "r": "",
-              "g": "attributive"
-            },
-            {
-              "t": "妖",
-              "r": "よう",
-              "g": "object"
-            },
-            {
-              "t": "だの",
-              "r": "",
-              "g": "object"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "奸",
-              "r": "かん",
-              "g": "object"
-            },
-            {
-              "t": "だのという",
-              "r": "",
-              "g": "object"
-            },
-            {
-              "t": "字",
-              "r": "じ",
-              "g": "object"
-            },
-            {
-              "t": "を",
-              "r": "",
-              "g": "object"
-            },
-            {
-              "t": "見",
-              "r": "み",
-              "g": "predicate"
-            },
-            {
-              "t": "て",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            }
-          ],
-          [
-            {
-              "t": "腹",
-              "r": "はら",
-              "g": "predicate"
-            },
-            {
-              "t": "を",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "立",
-              "r": "た",
-              "g": "predicate"
-            },
-            {
-              "t": "て",
-              "r": "",
-              "g": "predicate"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            },
-            {
               "t": "倉",
               "r": "そう",
               "g": "object"
             },
             {
-              "t": "顔",
-              "r": "がん",
+              "t": "頡",
+              "r": "けつ",
               "g": "object"
             },
             {
@@ -608,14 +618,19 @@
               "g": "predicate"
             },
             {
-              "t": "った",
+              "t": "って",
               "r": "",
               "g": "predicate"
             },
             {
-              "t": "。",
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
               "r": "",
-              "g": "function"
+              "g": "predicate"
             },
             {
               "t": "「",
@@ -623,7 +638,24 @@
               "g": "function"
             },
             {
-              "t": "おまえのその",
+              "t": "おまえという",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "attributive"
+            },
+            {
+              "t": "間",
+              "r": "げん",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
               "r": "",
               "g": "attributive"
             },
@@ -633,14 +665,9 @@
               "g": "subject"
             },
             {
-              "t": "は",
+              "t": "は、",
               "r": "",
               "g": "subject"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
             },
             {
               "t": "なんと",
@@ -663,14 +690,9 @@
               "g": "predicate"
             },
             {
-              "t": "なのだ",
+              "t": "なのだ！",
               "r": "",
               "g": "predicate"
-            },
-            {
-              "t": "！",
-              "r": "",
-              "g": "function"
             },
             {
               "t": "」",

@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 50,
-    "grammar_token_total": 50,
-    "unit_count": 2
+    "token_total": 57,
+    "grammar_token_total": 57,
+    "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0644",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -243,24 +243,25 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00644",
     "source_text": "底,帮苗干得来时地起卷卷,人就像问在稚窟头样，",
+    "corrected_text": "地，帮苗干得来时，地起卷卷，人就像困在地窟头样，",
     "units": [
       {
-        "source_text": "底,帮苗干得来时地起卷卷,",
+        "source_text": "地，帮苗干得来时，",
         "zh": [
           {
-            "t": "底",
-            "r": "dǐ",
-            "g": "object"
+            "t": "地",
+            "r": "dì",
+            "g": "topic"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
           {
             "t": "帮",
             "r": "bāng",
-            "g": "adverbial"
+            "g": "predicate"
           },
           {
             "t": "苗",
@@ -288,6 +289,82 @@
             "g": "adverbial"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "畑",
+              "r": "はたけ",
+              "g": "topic"
+            },
+            {
+              "t": "で、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "苗",
+              "r": "なえ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "仕",
+              "r": "し",
+              "g": "predicate"
+            },
+            {
+              "t": "事",
+              "r": "ごと",
+              "g": "predicate"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "手",
+              "r": "て",
+              "g": "predicate"
+            },
+            {
+              "t": "伝",
+              "r": "つだ",
+              "g": "predicate"
+            },
+            {
+              "t": "っている",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "時",
+              "r": "とき",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "地起卷卷，",
+        "zh": [
+          {
             "t": "地",
             "r": "dì",
             "g": "subject"
@@ -308,7 +385,7 @@
             "g": "complement"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -316,45 +393,8 @@
         "ja": [
           [
             {
-              "t": "底",
-              "r": "そこ",
-              "g": "object"
-            },
-            {
-              "t": "で、",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "苗",
-              "r": "なえ",
-              "g": "object"
-            },
-            {
-              "t": "を",
-              "r": "",
-              "g": "object"
-            },
-            {
-              "t": "手",
-              "r": "て",
-              "g": "adverbial"
-            },
-            {
-              "t": "伝",
-              "r": "つだ",
-              "g": "predicate"
-            },
-            {
-              "t": "っているうちに、",
-              "r": "",
-              "g": "adverbial"
-            }
-          ],
-          [
-            {
               "t": "地",
-              "r": "ち",
+              "r": "じ",
               "g": "subject"
             },
             {
@@ -371,7 +411,9 @@
               "t": "くるくると",
               "r": "",
               "g": "complement"
-            },
+            }
+          ],
+          [
             {
               "t": "巻",
               "r": "ま",
@@ -396,7 +438,7 @@
         ]
       },
       {
-        "source_text": "人就像问在稚窟头样，",
+        "source_text": "人就像困在地窟头样，",
         "zh": [
           {
             "t": "人",
@@ -414,8 +456,8 @@
             "g": "predicate"
           },
           {
-            "t": "问",
-            "r": "wèn",
+            "t": "困",
+            "r": "kùn",
             "g": "predicate"
           },
           {
@@ -424,8 +466,8 @@
             "g": "adverbial"
           },
           {
-            "t": "稚",
-            "r": "zhì",
+            "t": "地",
+            "r": "dì",
             "g": "object"
           },
           {
@@ -467,13 +509,13 @@
               "g": "adverbial"
             },
             {
-              "t": "稚",
+              "t": "地",
               "r": "ち",
               "g": "object"
             },
             {
-              "t": "窟",
-              "r": "くつ",
+              "t": "穴",
+              "r": "あな",
               "g": "object"
             },
             {
@@ -509,7 +551,12 @@
               "g": "predicate"
             },
             {
-              "t": "められたようで、",
+              "t": "められた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "ようで、",
               "r": "",
               "g": "complement"
             }

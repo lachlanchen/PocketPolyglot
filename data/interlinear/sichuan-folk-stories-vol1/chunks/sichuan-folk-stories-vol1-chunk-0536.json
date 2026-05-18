@@ -197,24 +197,25 @@
     {
       "id": "sichuan-folk-stories-vol1-p00536",
       "source_text": "采孙者:王纯五男 40岁文化馆干部大学采录时间、.地点:1961 年 11 月于都江坦市青城乡",
+      "corrected_text": "采录者:王纯五 男 40岁 文化馆干部 大学 采录时间、地点:1961年11月于都江堰市青城乡",
       "units": [
         {
-          "source_text": "采孙者:王纯五男 40岁文化馆干部大学",
+          "source_text": "采录者:王纯五 男 40岁 文化馆干部 大学",
           "zh": [
             {
               "t": "采",
               "r": "cǎi",
-              "g": "subject"
+              "g": "topic"
             },
             {
-              "t": "孙",
-              "r": "sūn",
-              "g": "subject"
+              "t": "录",
+              "r": "lù",
+              "g": "topic"
             },
             {
               "t": "者",
               "r": "zhě",
-              "g": "subject"
+              "g": "topic"
             },
             {
               "t": ":",
@@ -235,6 +236,11 @@
               "t": "五",
               "r": "wǔ",
               "g": "subject"
+            },
+            {
+              "t": " ",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "男",
@@ -262,39 +268,49 @@
               "g": "attributive"
             },
             {
+              "t": " ",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "文",
               "r": "wén",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "化",
               "r": "huà",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "馆",
               "r": "guǎn",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "干",
               "r": "gàn",
-              "g": "attributive"
+              "g": "predicate"
             },
             {
               "t": "部",
               "r": "bù",
-              "g": "attributive"
+              "g": "predicate"
+            },
+            {
+              "t": " ",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "大",
               "r": "dà",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "学",
               "r": "xué",
-              "g": "attributive"
+              "g": "complement"
             }
           ],
           "ja": [
@@ -302,17 +318,17 @@
               {
                 "t": "採",
                 "r": "さい",
-                "g": "subject"
+                "g": "topic"
               },
               {
-                "t": "孫",
-                "r": "そん",
-                "g": "subject"
+                "t": "録",
+                "r": "ろく",
+                "g": "topic"
               },
               {
                 "t": "者",
                 "r": "しゃ",
-                "g": "subject"
+                "g": "topic"
               },
               {
                 "t": "：",
@@ -335,22 +351,10 @@
                 "g": "subject"
               },
               {
-                "t": "、40",
+                "t": "、",
                 "r": "",
-                "g": "attributive"
+                "g": "function"
               },
-              {
-                "t": "歳",
-                "r": "さい",
-                "g": "attributive"
-              },
-              {
-                "t": "の",
-                "r": "",
-                "g": "attributive"
-              }
-            ],
-            [
               {
                 "t": "男",
                 "r": "だん",
@@ -362,34 +366,41 @@
                 "g": "attributive"
               },
               {
-                "t": "。",
+                "t": "40",
                 "r": "",
-                "g": "function"
+                "g": "attributive"
               },
+              {
+                "t": "歳",
+                "r": "さい",
+                "g": "attributive"
+              }
+            ],
+            [
               {
                 "t": "文",
                 "r": "ぶん",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "化",
                 "r": "か",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "館",
                 "r": "かん",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "幹",
                 "r": "かん",
-                "g": "attributive"
+                "g": "predicate"
               },
               {
                 "t": "部",
                 "r": "ぶ",
-                "g": "attributive"
+                "g": "predicate"
               },
               {
                 "t": "、",
@@ -399,38 +410,43 @@
               {
                 "t": "大",
                 "r": "だい",
-                "g": "attributive"
+                "g": "complement"
               },
               {
                 "t": "学",
                 "r": "がく",
-                "g": "attributive"
+                "g": "complement"
+              },
+              {
+                "t": "卒",
+                "r": "そつ",
+                "g": "complement"
               }
             ]
           ]
         },
         {
-          "source_text": "采录时间、.地点:1961 年 11 月于都江坦市青城乡",
+          "source_text": "采录时间、地点:1961年11月于都江堰市青城乡",
           "zh": [
             {
               "t": "采",
               "r": "cǎi",
-              "g": "subject"
+              "g": "topic"
             },
             {
               "t": "录",
               "r": "lù",
-              "g": "subject"
+              "g": "topic"
             },
             {
               "t": "时",
               "r": "shí",
-              "g": "subject"
+              "g": "topic"
             },
             {
               "t": "间",
               "r": "jiān",
-              "g": "subject"
+              "g": "topic"
             },
             {
               "t": "、",
@@ -438,19 +454,14 @@
               "g": "function"
             },
             {
-              "t": ".",
-              "r": "",
-              "g": "function"
-            },
-            {
               "t": "地",
               "r": "dì",
-              "g": "subject"
+              "g": "topic"
             },
             {
               "t": "点",
               "r": "diǎn",
-              "g": "subject"
+              "g": "topic"
             },
             {
               "t": ":",
@@ -478,21 +489,11 @@
               "g": "adverbial"
             },
             {
-              "t": " ",
-              "r": "",
-              "g": "function"
-            },
-            {
               "t": "年",
               "r": "nián",
               "g": "adverbial"
             },
             {
-              "t": " ",
-              "r": "",
-              "g": "function"
-            },
-            {
               "t": "1",
               "r": "",
               "g": "adverbial"
@@ -501,11 +502,6 @@
               "t": "1",
               "r": "",
               "g": "adverbial"
-            },
-            {
-              "t": " ",
-              "r": "",
-              "g": "function"
             },
             {
               "t": "月",
@@ -515,42 +511,42 @@
             {
               "t": "于",
               "r": "yú",
-              "g": "adverbial"
+              "g": "function"
             },
             {
               "t": "都",
               "r": "dū",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "江",
               "r": "jiāng",
-              "g": "adverbial"
+              "g": "object"
             },
             {
-              "t": "坦",
-              "r": "tǎn",
-              "g": "adverbial"
+              "t": "堰",
+              "r": "yàn",
+              "g": "object"
             },
             {
               "t": "市",
               "r": "shì",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "青",
               "r": "qīng",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "城",
               "r": "chéng",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "乡",
               "r": "xiāng",
-              "g": "adverbial"
+              "g": "object"
             }
           ],
           "ja": [
@@ -558,22 +554,22 @@
               {
                 "t": "採",
                 "r": "さい",
-                "g": "subject"
+                "g": "topic"
               },
               {
                 "t": "録",
                 "r": "ろく",
-                "g": "subject"
+                "g": "topic"
               },
               {
                 "t": "時",
                 "r": "じ",
-                "g": "subject"
+                "g": "topic"
               },
               {
                 "t": "間",
                 "r": "かん",
-                "g": "subject"
+                "g": "topic"
               },
               {
                 "t": "・",
@@ -583,12 +579,12 @@
               {
                 "t": "地",
                 "r": "ち",
-                "g": "subject"
+                "g": "topic"
               },
               {
                 "t": "点",
                 "r": "てん",
-                "g": "subject"
+                "g": "topic"
               },
               {
                 "t": "：1961",
@@ -615,42 +611,42 @@
               {
                 "t": "都",
                 "r": "と",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "江",
                 "r": "こう",
-                "g": "adverbial"
+                "g": "object"
               },
               {
-                "t": "坦",
-                "r": "たん",
-                "g": "adverbial"
+                "t": "堰",
+                "r": "えん",
+                "g": "object"
               },
               {
                 "t": "市",
                 "r": "し",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "青",
                 "r": "せい",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "城",
                 "r": "じょう",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "郷",
                 "r": "きょう",
-                "g": "adverbial"
+                "g": "object"
               },
               {
                 "t": "にて",
                 "r": "",
-                "g": "adverbial"
+                "g": "function"
               }
             ]
           ]

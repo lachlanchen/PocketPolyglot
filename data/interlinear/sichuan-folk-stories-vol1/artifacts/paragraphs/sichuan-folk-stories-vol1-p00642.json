@@ -55,17 +55,17 @@
       {
         "t": "和",
         "r": "hé",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": "英",
         "r": "yīng",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "雄",
         "r": "xióng",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "神",
@@ -87,22 +87,22 @@
       {
         "t": "と",
         "r": "",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": "英",
         "r": "えい",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "雄",
         "r": "ゆう",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "の",
         "r": "",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": "神",
@@ -162,9 +162,9 @@
         "g": "subject"
       },
       {
-        "t": "、",
+        "t": "が",
         "r": "",
-        "g": "function"
+        "g": "subject"
       },
       {
         "t": "薬",
@@ -198,9 +198,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00642",
     "source_text": "米光荣女 34岁牛市口辖区专干 高中采录计间.地点:1987 年 3 月于成都市东城区",
+    "corrected_text": "米光荣 女 34岁 牛市口辖区专干 高中 采录时间、地点：1987年3月于成都市东城区",
     "units": [
       {
-        "source_text": "米光荣女 34岁牛市口辖区专干 高中采录计间.",
+        "source_text": "米光荣 女 34岁 牛市口辖区专干 高中",
         "zh": [
           {
             "t": "米",
@@ -216,6 +217,11 @@
             "t": "荣",
             "r": "róng",
             "g": "subject"
+          },
+          {
+            "t": " ",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "女",
@@ -236,6 +242,11 @@
             "t": "岁",
             "r": "suì",
             "g": "attributive"
+          },
+          {
+            "t": " ",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "牛",
@@ -265,12 +276,12 @@
           {
             "t": "专",
             "r": "zhuān",
-            "g": "attributive"
+            "g": "predicate"
           },
           {
             "t": "干",
             "r": "gàn",
-            "g": "attributive"
+            "g": "predicate"
           },
           {
             "t": " ",
@@ -286,31 +297,6 @@
             "t": "中",
             "r": "zhōng",
             "g": "attributive"
-          },
-          {
-            "t": "采",
-            "r": "cǎi",
-            "g": "predicate"
-          },
-          {
-            "t": "录",
-            "r": "lù",
-            "g": "predicate"
-          },
-          {
-            "t": "计",
-            "r": "jì",
-            "g": "predicate"
-          },
-          {
-            "t": "间",
-            "r": "jiān",
-            "g": "predicate"
-          },
-          {
-            "t": ".",
-            "r": "",
-            "g": "function"
           }
         ],
         "ja": [
@@ -331,9 +317,9 @@
               "g": "subject"
             },
             {
-              "t": "、",
+              "t": "は",
               "r": "",
-              "g": "function"
+              "g": "subject"
             },
             {
               "t": "女",
@@ -400,25 +386,25 @@
             {
               "t": "専",
               "r": "せん",
-              "g": "attributive"
+              "g": "predicate"
             },
             {
               "t": "任",
               "r": "にん",
-              "g": "attributive"
+              "g": "predicate"
             },
             {
               "t": "幹",
               "r": "かん",
-              "g": "attributive"
+              "g": "predicate"
             },
             {
               "t": "部",
               "r": "ぶ",
-              "g": "attributive"
+              "g": "predicate"
             },
             {
-              "t": "、",
+              "t": "で、",
               "r": "",
               "g": "function"
             },
@@ -433,31 +419,6 @@
               "g": "attributive"
             },
             {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "採",
-              "r": "さい",
-              "g": "predicate"
-            },
-            {
-              "t": "録",
-              "r": "ろく",
-              "g": "predicate"
-            },
-            {
-              "t": "時",
-              "r": "じ",
-              "g": "predicate"
-            },
-            {
-              "t": "間",
-              "r": "かん",
-              "g": "predicate"
-            },
-            {
               "t": "。",
               "r": "",
               "g": "function"
@@ -466,8 +427,33 @@
         ]
       },
       {
-        "source_text": "地点:1987 年 3 月于成都市东城区",
+        "source_text": "采录时间、地点：1987年3月于成都市东城区",
         "zh": [
+          {
+            "t": "采",
+            "r": "cǎi",
+            "g": "topic"
+          },
+          {
+            "t": "录",
+            "r": "lù",
+            "g": "topic"
+          },
+          {
+            "t": "时",
+            "r": "shí",
+            "g": "topic"
+          },
+          {
+            "t": "间",
+            "r": "jiān",
+            "g": "topic"
+          },
+          {
+            "t": "、",
+            "r": "",
+            "g": "function"
+          },
           {
             "t": "地",
             "r": "dì",
@@ -479,7 +465,7 @@
             "g": "topic"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -489,29 +475,14 @@
             "g": "adverbial"
           },
           {
-            "t": " ",
-            "r": "",
-            "g": "function"
-          },
-          {
             "t": "年",
             "r": "nián",
             "g": "adverbial"
           },
           {
-            "t": " ",
-            "r": "",
-            "g": "function"
-          },
-          {
             "t": "3",
             "r": "",
             "g": "adverbial"
-          },
-          {
-            "t": " ",
-            "r": "",
-            "g": "function"
           },
           {
             "t": "月",
@@ -556,6 +527,31 @@
         ],
         "ja": [
           [
+            {
+              "t": "採",
+              "r": "さい",
+              "g": "topic"
+            },
+            {
+              "t": "録",
+              "r": "ろく",
+              "g": "topic"
+            },
+            {
+              "t": "時",
+              "r": "じ",
+              "g": "topic"
+            },
+            {
+              "t": "期",
+              "r": "き",
+              "g": "topic"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "topic"
+            },
             {
               "t": "場",
               "r": "ば",

@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 52,
-    "grammar_token_total": 52,
+    "token_total": 57,
+    "grammar_token_total": 57,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0619",
@@ -253,9 +253,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00619",
     "source_text": "讲述者:张文酸男 44岁巴县土主乡伙普村农民小学",
+    "corrected_text": "讲述者：张文酸，男，44岁，巴县土主乡伙普村农民，小学。",
     "units": [
       {
-        "source_text": "讲述者:张文酸男 44岁巴县土主乡伙普村农民小学",
+        "source_text": "讲述者：张文酸，男，44岁，巴县土主乡伙普村农民，小学。",
         "zh": [
           {
             "t": "讲",
@@ -273,7 +274,7 @@
             "g": "subject"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -293,12 +294,17 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "男",
             "r": "nán",
             "g": "attributive"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -311,6 +317,11 @@
             "t": "岁",
             "r": "suì",
             "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "巴",
@@ -363,6 +374,11 @@
             "g": "object"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "小",
             "r": "xiǎo",
             "g": "complement"
@@ -371,6 +387,11 @@
             "t": "学",
             "r": "xué",
             "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [

@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 95,
-    "grammar_token_total": 95,
+    "token_total": 100,
+    "grammar_token_total": 100,
     "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0524",
@@ -278,9 +278,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00524",
     "source_text": "采让者:宠天田 63岁大已县文化馆脖体干部大专采承时间、.地点:1987 年 11 月于大已县下南乡",
+    "corrected_text": "采录者：庞天田，63岁，大邑县文化馆退休干部，大专。采录时间、地点：1987年11月于大邑县下南乡。",
     "units": [
       {
-        "source_text": "采让者:宠天田 63岁大已县文化馆脖体干部大专",
+        "source_text": "采录者：庞天田，63岁，大邑县文化馆退休干部，大专。",
         "zh": [
           {
             "t": "采",
@@ -288,8 +289,8 @@
             "g": "attributive"
           },
           {
-            "t": "让",
-            "r": "ràng",
+            "t": "录",
+            "r": "lù",
             "g": "attributive"
           },
           {
@@ -298,13 +299,13 @@
             "g": "subject"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
           {
-            "t": "宠",
-            "r": "chǒng",
+            "t": "庞",
+            "r": "páng",
             "g": "subject"
           },
           {
@@ -318,7 +319,7 @@
             "g": "subject"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -338,13 +339,18 @@
             "g": "attributive"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "大",
             "r": "dà",
             "g": "attributive"
           },
           {
-            "t": "已",
-            "r": "yǐ",
+            "t": "邑",
+            "r": "yì",
             "g": "attributive"
           },
           {
@@ -368,14 +374,14 @@
             "g": "attributive"
           },
           {
-            "t": "脖",
-            "r": "bó",
-            "g": "attributive"
+            "t": "退",
+            "r": "tuì",
+            "g": "predicate"
           },
           {
-            "t": "体",
-            "r": "tǐ",
-            "g": "attributive"
+            "t": "休",
+            "r": "xiū",
+            "g": "predicate"
           },
           {
             "t": "干",
@@ -388,6 +394,11 @@
             "g": "object"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "大",
             "r": "dà",
             "g": "object"
@@ -396,6 +407,11 @@
             "t": "专",
             "r": "zhuān",
             "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -421,8 +437,8 @@
               "g": "function"
             },
             {
-              "t": "寵",
-              "r": "ちょう",
+              "t": "龐",
+              "r": "ほう",
               "g": "subject"
             },
             {
@@ -463,8 +479,8 @@
               "g": "attributive"
             },
             {
-              "t": "已",
-              "r": "い",
+              "t": "邑",
+              "r": "ゆう",
               "g": "attributive"
             },
             {
@@ -493,14 +509,14 @@
               "g": "attributive"
             },
             {
-              "t": "脖",
-              "r": "ぼつ",
-              "g": "attributive"
+              "t": "退",
+              "r": "たい",
+              "g": "predicate"
             },
             {
-              "t": "体",
-              "r": "たい",
-              "g": "attributive"
+              "t": "職",
+              "r": "しょく",
+              "g": "predicate"
             },
             {
               "t": "幹",
@@ -528,6 +544,11 @@
               "g": "object"
             },
             {
+              "t": "卒",
+              "r": "そつ",
+              "g": "object"
+            },
+            {
               "t": "。",
               "r": "",
               "g": "function"
@@ -536,7 +557,7 @@
         ]
       },
       {
-        "source_text": "采承时间、.地点:1987 年 11 月于大已县下南乡",
+        "source_text": "采录时间、地点：1987年11月于大邑县下南乡。",
         "zh": [
           {
             "t": "采",
@@ -544,8 +565,8 @@
             "g": "attributive"
           },
           {
-            "t": "承",
-            "r": "chéng",
+            "t": "录",
+            "r": "lù",
             "g": "attributive"
           },
           {
@@ -564,11 +585,6 @@
             "g": "function"
           },
           {
-            "t": ".",
-            "r": "",
-            "g": "function"
-          },
-          {
             "t": "地",
             "r": "dì",
             "g": "object"
@@ -579,7 +595,7 @@
             "g": "object"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -604,21 +620,11 @@
             "g": "adverbial"
           },
           {
-            "t": " ",
-            "r": "",
-            "g": "function"
-          },
-          {
             "t": "年",
             "r": "nián",
             "g": "adverbial"
           },
           {
-            "t": " ",
-            "r": "",
-            "g": "function"
-          },
-          {
             "t": "1",
             "r": "",
             "g": "adverbial"
@@ -627,11 +633,6 @@
             "t": "1",
             "r": "",
             "g": "adverbial"
-          },
-          {
-            "t": " ",
-            "r": "",
-            "g": "function"
           },
           {
             "t": "月",
@@ -649,8 +650,8 @@
             "g": "adverbial"
           },
           {
-            "t": "已",
-            "r": "yǐ",
+            "t": "邑",
+            "r": "yì",
             "g": "adverbial"
           },
           {
@@ -672,6 +673,11 @@
             "t": "乡",
             "r": "xiāng",
             "g": "adverbial"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -749,8 +755,8 @@
               "g": "adverbial"
             },
             {
-              "t": "已",
-              "r": "い",
+              "t": "邑",
+              "r": "ゆう",
               "g": "adverbial"
             },
             {
