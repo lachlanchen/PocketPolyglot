@@ -106,19 +106,19 @@ def raw_dir(book_id: str) -> Path:
 
 
 def book_status(book_id: str) -> tuple[bool, str, dict[str, str]]:
+    if book_id in RAW_ONLY_COMPLETE_BOOKS:
+        raw = raw_dir(book_id)
+        if raw.exists():
+            report = report_progress(book_id, raw)
+            if is_complete(report):
+                return True, "raw", report
+
     reviewed = reviewed_dir(book_id)
     if reviewed.exists():
         report = report_progress(book_id, reviewed)
         if is_complete(report):
             return True, "reviewed", report
         return False, "reviewed", report
-
-    raw = raw_dir(book_id)
-    if book_id in RAW_ONLY_COMPLETE_BOOKS and raw.exists():
-        report = report_progress(book_id, raw)
-        if is_complete(report):
-            return True, "raw", report
-        return False, "raw", report
 
     report = report_progress(book_id, reviewed)
     return False, "reviewed", report
