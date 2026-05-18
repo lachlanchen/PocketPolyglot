@@ -1,0 +1,926 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p00743",
+  "source_text": "森林开始沙沙作响。池边葳蕤的树枝相互摩挲着。夜空失去了平静的蓝色，呈现一片深青灰色，混混浊浊的。虫鸣未衰，风却席卷着大地，越刮越厉害，风啸犹如远方神秘的笛声越来越近了。",
+  "source_sha256": "fa8e0c1026a18ac45f79b5b38895981cfd3f6560efcb4e375e765de7b72bf2ce",
+  "source_normalized_sha256": "fa8e0c1026a18ac45f79b5b38895981cfd3f6560efcb4e375e765de7b72bf2ce",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 155,
+    "grammar_token_total": 155,
+    "unit_count": 4
+  },
+  "source_chunk_id": "kinkakuji-chunk-0743",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第五章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "五",
+        "r": "wǔ",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "五",
+        "r": "ご",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第五章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "五",
+        "r": "wǔ",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "五",
+        "r": "ご",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p00743",
+    "source_text": "森林开始沙沙作响。池边葳蕤的树枝相互摩挲着。夜空失去了平静的蓝色，呈现一片深青灰色，混混浊浊的。虫鸣未衰，风却席卷着大地，越刮越厉害，风啸犹如远方神秘的笛声越来越近了。",
+    "units": [
+      {
+        "source_text": "森林开始沙沙作响。",
+        "zh": [
+          {
+            "t": "森",
+            "r": "sēn",
+            "g": "subject"
+          },
+          {
+            "t": "林",
+            "r": "lín",
+            "g": "subject"
+          },
+          {
+            "t": "开",
+            "r": "kāi",
+            "g": "predicate"
+          },
+          {
+            "t": "始",
+            "r": "shǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "沙",
+            "r": "shā",
+            "g": "adverbial"
+          },
+          {
+            "t": "沙",
+            "r": "shā",
+            "g": "adverbial"
+          },
+          {
+            "t": "作",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "响",
+            "r": "xiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "森",
+              "r": "もり",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "ざわざわと",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "鳴",
+              "r": "な",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "始",
+              "r": "はじ",
+              "g": "predicate"
+            },
+            {
+              "t": "めた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "池边葳蕤的树枝相互摩挲着。",
+        "zh": [
+          {
+            "t": "池",
+            "r": "chí",
+            "g": "attributive"
+          },
+          {
+            "t": "边",
+            "r": "biān",
+            "g": "attributive"
+          },
+          {
+            "t": "葳",
+            "r": "wēi",
+            "g": "attributive"
+          },
+          {
+            "t": "蕤",
+            "r": "ruí",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "树",
+            "r": "shù",
+            "g": "subject"
+          },
+          {
+            "t": "枝",
+            "r": "zhī",
+            "g": "subject"
+          },
+          {
+            "t": "相",
+            "r": "xiāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "互",
+            "r": "hù",
+            "g": "adverbial"
+          },
+          {
+            "t": "摩",
+            "r": "mó",
+            "g": "predicate"
+          },
+          {
+            "t": "挲",
+            "r": "suō",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "池",
+              "r": "いけ",
+              "g": "attributive"
+            },
+            {
+              "t": "のほとりの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "生",
+              "r": "お",
+              "g": "attributive"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "茂",
+              "r": "しげ",
+              "g": "attributive"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "枝",
+              "r": "えだ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "互",
+              "r": "たが",
+              "g": "adverbial"
+            },
+            {
+              "t": "いに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "擦",
+              "r": "こす",
+              "g": "predicate"
+            },
+            {
+              "t": "れ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "合",
+              "r": "あ",
+              "g": "predicate"
+            },
+            {
+              "t": "っていた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "夜空失去了平静的蓝色，呈现一片深青灰色，混混浊浊的。",
+        "zh": [
+          {
+            "t": "夜",
+            "r": "yè",
+            "g": "subject"
+          },
+          {
+            "t": "空",
+            "r": "kōng",
+            "g": "subject"
+          },
+          {
+            "t": "失",
+            "r": "shī",
+            "g": "predicate"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "平",
+            "r": "píng",
+            "g": "attributive"
+          },
+          {
+            "t": "静",
+            "r": "jìng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "蓝",
+            "r": "lán",
+            "g": "object"
+          },
+          {
+            "t": "色",
+            "r": "sè",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "呈",
+            "r": "chéng",
+            "g": "predicate"
+          },
+          {
+            "t": "现",
+            "r": "xiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "attributive"
+          },
+          {
+            "t": "片",
+            "r": "piàn",
+            "g": "attributive"
+          },
+          {
+            "t": "深",
+            "r": "shēn",
+            "g": "attributive"
+          },
+          {
+            "t": "青",
+            "r": "qīng",
+            "g": "attributive"
+          },
+          {
+            "t": "灰",
+            "r": "huī",
+            "g": "attributive"
+          },
+          {
+            "t": "色",
+            "r": "sè",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "混",
+            "r": "hùn",
+            "g": "complement"
+          },
+          {
+            "t": "混",
+            "r": "hùn",
+            "g": "complement"
+          },
+          {
+            "t": "浊",
+            "r": "zhuó",
+            "g": "complement"
+          },
+          {
+            "t": "浊",
+            "r": "zhuó",
+            "g": "complement"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "夜",
+              "r": "よ",
+              "g": "subject"
+            },
+            {
+              "t": "空",
+              "r": "ぞら",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "静",
+              "r": "しず",
+              "g": "attributive"
+            },
+            {
+              "t": "かな",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "青",
+              "r": "あお",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "失",
+              "r": "うしな",
+              "g": "predicate"
+            },
+            {
+              "t": "い、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "attributive"
+            },
+            {
+              "t": "面",
+              "r": "めん",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "濃",
+              "r": "こ",
+              "g": "attributive"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "青",
+              "r": "あお",
+              "g": "object"
+            },
+            {
+              "t": "灰",
+              "r": "はい",
+              "g": "object"
+            },
+            {
+              "t": "色",
+              "r": "いろ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "濁",
+              "r": "にご",
+              "g": "complement"
+            },
+            {
+              "t": "っていた。",
+              "r": "",
+              "g": "complement"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "虫鸣未衰，风却席卷着大地，越刮越厉害，风啸犹如远方神秘的笛声越来越近了。",
+        "zh": [
+          {
+            "t": "虫",
+            "r": "chóng",
+            "g": "subject"
+          },
+          {
+            "t": "鸣",
+            "r": "míng",
+            "g": "subject"
+          },
+          {
+            "t": "未",
+            "r": "wèi",
+            "g": "adverbial"
+          },
+          {
+            "t": "衰",
+            "r": "shuāi",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "风",
+            "r": "fēng",
+            "g": "subject"
+          },
+          {
+            "t": "却",
+            "r": "què",
+            "g": "adverbial"
+          },
+          {
+            "t": "席",
+            "r": "xí",
+            "g": "predicate"
+          },
+          {
+            "t": "卷",
+            "r": "juǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "predicate"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "object"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "越",
+            "r": "yuè",
+            "g": "adverbial"
+          },
+          {
+            "t": "刮",
+            "r": "guā",
+            "g": "predicate"
+          },
+          {
+            "t": "越",
+            "r": "yuè",
+            "g": "adverbial"
+          },
+          {
+            "t": "厉",
+            "r": "lì",
+            "g": "complement"
+          },
+          {
+            "t": "害",
+            "r": "hai",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "风",
+            "r": "fēng",
+            "g": "subject"
+          },
+          {
+            "t": "啸",
+            "r": "xiào",
+            "g": "subject"
+          },
+          {
+            "t": "犹",
+            "r": "yóu",
+            "g": "predicate"
+          },
+          {
+            "t": "如",
+            "r": "rú",
+            "g": "predicate"
+          },
+          {
+            "t": "远",
+            "r": "yuǎn",
+            "g": "attributive"
+          },
+          {
+            "t": "方",
+            "r": "fāng",
+            "g": "attributive"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "attributive"
+          },
+          {
+            "t": "秘",
+            "r": "mì",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "笛",
+            "r": "dí",
+            "g": "object"
+          },
+          {
+            "t": "声",
+            "r": "shēng",
+            "g": "object"
+          },
+          {
+            "t": "越",
+            "r": "yuè",
+            "g": "adverbial"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "adverbial"
+          },
+          {
+            "t": "越",
+            "r": "yuè",
+            "g": "adverbial"
+          },
+          {
+            "t": "近",
+            "r": "jìn",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "虫",
+              "r": "むし",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "声",
+              "r": "こえ",
+              "g": "subject"
+            },
+            {
+              "t": "はまだ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "衰",
+              "r": "おとろ",
+              "g": "predicate"
+            },
+            {
+              "t": "えず、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "風",
+              "r": "かぜ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "大",
+              "r": "だい",
+              "g": "object"
+            },
+            {
+              "t": "地",
+              "r": "ち",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "巻",
+              "r": "ま",
+              "g": "predicate"
+            },
+            {
+              "t": "き",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "込",
+              "r": "こ",
+              "g": "predicate"
+            },
+            {
+              "t": "み、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "吹",
+              "r": "ふ",
+              "g": "predicate"
+            },
+            {
+              "t": "くほどに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "激",
+              "r": "はげ",
+              "g": "complement"
+            },
+            {
+              "t": "しく、",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "遠",
+              "r": "とお",
+              "g": "attributive"
+            },
+            {
+              "t": "く",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "神",
+              "r": "しん",
+              "g": "attributive"
+            },
+            {
+              "t": "秘",
+              "r": "ぴ",
+              "g": "attributive"
+            },
+            {
+              "t": "な",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "笛",
+              "r": "ふえ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "音",
+              "r": "ね",
+              "g": "object"
+            },
+            {
+              "t": "のように",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "近",
+              "r": "ちか",
+              "g": "complement"
+            },
+            {
+              "t": "づいてきた。",
+              "r": "",
+              "g": "complement"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
