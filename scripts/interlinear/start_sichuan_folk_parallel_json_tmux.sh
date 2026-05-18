@@ -166,6 +166,25 @@ chmod +x "$run_script"
 
 tmux new-session -d -s "$session" -n parallel-json "bash '$run_script' 2>&1 | tee '$log_dir/${session}_$(date +%Y%m%d_%H%M%S).log'"
 
+if [[ "${AUTOREPAIR_COMPANION:-1}" != "0" ]]; then
+  if ! BOOK_ID="$book_id" \
+    GUARDIAN_SESSION="${session}-autorepair" \
+    WORKER_SESSION="$session" \
+    REVIEW_SESSION="$session" \
+    SANITIZER_SESSION="${SANITIZER_SESSION:-zhjpbook-sichuan-folk-sanitizer}" \
+    START_COMMAND="MODEL=$model REASONING=$reasoning RETRY_FAILED=1 bash scripts/interlinear/start_sichuan_folk_parallel_json_tmux.sh $session" \
+    SANITIZER_COMMAND="MODEL=$model REASONING=$reasoning RETRY_FAILED=1 bash scripts/interlinear/start_sichuan_folk_sanitizer_tmux.sh ${SANITIZER_SESSION:-zhjpbook-sichuan-folk-sanitizer}" \
+    COMPILE_COMMAND="bash scripts/interlinear/compile_sichuan_folk_both_previews.sh" \
+    COMMIT_COMMAND="bash scripts/interlinear/commit_sichuan_folk_progress.sh" \
+    INTERVAL_SECONDS="${AUTOREPAIR_INTERVAL_SECONDS:-900}" \
+    STALL_SECONDS="${AUTOREPAIR_STALL_SECONDS:-3600}" \
+    MODEL="$model" \
+    REASONING="$reasoning" \
+    bash scripts/interlinear/start_autorepair_companion_tmux.sh "$book_id"; then
+    echo "warning: autorepair companion did not start" >&2
+  fi
+fi
+
 echo "tmux: $session"
 echo "workers: $workers"
 echo "review_workers: $review_workers"

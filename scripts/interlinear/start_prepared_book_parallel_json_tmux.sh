@@ -184,6 +184,23 @@ chmod +x "$run_script"
 
 tmux new-session -d -s "$session" -n parallel-json "bash '$run_script' 2>&1 | tee '$log_dir/${session}_$(date +%Y%m%d_%H%M%S).log'"
 
+if [[ "${AUTOREPAIR_COMPANION:-1}" != "0" ]]; then
+  if ! BOOK_ID="$book_id" \
+    GUARDIAN_SESSION="${session}-autorepair" \
+    WORKER_SESSION="$session" \
+    REVIEW_SESSION="$session" \
+    START_COMMAND="MODEL=$model REASONING=$reasoning RETRY_FAILED=1 bash scripts/interlinear/start_prepared_book_parallel_json_tmux.sh $book_id $session" \
+    COMPILE_COMMAND="bash scripts/interlinear/compile_prepared_book_both_previews.sh $book_id" \
+    COMMIT_COMMAND="bash scripts/interlinear/commit_prepared_book_progress.sh $book_id" \
+    INTERVAL_SECONDS="${AUTOREPAIR_INTERVAL_SECONDS:-900}" \
+    STALL_SECONDS="${AUTOREPAIR_STALL_SECONDS:-3600}" \
+    MODEL="$model" \
+    REASONING="$reasoning" \
+    bash scripts/interlinear/start_autorepair_companion_tmux.sh "$book_id"; then
+    echo "warning: autorepair companion did not start" >&2
+  fi
+fi
+
 echo "tmux: $session"
 echo "book_id: $book_id"
 echo "workers: $workers"
