@@ -1,0 +1,390 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p00316",
+  "source_text": "\"何必跑呢，真没没子啊。太费劲，拖着两腿回去就行了呗。\"",
+  "source_sha256": "fee9abd443233a93f8b8331836d32d33b2b717fcc8d79aeae930550429a66c76",
+  "source_normalized_sha256": "fee9abd443233a93f8b8331836d32d33b2b717fcc8d79aeae930550429a66c76",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 50,
+    "grammar_token_total": 50,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kinkakuji-chunk-0316",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第三章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第三章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p00316",
+    "source_text": "\"何必跑呢，真没没子啊。太费劲，拖着两腿回去就行了呗。\"",
+    "units": [
+      {
+        "source_text": "\"何必跑呢，",
+        "zh": [
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "何",
+            "r": "hé",
+            "g": "adverbial"
+          },
+          {
+            "t": "必",
+            "r": "bì",
+            "g": "adverbial"
+          },
+          {
+            "t": "跑",
+            "r": "pǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "呢",
+            "r": "ne",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "どうして",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "走",
+              "r": "はし",
+              "g": "predicate"
+            },
+            {
+              "t": "る",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "必",
+              "r": "ひつ",
+              "g": "predicate"
+            },
+            {
+              "t": "要",
+              "r": "よう",
+              "g": "predicate"
+            },
+            {
+              "t": "があるんだ、",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "真没没子啊。",
+        "zh": [
+          {
+            "t": "真",
+            "r": "zhēn",
+            "g": "adverbial"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "predicate"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "predicate"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "predicate"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "まったく",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "情",
+              "r": "なさ",
+              "g": "predicate"
+            },
+            {
+              "t": "けない",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "じゃないか。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "太费劲，拖着两腿回去就行了呗。\"",
+        "zh": [
+          {
+            "t": "太",
+            "r": "tài",
+            "g": "adverbial"
+          },
+          {
+            "t": "费",
+            "r": "fèi",
+            "g": "predicate"
+          },
+          {
+            "t": "劲",
+            "r": "jìn",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "拖",
+            "r": "tuō",
+            "g": "adverbial"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "adverbial"
+          },
+          {
+            "t": "两",
+            "r": "liǎng",
+            "g": "object"
+          },
+          {
+            "t": "腿",
+            "r": "tuǐ",
+            "g": "object"
+          },
+          {
+            "t": "回",
+            "r": "huí",
+            "g": "predicate"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "predicate"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "行",
+            "r": "xíng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "呗",
+            "r": "bei",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ひどく",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "骨",
+              "r": "ほね",
+              "g": "predicate"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "折",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "れる、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "両",
+              "r": "りょう",
+              "g": "object"
+            },
+            {
+              "t": "脚",
+              "r": "あし",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "引",
+              "r": "ひ",
+              "g": "adverbial"
+            },
+            {
+              "t": "きずって",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "帰",
+              "r": "かえ",
+              "g": "predicate"
+            },
+            {
+              "t": "ればいいさ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
