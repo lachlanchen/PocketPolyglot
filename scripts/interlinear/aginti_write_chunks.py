@@ -21,6 +21,8 @@ import hashlib
 import json
 import os
 import re
+import shutil
+import subprocess
 import sys
 import time
 import traceback
@@ -58,6 +60,26 @@ GRAMMAR_ROLES = frozenset({
 })
 SPACE_RE = re.compile(r'\s+')
 
+SISHU_TITLE_PINYIN = {
+    "一": "yi1", "七": "qi1", "三": "san1", "中": "zhong1", "九": "jiu3",
+    "二": "er4", "五": "wu3", "八": "ba1", "六": "liu4", "十": "shi2",
+    "卷": "juan4", "句": "ju4", "四": "si4", "大": "da4", "子": "zi3",
+    "孟": "meng4", "學": "xue2", "定": "ding4", "序": "xu4", "庸": "yong1",
+    "書": "shu1", "本": "ben3", "法": "fa3", "注": "zhu4", "章": "zhang1",
+    "考": "kao3", "註": "zhu4", "語": "yu3", "說": "shuo1", "論": "lun2",
+    "讀": "du2", "辨": "bian4", "附": "fu4", "集": "ji2",
+}
+
+SISHU_TITLE_FURIGANA = {
+    "一": "いち", "七": "しち", "三": "さん", "中": "ちゅう", "九": "きゅう",
+    "二": "に", "五": "ご", "八": "はち", "六": "ろく", "十": "じゅう",
+    "卷": "かん", "句": "く", "四": "し", "大": "だい", "子": "し",
+    "孟": "もう", "學": "がく", "定": "てい", "序": "じょ", "庸": "よう",
+    "書": "しょ", "本": "ほん", "法": "ほう", "注": "ちゅう", "章": "しょう",
+    "考": "こう", "註": "ちゅう", "語": "ご", "說": "せつ", "論": "ろん",
+    "讀": "どく", "辨": "べん", "附": "ふ", "集": "しゅう",
+}
+
 # --- Helpers ---------------------------------------------------------------
 
 
@@ -84,6 +106,27 @@ def is_kana_only(text: str) -> bool:
 
 def sha256_hex(data: str) -> str:
     return hashlib.sha256(data.encode("utf-8")).hexdigest()
+
+
+def title_tokens(text: str, readings: dict[str, str]) -> list[dict[str, str]]:
+    tokens: list[dict[str, str]] = []
+    for char in text:
+        if is_single_han(char):
+            tokens.append({"t": char, "r": readings.get(char, "")})
+        else:
+            tokens.append({"t": char, "r": ""})
+    return tokens
+
+
+def load_json(path: Path) -> dict[str, Any]:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def atomic_write_json(path: Path, data: dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    tmp.replace(path)
 
 
 # --- Validation ------------------------------------------------------------
@@ -125,14 +168,19 @@ def validate_ja_line(tokens: Any, where: str) -> list[str]:
             errs.append(f"{where}[{i}]: token must contain 't'")
             continue
         t = str(tok.get("t", ""))
+        r = str(tok.get("r", ""))
         role = tok.get("g")
         if role and str(role) not in GRAMMAR_ROLES:
             errs.append(
                 f"{where}[{i}]: invalid grammar role {role!r}; "
                 f"allowed: {', '.join(sorted(GRAMMAR_ROLES))}"
             )
-        # Note: we do NOT enforce one-kanji-per-token for Japanese;
-        # the model may produce natural compound tokens like 大学 with reading だいがく
+        if has_han(t) and not is_single_han(t):
+            errs.append(f"{where}[{i}]: Japanese kanji token must be exactly one kanji, got {t!r}")
+        if is_single_han(t) and not r:
+            errs.append(f"{where}[{i}]: Japanese kanji token needs furigana in 'r'")
+        if r and not is_single_han(t):
+            errs.append(f"{where}[{i}]: furigana may only be on one-kanji tokens")
     return errs
 
 
@@ -184,6 +232,228 @@ def validate_chunk_output(data: dict) -> list[str]:
     for ui, unit in enumerate(units):
         errs += validate_unit(unit, f"units[{ui}]")
     return errs
+
+
+def source_paragraph_text(chunk: dict[str, Any]) -> str:
+    return "".join(str(paragraph.get("text", "")) for paragraph in chunk.get("paragraphs", []))
+
+
+def wrap_renderer_chunk(data: dict[str, Any], source_chunk: dict[str, Any]) -> dict[str, Any]:
+    """Wrap AgInTi's compact model JSON into the renderer chunk schema."""
+    paragraphs = source_chunk.get("paragraphs") or []
+    if not paragraphs:
+        raise ValueError(f"{source_chunk.get('chunk_id')}: source chunk has no paragraphs")
+    if len(paragraphs) != 1:
+        raise ValueError(
+            f"{source_chunk.get('chunk_id')}: AgInTi writer currently expects one paragraph per chunk, "
+            f"got {len(paragraphs)}"
+        )
+    paragraph = paragraphs[0]
+    units = data.get("units", [])
+    section_title = source_chunk.get("section_title", "")
+    subsection_title = source_chunk.get("subsection_title", "")
+    story_title = source_chunk.get("story_title", "")
+    return {
+        "chunk_id": source_chunk["chunk_id"],
+        "section": {
+            "id": source_chunk.get("section_id", "__section__"),
+            "title": section_title,
+            "title_zh": title_tokens(section_title, SISHU_TITLE_PINYIN),
+            "title_ja": title_tokens(section_title, SISHU_TITLE_FURIGANA),
+        },
+        "subsection": {
+            "id": source_chunk.get("subsection_id", "__subsection__"),
+            "title": subsection_title,
+            "title_zh": title_tokens(subsection_title, SISHU_TITLE_PINYIN),
+            "title_ja": title_tokens(subsection_title, SISHU_TITLE_FURIGANA),
+        },
+        "story": {
+            "id": source_chunk.get("story_id", "__story__"),
+            "title": story_title,
+            "title_zh": title_tokens(story_title, SISHU_TITLE_PINYIN),
+            "title_ja": title_tokens(story_title, SISHU_TITLE_FURIGANA),
+        },
+        "paragraphs": [
+            {
+                "id": paragraph["id"],
+                "source_text": paragraph.get("text", ""),
+                "units": units,
+            }
+        ],
+    }
+
+
+def refresh_renderer_metadata(renderer_chunk: dict[str, Any], source_chunk: dict[str, Any]) -> dict[str, Any]:
+    """Refresh source-derived section/story titles without changing generated units."""
+    title_fields = (
+        ("section", "section_id", "section_title", "__section__"),
+        ("subsection", "subsection_id", "subsection_title", "__subsection__"),
+        ("story", "story_id", "story_title", "__story__"),
+    )
+    for node_name, id_key, title_key, fallback_id in title_fields:
+        title = source_chunk.get(title_key, "")
+        node = renderer_chunk.setdefault(node_name, {})
+        if not isinstance(node, dict):
+            node = {}
+            renderer_chunk[node_name] = node
+        node["id"] = source_chunk.get(id_key, fallback_id)
+        node["title"] = title
+        node["title_zh"] = title_tokens(title, SISHU_TITLE_PINYIN)
+        node["title_ja"] = title_tokens(title, SISHU_TITLE_FURIGANA)
+    return renderer_chunk
+
+
+def validate_renderer_chunk(renderer_chunk: dict[str, Any], source_chunk: dict[str, Any]) -> list[str]:
+    errs: list[str] = []
+    if renderer_chunk.get("chunk_id") != source_chunk.get("chunk_id"):
+        errs.append(f"chunk_id mismatch: {renderer_chunk.get('chunk_id')!r}")
+    for key in ("section", "subsection", "story"):
+        if not isinstance(renderer_chunk.get(key), dict):
+            errs.append(f"missing {key} object")
+    paragraphs = renderer_chunk.get("paragraphs")
+    source_paragraphs = source_chunk.get("paragraphs") or []
+    if not isinstance(paragraphs, list) or not paragraphs:
+        errs.append("missing paragraphs")
+        return errs
+    got_ids = [paragraph.get("id") for paragraph in paragraphs]
+    expected_ids = [paragraph.get("id") for paragraph in source_paragraphs]
+    if got_ids != expected_ids:
+        errs.append(f"paragraph ids mismatch: expected {expected_ids}, got {got_ids}")
+    for pi, paragraph in enumerate(paragraphs):
+        units = paragraph.get("units")
+        if not isinstance(units, list) or not units:
+            errs.append(f"paragraphs[{pi}]: missing units")
+            continue
+        rebuilt_parts: list[str] = []
+        for ui, unit in enumerate(units):
+            errs += validate_unit(unit, f"paragraphs[{pi}].units[{ui}]")
+            rebuilt_parts.append(token_text(unit.get("zh", [])))
+        target = paragraph.get("source_text", "")
+        if target and normalize("".join(rebuilt_parts)) != normalize(str(target)):
+            errs.append(f"paragraphs[{pi}]: units do not reconstruct paragraph source_text")
+    return errs
+
+
+def is_renderer_chunk(data: dict[str, Any]) -> bool:
+    return "paragraphs" in data and "section" in data and "subsection" in data and "story" in data
+
+
+def promote_renderer_chunk(renderer_chunk: dict[str, Any], data_path: Path, reviewed_path: Path) -> None:
+    atomic_write_json(data_path, renderer_chunk)
+    reviewed_path.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(data_path, reviewed_path)
+
+
+def build_status(
+    book_id: str,
+    chunks: list[dict[str, Any]],
+    reviewed_dir: Path,
+    failed_ids: set[str],
+) -> dict[str, Any]:
+    first_missing: int | None = None
+    valid_count = 0
+    for index, chunk in enumerate(chunks, start=1):
+        path = reviewed_dir / f"{chunk['chunk_id']}.json"
+        if path.exists():
+            valid_count += 1
+        elif first_missing is None:
+            first_missing = index
+    failed_count = len(failed_ids)
+    total = len(chunks)
+    return {
+        "book": book_id,
+        "total_chunks": total,
+        "raw": valid_count,
+        "reviewed": valid_count,
+        "failed": failed_count,
+        "failed_ids": sorted(failed_ids),
+        "pending": max(0, total - valid_count - failed_count),
+        "first_missing": first_missing,
+        "last_updated": datetime.now(timezone.utc).isoformat(),
+    }
+
+
+def save_computed_status(
+    status_path: Path,
+    book_id: str,
+    chunks: list[dict[str, Any]],
+    reviewed_dir: Path,
+    failed_ids: set[str],
+) -> dict[str, Any]:
+    status = build_status(book_id, chunks, reviewed_dir, failed_ids)
+    status_path.parent.mkdir(parents=True, exist_ok=True)
+    status_path.write_text(json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return status
+
+
+def compile_previews(book_id: str, log) -> bool:
+    env = os.environ.copy()
+    env.setdefault("COMMIT_PROGRESS", "0")
+    cmd = ["bash", "scripts/interlinear/compile_prepared_book_both_previews.sh", book_id]
+    log(f"Compiling previews: {' '.join(cmd)}")
+    result = subprocess.run(
+        cmd,
+        cwd=ROOT,
+        env=env,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+    )
+    compile_log = ROOT / "data" / "interlinear" / book_id / "compile.log"
+    compile_log.parent.mkdir(parents=True, exist_ok=True)
+    compile_log.write_text(result.stdout, encoding="utf-8")
+    if result.returncode != 0:
+        log(f"  COMPILE FAILED rc={result.returncode}; see {compile_log}")
+        tail = "\n".join(result.stdout.splitlines()[-20:])
+        if tail:
+            log(tail)
+        return False
+    log(f"  COMPILE OK; see {compile_log}")
+    return True
+
+
+def promote_existing_outputs(
+    chunks: list[dict[str, Any]],
+    chunk_out_dir: Path,
+    reviewed_dir: Path,
+    log,
+) -> tuple[int, set[str]]:
+    chunk_by_id = {chunk["chunk_id"]: chunk for chunk in chunks}
+    promoted = 0
+    failed_ids: set[str] = set()
+    for chunk_id, source_chunk in chunk_by_id.items():
+        out_path = chunk_out_dir / f"{chunk_id}.json"
+        reviewed_path = reviewed_dir / f"{chunk_id}.json"
+        if not out_path.exists():
+            continue
+        try:
+            data = load_json(out_path)
+        except (json.JSONDecodeError, OSError) as exc:
+            log(f"  {chunk_id}: cannot read existing output: {exc}")
+            failed_ids.add(chunk_id)
+            continue
+        if is_renderer_chunk(data):
+            renderer = refresh_renderer_metadata(data, source_chunk)
+        else:
+            raw_errs = validate_chunk_output(data)
+            if raw_errs:
+                log(f"  {chunk_id}: existing compact output invalid ({len(raw_errs)} errors)")
+                failed_ids.add(chunk_id)
+                continue
+            raw_path = chunk_out_dir / f"{chunk_id}.raw.json"
+            if not raw_path.exists():
+                atomic_write_json(raw_path, data)
+            renderer = wrap_renderer_chunk(data, source_chunk)
+        renderer_errs = validate_renderer_chunk(renderer, source_chunk)
+        if renderer_errs:
+            log(f"  {chunk_id}: renderer wrapper invalid ({len(renderer_errs)} errors)")
+            for err in renderer_errs[:8]:
+                log(f"    - {err}")
+            failed_ids.add(chunk_id)
+            continue
+        promote_renderer_chunk(renderer, out_path, reviewed_path)
+        promoted += 1
+    return promoted, failed_ids
 
 
 # --- Prompt building -------------------------------------------------------
@@ -358,11 +628,31 @@ def main() -> int:
                         help="Print what would be done without calling API")
     parser.add_argument("--delay", type=float, default=0.5,
                         help="Delay in seconds between API calls")
+    parser.add_argument("--reviewed-dir", default="",
+                        help="Renderer-ready chunk directory; default reads books/<book>/book-plan.json")
+    parser.add_argument("--promote-existing", action="store_true",
+                        help="Wrap/promote existing compact AgInTi outputs before writing new chunks")
+    parser.add_argument("--promote-existing-only", action="store_true",
+                        help="Only wrap/promote existing outputs, then exit")
+    parser.add_argument("--compile-every", type=int, default=0,
+                        help="Compile both preview PDFs after every N newly promoted chunks")
+    parser.add_argument("--compile-at-end", action="store_true",
+                        help="Compile both preview PDFs when the run finishes")
     args = parser.parse_args()
 
     book_id = args.book
+    plan_path = ROOT / "books" / book_id / "book-plan.json"
+    plan: dict[str, Any] = {}
+    if plan_path.exists():
+        plan = load_json(plan_path)
     chunks_jsonl = ROOT / "books" / book_id / "work" / "bilingual" / "chunks" / "chunks.jsonl"
     chunk_out_dir = ROOT / "data" / "interlinear" / book_id / "chunks"
+    if args.reviewed_dir:
+        reviewed_dir = ROOT / args.reviewed_dir
+    elif plan.get("reviewed_chunk_dir"):
+        reviewed_dir = ROOT / str(plan["reviewed_chunk_dir"])
+    else:
+        reviewed_dir = ROOT / "books" / book_id / "work" / "bilingual" / "reviewed" / "chunks"
     status_path = ROOT / "data" / "interlinear" / book_id / "status.json"
     log_path = ROOT / "data" / "interlinear" / book_id / "writer.log"
 
@@ -402,6 +692,8 @@ def main() -> int:
     status["book"] = book_id
     status["total_chunks"] = total
     chunk_out_dir.mkdir(parents=True, exist_ok=True)
+    reviewed_dir.mkdir(parents=True, exist_ok=True)
+    failed_ids: set[str] = set(status.get("failed_ids", []))
 
     # Log setup
     log_path.parent.mkdir(parents=True, exist_ok=True)
@@ -414,7 +706,22 @@ def main() -> int:
         log_fh.write(line + "\n")
         log_fh.flush()
 
+    if args.promote_existing or args.promote_existing_only:
+        promoted, existing_failed = promote_existing_outputs(chunks, chunk_out_dir, reviewed_dir, log)
+        failed_ids.update(existing_failed)
+        status = save_computed_status(status_path, book_id, chunks, reviewed_dir, failed_ids)
+        log(
+            f"Promoted existing outputs: promoted={promoted} "
+            f"valid={status['reviewed']} failed={status['failed']} first_missing={status['first_missing']}"
+        )
+        if args.promote_existing_only:
+            if args.compile_at_end:
+                compile_previews(book_id, log)
+            log_fh.close()
+            return 0
+
     processed = 0
+    newly_promoted = 0
     start_idx = max(0, args.start_chunk - 1)
 
     for idx in range(start_idx, total):
@@ -425,19 +732,49 @@ def main() -> int:
         chunk = chunks[idx]
         chunk_id = chunk["chunk_id"]
         out_path = chunk_out_dir / f"{chunk_id}.json"
+        raw_path = chunk_out_dir / f"{chunk_id}.raw.json"
+        reviewed_path = reviewed_dir / f"{chunk_id}.json"
 
         # Resume check
-        if out_path.exists():
+        if reviewed_path.exists():
             try:
-                existing = json.loads(out_path.read_text(encoding="utf-8"))
-                errs = validate_chunk_output(existing)
+                existing = load_json(reviewed_path)
+                if is_renderer_chunk(existing):
+                    existing = refresh_renderer_metadata(existing, chunk)
+                errs = validate_renderer_chunk(existing, chunk)
                 if not errs:
+                    promote_renderer_chunk(existing, out_path, reviewed_path)
                     processed += 1
                     continue
                 else:
-                    log(f"  {chunk_id}: existing file has {len(errs)} validation errors, redoing")
+                    log(f"  {chunk_id}: reviewed file has {len(errs)} validation errors, redoing")
             except (json.JSONDecodeError, OSError) as e:
-                log(f"  {chunk_id}: existing file corrupt ({e}), redoing")
+                log(f"  {chunk_id}: reviewed file corrupt ({e}), redoing")
+        elif out_path.exists():
+            try:
+                existing = load_json(out_path)
+                if is_renderer_chunk(existing):
+                    renderer = refresh_renderer_metadata(existing, chunk)
+                else:
+                    raw_errs = validate_chunk_output(existing)
+                    if raw_errs:
+                        renderer = None
+                    else:
+                        if not raw_path.exists():
+                            atomic_write_json(raw_path, existing)
+                        renderer = wrap_renderer_chunk(existing, chunk)
+                if renderer:
+                    errs = validate_renderer_chunk(renderer, chunk)
+                    if not errs:
+                        promote_renderer_chunk(renderer, out_path, reviewed_path)
+                        processed += 1
+                        newly_promoted += 1
+                        if args.compile_every and newly_promoted % args.compile_every == 0:
+                            compile_previews(book_id, log)
+                        continue
+                    log(f"  {chunk_id}: existing data output has {len(errs)} validation errors, redoing")
+            except (json.JSONDecodeError, OSError, ValueError) as e:
+                log(f"  {chunk_id}: existing data output unusable ({e}), redoing")
 
         # Build context
         sub = chunk.get("subsection_id", "__unknown__")
@@ -466,8 +803,8 @@ def main() -> int:
             raw_response = call_deepseek(client, model, SYSTEM_PROMPT, user_prompt)  # type: ignore[arg-type]
         except Exception as e:
             log(f"  API ERROR: {e}")
-            status["failed"] = status.get("failed", 0) + 1
-            save_status(status_path, status)
+            failed_ids.add(chunk_id)
+            save_computed_status(status_path, book_id, chunks, reviewed_dir, failed_ids)
             time.sleep(args.delay * 4)
             continue
 
@@ -490,55 +827,65 @@ def main() -> int:
                 except json.JSONDecodeError as e2:
                     log(f"  JSON PARSE ERROR (repair failed): {e2}")
                     log(f"  Raw response (first 200 chars): {raw_response[:200]}")
-                    status["failed"] = status.get("failed", 0) + 1
-                    save_status(status_path, status)
+                    failed_ids.add(chunk_id)
+                    raw_path.write_text(raw_response, encoding="utf-8")
+                    save_computed_status(status_path, book_id, chunks, reviewed_dir, failed_ids)
                     time.sleep(args.delay * 2)
                     continue
             else:
                 log(f"  JSON PARSE ERROR: {e}")
                 log(f"  Raw response (first 200 chars): {raw_response[:200]}")
-                status["failed"] = status.get("failed", 0) + 1
-                save_status(status_path, status)
+                failed_ids.add(chunk_id)
+                raw_path.write_text(raw_response, encoding="utf-8")
+                save_computed_status(status_path, book_id, chunks, reviewed_dir, failed_ids)
                 time.sleep(args.delay * 2)
                 continue
 
-        # Validate
+        # Validate compact model output and renderer wrapper.
         data["chunk_id"] = chunk_id
         errs = validate_chunk_output(data)
+        renderer: dict[str, Any] | None = None
+        if not errs:
+            try:
+                renderer = wrap_renderer_chunk(data, chunk)
+            except ValueError as exc:
+                errs.append(str(exc))
+        if renderer is not None:
+            errs += validate_renderer_chunk(renderer, chunk)
         if errs:
             log(f"  VALIDATION FAILED ({len(errs)} errors):")
             for err in errs[:10]:
                 log(f"    - {err}")
-            status["failed"] = status.get("failed", 0) + 1
+            failed_ids.add(chunk_id)
             # Still save the raw output for debugging
-            debug_path = chunk_out_dir / f"{chunk_id}.raw.json"
-            debug_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-            save_status(status_path, status)
+            atomic_write_json(raw_path, data)
+            save_computed_status(status_path, book_id, chunks, reviewed_dir, failed_ids)
             time.sleep(args.delay * 2)
             continue
 
-        # Save
-        out_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        status["raw"] = status.get("raw", 0) + 1
-        status["first_missing"] = None  # will be recomputed
+        # Save compact audit output and renderer-ready output.
+        atomic_write_json(raw_path, data)
+        promote_renderer_chunk(renderer, out_path, reviewed_path)
+        failed_ids.discard(chunk_id)
         processed += 1
-        log(f"  OK -> {out_path}")
-        save_status(status_path, status)
+        newly_promoted += 1
+        status = save_computed_status(status_path, book_id, chunks, reviewed_dir, failed_ids)
+        log(f"  OK -> {reviewed_path}")
+        if args.compile_every and newly_promoted % args.compile_every == 0:
+            compile_previews(book_id, log)
 
         time.sleep(args.delay)
 
     # Final status update
-    # Find first missing
-    first = None
-    for idx in range(total):
-        cid = chunks[idx]["chunk_id"]
-        if not (chunk_out_dir / f"{cid}.json").exists():
-            first = idx + 1
-            break
-    status["first_missing"] = first
-    save_status(status_path, status)
+    status = save_computed_status(status_path, book_id, chunks, reviewed_dir, failed_ids)
+    if args.compile_at_end:
+        compile_previews(book_id, log)
 
-    log(f"Done. raw={status['raw']} reviewed={status.get('reviewed',0)} failed={status.get('failed',0)} pending={status['pending']} first_missing={first}")
+    log(
+        f"Done. raw={status['raw']} reviewed={status.get('reviewed',0)} "
+        f"failed={status.get('failed',0)} pending={status['pending']} "
+        f"first_missing={status['first_missing']}"
+    )
     log_fh.close()
     return 0
 
