@@ -1,0 +1,389 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p00535",
+  "source_text": "我脸上飞起了一片红潮。他舔着筷子尖，一股作气地继续说下去：",
+  "source_sha256": "3e3ab7c11ce47a56147f395ed33e1d2df53a699d87fcb6ae2ec013b331baa2f1",
+  "source_normalized_sha256": "3e3ab7c11ce47a56147f395ed33e1d2df53a699d87fcb6ae2ec013b331baa2f1",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 52,
+    "grammar_token_total": 52,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kinkakuji-chunk-0535",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第四章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第四章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p00535",
+    "source_text": "我脸上飞起了一片红潮。他舔着筷子尖，一股作气地继续说下去：",
+    "units": [
+      {
+        "source_text": "我脸上飞起了一片红潮。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "adverbial"
+          },
+          {
+            "t": "脸",
+            "r": "liǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "飞",
+            "r": "fēi",
+            "g": "predicate"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "object"
+          },
+          {
+            "t": "片",
+            "r": "piàn",
+            "g": "object"
+          },
+          {
+            "t": "红",
+            "r": "hóng",
+            "g": "object"
+          },
+          {
+            "t": "潮",
+            "r": "cháo",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "adverbial"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "顔",
+              "r": "かお",
+              "g": "adverbial"
+            },
+            {
+              "t": "に、",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "さっと",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "赤",
+              "r": "あか",
+              "g": "object"
+            },
+            {
+              "t": "みが",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "差",
+              "r": "さ",
+              "g": "predicate"
+            },
+            {
+              "t": "した。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "他舔着筷子尖，一股作气地继续说下去：",
+        "zh": [
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "舔",
+            "r": "tiǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "predicate"
+          },
+          {
+            "t": "筷",
+            "r": "kuài",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "尖",
+            "r": "jiān",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "adverbial"
+          },
+          {
+            "t": "股",
+            "r": "gǔ",
+            "g": "adverbial"
+          },
+          {
+            "t": "作",
+            "r": "zuò",
+            "g": "adverbial"
+          },
+          {
+            "t": "气",
+            "r": "qì",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "继",
+            "r": "jì",
+            "g": "predicate"
+          },
+          {
+            "t": "续",
+            "r": "xù",
+            "g": "predicate"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "complement"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "complement"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "箸",
+              "r": "はし",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "先",
+              "r": "さき",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "なめながら、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "一",
+              "r": "いっ",
+              "g": "adverbial"
+            },
+            {
+              "t": "気",
+              "r": "き",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "話",
+              "r": "はなし",
+              "g": "predicate"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "続",
+              "r": "つづ",
+              "g": "predicate"
+            },
+            {
+              "t": "けていった：",
+              "r": "",
+              "g": "complement"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

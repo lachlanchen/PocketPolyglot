@@ -1,0 +1,810 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p00525",
+  "source_text": "这同学经常离群，独自在后院花坛旁吃盒饭。这种习惯仿佛是一种仪式，其难看的食相也是相当孤僻的，所以谁也不接近他。他也不与同学交谈，仿佛在拒绝友谊。",
+  "source_sha256": "393b7471e3472eb79f8af80bb116a5f9af91bf27e3658759c15137db00737b98",
+  "source_normalized_sha256": "393b7471e3472eb79f8af80bb116a5f9af91bf27e3658759c15137db00737b98",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 134,
+    "grammar_token_total": 134,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kinkakuji-chunk-0525",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第四章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第四章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p00525",
+    "source_text": "这同学经常离群，独自在后院花坛旁吃盒饭。这种习惯仿佛是一种仪式，其难看的食相也是相当孤僻的，所以谁也不接近他。他也不与同学交谈，仿佛在拒绝友谊。",
+    "units": [
+      {
+        "source_text": "这同学经常离群，独自在后院花坛旁吃盒饭。",
+        "zh": [
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "同",
+            "r": "tóng",
+            "g": "subject"
+          },
+          {
+            "t": "学",
+            "r": "xué",
+            "g": "subject"
+          },
+          {
+            "t": "经",
+            "r": "jīng",
+            "g": "adverbial"
+          },
+          {
+            "t": "常",
+            "r": "cháng",
+            "g": "adverbial"
+          },
+          {
+            "t": "离",
+            "r": "lí",
+            "g": "predicate"
+          },
+          {
+            "t": "群",
+            "r": "qún",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "独",
+            "r": "dú",
+            "g": "adverbial"
+          },
+          {
+            "t": "自",
+            "r": "zì",
+            "g": "adverbial"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "后",
+            "r": "hòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "院",
+            "r": "yuàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "花",
+            "r": "huā",
+            "g": "adverbial"
+          },
+          {
+            "t": "坛",
+            "r": "tán",
+            "g": "adverbial"
+          },
+          {
+            "t": "旁",
+            "r": "páng",
+            "g": "adverbial"
+          },
+          {
+            "t": "吃",
+            "r": "chī",
+            "g": "predicate"
+          },
+          {
+            "t": "盒",
+            "r": "hé",
+            "g": "object"
+          },
+          {
+            "t": "饭",
+            "r": "fàn",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "学",
+              "r": "がく",
+              "g": "subject"
+            },
+            {
+              "t": "生",
+              "r": "せい",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "いつも",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "群",
+              "r": "む",
+              "g": "object"
+            },
+            {
+              "t": "れを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "離",
+              "r": "はな",
+              "g": "predicate"
+            },
+            {
+              "t": "れ、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "ひとり",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "裏",
+              "r": "うら",
+              "g": "adverbial"
+            },
+            {
+              "t": "庭",
+              "r": "にわ",
+              "g": "adverbial"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "花",
+              "r": "はな",
+              "g": "adverbial"
+            },
+            {
+              "t": "壇",
+              "r": "だん",
+              "g": "adverbial"
+            },
+            {
+              "t": "のそばで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "弁",
+              "r": "べん",
+              "g": "object"
+            },
+            {
+              "t": "当",
+              "r": "とう",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "食",
+              "r": "た",
+              "g": "predicate"
+            },
+            {
+              "t": "べていた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "这种习惯仿佛是一种仪式，其难看的食相也是相当孤僻的，所以谁也不接近他。",
+        "zh": [
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "种",
+            "r": "zhǒng",
+            "g": "subject"
+          },
+          {
+            "t": "习",
+            "r": "xí",
+            "g": "subject"
+          },
+          {
+            "t": "惯",
+            "r": "guàn",
+            "g": "subject"
+          },
+          {
+            "t": "仿",
+            "r": "fǎng",
+            "g": "adverbial"
+          },
+          {
+            "t": "佛",
+            "r": "fú",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "object"
+          },
+          {
+            "t": "种",
+            "r": "zhǒng",
+            "g": "object"
+          },
+          {
+            "t": "仪",
+            "r": "yí",
+            "g": "object"
+          },
+          {
+            "t": "式",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "其",
+            "r": "qí",
+            "g": "attributive"
+          },
+          {
+            "t": "难",
+            "r": "nán",
+            "g": "attributive"
+          },
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "食",
+            "r": "shí",
+            "g": "subject"
+          },
+          {
+            "t": "相",
+            "r": "xiàng",
+            "g": "subject"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "相",
+            "r": "xiāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "当",
+            "r": "dāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "孤",
+            "r": "gū",
+            "g": "complement"
+          },
+          {
+            "t": "僻",
+            "r": "pì",
+            "g": "complement"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "所",
+            "r": "suǒ",
+            "g": "function"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "function"
+          },
+          {
+            "t": "谁",
+            "r": "shéi",
+            "g": "subject"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "接",
+            "r": "jiē",
+            "g": "predicate"
+          },
+          {
+            "t": "近",
+            "r": "jìn",
+            "g": "predicate"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "習",
+              "r": "しゅう",
+              "g": "subject"
+            },
+            {
+              "t": "慣",
+              "r": "かん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "まるで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "一",
+              "r": "いっ",
+              "g": "object"
+            },
+            {
+              "t": "種",
+              "r": "しゅ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "儀",
+              "r": "ぎ",
+              "g": "object"
+            },
+            {
+              "t": "式",
+              "r": "しき",
+              "g": "object"
+            },
+            {
+              "t": "のようで、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "その",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "attributive"
+            },
+            {
+              "t": "苦",
+              "r": "ぐる",
+              "g": "attributive"
+            },
+            {
+              "t": "しい",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "食",
+              "r": "た",
+              "g": "subject"
+            },
+            {
+              "t": "べぶりも",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "かなり",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "孤",
+              "r": "こ",
+              "g": "complement"
+            },
+            {
+              "t": "僻",
+              "r": "へき",
+              "g": "complement"
+            },
+            {
+              "t": "なので、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "誰",
+              "r": "だれ",
+              "g": "subject"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "近",
+              "r": "ちか",
+              "g": "predicate"
+            },
+            {
+              "t": "づかなかった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "他也不与同学交谈，仿佛在拒绝友谊。",
+        "zh": [
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "与",
+            "r": "yǔ",
+            "g": "adverbial"
+          },
+          {
+            "t": "同",
+            "r": "tóng",
+            "g": "adverbial"
+          },
+          {
+            "t": "学",
+            "r": "xué",
+            "g": "adverbial"
+          },
+          {
+            "t": "交",
+            "r": "jiāo",
+            "g": "predicate"
+          },
+          {
+            "t": "谈",
+            "r": "tán",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "仿",
+            "r": "fǎng",
+            "g": "adverbial"
+          },
+          {
+            "t": "佛",
+            "r": "fú",
+            "g": "adverbial"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "拒",
+            "r": "jù",
+            "g": "predicate"
+          },
+          {
+            "t": "绝",
+            "r": "jué",
+            "g": "predicate"
+          },
+          {
+            "t": "友",
+            "r": "yǒu",
+            "g": "object"
+          },
+          {
+            "t": "谊",
+            "r": "yì",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "同",
+              "r": "どう",
+              "g": "adverbial"
+            },
+            {
+              "t": "級",
+              "r": "きゅう",
+              "g": "adverbial"
+            },
+            {
+              "t": "生",
+              "r": "せい",
+              "g": "adverbial"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "話",
+              "r": "はな",
+              "g": "predicate"
+            },
+            {
+              "t": "そうとはせず、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "まるで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "友",
+              "r": "ゆう",
+              "g": "object"
+            },
+            {
+              "t": "情",
+              "r": "じょう",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "拒",
+              "r": "こば",
+              "g": "predicate"
+            },
+            {
+              "t": "んでいるかのようだった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
