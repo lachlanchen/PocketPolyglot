@@ -1,0 +1,384 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p00116",
+  "source_text": "\"这可不是黑市米。是施主们的心意，你只顾高高兴兴地吃好了。\"",
+  "source_sha256": "e5d293e24d05458376b4e89a6a0d0111339f037805cf7803a0ff11120370773c",
+  "source_normalized_sha256": "e5d293e24d05458376b4e89a6a0d0111339f037805cf7803a0ff11120370773c",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 51,
+    "grammar_token_total": 51,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kinkakuji-chunk-0116",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第一章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第一章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p00116",
+    "source_text": "\"这可不是黑市米。是施主们的心意，你只顾高高兴兴地吃好了。\"",
+    "units": [
+      {
+        "source_text": "\"这可不是黑市米。",
+        "zh": [
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bú",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "黑",
+            "r": "hēi",
+            "g": "object"
+          },
+          {
+            "t": "市",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "米",
+            "r": "mǐ",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "これは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "闇",
+              "r": "やみ",
+              "g": "object"
+            },
+            {
+              "t": "米",
+              "r": "まい",
+              "g": "object"
+            },
+            {
+              "t": "では",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "ない",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "是施主们的心意，你只顾高高兴兴地吃好了。\"",
+        "zh": [
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "施",
+            "r": "shī",
+            "g": "attributive"
+          },
+          {
+            "t": "主",
+            "r": "zhǔ",
+            "g": "attributive"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "心",
+            "r": "xīn",
+            "g": "object"
+          },
+          {
+            "t": "意",
+            "r": "yì",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "只",
+            "r": "zhǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "顾",
+            "r": "guǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "高",
+            "r": "gāo",
+            "g": "adverbial"
+          },
+          {
+            "t": "高",
+            "r": "gāo",
+            "g": "adverbial"
+          },
+          {
+            "t": "兴",
+            "r": "xìng",
+            "g": "adverbial"
+          },
+          {
+            "t": "兴",
+            "r": "xìng",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "吃",
+            "r": "chī",
+            "g": "predicate"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "施",
+              "r": "せ",
+              "g": "attributive"
+            },
+            {
+              "t": "主",
+              "r": "しゅ",
+              "g": "attributive"
+            },
+            {
+              "t": "たちの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "志",
+              "r": "こころざし",
+              "g": "object"
+            },
+            {
+              "t": "だ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "ただ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "喜",
+              "r": "よろこ",
+              "g": "adverbial"
+            },
+            {
+              "t": "んで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "食",
+              "r": "た",
+              "g": "predicate"
+            },
+            {
+              "t": "べれば",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "よい",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
