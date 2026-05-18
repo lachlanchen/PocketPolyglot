@@ -1,0 +1,208 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p00887",
+  "source_text": "这是1949年正月的事。",
+  "source_sha256": "8947594a779ef693374dfc6afe2d4c8e47488781f6ee4f4c6e7be6c183b79c8c",
+  "source_normalized_sha256": "8947594a779ef693374dfc6afe2d4c8e47488781f6ee4f4c6e7be6c183b79c8c",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 18,
+    "grammar_token_total": 18,
+    "unit_count": 1
+  },
+  "source_chunk_id": "kinkakuji-chunk-0887",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第七章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "attributive"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "attributive"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第七章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "attributive"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "attributive"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p00887",
+    "source_text": "这是1949年正月的事。",
+    "units": [
+      {
+        "source_text": "这是1949年正月的事。",
+        "zh": [
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "1949",
+            "r": "",
+            "g": "attributive"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "attributive"
+          },
+          {
+            "t": "正",
+            "r": "zhēng",
+            "g": "attributive"
+          },
+          {
+            "t": "月",
+            "r": "yuè",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "これは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "1949",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "年",
+              "r": "ねん",
+              "g": "attributive"
+            },
+            {
+              "t": "正",
+              "r": "しょう",
+              "g": "attributive"
+            },
+            {
+              "t": "月",
+              "r": "がつ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "こと",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "であった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
