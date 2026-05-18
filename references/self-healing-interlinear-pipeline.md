@@ -40,6 +40,7 @@ Each cycle:
 - If merge waits inside an already generated range, start the sanitizer for that exact range.
 - If the writer stopped before completion, restart it from the first missing chunk.
 - If code validation fails or repeated failures indicate a script bug, start a separate repair tmux session.
+- If sessions remain active but no progress changes for `ACTIVE_STALL_REPAIR_SECONDS`, start a maintainer repair session instead of waiting forever.
 
 ## Writer Integration
 
@@ -50,6 +51,8 @@ AUTOREPAIR_COMPANION=0 bash scripts/interlinear/start_prepared_book_parallel_jso
 ```
 
 The companion session is named after the writer, for example `zhjpbook-kinkakuji-json-autorepair`. Because it runs in its own tmux session, it is not blocked if the writer process is stuck inside Codex, TeX, merge logic, or a shell wait.
+
+The companion has two stall thresholds. `AUTOREPAIR_STALL_SECONDS` is the gentle warning/restart threshold. `ACTIVE_STALL_REPAIR_SECONDS` is the stronger threshold for the case where tmux sessions still exist but no files or progress counters move.
 
 ## Self-Repair Rules
 

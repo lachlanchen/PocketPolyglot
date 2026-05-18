@@ -468,21 +468,26 @@ def guardian_once(args: argparse.Namespace, profile: BookProfile, state: dict[st
         actions.append(f"start worker from {first_missing or 'default'}")
         actions.append(start_worker(profile, args, first_missing))
 
+    facts = {
+        "raw": raw,
+        "reviewed": reviewed,
+        "merge": merge_result,
+        "marker": marker,
+        "tmux": {
+            "worker": tmux_active(profile.worker_session),
+            "review": tmux_active(profile.review_session),
+            "sanitizer": tmux_active(profile.sanitizer_session) if profile.sanitizer_session else False,
+        },
+    }
+    if failures:
+        actions.append(launch_self_repair(profile, args, state, "Pipeline command failed.", facts))
+
     if unchanged_for >= args.stall_seconds:
-        facts = {
-            "unchanged_for": unchanged_for,
-            "raw": raw,
-            "reviewed": reviewed,
-            "merge": merge_result,
-            "marker": marker,
-            "tmux": {
-                "worker": tmux_active(profile.worker_session),
-                "review": tmux_active(profile.review_session),
-                "sanitizer": tmux_active(profile.sanitizer_session) if profile.sanitizer_session else False,
-            },
-        }
+        facts["unchanged_for"] = unchanged_for
         if not tmux_active(profile.worker_session) or failures:
             actions.append(launch_self_repair(profile, args, state, "Pipeline stalled or failed.", facts))
+        elif unchanged_for >= args.active_stall_repair_seconds:
+            actions.append(launch_self_repair(profile, args, state, "Pipeline remained unchanged while sessions stayed active.", facts))
         else:
             actions.append(f"stall observed but workers are active; gentle wait unchanged_for={unchanged_for}s")
 
@@ -513,6 +518,7 @@ def main() -> int:
     parser.add_argument("--book-id", default="sichuan-folk-stories-vol1")
     parser.add_argument("--interval-seconds", type=int, default=1800)
     parser.add_argument("--stall-seconds", type=int, default=3600)
+    parser.add_argument("--active-stall-repair-seconds", type=int, default=21600)
     parser.add_argument("--model", default=os.environ.get("MODEL", "gpt-5.5"))
     parser.add_argument("--reasoning", default=os.environ.get("REASONING", "medium"))
     parser.add_argument("--sanitizer-workers", type=int, default=int(os.environ.get("SANITIZER_WORKERS", "4")))
