@@ -1,0 +1,390 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p01000",
+  "source_text": "\"金阁不是无力。绝不是无力。但它是一切无力的根源！\"",
+  "source_sha256": "bc09527ac93a89c4b6ea64621d2aacaeb568f883e149d5312073d2c010c392e1",
+  "source_normalized_sha256": "bc09527ac93a89c4b6ea64621d2aacaeb568f883e149d5312073d2c010c392e1",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 50,
+    "grammar_token_total": 50,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kinkakuji-chunk-1000",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第七章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第七章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p01000",
+    "source_text": "\"金阁不是无力。绝不是无力。但它是一切无力的根源！\"",
+    "units": [
+      {
+        "source_text": "\"金阁不是无力。",
+        "zh": [
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "金",
+            "r": "jīn",
+            "g": "subject"
+          },
+          {
+            "t": "阁",
+            "r": "gé",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "predicate"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "无",
+            "r": "wú",
+            "g": "object"
+          },
+          {
+            "t": "力",
+            "r": "lì",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "金",
+              "r": "きん",
+              "g": "subject"
+            },
+            {
+              "t": "閣",
+              "r": "かく",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "無",
+              "r": "む",
+              "g": "object"
+            },
+            {
+              "t": "力",
+              "r": "りょく",
+              "g": "object"
+            },
+            {
+              "t": "ではない",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "绝不是无力。",
+        "zh": [
+          {
+            "t": "绝",
+            "r": "jué",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "predicate"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "无",
+            "r": "wú",
+            "g": "object"
+          },
+          {
+            "t": "力",
+            "r": "lì",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "決",
+              "r": "けっ",
+              "g": "adverbial"
+            },
+            {
+              "t": "して",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "無",
+              "r": "む",
+              "g": "object"
+            },
+            {
+              "t": "力",
+              "r": "りょく",
+              "g": "object"
+            },
+            {
+              "t": "ではない",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "但它是一切无力的根源！\"",
+        "zh": [
+          {
+            "t": "但",
+            "r": "dàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "它",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "attributive"
+          },
+          {
+            "t": "切",
+            "r": "qiè",
+            "g": "attributive"
+          },
+          {
+            "t": "无",
+            "r": "wú",
+            "g": "attributive"
+          },
+          {
+            "t": "力",
+            "r": "lì",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "根",
+            "r": "gēn",
+            "g": "object"
+          },
+          {
+            "t": "源",
+            "r": "yuán",
+            "g": "object"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "だが、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "それは",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "すべての",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "無",
+              "r": "む",
+              "g": "attributive"
+            },
+            {
+              "t": "力",
+              "r": "りょく",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "根",
+              "r": "こん",
+              "g": "object"
+            },
+            {
+              "t": "源",
+              "r": "げん",
+              "g": "object"
+            },
+            {
+              "t": "だ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "！」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
