@@ -173,9 +173,9 @@ def profile_for(book_id: str) -> BookProfile:
             review_rejected_dir=work / "parallel-review" / "merge-rejected",
             worker_session="zhjpbook-sichuan-folk-json",
             review_session="zhjpbook-sichuan-folk-json",
-            sanitizer_session="zhjpbook-sichuan-folk-sanitizer",
+            sanitizer_session="",
             start_command="bash scripts/interlinear/start_sichuan_folk_parallel_json_tmux.sh zhjpbook-sichuan-folk-json",
-            sanitizer_command="bash scripts/interlinear/start_sichuan_folk_sanitizer_tmux.sh zhjpbook-sichuan-folk-sanitizer",
+            sanitizer_command="",
             compile_command="bash scripts/interlinear/compile_sichuan_folk_both_previews.sh",
             commit_command="bash scripts/interlinear/commit_sichuan_folk_progress.sh",
         )

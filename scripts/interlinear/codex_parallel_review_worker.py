@@ -46,18 +46,37 @@ def claim_chunk(claim_dir: Path, chunk_id: str, worker_id: str, ttl_seconds: int
     try:
         claim_path.mkdir(parents=True)
     except FileExistsError:
-        if ttl_seconds <= 0:
-            return False
+        owner_alive = False
         try:
-            age = now - claim_path.stat().st_mtime
-        except FileNotFoundError:
-            return False
-        if age <= ttl_seconds:
-            return False
-        shutil.rmtree(claim_path, ignore_errors=True)
-        try:
-            claim_path.mkdir(parents=True)
-        except FileExistsError:
+            owner = json.loads((claim_path / "owner.json").read_text(encoding="utf-8"))
+            owner_pid = int(owner.get("pid", 0))
+            if owner_pid > 0:
+                os.kill(owner_pid, 0)
+                owner_alive = True
+        except (FileNotFoundError, json.JSONDecodeError, ValueError, ProcessLookupError):
+            owner_alive = False
+        except PermissionError:
+            owner_alive = True
+
+        if not owner_alive:
+            shutil.rmtree(claim_path, ignore_errors=True)
+            try:
+                claim_path.mkdir(parents=True)
+            except FileExistsError:
+                return False
+        elif ttl_seconds > 0:
+            try:
+                age = now - claim_path.stat().st_mtime
+            except FileNotFoundError:
+                return False
+            if age <= ttl_seconds:
+                return False
+            shutil.rmtree(claim_path, ignore_errors=True)
+            try:
+                claim_path.mkdir(parents=True)
+            except FileExistsError:
+                return False
+        else:
             return False
     (claim_path / "owner.json").write_text(
         json.dumps({"worker_id": worker_id, "pid": os.getpid(), "claimed_at": now}, indent=2) + "\n",
@@ -101,6 +120,7 @@ def main() -> int:
     parser.add_argument("--end-index", type=int)
     parser.add_argument("--max-chunks", type=int, default=0, help="0 means no per-worker limit")
     parser.add_argument("--retries", type=int, default=2)
+    parser.add_argument("--retry-failed", action="store_true")
     parser.add_argument("--claim-ttl-seconds", type=int, default=21600)
     parser.add_argument("--codex-timeout-seconds", type=int, default=7200)
     parser.add_argument("--idle-sleep", type=int, default=30)
@@ -133,8 +153,12 @@ def main() -> int:
                 continue
             if valid_reviewed(accepted_dir / f"{chunk_id}.json", chunk):
                 continue
-            if (failed_dir / f"{chunk_id}.json").exists():
-                continue
+            failed_path = failed_dir / f"{chunk_id}.json"
+            if failed_path.exists():
+                if args.retry_failed:
+                    failed_path.unlink()
+                else:
+                    continue
             if not (raw_dir / f"{chunk_id}.json").exists():
                 continue
             if claim_chunk(claim_dir, chunk_id, args.worker_id, args.claim_ttl_seconds):

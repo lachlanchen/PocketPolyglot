@@ -367,7 +367,7 @@ def repair_prompt(source: dict[str, Any], current: dict[str, Any], issues: list[
         - Split at sentence or short clause level so the interline is line-based and readable.
         {japanese_source_rule}
         - Ensure every Chinese Han token has pinyin on its own single-character token.
-        - Ensure every Japanese kanji has furigana on its own single-kanji token only.
+        - Ensure every Japanese kanji has furigana on its own single-kanji token only. If a token mixes kana/punctuation/quotes with a kanji or quoted Chinese glyph, split it, e.g. "おまえはこの「妈」の" must become kana/quote text, one "妈" token with reading, then kana/quote text.
         - Use one English grammar role in "g" for every content token.
         - Avoid color collapse: a whole sentence/chunk must not become one dominant role such as all predicate.
         - Match the major Chinese and Japanese components roughly with the same roles/colors.

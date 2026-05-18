@@ -16,6 +16,7 @@ reasoning="${REASONING:-medium}"
 codex_timeout_seconds="${CODEX_TIMEOUT_SECONDS:-7200}"
 merge_interval="${MERGE_INTERVAL:-180}"
 review_merge_interval="${REVIEW_MERGE_INTERVAL:-300}"
+enable_legacy_sanitizer="${ENABLE_LEGACY_SANITIZER:-0}"
 
 work_root="books/$book_id/work/bilingual/parallel-json"
 candidate_dir="$work_root/candidates"
@@ -167,13 +168,19 @@ chmod +x "$run_script"
 tmux new-session -d -s "$session" -n parallel-json "bash '$run_script' 2>&1 | tee '$log_dir/${session}_$(date +%Y%m%d_%H%M%S).log'"
 
 if [[ "${AUTOREPAIR_COMPANION:-1}" != "0" ]]; then
+  sanitizer_session_arg=""
+  sanitizer_command_arg=""
+  if [[ "$enable_legacy_sanitizer" == "1" ]]; then
+    sanitizer_session_arg="${SANITIZER_SESSION:-zhjpbook-sichuan-folk-sanitizer}"
+    sanitizer_command_arg="MODEL=$model REASONING=$reasoning RETRY_FAILED=1 bash scripts/interlinear/start_sichuan_folk_sanitizer_tmux.sh $sanitizer_session_arg"
+  fi
   if ! BOOK_ID="$book_id" \
     GUARDIAN_SESSION="${session}-autorepair" \
     WORKER_SESSION="$session" \
     REVIEW_SESSION="$session" \
-    SANITIZER_SESSION="${SANITIZER_SESSION:-zhjpbook-sichuan-folk-sanitizer}" \
+    SANITIZER_SESSION="$sanitizer_session_arg" \
     START_COMMAND="MODEL=$model REASONING=$reasoning RETRY_FAILED=1 bash scripts/interlinear/start_sichuan_folk_parallel_json_tmux.sh $session" \
-    SANITIZER_COMMAND="MODEL=$model REASONING=$reasoning RETRY_FAILED=1 bash scripts/interlinear/start_sichuan_folk_sanitizer_tmux.sh ${SANITIZER_SESSION:-zhjpbook-sichuan-folk-sanitizer}" \
+    SANITIZER_COMMAND="$sanitizer_command_arg" \
     COMPILE_COMMAND="bash scripts/interlinear/compile_sichuan_folk_both_previews.sh" \
     COMMIT_COMMAND="bash scripts/interlinear/commit_sichuan_folk_progress.sh" \
     INTERVAL_SECONDS="${AUTOREPAIR_INTERVAL_SECONDS:-900}" \

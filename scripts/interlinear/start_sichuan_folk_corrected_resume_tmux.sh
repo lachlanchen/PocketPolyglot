@@ -10,6 +10,7 @@ reasoning="${REASONING:-medium}"
 writer_session="${WRITER_SESSION:-zhjpbook-sichuan-folk-json}"
 sanitizer_session="${SANITIZER_SESSION:-zhjpbook-sichuan-folk-sanitizer}"
 monitor_session="${MONITOR_SESSION:-zhjpbook-sichuan-folk-monitor}"
+enable_legacy_sanitizer="${ENABLE_LEGACY_SANITIZER:-0}"
 
 bash scripts/interlinear/prepare_sichuan_folk_sources.sh
 
@@ -27,7 +28,9 @@ else
 fi
 sanitize_end="$((resume_index - 1))"
 
-if [[ "$sanitize_end" -ge 1 ]]; then
+if [[ "$enable_legacy_sanitizer" != "1" ]]; then
+  echo "legacy sanitizer skipped; async review-v2 is the repair/sanitize path"
+elif [[ "$sanitize_end" -ge 1 ]]; then
   if ! tmux has-session -t "$sanitizer_session" 2>/dev/null; then
     START_INDEX=1 \
     END_INDEX="$sanitize_end" \

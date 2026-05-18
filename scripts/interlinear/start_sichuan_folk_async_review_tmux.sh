@@ -15,6 +15,7 @@ reasoning="${REASONING:-medium}"
 codex_timeout_seconds="${CODEX_TIMEOUT_SECONDS:-7200}"
 merge_interval="${REVIEW_MERGE_INTERVAL:-300}"
 restart_interval="${REVIEW_RESTART_INTERVAL_SECONDS:-3600}"
+retry_failed="${RETRY_FAILED:-0}"
 raw_chunk_dir="${RAW_CHUNK_DIR:-books/$book_id/work/bilingual/interlinear/chunks}"
 review_root="${REVIEW_ROOT:-books/$book_id/work/bilingual/parallel-review-v2}"
 review_candidate_dir="$review_root/candidates"
@@ -42,6 +43,10 @@ fi
 end_arg=()
 if [[ "$end_index" != "0" ]]; then
   end_arg=(--end-index "$end_index")
+fi
+retry_failed_arg=()
+if [[ "$retry_failed" == "1" ]]; then
+  retry_failed_arg=(--retry-failed)
 fi
 
 cat > "$run_script" <<EOF
@@ -72,6 +77,7 @@ spawn_worker() {
     --max-chunks '$max_chunks_per_worker' \
     --codex-timeout-seconds '$codex_timeout_seconds' \
     --retries 2 \
+    ${retry_failed_arg[*]} \
     --idle-sleep 60 \
     --done-file '$done_file' \
     > "$review_root/logs/\$worker_id.log" 2>&1 &
@@ -125,6 +131,7 @@ echo "raw_chunk_dir: $raw_chunk_dir"
 echo "reviewed_chunk_dir: $reviewed_chunk_dir"
 echo "merge_interval: $merge_interval"
 echo "restart_interval: $restart_interval"
+echo "retry_failed: $retry_failed"
 echo "model: $model"
 echo "reasoning: $reasoning"
 echo "run_script: $run_script"

@@ -12,6 +12,14 @@ from typing import Any
 HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
 
+JP_FALLBACK_READINGS = {
+    # Simplified Chinese glyphs sometimes appear inside quoted character names
+    # in Japanese comments. They still need a single-token ruby reading.
+    "妈": "ま",
+    "马": "うま",
+    "妇": "ふ",
+}
+
 
 ROLE_ALIASES = {
     "zhu": "subject",
@@ -119,7 +127,20 @@ def normalize_node(node: Any) -> int:
 def split_reading_token(token: dict[str, Any], *, lang: str) -> tuple[list[dict[str, Any]], int]:
     text = str(token.get("t", ""))
     reading = str(token.get("r", ""))
+    role = token.get("g", "")
     if not reading:
+        if lang == "ja" and HAN_RE.search(text) and not SINGLE_HAN_RE.fullmatch(text):
+            parts: list[dict[str, Any]] = []
+            cursor = 0
+            for match in HAN_RE.finditer(text):
+                if match.start() > cursor:
+                    parts.append({"t": text[cursor : match.start()], "r": "", **({"g": role} if role else {})})
+                char = match.group(0)
+                parts.append({"t": char, "r": JP_FALLBACK_READINGS.get(char, ""), **({"g": role} if role else {})})
+                cursor = match.end()
+            if cursor < len(text):
+                parts.append({"t": text[cursor:], "r": "", **({"g": role} if role else {})})
+            return parts, 1
         return [token], 0
     han_matches = list(HAN_RE.finditer(text))
     if not han_matches:
@@ -128,7 +149,6 @@ def split_reading_token(token: dict[str, Any], *, lang: str) -> tuple[list[dict[
         return [new_token], 1
     if len(han_matches) == 1 and not SINGLE_HAN_RE.fullmatch(text):
         match = han_matches[0]
-        role = token.get("g", "")
         parts: list[dict[str, Any]] = []
         prefix = text[: match.start()]
         suffix = text[match.end() :]
