@@ -1,0 +1,474 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p00229",
+  "source_text": "我的日作息如上所述。每天起床的信号，是伙夫——称做\"典座\"——的摇铃声。",
+  "source_sha256": "fc9b01be6c55c0ad525a7bba2863b4a486a886c6b227a4cd643a3b74f8681735",
+  "source_normalized_sha256": "fc9b01be6c55c0ad525a7bba2863b4a486a886c6b227a4cd643a3b74f8681735",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 69,
+    "grammar_token_total": 69,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kinkakuji-chunk-0229",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第二章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "二",
+        "r": "に",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第二章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "二",
+        "r": "に",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p00229",
+    "source_text": "我的日作息如上所述。每天起床的信号，是伙夫——称做\"典座\"——的摇铃声。",
+    "units": [
+      {
+        "source_text": "我的日作息如上所述。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "subject"
+          },
+          {
+            "t": "作",
+            "r": "zuò",
+            "g": "subject"
+          },
+          {
+            "t": "息",
+            "r": "xī",
+            "g": "subject"
+          },
+          {
+            "t": "如",
+            "r": "rú",
+            "g": "predicate"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "predicate"
+          },
+          {
+            "t": "所",
+            "r": "suǒ",
+            "g": "predicate"
+          },
+          {
+            "t": "述",
+            "r": "shù",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "subject"
+            },
+            {
+              "t": "日",
+              "r": "にち",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "暮",
+              "r": "く",
+              "g": "subject"
+            },
+            {
+              "t": "らしぶりは、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "上",
+              "r": "うえ",
+              "g": "predicate"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "述",
+              "r": "の",
+              "g": "predicate"
+            },
+            {
+              "t": "べたとおりである。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "每天起床的信号，是伙夫——称做\"典座\"——的摇铃声。",
+        "zh": [
+          {
+            "t": "每",
+            "r": "měi",
+            "g": "attributive"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "attributive"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "床",
+            "r": "chuáng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "信",
+            "r": "xìn",
+            "g": "subject"
+          },
+          {
+            "t": "号",
+            "r": "hào",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "伙",
+            "r": "huǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "夫",
+            "r": "fū",
+            "g": "attributive"
+          },
+          {
+            "t": "—",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "—",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "称",
+            "r": "chēng",
+            "g": "attributive"
+          },
+          {
+            "t": "做",
+            "r": "zuò",
+            "g": "attributive"
+          },
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "典",
+            "r": "diǎn",
+            "g": "attributive"
+          },
+          {
+            "t": "座",
+            "r": "zuò",
+            "g": "attributive"
+          },
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "—",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "—",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "摇",
+            "r": "yáo",
+            "g": "attributive"
+          },
+          {
+            "t": "铃",
+            "r": "líng",
+            "g": "attributive"
+          },
+          {
+            "t": "声",
+            "r": "shēng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "毎",
+              "r": "まい",
+              "g": "attributive"
+            },
+            {
+              "t": "朝",
+              "r": "あさ",
+              "g": "attributive"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "起",
+              "r": "き",
+              "g": "attributive"
+            },
+            {
+              "t": "床",
+              "r": "しょう",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "合",
+              "r": "あい",
+              "g": "subject"
+            },
+            {
+              "t": "図",
+              "r": "ず",
+              "g": "subject"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "炊",
+              "r": "すい",
+              "g": "attributive"
+            },
+            {
+              "t": "事",
+              "r": "じ",
+              "g": "attributive"
+            },
+            {
+              "t": "係",
+              "r": "がかり",
+              "g": "attributive"
+            },
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "典",
+              "r": "てん",
+              "g": "attributive"
+            },
+            {
+              "t": "座",
+              "r": "ぞ",
+              "g": "attributive"
+            },
+            {
+              "t": "」の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "振",
+              "r": "ふ",
+              "g": "attributive"
+            },
+            {
+              "t": "る",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "鈴",
+              "r": "すず",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "音",
+              "r": "おと",
+              "g": "object"
+            },
+            {
+              "t": "であった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

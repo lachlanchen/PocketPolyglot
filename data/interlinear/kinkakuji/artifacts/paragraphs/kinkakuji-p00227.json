@@ -1,0 +1,183 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p00227",
+  "source_text": "粥饶果究",
+  "source_sha256": "a9b812736ca791d49b9488b7bc1a2b3264311d87bc82191e2816ee4920dc43fb",
+  "source_normalized_sha256": "a9b812736ca791d49b9488b7bc1a2b3264311d87bc82191e2816ee4920dc43fb",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 13,
+    "grammar_token_total": 13,
+    "unit_count": 1
+  },
+  "source_chunk_id": "kinkakuji-chunk-0227",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第二章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "二",
+        "r": "に",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第二章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "二",
+        "r": "に",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p00227",
+    "source_text": "粥饶果究",
+    "units": [
+      {
+        "source_text": "粥饶果究",
+        "zh": [
+          {
+            "t": "粥",
+            "r": "zhōu",
+            "g": "subject"
+          },
+          {
+            "t": "饶",
+            "r": "ráo",
+            "g": "predicate"
+          },
+          {
+            "t": "果",
+            "r": "guǒ",
+            "g": "object"
+          },
+          {
+            "t": "究",
+            "r": "jiū",
+            "g": "predicate"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "粥",
+              "r": "かゆ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "豊",
+              "r": "ゆた",
+              "g": "predicate"
+            },
+            {
+              "t": "かで",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "果",
+              "r": "か",
+              "g": "object"
+            },
+            {
+              "t": "実",
+              "r": "じつ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "究",
+              "r": "きわ",
+              "g": "predicate"
+            },
+            {
+              "t": "める。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
