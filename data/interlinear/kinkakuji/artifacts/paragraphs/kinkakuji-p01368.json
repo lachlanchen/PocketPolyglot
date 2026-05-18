@@ -1,0 +1,580 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p01368",
+  "source_text": "6月25日，朝鲜爆发了动乱。世界确实在没落，在毁灭，我这种预感果然应验了。我必须赶紧行动。",
+  "source_sha256": "35b4682a7398e1f0186eba82ad81067fca6b1445439ce630862646b4fb3f0a3e",
+  "source_normalized_sha256": "35b4682a7398e1f0186eba82ad81067fca6b1445439ce630862646b4fb3f0a3e",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 88,
+    "grammar_token_total": 88,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kinkakuji-chunk-1368",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第九章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "九",
+        "r": "jiǔ",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "九",
+        "r": "きゅう",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第九章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "九",
+        "r": "jiǔ",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "九",
+        "r": "きゅう",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p01368",
+    "source_text": "6月25日，朝鲜爆发了动乱。世界确实在没落，在毁灭，我这种预感果然应验了。我必须赶紧行动。",
+    "units": [
+      {
+        "source_text": "6月25日，朝鲜爆发了动乱。",
+        "zh": [
+          {
+            "t": "6",
+            "r": "",
+            "g": "adverbial"
+          },
+          {
+            "t": "月",
+            "r": "yuè",
+            "g": "adverbial"
+          },
+          {
+            "t": "25",
+            "r": "",
+            "g": "adverbial"
+          },
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "朝",
+            "r": "cháo",
+            "g": "adverbial"
+          },
+          {
+            "t": "鲜",
+            "r": "xiǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "爆",
+            "r": "bào",
+            "g": "predicate"
+          },
+          {
+            "t": "发",
+            "r": "fā",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "动",
+            "r": "dòng",
+            "g": "subject"
+          },
+          {
+            "t": "乱",
+            "r": "luàn",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "6",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "月",
+              "r": "がつ",
+              "g": "adverbial"
+            },
+            {
+              "t": "25",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "日",
+              "r": "にち",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "朝",
+              "r": "ちょう",
+              "g": "adverbial"
+            },
+            {
+              "t": "鮮",
+              "r": "せん",
+              "g": "adverbial"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "動",
+              "r": "どう",
+              "g": "subject"
+            },
+            {
+              "t": "乱",
+              "r": "らん",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "勃",
+              "r": "ぼっ",
+              "g": "predicate"
+            },
+            {
+              "t": "発",
+              "r": "ぱつ",
+              "g": "predicate"
+            },
+            {
+              "t": "した",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "世界确实在没落，在毁灭，我这种预感果然应验了。",
+        "zh": [
+          {
+            "t": "世",
+            "r": "shì",
+            "g": "subject"
+          },
+          {
+            "t": "界",
+            "r": "jiè",
+            "g": "subject"
+          },
+          {
+            "t": "确",
+            "r": "què",
+            "g": "adverbial"
+          },
+          {
+            "t": "实",
+            "r": "shí",
+            "g": "adverbial"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "没",
+            "r": "mò",
+            "g": "predicate"
+          },
+          {
+            "t": "落",
+            "r": "luò",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "毁",
+            "r": "huǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "灭",
+            "r": "miè",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "attributive"
+          },
+          {
+            "t": "种",
+            "r": "zhǒng",
+            "g": "attributive"
+          },
+          {
+            "t": "预",
+            "r": "yù",
+            "g": "subject"
+          },
+          {
+            "t": "感",
+            "r": "gǎn",
+            "g": "subject"
+          },
+          {
+            "t": "果",
+            "r": "guǒ",
+            "g": "adverbial"
+          },
+          {
+            "t": "然",
+            "r": "rán",
+            "g": "adverbial"
+          },
+          {
+            "t": "应",
+            "r": "yìng",
+            "g": "predicate"
+          },
+          {
+            "t": "验",
+            "r": "yàn",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "世",
+              "r": "せ",
+              "g": "subject"
+            },
+            {
+              "t": "界",
+              "r": "かい",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "確",
+              "r": "たし",
+              "g": "adverbial"
+            },
+            {
+              "t": "かに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "没",
+              "r": "ぼつ",
+              "g": "predicate"
+            },
+            {
+              "t": "落",
+              "r": "らく",
+              "g": "predicate"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "滅",
+              "r": "ほろ",
+              "g": "predicate"
+            },
+            {
+              "t": "びつつあり",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "attributive"
+            },
+            {
+              "t": "のこの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "予",
+              "r": "よ",
+              "g": "subject"
+            },
+            {
+              "t": "感",
+              "r": "かん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "やはり",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "的",
+              "r": "てき",
+              "g": "predicate"
+            },
+            {
+              "t": "中",
+              "r": "ちゅう",
+              "g": "predicate"
+            },
+            {
+              "t": "した",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我必须赶紧行动。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "必",
+            "r": "bì",
+            "g": "adverbial"
+          },
+          {
+            "t": "须",
+            "r": "xū",
+            "g": "adverbial"
+          },
+          {
+            "t": "赶",
+            "r": "gǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "紧",
+            "r": "jǐn",
+            "g": "adverbial"
+          },
+          {
+            "t": "行",
+            "r": "xíng",
+            "g": "predicate"
+          },
+          {
+            "t": "动",
+            "r": "dòng",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "すぐに",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "行",
+              "r": "こう",
+              "g": "predicate"
+            },
+            {
+              "t": "動",
+              "r": "どう",
+              "g": "predicate"
+            },
+            {
+              "t": "しなければならない",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

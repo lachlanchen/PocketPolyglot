@@ -1,0 +1,921 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p01400",
+  "source_text": "\"喏，你是个诚实的好学生。你在背地里是否干了什么放荡不羁的事，我不知道。但可怜的是，现在与过去不同，没有可供吃喝嫖赌的钱了吧。令尊和我，以及这里的住持，年轻时都干过相当恶劣的事哩。\"",
+  "source_sha256": "3ffeab08a1c4eda9d352796586ee417f602c16e09abe70433e04b886dcdca444",
+  "source_normalized_sha256": "3ffeab08a1c4eda9d352796586ee417f602c16e09abe70433e04b886dcdca444",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 154,
+    "grammar_token_total": 154,
+    "unit_count": 4
+  },
+  "source_chunk_id": "kinkakuji-chunk-1400",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第十章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第十章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p01400",
+    "source_text": "\"喏，你是个诚实的好学生。你在背地里是否干了什么放荡不羁的事，我不知道。但可怜的是，现在与过去不同，没有可供吃喝嫖赌的钱了吧。令尊和我，以及这里的住持，年轻时都干过相当恶劣的事哩。\"",
+    "units": [
+      {
+        "source_text": "\"喏，你是个诚实的好学生。",
+        "zh": [
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "喏",
+            "r": "nuò",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "function"
+          },
+          {
+            "t": "诚",
+            "r": "chéng",
+            "g": "attributive"
+          },
+          {
+            "t": "实",
+            "r": "shí",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "学",
+            "r": "xué",
+            "g": "object"
+          },
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ほら、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "君",
+              "r": "きみ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "誠",
+              "r": "せい",
+              "g": "attributive"
+            },
+            {
+              "t": "実",
+              "r": "じつ",
+              "g": "attributive"
+            },
+            {
+              "t": "なよい",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "学",
+              "r": "がく",
+              "g": "object"
+            },
+            {
+              "t": "生",
+              "r": "せい",
+              "g": "object"
+            },
+            {
+              "t": "だ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "你在背地里是否干了什么放荡不羁的事，我不知道。",
+        "zh": [
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "背",
+            "r": "bèi",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "adverbial"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "否",
+            "r": "fǒu",
+            "g": "function"
+          },
+          {
+            "t": "干",
+            "r": "gàn",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "什",
+            "r": "shén",
+            "g": "attributive"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "attributive"
+          },
+          {
+            "t": "放",
+            "r": "fàng",
+            "g": "attributive"
+          },
+          {
+            "t": "荡",
+            "r": "dàng",
+            "g": "attributive"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "attributive"
+          },
+          {
+            "t": "羁",
+            "r": "jī",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "predicate"
+          },
+          {
+            "t": "知",
+            "r": "zhī",
+            "g": "predicate"
+          },
+          {
+            "t": "道",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "君",
+              "r": "きみ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "陰",
+              "r": "かげ",
+              "g": "adverbial"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "何",
+              "r": "なに",
+              "g": "object"
+            },
+            {
+              "t": "か",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "放",
+              "r": "ほう",
+              "g": "attributive"
+            },
+            {
+              "t": "埒",
+              "r": "らつ",
+              "g": "attributive"
+            },
+            {
+              "t": "なことを",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "したかどうかは、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "には",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "分",
+              "r": "わ",
+              "g": "predicate"
+            },
+            {
+              "t": "からない。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "但可怜的是，现在与过去不同，没有可供吃喝嫖赌的钱了吧。",
+        "zh": [
+          {
+            "t": "但",
+            "r": "dàn",
+            "g": "function"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "predicate"
+          },
+          {
+            "t": "怜",
+            "r": "lián",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "现",
+            "r": "xiàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "与",
+            "r": "yǔ",
+            "g": "function"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "object"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "object"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "predicate"
+          },
+          {
+            "t": "同",
+            "r": "tóng",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "predicate"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "attributive"
+          },
+          {
+            "t": "供",
+            "r": "gōng",
+            "g": "attributive"
+          },
+          {
+            "t": "吃",
+            "r": "chī",
+            "g": "object"
+          },
+          {
+            "t": "喝",
+            "r": "hē",
+            "g": "object"
+          },
+          {
+            "t": "嫖",
+            "r": "piáo",
+            "g": "object"
+          },
+          {
+            "t": "赌",
+            "r": "dǔ",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "钱",
+            "r": "qián",
+            "g": "object"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "だが",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "哀",
+              "r": "あわ",
+              "g": "predicate"
+            },
+            {
+              "t": "れなことに、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "今",
+              "r": "いま",
+              "g": "adverbial"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "昔",
+              "r": "むかし",
+              "g": "object"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "違",
+              "r": "ちが",
+              "g": "predicate"
+            },
+            {
+              "t": "って、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "飲",
+              "r": "の",
+              "g": "object"
+            },
+            {
+              "t": "み",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "食",
+              "r": "く",
+              "g": "object"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "女",
+              "r": "おんな",
+              "g": "object"
+            },
+            {
+              "t": "遊",
+              "r": "あそ",
+              "g": "object"
+            },
+            {
+              "t": "びや",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "賭",
+              "r": "か",
+              "g": "object"
+            },
+            {
+              "t": "けに",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "使",
+              "r": "つか",
+              "g": "attributive"
+            },
+            {
+              "t": "う",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "金",
+              "r": "かね",
+              "g": "object"
+            },
+            {
+              "t": "はないだろう。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "令尊和我，以及这里的住持，年轻时都干过相当恶劣的事哩。\"",
+        "zh": [
+          {
+            "t": "令",
+            "r": "lìng",
+            "g": "subject"
+          },
+          {
+            "t": "尊",
+            "r": "zūn",
+            "g": "subject"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "subject"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "function"
+          },
+          {
+            "t": "及",
+            "r": "jí",
+            "g": "function"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "attributive"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "住",
+            "r": "zhù",
+            "g": "subject"
+          },
+          {
+            "t": "持",
+            "r": "chí",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "adverbial"
+          },
+          {
+            "t": "轻",
+            "r": "qīng",
+            "g": "adverbial"
+          },
+          {
+            "t": "时",
+            "r": "shí",
+            "g": "adverbial"
+          },
+          {
+            "t": "都",
+            "r": "dōu",
+            "g": "adverbial"
+          },
+          {
+            "t": "干",
+            "r": "gàn",
+            "g": "predicate"
+          },
+          {
+            "t": "过",
+            "r": "guo",
+            "g": "predicate"
+          },
+          {
+            "t": "相",
+            "r": "xiāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "当",
+            "r": "dāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "恶",
+            "r": "è",
+            "g": "attributive"
+          },
+          {
+            "t": "劣",
+            "r": "liè",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "哩",
+            "r": "li",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "君",
+              "r": "きみ",
+              "g": "subject"
+            },
+            {
+              "t": "のお",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "父",
+              "r": "とう",
+              "g": "subject"
+            },
+            {
+              "t": "上",
+              "r": "うえ",
+              "g": "subject"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "も、",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "それにここの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "住",
+              "r": "じゅう",
+              "g": "subject"
+            },
+            {
+              "t": "職",
+              "r": "しょく",
+              "g": "subject"
+            },
+            {
+              "t": "も、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "若",
+              "r": "わか",
+              "g": "adverbial"
+            },
+            {
+              "t": "いころはみな、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "相",
+              "r": "そう",
+              "g": "adverbial"
+            },
+            {
+              "t": "当",
+              "r": "とう",
+              "g": "adverbial"
+            },
+            {
+              "t": "ひどいことを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "したものだよ。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

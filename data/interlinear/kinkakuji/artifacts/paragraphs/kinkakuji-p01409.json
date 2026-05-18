@@ -1,0 +1,525 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p01409",
+  "source_text": "\"希望您把我看透叹。\"我终于脱口说出来了，\"我并不像您所想像那样，希望您把我的本愿看透暖。\"",
+  "source_sha256": "908134875e30fcce4d9b5050967fd10b3750dc38c4fa18a743800eca31a78d6f",
+  "source_normalized_sha256": "908134875e30fcce4d9b5050967fd10b3750dc38c4fa18a743800eca31a78d6f",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 77,
+    "grammar_token_total": 77,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kinkakuji-chunk-1409",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第十章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第十章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p01409",
+    "source_text": "\"希望您把我看透叹。\"我终于脱口说出来了，\"我并不像您所想像那样，希望您把我的本愿看透暖。\"",
+    "units": [
+      {
+        "source_text": "\"希望您把我看透叹。\"",
+        "zh": [
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "希",
+            "r": "xī",
+            "g": "predicate"
+          },
+          {
+            "t": "望",
+            "r": "wàng",
+            "g": "predicate"
+          },
+          {
+            "t": "您",
+            "r": "nín",
+            "g": "subject"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "object"
+          },
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "predicate"
+          },
+          {
+            "t": "透",
+            "r": "tòu",
+            "g": "complement"
+          },
+          {
+            "t": "叹",
+            "r": "tàn",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "どうか",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "抜",
+              "r": "ぬ",
+              "g": "complement"
+            },
+            {
+              "t": "いてください、と",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我终于脱口说出来了，",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "终",
+            "r": "zhōng",
+            "g": "adverbial"
+          },
+          {
+            "t": "于",
+            "r": "yú",
+            "g": "adverbial"
+          },
+          {
+            "t": "脱",
+            "r": "tuō",
+            "g": "predicate"
+          },
+          {
+            "t": "口",
+            "r": "kǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "出",
+            "r": "chū",
+            "g": "complement"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "ついに",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "口",
+              "r": "くち",
+              "g": "predicate"
+            },
+            {
+              "t": "をついて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "ってしまった、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "\"我并不像您所想像那样，希望您把我的本愿看透暖。\"",
+        "zh": [
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "并",
+            "r": "bìng",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "像",
+            "r": "xiàng",
+            "g": "predicate"
+          },
+          {
+            "t": "您",
+            "r": "nín",
+            "g": "subject"
+          },
+          {
+            "t": "所",
+            "r": "suǒ",
+            "g": "function"
+          },
+          {
+            "t": "想",
+            "r": "xiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "像",
+            "r": "xiàng",
+            "g": "predicate"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "object"
+          },
+          {
+            "t": "样",
+            "r": "yàng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "希",
+            "r": "xī",
+            "g": "predicate"
+          },
+          {
+            "t": "望",
+            "r": "wàng",
+            "g": "predicate"
+          },
+          {
+            "t": "您",
+            "r": "nín",
+            "g": "subject"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "object"
+          },
+          {
+            "t": "愿",
+            "r": "yuàn",
+            "g": "object"
+          },
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "predicate"
+          },
+          {
+            "t": "透",
+            "r": "tòu",
+            "g": "complement"
+          },
+          {
+            "t": "暖",
+            "r": "nuǎn",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "あなたが",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "想",
+              "r": "そう",
+              "g": "predicate"
+            },
+            {
+              "t": "像",
+              "r": "ぞう",
+              "g": "predicate"
+            },
+            {
+              "t": "するように、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "object"
+            },
+            {
+              "t": "願",
+              "r": "がん",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "抜",
+              "r": "ぬ",
+              "g": "complement"
+            },
+            {
+              "t": "いてほしいのではありません",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

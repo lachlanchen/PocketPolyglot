@@ -1,0 +1,455 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p01406",
+  "source_text": "\"恐怕不行吧。如果你干出与众不同的事，人们又会那样地看你。社会是健忘的啊。\"",
+  "source_sha256": "e47ef7504b59d9a3771fa5ea021183f6d702f36906b1eead98becad4243cee4f",
+  "source_normalized_sha256": "e47ef7504b59d9a3771fa5ea021183f6d702f36906b1eead98becad4243cee4f",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 63,
+    "grammar_token_total": 63,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kinkakuji-chunk-1406",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第十章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第十章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p01406",
+    "source_text": "\"恐怕不行吧。如果你干出与众不同的事，人们又会那样地看你。社会是健忘的啊。\"",
+    "units": [
+      {
+        "source_text": "\"恐怕不行吧。",
+        "zh": [
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "恐",
+            "r": "kǒng",
+            "g": "adverbial"
+          },
+          {
+            "t": "怕",
+            "r": "pà",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "predicate"
+          },
+          {
+            "t": "行",
+            "r": "xíng",
+            "g": "predicate"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「おそらく",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "無",
+              "r": "む",
+              "g": "predicate"
+            },
+            {
+              "t": "理",
+              "r": "り",
+              "g": "predicate"
+            },
+            {
+              "t": "だろう。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "如果你干出与众不同的事，人们又会那样地看你。",
+        "zh": [
+          {
+            "t": "如",
+            "r": "rú",
+            "g": "function"
+          },
+          {
+            "t": "果",
+            "r": "guǒ",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "干",
+            "r": "gàn",
+            "g": "predicate"
+          },
+          {
+            "t": "出",
+            "r": "chū",
+            "g": "complement"
+          },
+          {
+            "t": "与",
+            "r": "yǔ",
+            "g": "attributive"
+          },
+          {
+            "t": "众",
+            "r": "zhòng",
+            "g": "attributive"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "attributive"
+          },
+          {
+            "t": "同",
+            "r": "tóng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          },
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "adverbial"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "adverbial"
+          },
+          {
+            "t": "样",
+            "r": "yàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "predicate"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "もし",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "君",
+              "r": "きみ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "attributive"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "違",
+              "r": "ちが",
+              "g": "attributive"
+            },
+            {
+              "t": "うことをすれば、",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "subject"
+            },
+            {
+              "t": "々",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "はまたあんな",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "目",
+              "r": "め",
+              "g": "adverbial"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "君",
+              "r": "きみ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "る。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "社会是健忘的啊。\"",
+        "zh": [
+          {
+            "t": "社",
+            "r": "shè",
+            "g": "subject"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "健",
+            "r": "jiàn",
+            "g": "object"
+          },
+          {
+            "t": "忘",
+            "r": "wàng",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "\"",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "世",
+              "r": "せ",
+              "g": "subject"
+            },
+            {
+              "t": "間",
+              "r": "けん",
+              "g": "subject"
+            },
+            {
+              "t": "というものは",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "忘",
+              "r": "わす",
+              "g": "predicate"
+            },
+            {
+              "t": "れっぽいものなのだよ。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

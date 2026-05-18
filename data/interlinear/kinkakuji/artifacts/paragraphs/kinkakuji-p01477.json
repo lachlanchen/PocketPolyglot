@@ -1,0 +1,742 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kinkakuji",
+  "paragraph_id": "kinkakuji-p01477",
+  "source_text": "潮音洞已经弥漫烟雾。脚底下响起了火烧的爆裂声。我被烟呛得几乎窒息了。我一边不停地咳嗽，一边还在叩门。门扉还是不开。",
+  "source_sha256": "f314ef1b0900190ead9ba2dd073842355c769dccdcea7e6aa7adf4c6468cc8ff",
+  "source_normalized_sha256": "f314ef1b0900190ead9ba2dd073842355c769dccdcea7e6aa7adf4c6468cc8ff",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 116,
+    "grammar_token_total": 116,
+    "unit_count": 5
+  },
+  "source_chunk_id": "kinkakuji-chunk-1477",
+  "source_manifest_sha256": "50f0abaced13f36ef39ba96364bf99913bc84605951b872d273a8d2384952cac",
+  "section": {
+    "id": "第十章",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第十章-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kinkakuji-p01477",
+    "source_text": "潮音洞已经弥漫烟雾。脚底下响起了火烧的爆裂声。我被烟呛得几乎窒息了。我一边不停地咳嗽，一边还在叩门。门扉还是不开。",
+    "units": [
+      {
+        "source_text": "潮音洞已经弥漫烟雾。",
+        "zh": [
+          {
+            "t": "潮",
+            "r": "cháo",
+            "g": "subject"
+          },
+          {
+            "t": "音",
+            "r": "yīn",
+            "g": "subject"
+          },
+          {
+            "t": "洞",
+            "r": "dòng",
+            "g": "subject"
+          },
+          {
+            "t": "已",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "经",
+            "r": "jīng",
+            "g": "adverbial"
+          },
+          {
+            "t": "弥",
+            "r": "mí",
+            "g": "predicate"
+          },
+          {
+            "t": "漫",
+            "r": "màn",
+            "g": "predicate"
+          },
+          {
+            "t": "烟",
+            "r": "yān",
+            "g": "object"
+          },
+          {
+            "t": "雾",
+            "r": "wù",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "潮",
+              "r": "ちょう",
+              "g": "subject"
+            },
+            {
+              "t": "音",
+              "r": "おん",
+              "g": "subject"
+            },
+            {
+              "t": "洞",
+              "r": "どう",
+              "g": "subject"
+            },
+            {
+              "t": "には",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "すでに",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "煙",
+              "r": "えん",
+              "g": "object"
+            },
+            {
+              "t": "霧",
+              "r": "む",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "立",
+              "r": "た",
+              "g": "predicate"
+            },
+            {
+              "t": "ちこめていた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "脚底下响起了火烧的爆裂声。",
+        "zh": [
+          {
+            "t": "脚",
+            "r": "jiǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "底",
+            "r": "dǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "adverbial"
+          },
+          {
+            "t": "响",
+            "r": "xiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "火",
+            "r": "huǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "烧",
+            "r": "shāo",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "爆",
+            "r": "bào",
+            "g": "subject"
+          },
+          {
+            "t": "裂",
+            "r": "liè",
+            "g": "subject"
+          },
+          {
+            "t": "声",
+            "r": "shēng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "足",
+              "r": "あし",
+              "g": "adverbial"
+            },
+            {
+              "t": "下",
+              "r": "もと",
+              "g": "adverbial"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "火",
+              "r": "ひ",
+              "g": "attributive"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "焼",
+              "r": "や",
+              "g": "attributive"
+            },
+            {
+              "t": "かれる",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "爆",
+              "r": "ばく",
+              "g": "subject"
+            },
+            {
+              "t": "裂",
+              "r": "れつ",
+              "g": "subject"
+            },
+            {
+              "t": "音",
+              "r": "おん",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "響",
+              "r": "ひび",
+              "g": "predicate"
+            },
+            {
+              "t": "き",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "出",
+              "r": "だ",
+              "g": "predicate"
+            },
+            {
+              "t": "した",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我被烟呛得几乎窒息了。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "被",
+            "r": "bèi",
+            "g": "function"
+          },
+          {
+            "t": "烟",
+            "r": "yān",
+            "g": "adverbial"
+          },
+          {
+            "t": "呛",
+            "r": "qiàng",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "几",
+            "r": "jī",
+            "g": "adverbial"
+          },
+          {
+            "t": "乎",
+            "r": "hū",
+            "g": "adverbial"
+          },
+          {
+            "t": "窒",
+            "r": "zhì",
+            "g": "complement"
+          },
+          {
+            "t": "息",
+            "r": "xī",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "煙",
+              "r": "けむり",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "むせて",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "ほとんど",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "窒",
+              "r": "ちっ",
+              "g": "complement"
+            },
+            {
+              "t": "息",
+              "r": "そく",
+              "g": "complement"
+            },
+            {
+              "t": "しそうになった",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我一边不停地咳嗽，一边还在叩门。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "一",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "边",
+            "r": "biān",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "停",
+            "r": "tíng",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "咳",
+            "r": "ké",
+            "g": "predicate"
+          },
+          {
+            "t": "嗽",
+            "r": "sou",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "一",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "边",
+            "r": "biān",
+            "g": "adverbial"
+          },
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "adverbial"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "叩",
+            "r": "kòu",
+            "g": "predicate"
+          },
+          {
+            "t": "门",
+            "r": "mén",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "絶",
+              "r": "た",
+              "g": "adverbial"
+            },
+            {
+              "t": "えず",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "咳",
+              "r": "せき",
+              "g": "predicate"
+            },
+            {
+              "t": "込",
+              "r": "こ",
+              "g": "predicate"
+            },
+            {
+              "t": "みながら",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "なお",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "扉",
+              "r": "とびら",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "叩",
+              "r": "たた",
+              "g": "predicate"
+            },
+            {
+              "t": "き",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "続",
+              "r": "つづ",
+              "g": "predicate"
+            },
+            {
+              "t": "けていた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "门扉还是不开。",
+        "zh": [
+          {
+            "t": "门",
+            "r": "mén",
+            "g": "subject"
+          },
+          {
+            "t": "扉",
+            "r": "fēi",
+            "g": "subject"
+          },
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "开",
+            "r": "kāi",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "扉",
+              "r": "とびら",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "それでもまだ",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "開",
+              "r": "ひら",
+              "g": "predicate"
+            },
+            {
+              "t": "かなかった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
