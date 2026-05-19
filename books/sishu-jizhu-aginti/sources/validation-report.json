@@ -1,0 +1,57 @@
+{
+  "generated_at": "2026-05-19T11:24:00+08:00",
+  "book_id": "sishu-jizhu-aginti",
+  "chapter_headings_main_zh": 33,
+  "chapter_headings_reference_zh": 0,
+  "chapter_headings_reference_ja": 0,
+  "main_text_chars": 260473,
+  "reference_zh_text_chars": 0,
+  "reference_ja_text_chars": 0,
+  "boilerplate_blocks_removed": 2,
+  "chapter_headings_main": [
+    "大學章句序", "大學章句", "中庸章句序", "中庸章句",
+    "論語序說", "讀論語孟子法",
+    "論語集注卷一", "論語集注卷二", "論語集注卷三", "論語集注卷四",
+    "論語集注卷五", "論語集注卷六", "論語集注卷七", "論語集注卷八",
+    "論語集注卷九", "論語集注卷十",
+    "孟子序說",
+    "孟子集注卷一", "孟子集注卷二", "孟子集注卷三", "孟子集注卷四",
+    "孟子集注卷五", "孟子集注卷六", "孟子集注卷七", "孟子集注卷八",
+    "孟子集注卷九", "孟子集注卷十", "孟子集注卷十一", "孟子集注卷十二",
+    "孟子集注卷十三", "孟子集注卷十四",
+    "四書章句附考序", "四書章句集註定本辨"
+  ],
+  "extraction_summary": {
+    "main_zh": {
+      "status": "complete",
+      "method": "html",
+      "source": "sources/sishu/四書章句集註（維基文庫） - 朱熹.json",
+      "markdown": "books/sishu-jizhu-aginti/sources/markdown/zh_main.md",
+      "sha256": "0fbf183a2100b4490629e876fc249ad7780c683300d36e8f48676cd28d4f3ae4",
+      "notes": "Extracted via BeautifulSoup from Wikisource HTML. 2 PD boilerplate blocks removed. 33 chapters, 260K chars."
+    },
+    "reference_zh": {
+      "status": "requires_ocr",
+      "source": "sources/sishu/四書章句集注 sishu zhangju jizhu.pdf",
+      "notes": "399-page scanned image PDF. No text layer. Requires Tesseract OCR with chi_tra."
+    },
+    "reference_ja": {
+      "status": "requires_ocr",
+      "source": "sources/sishu/四書 仮名附（NDL公開） - 朱熹 集注・後藤嘉幸 点.json",
+      "notes": "171-page IIIF scanned PDF (4 manifests). Japanese vertical text with kana. Requires specialized OCR."
+    }
+  },
+  "checks": {
+    "active_plan_untouched": true,
+    "boilerplate_removed": true,
+    "sha256_stable": true,
+    "chapter_count_33": true,
+    "chars_above_10k": true
+  },
+  "notes": [
+    "main_zh is clean and ready for chunking. SHA256 stable.",
+    "reference_zh requires OCR before it can be used as a chapter-level reference.",
+    "reference_ja requires OCR before it can provide kana readings for Japanese comment generation.",
+    "Active book-plan.json was NOT modified. Multisource plan is at book-plan.multisource.json."
+  ]
+}

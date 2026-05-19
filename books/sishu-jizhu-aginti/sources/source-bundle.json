@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "book_id": "sishu-jizhu-aginti",
+  "generated_at": "2026-05-19T03:24:23.877383+00:00",
+  "sources": {
+    "main_zh": {
+      "role": "main_zh",
+      "language": "zh",
+      "title": "四書章句集註",
+      "author": "朱熹",
+      "source_path": "sources/sishu/四書章句集註（維基文庫） - 朱熹.json",
+      "source_sha256": "d2e2ef63ae6321fcfd962bc286479e02d31fef55bca7afaa2c17831da07ea6cb",
+      "markdown_path": "books/sishu-jizhu-aginti/sources/markdown/zh_main.md",
+      "markdown_sha256": "0fbf183a2100b4490629e876fc249ad7780c683300d36e8f48676cd28d4f3ae4",
+      "extraction_method": "html",
+      "extraction_status": "complete",
+      "chapter_count": 33,
+      "text_chars": 260473,
+      "notes": "Markdown already exists (use --force to regenerate)."
+    },
+    "reference_zh": {
+      "role": "reference_zh",
+      "language": "zh",
+      "title": "四書章句集註",
+      "author": "朱熹",
+      "source_path": "sources/sishu/四書章句集注 sishu zhangju jizhu.pdf",
+      "source_sha256": "66ae4b27d352cdf98b5d86d35ef66abbc04fb0775b9526b1b7c586eb309d1546",
+      "markdown_path": "",
+      "markdown_sha256": "",
+      "extraction_method": "ocr",
+      "extraction_status": "requires_ocr",
+      "chapter_count": 0,
+      "text_chars": 0,
+      "notes": "Scanned image PDF (399 pages). No text layer. Requires OCR.",
+      "page_count": 399
+    },
+    "reference_ja": {
+      "role": "reference_ja",
+      "language": "ja",
+      "title": "四書章句集注",
+      "author": "朱熹 集注・後藤嘉幸 点",
+      "source_path": "sources/sishu/四書 仮名附（NDL公開） - 朱熹 集注・後藤嘉幸 点.json",
+      "source_sha256": "264dec816bf7dc1ff552b3cf4c20827d07bda4496b6671e8ead3ba48b4dc7d15",
+      "markdown_path": "",
+      "markdown_sha256": "",
+      "extraction_method": "ocr",
+      "extraction_status": "requires_ocr",
+      "chapter_count": 0,
+      "text_chars": 0,
+      "notes": "IIIF scanned PDF (171 pages). No text layer. Requires OCR.",
+      "page_count": 171
+    }
+  },
+  "validation": {
+    "chapter_headings_main_zh": 33,
+    "chapter_headings_reference_zh": 0,
+    "chapter_headings_reference_ja": 0,
+    "main_text_chars": 260473,
+    "reference_zh_text_chars": 0,
+    "reference_ja_text_chars": 0,
+    "notes": [
+      "main_zh: complete - Markdown already exists (use --force to regenerate).",
+      "reference_zh: requires_ocr - Scanned image PDF (399 pages). No text layer. Requires OCR.",
+      "reference_ja: requires_ocr - IIIF scanned PDF (171 pages). No text layer. Requires OCR."
+    ]
+  }
+}
