@@ -2,10 +2,10 @@
   "book_id": "sishu-jizhu-aginti",
   "markdown": "books/sishu-jizhu-aginti/markdown/zh.md",
   "source_sha256": "902fd7de6fd94b7b6470c3b24ad1e74c7d4ed1530715997cf2895f57004e6622",
-  "paragraph_count": 925,
+  "paragraph_count": 921,
   "chunk_mode": "paragraph",
   "max_chars": null,
-  "chunk_count": 2484,
+  "chunk_count": 2480,
   "chunks_jsonl": "books/sishu-jizhu-aginti/work/bilingual/chunks/chunks.jsonl",
   "book_title_zh": "四書章句集註",
   "book_title_zh_reading": "sì shū zhāng jù jí zhù",
@@ -792,20 +792,6 @@
       "story_id": "四書章句集註-大學章句-intro",
       "paragraph_ids": [
         "sishu-jizhu-aginti-p00032"
-      ]
-    },
-    {
-      "chunk_id": "sishu-jizhu-aginti-chunk-0033",
-      "story_id": "四書章句集註-大學章句-intro",
-      "paragraph_ids": [
-        "sishu-jizhu-aginti-p00033"
-      ]
-    },
-    {
-      "chunk_id": "sishu-jizhu-aginti-chunk-0034",
-      "story_id": "四書章句集註-大學章句-intro",
-      "paragraph_ids": [
-        "sishu-jizhu-aginti-p00034"
       ]
     },
     {
@@ -2223,20 +2209,6 @@
       "split_from_chunk_id": "sishu-jizhu-aginti-chunk-0073",
       "split_part": 9,
       "split_part_count": 9
-    },
-    {
-      "chunk_id": "sishu-jizhu-aginti-chunk-0074",
-      "story_id": "四書章句集註-中庸章句-intro",
-      "paragraph_ids": [
-        "sishu-jizhu-aginti-p00074"
-      ]
-    },
-    {
-      "chunk_id": "sishu-jizhu-aginti-chunk-0075",
-      "story_id": "四書章句集註-中庸章句-intro",
-      "paragraph_ids": [
-        "sishu-jizhu-aginti-p00075"
-      ]
     },
     {
       "chunk_id": "sishu-jizhu-aginti-chunk-0076",
@@ -23770,5 +23742,31 @@
   "split_backups": {
     "chunks_jsonl": "books/sishu-jizhu-aginti/work/bilingual/chunks/chunks.jsonl.before-split-20260519T004808Z",
     "manifest": "books/sishu-jizhu-aginti/work/bilingual/chunks/manifest.json.before-split-20260519T004808Z"
-  }
+  },
+  "pruned_chunks": [
+    {
+      "chunk_id": "sishu-jizhu-aginti-chunk-0033",
+      "text": "此作品在全世界都属于 公有领域 ，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。",
+      "pruned_at": "2026-05-19T03:35:50.930360+00:00",
+      "reason": "matched prune pattern"
+    },
+    {
+      "chunk_id": "sishu-jizhu-aginti-chunk-0034",
+      "text": "Public domain Public domain false false",
+      "pruned_at": "2026-05-19T03:35:50.930376+00:00",
+      "reason": "matched prune pattern"
+    },
+    {
+      "chunk_id": "sishu-jizhu-aginti-chunk-0074",
+      "text": "此作品在全世界都属于 公有领域 ，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。",
+      "pruned_at": "2026-05-19T03:35:50.930380+00:00",
+      "reason": "matched prune pattern"
+    },
+    {
+      "chunk_id": "sishu-jizhu-aginti-chunk-0075",
+      "text": "Public domain Public domain false false",
+      "pruned_at": "2026-05-19T03:35:50.930383+00:00",
+      "reason": "matched prune pattern"
+    }
+  ]
 }
