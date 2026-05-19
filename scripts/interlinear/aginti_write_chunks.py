@@ -153,6 +153,8 @@ def validate_zh_tokens(tokens: Any, where: str) -> list[str]:
             errs.append(f"{where}[{i}]: Chinese Han token must be exactly one character, got {t!r}")
         if is_single_han(t) and not r:
             errs.append(f"{where}[{i}]: Chinese Han token needs pinyin in 'r'")
+        if is_single_han(t) and not role:
+            errs.append(f"{where}[{i}]: Chinese Han token needs grammar role in 'g'")
         if r and not is_single_han(t):
             errs.append(f"{where}[{i}]: pinyin may only be on one-Han-character tokens")
     return errs
@@ -179,6 +181,8 @@ def validate_ja_line(tokens: Any, where: str) -> list[str]:
             errs.append(f"{where}[{i}]: Japanese kanji token must be exactly one kanji, got {t!r}")
         if is_single_han(t) and not r:
             errs.append(f"{where}[{i}]: Japanese kanji token needs furigana in 'r'")
+        if is_single_han(t) and not role:
+            errs.append(f"{where}[{i}]: Japanese kanji token needs grammar role in 'g'")
         if r and not is_single_han(t):
             errs.append(f"{where}[{i}]: furigana may only be on one-kanji tokens")
     return errs
@@ -344,6 +348,18 @@ def promote_renderer_chunk(renderer_chunk: dict[str, Any], data_path: Path, revi
     shutil.copy2(data_path, reviewed_path)
 
 
+def quarantine_invalid_reviewed(path: Path) -> None:
+    if not path.exists():
+        return
+    quarantine_dir = path.parent.parent / "stale-reviewed"
+    quarantine_dir.mkdir(parents=True, exist_ok=True)
+    target = quarantine_dir / path.name
+    if target.exists():
+        stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+        target = quarantine_dir / f"{path.stem}.{stamp}{path.suffix}"
+    shutil.move(str(path), str(target))
+
+
 def build_status(
     book_id: str,
     chunks: list[dict[str, Any]],
@@ -354,7 +370,13 @@ def build_status(
     valid_count = 0
     for index, chunk in enumerate(chunks, start=1):
         path = reviewed_dir / f"{chunk['chunk_id']}.json"
+        is_valid = False
         if path.exists():
+            try:
+                is_valid = not validate_renderer_chunk(load_json(path), chunk)
+            except (json.JSONDecodeError, OSError):
+                is_valid = False
+        if is_valid:
             valid_count += 1
         elif first_missing is None:
             first_missing = index
@@ -449,6 +471,7 @@ def promote_existing_outputs(
             log(f"  {chunk_id}: renderer wrapper invalid ({len(renderer_errs)} errors)")
             for err in renderer_errs[:8]:
                 log(f"    - {err}")
+            quarantine_invalid_reviewed(reviewed_path)
             failed_ids.add(chunk_id)
             continue
         promote_renderer_chunk(renderer, out_path, reviewed_path)
@@ -504,9 +527,14 @@ CRITICAL RULES - follow these exactly:
      furigana. Use NATURAL MIXED KANJI/KANA - do NOT write kana-only sentences.
      Use proper Japanese scholarly vocabulary with 漢字.
 
-4. **Grammar roles (g)**: Only on zh tokens. Use one of:
+4. **Grammar roles (g)**:
+   - Every Chinese Hanzi token in `zh` MUST have `g`.
+   - Every Japanese kanji token in both `ja` lines MUST have `g`.
+   - Kana particles/auxiliaries may use `g: "function"` when useful, otherwise may omit `g`.
+   - Use the same broad role color family across Chinese and Japanese for corresponding
+     semantic components, even when the word order differs.
+   - Use one of:
    subject, predicate, object, attributive, adverbial, complement, topic, function.
-   Not every token needs a role. Only assign when clear.
 
 5. **Kana-only prohibition**: Neither ja line may be entirely kana when it contains
    semantic content. Use kanji for content words. Only particles, auxiliaries,
@@ -515,7 +543,10 @@ CRITICAL RULES - follow these exactly:
 6. **Furigana**: Every single-kanji token in ja lines needs `r` (furigana in hiragana).
    Kana tokens have `r: ""`.
 
-7. **No placeholders**: Every ja line must be real Japanese content.
+7. **Color-ready output**: The PDF color renderer depends on `g`. Do not leave
+   content kanji/hanzi untagged. If uncertain, choose the closest broad role.
+
+8. **No placeholders**: Every ja line must be real Japanese content.
    Do not output "注。" or "。" as the only content.
 
 Return ONLY valid JSON, no other text. Do not wrap in markdown code fences."""
@@ -748,8 +779,10 @@ def main() -> int:
                     continue
                 else:
                     log(f"  {chunk_id}: reviewed file has {len(errs)} validation errors, redoing")
+                    quarantine_invalid_reviewed(reviewed_path)
             except (json.JSONDecodeError, OSError) as e:
                 log(f"  {chunk_id}: reviewed file corrupt ({e}), redoing")
+                quarantine_invalid_reviewed(reviewed_path)
         elif out_path.exists():
             try:
                 existing = load_json(out_path)
