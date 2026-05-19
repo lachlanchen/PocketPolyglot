@@ -235,9 +235,17 @@ def detect_quality_issues(data: dict[str, Any], source_chunk: dict[str, Any]) ->
             if source_text and len(compact) > max(42, len(normalize(source_text)) * 4):
                 issues.append(f"{where}.ja[{line_index}]: Japanese line is too long for pocket interlinear layout")
         if compact_lines[0] and compact_lines[0] == compact_lines[1]:
-            issues.append(f"{where}: gloss and explanatory_comment are identical")
+            issues.append(
+                f"{where}: gloss and explanatory_comment are identical "
+                f"({clipped(compact_lines[0], 100)!r}); keep ja[0] as the gloss and rewrite ja[1] "
+                "as a concise explanatory note about meaning or grammar"
+            )
         elif compact_lines[0] and compact_lines[1] and compact_lines[0] in compact_lines[1] and len(compact_lines[0]) >= 8:
-            issues.append(f"{where}: explanatory_comment mostly duplicates the gloss")
+            issues.append(
+                f"{where}: explanatory_comment mostly duplicates the gloss "
+                f"(gloss={clipped(compact_lines[0], 80)!r}, comment={clipped(compact_lines[1], 100)!r}); "
+                "rewrite ja[1] as a concise explanatory note"
+            )
 
         for lang in ("zh", "ja"):
             counts = role_counts(unit_tokens(unit, lang))
