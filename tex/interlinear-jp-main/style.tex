@@ -165,9 +165,7 @@
 \newcommand{\JPCommentText}[1]{{\jpfont\addfontfeatures{FakeSlant=0.08}\fontsize{7.1pt}{10.5pt}\selectfont\color{BookNote}#1}}
 \newcommand{\ZHCommentText}[1]{{\zhfont\fontsize{6.95pt}{10.4pt}\selectfont\color{BookNote}#1}}
 \newcommand{\TinyLabel}[1]{{\sffamily\bfseries\fontsize{5.8pt}{5.8pt}\selectfont\textcolor{BookRed}{#1}}}
-\newcommand{\JpCommentWave}{%
-  {\color{BookRule}\dotfill}%
-}
+\newcommand{\JpCommentWave}{}
 
 \NewDocumentCommand{\JpMainPdfMeta}{m m m}{%
   \hypersetup{pdftitle={#1 / #2},pdfauthor={#3}}%
@@ -241,7 +239,6 @@
     \vspace{-0.22em}
     \noindent\hspace*{0.35em}{\TinyLabel{注}}\hspace{0.3em}%
     \begin{minipage}{0.84\linewidth}
-      \JpCommentWave\par\vspace{-0.34em}
       \rightskip=0pt plus 1.4em
       \JPCommentText{#2}%
     \end{minipage}\par

@@ -161,9 +161,7 @@
 \newcommand{\JAGloss}[1]{{\jpfont\fontsize{7.25pt}{11.3pt}\selectfont\color{BookNote}#1}}
 \newcommand{\JAExplain}[1]{{\jpfont\addfontfeatures{FakeSlant=0.08}\fontsize{6.45pt}{9.2pt}\selectfont\color{BookNote}#1}}
 \newcommand{\TinyLabel}[1]{{\sffamily\bfseries\fontsize{5.8pt}{5.8pt}\selectfont\textcolor{BookRed}{#1}}}
-\newcommand{\CommentWave}{%
-  {\color{BookRule}\dotfill}%
-}
+\newcommand{\CommentWave}{}
 
 \NewDocumentCommand{\InterPdfMeta}{m m}{%
   \hypersetup{pdftitle={#2 / #1}}%
@@ -224,7 +222,6 @@
     \if\relax\detokenize{#3}\relax\else
       \par\vspace{-0.18em}
       {\TinyLabel{注}}\hspace{0.25em}\begin{minipage}[t]{0.88\linewidth}
-        \CommentWave\par\vspace{-0.36em}
         \JAExplain{#3}%
       \end{minipage}%
     \fi
