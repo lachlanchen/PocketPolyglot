@@ -623,7 +623,7 @@ def run_failed_repair_passes(
     are already listed in status.json as failed. This keeps the forward pass
     simple and makes repair resumable without restarting the whole book.
     """
-    if args.failed_only or args.dry_run or args.max_chunks or args.retry_failed_passes <= 0:
+    if args.failed_only or args.dry_run or args.retry_failed_passes <= 0:
         return failed_ids
 
     current_failed = set(failed_ids)
