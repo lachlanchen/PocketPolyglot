@@ -610,6 +610,92 @@ def compile_previews(book_id: str, log) -> bool:
     return True
 
 
+def run_failed_repair_passes(
+    args: argparse.Namespace,
+    book_id: str,
+    status_path: Path,
+    failed_ids: set[str],
+    log,
+) -> set[str]:
+    """Run bounded failed-only passes in a child process.
+
+    The child process uses the same writer code but only touches chunks that
+    are already listed in status.json as failed. This keeps the forward pass
+    simple and makes repair resumable without restarting the whole book.
+    """
+    if args.failed_only or args.dry_run or args.max_chunks or args.retry_failed_passes <= 0:
+        return failed_ids
+
+    current_failed = set(failed_ids)
+    for pass_number in range(1, args.retry_failed_passes + 1):
+        if not current_failed:
+            break
+        before = set(current_failed)
+        cmd = [
+            sys.executable,
+            str(Path(__file__).resolve()),
+            "--book",
+            book_id,
+            "--failed-only",
+            "--retry-failed-passes",
+            "0",
+            "--delay",
+            str(args.delay),
+            "--api-timeout",
+            str(args.api_timeout),
+            "--api-retries",
+            str(args.api_retries),
+            "--invalid-retries",
+            str(args.invalid_retries),
+            "--max-tokens",
+            str(args.max_tokens),
+            "--compile-every",
+            "0",
+        ]
+        if args.reviewed_dir:
+            cmd.extend(["--reviewed-dir", args.reviewed_dir])
+
+        log(
+            f"Starting failed repair pass {pass_number}/{args.retry_failed_passes}: "
+            f"{len(before)} chunks"
+        )
+        result = subprocess.run(
+            cmd,
+            cwd=ROOT,
+            env=os.environ.copy(),
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+        )
+        repair_log = (
+            ROOT / "data" / "interlinear" / book_id
+            / f"failed-repair-pass-{pass_number}.log"
+        )
+        repair_log.parent.mkdir(parents=True, exist_ok=True)
+        repair_log.write_text(result.stdout, encoding="utf-8")
+
+        try:
+            current_failed = set(load_status(status_path).get("failed_ids", []))
+        except (json.JSONDecodeError, OSError):
+            current_failed = before
+
+        repaired = before - current_failed
+        new_failures = current_failed - before
+        log(
+            f"Failed repair pass {pass_number} rc={result.returncode}: "
+            f"repaired={len(repaired)} remaining={len(current_failed)} "
+            f"new_failures={len(new_failures)}; see {repair_log}"
+        )
+
+        if result.returncode != 0:
+            break
+        if current_failed == before:
+            log("Failed repair pass made no progress; leaving remaining chunks for later")
+            break
+
+    return current_failed
+
+
 def promote_existing_outputs(
     chunks: list[dict[str, Any]],
     chunk_out_dir: Path,
@@ -874,6 +960,10 @@ def main() -> int:
                         help="Retry provider calls this many times before marking the chunk failed")
     parser.add_argument("--invalid-retries", type=int, default=env_int("AGINTI_INVALID_RETRIES", 1),
                         help="Retry malformed or validation-failing model outputs this many times")
+    parser.add_argument("--failed-only", action="store_true",
+                        help="Process only chunks currently listed in status.json as failed")
+    parser.add_argument("--retry-failed-passes", type=int, default=env_int("AGINTI_RETRY_FAILED_PASSES", 1),
+                        help="After a full forward run, retry failed chunks this many times")
     parser.add_argument("--max-tokens", type=int, default=env_int("AGINTI_MAX_TOKENS", 16384),
                         help="Max completion tokens per provider call")
     parser.add_argument("--reviewed-dir", default="",
@@ -975,8 +1065,16 @@ def main() -> int:
     processed = 0
     newly_promoted = 0
     start_idx = max(0, args.start_chunk - 1)
+    if args.failed_only:
+        selected_indices = [
+            index for index, chunk in enumerate(chunks)
+            if index >= start_idx and chunk["chunk_id"] in failed_ids
+        ]
+        log(f"Failed-only mode: processing {len(selected_indices)} failed chunks")
+    else:
+        selected_indices = range(start_idx, total)
 
-    for idx in range(start_idx, total):
+    for idx in selected_indices:
         if args.max_chunks and processed >= args.max_chunks:
             log(f"Reached --max-chunks={args.max_chunks}, stopping")
             break
@@ -1189,6 +1287,8 @@ def main() -> int:
         time.sleep(args.delay)
 
     # Final status update
+    status = save_computed_status(status_path, book_id, chunks, reviewed_dir, failed_ids)
+    failed_ids = run_failed_repair_passes(args, book_id, status_path, failed_ids, log)
     status = save_computed_status(status_path, book_id, chunks, reviewed_dir, failed_ids)
     if args.compile_at_end:
         compile_previews(book_id, log)
