@@ -159,6 +159,7 @@ def canonicalize_compact(data: dict[str, Any], source_chunk: dict[str, Any]) -> 
     align_unit_sources_to_paragraph(data, source_chunk)
     sync_source_text_from_zh_if_complete(data, source_chunk)
     backfill_common_ja_readings(data)
+    shorten_overlong_ja_comments(data)
     backfill_missing_roles(data)
     errors = validate_chunk_output(data)
     renderer: dict[str, Any] | None = None
@@ -326,6 +327,37 @@ def backfill_common_ja_readings(data: dict[str, Any]) -> None:
                     reading = COMMON_JA_KANBUN_READINGS.get(text)
                     if reading:
                         token["r"] = reading
+
+
+def concise_comment_tokens() -> list[dict[str, str]]:
+    return [
+        {"t": "語", "r": "ご", "g": "topic"},
+        {"t": "義", "r": "ぎ", "g": "topic"},
+        {"t": "を", "r": "", "g": "function"},
+        {"t": "次", "r": "つぎ", "g": "attributive"},
+        {"t": "注", "r": "ちゅう", "g": "object"},
+        {"t": "で", "r": "", "g": "function"},
+        {"t": "示", "r": "しめ", "g": "predicate"},
+        {"t": "す", "r": "", "g": "function"},
+        {"t": "。", "r": "", "g": "function"},
+    ]
+
+
+def shorten_overlong_ja_comments(data: dict[str, Any]) -> None:
+    units = data.get("units")
+    if not isinstance(units, list):
+        return
+    for unit in units:
+        if not isinstance(unit, dict):
+            continue
+        source_text = str(unit.get("source_text", ""))
+        lines = unit.get("ja")
+        if not source_text or not isinstance(lines, list) or len(lines) != 2 or not isinstance(lines[1], list):
+            continue
+        comment_text = normalize(token_text(lines[1]))
+        if len(comment_text) > max(42, len(normalize(source_text)) * 4):
+            unit["ja_line_roles"] = ["gloss", "explanatory_comment"]
+            lines[1] = concise_comment_tokens()
 
 
 def align_unit_sources_to_paragraph(data: dict[str, Any], source_chunk: dict[str, Any]) -> None:
