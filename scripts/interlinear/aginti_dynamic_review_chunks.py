@@ -52,7 +52,17 @@ CONTENT_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaffぁ-ゟ゠-ヿ
 PUNCT_ONLY_RE = re.compile(r"^[\s，。！？、；：,.!?;:「」『』（）()《》〈〉“”‘’…—-]+$")
 CLOSING_PUNCT = set("〉」』》）)]，。；：、！？,.!?;:")
 OPENING_PUNCT = set("〈「『《（([")
-MAX_DETERMINISTIC_SOURCE_EDITS = 3
+MAX_DETERMINISTIC_SOURCE_EDITS = 8
+COMMON_JA_KANBUN_READINGS = {
+    "上": "じょう",
+    "也": "なり",
+    "之": "これ",
+    "人": "ひと",
+    "以": "い",
+    "日": "にち",
+    "者": "もの",
+    "而": "しこう",
+}
 def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
 
@@ -146,6 +156,7 @@ def canonicalize_compact(data: dict[str, Any], source_chunk: dict[str, Any]) -> 
     repair_zh_tokens_to_paragraph(data, source_chunk)
     align_unit_sources_to_paragraph(data, source_chunk)
     sync_source_text_from_zh_if_complete(data, source_chunk)
+    backfill_common_ja_readings(data)
     backfill_missing_roles(data)
     errors = validate_chunk_output(data)
     renderer: dict[str, Any] | None = None
@@ -290,6 +301,29 @@ def sync_source_text_from_zh_if_complete(data: dict[str, Any], source_chunk: dic
         for unit in units:
             if isinstance(unit, dict):
                 unit["source_text"] = token_text(unit.get("zh", []))
+
+
+def backfill_common_ja_readings(data: dict[str, Any]) -> None:
+    units = data.get("units")
+    if not isinstance(units, list):
+        return
+    for unit in units:
+        if not isinstance(unit, dict):
+            continue
+        lines = unit.get("ja")
+        if not isinstance(lines, list):
+            continue
+        for line in lines:
+            if not isinstance(line, list):
+                continue
+            for token in line:
+                if not isinstance(token, dict):
+                    continue
+                text = str(token.get("t", ""))
+                if is_single_han(text) and not str(token.get("r", "")):
+                    reading = COMMON_JA_KANBUN_READINGS.get(text)
+                    if reading:
+                        token["r"] = reading
 
 
 def align_unit_sources_to_paragraph(data: dict[str, Any], source_chunk: dict[str, Any]) -> None:
