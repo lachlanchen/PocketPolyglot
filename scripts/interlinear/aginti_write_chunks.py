@@ -45,6 +45,18 @@ try:
 except ImportError:
     sys.exit("Install openai: pip install openai")
 
+try:
+    import pykakasi  # type: ignore[import-untyped]
+    _KAKASI = pykakasi.kakasi()
+except ImportError:  # pragma: no cover - optional fallback dependency
+    _KAKASI = None
+
+try:
+    from pypinyin import Style, pinyin  # type: ignore[import-untyped]
+except ImportError:  # pragma: no cover - optional fallback dependency
+    Style = None  # type: ignore[assignment]
+    pinyin = None  # type: ignore[assignment]
+
 # --- Paths -----------------------------------------------------------------
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -102,6 +114,44 @@ JA_PARTICLE_ROLE = {
     "の": "attributive",
 }
 
+COMMON_JA_COMPOUND_READINGS = {
+    "孔子": ["こう", "し"],
+    "朱子": ["しゅ", "し"],
+    "程子": ["てい", "し"],
+    "孟子": ["もう", "し"],
+    "曾子": ["そう", "し"],
+    "顔子": ["がん", "し"],
+    "夫子": ["ふう", "し"],
+    "子貢": ["し", "こう"],
+    "子路": ["し", "ろ"],
+    "子游": ["し", "ゆう"],
+    "子夏": ["し", "か"],
+    "子張": ["し", "ちょう"],
+    "君子": ["くん", "し"],
+    "小人": ["しょう", "じん"],
+    "大人": ["たい", "じん"],
+    "仁者": ["じん", "しゃ"],
+    "知者": ["ち", "しゃ"],
+    "胡氏": ["こ", "し"],
+    "范氏": ["はん", "し"],
+    "尹氏": ["いん", "し"],
+    "程氏": ["てい", "し"],
+    "朱氏": ["しゅ", "し"],
+    "哀公": ["あい", "こう"],
+    "定公": ["てい", "こう"],
+    "四書": ["し", "しょ"],
+    "章句": ["しょう", "く"],
+    "集注": ["しっ", "ちゅう"],
+    "集註": ["しっ", "ちゅう"],
+    "大学": ["だい", "がく"],
+    "大學": ["だい", "がく"],
+    "中庸": ["ちゅう", "よう"],
+    "論語": ["ろん", "ご"],
+    "孟子": ["もう", "し"],
+    "所以": ["ゆ", "えん"],
+    "所謂": ["いわ", "ゆる"],
+}
+
 # --- Helpers ---------------------------------------------------------------
 
 
@@ -146,6 +196,137 @@ def env_float(name: str, default: float) -> float:
         return float(os.environ.get(name, str(default)))
     except ValueError:
         return default
+
+
+def pinyin_for_hanzi(char: str) -> str:
+    if pinyin is None or Style is None or not is_single_han(char):
+        return ""
+    try:
+        result = pinyin(char, style=Style.TONE3, heteronym=False, errors="ignore")
+    except Exception:
+        return ""
+    if not result or not result[0]:
+        return ""
+    return str(result[0][0]).lower()
+
+
+def kakasi_hira(text: str) -> str:
+    if _KAKASI is None or not text:
+        return ""
+    try:
+        parts = _KAKASI.convert(text)
+    except Exception:
+        return ""
+    return "".join(str(part.get("hira", "")) for part in parts)
+
+
+def split_reading_hint(reading: str, count: int) -> list[str]:
+    if not reading or count <= 0:
+        return []
+    pieces = [piece for piece in re.split(r"[\s/／・,，]+", reading.strip()) if piece]
+    return pieces if len(pieces) == count else []
+
+
+def ja_compound_readings(text: str, reading: str = "") -> list[str]:
+    han_chars = [char for char in text if is_single_han(char)]
+    if not han_chars:
+        return []
+    explicit = split_reading_hint(reading, len(han_chars))
+    if explicit:
+        return explicit
+    if text in COMMON_JA_COMPOUND_READINGS:
+        return COMMON_JA_COMPOUND_READINGS[text]
+    if _KAKASI is not None:
+        try:
+            converted = _KAKASI.convert(text)
+        except Exception:
+            converted = []
+        if converted and "".join(str(part.get("orig", "")) for part in converted) == text:
+            per_char: list[str] = []
+            usable = True
+            for part in converted:
+                orig = str(part.get("orig", ""))
+                hira = str(part.get("hira", ""))
+                if len(orig) == 1 and is_single_han(orig):
+                    per_char.append(hira)
+                elif has_han(orig):
+                    usable = False
+                    break
+            if usable and len(per_char) == len(han_chars):
+                return per_char
+    return [kakasi_hira(char) or reading or "" for char in han_chars]
+
+
+def normalize_ja_line_tokens(tokens: Any) -> None:
+    if not isinstance(tokens, list):
+        return
+    normalized: list[dict[str, Any]] = []
+    for tok in tokens:
+        if not isinstance(tok, dict):
+            continue
+        text = str(tok.get("t", ""))
+        reading = str(tok.get("r", "") or "")
+        role = tok.get("g")
+        if has_han(text) and not is_single_han(text):
+            readings = ja_compound_readings(text, reading)
+            han_index = 0
+            for char in text:
+                if is_single_han(char):
+                    new_tok: dict[str, Any] = {
+                        "t": char,
+                        "r": readings[han_index] if han_index < len(readings) else kakasi_hira(char),
+                    }
+                    if role in GRAMMAR_ROLES:
+                        new_tok["g"] = role
+                    normalized.append(new_tok)
+                    han_index += 1
+                else:
+                    new_tok = {"t": char, "r": ""}
+                    if role in GRAMMAR_ROLES and not is_punctuation(char):
+                        new_tok["g"] = role
+                    normalized.append(new_tok)
+            continue
+        new_tok = dict(tok)
+        if not is_single_han(text):
+            new_tok["r"] = ""
+        normalized.append(new_tok)
+    tokens[:] = normalized
+
+
+def canonicalize_zh_tokens_from_source(unit: Any) -> None:
+    if not isinstance(unit, dict):
+        return
+    source = str(unit.get("source_text", "") or "")
+    tokens = unit.get("zh")
+    if not source or not isinstance(tokens, list):
+        return
+    han_tokens = [
+        tok for tok in tokens
+        if isinstance(tok, dict) and is_single_han(str(tok.get("t", "")))
+    ]
+    rebuilt: list[dict[str, Any]] = []
+    cursor = 0
+    for char in source:
+        if is_single_han(char):
+            source_tok: dict[str, Any] | None = None
+            if cursor < len(han_tokens) and str(han_tokens[cursor].get("t", "")) == char:
+                source_tok = dict(han_tokens[cursor])
+                cursor += 1
+            else:
+                for lookahead in range(cursor + 1, min(cursor + 6, len(han_tokens))):
+                    if str(han_tokens[lookahead].get("t", "")) == char:
+                        source_tok = dict(han_tokens[lookahead])
+                        cursor = lookahead + 1
+                        break
+            if source_tok is None:
+                source_tok = {"t": char}
+            source_tok["t"] = char
+            if not source_tok.get("r"):
+                source_tok["r"] = pinyin_for_hanzi(char)
+            rebuilt.append(source_tok)
+        else:
+            rebuilt.append({"t": char, "r": ""})
+    unit["zh"] = rebuilt
 
 
 def infer_zh_role(tokens: list[dict[str, Any]], index: int, seen_predicate: bool) -> str:
@@ -230,10 +411,12 @@ def backfill_ja_roles(tokens: Any) -> None:
 def backfill_unit_roles(unit: Any) -> None:
     if not isinstance(unit, dict):
         return
+    canonicalize_zh_tokens_from_source(unit)
     backfill_zh_roles(unit.get("zh"))
     ja = unit.get("ja")
     if isinstance(ja, list):
         for line in ja:
+            normalize_ja_line_tokens(line)
             backfill_ja_roles(line)
 
 
@@ -847,6 +1030,13 @@ CRITICAL RULES - follow these exactly:
 
 6. **Furigana**: Every single-kanji token in ja lines needs `r` (furigana in hiragana).
    Kana tokens have `r: ""`.
+   Never put furigana on a multi-character Japanese word token. Split it:
+   - BAD: {"t":"孔子","r":"こうし"}
+   - GOOD: {"t":"孔","r":"こう"}, {"t":"子","r":"し"}
+   - BAD: {"t":"自然","r":"しぜん"}
+   - GOOD: {"t":"自","r":"し"}, {"t":"然","r":"ぜん"}
+   Mixed tokens must also be split: {"t":"咲か","r":"さか"} is bad; use
+   {"t":"咲","r":"さ"}, {"t":"か","r":""}.
 
 7. **Color-ready output**: The PDF color renderer depends on `g`. Do not leave
    content kanji/hanzi untagged. If uncertain, choose the closest broad role.
