@@ -340,9 +340,19 @@ def build_review_prompt(
         parts.append(f"- ... {len(issues) - 40} more issues omitted from prompt")
     parts.append("--- End issues ---")
     parts.append("")
-    parts.append("--- Current compact JSON ---")
-    parts.append(json.dumps(compact, ensure_ascii=False, indent=2))
-    parts.append("--- End current compact JSON ---")
+    severe_source_mismatch = any("common_prefix=0" in issue for issue in issues)
+    if severe_source_mismatch:
+        parts.append("--- Current compact JSON omitted ---")
+        parts.append(
+            "The deterministic reviewer found that the current JSON begins with a different source text. "
+            "Do not patch or reuse its units. Rebuild a complete compact JSON annotation from the original "
+            "Chinese paragraph above."
+        )
+        parts.append("--- End current compact JSON omitted ---")
+    else:
+        parts.append("--- Current compact JSON ---")
+        parts.append(json.dumps(compact, ensure_ascii=False, indent=2))
+        parts.append("--- End current compact JSON ---")
     return "\n".join(parts)
 
 
