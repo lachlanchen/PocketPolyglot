@@ -18,6 +18,7 @@ import sys
 import time
 from contextlib import contextmanager
 from datetime import datetime, timezone
+from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any
 
@@ -49,6 +50,9 @@ from aginti_write_chunks import (
 
 CONTENT_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaffぁ-ゟ゠-ヿA-Za-z0-9]")
 PUNCT_ONLY_RE = re.compile(r"^[\s，。！？、；：,.!?;:「」『』（）()《》〈〉“”‘’…—-]+$")
+CLOSING_PUNCT = set("〉」』》）)]，。；：、！？,.!?;:")
+OPENING_PUNCT = set("〈「『《（([")
+MAX_DETERMINISTIC_SOURCE_EDITS = 3
 def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
 
@@ -139,6 +143,9 @@ def load_current_compact(
 def canonicalize_compact(data: dict[str, Any], source_chunk: dict[str, Any]) -> tuple[dict[str, Any], dict[str, Any] | None, list[str]]:
     data["mode"] = "zh_main_ja_comment"
     data["chunk_id"] = source_chunk["chunk_id"]
+    repair_zh_tokens_to_paragraph(data, source_chunk)
+    align_unit_sources_to_paragraph(data, source_chunk)
+    sync_source_text_from_zh_if_complete(data, source_chunk)
     backfill_missing_roles(data)
     errors = validate_chunk_output(data)
     renderer: dict[str, Any] | None = None
@@ -150,6 +157,179 @@ def canonicalize_compact(data: dict[str, Any], source_chunk: dict[str, Any]) -> 
     if renderer is not None:
         errors.extend(validate_renderer_chunk(renderer, source_chunk))
     return data, renderer, errors
+
+
+def paragraph_source_text(source_chunk: dict[str, Any]) -> str:
+    return "".join(str(p.get("text", "")) for p in source_chunk.get("paragraphs", []))
+
+
+def trim_normalized_suffix(text: str, suffix: str) -> str:
+    if not suffix:
+        return text
+    if text.endswith(suffix):
+        return text[: -len(suffix)]
+    compact = normalize(text)
+    if compact.endswith(suffix):
+        return compact[: -len(suffix)]
+    return text
+
+
+def is_deterministic_source_char(char: str) -> bool:
+    return bool(char) and not is_content_text(char)
+
+
+def acceptable_source_diff(expected: str, got: str, max_chars: int = MAX_DETERMINISTIC_SOURCE_EDITS) -> list[tuple[str, int, int, int, int]] | None:
+    edits: list[tuple[str, int, int, int, int]] = []
+    edit_chars = 0
+    for tag, i1, i2, j1, j2 in SequenceMatcher(None, expected, got, autojunk=False).get_opcodes():
+        if tag == "equal":
+            edits.append((tag, i1, i2, j1, j2))
+            continue
+        expected_part = expected[i1:i2]
+        got_part = got[j1:j2]
+        if not all(is_deterministic_source_char(char) for char in expected_part + got_part):
+            return None
+        edit_chars += max(len(expected_part), len(got_part))
+        if edit_chars > max_chars:
+            return None
+        edits.append((tag, i1, i2, j1, j2))
+    return edits if edit_chars else None
+
+
+def zh_token_flat_units(units: list[Any]) -> tuple[list[tuple[int, dict[str, Any]]], list[list[dict[str, Any]]]] | None:
+    flat: list[tuple[int, dict[str, Any]]] = []
+    per_unit: list[list[dict[str, Any]]] = [[] for _ in units]
+    for unit_index, unit in enumerate(units):
+        if not isinstance(unit, dict):
+            return None
+        tokens = unit.get("zh")
+        if not isinstance(tokens, list):
+            return None
+        for token in tokens:
+            if not isinstance(token, dict):
+                return None
+            text = str(token.get("t", ""))
+            if not text:
+                continue
+            if len(text) > 1 and has_han(text):
+                return None
+            for char in text:
+                item = dict(token)
+                item["t"] = char
+                if not is_single_han(char):
+                    item["r"] = ""
+                flat.append((unit_index, item))
+    return flat, per_unit
+
+
+def source_punct_token(char: str) -> dict[str, str]:
+    return {"t": char, "r": ""}
+
+
+def insertion_unit(flat: list[tuple[int, dict[str, Any]]], got_index: int, text: str) -> int:
+    if not flat:
+        return 0
+    first = text[0] if text else ""
+    if first in CLOSING_PUNCT and got_index > 0:
+        return flat[got_index - 1][0]
+    if first in OPENING_PUNCT and got_index < len(flat):
+        return flat[got_index][0]
+    if got_index > 0:
+        return flat[got_index - 1][0]
+    return flat[0][0]
+
+
+def repair_zh_tokens_to_paragraph(data: dict[str, Any], source_chunk: dict[str, Any]) -> None:
+    units = data.get("units")
+    if not isinstance(units, list) or not units:
+        return
+    target = normalize(paragraph_source_text(source_chunk))
+    if not target:
+        return
+    flattened = zh_token_flat_units(units)
+    if flattened is None:
+        return
+    flat, per_unit = flattened
+    got = "".join(str(token.get("t", "")) for _, token in flat)
+    if got == target:
+        sync_source_text_from_zh_if_complete(data, source_chunk)
+        return
+    edits = acceptable_source_diff(target, got)
+    if edits is None:
+        return
+    for tag, i1, i2, j1, j2 in edits:
+        if tag == "equal":
+            for unit_index, token in flat[j1:j2]:
+                per_unit[unit_index].append(dict(token))
+        elif tag == "delete":
+            unit_index = insertion_unit(flat, j1, target[i1:i2])
+            for char in target[i1:i2]:
+                per_unit[unit_index].append(source_punct_token(char))
+        elif tag == "insert":
+            continue
+        elif tag == "replace":
+            unit_index = flat[j1][0] if j1 < len(flat) else insertion_unit(flat, j1, target[i1:i2])
+            for char in target[i1:i2]:
+                per_unit[unit_index].append(source_punct_token(char))
+    if normalize("".join(token_text(tokens) for tokens in per_unit)) != target:
+        return
+    for unit, tokens in zip(units, per_unit):
+        if not isinstance(unit, dict):
+            continue
+        unit["zh"] = tokens
+        unit["source_text"] = token_text(tokens)
+
+
+def sync_source_text_from_zh_if_complete(data: dict[str, Any], source_chunk: dict[str, Any]) -> None:
+    units = data.get("units")
+    if not isinstance(units, list) or not units:
+        return
+    target = normalize(paragraph_source_text(source_chunk))
+    rebuilt = normalize("".join(token_text(unit.get("zh", [])) for unit in units if isinstance(unit, dict)))
+    if target and rebuilt == target:
+        for unit in units:
+            if isinstance(unit, dict):
+                unit["source_text"] = token_text(unit.get("zh", []))
+
+
+def align_unit_sources_to_paragraph(data: dict[str, Any], source_chunk: dict[str, Any]) -> None:
+    """Repair tiny end-boundary drift between unit source_text and paragraph.
+
+    Most remaining hard chunks differ only by a trailing annotation bracket or
+    punctuation mark.  Fix those locally so the model is not asked to regenerate
+    an otherwise usable chunk.
+    """
+    units = data.get("units")
+    if not isinstance(units, list) or not units:
+        return
+    target = normalize(paragraph_source_text(source_chunk))
+    got = normalize("".join(str(unit.get("source_text", "")) for unit in units if isinstance(unit, dict)))
+    if not target or got == target:
+        return
+    if got.startswith(target) and 0 < len(got) - len(target) <= 3:
+        extra = got[len(target):]
+        remaining = extra
+        for unit in reversed(units):
+            if not remaining or not isinstance(unit, dict):
+                continue
+            source_text = str(unit.get("source_text", ""))
+            compact = normalize(source_text)
+            if not compact:
+                continue
+            if len(remaining) >= len(compact) and remaining.endswith(compact):
+                unit["source_text"] = ""
+                remaining = remaining[: -len(compact)]
+                continue
+            if compact.endswith(remaining):
+                unit["source_text"] = trim_normalized_suffix(source_text, remaining)
+                remaining = ""
+        return
+    if target.startswith(got) and 0 < len(target) - len(got) <= 3:
+        missing = target[len(got):]
+        for unit in reversed(units):
+            if isinstance(unit, dict):
+                unit["source_text"] = str(unit.get("source_text", "")) + missing
+                return
 
 
 def is_content_text(text: str) -> bool:
