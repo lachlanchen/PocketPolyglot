@@ -625,6 +625,7 @@ def main() -> int:
     parser.add_argument("--loop", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--issue-only", action="store_true", help="Detect/report issues without API repair")
+    parser.add_argument("--failed-only", action="store_true", help="Only review chunks currently listed in status.json failed_ids")
     parser.add_argument("--reviewed-dir", default="")
     parser.add_argument("--api-timeout", type=float, default=float(os.environ.get("AGINTI_API_TIMEOUT", "180")))
     parser.add_argument("--api-retries", type=int, default=int(os.environ.get("AGINTI_API_RETRIES", "2")))
@@ -676,6 +677,9 @@ def main() -> int:
         selected = chunks[max(0, args.start_chunk - 1):]
         if args.max_chunks:
             selected = selected[: args.max_chunks]
+        if args.failed_only:
+            failed_filter = set(load_status(book_status_path).get("failed_ids", []))
+            selected = [chunk for chunk in selected if chunk.get("chunk_id") in failed_filter]
         for index, source_chunk in enumerate(selected, start=args.start_chunk):
             chunk_id = source_chunk["chunk_id"]
             with chunk_lock(lock_dir, chunk_id) as got_lock:

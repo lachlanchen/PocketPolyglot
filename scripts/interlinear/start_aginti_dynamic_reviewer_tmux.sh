@@ -9,6 +9,7 @@ review_rounds="${REVIEW_ROUNDS:-2}"
 interval="${REVIEW_INTERVAL:-900}"
 delay="${DELAY:-1}"
 compile_every="${COMPILE_EVERY:-0}"
+failed_only="${FAILED_ONLY:-0}"
 run_id="${RUN_ID:-$(date -u +%Y%m%dT%H%M%SZ)}"
 log_dir="${LOG_DIR:-logs/${book}-dynamic-review-${run_id}}"
 
@@ -32,16 +33,23 @@ echo "max_chunks=$max_chunks"
 echo "review_rounds=$review_rounds"
 echo "interval=$interval"
 echo "compile_every=$compile_every"
+echo "failed_only=$failed_only"
 echo "started=\$(date -Is)"
-exec python3 -u scripts/interlinear/aginti_dynamic_review_chunks.py \\
-  --book "$book" \\
-  --start-chunk "$start_chunk" \\
-  --max-chunks "$max_chunks" \\
-  --review-rounds "$review_rounds" \\
-  --delay "$delay" \\
-  --sleep "$interval" \\
-  --compile-every "$compile_every" \\
+args=(
+  python3 -u scripts/interlinear/aginti_dynamic_review_chunks.py
+  --book "$book"
+  --start-chunk "$start_chunk"
+  --max-chunks "$max_chunks"
+  --review-rounds "$review_rounds"
+  --delay "$delay"
+  --sleep "$interval"
+  --compile-every "$compile_every"
   --loop
+)
+case "$failed_only" in
+  1|true|TRUE|yes|YES) args+=(--failed-only) ;;
+esac
+exec "\${args[@]}"
 SH
 chmod +x "$runfile"
 
