@@ -155,6 +155,7 @@ def load_current_compact(
 def canonicalize_compact(data: dict[str, Any], source_chunk: dict[str, Any]) -> tuple[dict[str, Any], dict[str, Any] | None, list[str]]:
     data["mode"] = "zh_main_ja_comment"
     data["chunk_id"] = source_chunk["chunk_id"]
+    truncate_extra_zh_tail_to_paragraph(data, source_chunk)
     repair_zh_tokens_to_paragraph(data, source_chunk)
     align_unit_sources_to_paragraph(data, source_chunk)
     sync_source_text_from_zh_if_complete(data, source_chunk)
@@ -292,6 +293,53 @@ def repair_zh_tokens_to_paragraph(data: dict[str, Any], source_chunk: dict[str, 
             continue
         unit["zh"] = tokens
         unit["source_text"] = token_text(tokens)
+
+
+def truncate_extra_zh_tail_to_paragraph(data: dict[str, Any], source_chunk: dict[str, Any]) -> None:
+    units = data.get("units")
+    if not isinstance(units, list) or not units:
+        return
+    target = re.sub(r"\s+", "", normalize(paragraph_source_text(source_chunk)))
+    if not target:
+        return
+    flattened = zh_token_flat_units(units)
+    if flattened is None:
+        return
+    flat, per_unit = flattened
+    compact_flat: list[tuple[int, dict[str, Any], str]] = []
+    for unit_index, token in flat:
+        text = re.sub(r"\s+", "", str(token.get("t", "")))
+        if text:
+            compact_flat.append((unit_index, token, text))
+    got = "".join(text for _, _, text in compact_flat)
+    if not got.startswith(target) or len(got) <= len(target):
+        return
+    remaining = len(target)
+    for unit_index, token, text in compact_flat:
+        if remaining <= 0:
+            break
+        if len(text) <= remaining:
+            kept = dict(token)
+            kept["t"] = text
+            per_unit[unit_index].append(kept)
+            remaining -= len(text)
+        else:
+            kept = dict(token)
+            kept["t"] = text[:remaining]
+            per_unit[unit_index].append(kept)
+            remaining = 0
+            break
+    if remaining != 0:
+        return
+    new_units: list[dict[str, Any]] = []
+    for unit, tokens in zip(units, per_unit):
+        if not isinstance(unit, dict) or not tokens:
+            continue
+        unit["zh"] = tokens
+        unit["source_text"] = token_text(tokens)
+        new_units.append(unit)
+    if normalize("".join(token_text(unit.get("zh", [])) for unit in new_units)) == target:
+        data["units"] = new_units
 
 
 def sync_source_text_from_zh_if_complete(data: dict[str, Any], source_chunk: dict[str, Any]) -> None:
