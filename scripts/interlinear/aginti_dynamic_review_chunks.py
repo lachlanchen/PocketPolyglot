@@ -153,6 +153,30 @@ def is_content_text(text: str) -> bool:
     return bool(CONTENT_RE.search(text)) and not PUNCT_ONLY_RE.fullmatch(text)
 
 
+def clipped(text: str, limit: int = 180) -> str:
+    if len(text) <= limit:
+        return text
+    return text[:limit] + "..."
+
+
+def mismatch_detail(where: str, expected: str, got: str) -> str:
+    exp = normalize(expected)
+    actual = normalize(got)
+    common = 0
+    for exp_char, got_char in zip(exp, actual):
+        if exp_char != got_char:
+            break
+        common += 1
+    start = max(0, common - 60)
+    return (
+        f"{where}: text reconstruction mismatch; expected_len={len(exp)} got_len={len(actual)} "
+        f"common_prefix={common}. "
+        f"Expected near mismatch: {clipped(exp[start:common + 180])!r}. "
+        f"Got near mismatch: {clipped(actual[start:common + 180])!r}. "
+        "If common_prefix is very small, discard the current unit text and rebuild from the exact original paragraph."
+    )
+
+
 def role_counts(tokens: list[dict[str, Any]]) -> dict[str, int]:
     counts: dict[str, int] = {}
     for token in tokens:
@@ -184,7 +208,7 @@ def detect_quality_issues(data: dict[str, Any], source_chunk: dict[str, Any]) ->
     paragraph_text = "".join(str(p.get("text", "")) for p in source_chunk.get("paragraphs", []))
     unit_source_text = "".join(str(unit.get("source_text", "")) for unit in data.get("units", []) if isinstance(unit, dict))
     if paragraph_text and normalize(unit_source_text) != normalize(paragraph_text):
-        issues.append("all units: unit.source_text values do not reconstruct the source paragraph")
+        issues.append(mismatch_detail("all units source_text", paragraph_text, unit_source_text))
 
     chunk_role_counts = {"zh": {}, "ja": {}}
     for unit_index, unit in enumerate(data.get("units", [])):
@@ -194,7 +218,7 @@ def detect_quality_issues(data: dict[str, Any], source_chunk: dict[str, Any]) ->
         source_text = str(unit.get("source_text", ""))
         zh_text = token_text(unit.get("zh", []))
         if source_text and normalize(zh_text) != normalize(source_text):
-            issues.append(f"{where}: zh tokens do not reconstruct unit.source_text")
+            issues.append(mismatch_detail(f"{where}.zh", source_text, zh_text))
 
         ja = unit.get("ja")
         if not isinstance(ja, list) or len(ja) != 2:
