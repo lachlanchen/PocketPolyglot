@@ -791,9 +791,6 @@ def repair_json(text: str) -> str | None:
     if t.startswith("```"):
         t = re.sub(r"^```(?:json)?\s*", "", t)
         t = re.sub(r"\s*```$", "", t)
-    # Fix common issues: missing comma before newline+quote
-    # e.g. \n    {\"t\" -> \n    ,{\"t\"
-    t = re.sub(r'\n(\s*)(?=["{\[])', r',\n\1', t)
     # Remove trailing commas before closing bracket/brace
     t = re.sub(r',(\s*[}\]])', r'\1', t)
     # Fix doubled commas
@@ -821,6 +818,8 @@ def main() -> int:
                         help="Provider call timeout in seconds")
     parser.add_argument("--api-retries", type=int, default=env_int("AGINTI_API_RETRIES", 2),
                         help="Retry provider calls this many times before marking the chunk failed")
+    parser.add_argument("--invalid-retries", type=int, default=env_int("AGINTI_INVALID_RETRIES", 1),
+                        help="Retry malformed or validation-failing model outputs this many times")
     parser.add_argument("--max-tokens", type=int, default=env_int("AGINTI_MAX_TOKENS", 16384),
                         help="Max completion tokens per provider call")
     parser.add_argument("--reviewed-dir", default="",
@@ -1003,90 +1002,123 @@ def main() -> int:
             processed += 1
             continue
 
-        # Build prompt and call API
-        user_prompt = build_user_prompt(chunk, context)
-        raw_response = ""
-        for attempt in range(1, max(1, args.api_retries + 1) + 1):
-            try:
-                raw_response = call_deepseek(
-                    client,
-                    model,
-                    SYSTEM_PROMPT,
-                    user_prompt,
-                    args.max_tokens,
-                )  # type: ignore[arg-type]
-                break
-            except Exception as e:
-                if attempt <= args.api_retries:
-                    wait_seconds = min(90.0, max(args.delay, 2.0) * attempt)
-                    log(
-                        f"  API ERROR attempt {attempt}/{args.api_retries + 1}: "
-                        f"{type(e).__name__}: {e}; retrying in {wait_seconds:.1f}s"
-                    )
-                    time.sleep(wait_seconds)
-                    continue
-                log(f"  API ERROR final attempt {attempt}/{args.api_retries + 1}: {type(e).__name__}: {e}")
+        base_user_prompt = build_user_prompt(chunk, context)
+        retry_feedback = ""
+        data: dict[str, Any] | None = None
+        renderer: dict[str, Any] | None = None
+
+        for generation_attempt in range(1, max(1, args.invalid_retries + 1) + 1):
+            user_prompt = base_user_prompt
+            if retry_feedback:
+                user_prompt += (
+                    "\n\n--- Previous output failed validation ---\n"
+                    f"{retry_feedback}\n"
+                    "Return a corrected COMPLETE JSON object. Do not summarize, omit, "
+                    "or rewrite any Chinese source characters."
+                )
+
+            raw_response = ""
+            for attempt in range(1, max(1, args.api_retries + 1) + 1):
+                try:
+                    raw_response = call_deepseek(
+                        client,
+                        model,
+                        SYSTEM_PROMPT,
+                        user_prompt,
+                        args.max_tokens,
+                    )  # type: ignore[arg-type]
+                    break
+                except Exception as e:
+                    if attempt <= args.api_retries:
+                        wait_seconds = min(90.0, max(args.delay, 2.0) * attempt)
+                        log(
+                            f"  API ERROR attempt {attempt}/{args.api_retries + 1}: "
+                            f"{type(e).__name__}: {e}; retrying in {wait_seconds:.1f}s"
+                        )
+                        time.sleep(wait_seconds)
+                        continue
+                    retry_feedback = f"API error: {type(e).__name__}: {e}"
+                    log(f"  API ERROR final attempt {attempt}/{args.api_retries + 1}: {retry_feedback}")
+                    break
+            if not raw_response:
                 failed_ids.add(chunk_id)
                 save_computed_status(status_path, book_id, chunks, reviewed_dir, failed_ids)
                 time.sleep(args.delay * 4)
                 break
-        if not raw_response:
-            continue
 
-        # Parse JSON
-        # Strip possible markdown fences
-        cleaned = raw_response.strip()
-        if cleaned.startswith("```"):
-            cleaned = re.sub(r"^```(?:json)?\s*", "", cleaned)
-            cleaned = re.sub(r"\s*```$", "", cleaned)
+            cleaned = raw_response.strip()
+            if cleaned.startswith("```"):
+                cleaned = re.sub(r"^```(?:json)?\s*", "", cleaned)
+                cleaned = re.sub(r"\s*```$", "", cleaned)
 
-        try:
-            data = json.loads(cleaned)
-        except json.JSONDecodeError as e:
-            # Attempt repair: common DeepSeek JSON issues
-            repaired = repair_json(cleaned)
-            if repaired:
-                try:
-                    data = json.loads(repaired)
-                    log(f"  JSON REPAIRED successfully")
-                except json.JSONDecodeError as e2:
-                    log(f"  JSON PARSE ERROR (repair failed): {e2}")
+            try:
+                candidate = json.loads(cleaned)
+            except json.JSONDecodeError as e:
+                repaired = repair_json(cleaned)
+                if repaired:
+                    try:
+                        candidate = json.loads(repaired)
+                        log("  JSON REPAIRED successfully")
+                    except json.JSONDecodeError as e2:
+                        retry_feedback = f"JSON parse error after repair: {e2}"
+                        raw_path.write_text(raw_response, encoding="utf-8")
+                        if generation_attempt <= args.invalid_retries:
+                            log(f"  JSON PARSE RETRY {generation_attempt}/{args.invalid_retries}: {retry_feedback}")
+                            time.sleep(args.delay * 2)
+                            continue
+                        log(f"  JSON PARSE ERROR (repair failed): {e2}")
+                        log(f"  Raw response (first 200 chars): {raw_response[:200]}")
+                        failed_ids.add(chunk_id)
+                        save_computed_status(status_path, book_id, chunks, reviewed_dir, failed_ids)
+                        time.sleep(args.delay * 2)
+                        break
+                else:
+                    retry_feedback = f"JSON parse error: {e}"
+                    raw_path.write_text(raw_response, encoding="utf-8")
+                    if generation_attempt <= args.invalid_retries:
+                        log(f"  JSON PARSE RETRY {generation_attempt}/{args.invalid_retries}: {retry_feedback}")
+                        time.sleep(args.delay * 2)
+                        continue
+                    log(f"  JSON PARSE ERROR: {e}")
                     log(f"  Raw response (first 200 chars): {raw_response[:200]}")
                     failed_ids.add(chunk_id)
-                    raw_path.write_text(raw_response, encoding="utf-8")
                     save_computed_status(status_path, book_id, chunks, reviewed_dir, failed_ids)
                     time.sleep(args.delay * 2)
+                    break
+
+            candidate["chunk_id"] = chunk_id
+            backfill_missing_roles(candidate)
+            errs = validate_chunk_output(candidate)
+            candidate_renderer: dict[str, Any] | None = None
+            if not errs:
+                try:
+                    candidate_renderer = wrap_renderer_chunk(candidate, chunk)
+                except ValueError as exc:
+                    errs.append(str(exc))
+            if candidate_renderer is not None:
+                errs += validate_renderer_chunk(candidate_renderer, chunk)
+            if errs:
+                retry_feedback = "\n".join(f"- {err}" for err in errs[:12])
+                atomic_write_json(raw_path, candidate)
+                if generation_attempt <= args.invalid_retries:
+                    log(f"  VALIDATION RETRY {generation_attempt}/{args.invalid_retries} ({len(errs)} errors)")
+                    for err in errs[:6]:
+                        log(f"    - {err}")
+                    time.sleep(args.delay * 2)
                     continue
-            else:
-                log(f"  JSON PARSE ERROR: {e}")
-                log(f"  Raw response (first 200 chars): {raw_response[:200]}")
+                log(f"  VALIDATION FAILED ({len(errs)} errors):")
+                for err in errs[:10]:
+                    log(f"    - {err}")
                 failed_ids.add(chunk_id)
-                raw_path.write_text(raw_response, encoding="utf-8")
                 save_computed_status(status_path, book_id, chunks, reviewed_dir, failed_ids)
                 time.sleep(args.delay * 2)
-                continue
+                break
 
-        # Validate compact model output and renderer wrapper.
-        data["chunk_id"] = chunk_id
-        backfill_missing_roles(data)
-        errs = validate_chunk_output(data)
-        renderer: dict[str, Any] | None = None
-        if not errs:
-            try:
-                renderer = wrap_renderer_chunk(data, chunk)
-            except ValueError as exc:
-                errs.append(str(exc))
-        if renderer is not None:
-            errs += validate_renderer_chunk(renderer, chunk)
-        if errs:
-            log(f"  VALIDATION FAILED ({len(errs)} errors):")
-            for err in errs[:10]:
-                log(f"    - {err}")
-            failed_ids.add(chunk_id)
-            # Still save the raw output for debugging
-            atomic_write_json(raw_path, data)
-            save_computed_status(status_path, book_id, chunks, reviewed_dir, failed_ids)
-            time.sleep(args.delay * 2)
+            data = candidate
+            renderer = candidate_renderer
+            break
+
+        if data is None or renderer is None:
             continue
 
         # Save compact audit output and renderer-ready output.
