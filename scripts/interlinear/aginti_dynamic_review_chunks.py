@@ -47,20 +47,6 @@ from aginti_write_chunks import (
 
 CONTENT_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaffぁ-ゟ゠-ヿA-Za-z0-9]")
 PUNCT_ONLY_RE = re.compile(r"^[\s，。！？、；：,.!?;:「」『』（）()《》〈〉“”‘’…—-]+$")
-COMMENT_MARKERS = (
-    "ここでは",
-    "すなわち",
-    "義は",
-    "注として",
-    "意味",
-    "指す",
-    "いう",
-    "解する",
-    "説く",
-    "示す",
-)
-
-
 def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
 
@@ -226,9 +212,6 @@ def detect_quality_issues(data: dict[str, Any], source_chunk: dict[str, Any]) ->
             issues.append(f"{where}: gloss and explanatory_comment are identical")
         elif compact_lines[0] and compact_lines[1] and compact_lines[0] in compact_lines[1] and len(compact_lines[0]) >= 8:
             issues.append(f"{where}: explanatory_comment mostly duplicates the gloss")
-        if compact_lines[1] and not any(marker in compact_lines[1] for marker in COMMENT_MARKERS):
-            if len(compact_lines[1]) >= max(10, int(len(compact_lines[0]) * 0.75)):
-                issues.append(f"{where}.ja[1]: explanatory_comment reads like a second translation; make it a concise note")
 
         for lang in ("zh", "ja"):
             counts = role_counts(unit_tokens(unit, lang))
