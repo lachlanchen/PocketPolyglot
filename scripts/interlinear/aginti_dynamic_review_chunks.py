@@ -34,10 +34,12 @@ from aginti_write_chunks import (
     is_renderer_chunk,
     is_single_han,
     load_json,
+    load_status,
     normalize,
     promote_renderer_chunk,
     refresh_renderer_metadata,
     repair_json,
+    save_computed_status,
     token_text,
     validate_chunk_output,
     validate_renderer_chunk,
@@ -398,6 +400,7 @@ def main() -> int:
     lock_dir = work_dir / "locks"
     log_path = work_dir / "dynamic-review.log"
     status_path = ROOT / "data" / "interlinear" / book_id / "dynamic-review-status.json"
+    book_status_path = ROOT / "data" / "interlinear" / book_id / "status.json"
     for path in (chunk_out_dir, reviewed_dir, issue_dir, attempt_dir, lock_dir):
         path.mkdir(parents=True, exist_ok=True)
     log_path.parent.mkdir(parents=True, exist_ok=True)
@@ -422,6 +425,7 @@ def main() -> int:
     def run_once() -> dict[str, Any]:
         nonlocal promoted_since_compile
         scanned = valid = fixed = unresolved = missing = locked = api_errors = 0
+        fixed_ids: set[str] = set()
         selected = chunks[max(0, args.start_chunk - 1):]
         if args.max_chunks:
             selected = selected[: args.max_chunks]
@@ -526,6 +530,7 @@ def main() -> int:
                     if not current_issues and current_renderer is not None:
                         promote_valid(current, current_renderer, chunk_out_dir, reviewed_dir, chunk_id)
                         fixed += 1
+                        fixed_ids.add(chunk_id)
                         promoted_since_compile += 1
                         log(f"{chunk_id}: dynamic review fixed and promoted")
                         break
@@ -552,6 +557,10 @@ def main() -> int:
             "locked": locked,
             "api_errors": api_errors,
         }
+        if not args.dry_run and not args.issue_only:
+            failed_ids = set(load_status(book_status_path).get("failed_ids", []))
+            failed_ids.difference_update(fixed_ids)
+            save_computed_status(book_status_path, book_id, chunks, reviewed_dir, failed_ids)
         status_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         log(
             "summary: "
