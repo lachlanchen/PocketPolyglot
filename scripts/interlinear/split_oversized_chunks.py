@@ -19,6 +19,8 @@ from typing import Any
 
 SENTENCE_BOUNDARY_RE = re.compile(r".+?(?:[。！？；;]|$)", re.S)
 SOFT_BOUNDARY_RE = re.compile(r".+?(?:[，、,]|$)", re.S)
+LEADING_CLOSE_NOTE_RE = re.compile(r"^(\s*〉\s*)")
+PART_SUFFIX_RE = re.compile(r"-part-\d+$")
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -56,6 +58,70 @@ def hard_split(text: str, max_chars: int) -> list[str]:
     return [text[index:index + max_chars] for index in range(0, len(text), max_chars)]
 
 
+def attach_leading_note_closers(parts: list[str]) -> list[str]:
+    """Move a leading 〉 marker back to the previous part.
+
+    Classical note text often uses 〈 ... 〉. Sentence splitting can leave the
+    closing marker alone at the start of the next subchunk, which confuses the
+    annotator and makes source reconstruction more brittle.
+    """
+    fixed = parts[:]
+    for index in range(1, len(fixed)):
+        match = LEADING_CLOSE_NOTE_RE.match(fixed[index])
+        if not match:
+            continue
+        fixed[index - 1] += match.group(1)
+        fixed[index] = fixed[index][match.end():]
+    return [part for part in fixed if part]
+
+
+def strip_part_suffix(value: str) -> str:
+    return PART_SUFFIX_RE.sub("", value)
+
+
+def merge_existing_split_group(group: list[dict[str, Any]]) -> dict[str, Any]:
+    first = group[0]
+    origin = str(first.get("split_from_chunk_id") or first["chunk_id"])
+    ordered = sorted(group, key=lambda item: int(item.get("split_part", 0) or 0))
+    base = dict(first)
+    base["chunk_id"] = origin
+    base.pop("split_from_chunk_id", None)
+    base.pop("split_part", None)
+    base.pop("split_part_count", None)
+
+    first_paragraph = dict(ordered[0]["paragraphs"][0])
+    first_paragraph["id"] = strip_part_suffix(str(first_paragraph["id"]))
+    first_paragraph["text"] = "".join(str(item["paragraphs"][0].get("text", "")) for item in ordered)
+    base["paragraphs"] = [first_paragraph]
+    return base
+
+
+def merge_existing_split_chunks(chunks: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Rebuild original chunks before re-splitting.
+
+    This makes the tool safe to rerun after tuning ``--max-chars`` or fixing the
+    split algorithm: existing split chunks are first merged by origin, then the
+    current splitter creates the new stable manifest.
+    """
+    merged: list[dict[str, Any]] = []
+    index = 0
+    while index < len(chunks):
+        chunk = chunks[index]
+        origin = chunk.get("split_from_chunk_id")
+        if not origin:
+            merged.append(chunk)
+            index += 1
+            continue
+
+        group = [chunk]
+        index += 1
+        while index < len(chunks) and chunks[index].get("split_from_chunk_id") == origin:
+            group.append(chunks[index])
+            index += 1
+        merged.append(merge_existing_split_group(group))
+    return merged
+
+
 def split_text(text: str, max_chars: int) -> list[str]:
     sentence_parts = pack_pieces(regex_pieces(text, SENTENCE_BOUNDARY_RE), max_chars)
     final: list[str] = []
@@ -69,7 +135,7 @@ def split_text(text: str, max_chars: int) -> list[str]:
                 final.append(comma_part)
             else:
                 final.extend(hard_split(comma_part, max_chars))
-    return [part for part in final if part]
+    return attach_leading_note_closers([part for part in final if part])
 
 
 def split_chunk(chunk: dict[str, Any], max_chars: int) -> list[dict[str, Any]]:
@@ -134,7 +200,7 @@ def main() -> int:
 
     chunks_path = Path(args.chunks_jsonl)
     manifest_path = Path(args.manifest)
-    chunks = load_chunks(chunks_path)
+    chunks = merge_existing_split_chunks(load_chunks(chunks_path))
     manifest = load_json(manifest_path)
 
     split_chunks: list[dict[str, Any]] = []
