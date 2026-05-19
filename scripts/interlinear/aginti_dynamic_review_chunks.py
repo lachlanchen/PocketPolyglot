@@ -1,0 +1,593 @@
+#!/usr/bin/env python3
+"""Deterministic + dynamic AgInTi reviewer for interlinear chunks.
+
+This reviewer is intentionally separate from the writer.  It first runs local
+schema/render/quality checks, then sends the concrete issue list to DeepSeek
+only when deterministic normalization cannot finish the repair.  A fix is
+promoted only after the same checks pass again.
+"""
+
+from __future__ import annotations
+
+import argparse
+import fcntl
+import json
+import os
+import re
+import sys
+import time
+from contextlib import contextmanager
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+
+from aginti_write_chunks import (
+    GRAMMAR_ROLES,
+    HAN_RE,
+    OpenAI,
+    ROOT,
+    atomic_write_json,
+    backfill_missing_roles,
+    call_deepseek,
+    compile_previews,
+    has_han,
+    is_renderer_chunk,
+    is_single_han,
+    load_json,
+    normalize,
+    promote_renderer_chunk,
+    refresh_renderer_metadata,
+    repair_json,
+    token_text,
+    validate_chunk_output,
+    validate_renderer_chunk,
+    wrap_renderer_chunk,
+)
+
+
+CONTENT_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaffぁ-ゟ゠-ヿA-Za-z0-9]")
+PUNCT_ONLY_RE = re.compile(r"^[\s，。！？、；：,.!?;:「」『』（）()《》〈〉“”‘’…—-]+$")
+COMMENT_MARKERS = (
+    "ここでは",
+    "すなわち",
+    "義は",
+    "注として",
+    "意味",
+    "指す",
+    "いう",
+    "解する",
+    "説く",
+    "示す",
+)
+
+
+def now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+
+def load_chunks(book_id: str) -> list[dict[str, Any]]:
+    path = ROOT / "books" / book_id / "work" / "bilingual" / "chunks" / "chunks.jsonl"
+    chunks: list[dict[str, Any]] = []
+    with path.open(encoding="utf-8") as handle:
+        for line in handle:
+            line = line.strip()
+            if line:
+                chunks.append(json.loads(line))
+    return chunks
+
+
+def reviewed_dir_for(book_id: str, override: str = "") -> Path:
+    if override:
+        return ROOT / override
+    plan_path = ROOT / "books" / book_id / "book-plan.json"
+    if plan_path.exists():
+        try:
+            plan = load_json(plan_path)
+            reviewed = plan.get("reviewed_chunk_dir")
+            if reviewed:
+                return ROOT / str(reviewed)
+        except Exception:
+            pass
+    return ROOT / "books" / book_id / "work" / "bilingual" / "reviewed" / "chunks"
+
+
+@contextmanager
+def chunk_lock(lock_dir: Path, chunk_id: str):
+    lock_dir.mkdir(parents=True, exist_ok=True)
+    lock_path = lock_dir / f"{chunk_id}.lock"
+    with lock_path.open("w", encoding="utf-8") as handle:
+        try:
+            fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError:
+            yield False
+            return
+        try:
+            yield True
+        finally:
+            fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
+
+
+def compact_from_renderer(data: dict[str, Any], chunk_id: str) -> dict[str, Any]:
+    units: list[dict[str, Any]] = []
+    paragraphs = data.get("paragraphs")
+    if isinstance(paragraphs, list):
+        for paragraph in paragraphs:
+            paragraph_units = paragraph.get("units") if isinstance(paragraph, dict) else None
+            if isinstance(paragraph_units, list):
+                units.extend(unit for unit in paragraph_units if isinstance(unit, dict))
+    return {
+        "mode": "zh_main_ja_comment",
+        "chunk_id": chunk_id,
+        "units": units,
+    }
+
+
+def load_current_compact(
+    chunk_id: str,
+    chunk_out_dir: Path,
+    reviewed_dir: Path,
+) -> tuple[dict[str, Any] | None, str]:
+    candidates = [
+        (reviewed_dir / f"{chunk_id}.json", "reviewed"),
+        (chunk_out_dir / f"{chunk_id}.json", "data"),
+        (chunk_out_dir / f"{chunk_id}.raw.json", "raw"),
+    ]
+    for path, label in candidates:
+        if not path.exists():
+            continue
+        data = load_json(path)
+        if is_renderer_chunk(data):
+            return compact_from_renderer(data, chunk_id), label
+        if isinstance(data.get("units"), list):
+            data["mode"] = "zh_main_ja_comment"
+            data["chunk_id"] = chunk_id
+            return data, label
+    return None, ""
+
+
+def canonicalize_compact(data: dict[str, Any], source_chunk: dict[str, Any]) -> tuple[dict[str, Any], dict[str, Any] | None, list[str]]:
+    data["mode"] = "zh_main_ja_comment"
+    data["chunk_id"] = source_chunk["chunk_id"]
+    backfill_missing_roles(data)
+    errors = validate_chunk_output(data)
+    renderer: dict[str, Any] | None = None
+    if not errors:
+        try:
+            renderer = wrap_renderer_chunk(data, source_chunk)
+        except ValueError as exc:
+            errors.append(str(exc))
+    if renderer is not None:
+        errors.extend(validate_renderer_chunk(renderer, source_chunk))
+    return data, renderer, errors
+
+
+def is_content_text(text: str) -> bool:
+    return bool(CONTENT_RE.search(text)) and not PUNCT_ONLY_RE.fullmatch(text)
+
+
+def role_counts(tokens: list[dict[str, Any]]) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for token in tokens:
+        text = str(token.get("t", ""))
+        if not is_content_text(text):
+            continue
+        role = str(token.get("g", "")).strip()
+        if not role or role == "function":
+            continue
+        counts[role] = counts.get(role, 0) + 1
+    return counts
+
+
+def unit_tokens(unit: dict[str, Any], lang: str) -> list[dict[str, Any]]:
+    if lang == "zh":
+        values = unit.get("zh", [])
+        return [token for token in values if isinstance(token, dict)] if isinstance(values, list) else []
+    tokens: list[dict[str, Any]] = []
+    lines = unit.get("ja", [])
+    if isinstance(lines, list):
+        for line in lines:
+            if isinstance(line, list):
+                tokens.extend(token for token in line if isinstance(token, dict))
+    return tokens
+
+
+def detect_quality_issues(data: dict[str, Any], source_chunk: dict[str, Any]) -> list[str]:
+    issues: list[str] = []
+    paragraph_text = "".join(str(p.get("text", "")) for p in source_chunk.get("paragraphs", []))
+    unit_source_text = "".join(str(unit.get("source_text", "")) for unit in data.get("units", []) if isinstance(unit, dict))
+    if paragraph_text and normalize(unit_source_text) != normalize(paragraph_text):
+        issues.append("all units: unit.source_text values do not reconstruct the source paragraph")
+
+    chunk_role_counts = {"zh": {}, "ja": {}}
+    for unit_index, unit in enumerate(data.get("units", [])):
+        if not isinstance(unit, dict):
+            continue
+        where = f"units[{unit_index}]"
+        source_text = str(unit.get("source_text", ""))
+        zh_text = token_text(unit.get("zh", []))
+        if source_text and normalize(zh_text) != normalize(source_text):
+            issues.append(f"{where}: zh tokens do not reconstruct unit.source_text")
+
+        ja = unit.get("ja")
+        if not isinstance(ja, list) or len(ja) != 2:
+            continue
+        line_texts = [token_text(line) if isinstance(line, list) else "" for line in ja]
+        compact_lines = [normalize(text) for text in line_texts]
+        for line_index, compact in enumerate(compact_lines):
+            if not compact:
+                issues.append(f"{where}.ja[{line_index}]: Japanese line is empty")
+            if compact in {"。", "注。", "説明。", "訳。"}:
+                issues.append(f"{where}.ja[{line_index}]: Japanese line is a placeholder, not real content")
+            if len(compact) >= 4 and not has_han(compact):
+                issues.append(f"{where}.ja[{line_index}]: Japanese content is kana-only; use normal mixed kanji/kana")
+            if source_text and len(compact) > max(42, len(normalize(source_text)) * 4):
+                issues.append(f"{where}.ja[{line_index}]: Japanese line is too long for pocket interlinear layout")
+        if compact_lines[0] and compact_lines[0] == compact_lines[1]:
+            issues.append(f"{where}: gloss and explanatory_comment are identical")
+        elif compact_lines[0] and compact_lines[1] and compact_lines[0] in compact_lines[1] and len(compact_lines[0]) >= 8:
+            issues.append(f"{where}: explanatory_comment mostly duplicates the gloss")
+        if compact_lines[1] and not any(marker in compact_lines[1] for marker in COMMENT_MARKERS):
+            if len(compact_lines[1]) >= max(10, int(len(compact_lines[0]) * 0.75)):
+                issues.append(f"{where}.ja[1]: explanatory_comment reads like a second translation; make it a concise note")
+
+        for lang in ("zh", "ja"):
+            counts = role_counts(unit_tokens(unit, lang))
+            total = sum(counts.values())
+            for role, count in counts.items():
+                chunk_role_counts[lang][role] = chunk_role_counts[lang].get(role, 0) + count
+            if total >= 18:
+                dominant_role, dominant_count = max(counts.items(), key=lambda item: item[1]) if counts else ("", 0)
+                if dominant_count / total >= 0.92:
+                    issues.append(
+                        f"{where}.{lang}: grammar/color collapse, {dominant_count}/{total} content tokens are {dominant_role}"
+                    )
+                if len(counts) < 2:
+                    issues.append(f"{where}.{lang}: grammar/color variety too low for a long unit")
+
+    for lang, counts in chunk_role_counts.items():
+        total = sum(counts.values())
+        if total >= 45:
+            dominant_role, dominant_count = max(counts.items(), key=lambda item: item[1]) if counts else ("", 0)
+            if dominant_count / total >= 0.88:
+                issues.append(
+                    f"chunk.{lang}: grammar/color collapse, {dominant_count}/{total} content tokens are {dominant_role}"
+                )
+            if len(counts) < 3:
+                issues.append(f"chunk.{lang}: grammar/color variety too low across the chunk")
+
+    return issues
+
+
+def detect_issues(data: dict[str, Any], source_chunk: dict[str, Any]) -> tuple[dict[str, Any], dict[str, Any] | None, list[str]]:
+    compact, renderer, errors = canonicalize_compact(data, source_chunk)
+    quality = detect_quality_issues(compact, source_chunk)
+    return compact, renderer, errors + quality
+
+
+REVIEW_SYSTEM_PROMPT = f"""\
+You are a strict interlinear JSON repair reviewer.
+
+You receive:
+- the original Chinese source paragraph,
+- the current compact JSON,
+- a deterministic issue list.
+
+Repair the JSON only as much as needed. Return one COMPLETE compact JSON object:
+{{
+  "mode": "zh_main_ja_comment",
+  "chunk_id": "...",
+  "units": [
+    {{
+      "source_text": "...",
+      "zh": [{{"t": "...", "r": "...", "g": "..."}}],
+      "ja_line_roles": ["gloss", "explanatory_comment"],
+      "ja": [[{{"t": "...", "r": "...", "g": "..."}}], [{{"t": "...", "r": "...", "g": "..."}}]]
+    }}
+  ]
+}}
+
+Hard rules:
+- Do not omit, add, or rewrite any Chinese source character. zh token text and
+  unit.source_text must reconstruct the original paragraph exactly after
+  whitespace normalization.
+- Split every Chinese Hanzi and every Japanese kanji into one-character tokens.
+- Put pinyin only on single Chinese Hanzi tokens.
+- Put furigana only on single Japanese kanji tokens.
+- Every Chinese Hanzi and every Japanese kanji must have `g`.
+- Allowed grammar roles: {", ".join(sorted(GRAMMAR_ROLES))}.
+- ja[0] is a Japanese gloss/reading. ja[1] is a smaller explanatory scholarly
+  note, not a duplicate translation.
+- Fix every listed issue, then self-check before answering.
+
+Return only JSON. No markdown fences.
+"""
+
+
+def build_review_prompt(
+    source_chunk: dict[str, Any],
+    compact: dict[str, Any],
+    issues: list[str],
+    context_chunks: list[dict[str, Any]],
+) -> str:
+    parts: list[str] = []
+    parts.append(f"Chunk ID: {source_chunk['chunk_id']}")
+    parts.append(f"Section: {source_chunk.get('subsection_title', '')}")
+    parts.append("")
+    if context_chunks:
+        parts.append("--- Nearby source context ---")
+        for context in context_chunks:
+            text = context.get("paragraphs", [{}])[0].get("text", "")
+            parts.append(str(text))
+        parts.append("--- End nearby source context ---")
+        parts.append("")
+    parts.append("--- Original Chinese paragraph ---")
+    parts.append("".join(str(p.get("text", "")) for p in source_chunk.get("paragraphs", [])))
+    parts.append("--- End original Chinese paragraph ---")
+    parts.append("")
+    parts.append("--- Deterministic issues to fix ---")
+    for issue in issues[:40]:
+        parts.append(f"- {issue}")
+    if len(issues) > 40:
+        parts.append(f"- ... {len(issues) - 40} more issues omitted from prompt")
+    parts.append("--- End issues ---")
+    parts.append("")
+    parts.append("--- Current compact JSON ---")
+    parts.append(json.dumps(compact, ensure_ascii=False, indent=2))
+    parts.append("--- End current compact JSON ---")
+    return "\n".join(parts)
+
+
+def parse_json_response(raw_response: str) -> dict[str, Any]:
+    cleaned = raw_response.strip()
+    if cleaned.startswith("```"):
+        cleaned = re.sub(r"^```(?:json)?\s*", "", cleaned)
+        cleaned = re.sub(r"\s*```$", "", cleaned)
+    try:
+        return json.loads(cleaned)
+    except json.JSONDecodeError:
+        repaired = repair_json(cleaned)
+        if not repaired:
+            raise
+        return json.loads(repaired)
+
+
+def build_context(chunks_by_subsection: dict[str, list[dict[str, Any]]], chunk: dict[str, Any]) -> list[dict[str, Any]]:
+    sub = chunk.get("subsection_id", "__unknown__")
+    sub_list = chunks_by_subsection.get(sub, [])
+    sub_idx = next((i for i, item in enumerate(sub_list) if item.get("chunk_id") == chunk.get("chunk_id")), -1)
+    if sub_idx < 0:
+        return []
+    start = max(0, sub_idx - 2)
+    end = min(len(sub_list), sub_idx + 3)
+    return [sub_list[i] for i in range(start, end) if i != sub_idx]
+
+
+def write_issue_report(report_dir: Path, chunk_id: str, report: dict[str, Any]) -> None:
+    report_dir.mkdir(parents=True, exist_ok=True)
+    path = report_dir / f"{chunk_id}.json"
+    path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def promote_valid(
+    compact: dict[str, Any],
+    renderer: dict[str, Any],
+    chunk_out_dir: Path,
+    reviewed_dir: Path,
+    chunk_id: str,
+) -> None:
+    raw_path = chunk_out_dir / f"{chunk_id}.raw.json"
+    out_path = chunk_out_dir / f"{chunk_id}.json"
+    reviewed_path = reviewed_dir / f"{chunk_id}.json"
+    atomic_write_json(raw_path, compact)
+    promote_renderer_chunk(renderer, out_path, reviewed_path)
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--book", default="sishu-jizhu-aginti")
+    parser.add_argument("--start-chunk", type=int, default=1)
+    parser.add_argument("--max-chunks", type=int, default=0, help="0 = no limit")
+    parser.add_argument("--review-rounds", type=int, default=int(os.environ.get("AGINTI_DYNAMIC_REVIEW_ROUNDS", "2")))
+    parser.add_argument("--delay", type=float, default=float(os.environ.get("AGINTI_DYNAMIC_REVIEW_DELAY", "1")))
+    parser.add_argument("--sleep", type=float, default=float(os.environ.get("AGINTI_DYNAMIC_REVIEW_SLEEP", "600")))
+    parser.add_argument("--loop", action="store_true")
+    parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--issue-only", action="store_true", help="Detect/report issues without API repair")
+    parser.add_argument("--reviewed-dir", default="")
+    parser.add_argument("--api-timeout", type=float, default=float(os.environ.get("AGINTI_API_TIMEOUT", "180")))
+    parser.add_argument("--api-retries", type=int, default=int(os.environ.get("AGINTI_API_RETRIES", "2")))
+    parser.add_argument("--max-tokens", type=int, default=int(os.environ.get("AGINTI_MAX_TOKENS", "16384")))
+    parser.add_argument("--compile-every", type=int, default=0)
+    parser.add_argument("--compile-at-end", action="store_true")
+    args = parser.parse_args()
+
+    book_id = args.book
+    chunks = load_chunks(book_id)
+    chunks_by_subsection: dict[str, list[dict[str, Any]]] = {}
+    for chunk in chunks:
+        chunks_by_subsection.setdefault(chunk.get("subsection_id", "__unknown__"), []).append(chunk)
+
+    chunk_out_dir = ROOT / "data" / "interlinear" / book_id / "chunks"
+    reviewed_dir = reviewed_dir_for(book_id, args.reviewed_dir)
+    work_dir = ROOT / "books" / book_id / "work" / "bilingual" / "dynamic-review"
+    issue_dir = work_dir / "issues"
+    attempt_dir = work_dir / "attempts"
+    lock_dir = work_dir / "locks"
+    log_path = work_dir / "dynamic-review.log"
+    status_path = ROOT / "data" / "interlinear" / book_id / "dynamic-review-status.json"
+    for path in (chunk_out_dir, reviewed_dir, issue_dir, attempt_dir, lock_dir):
+        path.mkdir(parents=True, exist_ok=True)
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+
+    api_key = os.environ.get("DEEPSEEK_API_KEY", "")
+    model = os.environ.get("AGINTI_REVIEW_MODEL") or os.environ.get("AGINTI_DEEPSEEK_MODEL", "deepseek-chat")
+    client = None
+    if not args.dry_run and not args.issue_only:
+        if not api_key:
+            print("ERROR: DEEPSEEK_API_KEY not set", file=sys.stderr)
+            return 1
+        client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com/v1", timeout=args.api_timeout)
+
+    def log(message: str) -> None:
+        line = f"{now_iso()} {message}"
+        print(line, flush=True)
+        with log_path.open("a", encoding="utf-8") as handle:
+            handle.write(line + "\n")
+
+    promoted_since_compile = 0
+
+    def run_once() -> dict[str, Any]:
+        nonlocal promoted_since_compile
+        scanned = valid = fixed = unresolved = missing = locked = api_errors = 0
+        selected = chunks[max(0, args.start_chunk - 1):]
+        if args.max_chunks:
+            selected = selected[: args.max_chunks]
+        for index, source_chunk in enumerate(selected, start=args.start_chunk):
+            chunk_id = source_chunk["chunk_id"]
+            with chunk_lock(lock_dir, chunk_id) as got_lock:
+                if not got_lock:
+                    locked += 1
+                    continue
+                compact, loaded_from = load_current_compact(chunk_id, chunk_out_dir, reviewed_dir)
+                if compact is None:
+                    missing += 1
+                    continue
+                scanned += 1
+                compact, renderer, issues = detect_issues(compact, source_chunk)
+                report: dict[str, Any] = {
+                    "book": book_id,
+                    "chunk_id": chunk_id,
+                    "chunk_index": index,
+                    "loaded_from": loaded_from,
+                    "checked_at": now_iso(),
+                    "initial_issue_count": len(issues),
+                    "initial_issues": issues,
+                    "rounds": [],
+                }
+                if not issues and renderer is not None:
+                    if not args.dry_run and not args.issue_only:
+                        promote_valid(compact, renderer, chunk_out_dir, reviewed_dir, chunk_id)
+                    valid += 1
+                    write_issue_report(issue_dir, chunk_id, report)
+                    continue
+
+                if args.dry_run or args.issue_only:
+                    unresolved += 1
+                    write_issue_report(issue_dir, chunk_id, report)
+                    log(f"{chunk_id}: detected {len(issues)} issues; not repairing")
+                    continue
+
+                current = compact
+                current_issues = issues
+                current_renderer = renderer
+                for review_round in range(1, max(1, args.review_rounds) + 1):
+                    prompt = build_review_prompt(
+                        source_chunk,
+                        current,
+                        current_issues,
+                        build_context(chunks_by_subsection, source_chunk),
+                    )
+                    prompt_path = attempt_dir / f"{chunk_id}.round-{review_round}.prompt.md"
+                    raw_path = attempt_dir / f"{chunk_id}.round-{review_round}.raw.txt"
+                    prompt_path.write_text(prompt, encoding="utf-8")
+                    raw_response = ""
+                    for attempt in range(1, max(1, args.api_retries + 1) + 1):
+                        try:
+                            raw_response = call_deepseek(
+                                client,
+                                model,
+                                REVIEW_SYSTEM_PROMPT,
+                                prompt,
+                                args.max_tokens,
+                            )
+                            break
+                        except Exception as exc:
+                            if attempt <= args.api_retries:
+                                wait_seconds = min(90.0, max(args.delay, 2.0) * attempt)
+                                log(
+                                    f"{chunk_id}: API error round={review_round} "
+                                    f"attempt={attempt}/{args.api_retries + 1}: {type(exc).__name__}: {exc}; "
+                                    f"retrying in {wait_seconds:.1f}s"
+                                )
+                                time.sleep(wait_seconds)
+                                continue
+                            api_errors += 1
+                            report["rounds"].append({
+                                "round": review_round,
+                                "api_error": f"{type(exc).__name__}: {exc}",
+                                "issues_before": current_issues,
+                            })
+                    if not raw_response:
+                        break
+                    raw_path.write_text(raw_response, encoding="utf-8")
+                    try:
+                        candidate = parse_json_response(raw_response)
+                    except Exception as exc:
+                        current_issues = [f"JSON parse error from dynamic reviewer: {exc}"]
+                        report["rounds"].append({
+                            "round": review_round,
+                            "parse_error": str(exc),
+                            "issues_after": current_issues,
+                        })
+                        continue
+                    candidate["chunk_id"] = chunk_id
+                    candidate, candidate_renderer, next_issues = detect_issues(candidate, source_chunk)
+                    report["rounds"].append({
+                        "round": review_round,
+                        "issues_before": current_issues,
+                        "issues_after": next_issues,
+                    })
+                    current = candidate
+                    current_renderer = candidate_renderer
+                    current_issues = next_issues
+                    if not current_issues and current_renderer is not None:
+                        promote_valid(current, current_renderer, chunk_out_dir, reviewed_dir, chunk_id)
+                        fixed += 1
+                        promoted_since_compile += 1
+                        log(f"{chunk_id}: dynamic review fixed and promoted")
+                        break
+                    log(f"{chunk_id}: dynamic review round {review_round} left {len(current_issues)} issues")
+                    time.sleep(args.delay)
+
+                report["final_issue_count"] = len(current_issues)
+                report["final_issues"] = current_issues
+                write_issue_report(issue_dir, chunk_id, report)
+                if current_issues:
+                    unresolved += 1
+                if args.compile_every and promoted_since_compile >= args.compile_every:
+                    compile_previews(book_id, log)
+                    promoted_since_compile = 0
+
+        summary = {
+            "book": book_id,
+            "checked_at": now_iso(),
+            "scanned": scanned,
+            "valid": valid,
+            "fixed": fixed,
+            "unresolved": unresolved,
+            "missing": missing,
+            "locked": locked,
+            "api_errors": api_errors,
+        }
+        status_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        log(
+            "summary: "
+            f"scanned={scanned} valid={valid} fixed={fixed} unresolved={unresolved} "
+            f"missing={missing} locked={locked} api_errors={api_errors}"
+        )
+        return summary
+
+    while True:
+        run_once()
+        if args.compile_at_end:
+            compile_previews(book_id, log)
+        if not args.loop:
+            break
+        log(f"sleeping {args.sleep:.0f}s before next dynamic review pass")
+        time.sleep(args.sleep)
+
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
