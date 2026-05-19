@@ -133,6 +133,20 @@ def sha256_hex(data: str) -> str:
     return hashlib.sha256(data.encode("utf-8")).hexdigest()
 
 
+def env_int(name: str, default: int) -> int:
+    try:
+        return int(os.environ.get(name, str(default)))
+    except ValueError:
+        return default
+
+
+def env_float(name: str, default: float) -> float:
+    try:
+        return float(os.environ.get(name, str(default)))
+    except ValueError:
+        return default
+
+
 def infer_zh_role(tokens: list[dict[str, Any]], index: int, seen_predicate: bool) -> str:
     text = str(tokens[index].get("t", ""))
     if text in ZH_FUNCTION_CHARS:
@@ -717,7 +731,7 @@ def build_user_prompt(chunk: dict, context_chunks: list[dict]) -> str:
 # --- API call --------------------------------------------------------------
 
 
-def call_deepseek(client: OpenAI, model: str, system: str, user: str) -> str:
+def call_deepseek(client: OpenAI, model: str, system: str, user: str, max_tokens: int) -> str:
     response = client.chat.completions.create(
         model=model,
         messages=[
@@ -725,7 +739,7 @@ def call_deepseek(client: OpenAI, model: str, system: str, user: str) -> str:
             {"role": "user", "content": user},
         ],
         temperature=0.3,
-        max_tokens=16384,
+        max_tokens=max_tokens,
     )
     return response.choices[0].message.content or ""
 
@@ -796,6 +810,12 @@ def main() -> int:
                         help="Print what would be done without calling API")
     parser.add_argument("--delay", type=float, default=0.5,
                         help="Delay in seconds between API calls")
+    parser.add_argument("--api-timeout", type=float, default=env_float("AGINTI_API_TIMEOUT", 180.0),
+                        help="Provider call timeout in seconds")
+    parser.add_argument("--api-retries", type=int, default=env_int("AGINTI_API_RETRIES", 2),
+                        help="Retry provider calls this many times before marking the chunk failed")
+    parser.add_argument("--max-tokens", type=int, default=env_int("AGINTI_MAX_TOKENS", 16384),
+                        help="Max completion tokens per provider call")
     parser.add_argument("--reviewed-dir", default="",
                         help="Renderer-ready chunk directory; default reads books/<book>/book-plan.json")
     parser.add_argument("--promote-existing", action="store_true",
@@ -836,7 +856,11 @@ def main() -> int:
         return 1
 
     model = os.environ.get("AGINTI_DEEPSEEK_MODEL", "deepseek-chat")
-    client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com/v1") if not args.dry_run else None  # type: ignore[arg-type]
+    client = OpenAI(
+        api_key=api_key,
+        base_url="https://api.deepseek.com/v1",
+        timeout=args.api_timeout,
+    ) if not args.dry_run else None  # type: ignore[arg-type]
 
     # Load chunks
     chunks: list[dict] = []
@@ -974,13 +998,32 @@ def main() -> int:
 
         # Build prompt and call API
         user_prompt = build_user_prompt(chunk, context)
-        try:
-            raw_response = call_deepseek(client, model, SYSTEM_PROMPT, user_prompt)  # type: ignore[arg-type]
-        except Exception as e:
-            log(f"  API ERROR: {e}")
-            failed_ids.add(chunk_id)
-            save_computed_status(status_path, book_id, chunks, reviewed_dir, failed_ids)
-            time.sleep(args.delay * 4)
+        raw_response = ""
+        for attempt in range(1, max(1, args.api_retries + 1) + 1):
+            try:
+                raw_response = call_deepseek(
+                    client,
+                    model,
+                    SYSTEM_PROMPT,
+                    user_prompt,
+                    args.max_tokens,
+                )  # type: ignore[arg-type]
+                break
+            except Exception as e:
+                if attempt <= args.api_retries:
+                    wait_seconds = min(90.0, max(args.delay, 2.0) * attempt)
+                    log(
+                        f"  API ERROR attempt {attempt}/{args.api_retries + 1}: "
+                        f"{type(e).__name__}: {e}; retrying in {wait_seconds:.1f}s"
+                    )
+                    time.sleep(wait_seconds)
+                    continue
+                log(f"  API ERROR final attempt {attempt}/{args.api_retries + 1}: {type(e).__name__}: {e}")
+                failed_ids.add(chunk_id)
+                save_computed_status(status_path, book_id, chunks, reviewed_dir, failed_ids)
+                time.sleep(args.delay * 4)
+                break
+        if not raw_response:
             continue
 
         # Parse JSON
