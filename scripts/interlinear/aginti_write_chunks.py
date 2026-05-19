@@ -659,6 +659,11 @@ CRITICAL RULES - follow these exactly:
 1. **Unit boundaries**: Split the paragraph into semantic units (clauses, sentences).
    Each unit's source_text and zh tokens must reconstruct the EXACT original Chinese text.
    No characters may be added, dropped, or changed.
+   The concatenation of ALL unit source_text values and ALL zh tokens must equal
+   the full paragraph after whitespace normalization.
+   Bracketed Zhu Xi notes such as 〈 ... 〉 are source text, not optional comments:
+   include the brackets, every character inside them, and all punctuation in zh.
+   Never output only the classic main-text sentences while skipping the notes.
 
 2. **Chinese tokenization (zh)**:
    - Each Chinese character (Hanzi / 漢字) MUST be its own token with `t` and `r` (pinyin).
@@ -725,6 +730,8 @@ def build_user_prompt(chunk: dict, context_chunks: list[dict]) -> str:
     parts.append("")
     parts.append("Produce the JSON annotation for this paragraph.")
     parts.append("Use semantic unit boundaries (clauses/sentences) for splitting.")
+    parts.append("Cover every character in the paragraph, including all 〈 ... 〉 note text.")
+    parts.append("Before returning JSON, verify that concatenating all zh token text exactly reconstructs the paragraph after whitespace normalization.")
     return "\n".join(parts)
 
 
