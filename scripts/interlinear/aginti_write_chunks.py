@@ -17,6 +17,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import fcntl
 import hashlib
 import json
 import os
@@ -556,7 +557,20 @@ def build_status(
             valid_count += 1
         elif first_missing is None:
             first_missing = index
-    failed_count = len(failed_ids)
+    effective_failed_ids: set[str] = set()
+    for chunk in chunks:
+        chunk_id = chunk["chunk_id"]
+        if chunk_id not in failed_ids:
+            continue
+        path = reviewed_dir / f"{chunk_id}.json"
+        if path.exists():
+            try:
+                if not validate_renderer_chunk(load_json(path), chunk):
+                    continue
+            except (json.JSONDecodeError, OSError):
+                pass
+        effective_failed_ids.add(chunk_id)
+    failed_count = len(effective_failed_ids)
     total = len(chunks)
     return {
         "book": book_id,
@@ -564,7 +578,7 @@ def build_status(
         "raw": valid_count,
         "reviewed": valid_count,
         "failed": failed_count,
-        "failed_ids": sorted(failed_ids),
+        "failed_ids": sorted(effective_failed_ids),
         "pending": max(0, total - valid_count - failed_count),
         "first_missing": first_missing,
         "last_updated": datetime.now(timezone.utc).isoformat(),
@@ -578,9 +592,16 @@ def save_computed_status(
     reviewed_dir: Path,
     failed_ids: set[str],
 ) -> dict[str, Any]:
-    status = build_status(book_id, chunks, reviewed_dir, failed_ids)
     status_path.parent.mkdir(parents=True, exist_ok=True)
-    status_path.write_text(json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    lock_path = status_path.with_suffix(status_path.suffix + ".lock")
+    with open(lock_path, "w", encoding="utf-8") as lock_fh:
+        fcntl.flock(lock_fh.fileno(), fcntl.LOCK_EX)
+        existing_failed = set(load_status(status_path).get("failed_ids", []))
+        status = build_status(book_id, chunks, reviewed_dir, existing_failed | set(failed_ids))
+        tmp = status_path.with_suffix(status_path.suffix + ".tmp")
+        tmp.write_text(json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        tmp.replace(status_path)
+        fcntl.flock(lock_fh.fileno(), fcntl.LOCK_UN)
     return status
 
 
@@ -964,6 +985,10 @@ def main() -> int:
                         help="Process only chunks currently listed in status.json as failed")
     parser.add_argument("--retry-failed-passes", type=int, default=env_int("AGINTI_RETRY_FAILED_PASSES", 1),
                         help="After a full forward run, retry failed chunks this many times")
+    parser.add_argument("--worker-count", type=int, default=env_int("AGINTI_WORKER_COUNT", 1),
+                        help="Shard work across N parallel workers (default 1)")
+    parser.add_argument("--worker-index", type=int, default=env_int("AGINTI_WORKER_INDEX", 0),
+                        help="0-based worker shard index when --worker-count > 1")
     parser.add_argument("--max-tokens", type=int, default=env_int("AGINTI_MAX_TOKENS", 16384),
                         help="Max completion tokens per provider call")
     parser.add_argument("--reviewed-dir", default="",
@@ -977,6 +1002,10 @@ def main() -> int:
     parser.add_argument("--compile-at-end", action="store_true",
                         help="Compile both preview PDFs when the run finishes")
     args = parser.parse_args()
+    if args.worker_count < 1:
+        parser.error("--worker-count must be at least 1")
+    if args.worker_index < 0 or args.worker_index >= args.worker_count:
+        parser.error("--worker-index must be between 0 and --worker-count - 1")
 
     book_id = args.book
     plan_path = ROOT / "books" / book_id / "book-plan.json"
@@ -1043,7 +1072,11 @@ def main() -> int:
 
     def log(msg: str) -> None:
         ts = datetime.now(timezone.utc).isoformat()
-        line = f"{ts} {msg}"
+        worker_prefix = (
+            f"[worker {args.worker_index + 1}/{args.worker_count}] "
+            if args.worker_count > 1 else ""
+        )
+        line = f"{ts} {worker_prefix}{msg}"
         print(line)
         log_fh.write(line + "\n")
         log_fh.flush()
@@ -1066,13 +1099,24 @@ def main() -> int:
     newly_promoted = 0
     start_idx = max(0, args.start_chunk - 1)
     if args.failed_only:
-        selected_indices = [
+        base_indices = [
             index for index, chunk in enumerate(chunks)
             if index >= start_idx and chunk["chunk_id"] in failed_ids
         ]
-        log(f"Failed-only mode: processing {len(selected_indices)} failed chunks")
+        log(f"Failed-only mode: selected {len(base_indices)} failed chunks")
     else:
-        selected_indices = range(start_idx, total)
+        base_indices = range(start_idx, total)
+    if args.worker_count > 1:
+        selected_indices = [
+            index for index in base_indices
+            if index % args.worker_count == args.worker_index
+        ]
+        log(
+            f"Shard mode: worker {args.worker_index + 1}/{args.worker_count} "
+            f"processing {len(selected_indices)} selected chunks"
+        )
+    else:
+        selected_indices = base_indices
 
     for idx in selected_indices:
         if args.max_chunks and processed >= args.max_chunks:
