@@ -348,6 +348,9 @@ def validate_unit(unit: dict, where: str) -> list[str]:
     if not isinstance(ja, list) or len(ja) != 2:
         errs.append(f"{where}: ja must be exactly two line arrays")
     else:
+        roles = unit.get("ja_line_roles", ["gloss", "explanatory_comment"])
+        if roles != ["gloss", "explanatory_comment"]:
+            errs.append(f"{where}: ja_line_roles must be ['gloss', 'explanatory_comment'] when present")
         for li in range(2):
             line = ja[li]
             if not isinstance(line, list):
@@ -372,6 +375,29 @@ def validate_unit(unit: dict, where: str) -> list[str]:
             f"got {normalize(zh_text)[:60]!r}, expected {normalize(source)[:60]!r}"
         )
     return errs
+
+
+def ensure_unit_line_roles(unit: dict[str, Any]) -> dict[str, Any]:
+    if isinstance(unit, dict) and isinstance(unit.get("ja"), list) and len(unit["ja"]) == 2:
+        unit["ja_line_roles"] = ["gloss", "explanatory_comment"]
+    return unit
+
+
+def ensure_line_roles(data: dict[str, Any]) -> dict[str, Any]:
+    units = data.get("units")
+    if isinstance(units, list):
+        for unit in units:
+            ensure_unit_line_roles(unit)
+    paragraphs = data.get("paragraphs")
+    if isinstance(paragraphs, list):
+        for paragraph in paragraphs:
+            if not isinstance(paragraph, dict):
+                continue
+            paragraph_units = paragraph.get("units")
+            if isinstance(paragraph_units, list):
+                for unit in paragraph_units:
+                    ensure_unit_line_roles(unit)
+    return data
 
 
 def validate_chunk_output(data: dict) -> list[str]:
@@ -402,7 +428,7 @@ def wrap_renderer_chunk(data: dict[str, Any], source_chunk: dict[str, Any]) -> d
             f"got {len(paragraphs)}"
         )
     paragraph = paragraphs[0]
-    units = data.get("units", [])
+    units = [ensure_unit_line_roles(unit) for unit in data.get("units", [])]
     section_title = source_chunk.get("section_title", "")
     subsection_title = source_chunk.get("subsection_title", "")
     story_title = source_chunk.get("story_title", "")
@@ -438,6 +464,7 @@ def wrap_renderer_chunk(data: dict[str, Any], source_chunk: dict[str, Any]) -> d
 
 def refresh_renderer_metadata(renderer_chunk: dict[str, Any], source_chunk: dict[str, Any]) -> dict[str, Any]:
     """Refresh source-derived section/story titles without changing generated units."""
+    ensure_line_roles(renderer_chunk)
     title_fields = (
         ("section", "section_id", "section_title", "__section__"),
         ("subsection", "subsection_id", "subsection_title", "__subsection__"),
@@ -646,6 +673,7 @@ The JSON format:
     {
       "source_text": "<the exact Chinese source for this unit>",
       "zh": [{"t": "<char>", "r": "<pinyin>"}, ...],
+      "ja_line_roles": ["gloss", "explanatory_comment"],
       "ja": [
         [{"t": "<token>", "r": "<furigana>"}, ...],
         [{"t": "<token>", "r": "<furigana>"}, ...]
@@ -673,15 +701,29 @@ CRITICAL RULES - follow these exactly:
    - Non-Hanzi elements like 「, 」, 〈, 〉 are separate tokens.
    - Pinyin must be lowercase with tone numbers (1-4) or tone marks.
 
-3. **Japanese commentary (ja)**:
+3. **Japanese lines (ja)**:
    - ja is an array of exactly TWO lines (token arrays).
-   - **Line 0 (reading/gloss)**: A Japanese gloss reflecting the Chinese meaning in
-     natural Japanese. Each kanji character MUST be its own token with furigana in `r`.
-     Kana tokens have `r` set to "".
-   - **Line 1 (explanatory comment)**: A scholarly Japanese commentary on the unit's
-     meaning, in Zhu Xi's interpretive tradition. Each kanji is its own token with
-     furigana. Use NATURAL MIXED KANJI/KANA - do NOT write kana-only sentences.
-     Use proper Japanese scholarly vocabulary with 漢字.
+   - Add `"ja_line_roles": ["gloss", "explanatory_comment"]` to every unit.
+   - **Line 0 = gloss**: a concise Japanese reading/gloss for the Chinese unit,
+     close to the source meaning and suitable as the main Japanese line. It may be
+     kunyomi/kanbun-like when helpful, but must remain readable natural Japanese.
+     Each kanji character MUST be its own token with furigana in `r`. Kana tokens
+     have `r` set to "".
+   - **Line 1 = explanatory_comment**: a short scholarly Japanese note explaining
+     the unit's sense, grammar, or Zhu Xi-style interpretive point. It is NOT a
+     second translation. Make it visibly different in function from line 0: use
+     concise commentary vocabulary such as ここでは, すなわち, 注として, 義は, など
+     when appropriate. Use NATURAL MIXED KANJI/KANA - do NOT write kana-only
+     sentences. Each kanji is its own token with furigana.
+   - The renderer treats line 0 as the main Japanese gloss and line 1 as a smaller
+     explanatory comment line with a note mark/wavy guide. Keep the data role clear.
+   - The same JSON may be rendered in either direction:
+     * zh-main: `zh` is the large continuous main text; ja line 0 is the Japanese
+       gloss under it; ja line 1 is a smaller slanted Japanese explanatory note.
+     * jp-main: ja line 0 is the large continuous Japanese main text; ja line 1 is
+       the smaller slanted Japanese note; `zh` becomes the separate Chinese comment.
+     Therefore do not duplicate line 0 in line 1, and do not use line 1 as a second
+     plain translation.
 
 4. **Grammar roles (g)**:
    - Every Chinese Hanzi token in `zh` MUST have `g`.
@@ -739,15 +781,27 @@ def build_user_prompt(chunk: dict, context_chunks: list[dict]) -> str:
 
 
 def call_deepseek(client: OpenAI, model: str, system: str, user: str, max_tokens: int) -> str:
-    response = client.chat.completions.create(
-        model=model,
-        messages=[
+    payload: dict[str, Any] = {
+        "model": model,
+        "messages": [
             {"role": "system", "content": system},
             {"role": "user", "content": user},
         ],
-        temperature=0.3,
-        max_tokens=max_tokens,
-    )
+        "temperature": 0.3,
+        "max_tokens": max_tokens,
+    }
+    response_format = os.environ.get("AGINTI_DEEPSEEK_RESPONSE_FORMAT", "json_object").strip().lower()
+    if response_format in {"json_object", "auto"}:
+        payload["response_format"] = {"type": "json_object"}
+    try:
+        response = client.chat.completions.create(**payload)
+    except Exception as exc:
+        message = str(exc)
+        if "response_format" in payload and re.search(r"response_format|json_object|unsupported|invalid", message, re.I):
+            payload.pop("response_format", None)
+            response = client.chat.completions.create(**payload)
+        else:
+            raise
     return response.choices[0].message.content or ""
 
 

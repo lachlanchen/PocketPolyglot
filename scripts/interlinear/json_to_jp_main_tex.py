@@ -55,12 +55,11 @@ def render_tokens(tokens: list[dict[str, str]], ruby_cmd: str, breakable: bool =
     return "".join(parts)
 
 
-def render_ja_lines(unit: dict[str, Any]) -> str:
+def render_ja_line(unit: dict[str, Any], index: int) -> str:
     lines = unit.get("ja", [])
-    tokens: list[dict[str, str]] = []
-    for line in lines:
-        tokens.extend(line)
-    return render_tokens(tokens, "jpruby", breakable=True)
+    if index >= len(lines) or not isinstance(lines[index], list):
+        return ""
+    return render_tokens(lines[index], "jpruby", breakable=True)
 
 
 def brace(text: str) -> str:
@@ -94,9 +93,10 @@ def render_author(author: str, author_reading: str) -> str:
 
 
 def emit_unit(unit: dict[str, Any]) -> str:
-    ja = render_ja_lines(unit)
+    ja_gloss = render_ja_line(unit, 0)
+    ja_comment = render_ja_line(unit, 1)
     zh = render_tokens(unit["zh"], "zhpy", breakable=True)
-    return "\n".join([r"\JpMainUnit", brace(ja), brace(zh), ""])
+    return "\n".join([r"\JpMainUnit", brace(ja_gloss), brace(ja_comment), brace(zh), ""])
 
 
 def convert(
