@@ -80,6 +80,27 @@ SISHU_TITLE_FURIGANA = {
     "讀": "どく", "辨": "べん", "附": "ふ", "集": "しゅう",
 }
 
+ZH_FUNCTION_CHARS = set("之其所而以於于乎也矣焉者則乃若夫蓋故是此彼與为爲")
+ZH_ADVERBIAL_CHARS = set("不未無莫皆既亦必或自始先後后復又常嘗猶甚乃遂竊私極")
+ZH_PREDICATE_CHARS = set("曰云謂為爲有無學教敎知行明修治正誠致格得失作立出入求盡尽全復见見用命使司設分發补補採采輯尊信接俟逃")
+
+JA_VERBISH_KANJI = set("教生降与與知全尽盡出命使治復修学學明行為爲有無見求作立設分発發補采採輯尊信接待逃用得失")
+JA_ADVERBIAL_KANJI = set("不未無皆既亦必自復又常極")
+JA_FUNCTION_KANJI = set("之其所而以於故是此者則夫蓋")
+JA_PARTICLE_ROLE = {
+    "は": "topic",
+    "も": "topic",
+    "が": "subject",
+    "を": "object",
+    "に": "adverbial",
+    "へ": "adverbial",
+    "で": "adverbial",
+    "から": "adverbial",
+    "より": "adverbial",
+    "と": "adverbial",
+    "の": "attributive",
+}
+
 # --- Helpers ---------------------------------------------------------------
 
 
@@ -99,6 +120,10 @@ def is_single_han(text: str) -> bool:
     return bool(SINGLE_HAN.fullmatch(text))
 
 
+def is_punctuation(text: str) -> bool:
+    return bool(text) and not has_han(text) and not re.search(r"[A-Za-z0-9\u3040-\u30ff]", text)
+
+
 def is_kana_only(text: str) -> bool:
     """True if text contains only kana/punctuation and no kanji."""
     return bool(KANA_ONLY_RE.fullmatch(text)) and not has_han(text)
@@ -106,6 +131,116 @@ def is_kana_only(text: str) -> bool:
 
 def sha256_hex(data: str) -> str:
     return hashlib.sha256(data.encode("utf-8")).hexdigest()
+
+
+def infer_zh_role(tokens: list[dict[str, Any]], index: int, seen_predicate: bool) -> str:
+    text = str(tokens[index].get("t", ""))
+    if text in ZH_FUNCTION_CHARS:
+        return "function"
+    if text in ZH_ADVERBIAL_CHARS:
+        return "adverbial"
+    if text in ZH_PREDICATE_CHARS:
+        return "predicate"
+    return "object" if seen_predicate else "subject"
+
+
+def backfill_zh_roles(tokens: Any) -> None:
+    if not isinstance(tokens, list):
+        return
+    seen_predicate = any(str(tok.get("g", "")) == "predicate" for tok in tokens if isinstance(tok, dict))
+    local_seen_predicate = False
+    for index, tok in enumerate(tokens):
+        if not isinstance(tok, dict):
+            continue
+        role = str(tok.get("g", "") or "")
+        if role == "predicate":
+            local_seen_predicate = True
+        text = str(tok.get("t", ""))
+        if is_single_han(text) and not role:
+            inferred = infer_zh_role(tokens, index, local_seen_predicate or seen_predicate)
+            tok["g"] = inferred
+            if inferred == "predicate":
+                local_seen_predicate = True
+        elif is_punctuation(text) and "g" not in tok:
+            tok["g"] = ""
+
+
+def next_text(tokens: list[dict[str, Any]], index: int) -> str:
+    if index + 1 >= len(tokens):
+        return ""
+    nxt = tokens[index + 1]
+    if not isinstance(nxt, dict):
+        return ""
+    return str(nxt.get("t", ""))
+
+
+def infer_ja_role(tokens: list[dict[str, Any]], index: int) -> str:
+    text = str(tokens[index].get("t", ""))
+    nxt = next_text(tokens, index)
+    if text in JA_FUNCTION_KANJI:
+        return "function"
+    if text in JA_ADVERBIAL_KANJI:
+        return "adverbial"
+    if text in JA_VERBISH_KANJI:
+        return "predicate"
+    for particle, role in JA_PARTICLE_ROLE.items():
+        if nxt.startswith(particle):
+            return role
+    if nxt and re.match(r"^[うくぐすずつづぬぶむるたてでだないますられさせしじ]", nxt):
+        return "predicate"
+    prev = str(tokens[index - 1].get("t", "")) if index > 0 and isinstance(tokens[index - 1], dict) else ""
+    if prev.endswith("の"):
+        return "attributive"
+    return "attributive"
+
+
+def backfill_ja_roles(tokens: Any) -> None:
+    if not isinstance(tokens, list):
+        return
+    for index, tok in enumerate(tokens):
+        if not isinstance(tok, dict):
+            continue
+        text = str(tok.get("t", ""))
+        if is_single_han(text) and not tok.get("g"):
+            tok["g"] = infer_ja_role(tokens, index)
+        elif text in JA_PARTICLE_ROLE and not tok.get("g"):
+            tok["g"] = JA_PARTICLE_ROLE[text]
+        elif text and not has_han(text) and not is_punctuation(text) and not tok.get("g"):
+            for particle, role in JA_PARTICLE_ROLE.items():
+                if text.startswith(particle):
+                    tok["g"] = role
+                    break
+
+
+def backfill_unit_roles(unit: Any) -> None:
+    if not isinstance(unit, dict):
+        return
+    backfill_zh_roles(unit.get("zh"))
+    ja = unit.get("ja")
+    if isinstance(ja, list):
+        for line in ja:
+            backfill_ja_roles(line)
+
+
+def backfill_missing_roles(data: dict[str, Any]) -> dict[str, Any]:
+    """Fill missing broad grammar roles in compact or renderer-ready chunks.
+
+    The model remains responsible for high-quality grammar labeling. This
+    fallback prevents a small number of omitted `g` fields from producing
+    all-black color previews or blocking otherwise valid chunks.
+    """
+    for unit in data.get("units", []) if isinstance(data.get("units"), list) else []:
+        backfill_unit_roles(unit)
+    paragraphs = data.get("paragraphs")
+    if isinstance(paragraphs, list):
+        for paragraph in paragraphs:
+            if not isinstance(paragraph, dict):
+                continue
+            units = paragraph.get("units")
+            if isinstance(units, list):
+                for unit in units:
+                    backfill_unit_roles(unit)
+    return data
 
 
 def title_tokens(text: str, readings: dict[str, str]) -> list[dict[str, str]]:
@@ -456,7 +591,9 @@ def promote_existing_outputs(
             continue
         if is_renderer_chunk(data):
             renderer = refresh_renderer_metadata(data, source_chunk)
+            backfill_missing_roles(renderer)
         else:
+            backfill_missing_roles(data)
             raw_errs = validate_chunk_output(data)
             if raw_errs:
                 log(f"  {chunk_id}: existing compact output invalid ({len(raw_errs)} errors)")
@@ -739,7 +876,7 @@ def main() -> int:
 
     if args.promote_existing or args.promote_existing_only:
         promoted, existing_failed = promote_existing_outputs(chunks, chunk_out_dir, reviewed_dir, log)
-        failed_ids.update(existing_failed)
+        failed_ids = existing_failed
         status = save_computed_status(status_path, book_id, chunks, reviewed_dir, failed_ids)
         log(
             f"Promoted existing outputs: promoted={promoted} "
@@ -772,9 +909,11 @@ def main() -> int:
                 existing = load_json(reviewed_path)
                 if is_renderer_chunk(existing):
                     existing = refresh_renderer_metadata(existing, chunk)
+                backfill_missing_roles(existing)
                 errs = validate_renderer_chunk(existing, chunk)
                 if not errs:
                     promote_renderer_chunk(existing, out_path, reviewed_path)
+                    failed_ids.discard(chunk_id)
                     processed += 1
                     continue
                 else:
@@ -788,7 +927,9 @@ def main() -> int:
                 existing = load_json(out_path)
                 if is_renderer_chunk(existing):
                     renderer = refresh_renderer_metadata(existing, chunk)
+                    backfill_missing_roles(renderer)
                 else:
+                    backfill_missing_roles(existing)
                     raw_errs = validate_chunk_output(existing)
                     if raw_errs:
                         renderer = None
@@ -800,6 +941,7 @@ def main() -> int:
                     errs = validate_renderer_chunk(renderer, chunk)
                     if not errs:
                         promote_renderer_chunk(renderer, out_path, reviewed_path)
+                        failed_ids.discard(chunk_id)
                         processed += 1
                         newly_promoted += 1
                         if args.compile_every and newly_promoted % args.compile_every == 0:
@@ -876,6 +1018,7 @@ def main() -> int:
 
         # Validate compact model output and renderer wrapper.
         data["chunk_id"] = chunk_id
+        backfill_missing_roles(data)
         errs = validate_chunk_output(data)
         renderer: dict[str, Any] | None = None
         if not errs:
