@@ -27,8 +27,10 @@ from aginti_write_chunks import (
     HAN_RE,
     OpenAI,
     ROOT,
+    SYSTEM_PROMPT as WRITE_SYSTEM_PROMPT,
     atomic_write_json,
     backfill_missing_roles,
+    build_user_prompt as build_write_user_prompt,
     call_deepseek,
     compile_previews,
     has_han,
@@ -565,13 +567,19 @@ def build_review_prompt(
         parts.append(f"- ... {len(issues) - 40} more issues omitted from prompt")
     parts.append("--- End issues ---")
     parts.append("")
-    severe_source_mismatch = any("common_prefix=0" in issue for issue in issues)
-    if severe_source_mismatch:
+    rebuild_from_source = any(
+        "common_prefix=0" in issue
+        or "all units source_text: text reconstruction mismatch" in issue
+        or "units do not reconstruct paragraph source_text" in issue
+        for issue in issues
+    )
+    if rebuild_from_source:
         parts.append("--- Current compact JSON omitted ---")
         parts.append(
-            "The deterministic reviewer found that the current JSON begins with a different source text. "
-            "Do not patch or reuse its units. Rebuild a complete compact JSON annotation from the original "
-            "Chinese paragraph above."
+            "The deterministic reviewer found that the current JSON does not reconstruct the source paragraph. "
+            "Do not patch or reuse its unit boundaries. Rebuild a complete compact JSON annotation from the exact "
+            "original Chinese paragraph above. Include every source character and do not add closing brackets or "
+            "comment text that is not present in the original paragraph."
         )
         parts.append("--- End current compact JSON omitted ---")
     else:
@@ -722,7 +730,90 @@ def main() -> int:
                     continue
                 compact, loaded_from = load_current_compact(chunk_id, chunk_out_dir, reviewed_dir)
                 if compact is None:
+                    report: dict[str, Any] = {
+                        "book": book_id,
+                        "chunk_id": chunk_id,
+                        "chunk_index": index,
+                        "loaded_from": "",
+                        "checked_at": now_iso(),
+                        "initial_issue_count": 1,
+                        "initial_issues": ["missing or corrupt compact JSON; rebuilding from source"],
+                        "rounds": [],
+                    }
+                    if args.dry_run or args.issue_only:
+                        missing += 1
+                        write_issue_report(issue_dir, chunk_id, report)
+                        log(f"{chunk_id}: missing current compact; not rebuilding")
+                        continue
+                    prompt = build_write_user_prompt(source_chunk, build_context(chunks_by_subsection, source_chunk))
+                    prompt_path = attempt_dir / f"{chunk_id}.rebuild.prompt.md"
+                    raw_path = attempt_dir / f"{chunk_id}.rebuild.raw.txt"
+                    prompt_path.write_text(prompt, encoding="utf-8")
+                    raw_response = ""
+                    for attempt in range(1, max(1, args.api_retries + 1) + 1):
+                        try:
+                            raw_response = call_deepseek(
+                                client,
+                                model,
+                                WRITE_SYSTEM_PROMPT,
+                                prompt,
+                                args.max_tokens,
+                            )
+                            break
+                        except Exception as exc:
+                            if attempt <= args.api_retries:
+                                wait_seconds = min(90.0, max(args.delay, 2.0) * attempt)
+                                log(
+                                    f"{chunk_id}: rebuild API error attempt={attempt}/{args.api_retries + 1}: "
+                                    f"{type(exc).__name__}: {exc}; retrying in {wait_seconds:.1f}s"
+                                )
+                                time.sleep(wait_seconds)
+                                continue
+                            api_errors += 1
+                            report["rounds"].append({
+                                "round": "rebuild",
+                                "api_error": f"{type(exc).__name__}: {exc}",
+                            })
+                    if not raw_response:
+                        missing += 1
+                        report["final_issue_count"] = 1
+                        report["final_issues"] = ["missing or corrupt compact JSON; rebuild API returned no response"]
+                        write_issue_report(issue_dir, chunk_id, report)
+                        continue
+                    raw_path.write_text(raw_response, encoding="utf-8")
+                    try:
+                        candidate = parse_json_response(raw_response)
+                    except Exception as exc:
+                        missing += 1
+                        report["rounds"].append({
+                            "round": "rebuild",
+                            "parse_error": str(exc),
+                        })
+                        report["final_issue_count"] = 1
+                        report["final_issues"] = [f"JSON parse error from rebuild: {exc}"]
+                        write_issue_report(issue_dir, chunk_id, report)
+                        continue
+                    candidate["chunk_id"] = chunk_id
+                    candidate, candidate_renderer, next_issues = detect_issues(candidate, source_chunk)
+                    report["rounds"].append({
+                        "round": "rebuild",
+                        "issues_after": next_issues,
+                    })
+                    if not next_issues and candidate_renderer is not None:
+                        promote_valid(candidate, candidate_renderer, chunk_out_dir, reviewed_dir, chunk_id)
+                        fixed += 1
+                        fixed_ids.add(chunk_id)
+                        promoted_since_compile += 1
+                        report["final_issue_count"] = 0
+                        report["final_issues"] = []
+                        write_issue_report(issue_dir, chunk_id, report)
+                        log(f"{chunk_id}: rebuilt missing compact and promoted")
+                        continue
                     missing += 1
+                    report["final_issue_count"] = len(next_issues)
+                    report["final_issues"] = next_issues
+                    write_issue_report(issue_dir, chunk_id, report)
+                    log(f"{chunk_id}: rebuild left {len(next_issues)} issues")
                     continue
                 scanned += 1
                 compact, renderer, issues = detect_issues(compact, source_chunk)
