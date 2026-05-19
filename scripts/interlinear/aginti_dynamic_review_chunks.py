@@ -401,6 +401,28 @@ def promote_valid(
     promote_renderer_chunk(renderer, out_path, reviewed_path)
 
 
+def salvage_previous_attempt(
+    attempt_dir: Path,
+    chunk_id: str,
+    source_chunk: dict[str, Any],
+) -> tuple[dict[str, Any], dict[str, Any], Path] | None:
+    attempts = sorted(
+        attempt_dir.glob(f"{chunk_id}.round-*.raw.txt"),
+        key=lambda path: path.stat().st_mtime,
+        reverse=True,
+    )
+    for raw_path in attempts:
+        try:
+            candidate = parse_json_response(raw_path.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        candidate["chunk_id"] = chunk_id
+        compact, renderer, issues = detect_issues(candidate, source_chunk)
+        if not issues and renderer is not None:
+            return compact, renderer, raw_path
+    return None
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--book", default="sishu-jizhu-aginti")
@@ -496,6 +518,24 @@ def main() -> int:
                     unresolved += 1
                     write_issue_report(issue_dir, chunk_id, report)
                     log(f"{chunk_id}: detected {len(issues)} issues; not repairing")
+                    continue
+
+                salvaged = salvage_previous_attempt(attempt_dir, chunk_id, source_chunk)
+                if salvaged is not None:
+                    salvaged_compact, salvaged_renderer, raw_attempt_path = salvaged
+                    promote_valid(salvaged_compact, salvaged_renderer, chunk_out_dir, reviewed_dir, chunk_id)
+                    fixed += 1
+                    fixed_ids.add(chunk_id)
+                    promoted_since_compile += 1
+                    report["rounds"].append({
+                        "round": "salvage_previous_attempt",
+                        "raw_attempt": str(raw_attempt_path.relative_to(ROOT)),
+                        "issues_after": [],
+                    })
+                    report["final_issue_count"] = 0
+                    report["final_issues"] = []
+                    write_issue_report(issue_dir, chunk_id, report)
+                    log(f"{chunk_id}: salvaged previous dynamic review attempt and promoted")
                     continue
 
                 current = compact

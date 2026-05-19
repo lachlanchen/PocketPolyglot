@@ -257,6 +257,21 @@ def ja_compound_readings(text: str, reading: str = "") -> list[str]:
     return [kakasi_hira(char) or reading or "" for char in han_chars]
 
 
+def repair_swapped_reading_role(tok: dict[str, Any]) -> None:
+    """Fix common model output where reading and grammar role are swapped."""
+    text = str(tok.get("t", ""))
+    reading = str(tok.get("r", "") or "")
+    role = str(tok.get("g", "") or "")
+    if reading in GRAMMAR_ROLES and role and role not in GRAMMAR_ROLES:
+        tok["r"] = role
+        tok["g"] = reading
+    elif not is_single_han(text) and reading in GRAMMAR_ROLES and not role and not is_punctuation(text):
+        tok["r"] = ""
+        tok["g"] = reading
+    elif role and role not in GRAMMAR_ROLES:
+        tok["g"] = ""
+
+
 def normalize_ja_line_tokens(tokens: Any) -> None:
     if not isinstance(tokens, list):
         return
@@ -264,6 +279,7 @@ def normalize_ja_line_tokens(tokens: Any) -> None:
     for tok in tokens:
         if not isinstance(tok, dict):
             continue
+        repair_swapped_reading_role(tok)
         text = str(tok.get("t", ""))
         reading = str(tok.get("r", "") or "")
         role = tok.get("g")
@@ -300,6 +316,9 @@ def canonicalize_zh_tokens_from_source(unit: Any) -> None:
     tokens = unit.get("zh")
     if not source or not isinstance(tokens, list):
         return
+    for tok in tokens:
+        if isinstance(tok, dict):
+            repair_swapped_reading_role(tok)
     han_tokens = [
         tok for tok in tokens
         if isinstance(tok, dict) and is_single_han(str(tok.get("t", "")))
@@ -348,6 +367,7 @@ def backfill_zh_roles(tokens: Any) -> None:
     for index, tok in enumerate(tokens):
         if not isinstance(tok, dict):
             continue
+        repair_swapped_reading_role(tok)
         role = str(tok.get("g", "") or "")
         if role == "predicate":
             local_seen_predicate = True
@@ -396,6 +416,7 @@ def backfill_ja_roles(tokens: Any) -> None:
     for index, tok in enumerate(tokens):
         if not isinstance(tok, dict):
             continue
+        repair_swapped_reading_role(tok)
         text = str(tok.get("t", ""))
         if is_single_han(text) and not tok.get("g"):
             tok["g"] = infer_ja_role(tokens, index)
