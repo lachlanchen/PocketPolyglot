@@ -123,7 +123,10 @@ def load_current_compact(
     for path, label in candidates:
         if not path.exists():
             continue
-        data = load_json(path)
+        try:
+            data = load_json(path)
+        except (json.JSONDecodeError, OSError):
+            continue
         if is_renderer_chunk(data):
             return compact_from_renderer(data, chunk_id), label
         if isinstance(data.get("units"), list):
