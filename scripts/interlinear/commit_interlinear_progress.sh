@@ -99,11 +99,22 @@ for extra in "${extras[@]}"; do
   fi
 done
 
-git add -- "${pathspecs[@]}"
-echo "Progress git status:"
-git status --short --untracked-files=no -- "${pathspecs[@]}" || true
+filtered_pathspecs=()
+for pathspec in "${pathspecs[@]}"; do
+  if git ls-files --error-unmatch "$pathspec" >/dev/null 2>&1; then
+    filtered_pathspecs+=("$pathspec")
+  elif git check-ignore -q -- "$pathspec"; then
+    echo "Skipping ignored untracked path: $pathspec"
+  else
+    filtered_pathspecs+=("$pathspec")
+  fi
+done
 
-if git diff --cached --quiet -- "${pathspecs[@]}"; then
+git add -- "${filtered_pathspecs[@]}"
+echo "Progress git status:"
+git status --short --untracked-files=no -- "${filtered_pathspecs[@]}" || true
+
+if git diff --cached --quiet -- "${filtered_pathspecs[@]}"; then
   echo "No tracked ${book_id} progress changes to commit."
   exit 0
 fi
@@ -119,4 +130,4 @@ print(data.get("last_valid") or "no-chunk")
 PY
 )"
 
-git commit -m "${message_prefix} ${last_valid}" -- "${pathspecs[@]}"
+git commit -m "${message_prefix} ${last_valid}" -- "${filtered_pathspecs[@]}"
