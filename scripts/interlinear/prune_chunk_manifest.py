@@ -25,6 +25,19 @@ def chunk_text(chunk: dict[str, Any]) -> str:
     return "\n".join(str(paragraph.get("text", "")) for paragraph in chunk.get("paragraphs", []))
 
 
+def base_paragraph_id(paragraph_id: str) -> str:
+    return re.sub(r"-part-\d+$", "", paragraph_id)
+
+
+def paragraph_bases(chunks: list[dict[str, Any]]) -> set[str]:
+    return {
+        base_paragraph_id(str(paragraph.get("id", "")))
+        for chunk in chunks
+        for paragraph in chunk.get("paragraphs", [])
+        if paragraph.get("id")
+    }
+
+
 def backup(path: Path, stamp: str) -> Path:
     target = path.with_suffix(path.suffix + f".bak-{stamp}")
     shutil.copy2(path, target)
@@ -77,14 +90,12 @@ def main() -> int:
         encoding="utf-8",
     )
     manifest["chunk_count"] = len(kept)
-    manifest["paragraph_count"] = len(
-        {
-            paragraph.get("id")
-            for chunk in kept
-            for paragraph in chunk.get("paragraphs", [])
-            if paragraph.get("id")
-        }
-    )
+    old_paragraph_count = int(manifest.get("paragraph_count") or 0)
+    pruned_bases = paragraph_bases(pruned) - paragraph_bases(kept)
+    if old_paragraph_count:
+        manifest["paragraph_count"] = max(0, old_paragraph_count - len(pruned_bases))
+    else:
+        manifest["paragraph_count"] = len(paragraph_bases(kept))
     manifest["chunks"] = manifest_chunks
     manifest.setdefault("pruned_chunks", [])
     manifest["pruned_chunks"].extend(
