@@ -1,0 +1,988 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01225",
+  "source_text": "花朵已经凋谢。上下两株小小的紫花地丁大概是千重子和苗子的象征吧？看样子，这两株紫花地丁以前不曾见过面，而今晚是不是已经相会了呢？在朦胧的灯光下，千重子凝望着这两株紫花地丁，不觉又一次噙上了眼泪。",
+  "source_sha256": "60726c68dcafe2ad1131a68433d88ffad5290aa2280c0dd91bea0000a9d2256c",
+  "source_normalized_sha256": "60726c68dcafe2ad1131a68433d88ffad5290aa2280c0dd91bea0000a9d2256c",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 163,
+    "grammar_token_total": 163,
+    "unit_count": 4
+  },
+  "source_chunk_id": "the-old-capital-chunk-1225",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "祇园节",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "attributive"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "attributive"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "attributive"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "attributive"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-祇园节-intro",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "attributive"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "attributive"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "attributive"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "attributive"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01225",
+    "source_text": "花朵已经凋谢。上下两株小小的紫花地丁大概是千重子和苗子的象征吧？看样子，这两株紫花地丁以前不曾见过面，而今晚是不是已经相会了呢？在朦胧的灯光下，千重子凝望着这两株紫花地丁，不觉又一次噙上了眼泪。",
+    "units": [
+      {
+        "source_text": "花朵已经凋谢。",
+        "zh": [
+          {
+            "t": "花",
+            "r": "huā",
+            "g": "subject"
+          },
+          {
+            "t": "朵",
+            "r": "duǒ",
+            "g": "subject"
+          },
+          {
+            "t": "已",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "经",
+            "r": "jīng",
+            "g": "adverbial"
+          },
+          {
+            "t": "凋",
+            "r": "diāo",
+            "g": "predicate"
+          },
+          {
+            "t": "谢",
+            "r": "xiè",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "花",
+              "r": "はな",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "もう",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "凋",
+              "r": "しぼ",
+              "g": "predicate"
+            },
+            {
+              "t": "んでしまっていた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "上下两株小小的紫花地丁大概是千重子和苗子的象征吧？",
+        "zh": [
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "attributive"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "attributive"
+          },
+          {
+            "t": "两",
+            "r": "liǎng",
+            "g": "attributive"
+          },
+          {
+            "t": "株",
+            "r": "zhū",
+            "g": "attributive"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "紫",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "花",
+            "r": "huā",
+            "g": "subject"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "subject"
+          },
+          {
+            "t": "丁",
+            "r": "dīng",
+            "g": "subject"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "adverbial"
+          },
+          {
+            "t": "概",
+            "r": "gài",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "千",
+            "r": "qiān",
+            "g": "attributive"
+          },
+          {
+            "t": "重",
+            "r": "chóng",
+            "g": "attributive"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "function"
+          },
+          {
+            "t": "苗",
+            "r": "miáo",
+            "g": "attributive"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "象",
+            "r": "xiàng",
+            "g": "object"
+          },
+          {
+            "t": "征",
+            "r": "zhēng",
+            "g": "object"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "上",
+              "r": "うえ",
+              "g": "attributive"
+            },
+            {
+              "t": "下",
+              "r": "した",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "二",
+              "r": "ふた",
+              "g": "attributive"
+            },
+            {
+              "t": "株",
+              "r": "かぶ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "小",
+              "r": "ちい",
+              "g": "attributive"
+            },
+            {
+              "t": "さな",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "菫",
+              "r": "すみれ",
+              "g": "subject"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "千",
+              "r": "ち",
+              "g": "attributive"
+            },
+            {
+              "t": "重",
+              "r": "え",
+              "g": "attributive"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "attributive"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "苗",
+              "r": "なえ",
+              "g": "attributive"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "象",
+              "r": "しょう",
+              "g": "object"
+            },
+            {
+              "t": "徴",
+              "r": "ちょう",
+              "g": "object"
+            },
+            {
+              "t": "なのだろう。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "看样子，这两株紫花地丁以前不曾见过面，而今晚是不是已经相会了呢？",
+        "zh": [
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "样",
+            "r": "yàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "两",
+            "r": "liǎng",
+            "g": "subject"
+          },
+          {
+            "t": "株",
+            "r": "zhū",
+            "g": "subject"
+          },
+          {
+            "t": "紫",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "花",
+            "r": "huā",
+            "g": "subject"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "subject"
+          },
+          {
+            "t": "丁",
+            "r": "dīng",
+            "g": "subject"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "前",
+            "r": "qián",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "曾",
+            "r": "céng",
+            "g": "adverbial"
+          },
+          {
+            "t": "见",
+            "r": "jiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "predicate"
+          },
+          {
+            "t": "面",
+            "r": "miàn",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "而",
+            "r": "ér",
+            "g": "function"
+          },
+          {
+            "t": "今",
+            "r": "jīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "晚",
+            "r": "wǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "不",
+            "r": "bú",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "已",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "经",
+            "r": "jīng",
+            "g": "adverbial"
+          },
+          {
+            "t": "相",
+            "r": "xiāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "呢",
+            "r": "ne",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "どうやら、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "この",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "二",
+              "r": "ふた",
+              "g": "subject"
+            },
+            {
+              "t": "株",
+              "r": "かぶ",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "菫",
+              "r": "すみれ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "前",
+              "r": "まえ",
+              "g": "adverbial"
+            },
+            {
+              "t": "には",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "会",
+              "r": "あ",
+              "g": "predicate"
+            },
+            {
+              "t": "ったことがなく、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "今",
+              "r": "こん",
+              "g": "adverbial"
+            },
+            {
+              "t": "夜",
+              "r": "や",
+              "g": "adverbial"
+            },
+            {
+              "t": "もう",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "出",
+              "r": "で",
+              "g": "predicate"
+            },
+            {
+              "t": "会",
+              "r": "あ",
+              "g": "predicate"
+            },
+            {
+              "t": "ったのだろうか。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "在朦胧的灯光下，千重子凝望着这两株紫花地丁，不觉又一次噙上了眼泪。",
+        "zh": [
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "朦",
+            "r": "méng",
+            "g": "attributive"
+          },
+          {
+            "t": "胧",
+            "r": "lóng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "灯",
+            "r": "dēng",
+            "g": "adverbial"
+          },
+          {
+            "t": "光",
+            "r": "guāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "千",
+            "r": "qiān",
+            "g": "subject"
+          },
+          {
+            "t": "重",
+            "r": "chóng",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "凝",
+            "r": "níng",
+            "g": "predicate"
+          },
+          {
+            "t": "望",
+            "r": "wàng",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "predicate"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "object"
+          },
+          {
+            "t": "两",
+            "r": "liǎng",
+            "g": "object"
+          },
+          {
+            "t": "株",
+            "r": "zhū",
+            "g": "object"
+          },
+          {
+            "t": "紫",
+            "r": "zǐ",
+            "g": "object"
+          },
+          {
+            "t": "花",
+            "r": "huā",
+            "g": "object"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "object"
+          },
+          {
+            "t": "丁",
+            "r": "dīng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "觉",
+            "r": "jué",
+            "g": "adverbial"
+          },
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "adverbial"
+          },
+          {
+            "t": "次",
+            "r": "cì",
+            "g": "adverbial"
+          },
+          {
+            "t": "噙",
+            "r": "qín",
+            "g": "predicate"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "眼",
+            "r": "yǎn",
+            "g": "object"
+          },
+          {
+            "t": "泪",
+            "r": "lèi",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "朧",
+              "r": "おぼろ",
+              "g": "attributive"
+            },
+            {
+              "t": "な",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "灯",
+              "r": "あか",
+              "g": "adverbial"
+            },
+            {
+              "t": "りの",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "下",
+              "r": "した",
+              "g": "adverbial"
+            },
+            {
+              "t": "で、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "千",
+              "r": "ち",
+              "g": "subject"
+            },
+            {
+              "t": "重",
+              "r": "え",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "二",
+              "r": "ふた",
+              "g": "object"
+            },
+            {
+              "t": "株",
+              "r": "かぶ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "菫",
+              "r": "すみれ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "つめ、また",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "知",
+              "r": "し",
+              "g": "adverbial"
+            },
+            {
+              "t": "らず",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "涙",
+              "r": "なみだ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "浮",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "かべた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

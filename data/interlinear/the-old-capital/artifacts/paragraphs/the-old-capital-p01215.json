@@ -1,0 +1,823 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01215",
+  "source_text": "“怪不得。你脸色不好，走路也晃晃悠悠的。”阿繁伸手去摸了摸千重子的额头，“倒没发烧，可是显得很悲伤的样子。今晚家里又有客人，你就跟妈一块儿睡吧。”",
+  "source_sha256": "40212cddc94c3f2e65f5ddd49fa9cc63a54fca096e7c64eb1be11397bc6aa78d",
+  "source_normalized_sha256": "40212cddc94c3f2e65f5ddd49fa9cc63a54fca096e7c64eb1be11397bc6aa78d",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 130,
+    "grammar_token_total": 130,
+    "unit_count": 4
+  },
+  "source_chunk_id": "the-old-capital-chunk-1215",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "祇园节",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "topic"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "topic"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "topic"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "topic"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-祇园节-intro",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "topic"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "topic"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "topic"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "topic"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01215",
+    "source_text": "“怪不得。你脸色不好，走路也晃晃悠悠的。”阿繁伸手去摸了摸千重子的额头，“倒没发烧，可是显得很悲伤的样子。今晚家里又有客人，你就跟妈一块儿睡吧。”",
+    "units": [
+      {
+        "source_text": "“怪不得。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "怪",
+            "r": "guài",
+            "g": "predicate"
+          },
+          {
+            "t": "不",
+            "r": "bu",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "なるほど。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "それでなのね。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "你脸色不好，走路也晃晃悠悠的。”",
+        "zh": [
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "topic"
+          },
+          {
+            "t": "脸",
+            "r": "liǎn",
+            "g": "subject"
+          },
+          {
+            "t": "色",
+            "r": "sè",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "predicate"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "走",
+            "r": "zǒu",
+            "g": "subject"
+          },
+          {
+            "t": "路",
+            "r": "lù",
+            "g": "subject"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "晃",
+            "r": "huàng",
+            "g": "predicate"
+          },
+          {
+            "t": "晃",
+            "r": "huàng",
+            "g": "predicate"
+          },
+          {
+            "t": "悠",
+            "r": "yōu",
+            "g": "predicate"
+          },
+          {
+            "t": "悠",
+            "r": "yōu",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "顔",
+              "r": "かお",
+              "g": "subject"
+            },
+            {
+              "t": "色",
+              "r": "いろ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "悪",
+              "r": "わる",
+              "g": "predicate"
+            },
+            {
+              "t": "いし、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "歩",
+              "r": "ある",
+              "g": "subject"
+            },
+            {
+              "t": "き",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "方",
+              "r": "かた",
+              "g": "subject"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "ふらふらしているわ。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "阿繁伸手去摸了摸千重子的额头，“倒没发烧，可是显得很悲伤的样子。",
+        "zh": [
+          {
+            "t": "阿",
+            "r": "ā",
+            "g": "subject"
+          },
+          {
+            "t": "繁",
+            "r": "fán",
+            "g": "subject"
+          },
+          {
+            "t": "伸",
+            "r": "shēn",
+            "g": "predicate"
+          },
+          {
+            "t": "手",
+            "r": "shǒu",
+            "g": "object"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "adverbial"
+          },
+          {
+            "t": "摸",
+            "r": "mō",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "摸",
+            "r": "mō",
+            "g": "predicate"
+          },
+          {
+            "t": "千",
+            "r": "qiān",
+            "g": "attributive"
+          },
+          {
+            "t": "重",
+            "r": "chóng",
+            "g": "attributive"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "额",
+            "r": "é",
+            "g": "object"
+          },
+          {
+            "t": "头",
+            "r": "tóu",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "倒",
+            "r": "dào",
+            "g": "adverbial"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "predicate"
+          },
+          {
+            "t": "发",
+            "r": "fā",
+            "g": "predicate"
+          },
+          {
+            "t": "烧",
+            "r": "shāo",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "显",
+            "r": "xiǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "很",
+            "r": "hěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "悲",
+            "r": "bēi",
+            "g": "complement"
+          },
+          {
+            "t": "伤",
+            "r": "shāng",
+            "g": "complement"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "complement"
+          },
+          {
+            "t": "样",
+            "r": "yàng",
+            "g": "complement"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "お",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "繁",
+              "r": "しげ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "伸",
+              "r": "の",
+              "g": "predicate"
+            },
+            {
+              "t": "ばして",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "千",
+              "r": "ち",
+              "g": "attributive"
+            },
+            {
+              "t": "重",
+              "r": "え",
+              "g": "attributive"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "額",
+              "r": "ひたい",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "触",
+              "r": "ふ",
+              "g": "predicate"
+            },
+            {
+              "t": "れ、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "熱",
+              "r": "ねつ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "ない",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "けれど、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "とても",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "悲",
+              "r": "かな",
+              "g": "complement"
+            },
+            {
+              "t": "しそうに",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "えるわ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "今晚家里又有客人，你就跟妈一块儿睡吧。”",
+        "zh": [
+          {
+            "t": "今",
+            "r": "jīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "晚",
+            "r": "wǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "adverbial"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "客",
+            "r": "kè",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "跟",
+            "r": "gēn",
+            "g": "adverbial"
+          },
+          {
+            "t": "妈",
+            "r": "mā",
+            "g": "adverbial"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "adverbial"
+          },
+          {
+            "t": "块",
+            "r": "kuài",
+            "g": "adverbial"
+          },
+          {
+            "t": "儿",
+            "r": "ér",
+            "g": "adverbial"
+          },
+          {
+            "t": "睡",
+            "r": "shuì",
+            "g": "predicate"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "今",
+              "r": "こん",
+              "g": "adverbial"
+            },
+            {
+              "t": "夜",
+              "r": "や",
+              "g": "adverbial"
+            },
+            {
+              "t": "もまた",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "家",
+              "r": "うち",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "お",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "客",
+              "r": "きゃく",
+              "g": "subject"
+            },
+            {
+              "t": "さんが",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "来",
+              "r": "く",
+              "g": "predicate"
+            },
+            {
+              "t": "るから、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "あなたは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "お",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "母",
+              "r": "かあ",
+              "g": "adverbial"
+            },
+            {
+              "t": "さんと",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "一",
+              "r": "いっ",
+              "g": "adverbial"
+            },
+            {
+              "t": "緒",
+              "r": "しょ",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "寝",
+              "r": "ね",
+              "g": "predicate"
+            },
+            {
+              "t": "なさい。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
