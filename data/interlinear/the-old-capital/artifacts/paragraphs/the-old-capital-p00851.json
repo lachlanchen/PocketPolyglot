@@ -1,0 +1,607 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00851",
+  "source_text": "“今天这瓢正饭馆的竹叶卷寿司是岛村送来的，请多吃点儿。我只做了个汤，请原谅。”母亲对父亲说。",
+  "source_sha256": "a289b62ca4929cbc74804b72d76dd5709016e838f5363f47c84ec7fbcfe6e764",
+  "source_normalized_sha256": "a289b62ca4929cbc74804b72d76dd5709016e838f5363f47c84ec7fbcfe6e764",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 89,
+    "grammar_token_total": 89,
+    "unit_count": 3
+  },
+  "source_chunk_id": "the-old-capital-chunk-0851",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "object"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "object"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "北山杉",
+    "title_zh": [
+      {
+        "t": "北",
+        "r": "běi",
+        "g": "object"
+      },
+      {
+        "t": "山",
+        "r": "shān",
+        "g": "object"
+      },
+      {
+        "t": "杉",
+        "r": "shān",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "北",
+        "r": "きた",
+        "g": "object"
+      },
+      {
+        "t": "山",
+        "r": "やま",
+        "g": "object"
+      },
+      {
+        "t": "杉",
+        "r": "すぎ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-北山杉-intro",
+    "title_zh": [
+      {
+        "t": "北",
+        "r": "běi",
+        "g": "object"
+      },
+      {
+        "t": "山",
+        "r": "shān",
+        "g": "object"
+      },
+      {
+        "t": "杉",
+        "r": "shān",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "北",
+        "r": "きた",
+        "g": "object"
+      },
+      {
+        "t": "山",
+        "r": "やま",
+        "g": "object"
+      },
+      {
+        "t": "杉",
+        "r": "すぎ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00851",
+    "source_text": "“今天这瓢正饭馆的竹叶卷寿司是岛村送来的，请多吃点儿。我只做了个汤，请原谅。”母亲对父亲说。",
+    "units": [
+      {
+        "source_text": "“今天这瓢正饭馆的竹叶卷寿司是岛村送来的，请多吃点儿。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "今",
+            "r": "jīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "attributive"
+          },
+          {
+            "t": "瓢",
+            "r": "piáo",
+            "g": "attributive"
+          },
+          {
+            "t": "正",
+            "r": "zhèng",
+            "g": "attributive"
+          },
+          {
+            "t": "饭",
+            "r": "fàn",
+            "g": "attributive"
+          },
+          {
+            "t": "馆",
+            "r": "guǎn",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "竹",
+            "r": "zhú",
+            "g": "subject"
+          },
+          {
+            "t": "叶",
+            "r": "yè",
+            "g": "subject"
+          },
+          {
+            "t": "卷",
+            "r": "juǎn",
+            "g": "subject"
+          },
+          {
+            "t": "寿",
+            "r": "shòu",
+            "g": "subject"
+          },
+          {
+            "t": "司",
+            "r": "sī",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "岛",
+            "r": "dǎo",
+            "g": "subject"
+          },
+          {
+            "t": "村",
+            "r": "cūn",
+            "g": "subject"
+          },
+          {
+            "t": "送",
+            "r": "sòng",
+            "g": "predicate"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "请",
+            "r": "qǐng",
+            "g": "function"
+          },
+          {
+            "t": "多",
+            "r": "duō",
+            "g": "adverbial"
+          },
+          {
+            "t": "吃",
+            "r": "chī",
+            "g": "predicate"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "complement"
+          },
+          {
+            "t": "儿",
+            "r": "r",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "今",
+              "r": "きょ",
+              "g": "adverbial"
+            },
+            {
+              "t": "日",
+              "r": "う",
+              "g": "adverbial"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "瓢",
+              "r": "ひさご",
+              "g": "attributive"
+            },
+            {
+              "t": "正",
+              "r": "しょう",
+              "g": "attributive"
+            },
+            {
+              "t": "という",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "料",
+              "r": "りょう",
+              "g": "attributive"
+            },
+            {
+              "t": "理",
+              "r": "り",
+              "g": "attributive"
+            },
+            {
+              "t": "屋",
+              "r": "や",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "笹",
+              "r": "ささ",
+              "g": "subject"
+            },
+            {
+              "t": "巻",
+              "r": "ま",
+              "g": "subject"
+            },
+            {
+              "t": "き",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "寿",
+              "r": "ず",
+              "g": "subject"
+            },
+            {
+              "t": "司",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "島",
+              "r": "しま",
+              "g": "subject"
+            },
+            {
+              "t": "村",
+              "r": "むら",
+              "g": "subject"
+            },
+            {
+              "t": "さんが",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "届",
+              "r": "とど",
+              "g": "predicate"
+            },
+            {
+              "t": "けてくださったものですから、どうぞたくさん",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "召",
+              "r": "め",
+              "g": "predicate"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "上",
+              "r": "あ",
+              "g": "predicate"
+            },
+            {
+              "t": "がってください。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我只做了个汤，请原谅。”",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "只",
+            "r": "zhǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "做",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "function"
+          },
+          {
+            "t": "汤",
+            "r": "tāng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "请",
+            "r": "qǐng",
+            "g": "function"
+          },
+          {
+            "t": "原",
+            "r": "yuán",
+            "g": "predicate"
+          },
+          {
+            "t": "谅",
+            "r": "liàng",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "汁",
+              "r": "しる",
+              "g": "object"
+            },
+            {
+              "t": "物",
+              "r": "もの",
+              "g": "object"
+            },
+            {
+              "t": "だけしか",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "作",
+              "r": "つく",
+              "g": "predicate"
+            },
+            {
+              "t": "りませんでした。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "どうかお",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "許",
+              "r": "ゆる",
+              "g": "predicate"
+            },
+            {
+              "t": "しください」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "母亲对父亲说。",
+        "zh": [
+          {
+            "t": "母",
+            "r": "mǔ",
+            "g": "subject"
+          },
+          {
+            "t": "亲",
+            "r": "qīn",
+            "g": "subject"
+          },
+          {
+            "t": "对",
+            "r": "duì",
+            "g": "adverbial"
+          },
+          {
+            "t": "父",
+            "r": "fù",
+            "g": "object"
+          },
+          {
+            "t": "亲",
+            "r": "qīn",
+            "g": "object"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "母",
+              "r": "はは",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "父",
+              "r": "ちち",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "そう",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

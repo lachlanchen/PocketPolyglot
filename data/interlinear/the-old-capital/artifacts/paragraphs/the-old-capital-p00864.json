@@ -1,0 +1,995 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00864",
+  "source_text": "“那不也挺好吗？有像北山杉那样的孩子固然可爱，可是没有啊。即使有，一旦遇上什么事，很容易受骗上当。就拿树来说吧，不管它是弯也罢，曲也罢，只要长大成材就好……你瞧，这个窄院子里的那棵老枫树。”",
+  "source_sha256": "f9df34a71ade470a51364749e372157ab697ad205cb2775d7c43ae3368311831",
+  "source_normalized_sha256": "f9df34a71ade470a51364749e372157ab697ad205cb2775d7c43ae3368311831",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 160,
+    "grammar_token_total": 160,
+    "unit_count": 6
+  },
+  "source_chunk_id": "the-old-capital-chunk-0864",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "object"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "object"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "北山杉",
+    "title_zh": [
+      {
+        "t": "北",
+        "r": "běi",
+        "g": "object"
+      },
+      {
+        "t": "山",
+        "r": "shān",
+        "g": "object"
+      },
+      {
+        "t": "杉",
+        "r": "shān",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "北",
+        "r": "きた",
+        "g": "object"
+      },
+      {
+        "t": "山",
+        "r": "やま",
+        "g": "object"
+      },
+      {
+        "t": "杉",
+        "r": "すぎ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-北山杉-intro",
+    "title_zh": [
+      {
+        "t": "北",
+        "r": "běi",
+        "g": "object"
+      },
+      {
+        "t": "山",
+        "r": "shān",
+        "g": "object"
+      },
+      {
+        "t": "杉",
+        "r": "shān",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "北",
+        "r": "きた",
+        "g": "object"
+      },
+      {
+        "t": "山",
+        "r": "やま",
+        "g": "object"
+      },
+      {
+        "t": "杉",
+        "r": "すぎ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00864",
+    "source_text": "“那不也挺好吗？有像北山杉那样的孩子固然可爱，可是没有啊。即使有，一旦遇上什么事，很容易受骗上当。就拿树来说吧，不管它是弯也罢，曲也罢，只要长大成材就好……你瞧，这个窄院子里的那棵老枫树。”",
+    "units": [
+      {
+        "source_text": "“那不也挺好吗？",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "挺",
+            "r": "tǐng",
+            "g": "adverbial"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "それも",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "なかなか",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "よいではありません",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "か。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "有像北山杉那样的孩子固然可爱，可是没有啊。",
+        "zh": [
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "像",
+            "r": "xiàng",
+            "g": "attributive"
+          },
+          {
+            "t": "北",
+            "r": "běi",
+            "g": "attributive"
+          },
+          {
+            "t": "山",
+            "r": "shān",
+            "g": "attributive"
+          },
+          {
+            "t": "杉",
+            "r": "shān",
+            "g": "attributive"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "attributive"
+          },
+          {
+            "t": "样",
+            "r": "yàng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "孩",
+            "r": "hái",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "subject"
+          },
+          {
+            "t": "固",
+            "r": "gù",
+            "g": "adverbial"
+          },
+          {
+            "t": "然",
+            "r": "rán",
+            "g": "adverbial"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "predicate"
+          },
+          {
+            "t": "爱",
+            "r": "ài",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "predicate"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "北",
+              "r": "きた",
+              "g": "attributive"
+            },
+            {
+              "t": "山",
+              "r": "やま",
+              "g": "attributive"
+            },
+            {
+              "t": "杉",
+              "r": "すぎ",
+              "g": "attributive"
+            },
+            {
+              "t": "のような",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "いれば",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "たしかに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "かわいいでしょう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "が、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "いないのです",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "即使有，一旦遇上什么事，很容易受骗上当。",
+        "zh": [
+          {
+            "t": "即",
+            "r": "jí",
+            "g": "adverbial"
+          },
+          {
+            "t": "使",
+            "r": "shǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "adverbial"
+          },
+          {
+            "t": "旦",
+            "r": "dàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "遇",
+            "r": "yù",
+            "g": "predicate"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "predicate"
+          },
+          {
+            "t": "什",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "object"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "很",
+            "r": "hěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "容",
+            "r": "róng",
+            "g": "adverbial"
+          },
+          {
+            "t": "易",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "受",
+            "r": "shòu",
+            "g": "predicate"
+          },
+          {
+            "t": "骗",
+            "r": "piàn",
+            "g": "predicate"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "predicate"
+          },
+          {
+            "t": "当",
+            "r": "dàng",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "たとえ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "いても",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "いったん",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "何",
+              "r": "なに",
+              "g": "object"
+            },
+            {
+              "t": "かに",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "出",
+              "r": "で",
+              "g": "predicate"
+            },
+            {
+              "t": "会",
+              "r": "あ",
+              "g": "predicate"
+            },
+            {
+              "t": "うと、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "すぐ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "だまされてしまいます",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "就拿树来说吧，不管它是弯也罢，曲也罢，",
+        "zh": [
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "拿",
+            "r": "ná",
+            "g": "function"
+          },
+          {
+            "t": "树",
+            "r": "shù",
+            "g": "topic"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "function"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "function"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "function"
+          },
+          {
+            "t": "管",
+            "r": "guǎn",
+            "g": "function"
+          },
+          {
+            "t": "它",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "弯",
+            "r": "wān",
+            "g": "predicate"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "function"
+          },
+          {
+            "t": "罢",
+            "r": "bà",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "曲",
+            "r": "qū",
+            "g": "predicate"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "function"
+          },
+          {
+            "t": "罢",
+            "r": "bà",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "木",
+              "r": "き",
+              "g": "topic"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "topic"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "function"
+            },
+            {
+              "t": "えば、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "それが",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "曲",
+              "r": "ま",
+              "g": "predicate"
+            },
+            {
+              "t": "がっていよう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "と、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ねじれていよう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "と、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "只要长大成材就好……",
+        "zh": [
+          {
+            "t": "只",
+            "r": "zhǐ",
+            "g": "function"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "function"
+          },
+          {
+            "t": "长",
+            "r": "zhǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "predicate"
+          },
+          {
+            "t": "成",
+            "r": "chéng",
+            "g": "complement"
+          },
+          {
+            "t": "材",
+            "r": "cái",
+            "g": "complement"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "……",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "predicate"
+            },
+            {
+              "t": "きく",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "育",
+              "r": "そだ",
+              "g": "predicate"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "用",
+              "r": "よう",
+              "g": "complement"
+            },
+            {
+              "t": "材",
+              "r": "ざい",
+              "g": "complement"
+            },
+            {
+              "t": "になれば、",
+              "r": "",
+              "g": "complement"
+            }
+          ],
+          [
+            {
+              "t": "それで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "よいのです",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "……",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "你瞧，这个窄院子里的那棵老枫树。”",
+        "zh": [
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "瞧",
+            "r": "qiáo",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "attributive"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "attributive"
+          },
+          {
+            "t": "窄",
+            "r": "zhǎi",
+            "g": "attributive"
+          },
+          {
+            "t": "院",
+            "r": "yuàn",
+            "g": "attributive"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "attributive"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "attributive"
+          },
+          {
+            "t": "棵",
+            "r": "kē",
+            "g": "attributive"
+          },
+          {
+            "t": "老",
+            "r": "lǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "枫",
+            "r": "fēng",
+            "g": "attributive"
+          },
+          {
+            "t": "树",
+            "r": "shù",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ほら、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "この",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "狭",
+              "r": "せま",
+              "g": "attributive"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "庭",
+              "r": "にわ",
+              "g": "attributive"
+            },
+            {
+              "t": "にある",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "あの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "古",
+              "r": "ふる",
+              "g": "attributive"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "楓",
+              "r": "かえで",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "木",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "てください",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
