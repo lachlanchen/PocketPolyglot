@@ -56,7 +56,9 @@ books/*/work/ocr-tests/
 books/*/work/chunks/
 books/*/work/interlinear/
 books/*/markdown/*.raw.md
-.aginti/
+.aginti/*
+!.aginti/skills/
+!.aginti/skills/**
 .aginti-sessions/
 .sessions/
 assets/covers/**/submit_response.json
@@ -68,3 +70,4 @@ assets/covers/**/result_response.json
 .aginti/.env
 .aginti/.env.*
 !.aginti/.env.example
+.aginti/codebase-map.json
