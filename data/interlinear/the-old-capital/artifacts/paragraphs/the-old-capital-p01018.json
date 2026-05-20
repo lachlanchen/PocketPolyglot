@@ -1,0 +1,466 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01018",
+  "source_text": "“令人忘不了，一辈子也忘不了啊……莫非人的感情会随着心潮的起伏而变化吗？”",
+  "source_sha256": "aee0809699244acdca10112678632427e3b30f32048059ee129978ca00270a10",
+  "source_normalized_sha256": "aee0809699244acdca10112678632427e3b30f32048059ee129978ca00270a10",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 63,
+    "grammar_token_total": 63,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-1018",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "祇园节",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "attributive"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "attributive"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "attributive"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "attributive"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-祇园节-intro",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "attributive"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "attributive"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "attributive"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "attributive"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01018",
+    "source_text": "“令人忘不了，一辈子也忘不了啊……莫非人的感情会随着心潮的起伏而变化吗？”",
+    "units": [
+      {
+        "source_text": "“令人忘不了，一辈子也忘不了啊……",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "令",
+            "r": "lìng",
+            "g": "predicate"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "object"
+          },
+          {
+            "t": "忘",
+            "r": "wàng",
+            "g": "predicate"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "liǎo",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "adverbial"
+          },
+          {
+            "t": "辈",
+            "r": "bèi",
+            "g": "adverbial"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "adverbial"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "忘",
+            "r": "wàng",
+            "g": "predicate"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "liǎo",
+            "g": "complement"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "……",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "忘",
+              "r": "わす",
+              "g": "predicate"
+            },
+            {
+              "t": "れられない、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "忘",
+              "r": "わす",
+              "g": "predicate"
+            },
+            {
+              "t": "れさせない、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "一",
+              "r": "いっ",
+              "g": "adverbial"
+            },
+            {
+              "t": "生",
+              "r": "しょう",
+              "g": "adverbial"
+            },
+            {
+              "t": "だって",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "忘",
+              "r": "わす",
+              "g": "predicate"
+            },
+            {
+              "t": "れられないのだ……",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "莫非人的感情会随着心潮的起伏而变化吗？”",
+        "zh": [
+          {
+            "t": "莫",
+            "r": "mò",
+            "g": "function"
+          },
+          {
+            "t": "非",
+            "r": "fēi",
+            "g": "function"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "感",
+            "r": "gǎn",
+            "g": "subject"
+          },
+          {
+            "t": "情",
+            "r": "qíng",
+            "g": "subject"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "adverbial"
+          },
+          {
+            "t": "随",
+            "r": "suí",
+            "g": "adverbial"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "adverbial"
+          },
+          {
+            "t": "心",
+            "r": "xīn",
+            "g": "attributive"
+          },
+          {
+            "t": "潮",
+            "r": "cháo",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "object"
+          },
+          {
+            "t": "伏",
+            "r": "fú",
+            "g": "object"
+          },
+          {
+            "t": "而",
+            "r": "ér",
+            "g": "function"
+          },
+          {
+            "t": "变",
+            "r": "biàn",
+            "g": "predicate"
+          },
+          {
+            "t": "化",
+            "r": "huà",
+            "g": "predicate"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ひょっとすると、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "感",
+              "r": "かん",
+              "g": "subject"
+            },
+            {
+              "t": "情",
+              "r": "じょう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "心",
+              "r": "こころ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "潮",
+              "r": "うしお",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "起",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "伏",
+              "r": "ふく",
+              "g": "object"
+            },
+            {
+              "t": "につれて",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "変",
+              "r": "か",
+              "g": "predicate"
+            },
+            {
+              "t": "わっていくのだろうか。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

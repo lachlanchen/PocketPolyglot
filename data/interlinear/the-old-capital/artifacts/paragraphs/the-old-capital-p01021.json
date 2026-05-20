@@ -1,0 +1,506 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01021",
+  "source_text": "“您来了，小姐。正逢祇园节，忙得不可开交，只有熟悉的老顾客来订才做，请多多包涵。”",
+  "source_sha256": "da7a19e83ebc447ec1e69795b5dd0404600240b8ff7b8c6e2dc242151fe851be",
+  "source_normalized_sha256": "da7a19e83ebc447ec1e69795b5dd0404600240b8ff7b8c6e2dc242151fe851be",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 71,
+    "grammar_token_total": 71,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-1021",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "祇园节",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "attributive"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "attributive"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "attributive"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "attributive"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-祇园节-intro",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "attributive"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "attributive"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "attributive"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "attributive"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01021",
+    "source_text": "“您来了，小姐。正逢祇园节，忙得不可开交，只有熟悉的老顾客来订才做，请多多包涵。”",
+    "units": [
+      {
+        "source_text": "“您来了，小姐。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "您",
+            "r": "nín",
+            "g": "subject"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "subject"
+          },
+          {
+            "t": "姐",
+            "r": "jiě",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "おいでになりましたね、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "お",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "嬢",
+              "r": "じょう",
+              "g": "subject"
+            },
+            {
+              "t": "さま。",
+              "r": "",
+              "g": "subject"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "正逢祇园节，忙得不可开交，只有熟悉的老顾客来订才做，请多多包涵。”",
+        "zh": [
+          {
+            "t": "正",
+            "r": "zhèng",
+            "g": "adverbial"
+          },
+          {
+            "t": "逢",
+            "r": "féng",
+            "g": "predicate"
+          },
+          {
+            "t": "祇",
+            "r": "qí",
+            "g": "object"
+          },
+          {
+            "t": "园",
+            "r": "yuán",
+            "g": "object"
+          },
+          {
+            "t": "节",
+            "r": "jié",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "忙",
+            "r": "máng",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "complement"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "complement"
+          },
+          {
+            "t": "开",
+            "r": "kāi",
+            "g": "complement"
+          },
+          {
+            "t": "交",
+            "r": "jiāo",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "只",
+            "r": "zhǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "熟",
+            "r": "shú",
+            "g": "attributive"
+          },
+          {
+            "t": "悉",
+            "r": "xī",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "老",
+            "r": "lǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "顾",
+            "r": "gù",
+            "g": "object"
+          },
+          {
+            "t": "客",
+            "r": "kè",
+            "g": "object"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "predicate"
+          },
+          {
+            "t": "订",
+            "r": "dìng",
+            "g": "predicate"
+          },
+          {
+            "t": "才",
+            "r": "cái",
+            "g": "adverbial"
+          },
+          {
+            "t": "做",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "请",
+            "r": "qǐng",
+            "g": "predicate"
+          },
+          {
+            "t": "多",
+            "r": "duō",
+            "g": "adverbial"
+          },
+          {
+            "t": "多",
+            "r": "duō",
+            "g": "adverbial"
+          },
+          {
+            "t": "包",
+            "r": "bāo",
+            "g": "predicate"
+          },
+          {
+            "t": "涵",
+            "r": "hán",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ちょうど",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "祇",
+              "r": "ぎ",
+              "g": "object"
+            },
+            {
+              "t": "園",
+              "r": "おん",
+              "g": "object"
+            },
+            {
+              "t": "祭",
+              "r": "まつり",
+              "g": "object"
+            },
+            {
+              "t": "で、",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "忙",
+              "r": "いそが",
+              "g": "predicate"
+            },
+            {
+              "t": "しくて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "complement"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "回",
+              "r": "まわ",
+              "g": "complement"
+            },
+            {
+              "t": "らず、",
+              "r": "",
+              "g": "complement"
+            }
+          ],
+          [
+            {
+              "t": "馴",
+              "r": "な",
+              "g": "attributive"
+            },
+            {
+              "t": "染",
+              "r": "じ",
+              "g": "attributive"
+            },
+            {
+              "t": "みのお",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "客",
+              "r": "きゃく",
+              "g": "object"
+            },
+            {
+              "t": "様",
+              "r": "さま",
+              "g": "object"
+            },
+            {
+              "t": "のご",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "注",
+              "r": "ちゅう",
+              "g": "predicate"
+            },
+            {
+              "t": "文",
+              "r": "もん",
+              "g": "predicate"
+            },
+            {
+              "t": "だけお",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "作",
+              "r": "つく",
+              "g": "predicate"
+            },
+            {
+              "t": "りします。どうかご",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "容",
+              "r": "よう",
+              "g": "predicate"
+            },
+            {
+              "t": "赦",
+              "r": "しゃ",
+              "g": "predicate"
+            },
+            {
+              "t": "ください」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

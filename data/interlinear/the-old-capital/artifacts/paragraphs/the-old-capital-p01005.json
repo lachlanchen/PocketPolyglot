@@ -1,0 +1,489 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01005",
+  "source_text": "[1] 天皇即位时，选未婚的皇族女性侍奉伊势神宫和贺茂神社，人称斋王。",
+  "source_sha256": "bfe1f0aba968f7199dbb648715f19920a71526572c682ab6063ae50ca3a9d1fc",
+  "source_normalized_sha256": "923f66f2b3a1d24fa189ce5779390b877273a3a7cfc08bd6abad2ca1aa2ad7e0",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 72,
+    "grammar_token_total": 72,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-1005",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "都",
+        "r": "dū"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "都",
+        "r": "と"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "北山杉",
+    "title_zh": [
+      {
+        "t": "北",
+        "r": "běi"
+      },
+      {
+        "t": "山",
+        "r": "shān"
+      },
+      {
+        "t": "杉",
+        "r": "shān"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "北",
+        "r": "きた"
+      },
+      {
+        "t": "山",
+        "r": "やま"
+      },
+      {
+        "t": "杉",
+        "r": "すぎ"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-北山杉-intro",
+    "title_zh": [
+      {
+        "t": "北",
+        "r": "běi"
+      },
+      {
+        "t": "山",
+        "r": "shān"
+      },
+      {
+        "t": "杉",
+        "r": "shān"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "北",
+        "r": "きた"
+      },
+      {
+        "t": "山",
+        "r": "やま"
+      },
+      {
+        "t": "杉",
+        "r": "すぎ"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01005",
+    "source_text": "[1] 天皇即位时，选未婚的皇族女性侍奉伊势神宫和贺茂神社，人称斋王。",
+    "units": [
+      {
+        "source_text": "[1] 天皇即位时，选未婚的皇族女性侍奉伊势神宫和贺茂神社，人称斋王。",
+        "zh": [
+          {
+            "t": "[",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "1",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "]",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": " ",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "皇",
+            "r": "huáng",
+            "g": "adverbial"
+          },
+          {
+            "t": "即",
+            "r": "jí",
+            "g": "adverbial"
+          },
+          {
+            "t": "位",
+            "r": "wèi",
+            "g": "adverbial"
+          },
+          {
+            "t": "时",
+            "r": "shí",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "选",
+            "r": "xuǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "未",
+            "r": "wèi",
+            "g": "attributive"
+          },
+          {
+            "t": "婚",
+            "r": "hūn",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "皇",
+            "r": "huáng",
+            "g": "attributive"
+          },
+          {
+            "t": "族",
+            "r": "zú",
+            "g": "attributive"
+          },
+          {
+            "t": "女",
+            "r": "nǚ",
+            "g": "object"
+          },
+          {
+            "t": "性",
+            "r": "xìng",
+            "g": "object"
+          },
+          {
+            "t": "侍",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "奉",
+            "r": "fèng",
+            "g": "predicate"
+          },
+          {
+            "t": "伊",
+            "r": "yī",
+            "g": "object"
+          },
+          {
+            "t": "势",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "宫",
+            "r": "gōng",
+            "g": "object"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "object"
+          },
+          {
+            "t": "贺",
+            "r": "hè",
+            "g": "object"
+          },
+          {
+            "t": "茂",
+            "r": "mào",
+            "g": "object"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "社",
+            "r": "shè",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "称",
+            "r": "chēng",
+            "g": "predicate"
+          },
+          {
+            "t": "斋",
+            "r": "zhāi",
+            "g": "object"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "注",
+              "r": "ちゅう",
+              "g": "function"
+            },
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "adverbial"
+            },
+            {
+              "t": "皇",
+              "r": "のう",
+              "g": "adverbial"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "即",
+              "r": "そく",
+              "g": "adverbial"
+            },
+            {
+              "t": "位",
+              "r": "い",
+              "g": "adverbial"
+            },
+            {
+              "t": "時",
+              "r": "じ",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "未",
+              "r": "み",
+              "g": "attributive"
+            },
+            {
+              "t": "婚",
+              "r": "こん",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "皇",
+              "r": "こう",
+              "g": "attributive"
+            },
+            {
+              "t": "族",
+              "r": "ぞく",
+              "g": "attributive"
+            },
+            {
+              "t": "女",
+              "r": "じょ",
+              "g": "object"
+            },
+            {
+              "t": "性",
+              "r": "せい",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "選",
+              "r": "えら",
+              "g": "predicate"
+            },
+            {
+              "t": "び、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "伊",
+              "r": "い",
+              "g": "object"
+            },
+            {
+              "t": "勢",
+              "r": "せ",
+              "g": "object"
+            },
+            {
+              "t": "神",
+              "r": "じん",
+              "g": "object"
+            },
+            {
+              "t": "宮",
+              "r": "ぐう",
+              "g": "object"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "賀",
+              "r": "か",
+              "g": "object"
+            },
+            {
+              "t": "茂",
+              "r": "も",
+              "g": "object"
+            },
+            {
+              "t": "神",
+              "r": "じん",
+              "g": "object"
+            },
+            {
+              "t": "社",
+              "r": "じゃ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "仕",
+              "r": "つか",
+              "g": "predicate"
+            },
+            {
+              "t": "えさせ、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "subject"
+            },
+            {
+              "t": "びとは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "斎",
+              "r": "さい",
+              "g": "object"
+            },
+            {
+              "t": "王",
+              "r": "おう",
+              "g": "object"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "呼",
+              "r": "よ",
+              "g": "predicate"
+            },
+            {
+              "t": "んだ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

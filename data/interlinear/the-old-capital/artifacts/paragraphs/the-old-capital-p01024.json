@@ -1,0 +1,581 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01024",
+  "source_text": "所谓八幡卷，就像鳗鱼卷一样，用豆皮卷上牛蒡。牡丹豆皮就像炸豆腐，不过它是用豆皮包上白菜之类的东西。",
+  "source_sha256": "558689161ea3a605e74d2e5a2b86573b0ad8b8591be71168d0a82609ffb13911",
+  "source_normalized_sha256": "558689161ea3a605e74d2e5a2b86573b0ad8b8591be71168d0a82609ffb13911",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 86,
+    "grammar_token_total": 86,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-1024",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "祇园节",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "topic"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "topic"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "topic"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "topic"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-祇园节-intro",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "topic"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "topic"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "topic"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "topic"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01024",
+    "source_text": "所谓八幡卷，就像鳗鱼卷一样，用豆皮卷上牛蒡。牡丹豆皮就像炸豆腐，不过它是用豆皮包上白菜之类的东西。",
+    "units": [
+      {
+        "source_text": "所谓八幡卷，就像鳗鱼卷一样，用豆皮卷上牛蒡。",
+        "zh": [
+          {
+            "t": "所",
+            "r": "suǒ",
+            "g": "function"
+          },
+          {
+            "t": "谓",
+            "r": "wèi",
+            "g": "function"
+          },
+          {
+            "t": "八",
+            "r": "bā",
+            "g": "subject"
+          },
+          {
+            "t": "幡",
+            "r": "fān",
+            "g": "subject"
+          },
+          {
+            "t": "卷",
+            "r": "juǎn",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "像",
+            "r": "xiàng",
+            "g": "predicate"
+          },
+          {
+            "t": "鳗",
+            "r": "mán",
+            "g": "object"
+          },
+          {
+            "t": "鱼",
+            "r": "yú",
+            "g": "object"
+          },
+          {
+            "t": "卷",
+            "r": "juǎn",
+            "g": "object"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "adverbial"
+          },
+          {
+            "t": "样",
+            "r": "yàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "用",
+            "r": "yòng",
+            "g": "adverbial"
+          },
+          {
+            "t": "豆",
+            "r": "dòu",
+            "g": "object"
+          },
+          {
+            "t": "皮",
+            "r": "pí",
+            "g": "object"
+          },
+          {
+            "t": "卷",
+            "r": "juǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "complement"
+          },
+          {
+            "t": "牛",
+            "r": "niú",
+            "g": "object"
+          },
+          {
+            "t": "蒡",
+            "r": "bàng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "いわゆる",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "八",
+              "r": "はち",
+              "g": "subject"
+            },
+            {
+              "t": "幡",
+              "r": "まん",
+              "g": "subject"
+            },
+            {
+              "t": "巻",
+              "r": "ま",
+              "g": "subject"
+            },
+            {
+              "t": "きは、",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "鰻",
+              "r": "うなぎ",
+              "g": "object"
+            },
+            {
+              "t": "巻",
+              "r": "ま",
+              "g": "object"
+            },
+            {
+              "t": "きのように、",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "豆",
+              "r": "まめ",
+              "g": "object"
+            },
+            {
+              "t": "皮",
+              "r": "かわ",
+              "g": "object"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "牛",
+              "r": "ご",
+              "g": "object"
+            },
+            {
+              "t": "蒡",
+              "r": "ぼう",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "巻",
+              "r": "ま",
+              "g": "predicate"
+            },
+            {
+              "t": "いたものだ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "牡丹豆皮就像炸豆腐，不过它是用豆皮包上白菜之类的东西。",
+        "zh": [
+          {
+            "t": "牡",
+            "r": "mǔ",
+            "g": "subject"
+          },
+          {
+            "t": "丹",
+            "r": "dān",
+            "g": "subject"
+          },
+          {
+            "t": "豆",
+            "r": "dòu",
+            "g": "subject"
+          },
+          {
+            "t": "皮",
+            "r": "pí",
+            "g": "subject"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "像",
+            "r": "xiàng",
+            "g": "predicate"
+          },
+          {
+            "t": "炸",
+            "r": "zhá",
+            "g": "object"
+          },
+          {
+            "t": "豆",
+            "r": "dòu",
+            "g": "object"
+          },
+          {
+            "t": "腐",
+            "r": "fu",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "不",
+            "r": "bú",
+            "g": "function"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "function"
+          },
+          {
+            "t": "它",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "用",
+            "r": "yòng",
+            "g": "adverbial"
+          },
+          {
+            "t": "豆",
+            "r": "dòu",
+            "g": "object"
+          },
+          {
+            "t": "皮",
+            "r": "pí",
+            "g": "object"
+          },
+          {
+            "t": "包",
+            "r": "bāo",
+            "g": "predicate"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "complement"
+          },
+          {
+            "t": "白",
+            "r": "bái",
+            "g": "object"
+          },
+          {
+            "t": "菜",
+            "r": "cài",
+            "g": "object"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "function"
+          },
+          {
+            "t": "类",
+            "r": "lèi",
+            "g": "function"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "东",
+            "r": "dōng",
+            "g": "object"
+          },
+          {
+            "t": "西",
+            "r": "xi",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "牡",
+              "r": "ぼ",
+              "g": "subject"
+            },
+            {
+              "t": "丹",
+              "r": "たん",
+              "g": "subject"
+            },
+            {
+              "t": "豆",
+              "r": "まめ",
+              "g": "subject"
+            },
+            {
+              "t": "皮",
+              "r": "かわ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "油",
+              "r": "あぶら",
+              "g": "object"
+            },
+            {
+              "t": "揚",
+              "r": "あ",
+              "g": "object"
+            },
+            {
+              "t": "げ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "豆",
+              "r": "どう",
+              "g": "object"
+            },
+            {
+              "t": "腐",
+              "r": "ふ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "似",
+              "r": "に",
+              "g": "predicate"
+            },
+            {
+              "t": "ているが、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "豆",
+              "r": "まめ",
+              "g": "object"
+            },
+            {
+              "t": "皮",
+              "r": "かわ",
+              "g": "object"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "白",
+              "r": "はく",
+              "g": "object"
+            },
+            {
+              "t": "菜",
+              "r": "さい",
+              "g": "object"
+            },
+            {
+              "t": "などを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "包",
+              "r": "つつ",
+              "g": "predicate"
+            },
+            {
+              "t": "んだものだ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
