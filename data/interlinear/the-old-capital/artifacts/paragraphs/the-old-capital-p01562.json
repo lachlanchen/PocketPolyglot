@@ -1,0 +1,258 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01562",
+  "source_text": "“他不是已经答应给你织了吗？”",
+  "source_sha256": "16d1b5a8d6931a3e9759f30f5a1be5904baf5eac85263589cc7d5341aeb88d22",
+  "source_normalized_sha256": "16d1b5a8d6931a3e9759f30f5a1be5904baf5eac85263589cc7d5341aeb88d22",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 30,
+    "grammar_token_total": 30,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-1562",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "都",
+        "r": "dū"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "都",
+        "r": "と"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "秋色",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū"
+      },
+      {
+        "t": "色",
+        "r": "sè"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "しゅう"
+      },
+      {
+        "t": "色",
+        "r": "しょく"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-秋色-intro",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū"
+      },
+      {
+        "t": "色",
+        "r": "sè"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "しゅう"
+      },
+      {
+        "t": "色",
+        "r": "しょく"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01562",
+    "source_text": "“他不是已经答应给你织了吗？”",
+    "units": [
+      {
+        "source_text": "“他不是已经答应给你织了吗？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bú",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "已",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "经",
+            "r": "jīng",
+            "g": "adverbial"
+          },
+          {
+            "t": "答",
+            "r": "dā",
+            "g": "predicate"
+          },
+          {
+            "t": "应",
+            "r": "ying",
+            "g": "predicate"
+          },
+          {
+            "t": "给",
+            "r": "gěi",
+            "g": "adverbial"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "object"
+          },
+          {
+            "t": "织",
+            "r": "zhī",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "もう",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "あなた",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "のために",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "織",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "ってくれると",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "引",
+              "r": "ひ",
+              "g": "predicate"
+            },
+            {
+              "t": "き",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "受",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "けてくれたんじゃないの",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

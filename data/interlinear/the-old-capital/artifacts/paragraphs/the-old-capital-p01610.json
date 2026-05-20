@@ -1,0 +1,386 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01610",
+  "source_text": "“在杉村一户人家当雇工干活。是个好姑娘。她不愿上咱家来。”",
+  "source_sha256": "c08a15e9d40e76286bae9180e052f1d7eddba36f77ed57ea98f298dedcf7d125",
+  "source_normalized_sha256": "c08a15e9d40e76286bae9180e052f1d7eddba36f77ed57ea98f298dedcf7d125",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 49,
+    "grammar_token_total": 49,
+    "unit_count": 3
+  },
+  "source_chunk_id": "the-old-capital-chunk-1610",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "秋色",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "topic"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "しゅう",
+        "g": "topic"
+      },
+      {
+        "t": "色",
+        "r": "しょく",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-秋色-intro",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "topic"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "しゅう",
+        "g": "topic"
+      },
+      {
+        "t": "色",
+        "r": "しょく",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01610",
+    "source_text": "“在杉村一户人家当雇工干活。是个好姑娘。她不愿上咱家来。”",
+    "units": [
+      {
+        "source_text": "“在杉村一户人家当雇工干活。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "杉",
+            "r": "shān",
+            "g": "adverbial"
+          },
+          {
+            "t": "村",
+            "r": "cūn",
+            "g": "adverbial"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "attributive"
+          },
+          {
+            "t": "户",
+            "r": "hù",
+            "g": "attributive"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "attributive"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "attributive"
+          },
+          {
+            "t": "当",
+            "r": "dāng",
+            "g": "predicate"
+          },
+          {
+            "t": "雇",
+            "r": "gù",
+            "g": "object"
+          },
+          {
+            "t": "工",
+            "r": "gōng",
+            "g": "object"
+          },
+          {
+            "t": "干",
+            "r": "gàn",
+            "g": "predicate"
+          },
+          {
+            "t": "活",
+            "r": "huó",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "杉",
+              "r": "すぎ",
+              "g": "adverbial"
+            },
+            {
+              "t": "村",
+              "r": "むら",
+              "g": "adverbial"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "ある",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "家",
+              "r": "いえ",
+              "g": "attributive"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "雇",
+              "r": "やと",
+              "g": "object"
+            },
+            {
+              "t": "われ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "仕",
+              "r": "し",
+              "g": "predicate"
+            },
+            {
+              "t": "事",
+              "r": "ごと",
+              "g": "predicate"
+            },
+            {
+              "t": "をしている。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "是个好姑娘。",
+        "zh": [
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "个",
+            "r": "ge",
+            "g": "function"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "姑",
+            "r": "gū",
+            "g": "object"
+          },
+          {
+            "t": "娘",
+            "r": "niáng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "いい",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "娘",
+              "r": "むすめ",
+              "g": "object"
+            },
+            {
+              "t": "だ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          []
+        ]
+      },
+      {
+        "source_text": "她不愿上咱家来。”",
+        "zh": [
+          {
+            "t": "她",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "愿",
+            "r": "yuàn",
+            "g": "predicate"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "predicate"
+          },
+          {
+            "t": "咱",
+            "r": "zán",
+            "g": "object"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "object"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "あの",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "うちへ",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "来",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "たがらないのだ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

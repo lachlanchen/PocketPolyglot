@@ -1,0 +1,702 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01600",
+  "source_text": "“好。”千重子到了后面楼上，慢条斯理地把衣服换下来稍坐片刻，然后再下楼来。母亲已经把三点钟那顿点心给店员们分发完了。",
+  "source_sha256": "d26769002c3234d4e119f6302305f9ad69b537be385e6ad567a151d5dd2c375f",
+  "source_normalized_sha256": "d26769002c3234d4e119f6302305f9ad69b537be385e6ad567a151d5dd2c375f",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 112,
+    "grammar_token_total": 112,
+    "unit_count": 3
+  },
+  "source_chunk_id": "the-old-capital-chunk-1600",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "秋色",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-秋色-intro",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01600",
+    "source_text": "“好。”千重子到了后面楼上，慢条斯理地把衣服换下来稍坐片刻，然后再下楼来。母亲已经把三点钟那顿点心给店员们分发完了。",
+    "units": [
+      {
+        "source_text": "“好。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "はい",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "千重子到了后面楼上，慢条斯理地把衣服换下来稍坐片刻，然后再下楼来。",
+        "zh": [
+          {
+            "t": "千",
+            "r": "qiān",
+            "g": "subject"
+          },
+          {
+            "t": "重",
+            "r": "chóng",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "后",
+            "r": "hòu",
+            "g": "object"
+          },
+          {
+            "t": "面",
+            "r": "miàn",
+            "g": "object"
+          },
+          {
+            "t": "楼",
+            "r": "lóu",
+            "g": "object"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "慢",
+            "r": "màn",
+            "g": "adverbial"
+          },
+          {
+            "t": "条",
+            "r": "tiáo",
+            "g": "adverbial"
+          },
+          {
+            "t": "斯",
+            "r": "sī",
+            "g": "adverbial"
+          },
+          {
+            "t": "理",
+            "r": "lǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "衣",
+            "r": "yī",
+            "g": "object"
+          },
+          {
+            "t": "服",
+            "r": "fu",
+            "g": "object"
+          },
+          {
+            "t": "换",
+            "r": "huàn",
+            "g": "predicate"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "complement"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "稍",
+            "r": "shāo",
+            "g": "adverbial"
+          },
+          {
+            "t": "坐",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "片",
+            "r": "piàn",
+            "g": "complement"
+          },
+          {
+            "t": "刻",
+            "r": "kè",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "然",
+            "r": "rán",
+            "g": "adverbial"
+          },
+          {
+            "t": "后",
+            "r": "hòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "再",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "predicate"
+          },
+          {
+            "t": "楼",
+            "r": "lóu",
+            "g": "object"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "千",
+              "r": "ち",
+              "g": "subject"
+            },
+            {
+              "t": "重",
+              "r": "え",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "奥",
+              "r": "おく",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "二",
+              "r": "に",
+              "g": "object"
+            },
+            {
+              "t": "階",
+              "r": "かい",
+              "g": "object"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "行",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "き",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "ゆっくり",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "着",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "物",
+              "r": "もの",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "脱",
+              "r": "ぬ",
+              "g": "predicate"
+            },
+            {
+              "t": "いで",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "少",
+              "r": "すこ",
+              "g": "adverbial"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "座",
+              "r": "すわ",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "それから",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "また",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "下",
+              "r": "した",
+              "g": "object"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "降",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "りて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "来",
+              "r": "き",
+              "g": "complement"
+            },
+            {
+              "t": "た",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "母亲已经把三点钟那顿点心给店员们分发完了。",
+        "zh": [
+          {
+            "t": "母",
+            "r": "mǔ",
+            "g": "subject"
+          },
+          {
+            "t": "亲",
+            "r": "qīn",
+            "g": "subject"
+          },
+          {
+            "t": "已",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "经",
+            "r": "jīng",
+            "g": "adverbial"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "三",
+            "r": "sān",
+            "g": "attributive"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "attributive"
+          },
+          {
+            "t": "钟",
+            "r": "zhōng",
+            "g": "attributive"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "attributive"
+          },
+          {
+            "t": "顿",
+            "r": "dùn",
+            "g": "attributive"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "object"
+          },
+          {
+            "t": "心",
+            "r": "xin",
+            "g": "object"
+          },
+          {
+            "t": "给",
+            "r": "gěi",
+            "g": "adverbial"
+          },
+          {
+            "t": "店",
+            "r": "diàn",
+            "g": "object"
+          },
+          {
+            "t": "员",
+            "r": "yuán",
+            "g": "object"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "object"
+          },
+          {
+            "t": "分",
+            "r": "fēn",
+            "g": "predicate"
+          },
+          {
+            "t": "发",
+            "r": "fā",
+            "g": "predicate"
+          },
+          {
+            "t": "完",
+            "r": "wán",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "母",
+              "r": "はは",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "もう",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "三",
+              "r": "さん",
+              "g": "attributive"
+            },
+            {
+              "t": "時",
+              "r": "じ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "その",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "おやつ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "店",
+              "r": "てん",
+              "g": "object"
+            },
+            {
+              "t": "員",
+              "r": "いん",
+              "g": "object"
+            },
+            {
+              "t": "たち",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "配",
+              "r": "くば",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "終",
+              "r": "お",
+              "g": "complement"
+            },
+            {
+              "t": "えていた",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

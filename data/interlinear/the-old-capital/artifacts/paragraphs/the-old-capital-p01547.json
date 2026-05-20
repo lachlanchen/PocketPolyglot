@@ -1,0 +1,238 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01547",
+  "source_text": "“小姐，你是不会有这样的家人的。”",
+  "source_sha256": "df90245be84b763c51e0ab9080130cf2f80d5ca0dfee58cdabe385e051e24631",
+  "source_normalized_sha256": "df90245be84b763c51e0ab9080130cf2f80d5ca0dfee58cdabe385e051e24631",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 26,
+    "grammar_token_total": 26,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-1547",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "都",
+        "r": "dū"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "都",
+        "r": "と"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "秋色",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū"
+      },
+      {
+        "t": "色",
+        "r": "sè"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき"
+      },
+      {
+        "t": "色",
+        "r": "いろ"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-秋色-intro",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū"
+      },
+      {
+        "t": "色",
+        "r": "sè"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき"
+      },
+      {
+        "t": "色",
+        "r": "いろ"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01547",
+    "source_text": "“小姐，你是不会有这样的家人的。”",
+    "units": [
+      {
+        "source_text": "“小姐，你是不会有这样的家人的。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "subject"
+          },
+          {
+            "t": "姐",
+            "r": "jiě",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "attributive"
+          },
+          {
+            "t": "样",
+            "r": "yàng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "object"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "お",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "嬢",
+              "r": "じょう",
+              "g": "subject"
+            },
+            {
+              "t": "さん、",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "あなたには",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "そのような",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "家",
+              "r": "か",
+              "g": "object"
+            },
+            {
+              "t": "族",
+              "r": "ぞく",
+              "g": "object"
+            },
+            {
+              "t": "はいないでしょう。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,476 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01581",
+  "source_text": "“那么，我就接受吧，小姐。”苗子乖乖地屈服了，“我净说些不必要的话，请你原谅。”",
+  "source_sha256": "a662f10fc7b47090286c8b175aede59b45c0aa7b28dc10fc790dbd0f14d0956a",
+  "source_normalized_sha256": "a662f10fc7b47090286c8b175aede59b45c0aa7b28dc10fc790dbd0f14d0956a",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 69,
+    "grammar_token_total": 69,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-1581",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "秋色",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-秋色-intro",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01581",
+    "source_text": "“那么，我就接受吧，小姐。”苗子乖乖地屈服了，“我净说些不必要的话，请你原谅。”",
+    "units": [
+      {
+        "source_text": "“那么，我就接受吧，小姐。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "adverbial"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "接",
+            "r": "jiē",
+            "g": "predicate"
+          },
+          {
+            "t": "受",
+            "r": "shòu",
+            "g": "predicate"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "object"
+          },
+          {
+            "t": "姐",
+            "r": "jiě",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "それなら、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "お",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "受",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "けします、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "お",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "嬢",
+              "r": "じょう",
+              "g": "object"
+            },
+            {
+              "t": "さま。",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "苗子乖乖地屈服了，“我净说些不必要的话，请你原谅。”",
+        "zh": [
+          {
+            "t": "苗",
+            "r": "miáo",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "乖",
+            "r": "guāi",
+            "g": "adverbial"
+          },
+          {
+            "t": "乖",
+            "r": "guāi",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "屈",
+            "r": "qū",
+            "g": "predicate"
+          },
+          {
+            "t": "服",
+            "r": "fú",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "净",
+            "r": "jìng",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "些",
+            "r": "xiē",
+            "g": "object"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "attributive"
+          },
+          {
+            "t": "必",
+            "r": "bì",
+            "g": "attributive"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "话",
+            "r": "huà",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "请",
+            "r": "qǐng",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "原",
+            "r": "yuán",
+            "g": "predicate"
+          },
+          {
+            "t": "谅",
+            "r": "liàng",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "苗",
+              "r": "びょう",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "おとなしく",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "屈",
+              "r": "くっ",
+              "g": "predicate"
+            },
+            {
+              "t": "服",
+              "r": "ぷく",
+              "g": "predicate"
+            },
+            {
+              "t": "して、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "余",
+              "r": "よ",
+              "g": "attributive"
+            },
+            {
+              "t": "計",
+              "r": "けい",
+              "g": "attributive"
+            },
+            {
+              "t": "なことばかり",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "申",
+              "r": "もう",
+              "g": "predicate"
+            },
+            {
+              "t": "しました。どうかお",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "許",
+              "r": "ゆる",
+              "g": "predicate"
+            },
+            {
+              "t": "しください。",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

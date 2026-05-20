@@ -1,0 +1,441 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01549",
+  "source_text": "“只要你把我看作姐妹，我就很感谢了。在祇园节时，我讲了一些多余的话。”",
+  "source_sha256": "91b93bf165459f313c6d0c893829a0c977b20d5ce99ae67227d303311e7ae273",
+  "source_normalized_sha256": "91b93bf165459f313c6d0c893829a0c977b20d5ce99ae67227d303311e7ae273",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 62,
+    "grammar_token_total": 62,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-1549",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "秋色",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-秋色-intro",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01549",
+    "source_text": "“只要你把我看作姐妹，我就很感谢了。在祇园节时，我讲了一些多余的话。”",
+    "units": [
+      {
+        "source_text": "“只要你把我看作姐妹，我就很感谢了。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "只",
+            "r": "zhǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "adverbial"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "object"
+          },
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "predicate"
+          },
+          {
+            "t": "作",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "姐",
+            "r": "jiě",
+            "g": "complement"
+          },
+          {
+            "t": "妹",
+            "r": "mèi",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "很",
+            "r": "hěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "感",
+            "r": "gǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "谢",
+            "r": "xiè",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「あなたが",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "姉",
+              "r": "しまい",
+              "g": "complement"
+            },
+            {
+              "t": "妹",
+              "r": "まい",
+              "g": "complement"
+            },
+            {
+              "t": "のように",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "てくれるだけで、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "とても",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "ありがたく",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "思",
+              "r": "おも",
+              "g": "predicate"
+            },
+            {
+              "t": "います。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "在祇园节时，我讲了一些多余的话。”",
+        "zh": [
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "祇",
+            "r": "qí",
+            "g": "attributive"
+          },
+          {
+            "t": "园",
+            "r": "yuán",
+            "g": "attributive"
+          },
+          {
+            "t": "节",
+            "r": "jié",
+            "g": "adverbial"
+          },
+          {
+            "t": "时",
+            "r": "shí",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "讲",
+            "r": "jiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yì",
+            "g": "attributive"
+          },
+          {
+            "t": "些",
+            "r": "xiē",
+            "g": "attributive"
+          },
+          {
+            "t": "多",
+            "r": "duō",
+            "g": "attributive"
+          },
+          {
+            "t": "余",
+            "r": "yú",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "话",
+            "r": "huà",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "祇",
+              "r": "ぎ",
+              "g": "adverbial"
+            },
+            {
+              "t": "園",
+              "r": "おん",
+              "g": "adverbial"
+            },
+            {
+              "t": "祭",
+              "r": "まつり",
+              "g": "adverbial"
+            },
+            {
+              "t": "のとき、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "少",
+              "r": "すこ",
+              "g": "attributive"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "余",
+              "r": "よ",
+              "g": "attributive"
+            },
+            {
+              "t": "計",
+              "r": "けい",
+              "g": "attributive"
+            },
+            {
+              "t": "なことを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "話",
+              "r": "はな",
+              "g": "predicate"
+            },
+            {
+              "t": "しました。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

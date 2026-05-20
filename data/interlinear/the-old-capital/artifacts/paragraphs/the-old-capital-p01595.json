@@ -1,0 +1,456 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01595",
+  "source_text": "苗子没有送千重子到汽车站。与其说是因为全身被淋湿了，不如说是怕引人注目。",
+  "source_sha256": "073fc7fe8bf6a2c06f3544eb3846b5247a251b342510e27fd63f771f8f2c6f0c",
+  "source_normalized_sha256": "073fc7fe8bf6a2c06f3544eb3846b5247a251b342510e27fd63f771f8f2c6f0c",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 65,
+    "grammar_token_total": 65,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-1595",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "秋色",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "attributive"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-秋色-intro",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01595",
+    "source_text": "苗子没有送千重子到汽车站。与其说是因为全身被淋湿了，不如说是怕引人注目。",
+    "units": [
+      {
+        "source_text": "苗子没有送千重子到汽车站。",
+        "zh": [
+          {
+            "t": "苗",
+            "r": "miáo",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "predicate"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "送",
+            "r": "sòng",
+            "g": "predicate"
+          },
+          {
+            "t": "千",
+            "r": "qiān",
+            "g": "object"
+          },
+          {
+            "t": "重",
+            "r": "chóng",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "object"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "complement"
+          },
+          {
+            "t": "汽",
+            "r": "qì",
+            "g": "complement"
+          },
+          {
+            "t": "车",
+            "r": "chē",
+            "g": "complement"
+          },
+          {
+            "t": "站",
+            "r": "zhàn",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "苗",
+              "r": "なえ",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "千",
+              "r": "ち",
+              "g": "object"
+            },
+            {
+              "t": "重",
+              "r": "え",
+              "g": "object"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "バス",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "停",
+              "r": "てい",
+              "g": "complement"
+            },
+            {
+              "t": "まで",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "送",
+              "r": "おく",
+              "g": "predicate"
+            },
+            {
+              "t": "らなかった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "与其说是因为全身被淋湿了，不如说是怕引人注目。",
+        "zh": [
+          {
+            "t": "与",
+            "r": "yǔ",
+            "g": "function"
+          },
+          {
+            "t": "其",
+            "r": "qí",
+            "g": "function"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "因",
+            "r": "yīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "为",
+            "r": "wèi",
+            "g": "adverbial"
+          },
+          {
+            "t": "全",
+            "r": "quán",
+            "g": "subject"
+          },
+          {
+            "t": "身",
+            "r": "shēn",
+            "g": "subject"
+          },
+          {
+            "t": "被",
+            "r": "bèi",
+            "g": "predicate"
+          },
+          {
+            "t": "淋",
+            "r": "lín",
+            "g": "predicate"
+          },
+          {
+            "t": "湿",
+            "r": "shī",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "function"
+          },
+          {
+            "t": "如",
+            "r": "rú",
+            "g": "function"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "怕",
+            "r": "pà",
+            "g": "predicate"
+          },
+          {
+            "t": "引",
+            "r": "yǐn",
+            "g": "object"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "object"
+          },
+          {
+            "t": "注",
+            "r": "zhù",
+            "g": "object"
+          },
+          {
+            "t": "目",
+            "r": "mù",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "全",
+              "r": "ぜん",
+              "g": "subject"
+            },
+            {
+              "t": "身",
+              "r": "しん",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "雨",
+              "r": "あめ",
+              "g": "predicate"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "濡",
+              "r": "ぬ",
+              "g": "predicate"
+            },
+            {
+              "t": "れたからというより",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "object"
+            },
+            {
+              "t": "目",
+              "r": "め",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "引",
+              "r": "ひ",
+              "g": "object"
+            },
+            {
+              "t": "くのを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "恐",
+              "r": "おそ",
+              "g": "predicate"
+            },
+            {
+              "t": "れたのである",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

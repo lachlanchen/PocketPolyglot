@@ -1,0 +1,507 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01620",
+  "source_text": "“是吗？”阿繁抚摸着千重子的头发说，“还是告诉妈好。那姑娘很像你吗？”",
+  "source_sha256": "87d9a0387dbd92419af6f0822a680a05c6bc950e04f8756468c711a5e9ee8c14",
+  "source_normalized_sha256": "87d9a0387dbd92419af6f0822a680a05c6bc950e04f8756468c711a5e9ee8c14",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 73,
+    "grammar_token_total": 73,
+    "unit_count": 3
+  },
+  "source_chunk_id": "the-old-capital-chunk-1620",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "秋色",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "topic"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "topic"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-秋色-intro",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "topic"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "topic"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01620",
+    "source_text": "“是吗？”阿繁抚摸着千重子的头发说，“还是告诉妈好。那姑娘很像你吗？”",
+    "units": [
+      {
+        "source_text": "“是吗？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "そう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "な",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？」",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "と",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "確",
+              "r": "たし",
+              "g": "predicate"
+            },
+            {
+              "t": "かめた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "阿繁抚摸着千重子的头发说，“还是告诉妈好。",
+        "zh": [
+          {
+            "t": "阿",
+            "r": "ā",
+            "g": "subject"
+          },
+          {
+            "t": "繁",
+            "r": "fán",
+            "g": "subject"
+          },
+          {
+            "t": "抚",
+            "r": "fǔ",
+            "g": "predicate"
+          },
+          {
+            "t": "摸",
+            "r": "mō",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "predicate"
+          },
+          {
+            "t": "千",
+            "r": "qiān",
+            "g": "attributive"
+          },
+          {
+            "t": "重",
+            "r": "chóng",
+            "g": "attributive"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "头",
+            "r": "tóu",
+            "g": "object"
+          },
+          {
+            "t": "发",
+            "r": "fà",
+            "g": "object"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "adverbial"
+          },
+          {
+            "t": "告",
+            "r": "gào",
+            "g": "predicate"
+          },
+          {
+            "t": "诉",
+            "r": "sù",
+            "g": "predicate"
+          },
+          {
+            "t": "妈",
+            "r": "mā",
+            "g": "object"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "阿",
+              "r": "あ",
+              "g": "subject"
+            },
+            {
+              "t": "繁",
+              "r": "はん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "千",
+              "r": "ち",
+              "g": "attributive"
+            },
+            {
+              "t": "重",
+              "r": "え",
+              "g": "attributive"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "髪",
+              "r": "かみ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "撫",
+              "r": "な",
+              "g": "predicate"
+            },
+            {
+              "t": "でながら、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "やはり",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "お",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "母",
+              "r": "かあ",
+              "g": "object"
+            },
+            {
+              "t": "さんに",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "話",
+              "r": "はな",
+              "g": "predicate"
+            },
+            {
+              "t": "したほうが",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "いい",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "那姑娘很像你吗？”",
+        "zh": [
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "attributive"
+          },
+          {
+            "t": "姑",
+            "r": "gū",
+            "g": "subject"
+          },
+          {
+            "t": "娘",
+            "r": "niang",
+            "g": "subject"
+          },
+          {
+            "t": "很",
+            "r": "hěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "像",
+            "r": "xiàng",
+            "g": "predicate"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "object"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "その",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "娘",
+              "r": "むすめ",
+              "g": "subject"
+            },
+            {
+              "t": "さんは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "あなたに",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "よく",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "似",
+              "r": "に",
+              "g": "predicate"
+            },
+            {
+              "t": "ている",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

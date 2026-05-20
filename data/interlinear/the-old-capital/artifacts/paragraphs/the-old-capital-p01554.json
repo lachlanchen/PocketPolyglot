@@ -1,0 +1,526 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01554",
+  "source_text": "千重子感动得几乎落下泪来。“听我说，苗子，节日那天晚上你被人家误认为是我，很不自在吧？”",
+  "source_sha256": "9d2325aa20e616e9ea5eeeea597e0feb0dc1e6fcde18bb8bb10a785ee2841795",
+  "source_normalized_sha256": "9d2325aa20e616e9ea5eeeea597e0feb0dc1e6fcde18bb8bb10a785ee2841795",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 79,
+    "grammar_token_total": 79,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-1554",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "秋色",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-秋色-intro",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01554",
+    "source_text": "千重子感动得几乎落下泪来。“听我说，苗子，节日那天晚上你被人家误认为是我，很不自在吧？”",
+    "units": [
+      {
+        "source_text": "千重子感动得几乎落下泪来。",
+        "zh": [
+          {
+            "t": "千",
+            "r": "qiān",
+            "g": "subject"
+          },
+          {
+            "t": "重",
+            "r": "chóng",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "感",
+            "r": "gǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "动",
+            "r": "dòng",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "几",
+            "r": "jī",
+            "g": "adverbial"
+          },
+          {
+            "t": "乎",
+            "r": "hū",
+            "g": "adverbial"
+          },
+          {
+            "t": "落",
+            "r": "luò",
+            "g": "predicate"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "complement"
+          },
+          {
+            "t": "泪",
+            "r": "lèi",
+            "g": "object"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "千",
+              "r": "ち",
+              "g": "subject"
+            },
+            {
+              "t": "重",
+              "r": "え",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "感",
+              "r": "かん",
+              "g": "predicate"
+            },
+            {
+              "t": "動",
+              "r": "どう",
+              "g": "predicate"
+            },
+            {
+              "t": "して、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "思",
+              "r": "おも",
+              "g": "adverbial"
+            },
+            {
+              "t": "わず",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "涙",
+              "r": "なみだ",
+              "g": "object"
+            },
+            {
+              "t": "がこぼれそうになった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "“听我说，苗子，节日那天晚上你被人家误认为是我，很不自在吧？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "听",
+            "r": "tīng",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "object"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "苗",
+            "r": "miáo",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "节",
+            "r": "jié",
+            "g": "adverbial"
+          },
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "adverbial"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "adverbial"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "晚",
+            "r": "wǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "上",
+            "r": "shang",
+            "g": "adverbial"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "被",
+            "r": "bèi",
+            "g": "function"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "subject"
+          },
+          {
+            "t": "误",
+            "r": "wù",
+            "g": "predicate"
+          },
+          {
+            "t": "认",
+            "r": "rèn",
+            "g": "predicate"
+          },
+          {
+            "t": "为",
+            "r": "wéi",
+            "g": "predicate"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "很",
+            "r": "hěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "predicate"
+          },
+          {
+            "t": "自",
+            "r": "zì",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zai",
+            "g": "predicate"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "聞",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "いて、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "苗",
+              "r": "なえ",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "祭",
+              "r": "まつ",
+              "g": "adverbial"
+            },
+            {
+              "t": "りのあの",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "夜",
+              "r": "よる",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "あなたは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "subject"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "object"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "間",
+              "r": "ま",
+              "g": "predicate"
+            },
+            {
+              "t": "違",
+              "r": "ちが",
+              "g": "predicate"
+            },
+            {
+              "t": "えられて、ずいぶん",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "居",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "心",
+              "r": "ごこ",
+              "g": "predicate"
+            },
+            {
+              "t": "地",
+              "r": "ち",
+              "g": "predicate"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "悪",
+              "r": "わる",
+              "g": "predicate"
+            },
+            {
+              "t": "かったでしょう？」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

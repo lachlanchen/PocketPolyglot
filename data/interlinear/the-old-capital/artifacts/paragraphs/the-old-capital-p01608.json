@@ -1,0 +1,411 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01608",
+  "source_text": "“我不能瞒着妈妈。我们只见过两面，就是在祇园节那天和今天……”",
+  "source_sha256": "46b6e079c388be2388e874db895722a87d1c6050ebd3fe74acdac094eef6a599",
+  "source_normalized_sha256": "46b6e079c388be2388e874db895722a87d1c6050ebd3fe74acdac094eef6a599",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 56,
+    "grammar_token_total": 56,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-1608",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "秋色",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-秋色-intro",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01608",
+    "source_text": "“我不能瞒着妈妈。我们只见过两面，就是在祇园节那天和今天……”",
+    "units": [
+      {
+        "source_text": "“我不能瞒着妈妈。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "能",
+            "r": "néng",
+            "g": "predicate"
+          },
+          {
+            "t": "瞒",
+            "r": "mán",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "predicate"
+          },
+          {
+            "t": "妈",
+            "r": "mā",
+            "g": "object"
+          },
+          {
+            "t": "妈",
+            "r": "ma",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "お",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "母",
+              "r": "かあ",
+              "g": "object"
+            },
+            {
+              "t": "さんには",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "隠",
+              "r": "かく",
+              "g": "predicate"
+            },
+            {
+              "t": "せません",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我们只见过两面，就是在祇园节那天和今天……”",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          },
+          {
+            "t": "只",
+            "r": "zhǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "见",
+            "r": "jiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "过",
+            "r": "guo",
+            "g": "predicate"
+          },
+          {
+            "t": "两",
+            "r": "liǎng",
+            "g": "attributive"
+          },
+          {
+            "t": "面",
+            "r": "miàn",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "function"
+          },
+          {
+            "t": "祇",
+            "r": "qí",
+            "g": "attributive"
+          },
+          {
+            "t": "园",
+            "r": "yuán",
+            "g": "attributive"
+          },
+          {
+            "t": "节",
+            "r": "jié",
+            "g": "attributive"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "attributive"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "object"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "function"
+          },
+          {
+            "t": "今",
+            "r": "jīn",
+            "g": "attributive"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "object"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "たちは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "二",
+              "r": "に",
+              "g": "attributive"
+            },
+            {
+              "t": "度",
+              "r": "ど",
+              "g": "object"
+            },
+            {
+              "t": "しか",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "会",
+              "r": "あ",
+              "g": "predicate"
+            },
+            {
+              "t": "っていません",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "祇",
+              "r": "ぎ",
+              "g": "attributive"
+            },
+            {
+              "t": "園",
+              "r": "おん",
+              "g": "attributive"
+            },
+            {
+              "t": "祭",
+              "r": "まつり",
+              "g": "attributive"
+            },
+            {
+              "t": "のあの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "日",
+              "r": "ひ",
+              "g": "object"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "今",
+              "r": "きょう",
+              "g": "object"
+            },
+            {
+              "t": "日",
+              "r": "きょう",
+              "g": "object"
+            },
+            {
+              "t": "だけです",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "……」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

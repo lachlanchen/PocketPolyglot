@@ -1,0 +1,327 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01598",
+  "source_text": "“妈，我回来了。回来晚了……爸爸呢？”",
+  "source_sha256": "96426e66507003cfcbed81348d43fd2a24e9675be9c37524dbb109f9e6164b3b",
+  "source_normalized_sha256": "96426e66507003cfcbed81348d43fd2a24e9675be9c37524dbb109f9e6164b3b",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 37,
+    "grammar_token_total": 37,
+    "unit_count": 3
+  },
+  "source_chunk_id": "the-old-capital-chunk-1598",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "秋色",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-秋色-intro",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01598",
+    "source_text": "“妈，我回来了。回来晚了……爸爸呢？”",
+    "units": [
+      {
+        "source_text": "“妈，我回来了。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "妈",
+            "r": "mā",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "回",
+            "r": "huí",
+            "g": "predicate"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "お",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "母",
+              "r": "かあ",
+              "g": "object"
+            },
+            {
+              "t": "さん、",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "ただいま",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "帰",
+              "r": "かえ",
+              "g": "predicate"
+            },
+            {
+              "t": "りました。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "回来晚了……",
+        "zh": [
+          {
+            "t": "回",
+            "r": "huí",
+            "g": "predicate"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "晚",
+            "r": "wǎn",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "帰",
+              "r": "かえ",
+              "g": "predicate"
+            },
+            {
+              "t": "るのが",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "遅",
+              "r": "おそ",
+              "g": "complement"
+            },
+            {
+              "t": "くなりました……",
+              "r": "",
+              "g": "complement"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "爸爸呢？”",
+        "zh": [
+          {
+            "t": "爸",
+            "r": "bà",
+            "g": "subject"
+          },
+          {
+            "t": "爸",
+            "r": "ba",
+            "g": "subject"
+          },
+          {
+            "t": "呢",
+            "r": "ne",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "お",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "父",
+              "r": "とう",
+              "g": "subject"
+            },
+            {
+              "t": "さんは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "どこに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "いるの",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
