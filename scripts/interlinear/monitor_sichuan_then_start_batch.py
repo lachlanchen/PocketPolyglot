@@ -17,16 +17,11 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[2]
 CURRENT_BOOK = "sichuan-folk-stories-vol1"
 DEFAULT_QUEUE = [
-    "kokoro",
-    "snow-country",
-    "no-longer-human",
-    "rashomon-stories",
-    "kinkakuji",
-    "sishu-jizhu",
-    "shiji",
+    "the-old-capital",
+    "izu-no-odori",
+    "genji-modern",
     "kojiki",
     "woman-in-the-dunes",
-    "genji-modern",
     "chumon-no-ooi-ryoriten",
     "ginga-tetsudo",
 ]

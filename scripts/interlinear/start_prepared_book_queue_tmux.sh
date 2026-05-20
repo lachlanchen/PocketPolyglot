@@ -20,7 +20,7 @@ if tmux has-session -t "=$session" 2>/dev/null; then
   exit 0
 fi
 
-book_ids="${BOOK_IDS:-kinkakuji sishu-jizhu shiji kojiki woman-in-the-dunes genji-modern chumon-no-ooi-ryoriten ginga-tetsudo}"
+book_ids="${BOOK_IDS:-the-old-capital izu-no-odori genji-modern kojiki woman-in-the-dunes chumon-no-ooi-ryoriten ginga-tetsudo}"
 book_args=()
 read -r -a ids <<< "$book_ids"
 for id in "${ids[@]}"; do
