@@ -1,0 +1,245 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00980",
+  "source_text": "“你织得非常结实呀。”",
+  "source_sha256": "2fc802598da6a1088796e7beec9f342b12a854b75b1d3da21237405ce8698a74",
+  "source_normalized_sha256": "2fc802598da6a1088796e7beec9f342b12a854b75b1d3da21237405ce8698a74",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 21,
+    "grammar_token_total": 21,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-0980",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "北山杉",
+    "title_zh": [
+      {
+        "t": "北",
+        "r": "běi",
+        "g": "attributive"
+      },
+      {
+        "t": "山",
+        "r": "shān",
+        "g": "attributive"
+      },
+      {
+        "t": "杉",
+        "r": "shān",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "北",
+        "r": "きた",
+        "g": "attributive"
+      },
+      {
+        "t": "山",
+        "r": "やま",
+        "g": "attributive"
+      },
+      {
+        "t": "杉",
+        "r": "すぎ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-北山杉-intro",
+    "title_zh": [
+      {
+        "t": "北",
+        "r": "běi",
+        "g": "attributive"
+      },
+      {
+        "t": "山",
+        "r": "shān",
+        "g": "attributive"
+      },
+      {
+        "t": "杉",
+        "r": "shān",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "北",
+        "r": "きた",
+        "g": "attributive"
+      },
+      {
+        "t": "山",
+        "r": "やま",
+        "g": "attributive"
+      },
+      {
+        "t": "杉",
+        "r": "すぎ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00980",
+    "source_text": "“你织得非常结实呀。”",
+    "units": [
+      {
+        "source_text": "“你织得非常结实呀。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "织",
+            "r": "zhī",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "非",
+            "r": "fēi",
+            "g": "adverbial"
+          },
+          {
+            "t": "常",
+            "r": "cháng",
+            "g": "adverbial"
+          },
+          {
+            "t": "结",
+            "r": "jiē",
+            "g": "complement"
+          },
+          {
+            "t": "实",
+            "r": "shi",
+            "g": "complement"
+          },
+          {
+            "t": "呀",
+            "r": "ya",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "あなたは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "とても",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "丈",
+              "r": "じょう",
+              "g": "complement"
+            },
+            {
+              "t": "夫",
+              "r": "ぶ",
+              "g": "complement"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "complement"
+            }
+          ],
+          [
+            {
+              "t": "織",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "れているのね",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,576 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00942",
+  "source_text": "伐竹人首先把捆在圆柱上的粗大的雄竹砍下来，然后整理好。细长的雌竹则原封不动地放置在那儿。",
+  "source_sha256": "2c3ff8a915d66b39219c29465a94c867f2704450d14bb55c39499dfdc7746a6b",
+  "source_normalized_sha256": "2c3ff8a915d66b39219c29465a94c867f2704450d14bb55c39499dfdc7746a6b",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 85,
+    "grammar_token_total": 85,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-0942",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "北山杉",
+    "title_zh": [
+      {
+        "t": "北",
+        "r": "běi",
+        "g": "topic"
+      },
+      {
+        "t": "山",
+        "r": "shān",
+        "g": "topic"
+      },
+      {
+        "t": "杉",
+        "r": "shān",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "北",
+        "r": "きた",
+        "g": "topic"
+      },
+      {
+        "t": "山",
+        "r": "やま",
+        "g": "topic"
+      },
+      {
+        "t": "杉",
+        "r": "すぎ",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-北山杉-intro",
+    "title_zh": [
+      {
+        "t": "北",
+        "r": "běi",
+        "g": "topic"
+      },
+      {
+        "t": "山",
+        "r": "shān",
+        "g": "topic"
+      },
+      {
+        "t": "杉",
+        "r": "shān",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "北",
+        "r": "きた",
+        "g": "topic"
+      },
+      {
+        "t": "山",
+        "r": "やま",
+        "g": "topic"
+      },
+      {
+        "t": "杉",
+        "r": "すぎ",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00942",
+    "source_text": "伐竹人首先把捆在圆柱上的粗大的雄竹砍下来，然后整理好。细长的雌竹则原封不动地放置在那儿。",
+    "units": [
+      {
+        "source_text": "伐竹人首先把捆在圆柱上的粗大的雄竹砍下来，然后整理好。",
+        "zh": [
+          {
+            "t": "伐",
+            "r": "fá",
+            "g": "subject"
+          },
+          {
+            "t": "竹",
+            "r": "zhú",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "首",
+            "r": "shǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "捆",
+            "r": "kǔn",
+            "g": "attributive"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "attributive"
+          },
+          {
+            "t": "圆",
+            "r": "yuán",
+            "g": "attributive"
+          },
+          {
+            "t": "柱",
+            "r": "zhù",
+            "g": "attributive"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "粗",
+            "r": "cū",
+            "g": "attributive"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "雄",
+            "r": "xióng",
+            "g": "object"
+          },
+          {
+            "t": "竹",
+            "r": "zhú",
+            "g": "object"
+          },
+          {
+            "t": "砍",
+            "r": "kǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "complement"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "然",
+            "r": "rán",
+            "g": "adverbial"
+          },
+          {
+            "t": "后",
+            "r": "hòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "整",
+            "r": "zhěng",
+            "g": "predicate"
+          },
+          {
+            "t": "理",
+            "r": "lǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "竹",
+              "r": "たけ",
+              "g": "subject"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "伐",
+              "r": "き",
+              "g": "subject"
+            },
+            {
+              "t": "る",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "まず",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "円",
+              "r": "えん",
+              "g": "attributive"
+            },
+            {
+              "t": "柱",
+              "r": "ちゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "にくくられた",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "太",
+              "r": "ふと",
+              "g": "attributive"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "雄",
+              "r": "お",
+              "g": "object"
+            },
+            {
+              "t": "竹",
+              "r": "だけ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "切",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "落",
+              "r": "お",
+              "g": "complement"
+            },
+            {
+              "t": "とし",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "それから",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "きちんと",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "整",
+              "r": "ととの",
+              "g": "predicate"
+            },
+            {
+              "t": "えた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "细长的雌竹则原封不动地放置在那儿。",
+        "zh": [
+          {
+            "t": "细",
+            "r": "xì",
+            "g": "attributive"
+          },
+          {
+            "t": "长",
+            "r": "cháng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "雌",
+            "r": "cí",
+            "g": "subject"
+          },
+          {
+            "t": "竹",
+            "r": "zhú",
+            "g": "subject"
+          },
+          {
+            "t": "则",
+            "r": "zé",
+            "g": "subject"
+          },
+          {
+            "t": "原",
+            "r": "yuán",
+            "g": "adverbial"
+          },
+          {
+            "t": "封",
+            "r": "fēng",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bú",
+            "g": "adverbial"
+          },
+          {
+            "t": "动",
+            "r": "dòng",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "放",
+            "r": "fàng",
+            "g": "predicate"
+          },
+          {
+            "t": "置",
+            "r": "zhì",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "complement"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "complement"
+          },
+          {
+            "t": "儿",
+            "r": "ér",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "細",
+              "r": "ほそ",
+              "g": "attributive"
+            },
+            {
+              "t": "長",
+              "r": "なが",
+              "g": "attributive"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "雌",
+              "r": "め",
+              "g": "subject"
+            },
+            {
+              "t": "竹",
+              "r": "だけ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "元",
+              "r": "もと",
+              "g": "adverbial"
+            },
+            {
+              "t": "のまま",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "adverbial"
+            },
+            {
+              "t": "つかずで",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "そこに",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "置",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "かれていた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

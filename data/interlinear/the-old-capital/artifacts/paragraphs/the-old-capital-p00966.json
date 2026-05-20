@@ -1,0 +1,396 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00966",
+  "source_text": "“我也有许多想法。自从在植物园里遇见小姐，我还在想。”",
+  "source_sha256": "b6070d83b49a2338a039836a3386aab29c9f39940d5435c6675e1bdd09edaa01",
+  "source_normalized_sha256": "b6070d83b49a2338a039836a3386aab29c9f39940d5435c6675e1bdd09edaa01",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 49,
+    "grammar_token_total": 49,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-0966",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "北山杉",
+    "title_zh": [
+      {
+        "t": "北",
+        "r": "běi",
+        "g": "attributive"
+      },
+      {
+        "t": "山",
+        "r": "shān",
+        "g": "attributive"
+      },
+      {
+        "t": "杉",
+        "r": "shān",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "北",
+        "r": "きた",
+        "g": "attributive"
+      },
+      {
+        "t": "山",
+        "r": "やま",
+        "g": "attributive"
+      },
+      {
+        "t": "杉",
+        "r": "すぎ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-北山杉-intro",
+    "title_zh": [
+      {
+        "t": "北",
+        "r": "běi",
+        "g": "attributive"
+      },
+      {
+        "t": "山",
+        "r": "shān",
+        "g": "attributive"
+      },
+      {
+        "t": "杉",
+        "r": "shān",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "北",
+        "r": "きた",
+        "g": "attributive"
+      },
+      {
+        "t": "山",
+        "r": "やま",
+        "g": "attributive"
+      },
+      {
+        "t": "杉",
+        "r": "すぎ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00966",
+    "source_text": "“我也有许多想法。自从在植物园里遇见小姐，我还在想。”",
+    "units": [
+      {
+        "source_text": "“我也有许多想法。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "许",
+            "r": "xǔ",
+            "g": "attributive"
+          },
+          {
+            "t": "多",
+            "r": "duō",
+            "g": "attributive"
+          },
+          {
+            "t": "想",
+            "r": "xiǎng",
+            "g": "object"
+          },
+          {
+            "t": "法",
+            "r": "fǎ",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "にも",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "いろいろな",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "考",
+              "r": "かんが",
+              "g": "object"
+            },
+            {
+              "t": "えが",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "あります",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "自从在植物园里遇见小姐，我还在想。”",
+        "zh": [
+          {
+            "t": "自",
+            "r": "zì",
+            "g": "adverbial"
+          },
+          {
+            "t": "从",
+            "r": "cóng",
+            "g": "adverbial"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "植",
+            "r": "zhí",
+            "g": "adverbial"
+          },
+          {
+            "t": "物",
+            "r": "wù",
+            "g": "adverbial"
+          },
+          {
+            "t": "园",
+            "r": "yuán",
+            "g": "adverbial"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "遇",
+            "r": "yù",
+            "g": "adverbial"
+          },
+          {
+            "t": "见",
+            "r": "jiàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "object"
+          },
+          {
+            "t": "姐",
+            "r": "jiě",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "adverbial"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "想",
+            "r": "xiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "植",
+              "r": "しょく",
+              "g": "adverbial"
+            },
+            {
+              "t": "物",
+              "r": "ぶつ",
+              "g": "adverbial"
+            },
+            {
+              "t": "園",
+              "r": "えん",
+              "g": "adverbial"
+            },
+            {
+              "t": "でお",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "嬢",
+              "r": "じょう",
+              "g": "object"
+            },
+            {
+              "t": "さんにお",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "会",
+              "r": "あ",
+              "g": "adverbial"
+            },
+            {
+              "t": "いしてから",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "はまだ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "考",
+              "r": "かんが",
+              "g": "predicate"
+            },
+            {
+              "t": "えているのです",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
