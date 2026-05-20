@@ -1,0 +1,401 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00702",
+  "source_text": "千重子是独生女。如果把她嫁出去，母亲阿繁不知该有多伤心啊！",
+  "source_sha256": "bd6cc4bb8601c4065e94b6cd660276e400afa5a9edb2c00081c496dbb57b131b",
+  "source_normalized_sha256": "bd6cc4bb8601c4065e94b6cd660276e400afa5a9edb2c00081c496dbb57b131b",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 50,
+    "grammar_token_total": 50,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-0702",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "和服街",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "fú",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "jiē",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "ふく",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "がい",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-和服街-intro",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "fú",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "jiē",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "ふく",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "がい",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00702",
+    "source_text": "千重子是独生女。如果把她嫁出去，母亲阿繁不知该有多伤心啊！",
+    "units": [
+      {
+        "source_text": "千重子是独生女。",
+        "zh": [
+          {
+            "t": "千",
+            "r": "qiān",
+            "g": "subject"
+          },
+          {
+            "t": "重",
+            "r": "chóng",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "独",
+            "r": "dú",
+            "g": "object"
+          },
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "object"
+          },
+          {
+            "t": "女",
+            "r": "nǚ",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "千",
+              "r": "ち",
+              "g": "subject"
+            },
+            {
+              "t": "重",
+              "r": "え",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "object"
+            },
+            {
+              "t": "人",
+              "r": "り",
+              "g": "object"
+            },
+            {
+              "t": "娘",
+              "r": "むすめ",
+              "g": "object"
+            },
+            {
+              "t": "だった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "如果把她嫁出去，母亲阿繁不知该有多伤心啊！",
+        "zh": [
+          {
+            "t": "如",
+            "r": "rú",
+            "g": "function"
+          },
+          {
+            "t": "果",
+            "r": "guǒ",
+            "g": "function"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "她",
+            "r": "tā",
+            "g": "object"
+          },
+          {
+            "t": "嫁",
+            "r": "jià",
+            "g": "predicate"
+          },
+          {
+            "t": "出",
+            "r": "chū",
+            "g": "complement"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "母",
+            "r": "mǔ",
+            "g": "subject"
+          },
+          {
+            "t": "亲",
+            "r": "qīn",
+            "g": "subject"
+          },
+          {
+            "t": "阿",
+            "r": "ā",
+            "g": "subject"
+          },
+          {
+            "t": "繁",
+            "r": "fán",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "知",
+            "r": "zhī",
+            "g": "predicate"
+          },
+          {
+            "t": "该",
+            "r": "gāi",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "多",
+            "r": "duō",
+            "g": "adverbial"
+          },
+          {
+            "t": "伤",
+            "r": "shāng",
+            "g": "object"
+          },
+          {
+            "t": "心",
+            "r": "xīn",
+            "g": "object"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "もし",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "彼",
+              "r": "かの",
+              "g": "object"
+            },
+            {
+              "t": "女",
+              "r": "じょ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "嫁",
+              "r": "とつ",
+              "g": "predicate"
+            },
+            {
+              "t": "がせてしまったら、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "母",
+              "r": "はは",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "お",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "繁",
+              "r": "しげ",
+              "g": "subject"
+            },
+            {
+              "t": "はどれほど",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "悲",
+              "r": "かな",
+              "g": "object"
+            },
+            {
+              "t": "しむことだろう。",
+              "r": "",
+              "g": "object"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

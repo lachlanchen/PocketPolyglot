@@ -1,0 +1,682 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00706",
+  "source_text": "“噢，谢谢。”宗助若无其事地说，“他干起活来，倒是蛮卖力气的。但在人前净出纰漏，鲁莽……叫人不放心啊。”",
+  "source_sha256": "39c79e2d259e07a851437d921c75e6ab16151e6ba083327434264e824902fe21",
+  "source_normalized_sha256": "39c79e2d259e07a851437d921c75e6ab16151e6ba083327434264e824902fe21",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 104,
+    "grammar_token_total": 104,
+    "unit_count": 3
+  },
+  "source_chunk_id": "the-old-capital-chunk-0706",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "和服街",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "fú",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "jiē",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "ふく",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "がい",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-和服街-intro",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "fú",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "jiē",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "ふく",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "がい",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00706",
+    "source_text": "“噢，谢谢。”宗助若无其事地说，“他干起活来，倒是蛮卖力气的。但在人前净出纰漏，鲁莽……叫人不放心啊。”",
+    "units": [
+      {
+        "source_text": "“噢，谢谢。”宗助若无其事地说，",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "噢",
+            "r": "ō",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "谢",
+            "r": "xiè",
+            "g": "predicate"
+          },
+          {
+            "t": "谢",
+            "r": "xie",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "宗",
+            "r": "zōng",
+            "g": "subject"
+          },
+          {
+            "t": "助",
+            "r": "zhù",
+            "g": "subject"
+          },
+          {
+            "t": "若",
+            "r": "ruò",
+            "g": "adverbial"
+          },
+          {
+            "t": "无",
+            "r": "wú",
+            "g": "adverbial"
+          },
+          {
+            "t": "其",
+            "r": "qí",
+            "g": "adverbial"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ああ",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ありがとう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "宗",
+              "r": "そう",
+              "g": "subject"
+            },
+            {
+              "t": "助",
+              "r": "すけ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "何",
+              "r": "なに",
+              "g": "adverbial"
+            },
+            {
+              "t": "げなく",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "“他干起活来，倒是蛮卖力气的。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "干",
+            "r": "gàn",
+            "g": "predicate"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "活",
+            "r": "huó",
+            "g": "object"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "倒",
+            "r": "dào",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "adverbial"
+          },
+          {
+            "t": "蛮",
+            "r": "mán",
+            "g": "adverbial"
+          },
+          {
+            "t": "卖",
+            "r": "mài",
+            "g": "predicate"
+          },
+          {
+            "t": "力",
+            "r": "lì",
+            "g": "object"
+          },
+          {
+            "t": "气",
+            "r": "qì",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "仕",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "事",
+              "r": "ごと",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "始",
+              "r": "はじ",
+              "g": "predicate"
+            },
+            {
+              "t": "めると",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "なかなか",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "精",
+              "r": "せい",
+              "g": "adverbial"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "出",
+              "r": "だ",
+              "g": "predicate"
+            },
+            {
+              "t": "して",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "働",
+              "r": "はたら",
+              "g": "predicate"
+            },
+            {
+              "t": "く",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "但在人前净出纰漏，鲁莽……叫人不放心啊。”",
+        "zh": [
+          {
+            "t": "但",
+            "r": "dàn",
+            "g": "function"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "adverbial"
+          },
+          {
+            "t": "前",
+            "r": "qián",
+            "g": "adverbial"
+          },
+          {
+            "t": "净",
+            "r": "jìng",
+            "g": "adverbial"
+          },
+          {
+            "t": "出",
+            "r": "chū",
+            "g": "predicate"
+          },
+          {
+            "t": "纰",
+            "r": "pī",
+            "g": "object"
+          },
+          {
+            "t": "漏",
+            "r": "lòu",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "鲁",
+            "r": "lǔ",
+            "g": "predicate"
+          },
+          {
+            "t": "莽",
+            "r": "mǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "叫",
+            "r": "jiào",
+            "g": "predicate"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "object"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "放",
+            "r": "fàng",
+            "g": "predicate"
+          },
+          {
+            "t": "心",
+            "r": "xīn",
+            "g": "predicate"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "けれど",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "adverbial"
+            },
+            {
+              "t": "前",
+              "r": "まえ",
+              "g": "adverbial"
+            },
+            {
+              "t": "では",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "失",
+              "r": "しっ",
+              "g": "object"
+            },
+            {
+              "t": "敗",
+              "r": "ぱい",
+              "g": "object"
+            },
+            {
+              "t": "ばかり",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "して",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "粗",
+              "r": "そ",
+              "g": "predicate"
+            },
+            {
+              "t": "忽",
+              "r": "こつ",
+              "g": "predicate"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "……",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "どうにも",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "安",
+              "r": "あん",
+              "g": "predicate"
+            },
+            {
+              "t": "心",
+              "r": "しん",
+              "g": "predicate"
+            },
+            {
+              "t": "できない",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "のだ",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "よ",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
