@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "audited_at": "2026-05-21T07:17:22+08:00",
+  "book_id": "shiji",
+  "sources": {
+    "ja.md": {
+      "path": "books/shiji/markdown/ja.md",
+      "canonical_ja": false,
+      "description": "Japanese Wikisource export of 史記 — this is Kanbun (classical Chinese with Japanese reading marks), not a modern Japanese translation. Use ONLY for name/term alignment and source context. The writer MUST NOT treat it as trusted Japanese prose.",
+      "original_source": "sources/史記（日本語ウィキソース） - 司馬遷.json",
+      "original_sha256": "c237a6faa82258176f9a5e0393f733002757c4425f3a2d22f3f8957b0c258cf6"
+    },
+    "zh.md": {
+      "path": "books/shiji/markdown/zh.md",
+      "canonical_zh": true,
+      "description": "CText public-domain export of 史記 — authoritative classical Chinese source text for zh_original layer.",
+      "original_source": "sources/史記（中國哲學書電子化計劃） - 司馬遷.json",
+      "original_sha256": "96455343b1aaf8fdb1a42306b499ad820e09c1a8dc0dba3e020b96497af858ae"
+    }
+  },
+  "target_language_profile": {
+    "ja": {
+      "min_kana_ratio": 0.08,
+      "min_kana_count_for_short": 2,
+      "min_context_kana_count": 6,
+      "kanbun_markers": ["而", "之", "於", "曰", "乃", "弗", "莫", "毋", "咸", "其"],
+      "kanbun_patterns": ["者、", "者，"],
+      "description": "Japanese must be modern prose with kana, particles, okurigana, and inflected endings. No Kanbun kundoku fragments. These markers detect likely Kanbun contamination.",
+      "grammar_roles": ["subject", "predicate", "object", "attributive", "adverbial", "complement", "topic", "function"]
+    },
+    "zh": {
+      "grammar_roles": ["subject", "predicate", "object", "attributive", "adverbial", "complement", "topic", "function"]
+    }
+  },
+  "prompt_version": "shiji-v1",
+  "schema_version": "zh_classical_three_layer-v1",
+  "validator_version": "shiji-validator-v1"
+}

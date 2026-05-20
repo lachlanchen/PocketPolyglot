@@ -4,6 +4,8 @@
 Schema: zh_classical_three_layer
 Checks: reconstruction, character-level tokens, grammar roles,
         Japanese placeholder rejection, modern Chinese distinctness.
+
+Config-driven checks via shiji_config.py and source-audit.json.
 """
 
 from __future__ import annotations
@@ -15,57 +17,17 @@ import sys
 from pathlib import Path
 from typing import Any
 
-SPACE_RE = re.compile(r"\s+")
-HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
-KANA_RE = re.compile(r"[\u3040-\u30ff\u31f0-\u31ff]")
-SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
-KANBUN_MARKERS_IN_JA = ("而", "之", "於", "曰", "乃", "弗", "莫", "毋", "咸", "其")
-PLACEHOLDER_JA = {"注", "注。", "。", "日本語"}
-GRAMMAR_ROLES = {
-    "subject",
-    "predicate",
-    "object",
-    "attributive",
-    "adverbial",
-    "complement",
-    "topic",
-    "function",
-}
-PUNCT_RE = re.compile(
-    r"^[，。、；：！？「」『』【】《》（）—…·・""''\-\.\!\?\;\:\"\'\(\)\[\]\s]+$"
+from shiji_config import (
+    HAN_RE, KANA_RE, SINGLE_HAN_RE,
+    GRAMMAR_ROLES, ja_quality_error,
+    normalize, token_text,
 )
 
-
-def normalize(text: str) -> str:
-    return SPACE_RE.sub("", text or "")
-
-
-def token_txt(tokens: list[dict[str, Any]]) -> str:
-    return "".join(str(tok.get("t", "")) for tok in tokens)
-
-
-def ja_quality_error(ja_text: str, zh_original_text: str) -> str:
-    ja_norm = normalize(ja_text)
-    zh_norm = normalize(zh_original_text)
-    source_han_count = len(HAN_RE.findall(zh_norm))
-    if source_han_count == 0:
-        return ""
-    ja_han_count = len(HAN_RE.findall(ja_norm))
-    ja_kana_count = len(KANA_RE.findall(ja_norm))
-    if ja_norm == zh_norm:
-        return "ja identical to zh_original; must be real Japanese, not copied Kanbun"
-    if ja_han_count >= 2 and ja_kana_count == 0:
-        return "ja has Han characters but no kana; must be real Japanese prose"
-    if source_han_count >= 6 and ja_kana_count < 2:
-        return "ja has too little kana for a real Japanese sentence"
-    if source_han_count >= 10 and ja_norm and (ja_kana_count / len(ja_norm)) < 0.08:
-        return "ja is too Kanbun-like; add Japanese particles and inflected endings"
-    for marker in KANBUN_MARKERS_IN_JA:
-        if marker in ja_norm:
-            return f"ja contains raw Kanbun marker '{marker}'"
-    if "者、" in ja_norm or "者，" in ja_norm:
-        return "ja contains Kanbun pattern '者、'"
-    return ""
+SPACE_RE = re.compile(r"\s+")
+PLACEHOLDER_JA = {"注", "注。", "。", "日本語"}
+PUNCT_RE = re.compile(
+    r"^[，。、；：！？「」『』【】《》（）—…·・\"\"''\\-\\.\\!\\?\\;\\:\\\"\\'\\(\\)\\[\\]\\s]+$"
+)
 
 
 def is_punct_or_space(text: str) -> bool:
@@ -118,7 +80,6 @@ def validate_ja(tokens: list[dict[str, Any]], where: str, errors: list[str]) -> 
             errors.append(f"{where}[{i}]: kanji '{t}' needs furigana")
         if r and not is_single:
             errors.append(f"{where}[{i}]: furigana on non-kanji token '{t}'")
-        # Enforce grammar roles on all non-punctuation tokens (kanji and kana)
         if t and not is_punct_or_space(t):
             if g not in GRAMMAR_ROLES:
                 allowed = ", ".join(sorted(GRAMMAR_ROLES))
@@ -159,7 +120,7 @@ def validate_chunk(data: dict[str, Any]) -> list[str]:
                 errors.append(f"{u_w}: missing zh_original tokens")
             else:
                 validate_zh(zh_orig, f"{u_w}.zh_original", errors)
-                zt = normalize(token_txt(zh_orig))
+                zt = normalize(token_text(zh_orig))
                 para_rebuilt.append(zt)
                 if unit_src and zt != unit_src:
                     errors.append(
@@ -174,13 +135,13 @@ def validate_chunk(data: dict[str, Any]) -> list[str]:
                 errors.append(f"{u_w}: ja must be list[dict] not list[list[dict]] (flat single-line schema)")
             else:
                 validate_ja(ja, f"{u_w}.ja", errors)
-                lt = normalize(token_txt(ja))
+                lt = normalize(token_text(ja))
                 if not lt:
                     errors.append(f"{u_w}.ja: Japanese text is empty")
                 if lt in PLACEHOLDER_JA:
                     errors.append(f"{u_w}.ja: Japanese is placeholder '{lt}'")
                 if isinstance(zh_orig, list):
-                    err = ja_quality_error(token_txt(ja), token_txt(zh_orig))
+                    err = ja_quality_error(token_text(ja), token_text(zh_orig))
                     if err:
                         errors.append(f"{u_w}.ja: {err}")
 
@@ -189,8 +150,8 @@ def validate_chunk(data: dict[str, Any]) -> list[str]:
                 errors.append(f"{u_w}: missing zh_modern tokens")
             else:
                 validate_zh(zh_mod, f"{u_w}.zh_modern", errors)
-                zmt = normalize(token_txt(zh_mod))
-                zot = normalize(token_txt(zh_orig or []))
+                zmt = normalize(token_text(zh_mod))
+                zot = normalize(token_text(zh_orig or []))
                 if zmt and zmt == zot:
                     errors.append(
                         f"{u_w}: zh_modern identical to zh_original; must differ"

@@ -18,6 +18,17 @@ from pathlib import Path
 
 from pypinyin import Style, lazy_pinyin
 
+# Import shared config (replaces duplicated hard-coded constants)
+from shiji_config import (
+    HAN_RE as CFG_HAN_RE, KANA_RE as CFG_KANA_RE,
+    SINGLE_HAN_RE as CFG_SINGLE_HAN_RE,
+    GRAMMAR_ROLES, ROLE_ALIASES,
+    JP_COMPOUND_READING_OVERRIDES, JP_SINGLE_KANJI_READING_OVERRIDES,
+    resolve_role, ja_quality_error, looks_like_real_japanese_reference,
+    token_text as cfg_token_text,
+    normalize as cfg_normalize,
+)
+
 DEEPSEEK_URL = "https://api.deepseek.com/v1/chat/completions"
 MODEL = "deepseek-chat"
 MODE = "zh_classical_three_layer"
@@ -34,38 +45,11 @@ HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 KANA_RE = re.compile(r"[\u3040-\u30ff\u31f0-\u31ff]")
 SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
 ALL_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]+$")
-KANBUN_MARKERS_IN_JA = ("而", "之", "於", "曰", "乃", "弗", "莫", "毋", "咸", "其")
+# KANBUN_MARKERS_IN_JA moved to source-audit.json / shiji_config.py
 MISSING_JA_READING_RE = re.compile(r"kanji '([^']+)' needs furigana")
 PUNCT_RE = re.compile(r"^[，。、；：！？「」『』【】《》（）—…·・\"'\\-\\.\\!\\?\\;\\:\\(\\)\\[\\]\\s]+$")
-GRAMMAR_ROLES = {
-    "subject", "predicate", "object", "attributive",
-    "adverbial", "complement", "topic", "function",
-}
-ROLE_ALIASES = {
-    "conjunction": "function",
-    "preposition": "function",
-    "particle": "function",
-    "auxiliary": "function",
-    "modal": "function",
-    "marker": "function",
-    "copula": "predicate",
-    "verb": "predicate",
-    "adjective": "predicate",
-    "adverb": "adverbial",
-    "noun": "object",
-    "name": "object",
-    "proper_noun": "object",
-    "proper noun": "object",
-}
-JP_COMPOUND_READING_OVERRIDES = {
-    "葷粥": ["くん", "いく"],
-    "釜山": ["ふ", "ざん"],
-    "涿鹿": ["たく", "ろく"],
-    "風后": ["ふう", "こう"],
-    "力牧": ["りき", "ぼく"],
-    "常先": ["じょう", "せん"],
-    "大鴻": ["たい", "こう"],
-}
+# GRAMMAR_ROLES and ROLE_ALIASES imported from shiji_config
+# JP_COMPOUND_READING_OVERRIDES imported from shiji_config
 JP_SINGLE_KANJI_READING_OVERRIDES = {
     "高": "こう",
     "辛": "しん",
@@ -169,9 +153,7 @@ def _ja_quality_error(ja_text: str, zh_original_text: str) -> str:
 
 
 def _role(value: str, default: str = "function") -> str:
-    role = str(value or "").strip().lower().replace("-", "_")
-    role = ROLE_ALIASES.get(role, role)
-    return role if role in GRAMMAR_ROLES else default
+    return resolve_role(value, default)
 
 
 def _normalize_tokens(tokens, lang: str):
