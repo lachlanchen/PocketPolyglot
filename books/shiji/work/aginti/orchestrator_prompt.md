@@ -78,3 +78,27 @@ Before starting a long run, do this:
 3. Start the writer and monitor tmux sessions.
 4. Let them run at least one small checkpoint beyond the existing pilot if provider limits allow.
 5. Report progress and evidence in the orchestrator session.
+
+Use these exact initial child commands unless you first prove a better resumable command is already present:
+
+Writer session command:
+
+```sh
+mkdir -p books/shiji/work/aginti/logs
+python3 -u books/shiji/work/aginti/generate_chunk.py --start 4 --limit 4619 --max-retries 2 2>&1 | tee -a books/shiji/work/aginti/logs/writer-$(date -u +%Y%m%dT%H%M%SZ).log
+```
+
+Monitor session command:
+
+```sh
+mkdir -p books/shiji/work/aginti/logs
+while true; do
+  date -u
+  python3 -u books/shiji/work/aginti/review_chunks.py --start 1 --limit 20
+  bash books/shiji/work/aginti/compile_pilot.sh
+  bash books/shiji/work/aginti/compile_pilot.sh --blackwhite
+  sleep 900
+done 2>&1 | tee -a books/shiji/work/aginti/logs/monitor-$(date -u +%Y%m%dT%H%M%SZ).log
+```
+
+Do not run `env`, `printenv`, `grep API_KEY`, or any command whose purpose is to inspect credentials before starting these commands.
