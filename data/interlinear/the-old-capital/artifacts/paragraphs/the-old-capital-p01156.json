@@ -1,0 +1,392 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01156",
+  "source_text": "“再见。”苗子对秀男说。秀男有点感到意外。",
+  "source_sha256": "d79f75437a33824152cfc2b3975d199c2b8f890ab1a0551ba8d25d076a88962b",
+  "source_normalized_sha256": "d79f75437a33824152cfc2b3975d199c2b8f890ab1a0551ba8d25d076a88962b",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 46,
+    "grammar_token_total": 46,
+    "unit_count": 3
+  },
+  "source_chunk_id": "the-old-capital-chunk-1156",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "祇园节",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "topic"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "topic"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "topic"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "topic"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-祇园节-intro",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "topic"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "topic"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "topic"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "topic"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01156",
+    "source_text": "“再见。”苗子对秀男说。秀男有点感到意外。",
+    "units": [
+      {
+        "source_text": "“再见。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "再",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "见",
+            "r": "jiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "さようなら",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "苗子对秀男说。",
+        "zh": [
+          {
+            "t": "苗",
+            "r": "miáo",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "对",
+            "r": "duì",
+            "g": "adverbial"
+          },
+          {
+            "t": "秀",
+            "r": "xiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "男",
+            "r": "nán",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "苗",
+              "r": "なえ",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "秀",
+              "r": "ひで",
+              "g": "adverbial"
+            },
+            {
+              "t": "男",
+              "r": "お",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "そう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "秀男有点感到意外。",
+        "zh": [
+          {
+            "t": "秀",
+            "r": "xiù",
+            "g": "subject"
+          },
+          {
+            "t": "男",
+            "r": "nán",
+            "g": "subject"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "感",
+            "r": "gǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "意",
+            "r": "yì",
+            "g": "object"
+          },
+          {
+            "t": "外",
+            "r": "wài",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "秀",
+              "r": "ひで",
+              "g": "subject"
+            },
+            {
+              "t": "男",
+              "r": "お",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "少",
+              "r": "すこ",
+              "g": "adverbial"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "意",
+              "r": "い",
+              "g": "object"
+            },
+            {
+              "t": "外",
+              "r": "がい",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "感",
+              "r": "かん",
+              "g": "predicate"
+            },
+            {
+              "t": "じた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

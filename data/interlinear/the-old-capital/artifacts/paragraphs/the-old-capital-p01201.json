@@ -1,0 +1,266 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01201",
+  "source_text": "“记得，记得。”真一回答。",
+  "source_sha256": "b4b62b6c09572c3a6ceb0902de76e515d01444ae83a69531b4932a475088c254",
+  "source_normalized_sha256": "b4b62b6c09572c3a6ceb0902de76e515d01444ae83a69531b4932a475088c254",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 23,
+    "grammar_token_total": 23,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-1201",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "祇园节",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "attributive"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "attributive"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "attributive"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "attributive"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "attributive"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-祇园节-intro",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "attributive"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "attributive"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "attributive"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "attributive"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01201",
+    "source_text": "“记得，记得。”真一回答。",
+    "units": [
+      {
+        "source_text": "“记得，记得。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "记",
+            "r": "jì",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "记",
+            "r": "jì",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "覚",
+              "r": "おぼ",
+              "g": "predicate"
+            },
+            {
+              "t": "えています、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "覚",
+              "r": "おぼ",
+              "g": "predicate"
+            },
+            {
+              "t": "えています。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "真一回答。",
+        "zh": [
+          {
+            "t": "真",
+            "r": "zhēn",
+            "g": "subject"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "subject"
+          },
+          {
+            "t": "回",
+            "r": "huí",
+            "g": "predicate"
+          },
+          {
+            "t": "答",
+            "r": "dá",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "真",
+              "r": "しん",
+              "g": "subject"
+            },
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "答",
+              "r": "こた",
+              "g": "predicate"
+            },
+            {
+              "t": "えた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

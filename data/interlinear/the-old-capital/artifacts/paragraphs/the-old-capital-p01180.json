@@ -1,0 +1,396 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01180",
+  "source_text": "这位哥哥长相很像真一。他莽莽撞撞地向千重子打了个招呼。",
+  "source_sha256": "ba19791b9633d415520d54dffb750bec56ff45706d73f706c9752e26ca1588da",
+  "source_normalized_sha256": "ba19791b9633d415520d54dffb750bec56ff45706d73f706c9752e26ca1588da",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 49,
+    "grammar_token_total": 49,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-1180",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "祇园节",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "topic"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "topic"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "topic"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "topic"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-祇园节-intro",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "topic"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "topic"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "topic"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "topic"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01180",
+    "source_text": "这位哥哥长相很像真一。他莽莽撞撞地向千重子打了个招呼。",
+    "units": [
+      {
+        "source_text": "这位哥哥长相很像真一。",
+        "zh": [
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "topic"
+          },
+          {
+            "t": "位",
+            "r": "wèi",
+            "g": "topic"
+          },
+          {
+            "t": "哥",
+            "r": "gē",
+            "g": "topic"
+          },
+          {
+            "t": "哥",
+            "r": "gē",
+            "g": "topic"
+          },
+          {
+            "t": "长",
+            "r": "zhǎng",
+            "g": "subject"
+          },
+          {
+            "t": "相",
+            "r": "xiàng",
+            "g": "subject"
+          },
+          {
+            "t": "很",
+            "r": "hěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "像",
+            "r": "xiàng",
+            "g": "predicate"
+          },
+          {
+            "t": "真",
+            "r": "zhēn",
+            "g": "complement"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "topic"
+            },
+            {
+              "t": "兄",
+              "r": "あに",
+              "g": "topic"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "topic"
+            },
+            {
+              "t": "顔",
+              "r": "かお",
+              "g": "subject"
+            },
+            {
+              "t": "立",
+              "r": "だ",
+              "g": "subject"
+            },
+            {
+              "t": "ちが",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "真",
+              "r": "しん",
+              "g": "complement"
+            },
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "complement"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "よく",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "似",
+              "r": "に",
+              "g": "predicate"
+            },
+            {
+              "t": "ていた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "他莽莽撞撞地向千重子打了个招呼。",
+        "zh": [
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "莽",
+            "r": "mǎng",
+            "g": "adverbial"
+          },
+          {
+            "t": "莽",
+            "r": "mǎng",
+            "g": "adverbial"
+          },
+          {
+            "t": "撞",
+            "r": "zhuàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "撞",
+            "r": "zhuàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "向",
+            "r": "xiàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "千",
+            "r": "qiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "重",
+            "r": "chóng",
+            "g": "adverbial"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "打",
+            "r": "dǎ",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "predicate"
+          },
+          {
+            "t": "招",
+            "r": "zhāo",
+            "g": "predicate"
+          },
+          {
+            "t": "呼",
+            "r": "hū",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "ぶっきらぼうに、",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "千",
+              "r": "ち",
+              "g": "adverbial"
+            },
+            {
+              "t": "重",
+              "r": "え",
+              "g": "adverbial"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "挨",
+              "r": "あい",
+              "g": "predicate"
+            },
+            {
+              "t": "拶",
+              "r": "さつ",
+              "g": "predicate"
+            },
+            {
+              "t": "した。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

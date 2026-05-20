@@ -1,0 +1,522 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01205",
+  "source_text": "“瞧你说的。”真一轻巧地躲过了她的话锋，心里嘀咕着：今晚上千重子怎么啦？",
+  "source_sha256": "fa10cc0f56c5c227ee58ceeb7b0f5e1dc906b75866b29c242ae80aad918ad3ad",
+  "source_normalized_sha256": "fa10cc0f56c5c227ee58ceeb7b0f5e1dc906b75866b29c242ae80aad918ad3ad",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 72,
+    "grammar_token_total": 72,
+    "unit_count": 3
+  },
+  "source_chunk_id": "the-old-capital-chunk-1205",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "祇园节",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "attributive"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "attributive"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "attributive"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "attributive"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-祇园节-intro",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "attributive"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "attributive"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "attributive"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "attributive"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01205",
+    "source_text": "“瞧你说的。”真一轻巧地躲过了她的话锋，心里嘀咕着：今晚上千重子怎么啦？",
+    "units": [
+      {
+        "source_text": "“瞧你说的。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "瞧",
+            "r": "qiáo",
+            "g": "predicate"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "まあ、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "あなた",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "ったら、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "そんなことを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "うのね。",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "真一轻巧地躲过了她的话锋，心里嘀咕着：",
+        "zh": [
+          {
+            "t": "真",
+            "r": "zhēn",
+            "g": "subject"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "subject"
+          },
+          {
+            "t": "轻",
+            "r": "qīng",
+            "g": "adverbial"
+          },
+          {
+            "t": "巧",
+            "r": "qiǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "躲",
+            "r": "duǒ",
+            "g": "predicate"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "她",
+            "r": "tā",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "话",
+            "r": "huà",
+            "g": "object"
+          },
+          {
+            "t": "锋",
+            "r": "fēng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "心",
+            "r": "xīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "嘀",
+            "r": "dí",
+            "g": "predicate"
+          },
+          {
+            "t": "咕",
+            "r": "gu",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "真",
+              "r": "しん",
+              "g": "subject"
+            },
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "軽",
+              "r": "かろ",
+              "g": "adverbial"
+            },
+            {
+              "t": "やかに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "彼",
+              "r": "かの",
+              "g": "attributive"
+            },
+            {
+              "t": "女",
+              "r": "じょ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "話",
+              "r": "はなし",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "矛",
+              "r": "ほこ",
+              "g": "object"
+            },
+            {
+              "t": "先",
+              "r": "さき",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "かわして、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "胸",
+              "r": "むね",
+              "g": "adverbial"
+            },
+            {
+              "t": "のうちで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "つぶやいた。",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "今晚上千重子怎么啦？",
+        "zh": [
+          {
+            "t": "今",
+            "r": "jīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "晚",
+            "r": "wǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "上",
+            "r": "shang",
+            "g": "adverbial"
+          },
+          {
+            "t": "千",
+            "r": "qiān",
+            "g": "subject"
+          },
+          {
+            "t": "重",
+            "r": "chóng",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "怎",
+            "r": "zěn",
+            "g": "predicate"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "predicate"
+          },
+          {
+            "t": "啦",
+            "r": "la",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "今",
+              "r": "こん",
+              "g": "adverbial"
+            },
+            {
+              "t": "夜",
+              "r": "や",
+              "g": "adverbial"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "千",
+              "r": "ち",
+              "g": "subject"
+            },
+            {
+              "t": "重",
+              "r": "え",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "いったい",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "どうしたのだろう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
