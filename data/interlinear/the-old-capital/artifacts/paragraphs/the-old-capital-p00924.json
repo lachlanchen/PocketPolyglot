@@ -1,0 +1,461 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00924",
+  "source_text": "太吉郎担心下雨。伐竹会在六月二十日举行，正是梅雨季节。",
+  "source_sha256": "f47d28ad888fef4a68946b0aec1b7e43d15c27ae7ea29827871badbf57f880f4",
+  "source_normalized_sha256": "f47d28ad888fef4a68946b0aec1b7e43d15c27ae7ea29827871badbf57f880f4",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 62,
+    "grammar_token_total": 62,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-0924",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "北山杉",
+    "title_zh": [
+      {
+        "t": "北",
+        "r": "běi",
+        "g": "attributive"
+      },
+      {
+        "t": "山",
+        "r": "shān",
+        "g": "attributive"
+      },
+      {
+        "t": "杉",
+        "r": "shān",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "北",
+        "r": "きた",
+        "g": "attributive"
+      },
+      {
+        "t": "山",
+        "r": "やま",
+        "g": "attributive"
+      },
+      {
+        "t": "杉",
+        "r": "すぎ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-北山杉-intro",
+    "title_zh": [
+      {
+        "t": "北",
+        "r": "běi",
+        "g": "attributive"
+      },
+      {
+        "t": "山",
+        "r": "shān",
+        "g": "attributive"
+      },
+      {
+        "t": "杉",
+        "r": "shān",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "北",
+        "r": "きた",
+        "g": "attributive"
+      },
+      {
+        "t": "山",
+        "r": "やま",
+        "g": "attributive"
+      },
+      {
+        "t": "杉",
+        "r": "すぎ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00924",
+    "source_text": "太吉郎担心下雨。伐竹会在六月二十日举行，正是梅雨季节。",
+    "units": [
+      {
+        "source_text": "太吉郎担心下雨。",
+        "zh": [
+          {
+            "t": "太",
+            "r": "tài",
+            "g": "subject"
+          },
+          {
+            "t": "吉",
+            "r": "jí",
+            "g": "subject"
+          },
+          {
+            "t": "郎",
+            "r": "láng",
+            "g": "subject"
+          },
+          {
+            "t": "担",
+            "r": "dān",
+            "g": "predicate"
+          },
+          {
+            "t": "心",
+            "r": "xīn",
+            "g": "predicate"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "object"
+          },
+          {
+            "t": "雨",
+            "r": "yǔ",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "太",
+              "r": "た",
+              "g": "subject"
+            },
+            {
+              "t": "吉",
+              "r": "きち",
+              "g": "subject"
+            },
+            {
+              "t": "郎",
+              "r": "ろう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "雨",
+              "r": "あめ",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "降",
+              "r": "ふ",
+              "g": "object"
+            },
+            {
+              "t": "るのを",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "心",
+              "r": "しん",
+              "g": "predicate"
+            },
+            {
+              "t": "配",
+              "r": "ぱい",
+              "g": "predicate"
+            },
+            {
+              "t": "していた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "伐竹会在六月二十日举行，正是梅雨季节。",
+        "zh": [
+          {
+            "t": "伐",
+            "r": "fá",
+            "g": "subject"
+          },
+          {
+            "t": "竹",
+            "r": "zhú",
+            "g": "subject"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "subject"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "六",
+            "r": "liù",
+            "g": "adverbial"
+          },
+          {
+            "t": "月",
+            "r": "yuè",
+            "g": "adverbial"
+          },
+          {
+            "t": "二",
+            "r": "èr",
+            "g": "adverbial"
+          },
+          {
+            "t": "十",
+            "r": "shí",
+            "g": "adverbial"
+          },
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "adverbial"
+          },
+          {
+            "t": "举",
+            "r": "jǔ",
+            "g": "predicate"
+          },
+          {
+            "t": "行",
+            "r": "xíng",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "正",
+            "r": "zhèng",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "梅",
+            "r": "méi",
+            "g": "object"
+          },
+          {
+            "t": "雨",
+            "r": "yǔ",
+            "g": "object"
+          },
+          {
+            "t": "季",
+            "r": "jì",
+            "g": "object"
+          },
+          {
+            "t": "节",
+            "r": "jié",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "竹",
+              "r": "たけ",
+              "g": "subject"
+            },
+            {
+              "t": "伐",
+              "r": "き",
+              "g": "subject"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "会",
+              "r": "かい",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "六",
+              "r": "ろく",
+              "g": "adverbial"
+            },
+            {
+              "t": "月",
+              "r": "がつ",
+              "g": "adverbial"
+            },
+            {
+              "t": "二",
+              "r": "に",
+              "g": "adverbial"
+            },
+            {
+              "t": "十",
+              "r": "じゅう",
+              "g": "adverbial"
+            },
+            {
+              "t": "日",
+              "r": "にち",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "行",
+              "r": "おこな",
+              "g": "predicate"
+            },
+            {
+              "t": "われ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ちょうど",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "梅",
+              "r": "つ",
+              "g": "object"
+            },
+            {
+              "t": "雨",
+              "r": "ゆ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "季",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "節",
+              "r": "せつ",
+              "g": "object"
+            },
+            {
+              "t": "だった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

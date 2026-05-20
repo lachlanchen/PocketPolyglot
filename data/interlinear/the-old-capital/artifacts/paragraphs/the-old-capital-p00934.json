@@ -1,0 +1,465 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00934",
+  "source_text": "面对大雄宝殿，左边叫丹波座，右边叫近江座，这是自古流传下来的称呼。",
+  "source_sha256": "ba7ed6ea27b732983c767855e0375d588301f7bdb66c28f61396f3aa63104646",
+  "source_normalized_sha256": "ba7ed6ea27b732983c767855e0375d588301f7bdb66c28f61396f3aa63104646",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 65,
+    "grammar_token_total": 65,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-0934",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "北山杉",
+    "title_zh": [
+      {
+        "t": "北",
+        "r": "běi",
+        "g": "attributive"
+      },
+      {
+        "t": "山",
+        "r": "shān",
+        "g": "attributive"
+      },
+      {
+        "t": "杉",
+        "r": "shān",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "北",
+        "r": "きた",
+        "g": "attributive"
+      },
+      {
+        "t": "山",
+        "r": "やま",
+        "g": "attributive"
+      },
+      {
+        "t": "杉",
+        "r": "すぎ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-北山杉-intro",
+    "title_zh": [
+      {
+        "t": "北",
+        "r": "běi",
+        "g": "attributive"
+      },
+      {
+        "t": "山",
+        "r": "shān",
+        "g": "attributive"
+      },
+      {
+        "t": "杉",
+        "r": "shān",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "北",
+        "r": "きた",
+        "g": "attributive"
+      },
+      {
+        "t": "山",
+        "r": "やま",
+        "g": "attributive"
+      },
+      {
+        "t": "杉",
+        "r": "すぎ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00934",
+    "source_text": "面对大雄宝殿，左边叫丹波座，右边叫近江座，这是自古流传下来的称呼。",
+    "units": [
+      {
+        "source_text": "面对大雄宝殿，左边叫丹波座，右边叫近江座，这是自古流传下来的称呼。",
+        "zh": [
+          {
+            "t": "面",
+            "r": "miàn",
+            "g": "predicate"
+          },
+          {
+            "t": "对",
+            "r": "duì",
+            "g": "predicate"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "object"
+          },
+          {
+            "t": "雄",
+            "r": "xióng",
+            "g": "object"
+          },
+          {
+            "t": "宝",
+            "r": "bǎo",
+            "g": "object"
+          },
+          {
+            "t": "殿",
+            "r": "diàn",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "左",
+            "r": "zuǒ",
+            "g": "subject"
+          },
+          {
+            "t": "边",
+            "r": "biān",
+            "g": "subject"
+          },
+          {
+            "t": "叫",
+            "r": "jiào",
+            "g": "predicate"
+          },
+          {
+            "t": "丹",
+            "r": "dān",
+            "g": "object"
+          },
+          {
+            "t": "波",
+            "r": "bō",
+            "g": "object"
+          },
+          {
+            "t": "座",
+            "r": "zuò",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "右",
+            "r": "yòu",
+            "g": "subject"
+          },
+          {
+            "t": "边",
+            "r": "biān",
+            "g": "subject"
+          },
+          {
+            "t": "叫",
+            "r": "jiào",
+            "g": "predicate"
+          },
+          {
+            "t": "近",
+            "r": "jìn",
+            "g": "object"
+          },
+          {
+            "t": "江",
+            "r": "jiāng",
+            "g": "object"
+          },
+          {
+            "t": "座",
+            "r": "zuò",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "自",
+            "r": "zì",
+            "g": "adverbial"
+          },
+          {
+            "t": "古",
+            "r": "gǔ",
+            "g": "adverbial"
+          },
+          {
+            "t": "流",
+            "r": "liú",
+            "g": "attributive"
+          },
+          {
+            "t": "传",
+            "r": "chuán",
+            "g": "attributive"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "attributive"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "称",
+            "r": "chēng",
+            "g": "object"
+          },
+          {
+            "t": "呼",
+            "r": "hū",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "大",
+              "r": "だい",
+              "g": "object"
+            },
+            {
+              "t": "雄",
+              "r": "おう",
+              "g": "object"
+            },
+            {
+              "t": "宝",
+              "r": "ほう",
+              "g": "object"
+            },
+            {
+              "t": "殿",
+              "r": "でん",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "向",
+              "r": "む",
+              "g": "predicate"
+            },
+            {
+              "t": "かって、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "左",
+              "r": "ひだり",
+              "g": "subject"
+            },
+            {
+              "t": "側",
+              "r": "がわ",
+              "g": "subject"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "丹",
+              "r": "たん",
+              "g": "object"
+            },
+            {
+              "t": "波",
+              "r": "ば",
+              "g": "object"
+            },
+            {
+              "t": "座",
+              "r": "ざ",
+              "g": "object"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "右",
+              "r": "みぎ",
+              "g": "subject"
+            },
+            {
+              "t": "側",
+              "r": "がわ",
+              "g": "subject"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "近",
+              "r": "おう",
+              "g": "object"
+            },
+            {
+              "t": "江",
+              "r": "み",
+              "g": "object"
+            },
+            {
+              "t": "座",
+              "r": "ざ",
+              "g": "object"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "呼",
+              "r": "よ",
+              "g": "predicate"
+            },
+            {
+              "t": "び、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "これは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "古",
+              "r": "ふる",
+              "g": "adverbial"
+            },
+            {
+              "t": "くから",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "伝",
+              "r": "つた",
+              "g": "attributive"
+            },
+            {
+              "t": "わってきた",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "呼",
+              "r": "よ",
+              "g": "object"
+            },
+            {
+              "t": "び",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "名",
+              "r": "な",
+              "g": "object"
+            },
+            {
+              "t": "である。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
