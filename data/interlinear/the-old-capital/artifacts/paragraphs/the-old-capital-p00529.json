@@ -1,0 +1,348 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00529",
+  "source_text": "“嗯，知道了。用什么和服料子配这条腰带呢？”",
+  "source_sha256": "ffb7e3c21176dfb6617f3be4b65a52b938de82435c48d0192c943c264fe58932",
+  "source_normalized_sha256": "ffb7e3c21176dfb6617f3be4b65a52b938de82435c48d0192c943c264fe58932",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 41,
+    "grammar_token_total": 41,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-0529",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "都",
+        "r": "dū"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "都",
+        "r": "と"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "和服街",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé"
+      },
+      {
+        "t": "服",
+        "r": "fú"
+      },
+      {
+        "t": "街",
+        "r": "jiē"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "着",
+        "r": "き"
+      },
+      {
+        "t": "物",
+        "r": "もの"
+      },
+      {
+        "t": "の",
+        "r": ""
+      },
+      {
+        "t": "町",
+        "r": "まち"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-和服街-intro",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé"
+      },
+      {
+        "t": "服",
+        "r": "fú"
+      },
+      {
+        "t": "街",
+        "r": "jiē"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "着",
+        "r": "き"
+      },
+      {
+        "t": "物",
+        "r": "もの"
+      },
+      {
+        "t": "の",
+        "r": ""
+      },
+      {
+        "t": "町",
+        "r": "まち"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00529",
+    "source_text": "“嗯，知道了。用什么和服料子配这条腰带呢？”",
+    "units": [
+      {
+        "source_text": "“嗯，知道了。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "嗯",
+            "r": "ǹg",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "知",
+            "r": "zhī",
+            "g": "predicate"
+          },
+          {
+            "t": "道",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ええ",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "分",
+              "r": "わ",
+              "g": "predicate"
+            },
+            {
+              "t": "かりました",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "用什么和服料子配这条腰带呢？”",
+        "zh": [
+          {
+            "t": "用",
+            "r": "yòng",
+            "g": "predicate"
+          },
+          {
+            "t": "什",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "object"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "object"
+          },
+          {
+            "t": "服",
+            "r": "fú",
+            "g": "object"
+          },
+          {
+            "t": "料",
+            "r": "liào",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "配",
+            "r": "pèi",
+            "g": "predicate"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "attributive"
+          },
+          {
+            "t": "条",
+            "r": "tiáo",
+            "g": "attributive"
+          },
+          {
+            "t": "腰",
+            "r": "yāo",
+            "g": "object"
+          },
+          {
+            "t": "带",
+            "r": "dài",
+            "g": "object"
+          },
+          {
+            "t": "呢",
+            "r": "ne",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "帯",
+              "r": "おび",
+              "g": "object"
+            },
+            {
+              "t": "には",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "どんな",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "着",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "物",
+              "r": "もの",
+              "g": "object"
+            },
+            {
+              "t": "地",
+              "r": "じ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "合",
+              "r": "あ",
+              "g": "predicate"
+            },
+            {
+              "t": "わせたら",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "いいでしょうか",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "？」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

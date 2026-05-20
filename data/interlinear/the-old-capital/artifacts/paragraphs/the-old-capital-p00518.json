@@ -1,0 +1,190 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00518",
+  "source_text": "“胡说。”",
+  "source_sha256": "b38c42a9b2c0d43b5ce189c10fccc17163515eb0f893a66c9ec8d1c1c7e632ba",
+  "source_normalized_sha256": "b38c42a9b2c0d43b5ce189c10fccc17163515eb0f893a66c9ec8d1c1c7e632ba",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 10,
+    "grammar_token_total": 10,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-0518",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "和服街",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "fú",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "jiē",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "ふく",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "がい",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-和服街-intro",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "fú",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "jiē",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "ふく",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "がい",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00518",
+    "source_text": "“胡说。”",
+    "units": [
+      {
+        "source_text": "“胡说。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "胡",
+            "r": "hú",
+            "g": "predicate"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ばかなことを",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "うな。",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
