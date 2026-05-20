@@ -43,6 +43,14 @@ def valid_reviewed(path: Path, source: dict[str, Any]) -> bool:
 def claim_chunk(claim_dir: Path, chunk_id: str, worker_id: str, ttl_seconds: int) -> bool:
     claim_path = claim_dir / chunk_id
     now = time.time()
+    ownerless_grace_seconds = min(30, ttl_seconds) if ttl_seconds > 0 else 30
+
+    def claim_age_seconds() -> float | None:
+        try:
+            return now - claim_path.stat().st_mtime
+        except FileNotFoundError:
+            return None
+
     try:
         claim_path.mkdir(parents=True)
     except FileExistsError:
@@ -53,7 +61,17 @@ def claim_chunk(claim_dir: Path, chunk_id: str, worker_id: str, ttl_seconds: int
             if owner_pid > 0:
                 os.kill(owner_pid, 0)
                 owner_alive = True
-        except (FileNotFoundError, json.JSONDecodeError, ValueError, ProcessLookupError):
+        except FileNotFoundError:
+            age = claim_age_seconds()
+            if age is None or age < ownerless_grace_seconds:
+                return False
+            owner_alive = False
+        except (json.JSONDecodeError, ValueError):
+            age = claim_age_seconds()
+            if age is None or age < ownerless_grace_seconds:
+                return False
+            owner_alive = False
+        except ProcessLookupError:
             owner_alive = False
         except PermissionError:
             owner_alive = True
