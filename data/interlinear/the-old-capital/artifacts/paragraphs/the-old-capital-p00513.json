@@ -1,0 +1,940 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00513",
+  "source_text": "“嘿，真好。色彩调配也……很好。这对佐田先生来说，是过去没有画过的，非常时新。不过画面显得有点素净，怕很难织好呀。就让我用心织织试试看吧。一定会把女儿的孝心和双亲的慈爱表现出来的。”",
+  "source_sha256": "12a4517cd5d392062e551990c6923f37dd9fc3c4b41e480427451ef661e92c9f",
+  "source_normalized_sha256": "12a4517cd5d392062e551990c6923f37dd9fc3c4b41e480427451ef661e92c9f",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 149,
+    "grammar_token_total": 149,
+    "unit_count": 6
+  },
+  "source_chunk_id": "the-old-capital-chunk-0513",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "和服街",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "fú",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "jiē",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "ふく",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "がい",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-和服街-intro",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "fú",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "jiē",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "ふく",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "がい",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00513",
+    "source_text": "“嘿，真好。色彩调配也……很好。这对佐田先生来说，是过去没有画过的，非常时新。不过画面显得有点素净，怕很难织好呀。就让我用心织织试试看吧。一定会把女儿的孝心和双亲的慈爱表现出来的。”",
+    "units": [
+      {
+        "source_text": "“嘿，真好。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "嘿",
+            "r": "hēi",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "真",
+            "r": "zhēn",
+            "g": "adverbial"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「まあ、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "adverbial"
+            },
+            {
+              "t": "当",
+              "r": "とう",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "いいですね。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "色彩调配也……很好。",
+        "zh": [
+          {
+            "t": "色",
+            "r": "sè",
+            "g": "subject"
+          },
+          {
+            "t": "彩",
+            "r": "cǎi",
+            "g": "subject"
+          },
+          {
+            "t": "调",
+            "r": "tiáo",
+            "g": "subject"
+          },
+          {
+            "t": "配",
+            "r": "pèi",
+            "g": "subject"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "很",
+            "r": "hěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "色",
+              "r": "いろ",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "配",
+              "r": "はい",
+              "g": "subject"
+            },
+            {
+              "t": "合",
+              "r": "ごう",
+              "g": "subject"
+            },
+            {
+              "t": "も……",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "とてもいい。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "这对佐田先生来说，是过去没有画过的，非常时新。",
+        "zh": [
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "对",
+            "r": "duì",
+            "g": "adverbial"
+          },
+          {
+            "t": "佐",
+            "r": "zuǒ",
+            "g": "adverbial"
+          },
+          {
+            "t": "田",
+            "r": "tián",
+            "g": "adverbial"
+          },
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "生",
+            "r": "sheng",
+            "g": "adverbial"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "adverbial"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "adverbial"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "画",
+            "r": "huà",
+            "g": "predicate"
+          },
+          {
+            "t": "过",
+            "r": "guo",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "非",
+            "r": "fēi",
+            "g": "adverbial"
+          },
+          {
+            "t": "常",
+            "r": "cháng",
+            "g": "adverbial"
+          },
+          {
+            "t": "时",
+            "r": "shí",
+            "g": "predicate"
+          },
+          {
+            "t": "新",
+            "r": "xīn",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "これは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "佐",
+              "r": "さ",
+              "g": "adverbial"
+            },
+            {
+              "t": "田",
+              "r": "だ",
+              "g": "adverbial"
+            },
+            {
+              "t": "先",
+              "r": "せん",
+              "g": "adverbial"
+            },
+            {
+              "t": "生",
+              "r": "せい",
+              "g": "adverbial"
+            },
+            {
+              "t": "にとっては、",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "今",
+              "r": "いま",
+              "g": "adverbial"
+            },
+            {
+              "t": "まで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "描",
+              "r": "か",
+              "g": "predicate"
+            },
+            {
+              "t": "いたことのない、とても",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "新",
+              "r": "あたら",
+              "g": "predicate"
+            },
+            {
+              "t": "しいものです。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "不过画面显得有点素净，怕很难织好呀。",
+        "zh": [
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "function"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "function"
+          },
+          {
+            "t": "画",
+            "r": "huà",
+            "g": "subject"
+          },
+          {
+            "t": "面",
+            "r": "miàn",
+            "g": "subject"
+          },
+          {
+            "t": "显",
+            "r": "xiǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "素",
+            "r": "sù",
+            "g": "complement"
+          },
+          {
+            "t": "净",
+            "r": "jìng",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "怕",
+            "r": "pà",
+            "g": "predicate"
+          },
+          {
+            "t": "很",
+            "r": "hěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "难",
+            "r": "nán",
+            "g": "predicate"
+          },
+          {
+            "t": "织",
+            "r": "zhī",
+            "g": "predicate"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "complement"
+          },
+          {
+            "t": "呀",
+            "r": "ya",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ただ、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "画",
+              "r": "が",
+              "g": "subject"
+            },
+            {
+              "t": "面",
+              "r": "めん",
+              "g": "subject"
+            },
+            {
+              "t": "はやや",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "地",
+              "r": "じ",
+              "g": "complement"
+            },
+            {
+              "t": "味",
+              "r": "み",
+              "g": "complement"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "えて、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "うまく",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "織",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "るのはとても",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "難",
+              "r": "むずか",
+              "g": "predicate"
+            },
+            {
+              "t": "しそうですね。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "就让我用心织织试试看吧。",
+        "zh": [
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "让",
+            "r": "ràng",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "object"
+          },
+          {
+            "t": "用",
+            "r": "yòng",
+            "g": "adverbial"
+          },
+          {
+            "t": "心",
+            "r": "xīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "织",
+            "r": "zhī",
+            "g": "predicate"
+          },
+          {
+            "t": "织",
+            "r": "zhī",
+            "g": "predicate"
+          },
+          {
+            "t": "试",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "试",
+            "r": "shi",
+            "g": "predicate"
+          },
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "predicate"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "では、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "心",
+              "r": "こころ",
+              "g": "adverbial"
+            },
+            {
+              "t": "をこめて",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "織",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "ってみましょう。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "一定会把女儿的孝心和双亲的慈爱表现出来的。”",
+        "zh": [
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "adverbial"
+          },
+          {
+            "t": "定",
+            "r": "dìng",
+            "g": "adverbial"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "adverbial"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "女",
+            "r": "nǚ",
+            "g": "attributive"
+          },
+          {
+            "t": "儿",
+            "r": "ér",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "孝",
+            "r": "xiào",
+            "g": "object"
+          },
+          {
+            "t": "心",
+            "r": "xīn",
+            "g": "object"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "object"
+          },
+          {
+            "t": "双",
+            "r": "shuāng",
+            "g": "attributive"
+          },
+          {
+            "t": "亲",
+            "r": "qīn",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "慈",
+            "r": "cí",
+            "g": "object"
+          },
+          {
+            "t": "爱",
+            "r": "ài",
+            "g": "object"
+          },
+          {
+            "t": "表",
+            "r": "biǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "现",
+            "r": "xiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "出",
+            "r": "chū",
+            "g": "complement"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "きっと",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "娘",
+              "r": "むすめ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "孝",
+              "r": "こう",
+              "g": "object"
+            },
+            {
+              "t": "心",
+              "r": "しん",
+              "g": "object"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "両",
+              "r": "りょう",
+              "g": "attributive"
+            },
+            {
+              "t": "親",
+              "r": "しん",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "慈",
+              "r": "じ",
+              "g": "object"
+            },
+            {
+              "t": "愛",
+              "r": "あい",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "表",
+              "r": "あらわ",
+              "g": "predicate"
+            },
+            {
+              "t": "せるでしょう。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

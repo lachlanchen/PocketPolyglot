@@ -1,0 +1,607 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00484",
+  "source_text": "虽说是去植物园和鸭川，但宗助顶多待一个小时左右。不过，他却十分留恋这样的散步。至今记忆犹新。",
+  "source_sha256": "65496aaf448a4ce69dc97aaf52cad9b404cf6c6629e38ecb72507533524824e8",
+  "source_normalized_sha256": "65496aaf448a4ce69dc97aaf52cad9b404cf6c6629e38ecb72507533524824e8",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 89,
+    "grammar_token_total": 89,
+    "unit_count": 3
+  },
+  "source_chunk_id": "the-old-capital-chunk-0484",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "和服街",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "fú",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "jiē",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "ふく",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "がい",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-和服街-intro",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "fú",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "jiē",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "ふく",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "がい",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00484",
+    "source_text": "虽说是去植物园和鸭川，但宗助顶多待一个小时左右。不过，他却十分留恋这样的散步。至今记忆犹新。",
+    "units": [
+      {
+        "source_text": "虽说是去植物园和鸭川，但宗助顶多待一个小时左右。",
+        "zh": [
+          {
+            "t": "虽",
+            "r": "suī",
+            "g": "function"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "predicate"
+          },
+          {
+            "t": "植",
+            "r": "zhí",
+            "g": "object"
+          },
+          {
+            "t": "物",
+            "r": "wù",
+            "g": "object"
+          },
+          {
+            "t": "园",
+            "r": "yuán",
+            "g": "object"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "object"
+          },
+          {
+            "t": "鸭",
+            "r": "yā",
+            "g": "object"
+          },
+          {
+            "t": "川",
+            "r": "chuān",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "但",
+            "r": "dàn",
+            "g": "function"
+          },
+          {
+            "t": "宗",
+            "r": "zōng",
+            "g": "subject"
+          },
+          {
+            "t": "助",
+            "r": "zhù",
+            "g": "subject"
+          },
+          {
+            "t": "顶",
+            "r": "dǐng",
+            "g": "adverbial"
+          },
+          {
+            "t": "多",
+            "r": "duō",
+            "g": "adverbial"
+          },
+          {
+            "t": "待",
+            "r": "dāi",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "complement"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "complement"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "complement"
+          },
+          {
+            "t": "时",
+            "r": "shí",
+            "g": "complement"
+          },
+          {
+            "t": "左",
+            "r": "zuǒ",
+            "g": "complement"
+          },
+          {
+            "t": "右",
+            "r": "yòu",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "植",
+              "r": "しょく",
+              "g": "object"
+            },
+            {
+              "t": "物",
+              "r": "ぶつ",
+              "g": "object"
+            },
+            {
+              "t": "園",
+              "r": "えん",
+              "g": "object"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "鴨",
+              "r": "かも",
+              "g": "object"
+            },
+            {
+              "t": "川",
+              "r": "がわ",
+              "g": "object"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "行",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "くとはいっても、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "宗",
+              "r": "そう",
+              "g": "subject"
+            },
+            {
+              "t": "助",
+              "r": "すけ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "せいぜい",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "complement"
+            },
+            {
+              "t": "時",
+              "r": "じ",
+              "g": "complement"
+            },
+            {
+              "t": "間",
+              "r": "かん",
+              "g": "complement"
+            },
+            {
+              "t": "ほどしか",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "いなかった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "不过，他却十分留恋这样的散步。",
+        "zh": [
+          {
+            "t": "不",
+            "r": "bú",
+            "g": "function"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "却",
+            "r": "què",
+            "g": "adverbial"
+          },
+          {
+            "t": "十",
+            "r": "shí",
+            "g": "adverbial"
+          },
+          {
+            "t": "分",
+            "r": "fēn",
+            "g": "adverbial"
+          },
+          {
+            "t": "留",
+            "r": "liú",
+            "g": "predicate"
+          },
+          {
+            "t": "恋",
+            "r": "liàn",
+            "g": "predicate"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "attributive"
+          },
+          {
+            "t": "样",
+            "r": "yàng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "散",
+            "r": "sàn",
+            "g": "object"
+          },
+          {
+            "t": "步",
+            "r": "bù",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "けれども、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "かえって",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "そんな",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "散",
+              "r": "さん",
+              "g": "object"
+            },
+            {
+              "t": "歩",
+              "r": "ぽ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "深",
+              "r": "ふか",
+              "g": "adverbial"
+            },
+            {
+              "t": "く",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "心",
+              "r": "こころ",
+              "g": "predicate"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "残",
+              "r": "のこ",
+              "g": "predicate"
+            },
+            {
+              "t": "していた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "至今记忆犹新。",
+        "zh": [
+          {
+            "t": "至",
+            "r": "zhì",
+            "g": "adverbial"
+          },
+          {
+            "t": "今",
+            "r": "jīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "记",
+            "r": "jì",
+            "g": "subject"
+          },
+          {
+            "t": "忆",
+            "r": "yì",
+            "g": "subject"
+          },
+          {
+            "t": "犹",
+            "r": "yóu",
+            "g": "adverbial"
+          },
+          {
+            "t": "新",
+            "r": "xīn",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "今",
+              "r": "いま",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "至",
+              "r": "いた",
+              "g": "adverbial"
+            },
+            {
+              "t": "るまで、",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "その",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "記",
+              "r": "き",
+              "g": "subject"
+            },
+            {
+              "t": "憶",
+              "r": "おく",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "なお",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "鮮",
+              "r": "あざ",
+              "g": "predicate"
+            },
+            {
+              "t": "やかだった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
