@@ -1,0 +1,250 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01346",
+  "source_text": "“长得也像这孩子这样标致吗？”",
+  "source_sha256": "d109e3289066557880beef1a8fb8a0b0355cfe9e459fa39412231e47a97fe397",
+  "source_normalized_sha256": "d109e3289066557880beef1a8fb8a0b0355cfe9e459fa39412231e47a97fe397",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 26,
+    "grammar_token_total": 26,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-1346",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "秋色",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-秋色-intro",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01346",
+    "source_text": "“长得也像这孩子这样标致吗？”",
+    "units": [
+      {
+        "source_text": "“长得也像这孩子这样标致吗？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "长",
+            "r": "zhǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "像",
+            "r": "xiàng",
+            "g": "predicate"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "object"
+          },
+          {
+            "t": "孩",
+            "r": "hái",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "adverbial"
+          },
+          {
+            "t": "样",
+            "r": "yàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "标",
+            "r": "biāo",
+            "g": "predicate"
+          },
+          {
+            "t": "致",
+            "r": "zhì",
+            "g": "predicate"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "この",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "のように、",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "やはり",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "器",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "量",
+              "r": "りょう",
+              "g": "predicate"
+            },
+            {
+              "t": "よく",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "育",
+              "r": "そだ",
+              "g": "predicate"
+            },
+            {
+              "t": "っていたのですか",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

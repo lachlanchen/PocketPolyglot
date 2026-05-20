@@ -1,0 +1,281 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01344",
+  "source_text": "“她是独生女吗？”太吉郎问。",
+  "source_sha256": "8e8f88211d4c670d21034dca11557ded070122da6c4b4d735c72060b26341dd2",
+  "source_normalized_sha256": "8e8f88211d4c670d21034dca11557ded070122da6c4b4d735c72060b26341dd2",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 30,
+    "grammar_token_total": 30,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-1344",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "秋色",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "attributive"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-秋色-intro",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01344",
+    "source_text": "“她是独生女吗？”太吉郎问。",
+    "units": [
+      {
+        "source_text": "“她是独生女吗？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "她",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "独",
+            "r": "dú",
+            "g": "object"
+          },
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "object"
+          },
+          {
+            "t": "女",
+            "r": "nǚ",
+            "g": "object"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "彼",
+              "r": "かの",
+              "g": "subject"
+            },
+            {
+              "t": "女",
+              "r": "じょ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "object"
+            },
+            {
+              "t": "人",
+              "r": "り",
+              "g": "object"
+            },
+            {
+              "t": "娘",
+              "r": "むすめ",
+              "g": "object"
+            },
+            {
+              "t": "ですか。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "太吉郎问。",
+        "zh": [
+          {
+            "t": "太",
+            "r": "tài",
+            "g": "subject"
+          },
+          {
+            "t": "吉",
+            "r": "jí",
+            "g": "subject"
+          },
+          {
+            "t": "郎",
+            "r": "láng",
+            "g": "subject"
+          },
+          {
+            "t": "问",
+            "r": "wèn",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "太",
+              "r": "た",
+              "g": "subject"
+            },
+            {
+              "t": "吉",
+              "r": "きち",
+              "g": "subject"
+            },
+            {
+              "t": "郎",
+              "r": "ろう",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "尋",
+              "r": "たず",
+              "g": "predicate"
+            },
+            {
+              "t": "ねた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,341 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01383",
+  "source_text": "“让我看看你的牙齿。”太吉郎对年轻艺伎说。",
+  "source_sha256": "663279434f50347ea211f9354b087356a94e9882866e85b9460279c27ba8553f",
+  "source_normalized_sha256": "663279434f50347ea211f9354b087356a94e9882866e85b9460279c27ba8553f",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 42,
+    "grammar_token_total": 42,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-1383",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "秋色",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "topic"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "しゅう",
+        "g": "topic"
+      },
+      {
+        "t": "色",
+        "r": "しょく",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-秋色-intro",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "topic"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "しゅう",
+        "g": "topic"
+      },
+      {
+        "t": "色",
+        "r": "しょく",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01383",
+    "source_text": "“让我看看你的牙齿。”太吉郎对年轻艺伎说。",
+    "units": [
+      {
+        "source_text": "“让我看看你的牙齿。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "让",
+            "r": "ràng",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "object"
+          },
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "predicate"
+          },
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "predicate"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "牙",
+            "r": "yá",
+            "g": "object"
+          },
+          {
+            "t": "齿",
+            "r": "chǐ",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "君",
+              "r": "きみ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "歯",
+              "r": "は",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "せてくれ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "太吉郎对年轻艺伎说。",
+        "zh": [
+          {
+            "t": "太",
+            "r": "tài",
+            "g": "subject"
+          },
+          {
+            "t": "吉",
+            "r": "jí",
+            "g": "subject"
+          },
+          {
+            "t": "郎",
+            "r": "láng",
+            "g": "subject"
+          },
+          {
+            "t": "对",
+            "r": "duì",
+            "g": "function"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "attributive"
+          },
+          {
+            "t": "轻",
+            "r": "qīng",
+            "g": "attributive"
+          },
+          {
+            "t": "艺",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "伎",
+            "r": "jì",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "太",
+              "r": "た",
+              "g": "subject"
+            },
+            {
+              "t": "吉",
+              "r": "きち",
+              "g": "subject"
+            },
+            {
+              "t": "郎",
+              "r": "ろう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "若",
+              "r": "わか",
+              "g": "attributive"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "芸",
+              "r": "げい",
+              "g": "adverbial"
+            },
+            {
+              "t": "妓",
+              "r": "ぎ",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

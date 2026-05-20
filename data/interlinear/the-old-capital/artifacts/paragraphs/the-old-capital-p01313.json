@@ -1,0 +1,271 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01313",
+  "source_text": "“哦，这倒也是啊。”太吉郎说。",
+  "source_sha256": "c09e197af346282a334a1b1345a9e4595661279aed820a40c6ed984db115dd83",
+  "source_normalized_sha256": "c09e197af346282a334a1b1345a9e4595661279aed820a40c6ed984db115dd83",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 28,
+    "grammar_token_total": 28,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-1313",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "秋色",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-秋色-intro",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01313",
+    "source_text": "“哦，这倒也是啊。”太吉郎说。",
+    "units": [
+      {
+        "source_text": "“哦，这倒也是啊。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "哦",
+            "r": "ò",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "倒",
+            "r": "dào",
+            "g": "adverbial"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ああ、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "それ",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "確",
+              "r": "たし",
+              "g": "predicate"
+            },
+            {
+              "t": "かにそうですね。",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "太吉郎说。",
+        "zh": [
+          {
+            "t": "太",
+            "r": "tài",
+            "g": "subject"
+          },
+          {
+            "t": "吉",
+            "r": "jí",
+            "g": "subject"
+          },
+          {
+            "t": "郎",
+            "r": "láng",
+            "g": "subject"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "太",
+              "r": "た",
+              "g": "subject"
+            },
+            {
+              "t": "吉",
+              "r": "きち",
+              "g": "subject"
+            },
+            {
+              "t": "郎",
+              "r": "ろう",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

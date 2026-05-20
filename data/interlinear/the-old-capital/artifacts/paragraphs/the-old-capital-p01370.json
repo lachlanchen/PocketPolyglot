@@ -1,0 +1,830 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01370",
+  "source_text": "“欢迎。真是久违了，一向可好？我们常想念着你哪。”又说，“躺下歇歇吧，我给你拿枕头来。哦，你刚才不是说寂寞吗？找个老实的来聊聊天……”",
+  "source_sha256": "99c0555f62ff5f7e8b2129a8f32132647f7f18375e9c0dd5b6f2f5082dbdd054",
+  "source_normalized_sha256": "99c0555f62ff5f7e8b2129a8f32132647f7f18375e9c0dd5b6f2f5082dbdd054",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 131,
+    "grammar_token_total": 131,
+    "unit_count": 6
+  },
+  "source_chunk_id": "the-old-capital-chunk-1370",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "秋色",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-秋色-intro",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01370",
+    "source_text": "“欢迎。真是久违了，一向可好？我们常想念着你哪。”又说，“躺下歇歇吧，我给你拿枕头来。哦，你刚才不是说寂寞吗？找个老实的来聊聊天……”",
+    "units": [
+      {
+        "source_text": "“欢迎。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "欢",
+            "r": "huān",
+            "g": "predicate"
+          },
+          {
+            "t": "迎",
+            "r": "yíng",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ようこそ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "いらっしゃい",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "真是久违了，一向可好？",
+        "zh": [
+          {
+            "t": "真",
+            "r": "zhēn",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "久",
+            "r": "jiǔ",
+            "g": "predicate"
+          },
+          {
+            "t": "违",
+            "r": "wéi",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "adverbial"
+          },
+          {
+            "t": "向",
+            "r": "xiàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "predicate"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "adverbial"
+            },
+            {
+              "t": "当",
+              "r": "とう",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "お",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "久",
+              "r": "ひさ",
+              "g": "predicate"
+            },
+            {
+              "t": "しぶりです",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "ずっと",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "お",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "元",
+              "r": "げん",
+              "g": "predicate"
+            },
+            {
+              "t": "気",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "でしたか",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我们常想念着你哪。”",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          },
+          {
+            "t": "常",
+            "r": "cháng",
+            "g": "adverbial"
+          },
+          {
+            "t": "想",
+            "r": "xiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "念",
+            "r": "niàn",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "predicate"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "object"
+          },
+          {
+            "t": "哪",
+            "r": "na",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "たちは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "いつも",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "あなたのことを",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "懐",
+              "r": "なつ",
+              "g": "predicate"
+            },
+            {
+              "t": "かしく",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "思",
+              "r": "おも",
+              "g": "predicate"
+            },
+            {
+              "t": "っていました",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "又说，“躺下歇歇吧，我给你拿枕头来。",
+        "zh": [
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "躺",
+            "r": "tǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "complement"
+          },
+          {
+            "t": "歇",
+            "r": "xiē",
+            "g": "predicate"
+          },
+          {
+            "t": "歇",
+            "r": "xiē",
+            "g": "predicate"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "给",
+            "r": "gěi",
+            "g": "adverbial"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "object"
+          },
+          {
+            "t": "拿",
+            "r": "ná",
+            "g": "predicate"
+          },
+          {
+            "t": "枕",
+            "r": "zhěn",
+            "g": "object"
+          },
+          {
+            "t": "头",
+            "r": "tou",
+            "g": "object"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "また",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "横",
+              "r": "よこ",
+              "g": "predicate"
+            },
+            {
+              "t": "になって",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "休",
+              "r": "やす",
+              "g": "predicate"
+            },
+            {
+              "t": "んでください",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "枕",
+              "r": "まくら",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "持",
+              "r": "も",
+              "g": "predicate"
+            },
+            {
+              "t": "ってきます",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "哦，你刚才不是说寂寞吗？",
+        "zh": [
+          {
+            "t": "哦",
+            "r": "ò",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "刚",
+            "r": "gāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "才",
+            "r": "cái",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "寂",
+            "r": "jì",
+            "g": "object"
+          },
+          {
+            "t": "寞",
+            "r": "mò",
+            "g": "object"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ああ",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "さっき",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "あなたは",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "寂",
+              "r": "さび",
+              "g": "object"
+            },
+            {
+              "t": "しいと",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "っていませんでしたか",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "找个老实的来聊聊天……”",
+        "zh": [
+          {
+            "t": "找",
+            "r": "zhǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "function"
+          },
+          {
+            "t": "老",
+            "r": "lǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "实",
+            "r": "shí",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "adverbial"
+          },
+          {
+            "t": "聊",
+            "r": "liáo",
+            "g": "predicate"
+          },
+          {
+            "t": "聊",
+            "r": "liáo",
+            "g": "predicate"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "object"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "実",
+              "r": "じつ",
+              "g": "attributive"
+            },
+            {
+              "t": "直",
+              "r": "ちょく",
+              "g": "attributive"
+            },
+            {
+              "t": "な",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "呼",
+              "r": "よ",
+              "g": "predicate"
+            },
+            {
+              "t": "んできて",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "少",
+              "r": "すこ",
+              "g": "adverbial"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "おしゃべり",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "しましょう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "……」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

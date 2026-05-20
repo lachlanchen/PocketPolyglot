@@ -1,0 +1,359 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01314",
+  "source_text": "“什么这倒也是啊！真薄情……总算想起来了吧？”",
+  "source_sha256": "4ee8919e86963c052fc3b450687081915128c145021c14ff9cb38f17f0456c2c",
+  "source_normalized_sha256": "4ee8919e86963c052fc3b450687081915128c145021c14ff9cb38f17f0456c2c",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 48,
+    "grammar_token_total": 48,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-1314",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "都",
+        "r": "dū"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "都",
+        "r": "と"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "秋色",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū"
+      },
+      {
+        "t": "色",
+        "r": "sè"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき"
+      },
+      {
+        "t": "色",
+        "r": "いろ"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-秋色-intro",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū"
+      },
+      {
+        "t": "色",
+        "r": "sè"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき"
+      },
+      {
+        "t": "色",
+        "r": "いろ"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01314",
+    "source_text": "“什么这倒也是啊！真薄情……总算想起来了吧？”",
+    "units": [
+      {
+        "source_text": "“什么这倒也是啊！",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "什",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "object"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "倒",
+            "r": "dào",
+            "g": "adverbial"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "何",
+              "r": "なに",
+              "g": "object"
+            },
+            {
+              "t": "よ",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "それ",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "まあ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "そう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "だけれど",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "ね",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "！",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "真薄情……总算想起来了吧？”",
+        "zh": [
+          {
+            "t": "真",
+            "r": "zhēn",
+            "g": "adverbial"
+          },
+          {
+            "t": "薄",
+            "r": "bó",
+            "g": "predicate"
+          },
+          {
+            "t": "情",
+            "r": "qíng",
+            "g": "predicate"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "总",
+            "r": "zǒng",
+            "g": "adverbial"
+          },
+          {
+            "t": "算",
+            "r": "suàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "想",
+            "r": "xiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "complement"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "adverbial"
+            },
+            {
+              "t": "当",
+              "r": "とう",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "薄",
+              "r": "はく",
+              "g": "predicate"
+            },
+            {
+              "t": "情",
+              "r": "じょう",
+              "g": "predicate"
+            },
+            {
+              "t": "ね",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "……",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "やっと",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "思",
+              "r": "おも",
+              "g": "predicate"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "出",
+              "r": "だ",
+              "g": "complement"
+            },
+            {
+              "t": "したのでしょう",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
