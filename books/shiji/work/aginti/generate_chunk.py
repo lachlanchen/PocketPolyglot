@@ -31,6 +31,7 @@ SENTENCE_SPLIT_RE = re.compile(r'(?<=[。！？；])')
 HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
 ALL_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]+$")
+MISSING_JA_READING_RE = re.compile(r"kanji '([^']+)' needs furigana")
 PUNCT_RE = re.compile(r"^[，。、；：！？「」『』【】《》（）—…·・\"'\\-\\.\\!\\?\\;\\:\\(\\)\\[\\]\\s]+$")
 GRAMMAR_ROLES = {
     "subject", "predicate", "object", "attributive",
@@ -61,6 +62,26 @@ JP_COMPOUND_READING_OVERRIDES = {
     "常先": ["じょう", "せん"],
     "大鴻": ["たい", "こう"],
 }
+JP_SINGLE_KANJI_READING_OVERRIDES = {
+    "高": "こう",
+    "辛": "しん",
+    "娵": "しゅ",
+    "訾": "し",
+    "氏": "し",
+    "摯": "し",
+    "嚳": "こく",
+    "堯": "ぎょう",
+    "勛": "くん",
+    "而": "じ",
+}
+
+
+def _iter_ja_tokens(data):
+    for para in data.get("paragraphs", []):
+        for unit in para.get("units", []):
+            for tok in unit.get("ja", []) if isinstance(unit.get("ja"), list) else []:
+                if isinstance(tok, dict):
+                    yield tok
 
 
 def _split_sentences(text: str) -> list[str]:
@@ -107,6 +128,8 @@ def _normalize_tokens(tokens, lang: str):
             reading = ""
         if lang == "zh" and not is_single_han:
             reading = ""
+        if lang == "ja" and is_single_han and not reading:
+            reading = JP_SINGLE_KANJI_READING_OVERRIDES.get(text, "")
         if PUNCT_RE.fullmatch(text):
             normalized.append({"t": text, "r": "", "g": ""})
         else:
@@ -130,6 +153,108 @@ def _sanitize_data(data):
         for unit in para.get("units", []):
             _sanitize_unit(unit)
     return data
+
+
+def _missing_ja_readings(errors: str) -> list[str]:
+    seen = []
+    for match in MISSING_JA_READING_RE.finditer(errors or ""):
+        char = match.group(1)
+        if SINGLE_HAN_RE.fullmatch(char) and char not in seen:
+            seen.append(char)
+    return seen
+
+
+def _ja_contexts(data, chars: list[str]) -> dict[str, list[str]]:
+    wanted = set(chars)
+    contexts = {ch: [] for ch in chars}
+    for para in data.get("paragraphs", []):
+        for unit in para.get("units", []):
+            ja = unit.get("ja", [])
+            if not isinstance(ja, list):
+                continue
+            texts = [str(tok.get("t", "")) if isinstance(tok, dict) else "" for tok in ja]
+            for idx, tok in enumerate(ja):
+                if not isinstance(tok, dict):
+                    continue
+                ch = str(tok.get("t", ""))
+                if ch not in wanted or tok.get("r"):
+                    continue
+                start = max(0, idx - 8)
+                end = min(len(texts), idx + 9)
+                context = "".join(texts[start:end])
+                if context and context not in contexts[ch]:
+                    contexts[ch].append(context)
+    return contexts
+
+
+def _repair_missing_ja_readings_with_model(data, missing_chars: list[str]) -> dict[str, str]:
+    contexts = _ja_contexts(data, missing_chars)
+    prompt_payload = {
+        "missing_kanji": missing_chars,
+        "contexts": {k: v[:4] for k, v in contexts.items()},
+    }
+    messages = [
+        {
+            "role": "system",
+            "content": (
+                "You provide Japanese furigana for single kanji tokens in classical "
+                "Chinese/Japanese historical text. Output ONLY JSON. Use hiragana or "
+                "katakana readings, no romanization, no explanations."
+            ),
+        },
+        {
+            "role": "user",
+            "content": (
+                "Return JSON in this exact shape: {\"readings\":{\"漢\":\"かん\"}}.\n"
+                "Give one reasonable Japanese on-yomi/name reading for each missing "
+                "single kanji, considering the local contexts.\n\n"
+                + json.dumps(prompt_payload, ensure_ascii=False, indent=2)
+            ),
+        },
+    ]
+    resp = chat(messages, temp=0.0)
+    raw = resp["choices"][0]["message"]["content"]
+    parsed = extract_json(raw)
+    if not isinstance(parsed, dict):
+        return {}
+    readings = parsed.get("readings", parsed)
+    if not isinstance(readings, dict):
+        return {}
+    fixed = {}
+    for ch in missing_chars:
+        reading = str(readings.get(ch, "")).strip()
+        if reading:
+            fixed[ch] = reading
+    return fixed
+
+
+def _repair_missing_ja_readings(data, errors: str) -> tuple[dict, bool]:
+    missing = _missing_ja_readings(errors)
+    if not missing:
+        return data, False
+
+    readings = {
+        ch: JP_SINGLE_KANJI_READING_OVERRIDES[ch]
+        for ch in missing
+        if ch in JP_SINGLE_KANJI_READING_OVERRIDES
+    }
+    unresolved = [ch for ch in missing if ch not in readings]
+    if unresolved:
+        try:
+            readings.update(_repair_missing_ja_readings_with_model(data, unresolved))
+        except Exception as exc:
+            print(f"  furigana repair failed: {str(exc)[:200]}", flush=True)
+
+    changed = False
+    for tok in _iter_ja_tokens(data):
+        ch = str(tok.get("t", ""))
+        if ch in readings and not tok.get("r"):
+            tok["r"] = readings[ch]
+            changed = True
+    if changed:
+        repaired = ", ".join(f"{ch}={readings[ch]}" for ch in sorted(readings) if readings.get(ch))
+        print(f"  repaired missing ja readings: {repaired}", flush=True)
+    return data, changed
 
 
 def load_key():
@@ -480,16 +605,33 @@ def generate_one(cid, max_retries, force):
     data = _sanitize_data(data)
 
     opath.parent.mkdir(parents=True, exist_ok=True)
-    opath.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    candidate = opath.with_suffix(".candidate.json")
+    candidate.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    ok, errs = validate(opath)
+    ok, errs = validate(candidate)
+    for _ in range(2):
+        if ok:
+            break
+        data, changed = _repair_missing_ja_readings(data, errs)
+        if not changed:
+            break
+        candidate.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+        ok, errs = validate(candidate)
     if ok:
+        candidate.replace(opath)
         print("  " + cid + ": OK")
         return True
     print("  " + cid + ": validation failed after generation\n  " + errs.replace("\n", "\n  "))
     LOG_DIR.mkdir(parents=True, exist_ok=True)
+    (LOG_DIR / (cid + ".invalid.json")).write_text(
+        candidate.read_text(encoding="utf-8"), encoding="utf-8")
     (LOG_DIR / (cid + ".fail.log")).write_text(
         "errors:\n" + errs + "\n", encoding="utf-8")
+    candidate.unlink(missing_ok=True)
+    if opath.exists():
+        existing_ok, _ = validate(opath)
+        if not existing_ok:
+            opath.unlink()
     return False
 
 
@@ -512,13 +654,15 @@ def main():
 
     current_fail = 0
     for cid in ids:
+        was_ok = bool(st.get("chunks", {}).get(cid, {}).get("ok"))
         ok = generate_one(cid, args.max_retries, args.force)
         st["chunks"][cid] = {"ok": ok, "ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
-        if ok:
+        if ok and not was_ok:
             st["generated"] = st.get("generated", 0) + 1
         else:
-            st["failed"] = st.get("failed", 0) + 1
-            current_fail += 1
+            if not ok:
+                st["failed"] = st.get("failed", 0) + 1
+                current_fail += 1
         save_status(st)
 
     print("\nDone. ok=" + str(len(ids) - current_fail) + " fail=" + str(current_fail))

@@ -4,8 +4,6 @@ You are the AgInTi orchestrator for `/home/lachlan/ProjectsLFS/ZhJpBook`.
 
 Read `AGENTS.md` and the project-local skill `.aginti/skills/zhjpbook-interlinear/SKILL.md` first. This is a Chinese/Japanese interlinear pocket-book repository. Do not use Codex wrappers for this task; use AgInTi, shell, Python, TeX, and DeepSeek/OpenAI-compatible JSON calls as configured on this machine.
 
-Do not inspect or print credential environment variables, `.env` files, `.aginti/.env`, API keys, tokens, or secret-like files. Authentication is assumed configured if prior chunks already exist; if provider calls fail, report the provider error without exposing credentials.
-
 ## Goal
 
 Create and supervise persistent Shiji generation in separate tmux sessions. The orchestration session should stay observable and should not do every chunk inline.
@@ -78,21 +76,3 @@ Before starting a long run, do this:
 3. Start the writer and monitor tmux sessions.
 4. Let them run at least one small checkpoint beyond the existing pilot if provider limits allow.
 5. Report progress and evidence in the orchestrator session.
-
-Use these exact initial child commands unless you first prove a better resumable command is already present:
-
-Writer session command:
-
-```sh
-mkdir -p books/shiji/work/aginti/logs
-python3 -u books/shiji/work/aginti/generate_chunk.py --start 4 --limit 4619 --max-retries 2 2>&1 | tee -a books/shiji/work/aginti/logs/writer-$(date -u +%Y%m%dT%H%M%SZ).log
-```
-
-Monitor session command:
-
-```sh
-mkdir -p books/shiji/work/aginti/logs
-INTERVAL_SECONDS=900 bash books/shiji/work/aginti/monitor_loop.sh 2>&1 | tee -a books/shiji/work/aginti/logs/monitor-$(date -u +%Y%m%dT%H%M%SZ).log
-```
-
-Do not run `env`, `printenv`, `grep API_KEY`, or any command whose purpose is to inspect credentials before starting these commands.

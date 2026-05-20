@@ -5,6 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 RENDERER="$SCRIPT_DIR/render_three_layer_tex.py"
 ROOT_DIR="$(cd "$SCRIPT_DIR/../../../../" && pwd)"
 BUILD_DIR="$ROOT_DIR/build/shiji-aginti"
+CHUNKS_DIR="$ROOT_DIR/data/interlinear/shiji-aginti/chunks"
 
 JP_COLOR="$BUILD_DIR/jp-main/color"
 JP_BW="$BUILD_DIR/jp-main/blackwhite"
@@ -16,6 +17,41 @@ if [[ "${1:-}" == "--blackwhite" ]]; then
   MODE="--blackwhite"
 fi
 
+LIMIT="${LIMIT:-}"
+if [[ -z "$LIMIT" ]]; then
+  LIMIT="$(python3 - "$CHUNKS_DIR" "$ROOT_DIR/books/shiji/work/aginti/validate_shiji_chunk.py" <<'PY'
+import sys
+import subprocess
+from pathlib import Path
+
+chunks = Path(sys.argv[1])
+validator = Path(sys.argv[2])
+n = 1
+while True:
+    path = chunks / f"shiji-chunk-{n:04d}.json"
+    if not path.exists():
+        break
+    result = subprocess.run(
+        [sys.executable, str(validator), str(path), "--quiet"],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+        timeout=30,
+    )
+    if result.returncode != 0:
+        break
+    n += 1
+print(max(0, n - 1))
+PY
+)"
+fi
+
+if [[ "$LIMIT" -lt 1 ]]; then
+  echo "No Shiji chunks available to compile."
+  exit 1
+fi
+
+echo "Compiling first $LIMIT Shiji chunks."
+
 compile_dir() {
   local dir="$1"
   local pdf="$2"
@@ -24,7 +60,7 @@ compile_dir() {
   if [[ "$MODE" == "--blackwhite" ]]; then
     bw_flag="--bw"
   fi
-  python3 "$RENDERER" --direction "$direction" $bw_flag --start 1 --limit 3 --out-dir "$dir"
+  python3 "$RENDERER" --direction "$direction" $bw_flag --start 1 --limit "$LIMIT" --out-dir "$dir"
   cd "$dir"
   xelatex -interaction=nonstopmode book.tex
   xelatex -interaction=nonstopmode book.tex
