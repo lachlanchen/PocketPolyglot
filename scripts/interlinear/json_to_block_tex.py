@@ -85,15 +85,23 @@ def render_author(author: str, author_reading: str) -> str:
     return "".join(rf"\jpruby{{{tex_escape(text)}}}{{{tex_escape(reading)}}}" for text, reading in groups if text)
 
 
-def emit_unit(unit: dict[str, Any]) -> str:
+def emit_unit(unit: dict[str, Any], *, secondary_ja: bool) -> str:
     zh = render_tokens(unit["zh"], "zhpy", breakable=True)
     ja_lines = unit.get("ja", [])
     ja1 = render_tokens(ja_lines[0], "jpruby", breakable=True) if len(ja_lines) > 0 else ""
-    ja2 = render_tokens(ja_lines[1], "jpruby", breakable=True) if len(ja_lines) > 1 else ""
+    ja2 = render_tokens(ja_lines[1], "jpruby", breakable=True) if secondary_ja and len(ja_lines) > 1 else ""
     return "\n".join([r"\InterUnit", brace(zh), brace(ja1), brace(ja2), ""])
 
 
-def convert(data: dict[str, Any], *, color_mode: str = "color", cover_image: str = "", author: str = "", author_reading: str = "") -> str:
+def convert(
+    data: dict[str, Any],
+    *,
+    color_mode: str = "color",
+    cover_image: str = "",
+    author: str = "",
+    author_reading: str = "",
+    secondary_ja: bool = True,
+) -> str:
     if color_mode == "blackwhite":
         cover_image = ""
     author_rendered = render_author(author, author_reading)
@@ -127,7 +135,7 @@ def convert(data: dict[str, Any], *, color_mode: str = "color", cover_image: str
                 for paragraph in story.get("paragraphs", []):
                     out.append(r"\InterParagraphStart")
                     for unit in paragraph.get("units", []):
-                        out.append(emit_unit(unit))
+                        out.append(emit_unit(unit, secondary_ja=secondary_ja))
                     out.append(r"\InterParagraphEnd")
                     out.append("")
 
@@ -142,11 +150,19 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--author-reading", default="")
     parser.add_argument("--cover-image", default="")
     parser.add_argument("--color-mode", choices=["color", "blackwhite"], default="color")
+    parser.add_argument("--hide-secondary-ja", action="store_true", help="do not render ja[1] explanatory/comment lines")
     args = parser.parse_args(argv)
 
     source = Path(args.source)
     data = json.loads(source.read_text(encoding="utf-8"))
-    result = convert(data, color_mode=args.color_mode, cover_image=args.cover_image, author=args.author, author_reading=args.author_reading)
+    result = convert(
+        data,
+        color_mode=args.color_mode,
+        cover_image=args.cover_image,
+        author=args.author,
+        author_reading=args.author_reading,
+        secondary_ja=not args.hide_secondary_ja,
+    )
     if args.output:
         out = Path(args.output)
         out.parent.mkdir(parents=True, exist_ok=True)

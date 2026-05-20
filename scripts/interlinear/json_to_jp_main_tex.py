@@ -92,9 +92,9 @@ def render_author(author: str, author_reading: str) -> str:
     return "".join(rf"\jpruby{{{tex_escape(text)}}}{{{tex_escape(reading)}}}" for text, reading in groups if text)
 
 
-def emit_unit(unit: dict[str, Any]) -> str:
+def emit_unit(unit: dict[str, Any], *, secondary_ja: bool) -> str:
     ja_gloss = render_ja_line(unit, 0)
-    ja_comment = render_ja_line(unit, 1)
+    ja_comment = render_ja_line(unit, 1) if secondary_ja else ""
     zh = render_tokens(unit["zh"], "zhpy", breakable=True)
     return "\n".join([r"\JpMainUnit", brace(ja_gloss), brace(ja_comment), brace(zh), ""])
 
@@ -109,6 +109,7 @@ def convert(
     powered_by: str,
     cover_image: str,
     color_mode: str,
+    secondary_ja: bool,
 ) -> str:
     title_ja = render_tokens(data["title"]["ja"], "jpruby")
     title_zh = render_tokens(data["title"]["zh"], "zhpy")
@@ -146,7 +147,7 @@ def convert(
                 for paragraph in story.get("paragraphs", []):
                     out.append(r"\JpMainParagraphStart")
                     for unit in paragraph.get("units", []):
-                        out.append(emit_unit(unit))
+                        out.append(emit_unit(unit, secondary_ja=secondary_ja))
                     out.append(r"\JpMainParagraphEnd")
                     out.append("")
 
@@ -164,6 +165,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--powered-by", default="powered by LazyingArt")
     parser.add_argument("--cover-image", default="")
     parser.add_argument("--color-mode", choices=["color", "blackwhite"], default="color")
+    parser.add_argument("--hide-secondary-ja", action="store_true", help="do not render ja[1] explanatory/comment lines")
     args = parser.parse_args(argv)
 
     source = Path(args.source)
@@ -177,6 +179,7 @@ def main(argv: list[str] | None = None) -> int:
         powered_by=args.powered_by,
         cover_image=args.cover_image,
         color_mode=args.color_mode,
+        secondary_ja=not args.hide_secondary_ja,
     )
     if args.output:
         out = Path(args.output)

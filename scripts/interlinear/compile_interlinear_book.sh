@@ -27,6 +27,7 @@ Options:
   --color-mode <mode>            color or blackwhite
   --output-pdf <path>            named PDF path
   --allow-missing                build from available chunks only
+  --hide-secondary-ja            do not render ja[1] explanatory/comment lines
   -h, --help                     show help
 USAGE
 }
@@ -50,6 +51,7 @@ source_epub_ja=""
 cover_image=""
 output_pdf=""
 allow_missing=0
+hide_secondary_ja=0
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -71,6 +73,7 @@ while [[ $# -gt 0 ]]; do
     --color-mode) color_mode="${2:-}"; shift 2 ;;
     --output-pdf) output_pdf="${2:-}"; shift 2 ;;
     --allow-missing) allow_missing=1; shift ;;
+    --hide-secondary-ja) hide_secondary_ja=1; shift ;;
     -h|--help) usage; exit 0 ;;
     *) echo "Unknown option: $1" >&2; usage >&2; exit 1 ;;
   esac
@@ -116,6 +119,10 @@ fi
 if [[ "$allow_missing" -eq 1 ]]; then
   assemble_cmd+=(--allow-missing)
 fi
+render_args=()
+if [[ "$hide_secondary_ja" -eq 1 ]]; then
+  render_args+=(--hide-secondary-ja)
+fi
 
 "${assemble_cmd[@]}"
 python scripts/interlinear/validate_interlinear_json.py "$output_json"
@@ -126,7 +133,8 @@ python scripts/interlinear/json_to_block_tex.py "$output_json" \
   --author "$author" \
   --author-reading "$author_reading" \
   --cover-image "$cover_image" \
-  --color-mode "$color_mode"
+  --color-mode "$color_mode" \
+  "${render_args[@]}"
 xelatex -interaction=nonstopmode -halt-on-error -jobname=book -output-directory="$build_dir" \
   "\\def\\InterlinearSource{$build_dir/source.tex}\\input{tex/interlinear-block/book.tex}"
 xelatex -interaction=nonstopmode -halt-on-error -jobname=book -output-directory="$build_dir" \
