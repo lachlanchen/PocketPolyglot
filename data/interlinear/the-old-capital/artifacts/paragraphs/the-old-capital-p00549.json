@@ -1,0 +1,199 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00549",
+  "source_text": "秀男没有作声。",
+  "source_sha256": "7fcf29c8bcbaa000da7084c98ab6eef2acf041031d57ac8d6c08927b0229e49b",
+  "source_normalized_sha256": "7fcf29c8bcbaa000da7084c98ab6eef2acf041031d57ac8d6c08927b0229e49b",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 15,
+    "grammar_token_total": 15,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-0549",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "都",
+        "r": "dū"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "都",
+        "r": "と"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "和服街",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé"
+      },
+      {
+        "t": "服",
+        "r": "fú"
+      },
+      {
+        "t": "街",
+        "r": "jiē"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ"
+      },
+      {
+        "t": "服",
+        "r": "ふく"
+      },
+      {
+        "t": "街",
+        "r": "がい"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-和服街-intro",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé"
+      },
+      {
+        "t": "服",
+        "r": "fú"
+      },
+      {
+        "t": "街",
+        "r": "jiē"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ"
+      },
+      {
+        "t": "服",
+        "r": "ふく"
+      },
+      {
+        "t": "街",
+        "r": "がい"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00549",
+    "source_text": "秀男没有作声。",
+    "units": [
+      {
+        "source_text": "秀男没有作声。",
+        "zh": [
+          {
+            "t": "秀",
+            "r": "xiù",
+            "g": "subject"
+          },
+          {
+            "t": "男",
+            "r": "nán",
+            "g": "subject"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "作",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "声",
+            "r": "shēng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "秀",
+              "r": "ひで",
+              "g": "subject"
+            },
+            {
+              "t": "男",
+              "r": "お",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "声",
+              "r": "こえ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "立",
+              "r": "た",
+              "g": "predicate"
+            },
+            {
+              "t": "てなかった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

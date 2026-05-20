@@ -1,0 +1,255 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00576",
+  "source_text": "“佐田先生，请您原谅。”",
+  "source_sha256": "959a3b5f0d2a844baf98b68e65c64eb99b4a6f2de33ae404da3eeca700603628",
+  "source_normalized_sha256": "959a3b5f0d2a844baf98b68e65c64eb99b4a6f2de33ae404da3eeca700603628",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 23,
+    "grammar_token_total": 23,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-0576",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "和服街",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "fú",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "jiē",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "ふく",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "がい",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-和服街-intro",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "fú",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "jiē",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "ふく",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "がい",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00576",
+    "source_text": "“佐田先生，请您原谅。”",
+    "units": [
+      {
+        "source_text": "“佐田先生，请您原谅。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "佐",
+            "r": "zuǒ",
+            "g": "subject"
+          },
+          {
+            "t": "田",
+            "r": "tián",
+            "g": "subject"
+          },
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "subject"
+          },
+          {
+            "t": "生",
+            "r": "sheng",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "请",
+            "r": "qǐng",
+            "g": "adverbial"
+          },
+          {
+            "t": "您",
+            "r": "nín",
+            "g": "subject"
+          },
+          {
+            "t": "原",
+            "r": "yuán",
+            "g": "predicate"
+          },
+          {
+            "t": "谅",
+            "r": "liàng",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "佐",
+              "r": "さ",
+              "g": "subject"
+            },
+            {
+              "t": "田",
+              "r": "だ",
+              "g": "subject"
+            },
+            {
+              "t": "先",
+              "r": "せん",
+              "g": "subject"
+            },
+            {
+              "t": "生",
+              "r": "せい",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "どうかお",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "許",
+              "r": "ゆる",
+              "g": "predicate"
+            },
+            {
+              "t": "しください",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

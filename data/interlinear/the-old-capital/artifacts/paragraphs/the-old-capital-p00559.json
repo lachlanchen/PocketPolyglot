@@ -1,0 +1,275 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00559",
+  "source_text": "他把画稿摊开放在秀男面前。",
+  "source_sha256": "e27125bdd67038665cb293e8d69e1f61b29d2150266a724afcece787140af5ac",
+  "source_normalized_sha256": "e27125bdd67038665cb293e8d69e1f61b29d2150266a724afcece787140af5ac",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 27,
+    "grammar_token_total": 27,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-0559",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "和服街",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "fú",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "jiē",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "ふく",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "がい",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-和服街-intro",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "fú",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "jiē",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "ふく",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "がい",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00559",
+    "source_text": "他把画稿摊开放在秀男面前。",
+    "units": [
+      {
+        "source_text": "他把画稿摊开放在秀男面前。",
+        "zh": [
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "画",
+            "r": "huà",
+            "g": "object"
+          },
+          {
+            "t": "稿",
+            "r": "gǎo",
+            "g": "object"
+          },
+          {
+            "t": "摊",
+            "r": "tān",
+            "g": "predicate"
+          },
+          {
+            "t": "开",
+            "r": "kāi",
+            "g": "complement"
+          },
+          {
+            "t": "放",
+            "r": "fàng",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "function"
+          },
+          {
+            "t": "秀",
+            "r": "xiù",
+            "g": "attributive"
+          },
+          {
+            "t": "男",
+            "r": "nán",
+            "g": "attributive"
+          },
+          {
+            "t": "面",
+            "r": "miàn",
+            "g": "object"
+          },
+          {
+            "t": "前",
+            "r": "qián",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "画",
+              "r": "が",
+              "g": "object"
+            },
+            {
+              "t": "稿",
+              "r": "こう",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "広",
+              "r": "ひろ",
+              "g": "predicate"
+            },
+            {
+              "t": "げて",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "秀",
+              "r": "ひで",
+              "g": "attributive"
+            },
+            {
+              "t": "男",
+              "r": "お",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "前",
+              "r": "まえ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "置",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "いた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
