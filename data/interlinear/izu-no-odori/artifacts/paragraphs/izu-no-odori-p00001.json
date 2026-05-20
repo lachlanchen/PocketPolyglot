@@ -1,0 +1,138 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p00001",
+  "source_text": "!cover",
+  "source_sha256": "4bc2d50dc24882844137d77cb8d45735f3f13b695318b3261ae58d1576bda041",
+  "source_normalized_sha256": "4bc2d50dc24882844137d77cb8d45735f3f13b695318b3261ae58d1576bda041",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 6,
+    "grammar_token_total": 6,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-0001",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "attributive"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "front",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "attributive"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p00001",
+    "source_text": "!cover",
+    "units": [
+      {
+        "source_text": "!cover",
+        "zh": [
+          {
+            "t": "!cover",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "表",
+              "r": "ひょう",
+              "g": "object"
+            },
+            {
+              "t": "紙",
+              "r": "し",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "指",
+              "r": "し",
+              "g": "predicate"
+            },
+            {
+              "t": "定",
+              "r": "てい",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
