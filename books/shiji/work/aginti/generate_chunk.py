@@ -130,6 +130,30 @@ def _normalize_tokens(tokens, lang: str):
             reading = ""
         if lang == "ja" and is_single_han and not reading:
             reading = JP_SINGLE_KANJI_READING_OVERRIDES.get(text, "")
+        if lang == "ja" and has_han and not is_single_han:
+            kana_buf: list[str] = []
+
+            def flush_kana() -> None:
+                if kana_buf:
+                    normalized.append({
+                        "t": "".join(kana_buf),
+                        "r": "",
+                        "g": _role(role, "function"),
+                    })
+                    kana_buf.clear()
+
+            for ch in text:
+                if SINGLE_HAN_RE.fullmatch(ch):
+                    flush_kana()
+                    normalized.append({
+                        "t": ch,
+                        "r": JP_SINGLE_KANJI_READING_OVERRIDES.get(ch, ""),
+                        "g": _role(role, "object"),
+                    })
+                else:
+                    kana_buf.append(ch)
+            flush_kana()
+            continue
         if PUNCT_RE.fullmatch(text):
             normalized.append({"t": text, "r": "", "g": ""})
         else:
@@ -139,6 +163,35 @@ def _normalize_tokens(tokens, lang: str):
                 "g": _role(role, "function" if not has_han else "object"),
             })
     return normalized
+
+
+def _rebuild_zh_original_from_source(source_text: str, tokens: list[dict]) -> list[dict]:
+    """Force classical Chinese tokens to exactly follow the source text.
+
+    The model sometimes omits punctuation such as the colon in 曰：「...」 while
+    still producing useful pinyin and grammar roles for the Hanzi. Rebuild from
+    the source sentence and reuse Hanzi readings/roles in order.
+    """
+    han_tokens = [
+        tok for tok in tokens
+        if isinstance(tok, dict) and SINGLE_HAN_RE.fullmatch(str(tok.get("t", "")))
+    ]
+    rebuilt: list[dict] = []
+    han_idx = 0
+    for ch in source_text:
+        if ch.isspace():
+            continue
+        if SINGLE_HAN_RE.fullmatch(ch):
+            src = han_tokens[han_idx] if han_idx < len(han_tokens) else {}
+            rebuilt.append({
+                "t": ch,
+                "r": str(src.get("r", "")) if isinstance(src, dict) else "",
+                "g": _role(str(src.get("g", "")) if isinstance(src, dict) else "", "object"),
+            })
+            han_idx += 1
+        else:
+            rebuilt.append({"t": ch, "r": "", "g": ""})
+    return rebuilt
 
 
 def _sanitize_unit(unit):
@@ -461,10 +514,13 @@ def generate_sentence_unit(sentence_text, section_title, section_id,
                 continue
 
             data = _sanitize_unit(data)
+            data["source_text"] = sentence_text
+            data["zh_original"] = _rebuild_zh_original_from_source(
+                sentence_text, data["zh_original"])
 
             # Check reconstruction: zh_original joined should match source_text
             zt = re.sub(r"\s+", "", "".join(t.get("t", "") for t in data["zh_original"]))
-            st = re.sub(r"\s+", "", data["source_text"])
+            st = re.sub(r"\s+", "", sentence_text)
             if zt != st:
                 last_err = f"zh_original reconstructs '{zt[:60]}' != source_text '{st[:60]}'"
                 print(f"    sentence[{sentence_idx+1}/{total_sentences}] "
