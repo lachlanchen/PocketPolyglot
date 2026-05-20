@@ -12,6 +12,15 @@ from typing import Any
 
 
 HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
+SPLIT_READING_RE = re.compile(r"[\s/／・,，]+")
+
+
+def reading_parts_for_text(text: str, reading: str) -> list[str]:
+    parts = [part for part in SPLIT_READING_RE.split(reading.strip()) if part]
+    han_count = len(HAN_RE.findall(text))
+    if len(parts) == 1 and han_count > 1 and len(text) == han_count and len(parts[0]) == han_count:
+        return list(parts[0])
+    return parts
 
 
 def plain_tokens(text: str, reading: str = "", *, reading_only_for_han: bool = False) -> list[dict[str, str]]:
@@ -19,14 +28,24 @@ def plain_tokens(text: str, reading: str = "", *, reading_only_for_han: bool = F
         return []
     if reading_only_for_han and not HAN_RE.search(text):
         reading = ""
-    han_chars = HAN_RE.findall(text)
-    reading_parts = [part for part in reading.split() if part]
-    if han_chars and len(han_chars) == len(text) and (not reading or len(reading_parts) == len(han_chars)):
-        return [
-            {"t": char, **({"r": reading_parts[index]} if reading_parts else {})}
-            for index, char in enumerate(han_chars)
-        ]
-    return [{"t": text, "r": reading}]
+    reading_parts = reading_parts_for_text(text, reading)
+    part_index = 0
+    tokens: list[dict[str, str]] = []
+    for char in text:
+        if HAN_RE.fullmatch(char):
+            token = {"t": char}
+            if part_index < len(reading_parts):
+                token["r"] = reading_parts[part_index]
+                part_index += 1
+            tokens.append(token)
+            continue
+
+        # Readings for mixed Japanese titles may include kana particles as
+        # alignment hints, but ruby must not be attached to kana/punctuation.
+        if part_index < len(reading_parts) and reading_parts[part_index] == char:
+            part_index += 1
+        tokens.append({"t": char})
+    return tokens
 
 
 def load_json(path: Path) -> dict[str, Any]:
