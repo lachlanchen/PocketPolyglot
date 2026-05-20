@@ -1,0 +1,336 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01454",
+  "source_text": "苗子会感到莫名其妙吧？秀男怀疑是理所当然的。",
+  "source_sha256": "151ccd98cef99b864a9adb37b7d3560dd7db69b1542895af15d671bdec3a1503",
+  "source_normalized_sha256": "151ccd98cef99b864a9adb37b7d3560dd7db69b1542895af15d671bdec3a1503",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 41,
+    "grammar_token_total": 41,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-1454",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "秋色",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-秋色-intro",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "あき",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01454",
+    "source_text": "苗子会感到莫名其妙吧？秀男怀疑是理所当然的。",
+    "units": [
+      {
+        "source_text": "苗子会感到莫名其妙吧？",
+        "zh": [
+          {
+            "t": "苗",
+            "r": "miáo",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "adverbial"
+          },
+          {
+            "t": "感",
+            "r": "gǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "莫",
+            "r": "mò",
+            "g": "object"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "object"
+          },
+          {
+            "t": "其",
+            "r": "qí",
+            "g": "object"
+          },
+          {
+            "t": "妙",
+            "r": "miào",
+            "g": "object"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "苗",
+              "r": "なえ",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "きっと",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "訳",
+              "r": "わけ",
+              "g": "object"
+            },
+            {
+              "t": "がわからないと",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "感",
+              "r": "かん",
+              "g": "predicate"
+            },
+            {
+              "t": "じるだろう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "秀男怀疑是理所当然的。",
+        "zh": [
+          {
+            "t": "秀",
+            "r": "xiù",
+            "g": "subject"
+          },
+          {
+            "t": "男",
+            "r": "nán",
+            "g": "subject"
+          },
+          {
+            "t": "怀",
+            "r": "huái",
+            "g": "predicate"
+          },
+          {
+            "t": "疑",
+            "r": "yí",
+            "g": "predicate"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "理",
+            "r": "lǐ",
+            "g": "object"
+          },
+          {
+            "t": "所",
+            "r": "suǒ",
+            "g": "object"
+          },
+          {
+            "t": "当",
+            "r": "dāng",
+            "g": "object"
+          },
+          {
+            "t": "然",
+            "r": "rán",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "秀",
+              "r": "ひで",
+              "g": "subject"
+            },
+            {
+              "t": "男",
+              "r": "お",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "疑",
+              "r": "うたが",
+              "g": "predicate"
+            },
+            {
+              "t": "うのは",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "当",
+              "r": "あ",
+              "g": "object"
+            },
+            {
+              "t": "たり",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "前",
+              "r": "まえ",
+              "g": "object"
+            },
+            {
+              "t": "のことだった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
