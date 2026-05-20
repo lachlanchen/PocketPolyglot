@@ -1,0 +1,531 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00149",
+  "source_text": "花朵稀稀疏疏地飘落在樱花树下，有的还漂浮在池子的水面上。不过，大概也只有七八瓣的光景……",
+  "source_sha256": "7afa754ac406bf9b00f92f917338080f749312b2b6df177e7b1c5979ec9d6254",
+  "source_normalized_sha256": "7afa754ac406bf9b00f92f917338080f749312b2b6df177e7b1c5979ec9d6254",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 78,
+    "grammar_token_total": 78,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-0149",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "春花",
+    "title_zh": [
+      {
+        "t": "春",
+        "r": "chūn",
+        "g": "attributive"
+      },
+      {
+        "t": "花",
+        "r": "huā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "春",
+        "r": "はる",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "花",
+        "r": "はな",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-春花-intro",
+    "title_zh": [
+      {
+        "t": "春",
+        "r": "chūn",
+        "g": "attributive"
+      },
+      {
+        "t": "花",
+        "r": "huā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "春",
+        "r": "はる",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "花",
+        "r": "はな",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00149",
+    "source_text": "花朵稀稀疏疏地飘落在樱花树下，有的还漂浮在池子的水面上。不过，大概也只有七八瓣的光景……",
+    "units": [
+      {
+        "source_text": "花朵稀稀疏疏地飘落在樱花树下，有的还漂浮在池子的水面上。",
+        "zh": [
+          {
+            "t": "花",
+            "r": "huā",
+            "g": "subject"
+          },
+          {
+            "t": "朵",
+            "r": "duǒ",
+            "g": "subject"
+          },
+          {
+            "t": "稀",
+            "r": "xī",
+            "g": "adverbial"
+          },
+          {
+            "t": "稀",
+            "r": "xī",
+            "g": "adverbial"
+          },
+          {
+            "t": "疏",
+            "r": "shū",
+            "g": "adverbial"
+          },
+          {
+            "t": "疏",
+            "r": "shū",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "飘",
+            "r": "piāo",
+            "g": "predicate"
+          },
+          {
+            "t": "落",
+            "r": "luò",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "complement"
+          },
+          {
+            "t": "樱",
+            "r": "yīng",
+            "g": "attributive"
+          },
+          {
+            "t": "花",
+            "r": "huā",
+            "g": "attributive"
+          },
+          {
+            "t": "树",
+            "r": "shù",
+            "g": "object"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "subject"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "subject"
+          },
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "adverbial"
+          },
+          {
+            "t": "漂",
+            "r": "piāo",
+            "g": "predicate"
+          },
+          {
+            "t": "浮",
+            "r": "fú",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "complement"
+          },
+          {
+            "t": "池",
+            "r": "chí",
+            "g": "attributive"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "水",
+            "r": "shuǐ",
+            "g": "object"
+          },
+          {
+            "t": "面",
+            "r": "miàn",
+            "g": "object"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "花",
+              "r": "はな",
+              "g": "subject"
+            },
+            {
+              "t": "びらは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "まばらに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "桜",
+              "r": "さくら",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "木",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "下",
+              "r": "した",
+              "g": "complement"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "舞",
+              "r": "ま",
+              "g": "predicate"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "落",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "ち",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "中",
+              "r": "なか",
+              "g": "subject"
+            },
+            {
+              "t": "には",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "池",
+              "r": "いけ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "水",
+              "r": "すい",
+              "g": "object"
+            },
+            {
+              "t": "面",
+              "r": "めん",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "浮",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "かんでいる",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "ものもあった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "不过，大概也只有七八瓣的光景……",
+        "zh": [
+          {
+            "t": "不",
+            "r": "bú",
+            "g": "function"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "adverbial"
+          },
+          {
+            "t": "概",
+            "r": "gài",
+            "g": "adverbial"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "只",
+            "r": "zhǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "七",
+            "r": "qī",
+            "g": "attributive"
+          },
+          {
+            "t": "八",
+            "r": "bā",
+            "g": "attributive"
+          },
+          {
+            "t": "瓣",
+            "r": "bàn",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "光",
+            "r": "guāng",
+            "g": "complement"
+          },
+          {
+            "t": "景",
+            "r": "jǐng",
+            "g": "complement"
+          },
+          {
+            "t": "……",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "とはいえ",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "おそらく",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "七",
+              "r": "しち",
+              "g": "attributive"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "八",
+              "r": "はち",
+              "g": "attributive"
+            },
+            {
+              "t": "枚",
+              "r": "まい",
+              "g": "object"
+            },
+            {
+              "t": "ほどしか",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "なかったのだろう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "……",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,853 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00135",
+  "source_text": "千重子折回来，把饵食扔到池子里，鲤鱼便成群簇拥上来，有的还把身子挺出水面。微波一圈套一圈地扩展开来。樱树和松树的倒影也在波面微微摇荡。",
+  "source_sha256": "7e96ca759115b15d070f1682cd236d9bf22027648b77cb9d00349dcee187dc82",
+  "source_normalized_sha256": "7e96ca759115b15d070f1682cd236d9bf22027648b77cb9d00349dcee187dc82",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 138,
+    "grammar_token_total": 138,
+    "unit_count": 4
+  },
+  "source_chunk_id": "the-old-capital-chunk-0135",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "春花",
+    "title_zh": [
+      {
+        "t": "春",
+        "r": "chūn",
+        "g": "topic"
+      },
+      {
+        "t": "花",
+        "r": "huā",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "春",
+        "r": "はる",
+        "g": "topic"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "topic"
+      },
+      {
+        "t": "花",
+        "r": "はな",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-春花-intro",
+    "title_zh": [
+      {
+        "t": "春",
+        "r": "chūn",
+        "g": "topic"
+      },
+      {
+        "t": "花",
+        "r": "huā",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "春",
+        "r": "はる",
+        "g": "topic"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "topic"
+      },
+      {
+        "t": "花",
+        "r": "はな",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00135",
+    "source_text": "千重子折回来，把饵食扔到池子里，鲤鱼便成群簇拥上来，有的还把身子挺出水面。微波一圈套一圈地扩展开来。樱树和松树的倒影也在波面微微摇荡。",
+    "units": [
+      {
+        "source_text": "千重子折回来，把饵食扔到池子里，",
+        "zh": [
+          {
+            "t": "千",
+            "r": "qiān",
+            "g": "subject"
+          },
+          {
+            "t": "重",
+            "r": "chóng",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "折",
+            "r": "zhé",
+            "g": "predicate"
+          },
+          {
+            "t": "回",
+            "r": "huí",
+            "g": "complement"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "饵",
+            "r": "ěr",
+            "g": "object"
+          },
+          {
+            "t": "食",
+            "r": "shí",
+            "g": "object"
+          },
+          {
+            "t": "扔",
+            "r": "rēng",
+            "g": "predicate"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "complement"
+          },
+          {
+            "t": "池",
+            "r": "chí",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "千",
+              "r": "ち",
+              "g": "subject"
+            },
+            {
+              "t": "重",
+              "r": "え",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "引",
+              "r": "ひ",
+              "g": "predicate"
+            },
+            {
+              "t": "き",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "返",
+              "r": "かえ",
+              "g": "predicate"
+            },
+            {
+              "t": "し、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "餌",
+              "r": "えさ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "池",
+              "r": "いけ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "中",
+              "r": "なか",
+              "g": "object"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "投",
+              "r": "な",
+              "g": "predicate"
+            },
+            {
+              "t": "げ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "入",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "れた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "鲤鱼便成群簇拥上来，有的还把身子挺出水面。",
+        "zh": [
+          {
+            "t": "鲤",
+            "r": "lǐ",
+            "g": "subject"
+          },
+          {
+            "t": "鱼",
+            "r": "yú",
+            "g": "subject"
+          },
+          {
+            "t": "便",
+            "r": "biàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "成",
+            "r": "chéng",
+            "g": "adverbial"
+          },
+          {
+            "t": "群",
+            "r": "qún",
+            "g": "adverbial"
+          },
+          {
+            "t": "簇",
+            "r": "cù",
+            "g": "predicate"
+          },
+          {
+            "t": "拥",
+            "r": "yōng",
+            "g": "predicate"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "complement"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "subject"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "subject"
+          },
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "adverbial"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "身",
+            "r": "shēn",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "挺",
+            "r": "tǐng",
+            "g": "predicate"
+          },
+          {
+            "t": "出",
+            "r": "chū",
+            "g": "complement"
+          },
+          {
+            "t": "水",
+            "r": "shuǐ",
+            "g": "object"
+          },
+          {
+            "t": "面",
+            "r": "miàn",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "鯉",
+              "r": "こい",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "すぐに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "群",
+              "r": "む",
+              "g": "adverbial"
+            },
+            {
+              "t": "れをなして",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "寄",
+              "r": "よ",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "集",
+              "r": "あつ",
+              "g": "predicate"
+            },
+            {
+              "t": "まり、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "中",
+              "r": "なか",
+              "g": "subject"
+            },
+            {
+              "t": "には",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "体",
+              "r": "からだ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "水",
+              "r": "すい",
+              "g": "object"
+            },
+            {
+              "t": "面",
+              "r": "めん",
+              "g": "object"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "突",
+              "r": "つ",
+              "g": "predicate"
+            },
+            {
+              "t": "き",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "出",
+              "r": "だ",
+              "g": "predicate"
+            },
+            {
+              "t": "すものもいた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "微波一圈套一圈地扩展开来。",
+        "zh": [
+          {
+            "t": "微",
+            "r": "wēi",
+            "g": "subject"
+          },
+          {
+            "t": "波",
+            "r": "bō",
+            "g": "subject"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "adverbial"
+          },
+          {
+            "t": "圈",
+            "r": "quān",
+            "g": "adverbial"
+          },
+          {
+            "t": "套",
+            "r": "tào",
+            "g": "adverbial"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "adverbial"
+          },
+          {
+            "t": "圈",
+            "r": "quān",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "扩",
+            "r": "kuò",
+            "g": "predicate"
+          },
+          {
+            "t": "展",
+            "r": "zhǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "开",
+            "r": "kāi",
+            "g": "complement"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "小",
+              "r": "さざ",
+              "g": "subject"
+            },
+            {
+              "t": "波",
+              "r": "なみ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "輪",
+              "r": "わ",
+              "g": "adverbial"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "輪",
+              "r": "わ",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "重",
+              "r": "かさ",
+              "g": "adverbial"
+            },
+            {
+              "t": "なるように、",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "次",
+              "r": "つぎ",
+              "g": "adverbial"
+            },
+            {
+              "t": "々",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "広",
+              "r": "ひろ",
+              "g": "predicate"
+            },
+            {
+              "t": "がっていった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "樱树和松树的倒影也在波面微微摇荡。",
+        "zh": [
+          {
+            "t": "樱",
+            "r": "yīng",
+            "g": "attributive"
+          },
+          {
+            "t": "树",
+            "r": "shù",
+            "g": "attributive"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "attributive"
+          },
+          {
+            "t": "松",
+            "r": "sōng",
+            "g": "attributive"
+          },
+          {
+            "t": "树",
+            "r": "shù",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "倒",
+            "r": "dào",
+            "g": "subject"
+          },
+          {
+            "t": "影",
+            "r": "yǐng",
+            "g": "subject"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "波",
+            "r": "bō",
+            "g": "object"
+          },
+          {
+            "t": "面",
+            "r": "miàn",
+            "g": "object"
+          },
+          {
+            "t": "微",
+            "r": "wēi",
+            "g": "adverbial"
+          },
+          {
+            "t": "微",
+            "r": "wēi",
+            "g": "adverbial"
+          },
+          {
+            "t": "摇",
+            "r": "yáo",
+            "g": "predicate"
+          },
+          {
+            "t": "荡",
+            "r": "dàng",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "桜",
+              "r": "さくら",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "木",
+              "r": "き",
+              "g": "attributive"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "松",
+              "r": "まつ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "木",
+              "r": "き",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "影",
+              "r": "かげ",
+              "g": "subject"
+            },
+            {
+              "t": "も、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "波",
+              "r": "なみ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "面",
+              "r": "おもて",
+              "g": "object"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "かすかに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "揺",
+              "r": "ゆ",
+              "g": "predicate"
+            },
+            {
+              "t": "れ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "動",
+              "r": "うご",
+              "g": "predicate"
+            },
+            {
+              "t": "いていた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
