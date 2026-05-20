@@ -92,12 +92,12 @@ def validate_ja(tokens: list[dict[str, Any]], where: str, errors: list[str]) -> 
             errors.append(f"{where}[{i}]: kanji '{t}' needs furigana")
         if r and not is_single:
             errors.append(f"{where}[{i}]: furigana on non-kanji token '{t}'")
-        # Only enforce grammar roles on kanji tokens; kana are phonetic helpers
-        if is_single:
+        # Enforce grammar roles on all non-punctuation tokens (kanji and kana)
+        if t and not is_punct_or_space(t):
             if g not in GRAMMAR_ROLES:
                 allowed = ", ".join(sorted(GRAMMAR_ROLES))
                 errors.append(
-                    f"{where}[{i}]: kanji '{t}' role '{g}' not in {allowed}"
+                    f"{where}[{i}]: token '{t}' role '{g}' not in {allowed}"
                 )
 
 
@@ -142,21 +142,17 @@ def validate_chunk(data: dict[str, Any]) -> list[str]:
                     )
 
             ja = unit.get("ja")
-            if not isinstance(ja, list) or len(ja) != 2:
-                n = len(ja) if isinstance(ja, list) else type(ja).__name__
-                errors.append(f"{u_w}: ja needs 2 lines, got {n}")
+            if not isinstance(ja, list):
+                errors.append(f"{u_w}: ja must be a token list (list[dict]), got {type(ja).__name__}")
+            elif len(ja) > 0 and isinstance(ja[0], list):
+                errors.append(f"{u_w}: ja must be list[dict] not list[list[dict]] (flat single-line schema)")
             else:
-                for li, line in enumerate(ja):
-                    lw = f"{u_w}.ja[{li}]"
-                    if not isinstance(line, list):
-                        errors.append(f"{lw}: must be a token list")
-                        continue
-                    validate_ja(line, lw, errors)
-                    lt = normalize(token_txt(line))
-                    if not lt:
-                        errors.append(f"{lw}: Japanese line is empty")
-                    if lt in PLACEHOLDER_JA:
-                        errors.append(f"{lw}: Japanese is placeholder '{lt}'")
+                validate_ja(ja, f"{u_w}.ja", errors)
+                lt = normalize(token_txt(ja))
+                if not lt:
+                    errors.append(f"{u_w}.ja: Japanese text is empty")
+                if lt in PLACEHOLDER_JA:
+                    errors.append(f"{u_w}.ja: Japanese is placeholder '{lt}'")
 
             zh_mod = unit.get("zh_modern")
             if not isinstance(zh_mod, list) or not zh_mod:

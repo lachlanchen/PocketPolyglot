@@ -79,41 +79,30 @@ Each chunk is one JSON file. The `mode` tag discriminates this schema from the o
             {"t": "。", "r": "", "g": ""}
           ],
           "ja": [
-            [
-              {"t": "黄", "r": "こう", "g": "attributive"},
-              {"t": "帝", "r": "てい", "g": "topic"},
-              {"t": "は", "r": "", "g": "function"},
-              {"t": "少", "r": "しょう", "g": "attributive"},
-              {"t": "典", "r": "てん", "g": "attributive"},
-              {"t": "の", "r": "", "g": "function"},
-              {"t": "子", "r": "こ", "g": "predicate"},
-              {"t": "で", "r": "", "g": "function"},
-              {"t": "、", "r": "", "g": ""},
-              {"t": "姓", "r": "せい", "g": "predicate"},
-              {"t": "は", "r": "", "g": "function"},
-              {"t": "公", "r": "こう", "g": "attributive"},
-              {"t": "孫", "r": "そん", "g": "object"},
-              {"t": "、", "r": "", "g": ""},
-              {"t": "名", "r": "な", "g": "predicate"},
-              {"t": "は", "r": "", "g": "function"},
-              {"t": "軒", "r": "けん", "g": "attributive"},
-              {"t": "轅", "r": "えん", "g": "object"},
-              {"t": "と", "r": "", "g": "function"},
-              {"t": "い", "r": "", "g": ""},
-              {"t": "う", "r": "", "g": ""},
-              {"t": "。", "r": "", "g": ""}
-            ],
-            [
-              {"t": "黄", "r": "", "g": ""},
-              {"t": "帝", "r": "", "g": ""},
-              {"t": "は", "r": "", "g": "function"},
-              {"t": "少", "r": "", "g": ""},
-              {"t": "典", "r": "", "g": ""},
-              {"t": "の", "r": "", "g": "function"},
-              {"t": "子", "r": "", "g": ""},
-              {"t": "ども", "r": "", "g": "predicate"},
-              ...
-            ]
+            {"t": "黄", "r": "こう", "g": "attributive"},
+            {"t": "帝", "r": "てい", "g": "topic"},
+            {"t": "は", "r": "", "g": "function"},
+            {"t": "少", "r": "しょう", "g": "attributive"},
+            {"t": "典", "r": "てん", "g": "attributive"},
+            {"t": "の", "r": "", "g": "function"},
+            {"t": "子", "r": "こ", "g": "predicate"},
+            {"t": "で", "r": "", "g": "function"},
+            {"t": "あ", "r": "", "g": ""},
+            {"t": "る", "r": "", "g": ""},
+            {"t": "、", "r": "", "g": ""},
+            {"t": "姓", "r": "せい", "g": "predicate"},
+            {"t": "は", "r": "", "g": "function"},
+            {"t": "公", "r": "こう", "g": "attributive"},
+            {"t": "孫", "r": "そん", "g": "object"},
+            {"t": "、", "r": "", "g": ""},
+            {"t": "名", "r": "な", "g": "predicate"},
+            {"t": "は", "r": "", "g": "function"},
+            {"t": "軒", "r": "けん", "g": "attributive"},
+            {"t": "轅", "r": "えん", "g": "object"},
+            {"t": "と", "r": "", "g": "function"},
+            {"t": "い", "r": "", "g": ""},
+            {"t": "う", "r": "", "g": ""},
+            {"t": "。", "r": "", "g": ""}
           ],
           "zh_modern": [
             {"t": "黄", "r": "huáng", "g": "attributive"},
@@ -145,7 +134,7 @@ Each chunk is one JSON file. The `mode` tag discriminates this schema from the o
 
 - `zh_original` — classical Chinese original tokens with pinyin. Never abbreviated to `zh`.
 - `zh_modern` — modern explanatory Chinese with pinyin. Always distinct from `zh_original`.
-- `ja` — a list of exactly 2 token lists (kanji-furigana line, then kana-only or mixed reading line). Both lines reconstruct the same Japanese reading of the unit; the first line uses kanji tokens, the second is the full reading.
+- `ja` — a flat list of dict tokens (list[dict]) representing the Japanese correspondence. Each kanji is a one-character token with furigana; kana tokens may be multi-character and must carry a valid `g` role unless punctuation. The token list represents the Japanese reading directly; there is no second kana-duplicate line — TeX ruby wrapping is a renderer concern.
 
 ## 3. Validation Rules (deterministic)
 
@@ -154,11 +143,11 @@ The validator (`validate_shiji_chunk.py`) checks each chunk JSON file:
 1. **Structure** — `mode` == `"zh_classical_three_layer"`, chunk has `chunk_id`, `paragraphs` array with at least one paragraph.
 2. **Source-text reconstruction** — joining all `zh_original[].t` within a **unit** reconstructs `unit.source_text` modulo whitespace. Joining across all units within a paragraph reconstructs `paragraph.source_text`.
 3. **Han-character token shape (zh_original, zh_modern)** — every CJK Unified Ideograph (U+3400–U+4DBF, U+4E00–U+9FFF, U+F900–U+FAFF) must appear as a one-character token with a non-empty `r` (pinyin). Punctuation and non-Han characters may lack `r`.
-4. **Kanji token shape (ja lines)** — every kanji (same Unicode ranges) must appear as a one-character token with a non-empty `r` (furigana). Kana-only tokens may lack `r`.
+4. **Kanji token shape (ja)** — every kanji (same Unicode ranges) must appear as a one-character token with a non-empty `r` (furigana). Kana tokens may be multi-character and, if not punctuation, must carry a valid `g` role. All tokens may carry `r` only when appropriate.
 5. **Grammar roles** — every token must have `g`; non-punctuation tokens must have `g` in `{subject, predicate, object, attributive, adverbial, complement, topic, function}`. Punctuation may have `g == ""`.
-6. **Japanese placeholder rejection** — no `ja` line may be empty, equal to `"注"`, `"注。"`, `"。"`, or `"日本語"`. Each line must contain at least one kanji or kana character.
+6. **Japanese placeholder rejection** — no `ja` token line may be empty, equal to `"注"`, `"注。"`, `"。"`, or `"日本語"`. The joined ja text must contain at least one kanji or kana character.
 7. **Modern Chinese distinctness** — `zh_modern` token text joined must differ from `zh_original` token text joined (cannot be a mere copy of the classical source).
-8. **Ja line count** — `ja` must be a list of exactly 2 token lists. Both lines joined must reconstruct the same Japanese reading text (modulo whitespace).
+8. **Ja flatness** — `ja` must be a flat `list[dict]` (single token list), not `list[list[dict]]`. There is no second kana-duplicate line; TeX ruby wrapping is a renderer concern.
 
 ## 4. Generation Worker
 
@@ -174,7 +163,7 @@ The validator (`validate_shiji_chunk.py`) checks each chunk JSON file:
 **Algorithm:**
 1. Grep the exact chunk JSONL line by chunk_id.
 2. Extract `paragraphs[].text` (classical Chinese) and `jp_reference[]` (Japanese Wikisource paragraphs).
-3. Build a DeepSeek prompt requesting tokenization into `zh_original`, `ja` (two lines), `zh_modern` per unit.
+3. Build a DeepSeek prompt requesting tokenization into `zh_original`, `ja` (flat token list), `zh_modern` per unit.
 4. Parse the LLM response, validate with `validate_shiji_chunk.py`.
 5. On validation failure, feed errors back to the LLM for one retry. If still failing, write the raw response + errors to `logs/` and exit non-zero.
 6. Write valid JSON to `data/interlinear/shiji-aginti/{chunk_id}.json`.
@@ -194,10 +183,9 @@ Two TeX renderer scripts are needed, both writing to `build/shiji-aginti/`:
 **Output files:** `build/shiji-aginti/jp-color/book.tex`, `build/shiji-aginti/jp-bw/book.tex`
 
 **Layout per unit:**
-1. **Primary line** — Japanese line 0 (kanji + furigana), with `\jpruby` and `\Gram` wrappers, rendered in a larger font.
-2. **Secondary line 0** — Japanese line 1 (kana reading), smaller font, gray.
-3. **Classical Chinese line** — `zh_original` tokens with `\zhcnruby` and `\Gram`.
-4. **Modern Chinese line** — `zh_modern` tokens with `\zhcnruby` and `\Gram`, in an even smaller font.
+1. **Primary line** — `ja` tokens (kanji + furigana + kana), with `\jpruby` and `\Gram` wrappers, rendered in a larger font. TeX ruby wrapping is the renderer's responsibility; the data layer provides a flat token list.
+2. **Classical Chinese line** — `zh_original` tokens with `\zhcnruby` and `\Gram`.
+3. **Modern Chinese line** — `zh_modern` tokens with `\zhcnruby` and `\Gram`, in a smaller font.
 
 ### 5.2 ZH-main renderer (`render_zh_main_tex.py`)
 
@@ -205,7 +193,7 @@ Two TeX renderer scripts are needed, both writing to `build/shiji-aginti/`:
 
 **Layout per unit:**
 1. **Primary line** — `zh_original` with `\zhcnruby` and `\Gram`, large font.
-2. **Japanese correspondence** — two ja lines with `\jpruby` and `\Gram`, smaller.
+2. **Japanese correspondence** — `ja` tokens with `\jpruby` and `\Gram`, smaller.
 3. **Modern Chinese line** — `zh_modern` with `\zhcnruby` and `\Gram`, smallest.
 
 ### 5.3 TeX style
