@@ -1,0 +1,165 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02573",
+  "source_text": "“对不起。”",
+  "source_sha256": "e36601216af015a1d530302b3f09ea59921d434c40056dac23999223f404daba",
+  "source_normalized_sha256": "e36601216af015a1d530302b3f09ea59921d434c40056dac23999223f404daba",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 13,
+    "grammar_token_total": 13,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-2573",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "subject"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "十",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-十-intro",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02573",
+    "source_text": "“对不起。”",
+    "units": [
+      {
+        "source_text": "“对不起。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "对",
+            "r": "duì",
+            "g": "predicate"
+          },
+          {
+            "t": "不",
+            "r": "bu",
+            "g": "predicate"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "申",
+              "r": "もう",
+              "g": "predicate"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "訳",
+              "r": "わけ",
+              "g": "predicate"
+            },
+            {
+              "t": "ありません",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

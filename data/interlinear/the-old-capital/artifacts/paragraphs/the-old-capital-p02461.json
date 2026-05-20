@@ -1,0 +1,377 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02461",
+  "source_text": "“哦？你正好比我重一倍。年龄却还不到我的一半……”",
+  "source_sha256": "c25d8ecb7954714fab3aacd37d1cbff176df05f406f54fed18b8de9504f9abf7",
+  "source_normalized_sha256": "c25d8ecb7954714fab3aacd37d1cbff176df05f406f54fed18b8de9504f9abf7",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 51,
+    "grammar_token_total": 51,
+    "unit_count": 3
+  },
+  "source_chunk_id": "the-old-capital-chunk-2461",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "四",
+    "title_zh": [
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-四-intro",
+    "title_zh": [
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02461",
+    "source_text": "“哦？你正好比我重一倍。年龄却还不到我的一半……”",
+    "units": [
+      {
+        "source_text": "“哦？",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "哦",
+            "r": "ó",
+            "g": "predicate"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ほう",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "你正好比我重一倍。",
+        "zh": [
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "正",
+            "r": "zhèng",
+            "g": "adverbial"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "比",
+            "r": "bǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "adverbial"
+          },
+          {
+            "t": "重",
+            "r": "zhòng",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "complement"
+          },
+          {
+            "t": "倍",
+            "r": "bèi",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "君",
+              "r": "きみ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "ちょうど",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "adverbial"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "二",
+              "r": "に",
+              "g": "complement"
+            },
+            {
+              "t": "倍",
+              "r": "ばい",
+              "g": "complement"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "重",
+              "r": "おも",
+              "g": "predicate"
+            },
+            {
+              "t": "さだ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "年龄却还不到我的一半……”",
+        "zh": [
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "subject"
+          },
+          {
+            "t": "龄",
+            "r": "líng",
+            "g": "subject"
+          },
+          {
+            "t": "却",
+            "r": "què",
+            "g": "adverbial"
+          },
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "predicate"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "object"
+          },
+          {
+            "t": "半",
+            "r": "bàn",
+            "g": "object"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "年",
+              "r": "とし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "それなのに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "まだ",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "半",
+              "r": "はん",
+              "g": "object"
+            },
+            {
+              "t": "分",
+              "r": "ぶん",
+              "g": "object"
+            },
+            {
+              "t": "にも",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "届",
+              "r": "とど",
+              "g": "predicate"
+            },
+            {
+              "t": "かない",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "……」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

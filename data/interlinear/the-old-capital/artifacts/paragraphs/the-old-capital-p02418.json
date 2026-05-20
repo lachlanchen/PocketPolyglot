@@ -1,0 +1,546 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02418",
+  "source_text": "这是很有礼貌的说法。他明知名人输了五目，却有意这么说，以图消除名人的忧郁，这也许是对名人的一种体贴吧。",
+  "source_sha256": "03a517b34ba9f08293173b27ec3e6d352e0aaa9cc0a8262abbe8bc990c6b675b",
+  "source_normalized_sha256": "03a517b34ba9f08293173b27ec3e6d352e0aaa9cc0a8262abbe8bc990c6b675b",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 87,
+    "grammar_token_total": 87,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-2418",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "二",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "attributive"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-二-intro",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02418",
+    "source_text": "这是很有礼貌的说法。他明知名人输了五目，却有意这么说，以图消除名人的忧郁，这也许是对名人的一种体贴吧。",
+    "units": [
+      {
+        "source_text": "这是很有礼貌的说法。",
+        "zh": [
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "很",
+            "r": "hěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "礼",
+            "r": "lǐ",
+            "g": "object"
+          },
+          {
+            "t": "貌",
+            "r": "mào",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "object"
+          },
+          {
+            "t": "法",
+            "r": "fǎ",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "これは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "たいへん",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "礼",
+              "r": "れい",
+              "g": "object"
+            },
+            {
+              "t": "儀",
+              "r": "ぎ",
+              "g": "object"
+            },
+            {
+              "t": "正",
+              "r": "ただ",
+              "g": "object"
+            },
+            {
+              "t": "しい",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "言",
+              "r": "い",
+              "g": "object"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "方",
+              "r": "かた",
+              "g": "object"
+            },
+            {
+              "t": "である",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "他明知名人输了五目，却有意这么说，以图消除名人的忧郁，这也许是对名人的一种体贴吧。",
+        "zh": [
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "明",
+            "r": "míng",
+            "g": "adverbial"
+          },
+          {
+            "t": "知",
+            "r": "zhī",
+            "g": "predicate"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "输",
+            "r": "shū",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "五",
+            "r": "wǔ",
+            "g": "object"
+          },
+          {
+            "t": "目",
+            "r": "mù",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "却",
+            "r": "què",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "意",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "adverbial"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "图",
+            "r": "tú",
+            "g": "adverbial"
+          },
+          {
+            "t": "消",
+            "r": "xiāo",
+            "g": "predicate"
+          },
+          {
+            "t": "除",
+            "r": "chú",
+            "g": "predicate"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "attributive"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "忧",
+            "r": "yōu",
+            "g": "object"
+          },
+          {
+            "t": "郁",
+            "r": "yù",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "许",
+            "r": "xǔ",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "对",
+            "r": "duì",
+            "g": "adverbial"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "object"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "一",
+            "r": "yì",
+            "g": "attributive"
+          },
+          {
+            "t": "种",
+            "r": "zhǒng",
+            "g": "attributive"
+          },
+          {
+            "t": "体",
+            "r": "tǐ",
+            "g": "object"
+          },
+          {
+            "t": "贴",
+            "r": "tiē",
+            "g": "object"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "名",
+              "r": "めい",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "五",
+              "r": "ご",
+              "g": "object"
+            },
+            {
+              "t": "目",
+              "r": "もく",
+              "g": "object"
+            },
+            {
+              "t": "負",
+              "r": "ま",
+              "g": "predicate"
+            },
+            {
+              "t": "けたと",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "知",
+              "r": "し",
+              "g": "predicate"
+            },
+            {
+              "t": "りながら",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "わざとそう",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "名",
+              "r": "めい",
+              "g": "object"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "憂",
+              "r": "ゆう",
+              "g": "object"
+            },
+            {
+              "t": "鬱",
+              "r": "うつ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "和",
+              "r": "やわ",
+              "g": "predicate"
+            },
+            {
+              "t": "らげようとしたのだろう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

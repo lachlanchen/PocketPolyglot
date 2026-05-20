@@ -1,0 +1,386 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02126",
+  "source_text": "“是吗？”太吉郎毫不犹豫地叫了一声，“千重子！”",
+  "source_sha256": "2af9d8f4b267f45c2a820ccd5dd9e7b45849839ba1fa32dc102238a88ae8d935",
+  "source_normalized_sha256": "2af9d8f4b267f45c2a820ccd5dd9e7b45849839ba1fa32dc102238a88ae8d935",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 45,
+    "grammar_token_total": 45,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-2126",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "object"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "object"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "冬天的花",
+    "title_zh": [
+      {
+        "t": "冬",
+        "r": "dōng",
+        "g": "attributive"
+      },
+      {
+        "t": "天",
+        "r": "tiān",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "attributive"
+      },
+      {
+        "t": "花",
+        "r": "huā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "冬",
+        "r": "ふゆ",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "花",
+        "r": "はな",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-冬天的花-intro",
+    "title_zh": [
+      {
+        "t": "冬",
+        "r": "dōng",
+        "g": "attributive"
+      },
+      {
+        "t": "天",
+        "r": "tiān",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "attributive"
+      },
+      {
+        "t": "花",
+        "r": "huā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "冬",
+        "r": "ふゆ",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "花",
+        "r": "はな",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02126",
+    "source_text": "“是吗？”太吉郎毫不犹豫地叫了一声，“千重子！”",
+    "units": [
+      {
+        "source_text": "“是吗？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "そう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "なのか",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "太吉郎毫不犹豫地叫了一声，“千重子！”",
+        "zh": [
+          {
+            "t": "太",
+            "r": "tài",
+            "g": "subject"
+          },
+          {
+            "t": "吉",
+            "r": "jí",
+            "g": "subject"
+          },
+          {
+            "t": "郎",
+            "r": "láng",
+            "g": "subject"
+          },
+          {
+            "t": "毫",
+            "r": "háo",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "犹",
+            "r": "yóu",
+            "g": "adverbial"
+          },
+          {
+            "t": "豫",
+            "r": "yù",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "叫",
+            "r": "jiào",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "complement"
+          },
+          {
+            "t": "声",
+            "r": "shēng",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "千",
+            "r": "qiān",
+            "g": "object"
+          },
+          {
+            "t": "重",
+            "r": "chóng",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "object"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "太",
+              "r": "た",
+              "g": "subject"
+            },
+            {
+              "t": "吉",
+              "r": "きち",
+              "g": "subject"
+            },
+            {
+              "t": "郎",
+              "r": "ろう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "ためらわずに",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "complement"
+            },
+            {
+              "t": "声",
+              "r": "こえ",
+              "g": "complement"
+            },
+            {
+              "t": "叫",
+              "r": "さけ",
+              "g": "predicate"
+            },
+            {
+              "t": "んだ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "千",
+              "r": "ち",
+              "g": "object"
+            },
+            {
+              "t": "重",
+              "r": "え",
+              "g": "object"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "！",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

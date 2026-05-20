@@ -1,0 +1,562 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02143",
+  "source_text": "“好吧。”父亲点点头，“路上当心……还有，你可以把爸爸刚才的话转告苗子那孩子。”",
+  "source_sha256": "0fa2c40960909ec96c6fee771710a2ed026844e20cc93e23b56d29af3ba2293a",
+  "source_normalized_sha256": "0fa2c40960909ec96c6fee771710a2ed026844e20cc93e23b56d29af3ba2293a",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 78,
+    "grammar_token_total": 78,
+    "unit_count": 3
+  },
+  "source_chunk_id": "the-old-capital-chunk-2143",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "冬天的花",
+    "title_zh": [
+      {
+        "t": "冬",
+        "r": "dōng",
+        "g": "attributive"
+      },
+      {
+        "t": "天",
+        "r": "tiān",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "function"
+      },
+      {
+        "t": "花",
+        "r": "huā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "冬",
+        "r": "ふゆ",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "花",
+        "r": "はな",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-冬天的花-intro",
+    "title_zh": [
+      {
+        "t": "冬",
+        "r": "dōng",
+        "g": "attributive"
+      },
+      {
+        "t": "天",
+        "r": "tiān",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "function"
+      },
+      {
+        "t": "花",
+        "r": "huā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "冬",
+        "r": "ふゆ",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "花",
+        "r": "はな",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02143",
+    "source_text": "“好吧。”父亲点点头，“路上当心……还有，你可以把爸爸刚才的话转告苗子那孩子。”",
+    "units": [
+      {
+        "source_text": "“好吧。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "よい",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "とも",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "父亲点点头，“路上当心……",
+        "zh": [
+          {
+            "t": "父",
+            "r": "fù",
+            "g": "subject"
+          },
+          {
+            "t": "亲",
+            "r": "qīn",
+            "g": "subject"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "头",
+            "r": "tóu",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "路",
+            "r": "lù",
+            "g": "adverbial"
+          },
+          {
+            "t": "上",
+            "r": "shang",
+            "g": "adverbial"
+          },
+          {
+            "t": "当",
+            "r": "dāng",
+            "g": "predicate"
+          },
+          {
+            "t": "心",
+            "r": "xīn",
+            "g": "predicate"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "父",
+              "r": "ちち",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "うなずき",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "道",
+              "r": "みち",
+              "g": "adverbial"
+            },
+            {
+              "t": "中",
+              "r": "なか",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "気",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "をつけて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "……",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "还有，你可以把爸爸刚才的话转告苗子那孩子。”",
+        "zh": [
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "adverbial"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "爸",
+            "r": "bà",
+            "g": "attributive"
+          },
+          {
+            "t": "爸",
+            "r": "ba",
+            "g": "attributive"
+          },
+          {
+            "t": "刚",
+            "r": "gāng",
+            "g": "attributive"
+          },
+          {
+            "t": "才",
+            "r": "cái",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "话",
+            "r": "huà",
+            "g": "object"
+          },
+          {
+            "t": "转",
+            "r": "zhuǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "告",
+            "r": "gào",
+            "g": "predicate"
+          },
+          {
+            "t": "苗",
+            "r": "miáo",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "attributive"
+          },
+          {
+            "t": "孩",
+            "r": "hái",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "それから",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "おまえ",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "父",
+              "r": "とう",
+              "g": "attributive"
+            },
+            {
+              "t": "さん",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "今",
+              "r": "いま",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "言",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "葉",
+              "r": "ば",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "苗",
+              "r": "なえ",
+              "g": "object"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "あの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "伝",
+              "r": "つた",
+              "g": "predicate"
+            },
+            {
+              "t": "えてよい",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

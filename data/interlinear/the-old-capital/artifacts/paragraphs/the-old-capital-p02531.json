@@ -1,0 +1,175 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02531",
+  "source_text": "“请稍候片刻……”",
+  "source_sha256": "24e5f9938d532963ef274b6282f67fcda23013b08a0b1845098b687463be6bcc",
+  "source_normalized_sha256": "24e5f9938d532963ef274b6282f67fcda23013b08a0b1845098b687463be6bcc",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 15,
+    "grammar_token_total": 15,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-2531",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "七",
+    "title_zh": [
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "七",
+        "r": "しち",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-七-intro",
+    "title_zh": [
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "七",
+        "r": "しち",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02531",
+    "source_text": "“请稍候片刻……”",
+    "units": [
+      {
+        "source_text": "“请稍候片刻……”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "请",
+            "r": "qǐng",
+            "g": "function"
+          },
+          {
+            "t": "稍",
+            "r": "shāo",
+            "g": "adverbial"
+          },
+          {
+            "t": "候",
+            "r": "hòu",
+            "g": "predicate"
+          },
+          {
+            "t": "片",
+            "r": "piàn",
+            "g": "complement"
+          },
+          {
+            "t": "刻",
+            "r": "kè",
+            "g": "complement"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "少",
+              "r": "しょう",
+              "g": "adverbial"
+            },
+            {
+              "t": "々",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "お",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "待",
+              "r": "ま",
+              "g": "predicate"
+            },
+            {
+              "t": "ちください",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "……",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

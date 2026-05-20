@@ -1,0 +1,402 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02149",
+  "source_text": "小浜坐落在小浜湾的岸边上，从若狭湾向前伸向日本海。",
+  "source_sha256": "2dbe711ee760ac7dddcb85fb4e22449e199552db24e30dab98d3dcedd4570104",
+  "source_normalized_sha256": "2dbe711ee760ac7dddcb85fb4e22449e199552db24e30dab98d3dcedd4570104",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 54,
+    "grammar_token_total": 54,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-2149",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "都",
+        "r": "dū"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "都",
+        "r": "と"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "冬天的花",
+    "title_zh": [
+      {
+        "t": "冬",
+        "r": "dōng"
+      },
+      {
+        "t": "天",
+        "r": "tiān"
+      },
+      {
+        "t": "的",
+        "r": "de"
+      },
+      {
+        "t": "花",
+        "r": "huā"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "冬",
+        "r": "ふゆ"
+      },
+      {
+        "t": "の",
+        "r": ""
+      },
+      {
+        "t": "花",
+        "r": "はな"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-冬天的花-intro",
+    "title_zh": [
+      {
+        "t": "冬",
+        "r": "dōng"
+      },
+      {
+        "t": "天",
+        "r": "tiān"
+      },
+      {
+        "t": "的",
+        "r": "de"
+      },
+      {
+        "t": "花",
+        "r": "huā"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "冬",
+        "r": "ふゆ"
+      },
+      {
+        "t": "の",
+        "r": ""
+      },
+      {
+        "t": "花",
+        "r": "はな"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02149",
+    "source_text": "小浜坐落在小浜湾的岸边上，从若狭湾向前伸向日本海。",
+    "units": [
+      {
+        "source_text": "小浜坐落在小浜湾的岸边上，从若狭湾向前伸向日本海。",
+        "zh": [
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "subject"
+          },
+          {
+            "t": "浜",
+            "r": "bāng",
+            "g": "subject"
+          },
+          {
+            "t": "坐",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "落",
+            "r": "luò",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "object"
+          },
+          {
+            "t": "浜",
+            "r": "bāng",
+            "g": "object"
+          },
+          {
+            "t": "湾",
+            "r": "wān",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "岸",
+            "r": "àn",
+            "g": "object"
+          },
+          {
+            "t": "边",
+            "r": "biān",
+            "g": "object"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "从",
+            "r": "cóng",
+            "g": "adverbial"
+          },
+          {
+            "t": "若",
+            "r": "ruò",
+            "g": "adverbial"
+          },
+          {
+            "t": "狭",
+            "r": "xiá",
+            "g": "adverbial"
+          },
+          {
+            "t": "湾",
+            "r": "wān",
+            "g": "adverbial"
+          },
+          {
+            "t": "向",
+            "r": "xiàng",
+            "g": "predicate"
+          },
+          {
+            "t": "前",
+            "r": "qián",
+            "g": "complement"
+          },
+          {
+            "t": "伸",
+            "r": "shēn",
+            "g": "predicate"
+          },
+          {
+            "t": "向",
+            "r": "xiàng",
+            "g": "predicate"
+          },
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "object"
+          },
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "object"
+          },
+          {
+            "t": "海",
+            "r": "hǎi",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "小",
+              "r": "お",
+              "g": "subject"
+            },
+            {
+              "t": "浜",
+              "r": "ばま",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "小",
+              "r": "お",
+              "g": "object"
+            },
+            {
+              "t": "浜",
+              "r": "ばま",
+              "g": "object"
+            },
+            {
+              "t": "湾",
+              "r": "わん",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "岸",
+              "r": "きし",
+              "g": "object"
+            },
+            {
+              "t": "辺",
+              "r": "べ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "位",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "置",
+              "r": "ち",
+              "g": "predicate"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "若",
+              "r": "わか",
+              "g": "adverbial"
+            },
+            {
+              "t": "狭",
+              "r": "さ",
+              "g": "adverbial"
+            },
+            {
+              "t": "湾",
+              "r": "わん",
+              "g": "adverbial"
+            },
+            {
+              "t": "から",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "前",
+              "r": "まえ",
+              "g": "complement"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "日",
+              "r": "に",
+              "g": "object"
+            },
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "object"
+            },
+            {
+              "t": "海",
+              "r": "かい",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "突",
+              "r": "つ",
+              "g": "predicate"
+            },
+            {
+              "t": "き",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "出",
+              "r": "で",
+              "g": "predicate"
+            },
+            {
+              "t": "ている",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

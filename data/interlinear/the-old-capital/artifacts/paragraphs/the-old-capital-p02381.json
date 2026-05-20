@@ -1,0 +1,349 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02381",
+  "source_text": "“多么轻飘啊。不成雪的雪。真好，是小小的雪。”",
+  "source_sha256": "657ffe4d6d6a0fcebbc6a74f753ea0f2e36fc50511f5ddc953ca998d26373c09",
+  "source_normalized_sha256": "657ffe4d6d6a0fcebbc6a74f753ea0f2e36fc50511f5ddc953ca998d26373c09",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 39,
+    "grammar_token_total": 39,
+    "unit_count": 3
+  },
+  "source_chunk_id": "the-old-capital-chunk-2381",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "都",
+        "r": "dū"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "都",
+        "r": "と"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "冬天的花",
+    "title_zh": [
+      {
+        "t": "冬",
+        "r": "dōng"
+      },
+      {
+        "t": "天",
+        "r": "tiān"
+      },
+      {
+        "t": "的",
+        "r": "de"
+      },
+      {
+        "t": "花",
+        "r": "huā"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "冬",
+        "r": "ふゆ"
+      },
+      {
+        "t": "の",
+        "r": ""
+      },
+      {
+        "t": "花",
+        "r": "はな"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-冬天的花-intro",
+    "title_zh": [
+      {
+        "t": "冬",
+        "r": "dōng"
+      },
+      {
+        "t": "天",
+        "r": "tiān"
+      },
+      {
+        "t": "的",
+        "r": "de"
+      },
+      {
+        "t": "花",
+        "r": "huā"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "冬",
+        "r": "ふゆ"
+      },
+      {
+        "t": "の",
+        "r": ""
+      },
+      {
+        "t": "花",
+        "r": "はな"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02381",
+    "source_text": "“多么轻飘啊。不成雪的雪。真好，是小小的雪。”",
+    "units": [
+      {
+        "source_text": "“多么轻飘啊。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "多",
+            "r": "duō",
+            "g": "adverbial"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "adverbial"
+          },
+          {
+            "t": "轻",
+            "r": "qīng",
+            "g": "predicate"
+          },
+          {
+            "t": "飘",
+            "r": "piāo",
+            "g": "predicate"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「なんて",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "軽",
+              "r": "かる",
+              "g": "predicate"
+            },
+            {
+              "t": "やかに",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "漂",
+              "r": "ただよ",
+              "g": "predicate"
+            },
+            {
+              "t": "うのだろう。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "不成雪的雪。",
+        "zh": [
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "predicate"
+          },
+          {
+            "t": "成",
+            "r": "chéng",
+            "g": "predicate"
+          },
+          {
+            "t": "雪",
+            "r": "xuě",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "雪",
+            "r": "xuě",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "雪",
+              "r": "ゆき",
+              "g": "object"
+            },
+            {
+              "t": "にならない",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "雪",
+              "r": "ゆき",
+              "g": "subject"
+            },
+            {
+              "t": "だ。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "真好，是小小的雪。”",
+        "zh": [
+          {
+            "t": "真",
+            "r": "zhēn",
+            "g": "adverbial"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "雪",
+            "r": "xuě",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ほんとうにいい、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "小",
+              "r": "ちい",
+              "g": "attributive"
+            },
+            {
+              "t": "さな",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "小",
+              "r": "ちい",
+              "g": "attributive"
+            },
+            {
+              "t": "さな",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "雪",
+              "r": "ゆき",
+              "g": "object"
+            },
+            {
+              "t": "だ。」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02413",
+  "source_text": "------------------------------------------------------------------------",
+  "source_sha256": "5be59d365acb8d35446f682c6d314fffd5db5846ab8c6eb021e6bacd98a82aa0",
+  "source_normalized_sha256": "5be59d365acb8d35446f682c6d314fffd5db5846ab8c6eb021e6bacd98a82aa0",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 12,
+    "grammar_token_total": 12,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-2413",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "一",
+    "title_zh": [
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "function"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-一-intro",
+    "title_zh": [
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02413",
+    "source_text": "------------------------------------------------------------------------",
+    "units": [
+      {
+        "source_text": "------------------------------------------------------------------------",
+        "zh": [
+          {
+            "t": "------------------------------------------------------------------------",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "attributive"
+            },
+            {
+              "t": "文",
+              "r": "ぶん",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "区",
+              "r": "く",
+              "g": "object"
+            },
+            {
+              "t": "切",
+              "r": "ぎ",
+              "g": "object"
+            },
+            {
+              "t": "りを",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "示",
+              "r": "しめ",
+              "g": "predicate"
+            },
+            {
+              "t": "す",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "横",
+              "r": "よこ",
+              "g": "object"
+            },
+            {
+              "t": "線",
+              "r": "せん",
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

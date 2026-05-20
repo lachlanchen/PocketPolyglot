@@ -1,0 +1,546 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02426",
+  "source_text": "下完这盘棋，正好快到三点，旅馆女佣端上了点心。人们依然沉默不语，视线都落在棋盘上。",
+  "source_sha256": "9b00a17be50bde377ef1f8a09bb48fb1c9b36bc26e781e70f723b39b6422fc3a",
+  "source_normalized_sha256": "9b00a17be50bde377ef1f8a09bb48fb1c9b36bc26e781e70f723b39b6422fc3a",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 87,
+    "grammar_token_total": 87,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-2426",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "二",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "function"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-二-intro",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02426",
+    "source_text": "下完这盘棋，正好快到三点，旅馆女佣端上了点心。人们依然沉默不语，视线都落在棋盘上。",
+    "units": [
+      {
+        "source_text": "下完这盘棋，正好快到三点，旅馆女佣端上了点心。",
+        "zh": [
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "predicate"
+          },
+          {
+            "t": "完",
+            "r": "wán",
+            "g": "complement"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "object"
+          },
+          {
+            "t": "盘",
+            "r": "pán",
+            "g": "object"
+          },
+          {
+            "t": "棋",
+            "r": "qí",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "正",
+            "r": "zhèng",
+            "g": "adverbial"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "快",
+            "r": "kuài",
+            "g": "adverbial"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "三",
+            "r": "sān",
+            "g": "object"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "旅",
+            "r": "lǚ",
+            "g": "subject"
+          },
+          {
+            "t": "馆",
+            "r": "guǎn",
+            "g": "subject"
+          },
+          {
+            "t": "女",
+            "r": "nǚ",
+            "g": "subject"
+          },
+          {
+            "t": "佣",
+            "r": "yōng",
+            "g": "subject"
+          },
+          {
+            "t": "端",
+            "r": "duān",
+            "g": "predicate"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "object"
+          },
+          {
+            "t": "心",
+            "r": "xīn",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "一",
+              "r": "いっ",
+              "g": "object"
+            },
+            {
+              "t": "局",
+              "r": "きょく",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "打",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "ち",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "終",
+              "r": "お",
+              "g": "complement"
+            },
+            {
+              "t": "えると、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ちょうど",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "三",
+              "r": "さん",
+              "g": "object"
+            },
+            {
+              "t": "時",
+              "r": "じ",
+              "g": "object"
+            },
+            {
+              "t": "近",
+              "r": "ちか",
+              "g": "adverbial"
+            },
+            {
+              "t": "くになり、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "旅",
+              "r": "りょ",
+              "g": "subject"
+            },
+            {
+              "t": "館",
+              "r": "かん",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "女",
+              "r": "じょ",
+              "g": "subject"
+            },
+            {
+              "t": "中",
+              "r": "ちゅう",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "菓",
+              "r": "か",
+              "g": "object"
+            },
+            {
+              "t": "子",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "運",
+              "r": "はこ",
+              "g": "predicate"
+            },
+            {
+              "t": "んできた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "人们依然沉默不语，视线都落在棋盘上。",
+        "zh": [
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          },
+          {
+            "t": "依",
+            "r": "yī",
+            "g": "adverbial"
+          },
+          {
+            "t": "然",
+            "r": "rán",
+            "g": "adverbial"
+          },
+          {
+            "t": "沉",
+            "r": "chén",
+            "g": "predicate"
+          },
+          {
+            "t": "默",
+            "r": "mò",
+            "g": "predicate"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "语",
+            "r": "yǔ",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "视",
+            "r": "shì",
+            "g": "subject"
+          },
+          {
+            "t": "线",
+            "r": "xiàn",
+            "g": "subject"
+          },
+          {
+            "t": "都",
+            "r": "dōu",
+            "g": "adverbial"
+          },
+          {
+            "t": "落",
+            "r": "luò",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "棋",
+            "r": "qí",
+            "g": "object"
+          },
+          {
+            "t": "盘",
+            "r": "pán",
+            "g": "object"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "subject"
+            },
+            {
+              "t": "々",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "なお",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "黙",
+              "r": "だま",
+              "g": "predicate"
+            },
+            {
+              "t": "ったまま",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "葉",
+              "r": "ば",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "発",
+              "r": "はっ",
+              "g": "predicate"
+            },
+            {
+              "t": "せず、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "視",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "線",
+              "r": "せん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "みな",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "碁",
+              "r": "ご",
+              "g": "object"
+            },
+            {
+              "t": "盤",
+              "r": "ばん",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "上",
+              "r": "うえ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "落",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "ちていた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

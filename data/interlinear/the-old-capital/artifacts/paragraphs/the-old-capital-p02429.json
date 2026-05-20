@@ -1,0 +1,185 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02429",
+  "source_text": "“先生，谢谢您了。”",
+  "source_sha256": "b428451e029d7f0c35edb70fb6f37201a861ca00239c75ad5705f197d5856b00",
+  "source_normalized_sha256": "b428451e029d7f0c35edb70fb6f37201a861ca00239c75ad5705f197d5856b00",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 17,
+    "grammar_token_total": 17,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-2429",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "二",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "attributive"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-二-intro",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02429",
+    "source_text": "“先生，谢谢您了。”",
+    "units": [
+      {
+        "source_text": "“先生，谢谢您了。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "subject"
+          },
+          {
+            "t": "生",
+            "r": "sheng",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "谢",
+            "r": "xiè",
+            "g": "predicate"
+          },
+          {
+            "t": "谢",
+            "r": "xie",
+            "g": "predicate"
+          },
+          {
+            "t": "您",
+            "r": "nín",
+            "g": "object"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "先",
+              "r": "せん",
+              "g": "subject"
+            },
+            {
+              "t": "生",
+              "r": "せい",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "ありがとうございました",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

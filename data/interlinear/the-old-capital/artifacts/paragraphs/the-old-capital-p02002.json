@@ -1,0 +1,908 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02002",
+  "source_text": "“哥哥，你瞧瞧那枫树树干上的紫花地丁。”真一用手指着说，“有两株吧。千重子小姐早在几年前就把那两株紫花地丁看作一对可爱的恋人……但它们俩却是咫尺天涯啊……”",
+  "source_sha256": "02865a8da8356eb19a332d728f2f4eb38045fc52b00743f583fd2d47040f07ca",
+  "source_normalized_sha256": "02865a8da8356eb19a332d728f2f4eb38045fc52b00743f583fd2d47040f07ca",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 139,
+    "grammar_token_total": 139,
+    "unit_count": 4
+  },
+  "source_chunk_id": "the-old-capital-chunk-2002",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "深秋的姐妹",
+    "title_zh": [
+      {
+        "t": "深",
+        "r": "shēn",
+        "g": "attributive"
+      },
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "attributive"
+      },
+      {
+        "t": "姐",
+        "r": "jiě",
+        "g": "topic"
+      },
+      {
+        "t": "妹",
+        "r": "mèi",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "晩",
+        "r": "ばん",
+        "g": "attributive"
+      },
+      {
+        "t": "秋",
+        "r": "しゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "姉",
+        "r": "し",
+        "g": "topic"
+      },
+      {
+        "t": "妹",
+        "r": "まい",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-深秋的姐妹-intro",
+    "title_zh": [
+      {
+        "t": "深",
+        "r": "shēn",
+        "g": "attributive"
+      },
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "attributive"
+      },
+      {
+        "t": "姐",
+        "r": "jiě",
+        "g": "topic"
+      },
+      {
+        "t": "妹",
+        "r": "mèi",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "晩",
+        "r": "ばん",
+        "g": "attributive"
+      },
+      {
+        "t": "秋",
+        "r": "しゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "姉",
+        "r": "し",
+        "g": "topic"
+      },
+      {
+        "t": "妹",
+        "r": "まい",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02002",
+    "source_text": "“哥哥，你瞧瞧那枫树树干上的紫花地丁。”真一用手指着说，“有两株吧。千重子小姐早在几年前就把那两株紫花地丁看作一对可爱的恋人……但它们俩却是咫尺天涯啊……”",
+    "units": [
+      {
+        "source_text": "“哥哥，你瞧瞧那枫树树干上的紫花地丁。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "哥",
+            "r": "gē",
+            "g": "subject"
+          },
+          {
+            "t": "哥",
+            "r": "ge",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "瞧",
+            "r": "qiáo",
+            "g": "predicate"
+          },
+          {
+            "t": "瞧",
+            "r": "qiao",
+            "g": "predicate"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "attributive"
+          },
+          {
+            "t": "枫",
+            "r": "fēng",
+            "g": "attributive"
+          },
+          {
+            "t": "树",
+            "r": "shù",
+            "g": "attributive"
+          },
+          {
+            "t": "树",
+            "r": "shù",
+            "g": "attributive"
+          },
+          {
+            "t": "干",
+            "r": "gàn",
+            "g": "attributive"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "紫",
+            "r": "zǐ",
+            "g": "object"
+          },
+          {
+            "t": "花",
+            "r": "huā",
+            "g": "object"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "object"
+          },
+          {
+            "t": "丁",
+            "r": "dīng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "兄",
+              "r": "にい",
+              "g": "subject"
+            },
+            {
+              "t": "さん、",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "て、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "あの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "楓",
+              "r": "かえで",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "幹",
+              "r": "みき",
+              "g": "attributive"
+            },
+            {
+              "t": "にある",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "紫",
+              "r": "すみれ",
+              "g": "object"
+            },
+            {
+              "t": "花",
+              "r": "ばな",
+              "g": "object"
+            },
+            {
+              "t": "地",
+              "r": "じ",
+              "g": "object"
+            },
+            {
+              "t": "丁",
+              "r": "ちょう",
+              "g": "object"
+            },
+            {
+              "t": "を。」",
+              "r": "",
+              "g": "object"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "真一用手指着说，“有两株吧。",
+        "zh": [
+          {
+            "t": "真",
+            "r": "zhēn",
+            "g": "subject"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "subject"
+          },
+          {
+            "t": "用",
+            "r": "yòng",
+            "g": "adverbial"
+          },
+          {
+            "t": "手",
+            "r": "shǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "指",
+            "r": "zhǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "两",
+            "r": "liǎng",
+            "g": "object"
+          },
+          {
+            "t": "株",
+            "r": "zhū",
+            "g": "object"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "真",
+              "r": "しん",
+              "g": "subject"
+            },
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "adverbial"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "指",
+              "r": "ゆび",
+              "g": "adverbial"
+            },
+            {
+              "t": "さしながら",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "二",
+              "r": "ふた",
+              "g": "object"
+            },
+            {
+              "t": "株",
+              "r": "かぶ",
+              "g": "object"
+            },
+            {
+              "t": "あるでしょう。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "千重子小姐早在几年前就把那两株紫花地丁看作一对可爱的恋人……",
+        "zh": [
+          {
+            "t": "千",
+            "r": "qiān",
+            "g": "subject"
+          },
+          {
+            "t": "重",
+            "r": "chóng",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "subject"
+          },
+          {
+            "t": "姐",
+            "r": "jiě",
+            "g": "subject"
+          },
+          {
+            "t": "早",
+            "r": "zǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "几",
+            "r": "jǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "adverbial"
+          },
+          {
+            "t": "前",
+            "r": "qián",
+            "g": "adverbial"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "object"
+          },
+          {
+            "t": "两",
+            "r": "liǎng",
+            "g": "object"
+          },
+          {
+            "t": "株",
+            "r": "zhū",
+            "g": "object"
+          },
+          {
+            "t": "紫",
+            "r": "zǐ",
+            "g": "object"
+          },
+          {
+            "t": "花",
+            "r": "huā",
+            "g": "object"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "object"
+          },
+          {
+            "t": "丁",
+            "r": "dīng",
+            "g": "object"
+          },
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "predicate"
+          },
+          {
+            "t": "作",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "complement"
+          },
+          {
+            "t": "对",
+            "r": "duì",
+            "g": "complement"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "attributive"
+          },
+          {
+            "t": "爱",
+            "r": "ài",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "恋",
+            "r": "liàn",
+            "g": "complement"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "complement"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "千",
+              "r": "ち",
+              "g": "subject"
+            },
+            {
+              "t": "重",
+              "r": "え",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "さんは、",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "何",
+              "r": "なん",
+              "g": "adverbial"
+            },
+            {
+              "t": "年",
+              "r": "ねん",
+              "g": "adverbial"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "前",
+              "r": "まえ",
+              "g": "adverbial"
+            },
+            {
+              "t": "から",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "もう、",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "あの",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "二",
+              "r": "ふた",
+              "g": "object"
+            },
+            {
+              "t": "株",
+              "r": "かぶ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "可",
+              "r": "か",
+              "g": "attributive"
+            },
+            {
+              "t": "愛",
+              "r": "わい",
+              "g": "attributive"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "恋",
+              "r": "こい",
+              "g": "complement"
+            },
+            {
+              "t": "人",
+              "r": "びと",
+              "g": "complement"
+            },
+            {
+              "t": "同",
+              "r": "どう",
+              "g": "complement"
+            },
+            {
+              "t": "士",
+              "r": "し",
+              "g": "complement"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "ていました……",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "但它们俩却是咫尺天涯啊……”",
+        "zh": [
+          {
+            "t": "但",
+            "r": "dàn",
+            "g": "function"
+          },
+          {
+            "t": "它",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          },
+          {
+            "t": "俩",
+            "r": "liǎ",
+            "g": "subject"
+          },
+          {
+            "t": "却",
+            "r": "què",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "咫",
+            "r": "zhǐ",
+            "g": "complement"
+          },
+          {
+            "t": "尺",
+            "r": "chǐ",
+            "g": "complement"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "complement"
+          },
+          {
+            "t": "涯",
+            "r": "yá",
+            "g": "complement"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "けれど",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "二",
+              "r": "ふた",
+              "g": "subject"
+            },
+            {
+              "t": "つは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "かえって",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "すぐ",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "近",
+              "r": "ちか",
+              "g": "complement"
+            },
+            {
+              "t": "くて",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "遠",
+              "r": "とお",
+              "g": "complement"
+            },
+            {
+              "t": "いのですね……」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

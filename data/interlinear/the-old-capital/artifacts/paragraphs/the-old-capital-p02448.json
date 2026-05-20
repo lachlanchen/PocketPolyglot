@@ -1,0 +1,476 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02448",
+  "source_text": "名人的对手大竹七段早已回家去了。他和没有孩子的名人不同，有一个热闹的家庭。",
+  "source_sha256": "cb7dc1e88218cd7d3fe60a733e820296b19f515165610f49f1b76116d072cf09",
+  "source_normalized_sha256": "cb7dc1e88218cd7d3fe60a733e820296b19f515165610f49f1b76116d072cf09",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 73,
+    "grammar_token_total": 73,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-2448",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "三",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-三-intro",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02448",
+    "source_text": "名人的对手大竹七段早已回家去了。他和没有孩子的名人不同，有一个热闹的家庭。",
+    "units": [
+      {
+        "source_text": "名人的对手大竹七段早已回家去了。",
+        "zh": [
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "attributive"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "对",
+            "r": "duì",
+            "g": "subject"
+          },
+          {
+            "t": "手",
+            "r": "shǒu",
+            "g": "subject"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "subject"
+          },
+          {
+            "t": "竹",
+            "r": "zhú",
+            "g": "subject"
+          },
+          {
+            "t": "七",
+            "r": "qī",
+            "g": "subject"
+          },
+          {
+            "t": "段",
+            "r": "duàn",
+            "g": "subject"
+          },
+          {
+            "t": "早",
+            "r": "zǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "已",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "回",
+            "r": "huí",
+            "g": "predicate"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "complement"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "名",
+              "r": "めい",
+              "g": "attributive"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "相",
+              "r": "あい",
+              "g": "subject"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "subject"
+            },
+            {
+              "t": "竹",
+              "r": "たけ",
+              "g": "subject"
+            },
+            {
+              "t": "七",
+              "r": "しち",
+              "g": "subject"
+            },
+            {
+              "t": "段",
+              "r": "だん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "すでに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "家",
+              "r": "いえ",
+              "g": "complement"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "帰",
+              "r": "かえ",
+              "g": "predicate"
+            },
+            {
+              "t": "っていた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "他和没有孩子的名人不同，有一个热闹的家庭。",
+        "zh": [
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "adverbial"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "attributive"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "attributive"
+          },
+          {
+            "t": "孩",
+            "r": "hái",
+            "g": "attributive"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "adverbial"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "predicate"
+          },
+          {
+            "t": "同",
+            "r": "tóng",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "attributive"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "attributive"
+          },
+          {
+            "t": "热",
+            "r": "rè",
+            "g": "attributive"
+          },
+          {
+            "t": "闹",
+            "r": "nào",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "object"
+          },
+          {
+            "t": "庭",
+            "r": "tíng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "attributive"
+            },
+            {
+              "t": "どものいない",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "名",
+              "r": "めい",
+              "g": "adverbial"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "adverbial"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "違",
+              "r": "ちが",
+              "g": "predicate"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "attributive"
+            },
+            {
+              "t": "つのにぎやかな",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "家",
+              "r": "か",
+              "g": "object"
+            },
+            {
+              "t": "庭",
+              "r": "てい",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "持",
+              "r": "も",
+              "g": "predicate"
+            },
+            {
+              "t": "っていた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

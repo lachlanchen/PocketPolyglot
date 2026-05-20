@@ -1,0 +1,366 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02527",
+  "source_text": "“先生，您要是觉着累了，请在那儿休息……”小野田六段对名人说。",
+  "source_sha256": "f8342ad3463452c3c80ffd2ba6707f2d2ac223a58455187bea25b81615aea404",
+  "source_normalized_sha256": "f8342ad3463452c3c80ffd2ba6707f2d2ac223a58455187bea25b81615aea404",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 51,
+    "grammar_token_total": 51,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-2527",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "subject"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "subject"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "subject"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "七",
+    "title_zh": [
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "七",
+        "r": "しち",
+        "g": "subject"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-七-intro",
+    "title_zh": [
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "七",
+        "r": "しち",
+        "g": "subject"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02527",
+    "source_text": "“先生，您要是觉着累了，请在那儿休息……”小野田六段对名人说。",
+    "units": [
+      {
+        "source_text": "“先生，您要是觉着累了，请在那儿休息……”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "object"
+          },
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "您",
+            "r": "nín",
+            "g": "subject"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "觉",
+            "r": "jué",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "predicate"
+          },
+          {
+            "t": "累",
+            "r": "lèi",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "请",
+            "r": "qǐng",
+            "g": "adverbial"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "那",
+            "r": "nàr",
+            "g": "adverbial"
+          },
+          {
+            "t": "儿",
+            "r": "ér",
+            "g": "adverbial"
+          },
+          {
+            "t": "休",
+            "r": "xiū",
+            "g": "predicate"
+          },
+          {
+            "t": "息",
+            "r": "xi",
+            "g": "predicate"
+          },
+          {
+            "t": "……”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "先",
+              "r": "せん",
+              "g": "object"
+            },
+            {
+              "t": "生",
+              "r": "せい",
+              "g": "object"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "お",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "疲",
+              "r": "つか",
+              "g": "predicate"
+            },
+            {
+              "t": "れでしたら、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "どうぞあちらで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "お",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "休",
+              "r": "やす",
+              "g": "predicate"
+            },
+            {
+              "t": "みください……」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "小野田六段对名人说。",
+        "zh": [
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "subject"
+          },
+          {
+            "t": "野",
+            "r": "yě",
+            "g": "subject"
+          },
+          {
+            "t": "田",
+            "r": "tián",
+            "g": "subject"
+          },
+          {
+            "t": "六",
+            "r": "liù",
+            "g": "attributive"
+          },
+          {
+            "t": "段",
+            "r": "duàn",
+            "g": "attributive"
+          },
+          {
+            "t": "对",
+            "r": "duì",
+            "g": "adverbial"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "object"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "object"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "小",
+              "r": "お",
+              "g": "subject"
+            },
+            {
+              "t": "野",
+              "r": "の",
+              "g": "subject"
+            },
+            {
+              "t": "田",
+              "r": "だ",
+              "g": "subject"
+            },
+            {
+              "t": "六",
+              "r": "ろく",
+              "g": "attributive"
+            },
+            {
+              "t": "段",
+              "r": "だん",
+              "g": "attributive"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "名",
+              "r": "めい",
+              "g": "object"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "object"
+            },
+            {
+              "t": "にそう",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

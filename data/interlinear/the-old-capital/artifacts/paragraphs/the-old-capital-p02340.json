@@ -1,0 +1,678 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02340",
+  "source_text": "“感谢你的厚意。但这种事还得根据他们两个年轻人感情的发展来定。”太吉郎避开水木的强烈要求，“千重子是个弃儿啊！”",
+  "source_sha256": "88fc117d198e86f8e0888e85c334628e8788921fb0238de92d601d7487607ced",
+  "source_normalized_sha256": "88fc117d198e86f8e0888e85c334628e8788921fb0238de92d601d7487607ced",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 99,
+    "grammar_token_total": 99,
+    "unit_count": 4
+  },
+  "source_chunk_id": "the-old-capital-chunk-2340",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "冬天的花",
+    "title_zh": [
+      {
+        "t": "冬",
+        "r": "dōng",
+        "g": "attributive"
+      },
+      {
+        "t": "天",
+        "r": "tiān",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "function"
+      },
+      {
+        "t": "花",
+        "r": "huā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "冬",
+        "r": "ふゆ",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "花",
+        "r": "はな",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-冬天的花-intro",
+    "title_zh": [
+      {
+        "t": "冬",
+        "r": "dōng",
+        "g": "attributive"
+      },
+      {
+        "t": "天",
+        "r": "tiān",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "function"
+      },
+      {
+        "t": "花",
+        "r": "huā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "冬",
+        "r": "ふゆ",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "花",
+        "r": "はな",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02340",
+    "source_text": "“感谢你的厚意。但这种事还得根据他们两个年轻人感情的发展来定。”太吉郎避开水木的强烈要求，“千重子是个弃儿啊！”",
+    "units": [
+      {
+        "source_text": "“感谢你的厚意。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "感",
+            "r": "gǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "谢",
+            "r": "xiè",
+            "g": "predicate"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "厚",
+            "r": "hòu",
+            "g": "object"
+          },
+          {
+            "t": "意",
+            "r": "yì",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「ご",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "厚",
+              "r": "こう",
+              "g": "object"
+            },
+            {
+              "t": "意",
+              "r": "い",
+              "g": "object"
+            },
+            {
+              "t": "には",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "感",
+              "r": "かん",
+              "g": "predicate"
+            },
+            {
+              "t": "謝",
+              "r": "しゃ",
+              "g": "predicate"
+            },
+            {
+              "t": "します。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "但这种事还得根据他们两个年轻人感情的发展来定。”",
+        "zh": [
+          {
+            "t": "但",
+            "r": "dàn",
+            "g": "function"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "种",
+            "r": "zhǒng",
+            "g": "subject"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "subject"
+          },
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "adverbial"
+          },
+          {
+            "t": "得",
+            "r": "děi",
+            "g": "predicate"
+          },
+          {
+            "t": "根",
+            "r": "gēn",
+            "g": "adverbial"
+          },
+          {
+            "t": "据",
+            "r": "jù",
+            "g": "adverbial"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "attributive"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "attributive"
+          },
+          {
+            "t": "两",
+            "r": "liǎng",
+            "g": "attributive"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "function"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "attributive"
+          },
+          {
+            "t": "轻",
+            "r": "qīng",
+            "g": "attributive"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "attributive"
+          },
+          {
+            "t": "感",
+            "r": "gǎn",
+            "g": "object"
+          },
+          {
+            "t": "情",
+            "r": "qíng",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "发",
+            "r": "fā",
+            "g": "object"
+          },
+          {
+            "t": "展",
+            "r": "zhǎn",
+            "g": "object"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "function"
+          },
+          {
+            "t": "定",
+            "r": "dìng",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "けれど、このことはまだ、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "二",
+              "r": "ふた",
+              "g": "attributive"
+            },
+            {
+              "t": "人",
+              "r": "り",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "若",
+              "r": "わか",
+              "g": "attributive"
+            },
+            {
+              "t": "者",
+              "r": "もの",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "気",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "持",
+              "r": "も",
+              "g": "object"
+            },
+            {
+              "t": "ちの",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "進",
+              "r": "すす",
+              "g": "object"
+            },
+            {
+              "t": "みぐあいで",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "決",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "めるべきです」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "太吉郎避开水木的强烈要求，",
+        "zh": [
+          {
+            "t": "太",
+            "r": "tài",
+            "g": "subject"
+          },
+          {
+            "t": "吉",
+            "r": "jí",
+            "g": "subject"
+          },
+          {
+            "t": "郎",
+            "r": "láng",
+            "g": "subject"
+          },
+          {
+            "t": "避",
+            "r": "bì",
+            "g": "predicate"
+          },
+          {
+            "t": "开",
+            "r": "kāi",
+            "g": "predicate"
+          },
+          {
+            "t": "水",
+            "r": "shuǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "木",
+            "r": "mù",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "强",
+            "r": "qiáng",
+            "g": "attributive"
+          },
+          {
+            "t": "烈",
+            "r": "liè",
+            "g": "attributive"
+          },
+          {
+            "t": "要",
+            "r": "yāo",
+            "g": "object"
+          },
+          {
+            "t": "求",
+            "r": "qiú",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "太",
+              "r": "た",
+              "g": "subject"
+            },
+            {
+              "t": "吉",
+              "r": "きち",
+              "g": "subject"
+            },
+            {
+              "t": "郎",
+              "r": "ろう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "水",
+              "r": "みず",
+              "g": "attributive"
+            },
+            {
+              "t": "木",
+              "r": "き",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "強",
+              "r": "つよ",
+              "g": "attributive"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "求",
+              "r": "もと",
+              "g": "object"
+            },
+            {
+              "t": "めを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "避",
+              "r": "さ",
+              "g": "predicate"
+            },
+            {
+              "t": "けて、",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "“千重子是个弃儿啊！”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "千",
+            "r": "qiān",
+            "g": "subject"
+          },
+          {
+            "t": "重",
+            "r": "chóng",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "function"
+          },
+          {
+            "t": "弃",
+            "r": "qì",
+            "g": "object"
+          },
+          {
+            "t": "儿",
+            "r": "ér",
+            "g": "object"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "千",
+              "r": "ち",
+              "g": "subject"
+            },
+            {
+              "t": "重",
+              "r": "え",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "捨",
+              "r": "す",
+              "g": "object"
+            },
+            {
+              "t": "て",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "子",
+              "r": "ご",
+              "g": "object"
+            },
+            {
+              "t": "なのですよ！」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

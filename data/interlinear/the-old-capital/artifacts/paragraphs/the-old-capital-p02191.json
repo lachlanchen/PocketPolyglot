@@ -1,0 +1,426 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02191",
+  "source_text": "“没关系。我这个人性格倔强，比谁都能干活，就是好哭。”",
+  "source_sha256": "77b98be90e2826e03eabbd5cf588e89f035fce9eb2ab6fe3b2008b5214a2f8aa",
+  "source_normalized_sha256": "77b98be90e2826e03eabbd5cf588e89f035fce9eb2ab6fe3b2008b5214a2f8aa",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 53,
+    "grammar_token_total": 53,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-2191",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "冬天的花",
+    "title_zh": [
+      {
+        "t": "冬",
+        "r": "dōng",
+        "g": "attributive"
+      },
+      {
+        "t": "天",
+        "r": "tiān",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "function"
+      },
+      {
+        "t": "花",
+        "r": "huā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "冬",
+        "r": "ふゆ",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "花",
+        "r": "はな",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-冬天的花-intro",
+    "title_zh": [
+      {
+        "t": "冬",
+        "r": "dōng",
+        "g": "attributive"
+      },
+      {
+        "t": "天",
+        "r": "tiān",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "function"
+      },
+      {
+        "t": "花",
+        "r": "huā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "冬",
+        "r": "ふゆ",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "花",
+        "r": "はな",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02191",
+    "source_text": "“没关系。我这个人性格倔强，比谁都能干活，就是好哭。”",
+    "units": [
+      {
+        "source_text": "“没关系。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "predicate"
+          },
+          {
+            "t": "关",
+            "r": "guān",
+            "g": "predicate"
+          },
+          {
+            "t": "系",
+            "r": "xi",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "大",
+              "r": "だい",
+              "g": "predicate"
+            },
+            {
+              "t": "丈",
+              "r": "じょう",
+              "g": "predicate"
+            },
+            {
+              "t": "夫",
+              "r": "ぶ",
+              "g": "predicate"
+            },
+            {
+              "t": "です",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "気",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "にしないでください",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我这个人性格倔强，比谁都能干活，就是好哭。”",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "attributive"
+          },
+          {
+            "t": "个",
+            "r": "ge",
+            "g": "attributive"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "attributive"
+          },
+          {
+            "t": "性",
+            "r": "xìng",
+            "g": "subject"
+          },
+          {
+            "t": "格",
+            "r": "gé",
+            "g": "subject"
+          },
+          {
+            "t": "倔",
+            "r": "jué",
+            "g": "predicate"
+          },
+          {
+            "t": "强",
+            "r": "jiàng",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "比",
+            "r": "bǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "谁",
+            "r": "shuí",
+            "g": "adverbial"
+          },
+          {
+            "t": "都",
+            "r": "dōu",
+            "g": "adverbial"
+          },
+          {
+            "t": "能",
+            "r": "néng",
+            "g": "predicate"
+          },
+          {
+            "t": "干",
+            "r": "gàn",
+            "g": "predicate"
+          },
+          {
+            "t": "活",
+            "r": "huó",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "好",
+            "r": "hào",
+            "g": "predicate"
+          },
+          {
+            "t": "哭",
+            "r": "kū",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "という",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "attributive"
+            },
+            {
+              "t": "間",
+              "r": "ま",
+              "g": "attributive"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "気",
+              "r": "き",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "強",
+              "r": "つよ",
+              "g": "predicate"
+            },
+            {
+              "t": "くて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "誰",
+              "r": "だれ",
+              "g": "adverbial"
+            },
+            {
+              "t": "よりも",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "働",
+              "r": "はたら",
+              "g": "predicate"
+            },
+            {
+              "t": "けるけれど、すぐ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "泣",
+              "r": "な",
+              "g": "predicate"
+            },
+            {
+              "t": "くのです",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

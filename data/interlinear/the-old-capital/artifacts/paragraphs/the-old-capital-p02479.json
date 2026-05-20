@@ -1,0 +1,273 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02479",
+  "source_text": "“没什么意思吧。”名人嘟哝了一句。",
+  "source_sha256": "2377f32e724d97ae6ad2d94a1637fbbbbb0132c15c33459c0a577198f307cbeb",
+  "source_normalized_sha256": "2377f32e724d97ae6ad2d94a1637fbbbbb0132c15c33459c0a577198f307cbeb",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 34,
+    "grammar_token_total": 34,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-2479",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng"
+      },
+      {
+        "t": "人",
+        "r": "rén"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい"
+      },
+      {
+        "t": "人",
+        "r": "じん"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "五",
+    "title_zh": [
+      {
+        "t": "五",
+        "r": "wǔ"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "五",
+        "r": "ご"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-五-intro",
+    "title_zh": [
+      {
+        "t": "五",
+        "r": "wǔ"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "五",
+        "r": "ご"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02479",
+    "source_text": "“没什么意思吧。”名人嘟哝了一句。",
+    "units": [
+      {
+        "source_text": "“没什么意思吧。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "predicate"
+          },
+          {
+            "t": "什",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "object"
+          },
+          {
+            "t": "意",
+            "r": "yì",
+            "g": "object"
+          },
+          {
+            "t": "思",
+            "r": "si",
+            "g": "object"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "別",
+              "r": "べつ",
+              "g": "predicate"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "どうという",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "意",
+              "r": "い",
+              "g": "object"
+            },
+            {
+              "t": "味",
+              "r": "み",
+              "g": "object"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "ないでしょう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "名人嘟哝了一句。",
+        "zh": [
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "嘟",
+            "r": "dū",
+            "g": "predicate"
+          },
+          {
+            "t": "哝",
+            "r": "nong",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "object"
+          },
+          {
+            "t": "句",
+            "r": "jù",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "名",
+              "r": "めい",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "そう",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "object"
+            },
+            {
+              "t": "言",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "つぶやいた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

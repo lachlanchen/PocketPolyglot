@@ -1,0 +1,322 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02465",
+  "source_text": "“哦，让了九子？了不起啊。”名人也说了一句。",
+  "source_sha256": "b792075a8917050fd002c1d09c7f091976b941b832b8e399c1c3aa2c86204a55",
+  "source_normalized_sha256": "b792075a8917050fd002c1d09c7f091976b941b832b8e399c1c3aa2c86204a55",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 40,
+    "grammar_token_total": 40,
+    "unit_count": 3
+  },
+  "source_chunk_id": "the-old-capital-chunk-2465",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "四",
+    "title_zh": [
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "attributive"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-四-intro",
+    "title_zh": [
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02465",
+    "source_text": "“哦，让了九子？了不起啊。”名人也说了一句。",
+    "units": [
+      {
+        "source_text": "“哦，让了九子？",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "哦",
+            "r": "ò",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "让",
+            "r": "ràng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "九",
+            "r": "jiǔ",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "object"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ほう、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "九",
+              "r": "きゅう",
+              "g": "object"
+            },
+            {
+              "t": "子",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "置",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "かせたのか？",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "了不起啊。”",
+        "zh": [
+          {
+            "t": "了",
+            "r": "liǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "predicate"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "大",
+              "r": "たい",
+              "g": "predicate"
+            },
+            {
+              "t": "した",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "もの",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "だな",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "。」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "名人也说了一句。",
+        "zh": [
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "object"
+          },
+          {
+            "t": "句",
+            "r": "jù",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "名",
+              "r": "めい",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "subject"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "ひとこと",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

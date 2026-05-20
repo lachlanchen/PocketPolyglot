@@ -1,0 +1,205 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02560",
+  "source_text": "休息片刻，庆祝宴会开始了。",
+  "source_sha256": "3c41ad1eda76bda8b028685364e99fb4f1c57cc9fed4ff55d8a0e22bbce59921",
+  "source_normalized_sha256": "3c41ad1eda76bda8b028685364e99fb4f1c57cc9fed4ff55d8a0e22bbce59921",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 21,
+    "grammar_token_total": 21,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-2560",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "九",
+    "title_zh": [
+      {
+        "t": "九",
+        "r": "jiǔ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "九",
+        "r": "きゅう",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-九-intro",
+    "title_zh": [
+      {
+        "t": "九",
+        "r": "jiǔ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "九",
+        "r": "きゅう",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02560",
+    "source_text": "休息片刻，庆祝宴会开始了。",
+    "units": [
+      {
+        "source_text": "休息片刻，庆祝宴会开始了。",
+        "zh": [
+          {
+            "t": "休",
+            "r": "xiū",
+            "g": "predicate"
+          },
+          {
+            "t": "息",
+            "r": "xi",
+            "g": "predicate"
+          },
+          {
+            "t": "片",
+            "r": "piàn",
+            "g": "complement"
+          },
+          {
+            "t": "刻",
+            "r": "kè",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "庆",
+            "r": "qìng",
+            "g": "attributive"
+          },
+          {
+            "t": "祝",
+            "r": "zhù",
+            "g": "attributive"
+          },
+          {
+            "t": "宴",
+            "r": "yàn",
+            "g": "subject"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "subject"
+          },
+          {
+            "t": "开",
+            "r": "kāi",
+            "g": "predicate"
+          },
+          {
+            "t": "始",
+            "r": "shǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "しばらく",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "休",
+              "r": "やす",
+              "g": "predicate"
+            },
+            {
+              "t": "んで、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "祝",
+              "r": "しゅく",
+              "g": "attributive"
+            },
+            {
+              "t": "宴",
+              "r": "えん",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "始",
+              "r": "はじ",
+              "g": "predicate"
+            },
+            {
+              "t": "まった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

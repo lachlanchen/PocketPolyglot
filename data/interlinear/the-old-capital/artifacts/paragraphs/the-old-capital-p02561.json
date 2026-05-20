@@ -1,0 +1,706 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02561",
+  "source_text": "列席这次开棋式的三位名人的年龄是：将棋名人木村三十四岁，名人关根十三世七十一岁，连珠棋名人高木五十一岁。都是虚岁。",
+  "source_sha256": "30b990510caff415638676dec46b70b82506f7be5479001f47808e0c1e2004db",
+  "source_normalized_sha256": "30b990510caff415638676dec46b70b82506f7be5479001f47808e0c1e2004db",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 119,
+    "grammar_token_total": 119,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-2561",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "九",
+    "title_zh": [
+      {
+        "t": "九",
+        "r": "jiǔ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "九",
+        "r": "きゅう",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-九-intro",
+    "title_zh": [
+      {
+        "t": "九",
+        "r": "jiǔ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "九",
+        "r": "きゅう",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02561",
+    "source_text": "列席这次开棋式的三位名人的年龄是：将棋名人木村三十四岁，名人关根十三世七十一岁，连珠棋名人高木五十一岁。都是虚岁。",
+    "units": [
+      {
+        "source_text": "列席这次开棋式的三位名人的年龄是：将棋名人木村三十四岁，名人关根十三世七十一岁，连珠棋名人高木五十一岁。",
+        "zh": [
+          {
+            "t": "列",
+            "r": "liè",
+            "g": "attributive"
+          },
+          {
+            "t": "席",
+            "r": "xí",
+            "g": "attributive"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "attributive"
+          },
+          {
+            "t": "次",
+            "r": "cì",
+            "g": "attributive"
+          },
+          {
+            "t": "开",
+            "r": "kāi",
+            "g": "attributive"
+          },
+          {
+            "t": "棋",
+            "r": "qí",
+            "g": "attributive"
+          },
+          {
+            "t": "式",
+            "r": "shì",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "三",
+            "r": "sān",
+            "g": "subject"
+          },
+          {
+            "t": "位",
+            "r": "wèi",
+            "g": "subject"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "subject"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "subject"
+          },
+          {
+            "t": "龄",
+            "r": "líng",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "将",
+            "r": "jiàng",
+            "g": "subject"
+          },
+          {
+            "t": "棋",
+            "r": "qí",
+            "g": "subject"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "木",
+            "r": "mù",
+            "g": "subject"
+          },
+          {
+            "t": "村",
+            "r": "cūn",
+            "g": "subject"
+          },
+          {
+            "t": "三",
+            "r": "sān",
+            "g": "complement"
+          },
+          {
+            "t": "十",
+            "r": "shí",
+            "g": "complement"
+          },
+          {
+            "t": "四",
+            "r": "sì",
+            "g": "complement"
+          },
+          {
+            "t": "岁",
+            "r": "suì",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "关",
+            "r": "guān",
+            "g": "subject"
+          },
+          {
+            "t": "根",
+            "r": "gēn",
+            "g": "subject"
+          },
+          {
+            "t": "十",
+            "r": "shí",
+            "g": "subject"
+          },
+          {
+            "t": "三",
+            "r": "sān",
+            "g": "subject"
+          },
+          {
+            "t": "世",
+            "r": "shì",
+            "g": "subject"
+          },
+          {
+            "t": "七",
+            "r": "qī",
+            "g": "complement"
+          },
+          {
+            "t": "十",
+            "r": "shí",
+            "g": "complement"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "complement"
+          },
+          {
+            "t": "岁",
+            "r": "suì",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "连",
+            "r": "lián",
+            "g": "subject"
+          },
+          {
+            "t": "珠",
+            "r": "zhū",
+            "g": "subject"
+          },
+          {
+            "t": "棋",
+            "r": "qí",
+            "g": "subject"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "高",
+            "r": "gāo",
+            "g": "subject"
+          },
+          {
+            "t": "木",
+            "r": "mù",
+            "g": "subject"
+          },
+          {
+            "t": "五",
+            "r": "wǔ",
+            "g": "complement"
+          },
+          {
+            "t": "十",
+            "r": "shí",
+            "g": "complement"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "complement"
+          },
+          {
+            "t": "岁",
+            "r": "suì",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "開",
+              "r": "かい",
+              "g": "attributive"
+            },
+            {
+              "t": "棋",
+              "r": "き",
+              "g": "attributive"
+            },
+            {
+              "t": "式",
+              "r": "しき",
+              "g": "attributive"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "列",
+              "r": "れっ",
+              "g": "attributive"
+            },
+            {
+              "t": "席",
+              "r": "せき",
+              "g": "attributive"
+            },
+            {
+              "t": "した",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "三",
+              "r": "さん",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "にん",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "名",
+              "r": "めい",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "年",
+              "r": "ねん",
+              "g": "subject"
+            },
+            {
+              "t": "齢",
+              "r": "れい",
+              "g": "subject"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "将",
+              "r": "しょう",
+              "g": "subject"
+            },
+            {
+              "t": "棋",
+              "r": "ぎ",
+              "g": "subject"
+            },
+            {
+              "t": "名",
+              "r": "めい",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "木",
+              "r": "き",
+              "g": "subject"
+            },
+            {
+              "t": "村",
+              "r": "むら",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "三",
+              "r": "さん",
+              "g": "complement"
+            },
+            {
+              "t": "十",
+              "r": "じゅう",
+              "g": "complement"
+            },
+            {
+              "t": "四",
+              "r": "よん",
+              "g": "complement"
+            },
+            {
+              "t": "歳",
+              "r": "さい",
+              "g": "complement"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "名",
+              "r": "めい",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "subject"
+            },
+            {
+              "t": "関",
+              "r": "せき",
+              "g": "subject"
+            },
+            {
+              "t": "根",
+              "r": "ね",
+              "g": "subject"
+            },
+            {
+              "t": "十",
+              "r": "じゅう",
+              "g": "subject"
+            },
+            {
+              "t": "三",
+              "r": "さん",
+              "g": "subject"
+            },
+            {
+              "t": "世",
+              "r": "せい",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "七",
+              "r": "なな",
+              "g": "complement"
+            },
+            {
+              "t": "十",
+              "r": "じゅう",
+              "g": "complement"
+            },
+            {
+              "t": "一",
+              "r": "いっ",
+              "g": "complement"
+            },
+            {
+              "t": "歳",
+              "r": "さい",
+              "g": "complement"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "連",
+              "r": "れん",
+              "g": "subject"
+            },
+            {
+              "t": "珠",
+              "r": "じゅ",
+              "g": "subject"
+            },
+            {
+              "t": "棋",
+              "r": "き",
+              "g": "subject"
+            },
+            {
+              "t": "名",
+              "r": "めい",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "高",
+              "r": "たか",
+              "g": "subject"
+            },
+            {
+              "t": "木",
+              "r": "ぎ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "五",
+              "r": "ご",
+              "g": "complement"
+            },
+            {
+              "t": "十",
+              "r": "じゅう",
+              "g": "complement"
+            },
+            {
+              "t": "一",
+              "r": "いっ",
+              "g": "complement"
+            },
+            {
+              "t": "歳",
+              "r": "さい",
+              "g": "complement"
+            },
+            {
+              "t": "であった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "都是虚岁。",
+        "zh": [
+          {
+            "t": "都",
+            "r": "dōu",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "虚",
+            "r": "xū",
+            "g": "complement"
+          },
+          {
+            "t": "岁",
+            "r": "suì",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "いずれも",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "数",
+              "r": "かぞ",
+              "g": "complement"
+            },
+            {
+              "t": "え",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "年",
+              "r": "どし",
+              "g": "complement"
+            },
+            {
+              "t": "であった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
