@@ -1,0 +1,245 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00743",
+  "source_text": "------------------------------------------------------------------------",
+  "source_sha256": "5be59d365acb8d35446f682c6d314fffd5db5846ab8c6eb021e6bacd98a82aa0",
+  "source_normalized_sha256": "5be59d365acb8d35446f682c6d314fffd5db5846ab8c6eb021e6bacd98a82aa0",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 21,
+    "grammar_token_total": 21,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-0743",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "和服街",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "fú",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "jiē",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "ふく",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "がい",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-和服街-intro",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "fú",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "jiē",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ",
+        "g": "attributive"
+      },
+      {
+        "t": "服",
+        "r": "ふく",
+        "g": "attributive"
+      },
+      {
+        "t": "街",
+        "r": "がい",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00743",
+    "source_text": "------------------------------------------------------------------------",
+    "units": [
+      {
+        "source_text": "------------------------------------------------------------------------",
+        "zh": [
+          {
+            "t": "------------------------------------------------------------------------",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "attributive"
+            },
+            {
+              "t": "文",
+              "r": "ぶん",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "区",
+              "r": "く",
+              "g": "attributive"
+            },
+            {
+              "t": "切",
+              "r": "ぎ",
+              "g": "object"
+            },
+            {
+              "t": "りを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "示",
+              "r": "しめ",
+              "g": "predicate"
+            },
+            {
+              "t": "す",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "横",
+              "r": "よこ",
+              "g": "attributive"
+            },
+            {
+              "t": "線",
+              "r": "せん",
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "物",
+              "r": "もの",
+              "g": "subject"
+            },
+            {
+              "t": "語",
+              "r": "がたり",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "内",
+              "r": "ない",
+              "g": "attributive"
+            },
+            {
+              "t": "容",
+              "r": "よう",
+              "g": "object"
+            },
+            {
+              "t": "はここには",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "置",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "かれていない",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

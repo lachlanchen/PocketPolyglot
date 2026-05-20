@@ -1,0 +1,214 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00738",
+  "source_text": "“人蛮稳重的。”",
+  "source_sha256": "e01ce605f27f838e19632777b5ee87d177fcefe2b3cd4ac89249494c5c77286d",
+  "source_normalized_sha256": "e01ce605f27f838e19632777b5ee87d177fcefe2b3cd4ac89249494c5c77286d",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 18,
+    "grammar_token_total": 18,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-0738",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "都",
+        "r": "dū"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "都",
+        "r": "と"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "和服街",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé"
+      },
+      {
+        "t": "服",
+        "r": "fú"
+      },
+      {
+        "t": "街",
+        "r": "jiē"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ"
+      },
+      {
+        "t": "服",
+        "r": "ふく"
+      },
+      {
+        "t": "街",
+        "r": "がい"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-和服街-intro",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé"
+      },
+      {
+        "t": "服",
+        "r": "fú"
+      },
+      {
+        "t": "街",
+        "r": "jiē"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ"
+      },
+      {
+        "t": "服",
+        "r": "ふく"
+      },
+      {
+        "t": "街",
+        "r": "がい"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00738",
+    "source_text": "“人蛮稳重的。”",
+    "units": [
+      {
+        "source_text": "“人蛮稳重的。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "蛮",
+            "r": "mán",
+            "g": "adverbial"
+          },
+          {
+            "t": "稳",
+            "r": "wěn",
+            "g": "predicate"
+          },
+          {
+            "t": "重",
+            "r": "zhòng",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "subject"
+            },
+            {
+              "t": "柄",
+              "r": "がら",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "かなり",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "落",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "ち",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "着",
+              "r": "つ",
+              "g": "predicate"
+            },
+            {
+              "t": "いている",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

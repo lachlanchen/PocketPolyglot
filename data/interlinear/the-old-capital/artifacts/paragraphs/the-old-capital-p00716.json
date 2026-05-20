@@ -1,0 +1,416 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00716",
+  "source_text": "“就坐这辆车子走吧。西阵不远。这工夫我们还要到加茂川边走走……”",
+  "source_sha256": "029105046f84f8923879f5643c433cacb878d74851f872c767da6c6eb7254959",
+  "source_normalized_sha256": "029105046f84f8923879f5643c433cacb878d74851f872c767da6c6eb7254959",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 54,
+    "grammar_token_total": 54,
+    "unit_count": 3
+  },
+  "source_chunk_id": "the-old-capital-chunk-0716",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "都",
+        "r": "dū"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "都",
+        "r": "と"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "和服街",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé"
+      },
+      {
+        "t": "服",
+        "r": "fú"
+      },
+      {
+        "t": "街",
+        "r": "jiē"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ"
+      },
+      {
+        "t": "服",
+        "r": "ふく"
+      },
+      {
+        "t": "街",
+        "r": "がい"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-和服街-intro",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé"
+      },
+      {
+        "t": "服",
+        "r": "fú"
+      },
+      {
+        "t": "街",
+        "r": "jiē"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ"
+      },
+      {
+        "t": "服",
+        "r": "ふく"
+      },
+      {
+        "t": "街",
+        "r": "がい"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00716",
+    "source_text": "“就坐这辆车子走吧。西阵不远。这工夫我们还要到加茂川边走走……”",
+    "units": [
+      {
+        "source_text": "“就坐这辆车子走吧。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "坐",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "attributive"
+          },
+          {
+            "t": "辆",
+            "r": "liàng",
+            "g": "attributive"
+          },
+          {
+            "t": "车",
+            "r": "chē",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "走",
+            "r": "zǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "車",
+              "r": "くるま",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "乗",
+              "r": "の",
+              "g": "predicate"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "行",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "きましょう。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "西阵不远。",
+        "zh": [
+          {
+            "t": "西",
+            "r": "xī",
+            "g": "subject"
+          },
+          {
+            "t": "阵",
+            "r": "zhèn",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "远",
+            "r": "yuǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "西",
+              "r": "にし",
+              "g": "subject"
+            },
+            {
+              "t": "陣",
+              "r": "じん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "遠",
+              "r": "とお",
+              "g": "predicate"
+            },
+            {
+              "t": "くありません。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "这工夫我们还要到加茂川边走走……”",
+        "zh": [
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "adverbial"
+          },
+          {
+            "t": "工",
+            "r": "gōng",
+            "g": "adverbial"
+          },
+          {
+            "t": "夫",
+            "r": "fu",
+            "g": "adverbial"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          },
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "adverbial"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "predicate"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "加",
+            "r": "jiā",
+            "g": "object"
+          },
+          {
+            "t": "茂",
+            "r": "mào",
+            "g": "object"
+          },
+          {
+            "t": "川",
+            "r": "chuān",
+            "g": "object"
+          },
+          {
+            "t": "边",
+            "r": "biān",
+            "g": "object"
+          },
+          {
+            "t": "走",
+            "r": "zǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "走",
+            "r": "zǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そのあいだに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "たちは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "また",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "加",
+              "r": "か",
+              "g": "object"
+            },
+            {
+              "t": "茂",
+              "r": "も",
+              "g": "object"
+            },
+            {
+              "t": "川",
+              "r": "がわ",
+              "g": "object"
+            },
+            {
+              "t": "のほとりを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "歩",
+              "r": "ある",
+              "g": "predicate"
+            },
+            {
+              "t": "きましょう……」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
