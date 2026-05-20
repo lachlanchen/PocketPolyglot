@@ -1,0 +1,748 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00679",
+  "source_text": "“花瓣也会四下飘落吧……”太吉郎说，“只是郁金香的花太多了，我有点厌烦。色彩过分鲜艳，反而会令人感到索然无味……也许是我上年纪啦。”",
+  "source_sha256": "e36720a766a191dd793590d38acb293592f944a98d464135297345e2df9ab03b",
+  "source_normalized_sha256": "e36720a766a191dd793590d38acb293592f944a98d464135297345e2df9ab03b",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 115,
+    "grammar_token_total": 115,
+    "unit_count": 4
+  },
+  "source_chunk_id": "the-old-capital-chunk-0679",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "和服街",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "topic"
+      },
+      {
+        "t": "服",
+        "r": "fú",
+        "g": "topic"
+      },
+      {
+        "t": "街",
+        "r": "jiē",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ",
+        "g": "topic"
+      },
+      {
+        "t": "服",
+        "r": "ふく",
+        "g": "topic"
+      },
+      {
+        "t": "街",
+        "r": "がい",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-和服街-intro",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "topic"
+      },
+      {
+        "t": "服",
+        "r": "fú",
+        "g": "topic"
+      },
+      {
+        "t": "街",
+        "r": "jiē",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ",
+        "g": "topic"
+      },
+      {
+        "t": "服",
+        "r": "ふく",
+        "g": "topic"
+      },
+      {
+        "t": "街",
+        "r": "がい",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00679",
+    "source_text": "“花瓣也会四下飘落吧……”太吉郎说，“只是郁金香的花太多了，我有点厌烦。色彩过分鲜艳，反而会令人感到索然无味……也许是我上年纪啦。”",
+    "units": [
+      {
+        "source_text": "“花瓣也会四下飘落吧……”太吉郎说，",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "花",
+            "r": "huā",
+            "g": "subject"
+          },
+          {
+            "t": "瓣",
+            "r": "bàn",
+            "g": "subject"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "predicate"
+          },
+          {
+            "t": "四",
+            "r": "sì",
+            "g": "adverbial"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "adverbial"
+          },
+          {
+            "t": "飘",
+            "r": "piāo",
+            "g": "predicate"
+          },
+          {
+            "t": "落",
+            "r": "luò",
+            "g": "predicate"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "……”",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "太",
+            "r": "tài",
+            "g": "subject"
+          },
+          {
+            "t": "吉",
+            "r": "jí",
+            "g": "subject"
+          },
+          {
+            "t": "郎",
+            "r": "láng",
+            "g": "subject"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "花",
+              "r": "はな",
+              "g": "subject"
+            },
+            {
+              "t": "びらも",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "あたりへ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "散",
+              "r": "ち",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "落",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "ちるだろうな",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "……」",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "と",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "太",
+              "r": "た",
+              "g": "subject"
+            },
+            {
+              "t": "吉",
+              "r": "きち",
+              "g": "subject"
+            },
+            {
+              "t": "郎",
+              "r": "ろう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "い、",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "“只是郁金香的花太多了，我有点厌烦。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "只",
+            "r": "zhǐ",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "郁",
+            "r": "yù",
+            "g": "subject"
+          },
+          {
+            "t": "金",
+            "r": "jīn",
+            "g": "subject"
+          },
+          {
+            "t": "香",
+            "r": "xiāng",
+            "g": "subject"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "subject"
+          },
+          {
+            "t": "花",
+            "r": "huā",
+            "g": "subject"
+          },
+          {
+            "t": "太",
+            "r": "tài",
+            "g": "adverbial"
+          },
+          {
+            "t": "多",
+            "r": "duō",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "厌",
+            "r": "yàn",
+            "g": "predicate"
+          },
+          {
+            "t": "烦",
+            "r": "fán",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ただ",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "チューリップの",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "花",
+              "r": "はな",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "あまりに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "多",
+              "r": "おお",
+              "g": "predicate"
+            },
+            {
+              "t": "くて、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "少",
+              "r": "すこ",
+              "g": "adverbial"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "うんざりしている",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "色彩过分鲜艳，反而会令人感到索然无味……",
+        "zh": [
+          {
+            "t": "色",
+            "r": "sè",
+            "g": "subject"
+          },
+          {
+            "t": "彩",
+            "r": "cǎi",
+            "g": "subject"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "adverbial"
+          },
+          {
+            "t": "分",
+            "r": "fèn",
+            "g": "adverbial"
+          },
+          {
+            "t": "鲜",
+            "r": "xiān",
+            "g": "predicate"
+          },
+          {
+            "t": "艳",
+            "r": "yàn",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "反",
+            "r": "fǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "而",
+            "r": "ér",
+            "g": "adverbial"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "predicate"
+          },
+          {
+            "t": "令",
+            "r": "lìng",
+            "g": "predicate"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "object"
+          },
+          {
+            "t": "感",
+            "r": "gǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "索",
+            "r": "suǒ",
+            "g": "complement"
+          },
+          {
+            "t": "然",
+            "r": "rán",
+            "g": "complement"
+          },
+          {
+            "t": "无",
+            "r": "wú",
+            "g": "complement"
+          },
+          {
+            "t": "味",
+            "r": "wèi",
+            "g": "complement"
+          },
+          {
+            "t": "……",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "色",
+              "r": "しき",
+              "g": "subject"
+            },
+            {
+              "t": "彩",
+              "r": "さい",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "あまりにも",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "鮮",
+              "r": "あざ",
+              "g": "predicate"
+            },
+            {
+              "t": "やかすぎると、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "かえって",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "味",
+              "r": "あじ",
+              "g": "complement"
+            },
+            {
+              "t": "気",
+              "r": "け",
+              "g": "complement"
+            },
+            {
+              "t": "なく",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "感",
+              "r": "かん",
+              "g": "predicate"
+            },
+            {
+              "t": "じられる",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "……",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "也许是我上年纪啦。”",
+        "zh": [
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "许",
+            "r": "xǔ",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "predicate"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "predicate"
+          },
+          {
+            "t": "纪",
+            "r": "jì",
+            "g": "predicate"
+          },
+          {
+            "t": "啦",
+            "r": "la",
+            "g": "function"
+          },
+          {
+            "t": "。”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "たぶん",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "年",
+              "r": "とし",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "取",
+              "r": "と",
+              "g": "predicate"
+            },
+            {
+              "t": "ったのだろうな",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
