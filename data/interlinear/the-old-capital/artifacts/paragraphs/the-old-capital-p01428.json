@@ -1,0 +1,245 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01428",
+  "source_text": "“知道，我曾坐公共汽车经过……”",
+  "source_sha256": "d91bbbba9ee0cff22aa4d08e331109ad8355c67fcb5838d274479df5c4084f72",
+  "source_normalized_sha256": "d91bbbba9ee0cff22aa4d08e331109ad8355c67fcb5838d274479df5c4084f72",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 25,
+    "grammar_token_total": 25,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-1428",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "秋色",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "しゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "しょく",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-秋色-intro",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "しゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "しょく",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01428",
+    "source_text": "“知道，我曾坐公共汽车经过……”",
+    "units": [
+      {
+        "source_text": "“知道，我曾坐公共汽车经过……”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "知",
+            "r": "zhī",
+            "g": "predicate"
+          },
+          {
+            "t": "道",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "曾",
+            "r": "céng",
+            "g": "adverbial"
+          },
+          {
+            "t": "坐",
+            "r": "zuò",
+            "g": "adverbial"
+          },
+          {
+            "t": "公",
+            "r": "gōng",
+            "g": "adverbial"
+          },
+          {
+            "t": "共",
+            "r": "gòng",
+            "g": "adverbial"
+          },
+          {
+            "t": "汽",
+            "r": "qì",
+            "g": "adverbial"
+          },
+          {
+            "t": "车",
+            "r": "chē",
+            "g": "adverbial"
+          },
+          {
+            "t": "经",
+            "r": "jīng",
+            "g": "predicate"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "predicate"
+          },
+          {
+            "t": "……”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "知",
+              "r": "し",
+              "g": "predicate"
+            },
+            {
+              "t": "っています",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "以",
+              "r": "い",
+              "g": "adverbial"
+            },
+            {
+              "t": "前",
+              "r": "ぜん",
+              "g": "adverbial"
+            },
+            {
+              "t": "バスで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "通",
+              "r": "とお",
+              "g": "predicate"
+            },
+            {
+              "t": "ったことがあります",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "……",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
