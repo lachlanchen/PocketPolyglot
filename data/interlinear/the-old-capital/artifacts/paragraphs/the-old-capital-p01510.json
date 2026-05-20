@@ -1,0 +1,250 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01510",
+  "source_text": "伴之而来的是一阵震耳欲聋的雷鸣。",
+  "source_sha256": "75ca2c37b582b54dc059ae768387ab6c8db2212dbff38080b7e0799ad7e6b894",
+  "source_normalized_sha256": "75ca2c37b582b54dc059ae768387ab6c8db2212dbff38080b7e0799ad7e6b894",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 26,
+    "grammar_token_total": 26,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-1510",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "秋色",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "しゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "しょく",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-秋色-intro",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "しゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "しょく",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01510",
+    "source_text": "伴之而来的是一阵震耳欲聋的雷鸣。",
+    "units": [
+      {
+        "source_text": "伴之而来的是一阵震耳欲聋的雷鸣。",
+        "zh": [
+          {
+            "t": "伴",
+            "r": "bàn",
+            "g": "subject"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "subject"
+          },
+          {
+            "t": "而",
+            "r": "ér",
+            "g": "subject"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "subject"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "complement"
+          },
+          {
+            "t": "阵",
+            "r": "zhèn",
+            "g": "complement"
+          },
+          {
+            "t": "震",
+            "r": "zhèn",
+            "g": "attributive"
+          },
+          {
+            "t": "耳",
+            "r": "ěr",
+            "g": "attributive"
+          },
+          {
+            "t": "欲",
+            "r": "yù",
+            "g": "attributive"
+          },
+          {
+            "t": "聋",
+            "r": "lóng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "雷",
+            "r": "léi",
+            "g": "complement"
+          },
+          {
+            "t": "鸣",
+            "r": "míng",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "それに",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "伴",
+              "r": "ともな",
+              "g": "subject"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "来",
+              "r": "き",
+              "g": "subject"
+            },
+            {
+              "t": "たのは、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "耳",
+              "r": "みみ",
+              "g": "attributive"
+            },
+            {
+              "t": "をつんざくような",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "雷",
+              "r": "らい",
+              "g": "complement"
+            },
+            {
+              "t": "鳴",
+              "r": "めい",
+              "g": "complement"
+            },
+            {
+              "t": "だった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

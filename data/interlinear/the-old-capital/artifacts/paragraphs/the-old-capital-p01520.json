@@ -1,0 +1,451 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01520",
+  "source_text": "“雨点难免要透过去的。但是，小姐，雷绝不会在小姐身上或近旁劈下来。”",
+  "source_sha256": "4e4650d63093f56710b552537c07b1495dd9c08a245c0e3f1a05f4277b20f8a2",
+  "source_normalized_sha256": "4e4650d63093f56710b552537c07b1495dd9c08a245c0e3f1a05f4277b20f8a2",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 64,
+    "grammar_token_total": 64,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-1520",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "秋色",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "しゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "しょく",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-秋色-intro",
+    "title_zh": [
+      {
+        "t": "秋",
+        "r": "qiū",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "秋",
+        "r": "しゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "しょく",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01520",
+    "source_text": "“雨点难免要透过去的。但是，小姐，雷绝不会在小姐身上或近旁劈下来。”",
+    "units": [
+      {
+        "source_text": "“雨点难免要透过去的。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "雨",
+            "r": "yǔ",
+            "g": "subject"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "subject"
+          },
+          {
+            "t": "难",
+            "r": "nán",
+            "g": "adverbial"
+          },
+          {
+            "t": "免",
+            "r": "miǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "adverbial"
+          },
+          {
+            "t": "透",
+            "r": "tòu",
+            "g": "predicate"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "predicate"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "雨",
+              "r": "あめ",
+              "g": "subject"
+            },
+            {
+              "t": "粒",
+              "r": "つぶ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "どうしても",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "通",
+              "r": "とお",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "抜",
+              "r": "ぬ",
+              "g": "predicate"
+            },
+            {
+              "t": "けてきます。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "但是，小姐，雷绝不会在小姐身上或近旁劈下来。”",
+        "zh": [
+          {
+            "t": "但",
+            "r": "dàn",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "function"
+          },
+          {
+            "t": "姐",
+            "r": "jie",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "雷",
+            "r": "léi",
+            "g": "subject"
+          },
+          {
+            "t": "绝",
+            "r": "jué",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "predicate"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "姐",
+            "r": "jie",
+            "g": "adverbial"
+          },
+          {
+            "t": "身",
+            "r": "shēn",
+            "g": "adverbial"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "或",
+            "r": "huò",
+            "g": "adverbial"
+          },
+          {
+            "t": "近",
+            "r": "jìn",
+            "g": "adverbial"
+          },
+          {
+            "t": "旁",
+            "r": "páng",
+            "g": "adverbial"
+          },
+          {
+            "t": "劈",
+            "r": "pī",
+            "g": "predicate"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "predicate"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "しかし、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "お",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "嬢",
+              "r": "じょう",
+              "g": "function"
+            },
+            {
+              "t": "さん、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "雷",
+              "r": "かみなり",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "お",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "嬢",
+              "r": "じょう",
+              "g": "adverbial"
+            },
+            {
+              "t": "さんの",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "身",
+              "r": "み",
+              "g": "adverbial"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "上",
+              "r": "うえ",
+              "g": "adverbial"
+            },
+            {
+              "t": "や",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "近",
+              "r": "ちか",
+              "g": "adverbial"
+            },
+            {
+              "t": "くに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "落",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "ちることは",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "決",
+              "r": "けっ",
+              "g": "adverbial"
+            },
+            {
+              "t": "して",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "ありません。",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
