@@ -1,0 +1,170 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02707",
+  "source_text": "“顶呢？”",
+  "source_sha256": "3b39181bd53fa36251d928c26b3b71a7f0bd1413fe71e023fb95cb291ee356b3",
+  "source_normalized_sha256": "3b39181bd53fa36251d928c26b3b71a7f0bd1413fe71e023fb95cb291ee356b3",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 10,
+    "grammar_token_total": 10,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-2707",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "十六",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "六",
+        "r": "liù",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "六",
+        "r": "ろく",
+        "g": "attributive"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-十六-intro",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "六",
+        "r": "liù",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "六",
+        "r": "ろく",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02707",
+    "source_text": "“顶呢？”",
+    "units": [
+      {
+        "source_text": "“顶呢？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "顶",
+            "r": "dǐng",
+            "g": "topic"
+          },
+          {
+            "t": "呢",
+            "r": "ne",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "上",
+              "r": "うえ",
+              "g": "topic"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "topic"
+            }
+          ],
+          [
+            {
+              "t": "どうですか",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

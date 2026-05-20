@@ -1,0 +1,215 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02918",
+  "source_text": "“那是围棋吧？”",
+  "source_sha256": "b1a4ea0ad27b3e27f5a9d9273a9acb603ad1c2deeb20e602b508b17481066b4c",
+  "source_normalized_sha256": "b1a4ea0ad27b3e27f5a9d9273a9acb603ad1c2deeb20e602b508b17481066b4c",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 15,
+    "grammar_token_total": 15,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-2918",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "二十八",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "八",
+        "r": "bā",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "八",
+        "r": "はち",
+        "g": "attributive"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-二十八-intro",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "八",
+        "r": "bā",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "八",
+        "r": "はち",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02918",
+    "source_text": "“那是围棋吧？”",
+    "units": [
+      {
+        "source_text": "“那是围棋吧？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "围",
+            "r": "wéi",
+            "g": "complement"
+          },
+          {
+            "t": "棋",
+            "r": "qí",
+            "g": "complement"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "あれは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "囲",
+              "r": "い",
+              "g": "complement"
+            },
+            {
+              "t": "碁",
+              "r": "ご",
+              "g": "complement"
+            }
+          ],
+          [
+            {
+              "t": "でしょうか",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

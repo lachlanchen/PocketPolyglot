@@ -1,0 +1,175 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p03235",
+  "source_text": "“是啊！”",
+  "source_sha256": "a62d26f68c87aa285f3550777f7e67b31e7cebf5f68577471a6d969415dc5113",
+  "source_normalized_sha256": "a62d26f68c87aa285f3550777f7e67b31e7cebf5f68577471a6d969415dc5113",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 7,
+    "grammar_token_total": 7,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-3235",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "四十一",
+    "title_zh": [
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-四十一-intro",
+    "title_zh": [
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p03235",
+    "source_text": "“是啊！”",
+    "units": [
+      {
+        "source_text": "“是啊！”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そうです",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "ね！",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

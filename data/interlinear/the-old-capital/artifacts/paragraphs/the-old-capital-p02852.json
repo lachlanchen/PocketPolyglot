@@ -1,0 +1,240 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02852",
+  "source_text": "我不会搓麻将，凑不够数。",
+  "source_sha256": "c2fa1336e8af2650ec7291f268b7696a88268827c9be53889cf1e489ddba6d8e",
+  "source_normalized_sha256": "c2fa1336e8af2650ec7291f268b7696a88268827c9be53889cf1e489ddba6d8e",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 20,
+    "grammar_token_total": 20,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-2852",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "二十四",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "attributive"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-二十四-intro",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02852",
+    "source_text": "我不会搓麻将，凑不够数。",
+    "units": [
+      {
+        "source_text": "我不会搓麻将，凑不够数。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bú",
+            "g": "adverbial"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "predicate"
+          },
+          {
+            "t": "搓",
+            "r": "cuō",
+            "g": "predicate"
+          },
+          {
+            "t": "麻",
+            "r": "má",
+            "g": "object"
+          },
+          {
+            "t": "将",
+            "r": "jiàng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "凑",
+            "r": "còu",
+            "g": "predicate"
+          },
+          {
+            "t": "不",
+            "r": "bú",
+            "g": "adverbial"
+          },
+          {
+            "t": "够",
+            "r": "gòu",
+            "g": "complement"
+          },
+          {
+            "t": "数",
+            "r": "shù",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "麻",
+              "r": "マー",
+              "g": "object"
+            },
+            {
+              "t": "雀",
+              "r": "ジャン",
+              "g": "object"
+            },
+            {
+              "t": "ができず、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "人",
+              "r": "にん",
+              "g": "object"
+            },
+            {
+              "t": "数",
+              "r": "ずう",
+              "g": "object"
+            },
+            {
+              "t": "がそろわない。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

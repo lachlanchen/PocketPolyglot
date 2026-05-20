@@ -1,0 +1,803 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p03088",
+  "source_text": "这是个阴天，白头鸟鸣啭不已。来到走廊，看见泉畔开了两朵杜鹃花，也结了蓓蕾。黄鹡鸰鸟飞近走廊。远处传来了电动机抽温泉水的声音。",
+  "source_sha256": "f2c116ab7c05a424970a521c4f35cdba939db167b9f76105dced11bb97e34be2",
+  "source_normalized_sha256": "f2c116ab7c05a424970a521c4f35cdba939db167b9f76105dced11bb97e34be2",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 126,
+    "grammar_token_total": 126,
+    "unit_count": 4
+  },
+  "source_chunk_id": "the-old-capital-chunk-3088",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "三十五",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "五",
+        "r": "wǔ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "五",
+        "r": "ご",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-三十五-intro",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "五",
+        "r": "wǔ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "五",
+        "r": "ご",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p03088",
+    "source_text": "这是个阴天，白头鸟鸣啭不已。来到走廊，看见泉畔开了两朵杜鹃花，也结了蓓蕾。黄鹡鸰鸟飞近走廊。远处传来了电动机抽温泉水的声音。",
+    "units": [
+      {
+        "source_text": "这是个阴天，白头鸟鸣啭不已。",
+        "zh": [
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "function"
+          },
+          {
+            "t": "阴",
+            "r": "yīn",
+            "g": "complement"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "白",
+            "r": "bái",
+            "g": "subject"
+          },
+          {
+            "t": "头",
+            "r": "tóu",
+            "g": "subject"
+          },
+          {
+            "t": "鸟",
+            "r": "niǎo",
+            "g": "subject"
+          },
+          {
+            "t": "鸣",
+            "r": "míng",
+            "g": "predicate"
+          },
+          {
+            "t": "啭",
+            "r": "zhuàn",
+            "g": "predicate"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "complement"
+          },
+          {
+            "t": "已",
+            "r": "yǐ",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "これ",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "曇",
+              "r": "くも",
+              "g": "complement"
+            },
+            {
+              "t": "りの",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "日",
+              "r": "ひ",
+              "g": "complement"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "シロガシラ",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "鳴",
+              "r": "な",
+              "g": "predicate"
+            },
+            {
+              "t": "きさえずり",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "続",
+              "r": "つづ",
+              "g": "complement"
+            },
+            {
+              "t": "けている",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "来到走廊，看见泉畔开了两朵杜鹃花，也结了蓓蕾。",
+        "zh": [
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "adverbial"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "adverbial"
+          },
+          {
+            "t": "走",
+            "r": "zǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "廊",
+            "r": "láng",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "predicate"
+          },
+          {
+            "t": "见",
+            "r": "jiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "泉",
+            "r": "quán",
+            "g": "adverbial"
+          },
+          {
+            "t": "畔",
+            "r": "pàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "开",
+            "r": "kāi",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "两",
+            "r": "liǎng",
+            "g": "attributive"
+          },
+          {
+            "t": "朵",
+            "r": "duǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "杜",
+            "r": "dù",
+            "g": "subject"
+          },
+          {
+            "t": "鹃",
+            "r": "juān",
+            "g": "subject"
+          },
+          {
+            "t": "花",
+            "r": "huā",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "结",
+            "r": "jiē",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "蓓",
+            "r": "bèi",
+            "g": "object"
+          },
+          {
+            "t": "蕾",
+            "r": "lěi",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "廊",
+              "r": "ろう",
+              "g": "adverbial"
+            },
+            {
+              "t": "下",
+              "r": "か",
+              "g": "adverbial"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "来",
+              "r": "き",
+              "g": "adverbial"
+            },
+            {
+              "t": "て",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "ると",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "泉",
+              "r": "いずみ",
+              "g": "adverbial"
+            },
+            {
+              "t": "のほとりに",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "ツツジ",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "二",
+              "r": "に",
+              "g": "attributive"
+            },
+            {
+              "t": "輪",
+              "r": "りん",
+              "g": "attributive"
+            },
+            {
+              "t": "咲",
+              "r": "さ",
+              "g": "predicate"
+            },
+            {
+              "t": "き",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "つぼみ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "つけていた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "黄鹡鸰鸟飞近走廊。",
+        "zh": [
+          {
+            "t": "黄",
+            "r": "huáng",
+            "g": "subject"
+          },
+          {
+            "t": "鹡",
+            "r": "jí",
+            "g": "subject"
+          },
+          {
+            "t": "鸰",
+            "r": "líng",
+            "g": "subject"
+          },
+          {
+            "t": "鸟",
+            "r": "niǎo",
+            "g": "subject"
+          },
+          {
+            "t": "飞",
+            "r": "fēi",
+            "g": "predicate"
+          },
+          {
+            "t": "近",
+            "r": "jìn",
+            "g": "complement"
+          },
+          {
+            "t": "走",
+            "r": "zǒu",
+            "g": "complement"
+          },
+          {
+            "t": "廊",
+            "r": "láng",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "キセキレイ",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "廊",
+              "r": "ろう",
+              "g": "complement"
+            },
+            {
+              "t": "下",
+              "r": "か",
+              "g": "complement"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "近",
+              "r": "ちか",
+              "g": "complement"
+            },
+            {
+              "t": "くへ",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "飛",
+              "r": "と",
+              "g": "predicate"
+            },
+            {
+              "t": "んできた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "远处传来了电动机抽温泉水的声音。",
+        "zh": [
+          {
+            "t": "远",
+            "r": "yuǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "处",
+            "r": "chù",
+            "g": "adverbial"
+          },
+          {
+            "t": "传",
+            "r": "chuán",
+            "g": "predicate"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "电",
+            "r": "diàn",
+            "g": "attributive"
+          },
+          {
+            "t": "动",
+            "r": "dòng",
+            "g": "attributive"
+          },
+          {
+            "t": "机",
+            "r": "jī",
+            "g": "attributive"
+          },
+          {
+            "t": "抽",
+            "r": "chōu",
+            "g": "attributive"
+          },
+          {
+            "t": "温",
+            "r": "wēn",
+            "g": "attributive"
+          },
+          {
+            "t": "泉",
+            "r": "quán",
+            "g": "attributive"
+          },
+          {
+            "t": "水",
+            "r": "shuǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "声",
+            "r": "shēng",
+            "g": "subject"
+          },
+          {
+            "t": "音",
+            "r": "yīn",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "遠",
+              "r": "とお",
+              "g": "adverbial"
+            },
+            {
+              "t": "くから",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "温",
+              "r": "おん",
+              "g": "attributive"
+            },
+            {
+              "t": "泉",
+              "r": "せん",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "湯",
+              "r": "ゆ",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "汲",
+              "r": "く",
+              "g": "attributive"
+            },
+            {
+              "t": "み",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "上",
+              "r": "あ",
+              "g": "attributive"
+            },
+            {
+              "t": "げる",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "モーター",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "音",
+              "r": "おと",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "聞",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "こえてきた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,642 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p03096",
+  "source_text": "中间休息了两天。第三天对局的早晨，名人和七段两人都说肚子痛。据说大竹七段五点就醒来了。",
+  "source_sha256": "6fc79c8c5307169a24b9203792441933969a830a016a62528739813661024683",
+  "source_normalized_sha256": "6fc79c8c5307169a24b9203792441933969a830a016a62528739813661024683",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 96,
+    "grammar_token_total": 96,
+    "unit_count": 3
+  },
+  "source_chunk_id": "the-old-capital-chunk-3096",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "三十六",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "六",
+        "r": "liù",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "六",
+        "r": "ろく",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-三十六-intro",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "六",
+        "r": "liù",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "六",
+        "r": "ろく",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p03096",
+    "source_text": "中间休息了两天。第三天对局的早晨，名人和七段两人都说肚子痛。据说大竹七段五点就醒来了。",
+    "units": [
+      {
+        "source_text": "中间休息了两天。",
+        "zh": [
+          {
+            "t": "中",
+            "r": "zhōng",
+            "g": "adverbial"
+          },
+          {
+            "t": "间",
+            "r": "jiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "休",
+            "r": "xiū",
+            "g": "predicate"
+          },
+          {
+            "t": "息",
+            "r": "xi",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "两",
+            "r": "liǎng",
+            "g": "complement"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "途",
+              "r": "と",
+              "g": "adverbial"
+            },
+            {
+              "t": "中",
+              "r": "ちゅう",
+              "g": "adverbial"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "二",
+              "r": "ふつ",
+              "g": "complement"
+            },
+            {
+              "t": "日",
+              "r": "か",
+              "g": "complement"
+            },
+            {
+              "t": "間",
+              "r": "かん",
+              "g": "complement"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "休",
+              "r": "きゅう",
+              "g": "predicate"
+            },
+            {
+              "t": "息",
+              "r": "そく",
+              "g": "predicate"
+            },
+            {
+              "t": "した",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "第三天对局的早晨，名人和七段两人都说肚子痛。",
+        "zh": [
+          {
+            "t": "第",
+            "r": "dì",
+            "g": "adverbial"
+          },
+          {
+            "t": "三",
+            "r": "sān",
+            "g": "adverbial"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "对",
+            "r": "duì",
+            "g": "attributive"
+          },
+          {
+            "t": "局",
+            "r": "jú",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "早",
+            "r": "zǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "晨",
+            "r": "chén",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "subject"
+          },
+          {
+            "t": "七",
+            "r": "qī",
+            "g": "subject"
+          },
+          {
+            "t": "段",
+            "r": "duàn",
+            "g": "subject"
+          },
+          {
+            "t": "两",
+            "r": "liǎng",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "都",
+            "r": "dōu",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "肚",
+            "r": "dù",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "痛",
+            "r": "tòng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "対",
+              "r": "たい",
+              "g": "attributive"
+            },
+            {
+              "t": "局",
+              "r": "きょく",
+              "g": "attributive"
+            },
+            {
+              "t": "三",
+              "r": "みっ",
+              "g": "adverbial"
+            },
+            {
+              "t": "日",
+              "r": "か",
+              "g": "adverbial"
+            },
+            {
+              "t": "目",
+              "r": "め",
+              "g": "adverbial"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "朝",
+              "r": "あさ",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "名",
+              "r": "めい",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "subject"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "七",
+              "r": "しち",
+              "g": "subject"
+            },
+            {
+              "t": "段",
+              "r": "だん",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "二",
+              "r": "ふた",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "り",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "どちらも",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "腹",
+              "r": "はら",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "痛",
+              "r": "いた",
+              "g": "object"
+            },
+            {
+              "t": "いと",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "据说大竹七段五点就醒来了。",
+        "zh": [
+          {
+            "t": "据",
+            "r": "jù",
+            "g": "function"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "function"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "subject"
+          },
+          {
+            "t": "竹",
+            "r": "zhú",
+            "g": "subject"
+          },
+          {
+            "t": "七",
+            "r": "qī",
+            "g": "subject"
+          },
+          {
+            "t": "段",
+            "r": "duàn",
+            "g": "subject"
+          },
+          {
+            "t": "五",
+            "r": "wǔ",
+            "g": "adverbial"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "醒",
+            "r": "xǐng",
+            "g": "predicate"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "聞",
+              "r": "き",
+              "g": "function"
+            },
+            {
+              "t": "くところでは",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "subject"
+            },
+            {
+              "t": "竹",
+              "r": "たけ",
+              "g": "subject"
+            },
+            {
+              "t": "七",
+              "r": "しち",
+              "g": "subject"
+            },
+            {
+              "t": "段",
+              "r": "だん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "五",
+              "r": "ご",
+              "g": "adverbial"
+            },
+            {
+              "t": "時",
+              "r": "じ",
+              "g": "adverbial"
+            },
+            {
+              "t": "には",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "もう",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "目",
+              "r": "め",
+              "g": "predicate"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "覚",
+              "r": "さ",
+              "g": "predicate"
+            },
+            {
+              "t": "ましていた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

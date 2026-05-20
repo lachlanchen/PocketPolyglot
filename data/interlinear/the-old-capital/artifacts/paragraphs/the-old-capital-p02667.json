@@ -1,0 +1,441 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02667",
+  "source_text": "但是，名人的脸上也渗出了汗珠。他突然双手抱头，然后又按住双颊。",
+  "source_sha256": "a7b94e2ed65d8456ad95f54b57b34510e2bba378f0caf3dce255e548c2bfc64d",
+  "source_normalized_sha256": "a7b94e2ed65d8456ad95f54b57b34510e2bba378f0caf3dce255e548c2bfc64d",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 62,
+    "grammar_token_total": 62,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-2667",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "十五",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "五",
+        "r": "wǔ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "五",
+        "r": "ご",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-十五-intro",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "五",
+        "r": "wǔ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "五",
+        "r": "ご",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02667",
+    "source_text": "但是，名人的脸上也渗出了汗珠。他突然双手抱头，然后又按住双颊。",
+    "units": [
+      {
+        "source_text": "但是，名人的脸上也渗出了汗珠。",
+        "zh": [
+          {
+            "t": "但",
+            "r": "dàn",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "attributive"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "脸",
+            "r": "liǎn",
+            "g": "subject"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "subject"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "渗",
+            "r": "shèn",
+            "g": "predicate"
+          },
+          {
+            "t": "出",
+            "r": "chū",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "汗",
+            "r": "hàn",
+            "g": "object"
+          },
+          {
+            "t": "珠",
+            "r": "zhū",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "しかし、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "名",
+              "r": "めい",
+              "g": "attributive"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "顔",
+              "r": "かお",
+              "g": "subject"
+            },
+            {
+              "t": "にも",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "汗",
+              "r": "あせ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "玉",
+              "r": "たま",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "にじみ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "出",
+              "r": "で",
+              "g": "complement"
+            },
+            {
+              "t": "ていた。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "他突然双手抱头，然后又按住双颊。",
+        "zh": [
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "突",
+            "r": "tū",
+            "g": "adverbial"
+          },
+          {
+            "t": "然",
+            "r": "rán",
+            "g": "adverbial"
+          },
+          {
+            "t": "双",
+            "r": "shuāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "手",
+            "r": "shǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "抱",
+            "r": "bào",
+            "g": "predicate"
+          },
+          {
+            "t": "头",
+            "r": "tóu",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "然",
+            "r": "rán",
+            "g": "function"
+          },
+          {
+            "t": "后",
+            "r": "hòu",
+            "g": "function"
+          },
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "按",
+            "r": "àn",
+            "g": "predicate"
+          },
+          {
+            "t": "住",
+            "r": "zhù",
+            "g": "complement"
+          },
+          {
+            "t": "双",
+            "r": "shuāng",
+            "g": "attributive"
+          },
+          {
+            "t": "颊",
+            "r": "jiá",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "突",
+              "r": "とつ",
+              "g": "adverbial"
+            },
+            {
+              "t": "然",
+              "r": "ぜん",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "両",
+              "r": "りょう",
+              "g": "adverbial"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "adverbial"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "頭",
+              "r": "あたま",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "抱",
+              "r": "かか",
+              "g": "predicate"
+            },
+            {
+              "t": "え、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "それからまた",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "両",
+              "r": "りょう",
+              "g": "attributive"
+            },
+            {
+              "t": "頬",
+              "r": "ほお",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "押",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "さえた。",
+              "r": "",
+              "g": "complement"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

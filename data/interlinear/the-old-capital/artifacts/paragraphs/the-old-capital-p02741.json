@@ -1,0 +1,758 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02741",
+  "source_text": "名人极少流露出这种情怀。他本不轻易动感情。作为观战记者长期细心观察名人，我对他满不在乎的神态和言辞才有所体会。",
+  "source_sha256": "088f8e8ccbfac23064e717a153ae7d5ee40f126aed033ed30366453d99011173",
+  "source_normalized_sha256": "088f8e8ccbfac23064e717a153ae7d5ee40f126aed033ed30366453d99011173",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 121,
+    "grammar_token_total": 121,
+    "unit_count": 4
+  },
+  "source_chunk_id": "the-old-capital-chunk-2741",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "十八",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "八",
+        "r": "bā",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "八",
+        "r": "はち",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-十八-intro",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "八",
+        "r": "bā",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "八",
+        "r": "はち",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02741",
+    "source_text": "名人极少流露出这种情怀。他本不轻易动感情。作为观战记者长期细心观察名人，我对他满不在乎的神态和言辞才有所体会。",
+    "units": [
+      {
+        "source_text": "名人极少流露出这种情怀。",
+        "zh": [
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "极",
+            "r": "jí",
+            "g": "adverbial"
+          },
+          {
+            "t": "少",
+            "r": "shǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "流",
+            "r": "liú",
+            "g": "predicate"
+          },
+          {
+            "t": "露",
+            "r": "lù",
+            "g": "predicate"
+          },
+          {
+            "t": "出",
+            "r": "chū",
+            "g": "complement"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "attributive"
+          },
+          {
+            "t": "种",
+            "r": "zhǒng",
+            "g": "attributive"
+          },
+          {
+            "t": "情",
+            "r": "qíng",
+            "g": "object"
+          },
+          {
+            "t": "怀",
+            "r": "huái",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "名",
+              "r": "めい",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "このような",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "情",
+              "r": "じょう",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "めったに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "表",
+              "r": "あらわ",
+              "g": "predicate"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "出",
+              "r": "だ",
+              "g": "predicate"
+            },
+            {
+              "t": "さなかった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "他本不轻易动感情。",
+        "zh": [
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "轻",
+            "r": "qīng",
+            "g": "adverbial"
+          },
+          {
+            "t": "易",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "动",
+            "r": "dòng",
+            "g": "predicate"
+          },
+          {
+            "t": "感",
+            "r": "gǎn",
+            "g": "object"
+          },
+          {
+            "t": "情",
+            "r": "qíng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "もともと",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "容",
+              "r": "よう",
+              "g": "adverbial"
+            },
+            {
+              "t": "易",
+              "r": "い",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "感",
+              "r": "かん",
+              "g": "object"
+            },
+            {
+              "t": "情",
+              "r": "じょう",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "動",
+              "r": "うご",
+              "g": "predicate"
+            },
+            {
+              "t": "かさない",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "作为观战记者长期细心观察名人，",
+        "zh": [
+          {
+            "t": "作",
+            "r": "zuò",
+            "g": "adverbial"
+          },
+          {
+            "t": "为",
+            "r": "wéi",
+            "g": "adverbial"
+          },
+          {
+            "t": "观",
+            "r": "guān",
+            "g": "attributive"
+          },
+          {
+            "t": "战",
+            "r": "zhàn",
+            "g": "attributive"
+          },
+          {
+            "t": "记",
+            "r": "jì",
+            "g": "adverbial"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "adverbial"
+          },
+          {
+            "t": "长",
+            "r": "cháng",
+            "g": "adverbial"
+          },
+          {
+            "t": "期",
+            "r": "qī",
+            "g": "adverbial"
+          },
+          {
+            "t": "细",
+            "r": "xì",
+            "g": "adverbial"
+          },
+          {
+            "t": "心",
+            "r": "xīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "观",
+            "r": "guān",
+            "g": "predicate"
+          },
+          {
+            "t": "察",
+            "r": "chá",
+            "g": "predicate"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "object"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "観",
+              "r": "かん",
+              "g": "attributive"
+            },
+            {
+              "t": "戦",
+              "r": "せん",
+              "g": "attributive"
+            },
+            {
+              "t": "記",
+              "r": "き",
+              "g": "adverbial"
+            },
+            {
+              "t": "者",
+              "r": "しゃ",
+              "g": "adverbial"
+            },
+            {
+              "t": "として",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "長",
+              "r": "なが",
+              "g": "adverbial"
+            },
+            {
+              "t": "く",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "注",
+              "r": "ちゅう",
+              "g": "adverbial"
+            },
+            {
+              "t": "意",
+              "r": "い",
+              "g": "adverbial"
+            },
+            {
+              "t": "深",
+              "r": "ぶか",
+              "g": "adverbial"
+            },
+            {
+              "t": "く",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "名",
+              "r": "めい",
+              "g": "object"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "観",
+              "r": "かん",
+              "g": "predicate"
+            },
+            {
+              "t": "察",
+              "r": "さつ",
+              "g": "predicate"
+            },
+            {
+              "t": "してきて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我对他满不在乎的神态和言辞才有所体会。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "对",
+            "r": "duì",
+            "g": "adverbial"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "attributive"
+          },
+          {
+            "t": "满",
+            "r": "mǎn",
+            "g": "attributive"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "attributive"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "attributive"
+          },
+          {
+            "t": "乎",
+            "r": "hū",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "态",
+            "r": "tài",
+            "g": "object"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "object"
+          },
+          {
+            "t": "言",
+            "r": "yán",
+            "g": "object"
+          },
+          {
+            "t": "辞",
+            "r": "cí",
+            "g": "object"
+          },
+          {
+            "t": "才",
+            "r": "cái",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "所",
+            "r": "suǒ",
+            "g": "predicate"
+          },
+          {
+            "t": "体",
+            "r": "tǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "平",
+              "r": "へい",
+              "g": "attributive"
+            },
+            {
+              "t": "然",
+              "r": "ぜん",
+              "g": "attributive"
+            },
+            {
+              "t": "とした",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "態",
+              "r": "たい",
+              "g": "object"
+            },
+            {
+              "t": "度",
+              "r": "ど",
+              "g": "object"
+            },
+            {
+              "t": "や",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "言",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "葉",
+              "r": "ば",
+              "g": "object"
+            },
+            {
+              "t": "について",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ようやく",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "少",
+              "r": "すこ",
+              "g": "predicate"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "分",
+              "r": "わ",
+              "g": "predicate"
+            },
+            {
+              "t": "かった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

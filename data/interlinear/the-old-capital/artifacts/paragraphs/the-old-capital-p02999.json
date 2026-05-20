@@ -1,0 +1,220 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02999",
+  "source_text": "名人沉默不语。",
+  "source_sha256": "efcdc747f25e03ef839e9c22df6fd8bc27b2dfc21860b03b0f985f34153951a2",
+  "source_normalized_sha256": "efcdc747f25e03ef839e9c22df6fd8bc27b2dfc21860b03b0f985f34153951a2",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 16,
+    "grammar_token_total": 16,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-2999",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "subject"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "subject"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "subject"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "三十一",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "function"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-三十一-intro",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02999",
+    "source_text": "名人沉默不语。",
+    "units": [
+      {
+        "source_text": "名人沉默不语。",
+        "zh": [
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "沉",
+            "r": "chén",
+            "g": "predicate"
+          },
+          {
+            "t": "默",
+            "r": "mò",
+            "g": "predicate"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "predicate"
+          },
+          {
+            "t": "语",
+            "r": "yǔ",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "名",
+              "r": "めい",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "黙",
+              "r": "だま",
+              "g": "predicate"
+            },
+            {
+              "t": "ったまま、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "何",
+              "r": "なに",
+              "g": "object"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "わなかった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

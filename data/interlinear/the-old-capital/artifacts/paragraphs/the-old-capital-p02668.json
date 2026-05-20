@@ -1,0 +1,636 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02668",
+  "source_text": "“东京大概热得发狂了吧。”名人说罢，久久地把嘴张开，迷迷蒙蒙的，仿佛想起了某日酷暑，又好像要追忆遥远的炙热。",
+  "source_sha256": "5e3393ed65c51458ea9d18ff28cd7f557b1db441c76e572b57bc8128172f7c0b",
+  "source_normalized_sha256": "5e3393ed65c51458ea9d18ff28cd7f557b1db441c76e572b57bc8128172f7c0b",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 101,
+    "grammar_token_total": 101,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-2668",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "十五",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "五",
+        "r": "wǔ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "五",
+        "r": "ご",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-十五-intro",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "五",
+        "r": "wǔ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "五",
+        "r": "ご",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02668",
+    "source_text": "“东京大概热得发狂了吧。”名人说罢，久久地把嘴张开，迷迷蒙蒙的，仿佛想起了某日酷暑，又好像要追忆遥远的炙热。",
+    "units": [
+      {
+        "source_text": "“东京大概热得发狂了吧。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "东",
+            "r": "dōng",
+            "g": "subject"
+          },
+          {
+            "t": "京",
+            "r": "jīng",
+            "g": "subject"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "adverbial"
+          },
+          {
+            "t": "概",
+            "r": "gài",
+            "g": "adverbial"
+          },
+          {
+            "t": "热",
+            "r": "rè",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "complement"
+          },
+          {
+            "t": "发",
+            "r": "fā",
+            "g": "complement"
+          },
+          {
+            "t": "狂",
+            "r": "kuáng",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "東",
+              "r": "とう",
+              "g": "subject"
+            },
+            {
+              "t": "京",
+              "r": "きょう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "たぶん",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "暑",
+              "r": "あつ",
+              "g": "predicate"
+            },
+            {
+              "t": "さで",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "気",
+              "r": "き",
+              "g": "complement"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "狂",
+              "r": "くる",
+              "g": "complement"
+            },
+            {
+              "t": "いそうだろう",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "。」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "名人说罢，久久地把嘴张开，迷迷蒙蒙的，仿佛想起了某日酷暑，又好像要追忆遥远的炙热。",
+        "zh": [
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "罢",
+            "r": "bà",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "久",
+            "r": "jiǔ",
+            "g": "adverbial"
+          },
+          {
+            "t": "久",
+            "r": "jiǔ",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "嘴",
+            "r": "zuǐ",
+            "g": "object"
+          },
+          {
+            "t": "张",
+            "r": "zhāng",
+            "g": "predicate"
+          },
+          {
+            "t": "开",
+            "r": "kāi",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "迷",
+            "r": "mí",
+            "g": "adverbial"
+          },
+          {
+            "t": "迷",
+            "r": "mí",
+            "g": "adverbial"
+          },
+          {
+            "t": "蒙",
+            "r": "méng",
+            "g": "adverbial"
+          },
+          {
+            "t": "蒙",
+            "r": "méng",
+            "g": "adverbial"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "仿",
+            "r": "fǎng",
+            "g": "adverbial"
+          },
+          {
+            "t": "佛",
+            "r": "fú",
+            "g": "adverbial"
+          },
+          {
+            "t": "想",
+            "r": "xiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "某",
+            "r": "mǒu",
+            "g": "attributive"
+          },
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "attributive"
+          },
+          {
+            "t": "酷",
+            "r": "kù",
+            "g": "object"
+          },
+          {
+            "t": "暑",
+            "r": "shǔ",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "像",
+            "r": "xiàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "adverbial"
+          },
+          {
+            "t": "追",
+            "r": "zhuī",
+            "g": "predicate"
+          },
+          {
+            "t": "忆",
+            "r": "yì",
+            "g": "predicate"
+          },
+          {
+            "t": "遥",
+            "r": "yáo",
+            "g": "attributive"
+          },
+          {
+            "t": "远",
+            "r": "yuǎn",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "炙",
+            "r": "zhì",
+            "g": "object"
+          },
+          {
+            "t": "热",
+            "r": "rè",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "名",
+              "r": "めい",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "そう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "終",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "えると、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "長",
+              "r": "なが",
+              "g": "adverbial"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "間",
+              "r": "あいだ",
+              "g": "adverbial"
+            },
+            {
+              "t": "口",
+              "r": "くち",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "開",
+              "r": "あ",
+              "g": "predicate"
+            },
+            {
+              "t": "けたまま、",
+              "r": "",
+              "g": "complement"
+            }
+          ],
+          [
+            {
+              "t": "ぼんやりと、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "ある",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "日",
+              "r": "ひ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "酷",
+              "r": "こく",
+              "g": "object"
+            },
+            {
+              "t": "暑",
+              "r": "しょ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "思",
+              "r": "おも",
+              "g": "predicate"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "出",
+              "r": "だ",
+              "g": "complement"
+            },
+            {
+              "t": "し、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "遠",
+              "r": "とお",
+              "g": "attributive"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "灼",
+              "r": "しゃく",
+              "g": "object"
+            },
+            {
+              "t": "熱",
+              "r": "ねつ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "追",
+              "r": "つい",
+              "g": "predicate"
+            },
+            {
+              "t": "憶",
+              "r": "おく",
+              "g": "predicate"
+            },
+            {
+              "t": "しようとするようだった",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

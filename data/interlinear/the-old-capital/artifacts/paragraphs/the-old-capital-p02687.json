@@ -1,0 +1,195 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02687",
+  "source_text": "“一手。”",
+  "source_sha256": "c72983179e27a49ca9d0618a2a64040d12971279da8b43978628eda7b5e108b2",
+  "source_normalized_sha256": "c72983179e27a49ca9d0618a2a64040d12971279da8b43978628eda7b5e108b2",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 15,
+    "grammar_token_total": 15,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-2687",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "十六",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "六",
+        "r": "liù",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "六",
+        "r": "ろく",
+        "g": "function"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-十六-intro",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "六",
+        "r": "liù",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "六",
+        "r": "ろく",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02687",
+    "source_text": "“一手。”",
+    "units": [
+      {
+        "source_text": "“一手。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "一",
+            "r": "yì",
+            "g": "object"
+          },
+          {
+            "t": "手",
+            "r": "shǒu",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "一",
+              "r": "いっ",
+              "g": "object"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "object"
+            },
+            {
+              "t": "。」",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "と",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "adverbial"
+            },
+            {
+              "t": "言",
+              "r": "こと",
+              "g": "predicate"
+            },
+            {
+              "t": "だけ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "述",
+              "r": "の",
+              "g": "predicate"
+            },
+            {
+              "t": "べた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

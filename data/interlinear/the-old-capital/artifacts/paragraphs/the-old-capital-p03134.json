@@ -1,0 +1,798 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p03134",
+  "source_text": "黑已经摆下棋子。我远离棋盘，也不知道他下在什么地方。就算知道他下在什么地方，也不晓得他的用意何在。他无缘无故地远离了酣战的中原，下在上边了。",
+  "source_sha256": "5cf7db86bb5814cfffdff2e943360a329214bbc6682ac0d51fbf671c1704e345",
+  "source_normalized_sha256": "5cf7db86bb5814cfffdff2e943360a329214bbc6682ac0d51fbf671c1704e345",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 125,
+    "grammar_token_total": 125,
+    "unit_count": 4
+  },
+  "source_chunk_id": "the-old-capital-chunk-3134",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "subject"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "三十七",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "attributive"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-三十七-intro",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p03134",
+    "source_text": "黑已经摆下棋子。我远离棋盘，也不知道他下在什么地方。就算知道他下在什么地方，也不晓得他的用意何在。他无缘无故地远离了酣战的中原，下在上边了。",
+    "units": [
+      {
+        "source_text": "黑已经摆下棋子。",
+        "zh": [
+          {
+            "t": "黑",
+            "r": "hēi",
+            "g": "subject"
+          },
+          {
+            "t": "已",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "经",
+            "r": "jīng",
+            "g": "adverbial"
+          },
+          {
+            "t": "摆",
+            "r": "bǎi",
+            "g": "predicate"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "predicate"
+          },
+          {
+            "t": "棋",
+            "r": "qí",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "黒",
+              "r": "くろ",
+              "g": "subject"
+            },
+            {
+              "t": "はすでに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "石",
+              "r": "いし",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "置",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "いていた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我远离棋盘，也不知道他下在什么地方。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "远",
+            "r": "yuǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "离",
+            "r": "lí",
+            "g": "predicate"
+          },
+          {
+            "t": "棋",
+            "r": "qí",
+            "g": "object"
+          },
+          {
+            "t": "盘",
+            "r": "pán",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "知",
+            "r": "zhī",
+            "g": "predicate"
+          },
+          {
+            "t": "道",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "什",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "object"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "object"
+          },
+          {
+            "t": "方",
+            "r": "fang",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "碁",
+              "r": "ご",
+              "g": "object"
+            },
+            {
+              "t": "盤",
+              "r": "ばん",
+              "g": "object"
+            },
+            {
+              "t": "から",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "離",
+              "r": "はな",
+              "g": "predicate"
+            },
+            {
+              "t": "れていて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "がどこへ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "打",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "ったのかも",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "知",
+              "r": "し",
+              "g": "predicate"
+            },
+            {
+              "t": "らなかった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "就算知道他下在什么地方，也不晓得他的用意何在。",
+        "zh": [
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "function"
+          },
+          {
+            "t": "算",
+            "r": "suàn",
+            "g": "function"
+          },
+          {
+            "t": "知",
+            "r": "zhī",
+            "g": "predicate"
+          },
+          {
+            "t": "道",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "什",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "object"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "object"
+          },
+          {
+            "t": "方",
+            "r": "fang",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "晓",
+            "r": "xiǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "用",
+            "r": "yòng",
+            "g": "object"
+          },
+          {
+            "t": "意",
+            "r": "yì",
+            "g": "object"
+          },
+          {
+            "t": "何",
+            "r": "hé",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "がどこへ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "打",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "ったかを",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "知",
+              "r": "し",
+              "g": "predicate"
+            },
+            {
+              "t": "っていても",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "その",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "意",
+              "r": "い",
+              "g": "object"
+            },
+            {
+              "t": "図",
+              "r": "と",
+              "g": "object"
+            },
+            {
+              "t": "がどこにあるのかは",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "分",
+              "r": "わ",
+              "g": "predicate"
+            },
+            {
+              "t": "からなかった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "他无缘无故地远离了酣战的中原，下在上边了。",
+        "zh": [
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "无",
+            "r": "wú",
+            "g": "adverbial"
+          },
+          {
+            "t": "缘",
+            "r": "yuán",
+            "g": "adverbial"
+          },
+          {
+            "t": "无",
+            "r": "wú",
+            "g": "adverbial"
+          },
+          {
+            "t": "故",
+            "r": "gù",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "远",
+            "r": "yuǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "离",
+            "r": "lí",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "酣",
+            "r": "hān",
+            "g": "attributive"
+          },
+          {
+            "t": "战",
+            "r": "zhàn",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "中",
+            "r": "zhōng",
+            "g": "object"
+          },
+          {
+            "t": "原",
+            "r": "yuán",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "object"
+          },
+          {
+            "t": "边",
+            "r": "bian",
+            "g": "object"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "はわけもなく",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "激",
+              "r": "げき",
+              "g": "attributive"
+            },
+            {
+              "t": "戦",
+              "r": "せん",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "中",
+              "r": "ちゅう",
+              "g": "object"
+            },
+            {
+              "t": "央",
+              "r": "おう",
+              "g": "object"
+            },
+            {
+              "t": "から",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "遠",
+              "r": "とお",
+              "g": "predicate"
+            },
+            {
+              "t": "く",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "離",
+              "r": "はな",
+              "g": "predicate"
+            },
+            {
+              "t": "れ、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "上",
+              "r": "うえ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "方",
+              "r": "ほう",
+              "g": "object"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "打",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02639",
+  "source_text": "这盘将棋花了近三个钟头，七段取胜了。",
+  "source_sha256": "6aee19235db43a2fe9542a096262adbf90c62a99efa269a9a703e006d72f83b5",
+  "source_normalized_sha256": "6aee19235db43a2fe9542a096262adbf90c62a99efa269a9a703e006d72f83b5",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 32,
+    "grammar_token_total": 32,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-2639",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng"
+      },
+      {
+        "t": "人",
+        "r": "rén"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい"
+      },
+      {
+        "t": "人",
+        "r": "じん"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "十三",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí"
+      },
+      {
+        "t": "三",
+        "r": "sān"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう"
+      },
+      {
+        "t": "三",
+        "r": "さん"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-十三-intro",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí"
+      },
+      {
+        "t": "三",
+        "r": "sān"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう"
+      },
+      {
+        "t": "三",
+        "r": "さん"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02639",
+    "source_text": "这盘将棋花了近三个钟头，七段取胜了。",
+    "units": [
+      {
+        "source_text": "这盘将棋花了近三个钟头，七段取胜了。",
+        "zh": [
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "盘",
+            "r": "pán",
+            "g": "subject"
+          },
+          {
+            "t": "将",
+            "r": "jiàng",
+            "g": "subject"
+          },
+          {
+            "t": "棋",
+            "r": "qí",
+            "g": "subject"
+          },
+          {
+            "t": "花",
+            "r": "huā",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "近",
+            "r": "jìn",
+            "g": "adverbial"
+          },
+          {
+            "t": "三",
+            "r": "sān",
+            "g": "complement"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "complement"
+          },
+          {
+            "t": "钟",
+            "r": "zhōng",
+            "g": "complement"
+          },
+          {
+            "t": "头",
+            "r": "tóu",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "七",
+            "r": "qī",
+            "g": "subject"
+          },
+          {
+            "t": "段",
+            "r": "duàn",
+            "g": "subject"
+          },
+          {
+            "t": "取",
+            "r": "qǔ",
+            "g": "predicate"
+          },
+          {
+            "t": "胜",
+            "r": "shèng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "一",
+              "r": "いっ",
+              "g": "subject"
+            },
+            {
+              "t": "局",
+              "r": "きょく",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "三",
+              "r": "さん",
+              "g": "complement"
+            },
+            {
+              "t": "時",
+              "r": "じ",
+              "g": "complement"
+            },
+            {
+              "t": "間",
+              "r": "かん",
+              "g": "complement"
+            },
+            {
+              "t": "近",
+              "r": "ちか",
+              "g": "adverbial"
+            },
+            {
+              "t": "くかかり、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "七",
+              "r": "しち",
+              "g": "subject"
+            },
+            {
+              "t": "段",
+              "r": "だん",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "勝",
+              "r": "か",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,326 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p03239",
+  "source_text": "“他是很寂寞。唉，不过，他总是这个样子啊。”",
+  "source_sha256": "ab7928d895b0a4f1d111663fc050c20feea67d276d84d0333d452bbebb824968",
+  "source_normalized_sha256": "ab7928d895b0a4f1d111663fc050c20feea67d276d84d0333d452bbebb824968",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 35,
+    "grammar_token_total": 35,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-3239",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "四十一",
+    "title_zh": [
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "attributive"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-四十一-intro",
+    "title_zh": [
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p03239",
+    "source_text": "“他是很寂寞。唉，不过，他总是这个样子啊。”",
+    "units": [
+      {
+        "source_text": "“他是很寂寞。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "很",
+            "r": "hěn",
+            "g": "predicate"
+          },
+          {
+            "t": "寂",
+            "r": "jì",
+            "g": "predicate"
+          },
+          {
+            "t": "寞",
+            "r": "mò",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "とても",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "寂",
+              "r": "さび",
+              "g": "predicate"
+            },
+            {
+              "t": "しいのです。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "唉，不过，他总是这个样子啊。”",
+        "zh": [
+          {
+            "t": "唉",
+            "r": "āi",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "总",
+            "r": "zǒng",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "adverbial"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "object"
+          },
+          {
+            "t": "个",
+            "r": "ge",
+            "g": "object"
+          },
+          {
+            "t": "样",
+            "r": "yàng",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ああ、けれど、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "いつも",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "こういう",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "様",
+              "r": "よう",
+              "g": "object"
+            },
+            {
+              "t": "子",
+              "r": "す",
+              "g": "object"
+            },
+            {
+              "t": "なのですね。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02755",
+  "source_text": "“本周的问题是黑91。”",
+  "source_sha256": "6595f50343edbca7fb31fcf214fde5b9fe963f8f74bdab3148ebf5a271a83bfb",
+  "source_normalized_sha256": "6595f50343edbca7fb31fcf214fde5b9fe963f8f74bdab3148ebf5a271a83bfb",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 22,
+    "grammar_token_total": 22,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-2755",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "subject"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "十九",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "九",
+        "r": "jiǔ",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "九",
+        "r": "きゅう",
+        "g": "subject"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-十九-intro",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "九",
+        "r": "jiǔ",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "九",
+        "r": "きゅう",
+        "g": "subject"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02755",
+    "source_text": "“本周的问题是黑91。”",
+    "units": [
+      {
+        "source_text": "“本周的问题是黑91。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "attributive"
+          },
+          {
+            "t": "周",
+            "r": "zhōu",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "问",
+            "r": "wèn",
+            "g": "subject"
+          },
+          {
+            "t": "题",
+            "r": "tí",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "黑",
+            "r": "hēi",
+            "g": "complement"
+          },
+          {
+            "t": "91",
+            "r": "",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "今",
+              "r": "こん",
+              "g": "attributive"
+            },
+            {
+              "t": "週",
+              "r": "しゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "問",
+              "r": "もん",
+              "g": "subject"
+            },
+            {
+              "t": "題",
+              "r": "だい",
+              "g": "subject"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "黒",
+              "r": "くろ",
+              "g": "complement"
+            },
+            {
+              "t": "91",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "です。",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

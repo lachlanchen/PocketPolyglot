@@ -1,0 +1,426 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02586",
+  "source_text": "今早放晴的天空又阴沉下来。这是大雨的前兆，水灾从关东波及关西。",
+  "source_sha256": "17f35f8a5d5f929f6dbdf145ceaadbfabd81f4c11e0d3b17e72d99deca0e259e",
+  "source_normalized_sha256": "17f35f8a5d5f929f6dbdf145ceaadbfabd81f4c11e0d3b17e72d99deca0e259e",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 63,
+    "grammar_token_total": 63,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-2586",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "十",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-十-intro",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02586",
+    "source_text": "今早放晴的天空又阴沉下来。这是大雨的前兆，水灾从关东波及关西。",
+    "units": [
+      {
+        "source_text": "今早放晴的天空又阴沉下来。",
+        "zh": [
+          {
+            "t": "今",
+            "r": "jīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "早",
+            "r": "zǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "放",
+            "r": "fàng",
+            "g": "attributive"
+          },
+          {
+            "t": "晴",
+            "r": "qíng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "subject"
+          },
+          {
+            "t": "空",
+            "r": "kōng",
+            "g": "subject"
+          },
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "阴",
+            "r": "yīn",
+            "g": "predicate"
+          },
+          {
+            "t": "沉",
+            "r": "chén",
+            "g": "predicate"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "complement"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "今",
+              "r": "けさ",
+              "g": "adverbial"
+            },
+            {
+              "t": "朝",
+              "r": "さ",
+              "g": "adverbial"
+            },
+            {
+              "t": "晴",
+              "r": "は",
+              "g": "attributive"
+            },
+            {
+              "t": "れた",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "空",
+              "r": "そら",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "また",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "陰",
+              "r": "かげ",
+              "g": "predicate"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "暗",
+              "r": "くら",
+              "g": "complement"
+            },
+            {
+              "t": "くなってきた",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "这是大雨的前兆，水灾从关东波及关西。",
+        "zh": [
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "attributive"
+          },
+          {
+            "t": "雨",
+            "r": "yǔ",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "前",
+            "r": "qián",
+            "g": "object"
+          },
+          {
+            "t": "兆",
+            "r": "zhào",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "水",
+            "r": "shuǐ",
+            "g": "subject"
+          },
+          {
+            "t": "灾",
+            "r": "zāi",
+            "g": "subject"
+          },
+          {
+            "t": "从",
+            "r": "cóng",
+            "g": "adverbial"
+          },
+          {
+            "t": "关",
+            "r": "guān",
+            "g": "adverbial"
+          },
+          {
+            "t": "东",
+            "r": "dōng",
+            "g": "adverbial"
+          },
+          {
+            "t": "波",
+            "r": "bō",
+            "g": "predicate"
+          },
+          {
+            "t": "及",
+            "r": "jí",
+            "g": "predicate"
+          },
+          {
+            "t": "关",
+            "r": "guān",
+            "g": "object"
+          },
+          {
+            "t": "西",
+            "r": "xī",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "これは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "attributive"
+            },
+            {
+              "t": "雨",
+              "r": "あめ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "前",
+              "r": "ぜん",
+              "g": "object"
+            },
+            {
+              "t": "兆",
+              "r": "ちょう",
+              "g": "object"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "水",
+              "r": "すい",
+              "g": "subject"
+            },
+            {
+              "t": "害",
+              "r": "がい",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "関",
+              "r": "かん",
+              "g": "adverbial"
+            },
+            {
+              "t": "東",
+              "r": "とう",
+              "g": "adverbial"
+            },
+            {
+              "t": "から",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "関",
+              "r": "かん",
+              "g": "object"
+            },
+            {
+              "t": "西",
+              "r": "さい",
+              "g": "object"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "及",
+              "r": "およ",
+              "g": "predicate"
+            },
+            {
+              "t": "んだ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

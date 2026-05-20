@@ -1,0 +1,316 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02898",
+  "source_text": "“大致是初段吧。近来似乎长棋了。”",
+  "source_sha256": "a31551dd9d4e88a4c9851aaae5ab39ba4566fec9ec8265193421e2d44f676c33",
+  "source_normalized_sha256": "a31551dd9d4e88a4c9851aaae5ab39ba4566fec9ec8265193421e2d44f676c33",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 33,
+    "grammar_token_total": 33,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-2898",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "二十七",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "attributive"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-二十七-intro",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02898",
+    "source_text": "“大致是初段吧。近来似乎长棋了。”",
+    "units": [
+      {
+        "source_text": "“大致是初段吧。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "adverbial"
+          },
+          {
+            "t": "致",
+            "r": "zhì",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "初",
+            "r": "chū",
+            "g": "complement"
+          },
+          {
+            "t": "段",
+            "r": "duàn",
+            "g": "complement"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "だいたい",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "初",
+              "r": "しょ",
+              "g": "complement"
+            },
+            {
+              "t": "段",
+              "r": "だん",
+              "g": "complement"
+            },
+            {
+              "t": "くらい",
+              "r": "",
+              "g": "complement"
+            }
+          ],
+          [
+            {
+              "t": "でしょう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "近来似乎长棋了。”",
+        "zh": [
+          {
+            "t": "近",
+            "r": "jìn",
+            "g": "adverbial"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "adverbial"
+          },
+          {
+            "t": "似",
+            "r": "sì",
+            "g": "adverbial"
+          },
+          {
+            "t": "乎",
+            "r": "hū",
+            "g": "adverbial"
+          },
+          {
+            "t": "长",
+            "r": "zhǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "棋",
+            "r": "qí",
+            "g": "object"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "近",
+              "r": "ちか",
+              "g": "adverbial"
+            },
+            {
+              "t": "ごろ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "棋",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "力",
+              "r": "りょく",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "伸",
+              "r": "の",
+              "g": "predicate"
+            },
+            {
+              "t": "びたようです",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

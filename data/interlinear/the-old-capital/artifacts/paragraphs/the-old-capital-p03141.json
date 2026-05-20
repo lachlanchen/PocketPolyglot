@@ -1,0 +1,799 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p03141",
+  "source_text": "“白子强下120。大概黑子也下定决心，强下123至129。黑子这种下法，在细棋里是常见的。这是决胜的一种气势。”吴六段这样解说。",
+  "source_sha256": "307f67b0165d7f28040f686d604ad953a95006dde33ab434a2c9bd0c460282a4",
+  "source_normalized_sha256": "307f67b0165d7f28040f686d604ad953a95006dde33ab434a2c9bd0c460282a4",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 123,
+    "grammar_token_total": 123,
+    "unit_count": 5
+  },
+  "source_chunk_id": "the-old-capital-chunk-3141",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "三十七",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "七",
+        "r": "しち",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-三十七-intro",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "七",
+        "r": "しち",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p03141",
+    "source_text": "“白子强下120。大概黑子也下定决心，强下123至129。黑子这种下法，在细棋里是常见的。这是决胜的一种气势。”吴六段这样解说。",
+    "units": [
+      {
+        "source_text": "“白子强下120。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "白",
+            "r": "bái",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "强",
+            "r": "qiáng",
+            "g": "adverbial"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "predicate"
+          },
+          {
+            "t": "120",
+            "r": "",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "白",
+              "r": "しろ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "120",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "object"
+            },
+            {
+              "t": "目",
+              "r": "め",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "強",
+              "r": "きょう",
+              "g": "adverbial"
+            },
+            {
+              "t": "引",
+              "r": "いん",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "打",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "大概黑子也下定决心，强下123至129。",
+        "zh": [
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "adverbial"
+          },
+          {
+            "t": "概",
+            "r": "gài",
+            "g": "adverbial"
+          },
+          {
+            "t": "黑",
+            "r": "hēi",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "predicate"
+          },
+          {
+            "t": "定",
+            "r": "dìng",
+            "g": "predicate"
+          },
+          {
+            "t": "决",
+            "r": "jué",
+            "g": "object"
+          },
+          {
+            "t": "心",
+            "r": "xīn",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "强",
+            "r": "qiáng",
+            "g": "adverbial"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "predicate"
+          },
+          {
+            "t": "123",
+            "r": "",
+            "g": "object"
+          },
+          {
+            "t": "至",
+            "r": "zhì",
+            "g": "object"
+          },
+          {
+            "t": "129",
+            "r": "",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "おそらく",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "黒",
+              "r": "くろ",
+              "g": "subject"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "覚",
+              "r": "かく",
+              "g": "object"
+            },
+            {
+              "t": "悟",
+              "r": "ご",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "決",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "め、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "123",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "object"
+            },
+            {
+              "t": "目",
+              "r": "め",
+              "g": "object"
+            },
+            {
+              "t": "から",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "129",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "object"
+            },
+            {
+              "t": "目",
+              "r": "め",
+              "g": "object"
+            },
+            {
+              "t": "まで",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "強",
+              "r": "きょう",
+              "g": "adverbial"
+            },
+            {
+              "t": "引",
+              "r": "いん",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "打",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "黑子这种下法，在细棋里是常见的。",
+        "zh": [
+          {
+            "t": "黑",
+            "r": "hēi",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "种",
+            "r": "zhǒng",
+            "g": "subject"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "subject"
+          },
+          {
+            "t": "法",
+            "r": "fǎ",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "细",
+            "r": "xì",
+            "g": "adverbial"
+          },
+          {
+            "t": "棋",
+            "r": "qí",
+            "g": "adverbial"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "常",
+            "r": "cháng",
+            "g": "predicate"
+          },
+          {
+            "t": "见",
+            "r": "jiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "黒",
+              "r": "くろ",
+              "g": "subject"
+            },
+            {
+              "t": "のこの",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "打",
+              "r": "う",
+              "g": "subject"
+            },
+            {
+              "t": "ち",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "方",
+              "r": "かた",
+              "g": "subject"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "細",
+              "r": "こま",
+              "g": "adverbial"
+            },
+            {
+              "t": "かい",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "碁",
+              "r": "ご",
+              "g": "adverbial"
+            },
+            {
+              "t": "ではよく",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "られる。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "这是决胜的一种气势。”",
+        "zh": [
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "决",
+            "r": "jué",
+            "g": "attributive"
+          },
+          {
+            "t": "胜",
+            "r": "shèng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "attributive"
+          },
+          {
+            "t": "种",
+            "r": "zhǒng",
+            "g": "attributive"
+          },
+          {
+            "t": "气",
+            "r": "qì",
+            "g": "object"
+          },
+          {
+            "t": "势",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "これは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "勝",
+              "r": "しょう",
+              "g": "attributive"
+            },
+            {
+              "t": "敗",
+              "r": "はい",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "決",
+              "r": "けっ",
+              "g": "attributive"
+            },
+            {
+              "t": "する",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "一",
+              "r": "いっ",
+              "g": "attributive"
+            },
+            {
+              "t": "種",
+              "r": "しゅ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "気",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "迫",
+              "r": "はく",
+              "g": "object"
+            },
+            {
+              "t": "である",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "吴六段这样解说。",
+        "zh": [
+          {
+            "t": "吴",
+            "r": "wú",
+            "g": "subject"
+          },
+          {
+            "t": "六",
+            "r": "liù",
+            "g": "subject"
+          },
+          {
+            "t": "段",
+            "r": "duàn",
+            "g": "subject"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "adverbial"
+          },
+          {
+            "t": "样",
+            "r": "yàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "解",
+            "r": "jiě",
+            "g": "predicate"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "呉",
+              "r": "ご",
+              "g": "subject"
+            },
+            {
+              "t": "六",
+              "r": "ろく",
+              "g": "subject"
+            },
+            {
+              "t": "段",
+              "r": "だん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "このように",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "解",
+              "r": "かい",
+              "g": "predicate"
+            },
+            {
+              "t": "説",
+              "r": "せつ",
+              "g": "predicate"
+            },
+            {
+              "t": "した。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

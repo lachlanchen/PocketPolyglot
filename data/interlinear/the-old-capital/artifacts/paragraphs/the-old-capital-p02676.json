@@ -1,0 +1,210 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02676",
+  "source_text": "“是不是有什么病呢？”",
+  "source_sha256": "abd8f75cb544d772f79f87af1b7d24c4d7114e051cc839ab75043d917e3cbfcf",
+  "source_normalized_sha256": "abd8f75cb544d772f79f87af1b7d24c4d7114e051cc839ab75043d917e3cbfcf",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 18,
+    "grammar_token_total": 18,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-2676",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "十五",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "五",
+        "r": "wǔ",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "五",
+        "r": "ご",
+        "g": "function"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-十五-intro",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "五",
+        "r": "wǔ",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "五",
+        "r": "ご",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02676",
+    "source_text": "“是不是有什么病呢？”",
+    "units": [
+      {
+        "source_text": "“是不是有什么病呢？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "不",
+            "r": "bú",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "什",
+            "r": "shén",
+            "g": "attributive"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "attributive"
+          },
+          {
+            "t": "病",
+            "r": "bìng",
+            "g": "object"
+          },
+          {
+            "t": "呢",
+            "r": "ne",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "どこか",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "具",
+              "r": "ぐ",
+              "g": "subject"
+            },
+            {
+              "t": "合",
+              "r": "あい",
+              "g": "subject"
+            },
+            {
+              "t": "でも",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "悪",
+              "r": "わる",
+              "g": "predicate"
+            },
+            {
+              "t": "いのですか",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,582 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02820",
+  "source_text": "八月五日，按规定是对弈日。最后决定上午只下两个小时。这之前，名人还要接受诊视。",
+  "source_sha256": "180e2a36dca0e098498c7dc3d8a1a2590da381ec9d4609e71d1cf2bf5285e6f9",
+  "source_normalized_sha256": "180e2a36dca0e098498c7dc3d8a1a2590da381ec9d4609e71d1cf2bf5285e6f9",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 84,
+    "grammar_token_total": 84,
+    "unit_count": 3
+  },
+  "source_chunk_id": "the-old-capital-chunk-2820",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "二十三",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-二十三-intro",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02820",
+    "source_text": "八月五日，按规定是对弈日。最后决定上午只下两个小时。这之前，名人还要接受诊视。",
+    "units": [
+      {
+        "source_text": "八月五日，按规定是对弈日。",
+        "zh": [
+          {
+            "t": "八",
+            "r": "bā",
+            "g": "adverbial"
+          },
+          {
+            "t": "月",
+            "r": "yuè",
+            "g": "adverbial"
+          },
+          {
+            "t": "五",
+            "r": "wǔ",
+            "g": "adverbial"
+          },
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "按",
+            "r": "àn",
+            "g": "adverbial"
+          },
+          {
+            "t": "规",
+            "r": "guī",
+            "g": "adverbial"
+          },
+          {
+            "t": "定",
+            "r": "dìng",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "对",
+            "r": "duì",
+            "g": "attributive"
+          },
+          {
+            "t": "弈",
+            "r": "yì",
+            "g": "attributive"
+          },
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "八",
+              "r": "はち",
+              "g": "adverbial"
+            },
+            {
+              "t": "月",
+              "r": "がつ",
+              "g": "adverbial"
+            },
+            {
+              "t": "五",
+              "r": "いつ",
+              "g": "adverbial"
+            },
+            {
+              "t": "日",
+              "r": "か",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "規",
+              "r": "き",
+              "g": "adverbial"
+            },
+            {
+              "t": "定",
+              "r": "てい",
+              "g": "adverbial"
+            },
+            {
+              "t": "どおり",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "対",
+              "r": "たい",
+              "g": "attributive"
+            },
+            {
+              "t": "局",
+              "r": "きょく",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "日",
+              "r": "ひ",
+              "g": "object"
+            },
+            {
+              "t": "であった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "最后决定上午只下两个小时。",
+        "zh": [
+          {
+            "t": "最",
+            "r": "zuì",
+            "g": "adverbial"
+          },
+          {
+            "t": "后",
+            "r": "hòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "决",
+            "r": "jué",
+            "g": "predicate"
+          },
+          {
+            "t": "定",
+            "r": "dìng",
+            "g": "predicate"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "午",
+            "r": "wǔ",
+            "g": "adverbial"
+          },
+          {
+            "t": "只",
+            "r": "zhǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "predicate"
+          },
+          {
+            "t": "两",
+            "r": "liǎng",
+            "g": "complement"
+          },
+          {
+            "t": "个",
+            "r": "ge",
+            "g": "complement"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "complement"
+          },
+          {
+            "t": "时",
+            "r": "shí",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "最",
+              "r": "さい",
+              "g": "adverbial"
+            },
+            {
+              "t": "後",
+              "r": "ご",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "午",
+              "r": "ご",
+              "g": "adverbial"
+            },
+            {
+              "t": "前",
+              "r": "ぜん",
+              "g": "adverbial"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "ただ",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "二",
+              "r": "に",
+              "g": "complement"
+            },
+            {
+              "t": "時",
+              "r": "じ",
+              "g": "complement"
+            },
+            {
+              "t": "間",
+              "r": "かん",
+              "g": "complement"
+            },
+            {
+              "t": "だけ",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "打",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "つことに",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "決",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "まった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "这之前，名人还要接受诊视。",
+        "zh": [
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "adverbial"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "adverbial"
+          },
+          {
+            "t": "前",
+            "r": "qián",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "adverbial"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "predicate"
+          },
+          {
+            "t": "接",
+            "r": "jiē",
+            "g": "predicate"
+          },
+          {
+            "t": "受",
+            "r": "shòu",
+            "g": "predicate"
+          },
+          {
+            "t": "诊",
+            "r": "zhěn",
+            "g": "object"
+          },
+          {
+            "t": "视",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "その",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "前",
+              "r": "まえ",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "名",
+              "r": "めい",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "なお",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "診",
+              "r": "しん",
+              "g": "object"
+            },
+            {
+              "t": "察",
+              "r": "さつ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "受",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "けなければならなかった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

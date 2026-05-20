@@ -1,0 +1,471 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02863",
+  "source_text": "“我休息三天，不能消除疲劳。一天下两个半小时，鼓不起劲儿来。”",
+  "source_sha256": "29d8f1fbd31ac3d6eee4593bbf181a07c421b50ecbfa1de34bdfe99268d460fb",
+  "source_normalized_sha256": "29d8f1fbd31ac3d6eee4593bbf181a07c421b50ecbfa1de34bdfe99268d460fb",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 64,
+    "grammar_token_total": 64,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-2863",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "二十五",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "五",
+        "r": "wǔ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "五",
+        "r": "ご",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-二十五-intro",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "五",
+        "r": "wǔ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "五",
+        "r": "ご",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02863",
+    "source_text": "“我休息三天，不能消除疲劳。一天下两个半小时，鼓不起劲儿来。”",
+    "units": [
+      {
+        "source_text": "“我休息三天，不能消除疲劳。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "休",
+            "r": "xiū",
+            "g": "predicate"
+          },
+          {
+            "t": "息",
+            "r": "xi",
+            "g": "predicate"
+          },
+          {
+            "t": "三",
+            "r": "sān",
+            "g": "complement"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "能",
+            "r": "néng",
+            "g": "adverbial"
+          },
+          {
+            "t": "消",
+            "r": "xiāo",
+            "g": "predicate"
+          },
+          {
+            "t": "除",
+            "r": "chú",
+            "g": "predicate"
+          },
+          {
+            "t": "疲",
+            "r": "pí",
+            "g": "object"
+          },
+          {
+            "t": "劳",
+            "r": "láo",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "三",
+              "r": "みっ",
+              "g": "complement"
+            },
+            {
+              "t": "日",
+              "r": "か",
+              "g": "complement"
+            },
+            {
+              "t": "休",
+              "r": "やす",
+              "g": "predicate"
+            },
+            {
+              "t": "んでも",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "疲",
+              "r": "つか",
+              "g": "object"
+            },
+            {
+              "t": "れを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "取",
+              "r": "と",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "除",
+              "r": "のぞ",
+              "g": "predicate"
+            },
+            {
+              "t": "けません",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "一天下两个半小时，鼓不起劲儿来。”",
+        "zh": [
+          {
+            "t": "一",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "predicate"
+          },
+          {
+            "t": "两",
+            "r": "liǎng",
+            "g": "object"
+          },
+          {
+            "t": "个",
+            "r": "ge",
+            "g": "object"
+          },
+          {
+            "t": "半",
+            "r": "bàn",
+            "g": "object"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "object"
+          },
+          {
+            "t": "时",
+            "r": "shí",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "鼓",
+            "r": "gǔ",
+            "g": "predicate"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "complement"
+          },
+          {
+            "t": "劲",
+            "r": "jìn",
+            "g": "object"
+          },
+          {
+            "t": "儿",
+            "r": "r",
+            "g": "object"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "adverbial"
+            },
+            {
+              "t": "日",
+              "r": "にち",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "二",
+              "r": "に",
+              "g": "object"
+            },
+            {
+              "t": "時",
+              "r": "じ",
+              "g": "object"
+            },
+            {
+              "t": "間",
+              "r": "かん",
+              "g": "object"
+            },
+            {
+              "t": "半",
+              "r": "はん",
+              "g": "object"
+            },
+            {
+              "t": "打",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "つと",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "気",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "力",
+              "r": "りょく",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "湧",
+              "r": "わ",
+              "g": "predicate"
+            },
+            {
+              "t": "いて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "きません",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

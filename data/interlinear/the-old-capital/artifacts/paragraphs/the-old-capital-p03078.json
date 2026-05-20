@@ -1,0 +1,220 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p03078",
+  "source_text": "七段似乎很意外。",
+  "source_sha256": "b28cf174c404af3d60a3cb42ff982441f22f19e404e195f9f41c78fedb63e8c5",
+  "source_normalized_sha256": "b28cf174c404af3d60a3cb42ff982441f22f19e404e195f9f41c78fedb63e8c5",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 16,
+    "grammar_token_total": 16,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-3078",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "三十四",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "四",
+        "r": "し",
+        "g": "attributive"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-三十四-intro",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "四",
+        "r": "し",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p03078",
+    "source_text": "七段似乎很意外。",
+    "units": [
+      {
+        "source_text": "七段似乎很意外。",
+        "zh": [
+          {
+            "t": "七",
+            "r": "qī",
+            "g": "subject"
+          },
+          {
+            "t": "段",
+            "r": "duàn",
+            "g": "subject"
+          },
+          {
+            "t": "似",
+            "r": "sì",
+            "g": "adverbial"
+          },
+          {
+            "t": "乎",
+            "r": "hū",
+            "g": "adverbial"
+          },
+          {
+            "t": "很",
+            "r": "hěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "意",
+            "r": "yì",
+            "g": "predicate"
+          },
+          {
+            "t": "外",
+            "r": "wài",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "七",
+              "r": "しち",
+              "g": "subject"
+            },
+            {
+              "t": "段",
+              "r": "だん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "ひどく",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "意",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "外",
+              "r": "がい",
+              "g": "predicate"
+            },
+            {
+              "t": "そうだった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

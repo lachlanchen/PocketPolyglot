@@ -1,0 +1,587 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p02936",
+  "source_text": "“是很有前途的。但不能操之过急……他们拥有相当水平的棋手，但很多人把围棋当作赌博。”",
+  "source_sha256": "c06bbf62ab31d67c307a21067635d1d33814aa7787bad43476793f3a9851f5f7",
+  "source_normalized_sha256": "c06bbf62ab31d67c307a21067635d1d33814aa7787bad43476793f3a9851f5f7",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 85,
+    "grammar_token_total": 85,
+    "unit_count": 3
+  },
+  "source_chunk_id": "the-old-capital-chunk-2936",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "名人",
+    "title_zh": [
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "名",
+        "r": "めい",
+        "g": "topic"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "二十八",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "八",
+        "r": "bā",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "八",
+        "r": "はち",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "名人-二十八-intro",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "topic"
+      },
+      {
+        "t": "八",
+        "r": "bā",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "topic"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "topic"
+      },
+      {
+        "t": "八",
+        "r": "はち",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p02936",
+    "source_text": "“是很有前途的。但不能操之过急……他们拥有相当水平的棋手，但很多人把围棋当作赌博。”",
+    "units": [
+      {
+        "source_text": "“是很有前途的。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "很",
+            "r": "hěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "前",
+            "r": "qián",
+            "g": "object"
+          },
+          {
+            "t": "途",
+            "r": "tú",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "将",
+              "r": "しょう",
+              "g": "predicate"
+            },
+            {
+              "t": "来",
+              "r": "らい",
+              "g": "predicate"
+            },
+            {
+              "t": "性",
+              "r": "せい",
+              "g": "predicate"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "complement"
+            },
+            {
+              "t": "いに",
+              "r": "",
+              "g": "complement"
+            }
+          ],
+          [
+            {
+              "t": "ある",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "但不能操之过急……",
+        "zh": [
+          {
+            "t": "但",
+            "r": "dàn",
+            "g": "function"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "能",
+            "r": "néng",
+            "g": "adverbial"
+          },
+          {
+            "t": "操",
+            "r": "cāo",
+            "g": "predicate"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "object"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "adverbial"
+          },
+          {
+            "t": "急",
+            "r": "jí",
+            "g": "complement"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "しかし",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "急",
+              "r": "いそ",
+              "g": "adverbial"
+            },
+            {
+              "t": "ぎすぎて",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "事",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "運",
+              "r": "はこ",
+              "g": "predicate"
+            },
+            {
+              "t": "んではならない",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "……",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "他们拥有相当水平的棋手，但很多人把围棋当作赌博。”",
+        "zh": [
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          },
+          {
+            "t": "拥",
+            "r": "yōng",
+            "g": "predicate"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "相",
+            "r": "xiāng",
+            "g": "attributive"
+          },
+          {
+            "t": "当",
+            "r": "dāng",
+            "g": "attributive"
+          },
+          {
+            "t": "水",
+            "r": "shuǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "平",
+            "r": "píng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "棋",
+            "r": "qí",
+            "g": "object"
+          },
+          {
+            "t": "手",
+            "r": "shǒu",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "但",
+            "r": "dàn",
+            "g": "function"
+          },
+          {
+            "t": "很",
+            "r": "hěn",
+            "g": "attributive"
+          },
+          {
+            "t": "多",
+            "r": "duō",
+            "g": "attributive"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "围",
+            "r": "wéi",
+            "g": "object"
+          },
+          {
+            "t": "棋",
+            "r": "qí",
+            "g": "object"
+          },
+          {
+            "t": "当",
+            "r": "dàng",
+            "g": "predicate"
+          },
+          {
+            "t": "作",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "赌",
+            "r": "dǔ",
+            "g": "complement"
+          },
+          {
+            "t": "博",
+            "r": "bó",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "らには",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "相",
+              "r": "そう",
+              "g": "attributive"
+            },
+            {
+              "t": "当",
+              "r": "とう",
+              "g": "attributive"
+            },
+            {
+              "t": "な",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "水",
+              "r": "すい",
+              "g": "attributive"
+            },
+            {
+              "t": "準",
+              "r": "じゅん",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "棋",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "士",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "がいる",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "多",
+              "r": "おお",
+              "g": "attributive"
+            },
+            {
+              "t": "くの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "囲",
+              "r": "い",
+              "g": "object"
+            },
+            {
+              "t": "碁",
+              "r": "ご",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "賭",
+              "r": "と",
+              "g": "complement"
+            },
+            {
+              "t": "博",
+              "r": "ばく",
+              "g": "complement"
+            },
+            {
+              "t": "とみなしている",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
