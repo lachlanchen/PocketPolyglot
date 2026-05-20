@@ -1,0 +1,321 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01264",
+  "source_text": "“请好好歇息吧。”父亲对客人招呼。",
+  "source_sha256": "b18147efa493c6be77f4d271839127674c4d4efbded942112e6bca78248efe8e",
+  "source_normalized_sha256": "b18147efa493c6be77f4d271839127674c4d4efbded942112e6bca78248efe8e",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 34,
+    "grammar_token_total": 34,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-1264",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "祇园节",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "attributive"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "attributive"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "attributive"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "attributive"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-祇园节-intro",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "attributive"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "attributive"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "attributive"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "attributive"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01264",
+    "source_text": "“请好好歇息吧。”父亲对客人招呼。",
+    "units": [
+      {
+        "source_text": "“请好好歇息吧。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "请",
+            "r": "qǐng",
+            "g": "adverbial"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "歇",
+            "r": "xiē",
+            "g": "predicate"
+          },
+          {
+            "t": "息",
+            "r": "xī",
+            "g": "predicate"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "どうぞ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "ゆっくり",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "お",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "休",
+              "r": "やす",
+              "g": "predicate"
+            },
+            {
+              "t": "みください",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "父亲对客人招呼。",
+        "zh": [
+          {
+            "t": "父",
+            "r": "fù",
+            "g": "subject"
+          },
+          {
+            "t": "亲",
+            "r": "qīn",
+            "g": "subject"
+          },
+          {
+            "t": "对",
+            "r": "duì",
+            "g": "adverbial"
+          },
+          {
+            "t": "客",
+            "r": "kè",
+            "g": "adverbial"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "adverbial"
+          },
+          {
+            "t": "招",
+            "r": "zhāo",
+            "g": "predicate"
+          },
+          {
+            "t": "呼",
+            "r": "hu",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "父",
+              "r": "ちち",
+              "g": "subject"
+            },
+            {
+              "t": "親",
+              "r": "おや",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "客",
+              "r": "きゃく",
+              "g": "adverbial"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "そう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "声",
+              "r": "こえ",
+              "g": "predicate"
+            },
+            {
+              "t": "をかけた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
