@@ -1,0 +1,823 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01082",
+  "source_text": "“很早以前……在北山砍杉树枝，从这棵树荡到另一棵树时，没悠荡好，掉落下来，摔在致命的地方……这是听村里人说的。那时我刚出生，什么也不知道……”",
+  "source_sha256": "fbd4322b70fd171c3db515822874ca4408033492838e479cdddbb120ef125dbb",
+  "source_normalized_sha256": "fbd4322b70fd171c3db515822874ca4408033492838e479cdddbb120ef125dbb",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 130,
+    "grammar_token_total": 130,
+    "unit_count": 4
+  },
+  "source_chunk_id": "the-old-capital-chunk-1082",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "祇园节",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "topic"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "topic"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "topic"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "topic"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-祇园节-intro",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "topic"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "topic"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "topic"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "topic"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01082",
+    "source_text": "“很早以前……在北山砍杉树枝，从这棵树荡到另一棵树时，没悠荡好，掉落下来，摔在致命的地方……这是听村里人说的。那时我刚出生，什么也不知道……”",
+    "units": [
+      {
+        "source_text": "“很早以前……在北山砍杉树枝，从这棵树荡到另一棵树时，没悠荡好，",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "很",
+            "r": "hěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "早",
+            "r": "zǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "前",
+            "r": "qián",
+            "g": "adverbial"
+          },
+          {
+            "t": "……",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "北",
+            "r": "běi",
+            "g": "adverbial"
+          },
+          {
+            "t": "山",
+            "r": "shān",
+            "g": "adverbial"
+          },
+          {
+            "t": "砍",
+            "r": "kǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "杉",
+            "r": "shān",
+            "g": "object"
+          },
+          {
+            "t": "树",
+            "r": "shù",
+            "g": "object"
+          },
+          {
+            "t": "枝",
+            "r": "zhī",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "从",
+            "r": "cóng",
+            "g": "adverbial"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "adverbial"
+          },
+          {
+            "t": "棵",
+            "r": "kē",
+            "g": "adverbial"
+          },
+          {
+            "t": "树",
+            "r": "shù",
+            "g": "adverbial"
+          },
+          {
+            "t": "荡",
+            "r": "dàng",
+            "g": "predicate"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "另",
+            "r": "lìng",
+            "g": "complement"
+          },
+          {
+            "t": "一",
+            "r": "yì",
+            "g": "complement"
+          },
+          {
+            "t": "棵",
+            "r": "kē",
+            "g": "complement"
+          },
+          {
+            "t": "树",
+            "r": "shù",
+            "g": "complement"
+          },
+          {
+            "t": "时",
+            "r": "shí",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "adverbial"
+          },
+          {
+            "t": "悠",
+            "r": "yōu",
+            "g": "predicate"
+          },
+          {
+            "t": "荡",
+            "r": "dàng",
+            "g": "predicate"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ずっと",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "昔",
+              "r": "むかし",
+              "g": "adverbial"
+            },
+            {
+              "t": "……",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "北",
+              "r": "きた",
+              "g": "adverbial"
+            },
+            {
+              "t": "山",
+              "r": "やま",
+              "g": "adverbial"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "杉",
+              "r": "すぎ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "枝",
+              "r": "えだ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "切",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "木",
+              "r": "き",
+              "g": "adverbial"
+            },
+            {
+              "t": "から",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "別",
+              "r": "べつ",
+              "g": "complement"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "木",
+              "r": "き",
+              "g": "complement"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "渡",
+              "r": "わた",
+              "g": "predicate"
+            },
+            {
+              "t": "る",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "時",
+              "r": "とき",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "うまく",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "揺",
+              "r": "ゆ",
+              "g": "predicate"
+            },
+            {
+              "t": "れず",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "掉落下来，摔在致命的地方……",
+        "zh": [
+          {
+            "t": "掉",
+            "r": "diào",
+            "g": "predicate"
+          },
+          {
+            "t": "落",
+            "r": "luò",
+            "g": "predicate"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "complement"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "摔",
+            "r": "shuāi",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "complement"
+          },
+          {
+            "t": "致",
+            "r": "zhì",
+            "g": "complement"
+          },
+          {
+            "t": "命",
+            "r": "mìng",
+            "g": "complement"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "complement"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "complement"
+          },
+          {
+            "t": "方",
+            "r": "fang",
+            "g": "complement"
+          },
+          {
+            "t": "……",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "落",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "ちてしまい",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "命",
+              "r": "いのち",
+              "g": "complement"
+            },
+            {
+              "t": "取",
+              "r": "と",
+              "g": "complement"
+            },
+            {
+              "t": "りの",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "場",
+              "r": "ば",
+              "g": "complement"
+            },
+            {
+              "t": "所",
+              "r": "しょ",
+              "g": "complement"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "ぶつかった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "……",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "这是听村里人说的。",
+        "zh": [
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "听",
+            "r": "tīng",
+            "g": "predicate"
+          },
+          {
+            "t": "村",
+            "r": "cūn",
+            "g": "adverbial"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "これは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "村",
+              "r": "むら",
+              "g": "adverbial"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "adverbial"
+            },
+            {
+              "t": "から",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "聞",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "いた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "話",
+              "r": "はなし",
+              "g": "predicate"
+            },
+            {
+              "t": "だ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "那时我刚出生，什么也不知道……”",
+        "zh": [
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "adverbial"
+          },
+          {
+            "t": "时",
+            "r": "shí",
+            "g": "adverbial"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "刚",
+            "r": "gāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "出",
+            "r": "chū",
+            "g": "predicate"
+          },
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "什",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "object"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "predicate"
+          },
+          {
+            "t": "知",
+            "r": "zhī",
+            "g": "predicate"
+          },
+          {
+            "t": "道",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "……”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "その",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "時",
+              "r": "とき",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "生",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "まれたばかりで",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "何",
+              "r": "なに",
+              "g": "object"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "知",
+              "r": "し",
+              "g": "predicate"
+            },
+            {
+              "t": "らなかった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "……」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

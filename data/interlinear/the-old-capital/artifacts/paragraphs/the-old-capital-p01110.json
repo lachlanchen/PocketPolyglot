@@ -1,0 +1,405 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01110",
+  "source_text": "“我家的铺子就在这儿附近，苗子，你哪怕打店门走过，也要来一趟呀。”",
+  "source_sha256": "b60a7e9af36b8dd4c61ebb258e99ce48ba2fcadb85c670b73484b0acde104a8d",
+  "source_normalized_sha256": "b60a7e9af36b8dd4c61ebb258e99ce48ba2fcadb85c670b73484b0acde104a8d",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 53,
+    "grammar_token_total": 53,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-1110",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "祇园节",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "attributive"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "attributive"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "attributive"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "attributive"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-祇园节-intro",
+    "title_zh": [
+      {
+        "t": "祇",
+        "r": "qí",
+        "g": "attributive"
+      },
+      {
+        "t": "园",
+        "r": "yuán",
+        "g": "attributive"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祇",
+        "r": "ぎ",
+        "g": "attributive"
+      },
+      {
+        "t": "園",
+        "r": "おん",
+        "g": "attributive"
+      },
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01110",
+    "source_text": "“我家的铺子就在这儿附近，苗子，你哪怕打店门走过，也要来一趟呀。”",
+    "units": [
+      {
+        "source_text": "“我家的铺子就在这儿附近，苗子，你哪怕打店门走过，也要来一趟呀。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "铺",
+            "r": "pù",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "subject"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "object"
+          },
+          {
+            "t": "儿",
+            "r": "r",
+            "g": "object"
+          },
+          {
+            "t": "附",
+            "r": "fù",
+            "g": "object"
+          },
+          {
+            "t": "近",
+            "r": "jìn",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "苗",
+            "r": "miáo",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "哪",
+            "r": "nǎ",
+            "g": "adverbial"
+          },
+          {
+            "t": "怕",
+            "r": "pà",
+            "g": "adverbial"
+          },
+          {
+            "t": "打",
+            "r": "dǎ",
+            "g": "predicate"
+          },
+          {
+            "t": "店",
+            "r": "diàn",
+            "g": "object"
+          },
+          {
+            "t": "门",
+            "r": "mén",
+            "g": "object"
+          },
+          {
+            "t": "走",
+            "r": "zǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "predicate"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "complement"
+          },
+          {
+            "t": "趟",
+            "r": "tàng",
+            "g": "complement"
+          },
+          {
+            "t": "呀",
+            "r": "ya",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「うちの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "店",
+              "r": "みせ",
+              "g": "subject"
+            },
+            {
+              "t": "はこの",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "近",
+              "r": "ちか",
+              "g": "object"
+            },
+            {
+              "t": "くなのよ、",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "苗",
+              "r": "なえ",
+              "g": "object"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "店",
+              "r": "みせ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "前",
+              "r": "まえ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "通",
+              "r": "とお",
+              "g": "predicate"
+            },
+            {
+              "t": "りかかるだけでも、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "必",
+              "r": "かなら",
+              "g": "adverbial"
+            },
+            {
+              "t": "ず",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "complement"
+            },
+            {
+              "t": "度",
+              "r": "ど",
+              "g": "complement"
+            },
+            {
+              "t": "寄",
+              "r": "よ",
+              "g": "predicate"
+            },
+            {
+              "t": "ってね。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
