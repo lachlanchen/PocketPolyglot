@@ -1,0 +1,377 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00789",
+  "source_text": "“是吗？”千重子并没认真看，“你啊，别太冒失了。”",
+  "source_sha256": "0e1eafbf6f050197dd2999e53f53fbf1b8534663d07655bdb97780e94223645e",
+  "source_normalized_sha256": "0e1eafbf6f050197dd2999e53f53fbf1b8534663d07655bdb97780e94223645e",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 43,
+    "grammar_token_total": 43,
+    "unit_count": 3
+  },
+  "source_chunk_id": "the-old-capital-chunk-0789",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "北山杉",
+    "title_zh": [
+      {
+        "t": "北",
+        "r": "běi",
+        "g": "topic"
+      },
+      {
+        "t": "山",
+        "r": "shān",
+        "g": "topic"
+      },
+      {
+        "t": "杉",
+        "r": "shān",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "北",
+        "r": "きた",
+        "g": "topic"
+      },
+      {
+        "t": "山",
+        "r": "やま",
+        "g": "topic"
+      },
+      {
+        "t": "杉",
+        "r": "すぎ",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-北山杉-intro",
+    "title_zh": [
+      {
+        "t": "北",
+        "r": "běi",
+        "g": "topic"
+      },
+      {
+        "t": "山",
+        "r": "shān",
+        "g": "topic"
+      },
+      {
+        "t": "杉",
+        "r": "shān",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "北",
+        "r": "きた",
+        "g": "topic"
+      },
+      {
+        "t": "山",
+        "r": "やま",
+        "g": "topic"
+      },
+      {
+        "t": "杉",
+        "r": "すぎ",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00789",
+    "source_text": "“是吗？”千重子并没认真看，“你啊，别太冒失了。”",
+    "units": [
+      {
+        "source_text": "“是吗？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「そう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "な",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "の？」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "千重子并没认真看，",
+        "zh": [
+          {
+            "t": "千",
+            "r": "qiān",
+            "g": "subject"
+          },
+          {
+            "t": "重",
+            "r": "chóng",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "并",
+            "r": "bìng",
+            "g": "adverbial"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "adverbial"
+          },
+          {
+            "t": "认",
+            "r": "rèn",
+            "g": "adverbial"
+          },
+          {
+            "t": "真",
+            "r": "zhēn",
+            "g": "adverbial"
+          },
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "千",
+              "r": "ち",
+              "g": "subject"
+            },
+            {
+              "t": "重",
+              "r": "え",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "真",
+              "r": "しん",
+              "g": "adverbial"
+            },
+            {
+              "t": "剣",
+              "r": "けん",
+              "g": "adverbial"
+            },
+            {
+              "t": "には",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "ず、",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "“你啊，别太冒失了。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "topic"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "topic"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "别",
+            "r": "bié",
+            "g": "adverbial"
+          },
+          {
+            "t": "太",
+            "r": "tài",
+            "g": "adverbial"
+          },
+          {
+            "t": "冒",
+            "r": "mào",
+            "g": "predicate"
+          },
+          {
+            "t": "失",
+            "r": "shī",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「あなた",
+              "r": "",
+              "g": "topic"
+            },
+            {
+              "t": "ね、",
+              "r": "",
+              "g": "topic"
+            }
+          ],
+          [
+            {
+              "t": "あまり",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "軽",
+              "r": "けい",
+              "g": "predicate"
+            },
+            {
+              "t": "率",
+              "r": "そつ",
+              "g": "predicate"
+            },
+            {
+              "t": "にならないで。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

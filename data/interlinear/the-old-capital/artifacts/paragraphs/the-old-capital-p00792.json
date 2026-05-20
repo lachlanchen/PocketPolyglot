@@ -1,0 +1,255 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00792",
+  "source_text": "“简直就像你的异母姐妹啊！”",
+  "source_sha256": "93b5541ae13fbb8de813d97baf52478bdad718443b646b94bf30ab89dd9133e0",
+  "source_normalized_sha256": "93b5541ae13fbb8de813d97baf52478bdad718443b646b94bf30ab89dd9133e0",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 23,
+    "grammar_token_total": 23,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-0792",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "北山杉",
+    "title_zh": [
+      {
+        "t": "北",
+        "r": "běi",
+        "g": "topic"
+      },
+      {
+        "t": "山",
+        "r": "shān",
+        "g": "topic"
+      },
+      {
+        "t": "杉",
+        "r": "shān",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "北",
+        "r": "きた",
+        "g": "topic"
+      },
+      {
+        "t": "山",
+        "r": "やま",
+        "g": "topic"
+      },
+      {
+        "t": "杉",
+        "r": "すぎ",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-北山杉-intro",
+    "title_zh": [
+      {
+        "t": "北",
+        "r": "běi",
+        "g": "topic"
+      },
+      {
+        "t": "山",
+        "r": "shān",
+        "g": "topic"
+      },
+      {
+        "t": "杉",
+        "r": "shān",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "北",
+        "r": "きた",
+        "g": "topic"
+      },
+      {
+        "t": "山",
+        "r": "やま",
+        "g": "topic"
+      },
+      {
+        "t": "杉",
+        "r": "すぎ",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00792",
+    "source_text": "“简直就像你的异母姐妹啊！”",
+    "units": [
+      {
+        "source_text": "“简直就像你的异母姐妹啊！”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "简",
+            "r": "jiǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "直",
+            "r": "zhí",
+            "g": "adverbial"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "像",
+            "r": "xiàng",
+            "g": "predicate"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "异",
+            "r": "yì",
+            "g": "object"
+          },
+          {
+            "t": "母",
+            "r": "mǔ",
+            "g": "object"
+          },
+          {
+            "t": "姐",
+            "r": "jiě",
+            "g": "object"
+          },
+          {
+            "t": "妹",
+            "r": "mèi",
+            "g": "object"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "まるで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "あなたの",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "異",
+              "r": "い",
+              "g": "object"
+            },
+            {
+              "t": "母",
+              "r": "ぼ",
+              "g": "object"
+            },
+            {
+              "t": "姉",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "妹",
+              "r": "まい",
+              "g": "object"
+            },
+            {
+              "t": "みたいだわ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "！」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
