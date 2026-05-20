@@ -1,0 +1,205 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00901",
+  "source_text": "“做噩梦啦？”",
+  "source_sha256": "e1de87c34f0779d73743b79a8566dfae48f857590307b1956c6819c8c3cff1b9",
+  "source_normalized_sha256": "e1de87c34f0779d73743b79a8566dfae48f857590307b1956c6819c8c3cff1b9",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 13,
+    "grammar_token_total": 13,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-0901",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "object"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "object"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "北山杉",
+    "title_zh": [
+      {
+        "t": "北",
+        "r": "běi",
+        "g": "object"
+      },
+      {
+        "t": "山",
+        "r": "shān",
+        "g": "object"
+      },
+      {
+        "t": "杉",
+        "r": "shān",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "北",
+        "r": "きた",
+        "g": "object"
+      },
+      {
+        "t": "山",
+        "r": "やま",
+        "g": "object"
+      },
+      {
+        "t": "杉",
+        "r": "すぎ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-北山杉-intro",
+    "title_zh": [
+      {
+        "t": "北",
+        "r": "běi",
+        "g": "object"
+      },
+      {
+        "t": "山",
+        "r": "shān",
+        "g": "object"
+      },
+      {
+        "t": "杉",
+        "r": "shān",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "北",
+        "r": "きた",
+        "g": "object"
+      },
+      {
+        "t": "山",
+        "r": "やま",
+        "g": "object"
+      },
+      {
+        "t": "杉",
+        "r": "すぎ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00901",
+    "source_text": "“做噩梦啦？”",
+    "units": [
+      {
+        "source_text": "“做噩梦啦？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "做",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "噩",
+            "r": "è",
+            "g": "object"
+          },
+          {
+            "t": "梦",
+            "r": "mèng",
+            "g": "object"
+          },
+          {
+            "t": "啦",
+            "r": "la",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "悪",
+              "r": "わる",
+              "g": "object"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "夢",
+              "r": "ゆめ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "たの？",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
