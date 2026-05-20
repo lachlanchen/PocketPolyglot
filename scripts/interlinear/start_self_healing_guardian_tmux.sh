@@ -12,6 +12,7 @@ active_stall_repair="${ACTIVE_STALL_REPAIR_SECONDS:-21600}"
 model="${MODEL:-gpt-5.5}"
 reasoning="${REASONING:-medium}"
 sanitizer_workers="${SANITIZER_WORKERS:-4}"
+compile_when_complete="${COMPILE_WHEN_COMPLETE:-1}"
 log_dir="books/$book_id/work/guardian"
 run_script="$log_dir/${session}.run.sh"
 mkdir -p "$log_dir"
@@ -43,6 +44,7 @@ guardian_args=(
 [[ -n "${SANITIZER_COMMAND:-}" ]] && guardian_args+=(--sanitizer-command "$SANITIZER_COMMAND")
 [[ -n "${COMPILE_COMMAND:-}" ]] && guardian_args+=(--compile-command "$COMPILE_COMMAND")
 [[ -n "${COMMIT_COMMAND:-}" ]] && guardian_args+=(--commit-command "$COMMIT_COMMAND")
+[[ "$compile_when_complete" == "1" ]] && guardian_args+=(--compile-when-complete)
 
 quoted_args=()
 for arg in "${guardian_args[@]}"; do
@@ -109,6 +111,7 @@ echo "book_id: $book_id"
 echo "interval_seconds: $interval"
 echo "stall_seconds: $stall"
 echo "active_stall_repair_seconds: $active_stall_repair"
+echo "compile_when_complete: $compile_when_complete"
 echo "model: $model"
 echo "reasoning: $reasoning"
 echo "log: $log"

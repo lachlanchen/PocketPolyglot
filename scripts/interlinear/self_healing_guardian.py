@@ -420,6 +420,20 @@ def save_state(path: Path, state: dict[str, Any]) -> None:
     path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def complete_compile_marker(profile: BookProfile, reviewed: dict[str, str]) -> str:
+    return json.dumps(
+        {
+            "book_id": profile.book_id,
+            "manifest_chunks": reviewed.get("manifest_chunks", ""),
+            "valid_chunks": reviewed.get("valid_chunks", ""),
+            "last_valid": reviewed.get("last_valid", ""),
+            "compile_command": profile.compile_command,
+            "reviewed_mtime": latest_mtime([profile.reviewed_dir, profile.manifest]),
+        },
+        sort_keys=True,
+    )
+
+
 def guardian_once(args: argparse.Namespace, profile: BookProfile, state: dict[str, Any]) -> dict[str, Any]:
     actions: list[str] = []
     failures: list[str] = []
@@ -450,27 +464,41 @@ def guardian_once(args: argparse.Namespace, profile: BookProfile, state: dict[st
         state["marker"] = marker_text
         state["marker_since"] = now
     unchanged_for = int(now - float(state.get("marker_since", now)))
+    reviewed_complete = is_complete(reviewed)
 
-    reviewed_valid = int(reviewed.get("valid_chunks", "0") or 0)
-    waiting_for = merge_result.get("review_waiting_for") or merge_result.get("raw_waiting_for") or ""
-    waiting_index = chunk_index(waiting_for)
-    if (
-        waiting_index
-        and reviewed_valid >= waiting_index
-        and profile.sanitizer_command
-        and not tmux_active(profile.sanitizer_session)
-    ):
-        actions.append(f"start sanitizer {waiting_index}-{reviewed_valid}")
-        actions.append(start_sanitizer(profile, args, waiting_index, reviewed_valid))
+    if reviewed_complete and args.compile_when_complete and profile.compile_command and not failures:
+        marker_for_compile = complete_compile_marker(profile, reviewed)
+        if state.get("complete_compile_marker") != marker_for_compile:
+            proc = run(profile.compile_command)
+            actions.append(proc.stdout[-4000:])
+            if proc.returncode:
+                failures.append("compile_when_complete failed")
+                actions.append(f"compile_when_complete_returncode={proc.returncode}")
+            else:
+                state["complete_compile_marker"] = marker_for_compile
 
-    if not is_complete(reviewed) and not tmux_active(profile.worker_session):
-        first_missing = raw.get("first_missing") or reviewed.get("first_missing") or ""
-        actions.append(f"start worker from {first_missing or 'default'}")
-        actions.append(start_worker(profile, args, first_missing))
+    if not reviewed_complete:
+        reviewed_valid = int(reviewed.get("valid_chunks", "0") or 0)
+        waiting_for = merge_result.get("review_waiting_for") or merge_result.get("raw_waiting_for") or ""
+        waiting_index = chunk_index(waiting_for)
+        if (
+            waiting_index
+            and reviewed_valid >= waiting_index
+            and profile.sanitizer_command
+            and not tmux_active(profile.sanitizer_session)
+        ):
+            actions.append(f"start sanitizer {waiting_index}-{reviewed_valid}")
+            actions.append(start_sanitizer(profile, args, waiting_index, reviewed_valid))
+
+        if not tmux_active(profile.worker_session):
+            first_missing = raw.get("first_missing") or reviewed.get("first_missing") or ""
+            actions.append(f"start worker from {first_missing or 'default'}")
+            actions.append(start_worker(profile, args, first_missing))
 
     facts = {
         "raw": raw,
         "reviewed": reviewed,
+        "complete": reviewed_complete,
         "merge": merge_result,
         "marker": marker,
         "tmux": {
@@ -482,7 +510,7 @@ def guardian_once(args: argparse.Namespace, profile: BookProfile, state: dict[st
     if failures:
         actions.append(launch_self_repair(profile, args, state, "Pipeline command failed.", facts))
 
-    if unchanged_for >= args.stall_seconds:
+    if not reviewed_complete and unchanged_for >= args.stall_seconds:
         facts["unchanged_for"] = unchanged_for
         if not tmux_active(profile.worker_session) or failures:
             actions.append(launch_self_repair(profile, args, state, "Pipeline stalled or failed.", facts))
@@ -491,18 +519,12 @@ def guardian_once(args: argparse.Namespace, profile: BookProfile, state: dict[st
         else:
             actions.append(f"stall observed but workers are active; gentle wait unchanged_for={unchanged_for}s")
 
-    if is_complete(reviewed) and args.compile_when_complete and profile.compile_command:
-        proc = run(profile.compile_command)
-        actions.append(proc.stdout[-4000:])
-        if proc.returncode:
-            failures.append("compile_when_complete failed")
-
     result = {
         "timestamp": now_iso(),
         "book_id": profile.book_id,
         "raw": raw,
         "reviewed": reviewed,
-        "complete": is_complete(reviewed),
+        "complete": reviewed_complete,
         "merge": merge_result,
         "marker": marker,
         "unchanged_for": unchanged_for,
