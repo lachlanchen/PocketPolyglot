@@ -1,0 +1,430 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00601",
+  "source_text": "太吉郎伸手到怀里，把那张腰带画稿揉成小团，扔到小河里去。",
+  "source_sha256": "57ce38c6bec26550b7d82d0fd5be085f7dc5b0eed3b8c5e63ea0c8fbf7b18b1a",
+  "source_normalized_sha256": "57ce38c6bec26550b7d82d0fd5be085f7dc5b0eed3b8c5e63ea0c8fbf7b18b1a",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 58,
+    "grammar_token_total": 58,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-0601",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "和服街",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "topic"
+      },
+      {
+        "t": "服",
+        "r": "fú",
+        "g": "topic"
+      },
+      {
+        "t": "街",
+        "r": "jiē",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ",
+        "g": "topic"
+      },
+      {
+        "t": "服",
+        "r": "ふく",
+        "g": "topic"
+      },
+      {
+        "t": "街",
+        "r": "がい",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-和服街-intro",
+    "title_zh": [
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "topic"
+      },
+      {
+        "t": "服",
+        "r": "fú",
+        "g": "topic"
+      },
+      {
+        "t": "街",
+        "r": "jiē",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "和",
+        "r": "わ",
+        "g": "topic"
+      },
+      {
+        "t": "服",
+        "r": "ふく",
+        "g": "topic"
+      },
+      {
+        "t": "街",
+        "r": "がい",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00601",
+    "source_text": "太吉郎伸手到怀里，把那张腰带画稿揉成小团，扔到小河里去。",
+    "units": [
+      {
+        "source_text": "太吉郎伸手到怀里，把那张腰带画稿揉成小团，扔到小河里去。",
+        "zh": [
+          {
+            "t": "太",
+            "r": "tài",
+            "g": "subject"
+          },
+          {
+            "t": "吉",
+            "r": "jí",
+            "g": "subject"
+          },
+          {
+            "t": "郎",
+            "r": "láng",
+            "g": "subject"
+          },
+          {
+            "t": "伸",
+            "r": "shēn",
+            "g": "predicate"
+          },
+          {
+            "t": "手",
+            "r": "shǒu",
+            "g": "object"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "complement"
+          },
+          {
+            "t": "怀",
+            "r": "huái",
+            "g": "complement"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "object"
+          },
+          {
+            "t": "张",
+            "r": "zhāng",
+            "g": "object"
+          },
+          {
+            "t": "腰",
+            "r": "yāo",
+            "g": "object"
+          },
+          {
+            "t": "带",
+            "r": "dài",
+            "g": "object"
+          },
+          {
+            "t": "画",
+            "r": "huà",
+            "g": "object"
+          },
+          {
+            "t": "稿",
+            "r": "gǎo",
+            "g": "object"
+          },
+          {
+            "t": "揉",
+            "r": "róu",
+            "g": "predicate"
+          },
+          {
+            "t": "成",
+            "r": "chéng",
+            "g": "complement"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "complement"
+          },
+          {
+            "t": "团",
+            "r": "tuán",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "扔",
+            "r": "rēng",
+            "g": "predicate"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "complement"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "complement"
+          },
+          {
+            "t": "河",
+            "r": "hé",
+            "g": "complement"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "complement"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "太",
+              "r": "た",
+              "g": "subject"
+            },
+            {
+              "t": "吉",
+              "r": "きち",
+              "g": "subject"
+            },
+            {
+              "t": "郎",
+              "r": "ろう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "懐",
+              "r": "ふところ",
+              "g": "complement"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "入",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "れ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "その",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "帯",
+              "r": "おび",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "下",
+              "r": "した",
+              "g": "object"
+            },
+            {
+              "t": "絵",
+              "r": "え",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "小",
+              "r": "ちい",
+              "g": "complement"
+            },
+            {
+              "t": "さな",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "塊",
+              "r": "かたまり",
+              "g": "complement"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "丸",
+              "r": "まる",
+              "g": "predicate"
+            },
+            {
+              "t": "め、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "小",
+              "r": "お",
+              "g": "complement"
+            },
+            {
+              "t": "川",
+              "r": "がわ",
+              "g": "complement"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "投",
+              "r": "な",
+              "g": "predicate"
+            },
+            {
+              "t": "げ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "捨",
+              "r": "す",
+              "g": "predicate"
+            },
+            {
+              "t": "てた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
