@@ -16,6 +16,8 @@ import sys
 import time
 from pathlib import Path
 
+from pypinyin import Style, lazy_pinyin
+
 DEEPSEEK_URL = "https://api.deepseek.com/v1/chat/completions"
 MODEL = "deepseek-chat"
 MODE = "zh_classical_three_layer"
@@ -29,6 +31,7 @@ JSONL = Path("books/shiji/work/bilingual/chunks/chunks.jsonl")
 JSON_RE = re.compile(r"\{[\s\S]*\}", re.MULTILINE)
 SENTENCE_SPLIT_RE = re.compile(r'(?<=[。！？；])')
 HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
+KANA_RE = re.compile(r"[\u3040-\u30ff\u31f0-\u31ff]")
 SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
 ALL_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]+$")
 MISSING_JA_READING_RE = re.compile(r"kanji '([^']+)' needs furigana")
@@ -76,6 +79,16 @@ JP_SINGLE_KANJI_READING_OVERRIDES = {
 }
 
 
+def _pinyin_char(ch: str) -> str:
+    if not SINGLE_HAN_RE.fullmatch(ch):
+        return ""
+    try:
+        values = lazy_pinyin(ch, style=Style.TONE, errors="ignore")
+    except Exception:
+        return ""
+    return values[0] if values else ""
+
+
 def _iter_ja_tokens(data):
     for para in data.get("paragraphs", []):
         for unit in para.get("units", []):
@@ -85,9 +98,51 @@ def _iter_ja_tokens(data):
 
 
 def _split_sentences(text: str) -> list[str]:
-    """Split classical Chinese text into sentence/clause units at 。！？；."""
-    parts = SENTENCE_SPLIT_RE.split(text)
-    return [s.strip() for s in parts if s.strip()]
+    """Split text while keeping closing quotes with the sentence."""
+    out: list[str] = []
+    buf: list[str] = []
+    closing = set("」』】》）)]")
+    i = 0
+    while i < len(text):
+        ch = text[i]
+        buf.append(ch)
+        if ch in "。！？；":
+            j = i + 1
+            while j < len(text) and text[j] in closing:
+                buf.append(text[j])
+                j += 1
+            sentence = "".join(buf).strip()
+            if sentence:
+                out.append(sentence)
+            buf.clear()
+            i = j
+            continue
+        i += 1
+    rest = "".join(buf).strip()
+    if rest:
+        out.append(rest)
+    return out
+
+
+def _token_text(tokens: list[dict]) -> str:
+    return "".join(str(tok.get("t", "")) for tok in tokens if isinstance(tok, dict))
+
+
+def _norm_text(text: str) -> str:
+    return re.sub(r"\s+", "", text or "")
+
+
+def _ja_quality_error(ja_text: str, zh_original_text: str) -> str:
+    ja_norm = _norm_text(ja_text)
+    zh_norm = _norm_text(zh_original_text)
+    if not HAN_RE.search(zh_norm):
+        return ""
+    ja_han_count = len(HAN_RE.findall(ja_norm))
+    if ja_norm == zh_norm:
+        return "ja is identical to zh_original; write real Japanese, not copied classical Chinese"
+    if ja_han_count >= 5 and not KANA_RE.search(ja_norm):
+        return "ja has Han characters but no kana; write Japanese kundoku/translation with kana and okurigana"
+    return ""
 
 
 def _role(value: str, default: str = "function") -> str:
@@ -118,7 +173,9 @@ def _normalize_tokens(tokens, lang: str):
             for i, ch in enumerate(text):
                 normalized.append({
                     "t": ch,
-                    "r": readings[i] if i < len(readings) else "",
+                    "r": readings[i] if i < len(readings) else (
+                        _pinyin_char(ch) if lang == "zh" else ""
+                    ),
                     "g": _role(role, "object"),
                 })
             continue
@@ -128,6 +185,8 @@ def _normalize_tokens(tokens, lang: str):
             reading = ""
         if lang == "zh" and not is_single_han:
             reading = ""
+        if lang == "zh" and is_single_han and not reading:
+            reading = _pinyin_char(text)
         if lang == "ja" and is_single_han and not reading:
             reading = JP_SINGLE_KANJI_READING_OVERRIDES.get(text, "")
         if lang == "ja" and has_han and not is_single_han:
@@ -427,6 +486,10 @@ def prompt_sentence(sentence_text, section_title, section_id,
         "RULES:\n"
         "- zh_original joined MUST exactly reconstruct source_text (whitespace-insensitive).\n"
         "- zh_modern is a MODERN Chinese explanation/paraphrase in your OWN words.\n"
+        "- ja is actual Japanese kundoku/translation, not copied Chinese/Kanbun source text. "
+        "The reference may itself be classical Chinese hosted on Japanese Wikisource; use it only as alignment help.\n"
+        "- For real text sentences, ja MUST contain Japanese kana/okurigana/particles. "
+        "Do not output all-kanji/all-Hanzi Japanese except for punctuation-only units.\n"
         "- ja is FLAT list of dicts, NOT nested arrays, NOT [[...], [...]] double lines.\n"
         "- Punctuation attaches to preceding unit.\n"
         "- NO placeholder Japanese like 注 or 日本語. Every unit must have meaningful Japanese.\n"
@@ -523,6 +586,25 @@ def generate_sentence_unit(sentence_text, section_title, section_id,
             st = re.sub(r"\s+", "", sentence_text)
             if zt != st:
                 last_err = f"zh_original reconstructs '{zt[:60]}' != source_text '{st[:60]}'"
+                print(f"    sentence[{sentence_idx+1}/{total_sentences}] "
+                      f"attempt {attempt+1}: {last_err}", flush=True)
+                retry = last_err
+                continue
+
+            zmt = _norm_text(_token_text(data["zh_modern"]))
+            if HAN_RE.search(zt) and zmt == zt:
+                last_err = (
+                    "zh_modern identical to zh_original; rewrite zh_modern as "
+                    "modern Chinese explanatory prose, not the classical source"
+                )
+                print(f"    sentence[{sentence_idx+1}/{total_sentences}] "
+                      f"attempt {attempt+1}: {last_err}", flush=True)
+                retry = last_err
+                continue
+
+            ja_err = _ja_quality_error(_token_text(data["ja"]), _token_text(data["zh_original"]))
+            if ja_err:
+                last_err = ja_err
                 print(f"    sentence[{sentence_idx+1}/{total_sentences}] "
                       f"attempt {attempt+1}: {last_err}", flush=True)
                 retry = last_err
