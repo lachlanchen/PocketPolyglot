@@ -1,0 +1,452 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00085",
+  "source_text": "“这把宝刀是不伤人的。何况又是在樱花树下呢。”真一说着，笑了起来。",
+  "source_sha256": "116e9d368fd09a1d126b955bcfb4c4b54bf10a8115879e05986f419a7984f558",
+  "source_normalized_sha256": "116e9d368fd09a1d126b955bcfb4c4b54bf10a8115879e05986f419a7984f558",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 60,
+    "grammar_token_total": 60,
+    "unit_count": 3
+  },
+  "source_chunk_id": "the-old-capital-chunk-0085",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "春花",
+    "title_zh": [
+      {
+        "t": "春",
+        "r": "chūn",
+        "g": "attributive"
+      },
+      {
+        "t": "花",
+        "r": "huā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "春",
+        "r": "はる",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "花",
+        "r": "はな",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-春花-intro",
+    "title_zh": [
+      {
+        "t": "春",
+        "r": "chūn",
+        "g": "attributive"
+      },
+      {
+        "t": "花",
+        "r": "huā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "春",
+        "r": "はる",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "花",
+        "r": "はな",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00085",
+    "source_text": "“这把宝刀是不伤人的。何况又是在樱花树下呢。”真一说着，笑了起来。",
+    "units": [
+      {
+        "source_text": "“这把宝刀是不伤人的。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "attributive"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "attributive"
+          },
+          {
+            "t": "宝",
+            "r": "bǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "刀",
+            "r": "dāo",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "伤",
+            "r": "shāng",
+            "g": "predicate"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "この",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "宝",
+              "r": "ほう",
+              "g": "attributive"
+            },
+            {
+              "t": "刀",
+              "r": "とう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "傷",
+              "r": "きず",
+              "g": "predicate"
+            },
+            {
+              "t": "つけるものではない。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "何况又是在樱花树下呢。”",
+        "zh": [
+          {
+            "t": "何",
+            "r": "hé",
+            "g": "function"
+          },
+          {
+            "t": "况",
+            "r": "kuàng",
+            "g": "function"
+          },
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "樱",
+            "r": "yīng",
+            "g": "attributive"
+          },
+          {
+            "t": "花",
+            "r": "huā",
+            "g": "attributive"
+          },
+          {
+            "t": "树",
+            "r": "shù",
+            "g": "object"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "object"
+          },
+          {
+            "t": "呢",
+            "r": "ne",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "まして",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ここはまた",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "桜",
+              "r": "さくら",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "木",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "下",
+              "r": "した",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "なのだからね。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "真一说着，笑了起来。",
+        "zh": [
+          {
+            "t": "真",
+            "r": "zhēn",
+            "g": "subject"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "subject"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "笑",
+            "r": "xiào",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "complement"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "真",
+              "r": "しん",
+              "g": "subject"
+            },
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "そう",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "いながら、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "笑",
+              "r": "わら",
+              "g": "predicate"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "出",
+              "r": "だ",
+              "g": "complement"
+            },
+            {
+              "t": "した。",
+              "r": "",
+              "g": "complement"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

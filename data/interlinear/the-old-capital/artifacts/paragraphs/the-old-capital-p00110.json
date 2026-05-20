@@ -1,0 +1,185 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00110",
+  "source_text": "“当然标致。”",
+  "source_sha256": "d97e2012ff3167914e595622a04e31d12efb13949ec79d302ed764d7b92050af",
+  "source_normalized_sha256": "d97e2012ff3167914e595622a04e31d12efb13949ec79d302ed764d7b92050af",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 13,
+    "grammar_token_total": 13,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-0110",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "春花",
+    "title_zh": [
+      {
+        "t": "春",
+        "r": "chūn",
+        "g": "attributive"
+      },
+      {
+        "t": "花",
+        "r": "huā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "春",
+        "r": "はる",
+        "g": "attributive"
+      },
+      {
+        "t": "花",
+        "r": "はな",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-春花-intro",
+    "title_zh": [
+      {
+        "t": "春",
+        "r": "chūn",
+        "g": "attributive"
+      },
+      {
+        "t": "花",
+        "r": "huā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "春",
+        "r": "はる",
+        "g": "attributive"
+      },
+      {
+        "t": "花",
+        "r": "はな",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00110",
+    "source_text": "“当然标致。”",
+    "units": [
+      {
+        "source_text": "“当然标致。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "当",
+            "r": "dāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "然",
+            "r": "rán",
+            "g": "adverbial"
+          },
+          {
+            "t": "标",
+            "r": "biāo",
+            "g": "predicate"
+          },
+          {
+            "t": "致",
+            "r": "zhi",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "もちろん",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "美",
+              "r": "うつく",
+              "g": "predicate"
+            },
+            {
+              "t": "しい",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,331 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00087",
+  "source_text": "“真想把所有的花都看遍呀。”千重子说。",
+  "source_sha256": "9d41874660431c1819c033d6caa3c6868c35b00e42514bb949208d3920f73327",
+  "source_normalized_sha256": "9d41874660431c1819c033d6caa3c6868c35b00e42514bb949208d3920f73327",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 38,
+    "grammar_token_total": 38,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-0087",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "春花",
+    "title_zh": [
+      {
+        "t": "春",
+        "r": "chūn",
+        "g": "topic"
+      },
+      {
+        "t": "花",
+        "r": "huā",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "春",
+        "r": "はる",
+        "g": "topic"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "topic"
+      },
+      {
+        "t": "花",
+        "r": "はな",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-春花-intro",
+    "title_zh": [
+      {
+        "t": "春",
+        "r": "chūn",
+        "g": "topic"
+      },
+      {
+        "t": "花",
+        "r": "huā",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "春",
+        "r": "はる",
+        "g": "topic"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "topic"
+      },
+      {
+        "t": "花",
+        "r": "はな",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00087",
+    "source_text": "“真想把所有的花都看遍呀。”千重子说。",
+    "units": [
+      {
+        "source_text": "“真想把所有的花都看遍呀。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "真",
+            "r": "zhēn",
+            "g": "adverbial"
+          },
+          {
+            "t": "想",
+            "r": "xiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "所",
+            "r": "suǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "花",
+            "r": "huā",
+            "g": "object"
+          },
+          {
+            "t": "都",
+            "r": "dōu",
+            "g": "adverbial"
+          },
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "predicate"
+          },
+          {
+            "t": "遍",
+            "r": "biàn",
+            "g": "complement"
+          },
+          {
+            "t": "呀",
+            "r": "ya",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "adverbial"
+            },
+            {
+              "t": "当",
+              "r": "とう",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "すべての",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "花",
+              "r": "はな",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "尽",
+              "r": "つ",
+              "g": "complement"
+            },
+            {
+              "t": "くしたいわ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "千重子说。",
+        "zh": [
+          {
+            "t": "千",
+            "r": "qiān",
+            "g": "subject"
+          },
+          {
+            "t": "重",
+            "r": "chóng",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "千",
+              "r": "ち",
+              "g": "subject"
+            },
+            {
+              "t": "重",
+              "r": "え",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

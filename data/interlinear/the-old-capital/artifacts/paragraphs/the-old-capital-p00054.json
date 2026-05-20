@@ -1,0 +1,260 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p00054",
+  "source_text": "“我就看落花的景致呗。”",
+  "source_sha256": "177147ff1a77980d47f8f57d3796360a729d2f930da5b8231202f1a121832b0c",
+  "source_normalized_sha256": "177147ff1a77980d47f8f57d3796360a729d2f930da5b8231202f1a121832b0c",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 26,
+    "grammar_token_total": 26,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-0054",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "春花",
+    "title_zh": [
+      {
+        "t": "春",
+        "r": "chūn",
+        "g": "attributive"
+      },
+      {
+        "t": "花",
+        "r": "huā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "春",
+        "r": "はる",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "花",
+        "r": "はな",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-春花-intro",
+    "title_zh": [
+      {
+        "t": "春",
+        "r": "chūn",
+        "g": "attributive"
+      },
+      {
+        "t": "花",
+        "r": "huā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "春",
+        "r": "はる",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "花",
+        "r": "はな",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p00054",
+    "source_text": "“我就看落花的景致呗。”",
+    "units": [
+      {
+        "source_text": "“我就看落花的景致呗。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "predicate"
+          },
+          {
+            "t": "落",
+            "r": "luò",
+            "g": "attributive"
+          },
+          {
+            "t": "花",
+            "r": "huā",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "景",
+            "r": "jǐng",
+            "g": "object"
+          },
+          {
+            "t": "致",
+            "r": "zhì",
+            "g": "object"
+          },
+          {
+            "t": "呗",
+            "r": "bei",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "ただ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "散",
+              "r": "ち",
+              "g": "attributive"
+            },
+            {
+              "t": "る",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "花",
+              "r": "はな",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "景",
+              "r": "けい",
+              "g": "object"
+            },
+            {
+              "t": "色",
+              "r": "しき",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "ているだけよ。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
