@@ -110,46 +110,19 @@ def _split_sentences(text: str) -> list[str]:
 
 
 def _token_text(tokens: list[dict]) -> str:
-    return "".join(str(tok.get("t", "")) for tok in tokens if isinstance(tok, dict))
+    return cfg_token_text(tokens)
 
 
 def _norm_text(text: str) -> str:
-    return re.sub(r"\s+", "", text or "")
+    return cfg_normalize(text)
 
 
 def _looks_like_real_japanese_reference(text: str) -> bool:
-    compact = _norm_text(text)
-    if len(compact) < 20:
-        return False
-    if "パブリックドメイン" in compact or "この作品" in compact:
-        return False
-    kana_count = len(KANA_RE.findall(compact))
-    han_count = len(HAN_RE.findall(compact))
-    return kana_count >= 6 and kana_count / max(len(compact), 1) >= 0.10 and han_count > 0
+    return looks_like_real_japanese_reference(text)
 
 
 def _ja_quality_error(ja_text: str, zh_original_text: str) -> str:
-    ja_norm = _norm_text(ja_text)
-    zh_norm = _norm_text(zh_original_text)
-    source_han_count = len(HAN_RE.findall(zh_norm))
-    if source_han_count == 0:
-        return ""
-    ja_han_count = len(HAN_RE.findall(ja_norm))
-    ja_kana_count = len(KANA_RE.findall(ja_norm))
-    if ja_norm == zh_norm:
-        return "ja is identical to zh_original; write real Japanese, not copied classical Chinese"
-    if ja_han_count >= 2 and ja_kana_count == 0:
-        return "ja has Han characters but no kana; write real Japanese prose with kana, particles, and okurigana"
-    if source_han_count >= 6 and ja_kana_count < 2:
-        return "ja has too little kana for a real Japanese sentence; rewrite as readable Japanese, not Kanbun"
-    if source_han_count >= 10 and len(ja_norm) and (ja_kana_count / len(ja_norm)) < 0.08:
-        return "ja is still too Kanbun-like; rewrite as natural Japanese with particles and inflected endings"
-    for marker in KANBUN_MARKERS_IN_JA:
-        if marker in ja_norm:
-            return f"ja contains raw Kanbun marker '{marker}'; translate it into modern Japanese wording"
-    if "者、" in ja_norm or "者，" in ja_norm:
-        return "ja contains Kanbun pattern '者、'; rewrite with Japanese は/とは wording"
-    return ""
+    return ja_quality_error(ja_text, zh_original_text)
 
 
 def _role(value: str, default: str = "function") -> str:
