@@ -1,0 +1,372 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01707",
+  "source_text": "“那就去吧。但龙村可没什么腰带卖……”",
+  "source_sha256": "45fb0887e54ce91f6c730202c624adecd8a8fa2e5b0b1a3f594adaad43d544bf",
+  "source_normalized_sha256": "45fb0887e54ce91f6c730202c624adecd8a8fa2e5b0b1a3f594adaad43d544bf",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 41,
+    "grammar_token_total": 41,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-1707",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "都",
+        "r": "dū"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "都",
+        "r": "と"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "松林的翠绿",
+    "title_zh": [
+      {
+        "t": "松",
+        "r": "sōng"
+      },
+      {
+        "t": "林",
+        "r": "lín"
+      },
+      {
+        "t": "的",
+        "r": "de"
+      },
+      {
+        "t": "翠",
+        "r": "cuì"
+      },
+      {
+        "t": "绿",
+        "r": "lǜ"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "松",
+        "r": "しょう"
+      },
+      {
+        "t": "林",
+        "r": "りん"
+      },
+      {
+        "t": "の",
+        "r": ""
+      },
+      {
+        "t": "翠",
+        "r": "すい"
+      },
+      {
+        "t": "緑",
+        "r": "りょく"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-松林的翠绿-intro",
+    "title_zh": [
+      {
+        "t": "松",
+        "r": "sōng"
+      },
+      {
+        "t": "林",
+        "r": "lín"
+      },
+      {
+        "t": "的",
+        "r": "de"
+      },
+      {
+        "t": "翠",
+        "r": "cuì"
+      },
+      {
+        "t": "绿",
+        "r": "lǜ"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "松",
+        "r": "しょう"
+      },
+      {
+        "t": "林",
+        "r": "りん"
+      },
+      {
+        "t": "の",
+        "r": ""
+      },
+      {
+        "t": "翠",
+        "r": "すい"
+      },
+      {
+        "t": "緑",
+        "r": "りょく"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01707",
+    "source_text": "“那就去吧。但龙村可没什么腰带卖……”",
+    "units": [
+      {
+        "source_text": "“那就去吧。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "adverbial"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "predicate"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "それなら",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "行",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "きましょう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "但龙村可没什么腰带卖……”",
+        "zh": [
+          {
+            "t": "但",
+            "r": "dàn",
+            "g": "function"
+          },
+          {
+            "t": "龙",
+            "r": "lóng",
+            "g": "subject"
+          },
+          {
+            "t": "村",
+            "r": "cūn",
+            "g": "subject"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "adverbial"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "predicate"
+          },
+          {
+            "t": "什",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "object"
+          },
+          {
+            "t": "腰",
+            "r": "yāo",
+            "g": "object"
+          },
+          {
+            "t": "带",
+            "r": "dài",
+            "g": "object"
+          },
+          {
+            "t": "卖",
+            "r": "mài",
+            "g": "object"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "でも",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "龍",
+              "r": "たつ",
+              "g": "subject"
+            },
+            {
+              "t": "村",
+              "r": "むら",
+              "g": "subject"
+            },
+            {
+              "t": "には",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "売",
+              "r": "う",
+              "g": "object"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "物",
+              "r": "もの",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "帯",
+              "r": "おび",
+              "g": "object"
+            },
+            {
+              "t": "なんて",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "たいして",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "ありません",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "よ",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "…",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "…",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01740",
+  "source_text": "“是吗？”",
+  "source_sha256": "28f13112dafdb679b4e031a2b734395fa240ea8091fe8fd37ea77d10e891ea56",
+  "source_normalized_sha256": "28f13112dafdb679b4e031a2b734395fa240ea8091fe8fd37ea77d10e891ea56",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 8,
+    "grammar_token_total": 8,
+    "unit_count": 1
+  },
+  "source_chunk_id": "the-old-capital-chunk-1740",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "object"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "object"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "松林的翠绿",
+    "title_zh": [
+      {
+        "t": "松",
+        "r": "sōng",
+        "g": "attributive"
+      },
+      {
+        "t": "林",
+        "r": "lín",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "function"
+      },
+      {
+        "t": "翠",
+        "r": "cuì",
+        "g": "object"
+      },
+      {
+        "t": "绿",
+        "r": "lǜ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "松",
+        "r": "まつ",
+        "g": "attributive"
+      },
+      {
+        "t": "林",
+        "r": "ばやし",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "翠",
+        "r": "みどり",
+        "g": "object"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "object"
+      },
+      {
+        "t": "緑",
+        "r": "みどり",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-松林的翠绿-intro",
+    "title_zh": [
+      {
+        "t": "松",
+        "r": "sōng",
+        "g": "attributive"
+      },
+      {
+        "t": "林",
+        "r": "lín",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "function"
+      },
+      {
+        "t": "翠",
+        "r": "cuì",
+        "g": "object"
+      },
+      {
+        "t": "绿",
+        "r": "lǜ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "松",
+        "r": "まつ",
+        "g": "attributive"
+      },
+      {
+        "t": "林",
+        "r": "ばやし",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "翠",
+        "r": "みどり",
+        "g": "object"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "object"
+      },
+      {
+        "t": "緑",
+        "r": "みどり",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01740",
+    "source_text": "“是吗？”",
+    "units": [
+      {
+        "source_text": "“是吗？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "です",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "か？",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,451 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "the-old-capital",
+  "paragraph_id": "the-old-capital-p01783",
+  "source_text": "“哦。有好几种账簿，还有一种应付税务局的账簿。”",
+  "source_sha256": "a8ec92ccdaea2887b9c94a049c1cd00167e0f2e0998de9de3ede000044030809",
+  "source_normalized_sha256": "a8ec92ccdaea2887b9c94a049c1cd00167e0f2e0998de9de3ede000044030809",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 52,
+    "grammar_token_total": 52,
+    "unit_count": 2
+  },
+  "source_chunk_id": "the-old-capital-chunk-1783",
+  "source_manifest_sha256": "51a0f71e5a254b2f120ad41b855c0a2520690d38eeb4b4377727bd32c1ec17f4",
+  "section": {
+    "id": "古都",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "object"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "object"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "松林的翠绿",
+    "title_zh": [
+      {
+        "t": "松",
+        "r": "sōng",
+        "g": "attributive"
+      },
+      {
+        "t": "林",
+        "r": "lín",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "function"
+      },
+      {
+        "t": "翠",
+        "r": "cuì",
+        "g": "object"
+      },
+      {
+        "t": "绿",
+        "r": "lǜ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "松",
+        "r": "しょう",
+        "g": "attributive"
+      },
+      {
+        "t": "林",
+        "r": "りん",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "翠",
+        "r": "すい",
+        "g": "object"
+      },
+      {
+        "t": "緑",
+        "r": "りょく",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古都-松林的翠绿-intro",
+    "title_zh": [
+      {
+        "t": "松",
+        "r": "sōng",
+        "g": "attributive"
+      },
+      {
+        "t": "林",
+        "r": "lín",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "function"
+      },
+      {
+        "t": "翠",
+        "r": "cuì",
+        "g": "object"
+      },
+      {
+        "t": "绿",
+        "r": "lǜ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "松",
+        "r": "しょう",
+        "g": "attributive"
+      },
+      {
+        "t": "林",
+        "r": "りん",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "翠",
+        "r": "すい",
+        "g": "object"
+      },
+      {
+        "t": "緑",
+        "r": "りょく",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "the-old-capital-p01783",
+    "source_text": "“哦。有好几种账簿，还有一种应付税务局的账簿。”",
+    "units": [
+      {
+        "source_text": "“哦。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "哦",
+            "r": "ò",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ああ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "そうです",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "有好几种账簿，还有一种应付税务局的账簿。”",
+        "zh": [
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "几",
+            "r": "jǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "种",
+            "r": "zhǒng",
+            "g": "object"
+          },
+          {
+            "t": "账",
+            "r": "zhàng",
+            "g": "object"
+          },
+          {
+            "t": "簿",
+            "r": "bù",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "attributive"
+          },
+          {
+            "t": "种",
+            "r": "zhǒng",
+            "g": "object"
+          },
+          {
+            "t": "应",
+            "r": "yìng",
+            "g": "attributive"
+          },
+          {
+            "t": "付",
+            "r": "fù",
+            "g": "attributive"
+          },
+          {
+            "t": "税",
+            "r": "shuì",
+            "g": "object"
+          },
+          {
+            "t": "务",
+            "r": "wù",
+            "g": "object"
+          },
+          {
+            "t": "局",
+            "r": "jú",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "账",
+            "r": "zhàng",
+            "g": "object"
+          },
+          {
+            "t": "簿",
+            "r": "bù",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "帳",
+              "r": "ちょう",
+              "g": "object"
+            },
+            {
+              "t": "簿",
+              "r": "ぼ",
+              "g": "object"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "何",
+              "r": "なん",
+              "g": "attributive"
+            },
+            {
+              "t": "種",
+              "r": "しゅ",
+              "g": "object"
+            },
+            {
+              "t": "類",
+              "r": "るい",
+              "g": "object"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "あります",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "それに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "税",
+              "r": "ぜい",
+              "g": "object"
+            },
+            {
+              "t": "務",
+              "r": "む",
+              "g": "object"
+            },
+            {
+              "t": "署",
+              "r": "しょ",
+              "g": "object"
+            },
+            {
+              "t": "向",
+              "r": "む",
+              "g": "attributive"
+            },
+            {
+              "t": "けの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "帳",
+              "r": "ちょう",
+              "g": "object"
+            },
+            {
+              "t": "簿",
+              "r": "ぼ",
+              "g": "object"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "attributive"
+            },
+            {
+              "t": "種",
+              "r": "しゅ",
+              "g": "object"
+            },
+            {
+              "t": "類",
+              "r": "るい",
+              "g": "object"
+            },
+            {
+              "t": "あります",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
