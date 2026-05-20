@@ -4,6 +4,8 @@ You are the AgInTi orchestrator for `/home/lachlan/ProjectsLFS/ZhJpBook`.
 
 Read `AGENTS.md` and the project-local skill `.aginti/skills/zhjpbook-interlinear/SKILL.md` first. This is a Chinese/Japanese interlinear pocket-book repository. Do not use Codex wrappers for this task; use AgInTi, shell, Python, TeX, and DeepSeek/OpenAI-compatible JSON calls as configured on this machine.
 
+Do not inspect or print credential environment variables, `.env` files, `.aginti/.env`, API keys, tokens, or secret-like files. Authentication is assumed configured if prior chunks already exist; if provider calls fail, report the provider error without exposing credentials.
+
 ## Goal
 
 Create and supervise persistent Shiji generation in separate tmux sessions. The orchestration session should stay observable and should not do every chunk inline.
