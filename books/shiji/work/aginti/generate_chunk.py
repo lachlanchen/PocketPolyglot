@@ -34,6 +34,7 @@ HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 KANA_RE = re.compile(r"[\u3040-\u30ff\u31f0-\u31ff]")
 SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
 ALL_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]+$")
+KANBUN_MARKERS_IN_JA = ("而", "之", "於", "曰", "乃", "弗", "莫", "毋", "咸", "其")
 MISSING_JA_READING_RE = re.compile(r"kanji '([^']+)' needs furigana")
 PUNCT_RE = re.compile(r"^[，。、；：！？「」『』【】《》（）—…·・\"'\\-\\.\\!\\?\\;\\:\\(\\)\\[\\]\\s]+$")
 GRAMMAR_ROLES = {
@@ -132,16 +133,38 @@ def _norm_text(text: str) -> str:
     return re.sub(r"\s+", "", text or "")
 
 
+def _looks_like_real_japanese_reference(text: str) -> bool:
+    compact = _norm_text(text)
+    if len(compact) < 20:
+        return False
+    if "パブリックドメイン" in compact or "この作品" in compact:
+        return False
+    kana_count = len(KANA_RE.findall(compact))
+    han_count = len(HAN_RE.findall(compact))
+    return kana_count >= 6 and kana_count / max(len(compact), 1) >= 0.10 and han_count > 0
+
+
 def _ja_quality_error(ja_text: str, zh_original_text: str) -> str:
     ja_norm = _norm_text(ja_text)
     zh_norm = _norm_text(zh_original_text)
-    if not HAN_RE.search(zh_norm):
+    source_han_count = len(HAN_RE.findall(zh_norm))
+    if source_han_count == 0:
         return ""
     ja_han_count = len(HAN_RE.findall(ja_norm))
+    ja_kana_count = len(KANA_RE.findall(ja_norm))
     if ja_norm == zh_norm:
         return "ja is identical to zh_original; write real Japanese, not copied classical Chinese"
-    if ja_han_count >= 5 and not KANA_RE.search(ja_norm):
-        return "ja has Han characters but no kana; write Japanese kundoku/translation with kana and okurigana"
+    if ja_han_count >= 2 and ja_kana_count == 0:
+        return "ja has Han characters but no kana; write real Japanese prose with kana, particles, and okurigana"
+    if source_han_count >= 6 and ja_kana_count < 2:
+        return "ja has too little kana for a real Japanese sentence; rewrite as readable Japanese, not Kanbun"
+    if source_han_count >= 10 and len(ja_norm) and (ja_kana_count / len(ja_norm)) < 0.08:
+        return "ja is still too Kanbun-like; rewrite as natural Japanese with particles and inflected endings"
+    for marker in KANBUN_MARKERS_IN_JA:
+        if marker in ja_norm:
+            return f"ja contains raw Kanbun marker '{marker}'; translate it into modern Japanese wording"
+    if "者、" in ja_norm or "者，" in ja_norm:
+        return "ja contains Kanbun pattern '者、'; rewrite with Japanese は/とは wording"
     return ""
 
 
@@ -449,10 +472,12 @@ def read_line(cid):
 def prompt_sentence(sentence_text, section_title, section_id,
                     paragraph_id, jp_refs, sentence_idx, total_sentences,
                     prev_sentence_text="", retry_errs=""):
-    """Build a per-sentence prompt with trimmed Japanese reference (~1000 chars)."""
+    """Build a per-sentence prompt with trimmed Kanbun/Japanese reference."""
     jp_excerpt = ""
     for r in jp_refs:
         txt = r.get("text", "")
+        if not _looks_like_real_japanese_reference(txt):
+            continue
         if len(jp_excerpt) + len(txt) + 1 > 1200:
             remaining = 1000 - len(jp_excerpt)
             if remaining > 40:
@@ -461,9 +486,15 @@ def prompt_sentence(sentence_text, section_title, section_id,
         jp_excerpt += txt + "\n"
     if len(jp_excerpt) > 1200:
         jp_excerpt = jp_excerpt[:1200] + "..."
+    if not jp_excerpt:
+        jp_excerpt = (
+            "No reliable real Japanese translation reference was found for this chapter. "
+            "The available Japanese-Wikisource material is mostly Kanbun/classical Chinese. "
+            "Generate the ja field yourself as natural Japanese from the Chinese source sentence."
+        )
 
     sysmsg = (
-        "You are a classical Chinese linguistics expert producing JSON for Sima Qian's 史記. "
+        "You are a classical Chinese and Japanese literary translation expert producing JSON for Sima Qian's 史記. "
         "Output ONLY valid JSON, no commentary.\n\n"
         "CRITICAL TOKEN RULES - VIOLATING THESE MEANS FAILURE:\n"
         "1. EVERY single Chinese character (Hanzi) MUST be its own separate token. "
@@ -476,7 +507,7 @@ def prompt_sentence(sentence_text, section_title, section_id,
         'Output a JSON object with keys: source_text, zh_original, ja, zh_modern.\n'
         '  "source_text": the exact sentence text.\n'
         '  "zh_original": [{"t": char, "r": pinyin, "g": role}] — classical Chinese, every Hanzi a single-char token with pinyin.\n'
-        '  "ja": [{"t": text, "r": furigana, "g": role}] — Japanese correspondence, FLAT token list (NOT nested). '
+        '  "ja": [{"t": text, "r": furigana, "g": role}] — REAL JAPANESE rendering, FLAT token list (NOT nested). '
         "Every kanji is single-char with furigana. Kana tokens must have r=\"\".\n"
         '  "zh_modern": [{"t": char, "r": pinyin, "g": role}] — MODERN Chinese paraphrase. Every Hanzi single-char with pinyin. '
         "MUST DIFFER from zh_original text.\n\n"
@@ -486,10 +517,21 @@ def prompt_sentence(sentence_text, section_title, section_id,
         "RULES:\n"
         "- zh_original joined MUST exactly reconstruct source_text (whitespace-insensitive).\n"
         "- zh_modern is a MODERN Chinese explanation/paraphrase in your OWN words.\n"
-        "- ja is actual Japanese kundoku/translation, not copied Chinese/Kanbun source text. "
-        "The reference may itself be classical Chinese hosted on Japanese Wikisource; use it only as alignment help.\n"
-        "- For real text sentences, ja MUST contain Japanese kana/okurigana/particles. "
-        "Do not output all-kanji/all-Hanzi Japanese except for punctuation-only units.\n"
+        "- ja MUST be real modern Japanese prose. Do NOT write Kanbun kundoku fragments. "
+        "It must have Japanese grammar, kana particles, okurigana, and inflected endings.\n"
+        "- The so-called Japanese reference is often NOT a Japanese translation. It may be Kanbun/classical Chinese "
+        "from Japanese Wikisource. Use it only to confirm alignment and names; DO NOT copy it into ja.\n"
+        "- Forbidden ja style: all-kanji/all-Hanzi Kanbun such as 「而蚩尤最為暴、莫能伐。」 or "
+        "「帝顓頊生子曰窮蟬。」.\n"
+        "- Also forbidden inside ja: raw Classical Chinese function markers like 而, 之, 於, 曰, 乃, 弗, 莫, 毋, 咸, 其. "
+        "Translate them as Japanese: しかし/そして, の, において, 言った, そこで, ない, みな, その, etc.\n"
+        "- Good ja style examples: 「しかし蚩尤は最も凶暴で、誰も討つことができなかった。」 / "
+        "「帝顓頊は子をもうけ、その名を窮蟬といった。」 / "
+        "「黃帝には二十五人の子があり、そのうち姓を得た者は十四人であった。」\n"
+        "- Prefer idiomatic Japanese over word-for-word Kanbun. For example, translate 最為暴 as 最も凶暴で, "
+        "not 最も暴で; translate 曰 as 言った, not 曰く/曰う; translate 之 as の/それ/彼/彼ら as context requires.\n"
+        "- For every content-bearing sentence, ja must contain kana. Names and terms may stay in kanji, but the sentence "
+        "must still read as Japanese prose.\n"
         "- ja is FLAT list of dicts, NOT nested arrays, NOT [[...], [...]] double lines.\n"
         "- Punctuation attaches to preceding unit.\n"
         "- NO placeholder Japanese like 注 or 日本語. Every unit must have meaningful Japanese.\n"
@@ -510,8 +552,9 @@ def prompt_sentence(sentence_text, section_title, section_id,
         "Section: " + section_title + " (" + section_id + ")\n"
         "Paragraph: " + paragraph_id + "\n"
         "Sentence:\n" + sentence_text + "\n\n"
-        "Japanese reference:\n" + jp_excerpt + "\n\n"
-        "Output JSON with source_text, zh_original, ja (flat), zh_modern for this one sentence only.\n"
+        "Kanbun/Japanese-source reference. WARNING: this is often classical Chinese, not real Japanese; do not copy it:\n"
+        + jp_excerpt + "\n\n"
+        "Output JSON with source_text, zh_original, ja (flat REAL Japanese prose), zh_modern for this one sentence only.\n"
         + note
     )
     return [{"role": "system", "content": sysmsg}, {"role": "user", "content": user}]

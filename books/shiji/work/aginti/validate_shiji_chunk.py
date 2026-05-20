@@ -17,7 +17,9 @@ from typing import Any
 
 SPACE_RE = re.compile(r"\s+")
 HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
+KANA_RE = re.compile(r"[\u3040-\u30ff\u31f0-\u31ff]")
 SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
+KANBUN_MARKERS_IN_JA = ("而", "之", "於", "曰", "乃", "弗", "莫", "毋", "咸", "其")
 PLACEHOLDER_JA = {"注", "注。", "。", "日本語"}
 GRAMMAR_ROLES = {
     "subject",
@@ -40,6 +42,30 @@ def normalize(text: str) -> str:
 
 def token_txt(tokens: list[dict[str, Any]]) -> str:
     return "".join(str(tok.get("t", "")) for tok in tokens)
+
+
+def ja_quality_error(ja_text: str, zh_original_text: str) -> str:
+    ja_norm = normalize(ja_text)
+    zh_norm = normalize(zh_original_text)
+    source_han_count = len(HAN_RE.findall(zh_norm))
+    if source_han_count == 0:
+        return ""
+    ja_han_count = len(HAN_RE.findall(ja_norm))
+    ja_kana_count = len(KANA_RE.findall(ja_norm))
+    if ja_norm == zh_norm:
+        return "ja identical to zh_original; must be real Japanese, not copied Kanbun"
+    if ja_han_count >= 2 and ja_kana_count == 0:
+        return "ja has Han characters but no kana; must be real Japanese prose"
+    if source_han_count >= 6 and ja_kana_count < 2:
+        return "ja has too little kana for a real Japanese sentence"
+    if source_han_count >= 10 and ja_norm and (ja_kana_count / len(ja_norm)) < 0.08:
+        return "ja is too Kanbun-like; add Japanese particles and inflected endings"
+    for marker in KANBUN_MARKERS_IN_JA:
+        if marker in ja_norm:
+            return f"ja contains raw Kanbun marker '{marker}'"
+    if "者、" in ja_norm or "者，" in ja_norm:
+        return "ja contains Kanbun pattern '者、'"
+    return ""
 
 
 def is_punct_or_space(text: str) -> bool:
@@ -153,6 +179,10 @@ def validate_chunk(data: dict[str, Any]) -> list[str]:
                     errors.append(f"{u_w}.ja: Japanese text is empty")
                 if lt in PLACEHOLDER_JA:
                     errors.append(f"{u_w}.ja: Japanese is placeholder '{lt}'")
+                if isinstance(zh_orig, list):
+                    err = ja_quality_error(token_txt(ja), token_txt(zh_orig))
+                    if err:
+                        errors.append(f"{u_w}.ja: {err}")
 
             zh_mod = unit.get("zh_modern")
             if not isinstance(zh_mod, list) or not zh_mod:

@@ -51,7 +51,7 @@
             {
               "t": "子",
               "r": "zǐ",
-              "g": "object"
+              "g": "predicate"
             },
             {
               "t": "，",
@@ -86,7 +86,7 @@
             {
               "t": "曰",
               "r": "yuē",
-              "g": "predicate"
+              "g": "function"
             },
             {
               "t": "軒",
@@ -116,8 +116,8 @@
               "g": "subject"
             },
             {
-              "t": "者",
-              "r": "は",
+              "t": "は",
+              "r": "",
               "g": "topic"
             },
             {
@@ -136,14 +136,19 @@
               "g": "attributive"
             },
             {
-              "t": "之",
-              "r": "の",
+              "t": "の",
+              "r": "",
               "g": "function"
             },
             {
               "t": "子",
               "r": "こ",
-              "g": "object"
+              "g": "predicate"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "、",
@@ -171,6 +176,11 @@
               "g": "object"
             },
             {
+              "t": "で",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "、",
               "r": "",
               "g": "function"
@@ -178,22 +188,12 @@
             {
               "t": "名",
               "r": "な",
-              "g": "subject"
-            },
-            {
-              "t": "を",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "曰",
-              "r": "い",
               "g": "predicate"
             },
             {
-              "t": "う",
+              "t": "は",
               "r": "",
-              "g": "predicate"
+              "g": "topic"
             },
             {
               "t": "軒",
@@ -207,6 +207,16 @@
             },
             {
               "t": "と",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "う",
               "r": "",
               "g": "function"
             },
@@ -285,17 +295,17 @@
             {
               "t": "名",
               "r": "míng",
-              "g": "subject"
+              "g": "predicate"
             },
             {
               "t": "字",
               "r": "zì",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "叫",
               "r": "jiào",
-              "g": "predicate"
+              "g": "function"
             },
             {
               "t": "軒",
@@ -345,7 +355,7 @@
             {
               "t": "弱",
               "r": "ruò",
-              "g": "topic"
+              "g": "predicate"
             },
             {
               "t": "而",
@@ -370,7 +380,7 @@
             {
               "t": "幼",
               "r": "yòu",
-              "g": "topic"
+              "g": "predicate"
             },
             {
               "t": "而",
@@ -395,7 +405,7 @@
             {
               "t": "長",
               "r": "zhǎng",
-              "g": "topic"
+              "g": "predicate"
             },
             {
               "t": "而",
@@ -405,12 +415,12 @@
             {
               "t": "敦",
               "r": "dūn",
-              "g": "predicate"
+              "g": "attributive"
             },
             {
               "t": "敏",
               "r": "mǐn",
-              "g": "object"
+              "g": "predicate"
             },
             {
               "t": "，",
@@ -420,7 +430,7 @@
             {
               "t": "成",
               "r": "chéng",
-              "g": "topic"
+              "g": "predicate"
             },
             {
               "t": "而",
@@ -430,12 +440,12 @@
             {
               "t": "聰",
               "r": "cōng",
-              "g": "predicate"
+              "g": "attributive"
             },
             {
               "t": "明",
               "r": "míng",
-              "g": "object"
+              "g": "predicate"
             },
             {
               "t": "。",
@@ -448,6 +458,11 @@
               "t": "生",
               "r": "う",
               "g": "predicate"
+            },
+            {
+              "t": "ま",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "れ",
@@ -465,62 +480,22 @@
               "g": "attributive"
             },
             {
-              "t": "靈",
+              "t": "霊",
               "r": "れい",
               "g": "predicate"
             },
             {
-              "t": "な",
+              "t": "で",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "あ",
               "r": "",
               "g": "function"
             },
             {
               "t": "り",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "弱",
-              "r": "よわ",
-              "g": "topic"
-            },
-            {
-              "t": "く",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "し",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "て",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "能",
-              "r": "よ",
-              "g": "predicate"
-            },
-            {
-              "t": "く",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "言",
-              "r": "い",
-              "g": "object"
-            },
-            {
-              "t": "ひ",
               "r": "",
               "g": "function"
             },
@@ -532,7 +507,47 @@
             {
               "t": "幼",
               "r": "おさな",
-              "g": "topic"
+              "g": "predicate"
+            },
+            {
+              "t": "く",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "て",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "よく",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "話",
+              "r": "はな",
+              "g": "predicate"
+            },
+            {
+              "t": "せ",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "少",
+              "r": "わか",
+              "g": "predicate"
             },
             {
               "t": "く",
@@ -550,27 +565,52 @@
               "g": "function"
             },
             {
-              "t": "徇",
-              "r": "したが",
+              "t": "す",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ぐ",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "れ",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "た",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "判",
+              "r": "はん",
               "g": "predicate"
             },
             {
-              "t": "ひ",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "齊",
-              "r": "ひと",
+              "t": "断",
+              "r": "だん",
               "g": "object"
             },
             {
-              "t": "し",
+              "t": "力",
+              "r": "りょく",
+              "g": "subject"
+            },
+            {
+              "t": "を",
               "r": "",
               "g": "function"
             },
             {
-              "t": "く",
+              "t": "持",
+              "r": "も",
+              "g": "predicate"
+            },
+            {
+              "t": "ち",
               "r": "",
               "g": "function"
             },
@@ -582,20 +622,20 @@
             {
               "t": "長",
               "r": "おとな",
-              "g": "topic"
+              "g": "predicate"
             },
             {
-              "t": "し",
+              "t": "に",
               "r": "",
               "g": "function"
             },
             {
-              "t": "く",
+              "t": "な",
               "r": "",
               "g": "function"
             },
             {
-              "t": "し",
+              "t": "っ",
               "r": "",
               "g": "function"
             },
@@ -605,22 +645,37 @@
               "g": "function"
             },
             {
-              "t": "敦",
-              "r": "あつ",
+              "t": "は",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "誠",
+              "r": "まこと",
+              "g": "attributive"
+            },
+            {
+              "t": "実",
+              "r": "じつ",
               "g": "predicate"
             },
             {
-              "t": "く",
+              "t": "で",
               "r": "",
               "g": "function"
             },
             {
               "t": "敏",
-              "r": "さと",
-              "g": "object"
+              "r": "びん",
+              "g": "predicate"
             },
             {
-              "t": "く",
+              "t": "腕",
+              "r": "わん",
+              "g": "subject"
+            },
+            {
+              "t": "で",
               "r": "",
               "g": "function"
             },
@@ -631,41 +686,16 @@
             },
             {
               "t": "成",
-              "r": "な",
-              "g": "topic"
-            },
-            {
-              "t": "り",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "て",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "聰",
-              "r": "さと",
+              "r": "せい",
               "g": "predicate"
             },
             {
-              "t": "く",
-              "r": "",
-              "g": "function"
+              "t": "人",
+              "r": "じん",
+              "g": "subject"
             },
             {
-              "t": "明",
-              "r": "あき",
-              "g": "object"
-            },
-            {
-              "t": "ら",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "か",
+              "t": "に",
               "r": "",
               "g": "function"
             },
@@ -675,7 +705,47 @@
               "g": "function"
             },
             {
-              "t": "り",
+              "t": "っ",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "て",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "聡",
+              "r": "そう",
+              "g": "attributive"
+            },
+            {
+              "t": "明",
+              "r": "めい",
+              "g": "predicate"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "あ",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "っ",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "た",
               "r": "",
               "g": "function"
             },
@@ -694,17 +764,17 @@
             {
               "t": "生",
               "r": "shēng",
-              "g": "predicate"
+              "g": "subject"
+            },
+            {
+              "t": "時",
+              "r": "shí",
+              "g": "attributive"
             },
             {
               "t": "就",
               "r": "jiù",
-              "g": "adverbial"
-            },
-            {
-              "t": "很",
-              "r": "hěn",
-              "g": "adverbial"
+              "g": "function"
             },
             {
               "t": "有",
@@ -717,9 +787,24 @@
               "g": "attributive"
             },
             {
-              "t": "灵",
+              "t": "奇",
+              "r": "qí",
+              "g": "predicate"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "function"
+            },
+            {
+              "t": "靈",
               "r": "líng",
               "g": "object"
+            },
+            {
+              "t": "性",
+              "r": "xìng",
+              "g": "subject"
             },
             {
               "t": "，",
@@ -729,37 +814,37 @@
             {
               "t": "幼",
               "r": "yòu",
-              "g": "topic"
+              "g": "predicate"
             },
             {
               "t": "小",
               "r": "xiǎo",
-              "g": "topic"
+              "g": "attributive"
             },
             {
-              "t": "时",
+              "t": "時",
               "r": "shí",
-              "g": "topic"
+              "g": "attributive"
             },
             {
               "t": "就",
               "r": "jiù",
-              "g": "adverbial"
+              "g": "function"
             },
             {
-              "t": "会",
+              "t": "會",
               "r": "huì",
               "g": "predicate"
             },
             {
-              "t": "说",
+              "t": "說",
               "r": "shuō",
               "g": "object"
             },
             {
-              "t": "话",
+              "t": "話",
               "r": "huà",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "，",
@@ -769,37 +854,57 @@
             {
               "t": "年",
               "r": "nián",
-              "g": "topic"
+              "g": "attributive"
             },
             {
               "t": "少",
               "r": "shào",
-              "g": "topic"
+              "g": "predicate"
             },
             {
-              "t": "时",
+              "t": "時",
               "r": "shí",
-              "g": "topic"
+              "g": "attributive"
             },
             {
               "t": "就",
               "r": "jiù",
-              "g": "adverbial"
+              "g": "function"
             },
             {
-              "t": "很",
-              "r": "hěn",
-              "g": "adverbial"
-            },
-            {
-              "t": "顺",
-              "r": "shùn",
+              "t": "有",
+              "r": "yǒu",
               "g": "predicate"
             },
             {
-              "t": "从",
-              "r": "cóng",
+              "t": "敏",
+              "r": "mǐn",
+              "g": "attributive"
+            },
+            {
+              "t": "銳",
+              "r": "ruì",
               "g": "predicate"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "function"
+            },
+            {
+              "t": "判",
+              "r": "pàn",
+              "g": "attributive"
+            },
+            {
+              "t": "斷",
+              "r": "duàn",
+              "g": "object"
+            },
+            {
+              "t": "力",
+              "r": "lì",
+              "g": "subject"
             },
             {
               "t": "，",
@@ -807,34 +912,39 @@
               "g": "function"
             },
             {
-              "t": "长",
+              "t": "長",
               "r": "zhǎng",
-              "g": "topic"
+              "g": "predicate"
             },
             {
               "t": "大",
               "r": "dà",
-              "g": "topic"
+              "g": "attributive"
             },
             {
-              "t": "后",
+              "t": "後",
               "r": "hòu",
-              "g": "topic"
+              "g": "attributive"
             },
             {
               "t": "就",
               "r": "jiù",
-              "g": "adverbial"
+              "g": "function"
             },
             {
-              "t": "厚",
-              "r": "hòu",
+              "t": "誠",
+              "r": "chéng",
+              "g": "attributive"
+            },
+            {
+              "t": "實",
+              "r": "shí",
               "g": "predicate"
             },
             {
-              "t": "道",
-              "r": "dào",
-              "g": "predicate"
+              "t": "又",
+              "r": "yòu",
+              "g": "function"
             },
             {
               "t": "勤",
@@ -842,9 +952,9 @@
               "g": "predicate"
             },
             {
-              "t": "勉",
-              "r": "miǎn",
-              "g": "predicate"
+              "t": "奮",
+              "r": "fèn",
+              "g": "object"
             },
             {
               "t": "，",
@@ -854,37 +964,37 @@
             {
               "t": "成",
               "r": "chéng",
-              "g": "topic"
+              "g": "predicate"
             },
             {
               "t": "年",
               "r": "nián",
-              "g": "topic"
+              "g": "subject"
             },
             {
-              "t": "后",
+              "t": "後",
               "r": "hòu",
-              "g": "topic"
+              "g": "attributive"
             },
             {
               "t": "就",
               "r": "jiù",
-              "g": "adverbial"
+              "g": "function"
             },
             {
-              "t": "耳",
-              "r": "ěr",
-              "g": "predicate"
+              "t": "非",
+              "r": "fēi",
+              "g": "function"
             },
             {
-              "t": "聪",
+              "t": "常",
+              "r": "cháng",
+              "g": "attributive"
+            },
+            {
+              "t": "聰",
               "r": "cōng",
-              "g": "predicate"
-            },
-            {
-              "t": "目",
-              "r": "mù",
-              "g": "predicate"
+              "g": "attributive"
             },
             {
               "t": "明",
