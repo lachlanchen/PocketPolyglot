@@ -109,6 +109,17 @@ def token_text(tokens: list[dict]) -> str:
     return "".join(str(tok.get("t", "")) for tok in tokens if isinstance(tok, dict))
 
 
+def _without_protected_marker_compounds(text: str, profile: dict) -> str:
+    """Strip allowed proper names/titles before raw Kanbun marker checks."""
+    cleaned = text
+    defaults = ["咸陽", "咸有一德", "咸有一徳", "巫咸", "咸艾", "弗忌", "差弗"]
+    for value in defaults + list(profile.get("protected_kanbun_marker_compounds", [])):
+        compound = normalize(str(value))
+        if compound:
+            cleaned = cleaned.replace(compound, "")
+    return cleaned
+
+
 # ---------------------------------------------------------------------------
 # Japanese quality checks (config-driven, not hard-coded marker lists)
 # ---------------------------------------------------------------------------
@@ -156,8 +167,9 @@ def ja_quality_error(ja_text: str, zh_original_text: str) -> str:
     if source_han_count >= 10 and len(ja_norm) and (ja_kana_count / len(ja_norm)) < min_kana_ratio:
         return "ja is still too Kanbun-like; rewrite as natural Japanese with particles and inflected endings"
 
+    marker_scan_text = _without_protected_marker_compounds(ja_norm, profile)
     for marker in kanbun_markers:
-        if marker in ja_norm:
+        if marker in marker_scan_text:
             return f"ja contains raw Kanbun marker '{marker}'; translate it into modern Japanese wording"
     for pattern in kanbun_patterns:
         if pattern in ja_norm:

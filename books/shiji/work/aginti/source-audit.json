@@ -24,6 +24,7 @@
       "min_kana_count_for_short": 2,
       "min_context_kana_count": 6,
       "kanbun_markers": ["而", "之", "於", "曰", "乃", "弗", "莫", "毋", "咸", "其"],
+      "protected_kanbun_marker_compounds": ["咸陽", "咸有一德", "咸有一徳", "巫咸", "咸艾", "弗忌", "差弗"],
       "kanbun_patterns": ["者、", "者，"],
       "description": "Japanese must be modern prose with kana, particles, okurigana, and inflected endings. No Kanbun kundoku fragments. These markers detect likely Kanbun contamination.",
       "grammar_roles": ["subject", "predicate", "object", "attributive", "adverbial", "complement", "topic", "function"]

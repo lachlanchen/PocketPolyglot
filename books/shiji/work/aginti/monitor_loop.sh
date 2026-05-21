@@ -36,6 +36,11 @@ PY
 
 while true; do
   date -u
+  # Backfill first invalid contiguous chunk before counting/compiling.
+  python3 -u books/shiji/work/aginti/backfill_monitor.py \
+    --check-limit 0 \
+    --max-retries 5 \
+    --max-backfill-per-run "${MAX_BACKFILL_PER_RUN:-3}" || true
   count="$(count_valid_chunks)"
   echo "valid contiguous chunks: $count"
   if [[ "$count" -gt 0 ]]; then
