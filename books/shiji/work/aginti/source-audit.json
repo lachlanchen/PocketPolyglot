@@ -22,9 +22,12 @@
     "ja": {
       "min_kana_ratio": 0.08,
       "min_kana_count_for_short": 2,
+      "min_name_list_kana_ratio": 0.035,
+      "min_name_list_kana_count": 6,
+      "name_list_terms": ["侯", "丞相", "卿", "大夫", "將軍", "御史", "廷尉", "博士"],
       "min_context_kana_count": 6,
       "kanbun_markers": ["而", "之", "於", "曰", "乃", "弗", "莫", "毋", "咸", "其", "焉"],
-      "protected_kanbun_marker_compounds": ["咸陽", "咸有一德", "咸有一徳", "巫咸", "咸艾", "弗忌", "差弗", "之罘"],
+      "protected_kanbun_marker_compounds": ["咸陽", "咸有一德", "咸有一徳", "巫咸", "咸艾", "弗忌", "差弗", "之罘", "馮毋擇"],
       "kanbun_patterns": ["者、", "者，"],
       "description": "Japanese must be modern prose with kana, particles, okurigana, and inflected endings. No Kanbun kundoku fragments. These markers detect likely Kanbun contamination.",
       "grammar_roles": ["subject", "predicate", "object", "attributive", "adverbial", "complement", "topic", "function"]

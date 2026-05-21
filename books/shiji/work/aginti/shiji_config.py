@@ -112,12 +112,35 @@ def token_text(tokens: list[dict]) -> str:
 def _without_protected_marker_compounds(text: str, profile: dict) -> str:
     """Strip allowed proper names/titles before raw Kanbun marker checks."""
     cleaned = text
-    defaults = ["咸陽", "咸有一德", "咸有一徳", "巫咸", "咸艾", "弗忌", "差弗", "之罘"]
+    defaults = [
+        "咸陽",
+        "咸有一德",
+        "咸有一徳",
+        "巫咸",
+        "咸艾",
+        "弗忌",
+        "差弗",
+        "之罘",
+        "馮毋擇",
+    ]
     for value in defaults + list(profile.get("protected_kanbun_marker_compounds", [])):
         compound = normalize(str(value))
         if compound:
             cleaned = cleaned.replace(compound, "")
     return cleaned
+
+
+def _looks_like_name_title_list(text: str, profile: dict) -> bool:
+    """Detect long official-title/person-name enumerations in Shiji prose."""
+    source = normalize(text)
+    han_count = len(HAN_RE.findall(source))
+    list_marks = source.count("、") + source.count("，") + source.count(",")
+    terms = profile.get(
+        "name_list_terms",
+        ["侯", "丞相", "卿", "大夫", "將軍", "御史", "廷尉", "博士"],
+    )
+    term_hits = sum(source.count(str(term)) for term in terms)
+    return han_count >= 30 and list_marks >= 4 and term_hits >= 2
 
 
 # ---------------------------------------------------------------------------
@@ -153,7 +176,11 @@ def ja_quality_error(ja_text: str, zh_original_text: str) -> str:
     ja_han_count = len(HAN_RE.findall(ja_norm))
     ja_kana_count = len(KANA_RE.findall(ja_norm))
     profile = get_ja_profile()
-    min_kana_ratio = profile.get("min_kana_ratio", 0.08)
+    is_name_list = _looks_like_name_title_list(zh_norm, profile)
+    min_kana_ratio = profile.get(
+        "min_name_list_kana_ratio" if is_name_list else "min_kana_ratio",
+        0.035 if is_name_list else 0.08,
+    )
     min_kana_short = profile.get("min_kana_count_for_short", 2)
     kanbun_markers = profile.get("kanbun_markers", [])
     kanbun_patterns = profile.get("kanbun_patterns", [])
@@ -162,6 +189,8 @@ def ja_quality_error(ja_text: str, zh_original_text: str) -> str:
         return "ja is identical to zh_original; write real Japanese, not copied classical Chinese"
     if ja_han_count >= 2 and ja_kana_count == 0:
         return "ja has Han characters but no kana; write real Japanese prose with kana, particles, and okurigana"
+    if is_name_list and ja_kana_count < profile.get("min_name_list_kana_count", 6):
+        return "ja title/name list lacks enough Japanese frame words; keep names but add particles and a predicate"
     if source_han_count >= 6 and ja_kana_count < min_kana_short:
         return "ja has too little kana for a real Japanese sentence; rewrite as readable Japanese, not Kanbun"
     if source_han_count >= 10 and len(ja_norm) and (ja_kana_count / len(ja_norm)) < min_kana_ratio:

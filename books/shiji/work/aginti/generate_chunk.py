@@ -121,6 +121,12 @@ def _looks_like_real_japanese_reference(text: str) -> bool:
     return looks_like_real_japanese_reference(text)
 
 
+def _looks_like_name_title_list(text: str) -> bool:
+    list_marks = text.count("、") + text.count("，") + text.count(",")
+    title_hits = sum(text.count(term) for term in ("侯", "丞相", "卿", "大夫", "將軍", "御史", "廷尉", "博士"))
+    return len(HAN_RE.findall(text)) >= 30 and list_marks >= 4 and title_hits >= 2
+
+
 def _ja_quality_error(ja_text: str, zh_original_text: str) -> str:
     return ja_quality_error(ja_text, zh_original_text)
 
@@ -480,7 +486,7 @@ def prompt_sentence(sentence_text, section_title, section_id,
         "「帝顓頊生子曰窮蟬。」.\n"
         "- Also forbidden inside ja: raw Classical Chinese function markers like 而, 之, 於, 曰, 乃, 弗, 莫, 毋, 咸, 其, 焉. "
         "Translate them as Japanese: しかし/そして, の, において, 言った, そこで, ない, みな, その, etc. "
-        "Exception: real proper names and text titles may retain their kanji, e.g. 咸陽, 巫咸, 咸艾, 咸有一德/咸有一徳, 弗忌, 差弗, 之罘.\n"
+        "Exception: real proper names and text titles may retain their kanji, e.g. 咸陽, 巫咸, 咸艾, 咸有一德/咸有一徳, 弗忌, 差弗, 之罘, 馮毋擇.\n"
         "- Do not write kundoku marker phrases such as 於是乃ち, 而して, 焉に, 之を, 其の. "
         "Use modern Japanese instead: そこで, そして/それから, そこを, これを/それを, その.\n"
         "- Good ja style examples: 「しかし蚩尤は最も凶暴で、誰も討つことができなかった。」 / "
@@ -490,6 +496,9 @@ def prompt_sentence(sentence_text, section_title, section_id,
         "not 最も暴で; translate 曰 as 言った, not 曰く/曰う; translate 之 as の/それ/彼/彼ら as context requires.\n"
         "- For every content-bearing sentence, ja must contain kana. Names and terms may stay in kanji, but the sentence "
         "must still read as Japanese prose.\n"
+        "- For long lists of officials or personal names, keep each title/name in kanji, but wrap the list in Japanese syntax, "
+        "for example: 「列侯武城侯の王離、列侯通武侯の王賁、...らが従い、海上でともに議論した。」 "
+        "Do not force-read every name as prose, and do not output a bare Chinese list.\n"
         "- ja is FLAT list of dicts, NOT nested arrays, NOT [[...], [...]] double lines.\n"
         "- Punctuation attaches to preceding unit.\n"
         "- NO placeholder Japanese like 注 or 日本語. Every unit must have meaningful Japanese.\n"
@@ -504,6 +513,13 @@ def prompt_sentence(sentence_text, section_title, section_id,
         if prev_sentence_text:
             note += f"Previous sentence: {prev_sentence_text}\n"
         note += "Continue the flow naturally.\n"
+    if _looks_like_name_title_list(sentence_text):
+        note += (
+            "\nThis sentence is mostly official titles and personal names. Keep titles and names in kanji, "
+            "but add a clear Japanese frame with particles and a final predicate. Use a structure like: "
+            "「列侯武城侯の王離、列侯通武侯の王賁、...らが従い、海上でともに議論した。」 "
+            "Do not output a bare Chinese-style list.\n"
+        )
 
     user = (
         "Tokenize this classical Chinese sentence from 史記:\n\n"
