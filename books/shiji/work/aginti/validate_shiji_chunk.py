@@ -20,7 +20,7 @@ from typing import Any
 from shiji_config import (
     HAN_RE, KANA_RE, SINGLE_HAN_RE,
     GRAMMAR_ROLES, ja_quality_error,
-    normalize, token_text,
+    normalize, token_text, allows_identical_zh_modern,
 )
 
 SPACE_RE = re.compile(r"\s+")
@@ -152,7 +152,7 @@ def validate_chunk(data: dict[str, Any]) -> list[str]:
                 validate_zh(zh_mod, f"{u_w}.zh_modern", errors)
                 zmt = normalize(token_text(zh_mod))
                 zot = normalize(token_text(zh_orig or []))
-                if zmt and zmt == zot:
+                if zmt and zmt == zot and not allows_identical_zh_modern(unit_src):
                     errors.append(
                         f"{u_w}: zh_modern identical to zh_original; must differ"
                     )

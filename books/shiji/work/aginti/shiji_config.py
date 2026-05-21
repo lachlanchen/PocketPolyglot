@@ -109,6 +109,28 @@ def token_text(tokens: list[dict]) -> str:
     return "".join(str(tok.get("t", "")) for tok in tokens if isinstance(tok, dict))
 
 
+def allows_identical_zh_modern(source_text: str) -> bool:
+    """Allow unchanged modern Chinese only for short name-list fragments.
+
+    Historical prose sometimes splits a list of names into sentence fragments
+    such as 「賈佗；」 or 「先軫；」. Requiring a paraphrase for those fragments
+    causes artificial output and repeated retries. Keep this exemption narrow:
+    the source must be a semicolon-terminated fragment containing only one to
+    four Han characters after punctuation is stripped, and it must not contain
+    common classical function words.
+    """
+    compact = normalize(source_text)
+    if not compact.endswith(("；", ";")):
+        return False
+    core = re.sub(r"[，。、；：！？「」『』【】《》（）—…·・\"'\-\.\!\?\;\:\(\)\[\]\s]", "", compact)
+    if not (1 <= len(core) <= 4):
+        return False
+    if not all(HAN_RE.fullmatch(ch) for ch in core):
+        return False
+    forbidden = set("曰為为不以而於于之其是有無无毋乃則则者也乎矣焉何")
+    return not any(ch in forbidden for ch in core)
+
+
 def _without_protected_marker_compounds(text: str, profile: dict) -> str:
     """Strip allowed proper names/titles before raw Kanbun marker checks."""
     cleaned = text

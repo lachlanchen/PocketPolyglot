@@ -28,6 +28,7 @@ from shiji_config import (
     resolve_role, ja_quality_error, looks_like_real_japanese_reference,
     token_text as cfg_token_text,
     normalize as cfg_normalize,
+    allows_identical_zh_modern,
 )
 
 DEEPSEEK_URL = "https://api.deepseek.com/v1/chat/completions"
@@ -736,7 +737,7 @@ def generate_sentence_unit(sentence_text, section_title, section_id,
                 continue
 
             zmt = _norm_text(_token_text(data["zh_modern"]))
-            if HAN_RE.search(zt) and zmt == zt:
+            if HAN_RE.search(zt) and zmt == zt and not allows_identical_zh_modern(sentence_text):
                 last_err = (
                     "zh_modern identical to zh_original; rewrite zh_modern as "
                     "modern Chinese explanatory prose, not the classical source"
