@@ -171,6 +171,26 @@ def _looks_like_name_title_list(text: str) -> bool:
     return len(HAN_RE.findall(text)) >= 30 and list_marks >= 4 and title_hits >= 2
 
 
+def _looks_like_table_header(text: str) -> bool:
+    """Detect sparse source rows such as timeline/table headers.
+
+    Some Shiji source chunks are not prose sentences, e.g. "公元前 秦 楚 ...".
+    They still need a readable Japanese explanatory line rather than a bare
+    all-kanji list, while zh_original must preserve the exact source text.
+    """
+    stripped = text.strip()
+    if not stripped:
+        return False
+    if any(mark in stripped for mark in "。！？；，、："):
+        return False
+    parts = [p for p in re.split(r"\s+", stripped) if p]
+    if len(parts) < 4:
+        return False
+    han_parts = sum(1 for p in parts if HAN_RE.search(p))
+    short_parts = sum(1 for p in parts if len(p) <= 4)
+    return han_parts >= 4 and short_parts >= len(parts) - 1
+
+
 def _ja_quality_error(ja_text: str, zh_original_text: str) -> str:
     return ja_quality_error(ja_text, zh_original_text)
 
@@ -585,6 +605,13 @@ def prompt_sentence(sentence_text, section_title, section_id,
             "but add a clear Japanese frame with particles and a final predicate. Use a structure like: "
             "「列侯武城侯の王離、列侯通武侯の王賁、...らが従い、海上でともに議論した。」 "
             "Do not output a bare Chinese-style list.\n"
+        )
+    if _looks_like_table_header(sentence_text):
+        note += (
+            "\nThis source line is a table/timeline header, not narrative prose. Preserve zh_original exactly, "
+            "but write ja as a readable Japanese explanatory sentence with kana and a predicate, not a bare list. "
+            "Example style: 「これは『公元前』と秦・楚・項・趙・齊・漢・燕・魏・韓を並べた表の見出しである。」 "
+            "Write zh_modern as a modern Chinese explanation such as: 「这是一个表头，列出公元前以及秦、楚、项、赵、齐、汉、燕、魏、韩等栏目。」\n"
         )
 
     user = (
