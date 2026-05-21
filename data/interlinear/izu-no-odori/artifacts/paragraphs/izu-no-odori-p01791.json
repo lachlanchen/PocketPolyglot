@@ -1,0 +1,240 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p01791",
+  "source_text": "“你很寂寞吧？”",
+  "source_sha256": "4d5c7ea2515599e0d015b0d7cd13eb7719a3464bb3a6d6ba82fd5390529ab176",
+  "source_normalized_sha256": "4d5c7ea2515599e0d015b0d7cd13eb7719a3464bb3a6d6ba82fd5390529ab176",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 15,
+    "grammar_token_total": 15,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-1791",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "object"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "object"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "object"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "温泉旅馆",
+    "title_zh": [
+      {
+        "t": "温",
+        "r": "wēn",
+        "g": "attributive"
+      },
+      {
+        "t": "泉",
+        "r": "quán",
+        "g": "attributive"
+      },
+      {
+        "t": "旅",
+        "r": "lǚ",
+        "g": "object"
+      },
+      {
+        "t": "馆",
+        "r": "guǎn",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "温",
+        "r": "おん",
+        "g": "attributive"
+      },
+      {
+        "t": "泉",
+        "r": "せん",
+        "g": "attributive"
+      },
+      {
+        "t": "旅",
+        "r": "りょ",
+        "g": "object"
+      },
+      {
+        "t": "館",
+        "r": "かん",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-温泉旅馆-intro",
+    "title_zh": [
+      {
+        "t": "温",
+        "r": "wēn",
+        "g": "attributive"
+      },
+      {
+        "t": "泉",
+        "r": "quán",
+        "g": "attributive"
+      },
+      {
+        "t": "旅",
+        "r": "lǚ",
+        "g": "object"
+      },
+      {
+        "t": "馆",
+        "r": "guǎn",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "温",
+        "r": "おん",
+        "g": "attributive"
+      },
+      {
+        "t": "泉",
+        "r": "せん",
+        "g": "attributive"
+      },
+      {
+        "t": "旅",
+        "r": "りょ",
+        "g": "object"
+      },
+      {
+        "t": "館",
+        "r": "かん",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p01791",
+    "source_text": "“你很寂寞吧？”",
+    "units": [
+      {
+        "source_text": "“你很寂寞吧？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "很",
+            "r": "hěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "寂",
+            "r": "jì",
+            "g": "predicate"
+          },
+          {
+            "t": "寞",
+            "r": "mò",
+            "g": "predicate"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "あなたは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "とても",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "寂",
+              "r": "さび",
+              "g": "predicate"
+            },
+            {
+              "t": "しいでしょう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

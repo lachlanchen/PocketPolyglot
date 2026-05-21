@@ -1,0 +1,215 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p01556",
+  "source_text": "“晚上好。”",
+  "source_sha256": "aebb6f550ea2f6b2d02a3baa1a1615eaa0a646b74e44f3f204190b24e541f625",
+  "source_normalized_sha256": "aebb6f550ea2f6b2d02a3baa1a1615eaa0a646b74e44f3f204190b24e541f625",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 10,
+    "grammar_token_total": 10,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-1556",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "attributive"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "温泉旅馆",
+    "title_zh": [
+      {
+        "t": "温",
+        "r": "wēn",
+        "g": "attributive"
+      },
+      {
+        "t": "泉",
+        "r": "quán",
+        "g": "attributive"
+      },
+      {
+        "t": "旅",
+        "r": "lǚ",
+        "g": "object"
+      },
+      {
+        "t": "馆",
+        "r": "guǎn",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "温",
+        "r": "おん",
+        "g": "attributive"
+      },
+      {
+        "t": "泉",
+        "r": "せん",
+        "g": "attributive"
+      },
+      {
+        "t": "旅",
+        "r": "りょ",
+        "g": "object"
+      },
+      {
+        "t": "館",
+        "r": "かん",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-温泉旅馆-intro",
+    "title_zh": [
+      {
+        "t": "温",
+        "r": "wēn",
+        "g": "attributive"
+      },
+      {
+        "t": "泉",
+        "r": "quán",
+        "g": "attributive"
+      },
+      {
+        "t": "旅",
+        "r": "lǚ",
+        "g": "object"
+      },
+      {
+        "t": "馆",
+        "r": "guǎn",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "温",
+        "r": "おん",
+        "g": "attributive"
+      },
+      {
+        "t": "泉",
+        "r": "せん",
+        "g": "attributive"
+      },
+      {
+        "t": "旅",
+        "r": "りょ",
+        "g": "object"
+      },
+      {
+        "t": "館",
+        "r": "かん",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p01556",
+    "source_text": "“晚上好。”",
+    "units": [
+      {
+        "source_text": "“晚上好。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "晚",
+            "r": "wǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "こんばんは",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

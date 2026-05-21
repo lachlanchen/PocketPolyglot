@@ -1,0 +1,558 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p00601",
+  "source_text": "“你是学生吧，是哪儿的帽子？给我看看。噢！”老板手里拿着我的制帽，显出很罕见的样子。",
+  "source_sha256": "db3ea2e7cc2782c9fc86af917957bbf0f5428e568a83c1212d4a9ebc1cdb6aee",
+  "source_normalized_sha256": "db3ea2e7cc2782c9fc86af917957bbf0f5428e568a83c1212d4a9ebc1cdb6aee",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 80,
+    "grammar_token_total": 80,
+    "unit_count": 4
+  },
+  "source_chunk_id": "izu-no-odori-chunk-0601",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "object"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "篝火",
+    "title_zh": [
+      {
+        "t": "篝",
+        "r": "gōu",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "huǒ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "篝",
+        "r": "かがり",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "び",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-篝火-intro",
+    "title_zh": [
+      {
+        "t": "篝",
+        "r": "gōu",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "huǒ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "篝",
+        "r": "かがり",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "び",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p00601",
+    "source_text": "“你是学生吧，是哪儿的帽子？给我看看。噢！”老板手里拿着我的制帽，显出很罕见的样子。",
+    "units": [
+      {
+        "source_text": "“你是学生吧，是哪儿的帽子？",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "学",
+            "r": "xué",
+            "g": "object"
+          },
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "object"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "哪",
+            "r": "nǎ",
+            "g": "attributive"
+          },
+          {
+            "t": "儿",
+            "r": "r",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "帽",
+            "r": "mào",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "あなたは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "学",
+              "r": "がく",
+              "g": "predicate"
+            },
+            {
+              "t": "生",
+              "r": "せい",
+              "g": "predicate"
+            },
+            {
+              "t": "さんでしょう、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "どこの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "帽",
+              "r": "ぼう",
+              "g": "object"
+            },
+            {
+              "t": "子",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "ですか。",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "给我看看。",
+        "zh": [
+          {
+            "t": "给",
+            "r": "gěi",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "object"
+          },
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "predicate"
+          },
+          {
+            "t": "看",
+            "r": "kan",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ちょっと",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "せてください。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "噢！”",
+        "zh": [
+          {
+            "t": "噢",
+            "r": "ō",
+            "g": "predicate"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "おお、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "これは。",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "老板手里拿着我的制帽，显出很罕见的样子。",
+        "zh": [
+          {
+            "t": "老",
+            "r": "lǎo",
+            "g": "subject"
+          },
+          {
+            "t": "板",
+            "r": "bǎn",
+            "g": "subject"
+          },
+          {
+            "t": "手",
+            "r": "shǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "拿",
+            "r": "ná",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "制",
+            "r": "zhì",
+            "g": "object"
+          },
+          {
+            "t": "帽",
+            "r": "mào",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "显",
+            "r": "xiǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "出",
+            "r": "chū",
+            "g": "predicate"
+          },
+          {
+            "t": "很",
+            "r": "hěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "罕",
+            "r": "hǎn",
+            "g": "attributive"
+          },
+          {
+            "t": "见",
+            "r": "jiàn",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "样",
+            "r": "yàng",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "主",
+              "r": "しゅ",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "制",
+              "r": "せい",
+              "g": "object"
+            },
+            {
+              "t": "帽",
+              "r": "ぼう",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "持",
+              "r": "も",
+              "g": "predicate"
+            },
+            {
+              "t": "って、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "とても",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "珍",
+              "r": "めずら",
+              "g": "attributive"
+            },
+            {
+              "t": "しそうな",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "様",
+              "r": "よう",
+              "g": "object"
+            },
+            {
+              "t": "子",
+              "r": "す",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "せた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

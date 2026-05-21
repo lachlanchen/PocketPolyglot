@@ -1,0 +1,722 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p00563",
+  "source_text": "我漫不经心地下着棋。这些日子，我为了道子似睡非睡，近于遐想，异常兴奋。现在连日的困顿登时涌了上来，我的棋越下越糟了。",
+  "source_sha256": "e4fe519b0a66ee295490d633eb262e4c5deba382ae7256566a459601b97c73ca",
+  "source_normalized_sha256": "e4fe519b0a66ee295490d633eb262e4c5deba382ae7256566a459601b97c73ca",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 116,
+    "grammar_token_total": 116,
+    "unit_count": 3
+  },
+  "source_chunk_id": "izu-no-odori-chunk-0563",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "げん",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "篝火",
+    "title_zh": [
+      {
+        "t": "篝",
+        "r": "gōu",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "huǒ",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "篝",
+        "r": "かがり",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "び",
+        "g": "attributive"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-篝火-intro",
+    "title_zh": [
+      {
+        "t": "篝",
+        "r": "gōu",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "huǒ",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "篝",
+        "r": "かがり",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "び",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p00563",
+    "source_text": "我漫不经心地下着棋。这些日子，我为了道子似睡非睡，近于遐想，异常兴奋。现在连日的困顿登时涌了上来，我的棋越下越糟了。",
+    "units": [
+      {
+        "source_text": "我漫不经心地下着棋。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "漫",
+            "r": "màn",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "经",
+            "r": "jīng",
+            "g": "adverbial"
+          },
+          {
+            "t": "心",
+            "r": "xīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "predicate"
+          },
+          {
+            "t": "棋",
+            "r": "qí",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "ぼんやりと",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "碁",
+              "r": "ご",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "打",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "っていた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "这些日子，我为了道子似睡非睡，近于遐想，异常兴奋。",
+        "zh": [
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "adverbial"
+          },
+          {
+            "t": "些",
+            "r": "xiē",
+            "g": "adverbial"
+          },
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "adverbial"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "为",
+            "r": "wèi",
+            "g": "adverbial"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "adverbial"
+          },
+          {
+            "t": "道",
+            "r": "dào",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "object"
+          },
+          {
+            "t": "似",
+            "r": "sì",
+            "g": "predicate"
+          },
+          {
+            "t": "睡",
+            "r": "shuì",
+            "g": "predicate"
+          },
+          {
+            "t": "非",
+            "r": "fēi",
+            "g": "predicate"
+          },
+          {
+            "t": "睡",
+            "r": "shuì",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "近",
+            "r": "jìn",
+            "g": "predicate"
+          },
+          {
+            "t": "于",
+            "r": "yú",
+            "g": "predicate"
+          },
+          {
+            "t": "遐",
+            "r": "xiá",
+            "g": "object"
+          },
+          {
+            "t": "想",
+            "r": "xiǎng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "异",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "常",
+            "r": "cháng",
+            "g": "adverbial"
+          },
+          {
+            "t": "兴",
+            "r": "xīng",
+            "g": "predicate"
+          },
+          {
+            "t": "奋",
+            "r": "fèn",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "頃",
+              "r": "ころ",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "道",
+              "r": "みち",
+              "g": "object"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "のために",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "眠",
+              "r": "ねむ",
+              "g": "predicate"
+            },
+            {
+              "t": "るとも",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "眠",
+              "r": "ねむ",
+              "g": "predicate"
+            },
+            {
+              "t": "らぬともつかず",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "夢",
+              "r": "む",
+              "g": "object"
+            },
+            {
+              "t": "想",
+              "r": "そう",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "近",
+              "r": "ちか",
+              "g": "predicate"
+            },
+            {
+              "t": "く",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "異",
+              "r": "い",
+              "g": "adverbial"
+            },
+            {
+              "t": "常",
+              "r": "じょう",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "興",
+              "r": "こう",
+              "g": "predicate"
+            },
+            {
+              "t": "奮",
+              "r": "ふん",
+              "g": "predicate"
+            },
+            {
+              "t": "していた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "现在连日的困顿登时涌了上来，我的棋越下越糟了。",
+        "zh": [
+          {
+            "t": "现",
+            "r": "xiàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "连",
+            "r": "lián",
+            "g": "attributive"
+          },
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "困",
+            "r": "kùn",
+            "g": "subject"
+          },
+          {
+            "t": "顿",
+            "r": "dùn",
+            "g": "subject"
+          },
+          {
+            "t": "登",
+            "r": "dēng",
+            "g": "adverbial"
+          },
+          {
+            "t": "时",
+            "r": "shí",
+            "g": "adverbial"
+          },
+          {
+            "t": "涌",
+            "r": "yǒng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "complement"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "棋",
+            "r": "qí",
+            "g": "subject"
+          },
+          {
+            "t": "越",
+            "r": "yuè",
+            "g": "adverbial"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "predicate"
+          },
+          {
+            "t": "越",
+            "r": "yuè",
+            "g": "adverbial"
+          },
+          {
+            "t": "糟",
+            "r": "zāo",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "いま",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "連",
+              "r": "れん",
+              "g": "attributive"
+            },
+            {
+              "t": "日",
+              "r": "じつ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "疲",
+              "r": "つか",
+              "g": "subject"
+            },
+            {
+              "t": "れ",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "たちまち",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "押",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "寄",
+              "r": "よ",
+              "g": "predicate"
+            },
+            {
+              "t": "せてきて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "碁",
+              "r": "ご",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "打",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "てば",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "打",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "つほど",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "ひどくなった",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

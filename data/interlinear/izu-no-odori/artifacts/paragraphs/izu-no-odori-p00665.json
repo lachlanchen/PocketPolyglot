@@ -1,0 +1,200 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p00665",
+  "source_text": "“老鸦浴嘛。”",
+  "source_sha256": "eecf21319625f05e6ecda23a8eef8bc59057df94da5cf667dc841f03629b981a",
+  "source_normalized_sha256": "eecf21319625f05e6ecda23a8eef8bc59057df94da5cf667dc841f03629b981a",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 15,
+    "grammar_token_total": 15,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-0665",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "attributive"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "篝火",
+    "title_zh": [
+      {
+        "t": "篝",
+        "r": "gōu",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "huǒ",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "篝",
+        "r": "かがり",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "び",
+        "g": "attributive"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-篝火-intro",
+    "title_zh": [
+      {
+        "t": "篝",
+        "r": "gōu",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "huǒ",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "篝",
+        "r": "かがり",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "び",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p00665",
+    "source_text": "“老鸦浴嘛。”",
+    "units": [
+      {
+        "source_text": "“老鸦浴嘛。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "老",
+            "r": "lǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "鸦",
+            "r": "yā",
+            "g": "predicate"
+          },
+          {
+            "t": "浴",
+            "r": "yù",
+            "g": "predicate"
+          },
+          {
+            "t": "嘛",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "烏",
+              "r": "からす",
+              "g": "predicate"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "行",
+              "r": "ぎょう",
+              "g": "predicate"
+            },
+            {
+              "t": "水",
+              "r": "ずい",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "だよ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

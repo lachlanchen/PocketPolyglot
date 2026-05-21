@@ -1,0 +1,220 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p00672",
+  "source_text": "“那么，你是怎么想的？”",
+  "source_sha256": "808007143961ed24da52b577423a76405064bbb9e5ef7886fb739da52a5886a3",
+  "source_normalized_sha256": "808007143961ed24da52b577423a76405064bbb9e5ef7886fb739da52a5886a3",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 19,
+    "grammar_token_total": 19,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-0672",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "object"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "篝火",
+    "title_zh": [
+      {
+        "t": "篝",
+        "r": "gōu",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "huǒ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "篝",
+        "r": "かがり",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "び",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-篝火-intro",
+    "title_zh": [
+      {
+        "t": "篝",
+        "r": "gōu",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "huǒ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "篝",
+        "r": "かがり",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "び",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p00672",
+    "source_text": "“那么，你是怎么想的？”",
+    "units": [
+      {
+        "source_text": "“那么，你是怎么想的？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "adverbial"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "怎",
+            "r": "zěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "adverbial"
+          },
+          {
+            "t": "想",
+            "r": "xiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "では、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "あなたは",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "どう",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "考",
+              "r": "かんが",
+              "g": "predicate"
+            },
+            {
+              "t": "えているのですか。",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

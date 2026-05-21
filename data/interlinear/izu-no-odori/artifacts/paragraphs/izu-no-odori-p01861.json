@@ -1,0 +1,230 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p01861",
+  "source_text": "“太残酷了。”",
+  "source_sha256": "a4d82ede0f43769d9b000b5ebc13813583de8cc91dfea32d38120c6a7a619b1a",
+  "source_normalized_sha256": "a4d82ede0f43769d9b000b5ebc13813583de8cc91dfea32d38120c6a7a619b1a",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 13,
+    "grammar_token_total": 13,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-1861",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "topic"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "topic"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "topic"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "温泉旅馆",
+    "title_zh": [
+      {
+        "t": "温",
+        "r": "wēn",
+        "g": "topic"
+      },
+      {
+        "t": "泉",
+        "r": "quán",
+        "g": "topic"
+      },
+      {
+        "t": "旅",
+        "r": "lǚ",
+        "g": "topic"
+      },
+      {
+        "t": "馆",
+        "r": "guǎn",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "温",
+        "r": "おん",
+        "g": "topic"
+      },
+      {
+        "t": "泉",
+        "r": "せん",
+        "g": "topic"
+      },
+      {
+        "t": "旅",
+        "r": "りょ",
+        "g": "topic"
+      },
+      {
+        "t": "館",
+        "r": "かん",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-温泉旅馆-intro",
+    "title_zh": [
+      {
+        "t": "温",
+        "r": "wēn",
+        "g": "topic"
+      },
+      {
+        "t": "泉",
+        "r": "quán",
+        "g": "topic"
+      },
+      {
+        "t": "旅",
+        "r": "lǚ",
+        "g": "topic"
+      },
+      {
+        "t": "馆",
+        "r": "guǎn",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "温",
+        "r": "おん",
+        "g": "topic"
+      },
+      {
+        "t": "泉",
+        "r": "せん",
+        "g": "topic"
+      },
+      {
+        "t": "旅",
+        "r": "りょ",
+        "g": "topic"
+      },
+      {
+        "t": "館",
+        "r": "かん",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p01861",
+    "source_text": "“太残酷了。”",
+    "units": [
+      {
+        "source_text": "“太残酷了。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "太",
+            "r": "tài",
+            "g": "adverbial"
+          },
+          {
+            "t": "残",
+            "r": "cán",
+            "g": "predicate"
+          },
+          {
+            "t": "酷",
+            "r": "kù",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "あまりにも",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "残",
+              "r": "ざん",
+              "g": "predicate"
+            },
+            {
+              "t": "酷",
+              "r": "こく",
+              "g": "predicate"
+            },
+            {
+              "t": "だ。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

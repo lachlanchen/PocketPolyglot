@@ -1,0 +1,206 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p01108",
+  "source_text": "“要是有狗，准会挨杀吧。”",
+  "source_sha256": "96d0e802de8c6201d4f2e4b5f0b853f84217255a3442a05a0c7a3d50dae2b907",
+  "source_normalized_sha256": "96d0e802de8c6201d4f2e4b5f0b853f84217255a3442a05a0c7a3d50dae2b907",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 22,
+    "grammar_token_total": 22,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-1108",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián"
+      },
+      {
+        "t": "言",
+        "r": "yán"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ"
+      },
+      {
+        "t": "書",
+        "r": "が"
+      },
+      {
+        "t": "き",
+        "r": ""
+      }
+    ]
+  },
+  "subsection": {
+    "id": "犬",
+    "title_zh": [
+      {
+        "t": "犬",
+        "r": "quǎn"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "犬",
+        "r": "いぬ"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-犬-intro",
+    "title_zh": [
+      {
+        "t": "犬",
+        "r": "quǎn"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "犬",
+        "r": "いぬ"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p01108",
+    "source_text": "“要是有狗，准会挨杀吧。”",
+    "units": [
+      {
+        "source_text": "“要是有狗，准会挨杀吧。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "狗",
+            "r": "gǒu",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "准",
+            "r": "zhǔn",
+            "g": "adverbial"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "adverbial"
+          },
+          {
+            "t": "挨",
+            "r": "ái",
+            "g": "predicate"
+          },
+          {
+            "t": "杀",
+            "r": "shā",
+            "g": "predicate"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "犬",
+              "r": "いぬ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "いれば、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "きっと",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "殺",
+              "r": "ころ",
+              "g": "predicate"
+            },
+            {
+              "t": "されるだろう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

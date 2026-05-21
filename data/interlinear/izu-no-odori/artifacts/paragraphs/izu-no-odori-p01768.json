@@ -1,0 +1,255 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p01768",
+  "source_text": "“我有点事求你。”",
+  "source_sha256": "c4260b994c3d5eb91a60f7c02ab860c2f586ccd782ef3205c5a5f7bcf9b7ba2b",
+  "source_normalized_sha256": "c4260b994c3d5eb91a60f7c02ab860c2f586ccd782ef3205c5a5f7bcf9b7ba2b",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 19,
+    "grammar_token_total": 19,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-1768",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "topic"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん",
+        "g": "topic"
+      },
+      {
+        "t": "言",
+        "r": "げん",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "温泉旅馆",
+    "title_zh": [
+      {
+        "t": "温",
+        "r": "wēn",
+        "g": "topic"
+      },
+      {
+        "t": "泉",
+        "r": "quán",
+        "g": "topic"
+      },
+      {
+        "t": "旅",
+        "r": "lǚ",
+        "g": "topic"
+      },
+      {
+        "t": "馆",
+        "r": "guǎn",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "温",
+        "r": "おん",
+        "g": "topic"
+      },
+      {
+        "t": "泉",
+        "r": "せん",
+        "g": "topic"
+      },
+      {
+        "t": "旅",
+        "r": "りょ",
+        "g": "topic"
+      },
+      {
+        "t": "館",
+        "r": "かん",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-温泉旅馆-intro",
+    "title_zh": [
+      {
+        "t": "温",
+        "r": "wēn",
+        "g": "topic"
+      },
+      {
+        "t": "泉",
+        "r": "quán",
+        "g": "topic"
+      },
+      {
+        "t": "旅",
+        "r": "lǚ",
+        "g": "topic"
+      },
+      {
+        "t": "馆",
+        "r": "guǎn",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "温",
+        "r": "おん",
+        "g": "topic"
+      },
+      {
+        "t": "泉",
+        "r": "せん",
+        "g": "topic"
+      },
+      {
+        "t": "旅",
+        "r": "りょ",
+        "g": "topic"
+      },
+      {
+        "t": "館",
+        "r": "かん",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p01768",
+    "source_text": "“我有点事求你。”",
+    "units": [
+      {
+        "source_text": "“我有点事求你。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "attributive"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "求",
+            "r": "qiú",
+            "g": "predicate"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "少",
+              "r": "すこ",
+              "g": "adverbial"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "あなたに",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "お",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "願",
+              "r": "ねが",
+              "g": "predicate"
+            },
+            {
+              "t": "いしたい",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "ことがあります",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p01060",
+  "source_text": "“是的。”",
+  "source_sha256": "0c503dccc537ab040c8888eb287b2e8c20d044a919a13a47d1eeaf47fa4cc518",
+  "source_normalized_sha256": "0c503dccc537ab040c8888eb287b2e8c20d044a919a13a47d1eeaf47fa4cc518",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 11,
+    "grammar_token_total": 11,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-1060",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "object"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "静静的雨",
+    "title_zh": [
+      {
+        "t": "静",
+        "r": "jìng",
+        "g": "attributive"
+      },
+      {
+        "t": "静",
+        "r": "jìng",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "attributive"
+      },
+      {
+        "t": "雨",
+        "r": "yǔ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "静",
+        "r": "しず",
+        "g": "attributive"
+      },
+      {
+        "t": "かな",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "雨",
+        "r": "あめ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-静静的雨-intro",
+    "title_zh": [
+      {
+        "t": "静",
+        "r": "jìng",
+        "g": "attributive"
+      },
+      {
+        "t": "静",
+        "r": "jìng",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "attributive"
+      },
+      {
+        "t": "雨",
+        "r": "yǔ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "静",
+        "r": "しず",
+        "g": "attributive"
+      },
+      {
+        "t": "かな",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "雨",
+        "r": "あめ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p01060",
+    "source_text": "“是的。”",
+    "units": [
+      {
+        "source_text": "“是的。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "はい",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "そうです",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

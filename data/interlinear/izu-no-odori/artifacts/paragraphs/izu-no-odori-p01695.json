@@ -1,0 +1,522 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p01695",
+  "source_text": "“忙得很啊。那玩意儿，哪儿还顾得上看呀。”阿泷说着一屁股坐下，把针捡起来。",
+  "source_sha256": "84c2e3d40a0075d54135a366f04ad13ec97f32092305e424e9fe70c8d83c2a27",
+  "source_normalized_sha256": "84c2e3d40a0075d54135a366f04ad13ec97f32092305e424e9fe70c8d83c2a27",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 72,
+    "grammar_token_total": 72,
+    "unit_count": 3
+  },
+  "source_chunk_id": "izu-no-odori-chunk-1695",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián"
+      },
+      {
+        "t": "言",
+        "r": "yán"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん"
+      },
+      {
+        "t": "言",
+        "r": "げん"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "温泉旅馆",
+    "title_zh": [
+      {
+        "t": "温",
+        "r": "wēn"
+      },
+      {
+        "t": "泉",
+        "r": "quán"
+      },
+      {
+        "t": "旅",
+        "r": "lǚ"
+      },
+      {
+        "t": "馆",
+        "r": "guǎn"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "温",
+        "r": "おん"
+      },
+      {
+        "t": "泉",
+        "r": "せん"
+      },
+      {
+        "t": "旅",
+        "r": "りょ"
+      },
+      {
+        "t": "館",
+        "r": "かん"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-温泉旅馆-intro",
+    "title_zh": [
+      {
+        "t": "温",
+        "r": "wēn"
+      },
+      {
+        "t": "泉",
+        "r": "quán"
+      },
+      {
+        "t": "旅",
+        "r": "lǚ"
+      },
+      {
+        "t": "馆",
+        "r": "guǎn"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "温",
+        "r": "おん"
+      },
+      {
+        "t": "泉",
+        "r": "せん"
+      },
+      {
+        "t": "旅",
+        "r": "りょ"
+      },
+      {
+        "t": "館",
+        "r": "かん"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p01695",
+    "source_text": "“忙得很啊。那玩意儿，哪儿还顾得上看呀。”阿泷说着一屁股坐下，把针捡起来。",
+    "units": [
+      {
+        "source_text": "“忙得很啊。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "忙",
+            "r": "máng",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "complement"
+          },
+          {
+            "t": "很",
+            "r": "hěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "とても",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "忙",
+              "r": "いそが",
+              "g": "predicate"
+            },
+            {
+              "t": "しいのよ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "ほんと",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "離",
+              "r": "はな",
+              "g": "predicate"
+            },
+            {
+              "t": "せないわ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "那玩意儿，哪儿还顾得上看呀。”",
+        "zh": [
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "object"
+          },
+          {
+            "t": "玩",
+            "r": "wán",
+            "g": "object"
+          },
+          {
+            "t": "意",
+            "r": "yì",
+            "g": "object"
+          },
+          {
+            "t": "儿",
+            "r": "ér",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "哪",
+            "r": "nǎ",
+            "g": "adverbial"
+          },
+          {
+            "t": "儿",
+            "r": "ér",
+            "g": "adverbial"
+          },
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "adverbial"
+          },
+          {
+            "t": "顾",
+            "r": "gù",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "complement"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "complement"
+          },
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "predicate"
+          },
+          {
+            "t": "呀",
+            "r": "ya",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "あんなもの",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "ている",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "暇",
+              "r": "ひま",
+              "g": "object"
+            },
+            {
+              "t": "なんてないわ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "阿泷说着一屁股坐下，把针捡起来。",
+        "zh": [
+          {
+            "t": "阿",
+            "r": "ā",
+            "g": "subject"
+          },
+          {
+            "t": "泷",
+            "r": "lóng",
+            "g": "subject"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "屁",
+            "r": "pì",
+            "g": "adverbial"
+          },
+          {
+            "t": "股",
+            "r": "gu",
+            "g": "adverbial"
+          },
+          {
+            "t": "坐",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "针",
+            "r": "zhēn",
+            "g": "object"
+          },
+          {
+            "t": "捡",
+            "r": "jiǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "complement"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "お",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "滝",
+              "r": "たき",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "そう",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "いながら",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "どさりと",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "座",
+              "r": "すわ",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "針",
+              "r": "はり",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "拾",
+              "r": "ひろ",
+              "g": "predicate"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "上",
+              "r": "あ",
+              "g": "complement"
+            },
+            {
+              "t": "げた",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

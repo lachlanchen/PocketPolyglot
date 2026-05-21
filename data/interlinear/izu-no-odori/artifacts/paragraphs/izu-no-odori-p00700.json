@@ -1,0 +1,802 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p00700",
+  "source_text": "她是说丙午年出生的事。回想起过去的日子，如今看到了崭新的自己……丙午年生，十六岁的处女，这个古老日本的虚假传说，多刺激我啊。",
+  "source_sha256": "c767df454fa19516e310e026ac7ec25b9db870f23adcbefea546c9719fbe7c37",
+  "source_normalized_sha256": "c767df454fa19516e310e026ac7ec25b9db870f23adcbefea546c9719fbe7c37",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 132,
+    "grammar_token_total": 132,
+    "unit_count": 3
+  },
+  "source_chunk_id": "izu-no-odori-chunk-0700",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "げん",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "篝火",
+    "title_zh": [
+      {
+        "t": "篝",
+        "r": "gōu",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "huǒ",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "篝",
+        "r": "かがり",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "び",
+        "g": "attributive"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-篝火-intro",
+    "title_zh": [
+      {
+        "t": "篝",
+        "r": "gōu",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "huǒ",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "篝",
+        "r": "かがり",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "び",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p00700",
+    "source_text": "她是说丙午年出生的事。回想起过去的日子，如今看到了崭新的自己……丙午年生，十六岁的处女，这个古老日本的虚假传说，多刺激我啊。",
+    "units": [
+      {
+        "source_text": "她是说丙午年出生的事。",
+        "zh": [
+          {
+            "t": "她",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "丙",
+            "r": "bǐng",
+            "g": "object"
+          },
+          {
+            "t": "午",
+            "r": "wǔ",
+            "g": "object"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "object"
+          },
+          {
+            "t": "出",
+            "r": "chū",
+            "g": "object"
+          },
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "彼",
+              "r": "かの",
+              "g": "subject"
+            },
+            {
+              "t": "女",
+              "r": "じょ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "丙",
+              "r": "ひのえ",
+              "g": "object"
+            },
+            {
+              "t": "午",
+              "r": "うま",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "年",
+              "r": "とし",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "生",
+              "r": "う",
+              "g": "object"
+            },
+            {
+              "t": "まれたことを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "っている",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "回想起过去的日子，如今看到了崭新的自己……",
+        "zh": [
+          {
+            "t": "回",
+            "r": "huí",
+            "g": "predicate"
+          },
+          {
+            "t": "想",
+            "r": "xiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "complement"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "object"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "如",
+            "r": "rú",
+            "g": "adverbial"
+          },
+          {
+            "t": "今",
+            "r": "jīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "predicate"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "崭",
+            "r": "zhǎn",
+            "g": "object"
+          },
+          {
+            "t": "新",
+            "r": "xīn",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "自",
+            "r": "zì",
+            "g": "object"
+          },
+          {
+            "t": "己",
+            "r": "jǐ",
+            "g": "object"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "過",
+              "r": "す",
+              "g": "object"
+            },
+            {
+              "t": "ぎ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "去",
+              "r": "さ",
+              "g": "object"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "日",
+              "r": "ひ",
+              "g": "object"
+            },
+            {
+              "t": "々",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "思",
+              "r": "おも",
+              "g": "predicate"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "返",
+              "r": "かえ",
+              "g": "predicate"
+            },
+            {
+              "t": "すと",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "今",
+              "r": "いま",
+              "g": "adverbial"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "まったく",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "新",
+              "r": "あたら",
+              "g": "object"
+            },
+            {
+              "t": "しい",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "自",
+              "r": "じ",
+              "g": "object"
+            },
+            {
+              "t": "分",
+              "r": "ぶん",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "えてきた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "…",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "…",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "丙午年生，十六岁的处女，这个古老日本的虚假传说，多刺激我啊。",
+        "zh": [
+          {
+            "t": "丙",
+            "r": "bǐng",
+            "g": "attributive"
+          },
+          {
+            "t": "午",
+            "r": "wǔ",
+            "g": "attributive"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "attributive"
+          },
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "十",
+            "r": "shí",
+            "g": "attributive"
+          },
+          {
+            "t": "六",
+            "r": "liù",
+            "g": "attributive"
+          },
+          {
+            "t": "岁",
+            "r": "suì",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "处",
+            "r": "chǔ",
+            "g": "attributive"
+          },
+          {
+            "t": "女",
+            "r": "nǚ",
+            "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "subject"
+          },
+          {
+            "t": "古",
+            "r": "gǔ",
+            "g": "subject"
+          },
+          {
+            "t": "老",
+            "r": "lǎo",
+            "g": "subject"
+          },
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "subject"
+          },
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "subject"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "subject"
+          },
+          {
+            "t": "虚",
+            "r": "xū",
+            "g": "subject"
+          },
+          {
+            "t": "假",
+            "r": "jiǎ",
+            "g": "subject"
+          },
+          {
+            "t": "传",
+            "r": "chuán",
+            "g": "subject"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "多",
+            "r": "duō",
+            "g": "adverbial"
+          },
+          {
+            "t": "刺",
+            "r": "cì",
+            "g": "predicate"
+          },
+          {
+            "t": "激",
+            "r": "jī",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "object"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "丙",
+              "r": "ひのえ",
+              "g": "attributive"
+            },
+            {
+              "t": "午",
+              "r": "うま",
+              "g": "attributive"
+            },
+            {
+              "t": "年",
+              "r": "どし",
+              "g": "attributive"
+            },
+            {
+              "t": "生",
+              "r": "う",
+              "g": "attributive"
+            },
+            {
+              "t": "まれ",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "十",
+              "r": "じゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "六",
+              "r": "ろく",
+              "g": "attributive"
+            },
+            {
+              "t": "歳",
+              "r": "さい",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "処",
+              "r": "しょ",
+              "g": "attributive"
+            },
+            {
+              "t": "女",
+              "r": "じょ",
+              "g": "attributive"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "古",
+              "r": "ふる",
+              "g": "subject"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "日",
+              "r": "に",
+              "g": "subject"
+            },
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "虚",
+              "r": "きょ",
+              "g": "subject"
+            },
+            {
+              "t": "偽",
+              "r": "ぎ",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "伝",
+              "r": "でん",
+              "g": "subject"
+            },
+            {
+              "t": "説",
+              "r": "せつ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "なんと",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "刺",
+              "r": "し",
+              "g": "predicate"
+            },
+            {
+              "t": "激",
+              "r": "げき",
+              "g": "predicate"
+            },
+            {
+              "t": "することか",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

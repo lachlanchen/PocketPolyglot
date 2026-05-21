@@ -1,0 +1,235 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p01104",
+  "source_text": "“可能是心理作用的缘故，真臭啊！”",
+  "source_sha256": "485a249b128bff98d2b2ff83b314cea21465e2a81214ce3b8e52d25a4f565019",
+  "source_normalized_sha256": "485a249b128bff98d2b2ff83b314cea21465e2a81214ce3b8e52d25a4f565019",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 26,
+    "grammar_token_total": 26,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-1104",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "attributive"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "犬",
+    "title_zh": [
+      {
+        "t": "犬",
+        "r": "quǎn",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "犬",
+        "r": "いぬ",
+        "g": "subject"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-犬-intro",
+    "title_zh": [
+      {
+        "t": "犬",
+        "r": "quǎn",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "犬",
+        "r": "いぬ",
+        "g": "subject"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p01104",
+    "source_text": "“可能是心理作用的缘故，真臭啊！”",
+    "units": [
+      {
+        "source_text": "“可能是心理作用的缘故，真臭啊！”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "adverbial"
+          },
+          {
+            "t": "能",
+            "r": "néng",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "心",
+            "r": "xīn",
+            "g": "attributive"
+          },
+          {
+            "t": "理",
+            "r": "lǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "作",
+            "r": "zuò",
+            "g": "attributive"
+          },
+          {
+            "t": "用",
+            "r": "yòng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "缘",
+            "r": "yuán",
+            "g": "object"
+          },
+          {
+            "t": "故",
+            "r": "gù",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "真",
+            "r": "zhēn",
+            "g": "adverbial"
+          },
+          {
+            "t": "臭",
+            "r": "chòu",
+            "g": "predicate"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "気",
+              "r": "き",
+              "g": "attributive"
+            },
+            {
+              "t": "のせいかもしれない、",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "adverbial"
+            },
+            {
+              "t": "当",
+              "r": "とう",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "臭",
+              "r": "くさ",
+              "g": "predicate"
+            },
+            {
+              "t": "いなあ！",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

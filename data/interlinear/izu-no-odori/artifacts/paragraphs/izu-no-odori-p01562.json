@@ -1,0 +1,421 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p01562",
+  "source_text": "“要是先打个招呼就好啰。我们以为你们停止营业了。”",
+  "source_sha256": "f3e7a49919a701983c4ff7594414b54a09948549478327bb13f7ba21cc3e3914",
+  "source_normalized_sha256": "f3e7a49919a701983c4ff7594414b54a09948549478327bb13f7ba21cc3e3914",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 50,
+    "grammar_token_total": 50,
+    "unit_count": 2
+  },
+  "source_chunk_id": "izu-no-odori-chunk-1562",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "げん",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "温泉旅馆",
+    "title_zh": [
+      {
+        "t": "温",
+        "r": "wēn",
+        "g": "attributive"
+      },
+      {
+        "t": "泉",
+        "r": "quán",
+        "g": "attributive"
+      },
+      {
+        "t": "旅",
+        "r": "lǚ",
+        "g": "object"
+      },
+      {
+        "t": "馆",
+        "r": "guǎn",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "温",
+        "r": "おん",
+        "g": "attributive"
+      },
+      {
+        "t": "泉",
+        "r": "せん",
+        "g": "attributive"
+      },
+      {
+        "t": "旅",
+        "r": "りょ",
+        "g": "object"
+      },
+      {
+        "t": "館",
+        "r": "かん",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-温泉旅馆-intro",
+    "title_zh": [
+      {
+        "t": "温",
+        "r": "wēn",
+        "g": "attributive"
+      },
+      {
+        "t": "泉",
+        "r": "quán",
+        "g": "attributive"
+      },
+      {
+        "t": "旅",
+        "r": "lǚ",
+        "g": "object"
+      },
+      {
+        "t": "馆",
+        "r": "guǎn",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "温",
+        "r": "おん",
+        "g": "attributive"
+      },
+      {
+        "t": "泉",
+        "r": "せん",
+        "g": "attributive"
+      },
+      {
+        "t": "旅",
+        "r": "りょ",
+        "g": "object"
+      },
+      {
+        "t": "館",
+        "r": "かん",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p01562",
+    "source_text": "“要是先打个招呼就好啰。我们以为你们停止营业了。”",
+    "units": [
+      {
+        "source_text": "“要是先打个招呼就好啰。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "打",
+            "r": "dǎ",
+            "g": "predicate"
+          },
+          {
+            "t": "个",
+            "r": "ge",
+            "g": "function"
+          },
+          {
+            "t": "招",
+            "r": "zhāo",
+            "g": "object"
+          },
+          {
+            "t": "呼",
+            "r": "hu",
+            "g": "object"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "啰",
+            "r": "luo",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "先",
+              "r": "さき",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "ひと",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "言",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "声",
+              "r": "こえ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "かけておけば",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "よかったですね",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我们以为你们停止营业了。”",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "为",
+            "r": "wéi",
+            "g": "predicate"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          },
+          {
+            "t": "停",
+            "r": "tíng",
+            "g": "predicate"
+          },
+          {
+            "t": "止",
+            "r": "zhǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "营",
+            "r": "yíng",
+            "g": "object"
+          },
+          {
+            "t": "业",
+            "r": "yè",
+            "g": "object"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "たちは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "あなた",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "方",
+              "r": "がた",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "営",
+              "r": "えい",
+              "g": "object"
+            },
+            {
+              "t": "業",
+              "r": "ぎょう",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "やめたのだと",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "思",
+              "r": "おも",
+              "g": "predicate"
+            },
+            {
+              "t": "っていました",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

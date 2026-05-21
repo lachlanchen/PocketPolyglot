@@ -1,0 +1,255 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p00241",
+  "source_text": "我呆住了。",
+  "source_sha256": "88da59281e2091047ef73fb9709f5e4ee4b6484a0a44112f61804505fb567efa",
+  "source_normalized_sha256": "88da59281e2091047ef73fb9709f5e4ee4b6484a0a44112f61804505fb567efa",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 10,
+    "grammar_token_total": 10,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-0241",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "topic"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "topic"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "topic"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "十六岁的日记",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "六",
+        "r": "liù",
+        "g": "attributive"
+      },
+      {
+        "t": "岁",
+        "r": "suì",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "attributive"
+      },
+      {
+        "t": "日",
+        "r": "rì",
+        "g": "topic"
+      },
+      {
+        "t": "记",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "六",
+        "r": "ろく",
+        "g": "attributive"
+      },
+      {
+        "t": "歳",
+        "r": "さい",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "日",
+        "r": "にっ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-十六岁的日记-intro",
+    "title_zh": [
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "六",
+        "r": "liù",
+        "g": "attributive"
+      },
+      {
+        "t": "岁",
+        "r": "suì",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "attributive"
+      },
+      {
+        "t": "日",
+        "r": "rì",
+        "g": "topic"
+      },
+      {
+        "t": "记",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "六",
+        "r": "ろく",
+        "g": "attributive"
+      },
+      {
+        "t": "歳",
+        "r": "さい",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "日",
+        "r": "にっ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p00241",
+    "source_text": "我呆住了。",
+    "units": [
+      {
+        "source_text": "我呆住了。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "呆",
+            "r": "dāi",
+            "g": "predicate"
+          },
+          {
+            "t": "住",
+            "r": "zhù",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "あっけに",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "とられた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

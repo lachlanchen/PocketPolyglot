@@ -1,0 +1,240 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p00398",
+  "source_text": "“是吗。”",
+  "source_sha256": "9dce349340478e90294e850c9aa57443ae95dd0e6a60623daaa9dc596fd4b450",
+  "source_normalized_sha256": "9dce349340478e90294e850c9aa57443ae95dd0e6a60623daaa9dc596fd4b450",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 9,
+    "grammar_token_total": 9,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-0398",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "object"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "招魂节一景",
+    "title_zh": [
+      {
+        "t": "招",
+        "r": "zhāo",
+        "g": "attributive"
+      },
+      {
+        "t": "魂",
+        "r": "hún",
+        "g": "attributive"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "attributive"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "attributive"
+      },
+      {
+        "t": "景",
+        "r": "jǐng",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "招",
+        "r": "しょう",
+        "g": "attributive"
+      },
+      {
+        "t": "魂",
+        "r": "こん",
+        "g": "attributive"
+      },
+      {
+        "t": "祭",
+        "r": "さい",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "一",
+        "r": "いっ",
+        "g": "attributive"
+      },
+      {
+        "t": "景",
+        "r": "けい",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-招魂节一景-intro",
+    "title_zh": [
+      {
+        "t": "招",
+        "r": "zhāo",
+        "g": "attributive"
+      },
+      {
+        "t": "魂",
+        "r": "hún",
+        "g": "attributive"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "attributive"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "attributive"
+      },
+      {
+        "t": "景",
+        "r": "jǐng",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "招",
+        "r": "しょう",
+        "g": "attributive"
+      },
+      {
+        "t": "魂",
+        "r": "こん",
+        "g": "attributive"
+      },
+      {
+        "t": "祭",
+        "r": "さい",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "一",
+        "r": "いっ",
+        "g": "attributive"
+      },
+      {
+        "t": "景",
+        "r": "けい",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p00398",
+    "source_text": "“是吗。”",
+    "units": [
+      {
+        "source_text": "“是吗。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "そう",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "です",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "か。」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

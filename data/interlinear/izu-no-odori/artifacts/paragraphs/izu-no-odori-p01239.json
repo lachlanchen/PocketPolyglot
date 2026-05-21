@@ -1,0 +1,230 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p01239",
+  "source_text": "“是只雄鸟。”",
+  "source_sha256": "3939ae6da9202682d4dab1a23278bd4cd1d54175d1851d73e9eefa837f677f5c",
+  "source_normalized_sha256": "3939ae6da9202682d4dab1a23278bd4cd1d54175d1851d73e9eefa837f677f5c",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 12,
+    "grammar_token_total": 12,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-1239",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "げん",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "春天的景色",
+    "title_zh": [
+      {
+        "t": "春",
+        "r": "chūn",
+        "g": "attributive"
+      },
+      {
+        "t": "天",
+        "r": "tiān",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "attributive"
+      },
+      {
+        "t": "景",
+        "r": "jǐng",
+        "g": "object"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "春",
+        "r": "はる",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "景",
+        "r": "けい",
+        "g": "object"
+      },
+      {
+        "t": "色",
+        "r": "しき",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-春天的景色-intro",
+    "title_zh": [
+      {
+        "t": "春",
+        "r": "chūn",
+        "g": "attributive"
+      },
+      {
+        "t": "天",
+        "r": "tiān",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "attributive"
+      },
+      {
+        "t": "景",
+        "r": "jǐng",
+        "g": "object"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "春",
+        "r": "はる",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "景",
+        "r": "けい",
+        "g": "object"
+      },
+      {
+        "t": "色",
+        "r": "しき",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p01239",
+    "source_text": "“是只雄鸟。”",
+    "units": [
+      {
+        "source_text": "“是只雄鸟。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "只",
+            "r": "zhī",
+            "g": "object"
+          },
+          {
+            "t": "雄",
+            "r": "xióng",
+            "g": "object"
+          },
+          {
+            "t": "鸟",
+            "r": "niǎo",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "雄",
+              "r": "おす",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "鳥",
+              "r": "とり",
+              "g": "object"
+            },
+            {
+              "t": "だ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

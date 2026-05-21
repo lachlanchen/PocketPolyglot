@@ -1,0 +1,220 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p00576",
+  "source_text": "“嗯，我跟和尚说说看。”",
+  "source_sha256": "89e9826f514859d3ceab41294fe733f352ff13022214fcdcfef19f850f7e769c",
+  "source_normalized_sha256": "89e9826f514859d3ceab41294fe733f352ff13022214fcdcfef19f850f7e769c",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 19,
+    "grammar_token_total": 19,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-0576",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "topic"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "topic"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "topic"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "篝火",
+    "title_zh": [
+      {
+        "t": "篝",
+        "r": "gōu",
+        "g": "topic"
+      },
+      {
+        "t": "火",
+        "r": "huǒ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "篝",
+        "r": "かがり",
+        "g": "topic"
+      },
+      {
+        "t": "火",
+        "r": "び",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-篝火-intro",
+    "title_zh": [
+      {
+        "t": "篝",
+        "r": "gōu",
+        "g": "topic"
+      },
+      {
+        "t": "火",
+        "r": "huǒ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "篝",
+        "r": "かがり",
+        "g": "topic"
+      },
+      {
+        "t": "火",
+        "r": "び",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p00576",
+    "source_text": "“嗯，我跟和尚说说看。”",
+    "units": [
+      {
+        "source_text": "“嗯，我跟和尚说说看。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "嗯",
+            "r": "èn",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "跟",
+            "r": "gēn",
+            "g": "adverbial"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "adverbial"
+          },
+          {
+            "t": "尚",
+            "r": "shàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「うん、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "和",
+              "r": "お",
+              "g": "adverbial"
+            },
+            {
+              "t": "尚",
+              "r": "しょう",
+              "g": "adverbial"
+            },
+            {
+              "t": "さんに",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "話",
+              "r": "はな",
+              "g": "predicate"
+            },
+            {
+              "t": "してみる。",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

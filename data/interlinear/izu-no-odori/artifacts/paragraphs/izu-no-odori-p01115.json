@@ -1,0 +1,500 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p01115",
+  "source_text": "“今天某某家有丧事，据说那家人觉得狗怪可怜的，想拜托邻居悄悄地将狗存放在亲戚那儿。”",
+  "source_sha256": "c976932d2a95d07c1db385d21570cf6d0b1e2623dff80231691b92a6b0831f54",
+  "source_normalized_sha256": "c976932d2a95d07c1db385d21570cf6d0b1e2623dff80231691b92a6b0831f54",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 80,
+    "grammar_token_total": 80,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-1115",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "げん",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "犬",
+    "title_zh": [
+      {
+        "t": "犬",
+        "r": "quǎn",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "犬",
+        "r": "いぬ",
+        "g": "attributive"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-犬-intro",
+    "title_zh": [
+      {
+        "t": "犬",
+        "r": "quǎn",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "犬",
+        "r": "いぬ",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p01115",
+    "source_text": "“今天某某家有丧事，据说那家人觉得狗怪可怜的，想拜托邻居悄悄地将狗存放在亲戚那儿。”",
+    "units": [
+      {
+        "source_text": "“今天某某家有丧事，据说那家人觉得狗怪可怜的，想拜托邻居悄悄地将狗存放在亲戚那儿。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "今",
+            "r": "jīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "某",
+            "r": "mǒu",
+            "g": "subject"
+          },
+          {
+            "t": "某",
+            "r": "mǒu",
+            "g": "subject"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "subject"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "丧",
+            "r": "sāng",
+            "g": "object"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "据",
+            "r": "jù",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "adverbial"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "subject"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "觉",
+            "r": "jué",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "狗",
+            "r": "gǒu",
+            "g": "object"
+          },
+          {
+            "t": "怪",
+            "r": "guài",
+            "g": "adverbial"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "complement"
+          },
+          {
+            "t": "怜",
+            "r": "lián",
+            "g": "complement"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "想",
+            "r": "xiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "拜",
+            "r": "bài",
+            "g": "predicate"
+          },
+          {
+            "t": "托",
+            "r": "tuō",
+            "g": "predicate"
+          },
+          {
+            "t": "邻",
+            "r": "lín",
+            "g": "object"
+          },
+          {
+            "t": "居",
+            "r": "jū",
+            "g": "object"
+          },
+          {
+            "t": "悄",
+            "r": "qiāo",
+            "g": "adverbial"
+          },
+          {
+            "t": "悄",
+            "r": "qiāo",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "将",
+            "r": "jiāng",
+            "g": "function"
+          },
+          {
+            "t": "狗",
+            "r": "gǒu",
+            "g": "object"
+          },
+          {
+            "t": "存",
+            "r": "cún",
+            "g": "predicate"
+          },
+          {
+            "t": "放",
+            "r": "fàng",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "complement"
+          },
+          {
+            "t": "亲",
+            "r": "qīn",
+            "g": "complement"
+          },
+          {
+            "t": "戚",
+            "r": "qi",
+            "g": "complement"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "complement"
+          },
+          {
+            "t": "儿",
+            "r": "ér",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "今",
+              "r": "きょ",
+              "g": "adverbial"
+            },
+            {
+              "t": "日",
+              "r": "う",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "某",
+              "r": "ぼう",
+              "g": "subject"
+            },
+            {
+              "t": "々の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "家",
+              "r": "いえ",
+              "g": "subject"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "不",
+              "r": "ふ",
+              "g": "object"
+            },
+            {
+              "t": "幸",
+              "r": "こう",
+              "g": "object"
+            },
+            {
+              "t": "があり、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "聞",
+              "r": "き",
+              "g": "adverbial"
+            },
+            {
+              "t": "くところでは",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "その",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "家",
+              "r": "いえ",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "犬",
+              "r": "いぬ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "不",
+              "r": "ふ",
+              "g": "complement"
+            },
+            {
+              "t": "憫",
+              "r": "びん",
+              "g": "complement"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "思",
+              "r": "おも",
+              "g": "predicate"
+            },
+            {
+              "t": "い、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "隣",
+              "r": "となり",
+              "g": "object"
+            },
+            {
+              "t": "人",
+              "r": "びと",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "頼",
+              "r": "たの",
+              "g": "predicate"
+            },
+            {
+              "t": "んで、こっそり",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "親",
+              "r": "しん",
+              "g": "complement"
+            },
+            {
+              "t": "戚",
+              "r": "せき",
+              "g": "complement"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "家",
+              "r": "いえ",
+              "g": "complement"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "預",
+              "r": "あず",
+              "g": "predicate"
+            },
+            {
+              "t": "けたいという。",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

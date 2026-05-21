@@ -1,0 +1,260 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p01882",
+  "source_text": "好，我这就分给大家。",
+  "source_sha256": "d62664c0871bf111e795bbcb619cddba6dc912f36588a06effb3c7318fd260f1",
+  "source_normalized_sha256": "d62664c0871bf111e795bbcb619cddba6dc912f36588a06effb3c7318fd260f1",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 19,
+    "grammar_token_total": 19,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-1882",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "object"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "叫卖声",
+    "title_zh": [
+      {
+        "t": "叫",
+        "r": "jiào",
+        "g": "attributive"
+      },
+      {
+        "t": "卖",
+        "r": "mài",
+        "g": "attributive"
+      },
+      {
+        "t": "声",
+        "r": "shēng",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "呼",
+        "r": "よ",
+        "g": "attributive"
+      },
+      {
+        "t": "び",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "売",
+        "r": "う",
+        "g": "attributive"
+      },
+      {
+        "t": "りの",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "声",
+        "r": "こえ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-叫卖声-intro",
+    "title_zh": [
+      {
+        "t": "叫",
+        "r": "jiào",
+        "g": "attributive"
+      },
+      {
+        "t": "卖",
+        "r": "mài",
+        "g": "attributive"
+      },
+      {
+        "t": "声",
+        "r": "shēng",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "呼",
+        "r": "よ",
+        "g": "attributive"
+      },
+      {
+        "t": "び",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "売",
+        "r": "う",
+        "g": "attributive"
+      },
+      {
+        "t": "りの",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "声",
+        "r": "こえ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p01882",
+    "source_text": "好，我这就分给大家。",
+    "units": [
+      {
+        "source_text": "好，我这就分给大家。",
+        "zh": [
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "adverbial"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "分",
+            "r": "fēn",
+            "g": "predicate"
+          },
+          {
+            "t": "给",
+            "r": "gěi",
+            "g": "predicate"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "complement"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "はい、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "今",
+              "r": "いま",
+              "g": "adverbial"
+            },
+            {
+              "t": "すぐ",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "皆",
+              "r": "みな",
+              "g": "complement"
+            },
+            {
+              "t": "さんに",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "分",
+              "r": "わ",
+              "g": "predicate"
+            },
+            {
+              "t": "けます。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

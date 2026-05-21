@@ -1,0 +1,170 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p01124",
+  "source_text": "“大畜生！”",
+  "source_sha256": "44525d9a299850a36f13e09bf045472744faa9a065c2851e5f3eceec98c955ef",
+  "source_normalized_sha256": "44525d9a299850a36f13e09bf045472744faa9a065c2851e5f3eceec98c955ef",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 13,
+    "grammar_token_total": 13,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-1124",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "object"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "犬",
+    "title_zh": [
+      {
+        "t": "犬",
+        "r": "quǎn",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "犬",
+        "r": "いぬ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-犬-intro",
+    "title_zh": [
+      {
+        "t": "犬",
+        "r": "quǎn",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "犬",
+        "r": "いぬ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p01124",
+    "source_text": "“大畜生！”",
+    "units": [
+      {
+        "source_text": "“大畜生！”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "attributive"
+          },
+          {
+            "t": "畜",
+            "r": "chù",
+            "g": "object"
+          },
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "object"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "この",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "畜",
+              "r": "ちく",
+              "g": "object"
+            },
+            {
+              "t": "生",
+              "r": "しょう",
+              "g": "object"
+            },
+            {
+              "t": "め",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "！",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

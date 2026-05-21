@@ -1,0 +1,642 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p00615",
+  "source_text": "“那儿可以看到岔口吧？越过岔口去办事的时候，我经常盯着开往东京的列车。”道子从高架桥上注视着远方，说。",
+  "source_sha256": "e32063f4625d050e41efff3b3697acdf2db85629ef584b834b2c7657a5cd91a3",
+  "source_normalized_sha256": "e32063f4625d050e41efff3b3697acdf2db85629ef584b834b2c7657a5cd91a3",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 99,
+    "grammar_token_total": 99,
+    "unit_count": 3
+  },
+  "source_chunk_id": "izu-no-odori-chunk-0615",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "attributive"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "篝火",
+    "title_zh": [
+      {
+        "t": "篝",
+        "r": "gōu",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "huǒ",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "篝",
+        "r": "かがり",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "び",
+        "g": "attributive"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-篝火-intro",
+    "title_zh": [
+      {
+        "t": "篝",
+        "r": "gōu",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "huǒ",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "篝",
+        "r": "かがり",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "び",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p00615",
+    "source_text": "“那儿可以看到岔口吧？越过岔口去办事的时候，我经常盯着开往东京的列车。”道子从高架桥上注视着远方，说。",
+    "units": [
+      {
+        "source_text": "“那儿可以看到岔口吧？",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "adverbial"
+          },
+          {
+            "t": "儿",
+            "r": "ér",
+            "g": "adverbial"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "predicate"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "predicate"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "岔",
+            "r": "chà",
+            "g": "object"
+          },
+          {
+            "t": "口",
+            "r": "kǒu",
+            "g": "object"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "あそこから",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "分",
+              "r": "わ",
+              "g": "object"
+            },
+            {
+              "t": "かれ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "道",
+              "r": "みち",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "えるでしょう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "越过岔口去办事的时候，我经常盯着开往东京的列车。”",
+        "zh": [
+          {
+            "t": "越",
+            "r": "yuè",
+            "g": "adverbial"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "adverbial"
+          },
+          {
+            "t": "岔",
+            "r": "chà",
+            "g": "adverbial"
+          },
+          {
+            "t": "口",
+            "r": "kǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "adverbial"
+          },
+          {
+            "t": "办",
+            "r": "bàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "adverbial"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "时",
+            "r": "shí",
+            "g": "adverbial"
+          },
+          {
+            "t": "候",
+            "r": "hou",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "经",
+            "r": "jīng",
+            "g": "adverbial"
+          },
+          {
+            "t": "常",
+            "r": "cháng",
+            "g": "adverbial"
+          },
+          {
+            "t": "盯",
+            "r": "dīng",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "predicate"
+          },
+          {
+            "t": "开",
+            "r": "kāi",
+            "g": "attributive"
+          },
+          {
+            "t": "往",
+            "r": "wǎng",
+            "g": "attributive"
+          },
+          {
+            "t": "东",
+            "r": "dōng",
+            "g": "attributive"
+          },
+          {
+            "t": "京",
+            "r": "jīng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "列",
+            "r": "liè",
+            "g": "object"
+          },
+          {
+            "t": "车",
+            "r": "chē",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "分",
+              "r": "わ",
+              "g": "adverbial"
+            },
+            {
+              "t": "かれ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "道",
+              "r": "みち",
+              "g": "adverbial"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "越",
+              "r": "こ",
+              "g": "adverbial"
+            },
+            {
+              "t": "えて",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "用",
+              "r": "よう",
+              "g": "adverbial"
+            },
+            {
+              "t": "事",
+              "r": "じ",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "行",
+              "r": "い",
+              "g": "adverbial"
+            },
+            {
+              "t": "くとき、",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "いつも",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "東",
+              "r": "とう",
+              "g": "attributive"
+            },
+            {
+              "t": "京",
+              "r": "きょう",
+              "g": "attributive"
+            },
+            {
+              "t": "行",
+              "r": "ゆ",
+              "g": "attributive"
+            },
+            {
+              "t": "きの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "列",
+              "r": "れっ",
+              "g": "object"
+            },
+            {
+              "t": "車",
+              "r": "しゃ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "つめているの」「",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "道子从高架桥上注视着远方，说。",
+        "zh": [
+          {
+            "t": "道",
+            "r": "dào",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "从",
+            "r": "cóng",
+            "g": "adverbial"
+          },
+          {
+            "t": "高",
+            "r": "gāo",
+            "g": "adverbial"
+          },
+          {
+            "t": "架",
+            "r": "jià",
+            "g": "adverbial"
+          },
+          {
+            "t": "桥",
+            "r": "qiáo",
+            "g": "adverbial"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "注",
+            "r": "zhù",
+            "g": "predicate"
+          },
+          {
+            "t": "视",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "predicate"
+          },
+          {
+            "t": "远",
+            "r": "yuǎn",
+            "g": "object"
+          },
+          {
+            "t": "方",
+            "r": "fāng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "道",
+              "r": "みち",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "高",
+              "r": "こう",
+              "g": "adverbial"
+            },
+            {
+              "t": "架",
+              "r": "か",
+              "g": "adverbial"
+            },
+            {
+              "t": "橋",
+              "r": "きょう",
+              "g": "adverbial"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "上",
+              "r": "うえ",
+              "g": "adverbial"
+            },
+            {
+              "t": "から",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "遠",
+              "r": "とお",
+              "g": "object"
+            },
+            {
+              "t": "くを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "つめながら",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、そう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

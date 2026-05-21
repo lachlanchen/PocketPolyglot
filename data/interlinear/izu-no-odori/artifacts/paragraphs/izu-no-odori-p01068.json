@@ -1,0 +1,240 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p01068",
+  "source_text": "“住在这个镇上？”",
+  "source_sha256": "e3f4d4ebf9d10932d11590bd09170e548e3b7945574cd2883ea52e8950a10e1a",
+  "source_normalized_sha256": "e3f4d4ebf9d10932d11590bd09170e548e3b7945574cd2883ea52e8950a10e1a",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 17,
+    "grammar_token_total": 17,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-1068",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "topic"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "topic"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "topic"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "静静的雨",
+    "title_zh": [
+      {
+        "t": "静",
+        "r": "jìng",
+        "g": "topic"
+      },
+      {
+        "t": "静",
+        "r": "jìng",
+        "g": "topic"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "topic"
+      },
+      {
+        "t": "雨",
+        "r": "yǔ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "静",
+        "r": "しず",
+        "g": "topic"
+      },
+      {
+        "t": "かな",
+        "r": "",
+        "g": "topic"
+      },
+      {
+        "t": "雨",
+        "r": "あめ",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-静静的雨-intro",
+    "title_zh": [
+      {
+        "t": "静",
+        "r": "jìng",
+        "g": "topic"
+      },
+      {
+        "t": "静",
+        "r": "jìng",
+        "g": "topic"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "topic"
+      },
+      {
+        "t": "雨",
+        "r": "yǔ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "静",
+        "r": "しず",
+        "g": "topic"
+      },
+      {
+        "t": "かな",
+        "r": "",
+        "g": "topic"
+      },
+      {
+        "t": "雨",
+        "r": "あめ",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p01068",
+    "source_text": "“住在这个镇上？”",
+    "units": [
+      {
+        "source_text": "“住在这个镇上？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "住",
+            "r": "zhù",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "complement"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "complement"
+          },
+          {
+            "t": "镇",
+            "r": "zhèn",
+            "g": "complement"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "complement"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "この",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "町",
+              "r": "まち",
+              "g": "complement"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "complement"
+            }
+          ],
+          [
+            {
+              "t": "住",
+              "r": "す",
+              "g": "predicate"
+            },
+            {
+              "t": "んでいるの",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

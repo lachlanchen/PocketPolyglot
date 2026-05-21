@@ -1,0 +1,170 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p01106",
+  "source_text": "“是谁死了呢？”",
+  "source_sha256": "b65c0aad7ed9186278e15885d57a7e75d83c652fd3b044f8d9674d111c32ce0c",
+  "source_normalized_sha256": "b65c0aad7ed9186278e15885d57a7e75d83c652fd3b044f8d9674d111c32ce0c",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 14,
+    "grammar_token_total": 14,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-1106",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "がき",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "犬",
+    "title_zh": [
+      {
+        "t": "犬",
+        "r": "quǎn",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "犬",
+        "r": "いぬ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-犬-intro",
+    "title_zh": [
+      {
+        "t": "犬",
+        "r": "quǎn",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "犬",
+        "r": "いぬ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p01106",
+    "source_text": "“是谁死了呢？”",
+    "units": [
+      {
+        "source_text": "“是谁死了呢？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "谁",
+            "r": "shuí",
+            "g": "subject"
+          },
+          {
+            "t": "死",
+            "r": "sǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "呢",
+            "r": "ne",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "誰",
+              "r": "だれ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "死",
+              "r": "し",
+              "g": "predicate"
+            },
+            {
+              "t": "んだ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "のだろう？」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

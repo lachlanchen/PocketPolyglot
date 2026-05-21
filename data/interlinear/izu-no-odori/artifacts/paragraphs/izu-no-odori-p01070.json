@@ -1,0 +1,240 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p01070",
+  "source_text": "“就这些条件吗？”",
+  "source_sha256": "e0ab6743c9e3d625bc2b00298b3a7bcfa284885c3de69466077d3cfa0a5c9bb7",
+  "source_normalized_sha256": "e0ab6743c9e3d625bc2b00298b3a7bcfa284885c3de69466077d3cfa0a5c9bb7",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 17,
+    "grammar_token_total": 17,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-1070",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "object"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "静静的雨",
+    "title_zh": [
+      {
+        "t": "静",
+        "r": "jìng",
+        "g": "attributive"
+      },
+      {
+        "t": "静",
+        "r": "jìng",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "attributive"
+      },
+      {
+        "t": "雨",
+        "r": "yǔ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "静",
+        "r": "しず",
+        "g": "attributive"
+      },
+      {
+        "t": "かな",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "雨",
+        "r": "あめ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-静静的雨-intro",
+    "title_zh": [
+      {
+        "t": "静",
+        "r": "jìng",
+        "g": "attributive"
+      },
+      {
+        "t": "静",
+        "r": "jìng",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "attributive"
+      },
+      {
+        "t": "雨",
+        "r": "yǔ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "静",
+        "r": "しず",
+        "g": "attributive"
+      },
+      {
+        "t": "かな",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "雨",
+        "r": "あめ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p01070",
+    "source_text": "“就这些条件吗？”",
+    "units": [
+      {
+        "source_text": "“就这些条件吗？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "些",
+            "r": "xiē",
+            "g": "subject"
+          },
+          {
+            "t": "条",
+            "r": "tiáo",
+            "g": "subject"
+          },
+          {
+            "t": "件",
+            "r": "jiàn",
+            "g": "subject"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "条",
+              "r": "じょう",
+              "g": "subject"
+            },
+            {
+              "t": "件",
+              "r": "けん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "これだけ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "ですか",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

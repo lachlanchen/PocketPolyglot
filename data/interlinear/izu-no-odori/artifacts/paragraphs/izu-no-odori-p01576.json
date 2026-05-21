@@ -1,0 +1,381 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p01576",
+  "source_text": "“哎哟，睡着了吗？对，你……要多加珍重啊。”",
+  "source_sha256": "eb05edf442cbd77c894ff2a66f9531b0a95c97278a9a2c7b368e35a308e1a97e",
+  "source_normalized_sha256": "eb05edf442cbd77c894ff2a66f9531b0a95c97278a9a2c7b368e35a308e1a97e",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 41,
+    "grammar_token_total": 41,
+    "unit_count": 2
+  },
+  "source_chunk_id": "izu-no-odori-chunk-1576",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "topic"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "topic"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "topic"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "温泉旅馆",
+    "title_zh": [
+      {
+        "t": "温",
+        "r": "wēn",
+        "g": "topic"
+      },
+      {
+        "t": "泉",
+        "r": "quán",
+        "g": "topic"
+      },
+      {
+        "t": "旅",
+        "r": "lǚ",
+        "g": "topic"
+      },
+      {
+        "t": "馆",
+        "r": "guǎn",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "温",
+        "r": "おん",
+        "g": "topic"
+      },
+      {
+        "t": "泉",
+        "r": "せん",
+        "g": "topic"
+      },
+      {
+        "t": "旅",
+        "r": "りょ",
+        "g": "topic"
+      },
+      {
+        "t": "館",
+        "r": "かん",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-温泉旅馆-intro",
+    "title_zh": [
+      {
+        "t": "温",
+        "r": "wēn",
+        "g": "topic"
+      },
+      {
+        "t": "泉",
+        "r": "quán",
+        "g": "topic"
+      },
+      {
+        "t": "旅",
+        "r": "lǚ",
+        "g": "topic"
+      },
+      {
+        "t": "馆",
+        "r": "guǎn",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "温",
+        "r": "おん",
+        "g": "topic"
+      },
+      {
+        "t": "泉",
+        "r": "せん",
+        "g": "topic"
+      },
+      {
+        "t": "旅",
+        "r": "りょ",
+        "g": "topic"
+      },
+      {
+        "t": "館",
+        "r": "かん",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p01576",
+    "source_text": "“哎哟，睡着了吗？对，你……要多加珍重啊。”",
+    "units": [
+      {
+        "source_text": "“哎哟，睡着了吗？",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "哎",
+            "r": "āi",
+            "g": "function"
+          },
+          {
+            "t": "哟",
+            "r": "yō",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "睡",
+            "r": "shuì",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zháo",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "あら",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "眠",
+              "r": "ねむ",
+              "g": "predicate"
+            },
+            {
+              "t": "ってしまったの",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "对，你……要多加珍重啊。”",
+        "zh": [
+          {
+            "t": "对",
+            "r": "duì",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "predicate"
+          },
+          {
+            "t": "多",
+            "r": "duō",
+            "g": "adverbial"
+          },
+          {
+            "t": "加",
+            "r": "jiā",
+            "g": "adverbial"
+          },
+          {
+            "t": "珍",
+            "r": "zhēn",
+            "g": "predicate"
+          },
+          {
+            "t": "重",
+            "r": "zhòng",
+            "g": "predicate"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そう",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "あなた",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "…",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "…",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "どうか",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "くれぐれも",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "お",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "大",
+              "r": "だい",
+              "g": "predicate"
+            },
+            {
+              "t": "事",
+              "r": "じ",
+              "g": "predicate"
+            },
+            {
+              "t": "にね",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

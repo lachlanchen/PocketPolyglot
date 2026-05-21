@@ -1,0 +1,451 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p00641",
+  "source_text": "“洗澡水烧热了，让您久等啦。”女佣在走廊上双手着地，施了个礼，带笑地说。",
+  "source_sha256": "e7f63059b1312474459caab95e2682cfa08940a8e1021719882fdf2dad31cbfc",
+  "source_normalized_sha256": "e7f63059b1312474459caab95e2682cfa08940a8e1021719882fdf2dad31cbfc",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 64,
+    "grammar_token_total": 64,
+    "unit_count": 2
+  },
+  "source_chunk_id": "izu-no-odori-chunk-0641",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "がき",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "篝火",
+    "title_zh": [
+      {
+        "t": "篝",
+        "r": "gōu",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "huǒ",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "篝",
+        "r": "かがり",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "び",
+        "g": "attributive"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-篝火-intro",
+    "title_zh": [
+      {
+        "t": "篝",
+        "r": "gōu",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "huǒ",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "篝",
+        "r": "かがり",
+        "g": "attributive"
+      },
+      {
+        "t": "火",
+        "r": "び",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p00641",
+    "source_text": "“洗澡水烧热了，让您久等啦。”女佣在走廊上双手着地，施了个礼，带笑地说。",
+    "units": [
+      {
+        "source_text": "“洗澡水烧热了，让您久等啦。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "洗",
+            "r": "xǐ",
+            "g": "subject"
+          },
+          {
+            "t": "澡",
+            "r": "zǎo",
+            "g": "subject"
+          },
+          {
+            "t": "水",
+            "r": "shuǐ",
+            "g": "subject"
+          },
+          {
+            "t": "烧",
+            "r": "shāo",
+            "g": "predicate"
+          },
+          {
+            "t": "热",
+            "r": "rè",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "让",
+            "r": "ràng",
+            "g": "predicate"
+          },
+          {
+            "t": "您",
+            "r": "nín",
+            "g": "object"
+          },
+          {
+            "t": "久",
+            "r": "jiǔ",
+            "g": "adverbial"
+          },
+          {
+            "t": "等",
+            "r": "děng",
+            "g": "predicate"
+          },
+          {
+            "t": "啦",
+            "r": "la",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「お",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "風",
+              "r": "ふ",
+              "g": "subject"
+            },
+            {
+              "t": "呂",
+              "r": "ろ",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "湯",
+              "r": "ゆ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "沸",
+              "r": "わ",
+              "g": "predicate"
+            },
+            {
+              "t": "きました、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "お",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "待",
+              "r": "ま",
+              "g": "predicate"
+            },
+            {
+              "t": "たせしました。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "女佣在走廊上双手着地，施了个礼，带笑地说。",
+        "zh": [
+          {
+            "t": "女",
+            "r": "nǚ",
+            "g": "subject"
+          },
+          {
+            "t": "佣",
+            "r": "yōng",
+            "g": "subject"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "走",
+            "r": "zǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "廊",
+            "r": "láng",
+            "g": "adverbial"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "双",
+            "r": "shuāng",
+            "g": "object"
+          },
+          {
+            "t": "手",
+            "r": "shǒu",
+            "g": "object"
+          },
+          {
+            "t": "着",
+            "r": "zhuó",
+            "g": "predicate"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "施",
+            "r": "shī",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "function"
+          },
+          {
+            "t": "礼",
+            "r": "lǐ",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "带",
+            "r": "dài",
+            "g": "adverbial"
+          },
+          {
+            "t": "笑",
+            "r": "xiào",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "女",
+              "r": "じょ",
+              "g": "subject"
+            },
+            {
+              "t": "中",
+              "r": "ちゅう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "廊",
+              "r": "ろう",
+              "g": "adverbial"
+            },
+            {
+              "t": "下",
+              "r": "か",
+              "g": "adverbial"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "両",
+              "r": "りょう",
+              "g": "object"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "ついて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "礼",
+              "r": "れい",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "し、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "笑",
+              "r": "わら",
+              "g": "adverbial"
+            },
+            {
+              "t": "いながら",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

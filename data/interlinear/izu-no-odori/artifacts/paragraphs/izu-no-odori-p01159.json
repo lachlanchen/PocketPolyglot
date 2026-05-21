@@ -1,0 +1,461 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p01159",
+  "source_text": "那是个晴天。风，却把竹林吹拂得摇曳不止，破坏了他要描绘的景色。",
+  "source_sha256": "3d47bdc05c47886abc5967b8cd71cd6d95a668856f9b1b003f790196ccc7a309",
+  "source_normalized_sha256": "3d47bdc05c47886abc5967b8cd71cd6d95a668856f9b1b003f790196ccc7a309",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 56,
+    "grammar_token_total": 56,
+    "unit_count": 2
+  },
+  "source_chunk_id": "izu-no-odori-chunk-1159",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "げん",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "春天的景色",
+    "title_zh": [
+      {
+        "t": "春",
+        "r": "chūn",
+        "g": "attributive"
+      },
+      {
+        "t": "天",
+        "r": "tiān",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "function"
+      },
+      {
+        "t": "景",
+        "r": "jǐng",
+        "g": "object"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "春",
+        "r": "はる",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "景",
+        "r": "けい",
+        "g": "object"
+      },
+      {
+        "t": "色",
+        "r": "しき",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-春天的景色-intro",
+    "title_zh": [
+      {
+        "t": "春",
+        "r": "chūn",
+        "g": "attributive"
+      },
+      {
+        "t": "天",
+        "r": "tiān",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "function"
+      },
+      {
+        "t": "景",
+        "r": "jǐng",
+        "g": "object"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "春",
+        "r": "はる",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "景",
+        "r": "けい",
+        "g": "object"
+      },
+      {
+        "t": "色",
+        "r": "しき",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p01159",
+    "source_text": "那是个晴天。风，却把竹林吹拂得摇曳不止，破坏了他要描绘的景色。",
+    "units": [
+      {
+        "source_text": "那是个晴天。",
+        "zh": [
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "function"
+          },
+          {
+            "t": "晴",
+            "r": "qíng",
+            "g": "object"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "それは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "晴",
+              "r": "は",
+              "g": "attributive"
+            },
+            {
+              "t": "れた",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "日",
+              "r": "ひ",
+              "g": "object"
+            },
+            {
+              "t": "だった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "风，却把竹林吹拂得摇曳不止，破坏了他要描绘的景色。",
+        "zh": [
+          {
+            "t": "风",
+            "r": "fēng",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "却",
+            "r": "què",
+            "g": "adverbial"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "竹",
+            "r": "zhú",
+            "g": "object"
+          },
+          {
+            "t": "林",
+            "r": "lín",
+            "g": "object"
+          },
+          {
+            "t": "吹",
+            "r": "chuī",
+            "g": "predicate"
+          },
+          {
+            "t": "拂",
+            "r": "fú",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "摇",
+            "r": "yáo",
+            "g": "complement"
+          },
+          {
+            "t": "曳",
+            "r": "yè",
+            "g": "complement"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "complement"
+          },
+          {
+            "t": "止",
+            "r": "zhǐ",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "破",
+            "r": "pò",
+            "g": "predicate"
+          },
+          {
+            "t": "坏",
+            "r": "huài",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "attributive"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "attributive"
+          },
+          {
+            "t": "描",
+            "r": "miáo",
+            "g": "attributive"
+          },
+          {
+            "t": "绘",
+            "r": "huì",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "景",
+            "r": "jǐng",
+            "g": "object"
+          },
+          {
+            "t": "色",
+            "r": "sè",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "しかし",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "風",
+              "r": "かぜ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "竹",
+              "r": "ちく",
+              "g": "object"
+            },
+            {
+              "t": "林",
+              "r": "りん",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "吹",
+              "r": "ふ",
+              "g": "predicate"
+            },
+            {
+              "t": "きなびかせ",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "attributive"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "描",
+              "r": "えが",
+              "g": "attributive"
+            },
+            {
+              "t": "こうとした",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "景",
+              "r": "けい",
+              "g": "object"
+            },
+            {
+              "t": "色",
+              "r": "しき",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "壊",
+              "r": "こわ",
+              "g": "predicate"
+            },
+            {
+              "t": "してしまった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
