@@ -25,9 +25,7 @@ from shiji_config import (
 
 SPACE_RE = re.compile(r"\s+")
 PLACEHOLDER_JA = {"注", "注。", "。", "日本語"}
-PUNCT_RE = re.compile(
-    r"^[，。、；：！？「」『』【】《》（）—…·・\"\"''\\-\\.\\!\\?\\;\\:\\\"\\'\\(\\)\\[\\]\\s]+$"
-)
+PUNCT_RE = re.compile(r"""^[\s，。、；：！？「」『』【】《》（）—…·・"'\-\.\!\?\;\:\(\)\[\]]+$""")
 
 
 def is_punct_or_space(text: str) -> bool:
