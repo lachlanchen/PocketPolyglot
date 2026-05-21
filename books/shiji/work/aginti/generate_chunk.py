@@ -84,8 +84,50 @@ def _iter_ja_tokens(data):
                     yield tok
 
 
+def _split_long_sentence(sentence: str, max_chars: int = 96) -> list[str]:
+    """Split oversized classical-Chinese sentences into comma-level clauses.
+
+    DeepSeek often returns truncated JSON for very long, heavily annotated
+    sentences because every Hanzi must be tokenized separately. Clause-level
+    units still reconstruct the paragraph exactly while keeping each model
+    request small enough to return valid JSON.
+    """
+    sentence = sentence.strip()
+    if len(sentence) <= max_chars:
+        return [sentence] if sentence else []
+
+    pieces: list[str] = []
+    buf: list[str] = []
+    min_chars = max(36, max_chars // 2)
+
+    for ch in sentence:
+        buf.append(ch)
+        if len(buf) >= min_chars and ch in "，、":
+            pieces.append("".join(buf).strip())
+            buf.clear()
+
+    if buf:
+        pieces.append("".join(buf).strip())
+
+    out: list[str] = []
+    for piece in pieces:
+        if not piece:
+            continue
+        if len(piece) <= max_chars * 3 // 2:
+            out.append(piece)
+            continue
+        # Last-resort split for a long piece with no comma. Prefer not to use
+        # this, but it prevents one pathological clause from blocking the run.
+        start = 0
+        while start < len(piece):
+            out.append(piece[start:start + max_chars])
+            start += max_chars
+
+    return out
+
+
 def _split_sentences(text: str) -> list[str]:
-    """Split text while keeping closing quotes with the sentence."""
+    """Split text while keeping closing quotes, then split oversized clauses."""
     out: list[str] = []
     buf: list[str] = []
     closing = set("」』】》）)]")
@@ -100,14 +142,14 @@ def _split_sentences(text: str) -> list[str]:
                 j += 1
             sentence = "".join(buf).strip()
             if sentence:
-                out.append(sentence)
+                out.extend(_split_long_sentence(sentence))
             buf.clear()
             i = j
             continue
         i += 1
     rest = "".join(buf).strip()
     if rest:
-        out.append(rest)
+        out.extend(_split_long_sentence(rest))
     return out
 
 
@@ -377,17 +419,37 @@ def chat(messages, temp=0.1):
     k = load_key()
     if not k:
         raise RuntimeError("DEEPSEEK_API_KEY not set")
-    body = json.dumps({"model": MODEL, "messages": messages,
-                       "temperature": temp, "max_tokens": 8192}).encode()
-    req = urllib.request.Request(DEEPSEEK_URL, data=body, headers={
-        "Content-Type": "application/json",
-        "Authorization": "Bearer " + k,
-    })
-    try:
+    payload = {
+        "model": MODEL,
+        "messages": messages,
+        "temperature": temp,
+        "max_tokens": int(os.environ.get("SHIJI_DEEPSEEK_MAX_TOKENS", "8192")),
+        "response_format": {"type": "json_object"},
+    }
+
+    def request_once(body_payload):
+        body = json.dumps(body_payload).encode()
+        req = urllib.request.Request(DEEPSEEK_URL, data=body, headers={
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + k,
+        })
         with urllib.request.urlopen(req, timeout=180) as resp:
             return json.loads(resp.read())
+
+    try:
+        return request_once(payload)
     except urllib.error.HTTPError as e:
         b = e.read().decode(errors="replace")
+        if (
+            "response_format" in payload
+            and re.search(r"response_format|json_object|unsupported|invalid", b, re.I)
+        ):
+            payload.pop("response_format", None)
+            try:
+                return request_once(payload)
+            except urllib.error.HTTPError as retry_e:
+                b = retry_e.read().decode(errors="replace")
+                raise RuntimeError("DeepSeek HTTP " + str(retry_e.code) + ": " + b[:300])
         raise RuntimeError("DeepSeek HTTP " + str(e.code) + ": " + b[:300])
 
 
