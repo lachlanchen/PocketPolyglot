@@ -114,6 +114,7 @@ def validate_chunk(data: dict[str, Any]) -> list[str]:
         for u_idx, unit in enumerate(units):
             u_w = f"{p_w}.units[{u_idx}]"
             unit_src = normalize(str(unit.get("source_text", "")))
+            unit_is_punct = bool(unit_src and is_punct_or_space(unit_src))
 
             zh_orig = unit.get("zh_original")
             if not isinstance(zh_orig, list) or not zh_orig:
@@ -138,7 +139,7 @@ def validate_chunk(data: dict[str, Any]) -> list[str]:
                 lt = normalize(token_text(ja))
                 if not lt:
                     errors.append(f"{u_w}.ja: Japanese text is empty")
-                if lt in PLACEHOLDER_JA:
+                if lt in PLACEHOLDER_JA and not unit_is_punct:
                     errors.append(f"{u_w}.ja: Japanese is placeholder '{lt}'")
                 if isinstance(zh_orig, list):
                     err = ja_quality_error(token_text(ja), token_text(zh_orig))
@@ -152,7 +153,11 @@ def validate_chunk(data: dict[str, Any]) -> list[str]:
                 validate_zh(zh_mod, f"{u_w}.zh_modern", errors)
                 zmt = normalize(token_text(zh_mod))
                 zot = normalize(token_text(zh_orig or []))
-                if zmt and zmt == zot and not allows_identical_zh_modern(unit_src):
+                if (
+                    zmt and zmt == zot
+                    and not unit_is_punct
+                    and not allows_identical_zh_modern(unit_src)
+                ):
                     errors.append(
                         f"{u_w}: zh_modern identical to zh_original; must differ"
                     )
