@@ -8,6 +8,7 @@ retries on failure, writes to data/interlinear/shiji-aginti/chunks/.
 from __future__ import annotations
 
 import argparse
+import fcntl
 import json
 import os
 import re
@@ -37,6 +38,7 @@ VALIDATOR = str(Path(__file__).resolve().parent / "validate_shiji_chunk.py")
 OUT_DIR = Path("data/interlinear/shiji-aginti/chunks")
 LOG_DIR = Path("books/shiji/work/aginti/logs")
 STATUS = Path("books/shiji/work/aginti/pilot_status.json")
+STATUS_LOCK = STATUS.with_suffix(STATUS.suffix + ".lock")
 JSONL = Path("books/shiji/work/bilingual/chunks/chunks.jsonl")
 
 JSON_RE = re.compile(r"\{[\s\S]*\}", re.MULTILINE)
@@ -545,6 +547,27 @@ def save_status(st):
     STATUS.write_text(json.dumps(st, ensure_ascii=False, indent=2))
 
 
+def update_status(cid: str, ok: bool) -> None:
+    """Record chunk status safely when multiple shard writers run."""
+    STATUS.parent.mkdir(parents=True, exist_ok=True)
+    with STATUS_LOCK.open("w", encoding="utf-8") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        st = load_status()
+        was_ok = bool(st.get("chunks", {}).get(cid, {}).get("ok"))
+        st.setdefault("chunks", {})[cid] = {
+            "ok": ok,
+            "ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        }
+        if ok and not was_ok:
+            st["generated"] = st.get("generated", 0) + 1
+        elif not ok:
+            st["failed"] = st.get("failed", 0) + 1
+        tmp = STATUS.with_suffix(f"{STATUS.suffix}.{os.getpid()}.tmp")
+        tmp.write_text(json.dumps(st, ensure_ascii=False, indent=2), encoding="utf-8")
+        tmp.replace(STATUS)
+        fcntl.flock(lock, fcntl.LOCK_UN)
+
+
 def generate_sentence_unit(sentence_text, section_title, section_id,
                            paragraph_id, jp_refs, sentence_idx, total_sentences,
                            prev_sentence_text="", max_retries=2):
@@ -803,22 +826,15 @@ def main():
         print("ERROR: DEEPSEEK_API_KEY missing", file=sys.stderr)
         return 3
 
-    st = load_status()
     ids = [args.chunk_id] if args.chunk_id else [
         "shiji-chunk-" + str(n).zfill(4) for n in range(args.start, args.start + args.limit)]
 
     current_fail = 0
     for cid in ids:
-        was_ok = bool(st.get("chunks", {}).get(cid, {}).get("ok"))
         ok = generate_one(cid, args.max_retries, args.force)
-        st["chunks"][cid] = {"ok": ok, "ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
-        if ok and not was_ok:
-            st["generated"] = st.get("generated", 0) + 1
-        else:
-            if not ok:
-                st["failed"] = st.get("failed", 0) + 1
-                current_fail += 1
-        save_status(st)
+        update_status(cid, ok)
+        if not ok:
+            current_fail += 1
 
     print("\nDone. ok=" + str(len(ids) - current_fail) + " fail=" + str(current_fail))
     return 0 if current_fail == 0 else 1
