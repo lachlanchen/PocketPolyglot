@@ -116,6 +116,7 @@ def _without_protected_marker_compounds(text: str, profile: dict) -> str:
         "咸陽",
         "咸有一德",
         "咸有一徳",
+        "咸池",
         "巫咸",
         "咸艾",
         "弗忌",
