@@ -98,6 +98,13 @@ start_writer_if_needed() {
     return
   fi
 
+  local prefix_guard="${CURRENT_PREFIX:-0}"
+  local monitor_guard=$((prefix_guard + MAX_BACKFILL_PER_RUN))
+  if [[ "$next" -le "$monitor_guard" ]]; then
+    echo "$session deferred at $next; monitor owns prefix window through $monitor_guard"
+    return
+  fi
+
   local limit ts log
   limit=$((end - next + 1))
   ts="$(date -u +%Y%m%dT%H%M%SZ)"
@@ -112,6 +119,7 @@ echo "Shiji supervisor started at $(date -u)"
 while true; do
   start_monitor_if_needed
 
+  CURRENT_PREFIX="$(prefix_count)"
   base=421
   size=421
   for idx in $(seq 0 9); do
@@ -122,7 +130,7 @@ while true; do
     start_writer_if_needed "$idx" "$start" "$end"
   done
 
-  prefix="$(prefix_count)"
+  prefix="$CURRENT_PREFIX"
   echo "$(date -u) contiguous_valid=$prefix/$TOTAL_CHUNKS"
   if [[ "$prefix" -ge "$TOTAL_CHUNKS" ]]; then
     echo "All chunks validate; compiling final Shiji PDFs."
