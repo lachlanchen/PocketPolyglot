@@ -334,7 +334,7 @@ def _has_forbidden_kanbun_pattern(text: str, pattern: str) -> bool:
             return False
         prev = text[idx - 1] if idx > 0 else ""
         title = text[max(0, idx - 1):idx + 1]
-        if title in {"謁者", "使者", "侍者"}:
+        if title in {"謁者", "使者", "侍者", "長者"}:
             start = idx + len(pattern)
             continue
         if not prev or not KANA_RE.fullmatch(prev):
