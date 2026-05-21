@@ -582,6 +582,9 @@ def prompt_sentence(sentence_text, section_title, section_id,
         "not 最も暴で; translate 曰 as 言った, not 曰く/曰う; translate 之 as の/それ/彼/彼ら as context requires.\n"
         "- Citation formulas such as 詩傳曰, 太史公曰, 褚先生曰 must become modern Japanese framing, "
         "for example 『詩伝』には「...」とある / 太史公は「...」と述べた. Never leave 曰 inside ja.\n"
+        "- Astronomical/table formulas beginning with 曰 must also become Japanese wording, "
+        "for example 曰東方木，主春 → 東方は木に属し、春をつかさどるという. "
+        "Never copy the character 曰 into ja, even when the source is a compact formula.\n"
         "- For every content-bearing sentence, ja must contain kana. Names and terms may stay in kanji, but the sentence "
         "must still read as Japanese prose.\n"
         "- For long lists of officials or personal names, keep each title/name in kanji, but wrap the list in Japanese syntax, "
@@ -607,6 +610,12 @@ def prompt_sentence(sentence_text, section_title, section_id,
             "but add a clear Japanese frame with particles and a final predicate. Use a structure like: "
             "「列侯武城侯の王離、列侯通武侯の王賁、...らが従い、海上でともに議論した。」 "
             "Do not output a bare Chinese-style list.\n"
+        )
+    if normalize(sentence_text).startswith("曰"):
+        note += (
+            "\nThis source sentence begins with 曰 as a compact formula marker. In ja, translate it with "
+            "Japanese wording such as 「...という」 or 「...とされる」. Do not include the character 曰 "
+            "or the word 曰く in the ja tokens.\n"
         )
     if _looks_like_table_header(sentence_text):
         note += (
