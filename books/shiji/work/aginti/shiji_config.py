@@ -120,13 +120,16 @@ def allows_identical_zh_modern(source_text: str) -> bool:
     common classical function words.
     """
     compact = normalize(source_text)
-    if not compact.endswith(("；", ";")):
-        return False
     core = re.sub(r"[，。、；：！？「」『』【】《》（）—…·・\"'\-\.\!\?\;\:\(\)\[\]\s]", "", compact)
     if not (1 <= len(core) <= 4):
         return False
     if not all(HAN_RE.fullmatch(ch) for ch in core):
         return False
+    if not compact.endswith(("；", ";")):
+        if not compact.endswith(("。", ".")):
+            return False
+        if not core.endswith(("子", "公", "侯", "王", "君", "伯", "叔", "仲", "季")):
+            return False
     forbidden = set("曰為为不以而於于之其是有無无毋乃則则者也乎矣焉何")
     return not any(ch in forbidden for ch in core)
 
