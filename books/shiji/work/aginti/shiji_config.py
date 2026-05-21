@@ -136,6 +136,38 @@ def _without_protected_marker_compounds(text: str, profile: dict) -> str:
     return cleaned
 
 
+def _source_title_marker_compounds(zh_text: str, markers: list[str]) -> set[str]:
+    """Find source-side names/titles where a marker-looking character is part of a title.
+
+    Shiji contains official titles such as 贅其侯. The final 其 should not be
+    treated as untranslated Kanbun when the generated Japanese retains that
+    title. Keep this narrow: only short source substrings that end in an
+    official-title suffix are protected.
+    """
+    title_suffixes = ("侯", "王", "君", "公", "帝", "后", "相", "卿")
+    compounds: set[str] = set()
+    marker_set = {str(m) for m in markers if str(m)}
+    for match in re.finditer(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]+", normalize(zh_text)):
+        segment = match.group(0)
+        length = len(segment)
+        for start in range(length):
+            stop_max = min(length, start + 6)
+            for stop in range(start + 2, stop_max + 1):
+                value = segment[start:stop]
+                if not value.endswith(title_suffixes):
+                    continue
+                if any(marker in value for marker in marker_set):
+                    compounds.add(value)
+    return compounds
+
+
+def _without_source_title_marker_compounds(text: str, zh_text: str, markers: list[str]) -> str:
+    cleaned = text
+    for compound in sorted(_source_title_marker_compounds(zh_text, markers), key=len, reverse=True):
+        cleaned = cleaned.replace(compound, "")
+    return cleaned
+
+
 def _looks_like_name_title_list(text: str, profile: dict) -> bool:
     """Detect long official-title/person-name enumerations in Shiji prose."""
     source = normalize(text)
@@ -203,6 +235,7 @@ def ja_quality_error(ja_text: str, zh_original_text: str) -> str:
         return "ja is still too Kanbun-like; rewrite as natural Japanese with particles and inflected endings"
 
     marker_scan_text = _without_protected_marker_compounds(ja_norm, profile)
+    marker_scan_text = _without_source_title_marker_compounds(marker_scan_text, zh_norm, kanbun_markers)
     for marker in kanbun_markers:
         if marker in marker_scan_text:
             return f"ja contains raw Kanbun marker '{marker}'; translate it into modern Japanese wording"
