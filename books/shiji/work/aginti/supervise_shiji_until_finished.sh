@@ -76,8 +76,10 @@ start_monitor_if_needed() {
   fi
   local ts
   ts="$(date -u +%Y%m%dT%H%M%SZ)"
+  local generator_timeout
+  generator_timeout="${SHIJI_GENERATOR_TIMEOUT_SECONDS:-1800}"
   tmux new-session -d -s "$MONITOR_SESSION" -c "$ROOT_DIR" \
-    "INTERVAL_SECONDS=60 MAX_BACKFILL_PER_RUN=$MAX_BACKFILL_PER_RUN bash books/shiji/work/aginti/monitor_loop.sh 2>&1 | tee -a $LOG_DIR/monitor-loop-${ts}-supervised.log"
+    "INTERVAL_SECONDS=60 MAX_BACKFILL_PER_RUN=$MAX_BACKFILL_PER_RUN SHIJI_GENERATOR_TIMEOUT_SECONDS=$generator_timeout bash books/shiji/work/aginti/monitor_loop.sh 2>&1 | tee -a $LOG_DIR/monitor-loop-${ts}-supervised.log"
   echo "restarted monitor at $ts"
 }
 
