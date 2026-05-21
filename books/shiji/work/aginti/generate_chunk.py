@@ -611,7 +611,7 @@ def prompt_sentence(sentence_text, section_title, section_id,
             "「列侯武城侯の王離、列侯通武侯の王賁、...らが従い、海上でともに議論した。」 "
             "Do not output a bare Chinese-style list.\n"
         )
-    if normalize(sentence_text).startswith("曰"):
+    if _norm_text(sentence_text).startswith("曰"):
         note += (
             "\nThis source sentence begins with 曰 as a compact formula marker. In ja, translate it with "
             "Japanese wording such as 「...という」 or 「...とされる」. Do not include the character 曰 "
