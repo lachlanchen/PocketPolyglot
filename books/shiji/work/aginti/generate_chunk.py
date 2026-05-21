@@ -550,7 +550,7 @@ def prompt_sentence(sentence_text, section_title, section_id,
         "「帝顓頊生子曰窮蟬。」.\n"
         "- Also forbidden inside ja: raw Classical Chinese function markers like 而, 之, 於, 曰, 乃, 弗, 莫, 毋, 咸, 其, 焉. "
         "Translate them as Japanese: しかし/そして, の, において, 言った, そこで, ない, みな, その, etc. "
-        "Exception: real proper names and text titles may retain their kanji, e.g. 咸陽, 巫咸, 咸艾, 咸有一德/咸有一徳, 弗忌, 差弗, 之罘, 馮毋擇, 審食其, 酈食其, 食其.\n"
+        "Exception: real proper names and text titles may retain their kanji, e.g. 咸陽, 巫咸, 咸艾, 咸有一德/咸有一徳, 弗忌, 差弗, 之罘, 馮毋擇, 審食其, 酈食其, 食其, 釋之/釈之.\n"
         "- Do not write kundoku marker phrases such as 於是乃ち, 而して, 焉に, 之を, 其の. "
         "Use modern Japanese instead: そこで, そして/それから, そこを, これを/それを, その.\n"
         "- Good ja style examples: 「しかし蚩尤は最も凶暴で、誰も討つことができなかった。」 / "
