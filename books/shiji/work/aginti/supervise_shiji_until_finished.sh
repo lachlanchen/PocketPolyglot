@@ -103,8 +103,19 @@ start_writer_if_needed() {
   local prefix_guard="${CURRENT_PREFIX:-0}"
   local monitor_guard=$((prefix_guard + MAX_BACKFILL_PER_RUN))
   if [[ "$next" -le "$monitor_guard" ]]; then
-    echo "$session deferred at $next; monitor owns prefix window through $monitor_guard"
-    return
+    local ahead_start ahead_next
+    ahead_start=$((monitor_guard + 1))
+    if [[ "$ahead_start" -gt "$end" ]]; then
+      echo "$session deferred at $next; monitor owns prefix window through $monitor_guard"
+      return
+    fi
+    ahead_next="$(range_next_start "$ahead_start" "$end")"
+    if [[ "$ahead_next" == "COMPLETE" ]]; then
+      echo "$session deferred at $next; monitor owns prefix window through $monitor_guard; range after window complete"
+      return
+    fi
+    echo "$session deferred at $next; monitor owns prefix window through $monitor_guard; starting ahead at $ahead_next"
+    next="$ahead_next"
   fi
 
   local limit ts log
