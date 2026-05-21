@@ -134,6 +134,9 @@ def _without_protected_marker_compounds(text: str, profile: dict) -> str:
         "広莫",
         "廣莫風",
         "広莫風",
+        "焉逢",
+        "焉逢攝提格",
+        "焉逢摂提格",
     ]
     for value in defaults + list(profile.get("protected_kanbun_marker_compounds", [])):
         compound = normalize(str(value))
