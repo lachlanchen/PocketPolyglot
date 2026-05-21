@@ -175,6 +175,7 @@ def _without_protected_marker_compounds(text: str, profile: dict) -> str:
         "樊於期",
         "於期",
         "於陵子仲",
+        "於單",
         "商於",
         "商・於",
         "商、於",
