@@ -334,6 +334,8 @@ def ja_quality_error(ja_text: str, zh_original_text: str) -> str:
     kanbun_markers = profile.get("kanbun_markers", [])
     kanbun_patterns = profile.get("kanbun_patterns", [])
 
+    if allows_identical_zh_modern(zh_original_text) and ja_norm == zh_norm:
+        return ""
     if ja_norm == zh_norm:
         return "ja is identical to zh_original; write real Japanese, not copied classical Chinese"
     if ja_han_count >= 2 and ja_kana_count == 0:
