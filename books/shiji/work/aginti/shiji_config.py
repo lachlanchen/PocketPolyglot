@@ -248,6 +248,8 @@ def _without_contextual_marker_names(text: str, zh_text: str, profile: dict) -> 
                 "讓於子之",
                 "让于子之",
                 "子之必",
+                "子之之心",
+                "捐子之之心",
                 "屬國於子之",
                 "属国于子之",
                 "子之大",
