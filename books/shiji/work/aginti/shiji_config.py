@@ -192,7 +192,7 @@ def _without_contextual_marker_names(text: str, zh_text: str, profile: dict) -> 
         },
         {
             "marker": "之",
-            "source_contains": ["相子之", "與子之交", "与子之交"],
+            "source_contains": ["相子之", "與子之交", "与子之交", "子之相燕"],
             "ja_terms": ["子之"],
         },
     ]
