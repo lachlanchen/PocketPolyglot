@@ -112,7 +112,7 @@ def token_text(tokens: list[dict]) -> str:
 def _without_protected_marker_compounds(text: str, profile: dict) -> str:
     """Strip allowed proper names/titles before raw Kanbun marker checks."""
     cleaned = text
-    defaults = ["咸陽", "咸有一德", "咸有一徳", "巫咸", "咸艾", "弗忌", "差弗"]
+    defaults = ["咸陽", "咸有一德", "咸有一徳", "巫咸", "咸艾", "弗忌", "差弗", "之罘"]
     for value in defaults + list(profile.get("protected_kanbun_marker_compounds", [])):
         compound = normalize(str(value))
         if compound:
