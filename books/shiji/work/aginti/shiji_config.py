@@ -170,6 +170,7 @@ def _without_protected_marker_compounds(text: str, profile: dict) -> str:
         "施之常",
         "樊於期",
         "於期",
+        "於陵子仲",
         "商於",
         "商、於、析",
         "於中",
