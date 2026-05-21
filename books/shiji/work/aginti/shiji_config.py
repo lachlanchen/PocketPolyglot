@@ -151,6 +151,7 @@ def _without_protected_marker_compounds(text: str, profile: dict) -> str:
         "之罘",
         "馮毋擇",
         "熊毋康",
+        "毋康",
         "審食其",
         "酈食其",
         "食其",
