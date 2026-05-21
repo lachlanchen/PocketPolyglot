@@ -31,7 +31,8 @@
       "protected_marker_name_contexts": [
         {"marker": "咸", "source_contains": ["于咸", "於咸"], "ja_terms": ["咸"]},
         {"marker": "之", "source_contains": ["相子之", "與子之交", "与子之交", "子之相燕", "尊子之", "信子之", "子之因", "讓相子之", "让相子之", "讓於子之", "让于子之", "子之必", "屬國於子之", "属国于子之", "子之大", "屬子之", "属子之", "效之子之", "子之南面", "決於子之", "决于子之", "攻子之", "燕子之亡", "燕相子之"], "ja_terms": ["子之"]},
-        {"marker": "莫", "source_contains": ["其子莫及平夏"], "ja_terms": ["莫"]}
+        {"marker": "莫", "source_contains": ["其子莫及平夏"], "ja_terms": ["莫"]},
+        {"marker": "於", "source_contains": ["商、於、析", "商，於，析", "曲沃、於中"], "ja_terms": ["於"]}
       ],
       "kanbun_patterns": ["者、", "者，"],
       "description": "Japanese must be modern prose with kana, particles, okurigana, and inflected endings. No Kanbun kundoku fragments. These markers detect likely Kanbun contamination.",

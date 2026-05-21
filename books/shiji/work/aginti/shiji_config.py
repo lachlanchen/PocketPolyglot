@@ -256,6 +256,11 @@ def _without_contextual_marker_names(text: str, zh_text: str, profile: dict) -> 
             "source_contains": ["其子莫及平夏"],
             "ja_terms": ["莫"],
         },
+        {
+            "marker": "於",
+            "source_contains": ["商、於、析", "商，於，析", "曲沃、於中"],
+            "ja_terms": ["於"],
+        },
     ]
     for item in defaults + list(profile.get("protected_marker_name_contexts", [])):
         marker = normalize(str(item.get("marker", "")))
