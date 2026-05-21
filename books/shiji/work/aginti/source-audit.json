@@ -30,7 +30,7 @@
       "protected_kanbun_marker_compounds": ["咸陽", "咸有一德", "咸有一徳", "咸池", "巫咸", "咸艾", "弗忌", "弗湟", "子弗湟", "差弗", "之罘", "馮毋擇", "審食其", "酈食其", "食其", "釋之", "釈之", "释之", "廣莫", "広莫", "廣莫風", "広莫風", "焉逢", "焉逢攝提格", "焉逢摂提格", "宋毋忌"],
       "protected_marker_name_contexts": [
         {"marker": "咸", "source_contains": ["于咸", "於咸"], "ja_terms": ["咸"]},
-        {"marker": "之", "source_contains": ["相子之", "與子之交", "与子之交", "子之相燕", "尊子之"], "ja_terms": ["子之"]}
+        {"marker": "之", "source_contains": ["相子之", "與子之交", "与子之交", "子之相燕", "尊子之", "信子之"], "ja_terms": ["子之"]}
       ],
       "kanbun_patterns": ["者、", "者，"],
       "description": "Japanese must be modern prose with kana, particles, okurigana, and inflected endings. No Kanbun kundoku fragments. These markers detect likely Kanbun contamination.",
