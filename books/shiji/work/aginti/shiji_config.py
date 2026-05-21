@@ -120,6 +120,8 @@ def _without_protected_marker_compounds(text: str, profile: dict) -> str:
         "巫咸",
         "咸艾",
         "弗忌",
+        "弗湟",
+        "子弗湟",
         "差弗",
         "之罘",
         "馮毋擇",
