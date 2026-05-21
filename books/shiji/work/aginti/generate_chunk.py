@@ -573,6 +573,8 @@ def prompt_sentence(sentence_text, section_title, section_id,
         "Exception: real proper names and official titles may retain their kanji, including short titles ending in 侯/王/君, e.g. 咸陽, 巫咸, 咸艾, 咸有一德/咸有一徳, 弗忌, 差弗, 之罘, 馮毋擇, 審食其, 酈食其, 食其, 釋之/釈之, 勇之, 贅其侯.\n"
         "- Do not write kundoku marker phrases such as 於是乃ち, 而して, 焉に, 之を, 其の. "
         "Use modern Japanese instead: そこで, そして/それから, そこを, これを/それを, その.\n"
+        "- For 者 clauses, write natural Japanese such as 人, 者(もの), or ...する者 only when it follows kana. "
+        "Do not output bare Kanbun-style compounds such as 王者、 or 侯者、.\n"
         "- Good ja style examples: 「しかし蚩尤は最も凶暴で、誰も討つことができなかった。」 / "
         "「帝顓頊は子をもうけ、その名を窮蟬といった。」 / "
         "「黃帝には二十五人の子があり、そのうち姓を得た者は十四人であった。」\n"

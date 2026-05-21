@@ -169,6 +169,27 @@ def _without_source_title_marker_compounds(text: str, zh_text: str, markers: lis
     return cleaned
 
 
+def _has_forbidden_kanbun_pattern(text: str, pattern: str) -> bool:
+    """Return True when a configured Kanbun pattern is really suspicious.
+
+    The broad patterns 者、/者， catch copied Kanbun, but modern Japanese can
+    legitimately contain kana-led phrases such as 「王となった者、」. Treat those
+    as Japanese, while still rejecting bare Hanzi compounds like 「王者、」.
+    """
+    if pattern not in {"者、", "者，"}:
+        return pattern in text
+
+    start = 0
+    while True:
+        idx = text.find(pattern, start)
+        if idx < 0:
+            return False
+        prev = text[idx - 1] if idx > 0 else ""
+        if not prev or not KANA_RE.fullmatch(prev):
+            return True
+        start = idx + len(pattern)
+
+
 def _looks_like_name_title_list(text: str, profile: dict) -> bool:
     """Detect long official-title/person-name enumerations in Shiji prose."""
     source = normalize(text)
@@ -241,7 +262,7 @@ def ja_quality_error(ja_text: str, zh_original_text: str) -> str:
         if marker in marker_scan_text:
             return f"ja contains raw Kanbun marker '{marker}'; translate it into modern Japanese wording"
     for pattern in kanbun_patterns:
-        if pattern in ja_norm:
+        if _has_forbidden_kanbun_pattern(ja_norm, pattern):
             return f"ja contains Kanbun pattern '{pattern}'; rewrite with Japanese は/とは wording"
 
     return ""
