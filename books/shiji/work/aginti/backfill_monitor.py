@@ -12,6 +12,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import os
 import selectors
 import subprocess
 import sys
@@ -22,6 +23,15 @@ VALIDATOR = Path(__file__).resolve().parent / "validate_shiji_chunk.py"
 GENERATOR = Path(__file__).resolve().parent / "generate_chunk.py"
 CHUNKS_DIR = Path("data/interlinear/shiji-aginti/chunks")
 JSONL = Path("books/shiji/work/bilingual/chunks/chunks.jsonl")
+
+
+def _generator_timeout_seconds() -> int:
+    raw = os.environ.get("SHIJI_GENERATOR_TIMEOUT_SECONDS", "1800")
+    try:
+        value = int(raw)
+    except ValueError:
+        value = 1800
+    return max(600, value)
 
 
 def _contiguous_valid_prefix(limit: int) -> tuple[int, int | None]:
@@ -63,13 +73,14 @@ def _regenerate_chunk(chunk_id: str, chunk_idx: int, max_retries: int) -> bool:
     assert proc.stdout is not None
     selector = selectors.DefaultSelector()
     selector.register(proc.stdout, selectors.EVENT_READ)
-    deadline = time.monotonic() + 600
+    timeout_seconds = _generator_timeout_seconds()
+    deadline = time.monotonic() + timeout_seconds
     tail: list[str] = []
 
     while proc.poll() is None:
         if time.monotonic() > deadline:
             proc.kill()
-            print(f"  {chunk_id}: generator timed out after 600s", flush=True)
+            print(f"  {chunk_id}: generator timed out after {timeout_seconds}s", flush=True)
             break
         for key, _ in selector.select(timeout=1):
             line = key.fileobj.readline()
