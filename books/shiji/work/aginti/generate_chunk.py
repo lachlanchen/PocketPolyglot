@@ -558,6 +558,8 @@ def prompt_sentence(sentence_text, section_title, section_id,
         "「黃帝には二十五人の子があり、そのうち姓を得た者は十四人であった。」\n"
         "- Prefer idiomatic Japanese over word-for-word Kanbun. For example, translate 最為暴 as 最も凶暴で, "
         "not 最も暴で; translate 曰 as 言った, not 曰く/曰う; translate 之 as の/それ/彼/彼ら as context requires.\n"
+        "- Citation formulas such as 詩傳曰, 太史公曰, 褚先生曰 must become modern Japanese framing, "
+        "for example 『詩伝』には「...」とある / 太史公は「...」と述べた. Never leave 曰 inside ja.\n"
         "- For every content-bearing sentence, ja must contain kana. Names and terms may stay in kanji, but the sentence "
         "must still read as Japanese prose.\n"
         "- For long lists of officials or personal names, keep each title/name in kanji, but wrap the list in Japanese syntax, "
