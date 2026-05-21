@@ -194,6 +194,8 @@ def _without_protected_marker_compounds(text: str, profile: dict) -> str:
         "焉逢攝提格",
         "焉逢摂提格",
         "焉氏",
+        "焉支",
+        "焉支山",
         "宋毋忌",
     ]
     for value in defaults + list(profile.get("protected_kanbun_marker_compounds", [])):
