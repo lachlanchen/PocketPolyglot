@@ -180,6 +180,31 @@ def _without_source_title_marker_compounds(text: str, zh_text: str, markers: lis
     return cleaned
 
 
+def _without_contextual_marker_names(text: str, zh_text: str, profile: dict) -> str:
+    """Strip one-character marker-looking names only in configured source contexts."""
+    cleaned = text
+    zh_norm = normalize(zh_text)
+    defaults = [
+        {
+            "marker": "咸",
+            "source_contains": ["于咸", "於咸"],
+            "ja_terms": ["咸"],
+        },
+    ]
+    for item in defaults + list(profile.get("protected_marker_name_contexts", [])):
+        marker = normalize(str(item.get("marker", "")))
+        if not marker:
+            continue
+        contexts = [normalize(str(value)) for value in item.get("source_contains", [])]
+        if not any(value and value in zh_norm for value in contexts):
+            continue
+        for term in item.get("ja_terms", [marker]):
+            term_norm = normalize(str(term))
+            if term_norm:
+                cleaned = cleaned.replace(term_norm, "")
+    return cleaned
+
+
 def _has_forbidden_kanbun_pattern(text: str, pattern: str) -> bool:
     """Return True when a configured Kanbun pattern is really suspicious.
 
@@ -269,6 +294,7 @@ def ja_quality_error(ja_text: str, zh_original_text: str) -> str:
 
     marker_scan_text = _without_protected_marker_compounds(ja_norm, profile)
     marker_scan_text = _without_source_title_marker_compounds(marker_scan_text, zh_norm, kanbun_markers)
+    marker_scan_text = _without_contextual_marker_names(marker_scan_text, zh_norm, profile)
     for marker in kanbun_markers:
         if marker in marker_scan_text:
             return f"ja contains raw Kanbun marker '{marker}'; translate it into modern Japanese wording"

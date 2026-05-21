@@ -571,6 +571,7 @@ def prompt_sentence(sentence_text, section_title, section_id,
         "- Also forbidden inside ja: raw Classical Chinese function markers like 而, 之, 於, 曰, 乃, 弗, 莫, 毋, 咸, 其, 焉. "
         "Translate them as Japanese: しかし/そして, の, において, 言った, そこで, ない, みな, その, etc. "
         "Exception: real proper names, work/music titles, wind/calendar names, and official titles may retain their kanji, including short titles ending in 侯/王/君, e.g. 咸陽, 咸池, 廣莫/広莫, 廣莫風/広莫風, 焉逢/焉逢攝提格, 宋毋忌, 子弗湟, 巫咸, 咸艾, 咸有一德/咸有一徳, 弗忌, 差弗, 之罘, 馮毋擇, 審食其, 酈食其, 食其, 釋之/釈之, 勇之, 贅其侯.\n"
+        "A one-character place name may be retained only when the source clearly uses it as a place, e.g. 咸 in 敗翟于咸.\n"
         "- Do not write kundoku marker phrases such as 於是乃ち, 而して, 焉に, 之を, 其の. "
         "Use modern Japanese instead: そこで, そして/それから, そこを, これを/それを, その.\n"
         "- For 者 clauses, write natural Japanese such as 人, 者(もの), or ...する者 only when it follows kana. "
