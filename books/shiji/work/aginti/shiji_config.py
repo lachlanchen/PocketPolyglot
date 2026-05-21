@@ -190,6 +190,7 @@ def _without_protected_marker_compounds(text: str, profile: dict) -> str:
         "大莫敖",
         "莫邪",
         "靡莫",
+        "昆莫",
         "勇之",
         "廣莫",
         "広莫",
