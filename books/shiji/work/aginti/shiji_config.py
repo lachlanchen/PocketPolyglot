@@ -128,9 +128,10 @@ def allows_identical_zh_modern(source_text: str) -> bool:
     if not compact.endswith(("；", ";")):
         if not compact.endswith(("。", ".")):
             return False
-        if not core.endswith(("子", "公", "侯", "王", "君", "伯", "叔", "仲", "季")):
-            return False
-    forbidden = set("曰為为不以而於于之其是有無无毋乃則则者也乎矣焉何")
+    forbidden = set(
+        "曰為为不以而於于之其是有無无毋乃則则者也乎矣焉何"
+        "死卒立殺杀伐攻取見见聞闻言至去來来入出走亡得失破敗败勝胜滅灭生使克"
+    )
     return not any(ch in forbidden for ch in core)
 
 
