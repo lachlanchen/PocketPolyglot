@@ -1,0 +1,192 @@
+#!/usr/bin/env python3
+"""Promote a failed candidate after repairing mechanical Japanese ruby shape."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import re
+from pathlib import Path
+from typing import Any
+
+try:
+    import pykakasi  # type: ignore[import-untyped]
+except Exception:  # pragma: no cover - optional local dependency
+    pykakasi = None
+
+from codex_bilingual_chunk_worker import validate_chunk
+from codex_chunk_worker import load_chunks
+from normalize_grammar_roles import (
+    JP_FALLBACK_READINGS,
+    cleanup_components,
+    normalize_node,
+)
+from reference_windows import expand_adjacent_jp_references
+from review_backfix_interlinear_chunks import review_chunk
+
+HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
+SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
+READING_SPLIT_RE = re.compile(r"[\s/／・,，]+")
+
+
+def load_json(path: Path) -> dict[str, Any]:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def write_json(path: Path, data: dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def kakasi_hira(text: str) -> str:
+    if text in JP_FALLBACK_READINGS:
+        return JP_FALLBACK_READINGS[text]
+    if pykakasi is None:
+        return ""
+    try:
+        converter = pykakasi.kakasi()
+        for item in converter.convert(text):
+            reading = item.get("hira") or item.get("kana") or ""
+            if reading and reading != text:
+                return reading
+    except Exception:
+        return ""
+    return ""
+
+
+def split_reading_hint(reading: str, count: int) -> list[str]:
+    parts = [part for part in READING_SPLIT_RE.split(reading.strip()) if part]
+    if len(parts) == count:
+        return parts
+    return []
+
+
+def repair_ja_tokens(tokens: Any) -> int:
+    if not isinstance(tokens, list):
+        return 0
+    changed = 0
+    rebuilt: list[Any] = []
+    for token in tokens:
+        if not isinstance(token, dict):
+            rebuilt.append(token)
+            continue
+        text = str(token.get("t", ""))
+        reading = str(token.get("r", "") or "")
+        role = token.get("g", "")
+        han_matches = list(HAN_RE.finditer(text))
+        if not han_matches:
+            if reading:
+                token = dict(token)
+                token["r"] = ""
+                changed += 1
+            rebuilt.append(token)
+            continue
+
+        if SINGLE_HAN_RE.fullmatch(text):
+            if not reading or HAN_RE.search(reading):
+                token = dict(token)
+                token["r"] = kakasi_hira(text)
+                changed += 1
+            rebuilt.append(token)
+            continue
+
+        changed += 1
+        explicit = split_reading_hint(reading, len(han_matches))
+        cursor = 0
+        han_index = 0
+        for match in han_matches:
+            if match.start() > cursor:
+                rebuilt.append({"t": text[cursor : match.start()], "r": "", **({"g": role} if role else {})})
+            char = match.group(0)
+            char_reading = explicit[han_index] if explicit else kakasi_hira(char)
+            rebuilt.append({"t": char, "r": char_reading, **({"g": role} if role else {})})
+            han_index += 1
+            cursor = match.end()
+        if cursor < len(text):
+            rebuilt.append({"t": text[cursor:], "r": "", **({"g": role} if role else {})})
+    if changed:
+        tokens[:] = rebuilt
+    return changed
+
+
+def repair_ja_ruby_shapes(node: Any) -> int:
+    changed = 0
+    if isinstance(node, dict):
+        for key in ("title_ja", "place_ja"):
+            changed += repair_ja_tokens(node.get(key))
+        ja = node.get("ja")
+        if isinstance(ja, list):
+            for line in ja:
+                changed += repair_ja_tokens(line)
+        for key, value in node.items():
+            if key not in {"title_ja", "place_ja", "ja"}:
+                changed += repair_ja_ruby_shapes(value)
+    elif isinstance(node, list):
+        for value in node:
+            changed += repair_ja_ruby_shapes(value)
+    return changed
+
+
+def candidate_paths(root: Path, chunk_id: str) -> list[Path]:
+    rejected_dir = root / "parallel-json" / "candidates" / "rejected"
+
+    def sort_key(path: Path) -> tuple[float, str]:
+        return (path.stat().st_mtime, path.name)
+
+    return sorted(rejected_dir.glob(f"{chunk_id}.*.json"), key=sort_key, reverse=True)
+
+
+def repair_candidate(data: dict[str, Any]) -> int:
+    changed = normalize_node(data)
+    changed += repair_ja_ruby_shapes(data)
+    changed += cleanup_components(data)
+    return changed
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--book-id", required=True)
+    parser.add_argument("--chunk-id", required=True)
+    parser.add_argument("--write-review-candidate", action="store_true")
+    args = parser.parse_args()
+
+    root = Path("books") / args.book_id / "work" / "bilingual"
+    sources = {
+        chunk["chunk_id"]: chunk
+        for chunk in expand_adjacent_jp_references(load_chunks(root / "chunks" / "chunks.jsonl"))
+    }
+    source = sources.get(args.chunk_id)
+    if source is None:
+        print(f"{args.chunk_id}: no source chunk")
+        return 2
+
+    for path in candidate_paths(root, args.chunk_id):
+        try:
+            data = load_json(path)
+        except json.JSONDecodeError as exc:
+            print(f"candidate_malformed={path}: {exc}")
+            continue
+        changed = repair_candidate(data)
+        strict_errors = validate_chunk(source, data)
+        review_errors = review_chunk(source, data)
+        if strict_errors or review_errors:
+            print(f"candidate_failed={path} changed={changed}")
+            for issue in (strict_errors + review_errors)[:25]:
+                print(f"  - {issue}")
+            continue
+
+        accepted = root / "parallel-json" / "candidates" / "accepted" / f"{args.chunk_id}.json"
+        write_json(accepted, data)
+        print(f"wrote={accepted} changed={changed}")
+        if args.write_review_candidate:
+            reviewed = root / "parallel-review" / "candidates" / "accepted" / f"{args.chunk_id}.json"
+            write_json(reviewed, data)
+            print(f"wrote={reviewed}")
+        return 0
+
+    print(f"{args.chunk_id}: no rejected candidate could be mechanically repaired")
+    return 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
