@@ -27,6 +27,8 @@ from review_backfix_interlinear_chunks import review_chunk
 HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
 READING_SPLIT_RE = re.compile(r"[\s/／・,，]+")
+CONTENT_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaffぁ-ゟ゠-ヿA-Za-z0-9]")
+JA_COMMENT_LINE_MAX = 54
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -127,6 +129,103 @@ def repair_ja_ruby_shapes(node: Any) -> int:
     return changed
 
 
+def token_text(tokens: Any) -> str:
+    if not isinstance(tokens, list):
+        return ""
+    return "".join(str(token.get("t", "")) for token in tokens if isinstance(token, dict))
+
+
+def compact_len(tokens: Any) -> int:
+    return len(re.sub(r"\s+", "", token_text(tokens)))
+
+
+def rebalance_two_ja_lines(lines: Any) -> int:
+    if not (
+        isinstance(lines, list)
+        and len(lines) == 2
+        and isinstance(lines[0], list)
+        and isinstance(lines[1], list)
+    ):
+        return 0
+    changed = 0
+    first: list[Any] = lines[0]
+    second: list[Any] = lines[1]
+    while compact_len(second) > JA_COMMENT_LINE_MAX and second:
+        next_token = second[0]
+        if compact_len(first + [next_token]) > JA_COMMENT_LINE_MAX:
+            break
+        first.append(second.pop(0))
+        changed += 1
+    moved_suffix: list[Any] = []
+    while compact_len(first) > JA_COMMENT_LINE_MAX and first:
+        next_token = first[-1]
+        if compact_len([next_token] + second) > JA_COMMENT_LINE_MAX:
+            break
+        moved_suffix.insert(0, first.pop())
+        changed += 1
+    if moved_suffix:
+        second[:0] = moved_suffix
+    return changed
+
+
+def repair_long_ja_rows(node: Any) -> int:
+    changed = 0
+    if isinstance(node, dict):
+        ja = node.get("ja")
+        changed += rebalance_two_ja_lines(ja)
+        for value in node.values():
+            changed += repair_long_ja_rows(value)
+    elif isinstance(node, list):
+        for value in node:
+            changed += repair_long_ja_rows(value)
+    return changed
+
+
+def fill_missing_roles(tokens: Any) -> int:
+    if not isinstance(tokens, list):
+        return 0
+    changed = 0
+    for index, token in enumerate(tokens):
+        if not isinstance(token, dict):
+            continue
+        text = str(token.get("t", ""))
+        if not CONTENT_RE.search(text) or str(token.get("g", "")).strip():
+            continue
+        role = ""
+        for neighbor in tokens[index + 1 :]:
+            if isinstance(neighbor, dict):
+                role = str(neighbor.get("g", "")).strip()
+                if role:
+                    break
+        if not role:
+            for neighbor in reversed(tokens[:index]):
+                if isinstance(neighbor, dict):
+                    role = str(neighbor.get("g", "")).strip()
+                    if role:
+                        break
+        token["g"] = role or "function"
+        changed += 1
+    return changed
+
+
+def repair_missing_roles(node: Any) -> int:
+    changed = 0
+    if isinstance(node, dict):
+        for key in ("zh", "title_zh", "title_ja", "place_zh", "place_ja"):
+            changed += fill_missing_roles(node.get(key))
+        ja = node.get("ja")
+        if isinstance(ja, list):
+            for line in ja:
+                changed += fill_missing_roles(line)
+        for key, value in node.items():
+            if key not in {"zh", "title_zh", "title_ja", "place_zh", "place_ja", "ja"}:
+                changed += repair_missing_roles(value)
+    elif isinstance(node, list):
+        for value in node:
+            changed += repair_missing_roles(value)
+    return changed
+
+
 def candidate_paths(root: Path, chunk_id: str) -> list[Path]:
     rejected_dir = root / "parallel-json" / "candidates" / "rejected"
 
@@ -139,6 +238,8 @@ def candidate_paths(root: Path, chunk_id: str) -> list[Path]:
 def repair_candidate(data: dict[str, Any]) -> int:
     changed = normalize_node(data)
     changed += repair_ja_ruby_shapes(data)
+    changed += repair_long_ja_rows(data)
+    changed += repair_missing_roles(data)
     changed += cleanup_components(data)
     return changed
 
