@@ -329,7 +329,9 @@ def review_chunk(source: dict[str, Any], data: dict[str, Any]) -> list[str]:
         add_role_collapse_issues(paragraph_counts["both"], paragraph_id, errors, minimum=120, max_ratio=0.84, min_roles=3)
 
     for text, count in duplicate_ja.items():
-        if count >= 3 and len(text) >= 5:
+        # Short repeated terms can be legitimate in literary prose. Keep the
+        # duplicate-collapse guard for sentence-like repeated comments.
+        if count >= 3 and len(text) >= 10:
             errors.append(f"{source['chunk_id']}: repeated identical Japanese comment {count} times: {text[:30]}")
 
     add_role_collapse_issues(chunk_counts["zh"], f"{source['chunk_id']}.zh", errors, minimum=90, max_ratio=0.82, min_roles=4)
