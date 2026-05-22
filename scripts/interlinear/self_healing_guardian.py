@@ -30,6 +30,8 @@ CRITICAL_SCRIPTS = [
     "scripts/interlinear/codex_sanitize_interlinear_range_worker.py",
     "scripts/interlinear/merge_parallel_json_candidates.py",
     "scripts/interlinear/merge_reviewed_chunks.py",
+    "scripts/interlinear/repair_mechanical_furigana_candidate.py",
+    "scripts/interlinear/repair_mechanical_furigana_prefix.py",
     "scripts/interlinear/monitor_interlinear_pipeline.py",
     "scripts/interlinear/monitor_sichuan_then_start_batch.py",
     "scripts/interlinear/self_healing_guardian.py",
