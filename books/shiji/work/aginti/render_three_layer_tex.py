@@ -96,6 +96,7 @@ def produce_tex(chunk_ids: list[str], direction: str, bw: bool) -> str:
     tex_lines.append(r"\clearpage")
     tex_lines.append(r"\pagestyle{fancy}")
 
+    last_section_id = ""
     for cid in chunk_ids:
         path = CHUNKS_DIR / f"{cid}.json"
         if not path.exists():
@@ -103,7 +104,9 @@ def produce_tex(chunk_ids: list[str], direction: str, bw: bool) -> str:
         data = json.loads(path.read_text(encoding="utf-8"))
         section = data.get("section", {})
         sec_id = section.get("id", cid)
-        tex_lines.append(r"\section{" + tex_escape(sec_id) + "}")
+        if sec_id != last_section_id:
+            tex_lines.append(r"\section{" + tex_escape(sec_id) + "}")
+            last_section_id = sec_id
 
         for para in data.get("paragraphs", []):
             for unit in para.get("units", []):
