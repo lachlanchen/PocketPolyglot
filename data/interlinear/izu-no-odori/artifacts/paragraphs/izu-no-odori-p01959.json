@@ -1,0 +1,266 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p01959",
+  "source_text": "“那好吧。谢谢。”",
+  "source_sha256": "e00139602108f0176f4cef3cd29703a6cf4d57b67262ab493a4419d131d66282",
+  "source_normalized_sha256": "e00139602108f0176f4cef3cd29703a6cf4d57b67262ab493a4419d131d66282",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 18,
+    "grammar_token_total": 18,
+    "unit_count": 2
+  },
+  "source_chunk_id": "izu-no-odori-chunk-1959",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "topic"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "topic"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "topic"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "水晶幻想",
+    "title_zh": [
+      {
+        "t": "水",
+        "r": "shuǐ",
+        "g": "topic"
+      },
+      {
+        "t": "晶",
+        "r": "jīng",
+        "g": "topic"
+      },
+      {
+        "t": "幻",
+        "r": "huàn",
+        "g": "topic"
+      },
+      {
+        "t": "想",
+        "r": "xiǎng",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "水",
+        "r": "すい",
+        "g": "topic"
+      },
+      {
+        "t": "晶",
+        "r": "しょう",
+        "g": "topic"
+      },
+      {
+        "t": "幻",
+        "r": "げん",
+        "g": "topic"
+      },
+      {
+        "t": "想",
+        "r": "そう",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-水晶幻想-intro",
+    "title_zh": [
+      {
+        "t": "水",
+        "r": "shuǐ",
+        "g": "topic"
+      },
+      {
+        "t": "晶",
+        "r": "jīng",
+        "g": "topic"
+      },
+      {
+        "t": "幻",
+        "r": "huàn",
+        "g": "topic"
+      },
+      {
+        "t": "想",
+        "r": "xiǎng",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "水",
+        "r": "すい",
+        "g": "topic"
+      },
+      {
+        "t": "晶",
+        "r": "しょう",
+        "g": "topic"
+      },
+      {
+        "t": "幻",
+        "r": "げん",
+        "g": "topic"
+      },
+      {
+        "t": "想",
+        "r": "そう",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p01959",
+    "source_text": "“那好吧。谢谢。”",
+    "units": [
+      {
+        "source_text": "“那好吧。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "adverbial"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "それなら",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "いい",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "でしょう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "谢谢。”",
+        "zh": [
+          {
+            "t": "谢",
+            "r": "xiè",
+            "g": "predicate"
+          },
+          {
+            "t": "谢",
+            "r": "xiè",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ありがとう",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "ございます",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p01973",
+  "source_text": "“小姐。”",
+  "source_sha256": "a8d3d1e29e83ee78226da011606776296486b7416c510561d5a35ae9a713e795",
+  "source_normalized_sha256": "a8d3d1e29e83ee78226da011606776296486b7416c510561d5a35ae9a713e795",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 10,
+    "grammar_token_total": 10,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-1973",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "object"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "水晶幻想",
+    "title_zh": [
+      {
+        "t": "水",
+        "r": "shuǐ",
+        "g": "attributive"
+      },
+      {
+        "t": "晶",
+        "r": "jīng",
+        "g": "attributive"
+      },
+      {
+        "t": "幻",
+        "r": "huàn",
+        "g": "object"
+      },
+      {
+        "t": "想",
+        "r": "xiǎng",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "水",
+        "r": "すい",
+        "g": "attributive"
+      },
+      {
+        "t": "晶",
+        "r": "しょう",
+        "g": "attributive"
+      },
+      {
+        "t": "幻",
+        "r": "げん",
+        "g": "object"
+      },
+      {
+        "t": "想",
+        "r": "そう",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-水晶幻想-intro",
+    "title_zh": [
+      {
+        "t": "水",
+        "r": "shuǐ",
+        "g": "attributive"
+      },
+      {
+        "t": "晶",
+        "r": "jīng",
+        "g": "attributive"
+      },
+      {
+        "t": "幻",
+        "r": "huàn",
+        "g": "object"
+      },
+      {
+        "t": "想",
+        "r": "xiǎng",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "水",
+        "r": "すい",
+        "g": "attributive"
+      },
+      {
+        "t": "晶",
+        "r": "しょう",
+        "g": "attributive"
+      },
+      {
+        "t": "幻",
+        "r": "げん",
+        "g": "object"
+      },
+      {
+        "t": "想",
+        "r": "そう",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p01973",
+    "source_text": "“小姐。”",
+    "units": [
+      {
+        "source_text": "“小姐。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "object"
+          },
+          {
+            "t": "姐",
+            "r": "jiě",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "お",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "嬢",
+              "r": "じょう",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "さん",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "。」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p02155",
+  "source_text": "“到哪儿？”",
+  "source_sha256": "08e106c5ce021d554a0b7c0da87163100a751685b79df2bcb85d648dafabf8fa",
+  "source_normalized_sha256": "08e106c5ce021d554a0b7c0da87163100a751685b79df2bcb85d648dafabf8fa",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 10,
+    "grammar_token_total": 10,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-2155",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "げん",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "抒情歌",
+    "title_zh": [
+      {
+        "t": "抒",
+        "r": "shū",
+        "g": "attributive"
+      },
+      {
+        "t": "情",
+        "r": "qíng",
+        "g": "attributive"
+      },
+      {
+        "t": "歌",
+        "r": "gē",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "抒",
+        "r": "じょ",
+        "g": "attributive"
+      },
+      {
+        "t": "情",
+        "r": "じょう",
+        "g": "attributive"
+      },
+      {
+        "t": "歌",
+        "r": "か",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-抒情歌-intro",
+    "title_zh": [
+      {
+        "t": "抒",
+        "r": "shū",
+        "g": "attributive"
+      },
+      {
+        "t": "情",
+        "r": "qíng",
+        "g": "attributive"
+      },
+      {
+        "t": "歌",
+        "r": "gē",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "抒",
+        "r": "じょ",
+        "g": "attributive"
+      },
+      {
+        "t": "情",
+        "r": "じょう",
+        "g": "attributive"
+      },
+      {
+        "t": "歌",
+        "r": "か",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p02155",
+    "source_text": "“到哪儿？”",
+    "units": [
+      {
+        "source_text": "“到哪儿？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "哪",
+            "r": "nǎ",
+            "g": "complement"
+          },
+          {
+            "t": "儿",
+            "r": "ér",
+            "g": "complement"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "どこへ",
+              "r": "",
+              "g": "complement"
+            }
+          ],
+          [
+            {
+              "t": "行",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "くの",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

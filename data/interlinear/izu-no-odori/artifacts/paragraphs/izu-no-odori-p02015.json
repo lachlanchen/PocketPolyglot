@@ -1,0 +1,250 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p02015",
+  "source_text": "“情绪相当好嘛。”",
+  "source_sha256": "246d9e217bcfe72dcbd0bb90588fbfc9767c40e7dfb7f8d732698fab3972d28e",
+  "source_normalized_sha256": "246d9e217bcfe72dcbd0bb90588fbfc9767c40e7dfb7f8d732698fab3972d28e",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 17,
+    "grammar_token_total": 17,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-2015",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "object"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "水晶幻想",
+    "title_zh": [
+      {
+        "t": "水",
+        "r": "shuǐ",
+        "g": "attributive"
+      },
+      {
+        "t": "晶",
+        "r": "jīng",
+        "g": "attributive"
+      },
+      {
+        "t": "幻",
+        "r": "huàn",
+        "g": "object"
+      },
+      {
+        "t": "想",
+        "r": "xiǎng",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "水",
+        "r": "すい",
+        "g": "attributive"
+      },
+      {
+        "t": "晶",
+        "r": "しょう",
+        "g": "attributive"
+      },
+      {
+        "t": "幻",
+        "r": "げん",
+        "g": "object"
+      },
+      {
+        "t": "想",
+        "r": "そう",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-水晶幻想-intro",
+    "title_zh": [
+      {
+        "t": "水",
+        "r": "shuǐ",
+        "g": "attributive"
+      },
+      {
+        "t": "晶",
+        "r": "jīng",
+        "g": "attributive"
+      },
+      {
+        "t": "幻",
+        "r": "huàn",
+        "g": "object"
+      },
+      {
+        "t": "想",
+        "r": "xiǎng",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "水",
+        "r": "すい",
+        "g": "attributive"
+      },
+      {
+        "t": "晶",
+        "r": "しょう",
+        "g": "attributive"
+      },
+      {
+        "t": "幻",
+        "r": "げん",
+        "g": "object"
+      },
+      {
+        "t": "想",
+        "r": "そう",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p02015",
+    "source_text": "“情绪相当好嘛。”",
+    "units": [
+      {
+        "source_text": "“情绪相当好嘛。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "情",
+            "r": "qíng",
+            "g": "subject"
+          },
+          {
+            "t": "绪",
+            "r": "xù",
+            "g": "subject"
+          },
+          {
+            "t": "相",
+            "r": "xiāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "当",
+            "r": "dāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "嘛",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "気",
+              "r": "き",
+              "g": "subject"
+            },
+            {
+              "t": "分",
+              "r": "ぶん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "かなり",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "いいじゃないか",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

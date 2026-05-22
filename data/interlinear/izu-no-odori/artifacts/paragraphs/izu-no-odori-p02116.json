@@ -1,0 +1,250 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p02116",
+  "source_text": "我的天使的翅膀折断了。",
+  "source_sha256": "afd400795ffde47ce864e9bfba2018070f6ae934792e5c1121859b6f4c8f69f6",
+  "source_normalized_sha256": "afd400795ffde47ce864e9bfba2018070f6ae934792e5c1121859b6f4c8f69f6",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 21,
+    "grammar_token_total": 21,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-2116",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "topic"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "topic"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "topic"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "抒情歌",
+    "title_zh": [
+      {
+        "t": "抒",
+        "r": "shū",
+        "g": "topic"
+      },
+      {
+        "t": "情",
+        "r": "qíng",
+        "g": "topic"
+      },
+      {
+        "t": "歌",
+        "r": "gē",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "抒",
+        "r": "じょ",
+        "g": "topic"
+      },
+      {
+        "t": "情",
+        "r": "じょう",
+        "g": "topic"
+      },
+      {
+        "t": "歌",
+        "r": "か",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-抒情歌-intro",
+    "title_zh": [
+      {
+        "t": "抒",
+        "r": "shū",
+        "g": "topic"
+      },
+      {
+        "t": "情",
+        "r": "qíng",
+        "g": "topic"
+      },
+      {
+        "t": "歌",
+        "r": "gē",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "抒",
+        "r": "じょ",
+        "g": "topic"
+      },
+      {
+        "t": "情",
+        "r": "じょう",
+        "g": "topic"
+      },
+      {
+        "t": "歌",
+        "r": "か",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p02116",
+    "source_text": "我的天使的翅膀折断了。",
+    "units": [
+      {
+        "source_text": "我的天使的翅膀折断了。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "attributive"
+          },
+          {
+            "t": "使",
+            "r": "shǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "翅",
+            "r": "chì",
+            "g": "subject"
+          },
+          {
+            "t": "膀",
+            "r": "bǎng",
+            "g": "subject"
+          },
+          {
+            "t": "折",
+            "r": "zhé",
+            "g": "predicate"
+          },
+          {
+            "t": "断",
+            "r": "duàn",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "attributive"
+            },
+            {
+              "t": "使",
+              "r": "し",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "翼",
+              "r": "つばさ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "折",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "れてしまった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

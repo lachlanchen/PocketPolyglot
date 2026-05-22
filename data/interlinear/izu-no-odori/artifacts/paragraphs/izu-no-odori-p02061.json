@@ -1,0 +1,240 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p02061",
+  "source_text": "“你再怎样说明……”",
+  "source_sha256": "b25b209137cfa4e8996647a930e2bf092545bef80c66e455465c1961901fe107",
+  "source_normalized_sha256": "b25b209137cfa4e8996647a930e2bf092545bef80c66e455465c1961901fe107",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 17,
+    "grammar_token_total": 17,
+    "unit_count": 1
+  },
+  "source_chunk_id": "izu-no-odori-chunk-2061",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "attributive"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "铁楼梯",
+    "title_zh": [
+      {
+        "t": "铁",
+        "r": "tiě",
+        "g": "attributive"
+      },
+      {
+        "t": "楼",
+        "r": "lóu",
+        "g": "object"
+      },
+      {
+        "t": "梯",
+        "r": "tī",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "鉄",
+        "r": "てつ",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "階",
+        "r": "かい",
+        "g": "object"
+      },
+      {
+        "t": "段",
+        "r": "だん",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-铁楼梯-intro",
+    "title_zh": [
+      {
+        "t": "铁",
+        "r": "tiě",
+        "g": "attributive"
+      },
+      {
+        "t": "楼",
+        "r": "lóu",
+        "g": "object"
+      },
+      {
+        "t": "梯",
+        "r": "tī",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "鉄",
+        "r": "てつ",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "階",
+        "r": "かい",
+        "g": "object"
+      },
+      {
+        "t": "段",
+        "r": "だん",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p02061",
+    "source_text": "“你再怎样说明……”",
+    "units": [
+      {
+        "source_text": "“你再怎样说明……”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "再",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "怎",
+            "r": "zěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "样",
+            "r": "yàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "明",
+            "r": "míng",
+            "g": "predicate"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "あなたが",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "いくら",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "説",
+              "r": "せつ",
+              "g": "predicate"
+            },
+            {
+              "t": "明",
+              "r": "めい",
+              "g": "predicate"
+            },
+            {
+              "t": "しても",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "……」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

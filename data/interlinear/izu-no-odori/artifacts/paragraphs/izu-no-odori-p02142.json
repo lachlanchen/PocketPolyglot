@@ -1,0 +1,849 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "izu-no-odori",
+  "paragraph_id": "izu-no-odori-p02142",
+  "source_text": "《心地观经》里写道：一切众生轮转五道，经百千劫，多次轮回转世之中，可能在何处又互成父母，人世间的男子皆慈父，人世间的女子均悲母也。",
+  "source_sha256": "b188d28feeaa1238ac97921d87cd7889b3cc9015cbc884fe1e525ee8d8e67401",
+  "source_normalized_sha256": "b188d28feeaa1238ac97921d87cd7889b3cc9015cbc884fe1e525ee8d8e67401",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 133,
+    "grammar_token_total": 133,
+    "unit_count": 5
+  },
+  "source_chunk_id": "izu-no-odori-chunk-2142",
+  "source_manifest_sha256": "3099e71658da3c657347948e8db5f455281d8fc217acbce841441b06431c3623",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "げん",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "抒情歌",
+    "title_zh": [
+      {
+        "t": "抒",
+        "r": "shū",
+        "g": "attributive"
+      },
+      {
+        "t": "情",
+        "r": "qíng",
+        "g": "attributive"
+      },
+      {
+        "t": "歌",
+        "r": "gē",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "抒",
+        "r": "じょ",
+        "g": "attributive"
+      },
+      {
+        "t": "情",
+        "r": "じょう",
+        "g": "attributive"
+      },
+      {
+        "t": "歌",
+        "r": "か",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-抒情歌-intro",
+    "title_zh": [
+      {
+        "t": "抒",
+        "r": "shū",
+        "g": "attributive"
+      },
+      {
+        "t": "情",
+        "r": "qíng",
+        "g": "attributive"
+      },
+      {
+        "t": "歌",
+        "r": "gē",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "抒",
+        "r": "じょ",
+        "g": "attributive"
+      },
+      {
+        "t": "情",
+        "r": "じょう",
+        "g": "attributive"
+      },
+      {
+        "t": "歌",
+        "r": "か",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "izu-no-odori-p02142",
+    "source_text": "《心地观经》里写道：一切众生轮转五道，经百千劫，多次轮回转世之中，可能在何处又互成父母，人世间的男子皆慈父，人世间的女子均悲母也。",
+    "units": [
+      {
+        "source_text": "《心地观经》里写道：",
+        "zh": [
+          {
+            "t": "《",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "心",
+            "r": "xīn",
+            "g": "object"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "object"
+          },
+          {
+            "t": "观",
+            "r": "guān",
+            "g": "object"
+          },
+          {
+            "t": "经",
+            "r": "jīng",
+            "g": "object"
+          },
+          {
+            "t": "》",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "写",
+            "r": "xiě",
+            "g": "predicate"
+          },
+          {
+            "t": "道",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "『",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "心",
+              "r": "しん",
+              "g": "object"
+            },
+            {
+              "t": "地",
+              "r": "じ",
+              "g": "object"
+            },
+            {
+              "t": "観",
+              "r": "かん",
+              "g": "object"
+            },
+            {
+              "t": "経",
+              "r": "きょう",
+              "g": "object"
+            },
+            {
+              "t": "』",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "には",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "こう",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "書",
+              "r": "か",
+              "g": "predicate"
+            },
+            {
+              "t": "かれている",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "一切众生轮转五道，经百千劫，",
+        "zh": [
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "attributive"
+          },
+          {
+            "t": "切",
+            "r": "qiè",
+            "g": "attributive"
+          },
+          {
+            "t": "众",
+            "r": "zhòng",
+            "g": "subject"
+          },
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "subject"
+          },
+          {
+            "t": "轮",
+            "r": "lún",
+            "g": "predicate"
+          },
+          {
+            "t": "转",
+            "r": "zhuǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "五",
+            "r": "wǔ",
+            "g": "object"
+          },
+          {
+            "t": "道",
+            "r": "dào",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "经",
+            "r": "jīng",
+            "g": "predicate"
+          },
+          {
+            "t": "百",
+            "r": "bǎi",
+            "g": "object"
+          },
+          {
+            "t": "千",
+            "r": "qiān",
+            "g": "object"
+          },
+          {
+            "t": "劫",
+            "r": "jié",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "あらゆる",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "衆",
+              "r": "しゅ",
+              "g": "subject"
+            },
+            {
+              "t": "生",
+              "r": "じょう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "五",
+              "r": "ご",
+              "g": "object"
+            },
+            {
+              "t": "道",
+              "r": "どう",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "輪",
+              "r": "りん",
+              "g": "predicate"
+            },
+            {
+              "t": "廻",
+              "r": "ね",
+              "g": "predicate"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "百",
+              "r": "ひゃく",
+              "g": "object"
+            },
+            {
+              "t": "千",
+              "r": "せん",
+              "g": "object"
+            },
+            {
+              "t": "劫",
+              "r": "ごう",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "経",
+              "r": "へ",
+              "g": "predicate"
+            },
+            {
+              "t": "て",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "多次轮回转世之中，可能在何处又互成父母，",
+        "zh": [
+          {
+            "t": "多",
+            "r": "duō",
+            "g": "adverbial"
+          },
+          {
+            "t": "次",
+            "r": "cì",
+            "g": "adverbial"
+          },
+          {
+            "t": "轮",
+            "r": "lún",
+            "g": "attributive"
+          },
+          {
+            "t": "回",
+            "r": "huí",
+            "g": "attributive"
+          },
+          {
+            "t": "转",
+            "r": "zhuǎn",
+            "g": "attributive"
+          },
+          {
+            "t": "世",
+            "r": "shì",
+            "g": "attributive"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "function"
+          },
+          {
+            "t": "中",
+            "r": "zhōng",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "adverbial"
+          },
+          {
+            "t": "能",
+            "r": "néng",
+            "g": "adverbial"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "何",
+            "r": "hé",
+            "g": "adverbial"
+          },
+          {
+            "t": "处",
+            "r": "chù",
+            "g": "adverbial"
+          },
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "互",
+            "r": "hù",
+            "g": "adverbial"
+          },
+          {
+            "t": "成",
+            "r": "chéng",
+            "g": "predicate"
+          },
+          {
+            "t": "父",
+            "r": "fù",
+            "g": "object"
+          },
+          {
+            "t": "母",
+            "r": "mǔ",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "幾",
+              "r": "いく",
+              "g": "adverbial"
+            },
+            {
+              "t": "度",
+              "r": "たび",
+              "g": "adverbial"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "生",
+              "r": "う",
+              "g": "attributive"
+            },
+            {
+              "t": "まれ",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "変",
+              "r": "か",
+              "g": "attributive"
+            },
+            {
+              "t": "わるうちに",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "どこかでまた",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "互",
+              "r": "たが",
+              "g": "adverbial"
+            },
+            {
+              "t": "いに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "父",
+              "r": "ふ",
+              "g": "object"
+            },
+            {
+              "t": "母",
+              "r": "ぼ",
+              "g": "object"
+            },
+            {
+              "t": "となることもある",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "人世间的男子皆慈父，",
+        "zh": [
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "attributive"
+          },
+          {
+            "t": "世",
+            "r": "shì",
+            "g": "attributive"
+          },
+          {
+            "t": "间",
+            "r": "jiān",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "男",
+            "r": "nán",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "皆",
+            "r": "jiē",
+            "g": "adverbial"
+          },
+          {
+            "t": "慈",
+            "r": "cí",
+            "g": "object"
+          },
+          {
+            "t": "父",
+            "r": "fù",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "世",
+              "r": "よ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "男",
+              "r": "だん",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "みな",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "慈",
+              "r": "じ",
+              "g": "object"
+            },
+            {
+              "t": "父",
+              "r": "ふ",
+              "g": "object"
+            },
+            {
+              "t": "であり",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "人世间的女子均悲母也。",
+        "zh": [
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "attributive"
+          },
+          {
+            "t": "世",
+            "r": "shì",
+            "g": "attributive"
+          },
+          {
+            "t": "间",
+            "r": "jiān",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "女",
+            "r": "nǚ",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "均",
+            "r": "jūn",
+            "g": "adverbial"
+          },
+          {
+            "t": "悲",
+            "r": "bēi",
+            "g": "object"
+          },
+          {
+            "t": "母",
+            "r": "mǔ",
+            "g": "object"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "世",
+              "r": "よ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "女",
+              "r": "じょ",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "みな",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "悲",
+              "r": "ひ",
+              "g": "object"
+            },
+            {
+              "t": "母",
+              "r": "ぼ",
+              "g": "object"
+            },
+            {
+              "t": "なのである",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
