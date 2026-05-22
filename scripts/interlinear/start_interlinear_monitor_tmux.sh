@@ -29,27 +29,49 @@ if tmux has-session -t "=$session" 2>/dev/null; then
 fi
 
 log="$monitor_dir/${session}_$(date +%Y%m%d_%H%M%S).log"
+runner="$monitor_dir/${session}.run.sh"
+finish_dir="books/$book_id/work/bilingual/reviewed/chunks"
+if [[ "$reviewed_stage" == "0" ]]; then
+  finish_dir="books/$book_id/work/bilingual/interlinear/chunks"
+fi
 reviewed_stage_arg=()
 if [[ "$reviewed_stage" == "0" ]]; then
   reviewed_stage_arg=(--no-reviewed-stage)
 fi
-tmux new-session -d -s "$session" -n monitor "\
-cd '$root' && \
-python -u scripts/interlinear/monitor_interlinear_pipeline.py \
-  --book-id '$book_id' \
-  --worker-session '$worker_session' \
-  --review-session '$review_session' \
-  --compile-command '$compile_command' \
-  --start-command '$start_command' \
-  --repair-command '$repair_command' \
-  --claim-ttl-seconds '$claim_ttl_seconds' \
-  --interval-seconds '$interval_seconds' \
-  --stall-seconds '$stall_seconds' \
-  ${reviewed_stage_arg[*]} \
-  --heal \
-  --clear-stale-claims \
-  --loop \
-  2>&1 | tee -a '$log'"
+{
+  printf '#!/usr/bin/env bash\n'
+  printf 'set -uo pipefail\n'
+  printf 'cd %q\n' "$root"
+  printf 'while true; do\n'
+  printf '  python -u scripts/interlinear/monitor_interlinear_pipeline.py \\\n'
+  printf '    --book-id %q \\\n' "$book_id"
+  printf '    --worker-session %q \\\n' "$worker_session"
+  printf '    --review-session %q \\\n' "$review_session"
+  printf '    --compile-command %q \\\n' "$compile_command"
+  printf '    --start-command %q \\\n' "$start_command"
+  printf '    --repair-command %q \\\n' "$repair_command"
+  printf '    --claim-ttl-seconds %q \\\n' "$claim_ttl_seconds"
+  printf '    --interval-seconds %q \\\n' "$interval_seconds"
+  printf '    --stall-seconds %q \\\n' "$stall_seconds"
+  if [[ "$reviewed_stage" == "0" ]]; then
+    printf '    --no-reviewed-stage \\\n'
+  fi
+  printf '    --heal \\\n'
+  printf '    --clear-stale-claims \\\n'
+  printf '    --loop\n'
+  printf '  code=$?\n'
+  printf '  echo "monitor_exit_code=$code timestamp=$(date -Is)"\n'
+  printf '  if python scripts/interlinear/report_interlinear_progress.py --manifest %q --chunk-dir %q | grep -q "^missing_chunks=0$"; then\n' \
+    "books/$book_id/work/bilingual/chunks/manifest.json" "$finish_dir"
+  printf '    echo "monitor_complete=1 timestamp=$(date -Is)"\n'
+  printf '    break\n'
+  printf '  fi\n'
+  printf '  sleep 60\n'
+  printf 'done\n'
+} > "$runner"
+chmod +x "$runner"
+
+tmux new-session -d -s "$session" -n monitor "bash '$runner' 2>&1 | tee -a '$log'"
 
 echo "tmux monitor: $session"
 echo "book_id: $book_id"
@@ -60,3 +82,4 @@ echo "stall_seconds: $stall_seconds"
 echo "claim_ttl_seconds: $claim_ttl_seconds"
 echo "reviewed_stage: $reviewed_stage"
 echo "log: $log"
+echo "runner: $runner"
