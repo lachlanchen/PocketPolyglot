@@ -181,6 +181,10 @@ def main() -> int:
         errors: list[str] | None = None
         try:
             for attempt in range(1, args.retries + 2):
+                if valid_existing(canonical_path, chunk) or valid_existing(candidate_path, chunk):
+                    print(f"{args.worker_id}: {chunk_id} resolved externally; skipping remaining retries", flush=True)
+                    completed += 1
+                    break
                 prompt = prompt_for_chunk(chunk, errors)
                 prompt_path = work_dir / "prompts" / f"{chunk_id}.attempt{attempt}.md"
                 message_path = work_dir / "messages" / f"{chunk_id}.attempt{attempt}.md"

@@ -213,6 +213,13 @@ def main() -> int:
                 previous_issues = issues
                 repaired = False
                 for attempt in range(1, args.retries + 2):
+                    if valid_reviewed(final_dir / f"{chunk_id}.json", source) or valid_reviewed(
+                        accepted_dir / f"{chunk_id}.json", source
+                    ):
+                        print(f"{args.worker_id}: {chunk_id} resolved externally; skipping remaining retries", flush=True)
+                        completed += 1
+                        repaired = True
+                        break
                     prompt = repair_prompt(source, data, previous_issues)
                     prompt_path = work_dir / "prompts" / f"{chunk_id}.attempt{attempt}.md"
                     message_path = work_dir / "messages" / f"{chunk_id}.attempt{attempt}.md"
