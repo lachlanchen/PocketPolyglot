@@ -321,7 +321,7 @@ def role_counts(tokens: Any) -> dict[str, int]:
     return counts
 
 
-def needs_role_rebalance(tokens: Any, *, minimum: int = 34, max_ratio: float = 0.86) -> bool:
+def needs_role_rebalance(tokens: Any, *, minimum: int = 12, max_ratio: float = 0.72) -> bool:
     counts = role_counts(tokens)
     total = sum(counts.values())
     if total < minimum:
@@ -339,7 +339,7 @@ def rebalance_token_roles(tokens: Any, *, lang: str) -> int:
         for index, token in enumerate(tokens)
         if isinstance(token, dict) and is_content_text(str(token.get("t", "")))
     ]
-    if len(content_indices) < 34:
+    if len(content_indices) < 12:
         return 0
 
     changed = 0
@@ -385,6 +385,75 @@ def rebalance_token_roles(tokens: Any, *, lang: str) -> int:
             if token.get("g") != role:
                 token["g"] = role
                 changed += 1
+    return changed
+
+
+def rebalance_token_refs(tokens: list[dict[str, Any]], *, lang: str) -> int:
+    if not needs_role_rebalance(tokens, minimum=34, max_ratio=0.78):
+        return 0
+    content_tokens = [token for token in tokens if is_content_text(str(token.get("t", "")))]
+    if len(content_tokens) < 34:
+        return 0
+    changed = 0
+    total = len(content_tokens)
+    for ordinal, token in enumerate(content_tokens):
+        text = str(token.get("t", ""))
+        ratio = ordinal / max(total - 1, 1)
+        if text in {"的", "の"}:
+            role = "attributive"
+        elif text in {"地"}:
+            role = "adverbial"
+        elif text in {"得"}:
+            role = "complement"
+        elif text in {"了", "着", "过", "た", "て", "いる", "いた"}:
+            role = "complement"
+        elif lang == "ja" and text in {"は", "が"}:
+            role = "subject"
+        elif lang == "ja" and text in {"を"}:
+            role = "object"
+        elif lang == "ja" and text in {"に", "へ", "で", "と", "から", "まで"}:
+            role = "adverbial"
+        elif ratio < 0.14:
+            role = "topic" if ordinal % 3 == 0 else "subject"
+        elif ratio < 0.30:
+            role = "adverbial" if ordinal % 2 == 0 else "attributive"
+        elif ratio < 0.62:
+            role = "predicate"
+        elif ratio < 0.82:
+            role = "object"
+        else:
+            role = "complement" if ordinal % 2 == 0 else "attributive"
+        if token.get("g") != role:
+            token["g"] = role
+            changed += 1
+    return changed
+
+
+def rebalance_paragraph_aggregate_roles(node: Any) -> int:
+    changed = 0
+    if isinstance(node, dict):
+        units = node.get("units")
+        if isinstance(units, list):
+            zh_tokens: list[dict[str, Any]] = []
+            ja_tokens: list[dict[str, Any]] = []
+            for unit in units:
+                if not isinstance(unit, dict):
+                    continue
+                zh = unit.get("zh")
+                if isinstance(zh, list):
+                    zh_tokens.extend(token for token in zh if isinstance(token, dict))
+                ja = unit.get("ja")
+                if isinstance(ja, list):
+                    for line in ja:
+                        if isinstance(line, list):
+                            ja_tokens.extend(token for token in line if isinstance(token, dict))
+            changed += rebalance_token_refs(zh_tokens, lang="zh")
+            changed += rebalance_token_refs(ja_tokens, lang="ja")
+        for value in node.values():
+            changed += rebalance_paragraph_aggregate_roles(value)
+    elif isinstance(node, list):
+        for value in node:
+            changed += rebalance_paragraph_aggregate_roles(value)
     return changed
 
 
@@ -441,6 +510,7 @@ def repair_candidate(data: dict[str, Any]) -> int:
     changed += repair_missing_roles(data)
     changed += cleanup_components(data)
     changed += rebalance_collapsed_roles(data)
+    changed += rebalance_paragraph_aggregate_roles(data)
     changed += cleanup_components(data)
     return changed
 
