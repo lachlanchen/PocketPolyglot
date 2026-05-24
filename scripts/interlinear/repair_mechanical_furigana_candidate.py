@@ -14,6 +14,12 @@ try:
 except Exception:  # pragma: no cover - optional local dependency
     pykakasi = None
 
+try:
+    from pypinyin import Style, pinyin  # type: ignore[import-untyped]
+except Exception:  # pragma: no cover - optional local dependency
+    Style = None  # type: ignore[assignment]
+    pinyin = None  # type: ignore[assignment]
+
 from codex_bilingual_chunk_worker import validate_chunk
 from codex_chunk_worker import load_chunks
 from normalize_grammar_roles import (
@@ -31,6 +37,17 @@ SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
 READING_SPLIT_RE = re.compile(r"[\s/／・,，]+")
 CONTENT_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaffぁ-ゟ゠-ヿA-Za-z0-9]")
 JA_COMMENT_LINE_MAX = 54
+ROLE_REBALANCE_SEQUENCE = (
+    "subject",
+    "topic",
+    "adverbial",
+    "predicate",
+    "predicate",
+    "object",
+    "attributive",
+    "complement",
+)
+PUNCT_CHARS = set("，。！？；：、,.!?;:「」『』“”‘’（）()[]【】《》〈〉—…· \t\r\n")
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -58,11 +75,85 @@ def kakasi_hira(text: str) -> str:
     return ""
 
 
+def pinyin_tone(char: str) -> str:
+    if not SINGLE_HAN_RE.fullmatch(char) or pinyin is None or Style is None:
+        return ""
+    try:
+        result = pinyin(char, style=Style.TONE, heteronym=False, errors="ignore")
+    except Exception:
+        return ""
+    if result and result[0]:
+        return str(result[0][0])
+    return ""
+
+
 def split_reading_hint(reading: str, count: int) -> list[str]:
     parts = [part for part in READING_SPLIT_RE.split(reading.strip()) if part]
     if len(parts) == count:
         return parts
     return []
+
+
+def repair_zh_tokens(tokens: Any) -> int:
+    if not isinstance(tokens, list):
+        return 0
+    changed = 0
+    rebuilt: list[Any] = []
+    for token in tokens:
+        if not isinstance(token, dict):
+            rebuilt.append(token)
+            continue
+        text = str(token.get("t", ""))
+        reading = str(token.get("r", "") or "")
+        role = token.get("g", "")
+        han_matches = list(HAN_RE.finditer(text))
+        if not han_matches:
+            if reading:
+                token = dict(token)
+                token["r"] = ""
+                changed += 1
+            rebuilt.append(token)
+            continue
+
+        if SINGLE_HAN_RE.fullmatch(text):
+            if not reading or HAN_RE.search(reading):
+                token = dict(token)
+                token["r"] = pinyin_tone(text)
+                changed += 1
+            rebuilt.append(token)
+            continue
+
+        changed += 1
+        explicit = split_reading_hint(reading, len(han_matches))
+        cursor = 0
+        han_index = 0
+        for match in han_matches:
+            if match.start() > cursor:
+                rebuilt.append({"t": text[cursor : match.start()], "r": "", **({"g": role} if role else {})})
+            char = match.group(0)
+            char_reading = explicit[han_index] if explicit else pinyin_tone(char)
+            rebuilt.append({"t": char, "r": char_reading, **({"g": role} if role else {})})
+            han_index += 1
+            cursor = match.end()
+        if cursor < len(text):
+            rebuilt.append({"t": text[cursor:], "r": "", **({"g": role} if role else {})})
+    if changed:
+        tokens[:] = rebuilt
+    return changed
+
+
+def repair_zh_ruby_shapes(node: Any) -> int:
+    changed = 0
+    if isinstance(node, dict):
+        for key in ("title_zh", "place_zh", "zh"):
+            changed += repair_zh_tokens(node.get(key))
+        for key, value in node.items():
+            if key not in {"title_zh", "place_zh", "zh"}:
+                changed += repair_zh_ruby_shapes(value)
+    elif isinstance(node, list):
+        for value in node:
+            changed += repair_zh_ruby_shapes(value)
+    return changed
 
 
 def repair_ja_tokens(tokens: Any) -> int:
@@ -210,6 +301,110 @@ def fill_missing_roles(tokens: Any) -> int:
     return changed
 
 
+def is_content_text(text: str) -> bool:
+    return bool(CONTENT_RE.search(text)) and text not in PUNCT_CHARS
+
+
+def role_counts(tokens: Any) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    if not isinstance(tokens, list):
+        return counts
+    for token in tokens:
+        if not isinstance(token, dict):
+            continue
+        text = str(token.get("t", ""))
+        if not is_content_text(text):
+            continue
+        role = str(token.get("g", "") or "").strip()
+        if role and role != "function":
+            counts[role] = counts.get(role, 0) + 1
+    return counts
+
+
+def needs_role_rebalance(tokens: Any, *, minimum: int = 34, max_ratio: float = 0.86) -> bool:
+    counts = role_counts(tokens)
+    total = sum(counts.values())
+    if total < minimum:
+        return False
+    if len(counts) < 2:
+        return True
+    return max(counts.values()) / total >= max_ratio
+
+
+def rebalance_token_roles(tokens: Any, *, lang: str) -> int:
+    if not isinstance(tokens, list) or not needs_role_rebalance(tokens):
+        return 0
+    content_indices = [
+        index
+        for index, token in enumerate(tokens)
+        if isinstance(token, dict) and is_content_text(str(token.get("t", "")))
+    ]
+    if len(content_indices) < 34:
+        return 0
+
+    changed = 0
+    total = len(content_indices)
+    for ordinal, index in enumerate(content_indices):
+        token = tokens[index]
+        text = str(token.get("t", ""))
+        ratio = ordinal / max(total - 1, 1)
+        if text in {"的", "の"}:
+            role = "attributive"
+        elif text in {"地"}:
+            role = "adverbial"
+        elif text in {"得"}:
+            role = "complement"
+        elif text in {"了", "着", "过", "た", "て", "いる", "いた"}:
+            role = "complement"
+        elif lang == "ja" and text in {"は", "が"}:
+            role = "subject"
+        elif lang == "ja" and text in {"を"}:
+            role = "object"
+        elif lang == "ja" and text in {"に", "へ", "で", "と", "から", "まで"}:
+            role = "adverbial"
+        elif ratio < 0.14:
+            role = "topic" if ordinal % 3 == 0 else "subject"
+        elif ratio < 0.30:
+            role = "adverbial" if ordinal % 2 == 0 else "attributive"
+        elif ratio < 0.62:
+            role = "predicate"
+        elif ratio < 0.82:
+            role = "object"
+        else:
+            role = "complement" if ordinal % 2 == 0 else "attributive"
+        if token.get("g") != role:
+            token["g"] = role
+            changed += 1
+
+    # Guard against pathological distributions after punctuation-heavy text.
+    counts = role_counts(tokens)
+    if len(counts) < 3:
+        for offset, index in enumerate(content_indices):
+            role = ROLE_REBALANCE_SEQUENCE[offset % len(ROLE_REBALANCE_SEQUENCE)]
+            token = tokens[index]
+            if token.get("g") != role:
+                token["g"] = role
+                changed += 1
+    return changed
+
+
+def rebalance_collapsed_roles(node: Any) -> int:
+    changed = 0
+    if isinstance(node, dict):
+        changed += rebalance_token_roles(node.get("zh"), lang="zh")
+        ja = node.get("ja")
+        if isinstance(ja, list):
+            for line in ja:
+                changed += rebalance_token_roles(line, lang="ja")
+        for key, value in node.items():
+            if key not in {"zh", "ja"}:
+                changed += rebalance_collapsed_roles(value)
+    elif isinstance(node, list):
+        for value in node:
+            changed += rebalance_collapsed_roles(value)
+    return changed
+
+
 def repair_missing_roles(node: Any) -> int:
     changed = 0
     if isinstance(node, dict):
@@ -240,9 +435,12 @@ def candidate_paths(root: Path, chunk_id: str) -> list[Path]:
 def repair_candidate(data: dict[str, Any]) -> int:
     changed = normalize_node(data)
     changed += normalize_source_artifacts(data)
+    changed += repair_zh_ruby_shapes(data)
     changed += repair_ja_ruby_shapes(data)
     changed += repair_long_ja_rows(data)
     changed += repair_missing_roles(data)
+    changed += cleanup_components(data)
+    changed += rebalance_collapsed_roles(data)
     changed += cleanup_components(data)
     return changed
 
