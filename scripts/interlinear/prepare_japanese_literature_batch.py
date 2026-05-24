@@ -245,6 +245,13 @@ def write_plan(book: dict[str, Any], paths: dict[str, str], launchable: bool) ->
     if book.get("title_map"):
         title_map_path = str(work_root / "chunks" / "title-map.json")
         write_json(ROOT / title_map_path, book["title_map"])
+    render_secondary_ja = book.get("render_secondary_ja")
+    secondary_ja_mode = book.get("secondary_ja_mode")
+    drop_editorial_notes = book.get("drop_editorial_notes")
+    if launchable and book.get("source_language") == "zh" and str(book.get("task_mode", "")).startswith("zh_main"):
+        render_secondary_ja = False if render_secondary_ja is None else render_secondary_ja
+        secondary_ja_mode = secondary_ja_mode or "merge"
+        drop_editorial_notes = True if drop_editorial_notes is None else drop_editorial_notes
     plan = {
         "schema_version": 1,
         "book_id": book_id,
@@ -264,6 +271,10 @@ def write_plan(book: dict[str, Any], paths: dict[str, str], launchable: bool) ->
         "author": book.get("author", ""),
         "author_reading_zh": book.get("author_reading_zh", ""),
         "author_reading_ja": book.get("author_reading_ja", ""),
+        "render_secondary_ja": render_secondary_ja,
+        "secondary_ja_mode": secondary_ja_mode,
+        "render_section_titles_zh": book.get("render_section_titles_zh", []),
+        "drop_editorial_notes": drop_editorial_notes,
         "book_description": book.get("book_description", ""),
         "chunk_mode": book.get("chunk_mode", "paragraph"),
         "reference_scope": book.get("reference_scope", "chapter"),

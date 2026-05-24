@@ -14,7 +14,7 @@ from typing import Any
 
 from codex_chunk_worker import extract_json, load_chunks, mentions_usage_limit, run_codex
 from codex_bilingual_chunk_worker import prompt_for_chunk, validate_chunk
-from normalize_grammar_roles import cleanup_components, normalize_node, normalize_ruby_token_shapes
+from normalize_grammar_roles import cleanup_components, normalize_node, normalize_ruby_token_shapes, normalize_source_artifacts
 from reference_windows import expand_adjacent_jp_references
 
 
@@ -39,6 +39,7 @@ def valid_existing(path: Path, source: dict[str, Any]) -> bool:
     except Exception:
         return False
     normalize_node(data)
+    normalize_source_artifacts(data)
     normalize_ruby_token_shapes(data)
     cleanup_components(data)
     return not validate_chunk(source, data)
@@ -207,6 +208,7 @@ def main() -> int:
                     )
                     result = extract_json(message_path.read_text(encoding="utf-8"))
                     normalize_node(result)
+                    normalize_source_artifacts(result)
                     normalize_ruby_token_shapes(result)
                     cleanup_components(result)
                     errors = validate_chunk(chunk, result)

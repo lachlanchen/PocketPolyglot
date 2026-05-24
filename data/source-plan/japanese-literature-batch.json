@@ -21,7 +21,10 @@
       "author_reading_ja": "あくた がわ りゅう の すけ",
       "book_description": "Akutagawa Ryunosuke short story collection; Chinese source with generated Japanese comment text.",
       "chunk_mode": "paragraph",
-      "reference_scope": "chapter"
+      "reference_scope": "chapter",
+      "render_secondary_ja": false,
+      "secondary_ja_mode": "merge",
+      "drop_editorial_notes": true
     },
     {
       "book_id": "kinkakuji",
@@ -40,7 +43,10 @@
       "author_reading_ja": "み しま ゆ き お",
       "book_description": "Mishima Yukio, The Temple of the Golden Pavilion; Chinese source with generated Japanese comment text.",
       "chunk_mode": "paragraph",
-      "reference_scope": "chapter"
+      "reference_scope": "chapter",
+      "render_secondary_ja": false,
+      "secondary_ja_mode": "merge",
+      "drop_editorial_notes": true
     },
     {
       "book_id": "woman-in-the-dunes",
@@ -59,7 +65,10 @@
       "author_reading_ja": "あ べ こう ぼう",
       "book_description": "Abe Kobo, The Woman in the Dunes; Chinese source with generated Japanese comment text.",
       "chunk_mode": "paragraph",
-      "reference_scope": "chapter"
+      "reference_scope": "chapter",
+      "render_secondary_ja": false,
+      "secondary_ja_mode": "merge",
+      "drop_editorial_notes": true
     },
     {
       "book_id": "silence",
@@ -97,7 +106,10 @@
       "author_reading_ja": "むらさき しき ぶ",
       "book_description": "Murasaki Shikibu, The Tale of Genji; modern Chinese source with generated Japanese comment text.",
       "chunk_mode": "paragraph",
-      "reference_scope": "chapter"
+      "reference_scope": "chapter",
+      "render_secondary_ja": false,
+      "secondary_ja_mode": "merge",
+      "drop_editorial_notes": true
     },
     {
       "book_id": "chumon-no-ooi-ryoriten",
@@ -126,7 +138,10 @@
         "渡过雪原之一（小狐狸绀三郎）": "雪渡り その一（小ぎつねの紺三郎）",
         "渡过雪原之二（狐狸小学校的幻灯会）": "雪渡り その二（きつね小学校の幻灯会）",
         "君鼠": "クねずみ"
-      }
+      },
+      "render_secondary_ja": false,
+      "secondary_ja_mode": "merge",
+      "drop_editorial_notes": true
     },
     {
       "book_id": "ginga-tetsudo",
@@ -159,7 +174,10 @@
         "七、北十字星和普利奥新海岸": "七、北十字とプリオシン海岸",
         "八、捕鸟人": "八、鳥を捕る人",
         "九、乔万尼的车票": "九、ジョバンニの切符"
-      }
+      },
+      "render_secondary_ja": false,
+      "secondary_ja_mode": "merge",
+      "drop_editorial_notes": true
     },
     {
       "book_id": "the-old-capital",
@@ -177,7 +195,13 @@
       "author_reading_ja": "かわばた まさ なお",
       "book_description": "Yasunari Kawabata, The Old Capital; Chinese source with generated Japanese comment text.",
       "chunk_mode": "paragraph",
-      "reference_scope": "chapter"
+      "reference_scope": "chapter",
+      "render_secondary_ja": false,
+      "secondary_ja_mode": "merge",
+      "drop_editorial_notes": true,
+      "render_section_titles_zh": [
+        "古都"
+      ]
     },
     {
       "book_id": "izu-no-odori",
@@ -195,7 +219,10 @@
       "author_reading_ja": "かわばた まさ なお",
       "book_description": "Yasunari Kawabata, The Dancing Girl of Izu; Chinese source with generated Japanese comment text.",
       "chunk_mode": "paragraph",
-      "reference_scope": "chapter"
+      "reference_scope": "chapter",
+      "render_secondary_ja": false,
+      "secondary_ja_mode": "merge",
+      "drop_editorial_notes": true
     }
   ]
 }

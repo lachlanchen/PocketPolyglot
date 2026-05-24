@@ -11,6 +11,21 @@ from typing import Any
 
 HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
+MARKDOWN_NOTE_LINK_RE = re.compile(
+    r"""(?:
+        \[\s*\\?\[\s*(?:注|註)?\s*[0-9０-９]{1,4}\s*\\?\]\s*\]\s*\([^)]+(?:\.html|\#)[^)]+\)
+        |
+        \[\s*(?:注|註)?\s*[0-9０-９]{1,4}\s*\]\s*\([^)]+(?:\.html|\#)[^)]+\)
+    )""",
+    re.VERBOSE,
+)
+INLINE_NOTE_REF_RE = re.compile(
+    r"[\[［〔【]\s*\\?\[?\s*(?:注|註)?\s*[0-9０-９]{1,4}\s*\\?\]?\s*[\]］〕】]"
+)
+DIGIT_TOKEN_RE = re.compile(r"^[0-9０-９]+$")
+NOTE_WORDS = {"注", "註"}
+OPEN_BRACKETS = {"[", "［", "〔", "【"}
+CLOSE_BRACKETS = {"]", "］", "〕", "】"}
 
 JP_FALLBACK_READINGS = {
     # Simplified Chinese glyphs sometimes appear inside quoted character names
@@ -92,6 +107,161 @@ JP_ATTACHED_SUFFIXES = (
 )
 ZH_COMPONENT_MARKERS = {"的", "地", "得"}
 ZH_ASPECT_MARKERS = {"了", "着", "过"}
+
+
+def strip_reader_note_artifacts(text: str) -> str:
+    """Remove EPUB/PDF footnote reference debris from reader-facing text."""
+
+    cleaned = MARKDOWN_NOTE_LINK_RE.sub("", str(text))
+    cleaned = INLINE_NOTE_REF_RE.sub("", cleaned)
+    return cleaned
+
+
+def strip_reader_note_artifact_tokens(tokens: Any) -> int:
+    if not isinstance(tokens, list):
+        return 0
+    changed = 0
+    normalized: list[Any] = []
+    for token in tokens:
+        if not isinstance(token, dict):
+            normalized.append(token)
+            continue
+        text = str(token.get("t", ""))
+        stripped = strip_reader_note_artifacts(text)
+        if stripped != text:
+            changed += 1
+        if not stripped:
+            changed += 1
+            continue
+        new_token = token
+        if stripped != text:
+            new_token = dict(token)
+            new_token["t"] = stripped
+        normalized.append(new_token)
+
+    cleaned: list[Any] = []
+    index = 0
+    while index < len(normalized):
+        token = normalized[index]
+        token_text = str(token.get("t", "")).strip() if isinstance(token, dict) else ""
+        if token_text in OPEN_BRACKETS:
+            joined = ""
+            end_index = index
+            while end_index < len(normalized) and len(joined) < 220:
+                next_text = str(normalized[end_index].get("t", "")) if isinstance(normalized[end_index], dict) else ""
+                joined += next_text
+                end_index += 1
+                if ")" in joined:
+                    break
+            match = MARKDOWN_NOTE_LINK_RE.match(joined)
+            if match:
+                consumed = 0
+                end_index = index
+                while end_index < len(normalized) and consumed < match.end():
+                    consumed += len(str(normalized[end_index].get("t", "")) if isinstance(normalized[end_index], dict) else "")
+                    end_index += 1
+                if cleaned and isinstance(cleaned[-1], dict) and not str(cleaned[-1].get("t", "")).strip():
+                    cleaned.pop()
+                index = end_index
+                while index < len(normalized):
+                    next_text = (
+                        str(normalized[index].get("t", "")).strip()
+                        if isinstance(normalized[index], dict)
+                        else ""
+                    )
+                    if next_text:
+                        break
+                    index += 1
+                changed += 1
+                continue
+        if token_text in OPEN_BRACKETS:
+            end_index = index + 1
+            if end_index < len(normalized):
+                next_text = (
+                    str(normalized[end_index].get("t", "")).strip()
+                    if isinstance(normalized[end_index], dict)
+                    else ""
+                )
+                if next_text in OPEN_BRACKETS:
+                    end_index += 1
+            if end_index < len(normalized):
+                next_text = (
+                    str(normalized[end_index].get("t", "")).strip()
+                    if isinstance(normalized[end_index], dict)
+                    else ""
+                )
+                if next_text in NOTE_WORDS:
+                    end_index += 1
+            digit_seen = False
+            while end_index < len(normalized):
+                next_text = (
+                    str(normalized[end_index].get("t", "")).strip()
+                    if isinstance(normalized[end_index], dict)
+                    else ""
+                )
+                if not DIGIT_TOKEN_RE.match(next_text):
+                    break
+                digit_seen = True
+                end_index += 1
+            if end_index < len(normalized):
+                next_text = (
+                    str(normalized[end_index].get("t", "")).strip()
+                    if isinstance(normalized[end_index], dict)
+                    else ""
+                )
+                if digit_seen and next_text in CLOSE_BRACKETS:
+                    end_index += 1
+                    if end_index < len(normalized):
+                        next_text = (
+                            str(normalized[end_index].get("t", "")).strip()
+                            if isinstance(normalized[end_index], dict)
+                            else ""
+                        )
+                        if next_text in CLOSE_BRACKETS:
+                            end_index += 1
+                    if cleaned and isinstance(cleaned[-1], dict) and not str(cleaned[-1].get("t", "")).strip():
+                        cleaned.pop()
+                    index = end_index
+                    while index < len(normalized):
+                        next_text = (
+                            str(normalized[index].get("t", "")).strip()
+                            if isinstance(normalized[index], dict)
+                            else ""
+                        )
+                        if next_text:
+                            break
+                        index += 1
+                    changed += 1
+                    continue
+        cleaned.append(token)
+        index += 1
+    if changed:
+        tokens[:] = cleaned
+    return changed
+
+
+def normalize_source_artifacts(node: Any) -> int:
+    changed = 0
+    if isinstance(node, dict):
+        for key in ("source_text", "corrected_text"):
+            if key in node and isinstance(node[key], str):
+                cleaned = strip_reader_note_artifacts(node[key])
+                if cleaned != node[key]:
+                    node[key] = cleaned
+                    changed += 1
+        for key in ("title_zh", "title_ja", "place_zh", "place_ja", "zh"):
+            changed += strip_reader_note_artifact_tokens(node.get(key))
+        ja = node.get("ja")
+        if isinstance(ja, list):
+            for line in ja:
+                changed += strip_reader_note_artifact_tokens(line)
+        for key, value in node.items():
+            if key not in {"source_text", "corrected_text", "title_zh", "title_ja", "place_zh", "place_ja", "zh", "ja"}:
+                changed += normalize_source_artifacts(value)
+    elif isinstance(node, list):
+        for value in node:
+            changed += normalize_source_artifacts(value)
+    return changed
 
 
 def normalize_role(value: Any) -> str:

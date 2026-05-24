@@ -14,7 +14,13 @@ from pathlib import Path
 from typing import Any
 
 from codex_chunk_worker import compact, extract_json, flatten_zh, load_chunks, run_codex
-from normalize_grammar_roles import cleanup_components, normalize_node, normalize_ruby_token_shapes
+from normalize_grammar_roles import (
+    cleanup_components,
+    normalize_node,
+    normalize_ruby_token_shapes,
+    normalize_source_artifacts,
+    strip_reader_note_artifacts,
+)
 from reference_windows import expand_adjacent_jp_references
 from validate_interlinear_json import ja_lines_text, normalize, validate_ja_tokens, validate_named_tokens, validate_zh_tokens
 
@@ -62,6 +68,10 @@ def unit_target_text(unit: dict[str, Any]) -> str:
     return str(unit.get("source_text", ""))
 
 
+def reader_compact(text: str) -> str:
+    return compact(strip_reader_note_artifacts(text))
+
+
 def needs_grammar_role(text: str) -> bool:
     return bool(CONTENT_RE.search(text))
 
@@ -107,12 +117,12 @@ def validate_chunk(source: dict[str, Any], result: dict[str, Any]) -> list[str]:
         if paragraph_id not in source_by_id:
             continue
         source_text = source_by_id[paragraph_id]
-        if compact(paragraph.get("source_text", "")) != compact(source_text):
+        if reader_compact(paragraph.get("source_text", "")) != reader_compact(source_text):
             errors.append(f"{paragraph_id}: paragraph source_text changed")
         if require_ocr_correction and "corrected_text" not in paragraph:
             errors.append(f"{paragraph_id}: corrected_text is required for OCR-reviewed source")
         target_text = paragraph_target_text(paragraph, fallback=source_text)
-        if compact(flatten_zh(paragraph)) != compact(target_text):
+        if reader_compact(flatten_zh(paragraph)) != reader_compact(target_text):
             errors.append(f"{paragraph_id}: zh tokens do not reconstruct corrected paragraph")
         if not paragraph.get("units"):
             errors.append(f"{paragraph_id}: missing units")
@@ -123,7 +133,7 @@ def validate_chunk(source: dict[str, Any], result: dict[str, Any]) -> list[str]:
             validate_grammar_tokens(unit.get("zh", []), zh_where, errors)
             zh_text = zh_unit_text(unit)
             unit_target = unit_target_text(unit)
-            if unit_target and compact(zh_text) != compact(unit_target):
+            if unit_target and reader_compact(zh_text) != reader_compact(unit_target):
                 errors.append(f"{unit_where}: zh tokens do not reconstruct unit source_text/corrected_text")
             chunk_zh_texts.append(zh_text)
             sentence_end_count = len(SENTENCE_END_RE.findall(zh_text))
@@ -259,6 +269,7 @@ def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = 
         Hard requirements:
         - Preserve every Chinese source paragraph in source_text. Do not omit, summarize, or reorder paragraphs.
         {ocr_instruction}
+        - Remove EPUB/HTML footnote reference debris from reader-facing fields and tokens. Examples: [\\[12\\]](#part1338.html#m12), [12](#note), [1], ［2］. Do not turn these into Japanese 注 lines.
         - For non-OCR-cleanup chunks, joining all zh token "t" values across all units must reconstruct the paragraph source text exactly, apart from whitespace.
         - Split the Chinese into natural reading units, usually sentence by sentence. Keep each unit readable as continuous Chinese prose.
         - Line-based pairing requirement: one unit should be one Chinese sentence, or one tightly bound sentence fragment when the sentence/comment is very long. Do not put a whole paragraph into one unit. If a paragraph has multiple sentence-ending punctuation marks, make multiple units in the same order.
@@ -367,6 +378,7 @@ def main() -> int:
                 continue
 
             normalize_node(result)
+            normalize_source_artifacts(result)
             normalize_ruby_token_shapes(result)
             cleanup_components(result)
             errors = validate_chunk(chunk, result)

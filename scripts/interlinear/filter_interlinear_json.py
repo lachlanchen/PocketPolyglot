@@ -22,8 +22,16 @@ NOTE_PREFIX_RE = re.compile(
     )""",
     re.VERBOSE,
 )
+MARKDOWN_NOTE_LINK_RE = re.compile(
+    r"""(?:
+        \[\s*\\?\[\s*(?:注|註)?\s*[0-9０-９]{1,4}\s*\\?\]\s*\]\s*\([^)]+(?:\.html|\#)[^)]+\)
+        |
+        \[\s*(?:注|註)?\s*[0-9０-９]{1,4}\s*\]\s*\([^)]+(?:\.html|\#)[^)]+\)
+    )""",
+    re.VERBOSE,
+)
 INLINE_NOTE_REF_RE = re.compile(
-    r"[\[［〔【]\s*(?:注|註)?\s*[0-9０-９]{1,3}\s*[\]］〕】]"
+    r"[\[［〔【]\s*\\?\[?\s*(?:注|註)?\s*[0-9０-９]{1,4}\s*\\?\]?\s*[\]］〕】]"
 )
 DIGIT_TOKEN_RE = re.compile(r"^[0-9０-９]+$")
 NOTE_WORDS = {"注", "註"}
@@ -64,6 +72,7 @@ def strip_inline_note_refs_from_tokens(tokens: list[dict[str, Any]]) -> list[dic
         if not isinstance(token, dict):
             continue
         text = str(token.get("t", ""))
+        text = MARKDOWN_NOTE_LINK_RE.sub("", text)
         stripped = INLINE_NOTE_REF_RE.sub("", text)
         if not stripped:
             continue
@@ -76,7 +85,30 @@ def strip_inline_note_refs_from_tokens(tokens: list[dict[str, Any]]) -> list[dic
     while index < len(normalized):
         token_text = str(normalized[index].get("t", "")).strip()
         if token_text in OPEN_BRACKETS:
+            joined = ""
+            end_index = index
+            while end_index < len(normalized) and len(joined) < 220:
+                joined += str(normalized[end_index].get("t", ""))
+                end_index += 1
+                if ")" in joined:
+                    break
+            match = MARKDOWN_NOTE_LINK_RE.match(joined)
+            if match:
+                consumed = 0
+                end_index = index
+                while end_index < len(normalized) and consumed < match.end():
+                    consumed += len(str(normalized[end_index].get("t", "")))
+                    end_index += 1
+                if cleaned and not str(cleaned[-1].get("t", "")).strip():
+                    cleaned.pop()
+                index = end_index
+                while index < len(normalized) and not str(normalized[index].get("t", "")).strip():
+                    index += 1
+                continue
+        if token_text in OPEN_BRACKETS:
             end_index = index + 1
+            if end_index < len(normalized) and str(normalized[end_index].get("t", "")).strip() in OPEN_BRACKETS:
+                end_index += 1
             if end_index < len(normalized) and str(normalized[end_index].get("t", "")).strip() in NOTE_WORDS:
                 end_index += 1
             digit_seen = False
@@ -84,15 +116,25 @@ def strip_inline_note_refs_from_tokens(tokens: list[dict[str, Any]]) -> list[dic
                 digit_seen = True
                 end_index += 1
             if digit_seen and end_index < len(normalized) and str(normalized[end_index].get("t", "")).strip() in CLOSE_BRACKETS:
+                end_index += 1
+                if end_index < len(normalized) and str(normalized[end_index].get("t", "")).strip() in CLOSE_BRACKETS:
+                    end_index += 1
                 if cleaned and not str(cleaned[-1].get("t", "")).strip():
                     cleaned.pop()
-                index = end_index + 1
+                index = end_index
                 while index < len(normalized) and not str(normalized[index].get("t", "")).strip():
                     index += 1
                 continue
         cleaned.append(normalized[index])
         index += 1
     return cleaned
+
+
+def strip_inline_note_refs_from_named_tokens(node: dict[str, Any]) -> None:
+    for key in ("title_zh", "title_ja", "place_zh", "place_ja"):
+        tokens = node.get(key)
+        if isinstance(tokens, list):
+            node[key] = strip_inline_note_refs_from_tokens(tokens)
 
 
 def strip_inline_note_refs(unit: dict[str, Any]) -> dict[str, Any]:
@@ -162,11 +204,17 @@ def filter_data(
         if include_section_title_zh and plain_title(section, "title_zh") not in include_section_title_zh:
             continue
         section = copy.deepcopy(section)
+        if drop_editorial_notes:
+            strip_inline_note_refs_from_named_tokens(section)
         subsections: list[dict[str, Any]] = []
         for subsection in section.get("subsections", []):
             subsection = copy.deepcopy(subsection)
+            if drop_editorial_notes:
+                strip_inline_note_refs_from_named_tokens(subsection)
             stories: list[dict[str, Any]] = []
             for story in subsection.get("stories", []):
+                if drop_editorial_notes:
+                    strip_inline_note_refs_from_named_tokens(story)
                 filtered = filter_story(story, drop_editorial_notes=drop_editorial_notes)
                 if filtered is not None:
                     stories.append(filtered)

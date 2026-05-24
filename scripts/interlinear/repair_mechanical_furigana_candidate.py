@@ -20,6 +20,8 @@ from normalize_grammar_roles import (
     JP_FALLBACK_READINGS,
     cleanup_components,
     normalize_node,
+    normalize_source_artifacts,
+    strip_reader_note_artifacts,
 )
 from reference_windows import expand_adjacent_jp_references
 from review_backfix_interlinear_chunks import review_chunk
@@ -237,10 +239,45 @@ def candidate_paths(root: Path, chunk_id: str) -> list[Path]:
 
 def repair_candidate(data: dict[str, Any]) -> int:
     changed = normalize_node(data)
+    changed += normalize_source_artifacts(data)
     changed += repair_ja_ruby_shapes(data)
     changed += repair_long_ja_rows(data)
     changed += repair_missing_roles(data)
     changed += cleanup_components(data)
+    return changed
+
+
+def restore_reader_source_punctuation(source: dict[str, Any], data: dict[str, Any]) -> int:
+    source_by_id = {
+        paragraph["id"]: strip_reader_note_artifacts(str(paragraph.get("text", "")))
+        for paragraph in source.get("paragraphs", [])
+        if isinstance(paragraph, dict)
+    }
+    changed = 0
+    for paragraph in data.get("paragraphs", []):
+        if not isinstance(paragraph, dict):
+            continue
+        target = source_by_id.get(str(paragraph.get("id", "")), "")
+        if not target:
+            continue
+        current = str(paragraph.get("source_text", ""))
+        if target == current:
+            continue
+        if not target.startswith(current):
+            continue
+        suffix = target[len(current) :]
+        if not suffix or HAN_RE.search(suffix):
+            continue
+        paragraph["source_text"] = target
+        units = paragraph.get("units", [])
+        if isinstance(units, list) and units:
+            last_unit = units[-1]
+            if isinstance(last_unit, dict):
+                last_unit["source_text"] = str(last_unit.get("source_text", "")) + suffix
+                zh = last_unit.get("zh")
+                if isinstance(zh, list):
+                    zh.append({"t": suffix, "r": "", "g": "function"})
+        changed += 1
     return changed
 
 
@@ -268,6 +305,7 @@ def main() -> int:
             print(f"candidate_malformed={path}: {exc}")
             continue
         changed = repair_candidate(data)
+        changed += restore_reader_source_punctuation(source, data)
         strict_errors = validate_chunk(source, data)
         review_errors = review_chunk(source, data)
         if strict_errors or review_errors:

@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Any
 
 from codex_chunk_worker import load_chunks
-from normalize_grammar_roles import cleanup_components, normalize_node, normalize_ruby_token_shapes
+from normalize_grammar_roles import cleanup_components, normalize_node, normalize_ruby_token_shapes, normalize_source_artifacts
 from reference_windows import expand_adjacent_jp_references
 from review_backfix_interlinear_chunks import review_chunk
 
@@ -32,6 +32,7 @@ def is_reviewed_valid(path: Path, source: dict[str, Any]) -> bool:
     try:
         data = load_json(path)
         normalize_node(data)
+        normalize_source_artifacts(data)
         normalize_ruby_token_shapes(data)
         cleanup_components(data)
         return not review_chunk(source, data)
@@ -79,6 +80,7 @@ def main() -> int:
         try:
             data = load_json(candidate_path)
             normalize_node(data)
+            normalize_source_artifacts(data)
             normalize_ruby_token_shapes(data)
             cleanup_components(data)
             errors = review_chunk(source, data)
