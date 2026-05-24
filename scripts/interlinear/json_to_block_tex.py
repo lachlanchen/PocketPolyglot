@@ -85,11 +85,26 @@ def render_author(author: str, author_reading: str) -> str:
     return "".join(rf"\jpruby{{{tex_escape(text)}}}{{{tex_escape(reading)}}}" for text, reading in groups if text)
 
 
-def emit_unit(unit: dict[str, Any], *, secondary_ja: bool) -> str:
+def render_ja_lines(unit: dict[str, Any], indexes: list[int]) -> str:
+    lines = unit.get("ja", [])
+    rendered: list[str] = []
+    for index in indexes:
+        if index < len(lines) and isinstance(lines[index], list):
+            line = render_tokens(lines[index], "jpruby", breakable=True)
+            if line:
+                rendered.append(line)
+    return "".join(rendered)
+
+
+def emit_unit(unit: dict[str, Any], *, secondary_ja_mode: str) -> str:
     zh = render_tokens(unit["zh"], "zhpy", breakable=True)
     ja_lines = unit.get("ja", [])
-    ja1 = render_tokens(ja_lines[0], "jpruby", breakable=True) if len(ja_lines) > 0 else ""
-    ja2 = render_tokens(ja_lines[1], "jpruby", breakable=True) if secondary_ja and len(ja_lines) > 1 else ""
+    if secondary_ja_mode == "merge":
+        ja1 = render_ja_lines(unit, list(range(len(ja_lines))))
+        ja2 = ""
+    else:
+        ja1 = render_ja_lines(unit, [0])
+        ja2 = render_ja_lines(unit, [1]) if secondary_ja_mode == "comment" else ""
     return "\n".join([r"\InterUnit", brace(zh), brace(ja1), brace(ja2), ""])
 
 
@@ -100,7 +115,7 @@ def convert(
     cover_image: str = "",
     author: str = "",
     author_reading: str = "",
-    secondary_ja: bool = True,
+    secondary_ja_mode: str = "comment",
 ) -> str:
     if color_mode == "blackwhite":
         cover_image = ""
@@ -135,7 +150,7 @@ def convert(
                 for paragraph in story.get("paragraphs", []):
                     out.append(r"\InterParagraphStart")
                     for unit in paragraph.get("units", []):
-                        out.append(emit_unit(unit, secondary_ja=secondary_ja))
+                        out.append(emit_unit(unit, secondary_ja_mode=secondary_ja_mode))
                     out.append(r"\InterParagraphEnd")
                     out.append("")
 
@@ -151,17 +166,24 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--cover-image", default="")
     parser.add_argument("--color-mode", choices=["color", "blackwhite"], default="color")
     parser.add_argument("--hide-secondary-ja", action="store_true", help="do not render ja[1] explanatory/comment lines")
+    parser.add_argument(
+        "--secondary-ja-mode",
+        choices=["comment", "hide", "merge"],
+        default="comment",
+        help="render ja[1] as a note, hide it, or merge all Japanese rows into the main Japanese text",
+    )
     args = parser.parse_args(argv)
 
     source = Path(args.source)
     data = json.loads(source.read_text(encoding="utf-8"))
+    secondary_ja_mode = "hide" if args.hide_secondary_ja else args.secondary_ja_mode
     result = convert(
         data,
         color_mode=args.color_mode,
         cover_image=args.cover_image,
         author=args.author,
         author_reading=args.author_reading,
-        secondary_ja=not args.hide_secondary_ja,
+        secondary_ja_mode=secondary_ja_mode,
     )
     if args.output:
         out = Path(args.output)

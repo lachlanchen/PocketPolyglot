@@ -34,6 +34,7 @@ author="$(jq -r '.author' "$plan")"
 author_reading_zh="$(jq -r '.author_reading_zh' "$plan")"
 author_reading_ja="$(jq -r '.author_reading_ja' "$plan")"
 render_secondary_ja="$(jq -r '.render_secondary_ja // true' "$plan")"
+secondary_ja_mode="$(jq -r '.secondary_ja_mode // empty' "$plan")"
 cover_image="${COVER_IMAGE:-}"
 if [[ -z "$cover_image" && -f "assets/covers/$book_id/cover.png" ]]; then
   cover_image="assets/covers/$book_id/cover.png"
@@ -47,10 +48,14 @@ fi
 mkdir -p "build/$book_id/zh-main/color" "build/$book_id/zh-main/blackwhite" \
   "build/$book_id/jp-main/color" "build/$book_id/jp-main/blackwhite" \
   "books/$book_id/work/bilingual/preview"
-secondary_ja_args=()
-if [[ "$render_secondary_ja" == "false" ]]; then
-  secondary_ja_args=(--hide-secondary-ja)
+if [[ -z "$secondary_ja_mode" ]]; then
+  if [[ "$render_secondary_ja" == "false" ]]; then
+    secondary_ja_mode="hide"
+  else
+    secondary_ja_mode="comment"
+  fi
 fi
+secondary_ja_args=(--secondary-ja-mode "$secondary_ja_mode")
 
 bash scripts/interlinear/compile_interlinear_book.sh \
   --manifest "$manifest" \

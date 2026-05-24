@@ -28,6 +28,7 @@ Options:
   --output-pdf <path>            named PDF path
   --allow-missing                build from available chunks only
   --hide-secondary-ja            do not render ja[1] explanatory/comment lines
+  --secondary-ja-mode <mode>     comment, hide, or merge ja[1+] into Japanese text
   -h, --help                     show help
 USAGE
 }
@@ -52,6 +53,7 @@ cover_image=""
 output_pdf=""
 allow_missing=0
 hide_secondary_ja=0
+secondary_ja_mode="comment"
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -74,6 +76,7 @@ while [[ $# -gt 0 ]]; do
     --output-pdf) output_pdf="${2:-}"; shift 2 ;;
     --allow-missing) allow_missing=1; shift ;;
     --hide-secondary-ja) hide_secondary_ja=1; shift ;;
+    --secondary-ja-mode) secondary_ja_mode="${2:-}"; shift 2 ;;
     -h|--help) usage; exit 0 ;;
     *) echo "Unknown option: $1" >&2; usage >&2; exit 1 ;;
   esac
@@ -92,6 +95,10 @@ cd "$root"
 case "$color_mode" in
   color|blackwhite) ;;
   *) echo "Invalid --color-mode: $color_mode" >&2; exit 1 ;;
+esac
+case "$secondary_ja_mode" in
+  comment|hide|merge) ;;
+  *) echo "Invalid --secondary-ja-mode: $secondary_ja_mode" >&2; exit 1 ;;
 esac
 if [[ "$color_mode" == "blackwhite" ]]; then
   cover_image=""
@@ -121,8 +128,9 @@ if [[ "$allow_missing" -eq 1 ]]; then
 fi
 render_args=()
 if [[ "$hide_secondary_ja" -eq 1 ]]; then
-  render_args+=(--hide-secondary-ja)
+  secondary_ja_mode="hide"
 fi
+render_args+=(--secondary-ja-mode "$secondary_ja_mode")
 
 "${assemble_cmd[@]}"
 python scripts/interlinear/validate_interlinear_json.py "$output_json"
