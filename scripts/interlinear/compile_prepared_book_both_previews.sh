@@ -10,6 +10,15 @@ if [[ -z "$book_id" ]]; then
   exit 1
 fi
 
+lock_dir="books/$book_id/work/bilingual/preview"
+mkdir -p "$lock_dir"
+lock_file="$lock_dir/compile.lock"
+exec 9>"$lock_file"
+if ! flock -n 9; then
+  echo "Preview compile already running for $book_id; skipping duplicate launch."
+  exit 0
+fi
+
 plan="books/$book_id/book-plan.json"
 if [[ ! -f "$plan" ]]; then
   echo "Missing book plan: $plan" >&2
@@ -49,7 +58,7 @@ fi
 
 mkdir -p "build/$book_id/zh-main/color" "build/$book_id/zh-main/blackwhite" \
   "build/$book_id/jp-main/color" "build/$book_id/jp-main/blackwhite" \
-  "books/$book_id/work/bilingual/preview"
+  "$lock_dir"
 if [[ -z "$secondary_ja_mode" ]]; then
   if [[ "$render_secondary_ja" == "false" ]]; then
     secondary_ja_mode="hide"

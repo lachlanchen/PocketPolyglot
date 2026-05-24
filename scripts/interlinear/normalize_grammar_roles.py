@@ -22,10 +22,33 @@ MARKDOWN_NOTE_LINK_RE = re.compile(
 INLINE_NOTE_REF_RE = re.compile(
     r"[\[［〔【]\s*\\?\[?\s*(?:注|註)?\s*[0-9０-９]{1,4}\s*\\?\]?\s*[\]］〕】]"
 )
+HTML_NOTE_TARGET_RE = re.compile(r"\(?#?part[0-9]+\.html#[A-Za-z]?[0-9]+\)?")
+CIRCLED_NOTE_CHARS = "\u2460-\u2473"
+CIRCLED_NOTE_RE = re.compile(f"[{CIRCLED_NOTE_CHARS}]")
+PAREN_NOTE_REF_RE = re.compile(
+    rf"[（(][^（）()]{{0,80}}(?:注|註|译注|譯注|訳注|脚注|注釈|注記)"
+    rf"[^（）()]{{0,30}}[{CIRCLED_NOTE_CHARS}][^（）()]{{0,30}}[）)]"
+)
+PAREN_ORPHAN_NOTE_REF_RE = re.compile(
+    r"[（(][^（）()]{0,80}(?:参看|參看|参考|參考|参照|參照|见|見)"
+    r"[^（）()]{0,50}(?:注|註|译注|譯注|訳注|脚注|注釈|注記)\s*[）)]"
+)
+NOTE_REF_PHRASE_RE = re.compile(
+    rf"(?:参看|參看|参考|參考|参照|參照|见|見)\s*"
+    rf"(?:第?[一二三四五六七八九十百千万〇零两0-9０-９]+(?:页|頁|ページ))?\s*"
+    rf"(?:注|註|译注|譯注|訳注|脚注|注釈|注記)?\s*[{CIRCLED_NOTE_CHARS}]+[。．、，,；;]?"
+)
+ORPHAN_NOTE_REF_PHRASE_RE = re.compile(
+    r"(?:参看|參看|参考|參考|参照|參照|见|見)\s*"
+    r"(?:第?[一二三四五六七八九十百千万〇零两0-9０-９]+(?:页|頁|ページ))?\s*"
+    r"(?:注|註|译注|譯注|訳注|脚注|注釈|注記)\s*[。．、，,；;]?"
+)
 DIGIT_TOKEN_RE = re.compile(r"^[0-9０-９]+$")
-NOTE_WORDS = {"注", "註"}
-OPEN_BRACKETS = {"[", "［", "〔", "【"}
-CLOSE_BRACKETS = {"]", "］", "〕", "】"}
+NOTE_WORDS = {"注", "註", "訳注", "脚注", "注釈", "注記"}
+NOTE_REF_START_WORDS = {"参看", "參看", "参考", "參考", "参照", "參照", "见", "見", "注", "註", "訳注", "脚注"}
+OPEN_BRACKETS = {"[", "［", "〔", "【", "(", "（"}
+CLOSE_BRACKETS = {"]", "］", "〕", "】", ")", "）"}
+PHRASE_ENDINGS = {"。", "．", "、", "，", ",", "；", ";", ")", "）"}
 
 JP_FALLBACK_READINGS = {
     # Simplified Chinese glyphs sometimes appear inside quoted character names
@@ -113,7 +136,13 @@ def strip_reader_note_artifacts(text: str) -> str:
     """Remove EPUB/PDF footnote reference debris from reader-facing text."""
 
     cleaned = MARKDOWN_NOTE_LINK_RE.sub("", str(text))
+    cleaned = HTML_NOTE_TARGET_RE.sub("", cleaned)
+    cleaned = PAREN_NOTE_REF_RE.sub("", cleaned)
+    cleaned = PAREN_ORPHAN_NOTE_REF_RE.sub("", cleaned)
+    cleaned = NOTE_REF_PHRASE_RE.sub("", cleaned)
+    cleaned = ORPHAN_NOTE_REF_PHRASE_RE.sub("", cleaned)
     cleaned = INLINE_NOTE_REF_RE.sub("", cleaned)
+    cleaned = CIRCLED_NOTE_RE.sub("", cleaned)
     return cleaned
 
 
@@ -151,8 +180,23 @@ def strip_reader_note_artifact_tokens(tokens: Any) -> int:
                 next_text = str(normalized[end_index].get("t", "")) if isinstance(normalized[end_index], dict) else ""
                 joined += next_text
                 end_index += 1
-                if ")" in joined:
+                if ")" in joined or "）" in joined:
                     break
+            if PAREN_NOTE_REF_RE.match(joined) or PAREN_ORPHAN_NOTE_REF_RE.match(joined):
+                if cleaned and isinstance(cleaned[-1], dict) and not str(cleaned[-1].get("t", "")).strip():
+                    cleaned.pop()
+                index = end_index
+                while index < len(normalized):
+                    next_text = (
+                        str(normalized[index].get("t", "")).strip()
+                        if isinstance(normalized[index], dict)
+                        else ""
+                    )
+                    if next_text:
+                        break
+                    index += 1
+                changed += 1
+                continue
             match = MARKDOWN_NOTE_LINK_RE.match(joined)
             if match:
                 consumed = 0
@@ -233,6 +277,32 @@ def strip_reader_note_artifact_tokens(tokens: Any) -> int:
                         index += 1
                     changed += 1
                     continue
+        if token_text in NOTE_REF_START_WORDS:
+            joined = ""
+            end_index = index
+            while end_index < len(normalized) and len(joined) < 120:
+                next_text = str(normalized[end_index].get("t", "")) if isinstance(normalized[end_index], dict) else ""
+                joined += next_text
+                end_index += 1
+                if any(ending in joined for ending in PHRASE_ENDINGS):
+                    break
+            if NOTE_REF_PHRASE_RE.match(joined) or ORPHAN_NOTE_REF_PHRASE_RE.match(joined) or (
+                CIRCLED_NOTE_RE.search(joined) and "注" in joined and ("参照" in joined or "参考" in joined)
+            ):
+                if cleaned and isinstance(cleaned[-1], dict) and not str(cleaned[-1].get("t", "")).strip():
+                    cleaned.pop()
+                index = end_index
+                while index < len(normalized):
+                    next_text = (
+                        str(normalized[index].get("t", "")).strip()
+                        if isinstance(normalized[index], dict)
+                        else ""
+                    )
+                    if next_text:
+                        break
+                    index += 1
+                changed += 1
+                continue
         cleaned.append(token)
         index += 1
     if changed:
