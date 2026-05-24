@@ -1,0 +1,621 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p04741",
+  "source_text": "放牛娃这样做了,小姐否也不变鬼了,小丙口恩恩爱爱,活了九十多岁才死。",
+  "source_sha256": "7f139bd90bc49ecae9789b3a7f9ebf6eaa48661347fac9bb3c9c6a2eca8eed8d",
+  "source_normalized_sha256": "7f139bd90bc49ecae9789b3a7f9ebf6eaa48661347fac9bb3c9c6a2eca8eed8d",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 71,
+    "grammar_token_total": 71,
+    "unit_count": 1
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-4741",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "缸狐精怪故事",
+    "title_zh": [
+      {
+        "t": "缸",
+        "r": "gāng",
+        "g": "attributive"
+      },
+      {
+        "t": "狐",
+        "r": "hú",
+        "g": "attributive"
+      },
+      {
+        "t": "精",
+        "r": "jīng",
+        "g": "attributive"
+      },
+      {
+        "t": "怪",
+        "r": "guài",
+        "g": "attributive"
+      },
+      {
+        "t": "故",
+        "r": "gù",
+        "g": "object"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "甕",
+        "r": "かめ",
+        "g": "attributive"
+      },
+      {
+        "t": "狐",
+        "r": "きつね",
+        "g": "attributive"
+      },
+      {
+        "t": "妖",
+        "r": "よう",
+        "g": "attributive"
+      },
+      {
+        "t": "怪",
+        "r": "かい",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "もの",
+        "g": "object"
+      },
+      {
+        "t": "語",
+        "r": "がたり",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-缸狐精怪故事-410-小姐与放和牛娃",
+    "title_zh": [
+      {
+        "t": "4",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "1",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "0",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "小",
+        "r": "xiǎo",
+        "g": "subject"
+      },
+      {
+        "t": "姐",
+        "r": "jiě",
+        "g": "subject"
+      },
+      {
+        "t": "与",
+        "r": "yǔ",
+        "g": "function"
+      },
+      {
+        "t": "放",
+        "r": "fàng",
+        "g": "subject"
+      },
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "subject"
+      },
+      {
+        "t": "牛",
+        "r": "niú",
+        "g": "subject"
+      },
+      {
+        "t": "娃",
+        "r": "wá",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "4",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "1",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "0",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "娘",
+        "r": "むすめ",
+        "g": "subject"
+      },
+      {
+        "t": "と",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "牛",
+        "r": "うし",
+        "g": "subject"
+      },
+      {
+        "t": "飼",
+        "r": "か",
+        "g": "subject"
+      },
+      {
+        "t": "いの",
+        "r": "",
+        "g": "subject"
+      },
+      {
+        "t": "少",
+        "r": "しょう",
+        "g": "subject"
+      },
+      {
+        "t": "年",
+        "r": "ねん",
+        "g": "subject"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p04741",
+    "source_text": "放牛娃这样做了,小姐否也不变鬼了,小丙口恩恩爱爱,活了九十多岁才死。",
+    "corrected_text": "放牛娃这样做了,小姐再也不变鬼了,小两口恩恩爱爱,活了九十多岁才死。",
+    "units": [
+      {
+        "source_text": "放牛娃这样做了,小姐再也不变鬼了,小两口恩恩爱爱,活了九十多岁才死。",
+        "zh": [
+          {
+            "t": "放",
+            "r": "fàng",
+            "g": "subject"
+          },
+          {
+            "t": "牛",
+            "r": "niú",
+            "g": "subject"
+          },
+          {
+            "t": "娃",
+            "r": "wá",
+            "g": "subject"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "adverbial"
+          },
+          {
+            "t": "样",
+            "r": "yàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "做",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "subject"
+          },
+          {
+            "t": "姐",
+            "r": "jiě",
+            "g": "subject"
+          },
+          {
+            "t": "再",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "变",
+            "r": "biàn",
+            "g": "predicate"
+          },
+          {
+            "t": "鬼",
+            "r": "guǐ",
+            "g": "object"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "subject"
+          },
+          {
+            "t": "两",
+            "r": "liǎng",
+            "g": "subject"
+          },
+          {
+            "t": "口",
+            "r": "kǒu",
+            "g": "subject"
+          },
+          {
+            "t": "恩",
+            "r": "ēn",
+            "g": "predicate"
+          },
+          {
+            "t": "恩",
+            "r": "ēn",
+            "g": "predicate"
+          },
+          {
+            "t": "爱",
+            "r": "ài",
+            "g": "predicate"
+          },
+          {
+            "t": "爱",
+            "r": "ài",
+            "g": "predicate"
+          },
+          {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "活",
+            "r": "huó",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "九",
+            "r": "jiǔ",
+            "g": "complement"
+          },
+          {
+            "t": "十",
+            "r": "shí",
+            "g": "complement"
+          },
+          {
+            "t": "多",
+            "r": "duō",
+            "g": "complement"
+          },
+          {
+            "t": "岁",
+            "r": "suì",
+            "g": "complement"
+          },
+          {
+            "t": "才",
+            "r": "cái",
+            "g": "adverbial"
+          },
+          {
+            "t": "死",
+            "r": "sǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "牛",
+              "r": "うし",
+              "g": "subject"
+            },
+            {
+              "t": "飼",
+              "r": "か",
+              "g": "subject"
+            },
+            {
+              "t": "いの",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "少",
+              "r": "しょう",
+              "g": "subject"
+            },
+            {
+              "t": "年",
+              "r": "ねん",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "このように",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "すると",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "娘",
+              "r": "むすめ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "二",
+              "r": "に",
+              "g": "adverbial"
+            },
+            {
+              "t": "度",
+              "r": "ど",
+              "g": "adverbial"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "幽",
+              "r": "ゆう",
+              "g": "object"
+            },
+            {
+              "t": "霊",
+              "r": "れい",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "ならなくなり",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "若",
+              "r": "わか",
+              "g": "subject"
+            },
+            {
+              "t": "夫",
+              "r": "ふう",
+              "g": "subject"
+            },
+            {
+              "t": "婦",
+              "r": "ふ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "仲",
+              "r": "なか",
+              "g": "predicate"
+            },
+            {
+              "t": "睦",
+              "r": "むつ",
+              "g": "predicate"
+            },
+            {
+              "t": "まじく",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "九",
+              "r": "きゅう",
+              "g": "complement"
+            },
+            {
+              "t": "十",
+              "r": "じゅう",
+              "g": "complement"
+            },
+            {
+              "t": "余",
+              "r": "よ",
+              "g": "complement"
+            },
+            {
+              "t": "歳",
+              "r": "さい",
+              "g": "complement"
+            },
+            {
+              "t": "まで",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "生",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "きてから",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "亡",
+              "r": "な",
+              "g": "predicate"
+            },
+            {
+              "t": "くなった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

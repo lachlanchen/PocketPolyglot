@@ -1,0 +1,994 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p04842",
+  "source_text": "第一天清早,李泡友发现胡氏果然是这么杭头,就有点害怕。第二天上街就去找长老和尚。见了长老和尚,李泡友说:果然是一个狐狸精.咋个办呢?",
+  "source_sha256": "20de4f3e0f16f9fca72c51ef8e61c25ca91eb37debe2c8b8be83685c3c210f6a",
+  "source_normalized_sha256": "20de4f3e0f16f9fca72c51ef8e61c25ca91eb37debe2c8b8be83685c3c210f6a",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 137,
+    "grammar_token_total": 137,
+    "unit_count": 4
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-4842",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "缸狐精怪故事",
+    "title_zh": [
+      {
+        "t": "缸",
+        "r": "gāng",
+        "g": "attributive"
+      },
+      {
+        "t": "狐",
+        "r": "hú",
+        "g": "attributive"
+      },
+      {
+        "t": "精",
+        "r": "jīng",
+        "g": "attributive"
+      },
+      {
+        "t": "怪",
+        "r": "guài",
+        "g": "attributive"
+      },
+      {
+        "t": "故",
+        "r": "gù",
+        "g": "object"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "甕",
+        "r": "かめ",
+        "g": "attributive"
+      },
+      {
+        "t": "狐",
+        "r": "きつね",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "精",
+        "r": "せい",
+        "g": "attributive"
+      },
+      {
+        "t": "怪",
+        "r": "かい",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "もの",
+        "g": "attributive"
+      },
+      {
+        "t": "語",
+        "r": "がたり",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-缸狐精怪故事-418-泡灶让丰都县",
+    "title_zh": [
+      {
+        "t": "4",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "1",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "8",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "泡",
+        "r": "pào",
+        "g": "subject"
+      },
+      {
+        "t": "灶",
+        "r": "zào",
+        "g": "subject"
+      },
+      {
+        "t": "让",
+        "r": "ràng",
+        "g": "subject"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "丰",
+        "r": "fēng",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "attributive"
+      },
+      {
+        "t": "县",
+        "r": "xiàn",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "4",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "1",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "8",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "泡",
+        "r": "ほう",
+        "g": "subject"
+      },
+      {
+        "t": "灶",
+        "r": "そう",
+        "g": "subject"
+      },
+      {
+        "t": "譲",
+        "r": "じょう",
+        "g": "subject"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "豊",
+        "r": "ほう",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "attributive"
+      },
+      {
+        "t": "県",
+        "r": "けん",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p04842",
+    "source_text": "第一天清早,李泡友发现胡氏果然是这么杭头,就有点害怕。第二天上街就去找长老和尚。见了长老和尚,李泡友说:果然是一个狐狸精.咋个办呢?",
+    "corrected_text": "第一天清早，李泡友发现胡氏果然是这么杭头，就有点害怕。第二天上街就去找长老和尚。见了长老和尚，李泡友说：果然是一个狐狸精。咋个办呢？",
+    "units": [
+      {
+        "source_text": "第一天清早，李泡友发现胡氏果然是这么杭头，就有点害怕。",
+        "zh": [
+          {
+            "t": "第",
+            "r": "dì",
+            "g": "adverbial"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "adverbial"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "清",
+            "r": "qīng",
+            "g": "adverbial"
+          },
+          {
+            "t": "早",
+            "r": "zǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "李",
+            "r": "lǐ",
+            "g": "subject"
+          },
+          {
+            "t": "泡",
+            "r": "pào",
+            "g": "subject"
+          },
+          {
+            "t": "友",
+            "r": "yǒu",
+            "g": "subject"
+          },
+          {
+            "t": "发",
+            "r": "fā",
+            "g": "predicate"
+          },
+          {
+            "t": "现",
+            "r": "xiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "胡",
+            "r": "hú",
+            "g": "subject"
+          },
+          {
+            "t": "氏",
+            "r": "shì",
+            "g": "subject"
+          },
+          {
+            "t": "果",
+            "r": "guǒ",
+            "g": "adverbial"
+          },
+          {
+            "t": "然",
+            "r": "rán",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "attributive"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "attributive"
+          },
+          {
+            "t": "杭",
+            "r": "háng",
+            "g": "object"
+          },
+          {
+            "t": "头",
+            "r": "tóu",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "害",
+            "r": "hài",
+            "g": "predicate"
+          },
+          {
+            "t": "怕",
+            "r": "pà",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "adverbial"
+            },
+            {
+              "t": "日",
+              "r": "にち",
+              "g": "adverbial"
+            },
+            {
+              "t": "目",
+              "r": "め",
+              "g": "adverbial"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "早",
+              "r": "そう",
+              "g": "adverbial"
+            },
+            {
+              "t": "朝",
+              "r": "ちょう",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "李",
+              "r": "り",
+              "g": "subject"
+            },
+            {
+              "t": "泡",
+              "r": "ほう",
+              "g": "subject"
+            },
+            {
+              "t": "友",
+              "r": "ゆう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "胡",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "氏",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "やはりそんな",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "杭",
+              "r": "こう",
+              "g": "object"
+            },
+            {
+              "t": "頭",
+              "r": "とう",
+              "g": "object"
+            },
+            {
+              "t": "だと",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "気",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "づき、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "少",
+              "r": "すこ",
+              "g": "adverbial"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "怖",
+              "r": "こわ",
+              "g": "predicate"
+            },
+            {
+              "t": "くなった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "第二天上街就去找长老和尚。",
+        "zh": [
+          {
+            "t": "第",
+            "r": "dì",
+            "g": "adverbial"
+          },
+          {
+            "t": "二",
+            "r": "èr",
+            "g": "adverbial"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "predicate"
+          },
+          {
+            "t": "街",
+            "r": "jiē",
+            "g": "object"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "predicate"
+          },
+          {
+            "t": "找",
+            "r": "zhǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "长",
+            "r": "zhǎng",
+            "g": "object"
+          },
+          {
+            "t": "老",
+            "r": "lǎo",
+            "g": "object"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "object"
+          },
+          {
+            "t": "尚",
+            "r": "shàng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "二",
+              "r": "ふつ",
+              "g": "adverbial"
+            },
+            {
+              "t": "日",
+              "r": "か",
+              "g": "adverbial"
+            },
+            {
+              "t": "目",
+              "r": "め",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "町",
+              "r": "まち",
+              "g": "object"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "出",
+              "r": "で",
+              "g": "predicate"
+            },
+            {
+              "t": "ると",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "すぐ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "長",
+              "r": "ちょう",
+              "g": "object"
+            },
+            {
+              "t": "老",
+              "r": "ろう",
+              "g": "object"
+            },
+            {
+              "t": "和",
+              "r": "お",
+              "g": "object"
+            },
+            {
+              "t": "尚",
+              "r": "しょう",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "探",
+              "r": "さが",
+              "g": "predicate"
+            },
+            {
+              "t": "しに",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "行",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "见了长老和尚，李泡友说：果然是一个狐狸精。",
+        "zh": [
+          {
+            "t": "见",
+            "r": "jiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "长",
+            "r": "zhǎng",
+            "g": "object"
+          },
+          {
+            "t": "老",
+            "r": "lǎo",
+            "g": "object"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "object"
+          },
+          {
+            "t": "尚",
+            "r": "shàng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "李",
+            "r": "lǐ",
+            "g": "subject"
+          },
+          {
+            "t": "泡",
+            "r": "pào",
+            "g": "subject"
+          },
+          {
+            "t": "友",
+            "r": "yǒu",
+            "g": "subject"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "果",
+            "r": "guǒ",
+            "g": "adverbial"
+          },
+          {
+            "t": "然",
+            "r": "rán",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "attributive"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "attributive"
+          },
+          {
+            "t": "狐",
+            "r": "hú",
+            "g": "object"
+          },
+          {
+            "t": "狸",
+            "r": "li",
+            "g": "object"
+          },
+          {
+            "t": "精",
+            "r": "jīng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "長",
+              "r": "ちょう",
+              "g": "object"
+            },
+            {
+              "t": "老",
+              "r": "ろう",
+              "g": "object"
+            },
+            {
+              "t": "和",
+              "r": "お",
+              "g": "object"
+            },
+            {
+              "t": "尚",
+              "r": "しょう",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "会",
+              "r": "あ",
+              "g": "predicate"
+            },
+            {
+              "t": "うと、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "李",
+              "r": "り",
+              "g": "subject"
+            },
+            {
+              "t": "泡",
+              "r": "ほう",
+              "g": "subject"
+            },
+            {
+              "t": "友",
+              "r": "ゆう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "やはり",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "一",
+              "r": "いっ",
+              "g": "attributive"
+            },
+            {
+              "t": "匹",
+              "r": "ぴき",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "狐",
+              "r": "きつね",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "精",
+              "r": "せい",
+              "g": "object"
+            },
+            {
+              "t": "だ。",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "咋个办呢？",
+        "zh": [
+          {
+            "t": "咋",
+            "r": "zǎ",
+            "g": "adverbial"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "adverbial"
+          },
+          {
+            "t": "办",
+            "r": "bàn",
+            "g": "predicate"
+          },
+          {
+            "t": "呢",
+            "r": "ne",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "どう",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "したら",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "いいんでしょうか",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,817 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p04637",
+  "source_text": "阎罗天子听墨,知道其中有因,便又问:你和少符是如何相识??渔夫又把他跟少符在凡间和来阴间后的事讲述了一饥。",
+  "source_sha256": "c6822b5fa2aeccf3c0745be72a5e7f1115ca29658ee1d8f6ccaf2e43db1b0d47",
+  "source_normalized_sha256": "c6822b5fa2aeccf3c0745be72a5e7f1115ca29658ee1d8f6ccaf2e43db1b0d47",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 103,
+    "grammar_token_total": 103,
+    "unit_count": 2
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-4637",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "缸狐精怪故事",
+    "title_zh": [
+      {
+        "t": "缸",
+        "r": "gāng",
+        "g": "attributive"
+      },
+      {
+        "t": "狐",
+        "r": "hú",
+        "g": "attributive"
+      },
+      {
+        "t": "精",
+        "r": "jīng",
+        "g": "attributive"
+      },
+      {
+        "t": "怪",
+        "r": "guài",
+        "g": "attributive"
+      },
+      {
+        "t": "故",
+        "r": "gù",
+        "g": "object"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "かめ",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "狐",
+        "r": "きつね",
+        "g": "attributive"
+      },
+      {
+        "t": "妖",
+        "r": "よう",
+        "g": "attributive"
+      },
+      {
+        "t": "怪",
+        "r": "かい",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "話",
+        "r": "はなし",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-缸狐精怪故事-406-癌王巧断冤案丰都县",
+    "title_zh": [
+      {
+        "t": "406. ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "癌",
+        "r": "ái",
+        "g": "subject"
+      },
+      {
+        "t": "王",
+        "r": "wáng",
+        "g": "subject"
+      },
+      {
+        "t": "巧",
+        "r": "qiǎo",
+        "g": "adverbial"
+      },
+      {
+        "t": "断",
+        "r": "duàn",
+        "g": "predicate"
+      },
+      {
+        "t": "冤",
+        "r": "yuān",
+        "g": "object"
+      },
+      {
+        "t": "案",
+        "r": "àn",
+        "g": "object"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "丰",
+        "r": "fēng",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "attributive"
+      },
+      {
+        "t": "县",
+        "r": "xiàn",
+        "g": "object"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "406. ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "癌",
+        "r": "がん",
+        "g": "subject"
+      },
+      {
+        "t": "王",
+        "r": "おう",
+        "g": "subject"
+      },
+      {
+        "t": "が",
+        "r": "",
+        "g": "subject"
+      },
+      {
+        "t": "巧",
+        "r": "たく",
+        "g": "adverbial"
+      },
+      {
+        "t": "みに",
+        "r": "",
+        "g": "adverbial"
+      },
+      {
+        "t": "冤",
+        "r": "えん",
+        "g": "object"
+      },
+      {
+        "t": "罪",
+        "r": "ざい",
+        "g": "object"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "object"
+      },
+      {
+        "t": "件",
+        "r": "けん",
+        "g": "object"
+      },
+      {
+        "t": "を",
+        "r": "",
+        "g": "object"
+      },
+      {
+        "t": "裁",
+        "r": "さば",
+        "g": "predicate"
+      },
+      {
+        "t": "く",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "豊",
+        "r": "ほう",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "object"
+      },
+      {
+        "t": "県",
+        "r": "けん",
+        "g": "object"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p04637",
+    "source_text": "阎罗天子听墨,知道其中有因,便又问:你和少符是如何相识??渔夫又把他跟少符在凡间和来阴间后的事讲述了一饥。",
+    "corrected_text": "阎罗天子听罢，知道其中有因，便又问：你和少符是如何相识？渔夫又把他跟少符在凡间和来阴间后的事讲述了一遍。",
+    "units": [
+      {
+        "source_text": "阎罗天子听罢，知道其中有因，便又问：你和少符是如何相识？",
+        "zh": [
+          {
+            "t": "阎",
+            "r": "yán",
+            "g": "subject"
+          },
+          {
+            "t": "罗",
+            "r": "luó",
+            "g": "subject"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "听",
+            "r": "tīng",
+            "g": "predicate"
+          },
+          {
+            "t": "罢",
+            "r": "bà",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "知",
+            "r": "zhī",
+            "g": "predicate"
+          },
+          {
+            "t": "道",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "其",
+            "r": "qí",
+            "g": "object"
+          },
+          {
+            "t": "中",
+            "r": "zhōng",
+            "g": "object"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "因",
+            "r": "yīn",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "便",
+            "r": "biàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "问",
+            "r": "wèn",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "subject"
+          },
+          {
+            "t": "少",
+            "r": "shào",
+            "g": "subject"
+          },
+          {
+            "t": "符",
+            "r": "fú",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "如",
+            "r": "rú",
+            "g": "adverbial"
+          },
+          {
+            "t": "何",
+            "r": "hé",
+            "g": "adverbial"
+          },
+          {
+            "t": "相",
+            "r": "xiāng",
+            "g": "predicate"
+          },
+          {
+            "t": "识",
+            "r": "shí",
+            "g": "predicate"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "閻",
+              "r": "えん",
+              "g": "subject"
+            },
+            {
+              "t": "羅",
+              "r": "ら",
+              "g": "subject"
+            },
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "聞",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "き",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "終",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "えると、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "事",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "訳",
+              "r": "わけ",
+              "g": "object"
+            },
+            {
+              "t": "があると",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "知",
+              "r": "し",
+              "g": "predicate"
+            },
+            {
+              "t": "り、また",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "問",
+              "r": "と",
+              "g": "predicate"
+            },
+            {
+              "t": "うた。おまえと",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "少",
+              "r": "しょう",
+              "g": "subject"
+            },
+            {
+              "t": "符",
+              "r": "ふ",
+              "g": "subject"
+            },
+            {
+              "t": "はどう",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "知",
+              "r": "し",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "合",
+              "r": "あ",
+              "g": "predicate"
+            },
+            {
+              "t": "ったのか。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "渔夫又把他跟少符在凡间和来阴间后的事讲述了一遍。",
+        "zh": [
+          {
+            "t": "渔",
+            "r": "yú",
+            "g": "subject"
+          },
+          {
+            "t": "夫",
+            "r": "fū",
+            "g": "subject"
+          },
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "attributive"
+          },
+          {
+            "t": "跟",
+            "r": "gēn",
+            "g": "attributive"
+          },
+          {
+            "t": "少",
+            "r": "shào",
+            "g": "attributive"
+          },
+          {
+            "t": "符",
+            "r": "fú",
+            "g": "attributive"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "attributive"
+          },
+          {
+            "t": "凡",
+            "r": "fán",
+            "g": "attributive"
+          },
+          {
+            "t": "间",
+            "r": "jiān",
+            "g": "attributive"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "attributive"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "attributive"
+          },
+          {
+            "t": "阴",
+            "r": "yīn",
+            "g": "attributive"
+          },
+          {
+            "t": "间",
+            "r": "jiān",
+            "g": "attributive"
+          },
+          {
+            "t": "后",
+            "r": "hòu",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "讲",
+            "r": "jiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "述",
+            "r": "shù",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "complement"
+          },
+          {
+            "t": "遍",
+            "r": "biàn",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "漁",
+              "r": "りょう",
+              "g": "subject"
+            },
+            {
+              "t": "師",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "はまた、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "自",
+              "r": "じ",
+              "g": "attributive"
+            },
+            {
+              "t": "分",
+              "r": "ぶん",
+              "g": "attributive"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "少",
+              "r": "しょう",
+              "g": "attributive"
+            },
+            {
+              "t": "符",
+              "r": "ふ",
+              "g": "attributive"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "人",
+              "r": "にん",
+              "g": "attributive"
+            },
+            {
+              "t": "間",
+              "r": "げん",
+              "g": "attributive"
+            },
+            {
+              "t": "界",
+              "r": "かい",
+              "g": "attributive"
+            },
+            {
+              "t": "でのこと、",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "そして",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "陰",
+              "r": "いん",
+              "g": "attributive"
+            },
+            {
+              "t": "間",
+              "r": "かん",
+              "g": "attributive"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "来",
+              "r": "き",
+              "g": "attributive"
+            },
+            {
+              "t": "た",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "後",
+              "r": "あと",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "事",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "を、ひととおり",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "語",
+              "r": "かた",
+              "g": "predicate"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "聞",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "かせた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
