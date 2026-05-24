@@ -1,0 +1,867 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p05477",
+  "source_text": "安世敏说:我告他偷我的羊皮只。我要他把羊皮容还给我,他不但不还,反而说我还告他,要拉我来打官司。",
+  "source_sha256": "cc779ae261e7479953c7a2613020b7732a18c5ac5340808cb6c3d1ee27df27da",
+  "source_normalized_sha256": "cc779ae261e7479953c7a2613020b7732a18c5ac5340808cb6c3d1ee27df27da",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 109,
+    "grammar_token_total": 109,
+    "unit_count": 2
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-5477",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "机智人物故事",
+    "title_zh": [
+      {
+        "t": "机",
+        "r": "jī",
+        "g": "attributive"
+      },
+      {
+        "t": "智",
+        "r": "zhì",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "wù",
+        "g": "attributive"
+      },
+      {
+        "t": "故",
+        "r": "gù",
+        "g": "object"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "機",
+        "r": "き",
+        "g": "attributive"
+      },
+      {
+        "t": "知",
+        "r": "ち",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "ぶつ",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "もの",
+        "g": "object"
+      },
+      {
+        "t": "語",
+        "r": "がたり",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-机智人物故事-469-官司是编出来的长寿县",
+    "title_zh": [
+      {
+        "t": "4",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "6",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "9",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "官",
+        "r": "guān",
+        "g": "subject"
+      },
+      {
+        "t": "司",
+        "r": "si",
+        "g": "subject"
+      },
+      {
+        "t": "是",
+        "r": "shì",
+        "g": "predicate"
+      },
+      {
+        "t": "编",
+        "r": "biān",
+        "g": "complement"
+      },
+      {
+        "t": "出",
+        "r": "chū",
+        "g": "complement"
+      },
+      {
+        "t": "来",
+        "r": "lái",
+        "g": "complement"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "function"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "长",
+        "r": "cháng",
+        "g": "attributive"
+      },
+      {
+        "t": "寿",
+        "r": "shòu",
+        "g": "attributive"
+      },
+      {
+        "t": "县",
+        "r": "xiàn",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "4",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "6",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "9",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "訴",
+        "r": "うった",
+        "g": "subject"
+      },
+      {
+        "t": "訟",
+        "r": "しょう",
+        "g": "subject"
+      },
+      {
+        "t": "は",
+        "r": "",
+        "g": "subject"
+      },
+      {
+        "t": "作",
+        "r": "つく",
+        "g": "complement"
+      },
+      {
+        "t": "り",
+        "r": "",
+        "g": "complement"
+      },
+      {
+        "t": "話",
+        "r": "ばなし",
+        "g": "complement"
+      },
+      {
+        "t": "だった",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "長",
+        "r": "ちょう",
+        "g": "attributive"
+      },
+      {
+        "t": "寿",
+        "r": "じゅ",
+        "g": "attributive"
+      },
+      {
+        "t": "県",
+        "r": "けん",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p05477",
+    "source_text": "安世敏说:我告他偷我的羊皮只。我要他把羊皮容还给我,他不但不还,反而说我还告他,要拉我来打官司。",
+    "corrected_text": "安世敏说:我告他偷我的羊皮衣。我要他把羊皮衣还给我,他不但不还,反而说我还告他,要拉我来打官司。",
+    "units": [
+      {
+        "source_text": "安世敏说:我告他偷我的羊皮衣。",
+        "zh": [
+          {
+            "t": "安",
+            "r": "ān",
+            "g": "subject"
+          },
+          {
+            "t": "世",
+            "r": "shì",
+            "g": "subject"
+          },
+          {
+            "t": "敏",
+            "r": "mǐn",
+            "g": "subject"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": ":",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "告",
+            "r": "gào",
+            "g": "predicate"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "object"
+          },
+          {
+            "t": "偷",
+            "r": "tōu",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "羊",
+            "r": "yáng",
+            "g": "object"
+          },
+          {
+            "t": "皮",
+            "r": "pí",
+            "g": "object"
+          },
+          {
+            "t": "衣",
+            "r": "yī",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "安",
+              "r": "あん",
+              "g": "subject"
+            },
+            {
+              "t": "世",
+              "r": "せい",
+              "g": "subject"
+            },
+            {
+              "t": "敏",
+              "r": "びん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った。「",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "羊",
+              "r": "よう",
+              "g": "object"
+            },
+            {
+              "t": "皮",
+              "r": "ひ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "上",
+              "r": "うわ",
+              "g": "object"
+            },
+            {
+              "t": "着",
+              "r": "ぎ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "盗",
+              "r": "ぬす",
+              "g": "predicate"
+            },
+            {
+              "t": "んだと",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "訴",
+              "r": "うった",
+              "g": "predicate"
+            },
+            {
+              "t": "えた。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我要他把羊皮衣还给我,他不但不还,反而说我还告他,要拉我来打官司。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "predicate"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "object"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "羊",
+            "r": "yáng",
+            "g": "object"
+          },
+          {
+            "t": "皮",
+            "r": "pí",
+            "g": "object"
+          },
+          {
+            "t": "衣",
+            "r": "yī",
+            "g": "object"
+          },
+          {
+            "t": "还",
+            "r": "huán",
+            "g": "predicate"
+          },
+          {
+            "t": "给",
+            "r": "gěi",
+            "g": "complement"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "complement"
+          },
+          {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "但",
+            "r": "dàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "还",
+            "r": "huán",
+            "g": "predicate"
+          },
+          {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "反",
+            "r": "fǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "而",
+            "r": "ér",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "adverbial"
+          },
+          {
+            "t": "告",
+            "r": "gào",
+            "g": "predicate"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "object"
+          },
+          {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "predicate"
+          },
+          {
+            "t": "拉",
+            "r": "lā",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "object"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "打",
+            "r": "dǎ",
+            "g": "predicate"
+          },
+          {
+            "t": "官",
+            "r": "guān",
+            "g": "object"
+          },
+          {
+            "t": "司",
+            "r": "si",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "羊",
+              "r": "よう",
+              "g": "object"
+            },
+            {
+              "t": "皮",
+              "r": "ひ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "上",
+              "r": "うわ",
+              "g": "object"
+            },
+            {
+              "t": "着",
+              "r": "ぎ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "返",
+              "r": "かえ",
+              "g": "predicate"
+            },
+            {
+              "t": "してくれと",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "求",
+              "r": "もと",
+              "g": "predicate"
+            },
+            {
+              "t": "めたが、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "返",
+              "r": "かえ",
+              "g": "predicate"
+            },
+            {
+              "t": "さないばかりか、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "逆",
+              "r": "ぎゃく",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "がまた",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "訴",
+              "r": "うった",
+              "g": "predicate"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "い、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "引",
+              "r": "ひ",
+              "g": "predicate"
+            },
+            {
+              "t": "っ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "張",
+              "r": "ぱ",
+              "g": "predicate"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "訴",
+              "r": "うった",
+              "g": "object"
+            },
+            {
+              "t": "訟",
+              "r": "しょう",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "起",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "こそうとした。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

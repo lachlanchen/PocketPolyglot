@@ -1,0 +1,648 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p05464",
+  "source_text": "朋友,我劝告你 -句:官司是编出来的,不是打出来的。你不要以为打官司你就要主。.",
+  "source_sha256": "b2815b22b3df301826c0f5da36bbb572a02c75050617a999fbf1d3d67bcfe8fa",
+  "source_normalized_sha256": "5a4279176bd740235cd53ae50fd5ef5f3ec3bd79c123a93c0e5a73871dae1547",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 71,
+    "grammar_token_total": 71,
+    "unit_count": 3
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-5464",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "object"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "object"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "机智人物故事",
+    "title_zh": [
+      {
+        "t": "机",
+        "r": "jī",
+        "g": "attributive"
+      },
+      {
+        "t": "智",
+        "r": "zhì",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "wù",
+        "g": "attributive"
+      },
+      {
+        "t": "故",
+        "r": "gù",
+        "g": "object"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "機",
+        "r": "き",
+        "g": "attributive"
+      },
+      {
+        "t": "知",
+        "r": "ち",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "ぶつ",
+        "g": "attributive"
+      },
+      {
+        "t": "故",
+        "r": "こ",
+        "g": "object"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-机智人物故事-469-官司是编出来的长寿县",
+    "title_zh": [
+      {
+        "t": "469. ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "官",
+        "r": "guān",
+        "g": "subject"
+      },
+      {
+        "t": "司",
+        "r": "sī",
+        "g": "subject"
+      },
+      {
+        "t": "是",
+        "r": "shì",
+        "g": "predicate"
+      },
+      {
+        "t": "编",
+        "r": "biān",
+        "g": "complement"
+      },
+      {
+        "t": "出",
+        "r": "chū",
+        "g": "complement"
+      },
+      {
+        "t": "来",
+        "r": "lái",
+        "g": "complement"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "function"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "长",
+        "r": "cháng",
+        "g": "attributive"
+      },
+      {
+        "t": "寿",
+        "r": "shòu",
+        "g": "attributive"
+      },
+      {
+        "t": "县",
+        "r": "xiàn",
+        "g": "object"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "469. ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "訴",
+        "r": "そ",
+        "g": "subject"
+      },
+      {
+        "t": "訟",
+        "r": "しょう",
+        "g": "subject"
+      },
+      {
+        "t": "は",
+        "r": "",
+        "g": "subject"
+      },
+      {
+        "t": "作",
+        "r": "つく",
+        "g": "complement"
+      },
+      {
+        "t": "り",
+        "r": "",
+        "g": "complement"
+      },
+      {
+        "t": "出",
+        "r": "だ",
+        "g": "complement"
+      },
+      {
+        "t": "されるもの",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "長",
+        "r": "ちょう",
+        "g": "attributive"
+      },
+      {
+        "t": "寿",
+        "r": "じゅ",
+        "g": "attributive"
+      },
+      {
+        "t": "県",
+        "r": "けん",
+        "g": "object"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p05464",
+    "source_text": "朋友,我劝告你 -句:官司是编出来的,不是打出来的。你不要以为打官司你就要主。.",
+    "corrected_text": "朋友，我劝告你一句：官司是编出来的，不是打出来的。你不要以为打官司你就要赢。",
+    "units": [
+      {
+        "source_text": "朋友，我劝告你一句：",
+        "zh": [
+          {
+            "t": "朋",
+            "r": "péng",
+            "g": "topic"
+          },
+          {
+            "t": "友",
+            "r": "yǒu",
+            "g": "topic"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "劝",
+            "r": "quàn",
+            "g": "predicate"
+          },
+          {
+            "t": "告",
+            "r": "gào",
+            "g": "predicate"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "object"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "object"
+          },
+          {
+            "t": "句",
+            "r": "jù",
+            "g": "object"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "友",
+              "r": "とも",
+              "g": "topic"
+            },
+            {
+              "t": "よ、",
+              "r": "",
+              "g": "topic"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "君",
+              "r": "きみ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "ひとこと",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "忠",
+              "r": "ちゅう",
+              "g": "predicate"
+            },
+            {
+              "t": "告",
+              "r": "こく",
+              "g": "predicate"
+            },
+            {
+              "t": "する。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "官司是编出来的，不是打出来的。",
+        "zh": [
+          {
+            "t": "官",
+            "r": "guān",
+            "g": "subject"
+          },
+          {
+            "t": "司",
+            "r": "sī",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "编",
+            "r": "biān",
+            "g": "complement"
+          },
+          {
+            "t": "出",
+            "r": "chū",
+            "g": "complement"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "不",
+            "r": "bú",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "打",
+            "r": "dǎ",
+            "g": "complement"
+          },
+          {
+            "t": "出",
+            "r": "chū",
+            "g": "complement"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "訴",
+              "r": "そ",
+              "g": "subject"
+            },
+            {
+              "t": "訟",
+              "r": "しょう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "作",
+              "r": "つく",
+              "g": "complement"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "出",
+              "r": "だ",
+              "g": "complement"
+            },
+            {
+              "t": "すものだ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "争",
+              "r": "あらそ",
+              "g": "complement"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "勝",
+              "r": "か",
+              "g": "complement"
+            },
+            {
+              "t": "ち",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "取",
+              "r": "と",
+              "g": "complement"
+            },
+            {
+              "t": "るものではない。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "你不要以为打官司你就要赢。",
+        "zh": [
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bú",
+            "g": "adverbial"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "adverbial"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "为",
+            "r": "wéi",
+            "g": "predicate"
+          },
+          {
+            "t": "打",
+            "r": "dǎ",
+            "g": "adverbial"
+          },
+          {
+            "t": "官",
+            "r": "guān",
+            "g": "object"
+          },
+          {
+            "t": "司",
+            "r": "sī",
+            "g": "object"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "adverbial"
+          },
+          {
+            "t": "赢",
+            "r": "yíng",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "裁",
+              "r": "さい",
+              "g": "adverbial"
+            },
+            {
+              "t": "判",
+              "r": "ばん",
+              "g": "adverbial"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "すれば、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "君",
+              "r": "きみ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "勝",
+              "r": "か",
+              "g": "predicate"
+            },
+            {
+              "t": "てると",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "思",
+              "r": "おも",
+              "g": "predicate"
+            },
+            {
+              "t": "ってはいけない。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
