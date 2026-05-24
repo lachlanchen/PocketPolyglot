@@ -1,0 +1,833 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p04369",
+  "source_text": "主小二到了柳家,起早睡晚,啥子活路都做.还把柳家花园经佑得花红柳绿的.柳九册的女儿如烟小姐,很喜欢他。",
+  "source_sha256": "791b88faf68b4eb40a7f00a3bc929896bfab98d9d27123b078b1862d7cdd6a71",
+  "source_normalized_sha256": "791b88faf68b4eb40a7f00a3bc929896bfab98d9d27123b078b1862d7cdd6a71",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 108,
+    "grammar_token_total": 108,
+    "unit_count": 3
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-4369",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "subject"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "subject"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "subject"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "幻想故事",
+    "title_zh": [
+      {
+        "t": "幻",
+        "r": "huàn",
+        "g": "attributive"
+      },
+      {
+        "t": "想",
+        "r": "xiǎng",
+        "g": "attributive"
+      },
+      {
+        "t": "故",
+        "r": "gù",
+        "g": "subject"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "幻",
+        "r": "げん",
+        "g": "attributive"
+      },
+      {
+        "t": "想",
+        "r": "そう",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "もの",
+        "g": "subject"
+      },
+      {
+        "t": "語",
+        "r": "がたり",
+        "g": "subject"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-幻想故事-387-范丹问佛成都市",
+    "title_zh": [
+      {
+        "t": "3",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "8",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "7",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "范",
+        "r": "fàn",
+        "g": "subject"
+      },
+      {
+        "t": "丹",
+        "r": "dān",
+        "g": "subject"
+      },
+      {
+        "t": "问",
+        "r": "wèn",
+        "g": "predicate"
+      },
+      {
+        "t": "佛",
+        "r": "fó",
+        "g": "object"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "成",
+        "r": "chéng",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "attributive"
+      },
+      {
+        "t": "市",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "3",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "8",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "7",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ". ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "范",
+        "r": "はん",
+        "g": "subject"
+      },
+      {
+        "t": "丹",
+        "r": "たん",
+        "g": "subject"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "仏",
+        "r": "ほとけ",
+        "g": "object"
+      },
+      {
+        "t": "に",
+        "r": "",
+        "g": "object"
+      },
+      {
+        "t": "問",
+        "r": "と",
+        "g": "predicate"
+      },
+      {
+        "t": "う",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "成",
+        "r": "せい",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "attributive"
+      },
+      {
+        "t": "市",
+        "r": "し",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p04369",
+    "source_text": "主小二到了柳家,起早睡晚,啥子活路都做.还把柳家花园经佑得花红柳绿的.柳九册的女儿如烟小姐,很喜欢他。",
+    "corrected_text": "王小二到了柳家，起早睡晚，啥子活路都做。还把柳家花园经管得花红柳绿的。柳九爷的女儿如烟小姐，很喜欢他。",
+    "units": [
+      {
+        "source_text": "王小二到了柳家，起早睡晚，啥子活路都做。",
+        "zh": [
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "subject"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "subject"
+          },
+          {
+            "t": "二",
+            "r": "èr",
+            "g": "subject"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "柳",
+            "r": "liǔ",
+            "g": "object"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "早",
+            "r": "zǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "睡",
+            "r": "shuì",
+            "g": "adverbial"
+          },
+          {
+            "t": "晚",
+            "r": "wǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "啥",
+            "r": "shá",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "活",
+            "r": "huó",
+            "g": "object"
+          },
+          {
+            "t": "路",
+            "r": "lù",
+            "g": "object"
+          },
+          {
+            "t": "都",
+            "r": "dōu",
+            "g": "adverbial"
+          },
+          {
+            "t": "做",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "王",
+              "r": "おう",
+              "g": "subject"
+            },
+            {
+              "t": "小",
+              "r": "しょう",
+              "g": "subject"
+            },
+            {
+              "t": "二",
+              "r": "じ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "柳",
+              "r": "りゅう",
+              "g": "object"
+            },
+            {
+              "t": "家",
+              "r": "け",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "着",
+              "r": "つ",
+              "g": "predicate"
+            },
+            {
+              "t": "くと、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "早",
+              "r": "はや",
+              "g": "adverbial"
+            },
+            {
+              "t": "起",
+              "r": "お",
+              "g": "adverbial"
+            },
+            {
+              "t": "きし",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "遅",
+              "r": "おそ",
+              "g": "adverbial"
+            },
+            {
+              "t": "く",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "寝",
+              "r": "ね",
+              "g": "adverbial"
+            },
+            {
+              "t": "て、どんな",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "仕",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "事",
+              "r": "ごと",
+              "g": "object"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "した",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "还把柳家花园经管得花红柳绿的。",
+        "zh": [
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "adverbial"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "柳",
+            "r": "liǔ",
+            "g": "object"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "object"
+          },
+          {
+            "t": "花",
+            "r": "huā",
+            "g": "object"
+          },
+          {
+            "t": "园",
+            "r": "yuán",
+            "g": "object"
+          },
+          {
+            "t": "经",
+            "r": "jīng",
+            "g": "predicate"
+          },
+          {
+            "t": "管",
+            "r": "guǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "complement"
+          },
+          {
+            "t": "花",
+            "r": "huā",
+            "g": "complement"
+          },
+          {
+            "t": "红",
+            "r": "hóng",
+            "g": "complement"
+          },
+          {
+            "t": "柳",
+            "r": "liǔ",
+            "g": "complement"
+          },
+          {
+            "t": "绿",
+            "r": "lǜ",
+            "g": "complement"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そのうえ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "柳",
+              "r": "りゅう",
+              "g": "object"
+            },
+            {
+              "t": "家",
+              "r": "け",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "庭",
+              "r": "にわ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "predicate"
+            },
+            {
+              "t": "入",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "れして、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "花",
+              "r": "はな",
+              "g": "complement"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "赤",
+              "r": "あか",
+              "g": "complement"
+            },
+            {
+              "t": "く",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "柳",
+              "r": "やなぎ",
+              "g": "complement"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "青",
+              "r": "あお",
+              "g": "complement"
+            },
+            {
+              "t": "々",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "とさせた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "柳九爷的女儿如烟小姐，很喜欢他。",
+        "zh": [
+          {
+            "t": "柳",
+            "r": "liǔ",
+            "g": "attributive"
+          },
+          {
+            "t": "九",
+            "r": "jiǔ",
+            "g": "attributive"
+          },
+          {
+            "t": "爷",
+            "r": "yé",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "女",
+            "r": "nǚ",
+            "g": "subject"
+          },
+          {
+            "t": "儿",
+            "r": "ér",
+            "g": "subject"
+          },
+          {
+            "t": "如",
+            "r": "rú",
+            "g": "subject"
+          },
+          {
+            "t": "烟",
+            "r": "yān",
+            "g": "subject"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "subject"
+          },
+          {
+            "t": "姐",
+            "r": "jiě",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "很",
+            "r": "hěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "喜",
+            "r": "xǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "欢",
+            "r": "huan",
+            "g": "predicate"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "柳",
+              "r": "りゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "九",
+              "r": "きゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "爺",
+              "r": "や",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "娘",
+              "r": "むすめ",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "如",
+              "r": "じょ",
+              "g": "subject"
+            },
+            {
+              "t": "煙",
+              "r": "えん",
+              "g": "subject"
+            },
+            {
+              "t": "お",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "嬢",
+              "r": "じょう",
+              "g": "subject"
+            },
+            {
+              "t": "さんは、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "object"
+            },
+            {
+              "t": "のことを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "たいそう",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "好",
+              "r": "す",
+              "g": "predicate"
+            },
+            {
+              "t": "きになった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
