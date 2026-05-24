@@ -1,0 +1,670 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p06357",
+  "source_text": "大家-面谈，-面喝茶。歌了一阵又有人问:双马公,这天地是何人所开?皮壮匠被",
+  "source_sha256": "1838f28e16c0bc77b0346a86b537c8d2c160603634b87cd94838f622b1a4bc5c",
+  "source_normalized_sha256": "1838f28e16c0bc77b0346a86b537c8d2c160603634b87cd94838f622b1a4bc5c",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 68,
+    "grammar_token_total": 68,
+    "unit_count": 3
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-6357",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "object"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "object"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "机智人物故事",
+    "title_zh": [
+      {
+        "t": "机",
+        "r": "jī",
+        "g": "attributive"
+      },
+      {
+        "t": "智",
+        "r": "zhì",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "wù",
+        "g": "attributive"
+      },
+      {
+        "t": "故",
+        "r": "gù",
+        "g": "object"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "機",
+        "r": "き",
+        "g": "attributive"
+      },
+      {
+        "t": "知",
+        "r": "ち",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "ぶつ",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "もの",
+        "g": "object"
+      },
+      {
+        "t": "語",
+        "r": "がたり",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-机智人物故事-576-一字不识的旨马公泸县",
+    "title_zh": [
+      {
+        "t": "576",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ". ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "object"
+      },
+      {
+        "t": "字",
+        "r": "zì",
+        "g": "object"
+      },
+      {
+        "t": "不",
+        "r": "bù",
+        "g": "adverbial"
+      },
+      {
+        "t": "识",
+        "r": "shí",
+        "g": "predicate"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "function"
+      },
+      {
+        "t": "旨",
+        "r": "zhǐ",
+        "g": "subject"
+      },
+      {
+        "t": "马",
+        "r": "mǎ",
+        "g": "subject"
+      },
+      {
+        "t": "公",
+        "r": "gōng",
+        "g": "subject"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "泸",
+        "r": "lú",
+        "g": "attributive"
+      },
+      {
+        "t": "县",
+        "r": "xiàn",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "576",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ". ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "字",
+        "r": "じ",
+        "g": "object"
+      },
+      {
+        "t": "を",
+        "r": "",
+        "g": "object"
+      },
+      {
+        "t": "一",
+        "r": "ひと",
+        "g": "adverbial"
+      },
+      {
+        "t": "つも",
+        "r": "",
+        "g": "adverbial"
+      },
+      {
+        "t": "知",
+        "r": "し",
+        "g": "predicate"
+      },
+      {
+        "t": "らない",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "旨",
+        "r": "し",
+        "g": "subject"
+      },
+      {
+        "t": "馬",
+        "r": "ば",
+        "g": "subject"
+      },
+      {
+        "t": "公",
+        "r": "こう",
+        "g": "subject"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "瀘",
+        "r": "ろ",
+        "g": "attributive"
+      },
+      {
+        "t": "県",
+        "r": "けん",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [
+      {
+        "t": "泸",
+        "r": "lú",
+        "g": "object"
+      },
+      {
+        "t": "县",
+        "r": "xiàn",
+        "g": "object"
+      }
+    ],
+    "place_ja": [
+      {
+        "t": "瀘",
+        "r": "ろ",
+        "g": "object"
+      },
+      {
+        "t": "県",
+        "r": "けん",
+        "g": "object"
+      }
+    ]
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p06357",
+    "source_text": "大家-面谈，-面喝茶。歌了一阵又有人问:双马公,这天地是何人所开?皮壮匠被",
+    "corrected_text": "大家一面谈，一面喝茶。歇了一阵又有人问：旨马公，这天地是何人所开？皮壮匠被",
+    "units": [
+      {
+        "source_text": "大家一面谈，一面喝茶。",
+        "zh": [
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "subject"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "subject"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "adverbial"
+          },
+          {
+            "t": "面",
+            "r": "miàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "谈",
+            "r": "tán",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "adverbial"
+          },
+          {
+            "t": "面",
+            "r": "miàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "喝",
+            "r": "hē",
+            "g": "predicate"
+          },
+          {
+            "t": "茶",
+            "r": "chá",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "皆",
+              "r": "みな",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "話",
+              "r": "はな",
+              "g": "predicate"
+            },
+            {
+              "t": "しながら、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "茶",
+              "r": "ちゃ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "飲",
+              "r": "の",
+              "g": "predicate"
+            },
+            {
+              "t": "んでいた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "歇了一阵又有人问：旨马公，这天地是何人所开？",
+        "zh": [
+          {
+            "t": "歇",
+            "r": "xiē",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "complement"
+          },
+          {
+            "t": "阵",
+            "r": "zhèn",
+            "g": "complement"
+          },
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "问",
+            "r": "wèn",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "旨",
+            "r": "zhǐ",
+            "g": "subject"
+          },
+          {
+            "t": "马",
+            "r": "mǎ",
+            "g": "subject"
+          },
+          {
+            "t": "公",
+            "r": "gōng",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "attributive"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "object"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "object"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "何",
+            "r": "hé",
+            "g": "attributive"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "所",
+            "r": "suǒ",
+            "g": "function"
+          },
+          {
+            "t": "开",
+            "r": "kāi",
+            "g": "predicate"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "しばらく",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "休",
+              "r": "やす",
+              "g": "predicate"
+            },
+            {
+              "t": "むと、また",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "尋",
+              "r": "たず",
+              "g": "predicate"
+            },
+            {
+              "t": "ねた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "旨",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "馬",
+              "r": "ば",
+              "g": "subject"
+            },
+            {
+              "t": "公",
+              "r": "こう",
+              "g": "subject"
+            },
+            {
+              "t": "、この",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "object"
+            },
+            {
+              "t": "地",
+              "r": "ち",
+              "g": "object"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "誰",
+              "r": "だれ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "開",
+              "r": "ひら",
+              "g": "predicate"
+            },
+            {
+              "t": "いたのか。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "皮壮匠被",
+        "zh": [
+          {
+            "t": "皮",
+            "r": "pí",
+            "g": "subject"
+          },
+          {
+            "t": "壮",
+            "r": "zhuàng",
+            "g": "subject"
+          },
+          {
+            "t": "匠",
+            "r": "jiàng",
+            "g": "subject"
+          },
+          {
+            "t": "被",
+            "r": "bèi",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "皮",
+              "r": "ひ",
+              "g": "subject"
+            },
+            {
+              "t": "壮",
+              "r": "そう",
+              "g": "subject"
+            },
+            {
+              "t": "匠",
+              "r": "しょう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "されて",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,662 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p06395",
+  "source_text": "采录者:王模安男 28岁高中采录时间、地点:1986 年 3月于平吕县新庙乡",
+  "source_sha256": "48d854e0e80276b91e4cde6b5ae92bcb1b7acdd75f50f8115f9c3c584a771435",
+  "source_normalized_sha256": "e2c2d105282facc849c6e24ad48ed0f78af5082f547aca5c46c991efca8b1ee5",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 75,
+    "grammar_token_total": 75,
+    "unit_count": 2
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-6395",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "机智人物故事",
+    "title_zh": [
+      {
+        "t": "机",
+        "r": "jī",
+        "g": "attributive"
+      },
+      {
+        "t": "智",
+        "r": "zhì",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "wù",
+        "g": "attributive"
+      },
+      {
+        "t": "故",
+        "r": "gù",
+        "g": "object"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "機",
+        "r": "き",
+        "g": "attributive"
+      },
+      {
+        "t": "知",
+        "r": "ち",
+        "g": "attributive"
+      },
+      {
+        "t": "に",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "富",
+        "r": "と",
+        "g": "attributive"
+      },
+      {
+        "t": "む",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "ぶつ",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "もの",
+        "g": "object"
+      },
+      {
+        "t": "語",
+        "r": "がたり",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-机智人物故事-579-县官画虎平虽县",
+    "title_zh": [
+      {
+        "t": "579. ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "县",
+        "r": "xiàn",
+        "g": "subject"
+      },
+      {
+        "t": "官",
+        "r": "guān",
+        "g": "subject"
+      },
+      {
+        "t": "画",
+        "r": "huà",
+        "g": "predicate"
+      },
+      {
+        "t": "虎",
+        "r": "hǔ",
+        "g": "object"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "平",
+        "r": "píng",
+        "g": "attributive"
+      },
+      {
+        "t": "虽",
+        "r": "suī",
+        "g": "attributive"
+      },
+      {
+        "t": "县",
+        "r": "xiàn",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "579. ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "県",
+        "r": "けん",
+        "g": "subject"
+      },
+      {
+        "t": "官",
+        "r": "かん",
+        "g": "subject"
+      },
+      {
+        "t": "が",
+        "r": "",
+        "g": "subject"
+      },
+      {
+        "t": "虎",
+        "r": "とら",
+        "g": "object"
+      },
+      {
+        "t": "を",
+        "r": "",
+        "g": "object"
+      },
+      {
+        "t": "描",
+        "r": "えが",
+        "g": "predicate"
+      },
+      {
+        "t": "く",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "平",
+        "r": "へい",
+        "g": "attributive"
+      },
+      {
+        "t": "雖",
+        "r": "すい",
+        "g": "attributive"
+      },
+      {
+        "t": "県",
+        "r": "けん",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p06395",
+    "source_text": "采录者:王模安男 28岁高中采录时间、地点:1986 年 3月于平吕县新庙乡",
+    "corrected_text": "采录者：王模安，男，28岁，高中。采录时间、地点：1986年3月于平昌县新庙乡。",
+    "units": [
+      {
+        "source_text": "采录者：王模安，男，28岁，高中。",
+        "zh": [
+          {
+            "t": "采",
+            "r": "cǎi",
+            "g": "attributive"
+          },
+          {
+            "t": "录",
+            "r": "lù",
+            "g": "attributive"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "subject"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "subject"
+          },
+          {
+            "t": "模",
+            "r": "mó",
+            "g": "subject"
+          },
+          {
+            "t": "安",
+            "r": "ān",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "男",
+            "r": "nán",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "28",
+            "r": "",
+            "g": "attributive"
+          },
+          {
+            "t": "岁",
+            "r": "suì",
+            "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "高",
+            "r": "gāo",
+            "g": "predicate"
+          },
+          {
+            "t": "中",
+            "r": "zhōng",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "採",
+              "r": "さい",
+              "g": "attributive"
+            },
+            {
+              "t": "録",
+              "r": "ろく",
+              "g": "attributive"
+            },
+            {
+              "t": "者",
+              "r": "しゃ",
+              "g": "subject"
+            },
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "王",
+              "r": "おう",
+              "g": "subject"
+            },
+            {
+              "t": "模",
+              "r": "も",
+              "g": "subject"
+            },
+            {
+              "t": "安",
+              "r": "あん",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "男",
+              "r": "だん",
+              "g": "predicate"
+            },
+            {
+              "t": "性",
+              "r": "せい",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "28",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "歳",
+              "r": "さい",
+              "g": "attributive"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "高",
+              "r": "こう",
+              "g": "predicate"
+            },
+            {
+              "t": "校",
+              "r": "こう",
+              "g": "predicate"
+            },
+            {
+              "t": "卒",
+              "r": "そつ",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "采录时间、地点：1986年3月于平昌县新庙乡。",
+        "zh": [
+          {
+            "t": "采",
+            "r": "cǎi",
+            "g": "attributive"
+          },
+          {
+            "t": "录",
+            "r": "lù",
+            "g": "attributive"
+          },
+          {
+            "t": "时",
+            "r": "shí",
+            "g": "subject"
+          },
+          {
+            "t": "间",
+            "r": "jiān",
+            "g": "subject"
+          },
+          {
+            "t": "、",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "subject"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "subject"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "1986",
+            "r": "",
+            "g": "adverbial"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "adverbial"
+          },
+          {
+            "t": "3",
+            "r": "",
+            "g": "adverbial"
+          },
+          {
+            "t": "月",
+            "r": "yuè",
+            "g": "adverbial"
+          },
+          {
+            "t": "于",
+            "r": "yú",
+            "g": "adverbial"
+          },
+          {
+            "t": "平",
+            "r": "píng",
+            "g": "adverbial"
+          },
+          {
+            "t": "昌",
+            "r": "chāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "县",
+            "r": "xiàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "新",
+            "r": "xīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "庙",
+            "r": "miào",
+            "g": "adverbial"
+          },
+          {
+            "t": "乡",
+            "r": "xiāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "採",
+              "r": "さい",
+              "g": "attributive"
+            },
+            {
+              "t": "録",
+              "r": "ろく",
+              "g": "attributive"
+            },
+            {
+              "t": "時",
+              "r": "じ",
+              "g": "subject"
+            },
+            {
+              "t": "期",
+              "r": "き",
+              "g": "subject"
+            },
+            {
+              "t": "・",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "場",
+              "r": "ば",
+              "g": "subject"
+            },
+            {
+              "t": "所",
+              "r": "しょ",
+              "g": "subject"
+            },
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "1986",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "年",
+              "r": "ねん",
+              "g": "adverbial"
+            },
+            {
+              "t": "3",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "月",
+              "r": "がつ",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "平",
+              "r": "へい",
+              "g": "adverbial"
+            },
+            {
+              "t": "昌",
+              "r": "しょう",
+              "g": "adverbial"
+            },
+            {
+              "t": "県",
+              "r": "けん",
+              "g": "adverbial"
+            },
+            {
+              "t": "新",
+              "r": "しん",
+              "g": "adverbial"
+            },
+            {
+              "t": "廟",
+              "r": "びょう",
+              "g": "adverbial"
+            },
+            {
+              "t": "郷",
+              "r": "きょう",
+              "g": "adverbial"
+            },
+            {
+              "t": "にて",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
