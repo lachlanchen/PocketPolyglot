@@ -1,0 +1,935 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p05836",
+  "source_text": "乌鸦飞到柳员外屋旁的一棵槐树上,扬着跌哑的嗓子叫道;起得好啊!起得好啊!人们抬头见是一只乌鸦就讨厌,无论它讲什么蒜维话,人们还是纷纷说:乌获是叫丧的,真",
+  "source_sha256": "fe88ffacff9e7bdc3b4cd632706ab4f1418cdc86ef1fd06b76d9b4a0a6ca1322",
+  "source_normalized_sha256": "fe88ffacff9e7bdc3b4cd632706ab4f1418cdc86ef1fd06b76d9b4a0a6ca1322",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 139,
+    "grammar_token_total": 139,
+    "unit_count": 5
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-5836",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "机智人物故事",
+    "title_zh": [
+      {
+        "t": "机",
+        "r": "jī",
+        "g": "attributive"
+      },
+      {
+        "t": "智",
+        "r": "zhì",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "wù",
+        "g": "attributive"
+      },
+      {
+        "t": "故",
+        "r": "gù",
+        "g": "object"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "機",
+        "r": "き",
+        "g": "attributive"
+      },
+      {
+        "t": "知",
+        "r": "ち",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "ぶつ",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "もの",
+        "g": "object"
+      },
+      {
+        "t": "語",
+        "r": "がたり",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-机智人物故事-510-乌鸦的名声",
+    "title_zh": [
+      {
+        "t": "510. ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "乌",
+        "r": "wū",
+        "g": "attributive"
+      },
+      {
+        "t": "鸦",
+        "r": "yā",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "attributive"
+      },
+      {
+        "t": "名",
+        "r": "míng",
+        "g": "object"
+      },
+      {
+        "t": "声",
+        "r": "shēng",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "510. ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "烏",
+        "r": "からす",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "評",
+        "r": "ひょう",
+        "g": "object"
+      },
+      {
+        "t": "判",
+        "r": "ばん",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p05836",
+    "source_text": "乌鸦飞到柳员外屋旁的一棵槐树上,扬着跌哑的嗓子叫道;起得好啊!起得好啊!人们抬头见是一只乌鸦就讨厌,无论它讲什么蒜维话,人们还是纷纷说:乌获是叫丧的,真",
+    "corrected_text": "乌鸦飞到柳员外屋旁的一棵槐树上，扬着嘶哑的嗓子叫道：起得好啊！起得好啊！人们抬头见是一只乌鸦就讨厌，无论它讲什么奉承话，人们还是纷纷说：乌鸦是叫丧的，真",
+    "units": [
+      {
+        "source_text": "乌鸦飞到柳员外屋旁的一棵槐树上，扬着嘶哑的嗓子叫道：",
+        "zh": [
+          {
+            "t": "乌",
+            "r": "wū",
+            "g": "subject"
+          },
+          {
+            "t": "鸦",
+            "r": "yā",
+            "g": "subject"
+          },
+          {
+            "t": "飞",
+            "r": "fēi",
+            "g": "predicate"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "柳",
+            "r": "liǔ",
+            "g": "attributive"
+          },
+          {
+            "t": "员",
+            "r": "yuán",
+            "g": "attributive"
+          },
+          {
+            "t": "外",
+            "r": "wài",
+            "g": "attributive"
+          },
+          {
+            "t": "屋",
+            "r": "wū",
+            "g": "attributive"
+          },
+          {
+            "t": "旁",
+            "r": "páng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "object"
+          },
+          {
+            "t": "棵",
+            "r": "kē",
+            "g": "object"
+          },
+          {
+            "t": "槐",
+            "r": "huái",
+            "g": "object"
+          },
+          {
+            "t": "树",
+            "r": "shù",
+            "g": "object"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "扬",
+            "r": "yáng",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "predicate"
+          },
+          {
+            "t": "嘶",
+            "r": "sī",
+            "g": "attributive"
+          },
+          {
+            "t": "哑",
+            "r": "yǎ",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "嗓",
+            "r": "sǎng",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "叫",
+            "r": "jiào",
+            "g": "predicate"
+          },
+          {
+            "t": "道",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "烏",
+              "r": "からす",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "柳",
+              "r": "りゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "員",
+              "r": "いん",
+              "g": "attributive"
+            },
+            {
+              "t": "外",
+              "r": "がい",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "屋",
+              "r": "や",
+              "g": "attributive"
+            },
+            {
+              "t": "敷",
+              "r": "しき",
+              "g": "attributive"
+            },
+            {
+              "t": "そばの",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "槐",
+              "r": "えん",
+              "g": "object"
+            },
+            {
+              "t": "樹",
+              "r": "じゅ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "飛",
+              "r": "と",
+              "g": "predicate"
+            },
+            {
+              "t": "び、しわがれ",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "声",
+              "r": "ごえ",
+              "g": "object"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "叫",
+              "r": "さけ",
+              "g": "predicate"
+            },
+            {
+              "t": "んだ：",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "起得好啊！起得好啊！",
+        "zh": [
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "complement"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "complement"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "complement"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "complement"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "起",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "きるのが",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "早",
+              "r": "はや",
+              "g": "complement"
+            },
+            {
+              "t": "いねえ！",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "起",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "きるのが",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "早",
+              "r": "はや",
+              "g": "complement"
+            },
+            {
+              "t": "いねえ！",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "人们抬头见是一只乌鸦就讨厌，",
+        "zh": [
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          },
+          {
+            "t": "抬",
+            "r": "tái",
+            "g": "predicate"
+          },
+          {
+            "t": "头",
+            "r": "tóu",
+            "g": "object"
+          },
+          {
+            "t": "见",
+            "r": "jiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "object"
+          },
+          {
+            "t": "只",
+            "r": "zhī",
+            "g": "object"
+          },
+          {
+            "t": "乌",
+            "r": "wū",
+            "g": "object"
+          },
+          {
+            "t": "鸦",
+            "r": "yā",
+            "g": "object"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "讨",
+            "r": "tǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "厌",
+            "r": "yàn",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "subject"
+            },
+            {
+              "t": "々",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "顔",
+              "r": "かお",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "上",
+              "r": "あ",
+              "g": "predicate"
+            },
+            {
+              "t": "げて",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "烏",
+              "r": "からす",
+              "g": "object"
+            },
+            {
+              "t": "だと",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "るなり",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "嫌",
+              "r": "いや",
+              "g": "predicate"
+            },
+            {
+              "t": "になり、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "无论它讲什么奉承话，人们还是纷纷说：",
+        "zh": [
+          {
+            "t": "无",
+            "r": "wú",
+            "g": "function"
+          },
+          {
+            "t": "论",
+            "r": "lùn",
+            "g": "function"
+          },
+          {
+            "t": "它",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "讲",
+            "r": "jiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "什",
+            "r": "shén",
+            "g": "attributive"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "attributive"
+          },
+          {
+            "t": "奉",
+            "r": "fèng",
+            "g": "object"
+          },
+          {
+            "t": "承",
+            "r": "chéng",
+            "g": "object"
+          },
+          {
+            "t": "话",
+            "r": "huà",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          },
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "adverbial"
+          },
+          {
+            "t": "纷",
+            "r": "fēn",
+            "g": "adverbial"
+          },
+          {
+            "t": "纷",
+            "r": "fēn",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "それがどんな",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "世",
+              "r": "せ",
+              "g": "object"
+            },
+            {
+              "t": "辞",
+              "r": "じ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "おうとも、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "subject"
+            },
+            {
+              "t": "々",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "相",
+              "r": "あい",
+              "g": "adverbial"
+            },
+            {
+              "t": "変",
+              "r": "か",
+              "g": "adverbial"
+            },
+            {
+              "t": "わらず",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "口",
+              "r": "くち",
+              "g": "adverbial"
+            },
+            {
+              "t": "々",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った：",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "乌鸦是叫丧的，真",
+        "zh": [
+          {
+            "t": "乌",
+            "r": "wū",
+            "g": "subject"
+          },
+          {
+            "t": "鸦",
+            "r": "yā",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "叫",
+            "r": "jiào",
+            "g": "attributive"
+          },
+          {
+            "t": "丧",
+            "r": "sāng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "真",
+            "r": "zhēn",
+            "g": "adverbial"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "烏",
+              "r": "からす",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "喪",
+              "r": "も",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "呼",
+              "r": "よ",
+              "g": "attributive"
+            },
+            {
+              "t": "ぶものだ、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "まったく",
+              "r": "",
+              "g": "adverbial"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

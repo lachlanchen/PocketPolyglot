@@ -1,0 +1,752 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p05951",
+  "source_text": "采录者:陈明想男 32岁通江县云喷乡文化干部采录时间、地点:1987 年于通江县云愤乡",
+  "source_sha256": "626e6c1d7e93d297be0ca8cd4fffc67e7e7ede95ecdcad463899b971eb435226",
+  "source_normalized_sha256": "edfe0011cb526ea81138ea6b4cb0286e4671380d2dd6d1ffb9c02eb4de34f933",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 91,
+    "grammar_token_total": 91,
+    "unit_count": 2
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-5951",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "attributive"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "attributive"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "机智人物故事",
+    "title_zh": [
+      {
+        "t": "机",
+        "r": "jī",
+        "g": "attributive"
+      },
+      {
+        "t": "智",
+        "r": "zhì",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "wù",
+        "g": "attributive"
+      },
+      {
+        "t": "故",
+        "r": "gù",
+        "g": "object"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "機",
+        "r": "き",
+        "g": "attributive"
+      },
+      {
+        "t": "知",
+        "r": "ち",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "ぶつ",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "もの",
+        "g": "object"
+      },
+      {
+        "t": "語",
+        "r": "がたり",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-机智人物故事-529-做文章通江上县",
+    "title_zh": [
+      {
+        "t": "5",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "2",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "9",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "做",
+        "r": "zuò",
+        "g": "predicate"
+      },
+      {
+        "t": "文",
+        "r": "wén",
+        "g": "object"
+      },
+      {
+        "t": "章",
+        "r": "zhāng",
+        "g": "object"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "通",
+        "r": "tōng",
+        "g": "attributive"
+      },
+      {
+        "t": "江",
+        "r": "jiāng",
+        "g": "attributive"
+      },
+      {
+        "t": "上",
+        "r": "shàng",
+        "g": "attributive"
+      },
+      {
+        "t": "县",
+        "r": "xiàn",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "5",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "2",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "9",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "文",
+        "r": "ぶん",
+        "g": "object"
+      },
+      {
+        "t": "章",
+        "r": "しょう",
+        "g": "object"
+      },
+      {
+        "t": "作",
+        "r": "づく",
+        "g": "predicate"
+      },
+      {
+        "t": "り",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "通",
+        "r": "つう",
+        "g": "attributive"
+      },
+      {
+        "t": "江",
+        "r": "こう",
+        "g": "attributive"
+      },
+      {
+        "t": "上",
+        "r": "じょう",
+        "g": "attributive"
+      },
+      {
+        "t": "県",
+        "r": "けん",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p05951",
+    "source_text": "采录者:陈明想男 32岁通江县云喷乡文化干部采录时间、地点:1987 年于通江县云愤乡",
+    "corrected_text": "采录者：陈明想，男，32岁，通江县云昙乡文化干部。采录时间、地点：1987年于通江县云昙乡",
+    "units": [
+      {
+        "source_text": "采录者：陈明想，男，32岁，通江县云昙乡文化干部。",
+        "zh": [
+          {
+            "t": "采",
+            "r": "cǎi",
+            "g": "attributive"
+          },
+          {
+            "t": "录",
+            "r": "lù",
+            "g": "attributive"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "subject"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "陈",
+            "r": "chén",
+            "g": "subject"
+          },
+          {
+            "t": "明",
+            "r": "míng",
+            "g": "subject"
+          },
+          {
+            "t": "想",
+            "r": "xiǎng",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "男",
+            "r": "nán",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "3",
+            "r": "",
+            "g": "attributive"
+          },
+          {
+            "t": "2",
+            "r": "",
+            "g": "attributive"
+          },
+          {
+            "t": "岁",
+            "r": "suì",
+            "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "通",
+            "r": "tōng",
+            "g": "attributive"
+          },
+          {
+            "t": "江",
+            "r": "jiāng",
+            "g": "attributive"
+          },
+          {
+            "t": "县",
+            "r": "xiàn",
+            "g": "attributive"
+          },
+          {
+            "t": "云",
+            "r": "yún",
+            "g": "attributive"
+          },
+          {
+            "t": "昙",
+            "r": "tán",
+            "g": "attributive"
+          },
+          {
+            "t": "乡",
+            "r": "xiāng",
+            "g": "attributive"
+          },
+          {
+            "t": "文",
+            "r": "wén",
+            "g": "attributive"
+          },
+          {
+            "t": "化",
+            "r": "huà",
+            "g": "attributive"
+          },
+          {
+            "t": "干",
+            "r": "gàn",
+            "g": "object"
+          },
+          {
+            "t": "部",
+            "r": "bù",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "採",
+              "r": "さい",
+              "g": "attributive"
+            },
+            {
+              "t": "録",
+              "r": "ろく",
+              "g": "attributive"
+            },
+            {
+              "t": "者",
+              "r": "しゃ",
+              "g": "subject"
+            },
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "陳",
+              "r": "ちん",
+              "g": "subject"
+            },
+            {
+              "t": "明",
+              "r": "めい",
+              "g": "subject"
+            },
+            {
+              "t": "想",
+              "r": "そう",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "男",
+              "r": "だん",
+              "g": "subject"
+            },
+            {
+              "t": "性",
+              "r": "せい",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "32",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "歳",
+              "r": "さい",
+              "g": "attributive"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "通",
+              "r": "つう",
+              "g": "attributive"
+            },
+            {
+              "t": "江",
+              "r": "こう",
+              "g": "attributive"
+            },
+            {
+              "t": "県",
+              "r": "けん",
+              "g": "attributive"
+            },
+            {
+              "t": "雲",
+              "r": "うん",
+              "g": "attributive"
+            },
+            {
+              "t": "曇",
+              "r": "どん",
+              "g": "attributive"
+            },
+            {
+              "t": "郷",
+              "r": "ごう",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "文",
+              "r": "ぶん",
+              "g": "attributive"
+            },
+            {
+              "t": "化",
+              "r": "か",
+              "g": "attributive"
+            },
+            {
+              "t": "幹",
+              "r": "かん",
+              "g": "object"
+            },
+            {
+              "t": "部",
+              "r": "ぶ",
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "采录时间、地点：1987年于通江县云昙乡",
+        "zh": [
+          {
+            "t": "采",
+            "r": "cǎi",
+            "g": "attributive"
+          },
+          {
+            "t": "录",
+            "r": "lù",
+            "g": "attributive"
+          },
+          {
+            "t": "时",
+            "r": "shí",
+            "g": "subject"
+          },
+          {
+            "t": "间",
+            "r": "jiān",
+            "g": "subject"
+          },
+          {
+            "t": "、",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "subject"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "subject"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "1",
+            "r": "",
+            "g": "adverbial"
+          },
+          {
+            "t": "9",
+            "r": "",
+            "g": "adverbial"
+          },
+          {
+            "t": "8",
+            "r": "",
+            "g": "adverbial"
+          },
+          {
+            "t": "7",
+            "r": "",
+            "g": "adverbial"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "adverbial"
+          },
+          {
+            "t": "于",
+            "r": "yú",
+            "g": "adverbial"
+          },
+          {
+            "t": "通",
+            "r": "tōng",
+            "g": "adverbial"
+          },
+          {
+            "t": "江",
+            "r": "jiāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "县",
+            "r": "xiàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "云",
+            "r": "yún",
+            "g": "adverbial"
+          },
+          {
+            "t": "昙",
+            "r": "tán",
+            "g": "adverbial"
+          },
+          {
+            "t": "乡",
+            "r": "xiāng",
+            "g": "adverbial"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "採",
+              "r": "さい",
+              "g": "attributive"
+            },
+            {
+              "t": "録",
+              "r": "ろく",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "時",
+              "r": "じ",
+              "g": "subject"
+            },
+            {
+              "t": "期",
+              "r": "き",
+              "g": "subject"
+            },
+            {
+              "t": "・",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "場",
+              "r": "ば",
+              "g": "subject"
+            },
+            {
+              "t": "所",
+              "r": "しょ",
+              "g": "subject"
+            },
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "1987",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "年",
+              "r": "ねん",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "通",
+              "r": "つう",
+              "g": "adverbial"
+            },
+            {
+              "t": "江",
+              "r": "こう",
+              "g": "adverbial"
+            },
+            {
+              "t": "県",
+              "r": "けん",
+              "g": "adverbial"
+            },
+            {
+              "t": "雲",
+              "r": "うん",
+              "g": "adverbial"
+            },
+            {
+              "t": "曇",
+              "r": "どん",
+              "g": "adverbial"
+            },
+            {
+              "t": "郷",
+              "r": "ごう",
+              "g": "adverbial"
+            },
+            {
+              "t": "にて",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

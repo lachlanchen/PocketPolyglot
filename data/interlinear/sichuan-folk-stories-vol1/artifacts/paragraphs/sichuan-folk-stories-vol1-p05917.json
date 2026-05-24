@@ -1,0 +1,496 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p05917",
+  "source_text": "秀才.县官.财主.穷人同在一个庙里避雪。",
+  "source_sha256": "a1a1ae6684783d8fcea39f2bb2255ca5cd8ff619183c6f46129a139be6f5aa25",
+  "source_normalized_sha256": "a1a1ae6684783d8fcea39f2bb2255ca5cd8ff619183c6f46129a139be6f5aa25",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 43,
+    "grammar_token_total": 43,
+    "unit_count": 1
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-5917",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "机智人物故事",
+    "title_zh": [
+      {
+        "t": "机",
+        "r": "jī",
+        "g": "attributive"
+      },
+      {
+        "t": "智",
+        "r": "zhì",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "wù",
+        "g": "attributive"
+      },
+      {
+        "t": "故",
+        "r": "gù",
+        "g": "object"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "機",
+        "r": "き",
+        "g": "attributive"
+      },
+      {
+        "t": "知",
+        "r": "ち",
+        "g": "attributive"
+      },
+      {
+        "t": "に",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "富",
+        "r": "と",
+        "g": "attributive"
+      },
+      {
+        "t": "む",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "ぶつ",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "もの",
+        "g": "object"
+      },
+      {
+        "t": "語",
+        "r": "がたり",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-机智人物故事-524-咏雪高县",
+    "title_zh": [
+      {
+        "t": "5",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "2",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "4",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "咏",
+        "r": "yǒng",
+        "g": "predicate"
+      },
+      {
+        "t": "雪",
+        "r": "xuě",
+        "g": "object"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "高",
+        "r": "gāo",
+        "g": "attributive"
+      },
+      {
+        "t": "县",
+        "r": "xiàn",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "5",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "2",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "4",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "雪",
+        "r": "ゆき",
+        "g": "object"
+      },
+      {
+        "t": "を",
+        "r": "",
+        "g": "object"
+      },
+      {
+        "t": "詠",
+        "r": "よ",
+        "g": "predicate"
+      },
+      {
+        "t": "む",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "高",
+        "r": "こう",
+        "g": "attributive"
+      },
+      {
+        "t": "県",
+        "r": "けん",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p05917",
+    "source_text": "秀才.县官.财主.穷人同在一个庙里避雪。",
+    "corrected_text": "秀才、县官、财主、穷人同在一个庙里避雪。",
+    "units": [
+      {
+        "source_text": "秀才、县官、财主、穷人同在一个庙里避雪。",
+        "zh": [
+          {
+            "t": "秀",
+            "r": "xiù",
+            "g": "subject"
+          },
+          {
+            "t": "才",
+            "r": "cái",
+            "g": "subject"
+          },
+          {
+            "t": "、",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "县",
+            "r": "xiàn",
+            "g": "subject"
+          },
+          {
+            "t": "官",
+            "r": "guān",
+            "g": "subject"
+          },
+          {
+            "t": "、",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "财",
+            "r": "cái",
+            "g": "subject"
+          },
+          {
+            "t": "主",
+            "r": "zhǔ",
+            "g": "subject"
+          },
+          {
+            "t": "、",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "穷",
+            "r": "qióng",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "同",
+            "r": "tóng",
+            "g": "adverbial"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "adverbial"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "adverbial"
+          },
+          {
+            "t": "庙",
+            "r": "miào",
+            "g": "adverbial"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "避",
+            "r": "bì",
+            "g": "predicate"
+          },
+          {
+            "t": "雪",
+            "r": "xuě",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "秀",
+              "r": "しゅう",
+              "g": "subject"
+            },
+            {
+              "t": "才",
+              "r": "さい",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "県",
+              "r": "けん",
+              "g": "subject"
+            },
+            {
+              "t": "官",
+              "r": "かん",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "金",
+              "r": "かね",
+              "g": "subject"
+            },
+            {
+              "t": "持",
+              "r": "も",
+              "g": "subject"
+            },
+            {
+              "t": "ち",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "貧",
+              "r": "まず",
+              "g": "subject"
+            },
+            {
+              "t": "しい",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "subject"
+            },
+            {
+              "t": "が、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "同",
+              "r": "おな",
+              "g": "adverbial"
+            },
+            {
+              "t": "じ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "寺",
+              "r": "てら",
+              "g": "adverbial"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "雪",
+              "r": "ゆき",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "避",
+              "r": "さ",
+              "g": "predicate"
+            },
+            {
+              "t": "けていた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
