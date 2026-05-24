@@ -19,6 +19,14 @@ MARKDOWN_NOTE_LINK_RE = re.compile(
     )""",
     re.VERBOSE,
 )
+EMPTY_MARKDOWN_NOTE_LINK_RE = re.compile(
+    r"""(?:
+        \[\s*\\?\[\s*(?:注|註)?\s*[0-9０-９]{1,4}\s*\\?\]\s*\]\s*\(\s*\)
+        |
+        \[\s*(?:注|註)?\s*[0-9０-９]{1,4}\s*\]\s*\(\s*\)
+    )""",
+    re.VERBOSE,
+)
 INLINE_NOTE_REF_RE = re.compile(
     r"[\[［〔【]\s*\\?\[?\s*(?:注|註)?\s*[0-9０-９]{1,4}\s*\\?\]?\s*[\]］〕】]"
 )
@@ -136,6 +144,7 @@ def strip_reader_note_artifacts(text: str) -> str:
     """Remove EPUB/PDF footnote reference debris from reader-facing text."""
 
     cleaned = MARKDOWN_NOTE_LINK_RE.sub("", str(text))
+    cleaned = EMPTY_MARKDOWN_NOTE_LINK_RE.sub("", cleaned)
     cleaned = HTML_NOTE_TARGET_RE.sub("", cleaned)
     cleaned = PAREN_NOTE_REF_RE.sub("", cleaned)
     cleaned = PAREN_ORPHAN_NOTE_REF_RE.sub("", cleaned)
@@ -197,7 +206,7 @@ def strip_reader_note_artifact_tokens(tokens: Any) -> int:
                     index += 1
                 changed += 1
                 continue
-            match = MARKDOWN_NOTE_LINK_RE.match(joined)
+            match = MARKDOWN_NOTE_LINK_RE.match(joined) or EMPTY_MARKDOWN_NOTE_LINK_RE.match(joined)
             if match:
                 consumed = 0
                 end_index = index

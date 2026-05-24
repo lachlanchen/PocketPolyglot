@@ -30,6 +30,14 @@ MARKDOWN_NOTE_LINK_RE = re.compile(
     )""",
     re.VERBOSE,
 )
+EMPTY_MARKDOWN_NOTE_LINK_RE = re.compile(
+    r"""(?:
+        \[\s*\\?\[\s*(?:注|註)?\s*[0-9０-９]{1,4}\s*\\?\]\s*\]\s*\(\s*\)
+        |
+        \[\s*(?:注|註)?\s*[0-9０-９]{1,4}\s*\]\s*\(\s*\)
+    )""",
+    re.VERBOSE,
+)
 INLINE_NOTE_REF_RE = re.compile(
     r"[\[［〔【]\s*\\?\[?\s*(?:注|註)?\s*[0-9０-９]{1,4}\s*\\?\]?\s*[\]］〕】]"
 )
@@ -80,6 +88,7 @@ def plain_title(item: dict[str, Any], key: str) -> str:
 
 def strip_text_note_refs(text: str) -> str:
     cleaned = MARKDOWN_NOTE_LINK_RE.sub("", str(text))
+    cleaned = EMPTY_MARKDOWN_NOTE_LINK_RE.sub("", cleaned)
     cleaned = HTML_NOTE_TARGET_RE.sub("", cleaned)
     cleaned = PAREN_NOTE_REF_RE.sub("", cleaned)
     cleaned = PAREN_ORPHAN_NOTE_REF_RE.sub("", cleaned)
@@ -155,7 +164,7 @@ def strip_inline_note_refs_from_tokens(tokens: list[dict[str, Any]]) -> list[dic
                 while index < len(normalized) and not str(normalized[index].get("t", "")).strip():
                     index += 1
                 continue
-            match = MARKDOWN_NOTE_LINK_RE.match(joined)
+            match = MARKDOWN_NOTE_LINK_RE.match(joined) or EMPTY_MARKDOWN_NOTE_LINK_RE.match(joined)
             if match:
                 consumed = 0
                 end_index = index
