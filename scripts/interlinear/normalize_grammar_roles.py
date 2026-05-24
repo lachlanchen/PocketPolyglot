@@ -52,6 +52,7 @@ ORPHAN_NOTE_REF_PHRASE_RE = re.compile(
     r"(?:注|註|译注|譯注|訳注|脚注|注釈|注記)\s*[。．、，,；;]?"
 )
 DIGIT_TOKEN_RE = re.compile(r"^[0-9０-９]+$")
+SHORT_NOTE_DIGIT_TOKEN_RE = re.compile(r"^[0-9０-９]{1,2}$")
 NOTE_WORDS = {"注", "註", "訳注", "脚注", "注釈", "注記"}
 NOTE_REF_START_WORDS = {"参看", "參看", "参考", "參考", "参照", "參照", "见", "見", "注", "註", "訳注", "脚注"}
 OPEN_BRACKETS = {"[", "［", "〔", "【", "(", "（"}
@@ -246,6 +247,7 @@ def strip_reader_note_artifact_tokens(tokens: Any) -> int:
                 if next_text in NOTE_WORDS:
                     end_index += 1
             digit_seen = False
+            digit_text = ""
             while end_index < len(normalized):
                 next_text = (
                     str(normalized[end_index].get("t", "")).strip()
@@ -255,6 +257,7 @@ def strip_reader_note_artifact_tokens(tokens: Any) -> int:
                 if not DIGIT_TOKEN_RE.match(next_text):
                     break
                 digit_seen = True
+                digit_text += next_text
                 end_index += 1
             if end_index < len(normalized):
                 next_text = (
@@ -262,7 +265,11 @@ def strip_reader_note_artifact_tokens(tokens: Any) -> int:
                     if isinstance(normalized[end_index], dict)
                     else ""
                 )
-                if digit_seen and next_text in CLOSE_BRACKETS:
+                # Standalone one/two digit parentheticals are usually note
+                # anchors. Three/four digit parentheticals in Chinese/Japanese
+                # texts are often historical year glosses, e.g. （1737） or
+                # (1670), and must remain reader-facing text.
+                if digit_seen and SHORT_NOTE_DIGIT_TOKEN_RE.fullmatch(digit_text) and next_text in CLOSE_BRACKETS:
                     end_index += 1
                     if end_index < len(normalized):
                         next_text = (
