@@ -32,6 +32,8 @@ Options:
   --allow-missing                build from available chunks only
   --hide-secondary-ja            do not render ja[1] explanatory/comment lines
   --secondary-ja-mode <mode>     comment, hide, or merge ja[1+] into Japanese text
+  --include-section-title-zh <t> keep only a Chinese section title after assembly
+  --drop-editorial-notes         drop note-only paragraphs such as [1]... footnotes
   -h, --help                     show help
 USAGE
 }
@@ -60,6 +62,8 @@ output_pdf=""
 allow_missing=0
 hide_secondary_ja=0
 secondary_ja_mode="comment"
+include_section_title_zh=()
+drop_editorial_notes=0
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -86,6 +90,8 @@ while [[ $# -gt 0 ]]; do
     --allow-missing) allow_missing=1; shift ;;
     --hide-secondary-ja) hide_secondary_ja=1; shift ;;
     --secondary-ja-mode) secondary_ja_mode="${2:-}"; shift 2 ;;
+    --include-section-title-zh) include_section_title_zh+=("${2:-}"); shift 2 ;;
+    --drop-editorial-notes) drop_editorial_notes=1; shift ;;
     -h|--help) usage; exit 0 ;;
     *) echo "Unknown option: $1" >&2; usage >&2; exit 1 ;;
   esac
@@ -139,6 +145,18 @@ fi
 render_args+=(--secondary-ja-mode "$secondary_ja_mode")
 
 "${assemble_cmd[@]}"
+filter_args=()
+for title in "${include_section_title_zh[@]}"; do
+  if [[ -n "$title" ]]; then
+    filter_args+=(--include-section-title-zh "$title")
+  fi
+done
+if [[ "$drop_editorial_notes" -eq 1 ]]; then
+  filter_args+=(--drop-editorial-notes)
+fi
+if [[ "${#filter_args[@]}" -gt 0 ]]; then
+  python scripts/interlinear/filter_interlinear_json.py "$output_json" -o "$output_json" "${filter_args[@]}"
+fi
 python scripts/interlinear/validate_interlinear_json.py "$output_json"
 
 if [[ "$color_mode" == "blackwhite" ]]; then

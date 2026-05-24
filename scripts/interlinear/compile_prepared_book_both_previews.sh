@@ -35,6 +35,8 @@ author_reading_zh="$(jq -r '.author_reading_zh' "$plan")"
 author_reading_ja="$(jq -r '.author_reading_ja' "$plan")"
 render_secondary_ja="$(jq -r '.render_secondary_ja // true' "$plan")"
 secondary_ja_mode="$(jq -r '.secondary_ja_mode // empty' "$plan")"
+drop_editorial_notes="$(jq -r '.drop_editorial_notes // false' "$plan")"
+mapfile -t render_section_titles_zh < <(jq -r '.render_section_titles_zh[]? // empty' "$plan")
 cover_image="${COVER_IMAGE:-}"
 if [[ -z "$cover_image" && -f "assets/covers/$book_id/cover.png" ]]; then
   cover_image="assets/covers/$book_id/cover.png"
@@ -56,6 +58,15 @@ if [[ -z "$secondary_ja_mode" ]]; then
   fi
 fi
 secondary_ja_args=(--secondary-ja-mode "$secondary_ja_mode")
+render_filter_args=()
+for title in "${render_section_titles_zh[@]}"; do
+  if [[ -n "$title" ]]; then
+    render_filter_args+=(--include-section-title-zh "$title")
+  fi
+done
+if [[ "$drop_editorial_notes" == "true" ]]; then
+  render_filter_args+=(--drop-editorial-notes)
+fi
 
 bash scripts/interlinear/compile_interlinear_book.sh \
   --manifest "$manifest" \
@@ -74,6 +85,7 @@ bash scripts/interlinear/compile_interlinear_book.sh \
   --build-dir "build/$book_id/zh-main/color" \
   --color-mode color \
   "${secondary_ja_args[@]}" \
+  "${render_filter_args[@]}" \
   --allow-missing
 cp "build/$book_id/zh-main/color/source.tex" "build/$book_id/zh-main/color/${title_zh}（日文注）.tex"
 
@@ -94,6 +106,7 @@ bash scripts/interlinear/compile_interlinear_book.sh \
   --build-dir "build/$book_id/zh-main/blackwhite" \
   --color-mode blackwhite \
   "${secondary_ja_args[@]}" \
+  "${render_filter_args[@]}" \
   --allow-missing
 cp "build/$book_id/zh-main/blackwhite/source.tex" "build/$book_id/zh-main/blackwhite/${title_zh}（日文注・黑白）.tex"
 
@@ -117,6 +130,7 @@ bash scripts/interlinear/compile_jp_main_book.sh \
   --build-dir "build/$book_id/jp-main/color" \
   --color-mode color \
   "${secondary_ja_args[@]}" \
+  "${render_filter_args[@]}" \
   --allow-missing
 cp "build/$book_id/jp-main/color/source.tex" "build/$book_id/jp-main/color/${title_ja}（中文注）.tex"
 
@@ -140,6 +154,7 @@ bash scripts/interlinear/compile_jp_main_book.sh \
   --build-dir "build/$book_id/jp-main/blackwhite" \
   --color-mode blackwhite \
   "${secondary_ja_args[@]}" \
+  "${render_filter_args[@]}" \
   --allow-missing
 cp "build/$book_id/jp-main/blackwhite/source.tex" "build/$book_id/jp-main/blackwhite/${title_ja}（中文注・黑白）.tex"
 
