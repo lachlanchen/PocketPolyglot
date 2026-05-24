@@ -18,7 +18,7 @@ NOTE_PREFIX_RE = re.compile(
         |
         [\[［〔【(（]\s*注\s*[0-9０-９]*\s*[\]］〕】)）]
         |
-        (?:注|註|译注|譯注|注释|註釋|注記)\s*(?:[0-9０-９]+)?\s*[:：\[]?
+        (?:注|註|译注|譯注|注释|註釋|訳注|脚注|注釈|注記)\s*(?:[0-9０-９]+)?\s*[:：\[]?
     )""",
     re.VERBOSE,
 )
@@ -50,6 +50,12 @@ def plain_title(item: dict[str, Any], key: str) -> str:
     return str(value)
 
 
+def strip_text_note_refs(text: str) -> str:
+    cleaned = MARKDOWN_NOTE_LINK_RE.sub("", str(text))
+    cleaned = INLINE_NOTE_REF_RE.sub("", cleaned)
+    return cleaned
+
+
 def unit_text(unit: dict[str, Any], lang: str) -> str:
     if lang == "zh":
         value = unit.get("zh", [])
@@ -63,7 +69,20 @@ def unit_text(unit: dict[str, Any], lang: str) -> str:
 def is_note_unit(unit: dict[str, Any]) -> bool:
     zh = unit_text(unit, "zh").strip()
     ja = unit_text(unit, "ja").strip()
-    return bool(NOTE_PREFIX_RE.match(zh) or NOTE_PREFIX_RE.match(ja))
+    source_text = str(unit.get("source_text", ""))
+    corrected_text = str(unit.get("corrected_text", ""))
+    cleaned_source = strip_text_note_refs(source_text).strip()
+    cleaned_corrected = strip_text_note_refs(corrected_text).strip()
+    source_was_only_note = bool(source_text.strip()) and not cleaned_source
+    corrected_was_only_note = bool(corrected_text.strip()) and not cleaned_corrected
+    return bool(
+        NOTE_PREFIX_RE.match(zh)
+        or NOTE_PREFIX_RE.match(ja)
+        or NOTE_PREFIX_RE.match(source_text.strip())
+        or NOTE_PREFIX_RE.match(corrected_text.strip())
+        or (not zh and (source_was_only_note or corrected_was_only_note))
+        or (not zh and "注" in ja and "参照" in ja)
+    )
 
 
 def strip_inline_note_refs_from_tokens(tokens: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -72,8 +91,7 @@ def strip_inline_note_refs_from_tokens(tokens: list[dict[str, Any]]) -> list[dic
         if not isinstance(token, dict):
             continue
         text = str(token.get("t", ""))
-        text = MARKDOWN_NOTE_LINK_RE.sub("", text)
-        stripped = INLINE_NOTE_REF_RE.sub("", text)
+        stripped = strip_text_note_refs(text)
         if not stripped:
             continue
         new_token = copy.deepcopy(token)
@@ -139,6 +157,9 @@ def strip_inline_note_refs_from_named_tokens(node: dict[str, Any]) -> None:
 
 def strip_inline_note_refs(unit: dict[str, Any]) -> dict[str, Any]:
     unit = copy.deepcopy(unit)
+    for key in ("source_text", "corrected_text"):
+        if key in unit and isinstance(unit[key], str):
+            unit[key] = strip_text_note_refs(unit[key])
     zh = unit.get("zh", [])
     if isinstance(zh, list):
         unit["zh"] = strip_inline_note_refs_from_tokens(zh)
