@@ -1,0 +1,567 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p06277",
+  "source_text": "懒王说;你有懒的基础,我就收你为徒弟吧.于是每天教他懒的技巧。",
+  "source_sha256": "b3ca1b4db3853ee5a83f95cfa22020c284db77885895507aaf503d8d279d251c",
+  "source_normalized_sha256": "b3ca1b4db3853ee5a83f95cfa22020c284db77885895507aaf503d8d279d251c",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 64,
+    "grammar_token_total": 64,
+    "unit_count": 2
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-6277",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "机智人物故事",
+    "title_zh": [
+      {
+        "t": "机",
+        "r": "jī",
+        "g": "attributive"
+      },
+      {
+        "t": "智",
+        "r": "zhì",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "wù",
+        "g": "attributive"
+      },
+      {
+        "t": "故",
+        "r": "gù",
+        "g": "object"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "機",
+        "r": "き",
+        "g": "attributive"
+      },
+      {
+        "t": "知",
+        "r": "ち",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "ぶつ",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "もの",
+        "g": "object"
+      },
+      {
+        "t": "語",
+        "r": "がたり",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-机智人物故事-568-学懒汉源县",
+    "title_zh": [
+      {
+        "t": "568. ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "学",
+        "r": "xué",
+        "g": "predicate"
+      },
+      {
+        "t": "懒",
+        "r": "lǎn",
+        "g": "object"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "汉",
+        "r": "hàn",
+        "g": "attributive"
+      },
+      {
+        "t": "源",
+        "r": "yuán",
+        "g": "attributive"
+      },
+      {
+        "t": "县",
+        "r": "xiàn",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "568. ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "怠",
+        "r": "なま",
+        "g": "object"
+      },
+      {
+        "t": "けを",
+        "r": "",
+        "g": "object"
+      },
+      {
+        "t": "学",
+        "r": "まな",
+        "g": "predicate"
+      },
+      {
+        "t": "ぶ",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "漢",
+        "r": "かん",
+        "g": "attributive"
+      },
+      {
+        "t": "源",
+        "r": "げん",
+        "g": "attributive"
+      },
+      {
+        "t": "県",
+        "r": "けん",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p06277",
+    "source_text": "懒王说;你有懒的基础,我就收你为徒弟吧.于是每天教他懒的技巧。",
+    "corrected_text": "懒王说：“你有懒的基础，我就收你为徒弟吧。”于是每天教他懒的技巧。",
+    "units": [
+      {
+        "source_text": "懒王说：“你有懒的基础，我就收你为徒弟吧。”",
+        "zh": [
+          {
+            "t": "懒",
+            "r": "lǎn",
+            "g": "subject"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "subject"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "懒",
+            "r": "lǎn",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "基",
+            "r": "jī",
+            "g": "object"
+          },
+          {
+            "t": "础",
+            "r": "chǔ",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "收",
+            "r": "shōu",
+            "g": "predicate"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "object"
+          },
+          {
+            "t": "为",
+            "r": "wéi",
+            "g": "predicate"
+          },
+          {
+            "t": "徒",
+            "r": "tú",
+            "g": "object"
+          },
+          {
+            "t": "弟",
+            "r": "dì",
+            "g": "object"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "怠",
+              "r": "なま",
+              "g": "subject"
+            },
+            {
+              "t": "け",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "王",
+              "r": "おう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "「おまえには",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "怠",
+              "r": "なま",
+              "g": "attributive"
+            },
+            {
+              "t": "けの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "基",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "礎",
+              "r": "そ",
+              "g": "object"
+            },
+            {
+              "t": "がある、",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "おまえを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "弟",
+              "r": "で",
+              "g": "object"
+            },
+            {
+              "t": "子",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "にしよう」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "于是每天教他懒的技巧。",
+        "zh": [
+          {
+            "t": "于",
+            "r": "yú",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "adverbial"
+          },
+          {
+            "t": "每",
+            "r": "měi",
+            "g": "adverbial"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "教",
+            "r": "jiāo",
+            "g": "predicate"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "object"
+          },
+          {
+            "t": "懒",
+            "r": "lǎn",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "技",
+            "r": "jì",
+            "g": "object"
+          },
+          {
+            "t": "巧",
+            "r": "qiǎo",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そこで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "毎",
+              "r": "まい",
+              "g": "adverbial"
+            },
+            {
+              "t": "日",
+              "r": "にち",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "怠",
+              "r": "なま",
+              "g": "attributive"
+            },
+            {
+              "t": "ける",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "技",
+              "r": "ぎ",
+              "g": "object"
+            },
+            {
+              "t": "巧",
+              "r": "こう",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "教",
+              "r": "おし",
+              "g": "predicate"
+            },
+            {
+              "t": "えた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

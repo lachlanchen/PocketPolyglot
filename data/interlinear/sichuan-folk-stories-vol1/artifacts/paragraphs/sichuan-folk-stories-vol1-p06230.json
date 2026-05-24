@@ -1,0 +1,903 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p06230",
+  "source_text": "讲述者:邻道兴男 65岁农民读过私你采录者:周业伟户明妨采录时间、地点:1986 年11 月 1 日涪陵市明家场上",
+  "source_sha256": "3b1c827ba0aafe4b3d828c322d5a191faa2387a67889697117f94e6699551998",
+  "source_normalized_sha256": "2fd248f1424f5364e198bc0797b9fb2b240567fb889d0a4bc86b83f4e76d88c3",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 118,
+    "grammar_token_total": 118,
+    "unit_count": 3
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-6230",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "attributive"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "attributive"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "机智人物故事",
+    "title_zh": [
+      {
+        "t": "机",
+        "r": "jī",
+        "g": "attributive"
+      },
+      {
+        "t": "智",
+        "r": "zhì",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "wù",
+        "g": "attributive"
+      },
+      {
+        "t": "故",
+        "r": "gù",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "機",
+        "r": "き",
+        "g": "attributive"
+      },
+      {
+        "t": "知",
+        "r": "ち",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "ぶつ",
+        "g": "attributive"
+      },
+      {
+        "t": "故",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-机智人物故事-564-不存财的媳妇涪陵市",
+    "title_zh": [
+      {
+        "t": "5",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "6",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "4",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "不",
+        "r": "bù",
+        "g": "predicate"
+      },
+      {
+        "t": "存",
+        "r": "cún",
+        "g": "predicate"
+      },
+      {
+        "t": "财",
+        "r": "cái",
+        "g": "object"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "function"
+      },
+      {
+        "t": "媳",
+        "r": "xí",
+        "g": "subject"
+      },
+      {
+        "t": "妇",
+        "r": "fù",
+        "g": "subject"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "涪",
+        "r": "fú",
+        "g": "attributive"
+      },
+      {
+        "t": "陵",
+        "r": "líng",
+        "g": "attributive"
+      },
+      {
+        "t": "市",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "5",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "6",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "4",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ". ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "財",
+        "r": "ざい",
+        "g": "object"
+      },
+      {
+        "t": "を",
+        "r": "",
+        "g": "object"
+      },
+      {
+        "t": "貯",
+        "r": "た",
+        "g": "predicate"
+      },
+      {
+        "t": "めない",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "嫁",
+        "r": "よめ",
+        "g": "subject"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "涪",
+        "r": "ふう",
+        "g": "attributive"
+      },
+      {
+        "t": "陵",
+        "r": "りょう",
+        "g": "attributive"
+      },
+      {
+        "t": "市",
+        "r": "し",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p06230",
+    "source_text": "讲述者:邻道兴男 65岁农民读过私你采录者:周业伟户明妨采录时间、地点:1986 年11 月 1 日涪陵市明家场上",
+    "corrected_text": "讲述者：邻道兴，男，65岁，农民，读过私塾。采录者：周业伟、户明芳。采录时间、地点：1986年11月1日，涪陵市明家场上",
+    "units": [
+      {
+        "source_text": "讲述者：邻道兴，男，65岁，农民，读过私塾。",
+        "zh": [
+          {
+            "t": "讲",
+            "r": "jiǎng",
+            "g": "subject"
+          },
+          {
+            "t": "述",
+            "r": "shù",
+            "g": "subject"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "subject"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "邻",
+            "r": "lín",
+            "g": "subject"
+          },
+          {
+            "t": "道",
+            "r": "dào",
+            "g": "subject"
+          },
+          {
+            "t": "兴",
+            "r": "xīng",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "男",
+            "r": "nán",
+            "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "6",
+            "r": "",
+            "g": "attributive"
+          },
+          {
+            "t": "5",
+            "r": "",
+            "g": "attributive"
+          },
+          {
+            "t": "岁",
+            "r": "suì",
+            "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "农",
+            "r": "nóng",
+            "g": "attributive"
+          },
+          {
+            "t": "民",
+            "r": "mín",
+            "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "读",
+            "r": "dú",
+            "g": "predicate"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "predicate"
+          },
+          {
+            "t": "私",
+            "r": "sī",
+            "g": "object"
+          },
+          {
+            "t": "塾",
+            "r": "shú",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "語",
+              "r": "かた",
+              "g": "subject"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "subject"
+            },
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "隣",
+              "r": "りん",
+              "g": "subject"
+            },
+            {
+              "t": "道",
+              "r": "どう",
+              "g": "subject"
+            },
+            {
+              "t": "興",
+              "r": "こう",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "男",
+              "r": "だん",
+              "g": "attributive"
+            },
+            {
+              "t": "性",
+              "r": "せい",
+              "g": "attributive"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "65",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "歳",
+              "r": "さい",
+              "g": "attributive"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "農",
+              "r": "のう",
+              "g": "attributive"
+            },
+            {
+              "t": "民",
+              "r": "みん",
+              "g": "attributive"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "私",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "塾",
+              "r": "じゅく",
+              "g": "object"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "学",
+              "r": "まな",
+              "g": "predicate"
+            },
+            {
+              "t": "んだ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "采录者：周业伟、户明芳。",
+        "zh": [
+          {
+            "t": "采",
+            "r": "cǎi",
+            "g": "subject"
+          },
+          {
+            "t": "录",
+            "r": "lù",
+            "g": "subject"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "subject"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "周",
+            "r": "zhōu",
+            "g": "subject"
+          },
+          {
+            "t": "业",
+            "r": "yè",
+            "g": "subject"
+          },
+          {
+            "t": "伟",
+            "r": "wěi",
+            "g": "subject"
+          },
+          {
+            "t": "、",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "户",
+            "r": "hù",
+            "g": "subject"
+          },
+          {
+            "t": "明",
+            "r": "míng",
+            "g": "subject"
+          },
+          {
+            "t": "芳",
+            "r": "fāng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "採",
+              "r": "さい",
+              "g": "subject"
+            },
+            {
+              "t": "録",
+              "r": "ろく",
+              "g": "subject"
+            },
+            {
+              "t": "者",
+              "r": "しゃ",
+              "g": "subject"
+            },
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "周",
+              "r": "しゅう",
+              "g": "subject"
+            },
+            {
+              "t": "業",
+              "r": "ぎょう",
+              "g": "subject"
+            },
+            {
+              "t": "偉",
+              "r": "い",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "戸",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "明",
+              "r": "めい",
+              "g": "subject"
+            },
+            {
+              "t": "芳",
+              "r": "ほう",
+              "g": "subject"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "采录时间、地点：1986年11月1日，涪陵市明家场上",
+        "zh": [
+          {
+            "t": "采",
+            "r": "cǎi",
+            "g": "subject"
+          },
+          {
+            "t": "录",
+            "r": "lù",
+            "g": "subject"
+          },
+          {
+            "t": "时",
+            "r": "shí",
+            "g": "subject"
+          },
+          {
+            "t": "间",
+            "r": "jiān",
+            "g": "subject"
+          },
+          {
+            "t": "、",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "subject"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "subject"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "1",
+            "r": "",
+            "g": "adverbial"
+          },
+          {
+            "t": "9",
+            "r": "",
+            "g": "adverbial"
+          },
+          {
+            "t": "8",
+            "r": "",
+            "g": "adverbial"
+          },
+          {
+            "t": "6",
+            "r": "",
+            "g": "adverbial"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "adverbial"
+          },
+          {
+            "t": "1",
+            "r": "",
+            "g": "adverbial"
+          },
+          {
+            "t": "1",
+            "r": "",
+            "g": "adverbial"
+          },
+          {
+            "t": "月",
+            "r": "yuè",
+            "g": "adverbial"
+          },
+          {
+            "t": "1",
+            "r": "",
+            "g": "adverbial"
+          },
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "涪",
+            "r": "fú",
+            "g": "adverbial"
+          },
+          {
+            "t": "陵",
+            "r": "líng",
+            "g": "adverbial"
+          },
+          {
+            "t": "市",
+            "r": "shì",
+            "g": "adverbial"
+          },
+          {
+            "t": "明",
+            "r": "míng",
+            "g": "adverbial"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "adverbial"
+          },
+          {
+            "t": "场",
+            "r": "chǎng",
+            "g": "adverbial"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "adverbial"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "採",
+              "r": "さい",
+              "g": "subject"
+            },
+            {
+              "t": "録",
+              "r": "ろく",
+              "g": "subject"
+            },
+            {
+              "t": "日",
+              "r": "にち",
+              "g": "subject"
+            },
+            {
+              "t": "時",
+              "r": "じ",
+              "g": "subject"
+            },
+            {
+              "t": "・",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "場",
+              "r": "ば",
+              "g": "subject"
+            },
+            {
+              "t": "所",
+              "r": "しょ",
+              "g": "subject"
+            },
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "1986",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "年",
+              "r": "ねん",
+              "g": "adverbial"
+            },
+            {
+              "t": "11",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "月",
+              "r": "がつ",
+              "g": "adverbial"
+            },
+            {
+              "t": "1",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "日",
+              "r": "にち",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "涪",
+              "r": "ふう",
+              "g": "adverbial"
+            },
+            {
+              "t": "陵",
+              "r": "りょう",
+              "g": "adverbial"
+            },
+            {
+              "t": "市",
+              "r": "し",
+              "g": "adverbial"
+            },
+            {
+              "t": "明",
+              "r": "めい",
+              "g": "adverbial"
+            },
+            {
+              "t": "家",
+              "r": "か",
+              "g": "adverbial"
+            },
+            {
+              "t": "場",
+              "r": "じょう",
+              "g": "adverbial"
+            },
+            {
+              "t": "にて",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
