@@ -1,0 +1,2857 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "genji-modern",
+  "paragraph_id": "genji-modern-p03345",
+  "source_text": "到了十月里，紫夫人为源氏祝寿，在嵯峨野的佛堂里举办药师佛供养。因为源氏恳切劝诫她不可过分铺张，所以一切布置都秘密进行。然而也很体面，佛像、经盒和包经卷的竹箦都极精美，使人走进佛堂，似觉真个到了西方极乐世界。所诵的是《最胜王经》《金刚般若经》和《寿命经》，规模甚大。满朝公卿王侯都来参与祈祷，半是为了这佛堂的景象美不可言，从穿过红叶林、走进嵯峨野开始，一路上都是美丽的秋景，所以大家争来参加。满目霜华的原野上，车马之声络绎不绝。诸位夫人争先恐后地致送精美物品，以供布施诵经僧众。",
+  "source_sha256": "359ae28f7fa2b39c9e997f90a8253c69327c465f7da26eaa31a161c47fc531f3",
+  "source_normalized_sha256": "359ae28f7fa2b39c9e997f90a8253c69327c465f7da26eaa31a161c47fc531f3",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 496,
+    "grammar_token_total": 496,
+    "unit_count": 10
+  },
+  "source_chunk_id": "genji-modern-chunk-3345",
+  "source_manifest_sha256": "31fed9a4682318b56bd3687aa261a681dd49e03ca0f121e1342197c4f3c9c0a0",
+  "section": {
+    "id": "第三十四回上-新菜1",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "huí",
+        "g": "function"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "上",
+        "r": "shàng",
+        "g": "function"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "新",
+        "r": "xīn",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "cài",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "かい",
+        "g": "function"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "上",
+        "r": "じょう",
+        "g": "function"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "若",
+        "r": "わか",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "な",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第三十四回上-新菜1-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "huí",
+        "g": "function"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "上",
+        "r": "shàng",
+        "g": "function"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "新",
+        "r": "xīn",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "cài",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "かい",
+        "g": "function"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "上",
+        "r": "じょう",
+        "g": "function"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "若",
+        "r": "わか",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "な",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "genji-modern-p03345",
+    "source_text": "到了十月里，紫夫人为源氏祝寿，在嵯峨野的佛堂里举办药师佛供养。因为源氏恳切劝诫她不可过分铺张，所以一切布置都秘密进行。然而也很体面，佛像、经盒和包经卷的竹箦都极精美，使人走进佛堂，似觉真个到了西方极乐世界。所诵的是《最胜王经》《金刚般若经》和《寿命经》，规模甚大。满朝公卿王侯都来参与祈祷，半是为了这佛堂的景象美不可言，从穿过红叶林、走进嵯峨野开始，一路上都是美丽的秋景，所以大家争来参加。满目霜华的原野上，车马之声络绎不绝。诸位夫人争先恐后地致送精美物品，以供布施诵经僧众。",
+    "units": [
+      {
+        "source_text": "到了十月里，紫夫人为源氏祝寿，在嵯峨野的佛堂里举办药师佛供养。",
+        "zh": [
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "十",
+            "r": "shí",
+            "g": "attributive"
+          },
+          {
+            "t": "月",
+            "r": "yuè",
+            "g": "object"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "紫",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "夫",
+            "r": "fū",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "为",
+            "r": "wèi",
+            "g": "adverbial"
+          },
+          {
+            "t": "源",
+            "r": "yuán",
+            "g": "object"
+          },
+          {
+            "t": "氏",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "祝",
+            "r": "zhù",
+            "g": "predicate"
+          },
+          {
+            "t": "寿",
+            "r": "shòu",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "嵯",
+            "r": "cuó",
+            "g": "adverbial"
+          },
+          {
+            "t": "峨",
+            "r": "é",
+            "g": "adverbial"
+          },
+          {
+            "t": "野",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "佛",
+            "r": "fó",
+            "g": "adverbial"
+          },
+          {
+            "t": "堂",
+            "r": "táng",
+            "g": "adverbial"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "举",
+            "r": "jǔ",
+            "g": "predicate"
+          },
+          {
+            "t": "办",
+            "r": "bàn",
+            "g": "predicate"
+          },
+          {
+            "t": "药",
+            "r": "yào",
+            "g": "object"
+          },
+          {
+            "t": "师",
+            "r": "shī",
+            "g": "object"
+          },
+          {
+            "t": "佛",
+            "r": "fó",
+            "g": "object"
+          },
+          {
+            "t": "供",
+            "r": "gòng",
+            "g": "object"
+          },
+          {
+            "t": "养",
+            "r": "yǎng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "十",
+              "r": "じゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "月",
+              "r": "がつ",
+              "g": "object"
+            },
+            {
+              "t": "になると、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "紫",
+              "r": "むらさき",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "上",
+              "r": "うえ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "源",
+              "r": "げん",
+              "g": "object"
+            },
+            {
+              "t": "氏",
+              "r": "じ",
+              "g": "object"
+            },
+            {
+              "t": "のため",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "賀",
+              "r": "が",
+              "g": "predicate"
+            },
+            {
+              "t": "寿",
+              "r": "じゅ",
+              "g": "object"
+            },
+            {
+              "t": "に、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "嵯",
+              "r": "さ",
+              "g": "adverbial"
+            },
+            {
+              "t": "峨",
+              "r": "が",
+              "g": "adverbial"
+            },
+            {
+              "t": "野",
+              "r": "の",
+              "g": "adverbial"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "仏",
+              "r": "ぶつ",
+              "g": "adverbial"
+            },
+            {
+              "t": "堂",
+              "r": "どう",
+              "g": "adverbial"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "薬",
+              "r": "やく",
+              "g": "object"
+            },
+            {
+              "t": "師",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "仏",
+              "r": "ぶつ",
+              "g": "object"
+            },
+            {
+              "t": "供",
+              "r": "く",
+              "g": "object"
+            },
+            {
+              "t": "養",
+              "r": "よう",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "営",
+              "r": "いとな",
+              "g": "predicate"
+            },
+            {
+              "t": "んだ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "因为源氏恳切劝诫她不可过分铺张，所以一切布置都秘密进行。",
+        "zh": [
+          {
+            "t": "因",
+            "r": "yīn",
+            "g": "function"
+          },
+          {
+            "t": "为",
+            "r": "wèi",
+            "g": "function"
+          },
+          {
+            "t": "源",
+            "r": "yuán",
+            "g": "subject"
+          },
+          {
+            "t": "氏",
+            "r": "shì",
+            "g": "subject"
+          },
+          {
+            "t": "恳",
+            "r": "kěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "切",
+            "r": "qiè",
+            "g": "adverbial"
+          },
+          {
+            "t": "劝",
+            "r": "quàn",
+            "g": "predicate"
+          },
+          {
+            "t": "诫",
+            "r": "jiè",
+            "g": "predicate"
+          },
+          {
+            "t": "她",
+            "r": "tā",
+            "g": "object"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "predicate"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "adverbial"
+          },
+          {
+            "t": "分",
+            "r": "fèn",
+            "g": "adverbial"
+          },
+          {
+            "t": "铺",
+            "r": "pū",
+            "g": "predicate"
+          },
+          {
+            "t": "张",
+            "r": "zhāng",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "所",
+            "r": "suǒ",
+            "g": "function"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "function"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "attributive"
+          },
+          {
+            "t": "切",
+            "r": "qiè",
+            "g": "attributive"
+          },
+          {
+            "t": "布",
+            "r": "bù",
+            "g": "subject"
+          },
+          {
+            "t": "置",
+            "r": "zhì",
+            "g": "subject"
+          },
+          {
+            "t": "都",
+            "r": "dōu",
+            "g": "adverbial"
+          },
+          {
+            "t": "秘",
+            "r": "mì",
+            "g": "adverbial"
+          },
+          {
+            "t": "密",
+            "r": "mì",
+            "g": "adverbial"
+          },
+          {
+            "t": "进",
+            "r": "jìn",
+            "g": "predicate"
+          },
+          {
+            "t": "行",
+            "r": "xíng",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "源",
+              "r": "げん",
+              "g": "subject"
+            },
+            {
+              "t": "氏",
+              "r": "じ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "彼",
+              "r": "かの",
+              "g": "object"
+            },
+            {
+              "t": "女",
+              "r": "じょ",
+              "g": "object"
+            },
+            {
+              "t": "に、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "決",
+              "r": "けっ",
+              "g": "adverbial"
+            },
+            {
+              "t": "して",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "度",
+              "r": "ど",
+              "g": "adverbial"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "越",
+              "r": "こ",
+              "g": "predicate"
+            },
+            {
+              "t": "して",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "はならぬと",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "心",
+              "r": "こころ",
+              "g": "adverbial"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "尽",
+              "r": "つ",
+              "g": "adverbial"
+            },
+            {
+              "t": "くして",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "諫",
+              "r": "いさ",
+              "g": "predicate"
+            },
+            {
+              "t": "めたので、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "準",
+              "r": "じゅん",
+              "g": "subject"
+            },
+            {
+              "t": "備",
+              "r": "び",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "すべて",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "秘",
+              "r": "ひ",
+              "g": "adverbial"
+            },
+            {
+              "t": "密",
+              "r": "みつ",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "進",
+              "r": "すす",
+              "g": "predicate"
+            },
+            {
+              "t": "められた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "然而也很体面，佛像、经盒和包经卷的竹箦都极精美，",
+        "zh": [
+          {
+            "t": "然",
+            "r": "rán",
+            "g": "function"
+          },
+          {
+            "t": "而",
+            "r": "ér",
+            "g": "function"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "很",
+            "r": "hěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "体",
+            "r": "tǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "面",
+            "r": "miàn",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "佛",
+            "r": "fó",
+            "g": "subject"
+          },
+          {
+            "t": "像",
+            "r": "xiàng",
+            "g": "subject"
+          },
+          {
+            "t": "、",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "经",
+            "r": "jīng",
+            "g": "subject"
+          },
+          {
+            "t": "盒",
+            "r": "hé",
+            "g": "subject"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "function"
+          },
+          {
+            "t": "包",
+            "r": "bāo",
+            "g": "attributive"
+          },
+          {
+            "t": "经",
+            "r": "jīng",
+            "g": "object"
+          },
+          {
+            "t": "卷",
+            "r": "juàn",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "竹",
+            "r": "zhú",
+            "g": "subject"
+          },
+          {
+            "t": "箦",
+            "r": "zé",
+            "g": "subject"
+          },
+          {
+            "t": "都",
+            "r": "dōu",
+            "g": "adverbial"
+          },
+          {
+            "t": "极",
+            "r": "jí",
+            "g": "adverbial"
+          },
+          {
+            "t": "精",
+            "r": "jīng",
+            "g": "predicate"
+          },
+          {
+            "t": "美",
+            "r": "měi",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "それでも",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "儀",
+              "r": "ぎ",
+              "g": "predicate"
+            },
+            {
+              "t": "式",
+              "r": "しき",
+              "g": "predicate"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "たいそう",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "立",
+              "r": "りっ",
+              "g": "predicate"
+            },
+            {
+              "t": "派",
+              "r": "ぱ",
+              "g": "predicate"
+            },
+            {
+              "t": "で、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "仏",
+              "r": "ぶつ",
+              "g": "subject"
+            },
+            {
+              "t": "像",
+              "r": "ぞう",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "経",
+              "r": "きょう",
+              "g": "subject"
+            },
+            {
+              "t": "箱",
+              "r": "ばこ",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "経",
+              "r": "きょう",
+              "g": "object"
+            },
+            {
+              "t": "巻",
+              "r": "かん",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "包",
+              "r": "つつ",
+              "g": "attributive"
+            },
+            {
+              "t": "む",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "竹",
+              "r": "たけ",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "簀",
+              "r": "す",
+              "g": "subject"
+            },
+            {
+              "t": "まで、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "皆",
+              "r": "みな",
+              "g": "adverbial"
+            },
+            {
+              "t": "きわめて",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "精",
+              "r": "せい",
+              "g": "predicate"
+            },
+            {
+              "t": "妙",
+              "r": "みょう",
+              "g": "predicate"
+            },
+            {
+              "t": "だった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "使人走进佛堂，似觉真个到了西方极乐世界。",
+        "zh": [
+          {
+            "t": "使",
+            "r": "shǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "object"
+          },
+          {
+            "t": "走",
+            "r": "zǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "进",
+            "r": "jìn",
+            "g": "predicate"
+          },
+          {
+            "t": "佛",
+            "r": "fó",
+            "g": "object"
+          },
+          {
+            "t": "堂",
+            "r": "táng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "似",
+            "r": "sì",
+            "g": "adverbial"
+          },
+          {
+            "t": "觉",
+            "r": "jué",
+            "g": "predicate"
+          },
+          {
+            "t": "真",
+            "r": "zhēn",
+            "g": "adverbial"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "adverbial"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "西",
+            "r": "xī",
+            "g": "object"
+          },
+          {
+            "t": "方",
+            "r": "fāng",
+            "g": "object"
+          },
+          {
+            "t": "极",
+            "r": "jí",
+            "g": "object"
+          },
+          {
+            "t": "乐",
+            "r": "lè",
+            "g": "object"
+          },
+          {
+            "t": "世",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "界",
+            "r": "jiè",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "仏",
+              "r": "ぶつ",
+              "g": "object"
+            },
+            {
+              "t": "堂",
+              "r": "どう",
+              "g": "object"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "足",
+              "r": "あし",
+              "g": "predicate"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "踏",
+              "r": "ふ",
+              "g": "predicate"
+            },
+            {
+              "t": "み",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "入",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "れさせると、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "まるで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "adverbial"
+            },
+            {
+              "t": "当",
+              "r": "とう",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "西",
+              "r": "さい",
+              "g": "object"
+            },
+            {
+              "t": "方",
+              "r": "ほう",
+              "g": "object"
+            },
+            {
+              "t": "極",
+              "r": "ごく",
+              "g": "object"
+            },
+            {
+              "t": "楽",
+              "r": "らく",
+              "g": "object"
+            },
+            {
+              "t": "世",
+              "r": "せ",
+              "g": "object"
+            },
+            {
+              "t": "界",
+              "r": "かい",
+              "g": "object"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "来",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "たように",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "思",
+              "r": "おも",
+              "g": "predicate"
+            },
+            {
+              "t": "われた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "所诵的是《最胜王经》《金刚般若经》和《寿命经》，规模甚大。",
+        "zh": [
+          {
+            "t": "所",
+            "r": "suǒ",
+            "g": "function"
+          },
+          {
+            "t": "诵",
+            "r": "sòng",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "《",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "最",
+            "r": "zuì",
+            "g": "object"
+          },
+          {
+            "t": "胜",
+            "r": "shèng",
+            "g": "object"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "object"
+          },
+          {
+            "t": "经",
+            "r": "jīng",
+            "g": "object"
+          },
+          {
+            "t": "》",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "《",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "金",
+            "r": "jīn",
+            "g": "object"
+          },
+          {
+            "t": "刚",
+            "r": "gāng",
+            "g": "object"
+          },
+          {
+            "t": "般",
+            "r": "bō",
+            "g": "object"
+          },
+          {
+            "t": "若",
+            "r": "rě",
+            "g": "object"
+          },
+          {
+            "t": "经",
+            "r": "jīng",
+            "g": "object"
+          },
+          {
+            "t": "》",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "function"
+          },
+          {
+            "t": "《",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "寿",
+            "r": "shòu",
+            "g": "object"
+          },
+          {
+            "t": "命",
+            "r": "mìng",
+            "g": "object"
+          },
+          {
+            "t": "经",
+            "r": "jīng",
+            "g": "object"
+          },
+          {
+            "t": "》",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "规",
+            "r": "guī",
+            "g": "subject"
+          },
+          {
+            "t": "模",
+            "r": "mó",
+            "g": "subject"
+          },
+          {
+            "t": "甚",
+            "r": "shèn",
+            "g": "adverbial"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "読",
+              "r": "どく",
+              "g": "predicate"
+            },
+            {
+              "t": "誦",
+              "r": "じゅ",
+              "g": "predicate"
+            },
+            {
+              "t": "されたのは、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "『",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "最",
+              "r": "さい",
+              "g": "object"
+            },
+            {
+              "t": "勝",
+              "r": "しょう",
+              "g": "object"
+            },
+            {
+              "t": "王",
+              "r": "おう",
+              "g": "object"
+            },
+            {
+              "t": "経",
+              "r": "きょう",
+              "g": "object"
+            },
+            {
+              "t": "』",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "『",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "金",
+              "r": "こん",
+              "g": "object"
+            },
+            {
+              "t": "剛",
+              "r": "ごう",
+              "g": "object"
+            },
+            {
+              "t": "般",
+              "r": "はん",
+              "g": "object"
+            },
+            {
+              "t": "若",
+              "r": "にゃ",
+              "g": "object"
+            },
+            {
+              "t": "経",
+              "r": "きょう",
+              "g": "object"
+            },
+            {
+              "t": "』",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "そして",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "『",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "寿",
+              "r": "じゅ",
+              "g": "object"
+            },
+            {
+              "t": "命",
+              "r": "みょう",
+              "g": "object"
+            },
+            {
+              "t": "経",
+              "r": "きょう",
+              "g": "object"
+            },
+            {
+              "t": "』",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "で、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "規",
+              "r": "き",
+              "g": "subject"
+            },
+            {
+              "t": "模",
+              "r": "ぼ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "たいへん",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "predicate"
+            },
+            {
+              "t": "きかった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "满朝公卿王侯都来参与祈祷，半是为了这佛堂的景象美不可言，",
+        "zh": [
+          {
+            "t": "满",
+            "r": "mǎn",
+            "g": "attributive"
+          },
+          {
+            "t": "朝",
+            "r": "cháo",
+            "g": "attributive"
+          },
+          {
+            "t": "公",
+            "r": "gōng",
+            "g": "subject"
+          },
+          {
+            "t": "卿",
+            "r": "qīng",
+            "g": "subject"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "subject"
+          },
+          {
+            "t": "侯",
+            "r": "hóu",
+            "g": "subject"
+          },
+          {
+            "t": "都",
+            "r": "dōu",
+            "g": "adverbial"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "predicate"
+          },
+          {
+            "t": "参",
+            "r": "cān",
+            "g": "predicate"
+          },
+          {
+            "t": "与",
+            "r": "yù",
+            "g": "predicate"
+          },
+          {
+            "t": "祈",
+            "r": "qí",
+            "g": "object"
+          },
+          {
+            "t": "祷",
+            "r": "dǎo",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "半",
+            "r": "bàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "为",
+            "r": "wèi",
+            "g": "function"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "attributive"
+          },
+          {
+            "t": "佛",
+            "r": "fó",
+            "g": "attributive"
+          },
+          {
+            "t": "堂",
+            "r": "táng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "景",
+            "r": "jǐng",
+            "g": "subject"
+          },
+          {
+            "t": "象",
+            "r": "xiàng",
+            "g": "subject"
+          },
+          {
+            "t": "美",
+            "r": "měi",
+            "g": "predicate"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "predicate"
+          },
+          {
+            "t": "言",
+            "r": "yán",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "朝",
+              "r": "ちょう",
+              "g": "attributive"
+            },
+            {
+              "t": "廷",
+              "r": "てい",
+              "g": "attributive"
+            },
+            {
+              "t": "中",
+              "r": "じゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "公",
+              "r": "く",
+              "g": "subject"
+            },
+            {
+              "t": "卿",
+              "r": "ぎょう",
+              "g": "subject"
+            },
+            {
+              "t": "や",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "王",
+              "r": "おう",
+              "g": "subject"
+            },
+            {
+              "t": "侯",
+              "r": "こう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "皆",
+              "r": "みな",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "祈",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "祷",
+              "r": "とう",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "参",
+              "r": "さん",
+              "g": "predicate"
+            },
+            {
+              "t": "列",
+              "r": "れつ",
+              "g": "predicate"
+            },
+            {
+              "t": "した。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "その",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "半",
+              "r": "なか",
+              "g": "adverbial"
+            },
+            {
+              "t": "ばは、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "この",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "仏",
+              "r": "ぶつ",
+              "g": "attributive"
+            },
+            {
+              "t": "堂",
+              "r": "どう",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "景",
+              "r": "けい",
+              "g": "subject"
+            },
+            {
+              "t": "色",
+              "r": "しき",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "いようもなく",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "美",
+              "r": "うつく",
+              "g": "predicate"
+            },
+            {
+              "t": "しいためだった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "从穿过红叶林、走进嵯峨野开始，一路上都是美丽的秋景，",
+        "zh": [
+          {
+            "t": "从",
+            "r": "cóng",
+            "g": "function"
+          },
+          {
+            "t": "穿",
+            "r": "chuān",
+            "g": "predicate"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "predicate"
+          },
+          {
+            "t": "红",
+            "r": "hóng",
+            "g": "attributive"
+          },
+          {
+            "t": "叶",
+            "r": "yè",
+            "g": "object"
+          },
+          {
+            "t": "林",
+            "r": "lín",
+            "g": "object"
+          },
+          {
+            "t": "、",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "走",
+            "r": "zǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "进",
+            "r": "jìn",
+            "g": "predicate"
+          },
+          {
+            "t": "嵯",
+            "r": "cuó",
+            "g": "object"
+          },
+          {
+            "t": "峨",
+            "r": "é",
+            "g": "object"
+          },
+          {
+            "t": "野",
+            "r": "yě",
+            "g": "object"
+          },
+          {
+            "t": "开",
+            "r": "kāi",
+            "g": "predicate"
+          },
+          {
+            "t": "始",
+            "r": "shǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "adverbial"
+          },
+          {
+            "t": "路",
+            "r": "lù",
+            "g": "adverbial"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "都",
+            "r": "dōu",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "美",
+            "r": "měi",
+            "g": "attributive"
+          },
+          {
+            "t": "丽",
+            "r": "lì",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "秋",
+            "r": "qiū",
+            "g": "object"
+          },
+          {
+            "t": "景",
+            "r": "jǐng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "紅",
+              "r": "もみ",
+              "g": "attributive"
+            },
+            {
+              "t": "葉",
+              "r": "じ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "林",
+              "r": "はやし",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "抜",
+              "r": "ぬ",
+              "g": "predicate"
+            },
+            {
+              "t": "け、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "嵯",
+              "r": "さ",
+              "g": "object"
+            },
+            {
+              "t": "峨",
+              "r": "が",
+              "g": "object"
+            },
+            {
+              "t": "野",
+              "r": "の",
+              "g": "object"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "入",
+              "r": "はい",
+              "g": "predicate"
+            },
+            {
+              "t": "るころから、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "道",
+              "r": "みち",
+              "g": "adverbial"
+            },
+            {
+              "t": "中",
+              "r": "なか",
+              "g": "adverbial"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "どこも",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "美",
+              "r": "うつく",
+              "g": "attributive"
+            },
+            {
+              "t": "しい",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "秋",
+              "r": "あき",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "景",
+              "r": "け",
+              "g": "object"
+            },
+            {
+              "t": "色",
+              "r": "しき",
+              "g": "object"
+            },
+            {
+              "t": "ばかりで、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "所以大家争来参加。",
+        "zh": [
+          {
+            "t": "所",
+            "r": "suǒ",
+            "g": "function"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "function"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "subject"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "subject"
+          },
+          {
+            "t": "争",
+            "r": "zhēng",
+            "g": "adverbial"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "predicate"
+          },
+          {
+            "t": "参",
+            "r": "cān",
+            "g": "predicate"
+          },
+          {
+            "t": "加",
+            "r": "jiā",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そのため",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "subject"
+            },
+            {
+              "t": "々",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "先",
+              "r": "さき",
+              "g": "adverbial"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "争",
+              "r": "あらそ",
+              "g": "adverbial"
+            },
+            {
+              "t": "うように",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "やって",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "来",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "て",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "参",
+              "r": "さん",
+              "g": "predicate"
+            },
+            {
+              "t": "加",
+              "r": "か",
+              "g": "predicate"
+            },
+            {
+              "t": "した。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "满目霜华的原野上，车马之声络绎不绝。",
+        "zh": [
+          {
+            "t": "满",
+            "r": "mǎn",
+            "g": "attributive"
+          },
+          {
+            "t": "目",
+            "r": "mù",
+            "g": "attributive"
+          },
+          {
+            "t": "霜",
+            "r": "shuāng",
+            "g": "attributive"
+          },
+          {
+            "t": "华",
+            "r": "huá",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "原",
+            "r": "yuán",
+            "g": "adverbial"
+          },
+          {
+            "t": "野",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "车",
+            "r": "chē",
+            "g": "subject"
+          },
+          {
+            "t": "马",
+            "r": "mǎ",
+            "g": "subject"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "function"
+          },
+          {
+            "t": "声",
+            "r": "shēng",
+            "g": "subject"
+          },
+          {
+            "t": "络",
+            "r": "luò",
+            "g": "adverbial"
+          },
+          {
+            "t": "绎",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "绝",
+            "r": "jué",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "霜",
+              "r": "しも",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "白",
+              "r": "しろ",
+              "g": "attributive"
+            },
+            {
+              "t": "さが",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "attributive"
+            },
+            {
+              "t": "面",
+              "r": "めん",
+              "g": "attributive"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "広",
+              "r": "ひろ",
+              "g": "attributive"
+            },
+            {
+              "t": "がる",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "野",
+              "r": "の",
+              "g": "adverbial"
+            },
+            {
+              "t": "原",
+              "r": "はら",
+              "g": "adverbial"
+            },
+            {
+              "t": "で、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "車",
+              "r": "くるま",
+              "g": "subject"
+            },
+            {
+              "t": "や",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "馬",
+              "r": "うま",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "音",
+              "r": "おと",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "絶",
+              "r": "た",
+              "g": "predicate"
+            },
+            {
+              "t": "え",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "間",
+              "r": "ま",
+              "g": "predicate"
+            },
+            {
+              "t": "なく",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "続",
+              "r": "つづ",
+              "g": "predicate"
+            },
+            {
+              "t": "いた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "诸位夫人争先恐后地致送精美物品，以供布施诵经僧众。",
+        "zh": [
+          {
+            "t": "诸",
+            "r": "zhū",
+            "g": "attributive"
+          },
+          {
+            "t": "位",
+            "r": "wèi",
+            "g": "attributive"
+          },
+          {
+            "t": "夫",
+            "r": "fū",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "争",
+            "r": "zhēng",
+            "g": "adverbial"
+          },
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "恐",
+            "r": "kǒng",
+            "g": "adverbial"
+          },
+          {
+            "t": "后",
+            "r": "hòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "致",
+            "r": "zhì",
+            "g": "predicate"
+          },
+          {
+            "t": "送",
+            "r": "sòng",
+            "g": "predicate"
+          },
+          {
+            "t": "精",
+            "r": "jīng",
+            "g": "attributive"
+          },
+          {
+            "t": "美",
+            "r": "měi",
+            "g": "attributive"
+          },
+          {
+            "t": "物",
+            "r": "wù",
+            "g": "object"
+          },
+          {
+            "t": "品",
+            "r": "pǐn",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "function"
+          },
+          {
+            "t": "供",
+            "r": "gōng",
+            "g": "predicate"
+          },
+          {
+            "t": "布",
+            "r": "bù",
+            "g": "object"
+          },
+          {
+            "t": "施",
+            "r": "shī",
+            "g": "object"
+          },
+          {
+            "t": "诵",
+            "r": "sòng",
+            "g": "attributive"
+          },
+          {
+            "t": "经",
+            "r": "jīng",
+            "g": "attributive"
+          },
+          {
+            "t": "僧",
+            "r": "sēng",
+            "g": "object"
+          },
+          {
+            "t": "众",
+            "r": "zhòng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "夫",
+              "r": "ふ",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "subject"
+            },
+            {
+              "t": "たちも",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "先",
+              "r": "さき",
+              "g": "adverbial"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "争",
+              "r": "あらそ",
+              "g": "adverbial"
+            },
+            {
+              "t": "って、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "精",
+              "r": "せい",
+              "g": "attributive"
+            },
+            {
+              "t": "美",
+              "r": "び",
+              "g": "attributive"
+            },
+            {
+              "t": "な",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "品",
+              "r": "しな",
+              "g": "object"
+            },
+            {
+              "t": "々",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "贈",
+              "r": "おく",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "読",
+              "r": "ど",
+              "g": "attributive"
+            },
+            {
+              "t": "経",
+              "r": "きょう",
+              "g": "attributive"
+            },
+            {
+              "t": "する",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "僧",
+              "r": "そう",
+              "g": "object"
+            },
+            {
+              "t": "たちへの",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "布",
+              "r": "ふ",
+              "g": "object"
+            },
+            {
+              "t": "施",
+              "r": "せ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "供",
+              "r": "そな",
+              "g": "predicate"
+            },
+            {
+              "t": "えるためである。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
