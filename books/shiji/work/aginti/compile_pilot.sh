@@ -6,6 +6,7 @@ RENDERER="$SCRIPT_DIR/render_three_layer_tex.py"
 ROOT_DIR="$(cd "$SCRIPT_DIR/../../../../" && pwd)"
 BUILD_DIR="$ROOT_DIR/build/shiji-aginti"
 CHUNKS_DIR="$ROOT_DIR/data/interlinear/shiji-aginti/chunks"
+COVER_IMAGE="$ROOT_DIR/assets/covers/shiji-aginti/cover.png"
 
 JP_COLOR="$BUILD_DIR/jp-main/color"
 JP_BW="$BUILD_DIR/jp-main/blackwhite"
@@ -60,7 +61,11 @@ compile_dir() {
   if [[ "$MODE" == "--blackwhite" ]]; then
     bw_flag="--bw"
   fi
-  python3 "$RENDERER" --direction "$direction" $bw_flag --start 1 --limit "$LIMIT" --out-dir "$dir"
+  local cover_args=()
+  if [[ "$MODE" != "--blackwhite" && -f "$COVER_IMAGE" ]]; then
+    cover_args=(--cover-image "$COVER_IMAGE")
+  fi
+  python3 "$RENDERER" --direction "$direction" $bw_flag --start 1 --limit "$LIMIT" --out-dir "$dir" "${cover_args[@]}"
   cd "$dir"
   xelatex -interaction=nonstopmode book.tex
   xelatex -interaction=nonstopmode book.tex

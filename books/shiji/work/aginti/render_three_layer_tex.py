@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 from typing import Any
@@ -75,7 +76,11 @@ def render_unit(unit: dict, direction: str) -> str:
     return "\n".join(lines)
 
 
-def produce_tex(chunk_ids: list[str], direction: str, bw: bool) -> str:
+def tex_path(path: str) -> str:
+    return tex_escape(path.replace("\\", "/"))
+
+
+def produce_tex(chunk_ids: list[str], direction: str, bw: bool, cover_image: str = "") -> str:
     """Produce complete LaTeX document."""
     tex_lines = [r"\documentclass[10pt]{book}", r"\input{style.tex}"]
     if bw:
@@ -83,15 +88,21 @@ def produce_tex(chunk_ids: list[str], direction: str, bw: bool) -> str:
     tex_lines.append(r"\begin{document}")
     tex_lines.append(r"\pagestyle{empty}")
     tex_lines.append("")
-    tex_lines.append(r"\begin{center}")
-    tex_lines.append(r"{\large\jpfont \zhcnruby{史}{shǐ}\zhcnruby{記}{jì}}")
-    tex_lines.append(r"\vspace{0.5em}")
-    tex_lines.append(r"{\normalsize \zhcnruby{司}{sī}\zhcnruby{馬}{mǎ}\zhcnruby{遷}{qiān}}")
-    tex_lines.append(r"\vspace{1em}")
-    tex_lines.append(r"{\footnotesize AgInTiFlow curated}")
-    tex_lines.append(r"{\footnotesize https://flow.lazying.art}")
-    tex_lines.append(r"{\footnotesize powered by LazyingArt}")
-    tex_lines.append(r"\end{center}")
+    if cover_image:
+        tex_lines.append(r"\newgeometry{margin=0pt}")
+        tex_lines.append(r"\noindent\includegraphics[width=\paperwidth,height=\paperheight]{" + tex_path(cover_image) + r"}")
+        tex_lines.append(r"\clearpage")
+        tex_lines.append(r"\restoregeometry")
+    else:
+        tex_lines.append(r"\begin{center}")
+        tex_lines.append(r"{\large\jpfont \zhcnruby{史}{shǐ}\zhcnruby{記}{jì}}")
+        tex_lines.append(r"\vspace{0.5em}")
+        tex_lines.append(r"{\normalsize \zhcnruby{司}{sī}\zhcnruby{馬}{mǎ}\zhcnruby{遷}{qiān}}")
+        tex_lines.append(r"\vspace{1em}")
+        tex_lines.append(r"{\footnotesize AgInTiFlow curated}")
+        tex_lines.append(r"{\footnotesize https://flow.lazying.art}")
+        tex_lines.append(r"{\footnotesize powered by LazyingArt}")
+        tex_lines.append(r"\end{center}")
     tex_lines.append(r"\tableofcontents")
     tex_lines.append(r"\clearpage")
     tex_lines.append(r"\pagestyle{fancy}")
@@ -125,6 +136,7 @@ def write_style_tex(out_dir: Path) -> None:
 \usepackage{fontspec}
 \usepackage{xeCJK}
 \usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage{titlesec}
 \usepackage{fancyhdr}
 \usepackage{hyperref}
@@ -211,6 +223,7 @@ def main() -> int:
     parser.add_argument("--start", type=int, default=1)
     parser.add_argument("--limit", type=int, default=1)
     parser.add_argument("--out-dir", help="Output directory for TeX")
+    parser.add_argument("--cover-image", default="", help="Workspace-relative or absolute cover image path")
     args = parser.parse_args()
 
     ids = [f"shiji-chunk-{n:04d}" for n in range(args.start, args.start + args.limit)]
@@ -222,7 +235,14 @@ def main() -> int:
 
     write_style_tex(out_dir)
 
-    tex = produce_tex(ids, args.direction, args.bw)
+    cover_image = ""
+    if args.cover_image and not args.bw:
+        cover = Path(args.cover_image)
+        if not cover.is_absolute():
+            cover = Path.cwd() / cover
+        if cover.exists():
+            cover_image = os.path.relpath(cover, out_dir)
+    tex = produce_tex(ids, args.direction, args.bw, cover_image)
     tex_path = out_dir / "book.tex"
     tex_path.write_text(tex, encoding="utf-8")
     print(f"Wrote {tex_path}")
