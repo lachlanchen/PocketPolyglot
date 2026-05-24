@@ -1,0 +1,849 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p03762",
+  "source_text": "张员外是个精明人,他认为只要是女子好,门户不相当没得好大回事,就对算命先生说:拜托你啦,媳妇说成后,当重谢先生.",
+  "source_sha256": "ca9c005294fcb5cdf054f0f00a355c8fc136f4f7c0fc41e2cc03d3638de35ba7",
+  "source_normalized_sha256": "ca9c005294fcb5cdf054f0f00a355c8fc136f4f7c0fc41e2cc03d3638de35ba7",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 108,
+    "grammar_token_total": 108,
+    "unit_count": 4
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-3762",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "风俗传说",
+    "title_zh": [
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "风",
+        "r": "fēng",
+        "g": "attributive"
+      },
+      {
+        "t": "俗",
+        "r": "sú",
+        "g": "attributive"
+      },
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "風",
+        "r": "ふう",
+        "g": "attributive"
+      },
+      {
+        "t": "俗",
+        "r": "ぞく",
+        "g": "attributive"
+      },
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-风俗传说-338-族灶王和神奉节县",
+    "title_zh": [
+      {
+        "t": "3",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "3",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "8",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "族",
+        "r": "zú",
+        "g": "attributive"
+      },
+      {
+        "t": "灶",
+        "r": "zào",
+        "g": "attributive"
+      },
+      {
+        "t": "王",
+        "r": "wáng",
+        "g": "object"
+      },
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "function"
+      },
+      {
+        "t": "神",
+        "r": "shén",
+        "g": "object"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "奉",
+        "r": "fèng",
+        "g": "attributive"
+      },
+      {
+        "t": "节",
+        "r": "jié",
+        "g": "attributive"
+      },
+      {
+        "t": "县",
+        "r": "xiàn",
+        "g": "object"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "3",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "3",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "8",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "族",
+        "r": "ぞく",
+        "g": "attributive"
+      },
+      {
+        "t": "竈",
+        "r": "かまど",
+        "g": "attributive"
+      },
+      {
+        "t": "王",
+        "r": "おう",
+        "g": "object"
+      },
+      {
+        "t": "と",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "神",
+        "r": "かみ",
+        "g": "object"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "奉",
+        "r": "ほう",
+        "g": "attributive"
+      },
+      {
+        "t": "節",
+        "r": "せつ",
+        "g": "attributive"
+      },
+      {
+        "t": "県",
+        "r": "けん",
+        "g": "object"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p03762",
+    "source_text": "张员外是个精明人,他认为只要是女子好,门户不相当没得好大回事,就对算命先生说:拜托你啦,媳妇说成后,当重谢先生.",
+    "corrected_text": "张员外是个精明人，他认为只要是女子好，门户不相当没得好大回事，就对算命先生说：拜托你啦，媳妇说成后，当重谢先生。",
+    "units": [
+      {
+        "source_text": "张员外是个精明人，他认为只要是女子好，",
+        "zh": [
+          {
+            "t": "张",
+            "r": "zhāng",
+            "g": "subject"
+          },
+          {
+            "t": "员",
+            "r": "yuán",
+            "g": "subject"
+          },
+          {
+            "t": "外",
+            "r": "wài",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "function"
+          },
+          {
+            "t": "精",
+            "r": "jīng",
+            "g": "attributive"
+          },
+          {
+            "t": "明",
+            "r": "míng",
+            "g": "attributive"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "认",
+            "r": "rèn",
+            "g": "predicate"
+          },
+          {
+            "t": "为",
+            "r": "wéi",
+            "g": "predicate"
+          },
+          {
+            "t": "只",
+            "r": "zhǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "女",
+            "r": "nǚ",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "張",
+              "r": "ちょう",
+              "g": "subject"
+            },
+            {
+              "t": "員",
+              "r": "いん",
+              "g": "subject"
+            },
+            {
+              "t": "外",
+              "r": "がい",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "抜",
+              "r": "ぬ",
+              "g": "attributive"
+            },
+            {
+              "t": "け",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "目",
+              "r": "め",
+              "g": "attributive"
+            },
+            {
+              "t": "のない",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "object"
+            },
+            {
+              "t": "で、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "女",
+              "r": "おんな",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "良",
+              "r": "よ",
+              "g": "predicate"
+            },
+            {
+              "t": "ければよいと",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "考",
+              "r": "かんが",
+              "g": "predicate"
+            },
+            {
+              "t": "え、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "门户不相当没得好大回事，",
+        "zh": [
+          {
+            "t": "门",
+            "r": "mén",
+            "g": "subject"
+          },
+          {
+            "t": "户",
+            "r": "hù",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "相",
+            "r": "xiāng",
+            "g": "predicate"
+          },
+          {
+            "t": "当",
+            "r": "dāng",
+            "g": "predicate"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "attributive"
+          },
+          {
+            "t": "回",
+            "r": "huí",
+            "g": "object"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "家",
+              "r": "いえ",
+              "g": "subject"
+            },
+            {
+              "t": "柄",
+              "r": "がら",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "釣",
+              "r": "つ",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "合",
+              "r": "あ",
+              "g": "predicate"
+            },
+            {
+              "t": "わなくても、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "大",
+              "r": "たい",
+              "g": "attributive"
+            },
+            {
+              "t": "した",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "問",
+              "r": "もん",
+              "g": "object"
+            },
+            {
+              "t": "題",
+              "r": "だい",
+              "g": "object"
+            },
+            {
+              "t": "ではないと",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "就对算命先生说：拜托你啦，",
+        "zh": [
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "对",
+            "r": "duì",
+            "g": "adverbial"
+          },
+          {
+            "t": "算",
+            "r": "suàn",
+            "g": "object"
+          },
+          {
+            "t": "命",
+            "r": "mìng",
+            "g": "object"
+          },
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "object"
+          },
+          {
+            "t": "生",
+            "r": "sheng",
+            "g": "object"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "拜",
+            "r": "bài",
+            "g": "predicate"
+          },
+          {
+            "t": "托",
+            "r": "tuō",
+            "g": "predicate"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "object"
+          },
+          {
+            "t": "啦",
+            "r": "la",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そこで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "占",
+              "r": "うらな",
+              "g": "object"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "師",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "「どうか",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "頼",
+              "r": "たの",
+              "g": "predicate"
+            },
+            {
+              "t": "みますよ、",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "媳妇说成后，当重谢先生。",
+        "zh": [
+          {
+            "t": "媳",
+            "r": "xí",
+            "g": "subject"
+          },
+          {
+            "t": "妇",
+            "r": "fù",
+            "g": "subject"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "成",
+            "r": "chéng",
+            "g": "complement"
+          },
+          {
+            "t": "后",
+            "r": "hòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "当",
+            "r": "dāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "重",
+            "r": "zhòng",
+            "g": "adverbial"
+          },
+          {
+            "t": "谢",
+            "r": "xiè",
+            "g": "predicate"
+          },
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "object"
+          },
+          {
+            "t": "生",
+            "r": "sheng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "嫁",
+              "r": "よめ",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "話",
+              "r": "はなし",
+              "g": "subject"
+            },
+            {
+              "t": "がまとまったら、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "きっと",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "先",
+              "r": "せん",
+              "g": "object"
+            },
+            {
+              "t": "生",
+              "r": "せい",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "厚",
+              "r": "あつ",
+              "g": "adverbial"
+            },
+            {
+              "t": "く",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "礼",
+              "r": "れい",
+              "g": "predicate"
+            },
+            {
+              "t": "をします」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

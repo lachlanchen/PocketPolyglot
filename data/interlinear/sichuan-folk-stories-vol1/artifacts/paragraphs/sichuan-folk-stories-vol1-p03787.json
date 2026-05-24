@@ -1,0 +1,903 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p03787",
+  "source_text": "有一天,财主问张老么:这是为啥子?张老么说:我那松树粱是块宝地.财主信和以为真拿了自己的一亩肥田与张老么打了调。",
+  "source_sha256": "0c0f0eaeb63d973151058398a6dfcecca8e76e086635b29ca9ae6042ed974f03",
+  "source_normalized_sha256": "0c0f0eaeb63d973151058398a6dfcecca8e76e086635b29ca9ae6042ed974f03",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 122,
+    "grammar_token_total": 122,
+    "unit_count": 3
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-3787",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "风俗传说",
+    "title_zh": [
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "风",
+        "r": "fēng",
+        "g": "attributive"
+      },
+      {
+        "t": "俗",
+        "r": "sú",
+        "g": "attributive"
+      },
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "風",
+        "r": "ふう",
+        "g": "attributive"
+      },
+      {
+        "t": "俗",
+        "r": "ぞく",
+        "g": "attributive"
+      },
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-风俗传说-339-吃腊八刀蕉溪县",
+    "title_zh": [
+      {
+        "t": "3",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "3",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "9",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "吃",
+        "r": "chī",
+        "g": "predicate"
+      },
+      {
+        "t": "腊",
+        "r": "là",
+        "g": "object"
+      },
+      {
+        "t": "八",
+        "r": "bā",
+        "g": "object"
+      },
+      {
+        "t": "刀",
+        "r": "dāo",
+        "g": "object"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "蕉",
+        "r": "jiāo",
+        "g": "attributive"
+      },
+      {
+        "t": "溪",
+        "r": "xī",
+        "g": "attributive"
+      },
+      {
+        "t": "县",
+        "r": "xiàn",
+        "g": "object"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "3",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "3",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "9",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ". ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "臘",
+        "r": "ろう",
+        "g": "object"
+      },
+      {
+        "t": "八",
+        "r": "はち",
+        "g": "object"
+      },
+      {
+        "t": "刀",
+        "r": "とう",
+        "g": "object"
+      },
+      {
+        "t": "を",
+        "r": "",
+        "g": "object"
+      },
+      {
+        "t": "食",
+        "r": "た",
+        "g": "predicate"
+      },
+      {
+        "t": "べる",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "蕉",
+        "r": "しょう",
+        "g": "attributive"
+      },
+      {
+        "t": "溪",
+        "r": "けい",
+        "g": "attributive"
+      },
+      {
+        "t": "県",
+        "r": "けん",
+        "g": "object"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p03787",
+    "source_text": "有一天,财主问张老么:这是为啥子?张老么说:我那松树粱是块宝地.财主信和以为真拿了自己的一亩肥田与张老么打了调。",
+    "corrected_text": "有一天，财主问张老么：这是为啥子？张老么说：我那松树梁是块宝地。财主信以为真拿了自己的一亩肥田与张老么打了调。",
+    "units": [
+      {
+        "source_text": "有一天，财主问张老么：这是为啥子？",
+        "zh": [
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "adverbial"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "财",
+            "r": "cái",
+            "g": "subject"
+          },
+          {
+            "t": "主",
+            "r": "zhǔ",
+            "g": "subject"
+          },
+          {
+            "t": "问",
+            "r": "wèn",
+            "g": "predicate"
+          },
+          {
+            "t": "张",
+            "r": "zhāng",
+            "g": "object"
+          },
+          {
+            "t": "老",
+            "r": "lǎo",
+            "g": "object"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "object"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "为",
+            "r": "wèi",
+            "g": "predicate"
+          },
+          {
+            "t": "啥",
+            "r": "shá",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ある",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "日",
+              "r": "ひ",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "地",
+              "r": "じ",
+              "g": "subject"
+            },
+            {
+              "t": "主",
+              "r": "ぬし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "張",
+              "r": "ちょう",
+              "g": "object"
+            },
+            {
+              "t": "老",
+              "r": "ろう",
+              "g": "object"
+            },
+            {
+              "t": "么",
+              "r": "よう",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "尋",
+              "r": "たず",
+              "g": "predicate"
+            },
+            {
+              "t": "ねた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "これは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "どういう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "わけ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "だ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "张老么说：我那松树梁是块宝地。",
+        "zh": [
+          {
+            "t": "张",
+            "r": "zhāng",
+            "g": "subject"
+          },
+          {
+            "t": "老",
+            "r": "lǎo",
+            "g": "subject"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "subject"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "attributive"
+          },
+          {
+            "t": "松",
+            "r": "sōng",
+            "g": "subject"
+          },
+          {
+            "t": "树",
+            "r": "shù",
+            "g": "subject"
+          },
+          {
+            "t": "梁",
+            "r": "liáng",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "块",
+            "r": "kuài",
+            "g": "object"
+          },
+          {
+            "t": "宝",
+            "r": "bǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "張",
+              "r": "ちょう",
+              "g": "subject"
+            },
+            {
+              "t": "老",
+              "r": "ろう",
+              "g": "subject"
+            },
+            {
+              "t": "么",
+              "r": "よう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "あの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "松",
+              "r": "しょう",
+              "g": "subject"
+            },
+            {
+              "t": "樹",
+              "r": "じゅ",
+              "g": "subject"
+            },
+            {
+              "t": "梁",
+              "r": "りょう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "宝",
+              "r": "たから",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "土",
+              "r": "と",
+              "g": "object"
+            },
+            {
+              "t": "地",
+              "r": "ち",
+              "g": "object"
+            },
+            {
+              "t": "です",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "财主信以为真拿了自己的一亩肥田与张老么打了调。",
+        "zh": [
+          {
+            "t": "财",
+            "r": "cái",
+            "g": "subject"
+          },
+          {
+            "t": "主",
+            "r": "zhǔ",
+            "g": "subject"
+          },
+          {
+            "t": "信",
+            "r": "xìn",
+            "g": "predicate"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "为",
+            "r": "wéi",
+            "g": "predicate"
+          },
+          {
+            "t": "真",
+            "r": "zhēn",
+            "g": "complement"
+          },
+          {
+            "t": "拿",
+            "r": "ná",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "自",
+            "r": "zì",
+            "g": "attributive"
+          },
+          {
+            "t": "己",
+            "r": "jǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "object"
+          },
+          {
+            "t": "亩",
+            "r": "mǔ",
+            "g": "object"
+          },
+          {
+            "t": "肥",
+            "r": "féi",
+            "g": "attributive"
+          },
+          {
+            "t": "田",
+            "r": "tián",
+            "g": "object"
+          },
+          {
+            "t": "与",
+            "r": "yǔ",
+            "g": "adverbial"
+          },
+          {
+            "t": "张",
+            "r": "zhāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "老",
+            "r": "lǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "adverbial"
+          },
+          {
+            "t": "打",
+            "r": "dǎ",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "调",
+            "r": "diào",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "地",
+              "r": "じ",
+              "g": "subject"
+            },
+            {
+              "t": "主",
+              "r": "ぬし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "それを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "真",
+              "r": "ま",
+              "g": "complement"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "受",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "け",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "自",
+              "r": "じ",
+              "g": "attributive"
+            },
+            {
+              "t": "分",
+              "r": "ぶん",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "一",
+              "r": "いっ",
+              "g": "object"
+            },
+            {
+              "t": "畝",
+              "r": "せ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "肥",
+              "r": "こ",
+              "g": "attributive"
+            },
+            {
+              "t": "えた",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "田",
+              "r": "た",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "張",
+              "r": "ちょう",
+              "g": "adverbial"
+            },
+            {
+              "t": "老",
+              "r": "ろう",
+              "g": "adverbial"
+            },
+            {
+              "t": "么",
+              "r": "よう",
+              "g": "adverbial"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "交",
+              "r": "こう",
+              "g": "predicate"
+            },
+            {
+              "t": "換",
+              "r": "かん",
+              "g": "predicate"
+            },
+            {
+              "t": "した",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

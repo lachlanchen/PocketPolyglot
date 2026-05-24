@@ -1,0 +1,542 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p03672",
+  "source_text": "采永时间、地点:1987 年2月于孝县团结镇附记:",
+  "source_sha256": "b7f823d8e2c2041e8e6fd471fb97aba7fe22b4ed649ef1b5d708024b23039998",
+  "source_normalized_sha256": "0b4c5e48ec3100c6c5b2a1fc78113294e5c59d84c5e6e33e8154867cb8067962",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 43,
+    "grammar_token_total": 43,
+    "unit_count": 2
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-3672",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "风俗传说",
+    "title_zh": [
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "风",
+        "r": "fēng",
+        "g": "attributive"
+      },
+      {
+        "t": "俗",
+        "r": "sú",
+        "g": "attributive"
+      },
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "風",
+        "r": "ふう",
+        "g": "attributive"
+      },
+      {
+        "t": "俗",
+        "r": "ぞく",
+        "g": "attributive"
+      },
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-风俗传说-328-吼山歌送腰侣吃上午辑县",
+    "title_zh": [
+      {
+        "t": "328",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ". ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "吼",
+        "r": "hǒu",
+        "g": "predicate"
+      },
+      {
+        "t": "山",
+        "r": "shān",
+        "g": "object"
+      },
+      {
+        "t": "歌",
+        "r": "gē",
+        "g": "object"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "送",
+        "r": "sòng",
+        "g": "predicate"
+      },
+      {
+        "t": "腰",
+        "r": "yāo",
+        "g": "object"
+      },
+      {
+        "t": "侣",
+        "r": "lǚ",
+        "g": "object"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "吃",
+        "r": "chī",
+        "g": "predicate"
+      },
+      {
+        "t": "上",
+        "r": "shàng",
+        "g": "object"
+      },
+      {
+        "t": "午",
+        "r": "wǔ",
+        "g": "object"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "辑",
+        "r": "jí",
+        "g": "attributive"
+      },
+      {
+        "t": "县",
+        "r": "xiàn",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "328. ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "山",
+        "r": "やま",
+        "g": "object"
+      },
+      {
+        "t": "歌",
+        "r": "うた",
+        "g": "object"
+      },
+      {
+        "t": "を",
+        "r": "",
+        "g": "object"
+      },
+      {
+        "t": "吼",
+        "r": "ほ",
+        "g": "predicate"
+      },
+      {
+        "t": "える",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "・",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "腰",
+        "r": "よう",
+        "g": "object"
+      },
+      {
+        "t": "侶",
+        "r": "りょ",
+        "g": "object"
+      },
+      {
+        "t": "を",
+        "r": "",
+        "g": "object"
+      },
+      {
+        "t": "送",
+        "r": "おく",
+        "g": "predicate"
+      },
+      {
+        "t": "り、",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "午",
+        "r": "ご",
+        "g": "object"
+      },
+      {
+        "t": "前",
+        "r": "ぜん",
+        "g": "object"
+      },
+      {
+        "t": "を",
+        "r": "",
+        "g": "object"
+      },
+      {
+        "t": "食",
+        "r": "た",
+        "g": "predicate"
+      },
+      {
+        "t": "べる",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "輯",
+        "r": "しゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "県",
+        "r": "けん",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p03672",
+    "source_text": "采永时间、地点:1987 年2月于孝县团结镇附记:",
+    "corrected_text": "采录时间、地点:1987年2月于郫县团结镇附记:",
+    "units": [
+      {
+        "source_text": "采录时间、地点:1987年2月于郫县团结镇",
+        "zh": [
+          {
+            "t": "采",
+            "r": "cǎi",
+            "g": "attributive"
+          },
+          {
+            "t": "录",
+            "r": "lù",
+            "g": "attributive"
+          },
+          {
+            "t": "时",
+            "r": "shí",
+            "g": "object"
+          },
+          {
+            "t": "间",
+            "r": "jiān",
+            "g": "object"
+          },
+          {
+            "t": "、",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "object"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "object"
+          },
+          {
+            "t": ":",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "1987",
+            "r": "",
+            "g": "attributive"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "attributive"
+          },
+          {
+            "t": "2",
+            "r": "",
+            "g": "attributive"
+          },
+          {
+            "t": "月",
+            "r": "yuè",
+            "g": "attributive"
+          },
+          {
+            "t": "于",
+            "r": "yú",
+            "g": "adverbial"
+          },
+          {
+            "t": "郫",
+            "r": "pí",
+            "g": "adverbial"
+          },
+          {
+            "t": "县",
+            "r": "xiàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "团",
+            "r": "tuán",
+            "g": "adverbial"
+          },
+          {
+            "t": "结",
+            "r": "jié",
+            "g": "adverbial"
+          },
+          {
+            "t": "镇",
+            "r": "zhèn",
+            "g": "adverbial"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "採",
+              "r": "さい",
+              "g": "attributive"
+            },
+            {
+              "t": "録",
+              "r": "ろく",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "時",
+              "r": "じ",
+              "g": "object"
+            },
+            {
+              "t": "間",
+              "r": "かん",
+              "g": "object"
+            },
+            {
+              "t": "・",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "場",
+              "r": "ば",
+              "g": "object"
+            },
+            {
+              "t": "所",
+              "r": "しょ",
+              "g": "object"
+            },
+            {
+              "t": "：1987",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "年",
+              "r": "ねん",
+              "g": "attributive"
+            },
+            {
+              "t": "2",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "月",
+              "r": "がつ",
+              "g": "attributive"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "郫",
+              "r": "ひ",
+              "g": "adverbial"
+            },
+            {
+              "t": "県",
+              "r": "けん",
+              "g": "adverbial"
+            },
+            {
+              "t": "団",
+              "r": "だん",
+              "g": "adverbial"
+            },
+            {
+              "t": "結",
+              "r": "けつ",
+              "g": "adverbial"
+            },
+            {
+              "t": "鎮",
+              "r": "ちん",
+              "g": "adverbial"
+            },
+            {
+              "t": "にて",
+              "r": "",
+              "g": "adverbial"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "附记:",
+        "zh": [
+          {
+            "t": "附",
+            "r": "fù",
+            "g": "attributive"
+          },
+          {
+            "t": "记",
+            "r": "jì",
+            "g": "object"
+          },
+          {
+            "t": ":",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "付",
+              "r": "ふ",
+              "g": "attributive"
+            },
+            {
+              "t": "記",
+              "r": "き",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
