@@ -1,0 +1,973 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p01898",
+  "source_text": "附记:徐悲鸿（1895一1953）,现代画家、美术教育家.江苏宜兴人,曾留学法国。建国后任中央美术学院院长,中华全国美术工作者协会证席。",
+  "source_sha256": "629f6fa0857e761140a44270de85400a4aaa6704ecfb20977360ec61e1bf5762",
+  "source_normalized_sha256": "629f6fa0857e761140a44270de85400a4aaa6704ecfb20977360ec61e1bf5762",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 133,
+    "grammar_token_total": 133,
+    "unit_count": 3
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-1898",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "文人传说",
+    "title_zh": [
+      {
+        "t": ",",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "文",
+        "r": "wén",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      },
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "文",
+        "r": "ぶん",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "attributive"
+      },
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-文人传说-176-徐斐鸿买马重庆市",
+    "title_zh": [
+      {
+        "t": "1",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "7",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "6",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "徐",
+        "r": "xú",
+        "g": "subject"
+      },
+      {
+        "t": "斐",
+        "r": "fěi",
+        "g": "subject"
+      },
+      {
+        "t": "鸿",
+        "r": "hóng",
+        "g": "subject"
+      },
+      {
+        "t": "买",
+        "r": "mǎi",
+        "g": "predicate"
+      },
+      {
+        "t": "马",
+        "r": "mǎ",
+        "g": "object"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "重",
+        "r": "chóng",
+        "g": "attributive"
+      },
+      {
+        "t": "庆",
+        "r": "qìng",
+        "g": "attributive"
+      },
+      {
+        "t": "市",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "1",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "7",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "6",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ". ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "徐",
+        "r": "じょ",
+        "g": "subject"
+      },
+      {
+        "t": "斐",
+        "r": "ひ",
+        "g": "subject"
+      },
+      {
+        "t": "鴻",
+        "r": "こう",
+        "g": "subject"
+      },
+      {
+        "t": "が",
+        "r": "",
+        "g": "subject"
+      },
+      {
+        "t": "馬",
+        "r": "うま",
+        "g": "object"
+      },
+      {
+        "t": "を",
+        "r": "",
+        "g": "object"
+      },
+      {
+        "t": "買",
+        "r": "か",
+        "g": "predicate"
+      },
+      {
+        "t": "う",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "重",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "慶",
+        "r": "けい",
+        "g": "attributive"
+      },
+      {
+        "t": "市",
+        "r": "し",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p01898",
+    "source_text": "附记:徐悲鸿（1895一1953）,现代画家、美术教育家.江苏宜兴人,曾留学法国。建国后任中央美术学院院长,中华全国美术工作者协会证席。",
+    "corrected_text": "附记：徐悲鸿（1895—1953），现代画家、美术教育家。江苏宜兴人，曾留学法国。建国后任中央美术学院院长，中华全国美术工作者协会主席。",
+    "units": [
+      {
+        "source_text": "附记：徐悲鸿（1895—1953），现代画家、美术教育家。",
+        "zh": [
+          {
+            "t": "附",
+            "r": "fù",
+            "g": "function"
+          },
+          {
+            "t": "记",
+            "r": "jì",
+            "g": "function"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "徐",
+            "r": "xú",
+            "g": "subject"
+          },
+          {
+            "t": "悲",
+            "r": "bēi",
+            "g": "subject"
+          },
+          {
+            "t": "鸿",
+            "r": "hóng",
+            "g": "subject"
+          },
+          {
+            "t": "（",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "1",
+            "r": "",
+            "g": "attributive"
+          },
+          {
+            "t": "8",
+            "r": "",
+            "g": "attributive"
+          },
+          {
+            "t": "9",
+            "r": "",
+            "g": "attributive"
+          },
+          {
+            "t": "5",
+            "r": "",
+            "g": "attributive"
+          },
+          {
+            "t": "—",
+            "r": "",
+            "g": "attributive"
+          },
+          {
+            "t": "1",
+            "r": "",
+            "g": "attributive"
+          },
+          {
+            "t": "9",
+            "r": "",
+            "g": "attributive"
+          },
+          {
+            "t": "5",
+            "r": "",
+            "g": "attributive"
+          },
+          {
+            "t": "3",
+            "r": "",
+            "g": "attributive"
+          },
+          {
+            "t": "）",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "现",
+            "r": "xiàn",
+            "g": "attributive"
+          },
+          {
+            "t": "代",
+            "r": "dài",
+            "g": "attributive"
+          },
+          {
+            "t": "画",
+            "r": "huà",
+            "g": "predicate"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "predicate"
+          },
+          {
+            "t": "、",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "美",
+            "r": "měi",
+            "g": "predicate"
+          },
+          {
+            "t": "术",
+            "r": "shù",
+            "g": "predicate"
+          },
+          {
+            "t": "教",
+            "r": "jiào",
+            "g": "predicate"
+          },
+          {
+            "t": "育",
+            "r": "yù",
+            "g": "predicate"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "付",
+              "r": "ふ",
+              "g": "function"
+            },
+            {
+              "t": "記",
+              "r": "き",
+              "g": "function"
+            },
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "徐",
+              "r": "じょ",
+              "g": "subject"
+            },
+            {
+              "t": "悲",
+              "r": "ひ",
+              "g": "subject"
+            },
+            {
+              "t": "鴻",
+              "r": "こう",
+              "g": "subject"
+            },
+            {
+              "t": "（1895—1953）は、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "近",
+              "r": "きん",
+              "g": "attributive"
+            },
+            {
+              "t": "代",
+              "r": "だい",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "画",
+              "r": "が",
+              "g": "predicate"
+            },
+            {
+              "t": "家",
+              "r": "か",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "美",
+              "r": "び",
+              "g": "predicate"
+            },
+            {
+              "t": "術",
+              "r": "じゅつ",
+              "g": "predicate"
+            },
+            {
+              "t": "教",
+              "r": "きょう",
+              "g": "predicate"
+            },
+            {
+              "t": "育",
+              "r": "いく",
+              "g": "predicate"
+            },
+            {
+              "t": "家",
+              "r": "か",
+              "g": "predicate"
+            },
+            {
+              "t": "である。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "江苏宜兴人，曾留学法国。",
+        "zh": [
+          {
+            "t": "江",
+            "r": "jiāng",
+            "g": "attributive"
+          },
+          {
+            "t": "苏",
+            "r": "sū",
+            "g": "attributive"
+          },
+          {
+            "t": "宜",
+            "r": "yí",
+            "g": "attributive"
+          },
+          {
+            "t": "兴",
+            "r": "xīng",
+            "g": "attributive"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "曾",
+            "r": "céng",
+            "g": "adverbial"
+          },
+          {
+            "t": "留",
+            "r": "liú",
+            "g": "predicate"
+          },
+          {
+            "t": "学",
+            "r": "xué",
+            "g": "predicate"
+          },
+          {
+            "t": "法",
+            "r": "fǎ",
+            "g": "object"
+          },
+          {
+            "t": "国",
+            "r": "guó",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "江",
+              "r": "こう",
+              "g": "attributive"
+            },
+            {
+              "t": "蘇",
+              "r": "そ",
+              "g": "attributive"
+            },
+            {
+              "t": "省",
+              "r": "しょう",
+              "g": "attributive"
+            },
+            {
+              "t": "宜",
+              "r": "ぎ",
+              "g": "attributive"
+            },
+            {
+              "t": "興",
+              "r": "こう",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "predicate"
+            },
+            {
+              "t": "で、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "かつて",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "フランス",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "留",
+              "r": "りゅう",
+              "g": "predicate"
+            },
+            {
+              "t": "学",
+              "r": "がく",
+              "g": "predicate"
+            },
+            {
+              "t": "した。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "建国后任中央美术学院院长，中华全国美术工作者协会主席。",
+        "zh": [
+          {
+            "t": "建",
+            "r": "jiàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "国",
+            "r": "guó",
+            "g": "adverbial"
+          },
+          {
+            "t": "后",
+            "r": "hòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "任",
+            "r": "rèn",
+            "g": "predicate"
+          },
+          {
+            "t": "中",
+            "r": "zhōng",
+            "g": "object"
+          },
+          {
+            "t": "央",
+            "r": "yāng",
+            "g": "object"
+          },
+          {
+            "t": "美",
+            "r": "měi",
+            "g": "object"
+          },
+          {
+            "t": "术",
+            "r": "shù",
+            "g": "object"
+          },
+          {
+            "t": "学",
+            "r": "xué",
+            "g": "object"
+          },
+          {
+            "t": "院",
+            "r": "yuàn",
+            "g": "object"
+          },
+          {
+            "t": "院",
+            "r": "yuàn",
+            "g": "object"
+          },
+          {
+            "t": "长",
+            "r": "zhǎng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "中",
+            "r": "zhōng",
+            "g": "object"
+          },
+          {
+            "t": "华",
+            "r": "huá",
+            "g": "object"
+          },
+          {
+            "t": "全",
+            "r": "quán",
+            "g": "object"
+          },
+          {
+            "t": "国",
+            "r": "guó",
+            "g": "object"
+          },
+          {
+            "t": "美",
+            "r": "měi",
+            "g": "object"
+          },
+          {
+            "t": "术",
+            "r": "shù",
+            "g": "object"
+          },
+          {
+            "t": "工",
+            "r": "gōng",
+            "g": "object"
+          },
+          {
+            "t": "作",
+            "r": "zuò",
+            "g": "object"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "object"
+          },
+          {
+            "t": "协",
+            "r": "xié",
+            "g": "object"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "object"
+          },
+          {
+            "t": "主",
+            "r": "zhǔ",
+            "g": "object"
+          },
+          {
+            "t": "席",
+            "r": "xí",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "建",
+              "r": "けん",
+              "g": "adverbial"
+            },
+            {
+              "t": "国",
+              "r": "こく",
+              "g": "adverbial"
+            },
+            {
+              "t": "後",
+              "r": "ご",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "中",
+              "r": "ちゅう",
+              "g": "object"
+            },
+            {
+              "t": "央",
+              "r": "おう",
+              "g": "object"
+            },
+            {
+              "t": "美",
+              "r": "び",
+              "g": "object"
+            },
+            {
+              "t": "術",
+              "r": "じゅつ",
+              "g": "object"
+            },
+            {
+              "t": "学",
+              "r": "がく",
+              "g": "object"
+            },
+            {
+              "t": "院",
+              "r": "いん",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "院",
+              "r": "いん",
+              "g": "object"
+            },
+            {
+              "t": "長",
+              "r": "ちょう",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "務",
+              "r": "つと",
+              "g": "predicate"
+            },
+            {
+              "t": "め、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "中",
+              "r": "ちゅう",
+              "g": "object"
+            },
+            {
+              "t": "華",
+              "r": "か",
+              "g": "object"
+            },
+            {
+              "t": "全",
+              "r": "ぜん",
+              "g": "object"
+            },
+            {
+              "t": "国",
+              "r": "こく",
+              "g": "object"
+            },
+            {
+              "t": "美",
+              "r": "び",
+              "g": "object"
+            },
+            {
+              "t": "術",
+              "r": "じゅつ",
+              "g": "object"
+            },
+            {
+              "t": "工",
+              "r": "こう",
+              "g": "object"
+            },
+            {
+              "t": "作",
+              "r": "さく",
+              "g": "object"
+            },
+            {
+              "t": "者",
+              "r": "しゃ",
+              "g": "object"
+            },
+            {
+              "t": "協",
+              "r": "きょう",
+              "g": "object"
+            },
+            {
+              "t": "会",
+              "r": "かい",
+              "g": "object"
+            },
+            {
+              "t": "主",
+              "r": "しゅ",
+              "g": "object"
+            },
+            {
+              "t": "席",
+              "r": "せき",
+              "g": "object"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "務",
+              "r": "つと",
+              "g": "predicate"
+            },
+            {
+              "t": "めた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

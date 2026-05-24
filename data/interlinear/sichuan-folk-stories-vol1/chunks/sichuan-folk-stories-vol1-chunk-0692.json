@@ -6,24 +6,24 @@
       {
         "t": "传",
         "r": "chuán",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "说",
         "r": "shuō",
-        "g": "predicate"
+        "g": "attributive"
       }
     ],
     "title_ja": [
       {
         "t": "伝",
         "r": "でん",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "説",
         "r": "せつ",
-        "g": "predicate"
+        "g": "attributive"
       }
     ]
   },
@@ -48,12 +48,12 @@
       {
         "t": "传",
         "r": "chuán",
-        "g": "predicate"
+        "g": "object"
       },
       {
         "t": "说",
         "r": "shuō",
-        "g": "predicate"
+        "g": "object"
       }
     ],
     "title_ja": [
@@ -75,12 +75,12 @@
       {
         "t": "伝",
         "r": "でん",
-        "g": "predicate"
+        "g": "object"
       },
       {
         "t": "説",
         "r": "せつ",
-        "g": "predicate"
+        "g": "object"
       }
     ]
   },
@@ -88,22 +88,7 @@
     "id": "传说-人物传说-067-函王开获门成都市",
     "title_zh": [
       {
-        "t": "0",
-        "r": "",
-        "g": "function"
-      },
-      {
-        "t": "6",
-        "r": "",
-        "g": "function"
-      },
-      {
-        "t": "7",
-        "r": "",
-        "g": "function"
-      },
-      {
-        "t": ". ",
+        "t": "067. ",
         "r": "",
         "g": "function"
       },
@@ -237,9 +222,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00692",
       "source_text": "这个西海的洪水是最不容易治的,因为它全被大山包围,水没得流出去的塌方。有无",
+      "corrected_text": "这个西海的洪水是最不容易治的，因为它全被大山包围，水没得流出去的地方。",
       "units": [
         {
-          "source_text": "这个西海的洪水是最不容易治的,",
+          "source_text": "这个西海的洪水是最不容易治的，",
           "zh": [
             {
               "t": "这",
@@ -312,7 +298,7 @@
               "g": "predicate"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             }
@@ -380,7 +366,7 @@
           ]
         },
         {
-          "source_text": "因为它全被大山包围,",
+          "source_text": "因为它全被大山包围，",
           "zh": [
             {
               "t": "因",
@@ -428,7 +414,7 @@
               "g": "predicate"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             }
@@ -486,7 +472,7 @@
           ]
         },
         {
-          "source_text": "水没得流出去的塌方。",
+          "source_text": "水没得流出去的地方。",
           "zh": [
             {
               "t": "水",
@@ -524,8 +510,8 @@
               "g": "attributive"
             },
             {
-              "t": "塌",
-              "r": "tā",
+              "t": "地",
+              "r": "dì",
               "g": "object"
             },
             {
@@ -567,25 +553,20 @@
                 "g": "complement"
               },
               {
-                "t": "る",
+                "t": "ていく",
                 "r": "",
                 "g": "complement"
               }
             ],
             [
               {
-                "t": "崩",
-                "r": "くず",
+                "t": "場",
+                "r": "ば",
                 "g": "object"
               },
               {
-                "t": "れ",
-                "r": "",
-                "g": "object"
-              },
-              {
-                "t": "口",
-                "r": "ぐち",
+                "t": "所",
+                "r": "しょ",
                 "g": "object"
               },
               {
@@ -597,37 +578,6 @@
                 "t": "。",
                 "r": "",
                 "g": "function"
-              }
-            ]
-          ]
-        },
-        {
-          "source_text": "有无",
-          "zh": [
-            {
-              "t": "有",
-              "r": "yǒu",
-              "g": "predicate"
-            },
-            {
-              "t": "无",
-              "r": "wú",
-              "g": "predicate"
-            }
-          ],
-          "ja": [
-            [
-              {
-                "t": "あるのか",
-                "r": "",
-                "g": "predicate"
-              }
-            ],
-            [
-              {
-                "t": "ないのか",
-                "r": "",
-                "g": "predicate"
               }
             ]
           ]

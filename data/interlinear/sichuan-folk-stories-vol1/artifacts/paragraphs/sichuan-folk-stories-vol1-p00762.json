@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 405,
-    "grammar_token_total": 405,
-    "unit_count": 8
+    "token_total": 415,
+    "grammar_token_total": 415,
+    "unit_count": 7
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0762",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -233,9 +233,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00762",
     "source_text": "讲述者:周继成男?73岁彭县迁休工人识字李永枢田 62岁彭县迁休教师高中采录前:王庆方57岁喜县文化馆干部大专采录时间、地点:1988 年 8 月于走县天彭钙附记:根据历史记载和出土文物,彭国在今亲县及其相毗连的地域。《元 -统志#记有茧州即古喜国。明曾学丛（驹中广记。绚郡县.古今甫释第--）云:喜具周彭国也,武王伐纪,喜人与马,明顾祖哮（读史方与纪要和明天启《成都府志?中均有彰其周为彭国之记载",
+    "corrected_text": "讲述者:周继成,男,73岁,彭县退休工人,识字;李永枢,男,62岁,彭县退休教师,高中。采录者:王庆方,57岁,彭县文化馆干部,大专。采录时间、地点:1988年8月于彭县天彭镇。附记:根据历史记载和出土文物,彭国在今彭县及其相毗连的地域。《元一统志》记有彭州即古彭国。明曾学稼《蜀中广记·蜀郡县古今通释第一》云:彭县周彭国也,武王伐纣,彭人助战。明顾祖禹《读史方舆纪要》和明天启《成都府志》中均有彭县周为彭国之记载",
     "units": [
       {
-        "source_text": "讲述者:周继成男?73岁彭县迁休工人识字李永枢田 62岁彭县迁休教师高中",
+        "source_text": "讲述者:周继成,男,73岁,彭县退休工人,识字;李永枢,男,62岁,彭县退休教师,高中。",
         "zh": [
           {
             "t": "讲",
@@ -273,12 +274,17 @@
             "g": "subject"
           },
           {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "男",
             "r": "nán",
             "g": "attributive"
           },
           {
-            "t": "?",
+            "t": ",",
             "r": "",
             "g": "function"
           },
@@ -293,6 +299,11 @@
             "g": "attributive"
           },
           {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "彭",
             "r": "péng",
             "g": "attributive"
@@ -303,8 +314,8 @@
             "g": "attributive"
           },
           {
-            "t": "迁",
-            "r": "qiān",
+            "t": "退",
+            "r": "tuì",
             "g": "attributive"
           },
           {
@@ -323,14 +334,24 @@
             "g": "attributive"
           },
           {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "识",
             "r": "shí",
-            "g": "attributive"
+            "g": "predicate"
           },
           {
             "t": "字",
             "r": "zì",
-            "g": "attributive"
+            "g": "object"
+          },
+          {
+            "t": ";",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "李",
@@ -348,12 +369,17 @@
             "g": "subject"
           },
           {
-            "t": "田",
-            "r": "tián",
-            "g": "subject"
+            "t": ",",
+            "r": "",
+            "g": "function"
           },
           {
-            "t": " ",
+            "t": "男",
+            "r": "nán",
+            "g": "attributive"
+          },
+          {
+            "t": ",",
             "r": "",
             "g": "function"
           },
@@ -368,6 +394,11 @@
             "g": "attributive"
           },
           {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "彭",
             "r": "péng",
             "g": "attributive"
@@ -378,8 +409,8 @@
             "g": "attributive"
           },
           {
-            "t": "迁",
-            "r": "qiān",
+            "t": "退",
+            "r": "tuì",
             "g": "attributive"
           },
           {
@@ -398,6 +429,11 @@
             "g": "attributive"
           },
           {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "高",
             "r": "gāo",
             "g": "attributive"
@@ -406,6 +442,11 @@
             "t": "中",
             "r": "zhōng",
             "g": "attributive"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -456,12 +497,7 @@
               "g": "attributive"
             },
             {
-              "t": "？",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "73",
+              "t": "、73",
               "r": "",
               "g": "attributive"
             },
@@ -516,14 +552,24 @@
               "g": "function"
             },
             {
-              "t": "識",
-              "r": "しき",
-              "g": "attributive"
-            },
-            {
               "t": "字",
               "r": "じ",
-              "g": "attributive"
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "読",
+              "r": "よ",
+              "g": "predicate"
+            },
+            {
+              "t": "める",
+              "r": "",
+              "g": "predicate"
             },
             {
               "t": "。",
@@ -548,17 +594,17 @@
               "g": "subject"
             },
             {
-              "t": "田",
-              "r": "でん",
-              "g": "subject"
-            },
-            {
               "t": "、",
               "r": "",
               "g": "function"
             },
             {
-              "t": "62",
+              "t": "男",
+              "r": "おとこ",
+              "g": "attributive"
+            },
+            {
+              "t": "、62",
               "r": "",
               "g": "attributive"
             },
@@ -618,6 +664,11 @@
               "g": "attributive"
             },
             {
+              "t": "校",
+              "r": "こう",
+              "g": "attributive"
+            },
+            {
               "t": "卒",
               "r": "そつ",
               "g": "attributive"
@@ -631,7 +682,7 @@
         ]
       },
       {
-        "source_text": "采录前:王庆方57岁喜县文化馆干部大专",
+        "source_text": "采录者:王庆方,57岁,彭县文化馆干部,大专。",
         "zh": [
           {
             "t": "采",
@@ -644,8 +695,8 @@
             "g": "function"
           },
           {
-            "t": "前",
-            "r": "qián",
+            "t": "者",
+            "r": "zhě",
             "g": "function"
           },
           {
@@ -669,6 +720,11 @@
             "g": "subject"
           },
           {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "57",
             "r": "",
             "g": "attributive"
@@ -679,8 +735,13 @@
             "g": "attributive"
           },
           {
-            "t": "喜",
-            "r": "xǐ",
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "彭",
+            "r": "péng",
             "g": "attributive"
           },
           {
@@ -714,6 +775,11 @@
             "g": "attributive"
           },
           {
+            "t": ",",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "大",
             "r": "dà",
             "g": "attributive"
@@ -722,6 +788,11 @@
             "t": "专",
             "r": "zhuān",
             "g": "attributive"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -737,8 +808,8 @@
               "g": "function"
             },
             {
-              "t": "前",
-              "r": "まえ",
+              "t": "者",
+              "r": "しゃ",
               "g": "function"
             },
             {
@@ -762,12 +833,7 @@
               "g": "subject"
             },
             {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "57",
+              "t": "、57",
               "r": "",
               "g": "attributive"
             },
@@ -777,13 +843,15 @@
               "g": "attributive"
             },
             {
-              "t": "、",
+              "t": "。",
               "r": "",
               "g": "function"
-            },
+            }
+          ],
+          [
             {
-              "t": "喜",
-              "r": "き",
+              "t": "彭",
+              "r": "ほう",
               "g": "attributive"
             },
             {
@@ -807,6 +875,11 @@
               "g": "attributive"
             },
             {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
               "t": "幹",
               "r": "かん",
               "g": "attributive"
@@ -820,9 +893,7 @@
               "t": "、",
               "r": "",
               "g": "function"
-            }
-          ],
-          [
+            },
             {
               "t": "短",
               "r": "たん",
@@ -847,7 +918,7 @@
         ]
       },
       {
-        "source_text": "采录时间、地点:1988 年 8 月于走县天彭钙",
+        "source_text": "采录时间、地点:1988年8月于彭县天彭镇。",
         "zh": [
           {
             "t": "采",
@@ -895,29 +966,14 @@
             "g": "adverbial"
           },
           {
-            "t": " ",
-            "r": "",
-            "g": "function"
-          },
-          {
             "t": "年",
             "r": "nián",
             "g": "adverbial"
           },
           {
-            "t": " ",
-            "r": "",
-            "g": "function"
-          },
-          {
             "t": "8",
             "r": "",
             "g": "adverbial"
-          },
-          {
-            "t": " ",
-            "r": "",
-            "g": "function"
           },
           {
             "t": "月",
@@ -930,8 +986,8 @@
             "g": "adverbial"
           },
           {
-            "t": "走",
-            "r": "zǒu",
+            "t": "彭",
+            "r": "péng",
             "g": "adverbial"
           },
           {
@@ -950,9 +1006,14 @@
             "g": "adverbial"
           },
           {
-            "t": "钙",
-            "r": "gài",
+            "t": "镇",
+            "r": "zhèn",
             "g": "adverbial"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -993,12 +1054,7 @@
               "g": "function"
             },
             {
-              "t": "：",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "1988",
+              "t": "：1988",
               "r": "",
               "g": "adverbial"
             },
@@ -1025,8 +1081,8 @@
           ],
           [
             {
-              "t": "走",
-              "r": "そう",
+              "t": "彭",
+              "r": "ほう",
               "g": "adverbial"
             },
             {
@@ -1045,8 +1101,8 @@
               "g": "adverbial"
             },
             {
-              "t": "鈣",
-              "r": "がい",
+              "t": "鎮",
+              "r": "ちん",
               "g": "adverbial"
             },
             {
@@ -1063,7 +1119,7 @@
         ]
       },
       {
-        "source_text": "附记:根据历史记载和出土文物,彭国在今亲县及其相毗连的地域。",
+        "source_text": "附记:根据历史记载和出土文物,彭国在今彭县及其相毗连的地域。",
         "zh": [
           {
             "t": "附",
@@ -1161,8 +1217,8 @@
             "g": "complement"
           },
           {
-            "t": "亲",
-            "r": "qīn",
+            "t": "彭",
+            "r": "péng",
             "g": "complement"
           },
           {
@@ -1279,14 +1335,9 @@
               "g": "adverbial"
             },
             {
-              "t": "によれば",
+              "t": "によれば、",
               "r": "",
               "g": "adverbial"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
             }
           ],
           [
@@ -1316,8 +1367,8 @@
               "g": "complement"
             },
             {
-              "t": "親",
-              "r": "しん",
+              "t": "彭",
+              "r": "ほう",
               "g": "complement"
             },
             {
@@ -1369,7 +1420,7 @@
         ]
       },
       {
-        "source_text": "《元 -统志#记有茧州即古喜国。",
+        "source_text": "《元一统志》记有彭州即古彭国。",
         "zh": [
           {
             "t": "《",
@@ -1379,30 +1430,25 @@
           {
             "t": "元",
             "r": "yuán",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
-            "t": " ",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "-",
-            "r": "",
-            "g": "function"
+            "t": "一",
+            "r": "yī",
+            "g": "attributive"
           },
           {
             "t": "统",
             "r": "tǒng",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
             "t": "志",
             "r": "zhì",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
-            "t": "#",
+            "t": "》",
             "r": "",
             "g": "function"
           },
@@ -1417,8 +1463,8 @@
             "g": "predicate"
           },
           {
-            "t": "茧",
-            "r": "jiǎn",
+            "t": "彭",
+            "r": "péng",
             "g": "subject"
           },
           {
@@ -1437,8 +1483,8 @@
             "g": "object"
           },
           {
-            "t": "喜",
-            "r": "xǐ",
+            "t": "彭",
+            "r": "péng",
             "g": "object"
           },
           {
@@ -1462,48 +1508,33 @@
             {
               "t": "元",
               "r": "げん",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
-              "t": " ",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "-",
-              "r": "",
-              "g": "function"
+              "t": "一",
+              "r": "いっ",
+              "g": "attributive"
             },
             {
               "t": "統",
               "r": "とう",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "志",
               "r": "し",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
-              "t": "#",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "』には",
-              "r": "",
-              "g": "adverbial"
-            },
-            {
-              "t": "、",
+              "t": "』には、",
               "r": "",
               "g": "function"
             }
           ],
           [
             {
-              "t": "茧",
-              "r": "けん",
+              "t": "彭",
+              "r": "ほう",
               "g": "subject"
             },
             {
@@ -1517,23 +1548,13 @@
               "g": "subject"
             },
             {
-              "t": "すなわち",
-              "r": "",
-              "g": "predicate"
-            },
-            {
               "t": "古",
-              "r": "ふる",
+              "r": "こ",
               "g": "object"
             },
             {
-              "t": "い",
-              "r": "",
-              "g": "object"
-            },
-            {
-              "t": "喜",
-              "r": "き",
+              "t": "彭",
+              "r": "ほう",
               "g": "object"
             },
             {
@@ -1565,7 +1586,7 @@
         ]
       },
       {
-        "source_text": "明曾学丛（驹中广记。",
+        "source_text": "明曾学稼《蜀中广记·蜀郡县古今通释第一》云:彭县周彭国也,武王伐纣,彭人助战。",
         "zh": [
           {
             "t": "明",
@@ -1583,168 +1604,87 @@
             "g": "subject"
           },
           {
-            "t": "丛",
-            "r": "cóng",
+            "t": "稼",
+            "r": "jià",
             "g": "subject"
           },
           {
-            "t": "（",
+            "t": "《",
             "r": "",
             "g": "function"
           },
           {
-            "t": "驹",
-            "r": "jū",
-            "g": "object"
+            "t": "蜀",
+            "r": "shǔ",
+            "g": "attributive"
           },
           {
             "t": "中",
             "r": "zhōng",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "广",
             "r": "guǎng",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "记",
             "r": "jì",
-            "g": "object"
+            "g": "attributive"
           },
           {
-            "t": "。",
+            "t": "·",
             "r": "",
             "g": "function"
-          }
-        ],
-        "ja": [
-          [
-            {
-              "t": "明",
-              "r": "みん",
-              "g": "attributive"
-            },
-            {
-              "t": "の",
-              "r": "",
-              "g": "attributive"
-            },
-            {
-              "t": "曾",
-              "r": "そう",
-              "g": "subject"
-            },
-            {
-              "t": "学",
-              "r": "がく",
-              "g": "subject"
-            },
-            {
-              "t": "叢",
-              "r": "そう",
-              "g": "subject"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            }
-          ],
-          [
-            {
-              "t": "（『",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "駒",
-              "r": "こま",
-              "g": "object"
-            },
-            {
-              "t": "中",
-              "r": "ちゅう",
-              "g": "object"
-            },
-            {
-              "t": "広",
-              "r": "こう",
-              "g": "object"
-            },
-            {
-              "t": "記",
-              "r": "き",
-              "g": "object"
-            },
-            {
-              "t": "』）",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "。",
-              "r": "",
-              "g": "function"
-            }
-          ]
-        ]
-      },
-      {
-        "source_text": "绚郡县.古今甫释第--）云:喜具周彭国也,武王伐纪,喜人与马,",
-        "zh": [
+          },
           {
-            "t": "绚",
-            "r": "xuàn",
-            "g": "adverbial"
+            "t": "蜀",
+            "r": "shǔ",
+            "g": "attributive"
           },
           {
             "t": "郡",
             "r": "jùn",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
             "t": "县",
             "r": "xiàn",
-            "g": "adverbial"
-          },
-          {
-            "t": ".",
-            "r": "",
-            "g": "function"
+            "g": "attributive"
           },
           {
             "t": "古",
             "r": "gǔ",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
             "t": "今",
             "r": "jīn",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
-            "t": "甫",
-            "r": "fǔ",
-            "g": "adverbial"
+            "t": "通",
+            "r": "tōng",
+            "g": "attributive"
           },
           {
             "t": "释",
             "r": "shì",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
             "t": "第",
             "r": "dì",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
-            "t": "--",
-            "r": "",
-            "g": "function"
+            "t": "一",
+            "r": "yī",
+            "g": "attributive"
           },
           {
-            "t": "）",
+            "t": "》",
             "r": "",
             "g": "function"
           },
@@ -1759,19 +1699,19 @@
             "g": "function"
           },
           {
-            "t": "喜",
-            "r": "xǐ",
+            "t": "彭",
+            "r": "péng",
             "g": "subject"
           },
           {
-            "t": "具",
-            "r": "jù",
+            "t": "县",
+            "r": "xiàn",
             "g": "subject"
           },
           {
             "t": "周",
             "r": "zhōu",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "彭",
@@ -1809,8 +1749,8 @@
             "g": "predicate"
           },
           {
-            "t": "纪",
-            "r": "jì",
+            "t": "纣",
+            "r": "zhòu",
             "g": "object"
           },
           {
@@ -1819,8 +1759,8 @@
             "g": "function"
           },
           {
-            "t": "喜",
-            "r": "xǐ",
+            "t": "彭",
+            "r": "péng",
             "g": "subject"
           },
           {
@@ -1829,17 +1769,17 @@
             "g": "subject"
           },
           {
-            "t": "与",
-            "r": "yǔ",
+            "t": "助",
+            "r": "zhù",
             "g": "predicate"
           },
           {
-            "t": "马",
-            "r": "mǎ",
+            "t": "战",
+            "r": "zhàn",
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "。",
             "r": "",
             "g": "function"
           }
@@ -1847,24 +1787,54 @@
         "ja": [
           [
             {
+              "t": "明",
+              "r": "みん",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "曾",
+              "r": "そう",
+              "g": "subject"
+            },
+            {
+              "t": "学",
+              "r": "がく",
+              "g": "subject"
+            },
+            {
+              "t": "稼",
+              "r": "か",
+              "g": "subject"
+            },
+            {
               "t": "『",
               "r": "",
               "g": "function"
             },
             {
-              "t": "絢",
-              "r": "けん",
-              "g": "adverbial"
+              "t": "蜀",
+              "r": "しょく",
+              "g": "attributive"
             },
             {
-              "t": "郡",
-              "r": "ぐん",
-              "g": "adverbial"
+              "t": "中",
+              "r": "ちゅう",
+              "g": "attributive"
             },
             {
-              "t": "県",
-              "r": "けん",
-              "g": "adverbial"
+              "t": "広",
+              "r": "こう",
+              "g": "attributive"
+            },
+            {
+              "t": "記",
+              "r": "き",
+              "g": "attributive"
             },
             {
               "t": "・",
@@ -1872,55 +1842,80 @@
               "g": "function"
             },
             {
+              "t": "蜀",
+              "r": "しょく",
+              "g": "attributive"
+            },
+            {
+              "t": "郡",
+              "r": "ぐん",
+              "g": "attributive"
+            },
+            {
+              "t": "県",
+              "r": "けん",
+              "g": "attributive"
+            },
+            {
               "t": "古",
               "r": "こ",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "今",
               "r": "こん",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
-              "t": "甫",
-              "r": "ほ",
-              "g": "adverbial"
+              "t": "通",
+              "r": "つう",
+              "g": "attributive"
             },
             {
               "t": "釈",
               "r": "しゃく",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "第",
               "r": "だい",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
-              "t": "--",
+              "t": "一",
+              "r": "いち",
+              "g": "attributive"
+            },
+            {
+              "t": "』は",
               "r": "",
-              "g": "function"
+              "g": "attributive"
             },
             {
-              "t": "』には",
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "う",
               "r": "",
-              "g": "adverbial"
+              "g": "predicate"
             },
             {
-              "t": "、",
+              "t": "。",
               "r": "",
               "g": "function"
             }
           ],
           [
             {
-              "t": "喜",
-              "r": "き",
+              "t": "彭",
+              "r": "ほう",
               "g": "subject"
             },
             {
-              "t": "具",
-              "r": "ぐ",
+              "t": "県",
+              "r": "けん",
               "g": "subject"
             },
             {
@@ -1931,12 +1926,17 @@
             {
               "t": "周",
               "r": "しゅう",
-              "g": "object"
+              "g": "attributive"
+            },
+            {
+              "t": "代",
+              "r": "だい",
+              "g": "attributive"
             },
             {
               "t": "の",
               "r": "",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "彭",
@@ -1949,9 +1949,9 @@
               "g": "object"
             },
             {
-              "t": "、",
+              "t": "で、",
               "r": "",
-              "g": "function"
+              "g": "predicate"
             },
             {
               "t": "武",
@@ -1969,8 +1969,8 @@
               "g": "subject"
             },
             {
-              "t": "紀",
-              "r": "き",
+              "t": "紂",
+              "r": "ちゅう",
               "g": "object"
             },
             {
@@ -1989,8 +1989,8 @@
               "g": "predicate"
             },
             {
-              "t": "喜",
-              "r": "き",
+              "t": "彭",
+              "r": "ほう",
               "g": "subject"
             },
             {
@@ -2004,27 +2004,27 @@
               "g": "subject"
             },
             {
-              "t": "馬",
-              "r": "うま",
+              "t": "戦",
+              "r": "たたか",
               "g": "object"
             },
             {
-              "t": "を",
+              "t": "いを",
               "r": "",
               "g": "object"
             },
             {
-              "t": "供",
-              "r": "きょう",
+              "t": "助",
+              "r": "たす",
               "g": "predicate"
             },
             {
-              "t": "した",
+              "t": "けた",
               "r": "",
               "g": "predicate"
             },
             {
-              "t": "、",
+              "t": "。",
               "r": "",
               "g": "function"
             }
@@ -2032,82 +2032,87 @@
         ]
       },
       {
-        "source_text": "明顾祖哮（读史方与纪要和明天启《成都府志?中均有彰其周为彭国之记载",
+        "source_text": "明顾祖禹《读史方舆纪要》和明天启《成都府志》中均有彭县周为彭国之记载",
         "zh": [
           {
             "t": "明",
             "r": "míng",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
             "t": "顾",
             "r": "gù",
-            "g": "adverbial"
+            "g": "subject"
           },
           {
             "t": "祖",
             "r": "zǔ",
-            "g": "adverbial"
+            "g": "subject"
           },
           {
-            "t": "哮",
-            "r": "xiào",
-            "g": "adverbial"
+            "t": "禹",
+            "r": "yǔ",
+            "g": "subject"
           },
           {
-            "t": "（",
+            "t": "《",
             "r": "",
             "g": "function"
           },
           {
             "t": "读",
             "r": "dú",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
             "t": "史",
             "r": "shǐ",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
             "t": "方",
             "r": "fāng",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
-            "t": "与",
-            "r": "yǔ",
-            "g": "adverbial"
+            "t": "舆",
+            "r": "yú",
+            "g": "attributive"
           },
           {
             "t": "纪",
             "r": "jì",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
             "t": "要",
             "r": "yào",
-            "g": "adverbial"
+            "g": "attributive"
+          },
+          {
+            "t": "》",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "和",
             "r": "hé",
-            "g": "adverbial"
+            "g": "function"
           },
           {
             "t": "明",
             "r": "míng",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
             "t": "天",
             "r": "tiān",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
             "t": "启",
             "r": "qǐ",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
             "t": "《",
@@ -2117,25 +2122,25 @@
           {
             "t": "成",
             "r": "chéng",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
             "t": "都",
             "r": "dū",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
             "t": "府",
             "r": "fǔ",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
             "t": "志",
             "r": "zhì",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
-            "t": "?",
+            "t": "》",
             "r": "",
             "g": "function"
           },
@@ -2155,19 +2160,19 @@
             "g": "predicate"
           },
           {
-            "t": "彰",
-            "r": "zhāng",
+            "t": "彭",
+            "r": "péng",
             "g": "subject"
           },
           {
-            "t": "其",
-            "r": "qí",
+            "t": "县",
+            "r": "xiàn",
             "g": "subject"
           },
           {
             "t": "周",
             "r": "zhōu",
-            "g": "subject"
+            "g": "adverbial"
           },
           {
             "t": "为",
@@ -2187,7 +2192,7 @@
           {
             "t": "之",
             "r": "zhī",
-            "g": "object"
+            "g": "function"
           },
           {
             "t": "记",
@@ -2205,27 +2210,27 @@
             {
               "t": "明",
               "r": "みん",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "の",
               "r": "",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "顧",
               "r": "こ",
-              "g": "adverbial"
+              "g": "subject"
             },
             {
               "t": "祖",
               "r": "そ",
-              "g": "adverbial"
+              "g": "subject"
             },
             {
-              "t": "哮",
-              "r": "こう",
-              "g": "adverbial"
+              "t": "禹",
+              "r": "う",
+              "g": "subject"
             },
             {
               "t": "『",
@@ -2235,52 +2240,52 @@
             {
               "t": "読",
               "r": "どく",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "史",
               "r": "し",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "方",
               "r": "ほう",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
-              "t": "与",
+              "t": "輿",
               "r": "よ",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "紀",
               "r": "き",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "要",
               "r": "よう",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "』と",
               "r": "",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "明",
               "r": "みん",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "天",
               "r": "てん",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "啓",
               "r": "けい",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "『",
@@ -2290,54 +2295,59 @@
             {
               "t": "成",
               "r": "せい",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "都",
               "r": "と",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "府",
               "r": "ふ",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "志",
               "r": "し",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
-              "t": "?』にも",
-              "r": "",
-              "g": "adverbial"
-            },
-            {
-              "t": "、",
+              "t": "』にも、",
               "r": "",
               "g": "function"
             }
           ],
           [
             {
-              "t": "彰",
-              "r": "しょう",
+              "t": "彭",
+              "r": "ほう",
               "g": "subject"
             },
             {
-              "t": "其",
-              "r": "き",
-              "g": "subject"
-            },
-            {
-              "t": "周",
-              "r": "しゅう",
+              "t": "県",
+              "r": "けん",
               "g": "subject"
             },
             {
               "t": "が",
               "r": "",
               "g": "subject"
+            },
+            {
+              "t": "周",
+              "r": "しゅう",
+              "g": "adverbial"
+            },
+            {
+              "t": "代",
+              "r": "だい",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
             },
             {
               "t": "彭",
@@ -2352,7 +2362,7 @@
             {
               "t": "であったとの",
               "r": "",
-              "g": "object"
+              "g": "predicate"
             },
             {
               "t": "記",
@@ -2365,14 +2375,14 @@
               "g": "object"
             },
             {
-              "t": "がある",
+              "t": "が",
               "r": "",
-              "g": "predicate"
+              "g": "object"
             },
             {
-              "t": "。",
+              "t": "ある",
               "r": "",
-              "g": "function"
+              "g": "predicate"
             }
           ]
         ]

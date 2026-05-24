@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 6,
-    "grammar_token_total": 6,
+    "token_total": 11,
+    "grammar_token_total": 11,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0804",
@@ -23,24 +23,24 @@
       {
         "t": "传",
         "r": "chuán",
-        "g": "function"
+        "g": "attributive"
       },
       {
         "t": "说",
         "r": "shuō",
-        "g": "function"
+        "g": "object"
       }
     ],
     "title_ja": [
       {
         "t": "伝",
         "r": "でん",
-        "g": "function"
+        "g": "attributive"
       },
       {
         "t": "説",
         "r": "せつ",
-        "g": "function"
+        "g": "object"
       }
     ]
   },
@@ -65,12 +65,12 @@
       {
         "t": "传",
         "r": "chuán",
-        "g": "function"
+        "g": "attributive"
       },
       {
         "t": "说",
         "r": "shuō",
-        "g": "function"
+        "g": "object"
       }
     ],
     "title_ja": [
@@ -92,12 +92,12 @@
       {
         "t": "伝",
         "r": "でん",
-        "g": "function"
+        "g": "attributive"
       },
       {
         "t": "説",
         "r": "せつ",
-        "g": "function"
+        "g": "object"
       }
     ]
   },
@@ -208,22 +208,23 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00804",
     "source_text": "附记:",
+    "corrected_text": "附记：",
     "units": [
       {
-        "source_text": "附记:",
+        "source_text": "附记：",
         "zh": [
           {
             "t": "附",
             "r": "fù",
-            "g": "function"
+            "g": "attributive"
           },
           {
             "t": "记",
             "r": "jì",
-            "g": "function"
+            "g": "object"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           }
@@ -233,15 +234,40 @@
             {
               "t": "付",
               "r": "ふ",
-              "g": "function"
+              "g": "attributive"
             },
             {
               "t": "記",
               "r": "き",
-              "g": "function"
+              "g": "object"
             }
           ],
           [
+            {
+              "t": "補",
+              "r": "ほ",
+              "g": "attributive"
+            },
+            {
+              "t": "足",
+              "r": "そく",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "記",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "録",
+              "r": "ろく",
+              "g": "object"
+            },
             {
               "t": "：",
               "r": "",

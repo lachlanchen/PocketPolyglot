@@ -105,17 +105,17 @@
       {
         "t": "大",
         "r": "dà",
-        "g": "object"
+        "g": "subject"
       },
       {
         "t": "台",
         "r": "tái",
-        "g": "object"
+        "g": "subject"
       },
       {
         "t": "治",
         "r": "zhì",
-        "g": "object"
+        "g": "predicate"
       },
       {
         "t": "水",
@@ -142,22 +142,22 @@
       {
         "t": "大",
         "r": "だい",
-        "g": "object"
+        "g": "subject"
       },
       {
         "t": "台",
-        "r": "だい",
-        "g": "object"
+        "r": "たい",
+        "g": "subject"
       },
       {
         "t": "の",
         "r": "",
-        "g": "object"
+        "g": "subject"
       },
       {
         "t": "治",
         "r": "ち",
-        "g": "object"
+        "g": "predicate"
       },
       {
         "t": "水",
@@ -172,14 +172,15 @@
     {
       "id": "sichuan-folk-stories-vol1-p00678",
       "source_text": "口，洪水通过缺吕,滚滚向东流去。讲述者:张文全男 44岁农民小学采录者:李子硕.赵永峰男文化馆干部采录时间、.地点;1988 年 4 月于巴县鱼油镇",
+      "corrected_text": "口，洪水通过缺口，滚滚向东流去。讲述者：张文全，男，44岁，农民，小学。采录者：李子硕、赵永峰，男，文化馆干部。采录时间、地点：1988年4月于巴县鱼洞镇。",
       "units": [
         {
-          "source_text": "口，洪水通过缺吕,滚滚向东流去。",
+          "source_text": "口，洪水通过缺口，滚滚向东流去。",
           "zh": [
             {
               "t": "口",
               "r": "kǒu",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "，",
@@ -212,12 +213,12 @@
               "g": "object"
             },
             {
-              "t": "吕",
-              "r": "lǚ",
+              "t": "口",
+              "r": "kǒu",
               "g": "object"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -260,17 +261,17 @@
           "ja": [
             [
               {
+                "t": "その",
+                "r": "",
+                "g": "object"
+              },
+              {
                 "t": "口",
                 "r": "くち",
-                "g": "adverbial"
+                "g": "object"
               },
               {
-                "t": "から",
-                "r": "",
-                "g": "adverbial"
-              },
-              {
-                "t": "、",
+                "t": "から、",
                 "r": "",
                 "g": "function"
               },
@@ -291,40 +292,30 @@
               },
               {
                 "t": "欠",
-                "r": "けつ",
+                "r": "けっ",
                 "g": "object"
               },
               {
-                "t": "呂",
-                "r": "りょ",
+                "t": "口",
+                "r": "こう",
                 "g": "object"
               },
               {
                 "t": "を",
                 "r": "",
                 "g": "object"
-              },
+              }
+            ],
+            [
               {
                 "t": "通",
                 "r": "とお",
                 "g": "predicate"
               },
               {
-                "t": "って",
+                "t": "って、とうとうと",
                 "r": "",
                 "g": "predicate"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
-              }
-            ],
-            [
-              {
-                "t": "とうとうと",
-                "r": "",
-                "g": "adverbial"
               },
               {
                 "t": "東",
@@ -342,30 +333,15 @@
                 "g": "predicate"
               },
               {
-                "t": "れ",
+                "t": "れていった。",
                 "r": "",
                 "g": "predicate"
-              },
-              {
-                "t": "去",
-                "r": "さ",
-                "g": "predicate"
-              },
-              {
-                "t": "った",
-                "r": "",
-                "g": "predicate"
-              },
-              {
-                "t": "。",
-                "r": "",
-                "g": "function"
               }
             ]
           ]
         },
         {
-          "source_text": "讲述者:张文全男 44岁农民小学",
+          "source_text": "讲述者：张文全，男，44岁，农民，小学。",
           "zh": [
             {
               "t": "讲",
@@ -383,44 +359,54 @@
               "g": "topic"
             },
             {
-              "t": ":",
+              "t": "：",
               "r": "",
               "g": "function"
             },
             {
               "t": "张",
               "r": "zhāng",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "文",
               "r": "wén",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "全",
               "r": "quán",
-              "g": "object"
+              "g": "subject"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "男",
               "r": "nán",
-              "g": "object"
+              "g": "attributive"
             },
             {
-              "t": " ",
+              "t": "，",
               "r": "",
               "g": "function"
             },
             {
               "t": "44",
               "r": "",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "岁",
               "r": "suì",
-              "g": "object"
+              "g": "attributive"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "农",
@@ -433,14 +419,24 @@
               "g": "object"
             },
             {
+              "t": "，",
+              "r": "",
+              "g": "function"
+            },
+            {
               "t": "小",
               "r": "xiǎo",
-              "g": "object"
+              "g": "complement"
             },
             {
               "t": "学",
               "r": "xué",
-              "g": "object"
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
@@ -468,17 +464,17 @@
               {
                 "t": "張",
                 "r": "ちょう",
-                "g": "object"
+                "g": "subject"
               },
               {
                 "t": "文",
                 "r": "ぶん",
-                "g": "object"
+                "g": "subject"
               },
               {
                 "t": "全",
                 "r": "ぜん",
-                "g": "object"
+                "g": "subject"
               },
               {
                 "t": "、",
@@ -488,27 +484,22 @@
               {
                 "t": "男",
                 "r": "だん",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "性",
                 "r": "せい",
-                "g": "object"
+                "g": "attributive"
               },
               {
-                "t": "、",
+                "t": "、44",
                 "r": "",
-                "g": "function"
-              },
-              {
-                "t": "44",
-                "r": "",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "歳",
                 "r": "さい",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "。",
@@ -528,34 +519,44 @@
                 "g": "object"
               },
               {
-                "t": "、",
+                "t": "で、",
                 "r": "",
                 "g": "function"
               },
               {
+                "t": "学",
+                "r": "がく",
+                "g": "complement"
+              },
+              {
+                "t": "歴",
+                "r": "れき",
+                "g": "complement"
+              },
+              {
+                "t": "は",
+                "r": "",
+                "g": "complement"
+              },
+              {
                 "t": "小",
                 "r": "しょう",
-                "g": "object"
+                "g": "complement"
               },
               {
                 "t": "学",
-                "r": "がっ",
-                "g": "object"
-              },
-              {
-                "t": "校",
-                "r": "こう",
-                "g": "object"
+                "r": "がく",
+                "g": "complement"
               },
               {
                 "t": "程",
                 "r": "てい",
-                "g": "object"
+                "g": "complement"
               },
               {
                 "t": "度",
                 "r": "ど",
-                "g": "object"
+                "g": "complement"
               },
               {
                 "t": "。",
@@ -566,7 +567,7 @@
           ]
         },
         {
-          "source_text": "采录者:李子硕.赵永峰男文化馆干部",
+          "source_text": "采录者：李子硕、赵永峰，男，文化馆干部。",
           "zh": [
             {
               "t": "采",
@@ -584,49 +585,59 @@
               "g": "topic"
             },
             {
-              "t": ":",
+              "t": "：",
               "r": "",
               "g": "function"
             },
             {
               "t": "李",
               "r": "lǐ",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "子",
               "r": "zǐ",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "硕",
               "r": "shuò",
-              "g": "object"
+              "g": "subject"
             },
             {
-              "t": ".",
+              "t": "、",
               "r": "",
               "g": "function"
             },
             {
               "t": "赵",
               "r": "zhào",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "永",
               "r": "yǒng",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "峰",
               "r": "fēng",
-              "g": "object"
+              "g": "subject"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "男",
               "r": "nán",
-              "g": "object"
+              "g": "attributive"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "文",
@@ -652,6 +663,11 @@
               "t": "部",
               "r": "bù",
               "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
@@ -679,37 +695,37 @@
               {
                 "t": "李",
                 "r": "り",
-                "g": "object"
+                "g": "subject"
               },
               {
                 "t": "子",
                 "r": "し",
-                "g": "object"
+                "g": "subject"
               },
               {
                 "t": "碩",
                 "r": "せき",
-                "g": "object"
+                "g": "subject"
               },
               {
-                "t": "・",
+                "t": "、",
                 "r": "",
-                "g": "object"
+                "g": "function"
               },
               {
                 "t": "趙",
                 "r": "ちょう",
-                "g": "object"
+                "g": "subject"
               },
               {
                 "t": "永",
                 "r": "えい",
-                "g": "object"
+                "g": "subject"
               },
               {
                 "t": "峰",
                 "r": "ほう",
-                "g": "object"
+                "g": "subject"
               },
               {
                 "t": "。",
@@ -721,15 +737,15 @@
               {
                 "t": "男",
                 "r": "だん",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "性",
                 "r": "せい",
-                "g": "object"
+                "g": "attributive"
               },
               {
-                "t": "、",
+                "t": "で、",
                 "r": "",
                 "g": "function"
               },
@@ -746,6 +762,11 @@
               {
                 "t": "館",
                 "r": "かん",
+                "g": "object"
+              },
+              {
+                "t": "の",
+                "r": "",
                 "g": "object"
               },
               {
@@ -767,7 +788,7 @@
           ]
         },
         {
-          "source_text": "采录时间、.地点;1988 年 4 月于巴县鱼油镇",
+          "source_text": "采录时间、地点：1988年4月于巴县鱼洞镇。",
           "zh": [
             {
               "t": "采",
@@ -795,11 +816,6 @@
               "g": "function"
             },
             {
-              "t": ".",
-              "r": "",
-              "g": "function"
-            },
-            {
               "t": "地",
               "r": "dì",
               "g": "topic"
@@ -810,7 +826,7 @@
               "g": "topic"
             },
             {
-              "t": ";",
+              "t": "：",
               "r": "",
               "g": "function"
             },
@@ -820,29 +836,14 @@
               "g": "adverbial"
             },
             {
-              "t": " ",
-              "r": "",
-              "g": "function"
-            },
-            {
               "t": "年",
               "r": "nián",
               "g": "adverbial"
             },
             {
-              "t": " ",
-              "r": "",
-              "g": "function"
-            },
-            {
               "t": "4",
               "r": "",
               "g": "adverbial"
-            },
-            {
-              "t": " ",
-              "r": "",
-              "g": "function"
             },
             {
               "t": "月",
@@ -852,7 +853,7 @@
             {
               "t": "于",
               "r": "yú",
-              "g": "complement"
+              "g": "predicate"
             },
             {
               "t": "巴",
@@ -870,14 +871,19 @@
               "g": "complement"
             },
             {
-              "t": "油",
-              "r": "yóu",
+              "t": "洞",
+              "r": "dòng",
               "g": "complement"
             },
             {
               "t": "镇",
               "r": "zhèn",
               "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ],
           "ja": [
@@ -898,9 +904,14 @@
                 "g": "topic"
               },
               {
+                "t": "期",
+                "r": "き",
+                "g": "topic"
+              },
+              {
                 "t": "・",
                 "r": "",
-                "g": "topic"
+                "g": "function"
               },
               {
                 "t": "場",
@@ -960,8 +971,8 @@
                 "g": "complement"
               },
               {
-                "t": "油",
-                "r": "ゆ",
+                "t": "洞",
+                "r": "どう",
                 "g": "complement"
               },
               {
@@ -972,7 +983,7 @@
               {
                 "t": "にて",
                 "r": "",
-                "g": "complement"
+                "g": "predicate"
               },
               {
                 "t": "。",

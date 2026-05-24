@@ -1,0 +1,762 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p00909",
+  "source_text": "过了一会儿,孙思和屠把病看完了.老虎又走来了,依然趴在他脚下,等孙思屠骑好后把他送回了家。",
+  "source_sha256": "e9e5bd66303da5f01647c95afef6c8a70298d0dbd546dfc779c8c9ee467d119c",
+  "source_normalized_sha256": "e9e5bd66303da5f01647c95afef6c8a70298d0dbd546dfc779c8c9ee467d119c",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 90,
+    "grammar_token_total": 90,
+    "unit_count": 2
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0909",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "subject"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "subject"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "subject"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "人物传说",
+    "title_zh": [
+      {
+        "t": "。",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "subject"
+      },
+      {
+        "t": "物",
+        "r": "wù",
+        "g": "subject"
+      },
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "subject"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "subject"
+      },
+      {
+        "t": "物",
+        "r": "ぶつ",
+        "g": "subject"
+      },
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "subject"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "subject"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-人物传说-087-孙思拷骑虎看病彭县",
+    "title_zh": [
+      {
+        "t": "0",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "8",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "7",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "孙",
+        "r": "sūn",
+        "g": "subject"
+      },
+      {
+        "t": "思",
+        "r": "sī",
+        "g": "subject"
+      },
+      {
+        "t": "拷",
+        "r": "kǎo",
+        "g": "subject"
+      },
+      {
+        "t": "骑",
+        "r": "qí",
+        "g": "predicate"
+      },
+      {
+        "t": "虎",
+        "r": "hǔ",
+        "g": "object"
+      },
+      {
+        "t": "看",
+        "r": "kàn",
+        "g": "predicate"
+      },
+      {
+        "t": "病",
+        "r": "bìng",
+        "g": "object"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "彭",
+        "r": "péng",
+        "g": "attributive"
+      },
+      {
+        "t": "县",
+        "r": "xiàn",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "0",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "8",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "7",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ". ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "孫",
+        "r": "そん",
+        "g": "subject"
+      },
+      {
+        "t": "思",
+        "r": "し",
+        "g": "subject"
+      },
+      {
+        "t": "拷",
+        "r": "こう",
+        "g": "subject"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "虎",
+        "r": "とら",
+        "g": "object"
+      },
+      {
+        "t": "に",
+        "r": "",
+        "g": "object"
+      },
+      {
+        "t": "乗",
+        "r": "の",
+        "g": "predicate"
+      },
+      {
+        "t": "って",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "診",
+        "r": "しん",
+        "g": "predicate"
+      },
+      {
+        "t": "察",
+        "r": "さつ",
+        "g": "predicate"
+      },
+      {
+        "t": "する",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "彭",
+        "r": "ほう",
+        "g": "attributive"
+      },
+      {
+        "t": "県",
+        "r": "けん",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p00909",
+    "source_text": "过了一会儿,孙思和屠把病看完了.老虎又走来了,依然趴在他脚下,等孙思屠骑好后把他送回了家。",
+    "corrected_text": "过了一会儿，孙思邈把病看完了。老虎又走来了，依然趴在他脚下，等孙思邈骑好后把他送回了家。",
+    "units": [
+      {
+        "source_text": "过了一会儿，孙思邈把病看完了。",
+        "zh": [
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "attributive"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "attributive"
+          },
+          {
+            "t": "儿",
+            "r": "r",
+            "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "孙",
+            "r": "sūn",
+            "g": "subject"
+          },
+          {
+            "t": "思",
+            "r": "sī",
+            "g": "subject"
+          },
+          {
+            "t": "邈",
+            "r": "miǎo",
+            "g": "subject"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "病",
+            "r": "bìng",
+            "g": "object"
+          },
+          {
+            "t": "看",
+            "r": "kàn",
+            "g": "predicate"
+          },
+          {
+            "t": "完",
+            "r": "wán",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "しばらくして、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "孫",
+              "r": "そん",
+              "g": "subject"
+            },
+            {
+              "t": "思",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "邈",
+              "r": "ばく",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "病",
+              "r": "びょう",
+              "g": "object"
+            },
+            {
+              "t": "人",
+              "r": "にん",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "診",
+              "r": "しん",
+              "g": "predicate"
+            },
+            {
+              "t": "察",
+              "r": "さつ",
+              "g": "predicate"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "終",
+              "r": "お",
+              "g": "complement"
+            },
+            {
+              "t": "えた。",
+              "r": "",
+              "g": "complement"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "老虎又走来了，依然趴在他脚下，等孙思邈骑好后把他送回了家。",
+        "zh": [
+          {
+            "t": "老",
+            "r": "lǎo",
+            "g": "subject"
+          },
+          {
+            "t": "虎",
+            "r": "hǔ",
+            "g": "subject"
+          },
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "走",
+            "r": "zǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "依",
+            "r": "yī",
+            "g": "adverbial"
+          },
+          {
+            "t": "然",
+            "r": "rán",
+            "g": "adverbial"
+          },
+          {
+            "t": "趴",
+            "r": "pā",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "attributive"
+          },
+          {
+            "t": "脚",
+            "r": "jiǎo",
+            "g": "object"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "等",
+            "r": "děng",
+            "g": "adverbial"
+          },
+          {
+            "t": "孙",
+            "r": "sūn",
+            "g": "subject"
+          },
+          {
+            "t": "思",
+            "r": "sī",
+            "g": "subject"
+          },
+          {
+            "t": "邈",
+            "r": "miǎo",
+            "g": "subject"
+          },
+          {
+            "t": "骑",
+            "r": "qí",
+            "g": "predicate"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "complement"
+          },
+          {
+            "t": "后",
+            "r": "hòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "object"
+          },
+          {
+            "t": "送",
+            "r": "sòng",
+            "g": "predicate"
+          },
+          {
+            "t": "回",
+            "r": "huí",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "虎",
+              "r": "とら",
+              "g": "subject"
+            },
+            {
+              "t": "はまた",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "歩",
+              "r": "ある",
+              "g": "predicate"
+            },
+            {
+              "t": "いて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "来",
+              "r": "き",
+              "g": "complement"
+            },
+            {
+              "t": "て、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "前",
+              "r": "まえ",
+              "g": "object"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "同",
+              "r": "おな",
+              "g": "adverbial"
+            },
+            {
+              "t": "じく",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "足",
+              "r": "あし",
+              "g": "object"
+            },
+            {
+              "t": "元",
+              "r": "もと",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "伏",
+              "r": "ふ",
+              "g": "predicate"
+            },
+            {
+              "t": "した。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "孫",
+              "r": "そん",
+              "g": "subject"
+            },
+            {
+              "t": "思",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "邈",
+              "r": "ばく",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "乗",
+              "r": "の",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "終",
+              "r": "お",
+              "g": "complement"
+            },
+            {
+              "t": "えると、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "家",
+              "r": "いえ",
+              "g": "object"
+            },
+            {
+              "t": "まで",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "送",
+              "r": "おく",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "返",
+              "r": "かえ",
+              "g": "complement"
+            },
+            {
+              "t": "した。",
+              "r": "",
+              "g": "complement"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

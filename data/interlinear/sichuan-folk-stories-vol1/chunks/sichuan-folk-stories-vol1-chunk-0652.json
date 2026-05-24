@@ -6,7 +6,7 @@
       {
         "t": "神",
         "r": "shén",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "话",
@@ -18,7 +18,7 @@
       {
         "t": "神",
         "r": "しん",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "話",
@@ -38,7 +38,7 @@
       {
         "t": "和",
         "r": "hé",
-        "g": "attributive"
+        "g": "function"
       },
       {
         "t": "英",
@@ -53,7 +53,7 @@
       {
         "t": "神",
         "r": "shén",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "话",
@@ -70,7 +70,7 @@
       {
         "t": "と",
         "r": "",
-        "g": "attributive"
+        "g": "function"
       },
       {
         "t": "英",
@@ -85,7 +85,7 @@
       {
         "t": "神",
         "r": "しん",
-        "g": "object"
+        "g": "attributive"
       },
       {
         "t": "話",
@@ -130,7 +130,7 @@
       {
         "t": "身",
         "r": "shēn",
-        "g": "object"
+        "g": "subject"
       },
       {
         "t": "九",
@@ -197,7 +197,7 @@
       {
         "t": "身",
         "r": "しん",
-        "g": "object"
+        "g": "subject"
       },
       {
         "t": "九",
@@ -242,13 +242,14 @@
     {
       "id": "sichuan-folk-stories-vol1-p00652",
       "source_text": "事青女 21岁二仙桥办事处文化专干高中采承时间、地点:1987 年 3 月于成都市东域区",
+      "corrected_text": "李青，女，21岁，二仙桥办事处文化专干。高中采录。时间、地点：1987年3月于成都市东城区。",
       "units": [
         {
-          "source_text": "事青女 21岁二仙桥办事处文化专干高中采承时间、地点:1987 年 3 月于成都市东域区",
+          "source_text": "李青，女，21岁，二仙桥办事处文化专干。",
           "zh": [
             {
-              "t": "事",
-              "r": "shì",
+              "t": "李",
+              "r": "lǐ",
               "g": "subject"
             },
             {
@@ -257,12 +258,17 @@
               "g": "subject"
             },
             {
-              "t": "女",
-              "r": "nǚ",
-              "g": "subject"
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
-              "t": " ",
+              "t": "女",
+              "r": "nǚ",
+              "g": "attributive"
+            },
+            {
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -280,6 +286,11 @@
               "t": "岁",
               "r": "suì",
               "g": "attributive"
+            },
+            {
+              "t": "，",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "二",
@@ -314,17 +325,17 @@
             {
               "t": "文",
               "r": "wén",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "化",
               "r": "huà",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "专",
               "r": "zhuān",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "干",
@@ -332,146 +343,16 @@
               "g": "object"
             },
             {
-              "t": "高",
-              "r": "gāo",
-              "g": "subject"
-            },
-            {
-              "t": "中",
-              "r": "zhōng",
-              "g": "subject"
-            },
-            {
-              "t": "采",
-              "r": "cǎi",
-              "g": "predicate"
-            },
-            {
-              "t": "承",
-              "r": "chéng",
-              "g": "predicate"
-            },
-            {
-              "t": "时",
-              "r": "shí",
-              "g": "object"
-            },
-            {
-              "t": "间",
-              "r": "jiān",
-              "g": "object"
-            },
-            {
-              "t": "、",
+              "t": "。",
               "r": "",
               "g": "function"
-            },
-            {
-              "t": "地",
-              "r": "dì",
-              "g": "object"
-            },
-            {
-              "t": "点",
-              "r": "diǎn",
-              "g": "object"
-            },
-            {
-              "t": ":",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "1",
-              "r": "",
-              "g": "adverbial"
-            },
-            {
-              "t": "9",
-              "r": "",
-              "g": "adverbial"
-            },
-            {
-              "t": "8",
-              "r": "",
-              "g": "adverbial"
-            },
-            {
-              "t": "7",
-              "r": "",
-              "g": "adverbial"
-            },
-            {
-              "t": " ",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "年",
-              "r": "nián",
-              "g": "adverbial"
-            },
-            {
-              "t": " ",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "3",
-              "r": "",
-              "g": "adverbial"
-            },
-            {
-              "t": " ",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "月",
-              "r": "yuè",
-              "g": "adverbial"
-            },
-            {
-              "t": "于",
-              "r": "yú",
-              "g": "adverbial"
-            },
-            {
-              "t": "成",
-              "r": "chéng",
-              "g": "adverbial"
-            },
-            {
-              "t": "都",
-              "r": "dū",
-              "g": "adverbial"
-            },
-            {
-              "t": "市",
-              "r": "shì",
-              "g": "adverbial"
-            },
-            {
-              "t": "东",
-              "r": "dōng",
-              "g": "adverbial"
-            },
-            {
-              "t": "域",
-              "r": "yù",
-              "g": "adverbial"
-            },
-            {
-              "t": "区",
-              "r": "qū",
-              "g": "adverbial"
             }
           ],
           "ja": [
             [
               {
-                "t": "事",
-                "r": "じ",
+                "t": "李",
+                "r": "り",
                 "g": "subject"
               },
               {
@@ -480,19 +361,19 @@
                 "g": "subject"
               },
               {
-                "t": "という",
+                "t": "、",
                 "r": "",
-                "g": "subject"
+                "g": "function"
               },
               {
                 "t": "女",
                 "r": "じょ",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "性",
                 "r": "せい",
-                "g": "subject"
+                "g": "attributive"
               },
               {
                 "t": "、21",
@@ -505,10 +386,12 @@
                 "g": "attributive"
               },
               {
-                "t": "、",
+                "t": "。",
                 "r": "",
                 "g": "function"
-              },
+              }
+            ],
+            [
               {
                 "t": "二",
                 "r": "に",
@@ -547,17 +430,17 @@
               {
                 "t": "文",
                 "r": "ぶん",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "化",
                 "r": "か",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "専",
                 "r": "せん",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "従",
@@ -570,10 +453,44 @@
                 "g": "object"
               },
               {
-                "t": "である",
+                "t": "。",
                 "r": "",
-                "g": "predicate"
-              },
+                "g": "function"
+              }
+            ]
+          ]
+        },
+        {
+          "source_text": "高中采录。",
+          "zh": [
+            {
+              "t": "高",
+              "r": "gāo",
+              "g": "subject"
+            },
+            {
+              "t": "中",
+              "r": "zhōng",
+              "g": "subject"
+            },
+            {
+              "t": "采",
+              "r": "cǎi",
+              "g": "predicate"
+            },
+            {
+              "t": "录",
+              "r": "lù",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          "ja": [
+            [
               {
                 "t": "高",
                 "r": "こう",
@@ -597,21 +514,6 @@
                 "g": "predicate"
               },
               {
-                "t": "集",
-                "r": "しゅう",
-                "g": "predicate"
-              },
-              {
-                "t": "・",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": "記",
-                "r": "き",
-                "g": "predicate"
-              },
-              {
                 "t": "録",
                 "r": "ろく",
                 "g": "predicate"
@@ -622,14 +524,133 @@
                 "g": "predicate"
               },
               {
+                "t": "。",
+                "r": "",
+                "g": "function"
+              }
+            ]
+          ]
+        },
+        {
+          "source_text": "时间、地点：1987年3月于成都市东城区。",
+          "zh": [
+            {
+              "t": "时",
+              "r": "shí",
+              "g": "topic"
+            },
+            {
+              "t": "间",
+              "r": "jiān",
+              "g": "topic"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "地",
+              "r": "dì",
+              "g": "topic"
+            },
+            {
+              "t": "点",
+              "r": "diǎn",
+              "g": "topic"
+            },
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "1",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "9",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "8",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "7",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "年",
+              "r": "nián",
+              "g": "adverbial"
+            },
+            {
+              "t": "3",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "月",
+              "r": "yuè",
+              "g": "adverbial"
+            },
+            {
+              "t": "于",
+              "r": "yú",
+              "g": "adverbial"
+            },
+            {
+              "t": "成",
+              "r": "chéng",
+              "g": "adverbial"
+            },
+            {
+              "t": "都",
+              "r": "dū",
+              "g": "adverbial"
+            },
+            {
+              "t": "市",
+              "r": "shì",
+              "g": "adverbial"
+            },
+            {
+              "t": "东",
+              "r": "dōng",
+              "g": "adverbial"
+            },
+            {
+              "t": "城",
+              "r": "chéng",
+              "g": "adverbial"
+            },
+            {
+              "t": "区",
+              "r": "qū",
+              "g": "adverbial"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          "ja": [
+            [
+              {
                 "t": "時",
                 "r": "じ",
-                "g": "object"
+                "g": "topic"
               },
               {
                 "t": "間",
                 "r": "かん",
-                "g": "object"
+                "g": "topic"
               },
               {
                 "t": "・",
@@ -639,12 +660,12 @@
               {
                 "t": "地",
                 "r": "ち",
-                "g": "object"
+                "g": "topic"
               },
               {
                 "t": "点",
                 "r": "てん",
-                "g": "object"
+                "g": "topic"
               },
               {
                 "t": "：1987",
@@ -670,7 +691,9 @@
                 "t": "、",
                 "r": "",
                 "g": "function"
-              },
+              }
+            ],
+            [
               {
                 "t": "成",
                 "r": "せい",
@@ -692,8 +715,8 @@
                 "g": "adverbial"
               },
               {
-                "t": "域",
-                "r": "いき",
+                "t": "城",
+                "r": "じょう",
                 "g": "adverbial"
               },
               {
@@ -705,6 +728,11 @@
                 "t": "にて",
                 "r": "",
                 "g": "adverbial"
+              },
+              {
+                "t": "。",
+                "r": "",
+                "g": "function"
               }
             ]
           ]

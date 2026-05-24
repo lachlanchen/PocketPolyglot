@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 200,
-    "grammar_token_total": 200,
-    "unit_count": 4
+    "token_total": 215,
+    "grammar_token_total": 215,
+    "unit_count": 5
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0695",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -278,18 +278,19 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00695",
     "source_text": "夏锅王把九江八河、四海一琉通,回朝向范上应报说:琉遂西海,应该算我妻子同她的婆婆的功劳啊!莹王听说是两个大龟把西海修通的,很怀念她们,就喊各大臣今后上朝时,手上要执龟牌。这个龟牌就是后来的朝片。",
+    "corrected_text": "夏禹王把九江八河、四海一一疏通，回朝向舜王禀报说：疏通西海，应该算我妻子同她的婆婆的功劳啊！舜王听说是两个大龟把西海修通的，很怀念她们，就喊各大臣今后上朝时，手上要执龟牌。这个龟牌就是后来的朝片。",
     "units": [
       {
-        "source_text": "夏锅王把九江八河、四海一琉通,回朝向范上应报说:",
+        "source_text": "夏禹王把九江八河、四海一一疏通，回朝向舜王禀报说：",
         "zh": [
           {
             "t": "夏",
             "r": "xià",
-            "g": "subject"
+            "g": "attributive"
           },
           {
-            "t": "锅",
-            "r": "guō",
+            "t": "禹",
+            "r": "yǔ",
             "g": "subject"
           },
           {
@@ -340,12 +341,17 @@
           {
             "t": "一",
             "r": "yī",
-            "g": "object"
+            "g": "adverbial"
           },
           {
-            "t": "琉",
-            "r": "liú",
-            "g": "object"
+            "t": "一",
+            "r": "yī",
+            "g": "adverbial"
+          },
+          {
+            "t": "疏",
+            "r": "shū",
+            "g": "predicate"
           },
           {
             "t": "通",
@@ -353,7 +359,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -373,19 +379,19 @@
             "g": "adverbial"
           },
           {
-            "t": "范",
-            "r": "fàn",
-            "g": "adverbial"
+            "t": "舜",
+            "r": "shùn",
+            "g": "object"
           },
           {
-            "t": "上",
-            "r": "shàng",
-            "g": "adverbial"
+            "t": "王",
+            "r": "wáng",
+            "g": "object"
           },
           {
-            "t": "应",
-            "r": "yìng",
-            "g": "adverbial"
+            "t": "禀",
+            "r": "bǐng",
+            "g": "predicate"
           },
           {
             "t": "报",
@@ -398,7 +404,7 @@
             "g": "predicate"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           }
@@ -408,11 +414,16 @@
             {
               "t": "夏",
               "r": "か",
-              "g": "subject"
+              "g": "attributive"
             },
             {
-              "t": "鍋",
-              "r": "か",
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "禹",
+              "r": "う",
               "g": "subject"
             },
             {
@@ -424,6 +435,11 @@
               "t": "は",
               "r": "",
               "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
             },
             {
               "t": "九",
@@ -461,19 +477,26 @@
               "g": "object"
             },
             {
-              "t": "一",
-              "r": "いち",
-              "g": "object"
-            },
-            {
-              "t": "琉",
-              "r": "りゅう",
-              "g": "object"
-            },
-            {
               "t": "を",
               "r": "",
               "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "adverbial"
+            },
+            {
+              "t": "々",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "疏",
+              "r": "そ",
+              "g": "predicate"
             },
             {
               "t": "通",
@@ -481,7 +504,7 @@
               "g": "predicate"
             },
             {
-              "t": "じさせ",
+              "t": "し",
               "r": "",
               "g": "predicate"
             },
@@ -489,9 +512,7 @@
               "t": "、",
               "r": "",
               "g": "function"
-            }
-          ],
-          [
+            },
             {
               "t": "朝",
               "r": "ちょう",
@@ -503,7 +524,7 @@
               "g": "adverbial"
             },
             {
-              "t": "へ",
+              "t": "に",
               "r": "",
               "g": "adverbial"
             },
@@ -513,57 +534,42 @@
               "g": "adverbial"
             },
             {
-              "t": "り",
+              "t": "って",
               "r": "",
               "g": "adverbial"
             },
             {
-              "t": "、",
-              "r": "",
-              "g": "function"
+              "t": "舜",
+              "r": "しゅん",
+              "g": "object"
             },
             {
-              "t": "范",
-              "r": "はん",
-              "g": "adverbial"
-            },
-            {
-              "t": "上",
-              "r": "じょう",
-              "g": "adverbial"
-            },
-            {
-              "t": "応",
+              "t": "王",
               "r": "おう",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "に",
               "r": "",
-              "g": "adverbial"
+              "g": "object"
             },
             {
-              "t": "報",
-              "r": "ほう",
+              "t": "申",
+              "r": "もう",
               "g": "predicate"
             },
             {
-              "t": "告",
-              "r": "こく",
-              "g": "predicate"
-            },
-            {
-              "t": "して",
+              "t": "し",
               "r": "",
               "g": "predicate"
             },
             {
-              "t": "言",
-              "r": "い",
+              "t": "上",
+              "r": "あ",
               "g": "predicate"
             },
             {
-              "t": "った",
+              "t": "げた",
               "r": "",
               "g": "predicate"
             },
@@ -576,30 +582,30 @@
         ]
       },
       {
-        "source_text": "琉遂西海,应该算我妻子同她的婆婆的功劳啊!",
+        "source_text": "疏通西海，应该算我妻子同她的婆婆的功劳啊！",
         "zh": [
           {
-            "t": "琉",
-            "r": "liú",
-            "g": "topic"
+            "t": "疏",
+            "r": "shū",
+            "g": "predicate"
           },
           {
-            "t": "遂",
-            "r": "suì",
-            "g": "topic"
+            "t": "通",
+            "r": "tōng",
+            "g": "predicate"
           },
           {
             "t": "西",
             "r": "xī",
-            "g": "topic"
+            "g": "object"
           },
           {
             "t": "海",
             "r": "hǎi",
-            "g": "topic"
+            "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -679,7 +685,7 @@
             "g": "function"
           },
           {
-            "t": "!",
+            "t": "！",
             "r": "",
             "g": "function"
           }
@@ -689,27 +695,32 @@
             {
               "t": "西",
               "r": "せい",
-              "g": "topic"
+              "g": "object"
             },
             {
               "t": "海",
               "r": "かい",
-              "g": "topic"
+              "g": "object"
             },
             {
-              "t": "まで",
+              "t": "を",
               "r": "",
-              "g": "topic"
+              "g": "object"
+            },
+            {
+              "t": "疏",
+              "r": "そ",
+              "g": "predicate"
             },
             {
               "t": "通",
               "r": "つう",
-              "g": "topic"
+              "g": "predicate"
             },
             {
-              "t": "じさせたことは",
+              "t": "したことは",
               "r": "",
-              "g": "topic"
+              "g": "predicate"
             },
             {
               "t": "、",
@@ -739,7 +750,17 @@
               "g": "attributive"
             },
             {
-              "t": "その",
+              "t": "彼",
+              "r": "かの",
+              "g": "attributive"
+            },
+            {
+              "t": "女",
+              "r": "じょ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
               "r": "",
               "g": "attributive"
             },
@@ -769,22 +790,12 @@
               "g": "object"
             },
             {
-              "t": "見",
-              "r": "み",
-              "g": "predicate"
-            },
-            {
-              "t": "るべきだ",
+              "t": "すべきだ",
               "r": "",
               "g": "predicate"
             },
             {
-              "t": "な",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "!",
+              "t": "！",
               "r": "",
               "g": "function"
             }
@@ -792,11 +803,11 @@
         ]
       },
       {
-        "source_text": "莹王听说是两个大龟把西海修通的,很怀念她们,就喊各大臣今后上朝时,手上要执龟牌。",
+        "source_text": "舜王听说是两个大龟把西海修通的，很怀念她们，",
         "zh": [
           {
-            "t": "莹",
-            "r": "yíng",
+            "t": "舜",
+            "r": "shùn",
             "g": "subject"
           },
           {
@@ -870,7 +881,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -900,97 +911,7 @@
             "g": "object"
           },
           {
-            "t": ",",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "就",
-            "r": "jiù",
-            "g": "adverbial"
-          },
-          {
-            "t": "喊",
-            "r": "hǎn",
-            "g": "predicate"
-          },
-          {
-            "t": "各",
-            "r": "gè",
-            "g": "object"
-          },
-          {
-            "t": "大",
-            "r": "dà",
-            "g": "object"
-          },
-          {
-            "t": "臣",
-            "r": "chén",
-            "g": "object"
-          },
-          {
-            "t": "今",
-            "r": "jīn",
-            "g": "adverbial"
-          },
-          {
-            "t": "后",
-            "r": "hòu",
-            "g": "adverbial"
-          },
-          {
-            "t": "上",
-            "r": "shàng",
-            "g": "adverbial"
-          },
-          {
-            "t": "朝",
-            "r": "cháo",
-            "g": "adverbial"
-          },
-          {
-            "t": "时",
-            "r": "shí",
-            "g": "adverbial"
-          },
-          {
-            "t": ",",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "手",
-            "r": "shǒu",
-            "g": "adverbial"
-          },
-          {
-            "t": "上",
-            "r": "shàng",
-            "g": "adverbial"
-          },
-          {
-            "t": "要",
-            "r": "yào",
-            "g": "adverbial"
-          },
-          {
-            "t": "执",
-            "r": "zhí",
-            "g": "predicate"
-          },
-          {
-            "t": "龟",
-            "r": "guī",
-            "g": "object"
-          },
-          {
-            "t": "牌",
-            "r": "pái",
-            "g": "object"
-          },
-          {
-            "t": "。",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -998,8 +919,8 @@
         "ja": [
           [
             {
-              "t": "瑩",
-              "r": "えい",
+              "t": "舜",
+              "r": "しゅん",
               "g": "subject"
             },
             {
@@ -1061,19 +982,31 @@
               "t": "を",
               "r": "",
               "g": "object"
-            },
+            }
+          ],
+          [
             {
-              "t": "通",
-              "r": "つう",
+              "t": "修",
+              "r": "しゅう",
               "g": "predicate"
             },
             {
-              "t": "じさせた",
+              "t": "復",
+              "r": "ふく",
+              "g": "predicate"
+            },
+            {
+              "t": "して",
               "r": "",
               "g": "predicate"
             },
             {
-              "t": "と",
+              "t": "通",
+              "r": "とお",
+              "g": "predicate"
+            },
+            {
+              "t": "したと",
               "r": "",
               "g": "predicate"
             },
@@ -1091,9 +1024,7 @@
               "t": "、",
               "r": "",
               "g": "function"
-            }
-          ],
-          [
+            },
             {
               "t": "彼",
               "r": "かの",
@@ -1110,14 +1041,153 @@
               "g": "object"
             },
             {
-              "t": "慕",
-              "r": "した",
+              "t": "深",
+              "r": "ふか",
+              "g": "adverbial"
+            },
+            {
+              "t": "く",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "懐",
+              "r": "なつ",
               "g": "predicate"
             },
             {
-              "t": "い",
+              "t": "かしんだ",
               "r": "",
               "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "就喊各大臣今后上朝时，手上要执龟牌。",
+        "zh": [
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "喊",
+            "r": "hǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "各",
+            "r": "gè",
+            "g": "object"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "object"
+          },
+          {
+            "t": "臣",
+            "r": "chén",
+            "g": "object"
+          },
+          {
+            "t": "今",
+            "r": "jīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "后",
+            "r": "hòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "朝",
+            "r": "cháo",
+            "g": "adverbial"
+          },
+          {
+            "t": "时",
+            "r": "shí",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "手",
+            "r": "shǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "adverbial"
+          },
+          {
+            "t": "执",
+            "r": "zhí",
+            "g": "predicate"
+          },
+          {
+            "t": "龟",
+            "r": "guī",
+            "g": "object"
+          },
+          {
+            "t": "牌",
+            "r": "pái",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そこで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "各",
+              "r": "かく",
+              "g": "object"
+            },
+            {
+              "t": "大",
+              "r": "だい",
+              "g": "object"
+            },
+            {
+              "t": "臣",
+              "r": "じん",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
             },
             {
               "t": "、",
@@ -1135,21 +1205,6 @@
               "g": "adverbial"
             },
             {
-              "t": "大",
-              "r": "だい",
-              "g": "object"
-            },
-            {
-              "t": "臣",
-              "r": "じん",
-              "g": "object"
-            },
-            {
-              "t": "たちに",
-              "r": "",
-              "g": "object"
-            },
-            {
               "t": "朝",
               "r": "ちょう",
               "g": "adverbial"
@@ -1160,7 +1215,29 @@
               "g": "adverbial"
             },
             {
-              "t": "で",
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "出",
+              "r": "で",
+              "g": "adverbial"
+            },
+            {
+              "t": "るときは",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "手",
+              "r": "て",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
               "r": "",
               "g": "adverbial"
             },
@@ -1180,12 +1257,22 @@
               "g": "object"
             },
             {
-              "t": "持",
-              "r": "も",
+              "t": "執",
+              "r": "と",
               "g": "predicate"
             },
             {
-              "t": "たせた",
+              "t": "るよう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "命",
+              "r": "めい",
+              "g": "predicate"
+            },
+            {
+              "t": "じた",
               "r": "",
               "g": "predicate"
             },
@@ -1279,14 +1366,14 @@
               "g": "subject"
             },
             {
-              "t": "こそ",
+              "t": "が",
               "r": "",
               "g": "subject"
             },
             {
-              "t": "、",
+              "t": "まさに",
               "r": "",
-              "g": "function"
+              "g": "adverbial"
             }
           ],
           [
@@ -1311,7 +1398,7 @@
               "g": "object"
             },
             {
-              "t": "である",
+              "t": "なのである",
               "r": "",
               "g": "predicate"
             },

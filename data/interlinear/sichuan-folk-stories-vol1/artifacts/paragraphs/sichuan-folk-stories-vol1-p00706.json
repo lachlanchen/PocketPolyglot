@@ -23,24 +23,24 @@
       {
         "t": "传",
         "r": "chuán",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "说",
         "r": "shuō",
-        "g": "predicate"
+        "g": "object"
       }
     ],
     "title_ja": [
       {
         "t": "伝",
         "r": "でん",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "説",
         "r": "せつ",
-        "g": "predicate"
+        "g": "object"
       }
     ]
   },
@@ -65,12 +65,12 @@
       {
         "t": "传",
         "r": "chuán",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "说",
         "r": "shuō",
-        "g": "predicate"
+        "g": "object"
       }
     ],
     "title_ja": [
@@ -92,12 +92,12 @@
       {
         "t": "伝",
         "r": "でん",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "説",
         "r": "せつ",
-        "g": "predicate"
+        "g": "object"
       }
     ]
   },
@@ -367,22 +367,7 @@
     ],
     "title_ja": [
       {
-        "t": "0",
-        "r": "",
-        "g": "function"
-      },
-      {
-        "t": "6",
-        "r": "",
-        "g": "function"
-      },
-      {
-        "t": "8",
-        "r": "",
-        "g": "function"
-      },
-      {
-        "t": ". ",
+        "t": "068. ",
         "r": "",
         "g": "function"
       },
@@ -402,8 +387,8 @@
         "g": "subject"
       },
       {
-        "t": "禁",
-        "r": "きん",
+        "t": "戒",
+        "r": "かい",
         "g": "predicate"
       },
       {
@@ -452,11 +437,6 @@
         "g": "attributive"
       },
       {
-        "t": "の",
-        "r": "",
-        "g": "attributive"
-      },
-      {
         "t": "建",
         "r": "けん",
         "g": "predicate"
@@ -497,13 +477,13 @@
         "g": "adverbial"
       },
       {
-        "t": "倹",
-        "r": "けん",
+        "t": "質",
+        "r": "しつ",
         "g": "predicate"
       },
       {
-        "t": "約",
-        "r": "やく",
+        "t": "素",
+        "r": "そ",
         "g": "predicate"
       },
       {
@@ -538,12 +518,12 @@
       },
       {
         "t": "三",
-        "r": "み",
+        "r": "さん",
         "g": "adverbial"
       },
       {
         "t": "度",
-        "r": "たび",
+        "r": "ど",
         "g": "adverbial"
       },
       {
@@ -587,34 +567,9 @@
         "g": "predicate"
       },
       {
-        "t": "一",
-        "r": "いっ",
-        "g": "adverbial"
-      },
-      {
-        "t": "心",
-        "r": "しん",
-        "g": "adverbial"
-      },
-      {
-        "t": "に",
+        "t": "ひたすら",
         "r": "",
         "g": "adverbial"
-      },
-      {
-        "t": "目",
-        "r": "め",
-        "g": "predicate"
-      },
-      {
-        "t": "指",
-        "r": "ざ",
-        "g": "predicate"
-      },
-      {
-        "t": "したのは",
-        "r": "",
-        "g": "function"
       }
     ],
     "place_zh": [],
@@ -623,9 +578,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00706",
     "source_text": "讲述考:吴元照男 66岁宜宾市政协谍休干部及耿各:吴有梧男地区杂协干部",
+    "corrected_text": "讲述者:吴元照男 66岁宜宾市政协离休干部采录者:吴有梧男地区文协干部",
     "units": [
       {
-        "source_text": "讲述考:吴元照男 66岁宜宾市政协谍休干部",
+        "source_text": "讲述者:吴元照男 66岁宜宾市政协离休干部",
         "zh": [
           {
             "t": "讲",
@@ -638,8 +594,8 @@
             "g": "predicate"
           },
           {
-            "t": "考",
-            "r": "kǎo",
+            "t": "者",
+            "r": "zhě",
             "g": "subject"
           },
           {
@@ -713,8 +669,8 @@
             "g": "attributive"
           },
           {
-            "t": "谍",
-            "r": "dié",
+            "t": "离",
+            "r": "lí",
             "g": "attributive"
           },
           {
@@ -736,18 +692,18 @@
         "ja": [
           [
             {
-              "t": "講",
-              "r": "こう",
+              "t": "語",
+              "r": "かた",
               "g": "predicate"
             },
             {
-              "t": "述",
-              "r": "じゅつ",
+              "t": "り",
+              "r": "",
               "g": "predicate"
             },
             {
-              "t": "考",
-              "r": "こう",
+              "t": "手",
+              "r": "て",
               "g": "subject"
             },
             {
@@ -828,8 +784,8 @@
               "g": "attributive"
             },
             {
-              "t": "谍",
-              "r": "ちょう",
+              "t": "離",
+              "r": "り",
               "g": "attributive"
             },
             {
@@ -851,21 +807,21 @@
         ]
       },
       {
-        "source_text": "及耿各:吴有梧男地区杂协干部",
+        "source_text": "采录者:吴有梧男地区文协干部",
         "zh": [
           {
-            "t": "及",
-            "r": "jí",
-            "g": "function"
+            "t": "采",
+            "r": "cǎi",
+            "g": "predicate"
           },
           {
-            "t": "耿",
-            "r": "gěng",
-            "g": "subject"
+            "t": "录",
+            "r": "lù",
+            "g": "predicate"
           },
           {
-            "t": "各",
-            "r": "gè",
+            "t": "者",
+            "r": "zhě",
             "g": "subject"
           },
           {
@@ -904,8 +860,8 @@
             "g": "attributive"
           },
           {
-            "t": "杂",
-            "r": "zá",
+            "t": "文",
+            "r": "wén",
             "g": "attributive"
           },
           {
@@ -927,18 +883,18 @@
         "ja": [
           [
             {
-              "t": "および",
-              "r": "",
-              "g": "function"
+              "t": "採",
+              "r": "さい",
+              "g": "predicate"
             },
             {
-              "t": "耿",
-              "r": "こう",
-              "g": "subject"
+              "t": "録",
+              "r": "ろく",
+              "g": "predicate"
             },
             {
-              "t": "各",
-              "r": "かく",
+              "t": "者",
+              "r": "しゃ",
               "g": "subject"
             },
             {
@@ -989,8 +945,8 @@
               "g": "attributive"
             },
             {
-              "t": "雑",
-              "r": "ざっ",
+              "t": "文",
+              "r": "ぶん",
               "g": "attributive"
             },
             {

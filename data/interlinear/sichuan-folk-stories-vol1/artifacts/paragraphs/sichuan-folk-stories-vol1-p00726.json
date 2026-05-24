@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 29,
-    "grammar_token_total": 29,
+    "token_total": 37,
+    "grammar_token_total": 37,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0726",
@@ -183,9 +183,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00726",
     "source_text": "讲述着:未条天田 72岁居民高中",
+    "corrected_text": "讲述者：未条天田，72岁，居民，高中。",
     "units": [
       {
-        "source_text": "讲述着:未条天田 72岁居民高中",
+        "source_text": "讲述者：未条天田，72岁，居民，高中。",
         "zh": [
           {
             "t": "讲",
@@ -198,12 +199,12 @@
             "g": "predicate"
           },
           {
-            "t": "着",
-            "r": "zhe",
-            "g": "predicate"
+            "t": "者",
+            "r": "zhě",
+            "g": "subject"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -228,7 +229,7 @@
             "g": "subject"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -243,24 +244,39 @@
             "g": "attributive"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "居",
             "r": "jū",
-            "g": "attributive"
+            "g": "object"
           },
           {
             "t": "民",
             "r": "mín",
-            "g": "attributive"
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "高",
             "r": "gāo",
-            "g": "attributive"
+            "g": "complement"
           },
           {
             "t": "中",
             "r": "zhōng",
-            "g": "attributive"
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -271,12 +287,17 @@
               "g": "predicate"
             },
             {
-              "t": "っている",
+              "t": "り",
               "r": "",
               "g": "predicate"
             },
             {
-              "t": ":",
+              "t": "手",
+              "r": "て",
+              "g": "subject"
+            },
+            {
+              "t": "：",
               "r": "",
               "g": "function"
             },
@@ -299,6 +320,11 @@
               "t": "田",
               "r": "でん",
               "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
             }
           ],
           [
@@ -313,19 +339,19 @@
               "g": "attributive"
             },
             {
-              "t": "の",
+              "t": "、",
               "r": "",
-              "g": "attributive"
+              "g": "function"
             },
             {
               "t": "住",
               "r": "じゅう",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "民",
               "r": "みん",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "、",
@@ -335,12 +361,22 @@
             {
               "t": "高",
               "r": "こう",
-              "g": "attributive"
+              "g": "complement"
             },
             {
-              "t": "中",
-              "r": "ちゅう",
-              "g": "attributive"
+              "t": "校",
+              "r": "こう",
+              "g": "complement"
+            },
+            {
+              "t": "卒",
+              "r": "そつ",
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ]
         ]

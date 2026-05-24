@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 66,
-    "grammar_token_total": 66,
-    "unit_count": 1
+    "token_total": 72,
+    "grammar_token_total": 72,
+    "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0707",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -443,9 +443,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00707",
     "source_text": "钱正杰男 46岁地区群艺信干部高中采录时间、.地点:1987 年于宜宾市",
+    "corrected_text": "钱正杰，男，46岁，地区群艺馆干部，高中。采录时间、地点：1987年于宜宾市",
     "units": [
       {
-        "source_text": "钱正杰男 46岁地区群艺信干部高中采录时间、.地点:1987 年于宜宾市",
+        "source_text": "钱正杰，男，46岁，地区群艺馆干部，高中。",
         "zh": [
           {
             "t": "钱",
@@ -463,12 +464,17 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "男",
             "r": "nán",
             "g": "attributive"
           },
           {
-            "t": " ",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -481,6 +487,11 @@
             "t": "岁",
             "r": "suì",
             "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "地",
@@ -503,8 +514,8 @@
             "g": "attributive"
           },
           {
-            "t": "信",
-            "r": "xìn",
+            "t": "馆",
+            "r": "guǎn",
             "g": "attributive"
           },
           {
@@ -518,79 +529,24 @@
             "g": "object"
           },
           {
-            "t": "高",
-            "r": "gāo",
-            "g": "attributive"
-          },
-          {
-            "t": "中",
-            "r": "zhōng",
-            "g": "attributive"
-          },
-          {
-            "t": "采",
-            "r": "cǎi",
-            "g": "predicate"
-          },
-          {
-            "t": "录",
-            "r": "lù",
-            "g": "predicate"
-          },
-          {
-            "t": "时",
-            "r": "shí",
-            "g": "adverbial"
-          },
-          {
-            "t": "间",
-            "r": "jiān",
-            "g": "adverbial"
-          },
-          {
-            "t": "、.",
+            "t": "，",
             "r": "",
             "g": "function"
           },
           {
-            "t": "地",
-            "r": "dì",
-            "g": "adverbial"
+            "t": "高",
+            "r": "gāo",
+            "g": "complement"
           },
           {
-            "t": "点",
-            "r": "diǎn",
-            "g": "adverbial"
+            "t": "中",
+            "r": "zhōng",
+            "g": "complement"
           },
           {
-            "t": ":1987 ",
+            "t": "。",
             "r": "",
-            "g": "adverbial"
-          },
-          {
-            "t": "年",
-            "r": "nián",
-            "g": "adverbial"
-          },
-          {
-            "t": "于",
-            "r": "yú",
-            "g": "adverbial"
-          },
-          {
-            "t": "宜",
-            "r": "yí",
-            "g": "adverbial"
-          },
-          {
-            "t": "宾",
-            "r": "bīn",
-            "g": "adverbial"
-          },
-          {
-            "t": "市",
-            "r": "shì",
-            "g": "adverbial"
+            "g": "function"
           }
         ],
         "ja": [
@@ -608,7 +564,7 @@
             {
               "t": "者",
               "r": "しゃ",
-              "g": "subject"
+              "g": "predicate"
             },
             {
               "t": "：",
@@ -654,12 +610,9 @@
               "t": "歳",
               "r": "さい",
               "g": "attributive"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            },
+            }
+          ],
+          [
             {
               "t": "地",
               "r": "ち",
@@ -681,8 +634,8 @@
               "g": "attributive"
             },
             {
-              "t": "信",
-              "r": "しん",
+              "t": "館",
+              "r": "かん",
               "g": "attributive"
             },
             {
@@ -694,48 +647,130 @@
               "t": "部",
               "r": "ぶ",
               "g": "object"
-            }
-          ],
-          [
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
             {
               "t": "高",
               "r": "こう",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "校",
               "r": "こう",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "卒",
               "r": "そつ",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "。",
               "r": "",
               "g": "function"
-            },
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "采录时间、地点：1987年于宜宾市",
+        "zh": [
+          {
+            "t": "采",
+            "r": "cǎi",
+            "g": "topic"
+          },
+          {
+            "t": "录",
+            "r": "lù",
+            "g": "topic"
+          },
+          {
+            "t": "时",
+            "r": "shí",
+            "g": "topic"
+          },
+          {
+            "t": "间",
+            "r": "jiān",
+            "g": "topic"
+          },
+          {
+            "t": "、",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "topic"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "topic"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "1987",
+            "r": "",
+            "g": "adverbial"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "adverbial"
+          },
+          {
+            "t": "于",
+            "r": "yú",
+            "g": "predicate"
+          },
+          {
+            "t": "宜",
+            "r": "yí",
+            "g": "object"
+          },
+          {
+            "t": "宾",
+            "r": "bīn",
+            "g": "object"
+          },
+          {
+            "t": "市",
+            "r": "shì",
+            "g": "object"
+          }
+        ],
+        "ja": [
+          [
             {
               "t": "採",
               "r": "さい",
-              "g": "predicate"
+              "g": "topic"
             },
             {
               "t": "録",
               "r": "ろく",
-              "g": "predicate"
+              "g": "topic"
             },
             {
               "t": "時",
               "r": "じ",
-              "g": "adverbial"
+              "g": "topic"
             },
             {
               "t": "間",
               "r": "かん",
-              "g": "adverbial"
+              "g": "topic"
             },
             {
               "t": "・",
@@ -745,12 +780,12 @@
             {
               "t": "地",
               "r": "ち",
-              "g": "adverbial"
+              "g": "topic"
             },
             {
               "t": "点",
               "r": "てん",
-              "g": "adverbial"
+              "g": "topic"
             },
             {
               "t": "：1987",
@@ -761,31 +796,33 @@
               "t": "年",
               "r": "ねん",
               "g": "adverbial"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
-            },
+            }
+          ],
+          [
             {
               "t": "宜",
               "r": "ぎ",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "賓",
               "r": "ひん",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "市",
               "r": "し",
-              "g": "adverbial"
+              "g": "object"
             },
             {
               "t": "にて",
               "r": "",
-              "g": "adverbial"
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ]
         ]

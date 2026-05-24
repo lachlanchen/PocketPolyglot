@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 226,
-    "grammar_token_total": 226,
+    "token_total": 229,
+    "grammar_token_total": 229,
     "unit_count": 4
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0683",
@@ -117,32 +117,32 @@
       {
         "t": "黄",
         "r": "huáng",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "龙",
         "r": "lóng",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "助",
         "r": "zhù",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "怠",
         "r": "dài",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "治",
         "r": "zhì",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "水",
         "r": "shuǐ",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "（",
@@ -189,52 +189,52 @@
       {
         "t": "黄",
         "r": "こう",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "龍",
         "r": "りゅう",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "が",
         "r": "",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "怠",
         "r": "たい",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "を",
         "r": "",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "助",
         "r": "たす",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "けて",
         "r": "",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "治",
         "r": "ち",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "水",
         "r": "すい",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "する",
         "r": "",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "（",
@@ -273,9 +273,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00683",
     "source_text": "他们到了洪水淹得最凶的地方,从神钨背上抓起息坏,大把大把地朝下撒。那落下去的息壤越长越多,变成一道长堤,洪水往后退了.息壤不断生长,虹眼间变成了一座座青山和思不到边的平坝.被洪水逼上高山顶的百姓,看到出下出现坡连坡、坝连需的好地方,都",
+    "corrected_text": "他们到了洪水淹得最凶的地方，从神龟背上抓起息壤，大把大把地朝下撒。那落下去的息壤越长越多，变成一道长堤，洪水往后退了。息壤不断生长，眨眼间变成了一座座青山和望不到边的平坝。被洪水逼上高山顶的百姓，看到山下出现坡连坡、坝连坝的好地方，都",
     "units": [
       {
-        "source_text": "他们到了洪水淹得最凶的地方,从神钨背上抓起息坏,大把大把地朝下撒。",
+        "source_text": "他们到了洪水淹得最凶的地方，从神龟背上抓起息壤，大把大把地朝下撒。",
         "zh": [
           {
             "t": "他",
@@ -335,15 +336,15 @@
           {
             "t": "地",
             "r": "dì",
-            "g": "complement"
+            "g": "object"
           },
           {
             "t": "方",
             "r": "fāng",
-            "g": "complement"
+            "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -358,8 +359,8 @@
             "g": "adverbial"
           },
           {
-            "t": "钨",
-            "r": "wū",
+            "t": "龟",
+            "r": "guī",
             "g": "adverbial"
           },
           {
@@ -388,12 +389,12 @@
             "g": "object"
           },
           {
-            "t": "坏",
-            "r": "huài",
+            "t": "壤",
+            "r": "rǎng",
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -491,39 +492,34 @@
               "g": "attributive"
             },
             {
-              "t": "押",
-              "r": "お",
+              "t": "水",
+              "r": "みず",
               "g": "attributive"
             },
             {
-              "t": "し",
-              "r": "",
+              "t": "浸",
+              "r": "びた",
               "g": "attributive"
             },
             {
-              "t": "寄",
-              "r": "よ",
-              "g": "attributive"
-            },
-            {
-              "t": "せた",
+              "t": "しにした",
               "r": "",
               "g": "attributive"
             },
             {
               "t": "場",
               "r": "ば",
-              "g": "complement"
+              "g": "object"
             },
             {
               "t": "所",
               "r": "しょ",
-              "g": "complement"
+              "g": "object"
             },
             {
               "t": "へ",
               "r": "",
-              "g": "complement"
+              "g": "object"
             },
             {
               "t": "着",
@@ -543,8 +539,8 @@
               "g": "adverbial"
             },
             {
-              "t": "钨",
-              "r": "う",
+              "t": "亀",
+              "r": "き",
               "g": "adverbial"
             },
             {
@@ -568,8 +564,8 @@
               "g": "object"
             },
             {
-              "t": "坏",
-              "r": "かい",
+              "t": "壌",
+              "r": "じょう",
               "g": "object"
             },
             {
@@ -616,7 +612,7 @@
         ]
       },
       {
-        "source_text": "那落下去的息壤越长越多,变成一道长堤,洪水往后退了.",
+        "source_text": "那落下去的息壤越长越多，变成一道长堤，洪水往后退了。",
         "zh": [
           {
             "t": "那",
@@ -626,22 +622,22 @@
           {
             "t": "落",
             "r": "luò",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "下",
             "r": "xià",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "去",
             "r": "qù",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "的",
             "r": "de",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "息",
@@ -656,7 +652,7 @@
           {
             "t": "越",
             "r": "yuè",
-            "g": "predicate"
+            "g": "adverbial"
           },
           {
             "t": "长",
@@ -666,7 +662,7 @@
           {
             "t": "越",
             "r": "yuè",
-            "g": "predicate"
+            "g": "adverbial"
           },
           {
             "t": "多",
@@ -674,7 +670,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -701,7 +697,7 @@
           {
             "t": "长",
             "r": "cháng",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "堤",
@@ -709,7 +705,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -744,7 +740,7 @@
             "g": "predicate"
           },
           {
-            "t": ".",
+            "t": "。",
             "r": "",
             "g": "function"
           }
@@ -759,12 +755,12 @@
             {
               "t": "落",
               "r": "お",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "ちていった",
               "r": "",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "息",
@@ -789,7 +785,7 @@
             {
               "t": "びるほど",
               "r": "",
-              "g": "predicate"
+              "g": "adverbial"
             },
             {
               "t": "増",
@@ -805,12 +801,12 @@
           [
             {
               "t": "一",
-              "r": "いっ",
+              "r": "いち",
               "g": "object"
             },
             {
-              "t": "本",
-              "r": "ぽん",
+              "t": "筋",
+              "r": "すじ",
               "g": "object"
             },
             {
@@ -821,12 +817,12 @@
             {
               "t": "長",
               "r": "なが",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "い",
               "r": "",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "堤",
@@ -877,7 +873,7 @@
         ]
       },
       {
-        "source_text": "息壤不断生长,虹眼间变成了一座座青山和思不到边的平坝.",
+        "source_text": "息壤不断生长，眨眼间变成了一座座青山和望不到边的平坝。",
         "zh": [
           {
             "t": "息",
@@ -910,13 +906,13 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
           {
-            "t": "虹",
-            "r": "hóng",
+            "t": "眨",
+            "r": "zhǎ",
             "g": "adverbial"
           },
           {
@@ -946,7 +942,7 @@
           },
           {
             "t": "一",
-            "r": "yī",
+            "r": "yí",
             "g": "object"
           },
           {
@@ -962,7 +958,7 @@
           {
             "t": "青",
             "r": "qīng",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "山",
@@ -975,34 +971,34 @@
             "g": "object"
           },
           {
-            "t": "思",
-            "r": "sī",
-            "g": "object"
+            "t": "望",
+            "r": "wàng",
+            "g": "attributive"
           },
           {
             "t": "不",
-            "r": "bù",
-            "g": "object"
+            "r": "bú",
+            "g": "attributive"
           },
           {
             "t": "到",
             "r": "dào",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "边",
             "r": "biān",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "的",
             "r": "de",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "平",
             "r": "píng",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "坝",
@@ -1010,7 +1006,7 @@
             "g": "object"
           },
           {
-            "t": ".",
+            "t": "。",
             "r": "",
             "g": "function"
           }
@@ -1053,7 +1049,17 @@
               "g": "predicate"
             },
             {
-              "t": "たちまち",
+              "t": "またたく",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "間",
+              "r": "ま",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
               "r": "",
               "g": "adverbial"
             }
@@ -1072,12 +1078,12 @@
             {
               "t": "青",
               "r": "あお",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "い",
               "r": "",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "山",
@@ -1092,17 +1098,17 @@
             {
               "t": "果",
               "r": "は",
-              "g": "object"
+              "g": "attributive"
             },
             {
-              "t": "てない",
+              "t": "てしない",
               "r": "",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "平",
               "r": "へい",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "地",
@@ -1110,7 +1116,17 @@
               "g": "object"
             },
             {
-              "t": "になった。",
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "変",
+              "r": "か",
+              "g": "predicate"
+            },
+            {
+              "t": "わった。",
               "r": "",
               "g": "predicate"
             }
@@ -1118,52 +1134,52 @@
         ]
       },
       {
-        "source_text": "被洪水逼上高山顶的百姓,看到出下出现坡连坡、坝连需的好地方,都",
+        "source_text": "被洪水逼上高山顶的百姓，看到山下出现坡连坡、坝连坝的好地方，都",
         "zh": [
           {
             "t": "被",
             "r": "bèi",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "洪",
             "r": "hóng",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "水",
             "r": "shuǐ",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "逼",
             "r": "bī",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "上",
             "r": "shàng",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "高",
             "r": "gāo",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "山",
             "r": "shān",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "顶",
             "r": "dǐng",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "的",
             "r": "de",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "百",
@@ -1176,7 +1192,7 @@
             "g": "subject"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -1191,8 +1207,8 @@
             "g": "predicate"
           },
           {
-            "t": "出",
-            "r": "chū",
+            "t": "山",
+            "r": "shān",
             "g": "object"
           },
           {
@@ -1241,8 +1257,8 @@
             "g": "object"
           },
           {
-            "t": "需",
-            "r": "xū",
+            "t": "坝",
+            "r": "bà",
             "g": "object"
           },
           {
@@ -1253,7 +1269,7 @@
           {
             "t": "好",
             "r": "hǎo",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "地",
@@ -1266,7 +1282,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -1281,62 +1297,62 @@
             {
               "t": "洪",
               "r": "こう",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "水",
               "r": "ずい",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "に",
               "r": "",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "高",
               "r": "たか",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "い",
               "r": "",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "山",
               "r": "さん",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "頂",
               "r": "ちょう",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "へ",
               "r": "",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "追",
               "r": "お",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "い",
               "r": "",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "上",
               "r": "あ",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "げられた",
               "r": "",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "民",
@@ -1351,6 +1367,16 @@
           ],
           [
             {
+              "t": "山",
+              "r": "やま",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
               "t": "下",
               "r": "した",
               "g": "object"
@@ -1361,8 +1387,18 @@
               "g": "object"
             },
             {
-              "t": "坂",
-              "r": "さか",
+              "t": "坡",
+              "r": "は",
+              "g": "object"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "堤",
+              "r": "つつみ",
               "g": "object"
             },
             {
@@ -1376,43 +1412,23 @@
               "g": "object"
             },
             {
-              "t": "なり、",
+              "t": "なる",
               "r": "",
               "g": "object"
             },
             {
-              "t": "平",
-              "r": "へい",
-              "g": "object"
+              "t": "良",
+              "r": "よ",
+              "g": "attributive"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "attributive"
             },
             {
               "t": "地",
               "r": "ち",
-              "g": "object"
-            },
-            {
-              "t": "が",
-              "r": "",
-              "g": "object"
-            },
-            {
-              "t": "連",
-              "r": "つら",
-              "g": "object"
-            },
-            {
-              "t": "なるよい",
-              "r": "",
-              "g": "object"
-            },
-            {
-              "t": "場",
-              "r": "ば",
-              "g": "object"
-            },
-            {
-              "t": "所",
-              "r": "しょ",
               "g": "object"
             },
             {

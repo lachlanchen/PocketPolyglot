@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 44,
-    "grammar_token_total": 44,
+    "token_total": 46,
+    "grammar_token_total": 46,
     "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0679",
@@ -23,24 +23,24 @@
       {
         "t": "传",
         "r": "chuán",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "说",
         "r": "shuō",
-        "g": "predicate"
+        "g": "object"
       }
     ],
     "title_ja": [
       {
         "t": "伝",
         "r": "でん",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "説",
         "r": "せつ",
-        "g": "predicate"
+        "g": "object"
       }
     ]
   },
@@ -65,12 +65,12 @@
       {
         "t": "传",
         "r": "chuán",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "说",
         "r": "shuō",
-        "g": "predicate"
+        "g": "object"
       }
     ],
     "title_ja": [
@@ -92,12 +92,12 @@
       {
         "t": "伝",
         "r": "でん",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "説",
         "r": "せつ",
-        "g": "predicate"
+        "g": "object"
       }
     ]
   },
@@ -242,24 +242,14 @@
         "g": "attributive"
       },
       {
-        "t": "の",
-        "r": "",
+        "t": "拒",
+        "r": "きょ",
         "g": "attributive"
       },
       {
         "t": "市",
-        "r": "いち",
+        "r": "し",
         "g": "object"
-      },
-      {
-        "t": "拒",
-        "r": "こば",
-        "g": "predicate"
-      },
-      {
-        "t": "み",
-        "r": "",
-        "g": "predicate"
       },
       {
         "t": "）",
@@ -273,9 +263,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00679",
     "source_text": "岷江上游,有座古庙黄龙寺。这黄龙寺是咋个来的呢?",
+    "corrected_text": "岷江上游，有座古庙黄龙寺。这黄龙寺是咋个来的呢？",
     "units": [
       {
-        "source_text": "岷江上游,有座古庙黄龙寺。",
+        "source_text": "岷江上游，有座古庙黄龙寺。",
         "zh": [
           {
             "t": "岷",
@@ -298,7 +289,7 @@
             "g": "adverbial"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -315,7 +306,7 @@
           {
             "t": "古",
             "r": "gǔ",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "庙",
@@ -325,12 +316,12 @@
           {
             "t": "黄",
             "r": "huáng",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "龙",
             "r": "lóng",
-            "g": "object"
+            "g": "attributive"
           },
           {
             "t": "寺",
@@ -371,21 +362,21 @@
               "g": "adverbial"
             },
             {
-              "t": "に、",
+              "t": "には、",
               "r": "",
-              "g": "function"
+              "g": "adverbial"
             }
           ],
           [
             {
               "t": "黄",
               "r": "こう",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "竜",
               "r": "りゅう",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "寺",
@@ -400,12 +391,12 @@
             {
               "t": "古",
               "r": "ふる",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "い",
               "r": "",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "寺",
@@ -421,7 +412,7 @@
         ]
       },
       {
-        "source_text": "这黄龙寺是咋个来的呢?",
+        "source_text": "这黄龙寺是咋个来的呢？",
         "zh": [
           {
             "t": "这",
@@ -474,7 +465,7 @@
             "g": "function"
           },
           {
-            "t": "?",
+            "t": "？",
             "r": "",
             "g": "function"
           }
@@ -509,7 +500,17 @@
           ],
           [
             {
-              "t": "いったいどのようにしてできたのだろうか?",
+              "t": "いったいどうして",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "生",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "まれたのだろうか？",
               "r": "",
               "g": "predicate"
             }

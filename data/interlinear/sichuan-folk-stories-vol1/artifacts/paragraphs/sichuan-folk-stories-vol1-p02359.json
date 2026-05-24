@@ -1,0 +1,732 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p02359",
+  "source_text": "安顺桥,位于成都市区东南部.横跨府河,原为木质结构。一九八- -年夏被洪水冲毁,重修桥为钢筋水泥建筑。",
+  "source_sha256": "4966c2a36d45370bb23a911753940d5c034a51cc58f0eb1c1467a9b9012d39b8",
+  "source_normalized_sha256": "17bca7b804bd4c3223fbdd2eb75ce737d53906573a41f430b9a77f82b7b06ecf",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 102,
+    "grammar_token_total": 102,
+    "unit_count": 2
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-2359",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "object"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "object"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "地方传说",
+    "title_zh": [
+      {
+        "t": "地",
+        "r": "dì",
+        "g": "attributive"
+      },
+      {
+        "t": "方",
+        "r": "fāng",
+        "g": "attributive"
+      },
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "object"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "地",
+        "r": "ち",
+        "g": "attributive"
+      },
+      {
+        "t": "方",
+        "r": "ほう",
+        "g": "attributive"
+      },
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "object"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-地方传说-219-安顺桥成都市",
+    "title_zh": [
+      {
+        "t": "219. ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "安",
+        "r": "ān",
+        "g": "object"
+      },
+      {
+        "t": "顺",
+        "r": "shùn",
+        "g": "object"
+      },
+      {
+        "t": "桥",
+        "r": "qiáo",
+        "g": "object"
+      },
+      {
+        "t": "《",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "成",
+        "r": "chéng",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "dū",
+        "g": "attributive"
+      },
+      {
+        "t": "市",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "219. ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "安",
+        "r": "あん",
+        "g": "object"
+      },
+      {
+        "t": "順",
+        "r": "じゅん",
+        "g": "object"
+      },
+      {
+        "t": "橋",
+        "r": "きょう",
+        "g": "object"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "成",
+        "r": "せい",
+        "g": "attributive"
+      },
+      {
+        "t": "都",
+        "r": "と",
+        "g": "attributive"
+      },
+      {
+        "t": "市",
+        "r": "し",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p02359",
+    "source_text": "安顺桥,位于成都市区东南部.横跨府河,原为木质结构。一九八- -年夏被洪水冲毁,重修桥为钢筋水泥建筑。",
+    "corrected_text": "安顺桥，位于成都市区东南部，横跨府河，原为木质结构。一九八一年夏被洪水冲毁，重修桥为钢筋水泥建筑。",
+    "units": [
+      {
+        "source_text": "安顺桥，位于成都市区东南部，横跨府河，原为木质结构。",
+        "zh": [
+          {
+            "t": "安",
+            "r": "ān",
+            "g": "subject"
+          },
+          {
+            "t": "顺",
+            "r": "shùn",
+            "g": "subject"
+          },
+          {
+            "t": "桥",
+            "r": "qiáo",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "位",
+            "r": "wèi",
+            "g": "predicate"
+          },
+          {
+            "t": "于",
+            "r": "yú",
+            "g": "predicate"
+          },
+          {
+            "t": "成",
+            "r": "chéng",
+            "g": "object"
+          },
+          {
+            "t": "都",
+            "r": "dū",
+            "g": "object"
+          },
+          {
+            "t": "市",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "区",
+            "r": "qū",
+            "g": "object"
+          },
+          {
+            "t": "东",
+            "r": "dōng",
+            "g": "object"
+          },
+          {
+            "t": "南",
+            "r": "nán",
+            "g": "object"
+          },
+          {
+            "t": "部",
+            "r": "bù",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "横",
+            "r": "héng",
+            "g": "predicate"
+          },
+          {
+            "t": "跨",
+            "r": "kuà",
+            "g": "predicate"
+          },
+          {
+            "t": "府",
+            "r": "fǔ",
+            "g": "object"
+          },
+          {
+            "t": "河",
+            "r": "hé",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "原",
+            "r": "yuán",
+            "g": "adverbial"
+          },
+          {
+            "t": "为",
+            "r": "wéi",
+            "g": "predicate"
+          },
+          {
+            "t": "木",
+            "r": "mù",
+            "g": "object"
+          },
+          {
+            "t": "质",
+            "r": "zhì",
+            "g": "object"
+          },
+          {
+            "t": "结",
+            "r": "jié",
+            "g": "object"
+          },
+          {
+            "t": "构",
+            "r": "gòu",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "安",
+              "r": "あん",
+              "g": "subject"
+            },
+            {
+              "t": "順",
+              "r": "じゅん",
+              "g": "subject"
+            },
+            {
+              "t": "橋",
+              "r": "きょう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "成",
+              "r": "せい",
+              "g": "object"
+            },
+            {
+              "t": "都",
+              "r": "と",
+              "g": "object"
+            },
+            {
+              "t": "市",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "街",
+              "r": "がい",
+              "g": "object"
+            },
+            {
+              "t": "地",
+              "r": "ち",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "東",
+              "r": "とう",
+              "g": "object"
+            },
+            {
+              "t": "南",
+              "r": "なん",
+              "g": "object"
+            },
+            {
+              "t": "部",
+              "r": "ぶ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "あり、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "府",
+              "r": "ふ",
+              "g": "object"
+            },
+            {
+              "t": "河",
+              "r": "が",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "架",
+              "r": "か",
+              "g": "predicate"
+            },
+            {
+              "t": "かり、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "もとは",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "木",
+              "r": "もく",
+              "g": "object"
+            },
+            {
+              "t": "造",
+              "r": "ぞう",
+              "g": "object"
+            },
+            {
+              "t": "構",
+              "r": "こう",
+              "g": "object"
+            },
+            {
+              "t": "造",
+              "r": "ぞう",
+              "g": "object"
+            },
+            {
+              "t": "だった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "一九八一年夏被洪水冲毁，重修桥为钢筋水泥建筑。",
+        "zh": [
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "adverbial"
+          },
+          {
+            "t": "九",
+            "r": "jiǔ",
+            "g": "adverbial"
+          },
+          {
+            "t": "八",
+            "r": "bā",
+            "g": "adverbial"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "adverbial"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "adverbial"
+          },
+          {
+            "t": "夏",
+            "r": "xià",
+            "g": "adverbial"
+          },
+          {
+            "t": "被",
+            "r": "bèi",
+            "g": "function"
+          },
+          {
+            "t": "洪",
+            "r": "hóng",
+            "g": "subject"
+          },
+          {
+            "t": "水",
+            "r": "shuǐ",
+            "g": "subject"
+          },
+          {
+            "t": "冲",
+            "r": "chōng",
+            "g": "predicate"
+          },
+          {
+            "t": "毁",
+            "r": "huǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "重",
+            "r": "chóng",
+            "g": "predicate"
+          },
+          {
+            "t": "修",
+            "r": "xiū",
+            "g": "predicate"
+          },
+          {
+            "t": "桥",
+            "r": "qiáo",
+            "g": "object"
+          },
+          {
+            "t": "为",
+            "r": "wéi",
+            "g": "predicate"
+          },
+          {
+            "t": "钢",
+            "r": "gāng",
+            "g": "object"
+          },
+          {
+            "t": "筋",
+            "r": "jīn",
+            "g": "object"
+          },
+          {
+            "t": "水",
+            "r": "shuǐ",
+            "g": "object"
+          },
+          {
+            "t": "泥",
+            "r": "ní",
+            "g": "object"
+          },
+          {
+            "t": "建",
+            "r": "jiàn",
+            "g": "object"
+          },
+          {
+            "t": "筑",
+            "r": "zhù",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "adverbial"
+            },
+            {
+              "t": "九",
+              "r": "きゅう",
+              "g": "adverbial"
+            },
+            {
+              "t": "八",
+              "r": "はち",
+              "g": "adverbial"
+            },
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "adverbial"
+            },
+            {
+              "t": "年",
+              "r": "ねん",
+              "g": "adverbial"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "夏",
+              "r": "なつ",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "洪",
+              "r": "こう",
+              "g": "subject"
+            },
+            {
+              "t": "水",
+              "r": "ずい",
+              "g": "subject"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "流",
+              "r": "なが",
+              "g": "predicate"
+            },
+            {
+              "t": "されて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "壊",
+              "r": "こわ",
+              "g": "predicate"
+            },
+            {
+              "t": "れ、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "橋",
+              "r": "はし",
+              "g": "object"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "再",
+              "r": "さい",
+              "g": "predicate"
+            },
+            {
+              "t": "建",
+              "r": "けん",
+              "g": "predicate"
+            },
+            {
+              "t": "され、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "鉄",
+              "r": "てっ",
+              "g": "object"
+            },
+            {
+              "t": "筋",
+              "r": "きん",
+              "g": "object"
+            },
+            {
+              "t": "コンクリート",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "建",
+              "r": "けん",
+              "g": "object"
+            },
+            {
+              "t": "築",
+              "r": "ちく",
+              "g": "object"
+            },
+            {
+              "t": "となった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

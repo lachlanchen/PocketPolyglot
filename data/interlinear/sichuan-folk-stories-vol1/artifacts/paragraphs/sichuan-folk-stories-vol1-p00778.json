@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 29,
-    "grammar_token_total": 29,
+    "token_total": 30,
+    "grammar_token_total": 30,
     "unit_count": 1
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0778",
@@ -253,12 +253,18 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00778",
     "source_text": "4 玉鱼山:今都江卉市城西,",
+    "corrected_text": "4. 玉垒山：今都江堰市城西。",
     "units": [
       {
-        "source_text": "4 玉鱼山:今都江卉市城西,",
+        "source_text": "4. 玉垒山：今都江堰市城西。",
         "zh": [
           {
             "t": "4",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": ".",
             "r": "",
             "g": "function"
           },
@@ -273,8 +279,8 @@
             "g": "subject"
           },
           {
-            "t": "鱼",
-            "r": "yú",
+            "t": "垒",
+            "r": "lěi",
             "g": "subject"
           },
           {
@@ -283,7 +289,7 @@
             "g": "subject"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -303,8 +309,8 @@
             "g": "attributive"
           },
           {
-            "t": "卉",
-            "r": "huì",
+            "t": "堰",
+            "r": "yàn",
             "g": "attributive"
           },
           {
@@ -323,7 +329,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "。",
             "r": "",
             "g": "function"
           }
@@ -331,7 +337,7 @@
         "ja": [
           [
             {
-              "t": "4 ",
+              "t": "4. ",
               "r": "",
               "g": "function"
             },
@@ -341,8 +347,8 @@
               "g": "subject"
             },
             {
-              "t": "魚",
-              "r": "ぎょ",
+              "t": "塁",
+              "r": "るい",
               "g": "subject"
             },
             {
@@ -366,9 +372,9 @@
               "g": "adverbial"
             },
             {
-              "t": "、",
+              "t": "の",
               "r": "",
-              "g": "function"
+              "g": "adverbial"
             }
           ],
           [
@@ -383,8 +389,8 @@
               "g": "attributive"
             },
             {
-              "t": "卉",
-              "r": "き",
+              "t": "堰",
+              "r": "えん",
               "g": "attributive"
             },
             {
@@ -408,7 +414,7 @@
               "g": "object"
             },
             {
-              "t": "、",
+              "t": "。",
               "r": "",
               "g": "function"
             }

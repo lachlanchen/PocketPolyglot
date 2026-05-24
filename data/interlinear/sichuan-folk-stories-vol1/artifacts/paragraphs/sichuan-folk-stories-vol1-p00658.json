@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 177,
-    "grammar_token_total": 177,
+    "token_total": 178,
+    "grammar_token_total": 178,
     "unit_count": 6
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0658",
@@ -142,7 +142,7 @@
       {
         "t": "武",
         "r": "wǔ",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "和",
@@ -152,12 +152,12 @@
       {
         "t": "耸",
         "r": "sǒng",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "射",
         "r": "shè",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "太",
@@ -199,7 +199,7 @@
       {
         "t": "武",
         "r": "ぶ",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "と",
@@ -209,12 +209,12 @@
       {
         "t": "耸",
         "r": "しょう",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "が",
         "r": "",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "太",
@@ -234,12 +234,12 @@
       {
         "t": "射",
         "r": "い",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "る",
         "r": "",
-        "g": "topic"
+        "g": "predicate"
       }
     ],
     "place_zh": [],
@@ -248,6 +248,7 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00658",
     "source_text": "第二天,武爷带上龙骨和虎骨做成的箭上山。刚到山项,太阳就出来了。他赶忙对准太阳射了一箭,射下一个太阳。他又接连射落八个太阳。剩下的那个太阳,就赶紧躲起来了。这下,天就是了。",
+    "corrected_text": "第二天,武爷带上龙骨和虎骨做成的箭上山。刚到山顶,太阳就出来了。他赶忙对准太阳射了一箭,射下一个太阳。他又接连射落八个太阳。剩下的那个太阳,就赶紧躲起来了。这下,天就黑了。",
     "units": [
       {
         "source_text": "第二天,武爷带上龙骨和虎骨做成的箭上山。",
@@ -486,7 +487,7 @@
         ]
       },
       {
-        "source_text": "刚到山项,太阳就出来了。",
+        "source_text": "刚到山顶,太阳就出来了。",
         "zh": [
           {
             "t": "刚",
@@ -504,8 +505,8 @@
             "g": "object"
           },
           {
-            "t": "项",
-            "r": "xiàng",
+            "t": "顶",
+            "r": "dǐng",
             "g": "object"
           },
           {
@@ -1130,7 +1131,7 @@
         ]
       },
       {
-        "source_text": "这下,天就是了。",
+        "source_text": "这下,天就黑了。",
         "zh": [
           {
             "t": "这",
@@ -1158,8 +1159,8 @@
             "g": "adverbial"
           },
           {
-            "t": "是",
-            "r": "shì",
+            "t": "黑",
+            "r": "hēi",
             "g": "predicate"
           },
           {
@@ -1193,7 +1194,12 @@
           ],
           [
             {
-              "t": "そういうことになった。",
+              "t": "暗",
+              "r": "くら",
+              "g": "predicate"
+            },
+            {
+              "t": "くなった。",
               "r": "",
               "g": "predicate"
             }

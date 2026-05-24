@@ -11,9 +11,9 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 60,
-    "grammar_token_total": 60,
-    "unit_count": 1
+    "token_total": 67,
+    "grammar_token_total": 67,
+    "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0728",
   "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
@@ -23,24 +23,24 @@
       {
         "t": "传",
         "r": "chuán",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "说",
         "r": "shuō",
-        "g": "predicate"
+        "g": "object"
       }
     ],
     "title_ja": [
       {
         "t": "伝",
         "r": "でん",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "説",
         "r": "せつ",
-        "g": "predicate"
+        "g": "object"
       }
     ]
   },
@@ -65,12 +65,12 @@
       {
         "t": "传",
         "r": "chuán",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "说",
         "r": "shuō",
-        "g": "predicate"
+        "g": "object"
       }
     ],
     "title_ja": [
@@ -92,12 +92,12 @@
       {
         "t": "伝",
         "r": "でん",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "説",
         "r": "せつ",
-        "g": "predicate"
+        "g": "object"
       }
     ]
   },
@@ -147,12 +147,12 @@
       {
         "t": "传",
         "r": "chuán",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "说",
         "r": "shuō",
-        "g": "predicate"
+        "g": "object"
       }
     ],
     "title_ja": [
@@ -199,12 +199,12 @@
       {
         "t": "伝",
         "r": "でん",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "説",
         "r": "せつ",
-        "g": "predicate"
+        "g": "object"
       }
     ],
     "place_zh": [],
@@ -213,19 +213,20 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00728",
     "source_text": "采隶时间.地点:1980 年3月16 日于玉山县正峡镇净坛街附记:",
+    "corrected_text": "采录时间、地点：1980年3月16日于巫山县巫峡镇净坛街。附记：",
     "units": [
       {
-        "source_text": "采隶时间.地点:1980 年3月16 日于玉山县正峡镇净坛街附记:",
+        "source_text": "采录时间、地点：1980年3月16日于巫山县巫峡镇净坛街。",
         "zh": [
           {
             "t": "采",
             "r": "cǎi",
-            "g": "predicate"
+            "g": "attributive"
           },
           {
-            "t": "隶",
-            "r": "lì",
-            "g": "predicate"
+            "t": "录",
+            "r": "lù",
+            "g": "attributive"
           },
           {
             "t": "时",
@@ -238,7 +239,7 @@
             "g": "object"
           },
           {
-            "t": ".",
+            "t": "、",
             "r": "",
             "g": "function"
           },
@@ -253,7 +254,7 @@
             "g": "object"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -276,11 +277,6 @@
             "t": "0",
             "r": "",
             "g": "adverbial"
-          },
-          {
-            "t": " ",
-            "r": "",
-            "g": "function"
           },
           {
             "t": "年",
@@ -308,11 +304,6 @@
             "g": "adverbial"
           },
           {
-            "t": " ",
-            "r": "",
-            "g": "function"
-          },
-          {
             "t": "日",
             "r": "rì",
             "g": "adverbial"
@@ -323,8 +314,8 @@
             "g": "function"
           },
           {
-            "t": "玉",
-            "r": "yù",
+            "t": "巫",
+            "r": "wū",
             "g": "complement"
           },
           {
@@ -338,8 +329,8 @@
             "g": "complement"
           },
           {
-            "t": "正",
-            "r": "zhèng",
+            "t": "巫",
+            "r": "wū",
             "g": "complement"
           },
           {
@@ -368,17 +359,7 @@
             "g": "complement"
           },
           {
-            "t": "附",
-            "r": "fù",
-            "g": "predicate"
-          },
-          {
-            "t": "记",
-            "r": "jì",
-            "g": "predicate"
-          },
-          {
-            "t": ":",
+            "t": "。",
             "r": "",
             "g": "function"
           }
@@ -388,12 +369,12 @@
             {
               "t": "採",
               "r": "さい",
-              "g": "predicate"
+              "g": "attributive"
             },
             {
               "t": "録",
               "r": "ろく",
-              "g": "predicate"
+              "g": "attributive"
             },
             {
               "t": "時",
@@ -463,8 +444,8 @@
           ],
           [
             {
-              "t": "玉",
-              "r": "ぎょく",
+              "t": "巫",
+              "r": "ふ",
               "g": "complement"
             },
             {
@@ -478,8 +459,8 @@
               "g": "complement"
             },
             {
-              "t": "正",
-              "r": "せい",
+              "t": "巫",
+              "r": "ふ",
               "g": "complement"
             },
             {
@@ -516,19 +497,75 @@
               "t": "。",
               "r": "",
               "g": "function"
-            },
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "附记：",
+        "zh": [
+          {
+            "t": "附",
+            "r": "fù",
+            "g": "attributive"
+          },
+          {
+            "t": "记",
+            "r": "jì",
+            "g": "object"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
             {
               "t": "付",
               "r": "ふ",
-              "g": "predicate"
+              "g": "attributive"
             },
             {
               "t": "記",
               "r": "き",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "：",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "補",
+              "r": "ほ",
+              "g": "attributive"
+            },
+            {
+              "t": "足",
+              "r": "そく",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "記",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "録",
+              "r": "ろく",
+              "g": "object"
+            },
+            {
+              "t": "。",
               "r": "",
               "g": "function"
             }

@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 385,
-    "grammar_token_total": 385,
+    "token_total": 389,
+    "grammar_token_total": 389,
     "unit_count": 10
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0746",
@@ -233,24 +233,25 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00746",
     "source_text": "生蛾死后,那些留在某树上的稚茧,又变成短蛾蛾,在峙上下了好多蛋。周围的人部抢着把性蛋连桑树带泥巴一齐挖回去。从此,半围的老百姓都学着恤昧的样子喂起短子来，他们还在答蛾住过的地方修了几间房子,中问--和间用来供答上,阿边的房子安锅灶,用来者茧抽丝。抽起来的丝,就合到塘头去清洗,洗过的丝,又亮又逆和,名声慢慢传开了,好多人都跑到这里来买丝。没几年,这地方就成了非常阑热的恤丝市。",
+    "corrected_text": "蚕蛾死后,那些留在桑树上的蚕茧,又变成蚕蛾,在树上下了好多蛋。周围的人都抢着把蚕蛋连桑树带泥巴一齐挖回去。从此,周围的老百姓都学着蚕娘的样子喂起蚕子来，他们还在蚕娘住过的地方修了几间房子,中间一间用来供蚕王,两边的房子安锅灶,用来煮茧抽丝。抽起来的丝,就拿到塘头去清洗,洗过的丝,又亮又柔和,名声慢慢传开了,好多人都跑到这里来买丝。没几年,这地方就成了非常闹热的蚕丝市。",
     "units": [
       {
-        "source_text": "生蛾死后,那些留在某树上的稚茧,又变成短蛾蛾,在峙上下了好多蛋。",
+        "source_text": "蚕蛾死后,那些留在桑树上的蚕茧,又变成蚕蛾,在树上下了好多蛋。",
         "zh": [
           {
-            "t": "生",
-            "r": "shēng",
-            "g": "adverbial"
+            "t": "蚕",
+            "r": "cán",
+            "g": "subject"
           },
           {
             "t": "蛾",
             "r": "é",
-            "g": "adverbial"
+            "g": "subject"
           },
           {
             "t": "死",
             "r": "sǐ",
-            "g": "adverbial"
+            "g": "predicate"
           },
           {
             "t": "后",
@@ -275,36 +276,36 @@
           {
             "t": "留",
             "r": "liú",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "在",
             "r": "zài",
-            "g": "subject"
+            "g": "attributive"
           },
           {
-            "t": "某",
-            "r": "mǒu",
-            "g": "subject"
+            "t": "桑",
+            "r": "sāng",
+            "g": "attributive"
           },
           {
             "t": "树",
             "r": "shù",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "上",
             "r": "shàng",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "的",
             "r": "de",
-            "g": "subject"
+            "g": "attributive"
           },
           {
-            "t": "稚",
-            "r": "zhì",
+            "t": "蚕",
+            "r": "cán",
             "g": "subject"
           },
           {
@@ -333,19 +334,14 @@
             "g": "predicate"
           },
           {
-            "t": "短",
-            "r": "duǎn",
-            "g": "predicate"
+            "t": "蚕",
+            "r": "cán",
+            "g": "object"
           },
           {
             "t": "蛾",
             "r": "é",
-            "g": "predicate"
-          },
-          {
-            "t": "蛾",
-            "r": "é",
-            "g": "predicate"
+            "g": "object"
           },
           {
             "t": ",",
@@ -358,8 +354,8 @@
             "g": "adverbial"
           },
           {
-            "t": "峙",
-            "r": "zhì",
+            "t": "树",
+            "r": "shù",
             "g": "adverbial"
           },
           {
@@ -401,24 +397,29 @@
         "ja": [
           [
             {
+              "t": "蚕",
+              "r": "かいこ",
+              "g": "subject"
+            },
+            {
               "t": "蛾",
               "r": "が",
-              "g": "adverbial"
+              "g": "subject"
             },
             {
               "t": "が",
               "r": "",
-              "g": "adverbial"
+              "g": "subject"
             },
             {
               "t": "死",
               "r": "し",
-              "g": "adverbial"
+              "g": "predicate"
             },
             {
               "t": "んだ",
               "r": "",
-              "g": "adverbial"
+              "g": "predicate"
             },
             {
               "t": "後",
@@ -431,39 +432,34 @@
               "g": "function"
             },
             {
-              "t": "その",
+              "t": "桑",
+              "r": "くわ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
               "r": "",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "木",
               "r": "き",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "に",
               "r": "",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "残",
               "r": "のこ",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "った",
               "r": "",
-              "g": "subject"
-            },
-            {
-              "t": "若",
-              "r": "わか",
-              "g": "subject"
-            },
-            {
-              "t": "い",
-              "r": "",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "繭",
@@ -483,22 +479,17 @@
               "g": "adverbial"
             },
             {
-              "t": "短",
-              "r": "たん",
-              "g": "predicate"
+              "t": "蚕",
+              "r": "かいこ",
+              "g": "object"
             },
             {
               "t": "蛾",
               "r": "が",
-              "g": "predicate"
+              "g": "object"
             },
             {
-              "t": "蛾",
-              "r": "が",
-              "g": "predicate"
-            },
-            {
-              "t": "となり",
+              "t": "になり",
               "r": "",
               "g": "predicate"
             },
@@ -508,8 +499,8 @@
               "g": "function"
             },
             {
-              "t": "峙",
-              "r": "じ",
+              "t": "木",
+              "r": "き",
               "g": "adverbial"
             },
             {
@@ -528,12 +519,7 @@
               "g": "adverbial"
             },
             {
-              "t": "多",
-              "r": "おお",
-              "g": "object"
-            },
-            {
-              "t": "くの",
+              "t": "たくさんの",
               "r": "",
               "g": "object"
             },
@@ -566,7 +552,7 @@
         ]
       },
       {
-        "source_text": "周围的人部抢着把性蛋连桑树带泥巴一齐挖回去。",
+        "source_text": "周围的人都抢着把蚕蛋连桑树带泥巴一齐挖回去。",
         "zh": [
           {
             "t": "周",
@@ -589,9 +575,9 @@
             "g": "subject"
           },
           {
-            "t": "部",
-            "r": "bù",
-            "g": "subject"
+            "t": "都",
+            "r": "dōu",
+            "g": "adverbial"
           },
           {
             "t": "抢",
@@ -609,8 +595,8 @@
             "g": "function"
           },
           {
-            "t": "性",
-            "r": "xìng",
+            "t": "蚕",
+            "r": "cán",
             "g": "object"
           },
           {
@@ -697,14 +683,19 @@
               "g": "subject"
             },
             {
-              "t": "者",
-              "r": "もの",
+              "t": "人",
+              "r": "ひと",
               "g": "subject"
             },
             {
               "t": "たちは",
               "r": "",
               "g": "subject"
+            },
+            {
+              "t": "みな",
+              "r": "",
+              "g": "adverbial"
             },
             {
               "t": "先",
@@ -732,13 +723,18 @@
               "g": "function"
             },
             {
-              "t": "性",
-              "r": "せい",
+              "t": "蚕",
+              "r": "かいこ",
               "g": "object"
             },
             {
-              "t": "蛋",
-              "r": "たん",
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "卵",
+              "r": "たまご",
               "g": "object"
             },
             {
@@ -764,7 +760,7 @@
               "g": "object"
             },
             {
-              "t": "も",
+              "t": "と",
               "r": "",
               "g": "object"
             },
@@ -774,7 +770,7 @@
               "g": "object"
             },
             {
-              "t": "も",
+              "t": "ごと",
               "r": "",
               "g": "object"
             },
@@ -799,29 +795,29 @@
               "g": "predicate"
             },
             {
-              "t": "って",
+              "t": "り",
               "r": "",
               "g": "predicate"
             },
             {
               "t": "持",
               "r": "も",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "ち",
               "r": "",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "帰",
               "r": "かえ",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "った",
               "r": "",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "。",
@@ -832,7 +828,7 @@
         ]
       },
       {
-        "source_text": "从此,半围的老百姓都学着恤昧的样子喂起短子来，",
+        "source_text": "从此,周围的老百姓都学着蚕娘的样子喂起蚕子来，",
         "zh": [
           {
             "t": "从",
@@ -850,8 +846,8 @@
             "g": "function"
           },
           {
-            "t": "半",
-            "r": "bàn",
+            "t": "周",
+            "r": "zhōu",
             "g": "subject"
           },
           {
@@ -887,37 +883,37 @@
           {
             "t": "学",
             "r": "xué",
-            "g": "adverbial"
+            "g": "predicate"
           },
           {
             "t": "着",
             "r": "zhe",
-            "g": "adverbial"
+            "g": "predicate"
           },
           {
-            "t": "恤",
-            "r": "xù",
-            "g": "adverbial"
+            "t": "蚕",
+            "r": "cán",
+            "g": "object"
           },
           {
-            "t": "昧",
-            "r": "mèi",
-            "g": "adverbial"
+            "t": "娘",
+            "r": "niáng",
+            "g": "object"
           },
           {
             "t": "的",
             "r": "de",
-            "g": "adverbial"
+            "g": "object"
           },
           {
             "t": "样",
             "r": "yàng",
-            "g": "adverbial"
+            "g": "object"
           },
           {
             "t": "子",
             "r": "zi",
-            "g": "adverbial"
+            "g": "object"
           },
           {
             "t": "喂",
@@ -930,8 +926,8 @@
             "g": "predicate"
           },
           {
-            "t": "短",
-            "r": "duǎn",
+            "t": "蚕",
+            "r": "cán",
             "g": "object"
           },
           {
@@ -958,8 +954,8 @@
               "g": "adverbial"
             },
             {
-              "t": "半",
-              "r": "はん",
+              "t": "周",
+              "r": "しゅう",
               "g": "subject"
             },
             {
@@ -988,8 +984,8 @@
               "g": "subject"
             },
             {
-              "t": "皆",
-              "r": "みな",
+              "t": "みな",
+              "r": "",
               "g": "adverbial"
             },
             {
@@ -998,30 +994,45 @@
               "g": "function"
             },
             {
-              "t": "恤",
-              "r": "じゅつ",
-              "g": "adverbial"
+              "t": "蚕",
+              "r": "さん",
+              "g": "object"
             },
             {
-              "t": "昧",
-              "r": "まい",
-              "g": "adverbial"
+              "t": "娘",
+              "r": "じょう",
+              "g": "object"
             },
             {
-              "t": "のまねをして",
+              "t": "の",
               "r": "",
-              "g": "adverbial"
+              "g": "object"
+            },
+            {
+              "t": "やり",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "方",
+              "r": "かた",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
             }
           ],
           [
             {
-              "t": "短",
-              "r": "たん",
-              "g": "object"
+              "t": "まねて",
+              "r": "",
+              "g": "predicate"
             },
             {
-              "t": "子",
-              "r": "し",
+              "t": "蚕",
+              "r": "かいこ",
               "g": "object"
             },
             {
@@ -1047,7 +1058,7 @@
             {
               "t": "めるようになった",
               "r": "",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "。",
@@ -1058,7 +1069,7 @@
         ]
       },
       {
-        "source_text": "他们还在答蛾住过的地方修了几间房子,",
+        "source_text": "他们还在蚕娘住过的地方修了几间房子,",
         "zh": [
           {
             "t": "他",
@@ -1081,29 +1092,29 @@
             "g": "adverbial"
           },
           {
-            "t": "答",
-            "r": "dá",
-            "g": "adverbial"
+            "t": "蚕",
+            "r": "cán",
+            "g": "attributive"
           },
           {
-            "t": "蛾",
-            "r": "é",
-            "g": "adverbial"
+            "t": "娘",
+            "r": "niáng",
+            "g": "attributive"
           },
           {
             "t": "住",
             "r": "zhù",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
             "t": "过",
             "r": "guò",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
             "t": "的",
             "r": "de",
-            "g": "adverbial"
+            "g": "attributive"
           },
           {
             "t": "地",
@@ -1174,29 +1185,29 @@
               "g": "function"
             },
             {
-              "t": "答",
-              "r": "とう",
-              "g": "adverbial"
+              "t": "蚕",
+              "r": "さん",
+              "g": "attributive"
             },
             {
-              "t": "蛾",
-              "r": "が",
-              "g": "adverbial"
+              "t": "娘",
+              "r": "じょう",
+              "g": "attributive"
             },
             {
               "t": "が",
               "r": "",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "住",
               "r": "す",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
-              "t": "んだ",
+              "t": "んだことのある",
               "r": "",
-              "g": "adverbial"
+              "g": "attributive"
             },
             {
               "t": "場",
@@ -1216,17 +1227,17 @@
           ],
           [
             {
-              "t": "数",
-              "r": "すう",
+              "t": "何",
+              "r": "なん",
               "g": "object"
             },
             {
               "t": "間",
-              "r": "けん",
+              "r": "げん",
               "g": "object"
             },
             {
-              "t": "の",
+              "t": "かの",
               "r": "",
               "g": "object"
             },
@@ -1259,7 +1270,7 @@
         ]
       },
       {
-        "source_text": "中问--和间用来供答上,",
+        "source_text": "中间一间用来供蚕王,",
         "zh": [
           {
             "t": "中",
@@ -1267,18 +1278,13 @@
             "g": "subject"
           },
           {
-            "t": "问",
-            "r": "wèn",
+            "t": "间",
+            "r": "jiān",
             "g": "subject"
           },
           {
-            "t": "--",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "和",
-            "r": "hé",
+            "t": "一",
+            "r": "yì",
             "g": "subject"
           },
           {
@@ -1302,13 +1308,13 @@
             "g": "predicate"
           },
           {
-            "t": "答",
-            "r": "dá",
+            "t": "蚕",
+            "r": "cán",
             "g": "object"
           },
           {
-            "t": "上",
-            "r": "shàng",
+            "t": "王",
+            "r": "wáng",
             "g": "object"
           },
           {
@@ -1320,13 +1326,18 @@
         "ja": [
           [
             {
-              "t": "中",
-              "r": "ちゅう",
+              "t": "真",
+              "r": "ま",
               "g": "subject"
             },
             {
-              "t": "央",
-              "r": "おう",
+              "t": "ん",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "中",
+              "r": "なか",
               "g": "subject"
             },
             {
@@ -1348,22 +1359,17 @@
               "t": "は",
               "r": "",
               "g": "subject"
-            },
-            {
-              "t": "、",
-              "r": "",
-              "g": "function"
             }
           ],
           [
             {
-              "t": "答",
-              "r": "とう",
+              "t": "蚕",
+              "r": "さん",
               "g": "object"
             },
             {
-              "t": "上",
-              "r": "じょう",
+              "t": "王",
+              "r": "おう",
               "g": "object"
             },
             {
@@ -1374,12 +1380,12 @@
             {
               "t": "祀",
               "r": "まつ",
-              "g": "complement"
+              "g": "predicate"
             },
             {
               "t": "るために",
               "r": "",
-              "g": "complement"
+              "g": "predicate"
             },
             {
               "t": "使",
@@ -1400,11 +1406,11 @@
         ]
       },
       {
-        "source_text": "阿边的房子安锅灶,用来者茧抽丝。",
+        "source_text": "两边的房子安锅灶,用来煮茧抽丝。",
         "zh": [
           {
-            "t": "阿",
-            "r": "ā",
+            "t": "两",
+            "r": "liǎng",
             "g": "subject"
           },
           {
@@ -1458,9 +1464,9 @@
             "g": "predicate"
           },
           {
-            "t": "者",
-            "r": "zhě",
-            "g": "object"
+            "t": "煮",
+            "r": "zhǔ",
+            "g": "predicate"
           },
           {
             "t": "茧",
@@ -1486,8 +1492,13 @@
         "ja": [
           [
             {
-              "t": "脇",
-              "r": "わき",
+              "t": "両",
+              "r": "りょう",
+              "g": "subject"
+            },
+            {
+              "t": "側",
+              "r": "がわ",
               "g": "subject"
             },
             {
@@ -1591,27 +1602,27 @@
         ]
       },
       {
-        "source_text": "抽起来的丝,就合到塘头去清洗,",
+        "source_text": "抽起来的丝,就拿到塘头去清洗,",
         "zh": [
           {
             "t": "抽",
             "r": "chōu",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "起",
             "r": "qǐ",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "来",
             "r": "lái",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "的",
             "r": "de",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "丝",
@@ -1629,14 +1640,14 @@
             "g": "adverbial"
           },
           {
-            "t": "合",
-            "r": "hé",
-            "g": "adverbial"
+            "t": "拿",
+            "r": "ná",
+            "g": "predicate"
           },
           {
             "t": "到",
             "r": "dào",
-            "g": "adverbial"
+            "g": "predicate"
           },
           {
             "t": "塘",
@@ -1651,7 +1662,7 @@
           {
             "t": "去",
             "r": "qù",
-            "g": "adverbial"
+            "g": "complement"
           },
           {
             "t": "清",
@@ -1674,22 +1685,22 @@
             {
               "t": "引",
               "r": "ひ",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "き",
               "r": "",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "出",
               "r": "だ",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "した",
               "r": "",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "糸",
@@ -1720,31 +1731,36 @@
               "t": "へ",
               "r": "",
               "g": "adverbial"
-            },
-            {
-              "t": "持",
-              "r": "も",
-              "g": "adverbial"
-            },
-            {
-              "t": "って",
-              "r": "",
-              "g": "adverbial"
-            },
-            {
-              "t": "行",
-              "r": "い",
-              "g": "adverbial"
-            },
-            {
-              "t": "き",
-              "r": "",
-              "g": "adverbial"
             }
           ],
           [
             {
-              "t": "そこで",
+              "t": "持",
+              "r": "も",
+              "g": "predicate"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "行",
+              "r": "い",
+              "g": "complement"
+            },
+            {
+              "t": "き",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "きれいに",
               "r": "",
               "g": "adverbial"
             },
@@ -1767,22 +1783,22 @@
         ]
       },
       {
-        "source_text": "洗过的丝,又亮又逆和,",
+        "source_text": "洗过的丝,又亮又柔和,",
         "zh": [
           {
             "t": "洗",
             "r": "xǐ",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "过",
             "r": "guò",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "的",
             "r": "de",
-            "g": "subject"
+            "g": "attributive"
           },
           {
             "t": "丝",
@@ -1810,8 +1826,8 @@
             "g": "adverbial"
           },
           {
-            "t": "逆",
-            "r": "nì",
+            "t": "柔",
+            "r": "róu",
             "g": "predicate"
           },
           {
@@ -1830,12 +1846,12 @@
             {
               "t": "洗",
               "r": "あら",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "った",
               "r": "",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "糸",
@@ -1853,29 +1869,34 @@
               "g": "function"
             },
             {
+              "t": "つやつやと",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
               "t": "光",
-              "r": "こう",
+              "r": "ひか",
               "g": "predicate"
             },
             {
-              "t": "沢",
-              "r": "たく",
-              "g": "predicate"
-            },
-            {
-              "t": "があり",
+              "t": "り",
               "r": "",
               "g": "predicate"
             }
           ],
           [
             {
-              "t": "また",
+              "t": "しかも",
               "r": "",
               "g": "adverbial"
             },
             {
-              "t": "しなやかだった",
+              "t": "柔",
+              "r": "やわ",
+              "g": "predicate"
+            },
+            {
+              "t": "らかだった",
               "r": "",
               "g": "predicate"
             },
@@ -1918,12 +1939,12 @@
           {
             "t": "开",
             "r": "kāi",
-            "g": "predicate"
+            "g": "complement"
           },
           {
             "t": "了",
             "r": "le",
-            "g": "predicate"
+            "g": "complement"
           },
           {
             "t": ",",
@@ -1973,7 +1994,7 @@
           {
             "t": "来",
             "r": "lái",
-            "g": "predicate"
+            "g": "complement"
           },
           {
             "t": "买",
@@ -2021,7 +2042,7 @@
             {
               "t": "まり",
               "r": "",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "、",
@@ -2078,12 +2099,12 @@
             {
               "t": "来",
               "r": "き",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "た",
               "r": "",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "。",
@@ -2094,7 +2115,7 @@
         ]
       },
       {
-        "source_text": "没几年,这地方就成了非常阑热的恤丝市。",
+        "source_text": "没几年,这地方就成了非常闹热的蚕丝市。",
         "zh": [
           {
             "t": "没",
@@ -2149,42 +2170,42 @@
           {
             "t": "非",
             "r": "fēi",
-            "g": "complement"
+            "g": "attributive"
           },
           {
             "t": "常",
             "r": "cháng",
-            "g": "complement"
+            "g": "attributive"
           },
           {
-            "t": "阑",
-            "r": "lán",
-            "g": "complement"
+            "t": "闹",
+            "r": "nào",
+            "g": "attributive"
           },
           {
             "t": "热",
             "r": "rè",
-            "g": "complement"
+            "g": "attributive"
           },
           {
             "t": "的",
             "r": "de",
-            "g": "complement"
+            "g": "attributive"
           },
           {
-            "t": "恤",
-            "r": "xù",
-            "g": "complement"
+            "t": "蚕",
+            "r": "cán",
+            "g": "object"
           },
           {
             "t": "丝",
             "r": "sī",
-            "g": "complement"
+            "g": "object"
           },
           {
             "t": "市",
             "r": "shì",
-            "g": "complement"
+            "g": "object"
           },
           {
             "t": "。",
@@ -2234,27 +2255,27 @@
             {
               "t": "たいへんにぎわう",
               "r": "",
-              "g": "complement"
+              "g": "attributive"
             },
             {
-              "t": "恤",
-              "r": "じゅつ",
-              "g": "complement"
+              "t": "蚕",
+              "r": "さん",
+              "g": "object"
             },
             {
-              "t": "絲",
+              "t": "糸",
               "r": "し",
-              "g": "complement"
+              "g": "object"
             },
             {
               "t": "の",
               "r": "",
-              "g": "complement"
+              "g": "object"
             },
             {
               "t": "市",
               "r": "いち",
-              "g": "complement"
+              "g": "object"
             },
             {
               "t": "になった",

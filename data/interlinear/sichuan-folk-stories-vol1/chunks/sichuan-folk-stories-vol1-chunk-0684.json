@@ -100,32 +100,32 @@
       {
         "t": "黄",
         "r": "huáng",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "龙",
         "r": "lóng",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "助",
         "r": "zhù",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "怠",
         "r": "dài",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "治",
         "r": "zhì",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "水",
         "r": "shuǐ",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "（",
@@ -172,52 +172,52 @@
       {
         "t": "黄",
         "r": "こう",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "竜",
         "r": "りゅう",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "が",
         "r": "",
-        "g": "topic"
+        "g": "subject"
       },
       {
         "t": "怠",
         "r": "たい",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "を",
         "r": "",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "助",
         "r": "たす",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "けて",
         "r": "",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "治",
         "r": "ち",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "水",
         "r": "すい",
-        "g": "topic"
+        "g": "object"
       },
       {
         "t": "する",
         "r": "",
-        "g": "topic"
+        "g": "predicate"
       },
       {
         "t": "（",
@@ -257,9 +257,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00684",
       "source_text": "跑下山修房盖屋,耕地播种。",
+      "corrected_text": "跑下山修房盖屋，耕地播种。",
       "units": [
         {
-          "source_text": "跑下山修房盖屋,耕地播种。",
+          "source_text": "跑下山修房盖屋，耕地播种。",
           "zh": [
             {
               "t": "跑",
@@ -297,7 +298,7 @@
               "g": "object"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -318,7 +319,7 @@
             },
             {
               "t": "种",
-              "r": "zhòng",
+              "r": "zhǒng",
               "g": "object"
             },
             {
@@ -355,7 +356,7 @@
                 "g": "complement"
               },
               {
-                "t": "りて、",
+                "t": "り、",
                 "r": "",
                 "g": "complement"
               },
@@ -370,17 +371,22 @@
                 "g": "object"
               },
               {
-                "t": "直",
+                "t": "修",
                 "r": "なお",
                 "g": "predicate"
               },
               {
-                "t": "し",
+                "t": "して",
                 "r": "",
                 "g": "predicate"
               }
             ],
             [
+              {
+                "t": "家",
+                "r": "いえ",
+                "g": "object"
+              },
               {
                 "t": "屋",
                 "r": "や",
@@ -417,7 +423,7 @@
                 "g": "predicate"
               },
               {
-                "t": "して",
+                "t": "し、",
                 "r": "",
                 "g": "predicate"
               },

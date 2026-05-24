@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 40,
-    "grammar_token_total": 40,
+    "token_total": 45,
+    "grammar_token_total": 45,
     "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0670",
@@ -55,17 +55,17 @@
       {
         "t": "和",
         "r": "hé",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": "英",
         "r": "yīng",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "雄",
         "r": "xióng",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "神",
@@ -87,22 +87,22 @@
       {
         "t": "と",
         "r": "",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": "英",
         "r": "えい",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "雄",
         "r": "ゆう",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "の",
         "r": "",
-        "g": "topic"
+        "g": "attributive"
       },
       {
         "t": "神",
@@ -268,27 +268,28 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00670",
     "source_text": "名时了:刚上。外尖些:即头脑灵活些。",
+    "corrected_text": "名时了：刚上。外尖些：即头脑灵活些。",
     "units": [
       {
-        "source_text": "名时了:刚上。",
+        "source_text": "名时了：刚上。",
         "zh": [
           {
             "t": "名",
             "r": "míng",
-            "g": "subject"
+            "g": "topic"
           },
           {
             "t": "时",
             "r": "shí",
-            "g": "subject"
+            "g": "topic"
           },
           {
             "t": "了",
             "r": "le",
-            "g": "subject"
+            "g": "topic"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -318,22 +319,22 @@
             {
               "t": "名",
               "r": "めい",
-              "g": "subject"
+              "g": "topic"
             },
             {
-              "t": "时",
+              "t": "時",
               "r": "じ",
-              "g": "subject"
+              "g": "topic"
             },
             {
               "t": "了",
               "r": "りょう",
-              "g": "subject"
+              "g": "topic"
             },
             {
-              "t": "」は",
+              "t": "」は、",
               "r": "",
-              "g": "subject"
+              "g": "topic"
             }
           ],
           [
@@ -348,33 +349,48 @@
               "g": "predicate"
             },
             {
-              "t": "がったところ。",
+              "t": "がったところ、という",
               "r": "",
               "g": "predicate"
+            },
+            {
+              "t": "意",
+              "r": "い",
+              "g": "object"
+            },
+            {
+              "t": "味",
+              "r": "み",
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ]
         ]
       },
       {
-        "source_text": "外尖些:即头脑灵活些。",
+        "source_text": "外尖些：即头脑灵活些。",
         "zh": [
           {
             "t": "外",
             "r": "wài",
-            "g": "subject"
+            "g": "topic"
           },
           {
             "t": "尖",
             "r": "jiān",
-            "g": "subject"
+            "g": "topic"
           },
           {
             "t": "些",
             "r": "xiē",
-            "g": "subject"
+            "g": "topic"
           },
           {
-            "t": ":",
+            "t": "：",
             "r": "",
             "g": "function"
           },
@@ -424,17 +440,17 @@
             {
               "t": "外",
               "r": "がい",
-              "g": "subject"
+              "g": "topic"
             },
             {
               "t": "尖",
               "r": "せん",
-              "g": "subject"
+              "g": "topic"
             },
             {
               "t": "些",
               "r": "さ",
-              "g": "subject"
+              "g": "topic"
             },
             {
               "t": "」は、つまり",
@@ -454,17 +470,12 @@
               "g": "subject"
             },
             {
-              "t": "回",
-              "r": "かい",
+              "t": "働",
+              "r": "はたら",
               "g": "predicate"
             },
             {
-              "t": "転",
-              "r": "てん",
-              "g": "predicate"
-            },
-            {
-              "t": "が",
+              "t": "きが",
               "r": "",
               "g": "predicate"
             },
@@ -479,14 +490,29 @@
               "g": "complement"
             },
             {
-              "t": "速",
-              "r": "はや",
+              "t": "利",
+              "r": "き",
               "g": "predicate"
             },
             {
-              "t": "いこと。",
+              "t": "くという",
               "r": "",
               "g": "predicate"
+            },
+            {
+              "t": "意",
+              "r": "い",
+              "g": "object"
+            },
+            {
+              "t": "味",
+              "r": "み",
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ]
         ]

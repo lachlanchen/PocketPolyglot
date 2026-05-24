@@ -1,0 +1,666 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p01552",
+  "source_text": "西羌王听了高兴地说:没有大堰,羌家不能起种,僚家不能放牧,汉家没有收成,我们",
+  "source_sha256": "9edeab69edf20164a7ba93bba5111e1cc17a4be37cac90736b2cb0df58dbe0a4",
+  "source_normalized_sha256": "9edeab69edf20164a7ba93bba5111e1cc17a4be37cac90736b2cb0df58dbe0a4",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 80,
+    "grammar_token_total": 80,
+    "unit_count": 1
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-1552",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "三国蜀汉人物传说",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "attributive"
+      },
+      {
+        "t": "国",
+        "r": "guó",
+        "g": "attributive"
+      },
+      {
+        "t": "蜀",
+        "r": "shǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "汉",
+        "r": "hàn",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "object"
+      },
+      {
+        "t": "物",
+        "r": "wù",
+        "g": "object"
+      },
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "attributive"
+      },
+      {
+        "t": "国",
+        "r": "ごく",
+        "g": "attributive"
+      },
+      {
+        "t": "蜀",
+        "r": "しょく",
+        "g": "attributive"
+      },
+      {
+        "t": "漢",
+        "r": "かん",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "object"
+      },
+      {
+        "t": "物",
+        "r": "ぶつ",
+        "g": "object"
+      },
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-三国蜀汉人物传说-143-马超守报灌县",
+    "title_zh": [
+      {
+        "t": "143. ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "马",
+        "r": "mǎ",
+        "g": "subject"
+      },
+      {
+        "t": "超",
+        "r": "chāo",
+        "g": "subject"
+      },
+      {
+        "t": "守",
+        "r": "shǒu",
+        "g": "predicate"
+      },
+      {
+        "t": "报",
+        "r": "bào",
+        "g": "object"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "灌",
+        "r": "guàn",
+        "g": "object"
+      },
+      {
+        "t": "县",
+        "r": "xiàn",
+        "g": "object"
+      },
+      {
+        "t": "）》",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "143. ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "馬",
+        "r": "ば",
+        "g": "subject"
+      },
+      {
+        "t": "超",
+        "r": "ちょう",
+        "g": "subject"
+      },
+      {
+        "t": "が",
+        "r": "",
+        "g": "subject"
+      },
+      {
+        "t": "報",
+        "r": "ほう",
+        "g": "object"
+      },
+      {
+        "t": "を",
+        "r": "",
+        "g": "object"
+      },
+      {
+        "t": "守",
+        "r": "まも",
+        "g": "predicate"
+      },
+      {
+        "t": "る",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "灌",
+        "r": "かん",
+        "g": "object"
+      },
+      {
+        "t": "県",
+        "r": "けん",
+        "g": "object"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p01552",
+    "source_text": "西羌王听了高兴地说:没有大堰,羌家不能起种,僚家不能放牧,汉家没有收成,我们",
+    "corrected_text": "西羌王听了高兴地说：没有大堰，羌家不能耕种，僚家不能放牧，汉家没有收成，我们",
+    "units": [
+      {
+        "source_text": "西羌王听了高兴地说：没有大堰，羌家不能耕种，僚家不能放牧，汉家没有收成，我们",
+        "zh": [
+          {
+            "t": "西",
+            "r": "xī",
+            "g": "subject"
+          },
+          {
+            "t": "羌",
+            "r": "qiāng",
+            "g": "subject"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "subject"
+          },
+          {
+            "t": "听",
+            "r": "tīng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "高",
+            "r": "gāo",
+            "g": "adverbial"
+          },
+          {
+            "t": "兴",
+            "r": "xìng",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "predicate"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "object"
+          },
+          {
+            "t": "堰",
+            "r": "yàn",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "羌",
+            "r": "qiāng",
+            "g": "subject"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "能",
+            "r": "néng",
+            "g": "adverbial"
+          },
+          {
+            "t": "耕",
+            "r": "gēng",
+            "g": "predicate"
+          },
+          {
+            "t": "种",
+            "r": "zhòng",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "僚",
+            "r": "liáo",
+            "g": "subject"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "能",
+            "r": "néng",
+            "g": "adverbial"
+          },
+          {
+            "t": "放",
+            "r": "fàng",
+            "g": "predicate"
+          },
+          {
+            "t": "牧",
+            "r": "mù",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "汉",
+            "r": "hàn",
+            "g": "subject"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "subject"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "predicate"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "收",
+            "r": "shōu",
+            "g": "object"
+          },
+          {
+            "t": "成",
+            "r": "chéng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "西",
+              "r": "せい",
+              "g": "subject"
+            },
+            {
+              "t": "羌",
+              "r": "きょう",
+              "g": "subject"
+            },
+            {
+              "t": "王",
+              "r": "おう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "それを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "聞",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "いて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "喜",
+              "r": "よろこ",
+              "g": "adverbial"
+            },
+            {
+              "t": "んで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "object"
+            },
+            {
+              "t": "きな",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "堰",
+              "r": "せき",
+              "g": "object"
+            },
+            {
+              "t": "がなければ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "羌",
+              "r": "きょう",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "家",
+              "r": "いえ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "耕",
+              "r": "たがや",
+              "g": "predicate"
+            },
+            {
+              "t": "せず",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "僚",
+              "r": "りょう",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "家",
+              "r": "いえ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "放",
+              "r": "ほう",
+              "g": "predicate"
+            },
+            {
+              "t": "牧",
+              "r": "ぼく",
+              "g": "predicate"
+            },
+            {
+              "t": "できず",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "漢",
+              "r": "かん",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "家",
+              "r": "いえ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "収",
+              "r": "しゅう",
+              "g": "object"
+            },
+            {
+              "t": "穫",
+              "r": "かく",
+              "g": "object"
+            },
+            {
+              "t": "がなく",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "たちは",
+              "r": "",
+              "g": "subject"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

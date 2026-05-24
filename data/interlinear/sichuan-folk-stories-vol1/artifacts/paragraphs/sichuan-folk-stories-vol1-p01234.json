@@ -1,0 +1,569 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p01234",
+  "source_text": "条网戏:只大致规定了剧情.规定了角色任务而没有出本的观。",
+  "source_sha256": "9e8985c36476c15dfd89ed62d5fe3e41da623cc2eea93ce9fc8ffc5cccfdf59c",
+  "source_normalized_sha256": "9e8985c36476c15dfd89ed62d5fe3e41da623cc2eea93ce9fc8ffc5cccfdf59c",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 52,
+    "grammar_token_total": 52,
+    "unit_count": 2
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-1234",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "人物传说",
+    "title_zh": [
+      {
+        "t": "。",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "wù",
+        "g": "attributive"
+      },
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "ぶつ",
+        "g": "attributive"
+      },
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-人物传说-110-张飞欠岳飞资中县",
+    "title_zh": [
+      {
+        "t": "110",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ". ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "张",
+        "r": "zhāng",
+        "g": "subject"
+      },
+      {
+        "t": "飞",
+        "r": "fēi",
+        "g": "subject"
+      },
+      {
+        "t": "欠",
+        "r": "qiàn",
+        "g": "predicate"
+      },
+      {
+        "t": "岳",
+        "r": "yuè",
+        "g": "object"
+      },
+      {
+        "t": "飞",
+        "r": "fēi",
+        "g": "object"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "资",
+        "r": "zī",
+        "g": "attributive"
+      },
+      {
+        "t": "中",
+        "r": "zhōng",
+        "g": "attributive"
+      },
+      {
+        "t": "县",
+        "r": "xiàn",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "110. ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "張",
+        "r": "ちょう",
+        "g": "subject"
+      },
+      {
+        "t": "飛",
+        "r": "ひ",
+        "g": "subject"
+      },
+      {
+        "t": "が",
+        "r": "",
+        "g": "subject"
+      },
+      {
+        "t": "岳",
+        "r": "がく",
+        "g": "object"
+      },
+      {
+        "t": "飛",
+        "r": "ひ",
+        "g": "object"
+      },
+      {
+        "t": "に",
+        "r": "",
+        "g": "object"
+      },
+      {
+        "t": "借",
+        "r": "か",
+        "g": "predicate"
+      },
+      {
+        "t": "りを",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "作",
+        "r": "つく",
+        "g": "predicate"
+      },
+      {
+        "t": "る",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "資",
+        "r": "し",
+        "g": "attributive"
+      },
+      {
+        "t": "中",
+        "r": "ちゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "県",
+        "r": "けん",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [
+      {
+        "t": "资",
+        "r": "zī",
+        "g": "attributive"
+      },
+      {
+        "t": "中",
+        "r": "zhōng",
+        "g": "attributive"
+      },
+      {
+        "t": "县",
+        "r": "xiàn",
+        "g": "attributive"
+      }
+    ],
+    "place_ja": [
+      {
+        "t": "資",
+        "r": "し",
+        "g": "attributive"
+      },
+      {
+        "t": "中",
+        "r": "ちゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "県",
+        "r": "けん",
+        "g": "attributive"
+      }
+    ]
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p01234",
+    "source_text": "条网戏:只大致规定了剧情.规定了角色任务而没有出本的观。",
+    "corrected_text": "提纲戏：只大致规定了剧情，规定了角色任务而没有定本的戏。",
+    "units": [
+      {
+        "source_text": "提纲戏：只大致规定了剧情，",
+        "zh": [
+          {
+            "t": "提",
+            "r": "tí",
+            "g": "attributive"
+          },
+          {
+            "t": "纲",
+            "r": "gāng",
+            "g": "attributive"
+          },
+          {
+            "t": "戏",
+            "r": "xì",
+            "g": "subject"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "只",
+            "r": "zhǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "adverbial"
+          },
+          {
+            "t": "致",
+            "r": "zhì",
+            "g": "adverbial"
+          },
+          {
+            "t": "规",
+            "r": "guī",
+            "g": "predicate"
+          },
+          {
+            "t": "定",
+            "r": "dìng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "剧",
+            "r": "jù",
+            "g": "object"
+          },
+          {
+            "t": "情",
+            "r": "qíng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "提",
+              "r": "てい",
+              "g": "attributive"
+            },
+            {
+              "t": "綱",
+              "r": "こう",
+              "g": "attributive"
+            },
+            {
+              "t": "劇",
+              "r": "げき",
+              "g": "subject"
+            },
+            {
+              "t": "とは、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "筋",
+              "r": "すじ",
+              "g": "object"
+            },
+            {
+              "t": "立",
+              "r": "だ",
+              "g": "object"
+            },
+            {
+              "t": "てだけを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "adverbial"
+            },
+            {
+              "t": "まかに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "定",
+              "r": "さだ",
+              "g": "predicate"
+            },
+            {
+              "t": "め、",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "规定了角色任务而没有定本的戏。",
+        "zh": [
+          {
+            "t": "规",
+            "r": "guī",
+            "g": "predicate"
+          },
+          {
+            "t": "定",
+            "r": "dìng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "角",
+            "r": "jué",
+            "g": "object"
+          },
+          {
+            "t": "色",
+            "r": "sè",
+            "g": "object"
+          },
+          {
+            "t": "任",
+            "r": "rèn",
+            "g": "object"
+          },
+          {
+            "t": "务",
+            "r": "wù",
+            "g": "object"
+          },
+          {
+            "t": "而",
+            "r": "ér",
+            "g": "function"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "定",
+            "r": "dìng",
+            "g": "attributive"
+          },
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "戏",
+            "r": "xì",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "役",
+              "r": "やく",
+              "g": "object"
+            },
+            {
+              "t": "柄",
+              "r": "がら",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "務",
+              "r": "つと",
+              "g": "object"
+            },
+            {
+              "t": "めを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "決",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "めているが、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "定",
+              "r": "てい",
+              "g": "attributive"
+            },
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "attributive"
+            },
+            {
+              "t": "のない",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "芝",
+              "r": "しば",
+              "g": "object"
+            },
+            {
+              "t": "居",
+              "r": "い",
+              "g": "object"
+            },
+            {
+              "t": "のことである。",
+              "r": "",
+              "g": "object"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

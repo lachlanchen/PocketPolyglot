@@ -1,0 +1,666 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p01795",
+  "source_text": "这充军原是替皇上充的,因此离京城后,- -路上吃饭睡觉都很方便。杨状元先在离京",
+  "source_sha256": "4b133bc3d7c0583c82a0a8aabf9a8bbdab17fd9c159eb6d4df5482f038bce889",
+  "source_normalized_sha256": "807a2cc32bfc1f6ebf901debc961781fa316f978dbcefa956f815047cd2be0b1",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 73,
+    "grammar_token_total": 73,
+    "unit_count": 2
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-1795",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "attributive"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "attributive"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "文人传说",
+    "title_zh": [
+      {
+        "t": ",",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "文",
+        "r": "wén",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      },
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "object"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": ",",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "文",
+        "r": "ぶん",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "attributive"
+      },
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "object"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-文人传说-168-替主充军双流县",
+    "title_zh": [
+      {
+        "t": "1",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "6",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "8",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "替",
+        "r": "tì",
+        "g": "predicate"
+      },
+      {
+        "t": "主",
+        "r": "zhǔ",
+        "g": "object"
+      },
+      {
+        "t": "充",
+        "r": "chōng",
+        "g": "predicate"
+      },
+      {
+        "t": "军",
+        "r": "jūn",
+        "g": "object"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "双",
+        "r": "shuāng",
+        "g": "attributive"
+      },
+      {
+        "t": "流",
+        "r": "liú",
+        "g": "attributive"
+      },
+      {
+        "t": "县",
+        "r": "xiàn",
+        "g": "object"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "1",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "6",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "8",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "主",
+        "r": "あるじ",
+        "g": "object"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "object"
+      },
+      {
+        "t": "身",
+        "r": "み",
+        "g": "object"
+      },
+      {
+        "t": "代",
+        "r": "が"
+      },
+      {
+        "t": "わりに",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "従",
+        "r": "じゅう",
+        "g": "predicate"
+      },
+      {
+        "t": "軍",
+        "r": "ぐん",
+        "g": "object"
+      },
+      {
+        "t": "する",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "双",
+        "r": "そう",
+        "g": "attributive"
+      },
+      {
+        "t": "流",
+        "r": "りゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "県",
+        "r": "けん",
+        "g": "object"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p01795",
+    "source_text": "这充军原是替皇上充的,因此离京城后,- -路上吃饭睡觉都很方便。杨状元先在离京",
+    "corrected_text": "这充军原是替皇上充的，因此离京城后，一路上吃饭睡觉都很方便。杨状元先在离京",
+    "units": [
+      {
+        "source_text": "这充军原是替皇上充的，因此离京城后，一路上吃饭睡觉都很方便。",
+        "zh": [
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "充",
+            "r": "chōng",
+            "g": "subject"
+          },
+          {
+            "t": "军",
+            "r": "jūn",
+            "g": "subject"
+          },
+          {
+            "t": "原",
+            "r": "yuán",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "替",
+            "r": "tì",
+            "g": "adverbial"
+          },
+          {
+            "t": "皇",
+            "r": "huáng",
+            "g": "object"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "object"
+          },
+          {
+            "t": "充",
+            "r": "chōng",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "因",
+            "r": "yīn",
+            "g": "function"
+          },
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "function"
+          },
+          {
+            "t": "离",
+            "r": "lí",
+            "g": "predicate"
+          },
+          {
+            "t": "京",
+            "r": "jīng",
+            "g": "object"
+          },
+          {
+            "t": "城",
+            "r": "chéng",
+            "g": "object"
+          },
+          {
+            "t": "后",
+            "r": "hòu",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "adverbial"
+          },
+          {
+            "t": "路",
+            "r": "lù",
+            "g": "adverbial"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "吃",
+            "r": "chī",
+            "g": "subject"
+          },
+          {
+            "t": "饭",
+            "r": "fàn",
+            "g": "object"
+          },
+          {
+            "t": "睡",
+            "r": "shuì",
+            "g": "subject"
+          },
+          {
+            "t": "觉",
+            "r": "jiào",
+            "g": "object"
+          },
+          {
+            "t": "都",
+            "r": "dōu",
+            "g": "adverbial"
+          },
+          {
+            "t": "很",
+            "r": "hěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "方",
+            "r": "fāng",
+            "g": "predicate"
+          },
+          {
+            "t": "便",
+            "r": "biàn",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "軍",
+              "r": "ぐん",
+              "g": "subject"
+            },
+            {
+              "t": "役",
+              "r": "えき",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "もともと",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "皇",
+              "r": "こう",
+              "g": "object"
+            },
+            {
+              "t": "帝",
+              "r": "てい",
+              "g": "object"
+            },
+            {
+              "t": "のためのものだったので、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "都",
+              "r": "みやこ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "離",
+              "r": "はな",
+              "g": "predicate"
+            },
+            {
+              "t": "れた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "後",
+              "r": "あと",
+              "g": "function"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "道",
+              "r": "どう",
+              "g": "adverbial"
+            },
+            {
+              "t": "中",
+              "r": "ちゅう",
+              "g": "adverbial"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "食",
+              "r": "しょく",
+              "g": "subject"
+            },
+            {
+              "t": "事",
+              "r": "じ",
+              "g": "subject"
+            },
+            {
+              "t": "や",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "宿",
+              "r": "しゅく",
+              "g": "subject"
+            },
+            {
+              "t": "泊",
+              "r": "はく",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "とても",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "便",
+              "r": "べん",
+              "g": "predicate"
+            },
+            {
+              "t": "利",
+              "r": "り",
+              "g": "predicate"
+            },
+            {
+              "t": "だった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "杨状元先在离京",
+        "zh": [
+          {
+            "t": "杨",
+            "r": "yáng",
+            "g": "subject"
+          },
+          {
+            "t": "状",
+            "r": "zhuàng",
+            "g": "subject"
+          },
+          {
+            "t": "元",
+            "r": "yuán",
+            "g": "subject"
+          },
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "离",
+            "r": "lí",
+            "g": "predicate"
+          },
+          {
+            "t": "京",
+            "r": "jīng",
+            "g": "object"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "楊",
+              "r": "よう",
+              "g": "subject"
+            },
+            {
+              "t": "状",
+              "r": "じょう",
+              "g": "subject"
+            },
+            {
+              "t": "元",
+              "r": "げん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "まず",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "都",
+              "r": "みやこ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "離",
+              "r": "はな",
+              "g": "predicate"
+            },
+            {
+              "t": "れるところで",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

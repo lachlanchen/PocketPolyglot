@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 85,
-    "grammar_token_total": 85,
+    "token_total": 86,
+    "grammar_token_total": 86,
     "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0665",
@@ -258,9 +258,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00665",
     "source_text": "十二个月亮本来是十二个姊妹,一出来都是十二个 -路,把二郎神晒恼火了。二郎神就稚",
+    "corrected_text": "十二个月亮本来是十二个姊妹，一出来都是十二个一路，把二郎神晒恼火了。二郎神就稚",
     "units": [
       {
-        "source_text": "十二个月亮本来是十二个姊妹,一出来都是十二个 -路,",
+        "source_text": "十二个月亮本来是十二个姊妹，一出来都是十二个一路，",
         "zh": [
           {
             "t": "十",
@@ -328,7 +329,7 @@
             "g": "object"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -360,35 +361,30 @@
           {
             "t": "十",
             "r": "shí",
-            "g": "object"
+            "g": "subject"
           },
           {
             "t": "二",
             "r": "èr",
-            "g": "object"
+            "g": "subject"
           },
           {
             "t": "个",
             "r": "gè",
-            "g": "object"
+            "g": "subject"
           },
           {
-            "t": " ",
-            "r": "",
-            "g": "function"
-          },
-          {
-            "t": "-",
-            "r": "",
-            "g": "function"
+            "t": "一",
+            "r": "yī",
+            "g": "adverbial"
           },
           {
             "t": "路",
             "r": "lù",
-            "g": "object"
+            "g": "adverbial"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           }
@@ -452,12 +448,12 @@
             },
             {
               "t": "姉",
-              "r": "しまい",
+              "r": "し",
               "g": "object"
             },
             {
               "t": "妹",
-              "r": "しまい",
+              "r": "まい",
               "g": "object"
             },
             {
@@ -473,49 +469,49 @@
               "g": "predicate"
             },
             {
-              "t": "てくると",
+              "t": "てくると、",
               "r": "",
               "g": "predicate"
             },
             {
-              "t": "皆",
-              "r": "みな",
-              "g": "adverbial"
-            },
-            {
-              "t": "が",
-              "r": "",
-              "g": "adverbial"
-            },
-            {
               "t": "十",
               "r": "じゅう",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "二",
               "r": "に",
-              "g": "object"
+              "g": "subject"
             },
             {
-              "t": "本",
-              "r": "ほん",
-              "g": "object"
+              "t": "人",
+              "r": "にん",
+              "g": "subject"
             },
             {
-              "t": "の",
+              "t": "が",
               "r": "",
-              "g": "object"
+              "g": "subject"
             },
             {
-              "t": "道",
-              "r": "みち",
-              "g": "object"
-            },
-            {
-              "t": "のようだった。",
+              "t": "みな",
               "r": "",
-              "g": "object"
+              "g": "adverbial"
+            },
+            {
+              "t": "一",
+              "r": "いっ",
+              "g": "adverbial"
+            },
+            {
+              "t": "緒",
+              "r": "しょ",
+              "g": "adverbial"
+            },
+            {
+              "t": "だった。",
+              "r": "",
+              "g": "predicate"
             }
           ]
         ]
@@ -572,7 +568,7 @@
         "ja": [
           [
             {
-              "t": "そのせいで",
+              "t": "そのため",
               "r": "",
               "g": "function"
             },
@@ -695,23 +691,28 @@
               "g": "predicate"
             },
             {
-              "t": "というところまでで",
+              "t": "という",
               "r": "",
               "g": "predicate"
             },
             {
-              "t": "文",
-              "r": "ぶん",
+              "t": "字",
+              "r": "じ",
               "g": "object"
             },
             {
-              "t": "が",
+              "t": "のところで",
               "r": "",
               "g": "object"
             },
             {
+              "t": "途",
+              "r": "と",
+              "g": "predicate"
+            },
+            {
               "t": "切",
-              "r": "き",
+              "r": "ぎ",
               "g": "predicate"
             },
             {

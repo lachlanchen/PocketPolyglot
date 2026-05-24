@@ -6,24 +6,24 @@
       {
         "t": "传",
         "r": "chuán",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "说",
         "r": "shuō",
-        "g": "predicate"
+        "g": "object"
       }
     ],
     "title_ja": [
       {
         "t": "伝",
         "r": "でん",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "説",
         "r": "せつ",
-        "g": "predicate"
+        "g": "object"
       }
     ]
   },
@@ -48,12 +48,12 @@
       {
         "t": "传",
         "r": "chuán",
-        "g": "predicate"
+        "g": "object"
       },
       {
         "t": "说",
         "r": "shuō",
-        "g": "predicate"
+        "g": "object"
       }
     ],
     "title_ja": [
@@ -75,12 +75,12 @@
       {
         "t": "伝",
         "r": "でん",
-        "g": "predicate"
+        "g": "object"
       },
       {
         "t": "説",
         "r": "せつ",
-        "g": "predicate"
+        "g": "object"
       }
     ]
   },
@@ -140,7 +140,7 @@
       {
         "t": "血",
         "r": "xuè",
-        "g": "attributive"
+        "g": "object"
       },
       {
         "t": "化",
@@ -170,7 +170,7 @@
       {
         "t": "县",
         "r": "xiàn",
-        "g": "attributive"
+        "g": "object"
       },
       {
         "t": "）",
@@ -230,14 +230,19 @@
         "g": "subject"
       },
       {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
         "t": "血",
         "r": "ち",
-        "g": "attributive"
+        "g": "object"
       },
       {
         "t": "が",
         "r": "",
-        "g": "attributive"
+        "g": "object"
       },
       {
         "t": "珠",
@@ -277,7 +282,7 @@
       {
         "t": "県",
         "r": "けん",
-        "g": "attributive"
+        "g": "object"
       },
       {
         "t": "）",
@@ -292,9 +297,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00811",
       "source_text": "他被折磨得骨瘦如此,又加疾病缠身,自知难以躲过杀身之祸。一天,他对跟随他多年的-",
+      "corrected_text": "他被折磨得骨瘦如柴，又加疾病缠身，自知难以躲过杀身之祸。一天，他对跟随他多年的",
       "units": [
         {
-          "source_text": "他被折磨得骨瘦如此,又加疾病缠身,自知难以躲过杀身之祸。",
+          "source_text": "他被折磨得骨瘦如柴，又加疾病缠身，自知难以躲过杀身之祸。",
           "zh": [
             {
               "t": "他",
@@ -337,12 +343,12 @@
               "g": "complement"
             },
             {
-              "t": "此",
-              "r": "cǐ",
+              "t": "柴",
+              "r": "chái",
               "g": "complement"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -377,7 +383,7 @@
               "g": "object"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -465,7 +471,7 @@
                 "g": "predicate"
               },
               {
-                "t": "まれて",
+                "t": "まれて、",
                 "r": "",
                 "g": "predicate"
               },
@@ -552,12 +558,12 @@
                 "g": "object"
               },
               {
-                "t": "逃",
-                "r": "のが",
+                "t": "避",
+                "r": "さ",
                 "g": "predicate"
               },
               {
-                "t": "れられないと",
+                "t": "けられぬと",
                 "r": "",
                 "g": "predicate"
               },
@@ -575,7 +581,7 @@
           ]
         },
         {
-          "source_text": "一天,他对跟随他多年的-",
+          "source_text": "一天，他对跟随他多年的",
           "zh": [
             {
               "t": "一",
@@ -588,7 +594,7 @@
               "g": "adverbial"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -631,11 +637,6 @@
               "t": "的",
               "r": "de",
               "g": "adverbial"
-            },
-            {
-              "t": "-",
-              "r": "",
-              "g": "function"
             }
           ],
           "ja": [
@@ -708,9 +709,14 @@
                 "g": "attributive"
               },
               {
-                "t": "-",
+                "t": "者",
+                "r": "もの",
+                "g": "object"
+              },
+              {
+                "t": "に",
                 "r": "",
-                "g": "function"
+                "g": "object"
               }
             ]
           ]

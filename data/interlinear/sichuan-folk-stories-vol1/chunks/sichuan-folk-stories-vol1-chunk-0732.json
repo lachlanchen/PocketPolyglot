@@ -6,24 +6,24 @@
       {
         "t": "传",
         "r": "chuán",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "说",
         "r": "shuō",
-        "g": "predicate"
+        "g": "object"
       }
     ],
     "title_ja": [
       {
         "t": "伝",
         "r": "でん",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "説",
         "r": "せつ",
-        "g": "predicate"
+        "g": "object"
       }
     ]
   },
@@ -53,7 +53,7 @@
       {
         "t": "说",
         "r": "shuō",
-        "g": "predicate"
+        "g": "object"
       }
     ],
     "title_ja": [
@@ -80,7 +80,7 @@
       {
         "t": "説",
         "r": "せつ",
-        "g": "predicate"
+        "g": "object"
       }
     ]
   },
@@ -252,9 +252,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00732",
       "source_text": "资子看得心头火置,一心要制伏大蝶。他立即拿起一把利剑,化着-条金龙,向大蟒冲",
+      "corrected_text": "资子看得心头火起，一心要制伏大蟒。他立即拿起一把利剑，化作一条金龙，向大蟒冲",
       "units": [
         {
-          "source_text": "资子看得心头火置,一心要制伏大蝶。",
+          "source_text": "资子看得心头火起，一心要制伏大蟒。",
           "zh": [
             {
               "t": "资",
@@ -289,15 +290,15 @@
             {
               "t": "火",
               "r": "huǒ",
+              "g": "subject"
+            },
+            {
+              "t": "起",
+              "r": "qǐ",
               "g": "predicate"
             },
             {
-              "t": "置",
-              "r": "zhì",
-              "g": "complement"
-            },
-            {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -332,8 +333,8 @@
               "g": "attributive"
             },
             {
-              "t": "蝶",
-              "r": "dié",
+              "t": "蟒",
+              "r": "mǎng",
               "g": "object"
             },
             {
@@ -387,22 +388,22 @@
               {
                 "t": "怒",
                 "r": "いか",
-                "g": "predicate"
+                "g": "subject"
               },
               {
                 "t": "りが",
                 "r": "",
+                "g": "subject"
+              },
+              {
+                "t": "湧",
+                "r": "わ",
                 "g": "predicate"
               },
               {
-                "t": "燃",
-                "r": "も",
-                "g": "complement"
-              },
-              {
-                "t": "え",
+                "t": "き",
                 "r": "",
-                "g": "complement"
+                "g": "predicate"
               }
             ],
             [
@@ -427,13 +428,8 @@
                 "g": "attributive"
               },
               {
-                "t": "きな",
-                "r": "",
-                "g": "attributive"
-              },
-              {
-                "t": "蝶",
-                "r": "ちょう",
+                "t": "蟒",
+                "r": "うわばみ",
                 "g": "object"
               },
               {
@@ -447,7 +443,7 @@
                 "g": "predicate"
               },
               {
-                "t": "服",
+                "t": "伏",
                 "r": "ふく",
                 "g": "predicate"
               },
@@ -465,7 +461,7 @@
           ]
         },
         {
-          "source_text": "他立即拿起一把利剑,化着-条金龙,向大蟒冲",
+          "source_text": "他立即拿起一把利剑，化作一条金龙，向大蟒冲",
           "zh": [
             {
               "t": "他",
@@ -513,7 +509,7 @@
               "g": "object"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -523,14 +519,14 @@
               "g": "predicate"
             },
             {
-              "t": "着",
-              "r": "zhe",
+              "t": "作",
+              "r": "zuò",
               "g": "predicate"
             },
             {
-              "t": "-",
-              "r": "",
-              "g": "function"
+              "t": "一",
+              "r": "yī",
+              "g": "attributive"
             },
             {
               "t": "条",
@@ -548,7 +544,7 @@
               "g": "object"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -650,7 +646,7 @@
               {
                 "t": "一",
                 "r": "いっ",
-                "g": "function"
+                "g": "attributive"
               },
               {
                 "t": "匹",
@@ -660,7 +656,7 @@
               {
                 "t": "の",
                 "r": "",
-                "g": "function"
+                "g": "attributive"
               },
               {
                 "t": "金",
@@ -678,7 +674,7 @@
                 "g": "object"
               },
               {
-                "t": "と",
+                "t": "に",
                 "r": "",
                 "g": "object"
               },
@@ -718,13 +714,13 @@
                 "g": "predicate"
               },
               {
-                "t": "っ",
+                "t": "き",
                 "r": "",
                 "g": "predicate"
               },
               {
-                "t": "込",
-                "r": "こ",
+                "t": "進",
+                "r": "すす",
                 "g": "predicate"
               },
               {

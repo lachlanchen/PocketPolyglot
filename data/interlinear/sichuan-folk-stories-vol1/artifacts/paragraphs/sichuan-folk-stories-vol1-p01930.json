@@ -1,0 +1,1732 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p01930",
+  "source_text": "正在这时,卫兵过来说,朱旅长,天色不早,我们该回去了。啊!孩子们这村知道回他们下棋,让他们骑马的,就是威震棉花坡战场.打得北洋军闻风表胆的朱德将军.小黑娃忙说:啊!要走啊?我们还没给你审草呢!朱德将军笑着对孩子们说孩子们学会下棋.学会骑蕊,将来有用呀!草割回去喂牛吧!说完,翻身上马.向放牛娃们挥挥手,就走了。",
+  "source_sha256": "8edcdf980503c903d60d1f33b926f0a7b8dbed35ab024ef56e3f76004c28f657",
+  "source_normalized_sha256": "8edcdf980503c903d60d1f33b926f0a7b8dbed35ab024ef56e3f76004c28f657",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 279,
+    "grammar_token_total": 279,
+    "unit_count": 7
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-1930",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "现代革命家传说",
+    "title_zh": [
+      {
+        "t": "*",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "现",
+        "r": "xiàn",
+        "g": "attributive"
+      },
+      {
+        "t": "代",
+        "r": "dài",
+        "g": "attributive"
+      },
+      {
+        "t": "革",
+        "r": "gé",
+        "g": "attributive"
+      },
+      {
+        "t": "命",
+        "r": "mìng",
+        "g": "attributive"
+      },
+      {
+        "t": "家",
+        "r": "jiā",
+        "g": "attributive"
+      },
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "現",
+        "r": "げん",
+        "g": "attributive"
+      },
+      {
+        "t": "代",
+        "r": "だい",
+        "g": "attributive"
+      },
+      {
+        "t": "革",
+        "r": "かく",
+        "g": "attributive"
+      },
+      {
+        "t": "命",
+        "r": "めい",
+        "g": "attributive"
+      },
+      {
+        "t": "家",
+        "r": "か",
+        "g": "attributive"
+      },
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-现代革命家传说-180-朱德将军和放牛娃",
+    "title_zh": [
+      {
+        "t": "1",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "8",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "0",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "朱",
+        "r": "zhū",
+        "g": "attributive"
+      },
+      {
+        "t": "德",
+        "r": "dé",
+        "g": "attributive"
+      },
+      {
+        "t": "将",
+        "r": "jiāng",
+        "g": "attributive"
+      },
+      {
+        "t": "军",
+        "r": "jūn",
+        "g": "attributive"
+      },
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "function"
+      },
+      {
+        "t": "放",
+        "r": "fàng",
+        "g": "attributive"
+      },
+      {
+        "t": "牛",
+        "r": "niú",
+        "g": "attributive"
+      },
+      {
+        "t": "娃",
+        "r": "wá",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "180. ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "朱",
+        "r": "しゅ",
+        "g": "attributive"
+      },
+      {
+        "t": "徳",
+        "r": "とく",
+        "g": "attributive"
+      },
+      {
+        "t": "将",
+        "r": "しょう",
+        "g": "attributive"
+      },
+      {
+        "t": "軍",
+        "r": "ぐん",
+        "g": "attributive"
+      },
+      {
+        "t": "と",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "牛",
+        "r": "うし",
+        "g": "attributive"
+      },
+      {
+        "t": "飼",
+        "r": "か",
+        "g": "attributive"
+      },
+      {
+        "t": "いの",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "子",
+        "r": "こ",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p01930",
+    "source_text": "正在这时,卫兵过来说,朱旅长,天色不早,我们该回去了。啊!孩子们这村知道回他们下棋,让他们骑马的,就是威震棉花坡战场.打得北洋军闻风表胆的朱德将军.小黑娃忙说:啊!要走啊?我们还没给你审草呢!朱德将军笑着对孩子们说孩子们学会下棋.学会骑蕊,将来有用呀!草割回去喂牛吧!说完,翻身上马.向放牛娃们挥挥手,就走了。",
+    "corrected_text": "正在这时，卫兵过来说，朱旅长，天色不早，我们该回去了。啊！孩子们这才知道和他们下棋，让他们骑马的，就是威震棉花坡战场，打得北洋军闻风丧胆的朱德将军。小黑娃忙说：啊！要走啊？我们还没给你割草呢！朱德将军笑着对孩子们说：孩子们，学会下棋，学会骑马，将来有用呀！草割回去喂牛吧！说完，翻身上马，向放牛娃们挥挥手，就走了。",
+    "units": [
+      {
+        "source_text": "正在这时，卫兵过来说，朱旅长，天色不早，我们该回去了。",
+        "zh": [
+          {
+            "t": "正",
+            "r": "zhèng",
+            "g": "adverbial"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "adverbial"
+          },
+          {
+            "t": "时",
+            "r": "shí",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "卫",
+            "r": "wèi",
+            "g": "subject"
+          },
+          {
+            "t": "兵",
+            "r": "bīng",
+            "g": "subject"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "predicate"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "predicate"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "朱",
+            "r": "zhū",
+            "g": "object"
+          },
+          {
+            "t": "旅",
+            "r": "lǚ",
+            "g": "object"
+          },
+          {
+            "t": "长",
+            "r": "zhǎng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "subject"
+          },
+          {
+            "t": "色",
+            "r": "sè",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "早",
+            "r": "zǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          },
+          {
+            "t": "该",
+            "r": "gāi",
+            "g": "adverbial"
+          },
+          {
+            "t": "回",
+            "r": "huí",
+            "g": "predicate"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ちょうどその",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "時",
+              "r": "とき",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "衛",
+              "r": "えい",
+              "g": "subject"
+            },
+            {
+              "t": "兵",
+              "r": "へい",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "やって",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "来",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "て",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "朱",
+              "r": "しゅ",
+              "g": "object"
+            },
+            {
+              "t": "旅",
+              "r": "りょ",
+              "g": "object"
+            },
+            {
+              "t": "長",
+              "r": "ちょう",
+              "g": "object"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "もう",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "遅",
+              "r": "おそ",
+              "g": "predicate"
+            },
+            {
+              "t": "いです、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "戻",
+              "r": "もど",
+              "g": "predicate"
+            },
+            {
+              "t": "りましょう。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "啊！孩子们这才知道和他们下棋，让他们骑马的，就是威震棉花坡战场，打得北洋军闻风丧胆的朱德将军。",
+        "zh": [
+          {
+            "t": "啊",
+            "r": "à",
+            "g": "function"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "孩",
+            "r": "hái",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "adverbial"
+          },
+          {
+            "t": "才",
+            "r": "cái",
+            "g": "adverbial"
+          },
+          {
+            "t": "知",
+            "r": "zhī",
+            "g": "predicate"
+          },
+          {
+            "t": "道",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "adverbial"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "adverbial"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "adverbial"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "attributive"
+          },
+          {
+            "t": "棋",
+            "r": "qí",
+            "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "让",
+            "r": "ràng",
+            "g": "attributive"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "object"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "object"
+          },
+          {
+            "t": "骑",
+            "r": "qí",
+            "g": "attributive"
+          },
+          {
+            "t": "马",
+            "r": "mǎ",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "威",
+            "r": "wēi",
+            "g": "attributive"
+          },
+          {
+            "t": "震",
+            "r": "zhèn",
+            "g": "attributive"
+          },
+          {
+            "t": "棉",
+            "r": "mián",
+            "g": "attributive"
+          },
+          {
+            "t": "花",
+            "r": "huā",
+            "g": "attributive"
+          },
+          {
+            "t": "坡",
+            "r": "pō",
+            "g": "attributive"
+          },
+          {
+            "t": "战",
+            "r": "zhàn",
+            "g": "attributive"
+          },
+          {
+            "t": "场",
+            "r": "chǎng",
+            "g": "attributive"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "打",
+            "r": "dǎ",
+            "g": "attributive"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "北",
+            "r": "běi",
+            "g": "object"
+          },
+          {
+            "t": "洋",
+            "r": "yáng",
+            "g": "object"
+          },
+          {
+            "t": "军",
+            "r": "jūn",
+            "g": "object"
+          },
+          {
+            "t": "闻",
+            "r": "wén",
+            "g": "complement"
+          },
+          {
+            "t": "风",
+            "r": "fēng",
+            "g": "complement"
+          },
+          {
+            "t": "丧",
+            "r": "sàng",
+            "g": "complement"
+          },
+          {
+            "t": "胆",
+            "r": "dǎn",
+            "g": "complement"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "complement"
+          },
+          {
+            "t": "朱",
+            "r": "zhū",
+            "g": "object"
+          },
+          {
+            "t": "德",
+            "r": "dé",
+            "g": "object"
+          },
+          {
+            "t": "将",
+            "r": "jiāng",
+            "g": "object"
+          },
+          {
+            "t": "军",
+            "r": "jūn",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ああ、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "どもたちはそこでやっと",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "知",
+              "r": "し",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "一",
+              "r": "いっ",
+              "g": "attributive"
+            },
+            {
+              "t": "緒",
+              "r": "しょ",
+              "g": "attributive"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "将",
+              "r": "しょう",
+              "g": "attributive"
+            },
+            {
+              "t": "棋",
+              "r": "ぎ",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "指",
+              "r": "さ",
+              "g": "attributive"
+            },
+            {
+              "t": "し、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "馬",
+              "r": "うま",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "乗",
+              "r": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "せてくれたのは、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "北",
+              "r": "ほく",
+              "g": "object"
+            },
+            {
+              "t": "洋",
+              "r": "よう",
+              "g": "object"
+            },
+            {
+              "t": "軍",
+              "r": "ぐん",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "震",
+              "r": "ふる",
+              "g": "complement"
+            },
+            {
+              "t": "えあがらせた",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "朱",
+              "r": "しゅ",
+              "g": "object"
+            },
+            {
+              "t": "徳",
+              "r": "とく",
+              "g": "object"
+            },
+            {
+              "t": "将",
+              "r": "しょう",
+              "g": "object"
+            },
+            {
+              "t": "軍",
+              "r": "ぐん",
+              "g": "object"
+            },
+            {
+              "t": "だった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "小黑娃忙说：啊！要走啊？",
+        "zh": [
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "subject"
+          },
+          {
+            "t": "黑",
+            "r": "hēi",
+            "g": "subject"
+          },
+          {
+            "t": "娃",
+            "r": "wá",
+            "g": "subject"
+          },
+          {
+            "t": "忙",
+            "r": "máng",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "啊",
+            "r": "à",
+            "g": "function"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "adverbial"
+          },
+          {
+            "t": "走",
+            "r": "zǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "小",
+              "r": "しょう",
+              "g": "subject"
+            },
+            {
+              "t": "黒",
+              "r": "こく",
+              "g": "subject"
+            },
+            {
+              "t": "娃",
+              "r": "あ",
+              "g": "subject"
+            },
+            {
+              "t": "はあわてて",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "えっ、もう",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "行",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "ってしまうんですか。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我们还没给你割草呢！",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          },
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "adverbial"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "adverbial"
+          },
+          {
+            "t": "给",
+            "r": "gěi",
+            "g": "adverbial"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "割",
+            "r": "gē",
+            "g": "predicate"
+          },
+          {
+            "t": "草",
+            "r": "cǎo",
+            "g": "object"
+          },
+          {
+            "t": "呢",
+            "r": "ne",
+            "g": "function"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "まだあなたのために",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "草",
+              "r": "くさ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "刈",
+              "r": "か",
+              "g": "predicate"
+            },
+            {
+              "t": "っていませんよ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "朱德将军笑着对孩子们说：孩子们，学会下棋，学会骑马，将来有用呀！",
+        "zh": [
+          {
+            "t": "朱",
+            "r": "zhū",
+            "g": "subject"
+          },
+          {
+            "t": "德",
+            "r": "dé",
+            "g": "subject"
+          },
+          {
+            "t": "将",
+            "r": "jiāng",
+            "g": "subject"
+          },
+          {
+            "t": "军",
+            "r": "jūn",
+            "g": "subject"
+          },
+          {
+            "t": "笑",
+            "r": "xiào",
+            "g": "adverbial"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "adverbial"
+          },
+          {
+            "t": "对",
+            "r": "duì",
+            "g": "adverbial"
+          },
+          {
+            "t": "孩",
+            "r": "hái",
+            "g": "adverbial"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "adverbial"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "孩",
+            "r": "hái",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "学",
+            "r": "xué",
+            "g": "subject"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "subject"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "object"
+          },
+          {
+            "t": "棋",
+            "r": "qí",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "学",
+            "r": "xué",
+            "g": "subject"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "subject"
+          },
+          {
+            "t": "骑",
+            "r": "qí",
+            "g": "object"
+          },
+          {
+            "t": "马",
+            "r": "mǎ",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "将",
+            "r": "jiāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "用",
+            "r": "yòng",
+            "g": "object"
+          },
+          {
+            "t": "呀",
+            "r": "ya",
+            "g": "function"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "朱",
+              "r": "しゅ",
+              "g": "subject"
+            },
+            {
+              "t": "徳",
+              "r": "とく",
+              "g": "subject"
+            },
+            {
+              "t": "将",
+              "r": "しょう",
+              "g": "subject"
+            },
+            {
+              "t": "軍",
+              "r": "ぐん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "笑",
+              "r": "わら",
+              "g": "adverbial"
+            },
+            {
+              "t": "いながら",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "adverbial"
+            },
+            {
+              "t": "どもたちに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "君",
+              "r": "きみ",
+              "g": "object"
+            },
+            {
+              "t": "たち、",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "将",
+              "r": "しょう",
+              "g": "object"
+            },
+            {
+              "t": "棋",
+              "r": "ぎ",
+              "g": "object"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "馬",
+              "r": "うま",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "乗",
+              "r": "の",
+              "g": "object"
+            },
+            {
+              "t": "ることも、",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "将",
+              "r": "しょう",
+              "g": "adverbial"
+            },
+            {
+              "t": "来",
+              "r": "らい",
+              "g": "adverbial"
+            },
+            {
+              "t": "役",
+              "r": "やく",
+              "g": "predicate"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "立",
+              "r": "た",
+              "g": "predicate"
+            },
+            {
+              "t": "つぞ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "草割回去喂牛吧！",
+        "zh": [
+          {
+            "t": "草",
+            "r": "cǎo",
+            "g": "object"
+          },
+          {
+            "t": "割",
+            "r": "gē",
+            "g": "predicate"
+          },
+          {
+            "t": "回",
+            "r": "huí",
+            "g": "complement"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "complement"
+          },
+          {
+            "t": "喂",
+            "r": "wèi",
+            "g": "predicate"
+          },
+          {
+            "t": "牛",
+            "r": "niú",
+            "g": "object"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "草",
+              "r": "くさ",
+              "g": "object"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "刈",
+              "r": "か",
+              "g": "predicate"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "持",
+              "r": "も",
+              "g": "complement"
+            },
+            {
+              "t": "ち",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "帰",
+              "r": "かえ",
+              "g": "complement"
+            },
+            {
+              "t": "り、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "牛",
+              "r": "うし",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "食",
+              "r": "た",
+              "g": "predicate"
+            },
+            {
+              "t": "べさせなさい。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "说完，翻身上马，向放牛娃们挥挥手，就走了。",
+        "zh": [
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "adverbial"
+          },
+          {
+            "t": "完",
+            "r": "wán",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "翻",
+            "r": "fān",
+            "g": "predicate"
+          },
+          {
+            "t": "身",
+            "r": "shēn",
+            "g": "predicate"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "predicate"
+          },
+          {
+            "t": "马",
+            "r": "mǎ",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "向",
+            "r": "xiàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "放",
+            "r": "fàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "牛",
+            "r": "niú",
+            "g": "adverbial"
+          },
+          {
+            "t": "娃",
+            "r": "wá",
+            "g": "adverbial"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "adverbial"
+          },
+          {
+            "t": "挥",
+            "r": "huī",
+            "g": "predicate"
+          },
+          {
+            "t": "挥",
+            "r": "huī",
+            "g": "predicate"
+          },
+          {
+            "t": "手",
+            "r": "shǒu",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "走",
+            "r": "zǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そう",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "adverbial"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "終",
+              "r": "お",
+              "g": "adverbial"
+            },
+            {
+              "t": "えると、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "身",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "をひるがえして",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "馬",
+              "r": "うま",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "乗",
+              "r": "の",
+              "g": "predicate"
+            },
+            {
+              "t": "り、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "牛",
+              "r": "うし",
+              "g": "adverbial"
+            },
+            {
+              "t": "飼",
+              "r": "か",
+              "g": "adverbial"
+            },
+            {
+              "t": "いの",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "adverbial"
+            },
+            {
+              "t": "らに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "振",
+              "r": "ふ",
+              "g": "predicate"
+            },
+            {
+              "t": "って、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "去",
+              "r": "さ",
+              "g": "predicate"
+            },
+            {
+              "t": "っていった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

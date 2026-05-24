@@ -177,9 +177,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00709",
       "source_text": "相传古时候,在西天表池仙宫里住着西王母。这西王峡有讲多女儿,个个都生得美狐无比,其中,又要数她第一十三个女儿瑶姬生得最聪明、最善良.最好看。西王母也最喜欢表姬.",
+      "corrected_text": "相传古时候，在西天瑶池仙宫里住着西王母。这西王母有许多女儿，个个都生得美丽无比，其中，又要数她第十三个女儿瑶姬生得最聪明、最善良、最好看。西王母也最喜欢瑶姬。",
       "units": [
         {
-          "source_text": "相传古时候,在西天表池仙宫里住着西王母。",
+          "source_text": "相传古时候，在西天瑶池仙宫里住着西王母。",
           "zh": [
             {
               "t": "相",
@@ -207,7 +208,7 @@
               "g": "adverbial"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -227,8 +228,8 @@
               "g": "adverbial"
             },
             {
-              "t": "表",
-              "r": "biǎo",
+              "t": "瑶",
+              "r": "yáo",
               "g": "adverbial"
             },
             {
@@ -325,13 +326,18 @@
                 "g": "adverbial"
               },
               {
-                "t": "表",
-                "r": "ひょう",
+                "t": "瑶",
+                "r": "よう",
                 "g": "adverbial"
               },
               {
                 "t": "池",
                 "r": "ち",
+                "g": "adverbial"
+              },
+              {
+                "t": "の",
+                "r": "",
                 "g": "adverbial"
               },
               {
@@ -345,14 +351,9 @@
                 "g": "adverbial"
               },
               {
-                "t": "には",
+                "t": "に",
                 "r": "",
                 "g": "adverbial"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
               }
             ],
             [
@@ -395,12 +396,12 @@
           ]
         },
         {
-          "source_text": "这西王峡有讲多女儿,个个都生得美狐无比,其中,又要数她第一十三个女儿瑶姬生得最聪明、最善良.",
+          "source_text": "这西王母有许多女儿，个个都生得美丽无比，",
           "zh": [
             {
               "t": "这",
               "r": "zhè",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "西",
@@ -413,8 +414,8 @@
               "g": "subject"
             },
             {
-              "t": "峡",
-              "r": "xiá",
+              "t": "母",
+              "r": "mǔ",
               "g": "subject"
             },
             {
@@ -423,14 +424,14 @@
               "g": "predicate"
             },
             {
-              "t": "讲",
-              "r": "jiǎng",
-              "g": "object"
+              "t": "许",
+              "r": "xǔ",
+              "g": "attributive"
             },
             {
               "t": "多",
               "r": "duō",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "女",
@@ -443,7 +444,7 @@
               "g": "object"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -475,28 +476,129 @@
             {
               "t": "美",
               "r": "měi",
-              "g": "predicate"
+              "g": "complement"
             },
             {
-              "t": "狐",
-              "r": "hú",
-              "g": "predicate"
+              "t": "丽",
+              "r": "lì",
+              "g": "complement"
             },
             {
               "t": "无",
               "r": "wú",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "比",
               "r": "bǐ",
-              "g": "predicate"
+              "g": "complement"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
-            },
+            }
+          ],
+          "ja": [
+            [
+              {
+                "t": "この",
+                "r": "",
+                "g": "attributive"
+              },
+              {
+                "t": "西",
+                "r": "せい",
+                "g": "subject"
+              },
+              {
+                "t": "王",
+                "r": "おう",
+                "g": "subject"
+              },
+              {
+                "t": "母",
+                "r": "ぼ",
+                "g": "subject"
+              },
+              {
+                "t": "には",
+                "r": "",
+                "g": "subject"
+              },
+              {
+                "t": "多",
+                "r": "おお",
+                "g": "attributive"
+              },
+              {
+                "t": "くの",
+                "r": "",
+                "g": "attributive"
+              },
+              {
+                "t": "娘",
+                "r": "むすめ",
+                "g": "object"
+              },
+              {
+                "t": "が",
+                "r": "",
+                "g": "object"
+              },
+              {
+                "t": "おり",
+                "r": "",
+                "g": "predicate"
+              },
+              {
+                "t": "、",
+                "r": "",
+                "g": "function"
+              }
+            ],
+            [
+              {
+                "t": "ひとりひとりが",
+                "r": "",
+                "g": "subject"
+              },
+              {
+                "t": "みな",
+                "r": "",
+                "g": "adverbial"
+              },
+              {
+                "t": "比",
+                "r": "くら",
+                "g": "complement"
+              },
+              {
+                "t": "べようもなく",
+                "r": "",
+                "g": "complement"
+              },
+              {
+                "t": "美",
+                "r": "うつく",
+                "g": "complement"
+              },
+              {
+                "t": "しかった",
+                "r": "",
+                "g": "predicate"
+              },
+              {
+                "t": "、",
+                "r": "",
+                "g": "function"
+              }
+            ]
+          ]
+        },
+        {
+          "source_text": "其中，又要数她第十三个女儿瑶姬生得最聪明、最善良、最好看。",
+          "zh": [
             {
               "t": "其",
               "r": "qí",
@@ -508,7 +610,7 @@
               "g": "adverbial"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -530,32 +632,27 @@
             {
               "t": "她",
               "r": "tā",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "第",
               "r": "dì",
-              "g": "subject"
-            },
-            {
-              "t": "一",
-              "r": "yī",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "十",
               "r": "shí",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "三",
               "r": "sān",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "个",
               "r": "gè",
-              "g": "subject"
+              "g": "attributive"
             },
             {
               "t": "女",
@@ -595,12 +692,12 @@
             {
               "t": "聪",
               "r": "cōng",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "明",
               "r": "míng",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "、",
@@ -615,102 +712,40 @@
             {
               "t": "善",
               "r": "shàn",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "良",
               "r": "liáng",
-              "g": "predicate"
+              "g": "complement"
             },
             {
-              "t": ".",
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "最",
+              "r": "zuì",
+              "g": "adverbial"
+            },
+            {
+              "t": "好",
+              "r": "hǎo",
+              "g": "complement"
+            },
+            {
+              "t": "看",
+              "r": "kàn",
+              "g": "complement"
+            },
+            {
+              "t": "。",
               "r": "",
               "g": "function"
             }
           ],
           "ja": [
-            [
-              {
-                "t": "この",
-                "r": "",
-                "g": "subject"
-              },
-              {
-                "t": "西",
-                "r": "せい",
-                "g": "subject"
-              },
-              {
-                "t": "王",
-                "r": "おう",
-                "g": "subject"
-              },
-              {
-                "t": "峡",
-                "r": "きょう",
-                "g": "subject"
-              },
-              {
-                "t": "には",
-                "r": "",
-                "g": "subject"
-              },
-              {
-                "t": "多",
-                "r": "おお",
-                "g": "object"
-              },
-              {
-                "t": "くの",
-                "r": "",
-                "g": "object"
-              },
-              {
-                "t": "娘",
-                "r": "むすめ",
-                "g": "object"
-              },
-              {
-                "t": "が",
-                "r": "",
-                "g": "object"
-              },
-              {
-                "t": "おり",
-                "r": "",
-                "g": "predicate"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": "みな",
-                "r": "",
-                "g": "subject"
-              },
-              {
-                "t": "このうえなく",
-                "r": "",
-                "g": "adverbial"
-              },
-              {
-                "t": "美",
-                "r": "うつく",
-                "g": "predicate"
-              },
-              {
-                "t": "しく",
-                "r": "",
-                "g": "predicate"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
-              }
-            ],
             [
               {
                 "t": "その",
@@ -723,29 +758,49 @@
                 "g": "adverbial"
               },
               {
-                "t": "では",
+                "t": "でも",
                 "r": "",
                 "g": "adverbial"
               },
               {
-                "t": "第",
-                "r": "だい",
-                "g": "subject"
+                "t": "、",
+                "r": "",
+                "g": "function"
               },
               {
-                "t": "十",
-                "r": "じゅう",
-                "g": "subject"
+                "t": "彼",
+                "r": "かの",
+                "g": "attributive"
               },
               {
-                "t": "三",
-                "r": "さん",
-                "g": "subject"
+                "t": "女",
+                "r": "じょ",
+                "g": "attributive"
               },
               {
                 "t": "の",
                 "r": "",
-                "g": "subject"
+                "g": "attributive"
+              },
+              {
+                "t": "第",
+                "r": "だい",
+                "g": "attributive"
+              },
+              {
+                "t": "十",
+                "r": "じゅう",
+                "g": "attributive"
+              },
+              {
+                "t": "三",
+                "r": "さん",
+                "g": "attributive"
+              },
+              {
+                "t": "の",
+                "r": "",
+                "g": "attributive"
               },
               {
                 "t": "娘",
@@ -753,9 +808,9 @@
                 "g": "subject"
               },
               {
-                "t": "の",
+                "t": "、",
                 "r": "",
-                "g": "subject"
+                "g": "function"
               },
               {
                 "t": "瑶",
@@ -771,7 +826,9 @@
                 "t": "が",
                 "r": "",
                 "g": "subject"
-              },
+              }
+            ],
+            [
               {
                 "t": "もっとも",
                 "r": "",
@@ -780,12 +837,12 @@
               {
                 "t": "賢",
                 "r": "かしこ",
-                "g": "predicate"
+                "g": "complement"
               },
               {
                 "t": "く",
                 "r": "",
-                "g": "predicate"
+                "g": "complement"
               },
               {
                 "t": "、",
@@ -800,63 +857,32 @@
               {
                 "t": "善",
                 "r": "ぜん",
-                "g": "predicate"
+                "g": "complement"
               },
               {
                 "t": "良",
                 "r": "りょう",
-                "g": "predicate"
+                "g": "complement"
               },
               {
-                "t": "だった",
+                "t": "で",
                 "r": "",
-                "g": "predicate"
+                "g": "complement"
               },
               {
-                "t": "。",
+                "t": "、",
                 "r": "",
                 "g": "function"
-              }
-            ]
-          ]
-        },
-        {
-          "source_text": "最好看。",
-          "zh": [
-            {
-              "t": "最",
-              "r": "zuì",
-              "g": "adverbial"
-            },
-            {
-              "t": "好",
-              "r": "hǎo",
-              "g": "predicate"
-            },
-            {
-              "t": "看",
-              "r": "kàn",
-              "g": "predicate"
-            },
-            {
-              "t": "。",
-              "r": "",
-              "g": "function"
-            }
-          ],
-          "ja": [
-            [
+              },
               {
-                "t": "いちばん",
+                "t": "もっとも",
                 "r": "",
                 "g": "adverbial"
-              }
-            ],
-            [
+              },
               {
                 "t": "美",
                 "r": "うつく",
-                "g": "predicate"
+                "g": "complement"
               },
               {
                 "t": "しかった",
@@ -872,7 +898,7 @@
           ]
         },
         {
-          "source_text": "西王母也最喜欢表姬.",
+          "source_text": "西王母也最喜欢瑶姬。",
           "zh": [
             {
               "t": "西",
@@ -910,8 +936,8 @@
               "g": "predicate"
             },
             {
-              "t": "表",
-              "r": "biǎo",
+              "t": "瑶",
+              "r": "yáo",
               "g": "object"
             },
             {
@@ -920,7 +946,7 @@
               "g": "object"
             },
             {
-              "t": ".",
+              "t": "。",
               "r": "",
               "g": "function"
             }
@@ -948,8 +974,8 @@
                 "g": "subject"
               },
               {
-                "t": "表",
-                "r": "ひょう",
+                "t": "瑶",
+                "r": "よう",
                 "g": "object"
               },
               {

@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 150,
-    "grammar_token_total": 150,
+    "token_total": 151,
+    "grammar_token_total": 151,
     "unit_count": 3
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0730",
@@ -191,9 +191,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00730",
     "source_text": "很旱以前,资中资阳、内江一带洪水泛滥,人们只好迁到山上吃野草野果。帮的第九个儿子名资,大家叫他资子。他奉命帮助大蜗到这一带来治水。",
+    "corrected_text": "很早以前，资中、资阳、内江一带洪水泛滥，人们只好迁到山上吃野草野果。禹的第九个儿子名资，大家叫他资子。他奉命帮助大禹到这一带来治水。",
     "units": [
       {
-        "source_text": "很旱以前,资中资阳、内江一带洪水泛滥,人们只好迁到山上吃野草野果。",
+        "source_text": "很早以前，资中、资阳、内江一带洪水泛滥，人们只好迁到山上吃野草野果。",
         "zh": [
           {
             "t": "很",
@@ -201,8 +202,8 @@
             "g": "adverbial"
           },
           {
-            "t": "旱",
-            "r": "hàn",
+            "t": "早",
+            "r": "zǎo",
             "g": "adverbial"
           },
           {
@@ -216,7 +217,7 @@
             "g": "adverbial"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -229,6 +230,11 @@
             "t": "中",
             "r": "zhōng",
             "g": "adverbial"
+          },
+          {
+            "t": "、",
+            "r": "",
+            "g": "function"
           },
           {
             "t": "资",
@@ -286,7 +292,7 @@
             "g": "predicate"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -564,11 +570,11 @@
         ]
       },
       {
-        "source_text": "帮的第九个儿子名资,大家叫他资子。",
+        "source_text": "禹的第九个儿子名资，大家叫他资子。",
         "zh": [
           {
-            "t": "帮",
-            "r": "bāng",
+            "t": "禹",
+            "r": "yǔ",
             "g": "attributive"
           },
           {
@@ -612,7 +618,7 @@
             "g": "complement"
           },
           {
-            "t": ",",
+            "t": "，",
             "r": "",
             "g": "function"
           },
@@ -655,8 +661,8 @@
         "ja": [
           [
             {
-              "t": "幇",
-              "r": "ほう",
+              "t": "禹",
+              "r": "う",
               "g": "attributive"
             },
             {
@@ -770,7 +776,7 @@
         ]
       },
       {
-        "source_text": "他奉命帮助大蜗到这一带来治水。",
+        "source_text": "他奉命帮助大禹到这一带来治水。",
         "zh": [
           {
             "t": "他",
@@ -803,8 +809,8 @@
             "g": "object"
           },
           {
-            "t": "蜗",
-            "r": "wō",
+            "t": "禹",
+            "r": "yǔ",
             "g": "object"
           },
           {
@@ -891,8 +897,8 @@
               "g": "object"
             },
             {
-              "t": "蝸",
-              "r": "か",
+              "t": "禹",
+              "r": "う",
               "g": "object"
             },
             {

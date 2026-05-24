@@ -6,24 +6,24 @@
       {
         "t": "传",
         "r": "chuán",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "说",
         "r": "shuō",
-        "g": "predicate"
+        "g": "object"
       }
     ],
     "title_ja": [
       {
         "t": "伝",
         "r": "でん",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "説",
         "r": "せつ",
-        "g": "predicate"
+        "g": "object"
       }
     ]
   },
@@ -48,12 +48,12 @@
       {
         "t": "传",
         "r": "chuán",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "说",
         "r": "shuō",
-        "g": "predicate"
+        "g": "object"
       }
     ],
     "title_ja": [
@@ -75,12 +75,12 @@
       {
         "t": "伝",
         "r": "でん",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "説",
         "r": "せつ",
-        "g": "predicate"
+        "g": "object"
       }
     ]
   },
@@ -125,7 +125,7 @@
       {
         "t": "县",
         "r": "xiàn",
-        "g": "attributive"
+        "g": "object"
       },
       {
         "t": "）",
@@ -155,7 +155,7 @@
         "g": "subject"
       },
       {
-        "t": "丘",
+        "t": "岡",
         "r": "おか",
         "g": "complement"
       },
@@ -187,7 +187,7 @@
       {
         "t": "県",
         "r": "けん",
-        "g": "attributive"
+        "g": "object"
       },
       {
         "t": "）",
@@ -202,9 +202,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00769",
       "source_text": "降超于滩,估虎在山;治平洪水,造福人间。",
+      "corrected_text": "降龙于滩，伏虎在山；治平洪水，造福人间。",
       "units": [
         {
-          "source_text": "降超于滩,估虎在山;",
+          "source_text": "降龙于滩，伏虎在山；",
           "zh": [
             {
               "t": "降",
@@ -212,8 +213,8 @@
               "g": "predicate"
             },
             {
-              "t": "超",
-              "r": "chāo",
+              "t": "龙",
+              "r": "lóng",
               "g": "object"
             },
             {
@@ -227,24 +228,24 @@
               "g": "complement"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
             {
-              "t": "估",
-              "r": "gū",
-              "g": "subject"
+              "t": "伏",
+              "r": "fú",
+              "g": "predicate"
             },
             {
               "t": "虎",
               "r": "hǔ",
-              "g": "subject"
+              "g": "object"
             },
             {
               "t": "在",
               "r": "zài",
-              "g": "predicate"
+              "g": "complement"
             },
             {
               "t": "山",
@@ -252,7 +253,7 @@
               "g": "complement"
             },
             {
-              "t": ";",
+              "t": "；",
               "r": "",
               "g": "function"
             }
@@ -260,8 +261,8 @@
           "ja": [
             [
               {
-                "t": "超",
-                "r": "ちょう",
+                "t": "竜",
+                "r": "りゅう",
                 "g": "object"
               },
               {
@@ -270,8 +271,13 @@
                 "g": "object"
               },
               {
-                "t": "浅",
-                "r": "あさ",
+                "t": "滝",
+                "r": "たき",
+                "g": "complement"
+              },
+              {
+                "t": "の",
+                "r": "",
                 "g": "complement"
               },
               {
@@ -280,41 +286,36 @@
                 "g": "complement"
               },
               {
-                "t": "に",
+                "t": "で",
                 "r": "",
                 "g": "complement"
               },
               {
                 "t": "降",
-                "r": "くだ",
+                "r": "こう",
                 "g": "predicate"
               },
               {
-                "t": "らせ、",
+                "t": "伏",
+                "r": "ふく",
+                "g": "predicate"
+              },
+              {
+                "t": "させ、",
                 "r": "",
                 "g": "predicate"
               }
             ],
             [
               {
-                "t": "估",
-                "r": "こ",
-                "g": "subject"
-              },
-              {
-                "t": "の",
-                "r": "",
-                "g": "subject"
-              },
-              {
                 "t": "虎",
                 "r": "とら",
-                "g": "subject"
+                "g": "object"
               },
               {
-                "t": "は",
+                "t": "を",
                 "r": "",
-                "g": "subject"
+                "g": "object"
               },
               {
                 "t": "山",
@@ -322,7 +323,17 @@
                 "g": "complement"
               },
               {
-                "t": "にいた。",
+                "t": "に",
+                "r": "",
+                "g": "complement"
+              },
+              {
+                "t": "伏",
+                "r": "ふ",
+                "g": "predicate"
+              },
+              {
+                "t": "せさせた。",
                 "r": "",
                 "g": "predicate"
               }
@@ -330,7 +341,7 @@
           ]
         },
         {
-          "source_text": "治平洪水,造福人间。",
+          "source_text": "治平洪水，造福人间。",
           "zh": [
             {
               "t": "治",
@@ -353,7 +364,7 @@
               "g": "object"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },

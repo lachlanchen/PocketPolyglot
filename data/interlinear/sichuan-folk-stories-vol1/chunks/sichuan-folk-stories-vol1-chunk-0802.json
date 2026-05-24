@@ -120,7 +120,7 @@
       {
         "t": "与",
         "r": "yǔ",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": "炳",
@@ -172,7 +172,7 @@
       {
         "t": "と",
         "r": "",
-        "g": "topic"
+        "g": "function"
       },
       {
         "t": "炳",
@@ -197,6 +197,7 @@
     {
       "id": "sichuan-folk-stories-vol1-p00802",
       "source_text": "EN",
+      "corrected_text": "EN",
       "units": [
         {
           "source_text": "EN",
@@ -215,9 +216,24 @@
           "ja": [
             [
               {
+                "t": "原",
+                "r": "げん",
+                "g": "attributive"
+              },
+              {
+                "t": "文",
+                "r": "ぶん",
+                "g": "attributive"
+              },
+              {
+                "t": "は",
+                "r": "",
+                "g": "attributive"
+              },
+              {
                 "t": "「",
                 "r": "",
-                "g": "object"
+                "g": "function"
               },
               {
                 "t": "EN",
@@ -225,21 +241,61 @@
                 "g": "object"
               },
               {
-                "t": "」と",
+                "t": "」のみ。",
                 "r": "",
                 "g": "object"
               }
             ],
             [
               {
-                "t": "記",
-                "r": "しる",
+                "t": "中",
+                "r": "ちゅう",
+                "g": "subject"
+              },
+              {
+                "t": "国",
+                "r": "ごく",
+                "g": "subject"
+              },
+              {
+                "t": "語",
+                "r": "ご",
+                "g": "subject"
+              },
+              {
+                "t": "本",
+                "r": "ほん",
+                "g": "attributive"
+              },
+              {
+                "t": "文",
+                "r": "ぶん",
+                "g": "attributive"
+              },
+              {
+                "t": "は",
+                "r": "",
+                "g": "subject"
+              },
+              {
+                "t": "未",
+                "r": "み",
                 "g": "predicate"
               },
               {
-                "t": "されている。",
-                "r": "",
+                "t": "収",
+                "r": "しゅう",
                 "g": "predicate"
+              },
+              {
+                "t": "録",
+                "r": "ろく",
+                "g": "predicate"
+              },
+              {
+                "t": "。",
+                "r": "",
+                "g": "function"
               }
             ]
           ]

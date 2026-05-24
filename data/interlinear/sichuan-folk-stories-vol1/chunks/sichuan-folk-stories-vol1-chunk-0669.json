@@ -120,12 +120,12 @@
       {
         "t": "二",
         "r": "èr",
-        "g": "attributive"
+        "g": "subject"
       },
       {
         "t": "郎",
         "r": "láng",
-        "g": "attributive"
+        "g": "subject"
       },
       {
         "t": "惟",
@@ -187,17 +187,17 @@
       {
         "t": "二",
         "r": "じ",
-        "g": "attributive"
+        "g": "subject"
       },
       {
         "t": "郎",
         "r": "ろう",
-        "g": "attributive"
+        "g": "subject"
       },
       {
         "t": "が",
         "r": "",
-        "g": "attributive"
+        "g": "subject"
       },
       {
         "t": "日",
@@ -252,6 +252,7 @@
     {
       "id": "sichuan-folk-stories-vol1-p00669",
       "source_text": "讲述者:杨春女 22岁农民初中采承者:何要祥男 25岁文化专干高中有果录时间、地点:1987 年 10月7日于益享县富驿镇",
+      "corrected_text": "讲述者:杨春女 22岁农民初中采录者:何要祥男 25岁文化专干高中采录时间、地点:1987 年 10月7日于盐亭县富驿镇",
       "units": [
         {
           "source_text": "讲述者:杨春女 22岁农民初中",
@@ -309,22 +310,22 @@
             {
               "t": "农",
               "r": "nóng",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "民",
               "r": "mín",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "初",
               "r": "chū",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "中",
               "r": "zhōng",
-              "g": "attributive"
+              "g": "complement"
             }
           ],
           "ja": [
@@ -332,12 +333,12 @@
               {
                 "t": "語",
                 "r": "かた",
-                "g": "subject"
+                "g": "predicate"
               },
               {
                 "t": "り",
                 "r": "",
-                "g": "subject"
+                "g": "predicate"
               },
               {
                 "t": "手",
@@ -389,12 +390,12 @@
               {
                 "t": "農",
                 "r": "のう",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "民",
                 "r": "みん",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "、",
@@ -404,28 +405,28 @@
               {
                 "t": "中",
                 "r": "ちゅう",
-                "g": "attributive"
+                "g": "complement"
               },
               {
                 "t": "学",
                 "r": "がく",
-                "g": "attributive"
+                "g": "complement"
               },
               {
-                "t": "校",
-                "r": "こう",
-                "g": "attributive"
+                "t": "程",
+                "r": "てい",
+                "g": "complement"
               },
               {
-                "t": "卒",
-                "r": "そつ",
-                "g": "attributive"
+                "t": "度",
+                "r": "ど",
+                "g": "complement"
               }
             ]
           ]
         },
         {
-          "source_text": "采承者:何要祥男 25岁文化专干高中",
+          "source_text": "采录者:何要祥男 25岁文化专干高中",
           "zh": [
             {
               "t": "采",
@@ -433,8 +434,8 @@
               "g": "predicate"
             },
             {
-              "t": "承",
-              "r": "chéng",
+              "t": "录",
+              "r": "lù",
               "g": "predicate"
             },
             {
@@ -485,32 +486,32 @@
             {
               "t": "文",
               "r": "wén",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "化",
               "r": "huà",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "专",
               "r": "zhuān",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "干",
               "r": "gàn",
-              "g": "attributive"
+              "g": "object"
             },
             {
               "t": "高",
               "r": "gāo",
-              "g": "attributive"
+              "g": "complement"
             },
             {
               "t": "中",
               "r": "zhōng",
-              "g": "attributive"
+              "g": "complement"
             }
           ],
           "ja": [
@@ -585,27 +586,32 @@
               {
                 "t": "文",
                 "r": "ぶん",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "化",
                 "r": "か",
-                "g": "attributive"
+                "g": "object"
               },
               {
                 "t": "専",
                 "r": "せん",
-                "g": "attributive"
+                "g": "object"
               },
               {
-                "t": "従",
-                "r": "じゅう",
-                "g": "attributive"
+                "t": "任",
+                "r": "にん",
+                "g": "object"
               },
               {
-                "t": "者",
-                "r": "じしゃ",
-                "g": "attributive"
+                "t": "幹",
+                "r": "かん",
+                "g": "object"
+              },
+              {
+                "t": "部",
+                "r": "ぶ",
+                "g": "object"
               },
               {
                 "t": "、",
@@ -615,33 +621,33 @@
               {
                 "t": "高",
                 "r": "こう",
-                "g": "attributive"
+                "g": "complement"
               },
               {
                 "t": "校",
                 "r": "こう",
-                "g": "attributive"
+                "g": "complement"
               },
               {
-                "t": "卒",
-                "r": "そつ",
-                "g": "attributive"
+                "t": "程",
+                "r": "てい",
+                "g": "complement"
+              },
+              {
+                "t": "度",
+                "r": "ど",
+                "g": "complement"
               }
             ]
           ]
         },
         {
-          "source_text": "有果录时间、地点:1987 年 10月7日于益享县富驿镇",
+          "source_text": "采录时间、地点:1987 年 10月7日于盐亭县富驿镇",
           "zh": [
             {
-              "t": "有",
-              "r": "yǒu",
-              "g": "function"
-            },
-            {
-              "t": "果",
-              "r": "guǒ",
-              "g": "function"
+              "t": "采",
+              "r": "cǎi",
+              "g": "predicate"
             },
             {
               "t": "录",
@@ -721,37 +727,37 @@
             {
               "t": "于",
               "r": "yú",
-              "g": "adverbial"
+              "g": "function"
             },
             {
-              "t": "益",
-              "r": "yì",
-              "g": "adverbial"
+              "t": "盐",
+              "r": "yán",
+              "g": "complement"
             },
             {
-              "t": "享",
-              "r": "xiǎng",
-              "g": "adverbial"
+              "t": "亭",
+              "r": "tíng",
+              "g": "complement"
             },
             {
               "t": "县",
               "r": "xiàn",
-              "g": "adverbial"
+              "g": "complement"
             },
             {
               "t": "富",
               "r": "fù",
-              "g": "adverbial"
+              "g": "complement"
             },
             {
               "t": "驿",
               "r": "yì",
-              "g": "adverbial"
+              "g": "complement"
             },
             {
               "t": "镇",
               "r": "zhèn",
-              "g": "adverbial"
+              "g": "complement"
             }
           ],
           "ja": [
@@ -829,64 +835,39 @@
             ],
             [
               {
-                "t": "益",
-                "r": "えき",
-                "g": "adverbial"
+                "t": "塩",
+                "r": "えん",
+                "g": "complement"
               },
               {
-                "t": "享",
-                "r": "きょう",
-                "g": "adverbial"
+                "t": "亭",
+                "r": "てい",
+                "g": "complement"
               },
               {
                 "t": "県",
                 "r": "けん",
-                "g": "adverbial"
+                "g": "complement"
               },
               {
                 "t": "富",
                 "r": "ふ",
-                "g": "adverbial"
+                "g": "complement"
               },
               {
                 "t": "驛",
                 "r": "えき",
-                "g": "adverbial"
+                "g": "complement"
               },
               {
                 "t": "鎮",
                 "r": "ちん",
-                "g": "adverbial"
+                "g": "complement"
               },
               {
                 "t": "にて",
                 "r": "",
-                "g": "adverbial"
-              },
-              {
-                "t": "（",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": "原",
-                "r": "げん",
-                "g": "function"
-              },
-              {
-                "t": "文",
-                "r": "ぶん",
-                "g": "function"
-              },
-              {
-                "t": "のまま",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": "）",
-                "r": "",
-                "g": "function"
+                "g": "complement"
               }
             ]
           ]

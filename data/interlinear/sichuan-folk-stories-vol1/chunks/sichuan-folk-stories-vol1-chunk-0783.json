@@ -6,24 +6,24 @@
       {
         "t": "传",
         "r": "chuán",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "说",
         "r": "shuō",
-        "g": "predicate"
+        "g": "object"
       }
     ],
     "title_ja": [
       {
         "t": "伝",
         "r": "でん",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "説",
         "r": "せつ",
-        "g": "predicate"
+        "g": "object"
       }
     ]
   },
@@ -48,12 +48,12 @@
       {
         "t": "传",
         "r": "chuán",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "说",
         "r": "shuō",
-        "g": "predicate"
+        "g": "object"
       }
     ],
     "title_ja": [
@@ -70,12 +70,12 @@
       {
         "t": "伝",
         "r": "でん",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "説",
         "r": "せつ",
-        "g": "predicate"
+        "g": "object"
       }
     ]
   },
@@ -120,7 +120,7 @@
       {
         "t": "子",
         "r": "zǐ",
-        "g": "attributive"
+        "g": "object"
       },
       {
         "t": "《",
@@ -140,7 +140,7 @@
       {
         "t": "霸",
         "r": "bà",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "市",
@@ -177,10 +177,10 @@
       {
         "t": "子",
         "r": "し",
-        "g": "attributive"
+        "g": "object"
       },
       {
-        "t": "「",
+        "t": "（",
         "r": "",
         "g": "function"
       },
@@ -195,37 +195,17 @@
         "g": "attributive"
       },
       {
-        "t": "で",
-        "r": "",
+        "t": "堰",
+        "r": "えん",
         "g": "attributive"
       },
       {
         "t": "市",
-        "r": "いち",
+        "r": "し",
         "g": "object"
       },
       {
-        "t": "を",
-        "r": "",
-        "g": "object"
-      },
-      {
-        "t": "牛",
-        "r": "ぎゅう",
-        "g": "predicate"
-      },
-      {
-        "t": "耳",
-        "r": "じ",
-        "g": "predicate"
-      },
-      {
-        "t": "る",
-        "r": "",
-        "g": "predicate"
-      },
-      {
-        "t": "」",
+        "t": "）",
         "r": "",
         "g": "function"
       }
@@ -237,9 +217,10 @@
     {
       "id": "sichuan-folk-stories-vol1-p00783",
       "source_text": "有一年,蜀王到能耳山那边去征西,路过这里。这晶王很爱百姓。不但不拢害百姓.还",
+      "corrected_text": "有一年，蜀王到牛耳山那边去征西，路过这里。这蜀王很爱百姓，不但不扰害百姓，还",
       "units": [
         {
-          "source_text": "有一年,蜀王到能耳山那边去征西,路过这里。",
+          "source_text": "有一年，蜀王到牛耳山那边去征西，路过这里。",
           "zh": [
             {
               "t": "有",
@@ -254,10 +235,10 @@
             {
               "t": "年",
               "r": "nián",
-              "g": "attributive"
+              "g": "adverbial"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -277,14 +258,14 @@
               "g": "predicate"
             },
             {
-              "t": "能",
-              "r": "néng",
-              "g": "object"
+              "t": "牛",
+              "r": "niú",
+              "g": "attributive"
             },
             {
               "t": "耳",
               "r": "ěr",
-              "g": "object"
+              "g": "attributive"
             },
             {
               "t": "山",
@@ -317,7 +298,7 @@
               "g": "object"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
             },
@@ -380,14 +361,14 @@
                 "g": "subject"
               },
               {
-                "t": "能",
-                "r": "のう",
-                "g": "object"
+                "t": "牛",
+                "r": "ぎゅう",
+                "g": "attributive"
               },
               {
                 "t": "耳",
                 "r": "じ",
-                "g": "object"
+                "g": "attributive"
               },
               {
                 "t": "山",
@@ -395,17 +376,7 @@
                 "g": "object"
               },
               {
-                "t": "の",
-                "r": "",
-                "g": "object"
-              },
-              {
-                "t": "方",
-                "r": "ほう",
-                "g": "object"
-              },
-              {
-                "t": "へ",
+                "t": "のあたりへ",
                 "r": "",
                 "g": "object"
               }
@@ -442,12 +413,7 @@
                 "g": "predicate"
               },
               {
-                "t": "、",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": "ここを",
+                "t": "、ここを",
                 "r": "",
                 "g": "object"
               },
@@ -457,20 +423,15 @@
                 "g": "predicate"
               },
               {
-                "t": "りかかった",
+                "t": "りかかった。",
                 "r": "",
                 "g": "predicate"
-              },
-              {
-                "t": "。",
-                "r": "",
-                "g": "function"
               }
             ]
           ]
         },
         {
-          "source_text": "这晶王很爱百姓。",
+          "source_text": "这蜀王很爱百姓，",
           "zh": [
             {
               "t": "这",
@@ -478,8 +439,8 @@
               "g": "attributive"
             },
             {
-              "t": "晶",
-              "r": "jīng",
+              "t": "蜀",
+              "r": "shǔ",
               "g": "subject"
             },
             {
@@ -508,7 +469,7 @@
               "g": "object"
             },
             {
-              "t": "。",
+              "t": "，",
               "r": "",
               "g": "function"
             }
@@ -521,8 +482,8 @@
                 "g": "attributive"
               },
               {
-                "t": "晶",
-                "r": "しょう",
+                "t": "蜀",
+                "r": "しょく",
                 "g": "subject"
               },
               {
@@ -558,20 +519,15 @@
                 "g": "predicate"
               },
               {
-                "t": "していた",
+                "t": "しており、",
                 "r": "",
                 "g": "predicate"
-              },
-              {
-                "t": "。",
-                "r": "",
-                "g": "function"
               }
             ]
           ]
         },
         {
-          "source_text": "不但不拢害百姓.",
+          "source_text": "不但不扰害百姓，还",
           "zh": [
             {
               "t": "不",
@@ -589,8 +545,8 @@
               "g": "adverbial"
             },
             {
-              "t": "拢",
-              "r": "lǒng",
+              "t": "扰",
+              "r": "rǎo",
               "g": "predicate"
             },
             {
@@ -609,18 +565,18 @@
               "g": "object"
             },
             {
-              "t": ".",
+              "t": "，",
               "r": "",
               "g": "function"
+            },
+            {
+              "t": "还",
+              "r": "hái",
+              "g": "adverbial"
             }
           ],
           "ja": [
             [
-              {
-                "t": "ただ",
-                "r": "",
-                "g": "adverbial"
-              },
               {
                 "t": "民",
                 "r": "たみ",
@@ -632,11 +588,6 @@
                 "g": "object"
               },
               {
-                "t": "かき",
-                "r": "",
-                "g": "predicate"
-              },
-              {
                 "t": "乱",
                 "r": "みだ",
                 "g": "predicate"
@@ -645,9 +596,7 @@
                 "t": "し",
                 "r": "",
                 "g": "predicate"
-              }
-            ],
-            [
+              },
               {
                 "t": "害",
                 "r": "がい",
@@ -659,43 +608,14 @@
                 "g": "predicate"
               },
               {
-                "t": "なかった",
-                "r": "",
-                "g": "predicate"
-              },
-              {
-                "t": "だけでなく",
-                "r": "",
-                "g": "adverbial"
-              },
-              {
-                "t": "。",
-                "r": "",
-                "g": "function"
-              }
-            ]
-          ]
-        },
-        {
-          "source_text": "还",
-          "zh": [
-            {
-              "t": "还",
-              "r": "hái",
-              "g": "adverbial"
-            }
-          ],
-          "ja": [
-            [
-              {
-                "t": "さらに",
+                "t": "ないばかりか、",
                 "r": "",
                 "g": "adverbial"
               }
             ],
             [
               {
-                "t": "そのうえ",
+                "t": "さらに",
                 "r": "",
                 "g": "adverbial"
               }

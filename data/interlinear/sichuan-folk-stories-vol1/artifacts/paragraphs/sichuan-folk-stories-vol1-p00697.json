@@ -11,8 +11,8 @@
     "zh_ruby": true,
     "ja_ruby": true,
     "grammar": true,
-    "token_total": 58,
-    "grammar_token_total": 58,
+    "token_total": 65,
+    "grammar_token_total": 65,
     "unit_count": 2
   },
   "source_chunk_id": "sichuan-folk-stories-vol1-chunk-0697",
@@ -23,24 +23,24 @@
       {
         "t": "传",
         "r": "chuán",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "说",
         "r": "shuō",
-        "g": "predicate"
+        "g": "object"
       }
     ],
     "title_ja": [
       {
         "t": "伝",
         "r": "でん",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "説",
         "r": "せつ",
-        "g": "predicate"
+        "g": "object"
       }
     ]
   },
@@ -65,12 +65,12 @@
       {
         "t": "传",
         "r": "chuán",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "说",
         "r": "shuō",
-        "g": "predicate"
+        "g": "object"
       }
     ],
     "title_ja": [
@@ -92,12 +92,12 @@
       {
         "t": "伝",
         "r": "でん",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "説",
         "r": "せつ",
-        "g": "predicate"
+        "g": "object"
       }
     ]
   },
@@ -238,9 +238,10 @@
   "paragraph": {
     "id": "sichuan-folk-stories-vol1-p00697",
     "source_text": "彭跃先男 45岁干部采录时间、地点:1986 年 10 月于成都市西城区",
+    "corrected_text": "彭跃先，男，45岁，干部。采录时间、地点：1986年10月于成都市西城区",
     "units": [
       {
-        "source_text": "彭跃先男 45岁干部",
+        "source_text": "彭跃先，男，45岁，干部。",
         "zh": [
           {
             "t": "彭",
@@ -258,12 +259,22 @@
             "g": "subject"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "男",
             "r": "nán",
             "g": "predicate"
           },
           {
-            "t": " 45",
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "45",
             "r": "",
             "g": "attributive"
           },
@@ -273,14 +284,24 @@
             "g": "attributive"
           },
           {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
             "t": "干",
             "r": "gàn",
-            "g": "predicate"
+            "g": "object"
           },
           {
             "t": "部",
             "r": "bù",
-            "g": "predicate"
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
           }
         ],
         "ja": [
@@ -314,6 +335,11 @@
               "t": "性",
               "r": "せい",
               "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
             }
           ],
           [
@@ -335,38 +361,43 @@
             {
               "t": "幹",
               "r": "かん",
-              "g": "predicate"
+              "g": "object"
             },
             {
               "t": "部",
               "r": "ぶ",
-              "g": "predicate"
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
             }
           ]
         ]
       },
       {
-        "source_text": "采录时间、地点:1986 年 10 月于成都市西城区",
+        "source_text": "采录时间、地点：1986年10月于成都市西城区",
         "zh": [
           {
             "t": "采",
             "r": "cǎi",
-            "g": "predicate"
+            "g": "attributive"
           },
           {
             "t": "录",
             "r": "lù",
-            "g": "predicate"
+            "g": "attributive"
           },
           {
             "t": "时",
             "r": "shí",
-            "g": "object"
+            "g": "subject"
           },
           {
             "t": "间",
             "r": "jiān",
-            "g": "object"
+            "g": "subject"
           },
           {
             "t": "、",
@@ -376,17 +407,22 @@
           {
             "t": "地",
             "r": "dì",
-            "g": "object"
+            "g": "subject"
           },
           {
             "t": "点",
             "r": "diǎn",
-            "g": "object"
+            "g": "subject"
           },
           {
-            "t": ":1986 ",
+            "t": "：",
             "r": "",
             "g": "function"
+          },
+          {
+            "t": "1986",
+            "r": "",
+            "g": "adverbial"
           },
           {
             "t": "年",
@@ -394,7 +430,7 @@
             "g": "adverbial"
           },
           {
-            "t": " 10 ",
+            "t": "10",
             "r": "",
             "g": "adverbial"
           },
@@ -444,27 +480,27 @@
             {
               "t": "採",
               "r": "さい",
-              "g": "predicate"
+              "g": "attributive"
             },
             {
               "t": "録",
               "r": "ろく",
-              "g": "predicate"
+              "g": "attributive"
             },
             {
               "t": "の",
               "r": "",
-              "g": "predicate"
+              "g": "attributive"
             },
             {
               "t": "時",
               "r": "じ",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "期",
               "r": "き",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "・",
@@ -474,12 +510,12 @@
             {
               "t": "場",
               "r": "ば",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "所",
               "r": "しょ",
-              "g": "object"
+              "g": "subject"
             },
             {
               "t": "：",

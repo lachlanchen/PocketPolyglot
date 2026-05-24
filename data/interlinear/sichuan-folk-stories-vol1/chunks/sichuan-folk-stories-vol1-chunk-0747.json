@@ -6,24 +6,24 @@
       {
         "t": "传",
         "r": "chuán",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "说",
         "r": "shuō",
-        "g": "predicate"
+        "g": "object"
       }
     ],
     "title_ja": [
       {
         "t": "伝",
         "r": "でん",
-        "g": "predicate"
+        "g": "attributive"
       },
       {
         "t": "説",
         "r": "せつ",
-        "g": "predicate"
+        "g": "object"
       }
     ]
   },
@@ -48,12 +48,12 @@
       {
         "t": "传",
         "r": "chuán",
-        "g": "predicate"
+        "g": "object"
       },
       {
         "t": "说",
         "r": "shuō",
-        "g": "predicate"
+        "g": "object"
       }
     ],
     "title_ja": [
@@ -70,12 +70,12 @@
       {
         "t": "伝",
         "r": "でん",
-        "g": "predicate"
+        "g": "object"
       },
       {
         "t": "説",
         "r": "せつ",
-        "g": "predicate"
+        "g": "object"
       }
     ]
   },
@@ -242,13 +242,14 @@
     {
       "id": "sichuan-folk-stories-vol1-p00747",
       "source_text": "生来大家就把供甜娥的地方叫短丝堂,把蜀王来过的小山坡叫回龙坡,把买卖大丝的地方叫垂市街了。",
+      "corrected_text": "后来大家就把供嫘娥的地方叫蚕丝堂，把蜀王来过的小山坡叫回龙坡，把买卖蚕丝的地方叫蚕市街了。",
       "units": [
         {
-          "source_text": "生来大家就把供甜娥的地方叫短丝堂,把蜀王来过的小山坡叫回龙坡,把买卖大丝的地方叫垂市街了。",
+          "source_text": "后来大家就把供嫘娥的地方叫蚕丝堂，",
           "zh": [
             {
-              "t": "生",
-              "r": "shēng",
+              "t": "后",
+              "r": "hòu",
               "g": "adverbial"
             },
             {
@@ -282,8 +283,8 @@
               "g": "attributive"
             },
             {
-              "t": "甜",
-              "r": "tián",
+              "t": "嫘",
+              "r": "léi",
               "g": "attributive"
             },
             {
@@ -312,8 +313,8 @@
               "g": "predicate"
             },
             {
-              "t": "短",
-              "r": "duǎn",
+              "t": "蚕",
+              "r": "cán",
               "g": "object"
             },
             {
@@ -327,10 +328,106 @@
               "g": "object"
             },
             {
-              "t": ",",
+              "t": "，",
               "r": "",
               "g": "function"
-            },
+            }
+          ],
+          "ja": [
+            [
+              {
+                "t": "のちに、",
+                "r": "",
+                "g": "adverbial"
+              },
+              {
+                "t": "人",
+                "r": "ひと",
+                "g": "subject"
+              },
+              {
+                "t": "々は",
+                "r": "",
+                "g": "subject"
+              },
+              {
+                "t": "嫘",
+                "r": "るい",
+                "g": "attributive"
+              },
+              {
+                "t": "娥",
+                "r": "が",
+                "g": "attributive"
+              },
+              {
+                "t": "を",
+                "r": "",
+                "g": "attributive"
+              },
+              {
+                "t": "祀",
+                "r": "まつ",
+                "g": "attributive"
+              },
+              {
+                "t": "る",
+                "r": "",
+                "g": "attributive"
+              }
+            ],
+            [
+              {
+                "t": "場",
+                "r": "ば",
+                "g": "object"
+              },
+              {
+                "t": "所",
+                "r": "しょ",
+                "g": "object"
+              },
+              {
+                "t": "を",
+                "r": "",
+                "g": "object"
+              },
+              {
+                "t": "蚕",
+                "r": "さん",
+                "g": "object"
+              },
+              {
+                "t": "糸",
+                "r": "し",
+                "g": "object"
+              },
+              {
+                "t": "堂",
+                "r": "どう",
+                "g": "object"
+              },
+              {
+                "t": "と",
+                "r": "",
+                "g": "object"
+              },
+              {
+                "t": "呼",
+                "r": "よ",
+                "g": "predicate"
+              },
+              {
+                "t": "び、",
+                "r": "",
+                "g": "predicate"
+              }
+            ]
+          ]
+        },
+        {
+          "source_text": "把蜀王来过的小山坡叫回龙坡，",
+          "zh": [
             {
               "t": "把",
               "r": "bǎ",
@@ -397,194 +494,12 @@
               "g": "object"
             },
             {
-              "t": ",",
-              "r": "",
-              "g": "function"
-            },
-            {
-              "t": "把",
-              "r": "bǎ",
-              "g": "function"
-            },
-            {
-              "t": "买",
-              "r": "mǎi",
-              "g": "attributive"
-            },
-            {
-              "t": "卖",
-              "r": "mài",
-              "g": "attributive"
-            },
-            {
-              "t": "大",
-              "r": "dà",
-              "g": "attributive"
-            },
-            {
-              "t": "丝",
-              "r": "sī",
-              "g": "attributive"
-            },
-            {
-              "t": "的",
-              "r": "de",
-              "g": "attributive"
-            },
-            {
-              "t": "地",
-              "r": "dì",
-              "g": "object"
-            },
-            {
-              "t": "方",
-              "r": "fāng",
-              "g": "object"
-            },
-            {
-              "t": "叫",
-              "r": "jiào",
-              "g": "predicate"
-            },
-            {
-              "t": "垂",
-              "r": "chuí",
-              "g": "object"
-            },
-            {
-              "t": "市",
-              "r": "shì",
-              "g": "object"
-            },
-            {
-              "t": "街",
-              "r": "jiē",
-              "g": "object"
-            },
-            {
-              "t": "了",
-              "r": "le",
-              "g": "function"
-            },
-            {
-              "t": "。",
+              "t": "，",
               "r": "",
               "g": "function"
             }
           ],
           "ja": [
-            [
-              {
-                "t": "それ",
-                "r": "",
-                "g": "adverbial"
-              },
-              {
-                "t": "以",
-                "r": "い",
-                "g": "adverbial"
-              },
-              {
-                "t": "来",
-                "r": "らい",
-                "g": "adverbial"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
-              },
-              {
-                "t": "人",
-                "r": "ひと",
-                "g": "subject"
-              },
-              {
-                "t": "々",
-                "r": "",
-                "g": "subject"
-              },
-              {
-                "t": "は",
-                "r": "",
-                "g": "subject"
-              },
-              {
-                "t": "甜",
-                "r": "てん",
-                "g": "attributive"
-              },
-              {
-                "t": "娥",
-                "r": "が",
-                "g": "attributive"
-              },
-              {
-                "t": "を",
-                "r": "",
-                "g": "attributive"
-              },
-              {
-                "t": "祀",
-                "r": "まつ",
-                "g": "attributive"
-              },
-              {
-                "t": "る",
-                "r": "",
-                "g": "attributive"
-              },
-              {
-                "t": "場",
-                "r": "ば",
-                "g": "object"
-              },
-              {
-                "t": "所",
-                "r": "しょ",
-                "g": "object"
-              },
-              {
-                "t": "を",
-                "r": "",
-                "g": "object"
-              },
-              {
-                "t": "短",
-                "r": "たん",
-                "g": "object"
-              },
-              {
-                "t": "絲",
-                "r": "し",
-                "g": "object"
-              },
-              {
-                "t": "堂",
-                "r": "どう",
-                "g": "object"
-              },
-              {
-                "t": "と",
-                "r": "",
-                "g": "object"
-              },
-              {
-                "t": "呼",
-                "r": "よ",
-                "g": "predicate"
-              },
-              {
-                "t": "び",
-                "r": "",
-                "g": "predicate"
-              },
-              {
-                "t": "、",
-                "r": "",
-                "g": "function"
-              }
-            ],
             [
               {
                 "t": "蜀",
@@ -625,7 +540,9 @@
                 "t": "を",
                 "r": "",
                 "g": "object"
-              },
+              }
+            ],
+            [
               {
                 "t": "回",
                 "r": "かい",
@@ -642,17 +559,111 @@
                 "g": "object"
               },
               {
-                "t": "、",
+                "t": "と",
                 "r": "",
-                "g": "function"
+                "g": "object"
               },
               {
-                "t": "大",
-                "r": "おお",
+                "t": "呼",
+                "r": "よ",
+                "g": "predicate"
+              },
+              {
+                "t": "び、",
+                "r": "",
+                "g": "predicate"
+              }
+            ]
+          ]
+        },
+        {
+          "source_text": "把买卖蚕丝的地方叫蚕市街了。",
+          "zh": [
+            {
+              "t": "把",
+              "r": "bǎ",
+              "g": "function"
+            },
+            {
+              "t": "买",
+              "r": "mǎi",
+              "g": "attributive"
+            },
+            {
+              "t": "卖",
+              "r": "mài",
+              "g": "attributive"
+            },
+            {
+              "t": "蚕",
+              "r": "cán",
+              "g": "attributive"
+            },
+            {
+              "t": "丝",
+              "r": "sī",
+              "g": "attributive"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "地",
+              "r": "dì",
+              "g": "object"
+            },
+            {
+              "t": "方",
+              "r": "fāng",
+              "g": "object"
+            },
+            {
+              "t": "叫",
+              "r": "jiào",
+              "g": "predicate"
+            },
+            {
+              "t": "蚕",
+              "r": "cán",
+              "g": "object"
+            },
+            {
+              "t": "市",
+              "r": "shì",
+              "g": "object"
+            },
+            {
+              "t": "街",
+              "r": "jiē",
+              "g": "object"
+            },
+            {
+              "t": "了",
+              "r": "le",
+              "g": "function"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          "ja": [
+            [
+              {
+                "t": "蚕",
+                "r": "かいこ",
                 "g": "attributive"
               },
               {
-                "t": "絲",
+                "t": "の",
+                "r": "",
+                "g": "attributive"
+              },
+              {
+                "t": "糸",
                 "r": "いと",
                 "g": "attributive"
               },
@@ -695,10 +706,12 @@
                 "t": "を",
                 "r": "",
                 "g": "object"
-              },
+              }
+            ],
+            [
               {
-                "t": "垂",
-                "r": "すい",
+                "t": "蚕",
+                "r": "さん",
                 "g": "object"
               },
               {
@@ -722,14 +735,9 @@
                 "g": "predicate"
               },
               {
-                "t": "んだ",
+                "t": "ぶようになった。",
                 "r": "",
                 "g": "predicate"
-              },
-              {
-                "t": "。",
-                "r": "",
-                "g": "function"
               }
             ]
           ]

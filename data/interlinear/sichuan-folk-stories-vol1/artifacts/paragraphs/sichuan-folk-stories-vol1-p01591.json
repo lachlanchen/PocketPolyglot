@@ -1,0 +1,1715 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p01591",
+  "source_text": "庄稼汉一听,不住播手说:先生,我不是借米,是来问字的.去年我来借米,你送了儿本书给我的孩子,说庄稼人也要认得字才好.我回去就抽空教孩子念节,可是,有些字认不倒。平常想来向你,又怕打扰先生,今天望见先生在这儿闲要,就……?扬子云笑了笑:今天我也不是闲要,不过,你肯来问字,倒是件好事。",
+  "source_sha256": "7dc6ded74ad71e8607f2cb83a6632bad0ceea352871c5f60ac9f1120f5d007f3",
+  "source_normalized_sha256": "7dc6ded74ad71e8607f2cb83a6632bad0ceea352871c5f60ac9f1120f5d007f3",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 278,
+    "grammar_token_total": 278,
+    "unit_count": 5
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-1591",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "文人传说",
+    "title_zh": [
+      {
+        "t": "文",
+        "r": "wén",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      },
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "predicate"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "文",
+        "r": "ぶん",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "attributive"
+      },
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "predicate"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-文人传说-147-扬雄与问字襄辑县",
+    "title_zh": [
+      {
+        "t": "1",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "4",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "7",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "扬",
+        "r": "yáng",
+        "g": "subject"
+      },
+      {
+        "t": "雄",
+        "r": "xióng",
+        "g": "subject"
+      },
+      {
+        "t": "与",
+        "r": "yǔ",
+        "g": "function"
+      },
+      {
+        "t": "问",
+        "r": "wèn",
+        "g": "attributive"
+      },
+      {
+        "t": "字",
+        "r": "zì",
+        "g": "attributive"
+      },
+      {
+        "t": "襄",
+        "r": "xiāng",
+        "g": "object"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "辑",
+        "r": "jí",
+        "g": "attributive"
+      },
+      {
+        "t": "县",
+        "r": "xiàn",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "1",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "4",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "7",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "揚",
+        "r": "よう",
+        "g": "subject"
+      },
+      {
+        "t": "雄",
+        "r": "ゆう",
+        "g": "subject"
+      },
+      {
+        "t": "と",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "字",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "を",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "問",
+        "r": "と",
+        "g": "attributive"
+      },
+      {
+        "t": "う",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "襄",
+        "r": "じょう",
+        "g": "object"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "輯",
+        "r": "しゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "県",
+        "r": "けん",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p01591",
+    "source_text": "庄稼汉一听,不住播手说:先生,我不是借米,是来问字的.去年我来借米,你送了儿本书给我的孩子,说庄稼人也要认得字才好.我回去就抽空教孩子念节,可是,有些字认不倒。平常想来向你,又怕打扰先生,今天望见先生在这儿闲要,就……?扬子云笑了笑:今天我也不是闲要,不过,你肯来问字,倒是件好事。",
+    "corrected_text": "庄稼汉一听，不住摆手说：先生，我不是借米，是来问字的。去年我来借米，你送了几本书给我的孩子，说庄稼人也要认得字才好。我回去就抽空教孩子念书，可是，有些字认不倒。平常想来向你问，又怕打扰先生，今天望见先生在这儿闲耍，就……扬子云笑了笑：今天我也不是闲耍，不过，你肯来问字，倒是件好事。",
+    "units": [
+      {
+        "source_text": "庄稼汉一听，不住摆手说：先生，我不是借米，是来问字的。",
+        "zh": [
+          {
+            "t": "庄",
+            "r": "zhuāng",
+            "g": "subject"
+          },
+          {
+            "t": "稼",
+            "r": "jià",
+            "g": "subject"
+          },
+          {
+            "t": "汉",
+            "r": "hàn",
+            "g": "subject"
+          },
+          {
+            "t": "一",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "听",
+            "r": "tīng",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "不",
+            "r": "bú",
+            "g": "adverbial"
+          },
+          {
+            "t": "住",
+            "r": "zhù",
+            "g": "adverbial"
+          },
+          {
+            "t": "摆",
+            "r": "bǎi",
+            "g": "predicate"
+          },
+          {
+            "t": "手",
+            "r": "shǒu",
+            "g": "object"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "subject"
+          },
+          {
+            "t": "生",
+            "r": "sheng",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bú",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "借",
+            "r": "jiè",
+            "g": "object"
+          },
+          {
+            "t": "米",
+            "r": "mǐ",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "adverbial"
+          },
+          {
+            "t": "问",
+            "r": "wèn",
+            "g": "object"
+          },
+          {
+            "t": "字",
+            "r": "zì",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "百",
+              "r": "ひゃく",
+              "g": "subject"
+            },
+            {
+              "t": "姓",
+              "r": "しょう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "それを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "聞",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "くと、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "しきりに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "振",
+              "r": "ふ",
+              "g": "predicate"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "先",
+              "r": "せん",
+              "g": "subject"
+            },
+            {
+              "t": "生",
+              "r": "せい",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "米",
+              "r": "こめ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "借",
+              "r": "か",
+              "g": "predicate"
+            },
+            {
+              "t": "りに",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "来",
+              "r": "き",
+              "g": "adverbial"
+            },
+            {
+              "t": "たのではなく、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "字",
+              "r": "じ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "尋",
+              "r": "たず",
+              "g": "predicate"
+            },
+            {
+              "t": "ねに",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "来",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "たのです。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "去年我来借米，你送了几本书给我的孩子，说庄稼人也要认得字才好。",
+        "zh": [
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "adverbial"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "adverbial"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "adverbial"
+          },
+          {
+            "t": "借",
+            "r": "jiè",
+            "g": "predicate"
+          },
+          {
+            "t": "米",
+            "r": "mǐ",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "送",
+            "r": "sòng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "几",
+            "r": "jǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "attributive"
+          },
+          {
+            "t": "书",
+            "r": "shū",
+            "g": "object"
+          },
+          {
+            "t": "给",
+            "r": "gěi",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "孩",
+            "r": "hái",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "庄",
+            "r": "zhuāng",
+            "g": "subject"
+          },
+          {
+            "t": "稼",
+            "r": "jià",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "predicate"
+          },
+          {
+            "t": "认",
+            "r": "rèn",
+            "g": "object"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "字",
+            "r": "zì",
+            "g": "object"
+          },
+          {
+            "t": "才",
+            "r": "cái",
+            "g": "adverbial"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "去",
+              "r": "きょ",
+              "g": "adverbial"
+            },
+            {
+              "t": "年",
+              "r": "ねん",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "米",
+              "r": "こめ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "借",
+              "r": "か",
+              "g": "predicate"
+            },
+            {
+              "t": "りに",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "来",
+              "r": "き",
+              "g": "adverbial"
+            },
+            {
+              "t": "たとき、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "あなたは",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "何",
+              "r": "なん",
+              "g": "attributive"
+            },
+            {
+              "t": "冊",
+              "r": "さつ",
+              "g": "attributive"
+            },
+            {
+              "t": "か",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "下",
+              "r": "くだ",
+              "g": "predicate"
+            },
+            {
+              "t": "さり、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "百",
+              "r": "ひゃく",
+              "g": "subject"
+            },
+            {
+              "t": "姓",
+              "r": "しょう",
+              "g": "subject"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "字",
+              "r": "じ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "覚",
+              "r": "おぼ",
+              "g": "predicate"
+            },
+            {
+              "t": "えねばと",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "いました。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我回去就抽空教孩子念书，可是，有些字认不倒。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "回",
+            "r": "huí",
+            "g": "predicate"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "complement"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "抽",
+            "r": "chōu",
+            "g": "adverbial"
+          },
+          {
+            "t": "空",
+            "r": "kòng",
+            "g": "adverbial"
+          },
+          {
+            "t": "教",
+            "r": "jiāo",
+            "g": "predicate"
+          },
+          {
+            "t": "孩",
+            "r": "hái",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "念",
+            "r": "niàn",
+            "g": "object"
+          },
+          {
+            "t": "书",
+            "r": "shū",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "些",
+            "r": "xiē",
+            "g": "attributive"
+          },
+          {
+            "t": "字",
+            "r": "zì",
+            "g": "object"
+          },
+          {
+            "t": "认",
+            "r": "rèn",
+            "g": "predicate"
+          },
+          {
+            "t": "不",
+            "r": "bú",
+            "g": "complement"
+          },
+          {
+            "t": "倒",
+            "r": "dǎo",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "帰",
+              "r": "かえ",
+              "g": "predicate"
+            },
+            {
+              "t": "ってから",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "暇",
+              "r": "ひま",
+              "g": "adverbial"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "adverbial"
+            },
+            {
+              "t": "つけて",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "読",
+              "r": "よ",
+              "g": "predicate"
+            },
+            {
+              "t": "ませました。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "けれど、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "いくつかの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "字",
+              "r": "じ",
+              "g": "object"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "覚",
+              "r": "おぼ",
+              "g": "predicate"
+            },
+            {
+              "t": "えられません。",
+              "r": "",
+              "g": "complement"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "平常想来向你问，又怕打扰先生，今天望见先生在这儿闲耍，就……",
+        "zh": [
+          {
+            "t": "平",
+            "r": "píng",
+            "g": "adverbial"
+          },
+          {
+            "t": "常",
+            "r": "cháng",
+            "g": "adverbial"
+          },
+          {
+            "t": "想",
+            "r": "xiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "向",
+            "r": "xiàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "问",
+            "r": "wèn",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "怕",
+            "r": "pà",
+            "g": "predicate"
+          },
+          {
+            "t": "打",
+            "r": "dǎ",
+            "g": "object"
+          },
+          {
+            "t": "扰",
+            "r": "rǎo",
+            "g": "object"
+          },
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "object"
+          },
+          {
+            "t": "生",
+            "r": "sheng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "今",
+            "r": "jīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "望",
+            "r": "wàng",
+            "g": "predicate"
+          },
+          {
+            "t": "见",
+            "r": "jiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "object"
+          },
+          {
+            "t": "生",
+            "r": "sheng",
+            "g": "object"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "这",
+            "r": "zhèr",
+            "g": "object"
+          },
+          {
+            "t": "儿",
+            "r": "ér",
+            "g": "object"
+          },
+          {
+            "t": "闲",
+            "r": "xián",
+            "g": "predicate"
+          },
+          {
+            "t": "耍",
+            "r": "shuǎ",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "普",
+              "r": "ふ",
+              "g": "adverbial"
+            },
+            {
+              "t": "段",
+              "r": "だん",
+              "g": "adverbial"
+            },
+            {
+              "t": "から",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "来",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "て",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "あなたに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "尋",
+              "r": "たず",
+              "g": "predicate"
+            },
+            {
+              "t": "ねたいと",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "思",
+              "r": "おも",
+              "g": "predicate"
+            },
+            {
+              "t": "っていましたが、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "先",
+              "r": "せん",
+              "g": "object"
+            },
+            {
+              "t": "生",
+              "r": "せい",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "邪",
+              "r": "じゃ",
+              "g": "object"
+            },
+            {
+              "t": "魔",
+              "r": "ま",
+              "g": "object"
+            },
+            {
+              "t": "になるのが",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "怖",
+              "r": "こわ",
+              "g": "predicate"
+            },
+            {
+              "t": "く、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "今",
+              "r": "きょ",
+              "g": "adverbial"
+            },
+            {
+              "t": "日",
+              "r": "う",
+              "g": "adverbial"
+            },
+            {
+              "t": "ここで",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "休",
+              "r": "やす",
+              "g": "predicate"
+            },
+            {
+              "t": "んでいるのを",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "かけて、それで……",
+              "r": "",
+              "g": "adverbial"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "扬子云笑了笑：今天我也不是闲耍，不过，你肯来问字，倒是件好事。",
+        "zh": [
+          {
+            "t": "扬",
+            "r": "yáng",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "云",
+            "r": "yún",
+            "g": "subject"
+          },
+          {
+            "t": "笑",
+            "r": "xiào",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "笑",
+            "r": "xiào",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "今",
+            "r": "jīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bú",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "闲",
+            "r": "xián",
+            "g": "object"
+          },
+          {
+            "t": "耍",
+            "r": "shuǎ",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "不",
+            "r": "bú",
+            "g": "function"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "肯",
+            "r": "kěn",
+            "g": "adverbial"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "adverbial"
+          },
+          {
+            "t": "问",
+            "r": "wèn",
+            "g": "predicate"
+          },
+          {
+            "t": "字",
+            "r": "zì",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "倒",
+            "r": "dào",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "件",
+            "r": "jiàn",
+            "g": "attributive"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "揚",
+              "r": "よう",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "雲",
+              "r": "うん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "にこりと",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "笑",
+              "r": "わら",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "今",
+              "r": "きょ",
+              "g": "adverbial"
+            },
+            {
+              "t": "日",
+              "r": "う",
+              "g": "adverbial"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "遊",
+              "r": "あそ",
+              "g": "object"
+            },
+            {
+              "t": "んでいたのではない。",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "だが、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "君",
+              "r": "きみ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "字",
+              "r": "じ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "尋",
+              "r": "たず",
+              "g": "predicate"
+            },
+            {
+              "t": "ねに",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "来",
+              "r": "き",
+              "g": "adverbial"
+            },
+            {
+              "t": "てくれたのは、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "かえって",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "よい",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "事",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "だ。",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
