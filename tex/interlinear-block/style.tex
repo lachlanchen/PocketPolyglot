@@ -100,8 +100,9 @@
         \box0
       }%
     \endgroup
+    \allowbreak{}%
   \else
-    #1%
+    #1\allowbreak{}%
   \fi
 }
 \NewDocumentCommand{\RubyWide}{m m}{%
@@ -119,8 +120,9 @@
         \hbox to \dimen0{\hss\box0\hss}%
       }%
     \endgroup
+    \allowbreak{}%
   \else
-    #1%
+    #1\allowbreak{}%
   \fi
 }
 
@@ -142,7 +144,7 @@
         { function } { \color{GramFunction} }
       }
   }
-\NewDocumentCommand{\Gram}{m m}{\group_begin:\zhjp_gram_color:n { #1 } #2\group_end:}
+\NewDocumentCommand{\Gram}{m m}{\group_begin:\zhjp_gram_color:n { #1 } #2\group_end:\allowbreak{}}
 \ExplSyntaxOff
 
 \newcommand{\GrammarLegend}{%

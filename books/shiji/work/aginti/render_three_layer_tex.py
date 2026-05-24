@@ -53,7 +53,7 @@ def render_tokens(tokens: list[dict], ruby_cmd: str) -> str:
             inner = tex_escape(t)
         if g and g in GRAM_COLORS:
             inner = rf"\{GRAM_COLORS[g]}{{{inner}}}"
-        parts.append(inner)
+        parts.append(inner + r"\allowbreak{}")
     return "".join(parts)
 
 
@@ -182,7 +182,9 @@ def write_style_tex(out_dir: Path) -> None:
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
-\emergencystretch=3em
+\pretolerance=1000
+\tolerance=9000
+\emergencystretch=6em
 \linespread{1.05}
 \XeTeXlinebreaklocale "ja"
 \XeTeXlinebreakskip=0pt plus 0.18em
@@ -191,26 +193,27 @@ def write_style_tex(out_dir: Path) -> None:
 \NewDocumentCommand{\zhcnruby}{m m}{%
   \leavevmode\setbox0=\hbox{#1}\dimen0=\wd0%
   \vbox{\offinterlineskip%
-    \hbox to \dimen0{\hss{\RubyFont #2}\hss}\kern0.06ex\box0}}
+    \hbox to \dimen0{\hss{\RubyFont #2}\hss}\kern0.06ex\box0}\allowbreak{}}
 \NewDocumentCommand{\jpruby}{m m}{%
   \leavevmode\setbox0=\hbox{#1}\dimen0=\wd0%
   \vbox{\offinterlineskip%
-    \hbox to \dimen0{\hss{\RubyFont #2}\hss}\kern0.06ex\box0}}
+    \hbox to \dimen0{\hss{\RubyFont #2}\hss}\kern0.06ex\box0}\allowbreak{}}
 
-\newcommand{\GramSubject}[1]{{\color{GramSubject}#1}}
-\newcommand{\GramPredicate}[1]{{\color{GramPredicate}#1}}
-\newcommand{\GramObject}[1]{{\color{GramObject}#1}}
-\newcommand{\GramAttributive}[1]{{\color{GramAttributive}#1}}
-\newcommand{\GramAdverbial}[1]{{\color{GramAdverbial}#1}}
-\newcommand{\GramComplement}[1]{{\color{GramComplement}#1}}
-\newcommand{\GramTopic}[1]{{\color{GramTopic}#1}}
-\newcommand{\GramFunction}[1]{{\color{GramFunction}#1}}
+\newcommand{\GramSubject}[1]{{\color{GramSubject}#1}\allowbreak{}}
+\newcommand{\GramPredicate}[1]{{\color{GramPredicate}#1}\allowbreak{}}
+\newcommand{\GramObject}[1]{{\color{GramObject}#1}\allowbreak{}}
+\newcommand{\GramAttributive}[1]{{\color{GramAttributive}#1}\allowbreak{}}
+\newcommand{\GramAdverbial}[1]{{\color{GramAdverbial}#1}\allowbreak{}}
+\newcommand{\GramComplement}[1]{{\color{GramComplement}#1}\allowbreak{}}
+\newcommand{\GramTopic}[1]{{\color{GramTopic}#1}\allowbreak{}}
+\newcommand{\GramFunction}[1]{{\color{GramFunction}#1}\allowbreak{}}
 
-\NewDocumentCommand{\JpMainLine}{m}{{\large\jpfont #1}\par}
-\NewDocumentCommand{\ZhMainLine}{m}{{\large\zhfont #1}\par}
-\NewDocumentCommand{\ZhOrigLine}{m}{{\normalsize\zhfont #1}\par}
-\NewDocumentCommand{\JaCommentLine}{m}{{\normalsize\jpfont #1}\par}
-\NewDocumentCommand{\ZhModernLine}{m}{{\footnotesize\zhfont #1}\par}
+\newcommand{\LineBreakTuning}{\rightskip=0pt plus 2.5em \spaceskip=.24em plus .16em minus .08em\relax}
+\NewDocumentCommand{\JpMainLine}{m}{\noindent{\large\jpfont\LineBreakTuning #1}\par}
+\NewDocumentCommand{\ZhMainLine}{m}{\noindent{\large\zhfont\LineBreakTuning #1}\par}
+\NewDocumentCommand{\ZhOrigLine}{m}{\noindent{\normalsize\zhfont\LineBreakTuning #1}\par}
+\NewDocumentCommand{\JaCommentLine}{m}{\noindent{\normalsize\jpfont\LineBreakTuning #1}\par}
+\NewDocumentCommand{\ZhModernLine}{m}{\noindent{\footnotesize\zhfont\LineBreakTuning #1}\par}
 """
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "style.tex").write_text(style, encoding="utf-8")
