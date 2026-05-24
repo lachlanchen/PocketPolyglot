@@ -1,0 +1,955 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "genji-modern",
+  "paragraph_id": "genji-modern-p03586",
+  "source_text": " 本回紧接前回，从源氏四十一岁三月开始记事，但从四十二岁至四十五岁这四年间没有记载，以后又记载了从四十六岁至四十七岁十二月之事。",
+  "source_sha256": "64c9e352b0c8a5fb42b9b3744b5269f22b2e7e5471083bb46c41639c8f3d4d72",
+  "source_normalized_sha256": "2dd4ba504eb2200b9ca7ff64d2dc27cad8fa3ca92657f54c4e25662b8c8361d1",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 127,
+    "grammar_token_total": 127,
+    "unit_count": 3
+  },
+  "source_chunk_id": "genji-modern-chunk-3586",
+  "source_manifest_sha256": "31fed9a4682318b56bd3687aa261a681dd49e03ca0f121e1342197c4f3c9c0a0",
+  "section": {
+    "id": "第三十四回下-新菜续1",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "huí",
+        "g": "function"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "下",
+        "r": "xià",
+        "g": "function"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "新",
+        "r": "xīn",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "cài",
+        "g": "attributive"
+      },
+      {
+        "t": "续",
+        "r": "xù",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "かい",
+        "g": "function"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "下",
+        "r": "げ",
+        "g": "function"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "若",
+        "r": "わか",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "な",
+        "g": "attributive"
+      },
+      {
+        "t": "続",
+        "r": "ぞく",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第三十四回下-新菜续1-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "huí",
+        "g": "function"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "下",
+        "r": "xià",
+        "g": "function"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "新",
+        "r": "xīn",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "cài",
+        "g": "attributive"
+      },
+      {
+        "t": "续",
+        "r": "xù",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "かい",
+        "g": "function"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "下",
+        "r": "げ",
+        "g": "function"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "若",
+        "r": "わか",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "な",
+        "g": "attributive"
+      },
+      {
+        "t": "続",
+        "r": "ぞく",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "genji-modern-p03586",
+    "source_text": " 本回紧接前回，从源氏四十一岁三月开始记事，但从四十二岁至四十五岁这四年间没有记载，以后又记载了从四十六岁至四十七岁十二月之事。",
+    "units": [
+      {
+        "source_text": "本回紧接前回，从源氏四十一岁三月开始记事，",
+        "zh": [
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "attributive"
+          },
+          {
+            "t": "回",
+            "r": "huí",
+            "g": "subject"
+          },
+          {
+            "t": "紧",
+            "r": "jǐn",
+            "g": "adverbial"
+          },
+          {
+            "t": "接",
+            "r": "jiē",
+            "g": "predicate"
+          },
+          {
+            "t": "前",
+            "r": "qián",
+            "g": "attributive"
+          },
+          {
+            "t": "回",
+            "r": "huí",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "从",
+            "r": "cóng",
+            "g": "adverbial"
+          },
+          {
+            "t": "源",
+            "r": "yuán",
+            "g": "adverbial"
+          },
+          {
+            "t": "氏",
+            "r": "shì",
+            "g": "adverbial"
+          },
+          {
+            "t": "四",
+            "r": "sì",
+            "g": "adverbial"
+          },
+          {
+            "t": "十",
+            "r": "shí",
+            "g": "adverbial"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "adverbial"
+          },
+          {
+            "t": "岁",
+            "r": "suì",
+            "g": "adverbial"
+          },
+          {
+            "t": "三",
+            "r": "sān",
+            "g": "adverbial"
+          },
+          {
+            "t": "月",
+            "r": "yuè",
+            "g": "adverbial"
+          },
+          {
+            "t": "开",
+            "r": "kāi",
+            "g": "predicate"
+          },
+          {
+            "t": "始",
+            "r": "shǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "记",
+            "r": "jì",
+            "g": "object"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "回",
+              "r": "かい",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "前",
+              "r": "ぜん",
+              "g": "object"
+            },
+            {
+              "t": "回",
+              "r": "かい",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "すぐに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "受",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "けて、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "源",
+              "r": "げん",
+              "g": "adverbial"
+            },
+            {
+              "t": "氏",
+              "r": "じ",
+              "g": "adverbial"
+            },
+            {
+              "t": "四",
+              "r": "よん",
+              "g": "adverbial"
+            },
+            {
+              "t": "十",
+              "r": "じゅう",
+              "g": "adverbial"
+            },
+            {
+              "t": "一",
+              "r": "いっ",
+              "g": "adverbial"
+            },
+            {
+              "t": "歳",
+              "r": "さい",
+              "g": "adverbial"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "三",
+              "r": "さん",
+              "g": "adverbial"
+            },
+            {
+              "t": "月",
+              "r": "がつ",
+              "g": "adverbial"
+            },
+            {
+              "t": "から",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "記",
+              "r": "しる",
+              "g": "predicate"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "始",
+              "r": "はじ",
+              "g": "predicate"
+            },
+            {
+              "t": "める。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "但从四十二岁至四十五岁这四年间没有记载，",
+        "zh": [
+          {
+            "t": "但",
+            "r": "dàn",
+            "g": "function"
+          },
+          {
+            "t": "从",
+            "r": "cóng",
+            "g": "adverbial"
+          },
+          {
+            "t": "四",
+            "r": "sì",
+            "g": "adverbial"
+          },
+          {
+            "t": "十",
+            "r": "shí",
+            "g": "adverbial"
+          },
+          {
+            "t": "二",
+            "r": "èr",
+            "g": "adverbial"
+          },
+          {
+            "t": "岁",
+            "r": "suì",
+            "g": "adverbial"
+          },
+          {
+            "t": "至",
+            "r": "zhì",
+            "g": "adverbial"
+          },
+          {
+            "t": "四",
+            "r": "sì",
+            "g": "adverbial"
+          },
+          {
+            "t": "十",
+            "r": "shí",
+            "g": "adverbial"
+          },
+          {
+            "t": "五",
+            "r": "wǔ",
+            "g": "adverbial"
+          },
+          {
+            "t": "岁",
+            "r": "suì",
+            "g": "adverbial"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "attributive"
+          },
+          {
+            "t": "四",
+            "r": "sì",
+            "g": "attributive"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "attributive"
+          },
+          {
+            "t": "间",
+            "r": "jiān",
+            "g": "attributive"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "predicate"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "记",
+            "r": "jì",
+            "g": "object"
+          },
+          {
+            "t": "载",
+            "r": "zǎi",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ただし、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "四",
+              "r": "よん",
+              "g": "adverbial"
+            },
+            {
+              "t": "十",
+              "r": "じゅう",
+              "g": "adverbial"
+            },
+            {
+              "t": "二",
+              "r": "に",
+              "g": "adverbial"
+            },
+            {
+              "t": "歳",
+              "r": "さい",
+              "g": "adverbial"
+            },
+            {
+              "t": "から",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "四",
+              "r": "よん",
+              "g": "adverbial"
+            },
+            {
+              "t": "十",
+              "r": "じゅう",
+              "g": "adverbial"
+            },
+            {
+              "t": "五",
+              "r": "ご",
+              "g": "adverbial"
+            },
+            {
+              "t": "歳",
+              "r": "さい",
+              "g": "adverbial"
+            },
+            {
+              "t": "までの",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "四",
+              "r": "よ",
+              "g": "attributive"
+            },
+            {
+              "t": "年",
+              "r": "ねん",
+              "g": "attributive"
+            },
+            {
+              "t": "間",
+              "r": "かん",
+              "g": "attributive"
+            },
+            {
+              "t": "には",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "記",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "載",
+              "r": "さい",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "ない。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "以后又记载了从四十六岁至四十七岁十二月之事。",
+        "zh": [
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "后",
+            "r": "hòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "记",
+            "r": "jì",
+            "g": "predicate"
+          },
+          {
+            "t": "载",
+            "r": "zǎi",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "从",
+            "r": "cóng",
+            "g": "attributive"
+          },
+          {
+            "t": "四",
+            "r": "sì",
+            "g": "attributive"
+          },
+          {
+            "t": "十",
+            "r": "shí",
+            "g": "attributive"
+          },
+          {
+            "t": "六",
+            "r": "liù",
+            "g": "attributive"
+          },
+          {
+            "t": "岁",
+            "r": "suì",
+            "g": "attributive"
+          },
+          {
+            "t": "至",
+            "r": "zhì",
+            "g": "attributive"
+          },
+          {
+            "t": "四",
+            "r": "sì",
+            "g": "attributive"
+          },
+          {
+            "t": "十",
+            "r": "shí",
+            "g": "attributive"
+          },
+          {
+            "t": "七",
+            "r": "qī",
+            "g": "attributive"
+          },
+          {
+            "t": "岁",
+            "r": "suì",
+            "g": "attributive"
+          },
+          {
+            "t": "十",
+            "r": "shí",
+            "g": "attributive"
+          },
+          {
+            "t": "二",
+            "r": "èr",
+            "g": "attributive"
+          },
+          {
+            "t": "月",
+            "r": "yuè",
+            "g": "attributive"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "attributive"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "その",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "後",
+              "r": "ご",
+              "g": "adverbial"
+            },
+            {
+              "t": "また、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "四",
+              "r": "よん",
+              "g": "attributive"
+            },
+            {
+              "t": "十",
+              "r": "じゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "六",
+              "r": "ろく",
+              "g": "attributive"
+            },
+            {
+              "t": "歳",
+              "r": "さい",
+              "g": "attributive"
+            },
+            {
+              "t": "から",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "四",
+              "r": "よん",
+              "g": "attributive"
+            },
+            {
+              "t": "十",
+              "r": "じゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "七",
+              "r": "なな",
+              "g": "attributive"
+            },
+            {
+              "t": "歳",
+              "r": "さい",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "十",
+              "r": "じゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "二",
+              "r": "に",
+              "g": "attributive"
+            },
+            {
+              "t": "月",
+              "r": "がつ",
+              "g": "attributive"
+            },
+            {
+              "t": "までの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "事",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "記",
+              "r": "しる",
+              "g": "predicate"
+            },
+            {
+              "t": "されている。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

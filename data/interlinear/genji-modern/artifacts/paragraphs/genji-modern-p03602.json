@@ -1,0 +1,825 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "genji-modern",
+  "paragraph_id": "genji-modern-p03602",
+  "source_text": " 古歌：“但愿清秋夜未央，千宵并作一宵长。不曾说尽胸中事，窗外金鸡报晓忙。”见《伊势物语》。",
+  "source_sha256": "23889368d61286cd51a67cd9db50e881a0ca10554cfe7090d02291c9a0fd615d",
+  "source_normalized_sha256": "6a52bdead9bc00698c5799c56138cb37e55ebaba6d19f4eec940d7f7189c53f6",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 101,
+    "grammar_token_total": 101,
+    "unit_count": 3
+  },
+  "source_chunk_id": "genji-modern-chunk-3602",
+  "source_manifest_sha256": "31fed9a4682318b56bd3687aa261a681dd49e03ca0f121e1342197c4f3c9c0a0",
+  "section": {
+    "id": "第三十四回下-新菜续1",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "huí",
+        "g": "function"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "下",
+        "r": "xià",
+        "g": "function"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "新",
+        "r": "xīn",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "cài",
+        "g": "object"
+      },
+      {
+        "t": "续",
+        "r": "xù",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "かい",
+        "g": "function"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "下",
+        "r": "げ",
+        "g": "function"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "若",
+        "r": "わか",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "な",
+        "g": "object"
+      },
+      {
+        "t": "続",
+        "r": "ぞく",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第三十四回下-新菜续1-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "huí",
+        "g": "function"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "下",
+        "r": "xià",
+        "g": "function"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "新",
+        "r": "xīn",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "cài",
+        "g": "object"
+      },
+      {
+        "t": "续",
+        "r": "xù",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "かい",
+        "g": "function"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "下",
+        "r": "げ",
+        "g": "function"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "若",
+        "r": "わか",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "な",
+        "g": "object"
+      },
+      {
+        "t": "続",
+        "r": "ぞく",
+        "g": "predicate"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "genji-modern-p03602",
+    "source_text": " 古歌：“但愿清秋夜未央，千宵并作一宵长。不曾说尽胸中事，窗外金鸡报晓忙。”见《伊势物语》。",
+    "units": [
+      {
+        "source_text": "古歌：“但愿清秋夜未央，千宵并作一宵长。",
+        "zh": [
+          {
+            "t": "古",
+            "r": "gǔ",
+            "g": "attributive"
+          },
+          {
+            "t": "歌",
+            "r": "gē",
+            "g": "subject"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "但",
+            "r": "dàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "愿",
+            "r": "yuàn",
+            "g": "predicate"
+          },
+          {
+            "t": "清",
+            "r": "qīng",
+            "g": "attributive"
+          },
+          {
+            "t": "秋",
+            "r": "qiū",
+            "g": "attributive"
+          },
+          {
+            "t": "夜",
+            "r": "yè",
+            "g": "subject"
+          },
+          {
+            "t": "未",
+            "r": "wèi",
+            "g": "adverbial"
+          },
+          {
+            "t": "央",
+            "r": "yāng",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "千",
+            "r": "qiān",
+            "g": "attributive"
+          },
+          {
+            "t": "宵",
+            "r": "xiāo",
+            "g": "object"
+          },
+          {
+            "t": "并",
+            "r": "bìng",
+            "g": "adverbial"
+          },
+          {
+            "t": "作",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "attributive"
+          },
+          {
+            "t": "宵",
+            "r": "xiāo",
+            "g": "object"
+          },
+          {
+            "t": "长",
+            "r": "cháng",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "古",
+              "r": "こ",
+              "g": "attributive"
+            },
+            {
+              "t": "歌",
+              "r": "か",
+              "g": "subject"
+            },
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "どうか",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "清",
+              "r": "きよ",
+              "g": "attributive"
+            },
+            {
+              "t": "らかな",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "秋",
+              "r": "あき",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "夜",
+              "r": "よ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "まだ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "更",
+              "r": "ふ",
+              "g": "predicate"
+            },
+            {
+              "t": "けず、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "千",
+              "r": "せん",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "宵",
+              "r": "よい",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "attributive"
+            },
+            {
+              "t": "夜",
+              "r": "よ",
+              "g": "object"
+            },
+            {
+              "t": "となり、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "長",
+              "r": "なが",
+              "g": "complement"
+            },
+            {
+              "t": "くあれ。",
+              "r": "",
+              "g": "complement"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "不曾说尽胸中事，窗外金鸡报晓忙。”",
+        "zh": [
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "曾",
+            "r": "céng",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "尽",
+            "r": "jìn",
+            "g": "complement"
+          },
+          {
+            "t": "胸",
+            "r": "xiōng",
+            "g": "attributive"
+          },
+          {
+            "t": "中",
+            "r": "zhōng",
+            "g": "attributive"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "窗",
+            "r": "chuāng",
+            "g": "attributive"
+          },
+          {
+            "t": "外",
+            "r": "wài",
+            "g": "adverbial"
+          },
+          {
+            "t": "金",
+            "r": "jīn",
+            "g": "attributive"
+          },
+          {
+            "t": "鸡",
+            "r": "jī",
+            "g": "subject"
+          },
+          {
+            "t": "报",
+            "r": "bào",
+            "g": "predicate"
+          },
+          {
+            "t": "晓",
+            "r": "xiǎo",
+            "g": "object"
+          },
+          {
+            "t": "忙",
+            "r": "máng",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "胸",
+              "r": "むね",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "内",
+              "r": "うち",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "思",
+              "r": "おも",
+              "g": "object"
+            },
+            {
+              "t": "いを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "まだ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "語",
+              "r": "かた",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "尽",
+              "r": "つ",
+              "g": "complement"
+            },
+            {
+              "t": "くさぬうちに、",
+              "r": "",
+              "g": "complement"
+            }
+          ],
+          [
+            {
+              "t": "窓",
+              "r": "まど",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "外",
+              "r": "そと",
+              "g": "adverbial"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "金",
+              "r": "きん",
+              "g": "attributive"
+            },
+            {
+              "t": "鶏",
+              "r": "けい",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "慌",
+              "r": "あわ",
+              "g": "complement"
+            },
+            {
+              "t": "ただしく",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "暁",
+              "r": "あかつき",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "告",
+              "r": "つ",
+              "g": "predicate"
+            },
+            {
+              "t": "げる。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "见《伊势物语》。",
+        "zh": [
+          {
+            "t": "见",
+            "r": "jiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "《",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "伊",
+            "r": "yī",
+            "g": "attributive"
+          },
+          {
+            "t": "势",
+            "r": "shì",
+            "g": "attributive"
+          },
+          {
+            "t": "物",
+            "r": "wù",
+            "g": "object"
+          },
+          {
+            "t": "语",
+            "r": "yǔ",
+            "g": "object"
+          },
+          {
+            "t": "》",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "『",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "伊",
+              "r": "い",
+              "g": "attributive"
+            },
+            {
+              "t": "勢",
+              "r": "せ",
+              "g": "attributive"
+            },
+            {
+              "t": "物",
+              "r": "もの",
+              "g": "object"
+            },
+            {
+              "t": "語",
+              "r": "がたり",
+              "g": "object"
+            },
+            {
+              "t": "』",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "える。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

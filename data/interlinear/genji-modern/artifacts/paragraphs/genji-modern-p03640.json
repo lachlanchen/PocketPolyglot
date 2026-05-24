@@ -1,0 +1,835 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "genji-modern",
+  "paragraph_id": "genji-modern-p03640",
+  "source_text": " 摩诃毘庐遮那即大日如来佛，是密宗佛教的本尊。此文似乎未了。据国学家石川雅望说，原本此处大约缺少一行，或损失一纸。",
+  "source_sha256": "cf575169a36ac75e1dffb0d646e6045f2d78b32f8026565771de88359ff7f8f7",
+  "source_normalized_sha256": "475a59baf14c0b80e44f1e23f1f2cac19a5080adf37ad9c0b3a0e4336e78d72c",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 103,
+    "grammar_token_total": 103,
+    "unit_count": 3
+  },
+  "source_chunk_id": "genji-modern-chunk-3640",
+  "source_manifest_sha256": "31fed9a4682318b56bd3687aa261a681dd49e03ca0f121e1342197c4f3c9c0a0",
+  "section": {
+    "id": "第三十四回下-新菜续1",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "huí",
+        "g": "function"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "下",
+        "r": "xià",
+        "g": "function"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "新",
+        "r": "xīn",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "cài",
+        "g": "object"
+      },
+      {
+        "t": "续",
+        "r": "xù",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "かい",
+        "g": "function"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "下",
+        "r": "げ",
+        "g": "function"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "若",
+        "r": "わか",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "な",
+        "g": "object"
+      },
+      {
+        "t": "続",
+        "r": "ぞく",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第三十四回下-新菜续1-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "huí",
+        "g": "function"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "下",
+        "r": "xià",
+        "g": "function"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "新",
+        "r": "xīn",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "cài",
+        "g": "object"
+      },
+      {
+        "t": "续",
+        "r": "xù",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "かい",
+        "g": "function"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "下",
+        "r": "げ",
+        "g": "function"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "若",
+        "r": "わか",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "な",
+        "g": "object"
+      },
+      {
+        "t": "続",
+        "r": "ぞく",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "genji-modern-p03640",
+    "source_text": " 摩诃毘庐遮那即大日如来佛，是密宗佛教的本尊。此文似乎未了。据国学家石川雅望说，原本此处大约缺少一行，或损失一纸。",
+    "units": [
+      {
+        "source_text": "摩诃毘庐遮那即大日如来佛，是密宗佛教的本尊。",
+        "zh": [
+          {
+            "t": "摩",
+            "r": "mó",
+            "g": "subject"
+          },
+          {
+            "t": "诃",
+            "r": "hē",
+            "g": "subject"
+          },
+          {
+            "t": "毘",
+            "r": "pí",
+            "g": "subject"
+          },
+          {
+            "t": "庐",
+            "r": "lú",
+            "g": "subject"
+          },
+          {
+            "t": "遮",
+            "r": "zhē",
+            "g": "subject"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "subject"
+          },
+          {
+            "t": "即",
+            "r": "jí",
+            "g": "predicate"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "complement"
+          },
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "complement"
+          },
+          {
+            "t": "如",
+            "r": "rú",
+            "g": "complement"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "佛",
+            "r": "fó",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "密",
+            "r": "mì",
+            "g": "attributive"
+          },
+          {
+            "t": "宗",
+            "r": "zōng",
+            "g": "attributive"
+          },
+          {
+            "t": "佛",
+            "r": "fó",
+            "g": "attributive"
+          },
+          {
+            "t": "教",
+            "r": "jiào",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "object"
+          },
+          {
+            "t": "尊",
+            "r": "zūn",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "摩",
+              "r": "ま",
+              "g": "subject"
+            },
+            {
+              "t": "訶",
+              "r": "か",
+              "g": "subject"
+            },
+            {
+              "t": "毘",
+              "r": "び",
+              "g": "subject"
+            },
+            {
+              "t": "盧",
+              "r": "る",
+              "g": "subject"
+            },
+            {
+              "t": "遮",
+              "r": "しゃ",
+              "g": "subject"
+            },
+            {
+              "t": "那",
+              "r": "な",
+              "g": "subject"
+            },
+            {
+              "t": "、すなわち",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "大",
+              "r": "だい",
+              "g": "complement"
+            },
+            {
+              "t": "日",
+              "r": "にち",
+              "g": "complement"
+            },
+            {
+              "t": "如",
+              "r": "にょ",
+              "g": "complement"
+            },
+            {
+              "t": "来",
+              "r": "らい",
+              "g": "complement"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "complement"
+            }
+          ],
+          [
+            {
+              "t": "密",
+              "r": "みっ",
+              "g": "attributive"
+            },
+            {
+              "t": "教",
+              "r": "きょう",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "object"
+            },
+            {
+              "t": "尊",
+              "r": "ぞん",
+              "g": "object"
+            },
+            {
+              "t": "である。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "此文似乎未了。",
+        "zh": [
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "subject"
+          },
+          {
+            "t": "文",
+            "r": "wén",
+            "g": "subject"
+          },
+          {
+            "t": "似",
+            "r": "sì",
+            "g": "adverbial"
+          },
+          {
+            "t": "乎",
+            "r": "hū",
+            "g": "adverbial"
+          },
+          {
+            "t": "未",
+            "r": "wèi",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "liǎo",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "文",
+              "r": "ぶん",
+              "g": "subject"
+            },
+            {
+              "t": "章",
+              "r": "しょう",
+              "g": "subject"
+            },
+            {
+              "t": "はまだ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "終",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "わっていない",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "ように",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "える。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "据国学家石川雅望说，原本此处大约缺少一行，或损失一纸。",
+        "zh": [
+          {
+            "t": "据",
+            "r": "jù",
+            "g": "adverbial"
+          },
+          {
+            "t": "国",
+            "r": "guó",
+            "g": "attributive"
+          },
+          {
+            "t": "学",
+            "r": "xué",
+            "g": "attributive"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "attributive"
+          },
+          {
+            "t": "石",
+            "r": "shí",
+            "g": "subject"
+          },
+          {
+            "t": "川",
+            "r": "chuān",
+            "g": "subject"
+          },
+          {
+            "t": "雅",
+            "r": "yǎ",
+            "g": "subject"
+          },
+          {
+            "t": "望",
+            "r": "wàng",
+            "g": "subject"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "原",
+            "r": "yuán",
+            "g": "attributive"
+          },
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "attributive"
+          },
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "处",
+            "r": "chù",
+            "g": "adverbial"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "adverbial"
+          },
+          {
+            "t": "约",
+            "r": "yuē",
+            "g": "adverbial"
+          },
+          {
+            "t": "缺",
+            "r": "quē",
+            "g": "predicate"
+          },
+          {
+            "t": "少",
+            "r": "shǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "object"
+          },
+          {
+            "t": "行",
+            "r": "háng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "或",
+            "r": "huò",
+            "g": "function"
+          },
+          {
+            "t": "损",
+            "r": "sǔn",
+            "g": "predicate"
+          },
+          {
+            "t": "失",
+            "r": "shī",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "object"
+          },
+          {
+            "t": "纸",
+            "r": "zhǐ",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "国",
+              "r": "こく",
+              "g": "attributive"
+            },
+            {
+              "t": "学",
+              "r": "がく",
+              "g": "attributive"
+            },
+            {
+              "t": "者",
+              "r": "しゃ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "石",
+              "r": "いし",
+              "g": "subject"
+            },
+            {
+              "t": "川",
+              "r": "かわ",
+              "g": "subject"
+            },
+            {
+              "t": "雅",
+              "r": "まさ",
+              "g": "subject"
+            },
+            {
+              "t": "望",
+              "r": "もち",
+              "g": "subject"
+            },
+            {
+              "t": "によれば、",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "原",
+              "r": "げん",
+              "g": "attributive"
+            },
+            {
+              "t": "本",
+              "r": "ぽん",
+              "g": "attributive"
+            },
+            {
+              "t": "のここにはおよそ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "object"
+            },
+            {
+              "t": "行",
+              "r": "ぎょう",
+              "g": "object"
+            },
+            {
+              "t": "、または",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "object"
+            },
+            {
+              "t": "紙",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "欠",
+              "r": "か",
+              "g": "predicate"
+            },
+            {
+              "t": "けているという。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,659 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "genji-modern",
+  "paragraph_id": "genji-modern-p03588",
+  "source_text": " 古歌：“可怜今日春光尽，久立花阴不忍归。”见《古今和歌集》。",
+  "source_sha256": "74f11403ff1fa4ccfce515b5bdde0b711366fb445d27a23e29e1373f0d7e05ef",
+  "source_normalized_sha256": "57d4c7f090ada6c0c2865d44c7ef21ac98aa0921414c3e110aab53283ce4956d",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 70,
+    "grammar_token_total": 70,
+    "unit_count": 2
+  },
+  "source_chunk_id": "genji-modern-chunk-3588",
+  "source_manifest_sha256": "31fed9a4682318b56bd3687aa261a681dd49e03ca0f121e1342197c4f3c9c0a0",
+  "section": {
+    "id": "第三十四回下-新菜续1",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "huí",
+        "g": "function"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "下",
+        "r": "xià",
+        "g": "function"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "新",
+        "r": "xīn",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "cài",
+        "g": "object"
+      },
+      {
+        "t": "续",
+        "r": "xù",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "かい",
+        "g": "function"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "下",
+        "r": "げ",
+        "g": "function"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "若",
+        "r": "わか",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "な",
+        "g": "object"
+      },
+      {
+        "t": "続",
+        "r": "ぞく",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第三十四回下-新菜续1-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "huí",
+        "g": "function"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "下",
+        "r": "xià",
+        "g": "function"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "新",
+        "r": "xīn",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "cài",
+        "g": "object"
+      },
+      {
+        "t": "续",
+        "r": "xù",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "かい",
+        "g": "function"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "下",
+        "r": "げ",
+        "g": "function"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "若",
+        "r": "わか",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "な",
+        "g": "object"
+      },
+      {
+        "t": "続",
+        "r": "ぞく",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "genji-modern-p03588",
+    "source_text": " 古歌：“可怜今日春光尽，久立花阴不忍归。”见《古今和歌集》。",
+    "units": [
+      {
+        "source_text": "古歌：“可怜今日春光尽，久立花阴不忍归。”",
+        "zh": [
+          {
+            "t": "古",
+            "r": "gǔ",
+            "g": "subject"
+          },
+          {
+            "t": "歌",
+            "r": "gē",
+            "g": "subject"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "adverbial"
+          },
+          {
+            "t": "怜",
+            "r": "lián",
+            "g": "adverbial"
+          },
+          {
+            "t": "今",
+            "r": "jīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "adverbial"
+          },
+          {
+            "t": "春",
+            "r": "chūn",
+            "g": "subject"
+          },
+          {
+            "t": "光",
+            "r": "guāng",
+            "g": "subject"
+          },
+          {
+            "t": "尽",
+            "r": "jìn",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "久",
+            "r": "jiǔ",
+            "g": "adverbial"
+          },
+          {
+            "t": "立",
+            "r": "lì",
+            "g": "predicate"
+          },
+          {
+            "t": "花",
+            "r": "huā",
+            "g": "complement"
+          },
+          {
+            "t": "阴",
+            "r": "yīn",
+            "g": "complement"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "忍",
+            "r": "rěn",
+            "g": "predicate"
+          },
+          {
+            "t": "归",
+            "r": "guī",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "古",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "歌",
+              "r": "か",
+              "g": "subject"
+            },
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "あわれにも",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "今",
+              "r": "きょ",
+              "g": "adverbial"
+            },
+            {
+              "t": "日",
+              "r": "う",
+              "g": "adverbial"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "春",
+              "r": "はる",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "光",
+              "r": "ひかり",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "尽",
+              "r": "つ",
+              "g": "predicate"
+            },
+            {
+              "t": "き",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "花",
+              "r": "はな",
+              "g": "complement"
+            },
+            {
+              "t": "陰",
+              "r": "かげ",
+              "g": "complement"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "久",
+              "r": "ひさ",
+              "g": "adverbial"
+            },
+            {
+              "t": "しく",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "立",
+              "r": "た",
+              "g": "predicate"
+            },
+            {
+              "t": "ち",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "帰",
+              "r": "かえ",
+              "g": "predicate"
+            },
+            {
+              "t": "るに",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "忍",
+              "r": "しの",
+              "g": "predicate"
+            },
+            {
+              "t": "びない",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "见《古今和歌集》。",
+        "zh": [
+          {
+            "t": "见",
+            "r": "jiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "《",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "古",
+            "r": "gǔ",
+            "g": "object"
+          },
+          {
+            "t": "今",
+            "r": "jīn",
+            "g": "object"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "object"
+          },
+          {
+            "t": "歌",
+            "r": "gē",
+            "g": "object"
+          },
+          {
+            "t": "集",
+            "r": "jí",
+            "g": "object"
+          },
+          {
+            "t": "》",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "『",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "古",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "今",
+              "r": "きん",
+              "g": "object"
+            },
+            {
+              "t": "和",
+              "r": "わ",
+              "g": "object"
+            },
+            {
+              "t": "歌",
+              "r": "か",
+              "g": "object"
+            },
+            {
+              "t": "集",
+              "r": "しゅう",
+              "g": "object"
+            },
+            {
+              "t": "』",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "える",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

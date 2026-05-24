@@ -1,0 +1,633 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "genji-modern",
+  "paragraph_id": "genji-modern-p03609",
+  "source_text": " 根据白居易《杨柳枝》诗：“白雪花繁空拂地，绿丝枝弱不胜莺。”",
+  "source_sha256": "bf55e774bc8a1419006c9659616415de64b4dc25c49100c1aa407e256658810d",
+  "source_normalized_sha256": "d744806f05ee471e22aaa41d1037ef7805ac5db1c5340d7ca54ae0683ed4ba91",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 67,
+    "grammar_token_total": 67,
+    "unit_count": 1
+  },
+  "source_chunk_id": "genji-modern-chunk-3609",
+  "source_manifest_sha256": "31fed9a4682318b56bd3687aa261a681dd49e03ca0f121e1342197c4f3c9c0a0",
+  "section": {
+    "id": "第三十四回下-新菜续1",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "attributive"
+      },
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "attributive"
+      },
+      {
+        "t": "回",
+        "r": "huí",
+        "g": "attributive"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "下",
+        "r": "xià",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "新",
+        "r": "xīn",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "cài",
+        "g": "object"
+      },
+      {
+        "t": "续",
+        "r": "xù",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "attributive"
+      },
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "attributive"
+      },
+      {
+        "t": "回",
+        "r": "かい",
+        "g": "attributive"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "下",
+        "r": "げ",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "若",
+        "r": "わか",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "な",
+        "g": "object"
+      },
+      {
+        "t": "続",
+        "r": "ぞく",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第三十四回下-新菜续1-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "attributive"
+      },
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "attributive"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "attributive"
+      },
+      {
+        "t": "回",
+        "r": "huí",
+        "g": "attributive"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "下",
+        "r": "xià",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "新",
+        "r": "xīn",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "cài",
+        "g": "object"
+      },
+      {
+        "t": "续",
+        "r": "xù",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "attributive"
+      },
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "attributive"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "attributive"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "attributive"
+      },
+      {
+        "t": "回",
+        "r": "かい",
+        "g": "attributive"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "下",
+        "r": "げ",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "若",
+        "r": "わか",
+        "g": "attributive"
+      },
+      {
+        "t": "菜",
+        "r": "な",
+        "g": "object"
+      },
+      {
+        "t": "続",
+        "r": "ぞく",
+        "g": "predicate"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "genji-modern-p03609",
+    "source_text": " 根据白居易《杨柳枝》诗：“白雪花繁空拂地，绿丝枝弱不胜莺。”",
+    "units": [
+      {
+        "source_text": "根据白居易《杨柳枝》诗：“白雪花繁空拂地，绿丝枝弱不胜莺。”",
+        "zh": [
+          {
+            "t": "根",
+            "r": "gēn",
+            "g": "adverbial"
+          },
+          {
+            "t": "据",
+            "r": "jù",
+            "g": "adverbial"
+          },
+          {
+            "t": "白",
+            "r": "bái",
+            "g": "attributive"
+          },
+          {
+            "t": "居",
+            "r": "jū",
+            "g": "attributive"
+          },
+          {
+            "t": "易",
+            "r": "yì",
+            "g": "attributive"
+          },
+          {
+            "t": "《",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "杨",
+            "r": "yáng",
+            "g": "attributive"
+          },
+          {
+            "t": "柳",
+            "r": "liǔ",
+            "g": "attributive"
+          },
+          {
+            "t": "枝",
+            "r": "zhī",
+            "g": "object"
+          },
+          {
+            "t": "》",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "诗",
+            "r": "shī",
+            "g": "object"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "白",
+            "r": "bái",
+            "g": "attributive"
+          },
+          {
+            "t": "雪",
+            "r": "xuě",
+            "g": "attributive"
+          },
+          {
+            "t": "花",
+            "r": "huā",
+            "g": "subject"
+          },
+          {
+            "t": "繁",
+            "r": "fán",
+            "g": "predicate"
+          },
+          {
+            "t": "空",
+            "r": "kōng",
+            "g": "adverbial"
+          },
+          {
+            "t": "拂",
+            "r": "fú",
+            "g": "predicate"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "绿",
+            "r": "lǜ",
+            "g": "attributive"
+          },
+          {
+            "t": "丝",
+            "r": "sī",
+            "g": "attributive"
+          },
+          {
+            "t": "枝",
+            "r": "zhī",
+            "g": "subject"
+          },
+          {
+            "t": "弱",
+            "r": "ruò",
+            "g": "predicate"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "胜",
+            "r": "shèng",
+            "g": "predicate"
+          },
+          {
+            "t": "莺",
+            "r": "yīng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "白",
+              "r": "はく",
+              "g": "attributive"
+            },
+            {
+              "t": "居",
+              "r": "きょ",
+              "g": "attributive"
+            },
+            {
+              "t": "易",
+              "r": "い",
+              "g": "attributive"
+            },
+            {
+              "t": "『",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "楊",
+              "r": "よう",
+              "g": "attributive"
+            },
+            {
+              "t": "柳",
+              "r": "りゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "枝",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "』",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "詩",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "によれば、",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "白",
+              "r": "はく",
+              "g": "attributive"
+            },
+            {
+              "t": "雪",
+              "r": "せつ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "花",
+              "r": "はな",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "繁",
+              "r": "しげ",
+              "g": "predicate"
+            },
+            {
+              "t": "く",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "空",
+              "r": "むな",
+              "g": "adverbial"
+            },
+            {
+              "t": "しく",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "地",
+              "r": "ち",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "払",
+              "r": "はら",
+              "g": "predicate"
+            },
+            {
+              "t": "い、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "緑",
+              "r": "みどり",
+              "g": "attributive"
+            },
+            {
+              "t": "糸",
+              "r": "いと",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "枝",
+              "r": "えだ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "弱",
+              "r": "よわ",
+              "g": "predicate"
+            },
+            {
+              "t": "く",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "鶯",
+              "r": "うぐいす",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "堪",
+              "r": "た",
+              "g": "predicate"
+            },
+            {
+              "t": "えない。",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
