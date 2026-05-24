@@ -1,0 +1,672 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p05402",
+  "source_text": "炖鸡肉猪脚杆又快又没得烟子,那好安逸暗!他连荷包蛋也不吃了,对安世敏说;你把这",
+  "source_sha256": "5fb2bfa9e09b726dda43cc8839e85c696e1511d92d4ad1c405b28dded6beddc9",
+  "source_normalized_sha256": "5fb2bfa9e09b726dda43cc8839e85c696e1511d92d4ad1c405b28dded6beddc9",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 72,
+    "grammar_token_total": 72,
+    "unit_count": 2
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-5402",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "attributive"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "attributive"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "机智人物故事",
+    "title_zh": [
+      {
+        "t": "机",
+        "r": "jī",
+        "g": "attributive"
+      },
+      {
+        "t": "智",
+        "r": "zhì",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "rén",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "wù",
+        "g": "attributive"
+      },
+      {
+        "t": "故",
+        "r": "gù",
+        "g": "object"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "機",
+        "r": "き",
+        "g": "attributive"
+      },
+      {
+        "t": "知",
+        "r": "ち",
+        "g": "attributive"
+      },
+      {
+        "t": "に",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "富",
+        "r": "と",
+        "g": "attributive"
+      },
+      {
+        "t": "む",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "人",
+        "r": "じん",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "ぶつ",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "もの",
+        "g": "object"
+      },
+      {
+        "t": "語",
+        "r": "がたり",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-机智人物故事-465-卖礁帘梁平县",
+    "title_zh": [
+      {
+        "t": "4",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "6",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "5",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "卖",
+        "r": "mài",
+        "g": "predicate"
+      },
+      {
+        "t": "礁",
+        "r": "jiāo",
+        "g": "object"
+      },
+      {
+        "t": "帘",
+        "r": "lián",
+        "g": "object"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "梁",
+        "r": "liáng",
+        "g": "attributive"
+      },
+      {
+        "t": "平",
+        "r": "píng",
+        "g": "attributive"
+      },
+      {
+        "t": "县",
+        "r": "xiàn",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "4",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "6",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "5",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "礁",
+        "r": "しょう",
+        "g": "object"
+      },
+      {
+        "t": "帘",
+        "r": "れん",
+        "g": "object"
+      },
+      {
+        "t": "を",
+        "r": "",
+        "g": "object"
+      },
+      {
+        "t": "売",
+        "r": "う",
+        "g": "predicate"
+      },
+      {
+        "t": "る",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "梁",
+        "r": "りょう",
+        "g": "attributive"
+      },
+      {
+        "t": "平",
+        "r": "へい",
+        "g": "attributive"
+      },
+      {
+        "t": "県",
+        "r": "けん",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p05402",
+    "source_text": "炖鸡肉猪脚杆又快又没得烟子,那好安逸暗!他连荷包蛋也不吃了,对安世敏说;你把这",
+    "corrected_text": "炖鸡肉猪脚杆又快又没得烟子，那好安逸噢！他连荷包蛋也不吃了，对安世敏说：你把这",
+    "units": [
+      {
+        "source_text": "炖鸡肉猪脚杆又快又没得烟子，那好安逸噢！",
+        "zh": [
+          {
+            "t": "炖",
+            "r": "dùn",
+            "g": "predicate"
+          },
+          {
+            "t": "鸡",
+            "r": "jī",
+            "g": "object"
+          },
+          {
+            "t": "肉",
+            "r": "ròu",
+            "g": "object"
+          },
+          {
+            "t": "猪",
+            "r": "zhū",
+            "g": "object"
+          },
+          {
+            "t": "脚",
+            "r": "jiǎo",
+            "g": "object"
+          },
+          {
+            "t": "杆",
+            "r": "gǎn",
+            "g": "object"
+          },
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "快",
+            "r": "kuài",
+            "g": "complement"
+          },
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "烟",
+            "r": "yān",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "subject"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "安",
+            "r": "ān",
+            "g": "predicate"
+          },
+          {
+            "t": "逸",
+            "r": "yì",
+            "g": "predicate"
+          },
+          {
+            "t": "噢",
+            "r": "ō",
+            "g": "function"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "鶏",
+              "r": "とり",
+              "g": "object"
+            },
+            {
+              "t": "肉",
+              "r": "にく",
+              "g": "object"
+            },
+            {
+              "t": "や",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "豚",
+              "r": "ぶた",
+              "g": "object"
+            },
+            {
+              "t": "足",
+              "r": "あし",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "煮",
+              "r": "に",
+              "g": "predicate"
+            },
+            {
+              "t": "るのも",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "速",
+              "r": "はや",
+              "g": "complement"
+            },
+            {
+              "t": "く、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "煙",
+              "r": "けむり",
+              "g": "object"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "出",
+              "r": "で",
+              "g": "predicate"
+            },
+            {
+              "t": "ない。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "それは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "なんとも",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "気",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "楽",
+              "r": "らく",
+              "g": "predicate"
+            },
+            {
+              "t": "でいいなあ！",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "他连荷包蛋也不吃了，对安世敏说：你把这",
+        "zh": [
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "连",
+            "r": "lián",
+            "g": "adverbial"
+          },
+          {
+            "t": "荷",
+            "r": "hé",
+            "g": "object"
+          },
+          {
+            "t": "包",
+            "r": "bāo",
+            "g": "object"
+          },
+          {
+            "t": "蛋",
+            "r": "dàn",
+            "g": "object"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "吃",
+            "r": "chī",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "对",
+            "r": "duì",
+            "g": "adverbial"
+          },
+          {
+            "t": "安",
+            "r": "ān",
+            "g": "object"
+          },
+          {
+            "t": "世",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "敏",
+            "r": "mǐn",
+            "g": "object"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "object"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "目",
+              "r": "め",
+              "g": "object"
+            },
+            {
+              "t": "玉",
+              "r": "だま",
+              "g": "object"
+            },
+            {
+              "t": "焼",
+              "r": "や",
+              "g": "object"
+            },
+            {
+              "t": "きまで",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "食",
+              "r": "た",
+              "g": "predicate"
+            },
+            {
+              "t": "べなくなり、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "安",
+              "r": "あん",
+              "g": "object"
+            },
+            {
+              "t": "世",
+              "r": "せい",
+              "g": "object"
+            },
+            {
+              "t": "敏",
+              "r": "びん",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った。「あなたはこれを",
+              "r": "",
+              "g": "object"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

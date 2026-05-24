@@ -1,0 +1,802 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "sichuan-folk-stories-vol1",
+  "paragraph_id": "sichuan-folk-stories-vol1-p05274",
+  "source_text": "呢?跑人浊信说:*那个老头走了,他是告老还乡的周输林周煌老先生。马.况-位族长手拉手出了饭馆。",
+  "source_sha256": "bcdbf601256a4332f22c0d25ac5bcd6c0b5fb7c2ca10bb6f6fbb0542bed851a5",
+  "source_normalized_sha256": "bcdbf601256a4332f22c0d25ac5bcd6c0b5fb7c2ca10bb6f6fbb0542bed851a5",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 100,
+    "grammar_token_total": 100,
+    "unit_count": 2
+  },
+  "source_chunk_id": "sichuan-folk-stories-vol1-chunk-5274",
+  "source_manifest_sha256": "afaaf1f8f4cfca75acd879407be94bc30c1c5711054f28e1347ea50fbb27fedf",
+  "section": {
+    "id": "传说",
+    "title_zh": [
+      {
+        "t": "传",
+        "r": "chuán",
+        "g": "attributive"
+      },
+      {
+        "t": "说",
+        "r": "shuō",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "伝",
+        "r": "でん",
+        "g": "attributive"
+      },
+      {
+        "t": "説",
+        "r": "せつ",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "生活故事",
+    "title_zh": [
+      {
+        "t": "生",
+        "r": "shēng",
+        "g": "attributive"
+      },
+      {
+        "t": "活",
+        "r": "huó",
+        "g": "attributive"
+      },
+      {
+        "t": "故",
+        "r": "gù",
+        "g": "object"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "生",
+        "r": "せい",
+        "g": "attributive"
+      },
+      {
+        "t": "活",
+        "r": "かつ",
+        "g": "attributive"
+      },
+      {
+        "t": "物",
+        "r": "もの",
+        "g": "object"
+      },
+      {
+        "t": "語",
+        "r": "がたり",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "传说-生活故事-452-马鼻梁和黄旗口涪陵市",
+    "title_zh": [
+      {
+        "t": "4",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "5",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "2",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "马",
+        "r": "mǎ",
+        "g": "attributive"
+      },
+      {
+        "t": "鼻",
+        "r": "bí",
+        "g": "attributive"
+      },
+      {
+        "t": "梁",
+        "r": "liáng",
+        "g": "attributive"
+      },
+      {
+        "t": "和",
+        "r": "hé",
+        "g": "function"
+      },
+      {
+        "t": "黄",
+        "r": "huáng",
+        "g": "attributive"
+      },
+      {
+        "t": "旗",
+        "r": "qí",
+        "g": "attributive"
+      },
+      {
+        "t": "口",
+        "r": "kǒu",
+        "g": "attributive"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "涪",
+        "r": "fú",
+        "g": "attributive"
+      },
+      {
+        "t": "陵",
+        "r": "líng",
+        "g": "attributive"
+      },
+      {
+        "t": "市",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "4",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "5",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "2",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": ".",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "馬",
+        "r": "ば",
+        "g": "attributive"
+      },
+      {
+        "t": "鼻",
+        "r": "び",
+        "g": "attributive"
+      },
+      {
+        "t": "梁",
+        "r": "りょう",
+        "g": "attributive"
+      },
+      {
+        "t": "と",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "黄",
+        "r": "こう",
+        "g": "attributive"
+      },
+      {
+        "t": "旗",
+        "r": "き",
+        "g": "attributive"
+      },
+      {
+        "t": "口",
+        "r": "こう",
+        "g": "attributive"
+      },
+      {
+        "t": "（",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "涪",
+        "r": "ふう",
+        "g": "attributive"
+      },
+      {
+        "t": "陵",
+        "r": "りょう",
+        "g": "attributive"
+      },
+      {
+        "t": "市",
+        "r": "し",
+        "g": "attributive"
+      },
+      {
+        "t": "）",
+        "r": "",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "sichuan-folk-stories-vol1-p05274",
+    "source_text": "呢?跑人浊信说:*那个老头走了,他是告老还乡的周输林周煌老先生。马.况-位族长手拉手出了饭馆。",
+    "corrected_text": "呢？旁人这才说：“那个老头走了，他是告老还乡的周翰林周煌老先生。”马、况二位族长手拉手出了饭馆。",
+    "units": [
+      {
+        "source_text": "呢？旁人这才说：“那个老头走了，他是告老还乡的周翰林周煌老先生。”",
+        "zh": [
+          {
+            "t": "呢",
+            "r": "ne",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "旁",
+            "r": "páng",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "adverbial"
+          },
+          {
+            "t": "才",
+            "r": "cái",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "subject"
+          },
+          {
+            "t": "个",
+            "r": "ge",
+            "g": "subject"
+          },
+          {
+            "t": "老",
+            "r": "lǎo",
+            "g": "subject"
+          },
+          {
+            "t": "头",
+            "r": "tóu",
+            "g": "subject"
+          },
+          {
+            "t": "走",
+            "r": "zǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "告",
+            "r": "gào",
+            "g": "attributive"
+          },
+          {
+            "t": "老",
+            "r": "lǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "还",
+            "r": "huán",
+            "g": "attributive"
+          },
+          {
+            "t": "乡",
+            "r": "xiāng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "周",
+            "r": "zhōu",
+            "g": "object"
+          },
+          {
+            "t": "翰",
+            "r": "hàn",
+            "g": "object"
+          },
+          {
+            "t": "林",
+            "r": "lín",
+            "g": "object"
+          },
+          {
+            "t": "周",
+            "r": "zhōu",
+            "g": "object"
+          },
+          {
+            "t": "煌",
+            "r": "huáng",
+            "g": "object"
+          },
+          {
+            "t": "老",
+            "r": "lǎo",
+            "g": "object"
+          },
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "object"
+          },
+          {
+            "t": "生",
+            "r": "sheng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "なのか。そばの",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "subject"
+            },
+            {
+              "t": "がそこで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "「あの",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "老",
+              "r": "ろう",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "去",
+              "r": "さ",
+              "g": "predicate"
+            },
+            {
+              "t": "った、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "隠",
+              "r": "いん",
+              "g": "attributive"
+            },
+            {
+              "t": "居",
+              "r": "きょ",
+              "g": "attributive"
+            },
+            {
+              "t": "して",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "故",
+              "r": "こ",
+              "g": "attributive"
+            },
+            {
+              "t": "郷",
+              "r": "きょう",
+              "g": "attributive"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "帰",
+              "r": "かえ",
+              "g": "attributive"
+            },
+            {
+              "t": "る",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "周",
+              "r": "しゅう",
+              "g": "object"
+            },
+            {
+              "t": "翰",
+              "r": "かん",
+              "g": "object"
+            },
+            {
+              "t": "林",
+              "r": "りん",
+              "g": "object"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "周",
+              "r": "しゅう",
+              "g": "object"
+            },
+            {
+              "t": "煌",
+              "r": "こう",
+              "g": "object"
+            },
+            {
+              "t": "老",
+              "r": "ろう",
+              "g": "object"
+            },
+            {
+              "t": "先",
+              "r": "せん",
+              "g": "object"
+            },
+            {
+              "t": "生",
+              "r": "せい",
+              "g": "object"
+            },
+            {
+              "t": "だ。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "马、况二位族长手拉手出了饭馆。",
+        "zh": [
+          {
+            "t": "马",
+            "r": "mǎ",
+            "g": "subject"
+          },
+          {
+            "t": "、",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "况",
+            "r": "kuàng",
+            "g": "subject"
+          },
+          {
+            "t": "二",
+            "r": "èr",
+            "g": "subject"
+          },
+          {
+            "t": "位",
+            "r": "wèi",
+            "g": "subject"
+          },
+          {
+            "t": "族",
+            "r": "zú",
+            "g": "subject"
+          },
+          {
+            "t": "长",
+            "r": "zhǎng",
+            "g": "subject"
+          },
+          {
+            "t": "手",
+            "r": "shǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "拉",
+            "r": "lā",
+            "g": "adverbial"
+          },
+          {
+            "t": "手",
+            "r": "shǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "出",
+            "r": "chū",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "饭",
+            "r": "fàn",
+            "g": "object"
+          },
+          {
+            "t": "馆",
+            "r": "guǎn",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "馬",
+              "r": "ば",
+              "g": "subject"
+            },
+            {
+              "t": "氏",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "況",
+              "r": "きょう",
+              "g": "subject"
+            },
+            {
+              "t": "氏",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "二",
+              "r": "ふた",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "り",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "族",
+              "r": "ぞく",
+              "g": "subject"
+            },
+            {
+              "t": "長",
+              "r": "ちょう",
+              "g": "subject"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "手",
+              "r": "て",
+              "g": "adverbial"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "取",
+              "r": "と",
+              "g": "adverbial"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "合",
+              "r": "あ",
+              "g": "adverbial"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "飯",
+              "r": "はん",
+              "g": "object"
+            },
+            {
+              "t": "館",
+              "r": "かん",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "出",
+              "r": "で",
+              "g": "predicate"
+            },
+            {
+              "t": "た。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
