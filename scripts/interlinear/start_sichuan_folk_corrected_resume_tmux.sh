@@ -7,6 +7,7 @@ cd "$root"
 book_id="sichuan-folk-stories-vol1"
 model="${MODEL:-gpt-5.5}"
 reasoning="${REASONING:-medium}"
+reviewed_chunk_dir="${SICHUAN_FOLK_CHUNK_DIR:-books/$book_id/work/bilingual/reviewed-v2/chunks}"
 writer_session="${WRITER_SESSION:-zhjpbook-sichuan-folk-json}"
 sanitizer_session="${SANITIZER_SESSION:-zhjpbook-sichuan-folk-sanitizer}"
 monitor_session="${MONITOR_SESSION:-zhjpbook-sichuan-folk-monitor}"
@@ -17,7 +18,7 @@ bash scripts/interlinear/prepare_sichuan_folk_sources.sh
 report="$(
   python scripts/interlinear/report_interlinear_progress.py \
     --manifest "books/$book_id/work/bilingual/chunks/manifest.json" \
-    --chunk-dir "books/$book_id/work/bilingual/reviewed/chunks"
+    --chunk-dir "$reviewed_chunk_dir"
 )"
 echo "$report"
 first_missing="$(awk -F= '/^first_missing=/ {print $2}' <<<"$report")"
@@ -47,6 +48,7 @@ fi
 
 if ! tmux has-session -t "$writer_session" 2>/dev/null; then
   START_INDEX="$resume_index" \
+  SICHUAN_FOLK_CHUNK_DIR="$reviewed_chunk_dir" \
   MODEL="$model" \
   REASONING="$reasoning" \
   RETRY_FAILED=1 \
@@ -62,8 +64,8 @@ if ! tmux has-session -t "$monitor_session" 2>/dev/null; then
   REVIEW_SESSION="$writer_session" \
   INTERVAL_SECONDS="${INTERVAL_SECONDS:-1800}" \
   STALL_SECONDS="${STALL_SECONDS:-3600}" \
-  COMPILE_COMMAND="bash scripts/interlinear/compile_sichuan_folk_both_previews.sh" \
-  START_COMMAND="MODEL=$model REASONING=$reasoning RETRY_FAILED=1 bash scripts/interlinear/start_sichuan_folk_parallel_json_tmux.sh $writer_session" \
+  COMPILE_COMMAND="SICHUAN_FOLK_CHUNK_DIR=$reviewed_chunk_dir bash scripts/interlinear/compile_sichuan_folk_both_previews.sh" \
+  START_COMMAND="SICHUAN_FOLK_CHUNK_DIR=$reviewed_chunk_dir MODEL=$model REASONING=$reasoning RETRY_FAILED=1 bash scripts/interlinear/start_sichuan_folk_parallel_json_tmux.sh $writer_session" \
   bash scripts/interlinear/start_interlinear_monitor_tmux.sh "$book_id"
 else
   echo "monitor already running: $monitor_session"

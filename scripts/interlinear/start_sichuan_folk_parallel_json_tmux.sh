@@ -27,7 +27,7 @@ review_candidate_dir="$review_root/candidates"
 review_merged_dir="$review_root/merged"
 review_rejected_dir="$review_root/merge-rejected"
 review_done_file="$review_root/generation.done"
-reviewed_chunk_dir="books/$book_id/work/bilingual/reviewed/chunks"
+reviewed_chunk_dir="${SICHUAN_FOLK_CHUNK_DIR:-books/$book_id/work/bilingual/reviewed-v2/chunks}"
 log_dir="books/$book_id/work/logs"
 run_script="$work_root/${session}.run.sh"
 
@@ -121,7 +121,7 @@ review_merge_once() {
     --final-dir '$reviewed_chunk_dir' \
     --merged-dir '$review_merged_dir' \
     --rejected-dir '$review_rejected_dir' \
-    --after-merge-command 'bash scripts/interlinear/compile_sichuan_folk_both_previews.sh'
+    --after-merge-command 'SICHUAN_FOLK_CHUNK_DIR="$reviewed_chunk_dir" bash scripts/interlinear/compile_sichuan_folk_both_previews.sh'
 }
 
 running_count() {
@@ -179,10 +179,10 @@ if [[ "${AUTOREPAIR_COMPANION:-1}" != "0" ]]; then
     WORKER_SESSION="$session" \
     REVIEW_SESSION="$session" \
     SANITIZER_SESSION="$sanitizer_session_arg" \
-    START_COMMAND="MODEL=$model REASONING=$reasoning RETRY_FAILED=1 bash scripts/interlinear/start_sichuan_folk_parallel_json_tmux.sh $session" \
+    START_COMMAND="SICHUAN_FOLK_CHUNK_DIR=$reviewed_chunk_dir MODEL=$model REASONING=$reasoning RETRY_FAILED=1 bash scripts/interlinear/start_sichuan_folk_parallel_json_tmux.sh $session" \
     SANITIZER_COMMAND="$sanitizer_command_arg" \
-    COMPILE_COMMAND="bash scripts/interlinear/compile_sichuan_folk_both_previews.sh" \
-    COMMIT_COMMAND="bash scripts/interlinear/commit_sichuan_folk_progress.sh" \
+    COMPILE_COMMAND="SICHUAN_FOLK_CHUNK_DIR=$reviewed_chunk_dir bash scripts/interlinear/compile_sichuan_folk_both_previews.sh" \
+    COMMIT_COMMAND="SICHUAN_FOLK_CHUNK_DIR=$reviewed_chunk_dir bash scripts/interlinear/commit_sichuan_folk_progress.sh" \
     INTERVAL_SECONDS="${AUTOREPAIR_INTERVAL_SECONDS:-900}" \
     STALL_SECONDS="${AUTOREPAIR_STALL_SECONDS:-3600}" \
     MODEL="$model" \

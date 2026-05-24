@@ -6,7 +6,7 @@ cd "$root"
 
 book_id="sichuan-folk-stories-vol1"
 manifest="books/$book_id/work/bilingual/chunks/manifest.json"
-chunk_dir="${SICHUAN_FOLK_CHUNK_DIR:-books/$book_id/work/bilingual/reviewed/chunks}"
+chunk_dir="${SICHUAN_FOLK_CHUNK_DIR:-books/$book_id/work/bilingual/reviewed-v2/chunks}"
 zh_json="books/$book_id/work/bilingual/preview/$book_id.partial.json"
 jp_json="books/$book_id/work/bilingual/preview/$book_id.jp-main.partial.json"
 build_root="${SICHUAN_FOLK_BUILD_ROOT:-build/$book_id}"
