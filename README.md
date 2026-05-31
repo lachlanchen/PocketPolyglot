@@ -17,6 +17,16 @@ PocketPolyglot turns bilingual texts into ruby, pinyin, grammar-colored, line-al
 
 The repository is a toolkit: TeX templates, Python scripts, JSON schemas, preview assets, and sample data. Bring your own rights-cleared source texts before publishing full generated books.
 
+## Four Editions At A Glance
+
+The same Kokoro interior page rendered as all four standard editions:
+
+<p align="center">
+  <img src="assets/edition-comparisons/kokoro-four-editions-page-20.png" alt="Kokoro shown as ZH-main color, ZH-main black and white, JP-main color, and JP-main black and white editions" width="100%">
+</p>
+
+Chinese/Japanese is the current showcase pair, but the pipeline is not limited to it. Any language pair with prepared aligned text and readings can use the same book model: EN-JP, ZH-EN, classical-modern, learner gloss editions, or teacher-curated parallel readers.
+
 ## What It Builds
 
 Every complete paired book can be exported in four reader choices:
@@ -70,7 +80,7 @@ Export completed local PDFs into a flat browsing folder and regenerate README pr
 
 ```sh
 make export-books
-make readme-previews
+make readme-assets
 ```
 
 ## Data Model
@@ -79,8 +89,8 @@ The core format is a paragraph/chapter JSON model. Text is split into aligned re
 
 ```json
 {
-  "zh": [{"t": "天地", "r": "tiān dì", "g": "subject"}],
-  "ja": [[{"t": "天地", "r": "てんち", "g": "subject"}]]
+  "zh": [{"t": "天", "r": "tiān", "g": "subject"}, {"t": "地", "r": "dì", "g": "subject"}],
+  "ja": [[{"t": "天", "r": "てん", "g": "subject"}, {"t": "地", "r": "ち", "g": "subject"}]]
 }
 ```
 
@@ -101,6 +111,7 @@ Stable token fields:
 | `scripts/interlinear/` | JSON chunking, validation, rendering, compiling, long-run workers |
 | `data/interlinear/sample.json` | small public sample of the structured format |
 | `assets/readme-previews/` | first-page preview images generated from PDFs |
+| `assets/edition-comparisons/` | four-edition comparison image generated from one interior PDF page |
 | `references/` | design notes, naming notes, and pipeline references |
 | `sources/` | local source books, ignored by Git |
 | `build/` | generated PDFs and TeX intermediates, ignored by Git |
