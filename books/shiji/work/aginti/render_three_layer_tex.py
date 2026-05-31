@@ -116,6 +116,7 @@ def produce_tex(chunk_ids: list[str], direction: str, bw: bool, cover_image: str
         section = data.get("section", {})
         sec_id = section.get("id", cid)
         if sec_id != last_section_id:
+            tex_lines.append(r"\clearpage")
             tex_lines.append(r"\section{" + tex_escape(sec_id) + "}")
             last_section_id = sec_id
 

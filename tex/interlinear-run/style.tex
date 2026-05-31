@@ -143,8 +143,14 @@
 }
 
 \NewDocumentCommand{\RunSubsection}{m m}{%
-  \section*{#1\quad{\jpfont\small #2}}%
+  \if\relax\detokenize{#1#2}\relax
+  \else
+    \clearpage
+    \section*{#1\quad{\jpfont\small #2}}%
+  \fi
 }
+
+\newcommand{\RunStoryPageBreak}{\clearpage}
 
 \NewDocumentCommand{\RunStory}{m m m m m}{%
   \Needspace{9\baselineskip}%

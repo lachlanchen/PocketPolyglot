@@ -104,6 +104,13 @@ def plain_tokens(tokens: list[dict[str, str]]) -> str:
     return "".join(str(token.get("t", "")) for token in tokens)
 
 
+def has_title(entry: dict[str, Any]) -> bool:
+    return bool(
+        plain_tokens(entry.get("title_zh", [])).strip()
+        or plain_tokens(entry.get("title_ja", [])).strip()
+    )
+
+
 def render_author(author: str, author_reading: str) -> str:
     author = author.strip()
     if not author:
@@ -180,10 +187,13 @@ def convert(
             rf"\JpMainSection{brace(render_tokens(section['title_ja'], 'jpruby'))}{brace(render_tokens(section['title_zh'], 'zhpy'))}"
         )
         for subsection in section.get("subsections", []):
-            out.append(
-                rf"\JpMainSubsection{brace(render_tokens(subsection['title_ja'], 'jpruby'))}{brace(render_tokens(subsection['title_zh'], 'zhpy'))}"
-            )
-            for story in subsection.get("stories", []):
+            if has_title(subsection):
+                out.append(
+                    rf"\JpMainSubsection{brace(render_tokens(subsection['title_ja'], 'jpruby'))}{brace(render_tokens(subsection['title_zh'], 'zhpy'))}"
+                )
+            for story_index, story in enumerate(subsection.get("stories", [])):
+                if story_index > 0:
+                    out.append(r"\JpMainStoryPageBreak")
                 title_ja_story = render_tokens(story["title_ja"], "jpruby")
                 title_zh_story = render_tokens(story["title_zh"], "zhpy")
                 place_ja = render_tokens(story.get("place_ja", []), "jpruby")
