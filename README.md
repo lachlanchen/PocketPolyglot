@@ -1,174 +1,112 @@
-# ZhJpBook
+<p align="center">
+  <a href="README.md">English</a> ·
+  <a href="i18n/README.zh-Hans.md">中文</a> ·
+  <a href="i18n/README.ja.md">日本語</a>
+</p>
 
-Pocket-size TeX workflow for a Chinese/Japanese paired reader with notes, pinyin, and furigana.
+# PocketPolyglot
+
+Generate beautiful pocket-size interlinear books for language learning.
+
+[![Website](https://img.shields.io/badge/learn.lazying.art-PocketPolyglot-7b5dff)](https://learn.lazying.art)
+[![TeX](https://img.shields.io/badge/XeLaTeX-pocket%20books-0f766e)](https://www.tug.org/xetex/)
+[![Python](https://img.shields.io/badge/Python-pipeline-3776ab)](scripts/)
+[![JSON](https://img.shields.io/badge/JSON-line%20aligned-f59e0b)](data/interlinear/sample.json)
+
+PocketPolyglot turns bilingual texts into ruby, pinyin, grammar-colored, line-aligned pocket books. The current production workflow focuses on Chinese/Japanese editions, but the data model is language-pair neutral: EN-JP, ZH-EN, classical-modern, and other paired reading formats can use the same structure.
+
+The repository is a toolkit: TeX templates, Python scripts, JSON schemas, preview assets, and sample data. Bring your own rights-cleared source texts before publishing full generated books.
+
+## What It Builds
+
+Every complete paired book can be exported in four reader choices:
+
+| Direction | Color | Black and White |
+| --- | --- | --- |
+| Chinese main text with Japanese notes | grammar-colored ruby/pinyin edition | monochrome edition for e-ink |
+| Japanese main text with Chinese notes | grammar-colored furigana/pinyin edition | monochrome edition for e-ink |
+
+The page format is pocket-size, with line-based interlinear blocks, full furigana over Japanese kanji, pinyin over Chinese text, optional grammar roles, tables of contents, generated covers, and chapter page breaks.
+
+## Gallery
+
+These previews are first pages rendered from generated PDFs, not standalone cover images.
+
+| Preview | Book | Editions |
+| --- | --- | --- |
+| <img src="assets/readme-previews/kokoro.png" width="150" alt="Kokoro first page preview"> | **Kokoro / 心 / こころ** | ZH-main color, ZH-main black and white, JP-main color, JP-main black and white |
+| <img src="assets/readme-previews/snow-country.png" width="150" alt="Snow Country first page preview"> | **Snow Country / 雪国** | ZH-main color, ZH-main black and white, JP-main color, JP-main black and white |
+| <img src="assets/readme-previews/no-longer-human.png" width="150" alt="No Longer Human first page preview"> | **No Longer Human / 人間失格** | ZH-main color, ZH-main black and white, JP-main color, JP-main black and white |
+| <img src="assets/readme-previews/the-old-capital.png" width="150" alt="The Old Capital first page preview"> | **The Old Capital / 古都** | ZH-main color, ZH-main black and white, JP-main color, JP-main black and white |
+| <img src="assets/readme-previews/izu-no-odori.png" width="150" alt="The Dancing Girl of Izu first page preview"> | **The Dancing Girl of Izu / 伊豆の踊子** | ZH-main color, ZH-main black and white, JP-main color, JP-main black and white |
+| <img src="assets/readme-previews/kinkakuji.png" width="150" alt="The Temple of the Golden Pavilion first page preview"> | **The Temple of the Golden Pavilion / 金閣寺** | ZH-main color, ZH-main black and white, JP-main color, JP-main black and white |
+| <img src="assets/readme-previews/rashomon-stories.png" width="150" alt="Rashomon stories first page preview"> | **Rashomon Stories / 羅生門短篇集** | ZH-main color, ZH-main black and white, JP-main color, JP-main black and white |
+| <img src="assets/readme-previews/genji-modern.png" width="150" alt="Tale of Genji first page preview"> | **The Tale of Genji / 源氏物語** | ZH-main color, ZH-main black and white, JP-main color, JP-main black and white |
+| <img src="assets/readme-previews/sishu-jizhu-aginti.png" width="150" alt="Sishu Zhangju Jizhu first page preview"> | **Sishu Zhangju Jizhu / 四書章句集註** | ZH-main color, ZH-main black and white, JP-main color, JP-main black and white |
+| <img src="assets/readme-previews/shiji-aginti.png" width="150" alt="Shiji first page preview"> | **Shiji / 史記** | ZH-main color, ZH-main black and white, JP-main color, JP-main black and white |
+| <img src="assets/readme-previews/sichuan-folk-stories-vol1.png" width="150" alt="Sichuan folk stories first page preview"> | **Sichuan Folk Stories, Volume 1 / 中国民间故事集成四川卷上** | ZH-main color, ZH-main black and white, JP-main color, JP-main black and white |
 
 ## Quick Start
 
-Build the sample paired book:
+Build the simple paired demo:
 
 ```sh
 make sample
 ```
 
-The PDF is written to `build/paired/book.pdf`.
-
-Build the Chinese-main/Japanese-comment block layout:
+Build the Chinese-main interlinear sample:
 
 ```sh
 make interlinear
 ```
 
-The PDF is written to `build/interlinear-block/book.pdf`.
-
-Build the run-in layout, where Chinese units sit back-to-back and each Japanese comment starts under its own Chinese sentence:
-
-```sh
-make interlinear-run
-```
-
-The PDF is written to `build/interlinear-run/book.pdf`. Both interlinear layouts use `data/interlinear/sample.json`.
-
-Build the Japanese-main/Chinese-comment layout from the same interlinear JSON:
+Build the Japanese-main interlinear sample from the same JSON:
 
 ```sh
 make interlinear-jp-main
 ```
 
-The PDF is written to `build/interlinear-jp-main/book.pdf`. Use `JP_MAIN_COVER=assets/covers/kokoro-jp-main/kokoro-cover.jpeg` to include the prepared Kokoro cover image.
-
-For paired-language book work, the expected deliverable is both reading directions whenever renderers exist. For Kokoro this means the Chinese-main/Japanese-comment PDF and the Japanese-main/Chinese-comment PDF are compiled after every accepted chunk.
-
-Convert `sources/心.epub` to Markdown:
+Export completed local PDFs into a flat browsing folder and regenerate README previews:
 
 ```sh
-make kokoro-md
+make export-books
+make readme-previews
 ```
 
-Run the full Codex-assisted `心` interlinear pipeline in tmux:
+## Data Model
 
-```sh
-make kokoro-tmux
-```
-
-The worker uses `gpt-5.5` with high reasoning, resumes one Codex session chunk by chunk, writes `books/kokoro/markdown/book.md`, assembles `data/interlinear/kokoro/assembled/current.json`, and compiles with the `interlinear-block` style to `build/interlinear-block/book.pdf`.
-
-Run the bilingual-source `心（こころ）` pipeline with Chinese as main text and the Japanese original as comment text:
-
-```sh
-make kokoro-bilingual-tmux
-```
-
-This uses `gpt-5.5` with `xhigh` reasoning, compiles a partial preview after every completed chunk, and writes the named PDF to `build/interlinear-block/心（こころ）.pdf`.
-Future bilingual runs default to one Chinese source paragraph per chunk and attach Japanese original context at the chapter/story level. Use `--chunk-mode size --max-chars 450` only when you intentionally want grouped paragraphs.
-
-Run OCR on a few pages of the scanned PDF:
-
-```sh
-make ocr-sample PAGES=60-62
-```
-
-The Markdown is written to `ocr/sample-pages.md`. For the whole PDF:
-
-```sh
-make ocr-all
-```
-
-## Preparing Paired Text
-
-Edit `data/paired/source.md`. Each aligned unit is one block:
-
-```md
-::: pair
-zh: \zhpy{大}{dà}\zhpy{學}{xué}之道，在明明德。
-jp: \jpruby{大学}{だいがく}の\jpruby{道}{みち}は、\jpruby{明徳}{めいとく}を\jpruby{明}{あき}らかにするに\jpruby{在}{あ}り。
-zh_comment: Chinese note here.
-jp_comment: \jpruby{朱子}{しゅし}\jpruby{曰}{い}く：\jpruby{大学}{だいがく}とは、\jpruby{大人}{たいじん}の\jpruby{学}{がく}なり。
-:::
-```
-
-Use `\zhpy{字}{pin}` for pinyin and `\jpruby{漢字}{かな}` for Japanese ruby. Ruby can be hidden in `tex/paired/book.tex` with `\HideAnnotations`.
-
-For Japanese, wrap every kanji or kanji compound in `\jpruby{...}{...}` when you want full furigana. A drafting helper is available:
-
-```sh
-python scripts/paired/add_japanese_furigana.py "大学の道は、明徳を明らかにする。"
-```
-
-Review the output manually; automatic readings can be wrong for classical text, names, and terms.
-
-## Interlinear JSON
-
-Use `data/interlinear/sample.json` when the book should read continuously in Chinese while Japanese sits below each Chinese sentence as a compact comment. Each story is split into paragraphs, and each paragraph into reading units:
+The core format is a paragraph/chapter JSON model. Text is split into aligned reading units, and each token can carry a reading and an optional grammar role.
 
 ```json
 {
-  "zh": [{"t": "天地", "r": "tiān dì"}, {"t": "整治好", "r": "zhěng zhì hǎo"}],
-  "ja": [
-    [{"t": "天地", "r": "てんち"}, {"t": "を", "r": ""}],
-    [{"t": "整", "r": "ととの"}, {"t": "えた。", "r": ""}]
-  ]
+  "zh": [{"t": "天地", "r": "tiān dì", "g": "subject"}],
+  "ja": [[{"t": "天地", "r": "てんち", "g": "subject"}]]
 }
 ```
 
-Chinese is the main row. Japanese is intentionally split into two short rows so it works like a running comment rather than a second equal text column.
+Stable token fields:
 
-Tokens may also carry an optional grammar role for colorized annotated editions:
+| Field | Meaning |
+| --- | --- |
+| `t` | surface text |
+| `r` | ruby, furigana, pinyin, or other reading |
+| `g` | optional grammar role such as `subject`, `predicate`, `object`, `attributive`, `adverbial`, `complement`, `topic`, or `function` |
 
-```json
-{"t": "我", "r": "wǒ", "g": "subject"}
-```
+## Project Layout
 
-Supported role keys are English-only: `subject`, `predicate`, `object`, `attributive`, `adverbial`, `complement`, `topic`, and `function`. Use `g` as the single visual grammar-component role across both languages; attached particles and markers can inherit the major component role when that gives a clearer aligned color. The renderer treats this as a display layer only; text and readings stay unchanged, so an annotated JSON can be validated against the same source text.
+| Path | Purpose |
+| --- | --- |
+| `tex/` | XeLaTeX templates for paired, block interlinear, run-in, and JP-main layouts |
+| `scripts/books/` | EPUB/PDF/Markdown preparation, cover composition, preview export |
+| `scripts/interlinear/` | JSON chunking, validation, rendering, compiling, long-run workers |
+| `data/interlinear/sample.json` | small public sample of the structured format |
+| `assets/readme-previews/` | first-page preview images generated from PDFs |
+| `references/` | design notes, naming notes, and pipeline references |
+| `sources/` | local source books, ignored by Git |
+| `build/` | generated PDFs and TeX intermediates, ignored by Git |
 
-The block layout in `tex/interlinear-block/` gives every sentence its own Chinese row plus Japanese note. The run-in layout in `tex/interlinear-run/` makes sentence units flow back-to-back; the Japanese note starts at the same horizontal point as its Chinese unit and wraps inside the measured Chinese-unit width.
+## Public Use
 
-The Japanese-main layout in `tex/interlinear-jp-main/` uses the same JSON without changing the source data: Japanese ruby text becomes the main continuous text, and the Chinese pinyin text becomes the smaller comment line under each reading unit.
+PocketPolyglot is designed for language learners, teachers, and book builders who want maintainable bilingual editions rather than manually aligned TeX. Keep source rights clear: publish templates, samples, and previews freely; publish full book PDFs only when the source text and translation can be redistributed.
 
-For bilingual source books, prepare both `books/<book-id>/markdown/zh.md` and `books/<book-id>/markdown/ja.md`. The chunker preserves each Chinese paragraph as its own task by default, while the Japanese reference is intentionally broader chapter context so the Codex worker can find the matching original passage instead of trusting a fragile sentence-range estimate.
-
-Completed bilingual work is also exported into paragraph artifacts:
-
-```text
-data/interlinear/<book-id>/artifacts/paragraphs/
-```
-
-Those artifacts store each paragraph's aligned text, pinyin/furigana, and grammar roles independently from any chunk split. Future runs hydrate new chunk files from the artifact store before calling Codex, so changing from grouped chunks to paragraph chunks does not restart finished work from zero.
-
-The default page is A6 pocket size. To use two columns in the paired demo instead, uncomment `\PairLayoutSideBySide` in `tex/paired/book.tex`.
-
-## Repository Layout
-
-```text
-data/interlinear/      structured JSON corpus
-data/interlinear/*/assembled/ current assembled book JSON
-data/interlinear/*/legacy/ archived older assembled JSON versions
-data/paired/           simple paired Markdown demo
-scripts/interlinear/   JSON-to-TeX renderers
-scripts/ocr/           OCR helper
-scripts/paired/        paired Markdown and ruby helpers
-assets/covers/         tracked cover images for compiled editions
-prompt_tools/          tmux/Codex long-running book pipelines
-tex/interlinear-block/ previous sentence-block layout
-tex/interlinear-run/   new back-to-back main-text layout
-tex/interlinear-jp-main/ Japanese-main/Chinese-comment layout
-tex/paired/            simple paired reader demo
-ocr/                   reviewed OCR Markdown
-sources/               local scanned PDFs, ignored by Git
-```
-
-## OCR Notes
-
-Original scanned PDFs live in `sources/` and are intentionally ignored by Git. The included scan is an image PDF, so OCR is imperfect. The OCR script creates reviewable Markdown with page headings; it does not try to silently "fix" hard character errors. For this scan, the strongest default found here is:
-
-```sh
-python scripts/ocr/pdf_to_markdown.py "sources/中国民间故事集成 四川卷 上 10978512.pdf" \
-  --pages 60-62 \
-  --lang chi_sim \
-  --psm 4 \
-  --dpi 300 \
-  --output ocr/sample-pages.md
-```
-
-Use `--crop --threshold` only if a different scan has dirty margins or weak contrast; Tesseract performed better on this PDF from the raw rendered page. Use `--save-images-dir ocr/images` when you want the page images beside the Markdown for manual correction.
-
-To switch OCR language, pass `OCR_LANG=jpn`, `OCR_LANG=jpn_vert`, `OCR_LANG=chi_tra`, or another language shown by `tesseract --list-langs`.
+Project site: [learn.lazying.art](https://learn.lazying.art)
