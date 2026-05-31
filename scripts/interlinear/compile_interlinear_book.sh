@@ -29,6 +29,7 @@ Options:
   --allow-missing                build from available chunks only
   --hide-secondary-ja            do not render ja[1] explanatory/comment lines
   --secondary-ja-mode <mode>     auto, comment, hide, or merge ja[1+] into Japanese text
+  --merge-continuation-units     merge clause-fragment units into sentence-like prose rows
   --include-section-title-zh <t> keep only a Chinese section title after assembly
   --drop-editorial-notes         drop note-only paragraphs such as [1]... footnotes
   -h, --help                     show help
@@ -56,6 +57,7 @@ output_pdf=""
 allow_missing=0
 hide_secondary_ja=0
 secondary_ja_mode="auto"
+merge_continuation_units=0
 include_section_title_zh=()
 drop_editorial_notes=0
 
@@ -81,6 +83,7 @@ while [[ $# -gt 0 ]]; do
     --allow-missing) allow_missing=1; shift ;;
     --hide-secondary-ja) hide_secondary_ja=1; shift ;;
     --secondary-ja-mode) secondary_ja_mode="${2:-}"; shift 2 ;;
+    --merge-continuation-units) merge_continuation_units=1; shift ;;
     --include-section-title-zh) include_section_title_zh+=("${2:-}"); shift 2 ;;
     --drop-editorial-notes) drop_editorial_notes=1; shift ;;
     -h|--help) usage; exit 0 ;;
@@ -137,6 +140,9 @@ if [[ "$hide_secondary_ja" -eq 1 ]]; then
   secondary_ja_mode="hide"
 fi
 render_args+=(--secondary-ja-mode "$secondary_ja_mode")
+if [[ "$merge_continuation_units" -eq 1 ]]; then
+  render_args+=(--merge-continuation-units)
+fi
 
 "${assemble_cmd[@]}"
 filter_args=()

@@ -33,6 +33,7 @@ bash scripts/interlinear/compile_interlinear_book.sh \
   --build-dir "$build_root/zh-main/color" \
   --color-mode color \
   --secondary-ja-mode merge \
+  --merge-continuation-units \
   --output-pdf "$build_root/zh-main/color/人間失格（にんげんしっかく）.pdf" \
   --allow-missing
 
@@ -54,6 +55,7 @@ bash scripts/interlinear/compile_interlinear_book.sh \
   --build-dir "$build_root/zh-main/blackwhite" \
   --color-mode blackwhite \
   --secondary-ja-mode merge \
+  --merge-continuation-units \
   --output-pdf "$build_root/zh-main/blackwhite/人間失格（にんげんしっかく）.pdf" \
   --allow-missing
 

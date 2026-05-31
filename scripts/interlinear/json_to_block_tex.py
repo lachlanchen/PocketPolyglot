@@ -20,6 +20,13 @@ COMMENT_LINE_ROLES = {
     "注",
 }
 
+SENTENCE_FINAL_PUNCT = set("。！？!?；;")
+OPENING_PUNCT = set("「『“‘（【《〈〔〖〘〚")
+CLOSING_PUNCT = set("」』”’）】》〉〕〗〙〛")
+OTHER_BOUNDARY_PUNCT = set("，、：:,.…—-")
+NO_INSERT_AFTER_PUNCT = SENTENCE_FINAL_PUNCT | OPENING_PUNCT | CLOSING_PUNCT | OTHER_BOUNDARY_PUNCT
+NO_INSERT_BEFORE_PUNCT = SENTENCE_FINAL_PUNCT | OPENING_PUNCT | CLOSING_PUNCT | OTHER_BOUNDARY_PUNCT
+
 
 def tex_escape(text: str) -> str:
     replacements = {
@@ -76,6 +83,47 @@ def plain_tokens(tokens: list[dict[str, str]]) -> str:
     return "".join(str(token.get("t", "")) for token in tokens)
 
 
+def strip_trailing_closers(text: str) -> str:
+    text = text.strip()
+    while text and text[-1] in CLOSING_PUNCT:
+        text = text[:-1].rstrip()
+    return text
+
+
+def ends_sentence(tokens: list[dict[str, str]]) -> bool:
+    text = strip_trailing_closers(plain_tokens(tokens))
+    return bool(text) and text[-1] in SENTENCE_FINAL_PUNCT
+
+
+def copy_tokens(tokens: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return [dict(token) for token in tokens if isinstance(token, dict)]
+
+
+def needs_join_punctuation(left: list[dict[str, Any]], right: list[dict[str, Any]]) -> bool:
+    left_text = plain_tokens(left).strip()
+    right_text = plain_tokens(right).strip()
+    if not left_text or not right_text:
+        return False
+    if left_text[-1] in NO_INSERT_AFTER_PUNCT:
+        return False
+    if right_text[0] in NO_INSERT_BEFORE_PUNCT:
+        return False
+    return True
+
+
+def join_tokens(
+    left: list[dict[str, Any]],
+    right: list[dict[str, Any]],
+    *,
+    inserted_punctuation: str = "",
+) -> list[dict[str, Any]]:
+    joined = copy_tokens(left)
+    if inserted_punctuation and needs_join_punctuation(left, right):
+        joined.append({"t": inserted_punctuation, "g": "function"})
+    joined.extend(copy_tokens(right))
+    return joined
+
+
 def has_title(entry: dict[str, Any]) -> bool:
     return bool(
         plain_tokens(entry.get("title_zh", [])).strip()
@@ -126,6 +174,64 @@ def is_comment_ja_line(unit: dict[str, Any], index: int) -> bool:
     return role in COMMENT_LINE_ROLES
 
 
+def clone_unit(unit: dict[str, Any]) -> dict[str, Any]:
+    cloned = dict(unit)
+    cloned["zh"] = copy_tokens(unit.get("zh", []))
+    cloned["ja"] = [copy_tokens(line) for line in unit.get("ja", []) if isinstance(line, list)]
+    if "ja_line_roles" in unit:
+        cloned["ja_line_roles"] = list(unit.get("ja_line_roles") or [])
+    return cloned
+
+
+def merge_unit_pair(left: dict[str, Any], right: dict[str, Any]) -> dict[str, Any]:
+    merged = dict(left)
+    merged["zh"] = join_tokens(left.get("zh", []), right.get("zh", []), inserted_punctuation="，")
+
+    left_ja = left.get("ja", [])
+    right_ja = right.get("ja", [])
+    ja_lines: list[list[dict[str, Any]]] = []
+    for index in range(max(len(left_ja), len(right_ja))):
+        left_line = left_ja[index] if index < len(left_ja) and isinstance(left_ja[index], list) else []
+        right_line = right_ja[index] if index < len(right_ja) and isinstance(right_ja[index], list) else []
+        if left_line and right_line:
+            ja_lines.append(join_tokens(left_line, right_line))
+        elif left_line:
+            ja_lines.append(copy_tokens(left_line))
+        else:
+            ja_lines.append(copy_tokens(right_line))
+    merged["ja"] = ja_lines
+
+    left_roles = list(left.get("ja_line_roles") or [])
+    right_roles = list(right.get("ja_line_roles") or [])
+    roles: list[str] = []
+    for index in range(max(len(left_roles), len(right_roles))):
+        role = left_roles[index] if index < len(left_roles) else ""
+        if not role and index < len(right_roles):
+            role = right_roles[index]
+        roles.append(role)
+    if roles:
+        merged["ja_line_roles"] = roles
+    return merged
+
+
+def merge_continuation_units(units: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    merged_units: list[dict[str, Any]] = []
+    current: dict[str, Any] | None = None
+    for unit in units:
+        next_unit = clone_unit(unit)
+        if current is None:
+            current = next_unit
+            continue
+        if current.get("zh") and next_unit.get("zh") and not ends_sentence(current.get("zh", [])):
+            current = merge_unit_pair(current, next_unit)
+        else:
+            merged_units.append(current)
+            current = next_unit
+    if current is not None:
+        merged_units.append(current)
+    return merged_units
+
+
 def emit_unit(unit: dict[str, Any], *, secondary_ja_mode: str) -> str:
     zh = render_tokens(unit["zh"], "zhpy", breakable=True)
     ja_lines = unit.get("ja", [])
@@ -156,6 +262,7 @@ def convert(
     author: str = "",
     author_reading: str = "",
     secondary_ja_mode: str = "auto",
+    merge_continuation_units_enabled: bool = False,
 ) -> str:
     if color_mode == "blackwhite":
         cover_image = ""
@@ -192,7 +299,10 @@ def convert(
                 out.append(rf"\InterStory{{{tex_escape(story['id'])}}}{brace(title_zh)}{brace(title_ja)}{brace(place_zh)}{brace(place_ja)}")
                 for paragraph in story.get("paragraphs", []):
                     out.append(r"\InterParagraphStart")
-                    for unit in paragraph.get("units", []):
+                    units = paragraph.get("units", [])
+                    if merge_continuation_units_enabled:
+                        units = merge_continuation_units(units)
+                    for unit in units:
                         out.append(emit_unit(unit, secondary_ja_mode=secondary_ja_mode))
                     out.append(r"\InterParagraphEnd")
                     out.append("")
@@ -215,6 +325,11 @@ def main(argv: list[str] | None = None) -> int:
         default="auto",
         help="auto-detect explicit comment rows by ja_line_roles, force ja[1] as a note, hide it, or merge all Japanese rows",
     )
+    parser.add_argument(
+        "--merge-continuation-units",
+        action="store_true",
+        help="merge adjacent Chinese units inside a paragraph until sentence-final punctuation, inserting a comma if a split had no punctuation",
+    )
     args = parser.parse_args(argv)
 
     source = Path(args.source)
@@ -227,6 +342,7 @@ def main(argv: list[str] | None = None) -> int:
         author=args.author,
         author_reading=args.author_reading,
         secondary_ja_mode=secondary_ja_mode,
+        merge_continuation_units_enabled=args.merge_continuation_units,
     )
     if args.output:
         out = Path(args.output)
