@@ -20,8 +20,12 @@ The repository is a toolkit: TeX templates, Python scripts, JSON schemas, previe
 The same Kokoro interior page rendered as all four standard editions:
 
 <p align="center">
-  <img src="assets/edition-comparisons/kokoro-four-editions-page-20.png" alt="Kokoro shown as ZH-main color, ZH-main black and white, JP-main color, and JP-main black and white editions" width="100%">
+  <a href="assets/edition-comparisons/kokoro-four-editions-page-20.png">
+    <img src="assets/edition-comparisons/kokoro-four-editions-page-20.png" alt="Kokoro shown as ZH-main color, ZH-main black and white, JP-main color, and JP-main black and white editions" width="100%">
+  </a>
 </p>
+
+Click the image to open the full-resolution version for readable ruby, furigana, and pinyin.
 
 Chinese/Japanese is the current showcase pair, but the pipeline is not limited to it. Any language pair with prepared aligned text and readings can use the same book model: EN-JP, ZH-EN, classical-modern, learner gloss editions, or teacher-curated parallel readers.
 
