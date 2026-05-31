@@ -1,8 +1,4 @@
-<p align="center">
-  <a href="../README.md">English</a> ·
-  <a href="README.zh-Hans.md">中文</a> ·
-  <a href="README.ja.md">日本語</a>
-</p>
+[English](../README.md) · [العربية](README.ar.md) · [Español](README.es.md) · [Français](README.fr.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Tiếng Việt](README.vi.md) · [中文 (简体)](README.zh-Hans.md) · [中文（繁體）](README.zh-Hant.md) · [Deutsch](README.de.md) · [Русский](README.ru.md)
 
 # PocketPolyglot
 
@@ -38,7 +34,7 @@ make sample
 make interlinear
 make interlinear-jp-main
 make export-books
-make readme-previews
+make readme-assets
 ```
 
 ## 主な構成
@@ -50,6 +46,7 @@ make readme-previews
 | `scripts/interlinear/` | JSON 分割、検証、レンダリング、コンパイル |
 | `data/interlinear/sample.json` | 公開用の構造化サンプル |
 | `assets/readme-previews/` | PDF の第一ページから作る README プレビュー |
+| `assets/edition-comparisons/` | 同じ PDF ページから作る四種類比較画像 |
 | `sources/` | ローカル原典ファイル、Git では無視 |
 | `build/` | 生成 PDF と中間ファイル、Git では無視 |
 
