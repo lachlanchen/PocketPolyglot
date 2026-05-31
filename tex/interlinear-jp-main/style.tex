@@ -1,0 +1,261 @@
+\usepackage{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{xparse}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{needspace}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\geometry{
+  paperwidth=105mm,
+  paperheight=148mm,
+  inner=8mm,
+  outer=8mm,
+  top=9mm,
+  bottom=11mm,
+  headheight=0pt,
+  headsep=0pt,
+  footskip=7mm
+}
+
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{Noto Sans}
+\setmonofont{TeX Gyre Cursor}
+\setCJKmainfont{Noto Serif CJK JP}
+\setCJKsansfont{Noto Sans CJK JP}
+\setCJKmonofont{Noto Sans Mono CJK JP}
+\newCJKfontfamily\zhfont{Noto Serif CJK SC}
+\newCJKfontfamily\jpfont{Noto Serif CJK JP}
+
+\definecolor{BookInk}{HTML}{141414}
+\definecolor{BookNote}{HTML}{4C4338}
+\definecolor{BookRule}{HTML}{B9B0A5}
+\definecolor{BookRed}{HTML}{7E2F24}
+\definecolor{CoverGround}{HTML}{1E2926}
+\definecolor{CoverGold}{HTML}{E6D4A2}
+\definecolor{GramSubject}{HTML}{13795B}
+\definecolor{GramPredicate}{HTML}{B23A48}
+\definecolor{GramObject}{HTML}{286DA8}
+\definecolor{GramAttributive}{HTML}{7C58A5}
+\definecolor{GramAdverbial}{HTML}{A96523}
+\definecolor{GramComplement}{HTML}{1D7F91}
+\colorlet{GramTopic}{GramSubject}
+\colorlet{GramFunction}{black}
+
+\hypersetup{colorlinks=true,linkcolor=BookRed,urlcolor=BookRed}
+
+\newif\ifBWMode
+\BWModefalse
+\newcommand{\BlackWhiteMode}{%
+  \BWModetrue
+  \hypersetup{linkcolor=black,urlcolor=black}%
+  \colorlet{BookInk}{black}%
+  \colorlet{BookNote}{black}%
+  \colorlet{BookRule}{black!55}%
+  \colorlet{BookRed}{black}%
+  \colorlet{CoverGround}{white}%
+  \colorlet{CoverGold}{black}%
+  \colorlet{GramSubject}{black}%
+  \colorlet{GramPredicate}{black}%
+  \colorlet{GramObject}{black}%
+  \colorlet{GramAttributive}{black}%
+  \colorlet{GramAdverbial}{black}%
+  \colorlet{GramComplement}{black}%
+  \colorlet{GramTopic}{black}%
+  \colorlet{GramFunction}{black}%
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\raggedbottom
+
+\titleformat{\section}{\normalfont\normalsize\bfseries\jpfont}{\thesection}{0.5em}{}
+\titlespacing*{\section}{0pt}{0.65em}{0.25em}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\emergencystretch=3em
+\linespread{1.03}
+\XeTeXlinebreaklocale "ja"
+\XeTeXlinebreakskip=0pt plus 0.18em
+
+\newif\ifShowRuby
+\ShowRubytrue
+\newcommand{\HideAnnotations}{\ShowRubyfalse}
+\newcommand{\ShowAnnotations}{\ShowRubytrue}
+
+\newcommand{\RubyFont}{\fontsize{3.6pt}{4pt}\selectfont}
+\NewDocumentCommand{\RubyFixed}{m m}{%
+  \ifShowRuby
+    \leavevmode
+    \begingroup
+      \setbox0=\hbox{#1}%
+      \dimen0=\wd0
+      \vbox{%
+        \offinterlineskip
+        \hbox to \dimen0{\hss{\RubyFont #2}\hss}%
+        \kern0.06ex
+        \box0
+      }%
+    \endgroup
+    \allowbreak{}%
+  \else
+    #1\allowbreak{}%
+  \fi
+}
+\NewDocumentCommand{\RubyWide}{m m}{%
+  \ifShowRuby
+    \leavevmode
+    \begingroup
+      \setbox0=\hbox{#1}%
+      \setbox1=\hbox{{\RubyFont #2}}%
+      \dimen0=\wd0
+      \ifdim\wd1>\dimen0 \dimen0=\wd1\fi
+      \vbox{%
+        \offinterlineskip
+        \hbox to \dimen0{\hss\box1\hss}%
+        \kern0.06ex
+        \hbox to \dimen0{\hss\box0\hss}%
+      }%
+    \endgroup
+    \allowbreak{}%
+  \else
+    #1\allowbreak{}%
+  \fi
+}
+
+\NewDocumentCommand{\zhpy}{m m}{\RubyFixed{{\zhfont #1}}{{\sffamily #2}}}
+\NewDocumentCommand{\jpruby}{m m}{\RubyWide{{\jpfont #1}}{{\jpfont #2}}}
+
+\ExplSyntaxOn
+\cs_new_protected:Npn \zhjp_gram_color:n #1
+  {
+    \str_case:nn { #1 }
+      {
+        { subject } { \color{GramSubject} }
+        { predicate } { \color{GramPredicate} }
+        { object } { \color{GramObject} }
+        { attributive } { \color{GramAttributive} }
+        { adverbial } { \color{GramAdverbial} }
+        { complement } { \color{GramComplement} }
+        { topic } { \color{GramTopic} }
+        { function } { \color{GramFunction} }
+      }
+  }
+\NewDocumentCommand{\Gram}{m m}{\group_begin:\zhjp_gram_color:n { #1 } #2\group_end:\allowbreak{}}
+\ExplSyntaxOff
+
+\newcommand{\GrammarLegend}{%
+  {\sffamily\fontsize{5.8pt}{7pt}\selectfont
+  \textcolor{GramSubject}{subject}\quad
+  \textcolor{GramPredicate}{predicate}\quad
+  \textcolor{GramObject}{object}\quad
+  \textcolor{GramAttributive}{attributive}\quad
+  \textcolor{GramAdverbial}{adverbial}\quad
+  \textcolor{GramComplement}{complement}\quad
+  \textcolor{GramTopic}{topic}\quad
+  \textcolor{GramFunction}{function}}%
+}
+
+\newcommand{\JPMainText}[1]{{\jpfont\fontsize{9.7pt}{15.5pt}\selectfont\color{BookInk}#1}}
+\newcommand{\JPGlossText}[1]{\JPMainText{#1}}
+\newcommand{\JPCommentText}[1]{{\jpfont\addfontfeatures{FakeSlant=0.08}\fontsize{7.1pt}{10.5pt}\selectfont\color{BookNote}#1}}
+\newcommand{\ZHCommentText}[1]{{\zhfont\fontsize{6.95pt}{10.4pt}\selectfont\color{BookNote}#1}}
+\newcommand{\TinyLabel}[1]{{\sffamily\bfseries\fontsize{5.8pt}{5.8pt}\selectfont\textcolor{BookRed}{#1}}}
+\newcommand{\JpCommentWave}{}
+
+\NewDocumentCommand{\JpMainPdfMeta}{m m m}{%
+  \hypersetup{pdftitle={#1 / #2},pdfauthor={#3}}%
+}
+
+\NewDocumentCommand{\JpMainTitle}{m m m m m m m}{%
+  \frontmatter
+  \thispagestyle{empty}%
+  \newgeometry{margin=0pt}%
+  \if\relax\detokenize{#7}\relax
+    \pagecolor{CoverGround}\color{CoverGold}%
+    \vspace*{0.18\paperheight}
+    {\centering{\jpfont\fontsize{28pt}{31pt}\selectfont #1\par}\vspace{0.5em}{\zhfont\fontsize{14pt}{17pt}\selectfont #2\par}\vspace{1.4em}{\jpfont\fontsize{9pt}{12pt}\selectfont #3\par}}
+    \vfill
+    {\centering\sffamily\fontsize{5.5pt}{7pt}\selectfont #4\quad #5\par #6\par}
+    \clearpage\nopagecolor\color{BookInk}%
+  \else
+    \IfFileExists{#7}{%
+      \noindent\includegraphics[width=\paperwidth,height=\paperheight]{#7}\par
+      \clearpage
+    }{%
+      \pagecolor{CoverGround}\color{CoverGold}%
+      \vspace*{0.18\paperheight}
+      {\centering{\jpfont\fontsize{28pt}{31pt}\selectfont #1\par}\vspace{0.5em}{\zhfont\fontsize{14pt}{17pt}\selectfont #2\par}\vspace{1.4em}{\jpfont\fontsize{9pt}{12pt}\selectfont #3\par}}
+      \vfill
+      {\centering\sffamily\fontsize{5.5pt}{7pt}\selectfont #4\quad #5\par #6\par}
+      \clearpage\nopagecolor\color{BookInk}%
+    }%
+  \fi
+  \restoregeometry
+  \thispagestyle{empty}
+  \vspace*{0.20\textheight}
+  {\centering{\jpfont\Huge #1\par}\vspace{0.55em}{\zhfont\Large #2\par}\vspace{1.5em}{\jpfont #3\par}\vfill\GrammarLegend\par\vspace{1.2em}{\sffamily\fontsize{6pt}{8pt}\selectfont #4\par\href{#5}{#5}\par #6\par}}
+  \clearpage
+  \mainmatter
+}
+
+\NewDocumentCommand{\JpMainSection}{m m}{%
+  \clearpage
+  \noindent{\jpfont\Large\bfseries #1\quad{\zhfont\small #2}}\par
+  \vspace{0.6em}
+}
+
+\NewDocumentCommand{\JpMainSubsection}{m m}{%
+  \if\relax\detokenize{#1#2}\relax
+  \else
+    \clearpage
+    \section*{#1\quad{\zhfont\small #2}}%
+  \fi
+}
+
+\newcommand{\JpMainStoryPageBreak}{\clearpage}
+
+\NewDocumentCommand{\JpMainStory}{m m m m m}{%
+  \Needspace{9\baselineskip}%
+  \vspace{0.6em}
+  \noindent{\TinyLabel{#1}}\hspace{0.5em}{\jpfont\bfseries\large #2}\par
+  \vspace{0.15em}
+  \noindent\hspace{1.5em}{\zhfont\small\color{BookNote}#3}\par
+  \vspace{0.15em}
+  \noindent\hspace{1.5em}{\jpfont\small\color{BookNote}#4\quad #5}\par
+  \vspace{0.35em}
+  \noindent\textcolor{BookRule}{\rule{\linewidth}{0.28pt}}\par
+  \vspace{0.35em}
+}
+
+\newcommand{\JpMainParagraphStart}{\par\Needspace{5\baselineskip}}
+\newcommand{\JpMainParagraphEnd}{\par\vspace{0.58em}}
+
+\NewDocumentCommand{\JpMainUnit}{m m m}{%
+  \Needspace{5\baselineskip}%
+  \noindent\begingroup
+    \rightskip=0pt plus 2em
+    \JPGlossText{#1}\par
+  \endgroup
+  \if\relax\detokenize{#2}\relax\else
+    \vspace{-0.22em}
+    \noindent\hspace*{0.35em}{\TinyLabel{注}}\hspace{0.3em}%
+    \begin{minipage}{0.84\linewidth}
+      \rightskip=0pt plus 1.4em
+      \JPCommentText{#2}%
+    \end{minipage}\par
+  \fi
+  \vspace{-0.03em}
+  \noindent\hspace*{1.2em}%
+  \begin{minipage}{0.87\linewidth}
+    \rightskip=0pt plus 1.5em
+    \ZHCommentText{#3}%
+  \end{minipage}\par
+  \vspace{0.12em}
+}

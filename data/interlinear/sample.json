@@ -1,0 +1,156 @@
+{
+  "schema_version": "0.2",
+  "mode": "zh_main_ja_comment",
+  "title": {
+    "zh": [
+      {"t": "口", "r": "kǒu"},
+      {"t": "袋", "r": "dài"},
+      {"t": "双", "r": "shuāng"},
+      {"t": "语", "r": "yǔ"},
+      {"t": "读", "r": "dú"},
+      {"t": "本", "r": "běn"}
+    ],
+    "ja": [
+      {"t": "ポケット", "r": ""},
+      {"t": "二", "r": "に"},
+      {"t": "言", "r": "げん"},
+      {"t": "語", "r": "ご"},
+      {"t": "読", "r": "どく"},
+      {"t": "本", "r": "ほん"}
+    ]
+  },
+  "source": {
+    "note": "Small original sample for validating the public PocketPolyglot layout and strict ruby/pinyin token rules."
+  },
+  "sections": [
+    {
+      "id": "spring",
+      "title_zh": [{"t": "春", "r": "chūn"}],
+      "title_ja": [{"t": "春", "r": "はる"}],
+      "subsections": [
+        {
+          "id": "path",
+          "title_zh": [
+            {"t": "小", "r": "xiǎo"},
+            {"t": "径", "r": "jìng"}
+          ],
+          "title_ja": [
+            {"t": "小", "r": "こ"},
+            {"t": "径", "r": "みち"}
+          ],
+          "stories": [
+            {
+              "id": "sample-001",
+              "title_zh": [
+                {"t": "春", "r": "chūn"},
+                {"t": "日", "r": "rì"},
+                {"t": "散", "r": "sàn"},
+                {"t": "步", "r": "bù"}
+              ],
+              "title_ja": [
+                {"t": "春", "r": "はる"},
+                {"t": "の", "r": ""},
+                {"t": "日", "r": "ひ"},
+                {"t": "の", "r": ""},
+                {"t": "散", "r": "さん"},
+                {"t": "歩", "r": "ぽ"}
+              ],
+              "place_zh": [
+                {"t": "庭", "r": "tíng"},
+                {"t": "中", "r": "zhōng"}
+              ],
+              "place_ja": [{"t": "庭", "r": "にわ"}],
+              "paragraphs": [
+                {
+                  "id": "sample-001-p1",
+                  "source_text": "春天来了，风很轻。我在小径上慢慢走。花开得安静。",
+                  "units": [
+                    {
+                      "source_text": "春天来了，风很轻。",
+                      "zh": [
+                        {"t": "春", "r": "chūn", "g": "subject"},
+                        {"t": "天", "r": "tiān", "g": "subject"},
+                        {"t": "来", "r": "lái", "g": "predicate"},
+                        {"t": "了", "r": "le", "g": "function"},
+                        {"t": "，", "r": ""},
+                        {"t": "风", "r": "fēng", "g": "subject"},
+                        {"t": "很", "r": "hěn", "g": "adverbial"},
+                        {"t": "轻", "r": "qīng", "g": "predicate"},
+                        {"t": "。", "r": ""}
+                      ],
+                      "ja": [
+                        [
+                          {"t": "春", "r": "はる", "g": "subject"},
+                          {"t": "が", "r": "", "g": "function"},
+                          {"t": "来", "r": "き", "g": "predicate"},
+                          {"t": "て、", "r": ""}
+                        ],
+                        [
+                          {"t": "風", "r": "かぜ", "g": "subject"},
+                          {"t": "は", "r": "", "g": "topic"},
+                          {"t": "軽", "r": "かる", "g": "predicate"},
+                          {"t": "い。", "r": ""}
+                        ]
+                      ]
+                    },
+                    {
+                      "source_text": "我在小径上慢慢走。",
+                      "zh": [
+                        {"t": "我", "r": "wǒ", "g": "subject"},
+                        {"t": "在", "r": "zài", "g": "function"},
+                        {"t": "小", "r": "xiǎo", "g": "attributive"},
+                        {"t": "径", "r": "jìng", "g": "object"},
+                        {"t": "上", "r": "shàng", "g": "function"},
+                        {"t": "慢", "r": "màn", "g": "adverbial"},
+                        {"t": "慢", "r": "màn", "g": "adverbial"},
+                        {"t": "走", "r": "zǒu", "g": "predicate"},
+                        {"t": "。", "r": ""}
+                      ],
+                      "ja": [
+                        [
+                          {"t": "私", "r": "わたし", "g": "subject"},
+                          {"t": "は", "r": "", "g": "topic"},
+                          {"t": "小", "r": "こ", "g": "object"},
+                          {"t": "径", "r": "みち", "g": "object"},
+                          {"t": "を", "r": "", "g": "function"}
+                        ],
+                        [
+                          {"t": "ゆっくり", "r": "", "g": "adverbial"},
+                          {"t": "歩", "r": "ある", "g": "predicate"},
+                          {"t": "く。", "r": ""}
+                        ]
+                      ]
+                    },
+                    {
+                      "source_text": "花开得安静。",
+                      "zh": [
+                        {"t": "花", "r": "huā", "g": "subject"},
+                        {"t": "开", "r": "kāi", "g": "predicate"},
+                        {"t": "得", "r": "de", "g": "function"},
+                        {"t": "安", "r": "ān", "g": "complement"},
+                        {"t": "静", "r": "jìng", "g": "complement"},
+                        {"t": "。", "r": ""}
+                      ],
+                      "ja": [
+                        [
+                          {"t": "花", "r": "はな", "g": "subject"},
+                          {"t": "は", "r": "", "g": "topic"},
+                          {"t": "静", "r": "しず", "g": "adverbial"},
+                          {"t": "かに", "r": ""}
+                        ],
+                        [
+                          {"t": "咲", "r": "さ", "g": "predicate"},
+                          {"t": "く。", "r": ""}
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

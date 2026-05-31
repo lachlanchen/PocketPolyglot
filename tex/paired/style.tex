@@ -1,0 +1,137 @@
+\usepackage{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{xparse}
+\usepackage{xcolor}
+\usepackage{needspace}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\geometry{
+  paperwidth=105mm,
+  paperheight=148mm,
+  inner=8mm,
+  outer=8mm,
+  top=9mm,
+  bottom=11mm,
+  headheight=11pt,
+  headsep=4pt,
+  footskip=7mm
+}
+
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{TeX Gyre Heros}
+\setmonofont{TeX Gyre Cursor}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+\newCJKfontfamily\zhfont{Noto Serif CJK SC}
+\newCJKfontfamily\jpfont{Noto Serif CJK JP}
+\newCJKfontfamily\commentfont{Noto Serif CJK SC}
+
+\definecolor{BookInk}{HTML}{171717}
+\definecolor{BookMuted}{HTML}{5A5148}
+\definecolor{BookRule}{HTML}{B7AFA4}
+\definecolor{BookLabel}{HTML}{7E2F24}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=BookLabel,
+  urlcolor=BookLabel
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\small\thepage}
+\fancyhead[LO]{\small\nouppercase{\rightmark}}
+\fancyhead[RE]{\small\nouppercase{\leftmark}}
+\renewcommand{\headrulewidth}{0pt}
+
+\titleformat{\chapter}[block]
+  {\normalfont\Large\bfseries\zhfont}
+  {\thechapter}
+  {0.6em}
+  {}
+\titlespacing*{\chapter}{0pt}{0.6em}{0.8em}
+\titleformat{\section}
+  {\normalfont\normalsize\bfseries\zhfont}
+  {\thesection}
+  {0.5em}
+  {}
+\titlespacing*{\section}{0pt}{0.7em}{0.35em}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\linespread{1.08}
+
+\newif\ifShowRuby
+\ShowRubytrue
+\newcommand{\ShowAnnotations}{\ShowRubytrue}
+\newcommand{\HideAnnotations}{\ShowRubyfalse}
+
+\newif\ifPairSideBySide
+\PairSideBySidefalse
+\newcommand{\PairLayoutStacked}{\PairSideBySidefalse}
+\newcommand{\PairLayoutSideBySide}{\PairSideBySidetrue}
+
+\newcommand{\RubyFont}{\fontsize{4.6pt}{4.9pt}\selectfont}
+\NewDocumentCommand{\Ruby}{m m}{%
+  \ifShowRuby
+    \leavevmode
+    \begingroup
+      \setbox0=\hbox{#1}%
+      \dimen0=\wd0
+      \vbox{%
+        \offinterlineskip
+        \hbox to \dimen0{\hss{\RubyFont #2}\hss}%
+        \kern0.12ex
+        \box0
+      }%
+    \endgroup
+  \else
+    #1%
+  \fi
+}
+
+\NewDocumentCommand{\zhpy}{m m}{\Ruby{{\zhfont #1}}{{\sffamily #2}}}
+\NewDocumentCommand{\jpruby}{m m}{\Ruby{{\jpfont #1}}{{\jpfont #2}}}
+\let\py\zhpy
+\let\furi\jpruby
+
+\newcommand{\PairLabel}[1]{%
+  {\sffamily\bfseries\fontsize{6pt}{6pt}\selectfont\textcolor{BookLabel}{#1}}%
+}
+\newcommand{\MainZH}[1]{{\zhfont\fontsize{10.2pt}{15.8pt}\selectfont\color{BookInk}#1}}
+\newcommand{\MainJP}[1]{{\jpfont\fontsize{9.2pt}{15.2pt}\selectfont\color{BookInk}#1}}
+\newcommand{\CommentText}[1]{{\commentfont\fontsize{7.3pt}{11.6pt}\selectfont\color{BookMuted}#1}}
+
+\newcommand{\MaybeComment}[2]{%
+  \if\relax\detokenize{#2}\relax
+  \else
+    \par\vspace{0.16em}\noindent\PairLabel{#1}\hspace{0.45em}\CommentText{#2}%
+  \fi
+}
+
+\NewDocumentCommand{\Pair}{m m m m}{%
+  \Needspace{7\baselineskip}%
+  \par\vspace{0.25em}%
+  \noindent\color{BookRule}\rule{\linewidth}{0.25pt}\par\nobreak\vspace{0.28em}%
+  \ifPairSideBySide
+    \noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X@{\hspace{0.65em}}>{\raggedright\arraybackslash}X@{}}
+      \PairLabel{中}\hspace{0.35em}\MainZH{#1} &
+      \PairLabel{日}\hspace{0.35em}\MainJP{#2}
+    \end{tabularx}%
+    \MaybeComment{注}{#3}%
+    \MaybeComment{註}{#4}%
+  \else
+    \noindent\PairLabel{中}\hspace{0.55em}\MainZH{#1}\par
+    \vspace{0.16em}%
+    \noindent\PairLabel{日}\hspace{0.55em}\MainJP{#2}%
+    \MaybeComment{注}{#3}%
+    \MaybeComment{註}{#4}%
+  \fi
+  \par\vspace{0.35em}%
+}

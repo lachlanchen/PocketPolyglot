@@ -1,0 +1,195 @@
+\usepackage{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{xparse}
+\usepackage{xcolor}
+\usepackage{needspace}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\geometry{
+  paperwidth=105mm,
+  paperheight=148mm,
+  inner=8mm,
+  outer=8mm,
+  top=9mm,
+  bottom=11mm,
+  headheight=0pt,
+  headsep=0pt,
+  footskip=7mm
+}
+
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{TeX Gyre Heros}
+\setmonofont{TeX Gyre Cursor}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+\newCJKfontfamily\zhfont{Noto Serif CJK SC}
+\newCJKfontfamily\jpfont{Noto Serif CJK JP}
+
+\definecolor{BookInk}{HTML}{151515}
+\definecolor{BookNote}{HTML}{4D463E}
+\definecolor{BookRule}{HTML}{B9B0A5}
+\definecolor{BookRed}{HTML}{7E2F24}
+\definecolor{GramSubject}{HTML}{13795B}
+\definecolor{GramPredicate}{HTML}{B23A48}
+\definecolor{GramObject}{HTML}{286DA8}
+\definecolor{GramAttributive}{HTML}{7C58A5}
+\definecolor{GramAdverbial}{HTML}{A96523}
+\definecolor{GramComplement}{HTML}{1D7F91}
+\colorlet{GramTopic}{GramSubject}
+\colorlet{GramFunction}{black}
+
+\hypersetup{colorlinks=true,linkcolor=BookRed,urlcolor=BookRed}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\raggedbottom
+
+\titleformat{\section}{\normalfont\normalsize\bfseries\zhfont}{\thesection}{0.5em}{}
+\titlespacing*{\section}{0pt}{0.65em}{0.25em}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\emergencystretch=2em
+\linespread{1.02}
+
+\newif\ifShowRuby
+\ShowRubytrue
+\newcommand{\HideAnnotations}{\ShowRubyfalse}
+\newcommand{\ShowAnnotations}{\ShowRubytrue}
+
+\newcommand{\RubyFont}{\fontsize{3.6pt}{4pt}\selectfont}
+\NewDocumentCommand{\RubyFixed}{m m}{%
+  \ifShowRuby
+    \leavevmode
+    \begingroup
+      \setbox0=\hbox{#1}%
+      \dimen0=\wd0
+      \vbox{%
+        \offinterlineskip
+        \hbox to \dimen0{\hss{\RubyFont #2}\hss}%
+        \kern0.06ex
+        \box0
+      }%
+    \endgroup
+  \else
+    #1%
+  \fi
+}
+\NewDocumentCommand{\RubyWide}{m m}{%
+  \ifShowRuby
+    \leavevmode
+    \begingroup
+      \setbox0=\hbox{#1}%
+      \setbox1=\hbox{{\RubyFont #2}}%
+      \dimen0=\wd0
+      \ifdim\wd1>\dimen0 \dimen0=\wd1\fi
+      \vbox{%
+        \offinterlineskip
+        \hbox to \dimen0{\hss\box1\hss}%
+        \kern0.06ex
+        \hbox to \dimen0{\hss\box0\hss}%
+      }%
+    \endgroup
+  \else
+    #1%
+  \fi
+}
+
+\NewDocumentCommand{\zhpy}{m m}{\RubyFixed{{\zhfont #1}}{{\sffamily #2}}}
+\NewDocumentCommand{\jpruby}{m m}{\RubyWide{{\jpfont #1}}{{\jpfont #2}}}
+
+\ExplSyntaxOn
+\cs_new_protected:Npn \zhjp_gram_color:n #1
+  {
+    \str_case:nn { #1 }
+      {
+        { subject } { \color{GramSubject} }
+        { predicate } { \color{GramPredicate} }
+        { object } { \color{GramObject} }
+        { attributive } { \color{GramAttributive} }
+        { adverbial } { \color{GramAdverbial} }
+        { complement } { \color{GramComplement} }
+        { topic } { \color{GramTopic} }
+        { function } { \color{GramFunction} }
+      }
+  }
+\NewDocumentCommand{\Gram}{m m}{\group_begin:\zhjp_gram_color:n { #1 } #2\group_end:}
+\ExplSyntaxOff
+
+\newcommand{\ZHRun}[1]{{\zhfont\fontsize{9.45pt}{15pt}\selectfont\color{BookInk}#1}}
+\newcommand{\JARunGloss}[1]{{\jpfont\fontsize{6.75pt}{9.3pt}\selectfont\color{BookNote}#1}}
+\newcommand{\JARunExplain}[1]{{\jpfont\addfontfeatures{FakeSlant=0.08}\fontsize{6.05pt}{8.4pt}\selectfont\color{BookNote}#1}}
+\newcommand{\TinyLabel}[1]{{\sffamily\bfseries\fontsize{5.8pt}{5.8pt}\selectfont\textcolor{BookRed}{#1}}}
+
+\NewDocumentCommand{\RunTitle}{m m}{%
+  \frontmatter
+  \thispagestyle{empty}
+  \vspace*{0.16\textheight}
+  {\centering{\zhfont\Huge #1\par}\vspace{0.8em}{\jpfont\small #2\par}}
+  \clearpage
+  \mainmatter
+}
+
+\NewDocumentCommand{\RunSection}{m m}{%
+  \clearpage
+  \noindent{\zhfont\Large\bfseries #1\quad{\jpfont\small #2}}\par
+  \vspace{0.6em}
+}
+
+\NewDocumentCommand{\RunSubsection}{m m}{%
+  \if\relax\detokenize{#1#2}\relax
+  \else
+    \clearpage
+    \section*{#1\quad{\jpfont\small #2}}%
+  \fi
+}
+
+\newcommand{\RunStoryPageBreak}{\clearpage}
+
+\NewDocumentCommand{\RunStory}{m m m m m}{%
+  \Needspace{9\baselineskip}%
+  \vspace{0.6em}
+  \noindent{\TinyLabel{#1}}\hspace{0.5em}{\zhfont\bfseries\large #2}\par
+  \vspace{0.15em}
+  \noindent\hspace{1.5em}{\jpfont\small\color{BookNote}#3}\par
+  \vspace{0.15em}
+  \noindent\hspace{1.5em}{\zhfont\small\color{BookNote}#4\quad #5}\par
+  \vspace{0.35em}
+  \noindent\textcolor{BookRule}{\rule{\linewidth}{0.28pt}}\par
+  \vspace{0.35em}
+}
+
+\newcommand{\RunParagraphStart}{\par\Needspace{5\baselineskip}\noindent}
+\newcommand{\RunParagraphEnd}{\par\vspace{0.65em}}
+
+\newdimen\RunUnitWidth
+\NewDocumentCommand{\RunUnit}{m m m}{%
+  \begingroup
+    \setbox0=\hbox{\ZHRun{#1}}%
+    \RunUnitWidth=\wd0
+    \ifdim\RunUnitWidth>\linewidth
+      \RunUnitWidth=\linewidth
+    \fi
+    \leavevmode
+    \vtop{%
+      \hsize=\RunUnitWidth
+      \parindent=0pt
+      \rightskip=0pt plus 1fil
+      \ZHRun{#1}\par
+      \vspace{-0.08em}
+      \JARunGloss{#2}\par
+      \if\relax\detokenize{#3}\relax\else
+        \vspace{-0.18em}
+        {\TinyLabel{注}}\hspace{0.2em}\JARunExplain{#3}\par
+      \fi
+      \vspace{0.12em}
+    }%
+    \penalty0\hskip0pt plus 0.25em\relax
+  \endgroup
+}
