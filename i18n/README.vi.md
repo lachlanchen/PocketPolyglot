@@ -10,6 +10,16 @@ PocketPolyglot biến văn bản song ngữ thành PDF nhỏ có ruby, furigana,
 
 Kho này là bộ công cụ, không phải nơi phân phối văn bản gốc. Nó gồm mẫu TeX, script Python, JSON mẫu, ảnh xem trước và ghi chú pipeline. Chỉ xuất bản sách đầy đủ khi văn bản và bản dịch có quyền phân phối rõ ràng.
 
+## Một Câu Toàn Chiều Rộng
+
+Ví dụ JP-main từ Kokoro: văn bản Nhật có furigana, chú thích tiếng Trung có pinyin và màu ngữ pháp trên các từ đã căn hàng.
+
+<p align="center">
+  <a href="../assets/edition-comparisons/kokoro-jp-main-sentence-page-20.png">
+    <img src="../assets/edition-comparisons/kokoro-jp-main-sentence-page-20.png" alt="Câu JP-main của Kokoro có furigana, chú thích tiếng Trung, pinyin và màu ngữ pháp" width="100%">
+  </a>
+</p>
+
 ## Bốn Phiên Bản
 
 Cùng một trang nội dung của Kokoro được kết xuất thành bốn phiên bản chuẩn:

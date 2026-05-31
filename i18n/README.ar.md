@@ -10,6 +10,16 @@ PocketPolyglot يحول النصوص الثنائية اللغة إلى ملفا
 
 هذا المستودع هو مجموعة أدوات: قوالب TeX، وسكربتات Python، وعينات JSON، وصور معاينة، وملاحظات pipeline. انشر الكتب الكاملة فقط عندما تكون حقوق النص والترجمة واضحة وقابلة لإعادة التوزيع.
 
+## جملة واحدة بعرض كامل
+
+مثال JP-main من Kokoro: نص ياباني مع furigana، وتعليق صيني مع pinyin، وألوان نحوية على الكلمات المتقابلة.
+
+<p align="center">
+  <a href="../assets/edition-comparisons/kokoro-jp-main-sentence-page-20.png">
+    <img src="../assets/edition-comparisons/kokoro-jp-main-sentence-page-20.png" alt="Kokoro JP-main sentence with furigana, Chinese comment, pinyin, and grammar color" width="100%">
+  </a>
+</p>
+
 ## أربع نسخ
 
 الصفحة الداخلية نفسها من Kokoro معروضة في النسخ الأربع القياسية:
