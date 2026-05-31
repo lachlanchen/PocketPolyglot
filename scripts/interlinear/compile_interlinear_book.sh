@@ -28,7 +28,7 @@ Options:
   --output-pdf <path>            named PDF path
   --allow-missing                build from available chunks only
   --hide-secondary-ja            do not render ja[1] explanatory/comment lines
-  --secondary-ja-mode <mode>     comment, hide, or merge ja[1+] into Japanese text
+  --secondary-ja-mode <mode>     auto, comment, hide, or merge ja[1+] into Japanese text
   --include-section-title-zh <t> keep only a Chinese section title after assembly
   --drop-editorial-notes         drop note-only paragraphs such as [1]... footnotes
   -h, --help                     show help
@@ -55,7 +55,7 @@ cover_image=""
 output_pdf=""
 allow_missing=0
 hide_secondary_ja=0
-secondary_ja_mode="comment"
+secondary_ja_mode="auto"
 include_section_title_zh=()
 drop_editorial_notes=0
 
@@ -103,7 +103,7 @@ case "$color_mode" in
   *) echo "Invalid --color-mode: $color_mode" >&2; exit 1 ;;
 esac
 case "$secondary_ja_mode" in
-  comment|hide|merge) ;;
+  auto|comment|hide|merge) ;;
   *) echo "Invalid --secondary-ja-mode: $secondary_ja_mode" >&2; exit 1 ;;
 esac
 if [[ "$color_mode" == "blackwhite" ]]; then

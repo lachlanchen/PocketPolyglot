@@ -63,7 +63,7 @@ if [[ -z "$secondary_ja_mode" ]]; then
   if [[ "$render_secondary_ja" == "false" ]]; then
     secondary_ja_mode="hide"
   else
-    secondary_ja_mode="comment"
+    secondary_ja_mode="auto"
   fi
 fi
 secondary_ja_args=(--secondary-ja-mode "$secondary_ja_mode")

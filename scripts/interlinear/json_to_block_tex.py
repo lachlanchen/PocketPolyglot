@@ -9,6 +9,17 @@ import sys
 from pathlib import Path
 from typing import Any
 
+COMMENT_LINE_ROLES = {
+    "comment",
+    "explanatory_comment",
+    "explanatory-comment",
+    "explanation",
+    "note",
+    "annotation",
+    "zhu",
+    "注",
+}
+
 
 def tex_escape(text: str) -> str:
     replacements = {
@@ -96,12 +107,34 @@ def render_ja_lines(unit: dict[str, Any], indexes: list[int]) -> str:
     return "".join(rendered)
 
 
+def ja_line_role(unit: dict[str, Any], index: int) -> str:
+    roles = unit.get("ja_line_roles") or []
+    if index >= len(roles):
+        return ""
+    return str(roles[index]).strip().lower()
+
+
+def is_comment_ja_line(unit: dict[str, Any], index: int) -> bool:
+    role = ja_line_role(unit, index)
+    return role in COMMENT_LINE_ROLES
+
+
 def emit_unit(unit: dict[str, Any], *, secondary_ja_mode: str) -> str:
     zh = render_tokens(unit["zh"], "zhpy", breakable=True)
     ja_lines = unit.get("ja", [])
     if secondary_ja_mode == "merge":
         ja1 = render_ja_lines(unit, list(range(len(ja_lines))))
         ja2 = ""
+    elif secondary_ja_mode == "auto":
+        main_indexes: list[int] = []
+        comment_indexes: list[int] = []
+        for index in range(len(ja_lines)):
+            if index > 0 and is_comment_ja_line(unit, index):
+                comment_indexes.append(index)
+            else:
+                main_indexes.append(index)
+        ja1 = render_ja_lines(unit, main_indexes)
+        ja2 = render_ja_lines(unit, comment_indexes)
     else:
         ja1 = render_ja_lines(unit, [0])
         ja2 = render_ja_lines(unit, [1]) if secondary_ja_mode == "comment" else ""
@@ -115,7 +148,7 @@ def convert(
     cover_image: str = "",
     author: str = "",
     author_reading: str = "",
-    secondary_ja_mode: str = "comment",
+    secondary_ja_mode: str = "auto",
 ) -> str:
     if color_mode == "blackwhite":
         cover_image = ""
@@ -168,9 +201,9 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--hide-secondary-ja", action="store_true", help="do not render ja[1] explanatory/comment lines")
     parser.add_argument(
         "--secondary-ja-mode",
-        choices=["comment", "hide", "merge"],
-        default="comment",
-        help="render ja[1] as a note, hide it, or merge all Japanese rows into the main Japanese text",
+        choices=["auto", "comment", "hide", "merge"],
+        default="auto",
+        help="auto-detect explicit comment rows by ja_line_roles, force ja[1] as a note, hide it, or merge all Japanese rows",
     )
     args = parser.parse_args(argv)
 

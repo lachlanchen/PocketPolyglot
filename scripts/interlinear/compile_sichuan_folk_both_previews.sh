@@ -33,6 +33,7 @@ bash scripts/interlinear/compile_interlinear_book.sh \
   --cover-image "$cover_image" \
   --build-dir "$build_root/zh-main/color" \
   --color-mode color \
+  --secondary-ja-mode merge \
   --output-pdf "$build_root/zh-main/color/中国民间故事集成四川卷上（日文注）.pdf" \
   --allow-missing
 
@@ -51,6 +52,7 @@ bash scripts/interlinear/compile_interlinear_book.sh \
   --cover-image "$cover_image" \
   --build-dir "$build_root/zh-main/blackwhite" \
   --color-mode blackwhite \
+  --secondary-ja-mode merge \
   --output-pdf "$build_root/zh-main/blackwhite/中国民间故事集成四川卷上（日文注）.pdf" \
   --allow-missing
 
@@ -72,6 +74,7 @@ bash scripts/interlinear/compile_jp_main_book.sh \
   --cover-image "$cover_image" \
   --build-dir "$build_root/jp-main/color" \
   --color-mode color \
+  --secondary-ja-mode merge \
   --output-pdf "$build_root/jp-main/color/中国民間故事集成四川巻上（中文注）.pdf" \
   --allow-missing
 
@@ -93,6 +96,7 @@ bash scripts/interlinear/compile_jp_main_book.sh \
   --cover-image "$cover_image" \
   --build-dir "$build_root/jp-main/blackwhite" \
   --color-mode blackwhite \
+  --secondary-ja-mode merge \
   --output-pdf "$build_root/jp-main/blackwhite/中国民間故事集成四川巻上（中文注）.pdf" \
   --allow-missing
 
