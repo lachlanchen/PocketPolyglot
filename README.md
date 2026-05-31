@@ -15,6 +15,16 @@ PocketPolyglot turns bilingual texts into ruby, pinyin, grammar-colored, line-al
 
 The repository is a toolkit: TeX templates, Python scripts, JSON schemas, preview assets, and sample data. Bring your own rights-cleared source texts before publishing full generated books.
 
+## One Sentence In Full Width
+
+JP-main sample from Kokoro: Japanese main text with furigana, Chinese comment with pinyin, and grammar color on the aligned words.
+
+<p align="center">
+  <a href="assets/edition-comparisons/kokoro-jp-main-sentence-page-20.png">
+    <img src="assets/edition-comparisons/kokoro-jp-main-sentence-page-20.png" alt="Kokoro JP-main sentence with furigana, Chinese comment, pinyin, and grammar color" width="100%">
+  </a>
+</p>
+
 ## Four Editions At A Glance
 
 The same Kokoro interior page rendered as all four standard editions:
@@ -113,7 +123,7 @@ Stable token fields:
 | `scripts/interlinear/` | JSON chunking, validation, rendering, compiling, long-run workers |
 | `data/interlinear/sample.json` | small public sample of the structured format |
 | `assets/readme-previews/` | first-page preview images generated from PDFs |
-| `assets/edition-comparisons/` | four-edition comparison image generated from one interior PDF page |
+| `assets/edition-comparisons/` | single-sentence and four-edition comparison images generated from interior PDF pages |
 | `references/` | design notes, naming notes, and pipeline references |
 | `sources/` | local source books, ignored by Git |
 | `build/` | generated PDFs and TeX intermediates, ignored by Git |

@@ -10,6 +10,16 @@ PocketPolyglot transforme des textes bilingues en petits PDF avec ruby, furigana
 
 Ce dépôt est une boîte à outils : modèles TeX, scripts Python, JSON d'exemple, images de prévisualisation et notes de pipeline. Ne publiez des livres complets que lorsque les textes et traductions peuvent être redistribués légalement.
 
+## Une Phrase En Pleine Largeur
+
+Exemple JP-main de Kokoro : texte japonais avec furigana, commentaire chinois avec pinyin et couleurs grammaticales sur les mots alignés.
+
+<p align="center">
+  <a href="../assets/edition-comparisons/kokoro-jp-main-sentence-page-20.png">
+    <img src="../assets/edition-comparisons/kokoro-jp-main-sentence-page-20.png" alt="Phrase JP-main de Kokoro avec furigana, commentaire chinois, pinyin et couleurs grammaticales" width="100%">
+  </a>
+</p>
+
 ## Quatre Éditions
 
 La même page intérieure de Kokoro rendue dans les quatre éditions standard :

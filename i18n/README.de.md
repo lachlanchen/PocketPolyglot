@@ -10,6 +10,16 @@ PocketPolyglot verwandelt zweisprachige Texte in kleine PDFs mit Ruby, Furigana,
 
 Dieses Repository ist ein Werkzeugkasten: TeX-Vorlagen, Python-Skripte, JSON-Beispiele, Vorschaubilder und Pipeline-Notizen. Vollständige Bücher sollten nur veröffentlicht werden, wenn Text und Übersetzung weiterverbreitet werden dürfen.
 
+## Ein Satz In Voller Breite
+
+JP-main-Beispiel aus Kokoro: japanischer Haupttext mit Furigana, chinesischer Kommentar mit Pinyin und Grammatikfarben auf den ausgerichteten Wörtern.
+
+<p align="center">
+  <a href="../assets/edition-comparisons/kokoro-jp-main-sentence-page-20.png">
+    <img src="../assets/edition-comparisons/kokoro-jp-main-sentence-page-20.png" alt="Kokoro JP-main-Satz mit Furigana, chinesischem Kommentar, Pinyin und Grammatikfarben" width="100%">
+  </a>
+</p>
+
 ## Vier Ausgaben
 
 Dieselbe Innenseite aus Kokoro als vier Standardausgaben:
