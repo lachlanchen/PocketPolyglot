@@ -13,7 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_LOCAL_DIR = ROOT / "build" / "books"
-DEFAULT_NUTSTORE_DIR = Path.home() / "Nutstore Files" / "Projects" / "ZhJpBook" / "books"
+DEFAULT_NUTSTORE_DIR = Path.home() / "Nutstore Files" / "Projects" / "LinguaLeaf" / "books"
 
 FINAL_DIRECTIONS = {"zh-main", "jp-main"}
 FINAL_VARIANTS = {"color", "blackwhite"}
