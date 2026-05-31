@@ -15,7 +15,9 @@ Este repositorio es una caja de herramientas: plantillas TeX, scripts Python, JS
 La misma página interior de Kokoro renderizada en las cuatro ediciones estándar:
 
 <p align="center">
-  <img src="../assets/edition-comparisons/kokoro-four-editions-page-20.png" alt="Kokoro en cuatro ediciones PocketPolyglot" width="100%">
+  <a href="../assets/edition-comparisons/kokoro-four-editions-page-20.png">
+    <img src="../assets/edition-comparisons/kokoro-four-editions-page-20.png" alt="Kokoro en cuatro ediciones PocketPolyglot" width="100%">
+  </a>
 </p>
 
 ## Salidas

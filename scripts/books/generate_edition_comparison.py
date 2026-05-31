@@ -25,11 +25,11 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--book-id", default="kokoro", help="Book ID from build/books/manifest.json.")
     parser.add_argument("--page", type=int, default=20, help="True PDF page number to render.")
-    parser.add_argument("--dpi", type=int, default=150, help="pdftoppm render DPI.")
+    parser.add_argument("--dpi", type=int, default=300, help="pdftoppm render DPI.")
     parser.add_argument(
         "--panel-width",
         type=int,
-        default=420,
+        default=760,
         help="Width of each page panel in the composed comparison image.",
     )
     parser.add_argument(

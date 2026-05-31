@@ -15,7 +15,9 @@ Kho này là bộ công cụ, không phải nơi phân phối văn bản gốc. 
 Cùng một trang nội dung của Kokoro được kết xuất thành bốn phiên bản chuẩn:
 
 <p align="center">
-  <img src="../assets/edition-comparisons/kokoro-four-editions-page-20.png" alt="Kokoro in four PocketPolyglot editions" width="100%">
+  <a href="../assets/edition-comparisons/kokoro-four-editions-page-20.png">
+    <img src="../assets/edition-comparisons/kokoro-four-editions-page-20.png" alt="Kokoro in four PocketPolyglot editions" width="100%">
+  </a>
 </p>
 
 ## Đầu Ra

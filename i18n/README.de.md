@@ -15,7 +15,9 @@ Dieses Repository ist ein Werkzeugkasten: TeX-Vorlagen, Python-Skripte, JSON-Bei
 Dieselbe Innenseite aus Kokoro als vier Standardausgaben:
 
 <p align="center">
-  <img src="../assets/edition-comparisons/kokoro-four-editions-page-20.png" alt="Kokoro in vier PocketPolyglot-Ausgaben" width="100%">
+  <a href="../assets/edition-comparisons/kokoro-four-editions-page-20.png">
+    <img src="../assets/edition-comparisons/kokoro-four-editions-page-20.png" alt="Kokoro in vier PocketPolyglot-Ausgaben" width="100%">
+  </a>
 </p>
 
 ## Ausgabeformen

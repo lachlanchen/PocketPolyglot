@@ -15,7 +15,9 @@ PocketPolyglot يحول النصوص الثنائية اللغة إلى ملفا
 الصفحة الداخلية نفسها من Kokoro معروضة في النسخ الأربع القياسية:
 
 <p align="center">
-  <img src="../assets/edition-comparisons/kokoro-four-editions-page-20.png" alt="Kokoro in four PocketPolyglot editions" width="100%">
+  <a href="../assets/edition-comparisons/kokoro-four-editions-page-20.png">
+    <img src="../assets/edition-comparisons/kokoro-four-editions-page-20.png" alt="Kokoro in four PocketPolyglot editions" width="100%">
+  </a>
 </p>
 
 ## المخرجات
