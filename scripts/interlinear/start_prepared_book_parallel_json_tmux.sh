@@ -117,6 +117,7 @@ for i in \$(seq 1 '$review_workers'); do
     --max-chunks '$max_chunks_per_worker' \
     --codex-timeout-seconds '$codex_timeout_seconds' \
     --retries 2 \
+    ${retry_failed_arg[*]} \
     --idle-sleep 30 \
     --done-file '$review_done_file' \
     > "$review_root/logs/\$worker_id.log" 2>&1 &
