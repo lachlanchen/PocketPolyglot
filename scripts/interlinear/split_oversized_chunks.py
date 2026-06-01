@@ -96,12 +96,17 @@ def merge_existing_split_group(group: list[dict[str, Any]]) -> dict[str, Any]:
     return base
 
 
-def merge_existing_split_chunks(chunks: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def merge_existing_split_chunks(
+    chunks: list[dict[str, Any]],
+    selected_chunk_ids: set[str] | None = None,
+) -> list[dict[str, Any]]:
     """Rebuild original chunks before re-splitting.
 
     This makes the tool safe to rerun after tuning ``--max-chars`` or fixing the
-    split algorithm: existing split chunks are first merged by origin, then the
-    current splitter creates the new stable manifest.
+    split algorithm: selected existing split chunks are first merged by origin,
+    then the current splitter creates the new stable manifest. When callers
+    pass explicit ``--chunk-id`` values, unrelated split groups must remain
+    untouched so targeted repair cannot accidentally invalidate completed work.
     """
     merged: list[dict[str, Any]] = []
     index = 0
@@ -109,6 +114,11 @@ def merge_existing_split_chunks(chunks: list[dict[str, Any]]) -> list[dict[str, 
         chunk = chunks[index]
         origin = chunk.get("split_from_chunk_id")
         if not origin:
+            merged.append(chunk)
+            index += 1
+            continue
+
+        if selected_chunk_ids and str(origin) not in selected_chunk_ids:
             merged.append(chunk)
             index += 1
             continue
@@ -206,9 +216,9 @@ def main() -> int:
 
     chunks_path = Path(args.chunks_jsonl)
     manifest_path = Path(args.manifest)
-    chunks = merge_existing_split_chunks(load_chunks(chunks_path))
     manifest = load_json(manifest_path)
     selected_chunk_ids = set(args.chunk_id)
+    chunks = merge_existing_split_chunks(load_chunks(chunks_path), selected_chunk_ids)
 
     split_chunks: list[dict[str, Any]] = []
     split_source_count = 0
