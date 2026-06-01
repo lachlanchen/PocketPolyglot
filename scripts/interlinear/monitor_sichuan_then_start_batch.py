@@ -268,6 +268,8 @@ def start_book(start: BookStart, args: argparse.Namespace) -> bool:
             "REASONING": args.reasoning,
         }
     )
+    if args.retry_failed:
+        env["RETRY_FAILED"] = "1"
     if start.book_id == "snow-country":
         env["ALLOW_WHILE_KOKORO"] = "1"
 
