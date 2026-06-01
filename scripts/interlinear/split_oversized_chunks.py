@@ -195,6 +195,12 @@ def main() -> int:
     parser.add_argument("--chunks-jsonl", required=True)
     parser.add_argument("--manifest", required=True)
     parser.add_argument("--max-chars", type=int, default=420)
+    parser.add_argument(
+        "--chunk-id",
+        action="append",
+        default=[],
+        help="only split the selected original chunk id; may be repeated",
+    )
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
@@ -202,14 +208,26 @@ def main() -> int:
     manifest_path = Path(args.manifest)
     chunks = merge_existing_split_chunks(load_chunks(chunks_path))
     manifest = load_json(manifest_path)
+    selected_chunk_ids = set(args.chunk_id)
 
     split_chunks: list[dict[str, Any]] = []
     split_source_count = 0
+    seen_selected: set[str] = set()
     for chunk in chunks:
+        chunk_id = str(chunk.get("chunk_id", ""))
+        if selected_chunk_ids and chunk_id not in selected_chunk_ids:
+            split_chunks.append(chunk)
+            continue
+        if selected_chunk_ids:
+            seen_selected.add(chunk_id)
         parts = split_chunk(chunk, args.max_chars)
         if len(parts) > 1:
             split_source_count += 1
         split_chunks.extend(parts)
+
+    missing_selected = selected_chunk_ids - seen_selected
+    if missing_selected:
+        raise SystemExit("selected chunk id(s) not found: " + ", ".join(sorted(missing_selected)))
 
     print(
         f"chunks_before={len(chunks)} chunks_after={len(split_chunks)} "
