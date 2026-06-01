@@ -143,6 +143,8 @@ def build_start(book_id: str, args: argparse.Namespace) -> BookStart | None:
         "MODEL": args.model,
         "REASONING": args.reasoning,
     }
+    if args.retry_failed:
+        common_env["RETRY_FAILED"] = "1"
     session = f"zhjpbook-{book_id}-json"
 
     plan_path = ROOT / "books" / book_id / "book-plan.json"
@@ -330,6 +332,12 @@ def main() -> int:
     parser.add_argument("--review-workers", type=int, default=int(os.environ.get("REVIEW_WORKERS", "6")))
     parser.add_argument("--model", default=os.environ.get("MODEL", "gpt-5.5"))
     parser.add_argument("--reasoning", default=os.environ.get("REASONING", "medium"))
+    parser.add_argument(
+        "--retry-failed",
+        action="store_true",
+        default=os.environ.get("RETRY_FAILED") == "1",
+        help="pass RETRY_FAILED=1 to per-book workers so archived failed chunks are retried",
+    )
     parser.add_argument("--interval-seconds", type=int, default=int(os.environ.get("INTERVAL_SECONDS", "1800")))
     parser.add_argument("--max-active-books", type=int, default=int(os.environ.get("MAX_ACTIVE_BOOKS", "0")))
     parser.add_argument("--child-monitor-interval-seconds", type=int, default=1800)

@@ -12,6 +12,7 @@ review_workers="${REVIEW_WORKERS:-6}"
 max_active_books="${MAX_ACTIVE_BOOKS:-1}"
 model="${MODEL:-gpt-5.5}"
 reasoning="${REASONING:-medium}"
+retry_failed="${RETRY_FAILED:-0}"
 log_dir="books/$ready_book_id/work/monitor"
 mkdir -p "$log_dir"
 
@@ -26,6 +27,10 @@ read -r -a ids <<< "$book_ids"
 for id in "${ids[@]}"; do
   book_args+=(--book-id "$id")
 done
+retry_failed_arg=()
+if [[ "$retry_failed" == "1" ]]; then
+  retry_failed_arg=(--retry-failed)
+fi
 
 log="$log_dir/${session}_$(date +%Y%m%d_%H%M%S).log"
 tmux new-session -d -s "$session" -n queue "\
@@ -38,6 +43,7 @@ python -u scripts/interlinear/monitor_sichuan_then_start_batch.py \
   --max-active-books '$max_active_books' \
   --model '$model' \
   --reasoning '$reasoning' \
+  ${retry_failed_arg[*]} \
   ${book_args[*]} \
   2>&1 | tee -a '$log'"
 
@@ -50,4 +56,5 @@ echo "review_workers_per_book: $review_workers"
 echo "max_active_books: $max_active_books"
 echo "model: $model"
 echo "reasoning: $reasoning"
+echo "retry_failed: $retry_failed"
 echo "log: $log"
