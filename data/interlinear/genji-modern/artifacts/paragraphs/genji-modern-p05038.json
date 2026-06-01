@@ -1,0 +1,905 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "genji-modern",
+  "paragraph_id": "genji-modern-p05038",
+  "source_text": " 据佛经中说：观音和势至前生是两个小孩，被继母杀死。父亲不胜悲痛，把两个孩尸裹入囊中，挂在颈上。后来受佛法感化，舍弃尸囊，进入佛道。",
+  "source_sha256": "7e79a27692b2cdccc1827ac36ece0782ade9b6d998efcc32f968ae1390022756",
+  "source_normalized_sha256": "faf788235471b1436c6c11199db35e6623fd6b32c430188734fc737d7728f531",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 131,
+    "grammar_token_total": 131,
+    "unit_count": 3
+  },
+  "source_chunk_id": "genji-modern-chunk-5038",
+  "source_manifest_sha256": "31fed9a4682318b56bd3687aa261a681dd49e03ca0f121e1342197c4f3c9c0a0",
+  "section": {
+    "id": "第四十九回-寄生1",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "九",
+        "r": "jiǔ",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "huí",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "寄",
+        "r": "jì",
+        "g": "predicate"
+      },
+      {
+        "t": "生",
+        "r": "shēng",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "九",
+        "r": "きゅう",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "かい",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "宿",
+        "r": "やど",
+        "g": "predicate"
+      },
+      {
+        "t": "り",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "木",
+        "r": "ぎ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第四十九回-寄生1-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "九",
+        "r": "jiǔ",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "huí",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "寄",
+        "r": "jì",
+        "g": "predicate"
+      },
+      {
+        "t": "生",
+        "r": "shēng",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "九",
+        "r": "きゅう",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "かい",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "宿",
+        "r": "やど",
+        "g": "predicate"
+      },
+      {
+        "t": "り",
+        "r": "",
+        "g": "predicate"
+      },
+      {
+        "t": "木",
+        "r": "ぎ",
+        "g": "predicate"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "genji-modern-p05038",
+    "source_text": " 据佛经中说：观音和势至前生是两个小孩，被继母杀死。父亲不胜悲痛，把两个孩尸裹入囊中，挂在颈上。后来受佛法感化，舍弃尸囊，进入佛道。",
+    "units": [
+      {
+        "source_text": "据佛经中说：观音和势至前生是两个小孩，被继母杀死。",
+        "zh": [
+          {
+            "t": "据",
+            "r": "jù",
+            "g": "adverbial"
+          },
+          {
+            "t": "佛",
+            "r": "fó",
+            "g": "object"
+          },
+          {
+            "t": "经",
+            "r": "jīng",
+            "g": "object"
+          },
+          {
+            "t": "中",
+            "r": "zhōng",
+            "g": "object"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "观",
+            "r": "guān",
+            "g": "subject"
+          },
+          {
+            "t": "音",
+            "r": "yīn",
+            "g": "subject"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "function"
+          },
+          {
+            "t": "势",
+            "r": "shì",
+            "g": "subject"
+          },
+          {
+            "t": "至",
+            "r": "zhì",
+            "g": "subject"
+          },
+          {
+            "t": "前",
+            "r": "qián",
+            "g": "attributive"
+          },
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "attributive"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "两",
+            "r": "liǎng",
+            "g": "attributive"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "attributive"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "object"
+          },
+          {
+            "t": "孩",
+            "r": "hái",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "被",
+            "r": "bèi",
+            "g": "function"
+          },
+          {
+            "t": "继",
+            "r": "jì",
+            "g": "adverbial"
+          },
+          {
+            "t": "母",
+            "r": "mǔ",
+            "g": "adverbial"
+          },
+          {
+            "t": "杀",
+            "r": "shā",
+            "g": "predicate"
+          },
+          {
+            "t": "死",
+            "r": "sǐ",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "仏",
+              "r": "ぶつ",
+              "g": "object"
+            },
+            {
+              "t": "経",
+              "r": "きょう",
+              "g": "object"
+            },
+            {
+              "t": "によれば、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "観",
+              "r": "かん",
+              "g": "subject"
+            },
+            {
+              "t": "音",
+              "r": "おん",
+              "g": "subject"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "勢",
+              "r": "せい",
+              "g": "subject"
+            },
+            {
+              "t": "至",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "前",
+              "r": "ぜん",
+              "g": "attributive"
+            },
+            {
+              "t": "世",
+              "r": "せ",
+              "g": "attributive"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "二",
+              "r": "ふた",
+              "g": "attributive"
+            },
+            {
+              "t": "人",
+              "r": "り",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "どもで、",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "継",
+              "r": "まま",
+              "g": "adverbial"
+            },
+            {
+              "t": "母",
+              "r": "はは",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "殺",
+              "r": "ころ",
+              "g": "predicate"
+            },
+            {
+              "t": "されたという。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "父亲不胜悲痛，把两个孩尸裹入囊中，挂在颈上。",
+        "zh": [
+          {
+            "t": "父",
+            "r": "fù",
+            "g": "subject"
+          },
+          {
+            "t": "亲",
+            "r": "qīn",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "胜",
+            "r": "shèng",
+            "g": "predicate"
+          },
+          {
+            "t": "悲",
+            "r": "bēi",
+            "g": "object"
+          },
+          {
+            "t": "痛",
+            "r": "tòng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "function"
+          },
+          {
+            "t": "两",
+            "r": "liǎng",
+            "g": "attributive"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "attributive"
+          },
+          {
+            "t": "孩",
+            "r": "hái",
+            "g": "object"
+          },
+          {
+            "t": "尸",
+            "r": "shī",
+            "g": "object"
+          },
+          {
+            "t": "裹",
+            "r": "guǒ",
+            "g": "predicate"
+          },
+          {
+            "t": "入",
+            "r": "rù",
+            "g": "complement"
+          },
+          {
+            "t": "囊",
+            "r": "náng",
+            "g": "object"
+          },
+          {
+            "t": "中",
+            "r": "zhōng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "挂",
+            "r": "guà",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "complement"
+          },
+          {
+            "t": "颈",
+            "r": "jǐng",
+            "g": "object"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "父",
+              "r": "ちち",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "悲",
+              "r": "かな",
+              "g": "object"
+            },
+            {
+              "t": "しみに",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "堪",
+              "r": "た",
+              "g": "predicate"
+            },
+            {
+              "t": "えられず、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "二",
+              "r": "ふた",
+              "g": "attributive"
+            },
+            {
+              "t": "人",
+              "r": "り",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "亡",
+              "r": "な",
+              "g": "object"
+            },
+            {
+              "t": "骸",
+              "r": "きがら",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "袋",
+              "r": "ふくろ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "包",
+              "r": "つつ",
+              "g": "predicate"
+            },
+            {
+              "t": "み",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "入",
+              "r": "い",
+              "g": "complement"
+            },
+            {
+              "t": "れ、",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "首",
+              "r": "くび",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "掛",
+              "r": "か",
+              "g": "predicate"
+            },
+            {
+              "t": "けた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "后来受佛法感化，舍弃尸囊，进入佛道。",
+        "zh": [
+          {
+            "t": "后",
+            "r": "hòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "adverbial"
+          },
+          {
+            "t": "受",
+            "r": "shòu",
+            "g": "predicate"
+          },
+          {
+            "t": "佛",
+            "r": "fó",
+            "g": "object"
+          },
+          {
+            "t": "法",
+            "r": "fǎ",
+            "g": "object"
+          },
+          {
+            "t": "感",
+            "r": "gǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "化",
+            "r": "huà",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "舍",
+            "r": "shě",
+            "g": "predicate"
+          },
+          {
+            "t": "弃",
+            "r": "qì",
+            "g": "predicate"
+          },
+          {
+            "t": "尸",
+            "r": "shī",
+            "g": "object"
+          },
+          {
+            "t": "囊",
+            "r": "náng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "进",
+            "r": "jìn",
+            "g": "predicate"
+          },
+          {
+            "t": "入",
+            "r": "rù",
+            "g": "complement"
+          },
+          {
+            "t": "佛",
+            "r": "fó",
+            "g": "object"
+          },
+          {
+            "t": "道",
+            "r": "dào",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "後",
+              "r": "のち",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "仏",
+              "r": "ぶっ",
+              "g": "object"
+            },
+            {
+              "t": "法",
+              "r": "ぽう",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "感",
+              "r": "かん",
+              "g": "predicate"
+            },
+            {
+              "t": "化",
+              "r": "か",
+              "g": "predicate"
+            },
+            {
+              "t": "され、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "亡",
+              "r": "な",
+              "g": "object"
+            },
+            {
+              "t": "骸",
+              "r": "きがら",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "袋",
+              "r": "ふくろ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "捨",
+              "r": "す",
+              "g": "predicate"
+            },
+            {
+              "t": "てて、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "仏",
+              "r": "ぶつ",
+              "g": "object"
+            },
+            {
+              "t": "道",
+              "r": "どう",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "入",
+              "r": "はい",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
