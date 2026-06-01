@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import shutil
 import subprocess
 import time
@@ -135,6 +136,46 @@ def complete(report: dict[str, str]) -> bool:
         and report.get("missing_chunks") == "0"
         and report.get("stale_chunks") == "0"
     )
+
+
+def manifest_order(manifest: Path) -> dict[str, int]:
+    try:
+        data = json.loads(manifest.read_text(encoding="utf-8"))
+        chunks = data.get("chunks", []) if isinstance(data, dict) else data
+    except Exception:
+        return {}
+    if not isinstance(chunks, list):
+        return {}
+    order: dict[str, int] = {}
+    for index, chunk in enumerate(chunks, start=1):
+        if isinstance(chunk, dict) and isinstance(chunk.get("chunk_id"), str):
+            order[chunk["chunk_id"]] = index
+    return order
+
+
+def chunk_start_index(manifest: Path, chunk_id: str) -> str:
+    if not chunk_id:
+        return ""
+    order = manifest_order(manifest)
+    if chunk_id in order:
+        return str(order[chunk_id])
+    match = re.search(r"chunk-(\d+)", chunk_id)
+    if match:
+        return str(int(match.group(1)))
+    return chunk_id.split("-")[-1].lstrip("0") or "1"
+
+
+def earliest_first_missing(paths: Paths, data: dict[str, Any]) -> str:
+    order = manifest_order(paths.manifest)
+    candidates: list[tuple[int, str]] = []
+    for stage in ("raw", "reviewed"):
+        chunk_id = data.get(stage, {}).get("first_missing", "")
+        if not chunk_id:
+            continue
+        candidates.append((order.get(chunk_id, 10**12), chunk_id))
+    if not candidates:
+        return ""
+    return min(candidates)[1]
 
 
 def health(
@@ -282,10 +323,12 @@ def merge(paths: Paths, compile_command: str, *, no_reviewed_stage: bool = False
     print(reviewed.stdout, end="")
 
 
-def start_worker(start_command: str, start_index: str) -> None:
+def start_worker(start_command: str, start_index: str, manifest: Path | None = None) -> None:
     env = os.environ.copy()
     if start_index:
-        env["START_INDEX"] = start_index.split("-")[-1].lstrip("0") or "1"
+        env["START_INDEX"] = chunk_start_index(manifest, start_index) if manifest is not None else (
+            start_index.split("-")[-1].lstrip("0") or "1"
+        )
     proc = subprocess.run(start_command, shell=True, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, env=env)
     print(proc.stdout, end="")
 
@@ -336,9 +379,9 @@ def monitor_once(args: argparse.Namespace, paths: Paths, state: dict[str, Any]) 
 
     if args.heal and args.start_command and unchanged_for >= args.stall_seconds:
         if not data["worker_session_active"] and not data["review_session_active"]:
-            first_missing = data["raw"].get("first_missing") or data["reviewed"].get("first_missing") or ""
+            first_missing = earliest_first_missing(paths, data)
             print(f"restarting_from={first_missing or 'default'}")
-            start_worker(args.start_command, first_missing)
+            start_worker(args.start_command, first_missing, paths.manifest)
             state["since"] = now
     elif unchanged_for >= args.stall_seconds:
         snap = snapshot(paths, data)
