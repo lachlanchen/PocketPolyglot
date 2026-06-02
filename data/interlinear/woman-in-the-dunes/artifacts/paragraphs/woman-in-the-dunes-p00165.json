@@ -1,0 +1,379 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "woman-in-the-dunes",
+  "paragraph_id": "woman-in-the-dunes-p00165",
+  "source_text": "“真够厉害，可真叫人害怕……沙子这东西……真够厉害……”",
+  "source_sha256": "5a689a1a311287d022a86059d888897d1580aae7b9e039f844c4f57de2407756",
+  "source_normalized_sha256": "5a689a1a311287d022a86059d888897d1580aae7b9e039f844c4f57de2407756",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 50,
+    "grammar_token_total": 50,
+    "unit_count": 4
+  },
+  "source_chunk_id": "woman-in-the-dunes-chunk-0165",
+  "source_manifest_sha256": "d4e448272465ec27547c95a3075b988bdeb9e6260e21053d5ef38c28d636507d",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián"
+      },
+      {
+        "t": "言",
+        "r": "yán"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ"
+      },
+      {
+        "t": "書",
+        "r": "が"
+      },
+      {
+        "t": "き",
+        "r": ""
+      }
+    ]
+  },
+  "subsection": {
+    "id": "四",
+    "title_zh": [
+      {
+        "t": "四",
+        "r": "sì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "四",
+        "r": "よん"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-四-intro",
+    "title_zh": [
+      {
+        "t": "四",
+        "r": "sì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "四",
+        "r": "よん"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "woman-in-the-dunes-p00165",
+    "source_text": "“真够厉害，可真叫人害怕……沙子这东西……真够厉害……”",
+    "units": [
+      {
+        "source_text": "“真够厉害，",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "真",
+            "r": "zhēn",
+            "g": "adverbial"
+          },
+          {
+            "t": "够",
+            "r": "gòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "厉",
+            "r": "lì",
+            "g": "predicate"
+          },
+          {
+            "t": "害",
+            "r": "hài",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "adverbial"
+            },
+            {
+              "t": "当",
+              "r": "とう",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "すごい",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "可真叫人害怕……",
+        "zh": [
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "adverbial"
+          },
+          {
+            "t": "真",
+            "r": "zhēn",
+            "g": "adverbial"
+          },
+          {
+            "t": "叫",
+            "r": "jiào",
+            "g": "predicate"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "object"
+          },
+          {
+            "t": "害",
+            "r": "hài",
+            "g": "predicate"
+          },
+          {
+            "t": "怕",
+            "r": "pà",
+            "g": "predicate"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "まったく",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "怖",
+              "r": "こわ",
+              "g": "predicate"
+            },
+            {
+              "t": "がらせる",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "……",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "沙子这东西……",
+        "zh": [
+          {
+            "t": "沙",
+            "r": "shā",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "subject"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "attributive"
+          },
+          {
+            "t": "东",
+            "r": "dōng",
+            "g": "subject"
+          },
+          {
+            "t": "西",
+            "r": "xi",
+            "g": "subject"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "砂",
+              "r": "すな",
+              "g": "subject"
+            },
+            {
+              "t": "という",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "ものは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "……",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "真够厉害……”",
+        "zh": [
+          {
+            "t": "真",
+            "r": "zhēn",
+            "g": "adverbial"
+          },
+          {
+            "t": "够",
+            "r": "gòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "厉",
+            "r": "lì",
+            "g": "predicate"
+          },
+          {
+            "t": "害",
+            "r": "hài",
+            "g": "predicate"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "adverbial"
+            },
+            {
+              "t": "当",
+              "r": "とう",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "恐",
+              "r": "おそ",
+              "g": "predicate"
+            },
+            {
+              "t": "ろしい",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "……」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
