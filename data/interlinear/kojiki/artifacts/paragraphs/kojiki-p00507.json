@@ -1,0 +1,682 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00507",
+  "source_text": "爾天皇。直幸女鳥王之所坐而。坐其殿戶之閾上。於是女鳥王。坐機而織服。爾天皇歌曰。",
+  "source_sha256": "c4e7176efcc8454f8f46d1d1be06bc0c5cc7100c44ec394097db7d4cf33fd45e",
+  "source_normalized_sha256": "c4e7176efcc8454f8f46d1d1be06bc0c5cc7100c44ec394097db7d4cf33fd45e",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 99,
+    "grammar_token_total": 99,
+    "unit_count": 6
+  },
+  "source_chunk_id": "kojiki-chunk-0507",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00507",
+    "source_text": "爾天皇。直幸女鳥王之所坐而。坐其殿戶之閾上。於是女鳥王。坐機而織服。爾天皇歌曰。",
+    "units": [
+      {
+        "source_text": "爾天皇。",
+        "zh": [
+          {
+            "t": "爾",
+            "r": "ěr",
+            "g": "adverbial"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "subject"
+          },
+          {
+            "t": "皇",
+            "r": "huáng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そこで",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "subject"
+            },
+            {
+              "t": "皇",
+              "r": "のう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "直幸女鳥王之所坐而。",
+        "zh": [
+          {
+            "t": "直",
+            "r": "zhí",
+            "g": "adverbial"
+          },
+          {
+            "t": "幸",
+            "r": "xìng",
+            "g": "predicate"
+          },
+          {
+            "t": "女",
+            "r": "nǚ",
+            "g": "object"
+          },
+          {
+            "t": "鳥",
+            "r": "niǎo",
+            "g": "object"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "object"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "object"
+          },
+          {
+            "t": "所",
+            "r": "suǒ",
+            "g": "object"
+          },
+          {
+            "t": "坐",
+            "r": "zuò",
+            "g": "object"
+          },
+          {
+            "t": "而",
+            "r": "ér",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ただちに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "女",
+              "r": "め",
+              "g": "object"
+            },
+            {
+              "t": "鳥",
+              "r": "どり",
+              "g": "object"
+            },
+            {
+              "t": "王",
+              "r": "のみこ",
+              "g": "object"
+            },
+            {
+              "t": "のおいでになる",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "所",
+              "r": "ところ",
+              "g": "object"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "行",
+              "r": "ぎょう",
+              "g": "predicate"
+            },
+            {
+              "t": "幸",
+              "r": "こう",
+              "g": "predicate"
+            },
+            {
+              "t": "され",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "坐其殿戶之閾上。",
+        "zh": [
+          {
+            "t": "坐",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "其",
+            "r": "qí",
+            "g": "complement"
+          },
+          {
+            "t": "殿",
+            "r": "diàn",
+            "g": "complement"
+          },
+          {
+            "t": "戶",
+            "r": "hù",
+            "g": "complement"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "complement"
+          },
+          {
+            "t": "閾",
+            "r": "yù",
+            "g": "complement"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "その",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "御",
+              "r": "ご",
+              "g": "complement"
+            },
+            {
+              "t": "殿",
+              "r": "てん",
+              "g": "complement"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "戸",
+              "r": "と",
+              "g": "complement"
+            },
+            {
+              "t": "口",
+              "r": "ぐち",
+              "g": "complement"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "敷",
+              "r": "しき",
+              "g": "complement"
+            },
+            {
+              "t": "居",
+              "r": "い",
+              "g": "complement"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "上",
+              "r": "うえ",
+              "g": "complement"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "complement"
+            }
+          ],
+          [
+            {
+              "t": "座",
+              "r": "すわ",
+              "g": "predicate"
+            },
+            {
+              "t": "られた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "於是女鳥王。",
+        "zh": [
+          {
+            "t": "於",
+            "r": "yú",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "adverbial"
+          },
+          {
+            "t": "女",
+            "r": "nǚ",
+            "g": "subject"
+          },
+          {
+            "t": "鳥",
+            "r": "niǎo",
+            "g": "subject"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そこで",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "女",
+              "r": "め",
+              "g": "subject"
+            },
+            {
+              "t": "鳥",
+              "r": "どり",
+              "g": "subject"
+            },
+            {
+              "t": "王",
+              "r": "のみこ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "坐機而織服。",
+        "zh": [
+          {
+            "t": "坐",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "機",
+            "r": "jī",
+            "g": "complement"
+          },
+          {
+            "t": "而",
+            "r": "ér",
+            "g": "function"
+          },
+          {
+            "t": "織",
+            "r": "zhī",
+            "g": "predicate"
+          },
+          {
+            "t": "服",
+            "r": "fú",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "機",
+              "r": "はた",
+              "g": "complement"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "座",
+              "r": "ざ",
+              "g": "predicate"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "衣",
+              "r": "ころも",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "織",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "っていた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "爾天皇歌曰。",
+        "zh": [
+          {
+            "t": "爾",
+            "r": "ěr",
+            "g": "adverbial"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "subject"
+          },
+          {
+            "t": "皇",
+            "r": "huáng",
+            "g": "subject"
+          },
+          {
+            "t": "歌",
+            "r": "gē",
+            "g": "object"
+          },
+          {
+            "t": "曰",
+            "r": "yuē",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そこで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "subject"
+            },
+            {
+              "t": "皇",
+              "r": "のう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "歌",
+              "r": "うた",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "詠",
+              "r": "よ",
+              "g": "predicate"
+            },
+            {
+              "t": "んで",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "われた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

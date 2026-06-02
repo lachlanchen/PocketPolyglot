@@ -1,0 +1,654 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00513",
+  "source_text": "天皇聞此歌。即興軍欲殺。爾速總別王。女鳥王。共逃退而。騰于倉椅山。於是速總別王歌曰。",
+  "source_sha256": "367d48bb23b1600a1f75d13f035ad0492e64f6a99162f743e6c38bda34b96a1a",
+  "source_normalized_sha256": "367d48bb23b1600a1f75d13f035ad0492e64f6a99162f743e6c38bda34b96a1a",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 92,
+    "grammar_token_total": 92,
+    "unit_count": 5
+  },
+  "source_chunk_id": "kojiki-chunk-0513",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00513",
+    "source_text": "天皇聞此歌。即興軍欲殺。爾速總別王。女鳥王。共逃退而。騰于倉椅山。於是速總別王歌曰。",
+    "units": [
+      {
+        "source_text": "天皇聞此歌。",
+        "zh": [
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "subject"
+          },
+          {
+            "t": "皇",
+            "r": "huáng",
+            "g": "subject"
+          },
+          {
+            "t": "聞",
+            "r": "wén",
+            "g": "predicate"
+          },
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "歌",
+            "r": "gē",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "subject"
+            },
+            {
+              "t": "皇",
+              "r": "のう",
+              "g": "subject"
+            },
+            {
+              "t": "はこの",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "歌",
+              "r": "うた",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "聞",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "かれた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "即興軍欲殺。",
+        "zh": [
+          {
+            "t": "即",
+            "r": "jí",
+            "g": "adverbial"
+          },
+          {
+            "t": "興",
+            "r": "xīng",
+            "g": "predicate"
+          },
+          {
+            "t": "軍",
+            "r": "jūn",
+            "g": "object"
+          },
+          {
+            "t": "欲",
+            "r": "yù",
+            "g": "predicate"
+          },
+          {
+            "t": "殺",
+            "r": "shā",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ただちに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "軍",
+              "r": "ぐん",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "興",
+              "r": "おこ",
+              "g": "predicate"
+            },
+            {
+              "t": "して、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "殺",
+              "r": "ころ",
+              "g": "predicate"
+            },
+            {
+              "t": "そうとした",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "爾速總別王。女鳥王。共逃退而。",
+        "zh": [
+          {
+            "t": "爾",
+            "r": "ěr",
+            "g": "adverbial"
+          },
+          {
+            "t": "速",
+            "r": "sù",
+            "g": "subject"
+          },
+          {
+            "t": "總",
+            "r": "zǒng",
+            "g": "subject"
+          },
+          {
+            "t": "別",
+            "r": "bié",
+            "g": "subject"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "女",
+            "r": "nǚ",
+            "g": "subject"
+          },
+          {
+            "t": "鳥",
+            "r": "niǎo",
+            "g": "subject"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "共",
+            "r": "gòng",
+            "g": "adverbial"
+          },
+          {
+            "t": "逃",
+            "r": "táo",
+            "g": "predicate"
+          },
+          {
+            "t": "退",
+            "r": "tuì",
+            "g": "predicate"
+          },
+          {
+            "t": "而",
+            "r": "ér",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そこで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "速",
+              "r": "はや",
+              "g": "subject"
+            },
+            {
+              "t": "総",
+              "r": "ぶさ",
+              "g": "subject"
+            },
+            {
+              "t": "別",
+              "r": "わけ",
+              "g": "subject"
+            },
+            {
+              "t": "王",
+              "r": "みこ",
+              "g": "subject"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "女",
+              "r": "め",
+              "g": "subject"
+            },
+            {
+              "t": "鳥",
+              "r": "どり",
+              "g": "subject"
+            },
+            {
+              "t": "王",
+              "r": "みこ",
+              "g": "subject"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "共",
+              "r": "とも",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "逃",
+              "r": "に",
+              "g": "predicate"
+            },
+            {
+              "t": "げ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "退",
+              "r": "しりぞ",
+              "g": "predicate"
+            },
+            {
+              "t": "いて、",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "騰于倉椅山。",
+        "zh": [
+          {
+            "t": "騰",
+            "r": "téng",
+            "g": "predicate"
+          },
+          {
+            "t": "于",
+            "r": "yú",
+            "g": "function"
+          },
+          {
+            "t": "倉",
+            "r": "cāng",
+            "g": "complement"
+          },
+          {
+            "t": "椅",
+            "r": "yǐ",
+            "g": "complement"
+          },
+          {
+            "t": "山",
+            "r": "shān",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "倉",
+              "r": "くら",
+              "g": "complement"
+            },
+            {
+              "t": "椅",
+              "r": "はし",
+              "g": "complement"
+            },
+            {
+              "t": "山",
+              "r": "やま",
+              "g": "complement"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "complement"
+            }
+          ],
+          [
+            {
+              "t": "登",
+              "r": "のぼ",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "於是速總別王歌曰。",
+        "zh": [
+          {
+            "t": "於",
+            "r": "yú",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "adverbial"
+          },
+          {
+            "t": "速",
+            "r": "sù",
+            "g": "subject"
+          },
+          {
+            "t": "總",
+            "r": "zǒng",
+            "g": "subject"
+          },
+          {
+            "t": "別",
+            "r": "bié",
+            "g": "subject"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "subject"
+          },
+          {
+            "t": "歌",
+            "r": "gē",
+            "g": "predicate"
+          },
+          {
+            "t": "曰",
+            "r": "yuē",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そこで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "速",
+              "r": "はや",
+              "g": "subject"
+            },
+            {
+              "t": "総",
+              "r": "ぶさ",
+              "g": "subject"
+            },
+            {
+              "t": "別",
+              "r": "わけ",
+              "g": "subject"
+            },
+            {
+              "t": "王",
+              "r": "みこ",
+              "g": "subject"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "歌",
+              "r": "うた",
+              "g": "predicate"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

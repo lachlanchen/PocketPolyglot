@@ -1,0 +1,403 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00581",
+  "source_text": "如此歌。即共自死。故此二歌者。讀歌也。",
+  "source_sha256": "ceaa34d5f5fd07a5d66bc7f9a3ee1b10d75a19e001428d09eed870ce6b35fe37",
+  "source_normalized_sha256": "ceaa34d5f5fd07a5d66bc7f9a3ee1b10d75a19e001428d09eed870ce6b35fe37",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 44,
+    "grammar_token_total": 44,
+    "unit_count": 4
+  },
+  "source_chunk_id": "kojiki-chunk-0581",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "predicate"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "predicate"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00581",
+    "source_text": "如此歌。即共自死。故此二歌者。讀歌也。",
+    "units": [
+      {
+        "source_text": "如此歌。",
+        "zh": [
+          {
+            "t": "如",
+            "r": "rú",
+            "g": "adverbial"
+          },
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "歌",
+            "r": "gē",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "このように",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "歌",
+              "r": "うた",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "即共自死。",
+        "zh": [
+          {
+            "t": "即",
+            "r": "jí",
+            "g": "adverbial"
+          },
+          {
+            "t": "共",
+            "r": "gòng",
+            "g": "adverbial"
+          },
+          {
+            "t": "自",
+            "r": "zì",
+            "g": "adverbial"
+          },
+          {
+            "t": "死",
+            "r": "sǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そこで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "共",
+              "r": "とも",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "自",
+              "r": "みずか",
+              "g": "adverbial"
+            },
+            {
+              "t": "ら",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "死",
+              "r": "し",
+              "g": "predicate"
+            },
+            {
+              "t": "んだ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "故此二歌者。",
+        "zh": [
+          {
+            "t": "故",
+            "r": "gù",
+            "g": "adverbial"
+          },
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "subject"
+          },
+          {
+            "t": "二",
+            "r": "èr",
+            "g": "subject"
+          },
+          {
+            "t": "歌",
+            "r": "gē",
+            "g": "subject"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ゆえに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "この",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "二",
+              "r": "ふた",
+              "g": "subject"
+            },
+            {
+              "t": "つの",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "歌",
+              "r": "うた",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "讀歌也。",
+        "zh": [
+          {
+            "t": "讀",
+            "r": "dú",
+            "g": "predicate"
+          },
+          {
+            "t": "歌",
+            "r": "gē",
+            "g": "object"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "読",
+              "r": "よ",
+              "g": "predicate"
+            },
+            {
+              "t": "み",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "歌",
+              "r": "うた",
+              "g": "object"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "ある",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

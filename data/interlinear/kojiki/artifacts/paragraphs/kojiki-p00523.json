@@ -1,0 +1,317 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00523",
+  "source_text": "如此白而。被給御琴。歌曰。",
+  "source_sha256": "ae2fcf7499f97cdc3580a04e724ed70b3b1963039203b29c3a207949964c4077",
+  "source_normalized_sha256": "ae2fcf7499f97cdc3580a04e724ed70b3b1963039203b29c3a207949964c4077",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 29,
+    "grammar_token_total": 29,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kojiki-chunk-0523",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00523",
+    "source_text": "如此白而。被給御琴。歌曰。",
+    "units": [
+      {
+        "source_text": "如此白而。",
+        "zh": [
+          {
+            "t": "如",
+            "r": "rú",
+            "g": "adverbial"
+          },
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "白",
+            "r": "bái",
+            "g": "predicate"
+          },
+          {
+            "t": "而",
+            "r": "ér",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "このように",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "申",
+              "r": "もう",
+              "g": "predicate"
+            },
+            {
+              "t": "した",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "被給御琴。",
+        "zh": [
+          {
+            "t": "被",
+            "r": "bèi",
+            "g": "predicate"
+          },
+          {
+            "t": "給",
+            "r": "gěi",
+            "g": "predicate"
+          },
+          {
+            "t": "御",
+            "r": "yù",
+            "g": "object"
+          },
+          {
+            "t": "琴",
+            "r": "qín",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "御",
+              "r": "み",
+              "g": "object"
+            },
+            {
+              "t": "琴",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "賜",
+              "r": "たまわ",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "歌曰。",
+        "zh": [
+          {
+            "t": "歌",
+            "r": "gē",
+            "g": "subject"
+          },
+          {
+            "t": "曰",
+            "r": "yuē",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "歌",
+              "r": "うた",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "こう",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "う",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

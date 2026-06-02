@@ -1,0 +1,514 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00585",
+  "source_text": "故。不出外以置也。是恐。隨大命奉進。然言以白事。",
+  "source_sha256": "b64ab2afc867fc4745dc546e1d450b7bd59fa464a5646914840c97300ad7d84c",
+  "source_normalized_sha256": "b64ab2afc867fc4745dc546e1d450b7bd59fa464a5646914840c97300ad7d84c",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 64,
+    "grammar_token_total": 64,
+    "unit_count": 5
+  },
+  "source_chunk_id": "kojiki-chunk-0585",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00585",
+    "source_text": "故。不出外以置也。是恐。隨大命奉進。然言以白事。",
+    "units": [
+      {
+        "source_text": "故。",
+        "zh": [
+          {
+            "t": "故",
+            "r": "gù",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ゆえに",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "不出外以置也。",
+        "zh": [
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "出",
+            "r": "chū",
+            "g": "predicate"
+          },
+          {
+            "t": "外",
+            "r": "wài",
+            "g": "complement"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "function"
+          },
+          {
+            "t": "置",
+            "r": "zhì",
+            "g": "predicate"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "外",
+              "r": "そと",
+              "g": "complement"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "出",
+              "r": "だ",
+              "g": "predicate"
+            },
+            {
+              "t": "さず",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "そのまま",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "置",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "いたのである",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "是恐。",
+        "zh": [
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "subject"
+          },
+          {
+            "t": "恐",
+            "r": "kǒng",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "これは",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "恐",
+              "r": "おそ",
+              "g": "predicate"
+            },
+            {
+              "t": "れたためである",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "隨大命奉進。",
+        "zh": [
+          {
+            "t": "隨",
+            "r": "suí",
+            "g": "adverbial"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "attributive"
+          },
+          {
+            "t": "命",
+            "r": "mìng",
+            "g": "object"
+          },
+          {
+            "t": "奉",
+            "r": "fèng",
+            "g": "adverbial"
+          },
+          {
+            "t": "進",
+            "r": "jìn",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "attributive"
+            },
+            {
+              "t": "いなる",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "命",
+              "r": "みこと",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "従",
+              "r": "したが",
+              "g": "adverbial"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "謹",
+              "r": "つつし",
+              "g": "adverbial"
+            },
+            {
+              "t": "んで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "奉",
+              "r": "たてまつ",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "進",
+              "r": "すす",
+              "g": "predicate"
+            },
+            {
+              "t": "める",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "然言以白事。",
+        "zh": [
+          {
+            "t": "然",
+            "r": "rán",
+            "g": "function"
+          },
+          {
+            "t": "言",
+            "r": "yán",
+            "g": "adverbial"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "function"
+          },
+          {
+            "t": "白",
+            "r": "bái",
+            "g": "predicate"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "しかし",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "言",
+              "r": "こと",
+              "g": "adverbial"
+            },
+            {
+              "t": "葉",
+              "r": "ば",
+              "g": "adverbial"
+            },
+            {
+              "t": "をもって",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "事",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "申",
+              "r": "もう",
+              "g": "predicate"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "上",
+              "r": "あ",
+              "g": "predicate"
+            },
+            {
+              "t": "げる",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

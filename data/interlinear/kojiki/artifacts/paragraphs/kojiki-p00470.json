@@ -1,0 +1,828 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00470",
+  "source_text": "作茨田堤。及茨田三宅。又作丸邇池。依網池。又掘難波之堀江而。通海。又掘小椅江。又定墨江之津。於是",
+  "source_sha256": "a3122440520495dd3872619b1fb7dd760291596e7369803b847f61e3dbcca4ae",
+  "source_normalized_sha256": "a3122440520495dd3872619b1fb7dd760291596e7369803b847f61e3dbcca4ae",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 118,
+    "grammar_token_total": 118,
+    "unit_count": 9
+  },
+  "source_chunk_id": "kojiki-chunk-0470",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00470",
+    "source_text": "作茨田堤。及茨田三宅。又作丸邇池。依網池。又掘難波之堀江而。通海。又掘小椅江。又定墨江之津。於是",
+    "units": [
+      {
+        "source_text": "作茨田堤。",
+        "zh": [
+          {
+            "t": "作",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "茨",
+            "r": "cí",
+            "g": "object"
+          },
+          {
+            "t": "田",
+            "r": "tián",
+            "g": "object"
+          },
+          {
+            "t": "堤",
+            "r": "dī",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "茨",
+              "r": "まむた",
+              "g": "object"
+            },
+            {
+              "t": "田",
+              "r": "た",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "堤",
+              "r": "つつみ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "築",
+              "r": "きず",
+              "g": "predicate"
+            },
+            {
+              "t": "いた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "及茨田三宅。",
+        "zh": [
+          {
+            "t": "及",
+            "r": "jí",
+            "g": "function"
+          },
+          {
+            "t": "茨",
+            "r": "cí",
+            "g": "object"
+          },
+          {
+            "t": "田",
+            "r": "tián",
+            "g": "object"
+          },
+          {
+            "t": "三",
+            "r": "sān",
+            "g": "object"
+          },
+          {
+            "t": "宅",
+            "r": "zhái",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "および",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "茨",
+              "r": "まむた",
+              "g": "object"
+            },
+            {
+              "t": "田",
+              "r": "た",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "屯",
+              "r": "みやけ",
+              "g": "object"
+            },
+            {
+              "t": "倉",
+              "r": "け",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "設",
+              "r": "もう",
+              "g": "predicate"
+            },
+            {
+              "t": "けた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "又作丸邇池。",
+        "zh": [
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "作",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "丸",
+            "r": "wán",
+            "g": "object"
+          },
+          {
+            "t": "邇",
+            "r": "ěr",
+            "g": "object"
+          },
+          {
+            "t": "池",
+            "r": "chí",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "また",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "丸",
+              "r": "わに",
+              "g": "object"
+            },
+            {
+              "t": "邇",
+              "r": "に",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "池",
+              "r": "いけ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "造",
+              "r": "つく",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "依網池。",
+        "zh": [
+          {
+            "t": "依",
+            "r": "yī",
+            "g": "object"
+          },
+          {
+            "t": "網",
+            "r": "wǎng",
+            "g": "object"
+          },
+          {
+            "t": "池",
+            "r": "chí",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "依",
+              "r": "よさみ",
+              "g": "object"
+            },
+            {
+              "t": "網",
+              "r": "み",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "池",
+              "r": "いけ",
+              "g": "object"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "造",
+              "r": "つく",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "又掘難波之堀江而。",
+        "zh": [
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "掘",
+            "r": "jué",
+            "g": "predicate"
+          },
+          {
+            "t": "難",
+            "r": "nán",
+            "g": "object"
+          },
+          {
+            "t": "波",
+            "r": "bō",
+            "g": "object"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "object"
+          },
+          {
+            "t": "堀",
+            "r": "kū",
+            "g": "object"
+          },
+          {
+            "t": "江",
+            "r": "jiāng",
+            "g": "object"
+          },
+          {
+            "t": "而",
+            "r": "ér",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "また",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "難",
+              "r": "なにわ",
+              "g": "object"
+            },
+            {
+              "t": "波",
+              "r": "わ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "堀",
+              "r": "ほり",
+              "g": "object"
+            },
+            {
+              "t": "江",
+              "r": "え",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "掘",
+              "r": "ほ",
+              "g": "predicate"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "通海。",
+        "zh": [
+          {
+            "t": "通",
+            "r": "tōng",
+            "g": "predicate"
+          },
+          {
+            "t": "海",
+            "r": "hǎi",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "海",
+              "r": "うみ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "通",
+              "r": "つう",
+              "g": "predicate"
+            },
+            {
+              "t": "じさせた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "又掘小椅江。",
+        "zh": [
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "掘",
+            "r": "jué",
+            "g": "predicate"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "object"
+          },
+          {
+            "t": "椅",
+            "r": "yǐ",
+            "g": "object"
+          },
+          {
+            "t": "江",
+            "r": "jiāng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "また",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "小",
+              "r": "おばし",
+              "g": "object"
+            },
+            {
+              "t": "椅",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "江",
+              "r": "え",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "掘",
+              "r": "ほ",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "又定墨江之津。",
+        "zh": [
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "定",
+            "r": "dìng",
+            "g": "predicate"
+          },
+          {
+            "t": "墨",
+            "r": "mò",
+            "g": "object"
+          },
+          {
+            "t": "江",
+            "r": "jiāng",
+            "g": "object"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "object"
+          },
+          {
+            "t": "津",
+            "r": "jīn",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "また",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "墨",
+              "r": "すみのえ",
+              "g": "object"
+            },
+            {
+              "t": "江",
+              "r": "え",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "津",
+              "r": "つ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "定",
+              "r": "さだ",
+              "g": "predicate"
+            },
+            {
+              "t": "めた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "於是",
+        "zh": [
+          {
+            "t": "於",
+            "r": "yú",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ここ",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "において",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,804 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00525",
+  "source_text": "此者。本岐歌之片歌也。此之御世。免寸河之西。有一高樹。其樹之影。當旦日者。逮淡道嶋。當夕日者。越",
+  "source_sha256": "caad06f46211ab5510b337842973637aec8deb8a57e6323c0ec1bf0b28f81452",
+  "source_normalized_sha256": "caad06f46211ab5510b337842973637aec8deb8a57e6323c0ec1bf0b28f81452",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 111,
+    "grammar_token_total": 111,
+    "unit_count": 10
+  },
+  "source_chunk_id": "kojiki-chunk-0525",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00525",
+    "source_text": "此者。本岐歌之片歌也。此之御世。免寸河之西。有一高樹。其樹之影。當旦日者。逮淡道嶋。當夕日者。越",
+    "units": [
+      {
+        "source_text": "此者。",
+        "zh": [
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "subject"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "これは",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "である",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "本岐歌之片歌也。",
+        "zh": [
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "attributive"
+          },
+          {
+            "t": "岐",
+            "r": "qí",
+            "g": "attributive"
+          },
+          {
+            "t": "歌",
+            "r": "gē",
+            "g": "attributive"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "attributive"
+          },
+          {
+            "t": "片",
+            "r": "piàn",
+            "g": "predicate"
+          },
+          {
+            "t": "歌",
+            "r": "gē",
+            "g": "predicate"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "本",
+              "r": "ほ",
+              "g": "attributive"
+            },
+            {
+              "t": "岐",
+              "r": "き",
+              "g": "attributive"
+            },
+            {
+              "t": "歌",
+              "r": "うた",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "片",
+              "r": "かた",
+              "g": "predicate"
+            },
+            {
+              "t": "歌",
+              "r": "うた",
+              "g": "predicate"
+            },
+            {
+              "t": "である",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "此之御世。",
+        "zh": [
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "adverbial"
+          },
+          {
+            "t": "御",
+            "r": "yù",
+            "g": "adverbial"
+          },
+          {
+            "t": "世",
+            "r": "shì",
+            "g": "adverbial"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "御",
+              "r": "み",
+              "g": "adverbial"
+            },
+            {
+              "t": "世",
+              "r": "よ",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "免寸河之西。",
+        "zh": [
+          {
+            "t": "免",
+            "r": "miǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "寸",
+            "r": "cùn",
+            "g": "adverbial"
+          },
+          {
+            "t": "河",
+            "r": "hé",
+            "g": "adverbial"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "adverbial"
+          },
+          {
+            "t": "西",
+            "r": "xī",
+            "g": "adverbial"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "免",
+              "r": "め",
+              "g": "adverbial"
+            },
+            {
+              "t": "寸",
+              "r": "き",
+              "g": "adverbial"
+            },
+            {
+              "t": "河",
+              "r": "がわ",
+              "g": "adverbial"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "西",
+              "r": "にし",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "有一高樹。",
+        "zh": [
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "object"
+          },
+          {
+            "t": "高",
+            "r": "gāo",
+            "g": "object"
+          },
+          {
+            "t": "樹",
+            "r": "shù",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "object"
+            },
+            {
+              "t": "つの",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "高",
+              "r": "たか",
+              "g": "object"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "樹",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "あった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "其樹之影。",
+        "zh": [
+          {
+            "t": "其",
+            "r": "qí",
+            "g": "subject"
+          },
+          {
+            "t": "樹",
+            "r": "shù",
+            "g": "subject"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "subject"
+          },
+          {
+            "t": "影",
+            "r": "yǐng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "その",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "樹",
+              "r": "き",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "影",
+              "r": "かげ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "當旦日者。",
+        "zh": [
+          {
+            "t": "當",
+            "r": "dāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "旦",
+            "r": "dàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "adverbial"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "adverbial"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "朝",
+              "r": "あさ",
+              "g": "adverbial"
+            },
+            {
+              "t": "日",
+              "r": "ひ",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "当",
+              "r": "あ",
+              "g": "adverbial"
+            },
+            {
+              "t": "たる",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "時",
+              "r": "とき",
+              "g": "adverbial"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "逮淡道嶋。",
+        "zh": [
+          {
+            "t": "逮",
+            "r": "dài",
+            "g": "predicate"
+          },
+          {
+            "t": "淡",
+            "r": "dàn",
+            "g": "object"
+          },
+          {
+            "t": "道",
+            "r": "dào",
+            "g": "object"
+          },
+          {
+            "t": "嶋",
+            "r": "dǎo",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "淡",
+              "r": "あわ",
+              "g": "object"
+            },
+            {
+              "t": "道",
+              "r": "じ",
+              "g": "object"
+            },
+            {
+              "t": "島",
+              "r": "しま",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "届",
+              "r": "とど",
+              "g": "predicate"
+            },
+            {
+              "t": "いた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "當夕日者。",
+        "zh": [
+          {
+            "t": "當",
+            "r": "dāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "夕",
+            "r": "xī",
+            "g": "adverbial"
+          },
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "adverbial"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "adverbial"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "夕",
+              "r": "ゆう",
+              "g": "adverbial"
+            },
+            {
+              "t": "日",
+              "r": "ひ",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "当",
+              "r": "あ",
+              "g": "adverbial"
+            },
+            {
+              "t": "たる",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "時",
+              "r": "とき",
+              "g": "adverbial"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "越",
+        "zh": [
+          {
+            "t": "越",
+            "r": "yuè",
+            "g": "predicate"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "越",
+              "r": "こ",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "えて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

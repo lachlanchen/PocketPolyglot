@@ -1,0 +1,409 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00586",
+  "source_text": "其思无禮。即爲其妹之禮物。令持押木之玉縵而貢獻。",
+  "source_sha256": "17189eeee8ecaeef80c8501ce4dfca68cc6742a7808bce239bbaebc30c72a380",
+  "source_normalized_sha256": "17189eeee8ecaeef80c8501ce4dfca68cc6742a7808bce239bbaebc30c72a380",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 51,
+    "grammar_token_total": 51,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kojiki-chunk-0586",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00586",
+    "source_text": "其思无禮。即爲其妹之禮物。令持押木之玉縵而貢獻。",
+    "units": [
+      {
+        "source_text": "其思无禮。",
+        "zh": [
+          {
+            "t": "其",
+            "r": "qí",
+            "g": "attributive"
+          },
+          {
+            "t": "思",
+            "r": "sī",
+            "g": "subject"
+          },
+          {
+            "t": "无",
+            "r": "wú",
+            "g": "predicate"
+          },
+          {
+            "t": "禮",
+            "r": "lǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "その",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "考",
+              "r": "かんが",
+              "g": "subject"
+            },
+            {
+              "t": "えは",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "礼",
+              "r": "れい",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "欠",
+              "r": "か",
+              "g": "predicate"
+            },
+            {
+              "t": "いていた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "即爲其妹之禮物。",
+        "zh": [
+          {
+            "t": "即",
+            "r": "jí",
+            "g": "adverbial"
+          },
+          {
+            "t": "爲",
+            "r": "wéi",
+            "g": "predicate"
+          },
+          {
+            "t": "其",
+            "r": "qí",
+            "g": "attributive"
+          },
+          {
+            "t": "妹",
+            "r": "mèi",
+            "g": "object"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "function"
+          },
+          {
+            "t": "禮",
+            "r": "lǐ",
+            "g": "object"
+          },
+          {
+            "t": "物",
+            "r": "wù",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そこで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "その",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "妹",
+              "r": "いもうと",
+              "g": "object"
+            },
+            {
+              "t": "への",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "礼",
+              "r": "れい",
+              "g": "object"
+            },
+            {
+              "t": "物",
+              "r": "もつ",
+              "g": "object"
+            },
+            {
+              "t": "とした。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "令持押木之玉縵而貢獻。",
+        "zh": [
+          {
+            "t": "令",
+            "r": "lìng",
+            "g": "predicate"
+          },
+          {
+            "t": "持",
+            "r": "chí",
+            "g": "predicate"
+          },
+          {
+            "t": "押",
+            "r": "yā",
+            "g": "object"
+          },
+          {
+            "t": "木",
+            "r": "mù",
+            "g": "object"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "function"
+          },
+          {
+            "t": "玉",
+            "r": "yù",
+            "g": "object"
+          },
+          {
+            "t": "縵",
+            "r": "màn",
+            "g": "object"
+          },
+          {
+            "t": "而",
+            "r": "ér",
+            "g": "function"
+          },
+          {
+            "t": "貢",
+            "r": "gòng",
+            "g": "predicate"
+          },
+          {
+            "t": "獻",
+            "r": "xiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "押",
+              "r": "おし",
+              "g": "object"
+            },
+            {
+              "t": "木",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "玉",
+              "r": "たま",
+              "g": "object"
+            },
+            {
+              "t": "縵",
+              "r": "かずら",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "持",
+              "r": "も",
+              "g": "predicate"
+            },
+            {
+              "t": "たせ、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "それを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "貢",
+              "r": "みつ",
+              "g": "predicate"
+            },
+            {
+              "t": "ぎ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "献",
+              "r": "たてまつ",
+              "g": "predicate"
+            },
+            {
+              "t": "らせた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
