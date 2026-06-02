@@ -1,0 +1,200 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "woman-in-the-dunes",
+  "paragraph_id": "woman-in-the-dunes-p00341",
+  "source_text": "“这种事与我何干？”",
+  "source_sha256": "22ffc618643931c7ee7f3339a7e78fe1582beef9e40cf8eec857b6b61d1c3518",
+  "source_normalized_sha256": "22ffc618643931c7ee7f3339a7e78fe1582beef9e40cf8eec857b6b61d1c3518",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 20,
+    "grammar_token_total": 20,
+    "unit_count": 1
+  },
+  "source_chunk_id": "woman-in-the-dunes-chunk-0341",
+  "source_manifest_sha256": "d4e448272465ec27547c95a3075b988bdeb9e6260e21053d5ef38c28d636507d",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "げん",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "九",
+    "title_zh": [
+      {
+        "t": "九",
+        "r": "jiǔ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "九",
+        "r": "きゅう",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-九-intro",
+    "title_zh": [
+      {
+        "t": "九",
+        "r": "jiǔ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "九",
+        "r": "きゅう",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "woman-in-the-dunes-p00341",
+    "source_text": "“这种事与我何干？”",
+    "units": [
+      {
+        "source_text": "“这种事与我何干？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "种",
+            "r": "zhǒng",
+            "g": "subject"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "subject"
+          },
+          {
+            "t": "与",
+            "r": "yǔ",
+            "g": "complement"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "complement"
+          },
+          {
+            "t": "何",
+            "r": "hé",
+            "g": "predicate"
+          },
+          {
+            "t": "干",
+            "r": "gān",
+            "g": "predicate"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "こんなことが、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "complement"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "何",
+              "r": "なに",
+              "g": "predicate"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "関",
+              "r": "かん",
+              "g": "predicate"
+            },
+            {
+              "t": "係",
+              "r": "けい",
+              "g": "predicate"
+            },
+            {
+              "t": "があるのか？",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
