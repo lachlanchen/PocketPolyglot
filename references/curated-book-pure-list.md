@@ -42,3 +42,4 @@
 - Robert Graves, _I, Claudius_
 - Hilary Mantel, _Wolf Hall_
 - Leo Tolstoy, _War and Peace_
+- Margaret Mitchell, _Gone with the Wind_
