@@ -1,0 +1,446 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00377",
+  "source_text": "不見國土。唯有大海。謂爲詐神而。押退御琴。不控。",
+  "source_sha256": "504047bb994a7a76758b632b5c68d1db6a572b8ee3fe06d1e98484e939e577a7",
+  "source_normalized_sha256": "504047bb994a7a76758b632b5c68d1db6a572b8ee3fe06d1e98484e939e577a7",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 54,
+    "grammar_token_total": 54,
+    "unit_count": 5
+  },
+  "source_chunk_id": "kojiki-chunk-0377",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00377",
+    "source_text": "不見國土。唯有大海。謂爲詐神而。押退御琴。不控。",
+    "units": [
+      {
+        "source_text": "不見國土。",
+        "zh": [
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "見",
+            "r": "jiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "國",
+            "r": "guó",
+            "g": "object"
+          },
+          {
+            "t": "土",
+            "r": "tǔ",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "国",
+              "r": "こく",
+              "g": "object"
+            },
+            {
+              "t": "土",
+              "r": "ど",
+              "g": "object"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "えない",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "唯有大海。",
+        "zh": [
+          {
+            "t": "唯",
+            "r": "wéi",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "attributive"
+          },
+          {
+            "t": "海",
+            "r": "hǎi",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ただ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "attributive"
+            },
+            {
+              "t": "海",
+              "r": "うみ",
+              "g": "object"
+            },
+            {
+              "t": "だけが",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "ある",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "謂爲詐神而。",
+        "zh": [
+          {
+            "t": "謂",
+            "r": "wèi",
+            "g": "predicate"
+          },
+          {
+            "t": "爲",
+            "r": "wéi",
+            "g": "predicate"
+          },
+          {
+            "t": "詐",
+            "r": "zhà",
+            "g": "attributive"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "而",
+            "r": "ér",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "偽",
+              "r": "いつわ",
+              "g": "attributive"
+            },
+            {
+              "t": "りの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "神",
+              "r": "かみ",
+              "g": "object"
+            },
+            {
+              "t": "であると",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "思",
+              "r": "おも",
+              "g": "predicate"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "押退御琴。",
+        "zh": [
+          {
+            "t": "押",
+            "r": "yā",
+            "g": "predicate"
+          },
+          {
+            "t": "退",
+            "r": "tuì",
+            "g": "predicate"
+          },
+          {
+            "t": "御",
+            "r": "yù",
+            "g": "attributive"
+          },
+          {
+            "t": "琴",
+            "r": "qín",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "御",
+              "r": "み",
+              "g": "attributive"
+            },
+            {
+              "t": "琴",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "押",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "しのけた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "不控。",
+        "zh": [
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "控",
+            "r": "kòng",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "もう",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "弾",
+              "r": "ひ",
+              "g": "predicate"
+            },
+            {
+              "t": "くことは",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "なかった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

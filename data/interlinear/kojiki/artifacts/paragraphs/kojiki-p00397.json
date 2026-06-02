@@ -1,0 +1,463 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00397",
+  "source_text": "菩岐。本岐玖琉本斯。登余本岐。本岐母登本斯。",
+  "source_sha256": "147519b589c786392a51919277d856687c4a387896235ffcfb74b08c003bab71",
+  "source_normalized_sha256": "147519b589c786392a51919277d856687c4a387896235ffcfb74b08c003bab71",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 56,
+    "grammar_token_total": 56,
+    "unit_count": 4
+  },
+  "source_chunk_id": "kojiki-chunk-0397",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00397",
+    "source_text": "菩岐。本岐玖琉本斯。登余本岐。本岐母登本斯。",
+    "units": [
+      {
+        "source_text": "菩岐。",
+        "zh": [
+          {
+            "t": "菩",
+            "r": "pú",
+            "g": "predicate"
+          },
+          {
+            "t": "岐",
+            "r": "qí",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ほぎ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "祝",
+              "r": "ほ",
+              "g": "predicate"
+            },
+            {
+              "t": "ぎの",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "声",
+              "r": "こえ",
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "本岐玖琉本斯。",
+        "zh": [
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "predicate"
+          },
+          {
+            "t": "岐",
+            "r": "qí",
+            "g": "predicate"
+          },
+          {
+            "t": "玖",
+            "r": "jiǔ",
+            "g": "complement"
+          },
+          {
+            "t": "琉",
+            "r": "liú",
+            "g": "complement"
+          },
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "object"
+          },
+          {
+            "t": "斯",
+            "r": "sī",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ほぎ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "くる",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "ほし",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "祝",
+              "r": "ほ",
+              "g": "predicate"
+            },
+            {
+              "t": "ぎ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "来",
+              "r": "く",
+              "g": "complement"
+            },
+            {
+              "t": "る",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "言",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "葉",
+              "r": "ば",
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "登余本岐。",
+        "zh": [
+          {
+            "t": "登",
+            "r": "dēng",
+            "g": "attributive"
+          },
+          {
+            "t": "余",
+            "r": "yú",
+            "g": "attributive"
+          },
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "predicate"
+          },
+          {
+            "t": "岐",
+            "r": "qí",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "とよほぎ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "豊",
+              "r": "とよ",
+              "g": "attributive"
+            },
+            {
+              "t": "かな",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "祝",
+              "r": "ほ",
+              "g": "predicate"
+            },
+            {
+              "t": "ぎ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "本岐母登本斯。",
+        "zh": [
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "predicate"
+          },
+          {
+            "t": "岐",
+            "r": "qí",
+            "g": "predicate"
+          },
+          {
+            "t": "母",
+            "r": "mǔ",
+            "g": "complement"
+          },
+          {
+            "t": "登",
+            "r": "dēng",
+            "g": "complement"
+          },
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "object"
+          },
+          {
+            "t": "斯",
+            "r": "sī",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ほぎ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "もとほし",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "祝",
+              "r": "ほ",
+              "g": "predicate"
+            },
+            {
+              "t": "ぎを",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "巡",
+              "r": "めぐ",
+              "g": "complement"
+            },
+            {
+              "t": "らす",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "言",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "葉",
+              "r": "ば",
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

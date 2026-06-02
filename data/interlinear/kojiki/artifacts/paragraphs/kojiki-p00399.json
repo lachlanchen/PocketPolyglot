@@ -1,0 +1,483 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00399",
+  "source_text": "如此歌而。獻大御酒。爾建内宿禰命。爲御子答歌曰。",
+  "source_sha256": "52fd93f0001cf0ed1b0e997796665f3baabd9a344dda0aa9d722f52824251e1e",
+  "source_normalized_sha256": "52fd93f0001cf0ed1b0e997796665f3baabd9a344dda0aa9d722f52824251e1e",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 60,
+    "grammar_token_total": 60,
+    "unit_count": 4
+  },
+  "source_chunk_id": "kojiki-chunk-0399",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00399",
+    "source_text": "如此歌而。獻大御酒。爾建内宿禰命。爲御子答歌曰。",
+    "units": [
+      {
+        "source_text": "如此歌而。",
+        "zh": [
+          {
+            "t": "如",
+            "r": "rú",
+            "g": "adverbial"
+          },
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "歌",
+            "r": "gē",
+            "g": "predicate"
+          },
+          {
+            "t": "而",
+            "r": "ér",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "このように",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "歌",
+              "r": "うた",
+              "g": "predicate"
+            },
+            {
+              "t": "って、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "そうして",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "獻大御酒。",
+        "zh": [
+          {
+            "t": "獻",
+            "r": "xiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "attributive"
+          },
+          {
+            "t": "御",
+            "r": "yù",
+            "g": "attributive"
+          },
+          {
+            "t": "酒",
+            "r": "jiǔ",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "attributive"
+            },
+            {
+              "t": "御",
+              "r": "み",
+              "g": "attributive"
+            },
+            {
+              "t": "酒",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "献",
+              "r": "たてまつ",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "爾建内宿禰命。",
+        "zh": [
+          {
+            "t": "爾",
+            "r": "ěr",
+            "g": "adverbial"
+          },
+          {
+            "t": "建",
+            "r": "jiàn",
+            "g": "subject"
+          },
+          {
+            "t": "内",
+            "r": "nèi",
+            "g": "subject"
+          },
+          {
+            "t": "宿",
+            "r": "sù",
+            "g": "subject"
+          },
+          {
+            "t": "禰",
+            "r": "mí",
+            "g": "subject"
+          },
+          {
+            "t": "命",
+            "r": "mìng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そこで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "建",
+              "r": "たけ",
+              "g": "subject"
+            },
+            {
+              "t": "内",
+              "r": "うち",
+              "g": "subject"
+            },
+            {
+              "t": "宿",
+              "r": "すく",
+              "g": "subject"
+            },
+            {
+              "t": "禰",
+              "r": "ね",
+              "g": "subject"
+            },
+            {
+              "t": "命",
+              "r": "のみこと",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "進",
+              "r": "すす",
+              "g": "predicate"
+            },
+            {
+              "t": "み",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "出",
+              "r": "で",
+              "g": "predicate"
+            },
+            {
+              "t": "て",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "爲御子答歌曰。",
+        "zh": [
+          {
+            "t": "爲",
+            "r": "wèi",
+            "g": "adverbial"
+          },
+          {
+            "t": "御",
+            "r": "yù",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "object"
+          },
+          {
+            "t": "答",
+            "r": "dá",
+            "g": "predicate"
+          },
+          {
+            "t": "歌",
+            "r": "gē",
+            "g": "object"
+          },
+          {
+            "t": "曰",
+            "r": "yuē",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "御",
+              "r": "み",
+              "g": "object"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "のために",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "答",
+              "r": "こた",
+              "g": "predicate"
+            },
+            {
+              "t": "え",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "歌",
+              "r": "うた",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "詠",
+              "r": "よ",
+              "g": "predicate"
+            },
+            {
+              "t": "んで",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

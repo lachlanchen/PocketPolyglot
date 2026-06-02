@@ -1,0 +1,442 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00409",
+  "source_text": "是無悒。弟子者。未成人。是愛。爾天皇詔。佐邪岐。",
+  "source_sha256": "3de47b3d0fbddd0a8b9eeb074c246e8149b70d71521895c6b52df4195f5b6933",
+  "source_normalized_sha256": "3de47b3d0fbddd0a8b9eeb074c246e8149b70d71521895c6b52df4195f5b6933",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 51,
+    "grammar_token_total": 51,
+    "unit_count": 6
+  },
+  "source_chunk_id": "kojiki-chunk-0409",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00409",
+    "source_text": "是無悒。弟子者。未成人。是愛。爾天皇詔。佐邪岐。",
+    "units": [
+      {
+        "source_text": "是無悒。",
+        "zh": [
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "subject"
+          },
+          {
+            "t": "無",
+            "r": "wú",
+            "g": "predicate"
+          },
+          {
+            "t": "悒",
+            "r": "yì",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "これには",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "憂",
+              "r": "うれ",
+              "g": "object"
+            },
+            {
+              "t": "いがない。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "弟子者。",
+        "zh": [
+          {
+            "t": "弟",
+            "r": "dì",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "弟",
+              "r": "おとうと",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "その",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "者",
+              "r": "もの",
+              "g": "subject"
+            },
+            {
+              "t": "である。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "未成人。",
+        "zh": [
+          {
+            "t": "未",
+            "r": "wèi",
+            "g": "adverbial"
+          },
+          {
+            "t": "成",
+            "r": "chéng",
+            "g": "predicate"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "まだ",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "成",
+              "r": "せい",
+              "g": "predicate"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "object"
+            },
+            {
+              "t": "していない。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "是愛。",
+        "zh": [
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "愛",
+            "r": "ài",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "これを",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "愛",
+              "r": "いつく",
+              "g": "predicate"
+            },
+            {
+              "t": "しんだ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "爾天皇詔。",
+        "zh": [
+          {
+            "t": "爾",
+            "r": "ěr",
+            "g": "adverbial"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "subject"
+          },
+          {
+            "t": "皇",
+            "r": "huáng",
+            "g": "subject"
+          },
+          {
+            "t": "詔",
+            "r": "zhào",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そこで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "subject"
+            },
+            {
+              "t": "皇",
+              "r": "のう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "詔",
+              "r": "みことのり",
+              "g": "predicate"
+            },
+            {
+              "t": "した。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "佐邪岐。",
+        "zh": [
+          {
+            "t": "佐",
+            "r": "zuǒ",
+            "g": "object"
+          },
+          {
+            "t": "邪",
+            "r": "xié",
+            "g": "object"
+          },
+          {
+            "t": "岐",
+            "r": "qí",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "佐",
+              "r": "さ",
+              "g": "object"
+            },
+            {
+              "t": "邪",
+              "r": "ざ",
+              "g": "object"
+            },
+            {
+              "t": "岐",
+              "r": "き",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "へである。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
