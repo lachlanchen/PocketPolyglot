@@ -1,0 +1,44 @@
+# Curated Book Pure List
+
+- 《三星堆出土文物全记录》全3册
+- 岳南，《看见三星堆》
+- 《三星堆祭祀坑》
+- 《三星堆祭祀坑发掘记》
+- Brett L. Walker, _A Concise History of Japan_
+- _The New Cambridge History of Japan_
+- Sarah Stewart Johnson, _The Sirens of Mars_
+- Kelly Weinersmith and Zach Weinersmith, _A City on Mars_
+- Kim Stanley Robinson, _Mars Trilogy_
+- Patricia Buckley Ebrey, _The Cambridge Illustrated History of China_
+- _History of Imperial China_ series
+- Jonathan D. Spence, _The Search for Modern China_
+- Norman Davies, _Europe: A History_
+- Anthony Kaldellis, _The New Roman Empire: A History of Byzantium_
+- Judith Herrin, _Byzantium: The Surprising Life of a Medieval Empire_
+- Peter H. Wilson, _The Holy Roman Empire: A Thousand Years of Europe's History_
+- Peter H. Wilson, _Heart of Europe: A History of the Holy Roman Empire_
+- Martyn Rady, _The Habsburgs: To Rule the World_
+- Pieter M. Judson, _The Habsburg Empire: A New History_
+- Marc David Baer, _The Ottomans: Khans, Caesars, and Caliphs_
+- Caroline Finkel, _Osman's Dream: The Story of the Ottoman Empire, 1300-1923_
+- William L. Cleveland and Martin Bunton, _A History of the Modern Middle East_
+- Albert Hourani, _A History of the Arab Peoples_
+- Michael Axworthy, _A History of Iran: Empire of the Mind_
+- Tom Holland, _Persian Fire_
+- Touraj Daryaee, _Sasanian Persia: The Rise and Fall of an Empire_
+- S. Frederick Starr, _Lost Enlightenment: Central Asia's Golden Age from the Arab Conquest to Tamerlane_
+- _The Cambridge History of Iran, Volume 5: The Saljuq and Mongol Periods_
+- Peter Frankopan, _The Silk Roads_
+- Amanda H. Podany, _Weavers, Scribes, and Kings_
+- Karen Radner, _Ancient Assyria: A Very Short Introduction_
+- Paul Kriwaczek, _Babylon: Mesopotamia and the Birth of Civilization_
+- Toby Wilkinson, _The Rise and Fall of Ancient Egypt_
+- Ian Shaw, _The Oxford History of Ancient Egypt_
+- Ferdowsi, trans. Dick Davis, _Shahnameh: The Persian Book of Kings_
+- Orhan Pamuk, _My Name Is Red_
+- Jason Goodwin, _The Janissary Tree_
+- Ivo Andric, _The Bridge on the Drina_
+- Naguib Mahfouz, _The Cairo Trilogy_
+- Robert Graves, _I, Claudius_
+- Hilary Mantel, _Wolf Hall_
+- Leo Tolstoy, _War and Peace_
