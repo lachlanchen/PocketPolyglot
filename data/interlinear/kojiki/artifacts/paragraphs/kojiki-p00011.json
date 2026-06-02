@@ -1,0 +1,883 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00011",
+  "source_text": "神倭伊波礼毗古天皇以下，品陀御世以前，為中卷；大雀（皇帝）以下，小治田大宫以前，為下卷。并録三卷，謹以獻上。臣安萬侣，誠惶誠恐，頓首頓首。",
+  "source_sha256": "3f2e79ab92f8d5a75e1c44041e65459c4cd776697fee4f76e77e513f173bdf0a",
+  "source_normalized_sha256": "3f2e79ab92f8d5a75e1c44041e65459c4cd776697fee4f76e77e513f173bdf0a",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 148,
+    "grammar_token_total": 148,
+    "unit_count": 4
+  },
+  "source_chunk_id": "kojiki-chunk-0011",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "序",
+    "title_zh": [
+      {
+        "t": "序",
+        "r": "xù",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "序",
+        "r": "じょ",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-序-intro",
+    "title_zh": [
+      {
+        "t": "序",
+        "r": "xù",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "序",
+        "r": "じょ",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00011",
+    "source_text": "神倭伊波礼毗古天皇以下，品陀御世以前，為中卷；大雀（皇帝）以下，小治田大宫以前，為下卷。并録三卷，謹以獻上。臣安萬侣，誠惶誠恐，頓首頓首。",
+    "units": [
+      {
+        "source_text": "神倭伊波礼毗古天皇以下，品陀御世以前，為中卷；",
+        "zh": [
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "倭",
+            "r": "wō",
+            "g": "object"
+          },
+          {
+            "t": "伊",
+            "r": "yī",
+            "g": "object"
+          },
+          {
+            "t": "波",
+            "r": "bō",
+            "g": "object"
+          },
+          {
+            "t": "礼",
+            "r": "lǐ",
+            "g": "object"
+          },
+          {
+            "t": "毗",
+            "r": "pí",
+            "g": "object"
+          },
+          {
+            "t": "古",
+            "r": "gǔ",
+            "g": "object"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "object"
+          },
+          {
+            "t": "皇",
+            "r": "huáng",
+            "g": "object"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "object"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "品",
+            "r": "pǐn",
+            "g": "object"
+          },
+          {
+            "t": "陀",
+            "r": "tuó",
+            "g": "object"
+          },
+          {
+            "t": "御",
+            "r": "yù",
+            "g": "object"
+          },
+          {
+            "t": "世",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "object"
+          },
+          {
+            "t": "前",
+            "r": "qián",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "為",
+            "r": "wéi",
+            "g": "predicate"
+          },
+          {
+            "t": "中",
+            "r": "zhōng",
+            "g": "complement"
+          },
+          {
+            "t": "卷",
+            "r": "juàn",
+            "g": "complement"
+          },
+          {
+            "t": "；",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "神",
+              "r": "かむ",
+              "g": "object"
+            },
+            {
+              "t": "倭",
+              "r": "やまと",
+              "g": "object"
+            },
+            {
+              "t": "伊",
+              "r": "い",
+              "g": "object"
+            },
+            {
+              "t": "波",
+              "r": "は",
+              "g": "object"
+            },
+            {
+              "t": "礼",
+              "r": "れ",
+              "g": "object"
+            },
+            {
+              "t": "毗",
+              "r": "び",
+              "g": "object"
+            },
+            {
+              "t": "古",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "天",
+              "r": "すめら",
+              "g": "object"
+            },
+            {
+              "t": "皇",
+              "r": "みこと",
+              "g": "object"
+            },
+            {
+              "t": "から",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "品",
+              "r": "ほむ",
+              "g": "object"
+            },
+            {
+              "t": "陀",
+              "r": "だ",
+              "g": "object"
+            },
+            {
+              "t": "御",
+              "r": "み",
+              "g": "object"
+            },
+            {
+              "t": "世",
+              "r": "よ",
+              "g": "object"
+            },
+            {
+              "t": "以",
+              "r": "い",
+              "g": "object"
+            },
+            {
+              "t": "前",
+              "r": "ぜん",
+              "g": "object"
+            },
+            {
+              "t": "までを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "中",
+              "r": "ちゅう",
+              "g": "complement"
+            },
+            {
+              "t": "巻",
+              "r": "かん",
+              "g": "complement"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "する",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "；",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "大雀（皇帝）以下，小治田大宫以前，為下卷。",
+        "zh": [
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "object"
+          },
+          {
+            "t": "雀",
+            "r": "què",
+            "g": "object"
+          },
+          {
+            "t": "（",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "皇",
+            "r": "huáng",
+            "g": "object"
+          },
+          {
+            "t": "帝",
+            "r": "dì",
+            "g": "object"
+          },
+          {
+            "t": "）",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "object"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "object"
+          },
+          {
+            "t": "治",
+            "r": "zhì",
+            "g": "object"
+          },
+          {
+            "t": "田",
+            "r": "tián",
+            "g": "object"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "object"
+          },
+          {
+            "t": "宫",
+            "r": "gōng",
+            "g": "object"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "object"
+          },
+          {
+            "t": "前",
+            "r": "qián",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "為",
+            "r": "wéi",
+            "g": "predicate"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "complement"
+          },
+          {
+            "t": "卷",
+            "r": "juàn",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "object"
+            },
+            {
+              "t": "雀",
+              "r": "さざき",
+              "g": "object"
+            },
+            {
+              "t": "（",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "皇",
+              "r": "こう",
+              "g": "object"
+            },
+            {
+              "t": "帝",
+              "r": "てい",
+              "g": "object"
+            },
+            {
+              "t": "）",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "から",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "小",
+              "r": "お",
+              "g": "object"
+            },
+            {
+              "t": "治",
+              "r": "はり",
+              "g": "object"
+            },
+            {
+              "t": "田",
+              "r": "だ",
+              "g": "object"
+            },
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "object"
+            },
+            {
+              "t": "宮",
+              "r": "みや",
+              "g": "object"
+            },
+            {
+              "t": "以",
+              "r": "い",
+              "g": "object"
+            },
+            {
+              "t": "前",
+              "r": "ぜん",
+              "g": "object"
+            },
+            {
+              "t": "までを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "下",
+              "r": "げ",
+              "g": "complement"
+            },
+            {
+              "t": "巻",
+              "r": "かん",
+              "g": "complement"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "する",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "并録三卷，謹以獻上。",
+        "zh": [
+          {
+            "t": "并",
+            "r": "bìng",
+            "g": "adverbial"
+          },
+          {
+            "t": "録",
+            "r": "lù",
+            "g": "predicate"
+          },
+          {
+            "t": "三",
+            "r": "sān",
+            "g": "object"
+          },
+          {
+            "t": "卷",
+            "r": "juàn",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "謹",
+            "r": "jǐn",
+            "g": "adverbial"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "獻",
+            "r": "xiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "あわせて",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "三",
+              "r": "さん",
+              "g": "object"
+            },
+            {
+              "t": "巻",
+              "r": "かん",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "記",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "録",
+              "r": "ろく",
+              "g": "predicate"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "謹",
+              "r": "つつし",
+              "g": "adverbial"
+            },
+            {
+              "t": "んで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "献",
+              "r": "けん",
+              "g": "predicate"
+            },
+            {
+              "t": "上",
+              "r": "じょう",
+              "g": "predicate"
+            },
+            {
+              "t": "する",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "臣安萬侣，誠惶誠恐，頓首頓首。",
+        "zh": [
+          {
+            "t": "臣",
+            "r": "chén",
+            "g": "subject"
+          },
+          {
+            "t": "安",
+            "r": "ān",
+            "g": "subject"
+          },
+          {
+            "t": "萬",
+            "r": "wàn",
+            "g": "subject"
+          },
+          {
+            "t": "侣",
+            "r": "lǚ",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "誠",
+            "r": "chéng",
+            "g": "adverbial"
+          },
+          {
+            "t": "惶",
+            "r": "huáng",
+            "g": "predicate"
+          },
+          {
+            "t": "誠",
+            "r": "chéng",
+            "g": "adverbial"
+          },
+          {
+            "t": "恐",
+            "r": "kǒng",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "頓",
+            "r": "dùn",
+            "g": "predicate"
+          },
+          {
+            "t": "首",
+            "r": "shǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "頓",
+            "r": "dùn",
+            "g": "predicate"
+          },
+          {
+            "t": "首",
+            "r": "shǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "臣",
+              "r": "しん",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "安",
+              "r": "やす",
+              "g": "subject"
+            },
+            {
+              "t": "萬",
+              "r": "ま",
+              "g": "subject"
+            },
+            {
+              "t": "侶",
+              "r": "ろ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "誠",
+              "r": "まこと",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "恐",
+              "r": "おそ",
+              "g": "predicate"
+            },
+            {
+              "t": "れかしこまり",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "頓",
+              "r": "とん",
+              "g": "predicate"
+            },
+            {
+              "t": "首",
+              "r": "しゅ",
+              "g": "predicate"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "また",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "頓",
+              "r": "とん",
+              "g": "predicate"
+            },
+            {
+              "t": "首",
+              "r": "しゅ",
+              "g": "predicate"
+            },
+            {
+              "t": "する",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

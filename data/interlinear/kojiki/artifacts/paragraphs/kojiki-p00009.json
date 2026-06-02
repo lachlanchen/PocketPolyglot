@@ -1,0 +1,874 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00009",
+  "source_text": "全以音連者，事趣更長。是以今，或一句之中，交用音訓；或一事之内，全以訓録。即辞理叵見以注明，意况易解更非注。亦於姓「日下」謂「玖沙訶」，於名",
+  "source_sha256": "a5185d27cbd63a1c6a72962d280c09555469885eb05a5b858f5e1c07a9ab9f4d",
+  "source_normalized_sha256": "a5185d27cbd63a1c6a72962d280c09555469885eb05a5b858f5e1c07a9ab9f4d",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 144,
+    "grammar_token_total": 144,
+    "unit_count": 5
+  },
+  "source_chunk_id": "kojiki-chunk-0009",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "序",
+    "title_zh": [
+      {
+        "t": "序",
+        "r": "xù",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "序",
+        "r": "じょ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-序-intro",
+    "title_zh": [
+      {
+        "t": "序",
+        "r": "xù",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "序",
+        "r": "じょ",
+        "g": "predicate"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00009",
+    "source_text": "全以音連者，事趣更長。是以今，或一句之中，交用音訓；或一事之内，全以訓録。即辞理叵見以注明，意况易解更非注。亦於姓「日下」謂「玖沙訶」，於名",
+    "units": [
+      {
+        "source_text": "全以音連者，事趣更長。",
+        "zh": [
+          {
+            "t": "全",
+            "r": "quán",
+            "g": "adverbial"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "音",
+            "r": "yīn",
+            "g": "object"
+          },
+          {
+            "t": "連",
+            "r": "lián",
+            "g": "predicate"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "subject"
+          },
+          {
+            "t": "趣",
+            "r": "qù",
+            "g": "subject"
+          },
+          {
+            "t": "更",
+            "r": "gèng",
+            "g": "adverbial"
+          },
+          {
+            "t": "長",
+            "r": "cháng",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "すべて",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "音",
+              "r": "おん",
+              "g": "object"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "連",
+              "r": "つら",
+              "g": "predicate"
+            },
+            {
+              "t": "ねると、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "事",
+              "r": "こと",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "趣",
+              "r": "おもむき",
+              "g": "subject"
+            },
+            {
+              "t": "がさらに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "長",
+              "r": "なが",
+              "g": "predicate"
+            },
+            {
+              "t": "くなる。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "是以今，或一句之中，交用音訓；",
+        "zh": [
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "function"
+          },
+          {
+            "t": "今",
+            "r": "jīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "或",
+            "r": "huò",
+            "g": "adverbial"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "attributive"
+          },
+          {
+            "t": "句",
+            "r": "jù",
+            "g": "object"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "function"
+          },
+          {
+            "t": "中",
+            "r": "zhōng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "交",
+            "r": "jiāo",
+            "g": "adverbial"
+          },
+          {
+            "t": "用",
+            "r": "yòng",
+            "g": "predicate"
+          },
+          {
+            "t": "音",
+            "r": "yīn",
+            "g": "object"
+          },
+          {
+            "t": "訓",
+            "r": "xùn",
+            "g": "object"
+          },
+          {
+            "t": "；",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そこで",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "今",
+              "r": "いま",
+              "g": "adverbial"
+            },
+            {
+              "t": "、あるいは",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "一",
+              "r": "いっ",
+              "g": "object"
+            },
+            {
+              "t": "句",
+              "r": "く",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "中",
+              "r": "なか",
+              "g": "object"
+            },
+            {
+              "t": "で、",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "音",
+              "r": "おん",
+              "g": "object"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "訓",
+              "r": "くん",
+              "g": "object"
+            },
+            {
+              "t": "とを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "交",
+              "r": "まじ",
+              "g": "adverbial"
+            },
+            {
+              "t": "えて",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "用",
+              "r": "もち",
+              "g": "predicate"
+            },
+            {
+              "t": "いる。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "或一事之内，全以訓録。",
+        "zh": [
+          {
+            "t": "或",
+            "r": "huò",
+            "g": "adverbial"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "attributive"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "function"
+          },
+          {
+            "t": "内",
+            "r": "nèi",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "全",
+            "r": "quán",
+            "g": "adverbial"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "訓",
+            "r": "xùn",
+            "g": "object"
+          },
+          {
+            "t": "録",
+            "r": "lù",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "あるいは",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "object"
+            },
+            {
+              "t": "つの",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "事",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "内",
+              "r": "うち",
+              "g": "object"
+            },
+            {
+              "t": "では、",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "すべて",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "訓",
+              "r": "くん",
+              "g": "object"
+            },
+            {
+              "t": "によって",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "記",
+              "r": "しる",
+              "g": "predicate"
+            },
+            {
+              "t": "す。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "即辞理叵見以注明，意况易解更非注。",
+        "zh": [
+          {
+            "t": "即",
+            "r": "jí",
+            "g": "function"
+          },
+          {
+            "t": "辞",
+            "r": "cí",
+            "g": "subject"
+          },
+          {
+            "t": "理",
+            "r": "lǐ",
+            "g": "subject"
+          },
+          {
+            "t": "叵",
+            "r": "pǒ",
+            "g": "adverbial"
+          },
+          {
+            "t": "見",
+            "r": "jiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "注",
+            "r": "zhù",
+            "g": "object"
+          },
+          {
+            "t": "明",
+            "r": "míng",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "意",
+            "r": "yì",
+            "g": "subject"
+          },
+          {
+            "t": "况",
+            "r": "kuàng",
+            "g": "subject"
+          },
+          {
+            "t": "易",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "解",
+            "r": "jiě",
+            "g": "predicate"
+          },
+          {
+            "t": "更",
+            "r": "gèng",
+            "g": "adverbial"
+          },
+          {
+            "t": "非",
+            "r": "fēi",
+            "g": "predicate"
+          },
+          {
+            "t": "注",
+            "r": "zhù",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "すなわち",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "辞",
+              "r": "じ",
+              "g": "subject"
+            },
+            {
+              "t": "理",
+              "r": "り",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "えにくいものは",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "注",
+              "r": "ちゅう",
+              "g": "object"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "明",
+              "r": "あき",
+              "g": "predicate"
+            },
+            {
+              "t": "らかにし、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "意",
+              "r": "い",
+              "g": "subject"
+            },
+            {
+              "t": "味",
+              "r": "み",
+              "g": "subject"
+            },
+            {
+              "t": "や",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "様",
+              "r": "よう",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "す",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "解",
+              "r": "わか",
+              "g": "predicate"
+            },
+            {
+              "t": "りやすいものは",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "注",
+              "r": "ちゅう",
+              "g": "object"
+            },
+            {
+              "t": "しない。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "亦於姓「日下」謂「玖沙訶」，於名",
+        "zh": [
+          {
+            "t": "亦",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "於",
+            "r": "yú",
+            "g": "adverbial"
+          },
+          {
+            "t": "姓",
+            "r": "xìng",
+            "g": "object"
+          },
+          {
+            "t": "「",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "object"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "object"
+          },
+          {
+            "t": "」",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "謂",
+            "r": "wèi",
+            "g": "predicate"
+          },
+          {
+            "t": "「",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "玖",
+            "r": "jiǔ",
+            "g": "object"
+          },
+          {
+            "t": "沙",
+            "r": "shā",
+            "g": "object"
+          },
+          {
+            "t": "訶",
+            "r": "hē",
+            "g": "object"
+          },
+          {
+            "t": "」",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "於",
+            "r": "yú",
+            "g": "adverbial"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "object"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "また",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "姓",
+              "r": "せい",
+              "g": "object"
+            },
+            {
+              "t": "の「",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "日",
+              "r": "くさ",
+              "g": "object"
+            },
+            {
+              "t": "下",
+              "r": "か",
+              "g": "object"
+            },
+            {
+              "t": "」については、",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "玖",
+              "r": "く",
+              "g": "object"
+            },
+            {
+              "t": "沙",
+              "r": "さ",
+              "g": "object"
+            },
+            {
+              "t": "訶",
+              "r": "か",
+              "g": "object"
+            },
+            {
+              "t": "」と",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "謂",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "い、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "名",
+              "r": "な",
+              "g": "object"
+            },
+            {
+              "t": "については",
+              "r": "",
+              "g": "object"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

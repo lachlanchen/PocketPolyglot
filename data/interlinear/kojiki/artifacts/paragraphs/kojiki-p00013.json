@@ -1,0 +1,356 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00013",
+  "source_text": "天地初發之時，於高天原成神名，天之御中主神。",
+  "source_sha256": "8b2634815fff44845091bac64fe8a4c68ba1a16fae2349673327f53b7fce22cf",
+  "source_normalized_sha256": "8b2634815fff44845091bac64fe8a4c68ba1a16fae2349673327f53b7fce22cf",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 48,
+    "grammar_token_total": 48,
+    "unit_count": 1
+  },
+  "source_chunk_id": "kojiki-chunk-0013",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "上卷",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng"
+      },
+      {
+        "t": "卷",
+        "r": "juàn"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう"
+      },
+      {
+        "t": "卷",
+        "r": "かん"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-上卷-intro",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng"
+      },
+      {
+        "t": "卷",
+        "r": "juàn"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう"
+      },
+      {
+        "t": "卷",
+        "r": "かん"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00013",
+    "source_text": "天地初發之時，於高天原成神名，天之御中主神。",
+    "units": [
+      {
+        "source_text": "天地初發之時，於高天原成神名，天之御中主神。",
+        "zh": [
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "subject"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "subject"
+          },
+          {
+            "t": "初",
+            "r": "chū",
+            "g": "adverbial"
+          },
+          {
+            "t": "發",
+            "r": "fā",
+            "g": "predicate"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "function"
+          },
+          {
+            "t": "時",
+            "r": "shí",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "於",
+            "r": "yú",
+            "g": "adverbial"
+          },
+          {
+            "t": "高",
+            "r": "gāo",
+            "g": "adverbial"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "原",
+            "r": "yuán",
+            "g": "adverbial"
+          },
+          {
+            "t": "成",
+            "r": "chéng",
+            "g": "predicate"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "object"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "object"
+          },
+          {
+            "t": "御",
+            "r": "yù",
+            "g": "object"
+          },
+          {
+            "t": "中",
+            "r": "zhōng",
+            "g": "object"
+          },
+          {
+            "t": "主",
+            "r": "zhǔ",
+            "g": "object"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "subject"
+            },
+            {
+              "t": "地",
+              "r": "ち",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "初",
+              "r": "はじ",
+              "g": "adverbial"
+            },
+            {
+              "t": "めて",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "開",
+              "r": "ひら",
+              "g": "predicate"
+            },
+            {
+              "t": "けた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "時",
+              "r": "とき",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "高",
+              "r": "たか",
+              "g": "adverbial"
+            },
+            {
+              "t": "天",
+              "r": "ま",
+              "g": "adverbial"
+            },
+            {
+              "t": "原",
+              "r": "はら",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "成",
+              "r": "な",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "神",
+              "r": "かみ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "名",
+              "r": "な",
+              "g": "object"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "天",
+              "r": "あめ",
+              "g": "object"
+            },
+            {
+              "t": "之",
+              "r": "の",
+              "g": "object"
+            },
+            {
+              "t": "御",
+              "r": "み",
+              "g": "object"
+            },
+            {
+              "t": "中",
+              "r": "なか",
+              "g": "object"
+            },
+            {
+              "t": "主",
+              "r": "ぬし",
+              "g": "object"
+            },
+            {
+              "t": "神",
+              "r": "かみ",
+              "g": "object"
+            },
+            {
+              "t": "である。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
