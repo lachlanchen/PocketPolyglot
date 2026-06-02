@@ -1,0 +1,1177 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "genji-modern",
+  "paragraph_id": "genji-modern-p05599",
+  "source_text": "（四）此书有英、德、法译本。英译本最早，刊于一九二一年，译者瓦勒（Arthur Waley），书名*The Tale of Genji*。德译本有二种，一是赫利芝卡（Herbart E.Herlitschka）所译，书名*Die Geschichte von Prinzen Genji*；二是缪勒扎勃希（Maximilian Müller-Jabüsch）所译，书名*Die Aventeur der Prinzen Genji*。法译本译者是归化法国之日本人山田氏，书名*Le Romance de Genji*。",
+  "source_sha256": "dfa6fedd1859bfcd3cbf7d5f2c01e58b974ffe452d0fa40257dac7721f16a4ad",
+  "source_normalized_sha256": "9d64ec6f8166ef3d0fce850827ad4ef7577389b71df01a2aca8d23bb950c2bf2",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 203,
+    "grammar_token_total": 203,
+    "unit_count": 5
+  },
+  "source_chunk_id": "genji-modern-chunk-5599",
+  "source_manifest_sha256": "31fed9a4682318b56bd3687aa261a681dd49e03ca0f121e1342197c4f3c9c0a0",
+  "section": {
+    "id": "译后记",
+    "title_zh": [
+      {
+        "t": "译",
+        "r": "yì",
+        "g": "attributive"
+      },
+      {
+        "t": "后",
+        "r": "hòu",
+        "g": "attributive"
+      },
+      {
+        "t": "记",
+        "r": "jì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "訳",
+        "r": "やく",
+        "g": "attributive"
+      },
+      {
+        "t": "者",
+        "r": "しゃ",
+        "g": "attributive"
+      },
+      {
+        "t": "あとがき",
+        "r": "",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "译后记-intro",
+    "title_zh": [
+      {
+        "t": "译",
+        "r": "yì",
+        "g": "attributive"
+      },
+      {
+        "t": "后",
+        "r": "hòu",
+        "g": "attributive"
+      },
+      {
+        "t": "记",
+        "r": "jì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "訳",
+        "r": "やく",
+        "g": "attributive"
+      },
+      {
+        "t": "者",
+        "r": "しゃ",
+        "g": "attributive"
+      },
+      {
+        "t": "あとがき",
+        "r": "",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "genji-modern-p05599",
+    "source_text": "（四）此书有英、德、法译本。英译本最早，刊于一九二一年，译者瓦勒（Arthur Waley），书名*The Tale of Genji*。德译本有二种，一是赫利芝卡（Herbart E.Herlitschka）所译，书名*Die Geschichte von Prinzen Genji*；二是缪勒扎勃希（Maximilian Müller-Jabüsch）所译，书名*Die Aventeur der Prinzen Genji*。法译本译者是归化法国之日本人山田氏，书名*Le Romance de Genji*。",
+    "units": [
+      {
+        "source_text": "（四）此书有英、德、法译本。",
+        "zh": [
+          {
+            "t": "（",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "四",
+            "r": "sì",
+            "g": "function"
+          },
+          {
+            "t": "）",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "subject"
+          },
+          {
+            "t": "书",
+            "r": "shū",
+            "g": "subject"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "英",
+            "r": "yīng",
+            "g": "attributive"
+          },
+          {
+            "t": "、",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "德",
+            "r": "dé",
+            "g": "attributive"
+          },
+          {
+            "t": "、",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "法",
+            "r": "fǎ",
+            "g": "attributive"
+          },
+          {
+            "t": "译",
+            "r": "yì",
+            "g": "object"
+          },
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "（",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "四",
+              "r": "よん",
+              "g": "function"
+            },
+            {
+              "t": "）",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "この",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "書",
+              "r": "しょ",
+              "g": "subject"
+            },
+            {
+              "t": "には",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "英",
+              "r": "えい",
+              "g": "attributive"
+            },
+            {
+              "t": "・",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "独",
+              "r": "どく",
+              "g": "attributive"
+            },
+            {
+              "t": "・",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "仏",
+              "r": "ふつ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "訳",
+              "r": "やく",
+              "g": "object"
+            },
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "object"
+            },
+            {
+              "t": "がある",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "英译本最早，刊于一九二一年，译者瓦勒（Arthur Waley），书名*The Tale of Genji*。",
+        "zh": [
+          {
+            "t": "英",
+            "r": "yīng",
+            "g": "attributive"
+          },
+          {
+            "t": "译",
+            "r": "yì",
+            "g": "subject"
+          },
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "subject"
+          },
+          {
+            "t": "最",
+            "r": "zuì",
+            "g": "adverbial"
+          },
+          {
+            "t": "早",
+            "r": "zǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "刊",
+            "r": "kān",
+            "g": "predicate"
+          },
+          {
+            "t": "于",
+            "r": "yú",
+            "g": "function"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "adverbial"
+          },
+          {
+            "t": "九",
+            "r": "jiǔ",
+            "g": "adverbial"
+          },
+          {
+            "t": "二",
+            "r": "èr",
+            "g": "adverbial"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "adverbial"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "译",
+            "r": "yì",
+            "g": "subject"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "subject"
+          },
+          {
+            "t": "瓦",
+            "r": "wǎ",
+            "g": "object"
+          },
+          {
+            "t": "勒",
+            "r": "lè",
+            "g": "object"
+          },
+          {
+            "t": "（",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "Arthur Waley",
+            "r": "",
+            "g": "object"
+          },
+          {
+            "t": "）",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "书",
+            "r": "shū",
+            "g": "subject"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "subject"
+          },
+          {
+            "t": "*The Tale of Genji*",
+            "r": "",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "英",
+              "r": "えい",
+              "g": "attributive"
+            },
+            {
+              "t": "訳",
+              "r": "やく",
+              "g": "subject"
+            },
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "最",
+              "r": "もっと",
+              "g": "adverbial"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "早",
+              "r": "はや",
+              "g": "predicate"
+            },
+            {
+              "t": "く、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "一",
+              "r": "せん",
+              "g": "adverbial"
+            },
+            {
+              "t": "九",
+              "r": "きゅう",
+              "g": "adverbial"
+            },
+            {
+              "t": "二",
+              "r": "に",
+              "g": "adverbial"
+            },
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "adverbial"
+            },
+            {
+              "t": "年",
+              "r": "ねん",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "刊",
+              "r": "かん",
+              "g": "predicate"
+            },
+            {
+              "t": "行",
+              "r": "こう",
+              "g": "predicate"
+            },
+            {
+              "t": "された",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "訳",
+              "r": "やく",
+              "g": "subject"
+            },
+            {
+              "t": "者",
+              "r": "しゃ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "ワーリー",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "（Arthur Waley）",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "書",
+              "r": "しょ",
+              "g": "subject"
+            },
+            {
+              "t": "名",
+              "r": "めい",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "*The Tale of Genji*",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "德译本有二种，一是赫利芝卡（Herbart E.Herlitschka）所译，书名*Die Geschichte von Prinzen Genji*；",
+        "zh": [
+          {
+            "t": "德",
+            "r": "dé",
+            "g": "attributive"
+          },
+          {
+            "t": "译",
+            "r": "yì",
+            "g": "subject"
+          },
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "subject"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "二",
+            "r": "èr",
+            "g": "object"
+          },
+          {
+            "t": "种",
+            "r": "zhǒng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "赫",
+            "r": "hè",
+            "g": "object"
+          },
+          {
+            "t": "利",
+            "r": "lì",
+            "g": "object"
+          },
+          {
+            "t": "芝",
+            "r": "zhī",
+            "g": "object"
+          },
+          {
+            "t": "卡",
+            "r": "kǎ",
+            "g": "object"
+          },
+          {
+            "t": "（",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "Herbart E.Herlitschka",
+            "r": "",
+            "g": "object"
+          },
+          {
+            "t": "）",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "所",
+            "r": "suǒ",
+            "g": "function"
+          },
+          {
+            "t": "译",
+            "r": "yì",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "书",
+            "r": "shū",
+            "g": "subject"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "subject"
+          },
+          {
+            "t": "*Die Geschichte von Prinzen Genji*",
+            "r": "",
+            "g": "object"
+          },
+          {
+            "t": "；",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "独",
+              "r": "どく",
+              "g": "attributive"
+            },
+            {
+              "t": "訳",
+              "r": "やく",
+              "g": "subject"
+            },
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "subject"
+            },
+            {
+              "t": "には",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "二",
+              "r": "に",
+              "g": "object"
+            },
+            {
+              "t": "種",
+              "r": "しゅ",
+              "g": "object"
+            },
+            {
+              "t": "あり、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "subject"
+            },
+            {
+              "t": "つは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "ヘルリチカ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "（Herbart E.Herlitschka）",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "訳",
+              "r": "やく",
+              "g": "predicate"
+            },
+            {
+              "t": "で、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "書",
+              "r": "しょ",
+              "g": "subject"
+            },
+            {
+              "t": "名",
+              "r": "めい",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "*Die Geschichte von Prinzen Genji*",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "二是缪勒扎勃希（Maximilian Müller-Jabüsch）所译，书名*Die Aventeur der Prinzen Genji*。",
+        "zh": [
+          {
+            "t": "二",
+            "r": "èr",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "缪",
+            "r": "miào",
+            "g": "object"
+          },
+          {
+            "t": "勒",
+            "r": "lè",
+            "g": "object"
+          },
+          {
+            "t": "扎",
+            "r": "zhā",
+            "g": "object"
+          },
+          {
+            "t": "勃",
+            "r": "bó",
+            "g": "object"
+          },
+          {
+            "t": "希",
+            "r": "xī",
+            "g": "object"
+          },
+          {
+            "t": "（",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "Maximilian Müller-Jabüsch",
+            "r": "",
+            "g": "object"
+          },
+          {
+            "t": "）",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "所",
+            "r": "suǒ",
+            "g": "function"
+          },
+          {
+            "t": "译",
+            "r": "yì",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "书",
+            "r": "shū",
+            "g": "subject"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "subject"
+          },
+          {
+            "t": "*Die Aventeur der Prinzen Genji*",
+            "r": "",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "もう",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "subject"
+            },
+            {
+              "t": "つは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "ミュラー＝ヤブッシュ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "（Maximilian Müller-Jabüsch）",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "訳",
+              "r": "やく",
+              "g": "predicate"
+            },
+            {
+              "t": "で、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "書",
+              "r": "しょ",
+              "g": "subject"
+            },
+            {
+              "t": "名",
+              "r": "めい",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "*Die Aventeur der Prinzen Genji*",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "法译本译者是归化法国之日本人山田氏，书名*Le Romance de Genji*。",
+        "zh": [
+          {
+            "t": "法",
+            "r": "fǎ",
+            "g": "attributive"
+          },
+          {
+            "t": "译",
+            "r": "yì",
+            "g": "subject"
+          },
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "subject"
+          },
+          {
+            "t": "译",
+            "r": "yì",
+            "g": "subject"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "归",
+            "r": "guī",
+            "g": "attributive"
+          },
+          {
+            "t": "化",
+            "r": "huà",
+            "g": "attributive"
+          },
+          {
+            "t": "法",
+            "r": "fǎ",
+            "g": "object"
+          },
+          {
+            "t": "国",
+            "r": "guó",
+            "g": "object"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "function"
+          },
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "attributive"
+          },
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "attributive"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "object"
+          },
+          {
+            "t": "山",
+            "r": "shān",
+            "g": "object"
+          },
+          {
+            "t": "田",
+            "r": "tián",
+            "g": "object"
+          },
+          {
+            "t": "氏",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "书",
+            "r": "shū",
+            "g": "subject"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "subject"
+          },
+          {
+            "t": "*Le Romance de Genji*",
+            "r": "",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "仏",
+              "r": "ふつ",
+              "g": "attributive"
+            },
+            {
+              "t": "訳",
+              "r": "やく",
+              "g": "subject"
+            },
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "訳",
+              "r": "やく",
+              "g": "subject"
+            },
+            {
+              "t": "者",
+              "r": "しゃ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "フランスに",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "帰",
+              "r": "き",
+              "g": "attributive"
+            },
+            {
+              "t": "化",
+              "r": "か",
+              "g": "attributive"
+            },
+            {
+              "t": "した",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "日",
+              "r": "に",
+              "g": "attributive"
+            },
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "attributive"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "山",
+              "r": "やま",
+              "g": "object"
+            },
+            {
+              "t": "田",
+              "r": "だ",
+              "g": "object"
+            },
+            {
+              "t": "氏",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "で、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "書",
+              "r": "しょ",
+              "g": "subject"
+            },
+            {
+              "t": "名",
+              "r": "めい",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "*Le Romance de Genji*",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

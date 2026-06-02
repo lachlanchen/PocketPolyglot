@@ -1,0 +1,790 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "genji-modern",
+  "paragraph_id": "genji-modern-p05563",
+  "source_text": " 此诗根据古歌：“初濑古川边，二杉相对生。经年再相见，二杉依旧青。”见《古今和歌集》旋头歌。",
+  "source_sha256": "6f7524b5ca88825a986f2ea7d91ba3be54a5f3e665223a7d3e874318d2bc4872",
+  "source_normalized_sha256": "f938e87cc6f3765e17939adc450e667932094ee0c57af6527d62631e47740437",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 110,
+    "grammar_token_total": 110,
+    "unit_count": 3
+  },
+  "source_chunk_id": "genji-modern-chunk-5563",
+  "source_manifest_sha256": "31fed9a4682318b56bd3687aa261a681dd49e03ca0f121e1342197c4f3c9c0a0",
+  "section": {
+    "id": "第五十三回-习字",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "五",
+        "r": "wǔ",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "huí",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "习",
+        "r": "xí",
+        "g": "predicate"
+      },
+      {
+        "t": "字",
+        "r": "zì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "五",
+        "r": "ご",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "かい",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "習",
+        "r": "しゅう",
+        "g": "predicate"
+      },
+      {
+        "t": "字",
+        "r": "じ",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "第五十三回-习字-intro",
+    "title_zh": [
+      {
+        "t": "第",
+        "r": "dì",
+        "g": "function"
+      },
+      {
+        "t": "五",
+        "r": "wǔ",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "shí",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "huí",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "习",
+        "r": "xí",
+        "g": "predicate"
+      },
+      {
+        "t": "字",
+        "r": "zì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "第",
+        "r": "だい",
+        "g": "function"
+      },
+      {
+        "t": "五",
+        "r": "ご",
+        "g": "function"
+      },
+      {
+        "t": "十",
+        "r": "じゅう",
+        "g": "function"
+      },
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "function"
+      },
+      {
+        "t": "回",
+        "r": "かい",
+        "g": "function"
+      },
+      {
+        "t": " ",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "習",
+        "r": "しゅう",
+        "g": "predicate"
+      },
+      {
+        "t": "字",
+        "r": "じ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "genji-modern-p05563",
+    "source_text": " 此诗根据古歌：“初濑古川边，二杉相对生。经年再相见，二杉依旧青。”见《古今和歌集》旋头歌。",
+    "units": [
+      {
+        "source_text": "此诗根据古歌：“初濑古川边，二杉相对生。",
+        "zh": [
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "subject"
+          },
+          {
+            "t": "诗",
+            "r": "shī",
+            "g": "subject"
+          },
+          {
+            "t": "根",
+            "r": "gēn",
+            "g": "predicate"
+          },
+          {
+            "t": "据",
+            "r": "jù",
+            "g": "predicate"
+          },
+          {
+            "t": "古",
+            "r": "gǔ",
+            "g": "object"
+          },
+          {
+            "t": "歌",
+            "r": "gē",
+            "g": "object"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "初",
+            "r": "chū",
+            "g": "attributive"
+          },
+          {
+            "t": "濑",
+            "r": "lài",
+            "g": "attributive"
+          },
+          {
+            "t": "古",
+            "r": "gǔ",
+            "g": "attributive"
+          },
+          {
+            "t": "川",
+            "r": "chuān",
+            "g": "attributive"
+          },
+          {
+            "t": "边",
+            "r": "biān",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "二",
+            "r": "èr",
+            "g": "subject"
+          },
+          {
+            "t": "杉",
+            "r": "shān",
+            "g": "subject"
+          },
+          {
+            "t": "相",
+            "r": "xiāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "对",
+            "r": "duì",
+            "g": "adverbial"
+          },
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "詩",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "古",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "歌",
+              "r": "か",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "基",
+              "r": "もと",
+              "g": "predicate"
+            },
+            {
+              "t": "づく",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "初",
+              "r": "はつ",
+              "g": "attributive"
+            },
+            {
+              "t": "瀬",
+              "r": "せ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "古",
+              "r": "ふる",
+              "g": "attributive"
+            },
+            {
+              "t": "川",
+              "r": "かわ",
+              "g": "attributive"
+            },
+            {
+              "t": "辺",
+              "r": "べ",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "二",
+              "r": "に",
+              "g": "subject"
+            },
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "杉",
+              "r": "すぎ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "向",
+              "r": "む",
+              "g": "adverbial"
+            },
+            {
+              "t": "かい",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "合",
+              "r": "あ",
+              "g": "adverbial"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "生",
+              "r": "は",
+              "g": "predicate"
+            },
+            {
+              "t": "える",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "经年再相见，二杉依旧青。”",
+        "zh": [
+          {
+            "t": "经",
+            "r": "jīng",
+            "g": "adverbial"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "adverbial"
+          },
+          {
+            "t": "再",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "相",
+            "r": "xiāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "见",
+            "r": "jiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "二",
+            "r": "èr",
+            "g": "subject"
+          },
+          {
+            "t": "杉",
+            "r": "shān",
+            "g": "subject"
+          },
+          {
+            "t": "依",
+            "r": "yī",
+            "g": "adverbial"
+          },
+          {
+            "t": "旧",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "青",
+            "r": "qīng",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "年",
+              "r": "とし",
+              "g": "adverbial"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "経",
+              "r": "へ",
+              "g": "adverbial"
+            },
+            {
+              "t": "て",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "再",
+              "r": "ふたた",
+              "g": "adverbial"
+            },
+            {
+              "t": "び",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "会",
+              "r": "あ",
+              "g": "predicate"
+            },
+            {
+              "t": "えば",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "二",
+              "r": "に",
+              "g": "subject"
+            },
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "杉",
+              "r": "すぎ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "昔",
+              "r": "むかし",
+              "g": "adverbial"
+            },
+            {
+              "t": "のまま",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "青",
+              "r": "あお",
+              "g": "predicate"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "见《古今和歌集》旋头歌。",
+        "zh": [
+          {
+            "t": "见",
+            "r": "jiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "《",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "古",
+            "r": "gǔ",
+            "g": "object"
+          },
+          {
+            "t": "今",
+            "r": "jīn",
+            "g": "object"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "object"
+          },
+          {
+            "t": "歌",
+            "r": "gē",
+            "g": "object"
+          },
+          {
+            "t": "集",
+            "r": "jí",
+            "g": "object"
+          },
+          {
+            "t": "》",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "旋",
+            "r": "xuán",
+            "g": "attributive"
+          },
+          {
+            "t": "头",
+            "r": "tóu",
+            "g": "attributive"
+          },
+          {
+            "t": "歌",
+            "r": "gē",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "『",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "古",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "今",
+              "r": "きん",
+              "g": "object"
+            },
+            {
+              "t": "和",
+              "r": "わ",
+              "g": "object"
+            },
+            {
+              "t": "歌",
+              "r": "か",
+              "g": "object"
+            },
+            {
+              "t": "集",
+              "r": "しゅう",
+              "g": "object"
+            },
+            {
+              "t": "』",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "旋",
+              "r": "せ",
+              "g": "attributive"
+            },
+            {
+              "t": "頭",
+              "r": "どう",
+              "g": "attributive"
+            },
+            {
+              "t": "歌",
+              "r": "か",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "える",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
