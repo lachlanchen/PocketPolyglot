@@ -1,0 +1,462 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00592",
+  "source_text": "聞此詔命。自參出。解所佩兵而。八度拜。白者。先",
+  "source_sha256": "0f3853e610c4bd85fa171893d5c110ed6e6e96f0e57bd76198ac6b42453d338a",
+  "source_normalized_sha256": "0f3853e610c4bd85fa171893d5c110ed6e6e96f0e57bd76198ac6b42453d338a",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 55,
+    "grammar_token_total": 55,
+    "unit_count": 6
+  },
+  "source_chunk_id": "kojiki-chunk-0592",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00592",
+    "source_text": "聞此詔命。自參出。解所佩兵而。八度拜。白者。先",
+    "units": [
+      {
+        "source_text": "聞此詔命。",
+        "zh": [
+          {
+            "t": "聞",
+            "r": "wén",
+            "g": "predicate"
+          },
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "詔",
+            "r": "zhào",
+            "g": "object"
+          },
+          {
+            "t": "命",
+            "r": "mìng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "詔",
+              "r": "みことのり",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "命",
+              "r": "めい",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "聞",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "いて、",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "自參出。",
+        "zh": [
+          {
+            "t": "自",
+            "r": "zì",
+            "g": "adverbial"
+          },
+          {
+            "t": "參",
+            "r": "cān",
+            "g": "predicate"
+          },
+          {
+            "t": "出",
+            "r": "chū",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "自",
+              "r": "みずか",
+              "g": "adverbial"
+            },
+            {
+              "t": "ら",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "参",
+              "r": "まい",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "出",
+              "r": "い",
+              "g": "complement"
+            },
+            {
+              "t": "でた。",
+              "r": "",
+              "g": "complement"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "解所佩兵而。",
+        "zh": [
+          {
+            "t": "解",
+            "r": "jiě",
+            "g": "predicate"
+          },
+          {
+            "t": "所",
+            "r": "suǒ",
+            "g": "function"
+          },
+          {
+            "t": "佩",
+            "r": "pèi",
+            "g": "attributive"
+          },
+          {
+            "t": "兵",
+            "r": "bīng",
+            "g": "object"
+          },
+          {
+            "t": "而",
+            "r": "ér",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "佩",
+              "r": "お",
+              "g": "attributive"
+            },
+            {
+              "t": "びていた",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "兵",
+              "r": "へい",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "解",
+              "r": "と",
+              "g": "predicate"
+            },
+            {
+              "t": "いて、",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "八度拜。",
+        "zh": [
+          {
+            "t": "八",
+            "r": "bā",
+            "g": "adverbial"
+          },
+          {
+            "t": "度",
+            "r": "dù",
+            "g": "adverbial"
+          },
+          {
+            "t": "拜",
+            "r": "bài",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "八",
+              "r": "や",
+              "g": "adverbial"
+            },
+            {
+              "t": "度",
+              "r": "たび",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "拝",
+              "r": "はい",
+              "g": "predicate"
+            },
+            {
+              "t": "した。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "白者。",
+        "zh": [
+          {
+            "t": "白",
+            "r": "bái",
+            "g": "predicate"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "申",
+              "r": "もう",
+              "g": "predicate"
+            },
+            {
+              "t": "して",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "うには、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "次",
+              "r": "つぎ",
+              "g": "function"
+            },
+            {
+              "t": "のようである。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "先",
+        "zh": [
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "adverbial"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "まず、",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "先",
+              "r": "さき",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

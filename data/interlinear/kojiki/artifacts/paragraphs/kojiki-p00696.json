@@ -1,0 +1,805 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00696",
+  "source_text": "欽明天皇天國押波流岐廣庭天皇。坐師木嶋大宮。治天下也。天皇。娶檜脾天皇之御子。石比賣命。生御子。八田王。",
+  "source_sha256": "23b1fc23c06357d3438b80189691f426bf87496d3f1be35cd9a4c9583a6628ea",
+  "source_normalized_sha256": "23b1fc23c06357d3438b80189691f426bf87496d3f1be35cd9a4c9583a6628ea",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 120,
+    "grammar_token_total": 120,
+    "unit_count": 6
+  },
+  "source_chunk_id": "kojiki-chunk-0696",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "predicate"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "predicate"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00696",
+    "source_text": "欽明天皇天國押波流岐廣庭天皇。坐師木嶋大宮。治天下也。天皇。娶檜脾天皇之御子。石比賣命。生御子。八田王。",
+    "units": [
+      {
+        "source_text": "欽明天皇天國押波流岐廣庭天皇。",
+        "zh": [
+          {
+            "t": "欽",
+            "r": "qīn",
+            "g": "subject"
+          },
+          {
+            "t": "明",
+            "r": "míng",
+            "g": "subject"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "subject"
+          },
+          {
+            "t": "皇",
+            "r": "huáng",
+            "g": "subject"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "attributive"
+          },
+          {
+            "t": "國",
+            "r": "guó",
+            "g": "attributive"
+          },
+          {
+            "t": "押",
+            "r": "yā",
+            "g": "attributive"
+          },
+          {
+            "t": "波",
+            "r": "bō",
+            "g": "attributive"
+          },
+          {
+            "t": "流",
+            "r": "liú",
+            "g": "attributive"
+          },
+          {
+            "t": "岐",
+            "r": "qí",
+            "g": "attributive"
+          },
+          {
+            "t": "廣",
+            "r": "guǎng",
+            "g": "attributive"
+          },
+          {
+            "t": "庭",
+            "r": "tíng",
+            "g": "attributive"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "subject"
+          },
+          {
+            "t": "皇",
+            "r": "huáng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "欽",
+              "r": "きん",
+              "g": "subject"
+            },
+            {
+              "t": "明",
+              "r": "めい",
+              "g": "subject"
+            },
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "subject"
+            },
+            {
+              "t": "皇",
+              "r": "のう",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "天",
+              "r": "あめ",
+              "g": "attributive"
+            },
+            {
+              "t": "国",
+              "r": "くに",
+              "g": "attributive"
+            },
+            {
+              "t": "押",
+              "r": "お",
+              "g": "attributive"
+            },
+            {
+              "t": "波",
+              "r": "は",
+              "g": "attributive"
+            },
+            {
+              "t": "流",
+              "r": "る",
+              "g": "attributive"
+            },
+            {
+              "t": "岐",
+              "r": "き",
+              "g": "attributive"
+            },
+            {
+              "t": "広",
+              "r": "ひろ",
+              "g": "attributive"
+            },
+            {
+              "t": "庭",
+              "r": "にわ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "天",
+              "r": "すめら",
+              "g": "subject"
+            },
+            {
+              "t": "皇",
+              "r": "みこと",
+              "g": "subject"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "坐師木嶋大宮。",
+        "zh": [
+          {
+            "t": "坐",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "師",
+            "r": "shī",
+            "g": "object"
+          },
+          {
+            "t": "木",
+            "r": "mù",
+            "g": "object"
+          },
+          {
+            "t": "嶋",
+            "r": "dǎo",
+            "g": "object"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "object"
+          },
+          {
+            "t": "宮",
+            "r": "gōng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "師",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "木",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "嶋",
+              "r": "しま",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "object"
+            },
+            {
+              "t": "宮",
+              "r": "みや",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "坐",
+              "r": "ま",
+              "g": "predicate"
+            },
+            {
+              "t": "しました",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "治天下也。",
+        "zh": [
+          {
+            "t": "治",
+            "r": "zhì",
+            "g": "predicate"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "object"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "object"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "object"
+            },
+            {
+              "t": "下",
+              "r": "か",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "治",
+              "r": "おさ",
+              "g": "predicate"
+            },
+            {
+              "t": "められました",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "天皇。娶檜脾天皇之御子。",
+        "zh": [
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "subject"
+          },
+          {
+            "t": "皇",
+            "r": "huáng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "娶",
+            "r": "qǔ",
+            "g": "predicate"
+          },
+          {
+            "t": "檜",
+            "r": "guì",
+            "g": "attributive"
+          },
+          {
+            "t": "脾",
+            "r": "pí",
+            "g": "attributive"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "attributive"
+          },
+          {
+            "t": "皇",
+            "r": "huáng",
+            "g": "attributive"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "attributive"
+          },
+          {
+            "t": "御",
+            "r": "yù",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "subject"
+            },
+            {
+              "t": "皇",
+              "r": "のう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "檜",
+              "r": "ひ",
+              "g": "attributive"
+            },
+            {
+              "t": "脾",
+              "r": "ひ",
+              "g": "attributive"
+            },
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "attributive"
+            },
+            {
+              "t": "皇",
+              "r": "のう",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "御",
+              "r": "み",
+              "g": "object"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "娶",
+              "r": "めと",
+              "g": "predicate"
+            },
+            {
+              "t": "られました",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "石比賣命。",
+        "zh": [
+          {
+            "t": "石",
+            "r": "shí",
+            "g": "subject"
+          },
+          {
+            "t": "比",
+            "r": "bǐ",
+            "g": "subject"
+          },
+          {
+            "t": "賣",
+            "r": "mài",
+            "g": "subject"
+          },
+          {
+            "t": "命",
+            "r": "mìng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "石",
+              "r": "いし",
+              "g": "subject"
+            },
+            {
+              "t": "比",
+              "r": "ひ",
+              "g": "subject"
+            },
+            {
+              "t": "売",
+              "r": "め",
+              "g": "subject"
+            },
+            {
+              "t": "命",
+              "r": "みこと",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "その",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "方",
+              "r": "かた",
+              "g": "subject"
+            },
+            {
+              "t": "でした",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "生御子。八田王。",
+        "zh": [
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "predicate"
+          },
+          {
+            "t": "御",
+            "r": "yù",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "八",
+            "r": "bā",
+            "g": "subject"
+          },
+          {
+            "t": "田",
+            "r": "tián",
+            "g": "subject"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "御",
+              "r": "み",
+              "g": "object"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "生",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "まれました",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "八",
+              "r": "や",
+              "g": "subject"
+            },
+            {
+              "t": "田",
+              "r": "た",
+              "g": "subject"
+            },
+            {
+              "t": "王",
+              "r": "おう",
+              "g": "subject"
+            },
+            {
+              "t": "です",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

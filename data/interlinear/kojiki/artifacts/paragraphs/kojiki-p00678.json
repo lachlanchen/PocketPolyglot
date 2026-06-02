@@ -1,0 +1,879 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00678",
+  "source_text": "如此奏者。天皇答詔之。是亦大理。如命可也。故天皇崩。即意祁命。知天津日繼。天皇。御年。參拾捌歲。",
+  "source_sha256": "08d5bb67d194029bf84cfce695221d9511294ac44c9ee189073aaec7ea109d69",
+  "source_normalized_sha256": "08d5bb67d194029bf84cfce695221d9511294ac44c9ee189073aaec7ea109d69",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 126,
+    "grammar_token_total": 126,
+    "unit_count": 10
+  },
+  "source_chunk_id": "kojiki-chunk-0678",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00678",
+    "source_text": "如此奏者。天皇答詔之。是亦大理。如命可也。故天皇崩。即意祁命。知天津日繼。天皇。御年。參拾捌歲。",
+    "units": [
+      {
+        "source_text": "如此奏者。",
+        "zh": [
+          {
+            "t": "如",
+            "r": "rú",
+            "g": "adverbial"
+          },
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "奏",
+            "r": "zòu",
+            "g": "predicate"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "このように",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "奏",
+              "r": "そう",
+              "g": "predicate"
+            },
+            {
+              "t": "上",
+              "r": "じょう",
+              "g": "predicate"
+            },
+            {
+              "t": "したならば",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "その",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "時",
+              "r": "とき",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "天皇答詔之。",
+        "zh": [
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "subject"
+          },
+          {
+            "t": "皇",
+            "r": "huáng",
+            "g": "subject"
+          },
+          {
+            "t": "答",
+            "r": "dá",
+            "g": "predicate"
+          },
+          {
+            "t": "詔",
+            "r": "zhào",
+            "g": "predicate"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "subject"
+            },
+            {
+              "t": "皇",
+              "r": "のう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "これに",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "答",
+              "r": "こた",
+              "g": "predicate"
+            },
+            {
+              "t": "えて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "詔",
+              "r": "みことのり",
+              "g": "predicate"
+            },
+            {
+              "t": "された",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "是亦大理。",
+        "zh": [
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "subject"
+          },
+          {
+            "t": "亦",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "attributive"
+          },
+          {
+            "t": "理",
+            "r": "lǐ",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "これもまた",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "attributive"
+            },
+            {
+              "t": "きな",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "道",
+              "r": "どう",
+              "g": "object"
+            },
+            {
+              "t": "理",
+              "r": "り",
+              "g": "object"
+            },
+            {
+              "t": "である",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "如命可也。",
+        "zh": [
+          {
+            "t": "如",
+            "r": "rú",
+            "g": "predicate"
+          },
+          {
+            "t": "命",
+            "r": "mìng",
+            "g": "object"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "predicate"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "命",
+              "r": "めい",
+              "g": "object"
+            },
+            {
+              "t": "じられた",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "通",
+              "r": "とお",
+              "g": "predicate"
+            },
+            {
+              "t": "りに",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "するのが",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "よい",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "故天皇崩。",
+        "zh": [
+          {
+            "t": "故",
+            "r": "gù",
+            "g": "adverbial"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "subject"
+          },
+          {
+            "t": "皇",
+            "r": "huáng",
+            "g": "subject"
+          },
+          {
+            "t": "崩",
+            "r": "bēng",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そこで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "subject"
+            },
+            {
+              "t": "皇",
+              "r": "のう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "崩",
+              "r": "ほう",
+              "g": "predicate"
+            },
+            {
+              "t": "御",
+              "r": "ぎょ",
+              "g": "predicate"
+            },
+            {
+              "t": "された",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "即意祁命。",
+        "zh": [
+          {
+            "t": "即",
+            "r": "jí",
+            "g": "adverbial"
+          },
+          {
+            "t": "意",
+            "r": "yì",
+            "g": "subject"
+          },
+          {
+            "t": "祁",
+            "r": "qí",
+            "g": "subject"
+          },
+          {
+            "t": "命",
+            "r": "mìng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ただちに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "意",
+              "r": "お",
+              "g": "subject"
+            },
+            {
+              "t": "祁",
+              "r": "け",
+              "g": "subject"
+            },
+            {
+              "t": "命",
+              "r": "のみこと",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "位",
+              "r": "くらい",
+              "g": "predicate"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "就",
+              "r": "つ",
+              "g": "predicate"
+            },
+            {
+              "t": "かれた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "知天津日繼。",
+        "zh": [
+          {
+            "t": "知",
+            "r": "zhī",
+            "g": "predicate"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "object"
+          },
+          {
+            "t": "津",
+            "r": "jīn",
+            "g": "object"
+          },
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "object"
+          },
+          {
+            "t": "繼",
+            "r": "jì",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "天",
+              "r": "あま",
+              "g": "object"
+            },
+            {
+              "t": "津",
+              "r": "つ",
+              "g": "object"
+            },
+            {
+              "t": "日",
+              "r": "ひ",
+              "g": "object"
+            },
+            {
+              "t": "継",
+              "r": "つぎ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "治",
+              "r": "し",
+              "g": "predicate"
+            },
+            {
+              "t": "らしめされた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "天皇。",
+        "zh": [
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "subject"
+          },
+          {
+            "t": "皇",
+            "r": "huáng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "subject"
+            },
+            {
+              "t": "皇",
+              "r": "のう",
+              "g": "subject"
+            },
+            {
+              "t": "について",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "記",
+              "r": "しる",
+              "g": "predicate"
+            },
+            {
+              "t": "す",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "御年。",
+        "zh": [
+          {
+            "t": "御",
+            "r": "yù",
+            "g": "attributive"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "御",
+              "r": "おん",
+              "g": "attributive"
+            },
+            {
+              "t": "年",
+              "r": "とし",
+              "g": "object"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "次",
+              "r": "つぎ",
+              "g": "adverbial"
+            },
+            {
+              "t": "のようである",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "參拾捌歲。",
+        "zh": [
+          {
+            "t": "參",
+            "r": "sān",
+            "g": "object"
+          },
+          {
+            "t": "拾",
+            "r": "shí",
+            "g": "object"
+          },
+          {
+            "t": "捌",
+            "r": "bā",
+            "g": "object"
+          },
+          {
+            "t": "歲",
+            "r": "suì",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "三",
+              "r": "さん",
+              "g": "object"
+            },
+            {
+              "t": "十",
+              "r": "じゅう",
+              "g": "object"
+            },
+            {
+              "t": "八",
+              "r": "はち",
+              "g": "object"
+            },
+            {
+              "t": "歳",
+              "r": "さい",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "であった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

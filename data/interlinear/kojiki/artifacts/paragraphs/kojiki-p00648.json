@@ -1,0 +1,539 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00648",
+  "source_text": "此者志都歌也。天皇。御年。壹佰貳拾肆歲。御御陵在河内之多治比高鸇也。",
+  "source_sha256": "bbeb94628c0e5380167a57876d561c3f0061cfb2053b8b03189f6105ba648bd6",
+  "source_normalized_sha256": "bbeb94628c0e5380167a57876d561c3f0061cfb2053b8b03189f6105ba648bd6",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 69,
+    "grammar_token_total": 69,
+    "unit_count": 5
+  },
+  "source_chunk_id": "kojiki-chunk-0648",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00648",
+    "source_text": "此者志都歌也。天皇。御年。壹佰貳拾肆歲。御御陵在河内之多治比高鸇也。",
+    "units": [
+      {
+        "source_text": "此者志都歌也。",
+        "zh": [
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "subject"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "subject"
+          },
+          {
+            "t": "志",
+            "r": "zhì",
+            "g": "object"
+          },
+          {
+            "t": "都",
+            "r": "dū",
+            "g": "object"
+          },
+          {
+            "t": "歌",
+            "r": "gē",
+            "g": "object"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "これは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "志",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "都",
+              "r": "づ",
+              "g": "object"
+            },
+            {
+              "t": "歌",
+              "r": "うた",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "である",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "天皇。",
+        "zh": [
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "subject"
+          },
+          {
+            "t": "皇",
+            "r": "huáng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "subject"
+            },
+            {
+              "t": "皇",
+              "r": "のう",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "である",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "御年。",
+        "zh": [
+          {
+            "t": "御",
+            "r": "yù",
+            "g": "subject"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "御",
+              "r": "お",
+              "g": "subject"
+            },
+            {
+              "t": "年",
+              "r": "とし",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "である",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "壹佰貳拾肆歲。",
+        "zh": [
+          {
+            "t": "壹",
+            "r": "yī",
+            "g": "subject"
+          },
+          {
+            "t": "佰",
+            "r": "bǎi",
+            "g": "subject"
+          },
+          {
+            "t": "貳",
+            "r": "èr",
+            "g": "subject"
+          },
+          {
+            "t": "拾",
+            "r": "shí",
+            "g": "subject"
+          },
+          {
+            "t": "肆",
+            "r": "sì",
+            "g": "subject"
+          },
+          {
+            "t": "歲",
+            "r": "suì",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "百",
+              "r": "ひゃく",
+              "g": "subject"
+            },
+            {
+              "t": "二",
+              "r": "に",
+              "g": "subject"
+            },
+            {
+              "t": "十",
+              "r": "じゅう",
+              "g": "subject"
+            },
+            {
+              "t": "四",
+              "r": "よん",
+              "g": "subject"
+            },
+            {
+              "t": "歳",
+              "r": "さい",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "であった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "御御陵在河内之多治比高鸇也。",
+        "zh": [
+          {
+            "t": "御",
+            "r": "yù",
+            "g": "subject"
+          },
+          {
+            "t": "御",
+            "r": "yù",
+            "g": "subject"
+          },
+          {
+            "t": "陵",
+            "r": "líng",
+            "g": "subject"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "河",
+            "r": "hé",
+            "g": "object"
+          },
+          {
+            "t": "内",
+            "r": "nèi",
+            "g": "object"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "object"
+          },
+          {
+            "t": "多",
+            "r": "duō",
+            "g": "object"
+          },
+          {
+            "t": "治",
+            "r": "zhì",
+            "g": "object"
+          },
+          {
+            "t": "比",
+            "r": "bǐ",
+            "g": "object"
+          },
+          {
+            "t": "高",
+            "r": "gāo",
+            "g": "object"
+          },
+          {
+            "t": "鸇",
+            "r": "zhān",
+            "g": "object"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "御",
+              "r": "み",
+              "g": "subject"
+            },
+            {
+              "t": "陵",
+              "r": "ささぎ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "河",
+              "r": "かわ",
+              "g": "object"
+            },
+            {
+              "t": "内",
+              "r": "ち",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "多",
+              "r": "た",
+              "g": "object"
+            },
+            {
+              "t": "治",
+              "r": "じ",
+              "g": "object"
+            },
+            {
+              "t": "比",
+              "r": "ひ",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "高",
+              "r": "たか",
+              "g": "object"
+            },
+            {
+              "t": "鸇",
+              "r": "わし",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "ある",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

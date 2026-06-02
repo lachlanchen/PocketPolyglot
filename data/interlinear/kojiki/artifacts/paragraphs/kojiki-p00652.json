@@ -1,0 +1,423 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00652",
+  "source_text": "令上於宮。故將治天下之間。平群臣之祖。名志毘臣。",
+  "source_sha256": "e58e280e5ea207a51d93735847988e23ae7469f0a3806968eed6ee93f040f2a4",
+  "source_normalized_sha256": "e58e280e5ea207a51d93735847988e23ae7469f0a3806968eed6ee93f040f2a4",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 48,
+    "grammar_token_total": 48,
+    "unit_count": 4
+  },
+  "source_chunk_id": "kojiki-chunk-0652",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00652",
+    "source_text": "令上於宮。故將治天下之間。平群臣之祖。名志毘臣。",
+    "units": [
+      {
+        "source_text": "令上於宮。",
+        "zh": [
+          {
+            "t": "令",
+            "r": "lìng",
+            "g": "predicate"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "predicate"
+          },
+          {
+            "t": "於",
+            "r": "yú",
+            "g": "adverbial"
+          },
+          {
+            "t": "宮",
+            "r": "gōng",
+            "g": "adverbial"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "宮",
+              "r": "みや",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "上",
+              "r": "のぼ",
+              "g": "predicate"
+            },
+            {
+              "t": "らせた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "故將治天下之間。",
+        "zh": [
+          {
+            "t": "故",
+            "r": "gù",
+            "g": "adverbial"
+          },
+          {
+            "t": "將",
+            "r": "jiāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "治",
+            "r": "zhì",
+            "g": "predicate"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "object"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "object"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "function"
+          },
+          {
+            "t": "間",
+            "r": "jiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そこで、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "object"
+            },
+            {
+              "t": "下",
+              "r": "か",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "治",
+              "r": "おさ",
+              "g": "predicate"
+            },
+            {
+              "t": "めようとする",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "間",
+              "r": "あいだ",
+              "g": "adverbial"
+            },
+            {
+              "t": "に。",
+              "r": "",
+              "g": "adverbial"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "平群臣之祖。",
+        "zh": [
+          {
+            "t": "平",
+            "r": "píng",
+            "g": "attributive"
+          },
+          {
+            "t": "群",
+            "r": "qún",
+            "g": "attributive"
+          },
+          {
+            "t": "臣",
+            "r": "chén",
+            "g": "attributive"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "function"
+          },
+          {
+            "t": "祖",
+            "r": "zǔ",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "平",
+              "r": "へ",
+              "g": "attributive"
+            },
+            {
+              "t": "群",
+              "r": "ぐり",
+              "g": "attributive"
+            },
+            {
+              "t": "臣",
+              "r": "のおみ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "祖",
+              "r": "おや",
+              "g": "subject"
+            },
+            {
+              "t": "である。",
+              "r": "",
+              "g": "subject"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "名志毘臣。",
+        "zh": [
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "subject"
+          },
+          {
+            "t": "志",
+            "r": "zhì",
+            "g": "predicate"
+          },
+          {
+            "t": "毘",
+            "r": "pí",
+            "g": "predicate"
+          },
+          {
+            "t": "臣",
+            "r": "chén",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "名",
+              "r": "な",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "志",
+              "r": "し",
+              "g": "predicate"
+            },
+            {
+              "t": "毘",
+              "r": "び",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "臣",
+              "r": "のおみ",
+              "g": "predicate"
+            },
+            {
+              "t": "という。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

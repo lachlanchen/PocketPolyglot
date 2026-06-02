@@ -1,0 +1,475 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00626",
+  "source_text": "既等天皇之鹵簿。亦其裝束之状。及人衆。相似不傾。",
+  "source_sha256": "ede6fad5ed2ba253ca14443f5e0d90b156708cbb278b09888e40cf8b61c97a62",
+  "source_normalized_sha256": "ede6fad5ed2ba253ca14443f5e0d90b156708cbb278b09888e40cf8b61c97a62",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 62,
+    "grammar_token_total": 62,
+    "unit_count": 4
+  },
+  "source_chunk_id": "kojiki-chunk-0626",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00626",
+    "source_text": "既等天皇之鹵簿。亦其裝束之状。及人衆。相似不傾。",
+    "units": [
+      {
+        "source_text": "既等天皇之鹵簿。",
+        "zh": [
+          {
+            "t": "既",
+            "r": "jì",
+            "g": "adverbial"
+          },
+          {
+            "t": "等",
+            "r": "děng",
+            "g": "predicate"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "attributive"
+          },
+          {
+            "t": "皇",
+            "r": "huáng",
+            "g": "attributive"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "attributive"
+          },
+          {
+            "t": "鹵",
+            "r": "lǔ",
+            "g": "object"
+          },
+          {
+            "t": "簿",
+            "r": "bù",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "すでに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "attributive"
+            },
+            {
+              "t": "皇",
+              "r": "のう",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "鹵",
+              "r": "ろ",
+              "g": "object"
+            },
+            {
+              "t": "簿",
+              "r": "ぼ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "等",
+              "r": "ひと",
+              "g": "predicate"
+            },
+            {
+              "t": "しかった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "亦其裝束之状。",
+        "zh": [
+          {
+            "t": "亦",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "其",
+            "r": "qí",
+            "g": "attributive"
+          },
+          {
+            "t": "裝",
+            "r": "zhuāng",
+            "g": "object"
+          },
+          {
+            "t": "束",
+            "r": "shù",
+            "g": "object"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "attributive"
+          },
+          {
+            "t": "状",
+            "r": "zhuàng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "また",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "そ",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "裝",
+              "r": "しょう",
+              "g": "object"
+            },
+            {
+              "t": "束",
+              "r": "ぞく",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "有",
+              "r": "あ",
+              "g": "object"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "様",
+              "r": "よう",
+              "g": "object"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "同",
+              "r": "おな",
+              "g": "predicate"
+            },
+            {
+              "t": "じであった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "及人衆。",
+        "zh": [
+          {
+            "t": "及",
+            "r": "jí",
+            "g": "function"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "object"
+          },
+          {
+            "t": "衆",
+            "r": "zhòng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "さらに",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "object"
+            },
+            {
+              "t": "々",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "群",
+              "r": "む",
+              "g": "object"
+            },
+            {
+              "t": "れ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "至",
+              "r": "いた",
+              "g": "function"
+            },
+            {
+              "t": "るまで、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "相似不傾。",
+        "zh": [
+          {
+            "t": "相",
+            "r": "xiāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "似",
+            "r": "sì",
+            "g": "predicate"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "傾",
+            "r": "qīng",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "互",
+              "r": "たが",
+              "g": "adverbial"
+            },
+            {
+              "t": "いに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "似",
+              "r": "に",
+              "g": "predicate"
+            },
+            {
+              "t": "ていて、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "少",
+              "r": "すこ",
+              "g": "adverbial"
+            },
+            {
+              "t": "しも",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "違",
+              "r": "ちが",
+              "g": "complement"
+            },
+            {
+              "t": "わなかった。",
+              "r": "",
+              "g": "complement"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

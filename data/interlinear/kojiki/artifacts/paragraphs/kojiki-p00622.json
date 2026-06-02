@@ -1,0 +1,327 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00622",
+  "source_text": "故自其時。號其野。謂阿岐豆野也。",
+  "source_sha256": "d2942e551db82f064af5ce454003bed3675c0c577dfb6697bd23139d08da1376",
+  "source_normalized_sha256": "d2942e551db82f064af5ce454003bed3675c0c577dfb6697bd23139d08da1376",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 31,
+    "grammar_token_total": 31,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kojiki-chunk-0622",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00622",
+    "source_text": "故自其時。號其野。謂阿岐豆野也。",
+    "units": [
+      {
+        "source_text": "故自其時。",
+        "zh": [
+          {
+            "t": "故",
+            "r": "gù",
+            "g": "adverbial"
+          },
+          {
+            "t": "自",
+            "r": "zì",
+            "g": "adverbial"
+          },
+          {
+            "t": "其",
+            "r": "qí",
+            "g": "adverbial"
+          },
+          {
+            "t": "時",
+            "r": "shí",
+            "g": "adverbial"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "それゆえ、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "その",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "時",
+              "r": "とき",
+              "g": "adverbial"
+            },
+            {
+              "t": "より。",
+              "r": "",
+              "g": "adverbial"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "號其野。",
+        "zh": [
+          {
+            "t": "號",
+            "r": "hào",
+            "g": "predicate"
+          },
+          {
+            "t": "其",
+            "r": "qí",
+            "g": "object"
+          },
+          {
+            "t": "野",
+            "r": "yě",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "その",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "野",
+              "r": "の",
+              "g": "object"
+            },
+            {
+              "t": "を、",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "名",
+              "r": "な",
+              "g": "predicate"
+            },
+            {
+              "t": "づけた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "謂阿岐豆野也。",
+        "zh": [
+          {
+            "t": "謂",
+            "r": "wèi",
+            "g": "predicate"
+          },
+          {
+            "t": "阿",
+            "r": "ā",
+            "g": "object"
+          },
+          {
+            "t": "岐",
+            "r": "qí",
+            "g": "object"
+          },
+          {
+            "t": "豆",
+            "r": "dòu",
+            "g": "object"
+          },
+          {
+            "t": "野",
+            "r": "yě",
+            "g": "object"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "阿",
+              "r": "あ",
+              "g": "object"
+            },
+            {
+              "t": "岐",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "豆",
+              "r": "づ",
+              "g": "object"
+            },
+            {
+              "t": "野",
+              "r": "の",
+              "g": "object"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "いうのである。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

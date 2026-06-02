@@ -1,0 +1,360 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00620",
+  "source_text": "曾能阿牟袁。阿岐豆波夜具比。加久能碁登。那爾",
+  "source_sha256": "25ab404d06e8e0bfb1bbf7a3aae8c9a2263ec20dfc79ec29b570854face6420e",
+  "source_normalized_sha256": "25ab404d06e8e0bfb1bbf7a3aae8c9a2263ec20dfc79ec29b570854face6420e",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 39,
+    "grammar_token_total": 39,
+    "unit_count": 4
+  },
+  "source_chunk_id": "kojiki-chunk-0620",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00620",
+    "source_text": "曾能阿牟袁。阿岐豆波夜具比。加久能碁登。那爾",
+    "units": [
+      {
+        "source_text": "曾能阿牟袁。",
+        "zh": [
+          {
+            "t": "曾",
+            "r": "céng",
+            "g": "attributive"
+          },
+          {
+            "t": "能",
+            "r": "néng",
+            "g": "attributive"
+          },
+          {
+            "t": "阿",
+            "r": "ā",
+            "g": "object"
+          },
+          {
+            "t": "牟",
+            "r": "móu",
+            "g": "object"
+          },
+          {
+            "t": "袁",
+            "r": "yuán",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "その",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "虻",
+              "r": "あぶ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "阿岐豆波夜具比。",
+        "zh": [
+          {
+            "t": "阿",
+            "r": "ā",
+            "g": "subject"
+          },
+          {
+            "t": "岐",
+            "r": "qí",
+            "g": "subject"
+          },
+          {
+            "t": "豆",
+            "r": "dòu",
+            "g": "subject"
+          },
+          {
+            "t": "波",
+            "r": "bō",
+            "g": "adverbial"
+          },
+          {
+            "t": "夜",
+            "r": "yè",
+            "g": "adverbial"
+          },
+          {
+            "t": "具",
+            "r": "jù",
+            "g": "predicate"
+          },
+          {
+            "t": "比",
+            "r": "bǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "蜻",
+              "r": "あき",
+              "g": "subject"
+            },
+            {
+              "t": "蛉",
+              "r": "づ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "すばやく",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "食",
+              "r": "く",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "加久能碁登。",
+        "zh": [
+          {
+            "t": "加",
+            "r": "jiā",
+            "g": "adverbial"
+          },
+          {
+            "t": "久",
+            "r": "jiǔ",
+            "g": "adverbial"
+          },
+          {
+            "t": "能",
+            "r": "néng",
+            "g": "adverbial"
+          },
+          {
+            "t": "碁",
+            "r": "qí",
+            "g": "adverbial"
+          },
+          {
+            "t": "登",
+            "r": "dēng",
+            "g": "adverbial"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "ように",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "那爾",
+        "zh": [
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "object"
+          },
+          {
+            "t": "爾",
+            "r": "ěr",
+            "g": "object"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "何",
+              "r": "なに",
+              "g": "object"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "いうのか",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

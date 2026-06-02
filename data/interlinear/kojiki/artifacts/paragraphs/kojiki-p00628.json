@@ -1,0 +1,809 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00628",
+  "source_text": "吾先見問。故吾先爲名告。吾者。雖惡事而一言。雖善事而一言。言離之神。葛城之一言主大神者也。天皇。",
+  "source_sha256": "2cd2ca6ba33f22a14580b419a45c679faebc64ba06f7e625fe84e14d18e4c47d",
+  "source_normalized_sha256": "2cd2ca6ba33f22a14580b419a45c679faebc64ba06f7e625fe84e14d18e4c47d",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 120,
+    "grammar_token_total": 120,
+    "unit_count": 8
+  },
+  "source_chunk_id": "kojiki-chunk-0628",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00628",
+    "source_text": "吾先見問。故吾先爲名告。吾者。雖惡事而一言。雖善事而一言。言離之神。葛城之一言主大神者也。天皇。",
+    "units": [
+      {
+        "source_text": "吾先見問。",
+        "zh": [
+          {
+            "t": "吾",
+            "r": "wú",
+            "g": "subject"
+          },
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "見",
+            "r": "jiàn",
+            "g": "predicate"
+          },
+          {
+            "t": "問",
+            "r": "wèn",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "先",
+              "r": "さき",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "出",
+              "r": "で",
+              "g": "predicate"
+            },
+            {
+              "t": "会",
+              "r": "あ",
+              "g": "predicate"
+            },
+            {
+              "t": "って、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "問",
+              "r": "と",
+              "g": "predicate"
+            },
+            {
+              "t": "いかけた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "故吾先爲名告。",
+        "zh": [
+          {
+            "t": "故",
+            "r": "gù",
+            "g": "function"
+          },
+          {
+            "t": "吾",
+            "r": "wú",
+            "g": "subject"
+          },
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "爲",
+            "r": "wéi",
+            "g": "function"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "object"
+          },
+          {
+            "t": "告",
+            "r": "gào",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "だから",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "先",
+              "r": "さき",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "名",
+              "r": "な",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "告",
+              "r": "つ",
+              "g": "predicate"
+            },
+            {
+              "t": "げよう。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "吾者。",
+        "zh": [
+          {
+            "t": "吾",
+            "r": "wú",
+            "g": "subject"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "という",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "者",
+              "r": "もの",
+              "g": "subject"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "すなわち",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "次",
+              "r": "つぎ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "神",
+              "r": "かみ",
+              "g": "object"
+            },
+            {
+              "t": "である。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "雖惡事而一言。",
+        "zh": [
+          {
+            "t": "雖",
+            "r": "suī",
+            "g": "function"
+          },
+          {
+            "t": "惡",
+            "r": "è",
+            "g": "attributive"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "而",
+            "r": "ér",
+            "g": "function"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "attributive"
+          },
+          {
+            "t": "言",
+            "r": "yán",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "悪",
+              "r": "あ",
+              "g": "attributive"
+            },
+            {
+              "t": "しき",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "事",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "であっても、",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "attributive"
+            },
+            {
+              "t": "言",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "切",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "る。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "雖善事而一言。",
+        "zh": [
+          {
+            "t": "雖",
+            "r": "suī",
+            "g": "function"
+          },
+          {
+            "t": "善",
+            "r": "shàn",
+            "g": "attributive"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "而",
+            "r": "ér",
+            "g": "function"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "attributive"
+          },
+          {
+            "t": "言",
+            "r": "yán",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "善",
+              "r": "よ",
+              "g": "attributive"
+            },
+            {
+              "t": "き",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "事",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "であっても、",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "attributive"
+            },
+            {
+              "t": "言",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "切",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "る。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "言離之神。",
+        "zh": [
+          {
+            "t": "言",
+            "r": "yán",
+            "g": "attributive"
+          },
+          {
+            "t": "離",
+            "r": "lí",
+            "g": "attributive"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "function"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "言",
+              "r": "こと",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "離",
+              "r": "はな",
+              "g": "attributive"
+            },
+            {
+              "t": "ち",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "定",
+              "r": "さだ",
+              "g": "attributive"
+            },
+            {
+              "t": "める",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "神",
+              "r": "かみ",
+              "g": "object"
+            },
+            {
+              "t": "である。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "葛城之一言主大神者也。",
+        "zh": [
+          {
+            "t": "葛",
+            "r": "gé",
+            "g": "attributive"
+          },
+          {
+            "t": "城",
+            "r": "chéng",
+            "g": "attributive"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "function"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "attributive"
+          },
+          {
+            "t": "言",
+            "r": "yán",
+            "g": "attributive"
+          },
+          {
+            "t": "主",
+            "r": "zhǔ",
+            "g": "attributive"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "attributive"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "function"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "葛",
+              "r": "かつ",
+              "g": "attributive"
+            },
+            {
+              "t": "城",
+              "r": "らぎ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "attributive"
+            },
+            {
+              "t": "言",
+              "r": "こと",
+              "g": "attributive"
+            },
+            {
+              "t": "主",
+              "r": "ぬし",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "attributive"
+            },
+            {
+              "t": "神",
+              "r": "かみ",
+              "g": "object"
+            },
+            {
+              "t": "である。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "天皇。",
+        "zh": [
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "subject"
+          },
+          {
+            "t": "皇",
+            "r": "huáng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "subject"
+            },
+            {
+              "t": "皇",
+              "r": "のう",
+              "g": "subject"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "これを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "聞",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "いた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

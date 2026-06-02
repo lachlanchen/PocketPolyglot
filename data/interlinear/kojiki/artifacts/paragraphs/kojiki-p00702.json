@@ -1,0 +1,724 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00702",
+  "source_text": "日子人太子。娶庶妹田村王。亦名糠代比賣命。生御子。坐岡本宮。治天下之天皇。次中津王。次多良王。",
+  "source_sha256": "7a464d1986dd18adde3faceae9f21f085adc180a10c2299ecc1671ae088520da",
+  "source_normalized_sha256": "7a464d1986dd18adde3faceae9f21f085adc180a10c2299ecc1671ae088520da",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 103,
+    "grammar_token_total": 103,
+    "unit_count": 8
+  },
+  "source_chunk_id": "kojiki-chunk-0702",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00702",
+    "source_text": "日子人太子。娶庶妹田村王。亦名糠代比賣命。生御子。坐岡本宮。治天下之天皇。次中津王。次多良王。",
+    "units": [
+      {
+        "source_text": "日子人太子。",
+        "zh": [
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "太",
+            "r": "tài",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "日",
+              "r": "ひ",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "太",
+              "r": "たい",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "である。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "娶庶妹田村王。",
+        "zh": [
+          {
+            "t": "娶",
+            "r": "qǔ",
+            "g": "predicate"
+          },
+          {
+            "t": "庶",
+            "r": "shù",
+            "g": "object"
+          },
+          {
+            "t": "妹",
+            "r": "mèi",
+            "g": "object"
+          },
+          {
+            "t": "田",
+            "r": "tián",
+            "g": "object"
+          },
+          {
+            "t": "村",
+            "r": "cūn",
+            "g": "object"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "異",
+              "r": "い",
+              "g": "object"
+            },
+            {
+              "t": "母",
+              "r": "ぼ",
+              "g": "object"
+            },
+            {
+              "t": "妹",
+              "r": "まい",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "田",
+              "r": "た",
+              "g": "object"
+            },
+            {
+              "t": "村",
+              "r": "むら",
+              "g": "object"
+            },
+            {
+              "t": "王",
+              "r": "おう",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "娶",
+              "r": "めと",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "亦名糠代比賣命。",
+        "zh": [
+          {
+            "t": "亦",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "predicate"
+          },
+          {
+            "t": "糠",
+            "r": "kāng",
+            "g": "object"
+          },
+          {
+            "t": "代",
+            "r": "dài",
+            "g": "object"
+          },
+          {
+            "t": "比",
+            "r": "bǐ",
+            "g": "object"
+          },
+          {
+            "t": "賣",
+            "r": "mài",
+            "g": "object"
+          },
+          {
+            "t": "命",
+            "r": "mìng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "また",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "糠",
+              "r": "ぬか",
+              "g": "object"
+            },
+            {
+              "t": "代",
+              "r": "しろ",
+              "g": "object"
+            },
+            {
+              "t": "比",
+              "r": "ひ",
+              "g": "object"
+            },
+            {
+              "t": "賣",
+              "r": "め",
+              "g": "object"
+            },
+            {
+              "t": "命",
+              "r": "みこと",
+              "g": "object"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "名",
+              "r": "な",
+              "g": "predicate"
+            },
+            {
+              "t": "づけられる。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "生御子。",
+        "zh": [
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "predicate"
+          },
+          {
+            "t": "御",
+            "r": "yù",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "御",
+              "r": "み",
+              "g": "object"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "生",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "んだ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "坐岡本宮。",
+        "zh": [
+          {
+            "t": "坐",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "岡",
+            "r": "gāng",
+            "g": "object"
+          },
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "object"
+          },
+          {
+            "t": "宮",
+            "r": "gōng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "岡",
+              "r": "おか",
+              "g": "object"
+            },
+            {
+              "t": "本",
+              "r": "もと",
+              "g": "object"
+            },
+            {
+              "t": "宮",
+              "r": "みや",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "坐",
+              "r": "ま",
+              "g": "predicate"
+            },
+            {
+              "t": "しました。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "治天下之天皇。",
+        "zh": [
+          {
+            "t": "治",
+            "r": "zhì",
+            "g": "predicate"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "object"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "object"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "function"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "subject"
+          },
+          {
+            "t": "皇",
+            "r": "huáng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "天",
+              "r": "あめ",
+              "g": "object"
+            },
+            {
+              "t": "下",
+              "r": "した",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "治",
+              "r": "おさ",
+              "g": "predicate"
+            },
+            {
+              "t": "めた",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "subject"
+            },
+            {
+              "t": "皇",
+              "r": "のう",
+              "g": "subject"
+            },
+            {
+              "t": "である。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "次中津王。",
+        "zh": [
+          {
+            "t": "次",
+            "r": "cì",
+            "g": "function"
+          },
+          {
+            "t": "中",
+            "r": "zhōng",
+            "g": "subject"
+          },
+          {
+            "t": "津",
+            "r": "jīn",
+            "g": "subject"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "次",
+              "r": "つぎ",
+              "g": "function"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "中",
+              "r": "なか",
+              "g": "subject"
+            },
+            {
+              "t": "津",
+              "r": "つ",
+              "g": "subject"
+            },
+            {
+              "t": "王",
+              "r": "おう",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "である。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "次多良王。",
+        "zh": [
+          {
+            "t": "次",
+            "r": "cì",
+            "g": "function"
+          },
+          {
+            "t": "多",
+            "r": "duō",
+            "g": "subject"
+          },
+          {
+            "t": "良",
+            "r": "liáng",
+            "g": "subject"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "次",
+              "r": "つぎ",
+              "g": "function"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "多",
+              "r": "た",
+              "g": "subject"
+            },
+            {
+              "t": "良",
+              "r": "ら",
+              "g": "subject"
+            },
+            {
+              "t": "王",
+              "r": "おう",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "である。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

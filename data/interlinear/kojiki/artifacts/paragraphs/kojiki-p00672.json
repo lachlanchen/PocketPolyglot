@@ -1,0 +1,276 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00672",
+  "source_text": "爾作御歌。其歌曰。",
+  "source_sha256": "8d4b8b258db5e411f4c8f9213a3bab01d90bd7aed4cabb79779e47518bd8a8da",
+  "source_normalized_sha256": "8d4b8b258db5e411f4c8f9213a3bab01d90bd7aed4cabb79779e47518bd8a8da",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 23,
+    "grammar_token_total": 23,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kojiki-chunk-0672",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "predicate"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "predicate"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00672",
+    "source_text": "爾作御歌。其歌曰。",
+    "units": [
+      {
+        "source_text": "爾作御歌。",
+        "zh": [
+          {
+            "t": "爾",
+            "r": "ěr",
+            "g": "adverbial"
+          },
+          {
+            "t": "作",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "御",
+            "r": "yù",
+            "g": "object"
+          },
+          {
+            "t": "歌",
+            "r": "gē",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そこで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "御",
+              "r": "み",
+              "g": "object"
+            },
+            {
+              "t": "歌",
+              "r": "うた",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "お",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "作",
+              "r": "つく",
+              "g": "predicate"
+            },
+            {
+              "t": "りになった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "其歌曰。",
+        "zh": [
+          {
+            "t": "其",
+            "r": "qí",
+            "g": "attributive"
+          },
+          {
+            "t": "歌",
+            "r": "gē",
+            "g": "subject"
+          },
+          {
+            "t": "曰",
+            "r": "yuē",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "その",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "歌",
+              "r": "うた",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "次",
+              "r": "つぎ",
+              "g": "predicate"
+            },
+            {
+              "t": "のようにいう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

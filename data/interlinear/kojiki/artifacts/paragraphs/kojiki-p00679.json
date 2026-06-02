@@ -1,0 +1,356 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00679",
+  "source_text": "治天下八歲。御陵在片岡之石坏岡上也。",
+  "source_sha256": "6b2a84a1227c63fbb9b3ca73ff689e1c7d7bf40a47cd56d11206b0663e7b866e",
+  "source_normalized_sha256": "6b2a84a1227c63fbb9b3ca73ff689e1c7d7bf40a47cd56d11206b0663e7b866e",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 39,
+    "grammar_token_total": 39,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kojiki-chunk-0679",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00679",
+    "source_text": "治天下八歲。御陵在片岡之石坏岡上也。",
+    "units": [
+      {
+        "source_text": "治天下八歲。",
+        "zh": [
+          {
+            "t": "治",
+            "r": "zhì",
+            "g": "predicate"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "object"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "object"
+          },
+          {
+            "t": "八",
+            "r": "bā",
+            "g": "complement"
+          },
+          {
+            "t": "歲",
+            "r": "suì",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "天",
+              "r": "あめ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "下",
+              "r": "した",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "治",
+              "r": "おさ",
+              "g": "predicate"
+            },
+            {
+              "t": "めたのは",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "八",
+              "r": "はち",
+              "g": "complement"
+            },
+            {
+              "t": "年",
+              "r": "ねん",
+              "g": "complement"
+            },
+            {
+              "t": "であった。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "御陵在片岡之石坏岡上也。",
+        "zh": [
+          {
+            "t": "御",
+            "r": "yù",
+            "g": "subject"
+          },
+          {
+            "t": "陵",
+            "r": "líng",
+            "g": "subject"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "片",
+            "r": "piàn",
+            "g": "attributive"
+          },
+          {
+            "t": "岡",
+            "r": "gāng",
+            "g": "attributive"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "function"
+          },
+          {
+            "t": "石",
+            "r": "shí",
+            "g": "attributive"
+          },
+          {
+            "t": "坏",
+            "r": "huài",
+            "g": "attributive"
+          },
+          {
+            "t": "岡",
+            "r": "gāng",
+            "g": "object"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "complement"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "御",
+              "r": "み",
+              "g": "subject"
+            },
+            {
+              "t": "陵",
+              "r": "ささぎ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "片",
+              "r": "かた",
+              "g": "attributive"
+            },
+            {
+              "t": "岡",
+              "r": "おか",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "石",
+              "r": "いし",
+              "g": "attributive"
+            },
+            {
+              "t": "坏",
+              "r": "つき",
+              "g": "attributive"
+            },
+            {
+              "t": "岡",
+              "r": "おか",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "上",
+              "r": "うえ",
+              "g": "complement"
+            },
+            {
+              "t": "にある。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

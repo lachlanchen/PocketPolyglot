@@ -1,0 +1,379 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00686",
+  "source_text": "是大后也。 生御子。天國押波流岐廣庭命。",
+  "source_sha256": "178b47c627816564bf8ec68032950e6a8824e64b3560b2dcdfed890159963f5c",
+  "source_normalized_sha256": "7b8d36ce8174a1b41214fbdf62219e72ab5a194e001bfcf91fc95e5e6e6b4b80",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 45,
+    "grammar_token_total": 45,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kojiki-chunk-0686",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00686",
+    "source_text": "是大后也。 生御子。天國押波流岐廣庭命。",
+    "units": [
+      {
+        "source_text": "是大后也。",
+        "zh": [
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "subject"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "predicate"
+          },
+          {
+            "t": "后",
+            "r": "hòu",
+            "g": "predicate"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "方",
+              "r": "かた",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "predicate"
+            },
+            {
+              "t": "后",
+              "r": "きさき",
+              "g": "predicate"
+            },
+            {
+              "t": "である",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "生御子。",
+        "zh": [
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "predicate"
+          },
+          {
+            "t": "御",
+            "r": "yù",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "御",
+              "r": "み",
+              "g": "object"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "お",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "生",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "みになった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "天國押波流岐廣庭命。",
+        "zh": [
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "object"
+          },
+          {
+            "t": "國",
+            "r": "guó",
+            "g": "object"
+          },
+          {
+            "t": "押",
+            "r": "yā",
+            "g": "object"
+          },
+          {
+            "t": "波",
+            "r": "bō",
+            "g": "object"
+          },
+          {
+            "t": "流",
+            "r": "liú",
+            "g": "object"
+          },
+          {
+            "t": "岐",
+            "r": "qí",
+            "g": "object"
+          },
+          {
+            "t": "廣",
+            "r": "guǎng",
+            "g": "object"
+          },
+          {
+            "t": "庭",
+            "r": "tíng",
+            "g": "object"
+          },
+          {
+            "t": "命",
+            "r": "mìng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "天",
+              "r": "あめ",
+              "g": "object"
+            },
+            {
+              "t": "国",
+              "r": "くに",
+              "g": "object"
+            },
+            {
+              "t": "押",
+              "r": "おし",
+              "g": "object"
+            },
+            {
+              "t": "波",
+              "r": "は",
+              "g": "object"
+            },
+            {
+              "t": "流",
+              "r": "る",
+              "g": "object"
+            },
+            {
+              "t": "岐",
+              "r": "き",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "広",
+              "r": "ひろ",
+              "g": "object"
+            },
+            {
+              "t": "庭",
+              "r": "にわ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "命",
+              "r": "みこと",
+              "g": "object"
+            },
+            {
+              "t": "である",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

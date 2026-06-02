@@ -1,0 +1,445 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00691",
+  "source_text": "治天下。次建小廣國押楯命。治天下。次佐佐宜王者。",
+  "source_sha256": "0308d6c2086d6ceefe91b7cf19df91f369fe69ce1fdb1bcdebbfd7fad96995b3",
+  "source_normalized_sha256": "0308d6c2086d6ceefe91b7cf19df91f369fe69ce1fdb1bcdebbfd7fad96995b3",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 56,
+    "grammar_token_total": 56,
+    "unit_count": 4
+  },
+  "source_chunk_id": "kojiki-chunk-0691",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00691",
+    "source_text": "治天下。次建小廣國押楯命。治天下。次佐佐宜王者。",
+    "units": [
+      {
+        "source_text": "治天下。",
+        "zh": [
+          {
+            "t": "治",
+            "r": "zhì",
+            "g": "predicate"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "object"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "天",
+              "r": "あめ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "下",
+              "r": "した",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "治",
+              "r": "おさ",
+              "g": "predicate"
+            },
+            {
+              "t": "められた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "次建小廣國押楯命。",
+        "zh": [
+          {
+            "t": "次",
+            "r": "cì",
+            "g": "adverbial"
+          },
+          {
+            "t": "建",
+            "r": "jiàn",
+            "g": "subject"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "subject"
+          },
+          {
+            "t": "廣",
+            "r": "guǎng",
+            "g": "subject"
+          },
+          {
+            "t": "國",
+            "r": "guó",
+            "g": "subject"
+          },
+          {
+            "t": "押",
+            "r": "yā",
+            "g": "subject"
+          },
+          {
+            "t": "楯",
+            "r": "dùn",
+            "g": "subject"
+          },
+          {
+            "t": "命",
+            "r": "mìng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "次",
+              "r": "つぎ",
+              "g": "adverbial"
+            },
+            {
+              "t": "に、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "建",
+              "r": "たけ",
+              "g": "subject"
+            },
+            {
+              "t": "小",
+              "r": "お",
+              "g": "subject"
+            },
+            {
+              "t": "廣",
+              "r": "ひろ",
+              "g": "subject"
+            },
+            {
+              "t": "國",
+              "r": "くに",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "押",
+              "r": "おし",
+              "g": "subject"
+            },
+            {
+              "t": "楯",
+              "r": "たて",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "命",
+              "r": "みこと",
+              "g": "subject"
+            },
+            {
+              "t": "である。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "治天下。",
+        "zh": [
+          {
+            "t": "治",
+            "r": "zhì",
+            "g": "predicate"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "object"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "天",
+              "r": "あめ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "下",
+              "r": "した",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "治",
+              "r": "おさ",
+              "g": "predicate"
+            },
+            {
+              "t": "められた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "次佐佐宜王者。",
+        "zh": [
+          {
+            "t": "次",
+            "r": "cì",
+            "g": "adverbial"
+          },
+          {
+            "t": "佐",
+            "r": "zuǒ",
+            "g": "subject"
+          },
+          {
+            "t": "佐",
+            "r": "zuǒ",
+            "g": "subject"
+          },
+          {
+            "t": "宜",
+            "r": "yí",
+            "g": "subject"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "subject"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "次",
+              "r": "つぎ",
+              "g": "adverbial"
+            },
+            {
+              "t": "に、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "佐",
+              "r": "さ",
+              "g": "subject"
+            },
+            {
+              "t": "佐",
+              "r": "さ",
+              "g": "subject"
+            },
+            {
+              "t": "宜",
+              "r": "ぎ",
+              "g": "subject"
+            },
+            {
+              "t": "王",
+              "r": "おう",
+              "g": "subject"
+            },
+            {
+              "t": "という",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "者",
+              "r": "もの",
+              "g": "function"
+            },
+            {
+              "t": "がある。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
