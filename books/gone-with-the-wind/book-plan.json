@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "book_id": "gone-with-the-wind",
+  "status": "prepared",
+  "launchable": true,
+  "task_mode": "trilingual_standard",
+  "book_title_en": "Gone With the Wind",
+  "book_title_zh": "飘",
+  "book_title_ja": "風と共に去りぬ",
+  "book_title_zh_reading": "piāo",
+  "book_title_ja_reading": "かぜ と とも に さ り ぬ",
+  "author": "Margaret Mitchell",
+  "author_reading_ja": "マーガレット ミッチェル",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "markdown": {
+    "en": "books/gone-with-the-wind/markdown/en.md",
+    "zh": "books/gone-with-the-wind/markdown/zh.md",
+    "zh_reference": "books/gone-with-the-wind/markdown/zh.reference.md",
+    "ja": "books/gone-with-the-wind/markdown/ja.md"
+  },
+  "chunks_manifest": "books/gone-with-the-wind/work/trilingual/chunks/manifest.json",
+  "chunks_jsonl": "books/gone-with-the-wind/work/trilingual/chunks/chunks.jsonl",
+  "raw_chunk_dir": "books/gone-with-the-wind/work/trilingual/interlinear/chunks",
+  "assembled_json": "books/gone-with-the-wind/work/trilingual/preview/gone-with-the-wind.partial.json",
+  "build_root": "build/gone-with-the-wind",
+  "source_paths": {
+    "en": "sources/gone-with-the-wind/Gone With the Wind.pdf",
+    "zh_primary": "sources/gone-with-the-wind/飘.epub",
+    "zh_secondary": "sources/gone-with-the-wind/乱世佳人.epub",
+    "ja": [
+      "sources/gone-with-the-wind/風と共に去りぬ（一）.epub",
+      "sources/gone-with-the-wind/風と共に去りぬ 第2巻（新潮文庫）.epub"
+    ]
+  },
+  "source_sha256": {
+    "en": "af0b142e78ca918038d894c396b50df4599aa7b38a102cf4fcf47ed94cd4eb68",
+    "zh_primary": "eaac9237aec33fa62fe12564455383a46fcd068c2005e43a38735a08f40d28c9",
+    "zh_secondary": "f74b9d3a843688dd9300661c72f4554cd85c6e28fdde5ef2124ae5d975d19559",
+    "ja": [
+      "fa60f1c07eb5485347879838d8285a0b92aa9b60a5ef74437b90222409655c92",
+      "e61bddbf8e802008decd42f40bdc1d510a6d4a075dfea6f40fb71b2abc8a9624"
+    ]
+  },
+  "chapter_count": 63,
+  "paragraph_count": 8337,
+  "chunk_count": 1745
+}
