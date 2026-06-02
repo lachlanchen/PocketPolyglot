@@ -1,0 +1,255 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00217",
+  "source_text": "爾大久米命答歌曰。",
+  "source_sha256": "4b608525fdef767037555bb0d4e8d1184b736d78911492680a83563fec987545",
+  "source_normalized_sha256": "4b608525fdef767037555bb0d4e8d1184b736d78911492680a83563fec987545",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 21,
+    "grammar_token_total": 21,
+    "unit_count": 1
+  },
+  "source_chunk_id": "kojiki-chunk-0217",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "predicate"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "predicate"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00217",
+    "source_text": "爾大久米命答歌曰。",
+    "units": [
+      {
+        "source_text": "爾大久米命答歌曰。",
+        "zh": [
+          {
+            "t": "爾",
+            "r": "ěr",
+            "g": "adverbial"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "subject"
+          },
+          {
+            "t": "久",
+            "r": "jiǔ",
+            "g": "subject"
+          },
+          {
+            "t": "米",
+            "r": "mǐ",
+            "g": "subject"
+          },
+          {
+            "t": "命",
+            "r": "mìng",
+            "g": "subject"
+          },
+          {
+            "t": "答",
+            "r": "dá",
+            "g": "predicate"
+          },
+          {
+            "t": "歌",
+            "r": "gē",
+            "g": "object"
+          },
+          {
+            "t": "曰",
+            "r": "yuē",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そこで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "subject"
+            },
+            {
+              "t": "久",
+              "r": "く",
+              "g": "subject"
+            },
+            {
+              "t": "米",
+              "r": "め",
+              "g": "subject"
+            },
+            {
+              "t": "命",
+              "r": "みこと",
+              "g": "subject"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "歌",
+              "r": "うた",
+              "g": "object"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "答",
+              "r": "こた",
+              "g": "predicate"
+            },
+            {
+              "t": "えて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

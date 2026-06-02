@@ -1,0 +1,472 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00220",
+  "source_text": "一宿御寢坐也。 其河謂佐韋河由者。於其河邊山由理草多在。",
+  "source_sha256": "3646caf61000390d4a2eb466a84aca5cc904d0a17f5b365329d58fff383d4d6f",
+  "source_normalized_sha256": "f05ba5d952a41fe5a915b0358508d3f71a4f0658fa22f99e19e250a76923540f",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 60,
+    "grammar_token_total": 60,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kojiki-chunk-0220",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00220",
+    "source_text": "一宿御寢坐也。 其河謂佐韋河由者。於其河邊山由理草多在。",
+    "units": [
+      {
+        "source_text": "一宿御寢坐也。",
+        "zh": [
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "adverbial"
+          },
+          {
+            "t": "宿",
+            "r": "sù",
+            "g": "predicate"
+          },
+          {
+            "t": "御",
+            "r": "yù",
+            "g": "attributive"
+          },
+          {
+            "t": "寢",
+            "r": "qǐn",
+            "g": "predicate"
+          },
+          {
+            "t": "坐",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "adverbial"
+            },
+            {
+              "t": "夜",
+              "r": "よ",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "そこで",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "お",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "休",
+              "r": "やす",
+              "g": "predicate"
+            },
+            {
+              "t": "みになった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "其河謂佐韋河由者。",
+        "zh": [
+          {
+            "t": "其",
+            "r": "qí",
+            "g": "attributive"
+          },
+          {
+            "t": "河",
+            "r": "hé",
+            "g": "object"
+          },
+          {
+            "t": "謂",
+            "r": "wèi",
+            "g": "predicate"
+          },
+          {
+            "t": "佐",
+            "r": "zuǒ",
+            "g": "object"
+          },
+          {
+            "t": "韋",
+            "r": "wéi",
+            "g": "object"
+          },
+          {
+            "t": "河",
+            "r": "hé",
+            "g": "object"
+          },
+          {
+            "t": "由",
+            "r": "yóu",
+            "g": "object"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "その",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "川",
+              "r": "かわ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "佐",
+              "r": "さ",
+              "g": "object"
+            },
+            {
+              "t": "韋",
+              "r": "い",
+              "g": "object"
+            },
+            {
+              "t": "川",
+              "r": "がわ",
+              "g": "object"
+            },
+            {
+              "t": "という",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "由",
+              "r": "ゆ",
+              "g": "object"
+            },
+            {
+              "t": "来",
+              "r": "らい",
+              "g": "object"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "於其河邊山由理草多在。",
+        "zh": [
+          {
+            "t": "於",
+            "r": "yú",
+            "g": "adverbial"
+          },
+          {
+            "t": "其",
+            "r": "qí",
+            "g": "attributive"
+          },
+          {
+            "t": "河",
+            "r": "hé",
+            "g": "adverbial"
+          },
+          {
+            "t": "邊",
+            "r": "biān",
+            "g": "adverbial"
+          },
+          {
+            "t": "山",
+            "r": "shān",
+            "g": "subject"
+          },
+          {
+            "t": "由",
+            "r": "yóu",
+            "g": "subject"
+          },
+          {
+            "t": "理",
+            "r": "lǐ",
+            "g": "subject"
+          },
+          {
+            "t": "草",
+            "r": "cǎo",
+            "g": "subject"
+          },
+          {
+            "t": "多",
+            "r": "duō",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "その",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "川",
+              "r": "かわ",
+              "g": "adverbial"
+            },
+            {
+              "t": "辺",
+              "r": "べ",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "山",
+              "r": "やま",
+              "g": "subject"
+            },
+            {
+              "t": "由",
+              "r": "ゆ",
+              "g": "subject"
+            },
+            {
+              "t": "理",
+              "r": "り",
+              "g": "subject"
+            },
+            {
+              "t": "草",
+              "r": "ぐさ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "多",
+              "r": "おお",
+              "g": "predicate"
+            },
+            {
+              "t": "く",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "生",
+              "r": "は",
+              "g": "predicate"
+            },
+            {
+              "t": "えていたからである",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
