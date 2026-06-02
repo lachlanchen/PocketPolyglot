@@ -1,0 +1,729 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00289",
+  "source_text": "皇之御子等。十六王。 男王十三。女王三。 故大帶日子淤斯呂和氣命者。治天下也。 御身長。一丈二寸。",
+  "source_sha256": "3a2d2c89787254790d741561ea0d3dab88f50c458336b12b64f933f51e340d59",
+  "source_normalized_sha256": "1eb984e5ecc9fd203d260040d101a4c7e65de399c586df91fb904b730bc32edd",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 104,
+    "grammar_token_total": 104,
+    "unit_count": 8
+  },
+  "source_chunk_id": "kojiki-chunk-0289",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00289",
+    "source_text": "皇之御子等。十六王。 男王十三。女王三。 故大帶日子淤斯呂和氣命者。治天下也。 御身長。一丈二寸。",
+    "units": [
+      {
+        "source_text": "皇之御子等。",
+        "zh": [
+          {
+            "t": "皇",
+            "r": "huáng",
+            "g": "attributive"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "function"
+          },
+          {
+            "t": "御",
+            "r": "yù",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "等",
+            "r": "děng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "attributive"
+            },
+            {
+              "t": "皇",
+              "r": "のう",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "御",
+              "r": "み",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "たち。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "十六王。",
+        "zh": [
+          {
+            "t": "十",
+            "r": "shí",
+            "g": "attributive"
+          },
+          {
+            "t": "六",
+            "r": "liù",
+            "g": "attributive"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "十",
+              "r": "じゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "六",
+              "r": "ろく",
+              "g": "attributive"
+            },
+            {
+              "t": "人",
+              "r": "にん",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "王",
+              "r": "おう",
+              "g": "subject"
+            },
+            {
+              "t": "である。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "男王十三。",
+        "zh": [
+          {
+            "t": "男",
+            "r": "nán",
+            "g": "attributive"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "subject"
+          },
+          {
+            "t": "十",
+            "r": "shí",
+            "g": "predicate"
+          },
+          {
+            "t": "三",
+            "r": "sān",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "男",
+              "r": "おとこ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "王",
+              "r": "おう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "十",
+              "r": "じゅう",
+              "g": "predicate"
+            },
+            {
+              "t": "三",
+              "r": "さん",
+              "g": "predicate"
+            },
+            {
+              "t": "人",
+              "r": "にん",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "女王三。",
+        "zh": [
+          {
+            "t": "女",
+            "r": "nǚ",
+            "g": "attributive"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "subject"
+          },
+          {
+            "t": "三",
+            "r": "sān",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "女",
+              "r": "おんな",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "王",
+              "r": "おう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "三",
+              "r": "さん",
+              "g": "predicate"
+            },
+            {
+              "t": "人",
+              "r": "にん",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "故大帶日子淤斯呂和氣命者。",
+        "zh": [
+          {
+            "t": "故",
+            "r": "gù",
+            "g": "adverbial"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "subject"
+          },
+          {
+            "t": "帶",
+            "r": "dài",
+            "g": "subject"
+          },
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "淤",
+            "r": "yū",
+            "g": "subject"
+          },
+          {
+            "t": "斯",
+            "r": "sī",
+            "g": "subject"
+          },
+          {
+            "t": "呂",
+            "r": "lǚ",
+            "g": "subject"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "subject"
+          },
+          {
+            "t": "氣",
+            "r": "qì",
+            "g": "subject"
+          },
+          {
+            "t": "命",
+            "r": "mìng",
+            "g": "subject"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "topic"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "故",
+              "r": "ゆえ",
+              "g": "adverbial"
+            },
+            {
+              "t": "に、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "subject"
+            },
+            {
+              "t": "帯",
+              "r": "たらし",
+              "g": "subject"
+            },
+            {
+              "t": "日",
+              "r": "ひ",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "淤",
+              "r": "お",
+              "g": "subject"
+            },
+            {
+              "t": "斯",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "呂",
+              "r": "ろ",
+              "g": "subject"
+            },
+            {
+              "t": "和",
+              "r": "わ",
+              "g": "subject"
+            },
+            {
+              "t": "気",
+              "r": "け",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "命",
+              "r": "みこと",
+              "g": "subject"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "topic"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "治天下也。",
+        "zh": [
+          {
+            "t": "治",
+            "r": "zhì",
+            "g": "predicate"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "object"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "object"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "object"
+            },
+            {
+              "t": "下",
+              "r": "か",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "治",
+              "r": "おさ",
+              "g": "predicate"
+            },
+            {
+              "t": "められた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "御身長。",
+        "zh": [
+          {
+            "t": "御",
+            "r": "yù",
+            "g": "attributive"
+          },
+          {
+            "t": "身",
+            "r": "shēn",
+            "g": "subject"
+          },
+          {
+            "t": "長",
+            "r": "cháng",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "御",
+              "r": "おん",
+              "g": "attributive"
+            },
+            {
+              "t": "身",
+              "r": "み",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "丈",
+              "r": "たけ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "長",
+              "r": "なが",
+              "g": "predicate"
+            },
+            {
+              "t": "かった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "一丈二寸。",
+        "zh": [
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "predicate"
+          },
+          {
+            "t": "丈",
+            "r": "zhàng",
+            "g": "predicate"
+          },
+          {
+            "t": "二",
+            "r": "èr",
+            "g": "predicate"
+          },
+          {
+            "t": "寸",
+            "r": "cùn",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "predicate"
+            },
+            {
+              "t": "丈",
+              "r": "じょう",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "二",
+              "r": "に",
+              "g": "predicate"
+            },
+            {
+              "t": "寸",
+              "r": "すん",
+              "g": "predicate"
+            },
+            {
+              "t": "であった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
