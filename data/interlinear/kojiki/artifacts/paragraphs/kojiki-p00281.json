@@ -1,0 +1,412 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00281",
+  "source_text": "不得中。於是國夫玖命彈矢者。即射建波爾安王而死。",
+  "source_sha256": "14e9c3cb1b49730288f0eb8ccb6625458fe05f4dd8397f74c26898840852af4b",
+  "source_normalized_sha256": "14e9c3cb1b49730288f0eb8ccb6625458fe05f4dd8397f74c26898840852af4b",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 48,
+    "grammar_token_total": 48,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kojiki-chunk-0281",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00281",
+    "source_text": "不得中。於是國夫玖命彈矢者。即射建波爾安王而死。",
+    "units": [
+      {
+        "source_text": "不得中。",
+        "zh": [
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "得",
+            "r": "dé",
+            "g": "predicate"
+          },
+          {
+            "t": "中",
+            "r": "zhòng",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "当",
+              "r": "あ",
+              "g": "predicate"
+            },
+            {
+              "t": "てることが",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "できなかった。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "於是國夫玖命彈矢者。",
+        "zh": [
+          {
+            "t": "於",
+            "r": "yú",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "adverbial"
+          },
+          {
+            "t": "國",
+            "r": "guó",
+            "g": "subject"
+          },
+          {
+            "t": "夫",
+            "r": "fū",
+            "g": "subject"
+          },
+          {
+            "t": "玖",
+            "r": "jiǔ",
+            "g": "subject"
+          },
+          {
+            "t": "命",
+            "r": "mìng",
+            "g": "subject"
+          },
+          {
+            "t": "彈",
+            "r": "tán",
+            "g": "predicate"
+          },
+          {
+            "t": "矢",
+            "r": "shǐ",
+            "g": "object"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そこで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "国",
+              "r": "くに",
+              "g": "subject"
+            },
+            {
+              "t": "夫",
+              "r": "ふ",
+              "g": "subject"
+            },
+            {
+              "t": "玖",
+              "r": "く",
+              "g": "subject"
+            },
+            {
+              "t": "命",
+              "r": "のみこと",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "矢",
+              "r": "や",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "射",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "ると、",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "即射建波爾安王而死。",
+        "zh": [
+          {
+            "t": "即",
+            "r": "jí",
+            "g": "adverbial"
+          },
+          {
+            "t": "射",
+            "r": "shè",
+            "g": "predicate"
+          },
+          {
+            "t": "建",
+            "r": "jiàn",
+            "g": "object"
+          },
+          {
+            "t": "波",
+            "r": "bō",
+            "g": "object"
+          },
+          {
+            "t": "爾",
+            "r": "ěr",
+            "g": "object"
+          },
+          {
+            "t": "安",
+            "r": "ān",
+            "g": "object"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "object"
+          },
+          {
+            "t": "而",
+            "r": "ér",
+            "g": "function"
+          },
+          {
+            "t": "死",
+            "r": "sǐ",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ただちに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "建",
+              "r": "たけ",
+              "g": "object"
+            },
+            {
+              "t": "波",
+              "r": "は",
+              "g": "object"
+            },
+            {
+              "t": "爾",
+              "r": "に",
+              "g": "object"
+            },
+            {
+              "t": "安",
+              "r": "やす",
+              "g": "object"
+            },
+            {
+              "t": "王",
+              "r": "おう",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "射",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "て、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "死",
+              "r": "し",
+              "g": "complement"
+            },
+            {
+              "t": "なせた。",
+              "r": "",
+              "g": "complement"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

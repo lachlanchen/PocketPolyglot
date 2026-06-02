@@ -1,0 +1,430 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00279",
+  "source_text": "皇答詔之。此者爲。在山代國。我之庶兄建波邇安王。",
+  "source_sha256": "168801523eedc0f81d62fc78c61b51622d6296d05fa2ff25ab025cf2bf3edf24",
+  "source_normalized_sha256": "168801523eedc0f81d62fc78c61b51622d6296d05fa2ff25ab025cf2bf3edf24",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 53,
+    "grammar_token_total": 53,
+    "unit_count": 4
+  },
+  "source_chunk_id": "kojiki-chunk-0279",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-古事記-intro",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00279",
+    "source_text": "皇答詔之。此者爲。在山代國。我之庶兄建波邇安王。",
+    "units": [
+      {
+        "source_text": "皇答詔之。",
+        "zh": [
+          {
+            "t": "皇",
+            "r": "huáng",
+            "g": "subject"
+          },
+          {
+            "t": "答",
+            "r": "dá",
+            "g": "predicate"
+          },
+          {
+            "t": "詔",
+            "r": "zhào",
+            "g": "predicate"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "subject"
+            },
+            {
+              "t": "皇",
+              "r": "のう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "これに",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "答",
+              "r": "こた",
+              "g": "predicate"
+            },
+            {
+              "t": "えて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "詔",
+              "r": "みことのり",
+              "g": "predicate"
+            },
+            {
+              "t": "された。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "此者爲。",
+        "zh": [
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "subject"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "subject"
+          },
+          {
+            "t": "爲",
+            "r": "wéi",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "これは",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "すなわち、",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "在山代國。",
+        "zh": [
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "山",
+            "r": "shān",
+            "g": "object"
+          },
+          {
+            "t": "代",
+            "r": "dài",
+            "g": "object"
+          },
+          {
+            "t": "國",
+            "r": "guó",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "山",
+              "r": "やま",
+              "g": "object"
+            },
+            {
+              "t": "代",
+              "r": "しろ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "国",
+              "r": "くに",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "いる",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "者",
+              "r": "もの",
+              "g": "subject"
+            },
+            {
+              "t": "で、",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我之庶兄建波邇安王。",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "attributive"
+          },
+          {
+            "t": "庶",
+            "r": "shù",
+            "g": "attributive"
+          },
+          {
+            "t": "兄",
+            "r": "xiōng",
+            "g": "subject"
+          },
+          {
+            "t": "建",
+            "r": "jiàn",
+            "g": "subject"
+          },
+          {
+            "t": "波",
+            "r": "bō",
+            "g": "subject"
+          },
+          {
+            "t": "邇",
+            "r": "ěr",
+            "g": "subject"
+          },
+          {
+            "t": "安",
+            "r": "ān",
+            "g": "subject"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "我",
+              "r": "わ",
+              "g": "attributive"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "庶",
+              "r": "しょ",
+              "g": "attributive"
+            },
+            {
+              "t": "兄",
+              "r": "けい",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "建",
+              "r": "たけ",
+              "g": "subject"
+            },
+            {
+              "t": "波",
+              "r": "は",
+              "g": "subject"
+            },
+            {
+              "t": "邇",
+              "r": "に",
+              "g": "subject"
+            },
+            {
+              "t": "安",
+              "r": "やす",
+              "g": "subject"
+            },
+            {
+              "t": "王",
+              "r": "おう",
+              "g": "subject"
+            },
+            {
+              "t": "である。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
