@@ -1,0 +1,140 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "woman-in-the-dunes",
+  "paragraph_id": "woman-in-the-dunes-p00262",
+  "source_text": "沙……",
+  "source_sha256": "0b9a493243e837dd2af3bd498ba61930d22a73d9eec5bd6996f0c417a4107183",
+  "source_normalized_sha256": "0b9a493243e837dd2af3bd498ba61930d22a73d9eec5bd6996f0c417a4107183",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 7,
+    "grammar_token_total": 7,
+    "unit_count": 1
+  },
+  "source_chunk_id": "woman-in-the-dunes-chunk-0262",
+  "source_manifest_sha256": "d4e448272465ec27547c95a3075b988bdeb9e6260e21053d5ef38c28d636507d",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "object"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "六",
+    "title_zh": [
+      {
+        "t": "六",
+        "r": "liù",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "六",
+        "r": "ろく",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-六-intro",
+    "title_zh": [
+      {
+        "t": "六",
+        "r": "liù",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "六",
+        "r": "ろく",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "woman-in-the-dunes-p00262",
+    "source_text": "沙……",
+    "units": [
+      {
+        "source_text": "沙……",
+        "zh": [
+          {
+            "t": "沙",
+            "r": "shā",
+            "g": "topic"
+          },
+          {
+            "t": "……",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "砂",
+              "r": "すな",
+              "g": "topic"
+            },
+            {
+              "t": "……",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "砂",
+              "r": "すな",
+              "g": "topic"
+            },
+            {
+              "t": "なのだ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "……",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
