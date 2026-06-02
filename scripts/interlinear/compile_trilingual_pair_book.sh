@@ -53,6 +53,11 @@ case "$comment_lang" in en|zh|ja) ;; *) echo "Invalid --comment-lang: $comment_l
 case "$color_mode" in color|blackwhite) ;; *) echo "Invalid --color-mode: $color_mode" >&2; exit 1 ;; esac
 
 cd "$root"
+lock_dir="books/$book_id/work/trilingual"
+mkdir -p "$lock_dir"
+exec 9>"$lock_dir/compile.lock"
+flock 9
+
 plan="books/$book_id/book-plan.json"
 if [[ ! -f "$plan" ]]; then
   echo "Missing book plan: $plan" >&2
