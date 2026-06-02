@@ -1,0 +1,215 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "woman-in-the-dunes",
+  "paragraph_id": "woman-in-the-dunes-p00131",
+  "source_text": "“是在树上开洞的虫子哟。”",
+  "source_sha256": "ddd0e79e71b49e6a5da1aaa41d7f7ee605affd5be56713389b195db9bed93125",
+  "source_normalized_sha256": "ddd0e79e71b49e6a5da1aaa41d7f7ee605affd5be56713389b195db9bed93125",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 23,
+    "grammar_token_total": 23,
+    "unit_count": 1
+  },
+  "source_chunk_id": "woman-in-the-dunes-chunk-0131",
+  "source_manifest_sha256": "d4e448272465ec27547c95a3075b988bdeb9e6260e21053d5ef38c28d636507d",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "書",
+        "r": "がき",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "四",
+    "title_zh": [
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-四-intro",
+    "title_zh": [
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "woman-in-the-dunes-p00131",
+    "source_text": "“是在树上开洞的虫子哟。”",
+    "units": [
+      {
+        "source_text": "“是在树上开洞的虫子哟。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "attributive"
+          },
+          {
+            "t": "树",
+            "r": "shù",
+            "g": "attributive"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "attributive"
+          },
+          {
+            "t": "开",
+            "r": "kāi",
+            "g": "attributive"
+          },
+          {
+            "t": "洞",
+            "r": "dòng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "虫",
+            "r": "chóng",
+            "g": "complement"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "complement"
+          },
+          {
+            "t": "哟",
+            "r": "yo",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "木",
+              "r": "き",
+              "g": "attributive"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "穴",
+              "r": "あな",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "あける",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "虫",
+              "r": "むし",
+              "g": "complement"
+            },
+            {
+              "t": "だよ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,885 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "woman-in-the-dunes",
+  "paragraph_id": "woman-in-the-dunes-p00120",
+  "source_text": "女人背过脸去，脸上浮起痉挛的表情。她失望了吧。真是乡下女人，毫不掩饰。他觉得有些不好意思，频频地舔着嘴唇。“没有澡盆，弄点水冲一冲也可以呀。我呀，浑身上下全是沙子……”",
+  "source_sha256": "e6cbe7c746fb921d2cb1a52efbce2a1bc6c5ac576e69756952db3aea49f28b10",
+  "source_normalized_sha256": "e6cbe7c746fb921d2cb1a52efbce2a1bc6c5ac576e69756952db3aea49f28b10",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 146,
+    "grammar_token_total": 146,
+    "unit_count": 6
+  },
+  "source_chunk_id": "woman-in-the-dunes-chunk-0120",
+  "source_manifest_sha256": "d4e448272465ec27547c95a3075b988bdeb9e6260e21053d5ef38c28d636507d",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "object"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん",
+        "g": "object"
+      },
+      {
+        "t": "言",
+        "r": "げん",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "四",
+    "title_zh": [
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-四-intro",
+    "title_zh": [
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "woman-in-the-dunes-p00120",
+    "source_text": "女人背过脸去，脸上浮起痉挛的表情。她失望了吧。真是乡下女人，毫不掩饰。他觉得有些不好意思，频频地舔着嘴唇。“没有澡盆，弄点水冲一冲也可以呀。我呀，浑身上下全是沙子……”",
+    "units": [
+      {
+        "source_text": "女人背过脸去，脸上浮起痉挛的表情。",
+        "zh": [
+          {
+            "t": "女",
+            "r": "nǚ",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "背",
+            "r": "bèi",
+            "g": "predicate"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "predicate"
+          },
+          {
+            "t": "脸",
+            "r": "liǎn",
+            "g": "object"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "脸",
+            "r": "liǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "浮",
+            "r": "fú",
+            "g": "predicate"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "痉",
+            "r": "jìng",
+            "g": "attributive"
+          },
+          {
+            "t": "挛",
+            "r": "luán",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "表",
+            "r": "biǎo",
+            "g": "object"
+          },
+          {
+            "t": "情",
+            "r": "qíng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "女",
+              "r": "おんな",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "顔",
+              "r": "かお",
+              "g": "object"
+            },
+            {
+              "t": "をそむけ、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "顔",
+              "r": "かお",
+              "g": "adverbial"
+            },
+            {
+              "t": "にけいれんした",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "表",
+              "r": "ひょう",
+              "g": "object"
+            },
+            {
+              "t": "情",
+              "r": "じょう",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "浮",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "かんだ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "她失望了吧。",
+        "zh": [
+          {
+            "t": "她",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "失",
+            "r": "shī",
+            "g": "predicate"
+          },
+          {
+            "t": "望",
+            "r": "wàng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "彼",
+              "r": "かの",
+              "g": "subject"
+            },
+            {
+              "t": "女",
+              "r": "じょ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "失",
+              "r": "しつ",
+              "g": "predicate"
+            },
+            {
+              "t": "望",
+              "r": "ぼう",
+              "g": "predicate"
+            },
+            {
+              "t": "したのだろう。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "きっと",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "落",
+              "r": "らく",
+              "g": "predicate"
+            },
+            {
+              "t": "胆",
+              "r": "たん",
+              "g": "predicate"
+            },
+            {
+              "t": "したのだ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "真是乡下女人，毫不掩饰。",
+        "zh": [
+          {
+            "t": "真",
+            "r": "zhēn",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "乡",
+            "r": "xiāng",
+            "g": "attributive"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "attributive"
+          },
+          {
+            "t": "女",
+            "r": "nǚ",
+            "g": "object"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "毫",
+            "r": "háo",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "掩",
+            "r": "yǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "饰",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "まったく",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "田",
+              "r": "いな",
+              "g": "attributive"
+            },
+            {
+              "t": "舎",
+              "r": "か",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "女",
+              "r": "おんな",
+              "g": "object"
+            },
+            {
+              "t": "だ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "少",
+              "r": "すこ",
+              "g": "adverbial"
+            },
+            {
+              "t": "しも",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "隠",
+              "r": "かく",
+              "g": "predicate"
+            },
+            {
+              "t": "そうとしない。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "他觉得有些不好意思，频频地舔着嘴唇。",
+        "zh": [
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "觉",
+            "r": "jué",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "些",
+            "r": "xiē",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "predicate"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "意",
+            "r": "yì",
+            "g": "predicate"
+          },
+          {
+            "t": "思",
+            "r": "si",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "频",
+            "r": "pín",
+            "g": "adverbial"
+          },
+          {
+            "t": "频",
+            "r": "pín",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "舔",
+            "r": "tiǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "predicate"
+          },
+          {
+            "t": "嘴",
+            "r": "zuǐ",
+            "g": "object"
+          },
+          {
+            "t": "唇",
+            "r": "chún",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "いくらか",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "気",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "まずく",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "感",
+              "r": "かん",
+              "g": "predicate"
+            },
+            {
+              "t": "じ、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "しきりに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "唇",
+              "r": "くちびる",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "舐",
+              "r": "な",
+              "g": "predicate"
+            },
+            {
+              "t": "めていた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "“没有澡盆，弄点水冲一冲也可以呀。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "predicate"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "澡",
+            "r": "zǎo",
+            "g": "object"
+          },
+          {
+            "t": "盆",
+            "r": "pén",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "弄",
+            "r": "nòng",
+            "g": "predicate"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "attributive"
+          },
+          {
+            "t": "水",
+            "r": "shuǐ",
+            "g": "object"
+          },
+          {
+            "t": "冲",
+            "r": "chōng",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "冲",
+            "r": "chōng",
+            "g": "predicate"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "predicate"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "呀",
+            "r": "ya",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "湯",
+              "r": "ゆ",
+              "g": "object"
+            },
+            {
+              "t": "船",
+              "r": "ぶね",
+              "g": "object"
+            },
+            {
+              "t": "がなくても、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "少",
+              "r": "すこ",
+              "g": "attributive"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "水",
+              "r": "みず",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "汲",
+              "r": "く",
+              "g": "predicate"
+            },
+            {
+              "t": "んで",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "流",
+              "r": "なが",
+              "g": "predicate"
+            },
+            {
+              "t": "せばいいのに。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我呀，浑身上下全是沙子……”",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "呀",
+            "r": "ya",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "浑",
+            "r": "hún",
+            "g": "attributive"
+          },
+          {
+            "t": "身",
+            "r": "shēn",
+            "g": "attributive"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "attributive"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "attributive"
+          },
+          {
+            "t": "全",
+            "r": "quán",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "沙",
+            "r": "shā",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "なんて、",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "全",
+              "r": "ぜん",
+              "g": "attributive"
+            },
+            {
+              "t": "身",
+              "r": "しん",
+              "g": "attributive"
+            },
+            {
+              "t": "くまなく",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "砂",
+              "r": "すな",
+              "g": "object"
+            },
+            {
+              "t": "だらけなんです……」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
