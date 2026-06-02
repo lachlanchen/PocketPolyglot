@@ -1,0 +1,366 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00121",
+  "source_text": "還矢之本也 。亦其雉不還，故於今諺曰「雉之頓使」",
+  "source_sha256": "6f113a83c355e1c0f4a190808cfd02eadc4704c7a30965064615efc90accc1f7",
+  "source_normalized_sha256": "c01c99e15b289c10d2a76b5901f98d262bdebf5453ad34e666eb075694c130a0",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": false,
+    "token_total": 45,
+    "grammar_token_total": 41,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kojiki-chunk-0121",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "topic"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "topic"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "上卷",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng",
+        "g": "topic"
+      },
+      {
+        "t": "卷",
+        "r": "juàn",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう",
+        "g": "topic"
+      },
+      {
+        "t": "卷",
+        "r": "かん",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-上卷-intro",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng",
+        "g": "topic"
+      },
+      {
+        "t": "卷",
+        "r": "juàn",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう",
+        "g": "topic"
+      },
+      {
+        "t": "卷",
+        "r": "かん",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00121",
+    "source_text": "還矢之本也 。亦其雉不還，故於今諺曰「雉之頓使」",
+    "units": [
+      {
+        "source_text": "還矢之本也 。",
+        "zh": [
+          {
+            "t": "還",
+            "r": "huán",
+            "g": "attributive"
+          },
+          {
+            "t": "矢",
+            "r": "shǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "attributive"
+          },
+          {
+            "t": "本",
+            "r": "běn",
+            "g": "predicate"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "function"
+          },
+          {
+            "t": " ",
+            "r": ""
+          },
+          {
+            "t": "。",
+            "r": ""
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "これが",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "矢",
+              "r": "や",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "返",
+              "r": "かえ",
+              "g": "attributive"
+            },
+            {
+              "t": "すことの",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "本",
+              "r": "もと",
+              "g": "predicate"
+            },
+            {
+              "t": "である。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "亦其雉不還，故於今諺曰「雉之頓使」",
+        "zh": [
+          {
+            "t": "亦",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "其",
+            "r": "qí",
+            "g": "subject"
+          },
+          {
+            "t": "雉",
+            "r": "zhì",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "還",
+            "r": "huán",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": ""
+          },
+          {
+            "t": "故",
+            "r": "gù",
+            "g": "adverbial"
+          },
+          {
+            "t": "於",
+            "r": "yú",
+            "g": "adverbial"
+          },
+          {
+            "t": "今",
+            "r": "jīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "諺",
+            "r": "yàn",
+            "g": "subject"
+          },
+          {
+            "t": "曰",
+            "r": "yuē",
+            "g": "predicate"
+          },
+          {
+            "t": "「",
+            "r": ""
+          },
+          {
+            "t": "雉",
+            "r": "zhì",
+            "g": "object"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "object"
+          },
+          {
+            "t": "頓",
+            "r": "dùn",
+            "g": "object"
+          },
+          {
+            "t": "使",
+            "r": "shǐ",
+            "g": "object"
+          },
+          {
+            "t": "」",
+            "r": ""
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "またその",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "雉",
+              "r": "きじ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "帰",
+              "r": "かえ",
+              "g": "predicate"
+            },
+            {
+              "t": "らず、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "ゆえに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "今",
+              "r": "いま",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "諺",
+              "r": "ことわざ",
+              "g": "subject"
+            },
+            {
+              "t": "で「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "雉",
+              "r": "きじ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "頓",
+              "r": "ひた",
+              "g": "object"
+            },
+            {
+              "t": "使",
+              "r": "づかい",
+              "g": "object"
+            },
+            {
+              "t": "」という。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

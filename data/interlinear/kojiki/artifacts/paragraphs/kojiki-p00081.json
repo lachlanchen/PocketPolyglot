@@ -1,0 +1,397 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00081",
+  "source_text": "於是到氣多之前時，裸菟伏也。尒八十神謂其菟云：",
+  "source_sha256": "d249370e8762ad6687949e85ef73a308f6fa79f106f761c2e97cdddd96e8d831",
+  "source_normalized_sha256": "d249370e8762ad6687949e85ef73a308f6fa79f106f761c2e97cdddd96e8d831",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 54,
+    "grammar_token_total": 54,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kojiki-chunk-0081",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "上卷",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng"
+      },
+      {
+        "t": "卷",
+        "r": "juàn"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう"
+      },
+      {
+        "t": "卷",
+        "r": "かん"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-上卷-intro",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng"
+      },
+      {
+        "t": "卷",
+        "r": "juàn"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう"
+      },
+      {
+        "t": "卷",
+        "r": "かん"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00081",
+    "source_text": "於是到氣多之前時，裸菟伏也。尒八十神謂其菟云：",
+    "units": [
+      {
+        "source_text": "於是到氣多之前時，裸菟伏也。",
+        "zh": [
+          {
+            "t": "於",
+            "r": "yú",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "氣",
+            "r": "qì",
+            "g": "object"
+          },
+          {
+            "t": "多",
+            "r": "duō",
+            "g": "object"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "function"
+          },
+          {
+            "t": "前",
+            "r": "qián",
+            "g": "object"
+          },
+          {
+            "t": "時",
+            "r": "shí",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "裸",
+            "r": "luǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "菟",
+            "r": "tù",
+            "g": "subject"
+          },
+          {
+            "t": "伏",
+            "r": "fú",
+            "g": "predicate"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そこで",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "氣",
+              "r": "け",
+              "g": "object"
+            },
+            {
+              "t": "多",
+              "r": "た",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "崎",
+              "r": "さき",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "着",
+              "r": "つ",
+              "g": "predicate"
+            },
+            {
+              "t": "いた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "時",
+              "r": "とき",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "裸",
+              "r": "はだか",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "菟",
+              "r": "うさぎ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "伏",
+              "r": "ふ",
+              "g": "predicate"
+            },
+            {
+              "t": "していた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "尒八十神謂其菟云：",
+        "zh": [
+          {
+            "t": "尒",
+            "r": "ěr",
+            "g": "function"
+          },
+          {
+            "t": "八",
+            "r": "bā",
+            "g": "subject"
+          },
+          {
+            "t": "十",
+            "r": "shí",
+            "g": "subject"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "subject"
+          },
+          {
+            "t": "謂",
+            "r": "wèi",
+            "g": "predicate"
+          },
+          {
+            "t": "其",
+            "r": "qí",
+            "g": "attributive"
+          },
+          {
+            "t": "菟",
+            "r": "tù",
+            "g": "object"
+          },
+          {
+            "t": "云",
+            "r": "yún",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そこで",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "八",
+              "r": "や",
+              "g": "subject"
+            },
+            {
+              "t": "十",
+              "r": "そ",
+              "g": "subject"
+            },
+            {
+              "t": "神",
+              "r": "がみ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "その",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "菟",
+              "r": "うさぎ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "向",
+              "r": "む",
+              "g": "predicate"
+            },
+            {
+              "t": "かって",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

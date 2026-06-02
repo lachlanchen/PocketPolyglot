@@ -1,0 +1,720 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00083",
+  "source_text": "「何由汝泣伏？」菟答言：「僕在淤岐嶋，雖欲度此地，無度因故，欺海和迩 此二字以音。下效此 言：",
+  "source_sha256": "65c1abba66efea4fa09a4f5eeaa1d221c8ea3aff926d731a2af88066d6cdf8cb",
+  "source_normalized_sha256": "83168afe3e4d0a314358ad6c58694470dbd81db9936cb52ee3782a87d8b80620",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 110,
+    "grammar_token_total": 110,
+    "unit_count": 5
+  },
+  "source_chunk_id": "kojiki-chunk-0083",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ"
+      },
+      {
+        "t": "事",
+        "r": "shì"
+      },
+      {
+        "t": "記",
+        "r": "jì"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ"
+      },
+      {
+        "t": "事",
+        "r": "じ"
+      },
+      {
+        "t": "記",
+        "r": "き"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "上卷",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng"
+      },
+      {
+        "t": "卷",
+        "r": "juàn"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう"
+      },
+      {
+        "t": "卷",
+        "r": "かん"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-上卷-intro",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng"
+      },
+      {
+        "t": "卷",
+        "r": "juàn"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう"
+      },
+      {
+        "t": "卷",
+        "r": "かん"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00083",
+    "source_text": "「何由汝泣伏？」菟答言：「僕在淤岐嶋，雖欲度此地，無度因故，欺海和迩 此二字以音。下效此 言：",
+    "units": [
+      {
+        "source_text": "「何由汝泣伏？」",
+        "zh": [
+          {
+            "t": "「",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "何",
+            "r": "hé",
+            "g": "adverbial"
+          },
+          {
+            "t": "由",
+            "r": "yóu",
+            "g": "adverbial"
+          },
+          {
+            "t": "汝",
+            "r": "rǔ",
+            "g": "subject"
+          },
+          {
+            "t": "泣",
+            "r": "qì",
+            "g": "predicate"
+          },
+          {
+            "t": "伏",
+            "r": "fú",
+            "g": "complement"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "」",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "どうして",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "お",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "前",
+              "r": "まえ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "泣",
+              "r": "な",
+              "g": "predicate"
+            },
+            {
+              "t": "き",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "伏",
+              "r": "ふ",
+              "g": "complement"
+            },
+            {
+              "t": "しているのか",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "？」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "菟答言：",
+        "zh": [
+          {
+            "t": "菟",
+            "r": "tú",
+            "g": "subject"
+          },
+          {
+            "t": "答",
+            "r": "dá",
+            "g": "predicate"
+          },
+          {
+            "t": "言",
+            "r": "yán",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "菟",
+              "r": "うさぎ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "答",
+              "r": "こた",
+              "g": "predicate"
+            },
+            {
+              "t": "えて",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "「僕在淤岐嶋，雖欲度此地，無度因故，",
+        "zh": [
+          {
+            "t": "「",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "僕",
+            "r": "pú",
+            "g": "subject"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "淤",
+            "r": "yū",
+            "g": "object"
+          },
+          {
+            "t": "岐",
+            "r": "qí",
+            "g": "object"
+          },
+          {
+            "t": "嶋",
+            "r": "dǎo",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "雖",
+            "r": "suī",
+            "g": "function"
+          },
+          {
+            "t": "欲",
+            "r": "yù",
+            "g": "predicate"
+          },
+          {
+            "t": "度",
+            "r": "dù",
+            "g": "predicate"
+          },
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "object"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "無",
+            "r": "wú",
+            "g": "predicate"
+          },
+          {
+            "t": "度",
+            "r": "dù",
+            "g": "attributive"
+          },
+          {
+            "t": "因",
+            "r": "yīn",
+            "g": "object"
+          },
+          {
+            "t": "故",
+            "r": "gù",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "淤",
+              "r": "お",
+              "g": "object"
+            },
+            {
+              "t": "岐",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "嶋",
+              "r": "しま",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "いて、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "地",
+              "r": "ち",
+              "g": "object"
+            },
+            {
+              "t": "へ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "渡",
+              "r": "わた",
+              "g": "predicate"
+            },
+            {
+              "t": "りたかったが、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "渡",
+              "r": "わた",
+              "g": "attributive"
+            },
+            {
+              "t": "る",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "object"
+            },
+            {
+              "t": "立",
+              "r": "だ",
+              "g": "object"
+            },
+            {
+              "t": "てがなく、",
+              "r": "",
+              "g": "object"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "欺海和迩 此二字以音。",
+        "zh": [
+          {
+            "t": "欺",
+            "r": "qī",
+            "g": "predicate"
+          },
+          {
+            "t": "海",
+            "r": "hǎi",
+            "g": "object"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "object"
+          },
+          {
+            "t": "迩",
+            "r": "ěr",
+            "g": "object"
+          },
+          {
+            "t": " ",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "subject"
+          },
+          {
+            "t": "二",
+            "r": "èr",
+            "g": "attributive"
+          },
+          {
+            "t": "字",
+            "r": "zì",
+            "g": "subject"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "音",
+            "r": "yīn",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "海",
+              "r": "うみ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "和",
+              "r": "わ",
+              "g": "object"
+            },
+            {
+              "t": "迩",
+              "r": "に",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "欺",
+              "r": "あざむ",
+              "g": "predicate"
+            },
+            {
+              "t": "いた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "注",
+              "r": "ちゅう",
+              "g": "function"
+            },
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "この",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "二",
+              "r": "に",
+              "g": "attributive"
+            },
+            {
+              "t": "字",
+              "r": "じ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "音",
+              "r": "おん",
+              "g": "object"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "読",
+              "r": "よ",
+              "g": "predicate"
+            },
+            {
+              "t": "む。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "下效此 言：",
+        "zh": [
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "subject"
+          },
+          {
+            "t": "效",
+            "r": "xiào",
+            "g": "predicate"
+          },
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "object"
+          },
+          {
+            "t": " ",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "言",
+            "r": "yán",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "注",
+              "r": "ちゅう",
+              "g": "function"
+            },
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "以",
+              "r": "い",
+              "g": "subject"
+            },
+            {
+              "t": "下",
+              "r": "か",
+              "g": "subject"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "これに",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "倣",
+              "r": "なら",
+              "g": "predicate"
+            },
+            {
+              "t": "う。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "そして",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "うには",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

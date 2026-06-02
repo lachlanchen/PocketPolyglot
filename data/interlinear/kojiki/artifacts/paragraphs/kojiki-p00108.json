@@ -1,0 +1,552 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00108",
+  "source_text": "者治奉之状奈何？」答言：「吾者，伊都岐奉于倭之青垣東山上。」此者坐御諸山上神也。",
+  "source_sha256": "571d7c4884db80453a8a70151af30af0d2b97b59ea65503fd192b9d13f5122a3",
+  "source_normalized_sha256": "571d7c4884db80453a8a70151af30af0d2b97b59ea65503fd192b9d13f5122a3",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 80,
+    "grammar_token_total": 80,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kojiki-chunk-0108",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "上卷",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng",
+        "g": "attributive"
+      },
+      {
+        "t": "卷",
+        "r": "juàn",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう",
+        "g": "attributive"
+      },
+      {
+        "t": "卷",
+        "r": "かん",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-上卷-intro",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng",
+        "g": "attributive"
+      },
+      {
+        "t": "卷",
+        "r": "juàn",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう",
+        "g": "attributive"
+      },
+      {
+        "t": "卷",
+        "r": "かん",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00108",
+    "source_text": "者治奉之状奈何？」答言：「吾者，伊都岐奉于倭之青垣東山上。」此者坐御諸山上神也。",
+    "units": [
+      {
+        "source_text": "者治奉之状奈何？」",
+        "zh": [
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "topic"
+          },
+          {
+            "t": "治",
+            "r": "zhì",
+            "g": "predicate"
+          },
+          {
+            "t": "奉",
+            "r": "fèng",
+            "g": "predicate"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "object"
+          },
+          {
+            "t": "状",
+            "r": "zhuàng",
+            "g": "subject"
+          },
+          {
+            "t": "奈",
+            "r": "nài",
+            "g": "predicate"
+          },
+          {
+            "t": "何",
+            "r": "hé",
+            "g": "predicate"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "」",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "それを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "治",
+              "r": "おさ",
+              "g": "predicate"
+            },
+            {
+              "t": "め",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "奉",
+              "r": "たてまつ",
+              "g": "predicate"
+            },
+            {
+              "t": "るありさまは、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "どのようであろうか。",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "答言：「吾者，伊都岐奉于倭之青垣東山上。」",
+        "zh": [
+          {
+            "t": "答",
+            "r": "dá",
+            "g": "predicate"
+          },
+          {
+            "t": "言",
+            "r": "yán",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "「",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "吾",
+            "r": "wú",
+            "g": "subject"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "伊",
+            "r": "yī",
+            "g": "predicate"
+          },
+          {
+            "t": "都",
+            "r": "dū",
+            "g": "predicate"
+          },
+          {
+            "t": "岐",
+            "r": "qí",
+            "g": "predicate"
+          },
+          {
+            "t": "奉",
+            "r": "fèng",
+            "g": "predicate"
+          },
+          {
+            "t": "于",
+            "r": "yú",
+            "g": "adverbial"
+          },
+          {
+            "t": "倭",
+            "r": "wō",
+            "g": "adverbial"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "adverbial"
+          },
+          {
+            "t": "青",
+            "r": "qīng",
+            "g": "adverbial"
+          },
+          {
+            "t": "垣",
+            "r": "yuán",
+            "g": "adverbial"
+          },
+          {
+            "t": "東",
+            "r": "dōng",
+            "g": "adverbial"
+          },
+          {
+            "t": "山",
+            "r": "shān",
+            "g": "adverbial"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "」",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "答",
+              "r": "こた",
+              "g": "predicate"
+            },
+            {
+              "t": "えて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "った。",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "倭",
+              "r": "やまと",
+              "g": "adverbial"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "青",
+              "r": "あお",
+              "g": "adverbial"
+            },
+            {
+              "t": "垣",
+              "r": "がき",
+              "g": "adverbial"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "東",
+              "r": "ひがし",
+              "g": "adverbial"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "山",
+              "r": "やま",
+              "g": "adverbial"
+            },
+            {
+              "t": "上",
+              "r": "うえ",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "斎",
+              "r": "いつ",
+              "g": "predicate"
+            },
+            {
+              "t": "き",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "奉",
+              "r": "たてまつ",
+              "g": "predicate"
+            },
+            {
+              "t": "る。",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "此者坐御諸山上神也。",
+        "zh": [
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "subject"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "subject"
+          },
+          {
+            "t": "坐",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "御",
+            "r": "yù",
+            "g": "adverbial"
+          },
+          {
+            "t": "諸",
+            "r": "zhū",
+            "g": "adverbial"
+          },
+          {
+            "t": "山",
+            "r": "shān",
+            "g": "adverbial"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "これは、",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "御",
+              "r": "み",
+              "g": "adverbial"
+            },
+            {
+              "t": "諸",
+              "r": "もろ",
+              "g": "adverbial"
+            },
+            {
+              "t": "山",
+              "r": "やま",
+              "g": "adverbial"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "上",
+              "r": "うえ",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "鎮",
+              "r": "しず",
+              "g": "predicate"
+            },
+            {
+              "t": "まっておられる",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "神",
+              "r": "かみ",
+              "g": "object"
+            },
+            {
+              "t": "である。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

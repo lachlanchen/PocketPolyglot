@@ -1,0 +1,616 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00112",
+  "source_text": "次，大土神，亦名土之御祖神 九神 。上件大年神之子，（自）大國御魂神以下、大土神以前，并十六神。",
+  "source_sha256": "7f4db0442b664d76259c8ef766cca8c8a8d78284e13a2215723ea2447e8f9943",
+  "source_normalized_sha256": "ff27bbf3b30f27e04652b8dafe301b8f875df9e4e3f323766f9d68cbb8d074e6",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 93,
+    "grammar_token_total": 93,
+    "unit_count": 2
+  },
+  "source_chunk_id": "kojiki-chunk-0112",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "上卷",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng",
+        "g": "attributive"
+      },
+      {
+        "t": "卷",
+        "r": "juàn",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう",
+        "g": "attributive"
+      },
+      {
+        "t": "卷",
+        "r": "かん",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-上卷-intro",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng",
+        "g": "attributive"
+      },
+      {
+        "t": "卷",
+        "r": "juàn",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう",
+        "g": "attributive"
+      },
+      {
+        "t": "卷",
+        "r": "かん",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00112",
+    "source_text": "次，大土神，亦名土之御祖神 九神 。上件大年神之子，（自）大國御魂神以下、大土神以前，并十六神。",
+    "units": [
+      {
+        "source_text": "次，大土神，亦名土之御祖神 九神 。",
+        "zh": [
+          {
+            "t": "次",
+            "r": "cì",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "subject"
+          },
+          {
+            "t": "土",
+            "r": "tǔ",
+            "g": "subject"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "亦",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "predicate"
+          },
+          {
+            "t": "土",
+            "r": "tǔ",
+            "g": "object"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "object"
+          },
+          {
+            "t": "御",
+            "r": "yù",
+            "g": "object"
+          },
+          {
+            "t": "祖",
+            "r": "zǔ",
+            "g": "object"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": " ",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "九",
+            "r": "jiǔ",
+            "g": "complement"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "complement"
+          },
+          {
+            "t": " ",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "次",
+              "r": "つぎ",
+              "g": "adverbial"
+            },
+            {
+              "t": "に、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "subject"
+            },
+            {
+              "t": "土",
+              "r": "つち",
+              "g": "subject"
+            },
+            {
+              "t": "神",
+              "r": "かみ",
+              "g": "subject"
+            },
+            {
+              "t": "、またの",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "名",
+              "r": "な",
+              "g": "predicate"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "土",
+              "r": "つち",
+              "g": "object"
+            },
+            {
+              "t": "之",
+              "r": "の",
+              "g": "object"
+            },
+            {
+              "t": "御",
+              "r": "み",
+              "g": "object"
+            },
+            {
+              "t": "祖",
+              "r": "おや",
+              "g": "object"
+            },
+            {
+              "t": "神",
+              "r": "かみ",
+              "g": "object"
+            },
+            {
+              "t": "で、",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "九",
+              "r": "きゅう",
+              "g": "complement"
+            },
+            {
+              "t": "柱",
+              "r": "はしら",
+              "g": "complement"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "神",
+              "r": "かみ",
+              "g": "complement"
+            },
+            {
+              "t": "である。",
+              "r": "",
+              "g": "complement"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "上件大年神之子，（自）大國御魂神以下、大土神以前，并十六神。",
+        "zh": [
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "attributive"
+          },
+          {
+            "t": "件",
+            "r": "jiàn",
+            "g": "attributive"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "attributive"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "attributive"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "attributive"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "function"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "（",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "自",
+            "r": "zì",
+            "g": "adverbial"
+          },
+          {
+            "t": "）",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "object"
+          },
+          {
+            "t": "國",
+            "r": "guó",
+            "g": "object"
+          },
+          {
+            "t": "御",
+            "r": "yù",
+            "g": "object"
+          },
+          {
+            "t": "魂",
+            "r": "hún",
+            "g": "object"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "adverbial"
+          },
+          {
+            "t": "、",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "object"
+          },
+          {
+            "t": "土",
+            "r": "tǔ",
+            "g": "object"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "前",
+            "r": "qián",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "并",
+            "r": "bìng",
+            "g": "predicate"
+          },
+          {
+            "t": "十",
+            "r": "shí",
+            "g": "complement"
+          },
+          {
+            "t": "六",
+            "r": "liù",
+            "g": "complement"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "上",
+              "r": "かみ",
+              "g": "attributive"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "挙",
+              "r": "あ",
+              "g": "attributive"
+            },
+            {
+              "t": "げた",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "attributive"
+            },
+            {
+              "t": "年",
+              "r": "とし",
+              "g": "attributive"
+            },
+            {
+              "t": "神",
+              "r": "かみ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "subject"
+            },
+            {
+              "t": "は、",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "object"
+            },
+            {
+              "t": "國",
+              "r": "くに",
+              "g": "object"
+            },
+            {
+              "t": "御",
+              "r": "み",
+              "g": "object"
+            },
+            {
+              "t": "魂",
+              "r": "たま",
+              "g": "object"
+            },
+            {
+              "t": "神",
+              "r": "かみ",
+              "g": "object"
+            },
+            {
+              "t": "から",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "object"
+            },
+            {
+              "t": "土",
+              "r": "つち",
+              "g": "object"
+            },
+            {
+              "t": "神",
+              "r": "かみ",
+              "g": "object"
+            },
+            {
+              "t": "までで、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "合",
+              "r": "あ",
+              "g": "predicate"
+            },
+            {
+              "t": "わせて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "十",
+              "r": "じゅう",
+              "g": "complement"
+            },
+            {
+              "t": "六",
+              "r": "ろく",
+              "g": "complement"
+            },
+            {
+              "t": "柱",
+              "r": "はしら",
+              "g": "complement"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "神",
+              "r": "かみ",
+              "g": "complement"
+            },
+            {
+              "t": "である。",
+              "r": "",
+              "g": "complement"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

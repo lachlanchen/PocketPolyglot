@@ -1,0 +1,1583 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00079",
+  "source_text": "此神名以音 。此神，娶布怒豆怒神 此神名以音 之女，名布帝耳 上 神 布帝二字以音 ，生子，天之冬衣神。此神，娶刺國大上 神之女，名刺國若比賣，生（子），大國主神，亦名謂大穴牟遲神 牟遲二字以音 ，亦名謂葦原色許男神 色許二字以音 ，亦名謂八千矛神，亦名謂宇都志國玉神 宇都志三字以音 ，并有五名。",
+  "source_sha256": "4caa864daf63b487d28964fa9fcac8e1c00ee37b882cf657c848da9023c2d4ef",
+  "source_normalized_sha256": "5fb67cdda624d87080121360425f099f50efbee5b5941b04165a70a191d2d204",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 284,
+    "grammar_token_total": 284,
+    "unit_count": 4
+  },
+  "source_chunk_id": "kojiki-chunk-0079",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "上卷",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng",
+        "g": "attributive"
+      },
+      {
+        "t": "卷",
+        "r": "juàn",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう",
+        "g": "attributive"
+      },
+      {
+        "t": "卷",
+        "r": "かん",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-上卷-intro",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng",
+        "g": "attributive"
+      },
+      {
+        "t": "卷",
+        "r": "juàn",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう",
+        "g": "attributive"
+      },
+      {
+        "t": "卷",
+        "r": "かん",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00079",
+    "source_text": "此神名以音 。此神，娶布怒豆怒神 此神名以音 之女，名布帝耳 上 神 布帝二字以音 ，生子，天之冬衣神。此神，娶刺國大上 神之女，名刺國若比賣，生（子），大國主神，亦名謂大穴牟遲神 牟遲二字以音 ，亦名謂葦原色許男神 色許二字以音 ，亦名謂八千矛神，亦名謂宇都志國玉神 宇都志三字以音 ，并有五名。",
+    "units": [
+      {
+        "source_text": "此神名以音 。",
+        "zh": [
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "subject"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "subject"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "subject"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "音",
+            "r": "yīn",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "注",
+              "r": "ちゅう",
+              "g": "function"
+            },
+            {
+              "t": "：",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "この",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "神",
+              "r": "かみ",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "名",
+              "r": "な",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "音",
+              "r": "おん",
+              "g": "object"
+            },
+            {
+              "t": "によって",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "記",
+              "r": "しる",
+              "g": "predicate"
+            },
+            {
+              "t": "す",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "此神，娶布怒豆怒神 此神名以音 之女，名布帝耳 上 神 布帝二字以音 ，生子，天之冬衣神。",
+        "zh": [
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "subject"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "娶",
+            "r": "qǔ",
+            "g": "predicate"
+          },
+          {
+            "t": "布",
+            "r": "bù",
+            "g": "attributive"
+          },
+          {
+            "t": "怒",
+            "r": "nù",
+            "g": "attributive"
+          },
+          {
+            "t": "豆",
+            "r": "dòu",
+            "g": "attributive"
+          },
+          {
+            "t": "怒",
+            "r": "nù",
+            "g": "attributive"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "attributive"
+          },
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "function"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "function"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "function"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "function"
+          },
+          {
+            "t": "音",
+            "r": "yīn",
+            "g": "function"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "attributive"
+          },
+          {
+            "t": "女",
+            "r": "nǚ",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "predicate"
+          },
+          {
+            "t": "布",
+            "r": "bù",
+            "g": "object"
+          },
+          {
+            "t": "帝",
+            "r": "dì",
+            "g": "object"
+          },
+          {
+            "t": "耳",
+            "r": "ěr",
+            "g": "object"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "function"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "布",
+            "r": "bù",
+            "g": "function"
+          },
+          {
+            "t": "帝",
+            "r": "dì",
+            "g": "function"
+          },
+          {
+            "t": "二",
+            "r": "èr",
+            "g": "function"
+          },
+          {
+            "t": "字",
+            "r": "zì",
+            "g": "function"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "function"
+          },
+          {
+            "t": "音",
+            "r": "yīn",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "predicate"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "object"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "object"
+          },
+          {
+            "t": "冬",
+            "r": "dōng",
+            "g": "object"
+          },
+          {
+            "t": "衣",
+            "r": "yī",
+            "g": "object"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "神",
+              "r": "かみ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "布",
+              "r": "ふ",
+              "g": "attributive"
+            },
+            {
+              "t": "怒",
+              "r": "ぬ",
+              "g": "attributive"
+            },
+            {
+              "t": "豆",
+              "r": "づ",
+              "g": "attributive"
+            },
+            {
+              "t": "怒",
+              "r": "ぬ",
+              "g": "attributive"
+            },
+            {
+              "t": "神",
+              "r": "のかみ",
+              "g": "attributive"
+            },
+            {
+              "t": "（",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "名",
+              "r": "な",
+              "g": "function"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "音",
+              "r": "おん",
+              "g": "function"
+            },
+            {
+              "t": "）",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "娘",
+              "r": "むすめ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "娶",
+              "r": "めと",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "名",
+              "r": "な",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "布",
+              "r": "ふ",
+              "g": "object"
+            },
+            {
+              "t": "帝",
+              "r": "てい",
+              "g": "object"
+            },
+            {
+              "t": "耳",
+              "r": "に",
+              "g": "object"
+            },
+            {
+              "t": "上",
+              "r": "じょう",
+              "g": "function"
+            },
+            {
+              "t": "神",
+              "r": "しん",
+              "g": "object"
+            },
+            {
+              "t": "（",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "布",
+              "r": "ふ",
+              "g": "function"
+            },
+            {
+              "t": "帝",
+              "r": "てい",
+              "g": "function"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "音",
+              "r": "おん",
+              "g": "function"
+            },
+            {
+              "t": "）",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "といい",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "天",
+              "r": "あめ",
+              "g": "object"
+            },
+            {
+              "t": "之",
+              "r": "の",
+              "g": "object"
+            },
+            {
+              "t": "冬",
+              "r": "ふゆ",
+              "g": "object"
+            },
+            {
+              "t": "衣",
+              "r": "きぬ",
+              "g": "object"
+            },
+            {
+              "t": "神",
+              "r": "のかみ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "生",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "んだ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "此神，娶刺國大上 神之女，名刺國若比賣，生（子），大國主神，亦名謂大穴牟遲神 牟遲二字以音 ，",
+        "zh": [
+          {
+            "t": "此",
+            "r": "cǐ",
+            "g": "subject"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "subject"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "娶",
+            "r": "qǔ",
+            "g": "predicate"
+          },
+          {
+            "t": "刺",
+            "r": "cì",
+            "g": "attributive"
+          },
+          {
+            "t": "國",
+            "r": "guó",
+            "g": "attributive"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "attributive"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "attributive"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "attributive"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "attributive"
+          },
+          {
+            "t": "女",
+            "r": "nǚ",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "predicate"
+          },
+          {
+            "t": "刺",
+            "r": "cì",
+            "g": "object"
+          },
+          {
+            "t": "國",
+            "r": "guó",
+            "g": "object"
+          },
+          {
+            "t": "若",
+            "r": "ruò",
+            "g": "object"
+          },
+          {
+            "t": "比",
+            "r": "bǐ",
+            "g": "object"
+          },
+          {
+            "t": "賣",
+            "r": "mài",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "predicate"
+          },
+          {
+            "t": "（",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "子",
+            "r": "zǐ",
+            "g": "object"
+          },
+          {
+            "t": "）",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "object"
+          },
+          {
+            "t": "國",
+            "r": "guó",
+            "g": "object"
+          },
+          {
+            "t": "主",
+            "r": "zhǔ",
+            "g": "object"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "亦",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "predicate"
+          },
+          {
+            "t": "謂",
+            "r": "wèi",
+            "g": "predicate"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "object"
+          },
+          {
+            "t": "穴",
+            "r": "xué",
+            "g": "object"
+          },
+          {
+            "t": "牟",
+            "r": "móu",
+            "g": "object"
+          },
+          {
+            "t": "遲",
+            "r": "chí",
+            "g": "object"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "牟",
+            "r": "móu",
+            "g": "function"
+          },
+          {
+            "t": "遲",
+            "r": "chí",
+            "g": "function"
+          },
+          {
+            "t": "二",
+            "r": "èr",
+            "g": "function"
+          },
+          {
+            "t": "字",
+            "r": "zì",
+            "g": "function"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "function"
+          },
+          {
+            "t": "音",
+            "r": "yīn",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "神",
+              "r": "かみ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "刺",
+              "r": "さし",
+              "g": "attributive"
+            },
+            {
+              "t": "國",
+              "r": "くに",
+              "g": "attributive"
+            },
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "attributive"
+            },
+            {
+              "t": "上",
+              "r": "かみ",
+              "g": "attributive"
+            },
+            {
+              "t": "神",
+              "r": "のかみ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "娘",
+              "r": "むすめ",
+              "g": "object"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "名",
+              "r": "な",
+              "g": "object"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "刺",
+              "r": "さし",
+              "g": "object"
+            },
+            {
+              "t": "國",
+              "r": "くに",
+              "g": "object"
+            },
+            {
+              "t": "若",
+              "r": "わか",
+              "g": "object"
+            },
+            {
+              "t": "比",
+              "r": "ひ",
+              "g": "object"
+            },
+            {
+              "t": "賣",
+              "r": "め",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "娶",
+              "r": "めと",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "として",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "object"
+            },
+            {
+              "t": "國",
+              "r": "くに",
+              "g": "object"
+            },
+            {
+              "t": "主",
+              "r": "ぬし",
+              "g": "object"
+            },
+            {
+              "t": "神",
+              "r": "のかみ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "生",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "んだ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "また",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "object"
+            },
+            {
+              "t": "穴",
+              "r": "あな",
+              "g": "object"
+            },
+            {
+              "t": "牟",
+              "r": "む",
+              "g": "object"
+            },
+            {
+              "t": "遲",
+              "r": "ち",
+              "g": "object"
+            },
+            {
+              "t": "神",
+              "r": "のかみ",
+              "g": "object"
+            },
+            {
+              "t": "（",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "牟",
+              "r": "む",
+              "g": "function"
+            },
+            {
+              "t": "遲",
+              "r": "ち",
+              "g": "function"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "音",
+              "r": "おん",
+              "g": "function"
+            },
+            {
+              "t": "）",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ともいう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "亦名謂葦原色許男神 色許二字以音 ，亦名謂八千矛神，亦名謂宇都志國玉神 宇都志三字以音 ，并有五名。",
+        "zh": [
+          {
+            "t": "亦",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "predicate"
+          },
+          {
+            "t": "謂",
+            "r": "wèi",
+            "g": "predicate"
+          },
+          {
+            "t": "葦",
+            "r": "wěi",
+            "g": "object"
+          },
+          {
+            "t": "原",
+            "r": "yuán",
+            "g": "object"
+          },
+          {
+            "t": "色",
+            "r": "sè",
+            "g": "object"
+          },
+          {
+            "t": "許",
+            "r": "xǔ",
+            "g": "object"
+          },
+          {
+            "t": "男",
+            "r": "nán",
+            "g": "object"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "色",
+            "r": "sè",
+            "g": "function"
+          },
+          {
+            "t": "許",
+            "r": "xǔ",
+            "g": "function"
+          },
+          {
+            "t": "二",
+            "r": "èr",
+            "g": "function"
+          },
+          {
+            "t": "字",
+            "r": "zì",
+            "g": "function"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "function"
+          },
+          {
+            "t": "音",
+            "r": "yīn",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "亦",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "predicate"
+          },
+          {
+            "t": "謂",
+            "r": "wèi",
+            "g": "predicate"
+          },
+          {
+            "t": "八",
+            "r": "bā",
+            "g": "object"
+          },
+          {
+            "t": "千",
+            "r": "qiān",
+            "g": "object"
+          },
+          {
+            "t": "矛",
+            "r": "máo",
+            "g": "object"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "亦",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "predicate"
+          },
+          {
+            "t": "謂",
+            "r": "wèi",
+            "g": "predicate"
+          },
+          {
+            "t": "宇",
+            "r": "yǔ",
+            "g": "object"
+          },
+          {
+            "t": "都",
+            "r": "dū",
+            "g": "object"
+          },
+          {
+            "t": "志",
+            "r": "zhì",
+            "g": "object"
+          },
+          {
+            "t": "國",
+            "r": "guó",
+            "g": "object"
+          },
+          {
+            "t": "玉",
+            "r": "yù",
+            "g": "object"
+          },
+          {
+            "t": "神",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "宇",
+            "r": "yǔ",
+            "g": "function"
+          },
+          {
+            "t": "都",
+            "r": "dū",
+            "g": "function"
+          },
+          {
+            "t": "志",
+            "r": "zhì",
+            "g": "function"
+          },
+          {
+            "t": "三",
+            "r": "sān",
+            "g": "function"
+          },
+          {
+            "t": "字",
+            "r": "zì",
+            "g": "function"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "function"
+          },
+          {
+            "t": "音",
+            "r": "yīn",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "并",
+            "r": "bìng",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "五",
+            "r": "wǔ",
+            "g": "object"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "また",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "葦",
+              "r": "あし",
+              "g": "object"
+            },
+            {
+              "t": "原",
+              "r": "はら",
+              "g": "object"
+            },
+            {
+              "t": "色",
+              "r": "しこ",
+              "g": "object"
+            },
+            {
+              "t": "許",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "男",
+              "r": "お",
+              "g": "object"
+            },
+            {
+              "t": "神",
+              "r": "のかみ",
+              "g": "object"
+            },
+            {
+              "t": "（",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "色",
+              "r": "しこ",
+              "g": "function"
+            },
+            {
+              "t": "許",
+              "r": "こ",
+              "g": "function"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "音",
+              "r": "おん",
+              "g": "function"
+            },
+            {
+              "t": "）",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "八",
+              "r": "や",
+              "g": "object"
+            },
+            {
+              "t": "千",
+              "r": "ち",
+              "g": "object"
+            },
+            {
+              "t": "矛",
+              "r": "ほこ",
+              "g": "object"
+            },
+            {
+              "t": "神",
+              "r": "のかみ",
+              "g": "object"
+            },
+            {
+              "t": "とも",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "いい",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "さらに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "宇",
+              "r": "う",
+              "g": "object"
+            },
+            {
+              "t": "都",
+              "r": "つ",
+              "g": "object"
+            },
+            {
+              "t": "志",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "國",
+              "r": "くに",
+              "g": "object"
+            },
+            {
+              "t": "玉",
+              "r": "たま",
+              "g": "object"
+            },
+            {
+              "t": "神",
+              "r": "のかみ",
+              "g": "object"
+            },
+            {
+              "t": "（",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "宇",
+              "r": "う",
+              "g": "function"
+            },
+            {
+              "t": "都",
+              "r": "つ",
+              "g": "function"
+            },
+            {
+              "t": "志",
+              "r": "し",
+              "g": "function"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "音",
+              "r": "おん",
+              "g": "function"
+            },
+            {
+              "t": "）",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ともいい",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "合",
+              "r": "あわ",
+              "g": "adverbial"
+            },
+            {
+              "t": "せて",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "五",
+              "r": "いつ",
+              "g": "object"
+            },
+            {
+              "t": "つの",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "名",
+              "r": "な",
+              "g": "object"
+            },
+            {
+              "t": "がある",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
