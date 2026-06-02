@@ -21,7 +21,7 @@ from codex_chunk_worker import extract_json, load_chunks, mentions_usage_limit, 
 from validate_trilingual_interlinear_json import GRAMMAR_ROLES, validate_chunk
 
 
-PROMPT_VERSION = "trilingual-major-component-role-v1"
+PROMPT_VERSION = "trilingual-major-component-role-v2"
 CONTENT_RE = re.compile(r"[A-Za-z0-9\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 
 
@@ -238,7 +238,7 @@ def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = 
           "chunk_id": "{chunk.get('chunk_id', '')}",
           "prompt_version": "{PROMPT_VERSION}",
           "edits": [
-            {{"path": "paragraphs/0/units/0/en", "start": 0, "end": 3, "text": "optional exact joined token text", "g": "subject"}}
+            {{"path": "paragraphs/0/units/0/en", "start": 0, "end": 3, "g": "subject"}}
           ]
         }}
 
@@ -246,6 +246,7 @@ def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = 
 
         Requirements:
         - Assign roles to most content tokens in en, zh, and ja.
+        - This is not a sample. Cover every listed token list in all three languages as completely as possible.
         - Make the same major semantic component roughly the same color across languages.
         - Prefer sentence-level visual readability over exact grammar theory.
         - Use subject/topic for the actor or discourse focus; predicate for verbs and verbal/adjectival predicates; object for affected things; attributive for modifiers inside noun phrases; adverbial for time/place/manner/condition phrases; complement for result/direction/degree complements; function only for punctuation, conjunction-only words, particles that cannot inherit a phrase role, or purely grammatical fillers.
@@ -253,7 +254,10 @@ def prompt_for_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = 
         - Chinese 的/地/得 and aspect particles may inherit the phrase role when that keeps the visual component together.
         - Do not use aliases such as zhu/wei/bin/ding/zhuang/bu. Use English roles only.
         - Use compact span edits. A span is half-open: start inclusive, end exclusive.
+        - Count token indexes exactly from the provided "i" fields. Never invent an index beyond the listed tokens.
+        - Do not include a "text" field in edits; use path/start/end/g only.
         - Do not output the full chunk.
+        - If a previous error says coverage is too low, return many more span edits across all en/zh/ja token lists, not a small patch.
         {error_block}
 
         Current token view:

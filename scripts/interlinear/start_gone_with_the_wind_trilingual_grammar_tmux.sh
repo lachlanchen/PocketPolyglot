@@ -70,7 +70,7 @@ for i in \$(seq 1 '$workers'); do
     --idle-sleep-seconds '$idle_sleep_seconds' \
     ${force_arg[*]} \
     --watch \
-    --retries 2 \
+    --retries 4 \
     > "$work_root/logs/\$worker_id.log" 2>&1 &
   worker_pids+=("\$!")
 done
