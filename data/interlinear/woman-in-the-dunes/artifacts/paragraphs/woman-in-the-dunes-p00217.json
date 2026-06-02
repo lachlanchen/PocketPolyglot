@@ -1,0 +1,165 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "woman-in-the-dunes",
+  "paragraph_id": "woman-in-the-dunes-p00217",
+  "source_text": "“有那么回事吗……”",
+  "source_sha256": "52782e4014a5e01890cbad2730855b7e10f25eebc5e7af7a23b6567497561bcd",
+  "source_normalized_sha256": "52782e4014a5e01890cbad2730855b7e10f25eebc5e7af7a23b6567497561bcd",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 13,
+    "grammar_token_total": 13,
+    "unit_count": 1
+  },
+  "source_chunk_id": "woman-in-the-dunes-chunk-0217",
+  "source_manifest_sha256": "d4e448272465ec27547c95a3075b988bdeb9e6260e21053d5ef38c28d636507d",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "げん",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "五",
+    "title_zh": [
+      {
+        "t": "五",
+        "r": "wǔ",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "五",
+        "r": "ご",
+        "g": "function"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-五-intro",
+    "title_zh": [
+      {
+        "t": "五",
+        "r": "wǔ",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "五",
+        "r": "ご",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "woman-in-the-dunes-p00217",
+    "source_text": "“有那么回事吗……”",
+    "units": [
+      {
+        "source_text": "“有那么回事吗……”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "attributive"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "attributive"
+          },
+          {
+            "t": "回",
+            "r": "huí",
+            "g": "subject"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "subject"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "……”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "そんな",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "ことが",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "あったのか",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "……」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
