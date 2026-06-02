@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_LOCAL_DIR = ROOT / "build" / "books"
 DEFAULT_NUTSTORE_DIR = Path.home() / "Nutstore Files" / "Projects" / "LinguaLeaf" / "books"
 
-FINAL_DIRECTIONS = {"zh-main", "jp-main"}
+FINAL_DIRECTIONS = {"zh-main", "jp-main", "en-main"}
 FINAL_VARIANTS = {"color", "blackwhite"}
 SKIP_PARTS = {"writer-preview", "writer-preview-all"}
 NUTSTORE_LAYOUT = "grouped"
@@ -25,6 +25,8 @@ EDITION_DIRS = {
     ("zh-main", "blackwhite"): "zh-main-blackwhite",
     ("jp-main", "color"): "jp-main-color",
     ("jp-main", "blackwhite"): "jp-main-blackwhite",
+    ("en-main", "color"): "en-main-color",
+    ("en-main", "blackwhite"): "en-main-blackwhite",
 }
 
 
@@ -53,16 +55,22 @@ def clean_title_filename(title: str) -> str:
 
 def discover_pdfs(build_dir: Path) -> list[ExportItem]:
     items: list[ExportItem] = []
-    for pdf in sorted(build_dir.glob("*/*/*/*.pdf")):
+    candidates = list(build_dir.glob("*/*/*/*.pdf"))
+    candidates.extend(build_dir.glob("*/*/*/*/*.pdf"))
+    for pdf in sorted(candidates):
         rel = pdf.relative_to(build_dir)
         parts = rel.parts
         if any(part in SKIP_PARTS for part in parts):
             continue
         if pdf.name == "book.pdf":
             continue
-        if len(parts) != 4:
+        if len(parts) == 4:
+            book_id, direction, variant, filename = parts
+        elif len(parts) == 5:
+            book_id, pair, direction, variant, filename = parts
+            book_id = f"{book_id}-{pair}"
+        else:
             continue
-        book_id, direction, variant, filename = parts
         if direction not in FINAL_DIRECTIONS or variant not in FINAL_VARIANTS:
             continue
         title = Path(filename).stem
@@ -158,7 +166,7 @@ def write_readme(target_dir: Path, items: list[ExportItem], source_root: Path, o
         "",
         "This folder is a browsing/export view of final PDFs from `build/`.",
         "",
-        "Directions: `zh-main` means Chinese main text with Japanese notes; `jp-main` means Japanese main text with Chinese notes.",
+        "Directions: `zh-main`, `jp-main`, and `en-main` indicate the main text language; the parenthetical label in each filename names the note/comment language.",
         "Variants: `color` and `blackwhite`.",
         "",
         f"Layout: `{layout}`",
