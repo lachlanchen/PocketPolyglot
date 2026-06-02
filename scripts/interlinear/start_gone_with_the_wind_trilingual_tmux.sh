@@ -28,6 +28,7 @@ reasoning="${REASONING:-high}"
 codex_timeout_seconds="${CODEX_TIMEOUT_SECONDS:-7200}"
 merge_interval="${MERGE_INTERVAL:-180}"
 compile_interval_seconds="${COMPILE_INTERVAL_SECONDS:-1200}"
+worker_script="${WORKER_SCRIPT:-scripts/interlinear/codex_trilingual_plain_json_worker.py}"
 
 work_root="books/$book_id/work/trilingual/parallel-json"
 candidate_dir="$work_root/candidates"
@@ -59,7 +60,7 @@ mkdir -p '$work_root/logs' '$candidate_dir' '$merged_dir' '$raw_chunk_dir'
 gen_pids=()
 for i in \$(seq 1 '$workers'); do
   worker_id="\$(printf 'tri-worker-%02d' "\$i")"
-  python -u scripts/interlinear/codex_trilingual_parallel_json_worker.py \
+  python -u '$worker_script' \
     --chunks-jsonl '$chunks_jsonl' \
     --canonical-dir '$raw_chunk_dir' \
     --candidate-dir '$candidate_dir' \
@@ -86,6 +87,10 @@ merge_once() {
 }
 
 compile_once() {
+  if ! find '$raw_chunk_dir' -maxdepth 1 -name '*.json' -print -quit | grep -q .; then
+    echo "compile_skipped=no_merged_chunks"
+    return 0
+  fi
   ALLOW_MISSING=1 bash scripts/interlinear/compile_gone_with_the_wind_12_previews.sh
 }
 
@@ -130,6 +135,7 @@ echo "book_id: $book_id"
 echo "workers: $workers"
 echo "model: $model"
 echo "reasoning: $reasoning"
+echo "worker_script: $worker_script"
 echo "start_index: $start_index"
 echo "end_index: $end_index"
 echo "max_chunks_per_worker: $max_chunks_per_worker"
