@@ -1,0 +1,612 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "kojiki",
+  "paragraph_id": "kojiki-p00024",
+  "source_text": "嶋國。然後還坐之時，生吉備兒嶋，亦名謂建日方別。次生，小豆嶋，亦名謂大野手 上 比賣。",
+  "source_sha256": "f060cba183fa397d8ce9e01b5ed25a2356766aff322802254b693fc25adba585",
+  "source_normalized_sha256": "0fc9666dc09d87dfc890380b27d47250844c96ecc60262f0168345bc2508796d",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 90,
+    "grammar_token_total": 90,
+    "unit_count": 3
+  },
+  "source_chunk_id": "kojiki-chunk-0024",
+  "source_manifest_sha256": "f0e083f61fed5ca6d24d60b3901eee298b5354b180eff4212412979947b7d215",
+  "section": {
+    "id": "古事記",
+    "title_zh": [
+      {
+        "t": "古",
+        "r": "gǔ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "jì",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "古",
+        "r": "こ",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "attributive"
+      },
+      {
+        "t": "記",
+        "r": "き",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "上卷",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng",
+        "g": "attributive"
+      },
+      {
+        "t": "卷",
+        "r": "juǎn",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう",
+        "g": "attributive"
+      },
+      {
+        "t": "卷",
+        "r": "かん",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "古事記-上卷-intro",
+    "title_zh": [
+      {
+        "t": "上",
+        "r": "shàng",
+        "g": "attributive"
+      },
+      {
+        "t": "卷",
+        "r": "juǎn",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "上",
+        "r": "じょう",
+        "g": "attributive"
+      },
+      {
+        "t": "卷",
+        "r": "かん",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "kojiki-p00024",
+    "source_text": "嶋國。然後還坐之時，生吉備兒嶋，亦名謂建日方別。次生，小豆嶋，亦名謂大野手 上 比賣。",
+    "units": [
+      {
+        "source_text": "嶋國。",
+        "zh": [
+          {
+            "t": "嶋",
+            "r": "dǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "國",
+            "r": "guó",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "島",
+              "r": "しま",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "国",
+              "r": "くに",
+              "g": "object"
+            },
+            {
+              "t": "である",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "然後還坐之時，生吉備兒嶋，亦名謂建日方別。",
+        "zh": [
+          {
+            "t": "然",
+            "r": "rán",
+            "g": "adverbial"
+          },
+          {
+            "t": "後",
+            "r": "hòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "還",
+            "r": "huán",
+            "g": "predicate"
+          },
+          {
+            "t": "坐",
+            "r": "zuò",
+            "g": "predicate"
+          },
+          {
+            "t": "之",
+            "r": "zhī",
+            "g": "function"
+          },
+          {
+            "t": "時",
+            "r": "shí",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "predicate"
+          },
+          {
+            "t": "吉",
+            "r": "jí",
+            "g": "object"
+          },
+          {
+            "t": "備",
+            "r": "bèi",
+            "g": "object"
+          },
+          {
+            "t": "兒",
+            "r": "ér",
+            "g": "object"
+          },
+          {
+            "t": "嶋",
+            "r": "dǎo",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "亦",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "predicate"
+          },
+          {
+            "t": "謂",
+            "r": "wèi",
+            "g": "predicate"
+          },
+          {
+            "t": "建",
+            "r": "jiàn",
+            "g": "object"
+          },
+          {
+            "t": "日",
+            "r": "rì",
+            "g": "object"
+          },
+          {
+            "t": "方",
+            "r": "fāng",
+            "g": "object"
+          },
+          {
+            "t": "別",
+            "r": "bié",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "その",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "後",
+              "r": "のち",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "還",
+              "r": "かえ",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "坐",
+              "r": "ま",
+              "g": "predicate"
+            },
+            {
+              "t": "した",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "時",
+              "r": "とき",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "吉",
+              "r": "きび",
+              "g": "object"
+            },
+            {
+              "t": "備",
+              "r": "び",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "兒",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "嶋",
+              "r": "じま",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "生",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "み、また",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "建",
+              "r": "たけ",
+              "g": "object"
+            },
+            {
+              "t": "日",
+              "r": "ひ",
+              "g": "object"
+            },
+            {
+              "t": "方",
+              "r": "かた",
+              "g": "object"
+            },
+            {
+              "t": "別",
+              "r": "わけ",
+              "g": "object"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "名",
+              "r": "な",
+              "g": "predicate"
+            },
+            {
+              "t": "づけた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "次生，小豆嶋，亦名謂大野手 上 比賣。",
+        "zh": [
+          {
+            "t": "次",
+            "r": "cì",
+            "g": "adverbial"
+          },
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "object"
+          },
+          {
+            "t": "豆",
+            "r": "dòu",
+            "g": "object"
+          },
+          {
+            "t": "嶋",
+            "r": "dǎo",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "亦",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "predicate"
+          },
+          {
+            "t": "謂",
+            "r": "wèi",
+            "g": "predicate"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "object"
+          },
+          {
+            "t": "野",
+            "r": "yě",
+            "g": "object"
+          },
+          {
+            "t": "手",
+            "r": "shǒu",
+            "g": "object"
+          },
+          {
+            "t": " ",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "object"
+          },
+          {
+            "t": " ",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "比",
+            "r": "bǐ",
+            "g": "object"
+          },
+          {
+            "t": "賣",
+            "r": "mài",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "次",
+              "r": "つぎ",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "小",
+              "r": "あず",
+              "g": "object"
+            },
+            {
+              "t": "豆",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "嶋",
+              "r": "しま",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "生",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "み、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "また",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "object"
+            },
+            {
+              "t": "野",
+              "r": "の",
+              "g": "object"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "object"
+            },
+            {
+              "t": "上",
+              "r": "かみ",
+              "g": "object"
+            },
+            {
+              "t": "比",
+              "r": "ひ",
+              "g": "object"
+            },
+            {
+              "t": "賣",
+              "r": "め",
+              "g": "object"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "名",
+              "r": "な",
+              "g": "predicate"
+            },
+            {
+              "t": "づけた",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
