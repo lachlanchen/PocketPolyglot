@@ -33,6 +33,11 @@ def tex_escape(text: str) -> str:
     return "".join(replacements.get(ch, ch) for ch in str(text))
 
 
+def tex_escape_en(text: str) -> str:
+    """Escape English text while preserving visible inter-word spaces."""
+    return tex_escape(text).replace(" ", r"\space{}")
+
+
 def token_role(token: dict[str, Any]) -> str:
     return str(token.get("g") or "")
 
@@ -47,9 +52,13 @@ def render_tokens(tokens: list[dict[str, Any]], lang: str) -> str:
     parts: list[str] = []
     for token in tokens:
         raw_text = str(token.get("t", ""))
-        text = tex_escape(raw_text)
+        text = tex_escape_en(raw_text) if lang == "en" else tex_escape(raw_text)
         ruby = tex_escape(str(token.get("r", "")))
         role = token_role(token)
+        if lang == "en" and raw_text.isspace():
+            parts.append(text)
+            parts.append(r"\allowbreak{}")
+            continue
         if lang == "zh" and ruby:
             rendered = rf"\zhpy{{{text}}}{{{ruby}}}"
         elif lang == "ja" and ruby:
