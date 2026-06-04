@@ -101,6 +101,14 @@ def active_sessions(book_ids: list[str]) -> list[str]:
     return sessions
 
 
+def queue_reports(book_ids: list[str]) -> dict[str, dict[str, str]]:
+    return {book_id: progress(book_id) for book_id in book_ids}
+
+
+def all_complete(reports: dict[str, dict[str, str]]) -> bool:
+    return all(complete(report) for report in reports.values())
+
+
 def start_book(book_id: str, args: argparse.Namespace) -> bool:
     plan = load_plan(book_id)
     if not plan:
@@ -162,12 +170,10 @@ def main() -> int:
     parser.add_argument("--once", action="store_true")
     args = parser.parse_args()
 
-    if not args.book_id:
-        raise SystemExit("--book-id is required at least once")
-
     while True:
         current_report = progress(args.current_book_id)
         is_current_complete = complete(current_report)
+        queued_reports = queue_reports(args.book_id)
         active = active_sessions(args.book_id)
         timestamp = datetime.now(timezone.utc).isoformat()
         print(
@@ -184,13 +190,19 @@ def main() -> int:
                 "current_report": current_report,
                 "current_complete": is_current_complete,
                 "queue": args.book_id,
+                "queue_reports": queued_reports,
                 "active_sessions": active,
             },
         )
 
+        if is_current_complete and not active and all_complete(queued_reports):
+            completed = ",".join(args.book_id) or "(none)"
+            print(f"queue_complete=1 completed={completed}; exiting", flush=True)
+            return 0
+
         if is_current_complete and len(active) < args.max_active_books:
             for book_id in args.book_id:
-                report = progress(book_id)
+                report = queued_reports[book_id]
                 if complete(report):
                     print(f"skip_complete={book_id}", flush=True)
                     continue

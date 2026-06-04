@@ -6,7 +6,8 @@ usage() {
 Usage: CURRENT_BOOK_ID=<book-id> BOOK_IDS="book-a book-b" scripts/interlinear/start_trilingual_queue_tmux.sh [session]
 
 Wait for CURRENT_BOOK_ID to complete, then start queued trilingual books one at a
-time. Each queued book needs books/<book-id>/book-plan.json and is launched with
+time. The monitor exits when CURRENT_BOOK_ID and every queued book are complete.
+Each queued book needs books/<book-id>/book-plan.json and is launched with
 start_trilingual_book_tmux.sh plus start_trilingual_finalize_tmux.sh.
 
 Environment:
