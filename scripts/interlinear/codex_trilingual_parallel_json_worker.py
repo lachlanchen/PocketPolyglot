@@ -47,16 +47,27 @@ def claim_chunk(claim_dir: Path, chunk_id: str, worker_id: str, ttl_seconds: int
         claim_path.mkdir(parents=True)
     except FileExistsError:
         owner_alive = False
+        owner_missing_or_partial = False
         try:
             owner = json.loads((claim_path / "owner.json").read_text(encoding="utf-8"))
             owner_pid = int(owner.get("pid", 0))
             if owner_pid > 0:
                 os.kill(owner_pid, 0)
                 owner_alive = True
-        except (FileNotFoundError, json.JSONDecodeError, ValueError, ProcessLookupError):
+        except (FileNotFoundError, json.JSONDecodeError, ValueError):
+            owner_missing_or_partial = True
+            owner_alive = False
+        except ProcessLookupError:
             owner_alive = False
         except PermissionError:
             owner_alive = True
+        if owner_missing_or_partial:
+            try:
+                age = now - claim_path.stat().st_mtime
+            except FileNotFoundError:
+                return False
+            if age <= min(30, ttl_seconds if ttl_seconds > 0 else 30):
+                return False
         if owner_alive:
             try:
                 age = now - claim_path.stat().st_mtime
