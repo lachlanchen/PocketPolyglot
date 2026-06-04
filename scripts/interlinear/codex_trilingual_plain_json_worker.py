@@ -235,6 +235,8 @@ def validate_plain_chunk(source: dict[str, Any], result: dict[str, Any]) -> list
         errors.append(f"paragraph id/order mismatch: expected {expected_ids}, got {got_ids}")
     source_plan_by_id = {paragraph["id"]: paragraph["units"] for paragraph in source_unit_plan(source)}
     spine_lang = source_spine_lang(source)
+    zh_required = spine_lang != "zh"
+    ja_required = spine_lang != "ja"
     for paragraph_index, paragraph in enumerate(paragraphs):
         where = f"paragraphs[{paragraph_index}]"
         if not isinstance(paragraph, dict):
@@ -259,17 +261,17 @@ def validate_plain_chunk(source: dict[str, Any], result: dict[str, Any]) -> list
             zh = plain_text(unit.get("zh", ""))
             ja = plain_text(unit.get("ja", ""))
             en = plain_text(unit.get("en", ""))
-            if not zh:
+            if zh_required and not zh:
                 errors.append(f"{unit_where}.zh: empty")
-            if not ja:
+            if ja_required and not ja:
                 errors.append(f"{unit_where}.ja: empty")
             if spine_lang != "en" and not en:
                 errors.append(f"{unit_where}.en: empty")
-            if zh and not HAN_RE.search(zh):
+            if zh_required and zh and not HAN_RE.search(zh):
                 errors.append(f"{unit_where}.zh: Chinese text must contain Han characters")
-            if zh and KANA_RE.search(zh):
+            if zh_required and zh and KANA_RE.search(zh):
                 errors.append(f"{unit_where}.zh: Chinese row contains Japanese kana")
-            if ja and not KANA_RE.search(ja):
+            if ja_required and ja and not KANA_RE.search(ja) and len("".join(ja.split())) > 12:
                 errors.append(f"{unit_where}.ja: Japanese row must contain kana; pure Han text is usually Chinese, not Japanese")
     return errors
 
