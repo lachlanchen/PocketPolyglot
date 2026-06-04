@@ -1,0 +1,416 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "woman-in-the-dunes",
+  "paragraph_id": "woman-in-the-dunes-p00617",
+  "source_text": "“我没问你这些事！我问的是从这里逃出去没再回来的人！”",
+  "source_sha256": "38a31a2509fde92da3b59e449b51f7277abf40ff44b81083d906b7eb72cd78a6",
+  "source_normalized_sha256": "38a31a2509fde92da3b59e449b51f7277abf40ff44b81083d906b7eb72cd78a6",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 57,
+    "grammar_token_total": 57,
+    "unit_count": 2
+  },
+  "source_chunk_id": "woman-in-the-dunes-chunk-0617",
+  "source_manifest_sha256": "d4e448272465ec27547c95a3075b988bdeb9e6260e21053d5ef38c28d636507d",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "function"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん",
+        "g": "function"
+      },
+      {
+        "t": "言",
+        "r": "げん",
+        "g": "function"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "一七",
+    "title_zh": [
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "function"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-一七-intro",
+    "title_zh": [
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "function"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "function"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "function"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "woman-in-the-dunes-p00617",
+    "source_text": "“我没问你这些事！我问的是从这里逃出去没再回来的人！”",
+    "units": [
+      {
+        "source_text": "“我没问你这些事！",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "adverbial"
+          },
+          {
+            "t": "问",
+            "r": "wèn",
+            "g": "predicate"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "object"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "attributive"
+          },
+          {
+            "t": "些",
+            "r": "xiē",
+            "g": "attributive"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "君",
+              "r": "きみ",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "そんな",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "事",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "尋",
+              "r": "たず",
+              "g": "predicate"
+            },
+            {
+              "t": "ねてはいない",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "！",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我问的是从这里逃出去没再回来的人！”",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "问",
+            "r": "wèn",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "从",
+            "r": "cóng",
+            "g": "adverbial"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "adverbial"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "逃",
+            "r": "táo",
+            "g": "predicate"
+          },
+          {
+            "t": "出",
+            "r": "chū",
+            "g": "complement"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "complement"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "adverbial"
+          },
+          {
+            "t": "再",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "回",
+            "r": "huí",
+            "g": "predicate"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "complement"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "object"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "聞",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "いているのは",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ここから",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "逃",
+              "r": "に",
+              "g": "predicate"
+            },
+            {
+              "t": "げ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "出",
+              "r": "だ",
+              "g": "complement"
+            },
+            {
+              "t": "して",
+              "r": "",
+              "g": "complement"
+            }
+          ],
+          [
+            {
+              "t": "二",
+              "r": "に",
+              "g": "adverbial"
+            },
+            {
+              "t": "度",
+              "r": "ど",
+              "g": "adverbial"
+            },
+            {
+              "t": "と",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "戻",
+              "r": "もど",
+              "g": "predicate"
+            },
+            {
+              "t": "ってこなかった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "object"
+            },
+            {
+              "t": "のことだ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "！",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

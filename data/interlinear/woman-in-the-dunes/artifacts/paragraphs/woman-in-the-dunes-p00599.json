@@ -1,0 +1,200 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "woman-in-the-dunes",
+  "paragraph_id": "woman-in-the-dunes-p00599",
+  "source_text": "“卖明信片的？”",
+  "source_sha256": "25feba4a24462a84476e796b365f8d7c98c99d6f4e22bdfdfbf0ba9ebc7cab6f",
+  "source_normalized_sha256": "25feba4a24462a84476e796b365f8d7c98c99d6f4e22bdfdfbf0ba9ebc7cab6f",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 16,
+    "grammar_token_total": 16,
+    "unit_count": 1
+  },
+  "source_chunk_id": "woman-in-the-dunes-chunk-0599",
+  "source_manifest_sha256": "d4e448272465ec27547c95a3075b988bdeb9e6260e21053d5ef38c28d636507d",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "topic"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "topic"
+      },
+      {
+        "t": "書",
+        "r": "がき",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "一七",
+    "title_zh": [
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "topic"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "topic"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-一七-intro",
+    "title_zh": [
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "topic"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "topic"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "woman-in-the-dunes-p00599",
+    "source_text": "“卖明信片的？”",
+    "units": [
+      {
+        "source_text": "“卖明信片的？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "卖",
+            "r": "mài",
+            "g": "predicate"
+          },
+          {
+            "t": "明",
+            "r": "míng",
+            "g": "object"
+          },
+          {
+            "t": "信",
+            "r": "xìn",
+            "g": "object"
+          },
+          {
+            "t": "片",
+            "r": "piàn",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "絵",
+              "r": "え",
+              "g": "object"
+            },
+            {
+              "t": "葉",
+              "r": "は",
+              "g": "object"
+            },
+            {
+              "t": "書",
+              "r": "がき",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "売",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "る",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "predicate"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

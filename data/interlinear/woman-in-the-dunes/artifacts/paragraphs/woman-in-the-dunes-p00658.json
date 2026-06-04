@@ -1,0 +1,172 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "woman-in-the-dunes",
+  "paragraph_id": "woman-in-the-dunes-p00658",
+  "source_text": "“去哪里！”",
+  "source_sha256": "446cd3f84f8e08199aa001bcc41947b2bf39f085d4102d86fcc209bc62b2960b",
+  "source_normalized_sha256": "446cd3f84f8e08199aa001bcc41947b2bf39f085d4102d86fcc209bc62b2960b",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 12,
+    "grammar_token_total": 12,
+    "unit_count": 1
+  },
+  "source_chunk_id": "woman-in-the-dunes-chunk-0658",
+  "source_manifest_sha256": "d4e448272465ec27547c95a3075b988bdeb9e6260e21053d5ef38c28d636507d",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián"
+      },
+      {
+        "t": "言",
+        "r": "yán"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ"
+      },
+      {
+        "t": "書",
+        "r": "が"
+      },
+      {
+        "t": "き",
+        "r": ""
+      }
+    ]
+  },
+  "subsection": {
+    "id": "一八",
+    "title_zh": [
+      {
+        "t": "一",
+        "r": "yī"
+      },
+      {
+        "t": "八",
+        "r": "bā"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "一",
+        "r": "いち"
+      },
+      {
+        "t": "八",
+        "r": "はち"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-一八-intro",
+    "title_zh": [
+      {
+        "t": "一",
+        "r": "yī"
+      },
+      {
+        "t": "八",
+        "r": "bā"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "一",
+        "r": "いち"
+      },
+      {
+        "t": "八",
+        "r": "はち"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "woman-in-the-dunes-p00658",
+    "source_text": "“去哪里！”",
+    "units": [
+      {
+        "source_text": "“去哪里！”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "predicate"
+          },
+          {
+            "t": "哪",
+            "r": "nǎ",
+            "g": "object"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "object"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "どこへ",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "行",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "く",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "！",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

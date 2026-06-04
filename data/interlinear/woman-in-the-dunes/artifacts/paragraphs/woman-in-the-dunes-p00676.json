@@ -1,0 +1,170 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "woman-in-the-dunes",
+  "paragraph_id": "woman-in-the-dunes-p00676",
+  "source_text": "“被子？”",
+  "source_sha256": "e9a52ae0e247bc2fd997ac132b7306f5f0a9602a10834f93c94a38f182b60317",
+  "source_normalized_sha256": "e9a52ae0e247bc2fd997ac132b7306f5f0a9602a10834f93c94a38f182b60317",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 10,
+    "grammar_token_total": 10,
+    "unit_count": 1
+  },
+  "source_chunk_id": "woman-in-the-dunes-chunk-0676",
+  "source_manifest_sha256": "d4e448272465ec27547c95a3075b988bdeb9e6260e21053d5ef38c28d636507d",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "topic"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん",
+        "g": "topic"
+      },
+      {
+        "t": "言",
+        "r": "げん",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "一九",
+    "title_zh": [
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "topic"
+      },
+      {
+        "t": "九",
+        "r": "jiǔ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "topic"
+      },
+      {
+        "t": "九",
+        "r": "きゅう",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-一九-intro",
+    "title_zh": [
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "topic"
+      },
+      {
+        "t": "九",
+        "r": "jiǔ",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "topic"
+      },
+      {
+        "t": "九",
+        "r": "きゅう",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "woman-in-the-dunes-p00676",
+    "source_text": "“被子？”",
+    "units": [
+      {
+        "source_text": "“被子？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "被",
+            "r": "bèi",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "布",
+              "r": "ふ",
+              "g": "object"
+            },
+            {
+              "t": "団",
+              "r": "とん",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "のこと",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "？」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "woman-in-the-dunes",
+  "paragraph_id": "woman-in-the-dunes-p00602",
+  "source_text": "“正好，很多人家都缺人手……”",
+  "source_sha256": "71df097ceb03955957546a3a6b03280cb00519ef6c6ee78982851350a0064f49",
+  "source_normalized_sha256": "71df097ceb03955957546a3a6b03280cb00519ef6c6ee78982851350a0064f49",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 27,
+    "grammar_token_total": 27,
+    "unit_count": 1
+  },
+  "source_chunk_id": "woman-in-the-dunes-chunk-0602",
+  "source_manifest_sha256": "d4e448272465ec27547c95a3075b988bdeb9e6260e21053d5ef38c28d636507d",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "topic"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "topic"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "topic"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "一七",
+    "title_zh": [
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "topic"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "topic"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "topic"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-一七-intro",
+    "title_zh": [
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "topic"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "topic"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "woman-in-the-dunes-p00602",
+    "source_text": "“正好，很多人家都缺人手……”",
+    "units": [
+      {
+        "source_text": "“正好，很多人家都缺人手……”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "正",
+            "r": "zhèng",
+            "g": "adverbial"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "很",
+            "r": "hěn",
+            "g": "subject"
+          },
+          {
+            "t": "多",
+            "r": "duō",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "subject"
+          },
+          {
+            "t": "都",
+            "r": "dōu",
+            "g": "adverbial"
+          },
+          {
+            "t": "缺",
+            "r": "quē",
+            "g": "predicate"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "object"
+          },
+          {
+            "t": "手",
+            "r": "shǒu",
+            "g": "object"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ちょうどいい、",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "多",
+              "r": "おお",
+              "g": "subject"
+            },
+            {
+              "t": "くの",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "家",
+              "r": "いえ",
+              "g": "subject"
+            },
+            {
+              "t": "で",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "どこも",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "object"
+            },
+            {
+              "t": "手",
+              "r": "で",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "足",
+              "r": "た",
+              "g": "predicate"
+            },
+            {
+              "t": "りないんだ……」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
