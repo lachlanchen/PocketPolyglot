@@ -1,0 +1,143 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "woman-in-the-dunes",
+  "paragraph_id": "woman-in-the-dunes-p01149",
+  "source_text": "家事法官",
+  "source_sha256": "be476bab7885227fb6acb6a1336fc68b3a1a865bd1593ba4adf023b3a350abb0",
+  "source_normalized_sha256": "be476bab7885227fb6acb6a1336fc68b3a1a865bd1593ba4adf023b3a350abb0",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 9,
+    "grammar_token_total": 9,
+    "unit_count": 1
+  },
+  "source_chunk_id": "woman-in-the-dunes-chunk-1149",
+  "source_manifest_sha256": "d4e448272465ec27547c95a3075b988bdeb9e6260e21053d5ef38c28d636507d",
+  "section": {
+    "id": "审判",
+    "title_zh": [
+      {
+        "t": "审",
+        "r": "shěn",
+        "g": "topic"
+      },
+      {
+        "t": "判",
+        "r": "pàn",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "審",
+        "r": "しん",
+        "g": "topic"
+      },
+      {
+        "t": "判",
+        "r": "ぱん",
+        "g": "topic"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "审判-intro",
+    "title_zh": [
+      {
+        "t": "审",
+        "r": "shěn",
+        "g": "topic"
+      },
+      {
+        "t": "判",
+        "r": "pàn",
+        "g": "topic"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "審",
+        "r": "しん",
+        "g": "topic"
+      },
+      {
+        "t": "判",
+        "r": "ぱん",
+        "g": "topic"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "woman-in-the-dunes-p01149",
+    "source_text": "家事法官",
+    "units": [
+      {
+        "source_text": "家事法官",
+        "zh": [
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "attributive"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "attributive"
+          },
+          {
+            "t": "法",
+            "r": "fǎ",
+            "g": "object"
+          },
+          {
+            "t": "官",
+            "r": "guān",
+            "g": "object"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "家",
+              "r": "か",
+              "g": "attributive"
+            },
+            {
+              "t": "事",
+              "r": "じ",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "裁",
+              "r": "さい",
+              "g": "object"
+            },
+            {
+              "t": "判",
+              "r": "ばん",
+              "g": "object"
+            },
+            {
+              "t": "官",
+              "r": "かん",
+              "g": "object"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

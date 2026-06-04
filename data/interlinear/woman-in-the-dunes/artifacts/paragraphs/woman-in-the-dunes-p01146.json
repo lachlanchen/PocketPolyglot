@@ -1,0 +1,128 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "woman-in-the-dunes",
+  "paragraph_id": "woman-in-the-dunes-p01146",
+  "source_text": "正文",
+  "source_sha256": "d661c3d96d53ebc0ca8a55aae24b5df4a4d1bf28d37337b982fe8ebf54846eeb",
+  "source_normalized_sha256": "d661c3d96d53ebc0ca8a55aae24b5df4a4d1bf28d37337b982fe8ebf54846eeb",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 6,
+    "grammar_token_total": 6,
+    "unit_count": 1
+  },
+  "source_chunk_id": "woman-in-the-dunes-chunk-1146",
+  "source_manifest_sha256": "d4e448272465ec27547c95a3075b988bdeb9e6260e21053d5ef38c28d636507d",
+  "section": {
+    "id": "审判",
+    "title_zh": [
+      {
+        "t": "审",
+        "r": "shěn",
+        "g": "predicate"
+      },
+      {
+        "t": "判",
+        "r": "pàn",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "審",
+        "r": "しん",
+        "g": "predicate"
+      },
+      {
+        "t": "判",
+        "r": "ぱん",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "审判-intro",
+    "title_zh": [
+      {
+        "t": "审",
+        "r": "shěn",
+        "g": "predicate"
+      },
+      {
+        "t": "判",
+        "r": "pàn",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "審",
+        "r": "しん",
+        "g": "predicate"
+      },
+      {
+        "t": "判",
+        "r": "ぱん",
+        "g": "predicate"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "woman-in-the-dunes-p01146",
+    "source_text": "正文",
+    "units": [
+      {
+        "source_text": "正文",
+        "zh": [
+          {
+            "t": "正",
+            "r": "zhèng",
+            "g": "attributive"
+          },
+          {
+            "t": "文",
+            "r": "wén",
+            "g": "object"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "attributive"
+            },
+            {
+              "t": "文",
+              "r": "ぶん",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "です",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
