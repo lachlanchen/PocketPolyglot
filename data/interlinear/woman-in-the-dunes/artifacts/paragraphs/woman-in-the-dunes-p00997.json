@@ -1,0 +1,213 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "woman-in-the-dunes",
+  "paragraph_id": "woman-in-the-dunes-p00997",
+  "source_text": "女人开始往手巾上打肥皂。",
+  "source_sha256": "8473cacec397049cd663e168ab7cb2931450b2fa6e032a492134c869c794ec5c",
+  "source_normalized_sha256": "8473cacec397049cd663e168ab7cb2931450b2fa6e032a492134c869c794ec5c",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 21,
+    "grammar_token_total": 21,
+    "unit_count": 1
+  },
+  "source_chunk_id": "woman-in-the-dunes-chunk-0997",
+  "source_manifest_sha256": "d4e448272465ec27547c95a3075b988bdeb9e6260e21053d5ef38c28d636507d",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián"
+      },
+      {
+        "t": "言",
+        "r": "yán"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん"
+      },
+      {
+        "t": "言",
+        "r": "げん"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "二七",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr"
+      },
+      {
+        "t": "七",
+        "r": "qī"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に"
+      },
+      {
+        "t": "七",
+        "r": "なな"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-二七-intro",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr"
+      },
+      {
+        "t": "七",
+        "r": "qī"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に"
+      },
+      {
+        "t": "七",
+        "r": "なな"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "woman-in-the-dunes-p00997",
+    "source_text": "女人开始往手巾上打肥皂。",
+    "units": [
+      {
+        "source_text": "女人开始往手巾上打肥皂。",
+        "zh": [
+          {
+            "t": "女",
+            "r": "nǚ",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "开",
+            "r": "kāi",
+            "g": "predicate"
+          },
+          {
+            "t": "始",
+            "r": "shǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "往",
+            "r": "wǎng",
+            "g": "adverbial"
+          },
+          {
+            "t": "手",
+            "r": "shǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "巾",
+            "r": "jīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "上",
+            "r": "shàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "打",
+            "r": "dǎ",
+            "g": "predicate"
+          },
+          {
+            "t": "肥",
+            "r": "féi",
+            "g": "object"
+          },
+          {
+            "t": "皂",
+            "r": "zào",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "女",
+              "r": "おんな",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "adverbial"
+            },
+            {
+              "t": "ぬぐいに",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "石",
+              "r": "せっ",
+              "g": "object"
+            },
+            {
+              "t": "鹸",
+              "r": "けん",
+              "g": "object"
+            },
+            {
+              "t": "をこすりつけ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "始",
+              "r": "はじ",
+              "g": "predicate"
+            },
+            {
+              "t": "めた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
