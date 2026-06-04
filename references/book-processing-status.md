@@ -36,8 +36,8 @@ This order prioritizes intriguing, readable, narrative books first. Prepared boo
 | Priority | Proposed ID | Title | Source Path | Readiness | Reason |
 |---:|---|---|---|---|---|
 | 1 | `silence` | 沉默 / Silence | `sources/Silence.epub` | English Markdown exists | Powerful story; needs JP/ZH source pairing strategy. |
-| 2 | `inugami-curse` | 犬神家族 / The Inugami Curse | `sources/犬神家族 - The Inugami Curse` | Prepared, 210 chunks | Mystery novel, engaging and readable; English spine, Chinese AZW reference, generated Japanese. |
-| 3 | `spring-snow` | 春雪 / Spring Snow | `sources/春雪 - Spring Snow` | Sources grouped | Mishima, strong literary priority. |
+| 2 | `inugami-curse` | 犬神家族 / The Inugami Curse | `sources/犬神家族 - The Inugami Curse` | Running, 210 chunks | Mystery novel, engaging and readable; English spine, Chinese AZW reference, generated Japanese. |
+| 3 | `spring-snow` | 春雪 / Spring Snow | `sources/春雪 - Spring Snow` | Prepared, 343 chunks | Mishima, strong literary priority; English spine, Chinese EPUB reference, generated Japanese. |
 | 4 | `temple-of-dawn` | 晓寺 / The Temple of Dawn | `sources/晓寺 - The Temple of Dawn` | Sources grouped | Continue Mishima sequence after Spring Snow. |
 | 5 | `silent-cry` | 万延元年的足球队 / The Silent Cry | `sources/The Silent Cry` | Sources grouped | Major Oe work; high literary value. |
 | 6 | `personal-matter` | 个人的体验 | `sources/个人的体验` | Sources grouped | Important Oe, likely manageable. |
