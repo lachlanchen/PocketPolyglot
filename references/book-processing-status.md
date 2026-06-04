@@ -28,6 +28,8 @@ For classical Chinese books, keep the classical original as a preserved source l
 | 14 | `gone-with-the-wind` | Gone With the Wind / 飘 / 風と共に去りぬ | `sources/gone-with-the-wind` | Complete | Trilingual EN-JP-ZH; 12 PDFs compiled. |
 | 15 | `botchan` | 少爷 / 坊っちゃん / Botchan | `sources/少爷 - Botchan` + Natsume source reservoir | Complete | Trilingual EN-JP-ZH; 261/261 chunks, 12 PDFs compiled. |
 | 16 | `i-am-a-cat` | 我是猫 / 吾輩は猫である / I Am a Cat | `sources/I-am-a-cat` + Natsume source reservoir | Complete | Trilingual EN-JP-ZH; 251/251 chunks, 12 PDFs compiled. |
+| 17 | `inugami-curse` | 犬神家族 / 犬神家の一族 / The Inugami Curse | `sources/犬神家族 - The Inugami Curse` | Complete | Trilingual EN-JP-ZH; 210/210 chunks, 12 PDFs compiled. |
+| 18 | `spring-snow` | 春雪 / 春の雪 / Spring Snow | `sources/春雪 - Spring Snow` | Complete | Trilingual EN-JP-ZH; 343/343 chunks, 12 PDFs compiled. |
 
 ## Recommended Future Queue
 
@@ -36,29 +38,27 @@ This order prioritizes intriguing, readable, narrative books first. Prepared boo
 | Priority | Proposed ID | Title | Source Path | Readiness | Reason |
 |---:|---|---|---|---|---|
 | 1 | `silence` | 沉默 / Silence | `sources/Silence.epub` | English Markdown exists | Powerful story; needs JP/ZH source pairing strategy. |
-| 2 | `inugami-curse` | 犬神家族 / The Inugami Curse | `sources/犬神家族 - The Inugami Curse` | Running, 210 chunks | Mystery novel, engaging and readable; English spine, Chinese AZW reference, generated Japanese. |
-| 3 | `spring-snow` | 春雪 / Spring Snow | `sources/春雪 - Spring Snow` | Prepared, 343 chunks | Mishima, strong literary priority; English spine, Chinese EPUB reference, generated Japanese. |
-| 4 | `temple-of-dawn` | 晓寺 / The Temple of Dawn | `sources/晓寺 - The Temple of Dawn` | Sources grouped | Continue Mishima sequence after Spring Snow. |
-| 5 | `silent-cry` | 万延元年的足球队 / The Silent Cry | `sources/The Silent Cry` | Sources grouped | Major Oe work; high literary value. |
-| 6 | `personal-matter` | 个人的体验 | `sources/个人的体验` | Sources grouped | Important Oe, likely manageable. |
-| 7 | `heike` | 平家物语 / 平家物語 | `sources/平家物语` | Sources grouped | Epic and famous; harder than modern novels but very attractive. |
-| 8 | `pillow-book` | 枕草子 | `sources/枕草子` | Sources grouped | Classic prose; good after narrative-first queue. |
-| 9 | `ginga-tetsudo` | 銀河鉄道の夜 | `sources/銀河鉄道の夜` | Prepared, 604 chunks | Short and beloved; good when we want a faster run. |
-| 10 | `chumon-no-ooi-ryoriten` | 注文の多い料理店 | `sources/注文の多い料理店` | Prepared, 2698 chunks | Children’s stories; keep after stronger single-book priorities. |
-| 11 | `kitchen` | 厨房 / Kitchen | `sources/厨房.epub` | Source only | Modern, accessible, good learner book if paired sources can be found. |
-| 12 | `norwegian-wood` | 挪威的森林 / Norwegian Wood | `sources/Norwegian Wood.epub` | Source only | Popular but source pairing needs care. |
-| 13 | `kafka-on-the-shore` | 海边的卡夫卡 / Kafka on the Shore | `sources/Kafka on the Shore  .epub` | Source only | Popular, long, likely costly. |
-| 14 | `hard-boiled-wonderland` | 世界尽头与冷酷仙境 | `sources/Hard-Boiled Wonderland and the End of the World.epub` | Source only | Interesting Murakami, long. |
-| 15 | `inspector-imanishi` | 砂器 / Inspector Imanishi Investigates | `sources/Inspector Imanishi Investigates.epub` | Source only | Mystery; needs Japanese/Chinese pairing source. |
-| 16 | `byakuyako` | 白夜行 | `sources/[東野圭吾] 白夜行.epub` | Source only | Popular mystery, long. |
-| 17 | `suspect-x` | 嫌疑人X的献身 | `sources/嫌疑人X的献身 (东野圭吾作品).epub` | Source only | Popular and compact; needs source pairing. |
-| 18 | `runaway-horses` | 奔马 | root EPUB source | Source only | Sea of Fertility volume 2; place after Spring Snow. |
-| 19 | `decay-of-the-angel` | 天人五衰 / The Decay of the Angel | `sources/The Decay of the Angel.epub` | Source only | Sea of Fertility volume 4; keep after earlier volumes. |
-| 20 | `sound-of-waves` | 潮骚 | root PDF source | Source only | Mishima, attractive but PDF-only. |
-| 21 | `box-man` | 箱男 | root EPUB source | Source only | Abe Kobo; interesting after 砂女. |
-| 22 | `setting-sun` | 斜陽 | `sources/斜陽.epub` | Source only | Dazai, good but source pairing must be prepared. |
-| 23 | `hell-screen` | 地狱变 / 地獄変 | `sources/地狱变.epub` | Source only | Short Akutagawa; can be paired with Akutagawa collections if useful. |
-| 24 | `ten-nights` | 十夜之梦 | `sources/十夜之梦.pdf` | Source only | Short Soseki; PDF extraction likely needed. |
+| 2 | `temple-of-dawn` | 晓寺 / The Temple of Dawn | `sources/晓寺 - The Temple of Dawn` | Sources grouped | Continue Mishima sequence after Spring Snow. |
+| 3 | `silent-cry` | 万延元年的足球队 / The Silent Cry | `sources/The Silent Cry` | Sources grouped | Major Oe work; high literary value. |
+| 4 | `personal-matter` | 个人的体验 | `sources/个人的体验` | Sources grouped | Important Oe, likely manageable. |
+| 5 | `heike` | 平家物语 / 平家物語 | `sources/平家物语` | Sources grouped | Epic and famous; harder than modern novels but very attractive. |
+| 6 | `pillow-book` | 枕草子 | `sources/枕草子` | Sources grouped | Classic prose; good after narrative-first queue. |
+| 7 | `ginga-tetsudo` | 銀河鉄道の夜 | `sources/銀河鉄道の夜` | Prepared, 604 chunks | Short and beloved; good when we want a faster run. |
+| 8 | `chumon-no-ooi-ryoriten` | 注文の多い料理店 | `sources/注文の多い料理店` | Prepared, 2698 chunks | Children’s stories; keep after stronger single-book priorities. |
+| 9 | `kitchen` | 厨房 / Kitchen | `sources/厨房.epub` | Source only | Modern, accessible, good learner book if paired sources can be found. |
+| 10 | `norwegian-wood` | 挪威的森林 / Norwegian Wood | `sources/Norwegian Wood.epub` | Source only | Popular but source pairing needs care. |
+| 11 | `kafka-on-the-shore` | 海边的卡夫卡 / Kafka on the Shore | `sources/Kafka on the Shore  .epub` | Source only | Popular, long, likely costly. |
+| 12 | `hard-boiled-wonderland` | 世界尽头与冷酷仙境 | `sources/Hard-Boiled Wonderland and the End of the World.epub` | Source only | Interesting Murakami, long. |
+| 13 | `inspector-imanishi` | 砂器 / Inspector Imanishi Investigates | `sources/Inspector Imanishi Investigates.epub` | Source only | Mystery; needs Japanese/Chinese pairing source. |
+| 14 | `byakuyako` | 白夜行 | `sources/[東野圭吾] 白夜行.epub` | Source only | Popular mystery, long. |
+| 15 | `suspect-x` | 嫌疑人X的献身 | `sources/嫌疑人X的献身 (东野圭吾作品).epub` | Source only | Popular and compact; needs source pairing. |
+| 16 | `runaway-horses` | 奔马 | root EPUB source | Source only | Sea of Fertility volume 2; place after Spring Snow. |
+| 17 | `decay-of-the-angel` | 天人五衰 / The Decay of the Angel | `sources/The Decay of the Angel.epub` | Source only | Sea of Fertility volume 4; keep after earlier volumes. |
+| 18 | `sound-of-waves` | 潮骚 | root PDF source | Source only | Mishima, attractive but PDF-only. |
+| 19 | `box-man` | 箱男 | root EPUB source | Source only | Abe Kobo; interesting after 砂女. |
+| 20 | `setting-sun` | 斜陽 | `sources/斜陽.epub` | Source only | Dazai, good but source pairing must be prepared. |
+| 21 | `hell-screen` | 地狱变 / 地獄変 | `sources/地狱变.epub` | Source only | Short Akutagawa; can be paired with Akutagawa collections if useful. |
+| 22 | `ten-nights` | 十夜之梦 | `sources/十夜之梦.pdf` | Source only | Short Soseki; PDF extraction likely needed. |
 
 ## Late Anthology / Reference Backlog
 
