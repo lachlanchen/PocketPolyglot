@@ -447,6 +447,7 @@ def main() -> int:
         "chunks_manifest": str(chunks_dir / "manifest.json"),
         "raw_chunk_dir": str(raw_chunk_dir),
         "preview_json": str(preview_dir / f"{BOOK_ID}.partial.json"),
+        "assembled_json": str(preview_dir / f"{BOOK_ID}.partial.json"),
         "prepared_at": datetime.now(timezone.utc).isoformat(),
         "chunk_count": len(chunks),
         "english_chapter_count": len(en_chapters),

@@ -40,7 +40,10 @@ fi
 chunks_jsonl="$(jq -r '.chunks_jsonl' "$plan")"
 manifest="$(jq -r '.chunks_manifest' "$plan")"
 raw_chunk_dir="$(jq -r '.raw_chunk_dir' "$plan")"
-assembled_json="$(jq -r '.assembled_json' "$plan")"
+assembled_json="$(jq -r '.assembled_json // .preview_json // empty' "$plan")"
+if [[ -z "$assembled_json" ]]; then
+  assembled_json="books/$book_id/work/trilingual/preview/$book_id.partial.json"
+fi
 work_root="books/$book_id/work/trilingual/finalize"
 log_dir="books/$book_id/work/logs"
 run_script="$work_root/${session}.run.sh"
