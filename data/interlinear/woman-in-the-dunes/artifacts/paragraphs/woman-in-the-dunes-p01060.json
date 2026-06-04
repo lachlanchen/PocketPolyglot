@@ -1,0 +1,261 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "woman-in-the-dunes",
+  "paragraph_id": "woman-in-the-dunes-p01060",
+  "source_text": "“卖掉？……这种东西卖给谁？”",
+  "source_sha256": "e9cc09d4b99e7b1b7f00a7777b9b4232a0b2f34c6f02d1f78fc66db35f472bbf",
+  "source_normalized_sha256": "e9cc09d4b99e7b1b7f00a7777b9b4232a0b2f34c6f02d1f78fc66db35f472bbf",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 26,
+    "grammar_token_total": 26,
+    "unit_count": 2
+  },
+  "source_chunk_id": "woman-in-the-dunes-chunk-1060",
+  "source_manifest_sha256": "d4e448272465ec27547c95a3075b988bdeb9e6260e21053d5ef38c28d636507d",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "げん",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "二九",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "object"
+      },
+      {
+        "t": "九",
+        "r": "jiǔ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "object"
+      },
+      {
+        "t": "九",
+        "r": "きゅう",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-二九-intro",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "object"
+      },
+      {
+        "t": "九",
+        "r": "jiǔ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "object"
+      },
+      {
+        "t": "九",
+        "r": "きゅう",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "woman-in-the-dunes-p01060",
+    "source_text": "“卖掉？……这种东西卖给谁？”",
+    "units": [
+      {
+        "source_text": "“卖掉？",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "卖",
+            "r": "mài",
+            "g": "predicate"
+          },
+          {
+            "t": "掉",
+            "r": "diào",
+            "g": "complement"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "売",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "ってしまう？",
+              "r": "",
+              "g": "complement"
+            }
+          ],
+          [
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "……这种东西卖给谁？”",
+        "zh": [
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "attributive"
+          },
+          {
+            "t": "种",
+            "r": "zhǒng",
+            "g": "attributive"
+          },
+          {
+            "t": "东",
+            "r": "dōng",
+            "g": "object"
+          },
+          {
+            "t": "西",
+            "r": "xi",
+            "g": "object"
+          },
+          {
+            "t": "卖",
+            "r": "mài",
+            "g": "predicate"
+          },
+          {
+            "t": "给",
+            "r": "gěi",
+            "g": "adverbial"
+          },
+          {
+            "t": "谁",
+            "r": "shéi",
+            "g": "adverbial"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "……",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "こんなものを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "誰",
+              "r": "だれ",
+              "g": "adverbial"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "売",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "るというんだ？",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

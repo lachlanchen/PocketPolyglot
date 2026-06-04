@@ -1,0 +1,235 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "woman-in-the-dunes",
+  "paragraph_id": "woman-in-the-dunes-p01027",
+  "source_text": "（啊呀呀，人家特地要为你辩护……）",
+  "source_sha256": "70381d6908c5cb4e0ffde137e7eeca932770d34aa3092e5153dbcfcf0ddb710d",
+  "source_normalized_sha256": "70381d6908c5cb4e0ffde137e7eeca932770d34aa3092e5153dbcfcf0ddb710d",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 23,
+    "grammar_token_total": 23,
+    "unit_count": 1
+  },
+  "source_chunk_id": "woman-in-the-dunes-chunk-1027",
+  "source_manifest_sha256": "d4e448272465ec27547c95a3075b988bdeb9e6260e21053d5ef38c28d636507d",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "げん",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "二八",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "object"
+      },
+      {
+        "t": "八",
+        "r": "bā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "object"
+      },
+      {
+        "t": "八",
+        "r": "はち",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-二八-intro",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "object"
+      },
+      {
+        "t": "八",
+        "r": "bā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "object"
+      },
+      {
+        "t": "八",
+        "r": "はち",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "woman-in-the-dunes-p01027",
+    "source_text": "（啊呀呀，人家特地要为你辩护……）",
+    "units": [
+      {
+        "source_text": "（啊呀呀，人家特地要为你辩护……）",
+        "zh": [
+          {
+            "t": "（",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "啊",
+            "r": "ā",
+            "g": "function"
+          },
+          {
+            "t": "呀",
+            "r": "yā",
+            "g": "function"
+          },
+          {
+            "t": "呀",
+            "r": "yā",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "subject"
+          },
+          {
+            "t": "特",
+            "r": "tè",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "adverbial"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "predicate"
+          },
+          {
+            "t": "为",
+            "r": "wèi",
+            "g": "adverbial"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "辩",
+            "r": "biàn",
+            "g": "predicate"
+          },
+          {
+            "t": "护",
+            "r": "hù",
+            "g": "predicate"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "）",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "（あらあら、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "がせっかくあなたのために",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "弁",
+              "r": "べん",
+              "g": "predicate"
+            },
+            {
+              "t": "護",
+              "r": "ご",
+              "g": "predicate"
+            },
+            {
+              "t": "してあげようというのに……）",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,653 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "woman-in-the-dunes",
+  "paragraph_id": "woman-in-the-dunes-p01058",
+  "source_text": "“你说沙子？”男人把牙齿咬得格格响，抬起下巴画了个圈，“沙子有个屁用？除了让人倒霉，一文不值。”",
+  "source_sha256": "2d9a3afc55f74675c61fe5416361803bbbd78bbaf51edf005a7356ab5dc3f528",
+  "source_normalized_sha256": "2d9a3afc55f74675c61fe5416361803bbbd78bbaf51edf005a7356ab5dc3f528",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 100,
+    "grammar_token_total": 100,
+    "unit_count": 4
+  },
+  "source_chunk_id": "woman-in-the-dunes-chunk-1058",
+  "source_manifest_sha256": "d4e448272465ec27547c95a3075b988bdeb9e6260e21053d5ef38c28d636507d",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "object"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん",
+        "g": "object"
+      },
+      {
+        "t": "言",
+        "r": "げん",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "二九",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "object"
+      },
+      {
+        "t": "九",
+        "r": "jiǔ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "object"
+      },
+      {
+        "t": "九",
+        "r": "きゅう",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-二九-intro",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "object"
+      },
+      {
+        "t": "九",
+        "r": "jiǔ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "object"
+      },
+      {
+        "t": "九",
+        "r": "きゅう",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "woman-in-the-dunes-p01058",
+    "source_text": "“你说沙子？”男人把牙齿咬得格格响，抬起下巴画了个圈，“沙子有个屁用？除了让人倒霉，一文不值。”",
+    "units": [
+      {
+        "source_text": "“你说沙子？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "沙",
+            "r": "shā",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "砂",
+              "r": "すな",
+              "g": "object"
+            },
+            {
+              "t": "のこと",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "うのか",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "男人把牙齿咬得格格响，抬起下巴画了个圈，",
+        "zh": [
+          {
+            "t": "男",
+            "r": "nán",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "把",
+            "r": "bǎ",
+            "g": "object"
+          },
+          {
+            "t": "牙",
+            "r": "yá",
+            "g": "object"
+          },
+          {
+            "t": "齿",
+            "r": "chǐ",
+            "g": "object"
+          },
+          {
+            "t": "咬",
+            "r": "yǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "complement"
+          },
+          {
+            "t": "格",
+            "r": "gé",
+            "g": "adverbial"
+          },
+          {
+            "t": "格",
+            "r": "gé",
+            "g": "adverbial"
+          },
+          {
+            "t": "响",
+            "r": "xiǎng",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "抬",
+            "r": "tái",
+            "g": "predicate"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "object"
+          },
+          {
+            "t": "巴",
+            "r": "ba",
+            "g": "object"
+          },
+          {
+            "t": "画",
+            "r": "huà",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "个",
+            "r": "ge",
+            "g": "object"
+          },
+          {
+            "t": "圈",
+            "r": "quān",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "男",
+              "r": "おとこ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "歯",
+              "r": "は",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "ぎりぎり",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "噛",
+              "r": "か",
+              "g": "predicate"
+            },
+            {
+              "t": "み",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "鳴",
+              "r": "な",
+              "g": "predicate"
+            },
+            {
+              "t": "らし",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "顎",
+              "r": "あご",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "上",
+              "r": "あ",
+              "g": "predicate"
+            },
+            {
+              "t": "げて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "輪",
+              "r": "わ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "描",
+              "r": "えが",
+              "g": "predicate"
+            },
+            {
+              "t": "き",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "“沙子有个屁用？",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "沙",
+            "r": "shā",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "subject"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "个",
+            "r": "ge",
+            "g": "object"
+          },
+          {
+            "t": "屁",
+            "r": "pì",
+            "g": "object"
+          },
+          {
+            "t": "用",
+            "r": "yòng",
+            "g": "object"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "砂",
+              "r": "すな",
+              "g": "subject"
+            },
+            {
+              "t": "なんか",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "何",
+              "r": "なん",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "役",
+              "r": "やく",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "立",
+              "r": "た",
+              "g": "predicate"
+            },
+            {
+              "t": "つ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "除了让人倒霉，一文不值。”",
+        "zh": [
+          {
+            "t": "除",
+            "r": "chú",
+            "g": "adverbial"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "adverbial"
+          },
+          {
+            "t": "让",
+            "r": "ràng",
+            "g": "predicate"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "object"
+          },
+          {
+            "t": "倒",
+            "r": "dǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "霉",
+            "r": "méi",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "一",
+            "r": "yì",
+            "g": "complement"
+          },
+          {
+            "t": "文",
+            "r": "wén",
+            "g": "complement"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "predicate"
+          },
+          {
+            "t": "值",
+            "r": "zhí",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "不",
+              "r": "ふ",
+              "g": "predicate"
+            },
+            {
+              "t": "幸",
+              "r": "こう",
+              "g": "predicate"
+            },
+            {
+              "t": "にする",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "だけで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "complement"
+            },
+            {
+              "t": "文",
+              "r": "もん",
+              "g": "complement"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "値",
+              "r": "ね",
+              "g": "complement"
+            },
+            {
+              "t": "打",
+              "r": "う",
+              "g": "complement"
+            },
+            {
+              "t": "ちも",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "ない",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
