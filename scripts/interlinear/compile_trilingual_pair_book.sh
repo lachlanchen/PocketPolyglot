@@ -15,6 +15,7 @@ Options:
   --color-mode <mode>        color or blackwhite
   --allow-missing            build a preview from available chunks
   --cover-image <path>       workspace-relative cover image
+  TRILINGUAL_BACKFILL_GRAMMAR=0 disables the default color-role backfill
   -h, --help                 show help
 USAGE
 }
@@ -124,6 +125,16 @@ fi
 output_pdf="$build_dir/$base_title.pdf"
 
 mkdir -p "$build_dir" "$(dirname "$assembled_json")"
+
+if [[ "$color_mode" == "color" && "${TRILINGUAL_BACKFILL_GRAMMAR:-1}" != "0" ]]; then
+  if find "$chunk_dir" -maxdepth 1 -name '*.json' -print -quit | grep -q .; then
+    python scripts/interlinear/backfill_trilingual_grammar_roles.py \
+      --chunk-dir "$chunk_dir" \
+      --chunks-jsonl "$chunks_jsonl" \
+      --overwrite-collapsed
+  fi
+fi
+
 assemble_args=(
   python scripts/interlinear/assemble_trilingual_json.py
   --manifest "$manifest"

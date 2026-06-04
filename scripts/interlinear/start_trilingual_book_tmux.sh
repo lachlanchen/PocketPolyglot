@@ -20,6 +20,7 @@ Environment:
   MERGE_INTERVAL=180
   COMPILE_INTERVAL_SECONDS=1200
   WORKER_SCRIPT=scripts/interlinear/codex_trilingual_plain_json_worker.py
+  BACKFILL_GRAMMAR_AFTER_MERGE=1
   RETRY_FAILED=0
 USAGE
 }
@@ -112,6 +113,14 @@ merge_once() {
     --candidate-dir '$candidate_dir' \
     --canonical-dir '$raw_chunk_dir' \
     --merged-dir '$merged_dir'
+  if [[ "\${BACKFILL_GRAMMAR_AFTER_MERGE:-1}" != "0" ]]; then
+    if find '$raw_chunk_dir' -maxdepth 1 -name '*.json' -print -quit | grep -q .; then
+      python scripts/interlinear/backfill_trilingual_grammar_roles.py \
+        --chunk-dir '$raw_chunk_dir' \
+        --chunks-jsonl '$chunks_jsonl' \
+        --overwrite-collapsed
+    fi
+  fi
 }
 
 compile_once() {
