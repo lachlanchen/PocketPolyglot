@@ -24,6 +24,9 @@ from validate_trilingual_interlinear_json import HAN_RE, KANA_RE, SINGLE_HAN_RE,
 SPACE_RE = re.compile(r"\s+")
 EN_TOKEN_RE = re.compile(r"\s+|[A-Za-z]+(?:['’-][A-Za-z]+)*|\d+(?:[.,]\d+)*|[^\sA-Za-z0-9]+")
 EN_SENTENCE_BOUNDARY_RE = re.compile(r'[.!?]["”’)]*\s+')
+SOURCE_SPINE_LANGS = {"en", "zh", "ja"}
+CJK_SENTENCE_END = set("。！？!?；;")
+CJK_CLOSERS = set("」』”’）)]〉》")
 KAKASI = pykakasi.kakasi()
 JA_READING_CACHE: dict[str, str] = {}
 
@@ -64,12 +67,55 @@ def split_english_units(text: str) -> list[str]:
     return parts or [text]
 
 
+def split_cjk_units(text: str) -> list[str]:
+    parts: list[str] = []
+    start = 0
+    index = 0
+    while index < len(text):
+        if text[index] not in CJK_SENTENCE_END:
+            index += 1
+            continue
+        end = index + 1
+        while end < len(text) and text[end] in CJK_CLOSERS:
+            end += 1
+        piece = text[start:end]
+        if piece.strip():
+            parts.append(piece)
+        start = end
+        index = end
+    tail = text[start:]
+    if tail.strip():
+        parts.append(tail)
+    return parts or [text]
+
+
+def source_spine_lang(chunk: dict[str, Any]) -> str:
+    lang = str(chunk.get("source_spine_lang") or "en")
+    return lang if lang in SOURCE_SPINE_LANGS else "en"
+
+
+def paragraph_source_text(paragraph: dict[str, Any], spine_lang: str) -> str:
+    for lang in (spine_lang, "en", "zh", "ja"):
+        text = str(paragraph.get(lang) or "")
+        if text.strip():
+            return text
+    return ""
+
+
+def split_source_units(text: str, lang: str) -> list[str]:
+    if lang == "en":
+        return split_english_units(text)
+    return split_cjk_units(text)
+
+
 def source_unit_plan(chunk: dict[str, Any]) -> list[dict[str, Any]]:
+    spine_lang = source_spine_lang(chunk)
     paragraphs: list[dict[str, Any]] = []
     for paragraph in chunk["paragraphs"]:
+        source_text = paragraph_source_text(paragraph, spine_lang)
         units = [
-            {"unit_id": f"{paragraph['id']}-u{unit_index:03d}", "en": unit}
-            for unit_index, unit in enumerate(split_english_units(paragraph["en"]), start=1)
+            {"unit_id": f"{paragraph['id']}-u{unit_index:03d}", spine_lang: unit}
+            for unit_index, unit in enumerate(split_source_units(source_text, spine_lang), start=1)
         ]
         paragraphs.append({"id": paragraph["id"], "units": units})
     return paragraphs
@@ -81,26 +127,19 @@ def prompt_for_plain_chunk(chunk: dict[str, Any], previous_errors: list[str] | N
         error_block = "\nPrevious output failed validation. Fix these exact issues:\n" + "\n".join(
             f"- {error}" for error in previous_errors[:80]
         )
+    spine_lang = source_spine_lang(chunk)
     reference = chunk.get("reference", {})
     ja_ref = reference.get("ja", {})
     ja_instruction = (
         "Use the supplied Japanese source window when it matches this chunk."
         if ja_ref.get("available")
-        else "No Japanese source window is available for this chapter; translate natural Japanese from the English spine and Chinese references."
+        else "No Japanese source window is available for this chapter; translate natural Japanese from the available source spine and references."
     )
-    return textwrap.dedent(
-        f"""
-        You are aligning one chunk of a trilingual pocket book.
-
-        Return exactly one JSON object. No Markdown fences. No explanation.
-
-        English is the standard spine. Use the supplied English unit plan for alignment, but do not copy English into your output. Use the Chinese/Japanese source windows for faithful corresponding text.
-
-        Required object shape:
-        {{
+    if spine_lang == "en":
+        shape = """{{
           "schema_version": "0.1-plain",
           "mode": "trilingual_plain_alignment",
-          "chunk_id": "{chunk['chunk_id']}",
+          "chunk_id": "{chunk_id}",
           "paragraphs": [
             {{
               "id": "source paragraph id",
@@ -113,15 +152,58 @@ def prompt_for_plain_chunk(chunk: dict[str, Any], previous_errors: list[str] | N
               ]
             }}
           ]
-        }}
+        }}"""
+        spine_requirements = """
+        - English is already supplied and will be preserved by the pipeline; do not include English in unit output.
+        - Chinese must be real Chinese prose, not a summary. Prefer the supplied Chinese reference translations when they match the English.
+        - Japanese: {ja_instruction}
+        - Japanese must be real Japanese prose with kana or natural Japanese inflection. Never put Chinese prose in "ja"."""
+    else:
+        source_name = {"zh": "Chinese", "ja": "Japanese"}[spine_lang]
+        copy_requirement = (
+            'Copy each supplied "zh" source unit exactly into the output "zh" field.'
+            if spine_lang == "zh"
+            else 'Copy each supplied "ja" source unit exactly into the output "ja" field.'
+        )
+        shape = """{{
+          "schema_version": "0.1-plain",
+          "mode": "trilingual_plain_alignment",
+          "chunk_id": "{chunk_id}",
+          "paragraphs": [
+            {{
+              "id": "source paragraph id",
+              "units": [
+                {{
+                  "unit_id": "exact supplied unit id",
+                  "en": "faithful English translation for that unit",
+                  "zh": "faithful Chinese text for that unit",
+                  "ja": "faithful Japanese text for that unit"
+                }}
+              ]
+            }}
+          ]
+        }}"""
+        spine_requirements = f"""
+        - Source spine language is {source_name}. {copy_requirement}
+        - English must be natural literary English corresponding to the source unit and references.
+        - Chinese must be real Chinese prose, not a summary.
+        - Japanese: {ja_instruction}
+        - Japanese must be real Japanese prose with kana or natural Japanese inflection. Never put Chinese prose in "ja"."""
+    return textwrap.dedent(
+        f"""
+        You are aligning one chunk of a trilingual pocket book.
+
+        Return exactly one JSON object. No Markdown fences. No explanation.
+
+        Use the supplied source unit plan for alignment. Use the Chinese/Japanese/English source windows for faithful corresponding text.
+
+        Required object shape:
+        {shape.format(chunk_id=chunk['chunk_id'])}
 
         Hard requirements:
         - Preserve paragraph ids and order exactly.
         - Preserve unit_id values and order exactly.
-        - Do not include or copy the English source text in your output.
-        - Chinese must be real Chinese prose, not a summary. Prefer the supplied Chinese reference translations when they match the English.
-        - Japanese: {ja_instruction}
-        - Japanese must be real Japanese prose with kana or natural Japanese inflection. Never put Chinese prose in "ja".
+        {spine_requirements.format(ja_instruction=ja_instruction)}
         - Do not include ruby, pinyin, token arrays, grammar colors, Markdown, commentary, or footnotes.
         - Keep chunk id and paragraph ids exactly as provided.
         {error_block}
@@ -129,7 +211,7 @@ def prompt_for_plain_chunk(chunk: dict[str, Any], previous_errors: list[str] | N
         Chunk metadata:
         {json.dumps({key: chunk[key] for key in ('chunk_id', 'chapter_id', 'chapter_number', 'chapter_title_en', 'chapter_part_en')}, ensure_ascii=False, indent=2)}
 
-        Source English unit plan:
+        Source unit plan:
         {json.dumps(source_unit_plan(chunk), ensure_ascii=False, indent=2)}
 
         Reference windows:
@@ -152,6 +234,7 @@ def validate_plain_chunk(source: dict[str, Any], result: dict[str, Any]) -> list
     if got_ids != expected_ids:
         errors.append(f"paragraph id/order mismatch: expected {expected_ids}, got {got_ids}")
     source_plan_by_id = {paragraph["id"]: paragraph["units"] for paragraph in source_unit_plan(source)}
+    spine_lang = source_spine_lang(source)
     for paragraph_index, paragraph in enumerate(paragraphs):
         where = f"paragraphs[{paragraph_index}]"
         if not isinstance(paragraph, dict):
@@ -175,10 +258,13 @@ def validate_plain_chunk(source: dict[str, Any], result: dict[str, Any]) -> list
                 continue
             zh = plain_text(unit.get("zh", ""))
             ja = plain_text(unit.get("ja", ""))
+            en = plain_text(unit.get("en", ""))
             if not zh:
                 errors.append(f"{unit_where}.zh: empty")
             if not ja:
                 errors.append(f"{unit_where}.ja: empty")
+            if spine_lang != "en" and not en:
+                errors.append(f"{unit_where}.en: empty")
             if zh and not HAN_RE.search(zh):
                 errors.append(f"{unit_where}.zh: Chinese text must contain Han characters")
             if zh and KANA_RE.search(zh):
@@ -364,7 +450,8 @@ def chapter_title_text(source: dict[str, Any], lang: str) -> str:
 
 
 def promote_plain_chunk(source: dict[str, Any], plain: dict[str, Any]) -> dict[str, Any]:
-    source_paragraphs = {paragraph["id"]: paragraph["en"] for paragraph in source["paragraphs"]}
+    spine_lang = source_spine_lang(source)
+    source_paragraphs = {paragraph["id"]: paragraph for paragraph in source["paragraphs"]}
     unit_plan_by_paragraph = {paragraph["id"]: paragraph["units"] for paragraph in source_unit_plan(source)}
     strict = {
         "schema_version": "0.1",
@@ -383,23 +470,41 @@ def promote_plain_chunk(source: dict[str, Any], plain: dict[str, Any]) -> dict[s
     }
     for paragraph in plain.get("paragraphs", []):
         paragraph_id = paragraph["id"]
+        source_paragraph = source_paragraphs[paragraph_id]
         source_units = unit_plan_by_paragraph[paragraph_id]
-        source_units_by_id = {unit["unit_id"]: unit["en"] for unit in source_units}
+        source_units_by_id = {unit["unit_id"]: unit for unit in source_units}
         strict_paragraph = {
             "id": paragraph_id,
-            "source_en": source_paragraphs[paragraph_id],
+            "source_en": source_paragraph.get("en", ""),
             "units": [],
         }
-        for unit in paragraph.get("units", []):
-            en = source_units_by_id[unit["unit_id"]]
-            strict_paragraph["units"].append(
-                {
-                    "source_en": en,
-                    "en": tokenize_en(en),
-                    "zh": tokenize_zh(plain_text(unit.get("zh", ""))),
-                    "ja": tokenize_ja(plain_text(unit.get("ja", ""))),
-                }
-            )
+        if source_paragraph.get("zh"):
+            strict_paragraph["source_zh"] = source_paragraph["zh"]
+        if source_paragraph.get("ja"):
+            strict_paragraph["source_ja"] = source_paragraph["ja"]
+        generated_en_parts: list[str] = []
+        plain_units = paragraph.get("units", [])
+        for unit_index, unit in enumerate(plain_units):
+            source_unit = source_units_by_id[unit["unit_id"]]
+            en = plain_text(source_unit.get("en", "")) or plain_text(unit.get("en", ""))
+            if not source_paragraph.get("en") and unit_index < len(plain_units) - 1 and not en.endswith(" "):
+                en = en + " "
+            zh = plain_text(source_unit.get("zh", "")) if spine_lang == "zh" else plain_text(unit.get("zh", ""))
+            ja = plain_text(source_unit.get("ja", "")) if spine_lang == "ja" else plain_text(unit.get("ja", ""))
+            generated_en_parts.append(en)
+            strict_unit = {
+                "source_en": en,
+                "en": tokenize_en(en),
+                "zh": tokenize_zh(zh),
+                "ja": tokenize_ja(ja),
+            }
+            if source_unit.get("zh"):
+                strict_unit["source_zh"] = source_unit["zh"]
+            if source_unit.get("ja"):
+                strict_unit["source_ja"] = source_unit["ja"]
+            strict_paragraph["units"].append(strict_unit)
+        if not strict_paragraph["source_en"]:
+            strict_paragraph["source_en"] = "".join(part for part in generated_en_parts if part).strip()
         strict["paragraphs"].append(strict_paragraph)
     return strict
 

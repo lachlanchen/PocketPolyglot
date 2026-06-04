@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "book_id": "i-am-a-cat",
+  "status": "prepared",
+  "launchable": true,
+  "task_mode": "trilingual_standard",
+  "source_spine_lang": "zh",
+  "book_title_en": "I Am a Cat",
+  "book_title_zh": "我是猫",
+  "book_title_ja": "吾輩は猫である",
+  "book_title_zh_reading": "wǒ shì māo",
+  "book_title_ja_reading": "わがはいはねこである",
+  "author": "夏目漱石",
+  "author_reading_ja": "なつめそうせき",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "markdown": {
+    "zh": "books/i-am-a-cat/markdown/zh.md",
+    "ja": "books/i-am-a-cat/markdown/ja.md"
+  },
+  "chunks_manifest": "books/i-am-a-cat/work/trilingual/chunks/manifest.json",
+  "chunks_jsonl": "books/i-am-a-cat/work/trilingual/chunks/chunks.jsonl",
+  "raw_chunk_dir": "books/i-am-a-cat/work/trilingual/interlinear/chunks",
+  "assembled_json": "books/i-am-a-cat/work/trilingual/preview/i-am-a-cat.partial.json",
+  "build_root": "build/i-am-a-cat",
+  "source_paths": {
+    "zh_primary": "sources/I-am-a-cat/我是猫【上海译文出品！影响鲁迅、老舍、钱锺书的日本国民作家夏目漱石的传世神作；用毒舌开启了人类吸猫文学先河】.epub",
+    "ja": "books/natsume-complete/markdown/book.md",
+    "ja_reservoir": "sources/夏目 漱石 作品全集.epub",
+    "scan_reference": "sources/I-am-a-cat/我是貓 吾輩は猫である.pdf"
+  },
+  "source_sha256": {
+    "zh_primary": "bd28604ef3cab3bfc3299177348e1893b8b06915860c9a78817adb4491d9ce79",
+    "ja": "5760cf2f7061f0dce82de914f720b0affc4c8d8ca83bf0f4826caa02894ad791",
+    "ja_reservoir": "6826b115026269bf1c4e6430cee30569aa3f25fc80c697941e453ecd1059cc53",
+    "scan_reference": "62a60a0164382766b3a9cf9529717d832d36f47da6628dbff524ef10b8f12955"
+  },
+  "chapter_count": 11,
+  "paragraph_count": 2629,
+  "chunk_count": 251,
+  "target_outputs": "12 PDFs: zh-en/en-zh, zh-ja/ja-zh, ja-en/en-ja; color and blackwhite"
+}

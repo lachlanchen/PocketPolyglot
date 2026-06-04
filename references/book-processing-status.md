@@ -34,7 +34,7 @@ This order prioritizes intriguing, readable, narrative books first. Prepared boo
 
 | Priority | Proposed ID | Title | Source Path | Readiness | Reason |
 |---:|---|---|---|---|---|
-| 1 | `i-am-a-cat` | 我是猫 / 吾輩は猫である | `sources/I-am-a-cat` | Sources grouped | Iconic, amusing, strong learner appeal; needs generated or sourced English layer. |
+| 1 | `i-am-a-cat` | 我是猫 / 吾輩は猫である / I Am a Cat | `sources/I-am-a-cat` | Prepared, 251 chunks | Iconic, amusing, strong learner appeal; Chinese-spine trilingual run now generates the English layer from JP/ZH sources. |
 | 2 | `silence` | 沉默 / Silence | `sources/Silence.epub` | English Markdown exists | Powerful story; needs JP/ZH source pairing strategy. |
 | 3 | `inugami-curse` | 犬神家族 / The Inugami Curse | `sources/犬神家族 - The Inugami Curse` | Sources grouped | Mystery novel, engaging and readable. |
 | 4 | `spring-snow` | 春雪 / Spring Snow | `sources/春雪 - Spring Snow` | Sources grouped | Mishima, strong literary priority. |

@@ -146,6 +146,12 @@ def validate_unit(unit: Any, where: str, errors: list[str]) -> tuple[str, str, s
     source_en = str(unit.get("source_en", ""))
     if source_en and compact(en_text) != compact(source_en):
         errors.append(f"{where}: en tokens do not reconstruct unit source_en")
+    source_zh = str(unit.get("source_zh", ""))
+    if source_zh and no_space(zh_text) != no_space(source_zh):
+        errors.append(f"{where}: zh tokens do not reconstruct unit source_zh")
+    source_ja = str(unit.get("source_ja", ""))
+    if source_ja and no_space(ja_text) != no_space(source_ja):
+        errors.append(f"{where}: ja tokens do not reconstruct unit source_ja")
     if not zh_text.strip():
         errors.append(f"{where}: zh text is empty")
     if not ja_text.strip():
@@ -173,7 +179,7 @@ def validate_chunk(source: dict[str, Any], result: dict[str, Any]) -> list[str]:
     got_ids = [paragraph.get("id") for paragraph in paragraphs if isinstance(paragraph, dict)]
     if got_ids != expected_ids:
         errors.append(f"paragraph id/order mismatch: expected {expected_ids}, got {got_ids}")
-    source_by_id = {paragraph["id"]: paragraph["en"] for paragraph in source["paragraphs"]}
+    source_by_id = {paragraph["id"]: str(paragraph.get("en", "")) for paragraph in source["paragraphs"]}
     for paragraph_index, paragraph in enumerate(paragraphs):
         if not isinstance(paragraph, dict):
             errors.append(f"paragraphs[{paragraph_index}]: must be an object")
@@ -183,8 +189,11 @@ def validate_chunk(source: dict[str, Any], result: dict[str, Any]) -> list[str]:
         if paragraph_id not in source_by_id:
             continue
         expected_en = source_by_id[paragraph_id]
-        if compact(paragraph.get("source_en", "")) != compact(expected_en):
+        paragraph_source_en = str(paragraph.get("source_en", ""))
+        if expected_en and compact(paragraph_source_en) != compact(expected_en):
             errors.append(f"{paragraph_id}: paragraph source_en changed")
+        if not expected_en and not compact(paragraph_source_en):
+            errors.append(f"{paragraph_id}: paragraph source_en is required when English is generated")
         units = paragraph.get("units")
         if not isinstance(units, list) or not units:
             errors.append(f"{paragraph_id}: missing units")
@@ -193,7 +202,8 @@ def validate_chunk(source: dict[str, Any], result: dict[str, Any]) -> list[str]:
         for unit_index, unit in enumerate(units):
             en_text, _zh_text, _ja_text = validate_unit(unit, f"{where}.units[{unit_index}]", errors)
             rebuilt_en_parts.append(en_text)
-        if compact("".join(rebuilt_en_parts)) != compact(expected_en):
+        expected_rebuilt_en = expected_en or paragraph_source_en
+        if expected_rebuilt_en and compact("".join(rebuilt_en_parts)) != compact(expected_rebuilt_en):
             errors.append(f"{paragraph_id}: units do not reconstruct paragraph English")
     return errors
 
