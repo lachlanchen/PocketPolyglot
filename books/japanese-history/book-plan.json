@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "book_id": "japanese-history",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_en_spine_generated_ja_with_ocr_zh_reference",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "en": "sources/japanese-history/A Concise History of Japan.epub",
+    "zh": "sources/japanese-history/[美]布雷特 L 沃克.日本史.pdf"
+  },
+  "source_sha256": {
+    "en": "ab097be9a0b7b832486e24caa56a3be71f831c036a6f412420d8b94c04950b07",
+    "zh": "8f90809d0b0eeb87f6891af760dc3df06b444d4443707b51a4ae7f992f7001a5"
+  },
+  "markdown": {
+    "en": "books/japanese-history/markdown/en.md",
+    "zh": "books/japanese-history/markdown/zh.md"
+  },
+  "book_title_en": "A Concise History of Japan",
+  "book_title_zh": "日本史",
+  "book_title_ja": "日本史",
+  "book_title_zh_reading": "rì běn shǐ",
+  "book_title_ja_reading": "にほんし",
+  "author": "Brett L. Walker",
+  "author_reading_zh": "bù léi tè L. wò kè",
+  "author_reading_ja": "ブレット L. ウォーカー",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Brett L. Walker, A Concise History of Japan. English EPUB is the alignment spine; Chinese scanned PDF OCR is a noisy reference; Japanese is generated.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "global_ratio_window",
+  "chunks_jsonl": "books/japanese-history/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/japanese-history/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/japanese-history/work/trilingual/interlinear/chunks",
+  "preview_json": "books/japanese-history/work/trilingual/preview/japanese-history.partial.json",
+  "assembled_json": "books/japanese-history/work/trilingual/preview/japanese-history.partial.json",
+  "prepared_at": "2026-06-04T22:35:14.179349+00:00",
+  "chunk_count": 290,
+  "english_chapter_count": 16,
+  "chinese_reference_chapter_count": 1
+}
