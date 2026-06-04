@@ -488,7 +488,10 @@ def promote_plain_chunk(source: dict[str, Any], plain: dict[str, Any]) -> dict[s
         plain_units = paragraph.get("units", [])
         for unit_index, unit in enumerate(plain_units):
             source_unit = source_units_by_id[unit["unit_id"]]
-            en = plain_text(source_unit.get("en", "")) or plain_text(unit.get("en", ""))
+            if spine_lang == "en":
+                en = str(source_unit.get("en", "")) or plain_text(unit.get("en", ""))
+            else:
+                en = plain_text(source_unit.get("en", "")) or plain_text(unit.get("en", ""))
             if not source_paragraph.get("en") and unit_index < len(plain_units) - 1 and not en.endswith(" "):
                 en = en + " "
             zh = plain_text(source_unit.get("zh", "")) if spine_lang == "zh" else plain_text(unit.get("zh", ""))
