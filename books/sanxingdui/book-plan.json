@@ -1,0 +1,37 @@
+{
+  "book_id": "sanxingdui",
+  "status": "prepared_ocr",
+  "description": "Sanxingdui scanned source OCR into searchable PDFs and review Markdown.",
+  "books": [
+    {
+      "slug": "shenqi-gushu",
+      "title": "神奇古蜀_三星堆和金沙遗址出土文物",
+      "source": "sources/sanxingdui/神奇古蜀_三星堆和金沙遗址出土文物.pdf"
+    },
+    {
+      "slug": "renjian-tianguo",
+      "title": "人间天国_ 三星堆.金沙王都发现之谜",
+      "source": "sources/sanxingdui/人间天国_ 三星堆.金沙王都发现之谜.pdf"
+    },
+    {
+      "slug": "huaxia-shendu",
+      "title": "华夏神都_ 全方位揭谜三星堆文明",
+      "source": "sources/sanxingdui/华夏神都_ 全方位揭谜三星堆文明.pdf"
+    },
+    {
+      "slug": "jisikeng",
+      "title": "三星堆祭祀坑",
+      "source": "sources/sanxingdui/三星堆祭祀坑.pdf"
+    },
+    {
+      "slug": "wenwu-quanjilu",
+      "title": "三星堆出土文物全记录（套装共3册）",
+      "source": "sources/sanxingdui/三星堆出土文物全记录（套装共3册）.pdf"
+    }
+  ],
+  "outputs": {
+    "searchable_pdf_dir": "build/sanxingdui/<slug>/",
+    "markdown_dir": "books/sanxingdui/markdown/",
+    "work_dir": "books/sanxingdui/work/ocr/<slug>/"
+  }
+}
