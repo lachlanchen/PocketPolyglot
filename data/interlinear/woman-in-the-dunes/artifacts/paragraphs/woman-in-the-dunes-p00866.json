@@ -1,0 +1,170 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "woman-in-the-dunes",
+  "paragraph_id": "woman-in-the-dunes-p00866",
+  "source_text": "干得漂亮！",
+  "source_sha256": "8e9deba3fd1d32bb7e6ecc9fdd820f0ff3b0fc3c7d828d7babf2a4765856b130",
+  "source_normalized_sha256": "8e9deba3fd1d32bb7e6ecc9fdd820f0ff3b0fc3c7d828d7babf2a4765856b130",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 10,
+    "grammar_token_total": 10,
+    "unit_count": 1
+  },
+  "source_chunk_id": "woman-in-the-dunes-chunk-0866",
+  "source_manifest_sha256": "d4e448272465ec27547c95a3075b988bdeb9e6260e21053d5ef38c28d636507d",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "がき",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "二四",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "attributive"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "attributive"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "attributive"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-二四-intro",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "attributive"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "attributive"
+      },
+      {
+        "t": "四",
+        "r": "よん",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "woman-in-the-dunes-p00866",
+    "source_text": "干得漂亮！",
+    "units": [
+      {
+        "source_text": "干得漂亮！",
+        "zh": [
+          {
+            "t": "干",
+            "r": "gàn",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "漂",
+            "r": "piào",
+            "g": "complement"
+          },
+          {
+            "t": "亮",
+            "r": "liang",
+            "g": "complement"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "見",
+              "r": "み",
+              "g": "complement"
+            },
+            {
+              "t": "事",
+              "r": "ごと",
+              "g": "complement"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "complement"
+            }
+          ],
+          [
+            {
+              "t": "やった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "！",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

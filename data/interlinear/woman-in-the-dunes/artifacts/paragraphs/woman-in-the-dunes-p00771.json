@@ -1,0 +1,453 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "woman-in-the-dunes",
+  "paragraph_id": "woman-in-the-dunes-p00771",
+  "source_text": "“等一等！有些话想问问，只问两句就可以，请等一下！”",
+  "source_sha256": "980b0b6633e4f81c5e38ceb9664f6b5536aae506e0a28860df0834cf2734b1a5",
+  "source_normalized_sha256": "980b0b6633e4f81c5e38ceb9664f6b5536aae506e0a28860df0834cf2734b1a5",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 59,
+    "grammar_token_total": 59,
+    "unit_count": 4
+  },
+  "source_chunk_id": "woman-in-the-dunes-chunk-0771",
+  "source_manifest_sha256": "d4e448272465ec27547c95a3075b988bdeb9e6260e21053d5ef38c28d636507d",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "object"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "二一",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "object"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "object"
+      },
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-二一-intro",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "object"
+      },
+      {
+        "t": "一",
+        "r": "yī",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "object"
+      },
+      {
+        "t": "一",
+        "r": "いち",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "woman-in-the-dunes-p00771",
+    "source_text": "“等一等！有些话想问问，只问两句就可以，请等一下！”",
+    "units": [
+      {
+        "source_text": "“等一等！",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "等",
+            "r": "děng",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "complement"
+          },
+          {
+            "t": "等",
+            "r": "děng",
+            "g": "complement"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ちょっと",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "待",
+              "r": "ま",
+              "g": "predicate"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "！",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "そこで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "待",
+              "r": "ま",
+              "g": "predicate"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "ください",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "！",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "有些话想问问，",
+        "zh": [
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "些",
+            "r": "xiē",
+            "g": "attributive"
+          },
+          {
+            "t": "话",
+            "r": "huà",
+            "g": "object"
+          },
+          {
+            "t": "想",
+            "r": "xiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "问",
+            "r": "wèn",
+            "g": "predicate"
+          },
+          {
+            "t": "问",
+            "r": "wèn",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "少",
+              "r": "すこ",
+              "g": "attributive"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "聞",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "きたい",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "こと",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "あるんです",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "只问两句就可以，",
+        "zh": [
+          {
+            "t": "只",
+            "r": "zhǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "问",
+            "r": "wèn",
+            "g": "predicate"
+          },
+          {
+            "t": "两",
+            "r": "liǎng",
+            "g": "attributive"
+          },
+          {
+            "t": "句",
+            "r": "jù",
+            "g": "object"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "predicate"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "二",
+              "r": "ふた",
+              "g": "attributive"
+            },
+            {
+              "t": "言",
+              "r": "こと",
+              "g": "object"
+            },
+            {
+              "t": "だけ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "聞",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "ければ",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "それで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "いいんです",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "请等一下！”",
+        "zh": [
+          {
+            "t": "请",
+            "r": "qǐng",
+            "g": "function"
+          },
+          {
+            "t": "等",
+            "r": "děng",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "complement"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "complement"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "どうか",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "少",
+              "r": "すこ",
+              "g": "complement"
+            },
+            {
+              "t": "し",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "だけ",
+              "r": "",
+              "g": "complement"
+            }
+          ],
+          [
+            {
+              "t": "待",
+              "r": "ま",
+              "g": "predicate"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "ください",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "！",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
