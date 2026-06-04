@@ -149,6 +149,7 @@ python scripts/interlinear/json_to_trilingual_pair_tex.py "$assembled_json" \
   --powered-by "$powered_by" \
   --cover-image "$cover_image"
 
+rm -f "$build_dir/book.aux" "$build_dir/book.out" "$build_dir/book.toc" "$build_dir/book.log"
 xelatex -interaction=nonstopmode -halt-on-error -jobname=book -output-directory="$build_dir" \
   "\\def\\TriPairSource{$build_dir/source.tex}\\input{tex/interlinear-trilingual-pair/book.tex}"
 xelatex -interaction=nonstopmode -halt-on-error -jobname=book -output-directory="$build_dir" \
