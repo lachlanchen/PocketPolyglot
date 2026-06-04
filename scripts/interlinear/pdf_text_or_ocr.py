@@ -33,6 +33,21 @@ def content_chars(text: str) -> int:
     return len(CONTENT_RE.findall(text))
 
 
+def extract_pdf_text_checked(pdf: Path, *, layout: bool = True, min_content_chars: int = 2000) -> str:
+    """Extract embedded PDF text and reject metadata-only/scanned results."""
+
+    mode = "-layout" if layout else "-raw"
+    text = run_text(["pdftotext", mode, str(pdf), "-"])
+    chars = content_chars(text)
+    if chars < min_content_chars:
+        raise RuntimeError(
+            f"pdftotext extracted only {chars} content characters from {pdf}. "
+            "This looks like a scanned or metadata-only PDF. Convert it first with "
+            "scripts/interlinear/pdf_text_or_ocr.py so OCR is used when needed."
+        )
+    return text
+
+
 def markdown_from_text(pdf: Path, text: str, title: str) -> str:
     generated_at = dt.datetime.now(dt.timezone.utc).isoformat()
     return (

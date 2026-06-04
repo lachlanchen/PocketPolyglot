@@ -6,8 +6,15 @@ from __future__ import annotations
 import argparse
 import re
 import subprocess
+import sys
 from collections import OrderedDict
 from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "scripts" / "interlinear"))
+
+from pdf_text_or_ocr import content_chars, extract_pdf_text_checked
 
 
 CHAPTERS_ZH = ["序曲", "第一手記", "第二手記", "第三手記", "後記"]
@@ -168,11 +175,21 @@ def main() -> int:
 
     zh_pdf = Path(args.zh_pdf)
     ja_pdf = Path(args.ja_pdf)
+    if not zh_pdf.is_absolute():
+        zh_pdf = ROOT / zh_pdf
+    if not ja_pdf.is_absolute():
+        ja_pdf = ROOT / ja_pdf
     out_dir = Path(args.output_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    zh_raw = run_text(["pdftotext", "-raw", str(zh_pdf), "-"])
+    zh_raw = extract_pdf_text_checked(zh_pdf, layout=False)
     ja_raw = run_text(["mutool", "draw", "-F", "txt", "-o", "-", str(ja_pdf)])
+    ja_chars = content_chars(ja_raw)
+    if ja_chars < 2000:
+        raise SystemExit(
+            f"mutool extracted only {ja_chars} content characters from {ja_pdf}. "
+            "This looks like a failed/scanned extraction; OCR or a different source is required."
+        )
 
     (out_dir / "zh.raw.md").write_text(zh_raw, encoding="utf-8")
     (out_dir / "ja.raw.md").write_text(ja_raw, encoding="utf-8")

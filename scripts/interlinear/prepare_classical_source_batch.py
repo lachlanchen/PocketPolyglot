@@ -14,6 +14,8 @@ from typing import Any
 
 from bs4 import BeautifulSoup
 
+from pdf_text_or_ocr import extract_pdf_text_checked
+
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -183,15 +185,8 @@ def pdf_text_to_markdown(
     start_text: str = "",
     start_heading: str = "",
 ) -> None:
-    proc = subprocess.run(
-        ["pdftotext", "-raw", str(pdf_path), "-"],
-        cwd=ROOT,
-        check=True,
-        text=True,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-    )
-    raw_lines = proc.stdout.replace("\r\n", "\n").replace("\r", "\n").splitlines()
+    raw = extract_pdf_text_checked(pdf_path, layout=False)
+    raw_lines = raw.replace("\r\n", "\n").replace("\r", "\n").splitlines()
     if start_text:
         wanted = clean_text(start_text)
         for index, raw_line in enumerate(raw_lines):

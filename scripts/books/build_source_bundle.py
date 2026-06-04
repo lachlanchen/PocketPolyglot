@@ -21,6 +21,9 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "scripts" / "interlinear"))
+
+from pdf_text_or_ocr import content_chars, extract_pdf_text_checked
 
 # ---- boilerplate stripping ----
 
@@ -112,12 +115,12 @@ def detect_source_kind(path: Path) -> str:
     return "unknown"
 
 
-def has_text_layer(pdf_path: Path) -> bool:
+def has_text_layer(pdf_path: Path, *, min_content_chars: int = 200) -> bool:
     proc = subprocess.run(
-        ["pdftotext", "-f", "1", "-l", "2", str(pdf_path), "-"],
+        ["pdftotext", "-f", "1", "-l", "10", str(pdf_path), "-"],
         capture_output=True, text=True,
     )
-    return bool(proc.stdout.strip())
+    return content_chars(proc.stdout) >= min_content_chars
 
 
 def pdf_page_count(pdf_path: Path) -> int:
@@ -134,11 +137,7 @@ def pdf_page_count(pdf_path: Path) -> int:
 
 def pdf_text_to_markdown(pdf_path: Path, output_path: Path, title: str) -> str:
     """Extract text from a text-layer PDF and write cleaned markdown. Returns sha256."""
-    proc = subprocess.run(
-        ["pdftotext", "-raw", str(pdf_path), "-"],
-        capture_output=True, text=True,
-    )
-    raw = proc.stdout.replace("\r\n", "\n").replace("\r", "\n")
+    raw = extract_pdf_text_checked(pdf_path, layout=False).replace("\r\n", "\n").replace("\r", "\n")
     lines: list[str] = [f"# {title}", ""]
     current_heading = ""
     buffer: list[str] = []

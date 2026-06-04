@@ -13,6 +13,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from pdf_text_or_ocr import extract_pdf_text_checked
+
 
 ROOT = Path(__file__).resolve().parents[2]
 BOOK_ID = "botchan"
@@ -84,7 +86,7 @@ def normalize_english_paragraph(lines: list[str]) -> str:
 
 
 def parse_english_pdf(path: Path) -> list[Chapter]:
-    raw = run_text(["pdftotext", "-layout", str(path), "-"])
+    raw = extract_pdf_text_checked(path, layout=True)
     chapters: list[Chapter] = []
     current: Chapter | None = None
     paragraph_lines: list[str] = []
