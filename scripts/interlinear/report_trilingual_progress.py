@@ -5,8 +5,13 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from pathlib import Path
 from typing import Any
+
+
+CONTENT_RE = re.compile(r"[A-Za-z0-9\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
+FUNCTION_PUNCT = set(" \t\r\n.,;:!?\"'“”‘’()[]{}<>《》〈〉—–-…·・、。，！？；：「」『』（）")
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -29,7 +34,8 @@ def token_stats(chunk: dict[str, Any]) -> tuple[int, int]:
                 for token in tokens:
                     if not isinstance(token, dict):
                         continue
-                    if not str(token.get("t", "")).strip():
+                    text = str(token.get("t", ""))
+                    if not CONTENT_RE.search(text) or all(char in FUNCTION_PUNCT for char in text):
                         continue
                     total += 1
                     if token.get("g"):
