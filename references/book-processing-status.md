@@ -2,6 +2,12 @@
 
 This table is the working order for PocketPolyglot/LinguaLeaf book production. Keep processed books separate from the future queue. Put large anthology, reference, "complete works", and classical collection projects later unless the user explicitly promotes one.
 
+## Production Target
+
+The default future pipeline is trilingual EN/JP/ZH. Prepare one strict JSON source first, then compile 12 PDFs from it: `zh-en`, `en-zh`, `zh-ja`, `ja-zh`, `ja-en`, and `en-ja`, each in `color` and `blackwhite`. Use English as the alignment spine for modern world literature when a reliable English source is available.
+
+For classical Chinese books, keep the classical original as a preserved source layer, but generate Japanese and English from the modern Chinese translation/paraphrase rather than directly from ambiguous OCR or terse classical syntax. The modern Chinese layer is the meaning bridge; the classical text remains visible as the original where the renderer supports it.
+
 ## Processed / Compiled
 
 | Order | Book ID | Title | Source Area | Status | Notes |
@@ -27,7 +33,7 @@ This order prioritizes intriguing, readable, narrative books first. Prepared boo
 
 | Priority | Proposed ID | Title | Source Path | Readiness | Reason |
 |---:|---|---|---|---|---|
-| 1 | `botchan` | 少爷 / 坊っちゃん / Botchan | `sources/少爷 - Botchan` | Sources grouped | Short, funny, high-value Soseki classic; good next visible output. |
+| 1 | `botchan` | 少爷 / 坊っちゃん / Botchan | `sources/少爷 - Botchan` + Natsume source reservoir | Prepared, 261 chunks | First queue item for the trilingual 12-PDF pipeline. |
 | 2 | `i-am-a-cat` | 我是猫 / 吾輩は猫である | `sources/I-am-a-cat` | Sources grouped | Iconic, amusing, strong learner appeal. |
 | 3 | `silence` | 沉默 / Silence | `sources/Silence.epub` | English Markdown exists | Powerful story; needs JP/ZH source pairing strategy. |
 | 4 | `inugami-curse` | 犬神家族 / The Inugami Curse | `sources/犬神家族 - The Inugami Curse` | Sources grouped | Mystery novel, engaging and readable. |
@@ -83,6 +89,8 @@ These are valuable, but they behave more like almanac/collection/reference proje
 
 - Move a title from the future queue to processed only after full chunk coverage, no stale chunks, and compiled PDFs are available.
 - Keep processed books in the processed table even if later refinements are needed.
+- Future single-title books should target EN/JP/ZH JSON and 12 PDFs unless the user explicitly asks for a smaller bilingual pass.
+- For classical Chinese, generate JP/EN from the modern Chinese meaning bridge and retain the classical original as source/original text.
 - Prefer one named work over a complete works volume or anthology.
 - Promote an anthology only when the user asks for that specific collection.
 - For future queue ordering, prefer readable, intriguing narrative works before reference/almanac-style collections.

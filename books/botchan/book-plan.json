@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "book_id": "botchan",
+  "status": "prepared",
+  "launchable": true,
+  "task_mode": "trilingual_standard",
+  "book_title_en": "Botchan",
+  "book_title_zh": "少爷",
+  "book_title_ja": "坊っちゃん",
+  "book_title_zh_reading": "shǎo ye",
+  "book_title_ja_reading": "ぼっちゃん",
+  "author": "夏目漱石",
+  "author_reading_ja": "なつめそうせき",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "markdown": {
+    "en": "books/botchan/markdown/en.md",
+    "zh": "books/botchan/markdown/zh.md",
+    "ja": "books/botchan/markdown/ja.md"
+  },
+  "chunks_manifest": "books/botchan/work/trilingual/chunks/manifest.json",
+  "chunks_jsonl": "books/botchan/work/trilingual/chunks/chunks.jsonl",
+  "raw_chunk_dir": "books/botchan/work/trilingual/interlinear/chunks",
+  "assembled_json": "books/botchan/work/trilingual/preview/botchan.partial.json",
+  "build_root": "build/botchan",
+  "source_paths": {
+    "en": "sources/少爷 - Botchan/Botchan.pdf",
+    "zh_primary": "sources/少爷 - Botchan/少爷(日本国民大作家夏目漱石代表作，译文幽默好读，故事让人忍俊不禁。2016最新电影版二宫和也领衔主演)(果麦经典).epub",
+    "ja": "books/natsume-complete/markdown/book.md",
+    "ja_reservoir": "sources/夏目 漱石 作品全集.epub"
+  },
+  "source_sha256": {
+    "en": "b31c16d2a622886a88fef62bfa02114d245c6757fc5482e702a05b5ef07af28e",
+    "zh_primary": "17f354110a7b1cc82dfa7a0e0da8c8083a43efef231463409edab6c0b37f8196",
+    "ja": "5760cf2f7061f0dce82de914f720b0affc4c8d8ca83bf0f4826caa02894ad791",
+    "ja_reservoir": "6826b115026269bf1c4e6430cee30569aa3f25fc80c697941e453ecd1059cc53"
+  },
+  "chapter_count": 11,
+  "paragraph_count": 490,
+  "chunk_count": 261,
+  "target_outputs": "12 PDFs: zh-en/en-zh, zh-ja/ja-zh, ja-en/en-ja; color and blackwhite"
+}

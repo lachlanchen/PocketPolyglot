@@ -5,11 +5,20 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from collections import OrderedDict
 from pathlib import Path
 from typing import Any
 
+import pykakasi
+from pypinyin import Style, pinyin
+
 from validate_trilingual_interlinear_json import validate_chunk
+
+
+HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
+SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
+KAKASI = pykakasi.kakasi()
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -22,6 +31,72 @@ def load_chunks_jsonl(path: Path) -> list[dict[str, Any]]:
 
 def plain_title(text: str) -> list[dict[str, str]]:
     return [{"t": text}]
+
+
+def tokenize_zh_title(text: str) -> list[dict[str, str]]:
+    tokens: list[dict[str, str]] = []
+    buffer: list[str] = []
+
+    def flush() -> None:
+        if buffer:
+            tokens.append({"t": "".join(buffer)})
+            buffer.clear()
+
+    for char in str(text):
+        if SINGLE_HAN_RE.fullmatch(char):
+            flush()
+            reading = pinyin(char, style=Style.TONE, heteronym=False, strict=False)[0][0]
+            tokens.append({"t": char, "r": reading})
+        else:
+            buffer.append(char)
+    flush()
+    return tokens or plain_title(text)
+
+
+def append_ja_text(tokens: list[dict[str, str]], text: str) -> None:
+    if not text:
+        return
+    if tokens and "r" not in tokens[-1]:
+        tokens[-1]["t"] += text
+    else:
+        tokens.append({"t": text})
+
+
+def tokenize_ja_title(text: str) -> list[dict[str, str]]:
+    tokens: list[dict[str, str]] = []
+    try:
+        segments = KAKASI.convert(str(text))
+    except Exception:
+        segments = [{"orig": str(text), "hira": ""}]
+    for segment in segments:
+        orig = str(segment.get("orig") or "")
+        hira = str(segment.get("hira") or "")
+        if not HAN_RE.search(orig):
+            append_ja_text(tokens, orig)
+            continue
+        kanji_count = sum(1 for char in orig if SINGLE_HAN_RE.fullmatch(char))
+        reading_parts = [hira] if kanji_count == 1 and hira else (list(hira) if len(hira) >= kanji_count else [])
+        reading_index = 0
+        for char in orig:
+            if SINGLE_HAN_RE.fullmatch(char):
+                if reading_parts:
+                    reading = reading_parts[min(reading_index, len(reading_parts) - 1)]
+                else:
+                    reading = str(KAKASI.convert(char)[0].get("hira") or "よみ")
+                tokens.append({"t": char, "r": reading})
+                reading_index += 1
+            else:
+                append_ja_text(tokens, char)
+    return tokens or plain_title(text)
+
+
+def title_tokens(manifest: dict[str, Any], lang: str) -> list[dict[str, str]]:
+    text = str(manifest.get(f"book_title_{lang}") or "")
+    if lang == "en":
+        return plain_title(text or "Untitled")
+    if lang == "zh":
+        return tokenize_zh_title(text or "未命名")
+    return tokenize_ja_title(text or "無題")
 
 
 def main() -> int:
@@ -73,28 +148,24 @@ def main() -> int:
     if assembled_count == 0:
         raise RuntimeError("no chunk JSON files were assembled")
 
-    source_note = (
-        "English is the alignment spine. Chinese uses both supplied Chinese translations as references. "
-        "Japanese uses supplied Japanese volumes where available; later Japanese is generated from English plus Chinese references."
+    source_note = str(
+        manifest.get("source_note")
+        or (
+            "English is the alignment spine. Chinese and Japanese use supplied source/reference windows "
+            "where available; missing target-language rows are generated from the spine and references."
+        )
     )
     book = {
         "schema_version": "0.1",
         "mode": "trilingual_standard",
         "title": {
-            "en": plain_title(manifest.get("book_title_en", "Gone With the Wind")),
-            "zh": [{"t": "飘", "r": "piāo"}],
-            "ja": [
-                {"t": "風", "r": "かぜ"},
-                {"t": "と", "r": ""},
-                {"t": "共", "r": "とも"},
-                {"t": "に", "r": ""},
-                {"t": "去", "r": "さ"},
-                {"t": "りぬ", "r": ""},
-            ],
+            "en": title_tokens(manifest, "en"),
+            "zh": title_tokens(manifest, "zh"),
+            "ja": title_tokens(manifest, "ja"),
         },
         "author": {
-            "name": manifest.get("author", "Margaret Mitchell"),
-            "reading_ja": "マーガレット ミッチェル",
+            "name": manifest.get("author", ""),
+            "reading_ja": manifest.get("author_reading_ja", ""),
         },
         "source": {
             "source_paths": manifest.get("source_paths", {}),
