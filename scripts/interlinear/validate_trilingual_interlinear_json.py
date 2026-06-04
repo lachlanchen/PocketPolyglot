@@ -42,6 +42,10 @@ def token_text(tokens: Any) -> str:
     return "".join(str(token.get("t", "")) for token in tokens if isinstance(token, dict))
 
 
+def has_language_content(text: str) -> bool:
+    return bool(HAN_RE.search(text) or KANA_RE.search(text) or LATIN_RE.search(text) or re.search(r"\d", text))
+
+
 def validate_token_shape(tokens: Any, where: str, errors: list[str]) -> bool:
     if not isinstance(tokens, list):
         errors.append(f"{where}: must be a token list")
@@ -137,19 +141,22 @@ def validate_unit(unit: Any, where: str, errors: list[str]) -> tuple[str, str, s
     if not isinstance(unit, dict):
         errors.append(f"{where}: unit must be an object")
         return "", "", ""
+    source_en = str(unit.get("source_en", ""))
+    source_zh = str(unit.get("source_zh", ""))
+    source_ja = str(unit.get("source_ja", ""))
+    source_basis = source_zh or source_ja or source_en
+    require_content = has_language_content(source_basis)
+    require_zh_han = require_content and (not source_zh or bool(HAN_RE.search(source_zh)))
     validate_en_tokens(unit.get("en", []), f"{where}.en", errors)
-    validate_zh_tokens(unit.get("zh", []), f"{where}.zh", errors, require_han=True)
-    validate_ja_tokens(unit.get("ja", []), f"{where}.ja", errors, require_japanese=True)
+    validate_zh_tokens(unit.get("zh", []), f"{where}.zh", errors, require_han=require_zh_han)
+    validate_ja_tokens(unit.get("ja", []), f"{where}.ja", errors, require_japanese=require_content)
     en_text = token_text(unit.get("en", []))
     zh_text = token_text(unit.get("zh", []))
     ja_text = token_text(unit.get("ja", []))
-    source_en = str(unit.get("source_en", ""))
     if source_en and compact(en_text) != compact(source_en):
         errors.append(f"{where}: en tokens do not reconstruct unit source_en")
-    source_zh = str(unit.get("source_zh", ""))
     if source_zh and no_space(zh_text) != no_space(source_zh):
         errors.append(f"{where}: zh tokens do not reconstruct unit source_zh")
-    source_ja = str(unit.get("source_ja", ""))
     if source_ja and no_space(ja_text) != no_space(source_ja):
         errors.append(f"{where}: ja tokens do not reconstruct unit source_ja")
     if not zh_text.strip():
