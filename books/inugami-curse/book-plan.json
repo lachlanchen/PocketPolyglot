@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "book_id": "inugami-curse",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_en_spine_generated_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "en": "sources/犬神家族 - The Inugami Curse/The Inugami Curse.epub",
+    "zh": "sources/犬神家族 - The Inugami Curse/《犬神家族》作者：[日]横沟正史.azw"
+  },
+  "source_sha256": {
+    "en": "22b8490d66eb959bd593c27dc641a0c90d1fa0b8127d297cb12bd33c3142e4f9",
+    "zh": "d1b008c96b238a3efb7d8fa1eea534b7ca82d87ca025623a17a2ac9320e1f8fb"
+  },
+  "markdown": {
+    "en": "books/inugami-curse/markdown/en.md",
+    "zh": "books/inugami-curse/markdown/zh.md"
+  },
+  "book_title_en": "The Inugami Curse",
+  "book_title_zh": "犬神家族",
+  "book_title_ja": "犬神家の一族",
+  "book_title_zh_reading": "quǎn shén jiā zú",
+  "book_title_ja_reading": "いぬがみけのいちぞく",
+  "author": "横溝正史",
+  "author_reading_zh": "héng gōu zhèng shǐ",
+  "author_reading_ja": "よこみぞせいし",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Yokomizo Seishi, The Inugami Curse. English source is the alignment spine; Chinese AZW translation is used as a reference; Japanese is generated.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "global_ratio_window",
+  "chunks_jsonl": "books/inugami-curse/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/inugami-curse/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/inugami-curse/work/trilingual/interlinear/chunks",
+  "preview_json": "books/inugami-curse/work/trilingual/preview/inugami-curse.partial.json",
+  "prepared_at": "2026-06-04T14:57:39.450535+00:00",
+  "chunk_count": 210,
+  "english_chapter_count": 38,
+  "chinese_chapter_count": 19
+}
