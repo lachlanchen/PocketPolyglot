@@ -1,0 +1,195 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "woman-in-the-dunes",
+  "paragraph_id": "woman-in-the-dunes-p00978",
+  "source_text": "“你哭什么？”",
+  "source_sha256": "f3b8db7bf72b654788930c045978ac3d9cef313b49e72632ffe253e07db4d7f6",
+  "source_normalized_sha256": "f3b8db7bf72b654788930c045978ac3d9cef313b49e72632ffe253e07db4d7f6",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 15,
+    "grammar_token_total": 15,
+    "unit_count": 1
+  },
+  "source_chunk_id": "woman-in-the-dunes-chunk-0978",
+  "source_manifest_sha256": "d4e448272465ec27547c95a3075b988bdeb9e6260e21053d5ef38c28d636507d",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "げん",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "二七",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "object"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "object"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-二七-intro",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "object"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "object"
+      },
+      {
+        "t": "七",
+        "r": "なな",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "woman-in-the-dunes-p00978",
+    "source_text": "“你哭什么？”",
+    "units": [
+      {
+        "source_text": "“你哭什么？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "哭",
+            "r": "kū",
+            "g": "predicate"
+          },
+          {
+            "t": "什",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "object"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "君",
+              "r": "きみ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "どうして",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "泣",
+              "r": "な",
+              "g": "predicate"
+            },
+            {
+              "t": "いているの",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

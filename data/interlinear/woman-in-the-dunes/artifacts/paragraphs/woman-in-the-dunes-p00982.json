@@ -1,0 +1,200 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "woman-in-the-dunes",
+  "paragraph_id": "woman-in-the-dunes-p00982",
+  "source_text": "“失败了呀……”",
+  "source_sha256": "0f27e1655fbb667980b9ea4aad6b583885b4f39ae23fb53d6f6b251f6525f32a",
+  "source_normalized_sha256": "0f27e1655fbb667980b9ea4aad6b583885b4f39ae23fb53d6f6b251f6525f32a",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 15,
+    "grammar_token_total": 15,
+    "unit_count": 1
+  },
+  "source_chunk_id": "woman-in-the-dunes-chunk-0982",
+  "source_manifest_sha256": "d4e448272465ec27547c95a3075b988bdeb9e6260e21053d5ef38c28d636507d",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "書",
+        "r": "が",
+        "g": "object"
+      },
+      {
+        "t": "き",
+        "r": "",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "二七",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "object"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "object"
+      },
+      {
+        "t": "七",
+        "r": "じゅうなな",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-二七-intro",
+    "title_zh": [
+      {
+        "t": "二",
+        "r": "èr",
+        "g": "object"
+      },
+      {
+        "t": "七",
+        "r": "qī",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "二",
+        "r": "に",
+        "g": "object"
+      },
+      {
+        "t": "七",
+        "r": "じゅうなな",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "woman-in-the-dunes-p00982",
+    "source_text": "“失败了呀……”",
+    "units": [
+      {
+        "source_text": "“失败了呀……”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "失",
+            "r": "shī",
+            "g": "predicate"
+          },
+          {
+            "t": "败",
+            "r": "bài",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "呀",
+            "r": "ya",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "…",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "失",
+              "r": "しつ",
+              "g": "predicate"
+            },
+            {
+              "t": "敗",
+              "r": "ぱい",
+              "g": "predicate"
+            },
+            {
+              "t": "してしまった",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "なあ",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "……",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
