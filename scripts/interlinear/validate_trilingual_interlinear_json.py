@@ -80,7 +80,14 @@ def validate_en_tokens(tokens: Any, where: str, errors: list[str]) -> None:
             errors.append(f"{where}[{token_index}]: English tokens must not carry ruby/pinyin")
 
 
-def validate_zh_tokens(tokens: Any, where: str, errors: list[str], *, require_han: bool = False) -> None:
+def validate_zh_tokens(
+    tokens: Any,
+    where: str,
+    errors: list[str],
+    *,
+    require_han: bool = False,
+    allow_kana: bool = False,
+) -> None:
     if not validate_token_shape(tokens, where, errors):
         return
     text_parts: list[str] = []
@@ -99,7 +106,7 @@ def validate_zh_tokens(tokens: Any, where: str, errors: list[str], *, require_ha
     text = "".join(text_parts)
     if require_han and not HAN_RE.search(text):
         errors.append(f"{where}: Chinese text must contain Han characters")
-    if KANA_RE.search(text):
+    if KANA_RE.search(text) and not allow_kana:
         errors.append(f"{where}: Chinese row contains Japanese kana")
 
 
@@ -147,8 +154,9 @@ def validate_unit(unit: Any, where: str, errors: list[str]) -> tuple[str, str, s
     source_basis = source_zh or source_ja or source_en
     require_content = has_language_content(source_basis)
     require_zh_han = require_content and (not source_zh or bool(HAN_RE.search(source_zh)))
+    allow_zh_kana = bool(source_zh and KANA_RE.search(source_zh))
     validate_en_tokens(unit.get("en", []), f"{where}.en", errors)
-    validate_zh_tokens(unit.get("zh", []), f"{where}.zh", errors, require_han=require_zh_han)
+    validate_zh_tokens(unit.get("zh", []), f"{where}.zh", errors, require_han=require_zh_han, allow_kana=allow_zh_kana)
     validate_ja_tokens(unit.get("ja", []), f"{where}.ja", errors, require_japanese=require_content)
     en_text = token_text(unit.get("en", []))
     zh_text = token_text(unit.get("zh", []))
