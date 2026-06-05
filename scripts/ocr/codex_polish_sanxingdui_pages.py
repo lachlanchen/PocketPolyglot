@@ -296,6 +296,7 @@ def polish_book(book: dict[str, str], args: argparse.Namespace) -> None:
     pages = parse_pages(source_text)
     out_dir = ROOT / "books" / BOOK_ID / "work" / "tex-polish" / "pages" / slug
     codex_dir = ROOT / "books" / BOOK_ID / "work" / "tex-polish" / "codex" / slug
+    assembled = ROOT / "books" / BOOK_ID / "markdown" / f"{slug}.polished.md"
     polished_pages: list[dict[str, Any]] = []
     processed = 0
 
@@ -352,12 +353,14 @@ def polish_book(book: dict[str, str], args: argparse.Namespace) -> None:
                     write_page(page_path, result)
                     polished_pages.append(result)
         processed += 1
+        if args.compile_every_pages and processed % args.compile_every_pages == 0:
+            assemble_markdown(title, slug, polished_pages, assembled)
+            compile_polished(slug)
         if args.max_pages and processed >= args.max_pages:
             break
 
     if not polished_pages:
         raise SystemExit(f"No pages polished for {slug}")
-    assembled = ROOT / "books" / BOOK_ID / "markdown" / f"{slug}.polished.md"
     assemble_markdown(title, slug, polished_pages, assembled)
     if args.compile:
         compile_polished(slug)
@@ -374,6 +377,7 @@ def main() -> int:
     parser.add_argument("--max-pages", type=int, default=0)
     parser.add_argument("--min-chars", type=int, default=60)
     parser.add_argument("--compile", action="store_true")
+    parser.add_argument("--compile-every-pages", type=int, default=0)
     parser.add_argument("--force", action="store_true")
     args = parser.parse_args()
 
