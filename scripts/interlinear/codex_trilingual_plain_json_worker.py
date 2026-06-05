@@ -157,7 +157,7 @@ def prompt_for_plain_chunk(chunk: dict[str, Any], previous_errors: list[str] | N
         - English is already supplied and will be preserved by the pipeline; do not include English in unit output.
         - Chinese must be real Chinese prose, not a summary. Prefer the supplied Chinese reference translations when they match the English.
         - Japanese: {ja_instruction}
-        - Japanese must be real Japanese prose with kana or natural Japanese inflection. Never put Chinese prose in "ja"."""
+        - Japanese must be real Japanese prose with kana or natural Japanese inflection. Use clear, common modern Japanese unless a supplied Japanese source requires otherwise. Never put Chinese prose in "ja"."""
     else:
         source_name = {"zh": "Chinese", "ja": "Japanese"}[spine_lang]
         copy_requirement = (
@@ -188,7 +188,7 @@ def prompt_for_plain_chunk(chunk: dict[str, Any], previous_errors: list[str] | N
         - English must be natural literary English corresponding to the source unit and references.
         - Chinese must be real Chinese prose, not a summary.
         - Japanese: {ja_instruction}
-        - Japanese must be real Japanese prose with kana or natural Japanese inflection. Never put Chinese prose in "ja"."""
+        - Japanese must be real Japanese prose with kana or natural Japanese inflection. Use clear, common modern Japanese unless a supplied Japanese source requires otherwise. Never put Chinese prose in "ja"."""
     return textwrap.dedent(
         f"""
         You are aligning one chunk of a trilingual pocket book.

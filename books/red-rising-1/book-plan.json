@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "book_id": "red-rising-1",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_en_zh_sources_generated_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "zh": "sources/mars/science-fiction/火星崛起（共三册）.epub",
+    "en": "sources/mars/science-fiction/Red Rising.epub"
+  },
+  "source_sha256": {
+    "zh": "7739c4b3e64c1a7f3fefc94d094b99455b0fc4b0a6c533df42d14579bb5484e6",
+    "en": "05354365c317ba3746d04bafdbed0d0b283479a4cbbda2a8c30ab9905b17af57"
+  },
+  "markdown": {
+    "en": "books/red-rising-1/markdown/en.md",
+    "zh": "books/red-rising-1/markdown/zh.md"
+  },
+  "book_title_en": "Red Rising",
+  "book_title_zh": "火星崛起",
+  "book_title_ja": "レッド・ライジング",
+  "book_title_zh_reading": "huǒ xīng jué qǐ",
+  "book_title_ja_reading": "レッド ライジング",
+  "author": "Pierce Brown",
+  "author_reading_zh": "pí ěr sī bù lǎng",
+  "author_reading_ja": "ピアス ブラウン",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Pierce Brown, Red Rising. English EPUB is the alignment spine; Chinese trilogy EPUB is the reference; Japanese is generated in natural modern Japanese.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "global_ratio_window",
+  "chunks_jsonl": "books/red-rising-1/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/red-rising-1/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/red-rising-1/work/trilingual/interlinear/chunks",
+  "preview_json": "books/red-rising-1/work/trilingual/preview/red-rising-1.partial.json",
+  "assembled_json": "books/red-rising-1/work/trilingual/preview/red-rising-1.partial.json",
+  "prepared_at": "2026-06-05T06:41:07.082214+00:00",
+  "chunk_count": 295,
+  "english_chapter_count": 45,
+  "chinese_reference_chapter_count": 44
+}

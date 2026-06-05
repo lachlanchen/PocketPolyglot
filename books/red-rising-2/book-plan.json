@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "book_id": "red-rising-2",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_en_zh_sources_generated_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "zh": "sources/mars/science-fiction/火星崛起（共三册）.epub",
+    "en": "sources/mars/science-fiction/Golden Son.epub"
+  },
+  "source_sha256": {
+    "zh": "7739c4b3e64c1a7f3fefc94d094b99455b0fc4b0a6c533df42d14579bb5484e6",
+    "en": "342e71967cbbc9b737b6b47d22d5b6d70fd4abe1c8096adf5a0302373880ac53"
+  },
+  "markdown": {
+    "en": "books/red-rising-2/markdown/en.md",
+    "zh": "books/red-rising-2/markdown/zh.md"
+  },
+  "book_title_en": "Golden Son",
+  "book_title_zh": "火星崛起2：黄金之子",
+  "book_title_ja": "ゴールデン・サン",
+  "book_title_zh_reading": "huǒ xīng jué qǐ èr huáng jīn zhī zǐ",
+  "book_title_ja_reading": "ゴールデン サン",
+  "author": "Pierce Brown",
+  "author_reading_zh": "pí ěr sī bù lǎng",
+  "author_reading_ja": "ピアス ブラウン",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Pierce Brown, Golden Son. English EPUB is the alignment spine; Chinese trilogy EPUB is the reference; Japanese is generated in natural modern Japanese.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "global_ratio_window",
+  "chunks_jsonl": "books/red-rising-2/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/red-rising-2/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/red-rising-2/work/trilingual/interlinear/chunks",
+  "preview_json": "books/red-rising-2/work/trilingual/preview/red-rising-2.partial.json",
+  "assembled_json": "books/red-rising-2/work/trilingual/preview/red-rising-2.partial.json",
+  "prepared_at": "2026-06-05T06:41:09.401316+00:00",
+  "chunk_count": 342,
+  "english_chapter_count": 52,
+  "chinese_reference_chapter_count": 51
+}
