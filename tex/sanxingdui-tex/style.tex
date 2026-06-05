@@ -3,6 +3,7 @@
 \usepackage{xeCJK}
 \usepackage{xparse}
 \usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage{needspace}
 \usepackage{titlesec}
 \usepackage{fancyhdr}
@@ -104,6 +105,16 @@
     原书第 #1 页\if\relax\detokenize{#2}\relax\else\quad #2\fi
     \hspace{0.55em}\rule[0.42ex]{0.22\linewidth}{0.25pt}}\par
   \vspace{0.15em}
+}
+
+\NewDocumentCommand{\SXOriginalPageImage}{m m}{%
+  \par\needspace{0.42\textheight}
+  \begin{center}
+    \includegraphics[width=\linewidth,height=0.58\textheight,keepaspectratio]{#1}\par
+    \vspace{0.16em}
+    {\zhsans\fontsize{6.8pt}{8.5pt}\selectfont\color{SXMuted}#2\par}
+  \end{center}
+  \vspace{0.2em}
 }
 
 \NewDocumentCommand{\SXPara}{+m}{%
