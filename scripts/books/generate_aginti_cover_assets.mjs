@@ -34,6 +34,24 @@ const THEME_HINTS = {
     "night train crossing a river of stars, deep blue sky, lantern-lit carriage, quiet celestial railway",
   "sishu-jizhu":
     "Confucian classics, bamboo slips, inkstone, Song dynasty study, austere scholarly texture",
+  "red-rising-1":
+    "Mars mine tunnels, red dust, rising rebellion, distant domed city, cinematic science-fiction atmosphere, austere red and black palette",
+  "red-rising-2":
+    "golden imperial fleet above Mars, dramatic sunlit armor silhouettes, political intrigue, orbital grandeur, refined science-fiction editorial mood",
+  "red-rising-3":
+    "morning star over Mars, fractured red horizon, liberation fleet, hopeful yet severe science-fiction atmosphere, restrained crimson and gold",
+  "japanese-history":
+    "layered Japanese history, Jomon pottery texture, Heian screen, samurai silhouette, Meiji modern linework, museum-quality historical design",
+  "spring-snow":
+    "Taisho-era elegance, falling snow, white camellia, aristocratic mansion garden, restrained romantic melancholy, refined Japanese literary cover",
+  "inugami-curse":
+    "misty lakeside estate, old family crest impression without readable symbols, dark water, inheritance mystery, classic Japanese detective atmosphere",
+  "i-am-a-cat":
+    "Meiji study room, scholar's desk, amused cat perspective, ink books and tatami, witty Japanese literary mood",
+  botchan:
+    "Meiji school town, hot-spring steam, energetic young teacher, tramline and classroom geometry, lively satirical Japanese novel atmosphere",
+  "gone-with-the-wind":
+    "American Civil War era Southern estate silhouette, wind-swept red earth, magnolia and distant flames, sweeping historical romance mood",
 };
 
 function parseArgs(argv) {
