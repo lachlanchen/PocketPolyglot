@@ -126,7 +126,7 @@ merge_once() {
 compile_once() {
   if ! find '$raw_chunk_dir' -maxdepth 1 -name '*.json' -print -quit | grep -q .; then
     echo "compile_skipped=no_merged_chunks"
-    return 0
+    return 2
   fi
   ALLOW_MISSING=1 bash scripts/interlinear/compile_trilingual_book_12_previews.sh '$book_id'
 }
@@ -147,8 +147,19 @@ while [[ "\$(running_count "\${gen_pids[@]}")" -gt 0 ]]; do
   merge_once
   now="\$(date +%s)"
   if [[ '$compile_interval_seconds' -gt 0 && \$((now - last_compile)) -ge '$compile_interval_seconds' ]]; then
-    compile_once || true
-    last_compile="\$now"
+    if compile_once; then
+      last_compile="\$now"
+    else
+      compile_status="\$?"
+      if [[ "\$compile_status" -eq 2 ]]; then
+        # No merged chunks yet: keep the timer open so the first valid merge
+        # compiles on the next monitor loop instead of waiting a full interval.
+        last_compile=0
+      else
+        echo "compile_failed_status=\$compile_status retry_after_interval"
+        last_compile="\$now"
+      fi
+    fi
   fi
   sleep '$merge_interval'
 done
