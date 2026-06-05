@@ -17,6 +17,8 @@ ROOT = Path(__file__).resolve().parents[2]
 BOOK_ID = "sanxingdui"
 EDITION_ID = "sanxingdui-tex"
 POLISHED_EDITION_ID = "sanxingdui-polished-tex"
+POCKET_EDITION_ID = "books/sanxingdui-tex-pocket"
+POLISHED_POCKET_EDITION_ID = "books/sanxingdui-polished-tex-pocket"
 TEMPLATE = ROOT / "tex" / "sanxingdui-tex" / "book.tex"
 PLAN = ROOT / "books" / BOOK_ID / "book-plan.json"
 
@@ -27,7 +29,7 @@ CJK_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 LATIN_OR_DIGIT_RE = re.compile(r"[A-Za-z0-9]")
 PUNCT_END_RE = re.compile(r"[。！？；：，、,.!?;:）】》」』”’]$")
 PAGE_NUMBER_LINE_RE = re.compile(r"\s+\d{1,4}$")
-LONG_ASCII_RE = re.compile(r"[A-Za-z0-9]{24,}")
+LONG_ASCII_RE = re.compile(r"[A-Za-z0-9]{18,}")
 BREAK_MARKER = "\ue000"
 
 
@@ -130,7 +132,7 @@ def tex_escape(text: str) -> str:
     return escaped.replace(BREAK_MARKER, r"\allowbreak{}")
 
 
-def break_long_ascii(text: str, width: int = 12) -> str:
+def break_long_ascii(text: str, width: int = 8) -> str:
     return BREAK_MARKER.join(text[index : index + width] for index in range(0, len(text), width))
 
 
@@ -267,13 +269,14 @@ def write_source(
     title: str,
     output: Path,
     *,
+    pocket: bool = False,
     source_pdf: Path | None = None,
     image_dir: Path | None = None,
     image_dpi: int = 170,
 ) -> None:
     output.parent.mkdir(parents=True, exist_ok=True)
     rel_md = book.markdown.relative_to(ROOT)
-    subtitle = f"{book.source_kind} TeX文本版"
+    subtitle = f"{book.source_kind} {'口袋' if pocket else ''}TeX文本版"
     image_note = "；并嵌入原书页图像以保留图版、地图与原始图注" if source_pdf and image_dir else ""
     note = f"基于 {rel_md} 生成；正文为可见 TeX 排版文本，不是隐藏 OCR 文本层{image_note}。"
 
@@ -320,10 +323,11 @@ def write_source(
                     handle.write(f"\\SXPara{{{escaped}}}\n")
 
 
-def compile_tex(source: Path, output_dir: Path, jobname: str) -> Path:
+def compile_tex(source: Path, output_dir: Path, jobname: str, *, pocket: bool = False) -> Path:
     output_dir.mkdir(parents=True, exist_ok=True)
     rel_source = source.relative_to(ROOT)
-    tex_input = rf"\def\SXSource{{{rel_source.as_posix()}}}\input{{tex/sanxingdui-tex/book.tex}}"
+    mode = r"\def\SXPocketMode{1}" if pocket else ""
+    tex_input = rf"{mode}\def\SXSource{{{rel_source.as_posix()}}}\input{{tex/sanxingdui-tex/book.tex}}"
     cmd = [
         "xelatex",
         "-interaction=nonstopmode",
@@ -343,25 +347,37 @@ def build_one(book_info: dict[str, str], args: argparse.Namespace) -> Path:
     title = book_info["title"]
     markdown, source_kind = choose_markdown(slug, prefer_reviewed=not args.raw, polished=args.polished)
     book = parse_markdown(markdown, source_kind)
-    edition_id = args.edition_id or (POLISHED_EDITION_ID if args.polished else EDITION_ID)
+    if args.edition_id:
+        edition_id = args.edition_id
+    elif args.pocket and args.polished:
+        edition_id = POLISHED_POCKET_EDITION_ID
+    elif args.pocket:
+        edition_id = POCKET_EDITION_ID
+    else:
+        edition_id = POLISHED_EDITION_ID if args.polished else EDITION_ID
     output_dir = ROOT / "build" / edition_id / slug
     source_tex = output_dir / "source.tex"
     display_title = title_for_pdf(title)
     include_page_images = args.include_page_images or (args.polished and not args.no_page_images)
     source_pdf = ROOT / book_info["source"] if include_page_images else None
-    image_dir = output_dir / "page-images" if include_page_images else None
+    if include_page_images and args.reuse_page_images_from_edition:
+        image_dir = ROOT / "build" / args.reuse_page_images_from_edition / slug / "page-images"
+    else:
+        image_dir = output_dir / "page-images" if include_page_images else None
+    image_dpi = args.image_dpi if args.image_dpi else (120 if args.pocket else 170)
     write_source(
         book,
         display_title,
         source_tex,
+        pocket=args.pocket,
         source_pdf=source_pdf,
         image_dir=image_dir,
-        image_dpi=args.image_dpi,
+        image_dpi=image_dpi,
     )
     if args.no_compile:
         return source_tex
-    pdf = compile_tex(source_tex, output_dir, slug)
-    suffix = "润色TeX文本版" if args.polished else "TeX文本版"
+    pdf = compile_tex(source_tex, output_dir, slug, pocket=args.pocket)
+    suffix = ("润色TeX口袋版" if args.pocket else "润色TeX文本版") if args.polished else ("TeX口袋版" if args.pocket else "TeX文本版")
     final_pdf = output_dir / f"{display_title}（{suffix}）.pdf"
     for stale in output_dir.glob("*（*TeX文本版）.pdf"):
         if stale != final_pdf:
@@ -378,9 +394,14 @@ def main() -> int:
     parser.add_argument("--raw", action="store_true", help="Use raw OCR Markdown even when reviewed Markdown exists.")
     parser.add_argument("--polished", action="store_true", help="Use <slug>.polished.md and write sanxingdui-polished-tex output.")
     parser.add_argument("--edition-id", help="Override build/<edition-id>/ output folder.")
+    parser.add_argument("--pocket", action="store_true", help="Compile an A6 pocket-size version into build/books/ by default.")
     parser.add_argument("--include-page-images", action="store_true", help="Render and include original PDF page images.")
     parser.add_argument("--no-page-images", action="store_true", help="Disable default page images for polished output.")
-    parser.add_argument("--image-dpi", type=int, default=170, help="DPI for original page images included in TeX.")
+    parser.add_argument("--image-dpi", type=int, default=0, help="DPI for original page images included in TeX; defaults to 170, or 120 in pocket mode.")
+    parser.add_argument(
+        "--reuse-page-images-from-edition",
+        help="Reuse build/<edition>/<slug>/page-images instead of writing page images into the current output folder.",
+    )
     parser.add_argument("--no-compile", action="store_true", help="Only write source.tex files.")
     args = parser.parse_args()
 

@@ -10,17 +10,34 @@
 \usepackage{hyperref}
 \usepackage{xurl}
 
-\geometry{
-  paperwidth=128mm,
-  paperheight=188mm,
-  inner=11mm,
-  outer=10mm,
-  top=13mm,
-  bottom=14mm,
-  headheight=9pt,
-  headsep=6pt,
-  footskip=8mm
-}
+\newif\ifSXPocket
+\ifdefined\SXPocketMode\SXPockettrue\fi
+
+\ifSXPocket
+  \geometry{
+    paperwidth=105mm,
+    paperheight=148mm,
+    inner=8mm,
+    outer=7mm,
+    top=9mm,
+    bottom=10mm,
+    headheight=8pt,
+    headsep=4pt,
+    footskip=6mm
+  }
+\else
+  \geometry{
+    paperwidth=128mm,
+    paperheight=188mm,
+    inner=11mm,
+    outer=10mm,
+    top=13mm,
+    bottom=14mm,
+    headheight=9pt,
+    headsep=6pt,
+    footskip=8mm
+  }
+\fi
 
 \setmainfont{Noto Serif CJK SC}
 \setsansfont{Noto Sans CJK SC}
@@ -45,25 +62,70 @@
 
 \XeTeXlinebreaklocale "zh"
 \XeTeXlinebreakskip=0pt plus 1pt
-\linespread{1.05}
-\emergencystretch=3em
+\ifSXPocket
+  \linespread{1.02}
+  \emergencystretch=8em
+\else
+  \linespread{1.05}
+  \emergencystretch=3em
+\fi
+\tolerance=9999
+\hbadness=10000
+\hfuzz=1.2pt
 \sloppy
+\raggedbottom
+
+\ifSXPocket
+  \newcommand{\SXTitleFont}{\fontsize{15pt}{19pt}\selectfont}
+  \newcommand{\SXSubFont}{\fontsize{7.6pt}{10pt}\selectfont}
+  \newcommand{\SXMetaFont}{\fontsize{6.4pt}{8.5pt}\selectfont}
+  \newcommand{\SXChapterFont}{\fontsize{12.8pt}{16pt}\selectfont}
+  \newcommand{\SXHeaderFont}{\fontsize{5.8pt}{7pt}\selectfont}
+  \newcommand{\SXFooterFont}{\fontsize{6.2pt}{7.5pt}\selectfont}
+  \newcommand{\SXPageFont}{\fontsize{5.7pt}{7pt}\selectfont}
+  \newcommand{\SXPageRuleWidth}{0.16\linewidth}
+  \newcommand{\SXParaFont}{\fontsize{8.25pt}{12.1pt}\selectfont}
+  \newcommand{\SXHeadingFont}{\fontsize{9.1pt}{11.5pt}\selectfont}
+  \newcommand{\SXListFont}{\fontsize{7.8pt}{10.5pt}\selectfont}
+  \newcommand{\SXCaptionFont}{\fontsize{6.9pt}{9pt}\selectfont}
+  \newcommand{\SXNoteFont}{\fontsize{6.8pt}{9pt}\selectfont}
+  \newcommand{\SXImageHeight}{0.42\textheight}
+\else
+  \newcommand{\SXTitleFont}{\fontsize{20pt}{25pt}\selectfont}
+  \newcommand{\SXSubFont}{\fontsize{9pt}{12pt}\selectfont}
+  \newcommand{\SXMetaFont}{\fontsize{7pt}{10pt}\selectfont}
+  \newcommand{\SXChapterFont}{\Large}
+  \newcommand{\SXHeaderFont}{\fontsize{6.8pt}{8pt}\selectfont}
+  \newcommand{\SXFooterFont}{\fontsize{7pt}{8pt}\selectfont}
+  \newcommand{\SXPageFont}{\fontsize{6.6pt}{8pt}\selectfont}
+  \newcommand{\SXPageRuleWidth}{0.22\linewidth}
+  \newcommand{\SXParaFont}{\fontsize{9.9pt}{15.4pt}\selectfont}
+  \newcommand{\SXHeadingFont}{\fontsize{10.8pt}{14pt}\selectfont}
+  \newcommand{\SXListFont}{\fontsize{9.45pt}{13.4pt}\selectfont}
+  \newcommand{\SXCaptionFont}{\fontsize{8.25pt}{11.2pt}\selectfont}
+  \newcommand{\SXNoteFont}{\fontsize{8pt}{11pt}\selectfont}
+  \newcommand{\SXImageHeight}{0.58\textheight}
+\fi
 
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LE,RO]{\zhsans\fontsize{6.8pt}{8pt}\selectfont\leftmark}
-\fancyfoot[C]{\zhsans\fontsize{7pt}{8pt}\selectfont\thepage}
+\fancyhead[LE,RO]{\zhsans\SXHeaderFont\leftmark}
+\fancyfoot[C]{\zhsans\SXFooterFont\thepage}
 \renewcommand{\headrulewidth}{0pt}
 
 \titleformat{\chapter}[display]
-  {\normalfont\zhfont\bfseries\Large\color{SXInk}}
+  {\normalfont\zhfont\bfseries\SXChapterFont\color{SXInk}}
   {}
   {0pt}
   {}
 \titlespacing*{\chapter}{0pt}{0pt}{1.1em}
 
 \setlength{\parindent}{2em}
-\setlength{\parskip}{0.18em}
+\ifSXPocket
+  \setlength{\parskip}{0.12em}
+\else
+  \setlength{\parskip}{0.18em}
+\fi
 
 \NewDocumentCommand{\SXMeta}{m m}{%
   \hypersetup{pdftitle={#1},pdfauthor={#2}}%
@@ -74,13 +136,13 @@
   \thispagestyle{empty}
   \vspace*{0.11\textheight}
   {\centering
-    {\zhfont\bfseries\fontsize{20pt}{25pt}\selectfont #1\par}
+    {\zhfont\bfseries\SXTitleFont #1\par}
     \vspace{1.2em}
-    {\zhsans\fontsize{9pt}{12pt}\selectfont #2\par}
+    {\zhsans\SXSubFont #2\par}
     \vspace{0.6em}
-    {\zhsans\fontsize{8pt}{11pt}\selectfont #3\par}
+    {\zhsans\SXMetaFont #3\par}
     \vfill
-    {\zhsans\fontsize{7pt}{10pt}\selectfont #4\par}
+    {\zhsans\SXMetaFont #4\par}
   }
   \clearpage
   \tableofcontents
@@ -92,7 +154,7 @@
   \chapter*{#1}
   \markboth{#1}{#1}
   \addcontentsline{toc}{chapter}{#1}
-  {\zhsans\fontsize{7pt}{10pt}\selectfont\color{SXMuted}#2\par}
+  {\zhsans\SXMetaFont\color{SXMuted}#2\par}
   \vspace{0.7em}
 }
 
@@ -100,40 +162,40 @@
   \par\needspace{4\baselineskip}
   \vspace{0.45em}
   \noindent
-  {\zhsans\fontsize{6.6pt}{8pt}\selectfont\color{SXMuted}
-    \rule[0.42ex]{0.22\linewidth}{0.25pt}\hspace{0.55em}
+  {\zhsans\SXPageFont\color{SXMuted}
+    \rule[0.42ex]{\SXPageRuleWidth}{0.25pt}\hspace{0.45em}
     原书第 #1 页\if\relax\detokenize{#2}\relax\else\quad #2\fi
-    \hspace{0.55em}\rule[0.42ex]{0.22\linewidth}{0.25pt}}\par
+    \hspace{0.45em}\rule[0.42ex]{\SXPageRuleWidth}{0.25pt}}\par
   \vspace{0.15em}
 }
 
 \NewDocumentCommand{\SXOriginalPageImage}{m m}{%
-  \par\needspace{0.42\textheight}
+  \par\needspace{\SXImageHeight}
   \begin{center}
-    \includegraphics[width=\linewidth,height=0.58\textheight,keepaspectratio]{#1}\par
+    \includegraphics[width=\linewidth,height=\SXImageHeight,keepaspectratio]{#1}\par
     \vspace{0.16em}
-    {\zhsans\fontsize{6.8pt}{8.5pt}\selectfont\color{SXMuted}#2\par}
+    {\zhsans\SXCaptionFont\color{SXMuted}#2\par}
   \end{center}
   \vspace{0.2em}
 }
 
 \NewDocumentCommand{\SXPara}{+m}{%
-  \par{\zhfont\fontsize{9.9pt}{15.4pt}\selectfont\color{SXInk}#1}\par
+  \par{\zhfont\SXParaFont\color{SXInk}#1}\par
 }
 
 \NewDocumentCommand{\SXHeading}{+m}{%
   \par\needspace{3\baselineskip}
   \vspace{0.35em}
-  \noindent{\zhsans\bfseries\fontsize{10.8pt}{14pt}\selectfont\color{SXAccent}#1}\par
+  \noindent{\zhsans\bfseries\SXHeadingFont\color{SXAccent}#1}\par
   \vspace{0.1em}
 }
 
 \NewDocumentCommand{\SXListLine}{+m}{%
-  \par\noindent{\zhfont\fontsize{9.45pt}{13.4pt}\selectfont\color{SXInk}#1}\par
+  \par\noindent{\zhfont\SXListFont\color{SXInk}#1}\par
 }
 
 \NewDocumentCommand{\SXCaption}{+m}{%
-  \par\noindent{\zhsans\fontsize{8.25pt}{11.2pt}\selectfont\color{SXMuted}#1}\par
+  \par\noindent{\zhsans\SXCaptionFont\color{SXMuted}#1}\par
 }
 
 \NewDocumentCommand{\SXFigureNote}{+m}{%
@@ -142,7 +204,7 @@
   \setlength{\fboxsep}{5pt}%
   \colorbox{SXPaper}{%
     \parbox{\dimexpr\linewidth-10pt\relax}{%
-      \zhsans\fontsize{8pt}{11pt}\selectfont\color{SXMuted}#1%
+      \zhsans\SXNoteFont\color{SXMuted}#1%
     }%
   }%
   \endgroup
