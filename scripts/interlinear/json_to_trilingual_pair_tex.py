@@ -10,14 +10,29 @@ from pathlib import Path
 from typing import Any
 
 
+LONG_RUN_BREAK = 12
+LONG_RUN_MIN = 18
 LANG_LABELS = {
     "en": "English",
     "zh": "中文",
     "ja": "日本語",
 }
+SUBSCRIPT_DIGITS = {
+    "₀": "0",
+    "₁": "1",
+    "₂": "2",
+    "₃": "3",
+    "₄": "4",
+    "₅": "5",
+    "₆": "6",
+    "₇": "7",
+    "₈": "8",
+    "₉": "9",
+}
+BREAK_AFTER = set("/\\._-,:;=+()[]{}")
 
 
-def tex_escape(text: str) -> str:
+def tex_escape_char(ch: str) -> str:
     replacements = {
         "\\": r"\textbackslash{}",
         "&": r"\&",
@@ -30,7 +45,37 @@ def tex_escape(text: str) -> str:
         "~": r"\textasciitilde{}",
         "^": r"\textasciicircum{}",
     }
-    return "".join(replacements.get(ch, ch) for ch in str(text))
+    if ch in SUBSCRIPT_DIGITS:
+        return rf"\ensuremath{{_{SUBSCRIPT_DIGITS[ch]}}}"
+    return replacements.get(ch, ch)
+
+
+def flush_alnum_run(parts: list[str], run: list[str]) -> None:
+    if not run:
+        return
+    text = "".join(run)
+    escaped = "".join(tex_escape_char(ch) for ch in text)
+    if len(text) >= LONG_RUN_MIN:
+        chunks = [escaped[index : index + LONG_RUN_BREAK] for index in range(0, len(escaped), LONG_RUN_BREAK)]
+        parts.append(r"\allowbreak{}".join(chunks))
+    else:
+        parts.append(escaped)
+    run.clear()
+
+
+def tex_escape(text: str) -> str:
+    parts: list[str] = []
+    run: list[str] = []
+    for ch in str(text):
+        if ch.isascii() and ch.isalnum():
+            run.append(ch)
+            continue
+        flush_alnum_run(parts, run)
+        parts.append(tex_escape_char(ch))
+        if ch in BREAK_AFTER:
+            parts.append(r"\allowbreak{}")
+    flush_alnum_run(parts, run)
+    return "".join(parts)
 
 
 def tex_escape_en(text: str) -> str:

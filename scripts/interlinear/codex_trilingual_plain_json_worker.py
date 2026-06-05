@@ -18,7 +18,13 @@ from pypinyin import Style, pinyin
 
 from codex_chunk_worker import compact, extract_json, load_chunks, mentions_usage_limit, run_codex
 from codex_trilingual_parallel_json_worker import claim_chunk, iter_selected, release_claim, valid_existing
-from validate_trilingual_interlinear_json import HAN_RE, KANA_RE, SINGLE_HAN_RE, validate_chunk
+from validate_trilingual_interlinear_json import (
+    HAN_RE,
+    KANA_RE,
+    SINGLE_HAN_RE,
+    allows_non_han_zh_fragment,
+    validate_chunk,
+)
 
 
 SPACE_RE = re.compile(r"\s+")
@@ -267,7 +273,11 @@ def validate_plain_chunk(source: dict[str, Any], result: dict[str, Any]) -> list
                 errors.append(f"{unit_where}.ja: empty")
             if spine_lang != "en" and not en:
                 errors.append(f"{unit_where}.en: empty")
-            if zh_required and zh and not HAN_RE.search(zh):
+            source_unit = {}
+            if paragraph_id in source_plan_by_id and unit_index < len(source_plan_by_id[paragraph_id]):
+                source_unit = source_plan_by_id[paragraph_id][unit_index]
+            source_text = plain_text(source_unit.get(spine_lang, ""))
+            if zh_required and zh and not HAN_RE.search(zh) and not allows_non_han_zh_fragment(source_text, zh):
                 errors.append(f"{unit_where}.zh: Chinese text must contain Han characters")
             if zh_required and zh and KANA_RE.search(zh):
                 errors.append(f"{unit_where}.zh: Chinese row contains Japanese kana")

@@ -16,6 +16,10 @@ HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
 KANA_RE = re.compile(r"[\u3040-\u30ff]")
 LATIN_RE = re.compile(r"[A-Za-z]")
+TECHNICAL_NON_HAN_RE = re.compile(
+    r"\d|[._/@#%°℃₂₃+-]|[A-Z]{2,}|\b(?:sol|jpg|jpeg|ascii|nasa|mav|eva|jpl|capcom|hermes|ares)\b",
+    re.IGNORECASE,
+)
 GRAMMAR_ROLES = {
     "subject",
     "predicate",
@@ -44,6 +48,19 @@ def token_text(tokens: Any) -> str:
 
 def has_language_content(text: str) -> bool:
     return bool(HAN_RE.search(text) or KANA_RE.search(text) or LATIN_RE.search(text) or re.search(r"\d", text))
+
+
+def allows_non_han_zh_fragment(source_text: str, zh_text: str) -> bool:
+    """Allow short technical/proper-name fragments that are naturally non-Han."""
+    text = compact(zh_text)
+    if not text or HAN_RE.search(text) or KANA_RE.search(text):
+        return False
+    if len(text) > 40:
+        return False
+    if len(LATIN_RE.findall(text)) > 24:
+        return False
+    source = compact(source_text)
+    return bool(TECHNICAL_NON_HAN_RE.search(text) or TECHNICAL_NON_HAN_RE.search(source))
 
 
 def validate_token_shape(tokens: Any, where: str, errors: list[str]) -> bool:
@@ -156,11 +173,13 @@ def validate_unit(unit: Any, where: str, errors: list[str]) -> tuple[str, str, s
     require_zh_han = require_content and (not source_zh or bool(HAN_RE.search(source_zh)))
     allow_zh_kana = bool(source_zh and KANA_RE.search(source_zh))
     validate_en_tokens(unit.get("en", []), f"{where}.en", errors)
-    validate_zh_tokens(unit.get("zh", []), f"{where}.zh", errors, require_han=require_zh_han, allow_kana=allow_zh_kana)
+    validate_zh_tokens(unit.get("zh", []), f"{where}.zh", errors, require_han=False, allow_kana=allow_zh_kana)
     validate_ja_tokens(unit.get("ja", []), f"{where}.ja", errors, require_japanese=require_content)
     en_text = token_text(unit.get("en", []))
     zh_text = token_text(unit.get("zh", []))
     ja_text = token_text(unit.get("ja", []))
+    if require_zh_han and not HAN_RE.search(zh_text) and not allows_non_han_zh_fragment(source_basis, zh_text):
+        errors.append(f"{where}.zh: Chinese text must contain Han characters")
     if source_en and compact(en_text) != compact(source_en):
         errors.append(f"{where}: en tokens do not reconstruct unit source_en")
     if source_zh and no_space(zh_text) != no_space(source_zh):
