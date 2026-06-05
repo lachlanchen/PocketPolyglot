@@ -16,6 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 BOOK_ID = "sanxingdui"
 EDITION_ID = "sanxingdui-tex"
+POLISHED_EDITION_ID = "sanxingdui-polished-tex"
 TEMPLATE = ROOT / "tex" / "sanxingdui-tex" / "book.tex"
 PLAN = ROOT / "books" / BOOK_ID / "book-plan.json"
 
@@ -58,10 +59,15 @@ def strip_frontmatter(text: str) -> str:
     return text
 
 
-def choose_markdown(slug: str, prefer_reviewed: bool) -> tuple[Path, str]:
+def choose_markdown(slug: str, prefer_reviewed: bool, polished: bool) -> tuple[Path, str]:
     markdown_dir = ROOT / "books" / BOOK_ID / "markdown"
+    polished_path = markdown_dir / f"{slug}.polished.md"
     reviewed = markdown_dir / f"{slug}.reviewed.md"
     raw = markdown_dir / f"{slug}.ocr.md"
+    if polished:
+        if polished_path.exists():
+            return polished_path, "OCR润色校订稿"
+        raise FileNotFoundError(f"No polished Markdown text found for {slug}: expected {polished_path}")
     if prefer_reviewed and reviewed.exists():
         return reviewed, "OCR校订稿"
     if raw.exists():
@@ -169,33 +175,52 @@ def is_list_like(lines: list[str], kind: str) -> bool:
     return len(content) >= 5 and short >= int(len(content) * 0.75)
 
 
+def flush_paragraph_group(rendered: list[tuple[str, str]], group: list[str], kind: str) -> None:
+    if not group:
+        return
+    if is_list_like(group, kind):
+        rendered.extend(("list", line) for line in group)
+    else:
+        rendered.append(("para", join_lines(group)))
+
+
 def page_blocks(lines: list[str], kind: str) -> list[tuple[str, str]]:
-    groups: list[list[str]] = [[]]
+    rendered: list[tuple[str, str]] = []
+    group: list[str] = []
     for line in lines:
         if not line.strip():
-            if groups[-1]:
-                groups.append([])
+            flush_paragraph_group(rendered, group, kind)
+            group = []
             continue
-        groups[-1].append(line)
-    if groups and not groups[-1]:
-        groups.pop()
-
-    rendered: list[tuple[str, str]] = []
-    for group in groups:
-        if not group:
+        if line.startswith("### "):
+            flush_paragraph_group(rendered, group, kind)
+            group = []
+            rendered.append(("heading", line[4:].strip()))
             continue
-        if is_list_like(group, kind):
-            rendered.extend(("list", line) for line in group)
-        else:
-            rendered.append(("para", join_lines(group)))
+        if line.startswith("- "):
+            flush_paragraph_group(rendered, group, kind)
+            group = []
+            rendered.append(("list", line[2:].strip()))
+            continue
+        if line.startswith("> "):
+            flush_paragraph_group(rendered, group, kind)
+            group = []
+            rendered.append(("caption", line[2:].strip()))
+            continue
+        group.append(line)
+    flush_paragraph_group(rendered, group, kind)
     return rendered
 
 
 def page_kind_label(kind: str) -> str:
     return {
+        "frontmatter": "书名/版权",
+        "toc": "目录",
         "text": "正文",
+        "catalog": "图录/条目",
         "caption_or_map": "图注/地图文字",
         "figure_or_blank": "图版/空白",
+        "notes": "附注",
     }.get(kind, kind)
 
 
@@ -241,8 +266,12 @@ def write_source(book: MarkdownBook, title: str, output: Path) -> None:
                 escaped = tex_escape(clean)
                 if clean.startswith("[") and clean.endswith("]"):
                     handle.write(f"\\SXFigureNote{{{escaped}}}\n")
+                elif block_kind == "heading":
+                    handle.write(f"\\SXHeading{{{escaped}}}\n")
                 elif block_kind == "list":
                     handle.write(f"\\SXListLine{{{escaped}}}\n")
+                elif block_kind == "caption":
+                    handle.write(f"\\SXCaption{{{escaped}}}\n")
                 else:
                     handle.write(f"\\SXPara{{{escaped}}}\n")
 
@@ -268,17 +297,19 @@ def compile_tex(source: Path, output_dir: Path, jobname: str) -> Path:
 def build_one(book_info: dict[str, str], args: argparse.Namespace) -> Path:
     slug = book_info["slug"]
     title = book_info["title"]
-    markdown, source_kind = choose_markdown(slug, prefer_reviewed=not args.raw)
+    markdown, source_kind = choose_markdown(slug, prefer_reviewed=not args.raw, polished=args.polished)
     book = parse_markdown(markdown, source_kind)
-    output_dir = ROOT / "build" / EDITION_ID / slug
+    edition_id = args.edition_id or (POLISHED_EDITION_ID if args.polished else EDITION_ID)
+    output_dir = ROOT / "build" / edition_id / slug
     source_tex = output_dir / "source.tex"
     display_title = title_for_pdf(title)
     write_source(book, display_title, source_tex)
     if args.no_compile:
         return source_tex
     pdf = compile_tex(source_tex, output_dir, slug)
-    final_pdf = output_dir / f"{display_title}（TeX文本版）.pdf"
-    for stale in output_dir.glob("*（TeX文本版）.pdf"):
+    suffix = "润色TeX文本版" if args.polished else "TeX文本版"
+    final_pdf = output_dir / f"{display_title}（{suffix}）.pdf"
+    for stale in output_dir.glob("*（*TeX文本版）.pdf"):
         if stale != final_pdf:
             stale.unlink()
     if final_pdf.exists():
@@ -291,6 +322,8 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--slug", action="append", help="Render only this slug; may be repeated.")
     parser.add_argument("--raw", action="store_true", help="Use raw OCR Markdown even when reviewed Markdown exists.")
+    parser.add_argument("--polished", action="store_true", help="Use <slug>.polished.md and write sanxingdui-polished-tex output.")
+    parser.add_argument("--edition-id", help="Override build/<edition-id>/ output folder.")
     parser.add_argument("--no-compile", action="store_true", help="Only write source.tex files.")
     args = parser.parse_args()
 

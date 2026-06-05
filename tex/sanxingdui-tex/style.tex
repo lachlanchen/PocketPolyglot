@@ -110,8 +110,19 @@
   \par{\zhfont\fontsize{9.9pt}{15.4pt}\selectfont\color{SXInk}#1}\par
 }
 
+\NewDocumentCommand{\SXHeading}{+m}{%
+  \par\needspace{3\baselineskip}
+  \vspace{0.35em}
+  \noindent{\zhsans\bfseries\fontsize{10.8pt}{14pt}\selectfont\color{SXAccent}#1}\par
+  \vspace{0.1em}
+}
+
 \NewDocumentCommand{\SXListLine}{+m}{%
   \par\noindent{\zhfont\fontsize{9.45pt}{13.4pt}\selectfont\color{SXInk}#1}\par
+}
+
+\NewDocumentCommand{\SXCaption}{+m}{%
+  \par\noindent{\zhsans\fontsize{8.25pt}{11.2pt}\selectfont\color{SXMuted}#1}\par
 }
 
 \NewDocumentCommand{\SXFigureNote}{+m}{%
