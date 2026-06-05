@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prepare Mars fiction trilingual EN/JP/ZH chunk tasks."""
+"""Prepare Mars trilingual EN/JP/ZH chunk tasks."""
 
 from __future__ import annotations
 
@@ -8,6 +8,7 @@ import hashlib
 import html
 import json
 import re
+import shutil
 import subprocess
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
@@ -16,7 +17,9 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[2]
-SOURCE_DIR = Path("sources/mars/science-fiction")
+SCIENCE_FICTION_DIR = Path("sources/mars/science-fiction")
+SCIENCE_HISTORY_DIR = Path("sources/mars/science-history")
+SOURCE_DIR = SCIENCE_FICTION_DIR
 CURATED_BY = "AgInTiFlow curated"
 CURATED_URL = "https://flow.lazying.art"
 POWERED_BY = "powered by LazyingArt"
@@ -29,13 +32,18 @@ SPACE_RE = re.compile(r"\s+")
 EN_SENTENCE_BOUNDARY_RE = re.compile(r'[.!?]["”’)]*\s+')
 CJK_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 EN_DATE_HEADING_RE = re.compile(r"^(?:[A-Za-z]+ \d{4}|20\d{2}(?:-\d{2,4})?):\s+.+$")
+EN_PART_WORDS = r"\d{1,3}|One|Two|Three|Four|Five|Six|Seven|Eight|Nine|Ten|Eleven|Twelve"
+EN_NUMBERED_TITLE_RE = re.compile(r"^(\d{1,3})\.\s+(.+)$")
 EN_HEADING_RE = re.compile(
-    r"^(?:Prologue|Epilogue|Chapter\s+\d+(?::\s*.+)?|\d{1,3}:\s+.+|\d{1,3}\s+[^.?!]{2,80}|PART\s+[IVXLCDM]+(?::|\s).+|Part\s+[IVXLCDM]+(?::|\s).+)$",
+    rf"^(?:Prologue|Epilogue|Introduction|Conclusion|Nota Bene:\s+.+|Chapter\s+\d+(?:(?::|\s+).+)?|\d{{1,3}}[.:]\s+.+|\d{{1,3}}\s+[^.?!]{{2,80}}|PART\s+(?:[IVXLCDM]+|{EN_PART_WORDS})(?::|\s| • | -).+|Part\s+(?:[IVXLCDM]+|{EN_PART_WORDS})(?::|\s| • | -).+)$",
     re.IGNORECASE,
 )
-EN_PART_RE = re.compile(r"^(?:PART|Part)\s+[IVXLCDM]+(?:(?::|\s).+)?$", re.IGNORECASE)
-EN_NUMBER_ONLY_RE = re.compile(r"^\d{1,3}$")
+EN_PART_RE = re.compile(rf"^(?:PART|Part)\s+(?:[IVXLCDM]+|{EN_PART_WORDS})(?:(?::|\s| • | -).+)?$", re.IGNORECASE)
+EN_NUMBER_ONLY_RE = re.compile(r"^\d{1,3}\.?$")
 ZH_CHAPTER_RE = re.compile(r"^第[一二三四五六七八九十百〇零0-9]+\s*章\s*.*$")
+ZH_SECTION_HEADING_RE = re.compile(
+    r"^第[一二三四五六七八九十百〇零0-9]+\s*[部卷篇].*(?:第[一二三四五六七八九十百〇零0-9]+\s*章.*)?$"
+)
 ZH_DATE_HEADING_RE = re.compile(
     r"^[一二三四五六七八九十〇零○0-9]{4}年(?:-|—|至|[一二三四五六七八九十〇零○0-9]{0,4}年)?\s*[一二三四五六七八九十冬春夏秋月0-9]*月?\s+.{1,30}$"
 )
@@ -55,8 +63,13 @@ EN_STOP_HEADINGS = {
     "Acknowledgements",
     "About the Author",
     "Also by",
+    "Bibliography",
     "By Pierce Brown",
     "Copyright",
+    "Dedication",
+    "Index",
+    "Notes",
+    "Reading Group Guide",
 }
 ZH_STOP_HEADINGS = {"致谢", "致 谢", "关于作者", "版权信息"}
 PDF_NOISE_LINES = {
@@ -127,12 +140,13 @@ class BookConfig:
     author_reading_zh: str
     author_reading_ja: str
     en_source: Path | None
-    zh_source: Path
+    zh_source: Path | None
     en_start_marker: str | None = None
     zh_start_marker: str | None = None
     zh_end_marker: str | None = None
     source_spine_lang: str = "en"
     book_description: str = ""
+    task_mode: str = "trilingual_en_zh_sources_generated_ja"
 
 
 BOOKS: dict[str, BookConfig] = {
@@ -222,6 +236,58 @@ BOOKS: dict[str, BookConfig] = {
         source_spine_lang="en",
         book_description="Ray Bradbury, The Martian Chronicles. English PDF is the alignment spine; Chinese EPUB is the reference; Japanese is generated in natural modern Japanese.",
     ),
+    "the-sirens-of-mars": BookConfig(
+        book_id="the-sirens-of-mars",
+        title_en="The Sirens of Mars",
+        title_zh="火星的塞壬",
+        title_ja="火星のセイレーン",
+        title_zh_reading="huǒ xīng de sài rén",
+        title_ja_reading="かせい の セイレーン",
+        author="Sarah Stewart Johnson",
+        author_reading_zh="sà lā sī tú ěr tè yuē hàn xùn",
+        author_reading_ja="サラ スチュワート ジョンソン",
+        en_source=SCIENCE_HISTORY_DIR / "The Sirens of Mars_ Searching for Life on Another World.epub",
+        zh_source=None,
+        en_start_marker="Prologue",
+        source_spine_lang="en",
+        task_mode="trilingual_en_source_generated_zh_ja",
+        book_description="Sarah Stewart Johnson, The Sirens of Mars. English EPUB is the complete alignment spine; Chinese and Japanese are generated as natural explanatory translations for language learning.",
+    ),
+    "a-city-on-mars": BookConfig(
+        book_id="a-city-on-mars",
+        title_en="A City on Mars",
+        title_zh="火星城市",
+        title_ja="火星に都市をつくる",
+        title_zh_reading="huǒ xīng chéng shì",
+        title_ja_reading="かせい に とし を つくる",
+        author="Kelly Weinersmith and Zach Weinersmith",
+        author_reading_zh="kǎi lì wēi nà shǐ mì sī hé zhā kè wēi nà shǐ mì sī",
+        author_reading_ja="ケリー ワイナースミス と ザック ワイナースミス",
+        en_source=SCIENCE_HISTORY_DIR
+        / "A City on Mars _ Can we settle space, should we settle space, and have we really thought this through_.epub",
+        zh_source=None,
+        en_start_marker="Introduction",
+        source_spine_lang="en",
+        task_mode="trilingual_en_source_generated_zh_ja",
+        book_description="Kelly and Zach Weinersmith, A City on Mars. English EPUB is the complete alignment spine; Chinese and Japanese are generated as natural explanatory translations for language learning.",
+    ),
+    "red-mars": BookConfig(
+        book_id="red-mars",
+        title_en="Red Mars",
+        title_zh="红火星",
+        title_ja="レッド・マーズ",
+        title_zh_reading="hóng huǒ xīng",
+        title_ja_reading="レッド マーズ",
+        author="Kim Stanley Robinson",
+        author_reading_zh="jīn sī tǎn lì luó bīn xùn",
+        author_reading_ja="キム スタンリー ロビンソン",
+        en_source=SCIENCE_FICTION_DIR / "Red Mars.epub",
+        zh_source=SCIENCE_FICTION_DIR / "108红火星.mobi",
+        en_start_marker="Part One",
+        zh_start_marker="第二部 太空远航 第一章",
+        source_spine_lang="en",
+        book_description="Kim Stanley Robinson, Red Mars. English EPUB is the complete alignment spine; Chinese MOBI is a partial reference beginning from the second part and should be used only when it matches the English location; Japanese is generated in natural modern Japanese.",
+    ),
 }
 
 
@@ -258,9 +324,16 @@ def clean_line(raw_line: str) -> str:
     line = html.unescape(line)
     line = line.strip("> ")
     line = compact(line)
+    bracketed = re.fullmatch(r"\[([A-Za-z0-9][^][]+)\]", line)
+    if bracketed:
+        line = bracketed.group(1).strip()
     if line.startswith("![]("):
         return ""
     if line in DROP_LINES:
+        return ""
+    if "暂缺" in line and len(line) <= 24:
+        return ""
+    if re.fullmatch(r"[-+=*#_•. ]{3,}", line):
         return ""
     return line
 
@@ -268,6 +341,35 @@ def clean_line(raw_line: str) -> str:
 def epub_lines(path: Path) -> list[str]:
     raw = run_text(["pandoc", str(path), "-t", "plain", "--wrap=none"])
     return [line for line in (clean_line(raw_line) for raw_line in raw.splitlines()) if line]
+
+
+def html_lines(path: Path) -> list[str]:
+    from bs4 import BeautifulSoup
+
+    raw = path.read_text(encoding="utf-8", errors="replace")
+    soup = BeautifulSoup(raw, "lxml")
+    for node in soup(["script", "style"]):
+        node.decompose()
+    return [line for line in (clean_line(raw_line) for raw_line in soup.get_text("\n").splitlines()) if line]
+
+
+def mobi_lines(path: Path) -> list[str]:
+    import mobi
+
+    tempdir, extracted = mobi.extract(str(ROOT / path))
+    try:
+        extracted_path = Path(extracted)
+        suffix = extracted_path.suffix.lower()
+        if suffix == ".epub":
+            raw = run_text(["pandoc", str(extracted_path), "-t", "plain", "--wrap=none"])
+            return [line for line in (clean_line(raw_line) for raw_line in raw.splitlines()) if line]
+        if suffix in {".html", ".htm"}:
+            return html_lines(extracted_path)
+        if suffix == ".pdf":
+            return pdf_lines_with_blanks(extracted_path)
+        raise RuntimeError(f"unsupported MOBI extraction output: {extracted_path}")
+    finally:
+        shutil.rmtree(tempdir, ignore_errors=True)
 
 
 def clean_pdf_line(raw_line: str) -> str:
@@ -302,28 +404,32 @@ def clean_pdf_text(text: str) -> str:
 
 
 def looks_like_en_prose(line: str) -> bool:
-    if EN_HEADING_RE.match(line) or line in EN_STOP_HEADINGS:
+    if EN_HEADING_RE.match(line) or is_en_stop_heading(line):
         return False
     return len(line) >= 35 and bool(re.search(r"[A-Za-z]{3,}", line))
 
 
 def looks_like_zh_prose(line: str) -> bool:
-    if ZH_CHAPTER_RE.match(line) or ZH_DATE_HEADING_RE.match(line) or ZH_PART_RE.match(line) or line in ZH_STOP_HEADINGS:
+    if (
+        ZH_CHAPTER_RE.match(line)
+        or ZH_SECTION_HEADING_RE.match(line)
+        or ZH_DATE_HEADING_RE.match(line)
+        or ZH_PART_RE.match(line)
+        or line in ZH_STOP_HEADINGS
+    ):
         return False
     return len(line) >= 12 and len(CJK_RE.findall(line)) >= 6
 
 
 def find_en_body_start(lines: list[str], preferred: str) -> int:
     if preferred:
-        for index, line in enumerate(lines):
-            if preferred in line:
+        candidates = [index for index, line in enumerate(lines) if marker_matches(line, preferred)]
+        for index in candidates:
+            window = lines[index + 1 : index + 18]
+            if any(looks_like_en_prose(item) for item in window):
                 return index
-    for index, line in enumerate(lines):
-        if line != preferred:
-            continue
-        window = lines[index + 1 : index + 12]
-        if any(looks_like_en_prose(item) for item in window):
-            return index
+        if candidates:
+            return candidates[-1]
     for index, line in enumerate(lines):
         if EN_HEADING_RE.match(line) and any(looks_like_en_prose(item) for item in lines[index + 1 : index + 12]):
             return index
@@ -344,8 +450,12 @@ def looks_like_en_part(line: str) -> bool:
     return bool(EN_PART_RE.match(line)) and len(line) <= 90
 
 
+def is_en_stop_heading(line: str) -> bool:
+    return line in EN_STOP_HEADINGS or line.startswith("Praise for ") or line.startswith("Also by ")
+
+
 def looks_like_en_heading(line: str) -> bool:
-    if line in EN_STOP_HEADINGS:
+    if is_en_stop_heading(line):
         return False
     if looks_like_en_part(line):
         return True
@@ -353,7 +463,11 @@ def looks_like_en_heading(line: str) -> bool:
         return True
     if line.lower() in {"prologue", "epilogue"}:
         return True
-    if re.match(r"^Chapter\s+\d+(?::\s*.+)?$", line, re.IGNORECASE):
+    if line.lower() in {"introduction", "conclusion"}:
+        return True
+    if re.match(r"^Chapter\s+\d+(?:(?::|\s+).+)?$", line, re.IGNORECASE):
+        return True
+    if re.match(r"^Nota Bene:\s+.+$", line, re.IGNORECASE):
         return True
     if re.match(r"^\d{1,3}:\s+.+$", line):
         return True
@@ -436,9 +550,19 @@ def merge_pdf_continuations(paragraphs: list[str]) -> list[str]:
 def can_be_split_title(line: str) -> bool:
     if not line or looks_like_en_heading(line) or line in EN_STOP_HEADINGS:
         return False
+    if re.match(r"^\d{1,3}[.)]\s+", line):
+        return False
     if looks_like_en_prose(line):
         return False
     return bool(re.search(r"[A-Za-z]", line)) and len(line) <= 80
+
+
+def can_be_numbered_chapter_title(line: str) -> bool:
+    if not line or is_en_stop_heading(line) or looks_like_en_part(line):
+        return False
+    if re.match(r"^\d{1,3}[.)]", line):
+        return False
+    return bool(re.search(r"[A-Za-z]", line)) and len(line) <= 150
 
 
 def parse_en_epub(path: Path, *, preferred_start: str) -> list[Chapter]:
@@ -447,18 +571,33 @@ def parse_en_epub(path: Path, *, preferred_start: str) -> list[Chapter]:
     chapters: list[Chapter] = []
     current: Chapter | None = None
     current_part = ""
+    next_numbered_chapter = 1
 
     index = start
     while index < len(lines):
         line = lines[index]
-        if line in EN_STOP_HEADINGS and chapters:
+        if is_en_stop_heading(line) and chapters:
             break
         if looks_like_en_part(line):
+            if current_part.startswith(line) and current is not None and current.paragraphs:
+                index += 1
+                continue
             current_part = line
+            current = None
             index += 1
             continue
-        if EN_NUMBER_ONLY_RE.match(line) and index + 1 < len(lines) and can_be_split_title(lines[index + 1]):
-            title = f"{line}: {lines[index + 1]}"
+        if current_part and current is None and can_be_split_title(line):
+            next_line = lines[index + 1] if index + 1 < len(lines) else ""
+            if EN_NUMBER_ONLY_RE.match(next_line) or looks_like_en_heading(next_line):
+                current_part = f"{current_part}: {line}"
+                index += 1
+                continue
+            current = Chapter(number=len(chapters) + 1, title=line, part=current_part)
+            chapters.append(current)
+            index += 1
+            continue
+        if EN_NUMBER_ONLY_RE.match(line) and index + 1 < len(lines) and can_be_numbered_chapter_title(lines[index + 1]):
+            title = f"{line.rstrip('.')}. {lines[index + 1]}"
             current = Chapter(number=len(chapters) + 1, title=title, part=current_part)
             chapters.append(current)
             index += 2
@@ -466,6 +605,15 @@ def parse_en_epub(path: Path, *, preferred_start: str) -> list[Chapter]:
         if looks_like_en_heading(line):
             current = Chapter(number=len(chapters) + 1, title=chapter_title_en(line, len(chapters) + 1), part=current_part)
             chapters.append(current)
+            index += 1
+            continue
+        if (
+            current is not None
+            and not current.paragraphs
+            and current.title.lower() in {"introduction", "conclusion", "prologue", "epilogue"}
+            and can_be_split_title(line)
+        ):
+            current.title = f"{current.title}: {line}"
             index += 1
             continue
         if current is None:
@@ -540,7 +688,7 @@ def parse_zh_lines(lines: list[str]) -> list[Chapter]:
         if ZH_PART_RE.match(line) and len(line) <= 16:
             current_part = line
             continue
-        if ZH_CHAPTER_RE.match(line) or ZH_DATE_HEADING_RE.match(line):
+        if ZH_CHAPTER_RE.match(line) or ZH_SECTION_HEADING_RE.match(line) or ZH_DATE_HEADING_RE.match(line):
             current = Chapter(number=len(chapters) + 1, title=line, part=current_part)
             chapters.append(current)
             continue
@@ -556,6 +704,17 @@ def parse_zh_epub(path: Path, *, start_marker: str | None, end_marker: str | Non
     lines = epub_lines(path)
     segment = extract_zh_segment(lines, start_marker=start_marker, end_marker=end_marker)
     return parse_zh_lines(segment)
+
+
+def parse_zh_source(path: Path | None, *, start_marker: str | None, end_marker: str | None) -> list[Chapter]:
+    if path is None:
+        return []
+    suffix = path.suffix.lower()
+    if suffix == ".mobi":
+        lines = mobi_lines(path)
+        segment = extract_zh_segment(lines, start_marker=start_marker, end_marker=end_marker)
+        return parse_zh_lines(segment)
+    return parse_zh_epub(path, start_marker=start_marker, end_marker=end_marker)
 
 
 def split_english_units(text: str, *, max_chars: int) -> list[str]:
@@ -626,6 +785,7 @@ def make_chunks(
     spine_chapters = en_chapters if spine_lang == "en" else zh_chapters
     reference_chapters = zh_chapters if spine_lang == "en" else en_chapters
     reference_text = all_text(reference_chapters)
+    has_zh_reference = bool(zh_chapters)
     total_chars = max(sum(len(p) + 1 for c in spine_chapters for p in c.paragraphs), 1)
     chunks: list[dict[str, Any]] = []
     global_cursor = 0
@@ -650,10 +810,10 @@ def make_chunks(
                 reference = {
                     "english": {"available": True, "chapter": chapter.title, "text": source_ref},
                     "zh_primary": {
-                        "available": bool(ref),
+                        "available": has_zh_reference and bool(ref),
                         "chapter": "global-ratio-window",
                         "text": ref,
-                        "quality": "published_translation_reference",
+                        "quality": "published_translation_reference" if has_zh_reference else "generate_from_english_spine",
                     },
                     "zh_secondary": {"available": False, "chapter": "", "text": ""},
                     "ja": {"available": False, "chapter": "", "text": ""},
@@ -709,10 +869,14 @@ def make_chunks(
             global_cursor += len(paragraph) + 1
         flush()
 
-    source_paths: dict[str, Any] = {"zh": str(config.zh_source)}
+    source_paths: dict[str, Any] = {}
+    if config.zh_source:
+        source_paths["zh"] = str(config.zh_source)
     if config.en_source:
         source_paths["en"] = str(config.en_source)
-    source_sha256: dict[str, Any] = {"zh": sha256(config.zh_source)}
+    source_sha256: dict[str, Any] = {}
+    if config.zh_source:
+        source_sha256["zh"] = sha256(config.zh_source)
     if config.en_source:
         source_sha256["en"] = sha256(config.en_source)
     manifest = {
@@ -756,14 +920,15 @@ def prepare_book(config: BookConfig, args: argparse.Namespace) -> dict[str, Any]
         en_chapters = parse_en_source(config.en_source, preferred_start=preferred)
         if not en_chapters:
             raise RuntimeError(f"no English chapters parsed for {config.book_id}")
-    zh_chapters = parse_zh_epub(config.zh_source, start_marker=config.zh_start_marker, end_marker=config.zh_end_marker)
-    if not zh_chapters:
+    zh_chapters = parse_zh_source(config.zh_source, start_marker=config.zh_start_marker, end_marker=config.zh_end_marker)
+    if config.source_spine_lang == "zh" and not zh_chapters:
         raise RuntimeError(f"no Chinese chapters parsed for {config.book_id}")
 
     book_root = Path("books") / config.book_id
     if en_chapters:
         write_text(book_root / "markdown/en.md", markdown_for_chapters(config.title_en, en_chapters))
-    write_text(book_root / "markdown/zh.md", markdown_for_chapters(config.title_zh, zh_chapters))
+    if zh_chapters:
+        write_text(book_root / "markdown/zh.md", markdown_for_chapters(config.title_zh, zh_chapters))
 
     manifest, chunks = make_chunks(
         config,
@@ -784,7 +949,9 @@ def prepare_book(config: BookConfig, args: argparse.Namespace) -> dict[str, Any]
     raw_chunk_dir.mkdir(parents=True, exist_ok=True)
     preview_dir.mkdir(parents=True, exist_ok=True)
 
-    source_paths: dict[str, Any] = {"zh": str(config.zh_source)}
+    source_paths: dict[str, Any] = {}
+    if config.zh_source:
+        source_paths["zh"] = str(config.zh_source)
     if config.en_source:
         source_paths["en"] = str(config.en_source)
     plan = {
@@ -792,13 +959,13 @@ def prepare_book(config: BookConfig, args: argparse.Namespace) -> dict[str, Any]
         "book_id": config.book_id,
         "status": "prepared_trilingual",
         "launchable": True,
-        "task_mode": "trilingual_en_zh_sources_generated_ja",
+        "task_mode": config.task_mode,
         "source_spine_lang": config.source_spine_lang,
         "source_paths": source_paths,
         "source_sha256": manifest["source_sha256"],
         "markdown": {
             **({"en": str(book_root / "markdown/en.md")} if en_chapters else {}),
-            "zh": str(book_root / "markdown/zh.md"),
+            **({"zh": str(book_root / "markdown/zh.md")} if zh_chapters else {}),
         },
         "book_title_en": config.title_en,
         "book_title_zh": config.title_zh,
