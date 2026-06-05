@@ -1,0 +1,128 @@
+\usepackage{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{xparse}
+\usepackage{xcolor}
+\usepackage{needspace}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{xurl}
+
+\geometry{
+  paperwidth=128mm,
+  paperheight=188mm,
+  inner=11mm,
+  outer=10mm,
+  top=13mm,
+  bottom=14mm,
+  headheight=9pt,
+  headsep=6pt,
+  footskip=8mm
+}
+
+\setmainfont{Noto Serif CJK SC}
+\setsansfont{Noto Sans CJK SC}
+\setmonofont{Noto Sans Mono CJK SC}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+\newCJKfontfamily\zhfont{Noto Serif CJK SC}
+\newCJKfontfamily\zhsans{Noto Sans CJK SC}
+
+\definecolor{SXInk}{HTML}{151515}
+\definecolor{SXMuted}{HTML}{56514A}
+\definecolor{SXRule}{HTML}{B5ADA2}
+\definecolor{SXAccent}{HTML}{7A3326}
+\definecolor{SXPaper}{HTML}{F4F0EA}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=SXAccent,
+  urlcolor=SXAccent
+}
+
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip=0pt plus 1pt
+\linespread{1.05}
+\emergencystretch=3em
+\sloppy
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\zhsans\fontsize{6.8pt}{8pt}\selectfont\leftmark}
+\fancyfoot[C]{\zhsans\fontsize{7pt}{8pt}\selectfont\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\titleformat{\chapter}[display]
+  {\normalfont\zhfont\bfseries\Large\color{SXInk}}
+  {}
+  {0pt}
+  {}
+\titlespacing*{\chapter}{0pt}{0pt}{1.1em}
+
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.18em}
+
+\NewDocumentCommand{\SXMeta}{m m}{%
+  \hypersetup{pdftitle={#1},pdfauthor={#2}}%
+}
+
+\NewDocumentCommand{\SXTitle}{m m m m}{%
+  \frontmatter
+  \thispagestyle{empty}
+  \vspace*{0.11\textheight}
+  {\centering
+    {\zhfont\bfseries\fontsize{20pt}{25pt}\selectfont #1\par}
+    \vspace{1.2em}
+    {\zhsans\fontsize{9pt}{12pt}\selectfont #2\par}
+    \vspace{0.6em}
+    {\zhsans\fontsize{8pt}{11pt}\selectfont #3\par}
+    \vfill
+    {\zhsans\fontsize{7pt}{10pt}\selectfont #4\par}
+  }
+  \clearpage
+  \tableofcontents
+  \clearpage
+  \mainmatter
+}
+
+\NewDocumentCommand{\SXChapter}{m m}{%
+  \chapter*{#1}
+  \markboth{#1}{#1}
+  \addcontentsline{toc}{chapter}{#1}
+  {\zhsans\fontsize{7pt}{10pt}\selectfont\color{SXMuted}#2\par}
+  \vspace{0.7em}
+}
+
+\NewDocumentCommand{\SXPage}{m m}{%
+  \par\needspace{4\baselineskip}
+  \vspace{0.45em}
+  \noindent
+  {\zhsans\fontsize{6.6pt}{8pt}\selectfont\color{SXMuted}
+    \rule[0.42ex]{0.22\linewidth}{0.25pt}\hspace{0.55em}
+    原书第 #1 页\if\relax\detokenize{#2}\relax\else\quad #2\fi
+    \hspace{0.55em}\rule[0.42ex]{0.22\linewidth}{0.25pt}}\par
+  \vspace{0.15em}
+}
+
+\NewDocumentCommand{\SXPara}{+m}{%
+  \par{\zhfont\fontsize{9.9pt}{15.4pt}\selectfont\color{SXInk}#1}\par
+}
+
+\NewDocumentCommand{\SXListLine}{+m}{%
+  \par\noindent{\zhfont\fontsize{9.45pt}{13.4pt}\selectfont\color{SXInk}#1}\par
+}
+
+\NewDocumentCommand{\SXFigureNote}{+m}{%
+  \par\noindent
+  \begingroup
+  \setlength{\fboxsep}{5pt}%
+  \colorbox{SXPaper}{%
+    \parbox{\dimexpr\linewidth-10pt\relax}{%
+      \zhsans\fontsize{8pt}{11pt}\selectfont\color{SXMuted}#1%
+    }%
+  }%
+  \endgroup
+  \par\vspace{0.2em}
+}

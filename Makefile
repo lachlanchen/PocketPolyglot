@@ -12,7 +12,7 @@ JP_MAIN_URL ?= https://flow.lazying.art
 JP_MAIN_POWERED_BY ?= powered by LazyingArt
 JP_MAIN_COVER ?=
 
-.PHONY: sample paired interlinear interlinear-run interlinear-jp-main compare export-books readme-previews edition-comparison sentence-showcase readme-assets kokoro-md kokoro-tmux kokoro-bilingual-md kokoro-bilingual-tmux kokoro-compile kokoro-jp-ocr-md snow-country-prepare snow-country-tmux snow-country-after-kokoro snow-country-compile ocr-sample ocr-all clean
+.PHONY: sample paired interlinear interlinear-run interlinear-jp-main compare export-books readme-previews edition-comparison sentence-showcase readme-assets kokoro-md kokoro-tmux kokoro-bilingual-md kokoro-bilingual-tmux kokoro-compile kokoro-jp-ocr-md snow-country-prepare snow-country-tmux snow-country-after-kokoro snow-country-compile sanxingdui-tex ocr-sample ocr-all clean
 
 sample: paired
 
@@ -73,6 +73,9 @@ snow-country-after-kokoro:
 
 snow-country-compile:
 	bash scripts/interlinear/compile_snow_country_both_previews.sh
+
+sanxingdui-tex:
+	python scripts/ocr/markdown_to_sanxingdui_tex.py
 
 build/paired/source.tex: $(PAIRED_DATA) scripts/paired/md_to_tex.py
 	python scripts/paired/md_to_tex.py $(PAIRED_DATA) -o build/paired/source.tex
