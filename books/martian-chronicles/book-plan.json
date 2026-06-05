@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "book_id": "martian-chronicles",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_en_zh_sources_generated_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "zh": "sources/mars/science-fiction/火星编年史.epub",
+    "en": "sources/mars/science-fiction/Bradbury, Ray - The Martian Chronicles.pdf"
+  },
+  "source_sha256": {
+    "zh": "2548bcc3b7f35e4774642f080ee8427b0d16452a19b973d3dcde9c40692fb8ed",
+    "en": "7b505bcff46d54bb3ae9582ebad36372c41f7890f0d57b5ffb625e7b3e113125"
+  },
+  "markdown": {
+    "en": "books/martian-chronicles/markdown/en.md",
+    "zh": "books/martian-chronicles/markdown/zh.md"
+  },
+  "book_title_en": "The Martian Chronicles",
+  "book_title_zh": "火星编年史",
+  "book_title_ja": "火星年代記",
+  "book_title_zh_reading": "huǒ xīng biān nián shǐ",
+  "book_title_ja_reading": "かせい ねんだいき",
+  "author": "Ray Bradbury",
+  "author_reading_zh": "léi bù léi dé bó lǐ",
+  "author_reading_ja": "レイ ブラッドベリ",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Ray Bradbury, The Martian Chronicles. English PDF is the alignment spine; Chinese EPUB is the reference; Japanese is generated in natural modern Japanese.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "global_ratio_window",
+  "chunks_jsonl": "books/martian-chronicles/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/martian-chronicles/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/martian-chronicles/work/trilingual/interlinear/chunks",
+  "preview_json": "books/martian-chronicles/work/trilingual/preview/martian-chronicles.partial.json",
+  "assembled_json": "books/martian-chronicles/work/trilingual/preview/martian-chronicles.partial.json",
+  "prepared_at": "2026-06-05T06:54:53.540828+00:00",
+  "chunk_count": 174,
+  "english_chapter_count": 26,
+  "chinese_reference_chapter_count": 25
+}

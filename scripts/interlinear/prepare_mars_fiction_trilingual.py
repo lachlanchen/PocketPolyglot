@@ -28,6 +28,7 @@ TAG_RE = re.compile(r"<[^>]+>")
 SPACE_RE = re.compile(r"\s+")
 EN_SENTENCE_BOUNDARY_RE = re.compile(r'[.!?]["”’)]*\s+')
 CJK_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
+EN_DATE_HEADING_RE = re.compile(r"^(?:[A-Za-z]+ \d{4}|20\d{2}(?:-\d{2,4})?):\s+.+$")
 EN_HEADING_RE = re.compile(
     r"^(?:Prologue|Epilogue|Chapter\s+\d+(?::\s*.+)?|\d{1,3}:\s+.+|\d{1,3}\s+[^.?!]{2,80}|PART\s+[IVXLCDM]+(?::|\s).+|Part\s+[IVXLCDM]+(?::|\s).+)$",
     re.IGNORECASE,
@@ -35,6 +36,9 @@ EN_HEADING_RE = re.compile(
 EN_PART_RE = re.compile(r"^(?:PART|Part)\s+[IVXLCDM]+(?:(?::|\s).+)?$", re.IGNORECASE)
 EN_NUMBER_ONLY_RE = re.compile(r"^\d{1,3}$")
 ZH_CHAPTER_RE = re.compile(r"^第[一二三四五六七八九十百〇零0-9]+\s*章\s*.*$")
+ZH_DATE_HEADING_RE = re.compile(
+    r"^[一二三四五六七八九十〇零○0-9]{4}年(?:-|—|至|[一二三四五六七八九十〇零○0-9]{0,4}年)?\s*[一二三四五六七八九十冬春夏秋月0-9]*月?\s+.{1,30}$"
+)
 ZH_PART_RE = re.compile(r"^[IVX]+\s+.+$")
 DROP_LINES = {
     "[]",
@@ -55,6 +59,52 @@ EN_STOP_HEADINGS = {
     "Copyright",
 }
 ZH_STOP_HEADINGS = {"致谢", "致 谢", "关于作者", "版权信息"}
+PDF_NOISE_LINES = {
+    "F T ra n sf o",
+    "PD rm",
+    "Y",
+    "er",
+    "ABB",
+    "y",
+    "bu",
+    "2.0",
+    "to",
+    "re",
+    "he",
+    "k",
+    "lic",
+    "C",
+    "w",
+    "w.",
+    "A B B Y Y.c",
+    "PUBLISHING HISTORY",
+    "CHRONOLOGY:",
+}
+PDF_TEXT_FIXES = {
+    "Churchil": "Churchill",
+    "Druxnmond": "Drummond",
+    "Parkhiil": "Parkhill",
+    "Stendabi": "Stendahl",
+    "bettle-car": "beetle-car",
+    "cirde": "circle",
+    "cirdes": "circles",
+    "cradded": "crackled",
+    "dapped": "clapped",
+    "dasped": "clasped",
+    "esctatic": "ecstatic",
+    "exuse": "excuse",
+    "flrebrands": "firebrands",
+    "inawind": "in a wind",
+    "induding": "including",
+    "mintes": "minutes",
+    "mirade": "miracle",
+    "obeisks": "obelisks",
+    "partides": "particles",
+    "slammng": "slamming",
+    "spectade": "spectacle",
+    "withpered": "whispered",
+    "wintar": "winter",
+}
 
 
 @dataclass
@@ -154,6 +204,24 @@ BOOKS: dict[str, BookConfig] = {
         source_spine_lang="en",
         book_description="Andy Weir, The Martian. English EPUB is the alignment spine; Chinese EPUB is the reference; Japanese is generated in natural modern Japanese.",
     ),
+    "martian-chronicles": BookConfig(
+        book_id="martian-chronicles",
+        title_en="The Martian Chronicles",
+        title_zh="火星编年史",
+        title_ja="火星年代記",
+        title_zh_reading="huǒ xīng biān nián shǐ",
+        title_ja_reading="かせい ねんだいき",
+        author="Ray Bradbury",
+        author_reading_zh="léi bù léi dé bó lǐ",
+        author_reading_ja="レイ ブラッドベリ",
+        en_source=SOURCE_DIR / "Bradbury, Ray - The Martian Chronicles.pdf",
+        zh_source=SOURCE_DIR / "火星编年史.epub",
+        en_start_marker="January 1999:",
+        zh_start_marker="一九九九年一月 火箭之夏",
+        zh_end_marker="本书由“行行”整理",
+        source_spine_lang="en",
+        book_description="Ray Bradbury, The Martian Chronicles. English PDF is the alignment spine; Chinese EPUB is the reference; Japanese is generated in natural modern Japanese.",
+    ),
 }
 
 
@@ -202,6 +270,37 @@ def epub_lines(path: Path) -> list[str]:
     return [line for line in (clean_line(raw_line) for raw_line in raw.splitlines()) if line]
 
 
+def clean_pdf_line(raw_line: str) -> str:
+    line = clean_line(raw_line.replace("\f", ""))
+    line = re.sub(r"\s+", " ", line).strip()
+    if not line:
+        return ""
+    if line in PDF_NOISE_LINES:
+        return ""
+    if "ABBYY" in line or "A B B Y Y" in line:
+        return ""
+    if re.fullmatch(r"[YwCk]|lic|he|re|to|bu|er|rm|PD|ABB", line):
+        return ""
+    if line.startswith("Copyright ") or line.startswith("ISBN ") or line.startswith("A Bantam"):
+        return ""
+    line = clean_pdf_text(line)
+    return line
+
+
+def pdf_lines_with_blanks(path: Path) -> list[str]:
+    raw = run_text(["pdftotext", "-layout", str(path), "-"])
+    return [clean_pdf_line(raw_line) for raw_line in raw.splitlines()]
+
+
+def clean_pdf_text(text: str) -> str:
+    text = text.replace("sucked. dry", "sucked dry")
+    text = text.replace("told me- -well", "told me--well")
+    text = text.replace('"Yll, lower your voice.\'', '"Yll, lower your voice."')
+    for bad, good in PDF_TEXT_FIXES.items():
+        text = re.sub(rf"\b{re.escape(bad)}\b", good, text)
+    return compact(text)
+
+
 def looks_like_en_prose(line: str) -> bool:
     if EN_HEADING_RE.match(line) or line in EN_STOP_HEADINGS:
         return False
@@ -209,7 +308,7 @@ def looks_like_en_prose(line: str) -> bool:
 
 
 def looks_like_zh_prose(line: str) -> bool:
-    if ZH_CHAPTER_RE.match(line) or ZH_PART_RE.match(line) or line in ZH_STOP_HEADINGS:
+    if ZH_CHAPTER_RE.match(line) or ZH_DATE_HEADING_RE.match(line) or ZH_PART_RE.match(line) or line in ZH_STOP_HEADINGS:
         return False
     return len(line) >= 12 and len(CJK_RE.findall(line)) >= 6
 
@@ -250,6 +349,8 @@ def looks_like_en_heading(line: str) -> bool:
         return False
     if looks_like_en_part(line):
         return True
+    if EN_DATE_HEADING_RE.match(line):
+        return True
     if line.lower() in {"prologue", "epilogue"}:
         return True
     if re.match(r"^Chapter\s+\d+(?::\s*.+)?$", line, re.IGNORECASE):
@@ -259,6 +360,77 @@ def looks_like_en_heading(line: str) -> bool:
     if re.match(r"^\d{1,3}\s+[^.?!]{2,80}$", line):
         return True
     return False
+
+
+def pdf_heading_title(line: str) -> str:
+    if EN_DATE_HEADING_RE.match(line):
+        left, _, right = line.partition(":")
+        return f"{left.strip()}: {right.strip()}"
+    return chapter_title_en(line, 1)
+
+
+def parse_en_pdf(path: Path, *, preferred_start: str) -> list[Chapter]:
+    lines = pdf_lines_with_blanks(path)
+    starts = [index for index, line in enumerate(lines) if preferred_start and preferred_start in line]
+    start = starts[-1] if starts else 0
+    chapters: list[Chapter] = []
+    current: Chapter | None = None
+    paragraph_lines: list[str] = []
+
+    def flush_paragraph() -> None:
+        nonlocal paragraph_lines
+        if current is None or not paragraph_lines:
+            paragraph_lines = []
+            return
+        text = compact(" ".join(paragraph_lines))
+        paragraph_lines = []
+        if text and looks_like_en_prose(text):
+            current.paragraphs.extend(split_english_units(text, max_chars=900))
+
+    for line in lines[start:]:
+        if not line:
+            flush_paragraph()
+            continue
+        if line == "ABOUT THE AUTHOR":
+            flush_paragraph()
+            break
+        if line in {"THE MARTIAN CHRONICLES", "For my wife MARGUERITE with all my love"}:
+            continue
+        if looks_like_en_heading(line):
+            flush_paragraph()
+            current = Chapter(number=len(chapters) + 1, title=pdf_heading_title(line), part="")
+            chapters.append(current)
+            continue
+        if current is None:
+            continue
+        if len(line) <= 2:
+            continue
+        paragraph_lines.append(line)
+    flush_paragraph()
+    for chapter in chapters:
+        chapter.paragraphs = merge_pdf_continuations(chapter.paragraphs)
+    return [chapter for chapter in chapters if chapter.paragraphs]
+
+
+def is_incomplete_english_unit(text: str) -> bool:
+    stripped = text.rstrip()
+    return bool(stripped) and not re.search(r'[.!?]["”’)]*_?$', stripped)
+
+
+def starts_like_continuation(text: str) -> bool:
+    stripped = text.lstrip()
+    return bool(stripped) and bool(re.match(r'^(?:["_])?[a-z]', stripped))
+
+
+def merge_pdf_continuations(paragraphs: list[str]) -> list[str]:
+    merged: list[str] = []
+    for paragraph in paragraphs:
+        paragraph = clean_pdf_text(paragraph)
+        if merged and is_incomplete_english_unit(merged[-1]) and starts_like_continuation(paragraph):
+            merged[-1] = compact(f"{merged[-1]} {paragraph}")
+        else:
+            merged.append(paragraph)
+    return merged
 
 
 def can_be_split_title(line: str) -> bool:
@@ -303,6 +475,12 @@ def parse_en_epub(path: Path, *, preferred_start: str) -> list[Chapter]:
             current.paragraphs.extend(split_english_units(line, max_chars=900))
         index += 1
     return [chapter for chapter in chapters if chapter.paragraphs]
+
+
+def parse_en_source(path: Path, *, preferred_start: str) -> list[Chapter]:
+    if path.suffix.lower() == ".pdf":
+        return parse_en_pdf(path, preferred_start=preferred_start)
+    return parse_en_epub(path, preferred_start=preferred_start)
 
 
 def normalize_marker(text: str) -> str:
@@ -362,7 +540,7 @@ def parse_zh_lines(lines: list[str]) -> list[Chapter]:
         if ZH_PART_RE.match(line) and len(line) <= 16:
             current_part = line
             continue
-        if ZH_CHAPTER_RE.match(line):
+        if ZH_CHAPTER_RE.match(line) or ZH_DATE_HEADING_RE.match(line):
             current = Chapter(number=len(chapters) + 1, title=line, part=current_part)
             chapters.append(current)
             continue
@@ -575,7 +753,7 @@ def prepare_book(config: BookConfig, args: argparse.Namespace) -> dict[str, Any]
     en_chapters: list[Chapter] = []
     if config.en_source:
         preferred = config.en_start_marker or ("Chapter 1" if config.book_id == "the-martian" else "Prologue")
-        en_chapters = parse_en_epub(config.en_source, preferred_start=preferred)
+        en_chapters = parse_en_source(config.en_source, preferred_start=preferred)
         if not en_chapters:
             raise RuntimeError(f"no English chapters parsed for {config.book_id}")
     zh_chapters = parse_zh_epub(config.zh_source, start_marker=config.zh_start_marker, end_marker=config.zh_end_marker)
