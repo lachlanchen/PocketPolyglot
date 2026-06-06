@@ -120,6 +120,11 @@
   {}
 \titlespacing*{\chapter}{0pt}{0pt}{1.1em}
 
+\makeatletter
+\renewcommand{\@pnumwidth}{3em}
+\renewcommand{\@tocrmarg}{3.6em}
+\makeatother
+
 \setlength{\parindent}{2em}
 \ifSXPocket
   \setlength{\parskip}{0.12em}
@@ -139,13 +144,19 @@
     {\zhfont\bfseries\SXTitleFont #1\par}
     \vspace{1.2em}
     {\zhsans\SXSubFont #2\par}
-    \vspace{0.6em}
-    {\zhsans\SXMetaFont #3\par}
+    \if\relax\detokenize{#3}\relax\else
+      \vspace{0.6em}
+      {\zhsans\SXMetaFont #3\par}
+    \fi
     \vfill
     {\zhsans\SXMetaFont #4\par}
   }
   \clearpage
-  \tableofcontents
+  \begingroup
+    \zhsans
+    \ifSXPocket\fontsize{7.3pt}{9.2pt}\selectfont\fi
+    \tableofcontents
+  \endgroup
   \clearpage
   \mainmatter
 }
@@ -188,6 +199,26 @@
   \vspace{0.35em}
   \noindent{\zhsans\bfseries\SXHeadingFont\color{SXAccent}#1}\par
   \vspace{0.1em}
+}
+
+\NewDocumentCommand{\SXSection}{+m}{%
+  \par\needspace{4\baselineskip}
+  \vspace{0.55em}
+  \noindent{\zhsans\bfseries\SXHeadingFont\color{SXAccent}#1}\par
+  \addcontentsline{toc}{section}{#1}
+  \vspace{0.18em}
+}
+
+\NewDocumentCommand{\SXBookFigure}{m m}{%
+  \par\needspace{\SXImageHeight}
+  \begin{center}
+    \includegraphics[width=\linewidth,height=\SXImageHeight,keepaspectratio]{#1}\par
+    \if\relax\detokenize{#2}\relax\else
+      \vspace{0.16em}
+      {\zhsans\SXCaptionFont\color{SXMuted}#2\par}
+    \fi
+  \end{center}
+  \vspace{0.2em}
 }
 
 \NewDocumentCommand{\SXListLine}{+m}{%
