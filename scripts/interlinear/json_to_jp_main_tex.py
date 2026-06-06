@@ -37,6 +37,10 @@ def tex_escape(text: str) -> str:
     return "".join(replacements.get(ch, ch) for ch in text)
 
 
+def tex_path_arg(path: str) -> str:
+    return str(path).replace("\\", "/")
+
+
 def token_role(token: dict[str, str]) -> str:
     return str(token.get("g") or "")
 
@@ -177,7 +181,7 @@ def convert(
     out.extend(
         [
             rf"\JpMainPdfMeta{{{tex_escape(plain_tokens(data['title']['ja']))}}}{{{tex_escape(plain_tokens(data['title']['zh']))}}}{{{tex_escape(author)}}}",
-            rf"\JpMainTitle{brace(title_ja)}{brace(title_zh)}{{{author_rendered}}}{{{tex_escape(curated_by)}}}{{{tex_escape(curated_url)}}}{{{tex_escape(powered_by)}}}{{{tex_escape(cover_image)}}}",
+            rf"\JpMainTitle{brace(title_ja)}{brace(title_zh)}{{{author_rendered}}}{{{tex_escape(curated_by)}}}{{{tex_escape(curated_url)}}}{{{tex_escape(powered_by)}}}{{{tex_path_arg(cover_image)}}}",
             "",
         ]
     )

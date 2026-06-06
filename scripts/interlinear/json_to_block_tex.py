@@ -44,6 +44,10 @@ def tex_escape(text: str) -> str:
     return "".join(replacements.get(ch, ch) for ch in text)
 
 
+def tex_path_arg(path: str) -> str:
+    return str(path).replace("\\", "/")
+
+
 def token_role(token: dict[str, str]) -> str:
     return str(token.get("g") or "")
 
@@ -275,7 +279,7 @@ def convert(
     out.extend(
         [
             rf"\InterPdfMeta{{{tex_escape(plain_tokens(data['title']['zh']))}}}{{{tex_escape(plain_tokens(data['title']['ja']))}}}",
-            rf"\InterTitle{brace(render_tokens(data['title']['zh'], 'zhpy'))}{brace(render_tokens(data['title']['ja'], 'jpruby'))}{{{author_rendered}}}{{{tex_escape(cover_image)}}}",
+            rf"\InterTitle{brace(render_tokens(data['title']['zh'], 'zhpy'))}{brace(render_tokens(data['title']['ja'], 'jpruby'))}{{{author_rendered}}}{{{tex_path_arg(cover_image)}}}",
             "",
         ]
     )

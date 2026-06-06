@@ -1,0 +1,247 @@
+#!/usr/bin/env python3
+"""Render trilingual interlinear JSON as one pair-direction TeX source."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+from pathlib import Path
+from typing import Any
+
+
+LONG_RUN_BREAK = 12
+LONG_RUN_MIN = 18
+LANG_LABELS = {
+    "en": "English",
+    "zh": "中文",
+    "ja": "日本語",
+}
+SUBSCRIPT_DIGITS = {
+    "₀": "0",
+    "₁": "1",
+    "₂": "2",
+    "₃": "3",
+    "₄": "4",
+    "₅": "5",
+    "₆": "6",
+    "₇": "7",
+    "₈": "8",
+    "₉": "9",
+}
+BREAK_AFTER = set("/\\._-,:;=+()[]{}")
+
+
+def tex_escape_char(ch: str) -> str:
+    replacements = {
+        "\\": r"\textbackslash{}",
+        "&": r"\&",
+        "%": r"\%",
+        "$": r"\$",
+        "#": r"\#",
+        "_": r"\_",
+        "{": r"\{",
+        "}": r"\}",
+        "~": r"\textasciitilde{}",
+        "^": r"\textasciicircum{}",
+    }
+    if ch in SUBSCRIPT_DIGITS:
+        return rf"\ensuremath{{_{SUBSCRIPT_DIGITS[ch]}}}"
+    return replacements.get(ch, ch)
+
+
+def flush_alnum_run(parts: list[str], run: list[str]) -> None:
+    if not run:
+        return
+    text = "".join(run)
+    escaped = "".join(tex_escape_char(ch) for ch in text)
+    if len(text) >= LONG_RUN_MIN:
+        chunks = [escaped[index : index + LONG_RUN_BREAK] for index in range(0, len(escaped), LONG_RUN_BREAK)]
+        parts.append(r"\allowbreak{}".join(chunks))
+    else:
+        parts.append(escaped)
+    run.clear()
+
+
+def tex_escape(text: str) -> str:
+    parts: list[str] = []
+    run: list[str] = []
+    for ch in str(text):
+        if ch.isascii() and ch.isalnum():
+            run.append(ch)
+            continue
+        flush_alnum_run(parts, run)
+        parts.append(tex_escape_char(ch))
+        if ch in BREAK_AFTER:
+            parts.append(r"\allowbreak{}")
+    flush_alnum_run(parts, run)
+    return "".join(parts)
+
+
+def tex_escape_en(text: str) -> str:
+    """Escape English text while preserving visible inter-word spaces."""
+    return tex_escape(text).replace(" ", r"\space{}")
+
+
+def tex_path_arg(path: str) -> str:
+    """Return a graphics path argument without discretionary line-break macros."""
+    return str(path).replace("\\", "/")
+
+
+def token_role(token: dict[str, Any]) -> str:
+    return str(token.get("g") or "")
+
+
+def wrap_role(text: str, role: str) -> str:
+    if not role:
+        return text
+    return rf"\Gram{{{tex_escape(role)}}}{{{text}}}"
+
+
+def render_tokens(tokens: list[dict[str, Any]], lang: str) -> str:
+    parts: list[str] = []
+    for token in tokens:
+        raw_text = str(token.get("t", ""))
+        text = tex_escape_en(raw_text) if lang == "en" else tex_escape(raw_text)
+        ruby = tex_escape(str(token.get("r", "")))
+        role = token_role(token)
+        if lang == "en" and raw_text.isspace():
+            parts.append(text)
+            parts.append(r"\allowbreak{}")
+            continue
+        if lang == "zh" and ruby:
+            rendered = rf"\zhpy{{{text}}}{{{ruby}}}"
+        elif lang == "ja" and ruby:
+            rendered = rf"\jpruby{{{text}}}{{{ruby}}}"
+        else:
+            rendered = text
+        parts.append(wrap_role(rendered, role))
+        parts.append(r"\allowbreak{}")
+    return "".join(parts)
+
+
+def render_lang(tokens: list[dict[str, Any]], lang: str, kind: str) -> str:
+    rendered = render_tokens(tokens, lang)
+    macro = {
+        ("zh", "main"): "TriMainZh",
+        ("ja", "main"): "TriMainJa",
+        ("en", "main"): "TriMainEn",
+        ("zh", "comment"): "TriCommentZh",
+        ("ja", "comment"): "TriCommentJa",
+        ("en", "comment"): "TriCommentEn",
+    }[(lang, kind)]
+    return rf"\{macro}{{{rendered}}}"
+
+
+def token_text(tokens: list[dict[str, Any]]) -> str:
+    return "".join(str(token.get("t", "")) for token in tokens)
+
+
+def brace(text: str) -> str:
+    if not text:
+        return "{}"
+    return "{%\n" + text + "\n}"
+
+
+def render_author(author: str, reading: str) -> str:
+    if not reading:
+        return tex_escape(author)
+    parts = [part for part in reading.split() if part]
+    chars = list(author)
+    if len(parts) == len(chars):
+        return "".join(rf"\jpruby{{{tex_escape(char)}}}{{{tex_escape(reading)}}}" for char, reading in zip(chars, parts))
+    return rf"\jpruby{{{tex_escape(author)}}}{{{tex_escape(reading)}}}"
+
+
+def convert(
+    data: dict[str, Any],
+    *,
+    main_lang: str,
+    comment_lang: str,
+    color_mode: str,
+    author: str,
+    author_reading: str,
+    curated_by: str,
+    curated_url: str,
+    powered_by: str,
+    cover_image: str,
+) -> str:
+    title = data.get("title", {})
+    main_title_plain = token_text(title.get(main_lang, []))
+    comment_title_plain = token_text(title.get(comment_lang, []))
+    main_title = render_lang(title.get(main_lang, []), main_lang, "main")
+    comment_title = render_lang(title.get(comment_lang, []), comment_lang, "comment")
+    if color_mode == "blackwhite":
+        cover_image = ""
+
+    out: list[str] = [
+        "% Generated by scripts/interlinear/json_to_trilingual_pair_tex.py. Edit JSON, not this file.",
+    ]
+    if color_mode == "blackwhite":
+        out.append(r"\BlackWhiteMode")
+    out.extend(
+        [
+            rf"\TriPairPdfMeta{{{tex_escape(main_title_plain)}}}{{{tex_escape(comment_title_plain)}}}{{{tex_escape(author)}}}",
+            rf"\TriPairTitle{brace(main_title)}{brace(comment_title)}{{{tex_escape(LANG_LABELS[main_lang])}}}{{{tex_escape(LANG_LABELS[comment_lang])}}}{{{render_author(author, author_reading)}}}{{{tex_escape(curated_by)}}}{{{tex_escape(curated_url)}}}{{{tex_escape(powered_by)}}}{{{tex_path_arg(cover_image)}}}",
+            "",
+        ]
+    )
+
+    for chapter in data.get("chapters", []):
+        chapter_title = chapter.get("title", {})
+        main_chapter = render_lang(chapter_title.get(main_lang, []), main_lang, "main")
+        comment_chapter = render_lang(chapter_title.get(comment_lang, []), comment_lang, "comment")
+        number = str(chapter.get("number") or "")
+        out.append(rf"\TriPairChapter{{{tex_escape(number)}}}{brace(main_chapter)}{brace(comment_chapter)}")
+        for paragraph in chapter.get("paragraphs", []):
+            out.append(r"\TriPairParagraphStart")
+            for unit in paragraph.get("units", []):
+                main = render_lang(unit.get(main_lang, []), main_lang, "main")
+                comment = render_lang(unit.get(comment_lang, []), comment_lang, "comment")
+                out.append("\n".join([r"\TriPairUnit", brace(main), brace(comment), ""]))
+            out.append(r"\TriPairParagraphEnd")
+            out.append("")
+    return "\n".join(out).rstrip() + "\n"
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("source")
+    parser.add_argument("-o", "--output")
+    parser.add_argument("--main-lang", choices=["en", "zh", "ja"], required=True)
+    parser.add_argument("--comment-lang", choices=["en", "zh", "ja"], required=True)
+    parser.add_argument("--color-mode", choices=["color", "blackwhite"], default="color")
+    parser.add_argument("--author", default="Margaret Mitchell")
+    parser.add_argument("--author-reading", default="")
+    parser.add_argument("--curated-by", default="AgInTiFlow curated")
+    parser.add_argument("--curated-url", default="https://flow.lazying.art")
+    parser.add_argument("--powered-by", default="powered by LazyingArt")
+    parser.add_argument("--cover-image", default="")
+    args = parser.parse_args(argv)
+    if args.main_lang == args.comment_lang:
+        raise SystemExit("main and comment languages must differ")
+
+    data = json.loads(Path(args.source).read_text(encoding="utf-8"))
+    result = convert(
+        data,
+        main_lang=args.main_lang,
+        comment_lang=args.comment_lang,
+        color_mode=args.color_mode,
+        author=args.author,
+        author_reading=args.author_reading,
+        curated_by=args.curated_by,
+        curated_url=args.curated_url,
+        powered_by=args.powered_by,
+        cover_image=args.cover_image,
+    )
+    if args.output:
+        out = Path(args.output)
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(result, encoding="utf-8")
+    else:
+        sys.stdout.write(result)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
