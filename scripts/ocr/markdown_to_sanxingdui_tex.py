@@ -102,6 +102,56 @@ BOOKLIKE_NO_TOC_HEADING_RE = re.compile(
     r")$",
     re.IGNORECASE,
 )
+JISIKENG_CHAPTER_HEADING_RE = re.compile(r"^(?:壹|贰|叁|肆|伍|陆|柒|捌|玖|拾|拾壹)\s")
+JISIKENG_TOP_SECTION_RE = re.compile(r"^[一二三四五六七八九十百〇零]+[ 　][^，。；：,.!?;:、].{0,42}$")
+JISIKENG_SUBSECTION_RE = re.compile(r"^（[一二三四五六七八九十]+）")
+JISIKENG_NUMBERED_TOC_HEADINGS = {
+    "1. 人像",
+    "2. 面像、面具",
+    "3. 龙、虎饰件",
+    "4. 礼器",
+    "5. 仪仗",
+    "1. 礼器",
+    "2. 仪仗",
+    "3. 工具",
+    "4. 其他",
+    "1. 仪仗",
+    "2. 工具",
+    "3. 其他",
+    "2. 人面具、兽面具、兽面",
+    "3. 眼形饰、眼形器、眼泡",
+    "4. 神树、神坛、神殿、太阳形器",
+    "5. 礼器",
+    "6. 仪仗",
+    "7. 挂饰",
+    "8. 铜箔饰件",
+    "9. 杂件",
+    "4. 饰品",
+    "5. 其他",
+    "1. 象牙",
+    "2. 象牙珠",
+    "3. 象牙器残片",
+    "4. 獠牙",
+    "1. 一号祭祀坑的地层年代",
+    "2. 二号祭祀坑的地层年代",
+    "1. 一号祭祀坑的年代推测",
+    "2. 二号祭祀坑的年代推测",
+    "1. 神像、神灵",
+    "2. 巫祝类",
+    "3. 祭祀用器",
+    "6. 祭品",
+}
+JISIKENG_APPENDIX_TOC_HEADINGS = {
+    "广汉三星堆祭祀坑青铜器的化学组成和铅同位素比值研究",
+    "三星堆一、二号祭祀坑出土玉石器岩石类型薄片鉴定报告",
+    "三星堆一号祭祀坑出土玉器残片鉴定报告",
+    "三星堆一号祭祀坑出土动物骨骼的初步观察",
+    "插图目录",
+    "拓片目录",
+    "图版目录",
+    "彩图目录",
+    "Abstract（英文提要）",
+}
 
 
 @dataclass
@@ -362,6 +412,47 @@ def is_booklike_toc_heading(text: str, kind: str, title: str, seen: set[str]) ->
     return True
 
 
+def is_jisikeng_book(book: MarkdownBook) -> bool:
+    return book.markdown.stem.startswith("jisikeng")
+
+
+def jisikeng_heading_role(text: str, kind: str, page_number: int) -> str | None:
+    clean = text.strip()
+    if not clean or kind in {"frontmatter", "toc"}:
+        return None
+    if JISIKENG_CHAPTER_HEADING_RE.match(clean):
+        return "chapter"
+    if clean in JISIKENG_APPENDIX_TOC_HEADINGS:
+        return "section"
+    if page_number >= 495:
+        return None
+    if page_number >= 454 and kind == "catalog":
+        return None
+    if clean in JISIKENG_NUMBERED_TOC_HEADINGS:
+        return "section"
+    if JISIKENG_TOP_SECTION_RE.match(clean):
+        return "section"
+    if JISIKENG_SUBSECTION_RE.match(clean):
+        return "section"
+    return None
+
+
+def booklike_heading_role(
+    text: str,
+    kind: str,
+    title: str,
+    seen: set[str],
+    *,
+    jisikeng: bool,
+    page_number: int,
+) -> str | None:
+    if jisikeng:
+        return jisikeng_heading_role(text, kind, page_number)
+    if is_booklike_toc_heading(text, kind, title, seen):
+        return "section"
+    return None
+
+
 def caption_from_blocks(blocks: list[tuple[str, str]]) -> str:
     captions: list[str] = []
     headings: list[str] = []
@@ -529,6 +620,7 @@ def write_booklike_source(
         handle.write(f"\\SXChapter{{{tex_escape(title)}}}{{{tex_escape(subtitle)}}}\n")
 
         seen_toc_headings: set[str] = set()
+        jisikeng = is_jisikeng_book(book)
 
         for page in book.pages:
             kind = page.kind or "text"
@@ -550,13 +642,25 @@ def write_booklike_source(
                     figure_emitted = True
 
             for block_kind, clean in real_blocks:
-                if figure_emitted and block_kind in {"caption", "heading"}:
+                heading_role = None
+                if block_kind == "heading":
+                    heading_role = booklike_heading_role(
+                        clean,
+                        kind,
+                        title,
+                        seen_toc_headings,
+                        jisikeng=jisikeng,
+                        page_number=page.number,
+                    )
+                if figure_emitted and block_kind in {"caption", "heading"} and heading_role != "chapter":
                     continue
                 if figure_emitted and kind in BOOKLIKE_FIGURE_KINDS and looks_like_ocr_garbage(clean):
                     continue
                 escaped = tex_escape(clean)
                 if block_kind == "heading":
-                    if is_booklike_toc_heading(clean, kind, title, seen_toc_headings):
+                    if heading_role == "chapter":
+                        handle.write(f"\\SXChapter{{{escaped}}}{{}}\n")
+                    elif heading_role == "section":
                         handle.write(f"\\SXSection{{{escaped}}}\n")
                     else:
                         handle.write(f"\\SXHeading{{{escaped}}}\n")
