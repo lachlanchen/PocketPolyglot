@@ -63,7 +63,14 @@ def choose_preview_items(items: list[dict[str, object]], direction: str, variant
             for item in editions
             if item.get("direction") == direction and item.get("variant") == variant
         ]
-        fallback = sorted(editions, key=lambda item: (str(item.get("direction")), str(item.get("variant"))))
+        def fallback_key(item: dict[str, object]) -> tuple[int, int, str, str]:
+            item_variant = str(item.get("variant"))
+            item_direction = str(item.get("direction"))
+            color_rank = 0 if item_variant == variant else 1 if item_variant == "color" else 2
+            direction_rank = 0 if item_direction == direction else 1
+            return (color_rank, direction_rank, item_direction, item_variant)
+
+        fallback = sorted(editions, key=fallback_key)
         chosen.append((preferred or fallback)[0])
     return chosen
 
