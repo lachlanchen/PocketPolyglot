@@ -17,6 +17,7 @@
 *.toc
 *.xdv
 *.lock
+build/
 build/**/source.tex
 build/**/book.pdf
 build/legacy/
@@ -83,6 +84,7 @@ books/*/markdown/*.raw.md
 .sessions/
 assets/covers/**/submit_response.json
 assets/covers/**/result_response.json
+data/interlinear/*/assembled/*.trilingual.json
 
 # Editor/system noise
 *~
