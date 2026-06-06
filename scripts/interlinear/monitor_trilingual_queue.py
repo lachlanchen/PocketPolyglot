@@ -174,12 +174,14 @@ def main() -> int:
         current_report = progress(args.current_book_id)
         is_current_complete = complete(current_report)
         queued_reports = queue_reports(args.book_id)
+        current_active = active_sessions([args.current_book_id])
         active = active_sessions(args.book_id)
         timestamp = datetime.now(timezone.utc).isoformat()
         print(
             f"timestamp={timestamp} current={args.current_book_id} "
             f"progress={current_report.get('valid_chunks','0')}/{current_report.get('manifest_chunks','0')} "
-            f"complete={int(is_current_complete)} active={len(active)} queue={','.join(args.book_id)}",
+            f"complete={int(is_current_complete)} current_active={len(current_active)} "
+            f"active={len(active)} queue={','.join(args.book_id)}",
             flush=True,
         )
         write_state(
@@ -189,11 +191,15 @@ def main() -> int:
                 "current_book_id": args.current_book_id,
                 "current_report": current_report,
                 "current_complete": is_current_complete,
+                "current_active_sessions": current_active,
                 "queue": args.book_id,
                 "queue_reports": queued_reports,
                 "active_sessions": active,
             },
         )
+
+        if not is_current_complete and not current_active:
+            start_book(args.current_book_id, args)
 
         if is_current_complete and not active and all_complete(queued_reports):
             completed = ",".join(args.book_id) or "(none)"
