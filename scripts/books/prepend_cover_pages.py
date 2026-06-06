@@ -70,6 +70,17 @@ def has_fresh_marker(pdf: Path, cover: Path) -> bool:
     )
 
 
+def first_page_has_image(pdf: Path) -> bool:
+    try:
+        reader = PdfReader(str(pdf))
+        if not reader.pages:
+            return False
+        return bool(list(getattr(reader.pages[0], "images", []) or []))
+    except Exception as exc:  # pragma: no cover - defensive for malformed PDFs.
+        print(f"warn: could not inspect first page images for {pdf}: {exc}")
+        return False
+
+
 def make_cover_pdf(cover_image: Path, width: float, height: float, target: Path) -> None:
     c = canvas.Canvas(str(target), pagesize=(width, height))
     c.drawImage(
@@ -150,10 +161,12 @@ def main() -> int:
                 print(f"skip marker: {pdf}")
                 skipped += 1
                 continue
-            if not args.force and source_has_current_cover(pdf, book_id):
-                print(f"skip tex-covered: {pdf}")
+            if not args.force and first_page_has_image(pdf):
+                print(f"skip image-cover: {pdf}")
                 skipped += 1
                 continue
+            if not args.force and source_has_current_cover(pdf, book_id):
+                print(f"source has cover but pdf has no first-page image: {pdf}")
             print(f"prepend cover: {pdf}")
             prepend_cover(pdf, cover)
             processed += 1

@@ -83,6 +83,11 @@ def tex_escape_en(text: str) -> str:
     return tex_escape(text).replace(" ", r"\space{}")
 
 
+def tex_path_arg(path: str) -> str:
+    """Return a graphics path argument without discretionary line-break macros."""
+    return str(path).replace("\\", "/")
+
+
 def token_role(token: dict[str, Any]) -> str:
     return str(token.get("g") or "")
 
@@ -177,7 +182,7 @@ def convert(
     out.extend(
         [
             rf"\TriPairPdfMeta{{{tex_escape(main_title_plain)}}}{{{tex_escape(comment_title_plain)}}}{{{tex_escape(author)}}}",
-            rf"\TriPairTitle{brace(main_title)}{brace(comment_title)}{{{tex_escape(LANG_LABELS[main_lang])}}}{{{tex_escape(LANG_LABELS[comment_lang])}}}{{{render_author(author, author_reading)}}}{{{tex_escape(curated_by)}}}{{{tex_escape(curated_url)}}}{{{tex_escape(powered_by)}}}{{{tex_escape(cover_image)}}}",
+            rf"\TriPairTitle{brace(main_title)}{brace(comment_title)}{{{tex_escape(LANG_LABELS[main_lang])}}}{{{tex_escape(LANG_LABELS[comment_lang])}}}{{{render_author(author, author_reading)}}}{{{tex_escape(curated_by)}}}{{{tex_escape(curated_url)}}}{{{tex_escape(powered_by)}}}{{{tex_path_arg(cover_image)}}}",
             "",
         ]
     )
