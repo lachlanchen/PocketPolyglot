@@ -136,6 +136,16 @@
   \hypersetup{pdftitle={#1},pdfauthor={#2}}%
 }
 
+\NewDocumentCommand{\SXCoverPage}{m}{%
+  \frontmatter
+  \clearpage
+  \newgeometry{margin=0pt}%
+  \thispagestyle{empty}%
+  \noindent\includegraphics[width=\paperwidth,height=\paperheight]{#1}%
+  \clearpage
+  \restoregeometry
+}
+
 \NewDocumentCommand{\SXTitle}{m m m m}{%
   \frontmatter
   \thispagestyle{empty}
