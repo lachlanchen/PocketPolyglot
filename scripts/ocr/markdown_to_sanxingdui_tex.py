@@ -152,6 +152,69 @@ JISIKENG_APPENDIX_TOC_HEADINGS = {
     "彩图目录",
     "Abstract（英文提要）",
 }
+HUAXIA_SHENDU_PART_HEADINGS = {
+    "上部  辉煌历程",
+    "上部 辉煌历程",
+    "下部  诸神归位",
+    "下部 诸神归位",
+}
+HUAXIA_SHENDU_TOC_HEADINGS = {
+    "青铜时代的迷藏",
+    "五千年前的一个照面",
+    "没有文字的哑谜",
+    "突然入侵的青铜器",
+    "上帝毁掉了模具",
+    "神龟托负而来的商代",
+    "夏王朝的雄祭祖器",
+    "飞越故园的昆仑神话",
+    "大禹在齐鲁",
+    "蜀族史前居泰安",
+    "蚕桑之祖有缗·蜀族",
+    "打捞青铜九鼎",
+    "守护我们共同的祖庙",
+    "一个改变历史的逃跑事件",
+    "饲蚕一族的文明之旅",
+    "蚕丛氏喂养的古蜀",
+    "思祖地故城朝向东北望",
+    "地名记录的历史",
+    "器物坑不是祭祀坑",
+    "悲壮掩埋的三星圣城",
+    "器物坑背后的秘密",
+    "至今使用夏历的岷山美人",
+    "织绣丝绸的传人",
+    "来自西邻的女神螺祖",
+    "太阳神崇的子孙们",
+    "神州处处三星台",
+    "三星台上的远古戏剧",
+    "与神沟通的游戏",
+    "四川遍地多“罗城”",
+    "雄祭核心太阳神",
+    "韩国人的“傩日”神图",
+    "虞傩中诞生了娱乐",
+    "三星堆地心的引力",
+    "瞧这一家子",
+    "首次迎面伏羲天帝",
+    "纵目烛龙的逼视",
+    "太阳神下榻的通天神树",
+    "追踪天际的三足太阳鸟",
+    "还原昆仑圣山",
+    "爬上昆仑山的三级四方台",
+    "再现昆仑祖台的布饰",
+    "人面鸟身与鲲鹏之变",
+    "参拜夏朝的国君",
+    "夏王朝历代先王素描",
+    "送头饰钩铃的大禹入座",
+    "魂归西天的金面通行证",
+    "祭祀土地和谷神的社台",
+    "五方诸神的复活",
+    "象征宇宙中心的灵台",
+    "从东方苍龙到龙的传人",
+    "南方朱雀与臆造的炎帝",
+    "西方白虎即开明帝",
+    "龟蛇相缠的北方玄武",
+    "坐镇中央的黄帝",
+    "埃及规矩与美洲中央祭坛",
+}
 
 
 @dataclass
@@ -378,6 +441,10 @@ def heading_key(text: str) -> str:
     return re.sub(r"[\s\W_]+", "", text, flags=re.UNICODE).lower()
 
 
+HUAXIA_SHENDU_PART_KEYS = {heading_key(heading) for heading in HUAXIA_SHENDU_PART_HEADINGS}
+HUAXIA_SHENDU_TOC_KEYS = {heading_key(heading) for heading in HUAXIA_SHENDU_TOC_HEADINGS}
+
+
 def is_booklike_toc_heading(text: str, kind: str, title: str, seen: set[str]) -> bool:
     clean = text.strip()
     if not clean:
@@ -416,6 +483,10 @@ def is_jisikeng_book(book: MarkdownBook) -> bool:
     return book.markdown.stem.startswith("jisikeng")
 
 
+def is_huaxia_shendu_book(book: MarkdownBook) -> bool:
+    return book.markdown.stem.startswith("huaxia-shendu")
+
+
 def jisikeng_heading_role(text: str, kind: str, page_number: int) -> str | None:
     clean = text.strip()
     if not clean or kind in {"frontmatter", "toc"}:
@@ -437,6 +508,18 @@ def jisikeng_heading_role(text: str, kind: str, page_number: int) -> str | None:
     return None
 
 
+def huaxia_shendu_heading_role(text: str, kind: str) -> str | None:
+    clean = text.strip()
+    if not clean or kind in {"frontmatter", "toc"}:
+        return None
+    key = heading_key(clean)
+    if key in HUAXIA_SHENDU_PART_KEYS:
+        return "chapter"
+    if key in HUAXIA_SHENDU_TOC_KEYS:
+        return "section"
+    return None
+
+
 def booklike_heading_role(
     text: str,
     kind: str,
@@ -444,10 +527,13 @@ def booklike_heading_role(
     seen: set[str],
     *,
     jisikeng: bool,
+    huaxia_shendu: bool,
     page_number: int,
 ) -> str | None:
     if jisikeng:
         return jisikeng_heading_role(text, kind, page_number)
+    if huaxia_shendu:
+        return huaxia_shendu_heading_role(text, kind)
     if is_booklike_toc_heading(text, kind, title, seen):
         return "section"
     return None
@@ -621,6 +707,7 @@ def write_booklike_source(
 
         seen_toc_headings: set[str] = set()
         jisikeng = is_jisikeng_book(book)
+        huaxia_shendu = is_huaxia_shendu_book(book)
 
         for page in book.pages:
             kind = page.kind or "text"
@@ -650,9 +737,15 @@ def write_booklike_source(
                         title,
                         seen_toc_headings,
                         jisikeng=jisikeng,
+                        huaxia_shendu=huaxia_shendu,
                         page_number=page.number,
                     )
-                if figure_emitted and block_kind in {"caption", "heading"} and heading_role != "chapter":
+                if (
+                    figure_emitted
+                    and block_kind in {"caption", "heading"}
+                    and heading_role != "chapter"
+                    and not (huaxia_shendu and heading_role == "section")
+                ):
                     continue
                 if figure_emitted and kind in BOOKLIKE_FIGURE_KINDS and looks_like_ocr_garbage(clean):
                     continue
@@ -737,7 +830,7 @@ def build_one(book_info: dict[str, str], args: argparse.Namespace) -> Path:
     else:
         suffix = ("润色TeX口袋版" if args.pocket else "润色TeX文本版") if args.polished else ("TeX口袋版" if args.pocket else "TeX文本版")
     final_pdf = output_dir / f"{display_title}（{suffix}）.pdf"
-    for stale in output_dir.glob("*（*TeX文本版）.pdf"):
+    for stale in output_dir.glob("*（*TeX*版）.pdf"):
         if stale != final_pdf:
             stale.unlink()
     if final_pdf.exists():
