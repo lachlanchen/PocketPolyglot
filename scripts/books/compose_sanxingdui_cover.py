@@ -111,32 +111,10 @@ def compose_one(slug: str, title: str, background: Path, output: Path) -> None:
     overlay = Image.new("RGBA", image.size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(overlay)
 
-    # Quiet the generated background enough for long Chinese titles to read.
-    draw.rectangle((0, 0, WIDTH, HEIGHT), fill=(10, 8, 6, 70))
-    panel_left = int(WIDTH * 0.075)
-    panel_right = int(WIDTH * 0.925)
-    panel_top = int(HEIGHT * 0.105)
-    panel_bottom = int(HEIGHT * 0.885)
-    draw.rounded_rectangle(
-        (panel_left, panel_top, panel_right, panel_bottom),
-        radius=28,
-        fill=(245, 234, 210, 190),
-        outline=(64, 43, 30, 220),
-        width=5,
-    )
-    inset = 34
-    draw.rounded_rectangle(
-        (panel_left + inset, panel_top + inset, panel_right - inset, panel_bottom - inset),
-        radius=14,
-        outline=(64, 43, 30, 105),
-        width=2,
-    )
-
     title_font = font(SERIF_BOLD, 94, index=2)
-    subtitle_font = font(SERIF_REGULAR, 43, index=2)
-    label_font = font(SANS_REGULAR, 32, index=2)
-    latin_font = font(SERIF_REGULAR, 28, index=2)
-    seal_font = font(SERIF_BOLD, 50, index=2)
+    latin_font = font(SERIF_REGULAR, 26, index=2)
+    credit_font = font(SERIF_REGULAR, 24, index=2)
+    seal_font = font(SERIF_BOLD, 44, index=2)
 
     title_text = normalize_title(title)
     lines = wrap_cjk(draw, title_text, title_font, int(WIDTH * 0.72))
@@ -149,23 +127,51 @@ def compose_one(slug: str, title: str, background: Path, output: Path) -> None:
     seal = (142, 42, 28, 242)
     title_line_height = int(title_font.size * 1.28)
     total_title_height = title_line_height * len(lines)
-    y = int(HEIGHT * 0.285) - total_title_height // 2
+
+    # Keep only a compact translucent title band so the generated artifact
+    # artwork remains visible as the primary cover signal.
+    center_y = int(HEIGHT * 0.405)
+    panel_left = int(WIDTH * 0.105)
+    panel_right = int(WIDTH * 0.895)
+    panel_top = center_y - total_title_height // 2 - int(HEIGHT * 0.055)
+    panel_bottom = center_y + total_title_height // 2 + int(HEIGHT * 0.070)
+    draw.rounded_rectangle(
+        (panel_left, panel_top, panel_right, panel_bottom),
+        radius=24,
+        fill=(245, 234, 210, 148),
+        outline=(64, 43, 30, 185),
+        width=4,
+    )
+    draw.line(
+        (panel_left + 38, panel_top + 30, panel_right - 38, panel_top + 30),
+        fill=(64, 43, 30, 110),
+        width=2,
+    )
+
+    y = center_y - total_title_height // 2
     for line in lines:
         draw_centered(draw, line, (WIDTH // 2, y + title_line_height // 2), title_font, ink)
         y += title_line_height
 
-    draw_centered(draw, "润色 TeX 图文口袋版", (WIDTH // 2, int(HEIGHT * 0.545)), subtitle_font, muted)
-    draw_centered(draw, "Sanxingdui Archaeology Reader", (WIDTH // 2, int(HEIGHT * 0.595)), latin_font, muted)
-    draw_centered(draw, "OCR 校读・图版保留・目录重排", (WIDTH // 2, int(HEIGHT * 0.655)), label_font, muted)
+    draw_centered(draw, "Sanxingdui Archaeology Reader", (WIDTH // 2, panel_bottom - 34), latin_font, muted)
 
-    draw_centered(draw, "AgInTiFlow curated", (WIDTH // 2, int(HEIGHT * 0.790)), latin_font, muted)
-    draw_centered(draw, "https://flow.lazying.art", (WIDTH // 2, int(HEIGHT * 0.822)), latin_font, muted)
-    draw_centered(draw, "powered by LazyingArt", (WIDTH // 2, int(HEIGHT * 0.854)), latin_font, muted)
+    credit_y = int(HEIGHT * 0.898)
+    credit_left = int(WIDTH * 0.245)
+    credit_right = int(WIDTH * 0.755)
+    credit_top = credit_y - 32
+    credit_bottom = credit_y + 74
+    draw.rounded_rectangle(
+        (credit_left, credit_top, credit_right, credit_bottom),
+        radius=18,
+        fill=(245, 234, 210, 108),
+    )
+    draw_centered(draw, "AgInTiFlow curated · https://flow.lazying.art", (WIDTH // 2, credit_y), credit_font, muted)
+    draw_centered(draw, "powered by LazyingArt", (WIDTH // 2, credit_y + 42), credit_font, muted)
 
-    seal_size = int(WIDTH * 0.085)
-    seal_x = int(WIDTH * 0.78)
-    seal_y = int(HEIGHT * 0.70)
-    draw.rounded_rectangle((seal_x, seal_y, seal_x + seal_size, seal_y + seal_size), radius=8, outline=seal, width=5)
+    seal_size = int(WIDTH * 0.066)
+    seal_x = int(WIDTH * 0.81)
+    seal_y = int(HEIGHT * 0.78)
+    draw.rounded_rectangle((seal_x, seal_y, seal_x + seal_size, seal_y + seal_size), radius=7, outline=seal, width=4)
     draw_centered(draw, "流", (seal_x + seal_size // 2, seal_y + seal_size // 2), seal_font, seal)
 
     composed = Image.alpha_composite(image, overlay)
