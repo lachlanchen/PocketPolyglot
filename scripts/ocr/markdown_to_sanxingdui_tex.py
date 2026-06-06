@@ -34,7 +34,7 @@ PAGE_NUMBER_LINE_RE = re.compile(r"\s+\d{1,4}$")
 LONG_ASCII_RE = re.compile(r"[A-Za-z0-9]{18,}")
 BREAK_MARKER = "\ue000"
 BOOKLIKE_FIGURE_KINDS = {"figure_or_blank", "caption_or_map"}
-BOOKLIKE_SKIP_KINDS = {"toc"}
+BOOKLIKE_SKIP_KINDS = {"toc", "frontmatter"}
 PLACEHOLDER_RE = re.compile(
     r"^\[?(?:图版页|地图页|图版页/地图页|本页当前文本为空|本页文字无法可靠识读|原页文字有限|地图页，文字有限)[^\]]*\]?$"
 )
@@ -77,6 +77,24 @@ TEXT_NORMALIZATION = str.maketrans(
         "₍": "(",
         "₎": ")",
     }
+)
+BOOKLIKE_NO_TOC_HEADING_RE = re.compile(
+    r"^(?:"
+    r"图书在版编目|目录|图例|彩图目录|主编|摄影|翻译|责任编辑|封面设计|出版发行|"
+    r"第[一二三四五六七八九十百零〇\d]+章|"
+    r"原诗\s*译文|下部|"
+    r"The\s+Whole\s+Collection|"
+    r"(?:图版|拓片)[一二三四五六七八九十百〇零\dA-Za-z、，,.\s]*.*|"
+    r"(?:表|附表|续表)[一二三四五六七八九十百〇零\dA-Za-z、，,.\s]*.*|"
+    r".*(?:统计表|登记表|结果表|分析结果|检测限度|尺寸.*重量表|重量.*表)|"
+    r"[A-Za-z]{1,3}[A-Za-z0-9ⅠⅡⅢⅣⅤⅥ]*[型式]?|"
+    r"[A-Z][a-z]?[ⅠⅡⅢⅣⅤⅥ]+式|"
+    r"[ⅠⅡⅢⅣⅤⅥ]+型|"
+    r"NO\d+样|"
+    r"[a-z]\.|"
+    r".*\d+件"
+    r")$",
+    re.IGNORECASE,
 )
 
 
@@ -282,6 +300,45 @@ def clean_booklike_text(text: str) -> str:
     return text.strip("；;。 ")
 
 
+def heading_key(text: str) -> str:
+    text = text.translate(TEXT_NORMALIZATION)
+    return re.sub(r"[\s\W_]+", "", text, flags=re.UNICODE).lower()
+
+
+def is_booklike_toc_heading(text: str, kind: str, title: str, seen: set[str]) -> bool:
+    clean = text.strip()
+    if not clean:
+        return False
+    if kind in {"frontmatter", "toc"}:
+        return False
+    if BOOKLIKE_NO_TOC_HEADING_RE.match(clean):
+        return False
+    if re.match(r"^\d+[.．]\s*", clean):
+        return False
+    if re.match(r"^\d{4}[—-]\d{4}$", clean):
+        return False
+    if re.match(r"^[A-Za-z][A-Za-z]?[ⅠⅡⅢⅣⅤⅥ0-9]*型\b", clean):
+        return False
+    if re.match(r"^[a-z][.．]\s*", clean, flags=re.IGNORECASE):
+        return False
+    if re.match(r"^[一二三四五六七八九十百〇零]{2,}\s*[A-Za-z]", clean):
+        return False
+    if re.search(r"(?:统计表|登记表|结果表|分析结果|检测限度|分解表|尺寸.*重量表|重量.*表)(?:（.*）)?$", clean):
+        return False
+    if clean in {"其他", "工具", "兵器", "戈", "璧"}:
+        return False
+    if len(clean) > 42 and not re.match(r"^[一二三四五六七八九十百〇零\d]+[、.．]", clean):
+        return False
+    key = heading_key(clean)
+    title_key = heading_key(title)
+    if key and title_key and (key == title_key or key in title_key or title_key in key):
+        return False
+    if key in seen:
+        return False
+    seen.add(key)
+    return True
+
+
 def caption_from_blocks(blocks: list[tuple[str, str]]) -> str:
     captions: list[str] = []
     headings: list[str] = []
@@ -435,6 +492,8 @@ def write_booklike_source(
         )
         handle.write(f"\\SXChapter{{{tex_escape(title)}}}{{{tex_escape(subtitle)}}}\n")
 
+        seen_toc_headings: set[str] = set()
+
         for page in book.pages:
             kind = page.kind or "text"
             if kind in BOOKLIKE_SKIP_KINDS:
@@ -455,11 +514,14 @@ def write_booklike_source(
                     figure_emitted = True
 
             for block_kind, clean in real_blocks:
-                if figure_emitted and block_kind == "caption":
+                if figure_emitted and block_kind in {"caption", "heading"}:
                     continue
                 escaped = tex_escape(clean)
                 if block_kind == "heading":
-                    handle.write(f"\\SXSection{{{escaped}}}\n")
+                    if is_booklike_toc_heading(clean, kind, title, seen_toc_headings):
+                        handle.write(f"\\SXSection{{{escaped}}}\n")
+                    else:
+                        handle.write(f"\\SXHeading{{{escaped}}}\n")
                 elif block_kind == "list":
                     handle.write(f"\\SXListLine{{{escaped}}}\n")
                 elif block_kind == "caption":
