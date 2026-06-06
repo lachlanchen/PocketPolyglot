@@ -17,8 +17,8 @@ ROOT = Path(__file__).resolve().parents[2]
 BOOK_ID = "sanxingdui"
 EDITION_ID = "sanxingdui-tex"
 POLISHED_EDITION_ID = "sanxingdui-polished-tex"
-POCKET_EDITION_ID = "books/sanxingdui-tex-pocket"
-POLISHED_POCKET_EDITION_ID = "books/sanxingdui-polished-tex-pocket"
+POCKET_EDITION_ID = "sanxingdui-tex-pocket"
+POLISHED_POCKET_EDITION_ID = "sanxingdui-polished-tex-pocket"
 TEMPLATE = ROOT / "tex" / "sanxingdui-tex" / "book.tex"
 PLAN = ROOT / "books" / BOOK_ID / "book-plan.json"
 
@@ -394,7 +394,7 @@ def main() -> int:
     parser.add_argument("--raw", action="store_true", help="Use raw OCR Markdown even when reviewed Markdown exists.")
     parser.add_argument("--polished", action="store_true", help="Use <slug>.polished.md and write sanxingdui-polished-tex output.")
     parser.add_argument("--edition-id", help="Override build/<edition-id>/ output folder.")
-    parser.add_argument("--pocket", action="store_true", help="Compile an A6 pocket-size version into build/books/ by default.")
+    parser.add_argument("--pocket", action="store_true", help="Compile an A6 pocket-size version into build/<sanxingdui-*-pocket>/ by default.")
     parser.add_argument("--include-page-images", action="store_true", help="Render and include original PDF page images.")
     parser.add_argument("--no-page-images", action="store_true", help="Disable default page images for polished output.")
     parser.add_argument("--image-dpi", type=int, default=0, help="DPI for original page images included in TeX; defaults to 170, or 120 in pocket mode.")
