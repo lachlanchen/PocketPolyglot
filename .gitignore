@@ -17,11 +17,19 @@
 *.toc
 *.xdv
 *.lock
+build/
 build/**/source.tex
 build/**/book.pdf
 build/legacy/
 build/preview/
 build/books/
+build/sanxingdui/
+build/sanxingdui-tex/
+build/sanxingdui-polished-tex/
+build/sanxingdui-tex-pocket/
+build/sanxingdui-polished-tex-pocket/
+build/sanxingdui-polished-booklike-tex/
+build/sanxingdui-polished-booklike-pocket/
 archive/build/previews/
 archive/build/legacy-layouts/early-experiments/
 archive/build/legacy-layouts/generated-scratch/
@@ -47,6 +55,7 @@ books/*/work/**/writer-preview*/
 books/*/work/**/parallel-json/
 books/*/work/**/parallel-review/
 books/*/work/**/parallel-review-v2/
+books/*/work/**/finalize/
 books/*/work/**/sanitizer/
 books/*/work/**/interlinear/**
 books/*/work/**/reviewed/
@@ -55,9 +64,16 @@ books/*/work/monitor/
 books/*/work/guardian/
 books/*/work/**/rejected*/
 books/*/work/**/stale*/
+books/*/work/source-extract/
 books/*/work/bilingual/chunks/chunks.jsonl
+books/*/work/trilingual/chunks/chunks.jsonl
+books/*/work/bilingual/chunks/*.before-split-*
 books/*/work/ocr-sample/
 books/*/work/ocr-tests/
+books/*/work/ocr/
+books/*/work/ocr-smoke/
+books/*/work/ocr-review/
+books/*/work/tex-polish/
 books/*/work/chunks/
 books/*/work/interlinear/
 books/*/markdown/*.raw.md
@@ -68,6 +84,7 @@ books/*/markdown/*.raw.md
 .sessions/
 assets/covers/**/submit_response.json
 assets/covers/**/result_response.json
+data/interlinear/*/assembled/*.trilingual.json
 
 # Editor/system noise
 *~
