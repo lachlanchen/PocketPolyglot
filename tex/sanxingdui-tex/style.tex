@@ -210,15 +210,20 @@
 }
 
 \NewDocumentCommand{\SXBookFigure}{m m}{%
-  \par\needspace{\SXImageHeight}
-  \begin{center}
-    \includegraphics[width=\linewidth,height=\SXImageHeight,keepaspectratio]{#1}\par
-    \if\relax\detokenize{#2}\relax\else
-      \vspace{0.16em}
-      {\zhsans\SXCaptionFont\color{SXMuted}#2\par}
-    \fi
-  \end{center}
-  \vspace{0.2em}
+  \clearpage
+  \thispagestyle{empty}%
+  \begingroup
+  \setlength{\parindent}{0pt}%
+  \setlength{\parskip}{0pt}%
+  \vbox to \textheight{%
+    \vfil
+    \hbox to \linewidth{%
+      \hfil\includegraphics[width=\linewidth,height=0.98\textheight,keepaspectratio]{#1}\hfil
+    }%
+    \vfil
+  }%
+  \endgroup
+  \clearpage
 }
 
 \NewDocumentCommand{\SXListLine}{+m}{%
