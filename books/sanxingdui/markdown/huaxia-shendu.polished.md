@@ -90,15 +90,12 @@ ISBN 978-7-5643-4174-9
 
 ## Page 6
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-- _
-or TEAR crs Hee
-SBFOAAMAA “Be”
-三星堆三级四方台
-东方青铜立人像
-镇守四方台四角的青铜蛇〈残件)
-
+> 东方青铜立人像
+> 置于四方台顶部的“昆轮”
+> 三星堆三级四方台
+> 镇守四方台四角的青铜蛇（残件）
 ## Page 7
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -113,16 +110,16 @@ SBFOAAMAA “Be”
 
 ## Page 9
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-—
-ww 华夏和神都全方位揭六三星堆文明
-|
-神秘的北方遇强
-SAR as
-虎形板饰 青铜鸡
-O三星星出土的四方祭礼器物
-
+> 华夏神都：全方位揭秘三星堆文明
+> 神秘的北方遇强
+> 青铜虎形器
+> 青铜爬龙柱形器
+> 金虎
+> 虎形板饰
+> 青铜鸡
+> 三星堆出土的四方祭礼器物
 ## Page 10
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -131,24 +128,20 @@ O三星星出土的四方祭礼器物
 
 ## Page 11
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-会本 bi x
-wv ee Rae ere eet sa
-金沙出土的反绑跪人像
-三星扒出土的头饰钩锥的大融像 纳西族《神路图》头饰包巾者
-
+> 金沙出土的反绑跪人像
+> 三星堆青铜雄鬼
+> 三星堆出土的头饰钩铃的大禹像
+> 纳西族《神路图》头饰包巾者
 ## Page 12
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-——
-iL ae eee et 5a
-HA ABA. bk Fe
-后来在民间被传为灶神
-灶神壁纸
-三星堆出土的烛阳面具
-
+> 纵目大耳的烛阴、烛阳后来在民间被传为灶神
+> 三星堆出土的烛阴面具
+> 灶神壁纸
+> 三星堆出土的烛阳面具
 ## Page 13
 
 <!-- kind=toc confidence=medium -->
@@ -3805,16 +3798,13 @@ HA ABA. bk Fe
 
 ## Page 273
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=text confidence=high -->
 
-LER, He
-挂记的迷梦 a
-iBT BY 4 A HO
-ie, RERK AMIE
-切都可以从三星堆以及同
-开始。
-欧成都平原多座故城遗址
+### 还原昆仑圣山
 
+每一个神话都连着一个梦想，每一种文明都有一个源头。而昆仑神话就是华夏文明的源头与梦想的集合。回到巍巍昆仑祖山，回到人类始祖的故园，阔别了几万年，一切的器物与布饰都改头换面，然而对于同一种文明血脉中的游子来说，试着把梦中的所见还原，或是把传说中的故园再度修复，那是一种叫人永世萦怀挂记的迷梦。
+
+记下故园当年的布饰，听听那每一件早已产生历史锈迹的器物的故事，或是就长久地注视着它们并指认出它的名字——这一切都可以从三星堆以及同期或稍远的成都平原多座故城遗址开始。
 ## Page 274
 
 <!-- kind=text confidence=medium -->

@@ -33,6 +33,11 @@ LATIN_OR_DIGIT_RE = re.compile(r"[A-Za-z0-9]")
 PUNCT_END_RE = re.compile(r"[。！？；：，、,.!?;:）】》」』”’]$")
 PAGE_NUMBER_LINE_RE = re.compile(r"\s+\d{1,4}$")
 LONG_ASCII_RE = re.compile(r"[A-Za-z0-9]{18,}")
+OCR_GARBAGE_TOKEN_RE = re.compile(
+    r"\b(?:TEAR|SBFO|SEEE|JAHRE|MIR|BUBS|PMA|SDK|DMEF|BUH|Arwen|Pare|"
+    r"Feet|MATAR|MASI|HANH|Pawan|SRE|JCRD|PHUT|WEAR|RAB|WRI|AFL)\b",
+    re.IGNORECASE,
+)
 BREAK_MARKER = "\ue000"
 BOOKLIKE_FIGURE_KINDS = {"figure_or_blank", "caption_or_map"}
 BOOKLIKE_SKIP_KINDS = {"toc", "frontmatter"}
@@ -301,6 +306,23 @@ def clean_booklike_text(text: str) -> str:
     return text.strip("；;。 ")
 
 
+def looks_like_ocr_garbage(text: str) -> bool:
+    text = text.strip()
+    if not text:
+        return True
+    cjk = cjk_count(text)
+    ascii_letters = sum(char.isascii() and char.isalpha() for char in text)
+    if OCR_GARBAGE_TOKEN_RE.search(text):
+        return True
+    if cjk == 0 and ascii_letters >= 3:
+        return True
+    if ascii_letters > max(12, cjk * 2) and not re.search(r"\bK[12]\b", text):
+        return True
+    if re.fullmatch(r"[0-9\s.,:;!?+\-_/\\|()[\]{}<>~`'\"=*&^%$#@，。；：、（）]+", text):
+        return True
+    return False
+
+
 def heading_key(text: str) -> str:
     text = text.translate(TEXT_NORMALIZATION)
     return re.sub(r"[\s\W_]+", "", text, flags=re.UNICODE).lower()
@@ -529,6 +551,8 @@ def write_booklike_source(
 
             for block_kind, clean in real_blocks:
                 if figure_emitted and block_kind in {"caption", "heading"}:
+                    continue
+                if figure_emitted and kind in BOOKLIKE_FIGURE_KINDS and looks_like_ocr_garbage(clean):
                     continue
                 escaped = tex_escape(clean)
                 if block_kind == "heading":

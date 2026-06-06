@@ -330,30 +330,10 @@ ISBN 7-5010-1032-3/K·428
 
 ## Page 15
 
-<!-- kind=caption_or_map confidence=medium -->
-
-### 图例
-
-- 高等级公路
-
-- 一般公路
-
-- 河流
+<!-- kind=caption_or_map confidence=high -->
 
 > 图一 三星堆遗址位置示意图
-
-### 图例
-
-- 比例尺：0至4公里
-
-- 地（市）、县（市）驻地
-
-- 乡（镇）村驻地
-
-- 高等级公路
-
 > 图二 三星堆遗址周围地区商周遗址分布图
-
 ## Page 16
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -458,42 +438,15 @@ ISBN 7-5010-1032-3/K·428
 
 ## Page 22
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图五 一号祭祀坑及相关遗迹分布图（T939～T941、T1039～T1041，比例尺0—5米）
-
-### 表一 T939～T941、T1039～T1041陶器统计表
-
-- 高柄豆豆柄：泥质陶7件，合计7件，占6.80%。
-
-- 平底盘口沿：泥质陶2件，合计2件，占1.94%。
-
-- 尊形器底部：泥质陶1件，合计1件，占0.97%。
-
-- 圈足器之圈足：泥质陶1件，合计1件，占0.97%。
-
-- 腹片、碎片：泥质陶69件，夹砂陶11件，合计80件，占77.67%。
-
-- 小计：泥质陶92件，夹砂陶11件，合计103件，占100%。
-
-- 比例：泥质陶89.32%，夹砂陶10.68%，合计100%。
-
+> 图五 一号祭祀坑相关图
 ## Page 23
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
 > 图六 一号祭祀坑发掘探方T1039、T1040南壁地层剖面图
-
 > 图七 一号祭祀坑坑口之上地层出土陶器器物图
-
-- 4. 平底盘口沿（T1039⑥：29）
-
-- 8. 尊形器底部（T1040⑥：16）
-
-- 12. 高柄豆豆柄（T1039⑥：1）
-
-- 13. 高柄豆豆柄（T1039⑥：3）
-
 ## Page 24
 
 <!-- kind=text confidence=medium -->
@@ -586,14 +539,11 @@ Ba型2件。大小略异，造型相同，形体厚重。顶盖与颅腔之间�
 
 ## Page 29
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图九 Aa型铜人头像 (K1 :2)
-0 20 厘米
-图一〇Ab 型铜人头像 (K1:6)
-图一一 Ab 型铜人头像 (K1 :26)
-24
-
+> 图九 Aa型铜人头像（K1：2）24
+> 图一〇 Ab型铜人头像（K1：6）24
+> 图一一 Ab型铜人头像（K1：26）24
 ## Page 30
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -660,18 +610,9 @@ A型1件。标本K1:20（图一九，1；图版六，1；彩图6），宽脸，�
 
 ## Page 37
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
 > 图版五 铜人头像、铜跪坐人像
-
-> 1. C型人头像（K1:5）
-
-> 2. C型人头像（K1:5）背面
-
-> 3. 跪坐人像（K1:293）
-
-> 4. 跪坐人像（K1:293）背面
-
 ## Page 38
 
 <!-- kind=text confidence=medium -->
@@ -700,66 +641,38 @@ A型1件。标本K1:20（图一九，1；图版六，1；彩图6），宽脸，�
 
 ## Page 39
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-34
-— +
-0
-20 JELK
-A—O 铜龙柱形器 (K1:36)
-图二一“”铜龙形饰、欧龙形羽翅饰件
-1. 龙形饰 (K1 :188)
-2. 获龙形羽翅饰件 (K1 :131)
-
+> 图二一 铜兽面及残件：1. 兽面（K1：188）；2. 残件（K1：131）35
 ## Page 40
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图二二 铜虎形器（K1:62）
-
-> 图二三 铜龙虎尊（K1:158、258）
-
+> 图二二 铜虎形器（K1：62）41
+> 图二三 铜器残件（K1：158、258）42
 ## Page 41
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-36
-拓片一
-1. 肩部
-2. 腹部
-3. 圈足
-拓片二
-Sele ERE 〈K1:158、258) 纹饰
-铜龙虎尊虎口下人形图案
-
+> 拓片一 铜羊首牺尊（K1:163、59）纹饰：1. 肩部；2. 腹部；3. 圈足
+> 拓片二 铜龙虎尊（K1:158、258）纹饰
+> 铜龙虎尊虎口下人形图案
 ## Page 42
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版六 铜人面像、铀人面具、铜龙柱形峰
-1. 人面像 (K1: 20) 2. 人面具 (K1:4)
-3. 龙柱形器 (K1:36) 局部 4. 龙柱形器 (K1 :36) 右侧面
-
+> 图版六 铜人面像、铜人面具、铜龙柱形器
 ## Page 43
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版七”铜龙形饰、铜获龙形羽翅饰件、铀虎形器
-38
-3. RI (K1:62)
-1. 龙形饰 (K1+188)
-2. BRIG AW ie (K1 :131)
-
+> 图版七 铜龙形饰、铜虎龙形羽翅饰件、铜饰件
 ## Page 44
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-AR. ER. PS.
-1. 、2. BRB (CK1:158, 258)
-3. 羊首牺尊圈足 〈(K1 :59)
-4. i (K1:130) 口沿及肩部
-5. 站 (K1:130) BE
-
+> 图版八 铜尊、铜罍、铜羊首牺尊
+> 1、2. 铜尊（K1:158、258）；3. 羊首牺尊圈足（K1:59）；4. 铜罍（K1:130）口沿及肩部；5. 铜罍（K1:130）圈足
 ## Page 45
 
 <!-- kind=text confidence=medium -->
@@ -792,15 +705,9 @@ AIII式3件。孔径较大，缘凸起较高且直。肉较厚，肉面较宽、
 
 ## Page 47
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-42
-SEEEENEOIGIEEESITEEISCTISTEEE
-oi,
-AA H##R (K1 :130)
-1. 口沿部分
-2. 圈足部分
-
+> 图二五 铜罍（K1:130）：1. 口沿部分；2. 圈足部分
 ## Page 48
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -809,38 +716,15 @@ AA H##R (K1 :130)
 
 ## Page 49
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图二七
-
-> 1. AI式（K1:124）
-
-> 2. AI式（K1:300-1）
-
-> 3. AI式（K1:117）
-
-> 4. AI式（K1:298-3）
-
-> 5. AII式（K1:152）
-
-> 6. AIII式（K1:223-2）
-
-> 7. AII式（K1:13）
-
+> 图二七 A型铜瑗：1. AⅠ式（K1:124）；2. AⅠ式（K1:300-1）；3. AⅠ式（K1:117）；4. AⅠ式（K1:298-3）；5. AⅡ式（K1:152）；6. AⅢ式（K1:223-2）；7. AⅢ式（K1:13）
 ## Page 50
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-拓片四 FR (K1 :130)
-纹饰
-1. 肩、腹部
-2. Be
-3. 外底刮范留下的划痕
-A=
-铜羊首牺尊 CK1 :59)
-圈足纹饰
-45
-
+> 拓片四 铜罍（K1:130）纹饰：1. 肩、腹部；2. 圈足；3. 外底刮范留下的划痕
+> 铜羊首牺尊（K1:59）圈足纹饰
 ## Page 51
 
 <!-- kind=text confidence=medium -->
@@ -873,28 +757,15 @@ C型4件。大小不等。好径大，壁直，肉窄。好缘两面的凸起较
 
 ## Page 52
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版九 HS dae. Hd Be
-3. #3 (K1:135) 背面 4. #83 (K1:135) Ail
-5. AIsRR (K1:124) 6. AIR (K1:300—1)
-
+> 图版九 铜盘、铜器盖、铜瑗
+> 1、2. 盘（K1:53）；3. 器盖（K1:135）背面；4. 器盖（K1:135）内侧；5. AⅠ式瑗（K1:124）；6. AⅠ式瑗（K1:300-1）
 ## Page 53
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 1. AⅠ式（K1:117）
-
-> 2. AⅠ式（K1:298—3）
-
-> 3. AⅡ式（K1:152）
-
-> 4. AⅡ式（K1:223—2）
-
-> 5. AⅢ式（编号残缺）
-
-> 6. AⅢ式（K1:298—4）
-
+> 图版十 铜铃、铜瑗
 ## Page 54
 
 <!-- kind=text confidence=high -->
@@ -919,41 +790,27 @@ Aa型9件。大小不等。体略长，四角圆，四边微弧。背面正中�
 
 ## Page 55
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图二九 BAR
-1. BIT st 〈K1 :291一4) 2. BI st (K1+115)
-A=O C MWR
-1. K1+#51 2. K1!262—2
-
+> 图二九 B型铜瑗：1. BⅢ式（K1:291-4）；2. BⅢ式（K1:115）
+> 图三〇 C型铜瑗：1. K1:51；2. K1:262-2
 ## Page 56
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
 > 图版：器物分型示意，比例尺2厘米。
-
 > 1. Aa型（K1:258-3） 2. Aa型（K1:289-2） 3. Aa型（K1:15） 4. Aa型（K1:25） 5. Ab型（K1:271-2） 6. Ab型（K1:239） 7. Ac型（K1:3-4） 8. Ac型（K1:263-4） 9. B型（K1:3-5）
-
 ## Page 57
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-1. BE式 (K1:269—2) 2. BIT st (FI 2891一4
-3. BITE st (K1:115) 4. C MY (K1:
-5. C 型 (K1:
-
+> 图版一一 铜环
+> 1. BⅡ式（K1:269-2）；2. BⅢ式（K1:291-4）；3. BⅢ式（K1:115）；4. C型（K1:51）；5. C型（K1:262-2）
 ## Page 58
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图版一二 戚形方孔铜璧
-
-> 1. Aa型（K1:258—3） 2. Aa型（K1:289—2） 3. Aa型（K1:15）
-
-> 4. Aa型（K1:25） 5. Ab型（K1:271—2） 6. Ab型（K1:239）
-
-> 8. Ac型（K1:263—4） 9. B型（K1:3—5）
-
+> 图版一二 戚形方孔铜璧：1. Aa型（K1:258-3）；2. Aa型（K1:289-2）；3. Aa型（K1:15）；4. Aa型（K1:25）；5. Ab型（K1:271-2）；6. Ab型（K1:239）；7. Ac型（K1:3-4）；8. Ac型（K1:263-4）；9. B型（K1:3-5）
 ## Page 59
 
 <!-- kind=text confidence=medium -->
@@ -1020,66 +877,30 @@ C型1件。标本K1:3-2（图三三，5；图版一四，5），长条形援，�
 
 ## Page 61
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图三二　A型铜戈
-
-> 1. AⅠ式（K1:7-1）
-
-> 2. AⅠ式（K1:3-7）
-
-> 3. AⅠ式（K1:127）
-
-> 4. AⅡ式（K1:69）
-
-> 5. AⅡ式（K1:247-2）
-
-> 6. AⅢ式（K1:198）
-
+> 图三二 A型铜戈：1. AⅠ式（K1:7-1）；2. AⅡ式（K1:3-7）；3. AⅡ式（K1:127）；4. AⅡ式（K1:69）；5. AⅢ式（K1:247-2）；6. AⅢ式（K1:198）
 ## Page 62
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-三三 B型、C 型铜戈
-- BIX (K1+263—15)
-BIT s{ (K1:298—13)
-BIT x{ (K1+189—1)
-BIII s{ (K1+269—3)
-CW (K1:3—2)
-Bf
-
+> 三三 B型、C 型铜戈
+> Bf
 ## Page 63
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
 > 1. AⅠ式（K1:7-1）
-
 > 2. AⅠ式（K1:23-7）
-
 > 3. AⅠ式（K1:127）
-
 > 4. AⅡ式（K1:69）
-
 > 5. AⅡ式（K1:247-2）
-
 > 6. AⅡ式（K1:198）
-
 ## Page 64
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-### 图版一四 铜戈
-
-> 1. HⅠ式（K1:263—15）
-
-> 2. BⅡ式（K1:298—13）
-
-> 3. BⅢ式（K1:189—1）
-
-> 4. BⅡ式（K1:269—3）
-
-> 5. C型（K1:3—2）
-
+> 图版一四 铜戈：1. BⅠ式（K1:263-15）；2. BⅡ式（K1:298-13）；3. BⅢ式（K1:189-1）；4. BⅢ式（K1:269-3）；5. C型（K1:3-2）
 ## Page 65
 
 <!-- kind=text confidence=medium -->
@@ -1146,24 +967,15 @@ Bf
 
 ## Page 69
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 拓片八　A型器物（K1:81、K1:97）两端纹饰。
-
-> 图三六　B、C型器物。
-
-> 1. Ba型（K1:170）；2. Bb型（K1:23）；3. Bc型（K1:101）；4. CI式（K1:102）；5. CII式（K1:275）。
-
+> 拓片八 A型玉璋（K1:81、97）两端纹饰，64页
+> 图三六 B型、C型器物：1. Ba型（K1:170）；2. Bb型（K1:23）；3. Bc型（K1:01）；4. CⅠ式（K1:02）；5. CⅡ式（K1:275）
 ## Page 70
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版一六 玉璋
-1. A型 (K1:81、97) 2. Ba 型 (K1:170)
-3. Bb 型 (K1:23)
-5. CI (K1:02)
-4. Be 型 〈K1 :01)
-
+> 图版一六 玉璋：1. A型（K1:81、97）；2. Ba型（K1:170）；3. Bb型（K1:23）；4. Bc型（K1:01）；5. CⅠ式（K1:02）
 ## Page 71
 
 <!-- kind=text confidence=medium -->
@@ -1210,44 +1022,30 @@ DbⅠ式 2 件。大小各一，纹饰风格相同。
 
 ## Page 73
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
 > 7. DaⅣ式（K1:146）
-
 > 8. DaⅤ式（K1:84）
-
 ## Page 74
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
 > 1. CⅠ式（K1:275）
-
 > 2. DaⅠ式（K1:151）
-
 > 3. DaⅢ式（K1:155）
-
 > 4. DaⅡ式（K1:05）
-
 > 5. DaⅢ式（K1:153）
-
 > 6. DaⅡ式（K1:272）
-
 ## Page 75
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 1. DaIV式（K1:011）
-
-> 2. DaIV式（K1:146）
-
-> 3. DaV式（K1:84）
-
-> 4. DbI式（K1:96）
-
-> 5. DbI式（K1:144—1）
-
-> 6. DbII式（K1:010）
-
+> 1. DaⅣ式（K1:011）
+> 2. DaⅣ式（K1:146）
+> 3. DaⅤ式（K1:84）
+> 4. DbⅠ式（K1:96）
+> 5. DbⅠ式（K1:144—1）
+> 6. DbⅡ式（K1:010）
 ## Page 76
 
 <!-- kind=text confidence=high -->
@@ -1284,11 +1082,10 @@ DbIV 式 1 件。标本 K1:97-7（图三八，6；图版一九，3），角砾�
 
 ## Page 78
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-2. 了DbII式 (K1?235—3) 3. DbIV 式 (K1:97—7)
-4. DbV xt (K1:75) 5. DbV 式 (K1: 86) 6. DbV xt (K1
-
+> 图版一九 玉璋
+> 1. DbⅡ式（K1:168）；2. DbⅢ式（K1:235-3）；3. DbⅣ式（K1:97-7）；4. DbⅤ式（K1:75）；5. DbⅤ式（K1:86）；6. DbⅤ式（K1:04）
 ## Page 79
 
 <!-- kind=text confidence=medium -->
@@ -1353,17 +1150,15 @@ Ea型3件。1件较完好，2件残。
 
 ## Page 83
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 1. DbVI式（K1:263-8） 2. DbVI式（K1:231） 3. DeI式（K1:03） 4. DcII式（K1:29） 5. DeII式（K1:97-1） 6. DeII式（K1:213、214）
-
+> 1. DbⅥ式（K1:263-8） 2. DbⅥ式（K1:231） 3. DeⅠ式（K1:03） 4. DcⅡ式（K1:29） 5. DeⅡ式（K1:97-1） 6. DeⅡ式（K1:213、214）
 ## Page 84
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-1，DeII式 (K1:166—2) 2. DelIII 式 《KE1506)
-4. DeIV 式 (K1:94) Ea 型 (K1+#235—5) 6. Ea 型 (K1
-
+> 图版二一 玉璋
+> 1. DcⅢ式（K1:166-2）；2. DcⅢ式（K1:06）；3. DcⅣ式（K1:218）；4. DcⅣ式（K1:94）；5. Ea型（K1:235-5）；6. Ea型（K1:161）
 ## Page 85
 
 <!-- kind=text confidence=medium -->
@@ -1384,26 +1179,9 @@ B型1件。标本K1:11-2（图四二，1；图版二三，1；彩图18），此�
 
 ## Page 86
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图四
-
-> 1. 玉璧（K1:11—2）
-
-> 2. 玉环（K1:191、264）
-
-> 3. Ea型（K1:95）
-
-> 4. Eb型（K1:210）
-
-> 5. Ec型（K1:223）
-
-> 6. Ed型（K1:87）
-
-> 7. Ee型（K1:90）
-
-> 比例尺：6厘米
-
+> 图四 1980—1986年三星堆遗址发掘相关示意图
 ## Page 87
 
 <!-- kind=text confidence=medium -->
@@ -1444,53 +1222,26 @@ C型1件。标本K1:213-2（图四三，3；图版二三，5），蛇纹石岩�
 
 ## Page 88
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版二二 ER
-1. Ea 型 (K1:95) 2. Eb 型 (K1+210) 3. Ec 型 (K1: 223)
-4. Ed 型 (K1 +87) 5. Ee 型 (K1:90)
-83
-
+> 图版二二 玉璋 83：1. Ea型（K1:95）；2. Eb型（K1:210）；3. Ec型（K1:223）；4. Ed型（K1:87）；5. Ee型（K1:90）
 ## Page 89
 
 <!-- kind=caption_or_map confidence=high -->
 
-> 图四三 戚形玉璧
-
-> 1. A型（K1:204）
-
-> 2. B型（K1:245）
-
-> 3. C型（K1:213-2）
-
-> 图四四 玉瑗、玉戚形佩
-
-> 1. 玉瑗（K1:284）
-
-> 2. 玉瑗（K1:63）
-
-> 3. 玉戚形佩（K1:235）
-
+> 图四三：1. A型（K1:204）；2. B型（K1:245）；3. C型（K1:213—2）
+> 图四四：1.（K1:284）；2.（K1:63）；3.（K1:235）
 ## Page 90
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-ih
-Was
-2. 环 (K1:191; 264)
-1. SF (KL t11—2)
-3. A WRB (K1: 204) 4. BE RB (K1: 245) 5. CW RBE (K1:213—2)
-
+> ih
+> 2. 环 (K1:191; 264)
 ## Page 91
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版二四 ER, REM. BK
-1. BH (K1 :284) 2. B (K1:63)
-4. Aal R%& 〈(K1 :108
-3. BE fil CK1 + 235)
-5. Aall {3 〈K1 :162)
-
+> 图版二四 玉瑗、戚形玉佩、玉戈 86：1. 瑗（K1:284）；2. 瑗（K1:63）；3. 戚形佩（K1:235）；4. AaI式戈（K1:108）；5. AaII式戈（K1:162）
 ## Page 92
 
 <!-- kind=catalog confidence=medium -->
@@ -1515,30 +1266,14 @@ AaⅣ式，1件。标本K1:97-4（图四五，5；图版二五，3），本页�
 
 ## Page 93
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图四五 Aa型玉戈
-
-> 1. AaI式（K1:108）
-
-> 2. AaII式（K1:162）
-
-> 3. AaII式（K1:09）
-
-> 4. AaIII式（K1:160）
-
-> 5. AaIV式（K1:97-4）
-
+> 图四五 Aa型玉戈：1. AaⅠ式（K1:108）；2. AaⅡ式（K1:162）；3. AaⅡ式（K1:09）；4. AaⅢ式（K1:160）；5. AaⅣ式（K1:97—4）
 ## Page 94
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版二五 BX
-1. AaII式 (K1+:09)
-2. AallI 式 (K1:160)
-3. AalV 式 〈K1 :97一4)
-4. Ab] 式 〈K1 :141一1、155一2)
-
+> 图版二五 玉戈 89：1. AaⅡ式（K1:09）；2. AaⅢ式（K1:160）；3. AaⅣ式（K1:97—4）；4. AbⅠ式（K1:141—1、155—2）
 ## Page 95
 
 <!-- kind=text confidence=high -->
@@ -1561,25 +1296,14 @@ B型1件。标本K1：288（图四七，1；图版二六，4；彩图26），软
 
 ## Page 96
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图四六 Ab HER
-1. API式 (K1:141—1, 155—2)
-3. AbII st (K1: 228) 4. AbIII式 (K1:353)
-2. AbI st (K1:08)
-91
-
+> 图四六 Ab型玉戈：1. AbⅠ式（K1:141—1、165—2）；2. AbⅠ式（K1:08）；3. AbⅡ式（K1:228）；4. AbⅢ式（K1:353）
 ## Page 97
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版二六 BK,
-1. AbI式 (K1:08)
-2. AbII式 (K1 + 228)
-3. AbIII式 (K1 #353)
-4. BY (K1: 288)
-92
-
+> 图版二六 玉戈 92：1. AbⅠ式（K1:08）；2. AbⅡ式（K1:228）；3. AbⅢ式（K1:353）；4. B型（K1:288）
 ## Page 98
 
 <!-- kind=catalog confidence=medium -->
@@ -1614,22 +1338,15 @@ B型1件。标本K1：288（图四七，1；图版二六，4；彩图26），软
 
 ## Page 99
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
 > 图四七 B型玉戈（K1:288）
-
-> 图四八 C、D型玉戈：1. Ca型（K1:77）；2. CbI式（K1:97—8）；3. CbII式（K1:156）；4. CbII式（K1:164）；5. D型（K1:23—1）
-
+> 图四八 C型、D型玉戈：1. Ca型（K1:77）；2. CbⅠ式（K1:97—8）；3. CbⅡ式（K1:156）
 ## Page 100
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版二七”玉戈
-1. Ca型 (KK1:77)
-2. CbI 式《〈开1 :97一8)
-3. CbII式 (K1: 156)
-4. CbII式 (K1:164)
-
+> 图版二七 玉戈 95：1. Ca型（K1:77）；2. CbⅠ式（K1:97—8）；3. CbⅡ式（K1:156）；4. CbⅡ式（K1:164）
 ## Page 101
 
 <!-- kind=text confidence=medium -->
@@ -1654,16 +1371,11 @@ Ac型1件。标本K1:266（图五一，3；图版二九，4），灰、灰黑、
 
 ## Page 102
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图四九 EH, Fe, G型玉戈
-1. E® (K1:136)
-2. F@ (K1:246)
-3. G@ (K1+!155—1)
-AAO #8) (K1:280) <<
-0 4厘米
-87
-
+> 图四九 E型、F型、G型玉戈
+> 图五〇 玉剑（K1:280）
+> 图五一 A型、B型玉斧
 ## Page 103
 
 <!-- kind=text confidence=medium -->
@@ -1692,20 +1404,7 @@ Cc型 1件。标本K1:92（图五二，3；图版三〇，2），灰—灰黑—
 
 <!-- kind=caption_or_map confidence=high -->
 
-> 图版二九 石剑、石斧
-
-> 1. 石剑（K1:280）
-
-> 2. Aa型石斧（K1:104）
-
-> 3. Ab型石斧（K1:258-1）
-
-> 4. Ac型石斧（K1:266）
-
-> 5. B型石斧（K1:45）
-
-> 6. Ca型石斧（K1:157）
-
+> 图版二九 玉剑、玉斧 100：1. 剑（K1:280）；2. Aa型斧（K1:104）；3. Ab型斧（K1:258—1）；4. Ac型斧（K1:266）；5. B型斧（K1:45）
 ## Page 106
 
 <!-- kind=text confidence=medium -->
@@ -1736,22 +1435,15 @@ B型 1件。标本K1：49（图五四，2；图版三一，5），蚀变白云�
 
 ## Page 107
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图五二 C型、D型器物（比例尺：6厘米）
-
-> 1. Ca型（K1:157） 2. Cb型（K1:97） 3. Cc型（K1:92） 4. Cd型（K1:52） 5. Ce型（K1:257） 6. Da型（K1:159） 7. Db型（K1:144—2） 8. Dc型（K1:174）
-
+> 图五二 C型、D型玉斧
 ## Page 108
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 比例尺：0—4厘米
-
-> 图五三 玉锛 1. A型（K1:256） 2. B型（K1:294-1）
-
-> 图五四 玉斤 1. A型（K1:78） 2. B型（K1:49） 3. Ca型（K1:149） 4. Cb型（K1:269） 5. Cb型（K1:291-9） 6. D型（K1:56）
-
+> 图五三 玉锛
+> 图五四 玉斤
 ## Page 109
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1802,34 +1494,14 @@ Ae型3件。器物呈四棱形，转角略磨圆，双面刃。
 
 ## Page 112
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图五五
-
-> 1. Aa型（K1:47）
-
-> 2. Ab型（K1:134）
-
-> 3. Ac型（K1:105）
-
-> 4. Ad型（K1:166-1）
-
-> 5. Ad型（K1:274）
-
-> 6. Ae型（K1:150）
-
-> 7. Ae型（K1:015）
-
-> 8. Ae型（K1:253）
-
+> 图五五 A型玉凿
 ## Page 113
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版三二 EAR. EMS
-2. Cb型 (K1:291—9) 3. D # (K1:56)
-4. Aa 型 (K1:47 5. Ab型 (K1:134) 6. Ac型 (K1:105)
-
+> 图版三二 斤、玉凿
 ## Page 114
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1872,30 +1544,15 @@ C型6件。器形宽而扁，刃部宽且薄。
 
 ## Page 116
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图五六 B型器物。1. Ba型（K1:53-7、K1:53-8） 2. Bb型（K1:250、K1:258-2） 3. Bb型（K1:97-3） 4. Bb型（K1:262-1） 5. Be型（K1:235-2）
-
-> 图五七 C型器物。1. K1:89 2. K1:281 3. K1:169 4. K1:262 5. K1:240 6. K1:263-3
-
+> 图五六 B型玉凿
+> 图五七 C型玉凿
 ## Page 117
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-### 图版三四
-
-> 1. Bb型（K1:250、K1:258-2）
-
-> 2. Bb型（K1:97-3）
-
-> 3. Bb型（K1:262-1）
-
-> 4. Bc型（K1:235）
-
-> 5. C型（K1:89）
-
-> 6. C型（K1:281）
-
+> 图版三四 玉凿
 ## Page 118
 
 <!-- kind=catalog confidence=medium -->
@@ -2014,38 +1671,19 @@ B型1件。标本K1:260（图六一，2；图版三八，4），石英片岩。�
 
 ## Page 123
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图六二 玉料块、琥珀坠饰
-
-> 1. K1:35；2. K1:261；3. K1:148、165-1
-
-> 1. A型（K1:140）；2. B型（K1:260）
-
-> 1. K1:291-11；2. 琥珀坠饰（K1:9），长一厘米
-
+> 图六二
 ## Page 124
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-RM. EMS
-1. FE型凿 (K1:129) cu 223! 3. G HM (K1:012)
-4. H WH (K1 :266一1) 5. 1H (K1: 255) 6. MIAH CK1:
-
+> 图版三七 玉凿、凹刃凿
 ## Page 125
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 1. 器物（K1:261）
-
-> 2. 器物（K1:148、165-1）
-
-> 3. A型磨石（K1:140）
-
-> 4. B型磨石（K1:260）
-
-> 5. 玉料块（K1:291-11）
-
+> 图版三八 凹刃凿、磨石、玉料块
 ## Page 126
 
 <!-- kind=text confidence=medium -->
@@ -2080,12 +1718,10 @@ Ba型6件。援窄长而直，微内屈。
 
 ## Page 127
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图六三：1. K1:138；2. K1:65；3. K1:79；4. K1:109、113。比例尺：0—10厘米。
-
-> 图六四：1. K1:166-3。
-
+> 图六三 A型石戈
+> 图六四
 ## Page 128
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -2094,23 +1730,15 @@ Ba型6件。援窄长而直，微内屈。
 
 ## Page 129
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版三九”芒珀险饰、
-1. 琥珀险饰 (K1 :9) 2. 琥珀险饰 (K1 :9) 背面
-3. A WX (K1:138)
-4. A WR (K1:65)
-
+> 图版三九 琥珀坠饰、石戈
 ## Page 130
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-AMO Ax
-1. A # (K1:79)
-2. AW (K1:109, 113)
-3. Ba 型 (K1:166—3)
-4. Ba 型 (K1:80)
-
+> 图版四〇 石戈
+> 1. A型（K1:79）；2. A型（K1:109、113）；3. Ba型（K1:166-3）；4. Ba型（K1:80）
 ## Page 131
 
 <!-- kind=text confidence=medium -->
@@ -2155,45 +1783,24 @@ Bc型14件。器物均残，经拼接后复原2件，其余的可部分复原，
 
 ## Page 133
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图六六（图名残缺）
-
-> 比例尺：0—8厘米。1.K1:226；2.K1:83；3.K1:16；4.K1:3229；5.K1:165、263—11；6.K1:218—1；7.K1:2155—3。
-
-> 比例尺：0—6厘米。1.K1:141；2.K1:137。
-
+> 图六六 Bc型
 ## Page 134
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版四一 石蕊
-1. Ba 型 (K1 +82)
-2. Ba 型 (K1:216)
-3. Bb 型 (K1:99)
-4. Bb 型 〈(K1 :154)
-
+> 图版四一 石戈
 ## Page 135
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版四二 石芯
-1. Bb 型 (K1:182、185)
-2. Be 型 〈(玫1 :226)
-3. Be 型 (KK1:83)
-4. Be 型 (K1:16)
-13:0
-
+> 图版四二 石戈
 ## Page 136
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版四三 Ak
-1. Be 型 〈K1 :222)
-2. Be HY (K1:165, 263—11)
-3. Be型 (K1+#218—1)
-4. Be 型 (K1:155—3)
-
+> 图版四三 石戈
 ## Page 137
 
 <!-- kind=text confidence=medium -->
@@ -2248,38 +1855,19 @@ A型7件。器形较长，正面略呈长方形，弧形双面刃。
 
 ## Page 139
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图七〇：K1:42、K1:252；K1:60；K1:43；K1:22；K1:48；K1:61。
-
-> 图七一：1. K1:217；2. K1:247-4；3. K1:268。
-
+> 图七一 B型
 ## Page 140
 
 <!-- kind=caption_or_map confidence=high -->
 
-### 图版四四 石矛、石斤、石铲
-
-> 1. 石矛（K1:141）
-
-> 2. 石矛（K1:137）
-
-> 3. A型石斤（K1:249—3）
-
-> 4. B型石斤（K1:167）
-
-> 5. Aa型铲（K1:259）
-
-> 6. Ab型铲（K1:261—1）
-
+> 图版四四 石矛、石锛、石铲
 ## Page 141
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版四五 AR. AF
-1. BH 〈(K1:289一1) 2. A AF (K1:42, 252) 3. AHF (K1:60)
-4. AE (K1:43) 5. 122 6. A #4 (K1:48)
-
+> 图版四五 石铲、石斧
 ## Page 142
 
 <!-- kind=catalog confidence=medium -->
@@ -2362,32 +1950,26 @@ D型8件。5件完整，3件残，不能复原。磨制。器物略呈长方形�
 
 ## Page 146
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-1. C型 (K1 :205) 2. C MY (K1:014) 3. D 型 (K1:168—1)
-4. D 型 (K1+276) 5. D 型 (K1:271—1) 6. D 型 (K1:
-
+> 图版四七 石斧
+> 1. C型（K1:205）；2. C型（K1:014）；3. D型（K1:168-1）；4. D型（K1:276）；5. D型（K1:271-1）；6. D型（K1:180）
 ## Page 147
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图七四 K1出土器物标本。可辨编号：K1:46、K1:218-7、K1:200、K1:266-5、K1:53-6、K1:236、K1:218-2、K1:271、K1:213-1、K1:221。比例尺：6厘米。
-
+> 图七四 E型石斧：1. K1:46；2. K1:53—6；3. K1:187；4. K1:236；5. K1:200；6. K1:218—2；7. K1:266—5；8. K1:271；9. K1:263—9；10. K1:213—1；11. K1:221
 ## Page 148
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-D型 (K1:224) 2. D型 (K1:241) 3. D型 (K1 +67)
-4. D#! (Kl 5. E @ (K1:46) 6. E @ (KK1:53一
-
+> 图版四八 石斧
+> 1. D型（K1:224）；2. D型（K1:241）；3. D型（K1:67）；4. D型（K1:234）；5. E型（K1:46）；6. E型（K1:53-6）
 ## Page 149
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版四九 EHAF
-1. E # (K1:187) 2. E @ (K1: 236) 3. E @ (K1: 200)
-4. E @ (K1:218—2) 5. E@ (K1:266—5) 6. 下型 (K1: 271)
-
+> 图版四九 陶器（K1:187、K1:236、K1:200、K1:218-2、K1:266-5、K1:271）
 ## Page 150
 
 <!-- kind=text confidence=medium -->
@@ -2444,34 +2026,20 @@ Bc型，6件。
 
 ## Page 152
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-AF. AM. AAG. WRI
-1. EF (K1:263—9) 2. EMF (K1:213—-1) 3. BF (CK12231—3)
-4. W@ (K1:14)
-5. A IRR # 〈K1 +320)
-
+> 图版五〇 陶器
 ## Page 153
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-ARR — Pig Re ae
-1. A #! (K1 +334)
-2. Ba 型 (K1+:346—5)
-3. Ba (K1+#346—7)
-4. Bb 型 (K1 :346一8)
-148
-
+> 图版五一 陶尖底盏
+> 1. A型（K1:334）；2. Ba型（K1:346-5）；3. Ba型（K1:346-7）；4. Bb型（K1:346-8）
 ## Page 154
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版五二 PR ae. Pld a
-1. Bb MUR (K1+346—10)
-2. Bo BAR (K1:346—2)
-3. A 型器座 〈(K1 :38)
-4. BR ak WE CK1+125)
-
+> 图版五二 陶器座：A型器座（K1:320）；A型器座（K1:334）；Ba型器座（K1:346-5）；Ba型器座（K1:346-7）；Bb型器座（K1:346-8）。149
 ## Page 155
 
 <!-- kind=text confidence=medium -->
@@ -2516,21 +2084,13 @@ B型1件。标本K1:354（图七八，3；图版五四，1），夹砂陶。内�
 
 <!-- kind=caption_or_map confidence=high -->
 
-> 图七七 陶器座。1. A型器座（K1:38）；2. B型器座（K1:125）；3. B型器座（K1:325）；4. B型器座（K1:50）。比例尺：4厘米。
-
-> 图七八 陶盉、陶平底盘。1. 陶盉（K1:193）；2. A型平底盘（K1:37）；3. B型平底盘（K1:354）。比例尺：4厘米。
-
+> 图七七 陶器座：1. A型（K1:38）；2. B型（K1:125）；3. Ba型（K1:325）；4. B型（K1:50）
+> 图七八 陶器：1. 釜（K1:193）；2. A型平底盘（K1:37）；3. B型平底盘（K1:354）
 ## Page 157
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版五三”陶器座、陶负、陶平底盘
-1. 也型器座 CK1 + 325)
-2. 了B型器座 CK1 +50)
-3. #E (K1 :193)
-4. A 型平底盘 〈K1:37)
-152
-
+> 图版五三 陶器座、陶豆、陶平底盘：Bb型器座（K1:346-10）；Be型器座（K1:346-2）；A型器座（K1:38）；B型器座（K1:125）；Ba型器座（K1:325）；B型器座（K1:50）；陶豆（K1:193）；A型平底盘（K1:37）。152
 ## Page 158
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -2571,52 +2131,12 @@ B型1件。标本K1:354（图七八，3；图版五四，1），夹砂陶。内�
 
 <!-- kind=caption_or_map confidence=high -->
 
-> 图七九 二号祭祀坑相关遗迹分布及发掘探方
-
-> 1. 二号祭祀坑及相关遗迹分布图
-
-> 2. 二号祭祀坑发掘探方T442、T443北壁地层剖面图
-
+> 图七九 二号祭祀坑相关遗迹分布及发掘探方T442、T443
 ## Page 161
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图八〇 二号祭祀坑坑口之上地层出土陶器器物图
-
-- 1. 高柄豆圈足（T442G：7）
-
-- 2. 高柄豆豆柄（T442G：12）
-
-- 3. 高柄豆豆柄（T542G：8）
-
-- 4. 高柄豆豆柄（T542：10）
-
-- 5. 高柄豆豆柄（T443：2）
-
-- 6. 高柄豆圈足（T543G：16）
-
-- 7. 高柄豆圈足（T443G：21）
-
-- 8. 器名不清（T542：23）
-
-- 9. 花边口罐口沿（T443：22）
-
-- 10. 小平底罐口沿（T442：5）
-
-- 11. 器名不清（T442G：19）
-
-- 12. 器名不清（T543G：20）
-
-- 13. 器名不清（T542：24）
-
-- 14. 器名不清（T442G：1）
-
-- 15. 器名不清（T442G：3）
-
-- 16. 壶口沿（T543：18）
-
-- 17. 盖钮（T443：6）
-
+> 图八〇 器物图：T442③:7；T442③:12；T542③:8；T542⑥:10；T443⑥:2；T543⑥:16
 ## Page 162
 
 <!-- kind=text confidence=medium -->
@@ -2703,18 +2223,10 @@ B型1件。标本K1:354（图七八，3；图版五四，1），夹砂陶。内�
 
 ## Page 168
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 拓片九 大型铜立人像（K2②:149、150）座腿及其座台侧面纹饰
-
-> 拓片一〇 大型铜立人像（K2②:149、150）足部纹饰
-
-> 1. 足部
-
-> 2. 足部内侧面
-
-> 3. 足部外侧面
-
+> 拓片九 大型铜立人像（K2②:149、150）座腿及其座台侧面纹饰，163页
+> 拓片一〇 大型铜立人像（K2②:149、150）足部纹饰，163页。1. 足部；2. 足部内侧面；3. 足部外侧面
 ## Page 169
 
 <!-- kind=text confidence=medium -->
@@ -2751,18 +2263,9 @@ B型1件。标本K1:354（图七八，3；图版五四，1），夹砂陶。内�
 
 ## Page 173
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图版五九 小型铜立人像、铜兽首冠人像、铜跪坐人像
-
-> 1. 小型铜立人像（K2②:292-2）
-
-> 2. 铜兽首冠人像
-
-> 4. A型铜跪坐人像（K2②:7）
-
-> 5. B型铜跪坐人像（K2②:04）
-
+> 图版五九 小型铜立人像、铜兽首冠人像、铜跪坐人像：小型铜立人像（K2②:292-2）；铜兽首冠人像（K2③:264）；A型跪坐人像（K2③:5）；A型跪坐人像（K2③:7）；B型跪坐人像（K2③:4）。168
 ## Page 174
 
 <!-- kind=text confidence=medium -->
@@ -2799,13 +2302,10 @@ B型1件。标本K1:354（图七八，3；图版五四，1），夹砂陶。内�
 
 ## Page 175
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图八五”铜跪坐人像
-1. A型 (K2@): 05) 2, A (K2@:7) 3. BH (K2@): 04)
-PAANZS al A) BE TBE AA AR (K2@): 48)
-L 70
-
+> 图八五 铜人像
+> 图八六 B型铜人像残件（K2②：48）
 ## Page 176
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -2820,14 +2320,9 @@ L 70
 
 ## Page 178
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-### 图版六C、D 铜喇叭座顶尊跪坐人像、铜人身鸟爪形脚人像
-
-> 1、2. 铜喇叭座顶尊跪坐人像（K2②:48）
-
-> 3、4. 铜人身鸟爪形脚人像（K2②:327）
-
+> 图版六 铜人面像、铜人面具、铜龙柱形器
 ## Page 179
 
 <!-- kind=text confidence=medium -->
@@ -2912,12 +2407,9 @@ B型：圆顶，2件。造型相同，大小略异，体厚重。面部轮廓已
 
 ## Page 185
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版六二“”铜人头像
-1. Ba 型 (K2@: 118) 2. Ba 型 (K2@:51)
-3. Ba 型 (K2@:15) 4. Ba 型 (K2@:17)
-
+> 图版六二 铜人头像：Ba型（K2②:118）。180
 ## Page 186
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -2954,39 +2446,21 @@ B型：圆顶，2件。造型相同，大小略异，体厚重。面部轮廓已
 
 ## Page 190
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-|
-图一〇二 “人身形铜牌饰 CK2@+103—27)
-拓片一三“人身形铜牌饰 (K2G:103一27) 纹饰
-185
-
+> 图一〇一 B型金面罩铜人头像（K2②：214）
+> 图一〇二 人身形铜牌饰（K2②：103-27）
+> 拓片一三 人身形铜牌饰（K2②:103-27）纹饰，185页
 ## Page 191
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
 > 图版六四 铜人头像、金面铜人头像
-
-> 1. Cb型人头像（K2②:63）
-
-> 2. A型金面铜人头像（K2②:45）
-
-> 3. A型金面铜人头像（K2②:115）
-
-> 4. B型金面铜人头像（K2②:137）
-
 ## Page 192
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-### 图版六五 金面铜人头像、人身形铜牌饰
-
-> 1. A型金面铜人头像（K2:214）
-
-> 2. B型金面铜人头像（K2:214）侧面
-
-> 3. 人身形铜牌饰（K2G:103-27）
-
+> 图版六五 金面铜人头像、人身形铜牌饰
 ## Page 193
 
 <!-- kind=text confidence=medium -->
@@ -3017,14 +2491,10 @@ D型6件。其中5件完整，另1件残破，仅存右半部。形制基本相�
 
 ## Page 194
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图一〇三 A型、B型铜人面具
-1. A型 (K2@):314) 2. B型 (K2@:153)
-图一〇四 C 型铜人面具
-1. K2@:60 2. K2@:293 ”3. K2@:57
-189
-
+> 图一〇二 人身形铜牌饰（K2②：103-27）
+> 图一〇三 A型、B型铜人面具
 ## Page 195
 
 <!-- kind=text confidence=medium -->
@@ -3061,25 +2531,14 @@ Dc型 1件。标本K2②:43（图一〇七，2；图版六九，4；彩图56）�
 
 ## Page 198
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版六八_，铜人面具
-1.C 型 (K2@:
-3. Db 型 (K2@: 102)
-oat
-on A
-ee
-2. Da 型 (K2@):119)
-
+> 图版六八 铜人面具
 ## Page 199
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图一〇六“Da、Db 型铜人面具
-1. Da型 (K2@:119) 2. Db 型 (K2@:102)
-3. Db 型 (K2G@:57) 4. Db 型 (KK2@):331)
-194
-
+> 图一〇六 Da、Db型铜人面具
 ## Page 200
 
 <!-- kind=text confidence=medium -->
@@ -3110,18 +2569,10 @@ A型3件。大小不等，形制基本相同，仅1件鼻额部略异。兽面�
 
 ## Page 203
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图一一一 A 型铜兽面
-1. K2@: 228
-2. K2@: 221
-3. K2@: 217
-图一一二 B型铜兽面
-1. K2@): 231
-2. K2@: 227
-3. K2@: 230
-L938
-
+> 图一一一 A型铜兽面
+> 图一一二 B型铜兽面
 ## Page 204
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3130,13 +2581,9 @@ L938
 
 ## Page 205
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版七一，铜兽面具、铀兽面
-1. B 型兽面具 (K2@: 148)
-2. A 型兽面 (K2@: 228)
-3. A 型兽面 (K2@: 221)
-
+> 图版七一 铜兽面具、铜兽面
 ## Page 206
 
 <!-- kind=text confidence=medium -->
@@ -3185,16 +2632,10 @@ Ab型 3件。铸造而成，形体较大，器物被砸烂并经火焚烧，仅�
 
 ## Page 208
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图一一三
-
-> 1. K2:98；2. K2:229；3. K2:231-1
-
-> 图一一四
-
-> Aa型（K2:214-2）；Ab型（K2:323）；Ab型（K2:155）；Ab型（K2:22）；B型（K2:79-21）
-
+> 图一一三 C型铜兽面
+> 图一一四 铜眼形饰
 ## Page 209
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3203,15 +2644,9 @@ Ab型 3件。铸造而成，形体较大，器物被砸烂并经火焚烧，仅�
 
 ## Page 210
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版七四 铜兽面、钢眼形饰
-1.C 型兽面 (K2@: 231一1)
-=
-2. Aa 型眼形饰 (K2@): 214—2)
-3. Ab 型眼形饰
-(K2@@: 323)
-
+> 图版七四 铜兽面、铜眼形饰
 ## Page 211
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3256,46 +2691,19 @@ Ab型 3件。铸造而成，形体较大，器物被砸烂并经火焚烧，仅�
 
 ## Page 213
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
 > 图一一五 铜眼形器
-
-> 1. A型（K2：202）
-
-> 2. B型（K2：197；K2：8）
-
-> 3. C型（左上：K2：101；右上：K2：106；左下：K2：8-1；右下：K2：99）
-
 ## Page 214
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
 > 图一一六 Aa型铜眼泡
-
-> 一号（K2②:4）
-
-> 二号（K2②:175）
-
-> 三号（K2②:120）
-
-> 四号（K2②:151）
-
-> 五号（K2②:265-2）
-
-> 六号（K2②:147-2）
-
-> 七号（K2②:301-2）
-
 ## Page 215
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版七六。”铜眼形器、铜眼泡
-1. 了型眼形器 (K2@:197, 8)
-2. C 型眼形器 (K2@:101,
-106、8一1、99)
-3. Aa 型一号眼泡
-
+> 图版七六 铜眼形器、铜眼泡
 ## Page 216
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3338,16 +2746,10 @@ D型2件。器形较矮，呈半球状，底面略作圆形，基部有四个小
 
 ## Page 218
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
 > 图一一七 Ab型、Ac型、Ad型铜眼泡
-
-> 1. Ab型（K2②:79-19） 2. Ac型（K2②:25） 3. Ad型（K2②:231） 4. Ad型（K2②:230）
-
-> 图一一八 Ba型、Bb型、Bc型铜眼泡
-
-> 1. Ba型（K2②:182） 2. Bb型（K2②:103-6） 3. Bc型（K2②:291-1） 4. Bc型（K2②:3）
-
+> 图一一八 B型铜眼泡
 ## Page 219
 
 <!-- kind=text confidence=medium -->
@@ -3370,16 +2772,9 @@ D型2件。器形较矮，呈半球状，底面略作圆形，基部有四个小
 
 ## Page 221
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版七九 铜眼泡
-3. Bb 型 (K2G@: 103一6)
-4. Be 型 (K2@): 291一1)
-<
-6. Ca 型 (K2@) 181)
-5. Be 型 (K2@: 3)
-2 1:6
-
+> 图版七九 铜眼泡，页216：1. Ad型（K2②:230）；2. Ba型（K2②:182）；3. Bb型（K2②:103—6）；4. Be型（K2②:291—1）；5. Be型（K2②:3）；6. Ca型（K2②:181）
 ## Page 222
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3448,18 +2843,9 @@ D型2件。器形较矮，呈半球状，底面略作圆形，基部有四个小
 
 ## Page 229
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-### 图版八三 大型铜神树上立鸟、小型铜神树
-
-> 1. 大型铜神树上立鸟（K2②:194-1）
-
-> 2. 小型铜神树（K2②:204、261）
-
-> 3. 小型铜神树（K2②:267）
-
-> 4. 小型铜神树（K2②:20）
-
+> 图版八三 大型铜神树上立鸟、小型铜神树，页224：1. 大型神树上立鸟（K2②:194—1）；2. 小型神树（K2②:204、261）；3. 小型神树（K2②:267）；4. 小型铜神树（K2②:20）
 ## Page 230
 
 <!-- kind=text confidence=medium -->
@@ -3518,26 +2904,15 @@ D型2件。器形较矮，呈半球状，底面略作圆形，基部有四个小
 
 ## Page 234
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版八五”铀果实、神树底座、钢圆座
-4. 神树底座 (K2@8): 17)
-. BX (K2@: 322—17)
-. ARE (K2@:55)
-
+> 图版八五 铜果实、神树底座、铜圆座，页229：1. 果实（K2②:78—1）；2. 果实（K2②:322—6）；3. 果实（K2②:322—17）；4. 神树底座（K2②:17）；5. 圆座（K2②:55）
 ## Page 235
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图一二七“”铜神树底座 (K2@+17)
-SS
-re)
-Q 10 JH K
-P——/\ a 388 At Dl
-(K2@) 55)
-Q 10 EX
-230
-
+> 图一二七 铜神树底座（K2②:17）
+> 图一二八 铜圆座（K2②:55）
 ## Page 236
 
 <!-- kind=text confidence=medium -->
@@ -3580,29 +2955,15 @@ Q 10 EX
 
 ## Page 238
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-00000000 GOo0o0 oO
-O38 22 gal, BOS 本
-[TZ
-Qo” 20H xX
-Al——JL Het: (K2@): 296)
-233
-
+> 图一二九 铜神坛（K2②:296）
 ## Page 239
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-234
-oq OS
-Guna:
-Q 8 EK 1
-A—=O 铜神坛
-= 1. K2@: 296-1
-= 2. K2@:292—3
-A-—=— Wee
-(K2@: 143—1)
-
+> 图一三〇 铜神坛：1. K2②:296-1；2. K2②:292-3
+> 图一三一 铜神殿（K2②:143-1）
 ## Page 240
 
 <!-- kind=text confidence=medium -->
@@ -3659,21 +3020,10 @@ A-—=— Wee
 
 ## Page 244
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-QO IK
-图一三四
-铜太阳形器
-1. K2@:1
-2. K2@: 67
-3. K2@: 66
-Q 208
-—————_-
-图一三五
-I式铜圆尊
-(K2@): 135)
-239
-
+> 图一三五 Ⅰ式铜圆尊（K2②:135）
+> 图一三四 铜太阳形器 239：1. K2②:1；2. K2②:67；3. K2②:66
 ## Page 245
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3718,18 +3068,9 @@ I式铜圆尊
 
 ## Page 250
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-一
-af
-“oa AR
-%
-4
-二 re
-ty OES fH, |
-拓片一七 III式铜圆尊 (K2@:112) 纹饰
-1. 肩部 2. 腹部 3. Ae
-
+> 拓片一七 Ⅲ式铜圆尊（K2②:112）纹饰：1. 肩部；2. 腹部；3. 圈足
 ## Page 251
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3738,13 +3079,9 @@ ty OES fH, |
 
 ## Page 252
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版八八_，铜持璋小人像、钢太阳形器
-1. FBV) AR 〈(K2G@: 325)
-2. BAR (K2@: 325) 侧面
-3. 太阳形器 (K2@:1)
-
+> 图版八八 持璋小人像、太阳形器，页247：1. 持璋小人像（K2②:325）；2. 持璋小人像（K2②:325）侧面；3. 太阳形器（K2②:1）
 ## Page 253
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3907,14 +3244,10 @@ A型34件。分三式。
 
 ## Page 271
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-拓片二二
-铜圆尊 〈(K2G): 252) 残片纹饰
-w= PBR 〈(K2@:23) 残片纹饰
-拓片二四 ”铜方尊 〈(K2@):184) 残片纹饰
-266
-
+> 拓片二二 铜圆尊（K2②:252）残片纹饰，266页
+> 拓片二四 铜方尊（K2②:184）残片纹饰，266页
 ## Page 272
 
 <!-- kind=text confidence=medium -->
@@ -3929,31 +3262,15 @@ w= PBR 〈(K2@:23) 残片纹饰
 
 ## Page 273
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-jet
-ers oF
-in
-Pew [ou
-纹饰
-3. BE
-2. 肩部、腹部
-II Xe BH 〈K2G@):159)
-拓片二六
-1. SB
-268
-
+> 拓片二五 Ⅲ式铜罍（K2②:159）纹饰：1. 口沿；2. 肩部、腹部；3. 圈足
+> 拓片二六 Ⅰ式铜方罍（K2②:80）纹饰：1. 肩部；2. 腹部
 ## Page 274
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版九六，铜圆尊残片、铀方尊残片
-1. 圆尊肩部 (KK2G:252)
-3. 圆尊口沿 (K2@):8)
-2. 圆尊肩部 (K2@: 23)
-4. 方尊肩部 (K2@: 184)
-269
-
+> 图版九六 铜圆尊残片、铜方尊残片
 ## Page 275
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -4042,46 +3359,27 @@ B型6件。其中4件较完好，另2件残。大小不等，孔口缘凸起较�
 
 ## Page 284
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-拓片二九”铀方时纹饰
-1. # (K2@: 205一1) 纹饰
-2. 器身 (K2@: 205) 纹饰
-拓片三〇
-铜圆过 〈K2@:117) 残片纹饰
-
+> 拓片二九 铜罍，279页：1. 盖（K2②:205-1）纹饰；2. 器身（K2②:205）纹饰
+> 拓片三〇 铜圆罍（K2②:117）残片纹饰，279页
 ## Page 285
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版一〇C〇 Be RA. HBB ae
-1. 腹部 〈(K2@: 103)
-2. BH (K2@:103—1)
-3. 腹部 (K2@: 39-1) 4. Bm (K2@: 32)
-280
-
+> 图版一〇〇 铜罍残片、铜瓿残片
+> 1. 腹部（K2②:103）；2. 肩部（K2②:103-1）；3. 腹部（K2②:39-1）；4. 腹部（K2②:32）
 ## Page 286
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-amg -O— ibe. HB. HA ae
-2. FH (K2@: 205)
-1. AB RA (K2@:133)
-3. Frm (K2@: 205-1) #
-. Ae (K2@:117)
-
+> 图版一〇一 铜罍残片、铜瓿残片、铜尊残片
 ## Page 287
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-A—h= KR 〈K2@: 111) aaa
-2
-图一五四 AI式小铜环
-1. K2@: 46
-2. K2@: 134
-3. K2@):126
-282
-
+> 图一五三 大铜瑗（K2②:111）
+> 图一五四 AⅠ式小铜环：1. K2②:46；2. K2②:134；3. K2②:126
 ## Page 288
 
 <!-- kind=text confidence=medium -->
@@ -4130,50 +3428,20 @@ B型8件。其中6件较完整，另2件较残。援较短，呈三角形；内�
 
 ## Page 290
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 比例尺：0—4厘米。
-
-> 图一五七 铜戚形方孔璧
-
-> A型（K2②：142-2）
-
-> A型（K2③：10）
-
-> B型（K2②：260）
-
-> C型（K2②：251）
-
-> C型（K2②：99）
-
-> 图一五八 铜璋形饰（K2②：144-5）
-
+> 图一五七 铜戚形方孔璧：1. A型（K2②:142-2）；2. A型（K2②:10）；3. B型（K2②:260）；4. C型（K2②:251）；5. C型（K2②:99）
+> 图一五八 铜璋形饰（K2②:144-5）
 ## Page 291
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-### 图版一〇二 大铜瑗、小铜环
-
-> 1. 大铜瑗（K2②：111）
-
-> 2. 小铜环（K2②：46）
-
-> 3. 小铜环（K2②：134）
-
-> 4. 小铜环（K2②：126）
-
-> 5. 小铜环（K2②：29）
-
-> 6. 小铜环（K2②：186）
-
+> 图版一〇二 铜器残片
 ## Page 292
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图版一〇三 小铜环、戚形方孔铜璧
-
-> 本页为图版页，除图版题名及少量器物编号外，文字信息有限。
-
+> 图版一〇三 铜器残片
 ## Page 293
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -4242,16 +3510,9 @@ DbII式1件。标本K2②:115-04（图一六二，4；图版一〇八，4），�
 
 ## Page 297
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图一六一 A型、B型铜铃
-
-> 1. A型（K2②:122） 2. Ba型（K2②:103-31）
-
-> 3. Ba型（K2②:213-1） 4. Bb型（K2②:115-01）
-
-> 5. Bc型（K2②:220）
-
+> 图一六一 A型、B型铜铃：1. A型（K2②:122）；2. Ba型（K2②:103-31）；3. Ba型（K2②:213-1）；4. Bb型（K2②:115-01）；5. Bc型（K2②:220）
 ## Page 298
 
 <!-- kind=text confidence=medium -->
@@ -4272,15 +3533,9 @@ G型1件。标本K2④:70-7（图一六四，1；图版一〇九，4），两面
 
 ## Page 299
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版一〇五”铜璋形饰、铜戈、
-1. BBM (K2@:144—5)
-_ ABR (K2G):
-, ABR (K2@:2
-. AMR (K2@:
-. AMR (K2O:
-
+> 图版一〇五 铜璋形饰、铜戈
 ## Page 300
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -4343,22 +3598,15 @@ D型，1件。标本K2②:6（图一六六，5；图版一一三，1），器形
 
 ## Page 304
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图一六三 E型、F型铜铃。1. E型（K2②:149）；2. F型（K2②:103-8）。
-
-> 图一六四 G型、H型、I型铜铃。1. G型（K2②:70-7）；2. H型（K2②:78）；3. I型（K2②:345）。
-
+> 图一六三 E型、F型铜铃
+> 图一六四 G型、H型、I型
 ## Page 305
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图一六五 ”圆形铜挂饰
-1. K2@:79—6 2. K2@: 150—4
-3. K2@: 70—5 4. K2@:103—22
-5. K2@:115—7 6. K2@): 39
-300
-
+> 图一六五 圆形铜挂饰
 ## Page 306
 
 <!-- kind=text confidence=medium -->
@@ -4381,14 +3629,9 @@ Fb型3件。其中1件完好，另2件残。周缘平，中间隆起，上有一
 
 ## Page 308
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版一一〇 铜铃、圆形铜挂饰
-2. [型铃 (K2@: 345)
-1. H#@# (K2@:78)
-3. ABE K2@:79—-6)
-4. ABH (K2@:150—4)
-
+> 图版一一〇 铜铃、圆形铜挂饰：1. H型（K2②:78）；2. I型（K2②:345）；3. 圆形挂饰C（K2②:79—6）；4. 圆形挂饰（K2②:150—4）
 ## Page 309
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -4397,22 +3640,16 @@ Fb型3件。其中1件完好，另2件残。周缘平，中间隆起，上有一
 
 ## Page 310
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-一一二，”龟背形铜挂饰
-1. A型 (K2@:115—8)
-FAR
-2. BRE (K2@: 279—2)
-4. C型 (K2@: 30一9)
-
+> 一一二，”龟背形铜挂饰
+> 1. A型 (K2②:115—8)
+> 4. C型 (K2②: 30一9)
 ## Page 311
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版一一三“”龟背形铜挂饰
-1. D型 (K2@:6) 2. EY (K2@:103—3)
-3. Fa 型 (K2@:115—9) 4. Fb 型 (K2@:103—14)
-
+> 图版一一三 龟背形铜挂饰：1. D型（K2②:6）；2. E型（K2②:103—3）；3. Fa型（K2②:115—9）；4. Fb型（K2②:103—14）
 ## Page 312
 
 <!-- kind=catalog confidence=medium -->
@@ -4527,12 +3764,9 @@ C型 1件。标本K2②:168（图一七一，4；图版一一八，3），圆圈
 
 ## Page 319
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图一七〇 铜铃（K2②:30—6）
-
-> 图一七一 铜铃挂架、铜挂环：A型（K2②:124）；B型（K2②:210）；B型（K2②:105）；C型（K2②:168）；挂环（K2②:193—60）。
-
+> 图一七一 铜铃挂架、铜挂环
 ## Page 320
 
 <!-- kind=text confidence=high -->
@@ -4572,11 +3806,9 @@ B型25件。均残。
 
 ## Page 321
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版一一七“扇贝形铜挂饰、禾形铜挂饰、钢铃挂架
-1. 上型扇贝形挂饰 CK 2. G 型扇贝形挂饰 CK
-
+> 图版一一七 扇贝形铜挂饰、禾形铜挂饰、铜铃挂架：1. F型扇贝形挂饰（K2②:292—1）；2. G型扇贝形挂饰（K2②:30—7）；3. 禾形铜挂饰（K2②:30—6）；4. A型铃挂架（K2②:124）
 ## Page 322
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -4585,18 +3817,10 @@ B型25件。均残。
 
 ## Page 323
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-### 图版一一九 铜贝、铜三棱形饰、铜弹丸、鱼形铜饰挂架
-
-> 1. 贝（K2②:103-2）
-
-> 2. 三棱形饰（K2G②:261-6）
-
-> 3. 弹丸（K2②:37、249-1）
-
-> 4. 鱼形铜饰挂架（K2②②:194-61）
-
+> 图版一一九 铜贝、铜三棱形饰、铜弹丸、鱼形铜箔饰挂架：1. 贝（K2②:103-2）；2. 三棱形饰（K2②:261-6）；3. 弹丸（K2②:37、249-1）；4. 鱼形铜箔饰挂架（K2②:194-61）
+> 图版一一九 铜贝、铜三棱形饰、铜弹丸、鱼形铜饰挂架
 ## Page 324
 
 <!-- kind=catalog confidence=medium -->
@@ -4641,32 +3865,18 @@ B型25件。均残。
 
 ## Page 325
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
 > 图一七三 鱼形铜饰
-
-> 1. A型（K2③:194-10） 2. A型（K2③:194-11） 3. B型（K2③:194-6） 4. C型（K2③:194-7） 5. D型（K2③:194-8） 6. E型（K2③:194-9）
-
-> 图一七四 铜饰
-
-> 1. A型（K2③:144-5） 2. B型（K2③:194-2） 3. B型（K2③:194-3） 4. C型（K2③:194-4） 5. C型（K2③:194-5）
-
+> 图一七四 璋形铜饰
+> 图一七四 璋形铜箔饰 320：1. A型（K2②:144-5）；2. B型（K2②:194-2）；3. B型（K2②:194-3）；4. C型（K2②:194-4）；5. C型（K2②:194-5）
 ## Page 326
 
 <!-- kind=caption_or_map confidence=high -->
 
-> 图一七五 叶脉纹铜箔饰
-
-> 1. K2③:194—15；2. K2③:194—13；3. K2③:194—12；4. K2③:194—16；5. K2③:194—14。比例尺：0—2厘米。
-
-> 图一七六 鱼鳞纹铜箔饰、彩绘铜箔饰
-
-> 1. 鱼鳞纹箔饰（K2③:194—18）；2. 鱼鳞纹箔饰（K2③:194—19）；3. 彩绘箔饰（K2③:194—17）。比例尺：0—4厘米。
-
-> 图一七七 兽面形铜箔饰、兽形铜箔饰、鸟形铜箔饰
-
-> 1. 兽面形箔饰（K2③:193—59）；2. 兽形箔饰（K2③:193—58）；3. 鸟形箔饰（K2②:70—19）。比例尺：1为0—4厘米，2为0—6厘米，3为0—4厘米。
-
+> 图一七五 叶脉纹铜箔饰 321：1. K2③:194-15；2. K2③:194-13；3. K2③:194-12；4. K2③:194-16；5. K2③:194-14
+> 图一七六 鱼鳞纹铜箔饰、彩绘铜箔饰 321：1. 鱼鳞纹箔饰（K2③:194-18）；2. 鱼鳞纹箔饰（K2③:194-19）；3. 彩绘箔饰（K2③:194-17）
+> 图一七七 兽面形铜箔饰、兽形铜箔饰、鸟形铜箔饰 321：1. 兽面形箔饰（K2③:193-59）；2. 兽形箔饰（K2③:193-58）；3. 鸟形箔饰（K2②:70-19）
 ## Page 327
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -4675,36 +3885,14 @@ B型25件。均残。
 
 ## Page 328
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 1. A型璋形饰（K2:144-5）
-
-> 2. B型璋形饰（K2:194-2）
-
-> 3. B型璋形饰（K2:194-3）
-
-> 4. C型璋形饰（K2:194-4）
-
-> 本页为图版题注页，后两项文字残缺，无法可靠辨识。
-
+> 图版一二一 璋形铜箔饰：1. A型（K2②:144-5）；2. B型（K2②:194-2）；3. B型（K2②:194-3）；4. C型（K2②:194-4）；5. C型（K2②:194-5）
 ## Page 329
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-### 图版一二二 铜饰
-
-> 1. 叶脉纹铜饰
-
-> 2. 圆形铜饰（K2G：194-20）
-
-> 3. 鱼鳞纹铜饰（K2G：194-18、194-19）
-
-> 4. 铜饰（K2：194-17）
-
-> 5. 铜饰（K2：194-59）
-
-> 6. 铜饰（K2：193-58）
-
+> 图版一二二 铜箔饰：1. 叶脉纹箔饰；2. 圆形箔饰（K2②:194-20）；3. 鱼鳞纹铜箔饰（K2②:194-18、194-19）；4. 彩绘箔饰（K2②:194-17）；5. 兽面形箔饰（K2②:194-59）；6. 兽形箔饰（K2②:193-58）
 ## Page 330
 
 <!-- kind=catalog confidence=medium -->
@@ -4765,20 +3953,16 @@ C型10件。颈以下残断无存。标本K2②:193-15（图一八二，3；图�
 
 ## Page 332
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图一七九 铜蛇中段、铜蛇尾。1. 蛇中段（K2②：56）；2. 蛇中段（K2②：113）；3. 蛇尾（K2②：44）；4. 蛇尾（K2②：330）。
-
-> 图一八〇 铜蛇羽翅、铜蛇形器。1. 蛇羽翅（K2②：70—10）；2. 蛇形器（K2②：326）。
-
+> 图一七九 铜蛇中段、铜蛇尾 327：1. 蛇中段（K2③:56）；2. 蛇中段（K2③:113）；3. 蛇尾（K2②:44）；4. 蛇尾（K2②:330）
+> 图一八〇 铜蛇羽翅、铜蛇形器 327：1. 蛇羽翅（K2②:70-10）；2. 蛇形器（K2②:326）
 ## Page 333
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
 > 图一八一 铜圆座（K2②:263）
-
-> 图一八二 龙形铜饰件：1. A型（K2②:203）；2. B型（K2②:145）；3. C型（K2②:193-15）；4. D型（K2②:193-25）；5. E型（K2②:193-26）；6. F型（K2②:52-2）；7. G型（K2②:193-31）；8. H型（K2②:193-32）。
-
+> 图一八二 龙形铜饰件 328：1. A型（K2②:203）；2. B型（K2②:145）；3. C型（K2②:193-15）；4. D型（K2②:193-25）；5. E型（K2②:193-26）；6. F型（K2②:52-2）；7. G型（K2②:193-31）；8. H型（K2②:193-32）
 ## Page 334
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -4787,24 +3971,14 @@ C型10件。颈以下残断无存。标本K2②:193-15（图一八二，3；图�
 
 ## Page 335
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版一二四 “”铜蛇、铜蛇羽翅
-1. 蛇中段 (K2@:113)
-2. 蛇尾 (K2Q): 44)
-3. 蛇尾 (K2@: 330)
-4. He (K2@:70—10)
-330
-
+> 图版一二四 铜蛇、铜蛇羽翅：1. 蛇中段（K2②:113）；2. 蛇尾（K2②:44）；3. 蛇尾（K2②:330）；4. 蛇羽翅（K2②:70-10）
 ## Page 336
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版一二五”铜蛇形器、铜圆座、龙形铜饰件
-1. KEW ae CK 3. A 型龙形饰件〈开
-2. ARE (K2@: 263)
-4. BARB mH (K2@: 145)
-
+> 图版一二五 铜蛇形器、铜圆座、龙形铜饰件：1. 蛇形器（K2②:326）；2. 铜圆座（K2②:263）；3. A型龙形饰件（K2②:203）；4. B型龙形饰件（K2②:145）
 ## Page 337
 
 <!-- kind=text confidence=medium -->
@@ -4839,16 +4013,11 @@ E型1件。标本K2②:239-1（图一八五，4；图版一二八，3；彩图86
 
 ## Page 338
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图一八三 铜公鸡、铜鸟头
-
-> 1. 公鸡（K2②:107） 2. 鸟头（K2②:141）
-
-鸟形饰。1件。标本K2②:193-4（图一八六，1；图版一二九，1；彩图87），一腿残，尾微残。器形较扁平，大头，双歧冠，巨喙略勾，喙中套一铜丝环，翅羽尖端向前卷曲，尾下侧铸成云雷纹状，尾羽高高上翘呈刀形。高9、宽6.5厘米。
-
-鸟头。1件。标本K2②:70-9（图一八六，2；图版一二九，2），器形扁平。大头，巨喙。
-
+> 图一八三 铜公鸡、铜鸟头 333：1. 公鸡（K2③:107）；2. 鸟头（K2②:141）
+> 图一八六 A型、B型、C型铜鸟形饰 339：1. A型（K2③:193-4）；2. B型（K2③:70-9）；3. C型（K2③:4-1）
+> 图版一二九 鸟形饰：1. A型（K2②:193-4）；2. B型（K2②:70-9）；3. C型（K2②:4-1）
 ## Page 339
 
 <!-- kind=text confidence=medium -->
@@ -4879,15 +4048,9 @@ F型1件。标本K2③:193—12（图一八七，4；图版一三〇，4），�
 
 ## Page 341
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版一二六 龙形铜饰件
-2. D型 (K2G@@:193一25)
-1. CM (K2
-4. 了型 (K26
-5. G型 (K2@:193—31)
-3. E @ (K2@: 193—26)
-
+> 图版一二六 龙形铜饰件：1. C型（K2②:193-15）；2. D型（K2②:193-25）；3. E型（K2②:193-26）；4. F型（K2②:52-2）；5. G型（K2②:193-31）
 ## Page 342
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -4902,12 +4065,10 @@ F型1件。标本K2③:193—12（图一八七，4；图版一三〇，4），�
 
 ## Page 344
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图一八六 A型、B型、C型器物。1. A型（K2②:193-4） 2. B型（K2②:70-9） 3. C型（K2②:4-1）
-
-> 图一八七 D型、E型、F型器物。1. D型（K2②:24-1） 2. D型（K2②:193-11） 3. E型（K2②:4-2） 4. F型（K2②:193-12）
-
+> 图一八六 A型、B型、C型铜鸟形饰 339：1. A型（K2③:193-4）；2. B型（K2③:70-9）；3. C型（K2③:4-1）
+> 图一八七 D型、E型、F型铜鸟形饰 339：1. D型（K2③:24-1）；2. D型（K2③:193-11）
 ## Page 345
 
 <!-- kind=text confidence=medium -->
@@ -4942,12 +4103,10 @@ F型1件。标本K2③:193—12（图一八七，4；图版一三〇，4），�
 
 ## Page 347
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-铜鸟形饰、铜鸟形饰尾部残件
-1. D型 (K2@: 24一1) 2. D型 (K2@:193—11)
-3. E@ (K2@:4—2) 4. 了型 (K2@:193—12) 5. BPR (K2@: 70-14)
-
+> 图版一三〇 铜鸟形饰、铜鸟形饰尾部残件
+> 1. D型（K2③:24-1）；2. D型（K2③:193-11）；3. E型（K2③:4-2）；4. F型（K2③:193-12）；5. 尾部残件（K2②:70-14）
 ## Page 348
 
 <!-- kind=text confidence=medium -->
@@ -4990,58 +4149,17 @@ F型1件。标本K2③:193—12（图一八七，4；图版一三〇，4），�
 
 ## Page 349
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图一八九 铜水牛头、铜怪兽、铜怪兽头
-
-> 1. 水牛头（K2②:193-8）
-
-> 2. 怪兽（K2②:193-10）
-
-> 3. 怪兽头（K2②:193-5）
-
-> 4. 怪兽头（K2⑥:193-6）
-
-> 5. 怪兽头（K2②:193-7）
-
-> 图一九〇 铜怪兽耳、铜怪兽残件
-
-> 1. 怪兽耳（K2②:193-62）
-
-> 2. 怪兽残件（K2②:193-14）
-
-> 图一九一 铜鱼（K2②:70-12）
-
+> 图一八九 铜水牛头、铜怪兽、铜怪兽头：一、水牛头（K2②:193-8）；二、怪兽（K2②:193-10）；三、怪兽头（K2②:193-5）；四、怪兽头（K2②:193-6）；五、怪兽头（K2②:193-7）。344页
+> 图一九〇 铜怪兽耳、铜怪兽残件：一、怪兽耳（K2②:193-62）；二、怪兽残件（K2②:193-14）。344页
+> 图一九一 铜鱼（K2②:70-12）。344页
 ## Page 350
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图一九二 镂空铜器
-
-> 1. 鞋背形（K2①:9）
-
-> 2. 鞋背形（K2②:120-1）
-
-> 3. （K2②:193-37）
-
-> 图一九三 镂空铜饰件
-
-> 1. K2②:193-44
-
-> 2. K2②:193-43
-
-> 3. K2②:193-42
-
-> 4. K2②:193-48
-
-> 5. K2②:193-46
-
-> 6. K2②:193-47
-
-> 7. K2②:193-45
-
-> 比例尺：0—4厘米
-
+> 图一九二 镂空铜器：一、鞋背形（K2①:9）；二、鞋背形（K2②:120-1）；三、菱形（K2②:193-37）。345页
+> 图一九三 铜六角形器（K2②:64）。352页
 ## Page 351
 
 <!-- kind=catalog confidence=medium -->
@@ -5078,22 +4196,9 @@ F型1件。标本K2③:193—12（图一八七，4；图版一三〇，4），�
 
 ## Page 353
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-### 图版一三一 铜鸟形饰尾部残件、铜水牛头、铜怪兽、铜怪兽头
-
-> 1. 铜鸟形饰尾部残件（K2②:193-13）
-
-> 2. 铜鸟形饰尾部残件（K2②:193-17）
-
-> 3. 铜水牛头（K2②:193-8）
-
-> 4. 铜怪兽（K2②:193-10）
-
-> 5. 铜怪兽头（K2②:193-5）
-
-> 6. 铜怪兽头（K2②:193-6）
-
+> 图版一三一 铜鸟形饰尾部残件、铜水牛头、铜怪兽、铜怪兽头
 ## Page 354
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -5104,32 +4209,12 @@ F型1件。标本K2③:193—12（图一八七，4；图版一三〇，4），�
 
 <!-- kind=caption_or_map confidence=high -->
 
-### 图版一三三 铜镂空器、刀羽形镂空铜饰件、双勾云纹羽形镂空铜饰件
-
-> 1. 鞋背形镂空器（K2②:120-1）
-
-> 2. 菱形镂空器（K2③:193-37）
-
-> 3. 窄刀羽形镂空饰件（K2③:193-42～48）
-
-> 4. 宽刀羽形镂空饰件（K2③:193-49～56）
-
-> 5. 双勾云纹羽形镂空饰件（K2②:214-2）
-
+> 图版一三三 铜镂空器、刀羽形镂空铜饰件、双勾云纹羽形镂空铜饰件
 ## Page 356
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-### 图版一三四
-
-> 歧羽形镂空铜饰件、尾羽形镂空铜饰件
-
-> 1. 尾羽形镂空铜饰件（K2②:193-33）
-
-> 2. 歧羽形镂空铜饰件（K2②:193-38）
-
-> 3. 尾羽形镂空铜饰件（K2②:193-40、41）
-
+> 图版一三四 歧羽形镂空铜饰件、尾羽形镂空铜饰件
 ## Page 357
 
 <!-- kind=text confidence=medium -->
@@ -5216,33 +4301,19 @@ C型共19件。分大号和小号两种。
 
 ## Page 360
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版一三五”铜六角形器、金面章
-1，铜六角形器 〈(K2G@@: 64)
-2. 金面罩 (K2@: 147)
-3. 金面罩 (K2@:62—1)
-
+> 图版一三五 铜六角形器、金面罩
 ## Page 361
 
 <!-- kind=caption_or_map confidence=high -->
 
-### 图版一三六 金箔四叉形器、璋形金箔饰
-
-> 1. 金箔四叉形器（K2③:120）
-
-> 2. A型璋形箔饰（K2②:88-45）
-
-> 3. A型璋形箔饰（K2②:129-1）
-
-> 4. Ba型璋形箔饰（K2③:130-1～9）
-
+> 图版一三六 金箔四叉形器、璋形金箔饰
 ## Page 362
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 本页为图版或示意页，可辨文字有限。
-
+> 图版一三七 璋形金箔饰、鱼形金箔饰、圆形金箔饰
 ## Page 363
 
 <!-- kind=text confidence=medium -->
@@ -5307,32 +4378,20 @@ Ce型，5件。器形大小不等，从大到小呈系列递变。射本部两�
 
 ## Page 366
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图一九七 A型铜戈
-
-> 1. K2③:201-4 2. K2③:194
-
-本部两侧齿饰及阑部残缺，经拼接复原。器身宽而扁平，两侧边较直，微内弧，前部两侧略宽出，前端成一叉形刃，叉口较深，刃锋利。援本部两侧上、下均宽出向内卷的云雷纹齿饰，中间为五齿。援与内之间有一直径1.1厘米的圆穿。通长50.3厘米，援长35厘米，宽10.1厘米，本长9.2厘米，内长6.5厘米，厚0.6厘米。
-
+> 图一九七 Ab型玉璋：一、K2②:201-4；二、K2②:194。361页
 ## Page 367
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图一九八 B型、Ca型
-
-> 1. B型（K2②：322—3） 2. Ca型（K2②：141） 3. Ca型（K2②：174） 4. Ca型（K2②：322—7） 5. Ca型（K2②：321）
-
-> 图一九九 Cb型、Cc型、Cd型
-
-> 1. Cb型（K2②：202—5） 2. Cc型（K2②：167） 3. Cd型（K2②：202—4）
-
+> 图一九八 B型、Ca型玉璋：一、B型（K2②:322-3）；二、Ca型（K2②:141）；三、Ca型（K2②:174）；四、Ca型（K2②:322-7）；五、Ca型（K2②:321）。362页
+> 图一九九 Cb型、Cc型、Cd型玉璋：一、Cb型（K2②:202-5）；二、Cc型（K2②:167）；三、Cd型（K2②:202-4）。362页
 ## Page 368
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
 > 图：1. K2：165；2. K2：202—2；3. K2：324；4. K2：314—2；5. K2：320。比例尺：6厘米。
-
 ## Page 369
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -5471,18 +4530,9 @@ Ac型1件。标本K2②:322-2（图二〇五，5；图版一四七，1），蚀�
 
 ## Page 378
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图版一四二 玉璋、璋形玉饰件
-
-> 1. C型玉璋（K2②：320）
-
-> 2. A型璋形玉饰件（K2②：763-1）
-
-> 3. B型璋形玉饰件（K2②：79-1）
-
-> 4. B型璋形玉饰件（K2②：79-2）
-
+> 图版一四二 玉璋、璋形玉饰件 373：1. Ce型玉璋（K2②:320）；2. A型璋形玉饰件（K2②:763-1）；3. B型璋形玉饰件（K2②:79-1）；4. B型璋形玉饰件（K2②:79-2）
 ## Page 379
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -5669,14 +4719,10 @@ F型10件。刃端略宽于顶端，断面略呈椭圆形，圆弧形刃。标�
 
 ## Page 395
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图二一一 器物图。比例尺：0—6厘米。
-
-> 1. 器物（K2①:314—5）；2. 器物（K2①:322—5）。
-
-> A：K2①:322—9；B：K2①:89；C：K2①:89—27、K2①:89—9、K2①:89—13；D：K2①:89—45、K2①:89—20；E：K2①:286。
-
+> 图二一〇 D型、E型玉戈
+> 图二一一 A型、B型、C型、D型、E型玉戚
 ## Page 396
 
 <!-- kind=text confidence=high -->
@@ -5821,47 +4867,24 @@ E型1件。标本K2②：159（图二一七，6；图版一六〇，4），浅�
 
 ## Page 406
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版一五六 EK
-2. G型 (K2@ 3. G 型 (K2@: 89—32)
-4. G型 (K2@: 89—24) 5. HH型 (K2@: 89—39) 6. H HY (K2@: 89—10)
-
+> 图版一五六：3. F型；4. F型
 ## Page 407
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版一五七”玉溺
-2. H @ (K2@): 89一17) 3. H型 (K2@:115—002)
-4. HH型 (K2@:
-. H #@ (K2@:89—23) 6. H # (K2@): 89—30)
-
+> 图版一五七：1. G型（K2②:89-9）；4. G型（K2②:89-13）
 ## Page 408
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图版一五八 玉璋
-
-> 1. I型（K2:89-36） 2. II型（K2:89-6） 3. I型（K2:89-8） 4. IV型（K2:89-41） 5. I型（K2:89-37） 6. III型（K2:89-18）
-
+> 图版一五八：玉璧。1. I型（K2②:89-36）；2. I型（K2②:89-6）；3. I型（K2②:89-8）；4. I型（K2②:89-41）；5. I型（K2②:89-37）；6. IⅠ型（K2②:89-18）
 ## Page 409
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-### 图版一五九
-
-> 1. 青铜器（K2②：89—40）
-
-> 2. 青铜器（K2②：89—46）
-
-> 3. 青铜器（K2②：89—31）
-
-> 4. 青铜器（K2②：314—4、250）
-
-> 5. 青铜器（K2②：89—44）
-
-> 6. 青铜器（K2②：89—43）
-
+> 图版一五九：玉凿、玉斧、磨石。1. II型凿（K2②:89-40）；4. 斧（K2②:314-4、250）；6. A型磨石（K2②:89-43）
 ## Page 410
 
 <!-- kind=text confidence=medium -->
@@ -5928,23 +4951,15 @@ E型1件。标本K2②：159（图二一七，6；图版一六〇，4），浅�
 
 ## Page 412
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版一六〇OO ERA, ER
-1. BBA (K2@: 280—2) 2. C HBA (K2@:70—2) 3. D AYRBA (K2@): 89—42)
->88—01)
-
+> 图版一六〇OO ERA, ER
+> >88—01)
 ## Page 413
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版一六一“玉珠、玉管
-1. 珠 (K2@:89—3)
-2. 珠 (K2@): 88—008)
-3. BH (K2@: 88—006)
-4. & (K2@:88—007)
-5. & (K2@: 88—013)
-
+> 图版一六一：玉珠、玉管。1. 珠（K2②:89-3）；2. 管（K2②:88-008）；3. 管（K2②:88-006）；4. 管（K2②:88-007）；5. 管（K2②:88-013）
 ## Page 414
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -5953,13 +4968,9 @@ E型1件。标本K2②：159（图二一七，6；图版一六〇，4），浅�
 
 ## Page 415
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图版一六三“新月形玉盒、玉料
-1. 新月形盒 〈K2G@@: 328)
-3. 玉料 (K2@:135—1)
-2. EB (K2@:23—29, 229-2)
-
+> 图版一六三 新月形玉璋、玉料
 ## Page 416
 
 <!-- kind=text confidence=medium -->
@@ -6000,19 +5011,10 @@ B型5件。体较厚。
 
 ## Page 417
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-Q 5厘米
-图二一九 Ae
-1. K2@: 85
-2. K2@: 132
-3. K2@:19-1
-‘ 5厘米
-图二二和〇OO AE
-— 1. K2@:171
-=< 2. K2@:19—2
-412
-
+> 图二一九 石器 412：1. K2②：85；2. K2②：132；3. K2②：19-1
+> 图二二 铜虎形器（K1：62）41
 ## Page 418
 
 <!-- kind=catalog confidence=low -->
@@ -6047,15 +5049,9 @@ Q 5厘米
 
 ## Page 421
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-1. B型 (K2@): 322一12)
-2. BH (K2@: 148)
-iyo eee HR RRR
-mA
-¥
-3. BH (K2@: 201-1)
-
+> 图二二三 石器：1. B型（K2②:322-12）；2. B型（K2②:148）；3. B型（K2②:201-1）
 ## Page 422
 
 <!-- kind=text confidence=medium -->
@@ -6102,26 +5098,9 @@ mA
 
 ## Page 423
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图二二三 象牙器残片
-
-- 1. 云雷纹器残片（K2@:79-3）
-
-- 2. 兽面纹器残片（K2@:79-4）
-
-- 3. 器名缺失（K2@:248-3）
-
-- 4. 穿孔器残片（K2@:225-1）
-
-> 图三三二
-
-- 1. K2@:228-2
-
-- 2. K2@:70-1
-
-- 3. K2@:150-1
-
+> 图二二三 象牙器残片 418：1. 云雷纹器残片（K2②：79-3）；2. 兽面纹器残片（K2②：79-4）；3. 六棱形器残片（K2②：248-3）；4. 穿孔器残片（K2②：225-1）
 ## Page 424
 
 <!-- kind=text confidence=medium -->
@@ -6154,32 +5133,14 @@ mA
 
 ## Page 427
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-### 图版一六九
-
-> 1. 算珠形珠（K2③:128-2）
-
-> 2. 器物残片（K2③:79-3）
-
-> 3. 兽面纹器残片（K2③:79-4）
-
-> 4. 器物残片（K2③:248-3）
-
-> 5. 穿孔器残片（K2③:225-1）
-
+> 图版一六九 象牙珠、象牙器残片
 ## Page 428
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-### 图版一七〇
-
-> 1. 虎牙（K2②:103-25）
-
-> 2. 虎牙（K2②:103-26、103-27）
-
-> 3. 黑色虎斑纹海贝（K2②:103）
-
+> 图版一七〇 虎牙、海贝
 ## Page 429
 
 <!-- kind=text confidence=medium -->
@@ -6204,22 +5165,16 @@ mA
 
 ## Page 430
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图二二五 三星堆遗址第一期典型陶器器物图：宽平沿器、折沿器、折沿器、折沿器、锯齿形口沿器、圈足豆、圈足豆。
-
-> 图二二六 三星堆遗址第二期典型陶器器物图：平底盘、圈足盘、香、高柄豆、鸟头形勺柄。
-
+> 图二二五 三星堆遗址第一期典型陶器器物图
+> 图二二六 三星堆遗址第二期典型陶器器物图
 ## Page 431
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图二二七 三星堆遗址第三期典型陶器器物图：2. 小平底罐；4. 尊形器；9. 高柄豆。
-
-> 图二二八 三星堆遗址第四期典型陶器器物图：尖底杯；高柄豆。
-
-> 本页为器物图页，除图题及少量器名外，器物编号和部分说明文字残缺难辨。
-
+> 图二二七 三星堆遗址第三期典型陶器器物图
+> 图二二八 三星堆遗址第四期典型陶器器物图
 ## Page 432
 
 <!-- kind=text confidence=medium -->
@@ -6476,18 +5431,15 @@ A型和B型的器形较宽而短，前锋与援之间无明显分界，锋尖圆
 
 ## Page 441
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
 > 本页为图表页，文字残缺，仅可辨“型式”“期别”等表头信息。
-
 ## Page 442
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
 > 表四 一、二号祭祀坑出土玉戈分期表
-
 > 本页为表格页，除表题外，表内文字残缺不清，难以可靠整理。
-
 ## Page 443
 
 <!-- kind=text confidence=medium -->
@@ -8746,14 +7698,11 @@ A型和B型的器形较宽而短，前锋与援之间无明显分界，锋尖圆
 
 ## Page 497
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图一 三星堆二号坑青铜器的铅同位素比值分布
-
-> 图二 三星堆一号坑青铜器的铅同位素比值分布
-
-> 图三 三星堆一号坑和二号坑青铜器的铅同位素比值分布比较图
-
+> 图一 三星堆遗址位置示意图
+> 图二 三星堆遗址周围地区商周遗址分布图
+> 图三 三星堆遗址分布图
 ## Page 498
 
 <!-- kind=text confidence=medium -->
@@ -8816,12 +7765,9 @@ A型和B型的器形较宽而短，前锋与援之间无明显分界，锋尖圆
 
 <!-- kind=caption_or_map confidence=high -->
 
-> 图四 三星堆一号坑和二号坑青铜器的铅同位素比值分布比较图B
-
-> 图五 三星堆祭祀坑与新干大洋洲商墓青铜器的铅同位素比值分布比较图A
-
-> 图六 三星堆祭祀坑与新干大洋洲商墓青铜器的铅同位素比值分布比较图B
-
+> 图四 1980—1986年三星堆遗址发掘相关示意图
+> 图五 一号祭祀坑相关图
+> 图六 一号祭祀坑发掘探方T1039、T1040南壁地层剖面图
 ## Page 502
 
 <!-- kind=text confidence=medium -->
@@ -9088,14 +8034,11 @@ K1：3—6石凿，薄片号S95-7。表面黑色，内部灰黑色，具层理�
 
 ## Page 508
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图一 K1:285 石斧（S95-6）。变质含长细砂岩，变余砂状结构，层状构造。×65
-
-> 图二 K1:3-6 石凿（S95-7）。复成分粗粉砂质铁质水云母岩。×65
-
-> 图三 K1:214 石凿（S95-19）。阳起石化、绢云母化角闪斜长斑岩，交代蚀变残斑结构；阳起石、绢云母交代。×65
-
+> 图一 三星堆遗址位置示意图
+> 图二 三星堆遗址周围地区商周遗址分布图
+> 图三 三星堆遗址分布图
 ## Page 509
 
 <!-- kind=text confidence=medium -->
@@ -9124,18 +8067,10 @@ K1：3—6石凿，薄片号S95-7。表面黑色，内部灰黑色，具层理�
 
 ## Page 510
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图四 K1:168-1 石锛斧（S95-5）
-
-> 1. 透辉石化球粒熔结凝灰岩，含火焰石流状构造，变晶基质中为球粒集合体。×65
-
-> 2. 球粒集合体局部放大，可见透辉石交代及交代残余环状构造。×200
-
-> 图五 K1:614 石锛（S95-4）
-
-> 变质细熔结凝灰岩，具假流状构造，含火焰石、饼状体及条带。×30
-
+> 图四 1980—1986年三星堆遗址发掘相关示意图
+> 图五 一号祭祀坑相关图
 ## Page 511
 
 <!-- kind=text confidence=medium -->
@@ -9190,14 +8125,11 @@ K1:241石璋，薄片号S95-1，仅一件。表面呈浅灰、灰白色，内部
 
 ## Page 513
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
 > K1:241（S95—1）：斑状变晶结构，变斑晶角闪石。×130
-
 > K1:289-158（S95—20）：阳起石透闪石岩（软玉），片理构造。×200
-
 > K1:22（S95—16）：阳起石透闪石岩（软玉），纤状交织变晶结构，斑点状构造，透闪石可组成放射状集合斑点。×200
-
 ## Page 514
 
 <!-- kind=text confidence=medium -->
@@ -9306,24 +8238,18 @@ K1∶221石璋，薄片号S95—8，为富含铁质的熔结凝灰岩，经热�
 
 ## Page 517
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图九 K1:266-6 4#（S95—7）石英阳起石角岩，具毛毡状变晶结构。照片中部含有阳起石与石英粒状集合体组成的透镜体。×200
-
-> 图一〇 K1:216 石戈（S95—23）具变晶结构、交代残余构造。大量滑石纤片状集合体内残存孤岛状透辉石及柱状透闪石。×200
-
-> 图一一 K1:81、97（S95—26）阳起石蛇纹石片岩，具鳞片变晶结构、片理构造。蛇纹石中残存针柱状阳起石交代残余。×200
-
+> 图九 Aa型铜人头像（K1：2）24
+> 图一〇 Ab型铜人头像（K1：6）24
+> 图一一 Ab型铜人头像（K1：26）24
 ## Page 518
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=caption_or_map confidence=high -->
 
-> 图一二 K2②:202-3 石戈（S95—22）。细晶大理岩，块状构造，方解石中含尘土状赤铁矿。×65
-
-> 图一三 K1:65、249-14 石戈（S95—24）。阳起石化透辉石岩，粒状变晶结构；透辉石边缘被柱状、针状阳起石交代，照片中有较大的烧失和孔洞。×200
-
-> 图一四 K1:113、109 石戈（S95—25）。岩石中有粒状、短柱状及筛状符山石，变晶基质中有较多细小透辉石。×130
-
+> 图一二 Ba型铜人头像（K1：7）27
+> 图一三 Ba型铜人头像（K1：11）27
+> 图一四 Bb型铜人头像（K1：72）28
 ## Page 519
 
 <!-- kind=text confidence=medium -->
@@ -9586,13 +8512,11 @@ NO6、NO7、NO8、NO9的矿物成分为较纯的透闪石，矿物呈显微纤�
 
 ## Page 534
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-se
-图12 一号祭祀寺 AI式铜戈 〈(K1 :7一1)
-All —SSeR RCSA (K1:11—1)
-图10 一号祭祀坑金杖 (K1:1)
-
+> 图10 一号祭祀坑金杖（K1:1）
+> 图12 一号祭祀坑 AⅠ式铜戈（K1:7-1）
+> 图13 一号祭祀坑 AⅡ式铜戈（K1:11-1）
 ## Page 535
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -9601,12 +8525,10 @@ All —SSeR RCSA (K1:11—1)
 
 ## Page 536
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-— 5 S78 bt Del 式玉璋 (K1:03)
-图 16 一号祭祀寺 DeIII KER (K1:166—2)
-531
-
+> 图15 一号祭祀坑 DeⅠ式玉璋（K1:03）
+> 图16 一号祭祀坑 DeⅢ式玉璋（K1:166-2）
 ## Page 537
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -9627,13 +8549,10 @@ All —SSeR RCSA (K1:11—1)
 
 ## Page 540
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图 22 一号祭礼坑 Aal HEH (K1:108)
-ee Hal (il as
-图23 一号祭祀 AbI RER (K1:141—-1, 155—2)
-535
-
+> 图22 一号祭祀坑 AaⅠ式玉戈（K1:108）
+> 图23 一号祭祀坑 AbⅠ式玉戈（K1:141-1、155-2）
 ## Page 541
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -9666,12 +8585,10 @@ ee Hal (il as
 
 ## Page 546
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图34 一号祭礼坑 Ab WEM (K1:134)
-图35 一号祭祀寺 Ad HEM (K1:166—1)
-541
-
+> 图34 一号祭祀坑 Ab型玉凿（K1:134）
+> 图35 一号祭祀坑 Ad型玉凿（K1:166-1）
 ## Page 547
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -9692,12 +8609,10 @@ ee Hal (il as
 
 ## Page 550
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图42 二号祭祀坑 Bw PEAR 〈K2GB): 04)
-二号祭礼坑铜喇叭座顶尊跪坐人像〈K2GB): 48)
-545
-
+> 图42 二号祭祀坑 B型铜人头像（K2②:04）
+> 图43 二号祭祀坑铜喇叭座顶尊跪坐人像（K2②:48）
 ## Page 551
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -9766,11 +8681,10 @@ ee Hal (il as
 
 ## Page 562
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图61 = 570 ht BD WIR (K2@):197, 8)
-二号祭祀坑 C 型铜眼形器 CK 101, 106, 8—1, 99)
-
+> 图61 二号祭祀坑 B型铜眼形器（K2②:197、8）
+> 图62 二号祭祀坑 C型铜眼形器（K2②:101、106、8-1、99）
 ## Page 563
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -9779,12 +8693,10 @@ ee Hal (il as
 
 ## Page 564
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图65 二号祭礼坑铜神树上立鸟
-(K2@:194一1)
-图64 二号祭礼坑 II号大型铜神树 (K2@:194)
-
+> 图64 二号祭祀坑Ⅱ号大型铜神树（K2②:194）
+> 图65 二号祭祀坑铜神树上立鸟（K2②:194-1）
 ## Page 565
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -9829,24 +8741,18 @@ ee Hal (il as
 
 ## Page 572
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图79 二号祭祀坑 再型铜铃 〈K:
-图77 二号祭祀坑 C 型铜铃(K2G@: 103一28)
-图78 二号祭祀寺 Da 型铜铃 (K
-
+> 图77 二号祭祀坑 C型铜铃（K2③:103-28）
+> 图78 二号祭祀坑 Da型铜铃
+> 图79 二号祭祀坑铜铃
 ## Page 573
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-+ PS (a
-A80 二号祭礼坑铜公鸡 (K2@: 107)
-|
-LN Yan
-SRS A 型龙形铜饰 (K20:
-图 82 二号祭祀坑 B型龙形铜饰 〈(K2
-图81 =
-
+> 图80 二号祭祀坑铜公鸡（K2②:107）
+> 图81 二号祭祀坑 A型龙形铜饰
+> 图82 二号祭祀坑 B型龙形铜饰
 ## Page 574
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -9861,12 +8767,11 @@ SRS A 型龙形铜饰 (K20:
 
 ## Page 576
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-图 88 二号祭祀坑铀怪兽 〈(K2G:193一10)
-图87 二号祭礼二 A 型铜鸟形饰(K2
-图 89 二号祭祀坑金稍四叉形器(K2
-
+> 图87 二号祭祀坑A型铜鸟形饰（K2②:193-4）
+> 图88 二号祭祀坑铜怪兽（K2②:193-10）
+> 图89 二号祭祀坑金箔四叉形器（K2②:120）
 ## Page 577
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -11023,12 +9928,9 @@ SRS A 型龙形铜饰 (K20:
 
 ## Page 608
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
-2. V RAB (K2@ : 127) 4. 铜方才 (K2@ : 205, 205—1)
-3. V 式铜圆尊 (K2@ : 129) 5. III sei He (K2@) : 159)
-603
-
+> 2. Ⅴ式铜圆尊（K2②:127）；3. Ⅴ式铜圆尊（K2②:129）；4. 铜方尊（K2②:205、205-1）；5. Ⅲ式铜罍（K2②:159）
 ## Page 609
 
 <!-- kind=catalog confidence=medium -->
@@ -11105,16 +10007,12 @@ SRS A 型龙形铜饰 (K20:
 
 ## Page 611
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=high -->
 
 > 拓片三四
-
 > 尾羽形（K2②:193—40）
-
 > 尾羽形（K2②:193—41）
-
 > 歧羽纹形（K2②:193—38）
-
 ## Page 612
 
 <!-- kind=toc confidence=medium -->

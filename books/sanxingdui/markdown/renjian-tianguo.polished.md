@@ -24,13 +24,16 @@ ISBN 978-7-5470-2109-5
 
 ## Page 3
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=frontmatter confidence=high -->
 
-REN LAN! LANG UO
-北方联合出版传媒(集团)股份有限公司
-RS 万卷出版公司
-2013. 01 . 沈阳
+### 人间天国
+### 三星堆、金沙王都发现之谜
 
+岳南 著
+
+北方联合出版传媒（集团）股份有限公司
+万卷出版公司
+2013年1月，沈阳
 ## Page 4
 
 <!-- kind=frontmatter confidence=medium -->

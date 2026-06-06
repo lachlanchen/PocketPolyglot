@@ -331,7 +331,6 @@ areata se ead! 129 Sere canes aie At dae
 <!-- kind=caption_or_map confidence=medium -->
 
 > 1. 大立人像，K2②:149、150，通高260.8厘米。大立人像由座子和人像两大部分组成。座子呈梯形，四角之间有四条相连的龙，张嘴露齿，各以头部的两角支撑人像台面的四角。高达180厘米的青铜立人像就站在这个座上。大立人像头戴高冠，身着长衣，赤脚站立。
-
 ## Page 30
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -400,27 +399,20 @@ areata se ead! 129 Sere canes aie At dae
 
 ## Page 41
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-3. 小立人像，K2GB): 296-1, LGR, ARH
-是袖衫，腰间系粗带两周，结祥于腰前。残高10.8厘米。
-40
-
+> 3. 小立人像，K2③:296-1，头残，身着对襟短袖衫，腰间系粗带两周，结祥于腰前。残高10.8厘米。
 ## Page 42
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-4. 小立人像，K2G@): 296-2，头残，身着对襟服，腰系一带，腰前系结，双臂平抬，双手呈握物状。残高6.5、宽4.2厘米。
-41
-
+> 4. 小立人像，K2③: 296-2，头残，身着对襟服，腰系一带，腰前系结，双臂平抬，双手呈握物状。残高6.5、宽4.2厘米。
 ## Page 43
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-5. 小跪坐人像，K2GB): 296-3，一只腿残缺，头似盘辫，双臂平抬，双手
-和物 ，双膝下跪。残高2.4、宽2厘米。
-42
-
+> 5. 小跪坐人像，K2③: 296-3，一只腿残缺，头似盘辫，双臂平抬，双手
+> 和物 ，双膝下跪。残高2.4、宽2厘米。
 ## Page 44
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -429,23 +421,19 @@ areata se ead! 129 Sere canes aie At dae
 
 ## Page 45
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-7. 持璋小跪人像，K2GB): 325，头残，上身赤裸，两臂平抬，双手抱握一件铜弄，双膝下跪。残高47、宽1.8厘米。
-44
-
+> 7. 持璋小跪人像，K2③: 325，头残，上身赤裸，两臂平抬，双手抱握一件铜弄，双膝下跪。残高47、宽1.8厘米。
 ## Page 46
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-8. 小跪坐估像，K2GB):7， 雕，头戴冠，身着对襟服，采束带两周，双手放腰下，双膝跪坐。宽5.9、通高12厘米5
-
+> 8. 小跪坐估像，K2③:7，雕，头戴冠，身着对襟服，采束带两周，双手放腰下，双膝跪坐。宽5.9、通高12厘米5
 ## Page 47
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-9 小跪坐人像，K2GB): 5，半圆肤，头戴冠，身着对襟服，腰间柬带两周，双和手放腰下，双膝跪坐。宽5.8、通高12.4厘米。
-
+> 9 小跪坐人像，K2③: 5，半圆肤，头戴冠，身着对襟服，腰间柬带两周，双和手放腰下，双膝跪坐。宽5.8、通高12.4厘米。
 ## Page 48
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -466,11 +454,10 @@ areata se ead! 129 Sere canes aie At dae
 
 ## Page 51
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-11. 项尊跪坐人像，K2GB): 48，头顶一件青铜尊，上盐赤裸，腰下系一件短裙，双膝跪在一座“神山”座子上。座
-子直径10、通高15.6厘米。
-
+> 11. 项尊跪坐人像，K2③: 48，头顶一件青铜尊，上盐赤裸，腰下系一件短裙，双膝跪在一座“神山”座子上。座
+> 子直径10、通高15.6厘米。
 ## Page 52
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -479,50 +466,33 @@ areata se ead! 129 Sere canes aie At dae
 
 ## Page 53
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-et
-2
-tir
-mK
-Es
-=
-a
-x
-=
-=
-«=
-让
-区
-ss
-tip
-iS
-=
-Ez
-es
-Sy
-os
-ce
-=
-Ss
-x
-bend
-还
-&
-=
-=
-=
-证
-x
-g
-&
-去
-=
-2
-oe
-Ss
-8.2, i146) 2K,
-
+> et
+> mK
+> Es
+> a
+> x
+> «=
+> 让
+> 区
+> ss
+> iS
+> Ez
+> es
+> Sy
+> os
+> ce
+> Ss
+> x
+> 还
+> 证
+> x
+> g
+> 去
+> oe
+> Ss
+> 8.2, i146) 2K,
 ## Page 54
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -537,17 +507,15 @@ Ss
 
 ## Page 56
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-13. 戴兽冠青岗人，K2G1264，下半身残矶，头功普形冠，双竹呈手物状，身着对襟服，服饰王禾云雷纹5”残高40.2理米
-
+> 13. 戴兽冠青岗人，K2G1264，下半身残矶，头功普形冠，双竹呈手物状，身着对襟服，服饰王禾云雷纹5”残高40.2理米
 ## Page 57
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-14. 小人面像，K1:20，耳残，形体小而竹，是三星推祭礼坑中出主的唯一的小人面像。面具后缘上下拐角处各有
-一穿孔。面具宽9.2、高7厘米。
-
+> 14. 小人面像，K1:20，耳残，形体小而竹，是三星推祭礼坑中出主的唯一的小人面像。面具后缘上下拐角处各有
+> 一穿孔。面具宽9.2、高7厘米。
 ## Page 58
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -568,11 +536,9 @@ Ss
 
 ## Page 61
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-16. 铜人面像，K2CD): 128，脸较方，额中穿孔，粗由大有眼，面具两侧的上下各有一个方形穿孔。宽41.5、厚0.3 、高25.4厘米
-60
-
+> 16. 铜人面像，K2CD): 128，脸较方，额中穿孔，粗由大有眼，面具两侧的上下各有一个方形穿孔。宽41.5、厚0.3 、高25.4厘米
 ## Page 62
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -593,24 +559,19 @@ Ss
 
 ## Page 65
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-20. 铜人面像，K2G@): 119，面具上宽下窄呈梯形，额部较宽。出土时能看见眉部及眼球曾涂黑彩。宽20.6、高15厘米。
-64
-
+> 20. 铜人面像，K2③: 119，面具上宽下窄呈梯形，额部较宽。出土时能看见眉部及眼球曾涂黑彩。宽20.6、高15厘米。
 ## Page 66
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-21. 铜人面像，K2G):57，眉和眼部兽涂黑彩，口部曾涂有朱砂。宽18.6、厚0.35、高18.6厘米。
-
+> 21. 铜人面像，K2③:57，眉和眼部兽涂黑彩，口部曾涂有朱砂。宽18.6、厚0.35、高18.6厘米。
 ## Page 67
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-22. 铜人面像，K2G@D): 293，额中方孔未溺穿，上有球凿击打痕迹。宽37.8、厚0.4、高25.5厘米。
-66
-
+> 22. 铜人面像，K2②:293，额中方孔未凿穿，上有球凿击打痕迹。宽37.8、厚0.4、高25.5厘米。
 ## Page 68
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -625,19 +586,14 @@ Ss
 
 ## Page 70
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-25. MATAR, K2Q: 153，形体较大，宽匠，粗眉大眼，长耳，口缝曾涂朱砂。宽60.5、厚0.6、高40.3厘米。
-69
-
+> 25. 铜人面像，K2②:153，形体较大，宽额，粗眉大眼，长耳，口缝曾涂朱砂。宽60.5、厚0.6、高40.3厘米。
 ## Page 71
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-j侧及下颌后缘各有一个小穿孔。宽20.7、厚0.25、高15厘米。
-26. 铜人面像，K2@D): 119，眉梢上绘}
-70
-
+> 26. 铜人面像，K2②:119，眉梢上绘有黑彩痕迹。
 ## Page 72
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -649,7 +605,6 @@ j侧及下颌后缘各有一个小穿孔。宽20.7、厚0.25、高15厘米。
 <!-- kind=caption_or_map confidence=medium -->
 
 > 28.“龙身”纵目人面像，K2：142。面具较大，额中部铸有一高68.1厘米的龙形饰，与人面形成整体造型。面具宽77.4厘米、通高82.5厘米。
-
 ## Page 74
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -667,7 +622,6 @@ j侧及下颌后缘各有一个小穿孔。宽20.7、厚0.25、高15厘米。
 <!-- kind=caption_or_map confidence=medium -->
 
 > 29. 大型纵目人面具，K2②:148。纵目眼，眼球突出眼眶达16厘米。鼻子为鹰钩状，大嘴，嘴角上翘，两耳呈兽耳。面具宽138、通高66厘米。
-
 ## Page 77
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -688,13 +642,10 @@ j侧及下颌后缘各有一个小穿孔。宽20.7、厚0.25、高15厘米。
 
 ## Page 80
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-34. ad A
-*) K23); 14.
-35. HASH, K1:26, SHOT, MBEAT BLM, FeI21.4.
-残高17.2厘米。
-
+> 34. 青铜人面具残件，K2③:14，残高26厘米。
+> 35. 铜人头像，K1:26，子母口头顶，埋藏前被砸毁。残宽21.4、残高17.2厘米。
 ## Page 81
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -757,19 +708,16 @@ j侧及下颌后缘各有一个小穿孔。宽20.7、厚0.25、高15厘米。
 
 ## Page 91
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-42. 铜人头像，K1: 11，形体较大，这尊头像出十时，在头像内部清理出骨河、铜焉、金虎销饰、玉玉等物。宽264、高37.4厘米
-
+> 42. 铜人头像，K1: 11，形体较大，这尊头像出十时，在头像内部清理出骨河、铜焉、金虎销饰、玉玉等物。宽264、高37.4厘米
 ## Page 92
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-而
-site
-ii
-同人头像，K1: 3，粗眉天眼，下颌较圆。出主时，在该头像内清理出十多要海贝。头纵径21.6、残高30.2厘米。
-
+> 而
+> ii
+> 同人头像，K1: 3，粗眉天眼，下颌较圆。出主时，在该头像内清理出十多要海贝。头纵径21.6、残高30.2厘米。
 ## Page 93
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -790,25 +738,19 @@ ii
 
 ## Page 96
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-45. MASI, K2Q: 83, kB, STUVAM, BAK. TI, MMI, WANALBAS MA. BE
-10.8, 7413.6)90K.
-
+> 45. 铜人头像，K2②:83，头较小，头顶似盘辫，或戴有辫状帽。宽额，脸瘦长，两只耳朵上各有三个圆穹。宽10.8、高13.6厘米。
 ## Page 97
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-痕迹，口部涂有朱砂。宽20、通高40.4厘米。
-46. 铜人头像，K2@D):51，眼眶、脑后的发游均留有黑
-96
-
+> 46. 铜人头像，K2②:51，眼眶及脑后发辫留有黑色痕迹，口部涂有朱砂。宽20、通高40.4厘米。
 ## Page 98
 
-<!-- kind=caption_or_map confidence=high -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 47. 铜人头像，K2②:48。平顶，粗眉，鼻尖稍勾，眉部、眼眶涂有黑彩，后脑有发辫至颈部的尖端。宽21.6厘米，通高41厘米。
-
 ## Page 99
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -817,32 +759,24 @@ ii
 
 ## Page 100
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-49. 铜人头像，K2GD): 118，头项有补铸痕迹，头项上有四个气孔。眉部、腿眶及关子均有黑彩，口颖有朱砂痕。宽18、通高37.8厘米。
-99
-
+> 49. 铜人头像，K2GD): 118，头项有补铸痕迹，头项上有四个气孔。眉部、腿眶及关子均有黑彩，口颖有朱砂痕。宽18、通高37.8厘米。
 ## Page 101
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-50. 铜人头像，K2C@D): 104，阔口，嘴角下勾，耳穗有穿孔，脑后有一条独送。宽19、通高38.6厘米。
-100
-
+> 50. 铜人头像，K2②:104，阔口，嘴角下勾，耳垂有穿孔，脑后有一条发辫。宽19、通高38.6厘米。
 ## Page 102
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-51. 铜人头像，K2GD): 156，顶盖脱落，脸形较瘦，脑后有发游。上腿、眉描黑彩，口涂朱砂。宽20.4、通高38.5厘米。
-101
-
+> 51. 铜人头像，K2GD): 156，顶盖脱落，脸形较瘦，脑后有发游。上腿、眉描黑彩，口涂朱砂。宽20.4、通高38.5厘米。
 ## Page 103
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-52. 铜人头像，K2(D): 55，眉及腿球部分曾涂黑彩，脑后有发游。宽18.3、通高41.3厘米
-102
-
+> 52. 铜人头像，K2③: 55，眉及腿球部分曾涂黑彩，脑后有发游。宽18.3、通高41.3厘米
 ## Page 104
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -875,10 +809,9 @@ ii
 
 ## Page 109
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-58. 网人头像，K22)5735 JAHRE, MSHA, WTA ZOA, FA BUBS. 919.5, 通高4902砷米。
-
+> 58. 铜人头像，K2②:5735，头残，眉眼、鼻梁、嘴部较清晰。宽19.5、通高49.2厘米。
 ## Page 110
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -917,12 +850,9 @@ ii
 
 ## Page 116
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-|
-63. HANH, K2@:58, WAKA, DST, WTA AG, JA. WR, AL. AL. SERA. HE
-23.8、通高51.6厘米。
-
+> 63. 铜人面像，K2②:58，宽额，大眼，长耳。口部、眼眶等处有朱砂痕。宽23.8、通高51.6厘米。
 ## Page 117
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -949,11 +879,10 @@ ii
 
 ## Page 121
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-65-1. 金面章铜人头像，K2@): 137，脑后有一发恬，上下端均残缺。金面音极薄，仅存在额及左脸部分。宽
-22.4、通高45.8厘米。
-
+> 65-1. 金面章铜人头像，K2②: 137，脑后有一发恬，上下端均残缺。金面音极薄，仅存在额及左脸部分。宽
+> 22.4、通高45.8厘米。
 ## Page 122
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -974,11 +903,9 @@ ii
 
 ## Page 125
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-67. 金面章铜头像，K2(C2D): 214，人金面单右额及颐部残缺，脑后发吉脱落，仅存两个长方形孔。宽22、高48.1厘米
-124
-
+> 67. 金面章铜头像，K2(C2D): 214，人金面单右额及颐部残缺，脑后发吉脱落，仅存两个长方形孔。宽22、高48.1厘米
 ## Page 126
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1009,16 +936,14 @@ ii
 
 ## Page 130
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-69. 铜虎，K1: 62，虎身呈圆形，四足站立 ，虎口张开，上下齿外露，两耳特大， 立。虎身长11.4、残高10.8居
-
+> 69. 铜虎，K1: 62，虎身呈圆形，四足站立 ，虎口张开，上下齿外露，两耳特大，立。虎身长11.4、残高10.8居
 ## Page 131
 
-<!-- kind=caption_or_map confidence=high -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 70. 铜龙柱形器，K1:36。龙的上半身位于柱子上端，龙头较大，头上有一对很大的角，龙嘴张开，利齿外露，下颌有一撮“山羊胡”。龙的下半身紧贴柱子，两只后爪紧抓柱子两侧，尾部上卷。柱子正前方还有一条简易的龙，头下尾上，与上述之龙方向相反。宽18.8厘米，高41厘米。
-
 ## Page 132
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1054,13 +979,11 @@ ii
 <!-- kind=caption_or_map confidence=medium -->
 
 > 73. 铜龙首，K2B：195-15、17、20。形体较小，龙张口露齿，上唇长而上卷，头后有一只角，头中间有一球状突起。龙身镂空，残。宽5.2厘米，高5.8厘米。
-
 ## Page 138
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-75. 铜龙形饰，K2G@): 193-34、75，残，只剩下身和尾，整个龙体显得非常简易。残长14.5厘米
-
+> 75. 铜龙形饰，K2③: 193-34、75，残，只剩下身和尾，整个龙体显得非常简易。残长14.5厘米
 ## Page 139
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1087,10 +1010,9 @@ ii
 
 ## Page 143
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-80. 铜兽头，K2(G3): 296-1，头上有两只大耳，在两只耳的中间长有一只似象鼻的“角”，此兽是神坛上的神兽
-
+> 80. 铜兽头，K2(G3): 296-1，头上有两只大耳，在两只耳的中间长有一只似象鼻的“角”，此兽是神坛上的神兽
 ## Page 144
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1120,35 +1042,26 @@ ii
 <!-- kind=caption_or_map confidence=medium -->
 
 > 84. 鸟，K2⑥：193-10。鸟首右顾而立，形体较小，鸟头和尾的比例都显得很大。细长身，身上饰有花纹，尾上卷，一足后拖。高4厘米、长7.8厘米。
-
 ## Page 149
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-85. 铜水牛头，K2GB): 193-8，残，圆鼻、大眼，粗眉，两只角分两边，中间一只角向前。残高2.6厘米
-148
-
+> 85. 铜水牛头，K2③: 193-8，残，圆鼻、大眼，粗眉，两只角分两边，中间一只角向前。残高2.6厘米
 ## Page 150
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-86. 铜水牛头，K2GB): 193-9，残，圆鼻、大眼，粗冉，两只角分两边，中间一只角向前。残高2.6厘米
-149
-
+> 86. 铜水牛头，K2③: 193-9，残，圆鼻、大眼，粗冉，两只角分两边，中间一只角向前。残高2.6厘米
 ## Page 151
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-87. 铜水牛头，K2G3): 193-10，残，圆鼻、大眼，粗由,两只角分两边，中间一只角向前。残高2.6厘米
-150
-
+> 87. 铜水牛头，K2G3): 193-10，残，圆鼻、大眼，粗由,两只角分两边，中间一只角向前。残高2.6厘米
 ## Page 152
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-88. 铜水牛头，K2G): 193-11，残，圆鼻、大眼，粗冉，两只角分两边，中间一只角向前。残高2.6厘米
-151
-
+> 88. 铜水牛头，K2③: 193-11，残，圆鼻、大眼，粗冉，两只角分两边，中间一只角向前。残高2.6厘米
 ## Page 153
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1157,10 +1070,9 @@ ii
 
 ## Page 154
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-89. 铜应头，K2@): 141， 形体较大，大眼，勾只，口缝及眼珠周围绘朱色。横径19.6、纵径38.8、通高40厘米。
-
+> 89. 铜应头，K2②: 141，形体较大，大眼，勾只，口缝及眼珠周围绘朱色。横径19.6、纵径38.8、通高40厘米。
 ## Page 155
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1184,21 +1096,16 @@ ii
 <!-- kind=caption_or_map confidence=medium -->
 
 > 92. 铜鸟。大头，头上竖立三枝冠羽，羽尖呈心形。圆眼，勾喙，颈中穿有一铜丝环，可能是挂小型饰件的。此鸟是小型青铜神树上的一只立鸟。宽4.5厘米，高8厘米。
-
 ## Page 159
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-93. 铜鸟，K2GB): 23，头上长花冠，尖喉、大圆眼，尾上卷。此鸟系一铜尊肩部上的装饰。高13.3厘米
-158
-
+> 93. 铜鸟，K2③: 23，头上长花冠，尖喉、大圆眼，尾上卷。此鸟系一铜尊肩部上的装饰。高13.3厘米
 ## Page 160
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-94. 铜鸟，K2GB): 252，尖只，头上扬，大圆眼，尾上卷，身涂有朱色。此乌是青铜尊肩部上的乌饰
-159
-
+> 94. 铜鸟，K2③: 252，尖只，头上扬，大圆眼，尾上卷，身涂有朱色。此乌是青铜尊肩部上的乌饰
 ## Page 161
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1213,19 +1120,14 @@ ii
 
 ## Page 163
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-97. 1%, K23): 193-4，扁平身，勾只，头上有和冠，尾高高地和账起，尾上饰有云纹。宽6.5、高9厘米
-162
-
+> 97. 1%, K23): 193-4，扁平身，勾只，头上有和冠，尾高高地和账起，尾上饰有云纹。宽6.5、高9厘米
 ## Page 164
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-铜乌，K2G@): 117，身扁平，长尖吃，圆眼外凸。这件鸟可能是某件器物上的装饰。高3.5、宽2.8 、厚0.5厘米
-98-1. #1, K22): ， » RARIK,
-163
-
+> 铜乌，K2③: 117，身扁平，长尖吃，圆眼外凸。这件鸟可能是某件器物上的装饰。高3.5、宽2.8 、厚0.5厘米
 ## Page 165
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1246,18 +1148,14 @@ ii
 
 ## Page 168
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-101. 铜鸟形饰，K2GB): 4-1，身铁空，造型抽象，用双勾线手法表现出鸟形。通高15、宽8.4、厚0.37厘米
-167
-
+> 101. 铜鸟形饰，K2③: 4-1，身铁空，造型抽象，用双勾线手法表现出鸟形。通高15、宽8.4、厚0.37厘米
 ## Page 169
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-102. 铜鸟饰，K2GB): 193-42、43、44 ( 三件 ) ，可能是鸟形饰的尾部。K2(GB): 193-42，长9.4，宽4.8、厚0.2厘米
-168
-
+> 102. 铜鸟饰，K2③: 193-42、43、44 ( 三件 ) ，可能是鸟形饰的尾部。K2(GB): 193-42，长9.4，宽4.8、厚0.2厘米
 ## Page 170
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1269,7 +1167,6 @@ ii
 <!-- kind=caption_or_map confidence=medium -->
 
 > 在三星堆出土的铜兽面具，一般都是用厚约0.2至0.3厘米的铜片铸造而成。兽面的头上一般长有两只大角，眼睛圆而大，嘴也特别大，有的上下牙齿外露，有的在下颌下面还铸有两只“鸟”。
-
 ## Page 172
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1320,11 +1217,9 @@ ii
 
 ## Page 180
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-113. 铜鱼，K2(3B): 194-61，鱼悬于三角圆锥体的挂架上- 圆圈上有三个8字形挂环。鱼尾残损，鱼残长6厘米
-179
-
+> 113. 铜鱼，K2(3B): 194-61，鱼悬于三角圆锥体的挂架上- 圆圈上有三个8字形挂环。鱼尾残损，鱼残长6厘米
 ## Page 181
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1357,10 +1252,9 @@ ii
 
 ## Page 186
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-120. 昆虫形挂饰，K2GB): 258，上图宽6.3、高9.6厘米，中图宽6.6、高9.1厘米，下图宽5.8、高7.8厘米
-
+> 120. 昆虫形挂饰，K2③: 258，上图宽6.3、高9.6厘米，中图宽6.6、高9.1厘米，下图宽5.8、高7.8厘米
 ## Page 187
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1441,11 +1335,9 @@ ii
 
 ## Page 200
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-137. 铜挂饰，K2(D): 30-5，宽5.1、高11.2厘米， K2(D): 79-34，宽5.2、高11.3厘米; K2GB): 161-4，宽5.5、高10.9厘米
-199
-
+> 137. 铜挂饰，K2③: 30-5，宽5.1、高11.2厘米，K2③: 79-34，宽5.2、高11.3厘米; K2③: 161-4，宽5.5、高10.9厘米
 ## Page 201
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1508,11 +1400,10 @@ ii
 
 ## Page 211
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-ay
-145. 铜铃架，从左至右，K2G@): 105，直径7.6、高8.4厘米; K2Q): 103-20; K2G): 124，直径4.8 、高6.2厘米。
-
+> ay
+> 145. 铜铃架，从左至右，K2③: 105，直径7.6、高8.4厘米; K2②: 103-20; K2③: 124，直径4.8 、高6.2厘米。
 ## Page 212
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1560,7 +1451,6 @@ ay
 <!-- kind=caption_or_map confidence=medium -->
 
 > 148. 小铜树，K2③:272。形体细小，有四个树根，根上分两枝树干，每一枝干又由两条树枝相缠而立，树顶端立有人首鸟身像。树高53.0厘米。
-
 ## Page 220
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1593,48 +1483,38 @@ ay
 
 ## Page 225
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-154. 铜树杆，K2GB): 204，主杆上有王、环之类的饰件。主二上端分为两主
-枝，主枝残。 推测在主枝的上面又分出分枝
-
+> 154. 铜树杆，K2③: 204，主杆上有王、环之类的饰件。主二上端分为两主
+> 枝，主枝残。 推测在主枝的上面又分出分枝
 ## Page 226
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-此
-os as
-i ey 3
-z €
-nF :
-*
-os
-t
-“
-ay
-i 7
-156. 铜树叶，K2GB): 194-14、12、13、15、16，长大约2厘米。
-
+> 此
+> z €
+> nF :
+> os
+> t
+> “
+> ay
+> i 7
+> 156. 铜树叶，K2③: 194-14、12、13、15、16，长大约2厘米。
 ## Page 227
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 三星堆一、二号祭祀坑出土的文物中，特别是青铜器和玉石器，可以说大多属于前所未见的类型。青铜眼睛、眼球、眼形饰，既能分开成型，又可合为一体。
-
 ## Page 228
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 图157。左，K2②：194-3，残长5.2、宽1.4厘米；中，194-2，残长6.5、宽1.2厘米；右，K2⑥：144-3，长6.1、宽0.7厘米。
-
 ## Page 229
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
->; K2Q): 135-32. 残长6、 宽1.1厘米。
-长两侧较直。残长65、 宽1.2厘
-158. 铜圭形饰， K2@Q): 194-4, 顶部残缺，器形罕
-
+> 158. 铜圭形饰，K2②:194-4，顶部残缺，器形较罕见。
 ## Page 230
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1649,12 +1529,9 @@ i 7
 
 ## Page 232
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-161. 铜眼，K2(3):181，直径6、高4厘米
-—
-162. $M AR, K é 422. x : ors E 1、高5.2厘米
-
+> 162. 铜眼形器，编号残缺，宽约4.2、高5.2厘米。
 ## Page 233
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1705,22 +1582,19 @@ i 7
 
 ## Page 241
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-171. 铜神殿屋顶，K2( 3，殿顶呈四面坡形，棍口下折， 方形 檐长16.5、 下宽16.3、残高15.8厘米
-
+> 171. 铜神殿屋顶，K2( 3，殿顶呈四面坡形，棍口下折，方形 檐长16.5、下宽16.3、残高15.8厘米
 ## Page 242
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 171-1 铜神殿屋面上段，K2G：143-1。填充有山形纹和圆圈、涡旋纹等。顶部上宽4.4厘米、下宽6.2厘米、长17.8厘米、残高7.5厘米。
-
 ## Page 243
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 171-2. 铜神殿屋面下段，K2③:143-1。顶部残。殿顶的结构由屋面上段与镂空的龙纹下段组成。顶部上窄下宽，上宽4.4厘米、下宽6.2厘米、长17.8厘米、残高7.5厘米。
-
 ## Page 244
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1729,11 +1603,9 @@ i 7
 
 ## Page 245
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-172. 网神坛，K2@@: 296，全器由兽形座、立人座、山形座和释顶建筑、立鸟等构成，高53.3厘米。 ( 复制件昭
-片，原件未修复 )
-
+> 172. 铜神坛，K2③:296，全器由兽形座、立人座、山形座和盝顶建筑、立鸟等构成，高53.3厘米。（复制件照片）
 ## Page 246
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1768,16 +1640,14 @@ i 7
 
 <!-- kind=caption_or_map confidence=medium -->
 
-> 173. 太阳形器，K2GD):67（上）。中心凸起的半球形为太阳，周围五条光芒呈放射状，芒外为晕圈。其形象有如四川岩画及三星堆二号祭祀坑出土青铜神殿屋盖上的“太阳光芒”。直径84厘米。K2GB):1（下），器型同K2GD):67，直径85厘米。
-
+> 173. 太阳形器，K2GD):67（上）。中心凸起的半球形为太阳，周围五条光芒呈放射状，芒外为晕圈。其形象有如四川岩画及三星堆二号祭祀坑出土青铜神殿屋盖上的“太阳光芒”。直径84厘米。K2③:1（下），器型同K2GD):67，直径85厘米。
 ## Page 252
 
-<!-- kind=caption_or_map confidence=medium -->
+<!-- kind=text confidence=high -->
 
 ### 兵器
 
-> 三星堆出土的铜戈是古蜀文化中的主要兵器。三星堆一、三号祭祀坑中出土的这些带有“锯齿”形的铜戈，属于祭祀礼仪活动中的仪仗器。这种器形在中国其他地区尚未见到。
-
+三星堆出土的铜戈是古蜀文化中的主要兵器。三星堆一、三号祭祀坑中出土的这些带有“锯齿”形的铜戈，属于祭祀礼仪活动中的仪仗器。这种器形在中国其他地区尚未见到。
 ## Page 253
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1834,11 +1704,9 @@ i 7
 
 ## Page 262
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-fees
-182. 铜颜圈足及口沿，K1: 30，上饰目云纹和云雷纹。口径20.7、圈足径24.4、圈足高4.8厘米。
-
+> 182. 铜颜圈足及口沿，K1: 30，上饰目云纹和云雷纹。口径20.7、圈足径24.4、圈足高4.8厘米。
 ## Page 263
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1874,7 +1742,6 @@ fees
 <!-- kind=caption_or_map confidence=medium -->
 
 > 185．铜尊，K2:151。以勾云雷纹为地，上饰兽面纹，肩部饰有三个牛头和三只立鸟。口径49厘米，肩径29厘米，通高56.6厘米。
-
 ## Page 269
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1895,13 +1762,11 @@ fees
 
 ## Page 272
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-再汉
-a5 SIONS
-187. $2, K2@: 127，上人饰云雷纹，肩上上饰三个卷角羊头3
-28.8、通高41.6厘米。
-
+> 再汉
+> 187. $2, K2②: 127，上人饰云雷纹，肩上上饰三个卷角羊头3
+> 28.8、通高41.6厘米。
 ## Page 273
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1910,10 +1775,9 @@ a5 SIONS
 
 ## Page 274
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-189. $M, K22Q): 122，以云雷纹为地，上人饰兽面纹和三 。口径34、肩径25.7、高31.5厘米。
-
+> 189. $M, K22Q): 122，以云雷纹为地，上人饰兽面纹和三 。口径34、肩径25.7、高31.5厘米。
 ## Page 275
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1928,18 +1792,14 @@ a5 SIONS
 
 ## Page 277
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-191. 铜时，K2D): 88，颈部有三周凸弦纹，肩上铸有四个卷羊头。肩部以云雷纹为地，上饰象鼻龙纹。口径20.3、通高35.4厘米。
-276
-
+> 191. 铜时，K2③: 88，颈部有三周凸弦纹，肩上铸有四个卷羊头。肩部以云雷纹为地，上饰象鼻龙纹。口径20.3、通高35.4厘米。
 ## Page 278
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-192. 铜旱，K2GB):70，肩部以云雷纹为地，上人饰象鼻效龙纹。器身曾涂有朱色。口径21、遍径28、通高33.4厘米。
-277
-
+> 192. 铜旱，K2③:70，肩部以云雷纹为地，上人饰象鼻效龙纹。器身曾涂有朱色。口径21、遍径28、通高33.4厘米。
 ## Page 279
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -1962,32 +1822,24 @@ a5 SIONS
 
 ## Page 282
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-AGL, WG
-14412.2)HOK.
-196. $J=H, K2G):261-6, PIAL, As, Pwr IF, Avbsbas
-2.3 ~2.6)/9DK.
-
+> 196. 铜牌形饰，K2③:261-6，残件，形制及纹饰局部可辨。长约2.3—2.6厘米。
 ## Page 283
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 197. 铜牌形饰，87GSZJ:36，长5.2—5.6厘米，厚0.1厘米。上边缘平，呈圆弧形，嵌有绿松石。正面绿锈上有细绒状物印痕。
-
 ## Page 284
 
-<!-- kind=caption_or_map confidence=high -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 198. 铜牌形饰，87GSZJ:16。器体约呈长方形，满布呈“S”形的镂空水波纹十个，分两行连续对称排列。长14厘米，宽4.9至5.3厘米，厚0.2厘米。
-
 ## Page 285
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-199. 铜牌饰，87GSZJ: 17。通体绿锈，体中有一凸起的“钮”，高13.8、宽5.2 ~ 5.8、厚1.5厘米。
-284
-
+> 199. 铜牌饰，87GSZJ: 17。通体绿锈，体中有一凸起的“钮”，高13.8、宽5.2 ~ 5.8、厚1.5厘米。
 ## Page 286
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -2047,9 +1899,7 @@ AGL, WG
 <!-- kind=caption_or_map confidence=medium -->
 
 > 雷纹。两腿健壮，腹部饰阴刻花纹，昂首而立。通宽108厘米，通高81.4厘米。
-
 > 本页其余文字残缺难辨，疑为图版或器物说明页。
-
 ## Page 296
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -2058,10 +1908,9 @@ AGL, WG
 
 ## Page 297
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 本页为图版或说明页，文字残缺，仅可辨出局部说明为器物下部有双腿。
-
 ## Page 298
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -2112,10 +1961,9 @@ AGL, WG
 
 ## Page 306
 
-<!-- kind=caption_or_map confidence=high -->
+<!-- kind=frontmatter confidence=high -->
 
 ### 三星堆出土文物全记录
-
 ## Page 307
 
 <!-- kind=text confidence=medium -->
@@ -2460,41 +2308,32 @@ AGL, WG
 
 ## Page 325
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-Pawan
-三星推遗址出土的陶器中，用于盛贮物器的器物，占了三星堆陶器器形的
-Hit, ERASMSMNM, H By
-
+> 三星推遗址出土的陶器中，用于盛贮物器的器物，占了三星堆陶器器形的
 ## Page 326
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 1. 小平底缸，陶，口径19.7厘米，底径6.7厘米，高17.2厘米。
-
 > 海贝。
-
 ## Page 327
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 3. 小平底缸，80GSDAT2G③:15。口径15.2、底径5.6、高16.4厘米。
-
 > 4. 小平底缸，2000GSZYT112②:67。口径15.2、底径3.4、高10.5厘米。
-
 ## Page 328
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-5.) Feet, 2000GST3108@: 33, JeMIM, MMH MIR, ae LAA. 1174813, 克径未8 高104惠米
-
+> 5. 小平底缸，2000GST3108③:33，夹砂褐陶。口径约13厘米，底径约8厘米，高10.4厘米。
 ## Page 329
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-7.小平底缸，86GSIIIT1416BB: 123，赤砂褐陶。口
-径13.6、底径2.8、高8.3厘米。
-
+> 7.小平底缸，86GSIIIT1416BB: 123，赤砂褐陶。口
+> 径13.6、底径2.8、高8.3厘米。
 ## Page 330
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -2503,10 +2342,9 @@ Hit, ERASMSMNM, H By
 
 ## Page 331
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-12.陶缸，86GSIINIT1416(BB，炎和砂灰陶。口径14.9、底人径3.5、高10.3厘米。
-
+> 12.陶缸，86GSIINIT1416(BB，炎和砂灰陶。口径14.9、底人径3.5、高10.3厘米。
 ## Page 332
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -2515,57 +2353,45 @@ Hit, ERASMSMNM, H By
 
 ## Page 333
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-16 小平底陶缸，86GSIIIT15169 :54，严砂褐陶，外表曾人饰黑
-径14.6、肩径1 底径3.7、高10.8厘米。
-
+> 16 小平底陶缸，86GSIIIT15169 :54，严砂褐陶，外表曾人饰黑
+> 径14.6、肩径1 底径3.7、高10.8厘米。
 ## Page 334
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 17. 陶缸，2000GSYGH25:2，夹砂灰陶。口径15.3厘米，底径4.5厘米，高13.8厘米。
-
 > 18. 陶杯，2000GSYGH22:70，夹砂灰陶。口径13.4厘米，底径3.2厘米，高8.9厘米。
-
 ## Page 335
 
-<!-- kind=caption_or_map confidence=high -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 19. 陶缸，2000GSH131:1，夹砂褐黄陶。口径17.5厘米，底径4厘米，高13.8厘米。
-
 > 20. 陶缸，2000GST3307H4:2，夹砂灰陶。口径11厘米，底径2.1厘米，高7.9厘米。
-
 ## Page 336
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 21. 陶缸，2000GSGGH99:2，夹砂红陶。口径17.5、底径13厘米。
-
 > 22. 陶杯，2000GSGGT3310③B:3，泥质黑陶。口径11.6、底径2.5、高6.1厘米。
-
 ## Page 337
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 23. 陶器，编号2000GSGCH2256:3。尺寸残缺，仅存高18.8厘米等信息。
-
 > 24. 陶器，编号2000GSGGH22:12，夹砂褐陶。口径16.5厘米、底径5.2厘米、高16厘米。
-
 ## Page 338
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 图二十六：2001GSGGT30177G16[1]。长15.8厘米，宽6.5厘米，高16.8厘米。
-
 ## Page 339
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 27. 陶罐，81GST2Q：14，夹砂灰陶。口径15.7厘米，底径5.5厘米，高16厘米。
-
 > 28. 陶罐，86GSⅢT1415OD，夹砂灰褐陶。口径16.3厘米，底径5.4厘米，高15.8厘米。
-
 ## Page 340
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -2574,11 +2400,9 @@ Hit, ERASMSMNM, H By
 
 ## Page 341
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-30.高领缸，2000GSGGH50: 18，泥质灰陶。口径12.2、腹径26.4、底径7、高24.3厘米。
-340
-
+> 30.高领缸，2000GSGGH50: 18，泥质灰陶。口径12.2、腹径26.4、底径7、高24.3厘米。
 ## Page 342
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -2638,17 +2462,13 @@ Hit, ERASMSMNM, H By
 <!-- kind=caption_or_map confidence=medium -->
 
 > 42. 尖底缸（杯），99GSZYH71:1，泥质灰陶。口径9厘米，高11.7厘米。
-
 > 43. 尖底缸（杯），99CSZYH71，泥质灰陶。口径9厘米，高13.5厘米。
-
 ## Page 352
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 44. 尖底缸（杯），82GST2GD:2，夹砂灰陶。口径8.1、高9.2厘米。
-
 > 45. 陶杯，84GSZXCATIOD，泥质红陶。口径9.5、高12.5厘米。
-
 ## Page 353
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -2699,18 +2519,15 @@ Hit, ERASMSMNM, H By
 
 ## Page 361
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-54.绳纹深腹红，99GSZYT1039); 118, JW IRM. 117248, JIRIEI4, PISO
-
+> 54. 绳纹深腹罐，99GSZYT103⑨:118，夹砂灰陶。口径24.8、腹径14厘米。
 ## Page 362
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-I147254.5, Bein SSlUK,
-55.AMA, 84GST104@; 17,3604
-56.8101, 2000GSGH22: 37, >
-
+> 55. 大口缸，84GST104③:17。
+> 56. 器物，2000GSGH22:37。
 ## Page 363
 
 <!-- kind=catalog confidence=medium -->
@@ -2721,12 +2538,10 @@ I147254.5, Bein SSlUK,
 
 ## Page 364
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 59. 夹砂褐陶。口径28厘米，残高34.5厘米。
-
 > 60. 残高27.5厘米。
-
 ## Page 365
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -2735,17 +2550,14 @@ I147254.5, Bein SSlUK,
 
 ## Page 366
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-63.圈足贫，2000GSGGH123: 1，顽砂黑褐陶。口径44、腹径52、足径20、高42厘米。
-
+> 63.圈足贫，2000GSGGH123: 1，顽砂黑褐陶。口径44、腹径52、足径20、高42厘米。
 ## Page 367
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-64.2, 2000GSGGCT3108TG16( 5, Jeu? Mi), 114%843.6, WEVESO, 1E4%20.4, 7542.4 )HE
-366
-
+> 64. 圈足器，2000GSGGCT3108TG16⑤，夹砂陶，口径约43.6厘米，圈足径约20.4厘米。
 ## Page 368
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -2766,10 +2578,9 @@ I147254.5, Bein SSlUK,
 
 ## Page 371
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-67.哇，86GSIIT1415O: 172，三足宽沿器泥质褐陶。口径18.5、腰沿直 、高37.7厘米
-
+> 67.哇，86GSIIT1415O: 172，三足宽沿器泥质褐陶。口径18.5、腰沿直 、高37.7厘米
 ## Page 372
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -2778,27 +2589,21 @@ I147254.5, Bein SSlUK,
 
 ## Page 373
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-食 th
-三星扒遗址出土的陶器中，有部分是用于盛食物的器物，在这些器物中 ，
-有各种各样的盘、豆、杀、盆等。
-
+> 食 th
+> 三星扒遗址出土的陶器中，有部分是用于盛食物的器物，在这些器物中 ，
+> 有各种各样的盘、豆、杀、盆等。
 ## Page 374
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-69. SRE, 86CSIK1:320, Be, JME, 117E13.5, WHS.VEDK; K1: 125，器座，夹砂红陶，直径6.6、高3厘米。
-w
-一
-w
-
+> 69. 器座，86GSIK1:320，夹砂陶，直径13.5厘米；K1:125，器座，夹砂红陶，直径6.6、高3厘米。
 ## Page 375
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 70. 尖底器，86GSJK1:44，夹砂黑陶，口径7.6、高1.8厘米；JK1:41，夹砂黑陶，口径7.7、高1.7厘米。
-
 ## Page 376
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -2813,10 +2618,9 @@ w
 
 ## Page 378
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 74. 玉璋，86GSINH30:2。长17.5、刃宽4.8、厚4.5厘米。
-
 ## Page 379
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -2831,17 +2635,14 @@ w
 
 ## Page 381
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 79. 器物图版。口径10厘米，高4厘米。
-
 ## Page 382
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-6GSITTI3ITSLB)G
-2, 2000GSGCT310800; 3，炎砂褐陶。 口径23.8、圈足径20、高55砷米。
-
+> 2, 2000GSGCT310800; 3，炎砂褐陶。 口径23.8、圈足径20、高55厘米。
 ## Page 383
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -2856,45 +2657,31 @@ w
 
 ## Page 385
 
-<!-- kind=caption_or_map confidence=high -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 85. 圈足盘，2001GSGGH124：3，夹砂褐陶，外饰黑衣。口径25、圈足径19.8、高3.8厘米。
-
 > 86. 圈足盘，84GSXDAT1③，夹砂灰陶。口径24.7、圈足径7.8、高8.9厘米。
-
 ## Page 386
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-}
-'
-, 86GSINTI4IS@A: 302, 9
-89 小平底盘，99GSZYH45:， 9, JCRDHIM. 117836, JRE8.7, 7.8K.
-
+> 89. 小平底盘，99GSZYH45:9，夹砂灰陶。口径约36厘米，底径8.7厘米。
 ## Page 387
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-人
-aa
-1 4437.6. 429. 159.6)8)
-91.曲腹盘，99GSZYT201@9:4，炎砂黄陶。口径13.7、底径4.:
-
+> 91. 曲腹盘，99GSZYT201⑨:4，夹砂黄陶。口径13.7厘米，底径记录残缺。
 ## Page 388
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 92. 高柄豆。泥质黑陶。
-
 > 本页为图版说明页，部分文字残缺，无法可靠恢复。
-
 ## Page 389
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-95.高柄豆，86GSDAT2G@O):36，泥 图。盘口径18、圈足径16.7、高46厘米，圈 了一只“有眼纹”
-388
-
+> 95. 高柄豆，86GSDAT2③:36，泥质陶。盘口径18、圈足径16.7、高46厘米，圈足上饰一只“有眼纹”。
 ## Page 390
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -2903,47 +2690,38 @@ aa
 
 ## Page 391
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-98. WEAR, 2000CGSCT3209H4: 23, Jest
-9, PARIEI7.8, FIS8.5/EOK.
-
+> 98. 陶器，2000GSGCT3209H4:23，夹砂陶。残高约7.8厘米。
 ## Page 392
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-PHUTIZI4 BA, 7)
-100.2.#, 99GSZYT103Q); 120，炎砂灰陶。口从12.6、残高10，
-
+> 100. 陶器，99GSZYT103⑨:120，夹砂灰陶。口径12.6、残高10厘米。
 ## Page 393
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 101. 夹砂褐陶。口径12厘米，残高2.7厘米。
-
 > 102. 圈足豆，夹砂灰陶。口径32.5厘米，圈足径14厘米，高22.4厘米。
-
 ## Page 394
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-103.圈足豆，97GSDGM10: 8，麻光黑皮陶。圈足上下各有三组钱孔，每组三个。口径17.2，豆腹深8、圈足径
-15、高15.5，通高24厘米。
-
+> 103.圈足豆，97GSDGM10: 8，麻光黑皮陶。圈足上下各有三组钱孔，每组三个。口径17.2，豆腹深8、圈足径
+> 15、高15.5，通高24厘米。
 ## Page 395
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-iM ake 水器
-三星推遗址出土的陶器中，有部分是用于盛酒盛水的器物，在这些器物
-中，有各式各样的陶坑、壶、杯、舰、瓶。
-
+> iM ake 水器
+> 三星推遗址出土的陶器中，有部分是用于盛酒盛水的器物，在这些器物
+> 中，有各式各样的陶坑、壶、杯、舰、瓶。
 ## Page 396
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-104.Pafil, S6GSIIITISIS@A, JCMZLPi), 日径11、底径43、高12.8厘
-
+> 104. 陶杯，86GSIIIT1515③A，夹砂灰陶。口径11、底径4.3、高12.8厘米。
 ## Page 397
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -2973,33 +2751,25 @@ iM ake 水器
 <!-- kind=caption_or_map confidence=medium -->
 
 > 110. 陶瓶，86GSⅢT1414④:17，夹砂灰陶。口径4厘米，底径4.7厘米，高16.7厘米。
-
 > 111. 陶瓶，86GSⅢT1313④:16，夹砂灰陶。口径3.5厘米，底径7厘米，高12.2厘米。
-
 ## Page 402
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 112. 陶器，夹砂黑陶。口径5.3厘米，底径4.5厘米，高12.7厘米。
-
 > 113. 陶瓶，86GSⅡT1617⑧B：44，夹砂灰陶。口径4厘米，底径5.5厘米，高14厘米。
-
 ## Page 403
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 114. 陶瓶，86GSⅡT1517②B:101，夹砂灰陶。口径4.5厘米、底径5.6厘米、高12.7厘米。
-
 > 115. 陶瓶，86GSⅡT1516③A:138，夹砂灰陶。口径4.6厘米、底径5.8厘米、高15.5厘米。
-
 ## Page 404
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 116. 陶瓶，86GSIIIT15169D:72，夹砂褐陶，外壁饰黑陶衣。口径4.7厘米、腹径6.3厘米、底径5.4厘米、高15厘米。
-
 > 117. 陶瓶，夹砂灰陶。口径5厘米、底径5.2厘米、高15.5厘米。
-
 ## Page 405
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3008,16 +2778,14 @@ iM ake 水器
 
 ## Page 406
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-119.曲腹平底杯，80GCSDAT2(GB); 82，来砂灰陶。口径11.5、底径6.6、高12.3厘米。
-
+> 119.曲腹平底杯，80GCSDAT2(GB); 82，来砂灰陶。口径11.5、底径6.6、高12.3厘米。
 ## Page 407
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-121.陶杯，86CSIIITI415GBA: 105，泥质祸陶，外饰黑陶衣。口径们.2、高97厘米。
-
+> 121.陶杯，86CSIIITI415GBA: 105，泥质祸陶，外饰黑陶衣。口径们.2、高97厘米。
 ## Page 408
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3062,11 +2830,10 @@ iM ake 水器
 
 ## Page 415
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-129. R75, S9CGSZYTI12@, seb
-130.FH2, 84GST103@); 2，夹砂褐陶，外人饰黑陶衣。 残高20厘
-
+> 129. 器物，99GSZYT112②，残件。
+> 130. 高领罐，84GST103③:2，夹砂褐陶，外饰黑陶衣。残高20厘米。
 ## Page 416
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3094,30 +2861,25 @@ iM ake 水器
 
 ## Page 420
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-138.82, 2000GSGGHS3: 14，均砂灰陶。口径18.41、
-肩径265、残高395厘米5
-
+> 138.82, 2000GSGGHS3: 14，均砂灰陶。口径18.41、
+> 肩径265、残高395厘米5
 ## Page 421
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 本页为图版页，文字残缺，仅能辨出少量数字，题名和说明无法可靠恢复。
-
 ## Page 422
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-142. 567228, 86GCSIIITI414@: 4，赤秒褐陶。 口径34、肩径
-33.5、底径67、通高63厘米。
-
+> 142. 高领罐，86GSIIIT1414③:4，夹砂褐陶。口径34、肩径33.5、底径6.7、通高63厘米。
 ## Page 423
 
-<!-- kind=caption_or_map confidence=high -->
+<!-- kind=caption_or_map confidence=medium -->
 
-三星堆遗址出土的陶器中，有部分是器物部件或器物的辅助用具，以及一些建筑构件，主要有器盖、器钮、器座、瓦形器、板状器、三角形器等，也包括无法归入前述各项的滤器。
-
+> 三星堆遗址出土的陶器中，有部分是器物部件或器物的辅助用具，以及一些建筑构件，主要有器盖、器钮、器座、瓦形器、板状器、三角形器等，也包括无法归入前述各项的滤器。
 ## Page 424
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3150,11 +2912,9 @@ iM ake 水器
 
 ## Page 429
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-149.器盖，97GSDGM10:9，泥质黑皮陶，灰胎，表面磨光。直径19.7、通高4.7厘米。
-428
-
+> 149.器盖，97GSDGM10:9，泥质黑皮陶，灰胎，表面磨光。直径19.7、通高4.7厘米。
 ## Page 430
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3184,39 +2944,30 @@ iM ake 水器
 <!-- kind=caption_or_map confidence=medium -->
 
 > 156. 器盖，99GSZYH14，夹砂灰陶。盖径15厘米，钮径6.5厘米，通高4.1厘米。
-
 ## Page 435
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 157. 器盖，84GST003G：1，夹砂红陶。盖径17厘米、纽径7厘米、通高8.5厘米。
-
 > 158. 器盖，2000GST3107：5，夹砂灰陶。盖径17.6厘米、纽径6.3厘米、通高5.2厘米。
-
 ## Page 436
 
-<!-- kind=caption_or_map confidence=high -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 159. 器盖，2000GSGgH28，夹砂橙黄陶。盖径18.2厘米、纽径2.1厘米、通高11.6厘米。
-
 > 160. 器盖，2000GSGgH28-1，夹砂褐陶，外表饰黑陶衣。盖径16.1厘米、通高11.7厘米。
-
 ## Page 437
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 161. 器盖，86GSINT1414BB:85，泥质灰陶。盖径14、纽径4.6、通高7厘米。
-
 > 162. 器盖，2000GSZYT112②D，夹砂褐陶，外饰黑陶衣。盖径12.4、纽径3.5、通高5.3厘米。
-
 ## Page 438
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 163. 器盖，2000GSZYTII2②:62，夹砂黑陶。盖径17.2、钮径3.1、通高5.8厘米。
-
 > 164. 器钮，86GSIIIT1516BC，泥质灰陶。直径4.7、残高4厘米。
-
 ## Page 439
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3225,12 +2976,10 @@ iM ake 水器
 
 ## Page 440
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-> 167　器物编号：84CST1036。
-
-> 168　器物编号：86GSIIIT1414。高16.5厘米，宽10.7厘米。
-
+> 167 器物编号：84CST1036。
+> 168 器物编号：86GSIIIT1414。高16.5厘米，宽10.7厘米。
 ## Page 441
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3239,22 +2988,15 @@ iM ake 水器
 
 ## Page 442
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 172. 器物残件，编号不清。高12.7厘米。
-
 > 173. 器钮，86GSIIIT1515G，夹砂褐陶。直径4.7厘米，残高5厘米。
-
 ## Page 443
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-cers
-a *
-本
-fh
-174.2841, 86GSIIITIZI4@C: 53，严砂红陶。宽17、残高11
-
+> 174. 器纽，86GSIIIT1214③C:53，夹砂红陶。宽17、残高11厘米。
 ## Page 444
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3281,25 +3023,19 @@ fh
 
 ## Page 448
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-180.48RE, 86CSIITISIT@A: 85，夹砂灰陶。口径30.2、残高10.5厘米，
-447
-
+> 180. 陶器，86GSIIIT1517③A:85，夹砂灰陶。口径30.2、残高10.5厘米。
 ## Page 449
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-181.陶研磨器 ( SPL) , S6GSIITH36Q); 189，顽砂黑褐陶。口径22、底径9.5、残高18.1厘米。 (正视 )
-448
-
+> 181. 陶研磨器（正视），86GSIIITH36③:189，夹砂黑褐陶。口径22、底径9.5、残高18.1厘米。
 ## Page 450
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-182.陶研磨器 ( 内部 ) ，86GSTIIH36G@D): 189，夹砂黑褐陶。口径22、底径9.5、残高18.1厘米。 (俯视 )
-449
-
+> 182. 陶研磨器（俯视），86GSIIITH36③:189，夹砂黑褐陶。口径22、底径9.5、残高18.1厘米。
 ## Page 451
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3308,10 +3044,9 @@ fh
 
 ## Page 452
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-184.器座，99GSDZYT112(D): 308，泥质灰黑陶。口径13、底径18.5、高30.2厘米。
-
+> 184.器座，99GSDZYT112(D): 308，泥质灰黑陶。口径13、底径18.5、高30.2厘米。
 ## Page 453
 
 <!-- kind=catalog confidence=medium -->
@@ -3324,17 +3059,14 @@ fh
 
 ## Page 454
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-188、板状器，2000GSGgT3108Tg160D: 121，夹砂灰黑陶。残长30.2、宽24.4、厚1.8砷米。
-
+> 188、板状器，2000GSGgT3108Tg160D: 121，夹砂灰黑陶。残长30.2、宽24.4、厚1.8厘米。
 ## Page 455
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-190.“陶器部件”，2000GSGgT3108Tg16: 17，赤砂黑褐陶。长23.7、宽12、厚1.1哩米。
-454
-
+> 190.“陶器部件”，2000GSGgT3108Tg16: 17，赤砂黑褐陶。长23.7、宽12、厚1.1厘米。
 ## Page 456
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3351,12 +3083,9 @@ fh
 
 ## Page 458
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-ers
-192.陶人，99GSZYT111: 33，夹砂褐陶,光圆头,高鼻突出。眼、嘴属阴刻线条画出，身着长宰，腰系一带，在腰前系结。
-457
-
+> 192.陶人，99GSZYT111: 33，夹砂褐陶,光圆头,高鼻突出。眼、嘴属阴刻线条画出，身着长宰，腰系一带，在腰前系结。
 ## Page 459
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3377,12 +3106,9 @@ ers
 
 ## Page 462
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-残宽16.5、残高11.6厘米。
-197.P9 3, 86GST1213Q), YewhZr pay,
-461
-
+> 残宽16.5、残高11.6厘米。
 ## Page 463
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3403,10 +3129,9 @@ ers
 
 ## Page 466
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-203.虎形器纽，86GST1314GB)C: 75，有雕塑成虎形，泥质褐陶。残宽4.8、残高5厘米。
-
+> 203.虎形器纽，86GST1314GB)C: 75，有雕塑成虎形，泥质褐陶。残宽4.8、残高5厘米。
 ## Page 467
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3415,11 +3140,9 @@ ers
 
 ## Page 468
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-205.蟾崔形器纽，86GST1416( 9，严砂褐陶，外饰黑陶衣。残宽3.4、残高6.4厘米。
-467
-
+> 205.蟾崔形器纽，86GST1416( 9，严砂褐陶，外饰黑陶衣。残宽3.4、残高6.4厘米。
 ## Page 469
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3428,12 +3151,9 @@ ers
 
 ## Page 470
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-207.3448, 82GSG1M:3, 9
-Vi), RAS14, BR GES. AJB,
-208.348, GSDAT4D: 27，泥质红陶。残长15.2厘米。
-
+> 208.348, GSDAT4D: 27，泥质红陶。残长15.2厘米。
 ## Page 471
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3460,34 +3180,27 @@ Vi), RAS14, BR GES. AJB,
 
 ## Page 475
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 213. 鸟头把。
-
 > 214. 陶器。左图：泥质灰陶，直径2厘米；中图：泥质灰陶，直径约2厘米；右图：泥质灰陶，直径2.7厘米。
-
 ## Page 476
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 216. 鸟头把。泥质褐陶，直径19厘米。
-
 > 图86。泥质褐陶，直径3厘米。
-
 > 本页为图版说明页，文字有限。
-
 ## Page 477
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-218.鸟头把，左图86CSIIIT1416(B)B89 Ye; 中国T1416G@): 89,泥质褐陶; 有图T1416
-
+> 218. 鸟头把，三件，均为泥质陶，器物编号见原图。
 ## Page 478
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 219. 鸟头把。左图：80GSCC 6，泥质灰陶，直径2.2厘米；中图：80CSDCT2G：26，泥质灰陶，直径2.2厘米；右图：80GSCCT1GD：7，泥质褐陶，直径2.5厘米。
-
 ## Page 479
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3565,9 +3278,7 @@ Vi), RAS14, BR GES. AJB,
 <!-- kind=caption_or_map confidence=medium -->
 
 > 233.图注残缺，仅可辨：86T1516：443，高22厘米。
-
 > 234.陶纺轮，图从左至右：86GST1516⑥：121，直径2.7厘米，高1.6厘米；T1415B，直径2.8厘米，高1.2厘米；T1516，直径3.1厘米，高1.5厘米；T1314D，直径3.2厘米，高1厘米。
-
 ## Page 492
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3579,31 +3290,24 @@ Vi), RAS14, BR GES. AJB,
 <!-- kind=caption_or_map confidence=medium -->
 
 > 237. 陶纺轮，2000GSGGT3108：12，泥质黑陶。直径3.2厘米，孔径0.4厘米，高1.9厘米。
-
 ## Page 494
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 238. 陶纺轮，2000GSGGT3108:13。泥质陶，一侧呈黑色。
-
 > 239. 陶纺轮，80GCSAT1:144。泥质灰陶。直径3.5厘米，孔径0.5厘米，高1.3厘米。
-
 ## Page 495
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 240. 陶纺轮，80GSDCT1G:153，泥质黑陶。直径3.2厘米，孔径0.4厘米，高2.1厘米。
-
 > 241. 陶纺轮，80GSDbTI1G:142，泥质黑陶。直径3.2厘米，孔径0.5厘米，高1.8厘米。
-
 ## Page 496
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 242. 陶纺轮，80GSDaT3G：139，泥质灰陶。直径3.8厘米，孔径0.4厘米，高2.1厘米。
-
 > 243. 陶纺轮，87GZT1：3，泥质褐陶。直径3.6厘米，孔径0.4厘米，高2厘米。
-
 ## Page 497
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3618,12 +3322,9 @@ Vi), RAS14, BR GES. AJB,
 
 ## Page 499
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-246.“帆形器”，87GZg1@: 1,泥质灰陶。直径6、高2.75厘米。
-已审阅
-498 子届 14-04-28, 19:58
-
+> 246. “帆形器”，87GZG1③:1，泥质灰陶。直径6、高2.75厘米。
 ## Page 500
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3650,10 +3351,9 @@ Vi), RAS14, BR GES. AJB,
 
 ## Page 504
 
-<!-- kind=caption_or_map confidence=high -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 1. 金面罩，K1:282。用金皮捶打而成，其大小、造型与同坑出土的人头像面部相当，故有可能是从某件大头像上脱落下来的。双眼镂空，鼻部凸起。残宽21.5厘米，高11.3厘米，重10.62克。
-
 ## Page 505
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3668,11 +3368,9 @@ Vi), RAS14, BR GES. AJB,
 
 ## Page 507
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-3.金璋形箔饰，K2G@: 130-5、6，器身作长条形，两侧直，射前部由后向前渐宽出，前端有又形四。姬部呈钝角形，角端有一圆穿。
-500
-
+> 3.金璋形箔饰，K2③: 130-5、6，器身作长条形，两侧直，射前部由后向前渐宽出，前端有又形四。姬部呈钝角形，角端有一圆穿。
 ## Page 508
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3690,19 +3388,11 @@ Vi), RAS14, BR GES. AJB,
 <!-- kind=caption_or_map confidence=medium -->
 
 > 5. 金璋形箔饰，K2③:130-11、12。器身略作长方形，体短宽，两侧直，射前部由后向前渐宽出，后端内收。金箔打制，素面。长13.5厘米，宽1.5—1.8厘米。
-
 ## Page 511
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-‘
-n
-ni , "
-ws ees
-be ,
-6.金叶饰，K 130-19, 23, 24, 26, 25, OIL, JmAlMis, A—AFL, PMA HI, HZ a
-Wales, Ltda,
-
+> 6. 金叶饰，K130-19、23、24、26、25，薄片状，残件。
 ## Page 512
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -3771,14 +3461,10 @@ Wales, Ltda,
 
 ## Page 523
 
-<!-- kind=caption_or_map confidence=high -->
+<!-- kind=frontmatter confidence=high -->
 
 ### 三星堆出土文物全记录
-
-### The Whole Collection of the Relics Excavated in Sanxingdui
-
 ### 玉器·石器
-
 ## Page 524
 
 <!-- kind=text confidence=medium -->
@@ -3827,10 +3513,9 @@ Wales, Ltda,
 
 ## Page 528
 
-<!-- kind=caption_or_map confidence=high -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 玉圭（00910），近纯白色，局部泛浅绿色，玉质较好。器物完好。平顶，两面刃较平，直腰，近顶处有一圆穿，两面管钻，器形扁平。通长10厘米，通宽3.2厘米，厚1.2厘米。
-
 ## Page 529
 
 <!-- kind=catalog confidence=low -->
@@ -3860,13 +3545,11 @@ Wales, Ltda,
 <!-- kind=caption_or_map confidence=medium -->
 
 > 5. 玉璋，K1:168，硅化白云质大理岩，青黑色。援两面微拱，两侧较平直，前端残断。援本部两侧齿饰较浅，上下两侧之间有一直径1厘米的圆穿，单面管钻。援宽6.8厘米，内长5.6厘米、宽4.3厘米、厚0.8厘米，通长31.3厘米。
-
 ## Page 534
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 柄部两面的两侧有平行阴线。宽0.8厘米，残长33.5厘米。
-
 ## Page 535
 
 <!-- kind=catalog confidence=medium -->
@@ -3875,12 +3558,10 @@ Wales, Ltda,
 
 ## Page 536
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-> 图9-2　K1:161b。
-
+> 图9-2 K1:161b。
 > 本页文字残缺严重，仅能辨认器物编号K1:161及局部尺寸信息。
-
 ## Page 537
 
 <!-- kind=catalog confidence=low -->
@@ -3894,13 +3575,11 @@ Wales, Ltda,
 <!-- kind=caption_or_map confidence=medium -->
 
 > 13. 玉璋，K1:97-1，蚀变白云石质，黑色。援前端残断，已复原。援两面扁平。援本部两侧有三组齿牙饰；两侧齿牙之间略偏一侧有一直径1厘米的圆穿，为单面管钻。内较长而直，末端略窄。援宽8.2厘米，内长7.3厘米、宽5.7厘米，厚0.6厘米，残长35.7厘米。
-
 ## Page 539
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 本页为图注或地图页，文字残缺，未见可可靠整理的正文。
-
 ## Page 540
 
 <!-- kind=catalog confidence=low -->
@@ -3982,7 +3661,6 @@ Wales, Ltda,
 <!-- kind=caption_or_map confidence=medium -->
 
 > 29. 玉璋，K1:96。角砾化白云质大理岩，青黄色，局部有黑褐色云斑。体形宽大，射部长条形，末端厚，刃口较小。射束部两侧各刻一人饰，纹饰之间可见起稿的平行线。一面宽6.7、另一面宽6.4、厚4.9、刃厚0.6、通长35.9厘米。
-
 ## Page 553
 
 <!-- kind=catalog confidence=low -->
@@ -4055,10 +3733,9 @@ Wales, Ltda,
 
 ## Page 563
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 本页为图版或图注页，文字残缺过重，未能可靠恢复可出版的说明文字。
-
 ## Page 564
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -4099,13 +3776,11 @@ Wales, Ltda,
 
 ## Page 569
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-W1S23, 9011.3, FRO.7
-{i
-50,边更，84GSW采:33 残。平面应为平行四边形。器身尚存一孔。完整端有数条细苞
-长17.5，宽9.5，
-
+> {i
+> 50,边更，84GSW采:33 残。平面应为平行四边形。器身尚存一孔。完整端有数条细苞
+> 长17.5，宽9.5，
 ## Page 570
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -4117,13 +3792,11 @@ W1S23, 9011.3, FRO.7
 <!-- kind=caption_or_map confidence=medium -->
 
 > 53 边璋，K2③:08，角砾状生物碎屑灰岩。黑灰色，正面和背面有花斑和流水状纹理。出土时残为数段，经拼接复原。其中三面两组纹饰均以带状云雷纹居中，两侧各有两条平行线；另三面两组纹饰为八条平行线。器物三端均残，宽7.3厘米，厚0.5厘米，通长36厘米。
-
 ## Page 572
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 两面平，两侧较窄，向前逐渐宽出，前端呈叉形。K2②:763—1。长4.6厘米，宽0.5—0.8厘米，厚0.15厘米。
-
 ## Page 573
 
 <!-- kind=catalog confidence=medium -->
@@ -4145,7 +3818,6 @@ W1S23, 9011.3, FRO.7
 <!-- kind=caption_or_map confidence=medium -->
 
 > 纹饰由平行线组成，每组均以带状云雷纹居中，两侧各有六七条平行线。穿径1厘米，射宽9.4厘米，长13.7厘米，宽8.1厘米，厚0.7厘米，通长66.4厘米。
-
 ## Page 576
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -4157,7 +3829,6 @@ W1S23, 9011.3, FRO.7
 <!-- kind=caption_or_map confidence=medium -->
 
 > 57. 玉琮，K1:11-2，大理岩。被火烧后有三道纵向裂纹，一端烧成鸡骨白色，另一端呈黑灰色。器形外方内圆，两端四角下磨成八棱形射，射两端微外敞。射高0.5厘米，壁厚1.1厘米，内径5.2—5.4厘米，外径6.5厘米，长7.2厘米，宽6.5厘米，高7.6厘米。
-
 ## Page 578
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -4181,7 +3852,6 @@ W1S23, 9011.3, FRO.7
 <!-- kind=caption_or_map confidence=medium -->
 
 > 59. 玉璧，K2GD:19。玉质，淡绿色微黄。出土时仅存一半，残为三段，经拼接复原。周缘直。肉两面平，厚薄均匀。好径65毫米，肉宽28毫米，通径122毫米。
-
 ## Page 582
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -4190,34 +3860,29 @@ W1S23, 9011.3, FRO.7
 
 ## Page 583
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 本页为图版说明页，文字残缺严重，仅可辨器物编号97GSDM29:1及“中间钻次大的圆窝”等局部描述。
-
 ## Page 584
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 61. 玉璧，97GSDGM5:3。蛇纹石玉，硬度5度。白色，体略厚。在平的一面圆心处钻有一直径0.41—0.78厘米的圆穿。直径4.3厘米，孔径0.7厘米，厚0.9厘米。
-
 ## Page 585
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 63. 玉环，87GSZJ:11120.10等，4件。白色，局部微黄，有水波状纹理。完好。肉内面平整，厚薄均匀，上有一长方形穿孔，好面平整。好径6.7厘米，肉宽9.6厘米，厚0.8厘米。
-
 ## Page 586
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 64.538：K1：6，蛇纹石玉。全器被火烧后呈鸡骨白色，局部略呈灰白色，一侧有裂纹。形制略小，好壁竖直，璧周缘平，肉面上琢出两组同心圆弦纹。好径5厘米，厚0.7厘米，肉宽1.1厘米，通径7.2厘米。
-
 ## Page 587
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 65. 玉璧，K1:284，蛇纹石质。全器被火烧后呈鸡骨白色，局部呈灰白色，一侧有裂纹。形制略小，好、肉壁直，内外周缘平，肉面上琢磨出两周同心圆弦纹。好径5.4厘米，孔高1厘米，内径1.3厘米，厚0.1厘米，通径7.9厘米。
-
 ## Page 588
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -4229,7 +3894,6 @@ W1S23, 9011.3, FRO.7
 <!-- kind=caption_or_map confidence=medium -->
 
 > 66. 玉璧，K2②:21，完好。体薄，肉面平，边缘较圆。肉内面有五组同心圆阴线纹，每组两周，各组之间又有同心圆浅凹槽。好缘凸起较低。好径6.5厘米，肉宽2.7厘米，通高1.7厘米。
-
 ## Page 590
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -4241,32 +3905,26 @@ W1S23, 9011.3, FRO.7
 <!-- kind=caption_or_map confidence=medium -->
 
 > 67. 玉璧，K2G①:127-1，碧玉质，淡绿色微黄，上有黑褐色流水状纹理。完好。体薄，肉面平，厚薄均匀，边缘打磨成圆棱，好缘凸起，好孔壁较直。好径6.5厘米，肉宽2.6厘米，通径11.6厘米。
-
 ## Page 592
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 呈淡黄绿色。完好。形制不十分规整。肉薄，两面平，周缘圆棱。好缘两面凸起较低。好径5.5厘米，肉宽1.5厘米，通径8.5厘米。
-
 ## Page 593
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 本页为图版页，文字残缺，仅可辨器物尺寸说明：孔壁直。孔径6.4厘米，肉宽2.2厘米，直径10.6厘米。
-
 ## Page 594
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-71, K2Q:89—4, PAM, RAM, 内面平，周缘较圆。好两
-MAA, LAE, FLARE. 44725.8, WNIE1.S, 31448.6)HK.
-
+> 71. 玉璧，K2②:89-4，灰白色，器面平，周缘较圆。通径25.8、孔径约11.5、肉宽约4.8厘米。
 ## Page 595
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 72. 玉环（00613、00611、00610、00612、00614），共5件。白玉，局部微黄。经修复完整，肉内面平整，厚薄均匀，上有一长方形穿孔，表面平整。好径6.3厘米，通径9厘米。
-
 ## Page 596
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -4275,48 +3933,39 @@ MAA, LAE, FLARE. 44725.8, WNIE1.S, 31448.6)HK.
 
 ## Page 597
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-74.5%, K2Q): 146-3, HAR, BIRR, Jana, 56
-4, PAVE, WINS). APU TA AAT, A
-好径6.8，肉帘3.5，通径13.7厘米。
-
+> 74. 玉璧，K2②:146-3，白色，局部有朱砂痕。好径6.8、肉宽3.5、通径13.7厘米。
 ## Page 598
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 76. 玉戚形璧，K1:204。灰白色，上有数道黑褐色线状纹理。全器被火烧，厚的一面微黄。器物残断，经拼接复原。器形长而扁，两面平，中部略厚，两端圆弧，其中一端宽，另一端窄，似璋形。好缘两面凸起，一面略高。长20.8、宽。
-
 ## Page 599
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 77. 玉琮，K1:245。器呈筒状，外方内圆，两端孔微外敞。长14.4、宽8.7，孔径3.4。
-
 ## Page 600
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 78. 玉牙璧形器，000668，白色，表面泛黄，略残。圆环形，顶面微上拱，底面边缘平整，内侧上拱。器身外沿下出一齿。好和孔两面管钻。直径5.2、好径2.3、孔径1.6、厚0.8厘米。
-
 ## Page 601
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 79. 戚形玉佩，K1:235。白云质大理岩，青灰色，一面有黑灰色斑纹，两面有极细的冰裂纹。上部有二圆穿，下部略宽出，下端呈圆弧形，有刃，刃厚钝。腰部两侧刻出对称的五齿，齿与齿之间有四组平行的凹线连接。通体抛光。高12.4、宽6.72、厚1.65厘米。
-
 ## Page 602
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 80. 玉镯，87GSZT33，灰青白色。器经火烧残断为四块，可复原。表面粘有朱砂，质地较细腻。镯身呈圆筒形，腰微束，上下缘均平直，器外两端近缘口处有两周一粗一细的凹弦纹。直径5.6、高2.2、厚0.3厘米。
-
 ## Page 603
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 82 玉蜗旋状器，97GSD&NM212，闪石类玉，硬度5—6度。扁平，孔从拱面钻出。直径4.8、高1.1、厚0.5厘米。白色，微泛青，透明。背面周沿磨成斜面。
-
 ## Page 604
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -4325,11 +3974,9 @@ MAA, LAE, FLARE. 44725.8, WNIE1.S, 31448.6)HK.
 
 ## Page 605
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-83.玉矛，9%7GSDgM10:2，浅粒贿，白色，不透明。阔叶形，层部残断。两面麻平，断面呈六边形，边刃较平。长6.9、宽3.3、厚0.6厘米。
-604
-
+> 83.玉矛，9%7GSDgM10:2，浅粒贿，白色，不透明。阔叶形，层部残断。两面麻平，断面呈六边形，边刃较平。长6.9、宽3.3、厚0.6厘米。
 ## Page 606
 
 <!-- kind=catalog confidence=medium -->
@@ -4366,10 +4013,9 @@ MAA, LAE, FLARE. 44725.8, WNIE1.S, 31448.6)HK.
 
 ## Page 611
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > K1:162。杂有深灰色。内长11.4、宽8.4、厚0.8，通长45.4厘米。
-
 ## Page 612
 
 <!-- kind=catalog confidence=medium -->
@@ -4397,7 +4043,6 @@ MAA, LAE, FLARE. 44725.8, WNIE1.S, 31448.6)HK.
 <!-- kind=caption_or_map confidence=medium -->
 
 > 95. 玉戈，K1:246。斑节状蚀变白云岩，内呈黑色，援被火烧后呈浅蓝色。援残断，经拼接复原。援呈梯形，两侧连弧状边有刃，前锋呈弧刃。援中脊两侧呈浅弧形下凹。无阑。内长方形，两侧平，正侧边略弧，有一直径1厘米的圆穿，两面钻。内上长2.8厘米，援宽6.1厘米，内长7.4厘米、宽4.7厘米、厚0.6厘米，通长21.1厘米。
-
 ## Page 616
 
 <!-- kind=catalog confidence=medium -->
@@ -4435,25 +4080,21 @@ MAA, LAE, FLARE. 44725.8, WNIE1.S, 31448.6)HK.
 <!-- kind=caption_or_map confidence=medium -->
 
 > 102. 玉戈，K2(G):140。斑基状蚀变白云质，黑色。援中部及前锋残断，援上有剥落痕迹。前锋及援下刃与内各有一圆穿。援宽7.3厘米，内长13.5厘米、宽5.8厘米、厚0.65厘米，通长43.4厘米。
-
 ## Page 622
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 103. 玉戈，K2(GB):162。蚀变基性岩，青灰色，上有鱼鳞片状纹理及黑褐色斑点。残断，经拼接复原。内长而直，中间无穿；内前部两侧各有一缺口，上缘与后缘转角处有一小圆穿，双面管钻，后缘微内弧。援宽6.7厘米，内长12厘米、宽5.2厘米、厚0.5厘米，通长39厘米。
-
 ## Page 623
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 104. 玉戈，K2GB：163，残断，经拼接复原。体略厚，援后部下刃口弧不显，前锋两侧内收呈弧形。援本部两面各刻有七条平行阴线，正中有一圆穿，单面管钻。内短，两侧较直。援宽7.5厘米，内长6.3厘米、宽6.6厘米、厚0.7厘米，通长35.8厘米。
-
 ## Page 624
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 105. 玉戈，K2:164。蚀变白云岩，黑色，完好。形小，体薄，两面略扁平。内与援交界处有一直径0.8厘米的圆穿，单面管钻。援宽7.2厘米；内长12.3厘米、宽4.8厘米、厚0.6厘米；通长40.4厘米。
-
 ## Page 625
 
 <!-- kind=catalog confidence=medium -->
@@ -4477,13 +4118,11 @@ MAA, LAE, FLARE. 44725.8, WNIE1.S, 31448.6)HK.
 <!-- kind=caption_or_map confidence=medium -->
 
 > 109. 玉戈，K2(G3):248，软玉质。援上侧呈青灰色，局部被火烧后泛白；下侧呈黑灰色。残断，经拼接复原。形制较小，体厚，援刃略显厚钝。援本部中间有一小圆穿，双面管钻。内较长，后缘微内弧。内前部有一直径0.7厘米的圆穿，单面管钻。援宽5.2厘米，内长8.3厘米、宽4.4厘米、厚0.7厘米，通长26.8厘米。
-
 ## Page 629
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 110. 玉戈，K2G②:314-1。残断，援上有剥落痕迹，前锋及援下刃与内交界处残缺，经拼接复原。体薄，刃锋利。援本部正中有一直径0.9厘米的圆穿，单面管钻。内的下缘及后缘微内弧，后缘上下转角各有小圆穿，双面管钻。援宽6.8厘米，内长12.2厘米、宽5.5厘米、厚0.6厘米，通长44.8厘米。
-
 ## Page 630
 
 <!-- kind=catalog confidence=medium -->
@@ -4507,7 +4146,6 @@ MAA, LAE, FLARE. 44725.8, WNIE1.S, 31448.6)HK.
 <!-- kind=caption_or_map confidence=medium -->
 
 > 114. 玉戈，K2G：322-1，蚀变白云岩，黑灰色。残断，上、下刃有多处缺损，经拼接复原。形制较大，体薄。援下刃呈弧形内凹。援本部中间有一直径0.8厘米的圆穿，单面管钻。内上缘与后缘转角处有一小圆穿，双面管钻。援宽8.2厘米，内长14.4厘米、宽6.6厘米、厚0.6厘米，通长53.3厘米。
-
 ## Page 634
 
 <!-- kind=catalog confidence=medium -->
@@ -4524,16 +4162,14 @@ MAA, LAE, FLARE. 44725.8, WNIE1.S, 31448.6)HK.
 
 ## Page 636
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-> 图118-54　K1:280，高3.4厘米，宽28.2厘米。
-
+> 图118-54 K1:280，高3.4厘米，宽28.2厘米。
 ## Page 637
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 119. 玉刀，K2:314-5，青玉质，黑色，不透明。柄端被火烧后呈灰黑色。背厚，较直，略凹。刃薄，锋利，前部呈圆弧形。柄直，前部两面有回纹和平行线相间的刻画纹饰。长27厘米，宽3厘米。
-
 ## Page 638
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -4542,18 +4178,15 @@ MAA, LAE, FLARE. 44725.8, WNIE1.S, 31448.6)HK.
 
 ## Page 639
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-> 120　K1:104
-
+> 120 K1:104
 > 本页为图版页，文字信息有限。
-
 ## Page 640
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 121. 玉斧，K1:144-2。灰黑色斑点状石英片岩，上有极细小的孔隙。顶端有自然断口。器形厚重，略呈梯形，两面微凸起，两侧边为圆棱，顶端窄，刃端宽，弧形双面刃。顶宽3厘米，刃宽4.8厘米，厚2.8厘米，高26.1厘米。
-
 ## Page 641
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -4562,18 +4195,15 @@ MAA, LAE, FLARE. 44725.8, WNIE1.S, 31448.6)HK.
 
 ## Page 642
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 图版文字大部分无法辨识，仅可确认尺寸信息残存：顶端宽约2.4，宽约4.6，厚约2.8，高约29.4。
-
 ## Page 643
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 本页为图版说明页，文字残缺，仅可辨识器物形制及局部尺寸。
-
 > 器形制较精，器形宽而高。可辨尺寸：厚2.6厘米，高14.3厘米；另有一件高16.5厘米。
-
 ## Page 644
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -4594,21 +4224,17 @@ MAA, LAE, FLARE. 44725.8, WNIE1.S, 31448.6)HK.
 
 ## Page 647
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-黑色，休形较小尖顶，
-厚05、高32砷米- i
-134.54, WAG, SNA, WW, WI. a
-3.2、厚0.9、高13.7厘米。
-
+> 黑色，休形较小尖顶，
+> 厚05、高32厘米- i
+> 3.2、厚0.9、高13.7厘米。
 ## Page 648
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 155 玉锛，采集。青灰色，局部经火烧后变白。平面呈长方形，两端残断。高12.5厘米，刃宽5.5厘米，厚1厘米。
-
 > 136 玉锛，K1:269。局部变白，正面有色纹理，背面呈雾状黑色。其余文字漫漶难辨。
-
 ## Page 649
 
 <!-- kind=catalog confidence=low -->
@@ -4619,10 +4245,9 @@ MAA, LAE, FLARE. 44725.8, WNIE1.S, 31448.6)HK.
 
 ## Page 650
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 本页为图版页，文字残缺，仅可辨器物编号：K1:149。
-
 ## Page 651
 
 <!-- kind=catalog confidence=medium -->
@@ -4633,10 +4258,9 @@ MAA, LAE, FLARE. 44725.8, WNIE1.S, 31448.6)HK.
 
 ## Page 652
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 144 玉斤，K1:56。灰白色。器形较长，一面呈弧形凸起，两侧略作弧形内凹。顶部至刃面有三条平行线。高13.7厘米，厚1.1厘米，高11.1厘米。
-
 ## Page 653
 
 <!-- kind=catalog confidence=medium -->
@@ -4654,44 +4278,34 @@ MAA, LAE, FLARE. 44725.8, WNIE1.S, 31448.6)HK.
 <!-- kind=caption_or_map confidence=medium -->
 
 > 146. 柄折为两段，刃端两侧残缺。两面及两侧较平，柄两侧直，下部向刃端逐渐呈弧形宽出，单面圆弧形刃。柄上有一直径1.2厘米的圆穿，一面管钻。圆穿一面刻出两条平行阴线。刃宽5.7厘米，高33厘米。
-
 ## Page 656
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 147. 玉凿，00050。灰棕色，局部青色。通体磨光，顶端较钝，横截面长方形，制作规整。高11.3厘米、宽2厘米、厚1.6厘米。
-
 > 148. 00051。顶端略收，侧边有棱。高13.5厘米、宽2厘米、厚1.7厘米。
-
 ## Page 657
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 149. K1:012。厚2.9、高25.3厘米。
-
 > 150. K1:105。22.3厘米。
-
 ## Page 658
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-> 151.5　K1:120。宽19厘米、厚1.5厘米、高20厘米。
-
-> 152.5　K1:134。中段略粗。宽3.3厘米、厚2.3厘米、高28.3厘米。
-
+> 151.5 K1:120。宽19厘米、厚1.5厘米、高20厘米。
+> 152.5 K1:134。中段略粗。宽3.3厘米、厚2.3厘米、高28.3厘米。
 ## Page 659
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-153.玉凿，00607，顶端有一段灰白色，成柄状，其下为青灰色，纵训面呈扇圆形，斜平项，弧腰，弧丸。长9.6、宽3.4、厚2厘米。
-658
-
+> 153.玉凿，00607，顶端有一段灰白色，成柄状，其下为青灰色，纵训面呈扇圆形，斜平项，弧腰，弧丸。长9.6、宽3.4、厚2厘米。
 ## Page 660
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 154. 玉凿，87GSZJ:35。灰白色，局部有纤维状纹理，经火烧后已无光泽，一侧有剥蚀白斑，柄端微残缺。柱状，中间大、两端小，断面呈圆角长方形，通体磨光，双面刃。长12.5厘米、宽2.2厘米、厚1.6厘米。
-
 ## Page 661
 
 <!-- kind=catalog confidence=medium -->
@@ -4713,21 +4327,17 @@ MAA, LAE, FLARE. 44725.8, WNIE1.S, 31448.6)HK.
 <!-- kind=caption_or_map confidence=medium -->
 
 > 器物通体磨光，近三角形，有自然断面，至顶略收。一面平，另一面两侧磨出圆棱，双面弧刃。宽1.5厘米、厚1厘米、高17.7厘米。
-
 ## Page 664
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 黑色斑点状石英片岩。形制规整，制作较精良。编号：K1:235—2。尺寸：宽1.8、厚1.4、高17厘米；宽25.5、厚1.7、高19.3厘米。
-
 ## Page 665
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 164. K1:244，器身较厚，顶端残，弧刃。宽24厘米、厚1.85厘米、高12.4厘米。
-
 > 163. K1:240，器身扁平，有切割留下的“台阶”；另三面微弧。顶端有斜穿孔。高15.3厘米。
-
 ## Page 666
 
 <!-- kind=catalog confidence=medium -->
@@ -4738,13 +4348,9 @@ MAA, LAE, FLARE. 44725.8, WNIE1.S, 31448.6)HK.
 
 ## Page 667
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-=i
-168.5, K1:261, MR ALAA NEN RR, BOK. — ih
-ABR KENTA RIE HS MG, OMA TTT, HUS.2, 2,
-18.3)HDK
-
+> 168. 玉器，K1:261，残件，表面有灰黑色纹理。长约18.3厘米。
 ## Page 668
 
 <!-- kind=catalog confidence=medium -->
@@ -4758,31 +4364,24 @@ ABR KENTA RIE HS MG, OMA TTT, HUS.2, 2,
 <!-- kind=caption_or_map confidence=medium -->
 
 > 171. 玉凿，K1:266-1，灰白色玉质片岩，上有黑褐色裂纹。顶端宽，刃端窄，断面为八棱形。宽2.9、厚2.2、高15.3厘米。
-
 > 172. 玉凿，K1:273，灰黑色灰长岩。器物残断，经拼合。器形薄，顶端一面为自然断裂面，经磨平。宽2.6、厚1.6、高20.7厘米。
-
 ## Page 670
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 173. 玉凿，K1:274。灰色、灰黑色、灰白色云母石英片岩。选用的材料不甚规整，一侧残缺。宽3.1、厚2.2、高20.6厘米。圆弧斜刃。
-
 > 174. 玉凿，K1:281。灰白色碧玉质片岩。楔形，两面扁平，两侧边磨圆，一侧略厚。顶端有自然断裂面，刃部有二处残缺，双面圆弧斜刃。宽2.9、厚1.1、高24.9厘米。
-
 ## Page 671
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 175. 玉凿，K1:291-1，玉质片岩。顶端有斜向的自然断裂面，刃端略宽于器身。宽2.1、厚1.6、高15.2厘米。
-
 > 176. 玉凿，K1:291-2，深紫色中型细粒砂岩。器形略薄。厚1.2、高19.5厘米。
-
 ## Page 672
 
-<!-- kind=caption_or_map confidence=high -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 177. 玉凿，K1:47，云母石英片岩，青灰色与灰黑色纹理相间。顶端一侧经火灼烧后局部呈鸡骨白色。器残断，经拼接复原。器形窄长，柄端细，刃端粗，断面为长椭圆形。宽3.2、厚1.5、高32厘米。
-
 ## Page 673
 
 <!-- kind=catalog confidence=medium -->
@@ -4796,99 +4395,70 @@ ABR KENTA RIE HS MG, OMA TTT, HUS.2, 2,
 <!-- kind=caption_or_map confidence=medium -->
 
 > 180. 玉璋，K1:97-3，灰白色云母石英片岩。局部被火烧后裂面，器身两面有开料切割痕迹，断面略呈圆角四边形。宽2.1、厚2.2、高26.6厘米。
-
 > 181. 器物，K2②:115-2。厚0.9、高20厘米。
-
 ## Page 675
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 182. 玉凿，K2(GD):285，斑杂状石英片岩，深灰色，一面有黑褐色云斑，顶端较薄。宽1.9、厚1.6、高21厘米。
-
 > 183. 玉凿，K2(GD):286，深灰色云母石英片岩。顶端残断。形制不规整，略呈多棱形，表面略加磨光，弧形刃，刃面平。宽2.4、厚1.7、高15.8厘米。
-
 ## Page 676
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 184. 玉凿，K2②:322-9。灰色细粒片麻岩。形制规整，中间残缺。宽2.9、厚1.5、高19.6厘米。
-
 > 185. 玉凿，K2②:70-1。灰色细粒片麻岩。形制规整，刃端宽于顶端，顶端平齐。厚0.8、高18.4厘米。
-
 ## Page 677
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 186. 石器，K2②:89-10，灰色斑点状石质，顶端不规整。
-
 > 187. 石器，K2②:89-13，黄岩。宽1.9、厚1.7、高18.4厘米。
-
 ## Page 678
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 188. 玉凿，K2G：89-14，深灰色斑点状石英片岩。顶端不规整。宽1.5厘米、厚1.2厘米、高17.4厘米。
-
 > 189. 玉凿，K2G：89-15，灰色亚玉质片岩。体较薄，形制规整，顶端平齐。宽1.2厘米、厚0.7厘米、高18.1厘米。
-
 ## Page 679
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 190. 玉凿，K2②:89-17。灰色斑点状石英片岩，顶端较薄。
-
 > 191. 玉凿，K2②:89-18。
-
 ## Page 680
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 192. K2②：89-19。宽2.2、厚1.9、高18.7厘米。
-
 > 193. K2②：89-20，灰色斑点片岩。一侧保持自然断面，略加磨光。宽2.4、厚1.2、高18厘米。
-
 ## Page 681
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-195.2, K2Q:39—23, 灰色斑点
-WG IHF. BRASIL
-14, —( SDK, DMEF BUH, TM. 981.7, 厚0.9、高
-15.6厚米。
-
+> 195. 玉器，K2②:39-23，灰色斑点石质，顶端自然断裂。宽1.7、厚0.9、高15.6厘米。
 ## Page 682
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 196. K2②:89—24。体短，形制较规整，顶端平齐。宽1.3厘米、厚0.9厘米、高11.5厘米。
-
 > 197. K2②:89—25。形制较规整，一面较平。宽1.5厘米、厚1.1厘米、高22.6厘米。
-
 ## Page 683
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-199. EB, K22:89—30, KABA. I, Di
-端为自然断裂面，略加磨光。宽1.7、厚1、高8.7砷米。
-
+> 端为自然断裂面，略加磨光。宽1.7、厚1、高8.7厘米。
 ## Page 684
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-WE
-Ts 1 Sa eR
-厚22、 1518.7)
-201. EH, K2@:89—39, DEMME 顶端有
-自然断裂面，稍轴魔光，刃源。 GE1.3, 厚0 9 高部]原
-米。
-
+> 201. 玉器，K2②:89-39，顶端有自然断裂面，稍加磨光，刃缘可见。宽1.3、厚0.9厘米。
 ## Page 685
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-203.玉评，K2G):89一36，斑点状石英片岩。体窗而
-面平，两侧绞直，刃端宽于顶端。宽2.3、厚1、高32.4
-
+> 203.玉评，K2③:89一36，斑点状石英片岩。体窗而
+> 面平，两侧绞直，刃端宽于顶端。宽2.3、厚1、高32.4
 ## Page 686
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -4900,9 +4470,7 @@ Ts 1 Sa eR
 <!-- kind=caption_or_map confidence=medium -->
 
 > 206. 玉凿，K2③:89-40，灰色斑点状石英片岩。体扁，两面薄。宽1.8、厚0.4、高14.8厘米。
-
 > 207. 玉凿，K2③:89-41。体扁，两面薄。宽1.9、厚0.8、高21.5厘米。
-
 ## Page 688
 
 <!-- kind=catalog confidence=low -->
@@ -4922,9 +4490,7 @@ Ts 1 Sa eR
 <!-- kind=caption_or_map confidence=medium -->
 
 > 212. 色泽不透明，一侧有开料的切制痕。长条形，两侧微直，双面平齐。高25.7、宽2.93、厚1.44厘米。
-
 > 213. 呈圆柱形，顶端不十分规整，仅在切料后的断面处略加磨光。宽2.2、厚2.2、高20.1厘米。
-
 ## Page 691
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -4942,64 +4508,48 @@ Ts 1 Sa eR
 <!-- kind=caption_or_map confidence=medium -->
 
 > 217. 玉璧，K1:260。圆形，中有孔。直径16.8厘米，孔径4.4厘米，厚1厘米。
-
 ## Page 694
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 218. 玉料，K2②:135-1（右），两件。一件为斑点石英片岩，用砾石制成，器形略方，周边圆弧，其中一角有自然凹缺，两面磨光。长10.2、宽9.5、厚2.4厘米。
-
 ## Page 695
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-210.5 HA, K2@:280—-2, WKAR a. MBE, “PIE, JAE
-i, PUNT HT, 168.3, Fi4.4, BEEK
-
+> 210. 玉磨石，K2②:280-2，浅灰色云母石英片岩，长8.3、宽4.4、厚1厘米。
 ## Page 696
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 220. 玉磨石。K2G②:280-2，长8.3、宽4.4、厚1厘米；K2G②:89-42，长11.7、宽3.7、厚1.1厘米；K1:140，长10.5、宽5.8、厚1厘米；K1:260，长8.8、宽4.4、厚1厘米。
-
 ## Page 697
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-222.玉磨石，K2G@);89一43，长桥圆形，中间厚，周边薄，形
-制规整，通体打磨光滑。一端残断。残长20.3、宽7.1、厚1.3厘
-米。
-
+> 222. 玉磨石，K2③:89-43，长椭圆形，中间厚，周边薄。
 ## Page 698
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-224.玉磨石，K2G):159，浅灰色云母石英
-片岩。体宽扁，一端斜抹，另一端有弧形
-刃。 Pare, FAW. 1214, $8.6, Jee
-0,95)HK
-
+> 224. 玉磨石，K2③:159，浅灰色云母石英片岩，体宽扁，一端斜抹，另一端有弧形刃。长14、宽8.6、厚0.95厘米。
 ## Page 699
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 均为圆柱形，个别为鼓形，大小不等，中有穿。长0.2—1.35厘米，直径0.6—1.35厘米。
-
 ## Page 700
 
 <!-- kind=caption_or_map confidence=medium -->
 
-> 227. K2Q:88—1。多为圆柱形，少数为算珠形，中有穿。长1—1.8厘米，直径0.8—1.1厘米。
-
+> 227. K2②:88—1。多为圆柱形，少数为算珠形，中有穿。长1—1.8厘米，直径0.8—1.1厘米。
 ## Page 701
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-229.58, K2G):269, FRM, 蓝、自两种颜色。
-少数两端平，多数两端斜平。长1.55一4.95、直径0.9一1.1
-厘米。
-700
-
+> 229.58, K2③:269, FRM, 蓝、自两种颜色。
+> 少数两端平，多数两端斜平。长1.55一4.95、直径0.9一1.1
+> 厘米。
 ## Page 702
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -5008,10 +4558,9 @@ i, PUNT HT, 168.3, Fi4.4, BEEK
 
 ## Page 703
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 233. 弯曲，直径较小。长1.9—6.5厘米，直径0.7—1.1厘米。
-
 ## Page 704
 
 <!-- kind=catalog confidence=medium -->
@@ -5023,47 +4572,33 @@ i, PUNT HT, 168.3, Fi4.4, BEEK
 <!-- kind=caption_or_map confidence=medium -->
 
 > 237. 玉料，K2G②:23-29、229-2，斑点石英片岩。利用砾石劈裂面制成，通体光滑，两面磨平，其中一面的三侧磨痕较深。长29、宽12.6、厚2.6厘米。
-
 ## Page 706
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-239. ABAGES, 97GSDeMS:7, Weer, WAS. A, ba
-灰黑色纹理。略时长方形，一面平，另一面弧拱。通体
-长 宽5.5、厚1.9厘米。
-
+> 239. 石器，97GSDGM5:7，灰黑色纹理，略呈长方形，一面平，另一面弧拱。宽5.5、厚1.9厘米。
 ## Page 707
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-i, a
-其神色板岩， Arwen, WA
-241 FREER, 00608,
-BBL. BALI, 宽3.5 厚1.8厘米。
-ay, HON, 49 AAR BAA
-
+> 241. 石器，编号00608，青灰色板岩。宽3.5、厚1.8厘米。
 ## Page 708
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 242。97CSDgM5:5，直径2.2厘米。
-
 > 不均匀青灰色，两端有黑灰色纹理，半透明。体细长。
-
 ## Page 709
 
-<!-- kind=caption_or_map confidence=high -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 243. 琥珀坠饰，K1:9，一端残缺。器物略呈心形，两面阴刻纹饰：一面为蝉背纹，另一面为蝉腹纹。上端有一凹槽，凹槽中有一圆穿，上下贯通。高5.1厘米、残宽3.8厘米、厚1.2厘米。
-
 ## Page 710
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 背拱起，一端有一孔。宽0.95、厚0.85厘米。
-
-> 244. 绿松石贝，K2GB:12。腹面平，中有一道凹槽，槽两侧有齿纹，背拱起，一端有一孔。长1.45、宽0.95厘米。
-
+> 244. 绿松石贝，K2③:12。腹面平，中有一道凹槽，槽两侧有齿纹，背拱起，一端有一孔。长1.45、宽0.95厘米。
 ## Page 711
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -5087,65 +4622,54 @@ ay, HON, 49 AAR BAA
 <!-- kind=caption_or_map confidence=medium -->
 
 > 1. 石器，99GSZYT104⑩:13。蚀变灰褐色大理岩，表面布满蚀点。器形纵剖面呈梯形，横剖面呈正方形。两端平，四边棱上有三道刻槽，制作粗糙。两端边长约7、5.7厘米，高11.5厘米。
-
 ## Page 715
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 2.石璋，K2(3D):79-1，出自K2(B):79铜尊内。因器形太小，石质未作鉴定。器物被火烧后呈灰褐色，射前部被烧残。两面平整，两侧直，射本部两侧齿饰宽出，均为三齿，柄长方形，正中有一穿。残长2.8厘米，宽1.3厘米。
-
 ## Page 716
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 3. 石璋，K2(GD):79-2，出自K2(GD):79铜尊内。因器形太小，石质未作鉴定。器物经火烧后呈灰褐色，刃前部被烧残。两面平整，两侧直，柄部两侧齿饰宽出，均为三齿；柄部长方形，正中有一穿。残长2.3厘米，宽1.1厘米。
-
 ## Page 717
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-5.48, 87G68Z):19,
-不平整，周缘较直，好孔略信
-通径11.6、好径4.1一4.6、肉帘2.9一4.2、厚0.8一1
-716
-
+> 5.48, 87G68Z):19,
+> 不平整，周缘较直，好孔略信
+> 通径11.6、好径4.1一4.6、肉帘2.9一4.2、厚0.8一1
 ## Page 718
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 7. 石璧，87GSZJ:20，青石质。质略细，器表平整，器身厚薄不均，周缘较直，好孔侧斜较大，管钻而成。通径9.8厘米，好径4.3—4.7厘米，肉宽1.9—3.4厘米，厚0.5—0.9厘米。
-
 ## Page 719
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 8. 石璧，87GSZJ:22，灰色。石质较细，制作规整，周缘较直，好孔略有偏斜。器身正面较平，背面微拱。通径7.1厘米，好径2.5—2.9厘米，肉宽1.7—2.5厘米，厚0.6—0.7厘米。
-
 ## Page 720
 
-<!-- kind=caption_or_map confidence=high -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 9. 石璧，87GSZJ:3。浅灰色，杂以黑色斑纹。石质细腻，通体有钙质水锈。通径17.1厘米，好径7.1—7.5厘米，肉宽4.7—5.2厘米，厚0.8—1.2厘米。
-
 ## Page 721
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-11 .石壁，87GSZJ4，灰色，石质略粗糙，周边有和剥蚀残痕，不
-其规整。通径14.2、好径4.9一5.2、肉帘4.9一5厘米。
-
+> 11 .石壁，87GSZJ4，灰色，石质略粗糙，周边有和剥蚀残痕，不
+> 其规整。通径14.2、好径4.9一5.2、肉帘4.9一5厘米。
 ## Page 722
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 13 石璧，87GSZ17。青灰色，杂以黑色斑纹。石质细腻，局部有气孔，满布水蚀痕。从石质和形体观察，疑系由87GSZJ:1号石璧芯制成。通径5.3—5.5厘米，孔径0.8—1.7厘米，肉宽1.7—2.3厘米，厚1厘米。
-
 ## Page 723
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 15. 石璧，87GSZJ:9，深灰色。石质细腻，一面打磨平整光洁，另一面打磨较差，不平整。好孔的位置略有偏移。通径3.1—3.5厘米，好径0.9—1.4厘米，肉宽1.1—1.4厘米，厚0.8厘米。
-
 ## Page 724
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -5160,29 +4684,25 @@ ay, HON, 49 AAR BAA
 
 ## Page 726
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-21 .石壁残件，87GSZJ.686GSJJT1113(8C)87，直径8，好径2.8，厚1.16厘米。
-
+> 21 .石壁残件，87GSZJ.686GSJJT1113(8C)87，直径8，好径2.8，厚1.16厘米。
 ## Page 727
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 23. 石璧残件，87GSZJ:6。灰色，石质细腻，器表有琢凿痕迹。边缘收分，当为制作石璧所遗残件，可见一道圆形管钻痕。
-
 ## Page 728
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-24 .石壁胚，86GSIIIT1413(80):94，灰绿色，局部蓝色。打制出圆形和毛豚， 5层状结构，未经磨制，从大小、厚
-厚2.1厘
-
+> 24 .石壁胚，86GSIIIT1413(80):94，灰绿色，局部蓝色。打制出圆形和毛豚，5层状结构，未经磨制，从大小、厚
+> 厚2.1厘
 ## Page 729
 
 <!-- kind=caption_or_map confidence=medium -->
 
-> 25 石环，K2GB):171，石灰岩。器物被火烧后呈灰黑色，出土时残为数块，经拼接复原。周缘直，内外两面平。两面孔边缘凸起，微外敞。孔径5.5、壁高1.75、肉厚2、通径9.5厘米。
-
+> 25 石环，K2③:171，石灰岩。器物被火烧后呈灰黑色，出土时残为数块，经拼接复原。周缘直，内外两面平。两面孔边缘凸起，微外敞。孔径5.5、壁高1.75、肉厚2、通径9.5厘米。
 ## Page 730
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -5194,9 +4714,7 @@ ay, HON, 49 AAR BAA
 <!-- kind=caption_or_map confidence=medium -->
 
 > 26. 石蜗旋状器，97GSDgM14:1。直径7厘米，高1.1厘米，厚0.6厘米。
-
 > 器物呈白色，外边缘微残。凹面周沿经打磨。从拱面中间钻出一圆孔，正面一侧的孔壁上有一钻痕。
-
 ## Page 732
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -5205,29 +4723,24 @@ ay, HON, 49 AAR BAA
 
 ## Page 733
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-27.石矛，86GSINT1675(11):48，灰白色蚀变贿。叶形锋，无辟，扁平无兰，尖锋利。通长13.3、宽6.3、厚1厘米
-732
-
+> 27.石矛，86GSINT1675(11):48，灰白色蚀变贿。叶形锋，无辟，扁平无兰，尖锋利。通长13.3、宽6.3、厚1厘米
 ## Page 734
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 本页为图版或说明页，文字信息有限；可辨内容仅见尺寸残文：“长4厘米”。
-
 ## Page 735
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-29.石予，K1:137，器形略小，矛叶本部及锋尖残，两侧录部有碰损痕迹。残长23、宽8.8、厚0.7厘米。
-
+> 29.石予，K1:137，器形略小，矛叶本部及锋尖残，两侧录部有碰损痕迹。残长23、宽8.8、厚0.7厘米。
 ## Page 736
 
-<!-- kind=caption_or_map confidence=high -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 30. 石矛，K1:141。器形较大，基本完好。矛叶两侧刃部有缺损的小缺口；矛叶根部两侧有击打而成的小缺口，略对称，用以系绳。长34.2、宽9.5、厚0.8厘米。
-
 ## Page 737
 
 <!-- kind=catalog confidence=medium -->
@@ -5242,24 +4755,19 @@ ay, HON, 49 AAR BAA
 
 ## Page 739
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-33.石戈，K2GB):148，体较厚。仅存援部残片。两侧直，两面有切割痕迹。残长23.9、宽11.7、厚1.2厘米。
-738
-
+> 33.石戈，K2③:148，体较厚。仅存援部残片。两侧直，两面有切割痕迹。残长23.9、宽11.7、厚1.2厘米。
 ## Page 740
 
 <!-- kind=caption_or_map confidence=medium -->
 
-> 34. 石戈，K2G):150-1，大理岩，被火烧成残块。援形宽大，仅残存内、胡部。内前部的两面各有平行线，中间有一圆穿。残长29.2、宽21.2、厚1.7厘米。
-
+> 34. 石戈，K2③:150-1，大理岩，被火烧成残块。援形宽大，仅残存内、胡部。内前部的两面各有平行线，中间有一圆穿。残长29.2、宽21.2、厚1.7厘米。
 ## Page 741
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-35 石铸，采:319，红色，磨制，下部一角残缺，边缘有疤痕。三角形，叶较宽，尖峰，有边刃，无中关，无链，平底。长6.8、宽3.4、厚0.6厘米。
-740
-
+> 35 石铸，采:319，红色，磨制，下部一角残缺，边缘有疤痕。三角形，叶较宽，尖峰，有边刃，无中关，无链，平底。长6.8、宽3.4、厚0.6厘米。
 ## Page 742
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -5268,24 +4776,19 @@ ay, HON, 49 AAR BAA
 
 ## Page 743
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-36.石竹，采:200，英片贿，磨制，弧项，顶部有砸击过的痕迹，弧腰，上部及中部有一穿孔。残长9.5、残宽5.6厘米。
-742
-
+> 36.石竹，采:200，英片贿，磨制，弧项，顶部有砸击过的痕迹，弧腰，上部及中部有一穿孔。残长9.5、残宽5.6厘米。
 ## Page 744
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 37. 石斧，K1:60，砂岩。器形较薄，两面较平，两侧直。顶端及一面可见打击痕迹，另一面被火烧后炸裂剥落，刃略有弧度。刃宽6.1厘米，器宽6.3厘米，厚1.9厘米，高16.4厘米。
-
 ## Page 745
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-38.石竹，K1:247一4，砂岩。器物被火烧后多处炸裂、剥落。器物两面微贞起，两侧平直，正锋。刃宽4.7、器宽4.9，厚2、高18.1厘米。
-744
-
+> 38.石竹，K1:247一4，砂岩。器物被火烧后多处炸裂、剥落。器物两面微贞起，两侧平直，正锋。刃宽4.7、器宽4.9，厚2、高18.1厘米。
 ## Page 746
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -5300,23 +4803,19 @@ ay, HON, 49 AAR BAA
 
 ## Page 748
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
 > 刃宽3厘米，厚0.2厘米。
-
 ## Page 749
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-44.石评，00053，青灰色，长条形。顶端磨出刃部，单面四，可作锛用。高5.5、宽1.1、厚0.8厘米。
-748
-
+> 44.石评，00053，青灰色，长条形。顶端磨出刃部，单面四，可作锛用。高5.5、宽1.1、厚0.8厘米。
 ## Page 750
 
 <!-- kind=caption_or_map confidence=medium -->
 
 > 45. 石锥形器，97GSDgM5:4，硅化白云岩，硬度4—5度。白色，微泛青，不透明，器身有剥蚀痕。体粗短，锥尖部较钝，后端锥形柄较长。长19.2厘米，直径2.4厘米。
-
 ## Page 751
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -5331,11 +4830,9 @@ ay, HON, 49 AAR BAA
 
 ## Page 753
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-49 Awe, ids, DUNS, BATA SIE ILS, TATU, ACH TAT PE
-整齐的牙齿，腿部残。身长10.6、宽65、高4.4厘米=
-
+> 49. 石兽，残件，牙齿整齐，腿部残。身长10.6、宽6.5、高4.4厘米。
 ## Page 754
 
 <!-- kind=figure_or_blank confidence=low -->
@@ -5350,17 +4847,15 @@ ay, HON, 49 AAR BAA
 
 ## Page 756
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-51 石料，86GSIIITI4148A)7I，白色带麻吉，似为卵石，表面磨圆。长条形，局部层状
-出，经拼接复原。高15.5、宽3.5、厚3.3厘米。
-
+> 51 石料，86GSIIITI4148A)7I，白色带麻吉，似为卵石，表面磨圆。长条形，局部层状
+> 出，经拼接复原。高15.5、宽3.5、厚3.3厘米。
 ## Page 757
 
-<!-- kind=caption_or_map confidence=low -->
+<!-- kind=caption_or_map confidence=medium -->
 
-52 海贝，10枚。有有黑、自两色。经初此鉴定，有货贝。虎斑纹贝、环纹货贝等。最大长3.2、宽2.6厘米; 最小长2.5、宽17厘米5
-
+> 52 海贝，10枚。有有黑、自两色。经初此鉴定，有货贝。虎斑纹贝、环纹货贝等。最大长3.2、宽2.6厘米; 最小长2.5、宽17厘米5
 ## Page 758
 
 <!-- kind=catalog confidence=medium -->
