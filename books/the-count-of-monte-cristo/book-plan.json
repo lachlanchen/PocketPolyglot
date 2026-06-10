@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "book_id": "the-count-of-monte-cristo",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_en_zh_sources_generated_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "zh": "sources/the-count-of-monte-cristo/读客经典文库：基督山伯爵（余华不吃不喝不睡，疯了般读完《基督山伯爵》！人类全部的智慧尽在其中！全三册一字未删完整版！）.pdf",
+    "en": "sources/the-count-of-monte-cristo/The Count of Monte Cristo.epub"
+  },
+  "source_sha256": {
+    "zh": "6746797784c16572a29c81e2f581cb8e55323148eb91d7c17aca475df68f35ff",
+    "en": "ec59ca5b1666a292c68ecf2fb988103770c69dd2674d84d382084a3ac6c01f63"
+  },
+  "markdown": {
+    "en": "books/the-count-of-monte-cristo/markdown/en.md",
+    "zh": "books/the-count-of-monte-cristo/markdown/zh.md"
+  },
+  "book_title_en": "The Count of Monte Cristo",
+  "book_title_zh": "基督山伯爵",
+  "book_title_ja": "モンテ・クリスト伯",
+  "book_title_zh_reading": "jī dū shān bó jué",
+  "book_title_ja_reading": "モンテ クリスト はく",
+  "author": "Alexandre Dumas",
+  "author_reading_zh": "yà lì shān dà zhòng mǎ",
+  "author_reading_ja": "アレクサンドル デュマ",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Alexandre Dumas, The Count of Monte Cristo. English EPUB is the alignment spine; Chinese PDF is a broad published translation reference; Japanese is generated in natural modern Japanese.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "global_ratio_window",
+  "chunks_jsonl": "books/the-count-of-monte-cristo/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/the-count-of-monte-cristo/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/the-count-of-monte-cristo/work/trilingual/interlinear/chunks",
+  "preview_json": "books/the-count-of-monte-cristo/work/trilingual/preview/the-count-of-monte-cristo.partial.json",
+  "assembled_json": "books/the-count-of-monte-cristo/work/trilingual/preview/the-count-of-monte-cristo.partial.json",
+  "prepared_at": "2026-06-10T10:29:56.024180+00:00",
+  "chunk_count": 1143,
+  "english_chapter_count": 117,
+  "chinese_reference_chapter_count": 122,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_world_literature_trilingual.py",
+    "english_spine": "English source is the chunk spine.",
+    "chinese_reference": "Chinese source converted to broad reference windows.",
+    "start_command": "bash scripts/interlinear/start_trilingual_book_tmux.sh the-count-of-monte-cristo"
+  }
+}

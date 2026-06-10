@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "book_id": "notre-dame-de-paris",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_en_source_generated_zh_ja_with_scanned_zh_reference",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "zh": "sources/notre-dame-de-paris/巴黎圣母院.pdf",
+    "en": "sources/notre-dame-de-paris/Notre-dame de Paris, by Victor Hugo.pdf"
+  },
+  "source_sha256": {
+    "zh": "60164ab7042778ba0e4b580bb43184cb5b1181a828b5ee0cb128f2de217eacdc",
+    "en": "f37616c683866815afdc8bab9eed5404bb1957d4d177093eb942af59d1a7ddb9"
+  },
+  "markdown": {
+    "en": "books/notre-dame-de-paris/markdown/en.md"
+  },
+  "book_title_en": "Notre-Dame de Paris",
+  "book_title_zh": "巴黎圣母院",
+  "book_title_ja": "ノートルダム・ド・パリ",
+  "book_title_zh_reading": "bā lí shèng mǔ yuàn",
+  "book_title_ja_reading": "ノートルダム ド パリ",
+  "author": "Victor Hugo",
+  "author_reading_zh": "wéi kè duō yǔ guǒ",
+  "author_reading_ja": "ヴィクトル ユーゴー",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Victor Hugo, Notre-Dame de Paris. English PDF is the alignment spine. The Chinese PDF appears scanned or metadata-only in pdftotext, so the first run should generate Chinese from English unless an OCR reference is prepared.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "global_ratio_window",
+  "chunks_jsonl": "books/notre-dame-de-paris/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/notre-dame-de-paris/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/notre-dame-de-paris/work/trilingual/interlinear/chunks",
+  "preview_json": "books/notre-dame-de-paris/work/trilingual/preview/notre-dame-de-paris.partial.json",
+  "assembled_json": "books/notre-dame-de-paris/work/trilingual/preview/notre-dame-de-paris.partial.json",
+  "prepared_at": "2026-06-10T10:31:44.556724+00:00",
+  "chunk_count": 471,
+  "english_chapter_count": 63,
+  "chinese_reference_chapter_count": 0,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_world_literature_trilingual.py",
+    "english_spine": "English source is the chunk spine.",
+    "chinese_reference": "Chinese PDF has no usable embedded text; generate Chinese from English or prepare OCR before running.",
+    "start_command": "bash scripts/interlinear/start_trilingual_book_tmux.sh notre-dame-de-paris"
+  }
+}

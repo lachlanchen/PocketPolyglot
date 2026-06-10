@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "book_id": "les-miserables",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_en_zh_sources_generated_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "zh": "sources/les-miserables/悲惨世界（上、下）【文字版】.pdf",
+    "en": "sources/les-miserables/Les Misérables.pdf"
+  },
+  "source_sha256": {
+    "zh": "5342a389cde58cbf655a77e5ba075df2beef1c3c3dced5b02677a6c632623b39",
+    "en": "fb3e2cd7b980e1fc4021625d08cee4220e185129e42e2584dc75215c19aee96e"
+  },
+  "markdown": {
+    "en": "books/les-miserables/markdown/en.md",
+    "zh": "books/les-miserables/markdown/zh.md"
+  },
+  "book_title_en": "Les Misérables",
+  "book_title_zh": "悲惨世界",
+  "book_title_ja": "レ・ミゼラブル",
+  "book_title_zh_reading": "bēi cǎn shì jiè",
+  "book_title_ja_reading": "レ ミゼラブル",
+  "author": "Victor Hugo",
+  "author_reading_zh": "wéi kè duō yǔ guǒ",
+  "author_reading_ja": "ヴィクトル ユーゴー",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Victor Hugo, Les Misérables. English Project Gutenberg PDF is the alignment spine; Chinese text PDF is a broad published translation reference; Japanese is generated in natural modern Japanese. This is very long and should run late.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "global_ratio_window",
+  "chunks_jsonl": "books/les-miserables/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/les-miserables/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/les-miserables/work/trilingual/interlinear/chunks",
+  "preview_json": "books/les-miserables/work/trilingual/preview/les-miserables.partial.json",
+  "assembled_json": "books/les-miserables/work/trilingual/preview/les-miserables.partial.json",
+  "prepared_at": "2026-06-10T10:31:04.083929+00:00",
+  "chunk_count": 1630,
+  "english_chapter_count": 438,
+  "chinese_reference_chapter_count": 369,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_world_literature_trilingual.py",
+    "english_spine": "English source is the chunk spine.",
+    "chinese_reference": "Chinese source converted to broad reference windows.",
+    "start_command": "bash scripts/interlinear/start_trilingual_book_tmux.sh les-miserables"
+  }
+}
