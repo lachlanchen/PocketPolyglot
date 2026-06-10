@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import subprocess
 from pathlib import Path
 from typing import Any
 
@@ -172,6 +173,11 @@ def preferred_ocr_markdown(path: Path, *, lang: str) -> Path | None:
 
         if os.environ.get("POCKETPOLYGLOT_PREFER_EN_OCR", "0") != "1":
             return None
+    if lang == "zh":
+        import os
+
+        if os.environ.get("POCKETPOLYGLOT_PREFER_ZH_OCR", "0") != "1" and embedded_pdf_content_chars(path) >= 2000:
+            return None
     for book_id, config in BOOKS.items():
         if lang == "en" and config.en_source == path:
             candidate = ROOT / "books" / book_id / "markdown" / "en.ocr-polished.md"
@@ -182,6 +188,18 @@ def preferred_ocr_markdown(path: Path, *, lang: str) -> Path | None:
         if candidate.exists():
             return candidate
     return None
+
+
+def embedded_pdf_content_chars(path: Path) -> int:
+    try:
+        raw = subprocess.check_output(
+            ["pdftotext", "-layout", str(ROOT / path), "-"],
+            cwd=ROOT,
+            stderr=subprocess.DEVNULL,
+        ).decode("utf-8", errors="replace")
+    except Exception:
+        return 0
+    return content_chars(raw)
 
 
 def lines_from_ocr_markdown(path: Path) -> list[str]:
