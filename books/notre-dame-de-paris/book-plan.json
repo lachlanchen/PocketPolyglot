@@ -14,7 +14,8 @@
     "en": "f37616c683866815afdc8bab9eed5404bb1957d4d177093eb942af59d1a7ddb9"
   },
   "markdown": {
-    "en": "books/notre-dame-de-paris/markdown/en.md"
+    "en": "books/notre-dame-de-paris/markdown/en.md",
+    "zh": "books/notre-dame-de-paris/markdown/zh.md"
   },
   "book_title_en": "Notre-Dame de Paris",
   "book_title_zh": "巴黎圣母院",
@@ -35,14 +36,14 @@
   "raw_chunk_dir": "books/notre-dame-de-paris/work/trilingual/interlinear/chunks",
   "preview_json": "books/notre-dame-de-paris/work/trilingual/preview/notre-dame-de-paris.partial.json",
   "assembled_json": "books/notre-dame-de-paris/work/trilingual/preview/notre-dame-de-paris.partial.json",
-  "prepared_at": "2026-06-10T10:58:24.249999+00:00",
+  "prepared_at": "2026-06-10T11:00:15.109486+00:00",
   "chunk_count": 471,
   "english_chapter_count": 63,
-  "chinese_reference_chapter_count": 0,
+  "chinese_reference_chapter_count": 9,
   "preparation_notes": {
     "script": "scripts/interlinear/prepare_world_literature_trilingual.py",
     "english_spine": "English source is the chunk spine.",
-    "chinese_reference": "Chinese PDF has no usable embedded text; generate Chinese from English or prepare OCR before running.",
+    "chinese_reference": "Chinese source converted to broad reference windows.",
     "start_command": "bash scripts/interlinear/start_trilingual_book_tmux.sh notre-dame-de-paris"
   }
 }
