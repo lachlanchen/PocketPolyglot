@@ -230,21 +230,22 @@ def lines_from_ocr_markdown(path: Path) -> list[str]:
     return lines
 
 
-def clean_world_line(raw_line: str, *, lang: str) -> str:
+def clean_world_line(raw_line: str, *, lang: str, from_ocr: bool = False) -> str:
     line = base.clean_line(raw_line)
     line = line.replace(" ,", "，").replace(" .", "。") if lang == "zh" else line
     line = base.compact(line)
     if not line or PAGE_NUMBER_RE.match(line):
         return ""
     if lang == "zh":
-        line = clean_zh_ocr_noise(line)
-        if not line:
-            return ""
+        if from_ocr:
+            line = clean_zh_ocr_noise(line)
+            if not line:
+                return ""
+            if ("本章节" in line or "本节重点" in line or "思维链接" in line) and "话说距今三百四十八年" not in line:
+                return ""
+            if re.match(r"^\d{1,2}[，,、.．]\s*.+(?:什么|为什么|说明|体现|如何|怎样|赏析|思考)", line):
+                return ""
         if "图书在版编目" in line or "ISBN" in line or "版权所有" in line:
-            return ""
-        if ("本章节" in line or "本节重点" in line or "思维链接" in line) and "话说距今三百四十八年" not in line:
-            return ""
-        if re.match(r"^\d{1,2}[，,、.．]\s*.+(?:什么|为什么|说明|体现|如何|怎样|赏析|思考)", line):
             return ""
         cjk_count = len(re.findall(r"[\u3400-\u4dbf\u4e00-\u9fff]", line))
         if cjk_count == 0 and LATIN_ONLY_NOISE_RE.match(line):
@@ -289,7 +290,7 @@ def clean_zh_ocr_noise(line: str) -> str:
 def source_lines(path: Path, *, lang: str, allow_scanned: bool = False) -> list[str]:
     ocr_markdown = preferred_ocr_markdown(path, lang=lang)
     if ocr_markdown:
-        return [clean_world_line(line, lang=lang) for line in lines_from_ocr_markdown(ocr_markdown)]
+        return [clean_world_line(line, lang=lang, from_ocr=True) for line in lines_from_ocr_markdown(ocr_markdown)]
     suffix = path.suffix.lower()
     if suffix == ".epub":
         return base.epub_lines(path)
