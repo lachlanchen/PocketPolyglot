@@ -160,6 +160,50 @@ BOOKS: dict[str, base.BookConfig] = {
 }
 
 
+def preferred_ocr_markdown(path: Path, *, lang: str) -> Path | None:
+    """Return polished OCR Markdown for this PDF source when available."""
+
+    if path.suffix.lower() != ".pdf":
+        return None
+    for book_id, config in BOOKS.items():
+        if lang == "en" and config.en_source == path:
+            candidate = ROOT / "books" / book_id / "markdown" / "en.ocr-polished.md"
+        elif lang == "zh" and config.zh_source == path:
+            candidate = ROOT / "books" / book_id / "markdown" / "zh.ocr-polished.md"
+        else:
+            continue
+        if candidate.exists():
+            return candidate
+    return None
+
+
+def lines_from_ocr_markdown(path: Path) -> list[str]:
+    lines: list[str] = []
+    in_yaml = False
+    for raw in path.read_text(encoding="utf-8", errors="replace").splitlines():
+        stripped = raw.strip()
+        if stripped == "---":
+            in_yaml = not in_yaml
+            continue
+        if in_yaml:
+            continue
+        if not stripped:
+            lines.append("")
+            continue
+        if stripped.startswith("<!--"):
+            continue
+        if stripped.startswith("# "):
+            continue
+        if re.match(r"^##\s+Page\s+\d+\s*$", stripped, re.IGNORECASE):
+            lines.append("")
+            continue
+        if stripped.startswith("## "):
+            lines.append(stripped.removeprefix("## ").strip())
+            continue
+        lines.append(stripped)
+    return lines
+
+
 def clean_world_line(raw_line: str, *, lang: str) -> str:
     line = base.clean_line(raw_line)
     line = line.replace(" ,", "，").replace(" .", "。") if lang == "zh" else line
@@ -188,6 +232,9 @@ def clean_world_line(raw_line: str, *, lang: str) -> str:
 
 
 def source_lines(path: Path, *, lang: str, allow_scanned: bool = False) -> list[str]:
+    ocr_markdown = preferred_ocr_markdown(path, lang=lang)
+    if ocr_markdown:
+        return [clean_world_line(line, lang=lang) for line in lines_from_ocr_markdown(ocr_markdown)]
     suffix = path.suffix.lower()
     if suffix == ".epub":
         return base.epub_lines(path)
