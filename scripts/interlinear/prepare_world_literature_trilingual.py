@@ -9,6 +9,7 @@ trilingual tmux queue can be started later.
 from __future__ import annotations
 
 import argparse
+import dataclasses
 import json
 import re
 import subprocess
@@ -36,12 +37,30 @@ ZH_HEADING_RE = re.compile(
     r"[一二三四五六七八九十百千〇零0-9]{1,4}[、.．]\s*.{1,40}"
     r")$"
 )
+JP_HEADING_RE = re.compile(
+    r"^(?:"
+    r"第\s*[一二三四五六七八九十百千〇零0-9]+\s*[部編文章巻章]\s*.*|"
+    r"[一二三四五六七八九十百千〇零0-9]{1,4}[、.．　 ]\s*.{1,60}"
+    r")$"
+)
 PAGE_NUMBER_RE = re.compile(r"^[\-—–]?\s*\d{1,5}\s*[\-—–]?$")
 LATIN_ONLY_NOISE_RE = re.compile(r"^[A-Za-z0-9 .,:;!?'\-_/()]{1,18}$")
+KANA_RE = re.compile(r"[\u3040-\u30ff]")
+CJK_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 
 
 class PreparedBookConfig(base.BookConfig):
     pass
+
+
+@dataclasses.dataclass(frozen=True)
+class JapaneseReferenceConfig:
+    source: Path
+    start_marker: str | None = None
+    end_marker: str | None = None
+    coverage_ratio: float = 1.0
+    quality: str = "published_japanese_translation_reference"
+    note: str = "Japanese source converted to broad reference windows."
 
 
 BOOKS: dict[str, base.BookConfig] = {
@@ -158,6 +177,26 @@ BOOKS: dict[str, base.BookConfig] = {
             "spine; Chinese text PDF is a broad published translation reference; Japanese "
             "is generated in natural modern Japanese. This is very long and should run late."
         ),
+    ),
+}
+
+JAPANESE_REFERENCES: dict[str, JapaneseReferenceConfig] = {
+    "wuthering-heights": JapaneseReferenceConfig(
+        source=Path("sources/wuthering-heights/嵐が丘（上）.epub"),
+        start_marker="第一章",
+        coverage_ratio=0.45,
+        quality="partial_published_japanese_translation_reference",
+        note=(
+            "Japanese EPUB source is 嵐が丘（上）, so it is a partial published "
+            "translation reference. Use it when the window matches the chunk; generate "
+            "natural Japanese for unmatched later chunks."
+        ),
+    ),
+    "les-miserables": JapaneseReferenceConfig(
+        source=Path("sources/les-miserables/レ・ミゼラブル 全巻セット.epub"),
+        start_marker="第一部ファンティーヌ",
+        quality="published_japanese_translation_reference",
+        note="Japanese EPUB source is レ・ミゼラブル 全巻セット and should be used as the main Japanese reference.",
     ),
 }
 
@@ -317,6 +356,8 @@ def marker_start(lines: list[str], marker: str | None, *, lang: str) -> int:
             return index
         if lang == "en" and any(looks_like_en_prose(item) for item in window):
             return index
+        if lang == "ja" and any(looks_like_ja_prose(item) for item in window):
+            return index
     return hits[-1]
 
 
@@ -334,6 +375,14 @@ def looks_like_zh_heading(line: str) -> bool:
     return bool(ZH_HEADING_RE.match(line))
 
 
+def looks_like_ja_heading(line: str) -> bool:
+    if not line or len(line) > 100:
+        return False
+    if JP_HEADING_RE.match(line):
+        return True
+    return line in {"序", "序文", "あとがき", "解説", "目次"}
+
+
 def looks_like_en_prose(line: str) -> bool:
     if not line or looks_like_en_heading(line):
         return False
@@ -343,7 +392,13 @@ def looks_like_en_prose(line: str) -> bool:
 def looks_like_zh_prose(line: str) -> bool:
     if not line or looks_like_zh_heading(line):
         return False
-    return len(re.findall(r"[\u3400-\u4dbf\u4e00-\u9fff]", line)) >= 6
+    return len(CJK_RE.findall(line)) >= 6
+
+
+def looks_like_ja_prose(line: str) -> bool:
+    if not line or looks_like_ja_heading(line):
+        return False
+    return len(line) >= 8 and (bool(KANA_RE.search(line)) or len(CJK_RE.findall(line)) >= 6)
 
 
 def normalize_en_paragraph(lines: list[str]) -> str:
@@ -462,6 +517,91 @@ def parse_zh_source(path: Path | None, *, start_marker: str | None, end_marker: 
     return [chapter for chapter in chapters if chapter.paragraphs]
 
 
+def parse_ja_source(ref: JapaneseReferenceConfig | None) -> list[base.Chapter]:
+    if ref is None or not (ROOT / ref.source).exists():
+        return []
+    lines = [base.clean_line(raw) for raw in base.epub_lines(ref.source)]
+    lines = [line for line in lines if line]
+    start = marker_start(lines, ref.start_marker, lang="ja")
+    end = len(lines)
+    if ref.end_marker:
+        for index in range(start + 1, len(lines)):
+            if lines[index] and base.marker_matches(lines[index], ref.end_marker):
+                end = index
+                break
+    lines = lines[start:end]
+
+    chapters: list[base.Chapter] = []
+    current: base.Chapter | None = None
+    for line in lines:
+        if looks_like_ja_heading(line):
+            current = base.Chapter(number=len(chapters) + 1, title=line, part="")
+            chapters.append(current)
+            continue
+        if current is None and looks_like_ja_prose(line):
+            current = base.Chapter(number=1, title="本文", part="")
+            chapters.append(current)
+        if current is not None and looks_like_ja_prose(line):
+            current.paragraphs.append(line)
+    return [chapter for chapter in chapters if chapter.paragraphs]
+
+
+def inject_japanese_reference(book_id: str, ref: JapaneseReferenceConfig, ja_chapters: list[base.Chapter]) -> None:
+    book_root = ROOT / "books" / book_id
+    plan_path = book_root / "book-plan.json"
+    plan = json.loads(plan_path.read_text(encoding="utf-8"))
+    chunks_jsonl = ROOT / plan["chunks_jsonl"]
+    manifest_path = ROOT / plan["chunks_manifest"]
+    chunks = [json.loads(line) for line in chunks_jsonl.read_text(encoding="utf-8").splitlines() if line.strip()]
+    ja_text = base.all_text(ja_chapters)
+    total_chars = max(
+        sum(
+            len(str(paragraph.get(chunk.get("source_spine_lang") or plan.get("source_spine_lang") or "en", ""))) + 1
+            for chunk in chunks
+            for paragraph in chunk.get("paragraphs", [])
+        ),
+        1,
+    )
+    cursor = 0
+    for chunk in chunks:
+        spine_lang = str(chunk.get("source_spine_lang") or plan.get("source_spine_lang") or "en")
+        chunk_chars = sum(len(str(paragraph.get(spine_lang, ""))) + 1 for paragraph in chunk.get("paragraphs", []))
+        start_ratio = cursor / total_chars
+        end_ratio = min(1.0, (cursor + chunk_chars) / total_chars)
+        if start_ratio < ref.coverage_ratio:
+            ja_start_ratio = min(1.0, start_ratio / max(ref.coverage_ratio, 0.001))
+            ja_end_ratio = min(1.0, end_ratio / max(ref.coverage_ratio, 0.001))
+            window = base.reference_window(ja_text, ja_start_ratio, ja_end_ratio, max_chars=plan.get("reference_chars", 9000) or 9000)
+        else:
+            window = ""
+        chunk.setdefault("reference", {})["ja"] = {
+            "available": bool(window),
+            "chapter": "global-ratio-window",
+            "text": window,
+            "quality": ref.quality,
+        }
+        cursor += chunk_chars
+
+    chunks_jsonl.write_text("\n".join(json.dumps(chunk, ensure_ascii=False) for chunk in chunks) + "\n", encoding="utf-8")
+
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    manifest.setdefault("source_paths", {})["ja"] = str(ref.source)
+    manifest.setdefault("source_sha256", {})["ja"] = base.sha256(ref.source)
+    manifest["japanese_reference_chapter_count"] = len(ja_chapters)
+    manifest["japanese_reference_note"] = ref.note
+    manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    plan.setdefault("source_paths", {})["ja"] = str(ref.source)
+    plan.setdefault("source_sha256", {})["ja"] = base.sha256(ref.source)
+    plan.setdefault("markdown", {})["ja"] = str(Path("books") / book_id / "markdown/jp.md")
+    plan["japanese_reference_chapter_count"] = len(ja_chapters)
+    plan["japanese_reference_note"] = ref.note
+    plan["task_mode"] = "trilingual_en_zh_ja_sources" if plan.get("task_mode") else "trilingual_en_zh_ja_sources"
+    notes = plan.setdefault("preparation_notes", {})
+    notes["japanese_reference"] = ref.note
+    plan_path.write_text(json.dumps(plan, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
 def prepare_selected(book_ids: list[str], args: argparse.Namespace) -> list[dict[str, Any]]:
     original_en = base.parse_en_source
     original_zh = base.parse_zh_source
@@ -474,6 +614,15 @@ def prepare_selected(book_ids: list[str], args: argparse.Namespace) -> list[dict
             plan_path = ROOT / "books" / book_id / "book-plan.json"
             plan = json.loads(plan_path.read_text(encoding="utf-8"))
             zh_markdown = ROOT / "books" / book_id / "markdown" / "zh.md"
+            ja_ref = JAPANESE_REFERENCES.get(book_id)
+            ja_chapters = parse_ja_source(ja_ref)
+            if ja_ref and ja_chapters:
+                base.write_text(
+                    ROOT / "books" / book_id / "markdown/jp.md",
+                    base.markdown_for_chapters(BOOKS[book_id].title_ja, ja_chapters),
+                )
+                inject_japanese_reference(book_id, ja_ref, ja_chapters)
+                plan = json.loads(plan_path.read_text(encoding="utf-8"))
             plan["preparation_notes"] = {
                 "script": "scripts/interlinear/prepare_world_literature_trilingual.py",
                 "english_spine": "English source is the chunk spine.",
@@ -481,6 +630,9 @@ def prepare_selected(book_ids: list[str], args: argparse.Namespace) -> list[dict
                     "Chinese source converted to broad reference windows."
                     if zh_markdown.exists()
                     else "Chinese PDF has no usable embedded text; generate Chinese from English or prepare OCR before running."
+                ),
+                "japanese_reference": (
+                    ja_ref.note if ja_ref and ja_chapters else "No published Japanese reference source configured; generate Japanese from source spine."
                 ),
                 "start_command": f"bash scripts/interlinear/start_trilingual_book_tmux.sh {book_id}",
             }

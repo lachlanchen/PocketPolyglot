@@ -16,15 +16,17 @@
   "source_spine_lang": "en",
   "source_paths": {
     "zh": "sources/wuthering-heights/呼啸山庄.pdf",
-    "en": "sources/wuthering-heights/Wuthering Heights.epub"
+    "en": "sources/wuthering-heights/Wuthering Heights.epub",
+    "ja": "sources/wuthering-heights/嵐が丘（上）.epub"
   },
   "source_sha256": {
     "zh": "c534b1fa58d222a92167e19be12cba913dcec2c8fcab903719d7476739168c73",
-    "en": "77af65ce00fa55884d223613fadd8ad2315eb08cfc50789763d2ddf610c49ffd"
+    "en": "77af65ce00fa55884d223613fadd8ad2315eb08cfc50789763d2ddf610c49ffd",
+    "ja": "65d3a0be777adbc78fe0be4c4a7ff0e9790889ea35a03ea82f3d9cf2ea59812d"
   },
   "source_note": "Emily Brontë, Wuthering Heights. English EPUB is the alignment spine; Chinese PDF is a broad published translation reference; Japanese is generated in natural modern Japanese.",
   "chunk_count": 329,
-  "generated_at": "2026-06-10T10:47:36.877303+00:00",
+  "generated_at": "2026-06-10T13:16:36.881665+00:00",
   "chunks": [
     {
       "chunk_id": "wuthering-heights-c0001",
@@ -4633,5 +4635,7 @@
         "wuthering-heights-s062-p02304"
       ]
     }
-  ]
+  ],
+  "japanese_reference_chapter_count": 14,
+  "japanese_reference_note": "Japanese EPUB source is 嵐が丘（上）, so it is a partial published translation reference. Use it when the window matches the chunk; generate natural Japanese for unmatched later chunks."
 }

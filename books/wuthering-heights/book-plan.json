@@ -3,19 +3,22 @@
   "book_id": "wuthering-heights",
   "status": "prepared_trilingual",
   "launchable": true,
-  "task_mode": "trilingual_en_zh_sources_generated_ja",
+  "task_mode": "trilingual_en_zh_ja_sources",
   "source_spine_lang": "en",
   "source_paths": {
     "zh": "sources/wuthering-heights/呼啸山庄.pdf",
-    "en": "sources/wuthering-heights/Wuthering Heights.epub"
+    "en": "sources/wuthering-heights/Wuthering Heights.epub",
+    "ja": "sources/wuthering-heights/嵐が丘（上）.epub"
   },
   "source_sha256": {
     "zh": "c534b1fa58d222a92167e19be12cba913dcec2c8fcab903719d7476739168c73",
-    "en": "77af65ce00fa55884d223613fadd8ad2315eb08cfc50789763d2ddf610c49ffd"
+    "en": "77af65ce00fa55884d223613fadd8ad2315eb08cfc50789763d2ddf610c49ffd",
+    "ja": "65d3a0be777adbc78fe0be4c4a7ff0e9790889ea35a03ea82f3d9cf2ea59812d"
   },
   "markdown": {
     "en": "books/wuthering-heights/markdown/en.md",
-    "zh": "books/wuthering-heights/markdown/zh.md"
+    "zh": "books/wuthering-heights/markdown/zh.md",
+    "ja": "books/wuthering-heights/markdown/jp.md"
   },
   "book_title_en": "Wuthering Heights",
   "book_title_zh": "呼啸山庄",
@@ -36,14 +39,17 @@
   "raw_chunk_dir": "books/wuthering-heights/work/trilingual/interlinear/chunks",
   "preview_json": "books/wuthering-heights/work/trilingual/preview/wuthering-heights.partial.json",
   "assembled_json": "books/wuthering-heights/work/trilingual/preview/wuthering-heights.partial.json",
-  "prepared_at": "2026-06-10T10:47:36.935298+00:00",
+  "prepared_at": "2026-06-10T13:16:36.922351+00:00",
   "chunk_count": 329,
   "english_chapter_count": 62,
   "chinese_reference_chapter_count": 20,
+  "japanese_reference_chapter_count": 14,
+  "japanese_reference_note": "Japanese EPUB source is 嵐が丘（上）, so it is a partial published translation reference. Use it when the window matches the chunk; generate natural Japanese for unmatched later chunks.",
   "preparation_notes": {
     "script": "scripts/interlinear/prepare_world_literature_trilingual.py",
     "english_spine": "English source is the chunk spine.",
     "chinese_reference": "Chinese source converted to broad reference windows.",
+    "japanese_reference": "Japanese EPUB source is 嵐が丘（上）, so it is a partial published translation reference. Use it when the window matches the chunk; generate natural Japanese for unmatched later chunks.",
     "start_command": "bash scripts/interlinear/start_trilingual_book_tmux.sh wuthering-heights"
   }
 }
