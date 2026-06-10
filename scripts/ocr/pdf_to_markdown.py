@@ -305,6 +305,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--keep-linebreaks", action="store_true", help="keep OCR line breaks instead of joining paragraphs")
     parser.add_argument("--keep-page-numbers", action="store_true", help="keep isolated page numbers from the scan")
     parser.add_argument("--save-images-dir", help="save preprocessed page images for review")
+    parser.add_argument("--progress-every", type=int, default=25, help="print progress every N completed pages; 0 disables")
     return parser
 
 
@@ -342,12 +343,22 @@ def main(argv: list[str] | None = None) -> int:
         file=sys.stderr,
     )
 
+    def maybe_report(done: int) -> None:
+        if args.progress_every > 0 and (done == len(pages) or done % args.progress_every == 0):
+            print(f"OCR progress: {done}/{len(pages)} page(s)", file=sys.stderr, flush=True)
+
     if workers == 1:
         _init_worker(options)
-        results = [ocr_page(page) for page in pages]
+        results = []
+        for page in pages:
+            results.append(ocr_page(page))
+            maybe_report(len(results))
     else:
         with Pool(processes=workers, initializer=_init_worker, initargs=(options,)) as pool:
-            results = list(pool.imap(ocr_page, pages))
+            results = []
+            for result in pool.imap(ocr_page, pages):
+                results.append(result)
+                maybe_report(len(results))
 
     write_markdown(Path(args.output), args, total_pages, results)
     print(f"Wrote {args.output}", file=sys.stderr)
