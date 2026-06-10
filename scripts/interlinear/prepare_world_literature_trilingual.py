@@ -165,6 +165,13 @@ def preferred_ocr_markdown(path: Path, *, lang: str) -> Path | None:
 
     if path.suffix.lower() != ".pdf":
         return None
+    if lang == "en":
+        # English PDFs usually have reliable embedded text and chapter markers.
+        # Keep OCR as an evidence/deep-check sidecar unless explicitly enabled.
+        import os
+
+        if os.environ.get("POCKETPOLYGLOT_PREFER_EN_OCR", "0") != "1":
+            return None
     for book_id, config in BOOKS.items():
         if lang == "en" and config.en_source == path:
             candidate = ROOT / "books" / book_id / "markdown" / "en.ocr-polished.md"
