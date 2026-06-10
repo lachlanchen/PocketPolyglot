@@ -127,7 +127,8 @@ BOOKS: dict[str, base.BookConfig] = {
         en_source=Path("sources/notre-dame-de-paris/Notre-dame de Paris, by Victor Hugo.pdf"),
         zh_source=Path("sources/notre-dame-de-paris/巴黎圣母院.pdf"),
         en_start_marker="CHAPTER I. THE GRAND HALL.",
-        zh_start_marker=None,
+        zh_start_marker="话说距今三百四十八年",
+        zh_end_marker="责任编辑",
         source_spine_lang="en",
         task_mode="trilingual_en_source_generated_zh_ja_with_scanned_zh_reference",
         book_description=(
@@ -236,7 +237,14 @@ def clean_world_line(raw_line: str, *, lang: str) -> str:
     if not line or PAGE_NUMBER_RE.match(line):
         return ""
     if lang == "zh":
+        line = clean_zh_ocr_noise(line)
+        if not line:
+            return ""
         if "图书在版编目" in line or "ISBN" in line or "版权所有" in line:
+            return ""
+        if ("本章节" in line or "本节重点" in line or "思维链接" in line) and "话说距今三百四十八年" not in line:
+            return ""
+        if re.match(r"^\d{1,2}[，,、.．]\s*.+(?:什么|为什么|说明|体现|如何|怎样|赏析|思考)", line):
             return ""
         cjk_count = len(re.findall(r"[\u3400-\u4dbf\u4e00-\u9fff]", line))
         if cjk_count == 0 and LATIN_ONLY_NOISE_RE.match(line):
@@ -254,6 +262,28 @@ def clean_world_line(raw_line: str, *, lang: str) -> str:
         if line.startswith("Produced by ") or line.startswith("This eBook is for the use"):
             return ""
     return line
+
+
+def clean_zh_ocr_noise(line: str) -> str:
+    """Remove recurring page/header fragments from Chinese OCR reference text."""
+
+    body_marker = "话说距今三百四十八年"
+    if body_marker in line:
+        line = line[line.find(body_marker) :]
+    line = re.sub(r"巴黎圣母院\s*\|\s*\d{1,4}", "", line)
+    line = re.sub(r"巴[笋获歼]\s*圣母院\s*\|\s*\d{1,4}", "", line)
+    line = re.sub(r"NOTRE[-\s]*DAME(?:\s*DE)?\s*PARIS", "", line, flags=re.IGNORECASE)
+    line = re.sub(r"[A-Za-z]{2,}", "", line)
+    line = re.sub(r"\s*\|\s*", "", line)
+    line = re.split(
+        r"(?:一部小说的开头|本[章节小童][^，。！？]{0,40}|"
+        r"\d{1,2}[.，,、]\s*[^，。！？]{0,60}(?:什么|为什么|如何|怎样|目的|体现|说明))",
+        line,
+        maxsplit=1,
+    )[0]
+    if re.match(r"^(?:本[章节小童]|这一部分|精彩赏析|思维链接|推荐理由|卡西莫多披上|这里又是)", line):
+        return ""
+    return base.compact(line)
 
 
 def source_lines(path: Path, *, lang: str, allow_scanned: bool = False) -> list[str]:
@@ -387,6 +417,10 @@ def parse_zh_source(path: Path | None, *, start_marker: str | None, end_marker: 
     if not lines:
         return []
     start = marker_start(lines, start_marker, lang="zh")
+    if start_marker and start < len(lines):
+        marker_pos = lines[start].find(start_marker)
+        if marker_pos > 0:
+            lines[start] = lines[start][marker_pos:]
     end = len(lines)
     if end_marker:
         for index in range(start + 1, len(lines)):
