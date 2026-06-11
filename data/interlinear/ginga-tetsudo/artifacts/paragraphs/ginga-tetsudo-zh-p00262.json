@@ -1,0 +1,242 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "ginga-tetsudo",
+  "paragraph_id": "ginga-tetsudo-zh-p00262",
+  "source_text": "“白鹭好吃吗？”",
+  "source_sha256": "a428d799cbaf392d27a38d0367a8369d4982e68903cac4c4beba3f07df5715fc",
+  "source_normalized_sha256": "a428d799cbaf392d27a38d0367a8369d4982e68903cac4c4beba3f07df5715fc",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 14,
+    "grammar_token_total": 14,
+    "unit_count": 1
+  },
+  "source_chunk_id": "ginga-tetsudo-chunk-0262",
+  "source_manifest_sha256": "1985e30a2c88d57b77480f8ff852d4cdcf81ebf2bf96f5dab4ff5f13fe59cd4e",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián"
+      },
+      {
+        "t": "言",
+        "r": "yán"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん"
+      },
+      {
+        "t": "言",
+        "r": "げん"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "八捕鸟人",
+    "title_zh": [
+      {
+        "t": "八",
+        "r": "bā"
+      },
+      {
+        "t": "、",
+        "r": ""
+      },
+      {
+        "t": "捕",
+        "r": "bǔ"
+      },
+      {
+        "t": "鸟",
+        "r": "niǎo"
+      },
+      {
+        "t": "人",
+        "r": "rén"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "八",
+        "r": "はち"
+      },
+      {
+        "t": "、",
+        "r": ""
+      },
+      {
+        "t": "鳥",
+        "r": "とり"
+      },
+      {
+        "t": "を",
+        "r": ""
+      },
+      {
+        "t": "捕",
+        "r": "と"
+      },
+      {
+        "t": "る",
+        "r": ""
+      },
+      {
+        "t": "人",
+        "r": "ひと"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-八捕鸟人-intro",
+    "title_zh": [
+      {
+        "t": "八",
+        "r": "bā"
+      },
+      {
+        "t": "、",
+        "r": ""
+      },
+      {
+        "t": "捕",
+        "r": "bǔ"
+      },
+      {
+        "t": "鸟",
+        "r": "niǎo"
+      },
+      {
+        "t": "人",
+        "r": "rén"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "八",
+        "r": "はち"
+      },
+      {
+        "t": "、",
+        "r": ""
+      },
+      {
+        "t": "鳥",
+        "r": "とり"
+      },
+      {
+        "t": "を",
+        "r": ""
+      },
+      {
+        "t": "捕",
+        "r": "と"
+      },
+      {
+        "t": "る",
+        "r": ""
+      },
+      {
+        "t": "人",
+        "r": "ひと"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "ginga-tetsudo-zh-p00262",
+    "source_text": "“白鹭好吃吗？”",
+    "units": [
+      {
+        "source_text": "“白鹭好吃吗？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "白",
+            "r": "bái",
+            "g": "subject"
+          },
+          {
+            "t": "鹭",
+            "r": "lù",
+            "g": "subject"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "吃",
+            "r": "chī",
+            "g": "predicate"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "鷺",
+              "r": "さぎ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "おいしいんですか",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
