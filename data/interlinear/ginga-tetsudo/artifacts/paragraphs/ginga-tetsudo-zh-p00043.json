@@ -1,0 +1,311 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "ginga-tetsudo",
+  "paragraph_id": "ginga-tetsudo-zh-p00043",
+  "source_text": "“啊，你快填填肚子吧，我还不想喝奶呢。”",
+  "source_sha256": "b7cdbc0964ba3e284edeb6490dbcc0240316347784ce7c8751ca664656b3e691",
+  "source_normalized_sha256": "b7cdbc0964ba3e284edeb6490dbcc0240316347784ce7c8751ca664656b3e691",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 32,
+    "grammar_token_total": 32,
+    "unit_count": 2
+  },
+  "source_chunk_id": "ginga-tetsudo-chunk-0043",
+  "source_manifest_sha256": "1985e30a2c88d57b77480f8ff852d4cdcf81ebf2bf96f5dab4ff5f13fe59cd4e",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "げん",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "三家",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "attributive"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "家",
+        "r": "jiā",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "attributive"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "家",
+        "r": "いえ",
+        "g": "attributive"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-三家-intro",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "attributive"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "家",
+        "r": "jiā",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "attributive"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "家",
+        "r": "いえ",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "ginga-tetsudo-zh-p00043",
+    "source_text": "“啊，你快填填肚子吧，我还不想喝奶呢。”",
+    "units": [
+      {
+        "source_text": "“啊，你快填填肚子吧，",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "啊",
+            "r": "ā",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "快",
+            "r": "kuài",
+            "g": "adverbial"
+          },
+          {
+            "t": "填",
+            "r": "tián",
+            "g": "predicate"
+          },
+          {
+            "t": "填",
+            "r": "tián",
+            "g": "predicate"
+          },
+          {
+            "t": "肚",
+            "r": "dù",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ああ、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "お",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "前",
+              "r": "まえ",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "さきに",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "おあがり",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我还不想喝奶呢。”",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "adverbial"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "想",
+            "r": "xiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "喝",
+            "r": "hē",
+            "g": "predicate"
+          },
+          {
+            "t": "奶",
+            "r": "nǎi",
+            "g": "object"
+          },
+          {
+            "t": "呢",
+            "r": "ne",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "あたしは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "まだ",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "ほしくないんだから",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

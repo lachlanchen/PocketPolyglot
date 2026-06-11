@@ -1,0 +1,286 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "ginga-tetsudo",
+  "paragraph_id": "ginga-tetsudo-zh-p00058",
+  "source_text": "“那帮人一见我就说这事，都在笑话我。”",
+  "source_sha256": "93760628275d1bce675fbc1dd7aef898b74bd5babcd182c2e8798b4ebaad6ab0",
+  "source_normalized_sha256": "93760628275d1bce675fbc1dd7aef898b74bd5babcd182c2e8798b4ebaad6ab0",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 27,
+    "grammar_token_total": 27,
+    "unit_count": 2
+  },
+  "source_chunk_id": "ginga-tetsudo-chunk-0058",
+  "source_manifest_sha256": "1985e30a2c88d57b77480f8ff852d4cdcf81ebf2bf96f5dab4ff5f13fe59cd4e",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "まえ",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "がき",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "三家",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "attributive"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "家",
+        "r": "jiā",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "attributive"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "家",
+        "r": "いえ",
+        "g": "attributive"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-三家-intro",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "attributive"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "家",
+        "r": "jiā",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "attributive"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "家",
+        "r": "いえ",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "ginga-tetsudo-zh-p00058",
+    "source_text": "“那帮人一见我就说这事，都在笑话我。”",
+    "units": [
+      {
+        "source_text": "“那帮人一见我就说这事，",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "subject"
+          },
+          {
+            "t": "帮",
+            "r": "bāng",
+            "g": "subject"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "adverbial"
+          },
+          {
+            "t": "见",
+            "r": "jiàn",
+            "g": "adverbial"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "object"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "object"
+          },
+          {
+            "t": "事",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "みんなが",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "ぼくにあうと",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "それを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "云",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "うよ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "都在笑话我。”",
+        "zh": [
+          {
+            "t": "都",
+            "r": "dōu",
+            "g": "adverbial"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "adverbial"
+          },
+          {
+            "t": "笑",
+            "r": "xiào",
+            "g": "predicate"
+          },
+          {
+            "t": "话",
+            "r": "huà",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ひやかすように",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "云",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "うんだ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

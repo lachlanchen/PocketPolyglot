@@ -1,0 +1,245 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "ginga-tetsudo",
+  "paragraph_id": "ginga-tetsudo-zh-p00050",
+  "source_text": "“那好吧，我先吃了。”",
+  "source_sha256": "53b76b62c870569932f9426aecc5a311f6b2102f18427c7e5d49e40e7d63e78b",
+  "source_normalized_sha256": "53b76b62c870569932f9426aecc5a311f6b2102f18427c7e5d49e40e7d63e78b",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 17,
+    "grammar_token_total": 17,
+    "unit_count": 1
+  },
+  "source_chunk_id": "ginga-tetsudo-chunk-0050",
+  "source_manifest_sha256": "1985e30a2c88d57b77480f8ff852d4cdcf81ebf2bf96f5dab4ff5f13fe59cd4e",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "銀",
+        "r": "ぎん",
+        "g": "attributive"
+      },
+      {
+        "t": "河",
+        "r": "が",
+        "g": "attributive"
+      },
+      {
+        "t": "鉄",
+        "r": "てつ",
+        "g": "attributive"
+      },
+      {
+        "t": "道",
+        "r": "どう",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "夜",
+        "r": "よる",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "三家",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "attributive"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "家",
+        "r": "jiā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "attributive"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "家",
+        "r": "うち",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-三家-intro",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "attributive"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "家",
+        "r": "jiā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "attributive"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "家",
+        "r": "うち",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "ginga-tetsudo-zh-p00050",
+    "source_text": "“那好吧，我先吃了。”",
+    "units": [
+      {
+        "source_text": "“那好吧，我先吃了。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "function"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "先",
+            "r": "xiān",
+            "g": "adverbial"
+          },
+          {
+            "t": "吃",
+            "r": "chī",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "では",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "ぼく",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "たべよう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

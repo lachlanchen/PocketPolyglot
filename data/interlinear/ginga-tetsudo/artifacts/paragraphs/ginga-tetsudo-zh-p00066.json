@@ -1,0 +1,864 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "ginga-tetsudo",
+  "paragraph_id": "ginga-tetsudo-zh-p00066",
+  "source_text": "“他家有条狗叫‘扎维尔’，尾巴就跟笤帚似的，我要是去的话，它就鼻孔忽扇忽扇地跟在我身后，一直要跟到大街拐弯的地方，有时候还会跟得更远呢。今晚说是大家一起到河边去放王瓜灯，他家的狗一定也会跟过去的。”",
+  "source_sha256": "c7d31ef6d4ee123ca8867e8471ea0b652cbf36e620e6b2e7b23fab94e6ea4f0b",
+  "source_normalized_sha256": "c7d31ef6d4ee123ca8867e8471ea0b652cbf36e620e6b2e7b23fab94e6ea4f0b",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 136,
+    "grammar_token_total": 136,
+    "unit_count": 5
+  },
+  "source_chunk_id": "ginga-tetsudo-chunk-0066",
+  "source_manifest_sha256": "1985e30a2c88d57b77480f8ff852d4cdcf81ebf2bf96f5dab4ff5f13fe59cd4e",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "げん",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "三家",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "function"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "家",
+        "r": "jiā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "function"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "家",
+        "r": "いえ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-三家-intro",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "function"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "家",
+        "r": "jiā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "function"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "家",
+        "r": "いえ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "ginga-tetsudo-zh-p00066",
+    "source_text": "“他家有条狗叫‘扎维尔’，尾巴就跟笤帚似的，我要是去的话，它就鼻孔忽扇忽扇地跟在我身后，一直要跟到大街拐弯的地方，有时候还会跟得更远呢。今晚说是大家一起到河边去放王瓜灯，他家的狗一定也会跟过去的。”",
+    "units": [
+      {
+        "source_text": "“他家有条狗叫‘扎维尔’，尾巴就跟笤帚似的，",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "attributive"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "attributive"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "条",
+            "r": "tiáo",
+            "g": "function"
+          },
+          {
+            "t": "狗",
+            "r": "gǒu",
+            "g": "object"
+          },
+          {
+            "t": "叫",
+            "r": "jiào",
+            "g": "predicate"
+          },
+          {
+            "t": "‘",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "扎",
+            "r": "zhā",
+            "g": "object"
+          },
+          {
+            "t": "维",
+            "r": "wéi",
+            "g": "object"
+          },
+          {
+            "t": "尔",
+            "r": "ěr",
+            "g": "object"
+          },
+          {
+            "t": "’",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "尾",
+            "r": "wěi",
+            "g": "subject"
+          },
+          {
+            "t": "巴",
+            "r": "ba",
+            "g": "subject"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "跟",
+            "r": "gēn",
+            "g": "function"
+          },
+          {
+            "t": "笤",
+            "r": "tiáo",
+            "g": "object"
+          },
+          {
+            "t": "帚",
+            "r": "zhou",
+            "g": "object"
+          },
+          {
+            "t": "似",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「ザウエルという",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "犬",
+              "r": "いぬ",
+              "g": "subject"
+            },
+            {
+              "t": "がいるよ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "しっぽがまるで",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "箒",
+              "r": "ほうき",
+              "g": "object"
+            },
+            {
+              "t": "のようだ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我要是去的话，它就鼻孔忽扇忽扇地跟在我身后，",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shi",
+            "g": "function"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "话",
+            "r": "huà",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "它",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "鼻",
+            "r": "bí",
+            "g": "object"
+          },
+          {
+            "t": "孔",
+            "r": "kǒng",
+            "g": "object"
+          },
+          {
+            "t": "忽",
+            "r": "hū",
+            "g": "adverbial"
+          },
+          {
+            "t": "扇",
+            "r": "shān",
+            "g": "adverbial"
+          },
+          {
+            "t": "忽",
+            "r": "hū",
+            "g": "adverbial"
+          },
+          {
+            "t": "扇",
+            "r": "shān",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "跟",
+            "r": "gēn",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "complement"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "身",
+            "r": "shēn",
+            "g": "object"
+          },
+          {
+            "t": "后",
+            "r": "hòu",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ぼくが",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "行",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "くと",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "鼻",
+              "r": "はな",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "鳴",
+              "r": "な",
+              "g": "predicate"
+            },
+            {
+              "t": "らして",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "ついてくるよ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "一直要跟到大街拐弯的地方，有时候还会跟得更远呢。",
+        "zh": [
+          {
+            "t": "一",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "直",
+            "r": "zhí",
+            "g": "adverbial"
+          },
+          {
+            "t": "要",
+            "r": "yào",
+            "g": "adverbial"
+          },
+          {
+            "t": "跟",
+            "r": "gēn",
+            "g": "predicate"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "complement"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "attributive"
+          },
+          {
+            "t": "街",
+            "r": "jiē",
+            "g": "object"
+          },
+          {
+            "t": "拐",
+            "r": "guǎi",
+            "g": "attributive"
+          },
+          {
+            "t": "弯",
+            "r": "wān",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "地",
+            "r": "dì",
+            "g": "object"
+          },
+          {
+            "t": "方",
+            "r": "fang",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "adverbial"
+          },
+          {
+            "t": "时",
+            "r": "shí",
+            "g": "adverbial"
+          },
+          {
+            "t": "候",
+            "r": "hou",
+            "g": "adverbial"
+          },
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "adverbial"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "adverbial"
+          },
+          {
+            "t": "跟",
+            "r": "gēn",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "更",
+            "r": "gèng",
+            "g": "complement"
+          },
+          {
+            "t": "远",
+            "r": "yuǎn",
+            "g": "complement"
+          },
+          {
+            "t": "呢",
+            "r": "ne",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ずうっと",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "町",
+              "r": "まち",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "角",
+              "r": "かど",
+              "g": "object"
+            },
+            {
+              "t": "まで",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "ついてくる。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "もっとついてくることもあるよ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "今晚说是大家一起到河边去放王瓜灯，",
+        "zh": [
+          {
+            "t": "今",
+            "r": "jīn",
+            "g": "adverbial"
+          },
+          {
+            "t": "晚",
+            "r": "wǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "function"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "subject"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "subject"
+          },
+          {
+            "t": "一",
+            "r": "yì",
+            "g": "adverbial"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "河",
+            "r": "hé",
+            "g": "object"
+          },
+          {
+            "t": "边",
+            "r": "biān",
+            "g": "object"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "predicate"
+          },
+          {
+            "t": "放",
+            "r": "fàng",
+            "g": "predicate"
+          },
+          {
+            "t": "王",
+            "r": "wáng",
+            "g": "object"
+          },
+          {
+            "t": "瓜",
+            "r": "guā",
+            "g": "object"
+          },
+          {
+            "t": "灯",
+            "r": "dēng",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "今",
+              "r": "こん",
+              "g": "adverbial"
+            },
+            {
+              "t": "夜",
+              "r": "や",
+              "g": "adverbial"
+            },
+            {
+              "t": "はみんなで",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "烏",
+              "r": "からす",
+              "g": "object"
+            },
+            {
+              "t": "瓜",
+              "r": "うり",
+              "g": "object"
+            },
+            {
+              "t": "のあかりを",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "川",
+              "r": "かわ",
+              "g": "object"
+            },
+            {
+              "t": "へながしに",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "行",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "くんだって。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "他家的狗一定也会跟过去的。”",
+        "zh": [
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "attributive"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "狗",
+            "r": "gǒu",
+            "g": "subject"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "adverbial"
+          },
+          {
+            "t": "定",
+            "r": "dìng",
+            "g": "adverbial"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "adverbial"
+          },
+          {
+            "t": "跟",
+            "r": "gēn",
+            "g": "predicate"
+          },
+          {
+            "t": "过",
+            "r": "guò",
+            "g": "complement"
+          },
+          {
+            "t": "去",
+            "r": "qù",
+            "g": "complement"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "きっと",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "犬",
+              "r": "いぬ",
+              "g": "subject"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "ついて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "行",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "くよ。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

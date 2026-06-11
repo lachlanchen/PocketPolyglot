@@ -1,0 +1,190 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "ginga-tetsudo",
+  "paragraph_id": "ginga-tetsudo-zh-p00063",
+  "source_text": "“是吗？”",
+  "source_sha256": "28f13112dafdb679b4e031a2b734395fa240ea8091fe8fd37ea77d10e891ea56",
+  "source_normalized_sha256": "28f13112dafdb679b4e031a2b734395fa240ea8091fe8fd37ea77d10e891ea56",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 10,
+    "grammar_token_total": 10,
+    "unit_count": 1
+  },
+  "source_chunk_id": "ginga-tetsudo-chunk-0063",
+  "source_manifest_sha256": "1985e30a2c88d57b77480f8ff852d4cdcf81ebf2bf96f5dab4ff5f13fe59cd4e",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "げん",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "三家",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "function"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "家",
+        "r": "jiā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "function"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "家",
+        "r": "いえ",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-三家-intro",
+    "title_zh": [
+      {
+        "t": "三",
+        "r": "sān",
+        "g": "function"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "家",
+        "r": "jiā",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "三",
+        "r": "さん",
+        "g": "function"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "家",
+        "r": "いえ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "ginga-tetsudo-zh-p00063",
+    "source_text": "“是吗？”",
+    "units": [
+      {
+        "source_text": "“是吗？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "そう",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "かねえ",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
