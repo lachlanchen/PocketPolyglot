@@ -1,0 +1,331 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "ginga-tetsudo",
+  "paragraph_id": "ginga-tetsudo-zh-p00151",
+  "source_text": "“烧的是酒精？或者是用电力的吧？”",
+  "source_sha256": "897bfe71ef2ba7326f5322f9ca918ae3dd4df9b729795f52382502db0ea3aed3",
+  "source_normalized_sha256": "897bfe71ef2ba7326f5322f9ca918ae3dd4df9b729795f52382502db0ea3aed3",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 28,
+    "grammar_token_total": 28,
+    "unit_count": 2
+  },
+  "source_chunk_id": "ginga-tetsudo-chunk-0151",
+  "source_manifest_sha256": "1985e30a2c88d57b77480f8ff852d4cdcf81ebf2bf96f5dab4ff5f13fe59cd4e",
+  "section": {
+    "id": "front",
+    "title_zh": [
+      {
+        "t": "前",
+        "r": "qián",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "yán",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "前",
+        "r": "ぜん",
+        "g": "attributive"
+      },
+      {
+        "t": "言",
+        "r": "げん",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "六银河站",
+    "title_zh": [
+      {
+        "t": "六",
+        "r": "liù",
+        "g": "function"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "银",
+        "r": "yín",
+        "g": "attributive"
+      },
+      {
+        "t": "河",
+        "r": "hé",
+        "g": "attributive"
+      },
+      {
+        "t": "站",
+        "r": "zhàn",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "六",
+        "r": "ろく",
+        "g": "function"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "銀",
+        "r": "ぎん",
+        "g": "attributive"
+      },
+      {
+        "t": "河",
+        "r": "が",
+        "g": "attributive"
+      },
+      {
+        "t": "ステーション",
+        "r": "",
+        "g": "object"
+      }
+    ]
+  },
+  "story": {
+    "id": "front-六银河站-intro",
+    "title_zh": [
+      {
+        "t": "六",
+        "r": "liù",
+        "g": "function"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "银",
+        "r": "yín",
+        "g": "attributive"
+      },
+      {
+        "t": "河",
+        "r": "hé",
+        "g": "attributive"
+      },
+      {
+        "t": "站",
+        "r": "zhàn",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "六",
+        "r": "ろく",
+        "g": "function"
+      },
+      {
+        "t": "、",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "銀",
+        "r": "ぎん",
+        "g": "attributive"
+      },
+      {
+        "t": "河",
+        "r": "が",
+        "g": "attributive"
+      },
+      {
+        "t": "ステーション",
+        "r": "",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "ginga-tetsudo-zh-p00151",
+    "source_text": "“烧的是酒精？或者是用电力的吧？”",
+    "units": [
+      {
+        "source_text": "“烧的是酒精？",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "烧",
+            "r": "shāo",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "酒",
+            "r": "jiǔ",
+            "g": "object"
+          },
+          {
+            "t": "精",
+            "r": "jīng",
+            "g": "object"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "アルコール",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "か",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "電",
+              "r": "でん",
+              "g": "object"
+            },
+            {
+              "t": "気",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "だろう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "或者是用电力的吧？”",
+        "zh": [
+          {
+            "t": "或",
+            "r": "huò",
+            "g": "function"
+          },
+          {
+            "t": "者",
+            "r": "zhě",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "用",
+            "r": "yòng",
+            "g": "predicate"
+          },
+          {
+            "t": "电",
+            "r": "diàn",
+            "g": "object"
+          },
+          {
+            "t": "力",
+            "r": "lì",
+            "g": "object"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "object"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "カムパネルラ",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "云",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "いました",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
