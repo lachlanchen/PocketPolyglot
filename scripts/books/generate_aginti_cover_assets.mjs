@@ -52,6 +52,16 @@ const THEME_HINTS = {
     "Meiji school town, hot-spring steam, energetic young teacher, tramline and classroom geometry, lively satirical Japanese novel atmosphere",
   "gone-with-the-wind":
     "American Civil War era Southern estate silhouette, wind-swept red earth, magnolia and distant flames, sweeping historical romance mood",
+  "one-hundred-years-of-solitude":
+    "Macondo under tropical rain and golden afternoon light, yellow butterflies, old colonial house, banana leaves, magical realist atmosphere, warm ochre and emerald palette",
+  "wuthering-heights":
+    "windswept Yorkshire moor, storm clouds, heather, lonely stone farmhouse silhouette, gothic romantic tension, restrained slate green and violet-gray palette",
+  "the-count-of-monte-cristo":
+    "Mediterranean prison fortress and sea cliffs, hidden treasure chest glow, elegant nineteenth-century adventure intrigue, moonlit blue and antique gold palette",
+  "notre-dame-de-paris":
+    "Gothic cathedral towers and rose window light over medieval Paris, stone gargoyles, candlelit shadows, tragic romantic grandeur, deep ultramarine and warm amber palette",
+  "les-miserables":
+    "nineteenth-century Paris streets at dawn, barricade silhouettes, worn cobblestones, humane revolutionary drama, misty blue-gray atmosphere with small warm lantern lights",
 };
 
 function parseArgs(argv) {

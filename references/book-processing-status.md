@@ -37,6 +37,11 @@ For classical Chinese books, keep the classical original as a preserved source l
 | 23 | `the-martian` | The Martian / 火星救援 / 火星の人 | `sources/mars/science-fiction` | Compiled, promotion pending | Trilingual EN-JP-ZH; 243/243 work chunks and 12 PDFs exist; `data/interlinear` promotion still pending. |
 | 24 | `martian-chronicles` | The Martian Chronicles / 火星编年史 / 火星年代記 | `sources/mars/science-fiction` | Complete | Trilingual EN-JP-ZH; 174/174 chunks, 12 PDFs compiled and data promoted. |
 | 25 | `sanxingdui-polished-booklike-pocket` | 三星堆图文书口袋版合集 | `sources/sanxingdui` | Complete | Five polished booklike A6 TeX/PDF editions compiled; this is a Chinese OCR/figure book workflow, not trilingual interlinear. |
+| 26 | `one-hundred-years-of-solitude` | One Hundred Years of Solitude / 百年孤独 / 百年の孤独 | `sources/one-hundred-years-of-solitude` | Complete | Trilingual EN-JP-ZH; 361/361 chunks, 12 PDFs compiled; AgInTi cover generated. |
+| 27 | `wuthering-heights` | Wuthering Heights / 呼啸山庄 / 嵐が丘 | `sources/wuthering-heights` | Complete | Trilingual EN-JP-ZH; 329/329 chunks, 12 PDFs compiled; Japanese reference integrated where available; AgInTi cover generated. |
+| 28 | `the-count-of-monte-cristo` | The Count of Monte Cristo / 基督山伯爵 / モンテ・クリスト伯 | `sources/the-count-of-monte-cristo` | Complete | Trilingual EN-JP-ZH; 1143/1143 chunks, 12 PDFs compiled; AgInTi cover generated. |
+| 29 | `notre-dame-de-paris` | Notre-Dame de Paris / 巴黎圣母院 / ノートルダム・ド・パリ | `sources/notre-dame-de-paris` | Complete | Trilingual EN-JP-ZH; 471/471 chunks, 12 PDFs compiled; Chinese OCR-polished reference promoted; AgInTi cover generated. |
+| 30 | `les-miserables` | Les Misérables / 悲惨世界 / レ・ミゼラブル | `sources/les-miserables` | Complete | Trilingual EN-JP-ZH; 1630/1630 chunks, 12 named PDFs compiled; AgInTi cover generated. |
 
 ## Prepared / Not Yet Compiled Queue
 
@@ -47,19 +52,14 @@ These books have sources and chunk manifests, but they are not complete processe
 | P1 | `red-mars` | Red Mars / 红火星 / レッド・マーズ | `sources/mars/science-fiction` | Prepared; 509 chunks, 0/509 generated | Good next Mars task because EN and ZH sources already exist. |
 | P2 | `the-sirens-of-mars` | The Sirens of Mars / 火星的塞壬 / 火星のセイレーン | `sources/mars/science-history` | Prepared; 174 chunks, 0/174 generated | Needs JP/ZH generation from English source. |
 | P3 | `a-city-on-mars` | A City on Mars / 火星城市 / 火星に都市をつくる | `sources/mars/science-history` | Prepared; 270 chunks, 0/270 generated | Needs JP/ZH generation from English source. |
-| P4 | `one-hundred-years-of-solitude` | One Hundred Years of Solitude / 百年孤独 / 百年の孤独 | `sources/one-hundred-years-of-solitude` | Prepared; 361 chunks, 0/361 generated | Strong first world-literature run: compact, famous, EN spine with published ZH reference. |
-| P5 | `wuthering-heights` | Wuthering Heights / 呼啸山庄 / 嵐が丘 | `sources/wuthering-heights` | Prepared; 329 chunks, 0/329 generated | Moderate length, clear EN spine, ZH PDF reference. |
-| P6 | `the-count-of-monte-cristo` | The Count of Monte Cristo / 基督山伯爵 / モンテ・クリスト伯 | `sources/the-count-of-monte-cristo` | Prepared; 1143 chunks, 0/1143 generated | Adventure novel with strong learner appeal; long but source structure is clear. |
-| P7 | `notre-dame-de-paris` | Notre-Dame de Paris / 巴黎圣母院 / ノートルダム・ド・パリ | `sources/notre-dame-de-paris` | Prepared; 471 chunks, 0/471 generated | EN spine prepared; ZH PDF has no usable embedded text, so OCR or generated ZH is needed. |
-| P8 | `les-miserables` | Les Misérables / 悲惨世界 / レ・ミゼラブル | `sources/les-miserables` | Prepared; 1630 chunks, 0/1630 generated | Very long; EN spine and ZH text reference prepared, best after shorter world-literature runs. |
-| P9 | `silence` | 沉默 / Silence | `sources/Silence.epub` | English Markdown exists | Powerful story; needs JP/ZH source pairing strategy. |
-| P10 | `temple-of-dawn` | 晓寺 / The Temple of Dawn | `sources/晓寺 - The Temple of Dawn` | Sources grouped | Continue Mishima sequence after Spring Snow. |
-| P11 | `silent-cry` | 万延元年的足球队 / The Silent Cry | `sources/The Silent Cry` | Sources grouped | Major Oe work; high literary value. |
-| P12 | `personal-matter` | 个人的体验 | `sources/个人的体验` | Sources grouped | Important Oe, likely manageable. |
-| P13 | `heike` | 平家物语 / 平家物語 | `sources/平家物语` | Sources grouped | Epic and famous; harder than modern novels but attractive. |
-| P14 | `pillow-book` | 枕草子 | `sources/枕草子` | Sources grouped | Classic prose; good after narrative-first queue. |
-| P15 | `ginga-tetsudo` | 銀河鉄道の夜 | `sources/銀河鉄道の夜` | Prepared, 604 chunks | Short and beloved; good when we want a faster run. |
-| P16 | `chumon-no-ooi-ryoriten` | 注文の多い料理店 | `sources/注文の多い料理店` | Prepared, 2698 chunks | Children’s stories; keep after stronger single-book priorities. |
+| P4 | `silence` | 沉默 / Silence | `sources/Silence.epub` | English Markdown exists | Powerful story; needs JP/ZH source pairing strategy. |
+| P5 | `temple-of-dawn` | 晓寺 / The Temple of Dawn | `sources/晓寺 - The Temple of Dawn` | Sources grouped | Continue Mishima sequence after Spring Snow. |
+| P6 | `silent-cry` | 万延元年的足球队 / The Silent Cry | `sources/The Silent Cry` | Sources grouped | Major Oe work; high literary value. |
+| P7 | `personal-matter` | 个人的体验 | `sources/个人的体验` | Sources grouped | Important Oe, likely manageable. |
+| P8 | `heike` | 平家物语 / 平家物語 | `sources/平家物语` | Sources grouped | Epic and famous; harder than modern novels but attractive. |
+| P9 | `pillow-book` | 枕草子 | `sources/枕草子` | Sources grouped | Classic prose; good after narrative-first queue. |
+| P10 | `ginga-tetsudo` | 銀河鉄道の夜 | `sources/銀河鉄道の夜` | Prepared, 604 chunks | Short and beloved; good when we want a faster run. |
+| P11 | `chumon-no-ooi-ryoriten` | 注文の多い料理店 | `sources/注文の多い料理店` | Prepared, 2698 chunks | Children’s stories; keep after stronger single-book priorities. |
 
 ## Additional Future Queue
 
