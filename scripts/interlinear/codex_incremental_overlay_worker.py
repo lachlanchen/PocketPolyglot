@@ -242,6 +242,25 @@ def validate_overlay(base: dict[str, Any], task: dict[str, Any], manifest: dict[
     return errors
 
 
+def normalize_overlay_for_task(overlay: dict[str, Any], manifest: dict[str, Any]) -> None:
+    """Drop fields that would rewrite base data instead of adding overlays."""
+    actions = {action["field"] for action in manifest["actions"]}
+    units = overlay.get("units")
+    if not isinstance(units, list):
+        return
+    for unit in units:
+        if not isinstance(unit, dict):
+            continue
+        unit.pop("zh", None)
+        unit.pop("zh_original", None)
+        unit.pop("zh_modern", None)
+        unit.pop("ja", None)
+        if "en" not in actions:
+            unit.pop("en", None)
+        if "ja_modern" not in actions:
+            unit.pop("ja_modern", None)
+
+
 def valid_existing(path: Path, base: dict[str, Any], task: dict[str, Any], manifest: dict[str, Any]) -> bool:
     if not path.exists():
         return False
@@ -467,6 +486,7 @@ def main() -> int:
                         timeout_seconds=args.codex_timeout_seconds,
                     )
                     result = extract_json(message_path.read_text(encoding="utf-8"))
+                    normalize_overlay_for_task(result, manifest)
                     errors = validate_overlay(base, task, manifest, result)
                 except Exception as exc:
                     if mentions_usage_limit(str(exc)):
