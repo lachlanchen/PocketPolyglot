@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "book_id": "snow-country",
+  "title": "雪国",
+  "category": "early_bilingual",
+  "source_area": "sources/snow-country",
+  "priority": 20,
+  "dependency": "base_chunks_exist",
+  "notes": "",
+  "chunk_id_source": "books_manifest",
+  "chunk_count": 1375,
+  "actions": [
+    {
+      "field": "en",
+      "kind": "understandable_english",
+      "source_priority": [
+        "unit.zh_modern",
+        "paragraph.corrected_text",
+        "unit.zh",
+        "paragraph.source_text"
+      ],
+      "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+    }
+  ],
+  "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/snow-country/tasks.jsonl",
+  "old_json_is_read_only": true,
+  "task_template": {
+    "schema_version": 1,
+    "task_type": "incremental_language_overlay",
+    "category": "early_bilingual",
+    "dependency": "base_chunks_exist",
+    "actions": [
+      {
+        "field": "en",
+        "kind": "understandable_english",
+        "source_priority": [
+          "unit.zh_modern",
+          "paragraph.corrected_text",
+          "unit.zh",
+          "paragraph.source_text"
+        ],
+        "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+      }
+    ],
+    "do_not_modify_templates": [
+      "data/interlinear/snow-country/chunks/{chunk_id}.json",
+      "books/snow-country/work/bilingual/interlinear/chunks/{chunk_id}.json",
+      "books/snow-country/work/bilingual/reviewed/chunks/{chunk_id}.json"
+    ],
+    "output_overlay_path_template": "books/snow-country/work/incremental/en-modern-ja/overlays/chunks/{chunk_id}.json",
+    "durable_overlay_path_template": "data/interlinear-overlays/en-modern-ja/snow-country/chunks/{chunk_id}.json",
+    "merge_policy": {
+      "preserve_existing_fields": true,
+      "append_only_fields": [
+        "en",
+        "ja_modern"
+      ],
+      "legacy_japanese_field": "ja",
+      "modern_japanese_field": "ja_modern"
+    },
+    "validation": {
+      "require_no_source_text_loss": true,
+      "require_english_if_requested": true,
+      "require_modern_ja_if_requested": false,
+      "forbid_overwriting_legacy_ja": true,
+      "require_ruby_for_kanji_tokens_in_ja_modern": true
+    }
+  },
+  "generated_at": "2026-06-11T09:51:31.955420+00:00"
+}

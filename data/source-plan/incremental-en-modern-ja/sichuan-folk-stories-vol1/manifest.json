@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "book_id": "sichuan-folk-stories-vol1",
+  "title": "中国民间故事集成 四川卷 上",
+  "category": "ocr_folk",
+  "source_area": "sources/中国民间故事集成 四川卷 上 10978512.pdf",
+  "priority": 50,
+  "dependency": "base_chunks_exist",
+  "notes": "Use corrected_text when present; generate plain, natural Japanese from the corrected modern Chinese story text.",
+  "chunk_id_source": "books_manifest",
+  "chunk_count": 6473,
+  "actions": [
+    {
+      "field": "en",
+      "kind": "understandable_english",
+      "source_priority": [
+        "unit.zh_modern",
+        "paragraph.corrected_text",
+        "unit.zh",
+        "paragraph.source_text"
+      ],
+      "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+    },
+    {
+      "field": "ja_modern",
+      "kind": "plain_modern_japanese",
+      "source_priority": [
+        "unit.zh_modern",
+        "paragraph.corrected_text",
+        "unit.zh",
+        "paragraph.source_text"
+      ],
+      "instruction": "Add reader-friendly modern Japanese based on the modern Chinese meaning bridge. Preserve the existing ja field as legacy/source/comment Japanese."
+    }
+  ],
+  "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/sichuan-folk-stories-vol1/tasks.jsonl",
+  "old_json_is_read_only": true,
+  "task_template": {
+    "schema_version": 1,
+    "task_type": "incremental_language_overlay",
+    "category": "ocr_folk",
+    "dependency": "base_chunks_exist",
+    "actions": [
+      {
+        "field": "en",
+        "kind": "understandable_english",
+        "source_priority": [
+          "unit.zh_modern",
+          "paragraph.corrected_text",
+          "unit.zh",
+          "paragraph.source_text"
+        ],
+        "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+      },
+      {
+        "field": "ja_modern",
+        "kind": "plain_modern_japanese",
+        "source_priority": [
+          "unit.zh_modern",
+          "paragraph.corrected_text",
+          "unit.zh",
+          "paragraph.source_text"
+        ],
+        "instruction": "Add reader-friendly modern Japanese based on the modern Chinese meaning bridge. Preserve the existing ja field as legacy/source/comment Japanese."
+      }
+    ],
+    "do_not_modify_templates": [
+      "data/interlinear/sichuan-folk-stories-vol1/chunks/{chunk_id}.json",
+      "books/sichuan-folk-stories-vol1/work/bilingual/interlinear/chunks/{chunk_id}.json",
+      "books/sichuan-folk-stories-vol1/work/bilingual/reviewed/chunks/{chunk_id}.json"
+    ],
+    "output_overlay_path_template": "books/sichuan-folk-stories-vol1/work/incremental/en-modern-ja/overlays/chunks/{chunk_id}.json",
+    "durable_overlay_path_template": "data/interlinear-overlays/en-modern-ja/sichuan-folk-stories-vol1/chunks/{chunk_id}.json",
+    "merge_policy": {
+      "preserve_existing_fields": true,
+      "append_only_fields": [
+        "en",
+        "ja_modern"
+      ],
+      "legacy_japanese_field": "ja",
+      "modern_japanese_field": "ja_modern"
+    },
+    "validation": {
+      "require_no_source_text_loss": true,
+      "require_english_if_requested": true,
+      "require_modern_ja_if_requested": true,
+      "forbid_overwriting_legacy_ja": true,
+      "require_ruby_for_kanji_tokens_in_ja_modern": true
+    }
+  },
+  "generated_at": "2026-06-11T09:51:32.622002+00:00"
+}

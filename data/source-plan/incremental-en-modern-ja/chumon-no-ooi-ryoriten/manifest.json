@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "book_id": "chumon-no-ooi-ryoriten",
+  "title": "注文の多い料理店",
+  "category": "prepared_bilingual",
+  "source_area": "sources/注文の多い料理店",
+  "priority": 150,
+  "dependency": "wait_for_current_bilingual_completion",
+  "notes": "Prepare now, run enhancement only after the current bilingual base queue finishes and reviewed chunks are promoted.",
+  "chunk_id_source": "books_manifest",
+  "chunk_count": 2698,
+  "actions": [
+    {
+      "field": "en",
+      "kind": "understandable_english",
+      "source_priority": [
+        "unit.zh_modern",
+        "paragraph.corrected_text",
+        "unit.zh",
+        "paragraph.source_text"
+      ],
+      "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+    }
+  ],
+  "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/chumon-no-ooi-ryoriten/tasks.jsonl",
+  "old_json_is_read_only": true,
+  "task_template": {
+    "schema_version": 1,
+    "task_type": "incremental_language_overlay",
+    "category": "prepared_bilingual",
+    "dependency": "wait_for_current_bilingual_completion",
+    "actions": [
+      {
+        "field": "en",
+        "kind": "understandable_english",
+        "source_priority": [
+          "unit.zh_modern",
+          "paragraph.corrected_text",
+          "unit.zh",
+          "paragraph.source_text"
+        ],
+        "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+      }
+    ],
+    "do_not_modify_templates": [
+      "data/interlinear/chumon-no-ooi-ryoriten/chunks/{chunk_id}.json",
+      "books/chumon-no-ooi-ryoriten/work/bilingual/interlinear/chunks/{chunk_id}.json",
+      "books/chumon-no-ooi-ryoriten/work/bilingual/reviewed/chunks/{chunk_id}.json"
+    ],
+    "output_overlay_path_template": "books/chumon-no-ooi-ryoriten/work/incremental/en-modern-ja/overlays/chunks/{chunk_id}.json",
+    "durable_overlay_path_template": "data/interlinear-overlays/en-modern-ja/chumon-no-ooi-ryoriten/chunks/{chunk_id}.json",
+    "merge_policy": {
+      "preserve_existing_fields": true,
+      "append_only_fields": [
+        "en",
+        "ja_modern"
+      ],
+      "legacy_japanese_field": "ja",
+      "modern_japanese_field": "ja_modern"
+    },
+    "validation": {
+      "require_no_source_text_loss": true,
+      "require_english_if_requested": true,
+      "require_modern_ja_if_requested": false,
+      "forbid_overwriting_legacy_ja": true,
+      "require_ruby_for_kanji_tokens_in_ja_modern": true
+    }
+  },
+  "generated_at": "2026-06-11T09:51:35.736785+00:00"
+}

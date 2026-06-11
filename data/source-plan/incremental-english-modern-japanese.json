@@ -1,0 +1,1247 @@
+{
+  "schema_version": 1,
+  "task_family": "incremental_english_and_modern_japanese_overlays",
+  "old_json_is_read_only": true,
+  "output_root": "data/source-plan/incremental-en-modern-ja",
+  "durable_overlay_root": "data/interlinear-overlays/en-modern-ja",
+  "generated_at": "2026-06-11T09:51:35.745812+00:00",
+  "books": [
+    {
+      "schema_version": 1,
+      "book_id": "kokoro",
+      "title": "心 / こころ",
+      "category": "early_bilingual",
+      "source_area": "sources/kokoro",
+      "priority": 10,
+      "dependency": "base_chunks_exist",
+      "notes": "",
+      "chunk_id_source": "books_manifest",
+      "chunk_count": 336,
+      "actions": [
+        {
+          "field": "en",
+          "kind": "understandable_english",
+          "source_priority": [
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+        }
+      ],
+      "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/kokoro/tasks.jsonl",
+      "old_json_is_read_only": true,
+      "task_template": {
+        "schema_version": 1,
+        "task_type": "incremental_language_overlay",
+        "category": "early_bilingual",
+        "dependency": "base_chunks_exist",
+        "actions": [
+          {
+            "field": "en",
+            "kind": "understandable_english",
+            "source_priority": [
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          }
+        ],
+        "do_not_modify_templates": [
+          "data/interlinear/kokoro/chunks/{chunk_id}.json",
+          "books/kokoro/work/bilingual/interlinear/chunks/{chunk_id}.json",
+          "books/kokoro/work/bilingual/reviewed/chunks/{chunk_id}.json"
+        ],
+        "output_overlay_path_template": "books/kokoro/work/incremental/en-modern-ja/overlays/chunks/{chunk_id}.json",
+        "durable_overlay_path_template": "data/interlinear-overlays/en-modern-ja/kokoro/chunks/{chunk_id}.json",
+        "merge_policy": {
+          "preserve_existing_fields": true,
+          "append_only_fields": [
+            "en",
+            "ja_modern"
+          ],
+          "legacy_japanese_field": "ja",
+          "modern_japanese_field": "ja_modern"
+        },
+        "validation": {
+          "require_no_source_text_loss": true,
+          "require_english_if_requested": true,
+          "require_modern_ja_if_requested": false,
+          "forbid_overwriting_legacy_ja": true,
+          "require_ruby_for_kanji_tokens_in_ja_modern": true
+        }
+      },
+      "generated_at": "2026-06-11T09:51:31.805287+00:00"
+    },
+    {
+      "schema_version": 1,
+      "book_id": "snow-country",
+      "title": "雪国",
+      "category": "early_bilingual",
+      "source_area": "sources/snow-country",
+      "priority": 20,
+      "dependency": "base_chunks_exist",
+      "notes": "",
+      "chunk_id_source": "books_manifest",
+      "chunk_count": 1375,
+      "actions": [
+        {
+          "field": "en",
+          "kind": "understandable_english",
+          "source_priority": [
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+        }
+      ],
+      "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/snow-country/tasks.jsonl",
+      "old_json_is_read_only": true,
+      "task_template": {
+        "schema_version": 1,
+        "task_type": "incremental_language_overlay",
+        "category": "early_bilingual",
+        "dependency": "base_chunks_exist",
+        "actions": [
+          {
+            "field": "en",
+            "kind": "understandable_english",
+            "source_priority": [
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          }
+        ],
+        "do_not_modify_templates": [
+          "data/interlinear/snow-country/chunks/{chunk_id}.json",
+          "books/snow-country/work/bilingual/interlinear/chunks/{chunk_id}.json",
+          "books/snow-country/work/bilingual/reviewed/chunks/{chunk_id}.json"
+        ],
+        "output_overlay_path_template": "books/snow-country/work/incremental/en-modern-ja/overlays/chunks/{chunk_id}.json",
+        "durable_overlay_path_template": "data/interlinear-overlays/en-modern-ja/snow-country/chunks/{chunk_id}.json",
+        "merge_policy": {
+          "preserve_existing_fields": true,
+          "append_only_fields": [
+            "en",
+            "ja_modern"
+          ],
+          "legacy_japanese_field": "ja",
+          "modern_japanese_field": "ja_modern"
+        },
+        "validation": {
+          "require_no_source_text_loss": true,
+          "require_english_if_requested": true,
+          "require_modern_ja_if_requested": false,
+          "forbid_overwriting_legacy_ja": true,
+          "require_ruby_for_kanji_tokens_in_ja_modern": true
+        }
+      },
+      "generated_at": "2026-06-11T09:51:31.955420+00:00"
+    },
+    {
+      "schema_version": 1,
+      "book_id": "no-longer-human",
+      "title": "人間失格",
+      "category": "early_bilingual",
+      "source_area": "sources/no-longer-human",
+      "priority": 30,
+      "dependency": "base_chunks_exist",
+      "notes": "",
+      "chunk_id_source": "books_manifest",
+      "chunk_count": 261,
+      "actions": [
+        {
+          "field": "en",
+          "kind": "understandable_english",
+          "source_priority": [
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+        }
+      ],
+      "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/no-longer-human/tasks.jsonl",
+      "old_json_is_read_only": true,
+      "task_template": {
+        "schema_version": 1,
+        "task_type": "incremental_language_overlay",
+        "category": "early_bilingual",
+        "dependency": "base_chunks_exist",
+        "actions": [
+          {
+            "field": "en",
+            "kind": "understandable_english",
+            "source_priority": [
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          }
+        ],
+        "do_not_modify_templates": [
+          "data/interlinear/no-longer-human/chunks/{chunk_id}.json",
+          "books/no-longer-human/work/bilingual/interlinear/chunks/{chunk_id}.json",
+          "books/no-longer-human/work/bilingual/reviewed/chunks/{chunk_id}.json"
+        ],
+        "output_overlay_path_template": "books/no-longer-human/work/incremental/en-modern-ja/overlays/chunks/{chunk_id}.json",
+        "durable_overlay_path_template": "data/interlinear-overlays/en-modern-ja/no-longer-human/chunks/{chunk_id}.json",
+        "merge_policy": {
+          "preserve_existing_fields": true,
+          "append_only_fields": [
+            "en",
+            "ja_modern"
+          ],
+          "legacy_japanese_field": "ja",
+          "modern_japanese_field": "ja_modern"
+        },
+        "validation": {
+          "require_no_source_text_loss": true,
+          "require_english_if_requested": true,
+          "require_modern_ja_if_requested": false,
+          "forbid_overwriting_legacy_ja": true,
+          "require_ruby_for_kanji_tokens_in_ja_modern": true
+        }
+      },
+      "generated_at": "2026-06-11T09:51:31.991059+00:00"
+    },
+    {
+      "schema_version": 1,
+      "book_id": "rashomon-stories",
+      "title": "羅生門短篇集",
+      "category": "early_bilingual",
+      "source_area": "sources/罗生门",
+      "priority": 40,
+      "dependency": "base_chunks_exist",
+      "notes": "",
+      "chunk_id_source": "books_manifest",
+      "chunk_count": 1386,
+      "actions": [
+        {
+          "field": "en",
+          "kind": "understandable_english",
+          "source_priority": [
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+        }
+      ],
+      "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/rashomon-stories/tasks.jsonl",
+      "old_json_is_read_only": true,
+      "task_template": {
+        "schema_version": 1,
+        "task_type": "incremental_language_overlay",
+        "category": "early_bilingual",
+        "dependency": "base_chunks_exist",
+        "actions": [
+          {
+            "field": "en",
+            "kind": "understandable_english",
+            "source_priority": [
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          }
+        ],
+        "do_not_modify_templates": [
+          "data/interlinear/rashomon-stories/chunks/{chunk_id}.json",
+          "books/rashomon-stories/work/bilingual/interlinear/chunks/{chunk_id}.json",
+          "books/rashomon-stories/work/bilingual/reviewed/chunks/{chunk_id}.json"
+        ],
+        "output_overlay_path_template": "books/rashomon-stories/work/incremental/en-modern-ja/overlays/chunks/{chunk_id}.json",
+        "durable_overlay_path_template": "data/interlinear-overlays/en-modern-ja/rashomon-stories/chunks/{chunk_id}.json",
+        "merge_policy": {
+          "preserve_existing_fields": true,
+          "append_only_fields": [
+            "en",
+            "ja_modern"
+          ],
+          "legacy_japanese_field": "ja",
+          "modern_japanese_field": "ja_modern"
+        },
+        "validation": {
+          "require_no_source_text_loss": true,
+          "require_english_if_requested": true,
+          "require_modern_ja_if_requested": false,
+          "forbid_overwriting_legacy_ja": true,
+          "require_ruby_for_kanji_tokens_in_ja_modern": true
+        }
+      },
+      "generated_at": "2026-06-11T09:51:32.166998+00:00"
+    },
+    {
+      "schema_version": 1,
+      "book_id": "sichuan-folk-stories-vol1",
+      "title": "中国民间故事集成 四川卷 上",
+      "category": "ocr_folk",
+      "source_area": "sources/中国民间故事集成 四川卷 上 10978512.pdf",
+      "priority": 50,
+      "dependency": "base_chunks_exist",
+      "notes": "Use corrected_text when present; generate plain, natural Japanese from the corrected modern Chinese story text.",
+      "chunk_id_source": "books_manifest",
+      "chunk_count": 6473,
+      "actions": [
+        {
+          "field": "en",
+          "kind": "understandable_english",
+          "source_priority": [
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+        },
+        {
+          "field": "ja_modern",
+          "kind": "plain_modern_japanese",
+          "source_priority": [
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add reader-friendly modern Japanese based on the modern Chinese meaning bridge. Preserve the existing ja field as legacy/source/comment Japanese."
+        }
+      ],
+      "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/sichuan-folk-stories-vol1/tasks.jsonl",
+      "old_json_is_read_only": true,
+      "task_template": {
+        "schema_version": 1,
+        "task_type": "incremental_language_overlay",
+        "category": "ocr_folk",
+        "dependency": "base_chunks_exist",
+        "actions": [
+          {
+            "field": "en",
+            "kind": "understandable_english",
+            "source_priority": [
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          },
+          {
+            "field": "ja_modern",
+            "kind": "plain_modern_japanese",
+            "source_priority": [
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add reader-friendly modern Japanese based on the modern Chinese meaning bridge. Preserve the existing ja field as legacy/source/comment Japanese."
+          }
+        ],
+        "do_not_modify_templates": [
+          "data/interlinear/sichuan-folk-stories-vol1/chunks/{chunk_id}.json",
+          "books/sichuan-folk-stories-vol1/work/bilingual/interlinear/chunks/{chunk_id}.json",
+          "books/sichuan-folk-stories-vol1/work/bilingual/reviewed/chunks/{chunk_id}.json"
+        ],
+        "output_overlay_path_template": "books/sichuan-folk-stories-vol1/work/incremental/en-modern-ja/overlays/chunks/{chunk_id}.json",
+        "durable_overlay_path_template": "data/interlinear-overlays/en-modern-ja/sichuan-folk-stories-vol1/chunks/{chunk_id}.json",
+        "merge_policy": {
+          "preserve_existing_fields": true,
+          "append_only_fields": [
+            "en",
+            "ja_modern"
+          ],
+          "legacy_japanese_field": "ja",
+          "modern_japanese_field": "ja_modern"
+        },
+        "validation": {
+          "require_no_source_text_loss": true,
+          "require_english_if_requested": true,
+          "require_modern_ja_if_requested": true,
+          "forbid_overwriting_legacy_ja": true,
+          "require_ruby_for_kanji_tokens_in_ja_modern": true
+        }
+      },
+      "generated_at": "2026-06-11T09:51:32.622002+00:00"
+    },
+    {
+      "schema_version": 1,
+      "book_id": "kinkakuji",
+      "title": "金阁寺 / 金閣寺",
+      "category": "early_bilingual",
+      "source_area": "sources/金阁寺",
+      "priority": 60,
+      "dependency": "base_chunks_exist",
+      "notes": "",
+      "chunk_id_source": "books_manifest",
+      "chunk_count": 1508,
+      "actions": [
+        {
+          "field": "en",
+          "kind": "understandable_english",
+          "source_priority": [
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+        }
+      ],
+      "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/kinkakuji/tasks.jsonl",
+      "old_json_is_read_only": true,
+      "task_template": {
+        "schema_version": 1,
+        "task_type": "incremental_language_overlay",
+        "category": "early_bilingual",
+        "dependency": "base_chunks_exist",
+        "actions": [
+          {
+            "field": "en",
+            "kind": "understandable_english",
+            "source_priority": [
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          }
+        ],
+        "do_not_modify_templates": [
+          "data/interlinear/kinkakuji/chunks/{chunk_id}.json",
+          "books/kinkakuji/work/bilingual/interlinear/chunks/{chunk_id}.json",
+          "books/kinkakuji/work/bilingual/reviewed/chunks/{chunk_id}.json"
+        ],
+        "output_overlay_path_template": "books/kinkakuji/work/incremental/en-modern-ja/overlays/chunks/{chunk_id}.json",
+        "durable_overlay_path_template": "data/interlinear-overlays/en-modern-ja/kinkakuji/chunks/{chunk_id}.json",
+        "merge_policy": {
+          "preserve_existing_fields": true,
+          "append_only_fields": [
+            "en",
+            "ja_modern"
+          ],
+          "legacy_japanese_field": "ja",
+          "modern_japanese_field": "ja_modern"
+        },
+        "validation": {
+          "require_no_source_text_loss": true,
+          "require_english_if_requested": true,
+          "require_modern_ja_if_requested": false,
+          "forbid_overwriting_legacy_ja": true,
+          "require_ruby_for_kanji_tokens_in_ja_modern": true
+        }
+      },
+      "generated_at": "2026-06-11T09:51:32.789049+00:00"
+    },
+    {
+      "schema_version": 1,
+      "book_id": "sishu-jizhu-aginti",
+      "title": "四書章句集註",
+      "category": "classical_chinese",
+      "source_area": "sources/sishu",
+      "priority": 70,
+      "dependency": "base_chunks_exist",
+      "notes": "Preferred Sishu pass. Preserve classical/commentary fields and add modern Japanese from the modern Chinese bridge when available.",
+      "chunk_id_source": "books_manifest",
+      "chunk_count": 2480,
+      "actions": [
+        {
+          "field": "en",
+          "kind": "understandable_english",
+          "source_priority": [
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+        },
+        {
+          "field": "ja_modern",
+          "kind": "plain_modern_japanese",
+          "source_priority": [
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add reader-friendly modern Japanese based on the modern Chinese meaning bridge. Preserve the existing ja field as legacy/source/comment Japanese."
+        }
+      ],
+      "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/sishu-jizhu-aginti/tasks.jsonl",
+      "old_json_is_read_only": true,
+      "task_template": {
+        "schema_version": 1,
+        "task_type": "incremental_language_overlay",
+        "category": "classical_chinese",
+        "dependency": "base_chunks_exist",
+        "actions": [
+          {
+            "field": "en",
+            "kind": "understandable_english",
+            "source_priority": [
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          },
+          {
+            "field": "ja_modern",
+            "kind": "plain_modern_japanese",
+            "source_priority": [
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add reader-friendly modern Japanese based on the modern Chinese meaning bridge. Preserve the existing ja field as legacy/source/comment Japanese."
+          }
+        ],
+        "do_not_modify_templates": [
+          "data/interlinear/sishu-jizhu-aginti/chunks/{chunk_id}.json",
+          "books/sishu-jizhu-aginti/work/bilingual/interlinear/chunks/{chunk_id}.json",
+          "books/sishu-jizhu-aginti/work/bilingual/reviewed/chunks/{chunk_id}.json"
+        ],
+        "output_overlay_path_template": "books/sishu-jizhu-aginti/work/incremental/en-modern-ja/overlays/chunks/{chunk_id}.json",
+        "durable_overlay_path_template": "data/interlinear-overlays/en-modern-ja/sishu-jizhu-aginti/chunks/{chunk_id}.json",
+        "merge_policy": {
+          "preserve_existing_fields": true,
+          "append_only_fields": [
+            "en",
+            "ja_modern"
+          ],
+          "legacy_japanese_field": "ja",
+          "modern_japanese_field": "ja_modern"
+        },
+        "validation": {
+          "require_no_source_text_loss": true,
+          "require_english_if_requested": true,
+          "require_modern_ja_if_requested": true,
+          "forbid_overwriting_legacy_ja": true,
+          "require_ruby_for_kanji_tokens_in_ja_modern": true
+        }
+      },
+      "generated_at": "2026-06-11T09:51:32.979619+00:00"
+    },
+    {
+      "schema_version": 1,
+      "book_id": "sishu-jizhu",
+      "title": "四書章句集註 legacy",
+      "category": "classical_chinese_legacy",
+      "source_area": "sources/sishu",
+      "priority": 75,
+      "dependency": "base_chunks_exist",
+      "notes": "Legacy Sishu pass. Keep old output; write only overlay files.",
+      "chunk_id_source": "books_manifest",
+      "chunk_count": 925,
+      "actions": [
+        {
+          "field": "en",
+          "kind": "understandable_english",
+          "source_priority": [
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+        },
+        {
+          "field": "ja_modern",
+          "kind": "plain_modern_japanese",
+          "source_priority": [
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add reader-friendly modern Japanese based on the modern Chinese meaning bridge. Preserve the existing ja field as legacy/source/comment Japanese."
+        }
+      ],
+      "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/sishu-jizhu/tasks.jsonl",
+      "old_json_is_read_only": true,
+      "task_template": {
+        "schema_version": 1,
+        "task_type": "incremental_language_overlay",
+        "category": "classical_chinese_legacy",
+        "dependency": "base_chunks_exist",
+        "actions": [
+          {
+            "field": "en",
+            "kind": "understandable_english",
+            "source_priority": [
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          },
+          {
+            "field": "ja_modern",
+            "kind": "plain_modern_japanese",
+            "source_priority": [
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add reader-friendly modern Japanese based on the modern Chinese meaning bridge. Preserve the existing ja field as legacy/source/comment Japanese."
+          }
+        ],
+        "do_not_modify_templates": [
+          "data/interlinear/sishu-jizhu/chunks/{chunk_id}.json",
+          "books/sishu-jizhu/work/bilingual/interlinear/chunks/{chunk_id}.json",
+          "books/sishu-jizhu/work/bilingual/reviewed/chunks/{chunk_id}.json"
+        ],
+        "output_overlay_path_template": "books/sishu-jizhu/work/incremental/en-modern-ja/overlays/chunks/{chunk_id}.json",
+        "durable_overlay_path_template": "data/interlinear-overlays/en-modern-ja/sishu-jizhu/chunks/{chunk_id}.json",
+        "merge_policy": {
+          "preserve_existing_fields": true,
+          "append_only_fields": [
+            "en",
+            "ja_modern"
+          ],
+          "legacy_japanese_field": "ja",
+          "modern_japanese_field": "ja_modern"
+        },
+        "validation": {
+          "require_no_source_text_loss": true,
+          "require_english_if_requested": true,
+          "require_modern_ja_if_requested": true,
+          "forbid_overwriting_legacy_ja": true,
+          "require_ruby_for_kanji_tokens_in_ja_modern": true
+        }
+      },
+      "generated_at": "2026-06-11T09:51:33.017011+00:00"
+    },
+    {
+      "schema_version": 1,
+      "book_id": "shiji-aginti",
+      "title": "史記",
+      "category": "classical_chinese",
+      "source_area": "sources/shiji",
+      "priority": 80,
+      "dependency": "base_chunks_exist",
+      "notes": "Prefer existing zh_modern over zh_original; generate English and plain modern Japanese from zh_modern.",
+      "chunk_id_source": "data_interlinear_chunks",
+      "chunk_count": 4622,
+      "actions": [
+        {
+          "field": "en",
+          "kind": "understandable_english",
+          "source_priority": [
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+        },
+        {
+          "field": "ja_modern",
+          "kind": "plain_modern_japanese",
+          "source_priority": [
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add reader-friendly modern Japanese based on the modern Chinese meaning bridge. Preserve the existing ja field as legacy/source/comment Japanese."
+        }
+      ],
+      "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/shiji-aginti/tasks.jsonl",
+      "old_json_is_read_only": true,
+      "task_template": {
+        "schema_version": 1,
+        "task_type": "incremental_language_overlay",
+        "category": "classical_chinese",
+        "dependency": "base_chunks_exist",
+        "actions": [
+          {
+            "field": "en",
+            "kind": "understandable_english",
+            "source_priority": [
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          },
+          {
+            "field": "ja_modern",
+            "kind": "plain_modern_japanese",
+            "source_priority": [
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add reader-friendly modern Japanese based on the modern Chinese meaning bridge. Preserve the existing ja field as legacy/source/comment Japanese."
+          }
+        ],
+        "do_not_modify_templates": [
+          "data/interlinear/shiji-aginti/chunks/{chunk_id}.json",
+          "books/shiji-aginti/work/bilingual/interlinear/chunks/{chunk_id}.json",
+          "books/shiji-aginti/work/bilingual/reviewed/chunks/{chunk_id}.json"
+        ],
+        "output_overlay_path_template": "books/shiji-aginti/work/incremental/en-modern-ja/overlays/chunks/{chunk_id}.json",
+        "durable_overlay_path_template": "data/interlinear-overlays/en-modern-ja/shiji-aginti/chunks/{chunk_id}.json",
+        "merge_policy": {
+          "preserve_existing_fields": true,
+          "append_only_fields": [
+            "en",
+            "ja_modern"
+          ],
+          "legacy_japanese_field": "ja",
+          "modern_japanese_field": "ja_modern"
+        },
+        "validation": {
+          "require_no_source_text_loss": true,
+          "require_english_if_requested": true,
+          "require_modern_ja_if_requested": true,
+          "forbid_overwriting_legacy_ja": true,
+          "require_ruby_for_kanji_tokens_in_ja_modern": true
+        }
+      },
+      "generated_at": "2026-06-11T09:51:34.236900+00:00"
+    },
+    {
+      "schema_version": 1,
+      "book_id": "the-old-capital",
+      "title": "古都",
+      "category": "early_bilingual",
+      "source_area": "sources/《古都》（川端康成经典名作，余华倾情推荐）.epub",
+      "priority": 90,
+      "dependency": "base_chunks_exist",
+      "notes": "",
+      "chunk_id_source": "books_manifest",
+      "chunk_count": 3248,
+      "actions": [
+        {
+          "field": "en",
+          "kind": "understandable_english",
+          "source_priority": [
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+        }
+      ],
+      "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/the-old-capital/tasks.jsonl",
+      "old_json_is_read_only": true,
+      "task_template": {
+        "schema_version": 1,
+        "task_type": "incremental_language_overlay",
+        "category": "early_bilingual",
+        "dependency": "base_chunks_exist",
+        "actions": [
+          {
+            "field": "en",
+            "kind": "understandable_english",
+            "source_priority": [
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          }
+        ],
+        "do_not_modify_templates": [
+          "data/interlinear/the-old-capital/chunks/{chunk_id}.json",
+          "books/the-old-capital/work/bilingual/interlinear/chunks/{chunk_id}.json",
+          "books/the-old-capital/work/bilingual/reviewed/chunks/{chunk_id}.json"
+        ],
+        "output_overlay_path_template": "books/the-old-capital/work/incremental/en-modern-ja/overlays/chunks/{chunk_id}.json",
+        "durable_overlay_path_template": "data/interlinear-overlays/en-modern-ja/the-old-capital/chunks/{chunk_id}.json",
+        "merge_policy": {
+          "preserve_existing_fields": true,
+          "append_only_fields": [
+            "en",
+            "ja_modern"
+          ],
+          "legacy_japanese_field": "ja",
+          "modern_japanese_field": "ja_modern"
+        },
+        "validation": {
+          "require_no_source_text_loss": true,
+          "require_english_if_requested": true,
+          "require_modern_ja_if_requested": false,
+          "forbid_overwriting_legacy_ja": true,
+          "require_ruby_for_kanji_tokens_in_ja_modern": true
+        }
+      },
+      "generated_at": "2026-06-11T09:51:34.550576+00:00"
+    },
+    {
+      "schema_version": 1,
+      "book_id": "izu-no-odori",
+      "title": "伊豆的舞女 / 伊豆の踊子",
+      "category": "early_bilingual",
+      "source_area": "sources/伊豆的舞女 - [日]川端康成.epub",
+      "priority": 100,
+      "dependency": "base_chunks_exist",
+      "notes": "",
+      "chunk_id_source": "books_manifest",
+      "chunk_count": 2265,
+      "actions": [
+        {
+          "field": "en",
+          "kind": "understandable_english",
+          "source_priority": [
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+        }
+      ],
+      "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/izu-no-odori/tasks.jsonl",
+      "old_json_is_read_only": true,
+      "task_template": {
+        "schema_version": 1,
+        "task_type": "incremental_language_overlay",
+        "category": "early_bilingual",
+        "dependency": "base_chunks_exist",
+        "actions": [
+          {
+            "field": "en",
+            "kind": "understandable_english",
+            "source_priority": [
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          }
+        ],
+        "do_not_modify_templates": [
+          "data/interlinear/izu-no-odori/chunks/{chunk_id}.json",
+          "books/izu-no-odori/work/bilingual/interlinear/chunks/{chunk_id}.json",
+          "books/izu-no-odori/work/bilingual/reviewed/chunks/{chunk_id}.json"
+        ],
+        "output_overlay_path_template": "books/izu-no-odori/work/incremental/en-modern-ja/overlays/chunks/{chunk_id}.json",
+        "durable_overlay_path_template": "data/interlinear-overlays/en-modern-ja/izu-no-odori/chunks/{chunk_id}.json",
+        "merge_policy": {
+          "preserve_existing_fields": true,
+          "append_only_fields": [
+            "en",
+            "ja_modern"
+          ],
+          "legacy_japanese_field": "ja",
+          "modern_japanese_field": "ja_modern"
+        },
+        "validation": {
+          "require_no_source_text_loss": true,
+          "require_english_if_requested": true,
+          "require_modern_ja_if_requested": false,
+          "forbid_overwriting_legacy_ja": true,
+          "require_ruby_for_kanji_tokens_in_ja_modern": true
+        }
+      },
+      "generated_at": "2026-06-11T09:51:34.819676+00:00"
+    },
+    {
+      "schema_version": 1,
+      "book_id": "genji-modern",
+      "title": "源氏物语 / 源氏物語",
+      "category": "early_bilingual_large",
+      "source_area": "sources/源氏物语",
+      "priority": 110,
+      "dependency": "base_chunks_exist",
+      "notes": "",
+      "chunk_id_source": "books_manifest",
+      "chunk_count": 5621,
+      "actions": [
+        {
+          "field": "en",
+          "kind": "understandable_english",
+          "source_priority": [
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+        }
+      ],
+      "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/genji-modern/tasks.jsonl",
+      "old_json_is_read_only": true,
+      "task_template": {
+        "schema_version": 1,
+        "task_type": "incremental_language_overlay",
+        "category": "early_bilingual_large",
+        "dependency": "base_chunks_exist",
+        "actions": [
+          {
+            "field": "en",
+            "kind": "understandable_english",
+            "source_priority": [
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          }
+        ],
+        "do_not_modify_templates": [
+          "data/interlinear/genji-modern/chunks/{chunk_id}.json",
+          "books/genji-modern/work/bilingual/interlinear/chunks/{chunk_id}.json",
+          "books/genji-modern/work/bilingual/reviewed/chunks/{chunk_id}.json"
+        ],
+        "output_overlay_path_template": "books/genji-modern/work/incremental/en-modern-ja/overlays/chunks/{chunk_id}.json",
+        "durable_overlay_path_template": "data/interlinear-overlays/en-modern-ja/genji-modern/chunks/{chunk_id}.json",
+        "merge_policy": {
+          "preserve_existing_fields": true,
+          "append_only_fields": [
+            "en",
+            "ja_modern"
+          ],
+          "legacy_japanese_field": "ja",
+          "modern_japanese_field": "ja_modern"
+        },
+        "validation": {
+          "require_no_source_text_loss": true,
+          "require_english_if_requested": true,
+          "require_modern_ja_if_requested": false,
+          "forbid_overwriting_legacy_ja": true,
+          "require_ruby_for_kanji_tokens_in_ja_modern": true
+        }
+      },
+      "generated_at": "2026-06-11T09:51:35.419701+00:00"
+    },
+    {
+      "schema_version": 1,
+      "book_id": "kojiki",
+      "title": "古事記",
+      "category": "ancient_classic",
+      "source_area": "sources/kojiki",
+      "priority": 120,
+      "dependency": "base_chunks_exist",
+      "notes": "Ancient text. Add English and a reader-friendly modern Japanese paraphrase from the modern Chinese bridge/source layer.",
+      "chunk_id_source": "books_manifest",
+      "chunk_count": 713,
+      "actions": [
+        {
+          "field": "en",
+          "kind": "understandable_english",
+          "source_priority": [
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+        },
+        {
+          "field": "ja_modern",
+          "kind": "plain_modern_japanese",
+          "source_priority": [
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add reader-friendly modern Japanese based on the modern Chinese meaning bridge. Preserve the existing ja field as legacy/source/comment Japanese."
+        }
+      ],
+      "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/kojiki/tasks.jsonl",
+      "old_json_is_read_only": true,
+      "task_template": {
+        "schema_version": 1,
+        "task_type": "incremental_language_overlay",
+        "category": "ancient_classic",
+        "dependency": "base_chunks_exist",
+        "actions": [
+          {
+            "field": "en",
+            "kind": "understandable_english",
+            "source_priority": [
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          },
+          {
+            "field": "ja_modern",
+            "kind": "plain_modern_japanese",
+            "source_priority": [
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add reader-friendly modern Japanese based on the modern Chinese meaning bridge. Preserve the existing ja field as legacy/source/comment Japanese."
+          }
+        ],
+        "do_not_modify_templates": [
+          "data/interlinear/kojiki/chunks/{chunk_id}.json",
+          "books/kojiki/work/bilingual/interlinear/chunks/{chunk_id}.json",
+          "books/kojiki/work/bilingual/reviewed/chunks/{chunk_id}.json"
+        ],
+        "output_overlay_path_template": "books/kojiki/work/incremental/en-modern-ja/overlays/chunks/{chunk_id}.json",
+        "durable_overlay_path_template": "data/interlinear-overlays/en-modern-ja/kojiki/chunks/{chunk_id}.json",
+        "merge_policy": {
+          "preserve_existing_fields": true,
+          "append_only_fields": [
+            "en",
+            "ja_modern"
+          ],
+          "legacy_japanese_field": "ja",
+          "modern_japanese_field": "ja_modern"
+        },
+        "validation": {
+          "require_no_source_text_loss": true,
+          "require_english_if_requested": true,
+          "require_modern_ja_if_requested": true,
+          "forbid_overwriting_legacy_ja": true,
+          "require_ruby_for_kanji_tokens_in_ja_modern": true
+        }
+      },
+      "generated_at": "2026-06-11T09:51:35.539068+00:00"
+    },
+    {
+      "schema_version": 1,
+      "book_id": "woman-in-the-dunes",
+      "title": "砂女 / 砂の女",
+      "category": "early_bilingual",
+      "source_area": "sources/砂女",
+      "priority": 130,
+      "dependency": "base_chunks_exist",
+      "notes": "",
+      "chunk_id_source": "books_manifest",
+      "chunk_count": 1150,
+      "actions": [
+        {
+          "field": "en",
+          "kind": "understandable_english",
+          "source_priority": [
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+        }
+      ],
+      "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/woman-in-the-dunes/tasks.jsonl",
+      "old_json_is_read_only": true,
+      "task_template": {
+        "schema_version": 1,
+        "task_type": "incremental_language_overlay",
+        "category": "early_bilingual",
+        "dependency": "base_chunks_exist",
+        "actions": [
+          {
+            "field": "en",
+            "kind": "understandable_english",
+            "source_priority": [
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          }
+        ],
+        "do_not_modify_templates": [
+          "data/interlinear/woman-in-the-dunes/chunks/{chunk_id}.json",
+          "books/woman-in-the-dunes/work/bilingual/interlinear/chunks/{chunk_id}.json",
+          "books/woman-in-the-dunes/work/bilingual/reviewed/chunks/{chunk_id}.json"
+        ],
+        "output_overlay_path_template": "books/woman-in-the-dunes/work/incremental/en-modern-ja/overlays/chunks/{chunk_id}.json",
+        "durable_overlay_path_template": "data/interlinear-overlays/en-modern-ja/woman-in-the-dunes/chunks/{chunk_id}.json",
+        "merge_policy": {
+          "preserve_existing_fields": true,
+          "append_only_fields": [
+            "en",
+            "ja_modern"
+          ],
+          "legacy_japanese_field": "ja",
+          "modern_japanese_field": "ja_modern"
+        },
+        "validation": {
+          "require_no_source_text_loss": true,
+          "require_english_if_requested": true,
+          "require_modern_ja_if_requested": false,
+          "forbid_overwriting_legacy_ja": true,
+          "require_ruby_for_kanji_tokens_in_ja_modern": true
+        }
+      },
+      "generated_at": "2026-06-11T09:51:35.641276+00:00"
+    },
+    {
+      "schema_version": 1,
+      "book_id": "ginga-tetsudo",
+      "title": "銀河鉄道の夜",
+      "category": "prepared_bilingual",
+      "source_area": "sources/銀河鉄道の夜",
+      "priority": 140,
+      "dependency": "wait_for_current_bilingual_completion",
+      "notes": "Prepare now, run enhancement only after the current bilingual base queue finishes and reviewed chunks are promoted.",
+      "chunk_id_source": "books_manifest",
+      "chunk_count": 604,
+      "actions": [
+        {
+          "field": "en",
+          "kind": "understandable_english",
+          "source_priority": [
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+        }
+      ],
+      "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/ginga-tetsudo/tasks.jsonl",
+      "old_json_is_read_only": true,
+      "task_template": {
+        "schema_version": 1,
+        "task_type": "incremental_language_overlay",
+        "category": "prepared_bilingual",
+        "dependency": "wait_for_current_bilingual_completion",
+        "actions": [
+          {
+            "field": "en",
+            "kind": "understandable_english",
+            "source_priority": [
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          }
+        ],
+        "do_not_modify_templates": [
+          "data/interlinear/ginga-tetsudo/chunks/{chunk_id}.json",
+          "books/ginga-tetsudo/work/bilingual/interlinear/chunks/{chunk_id}.json",
+          "books/ginga-tetsudo/work/bilingual/reviewed/chunks/{chunk_id}.json"
+        ],
+        "output_overlay_path_template": "books/ginga-tetsudo/work/incremental/en-modern-ja/overlays/chunks/{chunk_id}.json",
+        "durable_overlay_path_template": "data/interlinear-overlays/en-modern-ja/ginga-tetsudo/chunks/{chunk_id}.json",
+        "merge_policy": {
+          "preserve_existing_fields": true,
+          "append_only_fields": [
+            "en",
+            "ja_modern"
+          ],
+          "legacy_japanese_field": "ja",
+          "modern_japanese_field": "ja_modern"
+        },
+        "validation": {
+          "require_no_source_text_loss": true,
+          "require_english_if_requested": true,
+          "require_modern_ja_if_requested": false,
+          "forbid_overwriting_legacy_ja": true,
+          "require_ruby_for_kanji_tokens_in_ja_modern": true
+        }
+      },
+      "generated_at": "2026-06-11T09:51:35.661567+00:00"
+    },
+    {
+      "schema_version": 1,
+      "book_id": "chumon-no-ooi-ryoriten",
+      "title": "注文の多い料理店",
+      "category": "prepared_bilingual",
+      "source_area": "sources/注文の多い料理店",
+      "priority": 150,
+      "dependency": "wait_for_current_bilingual_completion",
+      "notes": "Prepare now, run enhancement only after the current bilingual base queue finishes and reviewed chunks are promoted.",
+      "chunk_id_source": "books_manifest",
+      "chunk_count": 2698,
+      "actions": [
+        {
+          "field": "en",
+          "kind": "understandable_english",
+          "source_priority": [
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+        }
+      ],
+      "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/chumon-no-ooi-ryoriten/tasks.jsonl",
+      "old_json_is_read_only": true,
+      "task_template": {
+        "schema_version": 1,
+        "task_type": "incremental_language_overlay",
+        "category": "prepared_bilingual",
+        "dependency": "wait_for_current_bilingual_completion",
+        "actions": [
+          {
+            "field": "en",
+            "kind": "understandable_english",
+            "source_priority": [
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          }
+        ],
+        "do_not_modify_templates": [
+          "data/interlinear/chumon-no-ooi-ryoriten/chunks/{chunk_id}.json",
+          "books/chumon-no-ooi-ryoriten/work/bilingual/interlinear/chunks/{chunk_id}.json",
+          "books/chumon-no-ooi-ryoriten/work/bilingual/reviewed/chunks/{chunk_id}.json"
+        ],
+        "output_overlay_path_template": "books/chumon-no-ooi-ryoriten/work/incremental/en-modern-ja/overlays/chunks/{chunk_id}.json",
+        "durable_overlay_path_template": "data/interlinear-overlays/en-modern-ja/chumon-no-ooi-ryoriten/chunks/{chunk_id}.json",
+        "merge_policy": {
+          "preserve_existing_fields": true,
+          "append_only_fields": [
+            "en",
+            "ja_modern"
+          ],
+          "legacy_japanese_field": "ja",
+          "modern_japanese_field": "ja_modern"
+        },
+        "validation": {
+          "require_no_source_text_loss": true,
+          "require_english_if_requested": true,
+          "require_modern_ja_if_requested": false,
+          "forbid_overwriting_legacy_ja": true,
+          "require_ruby_for_kanji_tokens_in_ja_modern": true
+        }
+      },
+      "generated_at": "2026-06-11T09:51:35.736785+00:00"
+    }
+  ],
+  "worker_contract": {
+    "read_existing_chunks_only": true,
+    "never_delete_or_rewrite_old_json": true,
+    "write_overlay_chunks_first": true,
+    "merge_only_after_validation": true,
+    "compile_new_editions_from_overlay_plus_base": true
+  }
+}
