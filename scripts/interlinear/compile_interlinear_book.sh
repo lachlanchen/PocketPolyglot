@@ -109,10 +109,6 @@ case "$secondary_ja_mode" in
   auto|comment|hide|merge) ;;
   *) echo "Invalid --secondary-ja-mode: $secondary_ja_mode" >&2; exit 1 ;;
 esac
-if [[ "$color_mode" == "blackwhite" ]]; then
-  cover_image=""
-fi
-
 assemble_cmd=(
   python scripts/interlinear/assemble_chunk_json.py
   --manifest "$manifest"

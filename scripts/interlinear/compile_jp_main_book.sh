@@ -159,10 +159,6 @@ if [[ "${#filter_args[@]}" -gt 0 ]]; then
 fi
 python scripts/interlinear/validate_interlinear_json.py "$output_json"
 
-if [[ "$color_mode" == "blackwhite" ]]; then
-  cover_image=""
-fi
-
 mkdir -p "$build_dir"
 python scripts/interlinear/json_to_jp_main_tex.py "$output_json" \
   -o "$build_dir/source.tex" \

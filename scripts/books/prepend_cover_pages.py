@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prepend generated cover images to finished color PDFs.
+"""Prepend generated cover images to finished PDFs.
 
 This is a fast post-processing path for large books whose TeX sources already
 use `assets/covers/<book-id>/cover.png`, but where a full rebuild would be
@@ -20,28 +20,49 @@ from reportlab.pdfgen import canvas
 
 
 ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_BOOKS = [
-    "red-rising-1",
-    "red-rising-2",
-    "red-rising-3",
-    "japanese-history",
-    "spring-snow",
-    "inugami-curse",
-    "i-am-a-cat",
-    "botchan",
-    "gone-with-the-wind",
-]
+COVER_EXTENSIONS = (".png", ".jpg", ".jpeg")
+LEGACY_COVER_DIRS = {
+    "kokoro": "kokoro-jp-main",
+}
 
 
-def color_pdfs(build_dir: Path, book_id: str) -> list[Path]:
+def final_pdfs(build_dir: Path, book_id: str) -> list[Path]:
     book_dir = build_dir / book_id
     if not book_dir.exists():
         return []
     return sorted(
         pdf
-        for pdf in book_dir.glob("**/color/*.pdf")
+        for pdf in book_dir.glob("**/*.pdf")
+        if pdf.parent.name in {"color", "blackwhite"}
         if pdf.name != "book.pdf" and pdf.is_file()
     )
+
+
+def discover_books(build_dir: Path) -> list[str]:
+    books: set[str] = set()
+    for pdf in build_dir.glob("*/*/*/*.pdf"):
+        if pdf.parent.name in {"color", "blackwhite"} and pdf.name != "book.pdf":
+            books.add(pdf.relative_to(build_dir).parts[0])
+    for pdf in build_dir.glob("*/*/*/*/*.pdf"):
+        if pdf.parent.name in {"color", "blackwhite"} and pdf.name != "book.pdf":
+            books.add(pdf.relative_to(build_dir).parts[0])
+    return sorted(books)
+
+
+def resolve_cover(assets_dir: Path, book_id: str) -> Path | None:
+    candidates = [assets_dir / book_id]
+    legacy = LEGACY_COVER_DIRS.get(book_id)
+    if legacy:
+        candidates.append(assets_dir / legacy)
+    for cover_dir in candidates:
+        direct = cover_dir / "cover.png"
+        if direct.exists():
+            return direct
+        for pattern in ("*cover*.png", "*cover*.jpg", "*cover*.jpeg"):
+            found = sorted(path for path in cover_dir.glob(pattern) if path.is_file())
+            if found:
+                return found[0]
+    return None
 
 
 def source_has_current_cover(pdf: Path, book_id: str) -> bool:
@@ -140,20 +161,20 @@ def main() -> int:
 
     build_dir = args.build_dir.resolve()
     assets_dir = args.assets_dir.resolve()
-    books = args.books or DEFAULT_BOOKS
+    books = args.books or discover_books(build_dir)
 
     processed = 0
     skipped = 0
     missing = 0
     for book_id in books:
-        cover = assets_dir / book_id / "cover.png"
-        pdfs = color_pdfs(build_dir, book_id)
-        if not cover.exists():
-            print(f"missing cover: {book_id} -> {cover}")
+        cover = resolve_cover(assets_dir, book_id)
+        pdfs = final_pdfs(build_dir, book_id)
+        if cover is None:
+            print(f"missing cover: {book_id}")
             missing += 1
             continue
         if not pdfs:
-            print(f"missing color pdfs: {book_id}")
+            print(f"missing final pdfs: {book_id}")
             missing += 1
             continue
         for pdf in pdfs:

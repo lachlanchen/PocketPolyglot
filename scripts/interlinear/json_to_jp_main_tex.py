@@ -177,7 +177,6 @@ def convert(
     ]
     if color_mode == "blackwhite":
         out.append(r"\BlackWhiteMode")
-        cover_image = ""
     out.extend(
         [
             rf"\JpMainPdfMeta{{{tex_escape(plain_tokens(data['title']['ja']))}}}{{{tex_escape(plain_tokens(data['title']['zh']))}}}{{{tex_escape(author)}}}",

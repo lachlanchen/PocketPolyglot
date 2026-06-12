@@ -80,9 +80,6 @@ powered_by="$(jq -r '.powered_by // "powered by LazyingArt"' "$plan")"
 if [[ -z "$cover_image" && -f "assets/covers/$book_id/cover.png" ]]; then
   cover_image="assets/covers/$book_id/cover.png"
 fi
-if [[ "$color_mode" == "blackwhite" ]]; then
-  cover_image=""
-fi
 
 case "$main_lang:$comment_lang" in
   zh:en|en:zh) pair="zh-en" ;;
