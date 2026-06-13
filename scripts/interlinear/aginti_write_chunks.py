@@ -71,6 +71,27 @@ GRAMMAR_ROLES = frozenset({
     "subject", "predicate", "object", "attributive",
     "adverbial", "complement", "topic", "function",
 })
+JA_LINE_ROLES = frozenset({
+    "gloss",
+    "main",
+    "translation",
+    "continuation",
+    "line_continuation",
+    "line-continuation",
+    "comment",
+    "explanatory_comment",
+    "explanatory-comment",
+    "explanation",
+    "modern_explanation",
+    "modern-explanation",
+    "modern_paraphrase",
+    "modern-paraphrase",
+    "paraphrase",
+    "note",
+    "annotation",
+    "zhu",
+    "注",
+})
 SPACE_RE = re.compile(r'\s+')
 
 SISHU_TITLE_PINYIN = {
@@ -550,14 +571,18 @@ def validate_unit(unit: dict, where: str) -> list[str]:
     errs += validate_zh_tokens(unit["zh"], f"{where}.zh")
 
     ja = unit.get("ja")
-    if not isinstance(ja, list) or len(ja) != 2:
-        errs.append(f"{where}: ja must be exactly two line arrays")
+    if not isinstance(ja, list) or not ja or len(ja) > 2:
+        errs.append(f"{where}: ja must be one or two line arrays")
     else:
-        roles = unit.get("ja_line_roles", ["gloss", "explanatory_comment"])
-        if roles != ["gloss", "explanatory_comment"]:
-            errs.append(f"{where}: ja_line_roles must be ['gloss', 'explanatory_comment'] when present")
-        for li in range(2):
-            line = ja[li]
+        roles = unit.get("ja_line_roles")
+        if roles is not None:
+            if not isinstance(roles, list) or len(roles) != len(ja):
+                errs.append(f"{where}: ja_line_roles must match ja length")
+            else:
+                for role in roles:
+                    if str(role) not in JA_LINE_ROLES:
+                        errs.append(f"{where}: unsupported ja_line_role {role!r}")
+        for li, line in enumerate(ja):
             if not isinstance(line, list):
                 errs.append(f"{where}.ja[{li}]: must be a token list")
                 continue
@@ -583,8 +608,10 @@ def validate_unit(unit: dict, where: str) -> list[str]:
 
 
 def ensure_unit_line_roles(unit: dict[str, Any]) -> dict[str, Any]:
-    if isinstance(unit, dict) and isinstance(unit.get("ja"), list) and len(unit["ja"]) == 2:
-        unit["ja_line_roles"] = ["gloss", "explanatory_comment"]
+    if isinstance(unit, dict) and isinstance(unit.get("ja"), list) and unit["ja"]:
+        roles = unit.get("ja_line_roles")
+        if not isinstance(roles, list) or len(roles) != len(unit["ja"]):
+            unit["ja_line_roles"] = ["gloss"] + ["continuation"] * (len(unit["ja"]) - 1)
     return unit
 
 
@@ -984,7 +1011,7 @@ The JSON format:
     {
       "source_text": "<the exact Chinese source for this unit>",
       "zh": [{"t": "<char>", "r": "<pinyin>"}, ...],
-      "ja_line_roles": ["gloss", "explanatory_comment"],
+      "ja_line_roles": ["gloss", "modern_explanation"],
       "ja": [
         [{"t": "<token>", "r": "<furigana>"}, ...],
         [{"t": "<token>", "r": "<furigana>"}, ...]
@@ -1013,28 +1040,34 @@ CRITICAL RULES - follow these exactly:
    - Pinyin must be lowercase with tone numbers (1-4) or tone marks.
 
 3. **Japanese lines (ja)**:
-   - ja is an array of exactly TWO lines (token arrays).
-   - Add `"ja_line_roles": ["gloss", "explanatory_comment"]` to every unit.
+   - ja is an array of ONE or TWO semantic lines (token arrays).
+   - Add `ja_line_roles` with the same length as `ja`.
    - **Line 0 = gloss**: a concise Japanese reading/gloss for the Chinese unit,
      close to the source meaning and suitable as the main Japanese line. It may be
      kunyomi/kanbun-like when helpful, but must remain readable natural Japanese.
      Each kanji character MUST be its own token with furigana in `r`. Kana tokens
      have `r` set to "".
-   - **Line 1 = explanatory_comment**: a short scholarly Japanese note explaining
-     the unit's sense, grammar, or Zhu Xi-style interpretive point. It is NOT a
-     second translation. Make it visibly different in function from line 0: use
-     concise commentary vocabulary such as ここでは, すなわち, 注として, 義は, など
-     when appropriate. Use NATURAL MIXED KANJI/KANA - do NOT write kana-only
-     sentences. Each kanji is its own token with furigana.
-   - The renderer treats line 0 as the main Japanese gloss and line 1 as a smaller
-     explanatory comment line with a note mark/wavy guide. Keep the data role clear.
+   - If the Japanese text simply continues the same sentence, keep it in line 0;
+     do NOT create a second `ja` row just because the sentence is long.
+   - Use line 1 only when it is genuinely a different layer:
+     * `modern_explanation`: a plain modern Japanese paraphrase distinct from the
+       kanbun-style gloss;
+     * `explanatory_comment`: a short scholarly note explaining sense, grammar,
+       or Zhu Xi-style interpretation.
+   - Line 1 must be visibly different in function from line 0. Prefer concise
+     commentary vocabulary such as これは, ここでは, すなわち, 義は, 意味は, or
+     注として when appropriate. Use NATURAL MIXED KANJI/KANA - do NOT write
+     kana-only sentences. Each kanji is its own token with furigana.
+   - The renderer treats line 0 as continuous Japanese main/gloss text and line 1
+     as a smaller separated explanation. Keep the data role clear.
    - The same JSON may be rendered in either direction:
      * zh-main: `zh` is the large continuous main text; ja line 0 is the Japanese
-       gloss under it; ja line 1 is a smaller slanted Japanese explanatory note.
-     * jp-main: ja line 0 is the large continuous Japanese main text; ja line 1 is
-       the smaller slanted Japanese note; `zh` becomes the separate Chinese comment.
-     Therefore do not duplicate line 0 in line 1, and do not use line 1 as a second
-     plain translation.
+       gloss under it; ja line 1, if present, is a smaller separated explanation.
+     * jp-main: ja line 0 is the large continuous Japanese main text; ja line 1, if
+       present, is the smaller separated explanation; `zh` becomes the separate
+       Chinese comment.
+     Therefore do not duplicate line 0 in line 1, and never use line 1 as a mere
+     physical line break.
 
 4. **Grammar roles (g)**:
    - Every Chinese Hanzi token in `zh` MUST have `g`.

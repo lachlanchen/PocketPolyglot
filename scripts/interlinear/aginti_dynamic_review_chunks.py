@@ -520,7 +520,7 @@ def detect_quality_issues(data: dict[str, Any], source_chunk: dict[str, Any]) ->
             issues.append(mismatch_detail(f"{where}.zh", source_text, zh_text))
 
         ja = unit.get("ja")
-        if not isinstance(ja, list) or len(ja) != 2:
+        if not isinstance(ja, list) or not ja:
             continue
         line_texts = [token_text(line) if isinstance(line, list) else "" for line in ja]
         compact_lines = [normalize(text) for text in line_texts]
@@ -533,17 +533,17 @@ def detect_quality_issues(data: dict[str, Any], source_chunk: dict[str, Any]) ->
                 issues.append(f"{where}.ja[{line_index}]: Japanese content is kana-only; use normal mixed kanji/kana")
             if source_text and len(compact) > max(42, len(normalize(source_text)) * 4):
                 issues.append(f"{where}.ja[{line_index}]: Japanese line is too long for pocket interlinear layout")
-        if compact_lines[0] and compact_lines[0] == compact_lines[1]:
+        if len(compact_lines) >= 2 and compact_lines[0] and compact_lines[0] == compact_lines[1]:
             issues.append(
-                f"{where}: gloss and explanatory_comment are identical "
-                f"({clipped(compact_lines[0], 100)!r}); keep ja[0] as the gloss and rewrite ja[1] "
-                "as a concise explanatory note about meaning or grammar"
+                f"{where}: ja[1] duplicates ja[0] "
+                f"({clipped(compact_lines[0], 100)!r}); remove ja[1] if it is only a continuation, "
+                "or rewrite it as a clearly separate modern_explanation/explanatory_comment"
             )
-        elif compact_lines[0] and compact_lines[1] and compact_lines[0] in compact_lines[1] and len(compact_lines[0]) >= 8:
+        elif len(compact_lines) >= 2 and compact_lines[0] and compact_lines[1] and compact_lines[0] in compact_lines[1] and len(compact_lines[0]) >= 8:
             issues.append(
-                f"{where}: explanatory_comment mostly duplicates the gloss "
-                f"(gloss={clipped(compact_lines[0], 80)!r}, comment={clipped(compact_lines[1], 100)!r}); "
-                "rewrite ja[1] as a concise explanatory note"
+                f"{where}: ja[1] mostly duplicates ja[0] "
+                f"(ja[0]={clipped(compact_lines[0], 80)!r}, ja[1]={clipped(compact_lines[1], 100)!r}); "
+                "merge it into ja[0] if it is continuation, or rewrite it as a clearly separate note"
             )
 
         for lang in ("zh", "ja"):
@@ -596,7 +596,7 @@ Repair the JSON only as much as needed. Return one COMPLETE compact JSON object:
     {{
       "source_text": "...",
       "zh": [{{"t": "...", "r": "...", "g": "..."}}],
-      "ja_line_roles": ["gloss", "explanatory_comment"],
+      "ja_line_roles": ["gloss", "modern_explanation"],
       "ja": [[{{"t": "...", "r": "...", "g": "..."}}], [{{"t": "...", "r": "...", "g": "..."}}]]
     }}
   ]
@@ -611,8 +611,10 @@ Hard rules:
 - Put furigana only on single Japanese kanji tokens.
 - Every Chinese Hanzi and every Japanese kanji must have `g`.
 - Allowed grammar roles: {", ".join(sorted(GRAMMAR_ROLES))}.
-- ja[0] is a Japanese gloss/reading. ja[1] is a smaller explanatory scholarly
-  note, not a duplicate translation.
+- ja[0] is continuous Japanese gloss/reading. If text simply continues the same
+  Japanese sentence, keep it in ja[0] rather than making ja[1].
+- Use ja[1] only for a genuinely separate modern_explanation or
+  explanatory_comment. It must not be a mere physical line break.
 - Fix every listed issue, then self-check before answering.
 
 Return only JSON. No markdown fences.

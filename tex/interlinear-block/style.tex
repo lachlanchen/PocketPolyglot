@@ -164,6 +164,7 @@
 \newcommand{\ZHMain}[1]{{\zhfont\fontsize{9.85pt}{16pt}\selectfont\color{BookInk}#1}}
 \newcommand{\JAGloss}[1]{{\jpfont\fontsize{7.25pt}{11.3pt}\selectfont\color{BookNote}#1}}
 \newcommand{\JAExplain}[1]{{\jpfont\addfontfeatures{FakeSlant=0.08}\fontsize{6.45pt}{9.2pt}\selectfont\color{BookNote}#1}}
+\newcommand{\JAExplainLabel}{{\jpfont\bfseries\fontsize{5.8pt}{7pt}\selectfont\textcolor{BookRed}{解}}}
 \newcommand{\TinyLabel}[1]{{\sffamily\bfseries\fontsize{5.8pt}{5.8pt}\selectfont\textcolor{BookRed}{#1}}}
 \newcommand{\CommentWave}{}
 
@@ -232,7 +233,7 @@
     \if\relax\detokenize{#3}\relax\else
       \par\vspace{-0.18em}
       \hspace*{0.85em}\begin{minipage}[t]{0.88\linewidth}
-        \JAExplain{#3}%
+        \JAExplainLabel\hspace{0.25em}\JAExplain{#3}%
       \end{minipage}%
     \fi
   \end{minipage}\par

@@ -14,10 +14,25 @@ COMMENT_LINE_ROLES = {
     "explanatory_comment",
     "explanatory-comment",
     "explanation",
+    "modern_explanation",
+    "modern-explanation",
+    "modern_paraphrase",
+    "modern-paraphrase",
+    "paraphrase",
     "note",
     "annotation",
     "zhu",
     "注",
+}
+
+MAIN_LINE_ROLES = {
+    "",
+    "gloss",
+    "main",
+    "translation",
+    "continuation",
+    "line_continuation",
+    "line-continuation",
 }
 
 CIRCLED_DIGITS = {
@@ -111,6 +126,8 @@ def ja_line_role(unit: dict[str, Any], index: int) -> str:
 
 def is_comment_ja_line(unit: dict[str, Any], index: int) -> bool:
     role = ja_line_role(unit, index)
+    if role in MAIN_LINE_ROLES:
+        return False
     return role in COMMENT_LINE_ROLES
 
 

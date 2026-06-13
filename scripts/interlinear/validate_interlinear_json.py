@@ -15,6 +15,27 @@ SPACE_RE = re.compile(r"\s+")
 HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
 PLACEHOLDER_JA = {"注", "注。", "。"}
+JA_LINE_ROLES = {
+    "gloss",
+    "main",
+    "translation",
+    "continuation",
+    "line_continuation",
+    "line-continuation",
+    "comment",
+    "explanatory_comment",
+    "explanatory-comment",
+    "explanation",
+    "modern_explanation",
+    "modern-explanation",
+    "modern_paraphrase",
+    "modern-paraphrase",
+    "paraphrase",
+    "note",
+    "annotation",
+    "zhu",
+    "注",
+}
 GRAMMAR_ROLES = {
     "subject",
     "predicate",
@@ -119,9 +140,18 @@ def validate_unit(unit: dict[str, Any], where: str, errors: list[str]) -> str:
         return ""
     validate_zh_tokens(unit["zh"], f"{where}.zh", errors)
     ja = unit.get("ja")
-    if not isinstance(ja, list) or len(ja) != 2:
-        errors.append(f"{where}: ja must contain exactly two line arrays")
+    if not isinstance(ja, list) or not ja:
+        errors.append(f"{where}: ja must contain one or more line arrays")
     else:
+        roles = unit.get("ja_line_roles")
+        if roles is not None:
+            if not isinstance(roles, list) or len(roles) != len(ja):
+                errors.append(f"{where}: ja_line_roles must be a list matching ja length")
+            else:
+                for role_index, role in enumerate(roles):
+                    if str(role) not in JA_LINE_ROLES:
+                        allowed = ", ".join(sorted(JA_LINE_ROLES))
+                        errors.append(f"{where}.ja_line_roles[{role_index}]: unsupported role {role!r}; use one of {allowed}")
         for line_index, line in enumerate(ja):
             if not isinstance(line, list):
                 errors.append(f"{where}.ja[{line_index}]: line must be a token list")

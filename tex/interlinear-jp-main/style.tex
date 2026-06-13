@@ -168,6 +168,7 @@
 \newcommand{\JPGlossText}[1]{\JPMainText{#1}}
 \newcommand{\JPCommentText}[1]{{\jpfont\addfontfeatures{FakeSlant=0.08}\fontsize{7.1pt}{10.5pt}\selectfont\color{BookNote}#1}}
 \newcommand{\ZHCommentText}[1]{{\zhfont\fontsize{6.95pt}{10.4pt}\selectfont\color{BookNote}#1}}
+\newcommand{\JPCommentLabel}{{\jpfont\bfseries\fontsize{6pt}{7pt}\selectfont\textcolor{BookRed}{解}}}
 \newcommand{\TinyLabel}[1]{{\sffamily\bfseries\fontsize{5.8pt}{5.8pt}\selectfont\textcolor{BookRed}{#1}}}
 \newcommand{\JpCommentWave}{}
 
@@ -250,7 +251,7 @@
     \noindent\hspace*{1.2em}%
     \begin{minipage}{0.87\linewidth}
       \rightskip=0pt plus 1.4em
-      \JPCommentText{#2}%
+      \JPCommentLabel\hspace{0.25em}\JPCommentText{#2}%
     \end{minipage}\par
   \fi
   \vspace{-0.03em}
