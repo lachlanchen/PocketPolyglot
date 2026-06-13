@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Export English-main Japanese/Chinese-note PDFs to a flat Nutstore folder."""
+"""Export English-main Japanese/Chinese-note PDFs to Nutstore."""
 
 from __future__ import annotations
 
@@ -38,6 +38,11 @@ def main() -> int:
     parser.add_argument("--build-dir", type=Path, default=ROOT / "build")
     parser.add_argument("--target-dir", type=Path, default=DEFAULT_TARGET)
     parser.add_argument("--no-clean", action="store_true")
+    parser.add_argument(
+        "--flat",
+        action="store_true",
+        help="Keep the older single-folder export layout with variant suffixes.",
+    )
     args = parser.parse_args()
 
     build_dir = args.build_dir.resolve()
@@ -50,6 +55,11 @@ def main() -> int:
     if not args.no_clean:
         for path in target_dir.glob("*.pdf"):
             path.unlink()
+        for variant in ("color", "blackwhite"):
+            variant_dir = target_dir / variant
+            if variant_dir.exists():
+                for path in variant_dir.glob("*.pdf"):
+                    path.unlink()
         for name in ("README.md", "manifest.json"):
             path = target_dir / name
             if path.exists():
@@ -58,19 +68,25 @@ def main() -> int:
     manifest_items = []
     used: set[str] = set()
     for book_id, variant, pdf in items:
-        suffix = "color" if variant == "color" else "blackwhite"
-        name = f"{clean_name(pdf.stem)} [{suffix}].pdf"
+        variant_dir = target_dir if args.flat else target_dir / variant
+        variant_dir.mkdir(parents=True, exist_ok=True)
+        name = f"{clean_name(pdf.stem)}.pdf"
+        if args.flat:
+            suffix = "color" if variant == "color" else "blackwhite"
+            name = f"{clean_name(pdf.stem)} [{suffix}].pdf"
         if name in used:
+            suffix = "color" if variant == "color" else "blackwhite"
             name = f"{clean_name(pdf.stem)} [{book_id} {suffix}].pdf"
         used.add(name)
-        output = target_dir / name
+        output = variant_dir / name
         shutil.copy2(pdf, output)
+        rel_output = output.relative_to(target_dir)
         manifest_items.append(
             {
                 "book_id": book_id,
                 "variant": variant,
                 "source": str(pdf.relative_to(build_dir)),
-                "output": name,
+                "output": str(rel_output),
                 "size_bytes": output.stat().st_size,
             }
         )
@@ -89,6 +105,11 @@ def main() -> int:
         f"PDF count: `{len(manifest_items)}`",
         "",
         "Each PDF uses English as the main reading line, with indented Japanese and Chinese note lines under each aligned unit.",
+        "",
+        "Files are separated by variant:",
+        "",
+        "- `color/` for grammar-colored editions",
+        "- `blackwhite/` for monochrome editions",
         "",
         "| Book | Variant | File |",
         "| --- | --- | --- |",
