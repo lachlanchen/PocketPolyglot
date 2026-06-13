@@ -29,6 +29,18 @@ SUBSCRIPT_DIGITS = {
     "₈": "8",
     "₉": "9",
 }
+CIRCLED_DIGITS = {
+    "①",
+    "②",
+    "③",
+    "④",
+    "⑤",
+    "⑥",
+    "⑦",
+    "⑧",
+    "⑨",
+    "⑩",
+}
 BREAK_AFTER = set("/\\._-,:;=+()[]{}")
 
 
@@ -45,6 +57,8 @@ def tex_escape_char(ch: str) -> str:
         "~": r"\textasciitilde{}",
         "^": r"\textasciicircum{}",
     }
+    if ch in CIRCLED_DIGITS:
+        return rf"\SymbolText{{{ch}}}"
     if ch in SUBSCRIPT_DIGITS:
         return rf"\ensuremath{{_{SUBSCRIPT_DIGITS[ch]}}}"
     return replacements.get(ch, ch)

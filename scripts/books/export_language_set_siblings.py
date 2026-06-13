@@ -6,14 +6,23 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
+import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
+
+from pypdf import PdfReader, PdfWriter
+from reportlab.lib.utils import ImageReader
+from reportlab.pdfgen import canvas
 
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_TARGET_ROOT = Path.home() / "Nutstore Files" / "Projects" / "LinguaLeaf"
 ARCHIVE = DEFAULT_TARGET_ROOT / "book-pdfs-20260525-083406"
 REFERENCE_DOC = ROOT / "references" / "language-set-exports.md"
+COVER_ROOT = ROOT / "assets" / "covers"
+COVER_ALIASES = {
+    "kokoro": "kokoro-jp-main",
+}
 
 
 BOOK_SETS = {
@@ -29,7 +38,7 @@ BOOK_SETS = {
             ("kokoro", "こころ / 心", ARCHIVE / "kokoro"),
             ("no-longer-human", "人間失格 / 人间失格", ARCHIVE / "no-longer-human"),
             ("rashomon-stories", "羅生門短篇集 / 罗生门短篇集", ARCHIVE / "rashomon-stories"),
-            ("sichuan-folk-stories-vol1", "中国民间故事集成 四川卷 上", ARCHIVE / "sichuan-folk-stories-vol1"),
+            ("sichuan-folk-stories-vol1", "中国民间故事集成 四川卷 上", ROOT / "build" / "sichuan-folk-stories-vol1"),
             ("snow-country", "雪国", ARCHIVE / "snow-country"),
             ("the-old-capital", "古都", ARCHIVE / "the-old-capital"),
         ],
@@ -38,8 +47,8 @@ BOOK_SETS = {
         "label": "Wenyanwen/JP/ZH trilingual leftovers",
         "note": "Classical Chinese-oriented editions that do not yet have English added; zh means modern Chinese helper/annotation.",
         "books": [
-            ("sishu-jizhu", "四書章句集註", ARCHIVE / "sishu-jizhu"),
-            ("sishu-jizhu-aginti", "四書章句集注 AgInTi edition", ARCHIVE / "sishu-jizhu-aginti"),
+            ("sishu-jizhu", "四書章句集註", ROOT / "build" / "sishu-jizhu"),
+            ("sishu-jizhu-aginti", "四書章句集注 AgInTi edition", ROOT / "build" / "sishu-jizhu-aginti"),
             ("shiji-aginti", "史記", ARCHIVE / "shiji-aginti-indented-20260525-091513"),
         ],
     },
@@ -74,6 +83,71 @@ def discover_book_pdfs(book_id: str, title: str, source_root: Path) -> list[dict
     return items
 
 
+def resolve_cover(book_id: str) -> Path | None:
+    candidates = [COVER_ROOT / book_id]
+    alias = COVER_ALIASES.get(book_id)
+    if alias:
+        candidates.append(COVER_ROOT / alias)
+    for cover_dir in candidates:
+        direct = cover_dir / "cover.png"
+        if direct.exists():
+            return direct
+        for pattern in ("*cover*.png", "*cover*.jpg", "*cover*.jpeg"):
+            found = sorted(path for path in cover_dir.glob(pattern) if path.is_file())
+            if found:
+                return found[0]
+    return None
+
+
+def first_page_has_image(pdf: Path) -> bool:
+    try:
+        reader = PdfReader(str(pdf))
+        if not reader.pages:
+            return False
+        return bool(list(getattr(reader.pages[0], "images", []) or []))
+    except Exception:
+        return False
+
+
+def make_cover_pdf(cover_image: Path, width: float, height: float, target: Path) -> None:
+    c = canvas.Canvas(str(target), pagesize=(width, height))
+    c.drawImage(
+        ImageReader(str(cover_image)),
+        0,
+        0,
+        width=width,
+        height=height,
+        preserveAspectRatio=False,
+        anchor="c",
+    )
+    c.showPage()
+    c.save()
+
+
+def prepend_cover(pdf: Path, cover_image: Path) -> None:
+    reader = PdfReader(str(pdf))
+    if not reader.pages:
+        raise RuntimeError(f"{pdf} has no pages")
+    box = reader.pages[0].mediabox
+    width = float(box.width)
+    height = float(box.height)
+
+    with tempfile.TemporaryDirectory(prefix="cover-prepend-", dir=str(pdf.parent)) as tmp_name:
+        tmp_dir = Path(tmp_name)
+        cover_pdf = tmp_dir / "cover.pdf"
+        output_pdf = tmp_dir / "output.pdf"
+        make_cover_pdf(cover_image, width, height, cover_pdf)
+
+        cover_reader = PdfReader(str(cover_pdf))
+        writer = PdfWriter()
+        writer.add_page(cover_reader.pages[0])
+        for page in reader.pages:
+            writer.add_page(page)
+        with output_pdf.open("wb") as handle:
+            writer.write(handle)
+        output_pdf.replace(pdf)
+
+
 def clean_category(target: Path) -> None:
     for variant in ("color", "blackwhite"):
         variant_dir = target / variant
@@ -95,7 +169,9 @@ def copy_category(category: str, config: dict[str, object], target_root: Path, n
     copied: list[dict[str, object]] = []
     used: dict[str, set[str]] = {"color": set(), "blackwhite": set()}
     missing: list[dict[str, str]] = []
+    missing_covers: list[dict[str, str]] = []
     for book_id, title, source_root in config["books"]:  # type: ignore[index]
+        cover = resolve_cover(book_id)
         found = discover_book_pdfs(book_id, title, Path(source_root))
         if not found:
             missing.append({"book_id": book_id, "title": title, "source_root": str(source_root)})
@@ -111,9 +187,18 @@ def copy_category(category: str, config: dict[str, object], target_root: Path, n
             used[variant].add(filename)
             output = variant_dir / filename
             shutil.copy2(source, output)
+            cover_status = "already-present"
+            if not first_page_has_image(output):
+                if cover is None:
+                    cover_status = "missing-cover-asset"
+                    missing_covers.append({"book_id": book_id, "pdf": str(output.relative_to(target))})
+                else:
+                    prepend_cover(output, cover)
+                    cover_status = "prepended"
             item = dict(item)
             item["output"] = str(output.relative_to(target))
             item["size_bytes"] = output.stat().st_size
+            item["cover"] = cover_status
             copied.append(item)
 
     manifest = {
@@ -129,6 +214,7 @@ def copy_category(category: str, config: dict[str, object], target_root: Path, n
             "blackwhite": sum(1 for item in copied if item["variant"] == "blackwhite"),
         },
         "missing_books": missing,
+        "missing_covers": missing_covers,
         "items": copied,
     }
     (target / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -162,6 +248,10 @@ def write_category_readme(target: Path, manifest: dict[str, object]) -> None:
         lines.extend(["", "## Missing", "", "| Book | Source root |", "| --- | --- |"])
         for item in manifest["missing_books"]:  # type: ignore[index]
             lines.append(f"| `{item['book_id']}` | `{item['source_root']}` |")
+    if manifest["missing_covers"]:  # type: ignore[index]
+        lines.extend(["", "## Missing Covers", "", "| Book | PDF |", "| --- | --- |"])
+        for item in manifest["missing_covers"]:  # type: ignore[index]
+            lines.append(f"| `{item['book_id']}` | `{item['pdf']}` |")
     (target / "README.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 

@@ -20,6 +20,19 @@ COMMENT_LINE_ROLES = {
     "注",
 }
 
+CIRCLED_DIGITS = {
+    "①",
+    "②",
+    "③",
+    "④",
+    "⑤",
+    "⑥",
+    "⑦",
+    "⑧",
+    "⑨",
+    "⑩",
+}
+
 SENTENCE_FINAL_PUNCT = set("。！？!?；;")
 OPENING_PUNCT = set("「『“‘（【《〈〔〖〘〚")
 CLOSING_PUNCT = set("」』”’）】》〉〕〗〙〛")
@@ -41,7 +54,10 @@ def tex_escape(text: str) -> str:
         "~": r"\textasciitilde{}",
         "^": r"\textasciicircum{}",
     }
-    return "".join(replacements.get(ch, ch) for ch in text)
+    return "".join(
+        rf"\SymbolText{{{ch}}}" if ch in CIRCLED_DIGITS else replacements.get(ch, ch)
+        for ch in text
+    )
 
 
 def tex_path_arg(path: str) -> str:

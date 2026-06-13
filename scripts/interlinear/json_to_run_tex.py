@@ -9,6 +9,19 @@ import sys
 from pathlib import Path
 from typing import Any
 
+CIRCLED_DIGITS = {
+    "①",
+    "②",
+    "③",
+    "④",
+    "⑤",
+    "⑥",
+    "⑦",
+    "⑧",
+    "⑨",
+    "⑩",
+}
+
 
 def tex_escape(text: str) -> str:
     replacements = {
@@ -23,7 +36,10 @@ def tex_escape(text: str) -> str:
         "~": r"\textasciitilde{}",
         "^": r"\textasciicircum{}",
     }
-    return "".join(replacements.get(ch, ch) for ch in text)
+    return "".join(
+        rf"\SymbolText{{{ch}}}" if ch in CIRCLED_DIGITS else replacements.get(ch, ch)
+        for ch in text
+    )
 
 
 def token_role(token: dict[str, str]) -> str:
