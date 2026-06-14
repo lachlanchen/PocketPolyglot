@@ -13618,5 +13618,36 @@
       ],
       "source_zh": "我一边这样想着，一边在继续观察着主人的情况。毫无觉察的主人，在玩完了“翻眼皮”之后，说道：“好像充血呢，肯定是慢性结膜炎了。”说罢，他用食指狠狠地揉了几下充血的眼睑。很可能是发痒吧，不过，不揉已经是那样红了，现在经这么一揉，如何受得了，肯定在不远的将来，会和盐渍鲷鱼的眼珠一样，烂成个窟窿的。主人很快又张开眼睛去照镜子。我一看，果然不出所料，那无神的眼睛活像北国冬天的天空，黯淡无光。当然，就是在平时，他的眼睛也不是那么炯炯有神的。如果可以夸大形容的话，那是一种无法分清黑眼珠与白眼珠的混浊的眼睛。正像他的精神状态总是一贯朦朦胧胧，不得要领一样，他的眼神也是暧昧得很，永远在眼窝中飘浮着。有的说这是胎毒所致，有的则解释为痘疮的后遗症。据说他在小时候，也没少吃过作为偏方的柳树上的毛虫和山蛤蟆。可是爱子心切的母亲虽然想尽了办法，但他今天还是和生下来的当时一样，头脑糊里糊涂的。按我的想法，这决不是因为胎毒或出天花的缘故。他的眼神之所以这样彷徨于晦涩溷浊的悲境之中，完全是因为他的头脑实际上是不透不明而形成的，其作用达于暗淡溟濛之极，所以才自然表现在形体上，结果让不了解这一情况的母亲为他操了许多心。烟升起处证明必定有火，眼神混浊，则正证明其愚钝而已。这样看来，他的眼神是他心的象征，他的心像天宝铜钱那样中间有孔，所以他的眼睛也和天宝铜钱一样，尽管个儿大，却不通用。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

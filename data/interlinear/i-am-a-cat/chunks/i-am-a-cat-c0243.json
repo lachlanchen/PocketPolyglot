@@ -16958,5 +16958,36 @@
       ],
       "source_zh": "迷亭继续说道：“这都是生在明治圣代的幸运啊。比如我吧，正因为能想出未来记，所以我的头脑要超出时势一两步，并从现在起过着独身生活。旁人胡言乱语硬说这是因为我失恋的缘故，这些近视者所能看到的，实在浅薄得可怜。这姑且不去管它，让我来继续讲讲我的未来记，它是这样的，到了那时，会有一个哲学家自天而降，提倡一种破天荒的真理。其学说曰：人是个性的动物。灭掉个性就会招致与灭掉人类同样的结果。既然为了使人类的意义得到完成，就应该不惜牺牲任何代价来保持这个个性，同时还应该使之发展。那种囿于陋习，勉勉强强来实行结婚，是违反人类自然倾向的一种歪风，在个性不发达的蒙昧时代，姑作别论，在文明发达的今天，仍然陷入这种弊端，竟然不以为怪，这是极大的谬见。在开化的高潮达到极点的当今时代，不可能存在两个个性超出一般亲密的程度而结合在一起的。尽管存在着这种明如观火的理由，而那些无教育的男女青年受一时的劣情所驱使，漫不经心地举行合卺之礼，这完全是极其悖德悖伦的行为。我们为了维护人道，为了维护文明，为了保护他们这些男女青年，必须尽全力来抵抗这种歪风……”"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

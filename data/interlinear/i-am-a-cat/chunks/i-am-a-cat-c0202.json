@@ -13772,5 +13772,36 @@
       ],
       "source_zh": "姐姐俊子自己的饭碗和筷子都被“小不点儿”给掠夺了，从刚才起只好耐着性子，使用妹妹那份最小的碗筷，但因为这东西太小，尽管她已经认为盛得满碗，但狠狠地往嘴里一送，也不过三口两口就吃光了。因此不得不频繁地把手伸向那盛饭的桶，她已经吃完了第四碗，现在是第五碗，俊子揭开饭桶的盖儿，拿起大饭勺，看了一会儿，似乎拿不定主意是再吃上一碗呢还是不吃。然后似乎下了最后的决心，看准那没有焦的地方，铲了一饭勺的饭，这一动作倒还容易，唯独当她把饭勺翻转过来，把米饭抹进碗里的时候，那饭碗装不下的米饭就大块大块地掉落在铺席上。俊子对此一点儿也未吃惊，她非常仔细地把掉在外边的米饭拣起来。我想她拣起来做什么呢？原来又都送回到饭桶里去了。这未免有点肮脏吧。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

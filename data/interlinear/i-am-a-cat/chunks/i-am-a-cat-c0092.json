@@ -11351,5 +11351,36 @@
       ],
       "source_zh": "梁上君子的脚步声来到卧室的隔扇前，突然停了下来。我拼命屏住呼吸，静观他的下一步动作。事后我想：“如果我捉老鼠时能以这样的气势那就好啦。”我那聚精会神的气势，全都集中在两只眼睛上，仿佛我的灵魂一下子要从两眼中飞出去似的。我真应该感谢这位梁上君子使我得到了这种再也不会获得的“开窍”。那隔扇的第三个窗棂的正中忽然像被雨浸了似的变了颜色，然后窗纸逐渐透成粉红色而且愈来愈浓，很快纸破了，伸进来一条红舌头。舌头停了不多久就不见了，从纸窗的孔后边出现了一个怪吓人的发亮的东西。毫无疑问，这就是这位梁上君子的眼睛喽。奇怪的是，我感到那只眼睛不去看室内其他任何东西，似乎专门注视着藏身在柳条箱背后的我。尽管时间不长，还不足一分钟，但让它这么瞧上一阵子，实在使我感到会少活十年哩。我再也受不了了。当我正要从柳条箱后面蹦出去的当儿，卧室的隔扇被轻轻推开了，我恭候已久的这位梁上君子终于赫然出现在我的眼前。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

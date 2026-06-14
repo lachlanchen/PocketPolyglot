@@ -15670,5 +15670,36 @@
       ],
       "source_zh": "我想所谓陶然，就是指我现在的情况吧。我漫无目的地，以一种似散步又非散步的样子，移动着脚下不稳的四条腿向前走去。不知为什么我困倦得很。我不知自己是睡着了呢还是在走路，我感到自己是睁着眼睛，但又觉得眼皮沉重得很。既然这样，我就豁出去啦。管它刀山火海，我什么也不怕！我软瘫瘫地刚好把前腿向前一伸，立刻就发出了“扑通”一声响，我刚叫了一声“哎呀”，心想这回可出娄子了。我来不及想出了什么娄子，就发觉脑子乱了套。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

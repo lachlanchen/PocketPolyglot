@@ -6,7 +6,7 @@
   "source_area": "sources/shiji",
   "priority": 80,
   "dependency": "base_chunks_exist",
-  "notes": "Prefer existing zh_modern over zh_original; generate English and plain modern Japanese from zh_modern.",
+  "notes": "Shiji chunks already contain zh_original and zh_modern; backfill English from zh_modern without rewriting existing Japanese.",
   "chunk_id_source": "data_interlinear_chunks",
   "chunk_count": 4622,
   "actions": [
@@ -14,23 +14,14 @@
       "field": "en",
       "kind": "understandable_english",
       "source_priority": [
+        "overlay.zh_modern",
         "unit.zh_modern",
         "paragraph.corrected_text",
+        "unit.zh_original",
         "unit.zh",
         "paragraph.source_text"
       ],
-      "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
-    },
-    {
-      "field": "ja_modern",
-      "kind": "plain_modern_japanese",
-      "source_priority": [
-        "unit.zh_modern",
-        "paragraph.corrected_text",
-        "unit.zh",
-        "paragraph.source_text"
-      ],
-      "instruction": "Add reader-friendly modern Japanese based on the modern Chinese meaning bridge. Preserve the existing ja field as legacy/source/comment Japanese."
+      "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
     }
   ],
   "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/shiji-aginti/tasks.jsonl",
@@ -45,23 +36,14 @@
         "field": "en",
         "kind": "understandable_english",
         "source_priority": [
+          "overlay.zh_modern",
           "unit.zh_modern",
           "paragraph.corrected_text",
+          "unit.zh_original",
           "unit.zh",
           "paragraph.source_text"
         ],
-        "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
-      },
-      {
-        "field": "ja_modern",
-        "kind": "plain_modern_japanese",
-        "source_priority": [
-          "unit.zh_modern",
-          "paragraph.corrected_text",
-          "unit.zh",
-          "paragraph.source_text"
-        ],
-        "instruction": "Add reader-friendly modern Japanese based on the modern Chinese meaning bridge. Preserve the existing ja field as legacy/source/comment Japanese."
+        "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
       }
     ],
     "do_not_modify_templates": [
@@ -74,19 +56,22 @@
     "merge_policy": {
       "preserve_existing_fields": true,
       "append_only_fields": [
+        "zh_modern",
         "en",
         "ja_modern"
       ],
       "legacy_japanese_field": "ja",
-      "modern_japanese_field": "ja_modern"
+      "modern_japanese_field": "ja_modern",
+      "modern_chinese_field": "zh_modern"
     },
     "validation": {
       "require_no_source_text_loss": true,
+      "require_modern_zh_if_requested": false,
       "require_english_if_requested": true,
-      "require_modern_ja_if_requested": true,
+      "require_modern_ja_if_requested": false,
       "forbid_overwriting_legacy_ja": true,
       "require_ruby_for_kanji_tokens_in_ja_modern": true
     }
   },
-  "generated_at": "2026-06-11T09:51:34.236900+00:00"
+  "generated_at": "2026-06-14T02:44:32.753640+00:00"
 }

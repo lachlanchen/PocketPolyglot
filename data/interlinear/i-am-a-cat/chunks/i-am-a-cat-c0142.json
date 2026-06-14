@@ -18073,5 +18073,36 @@
       ],
       "source_zh": "就在这时，入口处突然出现了一个穿着浅黄布衣裳、年龄七十开外的光头，这个人向这些裸体怪物恭恭敬敬地行了个礼，说道：“嘿嘿，每次都蒙各位照顾，实在谢谢。今天天气比较冷，请各位慢慢地洗。各位可以在药水池里多泡几遍，身子就会暖和啦。喂！掌柜的！多注意点，可要保持洗澡水足够的热度呀。”他口若悬河地说了这么一大套。澡堂掌柜的也回答了一声“好喽”。刚才那个大讲和唐内的家伙夸奖道：“这老头儿真和气哪，不这样就做不成生意呀。”我突然碰上了这个稀奇的老头儿，未免有些吃惊，所以这边的记述暂且放一放，让我专门观察一下这个老头儿吧。这老头先是看到刚从浴池里出来的一个四岁左右的小孩，就招手说：“小少爷，上这儿来！”那个小孩看见这个糟老头子有些害怕，“哇”的一声哭了起来。这老头似乎感到有些意外，感叹地说：“怎么，哭啦？说什么？怕这老头？啧，啧！”他不得已立即灵机一动，转向小孩的父亲说：“您好啊，源头儿，今天有点凉呀。昨儿晚上进到近江店的小偷该多么蠢啊。他把小门儿挖了个四方洞，你说可笑不？他什么也没有偷成就跑了。大概是碰上警察或者打更的啦。”他大大地嘲笑了小偷一番，然后又向另一个人说：“今天真是够冷的啦，您还年轻，还不太感觉冷吧？”其实是老头自己一味怕冷。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

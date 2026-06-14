@@ -17375,5 +17375,36 @@
       ],
       "source_zh": "用不着先生去表演腹疼发作，这是赞助会员的名册……”他一边说着，一边从紫绸的包袱中郑重地取出一个小本子，说道：“请您在上边签个名，再盖个图章。”说着便把小本子打开放在主人面前。我一看，上边整齐地写有当今知名的文学博士、文学士等一大群人的名字。主人说：“哈，让我做个赞助人，倒也没有什么不可以。不过，都有哪些义务呀？”看来，牡蛎般害怕出头的我家主人，有点不放心。客人说：“要说义务，倒也没有什么非请您做不可的事儿，只要您写下大名，表示赞成就可以了。”“既然这样，我加入。”主人一听说不需要尽义务，立刻轻松起来。那神气，就好像说：“只要不负什么义务，就是在造反的连名状上我也可以签名。”不但如此，在许多知名学者的大名里，能够把自己的姓名也列入榜中，对于过去从未经历过这种事儿的主人来说，自然是无上光荣，所以难怪他答应得那么爽快了。“对不起，请稍等。”主人说着，站起来进书斋去取印鉴，把我扑通一声从膝头上甩落下来。东风先生拿起一块蛋糕一口吃进去，在口里咕嗈老半天，噎得够呛。这使我联想起我今天早晨吃年糕的事情来。等主人从书斋里取来印鉴的时候，东风先生胃里的蛋糕也比较消停了。主人似乎没有注意到点心盘里的蛋糕少了一块，假如他注意到了，那么首先受到怀疑的肯定是我。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

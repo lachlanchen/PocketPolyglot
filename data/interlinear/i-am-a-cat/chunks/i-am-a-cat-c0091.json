@@ -18210,5 +18210,36 @@
       ],
       "source_zh": "有人轻轻地敲了两下厨房的防雨板，真怪呀，深更半夜怎么会有人来呢？大概又是老鼠在作怪吧。如果是老鼠，反正我是决心不去捕捉的，随你去折腾吧。又是咚咚的两响。看来不像是老鼠，假如是老鼠，那也是个警惕性很高的老鼠。主人家的那些老鼠，都是一些像主人教书的那个学校里的学生一样，不管白天黑夜总是用尽心思去琢磨怎样捣乱，把惊破可怜的主人的好梦作为它们天职的一群家伙，所以自然不会这样客客气气的。现在来的肯定不是老鼠。如果是前些日子闯入主人卧室咬了主人那低低的鼻头，然后凯旋归去的那只老鼠，是不会这样小心翼翼的。这决不是老鼠，我正寻思着，又听到把防雨板从下往上拍的声音。然后是把廊内纸门尽量缓缓推开的声音，这更加不会是老鼠了。是个人！在这样的深更半夜，一个人居然不在门外招呼一声就破门而入，屈尊光临，肯定不会是迷亭先生或铃木君。那么是不是我早已听到过大名的梁上君子呢？如果是梁上君子，我是多么想尽早拜识他啊。这位梁上君子现在抬起他的大泥脚正走到厨房里来，而且好像是往前迈了两步。大概是他在迈第三步的时候，可能绊在厨房的活动地板上了吧，发出了咕咚一声冲破了静夜。我感到脊背上的毛就像用鞋刷子给戗着擦过似的倒竖起来。好一阵子再也听不到任何脚步声了。我看了看主人的妻子，她仍张着嘴在梦中吞吐着太平空气。而主人呢，则把一本红皮书捏在拇指间，正做美梦哩。不久，厨房里传来了划火柴的声音。看来，这位梁上君子在夜里目力不像我辈那么管用。他摸不清室内的情况，肯定是不太方便的。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

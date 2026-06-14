@@ -12833,5 +12833,36 @@
       ],
       "source_zh": "主人用鼻毛赶走妻子，似乎觉得可以安心了，于是他想再拔上一根鼻毛随后就写上一句，可是他越是急于下笔，就越难以下笔。他自言自语地说：“‘吃烤红薯’看来也是画蛇添足，忍痛割爱吧。”说着，把这四个字也抹掉了。“‘一炷香’也太突然，去掉它！”主人毫不可惜地把这三个字也给枪毙了。剩下的就只有“天然居士是个研究空间、念《论语》的人”了。主人又觉得这似乎太简单，“哎，太麻烦！文章不写啦，只写墓志铭吧。”他把大笔左右一挥，在稿纸上抹了两笔，就像拙劣的文人画的兰草一样，费了九牛二虎之力写下来的文章，结果一字不剩地判了个不及格。然后，他把纸翻到背面，写了一段意义不明的话：“生于空间，探究空间，死于空间。空哉，间哉，天然居士，噫！”就在这时迷亭又和往常一样飘然而至。迷亭这个人，可能把别人的家看作自己的家一样，连一声招呼都不打，就毫不客气地走进来。不仅如此，他有时还从屋后的厨房门飘然入室。他这个人生来就把诸如担忧、客气、不好意思、费心劳神等等，统统抛到爪哇国去了。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

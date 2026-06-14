@@ -9803,5 +9803,36 @@
       ],
       "source_zh": "主人迟早要死的。金田那老头儿受欲心所累，早已成了活死人。秋天的树叶已经大体上落光。死是万物难以逃脱的宿命，如果活着也不见得有什么用处，不如早些死了更聪明些。根据刚才各位先生的说法，人的命运最后归结为自杀。如果稍微麻痹大意，那么猫儿也不得不生于这万事不自在的人世上。真是可怕呀。不知为什么，我心里也不痛快起来了。我也去喝点多多良君带来的啤酒，打起精神来高兴高兴吧。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

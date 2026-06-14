@@ -7137,5 +7137,36 @@
       ],
       "source_zh": "等壳摔碎了后，再飞落下去，就可以饱餐一顿乌龟肉了。它想好之后，便瞄准将乌龟从高处毫不客气地扔在这位作家的头上。不巧这个作家的头比起乌龟的壳来要软得多，结果秃头被打得粉碎，有名的伊斯基拉斯就这样悲惨地死去了。这个姑且不去管它，令人不解的是这只苍鹰的想法。它是明知道这个光秃秃的东西是作家的脑袋而故意将乌龟扔上去的呢，还是误认为是块光秃秃的石头才扔上去的？根据答案的不同，既可以将落云馆的敌人和这个苍鹰作一个比较，也可能无法比较。主人的脑袋既不像伊斯基拉斯的脑袋那样锃亮，也不像那些声誉极响的学者们的脑袋那样闪闪发光，然而他既然高坐在六叠大的、号称书斋的屋子里，把一些难读的书本举在他自己的面前，那么就应当把他看成是学者与作家的同类。既然是这样，主人的头之所以还未光秃，并不是因为他不具备秃头的资格，而是在不远的将来，秃头的命运肯定会落在他身上。这样看来，落云馆的那些学生们以这个头为目标，集中了他们的那个达姆达姆弹，不能不说是一种最切中时宜的策略。如果敌人将这一行动持续上两周的话，那么主人的脑袋由于恐怖和烦恼，必然也会营养不良起来，必然会变成像金桔、铁壶、铜釜那样的圆球模样。假如再多炮击两周的话，那么金桔无疑会被击得稀巴烂，铁壶会被击穿，铜釜也会被击出裂缝来。看不到这种明如观火的结果，还想尽一切办法和敌人血战到底的，只有那傻瓜苦沙弥先生本人了。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

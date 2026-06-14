@@ -11,6 +11,10 @@ reasoning="${REASONING:-high}"
 max_chunks_per_worker="${MAX_CHUNKS_PER_WORKER:-0}"
 codex_timeout_seconds="${CODEX_TIMEOUT_SECONDS:-7200}"
 usage_limit_sleep_seconds="${CODEX_USAGE_LIMIT_WAIT_SECONDS:-3600}"
+min_codex_remaining_percent="${MIN_CODEX_REMAINING_PERCENT:-0}"
+codex_usage_status_file="${CODEX_USAGE_STATUS_FILE:-}"
+codex_usage_check_command="${CODEX_USAGE_CHECK_COMMAND:-}"
+codex_usage_allow_unknown="${CODEX_USAGE_ALLOW_UNKNOWN:-0}"
 work_dir="${WORK_DIR:-books/_incremental-overlays/work/en-modern-ja}"
 global_manifest="${GLOBAL_MANIFEST:-data/source-plan/incremental-english-modern-japanese.json}"
 
@@ -32,6 +36,24 @@ fi
 retry_failed_arg=()
 if [[ "${RETRY_FAILED:-0}" == "1" ]]; then
   retry_failed_arg=(--retry-failed)
+fi
+
+budget_arg=()
+if [[ "$min_codex_remaining_percent" != "0" && "$min_codex_remaining_percent" != "0.0" ]]; then
+  budget_arg=(--min-codex-remaining-percent "$min_codex_remaining_percent")
+  if [[ -n "$codex_usage_status_file" ]]; then
+    budget_arg+=(--codex-usage-status-file "$codex_usage_status_file")
+  fi
+  if [[ -n "$codex_usage_check_command" ]]; then
+    budget_arg+=(--codex-usage-check-command "$codex_usage_check_command")
+  fi
+  if [[ "$codex_usage_allow_unknown" == "1" ]]; then
+    budget_arg+=(--codex-usage-allow-unknown)
+  fi
+fi
+budget_arg_text=""
+if [[ "${#budget_arg[@]}" -gt 0 ]]; then
+  printf -v budget_arg_text "%q " "${budget_arg[@]}"
 fi
 
 run_script="$work_dir/${session}.run.sh"
@@ -58,6 +80,7 @@ for i in \$(seq 1 '$workers'); do
         --reasoning '$reasoning' \
         --max-chunks '$max_chunks_per_worker' \
         --codex-timeout-seconds '$codex_timeout_seconds' \
+        $budget_arg_text \
         ${include_waiting_arg[*]} \
         ${retry_failed_arg[*]}
       rc="\$?"
@@ -105,6 +128,10 @@ echo "workers: $workers"
 echo "model: $model"
 echo "reasoning: $reasoning"
 echo "max_chunks_per_worker: $max_chunks_per_worker"
+echo "min_codex_remaining_percent: $min_codex_remaining_percent"
+echo "codex_usage_status_file: $codex_usage_status_file"
+echo "codex_usage_check_command: $codex_usage_check_command"
+echo "codex_usage_allow_unknown: $codex_usage_allow_unknown"
 echo "work_dir: $work_dir"
 echo "global_manifest: $global_manifest"
 echo "run_script: $run_script"

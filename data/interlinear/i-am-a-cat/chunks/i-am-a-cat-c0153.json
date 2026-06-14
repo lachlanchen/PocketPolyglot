@@ -7027,5 +7027,36 @@
       ],
       "source_zh": "诸位大概了解方格篱笆是怎么回事吧。它是一种既便于通风、筑起来又非常简便的墙。像我就可以从格子眼中自由自在地出入，所以筑不筑篱笆，对于我是一样的。然而落云馆校长可不是为我这只猫筑的方格篱笆，而是为了不让他自己培养的这群君子钻出去才特地请来工匠筑上的。不错，不管筑得如何有利于通风，人毕竟是无法钻过去的。人想要从这个用竹子编成的、四寸见方的窟窿钻过去，即使请来中国的魔术师张世尊，恐怕也是件大难事。所以这堵墙对人来说，无疑是起到了墙的作用。难怪主人看到这堵墙修好，认为“这下可好了”，十分高兴。但是，主人的逻辑中却有个极大的漏洞，这个漏洞比这堵竹墙上的窟窿还要大，是个足以使吞舟之鱼都会漏网的极大的漏洞。因为主人从墙是不可逾越的这一假定出发的，是建立在既然是学校的学生，不管这墙建造得如何粗糙，只要有个名叫墙的东西，明确了区域的界限，就不必担心他们会再闯进来的假定之上的。而且即使他推翻这个假定，他也认为，纵然有人想要闯进来也是闯不进的。因为他轻率地断定，任何瘦小的少年也绝不可能钻过这种方格窟窿，从而不必担心会有人再闯进来。事实也的确如此，只要他们不是猫儿，就不会出现从这种四方窟窿钻过来的可能。他们就是想做也绝对办不到。不过，跳过来蹦过去，却是极简单的啊，反而可以成为运动嘛。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

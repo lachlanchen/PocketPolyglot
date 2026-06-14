@@ -14055,5 +14055,36 @@
       ],
       "source_zh": "为了进行对人的研究，假如不选择发生某种波澜的时机，那是不会取得成果的。在平时，平庸的人不管到何时也还是平庸的，所以我所能见到和听到的，无非是一些平庸的人和平庸的事，毫无活力可言。但是，一旦遇到非常情况，这种平庸性，就会受一种灵妙的神秘作用推动，很快就会涌现出许多新奇的、古怪的、美妙的、特异的事物来，简单说吧，对于大益于开拓我们猫儿眼界的许多事件，到处都会出现。雪江姑娘的眼泪，正是这种现象之一。具有如此不可思议、不可捉摸的心理的雪江姑娘，在和主人妻子闲谈的时候，并不使人觉得有什么特异之处，但自从主人回来将油壶扔在铺席上以后，她立刻就像一条死龙用气筒打入空气一样，突然发挥出一种美妙的天生丽质来。而这种丽质是天下妇女所共有的，只不过它不会轻易就显现出来罢了。不，其实在二十四小时中随时都会显现出来，只是不像这样灼然可见、毫不掩饰地表现出来罢了。幸亏有主人这种喜欢摩挲我们猫儿皮毛的、特别执拗的怪人，才使我得以拜见这出好戏。我只要紧跟在主人身后，不论走到哪里，这舞台上的演员就会身不由己地活动起来。我承蒙这位主人收养，使我在这短暂的猫儿的一生当中，体验到这么许多事情，实在感谢。那么这次来的客人又是谁呢？"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

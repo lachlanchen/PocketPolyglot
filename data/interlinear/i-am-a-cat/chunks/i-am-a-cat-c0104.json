@@ -15459,5 +15459,36 @@
       ],
       "source_zh": "虽然如此，可是请车夫家的老黑来帮我的忙，又有损于我的威信。这该怎么办呢？我想来想去，想不出个好主意，最好的办法就是认定不会发生这种事儿，求得放心。那些没办法的人总是喜欢这样想：“这种事是不会发生的。”各位不妨看看现实社会，昨天娶的新娘说不定今天就会死去，而新姑爷却大唱什么白头偕老的赞歌，丝毫也看不出担心的样子。人们不担心，倒不是不值得担心，而是因为再担心也毫无用处。我固然缺乏不会发生受三面攻击的有力论据，但就情况而论，认定它不会发生，这对于解除我的担心是十分有用的。对于万物来说，放心都是必要的，我当然也希望能够放心。因此，我认定不会三面受攻击。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

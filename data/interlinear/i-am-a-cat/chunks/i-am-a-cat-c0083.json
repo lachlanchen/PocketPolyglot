@@ -16798,5 +16798,36 @@
       ],
       "source_zh": "“老兄，你想想看，问题不是很清楚吗？人家有那么多的财产，长得又那么漂亮，难道不是可以有许多合适的地方嫁过去吗？拿寒月君来说，也许是很不错，不过从身份——不，提出身份也许不恰当，从财产来说，不管谁看，都不太般配嘛。可是她父母为她操心，特地要我出面来向你打听，这难道不足以说明本人是对寒月有意吗？”铃木君的确用了一番很巧妙的道理来说服主人，这回看得出来，主人似乎也心服了，这样他才放下心来。不过，他觉得如果在这种地方来来回回打圈子很可能又会遇上主人的突然袭击，所以决心尽快把话茬往前引，早一点完成使命才是万全之策。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

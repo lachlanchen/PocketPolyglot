@@ -7727,5 +7727,36 @@
       ],
       "source_zh": "三毛姑娘死了，和老黑又合不来，我多少有些寂寥之感，所幸在人类中有了知己，也就不感到怎样沉寂了。前不久，有人写信给主人，求他把我的照片寄去。最近，还有人特地把冈山的名产“吉备糯米团子”寄来指名给我。随着人类对我寄予同情，我逐渐忘却自己是只猫儿。我似乎觉得自己不再是猫儿，已逐渐向人类靠拢了。我原先想要纠合猫族去和两只脚的先生们决一雌雄的想法，最近已烟消雾散。岂止如此，我已经进化到有时甚至认为自己是人间的一员，感到前途有望。我倒不是瞧不起同族，只是性之所近，求取一身安宁，势所使然。如果认为这是变心、轻浮、背叛，可就错怪我了。像这种咬文嚼字，随便谩骂别人的人，大多是不懂得通融、活该受穷的家伙。我蜕却了猫的习性以后，当然不该再把三毛姑娘或大老黑的事放在心上，我要以和人类同样的气度来评骘他们的思想言行，恐怕这也是很自然的吧。遗憾的是，主人把具有这般见识的我仍然看作一只普普通通披毛带皮的猫儿。他连一声招呼都不打，就大模大样地把寄给我的吉备糯米团子吃个精光。照片看来也不想给我拍好寄去。这要说是牢骚的确是牢骚，不过主人是主人，我是我，彼此见解自然各异，这也是无可奈何的事。因为我始终以为自己已经是个人了，所以对不再交往的其他猫儿的行为，也就有点难于形之笔墨啦。还是讲讲迷亭、寒月几位先生的事儿聊以塞责，敬请读者海涵吧。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

@@ -17396,5 +17396,36 @@
       ],
       "source_zh": "东风君带着无限羡慕的神情说：“这就是天才呀。假如不是天才，是决不可能想得如此着迷的。真令人羡慕！我这一年来也一直在捉摸怎样才能产生如此强烈的情感呢，可总是不成。我去出席音乐会什么的，尽可能用心地听，可是我的感性就是上升不到这种程度。”"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

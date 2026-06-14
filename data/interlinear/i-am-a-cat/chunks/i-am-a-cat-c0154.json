@@ -13405,5 +13405,36 @@
       ],
       "source_zh": "就这样，主人一会儿跑到后院，一会儿从茅房里向外看，一会儿又从茅房里跑到后院去，主人重复着这些动作。所谓疲于奔命，指的正是这种情况。主人终于火冒三丈，使人弄不清他到底是在以教师为职业呢，还是在以对付这个战争为职业。当他的火冒到极点时，便出现了如下事件。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

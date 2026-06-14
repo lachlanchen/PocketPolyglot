@@ -12197,5 +12197,36 @@
       ],
       "source_zh": "鼻子说话的语气越来越显露出她是个什么货色。她简直就像是为吵架而来的。可是在这点上，迷亭毕竟是迷亭，他不但毫不动火，反而饶有兴趣地听着这两个人的唇枪舌剑。那神态就好像李铁拐仙人正在欣赏厮打的斗鸡场面一样，抱着无所谓的态度旁听着。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

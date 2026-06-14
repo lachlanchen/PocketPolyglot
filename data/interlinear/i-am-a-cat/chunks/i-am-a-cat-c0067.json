@@ -13969,5 +13969,36 @@
       ],
       "source_zh": "我走近一看，一个女的正在大声地说着什么。她的声音与那个鼻子非常相似。据此来推测，这个女人大概就是这家的小姐，足以使寒月投河自杀未遂的那个活宝吧。可惜啊，隔着纸拉门我无法拜见她的花容月貌，因而也就无法看清她是否也在面孔当中供奉着一尊高高的大鼻子。不过，综合她说话的调调和那粗暴的鼻息来看，总不会是不惹人注目的蒜头鼻子吧。只听到这女人在大讲特讲，而听不到对方的声音，这大概就是人们所说的电话了。“你是大和吗？明天呀，我去，你们给我订个‘鹑三’，你听清楚了没有？什么，不清楚？真讨厌，我让你给我订鹑的三号。你说什么？订不了？怎么订不了呢？嘿、嘿……和我开玩笑？开什么玩笑！真会逗人！我说，你到底是谁？长吉？长吉你办不了，让你们的女老板来接电话！什么？你说怎么就能办？太不像话啦，你知道我是谁？是金田呀。吓、吓，你早就知道是我。你这个人真混账。我说我是金田，听明白了吗？什么？每次多蒙照顾，多谢？谢什么，我不想听你的道谢。哟，你还在笑！你真够上个傻蛋啦。一切照吩咐的办？你要和我胡说八道，我可要把电话挂上啦。听明白了吗？你不在乎吗？你怎么不说话呀，你倒是说呀。”可能是长吉那边把电话挂上了吧，好像再也没声音了。金田小姐发起火来，狠狠地摇起电话来。在她脚下的哈巴狗吓了一跳，突然狂吠起来。我想这可大意不得，马上从廊子跳下去，钻到缘下去了。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

@@ -16314,5 +16314,36 @@
       ],
       "source_zh": "前些日子，我被她关在门外，遭到野犬的袭击，几乎九死一生，多亏后来我爬到堆物的房顶上，在那里整整颤抖了一夜。这些都是起因于阿三不讲情面所造成的恶果。对于她这样的人，不管你怎样哀恳她，也决不会有反应的。不过，这就和平常所说的“挨了饿才想到祈神”、“人贫则志短”、“一见人家姑娘就想写情书”一样，遇上这种情况，还是要向她求一求的。我在第三次“噢噢”叫唤的时候，为了唤起她的注意，特地发出了复杂的叫声。我自信这美妙的声音不劣于贝多芬的交响曲，但对于阿三似乎仍然不起任何作用。阿三突然屈下膝来，揭开室内藏东西的地窖上的那块地板，从中取出一条四寸长硬木炭，在炭炉的角上一敲，敲成了三截，周围都被炭末弄得黑乎乎一片，好像还有炭末飞进了菜汤里，阿三可不是个在乎这种事的女人，而是立刻将磕成三节的炭从锅底塞进炭炉里。看来，她是不会领略我的交响乐了。当我出于无奈悄然想要回到起居间，从洗澡间旁通过的时候，家里的三个小女孩正在洗脸，搞得可热闹啦。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

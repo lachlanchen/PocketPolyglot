@@ -18357,5 +18357,36 @@
       ],
       "source_zh": "“那天在向岛的一个朋友家里开‘忘年会’兼合奏会，我也带了一把小提琴去。到了十五六位小姐和太太，是个非常热闹的盛会。一切都已准备停当，可以说这是最近难得的一次快举。晚餐已毕，乐器合奏也完了，大家进入闲谈，时间已经相当晚，我想向主人告辞。就在这时，某博士的夫人来到我的身旁，小声问我说：‘您知道某某小姐生病了吗？’说来，我两三天前见到那位小姐的时候，她还和平常一样，看不出她哪个地方不舒服，所以我吃了一惊，仔细问了情况。据说在我见到她的那天晚上，她突然发烧，不断发出谵语。如果只是这样，也就罢了，可她那谵语中，不时出现我的名字。”"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

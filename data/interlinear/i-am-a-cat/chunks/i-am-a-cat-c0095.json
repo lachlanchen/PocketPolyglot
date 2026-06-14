@@ -17674,5 +17674,36 @@
       ],
       "source_zh": "梁上君子在腋下似乎夹着什么，我仔细一看，是刚才主人扔在书斋里的那条旧毛毯。他穿着格子布的半截褂，屁股上边系着一条蓝灰色的博多带，从膝头往下露着两条雪白的小腿。他正抬起一条腿迈到席铺上来。主人从刚才起就在做着手指被一本红色封面小书挟住的梦，这时突然来个大翻身，大喊了一声“寒月！”梁上君子一惊之下把毛毯掉在了地上，他急忙将他那迈出的腿缩了回去。只见映在纸门上细长的两条腿的黑影在微微抖动。主人发出两声呃哈呃哈的声音，一下子把那本红皮书捅到一边，然后像害顽癣病一样咔嚓咔嚓不停地搔起他那伸出的黑胳膊。这以后他又趋于安静，头从枕头上滑了下来，陷入沉睡之中。看来，他喊声“寒月”，完全是梦中的呓语。梁上君子在廊子里停了一会儿，窥伺室内的动静，当他看准了主人夫妇都在熟睡，便又向席铺上伸出一条腿。这次再也听不见主人叫喊寒月的声音。不一会他又向前迈出了他的另一条腿。这间六叠的卧室里在一盏春灯的灿烂光辉照耀之下，把梁上君子的影子鲜明地分成两个影子，从柳条行李那边一直遮过我的头，黑黑地遮住了半边墙壁。我扭头一看，这位梁上君子的黑影正好模模糊糊地映在墙壁的三分之二高度的地方晃来晃去。别看这位是美男子，只看他的影子却活像个大脑袋的怪物，形状奇特得很。梁上君子俯视了一下主人的妻子熟睡的面孔，不知为什么显出了一丝的笑意。他连笑法都和寒月一模一样，使我大为吃惊。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

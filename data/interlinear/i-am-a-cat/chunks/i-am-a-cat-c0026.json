@@ -15511,5 +15511,36 @@
       ],
       "source_zh": "“不，也没有什么大不了的，登场人物不过是嫖客、船老大、粉头、跟妈、鸨儿和忘八这几个角色罢了。”看来这位东风先生对于这些是满不在乎的。主人听了“粉头”这个名字不禁皱了一下眉头。不过关于“跟妈”、“鸨儿”、“忘八”这些术语，他似乎缺少明确的知识，于是先提出了质疑，说道：“所谓‘跟妈’是指妓馆的使唤丫头吗？”“我还没有充分研究过。不过，我想‘跟妈’是酒馆的女佣。鸨儿嘛，可能是妓院里帮助管事儿的吧。”这位东风先生刚才还说要使用假嗓子来再现剧中的人物性格，可看来他并不了解“鸨儿”和“跟妈”这些人物的性质哩。主人又说：“哦，我明白了，‘跟妈’是隶属于酒馆的人，而‘鸨儿’是住在娼家里的人，对吧？那么，所谓‘忘八’是指人呢，还是指某个场所？如果是指人的话，是男人还是女人呢？”客人说：“我想‘忘八’好像是指男的。”主人说：“那他是掌管什么的呢？”“哎呀，我还没研究到这种程度哩，回头我再仔细查一查吧。”"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

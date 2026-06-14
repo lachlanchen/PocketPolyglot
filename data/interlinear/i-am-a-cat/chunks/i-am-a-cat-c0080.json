@@ -11057,5 +11057,36 @@
       ],
       "source_zh": "主人的妻子把吵嘴的事暂且放下来，急急忙忙抱起坎肩和针线盒跑到起居室里去了。主人把灰色的毛毯弄起来，扔进书斋。不一会儿，主人接过女佣拿来的名片一看，显出有点吃惊的样子，然后说了句“把他让到这里来”。说着，手里攥着那张名片进茅房去了。到底他为什么突然要进茅房，我摸不着头脑。而他为什么要把铃木藤十郎的名片带到茅房去，就更使我无法说明了。反正倒霉的是那张被命令随他一同进入臭茅房的名片先生。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

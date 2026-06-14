@@ -7467,5 +7467,36 @@
       ],
       "source_zh": "又过了一会儿，主人自言自语地说：“嗯，模样儿是怪难看的。”他能自己承认自己的丑陋，的确很难得的嘛。从他那神态看，的确是疯癫的动作，不过他说的话，倒是真理。如果再前进一步，那就会对自己的丑恶感到害怕。一个人如果不彻底感觉到自己是个可怕的坏蛋，那么还不能说是个久经世故的人。不是个久经世故的人，那么毕竟是不能解脱的。主人既然能够做到这种地步，似乎再前进一步，就有可能顺便说出句：“嗳哟，真可怕！”可他就是不说。只是在说了句“模样儿怪难看的”之后，也不知他是怎样想的，把腮帮子“噗——”的鼓了起来。然后用手心把鼓起来的腮帮子拍打了两三下。也不知这是哪一种咒术。这时我感到另有一张脸和这张脸似乎很相像，我想来想去，原来是厨娘阿三的那张脸。因为是顺便，我不妨提一提阿三的那张脸，那可真是圆鼓鼓的哩。不久以前，有人从穴守稻荷神社那里买来了一件河豚形的灯笼作为礼品送给主人家。阿三的那腮帮子恰像河豚灯笼那样，鼓得浑圆浑圆。由于鼓得太狠，不知把她那两只眼弄到哪里去了。当然，河豚鼓得圆圆的，是始终按浑圆来臌大的，而厨娘阿三呢，她脑袋的骨骼原本就是多角形的，她的胖脸是按她的骨骼臌大起来的，简直就像个经过水浸了的六角挂钟一般。阿三听了这话，真不知她会恼火到什么样子呢，所以关于阿三就讲到这里，还是接着讲我的主人吧。他一边尽量利用嘴里的空气使他的腮帮子鼓得老高，并如前所述，用手心拍打着，一边自言自语地说：“只要皮肤这样绷紧，麻子就不显啦。”"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

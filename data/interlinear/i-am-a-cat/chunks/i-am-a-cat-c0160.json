@@ -11373,5 +11373,36 @@
       ],
       "source_zh": "过不多久，似乎到了下课的时间，那位伦理教师的讲话戛然而止。其他教室里的授课也同时结束了。于是刚才还紧紧关在教室里的八百位好汉，一下子哇地高喊着，从建筑物里飞跑出来，那种气势，和捅掉一尺多长的大马蜂窝毫无两样。他们一起嗡嗡、哇哇地叫喊着，从窗子、拉门、能开阖的小门，还有只要能够钻出去的窟窿里争先恐后、毫不停留地蹦了出去。这就是大事件的开端。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

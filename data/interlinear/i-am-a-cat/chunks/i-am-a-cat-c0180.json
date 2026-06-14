@@ -18207,5 +18207,36 @@
       ],
       "source_zh": "主人默读了一通之后，立刻把信装回信封内，再也不理会了。捐款的事儿，恐怕他是不会做的。前些天，为东北地区农业灾害募捐，他捐了不是两元就是三元。这以后，他逢人就宣扬，他让人弄走了一笔捐款，既然是捐献，那无疑是主动交给人家的，不是被人弄走的。又不是进来了小偷给弄走什么，说什么被弄走显然是不妥当的。尽管如此，主人却似乎认为被盗了一样。所以这次不管是什么军人的欢迎会，也不管是什么华族老爷的发起人，假如是来威胁索要，那又当别论，只凭一纸铅印的通知，他可不是那种肯拿钱的人。按主人的意思是：先不要欢迎军人，倒是希望先欢迎他自己。欢迎了自己以后，那么对谁都可以欢迎。看来，他在朝夕还为生计犯愁的当儿，已经打定主意，把欢迎的事交给华族老爷了。主人又拿起了第二封，说了声：“哎呀，也是铅印的。”这封信上边是这样写的："
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

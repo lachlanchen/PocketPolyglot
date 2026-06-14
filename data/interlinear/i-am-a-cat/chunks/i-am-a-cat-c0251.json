@@ -11681,5 +11681,36 @@
       ],
       "source_zh": "我逐渐感到舒服些了。我弄不清楚是痛苦呢还是感谢上苍，也不清楚是在水里呢还是在主人的客厅里。管它在哪里，管它是怎么回事，都没关系。我只觉得很舒服。不，连舒服也感觉不到了。即便是天地化为齑粉也罢，反正我已进入奇妙的、宁静的世界之中。我就要死去。死，获得了这种宁静，如果不死是不可能获得这种宁静的。南无阿弥陀佛、南无阿弥陀佛。感谢呀感谢。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

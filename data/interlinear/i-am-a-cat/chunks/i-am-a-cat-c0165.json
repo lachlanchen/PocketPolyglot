@@ -14430,5 +14430,36 @@
       ],
       "source_zh": "“您说得太对了。我经常提醒他们，无奈人数众多……喂，你们今后不注意可不行呀，如果球飞进来，你们应该打个招呼从正门进来拣，听明白了吗？无奈学校太大，竟给我找事儿，真没办法。不过，从教育上说，运动是必要的，鄙人也很难加以禁止。允许他们运动吧，又会给您添许多麻烦，这点请您一定多多海涵。不过，今后我一定让他们走正门，向您打过招呼以后再拣。”这回是教伦理的教师说道。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

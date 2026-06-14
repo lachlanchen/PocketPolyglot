@@ -16839,5 +16839,36 @@
       ],
       "source_zh": "就在这个当儿，寒月君也不知是个什么打算，在这样的大热天，戴着冬天的帽子，两条腿满是尘土，居然枉驾而来了。迷亭立刻说：“喂，美男子光临啦。我可正吃着饭哩，很对不起呀。”然后迷亭君在众人环视之中，毫无不好意思地把剩下的一屉荞麦面条也吃个精光。这次他没有像方才那样吃法，不过，也没有再闹出用手绢捂嘴、中途喘气的难堪之态，结果两屉面条总算被他干净利落地报销了。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

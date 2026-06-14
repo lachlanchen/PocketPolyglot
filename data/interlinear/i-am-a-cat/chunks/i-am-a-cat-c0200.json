@@ -15988,5 +15988,36 @@
       ],
       "source_zh": "这很合情理，总让他倒立着，是不可能持久的嘛。在那下边，是木版印刷的很大的字，只认出“汝等”两个字。本想知道下边印的是什么，可是没有露出来。下一行只看出两个字：“快快”。他也很想知道这行接下去的是什么，但就这两个字，无从着手。假如主人是警察厅的密探，那么即使是别人家的东西，他也要把它硬撕下来。密探这种人，都没受过高等教育，为了获得事实，什么都干得出来。这种人是不好对付的啊。但愿他们能多少客气一些。如果他们不客气，最好的办法就是决不让他们掌握事实。据说，他们甚至用罗织虚构的罪名来陷害良民。良民们拿出税金雇用来的人反而加罪于雇主，这种行为也满可以说是疯子的行为。主人又把目光一转，读了读当中的地方。在正当中，“大分县”几个字也翻了筋斗。连伊藤博文都倒立着，大分县翻个筋斗也是理所当然的喽。主人读到这里，攥紧拳头，把它伸着，朝着顶棚高高举起，这是打呵欠的先兆。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

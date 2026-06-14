@@ -14527,5 +14527,36 @@
       ],
       "source_zh": "我还没有捉过一只老鼠，有一个时期，厨娘阿三甚至提出要把我驱逐出去。但由于主人深知我不是一只凡猫，所以我仍旧得以悠悠荡荡，生活在这个家里。对于这点，我一方面感谢主人的恩德，同时又不能不对主人的俊眼识英才表示敬佩之意。阿三由于不能认识我的非凡之处，时时虐待我，我也并不为此生气。不久左甚五郎就会出来把我的肖像雕到楼门柱子上，日本的斯坦朗也会高兴地把我的肖像画在画布上，到那时，他们这些瞎眼汉就会为自己的不明智而羞愧吧。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

@@ -27,6 +27,7 @@ class EnhancementBook:
     title: str
     category: str
     source_area: str
+    add_modern_zh: bool = False
     add_english: bool = True
     add_modern_ja: bool = False
     priority: int = 100
@@ -54,27 +55,28 @@ BOOKS: list[EnhancementBook] = [
         "四書章句集註",
         "classical_chinese",
         "sources/sishu",
+        add_modern_zh=True,
         add_modern_ja=True,
         priority=70,
-        notes="Preferred Sishu pass. Preserve classical/commentary fields and add modern Japanese from the modern Chinese bridge when available.",
+        notes="Preferred Sishu pass. Preserve classical/commentary fields. Add modern Chinese first, then generate English and readable modern Japanese from that modern Chinese bridge.",
     ),
     EnhancementBook(
         "sishu-jizhu",
         "四書章句集註 legacy",
         "classical_chinese_legacy",
         "sources/sishu",
+        add_modern_zh=True,
         add_modern_ja=True,
         priority=75,
-        notes="Legacy Sishu pass. Keep old output; write only overlay files.",
+        notes="Legacy Sishu pass. Keep old output; write only overlay files. Add modern Chinese first, then English and readable modern Japanese.",
     ),
     EnhancementBook(
         "shiji-aginti",
         "史記",
         "classical_chinese",
         "sources/shiji",
-        add_modern_ja=True,
         priority=80,
-        notes="Prefer existing zh_modern over zh_original; generate English and plain modern Japanese from zh_modern.",
+        notes="Shiji chunks already contain zh_original and zh_modern; backfill English from zh_modern without rewriting existing Japanese.",
     ),
     EnhancementBook("the-old-capital", "古都", "early_bilingual", "sources/《古都》（川端康成经典名作，余华倾情推荐）.epub", priority=90),
     EnhancementBook("izu-no-odori", "伊豆的舞女 / 伊豆の踊子", "early_bilingual", "sources/伊豆的舞女 - [日]川端康成.epub", priority=100),
@@ -157,13 +159,22 @@ def base_candidates(book_id: str, chunk_id: str) -> list[str]:
 
 def actions_for(book: EnhancementBook) -> list[dict[str, Any]]:
     actions: list[dict[str, Any]] = []
+    if book.add_modern_zh:
+        actions.append(
+            {
+                "field": "zh_modern",
+                "kind": "modern_chinese_bridge",
+                "source_priority": ["unit.zh_modern", "paragraph.corrected_text", "unit.zh_original", "unit.zh", "unit.source_text", "paragraph.source_text"],
+                "instruction": "Add accurate, readable modern Chinese aligned to the existing classical Chinese unit. Preserve names, terms, and source order; do not overwrite existing zh or ja.",
+            }
+        )
     if book.add_english:
         actions.append(
             {
                 "field": "en",
                 "kind": "understandable_english",
-                "source_priority": ["unit.zh_modern", "paragraph.corrected_text", "unit.zh", "paragraph.source_text"],
-                "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja.",
+                "source_priority": ["overlay.zh_modern", "unit.zh_modern", "paragraph.corrected_text", "unit.zh_original", "unit.zh", "paragraph.source_text"],
+                "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja.",
             }
         )
     if book.add_modern_ja:
@@ -171,7 +182,7 @@ def actions_for(book: EnhancementBook) -> list[dict[str, Any]]:
             {
                 "field": "ja_modern",
                 "kind": "plain_modern_japanese",
-                "source_priority": ["unit.zh_modern", "paragraph.corrected_text", "unit.zh", "paragraph.source_text"],
+                "source_priority": ["overlay.zh_modern", "unit.zh_modern", "paragraph.corrected_text", "unit.zh_original", "unit.zh", "paragraph.source_text"],
                 "instruction": "Add reader-friendly modern Japanese based on the modern Chinese meaning bridge. Preserve the existing ja field as legacy/source/comment Japanese.",
             }
         )
@@ -226,12 +237,14 @@ def prepare_book(book: EnhancementBook, *, dry_run: bool = False) -> dict[str, A
             "durable_overlay_path_template": f"data/interlinear-overlays/en-modern-ja/{book.book_id}/chunks/{{chunk_id}}.json",
             "merge_policy": {
                 "preserve_existing_fields": True,
-                "append_only_fields": ["en", "ja_modern"],
+                "append_only_fields": ["zh_modern", "en", "ja_modern"],
                 "legacy_japanese_field": "ja",
                 "modern_japanese_field": "ja_modern",
+                "modern_chinese_field": "zh_modern",
             },
             "validation": {
                 "require_no_source_text_loss": True,
+                "require_modern_zh_if_requested": book.add_modern_zh,
                 "require_english_if_requested": book.add_english,
                 "require_modern_ja_if_requested": book.add_modern_ja,
                 "forbid_overwriting_legacy_ja": True,

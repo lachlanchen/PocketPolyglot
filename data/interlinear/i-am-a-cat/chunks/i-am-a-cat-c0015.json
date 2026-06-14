@@ -14666,5 +14666,36 @@
       ],
       "source_zh": "拐过“宝丹”药铺房角，又走来一个艺妓。这个艺妓身材苗条，柳肩，长得很俊俏，身上穿着浅紫色衣服，很合体，看起来很雅致。她露出雪白的牙齿笑着说道：“小源哥，昨儿晚上嘛……实在是我太忙啦。”不过她那声音嘶哑得和乌鸦叫一样，使她那风流俊俏的姿态大为减色。我懒得回头去看所谓小源哥究竟是何许人，便甩着双手径直来到“御成路”。寒月不知为什么，似乎有些魂不守舍的样子。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

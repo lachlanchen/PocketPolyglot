@@ -17032,5 +17032,36 @@
       ],
       "source_zh": "笑声刚要停下来，那个五岁的小女孩说了一句：“妈妈，你看那猫，也真够受呀。”于是又以所谓挽狂澜于既倒之势，大家又大笑了我一番。过去有关人类缺乏同情心的行为所见所闻不少，但没有比这次更使我感到怨恨的了。终于，老天的保佑消失得无影无踪了，我恢复了四腿着地，并演出了白眼上翻的丑态，我难为情到了极点。看来，还是主人不忍心看着我死去，他命令阿三说：“给它把年糕拿掉。”阿三看着主人妻子，那眼神仿佛在说：“让它再跳一会不好吗？”主人的妻子虽也想看我跳舞，但她并不想眼看着我憋死，所以默不作声。主人又向阿三说：“不给它拿掉会死的，快些给它摘下来！”阿三仿佛梦中赴宴，刚饱享了一半便被唤醒似的，很不情愿地抓住年糕狠命地往下一揪。我的情况虽与寒月君不同，但当时着实担心她可能把我的几颗门牙给揪断。不是什么痛与不痛的问题，她把我死死嵌进年糕里的牙齿毫不留情地这么一扯，谁受得了呀？至此我又亲自体会出第四个真理：“举凡安乐，皆须通过痛苦而得之。”当我睁大眼睛环视四周时，家里的人都到里边的起居室去了。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

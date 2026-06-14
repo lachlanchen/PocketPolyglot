@@ -17316,5 +17316,36 @@
       ],
       "source_zh": "对我的举动一无所知的主人，带着极认真的态度，死劲儿盯着这面小镜子。说起来，镜子这种东西是很瘆人的。据说在深夜里点支蜡烛在一间大屋子里一个人独自照镜子，是要有相当胆量的。比如我吧，第一次被家里的小女孩们硬是把镜子凑近我的脸前时，我几乎吓傻了，吓得我在房子的周围足足跑了三圈。尽管现在是白天，但像主人这样目不转睛地瞧着镜子，那肯定他自己会对自己的面孔感到害怕。即便平常看上一两眼，那也决不是一张令人开心的面孔嘛。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

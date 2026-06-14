@@ -18168,5 +18168,36 @@
       ],
       "source_zh": "然而，现在在我眼前展现的这一群人，却把不应该脱掉的裤衩、大褂以及裙裤全都剥得精光，毫无顾忌地在众目环视之中把原来的丑态赤裸裸地暴露了出来，而且满不在乎地谈笑风生。在下方才说的一大奇观指的就是这件事。我能在这里为那些文明君子介绍他们的情况，实感不胜荣幸之至。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

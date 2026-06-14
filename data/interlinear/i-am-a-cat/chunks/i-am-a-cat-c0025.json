@@ -15763,5 +15763,36 @@
       ],
       "source_zh": "主人表示赞同地说：“是呀。”我可不明白究竟对在哪里。“服务员好像也表示很遗憾的样子说：‘不久，原料能进货了，请您再来光顾。’于是迷亭先生又问服务员：‘都用哪些材料啊？’服务员只是嘿嘿地笑却没有作答。先生故意又问了一句说：‘材料大概是日本派俳人吧。’那服务员说：‘是的，所以说最近就是到横滨去也弄不到手，实在对不起。’”“哈哈哈，这就是最后的‘滑稽点子’呀，太有趣啦。”主人从来没有这样的捧腹大笑过。他笑得打战，膝头晃动着，差一点把我颠下去。主人顾不得这些，还是在笑。看来，这是因为他知道上了迷亭的安德利亚·特尔·萨尔德的当的，不只是他一个人，所以突然高兴起来。“然后我们两人从西餐馆出来，迷亭先生十分得意地对我说：‘怎么样，进行得挺顺利吧，用橡面坊来招笑，够有意思的吧，’我说：‘实在佩服之至，’然后我们就分手了。不过，我的午饭时间已经耽搁，肚子空空，难受极了。”“那可让你受苦喽。”主人这才表示出同情。对于这点我也没有意见。两人的对话暂时中断，我喉咙里发出的咕噜声，传入他们耳中。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

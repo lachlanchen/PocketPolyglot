@@ -16894,5 +16894,36 @@
       ],
       "source_zh": "当然，主人并不是为了广施功德，才把痘疮种了满脸的。别小瞧这些痘痘，其实这本来也都是种上去的，只不过不幸的是，本以为种在胳膊上的，却不知什么时候又传染到脸上来了。当时主人还是孩子，不像现在这样知道什么是俊俏，只是一味地叫嚷“痒！痒！”，还拼命地往脸上抓，这就像火山爆发后，熔岩从脸上淌过一样，把爹娘给的脸蛋儿糟蹋得不成样子。主人时常向他的妻子说，在未患痘疮之前，自己是个粉妆玉琢一般的孩儿。他甚至还夸耀地说过：“当家人抱着他去浅草观音堂烧香的时候，连西洋人都不住回头看这个白胖娃娃哩。”不过，可惜的是，却没有人为他的话作证。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

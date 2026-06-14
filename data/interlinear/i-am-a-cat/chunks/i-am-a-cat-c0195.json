@@ -12484,5 +12484,36 @@
       ],
       "source_zh": "不管妻子怎样提醒，警察规定的时间到了，主人根本不理，连“嗯”一声都没有，那么显然是主人没理，而决不是妻子。主人的妻子做了这样判断之后，便表现出“你去晚了，我可管不着”的架势，扛起笤帚和掸子到书斋里打扫去了。随后就在书斋里响起了啪嗒啪嗒敲打的声音，这说明又开始了那例行公事般的打扫工作。说起来，打扫的目的是在于运动呢还是在于游戏，由于我不担负打扫的任务，与我无关，所以我只要不闻不问就行了。不过说到主人的妻子打扫房间的方法，不能不说那是毫无意义的。为什么说它毫无意义呢？因为这位主人的妻子只是为打扫而打扫。掸子在纸拉门上敲一通，笤帚在铺席上过一遍。然后就打扫完成了。至于为什么要打扫，打扫的效果如何，她连芝麻大的责任都不负的。正因为如此，清洁的地方倒是每天都清洁，而有垃圾的地方、尘土积聚的地方，则永远堆积着垃圾和厚厚的尘土。曾经有个故事叫“告朔饩羊”嘛，这说明搞点打扫总比不打扫好，但是，即使打扫了，其实并不是为我家主人打扫的，但偏偏每天还要不辞辛劳地打扫一通，这正是主人的妻子伟大之处。妻子和打扫房间的关系，只是多年习惯的产物，形成机械式的联想，两者牢牢地联结在一起。尽管如此，至于打扫的实际效果，正和主人的妻子还未出生之前一样，正和掸子、笤帚还未发明出来之前的古昔一样，丝毫无实效可言。看来，这两者的关系，正如形式逻辑学中的命题与语词一样，不管其内容如何，是彼此结合在一起的。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

@@ -17371,5 +17371,36 @@
       ],
       "source_zh": "主人又从书斋里跳了出去，抓住一个最擅长使用这种君子口吻的人，责难他为什么又闯进来。这位君子立刻忘了“你小子”、“去你妈的”这类高雅的语言，而使用了颇为下等的回答说：“我还以为这里是学校的植物园呢。”主人训诫他以后要注意，然后把他放掉了。说是“把他放掉”，听起来好像儿童捉弄完乌龟才放掉，这未免可笑。其实他是扯住那位君子的袖子和他讲理的。主人原以为已经这样狠狠地教育他了，大概不会再有问题。哪里想到，从女娲氏时期起，实际就总是与预期相反的，主人这次又失败了。这以后他们有时是从院子的北边进来，有时从院子前门横穿过去，或者哗啦的推开前门，家里人以为有客人来了呢，而在桐树林子那边，却发出一阵哄笑声。形势越来越险恶，教育的功效也就愈来愈明显。我那可怜的主人，深感对付不了，于是躲进书斋里，恭恭敬敬地上书给落云馆中学的校长，哀恳多少管一管他的学生。落云馆的校长也郑重地给主人送来了一封回信，说请他稍候一些日子，那里即将修一堵墙。过了几天，来了两三名工人，用了半天的时间，在主人房子和落云馆中间修起了一道三尺来高四方格的竹篱笆。主人十分高兴，以为这么一来就可以相安无事了。其实主人是个傻瓜，只靠这一点点的措施，是不可能使君子们的举动发生变化的。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

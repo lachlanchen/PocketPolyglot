@@ -13000,5 +13000,36 @@
       ],
       "source_zh": "就在这时，一个二十五六岁、长点小胡子的青年咚地跳了进来，这一下不打紧，他满身的肥皂沫和身上的污垢立刻飘到水面上来。水也就立刻浮上一层带青灰色的、闪闪发光的油垢。在他旁边的水面上露出两个脑袋，其中一个光脑袋的老头儿向一个留有寸头的青年搭话说：“老了，不中用啦。人要是头、脚都不灵了，就比不过小伙子啦。不过，唯独对于洗澡水，如果不热，我还是觉得不够味。”那小伙子说：“老大爷，您够结实的啦。有您这样精神也就满好啦。”“精神不济啦！只不过是还没有病罢了。人只要是不干荒唐的事儿，可以活到一百二十岁呢。”“嘿！能活那么久呀？”“能活！一百二十岁没问题！在维新前牛込区有个叫曲渊的直参武士，他家的一个仆役就活了一百三十岁。”“那可活得真长啊。”“是哟，是哟，因为活得太长啦，连自己的岁数都记不起来了。据说他在一百岁以前，还记得自己的岁数，以后就记不住了。我认识他的时候正好他是一百三十岁，可那时他还没有死，以后怎样我就不知道了。说不定现在还活着呢。”说着，这老头儿跨出了浴池。刚才那个留有小胡子的青年，把他身旁的水弄得飘满了云母片一样的肥皂沫，独自嘻嘻地笑着。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

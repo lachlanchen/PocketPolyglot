@@ -7321,5 +7321,36 @@
       ],
       "source_zh": "听到八妞哭喊声的主人，从大清早就大发脾气，他从被褥上猛地一下子坐起来。这样一来，什么精神休养啦，八木独仙啦，早就被抛到九霄云外去了。他在坐起来的同时，用两只手咯吱咯吱地在头上到处乱挠，几乎要把头皮都挠下来。已经积攒了一个多月的头屑，这时毫不客气地飞向脖梗子和睡衣领上。那光景可真壮观哩。我又看了看主人的胡子是否变了样，不看还好，一看吓一跳，原来胡子已经横七竖八乱得不成样子。可能胡子也觉得主人分明在生气，如果满不在乎地竖在那里，未免有点对不起主人吧，所以胡子也一根一根发起火来，以猛烈的势头各自找个方向向前闯去。这可是个很值得一看的景象。昨天是因为面对着镜子，所以这些胡子学着德皇陛下的样子，老老实实地排列在那里，但经过这一宿觉，什么训练啦、梳理啦，早已不管用，于是立刻还原到本来的面目，恢复了各自的出发点。这就和主人一晚上搞起来的精神修养，到了第二天早已拂拭罄尽、立刻全面暴露出他那生来的牛性子完全是一样的。主人长有这样一撮不老实的胡子，而且性情这么粗暴，竟然直到今天未被免职，居然还当着教师。我想到这里，才了解到日本之大，正因为大，所以金田君啦、金田君的走狗啦，才作为人在社会上行得通的吧。当他们作为人行得通的当儿，主人似乎也确信自己不可能被免职。这类事儿如有必要，不妨往巢鸭精神病医院寄张明信片去，向天道公平君打听打听，就会明白这个道理的。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

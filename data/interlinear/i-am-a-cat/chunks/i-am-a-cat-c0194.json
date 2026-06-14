@@ -6860,5 +6860,36 @@
       ],
       "source_zh": "在下不过是只猫儿。也许有人怀疑，一只猫儿如何能将主人的心思这样精细地记述下来呢？其实像这类事儿，对我们猫儿说来并不算回事儿。在下是懂得读心术的。您问我什么时候学会的？这种多余的事，您还是不问为好。反正我是懂得的。我爬到人类的膝头上睡觉的时候，我就将我的柔软的皮毛外衣轻轻地贴在人的肚腹上。于是立刻产生一道电流，他腹中所发生的一切便都清清楚楚地映在我的心眼上。就以前些日子的事为例吧，主人亲切地抚摸着我的头，突然他涌现出一个极要不得的念头，他在想，如果把这只猫儿的皮剥下来做成坎肩，该不知多么暖和呢。我立刻就觉察出他这一念头，不由吓出了一身冷汗，这该多么可怕呀！因为我有这种功能，所以我才有幸将主人头脑中产生的以上想法，作为我最大的荣誉向诸位报告。不过，当主人想到“这到底是什么呀？简直弄不明白！”以后就呼呼睡着了。到了明天，他肯定会将睡前想过的事思考到什么程度都忘得一干二净。今后，假如主人就疯子问题还要进行思考的话，那么肯定他还得从头开始想。如果那样，很难保证他还会采取这种思考方法，很难保证他仍然还会来老一套：“到底是什么呀，简直弄不明白。”不过，不管他重复思考多少遍，不管他沿着哪些思考路径前进，最后的结论肯定还会是“到底是什么呀，简直弄不明白”，唯独这一点，我是可以打保票的。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

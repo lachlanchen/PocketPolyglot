@@ -8426,5 +8426,36 @@
       ],
       "source_zh": "随后，我突然清醒过来，那个书生已经不见了，原先那么多兄弟姐妹也一个看不见了，就连我那最最亲爱的妈妈也去向不明。而且，这里和我早先呆的地方不同，亮得出奇，几乎令人睁不开眼睛。我想：“真奇怪，这是怎么回事呢？”于是我试着慢慢爬了几步，只感到浑身疼得要命。原来我是从稻草窝里一下子被丢进了矮竹丛里。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

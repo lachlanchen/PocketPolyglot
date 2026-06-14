@@ -7309,5 +7309,36 @@
       ],
       "source_zh": "据说第二回打算请一些有名的文人开个大会，他还向我说：‘务必也请先生光临，’我问他：‘还是搞近松的戏剧吗？’他说：‘不，下次要选个崭新的剧，已经决定搞《金色夜叉》了。我又问他：‘那么，你担当什么角色？’他说：‘我是阿宫姑娘。’东风君扮阿宫姑娘，多有意思！我一定要出席给他鼓掌叫好哩。”寒月皮笑肉不笑地说：“有趣吧。”主人把安德利亚·特尔·萨尔德和孔雀舌以及“橡面坊”的几件事儿联系在一起，报复地说：“不过，这人很不错，诚实，一点也不轻浮，和迷亭这样的人大不相同。”迷亭先生对此似乎毫不介意，笑道：“反正我这号人，永远是‘行德之俎’嘛。”主人说：“你也只能是那种人吧。”其实主人并不明白这句“行德之俎”是什么意思，不过，多亏了他当过多年教员懂得如何糊弄人，所以在这种场合，便把教书时的本领，应用到社交上来了。寒月却坦率地发问道：“刚才说的‘行德之俎’是怎么回事儿？”主人看着壁龛前的水仙说道：“那水仙是我去年年底洗澡回来的时候，半路上买来插上的。你们看，放得时间够长了吧。”主人用这个办法硬是把“行德之俎”给岔开了。迷亭一边把烟袋杆儿像表演“大神乐”艺人那样，用指头尖拨得飞转，一边说道：“提到年底，我在去年年底遇上了这样一件奇怪的事儿。”主人好像已经把“行德之俎”远远抛到脑后似的松了一口气，说道：“你遇见什么事儿啦？快讲给我们听听。”迷亭先生所遇到的怪事是这样的："
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

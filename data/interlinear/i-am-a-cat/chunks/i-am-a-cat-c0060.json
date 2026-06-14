@@ -7211,5 +7211,36 @@
       ],
       "source_zh": "迷亭半开玩笑地又递过去第三张：“你看这张好不好？”这次是在明信片上印刷着一艘帆船，和其他明信片一样，也是在明信片下边，写着点什么。她念道：“‘昨夜码头上／二八小姑娘／对着岩滩的群鸥／对着醒来的海鸟／哭诉失去爹和娘／爹娘出海去打鱼／双双葬身浪花底。’写得真好，真叫人佩服。这不是很懂得风流吗？”“真是懂得风流的吗？”迷亭说。“不错，写成这样，满可以用三弦琴弹唱啦。”鼻子说。“用弦子弹唱当然很地道喽。你再看看这张怎么样？”迷亭左一张右一张地拿给鼻子看。鼻子满意地说：“不必啦。我看了这么多，其他的不看也可以了。我了解啦，反正寒月先生不是那种粗鲁人就是了。”看来，关于寒月的事，鼻子要问的大概都问完了，她提出了一个任性自私的要求说：“谢谢，麻烦你们啦。我来这儿的事儿，请你们对寒月先生保密。”看来，她采取的方针是，关于寒月的事什么都要寻根问底，而关于自己这方面的事嘛，什么都不准向寒月说。迷亭和主人冷淡地应了一声：“唔。”鼻子站起来郑重地说：“不久我会送点谢礼来的。”两人把鼻子送到门口，回来以后，刚一落座，迷亭和主人不约而同地发问：“这女人是个啥货色呀？”在隔壁的屋子里，主人的妻子，看来也忍俊不禁，传来了吃吃的笑声。迷亭提高了嗓门说：“太太！苦沙弥太太！这不是‘俗套’的标本来了吗？庸俗到这步田地也真算到家喽。好啦，请不必客气，尽情地笑吧。”"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

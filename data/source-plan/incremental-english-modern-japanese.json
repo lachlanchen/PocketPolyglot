@@ -4,7 +4,7 @@
   "old_json_is_read_only": true,
   "output_root": "data/source-plan/incremental-en-modern-ja",
   "durable_overlay_root": "data/interlinear-overlays/en-modern-ja",
-  "generated_at": "2026-06-11T09:51:35.745812+00:00",
+  "generated_at": "2026-06-14T02:44:34.048783+00:00",
   "books": [
     {
       "schema_version": 1,
@@ -22,12 +22,14 @@
           "field": "en",
           "kind": "understandable_english",
           "source_priority": [
+            "overlay.zh_modern",
             "unit.zh_modern",
             "paragraph.corrected_text",
+            "unit.zh_original",
             "unit.zh",
             "paragraph.source_text"
           ],
-          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
         }
       ],
       "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/kokoro/tasks.jsonl",
@@ -42,12 +44,14 @@
             "field": "en",
             "kind": "understandable_english",
             "source_priority": [
+              "overlay.zh_modern",
               "unit.zh_modern",
               "paragraph.corrected_text",
+              "unit.zh_original",
               "unit.zh",
               "paragraph.source_text"
             ],
-            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
           }
         ],
         "do_not_modify_templates": [
@@ -60,21 +64,24 @@
         "merge_policy": {
           "preserve_existing_fields": true,
           "append_only_fields": [
+            "zh_modern",
             "en",
             "ja_modern"
           ],
           "legacy_japanese_field": "ja",
-          "modern_japanese_field": "ja_modern"
+          "modern_japanese_field": "ja_modern",
+          "modern_chinese_field": "zh_modern"
         },
         "validation": {
           "require_no_source_text_loss": true,
+          "require_modern_zh_if_requested": false,
           "require_english_if_requested": true,
           "require_modern_ja_if_requested": false,
           "forbid_overwriting_legacy_ja": true,
           "require_ruby_for_kanji_tokens_in_ja_modern": true
         }
       },
-      "generated_at": "2026-06-11T09:51:31.805287+00:00"
+      "generated_at": "2026-06-14T02:44:30.271828+00:00"
     },
     {
       "schema_version": 1,
@@ -92,12 +99,14 @@
           "field": "en",
           "kind": "understandable_english",
           "source_priority": [
+            "overlay.zh_modern",
             "unit.zh_modern",
             "paragraph.corrected_text",
+            "unit.zh_original",
             "unit.zh",
             "paragraph.source_text"
           ],
-          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
         }
       ],
       "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/snow-country/tasks.jsonl",
@@ -112,12 +121,14 @@
             "field": "en",
             "kind": "understandable_english",
             "source_priority": [
+              "overlay.zh_modern",
               "unit.zh_modern",
               "paragraph.corrected_text",
+              "unit.zh_original",
               "unit.zh",
               "paragraph.source_text"
             ],
-            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
           }
         ],
         "do_not_modify_templates": [
@@ -130,21 +141,24 @@
         "merge_policy": {
           "preserve_existing_fields": true,
           "append_only_fields": [
+            "zh_modern",
             "en",
             "ja_modern"
           ],
           "legacy_japanese_field": "ja",
-          "modern_japanese_field": "ja_modern"
+          "modern_japanese_field": "ja_modern",
+          "modern_chinese_field": "zh_modern"
         },
         "validation": {
           "require_no_source_text_loss": true,
+          "require_modern_zh_if_requested": false,
           "require_english_if_requested": true,
           "require_modern_ja_if_requested": false,
           "forbid_overwriting_legacy_ja": true,
           "require_ruby_for_kanji_tokens_in_ja_modern": true
         }
       },
-      "generated_at": "2026-06-11T09:51:31.955420+00:00"
+      "generated_at": "2026-06-14T02:44:30.419381+00:00"
     },
     {
       "schema_version": 1,
@@ -162,12 +176,14 @@
           "field": "en",
           "kind": "understandable_english",
           "source_priority": [
+            "overlay.zh_modern",
             "unit.zh_modern",
             "paragraph.corrected_text",
+            "unit.zh_original",
             "unit.zh",
             "paragraph.source_text"
           ],
-          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
         }
       ],
       "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/no-longer-human/tasks.jsonl",
@@ -182,12 +198,14 @@
             "field": "en",
             "kind": "understandable_english",
             "source_priority": [
+              "overlay.zh_modern",
               "unit.zh_modern",
               "paragraph.corrected_text",
+              "unit.zh_original",
               "unit.zh",
               "paragraph.source_text"
             ],
-            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
           }
         ],
         "do_not_modify_templates": [
@@ -200,21 +218,24 @@
         "merge_policy": {
           "preserve_existing_fields": true,
           "append_only_fields": [
+            "zh_modern",
             "en",
             "ja_modern"
           ],
           "legacy_japanese_field": "ja",
-          "modern_japanese_field": "ja_modern"
+          "modern_japanese_field": "ja_modern",
+          "modern_chinese_field": "zh_modern"
         },
         "validation": {
           "require_no_source_text_loss": true,
+          "require_modern_zh_if_requested": false,
           "require_english_if_requested": true,
           "require_modern_ja_if_requested": false,
           "forbid_overwriting_legacy_ja": true,
           "require_ruby_for_kanji_tokens_in_ja_modern": true
         }
       },
-      "generated_at": "2026-06-11T09:51:31.991059+00:00"
+      "generated_at": "2026-06-14T02:44:30.449693+00:00"
     },
     {
       "schema_version": 1,
@@ -232,12 +253,14 @@
           "field": "en",
           "kind": "understandable_english",
           "source_priority": [
+            "overlay.zh_modern",
             "unit.zh_modern",
             "paragraph.corrected_text",
+            "unit.zh_original",
             "unit.zh",
             "paragraph.source_text"
           ],
-          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
         }
       ],
       "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/rashomon-stories/tasks.jsonl",
@@ -252,12 +275,14 @@
             "field": "en",
             "kind": "understandable_english",
             "source_priority": [
+              "overlay.zh_modern",
               "unit.zh_modern",
               "paragraph.corrected_text",
+              "unit.zh_original",
               "unit.zh",
               "paragraph.source_text"
             ],
-            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
           }
         ],
         "do_not_modify_templates": [
@@ -270,21 +295,24 @@
         "merge_policy": {
           "preserve_existing_fields": true,
           "append_only_fields": [
+            "zh_modern",
             "en",
             "ja_modern"
           ],
           "legacy_japanese_field": "ja",
-          "modern_japanese_field": "ja_modern"
+          "modern_japanese_field": "ja_modern",
+          "modern_chinese_field": "zh_modern"
         },
         "validation": {
           "require_no_source_text_loss": true,
+          "require_modern_zh_if_requested": false,
           "require_english_if_requested": true,
           "require_modern_ja_if_requested": false,
           "forbid_overwriting_legacy_ja": true,
           "require_ruby_for_kanji_tokens_in_ja_modern": true
         }
       },
-      "generated_at": "2026-06-11T09:51:32.166998+00:00"
+      "generated_at": "2026-06-14T02:44:30.569231+00:00"
     },
     {
       "schema_version": 1,
@@ -302,19 +330,23 @@
           "field": "en",
           "kind": "understandable_english",
           "source_priority": [
+            "overlay.zh_modern",
             "unit.zh_modern",
             "paragraph.corrected_text",
+            "unit.zh_original",
             "unit.zh",
             "paragraph.source_text"
           ],
-          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
         },
         {
           "field": "ja_modern",
           "kind": "plain_modern_japanese",
           "source_priority": [
+            "overlay.zh_modern",
             "unit.zh_modern",
             "paragraph.corrected_text",
+            "unit.zh_original",
             "unit.zh",
             "paragraph.source_text"
           ],
@@ -333,19 +365,23 @@
             "field": "en",
             "kind": "understandable_english",
             "source_priority": [
+              "overlay.zh_modern",
               "unit.zh_modern",
               "paragraph.corrected_text",
+              "unit.zh_original",
               "unit.zh",
               "paragraph.source_text"
             ],
-            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
           },
           {
             "field": "ja_modern",
             "kind": "plain_modern_japanese",
             "source_priority": [
+              "overlay.zh_modern",
               "unit.zh_modern",
               "paragraph.corrected_text",
+              "unit.zh_original",
               "unit.zh",
               "paragraph.source_text"
             ],
@@ -362,21 +398,24 @@
         "merge_policy": {
           "preserve_existing_fields": true,
           "append_only_fields": [
+            "zh_modern",
             "en",
             "ja_modern"
           ],
           "legacy_japanese_field": "ja",
-          "modern_japanese_field": "ja_modern"
+          "modern_japanese_field": "ja_modern",
+          "modern_chinese_field": "zh_modern"
         },
         "validation": {
           "require_no_source_text_loss": true,
+          "require_modern_zh_if_requested": false,
           "require_english_if_requested": true,
           "require_modern_ja_if_requested": true,
           "forbid_overwriting_legacy_ja": true,
           "require_ruby_for_kanji_tokens_in_ja_modern": true
         }
       },
-      "generated_at": "2026-06-11T09:51:32.622002+00:00"
+      "generated_at": "2026-06-14T02:44:31.071850+00:00"
     },
     {
       "schema_version": 1,
@@ -394,12 +433,14 @@
           "field": "en",
           "kind": "understandable_english",
           "source_priority": [
+            "overlay.zh_modern",
             "unit.zh_modern",
             "paragraph.corrected_text",
+            "unit.zh_original",
             "unit.zh",
             "paragraph.source_text"
           ],
-          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
         }
       ],
       "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/kinkakuji/tasks.jsonl",
@@ -414,12 +455,14 @@
             "field": "en",
             "kind": "understandable_english",
             "source_priority": [
+              "overlay.zh_modern",
               "unit.zh_modern",
               "paragraph.corrected_text",
+              "unit.zh_original",
               "unit.zh",
               "paragraph.source_text"
             ],
-            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
           }
         ],
         "do_not_modify_templates": [
@@ -432,21 +475,24 @@
         "merge_policy": {
           "preserve_existing_fields": true,
           "append_only_fields": [
+            "zh_modern",
             "en",
             "ja_modern"
           ],
           "legacy_japanese_field": "ja",
-          "modern_japanese_field": "ja_modern"
+          "modern_japanese_field": "ja_modern",
+          "modern_chinese_field": "zh_modern"
         },
         "validation": {
           "require_no_source_text_loss": true,
+          "require_modern_zh_if_requested": false,
           "require_english_if_requested": true,
           "require_modern_ja_if_requested": false,
           "forbid_overwriting_legacy_ja": true,
           "require_ruby_for_kanji_tokens_in_ja_modern": true
         }
       },
-      "generated_at": "2026-06-11T09:51:32.789049+00:00"
+      "generated_at": "2026-06-14T02:44:31.217844+00:00"
     },
     {
       "schema_version": 1,
@@ -456,27 +502,44 @@
       "source_area": "sources/sishu",
       "priority": 70,
       "dependency": "base_chunks_exist",
-      "notes": "Preferred Sishu pass. Preserve classical/commentary fields and add modern Japanese from the modern Chinese bridge when available.",
+      "notes": "Preferred Sishu pass. Preserve classical/commentary fields. Add modern Chinese first, then generate English and readable modern Japanese from that modern Chinese bridge.",
       "chunk_id_source": "books_manifest",
       "chunk_count": 2480,
       "actions": [
         {
-          "field": "en",
-          "kind": "understandable_english",
+          "field": "zh_modern",
+          "kind": "modern_chinese_bridge",
           "source_priority": [
             "unit.zh_modern",
             "paragraph.corrected_text",
+            "unit.zh_original",
+            "unit.zh",
+            "unit.source_text",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add accurate, readable modern Chinese aligned to the existing classical Chinese unit. Preserve names, terms, and source order; do not overwrite existing zh or ja."
+        },
+        {
+          "field": "en",
+          "kind": "understandable_english",
+          "source_priority": [
+            "overlay.zh_modern",
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh_original",
             "unit.zh",
             "paragraph.source_text"
           ],
-          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
         },
         {
           "field": "ja_modern",
           "kind": "plain_modern_japanese",
           "source_priority": [
+            "overlay.zh_modern",
             "unit.zh_modern",
             "paragraph.corrected_text",
+            "unit.zh_original",
             "unit.zh",
             "paragraph.source_text"
           ],
@@ -492,22 +555,39 @@
         "dependency": "base_chunks_exist",
         "actions": [
           {
-            "field": "en",
-            "kind": "understandable_english",
+            "field": "zh_modern",
+            "kind": "modern_chinese_bridge",
             "source_priority": [
               "unit.zh_modern",
               "paragraph.corrected_text",
+              "unit.zh_original",
+              "unit.zh",
+              "unit.source_text",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add accurate, readable modern Chinese aligned to the existing classical Chinese unit. Preserve names, terms, and source order; do not overwrite existing zh or ja."
+          },
+          {
+            "field": "en",
+            "kind": "understandable_english",
+            "source_priority": [
+              "overlay.zh_modern",
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh_original",
               "unit.zh",
               "paragraph.source_text"
             ],
-            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
           },
           {
             "field": "ja_modern",
             "kind": "plain_modern_japanese",
             "source_priority": [
+              "overlay.zh_modern",
               "unit.zh_modern",
               "paragraph.corrected_text",
+              "unit.zh_original",
               "unit.zh",
               "paragraph.source_text"
             ],
@@ -524,21 +604,24 @@
         "merge_policy": {
           "preserve_existing_fields": true,
           "append_only_fields": [
+            "zh_modern",
             "en",
             "ja_modern"
           ],
           "legacy_japanese_field": "ja",
-          "modern_japanese_field": "ja_modern"
+          "modern_japanese_field": "ja_modern",
+          "modern_chinese_field": "zh_modern"
         },
         "validation": {
           "require_no_source_text_loss": true,
+          "require_modern_zh_if_requested": true,
           "require_english_if_requested": true,
           "require_modern_ja_if_requested": true,
           "forbid_overwriting_legacy_ja": true,
           "require_ruby_for_kanji_tokens_in_ja_modern": true
         }
       },
-      "generated_at": "2026-06-11T09:51:32.979619+00:00"
+      "generated_at": "2026-06-14T02:44:31.404743+00:00"
     },
     {
       "schema_version": 1,
@@ -548,27 +631,44 @@
       "source_area": "sources/sishu",
       "priority": 75,
       "dependency": "base_chunks_exist",
-      "notes": "Legacy Sishu pass. Keep old output; write only overlay files.",
+      "notes": "Legacy Sishu pass. Keep old output; write only overlay files. Add modern Chinese first, then English and readable modern Japanese.",
       "chunk_id_source": "books_manifest",
       "chunk_count": 925,
       "actions": [
         {
-          "field": "en",
-          "kind": "understandable_english",
+          "field": "zh_modern",
+          "kind": "modern_chinese_bridge",
           "source_priority": [
             "unit.zh_modern",
             "paragraph.corrected_text",
+            "unit.zh_original",
+            "unit.zh",
+            "unit.source_text",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add accurate, readable modern Chinese aligned to the existing classical Chinese unit. Preserve names, terms, and source order; do not overwrite existing zh or ja."
+        },
+        {
+          "field": "en",
+          "kind": "understandable_english",
+          "source_priority": [
+            "overlay.zh_modern",
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh_original",
             "unit.zh",
             "paragraph.source_text"
           ],
-          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
         },
         {
           "field": "ja_modern",
           "kind": "plain_modern_japanese",
           "source_priority": [
+            "overlay.zh_modern",
             "unit.zh_modern",
             "paragraph.corrected_text",
+            "unit.zh_original",
             "unit.zh",
             "paragraph.source_text"
           ],
@@ -584,22 +684,39 @@
         "dependency": "base_chunks_exist",
         "actions": [
           {
-            "field": "en",
-            "kind": "understandable_english",
+            "field": "zh_modern",
+            "kind": "modern_chinese_bridge",
             "source_priority": [
               "unit.zh_modern",
               "paragraph.corrected_text",
+              "unit.zh_original",
+              "unit.zh",
+              "unit.source_text",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add accurate, readable modern Chinese aligned to the existing classical Chinese unit. Preserve names, terms, and source order; do not overwrite existing zh or ja."
+          },
+          {
+            "field": "en",
+            "kind": "understandable_english",
+            "source_priority": [
+              "overlay.zh_modern",
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh_original",
               "unit.zh",
               "paragraph.source_text"
             ],
-            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
           },
           {
             "field": "ja_modern",
             "kind": "plain_modern_japanese",
             "source_priority": [
+              "overlay.zh_modern",
               "unit.zh_modern",
               "paragraph.corrected_text",
+              "unit.zh_original",
               "unit.zh",
               "paragraph.source_text"
             ],
@@ -616,21 +733,24 @@
         "merge_policy": {
           "preserve_existing_fields": true,
           "append_only_fields": [
+            "zh_modern",
             "en",
             "ja_modern"
           ],
           "legacy_japanese_field": "ja",
-          "modern_japanese_field": "ja_modern"
+          "modern_japanese_field": "ja_modern",
+          "modern_chinese_field": "zh_modern"
         },
         "validation": {
           "require_no_source_text_loss": true,
+          "require_modern_zh_if_requested": true,
           "require_english_if_requested": true,
           "require_modern_ja_if_requested": true,
           "forbid_overwriting_legacy_ja": true,
           "require_ruby_for_kanji_tokens_in_ja_modern": true
         }
       },
-      "generated_at": "2026-06-11T09:51:33.017011+00:00"
+      "generated_at": "2026-06-14T02:44:31.458523+00:00"
     },
     {
       "schema_version": 1,
@@ -640,7 +760,7 @@
       "source_area": "sources/shiji",
       "priority": 80,
       "dependency": "base_chunks_exist",
-      "notes": "Prefer existing zh_modern over zh_original; generate English and plain modern Japanese from zh_modern.",
+      "notes": "Shiji chunks already contain zh_original and zh_modern; backfill English from zh_modern without rewriting existing Japanese.",
       "chunk_id_source": "data_interlinear_chunks",
       "chunk_count": 4622,
       "actions": [
@@ -648,23 +768,14 @@
           "field": "en",
           "kind": "understandable_english",
           "source_priority": [
+            "overlay.zh_modern",
             "unit.zh_modern",
             "paragraph.corrected_text",
+            "unit.zh_original",
             "unit.zh",
             "paragraph.source_text"
           ],
-          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
-        },
-        {
-          "field": "ja_modern",
-          "kind": "plain_modern_japanese",
-          "source_priority": [
-            "unit.zh_modern",
-            "paragraph.corrected_text",
-            "unit.zh",
-            "paragraph.source_text"
-          ],
-          "instruction": "Add reader-friendly modern Japanese based on the modern Chinese meaning bridge. Preserve the existing ja field as legacy/source/comment Japanese."
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
         }
       ],
       "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/shiji-aginti/tasks.jsonl",
@@ -679,23 +790,14 @@
             "field": "en",
             "kind": "understandable_english",
             "source_priority": [
+              "overlay.zh_modern",
               "unit.zh_modern",
               "paragraph.corrected_text",
+              "unit.zh_original",
               "unit.zh",
               "paragraph.source_text"
             ],
-            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
-          },
-          {
-            "field": "ja_modern",
-            "kind": "plain_modern_japanese",
-            "source_priority": [
-              "unit.zh_modern",
-              "paragraph.corrected_text",
-              "unit.zh",
-              "paragraph.source_text"
-            ],
-            "instruction": "Add reader-friendly modern Japanese based on the modern Chinese meaning bridge. Preserve the existing ja field as legacy/source/comment Japanese."
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
           }
         ],
         "do_not_modify_templates": [
@@ -708,21 +810,24 @@
         "merge_policy": {
           "preserve_existing_fields": true,
           "append_only_fields": [
+            "zh_modern",
             "en",
             "ja_modern"
           ],
           "legacy_japanese_field": "ja",
-          "modern_japanese_field": "ja_modern"
+          "modern_japanese_field": "ja_modern",
+          "modern_chinese_field": "zh_modern"
         },
         "validation": {
           "require_no_source_text_loss": true,
+          "require_modern_zh_if_requested": false,
           "require_english_if_requested": true,
-          "require_modern_ja_if_requested": true,
+          "require_modern_ja_if_requested": false,
           "forbid_overwriting_legacy_ja": true,
           "require_ruby_for_kanji_tokens_in_ja_modern": true
         }
       },
-      "generated_at": "2026-06-11T09:51:34.236900+00:00"
+      "generated_at": "2026-06-14T02:44:32.753640+00:00"
     },
     {
       "schema_version": 1,
@@ -740,12 +845,14 @@
           "field": "en",
           "kind": "understandable_english",
           "source_priority": [
+            "overlay.zh_modern",
             "unit.zh_modern",
             "paragraph.corrected_text",
+            "unit.zh_original",
             "unit.zh",
             "paragraph.source_text"
           ],
-          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
         }
       ],
       "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/the-old-capital/tasks.jsonl",
@@ -760,12 +867,14 @@
             "field": "en",
             "kind": "understandable_english",
             "source_priority": [
+              "overlay.zh_modern",
               "unit.zh_modern",
               "paragraph.corrected_text",
+              "unit.zh_original",
               "unit.zh",
               "paragraph.source_text"
             ],
-            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
           }
         ],
         "do_not_modify_templates": [
@@ -778,21 +887,24 @@
         "merge_policy": {
           "preserve_existing_fields": true,
           "append_only_fields": [
+            "zh_modern",
             "en",
             "ja_modern"
           ],
           "legacy_japanese_field": "ja",
-          "modern_japanese_field": "ja_modern"
+          "modern_japanese_field": "ja_modern",
+          "modern_chinese_field": "zh_modern"
         },
         "validation": {
           "require_no_source_text_loss": true,
+          "require_modern_zh_if_requested": false,
           "require_english_if_requested": true,
           "require_modern_ja_if_requested": false,
           "forbid_overwriting_legacy_ja": true,
           "require_ruby_for_kanji_tokens_in_ja_modern": true
         }
       },
-      "generated_at": "2026-06-11T09:51:34.550576+00:00"
+      "generated_at": "2026-06-14T02:44:33.034188+00:00"
     },
     {
       "schema_version": 1,
@@ -810,12 +922,14 @@
           "field": "en",
           "kind": "understandable_english",
           "source_priority": [
+            "overlay.zh_modern",
             "unit.zh_modern",
             "paragraph.corrected_text",
+            "unit.zh_original",
             "unit.zh",
             "paragraph.source_text"
           ],
-          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
         }
       ],
       "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/izu-no-odori/tasks.jsonl",
@@ -830,12 +944,14 @@
             "field": "en",
             "kind": "understandable_english",
             "source_priority": [
+              "overlay.zh_modern",
               "unit.zh_modern",
               "paragraph.corrected_text",
+              "unit.zh_original",
               "unit.zh",
               "paragraph.source_text"
             ],
-            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
           }
         ],
         "do_not_modify_templates": [
@@ -848,21 +964,24 @@
         "merge_policy": {
           "preserve_existing_fields": true,
           "append_only_fields": [
+            "zh_modern",
             "en",
             "ja_modern"
           ],
           "legacy_japanese_field": "ja",
-          "modern_japanese_field": "ja_modern"
+          "modern_japanese_field": "ja_modern",
+          "modern_chinese_field": "zh_modern"
         },
         "validation": {
           "require_no_source_text_loss": true,
+          "require_modern_zh_if_requested": false,
           "require_english_if_requested": true,
           "require_modern_ja_if_requested": false,
           "forbid_overwriting_legacy_ja": true,
           "require_ruby_for_kanji_tokens_in_ja_modern": true
         }
       },
-      "generated_at": "2026-06-11T09:51:34.819676+00:00"
+      "generated_at": "2026-06-14T02:44:33.241618+00:00"
     },
     {
       "schema_version": 1,
@@ -880,12 +999,14 @@
           "field": "en",
           "kind": "understandable_english",
           "source_priority": [
+            "overlay.zh_modern",
             "unit.zh_modern",
             "paragraph.corrected_text",
+            "unit.zh_original",
             "unit.zh",
             "paragraph.source_text"
           ],
-          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
         }
       ],
       "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/genji-modern/tasks.jsonl",
@@ -900,12 +1021,14 @@
             "field": "en",
             "kind": "understandable_english",
             "source_priority": [
+              "overlay.zh_modern",
               "unit.zh_modern",
               "paragraph.corrected_text",
+              "unit.zh_original",
               "unit.zh",
               "paragraph.source_text"
             ],
-            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
           }
         ],
         "do_not_modify_templates": [
@@ -918,21 +1041,24 @@
         "merge_policy": {
           "preserve_existing_fields": true,
           "append_only_fields": [
+            "zh_modern",
             "en",
             "ja_modern"
           ],
           "legacy_japanese_field": "ja",
-          "modern_japanese_field": "ja_modern"
+          "modern_japanese_field": "ja_modern",
+          "modern_chinese_field": "zh_modern"
         },
         "validation": {
           "require_no_source_text_loss": true,
+          "require_modern_zh_if_requested": false,
           "require_english_if_requested": true,
           "require_modern_ja_if_requested": false,
           "forbid_overwriting_legacy_ja": true,
           "require_ruby_for_kanji_tokens_in_ja_modern": true
         }
       },
-      "generated_at": "2026-06-11T09:51:35.419701+00:00"
+      "generated_at": "2026-06-14T02:44:33.705590+00:00"
     },
     {
       "schema_version": 1,
@@ -950,19 +1076,23 @@
           "field": "en",
           "kind": "understandable_english",
           "source_priority": [
+            "overlay.zh_modern",
             "unit.zh_modern",
             "paragraph.corrected_text",
+            "unit.zh_original",
             "unit.zh",
             "paragraph.source_text"
           ],
-          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
         },
         {
           "field": "ja_modern",
           "kind": "plain_modern_japanese",
           "source_priority": [
+            "overlay.zh_modern",
             "unit.zh_modern",
             "paragraph.corrected_text",
+            "unit.zh_original",
             "unit.zh",
             "paragraph.source_text"
           ],
@@ -981,19 +1111,23 @@
             "field": "en",
             "kind": "understandable_english",
             "source_priority": [
+              "overlay.zh_modern",
               "unit.zh_modern",
               "paragraph.corrected_text",
+              "unit.zh_original",
               "unit.zh",
               "paragraph.source_text"
             ],
-            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
           },
           {
             "field": "ja_modern",
             "kind": "plain_modern_japanese",
             "source_priority": [
+              "overlay.zh_modern",
               "unit.zh_modern",
               "paragraph.corrected_text",
+              "unit.zh_original",
               "unit.zh",
               "paragraph.source_text"
             ],
@@ -1010,21 +1144,24 @@
         "merge_policy": {
           "preserve_existing_fields": true,
           "append_only_fields": [
+            "zh_modern",
             "en",
             "ja_modern"
           ],
           "legacy_japanese_field": "ja",
-          "modern_japanese_field": "ja_modern"
+          "modern_japanese_field": "ja_modern",
+          "modern_chinese_field": "zh_modern"
         },
         "validation": {
           "require_no_source_text_loss": true,
+          "require_modern_zh_if_requested": false,
           "require_english_if_requested": true,
           "require_modern_ja_if_requested": true,
           "forbid_overwriting_legacy_ja": true,
           "require_ruby_for_kanji_tokens_in_ja_modern": true
         }
       },
-      "generated_at": "2026-06-11T09:51:35.539068+00:00"
+      "generated_at": "2026-06-14T02:44:33.781750+00:00"
     },
     {
       "schema_version": 1,
@@ -1042,12 +1179,14 @@
           "field": "en",
           "kind": "understandable_english",
           "source_priority": [
+            "overlay.zh_modern",
             "unit.zh_modern",
             "paragraph.corrected_text",
+            "unit.zh_original",
             "unit.zh",
             "paragraph.source_text"
           ],
-          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
         }
       ],
       "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/woman-in-the-dunes/tasks.jsonl",
@@ -1062,12 +1201,14 @@
             "field": "en",
             "kind": "understandable_english",
             "source_priority": [
+              "overlay.zh_modern",
               "unit.zh_modern",
               "paragraph.corrected_text",
+              "unit.zh_original",
               "unit.zh",
               "paragraph.source_text"
             ],
-            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
           }
         ],
         "do_not_modify_templates": [
@@ -1080,21 +1221,24 @@
         "merge_policy": {
           "preserve_existing_fields": true,
           "append_only_fields": [
+            "zh_modern",
             "en",
             "ja_modern"
           ],
           "legacy_japanese_field": "ja",
-          "modern_japanese_field": "ja_modern"
+          "modern_japanese_field": "ja_modern",
+          "modern_chinese_field": "zh_modern"
         },
         "validation": {
           "require_no_source_text_loss": true,
+          "require_modern_zh_if_requested": false,
           "require_english_if_requested": true,
           "require_modern_ja_if_requested": false,
           "forbid_overwriting_legacy_ja": true,
           "require_ruby_for_kanji_tokens_in_ja_modern": true
         }
       },
-      "generated_at": "2026-06-11T09:51:35.641276+00:00"
+      "generated_at": "2026-06-14T02:44:33.884870+00:00"
     },
     {
       "schema_version": 1,
@@ -1112,12 +1256,14 @@
           "field": "en",
           "kind": "understandable_english",
           "source_priority": [
+            "overlay.zh_modern",
             "unit.zh_modern",
             "paragraph.corrected_text",
+            "unit.zh_original",
             "unit.zh",
             "paragraph.source_text"
           ],
-          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
         }
       ],
       "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/ginga-tetsudo/tasks.jsonl",
@@ -1132,12 +1278,14 @@
             "field": "en",
             "kind": "understandable_english",
             "source_priority": [
+              "overlay.zh_modern",
               "unit.zh_modern",
               "paragraph.corrected_text",
+              "unit.zh_original",
               "unit.zh",
               "paragraph.source_text"
             ],
-            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
           }
         ],
         "do_not_modify_templates": [
@@ -1150,21 +1298,24 @@
         "merge_policy": {
           "preserve_existing_fields": true,
           "append_only_fields": [
+            "zh_modern",
             "en",
             "ja_modern"
           ],
           "legacy_japanese_field": "ja",
-          "modern_japanese_field": "ja_modern"
+          "modern_japanese_field": "ja_modern",
+          "modern_chinese_field": "zh_modern"
         },
         "validation": {
           "require_no_source_text_loss": true,
+          "require_modern_zh_if_requested": false,
           "require_english_if_requested": true,
           "require_modern_ja_if_requested": false,
           "forbid_overwriting_legacy_ja": true,
           "require_ruby_for_kanji_tokens_in_ja_modern": true
         }
       },
-      "generated_at": "2026-06-11T09:51:35.661567+00:00"
+      "generated_at": "2026-06-14T02:44:33.940380+00:00"
     },
     {
       "schema_version": 1,
@@ -1182,12 +1333,14 @@
           "field": "en",
           "kind": "understandable_english",
           "source_priority": [
+            "overlay.zh_modern",
             "unit.zh_modern",
             "paragraph.corrected_text",
+            "unit.zh_original",
             "unit.zh",
             "paragraph.source_text"
           ],
-          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
         }
       ],
       "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/chumon-no-ooi-ryoriten/tasks.jsonl",
@@ -1202,12 +1355,14 @@
             "field": "en",
             "kind": "understandable_english",
             "source_priority": [
+              "overlay.zh_modern",
               "unit.zh_modern",
               "paragraph.corrected_text",
+              "unit.zh_original",
               "unit.zh",
               "paragraph.source_text"
             ],
-            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
           }
         ],
         "do_not_modify_templates": [
@@ -1220,21 +1375,24 @@
         "merge_policy": {
           "preserve_existing_fields": true,
           "append_only_fields": [
+            "zh_modern",
             "en",
             "ja_modern"
           ],
           "legacy_japanese_field": "ja",
-          "modern_japanese_field": "ja_modern"
+          "modern_japanese_field": "ja_modern",
+          "modern_chinese_field": "zh_modern"
         },
         "validation": {
           "require_no_source_text_loss": true,
+          "require_modern_zh_if_requested": false,
           "require_english_if_requested": true,
           "require_modern_ja_if_requested": false,
           "forbid_overwriting_legacy_ja": true,
           "require_ruby_for_kanji_tokens_in_ja_modern": true
         }
       },
-      "generated_at": "2026-06-11T09:51:35.736785+00:00"
+      "generated_at": "2026-06-14T02:44:34.040856+00:00"
     }
   ],
   "worker_contract": {

@@ -13900,5 +13900,36 @@
       ],
       "source_zh": "回到家，由于从一座漂亮房子突然挪到肮脏的地方来，我产生了一种仿佛从一座阳光温煦的山顶突然进入一个黑咕隆咚的洞穴里来的感觉。在探险中，由于心思专注在别的事物上，那屋子的装饰、纸隔断、纸拉门到底是个什么样子，我根本没有留意。可是，当我一旦感到我这住处十分低级的时候，不由得留恋起那所宅子的平庸来了。看来，似乎实业家还是比教员了不起。我自己也觉得这种想法奇怪，照例请教了一下我的尾巴，可尾巴尖儿昭示说：“你想得对，你想得对！”当我回到客厅里，令人吃惊的是，迷亭先生还没有走。许多烟蒂竖在火盆里，活像个蜂窝。迷亭盘膝而坐，正在讲什么。不知何时寒月君也来了。我家主人枕着胳膊躺在那里，专心致志地瞧着顶棚上的雨渍。一如往常，还是太平逸民的聚会。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

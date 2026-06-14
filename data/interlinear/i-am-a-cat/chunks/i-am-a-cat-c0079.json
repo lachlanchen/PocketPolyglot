@@ -18209,5 +18209,36 @@
       ],
       "source_zh": "“正因为是我自己的脑袋，秃不秃都无所谓嘛。”主人的妻子说，她毕竟还是有些担心，便把右手举起，来来回回地摸了一阵秃的地方。“哟，又大多啦。我还以为不会大这么多呢。”从她的语气里可以看出，她这才觉得按年龄说这秃的地方未免太大了。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

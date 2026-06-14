@@ -8110,5 +8110,36 @@
       ],
       "source_zh": "我想，像主人这样在药池里浸泡了那么久仍然毫不奏效，就只有浇上醋、用火烤的办法了。否则像这样的“书生”就是来上几百个，用上几十年的工夫，也不会治愈主人的顽固症的。这么多在浴池里浸泡着的人，这么多在水龙头前冲澡的人，都是脱掉了文明人所不可缺少的衣服的怪物集团，当然不能用常规来要求他们，他们可以愿意干什么就干什么。他们的胃跑到肺的地方去了，和唐内成了清和源氏，对阿民百般地不信任，这些都未尝不可。但是，他一旦从冲澡的地方上到穿衣的厅里来，就不再是怪物。因为他们回到了一般人类所生息的人世，就要穿上文明所必备的衣服。因而理所当然地必须采取人所采取的行动。现在主人站立的地方是在门槛上，是在介于冲澡地方与穿衣厅的门槛上，是本人即将回到欢言笑语、融通圆滑的世界的关键时刻。在这样的关键时刻，他还这样顽固到底，可见这种顽固对他本人说来已经是一种不可救药的病症。既然是病，那就不是轻易可以根除的，根据在下的卑见，想要根治这种病方法只有一个，那就是去求校长把他革职，一旦革职，像主人那样不会通融的人，肯定要流落街头。流落街头的最后结果就是浮浪而死。换句话说，革职对主人说来意味着死亡。主人虽然喜欢闹小病小灾，却是极不愿意死的。他只希望在不至于死的范围内，闹点小病来享受享受。所以如果威吓他说：“你闹这种病会要你命的，”胆小怯懦的主人肯定要吓得浑身发抖。通过这种浑身发抖，我想他的病就会根除，如果还是不能根除，那也就无可救药了。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

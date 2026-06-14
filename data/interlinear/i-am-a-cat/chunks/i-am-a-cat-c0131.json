@@ -12524,5 +12524,36 @@
       ],
       "source_zh": "然而，你也不妨试试，如果头朝下，采取源义经跳悬崖的办法，也来个“溜松”。那么虽有爪子也一点派不上用场，只会哧溜哧溜往下滑，根本无法支持自身的重量。于是尽管本意是想“爬下来”结果一变而为“摔下来”。可见，跳“鹎越”悬崖的办法实在太难了。在猫儿当中能有这种伎俩的，恐怕只有我一个啦。正因为如此，我才将这个运动称作“溜松”的啊。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

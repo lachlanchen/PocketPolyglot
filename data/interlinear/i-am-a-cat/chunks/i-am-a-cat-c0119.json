@@ -13842,5 +13842,36 @@
       ],
       "source_zh": "迷亭说：“不，这些材料，对于二十世纪的今天和明治初年前后女子品性的比较，是大有参考价值的，这可不能轻易放弃不讲呀。就那样，我和我家老爷子走到伊势源前，那个人贩子看见我家老爷子，便说道：‘老爷，您买不买女孩？这可是卖剩下来的，我少算您点，您买下吧。’说着，他放下扁担擦汗。一看，前后两只筐，各装一个，都是两岁左右的女孩。我家老爷子对那个人说：‘如果价钱便宜，也可以考虑考虑。’并问他：‘怎么，就剩这两个啦？’那人回答说：‘不巧，今天都卖光了，只剩下这两个，您随便挑一个吧。’说着用两手捧起一个女孩，就像卖倭瓜似的，送到我家老爷子的鼻子尖前。我家老爷子砰砰地敲了几下女孩子的头，口中说道：‘啊哟，这声音听起来还可以。’随后两人就开始讨价还价，最后总算讲妥了价，我家老爷子问他道：‘买是可以买，不过品质不会有错吧？’那人说：‘唔唔，前头这筐里的，俺一直用眼睛盯着，不会有错，不过担在后边的这个嘛，因为俺没长后眼，说不定会出现什么漏子，如果您要这个，品质我不敢保证，不过价钱还可以少算一点。’对于这个问答我现在还记忆犹新。在我当时幼小的心灵里，我可就已经认为女人果然是一时一刻也放松不得，大意不得的。但是在明治三十八年的今天，再也不会有卖女孩儿这种野蛮行为啦，似乎再也听不到因为眼睛瞧不见，女孩儿挑在后边筐里就不保险的论调了。所以，按我的想法，应该说这毕竟是托了泰西文明的福，女人的品行也大有进步啦。寒月君，你看是这样吧。”"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

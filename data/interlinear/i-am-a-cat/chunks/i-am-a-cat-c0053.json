@@ -13418,5 +13418,36 @@
       ],
       "source_zh": "我想：“真稀奇，主人家居然来了女客。”留心一看，那个发出尖叫声的女人，在铺席上拖拉着她双重绉绸盛装走了进来。年龄大概是四十刚过一点。她那变秃的前额发根上梳起来的头发，活像一道堤坝，朝天高高耸起，至少达到脸长的二分之一。她那双眼睛，就像挖开的陡坡那样，眼角斜吊，形成两条直线，左右对立着。称它是两条直线，是形容那对比鲸鱼眼还要细长的双眼。唯独鼻子却大得出奇，好像是把别人的鼻子偷来按在她脸上似的。她的鼻子就像是招魂社里的石灯笼移到十几米见方的一个小院子里来，硕大无比，可总让人觉得不协调。她的鼻子又是钩鼻，一度狠命地往高里抬，然后又好像抬得过分，半途里忽然谦虚起来，到了鼻尖那里失去了原来的势头，往下耷拉，窥伺着下面的嘴唇。由于是这样一个颇具特色的鼻子，所以这个女人说话时，会使你觉得与其说是她的嘴在说话，还不如说是鼻子在说话。为了向这个伟大的鼻子表示敬意，我准备以后称她为“鼻子”。鼻子在进行了初次见面的一番寒暄之后，冷冷地环视了一下主人的客厅，说道：“啧，府上真漂亮！”主人心里想：“故意胡说！”随后就叭嗒叭嗒不住地吸烟。迷亭仰望着顶棚说道：“苦沙弥君，那是漏雨的水渍呢还是木板的纹理？你看看，那花纹多么有趣！”迷亭分明想暗暗地勾引出主人的话来。主人回答说：“那还用说？漏雨的水渍呗！”迷亭不动声色地说：“很美啊。”鼻子内心里为这两个人不懂社交礼节感到生气。于是三个人鼎足而坐，好一阵子闷声不响。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

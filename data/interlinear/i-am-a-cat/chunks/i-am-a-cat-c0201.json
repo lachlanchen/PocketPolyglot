@@ -18226,5 +18226,36 @@
       ],
       "source_zh": "主人在长火盆旁边占好位置，面对饭桌一坐，饭桌的其他三面已经由刚才用抹布洗过脸的“小不点儿”、到御茶酱学校去的俊子和把手指伸进香粉瓶里的澄子一起占据着，大家一起吃早饭。主人先是将三位女公子公平地看了一遍。俊子的脸活像南蛮铁刀的护手，有着长椭圆形的轮廓。二女儿澄子，因为是妹妹，虽然多少有些像姐姐，但满可以联想用琉球漆漆成的大红盘子。至于“小不点儿”，则更是独放异彩，是个长脸。不过，如果是上下长形，那么世上是不乏其例的，而这个小家伙是朝着横方向拉长的。虽说世上的流行瞬息万变，但总不至于流行这种朝横向拉长的脸型吧。主人对自己的这几个孩子也细细地想过：“她们好歹也得逐渐长大。”岂止是逐渐地长，其生长之速，就像禅寺里的幼笋转眼就变成嫩竹一样，愈来愈大。主人每次都有“又长大了”的感慨，同时又总觉得好像有人从自己身后紧追上来的感觉故而深为不安。别看主人是个不着边际的人，但总还知道这三位小姐毕竟是女的。既然如此，那么迟早总得把她们嫁出去。这点常识他还是有的。正因为他懂得这点，所以他也清楚地知道自己缺乏把他们嫁出去的本事。这样，虽然是自己的孩子，他也感到是个很大的负担。既然都感到负担了，那么当初不生这些孩子该多好啊。然而这就是人嘛，如果给人下个定义则很简单，只要说专门干出一些自己不需要的事儿来给自己找烦恼的就是人，这就足够啦。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

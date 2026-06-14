@@ -17147,5 +17147,36 @@
       ],
       "source_zh": "寒月君蛮有兴趣地用筷子夹起一片下酒的“鱼糕”，用门牙咬下半块来。我真担心他又要崩断牙齿了，不过这回却没事儿。然后他淡淡地回答道：“您用不着操心，两个女的都是名门闺秀，您不认识。”“哦——”主人把“哦”的调门拉得很长，把下边“原来是这样”省去，同时在思考着什么。寒月君大概认为到了该收场的时候了，便提议说：“今天天气可真好啊，您要有空闲，我陪您去散散步吧。旅顺打了下来，街上可热闹啦。”主人的那副表情，仿佛在说：“攻下旅顺对我无关紧要，要紧的是了解一下那两个女性的身份。”他沉思了一会儿才下定决心，说道：“那就走吧！”说着站起身来，穿的还是那件棉布礼装外褂和已穿了二十年的“结城绸”棉袍。这棉袍听说是他哥哥死时留下给他做纪念的。虽说结城绸特别结实，可这样长期穿用，如何受得了，许多地方已磨得很薄，透过阳光可以看得见衣里补缀的针脚。主人穿衣服无所谓腊月与正月，也不分什么平时装与出门装。一说出门，摆起双手，轻松自在地抬腿就走。我不知道这到底是因为没有另外的衣服可换呢，还是有衣服懒得换，但至少我觉得不是由于失恋造成的。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

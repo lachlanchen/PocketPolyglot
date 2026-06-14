@@ -11422,5 +11422,36 @@
       ],
       "source_zh": "恰好在这时，格子门上的小铃铛叮叮当当地响了。大概又是客人来访。既是来客，应由女仆到门口去接待，除了鱼铺一个叫梅公的伙计送鱼来之外，我是决不迎出去的，所以我照旧不动声色地坐在主人的膝上。这时，主人脸上显出不安的表情向正门那边瞧，好像有高利贷者登门索债似的。主人似乎讨厌接待来贺新年的客人，也讨厌陪着他们喝酒。一个人褊狭到这种地步，也真够可以的了。既然那么讨厌贺客，早一点躲出门去不就解决了吗？可是他又没有这个勇气，这就更暴露出他那藏在硬壳里的“牡蛎”般的根性。很快，女仆回来报告说：“寒月先生来了。”寒月这个人，也是主人的旧门生，如今从大学毕业，听说混得比主人似乎还有出息。这个人不知是什么缘故，经常到主人家来玩。来了之后，总喜欢说些女人喜欢他这类半真半假的话，或者讲些社会上的趣闻琐事，要不就胡谄一些耸人听闻、风流浓艳的事儿，说够了才回去。为什么他特地找主人这种行将变成枯木死灰般的人来讲这类话呢，实在令人费解。而“牡蛎”般的主人，听了他的话以后，还不时地说上几句去凑趣，这就更滑稽啦。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

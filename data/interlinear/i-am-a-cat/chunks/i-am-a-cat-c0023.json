@@ -14546,5 +14546,36 @@
       ],
       "source_zh": "我回到家里，客厅的气氛与平时不同，充满了春意，就连主人的笑声也变得欢快起来。我心想真奇怪呀，便从敞开拉门的廊子进去，走近主人身旁一看，原来来了个面生的客人。头发分得十分整齐，穿着带家徽的棉布外褂和小仓出产的裙裤，是个很正经的“书生”打扮的人。我看了一下主人眼前的小火盆旁边，在带有“春庆漆绘”的香烟盒一起有一张名片，上面写着“谨此介绍越智东风君——水岛寒月拜上”的字样。这就使我知道了这位客人的姓名，也明白了他是寒月的朋友。由于我是中途进来的，一时摸不清主人和客人的对话内容，看来是在讲有关我上回介绍过的那位美学家迷亭君的事儿。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

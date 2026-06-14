@@ -13230,5 +13230,36 @@
       ],
       "source_zh": "以上，我如实地叙述了主人当天夜里在茕茕孤灯之下进行沉思默想时的心理活动。他的头脑不透明的特点，也充分显示在这个问题上。别看他蓄着德皇威廉二世式的八字胡，但却是个连狂人与平常人都辨别不出的糊涂虫。还不只是如此，他好不容易地给自己提出问题，诉之于自己的理性，结果却未能得出任何结论，就不再去想了。不管什么事他都是个完全缺乏思考力的人。他的结论就像从他鼻孔喷出来的朝日牌香烟的烟雾一样，茫漠缥缈，难以捉摸，这是他所发议论的唯一特色，应该永远记住。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

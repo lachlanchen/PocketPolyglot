@@ -2336,5 +2336,36 @@
       ],
       "source_zh": "“小偷！”主人发出极大的喊声从卧室跑了出来。我一看，他一只手提着煤油灯，一只手拿着手杖，从他那惺忪的双眼中发出与他身份相应的炯炯目光。我老老实实地蹲在我的食盘——鲍鱼壳的旁边。那两只怪物已把身影藏进壁橱里去了。主人茫然失措，明明找不出对象，却带着愠怒的声音在问：“怎么啦，是谁？发出这么大的声响！”这时，月已西斜，射进来银白色的光带已变得狭长了。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

@@ -7001,5 +7001,36 @@
       ],
       "source_zh": "那位师傅在纸窗里边唱边弹起了二弦琴。三毛姑娘得意地说：“多好听的声音呀！”“是很好听，不过，我不太懂，到底唱的是什么？”“你说她唱的？听说就是那个什么呀。师傅可喜欢这个曲子啦。我家师傅今年已经六十二岁了，身体多结实呀。”六十二岁还活着，当然应该说是结实。我只好回答一声：“嘿。”虽然这样回答有点傻乎乎的，但没办法，一时想不出其他更妙的回答。三毛姑娘接着说道：“听说她过去出身很不错，平时她总是这么说。”“她原来到底是干什么的？”“据说她是天璋院的秘书的妹妹的婆母的侄子的女儿。”“你说什么呀？”“就是那个天璋院秘书的妹妹嫁到婆家去的……”“原来是这样啊！不，请等一等，天璋院的妹妹的秘书的……”“哟，不是的，是天璋院的秘书的妹妹……”“好，这回明白啦，是天璋院的……”“对啦！”“秘书的……”“就是呀！”“嫁到了……”“不是，是妹妹嫁到……”“对，对，是我弄错了，是妹妹嫁到婆家去的……”“婆婆的侄儿的女儿！”“噢，是婆婆的侄儿的女儿呀。”“是呀，这回明白了吧。”“不，这太乱了，很难理出个头绪来，简便点说，是天璋院的什么人？”“你也未免太笨啦，我刚才不是说了吗，她是天璋院的秘书的妹妹的婆婆的侄儿的女儿嘛。”“这点我倒是早就清楚了，不过……”“你清楚不就行了吗？还问什么？”“是啊。”我无可奈何只好认输。我们有时候不得不说些无理也要说出三分理的谎话来。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

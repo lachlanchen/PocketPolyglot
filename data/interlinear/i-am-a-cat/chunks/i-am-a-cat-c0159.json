@@ -16833,5 +16833,36 @@
       ],
       "source_zh": "主人俯伏趴在通往廊子纸门的客厅里想着什么事儿。大概是在考虑怎样对付敌人的防御策略吧。落云馆好像正在上课，运动场上格外安静，只有在校舍内的一间教室里教师讲授伦理课的声音一清二楚，真是吐音朗朗，讲得十分动听。我仔细一听，讲课的人正是昨天代表敌方亲自出马担当谈判的那位“将军”。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

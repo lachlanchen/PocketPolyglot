@@ -430,6 +430,10 @@
                 "g": "predicate"
               }
             ]
+          ],
+          "ja_line_roles": [
+            "translation",
+            "continuation"
           ]
         },
         {
@@ -761,6 +765,10 @@
                 "g": "predicate"
               }
             ]
+          ],
+          "ja_line_roles": [
+            "translation",
+            "continuation"
           ]
         },
         {
@@ -977,6 +985,10 @@
                 "g": "predicate"
               }
             ]
+          ],
+          "ja_line_roles": [
+            "translation",
+            "continuation"
           ]
         },
         {
@@ -1183,6 +1195,10 @@
                 "g": "predicate"
               }
             ]
+          ],
+          "ja_line_roles": [
+            "translation",
+            "continuation"
           ]
         },
         {
@@ -1219,6 +1235,10 @@
                 "g": "function"
               }
             ]
+          ],
+          "ja_line_roles": [
+            "translation",
+            "continuation"
           ]
         },
         {
@@ -1325,6 +1345,10 @@
                 "g": "function"
               }
             ]
+          ],
+          "ja_line_roles": [
+            "translation",
+            "continuation"
           ]
         },
         {
@@ -1481,6 +1505,10 @@
                 "g": "predicate"
               }
             ]
+          ],
+          "ja_line_roles": [
+            "translation",
+            "continuation"
           ]
         },
         {
@@ -1672,6 +1700,10 @@
                 "g": "predicate"
               }
             ]
+          ],
+          "ja_line_roles": [
+            "translation",
+            "continuation"
           ]
         },
         {
@@ -1798,6 +1830,10 @@
                 "g": "predicate"
               }
             ]
+          ],
+          "ja_line_roles": [
+            "translation",
+            "continuation"
           ]
         },
         {
@@ -1964,6 +2000,10 @@
                 "g": "predicate"
               }
             ]
+          ],
+          "ja_line_roles": [
+            "translation",
+            "continuation"
           ]
         },
         {
@@ -2230,6 +2270,10 @@
                 "g": "predicate"
               }
             ]
+          ],
+          "ja_line_roles": [
+            "translation",
+            "continuation"
           ]
         },
         {
@@ -2626,6 +2670,10 @@
                 "g": "predicate"
               }
             ]
+          ],
+          "ja_line_roles": [
+            "translation",
+            "continuation"
           ]
         },
         {
@@ -2742,6 +2790,10 @@
                 "g": "predicate"
               }
             ]
+          ],
+          "ja_line_roles": [
+            "translation",
+            "continuation"
           ]
         },
         {
@@ -3023,6 +3075,10 @@
                 "g": "predicate"
               }
             ]
+          ],
+          "ja_line_roles": [
+            "translation",
+            "continuation"
           ]
         },
         {
@@ -3134,6 +3190,10 @@
                 "g": "predicate"
               }
             ]
+          ],
+          "ja_line_roles": [
+            "translation",
+            "continuation"
           ]
         },
         {
@@ -3265,6 +3325,10 @@
                 "g": "function"
               }
             ]
+          ],
+          "ja_line_roles": [
+            "translation",
+            "continuation"
           ]
         },
         {
@@ -3356,6 +3420,10 @@
                 "g": "predicate"
               }
             ]
+          ],
+          "ja_line_roles": [
+            "translation",
+            "continuation"
           ]
         },
         {
@@ -3442,6 +3510,10 @@
                 "g": "predicate"
               }
             ]
+          ],
+          "ja_line_roles": [
+            "translation",
+            "continuation"
           ]
         },
         {
@@ -3578,6 +3650,10 @@
                 "g": "predicate"
               }
             ]
+          ],
+          "ja_line_roles": [
+            "translation",
+            "continuation"
           ]
         },
         {
@@ -3754,6 +3830,10 @@
                 "g": "predicate"
               }
             ]
+          ],
+          "ja_line_roles": [
+            "translation",
+            "continuation"
           ]
         },
         {
@@ -3930,6 +4010,10 @@
                 "g": "predicate"
               }
             ]
+          ],
+          "ja_line_roles": [
+            "translation",
+            "continuation"
           ]
         },
         {
@@ -4101,6 +4185,10 @@
                 "g": "predicate"
               }
             ]
+          ],
+          "ja_line_roles": [
+            "translation",
+            "continuation"
           ]
         },
         {
@@ -4177,9 +4265,37 @@
                 "g": "predicate"
               }
             ]
+          ],
+          "ja_line_roles": [
+            "translation",
+            "continuation"
           ]
         }
       ]
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_bilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "source",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

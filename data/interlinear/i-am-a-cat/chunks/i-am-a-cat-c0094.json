@@ -10379,5 +10379,36 @@
       ],
       "source_zh": "其实，我已经忘记了为什么要发出如此喋喋不休的议论。一说起话来就离题万里，这也是人常犯的毛病嘛，至于说到我们猫儿就更不足为奇了，所以务请读者海涵。总之，当我看了一眼梁上君子打开寝室的隔扇，冷咕丁出现在门槛上时，我很自然地在脑中涌现出以上的感想。您问我“为什么会涌出这种感想？”既然问我为什么，那我现在就应该重新考虑一下。这么说吧，它的理由是这样的："
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

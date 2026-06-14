@@ -17327,5 +17327,36 @@
       ],
       "source_zh": "我心想，不知今天的情况如何，便照例把下颏贴到假山的草坪上向前方一望，那十五叠客厅的纸拉门，在暮春三月的明媚春光里，全都开着。客厅里边，金田夫妇正和一位来客谈话哪。不巧，那鼻子夫人的鼻子，正冲着这边，目光从正面越过池水，盯着我的脑门。被鼻子盯上，这是我有生以来破天荒第一遭。金田君是侧着身躯面向客人，所以我只能看见他那平坦的半边脸，另半边脸无法看见。但另一方面，他那鼻子到底在哪里，却无法看清。看到的只是他那黑白交杂、乱蓬蓬的胡子。于是我毫不费力就得出结论：在那胡须上边，肯定有两个窟窿。这引起我联翩的浮想：“若是春风吹过这样扁平的脸，肯定会十分轻松，不必费力气的。”来访的客人，在主客三人当中最具有一张平平常常的面孔，但也正因为如此，没有什么值得加以介绍的特色。说它平常，听起来似乎也蛮不错，但平常到极点，到了“登平凡之堂，入庸俗之室”的地步，毋宁使人为之悯然。我心想：“长着这种无味相貌、生在明治圣代的这位老兄，究竟是何许人呢？”如果不按老规矩走在“缘下”去恭聆他们的谈话，自然是无法了解的。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

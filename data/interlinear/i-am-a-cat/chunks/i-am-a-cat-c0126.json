@@ -18250,5 +18250,36 @@
       ],
       "source_zh": "不管你在海上经过多少个来回，也不会有人看见过一条鱼会是停止呼吸——不，说“停止呼吸”不妥当，因为是鱼嘛，应该说是在潮水中咽气——漂上来的。在那波涛汹涌、漫无际涯的大海中，就是坐上蒸汽船不分昼夜地去寻找，也不会发现一条鱼会漂上来。由此推论下去，可以立即下断语说鱼是极其壮实的。那么要问鱼为什么那样壮实？这也是人所不了解的，其实道理很简单，立刻能弄明白的。那就是因为鱼始终饮用海水，进行海水浴的缘故。海水浴对鱼的功效是如此的显著。既然对鱼儿有益处，那么对人也自然应该是有益处。一七五〇年里查德·拉塞尔博士刊登了一则夸大的广告，谈只要跳进布赖顿海水浴场，百病可以马上全部治愈，你当然可以嘲笑他的广告刊登得太晚。我们虽然是些猫儿，但只要时机成熟，我们也可以去镰仓海滨。现在还不行，万事都有个时机问题。正如明治维新前的日本人未能体验到海水的功效就死掉一样，今天的猫儿还未到可以裸体跳进海水的时机。急于干就必然出现差错。譬如今天，在被抛弃到筑地海岸的猫儿还未能平安回到家之前，我可不会不顾一切地去跳海。在进化法则还未能使我们这些猫儿对狂澜怒涛产生适当的抵抗力之前——换言之，在一般用语中还未把“猫死了”说成是“猫漂上来了”之前——海水浴是很难进行的。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

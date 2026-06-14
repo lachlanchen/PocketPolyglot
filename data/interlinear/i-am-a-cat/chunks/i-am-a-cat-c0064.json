@@ -15246,5 +15246,36 @@
       ],
       "source_zh": "我脚底沾上湿泥，给廊子印上许多梅花印，也许只会给阿三带来麻烦，于我并无痛苦。这样，我下了勇往直前的巨大决心，决定不等明天，立即前往。于是我跑到厨房里，准备出发。可是我转念又想：“且慢。”我作为一只猫儿不但达到了进化的顶点，而且在头脑发达方面，也自信绝不比中学三年级学生差。但是可悲呀，唯独我的喉咙始终还是猫的那种构造，不会讲人的语言，即便我能圆满地偷偷进入金田公馆，充分察看里面的形势，却无法把这些告诉给当事的寒月君，也不能告诉给主人和迷亭。如果不能告诉，那就等于埋在土中的钻石，不能在日光下闪光。我好不容易获得的情报，就会变成无用的废物。我想这太傻啦，还是算了吧。我伫立在厨房门口，踟蹰良久。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

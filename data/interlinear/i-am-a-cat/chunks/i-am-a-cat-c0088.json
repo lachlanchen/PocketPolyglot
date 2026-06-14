@@ -17757,5 +17757,36 @@
       ],
       "source_zh": "“不见得如此吧。”铃木君无可奈何地回答了一句。刚才迷亭的坏话已经说得够多啦，如果这时候他再说花道柳，像主人这样什么都不管的人，不定会捅出什么话来呢。所以他觉得最好的办法是含含糊糊地把迷亭的锋芒应付过去，不要使它再生枝节。铃木君是个聪明人。他很懂得在当今的时代不必要的争论能避开就尽量避开，没有用处的争吵是封建时代的遗物。人生的目的不在于口舌之争，而在于行动。只要事情能按照自己的意图一步步地进展下去，那么人生的目的就达到了。如果不需要辛苦、操劳和争吵而事情又能如愿，人生的目的就可以如愿以偿地达到了。铃木君毕业以后就是依靠这种信念取得成功，依靠这种信念挂上了金表，用这种信念接受了金田夫妇的委托，用这种信念圆满地说服了苦沙弥君，使得这一事件十之八九就要大功告成之际，忽然闯进来迷亭这个不可以常规约束的、令人怀疑是否具有超乎一般人心理作用的狂放者，他使铃木对这种场面感到手足失措。发明这种信条的是明治的绅士，实行这种信条的是铃木藤十郎君，而现在对这种信条感到难办的也是铃木藤十郎君。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

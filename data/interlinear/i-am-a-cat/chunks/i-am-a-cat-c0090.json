@@ -16974,5 +16974,36 @@
       ],
       "source_zh": "我想，今晚主人也会拿来什么书吧？一瞧，一册薄薄的小红书在几乎要堵住主人嘴上胡子的地方半开着。从主人左手大拇指还夹在书中来看，真是十分难得，他好像已读了五六行。和那本红书并排放着的是那块镀镍的怀表，发着与和暖的春夜不相称的寒色。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

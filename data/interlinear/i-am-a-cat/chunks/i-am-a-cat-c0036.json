@@ -17155,5 +17155,36 @@
       ],
       "source_zh": "“跳下去以后，我就晕晕乎乎，一段时间里，自己也不知是怎么回事儿了。过了一会儿，我清醒过来了。冷，倒是有点冷，可身上哪里也没沾湿，也没有呛水的感觉。心想：‘没有错呀，我是跳了下去的，太怪啦。’等我意识到肯定有问题，再往四周一看，好家伙！我自以为是跳进水里，其实我弄错了方向，跳到桥当中去啦。当时觉得遗憾极了。只是由于我弄错了前后的方向，结果没能去那个发出声音的地方。”寒月嘻嘻地笑着，一边照例把装饰在他胸前的丝绦当做累赘物，不断地摆弄着。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

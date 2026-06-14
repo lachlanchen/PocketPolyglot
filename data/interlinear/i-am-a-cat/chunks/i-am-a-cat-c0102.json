@@ -18334,5 +18334,36 @@
       ],
       "source_zh": "硬要那些除了形体活动之外再也看不见其他活动的人去看“己灵”的光辉，这就如同强要和尚去梳头，强要金枪鱼去讲演，强要电车脱轨，强要主人辞职，强要三平君不去考虑金钱的事一样。这些毕竟都是做不到的。然而，我们猫儿也是社会动物，既然是社会动物，不管我们如何抬高位置，总要和社会有某种程度的调和。主人啦，他的妻子啦，以及厨娘和三平君这样的人，虽然不肯给我适当的评价，但这是毫无办法的事，我只能表示遗憾而已。不过，如果由于他们愚昧的结果，真的不分青红皂白，剥我的皮卖给造三弦琴的店里，或者把我的肉剁碎供给多多良君美餐一顿，那可不得了。既然我享有以头脑从事活动的天命，作为亘古所无的猫儿出现在这个尘寰上，当然我的身体是极其宝贵的。有句谚语说：“千金之子，坐不陲堂”，如果我有意以超然高迈为宗旨，一味去冒吾身之危厄，那不单自身要遭受横祸，而且也大有悖于天意。猛虎一旦进入动物园则与豚犬比邻，鸿雁一旦落入鸡店老板之手则必与鸡鸭同俎。我既然与这些庸夫俗子厮混在一起，也就只好降格以求，化为庸猫罢了。我既然想做一只庸猫，当然得捉老鼠。就这样，我终于决心去捉老鼠了。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

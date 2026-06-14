@@ -15910,5 +15910,36 @@
       ],
       "source_zh": "桌子前边放了一块用洋纱做的薄薄坐垫，有一块地方被香烟烧了三个窟窿。从窟窿中露出的棉花呈现出灰黑色。在这个坐垫上背朝后端坐着的就是我家主人。他腰上缠了两圈灰腰带，带子的两端一直搭拉到脚心上。就在最近，我曾经用爪子去拨弄过这条带子，结果我的头马上挨了一下揍。这可不是随便可以挨近的带子哩。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

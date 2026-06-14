@@ -4912,5 +4912,36 @@
       ],
       "source_zh": "我不吃美味佳肴，所以也没发胖。至少身体还健康，没有成为瘸腿，就这样一天一天地活下去。老鼠我是决不捕捉的。我仍然讨厌厨娘阿三，仍然没有人给我起名字。要说欲望，那是无穷无尽的。我已下决心一辈子呆在这个教师家里，作个无名的猫儿，了结此生吧。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

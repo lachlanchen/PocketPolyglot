@@ -12755,5 +12755,36 @@
       ],
       "source_zh": "迷亭说道：“就这些呀？”主人说：“嗯，写得多么好呀！”迷亭道：“哎呀，我算服啦。真想不到你在这里对我的橡面坊回敬了一手。”主人道：“这可不是什么回敬，文章写得很妙嘛，所以我将它译过来。难道你不认为是如此吗？”主人窥伺着迷亭那藏在金边眼镜后面的眼色。“真想不到，你居然有这种本领。不错，这一次我算是被你捉弄啦。叹服！叹服！”迷亭鼓动他那如簧之舌自我解嘲。主人却丝毫也没弄懂他的意思，他说：“我可没有什么让你叹服的想法。只不过觉得文章极有趣才将它译了出来罢了。”“不，这太有意思啦，你不来这一手，就不是真格的，好厉害呀，我完全认输。”“你用不着认输，我也是最近不再画水彩画，所以才想到搞点文章什么的。”“你这个本领，怎么能与你那远近无别、黑白不分的水彩画相比呢。佩服之至！”主人说：“让你这样一夸奖，我就更有兴头啦。”看来，主人的理解和迷亭所说的始终不对路。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

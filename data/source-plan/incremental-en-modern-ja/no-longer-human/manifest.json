@@ -14,12 +14,14 @@
       "field": "en",
       "kind": "understandable_english",
       "source_priority": [
+        "overlay.zh_modern",
         "unit.zh_modern",
         "paragraph.corrected_text",
+        "unit.zh_original",
         "unit.zh",
         "paragraph.source_text"
       ],
-      "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+      "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
     }
   ],
   "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/no-longer-human/tasks.jsonl",
@@ -34,12 +36,14 @@
         "field": "en",
         "kind": "understandable_english",
         "source_priority": [
+          "overlay.zh_modern",
           "unit.zh_modern",
           "paragraph.corrected_text",
+          "unit.zh_original",
           "unit.zh",
           "paragraph.source_text"
         ],
-        "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+        "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
       }
     ],
     "do_not_modify_templates": [
@@ -52,19 +56,22 @@
     "merge_policy": {
       "preserve_existing_fields": true,
       "append_only_fields": [
+        "zh_modern",
         "en",
         "ja_modern"
       ],
       "legacy_japanese_field": "ja",
-      "modern_japanese_field": "ja_modern"
+      "modern_japanese_field": "ja_modern",
+      "modern_chinese_field": "zh_modern"
     },
     "validation": {
       "require_no_source_text_loss": true,
+      "require_modern_zh_if_requested": false,
       "require_english_if_requested": true,
       "require_modern_ja_if_requested": false,
       "forbid_overwriting_legacy_ja": true,
       "require_ruby_for_kanji_tokens_in_ja_modern": true
     }
   },
-  "generated_at": "2026-06-11T09:51:31.991059+00:00"
+  "generated_at": "2026-06-14T02:44:30.449693+00:00"
 }

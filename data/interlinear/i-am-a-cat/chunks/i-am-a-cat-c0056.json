@@ -7463,5 +7463,36 @@
       ],
       "source_zh": "鼻子在几乎败下阵来的危机关头勉强稳住了阵脚。“有什么事可以证明寒月爱着令爱的呢？”主人挺了挺胸脯，摆出一副不饶人的架势，意思是说：“要有，你说出来呀。”“哼，也差不多吧。”鼻子说。看来主人的攻势并未奏效。这当儿，迷亭一直以相扑裁判者自居，饶有兴趣地欣赏着这一场搏斗。可是由于鼻子方才的这句话，挑起了他的好奇心，他放下银烟袋，往前凑了凑说道：“是寒月给令爱写情书啦？这可太有趣啦，大过年的，又多了一件逸话，这倒是一个很好的谈话资料哩。”迷亭在那里独自高兴。“虽然没有写情书，可比写情书还厉害哪。你们两位不是都知道了吗？”鼻子一味地冷嘲热讽。“喂，你知道吗？”主人像被狐狸迷住似的问起迷亭来。迷亭也在不值得谦虚的地方谦虚起来，用傻乎乎的语气说道：“我可不知道，知道的应该是你。”“不，你们两个人都知道。”鼻子十分得意地说。“吓！”两人都同时佩服起这个女人来。“你们要是都忘了，那就让我来告诉你们。去年年底在向岛的阿部先生宅子里开过一次演奏会，寒月先生不是也去了吗？那天晚上在回来的路上，寒月先生不是在吾妻桥上发生过一件事儿吗？详细的情况我就不说啦，说不定会让他本人难堪。我想有了那样的证据，也就够啦。你们说呢？”鼻子说着，把她那带着钻石戒指的手，平放在膝头上，高傲地坐在那里。她那伟大的鼻子，越发显得大放异彩。看那架势，迷亭也好，主人也好，在她眼里都是虽有如无似的。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

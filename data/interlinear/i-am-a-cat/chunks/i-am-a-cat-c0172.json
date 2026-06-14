@@ -17434,5 +17434,36 @@
       ],
       "source_zh": "你既不能把落日拉回来，也不能使加茂河倒流回来。所能做到的只是在自己的心上下工夫，只要把心修炼好，使它能得自由，那落云馆的学生不管怎样胡闹，你不是就可以满不在乎了吗？对于那些狡诈的家伙，你就会相应不理，对于那种没有教养的家伙的胡说八道，你只要无动于衷地骂他们一声‘这帮王八蛋’不就完事儿了吗？据说过去有个和尚，当别人将要杀他的时候，他做了一个很妙的偈语：‘电光影里斩春风’。这很可能是在累积了心的修炼，达到消极的极点之后，才能说出这样精辟卓绝的话来吧。像我这种人，当然还不可能了解这种深奥的道理。总之，那种认为只有西方式的积极主义好的想法，是不太对头的。就拿你来说，不管你怎样按积极主义去处世，那些学生们来捉弄你，你不还是毫无办法吗？如果你有权势把那个学校封门，或者对方做了足以使你到警察那里去告状的坏事，那又当别论，如果不是那样，你就是怎样奉行积极主义，也不会取胜的啊。如果你搞积极主义，就会碰上金钱的问题，就会碰上势孤力单的问题，换句话说，你就得向有钱的人低头，你就得听命于人多势众的那些孩子们，像你这样穷光蛋，又只是孤零零的一个人，想要积极地去较量，这点正是你不满的根源嘛。怎么样，你懂了没有？”"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

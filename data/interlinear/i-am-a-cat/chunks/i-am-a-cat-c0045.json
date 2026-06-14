@@ -12489,5 +12489,36 @@
       ],
       "source_zh": "想不到主人竟命令我来招待迷亭先生，我当然不便以冷漠的态度相对，我向他喵喵地叫了几声，以表示好意，然后爬到他的膝上去。于是迷亭说道：“哎哟，肥多啦！”说着抓起我颈部的皮，把我拎到半空中。“这只猫两条后腿垂着，恐怕捕不了老鼠。苦沙弥太太，这只猫捉老鼠吗？”看来由我招待，他还不满意，所以和隔壁的主人的妻子搭起话来。主人的妻子隔着纸门回答说：“还提什么捉老鼠，它吃了煮年糕，跳舞来着呢。”想不到主人的妻子会突然在这点上揭我的伤疤。我虽然是悬在半空中，仍不免有些羞愧难当。可是，迷亭还是不肯把我放下，他说：“可不是！这只猫的长相就像是会跳舞的。苦沙弥太太！这猫的长相可大意不得呀，活像以前‘草双纸’里边出现的猫怪呢。”迷亭胡说一通，不停地和主人的妻子搭讪着。主人的妻子不太情愿地放下手中的针线活儿，走进客厅里来。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

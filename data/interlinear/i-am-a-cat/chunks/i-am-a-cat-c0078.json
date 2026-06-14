@@ -17613,5 +17613,36 @@
       ],
       "source_zh": "香烟的火逐渐靠近烟蒂那边，已经烧到一寸长的烟灰啪嗒落到毛毯上他也不去管，而是凝视着香烟的烟雾飞往的方向。这烟雾在春风里载沉载浮，画出好几层烟圈，正在飘向主人的妻子刚洗过的满头青丝。糟糕，我给忘了，应该讲讲主人的妻子了。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

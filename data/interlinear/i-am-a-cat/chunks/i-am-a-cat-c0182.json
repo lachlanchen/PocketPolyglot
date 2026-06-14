@@ -17877,5 +17877,36 @@
       ],
       "source_zh": "就在这个当儿，门前有人大声向屋内招呼：“有人吗？有人吗？”听声音像是迷亭，可又与迷亭为人不合，来人在不断打招呼表示拜访。主人在书斋里早就听到声音了，但他还是抄着手一动不动。可能是主人认为到门口去接待客人不是他的任务吧，所以他就是在书斋里也从不应声。厨娘阿三买肥皂去了，主人妻子正在上厕所。这样到门口迎接客人就只剩下我了，可我也懒得去。这时，来客从脱鞋台一下子跳到铺着地板的地方上来，然后拉开纸门大踏步地进到房子里边来了。主人够怪的，客人也是够怪的。来客似乎是先到了客厅里，客厅的拉门发出反复开闭的声音，然后又走到书斋里来，果然是迷亭。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

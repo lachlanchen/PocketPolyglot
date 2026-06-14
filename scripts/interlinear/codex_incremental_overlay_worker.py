@@ -12,6 +12,7 @@ import argparse
 import json
 import os
 import shutil
+import subprocess
 import textwrap
 import time
 from datetime import datetime, timezone
@@ -19,7 +20,7 @@ from pathlib import Path
 from typing import Any
 
 from codex_chunk_worker import extract_json, mentions_usage_limit, run_codex
-from validate_interlinear_json import GRAMMAR_ROLES, HAN_RE, SINGLE_HAN_RE, validate_ja_tokens
+from validate_interlinear_json import GRAMMAR_ROLES, HAN_RE, SINGLE_HAN_RE, validate_ja_tokens, validate_zh_tokens
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -188,6 +189,19 @@ def validate_en_tokens(tokens: Any, where: str, errors: list[str]) -> str:
     return text
 
 
+def validate_zh_modern_tokens(tokens: Any, where: str, errors: list[str]) -> str:
+    before = len(errors)
+    validate_zh_tokens(tokens, where, errors)
+    text = token_text(tokens)
+    if not text.strip():
+        errors.append(f"{where}: zh_modern text is empty")
+    if not HAN_RE.search(text):
+        errors.append(f"{where}: zh_modern appears to contain no Chinese text")
+    if len(errors) == before and compact(text) in {"注", "注。"}:
+        errors.append(f"{where}: zh_modern is a placeholder")
+    return text
+
+
 def validate_ja_modern(lines: Any, where: str, errors: list[str]) -> str:
     if not isinstance(lines, list) or not lines:
         errors.append(f"{where}: ja_modern must be a non-empty token line list")
@@ -231,6 +245,8 @@ def validate_overlay(base: dict[str, Any], task: dict[str, Any], manifest: dict[
             errors.append(f"units[{index}]: unit_index mismatch")
         if compact(str(unit.get("source_text", ""))) != compact(expected["source_text"]):
             errors.append(f"units[{index}]: source_text changed")
+        if "zh_modern" in actions:
+            validate_zh_modern_tokens(unit.get("zh_modern"), f"units[{index}].zh_modern", errors)
         if "en" in actions:
             validate_en_tokens(unit.get("en"), f"units[{index}].en", errors)
         if "ja_modern" in actions:
@@ -253,8 +269,9 @@ def normalize_overlay_for_task(overlay: dict[str, Any], manifest: dict[str, Any]
             continue
         unit.pop("zh", None)
         unit.pop("zh_original", None)
-        unit.pop("zh_modern", None)
         unit.pop("ja", None)
+        if "zh_modern" not in actions:
+            unit.pop("zh_modern", None)
         if "en" not in actions:
             unit.pop("en", None)
         if "ja_modern" not in actions:
@@ -317,6 +334,7 @@ def prompt_for_overlay(
     errors: list[str] | None,
 ) -> str:
     actions = {action["field"] for action in manifest["actions"]}
+    need_zh_modern = "zh_modern" in actions
     need_en = "en" in actions
     need_ja = "ja_modern" in actions
     unit_items = unit_blueprint(base)
@@ -332,6 +350,13 @@ def prompt_for_overlay(
             "unit_index": item["unit_index"],
             "source_text": item["source_text"],
         }
+        if need_zh_modern:
+            node["zh_modern"] = [
+                {"t": "现", "r": "xiàn", "g": "attributive"},
+                {"t": "代", "r": "dài", "g": "attributive"},
+                {"t": "中", "r": "zhōng", "g": "object"},
+                {"t": "文", "r": "wén", "g": "object"},
+            ]
         if need_en:
             node["en"] = [{"t": "Natural English translation with spaces between words.", "g": "predicate"}]
         if need_ja:
@@ -339,13 +364,17 @@ def prompt_for_overlay(
         unit_shape.append(node)
 
     language_requirements = []
+    if need_zh_modern:
+        language_requirements.append(
+            "- Add `zh_modern` to every unit as a Chinese token list. It must be accurate, readable modern Chinese based on the classical/source text. Every Chinese token needs pinyin in `r`; use grammar role `g` when useful."
+        )
     if need_en:
         language_requirements.append(
-            "- Add `en` to every unit as a token list. It must be natural, understandable English. Preserve spaces between English words. English tokens never have `r` readings."
+            "- Add `en` to every unit as a token list. It must be natural, understandable English. Preserve spaces between English words. English tokens never have `r` readings. If this task also asks for `zh_modern`, base the English on that modern Chinese bridge."
         )
     if need_ja:
         language_requirements.append(
-            "- Add `ja_modern` to every unit as one or two short token lines. It must be modern, plain, understandable Japanese based on the preferred Chinese meaning, not kanbun gloss and not Chinese prose."
+            "- Add `ja_modern` to every unit as one or two short token lines. It must be modern, plain, understandable Japanese based on the preferred Chinese meaning, not kanbun gloss and not Chinese prose. If this task also asks for `zh_modern`, base the Japanese on that modern Chinese bridge."
         )
     return textwrap.dedent(
         f"""
@@ -366,7 +395,7 @@ def prompt_for_overlay(
         - Do not rewrite old JSON. This output is an overlay only.
         - Preserve every `paragraph_id`, `unit_index`, and `source_text` exactly as provided.
         - Produce one output unit for every input unit, in the same order.
-        - Use the preferred Chinese text as meaning source. For classical Chinese, rely on `zh_modern` if present.
+        - Use the preferred Chinese text as meaning source. For classical Chinese, rely on `zh_modern` if present. If `zh_modern` is requested in this overlay, create it first and use it as the bridge for English/Japanese.
         - Use legacy Japanese only as a reference; if it is difficult, kanbun-like, or unnatural, create readable modern Japanese.
         - Japanese tokenization is strict: every kanji character must be its own token with furigana in `r`. Furigana may only be attached to one-kanji tokens. Kana, okurigana, punctuation, Latin text, Arabic numerals, and spaces have no reading.
         - Use optional `g` roles only from: {", ".join(sorted(GRAMMAR_ROLES))}.
@@ -404,6 +433,25 @@ def status_record(status: str, **extra: Any) -> dict[str, Any]:
     return {"status": status, "updated_at": now_iso(), **extra}
 
 
+def check_usage_budget(args: argparse.Namespace) -> bool:
+    if args.min_codex_remaining_percent <= 0:
+        return True
+    command = [
+        "python",
+        "scripts/interlinear/check_codex_usage_budget.py",
+        "--min-remaining-percent",
+        str(args.min_codex_remaining_percent),
+    ]
+    if args.codex_usage_status_file:
+        command.extend(["--status-file", args.codex_usage_status_file])
+    if args.codex_usage_check_command:
+        command.extend(["--status-command", args.codex_usage_check_command])
+    if args.codex_usage_allow_unknown:
+        command.append("--allow-unknown")
+    proc = subprocess.run(command, cwd=ROOT, text=True)
+    return proc.returncode == 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--global-manifest", default="data/source-plan/incremental-english-modern-japanese.json")
@@ -415,6 +463,10 @@ def main() -> int:
     parser.add_argument("--retries", type=int, default=3)
     parser.add_argument("--codex-timeout-seconds", type=int, default=7200)
     parser.add_argument("--claim-ttl-seconds", type=int, default=21600)
+    parser.add_argument("--min-codex-remaining-percent", type=float, default=0)
+    parser.add_argument("--codex-usage-status-file", default="")
+    parser.add_argument("--codex-usage-check-command", default="")
+    parser.add_argument("--codex-usage-allow-unknown", action="store_true")
     parser.add_argument("--retry-failed", action="store_true")
     parser.add_argument("--include-waiting-dependencies", action="store_true")
     args = parser.parse_args()
@@ -435,6 +487,9 @@ def main() -> int:
     failed = 0
     tasks = iter_claimable_tasks(global_manifest, args.include_waiting_dependencies)
     while True:
+        if not check_usage_budget(args):
+            print(f"{args.worker_id}: codex usage budget below threshold; stopping for supervisor retry", flush=True)
+            return 86
         claimed: tuple[dict[str, Any], dict[str, Any], dict[str, Any], Path, Path, str] | None = None
         for manifest, task in tasks:
             book_id = manifest["book_id"]

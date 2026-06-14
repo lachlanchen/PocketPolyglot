@@ -15745,5 +15745,36 @@
       ],
       "source_zh": "“还不知道谁胡说呢！”说着主人的妻子把笤帚咚地竖在主人的枕头旁边，很有一点威风凛凛的样子。就在这时，房后人力车夫家的八妞哇地大哭了起来。只要主人一发怒，八妞就准哭，这是车夫的老婆迫使八妞干的。每当我家主人发怒的时候，车夫的老婆就把八妞弄哭，也许金田家会为此给她一些小钱做奖赏吧，可八妞怎能吃得消呢。她有这样一个妈真是活该倒霉，从早到晚都得哭个没完。假如主人多少觉察出此中的奥妙，稍微控制一下他的发怒，那么八妞的寿命肯定会活得长一些哩。虽然说这是金田君让车夫的老婆干的，但干这种蠢事，可以认为比天道公平还要天道公平吧。假如只在主人发怒时，她那边让孩子哭叫，这孩子还可喘口气，但是金田君雇了附近的一些流氓，每次来喊“今户烧制的老狸精”的时候，八妞也必须配合哭叫起来。有时在还未弄清主人是否发怒之前，就猜测一定会发怒，于是先发制人，八妞首先就得哭起来。这样一来，主人是八妞呢，还是八妞是主人呢，简直都分不清啦。要想捉弄主人并不费事，只要狠狠地责骂八妞两句，就等于给了主人一记耳光。据说古时候西方在对犯人处刑的时候，如果该犯逃亡国外捕捉不着，就用一个假人代替真人来处以火刑。看来，他们当中也是有通晓西方故事的军师传授给他们这个奸计。不管是落云馆中学的学生，还是八妞的娘，对于缺少办法的主人来说，肯定都是难于应付的对手。此外，主人应付不了的人还多得很，也许整个这一带的人他都应付不了。不过，这与当前没有什么关系，所以，以后我再一点一点地介绍给您听吧。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

@@ -16355,5 +16355,36 @@
       ],
       "source_zh": "“这样，我把这个时间估算为十点钟。那么从现在到十点这段时间，我必须去消磨一下。回家去再重来，又太费事。到朋友家去聊聊，又觉得心神不宁，也不太好。这样，我万不得已，决定在这段相当长的时间里在市内散散步。可是，要是在平时逛上两三个小时，总觉得时间很快就会度过，唯独这天晚上，时间过得真慢啊！我深深感到这才是‘一日如千秋’哩。”寒月君故意装出一副焦急的样子看着迷亭先生。"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }

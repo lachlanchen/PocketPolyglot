@@ -16013,5 +16013,36 @@
       ],
       "source_zh": "主人把坐垫向来客一推，说了声“请你铺上”，但是这位光头老兄拘谨地答了声“嗯”，仍然不动。洋纱坐垫就摆在前面，坐垫当然不会说“请你坐上来吧”，而那位光头老兄的大脑袋却悄然不动，真是有趣极啦。坐垫嘛，当然是为了让人坐才由主人的妻子从劝业场买回来的，可不是为了供人看的。坐垫没有人坐上去，坐垫的名誉分明受到了毁损，当然劝客人坐上去的主人的面子也会有几分受损的吧。宁可毁损主人的颜面，也要和坐垫怒目相视的这位光头君，决不是讨厌坐垫本身。老实说，他正式坐到坐垫上去的这种事儿，除了为他祖父举办丧事的时间以外，还从来没有过呢。所以，跪坐得发麻的两腿已经在诉苦。尽管如此，他还是不肯坐上去。坐垫闲在那里，他还是不坐上去，主人明明说过“请你铺上”，他还是坚持不坐，真是个给人找麻烦的光头家伙！既然这样客气，那么成群结伙的时候、在上课时更客气一些岂不是更好，在公寓里住着的时候更客气一些岂不更好！应该谦逊的时候不谦逊，反而闹得翻天覆地，真是个品质恶劣的光头家伙！"
     }
-  ]
+  ],
+  "pp_schema": {
+    "name": "pocketpolyglot.chunk",
+    "version": 2,
+    "book_type": "modern_trilingual",
+    "legacy_fields_preserved": true,
+    "line_role_policy": "ja_line_roles marks continuation versus separate explanation; do not infer that ja[1] is a note unless its role says so.",
+    "layers": [
+      {
+        "id": "zh",
+        "field": "zh",
+        "lang": "zh",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "en",
+        "field": "en",
+        "lang": "en",
+        "role": "translation",
+        "register": "modern"
+      },
+      {
+        "id": "ja",
+        "field": "ja",
+        "lang": "ja",
+        "role": "translation_or_gloss",
+        "register": "modern_or_kanbun"
+      }
+    ],
+    "extra_notes": []
+  }
 }
