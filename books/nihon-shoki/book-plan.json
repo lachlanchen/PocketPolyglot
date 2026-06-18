@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "book_id": "nihon-shoki",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "book_title_wenyan": "日本書紀",
+  "book_title_zh": "日本书纪",
+  "book_title_ja": "日本書紀",
+  "book_title_en": "Nihon Shoki",
+  "author": "舍人親王 等",
+  "author_reading_zh": "shè rén qīn wáng děng",
+  "author_reading_ja": "とねりしんのう ほか",
+  "book_description": "Nihon Shoki with classical Chinese as the main text and modern Chinese, modern Japanese, and English overlays.",
+  "source_paths": {
+    "wenyan_epub": "sources/日本書紀/日本書紀.epub",
+    "english_pdf": "sources/日本書紀/Nihongi_ Chronicle of Japan From the Earliest Time to A.D. 697.pdf",
+    "wenyan_markdown": "books/nihon-shoki/markdown/wenyan.md",
+    "english_text": "books/nihon-shoki/markdown/en.raw.txt"
+  },
+  "chunks_jsonl": "books/nihon-shoki/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/nihon-shoki/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/nihon-shoki/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/nihon-shoki/work/quadrilingual/preview/nihon-shoki.partial.json",
+  "build_root": "build/nihon-shoki/wenyan-main-quadrilingual",
+  "prepared_at": "2026-06-18T12:05:40.092236+00:00"
+}
