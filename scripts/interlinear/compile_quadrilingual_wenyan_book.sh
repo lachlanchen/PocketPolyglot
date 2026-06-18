@@ -79,16 +79,25 @@ cat > "$build_dir/book.tex" <<EOF
 \\def\\QuadSource{$build_dir/source.tex}\\input{tex/interlinear-quadrilingual/book.tex}
 EOF
 
-case "$main_layer:$color_mode" in
-  wenyan:color) pdf_name="日本書紀（現代日本語・現代中文・英文注）.pdf" ;;
-  wenyan:blackwhite) pdf_name="日本書紀（現代日本語・現代中文・英文注・黑白）.pdf" ;;
-  zh_modern:color) pdf_name="日本書紀現代中文（文言・現代日本語・英文注）.pdf" ;;
-  zh_modern:blackwhite) pdf_name="日本書紀現代中文（文言・現代日本語・英文注・黑白）.pdf" ;;
-  ja_modern:color) pdf_name="日本書紀現代日本語（文言・現代中文・英文注）.pdf" ;;
-  ja_modern:blackwhite) pdf_name="日本書紀現代日本語（文言・現代中文・英文注・黑白）.pdf" ;;
-  en:color) pdf_name="Nihon Shoki（文言・現代中文・現代日本語注）.pdf" ;;
-  en:blackwhite) pdf_name="Nihon Shoki（文言・現代中文・現代日本語注・黑白）.pdf" ;;
+title_wenyan="$(jq -r '.book_title_wenyan // .book_title_zh // .book_title_ja // .book_title_en // .book_id' "$plan")"
+title_zh="$(jq -r '.book_title_zh // .book_title_wenyan // .book_title_ja // .book_title_en // .book_id' "$plan")"
+title_ja="$(jq -r '.book_title_ja // .book_title_wenyan // .book_title_zh // .book_title_en // .book_id' "$plan")"
+title_en="$(jq -r '.book_title_en // .book_title_wenyan // .book_title_zh // .book_title_ja // .book_id' "$plan")"
+case "$main_layer" in
+  wenyan) base_title="${title_wenyan}（現代日本語・現代中文・英文注）" ;;
+  zh_modern) base_title="${title_zh}現代中文（文言・現代日本語・英文注）" ;;
+  ja_modern) base_title="${title_ja}現代日本語（文言・現代中文・英文注）" ;;
+  en) base_title="${title_en}（文言・現代中文・現代日本語注）" ;;
 esac
+if [[ "$color_mode" == "blackwhite" ]]; then
+  if [[ "$base_title" == *"）" ]]; then
+    pdf_name="${base_title%）}・黑白）.pdf"
+  else
+    pdf_name="${base_title}・黑白.pdf"
+  fi
+else
+  pdf_name="${base_title}.pdf"
+fi
 
 xelatex -interaction=nonstopmode -halt-on-error -output-directory "$build_dir" "$build_dir/book.tex" >/dev/null
 xelatex -interaction=nonstopmode -halt-on-error -output-directory "$build_dir" "$build_dir/book.tex" >/dev/null

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "book_id": "kojiki-wenyan",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "book_title_wenyan": "古事記",
+  "book_title_zh": "古事记",
+  "book_title_ja": "古事記",
+  "book_title_en": "Kojiki",
+  "author": "太安萬侶・稗田阿礼",
+  "author_reading_zh": "tài ān wàn lǚ · bài tián ā lǐ",
+  "author_reading_ja": "おお の やす まろ・ひえだ の あれ",
+  "book_description": "Kojiki with the existing wenyan/kanbun-aligned source as main text plus modern Japanese, modern Chinese, and English overlays.",
+  "cover_image": "assets/covers/kojiki/cover.png",
+  "source_paths": {
+    "bilingual_base": "books/kojiki/work/bilingual/interlinear/chunks",
+    "wenyan_markdown": "books/kojiki/markdown/zh.md",
+    "ja_modern_reference": "books/kojiki/markdown/ja_modern.md",
+    "zh_modern_reference": "books/kojiki/markdown/zh_modern_ref.txt",
+    "english_text": "books/kojiki/markdown/en.raw.txt"
+  },
+  "chunks_jsonl": "books/kojiki-wenyan/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/kojiki-wenyan/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/kojiki-wenyan/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/kojiki-wenyan/work/quadrilingual/preview/kojiki-wenyan.partial.json",
+  "build_root": "build/kojiki-wenyan/wenyan-main-quadrilingual",
+  "prepared_at": "2026-06-18T16:08:10.134840+00:00"
+}

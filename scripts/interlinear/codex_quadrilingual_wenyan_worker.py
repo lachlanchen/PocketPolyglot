@@ -42,10 +42,27 @@ def plain_text(text: Any) -> str:
 def source_unit_plan(chunk: dict[str, Any]) -> list[dict[str, Any]]:
     plan: list[dict[str, Any]] = []
     for paragraph in chunk.get("paragraphs", []):
-        units = [
-            {"unit_id": f"{paragraph['id']}-u{index:03d}", "source_wenyan": unit}
-            for index, unit in enumerate(split_cjk_units(str(paragraph.get("wenyan", ""))), start=1)
-        ]
+        if paragraph.get("source_units"):
+            units = []
+            for index, unit in enumerate(paragraph.get("source_units") or [], start=1):
+                if not isinstance(unit, dict):
+                    continue
+                source_wenyan = str(unit.get("source_wenyan") or unit.get("source_text") or "")
+                if not source_wenyan:
+                    continue
+                item = {
+                    "unit_id": str(unit.get("unit_id") or f"{paragraph['id']}-u{index:03d}"),
+                    "source_wenyan": source_wenyan,
+                }
+                for key in ("existing_ja", "existing_zh", "existing_note"):
+                    if unit.get(key):
+                        item[key] = plain_text(unit.get(key))
+                units.append(item)
+        else:
+            units = [
+                {"unit_id": f"{paragraph['id']}-u{index:03d}", "source_wenyan": unit}
+                for index, unit in enumerate(split_cjk_units(str(paragraph.get("wenyan", ""))), start=1)
+            ]
         plan.append({"id": paragraph["id"], "units": units})
     return plan
 
@@ -66,13 +83,19 @@ def prompt_for_plain_chunk(chunk: dict[str, Any], previous_errors: list[str] | N
         error_block = "\nPrevious output failed validation. Fix these exact issues:\n" + "\n".join(
             f"- {error}" for error in previous_errors[:80]
         )
+    book_title = plain_text(
+        chunk.get("book_title_wenyan")
+        or chunk.get("book_title_zh")
+        or chunk.get("book_id")
+        or "the source text"
+    )
     return textwrap.dedent(
         f"""
         You are preparing one chunk of a quadrilingual pocket book.
 
         Return exactly one JSON object. No Markdown fences. No explanation.
 
-        The main stream is wenyan/classical Chinese from Nihon Shoki. Preserve it exactly.
+        The main stream is wenyan/classical Chinese from {book_title}. Preserve it exactly.
         Add three aligned reading layers for each supplied unit:
         - zh_modern: readable modern Chinese.
         - ja_modern: real, common modern Japanese with kana; not Chinese/kanbun.
@@ -104,6 +127,7 @@ def prompt_for_plain_chunk(chunk: dict[str, Any], previous_errors: list[str] | N
         - Do not omit, summarize, reorder, or rewrite the wenyan.
         - Modern Chinese must be normal readable Chinese, not another copy of the classical text unless the unit is only a name/title.
         - Modern Japanese must be natural Japanese with kana and inflection. Never put pure Chinese prose in ja_modern.
+        - If the supplied unit plan contains existing_ja, reuse or gently modernize it when it matches the wenyan.
         - English must be natural English and should use the English reference only when it clearly matches this broad book/chapter window.
         - Keep each unit aligned to the same meaning. Do not add footnotes or commentary.
         - No ruby, pinyin, token arrays, Markdown, or grammar labels in this plain response.
@@ -115,8 +139,8 @@ def prompt_for_plain_chunk(chunk: dict[str, Any], previous_errors: list[str] | N
         Source unit plan:
         {json.dumps(source_unit_plan(chunk), ensure_ascii=False, indent=2)}
 
-        Broad English reference window:
-        {json.dumps(chunk.get("reference", {}).get("en", {}), ensure_ascii=False, indent=2)}
+        Broad reference material:
+        {json.dumps(chunk.get("reference", {}), ensure_ascii=False, indent=2)}
         """
     ).strip()
 
