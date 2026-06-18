@@ -9,7 +9,7 @@
   "recommended_model": "gpt-5.5",
   "recommended_reasoning": "medium",
   "recommended_run_command": "MODEL=gpt-5.5 REASONING=medium GLOBAL_MANIFEST=data/source-plan/incremental-backfill-phases/phase-2-shiji-en-ja-modern.json bash scripts/interlinear/start_incremental_overlay_tmux.sh zhjpbook-backfill-phase-2-shiji-en-ja-modern",
-  "generated_at": "2026-06-18T02:33:51.847233+00:00",
+  "generated_at": "2026-06-18T02:47:55.300043+00:00",
   "books": [
     {
       "schema_version": 1,
@@ -113,7 +113,7 @@
           "require_ruby_for_kanji_tokens_in_ja_modern": true
         }
       },
-      "generated_at": "2026-06-18T02:33:50.558947+00:00"
+      "generated_at": "2026-06-18T02:47:45.891854+00:00"
     }
   ],
   "worker_contract": {

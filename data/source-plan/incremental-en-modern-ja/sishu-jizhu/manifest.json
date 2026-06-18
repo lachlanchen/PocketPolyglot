@@ -3,11 +3,11 @@
   "book_id": "sishu-jizhu",
   "title": "四書章句集註 legacy",
   "category": "classical_chinese_legacy",
-  "phase": "phase-3-sishu-zhmodern-en-ja-modern",
+  "phase": "later-legacy-sishu-preserved",
   "source_area": "sources/sishu",
-  "priority": 310,
-  "dependency": "base_chunks_exist",
-  "notes": "Legacy Sishu pass. Keep old output; write only overlay files. Add modern Chinese first, then English and readable modern Japanese.",
+  "priority": 900,
+  "dependency": "run_only_if_explicitly_requested",
+  "notes": "Legacy Sishu pass is preserved as read-only input and is not part of the active Sishu backfill. Use the AgInTi Sishu version unless the user explicitly asks to spend quota on this legacy variant.",
   "chunk_id_source": "books_manifest",
   "chunk_count": 925,
   "actions": [
@@ -57,7 +57,7 @@
     "schema_version": 1,
     "task_type": "incremental_language_overlay",
     "category": "classical_chinese_legacy",
-    "dependency": "base_chunks_exist",
+    "dependency": "run_only_if_explicitly_requested",
     "actions": [
       {
         "field": "zh_modern",
@@ -126,5 +126,5 @@
       "require_ruby_for_kanji_tokens_in_ja_modern": true
     }
   },
-  "generated_at": "2026-06-18T02:33:50.809080+00:00"
+  "generated_at": "2026-06-18T02:47:46.855233+00:00"
 }
