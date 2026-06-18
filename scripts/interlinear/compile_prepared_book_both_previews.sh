@@ -34,7 +34,8 @@ fi
 source_path="$(jq -r '.source_path' "$plan")"
 source_markdown="$(jq -r '.source_markdown' "$plan")"
 manifest="$(jq -r '.chunks_manifest' "$plan")"
-chunk_dir="$(jq -r '.reviewed_chunk_dir' "$plan")"
+chunk_dir="$(jq -r '.reviewed_chunk_dir // empty' "$plan")"
+raw_chunk_dir="$(jq -r '.raw_chunk_dir // empty' "$plan")"
 title_zh="$(jq -r '.book_title_zh' "$plan")"
 title_zh_reading="$(jq -r '.book_title_zh_reading' "$plan")"
 title_ja="$(jq -r '.book_title_ja' "$plan")"
@@ -52,8 +53,13 @@ if [[ -z "$cover_image" && -f "assets/covers/$book_id/cover.png" ]]; then
 fi
 
 if [[ ! -d "$chunk_dir" ]]; then
-  echo "No reviewed chunk directory yet: $chunk_dir" >&2
-  exit 0
+  if [[ -n "$raw_chunk_dir" && -d "$raw_chunk_dir" ]]; then
+    echo "No reviewed chunk directory yet; compiling from raw generated chunks: $raw_chunk_dir" >&2
+    chunk_dir="$raw_chunk_dir"
+  else
+    echo "No reviewed or raw chunk directory yet: reviewed=$chunk_dir raw=$raw_chunk_dir" >&2
+    exit 0
+  fi
 fi
 
 mkdir -p "build/$book_id/zh-main/color" "build/$book_id/zh-main/blackwhite" \
