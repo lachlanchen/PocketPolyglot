@@ -7,10 +7,28 @@
   "source_area": "sources/kojiki",
   "priority": 410,
   "dependency": "base_chunks_exist",
-  "notes": "Ancient text. Add English and a reader-friendly modern Japanese paraphrase from the modern Chinese bridge/source layer.",
+  "notes": "Ancient text. Add modern Chinese, English, and reader-friendly modern Japanese as additive overlays. Preserve legacy ja/zh fields and use the modern Chinese bridge for English and Japanese.",
+  "reference_paths": [
+    "books/kojiki/markdown/zh_modern_ref.txt",
+    "books/kojiki/markdown/ja_modern.md",
+    "books/kojiki/markdown/en.raw.txt"
+  ],
   "chunk_id_source": "books_manifest",
   "chunk_count": 713,
   "actions": [
+    {
+      "field": "zh_modern",
+      "kind": "modern_chinese_bridge",
+      "source_priority": [
+        "unit.zh_modern",
+        "paragraph.corrected_text",
+        "unit.zh_original",
+        "unit.zh",
+        "unit.source_text",
+        "paragraph.source_text"
+      ],
+      "instruction": "Add accurate, readable modern Chinese aligned to the existing classical Chinese unit. Preserve names, terms, and source order; do not overwrite existing zh or ja."
+    },
     {
       "field": "en",
       "kind": "understandable_english",
@@ -46,6 +64,19 @@
     "category": "ancient_classic",
     "dependency": "base_chunks_exist",
     "actions": [
+      {
+        "field": "zh_modern",
+        "kind": "modern_chinese_bridge",
+        "source_priority": [
+          "unit.zh_modern",
+          "paragraph.corrected_text",
+          "unit.zh_original",
+          "unit.zh",
+          "unit.source_text",
+          "paragraph.source_text"
+        ],
+        "instruction": "Add accurate, readable modern Chinese aligned to the existing classical Chinese unit. Preserve names, terms, and source order; do not overwrite existing zh or ja."
+      },
       {
         "field": "en",
         "kind": "understandable_english",
@@ -93,12 +124,12 @@
     },
     "validation": {
       "require_no_source_text_loss": true,
-      "require_modern_zh_if_requested": false,
+      "require_modern_zh_if_requested": true,
       "require_english_if_requested": true,
       "require_modern_ja_if_requested": true,
       "forbid_overwriting_legacy_ja": true,
       "require_ruby_for_kanji_tokens_in_ja_modern": true
     }
   },
-  "generated_at": "2026-06-18T02:47:46.672150+00:00"
+  "generated_at": "2026-06-18T12:12:48.595292+00:00"
 }

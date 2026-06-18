@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import shutil
 import subprocess
 import textwrap
@@ -131,6 +132,33 @@ def unit_blueprint(base: dict[str, Any]) -> list[dict[str, Any]]:
                 }
             )
     return units
+
+
+def reference_excerpts(manifest: dict[str, Any], task: dict[str, Any], *, max_chars: int = 6000) -> list[dict[str, str]]:
+    """Return small generic reference excerpts for overlay prompts.
+
+    This intentionally stays task-neutral: manifests may point at local text
+    references, and the worker includes bounded snippets. Exact alignment still
+    comes from the base chunk and the model's reasoning, not from hardcoded
+    book-specific matching.
+    """
+    paths = list(task.get("reference_paths") or manifest.get("reference_paths") or [])
+    excerpts: list[dict[str, str]] = []
+    budget = max_chars
+    for raw in paths:
+        if budget <= 0:
+            break
+        path = ROOT / str(raw)
+        if not path.exists() or not path.is_file():
+            continue
+        text = path.read_text(encoding="utf-8", errors="replace")
+        text = re.sub(r"\s+", " ", text).strip()
+        if not text:
+            continue
+        take = min(max(800, budget // max(1, len(paths))), budget, len(text))
+        excerpts.append({"path": str(raw), "excerpt": text[:take]})
+        budget -= take
+    return excerpts
 
 
 def context_summary(base: dict[str, Any]) -> dict[str, Any]:
@@ -407,6 +435,9 @@ def prompt_for_overlay(
 
         Unit sources:
         {json.dumps(unit_items, ensure_ascii=False, indent=2)}
+
+        Optional broad reference excerpts:
+        {json.dumps(reference_excerpts(manifest, task), ensure_ascii=False, indent=2)}
         """
     ).strip()
 

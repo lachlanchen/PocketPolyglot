@@ -34,6 +34,7 @@ class EnhancementBook:
     priority: int = 100
     dependency: str = "base_chunks_exist"
     notes: str = ""
+    reference_paths: tuple[str, ...] = ()
 
 
 BOOKS: list[EnhancementBook] = [
@@ -95,9 +96,15 @@ BOOKS: list[EnhancementBook] = [
         "ancient_classic",
         "sources/kojiki",
         "later-special-ancient",
+        add_modern_zh=True,
         add_modern_ja=True,
         priority=410,
-        notes="Ancient text. Add English and a reader-friendly modern Japanese paraphrase from the modern Chinese bridge/source layer.",
+        notes="Ancient text. Add modern Chinese, English, and reader-friendly modern Japanese as additive overlays. Preserve legacy ja/zh fields and use the modern Chinese bridge for English and Japanese.",
+        reference_paths=(
+            "books/kojiki/markdown/zh_modern_ref.txt",
+            "books/kojiki/markdown/ja_modern.md",
+            "books/kojiki/markdown/en.raw.txt",
+        ),
     ),
     EnhancementBook(
         "ginga-tetsudo",
@@ -209,6 +216,7 @@ def task_for(book: EnhancementBook, chunk_id: str) -> dict[str, Any]:
         "task_template_ref": "manifest.task_template",
         "output_overlay_path": f"books/{book.book_id}/work/incremental/en-modern-ja/overlays/chunks/{chunk_id}.json",
         "durable_overlay_path": f"data/interlinear-overlays/en-modern-ja/{book.book_id}/chunks/{chunk_id}.json",
+        "reference_paths": list(book.reference_paths),
     }
 
 
@@ -228,6 +236,7 @@ def prepare_book(book: EnhancementBook, *, dry_run: bool = False) -> dict[str, A
         "priority": book.priority,
         "dependency": book.dependency,
         "notes": book.notes,
+        "reference_paths": list(book.reference_paths),
         "chunk_id_source": source,
         "chunk_count": len(chunk_ids),
         "actions": actions_for(book),
