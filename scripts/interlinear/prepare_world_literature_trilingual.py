@@ -126,7 +126,7 @@ BOOKS: dict[str, base.BookConfig] = {
         en_source=Path("sources/jane-eyre/Jane Eyre.pdf"),
         zh_source=Path("sources/jane-eyre/夏洛蒂·勃朗特-简·爱.pdf"),
         en_start_marker="Chapter I",
-        zh_start_marker="那天不可能再去散步了",
+        zh_start_marker="不可能再去",
         source_spine_lang="en",
         task_mode="trilingual_en_zh_ja_sources",
         book_description=(
@@ -342,9 +342,22 @@ def clean_world_line(raw_line: str, *, lang: str, from_ocr: bool = False) -> str
             return ""
     else:
         if line in {
+            "Jane Eyre",
             "The Hunchback of Notre Dame by Victor Hugo",
             "Enjoy this wonderful eBook from All You Can Books audiobooks and ebooks service.",
         }:
+            return ""
+        if re.fullmatch(r"\d{1,5}\s+of\s+\d{1,5}", line):
+            return ""
+        if line.startswith("This eBook was designed and published by Planet PDF"):
+            return ""
+        if line.startswith("For more free eBooks visit our Web site at"):
+            return ""
+        if line.startswith("To hear about our latest releases subscribe to"):
+            return ""
+        if line.startswith("eBook brought to you by"):
+            return ""
+        if line.startswith("Create, view, and edit PDF"):
             return ""
         if line.startswith("Visit us at AllYouCanBooks.com"):
             return ""

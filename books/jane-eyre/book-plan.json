@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "book_id": "jane-eyre",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_en_zh_ja_sources",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "zh": "sources/jane-eyre/夏洛蒂·勃朗特-简·爱.pdf",
+    "en": "sources/jane-eyre/Jane Eyre.pdf",
+    "ja": "sources/jane-eyre/ジェイン・エア（上）.epub"
+  },
+  "source_sha256": {
+    "zh": "f24bb5a9902025d541a3a8aebd54e5836ab37a4f248a8b374caf59837c58fd2b",
+    "en": "0820b17a50281501f84221ca57e487be5a3c3059b302b3d090bfa069c9bcae43",
+    "ja": "7a138d88a6b716e9701050b25e73aff06bd53944e96eecd2b60225f8c6ca57b9"
+  },
+  "markdown": {
+    "en": "books/jane-eyre/markdown/en.md",
+    "zh": "books/jane-eyre/markdown/zh.md",
+    "ja": "books/jane-eyre/markdown/jp.md"
+  },
+  "book_title_en": "Jane Eyre",
+  "book_title_zh": "简·爱",
+  "book_title_ja": "ジェイン・エア",
+  "book_title_zh_reading": "jiǎn ài",
+  "book_title_ja_reading": "ジェイン エア",
+  "author": "Charlotte Brontë",
+  "author_reading_zh": "xià luò dì bó lǎng tè",
+  "author_reading_ja": "シャーロット ブロンテ",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Charlotte Brontë, Jane Eyre. English PDF is the alignment spine; Chinese PDF is an OCR-polished published translation reference; Japanese EPUB is a partial published translation reference for the first volume.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "global_ratio_window",
+  "chunks_jsonl": "books/jane-eyre/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/jane-eyre/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/jane-eyre/work/trilingual/interlinear/chunks",
+  "preview_json": "books/jane-eyre/work/trilingual/preview/jane-eyre.partial.json",
+  "assembled_json": "books/jane-eyre/work/trilingual/preview/jane-eyre.partial.json",
+  "prepared_at": "2026-06-18T03:39:55.621699+00:00",
+  "chunk_count": 443,
+  "english_chapter_count": 38,
+  "chinese_reference_chapter_count": 1,
+  "japanese_reference_chapter_count": 1,
+  "japanese_reference_note": "Japanese EPUB source is ジェイン・エア（上）, so it is a partial published translation reference. Use it when the window matches the first half; generate natural Japanese for unmatched later chunks.",
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_world_literature_trilingual.py",
+    "english_spine": "English source is the chunk spine.",
+    "chinese_reference": "Chinese source converted to broad reference windows.",
+    "japanese_reference": "Japanese EPUB source is ジェイン・エア（上）, so it is a partial published translation reference. Use it when the window matches the first half; generate natural Japanese for unmatched later chunks.",
+    "start_command": "bash scripts/interlinear/start_trilingual_book_tmux.sh jane-eyre"
+  }
+}
