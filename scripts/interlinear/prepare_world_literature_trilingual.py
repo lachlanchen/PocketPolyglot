@@ -63,6 +63,11 @@ class JapaneseReferenceConfig:
     note: str = "Japanese source converted to broad reference windows."
 
 
+FORCE_OCR_MARKDOWN: set[tuple[str, str]] = {
+    ("jane-eyre", "zh"),
+}
+
+
 BOOKS: dict[str, base.BookConfig] = {
     "one-hundred-years-of-solitude": base.BookConfig(
         book_id="one-hundred-years-of-solitude",
@@ -106,6 +111,28 @@ BOOKS: dict[str, base.BookConfig] = {
             "Emily Brontë, Wuthering Heights. English EPUB is the alignment spine; "
             "Chinese PDF is a broad published translation reference; Japanese is generated "
             "in natural modern Japanese."
+        ),
+    ),
+    "jane-eyre": base.BookConfig(
+        book_id="jane-eyre",
+        title_en="Jane Eyre",
+        title_zh="简·爱",
+        title_ja="ジェイン・エア",
+        title_zh_reading="jiǎn ài",
+        title_ja_reading="ジェイン エア",
+        author="Charlotte Brontë",
+        author_reading_zh="xià luò dì bó lǎng tè",
+        author_reading_ja="シャーロット ブロンテ",
+        en_source=Path("sources/jane-eyre/Jane Eyre.pdf"),
+        zh_source=Path("sources/jane-eyre/夏洛蒂·勃朗特-简·爱.pdf"),
+        en_start_marker="Chapter I",
+        zh_start_marker="那天不可能再去散步了",
+        source_spine_lang="en",
+        task_mode="trilingual_en_zh_ja_sources",
+        book_description=(
+            "Charlotte Brontë, Jane Eyre. English PDF is the alignment spine; "
+            "Chinese PDF is an OCR-polished published translation reference; "
+            "Japanese EPUB is a partial published translation reference for the first volume."
         ),
     ),
     "the-count-of-monte-cristo": base.BookConfig(
@@ -192,6 +219,17 @@ JAPANESE_REFERENCES: dict[str, JapaneseReferenceConfig] = {
             "natural Japanese for unmatched later chunks."
         ),
     ),
+    "jane-eyre": JapaneseReferenceConfig(
+        source=Path("sources/jane-eyre/ジェイン・エア（上）.epub"),
+        start_marker="その日、散歩",
+        coverage_ratio=0.5,
+        quality="partial_published_japanese_translation_reference",
+        note=(
+            "Japanese EPUB source is ジェイン・エア（上）, so it is a partial published "
+            "translation reference. Use it when the window matches the first half; generate "
+            "natural Japanese for unmatched later chunks."
+        ),
+    ),
     "les-miserables": JapaneseReferenceConfig(
         source=Path("sources/les-miserables/レ・ミゼラブル 全巻セット.epub"),
         start_marker="第一部ファンティーヌ",
@@ -206,6 +244,19 @@ def preferred_ocr_markdown(path: Path, *, lang: str) -> Path | None:
 
     if path.suffix.lower() != ".pdf":
         return None
+    forced_candidate: Path | None = None
+    for book_id, config in BOOKS.items():
+        if lang == "en" and config.en_source == path:
+            candidate = ROOT / "books" / book_id / "markdown" / "en.ocr-polished.md"
+        elif lang == "zh" and config.zh_source == path:
+            candidate = ROOT / "books" / book_id / "markdown" / "zh.ocr-polished.md"
+        else:
+            continue
+        if (book_id, lang) in FORCE_OCR_MARKDOWN:
+            forced_candidate = candidate
+            break
+    if forced_candidate is not None and forced_candidate.exists():
+        return forced_candidate
     if lang == "en":
         # English PDFs usually have reliable embedded text and chapter markers.
         # Keep OCR as an evidence/deep-check sidecar unless explicitly enabled.

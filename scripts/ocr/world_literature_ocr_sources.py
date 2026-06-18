@@ -48,6 +48,13 @@ SOURCES: tuple[OcrSource, ...] = (
         "chi_sim+eng",
     ),
     OcrSource(
+        "jane-eyre",
+        "zh",
+        "简·爱",
+        Path("sources/jane-eyre/夏洛蒂·勃朗特-简·爱.pdf"),
+        "chi_sim+eng",
+    ),
+    OcrSource(
         "the-count-of-monte-cristo",
         "zh",
         "基督山伯爵",

@@ -56,6 +56,8 @@ const THEME_HINTS = {
     "Macondo under tropical rain and golden afternoon light, yellow butterflies, old colonial house, banana leaves, magical realist atmosphere, warm ochre and emerald palette",
   "wuthering-heights":
     "windswept Yorkshire moor, storm clouds, heather, lonely stone farmhouse silhouette, gothic romantic tension, restrained slate green and violet-gray palette",
+  "jane-eyre":
+    "Victorian manor corridor, rain against tall windows, governess silhouette, candlelit library, restrained gothic romance atmosphere, deep green and warm amber palette",
   "the-count-of-monte-cristo":
     "Mediterranean prison fortress and sea cliffs, hidden treasure chest glow, elegant nineteenth-century adventure intrigue, moonlit blue and antique gold palette",
   "notre-dame-de-paris":
