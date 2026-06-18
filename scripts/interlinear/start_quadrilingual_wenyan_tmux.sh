@@ -15,6 +15,8 @@ Environment:
   MERGE_INTERVAL=180
   COMPILE_INTERVAL_SECONDS=1800
   MAIN_LAYERS="wenyan"
+  RETRY_FAILED=0
+  FAILED_RETRY_AGE_SECONDS=1800
 USAGE
 }
 
@@ -51,6 +53,8 @@ merge_interval="${MERGE_INTERVAL:-180}"
 compile_interval="${COMPILE_INTERVAL_SECONDS:-1800}"
 main_layers="${MAIN_LAYERS:-wenyan}"
 timeout="${CODEX_TIMEOUT_SECONDS:-7200}"
+retry_failed="${RETRY_FAILED:-0}"
+failed_retry_age="${FAILED_RETRY_AGE_SECONDS:-1800}"
 
 work_root="books/$book_id/work/quadrilingual/parallel-json"
 candidate_dir="$work_root/candidates"
@@ -61,6 +65,10 @@ mkdir -p "$work_root/logs" "$candidate_dir" "$raw_chunk_dir" "$log_dir"
 end_arg=""
 if [[ "$end_index" != "0" ]]; then
   end_arg="--end-index '$end_index'"
+fi
+retry_failed_arg=""
+if [[ "$retry_failed" == "1" || "$retry_failed" == "true" ]]; then
+  retry_failed_arg="--retry-failed --failed-retry-age-seconds '$failed_retry_age'"
 fi
 
 cat > "$run_script" <<EOF
@@ -84,6 +92,7 @@ for i in \$(seq 1 '$workers'); do
     $end_arg \
     --max-chunks '$max_chunks' \
     --codex-timeout-seconds '$timeout' \
+    $retry_failed_arg \
     --retries 4 \
     > "$work_root/logs/\$worker_id.log" 2>&1 &
   pids+=("\$!")
@@ -141,4 +150,5 @@ echo "workers: $workers"
 echo "model: $model"
 echo "reasoning: $reasoning"
 echo "main_layers: $main_layers"
+echo "retry_failed: $retry_failed"
 echo "run_script: $run_script"

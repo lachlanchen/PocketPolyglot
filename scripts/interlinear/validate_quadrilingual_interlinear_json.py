@@ -11,6 +11,7 @@ from typing import Any
 
 
 SPACE_RE = re.compile(r"\s+")
+SOURCE_NOTE_MARK_RE = re.compile(r"(?<=[。！？!?；;：:])\d{1,3}(?=$|[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff])")
 HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
 KANA_RE = re.compile(r"[\u3040-\u30ff]")
@@ -33,6 +34,10 @@ def compact(text: str) -> str:
 
 def no_space(text: str) -> str:
     return "".join(str(text or "").split())
+
+
+def source_compare_text(text: str) -> str:
+    return SOURCE_NOTE_MARK_RE.sub("", no_space(text))
 
 
 def token_text(tokens: Any) -> str:
@@ -129,14 +134,14 @@ def validate_chunk(source: dict[str, Any], result: dict[str, Any]) -> list[str]:
         pid = paragraph.get("id")
         expected = source_by_id.get(pid, "")
         where = f"paragraphs[{p_index}]"
-        if expected and no_space(paragraph.get("source_wenyan", "")) != no_space(expected):
+        if expected and source_compare_text(paragraph.get("source_wenyan", "")) != source_compare_text(expected):
             errors.append(f"{pid}: source_wenyan changed")
         units = paragraph.get("units")
         if not isinstance(units, list) or not units:
             errors.append(f"{pid}: missing units")
             continue
         rebuilt = "".join(str(unit.get("source_wenyan", "")) for unit in units if isinstance(unit, dict))
-        if expected and no_space(rebuilt) != no_space(expected):
+        if expected and source_compare_text(rebuilt) != source_compare_text(expected):
             errors.append(f"{pid}: units do not reconstruct source wenyan")
         for u_index, unit in enumerate(units):
             uwhere = f"{where}.units[{u_index}]"

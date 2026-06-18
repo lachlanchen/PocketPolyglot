@@ -20,6 +20,7 @@ from validate_quadrilingual_interlinear_json import HAN_RE, KANA_RE, validate_ch
 
 
 SPACE_RE = re.compile(r"\s+")
+SOURCE_NOTE_MARK_RE = re.compile(r"^\s*\d{1,3}\s*$")
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -39,6 +40,10 @@ def plain_text(text: Any) -> str:
     return SPACE_RE.sub(" ", str(text or "").replace("\n", " ")).strip()
 
 
+def ignorable_source_unit(text: str) -> bool:
+    return bool(SOURCE_NOTE_MARK_RE.fullmatch(str(text or "")))
+
+
 def source_unit_plan(chunk: dict[str, Any]) -> list[dict[str, Any]]:
     plan: list[dict[str, Any]] = []
     for paragraph in chunk.get("paragraphs", []):
@@ -48,7 +53,7 @@ def source_unit_plan(chunk: dict[str, Any]) -> list[dict[str, Any]]:
                 if not isinstance(unit, dict):
                     continue
                 source_wenyan = str(unit.get("source_wenyan") or unit.get("source_text") or "")
-                if not source_wenyan:
+                if not source_wenyan or ignorable_source_unit(source_wenyan):
                     continue
                 item = {
                     "unit_id": str(unit.get("unit_id") or f"{paragraph['id']}-u{index:03d}"),
@@ -62,6 +67,7 @@ def source_unit_plan(chunk: dict[str, Any]) -> list[dict[str, Any]]:
             units = [
                 {"unit_id": f"{paragraph['id']}-u{index:03d}", "source_wenyan": unit}
                 for index, unit in enumerate(split_cjk_units(str(paragraph.get("wenyan", ""))), start=1)
+                if not ignorable_source_unit(unit)
             ]
         plan.append({"id": paragraph["id"], "units": units})
     return plan
