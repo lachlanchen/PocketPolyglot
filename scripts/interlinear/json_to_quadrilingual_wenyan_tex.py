@@ -50,7 +50,7 @@ NOTE_MACRO = {
     "en": "QuadNoteEn",
 }
 DEFAULT_NOTE_ORDER = {
-    "wenyan": ["zh_modern", "ja_modern", "en"],
+    "wenyan": ["ja_modern", "zh_modern", "en"],
     "zh_modern": ["wenyan", "ja_modern", "en"],
     "ja_modern": ["wenyan", "zh_modern", "en"],
     "en": ["wenyan", "zh_modern", "ja_modern"],

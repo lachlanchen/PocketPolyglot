@@ -80,8 +80,8 @@ cat > "$build_dir/book.tex" <<EOF
 EOF
 
 case "$main_layer:$color_mode" in
-  wenyan:color) pdf_name="日本書紀（現代中文・現代日本語・英文注）.pdf" ;;
-  wenyan:blackwhite) pdf_name="日本書紀（現代中文・現代日本語・英文注・黑白）.pdf" ;;
+  wenyan:color) pdf_name="日本書紀（現代日本語・現代中文・英文注）.pdf" ;;
+  wenyan:blackwhite) pdf_name="日本書紀（現代日本語・現代中文・英文注・黑白）.pdf" ;;
   zh_modern:color) pdf_name="日本書紀現代中文（文言・現代日本語・英文注）.pdf" ;;
   zh_modern:blackwhite) pdf_name="日本書紀現代中文（文言・現代日本語・英文注・黑白）.pdf" ;;
   ja_modern:color) pdf_name="日本書紀現代日本語（文言・現代中文・英文注）.pdf" ;;

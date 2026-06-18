@@ -26,6 +26,8 @@ const THEME_HINTS = {
     "ancient Kyoto gate in rain, worn timber, twilight clouds, moral ambiguity, literary short-story atmosphere",
   kojiki:
     "ancient Japanese myth scroll, magatama beads, sea foam, torii shadow, sacred old paper and mineral pigments",
+  "nihon-shoki":
+    "ancient Japanese imperial chronicle, sacred court scrolls, bronze mirror, mountain shrine mist, early Yamato myth-history atmosphere, refined mineral pigments on aged paper",
   "woman-in-the-dunes":
     "abstract sand dunes, buried wooden house geometry, rope, wind-carved texture, existential modern Japanese mood",
   "chumon-no-ooi-ryoriten":
