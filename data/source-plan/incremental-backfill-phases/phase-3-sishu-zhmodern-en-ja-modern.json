@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "task_family": "incremental_english_and_modern_japanese_overlays.phase-3-sishu-zhmodern-en-ja-modern",
+  "phase": "phase-3-sishu-zhmodern-en-ja-modern",
+  "phase_description": "Sishu Jizhu; add modern Chinese bridge, then English and readable modern Japanese.",
+  "old_json_is_read_only": true,
+  "output_root": "data/source-plan/incremental-en-modern-ja",
+  "durable_overlay_root": "data/interlinear-overlays/en-modern-ja",
+  "recommended_model": "gpt-5.5",
+  "recommended_reasoning": "medium",
+  "recommended_run_command": "MODEL=gpt-5.5 REASONING=medium GLOBAL_MANIFEST=data/source-plan/incremental-backfill-phases/phase-3-sishu-zhmodern-en-ja-modern.json bash scripts/interlinear/start_incremental_overlay_tmux.sh zhjpbook-backfill-phase-3-sishu-zhmodern-en-ja-modern",
+  "generated_at": "2026-06-18T02:33:51.847518+00:00",
+  "books": [
+    {
+      "schema_version": 1,
+      "book_id": "sishu-jizhu-aginti",
+      "title": "四書章句集註",
+      "category": "classical_chinese",
+      "phase": "phase-3-sishu-zhmodern-en-ja-modern",
+      "source_area": "sources/sishu",
+      "priority": 300,
+      "dependency": "base_chunks_exist",
+      "notes": "Preferred Sishu pass. Preserve classical/commentary fields. Add modern Chinese first, then generate English and readable modern Japanese from that modern Chinese bridge.",
+      "chunk_id_source": "books_manifest",
+      "chunk_count": 2480,
+      "actions": [
+        {
+          "field": "zh_modern",
+          "kind": "modern_chinese_bridge",
+          "source_priority": [
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh_original",
+            "unit.zh",
+            "unit.source_text",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add accurate, readable modern Chinese aligned to the existing classical Chinese unit. Preserve names, terms, and source order; do not overwrite existing zh or ja."
+        },
+        {
+          "field": "en",
+          "kind": "understandable_english",
+          "source_priority": [
+            "overlay.zh_modern",
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh_original",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+        },
+        {
+          "field": "ja_modern",
+          "kind": "plain_modern_japanese",
+          "source_priority": [
+            "overlay.zh_modern",
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh_original",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add reader-friendly modern Japanese based on the modern Chinese meaning bridge. Preserve the existing ja field as legacy/source/comment Japanese."
+        }
+      ],
+      "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/sishu-jizhu-aginti/tasks.jsonl",
+      "old_json_is_read_only": true,
+      "task_template": {
+        "schema_version": 1,
+        "task_type": "incremental_language_overlay",
+        "category": "classical_chinese",
+        "dependency": "base_chunks_exist",
+        "actions": [
+          {
+            "field": "zh_modern",
+            "kind": "modern_chinese_bridge",
+            "source_priority": [
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh_original",
+              "unit.zh",
+              "unit.source_text",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add accurate, readable modern Chinese aligned to the existing classical Chinese unit. Preserve names, terms, and source order; do not overwrite existing zh or ja."
+          },
+          {
+            "field": "en",
+            "kind": "understandable_english",
+            "source_priority": [
+              "overlay.zh_modern",
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh_original",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          },
+          {
+            "field": "ja_modern",
+            "kind": "plain_modern_japanese",
+            "source_priority": [
+              "overlay.zh_modern",
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh_original",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add reader-friendly modern Japanese based on the modern Chinese meaning bridge. Preserve the existing ja field as legacy/source/comment Japanese."
+          }
+        ],
+        "do_not_modify_templates": [
+          "data/interlinear/sishu-jizhu-aginti/chunks/{chunk_id}.json",
+          "books/sishu-jizhu-aginti/work/bilingual/interlinear/chunks/{chunk_id}.json",
+          "books/sishu-jizhu-aginti/work/bilingual/reviewed/chunks/{chunk_id}.json"
+        ],
+        "output_overlay_path_template": "books/sishu-jizhu-aginti/work/incremental/en-modern-ja/overlays/chunks/{chunk_id}.json",
+        "durable_overlay_path_template": "data/interlinear-overlays/en-modern-ja/sishu-jizhu-aginti/chunks/{chunk_id}.json",
+        "merge_policy": {
+          "preserve_existing_fields": true,
+          "append_only_fields": [
+            "zh_modern",
+            "en",
+            "ja_modern"
+          ],
+          "legacy_japanese_field": "ja",
+          "modern_japanese_field": "ja_modern",
+          "modern_chinese_field": "zh_modern"
+        },
+        "validation": {
+          "require_no_source_text_loss": true,
+          "require_modern_zh_if_requested": true,
+          "require_english_if_requested": true,
+          "require_modern_ja_if_requested": true,
+          "forbid_overwriting_legacy_ja": true,
+          "require_ruby_for_kanji_tokens_in_ja_modern": true
+        }
+      },
+      "generated_at": "2026-06-18T02:33:50.764907+00:00"
+    },
+    {
+      "schema_version": 1,
+      "book_id": "sishu-jizhu",
+      "title": "四書章句集註 legacy",
+      "category": "classical_chinese_legacy",
+      "phase": "phase-3-sishu-zhmodern-en-ja-modern",
+      "source_area": "sources/sishu",
+      "priority": 310,
+      "dependency": "base_chunks_exist",
+      "notes": "Legacy Sishu pass. Keep old output; write only overlay files. Add modern Chinese first, then English and readable modern Japanese.",
+      "chunk_id_source": "books_manifest",
+      "chunk_count": 925,
+      "actions": [
+        {
+          "field": "zh_modern",
+          "kind": "modern_chinese_bridge",
+          "source_priority": [
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh_original",
+            "unit.zh",
+            "unit.source_text",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add accurate, readable modern Chinese aligned to the existing classical Chinese unit. Preserve names, terms, and source order; do not overwrite existing zh or ja."
+        },
+        {
+          "field": "en",
+          "kind": "understandable_english",
+          "source_priority": [
+            "overlay.zh_modern",
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh_original",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+        },
+        {
+          "field": "ja_modern",
+          "kind": "plain_modern_japanese",
+          "source_priority": [
+            "overlay.zh_modern",
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh_original",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add reader-friendly modern Japanese based on the modern Chinese meaning bridge. Preserve the existing ja field as legacy/source/comment Japanese."
+        }
+      ],
+      "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/sishu-jizhu/tasks.jsonl",
+      "old_json_is_read_only": true,
+      "task_template": {
+        "schema_version": 1,
+        "task_type": "incremental_language_overlay",
+        "category": "classical_chinese_legacy",
+        "dependency": "base_chunks_exist",
+        "actions": [
+          {
+            "field": "zh_modern",
+            "kind": "modern_chinese_bridge",
+            "source_priority": [
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh_original",
+              "unit.zh",
+              "unit.source_text",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add accurate, readable modern Chinese aligned to the existing classical Chinese unit. Preserve names, terms, and source order; do not overwrite existing zh or ja."
+          },
+          {
+            "field": "en",
+            "kind": "understandable_english",
+            "source_priority": [
+              "overlay.zh_modern",
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh_original",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          },
+          {
+            "field": "ja_modern",
+            "kind": "plain_modern_japanese",
+            "source_priority": [
+              "overlay.zh_modern",
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh_original",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add reader-friendly modern Japanese based on the modern Chinese meaning bridge. Preserve the existing ja field as legacy/source/comment Japanese."
+          }
+        ],
+        "do_not_modify_templates": [
+          "data/interlinear/sishu-jizhu/chunks/{chunk_id}.json",
+          "books/sishu-jizhu/work/bilingual/interlinear/chunks/{chunk_id}.json",
+          "books/sishu-jizhu/work/bilingual/reviewed/chunks/{chunk_id}.json"
+        ],
+        "output_overlay_path_template": "books/sishu-jizhu/work/incremental/en-modern-ja/overlays/chunks/{chunk_id}.json",
+        "durable_overlay_path_template": "data/interlinear-overlays/en-modern-ja/sishu-jizhu/chunks/{chunk_id}.json",
+        "merge_policy": {
+          "preserve_existing_fields": true,
+          "append_only_fields": [
+            "zh_modern",
+            "en",
+            "ja_modern"
+          ],
+          "legacy_japanese_field": "ja",
+          "modern_japanese_field": "ja_modern",
+          "modern_chinese_field": "zh_modern"
+        },
+        "validation": {
+          "require_no_source_text_loss": true,
+          "require_modern_zh_if_requested": true,
+          "require_english_if_requested": true,
+          "require_modern_ja_if_requested": true,
+          "forbid_overwriting_legacy_ja": true,
+          "require_ruby_for_kanji_tokens_in_ja_modern": true
+        }
+      },
+      "generated_at": "2026-06-18T02:33:50.809080+00:00"
+    }
+  ],
+  "worker_contract": {
+    "read_existing_chunks_only": true,
+    "never_delete_or_rewrite_old_json": true,
+    "write_overlay_chunks_first": true,
+    "merge_only_after_validation": true,
+    "compile_new_editions_from_overlay_plus_base": true,
+    "run_one_phase_at_a_time": true,
+    "phase_order": [
+      "phase-1-normal-english",
+      "phase-2-shiji-en-ja-modern",
+      "phase-3-sishu-zhmodern-en-ja-modern"
+    ]
+  }
+}

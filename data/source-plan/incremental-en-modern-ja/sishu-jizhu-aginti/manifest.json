@@ -3,8 +3,9 @@
   "book_id": "sishu-jizhu-aginti",
   "title": "四書章句集註",
   "category": "classical_chinese",
+  "phase": "phase-3-sishu-zhmodern-en-ja-modern",
   "source_area": "sources/sishu",
-  "priority": 70,
+  "priority": 300,
   "dependency": "base_chunks_exist",
   "notes": "Preferred Sishu pass. Preserve classical/commentary fields. Add modern Chinese first, then generate English and readable modern Japanese from that modern Chinese bridge.",
   "chunk_id_source": "books_manifest",
@@ -125,5 +126,5 @@
       "require_ruby_for_kanji_tokens_in_ja_modern": true
     }
   },
-  "generated_at": "2026-06-14T02:44:31.404743+00:00"
+  "generated_at": "2026-06-18T02:33:50.764907+00:00"
 }

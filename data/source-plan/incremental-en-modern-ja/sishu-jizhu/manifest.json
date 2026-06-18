@@ -3,8 +3,9 @@
   "book_id": "sishu-jizhu",
   "title": "四書章句集註 legacy",
   "category": "classical_chinese_legacy",
+  "phase": "phase-3-sishu-zhmodern-en-ja-modern",
   "source_area": "sources/sishu",
-  "priority": 75,
+  "priority": 310,
   "dependency": "base_chunks_exist",
   "notes": "Legacy Sishu pass. Keep old output; write only overlay files. Add modern Chinese first, then English and readable modern Japanese.",
   "chunk_id_source": "books_manifest",
@@ -125,5 +126,5 @@
       "require_ruby_for_kanji_tokens_in_ja_modern": true
     }
   },
-  "generated_at": "2026-06-14T02:44:31.458523+00:00"
+  "generated_at": "2026-06-18T02:33:50.809080+00:00"
 }

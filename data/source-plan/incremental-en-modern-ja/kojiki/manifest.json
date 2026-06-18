@@ -3,8 +3,9 @@
   "book_id": "kojiki",
   "title": "古事記",
   "category": "ancient_classic",
+  "phase": "later-special-ancient",
   "source_area": "sources/kojiki",
-  "priority": 120,
+  "priority": 410,
   "dependency": "base_chunks_exist",
   "notes": "Ancient text. Add English and a reader-friendly modern Japanese paraphrase from the modern Chinese bridge/source layer.",
   "chunk_id_source": "books_manifest",
@@ -99,5 +100,5 @@
       "require_ruby_for_kanji_tokens_in_ja_modern": true
     }
   },
-  "generated_at": "2026-06-14T02:44:33.781750+00:00"
+  "generated_at": "2026-06-18T02:33:51.533283+00:00"
 }

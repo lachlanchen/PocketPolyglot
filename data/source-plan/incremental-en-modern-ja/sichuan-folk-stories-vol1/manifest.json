@@ -3,8 +3,9 @@
   "book_id": "sichuan-folk-stories-vol1",
   "title": "中国民间故事集成 四川卷 上",
   "category": "ocr_folk",
+  "phase": "later-special-ocr",
   "source_area": "sources/中国民间故事集成 四川卷 上 10978512.pdf",
-  "priority": 50,
+  "priority": 400,
   "dependency": "base_chunks_exist",
   "notes": "Use corrected_text when present; generate plain, natural Japanese from the corrected modern Chinese story text.",
   "chunk_id_source": "books_manifest",
@@ -99,5 +100,5 @@
       "require_ruby_for_kanji_tokens_in_ja_modern": true
     }
   },
-  "generated_at": "2026-06-14T02:44:31.071850+00:00"
+  "generated_at": "2026-06-18T02:33:51.411866+00:00"
 }

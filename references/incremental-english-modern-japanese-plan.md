@@ -69,6 +69,21 @@ do not assume it is reader-friendly when the task asks for `ja_modern`.
 
 ## Prepared Scope
 
+The active resume plan is split into three phase manifests. Run them one at a
+time, in this order:
+
+1. `phase-1-normal-english`: normal modern bilingual books, English only.
+2. `phase-2-shiji-en-ja-modern`: Sima Qian Shiji, English plus readable modern
+   Japanese from existing modern Chinese.
+3. `phase-3-sishu-zhmodern-en-ja-modern`: Sishu Jizhu, modern Chinese bridge,
+   English, and readable modern Japanese.
+
+Phase manifests live at:
+
+```text
+data/source-plan/incremental-backfill-phases/<phase>.json
+```
+
 English overlays are prepared for all listed older books. Modern Chinese is
 explicitly prepared for:
 
@@ -83,7 +98,8 @@ Modern Japanese is also prepared for:
 - `kojiki`
 
 `shiji-aginti` already has `zh_original` and `zh_modern`; the current
-incremental task only backfills English and preserves existing Japanese.
+incremental task backfills English and readable modern Japanese from
+`zh_modern`, while preserving existing Japanese.
 
 `ginga-tetsudo` and `chumon-no-ooi-ryoriten` are listed with a dependency on
 their current bilingual completion, so they should not be consumed until their
@@ -120,3 +136,22 @@ The status file may contain `weekly_remaining_percent`, `remaining_percent`, or
 similar numeric keys. If a threshold is configured and no usable usage source is
 available, workers stop with retry code `86` and the tmux supervisor waits before
 trying again.
+
+## Future Resume Commands
+
+Do not start these until explicitly requested. They default to `gpt-5.5` with
+medium reasoning:
+
+```sh
+bash scripts/interlinear/start_incremental_backfill_phase_tmux.sh phase-1-normal-english
+bash scripts/interlinear/start_incremental_backfill_phase_tmux.sh phase-2-shiji-en-ja-modern
+bash scripts/interlinear/start_incremental_backfill_phase_tmux.sh phase-3-sishu-zhmodern-en-ja-modern
+```
+
+Equivalent explicit form:
+
+```sh
+MODEL=gpt-5.5 REASONING=medium \
+GLOBAL_MANIFEST=data/source-plan/incremental-backfill-phases/phase-1-normal-english.json \
+bash scripts/interlinear/start_incremental_overlay_tmux.sh zhjpbook-backfill-phase-1-normal-english
+```

@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "task_family": "incremental_english_and_modern_japanese_overlays.phase-2-shiji-en-ja-modern",
+  "phase": "phase-2-shiji-en-ja-modern",
+  "phase_description": "Sima Qian Shiji; add English and readable modern Japanese from existing zh_modern.",
+  "old_json_is_read_only": true,
+  "output_root": "data/source-plan/incremental-en-modern-ja",
+  "durable_overlay_root": "data/interlinear-overlays/en-modern-ja",
+  "recommended_model": "gpt-5.5",
+  "recommended_reasoning": "medium",
+  "recommended_run_command": "MODEL=gpt-5.5 REASONING=medium GLOBAL_MANIFEST=data/source-plan/incremental-backfill-phases/phase-2-shiji-en-ja-modern.json bash scripts/interlinear/start_incremental_overlay_tmux.sh zhjpbook-backfill-phase-2-shiji-en-ja-modern",
+  "generated_at": "2026-06-18T02:33:51.847233+00:00",
+  "books": [
+    {
+      "schema_version": 1,
+      "book_id": "shiji-aginti",
+      "title": "史記",
+      "category": "classical_chinese",
+      "phase": "phase-2-shiji-en-ja-modern",
+      "source_area": "sources/shiji",
+      "priority": 200,
+      "dependency": "base_chunks_exist",
+      "notes": "Shiji chunks already contain zh_original and zh_modern; backfill English and readable modern Japanese from zh_modern without rewriting existing Japanese.",
+      "chunk_id_source": "data_interlinear_chunks",
+      "chunk_count": 4622,
+      "actions": [
+        {
+          "field": "en",
+          "kind": "understandable_english",
+          "source_priority": [
+            "overlay.zh_modern",
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh_original",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+        },
+        {
+          "field": "ja_modern",
+          "kind": "plain_modern_japanese",
+          "source_priority": [
+            "overlay.zh_modern",
+            "unit.zh_modern",
+            "paragraph.corrected_text",
+            "unit.zh_original",
+            "unit.zh",
+            "paragraph.source_text"
+          ],
+          "instruction": "Add reader-friendly modern Japanese based on the modern Chinese meaning bridge. Preserve the existing ja field as legacy/source/comment Japanese."
+        }
+      ],
+      "tasks_jsonl": "data/source-plan/incremental-en-modern-ja/shiji-aginti/tasks.jsonl",
+      "old_json_is_read_only": true,
+      "task_template": {
+        "schema_version": 1,
+        "task_type": "incremental_language_overlay",
+        "category": "classical_chinese",
+        "dependency": "base_chunks_exist",
+        "actions": [
+          {
+            "field": "en",
+            "kind": "understandable_english",
+            "source_priority": [
+              "overlay.zh_modern",
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh_original",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add clear, natural English aligned to the existing sentence/unit structure. Prefer modern Chinese when available. Preserve names and culturally specific terms; do not overwrite existing zh or ja."
+          },
+          {
+            "field": "ja_modern",
+            "kind": "plain_modern_japanese",
+            "source_priority": [
+              "overlay.zh_modern",
+              "unit.zh_modern",
+              "paragraph.corrected_text",
+              "unit.zh_original",
+              "unit.zh",
+              "paragraph.source_text"
+            ],
+            "instruction": "Add reader-friendly modern Japanese based on the modern Chinese meaning bridge. Preserve the existing ja field as legacy/source/comment Japanese."
+          }
+        ],
+        "do_not_modify_templates": [
+          "data/interlinear/shiji-aginti/chunks/{chunk_id}.json",
+          "books/shiji-aginti/work/bilingual/interlinear/chunks/{chunk_id}.json",
+          "books/shiji-aginti/work/bilingual/reviewed/chunks/{chunk_id}.json"
+        ],
+        "output_overlay_path_template": "books/shiji-aginti/work/incremental/en-modern-ja/overlays/chunks/{chunk_id}.json",
+        "durable_overlay_path_template": "data/interlinear-overlays/en-modern-ja/shiji-aginti/chunks/{chunk_id}.json",
+        "merge_policy": {
+          "preserve_existing_fields": true,
+          "append_only_fields": [
+            "zh_modern",
+            "en",
+            "ja_modern"
+          ],
+          "legacy_japanese_field": "ja",
+          "modern_japanese_field": "ja_modern",
+          "modern_chinese_field": "zh_modern"
+        },
+        "validation": {
+          "require_no_source_text_loss": true,
+          "require_modern_zh_if_requested": false,
+          "require_english_if_requested": true,
+          "require_modern_ja_if_requested": true,
+          "forbid_overwriting_legacy_ja": true,
+          "require_ruby_for_kanji_tokens_in_ja_modern": true
+        }
+      },
+      "generated_at": "2026-06-18T02:33:50.558947+00:00"
+    }
+  ],
+  "worker_contract": {
+    "read_existing_chunks_only": true,
+    "never_delete_or_rewrite_old_json": true,
+    "write_overlay_chunks_first": true,
+    "merge_only_after_validation": true,
+    "compile_new_editions_from_overlay_plus_base": true,
+    "run_one_phase_at_a_time": true,
+    "phase_order": [
+      "phase-1-normal-english",
+      "phase-2-shiji-en-ja-modern",
+      "phase-3-sishu-zhmodern-en-ja-modern"
+    ]
+  }
+}

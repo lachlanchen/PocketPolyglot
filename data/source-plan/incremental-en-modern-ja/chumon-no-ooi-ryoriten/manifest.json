@@ -3,8 +3,9 @@
   "book_id": "chumon-no-ooi-ryoriten",
   "title": "注文の多い料理店",
   "category": "prepared_bilingual",
+  "phase": "deferred-prepared-bilingual",
   "source_area": "sources/注文の多い料理店",
-  "priority": 150,
+  "priority": 510,
   "dependency": "wait_for_current_bilingual_completion",
   "notes": "Prepare now, run enhancement only after the current bilingual base queue finishes and reviewed chunks are promoted.",
   "chunk_id_source": "books_manifest",
@@ -73,5 +74,5 @@
       "require_ruby_for_kanji_tokens_in_ja_modern": true
     }
   },
-  "generated_at": "2026-06-14T02:44:34.040856+00:00"
+  "generated_at": "2026-06-18T02:33:51.812580+00:00"
 }
