@@ -14,6 +14,7 @@ Options:
   --comment-lang <en|zh|ja>  comment language
   --color-mode <mode>        color or blackwhite
   --allow-missing            build a preview from available chunks
+  --input-json <path>        render from an already assembled trilingual JSON
   --cover-image <path>       workspace-relative cover image
   TRILINGUAL_BACKFILL_GRAMMAR=0 disables the default color-role backfill
   -h, --help                 show help
@@ -27,6 +28,7 @@ comment_lang=""
 color_mode="color"
 allow_missing=0
 cover_image=""
+input_json=""
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -35,6 +37,7 @@ while [[ $# -gt 0 ]]; do
     --comment-lang) comment_lang="${2:-}"; shift 2 ;;
     --color-mode) color_mode="${2:-}"; shift 2 ;;
     --allow-missing) allow_missing=1; shift ;;
+    --input-json) input_json="${2:-}"; shift 2 ;;
     --cover-image) cover_image="${2:-}"; shift 2 ;;
     -h|--help) usage; exit 0 ;;
     *) echo "Unknown option: $1" >&2; usage >&2; exit 1 ;;
@@ -97,7 +100,11 @@ dir_lang() {
 
 direction="$(dir_lang "$main_lang")-main"
 build_dir="build/$book_id/$pair/$direction/$color_mode"
-assembled_json="books/$book_id/work/trilingual/preview/$book_id.partial.json"
+if [[ -n "$input_json" ]]; then
+  assembled_json="$input_json"
+else
+  assembled_json="books/$book_id/work/trilingual/preview/$book_id.partial.json"
+fi
 
 lang_title() {
   case "$1" in
@@ -123,26 +130,31 @@ output_pdf="$build_dir/$base_title.pdf"
 
 mkdir -p "$build_dir" "$(dirname "$assembled_json")"
 
-if [[ "$color_mode" == "color" && "${TRILINGUAL_BACKFILL_GRAMMAR:-1}" != "0" ]]; then
-  if find "$chunk_dir" -maxdepth 1 -name '*.json' -print -quit | grep -q .; then
-    python scripts/interlinear/backfill_trilingual_grammar_roles.py \
-      --chunk-dir "$chunk_dir" \
-      --chunks-jsonl "$chunks_jsonl" \
-      --overwrite-collapsed
+if [[ -z "$input_json" ]]; then
+  if [[ "$color_mode" == "color" && "${TRILINGUAL_BACKFILL_GRAMMAR:-1}" != "0" ]]; then
+    if find "$chunk_dir" -maxdepth 1 -name '*.json' -print -quit | grep -q .; then
+      python scripts/interlinear/backfill_trilingual_grammar_roles.py \
+        --chunk-dir "$chunk_dir" \
+        --chunks-jsonl "$chunks_jsonl" \
+        --overwrite-collapsed
+    fi
   fi
-fi
 
-assemble_args=(
-  python scripts/interlinear/assemble_trilingual_json.py
-  --manifest "$manifest"
-  --chunks-jsonl "$chunks_jsonl"
-  --chunk-dir "$chunk_dir"
-  --output "$assembled_json"
-)
-if [[ "$allow_missing" -eq 1 ]]; then
-  assemble_args+=(--allow-missing)
+  assemble_args=(
+    python scripts/interlinear/assemble_trilingual_json.py
+    --manifest "$manifest"
+    --chunks-jsonl "$chunks_jsonl"
+    --chunk-dir "$chunk_dir"
+    --output "$assembled_json"
+  )
+  if [[ "$allow_missing" -eq 1 ]]; then
+    assemble_args+=(--allow-missing)
+  fi
+  "${assemble_args[@]}"
+elif [[ ! -f "$assembled_json" ]]; then
+  echo "Missing --input-json file: $assembled_json" >&2
+  exit 1
 fi
-"${assemble_args[@]}"
 python scripts/interlinear/validate_trilingual_interlinear_json.py "$assembled_json"
 
 python scripts/interlinear/json_to_trilingual_pair_tex.py "$assembled_json" \

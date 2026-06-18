@@ -33,6 +33,35 @@ if [[ ! -f "books/$book_id/book-plan.json" ]]; then
   exit 1
 fi
 
+plan="books/$book_id/book-plan.json"
+manifest="$(jq -r '.chunks_manifest' "$plan")"
+chunks_jsonl="$(jq -r '.chunks_jsonl' "$plan")"
+chunk_dir="$(jq -r '.raw_chunk_dir' "$plan")"
+snapshot_json="books/$book_id/work/trilingual/preview/$book_id.compile-snapshot.json"
+mkdir -p "$(dirname "$snapshot_json")"
+
+if [[ "${TRILINGUAL_BACKFILL_GRAMMAR:-1}" != "0" ]]; then
+  if find "$chunk_dir" -maxdepth 1 -name '*.json' -print -quit | grep -q .; then
+    python scripts/interlinear/backfill_trilingual_grammar_roles.py \
+      --chunk-dir "$chunk_dir" \
+      --chunks-jsonl "$chunks_jsonl" \
+      --overwrite-collapsed
+  fi
+fi
+
+assemble_args=(
+  python scripts/interlinear/assemble_trilingual_json.py
+  --manifest "$manifest"
+  --chunks-jsonl "$chunks_jsonl"
+  --chunk-dir "$chunk_dir"
+  --output "$snapshot_json"
+)
+if [[ "${ALLOW_MISSING:-1}" != "0" ]]; then
+  assemble_args+=(--allow-missing)
+fi
+"${assemble_args[@]}"
+python scripts/interlinear/validate_trilingual_interlinear_json.py "$snapshot_json"
+
 compile_one() {
   local main_lang="$1"
   local comment_lang="$2"
@@ -42,6 +71,7 @@ compile_one() {
     --main-lang "$main_lang" \
     --comment-lang "$comment_lang" \
     --color-mode "$color_mode" \
+    --input-json "$snapshot_json" \
     "${allow_missing_arg[@]}"
 }
 
