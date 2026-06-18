@@ -18,6 +18,7 @@ from pypinyin import Style, pinyin
 
 from codex_chunk_worker import compact, extract_json, load_chunks, mentions_usage_limit, run_codex
 from codex_trilingual_parallel_json_worker import claim_chunk, iter_selected, release_claim, valid_existing
+from english_sentence_splitter import sentence_boundary_ends
 from validate_trilingual_interlinear_json import (
     HAN_RE,
     KANA_RE,
@@ -29,7 +30,6 @@ from validate_trilingual_interlinear_json import (
 
 SPACE_RE = re.compile(r"\s+")
 EN_TOKEN_RE = re.compile(r"\s+|[A-Za-z]+(?:['’-][A-Za-z]+)*|\d+(?:[.,]\d+)*|[^\sA-Za-z0-9]+")
-EN_SENTENCE_BOUNDARY_RE = re.compile(r'[.!?]["”’)]*\s+')
 SOURCE_SPINE_LANGS = {"en", "zh", "ja"}
 CJK_SENTENCE_END = set("。！？!?；;")
 CJK_CLOSERS = set("」』”’）)]〉》")
@@ -61,8 +61,7 @@ def plain_text(value: Any) -> str:
 def split_english_units(text: str) -> list[str]:
     parts: list[str] = []
     start = 0
-    for match in EN_SENTENCE_BOUNDARY_RE.finditer(text):
-        end = match.end()
+    for end in sentence_boundary_ends(text):
         piece = text[start:end]
         if piece.strip():
             parts.append(piece)
@@ -540,6 +539,12 @@ def main() -> int:
     parser.add_argument("--claim-ttl-seconds", type=int, default=21600)
     parser.add_argument("--codex-timeout-seconds", type=int, default=7200)
     parser.add_argument("--retry-failed", action="store_true")
+    parser.add_argument(
+        "--failed-retry-age-seconds",
+        type=int,
+        default=1800,
+        help="When --retry-failed is set, only retry failed chunks older than this age; use 0 for targeted repair.",
+    )
     args = parser.parse_args()
 
     cwd = Path.cwd()
@@ -567,11 +572,20 @@ def main() -> int:
             candidate_path = accepted_dir / f"{chunk_id}.json"
             if valid_existing(canonical_path, chunk) or valid_existing(candidate_path, chunk):
                 continue
-            if not args.retry_failed and (failed_dir / f"{chunk_id}.json").exists():
-                continue
+            failed_path = failed_dir / f"{chunk_id}.json"
+            if failed_path.exists():
+                if not args.retry_failed:
+                    continue
+                if args.failed_retry_age_seconds > 0:
+                    try:
+                        failed_age = time.time() - failed_path.stat().st_mtime
+                    except FileNotFoundError:
+                        failed_age = args.failed_retry_age_seconds
+                    if failed_age < args.failed_retry_age_seconds:
+                        continue
             if claim_chunk(claim_dir, chunk_id, args.worker_id, args.claim_ttl_seconds):
                 if args.retry_failed:
-                    (failed_dir / f"{chunk_id}.json").unlink(missing_ok=True)
+                    failed_path.unlink(missing_ok=True)
                 claimed = item
                 break
         if claimed is None:

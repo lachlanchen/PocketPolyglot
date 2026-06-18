@@ -15,6 +15,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from english_sentence_splitter import sentence_boundary_ends
+
 
 ROOT = Path(__file__).resolve().parents[2]
 SCIENCE_FICTION_DIR = Path("sources/mars/science-fiction")
@@ -720,8 +722,7 @@ def parse_zh_source(path: Path | None, *, start_marker: str | None, end_marker: 
 def split_english_units(text: str, *, max_chars: int) -> list[str]:
     pieces: list[str] = []
     start = 0
-    for match in EN_SENTENCE_BOUNDARY_RE.finditer(text):
-        end = match.end()
+    for end in sentence_boundary_ends(text):
         piece = text[start:end].strip()
         if piece:
             pieces.append(piece)

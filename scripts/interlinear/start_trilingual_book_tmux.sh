@@ -22,6 +22,9 @@ Environment:
   WORKER_SCRIPT=scripts/interlinear/codex_trilingual_plain_json_worker.py
   BACKFILL_GRAMMAR_AFTER_MERGE=1
   RETRY_FAILED=0
+  FAILED_RETRY_AGE_SECONDS=1800
+  START_STALL_REPAIR=1
+  REPAIR_SLEEP_SECONDS=300
 USAGE
 }
 
@@ -77,7 +80,7 @@ if [[ "$end_index" != "0" ]]; then
 fi
 retry_failed_arg=()
 if [[ "${RETRY_FAILED:-0}" == "1" ]]; then
-  retry_failed_arg=(--retry-failed)
+  retry_failed_arg=(--retry-failed --failed-retry-age-seconds "${FAILED_RETRY_AGE_SECONDS:-1800}")
 fi
 
 cat > "$run_script" <<EOF
@@ -177,6 +180,20 @@ EOF
 chmod +x "$run_script"
 
 tmux new-session -d -s "$session" -n trilingual-json "bash '$run_script' 2>&1 | tee '$log_dir/${session}_$(date +%Y%m%d_%H%M%S).log'"
+
+if [[ "${START_STALL_REPAIR:-1}" != "0" ]]; then
+  repair_session="${REPAIR_SESSION:-${session}-repair}"
+  if tmux has-session -t "=$repair_session" 2>/dev/null; then
+    echo "repair tmux already exists: $repair_session"
+  else
+    MODEL="$model" \
+      REASONING="$reasoning" \
+      CODEX_TIMEOUT_SECONDS="$codex_timeout_seconds" \
+      REPAIR_SLEEP_SECONDS="${REPAIR_SLEEP_SECONDS:-300}" \
+      WORKER_SCRIPT="$worker_script" \
+      bash scripts/interlinear/start_trilingual_stall_repair_tmux.sh "$book_id" "$session" "$repair_session"
+  fi
+fi
 
 echo "tmux: $session"
 echo "book_id: $book_id"
