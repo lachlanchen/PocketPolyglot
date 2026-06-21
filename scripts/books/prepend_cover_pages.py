@@ -117,7 +117,20 @@ def make_cover_pdf(cover_image: Path, width: float, height: float, target: Path)
     c.save()
 
 
-def prepend_cover(pdf: Path, cover_image: Path) -> None:
+def write_marker(pdf: Path, cover_image: Path, mode: str) -> None:
+    marker = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "cover": str(cover_image),
+        "pdf": str(pdf),
+        "mode": mode,
+    }
+    pdf.with_suffix(pdf.suffix + ".cover.json").write_text(
+        json.dumps(marker, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
+def apply_cover(pdf: Path, cover_image: Path, *, replace_existing: bool) -> None:
     reader = PdfReader(str(pdf))
     if not reader.pages:
         raise RuntimeError(f"{pdf} has no pages")
@@ -134,21 +147,14 @@ def prepend_cover(pdf: Path, cover_image: Path) -> None:
         cover_reader = PdfReader(str(cover_pdf))
         writer = PdfWriter()
         writer.add_page(cover_reader.pages[0])
-        for page in reader.pages:
+        start_index = 1 if replace_existing else 0
+        for page in reader.pages[start_index:]:
             writer.add_page(page)
         with output_pdf.open("wb") as handle:
             writer.write(handle)
         output_pdf.replace(pdf)
 
-    marker = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "cover": str(cover_image),
-        "pdf": str(pdf),
-    }
-    pdf.with_suffix(pdf.suffix + ".cover.json").write_text(
-        json.dumps(marker, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
+    write_marker(pdf, cover_image, "replace" if replace_existing else "prepend")
 
 
 def main() -> int:
@@ -157,6 +163,7 @@ def main() -> int:
     parser.add_argument("--assets-dir", type=Path, default=ROOT / "assets" / "covers")
     parser.add_argument("--book", action="append", dest="books", help="book id to process")
     parser.add_argument("--force", action="store_true", help="prepend even if a fresh marker exists")
+    parser.add_argument("--replace-existing", action="store_true", help="replace first image-cover page instead of skipping it")
     args = parser.parse_args()
 
     build_dir = args.build_dir.resolve()
@@ -182,14 +189,16 @@ def main() -> int:
                 print(f"skip marker: {pdf}")
                 skipped += 1
                 continue
-            if not args.force and first_page_has_image(pdf):
+            has_image_cover = first_page_has_image(pdf)
+            if not args.force and has_image_cover and not args.replace_existing:
                 print(f"skip image-cover: {pdf}")
                 skipped += 1
                 continue
             if not args.force and source_has_current_cover(pdf, book_id):
                 print(f"source has cover but pdf has no first-page image: {pdf}")
-            print(f"prepend cover: {pdf}")
-            prepend_cover(pdf, cover)
+            replace = args.replace_existing and has_image_cover
+            print(f"{'replace' if replace else 'prepend'} cover: {pdf}")
+            apply_cover(pdf, cover, replace_existing=replace)
             processed += 1
 
     print(f"processed={processed} skipped={skipped} missing={missing}")

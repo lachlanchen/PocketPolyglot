@@ -62,26 +62,26 @@ def main() -> None:
     ink = (32, 24, 18, 255)
     muted = (76, 57, 42, 235)
     seal = (132, 45, 29, 235)
-    panel_fill = (246, 232, 200, 86)
-    panel_line = (44, 34, 27, 190)
+    panel_fill = (246, 232, 200, 68)
+    panel_line = (44, 34, 27, 150)
 
-    panel_left = int(width * 0.27)
-    panel_right = int(width * 0.73)
-    panel_top = int(height * 0.07)
-    panel_bottom = int(height * 0.92)
+    panel_left = int(width * 0.30)
+    panel_right = int(width * 0.70)
+    panel_top = int(height * 0.085)
+    panel_bottom = int(height * 0.905)
     draw.rounded_rectangle(
         (panel_left, panel_top, panel_right, panel_bottom),
         radius=14,
         fill=panel_fill,
         outline=panel_line,
-        width=4,
+        width=3,
     )
     inset = 24
     draw.rounded_rectangle(
         (panel_left + inset, panel_top + inset, panel_right - inset, panel_bottom - inset),
         radius=8,
-        outline=(44, 34, 27, 105),
-        width=2,
+        outline=(44, 34, 27, 76),
+        width=1,
     )
 
     title_font = font(SERIF_BOLD, int(height * 0.070), index=2)
@@ -124,7 +124,7 @@ def main() -> None:
     draw_centered(draw, "powered by LazyingArt", (width // 2, int(height * 0.865)), latin_font, muted)
 
     composed = Image.alpha_composite(image, overlay)
-    composed.save(OUTPUT)
+    composed.save(OUTPUT, optimize=True)
     print(OUTPUT.relative_to(ROOT))
 
 

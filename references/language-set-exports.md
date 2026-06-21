@@ -1,11 +1,11 @@
 # Language Set Exports
 
-Generated at: `2026-06-18T07:57:26.509543+00:00`
+Generated at: `2026-06-21T01:25:24.367271+00:00`
 Nutstore root: `/home/lachlan/Nutstore Files/Projects/LinguaLeaf`
 
 | Set | Folder | Books | PDFs | Color | Black-white | Notes |
 | --- | --- | ---: | ---: | ---: | ---: | --- |
-| EN/JP/ZH | `en-main-jp-zh` | 26 | 52 | 26 | 26 | English main with indented Japanese and Chinese notes. |
+| EN/JP/ZH | `en-main-jp-zh` | 13 | 27 | 13 | 14 | English main with indented Japanese and Chinese notes. |
 | JP/ZH trilingual leftovers | `jp-zh-trilingual-leftovers` | 11 | 44 | 22 | 22 | Ordinary Japanese/Chinese paired editions that do not yet have English added. |
 | Wenyanwen/JP/ZH trilingual leftovers | `wenyanwen-jp-zh-trilingual-leftovers` | 3 | 12 | 6 | 6 | Classical Chinese-oriented editions that do not yet have English added; zh means modern Chinese helper/annotation. |
 

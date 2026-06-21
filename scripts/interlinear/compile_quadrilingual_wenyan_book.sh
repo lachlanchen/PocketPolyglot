@@ -85,9 +85,9 @@ title_ja="$(jq -r '.book_title_ja // .book_title_wenyan // .book_title_zh // .bo
 title_en="$(jq -r '.book_title_en // .book_title_wenyan // .book_title_zh // .book_title_ja // .book_id' "$plan")"
 case "$main_layer" in
   wenyan) base_title="${title_wenyan}（現代日本語・現代中文・英文注）" ;;
-  zh_modern) base_title="${title_zh}現代中文（文言・現代日本語・英文注）" ;;
-  ja_modern) base_title="${title_ja}現代日本語（文言・現代中文・英文注）" ;;
-  en) base_title="${title_en}（文言・現代中文・現代日本語注）" ;;
+  zh_modern) base_title="${title_zh}（現代中文主文・文言・現代日本語・英文注）" ;;
+  ja_modern) base_title="${title_ja}（現代日本語主文・文言・現代中文・英文注）" ;;
+  en) base_title="${title_en}（英文主文・文言・現代日本語・現代中文注）" ;;
 esac
 if [[ "$color_mode" == "blackwhite" ]]; then
   if [[ "$base_title" == *"）" ]]; then

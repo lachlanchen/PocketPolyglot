@@ -80,6 +80,21 @@ def load_plan(path: Path) -> dict:
         return json.load(fh)
 
 
+def edition_label(plan: dict) -> str:
+    labels = []
+    if plan.get("book_title_en"):
+        labels.append("English")
+    if plan.get("book_title_ja"):
+        labels.append("日本語")
+    if plan.get("book_title_zh"):
+        labels.append("中文")
+    if len(labels) >= 3:
+        return "・".join(labels[:3]) + " interlinear"
+    if len(labels) == 2:
+        return "・".join(labels) + " 対照注解"
+    return "PocketPolyglot annotated edition"
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--plan", required=True, type=Path)
@@ -98,23 +113,23 @@ def main() -> int:
     overlay = Image.new("RGBA", image.size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(overlay)
 
-    panel_left = int(WIDTH * 0.29)
-    panel_right = int(WIDTH * 0.71)
-    panel_top = int(HEIGHT * 0.065)
-    panel_bottom = int(HEIGHT * 0.93)
+    panel_left = int(WIDTH * 0.315)
+    panel_right = int(WIDTH * 0.685)
+    panel_top = int(HEIGHT * 0.082)
+    panel_bottom = int(HEIGHT * 0.915)
     draw.rounded_rectangle(
         (panel_left, panel_top, panel_right, panel_bottom),
         radius=18,
-        fill=(246, 235, 210, 172),
-        outline=(42, 31, 24, 210),
-        width=5,
+        fill=(246, 235, 210, 112),
+        outline=(42, 31, 24, 155),
+        width=3,
     )
     inset = 28
     draw.rounded_rectangle(
         (panel_left + inset, panel_top + inset, panel_right - inset, panel_bottom - inset),
         radius=8,
-        outline=(42, 31, 24, 115),
-        width=2,
+        outline=(42, 31, 24, 80),
+        width=1,
     )
 
     title_font = font(SERIF_BOLD, int(HEIGHT * 0.061), index=0)
@@ -153,7 +168,7 @@ def main() -> int:
     if author_reading:
         author_line = f"{author}（{author_reading}）"
     draw_centered(draw, author_line, (WIDTH // 2, int(HEIGHT * 0.715)), small_font, muted)
-    draw_centered(draw, "中文・日本語 対照注解", (WIDTH // 2, int(HEIGHT * 0.765)), side_font, muted)
+    draw_centered(draw, edition_label(plan), (WIDTH // 2, int(HEIGHT * 0.765)), side_font, muted)
     draw_centered(draw, "AgInTiFlow curated", (WIDTH // 2, int(HEIGHT * 0.830)), latin_font, muted)
     draw_centered(draw, "https://flow.lazying.art", (WIDTH // 2, int(HEIGHT * 0.858)), latin_font, muted)
     draw_centered(draw, "powered by LazyingArt", (WIDTH // 2, int(HEIGHT * 0.886)), latin_font, muted)
@@ -171,7 +186,7 @@ def main() -> int:
 
     composed = Image.alpha_composite(image, overlay)
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    composed.convert("RGB").save(args.output, quality=94)
+    composed.convert("RGB").save(args.output, quality=94, optimize=True)
     print(args.output.resolve().relative_to(ROOT))
     return 0
 

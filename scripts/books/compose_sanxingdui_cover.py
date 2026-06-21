@@ -138,13 +138,13 @@ def compose_one(slug: str, title: str, background: Path, output: Path) -> None:
     draw.rounded_rectangle(
         (panel_left, panel_top, panel_right, panel_bottom),
         radius=24,
-        fill=(245, 234, 210, 148),
-        outline=(64, 43, 30, 185),
-        width=4,
+        fill=(245, 234, 210, 110),
+        outline=(64, 43, 30, 145),
+        width=3,
     )
     draw.line(
         (panel_left + 38, panel_top + 30, panel_right - 38, panel_top + 30),
-        fill=(64, 43, 30, 110),
+        fill=(64, 43, 30, 76),
         width=2,
     )
 
@@ -163,7 +163,7 @@ def compose_one(slug: str, title: str, background: Path, output: Path) -> None:
     draw.rounded_rectangle(
         (credit_left, credit_top, credit_right, credit_bottom),
         radius=18,
-        fill=(245, 234, 210, 108),
+        fill=(245, 234, 210, 72),
     )
     draw_centered(draw, "AgInTiFlow curated · https://flow.lazying.art", (WIDTH // 2, credit_y), credit_font, muted)
     draw_centered(draw, "powered by LazyingArt", (WIDTH // 2, credit_y + 42), credit_font, muted)
@@ -176,7 +176,7 @@ def compose_one(slug: str, title: str, background: Path, output: Path) -> None:
 
     composed = Image.alpha_composite(image, overlay)
     output.parent.mkdir(parents=True, exist_ok=True)
-    composed.convert("RGB").save(output, quality=95)
+    composed.convert("RGB").save(output, quality=95, optimize=True)
     print(output.relative_to(ROOT))
 
 

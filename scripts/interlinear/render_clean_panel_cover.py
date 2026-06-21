@@ -83,7 +83,7 @@ def main() -> int:
     parser.add_argument("--powered-by", default="powered by LazyingArt")
     parser.add_argument(
         "--panel-box",
-        default="0.285,0.075,0.690,0.955",
+        default="0.315,0.095,0.685,0.925",
         help="panel box ratios: x1,y1,x2,y2",
     )
     args = parser.parse_args()
@@ -100,14 +100,14 @@ def main() -> int:
     overlay = Image.new("RGBA", image.size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(overlay)
     radius = max(18, width // 70)
-    fill = (242, 234, 205, 255)
-    outline = (70, 61, 45, 230)
-    draw.rounded_rectangle(panel, radius=radius, fill=fill, outline=outline, width=max(3, width // 420))
+    fill = (242, 234, 205, 140)
+    outline = (70, 61, 45, 170)
+    draw.rounded_rectangle(panel, radius=radius, fill=fill, outline=outline, width=max(2, width // 560))
     inset = max(16, width // 90)
     draw.rounded_rectangle(
         (x1 + inset, y1 + inset, x2 - inset, y2 - inset),
         radius=max(10, radius - inset // 2),
-        outline=(108, 96, 70, 130),
+        outline=(108, 96, 70, 82),
         width=max(1, width // 760),
     )
 
@@ -165,7 +165,7 @@ def main() -> int:
         footer_y += footer_font.size * 1.45
 
     output.parent.mkdir(parents=True, exist_ok=True)
-    image.convert("RGB").save(output, quality=95)
+    image.convert("RGB").save(output, quality=95, optimize=True)
     print(output)
     return 0
 
