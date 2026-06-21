@@ -16,6 +16,40 @@ def load_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def superseded_progress(book: dict[str, Any]) -> tuple[int, int, str] | None:
+    replacement = book.get("superseded_by") or {}
+    if not replacement:
+        return None
+    manifest_path = replacement.get("manifest")
+    chunk_dir = replacement.get("chunk_dir")
+    chunks_jsonl = replacement.get("chunks_jsonl")
+    if not manifest_path or not chunk_dir:
+        return None
+    manifest_file = ROOT / manifest_path
+    chunk_root = ROOT / chunk_dir
+    if not manifest_file.exists() or not chunk_root.exists():
+        return None
+
+    manifest = load_json(manifest_file)
+    chunk_ids = [
+        item.get("chunk_id")
+        for item in manifest.get("chunks", [])
+        if isinstance(item, dict) and item.get("chunk_id")
+    ]
+    if not chunk_ids and chunks_jsonl:
+        chunks_file = ROOT / chunks_jsonl
+        if chunks_file.exists():
+            chunk_ids = [
+                json.loads(line).get("chunk_id")
+                for line in chunks_file.read_text(encoding="utf-8").splitlines()
+                if line.strip()
+            ]
+    total = len(chunk_ids)
+    done = sum(1 for chunk_id in chunk_ids if (chunk_root / f"{chunk_id}.json").exists())
+    note = f"superseded_by:{replacement.get('book_id', 'replacement')}"
+    return done, total, note
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--global-manifest", default="data/source-plan/incremental-english-modern-japanese.json")
@@ -28,6 +62,13 @@ def main() -> int:
     rows = []
     for book in sorted(manifest.get("books", []), key=lambda item: item.get("priority", 9999)):
         dependency = book.get("dependency", "")
+        replacement = superseded_progress(book)
+        if replacement is not None:
+            complete, count, replacement_note = replacement
+            total += count
+            done += min(complete, count)
+            rows.append((book["book_id"], "superseded", complete, count, replacement_note))
+            continue
         if dependency != "base_chunks_exist" and not args.include_waiting_dependencies:
             rows.append((book["book_id"], "deferred", 0, int(book.get("chunk_count", 0)), dependency))
             continue

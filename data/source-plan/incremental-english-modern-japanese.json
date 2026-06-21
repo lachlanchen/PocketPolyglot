@@ -1055,7 +1055,14 @@
       "source_area": "sources/kojiki",
       "priority": 410,
       "dependency": "base_chunks_exist",
-      "notes": "Ancient text. Add modern Chinese, English, and reader-friendly modern Japanese as additive overlays. Preserve legacy ja/zh fields and use the modern Chinese bridge for English and Japanese.",
+      "notes": "Superseded by the completed kojiki-wenyan quadrilingual task. That task filtered four non-book Wikisource footer chunks, so the completed book has 709 real source chunks rather than this older 713-chunk draft.",
+      "superseded_by": {
+        "book_id": "kojiki-wenyan",
+        "manifest": "books/kojiki-wenyan/work/quadrilingual/chunks/manifest.json",
+        "chunks_jsonl": "books/kojiki-wenyan/work/quadrilingual/chunks/chunks.jsonl",
+        "chunk_dir": "books/kojiki-wenyan/work/quadrilingual/interlinear/chunks",
+        "build_root": "build/kojiki-wenyan/wenyan-main-quadrilingual"
+      },
       "reference_paths": [
         "books/kojiki/markdown/zh_modern_ref.txt",
         "books/kojiki/markdown/ja_modern.md",
