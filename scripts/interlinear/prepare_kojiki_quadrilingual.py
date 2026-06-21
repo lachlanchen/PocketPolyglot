@@ -39,6 +39,7 @@ EN_RAW = ROOT / "books" / SOURCE_BOOK_ID / "markdown" / "en.raw.txt"
 
 SPACE_RE = re.compile(r"\s+")
 NOTE_MARK_RE = re.compile(r"[一二三四五六七八九〇零十百]{1,4}$")
+HAN_RE = re.compile(r"[\u3400-\u9fff]")
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -155,6 +156,26 @@ def build_existing_units(paragraph: dict[str, Any]) -> list[dict[str, str]]:
     return units
 
 
+def has_book_spine(paragraphs: list[dict[str, Any]]) -> bool:
+    """Keep real Kojiki spine text, not source-license/footer debris."""
+    text_parts: list[str] = []
+    for paragraph in paragraphs:
+        text_parts.append(str(paragraph.get("wenyan") or ""))
+        for unit in paragraph.get("source_units", []):
+            text_parts.append(str(unit.get("source_wenyan") or ""))
+
+    text = "".join(text_parts)
+    total_chars = sum(1 for char in text if not char.isspace())
+    han_chars = len(HAN_RE.findall(text))
+    if han_chars == 0:
+        return False
+    # Real Kojiki source chunks are short all-Han lines or dense wenyan text.
+    # Source-edition tails can contain a few Han usernames inside Latin/URL text.
+    if total_chars >= 80 and han_chars / total_chars < 0.15:
+        return False
+    return True
+
+
 def prepare_chunks() -> list[dict[str, Any]]:
     zh_reference = read_text(ZH_MODERN_REF)
     ja_reference = read_text(JA_MODERN_MD)
@@ -183,6 +204,8 @@ def prepare_chunks() -> list[dict[str, Any]]:
                 }
             )
         if not paragraphs:
+            continue
+        if not has_book_spine(paragraphs):
             continue
         chunks.append(
             {
