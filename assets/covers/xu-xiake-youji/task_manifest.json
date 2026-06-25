@@ -1,0 +1,32 @@
+{
+  "tool": "generate_image",
+  "provider": "grsai",
+  "host": "https://grsaiapi.com",
+  "model": "nano-banana-2",
+  "requestedFormat": "png",
+  "actualFormat": "png",
+  "formatNotice": "",
+  "outputDir": "assets/covers/xu-xiake-youji",
+  "promptFile": "assets/covers/xu-xiake-youji/prompt.txt",
+  "requestPayloadRedacted": "assets/covers/xu-xiake-youji/request_payload.redacted.json",
+  "referenceImages": [],
+  "referenceDimensions": null,
+  "matchReferenceSize": false,
+  "status": "succeeded",
+  "createdAt": "2026-06-25T13:22:55.260Z",
+  "taskId": "9-39806652-f776-4cc6-a7c6-2942aed0c661",
+  "submittedAt": "2026-06-25T13:22:56.040Z",
+  "finishedAt": "2026-06-25T13:24:40.435Z",
+  "downloadedFiles": [
+    {
+      "path": "assets/covers/xu-xiake-youji/cover.png",
+      "bytes": 8096257,
+      "sha256": "0348dfb4e205b21b1594e324fe198921c166c6c645a7d98d887b8ea7fc58393f",
+      "dimensions": {
+        "width": 1696,
+        "height": 2528,
+        "format": "png"
+      }
+    }
+  ]
+}

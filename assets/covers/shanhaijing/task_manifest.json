@@ -1,0 +1,32 @@
+{
+  "tool": "generate_image",
+  "provider": "grsai",
+  "host": "https://grsaiapi.com",
+  "model": "nano-banana-2",
+  "requestedFormat": "png",
+  "actualFormat": "png",
+  "formatNotice": "",
+  "outputDir": "assets/covers/shanhaijing",
+  "promptFile": "assets/covers/shanhaijing/prompt.txt",
+  "requestPayloadRedacted": "assets/covers/shanhaijing/request_payload.redacted.json",
+  "referenceImages": [],
+  "referenceDimensions": null,
+  "matchReferenceSize": false,
+  "status": "succeeded",
+  "createdAt": "2026-06-25T13:22:55.786Z",
+  "taskId": "7-f98cc677-69d9-4822-8287-335d631f9ac1",
+  "submittedAt": "2026-06-25T13:22:56.551Z",
+  "finishedAt": "2026-06-25T13:24:41.736Z",
+  "downloadedFiles": [
+    {
+      "path": "assets/covers/shanhaijing/cover.png",
+      "bytes": 7129523,
+      "sha256": "45535e6ab650e263c97418d20c429c2226dfa5ab230fe62fc2d21ba8e915e3b0",
+      "dimensions": {
+        "width": 1696,
+        "height": 2528,
+        "format": "png"
+      }
+    }
+  ]
+}
