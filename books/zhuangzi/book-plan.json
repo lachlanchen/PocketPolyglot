@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "book_id": "zhuangzi",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "莊子",
+  "book_title_zh": "庄子",
+  "book_title_ja": "荘子",
+  "book_title_en": "Zhuangzi",
+  "author": "莊周",
+  "author_reading_zh": "zhuāng zhōu",
+  "author_reading_ja": "そう しゅう",
+  "book_description": "莊子 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/zhuangzi/zh/wenyan-wikisource",
+    "modern_chinese_meaning_bridge": "sources/zhuangzi/zh/modern-annotated/庄子_ 中华经典名著全本全注全译丛书.pdf",
+    "full_english_reference": "sources/zhuangzi/en/burton-watson/The Complete Works of Zhuangzi.pdf",
+    "public_domain_english_reference": "sources/zhuangzi/en/gutenberg-giles",
+    "japanese_source_tree": "sources/zhuangzi/jp/wikisource-kanbun",
+    "modern_japanese_reference": "sources/zhuangzi/jp/modern-translation-scan",
+    "secondary_retelling_reference": "sources/zhuangzi/jp/essay-retelling/荘子.epub",
+    "wenyan_markdown": "books/zhuangzi/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/zhuangzi/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/zhuangzi/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/zhuangzi/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/zhuangzi/work/quadrilingual/preview/zhuangzi.partial.json",
+  "build_root": "build/zhuangzi/wenyan-main-quadrilingual",
+  "prepared_at": "2026-06-25T04:36:35.395093+00:00"
+}

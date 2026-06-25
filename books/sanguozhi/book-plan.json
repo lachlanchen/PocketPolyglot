@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "book_id": "sanguozhi",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "三國志",
+  "book_title_zh": "三国志",
+  "book_title_ja": "三國志",
+  "book_title_en": "Records of the Three Kingdoms",
+  "author": "陳壽",
+  "author_reading_zh": "chén shòu",
+  "author_reading_ja": "ちん じゅ",
+  "book_description": "三國志 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/sanguozhi/zh/wenyan-wikisource",
+    "alternate_classical_source": "sources/sanguozhi/zh/wenyan-gutenberg",
+    "commented_source_epub": "sources/sanguozhi/zh/pei-songzhi-source-epub/三国志（中华经典普及文库）.epub",
+    "incomplete_english_reference": "sources/sanguozhi/en/wikisource-open-license",
+    "partial_english_reference": "sources/sanguozhi/en/empresses-and-consorts-selections/Empresses and Consorts_ Selections from Chen Shou's Records of the Three States with Pei Songzhi's Commentary.pdf",
+    "japanese_index_only": "sources/sanguozhi/jp/wikisource-index",
+    "wenyan_markdown": "books/sanguozhi/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/sanguozhi/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/sanguozhi/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/sanguozhi/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/sanguozhi/work/quadrilingual/preview/sanguozhi.partial.json",
+  "build_root": "build/sanguozhi/wenyan-main-quadrilingual",
+  "prepared_at": "2026-06-25T04:37:31.749299+00:00"
+}
