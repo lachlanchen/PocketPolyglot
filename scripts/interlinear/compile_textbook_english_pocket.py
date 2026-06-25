@@ -184,7 +184,7 @@ def normalize_includegraphics_options(body: str) -> str:
 
     def replace(match: re.Match[str]) -> str:
         _, raw_name, _ = match.groups()
-        options = r"max width=\linewidth,max totalheight=.62\textheight,keepaspectratio,center"
+        options = r"max width=.94\linewidth,max totalheight=.62\textheight,keepaspectratio,center"
         return rf"\includegraphics[{options}]{{{raw_name.strip()}}}"
 
     body = INCLUDEGRAPHICS_RE.sub(replace, body)
