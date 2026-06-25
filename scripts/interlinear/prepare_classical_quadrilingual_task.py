@@ -7,10 +7,13 @@ import argparse
 import hashlib
 import json
 import re
+import subprocess
 from collections import OrderedDict
 from datetime import datetime, timezone
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
+from zipfile import ZipFile
 
 from bs4 import BeautifulSoup
 
@@ -59,6 +62,42 @@ ROMAN_TO_INT = {
     "XXXI": 31,
     "XXXII": 32,
     "XXXIII": 33,
+}
+
+WATSON_TITLES = {
+    1: "Free and Easy Wandering",
+    2: "Discussion on Making All Things Equal",
+    3: "The Secret of Caring for Life",
+    4: "In the World of Men",
+    5: "The Sign of Virtue Complete",
+    6: "The Great and Venerable Teacher",
+    7: "Fit for Emperors and Kings",
+    8: "Webbed Toes",
+    9: "Horses' Hoofs",
+    10: "Rifling Trunks",
+    11: "Let It Be, Leave It Alone",
+    12: "Heaven and Earth",
+    13: "The Way of Heaven",
+    14: "The Turning of Heaven",
+    15: "Constrained in Will",
+    16: "Mending the Inborn Nature",
+    17: "Autumn Floods",
+    18: "Supreme Happiness",
+    19: "Mastering Life",
+    20: "The Mountain Tree",
+    21: "Tian Zifang",
+    22: "Knowledge Wandered North",
+    23: "Gengsang Chu",
+    24: "Xu Wugui",
+    25: "Zeyang",
+    26: "External Things",
+    27: "Imputed Words",
+    28: "Giving Away a Throne",
+    29: "Robber Zhi",
+    30: "Discoursing on Swords",
+    31: "The Old Fisherman",
+    32: "Lie Yukou",
+    33: "The World",
 }
 
 ZHUANGZI_CANONICAL_ORDER = {
@@ -120,6 +159,89 @@ def clean_text(text: str) -> str:
     if TRAILING_PAGE_CHROME_RE.search(text):
         return ""
     return text
+
+
+def clean_reference_text(text: str) -> str:
+    text = text.replace("\ufeff", "")
+    text = re.sub(r"\r\n?", "\n", text)
+    text = re.sub(r"[ \t\u3000\xa0]+", " ", text)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
+
+
+def excerpt(text: str, limit: int = 4200) -> str:
+    return clean_reference_text(text)[:limit]
+
+
+def pdftotext(path: Path) -> str:
+    try:
+        return subprocess.check_output(
+            ["pdftotext", "-layout", str(path), "-"],
+            cwd=ROOT,
+            stderr=subprocess.DEVNULL,
+        ).decode("utf-8", errors="replace")
+    except (OSError, subprocess.CalledProcessError):
+        return ""
+
+
+def epub_text(path: Path) -> str:
+    if not path.exists():
+        return ""
+    parts: list[str] = []
+    try:
+        with ZipFile(path) as archive:
+            html_names = sorted(
+                name
+                for name in archive.namelist()
+                if name.lower().endswith((".html", ".htm", ".xhtml"))
+            )
+            for name in html_names:
+                soup = BeautifulSoup(archive.read(name), "html.parser")
+                text = soup.get_text("\n", strip=True)
+                if text:
+                    parts.append(text)
+    except Exception:
+        return ""
+    return clean_reference_text("\n\n".join(parts))
+
+
+def normalized_heading(text: str) -> str:
+    return re.sub(r"[^A-Z0-9]", "", text.upper())
+
+
+def line_window_by_headings(
+    lines: list[str],
+    headings: dict[int, str],
+    *,
+    min_line: int = 0,
+    max_chars: int = 4200,
+) -> dict[int, dict[str, str]]:
+    starts: list[tuple[int, int]] = []
+    used_lines: set[int] = set()
+    for number, heading in headings.items():
+        target = normalized_heading(heading)
+        best_index = -1
+        for index in range(min_line, len(lines)):
+            if index in used_lines:
+                continue
+            block = normalized_heading(" ".join(lines[index : index + 3]))
+            if target and target in block:
+                best_index = index
+                break
+        if best_index >= 0:
+            starts.append((number, best_index))
+            used_lines.add(best_index)
+    starts.sort(key=lambda item: item[1])
+    windows: dict[int, dict[str, str]] = {}
+    for offset, (number, start) in enumerate(starts):
+        end = starts[offset + 1][1] if offset + 1 < len(starts) else min(len(lines), start + 500)
+        block = "\n".join(lines[start:end])
+        windows[number] = {
+            "chapter_number": str(number),
+            "line_window": f"{start + 1}-{end}",
+            "excerpt": excerpt(block, max_chars),
+        }
+    return windows
 
 
 def zh_number_to_int(text: str) -> int:
@@ -348,6 +470,7 @@ def manifest_items(book: dict[str, Any]) -> list[dict[str, Any]]:
     return prepared
 
 
+@lru_cache(maxsize=1)
 def load_zhuangzi_giles_windows() -> dict[int, dict[str, str]]:
     path = ROOT / "sources" / "zhuangzi" / "en" / "gutenberg-giles" / "Chuang-Tzu-Giles-59709.txt"
     if not path.exists():
@@ -374,6 +497,32 @@ def load_zhuangzi_giles_windows() -> dict[int, dict[str, str]]:
     return windows
 
 
+@lru_cache(maxsize=1)
+def load_zhuangzi_watson_windows() -> dict[int, dict[str, str]]:
+    path = ROOT / "sources" / "zhuangzi" / "en" / "burton-watson" / "The Complete Works of Zhuangzi.pdf"
+    text = pdftotext(path)
+    if not text:
+        return {}
+    windows = line_window_by_headings(text.splitlines(), WATSON_TITLES, min_line=1000)
+    for item in windows.values():
+        item["source"] = "Burton Watson, The Complete Works of Zhuangzi"
+        item["path"] = str(path.relative_to(ROOT))
+    return windows
+
+
+@lru_cache(maxsize=1)
+def load_zhuangzi_jp_secondary_text() -> dict[str, str]:
+    epub = ROOT / "sources" / "zhuangzi" / "jp" / "essay-retelling" / "荘子.epub"
+    text = epub_text(epub)
+    return {
+        "source": "岡本かの子『荘子』 EPUB / Aozora-style retelling",
+        "path": str(epub.relative_to(ROOT)),
+        "excerpt": excerpt(text, 3200),
+        "note": "Secondary Japanese literary retelling, not a complete aligned translation.",
+    }
+
+
+@lru_cache(maxsize=1)
 def load_sanguozhi_open_en_windows() -> dict[int, dict[str, str]]:
     raw_dir = ROOT / "sources" / "sanguozhi" / "en" / "wikisource-open-license" / "raw"
     if not raw_dir.exists():
@@ -398,6 +547,65 @@ def load_sanguozhi_open_en_windows() -> dict[int, dict[str, str]]:
     return windows
 
 
+@lru_cache(maxsize=1)
+def load_sanguozhi_zh_epub_windows() -> dict[int, dict[str, str]]:
+    path = ROOT / "sources" / "sanguozhi" / "zh" / "pei-songzhi-source-epub" / "三国志（中华经典普及文库）.epub"
+    windows: dict[int, dict[str, str]] = {}
+    if not path.exists():
+        return windows
+    try:
+        with ZipFile(path) as archive:
+            html_names = sorted(
+                name
+                for name in archive.namelist()
+                if name.lower().endswith((".html", ".htm", ".xhtml"))
+            )
+            for name in html_names:
+                soup = BeautifulSoup(archive.read(name), "html.parser")
+                text = clean_reference_text(soup.get_text("\n", strip=True))
+                match = re.search(r"三国志卷([一二三四五六七八九十百〇零]+)", text)
+                if not match:
+                    continue
+                number = zh_number_to_int(match.group(1))
+                if number and number not in windows:
+                    windows[number] = {
+                        "source": "中华书局《三国志》EPUB with Pei Songzhi commentary",
+                        "path": str(path.relative_to(ROOT)),
+                        "epub_item": name,
+                        "excerpt": excerpt(text, 4200),
+                    }
+    except Exception:
+        return windows
+    return windows
+
+
+@lru_cache(maxsize=1)
+def load_sanguozhi_selection_en_windows() -> dict[int, dict[str, str]]:
+    path = (
+        ROOT
+        / "sources"
+        / "sanguozhi"
+        / "en"
+        / "empresses-and-consorts-selections"
+        / "Empresses and Consorts_ Selections from Chen Shou's Records of the Three States with Pei Songzhi's Commentary.pdf"
+    )
+    text = pdftotext(path)
+    if not text:
+        return {}
+    lines = text.splitlines()
+    headings = {
+        5: "Fascicle 5 Empresses and Consorts",
+        34: "Fascicle 34 Consorts and Sons of the Two Sovereigns",
+        50: "Fascicle 50 Consorts and Concubines",
+    }
+    windows = line_window_by_headings(lines, headings, min_line=1800)
+    for number, item in windows.items():
+        item["source"] = "Cutter/Crowell, Empresses and Consorts: selections from Records of the Three States"
+        item["path"] = str(path.relative_to(ROOT))
+        item["note"] = f"Partial English selection, relevant mainly to fascicle {number}."
+    return windows
+
+
 def broad_references(book: dict[str, Any], chapter_number: int) -> dict[str, Any]:
     layers = book["source_layers"]
     paths_by_layer: dict[str, list[dict[str, str]]] = OrderedDict()
@@ -414,20 +622,40 @@ def broad_references(book: dict[str, Any], chapter_number: int) -> dict[str, Any
         "paths": paths_by_layer,
     }
     if book["book_id"] == "zhuangzi":
-        reference["en"] = load_zhuangzi_giles_windows().get(chapter_number, {})
+        en_refs = []
+        watson = load_zhuangzi_watson_windows().get(chapter_number)
+        giles = load_zhuangzi_giles_windows().get(chapter_number)
+        if watson:
+            en_refs.append(watson)
+        if giles:
+            en_refs.append(giles)
+        reference["en"] = en_refs
         reference["zh_modern"] = {
             "source": "sources/zhuangzi/zh/modern-annotated/庄子_ 中华经典名著全本全注全译丛书.pdf",
             "note": "Scanned/metadata-only under pdftotext; use as source reference for later OCR, not as direct text in this chunk.",
         }
-        reference["ja_modern"] = {
-            "source": "sources/zhuangzi/jp/modern-translation-scan",
-            "note": "Public-domain Japanese modern translation scan; use as broad reference when OCR is prepared.",
-        }
+        reference["ja_modern"] = [
+            {
+                "source": "sources/zhuangzi/jp/modern-translation-scan",
+                "note": "Public-domain Japanese modern translation scan; image-only under pdftotext in the current environment, so OCR is required before prompt-time textual use.",
+            },
+            load_zhuangzi_jp_secondary_text(),
+        ]
     elif book["book_id"] == "sanguozhi":
-        reference["en"] = load_sanguozhi_open_en_windows().get(chapter_number, {})
+        en_refs = []
+        open_en = load_sanguozhi_open_en_windows().get(chapter_number)
+        selection_en = load_sanguozhi_selection_en_windows().get(chapter_number)
+        if open_en:
+            en_refs.append(open_en)
+        if selection_en:
+            en_refs.append(selection_en)
+        reference["en"] = en_refs
+        zh_epub = load_sanguozhi_zh_epub_windows().get(chapter_number)
         reference["zh_modern"] = {
             "source": "sources/sanguozhi/zh/pei-songzhi-source-epub/三国志（中华经典普及文库）.epub",
-            "note": "Chinese source edition with Pei Songzhi commentary; keep commentary out of the main wenyan spine unless explicitly represented as notes later.",
+            "note": "Chinese source edition with Pei Songzhi commentary; use as a broad Chinese reference while keeping commentary out of the primary wenyan stream.",
+            "excerpt": zh_epub.get("excerpt", "") if zh_epub else "",
+            "epub_item": zh_epub.get("epub_item", "") if zh_epub else "",
         }
         reference["ja_modern"] = {
             "source": "sources/sanguozhi/jp/wikisource-index",
