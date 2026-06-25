@@ -3,6 +3,11 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
+set +u
+[[ -f "$HOME/.profile" ]] && source "$HOME/.profile"
+[[ -f "$HOME/.bashrc" ]] && source "$HOME/.bashrc"
+set -u
+
 BOOKS=(
   game-theory
   game-theory-101
