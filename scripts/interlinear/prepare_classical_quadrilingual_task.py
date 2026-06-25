@@ -26,7 +26,9 @@ SPACE_RE = re.compile(r"\s+")
 SENTENCE_END_RE = re.compile(r"[。！？!?；;：:]")
 TRAILING_PAGE_CHROME_RE = re.compile(r"(NewPP limit report|Transclusion expansion time report|Saved in parser cache)", re.I)
 SANGUOZHI_VOLUME_RE = re.compile(r"卷\s*0*(\d+)")
+CLASSICAL_VOLUME_RE = re.compile(r"卷\s*0*(\d+)\s*([上中下])?")
 CHAPTER_ORDINAL_RE = re.compile(r"([一二三四五六七八九十百〇零]+)$")
+VOLUME_PART_ORDER = {"": 0, "上": 1, "中": 2, "下": 3}
 
 ROMAN_TO_INT = {
     "I": 1,
@@ -286,6 +288,11 @@ def chapter_sort_key(book_id: str, title: str, html_name: str, header_text: str)
             return (0, tail)
         match = SANGUOZHI_VOLUME_RE.search(tail) or SANGUOZHI_VOLUME_RE.search(html_name)
         return (int(match.group(1)) if match else 9999, tail)
+    if book_id in {"han-shu", "hou-han-shu"}:
+        match = CLASSICAL_VOLUME_RE.search(tail) or CLASSICAL_VOLUME_RE.search(html_name)
+        if match:
+            part = match.group(2) or ""
+            return (int(match.group(1)) * 10 + VOLUME_PART_ORDER.get(part, 0), tail)
     return (9999, tail)
 
 

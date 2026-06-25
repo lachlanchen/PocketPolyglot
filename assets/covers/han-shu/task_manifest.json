@@ -1,0 +1,32 @@
+{
+  "tool": "generate_image",
+  "provider": "grsai",
+  "host": "https://grsaiapi.com",
+  "model": "nano-banana-2",
+  "requestedFormat": "png",
+  "actualFormat": "png",
+  "formatNotice": "",
+  "outputDir": "assets/covers/han-shu",
+  "promptFile": "assets/covers/han-shu/prompt.txt",
+  "requestPayloadRedacted": "assets/covers/han-shu/request_payload.redacted.json",
+  "referenceImages": [],
+  "referenceDimensions": null,
+  "matchReferenceSize": false,
+  "status": "succeeded",
+  "createdAt": "2026-06-25T13:03:39.427Z",
+  "taskId": "7-727bf25a-7b50-4001-b2ae-a70f0533880b",
+  "submittedAt": "2026-06-25T13:03:40.205Z",
+  "finishedAt": "2026-06-25T13:04:47.777Z",
+  "downloadedFiles": [
+    {
+      "path": "assets/covers/han-shu/cover.png",
+      "bytes": 7615122,
+      "sha256": "a6a1d6820e8835354dfd53e1b14c96ec251039714f19d7fb8ad23d6ac9734037",
+      "dimensions": {
+        "width": 1696,
+        "height": 2528,
+        "format": "png"
+      }
+    }
+  ]
+}

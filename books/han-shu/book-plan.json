@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "book_id": "han-shu",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "漢書",
+  "book_title_zh": "汉书",
+  "book_title_ja": "漢書",
+  "book_title_en": "Book of Han",
+  "author": "班固",
+  "author_reading_zh": "bān gù",
+  "author_reading_ja": "はん こ",
+  "book_description": "漢書 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/han-shu/zh/wenyan-wikisource",
+    "alternate_classical_source": "sources/han-shu/zh/wenyan-gutenberg",
+    "alternate_digital_source": "sources/han-shu/zh/source-epub/汉书.epub",
+    "partial_english_reference": "sources/han-shu/en/dubs-volume-1/The History of the Former Han Dynasty A Critical Translation with Annotations Translation, Volume 1 1.pdf",
+    "japanese_index_only": "sources/han-shu/jp/wikisource-index",
+    "wenyan_markdown": "books/han-shu/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/han-shu/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/han-shu/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/han-shu/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/han-shu/work/quadrilingual/preview/han-shu.partial.json",
+  "build_root": "build/han-shu/wenyan-main-quadrilingual",
+  "cover_image": "assets/covers/han-shu/cover.png",
+  "prepared_at": "2026-06-25T13:02:53.869762+00:00"
+}
