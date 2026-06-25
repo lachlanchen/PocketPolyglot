@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "book_id": "xu-xiake-youji",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "徐霞客遊記",
+  "book_title_zh": "徐霞客游记",
+  "book_title_ja": "徐霞客遊記",
+  "book_title_en": "Xu Xiake's Travel Diaries",
+  "author": "徐弘祖",
+  "author_reading_zh": "xú hóng zǔ",
+  "author_reading_ja": "じょ こうそ",
+  "book_description": "徐霞客遊記 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/xu-xiake-youji/zh/wenyan-wikisource",
+    "alternate_classical_source": "sources/xu-xiake-youji/zh/wenyan-gutenberg",
+    "wikisource_export": "sources/xu-xiake-youji/zh/wenyan-wikisource-export",
+    "chinese_edition": "sources/xu-xiake-youji/zh/chinese-edition/徐霞客游记.pdf",
+    "english_study": "sources/xu-xiake-youji/en/english-study/Xu Xiake (1586–1641)_ The Art of Travel Writing.pdf",
+    "wenyan_markdown": "books/xu-xiake-youji/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/xu-xiake-youji/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/xu-xiake-youji/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/xu-xiake-youji/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/xu-xiake-youji/work/quadrilingual/preview/xu-xiake-youji.partial.json",
+  "build_root": "build/xu-xiake-youji/wenyan-main-quadrilingual",
+  "prepared_at": "2026-06-25T13:14:45.421903+00:00"
+}

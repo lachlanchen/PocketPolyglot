@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "book_id": "shanhaijing",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "山海經",
+  "book_title_zh": "山海经",
+  "book_title_ja": "山海経",
+  "book_title_en": "Classic of Mountains and Seas",
+  "author": "佚名",
+  "author_reading_zh": "yì míng",
+  "author_reading_ja": "いつめい",
+  "book_description": "山海經 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/shanhaijing/zh/wenyan-wikisource",
+    "alternate_classical_source": "sources/shanhaijing/zh/wenyan-gutenberg",
+    "wikisource_export": "sources/shanhaijing/zh/wenyan-wikisource-export",
+    "chinese_edition": "sources/shanhaijing/zh/chinese-edition/山海经.pdf",
+    "english_translation": "sources/shanhaijing/en/english-translation/The Classic of Mountains and Seas.pdf",
+    "wenyan_markdown": "books/shanhaijing/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/shanhaijing/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/shanhaijing/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/shanhaijing/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/shanhaijing/work/quadrilingual/preview/shanhaijing.partial.json",
+  "build_root": "build/shanhaijing/wenyan-main-quadrilingual",
+  "prepared_at": "2026-06-25T13:14:45.295326+00:00"
+}

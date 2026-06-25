@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "book_id": "zuozhuan",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "春秋左氏傳",
+  "book_title_zh": "左传",
+  "book_title_ja": "春秋左氏伝",
+  "book_title_en": "Zuo Tradition",
+  "author": "左丘明",
+  "author_reading_zh": "zuǒ qiū míng",
+  "author_reading_ja": "さきゅう めい",
+  "book_description": "春秋左氏傳 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/zuozhuan/zh/wenyan-wikisource",
+    "alternate_classical_source": "sources/zuozhuan/zh/wenyan-gutenberg",
+    "wikisource_export": "sources/zuozhuan/zh/wenyan-wikisource-export",
+    "modern_chinese_annotation": "sources/zuozhuan/zh/modern-annotations/春秋左传注 修订本 (全四册).epub",
+    "english_translation": "sources/zuozhuan/en/english-translation/Zuo Tradition _ Zuozhuan_ Commentary on the _Spring and Autumn Annals_.pdf",
+    "public_domain_english_scan": "sources/zuozhuan/en/commons-legge-scan",
+    "english_wikisource_legge": "sources/zuozhuan/en/wikisource-legge",
+    "japanese_study_reference": "sources/zuozhuan/jp/japanese-study/「春秋」と「左伝」.pdf",
+    "japanese_wikisource_reference": "sources/zuozhuan/jp/wikisource",
+    "wenyan_markdown": "books/zuozhuan/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/zuozhuan/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/zuozhuan/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/zuozhuan/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/zuozhuan/work/quadrilingual/preview/zuozhuan.partial.json",
+  "build_root": "build/zuozhuan/wenyan-main-quadrilingual",
+  "prepared_at": "2026-06-25T13:14:45.174498+00:00"
+}

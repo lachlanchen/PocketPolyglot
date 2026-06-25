@@ -27,8 +27,61 @@ SENTENCE_END_RE = re.compile(r"[。！？!?；;：:]")
 TRAILING_PAGE_CHROME_RE = re.compile(r"(NewPP limit report|Transclusion expansion time report|Saved in parser cache)", re.I)
 SANGUOZHI_VOLUME_RE = re.compile(r"卷\s*0*(\d+)")
 CLASSICAL_VOLUME_RE = re.compile(r"卷\s*0*(\d+)\s*([上中下])?")
+SOURCE_FILE_PREFIX_RE = re.compile(r"(?:^|/)(\d+)-")
 CHAPTER_ORDINAL_RE = re.compile(r"([一二三四五六七八九十百〇零]+)$")
 VOLUME_PART_ORDER = {"": 0, "上": 1, "中": 2, "下": 3}
+
+ZUOZHUAN_CANONICAL_ORDER = {
+    "序": 0,
+    "隱公": 1,
+    "桓公": 2,
+    "莊公": 3,
+    "閔公": 4,
+    "僖公": 5,
+    "文公": 6,
+    "宣公": 7,
+    "成公": 8,
+    "襄公": 9,
+    "昭公": 10,
+    "定公": 11,
+    "哀公": 12,
+}
+
+ZHANGUOCE_STATE_ORDER = {
+    "東周": 1,
+    "西周": 2,
+    "秦": 3,
+    "齊": 4,
+    "楚": 5,
+    "趙": 6,
+    "魏": 7,
+    "韓": 8,
+    "燕": 9,
+    "宋衛": 10,
+    "中山": 11,
+}
+
+SHANHAIJING_CANONICAL_ORDER = {
+    "郭璞序": 0,
+    "南山經": 1,
+    "西山經": 2,
+    "北山經": 3,
+    "東山經": 4,
+    "中山經": 5,
+    "海外南經": 6,
+    "海外西經": 7,
+    "海外北經": 8,
+    "海外東經": 9,
+    "海內南經": 10,
+    "海內西經": 11,
+    "海內北經": 12,
+    "海內東經": 13,
+    "大荒東經": 14,
+    "大荒南經": 15,
+    "大荒西經": 16,
+    "大荒北經": 17,
+    "海內經": 18,
+}
 
 ROMAN_TO_INT = {
     "I": 1,
@@ -268,10 +321,23 @@ def title_tail(title: str) -> str:
     return title.split("/")[-1].strip()
 
 
+def source_sequence_key(path_name: str) -> int:
+    match = SOURCE_FILE_PREFIX_RE.search(path_name)
+    return int(match.group(1)) if match else 9999
+
+
+def should_skip_source_item(book_id: str, title: str) -> bool:
+    tail = title_tail(title)
+    return book_id == "zuozhuan" and tail == "全覽"
+
+
 def normalize_chapter_title(book_id: str, title: str) -> str:
+    parts = [part.strip() for part in title.split("/") if part.strip()]
     tail = title_tail(title)
     if book_id == "sanguozhi":
         return tail.replace("卷", "卷 ")
+    if book_id == "zhanguoce" and len(parts) > 2:
+        return " ".join(parts[1:])
     return tail
 
 
@@ -293,7 +359,29 @@ def chapter_sort_key(book_id: str, title: str, html_name: str, header_text: str)
         if match:
             part = match.group(2) or ""
             return (int(match.group(1)) * 10 + VOLUME_PART_ORDER.get(part, 0), tail)
-    return (9999, tail)
+    if book_id == "zuozhuan":
+        return (ZUOZHUAN_CANONICAL_ORDER.get(tail, 9999), tail)
+    if book_id == "zhanguoce":
+        parts = [part.strip() for part in title.split("/") if part.strip()]
+        if len(parts) >= 3 and parts[-2] in ZHANGUOCE_STATE_ORDER:
+            return (1000 + ZHANGUOCE_STATE_ORDER[parts[-2]] * 100 + zh_number_to_int(parts[-1]), title)
+        if tail in ZHANGUOCE_STATE_ORDER:
+            return (1000 + ZHANGUOCE_STATE_ORDER[tail] * 100, title)
+        return (source_sequence_key(html_name), title)
+    if book_id == "shanhaijing":
+        return (SHANHAIJING_CANONICAL_ORDER.get(tail, 9000 + source_sequence_key(html_name)), tail)
+    if book_id == "xu-xiake-youji":
+        for prefix, base in (
+            ("滇遊日記", 1200),
+            ("粵西遊日記", 1300),
+            ("黔遊日記", 1700),
+            ("雞山志略", 1600),
+        ):
+            if tail.startswith(prefix):
+                suffix = tail.removeprefix(prefix)
+                return (base + zh_number_to_int(suffix), tail)
+        return (source_sequence_key(html_name), tail)
+    return (source_sequence_key(html_name), tail)
 
 
 def clean_soup_for_source(content: BeautifulSoup, *, drop_small: bool) -> None:
@@ -449,6 +537,8 @@ def manifest_items(book: dict[str, Any]) -> list[dict[str, Any]]:
     for item in items:
         title = str(item.get("title", ""))
         if "/" not in title:
+            continue
+        if should_skip_source_item(book["book_id"], title):
             continue
         html_rel = item.get("html")
         raw_rel = item.get("raw")

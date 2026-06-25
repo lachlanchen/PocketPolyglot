@@ -268,6 +268,227 @@
         }
       ],
       "next_step": "Use the Chinese source and Pei Songzhi edition for structure; align English only where references cover the matching sections."
+    },
+    {
+      "book_id": "zuozhuan",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "春秋左氏傳",
+      "book_title_zh": "左传",
+      "book_title_ja": "春秋左氏伝",
+      "book_title_en": "Zuo Tradition",
+      "author": "左丘明",
+      "author_reading_zh": "zuǒ qiū míng",
+      "author_reading_ja": "さきゅう めい",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/zuozhuan/zh/wenyan-wikisource",
+          "quality": "Chinese Wikisource raw source tree; chapter spine, excluding duplicate full overview"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "alternate_classical_source",
+          "path": "sources/zuozhuan/zh/wenyan-gutenberg",
+          "quality": "Project Gutenberg classical source"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "wikisource_export",
+          "path": "sources/zuozhuan/zh/wenyan-wikisource-export",
+          "quality": "Chinese Wikisource EPUB/PDF export"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "modern_chinese_annotation",
+          "path": "sources/zuozhuan/zh/modern-annotations/春秋左传注 修订本 (全四册).epub",
+          "quality": "modern Chinese annotated edition; use as meaning bridge"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_translation",
+          "path": "sources/zuozhuan/en/english-translation/Zuo Tradition _ Zuozhuan_ Commentary on the _Spring and Autumn Annals_.pdf",
+          "quality": "modern English translation/commentary"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "public_domain_english_scan",
+          "path": "sources/zuozhuan/en/commons-legge-scan",
+          "quality": "James Legge public-domain scan PDFs"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_wikisource_legge",
+          "path": "sources/zuozhuan/en/wikisource-legge",
+          "quality": "partial English Wikisource Legge metadata/tree"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_study_reference",
+          "path": "sources/zuozhuan/jp/japanese-study/「春秋」と「左伝」.pdf",
+          "quality": "Japanese study/reference, not complete aligned translation"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_wikisource_reference",
+          "path": "sources/zuozhuan/jp/wikisource",
+          "quality": "Japanese Wikisource source tree/reference"
+        }
+      ],
+      "next_step": "Use the Chinese classical source as spine; use modern Chinese annotation and English/Japanese references when matching, otherwise generate readable modern Chinese, modern Japanese, and English."
+    },
+    {
+      "book_id": "zhanguoce",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "戰國策",
+      "book_title_zh": "战国策",
+      "book_title_ja": "戦国策",
+      "book_title_en": "Strategies of the Warring States",
+      "author": "劉向 編",
+      "author_reading_zh": "liú xiàng biān",
+      "author_reading_ja": "りゅう きょう へん",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/zhanguoce/zh/wenyan-wikisource-shiliju",
+          "quality": "Chinese Wikisource 士禮居叢書本 source tree"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "wikisource_export",
+          "path": "sources/zhanguoce/zh/wenyan-wikisource-export",
+          "quality": "Chinese Wikisource EPUB/PDF export"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "chinese_edition",
+          "path": "sources/zhanguoce/zh/chinese-edition/戰國策.epub",
+          "quality": "Chinese digital edition/reference"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_translation",
+          "path": "sources/zhanguoce/en/english-translation/Chan-kuo Ts’e.pdf",
+          "quality": "English translation reference"
+        }
+      ],
+      "next_step": "Use the classical Chinese source as spine and the English translation/Chinese edition as references; generate modern Japanese where no Japanese source exists."
+    },
+    {
+      "book_id": "shanhaijing",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "山海經",
+      "book_title_zh": "山海经",
+      "book_title_ja": "山海経",
+      "book_title_en": "Classic of Mountains and Seas",
+      "author": "佚名",
+      "author_reading_zh": "yì míng",
+      "author_reading_ja": "いつめい",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/shanhaijing/zh/wenyan-wikisource",
+          "quality": "Chinese Wikisource raw source tree"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "alternate_classical_source",
+          "path": "sources/shanhaijing/zh/wenyan-gutenberg",
+          "quality": "Project Gutenberg classical source"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "wikisource_export",
+          "path": "sources/shanhaijing/zh/wenyan-wikisource-export",
+          "quality": "Chinese Wikisource EPUB/PDF export"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "chinese_edition",
+          "path": "sources/shanhaijing/zh/chinese-edition/山海经.pdf",
+          "quality": "Chinese edition/reference"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_translation",
+          "path": "sources/shanhaijing/en/english-translation/The Classic of Mountains and Seas.pdf",
+          "quality": "English translation reference"
+        }
+      ],
+      "next_step": "Use the canonical classical source order and the English/Chinese editions as references; generate modern Japanese."
+    },
+    {
+      "book_id": "xu-xiake-youji",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "徐霞客遊記",
+      "book_title_zh": "徐霞客游记",
+      "book_title_ja": "徐霞客遊記",
+      "book_title_en": "Xu Xiake's Travel Diaries",
+      "author": "徐弘祖",
+      "author_reading_zh": "xú hóng zǔ",
+      "author_reading_ja": "じょ こうそ",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/xu-xiake-youji/zh/wenyan-wikisource",
+          "quality": "Chinese Wikisource raw source tree"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "alternate_classical_source",
+          "path": "sources/xu-xiake-youji/zh/wenyan-gutenberg",
+          "quality": "Project Gutenberg classical source"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "wikisource_export",
+          "path": "sources/xu-xiake-youji/zh/wenyan-wikisource-export",
+          "quality": "Chinese Wikisource EPUB/PDF export"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "chinese_edition",
+          "path": "sources/xu-xiake-youji/zh/chinese-edition/徐霞客游记.pdf",
+          "quality": "Chinese edition/reference"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_study",
+          "path": "sources/xu-xiake-youji/en/english-study/Xu Xiake (1586–1641)_ The Art of Travel Writing.pdf",
+          "quality": "English study/reference, not complete aligned translation"
+        }
+      ],
+      "next_step": "Use the classical Chinese travel diary source as spine; use Chinese edition and English study broadly, and generate modern Japanese and English where no aligned translation exists."
     }
   ]
 }

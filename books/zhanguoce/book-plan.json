@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "book_id": "zhanguoce",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "戰國策",
+  "book_title_zh": "战国策",
+  "book_title_ja": "戦国策",
+  "book_title_en": "Strategies of the Warring States",
+  "author": "劉向 編",
+  "author_reading_zh": "liú xiàng biān",
+  "author_reading_ja": "りゅう きょう へん",
+  "book_description": "戰國策 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/zhanguoce/zh/wenyan-wikisource-shiliju",
+    "wikisource_export": "sources/zhanguoce/zh/wenyan-wikisource-export",
+    "chinese_edition": "sources/zhanguoce/zh/chinese-edition/戰國策.epub",
+    "english_translation": "sources/zhanguoce/en/english-translation/Chan-kuo Ts’e.pdf",
+    "wenyan_markdown": "books/zhanguoce/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/zhanguoce/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/zhanguoce/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/zhanguoce/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/zhanguoce/work/quadrilingual/preview/zhanguoce.partial.json",
+  "build_root": "build/zhanguoce/wenyan-main-quadrilingual",
+  "prepared_at": "2026-06-25T13:14:45.273892+00:00"
+}
