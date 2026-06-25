@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "book_id": "qft-gifted-amateur",
+  "status": "prepared_exact_tex_not_started",
+  "task_mode": "exact_textbook_tex_then_multilingual",
+  "launchable": true,
+  "book_title_en": "Quantum Field Theory for the Gifted Amateur",
+  "book_title_zh": "献给有天赋业余者的量子场论",
+  "book_title_ja": "才能あるアマチュアのための量子場理論",
+  "book_title_zh_reading": "xiàn gěi yǒu tiān fù yè yú zhě de liàng zǐ chǎng lùn",
+  "book_title_ja_reading": "さいのう ある アマチュア の ため の りょうし ば りろん",
+  "author": "Tom Lancaster and Stephen J. Blundell",
+  "author_reading_zh": "tāng mǔ lán kǎ sī tè hé sī dì fēn J. bù lún dé ěr",
+  "author_reading_ja": "トム ランカスター と スティーヴン J. ブランデル",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "source_paths": {
+    "exact_source": "sources/quantum-field-theory-gifted-amateur/Quantum_Field_Theory_For_The_Gifted_Amateur.pdf"
+  },
+  "source_sha256": {
+    "exact_source": "4077246c8126c929b1882038c72c43a1b9711e0cf76eb973e6839a095a0dffe0"
+  },
+  "source_status": {
+    "exact_source": {
+      "available": true,
+      "path": "sources/quantum-field-theory-gifted-amateur/Quantum_Field_Theory_For_The_Gifted_Amateur.pdf",
+      "sha256": "4077246c8126c929b1882038c72c43a1b9711e0cf76eb973e6839a095a0dffe0",
+      "pages": 512,
+      "page_size": "535.92 x 697.68 pts",
+      "embedded_text_chars": 925555,
+      "embedded_text_usable": true
+    },
+    "zh_reference": {
+      "available": false
+    }
+  },
+  "tools": {
+    "mathpix_api_credentials": true,
+    "mathpix_pdf_helper": "scripts/interlinear/textbook_mathpix_pdf_job.py",
+    "mathpix_image_helper": "scripts/interlinear/textbook_mathpix_ocr_worker.py",
+    "mpxpy": true,
+    "pdftocairo": true,
+    "pdftoppm": true,
+    "pdfimages": true,
+    "mutool": true,
+    "tesseract": true,
+    "pix2tex": false
+  },
+  "page_count": 512,
+  "body_start_page": 2,
+  "content_page_count": 503,
+  "mathpix_required_page_count": 503,
+  "task_contract": {
+    "first_artifact": "page-faithful TeX fragments, reviewed against source page images",
+    "preferred_ocr": "Use Mathpix v3/pdf whole-document OCR first, requesting tex.zip, mmd.zip, md.zip, and lines.json. Use per-page Mathpix OCR only for pages that need targeted repair.",
+    "formula_policy": "All displayed and inline formulas must be represented as TeX, not paraphrased prose.",
+    "figure_policy": "Extract or crop figures from the source PDF and preserve captions; do not silently drop diagrams.",
+    "translation_policy": "After exact TeX is assembled, split text/math nodes. Translate text nodes to modern Japanese and Chinese; copy math nodes unchanged into multilingual editions.",
+    "layout_policy": "Use tex/textbook-pocket with the same 105mm x 148mm pocket geometry and font scale as current books.",
+    "validation_policy": [
+      "compile exact pocket PDF with XeLaTeX",
+      "compare page/task coverage against manifest",
+      "spot-check formula-heavy pages visually against source images",
+      "check TeX log for severe overfull lines and missing figures",
+      "only then generate EN-JP-ZH editions"
+    ]
+  },
+  "tasks_jsonl": "books/qft-gifted-amateur/tasks/exact-tex/pages.jsonl",
+  "manifest": "books/qft-gifted-amateur/tasks/exact-tex/manifest.json",
+  "work_root": "books/qft-gifted-amateur/work/exact-tex",
+  "mathpix_pdf_job_dir": "books/qft-gifted-amateur/work/exact-tex/mathpix-pdf",
+  "build_root": "build/qft-gifted-amateur-exact-pocket",
+  "tex_template": "tex/textbook-pocket/book.tex",
+  "prepared_at": "2026-06-25T05:04:18.130577+00:00",
+  "description": "Retype Lancaster and Blundell, Quantum Field Theory for the Gifted Amateur, as a pocket-size TeX book. This is a formula-dense physics textbook: all inline/display equations, Feynman diagrams, examples, exercises, footnotes, tables, captions, appendices, and references must be preserved page by page. Mathpix whole-PDF OCR is required as the first pass; plain pdftotext is only a navigation aid and must not be trusted for formulas."
+}

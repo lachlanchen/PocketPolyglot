@@ -99,6 +99,32 @@ BOOKS: dict[str, TextbookConfig] = {
             "a replacement for the English exact source."
         ),
     ),
+    "qft-gifted-amateur": TextbookConfig(
+        book_id="qft-gifted-amateur",
+        title_en="Quantum Field Theory for the Gifted Amateur",
+        title_zh="献给有天赋业余者的量子场论",
+        title_ja="才能あるアマチュアのための量子場理論",
+        title_zh_reading="xiàn gěi yǒu tiān fù yè yú zhě de liàng zǐ chǎng lùn",
+        title_ja_reading="さいのう ある アマチュア の ため の りょうし ば りろん",
+        author="Tom Lancaster and Stephen J. Blundell",
+        author_reading_zh="tāng mǔ lán kǎ sī tè hé sī dì fēn J. bù lún dé ěr",
+        author_reading_ja="トム ランカスター と スティーヴン J. ブランデル",
+        exact_source_lang="en",
+        exact_source_pdf=Path(
+            "sources/quantum-field-theory-gifted-amateur/"
+            "Quantum_Field_Theory_For_The_Gifted_Amateur.pdf"
+        ),
+        zh_reference_pdf=None,
+        body_start_marker="Quantum Field Theory for the Gifted Amateur",
+        description=(
+            "Retype Lancaster and Blundell, Quantum Field Theory for the Gifted Amateur, "
+            "as a pocket-size TeX book. This is a formula-dense physics textbook: all "
+            "inline/display equations, Feynman diagrams, examples, exercises, footnotes, "
+            "tables, captions, appendices, and references must be preserved page by page. "
+            "Mathpix whole-PDF OCR is required as the first pass; plain pdftotext is only "
+            "a navigation aid and must not be trusted for formulas."
+        ),
+    ),
 }
 
 
