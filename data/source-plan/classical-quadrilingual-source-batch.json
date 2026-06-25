@@ -489,6 +489,77 @@
         }
       ],
       "next_step": "Use the classical Chinese travel diary source as spine; use Chinese edition and English study broadly, and generate modern Japanese and English where no aligned translation exists."
+    },
+    {
+      "book_id": "shui-jing-zhu",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "水經注",
+      "book_title_zh": "水经注",
+      "book_title_ja": "水経注",
+      "book_title_en": "Commentary on the Water Classic",
+      "author": "酈道元",
+      "author_reading_zh": "lì dào yuán",
+      "author_reading_ja": "れき どうげん",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/shui-jing-zhu/zh/wenyan-wikisource",
+          "quality": "Chinese Wikisource raw source tree, 40 chapters plus original preface"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "wikisource_export",
+          "path": "sources/shui-jing-zhu/zh/wenyan-wikisource-export",
+          "quality": "Chinese Wikisource EPUB/PDF export"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "traditional_critical_vertical",
+          "path": "sources/shui-jing-zhu/zh/critical-traditional-vertical/水經注校證【繁體竪版】.pdf",
+          "quality": "traditional vertical critical edition/reference"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "chinese_edition",
+          "path": "sources/shui-jing-zhu/zh/chinese-edition/水经注.pdf",
+          "quality": "local Chinese edition/reference"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "public_domain_scan_ocr_series",
+          "path": "sources/shui-jing-zhu/zh/internet-archive-060822-series",
+          "quality": "Internet Archive 18-volume public-domain scan series with PDF, OCR TXT, and metadata"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_open_reference",
+          "path": "sources/shui-jing-zhu/en/wikipedia-open-reference",
+          "quality": "English open reference; not a complete translation"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_open_reference",
+          "path": "sources/shui-jing-zhu/jp/wikipedia-open-reference",
+          "quality": "Japanese open reference; not a complete translation"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_catalog_reference",
+          "path": "sources/shui-jing-zhu/jp/waseda-catalog-reference",
+          "quality": "Waseda catalogue/viewer metadata and PDF link list; scans not copied because no explicit open reuse license was confirmed"
+        }
+      ],
+      "next_step": "Use the Chinese Wikisource text as the wenyan spine. Use local Chinese editions and public-domain scan OCR as meaning references; use English/Japanese open references only for terminology and background, generating aligned English and modern Japanese where no full translation exists."
     }
   ]
 }

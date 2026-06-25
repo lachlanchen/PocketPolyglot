@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "book_id": "shui-jing-zhu",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "水經注",
+  "book_title_zh": "水经注",
+  "book_title_ja": "水経注",
+  "book_title_en": "Commentary on the Water Classic",
+  "author": "酈道元",
+  "author_reading_zh": "lì dào yuán",
+  "author_reading_ja": "れき どうげん",
+  "book_description": "水經注 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/shui-jing-zhu/zh/wenyan-wikisource",
+    "wikisource_export": "sources/shui-jing-zhu/zh/wenyan-wikisource-export",
+    "traditional_critical_vertical": "sources/shui-jing-zhu/zh/critical-traditional-vertical/水經注校證【繁體竪版】.pdf",
+    "chinese_edition": "sources/shui-jing-zhu/zh/chinese-edition/水经注.pdf",
+    "public_domain_scan_ocr_series": "sources/shui-jing-zhu/zh/internet-archive-060822-series",
+    "english_open_reference": "sources/shui-jing-zhu/en/wikipedia-open-reference",
+    "japanese_open_reference": "sources/shui-jing-zhu/jp/wikipedia-open-reference",
+    "japanese_catalog_reference": "sources/shui-jing-zhu/jp/waseda-catalog-reference",
+    "wenyan_markdown": "books/shui-jing-zhu/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/shui-jing-zhu/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/shui-jing-zhu/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/shui-jing-zhu/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/shui-jing-zhu/work/quadrilingual/preview/shui-jing-zhu.partial.json",
+  "build_root": "build/shui-jing-zhu/wenyan-main-quadrilingual",
+  "prepared_at": "2026-06-25T16:16:28.906895+00:00"
+}

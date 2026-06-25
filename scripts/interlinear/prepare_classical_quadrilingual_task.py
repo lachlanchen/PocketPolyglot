@@ -338,6 +338,8 @@ def normalize_chapter_title(book_id: str, title: str) -> str:
         return tail.replace("卷", "卷 ")
     if book_id == "zhanguoce" and len(parts) > 2:
         return " ".join(parts[1:])
+    if book_id == "shui-jing-zhu" and tail.isdigit():
+        return f"卷 {tail}"
     return tail
 
 
@@ -380,6 +382,12 @@ def chapter_sort_key(book_id: str, title: str, html_name: str, header_text: str)
             if tail.startswith(prefix):
                 suffix = tail.removeprefix(prefix)
                 return (base + zh_number_to_int(suffix), tail)
+        return (source_sequence_key(html_name), tail)
+    if book_id == "shui-jing-zhu":
+        if tail == "原序":
+            return (0, tail)
+        if tail.isdigit():
+            return (int(tail), tail)
         return (source_sequence_key(html_name), tail)
     return (source_sequence_key(html_name), tail)
 
