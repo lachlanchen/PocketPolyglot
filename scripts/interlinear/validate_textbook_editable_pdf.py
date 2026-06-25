@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[2]
 OVERFULL_RE = re.compile(r"Overfull \\hbox \(([-0-9.]+)pt too wide\).*?lines? ([0-9]+)(?:--([0-9]+))?")
 FLOAT_RE = re.compile(r"Float too large for page by ([-0-9.]+)pt on input line ([0-9]+)")
 ERROR_RE = re.compile(r"(! (?:LaTeX|Package|Undefined|Missing|Emergency|File).*|Fatal|Erroneous nesting|Unable to load)")
+MISSING_IMAGE_RE = re.compile(r"(Unable to load picture|File `[^']+' not found|LaTeX Warning: File `[^']+' not found)")
 SUSPECT_RE = re.compile(
     r"computational nuysice|diffentiable|destroving|Descretize|practioners|allsp|"
     r"Chapter summary\s*[0-9]+Exercises|D0．|OH：|计算|物项|听并|Holograph",
@@ -95,7 +96,7 @@ def validate(build_dir: Path) -> dict[str, Any]:
         "error_markers": ERROR_RE.findall(log_text)[:50],
         "suspect_ocr_count": len(suspects),
         "suspect_ocr": suspects[:80],
-        "missing_image_count": log_text.count("Unable to load picture") + log_text.count("not found"),
+        "missing_image_count": len(MISSING_IMAGE_RE.findall(log_text)),
     }
     return report
 

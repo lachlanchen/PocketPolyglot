@@ -45,6 +45,8 @@ DISPLAY_ALIGN_TRAILING_INLINE_RE = re.compile(
     r"(\\left[\s\S]*?)\\\]",
     re.DOTALL,
 )
+INLINE_MATH_RE = re.compile(r"\\\((.*?)\\\)", re.DOTALL)
+DISPLAY_MATH_RE = re.compile(r"\\\[(.*?)\\\]", re.DOTALL)
 
 
 def run(cmd: list[str], *, check: bool = True, cwd: Path = ROOT) -> subprocess.CompletedProcess[str]:
@@ -78,7 +80,11 @@ def job_file(book_id: str) -> Path:
 def find_mathpix_tex(book_id: str) -> Path | None:
     base = job_dir(book_id)
     texzip_root = base / "texzip"
-    candidates = sorted(texzip_root.glob("*/*.tex")) + sorted(texzip_root.glob("*.tex"))
+    candidates = [
+        path
+        for path in sorted(texzip_root.glob("**/*.tex"))
+        if path.is_file()
+    ]
     if candidates:
         return candidates[0]
 
@@ -173,11 +179,81 @@ def resolve_image_paths(body: str, image_dir: Path) -> str:
     return INCLUDEGRAPHICS_RE.sub(replace, body)
 
 
+def normalize_includegraphics_options(body: str) -> str:
+    """Constrain all OCR-extracted figures for pocket-page output."""
+
+    def replace(match: re.Match[str]) -> str:
+        _, raw_name, _ = match.groups()
+        options = r"max width=\linewidth,max totalheight=.62\textheight,keepaspectratio,center"
+        return rf"\includegraphics[{options}]{{{raw_name.strip()}}}"
+
+    body = INCLUDEGRAPHICS_RE.sub(replace, body)
+    return re.sub(r"(\\includegraphics\[[^\]]+\]\{[^}]+\})\\\\", r"\1\\par\\smallskip", body)
+
+
+def balance_math_delimiters(content: str) -> str:
+    """Downgrade unmatched stretch delimiters inside one math fragment.
+
+    Mathpix sometimes emits a valid ``\left(...\right.`` pair for the first
+    term of a tuple and then a later ``\right)`` for the tuple close. XeLaTeX
+    rejects the later delimiter because the original ``\left`` was already
+    closed. A literal delimiter is safer than a fatal compile error; source
+    review tasks still catch the page for semantic cleanup.
+    """
+    left_count = len(re.findall(r"\\left(?:\\[{}]|[.\[(|{}]|\\[A-Za-z]+)", content))
+    right_tokens = list(re.finditer(r"\\right(?:\\[{}]|[.\])|{}]|\\[A-Za-z]+)", content))
+    if left_count > len(right_tokens):
+        return content + (r"\right." * (left_count - len(right_tokens)))
+    surplus = len(right_tokens) - left_count
+    if surplus <= 0:
+        return content
+
+    replacements = {
+        r"\right)": ")",
+        r"\right]": "]",
+        r"\right|": "|",
+        r"\right.": "",
+        r"\right\}": r"\}",
+        r"\right\{": r"\{",
+        r"\right\vert": r"\vert",
+        r"\right\rangle": r"\rangle",
+        r"\right\langle": r"\langle",
+    }
+    pieces: list[str] = []
+    last = 0
+    drop_starts = {match.start() for match in right_tokens[-surplus:]}
+    for match in right_tokens:
+        pieces.append(content[last : match.start()])
+        token = match.group(0)
+        if match.start() in drop_starts:
+            pieces.append(replacements.get(token, token.replace(r"\right", "")))
+        else:
+            pieces.append(token)
+        last = match.end()
+    pieces.append(content[last:])
+    return "".join(pieces)
+
+
+def sanitize_math_fragments(body: str) -> str:
+    def replace_inline(match: re.Match[str]) -> str:
+        return r"\(" + balance_math_delimiters(match.group(1)) + r"\)"
+
+    def replace_display(match: re.Match[str]) -> str:
+        return r"\[" + balance_math_delimiters(match.group(1)) + r"\]"
+
+    body = INLINE_MATH_RE.sub(replace_inline, body)
+    return DISPLAY_MATH_RE.sub(replace_display, body)
+
+
 def sanitize_mathpix_body(body: str) -> str:
     """Fix common Mathpix TeX fragments that are invalid in a book wrapper."""
     body = DISPLAY_ALIGN_TRAILING_INLINE_RE.sub(r"\\begin{align*}\n& \1 \\\\\2\\\\\n& \3\n\\end{align*}", body)
     body = DISPLAY_NESTED_ALIGN_RE.sub(r"\\begin{align*}\n& \1 \\\\\2\\\\\n& \3\n\\end{align*}", body)
     body = ALIGN_TRAILING_DISPLAY_RE.sub(r"\1\n\\[\2\n\\]\3", body)
+    body = body.replace(r"\textbackslash left.", "")
+    body = re.sub(r"\\section\*\{\s*-\s*", r"\\section*{", body)
+    body = normalize_includegraphics_options(body)
+    body = sanitize_math_fragments(body)
     body = re.sub(r"\\\[\s*(\\begin\{itemize\})", r"\1", body)
     body = re.sub(r"(\\end\{itemize\})\s*\\\]", r"\1", body)
     body = body.replace(r"\begin{verbatim}", r"\begin{Verbatim}[breaklines=true,breakanywhere=true,fontsize=\scriptsize]")
