@@ -309,9 +309,29 @@ def metadata(plan: dict[str, Any]) -> tuple[str, str]:
     return str(title), str(author)
 
 
+def apply_editable_fixes(book_id: str, body: str) -> str:
+    """Apply durable book-level OCR corrections stored outside build/."""
+    path = ROOT / "books" / book_id / "editable-fixes.json"
+    if not path.exists():
+        return body
+    data = load_json(path)
+    for item in data.get("replacements", []):
+        pattern = str(item.get("from", ""))
+        replacement = str(item.get("to", ""))
+        if not pattern:
+            continue
+        if item.get("regex"):
+            flags = re.DOTALL if item.get("dotall", True) else 0
+            body = re.sub(pattern, replacement, body, flags=flags)
+        else:
+            body = body.replace(pattern, replacement)
+    return body
+
+
 def build_source(book_id: str, mathpix_tex: Path) -> Path:
     plan = plan_for(book_id)
     title, author = metadata(plan)
+    font_command = str(plan.get("editable_pocket_font_command") or r"\footnotesize")
     out_dir = ROOT / "build" / f"{book_id}-exact-pocket" / "english"
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -325,6 +345,7 @@ def build_source(book_id: str, mathpix_tex: Path) -> Path:
     body = strip_mathpix_document(mathpix_tex.read_text(encoding="utf-8", errors="replace"))
     body = resolve_image_paths(body, dst_images)
     body = sanitize_mathpix_body(body)
+    body = apply_editable_fixes(book_id, body)
     source = out_dir / "source.tex"
     source.write_text(
         "\n".join(
@@ -339,8 +360,7 @@ def build_source(book_id: str, mathpix_tex: Path) -> Path:
                 "  {English-only exact pocket TeX draft from Mathpix OCR; formulas, tables, and figures are preserved for page-by-page review.}",
                 "",
                 "\\begingroup",
-                "\\footnotesize",
-                "\\everydisplay{\\scriptsize}",
+                font_command,
                 "\\setlength{\\tabcolsep}{2pt}",
                 "\\renewcommand{\\arraystretch}{0.92}",
                 "\\setlength{\\parindent}{1.1em}",

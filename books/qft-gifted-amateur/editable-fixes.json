@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "description": "Durable OCR fixes for the editable pocket TeX draft. These are applied after Mathpix sanitization and before XeLaTeX compilation.",
+  "replacements": [
+    {
+      "from": "\\section*{computational nuysice}\n",
+      "to": ""
+    },
+    {
+      "from": "D0．1 What is quantum field the－ory？ 1\\\\",
+      "to": "0.1 What is quantum field theory? 1\\\\"
+    },
+    {
+      "from": "destroving virtual particles",
+      "to": "destroying virtual particles"
+    },
+    {
+      "from": "\\section*{0．2 What is a field？OH：diffentiable Holograph}",
+      "to": "\\section*{0.2 What is a field?}"
+    },
+    {
+      "from": "practioners",
+      "to": "practitioners"
+    },
+    {
+      "from": "noto－ riously",
+      "to": "notoriously"
+    },
+    {
+      "from": "Forbidding－looking",
+      "to": "Forbidding-looking"
+    },
+    {
+      "from": "ex－ cellent",
+      "to": "excellent"
+    },
+    {
+      "from": "in－ teresting",
+      "to": "interesting"
+    },
+    {
+      "from": "allspeeds",
+      "to": "all speeds"
+    },
+    {
+      "from": "\\section*{计算物项听并化学。}\n",
+      "to": ""
+    },
+    {
+      "from": "Descretize",
+      "to": "Discretize"
+    },
+    {
+      "from": "Chapter summary 174Exercises174",
+      "to": "Chapter summary 174\\\\\nExercises 174"
+    }
+  ]
+}

@@ -75,6 +75,7 @@
   "mathpix_pdf_job_dir": "books/qft-gifted-amateur/work/exact-tex/mathpix-pdf",
   "build_root": "build/qft-gifted-amateur-exact-pocket",
   "tex_template": "tex/textbook-pocket/book.tex",
+  "editable_pocket_font_command": "\\scriptsize",
   "prepared_at": "2026-06-25T05:17:10.389321+00:00",
   "description": "Retype Lancaster and Blundell, Quantum Field Theory for the Gifted Amateur, as a pocket-size TeX book. This is a formula-dense physics textbook: all inline/display equations, Feynman diagrams, examples, exercises, footnotes, tables, captions, appendices, and references must be preserved page by page. The open-source facsimile path should be generated first. Mathpix whole-PDF OCR is only needed for an editable/reflowed TeX pass; plain pdftotext is a navigation aid and must not be trusted for formulas."
 }
