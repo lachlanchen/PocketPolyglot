@@ -71,6 +71,10 @@ def job_dir(book_id: str) -> Path:
     return ROOT / "books" / book_id / "work/exact-tex/mathpix-pdf"
 
 
+def job_file(book_id: str) -> Path:
+    return job_dir(book_id) / "job.json"
+
+
 def find_mathpix_tex(book_id: str) -> Path | None:
     base = job_dir(book_id)
     texzip_root = base / "texzip"
@@ -101,8 +105,11 @@ def ensure_mathpix_tex(book_id: str, *, submit: bool, wait: bool, download: bool
         )
 
     helper = ROOT / "scripts/interlinear/textbook_mathpix_pdf_job.py"
-    print(f"[{book_id}] submitting Mathpix whole-PDF job", flush=True)
-    print(run(["python", str(helper), "submit", "--book-id", book_id]).stdout, flush=True)
+    if job_file(book_id).exists():
+        print(f"[{book_id}] reusing existing Mathpix job file", flush=True)
+    else:
+        print(f"[{book_id}] submitting Mathpix whole-PDF job", flush=True)
+        print(run(["python", str(helper), "submit", "--book-id", book_id]).stdout, flush=True)
     if wait:
         print(f"[{book_id}] waiting for Mathpix conversions", flush=True)
         print(
