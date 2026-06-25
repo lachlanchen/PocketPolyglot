@@ -46,6 +46,10 @@ def token_text(tokens: Any) -> str:
     return "".join(str(token.get("t", "")) for token in tokens if isinstance(token, dict))
 
 
+def source_has_content(text: str) -> bool:
+    return bool(HAN_RE.search(source_compare_text(text)))
+
+
 def validate_token_shape(tokens: Any, where: str, errors: list[str]) -> bool:
     if not isinstance(tokens, list):
         errors.append(f"{where}: must be a token list")
@@ -149,10 +153,11 @@ def validate_chunk(source: dict[str, Any], result: dict[str, Any]) -> list[str]:
                 errors.append(f"{uwhere}: must be object")
                 continue
             source_wenyan = str(unit.get("source_wenyan", ""))
-            validate_zh_like(unit.get("wenyan", []), f"{uwhere}.wenyan", errors, require_han=True)
-            validate_zh_like(unit.get("zh_modern", []), f"{uwhere}.zh_modern", errors, require_han=True)
-            validate_ja(unit.get("ja_modern", []), f"{uwhere}.ja_modern", errors, require_japanese=True)
-            validate_en(unit.get("en", []), f"{uwhere}.en", errors, require_latin=True)
+            require_content = source_has_content(source_wenyan)
+            validate_zh_like(unit.get("wenyan", []), f"{uwhere}.wenyan", errors, require_han=require_content)
+            validate_zh_like(unit.get("zh_modern", []), f"{uwhere}.zh_modern", errors, require_han=require_content)
+            validate_ja(unit.get("ja_modern", []), f"{uwhere}.ja_modern", errors, require_japanese=require_content)
+            validate_en(unit.get("en", []), f"{uwhere}.en", errors, require_latin=require_content)
             if no_space(token_text(unit.get("wenyan", []))) != no_space(source_wenyan):
                 errors.append(f"{uwhere}: wenyan tokens do not reconstruct source_wenyan")
     return errors
@@ -169,10 +174,12 @@ def validate_book(data: dict[str, Any]) -> list[str]:
         for p_index, paragraph in enumerate(chapter.get("paragraphs", [])):
             for u_index, unit in enumerate(paragraph.get("units", [])):
                 where = f"chapters[{c_index}].paragraphs[{p_index}].units[{u_index}]"
-                validate_zh_like(unit.get("wenyan", []), f"{where}.wenyan", errors, require_han=True)
-                validate_zh_like(unit.get("zh_modern", []), f"{where}.zh_modern", errors, require_han=True)
-                validate_ja(unit.get("ja_modern", []), f"{where}.ja_modern", errors, require_japanese=True)
-                validate_en(unit.get("en", []), f"{where}.en", errors, require_latin=True)
+                source_wenyan = str(unit.get("source_wenyan", ""))
+                require_content = source_has_content(source_wenyan)
+                validate_zh_like(unit.get("wenyan", []), f"{where}.wenyan", errors, require_han=require_content)
+                validate_zh_like(unit.get("zh_modern", []), f"{where}.zh_modern", errors, require_han=require_content)
+                validate_ja(unit.get("ja_modern", []), f"{where}.ja_modern", errors, require_japanese=require_content)
+                validate_en(unit.get("en", []), f"{where}.en", errors, require_latin=require_content)
     return errors
 
 

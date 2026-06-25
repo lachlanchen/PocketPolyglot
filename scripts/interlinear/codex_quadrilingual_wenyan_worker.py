@@ -44,6 +44,10 @@ def ignorable_source_unit(text: str) -> bool:
     return bool(SOURCE_NOTE_MARK_RE.fullmatch(str(text or "")))
 
 
+def source_has_content(text: str) -> bool:
+    return bool(HAN_RE.search(str(text or "")))
+
+
 def source_unit_plan(chunk: dict[str, Any]) -> list[dict[str, Any]]:
     plan: list[dict[str, Any]] = []
     for paragraph in chunk.get("paragraphs", []):
@@ -184,24 +188,27 @@ def validate_plain_chunk(source: dict[str, Any], result: dict[str, Any]) -> list
                 errors.append(f"{paragraph_id}.units[{u_index}]: must be object")
                 continue
             expected_wenyan = expected_units[u_index]["source_wenyan"] if u_index < len(expected_units) else ""
-            if "".join(str(unit.get("source_wenyan", "")).split()) != "".join(expected_wenyan.split()):
-                errors.append(f"{paragraph_id}.units[{u_index}]: source_wenyan changed")
+            require_content = source_has_content(expected_wenyan)
             zh = plain_text(unit.get("zh_modern"))
             ja = plain_text(unit.get("ja_modern"))
             en = plain_text(unit.get("en"))
-            if not zh or not HAN_RE.search(zh):
+            if not zh or (require_content and not HAN_RE.search(zh)):
                 errors.append(f"{paragraph_id}.units[{u_index}].zh_modern: missing Chinese")
             if KANA_RE.search(zh):
                 errors.append(f"{paragraph_id}.units[{u_index}].zh_modern: contains Japanese kana")
-            if not ja or (len("".join(ja.split())) > 8 and not KANA_RE.search(ja)):
+            if not ja or (require_content and len("".join(ja.split())) > 8 and not KANA_RE.search(ja)):
                 errors.append(f"{paragraph_id}.units[{u_index}].ja_modern: must be real Japanese with kana")
-            if not en or not re.search(r"[A-Za-z]", en):
+            if not en or (require_content and not re.search(r"[A-Za-z]", en)):
                 errors.append(f"{paragraph_id}.units[{u_index}].en: missing English")
     return errors
 
 
 def promote_plain_chunk(source: dict[str, Any], plain: dict[str, Any]) -> dict[str, Any]:
     source_paragraphs = {p["id"]: p for p in source.get("paragraphs", [])}
+    expected_units_by_paragraph = {
+        paragraph["id"]: {unit["unit_id"]: unit["source_wenyan"] for unit in paragraph["units"]}
+        for paragraph in source_unit_plan(source)
+    }
     strict = {
         "schema_version": "0.1",
         "mode": "quadrilingual_wenyan_main",
@@ -221,13 +228,14 @@ def promote_plain_chunk(source: dict[str, Any], plain: dict[str, Any]) -> dict[s
     for paragraph in plain.get("paragraphs", []):
         paragraph_id = paragraph["id"]
         source_paragraph = source_paragraphs[paragraph_id]
+        expected_units = expected_units_by_paragraph.get(paragraph_id, {})
         strict_paragraph = {
             "id": paragraph_id,
             "source_wenyan": source_paragraph["wenyan"],
             "units": [],
         }
         for unit in paragraph.get("units", []):
-            source_wenyan = str(unit.get("source_wenyan", ""))
+            source_wenyan = str(expected_units.get(unit.get("unit_id")) or unit.get("source_wenyan", ""))
             strict_paragraph["units"].append(
                 {
                     "source_wenyan": source_wenyan,
