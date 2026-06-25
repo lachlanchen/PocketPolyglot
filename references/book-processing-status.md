@@ -70,10 +70,10 @@ support layers. The source inventory is tracked in
 
 | Priority | Proposed ID | Title | Source Path | Current Status | Next Step |
 |---:|---|---|---|---|---|
-| C1 | `zhuangzi` | 莊子 / Zhuangzi / 荘子 | `sources/zhuangzi` | Sources copied; quadrilingual plan prepared | Convert wenyan + modern references to Markdown, then chunk by chapter/paragraph. |
+| C1 | `zhuangzi` | 莊子 / Zhuangzi / 荘子 | `sources/zhuangzi` | Running quadrilingual writer; 33 chapters / 892 chunks prepared | tmux `zhjpbook-zhuangzi-quadrilingual`; queue monitor will check full coverage before moving on. |
 | C2 | `han-shu` | 漢書 / Book of Han | `sources/han-shu` | Sources copied; quadrilingual plan prepared | Use Chinese source spine; generate modern Japanese where JP source is index-only. |
 | C3 | `hou-han-shu` | 後漢書 / Book of Later Han | `sources/hou-han-shu` | Sources copied; quadrilingual plan prepared | Treat English/Japanese references as partial chapter references only. |
-| C4 | `sanguozhi` | 三國志 / Records of the Three Kingdoms | `sources/sanguozhi` | Sources copied; quadrilingual plan prepared | Use Chinese source and 裴松之注 edition for structure; English references are incomplete. |
+| C4 | `sanguozhi` | 三國志 / Records of the Three Kingdoms | `sources/sanguozhi` | Launchable and queued after Zhuangzi; 67 chapters / 2338 chunks prepared | Main spine excludes Pei Songzhi commentary from the primary wenyan stream; English references are incomplete. |
 
 ## Additional Future Queue
 
