@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "book_id": "nonlinear-dynamics-and-chaos",
+  "status": "prepared_exact_tex_not_started",
+  "task_mode": "exact_textbook_tex_then_multilingual",
+  "launchable": true,
+  "book_title_en": "Nonlinear Dynamics and Chaos",
+  "book_title_zh": "非线性动力学与混沌",
+  "book_title_ja": "非線形ダイナミクスとカオス",
+  "book_title_zh_reading": "fēi xiàn xìng dòng lì xué yǔ hùn dùn",
+  "book_title_ja_reading": "ひせんけい ダイナミクス と カオス",
+  "author": "Steven H. Strogatz",
+  "author_reading_zh": "shǐ dì fēn H. sī tuō jiā cí",
+  "author_reading_ja": "スティーヴン H. ストロガッツ",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "source_paths": {
+    "exact_source": "sources/nonlinear-dynamics-and-chaos/Nonlinear Dynamics and Chaos - With Applications to Physics, Biology, Chemistry, and Engineering.pdf",
+    "zh_reference": "sources/nonlinear-dynamics-and-chaos/非线性动力学与混沌.pdf"
+  },
+  "source_sha256": {
+    "exact_source": "8cb52d57ddf6c63dc71042e113c6dd333c4789a3aa4c9fe1ac1eeb2d0daa7579",
+    "zh_reference": "543ffd9e6103a80db87a318ce13f91f545c35c5e022a1da7f2d3c1faf9287f6b"
+  },
+  "source_status": {
+    "exact_source": {
+      "available": true,
+      "path": "sources/nonlinear-dynamics-and-chaos/Nonlinear Dynamics and Chaos - With Applications to Physics, Biology, Chemistry, and Engineering.pdf",
+      "sha256": "8cb52d57ddf6c63dc71042e113c6dd333c4789a3aa4c9fe1ac1eeb2d0daa7579",
+      "pages": 616,
+      "page_size": "442.08 x 663.12 pts",
+      "embedded_text_chars": 765928,
+      "embedded_text_usable": true
+    },
+    "zh_reference": {
+      "available": true,
+      "path": "sources/nonlinear-dynamics-and-chaos/非线性动力学与混沌.pdf",
+      "sha256": "543ffd9e6103a80db87a318ce13f91f545c35c5e022a1da7f2d3c1faf9287f6b",
+      "pages": 515,
+      "page_size": "395.52 x 571.92 pts",
+      "embedded_text_chars": 256984,
+      "embedded_text_usable": true
+    }
+  },
+  "tools": {
+    "mathpix_api_credentials": true,
+    "mathpix_pdf_helper": "scripts/interlinear/textbook_mathpix_pdf_job.py",
+    "mathpix_image_helper": "scripts/interlinear/textbook_mathpix_ocr_worker.py",
+    "mpxpy": true,
+    "pdftocairo": true,
+    "pdftoppm": true,
+    "pdfimages": true,
+    "mutool": true,
+    "tesseract": true,
+    "pix2tex": false
+  },
+  "page_count": 616,
+  "body_start_page": 6,
+  "content_page_count": 600,
+  "mathpix_required_page_count": 600,
+  "task_contract": {
+    "first_artifact": "page-faithful TeX fragments, reviewed against source page images",
+    "preferred_ocr": "Use Mathpix v3/pdf whole-document OCR first, requesting tex.zip, mmd.zip, md.zip, and lines.json. Use per-page Mathpix OCR only for pages that need targeted repair.",
+    "formula_policy": "All displayed and inline formulas must be represented as TeX, not paraphrased prose.",
+    "figure_policy": "Extract or crop figures from the source PDF and preserve captions; do not silently drop diagrams.",
+    "translation_policy": "After exact TeX is assembled, split text/math nodes. Translate text nodes to modern Japanese and Chinese; copy math nodes unchanged into multilingual editions.",
+    "layout_policy": "Use tex/textbook-pocket with the same 105mm x 148mm pocket geometry and font scale as current books.",
+    "validation_policy": [
+      "compile exact pocket PDF with XeLaTeX",
+      "compare page/task coverage against manifest",
+      "spot-check formula-heavy pages visually against source images",
+      "check TeX log for severe overfull lines and missing figures",
+      "only then generate EN-JP-ZH editions"
+    ]
+  },
+  "tasks_jsonl": "books/nonlinear-dynamics-and-chaos/tasks/exact-tex/pages.jsonl",
+  "manifest": "books/nonlinear-dynamics-and-chaos/tasks/exact-tex/manifest.json",
+  "work_root": "books/nonlinear-dynamics-and-chaos/work/exact-tex",
+  "mathpix_pdf_job_dir": "books/nonlinear-dynamics-and-chaos/work/exact-tex/mathpix-pdf",
+  "build_root": "build/nonlinear-dynamics-and-chaos-exact-pocket",
+  "tex_template": "tex/textbook-pocket/book.tex",
+  "prepared_at": "2026-06-25T05:01:45.946707+00:00",
+  "description": "Retype Strogatz, Nonlinear Dynamics and Chaos, as a pocket-size TeX book. Equations, figures, captions, examples, exercises, and section numbering must be preserved. The Chinese PDF is a second-edition translation and should be used as a reference, not as a replacement for the English exact source."
+}

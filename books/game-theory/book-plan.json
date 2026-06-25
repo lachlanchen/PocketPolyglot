@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "book_id": "game-theory",
+  "status": "prepared_exact_tex_not_started",
+  "task_mode": "exact_textbook_tex_then_multilingual",
+  "launchable": true,
+  "book_title_en": "Game Theory",
+  "book_title_zh": "博弈论",
+  "book_title_ja": "ゲーム理論",
+  "book_title_zh_reading": "bó yì lùn",
+  "book_title_ja_reading": "ゲーム りろん",
+  "author": "Martin J. Osborne and Ariel Rubinstein",
+  "author_reading_zh": "mǎ dīng ào sī běn hé ā ruì ěr lǔ bīn sī tǎn",
+  "author_reading_ja": "マーティン オズボーン と アリエル ルービンシュタイン",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "source_paths": {
+    "exact_source": "sources/game-theory/A Course in Game Theory.pdf",
+    "zh_reference": "sources/game-theory/博弈论教程.pdf",
+    "en_secondary": [
+      "sources/game-theory/Game_Theory_101_Complete_Textbook_2011.pdf"
+    ]
+  },
+  "source_sha256": {
+    "exact_source": "ffb9eecb5c1a2e7341704c833cbe063925993a76b9e3a492b10051087f9962da",
+    "zh_reference": "8106a246a378c12c8adfcf2fa806f7ac23cf7105ee87b87e66f917fc2bf4ff13",
+    "en_secondary": {
+      "sources/game-theory/Game_Theory_101_Complete_Textbook_2011.pdf": "812b2325f8651fcfb456654d6b0284a76c222fae592744aea360a5b4e47d8922"
+    }
+  },
+  "source_status": {
+    "exact_source": {
+      "available": true,
+      "path": "sources/game-theory/A Course in Game Theory.pdf",
+      "sha256": "ffb9eecb5c1a2e7341704c833cbe063925993a76b9e3a492b10051087f9962da",
+      "pages": 373,
+      "page_size": "595 x 842 pts (A4)",
+      "embedded_text_chars": 530856,
+      "embedded_text_usable": true
+    },
+    "zh_reference": {
+      "available": true,
+      "path": "sources/game-theory/博弈论教程.pdf",
+      "sha256": "8106a246a378c12c8adfcf2fa806f7ac23cf7105ee87b87e66f917fc2bf4ff13",
+      "pages": 337,
+      "page_size": "595 x 842 pts (A4)",
+      "embedded_text_chars": 7,
+      "embedded_text_usable": false
+    }
+  },
+  "tools": {
+    "mathpix_api_credentials": true,
+    "mathpix_pdf_helper": "scripts/interlinear/textbook_mathpix_pdf_job.py",
+    "mathpix_image_helper": "scripts/interlinear/textbook_mathpix_ocr_worker.py",
+    "mpxpy": true,
+    "pdftocairo": true,
+    "pdftoppm": true,
+    "pdfimages": true,
+    "mutool": true,
+    "tesseract": true,
+    "pix2tex": false
+  },
+  "page_count": 373,
+  "body_start_page": 4,
+  "content_page_count": 370,
+  "mathpix_required_page_count": 370,
+  "task_contract": {
+    "first_artifact": "page-faithful TeX fragments, reviewed against source page images",
+    "preferred_ocr": "Use Mathpix v3/pdf whole-document OCR first, requesting tex.zip, mmd.zip, md.zip, and lines.json. Use per-page Mathpix OCR only for pages that need targeted repair.",
+    "formula_policy": "All displayed and inline formulas must be represented as TeX, not paraphrased prose.",
+    "figure_policy": "Extract or crop figures from the source PDF and preserve captions; do not silently drop diagrams.",
+    "translation_policy": "After exact TeX is assembled, split text/math nodes. Translate text nodes to modern Japanese and Chinese; copy math nodes unchanged into multilingual editions.",
+    "layout_policy": "Use tex/textbook-pocket with the same 105mm x 148mm pocket geometry and font scale as current books.",
+    "validation_policy": [
+      "compile exact pocket PDF with XeLaTeX",
+      "compare page/task coverage against manifest",
+      "spot-check formula-heavy pages visually against source images",
+      "check TeX log for severe overfull lines and missing figures",
+      "only then generate EN-JP-ZH editions"
+    ]
+  },
+  "tasks_jsonl": "books/game-theory/tasks/exact-tex/pages.jsonl",
+  "manifest": "books/game-theory/tasks/exact-tex/manifest.json",
+  "work_root": "books/game-theory/work/exact-tex",
+  "mathpix_pdf_job_dir": "books/game-theory/work/exact-tex/mathpix-pdf",
+  "build_root": "build/game-theory-exact-pocket",
+  "tex_template": "tex/textbook-pocket/book.tex",
+  "prepared_at": "2026-06-25T05:01:43.228670+00:00",
+  "description": "Retype Osborne and Rubinstein, A Course in Game Theory, as a pocket-size TeX book. All definitions, propositions, payoff matrices, symbols, equations, and references must match the source. The Chinese PDF is reference material but has almost no embedded text, so OCR/polish is required before relying on it for translated editions."
+}

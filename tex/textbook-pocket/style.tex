@@ -1,0 +1,114 @@
+\usepackage{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\geometry{
+  paperwidth=105mm,
+  paperheight=148mm,
+  inner=8mm,
+  outer=8mm,
+  top=9mm,
+  bottom=11mm,
+  headheight=0pt,
+  headsep=0pt,
+  footskip=7mm
+}
+
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{Noto Sans}
+\setmonofont{TeX Gyre Cursor}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+\newfontfamily\ExactSans{Noto Sans}
+\newfontfamily\ExactMono{TeX Gyre Cursor}
+
+\definecolor{BookInk}{HTML}{151515}
+\definecolor{BookNote}{HTML}{4D463E}
+\definecolor{BookRule}{HTML}{B9B0A5}
+\definecolor{BookRed}{HTML}{7E2F24}
+
+\hypersetup{colorlinks=true,linkcolor=BookRed,urlcolor=BookRed}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\titleformat{\chapter}[block]{\normalfont\Large\bfseries}{\thechapter}{0.6em}{}
+\titlespacing*{\chapter}{0pt}{0.35em}{0.65em}
+\titleformat{\section}[block]{\normalfont\large\bfseries}{\thesection}{0.55em}{}
+\titlespacing*{\section}{0pt}{0.75em}{0.35em}
+\titleformat{\subsection}[block]{\normalfont\normalsize\bfseries}{\thesubsection}{0.5em}{}
+\titlespacing*{\subsection}{0pt}{0.55em}{0.25em}
+
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{0pt}
+\setlength{\abovedisplayskip}{0.45em}
+\setlength{\belowdisplayskip}{0.45em}
+\setlength{\abovedisplayshortskip}{0.35em}
+\setlength{\belowdisplayshortskip}{0.35em}
+\emergencystretch=4em
+\sloppy
+\linespread{1.02}
+
+\numberwithin{equation}{chapter}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{exercise}{Exercise}[chapter]
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[chapter]
+
+\newcommand{\TextbookPdfMeta}[3]{%
+  \hypersetup{pdftitle={#1},pdfauthor={#2},pdfsubject={#3}}%
+}
+
+\newcommand{\TextbookTitlePage}[6]{%
+  \frontmatter
+  \thispagestyle{empty}
+  \vspace*{0.14\textheight}
+  {\centering
+    {\Large #1\par}
+    \vspace{0.8em}
+    {\normalsize #2\par}
+    \vfill
+    {\ExactSans\fontsize{6.2pt}{8pt}\selectfont #3\quad #4\par #5\par}
+    \vspace{0.8em}
+    {\ExactSans\fontsize{5.8pt}{7pt}\selectfont #6\par}
+  }
+  \clearpage
+  \tableofcontents
+  \clearpage
+  \mainmatter
+}
+
+\newcommand{\ExactFigure}[3][]{%
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth,#1]{#2}
+    \caption{#3}
+  \end{figure}
+}
+
+\newenvironment{ExactSmall}{\small}{}
+\newenvironment{ExactTightItemize}{\begin{itemize}[leftmargin=1.2em,itemsep=0.12em,topsep=0.2em]}{\end{itemize}}
+\newenvironment{ExactTightEnumerate}{\begin{enumerate}[leftmargin=1.4em,itemsep=0.12em,topsep=0.2em]}{\end{enumerate}}
