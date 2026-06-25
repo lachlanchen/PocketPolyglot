@@ -47,6 +47,7 @@ DISPLAY_ALIGN_TRAILING_INLINE_RE = re.compile(
 )
 INLINE_MATH_RE = re.compile(r"\\\((.*?)\\\)", re.DOTALL)
 DISPLAY_MATH_RE = re.compile(r"\\\[(.*?)\\\]", re.DOTALL)
+TABULAR_RE = re.compile(r"(\\begin\{tabular\})\s*(\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\})([\s\S]*?)(\\end\{tabular\})")
 
 
 def run(cmd: list[str], *, check: bool = True, cwd: Path = ROOT) -> subprocess.CompletedProcess[str]:
@@ -185,10 +186,44 @@ def normalize_includegraphics_options(body: str) -> str:
     def replace(match: re.Match[str]) -> str:
         _, raw_name, _ = match.groups()
         options = r"max width=.94\linewidth,max totalheight=.62\textheight,keepaspectratio,center"
-        return rf"\includegraphics[{options}]{{{raw_name.strip()}}}"
+        return rf"\noindent\includegraphics[{options}]{{{raw_name.strip()}}}"
 
     body = INCLUDEGRAPHICS_RE.sub(replace, body)
     return re.sub(r"(\\includegraphics\[[^\]]+\]\{[^}]+\})\\\\", r"\1\\par\\smallskip", body)
+
+
+def count_simple_columns(spec: str) -> int:
+    spec = re.sub(r"\|", "", spec)
+    spec = re.sub(r"@\{[^{}]*\}", "", spec)
+    spec = re.sub(r">\{[^{}]*\}|<\{[^{}]*\}", "", spec)
+    spec = re.sub(r"[pmb]\{[^{}]*\}", "c", spec)
+    return len(re.findall(r"[lcrX]", spec))
+
+
+def count_row_columns(row: str) -> int:
+    row = row.strip()
+    if not row or row.startswith(r"\hline") or row.startswith(r"\cline"):
+        return 0
+    multicol = re.match(r"\\multicolumn\{(\d+)\}", row)
+    if multicol:
+        return int(multicol.group(1)) + row[multicol.end() :].count("&")
+    return len(re.findall(r"(?<!\\)&", row)) + 1
+
+
+def widen_simple_tabular_specs(body: str) -> str:
+    def replace(match: re.Match[str]) -> str:
+        begin, spec_group, spec, content, end = match.groups()
+        declared = count_simple_columns(spec)
+        rows = re.split(r"(?<!\\)\\\\", content)
+        actual = max((count_row_columns(row) for row in rows), default=0)
+        if actual <= declared or actual <= 0:
+            return match.group(0)
+        tokens = re.findall(r"[lcrX]", re.sub(r"[pmb]\{[^{}]*\}", "c", spec))
+        first = tokens[0] if tokens else "l"
+        fixed_spec = "| " + " ".join([first] + ["c"] * (actual - 1)) + " |"
+        return f"{begin}{{{fixed_spec}}}{content}{end}"
+
+    return TABULAR_RE.sub(replace, body)
 
 
 def balance_math_delimiters(content: str) -> str:
@@ -264,6 +299,7 @@ def sanitize_mathpix_body(body: str) -> str:
         body,
     )
     body = body.replace(r"\end{tabular}", r"\end{tabular}\end{adjustbox}")
+    body = widen_simple_tabular_specs(body)
     return body
 
 
