@@ -2,10 +2,10 @@
 """Prepare page-faithful textbook-to-TeX tasks.
 
 Technical textbooks must not go through the normal prose-first trilingual
-chunker. This preparer creates a page-level exact-TeX task contract: render
-source pages, OCR with Mathpix for formula-bearing content, review against the
-page image, assemble pocket-size TeX, then derive multilingual editions without
-changing formulas.
+chunker. This preparer creates a page-level exact-TeX task contract: first
+produce an open-source pocket facsimile that preserves formulas/tables exactly,
+then optionally OCR/retype formula-bearing pages for editable TeX and review
+against the source page image before deriving multilingual editions.
 """
 
 from __future__ import annotations
@@ -47,6 +47,7 @@ class TextbookConfig:
     exact_source_lang: str
     exact_source_pdf: Path
     zh_reference_pdf: Path | None
+    zh_reference_epub: Path | None = None
     en_secondary_sources: tuple[Path, ...] = ()
     body_start_marker: str = ""
     description: str = ""
@@ -75,6 +76,27 @@ BOOKS: dict[str, TextbookConfig] = {
             "so OCR/polish is required before relying on it for translated editions."
         ),
     ),
+    "game-theory-101": TextbookConfig(
+        book_id="game-theory-101",
+        title_en="Game Theory 101: The Complete Textbook",
+        title_zh="博弈论 101",
+        title_ja="ゲーム理論 101",
+        title_zh_reading="bó yì lùn yī líng yī",
+        title_ja_reading="ゲーム りろん ひゃくいち",
+        author="William Spaniel",
+        author_reading_zh="wēi lián sī pān ní ěr",
+        author_reading_ja="ウィリアム スパニエル",
+        exact_source_lang="en",
+        exact_source_pdf=Path("sources/game-theory/Game_Theory_101_Complete_Textbook_2011.pdf"),
+        zh_reference_pdf=Path("sources/game-theory/博弈论教程.pdf"),
+        body_start_marker="Introduction",
+        description=(
+            "Retype William Spaniel, Game Theory 101: The Complete Textbook, as a pocket-size TeX book. "
+            "The book is lighter than Osborne and Rubinstein but still contains payoff tables, diagrams, "
+            "equations, examples, and chapter structure that must be preserved. The Chinese game-theory "
+            "PDF is a general reference, not a line-by-line translation."
+        ),
+    ),
     "nonlinear-dynamics-and-chaos": TextbookConfig(
         book_id="nonlinear-dynamics-and-chaos",
         title_en="Nonlinear Dynamics and Chaos",
@@ -99,6 +121,30 @@ BOOKS: dict[str, TextbookConfig] = {
             "a replacement for the English exact source."
         ),
     ),
+    "chaos-making-new-science": TextbookConfig(
+        book_id="chaos-making-new-science",
+        title_en="Chaos: Making a New Science",
+        title_zh="混沌：开创新科学",
+        title_ja="カオス：新しい科学をつくる",
+        title_zh_reading="hùn dùn kāi chuàng xīn kē xué",
+        title_ja_reading="カオス あたらしい かがく を つくる",
+        author="James Gleick",
+        author_reading_zh="zhān mǔ sī gé lái kè",
+        author_reading_ja="ジェイムズ グリック",
+        exact_source_lang="en",
+        exact_source_pdf=Path("sources/chaos-making-new-science/Chaos_Making_New_Science_2015.pdf"),
+        zh_reference_pdf=None,
+        zh_reference_epub=Path(
+            "sources/chaos-making-new-science/"
+            "混沌：开创一门新科学（图灵图书）【百万级销量科普畅销书作家，中国文津图书奖、英国皇家学会图书奖《信息简史》作者最新力作！美国国家图书奖、普利策奖入围作品！】.epub"
+        ),
+        body_start_marker="Prologue",
+        description=(
+            "Retype James Gleick, Chaos: Making a New Science, as a pocket-size TeX book. "
+            "This is less equation-dense than the textbooks, but figures, captions, quotations, "
+            "section starts, and occasional formulas still need page-faithful preservation."
+        ),
+    ),
     "qft-gifted-amateur": TextbookConfig(
         book_id="qft-gifted-amateur",
         title_en="Quantum Field Theory for the Gifted Amateur",
@@ -121,8 +167,9 @@ BOOKS: dict[str, TextbookConfig] = {
             "as a pocket-size TeX book. This is a formula-dense physics textbook: all "
             "inline/display equations, Feynman diagrams, examples, exercises, footnotes, "
             "tables, captions, appendices, and references must be preserved page by page. "
-            "Mathpix whole-PDF OCR is required as the first pass; plain pdftotext is only "
-            "a navigation aid and must not be trusted for formulas."
+            "The open-source facsimile path should be generated first. Mathpix whole-PDF OCR "
+            "is only needed for an editable/reflowed TeX pass; plain pdftotext is a navigation "
+            "aid and must not be trusted for formulas."
         ),
     ),
 }
@@ -213,6 +260,15 @@ def find_body_start_page(pages: list[str], marker: str) -> int:
 def source_status(path: Path | None) -> dict[str, Any]:
     if path is None:
         return {"available": False}
+    if path.suffix.lower() == ".epub":
+        resolved = rel(path)
+        return {
+            "available": resolved.exists(),
+            "path": str(path),
+            "sha256": sha256(path) if resolved.exists() else None,
+            "format": "epub",
+            "embedded_text_usable": resolved.exists(),
+        }
     info = pdfinfo(path)
     pages = pdf_text_pages(path)
     chars = sum(content_chars(page) for page in pages)
@@ -285,6 +341,8 @@ def prepare(config: TextbookConfig) -> dict[str, Any]:
     }
     if config.zh_reference_pdf:
         source_paths["zh_reference"] = str(config.zh_reference_pdf)
+    if config.zh_reference_epub:
+        source_paths["zh_reference_epub"] = str(config.zh_reference_epub)
     if config.en_secondary_sources:
         source_paths["en_secondary"] = [str(path) for path in config.en_secondary_sources]
 
@@ -293,6 +351,8 @@ def prepare(config: TextbookConfig) -> dict[str, Any]:
     }
     if config.zh_reference_pdf:
         source_sha256["zh_reference"] = sha256(config.zh_reference_pdf)
+    if config.zh_reference_epub:
+        source_sha256["zh_reference_epub"] = sha256(config.zh_reference_epub)
     if config.en_secondary_sources:
         source_sha256["en_secondary"] = {str(path): sha256(path) for path in config.en_secondary_sources}
 
@@ -331,6 +391,7 @@ def prepare(config: TextbookConfig) -> dict[str, Any]:
         "source_status": {
             "exact_source": source_status(config.exact_source_pdf),
             "zh_reference": source_status(config.zh_reference_pdf),
+            "zh_reference_epub": source_status(config.zh_reference_epub),
         },
         "tools": tools,
         "page_count": page_count,
@@ -338,10 +399,12 @@ def prepare(config: TextbookConfig) -> dict[str, Any]:
         "content_page_count": sum(1 for task in tasks if task["is_content_page"]),
         "mathpix_required_page_count": sum(1 for task in tasks if task["requires_mathpix"]),
         "task_contract": {
-            "first_artifact": "page-faithful TeX fragments, reviewed against source page images",
+            "first_artifact": "open-source pocket facsimile TeX/PDF preserving original formulas and tables visually",
             "preferred_ocr": (
-                "Use Mathpix v3/pdf whole-document OCR first, requesting tex.zip, mmd.zip, md.zip, "
-                "and lines.json. Use per-page Mathpix OCR only for pages that need targeted repair."
+                "Do not run OCR just to get an exact readable pocket PDF. Use "
+                "scripts/interlinear/compile_textbook_facsimile_pocket.py first. "
+                "For editable/reflowed TeX, use Mathpix v3/pdf or targeted page OCR only "
+                "after the facsimile exists and only for pages that need retyping."
             ),
             "formula_policy": "All displayed and inline formulas must be represented as TeX, not paraphrased prose.",
             "figure_policy": "Extract or crop figures from the source PDF and preserve captions; do not silently drop diagrams.",
@@ -351,7 +414,7 @@ def prepare(config: TextbookConfig) -> dict[str, Any]:
             ),
             "layout_policy": "Use tex/textbook-pocket with the same 105mm x 148mm pocket geometry and font scale as current books.",
             "validation_policy": [
-                "compile exact pocket PDF with XeLaTeX",
+                "compile exact open-source facsimile pocket PDF with XeLaTeX",
                 "compare page/task coverage against manifest",
                 "spot-check formula-heavy pages visually against source images",
                 "check TeX log for severe overfull lines and missing figures",
@@ -382,13 +445,13 @@ def prepare(config: TextbookConfig) -> dict[str, Any]:
                 "",
                 "Required order:",
                 "",
-                "1. Render page images from the exact source PDF.",
-                "2. Run Mathpix OCR for every content page, especially formula-heavy pages.",
-                "3. Review each page against the image and correct formulas, theorem labels, figures, and captions.",
-                "4. Assemble `build/<book>-exact-pocket/source.tex` with `tex/textbook-pocket/book.tex`.",
+                "1. Compile the open-source facsimile pocket TeX/PDF first.",
+                "2. Render page images from the exact source PDF when editable review starts.",
+                "3. OCR/retype pages only when needed for editable TeX; do not guess formulas from plain text.",
+                "4. Review each editable page against the image and correct formulas, theorem labels, figures, and captions.",
                 "5. Only after exact TeX passes validation, derive EN-JP-ZH multilingual editions.",
                 "",
-                "Do not start from `pdftotext` prose chunks for this book.",
+                "Do not start from `pdftotext` prose chunks for this book. For no-Mathpix output, use the facsimile compiler.",
             ]
         )
         + "\n",
@@ -398,7 +461,10 @@ def prepare(config: TextbookConfig) -> dict[str, Any]:
         "pages": page_count,
         "content_pages": manifest["content_page_count"],
         "mathpix_pages": manifest["mathpix_required_page_count"],
-        "zh_reference_usable": manifest["source_status"]["zh_reference"].get("embedded_text_usable", False),
+        "zh_reference_usable": (
+            manifest["source_status"]["zh_reference"].get("embedded_text_usable", False)
+            or manifest["source_status"]["zh_reference_epub"].get("embedded_text_usable", False)
+        ),
     }
 
 

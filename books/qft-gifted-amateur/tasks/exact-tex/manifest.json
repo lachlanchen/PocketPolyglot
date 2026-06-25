@@ -33,6 +33,9 @@
     },
     "zh_reference": {
       "available": false
+    },
+    "zh_reference_epub": {
+      "available": false
     }
   },
   "tools": {
@@ -52,14 +55,14 @@
   "content_page_count": 503,
   "mathpix_required_page_count": 503,
   "task_contract": {
-    "first_artifact": "page-faithful TeX fragments, reviewed against source page images",
-    "preferred_ocr": "Use Mathpix v3/pdf whole-document OCR first, requesting tex.zip, mmd.zip, md.zip, and lines.json. Use per-page Mathpix OCR only for pages that need targeted repair.",
+    "first_artifact": "open-source pocket facsimile TeX/PDF preserving original formulas and tables visually",
+    "preferred_ocr": "Do not run OCR just to get an exact readable pocket PDF. Use scripts/interlinear/compile_textbook_facsimile_pocket.py first. For editable/reflowed TeX, use Mathpix v3/pdf or targeted page OCR only after the facsimile exists and only for pages that need retyping.",
     "formula_policy": "All displayed and inline formulas must be represented as TeX, not paraphrased prose.",
     "figure_policy": "Extract or crop figures from the source PDF and preserve captions; do not silently drop diagrams.",
     "translation_policy": "After exact TeX is assembled, split text/math nodes. Translate text nodes to modern Japanese and Chinese; copy math nodes unchanged into multilingual editions.",
     "layout_policy": "Use tex/textbook-pocket with the same 105mm x 148mm pocket geometry and font scale as current books.",
     "validation_policy": [
-      "compile exact pocket PDF with XeLaTeX",
+      "compile exact open-source facsimile pocket PDF with XeLaTeX",
       "compare page/task coverage against manifest",
       "spot-check formula-heavy pages visually against source images",
       "check TeX log for severe overfull lines and missing figures",
@@ -72,6 +75,6 @@
   "mathpix_pdf_job_dir": "books/qft-gifted-amateur/work/exact-tex/mathpix-pdf",
   "build_root": "build/qft-gifted-amateur-exact-pocket",
   "tex_template": "tex/textbook-pocket/book.tex",
-  "prepared_at": "2026-06-25T05:04:18.130577+00:00",
-  "description": "Retype Lancaster and Blundell, Quantum Field Theory for the Gifted Amateur, as a pocket-size TeX book. This is a formula-dense physics textbook: all inline/display equations, Feynman diagrams, examples, exercises, footnotes, tables, captions, appendices, and references must be preserved page by page. Mathpix whole-PDF OCR is required as the first pass; plain pdftotext is only a navigation aid and must not be trusted for formulas."
+  "prepared_at": "2026-06-25T05:17:10.389321+00:00",
+  "description": "Retype Lancaster and Blundell, Quantum Field Theory for the Gifted Amateur, as a pocket-size TeX book. This is a formula-dense physics textbook: all inline/display equations, Feynman diagrams, examples, exercises, footnotes, tables, captions, appendices, and references must be preserved page by page. The open-source facsimile path should be generated first. Mathpix whole-PDF OCR is only needed for an editable/reflowed TeX pass; plain pdftotext is a navigation aid and must not be trusted for formulas."
 }

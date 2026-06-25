@@ -47,6 +47,9 @@
       "page_size": "595 x 842 pts (A4)",
       "embedded_text_chars": 7,
       "embedded_text_usable": false
+    },
+    "zh_reference_epub": {
+      "available": false
     }
   },
   "tools": {
@@ -66,14 +69,14 @@
   "content_page_count": 370,
   "mathpix_required_page_count": 370,
   "task_contract": {
-    "first_artifact": "page-faithful TeX fragments, reviewed against source page images",
-    "preferred_ocr": "Use Mathpix v3/pdf whole-document OCR first, requesting tex.zip, mmd.zip, md.zip, and lines.json. Use per-page Mathpix OCR only for pages that need targeted repair.",
+    "first_artifact": "open-source pocket facsimile TeX/PDF preserving original formulas and tables visually",
+    "preferred_ocr": "Do not run OCR just to get an exact readable pocket PDF. Use scripts/interlinear/compile_textbook_facsimile_pocket.py first. For editable/reflowed TeX, use Mathpix v3/pdf or targeted page OCR only after the facsimile exists and only for pages that need retyping.",
     "formula_policy": "All displayed and inline formulas must be represented as TeX, not paraphrased prose.",
     "figure_policy": "Extract or crop figures from the source PDF and preserve captions; do not silently drop diagrams.",
     "translation_policy": "After exact TeX is assembled, split text/math nodes. Translate text nodes to modern Japanese and Chinese; copy math nodes unchanged into multilingual editions.",
     "layout_policy": "Use tex/textbook-pocket with the same 105mm x 148mm pocket geometry and font scale as current books.",
     "validation_policy": [
-      "compile exact pocket PDF with XeLaTeX",
+      "compile exact open-source facsimile pocket PDF with XeLaTeX",
       "compare page/task coverage against manifest",
       "spot-check formula-heavy pages visually against source images",
       "check TeX log for severe overfull lines and missing figures",
@@ -86,6 +89,6 @@
   "mathpix_pdf_job_dir": "books/game-theory/work/exact-tex/mathpix-pdf",
   "build_root": "build/game-theory-exact-pocket",
   "tex_template": "tex/textbook-pocket/book.tex",
-  "prepared_at": "2026-06-25T05:04:10.188189+00:00",
+  "prepared_at": "2026-06-25T05:17:00.178545+00:00",
   "description": "Retype Osborne and Rubinstein, A Course in Game Theory, as a pocket-size TeX book. All definitions, propositions, payoff matrices, symbols, equations, and references must match the source. The Chinese PDF is reference material but has almost no embedded text, so OCR/polish is required before relying on it for translated editions."
 }

@@ -1,6 +1,6 @@
-# Nonlinear Dynamics and Chaos Exact TeX Task
+# Chaos: Making a New Science Exact TeX Task
 
-Retype Strogatz, Nonlinear Dynamics and Chaos, as a pocket-size TeX book. Equations, figures, captions, examples, exercises, and section numbering must be preserved. The Chinese PDF is a second-edition translation and should be used as a reference, not as a replacement for the English exact source.
+Retype James Gleick, Chaos: Making a New Science, as a pocket-size TeX book. This is less equation-dense than the textbooks, but figures, captions, quotations, section starts, and occasional formulas still need page-faithful preservation.
 
 This is not a prose translation task. Convert the source PDF page by page into reviewed TeX.
 

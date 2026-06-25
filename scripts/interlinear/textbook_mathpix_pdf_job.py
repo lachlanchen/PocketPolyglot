@@ -149,14 +149,42 @@ def status(book_id: str, *, pdf_id: str = "") -> dict[str, Any]:
     return payload
 
 
-def wait(book_id: str, *, pdf_id: str = "", interval: int, timeout: int) -> dict[str, Any]:
+def conversions_done(payload: dict[str, Any], required: set[str]) -> bool:
+    if not required:
+        return True
+    conversion_status = payload.get("conversion_status") or {}
+    for name in required:
+        status = conversion_status.get(name, {}).get("status")
+        if status != "completed":
+            return False
+    return True
+
+
+def wait(
+    book_id: str,
+    *,
+    pdf_id: str = "",
+    interval: int,
+    timeout: int,
+    required_conversions: set[str],
+) -> dict[str, Any]:
     start = time.time()
     while True:
         payload = status(book_id, pdf_id=pdf_id)
         state = payload.get("status")
         done = payload.get("percent_done")
-        print(f"status={state} percent_done={done} completed={payload.get('num_pages_completed')}/{payload.get('num_pages')}", flush=True)
-        if state == "completed":
+        conversion_status = payload.get("conversion_status") or {}
+        conversion_summary = ",".join(
+            f"{name}:{conversion_status.get(name, {}).get('status', 'missing')}"
+            for name in sorted(required_conversions)
+        )
+        print(
+            f"status={state} percent_done={done} "
+            f"completed={payload.get('num_pages_completed')}/{payload.get('num_pages')} "
+            f"conversions={conversion_summary}",
+            flush=True,
+        )
+        if state == "completed" and conversions_done(payload, required_conversions):
             return payload
         if state == "error":
             raise RuntimeError(json.dumps(payload, ensure_ascii=False, indent=2))
@@ -200,6 +228,12 @@ def main() -> int:
     wait_parser.add_argument("--pdf-id", default="")
     wait_parser.add_argument("--interval", type=int, default=60)
     wait_parser.add_argument("--timeout", type=int, default=0)
+    wait_parser.add_argument(
+        "--required-conversion",
+        action="append",
+        default=["tex.zip", "md.zip", "mmd.zip"],
+        help="Conversion status that must be completed before wait exits. Repeatable.",
+    )
 
     download_parser = subparsers.add_parser("download")
     download_parser.add_argument("--book-id", required=True)
@@ -213,7 +247,13 @@ def main() -> int:
     elif args.cmd == "status":
         print(json.dumps(status(args.book_id, pdf_id=args.pdf_id), ensure_ascii=False, indent=2))
     elif args.cmd == "wait":
-        wait(args.book_id, pdf_id=args.pdf_id, interval=args.interval, timeout=args.timeout)
+        wait(
+            args.book_id,
+            pdf_id=args.pdf_id,
+            interval=args.interval,
+            timeout=args.timeout,
+            required_conversions=set(args.required_conversion),
+        )
     elif args.cmd == "download":
         download(args.book_id, pdf_id=args.pdf_id, extensions=args.extension or DEFAULT_EXTENSIONS)
     return 0

@@ -3,14 +3,23 @@
 \usepackage{xeCJK}
 \usepackage{xcolor}
 \usepackage{graphicx}
+\usepackage[export]{adjustbox}
 \usepackage{amsmath}
+\usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{mathtools}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{yhmath}
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{tabularx}
 \usepackage{longtable}
+\usepackage{caption}
+\usepackage{fvextra}
+\usepackage{csquotes}
+\usepackage{newunicodechar}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{fancyhdr}
@@ -36,6 +45,7 @@
 \setCJKmonofont{Noto Sans Mono CJK SC}
 \newfontfamily\ExactSans{Noto Sans}
 \newfontfamily\ExactMono{TeX Gyre Cursor}
+\graphicspath{{images/}{./images/}}
 
 \definecolor{BookInk}{HTML}{151515}
 \definecolor{BookNote}{HTML}{4D463E}
@@ -64,6 +74,16 @@
 \emergencystretch=4em
 \sloppy
 \linespread{1.02}
+\allowdisplaybreaks
+
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg}
+\newunicodechar{□}{\ifmmode\square\else{$\square$}\fi}
+\newunicodechar{×}{\ifmmode\times\else{$\times$}\fi}
+\newunicodechar{→}{\ifmmode\rightarrow\else{$\rightarrow$}\fi}
+\newunicodechar{𝜆}{\ifmmode\lambda\else{$\lambda$}\fi}
+
+\setkeys{Gin}{max width=\linewidth,max totalheight=.72\textheight,keepaspectratio}
+\captionsetup{font=scriptsize,skip=0.25em}
 
 \numberwithin{equation}{chapter}
 \theoremstyle{definition}
@@ -112,3 +132,8 @@
 \newenvironment{ExactSmall}{\small}{}
 \newenvironment{ExactTightItemize}{\begin{itemize}[leftmargin=1.2em,itemsep=0.12em,topsep=0.2em]}{\end{itemize}}
 \newenvironment{ExactTightEnumerate}{\begin{enumerate}[leftmargin=1.4em,itemsep=0.12em,topsep=0.2em]}{\end{enumerate}}
+\newenvironment{abstract}{%
+  \par\small\noindent\ignorespaces
+}{%
+  \par\normalsize
+}

@@ -6,10 +6,10 @@ This is not a prose translation task. Convert the source PDF page by page into r
 
 Required order:
 
-1. Render page images from the exact source PDF.
-2. Run Mathpix OCR for every content page, especially formula-heavy pages.
-3. Review each page against the image and correct formulas, theorem labels, figures, and captions.
-4. Assemble `build/<book>-exact-pocket/source.tex` with `tex/textbook-pocket/book.tex`.
+1. Compile the open-source facsimile pocket TeX/PDF first.
+2. Render page images from the exact source PDF when editable review starts.
+3. OCR/retype pages only when needed for editable TeX; do not guess formulas from plain text.
+4. Review each editable page against the image and correct formulas, theorem labels, figures, and captions.
 5. Only after exact TeX passes validation, derive EN-JP-ZH multilingual editions.
 
-Do not start from `pdftotext` prose chunks for this book.
+Do not start from `pdftotext` prose chunks for this book. For no-Mathpix output, use the facsimile compiler.

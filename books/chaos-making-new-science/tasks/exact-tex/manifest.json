@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "book_id": "chaos-making-new-science",
+  "status": "prepared_exact_tex_not_started",
+  "task_mode": "exact_textbook_tex_then_multilingual",
+  "launchable": true,
+  "book_title_en": "Chaos: Making a New Science",
+  "book_title_zh": "混沌：开创新科学",
+  "book_title_ja": "カオス：新しい科学をつくる",
+  "book_title_zh_reading": "hùn dùn kāi chuàng xīn kē xué",
+  "book_title_ja_reading": "カオス あたらしい かがく を つくる",
+  "author": "James Gleick",
+  "author_reading_zh": "zhān mǔ sī gé lái kè",
+  "author_reading_ja": "ジェイムズ グリック",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "source_paths": {
+    "exact_source": "sources/chaos-making-new-science/Chaos_Making_New_Science_2015.pdf",
+    "zh_reference_epub": "sources/chaos-making-new-science/混沌：开创一门新科学（图灵图书）【百万级销量科普畅销书作家，中国文津图书奖、英国皇家学会图书奖《信息简史》作者最新力作！美国国家图书奖、普利策奖入围作品！】.epub"
+  },
+  "source_sha256": {
+    "exact_source": "469488a2320ad1219fcf0cc2b234296be477d4d960a3e211d0fd40ae3742ba7d",
+    "zh_reference_epub": "93790400bf27901b18f86addedcb128ffba627a68587ca3acea6ed42fec25a65"
+  },
+  "source_status": {
+    "exact_source": {
+      "available": true,
+      "path": "sources/chaos-making-new-science/Chaos_Making_New_Science_2015.pdf",
+      "sha256": "469488a2320ad1219fcf0cc2b234296be477d4d960a3e211d0fd40ae3742ba7d",
+      "pages": 370,
+      "page_size": "396 x 576 pts",
+      "embedded_text_chars": 565115,
+      "embedded_text_usable": true
+    },
+    "zh_reference": {
+      "available": false
+    },
+    "zh_reference_epub": {
+      "available": true,
+      "path": "sources/chaos-making-new-science/混沌：开创一门新科学（图灵图书）【百万级销量科普畅销书作家，中国文津图书奖、英国皇家学会图书奖《信息简史》作者最新力作！美国国家图书奖、普利策奖入围作品！】.epub",
+      "sha256": "93790400bf27901b18f86addedcb128ffba627a68587ca3acea6ed42fec25a65",
+      "format": "epub",
+      "embedded_text_usable": true
+    }
+  },
+  "tools": {
+    "mathpix_api_credentials": true,
+    "mathpix_pdf_helper": "scripts/interlinear/textbook_mathpix_pdf_job.py",
+    "mathpix_image_helper": "scripts/interlinear/textbook_mathpix_ocr_worker.py",
+    "mpxpy": true,
+    "pdftocairo": true,
+    "pdftoppm": true,
+    "pdfimages": true,
+    "mutool": true,
+    "tesseract": true,
+    "pix2tex": false
+  },
+  "page_count": 370,
+  "body_start_page": 6,
+  "content_page_count": 355,
+  "mathpix_required_page_count": 355,
+  "task_contract": {
+    "first_artifact": "open-source pocket facsimile TeX/PDF preserving original formulas and tables visually",
+    "preferred_ocr": "Do not run OCR just to get an exact readable pocket PDF. Use scripts/interlinear/compile_textbook_facsimile_pocket.py first. For editable/reflowed TeX, use Mathpix v3/pdf or targeted page OCR only after the facsimile exists and only for pages that need retyping.",
+    "formula_policy": "All displayed and inline formulas must be represented as TeX, not paraphrased prose.",
+    "figure_policy": "Extract or crop figures from the source PDF and preserve captions; do not silently drop diagrams.",
+    "translation_policy": "After exact TeX is assembled, split text/math nodes. Translate text nodes to modern Japanese and Chinese; copy math nodes unchanged into multilingual editions.",
+    "layout_policy": "Use tex/textbook-pocket with the same 105mm x 148mm pocket geometry and font scale as current books.",
+    "validation_policy": [
+      "compile exact open-source facsimile pocket PDF with XeLaTeX",
+      "compare page/task coverage against manifest",
+      "spot-check formula-heavy pages visually against source images",
+      "check TeX log for severe overfull lines and missing figures",
+      "only then generate EN-JP-ZH editions"
+    ]
+  },
+  "tasks_jsonl": "books/chaos-making-new-science/tasks/exact-tex/pages.jsonl",
+  "manifest": "books/chaos-making-new-science/tasks/exact-tex/manifest.json",
+  "work_root": "books/chaos-making-new-science/work/exact-tex",
+  "mathpix_pdf_job_dir": "books/chaos-making-new-science/work/exact-tex/mathpix-pdf",
+  "build_root": "build/chaos-making-new-science-exact-pocket",
+  "tex_template": "tex/textbook-pocket/book.tex",
+  "prepared_at": "2026-06-25T05:17:04.747715+00:00",
+  "description": "Retype James Gleick, Chaos: Making a New Science, as a pocket-size TeX book. This is less equation-dense than the textbooks, but figures, captions, quotations, section starts, and occasional formulas still need page-faithful preservation."
+}

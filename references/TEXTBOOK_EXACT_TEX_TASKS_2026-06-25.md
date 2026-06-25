@@ -1,6 +1,6 @@
 # Exact Textbook TeX Task Plan
 
-Prepared at: 2026-06-25T05:04:18.139679+00:00
+Prepared at: 2026-06-25T05:17:10.397207+00:00
 
 These textbooks are formula-heavy. They must be converted page-faithfully into TeX before any multilingual PocketPolyglot edition is generated.
 
@@ -9,7 +9,9 @@ The renderer target is the same pocket profile used by the current books: 105 mm
 | Book ID | Source pages | Content pages | Mathpix pages | Chinese reference | Task path |
 | --- | ---: | ---: | ---: | --- | --- |
 | `game-theory` | 373 | 370 | 370 | OCR/polish required | `books/game-theory/tasks/exact-tex/` |
+| `game-theory-101` | 377 | 149 | 149 | OCR/polish required | `books/game-theory-101/tasks/exact-tex/` |
 | `nonlinear-dynamics-and-chaos` | 616 | 600 | 600 | embedded text usable | `books/nonlinear-dynamics-and-chaos/tasks/exact-tex/` |
+| `chaos-making-new-science` | 370 | 355 | 355 | embedded text usable | `books/chaos-making-new-science/tasks/exact-tex/` |
 | `qft-gifted-amateur` | 512 | 503 | 503 | OCR/polish required | `books/qft-gifted-amateur/tasks/exact-tex/` |
 
 Future start order:

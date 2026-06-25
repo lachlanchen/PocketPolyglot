@@ -1,38 +1,46 @@
 {
   "schema_version": 1,
-  "book_id": "qft-gifted-amateur",
+  "book_id": "game-theory-101",
   "status": "prepared_exact_tex_not_started",
   "task_mode": "exact_textbook_tex_then_multilingual",
   "launchable": true,
-  "book_title_en": "Quantum Field Theory for the Gifted Amateur",
-  "book_title_zh": "献给有天赋业余者的量子场论",
-  "book_title_ja": "才能あるアマチュアのための量子場理論",
-  "book_title_zh_reading": "xiàn gěi yǒu tiān fù yè yú zhě de liàng zǐ chǎng lùn",
-  "book_title_ja_reading": "さいのう ある アマチュア の ため の りょうし ば りろん",
-  "author": "Tom Lancaster and Stephen J. Blundell",
-  "author_reading_zh": "tāng mǔ lán kǎ sī tè hé sī dì fēn J. bù lún dé ěr",
-  "author_reading_ja": "トム ランカスター と スティーヴン J. ブランデル",
+  "book_title_en": "Game Theory 101: The Complete Textbook",
+  "book_title_zh": "博弈论 101",
+  "book_title_ja": "ゲーム理論 101",
+  "book_title_zh_reading": "bó yì lùn yī líng yī",
+  "book_title_ja_reading": "ゲーム りろん ひゃくいち",
+  "author": "William Spaniel",
+  "author_reading_zh": "wēi lián sī pān ní ěr",
+  "author_reading_ja": "ウィリアム スパニエル",
   "curated_by": "AgInTiFlow curated",
   "curated_url": "https://flow.lazying.art",
   "powered_by": "powered by LazyingArt",
   "source_paths": {
-    "exact_source": "sources/quantum-field-theory-gifted-amateur/Quantum_Field_Theory_For_The_Gifted_Amateur.pdf"
+    "exact_source": "sources/game-theory/Game_Theory_101_Complete_Textbook_2011.pdf",
+    "zh_reference": "sources/game-theory/博弈论教程.pdf"
   },
   "source_sha256": {
-    "exact_source": "4077246c8126c929b1882038c72c43a1b9711e0cf76eb973e6839a095a0dffe0"
+    "exact_source": "812b2325f8651fcfb456654d6b0284a76c222fae592744aea360a5b4e47d8922",
+    "zh_reference": "8106a246a378c12c8adfcf2fa806f7ac23cf7105ee87b87e66f917fc2bf4ff13"
   },
   "source_status": {
     "exact_source": {
       "available": true,
-      "path": "sources/quantum-field-theory-gifted-amateur/Quantum_Field_Theory_For_The_Gifted_Amateur.pdf",
-      "sha256": "4077246c8126c929b1882038c72c43a1b9711e0cf76eb973e6839a095a0dffe0",
-      "pages": 512,
-      "page_size": "535.92 x 697.68 pts",
-      "embedded_text_chars": 925555,
+      "path": "sources/game-theory/Game_Theory_101_Complete_Textbook_2011.pdf",
+      "sha256": "812b2325f8651fcfb456654d6b0284a76c222fae592744aea360a5b4e47d8922",
+      "pages": 377,
+      "page_size": "612 x 792 pts (letter)",
+      "embedded_text_chars": 308934,
       "embedded_text_usable": true
     },
     "zh_reference": {
-      "available": false
+      "available": true,
+      "path": "sources/game-theory/博弈论教程.pdf",
+      "sha256": "8106a246a378c12c8adfcf2fa806f7ac23cf7105ee87b87e66f917fc2bf4ff13",
+      "pages": 337,
+      "page_size": "595 x 842 pts (A4)",
+      "embedded_text_chars": 7,
+      "embedded_text_usable": false
     },
     "zh_reference_epub": {
       "available": false
@@ -50,10 +58,10 @@
     "tesseract": true,
     "pix2tex": false
   },
-  "page_count": 512,
-  "body_start_page": 2,
-  "content_page_count": 503,
-  "mathpix_required_page_count": 503,
+  "page_count": 377,
+  "body_start_page": 229,
+  "content_page_count": 149,
+  "mathpix_required_page_count": 149,
   "task_contract": {
     "first_artifact": "open-source pocket facsimile TeX/PDF preserving original formulas and tables visually",
     "preferred_ocr": "Do not run OCR just to get an exact readable pocket PDF. Use scripts/interlinear/compile_textbook_facsimile_pocket.py first. For editable/reflowed TeX, use Mathpix v3/pdf or targeted page OCR only after the facsimile exists and only for pages that need retyping.",
@@ -69,12 +77,12 @@
       "only then generate EN-JP-ZH editions"
     ]
   },
-  "tasks_jsonl": "books/qft-gifted-amateur/tasks/exact-tex/pages.jsonl",
-  "manifest": "books/qft-gifted-amateur/tasks/exact-tex/manifest.json",
-  "work_root": "books/qft-gifted-amateur/work/exact-tex",
-  "mathpix_pdf_job_dir": "books/qft-gifted-amateur/work/exact-tex/mathpix-pdf",
-  "build_root": "build/qft-gifted-amateur-exact-pocket",
+  "tasks_jsonl": "books/game-theory-101/tasks/exact-tex/pages.jsonl",
+  "manifest": "books/game-theory-101/tasks/exact-tex/manifest.json",
+  "work_root": "books/game-theory-101/work/exact-tex",
+  "mathpix_pdf_job_dir": "books/game-theory-101/work/exact-tex/mathpix-pdf",
+  "build_root": "build/game-theory-101-exact-pocket",
   "tex_template": "tex/textbook-pocket/book.tex",
-  "prepared_at": "2026-06-25T05:17:10.389321+00:00",
-  "description": "Retype Lancaster and Blundell, Quantum Field Theory for the Gifted Amateur, as a pocket-size TeX book. This is a formula-dense physics textbook: all inline/display equations, Feynman diagrams, examples, exercises, footnotes, tables, captions, appendices, and references must be preserved page by page. The open-source facsimile path should be generated first. Mathpix whole-PDF OCR is only needed for an editable/reflowed TeX pass; plain pdftotext is a navigation aid and must not be trusted for formulas."
+  "prepared_at": "2026-06-25T05:17:00.703811+00:00",
+  "description": "Retype William Spaniel, Game Theory 101: The Complete Textbook, as a pocket-size TeX book. The book is lighter than Osborne and Rubinstein but still contains payoff tables, diagrams, equations, examples, and chapter structure that must be preserved. The Chinese game-theory PDF is a general reference, not a line-by-line translation."
 }
