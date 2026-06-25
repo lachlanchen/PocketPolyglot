@@ -67,13 +67,20 @@ python scripts/interlinear/validate_quadrilingual_interlinear_json.py "$assemble
 author="$(jq -r '.author // ""' "$plan")"
 author_reading="$(jq -r '.author_reading_ja // ""' "$plan")"
 cover="$(jq -r '.cover_image // ""' "$plan")"
-python scripts/interlinear/json_to_quadrilingual_wenyan_tex.py "$assembled_json" \
-  --main-layer "$main_layer" \
-  --color-mode "$color_mode" \
-  --author "$author" \
-  --author-reading "$author_reading" \
-  --cover-image "$cover" \
+note_order="$(jq -r --arg layer "$main_layer" '.default_note_order[$layer] // [] | join(",")' "$plan")"
+tex_args=(
+  "$assembled_json"
+  --main-layer "$main_layer"
+  --color-mode "$color_mode"
+  --author "$author"
+  --author-reading "$author_reading"
+  --cover-image "$cover"
   -o "$build_dir/source.tex"
+)
+if [[ -n "$note_order" ]]; then
+  tex_args+=(--note-order "$note_order")
+fi
+python scripts/interlinear/json_to_quadrilingual_wenyan_tex.py "${tex_args[@]}"
 
 cat > "$build_dir/book.tex" <<EOF
 \\def\\QuadSource{$build_dir/source.tex}\\input{tex/interlinear-quadrilingual/book.tex}
@@ -84,7 +91,13 @@ title_zh="$(jq -r '.book_title_zh // .book_title_wenyan // .book_title_ja // .bo
 title_ja="$(jq -r '.book_title_ja // .book_title_wenyan // .book_title_zh // .book_title_en // .book_id' "$plan")"
 title_en="$(jq -r '.book_title_en // .book_title_wenyan // .book_title_zh // .book_title_ja // .book_id' "$plan")"
 case "$main_layer" in
-  wenyan) base_title="${title_wenyan}（現代日本語・現代中文・英文注）" ;;
+  wenyan)
+    if [[ "$note_order" == "en,ja_modern,zh_modern" ]]; then
+      base_title="${title_wenyan}（英文・現代日本語・現代中文注）"
+    else
+      base_title="${title_wenyan}（現代日本語・現代中文・英文注）"
+    fi
+    ;;
   zh_modern) base_title="${title_zh}（現代中文主文・文言・現代日本語・英文注）" ;;
   ja_modern) base_title="${title_ja}（現代日本語主文・文言・現代中文・英文注）" ;;
   en) base_title="${title_en}（英文主文・文言・現代日本語・現代中文注）" ;;

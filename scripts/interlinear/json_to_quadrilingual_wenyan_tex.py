@@ -72,6 +72,7 @@ def convert(
     data: dict[str, Any],
     *,
     main_layer: str,
+    note_order: list[str] | None,
     color_mode: str,
     author: str,
     author_reading: str,
@@ -80,7 +81,12 @@ def convert(
     powered_by: str,
     cover_image: str,
 ) -> str:
-    note_layers = DEFAULT_NOTE_ORDER[main_layer]
+    note_layers = note_order or DEFAULT_NOTE_ORDER[main_layer]
+    for layer in note_layers:
+        if layer not in LAYER_LANG:
+            raise ValueError(f"unknown note layer: {layer}")
+        if layer == main_layer:
+            raise ValueError(f"note order cannot include main layer: {layer}")
     title = data.get("title", {})
     main_title = render_layer(title.get(main_layer, []), main_layer, "main")
     subtitle = " / ".join(render_layer(title.get(layer, []), layer, "note") for layer in note_layers)
@@ -122,6 +128,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("source")
     parser.add_argument("-o", "--output")
     parser.add_argument("--main-layer", choices=list(LAYER_LANG), default="wenyan")
+    parser.add_argument(
+        "--note-order",
+        default="",
+        help="comma-separated note layer order; defaults to the renderer's standard order for the main layer",
+    )
     parser.add_argument("--color-mode", choices=["color", "blackwhite"], default="color")
     parser.add_argument("--author", default="")
     parser.add_argument("--author-reading", default="")
@@ -131,9 +142,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--cover-image", default="")
     args = parser.parse_args(argv)
     data = json.loads(Path(args.source).read_text(encoding="utf-8"))
+    note_order = [part.strip() for part in args.note_order.split(",") if part.strip()] or None
     result = convert(
         data,
         main_layer=args.main_layer,
+        note_order=note_order,
         color_mode=args.color_mode,
         author=args.author,
         author_reading=args.author_reading,

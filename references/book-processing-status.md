@@ -61,6 +61,20 @@ These books have sources and chunk manifests, but they are not complete processe
 | P7 | `ginga-tetsudo` | 銀河鉄道の夜 | `sources/銀河鉄道の夜` | Launchable bilingual; 604 chunks, 0/604 generated | Short and beloved; next runnable prepared task. |
 | P8 | `chumon-no-ooi-ryoriten` | 注文の多い料理店 | `sources/注文の多い料理店` | Launchable bilingual; 2698 chunks, 0/2698 generated | Children’s stories; run after Ginga. |
 
+## Prepared Classical Quadrilingual Source Queue
+
+These are source-prepared classical Chinese tasks. They should use `wenyan` as
+the main stream, then English, modern Japanese, and modern Chinese as aligned
+support layers. The source inventory is tracked in
+`data/source-plan/classical-quadrilingual-source-batch.json`.
+
+| Priority | Proposed ID | Title | Source Path | Current Status | Next Step |
+|---:|---|---|---|---|---|
+| C1 | `zhuangzi` | 莊子 / Zhuangzi / 荘子 | `sources/zhuangzi` | Sources copied; quadrilingual plan prepared | Convert wenyan + modern references to Markdown, then chunk by chapter/paragraph. |
+| C2 | `han-shu` | 漢書 / Book of Han | `sources/han-shu` | Sources copied; quadrilingual plan prepared | Use Chinese source spine; generate modern Japanese where JP source is index-only. |
+| C3 | `hou-han-shu` | 後漢書 / Book of Later Han | `sources/hou-han-shu` | Sources copied; quadrilingual plan prepared | Treat English/Japanese references as partial chapter references only. |
+| C4 | `sanguozhi` | 三國志 / Records of the Three Kingdoms | `sources/sanguozhi` | Sources copied; quadrilingual plan prepared | Use Chinese source and 裴松之注 edition for structure; English references are incomplete. |
+
 ## Additional Future Queue
 
 This order keeps further readable, narrative books after the prepared queue. Short anthologies and classical collections stay lower unless the user explicitly promotes one.

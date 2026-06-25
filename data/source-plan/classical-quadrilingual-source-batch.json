@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "description": "Prepared source inventory for classical Chinese quadrilingual PocketPolyglot tasks copied from the Books archive on 2026-06-25.",
+  "origin_reference": "../Books/references/CLASSICAL_TEXT_VERSION_TABLE_2026-06-25.md",
+  "status": "prepared_sources_only",
+  "default_model": "gpt-5.5",
+  "default_reasoning": "medium",
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_spine_lang": "wenyan",
+  "default_output": {
+    "main_layer": "wenyan",
+    "note_layers": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "description": "Chinese wenyan main text with English, modern Japanese, and modern Chinese notes."
+  },
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "generation_policy": {
+    "preserve_wenyan": true,
+    "generate_missing_modern_chinese": true,
+    "generate_missing_modern_japanese": true,
+    "generate_missing_english": true,
+    "use_modern_chinese_as_meaning_bridge": true,
+    "do_not_replace_source_translations_when_references_match": true,
+    "do_not_treat_notes_or_commentary_as_continuation_without_validation": true
+  },
+  "books": [
+    {
+      "book_id": "zhuangzi",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "莊子",
+      "book_title_zh": "庄子",
+      "book_title_ja": "荘子",
+      "book_title_en": "Zhuangzi",
+      "author": "莊周",
+      "author_reading_zh": "zhuāng zhōu",
+      "author_reading_ja": "そう しゅう",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/zhuangzi/zh/wenyan-wikisource",
+          "quality": "chapter-level public-domain source tree"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "modern_chinese_meaning_bridge",
+          "path": "sources/zhuangzi/zh/modern-annotated/庄子_ 中华经典名著全本全注全译丛书.pdf",
+          "quality": "annotated modern Chinese translation; use for meaning and terminology"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "full_english_reference",
+          "path": "sources/zhuangzi/en/burton-watson/The Complete Works of Zhuangzi.pdf",
+          "quality": "full English translation reference"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "public_domain_english_reference",
+          "path": "sources/zhuangzi/en/gutenberg-giles",
+          "quality": "public-domain English translation and commentary"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_source_tree",
+          "path": "sources/zhuangzi/jp/wikisource-kanbun",
+          "quality": "Japanese Wikisource tree, mainly classical/kanbun source"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "modern_japanese_reference",
+          "path": "sources/zhuangzi/jp/modern-translation-scan",
+          "quality": "public-domain Japanese modern translation scan; OCR/extraction required"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "secondary_retelling_reference",
+          "path": "sources/zhuangzi/jp/aozora-okamoto-kanoko",
+          "quality": "essay/retelling only; do not treat as complete source"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "secondary_retelling_reference",
+          "path": "sources/zhuangzi/jp/essay-retelling/荘子.epub",
+          "quality": "same-style essay/retelling; not complete Zhuangzi"
+        }
+      ],
+      "next_step": "Convert the Wikisource wenyan tree and modern Chinese annotated PDF to reviewed Markdown, then split by chapter/paragraph for quadrilingual chunk generation."
+    },
+    {
+      "book_id": "han-shu",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "漢書",
+      "book_title_zh": "汉书",
+      "book_title_ja": "漢書",
+      "book_title_en": "Book of Han",
+      "author": "班固",
+      "author_reading_zh": "bān gù",
+      "author_reading_ja": "はん こ",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/han-shu/zh/wenyan-wikisource",
+          "quality": "Wikisource classical Chinese source tree"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "alternate_classical_source",
+          "path": "sources/han-shu/zh/wenyan-gutenberg",
+          "quality": "Project Gutenberg classical source"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "alternate_digital_source",
+          "path": "sources/han-shu/zh/source-epub/汉书.epub",
+          "quality": "Chinese EPUB source edition"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "partial_english_reference",
+          "path": "sources/han-shu/en/dubs-volume-1/The History of the Former Han Dynasty A Critical Translation with Annotations Translation, Volume 1 1.pdf",
+          "quality": "partial scholarly English translation, volume 1 only"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_index_only",
+          "path": "sources/han-shu/jp/wikisource-index",
+          "quality": "index only; generate modern Japanese from modern Chinese when no usable Japanese source exists"
+        }
+      ],
+      "next_step": "Use Chinese source as spine; generate modern Chinese, modern Japanese, and English for sections without reliable translation references."
+    },
+    {
+      "book_id": "hou-han-shu",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "後漢書",
+      "book_title_zh": "后汉书",
+      "book_title_ja": "後漢書",
+      "book_title_en": "Book of Later Han",
+      "author": "范曄",
+      "author_reading_zh": "fàn yè",
+      "author_reading_ja": "はん よう",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/hou-han-shu/zh/wenyan-wikisource",
+          "quality": "Wikisource classical Chinese source tree"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "commented_classical_source",
+          "path": "sources/hou-han-shu/zh/li-xian-commentary/後漢書.pdf",
+          "quality": "large Chinese source text with Li Xian commentary; OCR/extraction required"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "partial_english_reference",
+          "path": "sources/hou-han-shu/en/military-history-ethnicity/Fan Ye's Book of Later Han (Houhanshu)_ Military History and Ethnicity 1.pdf",
+          "quality": "partial scholarly translation/commentary; not complete Hou Hanshu"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_excerpt_reference",
+          "path": "sources/hou-han-shu/jp/waden-excerpt/Gokanjo-Waden-Fan-Ye-Aozora.html",
+          "quality": "Aozora Japanese excerpt only, focused on 倭傳"
+        }
+      ],
+      "next_step": "Prepare a broad source spine first; only use Japanese/English references where they cover the matching chapter."
+    },
+    {
+      "book_id": "sanguozhi",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "三國志",
+      "book_title_zh": "三国志",
+      "book_title_ja": "三國志",
+      "book_title_en": "Records of the Three Kingdoms",
+      "author": "陳壽",
+      "author_reading_zh": "chén shòu",
+      "author_reading_ja": "ちん じゅ",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/sanguozhi/zh/wenyan-wikisource",
+          "quality": "Wikisource classical Chinese source tree"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "alternate_classical_source",
+          "path": "sources/sanguozhi/zh/wenyan-gutenberg",
+          "quality": "Project Gutenberg classical source"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "commented_source_epub",
+          "path": "sources/sanguozhi/zh/pei-songzhi-source-epub/三国志（中华经典普及文库）.epub",
+          "quality": "Chinese source edition with Pei Songzhi commentary"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "incomplete_english_reference",
+          "path": "sources/sanguozhi/en/wikisource-open-license",
+          "quality": "incomplete open-license English translation"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "partial_english_reference",
+          "path": "sources/sanguozhi/en/empresses-and-consorts-selections/Empresses and Consorts_ Selections from Chen Shou's Records of the Three States with Pei Songzhi's Commentary.pdf",
+          "quality": "English selections with annotations; not complete Sanguozhi"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_index_only",
+          "path": "sources/sanguozhi/jp/wikisource-index",
+          "quality": "index only; generate modern Japanese from modern Chinese where no Japanese source exists"
+        }
+      ],
+      "next_step": "Use the Chinese source and Pei Songzhi edition for structure; align English only where references cover the matching sections."
+    }
+  ]
+}
