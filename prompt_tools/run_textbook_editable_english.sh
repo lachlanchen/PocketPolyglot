@@ -6,6 +6,9 @@ cd "$(dirname "$0")/.."
 set +u
 [[ -f "$HOME/.profile" ]] && source "$HOME/.profile"
 [[ -f "$HOME/.bashrc" ]] && source "$HOME/.bashrc"
+if [[ -z "${MATHPIX_APP_ID:-}" || -z "${MATHPIX_APP_KEY:-}" ]]; then
+  eval "$(grep -E '^export MATHPIX_APP_(ID|KEY)=' "$HOME/.bashrc" 2>/dev/null || true)"
+fi
 set -u
 
 BOOKS=(
