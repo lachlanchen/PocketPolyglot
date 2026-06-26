@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "book_id": "zizhi-tongjian",
+  "status": "prepared_sources_only",
+  "launchable": false,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "資治通鑑",
+  "book_title_zh": "资治通鉴",
+  "book_title_ja": "資治通鑑",
+  "book_title_en": "Zizhi Tongjian",
+  "author": "司馬光",
+  "author_reading_zh": "sī mǎ guāng",
+  "author_reading_ja": "しば こう",
+  "commentator": "胡三省",
+  "book_description": "資治通鑑 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays. The local Chinese source is the full 294-juan Hu Sanxing annotated edition; English references currently cover Later Han chapters only.",
+  "source_paths": {
+    "commented_classical_source": "sources/zizhi-tongjian/zh/資治通鑑·繁體橫排版（胡三省注）294卷全.pdf",
+    "partial_english_later_han_57_156": "sources/zizhi-tongjian/en/A Hundred Years of Han vol.1 - Zizhi Tongjian Later Han 57-156.pdf",
+    "partial_english_later_han_157_189": "sources/zizhi-tongjian/en/Emperor Huan and Emperor Ling - Zizhi Tongjian Later Han 157-189.pdf",
+    "partial_english_later_han_189_220": "sources/zizhi-tongjian/en/To Establish Peace - Zizhi Tongjian Later Han 189-220.pdf",
+    "wenyan_markdown": "books/zizhi-tongjian/markdown/wenyan.md",
+    "reference_markdown": "books/zizhi-tongjian/markdown/references.md"
+  },
+  "generation_policy": {
+    "preserve_wenyan": true,
+    "preserve_hu_sanxing_commentary_as_notes": true,
+    "generate_missing_modern_chinese": true,
+    "generate_missing_modern_japanese": true,
+    "generate_missing_english": true,
+    "use_existing_english_only_when_chapter_matches": true
+  },
+  "next_step": "Convert the Chinese PDF and three English reference PDFs to reviewed Markdown, preserve Hu Sanxing notes as separate notes, then split the wenyan spine by juan/paragraph before generating quadrilingual JSON.",
+  "chunks_jsonl": "books/zizhi-tongjian/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/zizhi-tongjian/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/zizhi-tongjian/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/zizhi-tongjian/work/quadrilingual/preview/zizhi-tongjian.partial.json",
+  "build_root": "build/zizhi-tongjian/wenyan-main-quadrilingual",
+  "prepared_at": "2026-06-26T00:00:00+08:00"
+}

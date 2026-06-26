@@ -1,11 +1,12 @@
 # Classical Quadrilingual Source Tasks - 2026-06-25
 
 These tasks were prepared from the Books archive inventory at
-`../Books/references/CLASSICAL_TEXT_VERSION_TABLE_2026-06-25.md`.
+`../Books/references/CLASSICAL_TEXT_VERSION_TABLE_2026-06-25.md` and later
+local source imports.
 
 ## Default Task Shape
 
-All four works are classical Chinese tasks. The default output should keep
+All listed works are classical Chinese tasks. The default output should keep
 Chinese wenyan as the main stream and add three aligned note layers:
 
 1. English
@@ -27,6 +28,13 @@ Default renderer target:
 | 漢書 / Book of Han | `han-shu` | `sources/han-shu/zh/wenyan-wikisource` plus Gutenberg/EPUB alternates | Dubs English volume 1 | Japanese Wikisource is index-only; modern Japanese must be generated where needed. |
 | 後漢書 / Book of Later Han | `hou-han-shu` | `sources/hou-han-shu/zh/wenyan-wikisource` plus 李賢注 scan | partial English military/history reference, 倭傳 Japanese excerpt | English/Japanese references are partial and chapter-limited. |
 | 三國志 / Records of the Three Kingdoms | `sanguozhi` | `sources/sanguozhi/zh/wenyan-wikisource` plus Gutenberg/裴松之注 EPUB | incomplete English Wikisource, English selections | Japanese Wikisource is index-only; English references are incomplete. |
+| 左傳 / Zuo Tradition | `zuozhuan` | Chinese Wikisource/Gutenberg exports plus local annotated EPUB | Legge scan, local English translation/commentary, Japanese study | Japanese reference is study material, not aligned translation. |
+| 戰國策 / Strategies of the Warring States | `zhanguoce` | Chinese Wikisource export and local EPUB | Chan-kuo Ts'e English translation | Modern Japanese must be generated where no reliable source exists. |
+| 山海經 / Classic of Mountains and Seas | `shanhaijing` | Chinese Wikisource/Gutenberg exports and local PDF | English translation PDF | Modern Japanese must be generated where no reliable source exists. |
+| 徐霞客遊記 / Xu Xiake Youji | `xu-xiake-youji` | Chinese Wikisource/Gutenberg exports and local PDF | English study/reference | English study is not a complete aligned translation. |
+| 水經注 / Commentary on the Water Classic | `shui-jing-zhu` | Chinese Wikisource export plus local editions | English/Japanese open references | English/Japanese references are background only, not complete translations. |
+| 資治通鑑 / Zizhi Tongjian | `zizhi-tongjian` | `sources/zizhi-tongjian/zh/資治通鑑·繁體橫排版（胡三省注）294卷全.pdf` | three Later Han English translation volumes | English references cover only selected Later Han chapters; Japanese must be generated. |
+| 世說新語 / A New Account of Tales of the World | `shishuo-xinyu` | `sources/shishuo-xinyu/zh/世說新語.pdf` | Chinese 笺疏 and English translation/reference | Keep 笺疏/commentary as notes; do not merge it into continuation lines. |
 
 ## Next Pipeline Step
 
@@ -46,4 +54,3 @@ The first runnable task after this preparation should create
 ```sh
 scripts/interlinear/start_quadrilingual_wenyan_tmux.sh <book-id>
 ```
-

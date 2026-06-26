@@ -560,6 +560,107 @@
         }
       ],
       "next_step": "Use the Chinese Wikisource text as the wenyan spine. Use local Chinese editions and public-domain scan OCR as meaning references; use English/Japanese open references only for terminology and background, generating aligned English and modern Japanese where no full translation exists."
+    },
+    {
+      "book_id": "zizhi-tongjian",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "資治通鑑",
+      "book_title_zh": "资治通鉴",
+      "book_title_ja": "資治通鑑",
+      "book_title_en": "Zizhi Tongjian",
+      "author": "司馬光",
+      "author_reading_zh": "sī mǎ guāng",
+      "author_reading_ja": "しば こう",
+      "commentator": "胡三省",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "commented_classical_source",
+          "path": "sources/zizhi-tongjian/zh/資治通鑑·繁體橫排版（胡三省注）294卷全.pdf",
+          "quality": "full 294-juan traditional horizontal edition with Hu Sanxing commentary; OCR/extraction required"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "generated_modern_chinese_bridge",
+          "path": "sources/zizhi-tongjian/zh/資治通鑑·繁體橫排版（胡三省注）294卷全.pdf",
+          "quality": "derive modern Chinese from the wenyan source and Hu Sanxing commentary; no separate modern translation source is currently copied"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "partial_english_reference",
+          "path": "sources/zizhi-tongjian/en/A Hundred Years of Han vol.1 - Zizhi Tongjian Later Han 57-156.pdf",
+          "quality": "English translation reference for Later Han, years 57-156 only"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "partial_english_reference",
+          "path": "sources/zizhi-tongjian/en/Emperor Huan and Emperor Ling - Zizhi Tongjian Later Han 157-189.pdf",
+          "quality": "English translation reference for Later Han, years 157-189 only"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "partial_english_reference",
+          "path": "sources/zizhi-tongjian/en/To Establish Peace - Zizhi Tongjian Later Han 189-220.pdf",
+          "quality": "English translation reference for Later Han, years 189-220 only"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "generated_modern_japanese",
+          "path": "",
+          "quality": "no Japanese source is currently copied; generate reader-friendly modern Japanese from the verified wenyan and modern Chinese bridge"
+        }
+      ],
+      "next_step": "Extract the full Chinese PDF to reviewed Markdown, preserving Hu Sanxing commentary as separate notes. Extract the three English PDFs as chapter-range references only. Then split the wenyan spine by juan/paragraph before quadrilingual generation."
+    },
+    {
+      "book_id": "shishuo-xinyu",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "世說新語",
+      "book_title_zh": "世说新语",
+      "book_title_ja": "世説新語",
+      "book_title_en": "A New Account of Tales of the World",
+      "author": "劉義慶",
+      "author_reading_zh": "liú yì qìng",
+      "author_reading_ja": "りゅう ぎけい",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/shishuo-xinyu/zh/世說新語.pdf",
+          "quality": "Chinese source PDF; OCR/text extraction required"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "modern_chinese_commentary",
+          "path": "sources/shishuo-xinyu/zh/世说新语笺疏.pdf",
+          "quality": "Chinese annotation/commentary reference; preserve commentary separately from the main text"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_reference",
+          "path": "sources/shishuo-xinyu/en/Shih-shuo hsin-yü - A New Account of Tales of the World.pdf",
+          "quality": "English translation/reference; align by section where possible"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "generated_modern_japanese",
+          "path": "",
+          "quality": "no Japanese source is currently copied; generate reader-friendly modern Japanese from the verified wenyan and modern Chinese bridge"
+        }
+      ],
+      "next_step": "Extract/OCR all three PDFs to reviewed Markdown, split by original category and paragraph, and generate quadrilingual JSON while keeping 笺疏/commentary as notes rather than sentence continuation."
     }
   ]
 }
