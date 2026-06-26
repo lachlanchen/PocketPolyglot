@@ -15,6 +15,7 @@ DEFAULT_SHARE = Path("/home/lachlan/Nutstore Files/Share/LinguaLeaf")
 
 LANGUAGE_LABELS = {
     "wenyan-en-jp-zh": "文言文-English-日本語-中文",
+    "wenyan-jp-zh": "文言文-日本語-中文",
     "en-jp-zh": "English-日本語-中文",
     "jp-zh": "日本語-中文",
 }
