@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Export maximum-language Shiji-font PocketPolyglot editions.
+"""Export maximum-language large-font PocketPolyglot editions.
 
 The script is deliberately additive:
 
 * old build outputs are never removed or overwritten;
-* new TeX/PDF builds live under ``build/<book>/maximum-language-shiji-font/``;
-* compressed, GitHub-sized PDFs live under ``docs/pocketpolyglot/books/``;
+* new TeX/PDF builds live under ``build/<book>/maximum-language-large-font/``;
+* source-repo PDF artifacts live under ``artifacts/lingualleaf/books/``;
+* publishable PDFs are mirrored into ``../LingualLeaf/docs/pocketpolyglot/books/``;
 * first-page cover previews live under ``assets/max-language-previews/``.
 
 Supported maximum-language families:
@@ -25,15 +26,24 @@ import re
 import shutil
 import subprocess
 import sys
+import tempfile
 from dataclasses import dataclass
 from html import escape
 from pathlib import Path
 from typing import Iterable
 
+from pypdf import PdfReader, PdfWriter
+from reportlab.lib.utils import ImageReader
+from reportlab.pdfgen import canvas
+
 
 ROOT = Path(__file__).resolve().parents[2]
 BUILD = ROOT / "build"
-DOCS_ROOT = ROOT / "docs" / "pocketpolyglot"
+PROFILE_DIR = "maximum-language-large-font"
+LEGACY_PROFILE_DIR = "maximum-language-shiji-font"
+ARTIFACT_ROOT = ROOT / "artifacts" / "lingualleaf"
+LOCAL_EXPORT_ROOT = ARTIFACT_ROOT / "books"
+PUBLIC_EXPORT_ROOT = ROOT.parent / "LingualLeaf" / "docs" / "pocketpolyglot" / "books"
 PREVIEW_ROOT = ROOT / "assets" / "max-language-previews"
 LAZYLEARN = ROOT.parent / "LazyLearn"
 LAZYLEARN_PREVIEW_ROOT = LAZYLEARN / "figs" / "pocketpolyglot"
@@ -41,6 +51,7 @@ LAZYLEARN_SITE_PREVIEW_ROOT = LAZYLEARN / "docs" / "figs" / "pocketpolyglot"
 MANIFEST = ROOT / "references" / "MAX_LANGUAGE_SHIJI_FONT_EXPORTS.md"
 MANIFEST_JSON = ROOT / "references" / "max-language-shiji-font-exports.json"
 GITHUB_MAX_BYTES = 95 * 1024 * 1024
+COVER_ROOT = ROOT / "assets" / "covers"
 
 
 FAMILY_PRIORITY = {
@@ -97,6 +108,72 @@ def pdfinfo(path: Path) -> dict[str, str]:
 def first_pdf(directory: Path) -> Path | None:
     pdfs = sorted(p for p in directory.glob("*.pdf") if p.is_file())
     return pdfs[0] if pdfs else None
+
+
+def resolve_cover(book_id: str) -> Path | None:
+    candidates = [COVER_ROOT / book_id]
+    if book_id == "kokoro":
+        candidates.append(COVER_ROOT / "kokoro-jp-main")
+    for cover_dir in candidates:
+        direct = cover_dir / "cover.png"
+        if direct.exists():
+            return direct
+        for pattern in ("*cover*.png", "*cover*.jpg", "*cover*.jpeg"):
+            found = sorted(path for path in cover_dir.glob(pattern) if path.is_file())
+            if found:
+                return found[0]
+    return None
+
+
+def first_page_has_image(pdf: Path) -> bool:
+    try:
+        reader = PdfReader(str(pdf))
+        if not reader.pages:
+            return False
+        return bool(list(getattr(reader.pages[0], "images", []) or []))
+    except Exception:
+        return False
+
+
+def make_cover_pdf(cover_image: Path, width: float, height: float, target: Path) -> None:
+    c = canvas.Canvas(str(target), pagesize=(width, height))
+    c.drawImage(
+        ImageReader(str(cover_image)),
+        0,
+        0,
+        width=width,
+        height=height,
+        preserveAspectRatio=False,
+        anchor="c",
+    )
+    c.showPage()
+    c.save()
+
+
+def ensure_cover(pdf: Path, book_id: str) -> bool:
+    cover = resolve_cover(book_id)
+    if cover is None or first_page_has_image(pdf):
+        return False
+    reader = PdfReader(str(pdf))
+    if not reader.pages:
+        return False
+    box = reader.pages[0].mediabox
+    width = float(box.width)
+    height = float(box.height)
+    with tempfile.TemporaryDirectory(prefix="cover-prepend-", dir=str(pdf.parent)) as tmp_name:
+        tmp_dir = Path(tmp_name)
+        cover_pdf = tmp_dir / "cover.pdf"
+        output_pdf = tmp_dir / "output.pdf"
+        make_cover_pdf(cover, width, height, cover_pdf)
+        cover_reader = PdfReader(str(cover_pdf))
+        writer = PdfWriter()
+        writer.add_page(cover_reader.pages[0])
+        for page in reader.pages:
+            writer.add_page(page)
+        with output_pdf.open("wb") as handle:
+            writer.write(handle)
+        output_pdf.replace(pdf)
+    return True
 
 
 def quadrilingual_overrides() -> str:
@@ -260,7 +337,7 @@ def write_wrapper(edition: Edition, out_dir: Path) -> Path:
                 r"\documentclass[UTF8,fontset=none,10pt,openany]{ctexbook}",
                 rf"\input{{{edition.style_tex}}}",
                 "",
-                "% Shiji AgInTi font-size profile. Generated wrapper; source text is reused unchanged.",
+                "% Large-font profile. Generated wrapper; source text is reused unchanged.",
                 edition.overrides,
                 "",
                 r"\begin{document}",
@@ -292,7 +369,7 @@ def output_pdf_name(edition: Edition) -> str:
 
 
 def compile_edition(edition: Edition, *, force: bool = False) -> Path:
-    out_dir = BUILD / edition.book_id / "maximum-language-shiji-font" / edition.edition / edition.mode
+    out_dir = BUILD / edition.book_id / PROFILE_DIR / edition.edition / edition.mode
     pdf_path = out_dir / output_pdf_name(edition)
     if pdf_path.exists() and not force:
         return pdf_path
@@ -325,10 +402,11 @@ def compile_edition(edition: Edition, *, force: bool = False) -> Path:
     if not generated.exists():
         raise RuntimeError(f"XeLaTeX did not create {generated}")
     generated.replace(pdf_path)
+    ensure_cover(pdf_path, edition.book_id)
     return pdf_path
 
 
-def compress_pdf(source: Path, docs_pdf: Path, local_pdf: Path) -> tuple[Path, str]:
+def compress_pdf(source: Path, public_pdf: Path, local_pdf: Path) -> tuple[Path, str]:
     local_pdf.parent.mkdir(parents=True, exist_ok=True)
     tmp = local_pdf.with_suffix(".tmp.pdf")
     cmd = [
@@ -363,9 +441,9 @@ def compress_pdf(source: Path, docs_pdf: Path, local_pdf: Path) -> tuple[Path, s
         tmp.replace(local_pdf)
         status = "compressed"
     if local_pdf.stat().st_size <= GITHUB_MAX_BYTES:
-        docs_pdf.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(local_pdf, docs_pdf)
-        return docs_pdf, status
+        public_pdf.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(local_pdf, public_pdf)
+        return public_pdf, status
     return local_pdf, status + "-local-only-oversize"
 
 
@@ -443,13 +521,13 @@ def html_gallery(rows: list[dict[str, object]]) -> str:
         if color:
             cards.append(
                 '          <a class="primary" '
-                f'href="https://github.com/lachlanchen/PocketPolyglot/blob/main/{escape(str(color["tracked_pdf"]))}" '
+                f'href="https://github.com/lachlanchen/LingualLeaf/blob/main/{escape(str(color["tracked_pdf"]))}" '
                 'target="_blank" rel="noopener">Color PDF</a>'
             )
         if bw:
             cards.append(
                 '          <a class="secondary" '
-                f'href="https://github.com/lachlanchen/PocketPolyglot/blob/main/{escape(str(bw["tracked_pdf"]))}" '
+                f'href="https://github.com/lachlanchen/LingualLeaf/blob/main/{escape(str(bw["tracked_pdf"]))}" '
                 'target="_blank" rel="noopener">Black-white PDF</a>'
             )
         cards.extend(
@@ -495,7 +573,7 @@ def render_report(rows: list[dict[str, object]], skipped: list[str]) -> str:
     pushed = sum(1 for row in rows if row.get("tracked_pdf"))
     local = len(rows)
     lines = [
-        "# Maximum-Language Shiji-Font Exports",
+        "# Maximum-Language Large-Font Exports",
         "",
         "This catalog is generated from local build outputs. It selects the richest available language family per book:",
         "",
@@ -503,7 +581,7 @@ def render_report(rows: list[dict[str, object]], skipped: list[str]) -> str:
         "- `en-jp-zh` for trilingual modern editions;",
         "- `jp-zh` for bilingual editions where no English layer exists.",
         "",
-        "All compiled editions use a Shiji AgInTi-like larger font profile. Existing PDFs and JSON are not modified.",
+        "All compiled editions use the larger PocketPolyglot font profile. Existing source PDFs and JSON are not modified.",
         "",
         f"- Local compressed/exported PDFs: {local}",
         f"- GitHub-tracked PDFs under size cap: {pushed}",
@@ -540,6 +618,7 @@ def main() -> int:
     parser.add_argument("--no-compress", action="store_true")
     parser.add_argument("--no-preview", action="store_true")
     parser.add_argument("--no-readme", action="store_true")
+    parser.add_argument("--no-manifest", action="store_true")
     args = parser.parse_args()
 
     editions = discover_editions()
@@ -555,25 +634,29 @@ def main() -> int:
         print(f"[{index}/{len(editions)}] {edition.book_id} {edition.edition} {edition.mode}", flush=True)
         try:
             if args.no_compile:
-                build_pdf = first_pdf(BUILD / edition.book_id / "maximum-language-shiji-font" / edition.edition / edition.mode)
+                build_pdf = (
+                    first_pdf(BUILD / edition.book_id / PROFILE_DIR / edition.edition / edition.mode)
+                    or first_pdf(BUILD / edition.book_id / LEGACY_PROFILE_DIR / edition.edition / edition.mode)
+                )
                 if not build_pdf:
                     skipped.append(f"{edition.book_id} {edition.edition} {edition.mode}: no compiled PDF")
                     continue
             else:
                 build_pdf = compile_edition(edition, force=args.force_compile)
+            ensure_cover(build_pdf, edition.book_id)
             info = pdfinfo(build_pdf)
             export_name = output_pdf_name(edition)
-            local_pdf = BUILD / edition.book_id / "maximum-language-shiji-font" / edition.edition / edition.mode / "compressed" / export_name
-            docs_pdf = DOCS_ROOT / "books" / edition.family / edition.book_id / edition.edition / edition.mode / export_name
+            local_pdf = LOCAL_EXPORT_ROOT / edition.family / edition.book_id / edition.edition / edition.mode / export_name
+            public_pdf = PUBLIC_EXPORT_ROOT / edition.family / edition.book_id / edition.edition / edition.mode / export_name
             if args.no_compress:
                 exported = build_pdf
                 compress_status = "not-compressed"
             elif local_pdf.exists() and not args.force_compress:
-                exported = docs_pdf if docs_pdf.exists() else local_pdf
+                exported = public_pdf if public_pdf.exists() else local_pdf
                 compress_status = "existing"
             else:
-                exported, compress_status = compress_pdf(build_pdf, docs_pdf, local_pdf)
-            tracked_pdf = exported if exported.is_relative_to(DOCS_ROOT) else None
+                exported, compress_status = compress_pdf(build_pdf, public_pdf, local_pdf)
+            tracked_pdf = exported if exported.is_relative_to(PUBLIC_EXPORT_ROOT) else None
             preview_rel = ""
             if not args.no_preview and edition.mode == "color":
                 preview = PREVIEW_ROOT / f"{edition.book_id}.png"
@@ -595,7 +678,7 @@ def main() -> int:
                     "export_pdf": exported.relative_to(ROOT).as_posix() if exported.is_relative_to(ROOT) else str(exported),
                     "export_mib": bytes_mib(exported.stat().st_size),
                     "local_pdf": local_pdf.relative_to(ROOT).as_posix(),
-                    "tracked_pdf": tracked_pdf.relative_to(ROOT).as_posix() if tracked_pdf else "",
+                    "tracked_pdf": tracked_pdf.relative_to(ROOT.parent / "LingualLeaf").as_posix() if tracked_pdf else "",
                     "preview": preview_rel,
                     "pages": info.get("Pages"),
                     "status": info.get("Status"),
@@ -606,18 +689,27 @@ def main() -> int:
             skipped.append(f"{edition.book_id} {edition.edition} {edition.mode}: {exc}")
             print(f"WARNING: {skipped[-1]}", file=sys.stderr, flush=True)
 
-    MANIFEST_JSON.parent.mkdir(parents=True, exist_ok=True)
-    MANIFEST_JSON.write_text(json.dumps({"rows": rows, "skipped": skipped}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    MANIFEST.write_text(render_report(rows, skipped), encoding="utf-8")
+    if not args.no_manifest:
+        MANIFEST_JSON.parent.mkdir(parents=True, exist_ok=True)
+        MANIFEST_JSON.write_text(json.dumps({"rows": rows, "skipped": skipped}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        MANIFEST.write_text(render_report(rows, skipped), encoding="utf-8")
 
     if not args.no_readme:
         section = "\n".join(
             [
                 "## Maximum-Language Pocket Editions",
                 "",
-                "These are the richest available local editions for each completed book, rebuilt with a larger Shiji AgInTi-style font profile and compressed for GitHub when the result stays under normal GitHub file limits.",
+                "These are the richest available local editions for each completed book, rebuilt with a larger font profile and compressed for GitHub when the result stays under normal GitHub file limits.",
                 "",
-                markdown_table(rows),
+                markdown_table(
+                    [
+                        {
+                            **row,
+                            "tracked_pdf": f"https://github.com/lachlanchen/LingualLeaf/blob/main/{row['tracked_pdf']}" if row.get("tracked_pdf") else "",
+                        }
+                        for row in rows
+                    ]
+                ),
                 "",
                 f"Full local manifest: [{MANIFEST.relative_to(ROOT).as_posix()}]({MANIFEST.relative_to(ROOT).as_posix()}).",
             ]
@@ -634,13 +726,13 @@ def main() -> int:
                         {
                             **row,
                             "preview": f"figs/pocketpolyglot/{Path(str(row.get('preview', ''))).name}" if row.get("preview") else "",
-                            "tracked_pdf": f"https://github.com/lachlanchen/PocketPolyglot/blob/main/{row['tracked_pdf']}" if row.get("tracked_pdf") else "",
+                            "tracked_pdf": f"https://github.com/lachlanchen/LingualLeaf/blob/main/{row['tracked_pdf']}" if row.get("tracked_pdf") else "",
                         }
                         for row in rows
                     ]
                 ),
                 "",
-                "Repository: [lachlanchen/PocketPolyglot](https://github.com/lachlanchen/PocketPolyglot)",
+                "PDF repository: [lachlanchen/LingualLeaf](https://github.com/lachlanchen/LingualLeaf) · Source repository: [lachlanchen/PocketPolyglot](https://github.com/lachlanchen/PocketPolyglot)",
             ]
         )
         replace_section(LAZYLEARN / "README.md", "POCKETPOLYGLOT_MAX_LANGUAGE", lazy_section)
