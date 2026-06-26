@@ -1,0 +1,655 @@
+#!/usr/bin/env python3
+"""Export maximum-language Shiji-font PocketPolyglot editions.
+
+The script is deliberately additive:
+
+* old build outputs are never removed or overwritten;
+* new TeX/PDF builds live under ``build/<book>/maximum-language-shiji-font/``;
+* compressed, GitHub-sized PDFs live under ``docs/pocketpolyglot/books/``;
+* first-page cover previews live under ``assets/max-language-previews/``.
+
+Supported maximum-language families:
+
+* ``wenyan-en-jp-zh`` from ``wenyan-main-quadrilingual`` source TeX;
+* ``en-jp-zh`` from ``en-main-jp-zh`` source TeX;
+* ``jp-zh`` from existing ``jp-main`` / ``zh-main`` source TeX when no richer
+  trilingual or quadrilingual edition exists.
+"""
+
+from __future__ import annotations
+
+import argparse
+import csv
+import json
+import re
+import shutil
+import subprocess
+import sys
+from dataclasses import dataclass
+from html import escape
+from pathlib import Path
+from typing import Iterable
+
+
+ROOT = Path(__file__).resolve().parents[2]
+BUILD = ROOT / "build"
+DOCS_ROOT = ROOT / "docs" / "pocketpolyglot"
+PREVIEW_ROOT = ROOT / "assets" / "max-language-previews"
+LAZYLEARN = ROOT.parent / "LazyLearn"
+LAZYLEARN_PREVIEW_ROOT = LAZYLEARN / "figs" / "pocketpolyglot"
+LAZYLEARN_SITE_PREVIEW_ROOT = LAZYLEARN / "docs" / "figs" / "pocketpolyglot"
+MANIFEST = ROOT / "references" / "MAX_LANGUAGE_SHIJI_FONT_EXPORTS.md"
+MANIFEST_JSON = ROOT / "references" / "max-language-shiji-font-exports.json"
+GITHUB_MAX_BYTES = 95 * 1024 * 1024
+
+
+FAMILY_PRIORITY = {
+    "wenyan-en-jp-zh": 3,
+    "en-jp-zh": 2,
+    "jp-zh": 1,
+}
+
+
+@dataclass(frozen=True)
+class Edition:
+    book_id: str
+    family: str
+    edition: str
+    mode: str
+    source_tex: Path
+    style_tex: str
+    source_macro: str
+    overrides: str
+    original_pdf: Path | None
+    strip_blackwhite: bool = False
+
+
+def run(cmd: list[str], *, cwd: Path = ROOT, timeout: int | None = None) -> subprocess.CompletedProcess[str]:
+    return subprocess.run(cmd, cwd=cwd, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=timeout)
+
+
+def slugify(text: str) -> str:
+    text = text.strip().lower()
+    text = re.sub(r"[^a-z0-9._-]+", "-", text)
+    text = re.sub(r"-+", "-", text).strip("-")
+    return text or "book"
+
+
+def safe_filename(name: str) -> str:
+    name = name.replace("/", "／").replace("\\", "＼")
+    return re.sub(r"[\x00-\x1f]", "", name)
+
+
+def pdfinfo(path: Path) -> dict[str, str]:
+    result = run(["pdfinfo", str(path)], timeout=30)
+    info: dict[str, str] = {}
+    if result.returncode != 0:
+        info["Status"] = "pdfinfo-failed"
+        return info
+    for line in result.stdout.splitlines():
+        if ":" in line:
+            key, value = line.split(":", 1)
+            info[key.strip()] = value.strip()
+    info["Status"] = "ok"
+    return info
+
+
+def first_pdf(directory: Path) -> Path | None:
+    pdfs = sorted(p for p in directory.glob("*.pdf") if p.is_file())
+    return pdfs[0] if pdfs else None
+
+
+def quadrilingual_overrides() -> str:
+    return r"""
+\renewcommand{\RubyFont}{\fontsize{3.6pt}{4pt}\selectfont}
+\renewcommand{\QuadMainWenyan}[1]{{\zhfont\fontsize{11.6pt}{17.2pt}\selectfont\color{BookInk}#1}}
+\renewcommand{\QuadMainZhModern}[1]{{\zhfont\fontsize{11.2pt}{16.8pt}\selectfont\color{BookInk}#1}}
+\renewcommand{\QuadMainJaModern}[1]{{\jpfont\fontsize{11.2pt}{16.8pt}\selectfont\color{BookInk}#1}}
+\renewcommand{\QuadMainEn}[1]{{\enfont\fontsize{10.8pt}{14.2pt}\selectfont\color{BookInk}#1}}
+\renewcommand{\QuadNoteWenyan}[1]{{\zhfont\fontsize{9.6pt}{12.7pt}\selectfont\color{BookNote}#1}}
+\renewcommand{\QuadNoteJaModern}[1]{{\jpfont\fontsize{9.6pt}{12.7pt}\selectfont\color{BookNote}#1}}
+\renewcommand{\QuadNoteZhModern}[1]{{\zhfont\fontsize{8.25pt}{10.9pt}\selectfont\color{BookNote}#1}}
+\renewcommand{\QuadNoteEn}[1]{{\enfont\fontsize{8.9pt}{11.7pt}\selectfont\color{BookNote}#1}}
+\renewcommand{\TinyLabel}[1]{{\sffamily\bfseries\fontsize{5.8pt}{5.8pt}\selectfont\textcolor{BookRed}{#1}}}
+""".strip()
+
+
+def trilingual_overrides() -> str:
+    return r"""
+\renewcommand{\RubyFont}{\fontsize{3.6pt}{4pt}\selectfont}
+\renewcommand{\TriMainZh}[1]{{\zhfont\fontsize{11.2pt}{16.8pt}\selectfont\color{BookInk}#1}}
+\renewcommand{\TriMainJa}[1]{{\jpfont\fontsize{11.2pt}{16.8pt}\selectfont\color{BookInk}#1}}
+\renewcommand{\TriMainEn}[1]{{\enfont\fontsize{10.8pt}{14.2pt}\selectfont\color{BookInk}#1}}
+\renewcommand{\TriCommentZh}[1]{{\zhfont\fontsize{8.25pt}{10.9pt}\selectfont\color{BookNote}#1}}
+\renewcommand{\TriCommentJa}[1]{{\jpfont\fontsize{9.6pt}{12.7pt}\selectfont\color{BookNote}#1}}
+\renewcommand{\TriCommentEn}[1]{{\enfont\fontsize{8.9pt}{11.7pt}\selectfont\color{BookNote}#1}}
+\renewcommand{\TinyLabel}[1]{{\sffamily\bfseries\fontsize{5.8pt}{5.8pt}\selectfont\textcolor{BookRed}{#1}}}
+""".strip()
+
+
+def bilingual_zh_overrides() -> str:
+    return r"""
+\renewcommand{\RubyFont}{\fontsize{3.6pt}{4pt}\selectfont}
+\renewcommand{\ZHMain}[1]{{\zhfont\fontsize{11.6pt}{17.2pt}\selectfont\color{BookInk}#1}}
+\renewcommand{\JAGloss}[1]{{\jpfont\fontsize{9.6pt}{12.7pt}\selectfont\color{BookNote}#1}}
+\renewcommand{\JAExplain}[1]{{\jpfont\addfontfeatures{FakeSlant=0.08}\fontsize{8.25pt}{10.9pt}\selectfont\color{BookNote}#1}}
+\renewcommand{\JAExplainLabel}{{\jpfont\bfseries\fontsize{5.8pt}{7pt}\selectfont\textcolor{BookRed}{解}}}
+\renewcommand{\TinyLabel}[1]{{\sffamily\bfseries\fontsize{5.8pt}{5.8pt}\selectfont\textcolor{BookRed}{#1}}}
+""".strip()
+
+
+def bilingual_jp_overrides() -> str:
+    return r"""
+\renewcommand{\RubyFont}{\fontsize{3.6pt}{4pt}\selectfont}
+\renewcommand{\JPMainText}[1]{{\jpfont\fontsize{11.6pt}{17.2pt}\selectfont\color{BookInk}#1}}
+\renewcommand{\JPGlossText}[1]{\JPMainText{#1}}
+\renewcommand{\JPCommentText}[1]{{\jpfont\addfontfeatures{FakeSlant=0.08}\fontsize{9pt}{12pt}\selectfont\color{BookNote}#1}}
+\renewcommand{\ZHCommentText}[1]{{\zhfont\fontsize{8.25pt}{10.9pt}\selectfont\color{BookNote}#1}}
+\renewcommand{\JPCommentLabel}{{\jpfont\bfseries\fontsize{5.8pt}{7pt}\selectfont\textcolor{BookRed}{解}}}
+\renewcommand{\TinyLabel}[1]{{\sffamily\bfseries\fontsize{5.8pt}{5.8pt}\selectfont\textcolor{BookRed}{#1}}}
+""".strip()
+
+
+def candidate_for(book_dir: Path, rel_edition: str, family: str, style: str, macro: str, overrides: str) -> list[Edition]:
+    out: list[Edition] = []
+    for mode in ("color", "blackwhite"):
+        source = book_dir / rel_edition / mode / "source.tex"
+        if not source.exists():
+            continue
+        out.append(
+            Edition(
+                book_id=book_dir.name,
+                family=family,
+                edition=rel_edition,
+                mode=mode,
+                source_tex=source,
+                style_tex=style,
+                source_macro=macro,
+                overrides=overrides,
+                original_pdf=first_pdf(source.parent),
+            )
+        )
+    if not any(item.mode == "color" for item in out):
+        blackwhite_source = book_dir / rel_edition / "blackwhite" / "source.tex"
+        if blackwhite_source.exists():
+            out.append(
+                Edition(
+                    book_id=book_dir.name,
+                    family=family,
+                    edition=rel_edition,
+                    mode="color",
+                    source_tex=blackwhite_source,
+                    style_tex=style,
+                    source_macro=macro,
+                    overrides=overrides,
+                    original_pdf=first_pdf(blackwhite_source.parent),
+                    strip_blackwhite=True,
+                )
+            )
+    return out
+
+
+def discover_editions() -> list[Edition]:
+    editions: list[Edition] = []
+    for book_dir in sorted(p for p in BUILD.iterdir() if p.is_dir()):
+        if book_dir.name in {"books", "interlinear-block", "interlinear-jp-main", "interlinear-run"}:
+            continue
+        family_editions: list[Edition] = []
+        family_editions.extend(
+            candidate_for(
+                book_dir,
+                "wenyan-main-quadrilingual",
+                "wenyan-en-jp-zh",
+                "tex/interlinear-quadrilingual/style.tex",
+                "QuadSource",
+                quadrilingual_overrides(),
+            )
+        )
+        family_editions.extend(
+            candidate_for(
+                book_dir,
+                "en-main-jp-zh",
+                "en-jp-zh",
+                "tex/interlinear-trilingual-pair/style.tex",
+                "TriAllSource",
+                trilingual_overrides(),
+            )
+        )
+        if not family_editions:
+            family_editions.extend(
+                candidate_for(
+                    book_dir,
+                    "jp-main",
+                    "jp-zh",
+                    "tex/interlinear-jp-main/style.tex",
+                    "JpMainSource",
+                    bilingual_jp_overrides(),
+                )
+            )
+            family_editions.extend(
+                candidate_for(
+                    book_dir,
+                    "zh-main",
+                    "jp-zh",
+                    "tex/interlinear-block/style.tex",
+                    "InterlinearSource",
+                    bilingual_zh_overrides(),
+                )
+            )
+        if not family_editions:
+            continue
+        best = max(FAMILY_PRIORITY[item.family] for item in family_editions)
+        editions.extend(item for item in family_editions if FAMILY_PRIORITY[item.family] == best)
+    return editions
+
+
+def write_wrapper(edition: Edition, out_dir: Path) -> Path:
+    out_dir.mkdir(parents=True, exist_ok=True)
+    local_source = out_dir / "source.tex"
+    if edition.strip_blackwhite:
+        source_text = edition.source_tex.read_text(encoding="utf-8")
+        source_text = re.sub(r"(?m)^\\BlackWhiteMode\s*\n", "", source_text, count=1)
+        local_source.write_text(source_text, encoding="utf-8")
+    else:
+        shutil.copy2(edition.source_tex, local_source)
+    wrapper = out_dir / "book.tex"
+    source_arg = local_source.relative_to(ROOT).as_posix()
+    wrapper.write_text(
+        "\n".join(
+            [
+                r"\documentclass[UTF8,fontset=none,10pt,openany]{ctexbook}",
+                rf"\input{{{edition.style_tex}}}",
+                "",
+                "% Shiji AgInTi font-size profile. Generated wrapper; source text is reused unchanged.",
+                edition.overrides,
+                "",
+                r"\begin{document}",
+                rf"\def\{edition.source_macro}{{{source_arg}}}",
+                rf"\input{{\{edition.source_macro}}}",
+                r"\end{document}",
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    return wrapper
+
+
+def output_pdf_name(edition: Edition) -> str:
+    if edition.original_pdf:
+        stem = edition.original_pdf.stem
+    else:
+        stem = f"{edition.book_id}-{edition.family}-{edition.edition.replace('/', '-')}-{edition.mode}"
+    if edition.strip_blackwhite:
+        stem = stem.replace("・黑白", "").replace("黑白", "")
+        stem = re.sub(r"(?i)[・ _-]*(?:black[-_ ]?white|blackwhite|bw)\b", "", stem)
+        stem = stem.replace("・）", "）").replace("（・", "（")
+        stem = re.sub(r"[（(]\s*[）)]", "", stem)
+        stem = stem.strip("・ _-")
+    if "史記" in stem or "Shiji" in stem:
+        return safe_filename(f"{stem}・最大語種字級.pdf")
+    return safe_filename(f"{stem}・最大語種・史記字級.pdf")
+
+
+def compile_edition(edition: Edition, *, force: bool = False) -> Path:
+    out_dir = BUILD / edition.book_id / "maximum-language-shiji-font" / edition.edition / edition.mode
+    pdf_path = out_dir / output_pdf_name(edition)
+    if pdf_path.exists() and not force:
+        return pdf_path
+    wrapper = write_wrapper(edition, out_dir)
+    for pattern in ("book.aux", "book.log", "book.out", "book.toc", "book.pdf"):
+        try:
+            (out_dir / pattern).unlink()
+        except FileNotFoundError:
+            pass
+    for pass_number in (1, 2):
+        log = out_dir / f"xelatex-pass{pass_number}.log"
+        with log.open("w", encoding="utf-8") as handle:
+            result = subprocess.run(
+                [
+                    "xelatex",
+                    "-interaction=nonstopmode",
+                    "-halt-on-error",
+                    "-jobname=book",
+                    f"-output-directory={out_dir}",
+                    str(wrapper),
+                ],
+                cwd=ROOT,
+                text=True,
+                stdout=handle,
+                stderr=subprocess.STDOUT,
+            )
+        if result.returncode != 0:
+            raise RuntimeError(f"XeLaTeX failed for {edition.book_id} {edition.edition} {edition.mode}; see {log}")
+    generated = out_dir / "book.pdf"
+    if not generated.exists():
+        raise RuntimeError(f"XeLaTeX did not create {generated}")
+    generated.replace(pdf_path)
+    return pdf_path
+
+
+def compress_pdf(source: Path, docs_pdf: Path, local_pdf: Path) -> tuple[Path, str]:
+    local_pdf.parent.mkdir(parents=True, exist_ok=True)
+    tmp = local_pdf.with_suffix(".tmp.pdf")
+    cmd = [
+        "gs",
+        "-q",
+        "-dNOPAUSE",
+        "-dBATCH",
+        "-dSAFER",
+        "-sDEVICE=pdfwrite",
+        "-dCompatibilityLevel=1.5",
+        "-dPDFSETTINGS=/ebook",
+        "-dDetectDuplicateImages=true",
+        "-dCompressFonts=true",
+        "-dSubsetFonts=true",
+        "-dColorImageDownsampleType=/Bicubic",
+        "-dColorImageResolution=180",
+        "-dGrayImageDownsampleType=/Bicubic",
+        "-dGrayImageResolution=180",
+        "-dMonoImageResolution=300",
+        f"-sOutputFile={tmp}",
+        str(source),
+    ]
+    result = run(cmd, timeout=None)
+    if result.returncode != 0 or not tmp.exists():
+        shutil.copy2(source, local_pdf)
+        return local_pdf, "compression-failed-copied-original"
+    if tmp.stat().st_size > source.stat().st_size:
+        tmp.unlink(missing_ok=True)
+        shutil.copy2(source, local_pdf)
+        status = "compressed-larger-copied-original"
+    else:
+        tmp.replace(local_pdf)
+        status = "compressed"
+    if local_pdf.stat().st_size <= GITHUB_MAX_BYTES:
+        docs_pdf.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(local_pdf, docs_pdf)
+        return docs_pdf, status
+    return local_pdf, status + "-local-only-oversize"
+
+
+def extract_preview(pdf: Path, preview: Path) -> None:
+    preview.parent.mkdir(parents=True, exist_ok=True)
+    tmp_prefix = preview.with_suffix("")
+    run(["pdftoppm", "-png", "-f", "1", "-singlefile", "-r", "130", str(pdf), str(tmp_prefix)], timeout=120)
+    produced = tmp_prefix.with_suffix(".png")
+    if not produced.exists():
+        return
+    produced.replace(preview)
+    quant = run(["pngquant", "--force", "--skip-if-larger", "--output", str(preview), "96", str(preview)], timeout=120)
+    if quant.returncode not in {0, 98, 99}:
+        pass
+
+
+def bytes_mib(value: int) -> str:
+    return f"{value / 1024 / 1024:.1f}"
+
+
+def markdown_table(rows: list[dict[str, object]]) -> str:
+    lines = [
+        "| Preview | Book | Family | Color PDF | Black-white PDF |",
+        "| --- | --- | --- | --- | --- |",
+    ]
+    by_book: dict[str, list[dict[str, object]]] = {}
+    for row in rows:
+        by_book.setdefault(str(row["book_id"]), []).append(row)
+    for book_id, items in sorted(by_book.items()):
+        color = next((item for item in items if item["mode"] == "color" and item.get("tracked_pdf")), None)
+        bw = next((item for item in items if item["mode"] == "blackwhite" and item.get("tracked_pdf")), None)
+        any_item = color or bw or items[0]
+        preview = any_item.get("preview") or ""
+        preview_md = f'<img src="{preview}" width="120" alt="{book_id} cover preview">' if preview else ""
+        color_md = f"[color]({color['tracked_pdf']})" if color else "local only"
+        bw_md = f"[black-white]({bw['tracked_pdf']})" if bw else "local only"
+        lines.append(f"| {preview_md} | `{book_id}` | `{any_item['family']}` | {color_md} | {bw_md} |")
+    return "\n".join(lines)
+
+
+def html_gallery(rows: list[dict[str, object]]) -> str:
+    by_book: dict[str, list[dict[str, object]]] = {}
+    for row in rows:
+        by_book.setdefault(str(row["book_id"]), []).append(row)
+    cards: list[str] = [
+        '<section class="published-books pocket-polyglot-showcase pocketpolyglot-showcase" id="pocketpolyglot">',
+        '  <div class="section-header">',
+        "    <h2>PocketPolyglot Maximum-Language Editions</h2>",
+        "    <p>",
+        "      Pocket-size interlinear readers with the richest available language layers:",
+        "      JP-ZH, EN-JP-ZH, and classical WENYAN-EN-JP-ZH editions.",
+        "      Each card links to compressed color and black-white PDFs.",
+        "    </p>",
+        "  </div>",
+        '  <div class="pocketpolyglot-grid">',
+    ]
+    for book_id, items in sorted(by_book.items()):
+        color = next((item for item in items if item["mode"] == "color" and item.get("tracked_pdf")), None)
+        bw = next((item for item in items if item["mode"] == "blackwhite" and item.get("tracked_pdf")), None)
+        any_item = color or bw or items[0]
+        preview_name = Path(str(any_item.get("preview", ""))).name
+        preview = f"figs/pocketpolyglot/{preview_name}" if preview_name else ""
+        title = escape(book_id.replace("-", " ").title())
+        family = escape(str(any_item["family"]))
+        cards.extend(
+            [
+                '    <article class="pocketpolyglot-card">',
+                f'      <img src="{escape(preview)}" alt="{title} first-page preview" loading="lazy" />',
+                '      <div class="pocketpolyglot-card-body">',
+                f"        <p>{family}</p>",
+                f"        <h3>{title}</h3>",
+                '        <div class="hero-actions">',
+            ]
+        )
+        if color:
+            cards.append(
+                '          <a class="primary" '
+                f'href="https://github.com/lachlanchen/PocketPolyglot/blob/main/{escape(str(color["tracked_pdf"]))}" '
+                'target="_blank" rel="noopener">Color PDF</a>'
+            )
+        if bw:
+            cards.append(
+                '          <a class="secondary" '
+                f'href="https://github.com/lachlanchen/PocketPolyglot/blob/main/{escape(str(bw["tracked_pdf"]))}" '
+                'target="_blank" rel="noopener">Black-white PDF</a>'
+            )
+        cards.extend(
+            [
+                "        </div>",
+                "      </div>",
+                "    </article>",
+            ]
+        )
+    cards.extend(["  </div>", "</section>"])
+    return "\n".join(cards)
+
+
+def replace_section(path: Path, title: str, body: str) -> None:
+    if not path.exists():
+        return
+    text = path.read_text(encoding="utf-8")
+    start_marker = f"<!-- {title}:START -->"
+    end_marker = f"<!-- {title}:END -->"
+    section = f"{start_marker}\n{body.rstrip()}\n{end_marker}"
+    if start_marker in text and end_marker in text:
+        text = re.sub(re.escape(start_marker) + r".*?" + re.escape(end_marker), section, text, flags=re.S)
+    else:
+        insert_after = "\n## One Sentence In Full Width\n" if path.name == "README.md" and path.parent == ROOT else "\n## Featured Books\n"
+        if insert_after in text:
+            text = text.replace(insert_after, "\n" + section + "\n" + insert_after, 1)
+        elif path.name == "index.html" and 'id="pocketpolyglot"' in text:
+            text = re.sub(
+                r'\n\s*<section class="[^"]*pocket-polyglot-showcase[^"]*" id="pocketpolyglot">.*?\n\s*</section>',
+                "\n\n" + section,
+                text,
+                count=1,
+                flags=re.S,
+            )
+        elif path.name == "index.html" and "</header>" in text:
+            text = text.replace("</header>", "</header>\n\n" + section, 1)
+        else:
+            text += "\n\n" + section + "\n"
+    path.write_text(text, encoding="utf-8")
+
+
+def render_report(rows: list[dict[str, object]], skipped: list[str]) -> str:
+    pushed = sum(1 for row in rows if row.get("tracked_pdf"))
+    local = len(rows)
+    lines = [
+        "# Maximum-Language Shiji-Font Exports",
+        "",
+        "This catalog is generated from local build outputs. It selects the richest available language family per book:",
+        "",
+        "- `wenyan-en-jp-zh` for classical text editions;",
+        "- `en-jp-zh` for trilingual modern editions;",
+        "- `jp-zh` for bilingual editions where no English layer exists.",
+        "",
+        "All compiled editions use a Shiji AgInTi-like larger font profile. Existing PDFs and JSON are not modified.",
+        "",
+        f"- Local compressed/exported PDFs: {local}",
+        f"- GitHub-tracked PDFs under size cap: {pushed}",
+        f"- Skipped source folders: {len(skipped)}",
+        "",
+        "## Gallery",
+        "",
+        markdown_table(rows),
+        "",
+        "## Inventory",
+        "",
+        "| Book | Family | Edition | Mode | Pages | Source MiB | Export MiB | GitHub | Local PDF |",
+        "| --- | --- | --- | --- | ---: | ---: | ---: | --- | --- |",
+    ]
+    for row in rows:
+        lines.append(
+            f"| `{row['book_id']}` | `{row['family']}` | `{row['edition']}` | `{row['mode']}` | "
+            f"{row.get('pages') or '-'} | {row['source_mib']} | {row['export_mib']} | "
+            f"{'yes' if row.get('tracked_pdf') else 'no'} | `{row['local_pdf']}` |"
+        )
+    if skipped:
+        lines.extend(["", "## Skipped", ""])
+        lines.extend(f"- {item}" for item in skipped)
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--force-compile", action="store_true")
+    parser.add_argument("--force-compress", action="store_true")
+    parser.add_argument("--limit", type=int, default=0)
+    parser.add_argument("--book", action="append", default=[])
+    parser.add_argument("--no-compile", action="store_true")
+    parser.add_argument("--no-compress", action="store_true")
+    parser.add_argument("--no-preview", action="store_true")
+    parser.add_argument("--no-readme", action="store_true")
+    args = parser.parse_args()
+
+    editions = discover_editions()
+    if args.book:
+        wanted = set(args.book)
+        editions = [edition for edition in editions if edition.book_id in wanted]
+    if args.limit:
+        editions = editions[: args.limit]
+
+    rows: list[dict[str, object]] = []
+    skipped: list[str] = []
+    for index, edition in enumerate(editions, start=1):
+        print(f"[{index}/{len(editions)}] {edition.book_id} {edition.edition} {edition.mode}", flush=True)
+        try:
+            if args.no_compile:
+                build_pdf = first_pdf(BUILD / edition.book_id / "maximum-language-shiji-font" / edition.edition / edition.mode)
+                if not build_pdf:
+                    skipped.append(f"{edition.book_id} {edition.edition} {edition.mode}: no compiled PDF")
+                    continue
+            else:
+                build_pdf = compile_edition(edition, force=args.force_compile)
+            info = pdfinfo(build_pdf)
+            export_name = output_pdf_name(edition)
+            local_pdf = BUILD / edition.book_id / "maximum-language-shiji-font" / edition.edition / edition.mode / "compressed" / export_name
+            docs_pdf = DOCS_ROOT / "books" / edition.family / edition.book_id / edition.edition / edition.mode / export_name
+            if args.no_compress:
+                exported = build_pdf
+                compress_status = "not-compressed"
+            elif local_pdf.exists() and not args.force_compress:
+                exported = docs_pdf if docs_pdf.exists() else local_pdf
+                compress_status = "existing"
+            else:
+                exported, compress_status = compress_pdf(build_pdf, docs_pdf, local_pdf)
+            tracked_pdf = exported if exported.is_relative_to(DOCS_ROOT) else None
+            preview_rel = ""
+            if not args.no_preview and edition.mode == "color":
+                preview = PREVIEW_ROOT / f"{edition.book_id}.png"
+                extract_preview(build_pdf, preview)
+                if preview.exists():
+                    preview_rel = preview.relative_to(ROOT).as_posix()
+                    LAZYLEARN_PREVIEW_ROOT.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(preview, LAZYLEARN_PREVIEW_ROOT / preview.name)
+                    LAZYLEARN_SITE_PREVIEW_ROOT.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(preview, LAZYLEARN_SITE_PREVIEW_ROOT / preview.name)
+            rows.append(
+                {
+                    "book_id": edition.book_id,
+                    "family": edition.family,
+                    "edition": edition.edition,
+                    "mode": edition.mode,
+                    "source_pdf": build_pdf.relative_to(ROOT).as_posix(),
+                    "source_mib": bytes_mib(build_pdf.stat().st_size),
+                    "export_pdf": exported.relative_to(ROOT).as_posix() if exported.is_relative_to(ROOT) else str(exported),
+                    "export_mib": bytes_mib(exported.stat().st_size),
+                    "local_pdf": local_pdf.relative_to(ROOT).as_posix(),
+                    "tracked_pdf": tracked_pdf.relative_to(ROOT).as_posix() if tracked_pdf else "",
+                    "preview": preview_rel,
+                    "pages": info.get("Pages"),
+                    "status": info.get("Status"),
+                    "compress_status": compress_status,
+                }
+            )
+        except Exception as exc:  # noqa: BLE001 - keep the batch moving.
+            skipped.append(f"{edition.book_id} {edition.edition} {edition.mode}: {exc}")
+            print(f"WARNING: {skipped[-1]}", file=sys.stderr, flush=True)
+
+    MANIFEST_JSON.parent.mkdir(parents=True, exist_ok=True)
+    MANIFEST_JSON.write_text(json.dumps({"rows": rows, "skipped": skipped}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    MANIFEST.write_text(render_report(rows, skipped), encoding="utf-8")
+
+    if not args.no_readme:
+        section = "\n".join(
+            [
+                "## Maximum-Language Pocket Editions",
+                "",
+                "These are the richest available local editions for each completed book, rebuilt with a larger Shiji AgInTi-style font profile and compressed for GitHub when the result stays under normal GitHub file limits.",
+                "",
+                markdown_table(rows),
+                "",
+                f"Full local manifest: [{MANIFEST.relative_to(ROOT).as_posix()}]({MANIFEST.relative_to(ROOT).as_posix()}).",
+            ]
+        )
+        replace_section(ROOT / "README.md", "POCKETPOLYGLOT_MAX_LANGUAGE", section)
+        lazy_section = "\n".join(
+            [
+                "## PocketPolyglot Maximum-Language Editions",
+                "",
+                "PocketPolyglot/LinguaLeaf builds pocket-size interlinear readers with ruby, pinyin, grammar coloring, and maximum available language layers.",
+                "",
+                markdown_table(
+                    [
+                        {
+                            **row,
+                            "preview": f"figs/pocketpolyglot/{Path(str(row.get('preview', ''))).name}" if row.get("preview") else "",
+                            "tracked_pdf": f"https://github.com/lachlanchen/PocketPolyglot/blob/main/{row['tracked_pdf']}" if row.get("tracked_pdf") else "",
+                        }
+                        for row in rows
+                    ]
+                ),
+                "",
+                "Repository: [lachlanchen/PocketPolyglot](https://github.com/lachlanchen/PocketPolyglot)",
+            ]
+        )
+        replace_section(LAZYLEARN / "README.md", "POCKETPOLYGLOT_MAX_LANGUAGE", lazy_section)
+        replace_section(LAZYLEARN / "docs" / "index.html", "POCKETPOLYGLOT_MAX_LANGUAGE", html_gallery(rows))
+
+    print(MANIFEST.relative_to(ROOT))
+    print(f"rows={len(rows)} skipped={len(skipped)}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
