@@ -29,6 +29,7 @@ VARIANT_LABELS = {
 def clean_title(filename: str, variant: str) -> str:
     title = filename.removesuffix(".pdf")
     title = title.replace("・最大語種・史記字級", "")
+    title = title.replace("・最大語種・大字版", "")
     if variant == "blackwhite":
         title = title.replace("・黑白）", "）").replace("・黑白", "")
     return title.strip(" ・")

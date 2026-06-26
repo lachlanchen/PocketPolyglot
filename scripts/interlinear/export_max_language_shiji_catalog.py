@@ -50,8 +50,8 @@ PREVIEW_ROOT = ROOT / "assets" / "max-language-previews"
 LAZYLEARN = ROOT.parent / "LazyLearn"
 LAZYLEARN_PREVIEW_ROOT = LAZYLEARN / "figs" / "pocketpolyglot"
 LAZYLEARN_SITE_PREVIEW_ROOT = LAZYLEARN / "docs" / "figs" / "pocketpolyglot"
-MANIFEST = ROOT / "references" / "MAX_LANGUAGE_SHIJI_FONT_EXPORTS.md"
-MANIFEST_JSON = ROOT / "references" / "max-language-shiji-font-exports.json"
+MANIFEST = ROOT / "references" / "MAX_LANGUAGE_LARGE_FONT_EXPORTS.md"
+MANIFEST_JSON = ROOT / "references" / "max-language-large-font-exports.json"
 GITHUB_MAX_BYTES = 95 * 1024 * 1024
 COVER_ROOT = ROOT / "assets" / "covers"
 
@@ -94,6 +94,15 @@ def slugify(text: str) -> str:
 def safe_filename(name: str) -> str:
     name = name.replace("/", "／").replace("\\", "＼")
     return re.sub(r"[\x00-\x1f]", "", name)
+
+
+def clean_large_font_stem(stem: str) -> str:
+    stem = stem.replace("・最大語種・史記字級", "")
+    stem = stem.replace("・最大語種字級", "")
+    stem = stem.replace("・最大語種・大字版", "")
+    stem = stem.replace("・大字版", "")
+    stem = stem.replace("・史記AgInTi字級", "")
+    return stem.strip(" ・")
 
 
 def pdfinfo(path: Path) -> dict[str, str]:
@@ -338,11 +347,11 @@ def discover_precompiled_three_layer_editions() -> list[Edition]:
     specs = {
         "color": (
             BUILD / "shiji-aginti" / "zh-main" / "color" / "book.pdf",
-            "史記（現代日本語・現代中文注）・最大語種・史記字級.pdf",
+            "史記（現代日本語・現代中文注）・最大語種・大字版.pdf",
         ),
         "blackwhite": (
             BUILD / "shiji-aginti" / "zh-main" / "blackwhite" / "book.pdf",
-            "史記（現代日本語・現代中文注・黑白）・最大語種・史記字級.pdf",
+            "史記（現代日本語・現代中文注・黑白）・最大語種・大字版.pdf",
         ),
     }
     for mode, (pdf, name) in specs.items():
@@ -400,20 +409,20 @@ def write_wrapper(edition: Edition, out_dir: Path) -> Path:
 
 def output_pdf_name(edition: Edition) -> str:
     if edition.output_name:
-        return safe_filename(edition.output_name)
+        stem = Path(edition.output_name).stem
+        return safe_filename(f"{clean_large_font_stem(stem)}・最大語種・大字版.pdf")
     if edition.original_pdf:
         stem = edition.original_pdf.stem
     else:
         stem = f"{edition.book_id}-{edition.family}-{edition.edition.replace('/', '-')}-{edition.mode}"
+    stem = clean_large_font_stem(stem)
     if edition.strip_blackwhite:
         stem = stem.replace("・黑白", "").replace("黑白", "")
         stem = re.sub(r"(?i)[・ _-]*(?:black[-_ ]?white|blackwhite|bw)\b", "", stem)
         stem = stem.replace("・）", "）").replace("（・", "（")
         stem = re.sub(r"[（(]\s*[）)]", "", stem)
         stem = stem.strip("・ _-")
-    if "史記" in stem or "Shiji" in stem:
-        return safe_filename(f"{stem}・最大語種字級.pdf")
-    return safe_filename(f"{stem}・最大語種・史記字級.pdf")
+    return safe_filename(f"{stem}・最大語種・大字版.pdf")
 
 
 def compile_edition(edition: Edition, *, force: bool = False) -> Path:
