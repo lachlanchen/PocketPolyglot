@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "book_id": "sanguozhi-pei-zhu",
+  "base_book_id": "sanguozhi",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "pei_songzhi_zhu_maintext_additive",
+  "book_title_wenyan": "三國志裴松之注",
+  "book_title_zh": "三国志裴松之注",
+  "book_title_ja": "三国志裴松之注",
+  "book_title_en": "Records of the Three Kingdoms with Pei Songzhi Commentary",
+  "author": "陳壽／裴松之",
+  "author_reading_zh": "chén shòu / péi sōng zhī",
+  "author_reading_ja": "ちん じゅ／はい しょうし",
+  "book_description": "A new Sanguozhi edition that reuses the existing Chen Shou quadrilingual JSON and adds Pei Songzhi commentary as additional main-text chunks.",
+  "source_paths": {
+    "base_chenshou_current_json": "books/sanguozhi/work/quadrilingual/interlinear/chunks",
+    "base_chenshou_chunks_jsonl": "books/sanguozhi/work/quadrilingual/chunks/chunks.jsonl",
+    "base_chenshou_manifest": "books/sanguozhi/work/quadrilingual/chunks/manifest.json",
+    "pei_songzhi_commentary_epub": "sources/sanguozhi/zh/pei-songzhi-source-epub/三国志（中华经典普及文库）.epub",
+    "pei_songzhi_markdown": "books/sanguozhi-pei-zhu/markdown/pei-zhu.md"
+  },
+  "reuse_existing_json": true,
+  "base_current_chunk_dir": "books/sanguozhi/work/quadrilingual/interlinear/chunks",
+  "base_current_chunks_jsonl": "books/sanguozhi/work/quadrilingual/chunks/chunks.jsonl",
+  "base_current_manifest": "books/sanguozhi/work/quadrilingual/chunks/manifest.json",
+  "base_current_assembled_json": "books/sanguozhi/work/quadrilingual/preview/sanguozhi.partial.json",
+  "pei_chunks_jsonl": "data/source-plan/sanguozhi-pei-zhu-maintext/chunks.jsonl",
+  "pei_chunks_manifest": "data/source-plan/sanguozhi-pei-zhu-maintext/manifest.json",
+  "pei_raw_chunk_dir": "books/sanguozhi-pei-zhu/work/pei-zhu-maintext/interlinear/chunks",
+  "pei_candidate_dir": "books/sanguozhi-pei-zhu/work/pei-zhu-maintext/parallel-json",
+  "assembled_json": "books/sanguozhi-pei-zhu/work/pei-zhu-maintext/preview/sanguozhi-pei-zhu.partial.json",
+  "build_root": "build/sanguozhi-pei-zhu/wenyan-main-quadrilingual",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "prepared_at": "2026-06-26T00:18:00.150281+00:00"
+}
