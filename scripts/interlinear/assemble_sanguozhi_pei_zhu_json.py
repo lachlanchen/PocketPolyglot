@@ -37,10 +37,10 @@ def load_valid_pei_chunks(
     chunks_jsonl: Path,
     chunk_dir: Path,
     allow_missing: bool,
-) -> tuple[dict[int, list[dict[str, Any]]], list[str], list[dict[str, Any]]]:
+) -> tuple[dict[int, dict[int, list[dict[str, Any]]]], list[str], list[dict[str, Any]]]:
     sources = load_jsonl(chunks_jsonl)
     by_id = {source["chunk_id"]: source for source in sources}
-    grouped: dict[int, list[dict[str, Any]]] = {}
+    grouped: dict[int, dict[int, list[dict[str, Any]]]] = {}
     missing: list[str] = []
     stale: list[dict[str, Any]] = []
     for source in sources:
@@ -58,7 +58,18 @@ def load_valid_pei_chunks(
                 stale.append({"chunk_id": chunk_id, "errors": errors[:40]})
                 continue
             raise ValueError(f"{path}: " + "; ".join(errors[:40]))
-        grouped.setdefault(int(source["chapter_number"]), []).extend(data.get("paragraphs", []))
+        source_ref = source.get("reference", {}).get("source", {})
+        anchor_index = int(source_ref.get("main_paragraph_index") or 0)
+        note_index = int(source_ref.get("note_index") or 0)
+        chapter_number = int(source["chapter_number"])
+        for paragraph in data.get("paragraphs", []):
+            enriched = dict(paragraph)
+            enriched.setdefault("source_layer", "pei_songzhi_zhu")
+            enriched.setdefault("anchor_layer", "chenshou_main_text")
+            enriched.setdefault("anchor_main_paragraph_index", anchor_index)
+            enriched.setdefault("pei_note_index", note_index)
+            enriched.setdefault("pei_chunk_id", chunk_id)
+            grouped.setdefault(chapter_number, {}).setdefault(anchor_index, []).append(enriched)
     return grouped, missing, stale
 
 
@@ -86,17 +97,27 @@ def main() -> int:
     title_en = "Records of the Three Kingdoms with Pei Songzhi Commentary"
     assembled_chapters: list[dict[str, Any]] = []
     used_pei = 0
+    unmatched_pei = 0
     for number, chapter in chapter_map(current_book).items():
+        pei_by_anchor = dict(pei_by_chapter.get(number, {}))
+        base_paragraphs = list(chapter.get("paragraphs", []))
+        ordered_paragraphs: list[dict[str, Any]] = []
+        for main_index, paragraph in enumerate(base_paragraphs, start=1):
+            ordered_paragraphs.append(paragraph)
+            anchored_notes = pei_by_anchor.pop(main_index, [])
+            ordered_paragraphs.extend(anchored_notes)
+            used_pei += len(anchored_notes)
+        for anchor_index in sorted(pei_by_anchor):
+            fallback_notes = pei_by_anchor[anchor_index]
+            ordered_paragraphs.extend(fallback_notes)
+            used_pei += len(fallback_notes)
+            unmatched_pei += len(fallback_notes)
         new_chapter = {
             "id": chapter.get("id"),
             "number": number,
             "title": chapter.get("title", {}),
-            "paragraphs": list(chapter.get("paragraphs", [])),
+            "paragraphs": ordered_paragraphs,
         }
-        pei_paragraphs = pei_by_chapter.get(number, [])
-        if pei_paragraphs:
-            new_chapter["paragraphs"].extend(pei_paragraphs)
-            used_pei += len(pei_paragraphs)
         assembled_chapters.append(new_chapter)
 
     book = {
@@ -123,9 +144,10 @@ def main() -> int:
             "base_book_id": "sanguozhi",
             "book_id": "sanguozhi-pei-zhu",
             "base_policy": "Existing Chen Shou quadrilingual JSON is reused read-only.",
-            "pei_policy": "Pei Songzhi commentary chunks are appended as additional wenyan main-text paragraphs in each matching chapter.",
+            "pei_policy": "Pei Songzhi commentary chunks are inserted after their anchored Chen Shou main-text paragraph by source main_paragraph_index; only unmatched anchors fall back to chapter end.",
             "pei_total_chunk_count": pei_manifest.get("chunk_count"),
             "pei_used_paragraph_count": used_pei,
+            "pei_unmatched_anchor_paragraph_count": unmatched_pei,
             "pei_missing_chunk_count": len(missing),
             "pei_missing_chunks": missing,
             "pei_stale_chunk_count": len(stale),
@@ -136,7 +158,11 @@ def main() -> int:
     output = ROOT / args.output
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(book, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(output.relative_to(ROOT))
+    try:
+        display_path = output.relative_to(ROOT)
+    except ValueError:
+        display_path = output
+    print(display_path)
     print(f"pei_used_paragraphs={used_pei} missing={len(missing)} stale={len(stale)}")
     return 0
 
