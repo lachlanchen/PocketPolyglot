@@ -29,7 +29,7 @@ NOTE_LABEL = {
     "en": "英文",
     "zh": "中文",
     "ja": "日文",
-    "wenyan": "文言",
+    "wenyan": "文言文",
 }
 QUAD_MAIN_NOTES = {
     "wenyan": ["ja", "zh", "en"],

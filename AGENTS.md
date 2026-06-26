@@ -18,6 +18,8 @@ python scripts/interlinear/report_interlinear_progress.py \
 
 Python scripts use 4-space indentation, `argparse` CLIs, `pathlib.Path`, UTF-8 text IO, and `snake_case` names. Keep scripts executable when they are intended as commands. TeX macros use descriptive PascalCase-style names such as `\InterUnit` and `\JpMainUnit`. JSON token fields are short and stable: `t` for text, `r` for reading, and optional `g` for the English grammar-component role (`subject`, `predicate`, `object`, `attributive`, `adverbial`, `complement`, `topic`, or `function`).
 
+For classical Chinese, use `wenyan` as the internal slug, field, directory segment, and CLI layer name. Use `文言文` as the user-facing Chinese label. Do not use doubled romanization in new code, filenames, export folders, or documentation.
+
 ## Testing Guidelines
 
 There is no formal test suite. Validate Python edits with `python -m py_compile ...`. Validate interlinear JSON with `python scripts/interlinear/validate_interlinear_json.py <json>`. For layout changes, compile the relevant `make` target and inspect the generated PDF. For Kokoro chunks, progress must report no stale chunks before trusting a preview.

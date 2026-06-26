@@ -7,7 +7,7 @@ Nutstore root: `/home/lachlan/Nutstore Files/Projects/LinguaLeaf`
 | --- | --- | ---: | ---: | ---: | ---: | --- |
 | EN/JP/ZH | `en-main-jp-zh` | 13 | 27 | 13 | 14 | English main with indented Japanese and Chinese notes. |
 | JP/ZH trilingual leftovers | `jp-zh-trilingual-leftovers` | 11 | 44 | 22 | 22 | Ordinary Japanese/Chinese paired editions that do not yet have English added. |
-| Wenyanwen/JP/ZH trilingual leftovers | `wenyanwen-jp-zh-trilingual-leftovers` | 3 | 12 | 6 | 6 | Classical Chinese-oriented editions that do not yet have English added; zh means modern Chinese helper/annotation. |
+| Wenyan/JP/ZH trilingual leftovers | `wenyan-jp-zh-trilingual-leftovers` | 3 | 12 | 6 | 6 | Classical Chinese-oriented editions that do not yet have English added; zh means modern Chinese helper/annotation. |
 
 ## Detail
 
@@ -35,9 +35,9 @@ Folder: `jp-zh-trilingual-leftovers`
 | `snow-country` | 雪国 | 4 |
 | `the-old-capital` | 古都 | 4 |
 
-### Wenyanwen/JP/ZH trilingual leftovers
+### Wenyan/JP/ZH trilingual leftovers
 
-Folder: `wenyanwen-jp-zh-trilingual-leftovers`
+Folder: `wenyan-jp-zh-trilingual-leftovers`
 
 | Book | Title | PDFs |
 | --- | --- | ---: |

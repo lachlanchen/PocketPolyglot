@@ -43,8 +43,8 @@ BOOK_SETS = {
             ("the-old-capital", "古都", ARCHIVE / "the-old-capital"),
         ],
     },
-    "wenyanwen-jp-zh-trilingual-leftovers": {
-        "label": "Wenyanwen/JP/ZH trilingual leftovers",
+    "wenyan-jp-zh-trilingual-leftovers": {
+        "label": "Wenyan/JP/ZH trilingual leftovers",
         "note": "Classical Chinese-oriented editions that do not yet have English added; zh means modern Chinese helper/annotation.",
         "books": [
             ("sishu-jizhu", "四書章句集註", ROOT / "build" / "sishu-jizhu"),
