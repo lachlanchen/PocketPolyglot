@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Refresh LingualLeaf/PocketPolyglot catalog docs from uploaded PDFs.
+"""Refresh LinguaLeaf/PocketPolyglot catalog docs from uploaded PDFs.
 
 This script is intentionally documentation-only. It scans the PDF artifact
 repository, syncs preview images, and rewrites the catalog blocks in:
 
 * PocketPolyglot README.md
-* LingualLeaf README.md
+* LinguaLeaf README.md
 * LazyLearn README.md
 * LazyLearn docs/index.html
 
@@ -23,7 +23,7 @@ from urllib.parse import quote
 
 
 ROOT = Path(__file__).resolve().parents[2]
-LEAF = ROOT.parent / "LingualLeaf"
+LEAF = ROOT.parent / "LinguaLeaf"
 LAZYLEARN = ROOT.parent / "LazyLearn"
 PDF_ROOT = LEAF / "docs" / "pocketpolyglot" / "books"
 LOCAL_PREVIEW_ROOT = ROOT / "assets" / "max-language-previews"
@@ -31,8 +31,8 @@ LEAF_PREVIEW_ROOT = LEAF / "assets" / "max-language-previews"
 LAZYLEARN_PREVIEW_ROOT = LAZYLEARN / "figs" / "pocketpolyglot"
 LAZYLEARN_SITE_PREVIEW_ROOT = LAZYLEARN / "docs" / "figs" / "pocketpolyglot"
 
-GITHUB_BLOB_BASE = "https://github.com/lachlanchen/LingualLeaf/blob/main/"
-GITHUB_RAW_BASE = "https://raw.githubusercontent.com/lachlanchen/LingualLeaf/main/"
+GITHUB_BLOB_BASE = "https://github.com/lachlanchen/LinguaLeaf/blob/main/"
+GITHUB_RAW_BASE = "https://raw.githubusercontent.com/lachlanchen/LinguaLeaf/main/"
 LAZYLEARN_READER_BASE = "https://learn.lazying.art/pdf-reader.html"
 
 FAMILY_ORDER = {
@@ -226,7 +226,7 @@ def build_sections(rows: list[CatalogRow]) -> None:
         [
             "## Maximum-Language Pocket Editions",
             "",
-            "The final compressed PDFs live in [lachlanchen/LingualLeaf](https://github.com/lachlanchen/LingualLeaf). The links below point to the uploaded PDF artifacts while this repository keeps the source text, JSON, TeX, scripts, and generation workflow.",
+            "The final compressed PDFs live in [lachlanchen/LinguaLeaf](https://github.com/lachlanchen/LinguaLeaf). The links below point to the uploaded PDF artifacts while this repository keeps the source text, JSON, TeX, scripts, and generation workflow.",
             "",
             markdown_table(rows, preview_prefix="assets/max-language-previews", link_mode="blob"),
             "",
@@ -245,7 +245,7 @@ def build_sections(rows: list[CatalogRow]) -> None:
             "",
             markdown_table(rows, preview_prefix="figs/pocketpolyglot", link_mode="reader"),
             "",
-            "PDF repository: [lachlanchen/LingualLeaf](https://github.com/lachlanchen/LingualLeaf) · Source repository: [lachlanchen/PocketPolyglot](https://github.com/lachlanchen/PocketPolyglot)",
+            "PDF repository: [lachlanchen/LinguaLeaf](https://github.com/lachlanchen/LinguaLeaf) · Source repository: [lachlanchen/PocketPolyglot](https://github.com/lachlanchen/PocketPolyglot)",
         ]
     )
     replace_section(LAZYLEARN / "README.md", "POCKETPOLYGLOT_MAX_LANGUAGE", lazy_section)

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Sync final LingualLeaf PDFs into Nutstore project and share folders."""
+"""Sync final LinguaLeaf PDFs into Nutstore project and share folders."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ from collections import Counter
 from pathlib import Path
 
 
-DEFAULT_SOURCE = Path("/home/lachlan/ProjectsLFS/LingualLeaf/docs/pocketpolyglot/books")
+DEFAULT_SOURCE = Path("/home/lachlan/ProjectsLFS/LinguaLeaf/docs/pocketpolyglot/books")
 DEFAULT_PROJECT = Path("/home/lachlan/Nutstore Files/Projects/LinguaLeaf")
 DEFAULT_SHARE = Path("/home/lachlan/Nutstore Files/Share/LinguaLeaf")
 
@@ -78,9 +78,9 @@ def copy_file(src: Path, dst: Path) -> None:
 
 def write_manifest(path: Path, copied: list[tuple[Path, Path]]) -> None:
     lines = [
-        "# LingualLeaf Nutstore Sync",
+        "# LinguaLeaf Nutstore Sync",
         "",
-        "Generated from `/home/lachlan/ProjectsLFS/LingualLeaf/docs/pocketpolyglot/books`.",
+        "Generated from `/home/lachlan/ProjectsLFS/LinguaLeaf/docs/pocketpolyglot/books`.",
         "",
         f"PDF count: {len(copied)}",
         "",

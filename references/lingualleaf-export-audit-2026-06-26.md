@@ -4,7 +4,7 @@ Generated: 2026-06-26T17:45:19
 
 ## Summary
 
-- PDF repository root: `/home/lachlan/ProjectsLFS/LingualLeaf/docs/pocketpolyglot/books`
+- PDF repository root: `/home/lachlan/ProjectsLFS/LinguaLeaf/docs/pocketpolyglot/books`
 - Nutstore Share root: `/home/lachlan/Nutstore Files/Share/LinguaLeaf`
 - Nutstore Projects root: `/home/lachlan/Nutstore Files/Projects/LinguaLeaf/final-pdfs`
 - Exported PDFs: 96

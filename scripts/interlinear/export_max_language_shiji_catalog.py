@@ -6,7 +6,7 @@ The script is deliberately additive:
 * old build outputs are never removed or overwritten;
 * new TeX/PDF builds live under ``build/<book>/maximum-language-large-font/``;
 * source-repo PDF artifacts live under ``artifacts/lingualleaf/books/``;
-* publishable PDFs are mirrored into ``../LingualLeaf/docs/pocketpolyglot/books/``;
+* publishable PDFs are mirrored into ``../LinguaLeaf/docs/pocketpolyglot/books/``;
 * first-page cover previews live under ``assets/max-language-previews/``.
 
 Supported maximum-language families:
@@ -45,7 +45,7 @@ PROFILE_DIR = "maximum-language-large-font"
 LEGACY_PROFILE_DIR = "maximum-language-shiji-font"
 ARTIFACT_ROOT = ROOT / "artifacts" / "lingualleaf"
 LOCAL_EXPORT_ROOT = ARTIFACT_ROOT / "books"
-PUBLIC_EXPORT_ROOT = ROOT.parent / "LingualLeaf" / "docs" / "pocketpolyglot" / "books"
+PUBLIC_EXPORT_ROOT = ROOT.parent / "LinguaLeaf" / "docs" / "pocketpolyglot" / "books"
 PREVIEW_ROOT = ROOT / "assets" / "max-language-previews"
 LAZYLEARN = ROOT.parent / "LazyLearn"
 LAZYLEARN_PREVIEW_ROOT = LAZYLEARN / "figs" / "pocketpolyglot"
@@ -583,13 +583,13 @@ def html_gallery(rows: list[dict[str, object]]) -> str:
         if color:
             cards.append(
                 '          <a class="primary" '
-                f'href="https://github.com/lachlanchen/LingualLeaf/blob/main/{escape(str(color["tracked_pdf"]))}" '
+                f'href="https://github.com/lachlanchen/LinguaLeaf/blob/main/{escape(str(color["tracked_pdf"]))}" '
                 'target="_blank" rel="noopener">Color PDF</a>'
             )
         if bw:
             cards.append(
                 '          <a class="secondary" '
-                f'href="https://github.com/lachlanchen/LingualLeaf/blob/main/{escape(str(bw["tracked_pdf"]))}" '
+                f'href="https://github.com/lachlanchen/LinguaLeaf/blob/main/{escape(str(bw["tracked_pdf"]))}" '
                 'target="_blank" rel="noopener">Black-white PDF</a>'
             )
         cards.extend(
@@ -741,7 +741,7 @@ def main() -> int:
                     "export_pdf": exported.relative_to(ROOT).as_posix() if exported.is_relative_to(ROOT) else str(exported),
                     "export_mib": bytes_mib(exported.stat().st_size),
                     "local_pdf": local_pdf.relative_to(ROOT).as_posix(),
-                    "tracked_pdf": tracked_pdf.relative_to(ROOT.parent / "LingualLeaf").as_posix() if tracked_pdf else "",
+                    "tracked_pdf": tracked_pdf.relative_to(ROOT.parent / "LinguaLeaf").as_posix() if tracked_pdf else "",
                     "preview": preview_rel,
                     "pages": info.get("Pages"),
                     "status": info.get("Status"),
@@ -768,7 +768,7 @@ def main() -> int:
                     [
                         {
                             **row,
-                            "tracked_pdf": f"https://github.com/lachlanchen/LingualLeaf/blob/main/{row['tracked_pdf']}" if row.get("tracked_pdf") else "",
+                            "tracked_pdf": f"https://github.com/lachlanchen/LinguaLeaf/blob/main/{row['tracked_pdf']}" if row.get("tracked_pdf") else "",
                         }
                         for row in rows
                     ]
@@ -789,13 +789,13 @@ def main() -> int:
                         {
                             **row,
                             "preview": f"figs/pocketpolyglot/{Path(str(row.get('preview', ''))).name}" if row.get("preview") else "",
-                            "tracked_pdf": f"https://github.com/lachlanchen/LingualLeaf/blob/main/{row['tracked_pdf']}" if row.get("tracked_pdf") else "",
+                            "tracked_pdf": f"https://github.com/lachlanchen/LinguaLeaf/blob/main/{row['tracked_pdf']}" if row.get("tracked_pdf") else "",
                         }
                         for row in rows
                     ]
                 ),
                 "",
-                "PDF repository: [lachlanchen/LingualLeaf](https://github.com/lachlanchen/LingualLeaf) · Source repository: [lachlanchen/PocketPolyglot](https://github.com/lachlanchen/PocketPolyglot)",
+                "PDF repository: [lachlanchen/LinguaLeaf](https://github.com/lachlanchen/LinguaLeaf) · Source repository: [lachlanchen/PocketPolyglot](https://github.com/lachlanchen/PocketPolyglot)",
             ]
         )
         replace_section(LAZYLEARN / "README.md", "POCKETPOLYGLOT_MAX_LANGUAGE", lazy_section)
