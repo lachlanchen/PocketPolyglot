@@ -51,6 +51,16 @@ def usage_limit_wait_enabled() -> bool:
     return raw not in {"0", "false", "no", "off"}
 
 
+def ignore_user_config_enabled() -> bool:
+    raw = os.environ.get("CODEX_EXEC_IGNORE_USER_CONFIG", "0").strip().lower()
+    return raw in {"1", "true", "yes", "on"}
+
+
+def ignore_rules_enabled() -> bool:
+    raw = os.environ.get("CODEX_EXEC_IGNORE_RULES", "0").strip().lower()
+    return raw in {"1", "true", "yes", "on"}
+
+
 def log_text_since(path: Path, start_size: int) -> str:
     try:
         with path.open("rb") as handle:
@@ -229,6 +239,10 @@ def run_codex(
         cmd = ["codex", "exec", "--cd", str(cwd), *common, "-"]
     else:
         cmd = ["codex", "exec", "resume", "--last", *common, "-"]
+    if ignore_user_config_enabled():
+        cmd.insert(2, "--ignore-user-config")
+    if ignore_rules_enabled():
+        cmd.insert(2, "--ignore-rules")
 
     wait_seconds = env_int("CODEX_USAGE_LIMIT_WAIT_SECONDS", 3600)
     max_wait_seconds = env_int("CODEX_USAGE_LIMIT_MAX_WAIT_SECONDS", 0)

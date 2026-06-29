@@ -48,6 +48,38 @@ def source_has_content(text: str) -> bool:
     return bool(HAN_RE.search(str(text or "")))
 
 
+def chunk_has_source_content(chunk: dict[str, Any]) -> bool:
+    return any(
+        source_has_content(unit["source_wenyan"])
+        for paragraph in source_unit_plan(chunk)
+        for unit in paragraph["units"]
+    )
+
+
+def deterministic_plain_chunk(chunk: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "schema_version": "0.1-plain",
+        "mode": "quadrilingual_plain_alignment",
+        "chunk_id": chunk["chunk_id"],
+        "paragraphs": [
+            {
+                "id": paragraph["id"],
+                "units": [
+                    {
+                        "unit_id": unit["unit_id"],
+                        "source_wenyan": unit["source_wenyan"],
+                        "zh_modern": unit["source_wenyan"],
+                        "ja_modern": unit["source_wenyan"],
+                        "en": unit["source_wenyan"],
+                    }
+                    for unit in paragraph["units"]
+                ],
+            }
+            for paragraph in source_unit_plan(chunk)
+        ],
+    }
+
+
 def source_unit_plan(chunk: dict[str, Any]) -> list[dict[str, Any]]:
     plan: list[dict[str, Any]] = []
     for paragraph in chunk.get("paragraphs", []):
@@ -310,6 +342,24 @@ def main() -> int:
         chunk_id = chunk["chunk_id"]
         errors: list[str] | None = None
         try:
+            if not chunk_has_source_content(chunk):
+                plain = deterministic_plain_chunk(chunk)
+                errors = validate_plain_chunk(chunk, plain)
+                if errors:
+                    raise ValueError("; ".join(errors[:60]))
+                strict = promote_plain_chunk(chunk, plain)
+                errors = validate_chunk(chunk, strict)
+                if errors:
+                    raise ValueError("; ".join(errors[:60]))
+                write_json(plain_dir / f"{chunk_id}.json", plain)
+                write_json(accepted_dir / f"{chunk_id}.json", strict)
+                write_json(canonical_dir / f"{chunk_id}.json", strict)
+                write_json(
+                    status_dir / f"{chunk_id}.json",
+                    status_record("accepted", chunk_id=chunk_id, note="deterministic no-Han source chunk"),
+                )
+                completed += 1
+                continue
             for attempt in range(1, args.retries + 2):
                 prompt = prompt_for_plain_chunk(chunk, errors)
                 prompt_path = work_dir / "prompts" / f"{chunk_id}.attempt{attempt}.md"
