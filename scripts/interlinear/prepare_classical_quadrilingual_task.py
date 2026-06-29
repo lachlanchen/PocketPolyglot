@@ -83,6 +83,82 @@ SHANHAIJING_CANONICAL_ORDER = {
     "海內經": 18,
 }
 
+YIJING_CANONICAL_ORDER = {
+    "乾": 1,
+    "坤": 2,
+    "屯": 3,
+    "蒙": 4,
+    "需": 5,
+    "訟": 6,
+    "師": 7,
+    "比": 8,
+    "小畜": 9,
+    "履": 10,
+    "泰": 11,
+    "否": 12,
+    "同人": 13,
+    "大有": 14,
+    "謙": 15,
+    "豫": 16,
+    "隨": 17,
+    "蠱": 18,
+    "臨": 19,
+    "觀": 20,
+    "噬嗑": 21,
+    "賁": 22,
+    "剝": 23,
+    "復": 24,
+    "无妄": 25,
+    "大畜": 26,
+    "頤": 27,
+    "大過": 28,
+    "坎": 29,
+    "離": 30,
+    "咸": 31,
+    "恒": 32,
+    "遯": 33,
+    "大壯": 34,
+    "晉": 35,
+    "明夷": 36,
+    "家人": 37,
+    "睽": 38,
+    "蹇": 39,
+    "解": 40,
+    "損": 41,
+    "益": 42,
+    "夬": 43,
+    "姤": 44,
+    "萃": 45,
+    "升": 46,
+    "困": 47,
+    "井": 48,
+    "革": 49,
+    "鼎": 50,
+    "震": 51,
+    "艮": 52,
+    "漸": 53,
+    "歸妹": 54,
+    "豐": 55,
+    "旅": 56,
+    "巽": 57,
+    "兌": 58,
+    "渙": 59,
+    "節": 60,
+    "中孚": 61,
+    "小過": 62,
+    "既濟": 63,
+    "未濟": 64,
+    "彖": 65,
+    "大象": 66,
+    "小象": 67,
+    "文言": 68,
+    "繫辭上": 69,
+    "繫辭下": 70,
+    "說卦": 71,
+    "序卦": 72,
+    "雜卦": 73,
+}
+
 ROMAN_TO_INT = {
     "I": 1,
     "II": 2,
@@ -345,6 +421,8 @@ def normalize_chapter_title(book_id: str, title: str) -> str:
 
 def chapter_sort_key(book_id: str, title: str, html_name: str, header_text: str) -> tuple[int, str]:
     tail = title_tail(title)
+    if book_id == "yijing":
+        return (YIJING_CANONICAL_ORDER.get(tail, 9000 + source_sequence_key(html_name)), tail)
     if book_id == "zhuangzi":
         number = ZHUANGZI_CANONICAL_ORDER.get(tail)
         if not number:
@@ -466,6 +544,8 @@ def remove_balanced_templates(text: str) -> str:
 def clean_wiki_markup(text: str) -> str:
     text = re.sub(r"<!--.*?-->", "", text, flags=re.S)
     text = remove_balanced_templates(text)
+    text = re.sub(r"-\{(?:[^{}|]*\|)?([^{}|]+)\}-", r"\1", text)
+    text = re.sub(r"\[\[(?:File|Image):[^\]\n]+\]\]", "", text, flags=re.I)
     text = re.sub(r"\[\[([^]|\n]+)\|([^]\n]+)\]\]", r"\2", text)
     text = re.sub(r"\[\[([^]\n]+)\]\]", r"\1", text)
     text = re.sub(r"<[^>]+>", "", text)
@@ -494,13 +574,16 @@ def extract_raw_wiki_paragraphs(path: Path) -> tuple[str, list[str]]:
             continue
         if stripped.startswith("[[Category:") or stripped.startswith("__"):
             continue
+        stripped = re.sub(r"^[*#:;]+\s*", "", stripped)
+        if re.fullmatch(r"周易/.+", stripped):
+            continue
         heading = re.fullmatch(r"=+\s*(.+?)\s*=+", stripped)
         if heading:
             flush()
             if not header_text:
                 header_text = clean_text(heading.group(1))
             continue
-        if stripped.startswith("|"):
+        if stripped.startswith("|") or stripped.startswith("{|") or stripped.startswith("|}"):
             continue
         buffer.append(stripped)
     flush()
@@ -552,7 +635,10 @@ def manifest_items(book: dict[str, Any]) -> list[dict[str, Any]]:
         raw_rel = item.get("raw")
         html_path = source_dir / html_rel if html_rel else Path()
         raw_path = source_dir / raw_rel if raw_rel else Path()
-        if html_rel and html_path.exists():
+        if book["book_id"] == "yijing" and raw_rel and raw_path.exists():
+            source_path = raw_path
+            header_text, paragraphs = extract_raw_wiki_paragraphs(raw_path)
+        elif html_rel and html_path.exists():
             source_path = html_path
             header_text, paragraphs = extract_html_paragraphs(html_path, drop_small=book["book_id"] == "sanguozhi")
         elif raw_rel and raw_path.exists():
@@ -888,6 +974,13 @@ def prepare(book_id: str, *, max_chars: int, force: bool) -> None:
         "build_root": f"build/{book_id}/wenyan-main-quadrilingual",
         "prepared_at": manifest["prepared_at"],
     }
+    for cover_candidate in (
+        ROOT / "assets" / "covers" / book_id / "background.png",
+        ROOT / "assets" / "covers" / book_id / "cover.png",
+    ):
+        if cover_candidate.exists():
+            plan["cover_image"] = str(cover_candidate.relative_to(ROOT))
+            break
     write_json(plan_path, plan)
     print(f"{book_id}: chapters={len(chapters)} chunks={len(chunks)}")
     print(plan_path.relative_to(ROOT))

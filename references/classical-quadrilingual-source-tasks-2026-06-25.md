@@ -25,6 +25,7 @@ Default renderer target:
 | Work | Book ID | Main Source | Reference Layers | Caveat |
 | --- | --- | --- | --- | --- |
 | 莊子 / Zhuangzi | `zhuangzi` | `sources/zhuangzi/zh/wenyan-wikisource` | modern Chinese annotated PDF, Burton Watson English, Giles Gutenberg, Japanese scan | Japanese retelling files are secondary, not a complete aligned source. |
+| 周易 / Book of Changes | `yijing` | `sources/yijing/zh/wenyan-wikisource` complete Chinese Wikisource mirror | Chinese annotated scan, two English references, Japanese study PDF | Reference PDFs are not aligned text; use them for meaning and terminology while keeping the Wikisource Wenyan spine complete. |
 | 漢書 / Book of Han | `han-shu` | `sources/han-shu/zh/wenyan-wikisource` plus Gutenberg/EPUB alternates | Dubs English volume 1 | Japanese Wikisource is index-only; modern Japanese must be generated where needed. |
 | 後漢書 / Book of Later Han | `hou-han-shu` | `sources/hou-han-shu/zh/wenyan-wikisource` plus 李賢注 scan | partial English military/history reference, 倭傳 Japanese excerpt | English/Japanese references are partial and chapter-limited. |
 | 三國志 / Records of the Three Kingdoms | `sanguozhi` | `sources/sanguozhi/zh/wenyan-wikisource` plus Gutenberg/裴松之注 EPUB | incomplete English Wikisource, English selections | Japanese Wikisource is index-only; English references are incomplete. |

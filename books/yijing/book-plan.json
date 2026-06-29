@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "book_id": "yijing",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "周易",
+  "book_title_zh": "周易",
+  "book_title_ja": "易経",
+  "book_title_en": "Book of Changes",
+  "author": "伏羲・周文王・周公・孔子傳",
+  "author_reading_zh": "fú xī · zhōu wén wáng · zhōu gōng · kǒng zǐ zhuàn",
+  "author_reading_ja": "ふっき・しゅうぶんおう・しゅうこう・こうしでん",
+  "book_description": "周易 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/yijing/zh/wenyan-wikisource",
+    "modern_chinese_annotated_reference": "sources/yijing/zh/modern-annotated/周易.pdf",
+    "english_reference": "sources/yijing/en/i-ching/I Ching.pdf",
+    "english_scholarly_reference": "sources/yijing/en/bronze-age-document/The Book of Changes (Zhouyi)_ A Bronze Age Document.pdf",
+    "japanese_study_reference": "sources/yijing/jp/study/易学 成立と展開.pdf",
+    "wenyan_markdown": "books/yijing/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/yijing/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/yijing/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/yijing/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/yijing/work/quadrilingual/preview/yijing.partial.json",
+  "build_root": "build/yijing/wenyan-main-quadrilingual",
+  "prepared_at": "2026-06-29T23:26:05.348107+00:00",
+  "cover_image": "assets/covers/yijing/background.png"
+}

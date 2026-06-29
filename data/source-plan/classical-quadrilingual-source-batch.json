@@ -661,6 +661,56 @@
         }
       ],
       "next_step": "Extract/OCR all three PDFs to reviewed Markdown, split by original category and paragraph, and generate quadrilingual JSON while keeping 笺疏/commentary as notes rather than sentence continuation."
+    },
+    {
+      "book_id": "yijing",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "周易",
+      "book_title_zh": "周易",
+      "book_title_ja": "易経",
+      "book_title_en": "Book of Changes",
+      "author": "伏羲・周文王・周公・孔子傳",
+      "author_reading_zh": "fú xī · zhōu wén wáng · zhōu gōng · kǒng zǐ zhuàn",
+      "author_reading_ja": "ふっき・しゅうぶんおう・しゅうこう・こうしでん",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/yijing/zh/wenyan-wikisource",
+          "quality": "Chinese Wikisource complete local mirror: index, 64 hexagrams in King Wen order, and traditional appendix pages with redirects resolved"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "modern_chinese_annotated_reference",
+          "path": "sources/yijing/zh/modern-annotated/周易.pdf",
+          "quality": "Chinese annotated/translated scan; image-based in pdftotext, use as OCR or visual reference for modern Chinese meaning"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_reference",
+          "path": "sources/yijing/en/i-ching/I Ching.pdf",
+          "quality": "English I Ching reference"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_scholarly_reference",
+          "path": "sources/yijing/en/bronze-age-document/The Book of Changes (Zhouyi)_ A Bronze Age Document.pdf",
+          "quality": "scholarly English Zhouyi reference; use for terminology and interpretation"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_study_reference",
+          "path": "sources/yijing/jp/study/易学 成立と展開.pdf",
+          "quality": "Japanese study/reference; generate reader-friendly modern Japanese where no aligned translation exists"
+        }
+      ],
+      "next_step": "Use the complete Wikisource 周易/易傳 mirror as the Wenyan spine. Use the Chinese annotated scan, English I Ching references, and Japanese study reference for meaning, terminology, and commentary while generating aligned modern Japanese, modern Chinese, English, ruby/pinyin, and grammar roles."
     }
   ]
 }
