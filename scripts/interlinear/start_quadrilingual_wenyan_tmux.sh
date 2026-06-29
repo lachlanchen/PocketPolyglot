@@ -9,12 +9,17 @@ Environment:
   WORKERS=6
   MODEL=gpt-5.5
   REASONING=high
+  WORKER_PREFIX=quad-worker
   START_INDEX=1
   END_INDEX=0
   MAX_CHUNKS_PER_WORKER=0
   MERGE_INTERVAL=180
   COMPILE_INTERVAL_SECONDS=1800
   MAIN_LAYERS="wenyan"
+  CLAIM_TTL_SECONDS=1800
+  CODEX_TIMEOUT_SECONDS=1200
+  CODEX_EXEC_IGNORE_USER_CONFIG=1
+  CODEX_EXEC_IGNORE_RULES=1
   RETRY_FAILED=0
   FAILED_RETRY_AGE_SECONDS=1800
 USAGE
@@ -46,15 +51,19 @@ raw_chunk_dir="$(jq -r '.raw_chunk_dir' "$plan")"
 workers="${WORKERS:-6}"
 model="${MODEL:-gpt-5.5}"
 reasoning="${REASONING:-high}"
+worker_prefix="${WORKER_PREFIX:-quad-worker}"
 start_index="${START_INDEX:-1}"
 end_index="${END_INDEX:-0}"
 max_chunks="${MAX_CHUNKS_PER_WORKER:-0}"
 merge_interval="${MERGE_INTERVAL:-180}"
 compile_interval="${COMPILE_INTERVAL_SECONDS:-1800}"
 main_layers="${MAIN_LAYERS:-wenyan}"
-timeout="${CODEX_TIMEOUT_SECONDS:-7200}"
+claim_ttl="${CLAIM_TTL_SECONDS:-1800}"
+timeout="${CODEX_TIMEOUT_SECONDS:-1200}"
 retry_failed="${RETRY_FAILED:-0}"
 failed_retry_age="${FAILED_RETRY_AGE_SECONDS:-1800}"
+ignore_user_config="${CODEX_EXEC_IGNORE_USER_CONFIG:-1}"
+ignore_rules="${CODEX_EXEC_IGNORE_RULES:-1}"
 
 work_root="books/$book_id/work/quadrilingual/parallel-json"
 candidate_dir="$work_root/candidates"
@@ -76,10 +85,12 @@ cat > "$run_script" <<EOF
 set -euo pipefail
 cd '$root'
 mkdir -p '$work_root/logs' '$candidate_dir' '$raw_chunk_dir'
+export CODEX_EXEC_IGNORE_USER_CONFIG='$ignore_user_config'
+export CODEX_EXEC_IGNORE_RULES='$ignore_rules'
 
 pids=()
 for i in \$(seq 1 '$workers'); do
-  worker_id="\$(printf 'quad-worker-%02d' "\$i")"
+  worker_id="\$(printf '$worker_prefix-%03d' "\$i")"
   python -u scripts/interlinear/codex_quadrilingual_wenyan_worker.py \
     --chunks-jsonl '$chunks_jsonl' \
     --canonical-dir '$raw_chunk_dir' \
@@ -91,6 +102,7 @@ for i in \$(seq 1 '$workers'); do
     --start-index '$start_index' \
     $end_arg \
     --max-chunks '$max_chunks' \
+    --claim-ttl-seconds '$claim_ttl' \
     --codex-timeout-seconds '$timeout' \
     $retry_failed_arg \
     --retries 4 \
@@ -149,6 +161,9 @@ echo "book_id: $book_id"
 echo "workers: $workers"
 echo "model: $model"
 echo "reasoning: $reasoning"
+echo "worker_prefix: $worker_prefix"
+echo "claim_ttl_seconds: $claim_ttl"
+echo "codex_timeout_seconds: $timeout"
 echo "main_layers: $main_layers"
 echo "retry_failed: $retry_failed"
 echo "run_script: $run_script"

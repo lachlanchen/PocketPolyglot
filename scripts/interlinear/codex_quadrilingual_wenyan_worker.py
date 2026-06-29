@@ -140,7 +140,7 @@ def prompt_for_plain_chunk(chunk: dict[str, Any], previous_errors: list[str] | N
         The main stream is wenyan/classical Chinese from {book_title}. Preserve it exactly.
         Add three aligned reading layers for each supplied unit:
         - zh_modern: readable modern Chinese.
-        - ja_modern: real, common modern Japanese with kana; not Chinese/kanbun.
+        - ja_modern: real, common modern Japanese with kana; not Chinese, not kanbun, and not copied Han text.
         - en: clear English.
 
         Required object shape:
@@ -166,9 +166,11 @@ def prompt_for_plain_chunk(chunk: dict[str, Any], previous_errors: list[str] | N
 
         Hard requirements:
         - Preserve chunk_id, paragraph ids, unit ids, order, and source_wenyan exactly.
+        - Output valid JSON only. Escape all quotes inside strings. Do not output comments, trailing commas, multiple JSON objects, or Markdown.
         - Do not omit, summarize, reorder, or rewrite the wenyan.
         - Modern Chinese must be normal readable Chinese, not another copy of the classical text unless the unit is only a name/title.
-        - Modern Japanese must be natural Japanese with kana and inflection. Never put pure Chinese prose in ja_modern.
+        - Modern Japanese must be natural Japanese with kana and inflection. Translate the meaning into modern Japanese; never put pure Chinese prose, kanbun, or a Han-only string in ja_modern.
+        - If no reliable Japanese reference exists, first understand the wenyan through zh_modern, then write concise modern Japanese from that meaning.
         - If the supplied unit plan contains existing_ja, reuse or gently modernize it when it matches the wenyan.
         - English must be natural English and should use the English reference only when it clearly matches this broad book/chapter window.
         - Keep each unit aligned to the same meaning. Do not add footnotes or commentary.
