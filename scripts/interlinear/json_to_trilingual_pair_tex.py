@@ -44,6 +44,11 @@ CIRCLED_DIGITS = {
 BREAK_AFTER = set("/\\._-,:;=+()[]{}")
 
 
+def is_cjk_extension_b_or_later(ch: str) -> bool:
+    codepoint = ord(ch)
+    return 0x20000 <= codepoint <= 0x2EBEF
+
+
 def tex_escape_char(ch: str) -> str:
     replacements = {
         "\\": r"\textbackslash{}",
@@ -61,6 +66,8 @@ def tex_escape_char(ch: str) -> str:
         return rf"\SymbolText{{{ch}}}"
     if ch in SUBSCRIPT_DIGITS:
         return rf"\ensuremath{{_{SUBSCRIPT_DIGITS[ch]}}}"
+    if is_cjk_extension_b_or_later(ch):
+        return rf"\RareHan{{{ch}}}"
     return replacements.get(ch, ch)
 
 

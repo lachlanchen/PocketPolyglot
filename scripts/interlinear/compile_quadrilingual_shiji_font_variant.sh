@@ -5,11 +5,11 @@ usage() {
   cat <<'USAGE'
 Usage: scripts/interlinear/compile_quadrilingual_shiji_font_variant.sh --book-id <id> [--main-layer wenyan|zh_modern|ja_modern|en] [--color-mode color|blackwhite]
 
-Builds a separate quadrilingual PDF variant whose text sizes are close to the
-older Shiji AgInTi layout. Existing source JSON, source.tex, and PDFs are left
-untouched; this writes only under:
+Builds a separate quadrilingual PDF variant using the larger PocketPolyglot
+font profile originally tuned against the Shiji AgInTi layout. Existing source
+JSON, source.tex, and PDFs are left untouched; this writes only under:
 
-  build/<book-id>/<main-layer>-main-quadrilingual/shiji-aginti-font/<color-mode>/
+  build/<book-id>/<main-layer>-main-quadrilingual/large-font/<color-mode>/
 USAGE
 }
 
@@ -55,7 +55,7 @@ if [[ ! -f "$base_source" ]]; then
   exit 1
 fi
 
-variant_dir="build/$book_id/${main_layer}-main-quadrilingual/shiji-aginti-font/$color_mode"
+variant_dir="build/$book_id/${main_layer}-main-quadrilingual/large-font/$color_mode"
 mkdir -p "$variant_dir"
 cp "$base_source" "$variant_dir/source.tex"
 
@@ -63,7 +63,7 @@ cat > "$variant_dir/book.tex" <<EOF
 \\documentclass[UTF8,fontset=none,10pt,openany]{ctexbook}
 \\input{tex/interlinear-quadrilingual/style.tex}
 
-% Font-only profile matched to the older Shiji AgInTi feel:
+% Font-only profile matched to the larger PocketPolyglot readability profile:
 % main line around LaTeX \\large, first notes around \\normalsize,
 % modern Chinese / English notes slightly smaller to preserve wrapping.
 \\renewcommand{\\RubyFont}{\\fontsize{3.6pt}{4pt}\\selectfont}
@@ -96,9 +96,9 @@ EOF
 
 base_pdf="$(find "$base_dir" -maxdepth 1 -type f -name '*.pdf' | sort | head -n 1)"
 if [[ -n "$base_pdf" ]]; then
-  pdf_name="$(basename "${base_pdf%.pdf}")・史記AgInTi字級.pdf"
+  pdf_name="$(basename "${base_pdf%.pdf}")・大字版.pdf"
 else
-  pdf_name="${book_id}-${main_layer}-${color_mode}-shiji-aginti-font.pdf"
+  pdf_name="${book_id}-${main_layer}-${color_mode}-large-font.pdf"
 fi
 
 xelatex -interaction=nonstopmode -halt-on-error -output-directory "$variant_dir" "$variant_dir/book.tex" >/dev/null

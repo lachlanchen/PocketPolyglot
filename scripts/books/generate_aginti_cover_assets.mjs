@@ -36,6 +36,8 @@ const THEME_HINTS = {
     "night train crossing a river of stars, deep blue sky, lantern-lit carriage, quiet celestial railway",
   "sishu-jizhu":
     "Confucian classics, bamboo slips, inkstone, Song dynasty study, austere scholarly texture",
+  "shui-jing-zhu":
+    "ancient Chinese river geography, winding waterways through misty mountains, annotated silk map fragments, scholar-geographer's desk with bamboo slips and inkstone, Northern Wei historical atmosphere, refined ink-wash and restrained mineral pigments",
   "red-rising-1":
     "Mars mine tunnels, red dust, rising rebellion, distant domed city, cinematic science-fiction atmosphere, austere red and black palette",
   "red-rising-2":

@@ -30,9 +30,13 @@
 \setCJKmonofont{Noto Sans Mono CJK SC}
 \newCJKfontfamily\zhfont{Noto Serif CJK SC}
 \newCJKfontfamily\jpfont{Noto Serif CJK JP}
+\IfFontExistsTF{HanaMinB}
+  {\newCJKfontfamily\rarehanfont{HanaMinB}}
+  {\newCJKfontfamily\rarehanfont{Noto Serif CJK SC}}
 \newfontfamily\enfont{TeX Gyre Pagella}
 \newfontfamily\symbolfont{DejaVu Sans}
 \newcommand{\SymbolText}[1]{{\symbolfont #1}}
+\newcommand{\RareHan}[1]{{\rarehanfont #1}}
 
 \definecolor{BookInk}{HTML}{151515}
 \definecolor{BookNote}{HTML}{4D463E}
