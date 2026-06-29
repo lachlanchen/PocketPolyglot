@@ -48,6 +48,17 @@ python scripts/interlinear/report_quadrilingual_progress.py \
   --chunk-dir books/han-shu/work/quadrilingual/interlinear/chunks
 ```
 
+## Default Output Profile
+
+For classical Chinese runs, use the maximum-language quadrilingual shape by
+default: wenyan main text, English, modern Japanese, and modern Chinese. Generate
+strict JSON with grammar roles so color builds are deterministic.
+
+Final user-facing PDFs should use the larger Shiji AgInTi-style font profile for
+readability, but artifact names should use neutral wording such as
+`large-font` / `大字版` instead of Shiji-specific labels. Produce both color and
+black-white variants from the same validated JSON.
+
 ## Prompt Rules To Preserve
 
 - Preserve `source_wenyan`, IDs, and order exactly.
