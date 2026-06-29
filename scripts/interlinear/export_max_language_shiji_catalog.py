@@ -128,6 +128,8 @@ def resolve_cover(book_id: str) -> Path | None:
     candidates = [COVER_ROOT / book_id]
     if book_id == "kokoro":
         candidates.append(COVER_ROOT / "kokoro-jp-main")
+    if book_id == "sanguozhi-pei-zhu":
+        candidates.append(COVER_ROOT / "sanguozhi")
     for cover_dir in candidates:
         direct = cover_dir / "cover.png"
         if direct.exists():
@@ -285,6 +287,8 @@ def discover_editions() -> list[Edition]:
     for book_dir in sorted(p for p in BUILD.iterdir() if p.is_dir()):
         if book_dir.name in {"books", "interlinear-block", "interlinear-jp-main", "interlinear-run"}:
             continue
+        if book_dir.name == "sanguozhi-pei-zhu":
+            continue
         family_editions: list[Edition] = []
         family_editions.extend(
             candidate_for(
@@ -331,8 +335,55 @@ def discover_editions() -> list[Edition]:
             continue
         best = max(FAMILY_PRIORITY[item.family] for item in family_editions)
         editions.extend(item for item in family_editions if FAMILY_PRIORITY[item.family] == best)
+    editions.extend(discover_precompiled_quadrilingual_editions())
     editions.extend(discover_precompiled_three_layer_editions())
     return editions
+
+
+def discover_precompiled_quadrilingual_editions() -> list[Edition]:
+    """Discover completed quadrilingual PDFs that should be exported as-is."""
+
+    out: list[Edition] = []
+    specs = {
+        "sanguozhi-pei-zhu": {
+            "color": (
+                BUILD
+                / "sanguozhi-pei-zhu"
+                / "wenyan-main-quadrilingual"
+                / "color"
+                / "三國志裴松之注（英文・現代日本語・現代中文注）.pdf",
+                "三國志裴松之注（英文・現代日本語・現代中文注）・最大語種・大字版.pdf",
+            ),
+            "blackwhite": (
+                BUILD
+                / "sanguozhi-pei-zhu"
+                / "wenyan-main-quadrilingual"
+                / "blackwhite"
+                / "三國志裴松之注（英文・現代日本語・現代中文注・黑白）.pdf",
+                "三國志裴松之注（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf",
+            ),
+        }
+    }
+    for book_id, modes in specs.items():
+        for mode, (pdf, name) in modes.items():
+            if not pdf.exists():
+                continue
+            out.append(
+                Edition(
+                    book_id=book_id,
+                    family="wenyan-en-jp-zh",
+                    edition="wenyan-main-quadrilingual",
+                    mode=mode,
+                    source_tex=pdf,
+                    style_tex="",
+                    source_macro="",
+                    overrides="",
+                    original_pdf=pdf,
+                    precompiled_pdf=pdf,
+                    output_name=name,
+                )
+            )
+    return out
 
 
 def discover_precompiled_three_layer_editions() -> list[Edition]:
@@ -724,6 +775,14 @@ def main() -> int:
             if not args.no_preview and edition.mode == "color":
                 preview = PREVIEW_ROOT / f"{edition.book_id}.png"
                 extract_preview(build_pdf, preview)
+                if preview.exists():
+                    preview_rel = preview.relative_to(ROOT).as_posix()
+                    LAZYLEARN_PREVIEW_ROOT.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(preview, LAZYLEARN_PREVIEW_ROOT / preview.name)
+                    LAZYLEARN_SITE_PREVIEW_ROOT.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(preview, LAZYLEARN_SITE_PREVIEW_ROOT / preview.name)
+            elif edition.mode == "color":
+                preview = PREVIEW_ROOT / f"{edition.book_id}.png"
                 if preview.exists():
                     preview_rel = preview.relative_to(ROOT).as_posix()
                     LAZYLEARN_PREVIEW_ROOT.mkdir(parents=True, exist_ok=True)
