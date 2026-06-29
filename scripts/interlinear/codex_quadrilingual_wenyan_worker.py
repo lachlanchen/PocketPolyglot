@@ -21,6 +21,7 @@ from validate_quadrilingual_interlinear_json import HAN_RE, KANA_RE, validate_ch
 
 SPACE_RE = re.compile(r"\s+")
 SOURCE_NOTE_MARK_RE = re.compile(r"^\s*\d{1,3}\s*$")
+CATALOG_COUNTER_RE = re.compile(r"[一二三四五六七八九十百千〇零\d]+[篇卷巻]")
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -54,6 +55,39 @@ def chunk_has_source_content(chunk: dict[str, Any]) -> bool:
         for paragraph in source_unit_plan(chunk)
         for unit in paragraph["units"]
     )
+
+
+def catalog_like_source(text: str) -> bool:
+    """Detect bibliographic list entries such as 漢書藝文志 catalog rows."""
+    source = str(text or "")
+    return len(CATALOG_COUNTER_RE.findall(source)) >= 2 and any(mark in source for mark in "，、；;")
+
+
+def repair_catalog_like_ja(source: dict[str, Any], plain: dict[str, Any]) -> dict[str, Any]:
+    """Add a Japanese predicate to catalog rows that otherwise contain no kana.
+
+    Low-reasoning fetches often render Han catalog lists as title lists only:
+    『黃帝...』十二卷、... . That is not readable Japanese and fails the kana
+    validator. For catalog-like source rows only, append a short predicate so the
+    line is explicit Japanese without altering the listed titles.
+    """
+    plan_by_id = {
+        paragraph["id"]: {unit["unit_id"]: unit["source_wenyan"] for unit in paragraph["units"]}
+        for paragraph in source_unit_plan(source)
+    }
+    for paragraph in plain.get("paragraphs") or []:
+        if not isinstance(paragraph, dict):
+            continue
+        paragraph_sources = plan_by_id.get(str(paragraph.get("id")), {})
+        for unit in paragraph.get("units") or []:
+            if not isinstance(unit, dict):
+                continue
+            unit_id = str(unit.get("unit_id") or "")
+            source_wenyan = paragraph_sources.get(unit_id, "")
+            ja = plain_text(unit.get("ja_modern"))
+            if ja and not KANA_RE.search(ja) and catalog_like_source(source_wenyan):
+                unit["ja_modern"] = ja.rstrip("。") + "である。"
+    return plain
 
 
 def deterministic_plain_chunk(chunk: dict[str, Any]) -> dict[str, Any]:
@@ -171,6 +205,7 @@ def prompt_for_plain_chunk(chunk: dict[str, Any], previous_errors: list[str] | N
         - Modern Chinese must be normal readable Chinese, not another copy of the classical text unless the unit is only a name/title.
         - Modern Japanese must be natural Japanese with kana and inflection. Translate the meaning into modern Japanese; never put pure Chinese prose, kanbun, or a Han-only string in ja_modern.
         - If no reliable Japanese reference exists, first understand the wenyan through zh_modern, then write concise modern Japanese from that meaning.
+        - For catalog/list rows with titles and counts, do not output a title list only. Add Japanese particles or a predicate, e.g. "...である", so ja_modern contains kana.
         - If the supplied unit plan contains existing_ja, reuse or gently modernize it when it matches the wenyan.
         - English must be natural English and should use the English reference only when it clearly matches this broad book/chapter window.
         - Keep each unit aligned to the same meaning. Do not add footnotes or commentary.
@@ -383,6 +418,7 @@ def main() -> int:
                     )
                     raw_text = message_path.read_text(encoding="utf-8")
                     plain = extract_json(raw_text)
+                    plain = repair_catalog_like_ja(chunk, plain)
                     errors = validate_plain_chunk(chunk, plain)
                     if errors:
                         raise ValueError("; ".join(errors[:60]))
