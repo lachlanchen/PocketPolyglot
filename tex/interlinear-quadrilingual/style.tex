@@ -247,24 +247,24 @@
 
 \newcommand{\QuadParagraphStart}{\par\Needspace{8\baselineskip}}
 \newcommand{\QuadParagraphEnd}{\par\vspace{0.5em}}
+\NewDocumentCommand{\QuadNoteBlock}{m m}{%
+  \par
+  \begingroup
+    \leftskip=1.05em
+    \rightskip=0pt plus 1em
+    \parindent=0pt
+    \noindent\TinyLabel{#1}\quad #2\par
+  \endgroup
+}
 
 \NewDocumentCommand{\QuadUnit}{m m m m m m m}{%
   \Needspace{8\baselineskip}%
   \noindent #1\par
   \vspace{0.02em}
-  \noindent\hspace*{1.05em}%
-  \begin{minipage}{0.88\linewidth}
-    \TinyLabel{#2}\quad #3%
-  \end{minipage}\par
+  \QuadNoteBlock{#2}{#3}%
   \vspace{0.03em}
-  \noindent\hspace*{1.05em}%
-  \begin{minipage}{0.88\linewidth}
-    \TinyLabel{#4}\quad #5%
-  \end{minipage}\par
+  \QuadNoteBlock{#4}{#5}%
   \vspace{0.03em}
-  \noindent\hspace*{1.05em}%
-  \begin{minipage}{0.88\linewidth}
-    \TinyLabel{#6}\quad #7%
-  \end{minipage}\par
+  \QuadNoteBlock{#6}{#7}%
   \vspace{0.18em}
 }
