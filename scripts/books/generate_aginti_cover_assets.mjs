@@ -40,6 +40,8 @@ const THEME_HINTS = {
     "ancient Chinese river geography, winding waterways through misty mountains, annotated silk map fragments, scholar-geographer's desk with bamboo slips and inkstone, Northern Wei historical atmosphere, refined ink-wash and restrained mineral pigments",
   chuci:
     "Chu lacquerware elegance, deep southern river mist, orchid and angelica, phoenix-feather curves, bronze bells, silk manuscript fragments, Qu Yuan's exile-poetry atmosphere, dark cinnabar, black, jade green, and restrained gold",
+  shijing:
+    "ancient songs and fields of the Zhou world, reeds by a riverbank, millet and mulberry leaves, bronze ritual vessel, simple court music, old bamboo-slip anthology, tender folk-song atmosphere, restrained jade green, warm earth, pale gold, and ink-wash texture",
   "red-rising-1":
     "Mars mine tunnels, red dust, rising rebellion, distant domed city, cinematic science-fiction atmosphere, austere red and black palette",
   "red-rising-2":
