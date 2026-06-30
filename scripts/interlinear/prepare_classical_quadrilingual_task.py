@@ -650,6 +650,8 @@ def clean_wiki_markup(text: str) -> str:
 
 def extract_raw_wiki_paragraphs(path: Path) -> tuple[str, list[str]]:
     raw = path.read_text(encoding="utf-8", errors="replace")
+    if re.match(r"^\s*#\s*(?:重定向|redirect)\s*", raw, flags=re.I):
+        return "", []
     raw = clean_wiki_markup(raw)
     header_text = ""
     paragraphs: list[str] = []
