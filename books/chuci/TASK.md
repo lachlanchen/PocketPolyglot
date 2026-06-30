@@ -1,6 +1,6 @@
 # Chuci Quadrilingual Task
 
-Status: prepared only. Do not start automatically.
+Status: complete.
 
 Prepared output:
 
@@ -11,7 +11,17 @@ Prepared output:
 - Secondary layers: English, modern Japanese, modern Chinese
 - Grammar analysis: required, normalized English role labels
 - Font profile: large LinguaLeaf pocket font profile
+- Cover: `assets/covers/chuci/cover.png`
 - Source order: received anthology order, starting `離騷`
+
+Completed run:
+
+- Session: `zhjpbook-chuci-100-low`
+- Workers: `100`
+- Model/reasoning: `gpt-5.5`, `low`
+- Coverage: `178/178`, no missing chunks, no stale chunks
+- Grammar analysis: generated and backfilled through the quadrilingual renderer
+- Large-font PDF pages: `662`
 
 Source layout:
 
@@ -39,3 +49,13 @@ MAIN_LAYERS=wenyan \
 scripts/interlinear/start_quadrilingual_wenyan_tmux.sh \
   chuci zhjpbook-chuci-100-low
 ```
+
+Built PDFs:
+
+- `build/chuci/wenyan-main-quadrilingual/large-font/color/楚辭（英文・現代日本語・現代中文注）・大字版.pdf`
+- `build/chuci/wenyan-main-quadrilingual/large-font/blackwhite/楚辭（英文・現代日本語・現代中文注・黑白）・大字版.pdf`
+
+Working normal-font PDFs:
+
+- `build/chuci/wenyan-main-quadrilingual/color/楚辭（英文・現代日本語・現代中文注）.pdf`
+- `build/chuci/wenyan-main-quadrilingual/blackwhite/楚辭（英文・現代日本語・現代中文注・黑白）.pdf`
