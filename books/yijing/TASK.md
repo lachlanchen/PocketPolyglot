@@ -1,6 +1,6 @@
 # Yijing Quadrilingual Task
 
-Status: prepared only, not started.
+Status: complete.
 
 Prepared output:
 
@@ -12,6 +12,15 @@ Prepared output:
 - Grammar analysis: required, normalized English role labels
 - Font profile: large LinguaLeaf pocket font profile
 - Cover: `assets/covers/yijing/background.png`
+
+Completed run:
+
+- Session: `zhjpbook-yijing-100-low`
+- Workers: `100`
+- Model/reasoning: `gpt-5.5`, `low`
+- Coverage: `948/948`, no missing chunks, no stale chunks
+- Grammar backfill: applied to all chunk JSON files
+- PDF pages: `1079`
 
 Source layout:
 
@@ -29,7 +38,7 @@ Prepared files:
 - Chunks: `books/yijing/work/quadrilingual/chunks/chunks.jsonl`
 - Wenyan Markdown: `books/yijing/markdown/wenyan.md`
 
-Launch later, but do not run until requested:
+Launch command used:
 
 ```bash
 WORKERS=100 MODEL=gpt-5.5 REASONING=low \
@@ -40,4 +49,14 @@ scripts/interlinear/start_quadrilingual_wenyan_tmux.sh \
   yijing zhjpbook-yijing-100-low
 ```
 
-After generation, compile color and black-white large-font PDFs, validate manifest coverage and overflow, then sync final PDFs to the LinguaLeaf Nutstore folders.
+Built PDFs:
+
+- `build/yijing/wenyan-main-quadrilingual/large-font/color/周易（英文・現代日本語・現代中文注）・大字版.pdf`
+- `build/yijing/wenyan-main-quadrilingual/large-font/blackwhite/周易（英文・現代日本語・現代中文注・黑白）・大字版.pdf`
+
+Synced PDFs:
+
+- `/home/lachlan/Nutstore Files/Projects/LinguaLeaf/final-pdfs/文言文-English-日本語-中文/yijing/color/周易（英文・現代日本語・現代中文注）・大字版｜文言文-English-日本語-中文｜彩色.pdf`
+- `/home/lachlan/Nutstore Files/Projects/LinguaLeaf/final-pdfs/文言文-English-日本語-中文/yijing/blackwhite/周易（英文・現代日本語・現代中文注・黑白）・大字版｜文言文-English-日本語-中文｜黑白.pdf`
+- `/home/lachlan/Nutstore Files/Share/LinguaLeaf/color/周易（英文・現代日本語・現代中文注）・大字版｜文言文-English-日本語-中文｜彩色.pdf`
+- `/home/lachlan/Nutstore Files/Share/LinguaLeaf/blackwhite/周易（英文・現代日本語・現代中文注・黑白）・大字版｜文言文-English-日本語-中文｜黑白.pdf`

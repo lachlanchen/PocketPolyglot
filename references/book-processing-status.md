@@ -45,6 +45,7 @@ For classical Chinese books, keep the classical original as a preserved source l
 | 31 | `the-count-of-monte-cristo` | The Count of Monte Cristo / 基督山伯爵 / モンテ・クリスト伯 | `sources/the-count-of-monte-cristo` | Complete | Trilingual EN-JP-ZH; 1143/1143 chunks, 12 PDFs compiled; AgInTi cover generated. |
 | 32 | `notre-dame-de-paris` | Notre-Dame de Paris / 巴黎圣母院 / ノートルダム・ド・パリ | `sources/notre-dame-de-paris` | Complete | Trilingual EN-JP-ZH; 471/471 chunks, 12 PDFs compiled; Chinese OCR-polished reference promoted; AgInTi cover generated. |
 | 33 | `les-miserables` | Les Misérables / 悲惨世界 / レ・ミゼラブル | `sources/les-miserables` | Complete | Trilingual EN-JP-ZH; 1630/1630 chunks, 12 named PDFs compiled; AgInTi cover generated. |
+| 34 | `yijing` | 周易 / Book of Changes / 易経 | `sources/yijing` | Complete | Quadrilingual Wenyan-English-modern Japanese-modern Chinese; 948/948 chunks, grammar colored, large-font color and blackwhite PDFs compiled and synced. |
 
 ## Prepared / Not Yet Compiled Queue
 
@@ -71,10 +72,9 @@ support layers. The source inventory is tracked in
 | Priority | Proposed ID | Title | Source Path | Current Status | Next Step |
 |---:|---|---|---|---|---|
 | C1 | `zhuangzi` | 莊子 / Zhuangzi / 荘子 | `sources/zhuangzi` | Running quadrilingual writer; 33 chapters / 892 chunks prepared | tmux `zhjpbook-zhuangzi-quadrilingual`; queue monitor will check full coverage before moving on. |
-| C2 | `yijing` | 周易 / Book of Changes / 易経 | `sources/yijing` | Launchable; 73 chapters / 948 chunks prepared; not started | Use complete Chinese Wikisource mirror as Wenyan spine; run later with `gpt-5.5` low reasoning and 100 workers if requested. |
-| C3 | `han-shu` | 漢書 / Book of Han | `sources/han-shu` | Sources copied; quadrilingual plan prepared | Use Chinese source spine; generate modern Japanese where JP source is index-only. |
-| C4 | `hou-han-shu` | 後漢書 / Book of Later Han | `sources/hou-han-shu` | Sources copied; quadrilingual plan prepared | Treat English/Japanese references as partial chapter references only. |
-| C5 | `sanguozhi` | 三國志 / Records of the Three Kingdoms | `sources/sanguozhi` | Launchable and queued after Zhuangzi; 67 chapters / 2338 chunks prepared | Main spine excludes Pei Songzhi commentary from the primary wenyan stream; English references are incomplete. |
+| C2 | `han-shu` | 漢書 / Book of Han | `sources/han-shu` | Sources copied; quadrilingual plan prepared | Use Chinese source spine; generate modern Japanese where JP source is index-only. |
+| C3 | `hou-han-shu` | 後漢書 / Book of Later Han | `sources/hou-han-shu` | Sources copied; quadrilingual plan prepared | Treat English/Japanese references as partial chapter references only. |
+| C4 | `sanguozhi` | 三國志 / Records of the Three Kingdoms | `sources/sanguozhi` | Launchable and queued after Zhuangzi; 67 chapters / 2338 chunks prepared | Main spine excludes Pei Songzhi commentary from the primary wenyan stream; English references are incomplete. |
 
 ## Additional Future Queue
 
