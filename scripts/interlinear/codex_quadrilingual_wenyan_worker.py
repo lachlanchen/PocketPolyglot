@@ -21,6 +21,7 @@ from validate_quadrilingual_interlinear_json import HAN_RE, KANA_RE, validate_ch
 
 SPACE_RE = re.compile(r"\s+")
 SOURCE_NOTE_MARK_RE = re.compile(r"^\s*\d{1,3}\s*$")
+BRACKETED_SOURCE_NOTE_MARK_RE = re.compile(r"^\s*[\[［【〈《(（]?\s*[一二三四五六七八九十百千万〇零０-９0-9]{1,8}\s*[\]］】〉》)）]?\s*$")
 CATALOG_COUNTER_RE = re.compile(r"[一二三四五六七八九十百千〇零\d]+[篇卷巻]")
 
 
@@ -46,6 +47,8 @@ def ignorable_source_unit(text: str) -> bool:
 
 
 def source_has_content(text: str) -> bool:
+    if BRACKETED_SOURCE_NOTE_MARK_RE.fullmatch(str(text or "")):
+        return False
     return bool(HAN_RE.search(str(text or "")))
 
 
