@@ -1,6 +1,6 @@
 # Shijing Quadrilingual Task
 
-Status: prepared only. Do not start automatically.
+Status: complete.
 
 Prepared output:
 
@@ -11,7 +11,17 @@ Prepared output:
 - Secondary layers: English, modern Japanese, modern Chinese
 - Grammar analysis: required, normalized English role labels
 - Font profile: large LinguaLeaf pocket font profile
+- Cover: `assets/covers/shijing/cover.png`
 - Source order: root Wikisource anthology order, starting `關雎`
+
+Completed run:
+
+- Session: `zhjpbook-shijing-100-low`
+- Workers: `100`
+- Model/reasoning: `gpt-5.5`, `low`
+- Coverage: `949/949`, no missing chunks, no stale chunks
+- Grammar analysis: generated and backfilled through the quadrilingual renderer
+- Large-font PDF pages: `740`
 
 Source layout:
 
@@ -39,3 +49,13 @@ MAIN_LAYERS=wenyan \
 scripts/interlinear/start_quadrilingual_wenyan_tmux.sh \
   shijing zhjpbook-shijing-100-low
 ```
+
+Built PDFs:
+
+- `build/shijing/wenyan-main-quadrilingual/large-font/color/詩經（英文・現代日本語・現代中文注）・大字版.pdf`
+- `build/shijing/wenyan-main-quadrilingual/large-font/blackwhite/詩經（英文・現代日本語・現代中文注・黑白）・大字版.pdf`
+
+Working normal-font PDFs:
+
+- `build/shijing/wenyan-main-quadrilingual/color/詩經（英文・現代日本語・現代中文注）.pdf`
+- `build/shijing/wenyan-main-quadrilingual/blackwhite/詩經（英文・現代日本語・現代中文注・黑白）.pdf`
