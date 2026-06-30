@@ -13,6 +13,7 @@ START_SCRIPT="$PART_DIR/start_part.sh"
 EXTRA_SESSION="${EXTRA_SESSION:-zhjpbook-hou-han-shu-part-01-90-after1am-low}"
 EXTRA_WORKERS="${EXTRA_WORKERS:-90}"
 EXTRA_PREFIX="${EXTRA_PREFIX:-quad-after1}"
+SCALE_AFTER_HOUR="${SCALE_AFTER_HOUR:-1}"
 THRESHOLD="${CODEX_5H_MIN_LEFT_PERCENT:-25}"
 CHECK_INTERVAL_SECONDS="${CHECK_INTERVAL_SECONDS:-600}"
 LIMIT_BACKOFF_SECONDS="${LIMIT_BACKOFF_SECONDS:-3600}"
@@ -26,11 +27,13 @@ log() {
   printf '[%s] %s\n' "$(date '+%F %T %Z')" "$*" | tee -a "$LOG"
 }
 
-next_one_am_epoch() {
+next_scale_epoch() {
   python3 - <<'PY'
+import os
 from datetime import datetime, timedelta
+hour = int(os.environ.get("SCALE_AFTER_HOUR", "1"))
 now = datetime.now()
-target = now.replace(hour=1, minute=0, second=0, microsecond=0)
+target = now.replace(hour=hour, minute=0, second=0, microsecond=0)
 if target <= now:
     target += timedelta(days=1)
 print(int(target.timestamp()))
@@ -100,7 +103,7 @@ stop_extra() {
   fi
 }
 
-target="$(next_one_am_epoch)"
+target="$(next_scale_epoch)"
 now="$(date +%s)"
 if (( now < target )); then
   log "waiting until $(date -d "@$target" '+%F %T %Z') before adding extra workers"
