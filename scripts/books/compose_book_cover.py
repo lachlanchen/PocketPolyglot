@@ -15,6 +15,7 @@ WIDTH = 1536
 HEIGHT = round(WIDTH * 148 / 105)
 SERIF_REGULAR = "/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc"
 SERIF_BOLD = "/usr/share/fonts/opentype/noto/NotoSerifCJK-Bold.ttc"
+SYMBOL_FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 
 
 def font(path: str, size: int, index: int = 2) -> ImageFont.FreeTypeFont:
@@ -50,6 +51,33 @@ def draw_centered(
     draw.text((x, y), text, font=font_obj, fill=fill)
 
 
+def draw_centered_fit(
+    draw: ImageDraw.ImageDraw,
+    text: str,
+    xy: tuple[int, int],
+    font_path: str,
+    size: int,
+    index: int,
+    fill: tuple[int, int, int, int],
+    *,
+    max_width: int,
+    min_size: int,
+) -> None:
+    fitted = font(font_path, size, index=index)
+    while size > min_size:
+        bbox = draw.textbbox((0, 0), text, font=fitted)
+        if bbox[2] - bbox[0] <= max_width:
+            break
+        size -= 1
+        fitted = font(font_path, size, index=index)
+    draw_centered(draw, text, xy, fitted, fill)
+
+
+def text_width(draw: ImageDraw.ImageDraw, text: str, font_obj: ImageFont.FreeTypeFont) -> int:
+    bbox = draw.textbbox((0, 0), text, font=font_obj)
+    return bbox[2] - bbox[0]
+
+
 def draw_vertical(
     draw: ImageDraw.ImageDraw,
     text: str,
@@ -73,6 +101,23 @@ def draw_vertical(
     for ch, (w, h) in zip(chars, heights):
         draw.text((x - w / 2, cursor), ch, font=font_obj, fill=fill)
         cursor += h + gap
+
+
+def draw_yijing_trigrams(draw: ImageDraw.ImageDraw, *, fill: tuple[int, int, int, int]) -> None:
+    symbol_font = ImageFont.truetype(SYMBOL_FONT, size=int(HEIGHT * 0.034))
+    trigrams = ["☰", "☱", "☲", "☳", "☴", "☵", "☶", "☷"]
+    positions = [
+        (int(WIDTH * 0.19), int(HEIGHT * 0.18)),
+        (int(WIDTH * 0.81), int(HEIGHT * 0.18)),
+        (int(WIDTH * 0.18), int(HEIGHT * 0.34)),
+        (int(WIDTH * 0.82), int(HEIGHT * 0.34)),
+        (int(WIDTH * 0.18), int(HEIGHT * 0.52)),
+        (int(WIDTH * 0.82), int(HEIGHT * 0.52)),
+        (int(WIDTH * 0.19), int(HEIGHT * 0.70)),
+        (int(WIDTH * 0.81), int(HEIGHT * 0.70)),
+    ]
+    for trigram, position in zip(trigrams, positions):
+        draw_centered(draw, trigram, position, symbol_font, fill)
 
 
 def load_plan(path: Path) -> dict:
@@ -142,6 +187,9 @@ def main() -> int:
     muted = (70, 54, 43, 238)
     seal = (150, 42, 30, 238)
 
+    if args.book_id == "yijing":
+        draw_yijing_trigrams(draw, fill=(28, 22, 17, 185))
+
     draw_vertical(
         draw,
         title_ja,
@@ -164,18 +212,93 @@ def main() -> int:
             max_bottom=int(HEIGHT * 0.66),
         )
 
-    author_line = author
-    if author_reading:
-        author_line = f"{author}（{author_reading}）"
-    draw_centered(draw, author_line, (WIDTH // 2, int(HEIGHT * 0.715)), small_font, muted)
-    draw_centered(draw, edition_label(plan), (WIDTH // 2, int(HEIGHT * 0.765)), side_font, muted)
-    draw_centered(draw, "AgInTiFlow curated", (WIDTH // 2, int(HEIGHT * 0.830)), latin_font, muted)
-    draw_centered(draw, "https://flow.lazying.art", (WIDTH // 2, int(HEIGHT * 0.858)), latin_font, muted)
-    draw_centered(draw, "powered by LazyingArt", (WIDTH // 2, int(HEIGHT * 0.886)), latin_font, muted)
+    panel_text_width = panel_right - panel_left - inset * 2
+
+    author_line = f"{author}（{author_reading}）" if author_reading else author
+    author_y = int(HEIGHT * 0.715)
+    if author and author_reading and text_width(draw, author_line, small_font) > panel_text_width:
+        draw_centered_fit(
+            draw,
+            author,
+            (WIDTH // 2, author_y - int(HEIGHT * 0.011)),
+            SERIF_REGULAR,
+            int(HEIGHT * 0.018),
+            0,
+            muted,
+            max_width=panel_text_width,
+            min_size=int(HEIGHT * 0.011),
+        )
+        draw_centered_fit(
+            draw,
+            author_reading,
+            (WIDTH // 2, author_y + int(HEIGHT * 0.014)),
+            SERIF_REGULAR,
+            int(HEIGHT * 0.013),
+            0,
+            muted,
+            max_width=panel_text_width,
+            min_size=int(HEIGHT * 0.008),
+        )
+    else:
+        draw_centered_fit(
+            draw,
+            author_line,
+            (WIDTH // 2, author_y),
+            SERIF_REGULAR,
+            int(HEIGHT * 0.020),
+            0,
+            muted,
+            max_width=panel_text_width,
+            min_size=int(HEIGHT * 0.010),
+        )
+    draw_centered_fit(
+        draw,
+        edition_label(plan),
+        (WIDTH // 2, int(HEIGHT * 0.765)),
+        SERIF_REGULAR,
+        int(HEIGHT * 0.024),
+        2,
+        muted,
+        max_width=panel_text_width,
+        min_size=int(HEIGHT * 0.010),
+    )
+    draw_centered_fit(
+        draw,
+        "AgInTiFlow curated",
+        (WIDTH // 2, int(HEIGHT * 0.830)),
+        SERIF_REGULAR,
+        int(HEIGHT * 0.015),
+        2,
+        muted,
+        max_width=panel_text_width,
+        min_size=int(HEIGHT * 0.009),
+    )
+    draw_centered_fit(
+        draw,
+        "https://flow.lazying.art",
+        (WIDTH // 2, int(HEIGHT * 0.858)),
+        SERIF_REGULAR,
+        int(HEIGHT * 0.015),
+        2,
+        muted,
+        max_width=panel_text_width,
+        min_size=int(HEIGHT * 0.009),
+    )
+    draw_centered_fit(
+        draw,
+        "powered by LazyingArt",
+        (WIDTH // 2, int(HEIGHT * 0.886)),
+        SERIF_REGULAR,
+        int(HEIGHT * 0.015),
+        2,
+        muted,
+        max_width=panel_text_width,
+        min_size=int(HEIGHT * 0.009),
+    )
 
     seal_size = int(WIDTH * 0.075)
     seal_x = int(WIDTH * 0.61)
-    seal_y = int(HEIGHT * 0.70)
+    seal_y = int(HEIGHT * 0.64)
     draw.rounded_rectangle(
         (seal_x, seal_y, seal_x + seal_size, seal_y + seal_size),
         radius=7,
