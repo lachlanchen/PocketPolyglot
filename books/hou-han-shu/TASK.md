@@ -56,6 +56,23 @@ Recommended first-part launch for tonight:
 bash books/hou-han-shu/work/quadrilingual/parts/part-01/start_part.sh
 ```
 
+Conservative staged launch:
+
+```bash
+WORKERS=10 WORKER_PREFIX=quad-now \
+bash books/hou-han-shu/work/quadrilingual/parts/part-01/start_part.sh \
+  zhjpbook-hou-han-shu-part-01-10-low
+
+tmux new-session -d -s zhjpbook-hou-han-shu-part-01-scaler \
+  "bash books/hou-han-shu/work/quadrilingual/parts/part-01/scale_after_1am.sh"
+```
+
+The scaler waits until 01:00, then adds 90 workers with a different worker
+prefix. It pauses extra workers for recent hard usage-limit log markers. If a
+real `/status` quota snapshot is saved to
+`books/hou-han-shu/work/quadrilingual/parts/part-01/quota/status.txt`, it also
+holds extra workers when the `5h limit` line is below 25% left.
+
 The part scripts default to `WORKERS=100`, `MODEL=gpt-5.5`, and
 `REASONING=low`. They use the shared canonical chunk output directory, so later
 parts continue the same book without duplicating earlier results.
