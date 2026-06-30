@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "book_id": "hou-han-shu",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "後漢書",
+  "book_title_zh": "后汉书",
+  "book_title_ja": "後漢書",
+  "book_title_en": "Book of Later Han",
+  "author": "范曄",
+  "author_reading_zh": "fàn yè",
+  "author_reading_ja": "はん よう",
+  "book_description": "後漢書 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/hou-han-shu/zh/wenyan-wikisource",
+    "commented_classical_source": "sources/hou-han-shu/zh/li-xian-commentary/後漢書.pdf",
+    "partial_english_reference": "sources/hou-han-shu/en/military-history-ethnicity/Fan Ye's Book of Later Han (Houhanshu)_ Military History and Ethnicity 1.pdf",
+    "japanese_excerpt_reference": "sources/hou-han-shu/jp/waden-excerpt/Gokanjo-Waden-Fan-Ye-Aozora.html",
+    "wenyan_markdown": "books/hou-han-shu/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/hou-han-shu/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/hou-han-shu/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/hou-han-shu/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/hou-han-shu/work/quadrilingual/preview/hou-han-shu.partial.json",
+  "build_root": "build/hou-han-shu/wenyan-main-quadrilingual",
+  "prepared_at": "2026-06-30T06:10:47.507664+00:00"
+}

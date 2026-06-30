@@ -435,6 +435,8 @@ def chapter_sort_key(book_id: str, title: str, html_name: str, header_text: str)
         match = SANGUOZHI_VOLUME_RE.search(tail) or SANGUOZHI_VOLUME_RE.search(html_name)
         return (int(match.group(1)) if match else 9999, tail)
     if book_id in {"han-shu", "hou-han-shu"}:
+        if book_id == "hou-han-shu" and tail == "注補續漢書八志序":
+            return (905, tail)
         match = CLASSICAL_VOLUME_RE.search(tail) or CLASSICAL_VOLUME_RE.search(html_name)
         if match:
             part = match.group(2) or ""
