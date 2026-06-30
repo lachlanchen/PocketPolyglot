@@ -42,6 +42,8 @@ const THEME_HINTS = {
     "Chu lacquerware elegance, deep southern river mist, orchid and angelica, phoenix-feather curves, bronze bells, silk manuscript fragments, Qu Yuan's exile-poetry atmosphere, dark cinnabar, black, jade green, and restrained gold",
   shijing:
     "ancient songs and fields of the Zhou world, reeds by a riverbank, millet and mulberry leaves, bronze ritual vessel, simple court music, old bamboo-slip anthology, tender folk-song atmosphere, restrained jade green, warm earth, pale gold, and ink-wash texture",
+  "tangshi-sanbai":
+    "Tang dynasty poetry anthology, moonlit pavilion, distant frontier mountains, river boat, plum blossom and wine cup, scholar's desk with brush and folded paper, luminous regulated-verse elegance, mineral blue, ink black, moon silver, and restrained cinnabar",
   "red-rising-1":
     "Mars mine tunnels, red dust, rising rebellion, distant domed city, cinematic science-fiction atmosphere, austere red and black palette",
   "red-rising-2":
