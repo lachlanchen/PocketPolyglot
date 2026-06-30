@@ -22,6 +22,10 @@ Environment:
   CODEX_EXEC_IGNORE_RULES=1
   RETRY_FAILED=0
   FAILED_RETRY_AGE_SECONDS=1800
+  CHUNKS_JSONL_OVERRIDE=
+  MANIFEST_OVERRIDE=
+  RAW_CHUNK_DIR_OVERRIDE=
+  WORK_ROOT_OVERRIDE=
 USAGE
 }
 
@@ -45,9 +49,9 @@ if tmux has-session -t "=$session" 2>/dev/null; then
   exit 1
 fi
 
-chunks_jsonl="$(jq -r '.chunks_jsonl' "$plan")"
-manifest="$(jq -r '.chunks_manifest' "$plan")"
-raw_chunk_dir="$(jq -r '.raw_chunk_dir' "$plan")"
+chunks_jsonl="${CHUNKS_JSONL_OVERRIDE:-$(jq -r '.chunks_jsonl' "$plan")}"
+manifest="${MANIFEST_OVERRIDE:-$(jq -r '.chunks_manifest' "$plan")}"
+raw_chunk_dir="${RAW_CHUNK_DIR_OVERRIDE:-$(jq -r '.raw_chunk_dir' "$plan")}"
 workers="${WORKERS:-6}"
 model="${MODEL:-gpt-5.5}"
 reasoning="${REASONING:-high}"
@@ -65,7 +69,7 @@ failed_retry_age="${FAILED_RETRY_AGE_SECONDS:-1800}"
 ignore_user_config="${CODEX_EXEC_IGNORE_USER_CONFIG:-1}"
 ignore_rules="${CODEX_EXEC_IGNORE_RULES:-1}"
 
-work_root="books/$book_id/work/quadrilingual/parallel-json"
+work_root="${WORK_ROOT_OVERRIDE:-books/$book_id/work/quadrilingual/parallel-json}"
 candidate_dir="$work_root/candidates"
 log_dir="books/$book_id/work/logs"
 run_script="$work_root/${session}.run.sh"

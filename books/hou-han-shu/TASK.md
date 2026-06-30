@@ -42,4 +42,22 @@ scripts/interlinear/start_quadrilingual_wenyan_tmux.sh \
   hou-han-shu zhjpbook-hou-han-shu-100-low
 ```
 
+Prepared three-part launch split:
+
+| Part | Chapters | Chunks | Chunk indexes | Launch script |
+| --- | ---: | ---: | ---: | --- |
+| 1 | 1-51 | 4377 | 1-4377 | `books/hou-han-shu/work/quadrilingual/parts/part-01/start_part.sh` |
+| 2 | 52-92 | 4402 | 4378-8779 | `books/hou-han-shu/work/quadrilingual/parts/part-02/start_part.sh` |
+| 3 | 93-131 | 4373 | 8780-13152 | `books/hou-han-shu/work/quadrilingual/parts/part-03/start_part.sh` |
+
+Recommended first-part launch for tonight:
+
+```bash
+bash books/hou-han-shu/work/quadrilingual/parts/part-01/start_part.sh
+```
+
+The part scripts default to `WORKERS=100`, `MODEL=gpt-5.5`, and
+`REASONING=low`. They use the shared canonical chunk output directory, so later
+parts continue the same book without duplicating earlier results.
+
 After generation, run grammar-role backfill, compile color and black-white large-font PDFs, validate manifest coverage and overflow, then sync final PDFs to the LinguaLeaf Nutstore folders.

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "book_id": "hou-han-shu",
+  "parts": 3,
+  "source_manifest": "books/hou-han-shu/work/quadrilingual/chunks/manifest.json",
+  "source_chunks_jsonl": "books/hou-han-shu/work/quadrilingual/chunks/chunks.jsonl",
+  "generated_at": "2026-06-30T13:38:15.364233+00:00",
+  "part_manifests": [
+    {
+      "part": 1,
+      "manifest": "books/hou-han-shu/work/quadrilingual/parts/part-01/manifest.json",
+      "start_script": "books/hou-han-shu/work/quadrilingual/parts/part-01/start_part.sh",
+      "start_index": 1,
+      "end_index": 4377,
+      "chunk_count": 4377,
+      "chapter_count": 51,
+      "chapter_range": [
+        1,
+        51
+      ],
+      "chunk_range": [
+        "hou-han-shu-chunk-0001",
+        "hou-han-shu-chunk-4377"
+      ]
+    },
+    {
+      "part": 2,
+      "manifest": "books/hou-han-shu/work/quadrilingual/parts/part-02/manifest.json",
+      "start_script": "books/hou-han-shu/work/quadrilingual/parts/part-02/start_part.sh",
+      "start_index": 4378,
+      "end_index": 8779,
+      "chunk_count": 4402,
+      "chapter_count": 41,
+      "chapter_range": [
+        52,
+        92
+      ],
+      "chunk_range": [
+        "hou-han-shu-chunk-4378",
+        "hou-han-shu-chunk-8779"
+      ]
+    },
+    {
+      "part": 3,
+      "manifest": "books/hou-han-shu/work/quadrilingual/parts/part-03/manifest.json",
+      "start_script": "books/hou-han-shu/work/quadrilingual/parts/part-03/start_part.sh",
+      "start_index": 8780,
+      "end_index": 13152,
+      "chunk_count": 4373,
+      "chapter_count": 39,
+      "chapter_range": [
+        93,
+        131
+      ],
+      "chunk_range": [
+        "hou-han-shu-chunk-8780",
+        "hou-han-shu-chunk-13152"
+      ]
+    }
+  ]
+}

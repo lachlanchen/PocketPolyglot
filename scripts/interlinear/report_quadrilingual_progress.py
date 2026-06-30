@@ -28,6 +28,13 @@ def main() -> int:
     manifest = load_json(Path(args.manifest))
     sources = load_jsonl(Path(args.chunks_jsonl))
     chunk_dir = Path(args.chunk_dir)
+    manifest_chunks = manifest.get("chunks")
+    if isinstance(manifest_chunks, list) and manifest_chunks:
+        selected_ids = {
+            item.get("chunk_id") if isinstance(item, dict) else item
+            for item in manifest_chunks
+        }
+        sources = [source for source in sources if source.get("chunk_id") in selected_ids]
     valid = 0
     missing = 0
     stale = 0
