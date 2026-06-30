@@ -77,4 +77,14 @@ The part scripts default to `WORKERS=100`, `MODEL=gpt-5.5`, and
 `REASONING=low`. They use the shared canonical chunk output directory, so later
 parts continue the same book without duplicating earlier results.
 
+Sequential 10-worker continuation:
+
+```bash
+tmux new-session -d -s zhjpbook-hou-han-shu-sequential-10 \
+  "WORKERS=10 bash books/hou-han-shu/work/quadrilingual/parts/run_parts_sequential.sh"
+```
+
+This controller waits for part 1 to validate complete, then starts part 2 with
+10 workers, waits for part 2, then starts part 3 with 10 workers.
+
 After generation, run grammar-role backfill, compile color and black-white large-font PDFs, validate manifest coverage and overflow, then sync final PDFs to the LinguaLeaf Nutstore folders.
