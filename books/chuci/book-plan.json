@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "book_id": "chuci",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "楚辭",
+  "book_title_zh": "楚辞",
+  "book_title_ja": "楚辞",
+  "book_title_en": "Songs of Chu",
+  "author": "屈原等",
+  "author_reading_zh": "qū yuán děng",
+  "author_reading_ja": "くつ げん ほか",
+  "book_description": "楚辭 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/chuci/zh-wikisource",
+    "wikisource_export": "sources/chuci/zh-wikisource-export/楚辭-Wikisource.epub",
+    "modern_chinese_reference": "sources/chuci/zh/楚辭.pdf",
+    "commentary_reference": "sources/chuci/楚辞集解.pdf",
+    "english_reference": "sources/chuci/en/The Songs of Chu - Qu Yuan and Others.pdf",
+    "english_wikipedia_reference": "sources/chuci/en-wikipedia-reference",
+    "japanese_wikipedia_reference": "sources/chuci/ja-wikipedia-reference",
+    "wenyan_markdown": "books/chuci/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/chuci/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/chuci/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/chuci/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/chuci/work/quadrilingual/preview/chuci.partial.json",
+  "build_root": "build/chuci/wenyan-main-quadrilingual",
+  "prepared_at": "2026-06-30T09:14:26.305269+00:00"
+}

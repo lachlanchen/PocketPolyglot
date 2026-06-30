@@ -29,6 +29,7 @@ SANGUOZHI_VOLUME_RE = re.compile(r"卷\s*0*(\d+)")
 CLASSICAL_VOLUME_RE = re.compile(r"卷\s*0*(\d+)\s*([上中下])?")
 SOURCE_FILE_PREFIX_RE = re.compile(r"(?:^|/)(\d+)-")
 CHAPTER_ORDINAL_RE = re.compile(r"([一二三四五六七八九十百〇零]+)$")
+WIKI_LINK_RE = re.compile(r"\[\[([^]\|#]+)(?:#[^]\|]*)?(?:\|([^]\n]+))?\]\]")
 VOLUME_PART_ORDER = {"": 0, "上": 1, "中": 2, "下": 3}
 
 ZUOZHUAN_CANONICAL_ORDER = {
@@ -81,6 +82,28 @@ SHANHAIJING_CANONICAL_ORDER = {
     "大荒西經": 16,
     "大荒北經": 17,
     "海內經": 18,
+}
+
+ANTHOLOGY_STANDALONE_BOOKS = {"chuci", "tangshi-sanbai"}
+CHUCI_SKIP_TITLES = {"楚辭", "楚辭章句", "楚辭補注", "屈原賦注"}
+CHUCI_CANONICAL_ORDER = {
+    "離騷": 1,
+    "九歌": 2,
+    "天問": 3,
+    "九章": 4,
+    "遠遊": 5,
+    "卜居": 6,
+    "漁父": 7,
+    "九辯": 8,
+    "招魂": 9,
+    "大招": 10,
+    "惜誓": 11,
+    "招隱士": 12,
+    "七諫": 13,
+    "哀時命": 14,
+    "九懷": 15,
+    "九歎": 16,
+    "九思": 17,
 }
 
 YIJING_CANONICAL_ORDER = {
@@ -397,6 +420,21 @@ def title_tail(title: str) -> str:
     return title.split("/")[-1].strip()
 
 
+def normalize_title_key(title: str) -> str:
+    title = clean_wiki_markup(title)
+    title = title.replace("_", " ").replace("䰟", "魂")
+    title = SPACE_RE.sub(" ", title).strip()
+    return title
+
+
+def title_order_keys(title: str) -> list[str]:
+    full = normalize_title_key(title)
+    tail = normalize_title_key(title_tail(full))
+    stripped_tail = re.sub(r"\s*[（(][^）)]*[）)]\s*$", "", tail).strip()
+    keys = [full, tail, stripped_tail]
+    return [key for index, key in enumerate(keys) if key and key not in keys[:index]]
+
+
 def source_sequence_key(path_name: str) -> int:
     match = SOURCE_FILE_PREFIX_RE.search(path_name)
     return int(match.group(1)) if match else 9999
@@ -419,8 +457,61 @@ def normalize_chapter_title(book_id: str, title: str) -> str:
     return tail
 
 
-def chapter_sort_key(book_id: str, title: str, html_name: str, header_text: str) -> tuple[int, str]:
+def canonical_chuci_key(title: str) -> str:
+    key = title_order_keys(title)[-1]
+    return key.replace("招䰟", "招魂")
+
+
+def resolve_wiki_link_title(root_title: str, target: str) -> str:
+    target = target.strip()
+    if target.startswith("/"):
+        return f"{root_title}{target}"
+    return target
+
+
+def root_wiki_link_order(
+    book_id: str,
+    source_dir: Path,
+    items: list[dict[str, Any]],
+    root_title: str,
+) -> dict[str, int]:
+    if book_id not in {"shijing", "tangshi-sanbai"}:
+        return {}
+    root_items = [item for item in items if normalize_title_key(str(item.get("title", ""))) == root_title]
+    order: dict[str, int] = {}
+    if not root_items:
+        return order
+    raw_rel = root_items[0].get("raw")
+    raw_path = source_dir / raw_rel if raw_rel else Path()
+    if not raw_path.exists():
+        return order
+    sequence = 0
+    for line in raw_path.read_text(encoding="utf-8", errors="replace").splitlines():
+        if not line.lstrip().startswith("#"):
+            continue
+        for match in WIKI_LINK_RE.finditer(line):
+            target = resolve_wiki_link_title(root_title, match.group(1))
+            low = target.lower()
+            if low.startswith(("category:", "file:", "image:")):
+                continue
+            sequence += 1
+            for key in title_order_keys(target):
+                order.setdefault(key, sequence)
+    return order
+
+
+def chapter_sort_key(
+    book_id: str,
+    title: str,
+    html_name: str,
+    header_text: str,
+    root_order: dict[str, int] | None = None,
+) -> tuple[int, str]:
     tail = title_tail(title)
+    if root_order:
+        for key in title_order_keys(title):
+            if key in root_order:
+                return (root_order[key], key)
     if book_id == "yijing":
         return (YIJING_CANONICAL_ORDER.get(tail, 9000 + source_sequence_key(html_name)), tail)
     if book_id == "zhuangzi":
@@ -452,6 +543,8 @@ def chapter_sort_key(book_id: str, title: str, html_name: str, header_text: str)
         return (source_sequence_key(html_name), title)
     if book_id == "shanhaijing":
         return (SHANHAIJING_CANONICAL_ORDER.get(tail, 9000 + source_sequence_key(html_name)), tail)
+    if book_id == "chuci":
+        return (CHUCI_CANONICAL_ORDER.get(canonical_chuci_key(tail), 9000 + source_sequence_key(html_name)), tail)
     if book_id == "xu-xiake-youji":
         for prefix, base in (
             ("滇遊日記", 1200),
@@ -626,13 +719,24 @@ def manifest_items(book: dict[str, Any]) -> list[dict[str, Any]]:
     source_dir = ROOT / source["path"]
     manifest_path = source_dir / "manifest.json"
     items = [item for item in load_json(manifest_path) if item.get("status") == "ok"]
+    root_order = root_wiki_link_order(book["book_id"], source_dir, items, book["book_title_wenyan"])
     prepared = []
+    seen_titles: set[str] = set()
     for item in items:
         title = str(item.get("title", ""))
-        if "/" not in title:
+        if "/" not in title and book["book_id"] not in ANTHOLOGY_STANDALONE_BOOKS:
+            continue
+        if root_order and not any(key in root_order for key in title_order_keys(title)):
             continue
         if should_skip_source_item(book["book_id"], title):
             continue
+        chapter_title = normalize_chapter_title(book["book_id"], title)
+        if book["book_id"] == "chuci":
+            if chapter_title in CHUCI_SKIP_TITLES:
+                continue
+            if chapter_title in seen_titles:
+                continue
+            seen_titles.add(chapter_title)
         html_rel = item.get("html")
         raw_rel = item.get("raw")
         html_path = source_dir / html_rel if html_rel else Path()
@@ -656,7 +760,7 @@ def manifest_items(book: dict[str, Any]) -> list[dict[str, Any]]:
                 "source_path": source_path,
                 "header_text": header_text,
                 "paragraphs": paragraphs,
-                "sort_key": chapter_sort_key(book["book_id"], title, source_path.name, header_text),
+                "sort_key": chapter_sort_key(book["book_id"], title, source_path.name, header_text, root_order),
             }
         )
     prepared.sort(key=lambda item: item["sort_key"])

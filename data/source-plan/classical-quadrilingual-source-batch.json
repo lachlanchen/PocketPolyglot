@@ -711,6 +711,254 @@
         }
       ],
       "next_step": "Use the complete Wikisource 周易/易傳 mirror as the Wenyan spine. Use the Chinese annotated scan, English I Ching references, and Japanese study reference for meaning, terminology, and commentary while generating aligned modern Japanese, modern Chinese, English, ruby/pinyin, and grammar roles."
+    },
+    {
+      "book_id": "shijing",
+      "status": "prepared_sources_only",
+      "priority": "classical_poetry_queue",
+      "book_title_wenyan": "詩經",
+      "book_title_zh": "诗经",
+      "book_title_ja": "詩経",
+      "book_title_en": "Classic of Poetry",
+      "author": "作者未詳",
+      "author_reading_zh": "zuò zhě wèi xiáng",
+      "author_reading_ja": "さくしゃ みしょう",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/shijing/zh-wikisource",
+          "quality": "Chinese Wikisource full source tree, 301 pages; used as the wenyan spine"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "wikisource_export",
+          "path": "sources/shijing/zh-wikisource-export/詩經-Wikisource.epub",
+          "quality": "Chinese Wikisource EPUB export"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "modern_chinese_reference",
+          "path": "sources/shijing/zh/詩經.pdf",
+          "quality": "downloaded Chinese reference PDF"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "modern_chinese_selection",
+          "path": "sources/shijing/诗经选.epub",
+          "quality": "Chinese EPUB selection/reference"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "annotated_chinese_reference",
+          "path": "sources/shijing/詩經注析（全二冊） 上册.pdf",
+          "quality": "Chinese annotated reference volume 1"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "annotated_chinese_reference",
+          "path": "sources/shijing/詩經注析（全二冊） 下册.pdf",
+          "quality": "Chinese annotated reference volume 2"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_commentary_reference",
+          "path": "sources/shijing/毛詩注疏.pdf",
+          "quality": "large classical commentary reference; not the primary spine"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_reference",
+          "path": "sources/shijing/en/The Book of Songs - The Ancient Chinese Classic of Poetry.pdf",
+          "quality": "English Book of Songs reference PDF"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_wikisource_reference",
+          "path": "sources/shijing/en-wikisource-classic-of-poetry",
+          "quality": "English Wikisource Classic of Poetry page"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_wikisource_export",
+          "path": "sources/shijing/en-wikisource-export/Classic-of-Poetry-Wikisource.epub",
+          "quality": "English Wikisource EPUB export"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_wikisource_partial",
+          "path": "sources/shijing/ja-wikisource-shikyo",
+          "quality": "Japanese Wikisource partial source tree, 8 poems/pages"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_wikisource_export",
+          "path": "sources/shijing/ja-wikisource-export/詩経-Wikisource.epub",
+          "quality": "Japanese Wikisource EPUB export"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_study_reference",
+          "path": "sources/shijing/jp/詩経 - 歌の原始 書物誕生.pdf",
+          "quality": "Japanese study/reference PDF; not a full aligned translation"
+        }
+      ],
+      "next_step": "Use Chinese Wikisource as the poem spine; use Chinese/English/Japanese references where matching, and generate missing modern Japanese/English/modern Chinese where no source aligns."
+    },
+    {
+      "book_id": "chuci",
+      "status": "prepared_sources_only",
+      "priority": "classical_poetry_queue",
+      "book_title_wenyan": "楚辭",
+      "book_title_zh": "楚辞",
+      "book_title_ja": "楚辞",
+      "book_title_en": "Songs of Chu",
+      "author": "屈原等",
+      "author_reading_zh": "qū yuán děng",
+      "author_reading_ja": "くつ げん ほか",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/chuci/zh-wikisource",
+          "quality": "Chinese Wikisource source tree; anthology entries with duplicate/root pages filtered during preparation"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "wikisource_export",
+          "path": "sources/chuci/zh-wikisource-export/楚辭-Wikisource.epub",
+          "quality": "Chinese Wikisource EPUB export"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "modern_chinese_reference",
+          "path": "sources/chuci/zh/楚辭.pdf",
+          "quality": "downloaded Chinese reference PDF"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "commentary_reference",
+          "path": "sources/chuci/楚辞补注.pdf",
+          "quality": "Chinese commentary/reference PDF"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "commentary_reference",
+          "path": "sources/chuci/楚辞集解.pdf",
+          "quality": "Chinese commentary/reference PDF"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_reference",
+          "path": "sources/chuci/en/The Songs of Chu - Qu Yuan and Others.pdf",
+          "quality": "English anthology reference PDF"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_wikipedia_reference",
+          "path": "sources/chuci/en-wikipedia-reference",
+          "quality": "English Wikipedia reference, broad context only"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_wikipedia_reference",
+          "path": "sources/chuci/ja-wikipedia-reference",
+          "quality": "Japanese Wikipedia reference, broad context only; generate modern Japanese where no full source exists"
+        }
+      ],
+      "next_step": "Use the filtered Chinese Wikisource anthology as the spine; use the English anthology and Chinese commentaries as references; generate modern Japanese."
+    },
+    {
+      "book_id": "tangshi-sanbai",
+      "status": "prepared_sources_only",
+      "priority": "classical_poetry_queue",
+      "book_title_wenyan": "唐詩三百首",
+      "book_title_zh": "唐诗三百首",
+      "book_title_ja": "唐詩三百首",
+      "book_title_en": "Three Hundred Tang Poems",
+      "author": "蘅塘退士 編",
+      "author_reading_zh": "héng táng tuì shì biān",
+      "author_reading_ja": "こうとうたいし へん",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/tangshi-sanbai/zh-wikisource-tangshi-sanbai",
+          "quality": "Chinese Wikisource Tangshi Sanbai source tree; filtered to 320 anthology poem chapters from the root-page order"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "wikisource_export",
+          "path": "sources/tangshi-sanbai/zh-wikisource-export/唐詩三百首-Wikisource.epub",
+          "quality": "Chinese Wikisource EPUB export"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "modern_chinese_reference",
+          "path": "sources/tangshi-sanbai/zh/唐詩三百首.pdf",
+          "quality": "downloaded Chinese reference PDF"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_reference",
+          "path": "sources/tangshi-sanbai/en/Three Hundred Tang Poems.pdf",
+          "quality": "English Three Hundred Tang Poems reference PDF"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_wikisource_reference",
+          "path": "sources/tangshi-sanbai/en-wikisource-the-jade-mountain",
+          "quality": "English Wikisource The Jade Mountain partial/reference tree"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_wikisource_export",
+          "path": "sources/tangshi-sanbai/en-wikisource-export/The-Jade-Mountain-Wikisource.epub",
+          "quality": "English Wikisource EPUB export"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_wikipedia_reference",
+          "path": "sources/tangshi-sanbai/ja-wikipedia-reference",
+          "quality": "Japanese Wikipedia references for 唐詩三百首/唐詩選; generate modern Japanese where no aligned source exists"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "du_fu_supplemental_reference",
+          "path": "sources/tangshi-sanbai/du-fu/zh/杜甫诗选 POEMAS de DU FU.pdf",
+          "quality": "Du Fu supplemental reference, not full anthology"
+        }
+      ],
+      "next_step": "Use Chinese Wikisource poem pages as the spine; use English and Chinese PDFs as references; generate modern Japanese."
     }
   ]
 }

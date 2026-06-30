@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "book_id": "tangshi-sanbai",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "唐詩三百首",
+  "book_title_zh": "唐诗三百首",
+  "book_title_ja": "唐詩三百首",
+  "book_title_en": "Three Hundred Tang Poems",
+  "author": "蘅塘退士 編",
+  "author_reading_zh": "héng táng tuì shì biān",
+  "author_reading_ja": "こうとうたいし へん",
+  "book_description": "唐詩三百首 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/tangshi-sanbai/zh-wikisource-tangshi-sanbai",
+    "wikisource_export": "sources/tangshi-sanbai/zh-wikisource-export/唐詩三百首-Wikisource.epub",
+    "modern_chinese_reference": "sources/tangshi-sanbai/zh/唐詩三百首.pdf",
+    "english_reference": "sources/tangshi-sanbai/en/Three Hundred Tang Poems.pdf",
+    "english_wikisource_reference": "sources/tangshi-sanbai/en-wikisource-the-jade-mountain",
+    "english_wikisource_export": "sources/tangshi-sanbai/en-wikisource-export/The-Jade-Mountain-Wikisource.epub",
+    "japanese_wikipedia_reference": "sources/tangshi-sanbai/ja-wikipedia-reference",
+    "du_fu_supplemental_reference": "sources/tangshi-sanbai/du-fu/zh/杜甫诗选 POEMAS de DU FU.pdf",
+    "wenyan_markdown": "books/tangshi-sanbai/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/tangshi-sanbai/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/tangshi-sanbai/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/tangshi-sanbai/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/tangshi-sanbai/work/quadrilingual/preview/tangshi-sanbai.partial.json",
+  "build_root": "build/tangshi-sanbai/wenyan-main-quadrilingual",
+  "prepared_at": "2026-06-30T09:14:27.109757+00:00"
+}

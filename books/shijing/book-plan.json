@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "book_id": "shijing",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "詩經",
+  "book_title_zh": "诗经",
+  "book_title_ja": "詩経",
+  "book_title_en": "Classic of Poetry",
+  "author": "作者未詳",
+  "author_reading_zh": "zuò zhě wèi xiáng",
+  "author_reading_ja": "さくしゃ みしょう",
+  "book_description": "詩經 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/shijing/zh-wikisource",
+    "wikisource_export": "sources/shijing/zh-wikisource-export/詩經-Wikisource.epub",
+    "modern_chinese_reference": "sources/shijing/zh/詩經.pdf",
+    "modern_chinese_selection": "sources/shijing/诗经选.epub",
+    "annotated_chinese_reference": "sources/shijing/詩經注析（全二冊） 下册.pdf",
+    "classical_commentary_reference": "sources/shijing/毛詩注疏.pdf",
+    "english_reference": "sources/shijing/en/The Book of Songs - The Ancient Chinese Classic of Poetry.pdf",
+    "english_wikisource_reference": "sources/shijing/en-wikisource-classic-of-poetry",
+    "english_wikisource_export": "sources/shijing/en-wikisource-export/Classic-of-Poetry-Wikisource.epub",
+    "japanese_wikisource_partial": "sources/shijing/ja-wikisource-shikyo",
+    "japanese_wikisource_export": "sources/shijing/ja-wikisource-export/詩経-Wikisource.epub",
+    "japanese_study_reference": "sources/shijing/jp/詩経 - 歌の原始 書物誕生.pdf",
+    "wenyan_markdown": "books/shijing/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/shijing/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/shijing/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/shijing/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/shijing/work/quadrilingual/preview/shijing.partial.json",
+  "build_root": "build/shijing/wenyan-main-quadrilingual",
+  "prepared_at": "2026-06-30T09:14:26.242496+00:00"
+}
