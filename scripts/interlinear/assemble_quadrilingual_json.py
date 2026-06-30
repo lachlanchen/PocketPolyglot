@@ -32,6 +32,13 @@ def main() -> int:
 
     manifest = load_json(Path(args.manifest))
     sources = load_jsonl(Path(args.chunks_jsonl))
+    manifest_chunks = manifest.get("chunks")
+    if isinstance(manifest_chunks, list) and manifest_chunks:
+        selected_ids = {
+            item.get("chunk_id") if isinstance(item, dict) else item
+            for item in manifest_chunks
+        }
+        sources = [source for source in sources if source.get("chunk_id") in selected_ids]
     chunk_dir = Path(args.chunk_dir)
     chapters: "OrderedDict[str, dict[str, Any]]" = OrderedDict()
     missing: list[str] = []
