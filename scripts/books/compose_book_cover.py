@@ -146,11 +146,13 @@ def main() -> int:
     parser.add_argument("--background", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--book-id", default="")
+    parser.add_argument("--title-suffix", default="", help="Optional suffix appended to the displayed book titles, e.g. 第二部.")
     args = parser.parse_args()
 
     plan = load_plan(args.plan)
-    title_ja = plan.get("book_title_ja") or plan.get("book_title_zh") or args.book_id
-    title_zh = plan.get("book_title_zh") or title_ja
+    title_suffix = args.title_suffix.strip()
+    title_ja = (plan.get("book_title_ja") or plan.get("book_title_zh") or args.book_id) + title_suffix
+    title_zh = (plan.get("book_title_zh") or title_ja) + title_suffix
     author = plan.get("author") or ""
     author_reading = plan.get("author_reading_ja") or plan.get("author_reading_zh") or ""
 
