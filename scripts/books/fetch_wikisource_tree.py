@@ -22,6 +22,7 @@ from typing import Any
 
 
 API_ROOTS = {
+    "ar": "https://ar.wikisource.org/w/api.php",
     "zh": "https://zh.wikisource.org/w/api.php",
     "ja": "https://ja.wikisource.org/w/api.php",
     "jp": "https://ja.wikisource.org/w/api.php",

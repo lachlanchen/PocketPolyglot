@@ -98,6 +98,16 @@ reference only.
 |---:|---|---|---|---|---|
 | B1 | `bible` | The Holy Bible / 聖經 / 聖書 | `sources/bible` | Running; 66 books / 1189 chapters / 2113 chunks prepared | English KJV is the exact spine; Chinese Union Version is exact; modern Japanese is generated because Japanese Wikisource Kougo pages are metadata/redaction pages. |
 
+## Prepared Arabic Quadrilingual Source Queue
+
+These tasks preserve Arabic explicitly as `ar`, with ruby/transliteration and
+grammar analysis required in the future writer/renderer. Do not relabel Arabic
+as `wenyan`, `zh`, or `ja` to reuse an incompatible renderer.
+
+| Priority | Proposed ID | Title | Source Path | Current Status | Next Step |
+|---:|---|---|---|---|---|
+| AQ1 | `quran` | القرآن الكريم / The Quran / クルアーン / 古蘭經 | `sources/quran` | Prepared; 114 suras / 842 chunks; Arabic complete, EN/JA/ZH references partial | Add Arabic quadrilingual writer/validator and RTL ruby renderer before launching. |
+
 ## Additional Future Queue
 
 This order keeps further readable, narrative books after the prepared queue. Short anthologies and classical collections stay lower unless the user explicitly promotes one.

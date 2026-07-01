@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "book_id": "quran",
+  "status": "prepared",
+  "launchable": false,
+  "task_mode": "arabic_quadrilingual_main",
+  "source_language": "ar",
+  "book_title_ar": "القرآن الكريم",
+  "book_title_en": "The Quran",
+  "book_title_ja": "クルアーン",
+  "book_title_zh": "古蘭經",
+  "book_description": "Arabic Quran source with English, modern Japanese, and modern Chinese aligned learner-book overlays.",
+  "chapter_count": 114,
+  "chunk_count": 842,
+  "missing_suras": [],
+  "source_paths": {
+    "arabic_wikisource_hafs_madina": "sources/quran/ar/wikisource-hafs-madina",
+    "english_wikisource_pickthall_1930": "sources/quran/en/wikisource-pickthall-1930",
+    "english_wikisource_rodwell": "sources/quran/en/wikisource-rodwell",
+    "japanese_wikisource_quran_partial": "sources/quran/ja/wikisource-quran",
+    "chinese_wikisource_hanyigulanjing": "sources/quran/zh/wikisource-hanyigulanjing",
+    "chinese_wikisource_gulanjing_yijie_partial": "sources/quran/zh/wikisource-gulanjing-yijie",
+    "chinese_wikisource_gulanjing_dayi": "sources/quran/zh/wikisource-gulanjing-dayi",
+    "arabic_markdown": "books/quran/markdown/quran-arabic-source.md"
+  },
+  "chunks_jsonl": "books/quran/work/arabic-quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/quran/work/arabic-quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/quran/work/arabic-quadrilingual/interlinear/chunks",
+  "assembled_json": "books/quran/work/arabic-quadrilingual/preview/quran.partial.json",
+  "build_root": "build/quran",
+  "required_pipeline_work": [
+    "Add arabic_quadrilingual writer/validator or extend generic multilingual writer.",
+    "Add Arabic ruby/token rendering in XeLaTeX with RTL-safe layout.",
+    "Add Arabic grammar-role coloring and validation.",
+    "Compile color and blackwhite large-font PDFs after generated chunks validate."
+  ],
+  "prepared_at": "2026-07-01T23:08:19.718477+00:00"
+}
