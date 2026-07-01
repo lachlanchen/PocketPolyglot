@@ -48,6 +48,14 @@ const THEME_HINTS = {
     "Chan Buddhist scripture atmosphere, quiet monastery hall, lotus pond at dawn, empty meditation seat, old sutra paper, incense smoke, warm gold and ink-black restraint, contemplative Southern school Zen feeling",
   "vimalakirti-sutra":
     "Mahayana Buddhist scripture atmosphere, refined lay sage's room, lotus light, celestial canopy abstraction, old Sanskrit and Chinese sutra-paper texture without readable letters, luminous compassion and nonduality, mineral blue, gold, and dark ink",
+  mudanting:
+    "Ming dynasty Kunqu dream-romance atmosphere, moonlit peony garden, quiet pavilion, silk sleeves implied by flowing forms, refined theatrical beauty, tender longing and resurrection imagery, rose, jade green, old gold, and ink-wash restraint",
+  xixiangji:
+    "Yuan drama Western Chamber atmosphere, moonlit monastery courtyard, red paper lantern glow without readable writing, scholar's travel desk, folded fan, distant chamber screen, elegant romantic tension, cinnabar, indigo, warm gold, and old paper texture",
+  manyoshu:
+    "Nara-era poetry anthology atmosphere, pampas grass and autumn wind, old travel road, sea cliffs, mountain mist, court manuscript paper, understated ancient Japanese lyric feeling, mineral blue, pale grass green, warm earth, and soft ink texture",
+  "kokin-wakashu":
+    "Heian waka anthology atmosphere, cherry blossoms over layered paper, court poetry screens, soft garden water, refined seasonal elegance, subtle gold dust, pale pink, celadon, and deep ink with no readable calligraphy",
   "red-rising-1":
     "Mars mine tunnels, red dust, rising rebellion, distant domed city, cinematic science-fiction atmosphere, austere red and black palette",
   "red-rising-2":

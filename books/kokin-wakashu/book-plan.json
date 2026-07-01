@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "book_id": "kokin-wakashu",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "trilingual_japanese_classical_main",
+  "source_language": "ja",
+  "book_title_en": "Kokin Wakashu",
+  "book_title_zh": "古今和歌集",
+  "book_title_ja": "古今和歌集",
+  "author": "紀貫之 等 撰",
+  "author_reading_ja": "き の つらゆき ほか せん",
+  "book_description": "古今和歌集 with Japanese source text and English/Chinese overlays.",
+  "source_paths": {
+    "japanese_wikisource": "sources/kokin-wakashu/jp/wikisource",
+    "japanese_markdown": "books/kokin-wakashu/markdown/japanese-source.md",
+    "english_reference_1": "sources/kokin-wakashu/en/wikisource-anthology-kokinshu",
+    "english_reference_2": "sources/kokin-wakashu/en/wikisource-anthology-six-collections",
+    "english_reference_3": "sources/japanese-literature-anthology/en/wikisource",
+    "missing_reference_manifest_1": "sources/kokin-wakashu/en/wikisource",
+    "missing_reference_manifest_2": "sources/kokin-wakashu/zh/wikisource",
+    "extra_reference_1": "sources/kokin-wakashu/jp/modern-translation-epub/古今和歌集（全現代語訳付）.epub"
+  },
+  "source_note": "Japanese Wikisource is the preserved source spine. The local modern-translation EPUB is a broad Japanese reference; English Wikisource anthology pages are partial references; Chinese is generated from the Japanese source.",
+  "chunks_jsonl": "books/kokin-wakashu/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/kokin-wakashu/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/kokin-wakashu/work/trilingual/interlinear/chunks",
+  "assembled_json": "books/kokin-wakashu/work/trilingual/preview/kokin-wakashu.partial.json",
+  "build_root": "build/kokin-wakashu",
+  "prepared_at": "2026-07-01T21:36:24.930599+00:00"
+}

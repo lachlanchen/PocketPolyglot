@@ -1265,6 +1265,92 @@
         }
       ],
       "next_step": "Use Chinese Wikisource chapter subpages as the wenyan spine. Use the Chinese EPUB and English PDF as references; generate modern Japanese and modern Chinese overlays."
+    },
+    {
+      "book_id": "mudanting",
+      "status": "launchable_task_prepared",
+      "priority": "classical_drama_queue",
+      "book_title_wenyan": "牡丹亭",
+      "book_title_zh": "牡丹亭",
+      "book_title_ja": "牡丹亭",
+      "book_title_en": "The Peony Pavilion",
+      "author": "湯顯祖",
+      "author_reading_zh": "tāng xiǎn zǔ",
+      "author_reading_ja": "とう けんそ",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/mudanting/zh/wikisource",
+          "quality": "Chinese Wikisource mirror of 牡丹亭; canonical 55-scene drama spine after duplicate-page filtering"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "generated_modern_chinese",
+          "path": "sources/mudanting/zh/wikisource",
+          "quality": "No aligned modern Chinese translation found locally; generate readable modern Chinese from the wenyan spine"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_wikisource_missing_manifest",
+          "path": "sources/mudanting/en/wikisource",
+          "quality": "Wikisource manifest records missing English root; generate English from the wenyan and modern Chinese bridge"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_wikisource_missing_manifest",
+          "path": "sources/mudanting/jp/wikisource",
+          "quality": "Wikisource manifest records missing Japanese root; generate natural modern Japanese from the wenyan and modern Chinese bridge"
+        }
+      ],
+      "next_step": "Run the quadrilingual writer from books/mudanting/work/quadrilingual/chunks/manifest.json, then compile large-font color and black-white editions with cover."
+    },
+    {
+      "book_id": "xixiangji",
+      "status": "launchable_task_prepared",
+      "priority": "classical_drama_queue",
+      "book_title_wenyan": "西廂記",
+      "book_title_zh": "西厢记",
+      "book_title_ja": "西廂記",
+      "book_title_en": "The Story of the Western Wing",
+      "author": "王實甫",
+      "author_reading_zh": "wáng shí fǔ",
+      "author_reading_ja": "おう じつほ",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/xixiangji/zh/wikisource",
+          "quality": "Chinese Wikisource mirror of 崔鶯鶯待月西廂記; uses only the five-book Wang Shifu text, excluding 北西廂記 and 南西廂記 variants"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "chinese_edition_reference",
+          "path": "sources/xixiangji/zh/chinese-edition/西廂記.pdf",
+          "quality": "downloaded Chinese reference PDF; use for meaning and terminology where OCR/text extraction is reliable"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_wikisource_missing_manifest",
+          "path": "sources/xixiangji/en/wikisource",
+          "quality": "Wikisource manifest records missing English root; generate English from the wenyan and modern Chinese bridge"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_wikisource_missing_manifest",
+          "path": "sources/xixiangji/jp/wikisource",
+          "quality": "Wikisource manifest records missing Japanese root; generate natural modern Japanese from the wenyan and modern Chinese bridge"
+        }
+      ],
+      "next_step": "Run the quadrilingual writer from books/xixiangji/work/quadrilingual/chunks/manifest.json, then compile large-font color and black-white editions with cover."
     }
   ]
 }

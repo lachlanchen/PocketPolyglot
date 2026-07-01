@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "book_id": "mudanting",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "牡丹亭",
+  "book_title_zh": "牡丹亭",
+  "book_title_ja": "牡丹亭",
+  "book_title_en": "The Peony Pavilion",
+  "author": "湯顯祖",
+  "author_reading_zh": "tāng xiǎn zǔ",
+  "author_reading_ja": "とう けんそ",
+  "book_description": "牡丹亭 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/mudanting/zh/wikisource",
+    "generated_modern_chinese": "sources/mudanting/zh/wikisource",
+    "english_wikisource_missing_manifest": "sources/mudanting/en/wikisource",
+    "japanese_wikisource_missing_manifest": "sources/mudanting/jp/wikisource",
+    "wenyan_markdown": "books/mudanting/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/mudanting/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/mudanting/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/mudanting/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/mudanting/work/quadrilingual/preview/mudanting.partial.json",
+  "build_root": "build/mudanting/wenyan-main-quadrilingual",
+  "prepared_at": "2026-07-01T21:35:23.339745+00:00"
+}

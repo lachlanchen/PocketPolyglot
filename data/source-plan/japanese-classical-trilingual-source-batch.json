@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "description": "Japanese classical source-spine trilingual tasks prepared for LinguaLeaf/PocketPolyglot.",
+  "default_task_mode": "trilingual_japanese_classical_main",
+  "default_output": "Japanese source text with English and modern Chinese overlays, grammar coloring, color and black-white PDFs, and large-font final editions.",
+  "books": [
+    {
+      "book_id": "manyoshu",
+      "status": "launchable_task_prepared",
+      "priority": "japanese_classical_queue",
+      "book_title_ja": "万葉集",
+      "book_title_zh": "万叶集",
+      "book_title_en": "Man'yoshu",
+      "author": "大伴家持 等 編",
+      "author_reading_ja": "おおとも の やかもち ほか へん",
+      "source_layers": [
+        {
+          "layer": "ja_source",
+          "lang": "ja",
+          "role": "source_spine",
+          "path": "sources/manyoshu/jp/wikisource",
+          "quality": "Japanese Wikisource kundoku source spine; original and kana fields are retained in chunk references"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "partial_reference",
+          "path": "sources/manyoshu/en/wikisource-anthology-manyoshu",
+          "quality": "Partial English Wikisource anthology reference; use only where it clearly matches"
+        },
+        {
+          "layer": "zh",
+          "lang": "zh",
+          "role": "generated_modern_chinese",
+          "path": "sources/manyoshu/zh/wikisource",
+          "quality": "Manifest records missing Chinese Wikisource root; generate modern Chinese from Japanese source"
+        }
+      ],
+      "chunks_manifest": "books/manyoshu/work/trilingual/chunks/manifest.json",
+      "next_step": "Run the trilingual writer, compile all 12 color/black-white pair editions, then sync final PDFs."
+    },
+    {
+      "book_id": "kokin-wakashu",
+      "status": "launchable_task_prepared",
+      "priority": "japanese_classical_queue",
+      "book_title_ja": "古今和歌集",
+      "book_title_zh": "古今和歌集",
+      "book_title_en": "Kokin Wakashu",
+      "author": "紀貫之 等 撰",
+      "author_reading_ja": "き の つらゆき ほか せん",
+      "source_layers": [
+        {
+          "layer": "ja_source",
+          "lang": "ja",
+          "role": "source_spine",
+          "path": "sources/kokin-wakashu/jp/wikisource",
+          "quality": "Japanese Wikisource source spine"
+        },
+        {
+          "layer": "ja_reference",
+          "lang": "ja",
+          "role": "modern_translation_reference",
+          "path": "sources/kokin-wakashu/jp/modern-translation-epub/古今和歌集（全現代語訳付）.epub",
+          "quality": "Local modern Japanese EPUB reference for difficult archaic passages"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "partial_reference",
+          "path": "sources/kokin-wakashu/en/wikisource-anthology-kokinshu",
+          "quality": "Partial English Wikisource anthology reference; use only where it clearly matches"
+        },
+        {
+          "layer": "zh",
+          "lang": "zh",
+          "role": "generated_modern_chinese",
+          "path": "sources/kokin-wakashu/zh/wikisource",
+          "quality": "Manifest records missing Chinese Wikisource root; generate modern Chinese from Japanese source"
+        }
+      ],
+      "chunks_manifest": "books/kokin-wakashu/work/trilingual/chunks/manifest.json",
+      "next_step": "Run the trilingual writer, compile all 12 color/black-white pair editions, then sync final PDFs."
+    }
+  ]
+}

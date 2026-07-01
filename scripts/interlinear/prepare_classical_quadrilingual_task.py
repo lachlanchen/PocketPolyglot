@@ -106,6 +106,66 @@ CHUCI_CANONICAL_ORDER = {
     "九思": 17,
 }
 
+MUDANTING_CANONICAL_ORDER = {
+    "標目": 1,
+    "言懷": 2,
+    "訓女": 3,
+    "腐歎": 4,
+    "延師": 5,
+    "悵眺": 6,
+    "閨塾": 7,
+    "勸農": 8,
+    "肅苑": 9,
+    "驚夢": 10,
+    "慈戒": 11,
+    "尋夢": 12,
+    "訣謁": 13,
+    "寫真": 14,
+    "寫眞": 14,
+    "虜諜": 15,
+    "詰病": 16,
+    "道覡": 17,
+    "診祟": 18,
+    "牝賊": 19,
+    "鬧殤": 20,
+    "謁遇": 21,
+    "旅寄": 22,
+    "冥判": 23,
+    "拾畫": 24,
+    "憶女": 25,
+    "玩真": 26,
+    "玩眞": 26,
+    "魂遊": 27,
+    "幽媾": 28,
+    "旁疑": 29,
+    "懽撓": 30,
+    "繕備": 31,
+    "冥誓": 32,
+    "秘議": 33,
+    "詗藥": 34,
+    "回生": 35,
+    "婚走": 36,
+    "駭變": 37,
+    "淮警": 38,
+    "如杭": 39,
+    "僕偵": 40,
+    "耽試": 41,
+    "移鎮": 42,
+    "禦淮": 43,
+    "急難": 44,
+    "寇間": 45,
+    "折寇": 46,
+    "圍釋": 47,
+    "遇母": 48,
+    "淮泊": 49,
+    "鬧宴": 50,
+    "榜下": 51,
+    "索元": 52,
+    "硬拷": 53,
+    "聞喜": 54,
+    "圓駕": 55,
+}
+
 YIJING_CANONICAL_ORDER = {
     "乾": 1,
     "坤": 2,
@@ -446,6 +506,10 @@ def should_skip_source_item(book_id: str, title: str) -> bool:
         return True
     if book_id == "vimalakirti-sutra" and tail in {"1", "2", "3"}:
         return True
+    if book_id == "mudanting" and tail == "歡撓":
+        return True
+    if book_id == "xixiangji" and tail in {"北西廂記", "南西廂記"}:
+        return True
     return False
 
 
@@ -670,6 +734,15 @@ def chapter_sort_key(
         return (SHANHAIJING_CANONICAL_ORDER.get(tail, 9000 + source_sequence_key(html_name)), tail)
     if book_id == "chuci":
         return (CHUCI_CANONICAL_ORDER.get(canonical_chuci_key(tail), 9000 + source_sequence_key(html_name)), tail)
+    if book_id == "mudanting":
+        return (MUDANTING_CANONICAL_ORDER.get(tail, 9000 + source_sequence_key(html_name)), tail)
+    if book_id == "xixiangji":
+        match = re.search(r"第\s*([1-5一二三四五])\s*本", tail)
+        if match:
+            raw = match.group(1)
+            number = int(raw) if raw.isdigit() else zh_number_to_int(raw)
+            return (number, tail)
+        return (9000 + source_sequence_key(html_name), tail)
     if book_id == "xu-xiake-youji":
         for prefix, base in (
             ("滇遊日記", 1200),

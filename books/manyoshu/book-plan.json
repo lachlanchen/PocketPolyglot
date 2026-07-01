@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "book_id": "manyoshu",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "trilingual_japanese_classical_main",
+  "source_language": "ja",
+  "book_title_en": "Man'yoshu",
+  "book_title_zh": "万叶集",
+  "book_title_ja": "万葉集",
+  "author": "大伴家持 等 編",
+  "author_reading_ja": "おおとも の やかもち ほか へん",
+  "book_description": "万葉集 with Japanese source text and English/Chinese overlays.",
+  "source_paths": {
+    "japanese_wikisource": "sources/manyoshu/jp/wikisource",
+    "japanese_markdown": "books/manyoshu/markdown/japanese-source.md",
+    "english_reference_1": "sources/manyoshu/en/wikisource-anthology-manyoshu",
+    "english_reference_2": "sources/japanese-literature-anthology/en/wikisource",
+    "missing_reference_manifest_1": "sources/manyoshu/en/wikisource",
+    "missing_reference_manifest_2": "sources/manyoshu/zh/wikisource"
+  },
+  "source_note": "Japanese Wikisource kundoku is the preserved source spine. English uses the Anthology of Japanese Literature page only where it matches; Chinese is generated from the Japanese source.",
+  "chunks_jsonl": "books/manyoshu/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/manyoshu/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/manyoshu/work/trilingual/interlinear/chunks",
+  "assembled_json": "books/manyoshu/work/trilingual/preview/manyoshu.partial.json",
+  "build_root": "build/manyoshu",
+  "prepared_at": "2026-07-01T21:36:24.362232+00:00"
+}

@@ -75,6 +75,20 @@ support layers. The source inventory is tracked in
 | C2 | `han-shu` | 漢書 / Book of Han | `sources/han-shu` | Sources copied; quadrilingual plan prepared | Use Chinese source spine; generate modern Japanese where JP source is index-only. |
 | C3 | `hou-han-shu` | 後漢書 / Book of Later Han | `sources/hou-han-shu` | Launchable; 131 chapters / 13152 chunks prepared; not started | Treat English/Japanese references as partial chapter references only; `注補續漢書八志序` is ordered between `卷90` and `卷91`. |
 | C4 | `sanguozhi` | 三國志 / Records of the Three Kingdoms | `sources/sanguozhi` | Launchable and queued after Zhuangzi; 67 chapters / 2338 chunks prepared | Main spine excludes Pei Songzhi commentary from the primary wenyan stream; English references are incomplete. |
+| C5 | `mudanting` | 牡丹亭 / The Peony Pavilion | `sources/mudanting` | Launchable; 55 scenes / 523 chunks prepared | Chinese Wikisource is the wenyan spine; EN/modern JP/modern ZH overlays are generated because no matching Wikisource translations were found. |
+| C6 | `xixiangji` | 西廂記 / The Story of the Western Wing | `sources/xixiangji` | Launchable; 5 books / 101 chunks prepared | Uses Wang Shifu five-book spine; `北西廂記` and `南西廂記` variants are excluded from the main stream. |
+
+## Prepared Japanese Classical Trilingual Queue
+
+These are classical Japanese source-spine tasks. They should use the Japanese
+source as the main stream, then English and modern Chinese as aligned support
+layers. Where English Wikisource material is partial, it is stored as a broad
+reference only.
+
+| Priority | Proposed ID | Title | Source Path | Current Status | Next Step |
+|---:|---|---|---|---|---|
+| J1 | `manyoshu` | 万葉集 / Man'yoshu / 万叶集 | `sources/manyoshu` | Launchable; 20 volumes / 4562 chunks prepared | Use Japanese Wikisource kundoku as the source spine; English anthology references are partial; Chinese is generated. |
+| J2 | `kokin-wakashu` | 古今和歌集 / Kokin Wakashu | `sources/kokin-wakashu` | Launchable; 23 sections / 1123 chunks prepared | Use Japanese Wikisource plus local modern-translation EPUB as references; English anthology references are partial; Chinese is generated. |
 
 ## Additional Future Queue
 

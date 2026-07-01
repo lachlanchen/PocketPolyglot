@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "book_id": "xixiangji",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "西廂記",
+  "book_title_zh": "西厢记",
+  "book_title_ja": "西廂記",
+  "book_title_en": "The Story of the Western Wing",
+  "author": "王實甫",
+  "author_reading_zh": "wáng shí fǔ",
+  "author_reading_ja": "おう じつほ",
+  "book_description": "西廂記 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/xixiangji/zh/wikisource",
+    "chinese_edition_reference": "sources/xixiangji/zh/chinese-edition/西廂記.pdf",
+    "english_wikisource_missing_manifest": "sources/xixiangji/en/wikisource",
+    "japanese_wikisource_missing_manifest": "sources/xixiangji/jp/wikisource",
+    "wenyan_markdown": "books/xixiangji/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/xixiangji/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/xixiangji/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/xixiangji/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/xixiangji/work/quadrilingual/preview/xixiangji.partial.json",
+  "build_root": "build/xixiangji/wenyan-main-quadrilingual",
+  "prepared_at": "2026-07-01T21:35:23.368782+00:00"
+}
