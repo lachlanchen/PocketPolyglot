@@ -785,7 +785,14 @@ def main() -> int:
             local_pdf = LOCAL_EXPORT_ROOT / edition.family / edition.book_id / edition.edition / edition.mode / export_name
             public_pdf = PUBLIC_EXPORT_ROOT / edition.family / edition.book_id / edition.edition / edition.mode / export_name
             if args.no_compress:
-                exported = public_pdf if public_pdf.exists() else local_pdf if local_pdf.exists() else build_pdf
+                local_pdf.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(build_pdf, local_pdf)
+                if local_pdf.stat().st_size <= GITHUB_MAX_BYTES:
+                    public_pdf.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(local_pdf, public_pdf)
+                    exported = public_pdf
+                else:
+                    exported = local_pdf
                 compress_status = "not-compressed"
             elif local_pdf.exists() and not args.force_compress:
                 exported = public_pdf if public_pdf.exists() else local_pdf

@@ -44,6 +44,10 @@ const THEME_HINTS = {
     "ancient songs and fields of the Zhou world, reeds by a riverbank, millet and mulberry leaves, bronze ritual vessel, simple court music, old bamboo-slip anthology, tender folk-song atmosphere, restrained jade green, warm earth, pale gold, and ink-wash texture",
   "tangshi-sanbai":
     "Tang dynasty poetry anthology, moonlit pavilion, distant frontier mountains, river boat, plum blossom and wine cup, scholar's desk with brush and folded paper, luminous regulated-verse elegance, mineral blue, ink black, moon silver, and restrained cinnabar",
+  "platform-sutra":
+    "Chan Buddhist scripture atmosphere, quiet monastery hall, lotus pond at dawn, empty meditation seat, old sutra paper, incense smoke, warm gold and ink-black restraint, contemplative Southern school Zen feeling",
+  "vimalakirti-sutra":
+    "Mahayana Buddhist scripture atmosphere, refined lay sage's room, lotus light, celestial canopy abstraction, old Sanskrit and Chinese sutra-paper texture without readable letters, luminous compassion and nonduality, mineral blue, gold, and dark ink",
   "red-rising-1":
     "Mars mine tunnels, red dust, rising rebellion, distant domed city, cinematic science-fiction atmosphere, austere red and black palette",
   "red-rising-2":
