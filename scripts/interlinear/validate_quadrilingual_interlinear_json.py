@@ -12,6 +12,7 @@ from typing import Any
 
 SPACE_RE = re.compile(r"\s+")
 SOURCE_NOTE_MARK_RE = re.compile(r"(?<=[。！？!?；;：:])\d{1,3}(?=$|[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff])")
+BRACKETED_SOURCE_NOTE_MARK_RE = re.compile(r"^\s*[\[［【〈《(（]?\s*[一二三四五六七八九十百千万〇零０-９0-9]{1,8}\s*[\]］】〉》)）]?\s*$")
 HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
 KANA_RE = re.compile(r"[\u3040-\u30ff]")
@@ -47,6 +48,8 @@ def token_text(tokens: Any) -> str:
 
 
 def source_has_content(text: str) -> bool:
+    if BRACKETED_SOURCE_NOTE_MARK_RE.fullmatch(str(text or "")):
+        return False
     return bool(HAN_RE.search(source_compare_text(text)))
 
 
