@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "book_id": "vimalakirti-sutra",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "維摩詰所說經",
+  "book_title_zh": "维摩诘所说经",
+  "book_title_ja": "維摩経",
+  "book_title_en": "Vimalakirti Nirdesa Sutra",
+  "author": "鳩摩羅什 譯",
+  "author_reading_zh": "jiū mó luó shí yì",
+  "author_reading_ja": "くまらじゅう やく",
+  "book_description": "維摩詰所說經 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/vimalakirti-sutra/zh/wikisource",
+    "source_epub": "sources/vimalakirti-sutra/zh/source-epub/维摩诘所说经.epub",
+    "english_translation": "sources/vimalakirti-sutra/en/english-translation/VIMALAKIRTI NIRDESA SUTRA.pdf",
+    "english_wikisource_missing_manifest": "sources/vimalakirti-sutra/en/wikisource",
+    "japanese_wikisource_missing_manifest": "sources/vimalakirti-sutra/jp/wikisource",
+    "wenyan_markdown": "books/vimalakirti-sutra/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/vimalakirti-sutra/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/vimalakirti-sutra/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/vimalakirti-sutra/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/vimalakirti-sutra/work/quadrilingual/preview/vimalakirti-sutra.partial.json",
+  "build_root": "build/vimalakirti-sutra/wenyan-main-quadrilingual",
+  "prepared_at": "2026-07-01T17:42:40.098577+00:00"
+}

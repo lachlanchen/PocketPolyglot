@@ -1165,6 +1165,106 @@
         }
       ],
       "next_step": "Use Chinese Wikisource poem pages as the spine; use English and Chinese PDFs as references; generate modern Japanese."
+    },
+    {
+      "book_id": "platform-sutra",
+      "status": "prepared_sources_only",
+      "priority": "buddhist_classics_queue",
+      "book_title_wenyan": "六祖大師法寶壇經",
+      "book_title_zh": "六祖坛经",
+      "book_title_ja": "六祖壇経",
+      "book_title_en": "The Platform Sutra of the Sixth Patriarch",
+      "author": "惠能",
+      "author_reading_zh": "huì néng",
+      "author_reading_ja": "えのう",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/platform-sutra/zh/wikisource",
+          "quality": "Chinese Wikisource mirror of 六祖大師法寶壇經; single root-page source spine"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "chinese_edition",
+          "path": "sources/platform-sutra/zh/chinese-edition/六祖大師法寶壇經.pdf",
+          "quality": "downloaded Chinese reference PDF"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_translation",
+          "path": "sources/platform-sutra/en/english-translation/The Platform Sutra of the Sixth Patriarch.pdf",
+          "quality": "downloaded English translation/reference PDF"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_wikisource_missing_manifest",
+          "path": "sources/platform-sutra/en/wikisource",
+          "quality": "Wikisource manifest records missing English root; reference only"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_wikisource_missing_manifest",
+          "path": "sources/platform-sutra/jp/wikisource",
+          "quality": "Wikisource manifest records missing Japanese root; generate modern Japanese from wenyan, modern Chinese, and English references"
+        }
+      ],
+      "next_step": "Use Chinese Wikisource as the wenyan spine. Use local Chinese and English PDFs as references; generate clear modern Japanese and modern Chinese overlays where no aligned source exists."
+    },
+    {
+      "book_id": "vimalakirti-sutra",
+      "status": "prepared_sources_only",
+      "priority": "buddhist_classics_queue",
+      "book_title_wenyan": "維摩詰所說經",
+      "book_title_zh": "维摩诘所说经",
+      "book_title_ja": "維摩経",
+      "book_title_en": "Vimalakirti Nirdesa Sutra",
+      "author": "鳩摩羅什 譯",
+      "author_reading_zh": "jiū mó luó shí yì",
+      "author_reading_ja": "くまらじゅう やく",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/vimalakirti-sutra/zh/wikisource",
+          "quality": "Chinese Wikisource mirror with chapter subpages for 維摩詰所說經"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "source_epub",
+          "path": "sources/vimalakirti-sutra/zh/source-epub/维摩诘所说经.epub",
+          "quality": "downloaded Chinese EPUB reference"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_translation",
+          "path": "sources/vimalakirti-sutra/en/english-translation/VIMALAKIRTI NIRDESA SUTRA.pdf",
+          "quality": "downloaded English translation/reference PDF"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_wikisource_missing_manifest",
+          "path": "sources/vimalakirti-sutra/en/wikisource",
+          "quality": "Wikisource manifest records missing English root; reference only"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_wikisource_missing_manifest",
+          "path": "sources/vimalakirti-sutra/jp/wikisource",
+          "quality": "Wikisource manifest records missing Japanese root; generate modern Japanese from wenyan, Chinese, and English references"
+        }
+      ],
+      "next_step": "Use Chinese Wikisource chapter subpages as the wenyan spine. Use the Chinese EPUB and English PDF as references; generate modern Japanese and modern Chinese overlays."
     }
   ]
 }

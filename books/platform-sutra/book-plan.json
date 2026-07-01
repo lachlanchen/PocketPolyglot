@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "book_id": "platform-sutra",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "六祖大師法寶壇經",
+  "book_title_zh": "六祖坛经",
+  "book_title_ja": "六祖壇経",
+  "book_title_en": "The Platform Sutra of the Sixth Patriarch",
+  "author": "惠能",
+  "author_reading_zh": "huì néng",
+  "author_reading_ja": "えのう",
+  "book_description": "六祖大師法寶壇經 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/platform-sutra/zh/wikisource",
+    "chinese_edition": "sources/platform-sutra/zh/chinese-edition/六祖大師法寶壇經.pdf",
+    "english_translation": "sources/platform-sutra/en/english-translation/The Platform Sutra of the Sixth Patriarch.pdf",
+    "english_wikisource_missing_manifest": "sources/platform-sutra/en/wikisource",
+    "japanese_wikisource_missing_manifest": "sources/platform-sutra/jp/wikisource",
+    "wenyan_markdown": "books/platform-sutra/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/platform-sutra/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/platform-sutra/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/platform-sutra/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/platform-sutra/work/quadrilingual/preview/platform-sutra.partial.json",
+  "build_root": "build/platform-sutra/wenyan-main-quadrilingual",
+  "prepared_at": "2026-07-01T17:42:40.074636+00:00"
+}

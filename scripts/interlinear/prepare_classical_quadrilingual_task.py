@@ -84,7 +84,7 @@ SHANHAIJING_CANONICAL_ORDER = {
     "海內經": 18,
 }
 
-ANTHOLOGY_STANDALONE_BOOKS = {"chuci", "foguoji", "tangshi-sanbai"}
+ANTHOLOGY_STANDALONE_BOOKS = {"chuci", "foguoji", "platform-sutra", "tangshi-sanbai"}
 CHUCI_SKIP_TITLES = {"楚辭", "楚辭章句", "楚辭補注", "屈原賦注"}
 CHUCI_CANONICAL_ORDER = {
     "離騷": 1,
@@ -442,7 +442,11 @@ def source_sequence_key(path_name: str) -> int:
 
 def should_skip_source_item(book_id: str, title: str) -> bool:
     tail = title_tail(title)
-    return book_id == "zuozhuan" and tail == "全覽"
+    if book_id == "zuozhuan" and tail == "全覽":
+        return True
+    if book_id == "vimalakirti-sutra" and tail in {"1", "2", "3"}:
+        return True
+    return False
 
 
 def normalize_chapter_title(book_id: str, title: str) -> str:
@@ -530,6 +534,8 @@ def meaningful_chapter_title(book_id: str, title: str, header_text: str) -> str:
             return header
         if base and header != base:
             return f"{base} {header}"
+    if book_id == "vimalakirti-sutra" and header:
+        return header
     return base
 
 
@@ -839,7 +845,10 @@ def manifest_items(book: dict[str, Any]) -> list[dict[str, Any]]:
     source = next(layer for layer in book["source_layers"] if layer["layer"] == "wenyan" and layer["role"] == "classical_source")
     source_dir = ROOT / source["path"]
     manifest_path = source_dir / "manifest.json"
-    items = [item for item in load_json(manifest_path) if item.get("status") == "ok"]
+    manifest_data = load_json(manifest_path)
+    if isinstance(manifest_data, dict):
+        manifest_data = manifest_data.get("pages", [])
+    items = [item for item in manifest_data if item.get("status") == "ok"]
     root_order = root_wiki_link_order(book["book_id"], source_dir, items, book["book_title_wenyan"])
     prepared = []
     seen_titles: set[str] = set()
