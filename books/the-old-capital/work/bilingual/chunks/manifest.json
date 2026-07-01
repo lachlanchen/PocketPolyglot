@@ -5,7 +5,7 @@
   "paragraph_count": 3248,
   "chunk_mode": "paragraph",
   "max_chars": null,
-  "chunk_count": 3248,
+  "chunk_count": 3246,
   "chunks_jsonl": "books/the-old-capital/work/bilingual/chunks/chunks.jsonl",
   "book_title_zh": "古都",
   "book_title_zh_reading": "gǔ dū",
@@ -55,20 +55,6 @@
       "story_id": "版权信息-intro",
       "paragraph_ids": [
         "the-old-capital-p00006"
-      ]
-    },
-    {
-      "chunk_id": "the-old-capital-chunk-0007",
-      "story_id": "版权信息-intro",
-      "paragraph_ids": [
-        "the-old-capital-p00007"
-      ]
-    },
-    {
-      "chunk_id": "the-old-capital-chunk-0008",
-      "story_id": "版权信息-intro",
-      "paragraph_ids": [
-        "the-old-capital-p00008"
       ]
     },
     {
@@ -22749,6 +22735,32 @@
       "story_id": "本因坊秀哉名人告别赛-intro",
       "paragraph_ids": [
         "the-old-capital-p03248"
+      ]
+    }
+  ],
+  "pruned_boilerplate_chunks": [
+    {
+      "chunk_id": "the-old-capital-chunk-0007",
+      "pruned_at": "2026-07-01T09:56:21.322433+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "publisher_license_zh",
+          "field": "paragraphs[0].text",
+          "text": "本书由新经典文化股份有限公司提供授权"
+        }
+      ]
+    },
+    {
+      "chunk_id": "the-old-capital-chunk-0008",
+      "pruned_at": "2026-07-01T09:56:21.322433+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "publisher_license_zh",
+          "field": "paragraphs[0].text",
+          "text": "版权所有·侵权必究"
+        }
       ]
     }
   ]

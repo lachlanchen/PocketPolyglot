@@ -10,7 +10,7 @@
   "author": "屈原等",
   "author_reading_zh": "qū yuán děng",
   "author_reading_ja": "くつ げん ほか",
-  "chunk_count": 178,
+  "chunk_count": 162,
   "chapter_count": 17,
   "chunks": [
     {
@@ -35,10 +35,6 @@
     },
     {
       "chunk_id": "chuci-chunk-0006",
-      "chapter_number": 1
-    },
-    {
-      "chunk_id": "chuci-chunk-0007",
       "chapter_number": 1
     },
     {
@@ -86,10 +82,6 @@
       "chapter_number": 2
     },
     {
-      "chunk_id": "chuci-chunk-0019",
-      "chapter_number": 2
-    },
-    {
       "chunk_id": "chuci-chunk-0020",
       "chapter_number": 3
     },
@@ -119,10 +111,6 @@
     },
     {
       "chunk_id": "chuci-chunk-0027",
-      "chapter_number": 3
-    },
-    {
-      "chunk_id": "chuci-chunk-0028",
       "chapter_number": 3
     },
     {
@@ -270,10 +258,6 @@
       "chapter_number": 4
     },
     {
-      "chunk_id": "chuci-chunk-0065",
-      "chapter_number": 4
-    },
-    {
       "chunk_id": "chuci-chunk-0066",
       "chapter_number": 5
     },
@@ -310,23 +294,11 @@
       "chapter_number": 5
     },
     {
-      "chunk_id": "chuci-chunk-0075",
-      "chapter_number": 5
-    },
-    {
       "chunk_id": "chuci-chunk-0076",
       "chapter_number": 6
     },
     {
-      "chunk_id": "chuci-chunk-0077",
-      "chapter_number": 6
-    },
-    {
       "chunk_id": "chuci-chunk-0078",
-      "chapter_number": 7
-    },
-    {
-      "chunk_id": "chuci-chunk-0079",
       "chapter_number": 7
     },
     {
@@ -374,10 +346,6 @@
       "chapter_number": 8
     },
     {
-      "chunk_id": "chuci-chunk-0091",
-      "chapter_number": 8
-    },
-    {
       "chunk_id": "chuci-chunk-0092",
       "chapter_number": 9
     },
@@ -395,10 +363,6 @@
     },
     {
       "chunk_id": "chuci-chunk-0096",
-      "chapter_number": 9
-    },
-    {
-      "chunk_id": "chuci-chunk-0097",
       "chapter_number": 9
     },
     {
@@ -422,10 +386,6 @@
       "chapter_number": 10
     },
     {
-      "chunk_id": "chuci-chunk-0103",
-      "chapter_number": 10
-    },
-    {
       "chunk_id": "chuci-chunk-0104",
       "chapter_number": 11
     },
@@ -435,10 +395,6 @@
     },
     {
       "chunk_id": "chuci-chunk-0106",
-      "chapter_number": 12
-    },
-    {
-      "chunk_id": "chuci-chunk-0107",
       "chapter_number": 12
     },
     {
@@ -502,10 +458,6 @@
       "chapter_number": 13
     },
     {
-      "chunk_id": "chuci-chunk-0123",
-      "chapter_number": 13
-    },
-    {
       "chunk_id": "chuci-chunk-0124",
       "chapter_number": 14
     },
@@ -519,10 +471,6 @@
     },
     {
       "chunk_id": "chuci-chunk-0127",
-      "chapter_number": 14
-    },
-    {
-      "chunk_id": "chuci-chunk-0128",
       "chapter_number": 14
     },
     {
@@ -563,10 +511,6 @@
     },
     {
       "chunk_id": "chuci-chunk-0138",
-      "chapter_number": 15
-    },
-    {
-      "chunk_id": "chuci-chunk-0139",
       "chapter_number": 15
     },
     {
@@ -678,10 +622,6 @@
       "chapter_number": 16
     },
     {
-      "chunk_id": "chuci-chunk-0167",
-      "chapter_number": 16
-    },
-    {
       "chunk_id": "chuci-chunk-0168",
       "chapter_number": 17
     },
@@ -720,10 +660,6 @@
     {
       "chunk_id": "chuci-chunk-0177",
       "chapter_number": 17
-    },
-    {
-      "chunk_id": "chuci-chunk-0178",
-      "chapter_number": 17
     }
   ],
   "source_paths": {
@@ -739,5 +675,199 @@
   "source_sha256": {
     "books/chuci/markdown/wenyan.md": "2dcce5e2ad14cb6c0f8f51348eb17c69eec37c02cbdd440c2f65dc38ea5c5a05"
   },
-  "prepared_at": "2026-06-30T09:14:26.305269+00:00"
+  "prepared_at": "2026-06-30T09:14:26.305269+00:00",
+  "pruned_boilerplate_chunks": [
+    {
+      "chunk_id": "chuci-chunk-0007",
+      "pruned_at": "2026-07-01T09:56:17.019133+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].wenyan",
+          "text": "此作品在全世界都属于公有领域，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
+      ]
+    },
+    {
+      "chunk_id": "chuci-chunk-0019",
+      "pruned_at": "2026-07-01T09:56:17.019133+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].wenyan",
+          "text": "此作品在全世界都属于公有领域，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
+      ]
+    },
+    {
+      "chunk_id": "chuci-chunk-0028",
+      "pruned_at": "2026-07-01T09:56:17.019133+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].wenyan",
+          "text": "此作品在全世界都属于公有领域，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
+      ]
+    },
+    {
+      "chunk_id": "chuci-chunk-0065",
+      "pruned_at": "2026-07-01T09:56:17.019133+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].wenyan",
+          "text": "此作品在全世界都属于公有领域，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
+      ]
+    },
+    {
+      "chunk_id": "chuci-chunk-0075",
+      "pruned_at": "2026-07-01T09:56:17.019133+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].wenyan",
+          "text": "此作品在全世界都属于公有领域，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
+      ]
+    },
+    {
+      "chunk_id": "chuci-chunk-0077",
+      "pruned_at": "2026-07-01T09:56:17.019133+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].wenyan",
+          "text": "此作品在全世界都属于公有领域，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
+      ]
+    },
+    {
+      "chunk_id": "chuci-chunk-0079",
+      "pruned_at": "2026-07-01T09:56:17.019133+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].wenyan",
+          "text": "此作品在全世界都属于公有领域，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
+      ]
+    },
+    {
+      "chunk_id": "chuci-chunk-0091",
+      "pruned_at": "2026-07-01T09:56:17.019133+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].wenyan",
+          "text": "此作品在全世界都属于公有领域，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
+      ]
+    },
+    {
+      "chunk_id": "chuci-chunk-0097",
+      "pruned_at": "2026-07-01T09:56:17.019133+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].wenyan",
+          "text": "此先秦作品在全世界都属于公有领域，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
+      ]
+    },
+    {
+      "chunk_id": "chuci-chunk-0103",
+      "pruned_at": "2026-07-01T09:56:17.019133+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].wenyan",
+          "text": "此作品在全世界都属于公有领域，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
+      ]
+    },
+    {
+      "chunk_id": "chuci-chunk-0107",
+      "pruned_at": "2026-07-01T09:56:17.019133+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].wenyan",
+          "text": "此西漢作品在全世界都属于公有领域，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
+      ]
+    },
+    {
+      "chunk_id": "chuci-chunk-0123",
+      "pruned_at": "2026-07-01T09:56:17.019133+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].wenyan",
+          "text": "此西漢作品在全世界都属于公有领域，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
+      ]
+    },
+    {
+      "chunk_id": "chuci-chunk-0128",
+      "pruned_at": "2026-07-01T09:56:17.019133+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].wenyan",
+          "text": "此西漢作品在全世界都属于公有领域，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
+      ]
+    },
+    {
+      "chunk_id": "chuci-chunk-0139",
+      "pruned_at": "2026-07-01T09:56:17.019133+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].wenyan",
+          "text": "此西漢作品在全世界都属于公有领域，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
+      ]
+    },
+    {
+      "chunk_id": "chuci-chunk-0167",
+      "pruned_at": "2026-07-01T09:56:17.019133+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].wenyan",
+          "text": "此西漢作品在全世界都属于公有领域，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
+      ]
+    },
+    {
+      "chunk_id": "chuci-chunk-0178",
+      "pruned_at": "2026-07-01T09:56:17.019133+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].wenyan",
+          "text": "此東漢作品在全世界都属于公有领域，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
+      ]
+    }
+  ]
 }

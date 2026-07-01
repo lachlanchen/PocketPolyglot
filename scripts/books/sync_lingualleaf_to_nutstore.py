@@ -9,7 +9,7 @@ from collections import Counter
 from pathlib import Path
 
 
-DEFAULT_SOURCE = Path("/home/lachlan/ProjectsLFS/LinguaLeaf/docs/pocketpolyglot/books")
+DEFAULT_SOURCE = Path("/home/lachlan/ProjectsLFS/ZhJpBook/artifacts/lingualleaf/books")
 DEFAULT_PROJECT = Path("/home/lachlan/Nutstore Files/Projects/LinguaLeaf")
 DEFAULT_SHARE = Path("/home/lachlan/Nutstore Files/Share/LinguaLeaf")
 
@@ -76,11 +76,11 @@ def copy_file(src: Path, dst: Path) -> None:
     shutil.copy2(src, dst)
 
 
-def write_manifest(path: Path, copied: list[tuple[Path, Path]]) -> None:
+def write_manifest(path: Path, copied: list[tuple[Path, Path]], source_root: Path) -> None:
     lines = [
         "# LinguaLeaf Nutstore Sync",
         "",
-        "Generated from `/home/lachlan/ProjectsLFS/LinguaLeaf/docs/pocketpolyglot/books`.",
+        f"Generated from `{source_root}`.",
         "",
         f"PDF count: {len(copied)}",
         "",
@@ -122,8 +122,8 @@ def main() -> int:
         project_copied.append((src, project_dst))
         share_copied.append((src, share_dst))
 
-    write_manifest(args.project / "final-pdfs" / "MANIFEST.md", project_copied)
-    write_manifest(args.share / "MANIFEST.md", share_copied)
+    write_manifest(args.project / "final-pdfs" / "MANIFEST.md", project_copied, args.source)
+    write_manifest(args.share / "MANIFEST.md", share_copied, args.source)
 
     print(f"copied_project={len(project_copied)}")
     print(f"copied_share={len(share_copied)}")

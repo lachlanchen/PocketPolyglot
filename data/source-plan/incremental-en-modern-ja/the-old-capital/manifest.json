@@ -9,7 +9,7 @@
   "dependency": "base_chunks_exist",
   "notes": "",
   "chunk_id_source": "books_manifest",
-  "chunk_count": 3248,
+  "chunk_count": 3246,
   "actions": [
     {
       "field": "en",
@@ -74,5 +74,81 @@
       "require_ruby_for_kanji_tokens_in_ja_modern": true
     }
   },
-  "generated_at": "2026-06-18T02:47:43.799953+00:00"
+  "generated_at": "2026-06-18T02:47:43.799953+00:00",
+  "pruned_boilerplate_tasks": [
+    {
+      "task_id": "the-old-capital-chunk-0007",
+      "pruned_at": "2026-07-01T09:56:51.146396+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "publisher_license_zh",
+          "field": "paragraphs[0].source_text",
+          "text": "本书由新经典文化股份有限公司提供授权"
+        },
+        {
+          "kind": "publisher_license_zh",
+          "field": "paragraphs[0].units[0].source_text",
+          "text": "本书由新经典文化股份有限公司提供授权"
+        },
+        {
+          "kind": "publisher_license_zh",
+          "field": "paragraphs[0].source_text",
+          "text": "本书由新经典文化股份有限公司提供授权"
+        },
+        {
+          "kind": "publisher_license_zh",
+          "field": "paragraphs[0].units[0].source_text",
+          "text": "本书由新经典文化股份有限公司提供授权"
+        },
+        {
+          "kind": "publisher_license_zh",
+          "field": "paragraphs[0].source_text",
+          "text": "本书由新经典文化股份有限公司提供授权"
+        },
+        {
+          "kind": "publisher_license_zh",
+          "field": "paragraphs[0].units[0].source_text",
+          "text": "本书由新经典文化股份有限公司提供授权"
+        }
+      ]
+    },
+    {
+      "task_id": "the-old-capital-chunk-0008",
+      "pruned_at": "2026-07-01T09:56:51.146396+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "publisher_license_zh",
+          "field": "paragraphs[0].source_text",
+          "text": "版权所有·侵权必究"
+        },
+        {
+          "kind": "publisher_license_zh",
+          "field": "paragraphs[0].units[0].source_text",
+          "text": "版权所有·侵权必究"
+        },
+        {
+          "kind": "publisher_license_zh",
+          "field": "paragraphs[0].source_text",
+          "text": "版权所有·侵权必究"
+        },
+        {
+          "kind": "publisher_license_zh",
+          "field": "paragraphs[0].units[0].source_text",
+          "text": "版权所有·侵权必究"
+        },
+        {
+          "kind": "publisher_license_zh",
+          "field": "paragraphs[0].source_text",
+          "text": "版权所有·侵权必究"
+        },
+        {
+          "kind": "publisher_license_zh",
+          "field": "paragraphs[0].units[0].source_text",
+          "text": "版权所有·侵权必究"
+        }
+      ]
+    }
+  ]
 }

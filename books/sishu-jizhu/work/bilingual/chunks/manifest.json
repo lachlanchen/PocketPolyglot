@@ -5,7 +5,7 @@
   "paragraph_count": 925,
   "chunk_mode": "paragraph",
   "max_chars": null,
-  "chunk_count": 925,
+  "chunk_count": 923,
   "chunks_jsonl": "books/sishu-jizhu/work/bilingual/chunks/chunks.jsonl",
   "book_title_zh": "四書章句集註",
   "book_title_zh_reading": "sì shū zhāng jù jí zhù",
@@ -237,13 +237,6 @@
       "story_id": "四書章句集註-大學章句-intro",
       "paragraph_ids": [
         "sishu-jizhu-p00032"
-      ]
-    },
-    {
-      "chunk_id": "sishu-jizhu-chunk-0033",
-      "story_id": "四書章句集註-大學章句-intro",
-      "paragraph_ids": [
-        "sishu-jizhu-p00033"
       ]
     },
     {
@@ -524,13 +517,6 @@
       "story_id": "四書章句集註-中庸章句-intro",
       "paragraph_ids": [
         "sishu-jizhu-p00073"
-      ]
-    },
-    {
-      "chunk_id": "sishu-jizhu-chunk-0074",
-      "story_id": "四書章句集註-中庸章句-intro",
-      "paragraph_ids": [
-        "sishu-jizhu-p00074"
       ]
     },
     {
@@ -6488,6 +6474,32 @@
       "story_id": "四書章句集註-四書章句集註定本辨-intro",
       "paragraph_ids": [
         "sishu-jizhu-p00925"
+      ]
+    }
+  ],
+  "pruned_boilerplate_chunks": [
+    {
+      "chunk_id": "sishu-jizhu-chunk-0033",
+      "pruned_at": "2026-07-01T09:56:20.639128+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].text",
+          "text": "此作品在全世界都属于 公有领域 ，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
+      ]
+    },
+    {
+      "chunk_id": "sishu-jizhu-chunk-0074",
+      "pruned_at": "2026-07-01T09:56:20.639128+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].text",
+          "text": "此作品在全世界都属于 公有领域 ，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
       ]
     }
   ]

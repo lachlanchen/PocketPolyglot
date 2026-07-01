@@ -171,9 +171,11 @@ python scripts/interlinear/json_to_trilingual_pair_tex.py "$assembled_json" \
 
 rm -f "$build_dir/book.aux" "$build_dir/book.out" "$build_dir/book.toc" "$build_dir/book.log"
 xelatex -interaction=nonstopmode -halt-on-error -jobname=book -output-directory="$build_dir" \
-  "\\def\\TriPairSource{$build_dir/source.tex}\\input{tex/interlinear-trilingual-pair/book.tex}"
+  "\\def\\TriPairSource{$build_dir/source.tex}\\input{tex/interlinear-trilingual-pair/book.tex}" \
+  > "$build_dir/xelatex-pass1.log" 2>&1
 xelatex -interaction=nonstopmode -halt-on-error -jobname=book -output-directory="$build_dir" \
-  "\\def\\TriPairSource{$build_dir/source.tex}\\input{tex/interlinear-trilingual-pair/book.tex}"
+  "\\def\\TriPairSource{$build_dir/source.tex}\\input{tex/interlinear-trilingual-pair/book.tex}" \
+  > "$build_dir/xelatex-pass2.log" 2>&1
 cp "$build_dir/book.pdf" "$output_pdf"
 rm -f "$build_dir/book.pdf"
 cp "$build_dir/source.tex" "$build_dir/$base_title.tex"

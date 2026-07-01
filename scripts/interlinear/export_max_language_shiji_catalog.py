@@ -246,6 +246,24 @@ def bilingual_jp_overrides() -> str:
 def candidate_for(book_dir: Path, rel_edition: str, family: str, style: str, macro: str, overrides: str) -> list[Edition]:
     out: list[Edition] = []
     for mode in ("color", "blackwhite"):
+        large_font_pdf = first_pdf(book_dir / rel_edition / "large-font" / mode)
+        if large_font_pdf is not None:
+            out.append(
+                Edition(
+                    book_id=book_dir.name,
+                    family=family,
+                    edition=rel_edition,
+                    mode=mode,
+                    source_tex=large_font_pdf,
+                    style_tex="",
+                    source_macro="",
+                    overrides="",
+                    original_pdf=large_font_pdf,
+                    precompiled_pdf=large_font_pdf,
+                    output_name=large_font_pdf.name,
+                )
+            )
+            continue
         source = book_dir / rel_edition / mode / "source.tex"
         if not source.exists():
             continue
@@ -350,16 +368,18 @@ def discover_precompiled_quadrilingual_editions() -> list[Edition]:
                 BUILD
                 / "sanguozhi-pei-zhu"
                 / "wenyan-main-quadrilingual"
+                / "large-font"
                 / "color"
-                / "三國志裴松之注（英文・現代日本語・現代中文注）.pdf",
+                / "三國志裴松之注（英文・現代日本語・現代中文注）・大字版.pdf",
                 "三國志裴松之注（英文・現代日本語・現代中文注）・最大語種・大字版.pdf",
             ),
             "blackwhite": (
                 BUILD
                 / "sanguozhi-pei-zhu"
                 / "wenyan-main-quadrilingual"
+                / "large-font"
                 / "blackwhite"
-                / "三國志裴松之注（英文・現代日本語・現代中文注・黑白）.pdf",
+                / "三國志裴松之注（英文・現代日本語・現代中文注・黑白）・大字版.pdf",
                 "三國志裴松之注（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf",
             ),
         }
@@ -557,6 +577,7 @@ def compress_pdf(source: Path, public_pdf: Path, local_pdf: Path) -> tuple[Path,
         public_pdf.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(local_pdf, public_pdf)
         return public_pdf, status
+    public_pdf.unlink(missing_ok=True)
     return local_pdf, status + "-local-only-oversize"
 
 
@@ -763,7 +784,7 @@ def main() -> int:
             local_pdf = LOCAL_EXPORT_ROOT / edition.family / edition.book_id / edition.edition / edition.mode / export_name
             public_pdf = PUBLIC_EXPORT_ROOT / edition.family / edition.book_id / edition.edition / edition.mode / export_name
             if args.no_compress:
-                exported = build_pdf
+                exported = public_pdf if public_pdf.exists() else local_pdf if local_pdf.exists() else build_pdf
                 compress_status = "not-compressed"
             elif local_pdf.exists() and not args.force_compress:
                 exported = public_pdf if public_pdf.exists() else local_pdf

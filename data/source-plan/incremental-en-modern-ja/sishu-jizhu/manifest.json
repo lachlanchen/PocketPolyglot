@@ -9,7 +9,7 @@
   "dependency": "run_only_if_explicitly_requested",
   "notes": "Legacy Sishu pass is preserved as read-only input and is not part of the active Sishu backfill. Use the AgInTi Sishu version unless the user explicitly asks to spend quota on this legacy variant.",
   "chunk_id_source": "books_manifest",
-  "chunk_count": 925,
+  "chunk_count": 923,
   "actions": [
     {
       "field": "zh_modern",
@@ -126,5 +126,41 @@
       "require_ruby_for_kanji_tokens_in_ja_modern": true
     }
   },
-  "generated_at": "2026-06-18T02:47:46.855233+00:00"
+  "generated_at": "2026-06-18T02:47:46.855233+00:00",
+  "pruned_boilerplate_tasks": [
+    {
+      "task_id": "sishu-jizhu-chunk-0033",
+      "pruned_at": "2026-07-01T09:56:45.363487+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].source_text",
+          "text": "此作品在全世界都属于 公有领域 ，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        },
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].units[0].source_text",
+          "text": "此作品在全世界都属于 公有领域 ，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
+      ]
+    },
+    {
+      "task_id": "sishu-jizhu-chunk-0074",
+      "pruned_at": "2026-07-01T09:56:45.363487+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].source_text",
+          "text": "此作品在全世界都属于 公有领域 ，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        },
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].units[1].source_text",
+          "text": "因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
+      ]
+    }
+  ]
 }

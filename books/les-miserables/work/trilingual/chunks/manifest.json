@@ -25,7 +25,7 @@
     "ja": "c3e544f2d06acaf48454792899c3363661922d3fd58476402ca00208630225d7"
   },
   "source_note": "Victor Hugo, Les Misérables. English Project Gutenberg PDF is the alignment spine; Chinese text PDF is a broad published translation reference; Japanese is generated in natural modern Japanese. This is very long and should run late.",
-  "chunk_count": 1630,
+  "chunk_count": 1622,
   "generated_at": "2026-06-10T13:16:41.968179+00:00",
   "chunks": [
     {
@@ -16075,122 +16075,266 @@
       "paragraph_ids": [
         "les-miserables-s486-p04694"
       ]
-    },
+    }
+  ],
+  "japanese_reference_chapter_count": 375,
+  "japanese_reference_note": "Japanese EPUB source is レ・ミゼラブル 全巻セット and should be used as the main Japanese reference.",
+  "pruned_boilerplate_chunks": [
     {
       "chunk_id": "les-miserables-c1623",
-      "chapter_id": "chapter-487",
-      "chapter_number": 487,
-      "paragraph_ids": [
-        "les-miserables-s487-p04695",
-        "les-miserables-s487-p04696",
-        "les-miserables-s487-p04697",
-        "les-miserables-s487-p04698",
-        "les-miserables-s487-p04699",
-        "les-miserables-s487-p04700",
-        "les-miserables-s487-p04701",
-        "les-miserables-s487-p04702",
-        "les-miserables-s487-p04703"
+      "pruned_at": "2026-07-01T09:56:18.982934+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[1].en",
+          "text": "End of the Project Gutenberg EBook of Les Misérables, by Victor Hugo"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[4].en",
+          "text": "Creating the works from print editions not protected by U.S. copyright law means that no one owns a United States copyright in these works, so the Foundation (and you!) can copy a…"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[6].en",
+          "text": "THE FULL PROJECT GUTENBERG LICENSE PLEASE READ THIS BEFORE YOU DISTRIBUTE OR USE THIS WORK"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[7].en",
+          "text": "To protect the Project Gutenberg-tm mission of promoting the free distribution of electronic works, by using or distributing this work (or any other work associated in any way wit…"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[8].en",
+          "text": "Section 1. General Terms of Use and Redistributing Project Gutenberg-tm electronic works"
+        }
       ]
     },
     {
       "chunk_id": "les-miserables-c1624",
-      "chapter_id": "chapter-487",
-      "chapter_number": 487,
-      "paragraph_ids": [
-        "les-miserables-s487-p04704",
-        "les-miserables-s487-p04705",
-        "les-miserables-s487-p04706",
-        "les-miserables-s487-p04707"
+      "pruned_at": "2026-07-01T09:56:18.982934+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[0].en",
+          "text": "1.A. By reading or using any part of this Project Gutenberg-tm electronic work, you indicate that you have read, understand, agree to and accept all the terms of this license and …"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[1].en",
+          "text": "1.B. \"Project Gutenberg\" is a registered trademark. It may only be used on or associated in any way with an electronic work by people who agree to be bound by the terms of this ag…"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[2].en",
+          "text": "1.C. The Project Gutenberg Literary Archive Foundation (\"the Foundation\" or PGLAF), owns a compilation copyright in the collection of Project Gutenberg-tm electronic works. Nearly…"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[3].en",
+          "text": "claim a right to prevent you from copying, distributing, performing, displaying or creating derivative works based on the work as long as all references to Project Gutenberg are r…"
+        }
       ]
     },
     {
       "chunk_id": "les-miserables-c1625",
-      "chapter_id": "chapter-487",
-      "chapter_number": 487,
-      "paragraph_ids": [
-        "les-miserables-s487-p04708",
-        "les-miserables-s487-p04709",
-        "les-miserables-s487-p04710",
-        "les-miserables-s487-p04711",
-        "les-miserables-s487-p04712",
-        "les-miserables-s487-p04713"
+      "pruned_at": "2026-07-01T09:56:18.982934+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[0].en",
+          "text": "1.D. The copyright laws of the place where you are located also govern what you can do with this work. Copyright laws in most countries are in a constant state of change. If you a…"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[1].en",
+          "text": "1.E. Unless you have removed all references to Project Gutenberg:"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[2].en",
+          "text": "1.E.1. The following sentence, with active links to, or other immediate access to, the full Project Gutenberg-tm License must appear prominently whenever any copy of a Project Gut…"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[3].en",
+          "text": "most other parts of the world at no cost and with almost no restrictions whatsoever. You may copy it, give it away or re-use it under the terms of the Project Gutenberg License in…"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[4].en",
+          "text": "1.E.2. If an individual Project Gutenberg-tm electronic work is derived from texts not protected by U.S. copyright law (does not contain a notice indicating that it is posted with…"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[5].en",
+          "text": "1.E.3. If an individual Project Gutenberg-tm electronic work is posted with the permission of the copyright holder, your use and distribution must comply with both paragraphs 1.E.…"
+        }
       ]
     },
     {
       "chunk_id": "les-miserables-c1626",
-      "chapter_id": "chapter-487",
-      "chapter_number": 487,
-      "paragraph_ids": [
-        "les-miserables-s487-p04714",
-        "les-miserables-s487-p04715",
-        "les-miserables-s487-p04716",
-        "les-miserables-s487-p04717",
-        "les-miserables-s487-p04718",
-        "les-miserables-s487-p04719",
-        "les-miserables-s487-p04720"
+      "pruned_at": "2026-07-01T09:56:18.982934+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[0].en",
+          "text": "1.E.4. Do not unlink or detach or remove the full Project Gutenberg-tm License terms from this work, or any files containing a part of this work or any other work associated with …"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[2].en",
+          "text": "active links or immediate access to the full terms of the Project Gutenberg-tm License."
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[3].en",
+          "text": "1.E.6. You may convert to and distribute this work in any binary, compressed, marked up, nonproprietary or proprietary form, including any word processing or hypertext form. Howev…"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[4].en",
+          "text": "1.E.7. Do not charge a fee for access to, viewing, displaying, performing, copying or distributing any Project Gutenberg-tm works unless you comply with paragraph 1.E.8 or 1.E.9."
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[5].en",
+          "text": "1.E.8. You may charge a reasonable fee for copies of or providing access to or distributing Project Gutenberg-tm electronic works provided that"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[6].en",
+          "text": "* You pay a royalty fee of 20% of the gross profits you derive from the use of Project Gutenberg-tm works calculated using the method you already use to calculate your applicable …"
+        }
       ]
     },
     {
       "chunk_id": "les-miserables-c1627",
-      "chapter_id": "chapter-487",
-      "chapter_number": 487,
-      "paragraph_ids": [
-        "les-miserables-s487-p04721",
-        "les-miserables-s487-p04722",
-        "les-miserables-s487-p04723",
-        "les-miserables-s487-p04724",
-        "les-miserables-s487-p04725",
-        "les-miserables-s487-p04726",
-        "les-miserables-s487-p04727"
+      "pruned_at": "2026-07-01T09:56:18.982934+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[0].en",
+          "text": "* You provide a full refund of any money paid by a user who notifies you in writing (or by e-mail) within 30 days of receipt that s/he does not agree to the terms of the full Proj…"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[2].en",
+          "text": "* You comply with all other terms of this agreement for free distribution of Project Gutenberg-tm works."
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[3].en",
+          "text": "1.E.9. If you wish to charge a fee or distribute a Project Gutenberg-tm electronic work or group of works on different terms than are set forth in this agreement, you must obtain …"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[4].en",
+          "text": "1.F.1. Project Gutenberg volunteers and employees expend considerable effort to identify, do copyright research on, transcribe and proofread works not protected by U.S. copyright …"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[5].en",
+          "text": "Gutenberg-tm collection. Despite these efforts, Project Gutenberg-tm electronic works, and the medium on which they may be stored, may contain \"Defects,\" such as, but not limited …"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[6].en",
+          "text": "1.F.2. LIMITED WARRANTY, DISCLAIMER OF DAMAGES - Except for the \"Right of Replacement or Refund\" described in paragraph 1.F.3, the Project Gutenberg Literary Archive Foundation, t…"
+        }
       ]
     },
     {
       "chunk_id": "les-miserables-c1628",
-      "chapter_id": "chapter-487",
-      "chapter_number": 487,
-      "paragraph_ids": [
-        "les-miserables-s487-p04728",
-        "les-miserables-s487-p04729",
-        "les-miserables-s487-p04730",
-        "les-miserables-s487-p04731",
-        "les-miserables-s487-p04732",
-        "les-miserables-s487-p04733"
+      "pruned_at": "2026-07-01T09:56:18.982934+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[3].en",
+          "text": "1.F.6. INDEMNITY - You agree to indemnify and hold the Foundation, the trademark owner, any agent or employee of the Foundation, anyone providing copies of Project Gutenberg-tm el…"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[4].en",
+          "text": "Section 2. Information about the Mission of Project Gutenberg-tm"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[5].en",
+          "text": "Project Gutenberg-tm is synonymous with the free distribution of"
+        }
       ]
     },
     {
       "chunk_id": "les-miserables-c1629",
-      "chapter_id": "chapter-487",
-      "chapter_number": 487,
-      "paragraph_ids": [
-        "les-miserables-s487-p04734",
-        "les-miserables-s487-p04735",
-        "les-miserables-s487-p04736",
-        "les-miserables-s487-p04737",
-        "les-miserables-s487-p04738",
-        "les-miserables-s487-p04739",
-        "les-miserables-s487-p04740",
-        "les-miserables-s487-p04741",
-        "les-miserables-s487-p04742"
+      "pruned_at": "2026-07-01T09:56:18.982934+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[1].en",
+          "text": "Volunteers and financial support to provide volunteers with the assistance they need are critical to reaching Project Gutenberg-tm's goals and ensuring that the Project Gutenberg-…"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[2].en",
+          "text": "Section 3. Information about the Project Gutenberg Literary Archive Foundation"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[3].en",
+          "text": "The Project Gutenberg Literary Archive Foundation is a non profit 501(c)(3) educational corporation organized under the laws of the state of Mississippi and granted tax exempt sta…"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[7].en",
+          "text": "Section 4. Information about Donations to the Project Gutenberg Literary Archive Foundation"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[8].en",
+          "text": "Project Gutenberg-tm depends upon and cannot survive without wide spread public support and donations to carry out its mission of increasing the number of public domain and licens…"
+        }
       ]
     },
     {
       "chunk_id": "les-miserables-c1630",
-      "chapter_id": "chapter-487",
-      "chapter_number": 487,
-      "paragraph_ids": [
-        "les-miserables-s487-p04743",
-        "les-miserables-s487-p04744",
-        "les-miserables-s487-p04745",
-        "les-miserables-s487-p04746",
-        "les-miserables-s487-p04747",
-        "les-miserables-s487-p04748",
-        "les-miserables-s487-p04749",
-        "les-miserables-s487-p04750",
-        "les-miserables-s487-p04751",
-        "les-miserables-s487-p04752"
+      "pruned_at": "2026-07-01T09:56:18.982934+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[4].en",
+          "text": "Please check the Project Gutenberg Web pages for current donation methods and addresses. Donations are accepted in a number of other ways including checks, online payments and cre…"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[5].en",
+          "text": "Section 5. General Information About Project Gutenberg-tm electronic works."
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[6].en",
+          "text": "Professor Michael S. Hart was the originator of the Project Gutenberg-tm concept of a library of electronic works that could be freely shared with anyone. For forty years, he prod…"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[7].en",
+          "text": "Project Gutenberg-tm eBooks are often created from several printed editions, all of which are confirmed as not protected by copyright in the U.S. unless a copyright notice is incl…"
+        },
+        {
+          "kind": "project_gutenberg_boilerplate",
+          "field": "paragraphs[9].en",
+          "text": "This Web site includes information about Project Gutenberg-tm, including how to make donations to the Project Gutenberg Literary Archive Foundation, how to help produce our new eB…"
+        }
       ]
     }
-  ],
-  "japanese_reference_chapter_count": 375,
-  "japanese_reference_note": "Japanese EPUB source is レ・ミゼラブル 全巻セット and should be used as the main Japanese reference."
+  ]
 }

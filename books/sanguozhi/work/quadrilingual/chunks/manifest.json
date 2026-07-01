@@ -10,7 +10,7 @@
   "author": "陳壽",
   "author_reading_zh": "chén shòu",
   "author_reading_ja": "ちん じゅ",
-  "chunk_count": 2338,
+  "chunk_count": 2334,
   "chapter_count": 67,
   "chunks": [
     {
@@ -530,10 +530,6 @@
       "chapter_number": 2
     },
     {
-      "chunk_id": "sanguozhi-chunk-0130",
-      "chapter_number": 2
-    },
-    {
       "chunk_id": "sanguozhi-chunk-0131",
       "chapter_number": 3
     },
@@ -691,10 +687,6 @@
     },
     {
       "chunk_id": "sanguozhi-chunk-0170",
-      "chapter_number": 3
-    },
-    {
-      "chunk_id": "sanguozhi-chunk-0171",
       "chapter_number": 3
     },
     {
@@ -1454,10 +1446,6 @@
       "chapter_number": 7
     },
     {
-      "chunk_id": "sanguozhi-chunk-0361",
-      "chapter_number": 7
-    },
-    {
       "chunk_id": "sanguozhi-chunk-0362",
       "chapter_number": 8
     },
@@ -1551,10 +1539,6 @@
     },
     {
       "chunk_id": "sanguozhi-chunk-0385",
-      "chapter_number": 8
-    },
-    {
-      "chunk_id": "sanguozhi-chunk-0386",
       "chapter_number": 8
     },
     {
@@ -9378,5 +9362,55 @@
   "source_sha256": {
     "books/sanguozhi/markdown/wenyan.md": "290e078b595052b34b52d8885b4f890194da60e64fec70fdd56fcac24d4d673a"
   },
-  "prepared_at": "2026-06-25T04:46:06.869410+00:00"
+  "prepared_at": "2026-06-25T04:46:06.869410+00:00",
+  "pruned_boilerplate_chunks": [
+    {
+      "chunk_id": "sanguozhi-chunk-0130",
+      "pruned_at": "2026-07-01T09:56:20.041140+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].wenyan",
+          "text": "此西晉作品在全世界都属于公有领域，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
+      ]
+    },
+    {
+      "chunk_id": "sanguozhi-chunk-0171",
+      "pruned_at": "2026-07-01T09:56:20.041140+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].wenyan",
+          "text": "此西晉作品在全世界都属于公有领域，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
+      ]
+    },
+    {
+      "chunk_id": "sanguozhi-chunk-0361",
+      "pruned_at": "2026-07-01T09:56:20.041140+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].wenyan",
+          "text": "此西晉作品在全世界都属于公有领域，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
+      ]
+    },
+    {
+      "chunk_id": "sanguozhi-chunk-0386",
+      "pruned_at": "2026-07-01T09:56:20.041140+00:00",
+      "reason": "source/license boilerplate detected",
+      "matches": [
+        {
+          "kind": "wikisource_public_domain_zh",
+          "field": "paragraphs[0].wenyan",
+          "text": "此西晉作品在全世界都属于公有领域，因为作者逝世已经超过100年，且作品于1931年1月1日之前出版。"
+        }
+      ]
+    }
+  ]
 }

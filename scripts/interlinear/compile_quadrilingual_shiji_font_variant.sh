@@ -3,13 +3,16 @@ set -euo pipefail
 
 usage() {
   cat <<'USAGE'
-Usage: scripts/interlinear/compile_quadrilingual_shiji_font_variant.sh --book-id <id> [--main-layer wenyan|zh_modern|ja_modern|en] [--color-mode color|blackwhite]
+Usage: scripts/interlinear/compile_quadrilingual_shiji_font_variant.sh --book-id <id> [--main-layer wenyan|zh_modern|ja_modern|en] [--color-mode color|blackwhite] [--skip-base-rebuild]
 
 Builds a separate quadrilingual PDF variant using the larger PocketPolyglot
 font profile originally tuned against the Shiji AgInTi layout. Existing source
 JSON, source.tex, and PDFs are left untouched; this writes only under:
 
   build/<book-id>/<main-layer>-main-quadrilingual/large-font/<color-mode>/
+
+Use --skip-base-rebuild only when the normal build directory already contains a
+fresh source.tex and PDF from the same cleaned manifest.
 USAGE
 }
 
@@ -19,11 +22,13 @@ cd "$root"
 book_id=""
 main_layer="wenyan"
 color_mode="color"
+skip_base_rebuild=0
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --book-id) book_id="$2"; shift 2 ;;
     --main-layer) main_layer="$2"; shift 2 ;;
     --color-mode) color_mode="$2"; shift 2 ;;
+    --skip-base-rebuild) skip_base_rebuild=1; shift ;;
     -h|--help) usage; exit 0 ;;
     *) echo "Unknown argument: $1" >&2; usage; exit 1 ;;
   esac
@@ -44,10 +49,12 @@ esac
 
 base_dir="build/$book_id/${main_layer}-main-quadrilingual/$color_mode"
 base_source="$base_dir/source.tex"
-bash scripts/interlinear/compile_quadrilingual_wenyan_book.sh \
-  --book-id "$book_id" \
-  --main-layer "$main_layer" \
-  --color-mode "$color_mode"
+if [[ "$skip_base_rebuild" != "1" ]]; then
+  bash scripts/interlinear/compile_quadrilingual_wenyan_book.sh \
+    --book-id "$book_id" \
+    --main-layer "$main_layer" \
+    --color-mode "$color_mode"
+fi
 if [[ ! -f "$base_source" ]]; then
   echo "Missing source TeX: $base_source" >&2
   exit 1
