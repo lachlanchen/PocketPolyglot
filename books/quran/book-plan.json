@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "book_id": "quran",
-  "status": "prepared",
-  "launchable": false,
+  "status": "compiled",
+  "launchable": true,
   "task_mode": "arabic_quadrilingual_main",
   "source_language": "ar",
   "book_title_ar": "القرآن الكريم",
@@ -26,13 +26,22 @@
   "chunks_jsonl": "books/quran/work/arabic-quadrilingual/chunks/chunks.jsonl",
   "chunks_manifest": "books/quran/work/arabic-quadrilingual/chunks/manifest.json",
   "raw_chunk_dir": "books/quran/work/arabic-quadrilingual/interlinear/chunks",
-  "assembled_json": "books/quran/work/arabic-quadrilingual/preview/quran.partial.json",
+  "assembled_json": "books/quran/work/arabic-quadrilingual/preview/quran.full.json",
   "build_root": "build/quran",
-  "required_pipeline_work": [
-    "Add arabic_quadrilingual writer/validator or extend generic multilingual writer.",
-    "Add Arabic ruby/token rendering in XeLaTeX with RTL-safe layout.",
-    "Add Arabic grammar-role coloring and validation.",
-    "Compile color and blackwhite large-font PDFs after generated chunks validate."
+  "required_pipeline_work": [],
+  "cover_image": "assets/covers/quran/cover.png",
+  "pipeline_scripts": [
+    "scripts/interlinear/fetch_qurancom_word_data.py",
+    "scripts/interlinear/build_quran_arabic_quadrilingual_json.py",
+    "scripts/interlinear/validate_quran_arabic_quadrilingual_json.py",
+    "scripts/interlinear/json_to_arabic_quadrilingual_tex.py",
+    "scripts/interlinear/compile_quran_arabic_quadrilingual_book.sh"
   ],
+  "compiled_outputs": {
+    "ar": {
+      "color": "build/quran/ar-main-quadrilingual/color/القرآن الكريم（English・日本語・中文注）.pdf",
+      "blackwhite": "build/quran/ar-main-quadrilingual/blackwhite/القرآن الكريم（English・日本語・中文注・黑白）.pdf"
+    }
+  },
   "prepared_at": "2026-07-01T23:08:19.718477+00:00"
 }

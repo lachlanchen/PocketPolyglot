@@ -1,0 +1,274 @@
+\usepackage{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{xparse}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{needspace}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{bidi}
+
+\geometry{
+  paperwidth=105mm,
+  paperheight=148mm,
+  inner=7.8mm,
+  outer=7.8mm,
+  top=8.5mm,
+  bottom=10.5mm,
+  headheight=0pt,
+  headsep=0pt,
+  footskip=7mm
+}
+
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{Noto Sans}
+\setmonofont{TeX Gyre Cursor}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\newCJKfontfamily\zhfont{Noto Serif CJK SC}
+\newCJKfontfamily\jpfont{Noto Serif CJK JP}
+\newfontfamily\enfont{TeX Gyre Pagella}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1.08]{Amiri}
+\newfontfamily\symbolfont{DejaVu Sans}
+\newcommand{\SymbolText}[1]{{\symbolfont #1}}
+
+\definecolor{BookInk}{HTML}{141414}
+\definecolor{BookNote}{HTML}{3E3A35}
+\definecolor{BookRule}{HTML}{B9B0A5}
+\definecolor{BookRed}{HTML}{7E2F24}
+\definecolor{BookFaint}{HTML}{E8E0D1}
+\definecolor{GramSubject}{HTML}{13795B}
+\definecolor{GramPredicate}{HTML}{B23A48}
+\definecolor{GramObject}{HTML}{286DA8}
+\definecolor{GramAttributive}{HTML}{7C58A5}
+\definecolor{GramAdverbial}{HTML}{A96523}
+\definecolor{GramComplement}{HTML}{1D7F91}
+\colorlet{GramTopic}{GramSubject}
+\colorlet{GramFunction}{black}
+
+\hypersetup{colorlinks=true,linkcolor=BookRed,urlcolor=BookRed}
+
+\newif\ifBWMode
+\BWModefalse
+\newcommand{\BlackWhiteMode}{%
+  \BWModetrue
+  \hypersetup{linkcolor=black,urlcolor=black}%
+  \colorlet{BookInk}{black}%
+  \colorlet{BookNote}{black}%
+  \colorlet{BookRule}{black!55}%
+  \colorlet{BookRed}{black}%
+  \colorlet{BookFaint}{black!8}%
+  \colorlet{GramSubject}{black}%
+  \colorlet{GramPredicate}{black}%
+  \colorlet{GramObject}{black}%
+  \colorlet{GramAttributive}{black}%
+  \colorlet{GramAdverbial}{black}%
+  \colorlet{GramComplement}{black}%
+  \colorlet{GramTopic}{black}%
+  \colorlet{GramFunction}{black}%
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\titleformat{\chapter}[block]{\normalfont\Large\bfseries}{\thechapter}{0.6em}{}
+\titlespacing*{\chapter}{0pt}{0.35em}{0.65em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\emergencystretch=5em
+\sloppy
+\linespread{1.01}
+
+\newif\ifShowRuby
+\ShowRubytrue
+\newcommand{\RubyFont}{\fontsize{3.25pt}{3.7pt}\selectfont}
+\NewDocumentCommand{\RubyFixed}{m m}{%
+  \ifShowRuby
+    \leavevmode
+    \begingroup
+      \setbox0=\hbox{#1}%
+      \dimen0=\wd0
+      \vbox{%
+        \offinterlineskip
+        \hbox to \dimen0{\hss{\RubyFont #2}\hss}%
+        \kern0.08ex
+        \box0
+      }%
+    \endgroup
+    \allowbreak{}%
+  \else
+    #1\allowbreak{}%
+  \fi
+}
+\NewDocumentCommand{\RubyWide}{m m}{%
+  \ifShowRuby
+    \leavevmode
+    \begingroup
+      \setbox0=\hbox{#1}%
+      \setbox1=\hbox{{\RubyFont #2}}%
+      \dimen0=\wd0
+      \ifdim\wd1>\dimen0 \dimen0=\wd1\fi
+      \vbox{%
+        \offinterlineskip
+        \hbox to \dimen0{\hss\box1\hss}%
+        \kern0.08ex
+        \hbox to \dimen0{\hss\box0\hss}%
+      }%
+    \endgroup
+    \allowbreak{}%
+  \else
+    #1\allowbreak{}%
+  \fi
+}
+\NewDocumentCommand{\zhpy}{m m}{\RubyFixed{{\zhfont #1}}{{\sffamily #2}}}
+\NewDocumentCommand{\jpruby}{m m}{\RubyWide{{\jpfont #1}}{{\jpfont #2}}}
+
+\newcommand{\ArRubyFont}{\fontsize{3.45pt}{3.8pt}\selectfont\enfont}
+\NewDocumentCommand{\ArWord}{m}{%
+  \leavevmode\hbox{\RL{{\arabicfont #1}}}\allowbreak{}%
+}
+\NewDocumentCommand{\ArRuby}{m m}{%
+  \ifShowRuby
+    \leavevmode\begingroup
+      \setbox0=\hbox{\RL{{\arabicfont #1}}}%
+      \dimen0=\wd0
+      \setbox1=\hbox{{\ArRubyFont #2}}%
+      \ifdim\wd1>\dimen0 \dimen0=\wd1\fi
+      \vbox{%
+        \offinterlineskip
+        \hbox to \dimen0{\hss\box1\hss}%
+        \kern0.1ex
+        \hbox to \dimen0{\hss\box0\hss}%
+      }%
+    \endgroup\allowbreak{}%
+  \else
+    \ArWord{#1}%
+  \fi
+}
+\newcommand{\ArSpace}{\hspace{0.13em}\allowbreak{}}
+
+\ExplSyntaxOn
+\cs_new_protected:Npn \quad_gram_color:n #1
+  {
+    \str_case:nn { #1 }
+      {
+        { subject } { \color{GramSubject} }
+        { predicate } { \color{GramPredicate} }
+        { object } { \color{GramObject} }
+        { attributive } { \color{GramAttributive} }
+        { adverbial } { \color{GramAdverbial} }
+        { complement } { \color{GramComplement} }
+        { topic } { \color{GramTopic} }
+        { function } { \color{GramFunction} }
+      }
+  }
+\NewDocumentCommand{\Gram}{m m}{\group_begin:\quad_gram_color:n { #1 } #2\group_end:\allowbreak{}}
+\ExplSyntaxOff
+
+\newcommand{\GrammarLegend}{%
+  {\sffamily\fontsize{5pt}{6.4pt}\selectfont
+  \textcolor{GramSubject}{subject}\quad
+  \textcolor{GramPredicate}{predicate}\quad
+  \textcolor{GramObject}{object}\quad
+  \textcolor{GramAttributive}{attributive}\quad
+  \textcolor{GramAdverbial}{adverbial}\quad
+  \textcolor{GramComplement}{complement}\quad
+  \textcolor{GramTopic}{topic}\quad
+  \textcolor{GramFunction}{function}}%
+}
+
+\newcommand{\QuranMainAr}[1]{{\begin{RTL}\arabicfont\fontsize{11.4pt}{17.2pt}\selectfont\color{BookInk}#1\end{RTL}}}
+\newcommand{\QuranMainEn}[1]{{\enfont\fontsize{9pt}{12.2pt}\selectfont\color{BookInk}#1}}
+\newcommand{\QuranMainJa}[1]{{\jpfont\fontsize{9.2pt}{13.2pt}\selectfont\color{BookInk}#1}}
+\newcommand{\QuranMainZh}[1]{{\zhfont\fontsize{9.2pt}{13.2pt}\selectfont\color{BookInk}#1}}
+\newcommand{\QuranNoteAr}[1]{{\begin{RTL}\arabicfont\fontsize{7.7pt}{11.3pt}\selectfont\color{BookNote}#1\end{RTL}}}
+\newcommand{\QuranNoteEn}[1]{{\enfont\fontsize{6.55pt}{8.9pt}\selectfont\color{BookNote}#1}}
+\newcommand{\QuranNoteJa}[1]{{\jpfont\fontsize{6.75pt}{9.3pt}\selectfont\color{BookNote}#1}}
+\newcommand{\QuranNoteZh}[1]{{\zhfont\fontsize{6.75pt}{9.3pt}\selectfont\color{BookNote}#1}}
+\newcommand{\TinyLabel}[1]{{\sffamily\bfseries\fontsize{5pt}{5.2pt}\selectfont\textcolor{BookRed}{#1}}}
+\newcommand{\VerseKey}[1]{{\sffamily\fontsize{5.3pt}{5.5pt}\selectfont\textcolor{BookRed}{#1}}}
+
+\NewDocumentCommand{\QuranPdfMeta}{m m}{%
+  \hypersetup{pdftitle={#1},pdfauthor={#2}}%
+}
+
+\NewDocumentCommand{\QuranTitle}{m m m m m m m}{%
+  \frontmatter
+  \thispagestyle{empty}
+  \if\relax\detokenize{#7}\relax
+  \else
+    \newgeometry{margin=0pt}%
+    \IfFileExists{#7}{%
+      \begin{tikzpicture}[remember picture,overlay]
+        \node[anchor=south west,inner sep=0pt] at (current page.south west)
+          {\includegraphics[width=\paperwidth,height=\paperheight]{#7}};
+      \end{tikzpicture}%
+      \null
+      \clearpage
+    }{}%
+    \restoregeometry
+  \fi
+  \thispagestyle{empty}
+  \vspace*{0.10\textheight}
+  {\centering
+    {\Large #1\par}
+    \vspace{0.55em}
+    {\small\color{BookNote}#2\par}
+    \vspace{0.8em}
+    {\small #3\par}
+    \vfill
+    {\sffamily\fontsize{6.2pt}{8pt}\selectfont #4\quad #5\par #6\par}
+    \vspace{0.8em}
+    \GrammarLegend\par
+  }
+  \clearpage
+  \tableofcontents
+  \clearpage
+  \mainmatter
+}
+
+\NewDocumentCommand{\QuranChapter}{m m m O{}}{%
+  \clearpage
+  \phantomsection
+  \chapter*{#2}%
+  \if\relax\detokenize{#4}\relax
+    \addcontentsline{toc}{chapter}{#1\quad #2}%
+  \else
+    \addcontentsline{toc}{chapter}{#1\quad #4}%
+  \fi
+  \noindent{\small\color{BookNote}#3}\par
+  \vspace{0.35em}
+  \noindent\textcolor{BookRule}{\rule{\linewidth}{0.28pt}}\par
+  \vspace{0.45em}
+}
+
+\newcommand{\QuranParagraphStart}{\par\Needspace{9\baselineskip}}
+\newcommand{\QuranParagraphEnd}{\par\vspace{0.38em}}
+\NewDocumentCommand{\QuranNoteBlock}{m m}{%
+  \par
+  \begingroup
+    \leftskip=1.05em
+    \rightskip=0pt plus 1em
+    \parindent=0pt
+    \noindent\TinyLabel{#1}\quad #2\par
+  \endgroup
+}
+
+\NewDocumentCommand{\QuranUnit}{m m m m m m m m}{%
+  \Needspace{10\baselineskip}%
+  \noindent\VerseKey{#1}\par
+  \vspace{0.04em}
+  \noindent #2\par
+  \vspace{0.03em}
+  \QuranNoteBlock{#3}{#4}%
+  \vspace{0.03em}
+  \QuranNoteBlock{#5}{#6}%
+  \vspace{0.03em}
+  \QuranNoteBlock{#7}{#8}%
+  \vspace{0.20em}
+}

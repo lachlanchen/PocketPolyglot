@@ -106,7 +106,7 @@ as `wenyan`, `zh`, or `ja` to reuse an incompatible renderer.
 
 | Priority | Proposed ID | Title | Source Path | Current Status | Next Step |
 |---:|---|---|---|---|---|
-| AQ1 | `quran` | القرآن الكريم / The Quran / クルアーン / 古蘭經 | `sources/quran` | Prepared; 114 suras / 842 chunks; Arabic complete, EN/JA/ZH references partial | Add Arabic quadrilingual writer/validator and RTL ruby renderer before launching. |
+| AQ1 | `quran` | القرآن الكريم / The Quran / クルアーン / 古蘭經 | `sources/quran` | Completed Arabic-main first edition; 114 suras / 842 chunks / 6348 units; color and black-white PDFs compiled | Optional future work: add EN-main, JA-main, and ZH-main reverse quadrilingual editions. |
 
 ## Additional Future Queue
 

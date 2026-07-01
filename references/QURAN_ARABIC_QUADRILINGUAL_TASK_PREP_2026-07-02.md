@@ -1,6 +1,6 @@
 # Quran Arabic Quadrilingual Task Prep - 2026-07-02
 
-Prepared `quran` as an Arabic-spine quadrilingual LinguaLeaf task.
+Prepared and compiled `quran` as an Arabic-spine quadrilingual LinguaLeaf task.
 
 ## Sources Mirrored
 
@@ -29,22 +29,31 @@ aligned translations.
 - Missing Arabic suras: `0`
 - Manifest: `books/quran/work/arabic-quadrilingual/chunks/manifest.json`
 - Source Markdown: `books/quran/markdown/quran-arabic-source.md`
+- Full generated JSON: `books/quran/work/arabic-quadrilingual/preview/quran.full.json`
+- Color PDF: `build/quran/ar-main-quadrilingual/color/القرآن الكريم（English・日本語・中文注）.pdf`
+- Black-white PDF: `build/quran/ar-main-quadrilingual/blackwhite/القرآن الكريم（English・日本語・中文注・黑白）.pdf`
 
 Each source unit preserves exact Arabic text and includes initial
 `ar_tokens` with `t` text and `r` ruby/transliteration. These readings are
 mechanical seeds for the future Arabic renderer/reviewer; the writer should
 preserve Arabic exactly and refine readings only with validation evidence.
 
-## Required Pipeline Work
+## Completion Notes
 
-The task is intentionally `launchable: false` until the generic pipeline can
-handle Arabic explicitly:
+The completed first edition uses:
 
-- Arabic quadrilingual writer/validator or generic multilingual writer.
-- RTL-safe XeLaTeX rendering for Arabic source text.
-- Arabic ruby/transliteration above or beside each Arabic word.
-- Grammar role `g` support for Arabic plus English/Japanese/Chinese.
-- Color and blackwhite large-font PDF compile targets.
+- Arabic source spine from the prepared Wikisource Hafs/Madina mirror.
+- Quran.com word-level Arabic transliteration and word gloss cache.
+- QuranEnc `english_rwwad`, `japanese_saeedsato`, and `chinese_makin`
+  verse-aligned SQLite translations.
+- Heuristic normalized grammar roles for Arabic, English, Japanese, and Chinese
+  tokens, rendered in color or black-white.
+- Dedicated XeLaTeX Arabic RTL/ruby renderer using `bidi` and Amiri.
 
-The existing Chinese/Japanese/English renderers should not be used by relabeling
-Arabic as another language.
+Validation on 2026-07-02:
+
+- `validate_quran_arabic_quadrilingual_json.py`: passed.
+- Color PDF: `3014` pages, `0` overfull boxes, `0` fatal TeX errors.
+- Black-white PDF: `3014` pages, `0` overfull boxes, `0` fatal TeX errors.
+- Synced to Nutstore `Share/LinguaLeaf` and
+  `Projects/LinguaLeaf/final-pdfs/العربية-English-日本語-中文/quran/`.
