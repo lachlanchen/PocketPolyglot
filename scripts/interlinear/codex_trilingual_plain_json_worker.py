@@ -58,6 +58,10 @@ def plain_text(value: Any) -> str:
     return normalize_space(str(value or "").replace("\n", " "))
 
 
+def no_space(text: Any) -> str:
+    return "".join(str(text or "").split())
+
+
 def split_english_units(text: str) -> list[str]:
     parts: list[str] = []
     start = 0
@@ -299,7 +303,8 @@ def validate_plain_chunk(source: dict[str, Any], result: dict[str, Any]) -> list
                 errors.append(f"{unit_where}.zh: Chinese text must contain Han characters")
             if zh_required and zh and KANA_RE.search(zh):
                 errors.append(f"{unit_where}.zh: Chinese row contains Japanese kana")
-            if ja_required and ja and not KANA_RE.search(ja) and len("".join(ja.split())) > 12:
+            copied_source_ja = bool(source_unit.get("ja")) and no_space(ja) == no_space(source_unit.get("ja"))
+            if ja_required and ja and not KANA_RE.search(ja) and len("".join(ja.split())) > 12 and not copied_source_ja:
                 errors.append(f"{unit_where}.ja: Japanese row must contain kana; pure Han text is usually Chinese, not Japanese")
     return errors
 
@@ -520,7 +525,7 @@ def promote_plain_chunk(source: dict[str, Any], plain: dict[str, Any]) -> dict[s
                 en = str(source_unit.get("en", "")) or plain_text(unit.get("en", ""))
             else:
                 en = plain_text(source_unit.get("en", "")) or plain_text(unit.get("en", ""))
-            if not source_paragraph.get("en") and unit_index < len(plain_units) - 1 and not en.endswith(" "):
+            if unit_index < len(plain_units) - 1 and en and not en.endswith(" "):
                 en = en + " "
             zh = plain_text(source_unit.get("zh", "")) if spine_lang == "zh" else plain_text(unit.get("zh", ""))
             ja = plain_text(source_unit.get("ja", "")) if spine_lang == "ja" else plain_text(unit.get("ja", ""))

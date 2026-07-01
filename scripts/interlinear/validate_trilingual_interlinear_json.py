@@ -47,7 +47,7 @@ def token_text(tokens: Any) -> str:
 
 
 def has_language_content(text: str) -> bool:
-    return bool(HAN_RE.search(text) or KANA_RE.search(text) or LATIN_RE.search(text) or re.search(r"\d", text))
+    return bool(HAN_RE.search(text) or KANA_RE.search(text) or LATIN_RE.search(text))
 
 
 def allows_non_han_zh_fragment(source_text: str, zh_text: str) -> bool:
