@@ -120,6 +120,70 @@
       "next_step": "Convert the Wikisource wenyan tree and modern Chinese annotated PDF to reviewed Markdown, then split by chapter/paragraph for quadrilingual chunk generation."
     },
     {
+      "book_id": "foguoji",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "佛國記",
+      "book_title_zh": "佛国记",
+      "book_title_ja": "仏国記",
+      "book_title_en": "A Record of Buddhistic Kingdoms",
+      "author": "法顯",
+      "author_reading_zh": "fǎ xiǎn",
+      "author_reading_ja": "ほっけん",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/foguoji/zh/wenyan-wikisource",
+          "quality": "Chinese Wikisource classical source, one complete standalone page"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "zh_wikisource_epub_export",
+          "path": "sources/foguoji/zh/wikisource-export/佛國記-Wikisource.epub",
+          "quality": "valid Wikisource EPUB export"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "zh_author_context_reference",
+          "path": "sources/foguoji/zh/wikipedia-reference",
+          "quality": "Chinese reference for 法显; generate modern Chinese from wenyan when no aligned translation is available"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "public_domain_english_reference",
+          "path": "sources/foguoji/en/wikisource-record-of-buddhistic-kingdoms",
+          "quality": "English Wikisource public-domain translation, Record of the Buddhistic Kingdoms"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "en_wikisource_epub_export",
+          "path": "sources/foguoji/en/wikisource-export/Record-of-the-Buddhistic-Kingdoms-Wikisource.epub",
+          "quality": "valid Wikisource EPUB export"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "en_author_context_reference",
+          "path": "sources/foguoji/en/wikipedia-reference",
+          "quality": "English reference for Faxian"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "work_and_author_context_reference",
+          "path": "sources/foguoji/jp/wikipedia-reference",
+          "quality": "Japanese references for 仏国記 and 法顕; no complete Japanese translation found locally"
+        }
+      ],
+      "next_step": "Use the Chinese Wikisource text as the wenyan spine, use English Wikisource as a translation reference, and generate modern Japanese plus modern Chinese with the Wikipedia references only for terminology and context."
+    },
+    {
       "book_id": "han-shu",
       "status": "prepared_sources_only",
       "priority": "classical_queue",

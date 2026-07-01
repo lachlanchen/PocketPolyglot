@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "book_id": "foguoji",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "佛國記",
+  "book_title_zh": "佛国记",
+  "book_title_ja": "仏国記",
+  "book_title_en": "A Record of Buddhistic Kingdoms",
+  "author": "法顯",
+  "author_reading_zh": "fǎ xiǎn",
+  "author_reading_ja": "ほっけん",
+  "book_description": "佛國記 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/foguoji/zh/wenyan-wikisource",
+    "zh_wikisource_epub_export": "sources/foguoji/zh/wikisource-export/佛國記-Wikisource.epub",
+    "zh_author_context_reference": "sources/foguoji/zh/wikipedia-reference",
+    "public_domain_english_reference": "sources/foguoji/en/wikisource-record-of-buddhistic-kingdoms",
+    "en_wikisource_epub_export": "sources/foguoji/en/wikisource-export/Record-of-the-Buddhistic-Kingdoms-Wikisource.epub",
+    "en_author_context_reference": "sources/foguoji/en/wikipedia-reference",
+    "work_and_author_context_reference": "sources/foguoji/jp/wikipedia-reference",
+    "wenyan_markdown": "books/foguoji/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/foguoji/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/foguoji/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/foguoji/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/foguoji/work/quadrilingual/preview/foguoji.partial.json",
+  "build_root": "build/foguoji/wenyan-main-quadrilingual",
+  "prepared_at": "2026-07-01T03:16:06.793833+00:00"
+}

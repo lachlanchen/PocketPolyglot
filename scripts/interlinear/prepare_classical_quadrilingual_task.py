@@ -84,7 +84,7 @@ SHANHAIJING_CANONICAL_ORDER = {
     "海內經": 18,
 }
 
-ANTHOLOGY_STANDALONE_BOOKS = {"chuci", "tangshi-sanbai"}
+ANTHOLOGY_STANDALONE_BOOKS = {"chuci", "foguoji", "tangshi-sanbai"}
 CHUCI_SKIP_TITLES = {"楚辭", "楚辭章句", "楚辭補注", "屈原賦注"}
 CHUCI_CANONICAL_ORDER = {
     "離騷": 1,
@@ -905,6 +905,54 @@ def load_sanguozhi_selection_en_windows() -> dict[int, dict[str, str]]:
     return windows
 
 
+@lru_cache(maxsize=1)
+def load_foguoji_references() -> dict[str, Any]:
+    en_raw = ROOT / "sources" / "foguoji" / "en" / "wikisource-record-of-buddhistic-kingdoms" / "raw" / "0001-Record of the Buddhistic Kingdoms.wiki"
+    ja_work = ROOT / "sources" / "foguoji" / "jp" / "wikipedia-reference" / "仏国記.html"
+    ja_author = ROOT / "sources" / "foguoji" / "jp" / "wikipedia-reference" / "法顕.html"
+    zh_author = ROOT / "sources" / "foguoji" / "zh" / "wikipedia-reference" / "法显.html"
+
+    def html_excerpt(path: Path, limit: int = 2600) -> str:
+        if not path.exists():
+            return ""
+        soup = BeautifulSoup(path.read_text(encoding="utf-8", errors="replace"), "html.parser")
+        content = soup.select_one(".mw-parser-output") or soup
+        for tag in content.select("style, script, table, sup, .noprint"):
+            tag.decompose()
+        return excerpt(content.get_text("\n", strip=True), limit)
+
+    en_text = ""
+    if en_raw.exists():
+        en_text = excerpt(clean_wiki_markup(en_raw.read_text(encoding="utf-8", errors="replace")), 4200)
+    return {
+        "en": {
+            "source": "English Wikisource, Record of the Buddhistic Kingdoms",
+            "path": str(en_raw.relative_to(ROOT)),
+            "excerpt": en_text,
+        },
+        "ja_modern": [
+            {
+                "source": "Japanese Wikipedia reference for 仏国記",
+                "path": str(ja_work.relative_to(ROOT)),
+                "excerpt": html_excerpt(ja_work),
+                "note": "Reference only; no full Japanese translation was found locally.",
+            },
+            {
+                "source": "Japanese Wikipedia reference for 法顕",
+                "path": str(ja_author.relative_to(ROOT)),
+                "excerpt": html_excerpt(ja_author),
+                "note": "Author/traveler context for terminology.",
+            },
+        ],
+        "zh_modern": {
+            "source": "Chinese Wikipedia reference for 法显",
+            "path": str(zh_author.relative_to(ROOT)),
+            "excerpt": html_excerpt(zh_author),
+            "note": "Author/traveler context; generate modern Chinese from the wenyan spine.",
+        },
+    }
+
+
 def broad_references(book: dict[str, Any], chapter_number: int) -> dict[str, Any]:
     layers = book["source_layers"]
     paths_by_layer: dict[str, list[dict[str, str]]] = OrderedDict()
@@ -960,6 +1008,8 @@ def broad_references(book: dict[str, Any], chapter_number: int) -> dict[str, Any
             "source": "sources/sanguozhi/jp/wikisource-index",
             "note": "Index-only Japanese source. Generate natural modern Japanese where no matching source exists.",
         }
+    elif book["book_id"] == "foguoji":
+        reference.update(load_foguoji_references())
     return reference
 
 
