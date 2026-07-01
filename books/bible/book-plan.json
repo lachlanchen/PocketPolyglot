@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "book_id": "bible",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "trilingual_bible_wikisource",
+  "source_language": "en",
+  "book_title_en": "The Holy Bible",
+  "book_title_zh": "聖經",
+  "book_title_ja": "聖書",
+  "author": "",
+  "author_reading_ja": "",
+  "book_description": "The Holy Bible with KJV English, Chinese Union Version, and generated modern Japanese aligned by verse.",
+  "source_paths": {
+    "english_kjv_wikisource": "sources/bible/en/wikisource-kjv",
+    "chinese_union_wikisource": "sources/bible/zh/wikisource-union",
+    "japanese_kougo_old_testament_attempted": "sources/bible/ja/wikisource-kougo-ot",
+    "japanese_kougo_new_testament_attempted": "sources/bible/ja/wikisource-kougo-nt",
+    "markdown": "books/bible/markdown/bible-wikisource.md"
+  },
+  "chunks_jsonl": "books/bible/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/bible/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/bible/work/trilingual/interlinear/chunks",
+  "assembled_json": "books/bible/work/trilingual/preview/bible.partial.json",
+  "build_root": "build/bible",
+  "prepared_at": "2026-07-01T22:20:01.245719+00:00"
+}

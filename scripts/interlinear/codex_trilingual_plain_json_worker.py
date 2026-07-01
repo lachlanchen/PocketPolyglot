@@ -117,6 +117,24 @@ def source_unit_plan(chunk: dict[str, Any]) -> list[dict[str, Any]]:
     spine_lang = source_spine_lang(chunk)
     paragraphs: list[dict[str, Any]] = []
     for paragraph in chunk["paragraphs"]:
+        explicit_units = paragraph.get("units")
+        if isinstance(explicit_units, list) and explicit_units:
+            units: list[dict[str, Any]] = []
+            for unit_index, unit in enumerate(explicit_units, start=1):
+                if not isinstance(unit, dict):
+                    continue
+                unit_id = str(unit.get("unit_id") or f"{paragraph['id']}-u{unit_index:03d}")
+                planned: dict[str, Any] = {"unit_id": unit_id}
+                for lang in ("en", "zh", "ja"):
+                    text = plain_text(unit.get(lang, ""))
+                    if text:
+                        planned[lang] = text
+                if not any(lang in planned for lang in ("en", "zh", "ja")):
+                    continue
+                units.append(planned)
+            if units:
+                paragraphs.append({"id": paragraph["id"], "units": units})
+                continue
         source_text = paragraph_source_text(paragraph, spine_lang)
         units = [
             {"unit_id": f"{paragraph['id']}-u{unit_index:03d}", spine_lang: unit}
@@ -208,6 +226,7 @@ def prompt_for_plain_chunk(chunk: dict[str, Any], previous_errors: list[str] | N
         Hard requirements:
         - Preserve paragraph ids and order exactly.
         - Preserve unit_id values and order exactly.
+        - If a supplied source unit contains an exact "zh" or "ja" value, copy that field exactly into the corresponding output field.
         {spine_requirements.format(ja_instruction=ja_instruction)}
         - Do not include ruby, pinyin, token arrays, grammar colors, Markdown, commentary, or footnotes.
         - Keep chunk id and paragraph ids exactly as provided.

@@ -46,6 +46,7 @@ For classical Chinese books, keep the classical original as a preserved source l
 | 32 | `notre-dame-de-paris` | Notre-Dame de Paris / 巴黎圣母院 / ノートルダム・ド・パリ | `sources/notre-dame-de-paris` | Complete | Trilingual EN-JP-ZH; 471/471 chunks, 12 PDFs compiled; Chinese OCR-polished reference promoted; AgInTi cover generated. |
 | 33 | `les-miserables` | Les Misérables / 悲惨世界 / レ・ミゼラブル | `sources/les-miserables` | Complete | Trilingual EN-JP-ZH; 1630/1630 chunks, 12 named PDFs compiled; AgInTi cover generated. |
 | 34 | `yijing` | 周易 / Book of Changes / 易経 | `sources/yijing` | Complete | Quadrilingual Wenyan-English-modern Japanese-modern Chinese; 948/948 chunks, grammar colored, large-font color and blackwhite PDFs compiled and synced. |
+| 35 | `xixiangji` | 西廂記 / The Story of the Western Wing | `sources/xixiangji` | Complete | Quadrilingual Wenyan-English-modern Japanese-modern Chinese; 101/101 chunks, color and blackwhite PDFs compiled. |
 
 ## Prepared / Not Yet Compiled Queue
 
@@ -75,8 +76,8 @@ support layers. The source inventory is tracked in
 | C2 | `han-shu` | 漢書 / Book of Han | `sources/han-shu` | Sources copied; quadrilingual plan prepared | Use Chinese source spine; generate modern Japanese where JP source is index-only. |
 | C3 | `hou-han-shu` | 後漢書 / Book of Later Han | `sources/hou-han-shu` | Launchable; 131 chapters / 13152 chunks prepared; not started | Treat English/Japanese references as partial chapter references only; `注補續漢書八志序` is ordered between `卷90` and `卷91`. |
 | C4 | `sanguozhi` | 三國志 / Records of the Three Kingdoms | `sources/sanguozhi` | Launchable and queued after Zhuangzi; 67 chapters / 2338 chunks prepared | Main spine excludes Pei Songzhi commentary from the primary wenyan stream; English references are incomplete. |
-| C5 | `mudanting` | 牡丹亭 / The Peony Pavilion | `sources/mudanting` | Launchable; 55 scenes / 523 chunks prepared | Chinese Wikisource is the wenyan spine; EN/modern JP/modern ZH overlays are generated because no matching Wikisource translations were found. |
-| C6 | `xixiangji` | 西廂記 / The Story of the Western Wing | `sources/xixiangji` | Launchable; 5 books / 101 chunks prepared | Uses Wang Shifu five-book spine; `北西廂記` and `南西廂記` variants are excluded from the main stream. |
+| C5 | `mudanting` | 牡丹亭 / The Peony Pavilion | `sources/mudanting` | Running; 55 scenes / 523 chunks prepared | Chinese Wikisource is the wenyan spine; EN/modern JP/modern ZH overlays are generated because no matching Wikisource translations were found. |
+| C6 | `xixiangji` | 西廂記 / The Story of the Western Wing | `sources/xixiangji` | Complete; 5 books / 101 chunks | Uses Wang Shifu five-book spine; `北西廂記` and `南西廂記` variants are excluded from the main stream. |
 
 ## Prepared Japanese Classical Trilingual Queue
 
@@ -89,6 +90,12 @@ reference only.
 |---:|---|---|---|---|---|
 | J1 | `manyoshu` | 万葉集 / Man'yoshu / 万叶集 | `sources/manyoshu` | Launchable; 20 volumes / 4562 chunks prepared | Use Japanese Wikisource kundoku as the source spine; English anthology references are partial; Chinese is generated. |
 | J2 | `kokin-wakashu` | 古今和歌集 / Kokin Wakashu | `sources/kokin-wakashu` | Launchable; 23 sections / 1123 chunks prepared | Use Japanese Wikisource plus local modern-translation EPUB as references; English anthology references are partial; Chinese is generated. |
+
+## Prepared Bible Trilingual Task
+
+| Priority | Proposed ID | Title | Source Path | Current Status | Next Step |
+|---:|---|---|---|---|---|
+| B1 | `bible` | The Holy Bible / 聖經 / 聖書 | `sources/bible` | Running; 66 books / 1189 chapters / 2113 chunks prepared | English KJV is the exact spine; Chinese Union Version is exact; modern Japanese is generated because Japanese Wikisource Kougo pages are metadata/redaction pages. |
 
 ## Additional Future Queue
 

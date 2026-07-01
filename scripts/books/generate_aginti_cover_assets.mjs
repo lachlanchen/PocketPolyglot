@@ -56,6 +56,8 @@ const THEME_HINTS = {
     "Nara-era poetry anthology atmosphere, pampas grass and autumn wind, old travel road, sea cliffs, mountain mist, court manuscript paper, understated ancient Japanese lyric feeling, mineral blue, pale grass green, warm earth, and soft ink texture",
   "kokin-wakashu":
     "Heian waka anthology atmosphere, cherry blossoms over layered paper, court poetry screens, soft garden water, refined seasonal elegance, subtle gold dust, pale pink, celadon, and deep ink with no readable calligraphy",
+  bible:
+    "ancient scripture atmosphere, open parchment scrolls, olive branch, desert dawn light, quiet stone path, restrained indigo, warm gold, and deep ink, contemplative sacred-book mood without readable letters",
   "red-rising-1":
     "Mars mine tunnels, red dust, rising rebellion, distant domed city, cinematic science-fiction atmosphere, austere red and black palette",
   "red-rising-2":
