@@ -218,9 +218,17 @@
   \phantomsection
   \chapter*{#2}%
   \if\relax\detokenize{#4}\relax
-    \addcontentsline{toc}{chapter}{#1\quad #2}%
+    \if\relax\detokenize{#1}\relax
+      \addcontentsline{toc}{chapter}{#2}%
+    \else
+      \addcontentsline{toc}{chapter}{#1\quad #2}%
+    \fi
   \else
-    \addcontentsline{toc}{chapter}{#1\quad #4}%
+    \if\relax\detokenize{#1}\relax
+      \addcontentsline{toc}{chapter}{#4}%
+    \else
+      \addcontentsline{toc}{chapter}{#1\quad #4}%
+    \fi
   \fi
   \noindent{\small\color{BookNote}#3}\par
   \vspace{0.35em}

@@ -210,11 +210,23 @@
   \mainmatter
 }
 
-\NewDocumentCommand{\TriPairChapter}{m m m}{%
+\NewDocumentCommand{\TriPairChapter}{m m m O{}}{%
   \clearpage
   \phantomsection
   \chapter*{#2}%
-  \addcontentsline{toc}{chapter}{#1\quad #2}%
+  \if\relax\detokenize{#4}\relax
+    \if\relax\detokenize{#1}\relax
+      \addcontentsline{toc}{chapter}{#2}%
+    \else
+      \addcontentsline{toc}{chapter}{#1\quad #2}%
+    \fi
+  \else
+    \if\relax\detokenize{#1}\relax
+      \addcontentsline{toc}{chapter}{#4}%
+    \else
+      \addcontentsline{toc}{chapter}{#1\quad #4}%
+    \fi
+  \fi
   \noindent{\small\color{BookNote}#3}\par
   \vspace{0.35em}
   \noindent\textcolor{BookRule}{\rule{\linewidth}{0.28pt}}\par
@@ -274,11 +286,23 @@
   \mainmatter
 }
 
-\NewDocumentCommand{\TriAllChapter}{m m m m}{%
+\NewDocumentCommand{\TriAllChapter}{m m m m O{}}{%
   \clearpage
   \phantomsection
   \chapter*{#2}%
-  \addcontentsline{toc}{chapter}{#1\quad #2}%
+  \if\relax\detokenize{#5}\relax
+    \if\relax\detokenize{#1}\relax
+      \addcontentsline{toc}{chapter}{#2}%
+    \else
+      \addcontentsline{toc}{chapter}{#1\quad #2}%
+    \fi
+  \else
+    \if\relax\detokenize{#1}\relax
+      \addcontentsline{toc}{chapter}{#5}%
+    \else
+      \addcontentsline{toc}{chapter}{#1\quad #5}%
+    \fi
+  \fi
   \noindent{\small\color{BookNote}#3}\par
   \vspace{0.15em}
   \noindent{\small\color{BookNote}#4}\par

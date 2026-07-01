@@ -5,11 +5,13 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 from typing import Any
 
 
+SHORT_TOC_TITLE_LIMIT = 86
 LONG_RUN_BREAK = 12
 LONG_RUN_MIN = 18
 LANG_LABELS = {
@@ -158,6 +160,19 @@ def token_text(tokens: list[dict[str, Any]]) -> str:
     return "".join(str(token.get("t", "")) for token in tokens)
 
 
+def short_toc_title(text: str, *, limit: int = SHORT_TOC_TITLE_LIMIT) -> str:
+    """Return a plain, short title suitable for PDF reader outlines."""
+    title = re.sub(r"\s+", " ", str(text)).strip()
+    title = title.strip(" \t\r\n-–—:：;；,，、.")
+    if len(title) <= limit:
+        return title
+    return title[:limit].rstrip(" \t\r\n-–—:：;；,，、.") + "…"
+
+
+def optional_arg_text(text: str) -> str:
+    return tex_escape(text).replace("[", "{[}").replace("]", "{]}")
+
+
 def brace(text: str) -> str:
     if not text:
         return "{}"
@@ -210,8 +225,13 @@ def convert(
         chapter_title = chapter.get("title", {})
         main_chapter = render_lang(chapter_title.get(main_lang, []), main_lang, "main")
         comment_chapter = render_lang(chapter_title.get(comment_lang, []), comment_lang, "comment")
+        toc_title = short_toc_title(
+            token_text(chapter_title.get(main_lang, [])) or token_text(chapter_title.get(comment_lang, []))
+        )
         number = str(chapter.get("number") or "")
-        out.append(rf"\TriPairChapter{{{tex_escape(number)}}}{brace(main_chapter)}{brace(comment_chapter)}")
+        out.append(
+            rf"\TriPairChapter{{{tex_escape(number)}}}{brace(main_chapter)}{brace(comment_chapter)}[{optional_arg_text(toc_title)}]"
+        )
         for paragraph in chapter.get("paragraphs", []):
             out.append(r"\TriPairParagraphStart")
             for unit in paragraph.get("units", []):

@@ -11,8 +11,10 @@ from typing import Any
 
 from json_to_trilingual_pair_tex import (
     brace,
+    optional_arg_text,
     render_author,
     render_tokens,
+    short_toc_title,
     tex_escape,
     tex_path_arg,
     token_text,
@@ -107,7 +109,7 @@ def convert(
         chapter_title = chapter.get("title", {})
         main_chapter = render_layer(chapter_title.get(main_layer, []), main_layer, "main")
         chapter_subtitle = " / ".join(render_layer(chapter_title.get(layer, []), layer, "note") for layer in note_layers)
-        toc_title = tex_escape(main_plain({"title": chapter_title}, main_layer)).replace("[", "{[}").replace("]", "{]}")
+        toc_title = optional_arg_text(short_toc_title(main_plain({"title": chapter_title}, main_layer)))
         number = str(chapter.get("number") or "")
         out.append(rf"\QuadChapter{{{tex_escape(number)}}}{brace(main_chapter)}{brace(chapter_subtitle)}[{toc_title}]")
         for paragraph in chapter.get("paragraphs", []):

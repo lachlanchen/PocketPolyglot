@@ -11,8 +11,10 @@ from typing import Any
 
 from json_to_trilingual_pair_tex import (
     brace,
+    optional_arg_text,
     render_author,
     render_lang,
+    short_toc_title,
     tex_escape,
     tex_path_arg,
     token_text,
@@ -54,8 +56,15 @@ def convert(
         en_chapter = render_lang(chapter_title.get("en", []), "en", "main")
         ja_chapter = render_lang(chapter_title.get("ja", []), "ja", "comment")
         zh_chapter = render_lang(chapter_title.get("zh", []), "zh", "comment")
+        toc_title = short_toc_title(
+            token_text(chapter_title.get("en", []))
+            or token_text(chapter_title.get("ja", []))
+            or token_text(chapter_title.get("zh", []))
+        )
         number = str(chapter.get("number") or "")
-        out.append(rf"\TriAllChapter{{{tex_escape(number)}}}{brace(en_chapter)}{brace(ja_chapter)}{brace(zh_chapter)}")
+        out.append(
+            rf"\TriAllChapter{{{tex_escape(number)}}}{brace(en_chapter)}{brace(ja_chapter)}{brace(zh_chapter)}[{optional_arg_text(toc_title)}]"
+        )
         for paragraph in chapter.get("paragraphs", []):
             out.append(r"\TriAllParagraphStart")
             for unit in paragraph.get("units", []):
