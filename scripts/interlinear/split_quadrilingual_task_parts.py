@@ -192,6 +192,8 @@ def main() -> int:
                 "chunk_count": len(selected_chunks),
                 "chapter_count": len(selected_groups),
                 "chapter_range": [selected_groups[0][0], selected_groups[-1][0]],
+                "first_chapter_title_wenyan": first.get("chapter_title_wenyan"),
+                "last_chapter_title_wenyan": last.get("chapter_title_wenyan"),
                 "chunk_range": [selected_chunks[0]["chunk_id"], selected_chunks[-1]["chunk_id"]],
             }
         )

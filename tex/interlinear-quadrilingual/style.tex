@@ -213,11 +213,15 @@
   \mainmatter
 }
 
-\NewDocumentCommand{\QuadChapter}{m m m}{%
+\NewDocumentCommand{\QuadChapter}{m m m O{}}{%
   \clearpage
   \phantomsection
   \chapter*{#2}%
-  \addcontentsline{toc}{chapter}{#1\quad #2}%
+  \if\relax\detokenize{#4}\relax
+    \addcontentsline{toc}{chapter}{#1\quad #2}%
+  \else
+    \addcontentsline{toc}{chapter}{#1\quad #4}%
+  \fi
   \noindent{\small\color{BookNote}#3}\par
   \vspace{0.35em}
   \noindent\textcolor{BookRule}{\rule{\linewidth}{0.28pt}}\par

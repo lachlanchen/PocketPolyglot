@@ -457,6 +457,82 @@ def normalize_chapter_title(book_id: str, title: str) -> str:
     return tail
 
 
+def first_template_body(text: str, names: set[str]) -> str:
+    lowered = text.lower()
+    starts = [
+        lowered.find("{{" + name.lower())
+        for name in names
+        if lowered.find("{{" + name.lower()) >= 0
+    ]
+    if not starts:
+        return ""
+    index = min(starts)
+    depth = 1
+    end = index + 2
+    while end < len(text) and depth:
+        if text.startswith("{{", end):
+            depth += 1
+            end += 2
+        elif text.startswith("}}", end):
+            depth -= 1
+            end += 2
+        else:
+            end += 1
+    return text[index + 2 : end - 2] if depth == 0 else ""
+
+
+def top_level_template_field(body: str, field: str) -> str:
+    pattern = re.compile(
+        rf"(?:^|\|)\s*{re.escape(field)}\s*=\s*(.*?)(?=\|\s*[A-Za-z_][A-Za-z0-9_ -]*\s*=|\Z)",
+        re.S,
+    )
+    match = pattern.search(body)
+    return match.group(1).strip() if match else ""
+
+
+def clean_wiki_header_field(text: str) -> str:
+    text = clean_wiki_markup(text)
+    text = text.replace("\u3000", " ").replace("\xa0", " ")
+    text = re.sub(r"\s+", " ", text).strip()
+    text = text.replace("../", "").replace("《", "").replace("》", "")
+    return text.strip()
+
+
+def extract_raw_wiki_header_section(path: Path) -> str:
+    if not path.exists():
+        return ""
+    raw = path.read_text(encoding="utf-8", errors="replace")
+    body = first_template_body(raw, {"header", "header2"})
+    title = clean_wiki_header_field(top_level_template_field(body, "title")) if body else ""
+    section = clean_wiki_header_field(top_level_template_field(body, "section")) if body else ""
+    if "志" in title and "第" in title:
+        section_head = section.split(" ", 1)[0] if section else ""
+        if section_head and section_head not in title and len(section_head) <= 8:
+            return f"{title} {section_head}"
+        return title
+    if section:
+        return section
+    if title and title not in {"../", ".."}:
+        return title
+    for line in raw.splitlines()[:40]:
+        text = clean_text(clean_wiki_markup(line.replace("__TOC__", "")))
+        if text.startswith("後漢書卷") or text.startswith("漢書卷"):
+            return text.replace("　", " ").strip()
+    return ""
+
+
+def meaningful_chapter_title(book_id: str, title: str, header_text: str) -> str:
+    base = normalize_chapter_title(book_id, title)
+    header = str(header_text or "").replace("\u3000", " ").replace("\xa0", " ")
+    header = re.sub(r"\s+", " ", header).strip()
+    if book_id in {"han-shu", "hou-han-shu"} and header:
+        if header.startswith(("卷", "巻")):
+            return header
+        if base and header != base:
+            return f"{base} {header}"
+    return base
+
+
 def canonical_chuci_key(title: str) -> str:
     key = title_order_keys(title)[-1]
     return key.replace("招䰟", "招魂")
@@ -732,17 +808,18 @@ def manifest_items(book: dict[str, Any]) -> list[dict[str, Any]]:
             continue
         if should_skip_source_item(book["book_id"], title):
             continue
-        chapter_title = normalize_chapter_title(book["book_id"], title)
+        preliminary_chapter_title = normalize_chapter_title(book["book_id"], title)
         if book["book_id"] == "chuci":
-            if chapter_title in CHUCI_SKIP_TITLES:
+            if preliminary_chapter_title in CHUCI_SKIP_TITLES:
                 continue
-            if chapter_title in seen_titles:
+            if preliminary_chapter_title in seen_titles:
                 continue
-            seen_titles.add(chapter_title)
+            seen_titles.add(preliminary_chapter_title)
         html_rel = item.get("html")
         raw_rel = item.get("raw")
         html_path = source_dir / html_rel if html_rel else Path()
         raw_path = source_dir / raw_rel if raw_rel else Path()
+        raw_header_text = extract_raw_wiki_header_section(raw_path) if raw_path.exists() else ""
         if book["book_id"] == "yijing" and raw_rel and raw_path.exists():
             source_path = raw_path
             header_text, paragraphs = extract_raw_wiki_paragraphs(raw_path)
@@ -754,11 +831,15 @@ def manifest_items(book: dict[str, Any]) -> list[dict[str, Any]]:
             header_text, paragraphs = extract_raw_wiki_paragraphs(raw_path)
         else:
             continue
+        if raw_header_text:
+            header_text = raw_header_text
         if not paragraphs:
             continue
+        chapter_title = meaningful_chapter_title(book["book_id"], title, header_text)
         prepared.append(
             {
                 **item,
+                "chapter_title": chapter_title,
                 "source_path": source_path,
                 "header_text": header_text,
                 "paragraphs": paragraphs,
@@ -1044,7 +1125,7 @@ def prepare(book_id: str, *, max_chars: int, force: bool) -> None:
     chunks: list[dict[str, Any]] = []
     chunk_counter = 0
     for chapter_number, item in enumerate(source_items, start=1):
-        chapter_title = normalize_chapter_title(book_id, str(item["title"]))
+        chapter_title = str(item.get("chapter_title") or meaningful_chapter_title(book_id, str(item["title"]), str(item.get("header_text") or "")))
         chapter_paragraphs = item["paragraphs"]
         chapters.append({"chapter_title": chapter_title, "paragraphs": chapter_paragraphs})
         chapter_id = f"{book_id}-chapter-{chapter_number:02d}"

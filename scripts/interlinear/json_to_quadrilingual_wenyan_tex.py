@@ -107,8 +107,9 @@ def convert(
         chapter_title = chapter.get("title", {})
         main_chapter = render_layer(chapter_title.get(main_layer, []), main_layer, "main")
         chapter_subtitle = " / ".join(render_layer(chapter_title.get(layer, []), layer, "note") for layer in note_layers)
+        toc_title = tex_escape(main_plain({"title": chapter_title}, main_layer)).replace("[", "{[}").replace("]", "{]}")
         number = str(chapter.get("number") or "")
-        out.append(rf"\QuadChapter{{{tex_escape(number)}}}{brace(main_chapter)}{brace(chapter_subtitle)}")
+        out.append(rf"\QuadChapter{{{tex_escape(number)}}}{brace(main_chapter)}{brace(chapter_subtitle)}[{toc_title}]")
         for paragraph in chapter.get("paragraphs", []):
             out.append(r"\QuadParagraphStart")
             for unit in paragraph.get("units", []):

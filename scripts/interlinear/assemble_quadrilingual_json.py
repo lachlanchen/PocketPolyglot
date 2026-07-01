@@ -21,6 +21,20 @@ def load_jsonl(path: Path) -> list[dict[str, Any]]:
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
 
 
+def source_chapter_title(source: dict[str, Any], generated: dict[str, Any]) -> dict[str, Any]:
+    generated_title = generated.get("chapter", {}).get("title", {})
+    title = {
+        "wenyan": tokenize_zh(str(source.get("chapter_title_wenyan") or "")),
+        "zh_modern": tokenize_zh(str(source.get("chapter_title_zh_modern") or source.get("chapter_title_wenyan") or "")),
+        "ja_modern": tokenize_ja(str(source.get("chapter_title_ja_modern") or source.get("chapter_title_wenyan") or "")),
+        "en": tokenize_en(str(source.get("chapter_title_en") or "")),
+    }
+    for layer, tokens in list(title.items()):
+        if not tokens:
+            title[layer] = generated_title.get(layer, [])
+    return title
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", required=True)
@@ -65,7 +79,7 @@ def main() -> int:
             {
                 "id": chapter_id,
                 "number": source["chapter_number"],
-                "title": data["chapter"]["title"],
+                "title": source_chapter_title(source, data),
                 "paragraphs": [],
             },
         )
