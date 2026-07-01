@@ -770,7 +770,8 @@ def main() -> int:
         try:
             if args.no_compile:
                 build_pdf = (
-                    first_pdf(BUILD / edition.book_id / PROFILE_DIR / edition.edition / edition.mode)
+                    edition.precompiled_pdf
+                    or first_pdf(BUILD / edition.book_id / PROFILE_DIR / edition.edition / edition.mode)
                     or first_pdf(BUILD / edition.book_id / LEGACY_PROFILE_DIR / edition.edition / edition.mode)
                 )
                 if not build_pdf:

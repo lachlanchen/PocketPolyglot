@@ -9,9 +9,9 @@ This catalog is generated from local build outputs. It selects the richest avail
 
 All compiled editions use the larger PocketPolyglot font profile. Existing source PDFs and JSON are not modified.
 
-- Local compressed/exported PDFs: 103
+- Local compressed/exported PDFs: 119
 - GitHub-tracked PDFs under size cap: 102
-- Skipped source folders: 17
+- Skipped source folders: 3
 
 ## Gallery
 
@@ -21,10 +21,14 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | <img src="assets/max-language-previews/botchan.png" width="120" alt="botchan cover preview"> | `botchan` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/botchan/en-main-jp-zh/color/Botchan（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/botchan/en-main-jp-zh/blackwhite/Botchan（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/chuci.png" width="120" alt="chuci cover preview"> | `chuci` | `wenyan-en-jp-zh` | [color](docs/pocketpolyglot/books/wenyan-en-jp-zh/chuci/wenyan-main-quadrilingual/color/楚辭（英文・現代日本語・現代中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/wenyan-en-jp-zh/chuci/wenyan-main-quadrilingual/blackwhite/楚辭（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/chumon-no-ooi-ryoriten.png" width="120" alt="chumon-no-ooi-ryoriten cover preview"> | `chumon-no-ooi-ryoriten` | `jp-zh` | [color](docs/pocketpolyglot/books/jp-zh/chumon-no-ooi-ryoriten/jp-main/color/注文の多い料理店（中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/jp-zh/chumon-no-ooi-ryoriten/jp-main/blackwhite/注文の多い料理店（中文注・黑白）・最大語種・大字版.pdf) |
+| <img src="assets/max-language-previews/foguoji.png" width="120" alt="foguoji cover preview"> | `foguoji` | `wenyan-en-jp-zh` | local only | local only |
 |  | `genji-modern` | `en-jp-zh` | local only | [black-white](docs/pocketpolyglot/books/en-jp-zh/genji-modern/en-main-jp-zh/blackwhite/The Tale of Genji（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/ginga-tetsudo.png" width="120" alt="ginga-tetsudo cover preview"> | `ginga-tetsudo` | `jp-zh` | [color](docs/pocketpolyglot/books/jp-zh/ginga-tetsudo/jp-main/color/銀河鉄道の夜（中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/jp-zh/ginga-tetsudo/jp-main/blackwhite/銀河鉄道の夜（中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/gone-with-the-wind.png" width="120" alt="gone-with-the-wind cover preview"> | `gone-with-the-wind` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/gone-with-the-wind/en-main-jp-zh/color/Gone With the Wind（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/gone-with-the-wind/en-main-jp-zh/blackwhite/Gone With the Wind（日文・中文注・黑白）・最大語種・大字版.pdf) |
 |  | `han-shu` | `wenyan-en-jp-zh` | local only | [black-white](docs/pocketpolyglot/books/wenyan-en-jp-zh/han-shu/wenyan-main-quadrilingual/blackwhite/漢書（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
+| <img src="assets/max-language-previews/hou-han-shu-part-01.png" width="120" alt="hou-han-shu-part-01 cover preview"> | `hou-han-shu-part-01` | `wenyan-en-jp-zh` | local only | local only |
+| <img src="assets/max-language-previews/hou-han-shu-part-02.png" width="120" alt="hou-han-shu-part-02 cover preview"> | `hou-han-shu-part-02` | `wenyan-en-jp-zh` | local only | local only |
+| <img src="assets/max-language-previews/hou-han-shu-part-03.png" width="120" alt="hou-han-shu-part-03 cover preview"> | `hou-han-shu-part-03` | `wenyan-en-jp-zh` | local only | local only |
 | <img src="assets/max-language-previews/i-am-a-cat.png" width="120" alt="i-am-a-cat cover preview"> | `i-am-a-cat` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/i-am-a-cat/en-main-jp-zh/color/I Am a Cat（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/i-am-a-cat/en-main-jp-zh/blackwhite/I Am a Cat（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/inugami-curse.png" width="120" alt="inugami-curse cover preview"> | `inugami-curse` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/inugami-curse/en-main-jp-zh/color/The Inugami Curse（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/inugami-curse/en-main-jp-zh/blackwhite/The Inugami Curse（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/izu-no-odori.png" width="120" alt="izu-no-odori cover preview"> | `izu-no-odori` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/izu-no-odori/en-main-jp-zh/color/The Dancing Girl of Izu（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/izu-no-odori/en-main-jp-zh/blackwhite/The Dancing Girl of Izu（日文・中文注・黑白）・最大語種・大字版.pdf) |
@@ -47,8 +51,10 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | <img src="assets/max-language-previews/red-rising-3.png" width="120" alt="red-rising-3 cover preview"> | `red-rising-3` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/red-rising-3/en-main-jp-zh/color/Morning Star（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/red-rising-3/en-main-jp-zh/blackwhite/Morning Star（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/sanguozhi.png" width="120" alt="sanguozhi cover preview"> | `sanguozhi` | `wenyan-en-jp-zh` | [color](docs/pocketpolyglot/books/wenyan-en-jp-zh/sanguozhi/wenyan-main-quadrilingual/color/三國志（英文・現代日本語・現代中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/wenyan-en-jp-zh/sanguozhi/wenyan-main-quadrilingual/blackwhite/三國志（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/sanguozhi-pei-zhu.png" width="120" alt="sanguozhi-pei-zhu cover preview"> | `sanguozhi-pei-zhu` | `wenyan-en-jp-zh` | [color](docs/pocketpolyglot/books/wenyan-en-jp-zh/sanguozhi-pei-zhu/wenyan-main-quadrilingual/color/三國志裴松之注（英文・現代日本語・現代中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/wenyan-en-jp-zh/sanguozhi-pei-zhu/wenyan-main-quadrilingual/blackwhite/三國志裴松之注（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
+| <img src="assets/max-language-previews/shanhaijing.png" width="120" alt="shanhaijing cover preview"> | `shanhaijing` | `wenyan-en-jp-zh` | local only | local only |
 | <img src="assets/max-language-previews/shiji-aginti.png" width="120" alt="shiji-aginti cover preview"> | `shiji-aginti` | `wenyan-jp-zh` | [color](docs/pocketpolyglot/books/wenyan-jp-zh/shiji-aginti/wenyan-main-jp-zh/color/史記（現代日本語・現代中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/wenyan-jp-zh/shiji-aginti/wenyan-main-jp-zh/blackwhite/史記（現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/shijing.png" width="120" alt="shijing cover preview"> | `shijing` | `wenyan-en-jp-zh` | [color](docs/pocketpolyglot/books/wenyan-en-jp-zh/shijing/wenyan-main-quadrilingual/color/詩經（英文・現代日本語・現代中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/wenyan-en-jp-zh/shijing/wenyan-main-quadrilingual/blackwhite/詩經（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
+| <img src="assets/max-language-previews/shui-jing-zhu.png" width="120" alt="shui-jing-zhu cover preview"> | `shui-jing-zhu` | `wenyan-en-jp-zh` | local only | local only |
 | <img src="assets/max-language-previews/sichuan-folk-stories-vol1.png" width="120" alt="sichuan-folk-stories-vol1 cover preview"> | `sichuan-folk-stories-vol1` | `jp-zh` | [color](docs/pocketpolyglot/books/jp-zh/sichuan-folk-stories-vol1/jp-main/color/中国民間故事集成四川巻上（中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/jp-zh/sichuan-folk-stories-vol1/jp-main/blackwhite/中国民間故事集成四川巻上（中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/sishu-jizhu.png" width="120" alt="sishu-jizhu cover preview"> | `sishu-jizhu` | `jp-zh` | [color](docs/pocketpolyglot/books/jp-zh/sishu-jizhu/jp-main/color/四書章句集注（中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/jp-zh/sishu-jizhu/jp-main/blackwhite/四書章句集注（中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/sishu-jizhu-aginti.png" width="120" alt="sishu-jizhu-aginti cover preview"> | `sishu-jizhu-aginti` | `jp-zh` | [color](docs/pocketpolyglot/books/jp-zh/sishu-jizhu-aginti/jp-main/color/四書章句集注（中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/jp-zh/sishu-jizhu-aginti/jp-main/blackwhite/四書章句集注（中文注・黑白）・最大語種・大字版.pdf) |
@@ -62,7 +68,9 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | <img src="assets/max-language-previews/woman-in-the-dunes.png" width="120" alt="woman-in-the-dunes cover preview"> | `woman-in-the-dunes` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/woman-in-the-dunes/en-main-jp-zh/color/The Woman in the Dunes（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/woman-in-the-dunes/en-main-jp-zh/blackwhite/The Woman in the Dunes（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/wuthering-heights.png" width="120" alt="wuthering-heights cover preview"> | `wuthering-heights` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/wuthering-heights/en-main-jp-zh/color/Wuthering Heights（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/wuthering-heights/en-main-jp-zh/blackwhite/Wuthering Heights（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/xu-xiake-youji.png" width="120" alt="xu-xiake-youji cover preview"> | `xu-xiake-youji` | `wenyan-en-jp-zh` | [color](docs/pocketpolyglot/books/wenyan-en-jp-zh/xu-xiake-youji/wenyan-main-quadrilingual/color/徐霞客遊記（英文・現代日本語・現代中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/wenyan-en-jp-zh/xu-xiake-youji/wenyan-main-quadrilingual/blackwhite/徐霞客遊記（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
+| <img src="assets/max-language-previews/yijing.png" width="120" alt="yijing cover preview"> | `yijing` | `wenyan-en-jp-zh` | local only | local only |
 | <img src="assets/max-language-previews/zhuangzi.png" width="120" alt="zhuangzi cover preview"> | `zhuangzi` | `wenyan-en-jp-zh` | [color](docs/pocketpolyglot/books/wenyan-en-jp-zh/zhuangzi/wenyan-main-quadrilingual/color/莊子（英文・現代日本語・現代中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/wenyan-en-jp-zh/zhuangzi/wenyan-main-quadrilingual/blackwhite/莊子（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
+| <img src="assets/max-language-previews/zuozhuan.png" width="120" alt="zuozhuan cover preview"> | `zuozhuan` | `wenyan-en-jp-zh` | local only | local only |
 
 ## Inventory
 
@@ -78,6 +86,8 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | `chumon-no-ooi-ryoriten` | `jp-zh` | `jp-main` | `blackwhite` | 39 | 9.1 | 0.5 | yes | `artifacts/lingualleaf/books/jp-zh/chumon-no-ooi-ryoriten/jp-main/blackwhite/注文の多い料理店（中文注・黑白）・最大語種・大字版.pdf` |
 | `chumon-no-ooi-ryoriten` | `jp-zh` | `zh-main` | `color` | 39 | 5.5 | 0.6 | yes | `artifacts/lingualleaf/books/jp-zh/chumon-no-ooi-ryoriten/zh-main/color/要求太多的餐馆（日文注）・最大語種・大字版.pdf` |
 | `chumon-no-ooi-ryoriten` | `jp-zh` | `zh-main` | `blackwhite` | 40 | 9.1 | 0.5 | yes | `artifacts/lingualleaf/books/jp-zh/chumon-no-ooi-ryoriten/zh-main/blackwhite/要求太多的餐馆（日文注・黑白）・最大語種・大字版.pdf` |
+| `foguoji` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 305 | 7.2 | 7.2 | no | `artifacts/lingualleaf/books/wenyan-en-jp-zh/foguoji/wenyan-main-quadrilingual/color/佛國記（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
+| `foguoji` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 305 | 7.0 | 7.0 | no | `artifacts/lingualleaf/books/wenyan-en-jp-zh/foguoji/wenyan-main-quadrilingual/blackwhite/佛國記（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
 | `genji-modern` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 8787 | 42.5 | 39.4 | yes | `artifacts/lingualleaf/books/en-jp-zh/genji-modern/en-main-jp-zh/blackwhite/The Tale of Genji（日文・中文注・黑白）・最大語種・大字版.pdf` |
 | `ginga-tetsudo` | `jp-zh` | `jp-main` | `color` | 204 | 6.5 | 1.8 | yes | `artifacts/lingualleaf/books/jp-zh/ginga-tetsudo/jp-main/color/銀河鉄道の夜（中文注）・最大語種・大字版.pdf` |
 | `ginga-tetsudo` | `jp-zh` | `jp-main` | `blackwhite` | 205 | 8.9 | 1.6 | yes | `artifacts/lingualleaf/books/jp-zh/ginga-tetsudo/jp-main/blackwhite/銀河鉄道の夜（中文注・黑白）・最大語種・大字版.pdf` |
@@ -87,6 +97,12 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | `gone-with-the-wind` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 7057 | 38.7 | 33.1 | yes | `artifacts/lingualleaf/books/en-jp-zh/gone-with-the-wind/en-main-jp-zh/blackwhite/Gone With the Wind（日文・中文注・黑白）・最大語種・大字版.pdf` |
 | `han-shu` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 14692 | 96.9 | 96.9 | no | `artifacts/lingualleaf/books/wenyan-en-jp-zh/han-shu/wenyan-main-quadrilingual/color/漢書（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
 | `han-shu` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 14692 | 88.7 | 80.1 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/han-shu/wenyan-main-quadrilingual/blackwhite/漢書（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
+| `hou-han-shu-part-01` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 6725 | 47.1 | 47.1 | no | `artifacts/lingualleaf/books/wenyan-en-jp-zh/hou-han-shu-part-01/wenyan-main-quadrilingual/color/後漢書第一部（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
+| `hou-han-shu-part-01` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 6725 | 43.5 | 43.5 | no | `artifacts/lingualleaf/books/wenyan-en-jp-zh/hou-han-shu-part-01/wenyan-main-quadrilingual/blackwhite/後漢書第一部（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
+| `hou-han-shu-part-02` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 6762 | 47.0 | 47.0 | no | `artifacts/lingualleaf/books/wenyan-en-jp-zh/hou-han-shu-part-02/wenyan-main-quadrilingual/color/後漢書第二部（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
+| `hou-han-shu-part-02` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 6762 | 43.4 | 43.4 | no | `artifacts/lingualleaf/books/wenyan-en-jp-zh/hou-han-shu-part-02/wenyan-main-quadrilingual/blackwhite/後漢書第二部（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
+| `hou-han-shu-part-03` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 5506 | 38.4 | 38.4 | no | `artifacts/lingualleaf/books/wenyan-en-jp-zh/hou-han-shu-part-03/wenyan-main-quadrilingual/color/後漢書第三部（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
+| `hou-han-shu-part-03` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 5506 | 35.5 | 35.5 | no | `artifacts/lingualleaf/books/wenyan-en-jp-zh/hou-han-shu-part-03/wenyan-main-quadrilingual/blackwhite/後漢書第三部（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
 | `i-am-a-cat` | `en-jp-zh` | `en-main-jp-zh` | `color` | 2551 | 19.7 | 16.1 | yes | `artifacts/lingualleaf/books/en-jp-zh/i-am-a-cat/en-main-jp-zh/color/I Am a Cat（日文・中文注）・最大語種・大字版.pdf` |
 | `i-am-a-cat` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 2551 | 18.5 | 13.1 | yes | `artifacts/lingualleaf/books/en-jp-zh/i-am-a-cat/en-main-jp-zh/blackwhite/I Am a Cat（日文・中文注・黑白）・最大語種・大字版.pdf` |
 | `inugami-curse` | `en-jp-zh` | `en-main-jp-zh` | `color` | 1390 | 12.7 | 8.8 | yes | `artifacts/lingualleaf/books/en-jp-zh/inugami-curse/en-main-jp-zh/color/The Inugami Curse（日文・中文注）・最大語種・大字版.pdf` |
@@ -131,8 +147,12 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | `red-rising-3` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 3437 | 19.6 | 15.3 | yes | `artifacts/lingualleaf/books/en-jp-zh/red-rising-3/en-main-jp-zh/blackwhite/Morning Star（日文・中文注・黑白）・最大語種・大字版.pdf` |
 | `sanguozhi` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 6736 | 48.9 | 46.5 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/sanguozhi/wenyan-main-quadrilingual/color/三國志（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
 | `sanguozhi` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 6736 | 45.2 | 38.1 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/sanguozhi/wenyan-main-quadrilingual/blackwhite/三國志（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
+| `shanhaijing` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 713 | 11.7 | 11.7 | no | `artifacts/lingualleaf/books/wenyan-en-jp-zh/shanhaijing/wenyan-main-quadrilingual/color/山海經（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
+| `shanhaijing` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 713 | 11.4 | 11.4 | no | `artifacts/lingualleaf/books/wenyan-en-jp-zh/shanhaijing/wenyan-main-quadrilingual/blackwhite/山海經（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
 | `shijing` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 522 | 8.8 | 3.9 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/shijing/wenyan-main-quadrilingual/color/詩經（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
 | `shijing` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 522 | 8.6 | 3.4 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/shijing/wenyan-main-quadrilingual/blackwhite/詩經（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
+| `shui-jing-zhu` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 236 | 3.8 | 3.8 | no | `artifacts/lingualleaf/books/wenyan-en-jp-zh/shui-jing-zhu/wenyan-main-quadrilingual/color/水經注（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
+| `shui-jing-zhu` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 236 | 3.7 | 3.7 | no | `artifacts/lingualleaf/books/wenyan-en-jp-zh/shui-jing-zhu/wenyan-main-quadrilingual/blackwhite/水經注（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
 | `sichuan-folk-stories-vol1` | `jp-zh` | `jp-main` | `color` | 4540 | 28.1 | 26.4 | yes | `artifacts/lingualleaf/books/jp-zh/sichuan-folk-stories-vol1/jp-main/color/中国民間故事集成四川巻上（中文注）・最大語種・大字版.pdf` |
 | `sichuan-folk-stories-vol1` | `jp-zh` | `jp-main` | `blackwhite` | 4540 | 25.8 | 22.2 | yes | `artifacts/lingualleaf/books/jp-zh/sichuan-folk-stories-vol1/jp-main/blackwhite/中国民間故事集成四川巻上（中文注・黑白）・最大語種・大字版.pdf` |
 | `sichuan-folk-stories-vol1` | `jp-zh` | `zh-main` | `color` | 4665 | 28.3 | 26.5 | yes | `artifacts/lingualleaf/books/jp-zh/sichuan-folk-stories-vol1/zh-main/color/中国民间故事集成四川卷上（日文注）・最大語種・大字版.pdf` |
@@ -165,8 +185,12 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | `wuthering-heights` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 2106 | 15.8 | 10.9 | yes | `artifacts/lingualleaf/books/en-jp-zh/wuthering-heights/en-main-jp-zh/blackwhite/Wuthering Heights（日文・中文注・黑白）・最大語種・大字版.pdf` |
 | `xu-xiake-youji` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 9544 | 65.6 | 64.6 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/xu-xiake-youji/wenyan-main-quadrilingual/color/徐霞客遊記（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
 | `xu-xiake-youji` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 9544 | 60.2 | 52.2 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/xu-xiake-youji/wenyan-main-quadrilingual/blackwhite/徐霞客遊記（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
+| `yijing` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 1052 | 11.6 | 11.6 | no | `artifacts/lingualleaf/books/wenyan-en-jp-zh/yijing/wenyan-main-quadrilingual/color/周易（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
+| `yijing` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 1052 | 11.1 | 11.1 | no | `artifacts/lingualleaf/books/wenyan-en-jp-zh/yijing/wenyan-main-quadrilingual/blackwhite/周易（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
 | `zhuangzi` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 1552 | 14.4 | 10.9 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/zhuangzi/wenyan-main-quadrilingual/color/莊子（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
 | `zhuangzi` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 1552 | 13.6 | 9.1 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/zhuangzi/wenyan-main-quadrilingual/blackwhite/莊子（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
+| `zuozhuan` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 3992 | 29.5 | 29.5 | no | `artifacts/lingualleaf/books/wenyan-en-jp-zh/zuozhuan/wenyan-main-quadrilingual/color/春秋左氏傳（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
+| `zuozhuan` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 3992 | 27.5 | 27.5 | no | `artifacts/lingualleaf/books/wenyan-en-jp-zh/zuozhuan/wenyan-main-quadrilingual/blackwhite/春秋左氏傳（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
 | `sanguozhi-pei-zhu` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 12042 | 81.9 | 81.9 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/sanguozhi-pei-zhu/wenyan-main-quadrilingual/color/三國志裴松之注（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
 | `sanguozhi-pei-zhu` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 12042 | 75.1 | 67.2 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/sanguozhi-pei-zhu/wenyan-main-quadrilingual/blackwhite/三國志裴松之注（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
 | `shiji-aginti` | `wenyan-jp-zh` | `wenyan-main-jp-zh` | `color` | 6471 | 52.4 | 52.4 | yes | `artifacts/lingualleaf/books/wenyan-jp-zh/shiji-aginti/wenyan-main-jp-zh/color/史記（現代日本語・現代中文注）・最大語種・大字版.pdf` |
@@ -174,20 +198,6 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 
 ## Skipped
 
-- foguoji wenyan-main-quadrilingual color: no compiled PDF
-- foguoji wenyan-main-quadrilingual blackwhite: no compiled PDF
 - genji-modern en-main-jp-zh color: Stream has ended unexpectedly
 - hou-han-shu wenyan-main-quadrilingual color: no compiled PDF
 - hou-han-shu wenyan-main-quadrilingual blackwhite: no compiled PDF
-- hou-han-shu-part-01 wenyan-main-quadrilingual color: no compiled PDF
-- hou-han-shu-part-01 wenyan-main-quadrilingual blackwhite: no compiled PDF
-- hou-han-shu-part-02 wenyan-main-quadrilingual color: no compiled PDF
-- hou-han-shu-part-02 wenyan-main-quadrilingual blackwhite: no compiled PDF
-- hou-han-shu-part-03 wenyan-main-quadrilingual color: no compiled PDF
-- hou-han-shu-part-03 wenyan-main-quadrilingual blackwhite: no compiled PDF
-- shui-jing-zhu wenyan-main-quadrilingual color: no compiled PDF
-- shui-jing-zhu wenyan-main-quadrilingual blackwhite: no compiled PDF
-- yijing wenyan-main-quadrilingual color: no compiled PDF
-- yijing wenyan-main-quadrilingual blackwhite: no compiled PDF
-- zuozhuan wenyan-main-quadrilingual color: no compiled PDF
-- zuozhuan wenyan-main-quadrilingual blackwhite: no compiled PDF
