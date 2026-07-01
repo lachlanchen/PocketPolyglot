@@ -533,6 +533,49 @@ def meaningful_chapter_title(book_id: str, title: str, header_text: str) -> str:
     return base
 
 
+def is_source_footer_paragraph(text: str) -> bool:
+    text = clean_text(text)
+    return (
+        text.startswith("此作品在全世界都属于公有领域")
+        or text.startswith("This work is in the public domain")
+        or text.startswith("この作品はパブリックドメイン")
+    )
+
+
+def expand_chapter_anchors(book: dict[str, Any], items: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    anchors = book.get("chapter_anchors") or []
+    if not anchors:
+        return items
+    expanded: list[dict[str, Any]] = []
+    missing = {str(anchor["starts_with"]) for anchor in anchors}
+    for item in items:
+        current: dict[str, Any] | None = None
+        for paragraph in item["paragraphs"]:
+            matched_anchor = next(
+                (anchor for anchor in anchors if paragraph.startswith(str(anchor["starts_with"]))),
+                None,
+            )
+            if matched_anchor:
+                missing.discard(str(matched_anchor["starts_with"]))
+                current = {
+                    **item,
+                    "chapter_title": str(matched_anchor["title_wenyan"]),
+                    "chapter_title_wenyan": str(matched_anchor["title_wenyan"]),
+                    "chapter_title_zh_modern": str(matched_anchor.get("title_zh_modern") or matched_anchor["title_wenyan"]),
+                    "chapter_title_ja_modern": str(matched_anchor.get("title_ja_modern") or matched_anchor["title_wenyan"]),
+                    "chapter_title_en": str(matched_anchor.get("title_en") or matched_anchor["title_wenyan"]),
+                    "paragraphs": [],
+                }
+                expanded.append(current)
+            if current is None:
+                current = {**item, "paragraphs": []}
+                expanded.append(current)
+            current["paragraphs"].append(paragraph)
+    if missing:
+        raise ValueError(f"{book['book_id']}: missing chapter anchors: {sorted(missing)!r}")
+    return [item for item in expanded if item["paragraphs"]]
+
+
 def canonical_chuci_key(title: str) -> str:
     key = title_order_keys(title)[-1]
     return key.replace("招䰟", "招魂")
@@ -833,6 +876,7 @@ def manifest_items(book: dict[str, Any]) -> list[dict[str, Any]]:
             continue
         if raw_header_text:
             header_text = raw_header_text
+        paragraphs = [paragraph for paragraph in paragraphs if not is_source_footer_paragraph(paragraph)]
         if not paragraphs:
             continue
         chapter_title = meaningful_chapter_title(book["book_id"], title, header_text)
@@ -847,6 +891,7 @@ def manifest_items(book: dict[str, Any]) -> list[dict[str, Any]]:
             }
         )
     prepared.sort(key=lambda item: item["sort_key"])
+    prepared = expand_chapter_anchors(book, prepared)
     return prepared
 
 
@@ -1126,8 +1171,12 @@ def prepare(book_id: str, *, max_chars: int, force: bool) -> None:
     chunk_counter = 0
     for chapter_number, item in enumerate(source_items, start=1):
         chapter_title = str(item.get("chapter_title") or meaningful_chapter_title(book_id, str(item["title"]), str(item.get("header_text") or "")))
+        chapter_title_wenyan = str(item.get("chapter_title_wenyan") or chapter_title)
+        chapter_title_zh_modern = str(item.get("chapter_title_zh_modern") or chapter_title_wenyan)
+        chapter_title_ja_modern = str(item.get("chapter_title_ja_modern") or chapter_title_wenyan)
+        chapter_title_en = str(item.get("chapter_title_en") or f"{book['book_title_en']} {chapter_number}: {chapter_title_wenyan}")
         chapter_paragraphs = item["paragraphs"]
-        chapters.append({"chapter_title": chapter_title, "paragraphs": chapter_paragraphs})
+        chapters.append({"chapter_title": chapter_title_wenyan, "paragraphs": chapter_paragraphs})
         chapter_id = f"{book_id}-chapter-{chapter_number:02d}"
         for paragraph_number, paragraph in enumerate(chapter_paragraphs, start=1):
             for part_number, piece in enumerate(split_paragraph(paragraph, max_chars), start=1):
@@ -1146,11 +1195,11 @@ def prepare(book_id: str, *, max_chars: int, force: bool) -> None:
                         "chunk_id": chunk_id,
                         "chapter_id": chapter_id,
                         "chapter_number": chapter_number,
-                        "chapter_title_wenyan": chapter_title,
-                        "chapter_title_zh_modern": book.get("book_title_zh", book["book_title_wenyan"]) if chapter_number == 0 else chapter_title,
-                        "chapter_title_ja_modern": book.get("book_title_ja", book["book_title_wenyan"]) if chapter_number == 0 else chapter_title,
-                        "chapter_title_en": f"{book['book_title_en']} {chapter_number}: {chapter_title}",
-                        "section_title_wenyan": f"{chapter_title}{section_suffix}",
+                        "chapter_title_wenyan": chapter_title_wenyan,
+                        "chapter_title_zh_modern": chapter_title_zh_modern,
+                        "chapter_title_ja_modern": chapter_title_ja_modern,
+                        "chapter_title_en": chapter_title_en,
+                        "section_title_wenyan": f"{chapter_title_wenyan}{section_suffix}",
                         "source_spine_lang": "wenyan",
                         "paragraphs": [{"id": paragraph_id, "wenyan": piece}],
                         "reference": broad_references(book, chapter_number),
