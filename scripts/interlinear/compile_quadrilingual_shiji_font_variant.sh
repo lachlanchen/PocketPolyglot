@@ -44,12 +44,10 @@ esac
 
 base_dir="build/$book_id/${main_layer}-main-quadrilingual/$color_mode"
 base_source="$base_dir/source.tex"
-if [[ ! -f "$base_source" ]]; then
-  bash scripts/interlinear/compile_quadrilingual_wenyan_book.sh \
-    --book-id "$book_id" \
-    --main-layer "$main_layer" \
-    --color-mode "$color_mode"
-fi
+bash scripts/interlinear/compile_quadrilingual_wenyan_book.sh \
+  --book-id "$book_id" \
+  --main-layer "$main_layer" \
+  --color-mode "$color_mode"
 if [[ ! -f "$base_source" ]]; then
   echo "Missing source TeX: $base_source" >&2
   exit 1
