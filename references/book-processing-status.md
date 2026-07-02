@@ -103,7 +103,7 @@ reference only.
 
 | Priority | Proposed ID | Title | Source Path | Current Status | Next Step |
 |---:|---|---|---|---|---|
-| J1 | `manyoshu` | 万葉集 / Man'yoshu / 万叶集 | `sources/manyoshu` | Paused; 20 volumes / 4562 chunks prepared; 3106/4562 valid chunks saved as of 2026-07-02 | Resume as a single-book run only. Use Japanese Wikisource kundoku as the source spine; English anthology references are partial; Chinese is generated. |
+| J1 | `manyoshu` | 万葉集 / Man'yoshu / 万叶集 | `sources/manyoshu` | Running as the only resumed book; 20 volumes / 4562 chunks prepared; restarted from 3106/4562 valid chunks on 2026-07-02 | Active sessions: `zhjpbook-manyoshu-onebyone`, `zhjpbook-manyoshu-onebyone-repair`, and finalizer `zhjpbook-manyoshu-onebyone-finalize`. Use Japanese Wikisource kundoku as the source spine; English anthology references are partial; Chinese is generated. |
 | J2 | `kokin-wakashu` | 古今和歌集 / Kokin Wakashu | `sources/kokin-wakashu` | Launchable; 23 sections / 1123 chunks prepared | Use Japanese Wikisource plus local modern-translation EPUB as references; English anthology references are partial; Chinese is generated. |
 
 ## Prepared Bible Trilingual Task
