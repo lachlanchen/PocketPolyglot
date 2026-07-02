@@ -105,6 +105,23 @@ finalize_quadrilingual() {
 run_quadrilingual_book() {
   local book_id="$1"
   echo "queue_start_quadrilingual=$book_id"
+  local plan="books/$book_id/book-plan.json"
+  local skip_marker="books/$book_id/work/quadrilingual/queue/skipped-source-prep-required.ok"
+  if [[ -f "$plan" ]] && [[ ! -f "books/$book_id/work/quadrilingual/chunks/manifest.json" ]]; then
+    local launchable
+    launchable="$(jq -r '.launchable // false' "$plan")"
+    if [[ "$launchable" != "true" ]]; then
+      mkdir -p "$(dirname "$skip_marker")"
+      {
+        date -Is
+        echo "book_id=$book_id"
+        echo "reason=book plan is source-prepared only and has no runnable quadrilingual manifest"
+        echo "next_step=$(jq -r '.next_step // "prepare source markdown and chunks first"' "$plan")"
+      } > "$skip_marker"
+      echo "queue_skip_quadrilingual=$book_id marker=$skip_marker"
+      return 0
+    fi
+  fi
   prepare_quadrilingual "$book_id"
   while true; do
     if progress_complete "$book_id"; then
