@@ -43,6 +43,10 @@ prepare_quadrilingual() {
       python scripts/interlinear/prepare_shishuo_xinyu_quadrilingual.py \
         --max-chars "$prepare_max_chars"
       ;;
+    zizhi-tongjian)
+      python scripts/interlinear/prepare_zizhi_tongjian_quadrilingual.py \
+        --max-chars "${ZIZHI_PREPARE_MAX_CHARS:-1600}"
+      ;;
     *)
       python scripts/interlinear/prepare_classical_quadrilingual_task.py \
         --book-id "$book_id" \
@@ -107,7 +111,7 @@ run_quadrilingual_book() {
   echo "queue_start_quadrilingual=$book_id"
   local plan="books/$book_id/book-plan.json"
   local skip_marker="books/$book_id/work/quadrilingual/queue/skipped-source-prep-required.ok"
-  if [[ -f "$plan" ]] && [[ ! -f "books/$book_id/work/quadrilingual/chunks/manifest.json" ]]; then
+  if [[ "$book_id" != "zizhi-tongjian" && -f "$plan" ]] && [[ ! -f "books/$book_id/work/quadrilingual/chunks/manifest.json" ]]; then
     local launchable
     launchable="$(jq -r '.launchable // false' "$plan")"
     if [[ "$launchable" != "true" ]]; then
