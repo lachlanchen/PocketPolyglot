@@ -61,7 +61,14 @@ done
 
 ALLOW_MISSING=0 bash scripts/interlinear/compile_trilingual_book_12_previews.sh "$book_id"
 for color_mode in color blackwhite; do
-  bash scripts/interlinear/compile_trilingual_en_notes_book.sh --book-id "$book_id" --color-mode "$color_mode"
+  case "$book_id" in
+    kokin-wakashu|manyoshu)
+      bash scripts/interlinear/compile_trilingual_source_notes_book.sh --book-id "$book_id" --color-mode "$color_mode"
+      ;;
+    *)
+      bash scripts/interlinear/compile_trilingual_en_notes_book.sh --book-id "$book_id" --color-mode "$color_mode"
+      ;;
+  esac
 done
 python scripts/interlinear/export_max_language_shiji_catalog.py --book "$book_id" --force-compile --force-compress --no-readme --no-manifest
 python scripts/books/sync_trilingual_pair_book_to_nutstore.py "$book_id"

@@ -47,6 +47,16 @@ FAMILY_PRIORITY = {
 }
 
 
+def edition_priority(family: str, edition: str) -> int:
+    if family == "wayakana-en-jp-zh":
+        return 10 if edition.startswith("wayakana-main") else 0
+    if family == "wenyan-en-jp-zh":
+        return 10 if edition.startswith("wenyan-main") else 0
+    if family == "en-jp-zh":
+        return 10 if edition.startswith("en-main") else 0
+    return 0
+
+
 def clean_title(filename: str, variant: str) -> str:
     title = filename.removesuffix(".pdf")
     title = title.replace("・最大語種・史記字級", "")
@@ -81,7 +91,13 @@ def discover(source_root: Path, book_id: str) -> list[dict[str, str | Path]]:
     if not records:
         return records
     best = max(FAMILY_PRIORITY.get(str(record["family"]), 0) for record in records)
-    return [record for record in records if FAMILY_PRIORITY.get(str(record["family"]), 0) == best]
+    records = [record for record in records if FAMILY_PRIORITY.get(str(record["family"]), 0) == best]
+    best_edition = max(edition_priority(str(record["family"]), str(record["edition"])) for record in records)
+    return [
+        record
+        for record in records
+        if edition_priority(str(record["family"]), str(record["edition"])) == best_edition
+    ]
 
 
 def copy_file(src: Path, dst: Path) -> None:

@@ -251,8 +251,6 @@ def bilingual_jp_overrides() -> str:
 
 def candidate_for(book_dir: Path, rel_edition: str, family: str, style: str, macro: str, overrides: str) -> list[Edition]:
     out: list[Edition] = []
-    if family == "en-jp-zh" and book_dir.name in JAPANESE_CLASSICAL_SOURCE_BOOKS:
-        family = "wayakana-en-jp-zh"
     for mode in ("color", "blackwhite"):
         large_font_pdf = first_pdf(book_dir / rel_edition / "large-font" / mode)
         if large_font_pdf is not None:
@@ -326,16 +324,28 @@ def discover_editions() -> list[Edition]:
                 quadrilingual_overrides(),
             )
         )
-        family_editions.extend(
-            candidate_for(
-                book_dir,
-                "en-main-jp-zh",
-                "en-jp-zh",
-                "tex/interlinear-trilingual-pair/style.tex",
-                "TriAllSource",
-                trilingual_overrides(),
+        if book_dir.name in JAPANESE_CLASSICAL_SOURCE_BOOKS:
+            family_editions.extend(
+                candidate_for(
+                    book_dir,
+                    "wayakana-main-en-zh",
+                    "wayakana-en-jp-zh",
+                    "tex/interlinear-trilingual-pair/style.tex",
+                    "TriSourceNotesSource",
+                    trilingual_overrides(),
+                )
             )
-        )
+        else:
+            family_editions.extend(
+                candidate_for(
+                    book_dir,
+                    "en-main-jp-zh",
+                    "en-jp-zh",
+                    "tex/interlinear-trilingual-pair/style.tex",
+                    "TriAllSource",
+                    trilingual_overrides(),
+                )
+            )
         if not family_editions:
             family_editions.extend(
                 candidate_for(

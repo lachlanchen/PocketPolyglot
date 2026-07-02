@@ -39,6 +39,16 @@ FAMILY_PRIORITY = {
 }
 
 
+def edition_priority(family: str, edition: str) -> int:
+    if family == "wayakana-en-jp-zh":
+        return 10 if edition.startswith("wayakana-main") else 0
+    if family == "wenyan-en-jp-zh":
+        return 10 if edition.startswith("wenyan-main") else 0
+    if family == "en-jp-zh":
+        return 10 if edition.startswith("en-main") else 0
+    return 0
+
+
 def clean_title(filename: str, variant: str) -> str:
     title = filename.removesuffix(".pdf")
     title = title.replace("・最大語種・史記字級", "")
@@ -75,10 +85,18 @@ def pdf_records(source_root: Path) -> list[dict[str, str | Path]]:
         book_id = str(record["book_id"])
         priority = FAMILY_PRIORITY.get(str(record["family"]), 0)
         best_family[book_id] = max(best_family.get(book_id, 0), priority)
+    best_edition: dict[str, int] = {}
+    for record in candidates:
+        book_id = str(record["book_id"])
+        if FAMILY_PRIORITY.get(str(record["family"]), 0) != best_family.get(book_id, 0):
+            continue
+        priority = edition_priority(str(record["family"]), str(record["edition"]))
+        best_edition[book_id] = max(best_edition.get(book_id, 0), priority)
     return [
         record
         for record in candidates
         if FAMILY_PRIORITY.get(str(record["family"]), 0) == best_family.get(str(record["book_id"]), 0)
+        and edition_priority(str(record["family"]), str(record["edition"])) == best_edition.get(str(record["book_id"]), 0)
     ]
 
 

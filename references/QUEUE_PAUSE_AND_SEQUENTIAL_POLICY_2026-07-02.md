@@ -63,3 +63,11 @@ In these labels, `jp` and `zh` mean modern Japanese and modern Chinese unless
 an explicit source layer such as `wenyan`, `wayakana`, or `ar` is present.
 Pair-only PDFs may be copied to `/home/lachlan/Nutstore Files/Projects/LinguaLeaf`
 for archival browsing, but Share should stay maximum-language only.
+
+For `wayakana-*` books, the public maximum-language edition must not use
+English as the main text. The original Japanese source layer, such as waka/kana
+or classical Japanese prose, is the main stream, matching the way `wenyan-*`
+uses the original Chinese source as the main stream. If a separate modern
+Japanese layer has not yet been backfilled, publish source Japanese with the
+available English and modern Chinese notes, and keep the edition path explicit
+as `wayakana-main-en-zh` rather than relabeling an English-main PDF.

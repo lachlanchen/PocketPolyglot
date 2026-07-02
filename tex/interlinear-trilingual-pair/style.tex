@@ -329,3 +329,86 @@
   \end{minipage}\par
   \vspace{0.16em}
 }
+
+\NewDocumentCommand{\TriSourcePdfMeta}{m m}{%
+  \hypersetup{pdftitle={#1 / English and Chinese notes},pdfauthor={#2}}%
+}
+
+\NewDocumentCommand{\TriSourceTitle}{m m m m m m m m}{%
+  \frontmatter
+  \thispagestyle{empty}
+  \if\relax\detokenize{#8}\relax
+  \else
+    \newgeometry{margin=0pt}%
+    \IfFileExists{#8}{%
+      \noindent\includegraphics[width=\paperwidth,height=\paperheight]{#8}\par
+      \clearpage
+    }{}%
+    \restoregeometry
+  \fi
+  \thispagestyle{empty}
+  \vspace*{0.12\textheight}
+  {\centering
+    {\Large #1\par}
+    \vspace{0.55em}
+    {\small\color{BookNote}#2\par}
+    \vspace{0.35em}
+    {\small\color{BookNote}#3\par}
+    \vspace{0.9em}
+    {\small 和歌仮名 main / English + 中文 notes\par}
+    \vspace{0.9em}
+    {\normalsize #4\par}
+    \vfill
+    {\sffamily\fontsize{6.2pt}{8pt}\selectfont #5\quad #6\par #7\par}
+    \vspace{0.8em}
+    \GrammarLegend\par
+  }
+  \clearpage
+  \tableofcontents
+  \clearpage
+  \mainmatter
+}
+
+\NewDocumentCommand{\TriSourceChapter}{m m m m O{}}{%
+  \clearpage
+  \phantomsection
+  \chapter*{#2}%
+  \if\relax\detokenize{#5}\relax
+    \if\relax\detokenize{#1}\relax
+      \addcontentsline{toc}{chapter}{#2}%
+    \else
+      \addcontentsline{toc}{chapter}{#1\quad #2}%
+    \fi
+  \else
+    \if\relax\detokenize{#1}\relax
+      \addcontentsline{toc}{chapter}{#5}%
+    \else
+      \addcontentsline{toc}{chapter}{#1\quad #5}%
+    \fi
+  \fi
+  \noindent{\small\color{BookNote}#3}\par
+  \vspace{0.15em}
+  \noindent{\small\color{BookNote}#4}\par
+  \vspace{0.35em}
+  \noindent\textcolor{BookRule}{\rule{\linewidth}{0.28pt}}\par
+  \vspace{0.45em}
+}
+
+\newcommand{\TriSourceParagraphStart}{\par\Needspace{6\baselineskip}}
+\newcommand{\TriSourceParagraphEnd}{\par\vspace{0.46em}}
+
+\NewDocumentCommand{\TriSourceUnit}{m m m}{%
+  \Needspace{6\baselineskip}%
+  \noindent #1\par
+  \vspace{0.02em}
+  \noindent\hspace*{1.15em}%
+  \begin{minipage}{0.86\linewidth}
+    \TinyLabel{EN}\quad #2%
+  \end{minipage}\par
+  \vspace{0.04em}
+  \noindent\hspace*{1.15em}%
+  \begin{minipage}{0.86\linewidth}
+    \TinyLabel{中}\quad #3%
+  \end{minipage}\par
+  \vspace{0.16em}
+}
