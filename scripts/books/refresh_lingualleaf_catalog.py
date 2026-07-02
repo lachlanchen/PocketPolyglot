@@ -15,6 +15,7 @@ It does not compile or compress PDFs.
 from __future__ import annotations
 
 import html
+import json
 import re
 import shutil
 from dataclasses import dataclass
@@ -26,6 +27,8 @@ ROOT = Path(__file__).resolve().parents[2]
 LEAF = ROOT.parent / "LinguaLeaf"
 LAZYLEARN = ROOT.parent / "LazyLearn"
 PDF_ROOT = LEAF / "docs" / "pocketpolyglot" / "books"
+LEAF_MANIFEST_JSON = LEAF / "references" / "max-language-large-font-exports.json"
+LEAF_MANIFEST_MD = LEAF / "references" / "MAX_LANGUAGE_LARGE_FONT_EXPORTS.md"
 LOCAL_PREVIEW_ROOT = ROOT / "assets" / "max-language-previews"
 LEAF_PREVIEW_ROOT = LEAF / "assets" / "max-language-previews"
 LAZYLEARN_PREVIEW_ROOT = LAZYLEARN / "figs" / "pocketpolyglot"
@@ -38,14 +41,19 @@ LAZYLEARN_READER_BASE = "https://learn.lazying.art/pdf-reader.html"
 FAMILY_ORDER = {
     "en-jp-zh": 1,
     "jp-zh": 2,
-    "wenyan-en-jp-zh": 3,
-    "wenyan-jp-zh": 4,
+    "wayakana-en-jp-zh": 3,
+    "ar-en-jp-zh": 4,
+    "arabic-en-jp-zh": 4,
+    "wenyan-en-jp-zh": 5,
+    "wenyan-jp-zh": 6,
 }
 
 EDITION_LABELS = {
     "en-main-jp-zh": "English main · 日本語 · 中文",
     "jp-main": "日本語 main · 中文",
     "zh-main": "中文 main · 日本語",
+    "wayakana-main-en-zh": "和歌仮名 main · English · 中文",
+    "arabic-main-quadrilingual": "العربية main · English · 日本語 · 中文",
     "wenyan-main-quadrilingual": "文言文 main · English · 日本語 · 中文",
     "wenyan-main-jp-zh": "文言文 main · 日本語 · 中文",
 }
@@ -141,6 +149,68 @@ def markdown_table(rows: list[CatalogRow], *, preview_prefix: str, link_mode: st
     return "\n".join(lines)
 
 
+def bytes_mib(path: Path) -> str:
+    return f"{path.stat().st_size / 1024 / 1024:.1f}"
+
+
+def manifest_records(rows: list[CatalogRow]) -> list[dict[str, str]]:
+    records: list[dict[str, str]] = []
+    for row in rows:
+        preview = preview_path(row.book_id, "assets/max-language-previews")
+        for mode, rel in (("color", row.color_rel), ("blackwhite", row.bw_rel)):
+            if not rel:
+                continue
+            pdf = LEAF / rel
+            records.append(
+                {
+                    "book_id": row.book_id,
+                    "family": row.family,
+                    "edition": row.edition,
+                    "mode": mode,
+                    "export_pdf": rel,
+                    "tracked_pdf": rel,
+                    "preview": preview,
+                    "export_mib": bytes_mib(pdf) if pdf.exists() else "",
+                    "status": "ok" if pdf.exists() else "missing",
+                }
+            )
+    return records
+
+
+def write_lingualleaf_manifest(rows: list[CatalogRow]) -> None:
+    records = manifest_records(rows)
+    LEAF_MANIFEST_JSON.parent.mkdir(parents=True, exist_ok=True)
+    LEAF_MANIFEST_JSON.write_text(
+        json.dumps(
+            {
+                "source": "docs/pocketpolyglot/books",
+                "generated_by": "scripts/books/refresh_lingualleaf_catalog.py",
+                "rows": records,
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    LEAF_MANIFEST_MD.write_text(
+        "\n".join(
+            [
+                "# Maximum-Language Large-Font Exports",
+                "",
+                "Generated from `docs/pocketpolyglot/books/` by `scripts/books/refresh_lingualleaf_catalog.py`.",
+                "",
+                f"Catalog rows: {len(rows)}",
+                f"PDF entries: {len(records)}",
+                "",
+                markdown_table(rows, preview_prefix="assets/max-language-previews", link_mode="relative"),
+                "",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+
 def html_gallery(rows: list[CatalogRow]) -> str:
     cards = [
         '<section class="published-books pocket-polyglot-showcase pocketpolyglot-showcase" id="pocketpolyglot">',
@@ -198,7 +268,7 @@ def replace_section(path: Path, marker: str, body: str) -> None:
 def update_lingualleaf_intro(rows: list[CatalogRow]) -> None:
     path = LEAF / "README.md"
     text = path.read_text(encoding="utf-8")
-    pdf_count = len([rel for row in rows for rel in (row.color_rel, row.bw_rel) if rel])
+    pdf_count = len(list(PDF_ROOT.rglob("*.pdf")))
     preview_count = len(list(LEAF_PREVIEW_ROOT.glob("*.png")))
     families = ", ".join(f"`{item}`" for item in sorted({row.family for row in rows}, key=lambda x: FAMILY_ORDER.get(x, 99)))
     text = re.sub(r"- \d+ compressed final PDFs under `docs/pocketpolyglot/books/`\.", f"- {pdf_count} compressed final PDFs under `docs/pocketpolyglot/books/`.", text)
@@ -208,6 +278,7 @@ def update_lingualleaf_intro(rows: list[CatalogRow]) -> None:
 
 
 def build_sections(rows: list[CatalogRow]) -> None:
+    write_lingualleaf_manifest(rows)
     leaf_section = "\n".join(
         [
             "## Maximum-Language Pocket Editions",
