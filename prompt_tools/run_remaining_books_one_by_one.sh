@@ -38,9 +38,17 @@ progress_complete() {
 
 prepare_quadrilingual() {
   local book_id="$1"
-  python scripts/interlinear/prepare_classical_quadrilingual_task.py \
-    --book-id "$book_id" \
-    --max-chars "$prepare_max_chars"
+  case "$book_id" in
+    shishuo-xinyu)
+      python scripts/interlinear/prepare_shishuo_xinyu_quadrilingual.py \
+        --max-chars "$prepare_max_chars"
+      ;;
+    *)
+      python scripts/interlinear/prepare_classical_quadrilingual_task.py \
+        --book-id "$book_id" \
+        --max-chars "$prepare_max_chars"
+      ;;
+  esac
 }
 
 start_quadrilingual_if_needed() {

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "book_id": "shishuo-xinyu",
-  "status": "prepared_sources_only",
-  "launchable": false,
+  "status": "launchable",
+  "launchable": true,
   "task_mode": "quadrilingual_wenyan_main",
   "source_language": "wenyan",
   "default_note_order": {
@@ -34,27 +34,18 @@
   "author": "劉義慶",
   "author_reading_zh": "liú yì qìng",
   "author_reading_ja": "りゅう ぎけい",
-  "book_description": "世說新語 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays. The task keeps the Chinese annotation PDF as a meaning/commentary reference and uses the English translation PDF where aligned.",
+  "book_description": "世說新語 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
   "source_paths": {
     "classical_source": "sources/shishuo-xinyu/zh/世說新語.pdf",
     "modern_chinese_commentary": "sources/shishuo-xinyu/zh/世说新语笺疏.pdf",
     "english_reference": "sources/shishuo-xinyu/en/Shih-shuo hsin-yü - A New Account of Tales of the World.pdf",
-    "wenyan_markdown": "books/shishuo-xinyu/markdown/wenyan.md",
-    "reference_markdown": "books/shishuo-xinyu/markdown/references.md"
+    "wenyan_markdown": "books/shishuo-xinyu/markdown/wenyan.md"
   },
-  "generation_policy": {
-    "preserve_wenyan": true,
-    "preserve_chinese_commentary_as_notes": true,
-    "generate_missing_modern_chinese": true,
-    "generate_missing_modern_japanese": true,
-    "generate_missing_english": true,
-    "use_existing_english_only_when_section_matches": true
-  },
-  "next_step": "Extract/OCR the Chinese source, annotation PDF, and English translation to reviewed Markdown, then split by original category and paragraph before generating quadrilingual JSON.",
   "chunks_jsonl": "books/shishuo-xinyu/work/quadrilingual/chunks/chunks.jsonl",
   "chunks_manifest": "books/shishuo-xinyu/work/quadrilingual/chunks/manifest.json",
   "raw_chunk_dir": "books/shishuo-xinyu/work/quadrilingual/interlinear/chunks",
   "assembled_json": "books/shishuo-xinyu/work/quadrilingual/preview/shishuo-xinyu.partial.json",
   "build_root": "build/shishuo-xinyu/wenyan-main-quadrilingual",
-  "prepared_at": "2026-06-26T00:00:00+08:00"
+  "cover_image": "assets/covers/shishuo-xinyu/cover.png",
+  "prepared_at": "2026-07-02T15:22:10.584747+00:00"
 }
