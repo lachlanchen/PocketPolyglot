@@ -59,8 +59,14 @@ COVER_ROOT = ROOT / "assets" / "covers"
 FAMILY_PRIORITY = {
     "wenyan-en-jp-zh": 3,
     "wenyan-jp-zh": 2.5,
+    "wayakana-en-jp-zh": 2.25,
     "en-jp-zh": 2,
     "jp-zh": 1,
+}
+
+JAPANESE_CLASSICAL_SOURCE_BOOKS = {
+    "kokin-wakashu",
+    "manyoshu",
 }
 
 
@@ -245,6 +251,8 @@ def bilingual_jp_overrides() -> str:
 
 def candidate_for(book_dir: Path, rel_edition: str, family: str, style: str, macro: str, overrides: str) -> list[Edition]:
     out: list[Edition] = []
+    if family == "en-jp-zh" and book_dir.name in JAPANESE_CLASSICAL_SOURCE_BOOKS:
+        family = "wayakana-en-jp-zh"
     for mode in ("color", "blackwhite"):
         large_font_pdf = first_pdf(book_dir / rel_edition / "large-font" / mode)
         if large_font_pdf is not None:

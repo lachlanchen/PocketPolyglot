@@ -44,3 +44,22 @@ batch. A book run should finish the full loop before the next book starts:
 Bible and Quran stay at the end. Quran Arabic-main is already complete; any
 reverse-main Quran editions wait until the other active queue work is complete
 and the user explicitly asks for them.
+
+## Nutstore Share Rule
+
+`/home/lachlan/Nutstore Files/Share/LinguaLeaf` is a public browsing folder and
+should contain only maximum-language large-font editions. Do not put the 12
+intermediate pair PDFs there by default.
+
+Allowed public Share families:
+
+- `wenyan-en-jp-zh`: classical Chinese source, English, modern Japanese, modern Chinese.
+- `wayakana-en-jp-zh`: Japanese classical/waka/kana source, English, modern Japanese, modern Chinese.
+- `en-jp-zh`: modern English/Japanese/Chinese maximum-language edition.
+- `jp-zh`: bilingual maximum-language fallback when no English layer exists.
+- `ar-en-jp-zh`: Arabic source, English, modern Japanese, modern Chinese.
+
+In these labels, `jp` and `zh` mean modern Japanese and modern Chinese unless
+an explicit source layer such as `wenyan`, `wayakana`, or `ar` is present.
+Pair-only PDFs may be copied to `/home/lachlan/Nutstore Files/Projects/LinguaLeaf`
+for archival browsing, but Share should stay maximum-language only.

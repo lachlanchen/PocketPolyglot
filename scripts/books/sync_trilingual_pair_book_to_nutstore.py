@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Sync one trilingual pair-book build into Nutstore.
+"""Sync one trilingual pair-book build into Nutstore Projects.
 
 This handles the 12 pair PDFs produced by
 ``scripts/interlinear/compile_trilingual_book_12_previews.sh``:
 ``jp-en``, ``zh-en``, and ``zh-jp`` in both main directions and both variants.
 It is intentionally book-scoped so a sequential queue run can export only the
-book that just finished.
+book that just finished. By default it does not write to Nutstore Share:
+`Share/LinguaLeaf` is reserved for maximum-language public editions.
 """
 
 from __future__ import annotations
@@ -108,6 +109,11 @@ def main() -> int:
     parser.add_argument("--build-root", type=Path, default=ROOT / "build")
     parser.add_argument("--project", type=Path, default=DEFAULT_PROJECT)
     parser.add_argument("--share", type=Path, default=DEFAULT_SHARE)
+    parser.add_argument(
+        "--include-share",
+        action="store_true",
+        help="also copy pair editions to Share; normally avoid this because Share is max-language only",
+    )
     args = parser.parse_args()
 
     records = discover(args.book_id, args.build_root)
@@ -130,15 +136,17 @@ def main() -> int:
         variant = str(record["variant"])
 
         project_dst = args.project / "final-pdfs" / label / book_id / edition / variant / name
-        share_dst = args.share / variant / name
         copy_file(src, project_dst)
-        copy_file(src, share_dst)
         project_copied.append((src, project_dst))
-        share_copied.append((src, share_dst))
+        if args.include_share:
+            share_dst = args.share / variant / name
+            copy_file(src, share_dst)
+            share_copied.append((src, share_dst))
 
     source_root = args.build_root / args.book_id
     write_manifest(args.project / "final-pdfs" / "MANIFEST-trilingual-pairs.md", project_copied, source_root)
-    write_manifest(args.share / "MANIFEST-trilingual-pairs.md", share_copied, source_root)
+    if args.include_share:
+        write_manifest(args.share / "MANIFEST-trilingual-pairs.md", share_copied, source_root)
     print(f"copied_project={len(project_copied)}")
     print(f"copied_share={len(share_copied)}")
     print(f"project_root={args.project / 'final-pdfs'}")

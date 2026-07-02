@@ -21,6 +21,10 @@ not deleted. Quran Arabic-main is complete; any reverse-main Quran editions
 should wait until the rest of the active queue is finished and the user asks for
 them.
 
+Nutstore Share exports are maximum-language only: `wenyan-en-jp-zh`,
+`wayakana-en-jp-zh`, `en-jp-zh`, `jp-zh`, and `ar-en-jp-zh`. Pair-only PDFs
+belong in Projects exports unless the user explicitly asks otherwise.
+
 ## Processed / Compiled
 
 | Order | Book ID | Title | Source Area | Status | Notes |

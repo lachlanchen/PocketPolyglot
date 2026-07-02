@@ -1,15 +1,23 @@
 #!/usr/bin/env python3
-"""Sync final LinguaLeaf PDFs into Nutstore project and share folders."""
+"""Sync one maximum-language LinguaLeaf book into Nutstore.
+
+Nutstore Share is a public browsing folder. It should contain only maximum
+language public editions such as ``wenyan-en-jp-zh``, ``wayakana-en-jp-zh``,
+``en-jp-zh``, ``jp-zh``, and Arabic ``ar-en-jp-zh``. Pair-only editions belong
+in Projects, not Share.
+"""
 
 from __future__ import annotations
 
 import argparse
+import fnmatch
 import shutil
 from collections import Counter
 from pathlib import Path
 
 
-DEFAULT_SOURCE = Path("/home/lachlan/ProjectsLFS/ZhJpBook/artifacts/lingualleaf/books")
+ROOT = Path(__file__).resolve().parents[2]
+DEFAULT_SOURCE = ROOT / "artifacts" / "lingualleaf" / "books"
 DEFAULT_PROJECT = Path("/home/lachlan/Nutstore Files/Projects/LinguaLeaf")
 DEFAULT_SHARE = Path("/home/lachlan/Nutstore Files/Share/LinguaLeaf")
 
@@ -48,49 +56,32 @@ def clean_title(filename: str, variant: str) -> str:
     return title.strip(" ・")
 
 
-def pdf_records(source_root: Path) -> list[dict[str, str | Path]]:
-    candidates: list[dict[str, str | Path]] = []
+def discover(source_root: Path, book_id: str) -> list[dict[str, str | Path]]:
+    records: list[dict[str, str | Path]] = []
     for pdf in sorted(source_root.rglob("*.pdf")):
         rel = pdf.relative_to(source_root)
         if len(rel.parts) < 5:
             continue
-        family, book_id, edition, variant = rel.parts[:4]
-        if variant not in VARIANT_LABELS:
+        family, current_book_id, edition, variant = rel.parts[:4]
+        if current_book_id != book_id or variant not in VARIANT_LABELS:
             continue
-        language_label = LANGUAGE_LABELS.get(family, family)
-        title = clean_title(pdf.name, variant)
-        candidates.append(
+        if family not in LANGUAGE_LABELS:
+            continue
+        records.append(
             {
                 "source": pdf,
                 "family": family,
-                "book_id": book_id,
+                "book_id": current_book_id,
                 "edition": edition,
                 "variant": variant,
-                "language_label": language_label,
-                "title": title,
+                "language_label": LANGUAGE_LABELS[family],
+                "title": clean_title(pdf.name, variant),
             }
         )
-    best_family: dict[str, int] = {}
-    for record in candidates:
-        book_id = str(record["book_id"])
-        priority = FAMILY_PRIORITY.get(str(record["family"]), 0)
-        best_family[book_id] = max(best_family.get(book_id, 0), priority)
-    return [
-        record
-        for record in candidates
-        if FAMILY_PRIORITY.get(str(record["family"]), 0) == best_family.get(str(record["book_id"]), 0)
-    ]
-
-
-def target_name(record: dict[str, str | Path], title_counts: Counter[str]) -> str:
-    title = str(record["title"])
-    language_label = str(record["language_label"])
-    variant_label = VARIANT_LABELS[str(record["variant"])]
-    stem = f"{title}｜{language_label}｜{variant_label}"
-    collision_key = f"{title}｜{language_label}｜{variant_label}"
-    if title_counts[collision_key] > 1:
-        stem = f"{stem}｜{record['book_id']}"
-    return f"{stem}.pdf"
+    if not records:
+        return records
+    best = max(FAMILY_PRIORITY.get(str(record["family"]), 0) for record in records)
+    return [record for record in records if FAMILY_PRIORITY.get(str(record["family"]), 0) == best]
 
 
 def copy_file(src: Path, dst: Path) -> None:
@@ -98,13 +89,38 @@ def copy_file(src: Path, dst: Path) -> None:
     shutil.copy2(src, dst)
 
 
-def write_manifest(path: Path, copied: list[tuple[Path, Path]], source_root: Path) -> None:
+def target_name(record: dict[str, str | Path], title_counts: Counter[str]) -> str:
+    title = str(record["title"])
+    label = str(record["language_label"])
+    variant_label = VARIANT_LABELS[str(record["variant"])]
+    key = f"{title}｜{label}｜{variant_label}"
+    stem = key
+    if title_counts[key] > 1:
+        stem = f"{stem}｜{record['book_id']}"
+    return f"{stem}.pdf"
+
+
+def clean_share(share: Path, patterns: list[str]) -> list[Path]:
+    removed: list[Path] = []
+    for variant in VARIANT_LABELS:
+        variant_dir = share / variant
+        if not variant_dir.exists():
+            continue
+        for pdf in variant_dir.glob("*.pdf"):
+            if any(fnmatch.fnmatch(pdf.name, pattern) for pattern in patterns):
+                pdf.unlink()
+                removed.append(pdf)
+    return removed
+
+
+def write_manifest(path: Path, copied: list[tuple[Path, Path]], removed: list[Path], source_root: Path) -> None:
     lines = [
-        "# LinguaLeaf Nutstore Sync",
+        "# LinguaLeaf Maximum-Language Sync",
         "",
         f"Generated from `{source_root}`.",
         "",
         f"PDF count: {len(copied)}",
+        f"Removed old Share PDFs: {len(removed)}",
         "",
     ]
     for _, dst in copied:
@@ -115,40 +131,43 @@ def write_manifest(path: Path, copied: list[tuple[Path, Path]], source_root: Pat
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("book_id")
     parser.add_argument("--source", type=Path, default=DEFAULT_SOURCE)
     parser.add_argument("--project", type=Path, default=DEFAULT_PROJECT)
     parser.add_argument("--share", type=Path, default=DEFAULT_SHARE)
+    parser.add_argument("--clean-share-glob", action="append", default=[])
     args = parser.parse_args()
 
-    records = pdf_records(args.source)
+    records = discover(args.source, args.book_id)
+    if not records:
+        raise SystemExit(f"No maximum-language PDFs found for {args.book_id}")
+
+    removed = clean_share(args.share, args.clean_share_glob)
     title_counts = Counter(
         f"{record['title']}｜{record['language_label']}｜{VARIANT_LABELS[str(record['variant'])]}"
         for record in records
     )
 
-    project_copied: list[tuple[Path, Path]] = []
-    share_copied: list[tuple[Path, Path]] = []
-
+    copied: list[tuple[Path, Path]] = []
     for record in records:
         src = Path(record["source"])
         name = target_name(record, title_counts)
         family_label = str(record["language_label"])
         book_id = str(record["book_id"])
         variant = str(record["variant"])
+        edition = str(record["edition"])
 
-        project_dst = args.project / "final-pdfs" / family_label / book_id / variant / name
+        project_dst = args.project / "final-pdfs" / family_label / book_id / edition / variant / name
         share_dst = args.share / variant / name
-
         copy_file(src, project_dst)
         copy_file(src, share_dst)
-        project_copied.append((src, project_dst))
-        share_copied.append((src, share_dst))
+        copied.append((src, project_dst))
+        copied.append((src, share_dst))
 
-    write_manifest(args.project / "final-pdfs" / "MANIFEST.md", project_copied, args.source)
-    write_manifest(args.share / "MANIFEST.md", share_copied, args.source)
-
-    print(f"copied_project={len(project_copied)}")
-    print(f"copied_share={len(share_copied)}")
+    write_manifest(args.project / "final-pdfs" / "MANIFEST-max-language.md", copied, removed, args.source)
+    write_manifest(args.share / "MANIFEST-max-language.md", copied, removed, args.source)
+    print(f"copied={len(copied)}")
+    print(f"removed_share={len(removed)}")
     print(f"project_root={args.project / 'final-pdfs'}")
     print(f"share_root={args.share}")
     return 0
