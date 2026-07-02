@@ -8,6 +8,19 @@ The default future pipeline is trilingual EN/JP/ZH. Prepare one strict JSON sour
 
 For classical Chinese books, keep the classical original as a preserved source layer, but generate Japanese and English from the modern Chinese translation/paraphrase rather than directly from ambiguous OCR or terse classical syntax. The modern Chinese layer is the meaning bridge; the classical text remains visible as the original where the renderer supports it.
 
+## Queue Execution Policy
+
+Paused broad parallel queue execution on 2026-07-02. Future work should run one
+book at a time: generate or resume chunk JSON, review/sanitize, compile color
+and black-white PDFs, sync the final PDFs, commit durable tracked artifacts, and
+only then start the next book. Do not auto-start multiple queued books together
+unless the user explicitly asks for a parallel batch.
+
+Hold Bible and Quran work at the end of the queue. Bible generation is paused,
+not deleted. Quran Arabic-main is complete; any reverse-main Quran editions
+should wait until the rest of the active queue is finished and the user asks for
+them.
+
 ## Processed / Compiled
 
 | Order | Book ID | Title | Source Area | Status | Notes |
@@ -48,6 +61,7 @@ For classical Chinese books, keep the classical original as a preserved source l
 | 34 | `yijing` | 周易 / Book of Changes / 易経 | `sources/yijing` | Complete | Quadrilingual Wenyan-English-modern Japanese-modern Chinese; 948/948 chunks, grammar colored, large-font color and blackwhite PDFs compiled and synced. |
 | 35 | `xixiangji` | 西廂記 / The Story of the Western Wing | `sources/xixiangji` | Complete | Quadrilingual Wenyan-English-modern Japanese-modern Chinese; 101/101 chunks, color and blackwhite PDFs compiled. |
 | 36 | `mudanting` | 牡丹亭 / The Peony Pavilion | `sources/mudanting` | Complete | Quadrilingual Wenyan-English-modern Japanese-modern Chinese; 523/523 chunks, color and blackwhite PDFs compiled and synced. |
+| 37 | `zhuangzi` | 莊子 / Zhuangzi / 荘子 | `sources/zhuangzi` | Compiled | Quadrilingual Wenyan-English-modern Japanese-modern Chinese; 892/892 chunks, large-font color and blackwhite PDFs exist. |
 
 ## Prepared / Not Yet Compiled Queue
 
@@ -73,7 +87,7 @@ support layers. The source inventory is tracked in
 
 | Priority | Proposed ID | Title | Source Path | Current Status | Next Step |
 |---:|---|---|---|---|---|
-| C1 | `zhuangzi` | 莊子 / Zhuangzi / 荘子 | `sources/zhuangzi` | Running quadrilingual writer; 33 chapters / 892 chunks prepared | tmux `zhjpbook-zhuangzi-quadrilingual`; queue monitor will check full coverage before moving on. |
+| C1 | `zhuangzi` | 莊子 / Zhuangzi / 荘子 | `sources/zhuangzi` | Complete/compiled; 33 chapters / 892 chunks, 892/892 valid | No active worker. Keep only future refinements here; do not restart as part of the broad queue. |
 | C2 | `han-shu` | 漢書 / Book of Han | `sources/han-shu` | Sources copied; quadrilingual plan prepared | Use Chinese source spine; generate modern Japanese where JP source is index-only. |
 | C3 | `hou-han-shu` | 後漢書 / Book of Later Han | `sources/hou-han-shu` | Launchable; 131 chapters / 13152 chunks prepared; not started | Treat English/Japanese references as partial chapter references only; `注補續漢書八志序` is ordered between `卷90` and `卷91`. |
 | C4 | `sanguozhi` | 三國志 / Records of the Three Kingdoms | `sources/sanguozhi` | Launchable and queued after Zhuangzi; 67 chapters / 2338 chunks prepared | Main spine excludes Pei Songzhi commentary from the primary wenyan stream; English references are incomplete. |
@@ -89,14 +103,14 @@ reference only.
 
 | Priority | Proposed ID | Title | Source Path | Current Status | Next Step |
 |---:|---|---|---|---|---|
-| J1 | `manyoshu` | 万葉集 / Man'yoshu / 万叶集 | `sources/manyoshu` | Launchable; 20 volumes / 4562 chunks prepared | Use Japanese Wikisource kundoku as the source spine; English anthology references are partial; Chinese is generated. |
+| J1 | `manyoshu` | 万葉集 / Man'yoshu / 万叶集 | `sources/manyoshu` | Paused; 20 volumes / 4562 chunks prepared; 3106/4562 valid chunks saved as of 2026-07-02 | Resume as a single-book run only. Use Japanese Wikisource kundoku as the source spine; English anthology references are partial; Chinese is generated. |
 | J2 | `kokin-wakashu` | 古今和歌集 / Kokin Wakashu | `sources/kokin-wakashu` | Launchable; 23 sections / 1123 chunks prepared | Use Japanese Wikisource plus local modern-translation EPUB as references; English anthology references are partial; Chinese is generated. |
 
 ## Prepared Bible Trilingual Task
 
 | Priority | Proposed ID | Title | Source Path | Current Status | Next Step |
 |---:|---|---|---|---|---|
-| B1 | `bible` | The Holy Bible / 聖經 / 聖書 | `sources/bible` | Running; 66 books / 1189 chapters / 2113 chunks prepared | English KJV is the exact spine; Chinese Union Version is exact; modern Japanese is generated because Japanese Wikisource Kougo pages are metadata/redaction pages. |
+| B1 | `bible` | The Holy Bible / 聖經 / 聖書 | `sources/bible` | Paused; 66 books / 1189 chapters / 2113 chunks prepared; 624/2113 valid chunks saved as of 2026-07-02 | Keep at the end of the queue. English KJV is the exact spine; Chinese Union Version is exact; modern Japanese is generated because Japanese Wikisource Kougo pages are metadata/redaction pages. Resume only when explicitly requested. |
 
 ## Prepared Arabic Quadrilingual Source Queue
 
@@ -106,7 +120,7 @@ as `wenyan`, `zh`, or `ja` to reuse an incompatible renderer.
 
 | Priority | Proposed ID | Title | Source Path | Current Status | Next Step |
 |---:|---|---|---|---|---|
-| AQ1 | `quran` | القرآن الكريم / The Quran / クルアーン / 古蘭經 | `sources/quran` | Completed Arabic-main first edition; 114 suras / 842 chunks / 6348 units; color and black-white PDFs compiled | Optional future work: add EN-main, JA-main, and ZH-main reverse quadrilingual editions. |
+| AQ1 | `quran` | القرآن الكريم / The Quran / クルアーン / 古蘭經 | `sources/quran` | Completed Arabic-main first edition; 114 suras / 842 chunks / 6348 units; color and black-white PDFs compiled | Keep reverse-main editions at the end of the queue. Optional future work: add EN-main, JA-main, and ZH-main reverse quadrilingual editions. |
 
 ## Additional Future Queue
 

@@ -45,3 +45,21 @@ Tmux sessions:
 
 - `zhjpbook-bible-10-low`
 - `zhjpbook-bible-10-low-repair`
+
+## Pause Note - 2026-07-02
+
+The user asked to stop broad queue execution and keep Bible/Quran work at the
+end. The two Bible tmux sessions above were stopped. No generated JSON was
+deleted.
+
+Manifest progress at pause:
+
+- `manifest_chunks=2113`
+- `valid_chunks=624`
+- `stale_chunks=0`
+- `missing_chunks=1489`
+- `last_valid=bible-chunk-00624`
+- `first_missing=bible-chunk-00625`
+
+Resume only by explicit request, and run it as a single-book task rather than
+as part of a broad parallel queue.
