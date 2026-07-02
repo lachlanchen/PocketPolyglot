@@ -18,9 +18,10 @@ import html
 import json
 import re
 import shutil
+from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote, urlencode
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -33,6 +34,7 @@ LOCAL_PREVIEW_ROOT = ROOT / "assets" / "max-language-previews"
 LEAF_PREVIEW_ROOT = LEAF / "assets" / "max-language-previews"
 LAZYLEARN_PREVIEW_ROOT = LAZYLEARN / "figs" / "pocketpolyglot"
 LAZYLEARN_SITE_PREVIEW_ROOT = LAZYLEARN / "docs" / "figs" / "pocketpolyglot"
+LAZYLEARN_CATALOG_JSON = LAZYLEARN / "docs" / "pocketpolyglot" / "catalog.json"
 
 GITHUB_BLOB_BASE = "https://github.com/lachlanchen/LinguaLeaf/blob/main/"
 GITHUB_RAW_BASE = "https://raw.githubusercontent.com/lachlanchen/LinguaLeaf/main/"
@@ -115,9 +117,25 @@ def url_for(rel: str, *, raw: bool = False) -> str:
     return base + quote(rel, safe="/")
 
 
-def reader_url(rel: str, title: str, *, absolute: bool = False) -> str:
+def legacy_reader_url(rel: str, title: str, *, absolute: bool = False) -> str:
     base = LAZYLEARN_READER_BASE if absolute else "pdf-reader.html"
     return f"{base}?path={quote(rel, safe='/')}&title={quote(title, safe='')}"
+
+
+def short_reader_url(
+    row: CatalogRow,
+    mode: str,
+    *,
+    absolute: bool = False,
+    duplicate_books: Counter[str] | None = None,
+) -> str:
+    base = LAZYLEARN_READER_BASE if absolute else "pdf-reader.html"
+    params: list[tuple[str, str]] = [("book", row.book_id)]
+    if duplicate_books and duplicate_books[row.book_id] > 1:
+        params.extend([("family", row.family), ("edition", row.edition)])
+    if mode != "color":
+        params.append(("mode", mode))
+    return f"{base}?{urlencode(params, quote_via=quote)}"
 
 
 def preview_path(book_id: str, prefix: str) -> str:
@@ -128,6 +146,7 @@ def preview_path(book_id: str, prefix: str) -> str:
 
 
 def markdown_table(rows: list[CatalogRow], *, preview_prefix: str, link_mode: str) -> str:
+    duplicate_books = Counter(row.book_id for row in rows)
     lines = [
         "| Preview | Book | Edition | Color | Black-white |",
         "| --- | --- | --- | --- | --- |",
@@ -140,8 +159,8 @@ def markdown_table(rows: list[CatalogRow], *, preview_prefix: str, link_mode: st
             color = f"[Read]({quote(row.color_rel, safe='/()（）・.:-_')})" if row.color_rel else "-"
             bw = f"[Read]({quote(row.bw_rel, safe='/()（）・.:-_')})" if row.bw_rel else "-"
         elif link_mode == "reader":
-            color = f"[Read]({reader_url(row.color_rel, row.title, absolute=True)})" if row.color_rel else "-"
-            bw = f"[Read]({reader_url(row.bw_rel, row.title + ' black-white', absolute=True)})" if row.bw_rel else "-"
+            color = f"[Read]({short_reader_url(row, 'color', absolute=True, duplicate_books=duplicate_books)})" if row.color_rel else "-"
+            bw = f"[Read]({short_reader_url(row, 'blackwhite', absolute=True, duplicate_books=duplicate_books)})" if row.bw_rel else "-"
         else:
             color = f"[PDF]({url_for(row.color_rel)})" if row.color_rel else "-"
             bw = f"[PDF]({url_for(row.bw_rel)})" if row.bw_rel else "-"
@@ -211,7 +230,44 @@ def write_lingualleaf_manifest(rows: list[CatalogRow]) -> None:
     )
 
 
+def write_lazylearn_catalog(rows: list[CatalogRow]) -> None:
+    duplicate_books = Counter(row.book_id for row in rows)
+    records: list[dict[str, str]] = []
+    for row in rows:
+        for mode, rel in (("color", row.color_rel), ("blackwhite", row.bw_rel)):
+            if not rel:
+                continue
+            title = row.title if mode == "color" else f"{row.title} black-white"
+            records.append(
+                {
+                    "book_id": row.book_id,
+                    "family": row.family,
+                    "edition": row.edition,
+                    "mode": mode,
+                    "title": title,
+                    "path": rel,
+                    "short_url": short_reader_url(row, mode, duplicate_books=duplicate_books),
+                    "legacy_url": legacy_reader_url(rel, title),
+                }
+            )
+    LAZYLEARN_CATALOG_JSON.parent.mkdir(parents=True, exist_ok=True)
+    LAZYLEARN_CATALOG_JSON.write_text(
+        json.dumps(
+            {
+                "source": "https://github.com/lachlanchen/LinguaLeaf/tree/main/docs/pocketpolyglot/books",
+                "generated_by": "scripts/books/refresh_lingualleaf_catalog.py",
+                "rows": records,
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+
+
 def html_gallery(rows: list[CatalogRow]) -> str:
+    duplicate_books = Counter(row.book_id for row in rows)
     cards = [
         '<section class="published-books pocket-polyglot-showcase pocketpolyglot-showcase" id="pocketpolyglot">',
         '  <div class="section-header">',
@@ -240,13 +296,13 @@ def html_gallery(rows: list[CatalogRow]) -> str:
         if row.color_rel:
             cards.append(
                 '          <a class="primary" '
-                f'href="{html.escape(reader_url(row.color_rel, row.title))}" '
+                f'href="{html.escape(short_reader_url(row, "color", duplicate_books=duplicate_books))}" '
                 'target="_blank" rel="noopener">Read color</a>'
             )
         if row.bw_rel:
             cards.append(
                 '          <a class="secondary" '
-                f'href="{html.escape(reader_url(row.bw_rel, row.title + " black-white"))}" '
+                f'href="{html.escape(short_reader_url(row, "blackwhite", duplicate_books=duplicate_books))}" '
                 'target="_blank" rel="noopener">Read black-white</a>'
             )
         cards.extend(["        </div>", "      </div>", "    </article>"])
@@ -279,6 +335,7 @@ def update_lingualleaf_intro(rows: list[CatalogRow]) -> None:
 
 def build_sections(rows: list[CatalogRow]) -> None:
     write_lingualleaf_manifest(rows)
+    write_lazylearn_catalog(rows)
     leaf_section = "\n".join(
         [
             "## Maximum-Language Pocket Editions",
@@ -312,7 +369,7 @@ def build_sections(rows: list[CatalogRow]) -> None:
             "",
             "PocketPolyglot/LinguaLeaf builds pocket-size interlinear readers with ruby, pinyin, grammar coloring, and maximum available language layers.",
             "",
-            "The `Read` links open the LazyLearn PDF.js reader with PDFs streamed from GitHub raw URLs.",
+            "The `Read` links use short LazyLearn reader URLs such as `?book=bible`; legacy `?path=...` links remain supported.",
             "",
             markdown_table(rows, preview_prefix="figs/pocketpolyglot", link_mode="reader"),
             "",
