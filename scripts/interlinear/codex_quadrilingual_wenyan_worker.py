@@ -356,6 +356,7 @@ def main() -> int:
 
     completed = 0
     failed = 0
+    failed_this_run: set[str] = set()
     while True:
         claimed: tuple[int, dict[str, Any]] | None = None
         for item in iter_selected(chunks, args.start_index, args.end_index):
@@ -366,6 +367,8 @@ def main() -> int:
                 continue
             failed_path = failed_dir / f"{chunk_id}.json"
             if failed_path.exists():
+                if chunk_id in failed_this_run:
+                    continue
                 if not args.retry_failed:
                     continue
                 if args.failed_retry_age_seconds > 0 and time.time() - failed_path.stat().st_mtime < args.failed_retry_age_seconds:
@@ -419,6 +422,20 @@ def main() -> int:
                         cwd=cwd,
                         timeout_seconds=args.codex_timeout_seconds,
                     )
+                except Exception as exc:  # noqa: BLE001
+                    raw_log = log_path.read_text(encoding="utf-8", errors="replace") if log_path.exists() else ""
+                    if mentions_usage_limit(raw_log):
+                        print(f"{args.worker_id}: usage limit mentioned for {chunk_id}; leaving claim for retry", flush=True)
+                        raise
+                    errors = [str(exc)]
+                    write_json(rejected_dir / f"{chunk_id}.attempt{attempt}.json", status_record("rejected", error=str(exc)))
+                    if attempt <= args.retries:
+                        continue
+                    write_json(failed_dir / f"{chunk_id}.json", status_record("failed", error=str(exc), chunk_id=chunk_id))
+                    failed_this_run.add(chunk_id)
+                    failed += 1
+                    break
+                try:
                     raw_text = message_path.read_text(encoding="utf-8")
                     plain = extract_json(raw_text)
                     plain = repair_catalog_like_ja(chunk, plain)
@@ -430,15 +447,12 @@ def main() -> int:
                     if errors:
                         raise ValueError("; ".join(errors[:60]))
                 except Exception as exc:  # noqa: BLE001
-                    raw_log = log_path.read_text(encoding="utf-8", errors="replace") if log_path.exists() else ""
-                    if mentions_usage_limit(raw_log):
-                        print(f"{args.worker_id}: usage limit mentioned for {chunk_id}; leaving claim for retry", flush=True)
-                        raise
                     errors = [str(exc)]
                     write_json(rejected_dir / f"{chunk_id}.attempt{attempt}.json", status_record("rejected", error=str(exc)))
                     if attempt <= args.retries:
                         continue
                     write_json(failed_dir / f"{chunk_id}.json", status_record("failed", error=str(exc), chunk_id=chunk_id))
+                    failed_this_run.add(chunk_id)
                     failed += 1
                     break
                 else:
