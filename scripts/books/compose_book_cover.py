@@ -127,6 +127,8 @@ def load_plan(path: Path) -> dict:
 
 def edition_label(plan: dict) -> str:
     labels = []
+    if plan.get("source_language") == "wenyan" or plan.get("book_title_wenyan"):
+        labels.append("文言文")
     if plan.get("book_title_en"):
         labels.append("English")
     if plan.get("book_title_ja"):
@@ -134,7 +136,7 @@ def edition_label(plan: dict) -> str:
     if plan.get("book_title_zh"):
         labels.append("中文")
     if len(labels) >= 3:
-        return "・".join(labels[:3]) + " interlinear"
+        return "・".join(labels[:4]) + " interlinear"
     if len(labels) == 2:
         return "・".join(labels) + " 対照注解"
     return "PocketPolyglot annotated edition"

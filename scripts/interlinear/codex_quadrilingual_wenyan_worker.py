@@ -23,6 +23,7 @@ SPACE_RE = re.compile(r"\s+")
 SOURCE_NOTE_MARK_RE = re.compile(r"^\s*\d{1,3}\s*$")
 BRACKETED_SOURCE_NOTE_MARK_RE = re.compile(r"^\s*[\[［【〈《(（]?\s*[一二三四五六七八九十百千万〇零０-９0-9]{1,8}\s*[\]］】〉》)）]?\s*$")
 CATALOG_COUNTER_RE = re.compile(r"[一二三四五六七八九十百千〇零\d]+[篇卷巻]")
+LATIN_RE = re.compile(r"[A-Za-z]")
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -90,6 +91,48 @@ def repair_catalog_like_ja(source: dict[str, Any], plain: dict[str, Any]) -> dic
             ja = plain_text(unit.get("ja_modern"))
             if ja and not KANA_RE.search(ja) and catalog_like_source(source_wenyan):
                 unit["ja_modern"] = ja.rstrip("。") + "である。"
+    return plain
+
+
+def compact_no_space(text: str) -> str:
+    return "".join(str(text or "").split())
+
+
+def repair_short_fragment_plain_text(source: dict[str, Any], plain: dict[str, Any]) -> dict[str, Any]:
+    """Patch tiny split fragments that are too small for a model to translate.
+
+    Some OCR/source splits divide pronunciation notes across paragraphs, for
+    example ``帥，讀曰`` / ``率。``. Low/medium reasoning models often return the
+    second English row as just ``率.``, which is not valid English evidence even
+    though the alignment is otherwise correct. This patch only touches very
+    short content-bearing fragments and produces explicit readable rows.
+    """
+    plan_by_id = {
+        paragraph["id"]: {unit["unit_id"]: unit["source_wenyan"] for unit in paragraph["units"]}
+        for paragraph in source_unit_plan(source)
+    }
+    for paragraph in plain.get("paragraphs") or []:
+        if not isinstance(paragraph, dict):
+            continue
+        paragraph_sources = plan_by_id.get(str(paragraph.get("id")), {})
+        for unit in paragraph.get("units") or []:
+            if not isinstance(unit, dict):
+                continue
+            source_wenyan = plain_text(paragraph_sources.get(str(unit.get("unit_id") or ""), ""))
+            if not source_has_content(source_wenyan):
+                continue
+            short_source = compact_no_space(source_wenyan)
+            if len(short_source) > 10:
+                continue
+            en = plain_text(unit.get("en"))
+            if en and not LATIN_RE.search(en):
+                unit["en"] = f"The note gives: {source_wenyan}"
+            ja = plain_text(unit.get("ja_modern"))
+            if ja and not KANA_RE.search(ja):
+                unit["ja_modern"] = f"「{ja}」である。"
+            zh = plain_text(unit.get("zh_modern"))
+            if not zh or not HAN_RE.search(zh):
+                unit["zh_modern"] = source_wenyan
     return plain
 
 
@@ -439,6 +482,7 @@ def main() -> int:
                     raw_text = message_path.read_text(encoding="utf-8")
                     plain = extract_json(raw_text)
                     plain = repair_catalog_like_ja(chunk, plain)
+                    plain = repair_short_fragment_plain_text(chunk, plain)
                     errors = validate_plain_chunk(chunk, plain)
                     if errors:
                         raise ValueError("; ".join(errors[:60]))
