@@ -105,8 +105,26 @@ def extract_json(text: str) -> dict[str, Any]:
         elif char == "}":
             depth -= 1
             if depth == 0:
-                return json.loads(stripped[start : index + 1])
-    raise ValueError("unterminated JSON object")
+                candidate = stripped[start : index + 1]
+                try:
+                    return json.loads(candidate)
+                except json.JSONDecodeError:
+                    try:
+                        from json_repair import repair_json
+
+                        return json.loads(repair_json(candidate))
+                    except Exception:
+                        raise
+    candidate = stripped[start:]
+    try:
+        from json_repair import repair_json
+
+        repaired = json.loads(repair_json(candidate))
+    except Exception as exc:
+        raise ValueError("unterminated JSON object") from exc
+    if not isinstance(repaired, dict):
+        raise ValueError("JSON repair did not return an object")
+    return repaired
 
 
 def flatten_zh(paragraph: dict[str, Any]) -> str:
