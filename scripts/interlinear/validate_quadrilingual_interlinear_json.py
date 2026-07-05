@@ -17,6 +17,13 @@ HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
 KANA_RE = re.compile(r"[\u3040-\u30ff]")
 LATIN_RE = re.compile(r"[A-Za-z]")
+BAD_OUTPUT_RE = re.compile(
+    r"<[^>]{1,120}>|&(?:lt|gt|amp|quot|nbsp);|"
+    r"\{\{|\}\}|\[\[|\]\]|#重定向|#REDIRECT|mw-parser|"
+    r"Wikisource|Wikipedia|維基文庫|维基文库|public domain|"
+    r"Google|UNIVERSITY OF MICHIGAN|Digitized by|Page \d+",
+    re.IGNORECASE,
+)
 GRAMMAR_ROLES = {
     "subject",
     "predicate",
@@ -45,6 +52,11 @@ def token_text(tokens: Any) -> str:
     if not isinstance(tokens, list):
         return ""
     return "".join(str(token.get("t", "")) for token in tokens if isinstance(token, dict))
+
+
+def validate_output_quality(text: str, where: str, errors: list[str]) -> None:
+    if BAD_OUTPUT_RE.search(text):
+        errors.append(f"{where}: contains HTML/wiki/page boilerplate or scanned-book noise")
 
 
 def source_has_content(text: str) -> bool:
@@ -76,6 +88,7 @@ def validate_zh_like(tokens: Any, where: str, errors: list[str], *, require_han:
     if not validate_token_shape(tokens, where, errors):
         return
     text = token_text(tokens)
+    validate_output_quality(text, where, errors)
     if require_han and not HAN_RE.search(text):
         errors.append(f"{where}: must contain Han characters")
     for index, token in enumerate(tokens):
@@ -94,6 +107,7 @@ def validate_ja(tokens: Any, where: str, errors: list[str], *, require_japanese:
     if not validate_token_shape(tokens, where, errors):
         return
     text = token_text(tokens)
+    validate_output_quality(text, where, errors)
     readings = "".join(str(token.get("r", "")) for token in tokens if isinstance(token, dict))
     if require_japanese and not (KANA_RE.search(text) or KANA_RE.search(readings)):
         errors.append(f"{where}: Japanese row has no kana/furigana evidence")
@@ -113,6 +127,7 @@ def validate_en(tokens: Any, where: str, errors: list[str], *, require_latin: bo
     if not validate_token_shape(tokens, where, errors):
         return
     text = token_text(tokens)
+    validate_output_quality(text, where, errors)
     if require_latin and not LATIN_RE.search(text):
         errors.append(f"{where}: English row has no Latin text")
     for index, token in enumerate(tokens):

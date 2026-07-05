@@ -38,9 +38,9 @@ case "$color_mode" in
 esac
 
 plan="books/$book_id/book-plan.json"
-manifest="$(jq -r '.chunks_manifest' "$plan")"
-chunks_jsonl="$(jq -r '.chunks_jsonl' "$plan")"
-chunk_dir="$(jq -r '.raw_chunk_dir' "$plan")"
+manifest="${MANIFEST_OVERRIDE:-$(jq -r '.chunks_manifest' "$plan")}"
+chunks_jsonl="${CHUNKS_JSONL_OVERRIDE:-$(jq -r '.chunks_jsonl' "$plan")}"
+chunk_dir="${RAW_CHUNK_DIR_OVERRIDE:-$(jq -r '.raw_chunk_dir' "$plan")}"
 assembled_json="books/$book_id/work/quadrilingual/preview/$book_id.partial.json"
 build_dir="build/$book_id/${main_layer}-main-quadrilingual/$color_mode"
 mkdir -p "$(dirname "$assembled_json")" "$build_dir"

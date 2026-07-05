@@ -1295,6 +1295,13 @@
         {
           "layer": "en",
           "lang": "en",
+          "role": "full_english_translation_pdf_ocr_required",
+          "path": "sources/mudanting/en/english-translation/The Peony Pavilion - Mudan ting.pdf",
+          "quality": "Full English translation PDF; image-only under pdftotext, so OCR cache is required before prompt-time text use"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
           "role": "english_wikisource_missing_manifest",
           "path": "sources/mudanting/en/wikisource",
           "quality": "Wikisource manifest records missing English root; generate English from the wenyan and modern Chinese bridge"
@@ -1307,7 +1314,7 @@
           "quality": "Wikisource manifest records missing Japanese root; generate natural modern Japanese from the wenyan and modern Chinese bridge"
         }
       ],
-      "next_step": "Run the quadrilingual writer from books/mudanting/work/quadrilingual/chunks/manifest.json, then compile large-font color and black-white editions with cover."
+      "next_step": "OCR the local English translation PDF into books/mudanting/work/source-extract/english-reference.md, refresh the task so the PDF text appears as broad reference material, then rerun only the overlay chunks that need quality repair and compile large-font color and black-white editions with cover."
     },
     {
       "book_id": "xixiangji",
@@ -1338,6 +1345,13 @@
         {
           "layer": "en",
           "lang": "en",
+          "role": "full_english_translation_reference",
+          "path": "sources/xixiangji/en/english-translation/The Story of the Western Wing.pdf",
+          "quality": "Extractable English translation/reference PDF; internal grouping differs from the five-book Chinese spine, so use only when the passage clearly matches"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
           "role": "english_wikisource_missing_manifest",
           "path": "sources/xixiangji/en/wikisource",
           "quality": "Wikisource manifest records missing English root; generate English from the wenyan and modern Chinese bridge"
@@ -1350,7 +1364,7 @@
           "quality": "Wikisource manifest records missing Japanese root; generate natural modern Japanese from the wenyan and modern Chinese bridge"
         }
       ],
-      "next_step": "Run the quadrilingual writer from books/xixiangji/work/quadrilingual/chunks/manifest.json, then compile large-font color and black-white editions with cover."
+      "next_step": "Refresh the task so the local English translation PDF appears as broad reference material, rerun only the overlay chunks that need quality repair, then compile large-font color and black-white editions with cover."
     },
     {
       "book_id": "guoyu",

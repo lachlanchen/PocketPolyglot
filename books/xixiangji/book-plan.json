@@ -5,7 +5,6 @@
   "launchable": true,
   "task_mode": "quadrilingual_wenyan_main",
   "source_language": "wenyan",
-  "cover_image": "assets/covers/xixiangji/cover.png",
   "default_note_order": {
     "wenyan": [
       "en",
@@ -39,6 +38,7 @@
   "source_paths": {
     "classical_source": "sources/xixiangji/zh/wikisource",
     "chinese_edition_reference": "sources/xixiangji/zh/chinese-edition/西廂記.pdf",
+    "full_english_translation_reference": "sources/xixiangji/en/english-translation/The Story of the Western Wing.pdf",
     "english_wikisource_missing_manifest": "sources/xixiangji/en/wikisource",
     "japanese_wikisource_missing_manifest": "sources/xixiangji/jp/wikisource",
     "wenyan_markdown": "books/xixiangji/markdown/wenyan.md"
@@ -48,5 +48,6 @@
   "raw_chunk_dir": "books/xixiangji/work/quadrilingual/interlinear/chunks",
   "assembled_json": "books/xixiangji/work/quadrilingual/preview/xixiangji.partial.json",
   "build_root": "build/xixiangji/wenyan-main-quadrilingual",
-  "prepared_at": "2026-07-01T21:35:23.368782+00:00"
+  "prepared_at": "2026-07-05T12:15:51.049581+00:00",
+  "cover_image": "assets/covers/xixiangji/background.png"
 }

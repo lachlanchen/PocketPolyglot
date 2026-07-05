@@ -5,7 +5,6 @@
   "launchable": true,
   "task_mode": "quadrilingual_wenyan_main",
   "source_language": "wenyan",
-  "cover_image": "assets/covers/mudanting/cover.png",
   "default_note_order": {
     "wenyan": [
       "en",
@@ -39,6 +38,7 @@
   "source_paths": {
     "classical_source": "sources/mudanting/zh/wikisource",
     "generated_modern_chinese": "sources/mudanting/zh/wikisource",
+    "full_english_translation_pdf_ocr_required": "sources/mudanting/en/english-translation/The Peony Pavilion - Mudan ting.pdf",
     "english_wikisource_missing_manifest": "sources/mudanting/en/wikisource",
     "japanese_wikisource_missing_manifest": "sources/mudanting/jp/wikisource",
     "wenyan_markdown": "books/mudanting/markdown/wenyan.md"
@@ -48,5 +48,6 @@
   "raw_chunk_dir": "books/mudanting/work/quadrilingual/interlinear/chunks",
   "assembled_json": "books/mudanting/work/quadrilingual/preview/mudanting.partial.json",
   "build_root": "build/mudanting/wenyan-main-quadrilingual",
-  "prepared_at": "2026-07-01T21:35:23.339745+00:00"
+  "prepared_at": "2026-07-05T12:15:51.358454+00:00",
+  "cover_image": "assets/covers/mudanting/background.png"
 }

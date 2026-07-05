@@ -24,6 +24,13 @@ SOURCE_NOTE_MARK_RE = re.compile(r"^\s*\d{1,3}\s*$")
 BRACKETED_SOURCE_NOTE_MARK_RE = re.compile(r"^\s*[\[［【〈《(（]?\s*[一二三四五六七八九十百千万〇零０-９0-9]{1,8}\s*[\]］】〉》)）]?\s*$")
 CATALOG_COUNTER_RE = re.compile(r"[一二三四五六七八九十百千〇零\d]+[篇卷巻]")
 LATIN_RE = re.compile(r"[A-Za-z]")
+BAD_OUTPUT_RE = re.compile(
+    r"<[^>]{1,120}>|&(?:lt|gt|amp|quot|nbsp);|"
+    r"\{\{|\}\}|\[\[|\]\]|#重定向|#REDIRECT|mw-parser|"
+    r"Wikisource|Wikipedia|維基文庫|维基文库|public domain|"
+    r"Google|UNIVERSITY OF MICHIGAN|Digitized by|Page \d+",
+    re.IGNORECASE,
+)
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -41,6 +48,15 @@ def status_record(status: str, **extra: Any) -> dict[str, Any]:
 
 def plain_text(text: Any) -> str:
     return SPACE_RE.sub(" ", str(text or "").replace("\n", " ")).strip()
+
+
+def quality_errors(text: str, where: str) -> list[str]:
+    errors: list[str] = []
+    if BAD_OUTPUT_RE.search(text):
+        errors.append(f"{where}: contains HTML/wiki/page boilerplate or scanned-book noise")
+    if "\n" in str(text or ""):
+        errors.append(f"{where}: must be a single coherent line, not copied PDF/source line breaks")
+    return errors
 
 
 def ignorable_source_unit(text: str) -> bool:
@@ -254,6 +270,10 @@ def prompt_for_plain_chunk(chunk: dict[str, Any], previous_errors: list[str] | N
         - For catalog/list rows with titles and counts, do not output a title list only. Add Japanese particles or a predicate, e.g. "...である", so ja_modern contains kana.
         - If the supplied unit plan contains existing_ja, reuse or gently modernize it when it matches the wenyan.
         - English must be natural English and should use the English reference only when it clearly matches this broad book/chapter window.
+        - Prefer real translation PDFs or EPUBs listed in the references over generated guesses, but never force a broad reference onto a non-matching passage.
+        - Reference excerpts may contain page headers, OCR noise, publisher/copyright text, HTML/wiki markup, or archive labels. Never copy those into zh_modern, ja_modern, or en.
+        - Keep zh_modern, ja_modern, and en as coherent single-line prose for each supplied unit. Do not preserve PDF line breaks or Wikisource layout line breaks.
+        - If a source unit is only a stage direction, name, or short phrase, translate it concisely; if it is a full sentence, do not split it into disconnected fragments.
         - Keep each unit aligned to the same meaning. Do not add footnotes or commentary.
         - No ruby, pinyin, token arrays, Markdown, or grammar labels in this plain response.
         {error_block}
@@ -307,6 +327,9 @@ def validate_plain_chunk(source: dict[str, Any], result: dict[str, Any]) -> list
             zh = plain_text(unit.get("zh_modern"))
             ja = plain_text(unit.get("ja_modern"))
             en = plain_text(unit.get("en"))
+            errors.extend(quality_errors(str(unit.get("zh_modern", "")), f"{paragraph_id}.units[{u_index}].zh_modern"))
+            errors.extend(quality_errors(str(unit.get("ja_modern", "")), f"{paragraph_id}.units[{u_index}].ja_modern"))
+            errors.extend(quality_errors(str(unit.get("en", "")), f"{paragraph_id}.units[{u_index}].en"))
             if not zh or (require_content and not HAN_RE.search(zh)):
                 errors.append(f"{paragraph_id}.units[{u_index}].zh_modern: missing Chinese")
             if KANA_RE.search(zh):

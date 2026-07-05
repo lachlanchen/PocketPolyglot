@@ -405,6 +405,32 @@ def pdftotext(path: Path) -> str:
         return ""
 
 
+def content_char_count(text: str) -> int:
+    return len(re.findall(r"[A-Za-z0-9\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]", text))
+
+
+def cached_pdf_reference_text(book_id: str, path: Path) -> tuple[str, str]:
+    """Return extractable PDF text, or an OCR cache if the PDF is image-only."""
+
+    text = clean_reference_text(pdftotext(path))
+    if content_char_count(text) >= 2000:
+        return text, "pdftotext"
+
+    cache_root = ROOT / "books" / book_id / "work" / "source-extract"
+    candidates = [
+        cache_root / f"{path.stem}.md",
+        cache_root / f"{path.stem}.txt",
+        cache_root / "english-reference.md",
+        cache_root / "english-reference.txt",
+    ]
+    for candidate in candidates:
+        if candidate.exists():
+            cached = clean_reference_text(candidate.read_text(encoding="utf-8", errors="replace"))
+            if content_char_count(cached) >= 2000:
+                return cached, "ocr_cache"
+    return "", "needs_ocr"
+
+
 def epub_text(path: Path) -> str:
     if not path.exists():
         return ""
@@ -1142,6 +1168,60 @@ def html_reference_excerpt(path: Path, limit: int = 2600) -> str:
     return excerpt(content.get_text("\n", strip=True), limit)
 
 
+def translation_body_excerpt(text: str, headings: list[str] | None = None, limit: int = 4200) -> str:
+    if headings:
+        min_body_index = min(max(2000, len(text) // 5), max(0, len(text) - 1))
+        for heading in headings:
+            line_heading_re = re.compile(rf"(?im)^[ \t]*{re.escape(heading)}[ \t]*$")
+            matches = list(line_heading_re.finditer(text))
+            if not matches:
+                matches = list(re.finditer(re.escape(heading), text, flags=re.IGNORECASE))
+            if not matches:
+                continue
+            later = next((match for match in matches if match.start() >= min_body_index), None)
+            match = later or matches[-1]
+            return excerpt(text[match.start() :], limit)
+    return excerpt(text, limit)
+
+
+@lru_cache(maxsize=1)
+def load_mudanting_references() -> dict[str, Any]:
+    en_pdf = ROOT / "sources" / "mudanting" / "en" / "english-translation" / "The Peony Pavilion - Mudan ting.pdf"
+    text, method = cached_pdf_reference_text("mudanting", en_pdf)
+    ref: dict[str, Any] = {
+        "source": "Cyril Birch, The Peony Pavilion / Mudan ting",
+        "path": str(en_pdf.relative_to(ROOT)),
+        "extraction": method,
+        "note": (
+            "Full English translation PDF. Use when a passage clearly matches. "
+            "If extraction is needs_ocr, run scripts/interlinear/pdf_text_or_ocr.py "
+            "to create books/mudanting/work/source-extract/english-reference.md before relying on it."
+        ),
+    }
+    if text:
+        ref["excerpt"] = translation_body_excerpt(text, ["The Peony Pavilion", "ACT", "SCENE"])
+    else:
+        ref["excerpt"] = ""
+    return {"en": [ref]}
+
+
+@lru_cache(maxsize=1)
+def load_xixiangji_references() -> dict[str, Any]:
+    en_pdf = ROOT / "sources" / "xixiangji" / "en" / "english-translation" / "The Story of the Western Wing.pdf"
+    text, method = cached_pdf_reference_text("xixiangji", en_pdf)
+    ref: dict[str, Any] = {
+        "source": "Stephen H. West and Wilt L. Idema, The Story of the Western Wing",
+        "path": str(en_pdf.relative_to(ROOT)),
+        "extraction": method,
+        "note": (
+            "English translation/reference PDF. Its internal grouping differs from the five-book Wikisource spine, "
+            "so use it as a broad translation reference only when the local passage clearly matches."
+        ),
+        "excerpt": translation_body_excerpt(text, ["Translation", "Book the First", "The Story of the Western Wing"]) if text else "",
+    }
+    return {"en": [ref]}
+
+
 @lru_cache(maxsize=1)
 def load_guoyu_references() -> dict[str, Any]:
     en_work = ROOT / "sources" / "guoyu" / "en" / "wikipedia-reference" / "Guoyu (book).html"
@@ -1294,6 +1374,10 @@ def broad_references(book: dict[str, Any], chapter_number: int) -> dict[str, Any
         reference.update(load_guoyu_references())
     elif book["book_id"] == "foguoji":
         reference.update(load_foguoji_references())
+    elif book["book_id"] == "mudanting":
+        reference.update(load_mudanting_references())
+    elif book["book_id"] == "xixiangji":
+        reference.update(load_xixiangji_references())
     return reference
 
 
