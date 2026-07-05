@@ -9,8 +9,8 @@ This catalog is generated from local build outputs. It selects the richest avail
 
 All compiled editions use the larger PocketPolyglot font profile. Existing source PDFs and JSON are not modified.
 
-- Local compressed/exported PDFs: 158
-- GitHub-tracked PDFs under size cap: 152
+- Local compressed/exported PDFs: 160
+- GitHub-tracked PDFs under size cap: 154
 - Skipped source folders: 4
 
 ## Gallery
@@ -18,6 +18,7 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | Preview | Book | Family | Color PDF | Black-white PDF |
 | --- | --- | --- | --- | --- |
 | <img src="assets/max-language-previews/a-city-on-mars.png" width="120" alt="a-city-on-mars cover preview"> | `a-city-on-mars` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/a-city-on-mars/en-main-jp-zh/color/A City on Mars（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/a-city-on-mars/en-main-jp-zh/blackwhite/A City on Mars（日文・中文注・黑白）・最大語種・大字版.pdf) |
+| <img src="assets/max-language-previews/a-game-of-thrones.png" width="120" alt="a-game-of-thrones cover preview"> | `a-game-of-thrones` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/a-game-of-thrones/en-main-jp-zh/color/A Game of Thrones（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/a-game-of-thrones/en-main-jp-zh/blackwhite/A Game of Thrones（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/bhagavad-gita.png" width="120" alt="bhagavad-gita cover preview"> | `bhagavad-gita` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/bhagavad-gita/en-main-jp-zh/color/The Bhagavad Gita（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/bhagavad-gita/en-main-jp-zh/blackwhite/The Bhagavad Gita（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/bible.png" width="120" alt="bible cover preview"> | `bible` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/bible/en-main-jp-zh/color/The Holy Bible（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/bible/en-main-jp-zh/blackwhite/The Holy Bible（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/botchan.png" width="120" alt="botchan cover preview"> | `botchan` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/botchan/en-main-jp-zh/color/Botchan（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/botchan/en-main-jp-zh/blackwhite/Botchan（日文・中文注・黑白）・最大語種・大字版.pdf) |
@@ -97,6 +98,8 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | --- | --- | --- | --- | ---: | ---: | ---: | --- | --- |
 | `a-city-on-mars` | `en-jp-zh` | `en-main-jp-zh` | `color` | 1626 | 14.7 | 11.0 | yes | `artifacts/lingualleaf/books/en-jp-zh/a-city-on-mars/en-main-jp-zh/color/A City on Mars（日文・中文注）・最大語種・大字版.pdf` |
 | `a-city-on-mars` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 1626 | 13.9 | 9.2 | yes | `artifacts/lingualleaf/books/en-jp-zh/a-city-on-mars/en-main-jp-zh/blackwhite/A City on Mars（日文・中文注・黑白）・最大語種・大字版.pdf` |
+| `a-game-of-thrones` | `en-jp-zh` | `en-main-jp-zh` | `color` | 4560 | 30.0 | 28.2 | yes | `artifacts/lingualleaf/books/en-jp-zh/a-game-of-thrones/en-main-jp-zh/color/A Game of Thrones（日文・中文注）・最大語種・大字版.pdf` |
+| `a-game-of-thrones` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 4560 | 27.8 | 22.8 | yes | `artifacts/lingualleaf/books/en-jp-zh/a-game-of-thrones/en-main-jp-zh/blackwhite/A Game of Thrones（日文・中文注・黑白）・最大語種・大字版.pdf` |
 | `bhagavad-gita` | `en-jp-zh` | `en-main-jp-zh` | `color` | 278 | 4.7 | 4.7 | yes | `artifacts/lingualleaf/books/en-jp-zh/bhagavad-gita/en-main-jp-zh/color/The Bhagavad Gita（日文・中文注）・最大語種・大字版.pdf` |
 | `bhagavad-gita` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 278 | 4.6 | 4.6 | yes | `artifacts/lingualleaf/books/en-jp-zh/bhagavad-gita/en-main-jp-zh/blackwhite/The Bhagavad Gita（日文・中文注・黑白）・最大語種・大字版.pdf` |
 | `bible` | `en-jp-zh` | `en-main-jp-zh` | `color` | 10285 | 51.9 | 51.9 | yes | `artifacts/lingualleaf/books/en-jp-zh/bible/en-main-jp-zh/color/The Holy Bible（日文・中文注）・最大語種・大字版.pdf` |
@@ -139,8 +142,8 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | `inugami-curse` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 1390 | 12.1 | 7.3 | yes | `artifacts/lingualleaf/books/en-jp-zh/inugami-curse/en-main-jp-zh/blackwhite/The Inugami Curse（日文・中文注・黑白）・最大語種・大字版.pdf` |
 | `izu-no-odori` | `en-jp-zh` | `en-main-jp-zh` | `color` | 1357 | 11.5 | 7.9 | yes | `artifacts/lingualleaf/books/en-jp-zh/izu-no-odori/en-main-jp-zh/color/The Dancing Girl of Izu（日文・中文注）・最大語種・大字版.pdf` |
 | `izu-no-odori` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 1357 | 11.0 | 7.1 | yes | `artifacts/lingualleaf/books/en-jp-zh/izu-no-odori/en-main-jp-zh/blackwhite/The Dancing Girl of Izu（日文・中文注・黑白）・最大語種・大字版.pdf` |
-| `jane-eyre` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 2951 | 19.7 | 15.0 | yes | `artifacts/lingualleaf/books/en-jp-zh/jane-eyre/en-main-jp-zh/blackwhite/Jane Eyre（日文・中文注・黑白）・最大語種・大字版.pdf` |
 | `jane-eyre` | `en-jp-zh` | `en-main-jp-zh` | `color` | 2951 | 21.1 | 18.5 | yes | `artifacts/lingualleaf/books/en-jp-zh/jane-eyre/en-main-jp-zh/color/Jane Eyre（日文・中文注）・最大語種・大字版.pdf` |
+| `jane-eyre` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 2951 | 19.7 | 15.0 | yes | `artifacts/lingualleaf/books/en-jp-zh/jane-eyre/en-main-jp-zh/blackwhite/Jane Eyre（日文・中文注・黑白）・最大語種・大字版.pdf` |
 | `japanese-history` | `en-jp-zh` | `en-main-jp-zh` | `color` | 1491 | 15.3 | 11.1 | yes | `artifacts/lingualleaf/books/en-jp-zh/japanese-history/en-main-jp-zh/color/A Concise History of Japan（日文・中文注）・最大語種・大字版.pdf` |
 | `japanese-history` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 1491 | 14.5 | 9.3 | yes | `artifacts/lingualleaf/books/en-jp-zh/japanese-history/en-main-jp-zh/blackwhite/A Concise History of Japan（日文・中文注・黑白）・最大語種・大字版.pdf` |
 | `kinkakuji` | `en-jp-zh` | `en-main-jp-zh` | `color` | 1280 | 12.0 | 7.9 | yes | `artifacts/lingualleaf/books/en-jp-zh/kinkakuji/en-main-jp-zh/color/The Temple of the Golden Pavilion（日文・中文注）・最大語種・大字版.pdf` |
@@ -185,8 +188,12 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | `red-rising-3` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 3437 | 19.6 | 15.3 | yes | `artifacts/lingualleaf/books/en-jp-zh/red-rising-3/en-main-jp-zh/blackwhite/Morning Star（日文・中文注・黑白）・最大語種・大字版.pdf` |
 | `sanguozhi` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 6736 | 48.9 | 46.5 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/sanguozhi/wenyan-main-quadrilingual/color/三國志（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
 | `sanguozhi` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 6736 | 45.2 | 38.1 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/sanguozhi/wenyan-main-quadrilingual/blackwhite/三國志（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
+| `sanguozhi-pei-zhu` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 12042 | 81.9 | 81.9 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/sanguozhi-pei-zhu/wenyan-main-quadrilingual/color/三國志裴松之注（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
+| `sanguozhi-pei-zhu` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 12042 | 75.1 | 67.2 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/sanguozhi-pei-zhu/wenyan-main-quadrilingual/blackwhite/三國志裴松之注（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
 | `shanhaijing` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 713 | 11.7 | 11.7 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/shanhaijing/wenyan-main-quadrilingual/color/山海經（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
 | `shanhaijing` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 713 | 11.4 | 11.4 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/shanhaijing/wenyan-main-quadrilingual/blackwhite/山海經（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
+| `shiji-aginti` | `wenyan-jp-zh` | `wenyan-main-jp-zh` | `color` | 6471 | 52.4 | 52.4 | yes | `artifacts/lingualleaf/books/wenyan-jp-zh/shiji-aginti/wenyan-main-jp-zh/color/史記（現代日本語・現代中文注）・最大語種・大字版.pdf` |
+| `shiji-aginti` | `wenyan-jp-zh` | `wenyan-main-jp-zh` | `blackwhite` | 6472 | 54.1 | 54.1 | yes | `artifacts/lingualleaf/books/wenyan-jp-zh/shiji-aginti/wenyan-main-jp-zh/blackwhite/史記（現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
 | `shijing` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 522 | 8.8 | 3.9 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/shijing/wenyan-main-quadrilingual/color/詩經（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
 | `shijing` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 522 | 8.6 | 3.4 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/shijing/wenyan-main-quadrilingual/blackwhite/詩經（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
 | `shishuo-xinyu` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 1492 | 19.2 | 11.3 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/shishuo-xinyu/wenyan-main-quadrilingual/color/世說新語（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
@@ -249,10 +256,6 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | `zizhi-tongjian-part-06` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 16229 | 88.3 | 82.3 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/zizhi-tongjian-part-06/wenyan-main-quadrilingual/blackwhite/資治通鑑第六部（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
 | `zuozhuan` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 3992 | 29.5 | 29.5 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/zuozhuan/wenyan-main-quadrilingual/color/春秋左氏傳（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
 | `zuozhuan` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 3992 | 27.5 | 27.5 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/zuozhuan/wenyan-main-quadrilingual/blackwhite/春秋左氏傳（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
-| `sanguozhi-pei-zhu` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 12042 | 81.9 | 81.9 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/sanguozhi-pei-zhu/wenyan-main-quadrilingual/color/三國志裴松之注（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
-| `sanguozhi-pei-zhu` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 12042 | 75.1 | 67.2 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/sanguozhi-pei-zhu/wenyan-main-quadrilingual/blackwhite/三國志裴松之注（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
-| `shiji-aginti` | `wenyan-jp-zh` | `wenyan-main-jp-zh` | `color` | 6471 | 52.4 | 52.4 | yes | `artifacts/lingualleaf/books/wenyan-jp-zh/shiji-aginti/wenyan-main-jp-zh/color/史記（現代日本語・現代中文注）・最大語種・大字版.pdf` |
-| `shiji-aginti` | `wenyan-jp-zh` | `wenyan-main-jp-zh` | `blackwhite` | 6472 | 54.1 | 54.1 | yes | `artifacts/lingualleaf/books/wenyan-jp-zh/shiji-aginti/wenyan-main-jp-zh/blackwhite/史記（現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
 
 ## Skipped
 

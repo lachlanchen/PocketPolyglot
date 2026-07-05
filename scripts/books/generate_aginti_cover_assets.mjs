@@ -82,6 +82,8 @@ const THEME_HINTS = {
     "windswept Yorkshire moor, storm clouds, heather, lonely stone farmhouse silhouette, gothic romantic tension, restrained slate green and violet-gray palette",
   "jane-eyre":
     "Victorian manor corridor, rain against tall windows, governess silhouette, candlelit library, restrained gothic romance atmosphere, deep green and warm amber palette",
+  "a-game-of-thrones":
+    "grim medieval fantasy court intrigue, iron throne silhouette without readable symbols, snow-dark northern forest, dragon-scale texture, red comet glow, austere black, steel, and crimson palette",
   "the-count-of-monte-cristo":
     "Mediterranean prison fortress and sea cliffs, hidden treasure chest glow, elegant nineteenth-century adventure intrigue, moonlit blue and antique gold palette",
   "notre-dame-de-paris":

@@ -761,6 +761,45 @@ def render_report(rows: list[dict[str, object]], skipped: list[str]) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
+def sort_rows(rows: list[dict[str, object]]) -> list[dict[str, object]]:
+    mode_rank = {"color": 0, "blackwhite": 1}
+    return sorted(
+        rows,
+        key=lambda row: (
+            str(row.get("book_id", "")),
+            str(row.get("family", "")),
+            str(row.get("edition", "")),
+            mode_rank.get(str(row.get("mode", "")), 9),
+            str(row.get("mode", "")),
+        ),
+    )
+
+
+def merge_scoped_catalog(
+    rows: list[dict[str, object]],
+    skipped: list[str],
+    wanted_books: set[str],
+) -> tuple[list[dict[str, object]], list[str]]:
+    if not wanted_books or not MANIFEST_JSON.exists():
+        return sort_rows(rows), skipped
+    try:
+        existing = json.loads(MANIFEST_JSON.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return sort_rows(rows), skipped
+
+    kept_rows = [
+        row
+        for row in existing.get("rows", [])
+        if str(row.get("book_id", "")) not in wanted_books
+    ]
+    kept_skipped = [
+        item
+        for item in existing.get("skipped", [])
+        if not any(str(item).startswith(f"{book_id} ") for book_id in wanted_books)
+    ]
+    return sort_rows([*kept_rows, *rows]), [*kept_skipped, *skipped]
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--force-compile", action="store_true")
@@ -858,10 +897,18 @@ def main() -> int:
             skipped.append(f"{edition.book_id} {edition.edition} {edition.mode}: {exc}")
             print(f"WARNING: {skipped[-1]}", file=sys.stderr, flush=True)
 
+    manifest_rows = rows
+    manifest_skipped = skipped
+    if args.book and not args.limit:
+        manifest_rows, manifest_skipped = merge_scoped_catalog(rows, skipped, set(args.book))
+
     if not args.no_manifest:
         MANIFEST_JSON.parent.mkdir(parents=True, exist_ok=True)
-        MANIFEST_JSON.write_text(json.dumps({"rows": rows, "skipped": skipped}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        MANIFEST.write_text(render_report(rows, skipped), encoding="utf-8")
+        MANIFEST_JSON.write_text(
+            json.dumps({"rows": manifest_rows, "skipped": manifest_skipped}, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        MANIFEST.write_text(render_report(manifest_rows, manifest_skipped), encoding="utf-8")
 
     if not args.no_readme:
         section = "\n".join(
@@ -876,7 +923,7 @@ def main() -> int:
                             **row,
                             "tracked_pdf": f"https://github.com/lachlanchen/LinguaLeaf/blob/main/{row['tracked_pdf']}" if row.get("tracked_pdf") else "",
                         }
-                        for row in rows
+                        for row in manifest_rows
                     ]
                 ),
                 "",
@@ -897,7 +944,7 @@ def main() -> int:
                             "preview": f"figs/pocketpolyglot/{Path(str(row.get('preview', ''))).name}" if row.get("preview") else "",
                             "tracked_pdf": f"https://github.com/lachlanchen/LinguaLeaf/blob/main/{row['tracked_pdf']}" if row.get("tracked_pdf") else "",
                         }
-                        for row in rows
+                        for row in manifest_rows
                     ]
                 ),
                 "",
@@ -905,10 +952,10 @@ def main() -> int:
             ]
         )
         replace_section(LAZYLEARN / "README.md", "POCKETPOLYGLOT_MAX_LANGUAGE", lazy_section)
-        replace_section(LAZYLEARN / "docs" / "index.html", "POCKETPOLYGLOT_MAX_LANGUAGE", html_gallery(rows))
+        replace_section(LAZYLEARN / "docs" / "index.html", "POCKETPOLYGLOT_MAX_LANGUAGE", html_gallery(manifest_rows))
 
     print(MANIFEST.relative_to(ROOT))
-    print(f"rows={len(rows)} skipped={len(skipped)}")
+    print(f"rows={len(manifest_rows)} skipped={len(manifest_skipped)}")
     return 0
 
 
