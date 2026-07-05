@@ -62,7 +62,10 @@ def main() -> int:
             missing.append(item["chunk_id"])
             continue
         chunk = load_json(chunk_path)
-        if chunk.get("chunk_id") != item["chunk_id"] or paragraph_ids(chunk) != item.get("paragraph_ids", []):
+        expected_paragraph_ids = item.get("paragraph_ids")
+        if chunk.get("chunk_id") != item["chunk_id"] or (
+            expected_paragraph_ids is not None and paragraph_ids(chunk) != expected_paragraph_ids
+        ):
             stale.append(item["chunk_id"])
             continue
         valid.append(item["chunk_id"])

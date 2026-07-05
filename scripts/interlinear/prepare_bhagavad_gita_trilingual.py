@@ -304,7 +304,15 @@ def build_chunks(verses: list[Verse], *, reference_chars: int) -> tuple[list[dic
             },
         }
         chunks.append(chunk)
-        manifest_chunks.append({"chunk_id": chunk_id, "chunk_index": index, "chapter_number": verse.chapter})
+        manifest_chunks.append(
+            {
+                "chunk_id": chunk_id,
+                "chunk_index": index,
+                "chapter_number": verse.chapter,
+                "chapter_part_en": f"Bhagavad Gita {verse.chapter}.{verse.verse}",
+                "paragraph_ids": [paragraph_id],
+            }
+        )
     return chunks, manifest_chunks
 
 
