@@ -91,7 +91,14 @@ SHANHAIJING_CANONICAL_ORDER = {
     "海內經": 18,
 }
 
-ANTHOLOGY_STANDALONE_BOOKS = {"chuci", "foguoji", "platform-sutra", "tangshi-sanbai"}
+ANTHOLOGY_STANDALONE_BOOKS = {
+    "chuci",
+    "foguoji",
+    "platform-sutra",
+    "simafa",
+    "sunbin-bingfa",
+    "tangshi-sanbai",
+}
 CHUCI_SKIP_TITLES = {"楚辭", "楚辭章句", "楚辭補注", "屈原賦注"}
 CHUCI_CANONICAL_ORDER = {
     "離騷": 1,
@@ -111,6 +118,125 @@ CHUCI_CANONICAL_ORDER = {
     "九懷": 15,
     "九歎": 16,
     "九思": 17,
+}
+
+MENGZI_CANONICAL_ORDER = {
+    "梁惠王上": 1,
+    "梁惠王下": 2,
+    "公孫丑上": 3,
+    "公孫丑下": 4,
+    "滕文公上": 5,
+    "滕文公下": 6,
+    "離婁上": 7,
+    "離婁下": 8,
+    "萬章上": 9,
+    "萬章下": 10,
+    "告子上": 11,
+    "告子下": 12,
+    "盡心上": 13,
+    "盡心下": 14,
+}
+
+XUNZI_CANONICAL_ORDER = {
+    "荀子序": 0,
+    "勸學篇": 1,
+    "修身篇": 2,
+    "不苟篇": 3,
+    "榮辱篇": 4,
+    "非相篇": 5,
+    "非十二子篇": 6,
+    "仲尼篇": 7,
+    "儒效篇": 8,
+    "王制篇": 9,
+    "富國篇": 10,
+    "王霸篇": 11,
+    "君道篇": 12,
+    "臣道篇": 13,
+    "致士篇": 14,
+    "議兵篇": 15,
+    "彊國篇": 16,
+    "天論篇": 17,
+    "正論篇": 18,
+    "禮論篇": 19,
+    "樂論篇": 20,
+    "解蔽篇": 21,
+    "正名篇": 22,
+    "性惡篇": 23,
+    "君子篇": 24,
+    "成相篇": 25,
+    "賦篇": 26,
+    "大略篇": 27,
+    "宥坐篇": 28,
+    "子道篇": 29,
+    "法行篇": 30,
+    "哀公篇": 31,
+    "堯問篇": 32,
+}
+
+MOZI_CANONICAL_ORDER = {
+    "親士": 1,
+    "修身": 2,
+    "所染": 3,
+    "法儀": 4,
+    "七患": 5,
+    "辭過": 6,
+    "三辯": 7,
+    "尚賢上": 8,
+    "尚賢中": 9,
+    "尚賢下": 10,
+    "尚同上": 11,
+    "尚同中": 12,
+    "尚同下": 13,
+    "兼愛上": 14,
+    "兼愛中": 15,
+    "兼愛下": 16,
+    "非攻上": 17,
+    "非攻中": 18,
+    "非攻下": 19,
+    "節用上": 20,
+    "節用中": 21,
+    "節葬下": 22,
+    "天志上": 23,
+    "天志中": 24,
+    "天志下": 25,
+    "明鬼下": 26,
+    "非樂上": 27,
+    "非命上": 28,
+    "非命中": 29,
+    "非命下": 30,
+    "非儒下": 31,
+    "經上": 32,
+    "經下": 33,
+    "經說上": 34,
+    "經說下": 35,
+    "大取": 36,
+    "小取": 37,
+    "耕柱": 38,
+    "貴義": 39,
+    "公孟": 40,
+    "魯問": 41,
+    "公輸": 42,
+    "備城門": 43,
+    "備高臨": 44,
+    "備梯": 45,
+    "備水": 46,
+    "備突": 47,
+    "備穴": 48,
+    "備蛾傅": 49,
+    "迎敵祠": 50,
+    "旗幟": 51,
+    "號令": 52,
+    "雜守": 53,
+}
+
+GUIGUZI_CANONICAL_ORDER = {
+    "序": 0,
+    "卷01": 1,
+    "卷02": 2,
+    "卷03": 3,
+    "鬼谷子附録": 4,
+    "鬼谷子篇目考": 5,
+    "跋": 6,
 }
 
 MUDANTING_CANONICAL_ORDER = {
@@ -673,6 +799,12 @@ def source_sequence_key(path_name: str) -> int:
 
 def should_skip_source_item(book_id: str, title: str) -> bool:
     tail = title_tail(title)
+    if book_id in {"mengzi", "mozi"} and tail == "全覽":
+        return True
+    if book_id == "hanfeizi" and not re.fullmatch(r"\d{2}", tail):
+        return True
+    if book_id == "simafa" and tail != "司馬法":
+        return True
     if book_id == "zuozhuan" and tail == "全覽":
         return True
     if book_id == "vimalakirti-sutra" and tail in {"1", "2", "3"}:
@@ -772,6 +904,8 @@ def meaningful_chapter_title(book_id: str, title: str, header_text: str) -> str:
         if base and header != base:
             return f"{base} {header}"
     if book_id == "guoyu" and header:
+        return header
+    if book_id in {"hanfeizi", "lushi-chunqiu"} and header:
         return header
     if book_id == "vimalakirti-sutra" and header:
         return header
@@ -921,6 +1055,20 @@ def chapter_sort_key(
         return (SHANHAIJING_CANONICAL_ORDER.get(tail, 9000 + source_sequence_key(html_name)), tail)
     if book_id == "chuci":
         return (CHUCI_CANONICAL_ORDER.get(canonical_chuci_key(tail), 9000 + source_sequence_key(html_name)), tail)
+    if book_id == "mengzi":
+        return (MENGZI_CANONICAL_ORDER.get(tail, 9000 + source_sequence_key(html_name)), tail)
+    if book_id == "xunzi":
+        return (XUNZI_CANONICAL_ORDER.get(tail, 9000 + source_sequence_key(html_name)), tail)
+    if book_id == "mozi":
+        return (MOZI_CANONICAL_ORDER.get(tail, 9000 + source_sequence_key(html_name)), tail)
+    if book_id == "guiguzi":
+        return (GUIGUZI_CANONICAL_ORDER.get(tail, 9000 + source_sequence_key(html_name)), tail)
+    if book_id == "lushi-chunqiu":
+        match = re.search(r"卷\s*([一二三四五六七八九十百〇零0-9]+)", tail)
+        if match:
+            raw = match.group(1)
+            return (int(raw) if raw.isdigit() else zh_number_to_int(raw), tail)
+        return (9000 + source_sequence_key(html_name), tail)
     if book_id == "mudanting":
         return (MUDANTING_CANONICAL_ORDER.get(tail, 9000 + source_sequence_key(html_name)), tail)
     if book_id == "xixiangji":
@@ -1503,6 +1651,44 @@ def epub_reference(path: Path, source: str, note: str, *, limit: int = 3600) -> 
     }
 
 
+@lru_cache(maxsize=None)
+def file_reference_excerpt(book_id: str, rel_path: str, limit: int = 1600) -> dict[str, str] | None:
+    path = ROOT / rel_path
+    if not path.is_file():
+        return None
+    suffix = path.suffix.lower()
+    if suffix == ".pdf":
+        text, method = cached_pdf_reference_text(book_id, path)
+    elif suffix == ".epub":
+        text = epub_text(path)
+        method = "epub_text" if text else "needs_extraction"
+    else:
+        return None
+    return {
+        "path": rel_path,
+        "method": method,
+        "excerpt": excerpt(text, limit) if text else "",
+    }
+
+
+def generic_reference_excerpts(book_id: str, layers: list[dict[str, Any]]) -> dict[str, list[dict[str, str]]]:
+    refs: dict[str, list[dict[str, str]]] = OrderedDict()
+    for layer in layers:
+        rel_path = str(layer.get("path") or "")
+        if not rel_path:
+            continue
+        item = file_reference_excerpt(book_id, rel_path)
+        if not item:
+            continue
+        item = {
+            "role": str(layer.get("role") or ""),
+            "quality": str(layer.get("quality") or ""),
+            **item,
+        }
+        refs.setdefault(str(layer.get("layer") or "reference"), []).append(item)
+    return refs
+
+
 @lru_cache(maxsize=1)
 def load_sunzi_references() -> dict[str, Any]:
     return {
@@ -1614,6 +1800,9 @@ def broad_references(book: dict[str, Any], chapter_number: int) -> dict[str, Any
         "scope": "References are broad chapter/source references. Preserve the wenyan source exactly and only use references when they clearly match.",
         "paths": paths_by_layer,
     }
+    extracted_refs = generic_reference_excerpts(book["book_id"], layers)
+    if extracted_refs:
+        reference["source_excerpts"] = extracted_refs
     if book["book_id"] == "zhuangzi":
         en_refs = []
         watson = load_zhuangzi_watson_windows().get(chapter_number)

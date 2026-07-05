@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "book_id": "lushi-chunqiu",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "呂氏春秋",
+  "book_title_zh": "吕氏春秋",
+  "book_title_ja": "呂氏春秋",
+  "book_title_en": "Lüshi Chunqiu",
+  "author": "呂不韋門客",
+  "author_reading_zh": "lǚ bù wéi mén kè",
+  "author_reading_ja": "りょ ふい の もんかく",
+  "book_description": "呂氏春秋 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/lushi-chunqiu/zh/wikisource",
+    "modern_chinese_reference": "sources/lushi-chunqiu/zh/吕氏春秋.pdf",
+    "english_reference": "sources/lushi-chunqiu/en/The Annals of Lü Buwei.pdf",
+    "japanese_context_reference": "sources/lushi-chunqiu/wiki-snapshots/wikipedia/ja/wikipedia-ja-呂氏春秋.pdf",
+    "wenyan_markdown": "books/lushi-chunqiu/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/lushi-chunqiu/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/lushi-chunqiu/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/lushi-chunqiu/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/lushi-chunqiu/work/quadrilingual/preview/lushi-chunqiu.partial.json",
+  "build_root": "build/lushi-chunqiu/wenyan-main-quadrilingual",
+  "prepared_at": "2026-07-05T23:29:25.249331+00:00"
+}

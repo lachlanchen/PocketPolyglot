@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "book_id": "mengzi",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "孟子",
+  "book_title_zh": "孟子",
+  "book_title_ja": "孟子",
+  "book_title_en": "Mencius",
+  "author": "孟子及其弟子",
+  "author_reading_zh": "mèng zǐ jí qí dì zǐ",
+  "author_reading_ja": "もうし および その でし",
+  "book_description": "孟子 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/mengzi/zh/wikisource",
+    "modern_chinese_reference": "sources/mengzi/zh/commentary/孟子译注（典藏版）.pdf",
+    "english_reference": "sources/mengzi/en/Mencius.pdf",
+    "english_wikisource_snapshot": "sources/mengzi/wiki-snapshots/wikisource/en/wikisource-en-The Works of Mencius.pdf",
+    "japanese_wikisource_snapshot": "sources/mengzi/wiki-snapshots/wikisource/ja/wikisource-ja-孟子.pdf",
+    "wenyan_markdown": "books/mengzi/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/mengzi/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/mengzi/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/mengzi/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/mengzi/work/quadrilingual/preview/mengzi.partial.json",
+  "build_root": "build/mengzi/wenyan-main-quadrilingual",
+  "prepared_at": "2026-07-05T23:29:19.142524+00:00"
+}

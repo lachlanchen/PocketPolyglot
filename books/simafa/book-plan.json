@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "book_id": "simafa",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "司馬法",
+  "book_title_zh": "司马法",
+  "book_title_ja": "司馬法",
+  "book_title_en": "The Methods of the Sima",
+  "author": "司馬穰苴",
+  "author_reading_zh": "sī mǎ ráng jū",
+  "author_reading_ja": "しば じょうしょ",
+  "book_description": "司馬法 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/chinese-military-classics/simafa/zh/wikisource",
+    "modern_chinese_reference": "sources/chinese-military-classics/simafa/zh/司马法 - 中华兵法宝典丛书.epub",
+    "english_anthology_reference": "sources/chinese-military-classics/anthologies/en/Chinese Martial Code - Sun Tzu Sima Rangju Wu Zi.epub",
+    "english_secondary_reference": "sources/chinese-military-classics/anthologies/en/Military Strategy Classics of Ancient China - English and Chinese.epub",
+    "japanese_wikisource_snapshot": "sources/chinese-military-classics/simafa/wiki-snapshots/wikisource/ja/wikisource-ja-司馬法.pdf",
+    "wenyan_markdown": "books/simafa/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/simafa/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/simafa/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/simafa/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/simafa/work/quadrilingual/preview/simafa.partial.json",
+  "build_root": "build/simafa/wenyan-main-quadrilingual",
+  "prepared_at": "2026-07-05T23:29:29.425910+00:00"
+}

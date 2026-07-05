@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "book_id": "guiguzi",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "鬼谷子",
+  "book_title_zh": "鬼谷子",
+  "book_title_ja": "鬼谷子",
+  "book_title_en": "Guiguzi",
+  "author": "鬼谷子",
+  "author_reading_zh": "guǐ gǔ zǐ",
+  "author_reading_ja": "きこくし",
+  "book_description": "鬼谷子 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/guiguzi/zh/wikisource",
+    "modern_chinese_reference": "sources/guiguzi/zh/陶注鬼谷子校订考说 - 子海精华编.pdf",
+    "english_reference": "sources/guiguzi/en/Guiguzi - China's First Treatise on Rhetoric.pdf",
+    "japanese_context_reference": "sources/guiguzi/wiki-snapshots/wikipedia/ja/wikipedia-ja-鬼谷子.pdf",
+    "wenyan_markdown": "books/guiguzi/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/guiguzi/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/guiguzi/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/guiguzi/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/guiguzi/work/quadrilingual/preview/guiguzi.partial.json",
+  "build_root": "build/guiguzi/wenyan-main-quadrilingual",
+  "prepared_at": "2026-07-05T23:29:24.090991+00:00"
+}

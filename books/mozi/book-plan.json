@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "book_id": "mozi",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "墨子",
+  "book_title_zh": "墨子",
+  "book_title_ja": "墨子",
+  "book_title_en": "Mozi",
+  "author": "墨翟及墨家後學",
+  "author_reading_zh": "mò dí jí mò jiā hòu xué",
+  "author_reading_ja": "ぼく てき および ぼっか の こうがく",
+  "book_description": "墨子 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/mozi/zh/wikisource",
+    "modern_chinese_reference": "sources/mozi/zh/墨子.pdf",
+    "english_reference": "sources/mozi/en/The Mozi - A Complete Translation.pdf",
+    "english_wikisource_snapshot": "sources/mozi/wiki-snapshots/wikisource/en/wikisource-en-Mozi.pdf",
+    "japanese_context_reference": "sources/mozi/wiki-snapshots/wikipedia/ja/wikipedia-ja-墨子.pdf",
+    "wenyan_markdown": "books/mozi/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/mozi/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/mozi/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/mozi/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/mozi/work/quadrilingual/preview/mozi.partial.json",
+  "build_root": "build/mozi/wenyan-main-quadrilingual",
+  "prepared_at": "2026-07-05T23:29:22.965834+00:00"
+}

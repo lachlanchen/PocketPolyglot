@@ -1607,6 +1607,426 @@
         }
       ],
       "next_step": "Use the twenty canonical Chinese Wikisource chapters as the wenyan spine. Use English Wikisource/EPUB/PDF references and Japanese Wikisource as references; generate aligned English, readable modern Japanese, modern Chinese, ruby/pinyin, and grammar roles."
+    },
+    {
+      "book_id": "mengzi",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "孟子",
+      "book_title_zh": "孟子",
+      "book_title_ja": "孟子",
+      "book_title_en": "Mencius",
+      "author": "孟子及其弟子",
+      "author_reading_zh": "mèng zǐ jí qí dì zǐ",
+      "author_reading_ja": "もうし および その でし",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/mengzi/zh/wikisource",
+          "quality": "Chinese Wikisource source tree fetched with canonical chapter pages"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "modern_chinese_reference",
+          "path": "sources/mengzi/zh/commentary/孟子译注（典藏版）.pdf",
+          "quality": "Chinese annotated translation/reference; image-only if pdftotext is blank"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_reference",
+          "path": "sources/mengzi/en/Mencius.pdf",
+          "quality": "English Mencius reference"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_wikisource_snapshot",
+          "path": "sources/mengzi/wiki-snapshots/wikisource/en/wikisource-en-The Works of Mencius.pdf",
+          "quality": "Wikisource PDF snapshot reference"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_wikisource_snapshot",
+          "path": "sources/mengzi/wiki-snapshots/wikisource/ja/wikisource-ja-孟子.pdf",
+          "quality": "Japanese Wikisource snapshot/reference; generate readable modern Japanese where needed"
+        }
+      ]
+    },
+    {
+      "book_id": "xunzi",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "荀子",
+      "book_title_zh": "荀子",
+      "book_title_ja": "荀子",
+      "book_title_en": "Xunzi",
+      "author": "荀況",
+      "author_reading_zh": "xún kuàng",
+      "author_reading_ja": "じゅん きょう",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/xunzi/zh/wikisource",
+          "quality": "Chinese Wikisource source tree"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "modern_chinese_reference",
+          "path": "sources/xunzi/zh/荀子.pdf",
+          "quality": "Chinese reference edition"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "secondary_chinese_reference",
+          "path": "sources/xunzi/zh/学不可以已：一日一语荀子.epub",
+          "quality": "Modern Chinese reading/reference EPUB"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_reference",
+          "path": "sources/xunzi/en/Xunzi - The Complete Text.pdf",
+          "quality": "English full translation reference"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_context_reference",
+          "path": "sources/xunzi/wiki-snapshots/wikipedia/ja/wikipedia-ja-荀子.pdf",
+          "quality": "Japanese reference/context; generate readable modern Japanese"
+        }
+      ]
+    },
+    {
+      "book_id": "mozi",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "墨子",
+      "book_title_zh": "墨子",
+      "book_title_ja": "墨子",
+      "book_title_en": "Mozi",
+      "author": "墨翟及墨家後學",
+      "author_reading_zh": "mò dí jí mò jiā hòu xué",
+      "author_reading_ja": "ぼく てき および ぼっか の こうがく",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/mozi/zh/wikisource",
+          "quality": "Chinese Wikisource source tree"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "modern_chinese_reference",
+          "path": "sources/mozi/zh/墨子.pdf",
+          "quality": "Chinese annotated translation/reference"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_reference",
+          "path": "sources/mozi/en/The Mozi - A Complete Translation.pdf",
+          "quality": "English complete translation reference"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_wikisource_snapshot",
+          "path": "sources/mozi/wiki-snapshots/wikisource/en/wikisource-en-Mozi.pdf",
+          "quality": "English Wikisource snapshot/reference"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_context_reference",
+          "path": "sources/mozi/wiki-snapshots/wikipedia/ja/wikipedia-ja-墨子.pdf",
+          "quality": "Japanese context/reference; generate readable modern Japanese"
+        }
+      ]
+    },
+    {
+      "book_id": "hanfeizi",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "韓非子",
+      "book_title_zh": "韩非子",
+      "book_title_ja": "韓非子",
+      "book_title_en": "Han Feizi",
+      "author": "韓非",
+      "author_reading_zh": "hán fēi",
+      "author_reading_ja": "かん ぴ",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/hanfeizi/zh/wikisource",
+          "quality": "Chinese Wikisource source tree; task preparer keeps volume pages only to avoid duplicate article pages"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "modern_chinese_reference",
+          "path": "sources/hanfeizi/zh/韩非子.pdf",
+          "quality": "Chinese reference edition"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_reference",
+          "path": "sources/hanfeizi/en/Han Feizi - Basic Writings.pdf",
+          "quality": "English selected translation/reference"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_context_reference",
+          "path": "sources/hanfeizi/wiki-snapshots/wikipedia/ja/wikipedia-ja-韓非子.pdf",
+          "quality": "Japanese context/reference; generate readable modern Japanese"
+        }
+      ]
+    },
+    {
+      "book_id": "guiguzi",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "鬼谷子",
+      "book_title_zh": "鬼谷子",
+      "book_title_ja": "鬼谷子",
+      "book_title_en": "Guiguzi",
+      "author": "鬼谷子",
+      "author_reading_zh": "guǐ gǔ zǐ",
+      "author_reading_ja": "きこくし",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/guiguzi/zh/wikisource",
+          "quality": "Chinese Wikisource source tree"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "modern_chinese_reference",
+          "path": "sources/guiguzi/zh/陶注鬼谷子校订考说 - 子海精华编.pdf",
+          "quality": "Chinese annotated/reference edition"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_reference",
+          "path": "sources/guiguzi/en/Guiguzi - China's First Treatise on Rhetoric.pdf",
+          "quality": "English translation/commentary reference"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_context_reference",
+          "path": "sources/guiguzi/wiki-snapshots/wikipedia/ja/wikipedia-ja-鬼谷子.pdf",
+          "quality": "Japanese context/reference; generate readable modern Japanese"
+        }
+      ]
+    },
+    {
+      "book_id": "lushi-chunqiu",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "呂氏春秋",
+      "book_title_zh": "吕氏春秋",
+      "book_title_ja": "呂氏春秋",
+      "book_title_en": "Lüshi Chunqiu",
+      "author": "呂不韋門客",
+      "author_reading_zh": "lǚ bù wéi mén kè",
+      "author_reading_ja": "りょ ふい の もんかく",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/lushi-chunqiu/zh/wikisource",
+          "quality": "Chinese Wikisource source tree"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "modern_chinese_reference",
+          "path": "sources/lushi-chunqiu/zh/吕氏春秋.pdf",
+          "quality": "Chinese annotated/reference edition"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_reference",
+          "path": "sources/lushi-chunqiu/en/The Annals of Lü Buwei.pdf",
+          "quality": "English translation/reference"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_context_reference",
+          "path": "sources/lushi-chunqiu/wiki-snapshots/wikipedia/ja/wikipedia-ja-呂氏春秋.pdf",
+          "quality": "Japanese context/reference; generate readable modern Japanese"
+        }
+      ]
+    },
+    {
+      "book_id": "sunbin-bingfa",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "孫臏兵法",
+      "book_title_zh": "孙膑兵法",
+      "book_title_ja": "孫臏兵法",
+      "book_title_en": "Sun Bin's Art of War",
+      "author": "孫臏",
+      "author_reading_zh": "sūn bìn",
+      "author_reading_ja": "そん ぴん",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/chinese-military-classics/sunbin-bingfa/zh/wikisource",
+          "quality": "Chinese Wikisource single-page source"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "modern_chinese_reference",
+          "path": "sources/chinese-military-classics/sunbin-bingfa/zh/孫臏兵法 - 白話譯註節譯本.epub",
+          "quality": "Chinese vernacular annotated reference EPUB"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "secondary_chinese_reference",
+          "path": "sources/chinese-military-classics/sunbin-bingfa/zh/孙膑兵法.pdf",
+          "quality": "Chinese PDF reference"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_anthology_reference",
+          "path": "sources/chinese-military-classics/anthologies/en/Military Strategy Classics of Ancient China - English and Chinese.epub",
+          "quality": "English/Chinese military classics anthology; use matching Sun Bin passages only"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_secondary_reference",
+          "path": "sources/chinese-military-classics/anthologies/en/The Art of War - Complete Texts and Commentaries.epub",
+          "quality": "Secondary military classics reference"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_context_reference",
+          "path": "sources/chinese-military-classics/sunbin-bingfa/wiki-snapshots/wikipedia/ja/wikipedia-ja-孫臏兵法.pdf",
+          "quality": "Japanese context/reference; generate readable modern Japanese"
+        }
+      ]
+    },
+    {
+      "book_id": "simafa",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "司馬法",
+      "book_title_zh": "司马法",
+      "book_title_ja": "司馬法",
+      "book_title_en": "The Methods of the Sima",
+      "author": "司馬穰苴",
+      "author_reading_zh": "sī mǎ ráng jū",
+      "author_reading_ja": "しば じょうしょ",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/chinese-military-classics/simafa/zh/wikisource",
+          "quality": "Chinese Wikisource source; task preparer keeps the complete root page only"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "modern_chinese_reference",
+          "path": "sources/chinese-military-classics/simafa/zh/司马法 - 中华兵法宝典丛书.epub",
+          "quality": "Modern Chinese annotated reference EPUB"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_anthology_reference",
+          "path": "sources/chinese-military-classics/anthologies/en/Chinese Martial Code - Sun Tzu Sima Rangju Wu Zi.epub",
+          "quality": "English military classics anthology with Sima Rangju/Sima Fa material"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_secondary_reference",
+          "path": "sources/chinese-military-classics/anthologies/en/Military Strategy Classics of Ancient China - English and Chinese.epub",
+          "quality": "Secondary English/Chinese anthology reference"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_wikisource_snapshot",
+          "path": "sources/chinese-military-classics/simafa/wiki-snapshots/wikisource/ja/wikisource-ja-司馬法.pdf",
+          "quality": "Japanese Wikisource snapshot/reference; generate readable modern Japanese"
+        }
+      ]
+    },
+    {
+      "book_id": "weiliaozi",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "尉繚子",
+      "book_title_zh": "尉缭子",
+      "book_title_ja": "尉繚子",
+      "book_title_en": "Wei Liaozi",
+      "author": "尉繚",
+      "author_reading_zh": "wèi liáo",
+      "author_reading_ja": "うつ りょう",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/chinese-military-classics/weiliaozi/zh/wikisource",
+          "quality": "Chinese Wikisource source tree; all-view page contains the full text"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "modern_chinese_reference",
+          "path": "sources/chinese-military-classics/weiliaozi/zh/尉缭子.pdf",
+          "quality": "Chinese PDF source/reference with extractable text"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_anthology_reference",
+          "path": "sources/chinese-military-classics/anthologies/en/Military Strategy Classics of Ancient China - English and Chinese.epub",
+          "quality": "English/Chinese military classics anthology; use matching Wei Liaozi passages only"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_context_reference",
+          "path": "sources/chinese-military-classics/weiliaozi/wiki-snapshots/wikipedia/ja/wikipedia-ja-尉繚子.pdf",
+          "quality": "Japanese context/reference; generate readable modern Japanese"
+        }
+      ]
     }
   ]
 }

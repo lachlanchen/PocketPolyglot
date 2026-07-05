@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "book_id": "hanfeizi",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "韓非子",
+  "book_title_zh": "韩非子",
+  "book_title_ja": "韓非子",
+  "book_title_en": "Han Feizi",
+  "author": "韓非",
+  "author_reading_zh": "hán fēi",
+  "author_reading_ja": "かん ぴ",
+  "book_description": "韓非子 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/hanfeizi/zh/wikisource",
+    "modern_chinese_reference": "sources/hanfeizi/zh/韩非子.pdf",
+    "english_reference": "sources/hanfeizi/en/Han Feizi - Basic Writings.pdf",
+    "japanese_context_reference": "sources/hanfeizi/wiki-snapshots/wikipedia/ja/wikipedia-ja-韓非子.pdf",
+    "wenyan_markdown": "books/hanfeizi/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/hanfeizi/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/hanfeizi/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/hanfeizi/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/hanfeizi/work/quadrilingual/preview/hanfeizi.partial.json",
+  "build_root": "build/hanfeizi/wenyan-main-quadrilingual",
+  "prepared_at": "2026-07-05T23:29:23.296842+00:00"
+}

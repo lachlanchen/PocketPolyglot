@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "book_id": "weiliaozi",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "尉繚子",
+  "book_title_zh": "尉缭子",
+  "book_title_ja": "尉繚子",
+  "book_title_en": "Wei Liaozi",
+  "author": "尉繚",
+  "author_reading_zh": "wèi liáo",
+  "author_reading_ja": "うつ りょう",
+  "book_description": "尉繚子 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/chinese-military-classics/weiliaozi/zh/wikisource",
+    "modern_chinese_reference": "sources/chinese-military-classics/weiliaozi/zh/尉缭子.pdf",
+    "english_anthology_reference": "sources/chinese-military-classics/anthologies/en/Military Strategy Classics of Ancient China - English and Chinese.epub",
+    "japanese_context_reference": "sources/chinese-military-classics/weiliaozi/wiki-snapshots/wikipedia/ja/wikipedia-ja-尉繚子.pdf",
+    "wenyan_markdown": "books/weiliaozi/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/weiliaozi/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/weiliaozi/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/weiliaozi/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/weiliaozi/work/quadrilingual/preview/weiliaozi.partial.json",
+  "build_root": "build/weiliaozi/wenyan-main-quadrilingual",
+  "prepared_at": "2026-07-05T23:29:29.667589+00:00"
+}
