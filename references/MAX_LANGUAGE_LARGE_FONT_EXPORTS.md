@@ -9,8 +9,8 @@ This catalog is generated from local build outputs. It selects the richest avail
 
 All compiled editions use the larger PocketPolyglot font profile. Existing source PDFs and JSON are not modified.
 
-- Local compressed/exported PDFs: 154
-- GitHub-tracked PDFs under size cap: 147
+- Local compressed/exported PDFs: 156
+- GitHub-tracked PDFs under size cap: 149
 - Skipped source folders: 4
 
 ## Gallery
@@ -23,6 +23,7 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | <img src="assets/max-language-previews/botchan.png" width="120" alt="botchan cover preview"> | `botchan` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/botchan/en-main-jp-zh/color/Botchan（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/botchan/en-main-jp-zh/blackwhite/Botchan（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/chuci.png" width="120" alt="chuci cover preview"> | `chuci` | `wenyan-en-jp-zh` | [color](docs/pocketpolyglot/books/wenyan-en-jp-zh/chuci/wenyan-main-quadrilingual/color/楚辭（英文・現代日本語・現代中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/wenyan-en-jp-zh/chuci/wenyan-main-quadrilingual/blackwhite/楚辭（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/chumon-no-ooi-ryoriten.png" width="120" alt="chumon-no-ooi-ryoriten cover preview"> | `chumon-no-ooi-ryoriten` | `jp-zh` | [color](docs/pocketpolyglot/books/jp-zh/chumon-no-ooi-ryoriten/jp-main/color/注文の多い料理店（中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/jp-zh/chumon-no-ooi-ryoriten/jp-main/blackwhite/注文の多い料理店（中文注・黑白）・最大語種・大字版.pdf) |
+| <img src="assets/max-language-previews/fellowship-of-the-ring.png" width="120" alt="fellowship-of-the-ring cover preview"> | `fellowship-of-the-ring` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/fellowship-of-the-ring/en-main-jp-zh/color/The Fellowship of the Ring（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/fellowship-of-the-ring/en-main-jp-zh/blackwhite/The Fellowship of the Ring（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/foguoji.png" width="120" alt="foguoji cover preview"> | `foguoji` | `wenyan-en-jp-zh` | [color](docs/pocketpolyglot/books/wenyan-en-jp-zh/foguoji/wenyan-main-quadrilingual/color/佛國記（英文・現代日本語・現代中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/wenyan-en-jp-zh/foguoji/wenyan-main-quadrilingual/blackwhite/佛國記（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/genji-modern.png" width="120" alt="genji-modern cover preview"> | `genji-modern` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/genji-modern/en-main-jp-zh/color/The Tale of Genji（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/genji-modern/en-main-jp-zh/blackwhite/The Tale of Genji（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/ginga-tetsudo.png" width="120" alt="ginga-tetsudo cover preview"> | `ginga-tetsudo` | `jp-zh` | [color](docs/pocketpolyglot/books/jp-zh/ginga-tetsudo/jp-main/color/銀河鉄道の夜（中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/jp-zh/ginga-tetsudo/jp-main/blackwhite/銀河鉄道の夜（中文注・黑白）・最大語種・大字版.pdf) |
@@ -247,6 +248,8 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | `sanguozhi-pei-zhu` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 12042 | 75.1 | 75.1 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/sanguozhi-pei-zhu/wenyan-main-quadrilingual/blackwhite/三國志裴松之注（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
 | `shiji-aginti` | `wenyan-jp-zh` | `wenyan-main-jp-zh` | `color` | 6471 | 52.4 | 52.4 | yes | `artifacts/lingualleaf/books/wenyan-jp-zh/shiji-aginti/wenyan-main-jp-zh/color/史記（現代日本語・現代中文注）・最大語種・大字版.pdf` |
 | `shiji-aginti` | `wenyan-jp-zh` | `wenyan-main-jp-zh` | `blackwhite` | 6472 | 54.1 | 54.1 | yes | `artifacts/lingualleaf/books/wenyan-jp-zh/shiji-aginti/wenyan-main-jp-zh/blackwhite/史記（現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
+| `fellowship-of-the-ring` | `en-jp-zh` | `en-main-jp-zh` | `color` | 2521 | 19.6 | 16.6 | yes | `artifacts/lingualleaf/books/en-jp-zh/fellowship-of-the-ring/en-main-jp-zh/color/The Fellowship of the Ring（日文・中文注）・最大語種・大字版.pdf` |
+| `fellowship-of-the-ring` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 2521 | 18.3 | 13.5 | yes | `artifacts/lingualleaf/books/en-jp-zh/fellowship-of-the-ring/en-main-jp-zh/blackwhite/The Fellowship of the Ring（日文・中文注・黑白）・最大語種・大字版.pdf` |
 
 ## Skipped
 

@@ -54,6 +54,8 @@ def discover(book_id: str, build_root: Path) -> list[dict[str, str | Path]]:
         if len(rel.parts) != 4:
             continue
         pair, main_dir, variant, filename = rel.parts
+        if pair not in PAIR_LABELS:
+            continue
         if variant not in VARIANT_LABELS:
             continue
         label = PAIR_LABELS.get(pair, pair)
