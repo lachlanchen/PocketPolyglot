@@ -61,6 +61,11 @@ case "$part_number" in
   3) part_zh="第三部"; part_en="Part III" ;;
   4) part_zh="第四部"; part_en="Part IV" ;;
   5) part_zh="第五部"; part_en="Part V" ;;
+  6) part_zh="第六部"; part_en="Part VI" ;;
+  7) part_zh="第七部"; part_en="Part VII" ;;
+  8) part_zh="第八部"; part_en="Part VIII" ;;
+  9) part_zh="第九部"; part_en="Part IX" ;;
+  10) part_zh="第十部"; part_en="Part X" ;;
   *) part_zh="第${part_number}部"; part_en="Part ${part_number}" ;;
 esac
 
@@ -68,10 +73,14 @@ assembled_json="books/$book_id/work/quadrilingual/preview/$book_id.$part.json"
 build_dir="build/$book_id-$part/${main_layer}-main-quadrilingual/large-font/$color_mode"
 mkdir -p "$(dirname "$assembled_json")" "$build_dir"
 
-python scripts/interlinear/backfill_quadrilingual_grammar_roles.py \
-  --chunk-dir "$chunk_dir" \
-  --chunks-jsonl "$chunks_jsonl" \
-  --overwrite-collapsed >/dev/null
+grammar_marker="$chunk_dir/.grammar-backfill-overwrite-collapsed.done"
+if [[ ! -f "$grammar_marker" ]] || find "$chunk_dir" -maxdepth 1 -name '*.json' -newer "$grammar_marker" -print -quit | grep -q .; then
+  python scripts/interlinear/backfill_quadrilingual_grammar_roles.py \
+    --chunk-dir "$chunk_dir" \
+    --chunks-jsonl "$chunks_jsonl" \
+    --overwrite-collapsed >/dev/null
+  touch "$grammar_marker"
+fi
 
 python scripts/interlinear/assemble_quadrilingual_json.py \
   --manifest "$part_manifest" \
