@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "book_id": "a-game-of-thrones",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_en_zh_sources_generated_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "zh": "sources/a-song-of-ice-and-fire/zh/乔治·R R 马丁经典奇幻系列（套装共22册）.mobi",
+    "en": "sources/a-song-of-ice-and-fire/en/individual-volumes/01 - A Game of Thrones.epub"
+  },
+  "source_sha256": {
+    "zh": "7dfbb51078cfa12672a8dbab1b559f762dd8a81022e3d209e7cbb473645dd7d9",
+    "en": "8d67f63e173d33aa27a6d4ae5bb603eaea47ba69fbf00277cda5120a0d427da2"
+  },
+  "markdown": {
+    "en": "books/a-game-of-thrones/markdown/en.md",
+    "zh": "books/a-game-of-thrones/markdown/zh.md"
+  },
+  "book_title_en": "A Game of Thrones",
+  "book_title_zh": "权力的游戏",
+  "book_title_ja": "七王国の玉座",
+  "book_title_zh_reading": "quán lì de yóu xì",
+  "book_title_ja_reading": "しちおうこく の ぎょくざ",
+  "author": "George R. R. Martin",
+  "author_reading_zh": "qiáo zhì mǎ dīng",
+  "author_reading_ja": "ジョージ アール アール マーティン",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "George R. R. Martin, A Game of Thrones. English volume-one EPUB is the alignment spine; Chinese MOBI anthology is trimmed to the first book and used as a broad published translation reference. No Japanese volume source is staged, so Japanese is generated in natural modern Japanese.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "global_ratio_window",
+  "chunks_jsonl": "books/a-game-of-thrones/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/a-game-of-thrones/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/a-game-of-thrones/work/trilingual/interlinear/chunks",
+  "preview_json": "books/a-game-of-thrones/work/trilingual/preview/a-game-of-thrones.partial.json",
+  "assembled_json": "books/a-game-of-thrones/work/trilingual/preview/a-game-of-thrones.partial.json",
+  "prepared_at": "2026-07-05T15:57:32.561677+00:00",
+  "chunk_count": 697,
+  "english_chapter_count": 81,
+  "chinese_reference_chapter_count": 1,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_fantasy_trilingual.py",
+    "english_spine": "English source is the chunk spine.",
+    "chinese_reference": "Chinese source is trimmed to the requested first book and used as a broad reference window.",
+    "start_command": "WORKERS=10 MODEL=gpt-5.5 REASONING=low bash scripts/interlinear/start_trilingual_book_tmux.sh a-game-of-thrones"
+  }
+}

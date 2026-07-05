@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "book_id": "harry-potter-1",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_en_zh_sources_generated_ja_with_image_only_ja_reference",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "zh": "sources/harry-potter/zh/哈利·波特.epub",
+    "en": "sources/harry-potter/en/Harry Potter Series.epub",
+    "ja": "sources/harry-potter/jp/ハリー・ポッターと賢者の石.pdf"
+  },
+  "source_sha256": {
+    "zh": "584b6c7916a9cceb48db39d3323b2ac97e33ded20d3df6ec1ca1e1e8b5ac83be",
+    "en": "624e880b6f026b34420777bae4b885f7d9e086489a57daa389e8c69ab82824e4",
+    "ja": "d943e38c43dc081381cea6de7dfee447a3c4b1815804404818eb772aab5361af"
+  },
+  "markdown": {
+    "en": "books/harry-potter-1/markdown/en.md",
+    "zh": "books/harry-potter-1/markdown/zh.md"
+  },
+  "book_title_en": "Harry Potter and the Sorcerer's Stone",
+  "book_title_zh": "哈利·波特与魔法石",
+  "book_title_ja": "ハリー・ポッターと賢者の石",
+  "book_title_zh_reading": "hā lì bō tè yǔ mó fǎ shí",
+  "book_title_ja_reading": "ハリー ポッター と けんじゃ の いし",
+  "author": "J. K. Rowling",
+  "author_reading_zh": "luó lín",
+  "author_reading_ja": "ローリング",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "J. K. Rowling, Harry Potter and the Sorcerer's Stone. English series EPUB is trimmed to volume one and used as the alignment spine; Chinese EPUB is trimmed to volume one and used as a published translation reference. The local Japanese PDF is image-only, so Japanese is generated in natural modern Japanese unless OCR is prepared later.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "global_ratio_window",
+  "chunks_jsonl": "books/harry-potter-1/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/harry-potter-1/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/harry-potter-1/work/trilingual/interlinear/chunks",
+  "preview_json": "books/harry-potter-1/work/trilingual/preview/harry-potter-1.partial.json",
+  "assembled_json": "books/harry-potter-1/work/trilingual/preview/harry-potter-1.partial.json",
+  "prepared_at": "2026-07-05T15:57:29.285469+00:00",
+  "chunk_count": 185,
+  "english_chapter_count": 19,
+  "chinese_reference_chapter_count": 17,
+  "preparation_notes": {
+    "japanese_reference": "Japanese source exists locally but is image-only in pdftotext; prepare OCR later if exact Japanese-source alignment is required.",
+    "script": "scripts/interlinear/prepare_fantasy_trilingual.py",
+    "english_spine": "English source is the chunk spine.",
+    "chinese_reference": "Chinese source is trimmed to the requested first book and used as a broad reference window.",
+    "start_command": "WORKERS=10 MODEL=gpt-5.5 REASONING=low bash scripts/interlinear/start_trilingual_book_tmux.sh harry-potter-1"
+  }
+}

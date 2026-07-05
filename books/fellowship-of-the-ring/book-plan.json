@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "book_id": "fellowship-of-the-ring",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_en_zh_sources_generated_ja_with_image_only_ja_reference",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "zh": "sources/lord-of-the-rings/zh/魔戒全集.epub",
+    "en": "sources/lord-of-the-rings/en/The Lord of the Rings.epub",
+    "ja": "sources/lord-of-the-rings/jp/指輪物語 旅の仲間 上1.pdf"
+  },
+  "source_sha256": {
+    "zh": "c241c1b9684be08851127cfaa042fc3e9d5d02f1b2c35bae4ab70b27fcda2822",
+    "en": "0a02caa556169105cd793b069e1412b71750a8c1ba9715619ccc9ac4d996dfe9",
+    "ja": "88bdcebdfdfd1ab8391d0df8eec0961b7d78af7e073cbb9dfa45f595ed2dc156"
+  },
+  "markdown": {
+    "en": "books/fellowship-of-the-ring/markdown/en.md",
+    "zh": "books/fellowship-of-the-ring/markdown/zh.md"
+  },
+  "book_title_en": "The Fellowship of the Ring",
+  "book_title_zh": "魔戒现身",
+  "book_title_ja": "指輪物語 旅の仲間",
+  "book_title_zh_reading": "mó jiè xiàn shēn",
+  "book_title_ja_reading": "ゆびわものがたり たび の なかま",
+  "author": "J. R. R. Tolkien",
+  "author_reading_zh": "tuō ěr jīn",
+  "author_reading_ja": "トールキン",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "J. R. R. Tolkien, The Fellowship of the Ring. English EPUB is the alignment spine; Chinese EPUB bundle is trimmed to the first Lord of the Rings volume and used as a published translation reference. The local Japanese PDF is image-only, so Japanese is generated in natural modern Japanese unless an OCR cache is prepared later.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "global_ratio_window",
+  "chunks_jsonl": "books/fellowship-of-the-ring/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/fellowship-of-the-ring/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/fellowship-of-the-ring/work/trilingual/interlinear/chunks",
+  "preview_json": "books/fellowship-of-the-ring/work/trilingual/preview/fellowship-of-the-ring.partial.json",
+  "assembled_json": "books/fellowship-of-the-ring/work/trilingual/preview/fellowship-of-the-ring.partial.json",
+  "prepared_at": "2026-07-05T15:57:28.331063+00:00",
+  "chunk_count": 405,
+  "english_chapter_count": 23,
+  "chinese_reference_chapter_count": 1,
+  "preparation_notes": {
+    "japanese_reference": "Japanese source exists locally but is image-only in pdftotext; prepare OCR later if exact Japanese-source alignment is required.",
+    "script": "scripts/interlinear/prepare_fantasy_trilingual.py",
+    "english_spine": "English source is the chunk spine.",
+    "chinese_reference": "Chinese source is trimmed to the requested first book and used as a broad reference window.",
+    "start_command": "WORKERS=10 MODEL=gpt-5.5 REASONING=low bash scripts/interlinear/start_trilingual_book_tmux.sh fellowship-of-the-ring"
+  }
+}
