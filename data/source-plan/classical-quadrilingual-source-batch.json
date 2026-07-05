@@ -1351,6 +1351,70 @@
         }
       ],
       "next_step": "Run the quadrilingual writer from books/xixiangji/work/quadrilingual/chunks/manifest.json, then compile large-font color and black-white editions with cover."
+    },
+    {
+      "book_id": "guoyu",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "國語",
+      "book_title_zh": "国语",
+      "book_title_ja": "国語",
+      "book_title_en": "Discourses of the States",
+      "author": "左丘明 傳",
+      "author_reading_zh": "zuǒ qiū míng chuán",
+      "author_reading_ja": "さ きゅうめい でん",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/guoyu/zh/wenyan-wikisource",
+          "quality": "Chinese Wikisource 國語 source tree, 21 rolls plus 國語解敘; used as the exact wenyan spine"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "alternate_siku_source",
+          "path": "sources/guoyu/zh/wenyan-wikisource-siku",
+          "quality": "Chinese Wikisource 四庫全書本 alternate source tree for cross-checking variants"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "wikisource_export",
+          "path": "sources/guoyu/zh/wenyan-wikisource-export",
+          "quality": "Chinese Wikisource EPUB exports for both standard and 四庫全書本 texts"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "chinese_commentary",
+          "path": "sources/guoyu/zh/chinese-commentary/国语集解.pdf",
+          "quality": "downloaded Chinese commentary/reference PDF; use for meaning, terminology, and notes while keeping commentary separate from the main wenyan stream"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "chinese_open_reference",
+          "path": "sources/guoyu/zh/wikipedia-reference",
+          "quality": "Chinese open reference pages for 國語 and 左丘明"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_open_reference",
+          "path": "sources/guoyu/en/wikipedia-reference",
+          "quality": "English open reference pages; no full aligned English translation found locally"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_open_reference",
+          "path": "sources/guoyu/jp/wikipedia-reference",
+          "quality": "Japanese open reference pages; no full aligned Japanese translation found locally"
+        }
+      ],
+      "next_step": "Use the Chinese Wikisource text as the wenyan spine. Use 國語集解 and the alternate 四庫全書本 source as references; generate readable English, modern Japanese, and modern Chinese where no aligned translation source exists. Keep commentary/集解 as notes or reference, not as continuation of the main line."
     }
   ]
 }

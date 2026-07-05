@@ -34,6 +34,7 @@ Default renderer target:
 | 山海經 / Classic of Mountains and Seas | `shanhaijing` | Chinese Wikisource/Gutenberg exports and local PDF | English translation PDF | Modern Japanese must be generated where no reliable source exists. |
 | 徐霞客遊記 / Xu Xiake Youji | `xu-xiake-youji` | Chinese Wikisource/Gutenberg exports and local PDF | English study/reference | English study is not a complete aligned translation. |
 | 水經注 / Commentary on the Water Classic | `shui-jing-zhu` | Chinese Wikisource export plus local editions | English/Japanese open references | English/Japanese references are background only, not complete translations. |
+| 國語 / Discourses of the States | `guoyu` | `sources/guoyu/zh/wenyan-wikisource` plus 四庫全書 alternate | `国语集解.pdf`, Chinese/English/Japanese open references | Main wenyan spine drops Wikisource inline commentary; keep 集解/commentary as reference, not continuation lines. |
 | 資治通鑑 / Zizhi Tongjian | `zizhi-tongjian` | `sources/zizhi-tongjian/zh/資治通鑑·繁體橫排版（胡三省注）294卷全.pdf` | three Later Han English translation volumes | English references cover only selected Later Han chapters; Japanese must be generated. |
 | 世說新語 / A New Account of Tales of the World | `shishuo-xinyu` | `sources/shishuo-xinyu/zh/世說新語.pdf` | Chinese 笺疏 and English translation/reference | Keep 笺疏/commentary as notes; do not merge it into continuation lines. |
 

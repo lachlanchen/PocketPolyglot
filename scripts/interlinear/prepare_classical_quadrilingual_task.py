@@ -31,6 +31,11 @@ SOURCE_FILE_PREFIX_RE = re.compile(r"(?:^|/)(\d+)-")
 CHAPTER_ORDINAL_RE = re.compile(r"([一二三四五六七八九十百〇零]+)$")
 WIKI_LINK_RE = re.compile(r"\[\[([^]\|#]+)(?:#[^]\|]*)?(?:\|([^]\n]+))?\]\]")
 VOLUME_PART_ORDER = {"": 0, "上": 1, "中": 2, "下": 3}
+SOURCE_TEXT_REPLACEMENTS = {
+    # Wikisource uses bracketed composition text for this uncommon graph in
+    # 國語; keep the source spine as real Unicode text instead of note-like markup.
+    "〈虫苪〉": "蚋",
+}
 
 ZUOZHUAN_CANONICAL_ORDER = {
     "序": 0,
@@ -368,6 +373,8 @@ def sha256(path: Path) -> str:
 
 def clean_text(text: str) -> str:
     text = text.replace("\u3000", "").replace("\xa0", "")
+    for old, new in SOURCE_TEXT_REPLACEMENTS.items():
+        text = text.replace(old, new)
     text = SPACE_RE.sub("", text)
     text = text.strip()
     if TRAILING_PAGE_CHROME_RE.search(text):
@@ -598,6 +605,8 @@ def meaningful_chapter_title(book_id: str, title: str, header_text: str) -> str:
             return header
         if base and header != base:
             return f"{base} {header}"
+    if book_id == "guoyu" and header:
+        return header
     if book_id == "vimalakirti-sutra" and header:
         return header
     return base
@@ -759,6 +768,13 @@ def chapter_sort_key(
             return (0, tail)
         if tail.isdigit():
             return (int(tail), tail)
+        return (source_sequence_key(html_name), tail)
+    if book_id == "guoyu":
+        if tail in {"國語解敘", "國語解叙"}:
+            return (0, tail)
+        match = CLASSICAL_VOLUME_RE.search(tail) or CLASSICAL_VOLUME_RE.search(html_name)
+        if match:
+            return (int(match.group(1)) * 10, tail)
         return (source_sequence_key(html_name), tail)
     return (source_sequence_key(html_name), tail)
 
@@ -950,7 +966,10 @@ def manifest_items(book: dict[str, Any]) -> list[dict[str, Any]]:
             header_text, paragraphs = extract_raw_wiki_paragraphs(raw_path)
         elif html_rel and html_path.exists():
             source_path = html_path
-            header_text, paragraphs = extract_html_paragraphs(html_path, drop_small=book["book_id"] == "sanguozhi")
+            header_text, paragraphs = extract_html_paragraphs(
+                html_path,
+                drop_small=book["book_id"] in {"guoyu", "sanguozhi"},
+            )
         elif raw_rel and raw_path.exists():
             source_path = raw_path
             header_text, paragraphs = extract_raw_wiki_paragraphs(raw_path)
@@ -1113,21 +1132,76 @@ def load_sanguozhi_selection_en_windows() -> dict[int, dict[str, str]]:
     return windows
 
 
+def html_reference_excerpt(path: Path, limit: int = 2600) -> str:
+    if not path.exists():
+        return ""
+    soup = BeautifulSoup(path.read_text(encoding="utf-8", errors="replace"), "html.parser")
+    content = soup.select_one(".mw-parser-output") or soup
+    for tag in content.select("style, script, table, sup, .noprint"):
+        tag.decompose()
+    return excerpt(content.get_text("\n", strip=True), limit)
+
+
+@lru_cache(maxsize=1)
+def load_guoyu_references() -> dict[str, Any]:
+    en_work = ROOT / "sources" / "guoyu" / "en" / "wikipedia-reference" / "Guoyu (book).html"
+    en_discourses = ROOT / "sources" / "guoyu" / "en" / "wikipedia-reference" / "Discourses of the States.html"
+    ja_work = ROOT / "sources" / "guoyu" / "jp" / "wikipedia-reference" / "国語 (歴史書).html"
+    ja_title = ROOT / "sources" / "guoyu" / "jp" / "wikipedia-reference" / "国語.html"
+    zh_work = ROOT / "sources" / "guoyu" / "zh" / "wikipedia-reference" / "國語 (書).html"
+    zh_author = ROOT / "sources" / "guoyu" / "zh" / "wikipedia-reference" / "左丘明.html"
+    return {
+        "en": [
+            {
+                "source": "English Wikipedia reference for Guoyu",
+                "path": str(en_work.relative_to(ROOT)),
+                "excerpt": html_reference_excerpt(en_work),
+                "note": "Reference only; no full English translation was found locally.",
+            },
+            {
+                "source": "English Wikipedia reference for Discourses of the States",
+                "path": str(en_discourses.relative_to(ROOT)),
+                "excerpt": html_reference_excerpt(en_discourses),
+                "note": "Reference only; use for title/terminology context.",
+            },
+        ],
+        "ja_modern": [
+            {
+                "source": "Japanese Wikipedia reference for 国語 (歴史書)",
+                "path": str(ja_work.relative_to(ROOT)),
+                "excerpt": html_reference_excerpt(ja_work),
+                "note": "Reference only; generate natural modern Japanese from the wenyan and Chinese commentary where no full Japanese translation exists.",
+            },
+            {
+                "source": "Japanese Wikipedia reference for 国語",
+                "path": str(ja_title.relative_to(ROOT)),
+                "excerpt": html_reference_excerpt(ja_title),
+                "note": "Terminology context.",
+            },
+        ],
+        "zh_modern": [
+            {
+                "source": "Chinese Wikipedia reference for 國語",
+                "path": str(zh_work.relative_to(ROOT)),
+                "excerpt": html_reference_excerpt(zh_work),
+                "note": "Background reference; generate modern Chinese from the wenyan spine and Chinese commentary where useful.",
+            },
+            {
+                "source": "Chinese Wikipedia reference for 左丘明",
+                "path": str(zh_author.relative_to(ROOT)),
+                "excerpt": html_reference_excerpt(zh_author),
+                "note": "Author/context reference.",
+            },
+        ],
+    }
+
+
 @lru_cache(maxsize=1)
 def load_foguoji_references() -> dict[str, Any]:
     en_raw = ROOT / "sources" / "foguoji" / "en" / "wikisource-record-of-buddhistic-kingdoms" / "raw" / "0001-Record of the Buddhistic Kingdoms.wiki"
     ja_work = ROOT / "sources" / "foguoji" / "jp" / "wikipedia-reference" / "仏国記.html"
     ja_author = ROOT / "sources" / "foguoji" / "jp" / "wikipedia-reference" / "法顕.html"
     zh_author = ROOT / "sources" / "foguoji" / "zh" / "wikipedia-reference" / "法显.html"
-
-    def html_excerpt(path: Path, limit: int = 2600) -> str:
-        if not path.exists():
-            return ""
-        soup = BeautifulSoup(path.read_text(encoding="utf-8", errors="replace"), "html.parser")
-        content = soup.select_one(".mw-parser-output") or soup
-        for tag in content.select("style, script, table, sup, .noprint"):
-            tag.decompose()
-        return excerpt(content.get_text("\n", strip=True), limit)
 
     en_text = ""
     if en_raw.exists():
@@ -1142,20 +1216,20 @@ def load_foguoji_references() -> dict[str, Any]:
             {
                 "source": "Japanese Wikipedia reference for 仏国記",
                 "path": str(ja_work.relative_to(ROOT)),
-                "excerpt": html_excerpt(ja_work),
+                "excerpt": html_reference_excerpt(ja_work),
                 "note": "Reference only; no full Japanese translation was found locally.",
             },
             {
                 "source": "Japanese Wikipedia reference for 法顕",
                 "path": str(ja_author.relative_to(ROOT)),
-                "excerpt": html_excerpt(ja_author),
+                "excerpt": html_reference_excerpt(ja_author),
                 "note": "Author/traveler context for terminology.",
             },
         ],
         "zh_modern": {
             "source": "Chinese Wikipedia reference for 法显",
             "path": str(zh_author.relative_to(ROOT)),
-            "excerpt": html_excerpt(zh_author),
+            "excerpt": html_reference_excerpt(zh_author),
             "note": "Author/traveler context; generate modern Chinese from the wenyan spine.",
         },
     }
@@ -1216,6 +1290,8 @@ def broad_references(book: dict[str, Any], chapter_number: int) -> dict[str, Any
             "source": "sources/sanguozhi/jp/wikisource-index",
             "note": "Index-only Japanese source. Generate natural modern Japanese where no matching source exists.",
         }
+    elif book["book_id"] == "guoyu":
+        reference.update(load_guoyu_references())
     elif book["book_id"] == "foguoji":
         reference.update(load_foguoji_references())
     return reference

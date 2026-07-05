@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "book_id": "guoyu",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "國語",
+  "book_title_zh": "国语",
+  "book_title_ja": "国語",
+  "book_title_en": "Discourses of the States",
+  "author": "左丘明 傳",
+  "author_reading_zh": "zuǒ qiū míng chuán",
+  "author_reading_ja": "さ きゅうめい でん",
+  "book_description": "國語 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/guoyu/zh/wenyan-wikisource",
+    "alternate_siku_source": "sources/guoyu/zh/wenyan-wikisource-siku",
+    "wikisource_export": "sources/guoyu/zh/wenyan-wikisource-export",
+    "chinese_commentary": "sources/guoyu/zh/chinese-commentary/国语集解.pdf",
+    "chinese_open_reference": "sources/guoyu/zh/wikipedia-reference",
+    "english_open_reference": "sources/guoyu/en/wikipedia-reference",
+    "japanese_open_reference": "sources/guoyu/jp/wikipedia-reference",
+    "wenyan_markdown": "books/guoyu/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/guoyu/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/guoyu/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/guoyu/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/guoyu/work/quadrilingual/preview/guoyu.partial.json",
+  "build_root": "build/guoyu/wenyan-main-quadrilingual",
+  "prepared_at": "2026-07-05T11:43:20.766338+00:00"
+}
