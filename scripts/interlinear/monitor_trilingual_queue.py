@@ -201,12 +201,12 @@ def main() -> int:
         if not is_current_complete and not current_active:
             start_book(args.current_book_id, args)
 
-        if is_current_complete and not active and all_complete(queued_reports):
+        if is_current_complete and not current_active and not active and all_complete(queued_reports):
             completed = ",".join(args.book_id) or "(none)"
             print(f"queue_complete=1 completed={completed}; exiting", flush=True)
             return 0
 
-        if is_current_complete and len(active) < args.max_active_books:
+        if is_current_complete and not current_active and len(active) < args.max_active_books:
             for book_id in args.book_id:
                 report = queued_reports[book_id]
                 if complete(report):
