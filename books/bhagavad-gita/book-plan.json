@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "book_id": "bhagavad-gita",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_en_source_generated_zh_ja",
+  "source_spine_lang": "en",
+  "book_title_en": "The Bhagavad Gita",
+  "book_title_zh": "薄伽梵歌",
+  "book_title_ja": "バガヴァッド・ギーター",
+  "title_zh_reading": "bó qié fàn gē",
+  "title_ja_reading": "バガヴァッド ギーター",
+  "author": "Vyasa",
+  "author_reading_zh": "pí yē suō",
+  "author_reading_ja": "ヴィヤーサ",
+  "book_description": "The Bhagavad Gita. English verse translations from the Sargeant Sanskrit/English PDF form the source spine; Chinese and modern Japanese are generated for language-learning overlays.",
+  "source_paths": {
+    "en": "sources/bhagavad-gita/en/english-translation/The Bhagavad Gita.pdf",
+    "zh": "sources/bhagavad-gita/zh/chinese-translation/薄伽梵歌.pdf",
+    "en_markdown": "books/bhagavad-gita/markdown/en.md"
+  },
+  "source_sha256": {
+    "en": "a09c2fb9cc7640bd77de79ca60babe8bb32284cd408b87217b14b02144db2353",
+    "zh": "0da9a6cc97f0d425498d82fdf039928e1405de768f2b9b12b6a86d4a8682ef13"
+  },
+  "chunks_jsonl": "books/bhagavad-gita/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/bhagavad-gita/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/bhagavad-gita/work/trilingual/interlinear/chunks",
+  "assembled_json": "books/bhagavad-gita/work/trilingual/preview/bhagavad-gita.partial.json",
+  "markdown": {
+    "en": "books/bhagavad-gita/markdown/en.md"
+  },
+  "reference_chars": 6000,
+  "prepared_at": "2026-07-05T11:57:41.495601+00:00",
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_bhagavad_gita_trilingual.py",
+    "english_spine": "English verse translation blocks are extracted from the Sargeant PDF, one chunk per verse page.",
+    "sanskrit_reference": "The Sargeant PDF includes Sanskrit, transliteration, word-by-word glosses, and grammar notes as reference only.",
+    "chinese_reference": "The Chinese PDF is scanned and retained as a source reference; OCR-polished Chinese can be added later without replacing existing chunks.",
+    "japanese_reference": "No Japanese source was supplied; generate natural modern Japanese.",
+    "start_command": "bash scripts/interlinear/start_trilingual_book_tmux.sh bhagavad-gita"
+  }
+}
