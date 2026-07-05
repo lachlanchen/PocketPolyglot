@@ -12,18 +12,20 @@ import argparse
 import json
 import posixpath
 import re
+import warnings
 import zipfile
 from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 import xml.etree.ElementTree as ET
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, XMLParsedAsHTMLWarning
 
 import prepare_mars_fiction_trilingual as base
 
 
 ROOT = Path(__file__).resolve().parents[2]
+warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
 
 
 WORD_NUMBERS = {
@@ -364,7 +366,7 @@ def prepare_selected(book_ids: list[str], args: argparse.Namespace) -> list[dict
                 **plan.get("preparation_notes", {}),
                 "script": "scripts/interlinear/prepare_fantasy_trilingual.py",
                 "english_spine": "English source is the chunk spine.",
-                "chinese_reference": "Chinese source is trimmed to the requested first book and used as a broad reference window.",
+                "chinese_reference": "Chinese source is trimmed to the requested first book and used as a compact ratio reference window.",
                 "start_command": f"WORKERS=10 MODEL=gpt-5.5 REASONING=low bash scripts/interlinear/start_trilingual_book_tmux.sh {book_id}",
             }
             plan_path.write_text(json.dumps(plan, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -379,7 +381,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--book-id", action="append", choices=sorted(BOOKS), help="Prepare one book; repeatable.")
     parser.add_argument("--max-chunk-chars", type=int, default=2600)
-    parser.add_argument("--reference-chars", type=int, default=9000)
+    parser.add_argument("--reference-chars", type=int, default=2200)
     args = parser.parse_args()
 
     selected = args.book_id or list(BOOKS)

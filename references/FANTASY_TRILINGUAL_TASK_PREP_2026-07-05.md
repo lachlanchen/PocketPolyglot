@@ -3,6 +3,8 @@
 Prepared three modern-fantasy LinguaLeaf/PocketPolyglot tasks with English as
 the alignment spine, Chinese as a published-reference source, and generated
 natural modern Japanese where exact Japanese text is not yet OCR-ready.
+Fantasy prompts use compact ratio-based Chinese reference windows by default so
+large anthology/bundle sources do not get copied into every chunk prompt.
 
 | Book ID | Work | Status | Chunks | Sources |
 | --- | --- | --- | ---: | --- |

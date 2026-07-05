@@ -38,7 +38,7 @@
   "raw_chunk_dir": "books/fellowship-of-the-ring/work/trilingual/interlinear/chunks",
   "preview_json": "books/fellowship-of-the-ring/work/trilingual/preview/fellowship-of-the-ring.partial.json",
   "assembled_json": "books/fellowship-of-the-ring/work/trilingual/preview/fellowship-of-the-ring.partial.json",
-  "prepared_at": "2026-07-05T15:57:28.331063+00:00",
+  "prepared_at": "2026-07-05T16:01:57.239499+00:00",
   "chunk_count": 405,
   "english_chapter_count": 23,
   "chinese_reference_chapter_count": 1,
@@ -46,7 +46,7 @@
     "japanese_reference": "Japanese source exists locally but is image-only in pdftotext; prepare OCR later if exact Japanese-source alignment is required.",
     "script": "scripts/interlinear/prepare_fantasy_trilingual.py",
     "english_spine": "English source is the chunk spine.",
-    "chinese_reference": "Chinese source is trimmed to the requested first book and used as a broad reference window.",
+    "chinese_reference": "Chinese source is trimmed to the requested first book and used as a compact ratio reference window.",
     "start_command": "WORKERS=10 MODEL=gpt-5.5 REASONING=low bash scripts/interlinear/start_trilingual_book_tmux.sh fellowship-of-the-ring"
   }
 }

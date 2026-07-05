@@ -36,14 +36,14 @@
   "raw_chunk_dir": "books/a-game-of-thrones/work/trilingual/interlinear/chunks",
   "preview_json": "books/a-game-of-thrones/work/trilingual/preview/a-game-of-thrones.partial.json",
   "assembled_json": "books/a-game-of-thrones/work/trilingual/preview/a-game-of-thrones.partial.json",
-  "prepared_at": "2026-07-05T15:57:32.561677+00:00",
+  "prepared_at": "2026-07-05T16:02:01.660888+00:00",
   "chunk_count": 697,
   "english_chapter_count": 81,
   "chinese_reference_chapter_count": 1,
   "preparation_notes": {
     "script": "scripts/interlinear/prepare_fantasy_trilingual.py",
     "english_spine": "English source is the chunk spine.",
-    "chinese_reference": "Chinese source is trimmed to the requested first book and used as a broad reference window.",
+    "chinese_reference": "Chinese source is trimmed to the requested first book and used as a compact ratio reference window.",
     "start_command": "WORKERS=10 MODEL=gpt-5.5 REASONING=low bash scripts/interlinear/start_trilingual_book_tmux.sh a-game-of-thrones"
   }
 }
