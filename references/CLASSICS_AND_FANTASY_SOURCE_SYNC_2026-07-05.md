@@ -40,6 +40,12 @@ Copied the listed downloads into ignored `sources/` folders. Originals in
 | Work / series | Language / role | Stored path |
 | --- | --- | --- |
 | A Song of Ice and Fire | EN Game of Thrones | `sources/a-song-of-ice-and-fire/en/A Game of Thrones - George R R Martin.pdf` |
+| A Song of Ice and Fire | EN volume 1 EPUB | `sources/a-song-of-ice-and-fire/en/individual-volumes/01 - A Game of Thrones.epub` |
+| A Song of Ice and Fire | EN volume 2 EPUB | `sources/a-song-of-ice-and-fire/en/individual-volumes/02 - A Clash of Kings.epub` |
+| A Song of Ice and Fire | EN volume 3 EPUB | `sources/a-song-of-ice-and-fire/en/individual-volumes/03 - A Storm of Swords.epub` |
+| A Song of Ice and Fire | EN volume 4 EPUB | `sources/a-song-of-ice-and-fire/en/individual-volumes/04 - A Feast for Crows.epub` |
+| A Song of Ice and Fire | EN volume 5 EPUB | `sources/a-song-of-ice-and-fire/en/individual-volumes/05 - A Dance with Dragons.epub` |
+| A Song of Ice and Fire | EN volumes 1-5 bundle | `sources/a-song-of-ice-and-fire/en/series-bundles/A Song of Ice and Fire 1-5.epub` |
 | George R. R. Martin collection | ZH anthology | `sources/a-song-of-ice-and-fire/zh/乔治·R R 马丁经典奇幻系列（套装共22册）.mobi` |
 | The Lord of the Rings | EN | `sources/lord-of-the-rings/en/The Lord of the Rings.epub` |
 | 魔戒 | ZH | `sources/lord-of-the-rings/zh/魔戒全集.epub` |
