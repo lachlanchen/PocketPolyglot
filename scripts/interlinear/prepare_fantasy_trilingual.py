@@ -102,8 +102,9 @@ EPUB_SEGMENTS: dict[str, SegmentConfig] = {
 MOBI_SEGMENTS: dict[str, SegmentConfig] = {
     "sources/a-song-of-ice-and-fire/zh/乔治·R R 马丁经典奇幻系列（套装共22册）.mobi": {
         "start_marker": "序幕",
-        "end_marker": "跋",
-        "start_occurrence": "last_before_end",
+        "end_marker": "序幕",
+        "start_hit_ordinal": 1,
+        "merge_cjk_continuations": True,
     },
 }
 
@@ -252,14 +253,18 @@ def find_segment_bounds(lines: list[str], config: SegmentConfig) -> tuple[int, i
     end_hits = [index for index, line in enumerate(lines) if end_marker and marker_matches(line, str(end_marker))]
     start = 0
     if start_hits:
-        occurrence = config.get("start_occurrence", "first")
-        if occurrence == "last":
-            start = start_hits[-1]
-        elif occurrence == "last_before_end" and end_hits:
-            eligible = [hit for hit in start_hits if any(end > hit for end in end_hits)]
-            start = eligible[-1] if eligible else start_hits[-1]
+        ordinal = config.get("start_hit_ordinal")
+        if isinstance(ordinal, int) and 0 <= ordinal < len(start_hits):
+            start = start_hits[ordinal]
         else:
-            start = start_hits[0]
+            occurrence = config.get("start_occurrence", "first")
+            if occurrence == "last":
+                start = start_hits[-1]
+            elif occurrence == "last_before_end" and end_hits:
+                eligible = [hit for hit in start_hits if any(end > hit for end in end_hits)]
+                start = eligible[-1] if eligible else start_hits[-1]
+            else:
+                start = start_hits[0]
     end = len(lines)
     if end_hits:
         later = [hit for hit in end_hits if hit > start]
@@ -276,6 +281,8 @@ def normalize_fantasy_lines(lines: list[str], config: SegmentConfig) -> list[str
             continue
         if drop_repeated_title and line == drop_repeated_title:
             continue
+        if line.startswith("r. and Mrs. Dursley, of number four, Privet Drive"):
+            line = "M" + line
         if config.get("normalize_chapter_words"):
             match = re.fullmatch(r"CHAPTER\s+([A-Z]+)", line)
             if match and match.group(1) in WORD_NUMBERS:
@@ -310,6 +317,43 @@ def normalize_fantasy_lines(lines: list[str], config: SegmentConfig) -> list[str
     return out
 
 
+def merge_cjk_continuations(lines: list[str]) -> list[str]:
+    out: list[str] = []
+    index = 0
+    terminal = re.compile(r"[。！？.!?」』”’）)]$")
+    continuation_start = re.compile(r"^[，、。！？；：」』”’）)]")
+    cjk_heading_like = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff・•·A-Za-z0-9]{1,10}$")
+    while index < len(lines):
+        line = lines[index]
+        if line in {"序幕", "正文"}:
+            out.append(line)
+            index += 1
+            continue
+        if index + 1 < len(lines):
+            nxt = lines[index + 1]
+            if continuation_start.search(nxt):
+                out.append(line + nxt)
+                index += 2
+                continue
+            if line.startswith("“") and len(line) < 18 and not terminal.search(line):
+                out.append(line + nxt)
+                index += 2
+                continue
+            if (
+                len(line) > 20
+                and base.CJK_RE.search(line)
+                and base.CJK_RE.search(nxt)
+                and not terminal.search(line)
+                and not cjk_heading_like.fullmatch(nxt)
+            ):
+                out.append(line + nxt)
+                index += 2
+                continue
+        out.append(line)
+        index += 1
+    return out
+
+
 def segmented_epub_lines(path: Path) -> list[str]:
     key = normalize_key(path)
     config = EPUB_SEGMENTS.get(key)
@@ -318,6 +362,8 @@ def segmented_epub_lines(path: Path) -> list[str]:
         start, end = find_segment_bounds(lines, config)
         lines = lines[start:end]
         lines = normalize_fantasy_lines(lines, config)
+        if config.get("merge_cjk_continuations"):
+            lines = merge_cjk_continuations(lines)
     return [line for line in lines if line]
 
 
@@ -329,6 +375,8 @@ def segmented_mobi_lines(original_mobi_lines: Callable[[Path], list[str]], path:
         start, end = find_segment_bounds(lines, config)
         lines = lines[start:end]
         lines = normalize_fantasy_lines(lines, config)
+        if config.get("merge_cjk_continuations"):
+            lines = merge_cjk_continuations(lines)
     return [line for line in lines if line]
 
 
