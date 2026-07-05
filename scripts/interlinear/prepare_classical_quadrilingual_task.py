@@ -1199,7 +1199,7 @@ def load_mudanting_references() -> dict[str, Any]:
         ),
     }
     if text:
-        ref["excerpt"] = translation_body_excerpt(text, ["The Peony Pavilion", "ACT", "SCENE"])
+        ref["excerpt"] = translation_body_excerpt(text, ["SCENE ONE", "Scene One", "PROLOGUE SPEAKER", "ACT", "The Peony Pavilion"])
     else:
         ref["excerpt"] = ""
     return {"en": [ref]}
