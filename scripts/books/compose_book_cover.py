@@ -78,6 +78,40 @@ def text_width(draw: ImageDraw.ImageDraw, text: str, font_obj: ImageFont.FreeTyp
     return bbox[2] - bbox[0]
 
 
+def vertical_text_height(
+    draw: ImageDraw.ImageDraw,
+    text: str,
+    font_obj: ImageFont.FreeTypeFont,
+    gap: int,
+) -> int:
+    total = 0
+    chars = list(text)
+    for ch in chars:
+        bbox = draw.textbbox((0, 0), ch, font=font_obj)
+        total += bbox[3] - bbox[1]
+    return total + gap * max(0, len(chars) - 1)
+
+
+def fit_vertical_font(
+    draw: ImageDraw.ImageDraw,
+    text: str,
+    font_path: str,
+    size: int,
+    index: int,
+    *,
+    max_height: int,
+    min_size: int,
+) -> tuple[ImageFont.FreeTypeFont, int]:
+    while size > min_size:
+        gap = max(2, int(size * 0.10))
+        fitted = font(font_path, size, index=index)
+        if vertical_text_height(draw, text, fitted, gap) <= max_height:
+            return fitted, gap
+        size -= 2
+    gap = max(2, int(size * 0.10))
+    return font(font_path, size, index=index), gap
+
+
 def draw_vertical(
     draw: ImageDraw.ImageDraw,
     text: str,
@@ -181,7 +215,16 @@ def main() -> int:
         width=1,
     )
 
-    title_font = font(SERIF_BOLD, int(HEIGHT * 0.061), index=0)
+    title_max_height = int(HEIGHT * 0.535)
+    title_font, title_gap = fit_vertical_font(
+        draw,
+        title_ja,
+        SERIF_BOLD,
+        int(HEIGHT * 0.061),
+        0,
+        max_height=title_max_height,
+        min_size=int(HEIGHT * 0.030),
+    )
     side_font = font(SERIF_REGULAR, int(HEIGHT * 0.024), index=2)
     small_font = font(SERIF_REGULAR, int(HEIGHT * 0.020), index=0)
     latin_font = font(SERIF_REGULAR, int(HEIGHT * 0.015), index=2)
@@ -201,7 +244,7 @@ def main() -> int:
         int(HEIGHT * 0.13),
         title_font,
         fill=ink,
-        gap=max(3, int(HEIGHT * 0.006)),
+        gap=title_gap,
         max_bottom=int(HEIGHT * 0.67),
     )
     if title_zh != title_ja:
