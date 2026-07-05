@@ -249,6 +249,31 @@ YIJING_CANONICAL_ORDER = {
     "雜卦": 73,
 }
 
+LUNYU_CANONICAL_ORDER = {
+    "學而第一": 1,
+    "爲政第二": 2,
+    "為政第二": 2,
+    "八佾第三": 3,
+    "里仁第四": 4,
+    "公冶長第五": 5,
+    "雍也第六": 6,
+    "述而第七": 7,
+    "泰伯第八": 8,
+    "子罕第九": 9,
+    "鄉黨第十": 10,
+    "先進第十一": 11,
+    "顏淵第十二": 12,
+    "子路第十三": 13,
+    "憲問第十四": 14,
+    "衞靈公第十五": 15,
+    "衛靈公第十五": 15,
+    "季氏第十六": 16,
+    "陽貨第十七": 17,
+    "微子第十八": 18,
+    "子張第十九": 19,
+    "堯曰第二十": 20,
+}
+
 ROMAN_TO_INT = {
     "I": 1,
     "II": 2,
@@ -656,6 +681,8 @@ def should_skip_source_item(book_id: str, title: str) -> bool:
         return True
     if book_id == "xixiangji" and tail in {"北西廂記", "南西廂記"}:
         return True
+    if book_id == "lunyu" and tail in {"全覽", "序說", "知道第二十二"}:
+        return True
     return False
 
 
@@ -756,6 +783,7 @@ def is_source_boilerplate_paragraph(text: str) -> bool:
     normalized = text.replace("目錄", "目录").replace("頁", "页")
     if (
         text.startswith("此作品在全世界都属于公有领域")
+        or text.startswith("此先秦作品在全世界都属于公有领域")
         or text.startswith("This work is in the public domain")
         or text.startswith("この作品はパブリックドメイン")
     ):
@@ -926,6 +954,8 @@ def chapter_sort_key(
         if match:
             return (int(match.group(1)) * 10, tail)
         return (source_sequence_key(html_name), tail)
+    if book_id == "lunyu":
+        return (LUNYU_CANONICAL_ORDER.get(tail, 9000 + source_sequence_key(html_name)), tail)
     return (source_sequence_key(html_name), tail)
 
 
@@ -1463,6 +1493,112 @@ def load_foguoji_references() -> dict[str, Any]:
     }
 
 
+def epub_reference(path: Path, source: str, note: str, *, limit: int = 3600) -> dict[str, str]:
+    text = epub_text(path)
+    return {
+        "source": source,
+        "path": str(path.relative_to(ROOT)),
+        "excerpt": excerpt(text, limit) if text else "",
+        "note": note,
+    }
+
+
+@lru_cache(maxsize=1)
+def load_sunzi_references() -> dict[str, Any]:
+    return {
+        "en": [
+            epub_reference(
+                ROOT / "sources" / "sunzi-bingfa" / "en" / "wikisource-export" / "The Art of War (Sun)-Wikisource.epub",
+                "English Wikisource, The Art of War (Sun)",
+                "Public-domain English translation/reference; use only where it clearly aligns with the current passage.",
+            ),
+            epub_reference(
+                ROOT / "sources" / "sunzi-bingfa" / "en" / "reference" / "The Art of War - Landmark Edition.epub",
+                "The Art of War, Landmark Edition",
+                "Downloaded English reference edition; use as secondary wording/context.",
+            ),
+        ],
+        "ja_modern": [
+            epub_reference(
+                ROOT / "sources" / "sunzi-bingfa" / "jp" / "wikisource-export" / "孫子-Wikisource.epub",
+                "Japanese Wikisource, 孫子",
+                "Japanese reference; generate readable modern Japanese if the source remains kundoku/classical.",
+            )
+        ],
+        "zh_modern": [
+            epub_reference(
+                ROOT / "sources" / "sunzi-bingfa" / "zh" / "source-epub" / "孫子兵法全書.epub",
+                "孫子兵法全書 EPUB",
+                "Chinese reference/commentary EPUB; use for modern Chinese meaning and notes, not as replacement for the wenyan spine.",
+            )
+        ],
+    }
+
+
+@lru_cache(maxsize=1)
+def load_daodejing_references() -> dict[str, Any]:
+    return {
+        "en": [
+            epub_reference(
+                ROOT / "sources" / "daodejing" / "en" / "wikisource-export" / "Tao Te Ching-Wikisource.epub",
+                "English Wikisource, Tao Te Ching",
+                "Public-domain English reference if the exported text is useful; ignore index/front-matter noise.",
+            ),
+            epub_reference(
+                ROOT / "sources" / "daodejing" / "en" / "reference" / "Everyday Tao Te Ching - A Renegade practical guide.epub",
+                "Everyday Tao Te Ching",
+                "Secondary English reference; use for broad meaning only.",
+            ),
+        ],
+        "ja_modern": [
+            epub_reference(
+                ROOT / "sources" / "daodejing" / "jp" / "wikisource-export" / "老子道徳経-Wikisource.epub",
+                "Japanese Wikisource, 老子道徳経",
+                "Japanese reference; generate readable modern Japanese if the source is kundoku/classical.",
+            )
+        ],
+        "zh_modern": [
+            epub_reference(
+                ROOT / "sources" / "daodejing" / "zh" / "commentary-epub" / "老子他說 - 繁體版.epub",
+                "南懷瑾《老子他說》",
+                "Chinese commentary/reference. The task spine already extracts only the classical chapter paragraph; keep commentary separate.",
+            )
+        ],
+    }
+
+
+@lru_cache(maxsize=1)
+def load_lunyu_references() -> dict[str, Any]:
+    return {
+        "en": [
+            epub_reference(
+                ROOT / "sources" / "lunyu" / "en" / "wikisource-export" / "The Analects-Wikisource.epub",
+                "English Wikisource, The Analects",
+                "Public-domain English reference; use only where it aligns with the current passage.",
+            ),
+            epub_reference(
+                ROOT / "sources" / "lunyu" / "en" / "reference" / "The Analects.epub",
+                "The Analects EPUB",
+                "Downloaded English reference edition.",
+            ),
+        ],
+        "ja_modern": [
+            epub_reference(
+                ROOT / "sources" / "lunyu" / "jp" / "wikisource-export" / "論語-Wikisource.epub",
+                "Japanese Wikisource, 論語",
+                "Japanese reference; generate readable modern Japanese if the source is kundoku/classical.",
+            )
+        ],
+        "zh_modern": [
+            epub_reference(
+                ROOT / "sources" / "lunyu" / "zh" / "wikisource-export" / "論語-Wikisource.epub",
+                "Chinese Wikisource, 論語",
+                "Chinese source/export reference; generate modern Chinese from the wenyan spine.",
+            )
+        ],
+    }
+
+
 def broad_references(book: dict[str, Any], chapter_number: int) -> dict[str, Any]:
     layers = book["source_layers"]
     paths_by_layer: dict[str, list[dict[str, str]]] = OrderedDict()
@@ -1526,6 +1662,12 @@ def broad_references(book: dict[str, Any], chapter_number: int) -> dict[str, Any
         reference.update(load_mudanting_references(chapter_number))
     elif book["book_id"] == "xixiangji":
         reference.update(load_xixiangji_references(chapter_number))
+    elif book["book_id"] == "sunzi-bingfa":
+        reference.update(load_sunzi_references())
+    elif book["book_id"] == "daodejing":
+        reference.update(load_daodejing_references())
+    elif book["book_id"] == "lunyu":
+        reference.update(load_lunyu_references())
     return reference
 
 

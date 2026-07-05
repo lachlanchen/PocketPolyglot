@@ -1429,6 +1429,184 @@
         }
       ],
       "next_step": "Use the Chinese Wikisource text as the wenyan spine. Use 國語集解 and the alternate 四庫全書本 source as references; generate readable English, modern Japanese, and modern Chinese where no aligned translation source exists. Keep commentary/集解 as notes or reference, not as continuation of the main line."
+    },
+    {
+      "book_id": "sunzi-bingfa",
+      "status": "launchable_task_prepared",
+      "priority": "classical_queue",
+      "book_title_wenyan": "孫子兵法",
+      "book_title_zh": "孙子兵法",
+      "book_title_ja": "孫子",
+      "book_title_en": "The Art of War",
+      "author": "孫武",
+      "author_reading_zh": "sūn wǔ",
+      "author_reading_ja": "そん ぶ",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/sunzi-bingfa/zh/wikisource-chapterized",
+          "quality": "local chapterized spine extracted from the Chinese Wikisource 孫子兵法 page; thirteen canonical chapters only"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "source_page_reference",
+          "path": "sources/sunzi-bingfa/zh/wikisource",
+          "quality": "original Chinese Wikisource source tree retained for cross-checking"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "chinese_reference_epub",
+          "path": "sources/sunzi-bingfa/zh/source-epub/孫子兵法全書.epub",
+          "quality": "downloaded Chinese reference/commentary EPUB; use for modern Chinese meaning and notes"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_wikisource_translation",
+          "path": "sources/sunzi-bingfa/en/wikisource",
+          "quality": "English Wikisource Art of War source tree"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_reference_epubs",
+          "path": "sources/sunzi-bingfa/en/reference",
+          "quality": "downloaded English reference EPUBs including Landmark Edition and study translations"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_wikisource_reference",
+          "path": "sources/sunzi-bingfa/jp/wikisource",
+          "quality": "Japanese Wikisource 孫子 source tree; use as reference and generate readable modern Japanese where needed"
+        }
+      ],
+      "next_step": "Use the chapterized Chinese Wikisource text as the wenyan spine. Use English Wikisource, downloaded English EPUBs, Japanese Wikisource, and the Chinese commentary EPUB as references; generate aligned English, readable modern Japanese, modern Chinese, ruby/pinyin, and grammar roles."
+    },
+    {
+      "book_id": "daodejing",
+      "status": "launchable_task_prepared",
+      "priority": "classical_queue",
+      "book_title_wenyan": "道德經",
+      "book_title_zh": "道德经",
+      "book_title_ja": "老子道徳経",
+      "book_title_en": "Tao Te Ching",
+      "author": "老子",
+      "author_reading_zh": "lǎo zǐ",
+      "author_reading_ja": "ろうし",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/daodejing/zh/wenyan-from-japanese-wikisource",
+          "quality": "local 81-chapter wenyan spine extracted from Japanese Wikisource 老子道徳経 by stripping kundoku marks from the classical text paragraphs"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "source_index_reference",
+          "path": "sources/daodejing/zh/wikisource-index",
+          "quality": "Chinese Wikisource 道德經 index/version page, retained only for provenance and cross-checking"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "chinese_commentary_epub",
+          "path": "sources/daodejing/zh/commentary-epub/老子他說 - 繁體版.epub",
+          "quality": "downloaded Chinese commentary/reference EPUB; use for modern Chinese meaning while keeping commentary separate"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_wikisource_reference",
+          "path": "sources/daodejing/en/wikisource",
+          "quality": "English Wikisource Tao Te Ching source tree"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_reference_epub",
+          "path": "sources/daodejing/en/reference/Everyday Tao Te Ching - A Renegade practical guide.epub",
+          "quality": "downloaded English Tao Te Ching reference EPUB"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_wikisource_reference",
+          "path": "sources/daodejing/jp/wikisource",
+          "quality": "Japanese Wikisource 老子道徳経 source tree"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_reference_pdfs",
+          "path": "sources/daodejing/jp/reference",
+          "quality": "downloaded Japanese reference PDFs"
+        }
+      ],
+      "next_step": "Use the extracted 81-chapter wenyan spine as the main text. Use 老子他說 as Chinese commentary, plus English Tao Te Ching references and Japanese Wikisource/PDF references, to generate aligned English, readable modern Japanese, modern Chinese, ruby/pinyin, and grammar roles."
+    },
+    {
+      "book_id": "lunyu",
+      "status": "launchable_task_prepared",
+      "priority": "classical_queue",
+      "book_title_wenyan": "論語",
+      "book_title_zh": "论语",
+      "book_title_ja": "論語",
+      "book_title_en": "The Analects",
+      "author": "孔子門人",
+      "author_reading_zh": "kǒng zǐ mén rén",
+      "author_reading_ja": "こうし もんじん",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/lunyu/zh/wikisource",
+          "quality": "Chinese Wikisource 論語 source tree; filters root/all-view/index pages and keeps the twenty canonical chapters"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "wikisource_export",
+          "path": "sources/lunyu/zh/wikisource-export",
+          "quality": "Chinese Wikisource EPUB export"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_wikisource_legge",
+          "path": "sources/lunyu/en/wikisource-confucian-analects",
+          "quality": "English Wikisource Confucian Analects reference"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_wikisource_reference",
+          "path": "sources/lunyu/en/wikisource-the-analects",
+          "quality": "English Wikisource The Analects source tree"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_reference_files",
+          "path": "sources/lunyu/en/reference",
+          "quality": "downloaded English Analects EPUB/PDF references"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_wikisource_reference",
+          "path": "sources/lunyu/jp/wikisource",
+          "quality": "Japanese Wikisource 論語 source tree; use as reference and generate readable modern Japanese where needed"
+        }
+      ],
+      "next_step": "Use the twenty canonical Chinese Wikisource chapters as the wenyan spine. Use English Wikisource/EPUB/PDF references and Japanese Wikisource as references; generate aligned English, readable modern Japanese, modern Chinese, ruby/pinyin, and grammar roles."
     }
   ]
 }

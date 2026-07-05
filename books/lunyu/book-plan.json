@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "book_id": "lunyu",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "論語",
+  "book_title_zh": "论语",
+  "book_title_ja": "論語",
+  "book_title_en": "The Analects",
+  "author": "孔子門人",
+  "author_reading_zh": "kǒng zǐ mén rén",
+  "author_reading_ja": "こうし もんじん",
+  "book_description": "論語 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/lunyu/zh/wikisource",
+    "wikisource_export": "sources/lunyu/zh/wikisource-export",
+    "english_wikisource_legge": "sources/lunyu/en/wikisource-confucian-analects",
+    "english_wikisource_reference": "sources/lunyu/en/wikisource-the-analects",
+    "english_reference_files": "sources/lunyu/en/reference",
+    "japanese_wikisource_reference": "sources/lunyu/jp/wikisource",
+    "wenyan_markdown": "books/lunyu/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/lunyu/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/lunyu/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/lunyu/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/lunyu/work/quadrilingual/preview/lunyu.partial.json",
+  "build_root": "build/lunyu/wenyan-main-quadrilingual",
+  "prepared_at": "2026-07-05T13:41:53.136954+00:00"
+}
