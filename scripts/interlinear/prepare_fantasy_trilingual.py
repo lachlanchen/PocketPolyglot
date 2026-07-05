@@ -49,11 +49,94 @@ WORD_NUMBERS = {
     "EIGHTEEN": "18",
     "NINETEEN": "19",
     "TWENTY": "20",
+    "TWENTY-ONE": "21",
+    "TWENTY-TWO": "22",
+    "TWENTY-THREE": "23",
+    "TWENTY-FOUR": "24",
+    "TWENTY-FIVE": "25",
+    "TWENTY-SIX": "26",
+    "TWENTY-SEVEN": "27",
+    "TWENTY-EIGHT": "28",
+    "TWENTY-NINE": "29",
+    "THIRTY": "30",
+    "THIRTY-ONE": "31",
+    "THIRTY-TWO": "32",
+    "THIRTY-THREE": "33",
+    "THIRTY-FOUR": "34",
+    "THIRTY-FIVE": "35",
+    "THIRTY-SIX": "36",
+    "THIRTY-SEVEN": "37",
+    "THIRTY-EIGHT": "38",
+    "THIRTY-NINE": "39",
+    "FORTY": "40",
 }
+
+
+CURRENT_BOOK_ID: str | None = None
 
 
 class SegmentConfig(dict[str, Any]):
     pass
+
+
+def opf_prefix_filter(prefix: str) -> Callable[[str], bool]:
+    return lambda name: name.startswith(prefix)
+
+
+ASOIAF_POV_HEADINGS = {
+    "Prologue",
+    "Epilogue",
+    "Arya",
+    "Asha",
+    "Barristan",
+    "Bran",
+    "Brienne",
+    "Catelyn",
+    "Cersei",
+    "Daenerys",
+    "Davos",
+    "Eddard",
+    "Jaime",
+    "Jon",
+    "Melisandre",
+    "Quentyn",
+    "Reek",
+    "Samwell",
+    "Sansa",
+    "The Captain Of Guards",
+    "Cat Of The Canals",
+    "The Drowned Man",
+    "The Blind Girl",
+    "The Discarded Knight",
+    "The Dragontamer",
+    "The Griffin Reborn",
+    "The Iron Captain",
+    "The Iron Suitor",
+    "The King's Prize",
+    "The Kraken's Daughter",
+    "The Lost Lord",
+    "The Merchant's Man",
+    "The Prince Of Winterfell",
+    "The Princess In The Tower",
+    "The Prophet",
+    "The Queen's Hand",
+    "The Queenmaker",
+    "The Queensguard",
+    "The Reaver",
+    "The Sacrifice",
+    "The Soiled Knight",
+    "The Spurned Suitor",
+    "The Turncloak",
+    "The Ugly Little Girl",
+    "The Wayward Bride",
+    "The Windblown",
+    "The Watcher",
+    "Theon",
+    "Tyrion",
+    "Victarion",
+}
+
+ASOIAF_POV_CANONICAL = {heading.replace("’", "'").upper(): heading for heading in ASOIAF_POV_HEADINGS}
 
 
 EPUB_SEGMENTS: dict[str, SegmentConfig] = {
@@ -84,6 +167,7 @@ EPUB_SEGMENTS: dict[str, SegmentConfig] = {
         "start_marker": "Prologue",
         "start_occurrence": "last",
         "drop_repeated_title": "A Game of Thrones",
+        "merge_inline_fragments": True,
         "pov_headings": {
             "Prologue",
             "Bran",
@@ -105,6 +189,180 @@ MOBI_SEGMENTS: dict[str, SegmentConfig] = {
         "end_marker": "序幕",
         "start_hit_ordinal": 1,
         "merge_cjk_continuations": True,
+    },
+}
+
+
+BOOK_EPUB_SEGMENTS: dict[str, dict[str, SegmentConfig]] = {
+    "the-two-towers": {
+        "sources/lord-of-the-rings/en/The Lord of the Rings.epub": {
+            "start_marker": "THE TWO TOWERS",
+            "end_marker": "THE RETURN OF THE KING",
+            "start_hit_ordinal": 1,
+        },
+        "sources/lord-of-the-rings/zh/魔戒全集.epub": {
+            "start_marker": "《魔戒》二部曲--《双城奇谋》",
+            "end_marker": "《魔戒》三部曲--《王者再临》",
+        },
+    },
+    "return-of-the-king": {
+        "sources/lord-of-the-rings/en/The Lord of the Rings.epub": {
+            "start_marker": "THE RETURN OF THE KING",
+            "start_hit_ordinal": 1,
+        },
+        "sources/lord-of-the-rings/zh/魔戒全集.epub": {
+            "start_marker": "《魔戒》三部曲--《王者再临》",
+        },
+    },
+    "harry-potter-2": {
+        "sources/harry-potter/en/Harry Potter Series.epub": {
+            "opf_filter": opf_prefix_filter("2/"),
+            "start_marker": "CHAPTER ONE",
+            "normalize_chapter_words": True,
+            "combine_following_title_for_chapter": True,
+            "drop_repeated_title": "HP 2 - Harry Potter and the Chamber of Secrets",
+        },
+        "sources/harry-potter/zh/哈利·波特.epub": {
+            "start_marker": "第一章 最糟糕的生日",
+            "end_marker": "第一章 猫头鹰邮递",
+        },
+    },
+    "harry-potter-3": {
+        "sources/harry-potter/en/Harry Potter Series.epub": {
+            "opf_filter": opf_prefix_filter("3/"),
+            "start_marker": "CHAPTER ONE",
+            "normalize_chapter_words": True,
+            "combine_following_title_for_chapter": True,
+            "drop_repeated_title": "HP 3 - Harry Potter and the Prisoner of Azkaban",
+        },
+        "sources/harry-potter/zh/哈利·波特.epub": {
+            "start_marker": "第一章 猫头鹰邮递",
+            "end_marker": "第一章 里德尔府",
+        },
+    },
+    "harry-potter-4": {
+        "sources/harry-potter/en/Harry Potter Series.epub": {
+            "opf_filter": opf_prefix_filter("4/"),
+            "start_marker": "CHAPTER ONE",
+            "normalize_chapter_words": True,
+            "combine_following_title_for_chapter": True,
+            "drop_repeated_title": "HP 4 - Harry Potter and the Goblet of Fire",
+        },
+        "sources/harry-potter/zh/哈利·波特.epub": {
+            "start_marker": "第一章 里德尔府",
+            "end_marker": "第一章 达力遭遇摄魂怪",
+        },
+    },
+    "harry-potter-5": {
+        "sources/harry-potter/en/Harry Potter Series.epub": {
+            "opf_filter": opf_prefix_filter("5/"),
+            "start_marker": "Chapter 1",
+            "normalize_chapter_words": True,
+            "combine_following_title_for_chapter": True,
+            "drop_repeated_title": "HP 5 - Harry Potter and the Order of the Phoenix",
+        },
+        "sources/harry-potter/zh/哈利·波特.epub": {
+            "start_marker": "第一章 达力遭遇摄魂怪",
+            "end_marker": "第一章 另一位部长",
+        },
+    },
+    "harry-potter-6": {
+        "sources/harry-potter/en/Harry Potter Series.epub": {
+            "opf_filter": opf_prefix_filter("6/"),
+            "start_marker": "Chapter 1",
+            "normalize_chapter_words": True,
+            "combine_following_title_for_chapter": True,
+            "drop_repeated_title": "HP 6 - Harry Potter and the Half-Blood Prince",
+        },
+        "sources/harry-potter/zh/哈利·波特.epub": {
+            "start_marker": "第一章 另一位部长",
+            "end_marker": "第一章 黑魔王崛起",
+        },
+    },
+    "harry-potter-7": {
+        "sources/harry-potter/en/Harry Potter Series.epub": {
+            "opf_filter": opf_prefix_filter("7/"),
+            "start_marker": "Chapter 1",
+            "normalize_chapter_words": True,
+            "combine_following_title_for_chapter": True,
+            "drop_repeated_title": "HP 7 - Harry Potter and the Deathly Hallows",
+        },
+        "sources/harry-potter/zh/哈利·波特.epub": {
+            "start_marker": "第一章 黑魔王崛起",
+            "end_marker": "Table of Contents",
+        },
+    },
+    "a-clash-of-kings": {
+        "sources/a-song-of-ice-and-fire/en/individual-volumes/02 - A Clash of Kings.epub": {
+            "start_marker": "PROLOGUE",
+            "start_occurrence": "last",
+            "drop_repeated_title": "A Clash of Kings",
+            "merge_inline_fragments": True,
+            "pov_headings": ASOIAF_POV_HEADINGS,
+        },
+    },
+    "a-storm-of-swords": {
+        "sources/a-song-of-ice-and-fire/en/individual-volumes/03 - A Storm of Swords.epub": {
+            "start_marker": "Prologue",
+            "start_occurrence": "last",
+            "drop_repeated_title": "A Storm of Swords",
+            "merge_inline_fragments": True,
+            "pov_headings": ASOIAF_POV_HEADINGS,
+        },
+    },
+    "a-feast-for-crows": {
+        "sources/a-song-of-ice-and-fire/en/individual-volumes/04 - A Feast for Crows.epub": {
+            "start_marker": "Prologue",
+            "start_occurrence": "last",
+            "drop_repeated_title": "A Feast for Crows",
+            "merge_inline_fragments": True,
+            "pov_headings": ASOIAF_POV_HEADINGS,
+        },
+    },
+    "a-dance-with-dragons": {
+        "sources/a-song-of-ice-and-fire/en/individual-volumes/05 - A Dance with Dragons.epub": {
+            "start_marker": "PROLOGUE",
+            "start_occurrence": "last",
+            "drop_repeated_title": "A Dance with Dragons",
+            "merge_inline_fragments": True,
+            "pov_headings": ASOIAF_POV_HEADINGS,
+        },
+    },
+}
+
+
+BOOK_MOBI_SEGMENTS: dict[str, dict[str, SegmentConfig]] = {
+    "a-clash-of-kings": {
+        "sources/a-song-of-ice-and-fire/zh/乔治·R R 马丁经典奇幻系列（套装共22册）.mobi": {
+            "start_marker": "序幕",
+            "end_marker": "序幕",
+            "start_hit_ordinal": 3,
+            "merge_cjk_continuations": True,
+        },
+    },
+    "a-storm-of-swords": {
+        "sources/a-song-of-ice-and-fire/zh/乔治·R R 马丁经典奇幻系列（套装共22册）.mobi": {
+            "start_marker": "序幕",
+            "end_marker": "序章",
+            "start_hit_ordinal": 5,
+            "merge_cjk_continuations": True,
+        },
+    },
+    "a-feast-for-crows": {
+        "sources/a-song-of-ice-and-fire/zh/乔治·R R 马丁经典奇幻系列（套装共22册）.mobi": {
+            "start_marker": "序章",
+            "end_marker": "序幕",
+            "start_hit_ordinal": 1,
+            "merge_cjk_continuations": True,
+        },
+    },
+    "a-dance-with-dragons": {
+        "sources/a-song-of-ice-and-fire/zh/乔治·R R 马丁经典奇幻系列（套装共22册）.mobi": {
+            "start_marker": "序幕",
+            "end_marker": "返回总目录",
+            "start_hit_ordinal": 7,
+            "merge_cjk_continuations": True,
+        },
     },
 }
 
@@ -179,6 +437,270 @@ BOOKS: dict[str, base.BookConfig] = {
             "Japanese."
         ),
     ),
+    "the-two-towers": base.BookConfig(
+        book_id="the-two-towers",
+        title_en="The Two Towers",
+        title_zh="双城奇谋",
+        title_ja="二つの塔",
+        title_zh_reading="shuāng chéng qí móu",
+        title_ja_reading="ふたつ の とう",
+        author="J. R. R. Tolkien",
+        author_reading_zh="tuō ěr jīn",
+        author_reading_ja="トールキン",
+        en_source=Path("sources/lord-of-the-rings/en/The Lord of the Rings.epub"),
+        zh_source=Path("sources/lord-of-the-rings/zh/魔戒全集.epub"),
+        en_start_marker="THE TWO TOWERS",
+        source_spine_lang="en",
+        task_mode="trilingual_en_zh_sources_generated_ja",
+        book_description=(
+            "J. R. R. Tolkien, The Two Towers. English and Chinese bundle sources "
+            "are sliced to the second Lord of the Rings volume; English is the "
+            "alignment spine, Chinese is the published translation reference, and "
+            "Japanese is generated in natural modern Japanese."
+        ),
+    ),
+    "return-of-the-king": base.BookConfig(
+        book_id="return-of-the-king",
+        title_en="The Return of the King",
+        title_zh="王者再临",
+        title_ja="王の帰還",
+        title_zh_reading="wáng zhě zài lín",
+        title_ja_reading="おう の きかん",
+        author="J. R. R. Tolkien",
+        author_reading_zh="tuō ěr jīn",
+        author_reading_ja="トールキン",
+        en_source=Path("sources/lord-of-the-rings/en/The Lord of the Rings.epub"),
+        zh_source=Path("sources/lord-of-the-rings/zh/魔戒全集.epub"),
+        en_start_marker="THE RETURN OF THE KING",
+        source_spine_lang="en",
+        task_mode="trilingual_en_zh_sources_generated_ja",
+        book_description=(
+            "J. R. R. Tolkien, The Return of the King. English and Chinese bundle "
+            "sources are sliced to the third Lord of the Rings volume; English is "
+            "the alignment spine, Chinese is the published translation reference, "
+            "and Japanese is generated in natural modern Japanese."
+        ),
+    ),
+    "harry-potter-2": base.BookConfig(
+        book_id="harry-potter-2",
+        title_en="Harry Potter and the Chamber of Secrets",
+        title_zh="哈利·波特与密室",
+        title_ja="ハリー・ポッターと秘密の部屋",
+        title_zh_reading="hā lì bō tè yǔ mì shì",
+        title_ja_reading="ハリー ポッター と ひみつ の へや",
+        author="J. K. Rowling",
+        author_reading_zh="luó lín",
+        author_reading_ja="ローリング",
+        en_source=Path("sources/harry-potter/en/Harry Potter Series.epub"),
+        zh_source=Path("sources/harry-potter/zh/哈利·波特.epub"),
+        en_start_marker="Chapter 1",
+        source_spine_lang="en",
+        task_mode="trilingual_en_zh_sources_generated_ja",
+        book_description=(
+            "J. K. Rowling, Harry Potter and the Chamber of Secrets. English and "
+            "Chinese series EPUBs are sliced to volume two; English is the "
+            "alignment spine, Chinese is the published translation reference, and "
+            "Japanese is generated in natural modern Japanese."
+        ),
+    ),
+    "harry-potter-3": base.BookConfig(
+        book_id="harry-potter-3",
+        title_en="Harry Potter and the Prisoner of Azkaban",
+        title_zh="哈利·波特与阿兹卡班的囚徒",
+        title_ja="ハリー・ポッターとアズカバンの囚人",
+        title_zh_reading="hā lì bō tè yǔ ā zī kǎ bān de qiú tú",
+        title_ja_reading="ハリー ポッター と アズカバン の しゅうじん",
+        author="J. K. Rowling",
+        author_reading_zh="luó lín",
+        author_reading_ja="ローリング",
+        en_source=Path("sources/harry-potter/en/Harry Potter Series.epub"),
+        zh_source=Path("sources/harry-potter/zh/哈利·波特.epub"),
+        en_start_marker="Chapter 1",
+        source_spine_lang="en",
+        task_mode="trilingual_en_zh_sources_generated_ja",
+        book_description=(
+            "J. K. Rowling, Harry Potter and the Prisoner of Azkaban. English and "
+            "Chinese series EPUBs are sliced to volume three; English is the "
+            "alignment spine, Chinese is the published translation reference, and "
+            "Japanese is generated in natural modern Japanese."
+        ),
+    ),
+    "harry-potter-4": base.BookConfig(
+        book_id="harry-potter-4",
+        title_en="Harry Potter and the Goblet of Fire",
+        title_zh="哈利·波特与火焰杯",
+        title_ja="ハリー・ポッターと炎のゴブレット",
+        title_zh_reading="hā lì bō tè yǔ huǒ yàn bēi",
+        title_ja_reading="ハリー ポッター と ほのお の ゴブレット",
+        author="J. K. Rowling",
+        author_reading_zh="luó lín",
+        author_reading_ja="ローリング",
+        en_source=Path("sources/harry-potter/en/Harry Potter Series.epub"),
+        zh_source=Path("sources/harry-potter/zh/哈利·波特.epub"),
+        en_start_marker="Chapter 1",
+        source_spine_lang="en",
+        task_mode="trilingual_en_zh_sources_generated_ja",
+        book_description=(
+            "J. K. Rowling, Harry Potter and the Goblet of Fire. English and "
+            "Chinese series EPUBs are sliced to volume four; English is the "
+            "alignment spine, Chinese is the published translation reference, and "
+            "Japanese is generated in natural modern Japanese."
+        ),
+    ),
+    "harry-potter-5": base.BookConfig(
+        book_id="harry-potter-5",
+        title_en="Harry Potter and the Order of the Phoenix",
+        title_zh="哈利·波特与凤凰社",
+        title_ja="ハリー・ポッターと不死鳥の騎士団",
+        title_zh_reading="hā lì bō tè yǔ fèng huáng shè",
+        title_ja_reading="ハリー ポッター と ふしちょう の きしだん",
+        author="J. K. Rowling",
+        author_reading_zh="luó lín",
+        author_reading_ja="ローリング",
+        en_source=Path("sources/harry-potter/en/Harry Potter Series.epub"),
+        zh_source=Path("sources/harry-potter/zh/哈利·波特.epub"),
+        en_start_marker="Chapter 1",
+        source_spine_lang="en",
+        task_mode="trilingual_en_zh_sources_generated_ja",
+        book_description=(
+            "J. K. Rowling, Harry Potter and the Order of the Phoenix. English and "
+            "Chinese series EPUBs are sliced to volume five; English is the "
+            "alignment spine, Chinese is the published translation reference, and "
+            "Japanese is generated in natural modern Japanese."
+        ),
+    ),
+    "harry-potter-6": base.BookConfig(
+        book_id="harry-potter-6",
+        title_en="Harry Potter and the Half-Blood Prince",
+        title_zh="哈利·波特与混血王子",
+        title_ja="ハリー・ポッターと謎のプリンス",
+        title_zh_reading="hā lì bō tè yǔ hùn xuè wáng zǐ",
+        title_ja_reading="ハリー ポッター と なぞ の プリンス",
+        author="J. K. Rowling",
+        author_reading_zh="luó lín",
+        author_reading_ja="ローリング",
+        en_source=Path("sources/harry-potter/en/Harry Potter Series.epub"),
+        zh_source=Path("sources/harry-potter/zh/哈利·波特.epub"),
+        en_start_marker="Chapter 1",
+        source_spine_lang="en",
+        task_mode="trilingual_en_zh_sources_generated_ja",
+        book_description=(
+            "J. K. Rowling, Harry Potter and the Half-Blood Prince. English and "
+            "Chinese series EPUBs are sliced to volume six; English is the "
+            "alignment spine, Chinese is the published translation reference, and "
+            "Japanese is generated in natural modern Japanese."
+        ),
+    ),
+    "harry-potter-7": base.BookConfig(
+        book_id="harry-potter-7",
+        title_en="Harry Potter and the Deathly Hallows",
+        title_zh="哈利·波特与死亡圣器",
+        title_ja="ハリー・ポッターと死の秘宝",
+        title_zh_reading="hā lì bō tè yǔ sǐ wáng shèng qì",
+        title_ja_reading="ハリー ポッター と し の ひほう",
+        author="J. K. Rowling",
+        author_reading_zh="luó lín",
+        author_reading_ja="ローリング",
+        en_source=Path("sources/harry-potter/en/Harry Potter Series.epub"),
+        zh_source=Path("sources/harry-potter/zh/哈利·波特.epub"),
+        en_start_marker="Chapter 1",
+        source_spine_lang="en",
+        task_mode="trilingual_en_zh_sources_generated_ja",
+        book_description=(
+            "J. K. Rowling, Harry Potter and the Deathly Hallows. English and "
+            "Chinese series EPUBs are sliced to volume seven; English is the "
+            "alignment spine, Chinese is the published translation reference, and "
+            "Japanese is generated in natural modern Japanese."
+        ),
+    ),
+    "a-clash-of-kings": base.BookConfig(
+        book_id="a-clash-of-kings",
+        title_en="A Clash of Kings",
+        title_zh="列王的纷争",
+        title_ja="王狼たちの戦旗",
+        title_zh_reading="liè wáng de fēn zhēng",
+        title_ja_reading="おうろうたち の せんき",
+        author="George R. R. Martin",
+        author_reading_zh="qiáo zhì mǎ dīng",
+        author_reading_ja="ジョージ アール アール マーティン",
+        en_source=Path("sources/a-song-of-ice-and-fire/en/individual-volumes/02 - A Clash of Kings.epub"),
+        zh_source=Path("sources/a-song-of-ice-and-fire/zh/乔治·R R 马丁经典奇幻系列（套装共22册）.mobi"),
+        en_start_marker="Prologue",
+        source_spine_lang="en",
+        task_mode="trilingual_en_zh_sources_generated_ja",
+        book_description=(
+            "George R. R. Martin, A Clash of Kings. English volume-two EPUB is the "
+            "alignment spine; Chinese anthology is sliced to the second book and "
+            "used as a published translation reference; Japanese is generated in "
+            "natural modern Japanese."
+        ),
+    ),
+    "a-storm-of-swords": base.BookConfig(
+        book_id="a-storm-of-swords",
+        title_en="A Storm of Swords",
+        title_zh="冰雨的风暴",
+        title_ja="剣嵐の大地",
+        title_zh_reading="bīng yǔ de fēng bào",
+        title_ja_reading="けんらん の だいち",
+        author="George R. R. Martin",
+        author_reading_zh="qiáo zhì mǎ dīng",
+        author_reading_ja="ジョージ アール アール マーティン",
+        en_source=Path("sources/a-song-of-ice-and-fire/en/individual-volumes/03 - A Storm of Swords.epub"),
+        zh_source=Path("sources/a-song-of-ice-and-fire/zh/乔治·R R 马丁经典奇幻系列（套装共22册）.mobi"),
+        en_start_marker="Prologue",
+        source_spine_lang="en",
+        task_mode="trilingual_en_zh_sources_generated_ja",
+        book_description=(
+            "George R. R. Martin, A Storm of Swords. English volume-three EPUB is "
+            "the alignment spine; Chinese anthology is sliced to the third book "
+            "and used as a published translation reference; Japanese is generated "
+            "in natural modern Japanese."
+        ),
+    ),
+    "a-feast-for-crows": base.BookConfig(
+        book_id="a-feast-for-crows",
+        title_en="A Feast for Crows",
+        title_zh="群鸦的盛宴",
+        title_ja="乱鴉の饗宴",
+        title_zh_reading="qún yā de shèng yàn",
+        title_ja_reading="らんあ の きょうえん",
+        author="George R. R. Martin",
+        author_reading_zh="qiáo zhì mǎ dīng",
+        author_reading_ja="ジョージ アール アール マーティン",
+        en_source=Path("sources/a-song-of-ice-and-fire/en/individual-volumes/04 - A Feast for Crows.epub"),
+        zh_source=Path("sources/a-song-of-ice-and-fire/zh/乔治·R R 马丁经典奇幻系列（套装共22册）.mobi"),
+        en_start_marker="Prologue",
+        source_spine_lang="en",
+        task_mode="trilingual_en_zh_sources_generated_ja",
+        book_description=(
+            "George R. R. Martin, A Feast for Crows. English volume-four EPUB is "
+            "the alignment spine; Chinese anthology is sliced to the fourth book "
+            "and used as a published translation reference; Japanese is generated "
+            "in natural modern Japanese."
+        ),
+    ),
+    "a-dance-with-dragons": base.BookConfig(
+        book_id="a-dance-with-dragons",
+        title_en="A Dance with Dragons",
+        title_zh="魔龙的狂舞",
+        title_ja="竜との舞踏",
+        title_zh_reading="mó lóng de kuáng wǔ",
+        title_ja_reading="りゅう との ぶとう",
+        author="George R. R. Martin",
+        author_reading_zh="qiáo zhì mǎ dīng",
+        author_reading_ja="ジョージ アール アール マーティン",
+        en_source=Path("sources/a-song-of-ice-and-fire/en/individual-volumes/05 - A Dance with Dragons.epub"),
+        zh_source=Path("sources/a-song-of-ice-and-fire/zh/乔治·R R 马丁经典奇幻系列（套装共22册）.mobi"),
+        en_start_marker="Prologue",
+        source_spine_lang="en",
+        task_mode="trilingual_en_zh_sources_generated_ja",
+        book_description=(
+            "George R. R. Martin, A Dance with Dragons. English volume-five EPUB "
+            "is the alignment spine; Chinese anthology is sliced to the fifth book "
+            "and used as a published translation reference; Japanese is generated "
+            "in natural modern Japanese."
+        ),
+    ),
 }
 
 
@@ -190,6 +712,19 @@ IMAGE_ONLY_JAPANESE_REFERENCES: dict[str, str] = {
 
 def normalize_key(path: Path) -> str:
     return str(path).replace("\\", "/")
+
+
+def current_book_segment(
+    path: Path,
+    legacy_segments: dict[str, SegmentConfig],
+    book_segments: dict[str, dict[str, SegmentConfig]],
+) -> SegmentConfig | None:
+    key = normalize_key(path)
+    if CURRENT_BOOK_ID:
+        scoped = book_segments.get(CURRENT_BOOK_ID, {}).get(key)
+        if scoped is not None:
+            return scoped
+    return legacy_segments.get(key)
 
 
 def clean_html_text(raw: str) -> list[str]:
@@ -273,6 +808,34 @@ def find_segment_bounds(lines: list[str], config: SegmentConfig) -> tuple[int, i
     return start, end
 
 
+def is_structural_line(line: str) -> bool:
+    return bool(
+        line in {"Prologue", "Epilogue", "Appendix", "Acknowledgments", "About the Author"}
+        or re.match(r"^\d{1,3}:\s+", line)
+        or re.match(r"^Chapter\s+\d{1,3}(?::|\b)", line)
+        or re.match(r"^BOOK\s+(?:[IVXLCDM]+|ONE|TWO|THREE|FOUR|FIVE|SIX)", line, re.IGNORECASE)
+    )
+
+
+def merge_inline_fragments(lines: list[str]) -> list[str]:
+    out: list[str] = []
+    terminal = re.compile(r"[.!?。！？\"”’)]$")
+    punctuation_start = re.compile(r"^[,.;:!?，。！？；：、]")
+    for line in lines:
+        if not out or is_structural_line(line):
+            out.append(line)
+            continue
+        previous = out[-1]
+        if punctuation_start.match(line):
+            out[-1] = previous + line
+            continue
+        if not is_structural_line(previous) and (previous.endswith(",") or (len(previous) <= 40 and not terminal.search(previous))):
+            out[-1] = f"{previous} {line}".strip()
+            continue
+        out.append(line)
+    return out
+
+
 def normalize_fantasy_lines(lines: list[str], config: SegmentConfig) -> list[str]:
     drop_repeated_title = config.get("drop_repeated_title")
     cleaned: list[str] = []
@@ -284,9 +847,10 @@ def normalize_fantasy_lines(lines: list[str], config: SegmentConfig) -> list[str
         if line.startswith("r. and Mrs. Dursley, of number four, Privet Drive"):
             line = "M" + line
         if config.get("normalize_chapter_words"):
-            match = re.fullmatch(r"CHAPTER\s+([A-Z]+)", line)
-            if match and match.group(1) in WORD_NUMBERS:
-                line = f"Chapter {WORD_NUMBERS[match.group(1)]}"
+            match = re.fullmatch(r"CHAPTER\s+([A-Z -]+)", line)
+            chapter_word = match.group(1).replace(" ", "-") if match else ""
+            if chapter_word in WORD_NUMBERS:
+                line = f"Chapter {WORD_NUMBERS[chapter_word]}"
         if re.fullmatch(r"\[\d{1,4}\]", line):
             continue
         cleaned.append(line)
@@ -295,6 +859,15 @@ def normalize_fantasy_lines(lines: list[str], config: SegmentConfig) -> list[str
     index = 0
     while index < len(cleaned):
         line = cleaned[index]
+        if (
+            len(line) == 1
+            and line.isupper()
+            and index + 1 < len(cleaned)
+            and re.match(r"^[a-z]", cleaned[index + 1])
+        ):
+            out.append(line + cleaned[index + 1])
+            index += 2
+            continue
         if config.get("combine_following_title_for_chapter"):
             match = re.fullmatch(r"Chapter\s+(\d{1,3})", line)
             if match and index + 1 < len(cleaned):
@@ -304,16 +877,22 @@ def normalize_fantasy_lines(lines: list[str], config: SegmentConfig) -> list[str
                     index += 2
                     continue
         pov_headings = config.get("pov_headings")
-        if isinstance(pov_headings, set) and line in pov_headings:
-            if line == "Prologue":
+        pov_line = line.replace("’", "'")
+        canonical_pov = ASOIAF_POV_CANONICAL.get(pov_line.upper()) if isinstance(pov_headings, set) else None
+        if canonical_pov:
+            if canonical_pov == "Prologue":
                 out.append("Prologue")
+            elif canonical_pov == "Epilogue":
+                out.append("Epilogue")
             else:
                 count = 1 + sum(1 for item in out if re.match(r"^\d{1,3}:\s+", item))
-                out.append(f"{count}: {line}")
+                out.append(f"{count}: {canonical_pov}")
             index += 1
             continue
         out.append(line)
         index += 1
+    if config.get("merge_inline_fragments"):
+        return merge_inline_fragments(out)
     return out
 
 
@@ -355,8 +934,7 @@ def merge_cjk_continuations(lines: list[str]) -> list[str]:
 
 
 def segmented_epub_lines(path: Path) -> list[str]:
-    key = normalize_key(path)
-    config = EPUB_SEGMENTS.get(key)
+    config = current_book_segment(path, EPUB_SEGMENTS, BOOK_EPUB_SEGMENTS)
     lines = read_epub_lines(path, config.get("opf_filter") if config else None)
     if config:
         start, end = find_segment_bounds(lines, config)
@@ -368,9 +946,8 @@ def segmented_epub_lines(path: Path) -> list[str]:
 
 
 def segmented_mobi_lines(original_mobi_lines: Callable[[Path], list[str]], path: Path) -> list[str]:
-    key = normalize_key(path)
     lines = original_mobi_lines(path)
-    config = MOBI_SEGMENTS.get(key)
+    config = current_book_segment(path, MOBI_SEGMENTS, BOOK_MOBI_SEGMENTS)
     if config:
         start, end = find_segment_bounds(lines, config)
         lines = lines[start:end]
@@ -399,6 +976,7 @@ def inject_image_only_japanese_reference(book_id: str) -> None:
 
 
 def prepare_selected(book_ids: list[str], args: argparse.Namespace) -> list[dict[str, Any]]:
+    global CURRENT_BOOK_ID
     original_epub_lines = base.epub_lines
     original_mobi_lines = base.mobi_lines
     base.epub_lines = segmented_epub_lines
@@ -406,6 +984,7 @@ def prepare_selected(book_ids: list[str], args: argparse.Namespace) -> list[dict
     try:
         results: list[dict[str, Any]] = []
         for book_id in book_ids:
+            CURRENT_BOOK_ID = book_id
             result = base.prepare_book(BOOKS[book_id], args)
             inject_image_only_japanese_reference(book_id)
             plan_path = ROOT / "books" / book_id / "book-plan.json"
@@ -421,6 +1000,7 @@ def prepare_selected(book_ids: list[str], args: argparse.Namespace) -> list[dict
             results.append(result)
         return results
     finally:
+        CURRENT_BOOK_ID = None
         base.epub_lines = original_epub_lines
         base.mobi_lines = original_mobi_lines
 

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "book_id": "the-two-towers",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_en_zh_sources_generated_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "zh": "sources/lord-of-the-rings/zh/魔戒全集.epub",
+    "en": "sources/lord-of-the-rings/en/The Lord of the Rings.epub"
+  },
+  "source_sha256": {
+    "zh": "c241c1b9684be08851127cfaa042fc3e9d5d02f1b2c35bae4ab70b27fcda2822",
+    "en": "0a02caa556169105cd793b069e1412b71750a8c1ba9715619ccc9ac4d996dfe9"
+  },
+  "markdown": {
+    "en": "books/the-two-towers/markdown/en.md",
+    "zh": "books/the-two-towers/markdown/zh.md"
+  },
+  "book_title_en": "The Two Towers",
+  "book_title_zh": "双城奇谋",
+  "book_title_ja": "二つの塔",
+  "book_title_zh_reading": "shuāng chéng qí móu",
+  "book_title_ja_reading": "ふたつ の とう",
+  "author": "J. R. R. Tolkien",
+  "author_reading_zh": "tuō ěr jīn",
+  "author_reading_ja": "トールキン",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "J. R. R. Tolkien, The Two Towers. English and Chinese bundle sources are sliced to the second Lord of the Rings volume; English is the alignment spine, Chinese is the published translation reference, and Japanese is generated in natural modern Japanese.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "global_ratio_window",
+  "chunks_jsonl": "books/the-two-towers/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/the-two-towers/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/the-two-towers/work/trilingual/interlinear/chunks",
+  "preview_json": "books/the-two-towers/work/trilingual/preview/the-two-towers.partial.json",
+  "assembled_json": "books/the-two-towers/work/trilingual/preview/the-two-towers.partial.json",
+  "prepared_at": "2026-07-05T23:06:17.989499+00:00",
+  "chunk_count": 352,
+  "english_chapter_count": 22,
+  "chinese_reference_chapter_count": 2,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_fantasy_trilingual.py",
+    "english_spine": "English source is the chunk spine.",
+    "chinese_reference": "Chinese source is trimmed to the requested first book and used as a compact ratio reference window.",
+    "start_command": "WORKERS=10 MODEL=gpt-5.5 REASONING=low bash scripts/interlinear/start_trilingual_book_tmux.sh the-two-towers"
+  }
+}

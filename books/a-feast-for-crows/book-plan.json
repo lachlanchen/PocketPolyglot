@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "book_id": "a-feast-for-crows",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_en_zh_sources_generated_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "zh": "sources/a-song-of-ice-and-fire/zh/乔治·R R 马丁经典奇幻系列（套装共22册）.mobi",
+    "en": "sources/a-song-of-ice-and-fire/en/individual-volumes/04 - A Feast for Crows.epub"
+  },
+  "source_sha256": {
+    "zh": "7dfbb51078cfa12672a8dbab1b559f762dd8a81022e3d209e7cbb473645dd7d9",
+    "en": "e5ac4a8a9c0df8acf57097c29164d2eedbff27ea51e9aae63e4e12b0a0120986"
+  },
+  "markdown": {
+    "en": "books/a-feast-for-crows/markdown/en.md",
+    "zh": "books/a-feast-for-crows/markdown/zh.md"
+  },
+  "book_title_en": "A Feast for Crows",
+  "book_title_zh": "群鸦的盛宴",
+  "book_title_ja": "乱鴉の饗宴",
+  "book_title_zh_reading": "qún yā de shèng yàn",
+  "book_title_ja_reading": "らんあ の きょうえん",
+  "author": "George R. R. Martin",
+  "author_reading_zh": "qiáo zhì mǎ dīng",
+  "author_reading_ja": "ジョージ アール アール マーティン",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "George R. R. Martin, A Feast for Crows. English volume-four EPUB is the alignment spine; Chinese anthology is sliced to the fourth book and used as a published translation reference; Japanese is generated in natural modern Japanese.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "global_ratio_window",
+  "chunks_jsonl": "books/a-feast-for-crows/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/a-feast-for-crows/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/a-feast-for-crows/work/trilingual/interlinear/chunks",
+  "preview_json": "books/a-feast-for-crows/work/trilingual/preview/a-feast-for-crows.partial.json",
+  "assembled_json": "books/a-feast-for-crows/work/trilingual/preview/a-feast-for-crows.partial.json",
+  "prepared_at": "2026-07-05T23:06:36.234360+00:00",
+  "chunk_count": 705,
+  "english_chapter_count": 51,
+  "chinese_reference_chapter_count": 1,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_fantasy_trilingual.py",
+    "english_spine": "English source is the chunk spine.",
+    "chinese_reference": "Chinese source is trimmed to the requested first book and used as a compact ratio reference window.",
+    "start_command": "WORKERS=10 MODEL=gpt-5.5 REASONING=low bash scripts/interlinear/start_trilingual_book_tmux.sh a-feast-for-crows"
+  }
+}

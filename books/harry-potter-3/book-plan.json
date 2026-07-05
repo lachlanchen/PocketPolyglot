@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "book_id": "harry-potter-3",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_en_zh_sources_generated_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "zh": "sources/harry-potter/zh/哈利·波特.epub",
+    "en": "sources/harry-potter/en/Harry Potter Series.epub"
+  },
+  "source_sha256": {
+    "zh": "584b6c7916a9cceb48db39d3323b2ac97e33ded20d3df6ec1ca1e1e8b5ac83be",
+    "en": "624e880b6f026b34420777bae4b885f7d9e086489a57daa389e8c69ab82824e4"
+  },
+  "markdown": {
+    "en": "books/harry-potter-3/markdown/en.md",
+    "zh": "books/harry-potter-3/markdown/zh.md"
+  },
+  "book_title_en": "Harry Potter and the Prisoner of Azkaban",
+  "book_title_zh": "哈利·波特与阿兹卡班的囚徒",
+  "book_title_ja": "ハリー・ポッターとアズカバンの囚人",
+  "book_title_zh_reading": "hā lì bō tè yǔ ā zī kǎ bān de qiú tú",
+  "book_title_ja_reading": "ハリー ポッター と アズカバン の しゅうじん",
+  "author": "J. K. Rowling",
+  "author_reading_zh": "luó lín",
+  "author_reading_ja": "ローリング",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "J. K. Rowling, Harry Potter and the Prisoner of Azkaban. English and Chinese series EPUBs are sliced to volume three; English is the alignment spine, Chinese is the published translation reference, and Japanese is generated in natural modern Japanese.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "global_ratio_window",
+  "chunks_jsonl": "books/harry-potter-3/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/harry-potter-3/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/harry-potter-3/work/trilingual/interlinear/chunks",
+  "preview_json": "books/harry-potter-3/work/trilingual/preview/harry-potter-3.partial.json",
+  "assembled_json": "books/harry-potter-3/work/trilingual/preview/harry-potter-3.partial.json",
+  "prepared_at": "2026-07-05T23:06:20.747711+00:00",
+  "chunk_count": 262,
+  "english_chapter_count": 23,
+  "chinese_reference_chapter_count": 22,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_fantasy_trilingual.py",
+    "english_spine": "English source is the chunk spine.",
+    "chinese_reference": "Chinese source is trimmed to the requested first book and used as a compact ratio reference window.",
+    "start_command": "WORKERS=10 MODEL=gpt-5.5 REASONING=low bash scripts/interlinear/start_trilingual_book_tmux.sh harry-potter-3"
+  }
+}
