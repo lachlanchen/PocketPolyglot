@@ -25,6 +25,8 @@ HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 SPACE_RE = re.compile(r"\s+")
 SENTENCE_END_RE = re.compile(r"[。！？!?；;：:]")
 TRAILING_PAGE_CHROME_RE = re.compile(r"(NewPP limit report|Transclusion expansion time report|Saved in parser cache)", re.I)
+PDF_REFERENCE_PAGE_LINE_RE = re.compile(r"^\s*(?:\f?\s*Page\s+\d+|\d+|[ivxlcdm]{1,8})\s*$", re.I)
+PDF_REFERENCE_UPPER_HEADER_RE = re.compile(r"^[A-Z][A-Z0-9 ,.;:'\"!?()\-­]{18,}$")
 SANGUOZHI_VOLUME_RE = re.compile(r"卷\s*0*(\d+)")
 CLASSICAL_VOLUME_RE = re.compile(r"卷\s*0*(\d+)\s*([上中下])?")
 SOURCE_FILE_PREFIX_RE = re.compile(r"(?:^|/)(\d+)-")
@@ -282,6 +284,73 @@ ROMAN_TO_INT = {
     "XXXII": 32,
     "XXXIII": 33,
 }
+INT_TO_ROMAN = {value: key for key, value in ROMAN_TO_INT.items()}
+
+ENGLISH_ORDINAL_WORDS = {
+    1: "ONE",
+    2: "TWO",
+    3: "THREE",
+    4: "FOUR",
+    5: "FIVE",
+    6: "SIX",
+    7: "SEVEN",
+    8: "EIGHT",
+    9: "NINE",
+    10: "TEN",
+    11: "ELEVEN",
+    12: "TWELVE",
+    13: "THIRTEEN",
+    14: "FOURTEEN",
+    15: "FIFTEEN",
+    16: "SIXTEEN",
+    17: "SEVENTEEN",
+    18: "EIGHTEEN",
+    19: "NINETEEN",
+    20: "TWENTY",
+    21: "TWENTY-ONE",
+    22: "TWENTY-TWO",
+    23: "TWENTY-THREE",
+    24: "TWENTY-FOUR",
+    25: "TWENTY-FIVE",
+    26: "TWENTY-SIX",
+    27: "TWENTY-SEVEN",
+    28: "TWENTY-EIGHT",
+    29: "TWENTY-NINE",
+    30: "THIRTY",
+    31: "THIRTY-ONE",
+    32: "THIRTY-TWO",
+    33: "THIRTY-THREE",
+    34: "THIRTY-FOUR",
+    35: "THIRTY-FIVE",
+    36: "THIRTY-SIX",
+    37: "THIRTY-SEVEN",
+    38: "THIRTY-EIGHT",
+    39: "THIRTY-NINE",
+    40: "FORTY",
+    41: "FORTY-ONE",
+    42: "FORTY-TWO",
+    43: "FORTY-THREE",
+    44: "FORTY-FOUR",
+    45: "FORTY-FIVE",
+    46: "FORTY-SIX",
+    47: "FORTY-SEVEN",
+    48: "FORTY-EIGHT",
+    49: "FORTY-NINE",
+    50: "FIFTY",
+    51: "FIFTY-ONE",
+    52: "FIFTY-TWO",
+    53: "FIFTY-THREE",
+    54: "FIFTY-FOUR",
+    55: "FIFTY-FIVE",
+}
+
+WESTERN_WING_BOOK_WORDS = {
+    1: "First",
+    2: "Second",
+    3: "Third",
+    4: "Fourth",
+    5: "Fifth",
+}
 
 WATSON_TITLES = {
     1: "Free and Easy Wandering",
@@ -390,6 +459,50 @@ def clean_reference_text(text: str) -> str:
     return text.strip()
 
 
+def clean_translation_reference_text(text: str) -> str:
+    """Clean PDF/OCR reference text before it enters chunk prompts.
+
+    Reference PDFs often carry page headers, page numbers, form-feed markers, and
+    hard line breaks. Those are useful for humans but toxic for generation: the
+    writer may imitate them and split a simple sentence across many rows.
+    """
+
+    lines: list[str] = []
+    for raw_line in clean_reference_text(text.replace("\f", "\n")).splitlines():
+        line = raw_line.strip()
+        if not line:
+            lines.append("")
+            continue
+        if PDF_REFERENCE_PAGE_LINE_RE.fullmatch(line):
+            continue
+        if PDF_REFERENCE_UPPER_HEADER_RE.fullmatch(line) and len(line.split()) <= 9:
+            continue
+        if re.fullmatch(r"[-–—_* ]{3,}", line):
+            continue
+        lines.append(line)
+
+    paragraphs: list[str] = []
+    buffer = ""
+    for line in lines:
+        if not line:
+            if buffer:
+                paragraphs.append(buffer.strip())
+                buffer = ""
+            continue
+        if not buffer:
+            buffer = line
+            continue
+        if buffer.endswith(("-", "­")):
+            buffer = buffer.rstrip("-­") + line
+        elif re.search(r"[.!?。！？:：;；\"”’)]$", buffer):
+            buffer += "\n" + line
+        else:
+            buffer += " " + line
+    if buffer:
+        paragraphs.append(buffer.strip())
+    return clean_reference_text("\n\n".join(paragraphs))
+
+
 def excerpt(text: str, limit: int = 4200) -> str:
     return clean_reference_text(text)[:limit]
 
@@ -412,7 +525,7 @@ def content_char_count(text: str) -> int:
 def cached_pdf_reference_text(book_id: str, path: Path) -> tuple[str, str]:
     """Return extractable PDF text, or an OCR cache if the PDF is image-only."""
 
-    text = clean_reference_text(pdftotext(path))
+    text = clean_translation_reference_text(pdftotext(path))
     if content_char_count(text) >= 2000:
         return text, "pdftotext"
 
@@ -425,7 +538,7 @@ def cached_pdf_reference_text(book_id: str, path: Path) -> tuple[str, str]:
     ]
     for candidate in candidates:
         if candidate.exists():
-            cached = clean_reference_text(candidate.read_text(encoding="utf-8", errors="replace"))
+            cached = clean_translation_reference_text(candidate.read_text(encoding="utf-8", errors="replace"))
             if content_char_count(cached) >= 2000:
                 return cached, "ocr_cache"
     return "", "needs_ocr"
@@ -638,13 +751,24 @@ def meaningful_chapter_title(book_id: str, title: str, header_text: str) -> str:
     return base
 
 
-def is_source_footer_paragraph(text: str) -> bool:
+def is_source_boilerplate_paragraph(text: str) -> bool:
     text = clean_text(text)
-    return (
+    normalized = text.replace("目錄", "目录").replace("頁", "页")
+    if (
         text.startswith("此作品在全世界都属于公有领域")
         or text.startswith("This work is in the public domain")
         or text.startswith("この作品はパブリックドメイン")
-    )
+    ):
+        return True
+    if not normalized:
+        return True
+    if len(normalized) <= 40 and "目录" in normalized and not SENTENCE_END_RE.search(normalized):
+        nav_chars = set("上下一本章卷篇页回返回目录前后後首末")
+        if all(char in nav_chars or char.isdigit() for char in normalized):
+            return True
+    if re.fullmatch(r"(?:上一|下一|前一|後一|后一).{0,10}", normalized) and not SENTENCE_END_RE.search(normalized):
+        return True
+    return False
 
 
 def expand_chapter_anchors(book: dict[str, Any], items: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -1003,7 +1127,7 @@ def manifest_items(book: dict[str, Any]) -> list[dict[str, Any]]:
             continue
         if raw_header_text:
             header_text = raw_header_text
-        paragraphs = [paragraph for paragraph in paragraphs if not is_source_footer_paragraph(paragraph)]
+        paragraphs = [paragraph for paragraph in paragraphs if not is_source_boilerplate_paragraph(paragraph)]
         if not paragraphs:
             continue
         chapter_title = meaningful_chapter_title(book["book_id"], title, header_text)
@@ -1168,9 +1292,18 @@ def html_reference_excerpt(path: Path, limit: int = 2600) -> str:
     return excerpt(content.get_text("\n", strip=True), limit)
 
 
-def translation_body_excerpt(text: str, headings: list[str] | None = None, limit: int = 4200) -> str:
+def translation_body_excerpt(
+    text: str,
+    headings: list[str] | None = None,
+    limit: int = 4200,
+    *,
+    min_body_index: int | None = None,
+    prefer_last: bool = False,
+) -> str:
     if headings:
-        min_body_index = min(max(2000, len(text) // 5), max(0, len(text) - 1))
+        body_floor = min_body_index
+        if body_floor is None:
+            body_floor = min(max(2000, len(text) // 5), max(0, len(text) - 1))
         for heading in headings:
             line_heading_re = re.compile(rf"(?im)^[ \t]*{re.escape(heading)}[ \t]*$")
             matches = list(line_heading_re.finditer(text))
@@ -1178,14 +1311,17 @@ def translation_body_excerpt(text: str, headings: list[str] | None = None, limit
                 matches = list(re.finditer(re.escape(heading), text, flags=re.IGNORECASE))
             if not matches:
                 continue
-            later = next((match for match in matches if match.start() >= min_body_index), None)
-            match = later or matches[-1]
+            candidates = [match for match in matches if match.start() >= body_floor]
+            if prefer_last:
+                match = (candidates or matches)[-1]
+            else:
+                match = (candidates or matches)[0]
             return excerpt(text[match.start() :], limit)
     return excerpt(text, limit)
 
 
-@lru_cache(maxsize=1)
-def load_mudanting_references() -> dict[str, Any]:
+@lru_cache(maxsize=None)
+def load_mudanting_references(chapter_number: int) -> dict[str, Any]:
     en_pdf = ROOT / "sources" / "mudanting" / "en" / "english-translation" / "The Peony Pavilion - Mudan ting.pdf"
     text, method = cached_pdf_reference_text("mudanting", en_pdf)
     ref: dict[str, Any] = {
@@ -1199,16 +1335,28 @@ def load_mudanting_references() -> dict[str, Any]:
         ),
     }
     if text:
-        ref["excerpt"] = translation_body_excerpt(text, ["SCENE ONE", "Scene One", "PROLOGUE SPEAKER", "ACT", "The Peony Pavilion"])
+        scene_word = ENGLISH_ORDINAL_WORDS.get(chapter_number)
+        headings = [
+            f"SCENE {scene_word}",
+            f"Scene {scene_word.title()}",
+        ] if scene_word else []
+        headings.extend(["PROLOGUE SPEAKER", "ACT", "The Peony Pavilion"])
+        ref["excerpt"] = translation_body_excerpt(text, headings, min_body_index=50_000)
     else:
         ref["excerpt"] = ""
     return {"en": [ref]}
 
 
-@lru_cache(maxsize=1)
-def load_xixiangji_references() -> dict[str, Any]:
+@lru_cache(maxsize=None)
+def load_xixiangji_references(chapter_number: int) -> dict[str, Any]:
     en_pdf = ROOT / "sources" / "xixiangji" / "en" / "english-translation" / "The Story of the Western Wing.pdf"
     text, method = cached_pdf_reference_text("xixiangji", en_pdf)
+    book_word = WESTERN_WING_BOOK_WORDS.get(chapter_number)
+    headings = [f"Book the {book_word}"] if book_word else []
+    roman = INT_TO_ROMAN.get(chapter_number)
+    if roman:
+        headings.append(f"VOLUME {roman}")
+    headings.extend(["An Introduction to the Story", "The Story of Oriole Cui"])
     ref: dict[str, Any] = {
         "source": "Stephen H. West and Wilt L. Idema, The Story of the Western Wing",
         "path": str(en_pdf.relative_to(ROOT)),
@@ -1217,7 +1365,7 @@ def load_xixiangji_references() -> dict[str, Any]:
             "English translation/reference PDF. Its internal grouping differs from the five-book Wikisource spine, "
             "so use it as a broad translation reference only when the local passage clearly matches."
         ),
-        "excerpt": translation_body_excerpt(text, ["Translation", "Book the First", "The Story of the Western Wing"]) if text else "",
+        "excerpt": translation_body_excerpt(text, headings, min_body_index=200_000, prefer_last=True) if text else "",
     }
     return {"en": [ref]}
 
@@ -1375,9 +1523,9 @@ def broad_references(book: dict[str, Any], chapter_number: int) -> dict[str, Any
     elif book["book_id"] == "foguoji":
         reference.update(load_foguoji_references())
     elif book["book_id"] == "mudanting":
-        reference.update(load_mudanting_references())
+        reference.update(load_mudanting_references(chapter_number))
     elif book["book_id"] == "xixiangji":
-        reference.update(load_xixiangji_references())
+        reference.update(load_xixiangji_references(chapter_number))
     return reference
 
 
