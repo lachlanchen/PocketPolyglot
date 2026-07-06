@@ -45,6 +45,7 @@ DEFAULT_CLASSICS = [
     "hanfeizi",
     "guiguzi",
     "lushi-chunqiu",
+    "sunzi-bingfa",
     "sunbin-bingfa",
     "simafa",
     "weiliaozi",

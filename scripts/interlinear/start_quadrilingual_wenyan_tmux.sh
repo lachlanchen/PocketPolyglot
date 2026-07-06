@@ -26,6 +26,8 @@ Environment:
   MANIFEST_OVERRIDE=
   RAW_CHUNK_DIR_OVERRIDE=
   WORK_ROOT_OVERRIDE=
+  START_AUTOREPAIR_COMPANION=1
+  AUTOREPAIR_ACTIVE_STALL_SECONDS=7200
 USAGE
 }
 
@@ -165,6 +167,35 @@ EOF
 chmod +x "$run_script"
 
 tmux new-session -d -s "$session" -n quadrilingual-json "bash '$run_script' 2>&1 | tee '$log_dir/${session}_$(date +%Y%m%d_%H%M%S).log'"
+
+shell_quote() {
+  printf '%q' "$1"
+}
+
+if [[ "${START_AUTOREPAIR_COMPANION:-1}" != "0" ]]; then
+  companion_session="${AUTOREPAIR_SESSION:-${session}-autorepair}"
+  restart_cmd="START_AUTOREPAIR_COMPANION=0 RETRY_FAILED=1 WORKERS=$(shell_quote "$workers") MODEL=$(shell_quote "$model") REASONING=$(shell_quote "$reasoning") WORKER_PREFIX=$(shell_quote "$worker_prefix") CLAIM_TTL_SECONDS=$(shell_quote "$claim_ttl") CODEX_TIMEOUT_SECONDS=$(shell_quote "$timeout") MERGE_INTERVAL=$(shell_quote "$merge_interval") COMPILE_INTERVAL_SECONDS=$(shell_quote "$compile_interval") MAIN_LAYERS=$(shell_quote "$main_layers") bash scripts/interlinear/start_quadrilingual_wenyan_tmux.sh $(shell_quote "$book_id") $(shell_quote "$session")"
+  bash scripts/interlinear/start_autorepair_companion_tmux.sh \
+    --name "$session" \
+    --session "$companion_session" \
+    --state-dir "$work_root/autorepair" \
+    --primary-session "$session" \
+    --health-command "python scripts/interlinear/report_quadrilingual_progress.py --manifest $(shell_quote "$manifest") --chunks-jsonl $(shell_quote "$chunks_jsonl") --chunk-dir $(shell_quote "$raw_chunk_dir")" \
+    --health-nonzero-ok \
+    --complete-ratio valid \
+    --complete-key missing=0 \
+    --complete-key stale=0 \
+    --watch "$raw_chunk_dir" \
+    --watch "$candidate_dir" \
+    --log "$work_root/logs/*.log" \
+    --log "$log_dir/${session}_*.log" \
+    --py-compile scripts/interlinear/codex_quadrilingual_wenyan_worker.py \
+    --py-compile scripts/interlinear/backfill_quadrilingual_grammar_roles.py \
+    --py-compile scripts/interlinear/assemble_quadrilingual_json.py \
+    --py-compile scripts/interlinear/validate_quadrilingual_interlinear_json.py \
+    --start-command "$restart_cmd" \
+    --allow-repair
+fi
 
 echo "tmux: $session"
 echo "book_id: $book_id"

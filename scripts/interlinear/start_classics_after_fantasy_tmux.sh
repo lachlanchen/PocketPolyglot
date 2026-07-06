@@ -9,7 +9,7 @@ Starts a tmux monitor that waits for the current fantasy trilingual queue
 to finish before launching the classical quadrilingual queue:
 
   lunyu, mengzi, xunzi, mozi, hanfeizi, guiguzi, lushi-chunqiu,
-  sunbin-bingfa, simafa, weiliaozi
+  sunzi-bingfa, sunbin-bingfa, simafa, weiliaozi
 
 Environment:
   WORKERS=100

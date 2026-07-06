@@ -25,6 +25,8 @@ Environment:
   FAILED_RETRY_AGE_SECONDS=1800
   START_STALL_REPAIR=1
   REPAIR_SLEEP_SECONDS=300
+  START_AUTOREPAIR_COMPANION=1
+  AUTOREPAIR_ACTIVE_STALL_SECONDS=7200
 USAGE
 }
 
@@ -45,6 +47,7 @@ if [[ ! -f "$plan" ]]; then
 fi
 
 chunks_jsonl="$(jq -r '.chunks_jsonl' "$plan")"
+manifest="$(jq -r '.chunks_manifest' "$plan")"
 raw_chunk_dir="$(jq -r '.raw_chunk_dir' "$plan")"
 if [[ ! -f "$chunks_jsonl" ]]; then
   echo "Missing chunks jsonl: $chunks_jsonl" >&2
@@ -193,6 +196,34 @@ if [[ "${START_STALL_REPAIR:-1}" != "0" ]]; then
       WORKER_SCRIPT="$worker_script" \
       bash scripts/interlinear/start_trilingual_stall_repair_tmux.sh "$book_id" "$session" "$repair_session"
   fi
+fi
+
+shell_quote() {
+  printf '%q' "$1"
+}
+
+if [[ "${START_AUTOREPAIR_COMPANION:-1}" != "0" ]]; then
+  companion_session="${AUTOREPAIR_SESSION:-${session}-autorepair}"
+  restart_cmd="START_AUTOREPAIR_COMPANION=0 START_STALL_REPAIR=1 RETRY_FAILED=1 WORKERS=$(shell_quote "$workers") MODEL=$(shell_quote "$model") REASONING=$(shell_quote "$reasoning") CODEX_TIMEOUT_SECONDS=$(shell_quote "$codex_timeout_seconds") MERGE_INTERVAL=$(shell_quote "$merge_interval") COMPILE_INTERVAL_SECONDS=$(shell_quote "$compile_interval_seconds") WORKER_SCRIPT=$(shell_quote "$worker_script") bash scripts/interlinear/start_trilingual_book_tmux.sh $(shell_quote "$book_id") $(shell_quote "$session")"
+  bash scripts/interlinear/start_autorepair_companion_tmux.sh \
+    --name "$session" \
+    --session "$companion_session" \
+    --state-dir "$work_root/autorepair" \
+    --primary-session "$session" \
+    --health-command "python scripts/interlinear/report_trilingual_progress.py --manifest $(shell_quote "$manifest") --chunk-dir $(shell_quote "$raw_chunk_dir")" \
+    --health-nonzero-ok \
+    --complete-key missing_chunks=0 \
+    --complete-key stale_chunks=0 \
+    --complete-key-eq manifest_chunks=valid_chunks \
+    --watch "$raw_chunk_dir" \
+    --watch "$candidate_dir" \
+    --log "$work_root/logs/*.log" \
+    --log "$log_dir/${session}_*.log" \
+    --py-compile "$worker_script" \
+    --py-compile scripts/interlinear/merge_trilingual_json_candidates.py \
+    --py-compile scripts/interlinear/backfill_trilingual_grammar_roles.py \
+    --start-command "$restart_cmd" \
+    --allow-repair
 fi
 
 echo "tmux: $session"

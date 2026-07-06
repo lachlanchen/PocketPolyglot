@@ -15,16 +15,47 @@ Never overwrite good artifacts just because the chunk plan or prompt changes. Tr
 5. **Autorepair companions** are launched by the writer start scripts. They are separate tmux sessions, independent of the writer process, and stay mostly dormant unless progress stalls.
 6. **Book monitors** remain as a fallback layer for coarse progress reporting and queued book handoff.
 
-## Guardian Logic
+## Generic Companion Logic
 
-The companion repairer lives in `scripts/interlinear/self_healing_guardian.py`. It is normally started automatically by writer launch scripts:
+The reusable companion is `scripts/autorepair_companion.py`; the tmux launcher
+is `scripts/interlinear/start_autorepair_companion_tmux.sh`. This is the
+preferred layer for new long-running jobs because it is neutral: it accepts a
+health command, completion keys, watched artifact paths, logs, and an optional
+restart command.
+
+The companion spends no model tokens during normal checks. It compares health
+output, tmux state, artifact mtimes, and `py_compile` results. It launches a
+separate `codex exec` repair session only when a deterministic restart fails,
+`py_compile` fails, the health command crashes, or an active tmux job stalls for
+the configured threshold.
+
+Repair reasoning is dynamic and capped: first simple faults use `low`, active
+stalls or repeated faults use `medium`, and repeated unclear orchestration
+failures use `high` unless `AUTOREPAIR_MAX_REASONING=xhigh` is explicitly set.
+
+Trilingual and quadrilingual runners enable it by default:
+
+```sh
+bash scripts/interlinear/start_trilingual_book_tmux.sh return-of-the-king
+bash scripts/interlinear/start_quadrilingual_wenyan_tmux.sh sunzi-bingfa
+```
+
+Disable it only for debugging:
+
+```sh
+START_AUTOREPAIR_COMPANION=0 bash scripts/interlinear/start_quadrilingual_wenyan_tmux.sh sunzi-bingfa
+```
+
+## Legacy Guardian Logic
+
+The older book-profile guardian lives in `scripts/interlinear/self_healing_guardian.py`. It remains available for legacy bilingual profiles:
 
 ```sh
 bash scripts/interlinear/start_sichuan_folk_parallel_json_tmux.sh zhjpbook-sichuan-folk-json
 bash scripts/interlinear/start_prepared_book_parallel_json_tmux.sh kinkakuji zhjpbook-kinkakuji-json
 ```
 
-It can also be started explicitly:
+It can also be started explicitly through the compatibility path:
 
 ```sh
 bash scripts/interlinear/start_autorepair_companion_tmux.sh sichuan-folk-stories-vol1
