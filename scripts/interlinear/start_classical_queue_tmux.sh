@@ -50,7 +50,17 @@ export SKIP_FANTASY_GATE=1
 export STATE_DIR="${STATE_DIR:-books/_queues/classical-queue}"
 
 tmux new-session -d -s "$session" -n classical-queue \
-  "cd '$root' && python -u scripts/interlinear/monitor_fantasy_then_classical_queue.py --skip-fantasy-gate --state-dir '$STATE_DIR' 2>&1 | tee '$log_dir/${session}_$(date +%Y%m%d_%H%M%S).log'"
+  "cd '$root' && python -u scripts/interlinear/monitor_fantasy_then_classical_queue.py \
+    --skip-fantasy-gate \
+    --state-dir '$STATE_DIR' \
+    --workers '$WORKERS' \
+    --model '$MODEL' \
+    --reasoning '$REASONING' \
+    --main-layers '$MAIN_LAYERS' \
+    --interval-seconds '$INTERVAL_SECONDS' \
+    --merge-interval-seconds '$MERGE_INTERVAL' \
+    --compile-interval-seconds '$COMPILE_INTERVAL_SECONDS' \
+    2>&1 | tee '$log_dir/${session}_$(date +%Y%m%d_%H%M%S).log'"
 
 echo "tmux: $session"
 echo "workers: $WORKERS"

@@ -50,7 +50,18 @@ export SKIP_CLASSICAL_GATE=1
 export STATE_DIR="${STATE_DIR:-books/_queues/world-poetry-queue}"
 
 tmux new-session -d -s "$session" -n world-poetry-queue \
-  "cd '$root' && python -u scripts/interlinear/monitor_world_poetry_after_classics.py --skip-classical-gate --state-dir '$STATE_DIR' 2>&1 | tee '$log_dir/${session}_$(date +%Y%m%d_%H%M%S).log'"
+  "cd '$root' && python -u scripts/interlinear/monitor_world_poetry_after_classics.py \
+    --skip-classical-gate \
+    --state-dir '$STATE_DIR' \
+    --workers '$WORKERS' \
+    --model '$MODEL' \
+    --reasoning '$REASONING' \
+    --interval-seconds '$INTERVAL_SECONDS' \
+    --merge-interval-seconds '$MERGE_INTERVAL' \
+    --compile-interval-seconds '$COMPILE_INTERVAL_SECONDS' \
+    --max-active-books '$MAX_ACTIVE_BOOKS' \
+    --poetry-batch '$POETRY_BATCH' \
+    2>&1 | tee '$log_dir/${session}_$(date +%Y%m%d_%H%M%S).log'"
 
 echo "tmux: $session"
 echo "workers: $WORKERS"
