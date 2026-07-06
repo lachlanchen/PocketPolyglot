@@ -174,7 +174,7 @@ shell_quote() {
 
 if [[ "${START_AUTOREPAIR_COMPANION:-1}" != "0" ]]; then
   companion_session="${AUTOREPAIR_SESSION:-${session}-autorepair}"
-  restart_cmd="START_AUTOREPAIR_COMPANION=0 RETRY_FAILED=1 WORKERS=$(shell_quote "$workers") MODEL=$(shell_quote "$model") REASONING=$(shell_quote "$reasoning") WORKER_PREFIX=$(shell_quote "$worker_prefix") CLAIM_TTL_SECONDS=$(shell_quote "$claim_ttl") CODEX_TIMEOUT_SECONDS=$(shell_quote "$timeout") MERGE_INTERVAL=$(shell_quote "$merge_interval") COMPILE_INTERVAL_SECONDS=$(shell_quote "$compile_interval") MAIN_LAYERS=$(shell_quote "$main_layers") bash scripts/interlinear/start_quadrilingual_wenyan_tmux.sh $(shell_quote "$book_id") $(shell_quote "$session")"
+  restart_cmd="START_AUTOREPAIR_COMPANION=0 RETRY_FAILED=1 START_INDEX={first_missing_index} WORKERS=$(shell_quote "$workers") MODEL=$(shell_quote "$model") REASONING=$(shell_quote "$reasoning") WORKER_PREFIX=$(shell_quote "$worker_prefix") CLAIM_TTL_SECONDS=$(shell_quote "$claim_ttl") CODEX_TIMEOUT_SECONDS=$(shell_quote "$timeout") MERGE_INTERVAL=$(shell_quote "$merge_interval") COMPILE_INTERVAL_SECONDS=$(shell_quote "$compile_interval") MAIN_LAYERS=$(shell_quote "$main_layers") bash scripts/interlinear/start_quadrilingual_wenyan_tmux.sh $(shell_quote "$book_id") $(shell_quote "$session")"
   bash scripts/interlinear/start_autorepair_companion_tmux.sh \
     --name "$session" \
     --session "$companion_session" \

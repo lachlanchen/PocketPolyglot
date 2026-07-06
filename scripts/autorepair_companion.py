@@ -165,6 +165,25 @@ def complete_from_keys(report: dict[str, str], key_values: list[tuple[str, str]]
     return True
 
 
+def first_missing_index(report: dict[str, str]) -> str:
+    value = report.get("first_missing", "")
+    if not value:
+        return ""
+    first = value.split(",", 1)[0].strip()
+    match = re.search(r"(\d+)(?!.*\d)", first)
+    if not match:
+        return ""
+    return str(int(match.group(1)))
+
+
+def render_command_template(template: str, report: dict[str, str]) -> str:
+    rendered = template.replace("{first_missing_index}", shlex.quote(first_missing_index(report)))
+    rendered = rendered.replace("{first_missing}", shlex.quote(report.get("first_missing", "").split(",", 1)[0].strip()))
+    for key, value in report.items():
+        rendered = rendered.replace("{health." + key + "}", shlex.quote(value))
+    return rendered
+
+
 def classify_reasoning(state: dict[str, Any], reason: str, *, max_reasoning: str) -> str:
     order = ["low", "medium", "high", "xhigh"]
     max_index = order.index(max_reasoning) if max_reasoning in order else order.index("high")
@@ -323,14 +342,15 @@ def companion_once(args: argparse.Namespace, state: dict[str, Any]) -> dict[str,
     elif not active and args.start_command:
         last_start = float(state.get("last_start_at", 0) or 0)
         if time.time() - last_start >= args.start_cooldown_seconds:
-            start = run_shell(args.start_command, timeout=args.start_timeout_seconds)
+            start_command = render_command_template(args.start_command, report)
+            start = run_shell(start_command, timeout=args.start_timeout_seconds)
             state["last_start_at"] = time.time()
             actions.append(f"start_command_returncode={start.returncode}")
             actions.append(truncate(start.stdout, 2000))
             if start.returncode:
                 facts = {
                     "health": {"returncode": health_returncode, "stdout": truncate(health_stdout, 4000), "parsed": report},
-                    "start_command": args.start_command,
+                    "start_command": start_command,
                     "start_output": truncate(start.stdout, 5000),
                     "logs": recent_logs,
                 }
