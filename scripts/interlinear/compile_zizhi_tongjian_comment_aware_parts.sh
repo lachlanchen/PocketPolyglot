@@ -37,6 +37,28 @@ esac
 
 bash scripts/interlinear/setup_zizhi_tongjian_comment_aware_project.sh
 
+book_id="zizhi-tongjian-comment-aware"
+plan="books/$book_id/book-plan.json"
+full_manifest="$(jq -r '.chunks_manifest' "$plan")"
+chunks_jsonl="$(jq -r '.chunks_jsonl' "$plan")"
+chunk_dir="$(jq -r '.raw_chunk_dir' "$plan")"
+source_pdf="$(jq -r '.source_paths.commented_classical_source' "$plan")"
+xml_cache="$(jq -r '.pdf_font_xml_cache' "$plan")"
+sidecar="$(jq -r '.comment_sidecar' "$plan")"
+span_report="$(jq -r '.comment_span_report' "$plan")"
+
+if [[ ! -s "$sidecar" ]]; then
+  echo "==> building full comment sidecar once"
+  python scripts/interlinear/build_zizhi_tongjian_comment_spans.py \
+    --manifest "$full_manifest" \
+    --chunks-jsonl "$chunks_jsonl" \
+    --chunk-dir "$chunk_dir" \
+    --source-pdf "$source_pdf" \
+    --xml-cache "$xml_cache" \
+    --output "$sidecar" \
+    --report "$span_report"
+fi
+
 for part in $parts; do
   for mode in "${modes[@]}"; do
     echo "==> $part $mode"
