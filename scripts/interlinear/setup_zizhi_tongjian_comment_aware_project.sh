@@ -10,6 +10,7 @@ dst_book="zizhi-tongjian-comment-aware"
 mkdir -p \
   "books/$dst_book/work/quadrilingual/chunks" \
   "books/$dst_book/work/quadrilingual/interlinear" \
+  "books/$dst_book/work/quadrilingual/parts" \
   "books/$dst_book/work/comment-aware" \
   "books/$dst_book/work/pdf-font-map"
 
@@ -26,5 +27,10 @@ if [[ ! -d "books/$dst_book/work/quadrilingual/interlinear/chunks" ]]; then
     "books/$dst_book/work/quadrilingual/interlinear/chunks"
 fi
 
-echo "copied JSON project: books/$dst_book"
+if [[ -d "books/$src_book/work/quadrilingual/parts" && ! -d "books/$dst_book/work/quadrilingual/parts/part-01" ]]; then
+  cp -a --reflink=auto \
+    "books/$src_book/work/quadrilingual/parts/." \
+    "books/$dst_book/work/quadrilingual/parts/"
+fi
 
+echo "copied JSON project: books/$dst_book"
