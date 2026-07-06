@@ -9,8 +9,8 @@ This catalog is generated from local build outputs. It selects the richest avail
 
 All compiled editions use the larger PocketPolyglot font profile. Existing source PDFs and JSON are not modified.
 
-- Local compressed/exported PDFs: 160
-- GitHub-tracked PDFs under size cap: 154
+- Local compressed/exported PDFs: 162
+- GitHub-tracked PDFs under size cap: 156
 - Skipped source folders: 4
 
 ## Gallery
@@ -76,6 +76,7 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | <img src="assets/max-language-previews/the-martian.png" width="120" alt="the-martian cover preview"> | `the-martian` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/the-martian/en-main-jp-zh/color/The Martian（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/the-martian/en-main-jp-zh/blackwhite/The Martian（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/the-old-capital.png" width="120" alt="the-old-capital cover preview"> | `the-old-capital` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/the-old-capital/en-main-jp-zh/color/The Old Capital（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/the-old-capital/en-main-jp-zh/blackwhite/The Old Capital（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/the-sirens-of-mars.png" width="120" alt="the-sirens-of-mars cover preview"> | `the-sirens-of-mars` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/the-sirens-of-mars/en-main-jp-zh/color/The Sirens of Mars（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/the-sirens-of-mars/en-main-jp-zh/blackwhite/The Sirens of Mars（日文・中文注・黑白）・最大語種・大字版.pdf) |
+| <img src="assets/max-language-previews/the-two-towers.png" width="120" alt="the-two-towers cover preview"> | `the-two-towers` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/the-two-towers/en-main-jp-zh/color/The Two Towers（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/the-two-towers/en-main-jp-zh/blackwhite/The Two Towers（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/vimalakirti-sutra.png" width="120" alt="vimalakirti-sutra cover preview"> | `vimalakirti-sutra` | `wenyan-en-jp-zh` | [color](docs/pocketpolyglot/books/wenyan-en-jp-zh/vimalakirti-sutra/wenyan-main-quadrilingual/color/維摩詰所說經（英文・現代日本語・現代中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/wenyan-en-jp-zh/vimalakirti-sutra/wenyan-main-quadrilingual/blackwhite/維摩詰所說經（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/woman-in-the-dunes.png" width="120" alt="woman-in-the-dunes cover preview"> | `woman-in-the-dunes` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/woman-in-the-dunes/en-main-jp-zh/color/The Woman in the Dunes（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/woman-in-the-dunes/en-main-jp-zh/blackwhite/The Woman in the Dunes（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/wuthering-heights.png" width="120" alt="wuthering-heights cover preview"> | `wuthering-heights` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/wuthering-heights/en-main-jp-zh/color/Wuthering Heights（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/wuthering-heights/en-main-jp-zh/blackwhite/Wuthering Heights（日文・中文注・黑白）・最大語種・大字版.pdf) |
@@ -226,6 +227,8 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | `the-old-capital` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 1594 | 12.0 | 7.9 | yes | `artifacts/lingualleaf/books/en-jp-zh/the-old-capital/en-main-jp-zh/blackwhite/The Old Capital（日文・中文注・黑白）・最大語種・大字版.pdf` |
 | `the-sirens-of-mars` | `en-jp-zh` | `en-main-jp-zh` | `color` | 1006 | 11.5 | 7.4 | yes | `artifacts/lingualleaf/books/en-jp-zh/the-sirens-of-mars/en-main-jp-zh/color/The Sirens of Mars（日文・中文注）・最大語種・大字版.pdf` |
 | `the-sirens-of-mars` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 1006 | 11.0 | 6.3 | yes | `artifacts/lingualleaf/books/en-jp-zh/the-sirens-of-mars/en-main-jp-zh/blackwhite/The Sirens of Mars（日文・中文注・黑白）・最大語種・大字版.pdf` |
+| `the-two-towers` | `en-jp-zh` | `en-main-jp-zh` | `color` | 2680 | 19.3 | 15.5 | yes | `artifacts/lingualleaf/books/en-jp-zh/the-two-towers/en-main-jp-zh/color/The Two Towers（日文・中文注）・最大語種・大字版.pdf` |
+| `the-two-towers` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 2680 | 18.2 | 12.6 | yes | `artifacts/lingualleaf/books/en-jp-zh/the-two-towers/en-main-jp-zh/blackwhite/The Two Towers（日文・中文注・黑白）・最大語種・大字版.pdf` |
 | `vimalakirti-sutra` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 779 | 14.0 | 14.0 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/vimalakirti-sutra/wenyan-main-quadrilingual/color/維摩詰所說經（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
 | `vimalakirti-sutra` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 779 | 13.7 | 13.7 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/vimalakirti-sutra/wenyan-main-quadrilingual/blackwhite/維摩詰所說經（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
 | `woman-in-the-dunes` | `en-jp-zh` | `en-main-jp-zh` | `color` | 1014 | 11.1 | 6.2 | yes | `artifacts/lingualleaf/books/en-jp-zh/woman-in-the-dunes/en-main-jp-zh/color/The Woman in the Dunes（日文・中文注）・最大語種・大字版.pdf` |
