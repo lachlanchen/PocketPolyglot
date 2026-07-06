@@ -194,8 +194,8 @@ cat > "$build_dir/book.tex" <<EOF
   {\\begingroup\\setlength{\\fboxsep}{0.55pt}\\sffamily\\bfseries\\fontsize{5.8pt}{6.2pt}\\selectfont
   \\ifBWMode\\fbox{\\strut #1}\\else\\colorbox{BookFaint}{\\textcolor{BookRed}{\\strut #1}}\\fi\\endgroup}%
 }
-\\newcommand{\\QuadMainWenyanComment}[1]{{\\zhfont\\fontsize{11.2pt}{16.8pt}\\selectfont\\color{BookNote}\\QuadAnnotationBadge{注}\\thinspace #1}}
-\\newcommand{\\QuadMainWenyanPronunciation}[1]{{\\zhfont\\fontsize{10.8pt}{16.2pt}\\selectfont\\color{BookNote}\\QuadAnnotationBadge{音}\\thinspace #1}}
+\\newcommand{\\QuadMainWenyanComment}[1]{{\\zhfont\\fontsize{10.4pt}{14.9pt}\\selectfont\\color{BookNote}\\QuadAnnotationBadge{注}\\thinspace #1}}
+\\newcommand{\\QuadMainWenyanPronunciation}[1]{{\\zhfont\\fontsize{10.2pt}{14.7pt}\\selectfont\\color{BookNote}\\QuadAnnotationBadge{音}\\thinspace #1}}
 \\renewcommand{\\GrammarLegend}{%
   {\\sffamily\\fontsize{5.8pt}{7pt}\\selectfont
   \\textcolor{GramSubject}{subject}\\quad

@@ -25,7 +25,6 @@ from json_to_trilingual_pair_tex import (
     short_toc_title,
     tex_escape,
     tex_path_arg,
-    token_text,
 )
 from zizhi_tongjian_comment_layer import MAIN, json_to_spans, sidecar_key
 
@@ -77,9 +76,10 @@ def split_tokens_by_char_offsets(
     return result
 
 
-def render_plain_zh_tokens(tokens: list[dict[str, Any]]) -> str:
-    """Render annotation text compactly: no pinyin and no grammar colors."""
-    return tex_escape(token_text(tokens))
+def render_zh_tokens_with_ruby_no_grammar(tokens: list[dict[str, Any]]) -> str:
+    """Render annotation text with pinyin, but without grammar colors."""
+    stripped_tokens = [{key: value for key, value in token.items() if key != "g"} for token in tokens]
+    return render_tokens(stripped_tokens, "zh")
 
 
 def render_wenyan_with_spans(unit: dict[str, Any], span_items: list[dict[str, Any]]) -> str:
@@ -99,7 +99,7 @@ def render_wenyan_with_spans(unit: dict[str, Any], span_items: list[dict[str, An
         if kind == MAIN:
             rendered = render_tokens(sub_tokens, "zh")
         else:
-            rendered = render_plain_zh_tokens(sub_tokens)
+            rendered = render_zh_tokens_with_ruby_no_grammar(sub_tokens)
         parts.append(rf"\{macro}{{{rendered}}}")
     if not parts:
         return render_layer(tokens, "wenyan", "main")
@@ -213,4 +213,3 @@ def main(argv: list[str] | None = None) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
