@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "book_id": "english-poetry-anthology",
+  "status": "source_ready_not_chunked",
+  "launchable": false,
+  "task_mode": "trilingual_poetry_anthology_zh_en_sources_generated_ja",
+  "source_spine_lang": "en",
+  "book_title_en": "Classic English Poetry Anthology",
+  "book_title_zh": "英诗经典名家名译",
+  "book_title_ja": "英詩名作選",
+  "author": "various authors",
+  "author_reading_zh": "duō wèi zuò zhě",
+  "author_reading_ja": "ふくすう の さくしゃ",
+  "source_paths": {
+    "zh_en_anthology_epub": "resources/curated-books/world-poetry/anthologies/zh-en/英诗经典名家名译(英汉对照)(套装共23册).epub",
+    "byron_reference": "resources/curated-books/world-poetry/byron/en/Selected poems of Lord Byron.pdf",
+    "keats_reference": "resources/curated-books/world-poetry/keats/en/John Keats - poems.pdf",
+    "shelley_reference": "resources/curated-books/world-poetry/shelley/en/Shelley_ Selected Poems (Longman Annotated English Poets).pdf",
+    "yeats_reference": "resources/curated-books/world-poetry/yeats/en/The Collected Poems of W. B. Yeats.pdf",
+    "wilde_reference": "resources/curated-books/world-poetry/wilde/en/Poetry.epub"
+  },
+  "markdown": {
+    "en": "books/english-poetry-anthology/markdown/en.md",
+    "zh": "books/english-poetry-anthology/markdown/zh.md",
+    "ja": "books/english-poetry-anthology/markdown/ja.md"
+  },
+  "chunks_jsonl": "books/english-poetry-anthology/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/english-poetry-anthology/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/english-poetry-anthology/work/trilingual/interlinear/chunks",
+  "preview_json": "books/english-poetry-anthology/work/trilingual/preview/english-poetry-anthology.partial.json",
+  "assembled_json": "books/english-poetry-anthology/work/trilingual/preview/english-poetry-anthology.partial.json",
+  "build_root": "build/english-poetry-anthology",
+  "cover_image": "assets/covers/english-poetry-anthology/cover.png",
+  "prepared_at": "2026-07-06T03:44:26.922494+00:00",
+  "preparation_notes": {
+    "status": "Sources are synced. Conversion to reviewed Markdown and chunk manifest still needs to run before workers start.",
+    "recommended_chunking": "poem stanza/line-group chunks; avoid raw PDF line-wrap chunks",
+    "recommended_worker": "WORKERS=10 MODEL=gpt-5.5 REASONING=low after manifest exists; increase only after validation is stable"
+  }
+}

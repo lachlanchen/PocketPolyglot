@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "book_id": "xu-zhimo-poems",
+  "status": "source_ready_not_chunked",
+  "launchable": false,
+  "task_mode": "trilingual_poetry_zh_source_generated_en_ja",
+  "source_spine_lang": "zh",
+  "book_title_en": "Xu Zhimo: Selected Poems",
+  "book_title_zh": "翡冷翠的一夜：徐志摩诗歌精华",
+  "book_title_ja": "徐志摩詩選",
+  "author": "徐志摩",
+  "author_reading_zh": "xú zhì mó",
+  "author_reading_ja": "じょ しま",
+  "source_paths": {
+    "zh_pdf": "resources/curated-books/world-poetry/xu-zhimo/zh/翡冷翠的一夜：徐志摩诗歌精华.pdf",
+    "zh_wikisource_zaibie_kangqiao_export": "resources/curated-books/world-poetry/xu-zhimo/zaibie-kangqiao/zh-wikisource-export/manifest.json",
+    "wiki_author_zh": "resources/curated-books/wiki-snapshots/world-poetry/xu-zhimo/wikipedia/zh/wikipedia-zh-徐志摩.pdf",
+    "wiki_wikisource_author": "resources/curated-books/wiki-snapshots/world-poetry/xu-zhimo/wikisource/zh-author/wikisource-zh-Author-徐志摩.pdf",
+    "wiki_zaibie_kangqiao_pdf": "resources/curated-books/wiki-snapshots/world-poetry/xu-zhimo-zaibie-kangqiao/wikisource/zh/wikisource-zh-再別康橋.pdf"
+  },
+  "markdown": {
+    "en": "books/xu-zhimo-poems/markdown/en.md",
+    "zh": "books/xu-zhimo-poems/markdown/zh.md",
+    "ja": "books/xu-zhimo-poems/markdown/ja.md"
+  },
+  "chunks_jsonl": "books/xu-zhimo-poems/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/xu-zhimo-poems/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/xu-zhimo-poems/work/trilingual/interlinear/chunks",
+  "preview_json": "books/xu-zhimo-poems/work/trilingual/preview/xu-zhimo-poems.partial.json",
+  "assembled_json": "books/xu-zhimo-poems/work/trilingual/preview/xu-zhimo-poems.partial.json",
+  "build_root": "build/xu-zhimo-poems",
+  "cover_image": "assets/covers/xu-zhimo-poems/cover.png",
+  "prepared_at": "2026-07-06T03:44:26.922494+00:00",
+  "preparation_notes": {
+    "status": "Sources are synced. Conversion to reviewed Markdown and chunk manifest still needs to run before workers start.",
+    "recommended_chunking": "poem stanza/line-group chunks; avoid raw PDF line-wrap chunks",
+    "recommended_worker": "WORKERS=10 MODEL=gpt-5.5 REASONING=low after manifest exists; increase only after validation is stable"
+  }
+}

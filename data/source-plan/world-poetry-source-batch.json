@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "batch_id": "world-poetry-source-batch",
+  "status": "sources_synced_tasks_prepared_not_started",
+  "prepared_at": "2026-07-06T03:44:26.922494+00:00",
+  "resource_root": "resources/curated-books/world-poetry",
+  "wiki_snapshot_root": "resources/curated-books/wiki-snapshots/world-poetry",
+  "default_output": {
+    "family": "en-jp-zh or zh-en-jp depending on source spine",
+    "font_profile": "large-font",
+    "variants": [
+      "color",
+      "blackwhite"
+    ],
+    "grammar_analysis": true,
+    "cover_required": true,
+    "sync_targets": [
+      "Nutstore Projects/LinguaLeaf",
+      "Nutstore Share/LinguaLeaf",
+      "LinguaLeaf repo",
+      "LazyLearn website"
+    ]
+  },
+  "generation_policy": [
+    "Use the poem original language as the source spine when available.",
+    "Use existing English/Chinese translations directly when available; generate missing Japanese or Chinese only after registering references.",
+    "Preserve poem line breaks intentionally, but do not copy PDF/OCR accidental line wraps.",
+    "For poetry, align by poem stanza/line groups rather than arbitrary paragraphs.",
+    "Compile maximum-language large-font color and black-white editions after validation."
+  ],
+  "tasks": [
+    {
+      "priority": 1,
+      "book_id": "tagore-gitanjali",
+      "title_en": "Gitanjali",
+      "title_zh": "吉檀迦利",
+      "title_ja": "ギタンジャリ",
+      "author": "Rabindranath Tagore",
+      "source_spine_lang": "en",
+      "task_mode": "trilingual_poetry_en_source_zh_reference_generated_ja",
+      "status": "source_ready_not_chunked",
+      "book_plan": "books/tagore-gitanjali/book-plan.json",
+      "missing_source_paths": []
+    },
+    {
+      "priority": 2,
+      "book_id": "tagore-stray-birds",
+      "title_en": "Stray Birds",
+      "title_zh": "飞鸟集",
+      "title_ja": "迷い鳥",
+      "author": "Rabindranath Tagore",
+      "source_spine_lang": "en",
+      "task_mode": "trilingual_poetry_en_zh_sources_generated_ja",
+      "status": "source_ready_not_chunked",
+      "book_plan": "books/tagore-stray-birds/book-plan.json",
+      "missing_source_paths": []
+    },
+    {
+      "priority": 3,
+      "book_id": "gibran-the-prophet",
+      "title_en": "The Prophet",
+      "title_zh": "先知",
+      "title_ja": "預言者",
+      "author": "Kahlil Gibran",
+      "source_spine_lang": "en",
+      "task_mode": "trilingual_poetry_en_source_zh_reference_generated_ja",
+      "status": "source_ready_not_chunked",
+      "book_plan": "books/gibran-the-prophet/book-plan.json",
+      "missing_source_paths": []
+    },
+    {
+      "priority": 4,
+      "book_id": "byron-selected-poems",
+      "title_en": "Selected Poems of Lord Byron",
+      "title_zh": "拜伦诗选",
+      "title_ja": "バイロン詩選",
+      "author": "Lord Byron",
+      "source_spine_lang": "en",
+      "task_mode": "trilingual_poetry_en_source_zh_reference_generated_ja",
+      "status": "source_ready_not_chunked",
+      "book_plan": "books/byron-selected-poems/book-plan.json",
+      "missing_source_paths": []
+    },
+    {
+      "priority": 5,
+      "book_id": "shelley-selected-poems",
+      "title_en": "Shelley: Selected Poems",
+      "title_zh": "雪莱抒情诗选",
+      "title_ja": "シェリー詩選",
+      "author": "Percy Bysshe Shelley",
+      "source_spine_lang": "en",
+      "task_mode": "trilingual_poetry_en_source_zh_reference_generated_ja",
+      "status": "source_ready_not_chunked",
+      "book_plan": "books/shelley-selected-poems/book-plan.json",
+      "missing_source_paths": []
+    },
+    {
+      "priority": 6,
+      "book_id": "yeats-collected-poems",
+      "title_en": "The Collected Poems of W. B. Yeats",
+      "title_zh": "苇间风",
+      "title_ja": "イェイツ詩集",
+      "author": "W. B. Yeats",
+      "source_spine_lang": "en",
+      "task_mode": "trilingual_poetry_en_source_zh_reference_generated_ja",
+      "status": "source_ready_not_chunked",
+      "book_plan": "books/yeats-collected-poems/book-plan.json",
+      "missing_source_paths": []
+    },
+    {
+      "priority": 7,
+      "book_id": "ovid-art-of-love",
+      "title_en": "Ars Amatoria: The Art of Love",
+      "title_zh": "爱的艺术",
+      "title_ja": "恋愛術",
+      "author": "Ovid",
+      "source_spine_lang": "en",
+      "task_mode": "trilingual_poetry_en_source_zh_reference_generated_ja",
+      "status": "source_ready_not_chunked",
+      "book_plan": "books/ovid-art-of-love/book-plan.json",
+      "missing_source_paths": []
+    },
+    {
+      "priority": 8,
+      "book_id": "keats-poems",
+      "title_en": "John Keats: Poems",
+      "title_zh": "济慈诗选",
+      "title_ja": "キーツ詩選",
+      "author": "John Keats",
+      "source_spine_lang": "en",
+      "task_mode": "trilingual_poetry_en_source_generated_zh_ja",
+      "status": "source_ready_not_chunked",
+      "book_plan": "books/keats-poems/book-plan.json",
+      "missing_source_paths": []
+    },
+    {
+      "priority": 9,
+      "book_id": "wilde-poetry",
+      "title_en": "Poetry",
+      "title_zh": "王尔德诗集",
+      "title_ja": "ワイルド詩集",
+      "author": "Oscar Wilde",
+      "source_spine_lang": "en",
+      "task_mode": "trilingual_poetry_en_source_generated_zh_ja",
+      "status": "source_ready_not_chunked",
+      "book_plan": "books/wilde-poetry/book-plan.json",
+      "missing_source_paths": []
+    },
+    {
+      "priority": 10,
+      "book_id": "xu-zhimo-poems",
+      "title_en": "Xu Zhimo: Selected Poems",
+      "title_zh": "翡冷翠的一夜：徐志摩诗歌精华",
+      "title_ja": "徐志摩詩選",
+      "author": "徐志摩",
+      "source_spine_lang": "zh",
+      "task_mode": "trilingual_poetry_zh_source_generated_en_ja",
+      "status": "source_ready_not_chunked",
+      "book_plan": "books/xu-zhimo-poems/book-plan.json",
+      "missing_source_paths": []
+    },
+    {
+      "priority": 11,
+      "book_id": "tsangyang-gyatso-poems",
+      "title_en": "Songs of Tsangyang Gyatso",
+      "title_zh": "仓央嘉措诗集",
+      "title_ja": "ツァンヤン・ギャツォ詩集",
+      "author": "仓央嘉措",
+      "source_spine_lang": "zh",
+      "task_mode": "trilingual_poetry_zh_source_generated_en_ja",
+      "status": "source_ready_not_chunked",
+      "book_plan": "books/tsangyang-gyatso-poems/book-plan.json",
+      "missing_source_paths": []
+    },
+    {
+      "priority": 12,
+      "book_id": "english-poetry-anthology",
+      "title_en": "Classic English Poetry Anthology",
+      "title_zh": "英诗经典名家名译",
+      "title_ja": "英詩名作選",
+      "author": "various authors",
+      "source_spine_lang": "en",
+      "task_mode": "trilingual_poetry_anthology_zh_en_sources_generated_ja",
+      "status": "source_ready_not_chunked",
+      "book_plan": "books/english-poetry-anthology/book-plan.json",
+      "missing_source_paths": []
+    }
+  ]
+}

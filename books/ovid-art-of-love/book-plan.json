@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "book_id": "ovid-art-of-love",
+  "status": "source_ready_not_chunked",
+  "launchable": false,
+  "task_mode": "trilingual_poetry_en_source_zh_reference_generated_ja",
+  "source_spine_lang": "en",
+  "book_title_en": "Ars Amatoria: The Art of Love",
+  "book_title_zh": "爱的艺术",
+  "book_title_ja": "恋愛術",
+  "author": "Ovid",
+  "author_reading_zh": "ào wéi dé",
+  "author_reading_ja": "オウィディウス",
+  "source_paths": {
+    "en_wikisource_export": "resources/curated-books/world-poetry/ovid-art-of-love/en-wikisource-export/manifest.json",
+    "en_epub": "resources/curated-books/world-poetry/ovid-art-of-love/en/The Art of Love.epub",
+    "zh_pdf": "resources/curated-books/world-poetry/ovid-art-of-love/zh/爱的艺术.pdf",
+    "wiki_text_pdf": "resources/curated-books/wiki-snapshots/world-poetry/ovid-art-of-love/wikisource/en/wikisource-en-Ars Amatoria The Art of Love.pdf",
+    "wiki_author_en": "resources/curated-books/wiki-snapshots/world-poetry/ovid/wikipedia/en/wikipedia-en-Ovid.pdf",
+    "wiki_author_zh": "resources/curated-books/wiki-snapshots/world-poetry/ovid/wikipedia/zh/wikipedia-zh-奧維德.pdf"
+  },
+  "markdown": {
+    "en": "books/ovid-art-of-love/markdown/en.md",
+    "zh": "books/ovid-art-of-love/markdown/zh.md",
+    "ja": "books/ovid-art-of-love/markdown/ja.md"
+  },
+  "chunks_jsonl": "books/ovid-art-of-love/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/ovid-art-of-love/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/ovid-art-of-love/work/trilingual/interlinear/chunks",
+  "preview_json": "books/ovid-art-of-love/work/trilingual/preview/ovid-art-of-love.partial.json",
+  "assembled_json": "books/ovid-art-of-love/work/trilingual/preview/ovid-art-of-love.partial.json",
+  "build_root": "build/ovid-art-of-love",
+  "cover_image": "assets/covers/ovid-art-of-love/cover.png",
+  "prepared_at": "2026-07-06T03:44:26.922494+00:00",
+  "preparation_notes": {
+    "status": "Sources are synced. Conversion to reviewed Markdown and chunk manifest still needs to run before workers start.",
+    "recommended_chunking": "poem stanza/line-group chunks; avoid raw PDF line-wrap chunks",
+    "recommended_worker": "WORKERS=10 MODEL=gpt-5.5 REASONING=low after manifest exists; increase only after validation is stable"
+  }
+}

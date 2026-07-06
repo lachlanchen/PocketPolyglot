@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "book_id": "tagore-stray-birds",
+  "status": "source_ready_not_chunked",
+  "launchable": false,
+  "task_mode": "trilingual_poetry_en_zh_sources_generated_ja",
+  "source_spine_lang": "en",
+  "book_title_en": "Stray Birds",
+  "book_title_zh": "飞鸟集",
+  "book_title_ja": "迷い鳥",
+  "author": "Rabindranath Tagore",
+  "author_reading_zh": "tài gē ěr",
+  "author_reading_ja": "タゴール",
+  "source_paths": {
+    "en_wikisource_export": "resources/curated-books/world-poetry/tagore-stray-birds/en-wikisource-export/manifest.json",
+    "en_pdf": "resources/curated-books/world-poetry/tagore-stray-birds/en/Stray Birds.pdf",
+    "zh_wikisource_export": "resources/curated-books/world-poetry/tagore-stray-birds/zh-wikisource-export/manifest.json",
+    "zh_en_bilingual_pdf": "resources/curated-books/world-poetry/tagore-stray-birds/zh-en/飞鸟集（中英对照版）.pdf",
+    "ja_tagore_reference": "resources/curated-books/world-poetry/tagore/ja/タゴール詩集.epub",
+    "wiki_en_text_pdf": "resources/curated-books/wiki-snapshots/world-poetry/tagore-stray-birds/wikisource/en/wikisource-en-Stray Birds.pdf",
+    "wiki_zh_text_pdf": "resources/curated-books/wiki-snapshots/world-poetry/tagore-stray-birds/wikisource/zh/wikisource-zh-飛鳥集.pdf"
+  },
+  "markdown": {
+    "en": "books/tagore-stray-birds/markdown/en.md",
+    "zh": "books/tagore-stray-birds/markdown/zh.md",
+    "ja": "books/tagore-stray-birds/markdown/ja.md"
+  },
+  "chunks_jsonl": "books/tagore-stray-birds/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/tagore-stray-birds/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/tagore-stray-birds/work/trilingual/interlinear/chunks",
+  "preview_json": "books/tagore-stray-birds/work/trilingual/preview/tagore-stray-birds.partial.json",
+  "assembled_json": "books/tagore-stray-birds/work/trilingual/preview/tagore-stray-birds.partial.json",
+  "build_root": "build/tagore-stray-birds",
+  "cover_image": "assets/covers/tagore-stray-birds/cover.png",
+  "prepared_at": "2026-07-06T03:44:26.922494+00:00",
+  "preparation_notes": {
+    "status": "Sources are synced. Conversion to reviewed Markdown and chunk manifest still needs to run before workers start.",
+    "recommended_chunking": "poem stanza/line-group chunks; avoid raw PDF line-wrap chunks",
+    "recommended_worker": "WORKERS=10 MODEL=gpt-5.5 REASONING=low after manifest exists; increase only after validation is stable"
+  }
+}

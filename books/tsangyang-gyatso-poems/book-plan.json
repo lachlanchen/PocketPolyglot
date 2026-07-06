@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "book_id": "tsangyang-gyatso-poems",
+  "status": "source_ready_not_chunked",
+  "launchable": false,
+  "task_mode": "trilingual_poetry_zh_source_generated_en_ja",
+  "source_spine_lang": "zh",
+  "book_title_en": "Songs of Tsangyang Gyatso",
+  "book_title_zh": "仓央嘉措诗集",
+  "book_title_ja": "ツァンヤン・ギャツォ詩集",
+  "author": "仓央嘉措",
+  "author_reading_zh": "cāng yāng jiā cuò",
+  "author_reading_ja": "ツァンヤン・ギャツォ",
+  "source_paths": {
+    "zh_epub": "resources/curated-books/world-poetry/tsangyang-gyatso/zh/仓央嘉措诗集.epub",
+    "zh_wikisource_export": "resources/curated-books/world-poetry/tsangyang-gyatso/zh-wikisource-export/manifest.json",
+    "wiki_author_zh": "resources/curated-books/wiki-snapshots/world-poetry/tsangyang-gyatso/wikipedia/zh/wikipedia-zh-仓央嘉措.pdf",
+    "wiki_text_pdf": "resources/curated-books/wiki-snapshots/world-poetry/tsangyang-gyatso/wikisource/zh/wikisource-zh-倉央嘉措情歌.pdf"
+  },
+  "markdown": {
+    "en": "books/tsangyang-gyatso-poems/markdown/en.md",
+    "zh": "books/tsangyang-gyatso-poems/markdown/zh.md",
+    "ja": "books/tsangyang-gyatso-poems/markdown/ja.md"
+  },
+  "chunks_jsonl": "books/tsangyang-gyatso-poems/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/tsangyang-gyatso-poems/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/tsangyang-gyatso-poems/work/trilingual/interlinear/chunks",
+  "preview_json": "books/tsangyang-gyatso-poems/work/trilingual/preview/tsangyang-gyatso-poems.partial.json",
+  "assembled_json": "books/tsangyang-gyatso-poems/work/trilingual/preview/tsangyang-gyatso-poems.partial.json",
+  "build_root": "build/tsangyang-gyatso-poems",
+  "cover_image": "assets/covers/tsangyang-gyatso-poems/cover.png",
+  "prepared_at": "2026-07-06T03:44:26.922494+00:00",
+  "preparation_notes": {
+    "status": "Sources are synced. Conversion to reviewed Markdown and chunk manifest still needs to run before workers start.",
+    "recommended_chunking": "poem stanza/line-group chunks; avoid raw PDF line-wrap chunks",
+    "recommended_worker": "WORKERS=10 MODEL=gpt-5.5 REASONING=low after manifest exists; increase only after validation is stable"
+  }
+}

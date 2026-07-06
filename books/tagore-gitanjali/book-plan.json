@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "book_id": "tagore-gitanjali",
+  "status": "source_ready_not_chunked",
+  "launchable": false,
+  "task_mode": "trilingual_poetry_en_source_zh_reference_generated_ja",
+  "source_spine_lang": "en",
+  "book_title_en": "Gitanjali",
+  "book_title_zh": "吉檀迦利",
+  "book_title_ja": "ギタンジャリ",
+  "author": "Rabindranath Tagore",
+  "author_reading_zh": "tài gē ěr",
+  "author_reading_ja": "タゴール",
+  "source_paths": {
+    "en_wikisource_export": "resources/curated-books/world-poetry/tagore-gitanjali/en-wikisource-export/manifest.json",
+    "zh_translation_pdf": "resources/curated-books/world-poetry/tagore-gitanjali/zh/吉檀迦利（亚洲首部诺贝尔文学奖获奖诗集，全录艺术家马克·麦金尼斯103幅精美插画。十五年精心打磨译本）(果麦经典).pdf",
+    "ja_tagore_reference": "resources/curated-books/world-poetry/tagore/ja/タゴール詩集.epub",
+    "wiki_en_text_pdf": "resources/curated-books/wiki-snapshots/world-poetry/tagore-gitanjali/wikisource/en/wikisource-en-Gitanjali.pdf",
+    "wiki_author_en": "resources/curated-books/wiki-snapshots/world-poetry/tagore/wikipedia/en/wikipedia-en-Rabindranath Tagore.pdf",
+    "wiki_author_zh": "resources/curated-books/wiki-snapshots/world-poetry/tagore/wikipedia/zh/wikipedia-zh-泰戈尔.pdf"
+  },
+  "markdown": {
+    "en": "books/tagore-gitanjali/markdown/en.md",
+    "zh": "books/tagore-gitanjali/markdown/zh.md",
+    "ja": "books/tagore-gitanjali/markdown/ja.md"
+  },
+  "chunks_jsonl": "books/tagore-gitanjali/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/tagore-gitanjali/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/tagore-gitanjali/work/trilingual/interlinear/chunks",
+  "preview_json": "books/tagore-gitanjali/work/trilingual/preview/tagore-gitanjali.partial.json",
+  "assembled_json": "books/tagore-gitanjali/work/trilingual/preview/tagore-gitanjali.partial.json",
+  "build_root": "build/tagore-gitanjali",
+  "cover_image": "assets/covers/tagore-gitanjali/cover.png",
+  "prepared_at": "2026-07-06T03:44:26.922494+00:00",
+  "preparation_notes": {
+    "status": "Sources are synced. Conversion to reviewed Markdown and chunk manifest still needs to run before workers start.",
+    "recommended_chunking": "poem stanza/line-group chunks; avoid raw PDF line-wrap chunks",
+    "recommended_worker": "WORKERS=10 MODEL=gpt-5.5 REASONING=low after manifest exists; increase only after validation is stable"
+  }
+}
