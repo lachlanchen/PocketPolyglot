@@ -42,6 +42,12 @@ const THEME_HINTS = {
     "ancient Chinese military classic, bamboo slips, bronze sword guard, misted mountain passes, strategic map lines without readable text, calm disciplined command atmosphere, restrained ink black, bronze, and muted cinnabar palette",
   wuzi:
     "Warring States military classic, austere command tent, bamboo slips, old campaign map lines without readable text, bronze spearhead and inkstone, disciplined strategic atmosphere, muted bronze, black ink, and weathered parchment palette",
+  "sunbin-bingfa":
+    "Sun Bin military classic, bamboo slips, old chariot wheel shadow, strategic valley map lines without readable text, Warring States tactical atmosphere, restrained bronze, ink black, and muted jade palette",
+  simafa:
+    "ancient ritual military method, bronze command tablets, orderly army standards without readable symbols, court archive and bamboo slips, restrained Zhou-era discipline, dark ink, aged parchment, and muted cinnabar palette",
+  weiliaozi:
+    "ancient Chinese military strategy, fortress gate silhouette, bamboo slips, bronze seal, night watch fires on distant walls, disciplined political-strategy atmosphere, restrained black, bronze, and deep red palette",
   "shui-jing-zhu":
     "ancient Chinese river geography, winding waterways through misty mountains, annotated silk map fragments, scholar-geographer's desk with bamboo slips and inkstone, Northern Wei historical atmosphere, refined ink-wash and restrained mineral pigments",
   chuci:
@@ -90,6 +96,8 @@ const THEME_HINTS = {
     "Victorian manor corridor, rain against tall windows, governess silhouette, candlelit library, restrained gothic romance atmosphere, deep green and warm amber palette",
   "harry-potter-6":
     "old magical astronomy tower at twilight, half-lit potion book, silver-green candlelight, dark lake and castle silhouettes, melancholy coming-of-age fantasy atmosphere, restrained emerald, indigo, and antique gold palette",
+  "harry-potter-7":
+    "final dark magical quest, broken wand, forest clearing, ancient castle in distant dawn, silver stag light over mist, solemn heroic fantasy conclusion, restrained indigo, ash gray, and pale gold palette",
   "a-game-of-thrones":
     "grim medieval fantasy court intrigue, iron throne silhouette without readable symbols, snow-dark northern forest, dragon-scale texture, red comet glow, austere black, steel, and crimson palette",
   "the-count-of-monte-cristo":
@@ -102,6 +110,8 @@ const THEME_HINTS = {
     "Bengal devotional poetry, river at dawn, lotus and flowering branches, quiet manuscript page, warm gold and soft blue, contemplative spiritual lyric mood, no readable text",
   "tagore-stray-birds":
     "Tagore aphoristic lyric poems, small birds crossing a wide dawn sky, Bengal riverbank, lotus leaves, floating manuscript pages without readable text, light contemplative mood, pale gold, sky blue, and soft green palette",
+  "gibran-the-prophet":
+    "Kahlil Gibran's The Prophet, coastal hill town at dawn, cedar branches, open parchment without readable words, quiet spiritual address and luminous Mediterranean air, restrained gold, blue, and warm stone palette",
 };
 
 function parseArgs(argv) {
