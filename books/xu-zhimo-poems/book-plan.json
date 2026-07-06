@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "book_id": "xu-zhimo-poems",
-  "status": "source_ready_not_chunked",
-  "launchable": false,
+  "status": "prepared_trilingual",
+  "launchable": true,
   "task_mode": "trilingual_poetry_zh_source_generated_en_ja",
   "source_spine_lang": "zh",
   "book_title_en": "Xu Zhimo: Selected Poems",
@@ -30,10 +30,33 @@
   "assembled_json": "books/xu-zhimo-poems/work/trilingual/preview/xu-zhimo-poems.partial.json",
   "build_root": "build/xu-zhimo-poems",
   "cover_image": "assets/covers/xu-zhimo-poems/cover.png",
-  "prepared_at": "2026-07-06T03:44:26.922494+00:00",
+  "prepared_at": "2026-07-06T11:12:44.343171+00:00",
   "preparation_notes": {
-    "status": "Sources are synced. Conversion to reviewed Markdown and chunk manifest still needs to run before workers start.",
-    "recommended_chunking": "poem stanza/line-group chunks; avoid raw PDF line-wrap chunks",
-    "recommended_worker": "WORKERS=10 MODEL=gpt-5.5 REASONING=low after manifest exists; increase only after validation is stable"
+    "status": "Chunk manifest prepared and launchable.",
+    "chunking": "poem/stanza/line groups; no generated translations are overwritten.",
+    "quality_rule": "Wikisource/EPUB preferred; PDF text used only when no better spine source exists."
+  },
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "chunk_mode": "poem_stanza_line_group",
+  "reference_scope": "global_ratio_poetry_window",
+  "chunk_count": 5,
+  "source_extraction": {
+    "en": {
+      "key": "wiki_wikisource_author",
+      "path": "resources/curated-books/wiki-snapshots/world-poetry/xu-zhimo/wikisource/zh-author/wikisource-zh-Author-徐志摩.pdf",
+      "method": "pdf"
+    },
+    "zh": {
+      "key": "wiki_author_zh",
+      "path": "resources/curated-books/wiki-snapshots/world-poetry/xu-zhimo/wikipedia/zh/wikipedia-zh-徐志摩.pdf",
+      "method": "pdf"
+    },
+    "ja": {
+      "key": "wiki_wikisource_author",
+      "path": "resources/curated-books/wiki-snapshots/world-poetry/xu-zhimo/wikisource/zh-author/wikisource-zh-Author-徐志摩.pdf",
+      "method": "pdf"
+    }
   }
 }

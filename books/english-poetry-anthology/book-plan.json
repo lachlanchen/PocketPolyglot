@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "book_id": "english-poetry-anthology",
-  "status": "source_ready_not_chunked",
-  "launchable": false,
+  "status": "prepared_trilingual",
+  "launchable": true,
   "task_mode": "trilingual_poetry_anthology_zh_en_sources_generated_ja",
   "source_spine_lang": "en",
   "book_title_en": "Classic English Poetry Anthology",
@@ -20,9 +20,7 @@
     "wilde_reference": "resources/curated-books/world-poetry/wilde/en/Poetry.epub"
   },
   "markdown": {
-    "en": "books/english-poetry-anthology/markdown/en.md",
-    "zh": "books/english-poetry-anthology/markdown/zh.md",
-    "ja": "books/english-poetry-anthology/markdown/ja.md"
+    "en": "books/english-poetry-anthology/markdown/en.md"
   },
   "chunks_jsonl": "books/english-poetry-anthology/work/trilingual/chunks/chunks.jsonl",
   "chunks_manifest": "books/english-poetry-anthology/work/trilingual/chunks/manifest.json",
@@ -31,10 +29,23 @@
   "assembled_json": "books/english-poetry-anthology/work/trilingual/preview/english-poetry-anthology.partial.json",
   "build_root": "build/english-poetry-anthology",
   "cover_image": "assets/covers/english-poetry-anthology/cover.png",
-  "prepared_at": "2026-07-06T03:44:26.922494+00:00",
+  "prepared_at": "2026-07-06T11:12:58.986603+00:00",
   "preparation_notes": {
-    "status": "Sources are synced. Conversion to reviewed Markdown and chunk manifest still needs to run before workers start.",
-    "recommended_chunking": "poem stanza/line-group chunks; avoid raw PDF line-wrap chunks",
-    "recommended_worker": "WORKERS=10 MODEL=gpt-5.5 REASONING=low after manifest exists; increase only after validation is stable"
+    "status": "Chunk manifest prepared and launchable.",
+    "chunking": "poem/stanza/line groups; no generated translations are overwritten.",
+    "quality_rule": "Wikisource/EPUB preferred; PDF text used only when no better spine source exists."
+  },
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "chunk_mode": "poem_stanza_line_group",
+  "reference_scope": "global_ratio_poetry_window",
+  "chunk_count": 217,
+  "source_extraction": {
+    "en": {
+      "key": "wilde_reference",
+      "path": "resources/curated-books/world-poetry/wilde/en/Poetry.epub",
+      "method": "epub"
+    }
   }
 }

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "book_id": "gibran-the-prophet",
-  "status": "source_ready_not_chunked",
-  "launchable": false,
+  "status": "prepared_trilingual",
+  "launchable": true,
   "task_mode": "trilingual_poetry_en_source_zh_reference_generated_ja",
   "source_spine_lang": "en",
   "book_title_en": "The Prophet",
@@ -21,8 +21,7 @@
   },
   "markdown": {
     "en": "books/gibran-the-prophet/markdown/en.md",
-    "zh": "books/gibran-the-prophet/markdown/zh.md",
-    "ja": "books/gibran-the-prophet/markdown/ja.md"
+    "zh": "books/gibran-the-prophet/markdown/zh.md"
   },
   "chunks_jsonl": "books/gibran-the-prophet/work/trilingual/chunks/chunks.jsonl",
   "chunks_manifest": "books/gibran-the-prophet/work/trilingual/chunks/manifest.json",
@@ -31,10 +30,28 @@
   "assembled_json": "books/gibran-the-prophet/work/trilingual/preview/gibran-the-prophet.partial.json",
   "build_root": "build/gibran-the-prophet",
   "cover_image": "assets/covers/gibran-the-prophet/cover.png",
-  "prepared_at": "2026-07-06T03:44:26.922494+00:00",
+  "prepared_at": "2026-07-06T11:16:54.732968+00:00",
   "preparation_notes": {
-    "status": "Sources are synced. Conversion to reviewed Markdown and chunk manifest still needs to run before workers start.",
-    "recommended_chunking": "poem stanza/line-group chunks; avoid raw PDF line-wrap chunks",
-    "recommended_worker": "WORKERS=10 MODEL=gpt-5.5 REASONING=low after manifest exists; increase only after validation is stable"
+    "status": "Chunk manifest prepared and launchable.",
+    "chunking": "poem/stanza/line groups; no generated translations are overwritten.",
+    "quality_rule": "Wikisource/EPUB preferred; PDF text used only when no better spine source exists."
+  },
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "chunk_mode": "poem_stanza_line_group",
+  "reference_scope": "global_ratio_poetry_window",
+  "chunk_count": 29,
+  "source_extraction": {
+    "en": {
+      "key": "en_epub",
+      "path": "resources/curated-books/world-poetry/gibran-the-prophet/en/The Prophet.epub",
+      "method": "epub"
+    },
+    "zh": {
+      "key": "zh_epub",
+      "path": "resources/curated-books/world-poetry/gibran-the-prophet/zh/先知.沙与沫-原版插图本-权威全译典藏版.epub",
+      "method": "epub"
+    }
   }
 }

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "book_id": "tagore-gitanjali",
-  "status": "source_ready_not_chunked",
-  "launchable": false,
+  "status": "prepared_trilingual",
+  "launchable": true,
   "task_mode": "trilingual_poetry_en_source_zh_reference_generated_ja",
   "source_spine_lang": "en",
   "book_title_en": "Gitanjali",
@@ -31,10 +31,33 @@
   "assembled_json": "books/tagore-gitanjali/work/trilingual/preview/tagore-gitanjali.partial.json",
   "build_root": "build/tagore-gitanjali",
   "cover_image": "assets/covers/tagore-gitanjali/cover.png",
-  "prepared_at": "2026-07-06T03:44:26.922494+00:00",
+  "prepared_at": "2026-07-06T11:12:29.582708+00:00",
   "preparation_notes": {
-    "status": "Sources are synced. Conversion to reviewed Markdown and chunk manifest still needs to run before workers start.",
-    "recommended_chunking": "poem stanza/line-group chunks; avoid raw PDF line-wrap chunks",
-    "recommended_worker": "WORKERS=10 MODEL=gpt-5.5 REASONING=low after manifest exists; increase only after validation is stable"
+    "status": "Chunk manifest prepared and launchable.",
+    "chunking": "poem/stanza/line groups; no generated translations are overwritten.",
+    "quality_rule": "Wikisource/EPUB preferred; PDF text used only when no better spine source exists."
+  },
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "chunk_mode": "poem_stanza_line_group",
+  "reference_scope": "global_ratio_poetry_window",
+  "chunk_count": 103,
+  "source_extraction": {
+    "en": {
+      "key": "en_wikisource_export",
+      "path": "resources/curated-books/world-poetry/tagore-gitanjali/en-wikisource-export/manifest.json",
+      "method": "json"
+    },
+    "zh": {
+      "key": "wiki_author_zh",
+      "path": "resources/curated-books/wiki-snapshots/world-poetry/tagore/wikipedia/zh/wikipedia-zh-泰戈尔.pdf",
+      "method": "pdf"
+    },
+    "ja": {
+      "key": "ja_tagore_reference",
+      "path": "resources/curated-books/world-poetry/tagore/ja/タゴール詩集.epub",
+      "method": "epub"
+    }
   }
 }

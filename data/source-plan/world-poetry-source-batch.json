@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "batch_id": "world-poetry-source-batch",
-  "status": "queued_after_classical_sources_synced_tasks_prepared_not_started",
+  "status": "poetry_chunks_prepared",
   "prepared_at": "2026-07-06T03:44:26.922494+00:00",
   "resource_root": "resources/curated-books/world-poetry",
   "wiki_snapshot_root": "resources/curated-books/wiki-snapshots/world-poetry",
@@ -38,9 +38,11 @@
       "author": "Rabindranath Tagore",
       "source_spine_lang": "en",
       "task_mode": "trilingual_poetry_en_source_zh_reference_generated_ja",
-      "status": "source_ready_not_chunked",
+      "status": "chunked_launchable",
       "book_plan": "books/tagore-gitanjali/book-plan.json",
-      "missing_source_paths": []
+      "missing_source_paths": [],
+      "chunk_count": 103,
+      "prepared_chunks_at": "2026-07-06T11:12:58.987060+00:00"
     },
     {
       "priority": 2,
@@ -51,9 +53,11 @@
       "author": "Rabindranath Tagore",
       "source_spine_lang": "en",
       "task_mode": "trilingual_poetry_en_zh_sources_generated_ja",
-      "status": "source_ready_not_chunked",
+      "status": "chunked_launchable",
       "book_plan": "books/tagore-stray-birds/book-plan.json",
-      "missing_source_paths": []
+      "missing_source_paths": [],
+      "chunk_count": 126,
+      "prepared_chunks_at": "2026-07-06T11:16:54.733195+00:00"
     },
     {
       "priority": 3,
@@ -64,9 +68,11 @@
       "author": "Kahlil Gibran",
       "source_spine_lang": "en",
       "task_mode": "trilingual_poetry_en_source_zh_reference_generated_ja",
-      "status": "source_ready_not_chunked",
+      "status": "chunked_launchable",
       "book_plan": "books/gibran-the-prophet/book-plan.json",
-      "missing_source_paths": []
+      "missing_source_paths": [],
+      "chunk_count": 29,
+      "prepared_chunks_at": "2026-07-06T11:16:54.733198+00:00"
     },
     {
       "priority": 4,
@@ -77,9 +83,11 @@
       "author": "Lord Byron",
       "source_spine_lang": "en",
       "task_mode": "trilingual_poetry_en_source_zh_reference_generated_ja",
-      "status": "source_ready_not_chunked",
+      "status": "chunked_launchable",
       "book_plan": "books/byron-selected-poems/book-plan.json",
-      "missing_source_paths": []
+      "missing_source_paths": [],
+      "chunk_count": 836,
+      "prepared_chunks_at": "2026-07-06T11:12:58.987065+00:00"
     },
     {
       "priority": 5,
@@ -90,9 +98,11 @@
       "author": "Percy Bysshe Shelley",
       "source_spine_lang": "en",
       "task_mode": "trilingual_poetry_en_source_zh_reference_generated_ja",
-      "status": "source_ready_not_chunked",
+      "status": "chunked_launchable",
       "book_plan": "books/shelley-selected-poems/book-plan.json",
-      "missing_source_paths": []
+      "missing_source_paths": [],
+      "chunk_count": 2105,
+      "prepared_chunks_at": "2026-07-06T11:12:58.987066+00:00"
     },
     {
       "priority": 6,
@@ -103,9 +113,11 @@
       "author": "W. B. Yeats",
       "source_spine_lang": "en",
       "task_mode": "trilingual_poetry_en_source_zh_reference_generated_ja",
-      "status": "source_ready_not_chunked",
+      "status": "chunked_launchable",
       "book_plan": "books/yeats-collected-poems/book-plan.json",
-      "missing_source_paths": []
+      "missing_source_paths": [],
+      "chunk_count": 634,
+      "prepared_chunks_at": "2026-07-06T11:12:58.987067+00:00"
     },
     {
       "priority": 7,
@@ -116,9 +128,11 @@
       "author": "Ovid",
       "source_spine_lang": "en",
       "task_mode": "trilingual_poetry_en_source_zh_reference_generated_ja",
-      "status": "source_ready_not_chunked",
+      "status": "chunked_launchable",
       "book_plan": "books/ovid-art-of-love/book-plan.json",
-      "missing_source_paths": []
+      "missing_source_paths": [],
+      "chunk_count": 111,
+      "prepared_chunks_at": "2026-07-06T11:12:58.987067+00:00"
     },
     {
       "priority": 8,
@@ -129,9 +143,11 @@
       "author": "John Keats",
       "source_spine_lang": "en",
       "task_mode": "trilingual_poetry_en_source_generated_zh_ja",
-      "status": "source_ready_not_chunked",
+      "status": "chunked_launchable",
       "book_plan": "books/keats-poems/book-plan.json",
-      "missing_source_paths": []
+      "missing_source_paths": [],
+      "chunk_count": 56,
+      "prepared_chunks_at": "2026-07-06T11:12:58.987068+00:00"
     },
     {
       "priority": 9,
@@ -142,9 +158,11 @@
       "author": "Oscar Wilde",
       "source_spine_lang": "en",
       "task_mode": "trilingual_poetry_en_source_generated_zh_ja",
-      "status": "source_ready_not_chunked",
+      "status": "chunked_launchable",
       "book_plan": "books/wilde-poetry/book-plan.json",
-      "missing_source_paths": []
+      "missing_source_paths": [],
+      "chunk_count": 217,
+      "prepared_chunks_at": "2026-07-06T11:12:58.987069+00:00"
     },
     {
       "priority": 10,
@@ -155,9 +173,11 @@
       "author": "徐志摩",
       "source_spine_lang": "zh",
       "task_mode": "trilingual_poetry_zh_source_generated_en_ja",
-      "status": "source_ready_not_chunked",
+      "status": "chunked_launchable",
       "book_plan": "books/xu-zhimo-poems/book-plan.json",
-      "missing_source_paths": []
+      "missing_source_paths": [],
+      "chunk_count": 5,
+      "prepared_chunks_at": "2026-07-06T11:12:58.987070+00:00"
     },
     {
       "priority": 11,
@@ -168,9 +188,11 @@
       "author": "仓央嘉措",
       "source_spine_lang": "zh",
       "task_mode": "trilingual_poetry_zh_source_generated_en_ja",
-      "status": "source_ready_not_chunked",
+      "status": "chunked_launchable",
       "book_plan": "books/tsangyang-gyatso-poems/book-plan.json",
-      "missing_source_paths": []
+      "missing_source_paths": [],
+      "chunk_count": 10,
+      "prepared_chunks_at": "2026-07-06T11:12:58.987071+00:00"
     },
     {
       "priority": 12,
@@ -181,9 +203,12 @@
       "author": "various authors",
       "source_spine_lang": "en",
       "task_mode": "trilingual_poetry_anthology_zh_en_sources_generated_ja",
-      "status": "source_ready_not_chunked",
+      "status": "chunked_launchable",
       "book_plan": "books/english-poetry-anthology/book-plan.json",
-      "missing_source_paths": []
+      "missing_source_paths": [],
+      "chunk_count": 217,
+      "prepared_chunks_at": "2026-07-06T11:12:58.987071+00:00"
     }
-  ]
+  ],
+  "last_chunk_preparation_at": "2026-07-06T11:16:54.733200+00:00"
 }
