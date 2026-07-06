@@ -258,9 +258,9 @@ def start_poetry(book_id: str, args: argparse.Namespace) -> bool:
     return True
 
 
-def write_state(payload: dict[str, Any]) -> None:
-    STATE_DIR.mkdir(parents=True, exist_ok=True)
-    (STATE_DIR / "state.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+def write_state(state_dir: Path, payload: dict[str, Any]) -> None:
+    state_dir.mkdir(parents=True, exist_ok=True)
+    (state_dir / "state.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def main() -> int:
@@ -268,6 +268,8 @@ def main() -> int:
     parser.add_argument("--classical-book-id", action="append", default=[])
     parser.add_argument("--poetry-book-id", action="append", default=[])
     parser.add_argument("--poetry-batch", default=os.environ.get("POETRY_BATCH", str(DEFAULT_POETRY_BATCH)))
+    parser.add_argument("--skip-classical-gate", action="store_true", default=os.environ.get("SKIP_CLASSICAL_GATE") == "1")
+    parser.add_argument("--state-dir", default=os.environ.get("STATE_DIR", str(STATE_DIR)))
     parser.add_argument("--workers", type=int, default=int(os.environ.get("WORKERS", "10")))
     parser.add_argument("--model", default=os.environ.get("MODEL", "gpt-5.5"))
     parser.add_argument("--reasoning", default=os.environ.get("REASONING", "low"))
@@ -281,12 +283,18 @@ def main() -> int:
 
     classical_ids = args.classical_book_id or DEFAULT_CLASSICS
     poetry_ids = args.poetry_book_id or poetry_ids_from_batch(ROOT / args.poetry_batch)
+    state_dir = ROOT / args.state_dir
 
     while True:
         timestamp = datetime.now(timezone.utc).isoformat()
-        classical_reports = {book_id: quadrilingual_progress(book_id) for book_id in classical_ids}
-        classical_done = all(quadrilingual_complete(report) for report in classical_reports.values())
-        active_classics = active_classical_sessions(classical_ids)
+        if args.skip_classical_gate:
+            classical_reports = {}
+            classical_done = True
+            active_classics = []
+        else:
+            classical_reports = {book_id: quadrilingual_progress(book_id) for book_id in classical_ids}
+            classical_done = all(quadrilingual_complete(report) for report in classical_reports.values())
+            active_classics = active_classical_sessions(classical_ids)
         poetry_reports = {book_id: trilingual_progress(book_id) for book_id in poetry_ids}
         poetry_status = {book_id: launchability(book_id) for book_id in poetry_ids}
         active_poetry = active_poetry_sessions(poetry_ids)
@@ -302,8 +310,10 @@ def main() -> int:
             flush=True,
         )
         write_state(
+            state_dir,
             {
                 "timestamp": timestamp,
+                "skip_classical_gate": args.skip_classical_gate,
                 "classical_book_ids": classical_ids,
                 "classical_reports": classical_reports,
                 "classical_complete": classical_done,

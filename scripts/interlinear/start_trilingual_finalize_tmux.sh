@@ -86,6 +86,13 @@ python scripts/interlinear/backfill_trilingual_grammar_roles.py \\
 
 ALLOW_MISSING=0 bash scripts/interlinear/compile_trilingual_book_12_previews.sh '$book_id'
 
+mkdir -p "\$(dirname '$assembled_json')"
+python scripts/interlinear/assemble_trilingual_json.py \\
+  --manifest '$manifest' \\
+  --chunks-jsonl '$chunks_jsonl' \\
+  --chunk-dir '$raw_chunk_dir' \\
+  --output '$assembled_json'
+
 python scripts/interlinear/validate_trilingual_interlinear_json.py '$assembled_json'
 
 mkdir -p 'data/interlinear/$book_id/chunks' 'data/interlinear/$book_id/assembled'

@@ -198,15 +198,17 @@ def start_classical(book_id: str, args: argparse.Namespace) -> bool:
     return True
 
 
-def write_state(payload: dict[str, Any]) -> None:
-    STATE_DIR.mkdir(parents=True, exist_ok=True)
-    (STATE_DIR / "state.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+def write_state(state_dir: Path, payload: dict[str, Any]) -> None:
+    state_dir.mkdir(parents=True, exist_ok=True)
+    (state_dir / "state.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--fantasy-book-id", action="append", default=[])
     parser.add_argument("--classical-book-id", action="append", default=[])
+    parser.add_argument("--skip-fantasy-gate", action="store_true", default=os.environ.get("SKIP_FANTASY_GATE") == "1")
+    parser.add_argument("--state-dir", default=os.environ.get("STATE_DIR", str(STATE_DIR)))
     parser.add_argument("--workers", type=int, default=int(os.environ.get("WORKERS", "100")))
     parser.add_argument("--model", default=os.environ.get("MODEL", "gpt-5.5"))
     parser.add_argument("--reasoning", default=os.environ.get("REASONING", "low"))
@@ -220,12 +222,18 @@ def main() -> int:
 
     fantasy_ids = args.fantasy_book_id or DEFAULT_FANTASY
     classical_ids = args.classical_book_id or DEFAULT_CLASSICS
+    state_dir = ROOT / args.state_dir
 
     while True:
         timestamp = datetime.now(timezone.utc).isoformat()
-        fantasy_reports = {book_id: trilingual_progress(book_id) for book_id in fantasy_ids}
-        fantasy_done = all(trilingual_complete(report) for report in fantasy_reports.values())
-        active_fantasy = fantasy_sessions(fantasy_ids)
+        if args.skip_fantasy_gate:
+            fantasy_reports = {}
+            fantasy_done = True
+            active_fantasy = []
+        else:
+            fantasy_reports = {book_id: trilingual_progress(book_id) for book_id in fantasy_ids}
+            fantasy_done = all(trilingual_complete(report) for report in fantasy_reports.values())
+            active_fantasy = fantasy_sessions(fantasy_ids)
         classical_reports = {book_id: quadrilingual_progress(book_id) for book_id in classical_ids}
         active_classical = [quadrilingual_session(book_id) for book_id in classical_ids if tmux_active(quadrilingual_session(book_id))]
 
@@ -235,8 +243,10 @@ def main() -> int:
             flush=True,
         )
         write_state(
+            state_dir,
             {
                 "timestamp": timestamp,
+                "skip_fantasy_gate": args.skip_fantasy_gate,
                 "fantasy_book_ids": fantasy_ids,
                 "fantasy_reports": fantasy_reports,
                 "fantasy_complete": fantasy_done,
