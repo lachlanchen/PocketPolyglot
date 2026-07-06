@@ -1,0 +1,5196 @@
+{
+  "schema_version": "0.1",
+  "mode": "trilingual_standard",
+  "chunk_id": "harry-potter-3-c0250",
+  "chapter": {
+    "id": "chapter-025",
+    "number": 25,
+    "title": {
+      "en": [
+        {
+          "t": "Chapter",
+          "g": "subject"
+        },
+        {
+          "t": " "
+        },
+        {
+          "t": "21",
+          "g": "subject"
+        },
+        {
+          "t": ":"
+        },
+        {
+          "t": " "
+        },
+        {
+          "t": "Hermione’s",
+          "g": "predicate"
+        },
+        {
+          "t": " "
+        },
+        {
+          "t": "Secret",
+          "g": "object"
+        }
+      ],
+      "zh": [
+        {
+          "t": "global-ratio-window",
+          "g": "topic"
+        }
+      ],
+      "ja": [
+        {
+          "t": "第",
+          "r": "だい",
+          "g": "subject"
+        },
+        {
+          "t": "25",
+          "g": "attributive"
+        },
+        {
+          "t": "章",
+          "r": "しょう",
+          "g": "complement"
+        }
+      ]
+    }
+  },
+  "paragraphs": [
+    {
+      "id": "harry-potter-3-s025-p04007",
+      "source_en": "‘OK, Buckbeak, up!’ said Harry, shaking the rope. ‘Up to the tower – come on!’",
+      "units": [
+        {
+          "source_en": "‘OK, Buckbeak, up!’ ",
+          "en": [
+            {
+              "t": "‘"
+            },
+            {
+              "t": "OK",
+              "g": "subject"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Buckbeak",
+              "g": "predicate"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "up",
+              "g": "adverbial"
+            },
+            {
+              "t": "!’"
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "“"
+            },
+            {
+              "t": "好",
+              "r": "hǎo",
+              "g": "subject"
+            },
+            {
+              "t": "啦",
+              "r": "la",
+              "g": "subject"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "巴",
+              "r": "bā",
+              "g": "attributive"
+            },
+            {
+              "t": "克",
+              "r": "kè",
+              "g": "attributive"
+            },
+            {
+              "t": "比",
+              "r": "bǐ",
+              "g": "topic"
+            },
+            {
+              "t": "克",
+              "r": "kè",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "向",
+              "r": "xiàng",
+              "g": "adverbial"
+            },
+            {
+              "t": "上",
+              "r": "shàng",
+              "g": "complement"
+            },
+            {
+              "t": "飞",
+              "r": "fēi",
+              "g": "object"
+            },
+            {
+              "t": "！”"
+            }
+          ],
+          "ja": [
+            {
+              "t": "「よし、バックビーク、",
+              "g": "subject"
+            },
+            {
+              "t": "上",
+              "r": "うえ",
+              "g": "attributive"
+            },
+            {
+              "t": "へ！」",
+              "g": "adverbial"
+            }
+          ]
+        },
+        {
+          "source_en": "said Harry, shaking the rope. ",
+          "en": [
+            {
+              "t": "said",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Harry",
+              "g": "object"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "shaking",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "rope",
+              "g": "object"
+            },
+            {
+              "t": "."
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "哈",
+              "r": "hā",
+              "g": "subject"
+            },
+            {
+              "t": "利",
+              "r": "lì",
+              "g": "subject"
+            },
+            {
+              "t": "摇",
+              "r": "yáo",
+              "g": "attributive"
+            },
+            {
+              "t": "动",
+              "r": "dòng",
+              "g": "attributive"
+            },
+            {
+              "t": "着",
+              "r": "zhe",
+              "g": "predicate"
+            },
+            {
+              "t": "绳",
+              "r": "shéng",
+              "g": "attributive"
+            },
+            {
+              "t": "子",
+              "r": "zi",
+              "g": "attributive"
+            },
+            {
+              "t": "说",
+              "r": "shuō",
+              "g": "predicate"
+            },
+            {
+              "t": "，"
+            }
+          ],
+          "ja": [
+            {
+              "t": "ハリーは",
+              "g": "subject"
+            },
+            {
+              "t": "縄",
+              "r": "なわ",
+              "g": "subject"
+            },
+            {
+              "t": "を",
+              "g": "object"
+            },
+            {
+              "t": "揺",
+              "r": "ゆ",
+              "g": "attributive"
+            },
+            {
+              "t": "さぶりながら",
+              "g": "subject"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "attributive"
+            },
+            {
+              "t": "った。",
+              "g": "complement"
+            }
+          ]
+        },
+        {
+          "source_en": "‘Up to the tower – come on!’",
+          "en": [
+            {
+              "t": "‘"
+            },
+            {
+              "t": "Up",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "to",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "tower",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "–"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "come",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "on",
+              "g": "adverbial"
+            },
+            {
+              "t": "!’"
+            }
+          ],
+          "zh": [
+            {
+              "t": "“"
+            },
+            {
+              "t": "飞",
+              "r": "fēi",
+              "g": "subject"
+            },
+            {
+              "t": "到",
+              "r": "dào",
+              "g": "adverbial"
+            },
+            {
+              "t": "塔",
+              "r": "tǎ",
+              "g": "attributive"
+            },
+            {
+              "t": "楼",
+              "r": "lóu",
+              "g": "attributive"
+            },
+            {
+              "t": "。"
+            },
+            {
+              "t": "来",
+              "r": "lái",
+              "g": "complement"
+            },
+            {
+              "t": "吧",
+              "r": "ba",
+              "g": "object"
+            },
+            {
+              "t": "！”"
+            }
+          ],
+          "ja": [
+            {
+              "t": "「"
+            },
+            {
+              "t": "塔",
+              "r": "とう",
+              "g": "subject"
+            },
+            {
+              "t": "まで",
+              "g": "adverbial"
+            },
+            {
+              "t": "上",
+              "r": "あ",
+              "g": "attributive"
+            },
+            {
+              "t": "がるんだ、さあ！」",
+              "g": "subject"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harry-potter-3-s025-p04008",
+      "source_en": "The Hippogriff gave one sweep of its mighty wings and they were soaring upwards again, high as the top of the West Tower. Buckbeak landed with a clatter on the battlements and Harry and Hermione slid off him at once.",
+      "units": [
+        {
+          "source_en": "The Hippogriff gave one sweep of its mighty wings and they were soaring upwards again, high as the top of the West Tower. ",
+          "en": [
+            {
+              "t": "The",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Hippogriff",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "gave",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "one",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "sweep",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "its",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "mighty",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "wings",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "they",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "were",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "soaring",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "upwards",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "again",
+              "g": "object"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "high",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "as",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "top",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "West",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Tower",
+              "g": "object"
+            },
+            {
+              "t": "."
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "这",
+              "r": "zhè",
+              "g": "subject"
+            },
+            {
+              "t": "头",
+              "r": "tóu",
+              "g": "subject"
+            },
+            {
+              "t": "鹰",
+              "r": "yīng",
+              "g": "subject"
+            },
+            {
+              "t": "头",
+              "r": "tóu",
+              "g": "subject"
+            },
+            {
+              "t": "马",
+              "r": "mǎ",
+              "g": "subject"
+            },
+            {
+              "t": "身",
+              "r": "shēn",
+              "g": "subject"
+            },
+            {
+              "t": "有",
+              "r": "yǒu",
+              "g": "predicate"
+            },
+            {
+              "t": "翼",
+              "r": "yì",
+              "g": "object"
+            },
+            {
+              "t": "兽",
+              "r": "shòu",
+              "g": "object"
+            },
+            {
+              "t": "双",
+              "r": "shuāng",
+              "g": "object"
+            },
+            {
+              "t": "翼",
+              "r": "yì",
+              "g": "object"
+            },
+            {
+              "t": "一",
+              "r": "yī",
+              "g": "object"
+            },
+            {
+              "t": "振",
+              "r": "zhèn",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "他",
+              "r": "tā",
+              "g": "object"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "object"
+            },
+            {
+              "t": "就",
+              "r": "jiù",
+              "g": "adverbial"
+            },
+            {
+              "t": "又",
+              "r": "yòu",
+              "g": "adverbial"
+            },
+            {
+              "t": "向",
+              "r": "xiàng",
+              "g": "adverbial"
+            },
+            {
+              "t": "上",
+              "r": "shàng",
+              "g": "complement"
+            },
+            {
+              "t": "飞",
+              "r": "fēi",
+              "g": "object"
+            },
+            {
+              "t": "去",
+              "r": "qù",
+              "g": "complement"
+            },
+            {
+              "t": "了",
+              "r": "le",
+              "g": "complement"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "飞",
+              "r": "fēi",
+              "g": "object"
+            },
+            {
+              "t": "得",
+              "r": "dé",
+              "g": "complement"
+            },
+            {
+              "t": "和",
+              "r": "hé",
+              "g": "object"
+            },
+            {
+              "t": "西",
+              "r": "xī",
+              "g": "object"
+            },
+            {
+              "t": "塔",
+              "r": "tǎ",
+              "g": "object"
+            },
+            {
+              "t": "楼",
+              "r": "lóu",
+              "g": "object"
+            },
+            {
+              "t": "顶",
+              "r": "dǐng",
+              "g": "object"
+            },
+            {
+              "t": "一",
+              "r": "yī",
+              "g": "object"
+            },
+            {
+              "t": "样",
+              "r": "yàng",
+              "g": "object"
+            },
+            {
+              "t": "高",
+              "r": "gāo",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "ヒッポグリフが",
+              "g": "subject"
+            },
+            {
+              "t": "力",
+              "r": "ちから",
+              "g": "subject"
+            },
+            {
+              "t": "強",
+              "r": "づよ",
+              "g": "subject"
+            },
+            {
+              "t": "い",
+              "g": "subject"
+            },
+            {
+              "t": "翼",
+              "r": "つばさ",
+              "g": "subject"
+            },
+            {
+              "t": "をひと",
+              "g": "object"
+            },
+            {
+              "t": "振",
+              "r": "ふ",
+              "g": "subject"
+            },
+            {
+              "t": "りすると、",
+              "g": "adverbial"
+            },
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "attributive"
+            },
+            {
+              "t": "らはまた",
+              "g": "subject"
+            },
+            {
+              "t": "上",
+              "r": "うえ",
+              "g": "object"
+            },
+            {
+              "t": "へ",
+              "g": "adverbial"
+            },
+            {
+              "t": "舞",
+              "r": "ま",
+              "g": "object"
+            },
+            {
+              "t": "い",
+              "g": "object"
+            },
+            {
+              "t": "上",
+              "r": "あ",
+              "g": "object"
+            },
+            {
+              "t": "がり、",
+              "g": "subject"
+            },
+            {
+              "t": "西",
+              "r": "にし",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "塔",
+              "r": "とう",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "頂",
+              "r": "いただき",
+              "g": "object"
+            },
+            {
+              "t": "と",
+              "g": "adverbial"
+            },
+            {
+              "t": "同",
+              "r": "おな",
+              "g": "complement"
+            },
+            {
+              "t": "じ",
+              "g": "complement"
+            },
+            {
+              "t": "高",
+              "r": "たか",
+              "g": "complement"
+            },
+            {
+              "t": "さまで",
+              "g": "adverbial"
+            },
+            {
+              "t": "昇",
+              "r": "のぼ",
+              "g": "complement"
+            },
+            {
+              "t": "った。",
+              "g": "complement"
+            }
+          ]
+        },
+        {
+          "source_en": "Buckbeak landed with a clatter on the battlements and Harry and Hermione slid off him at once.",
+          "en": [
+            {
+              "t": "Buckbeak",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "landed",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "with",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "a",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "clatter",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "on",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "battlements",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Harry",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Hermione",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "slid",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "off",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "him",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "at",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "once",
+              "g": "adverbial"
+            },
+            {
+              "t": "."
+            }
+          ],
+          "zh": [
+            {
+              "t": "巴",
+              "r": "bā",
+              "g": "subject"
+            },
+            {
+              "t": "克",
+              "r": "kè",
+              "g": "subject"
+            },
+            {
+              "t": "比",
+              "r": "bǐ",
+              "g": "subject"
+            },
+            {
+              "t": "克",
+              "r": "kè",
+              "g": "subject"
+            },
+            {
+              "t": "哒",
+              "r": "dá",
+              "g": "subject"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "一",
+              "r": "yī",
+              "g": "attributive"
+            },
+            {
+              "t": "声",
+              "r": "shēng",
+              "g": "attributive"
+            },
+            {
+              "t": "降",
+              "r": "jiàng",
+              "g": "attributive"
+            },
+            {
+              "t": "落",
+              "r": "luò",
+              "g": "attributive"
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "雉",
+              "r": "zhì",
+              "g": "attributive"
+            },
+            {
+              "t": "堞",
+              "r": "dié",
+              "g": "attributive"
+            },
+            {
+              "t": "墙",
+              "r": "qiáng",
+              "g": "attributive"
+            },
+            {
+              "t": "上",
+              "r": "shàng",
+              "g": "predicate"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "哈",
+              "r": "hā",
+              "g": "attributive"
+            },
+            {
+              "t": "利",
+              "r": "lì",
+              "g": "attributive"
+            },
+            {
+              "t": "和",
+              "r": "hé",
+              "g": "attributive"
+            },
+            {
+              "t": "赫",
+              "r": "hè",
+              "g": "attributive"
+            },
+            {
+              "t": "敏",
+              "r": "mǐn",
+              "g": "attributive"
+            },
+            {
+              "t": "立",
+              "r": "lì",
+              "g": "attributive"
+            },
+            {
+              "t": "刻",
+              "r": "kè",
+              "g": "attributive"
+            },
+            {
+              "t": "从",
+              "r": "cóng",
+              "g": "adverbial"
+            },
+            {
+              "t": "它",
+              "r": "tā",
+              "g": "attributive"
+            },
+            {
+              "t": "背",
+              "r": "bèi",
+              "g": "attributive"
+            },
+            {
+              "t": "上",
+              "r": "shàng",
+              "g": "predicate"
+            },
+            {
+              "t": "滑",
+              "r": "huá",
+              "g": "attributive"
+            },
+            {
+              "t": "下",
+              "r": "xià",
+              "g": "predicate"
+            },
+            {
+              "t": "来",
+              "r": "lái",
+              "g": "complement"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "バックビークは",
+              "g": "subject"
+            },
+            {
+              "t": "胸",
+              "r": "きょう",
+              "g": "subject"
+            },
+            {
+              "t": "壁",
+              "r": "へき",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "上",
+              "r": "うえ",
+              "g": "attributive"
+            },
+            {
+              "t": "にがたんと",
+              "g": "subject"
+            },
+            {
+              "t": "降",
+              "r": "お",
+              "g": "attributive"
+            },
+            {
+              "t": "り",
+              "g": "attributive"
+            },
+            {
+              "t": "立",
+              "r": "た",
+              "g": "attributive"
+            },
+            {
+              "t": "ち、ハリーとハーマイオニーはすぐにその",
+              "g": "subject"
+            },
+            {
+              "t": "背",
+              "r": "そむ",
+              "g": "attributive"
+            },
+            {
+              "t": "から",
+              "g": "adverbial"
+            },
+            {
+              "t": "滑",
+              "r": "すべ",
+              "g": "attributive"
+            },
+            {
+              "t": "り",
+              "g": "attributive"
+            },
+            {
+              "t": "降",
+              "r": "お",
+              "g": "attributive"
+            },
+            {
+              "t": "りた。",
+              "g": "complement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harry-potter-3-s025-p04009",
+      "source_en": "‘Sirius, you’d better go, quick,’ Harry panted. ‘They’ll reach Flitwick’s office any moment, they’ll find out you’ve gone.’",
+      "units": [
+        {
+          "source_en": "‘Sirius, you’d better go, quick,’ Harry panted. ",
+          "en": [
+            {
+              "t": "‘"
+            },
+            {
+              "t": "Sirius",
+              "g": "subject"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "you’d",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "better",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "go",
+              "g": "predicate"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "quick",
+              "g": "object"
+            },
+            {
+              "t": ",’"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Harry",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "panted",
+              "g": "predicate"
+            },
+            {
+              "t": "."
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "“"
+            },
+            {
+              "t": "布",
+              "r": "bù",
+              "g": "subject"
+            },
+            {
+              "t": "莱",
+              "r": "lái",
+              "g": "subject"
+            },
+            {
+              "t": "克",
+              "r": "kè",
+              "g": "attributive"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "你",
+              "r": "nǐ",
+              "g": "attributive"
+            },
+            {
+              "t": "最",
+              "r": "zuì",
+              "g": "attributive"
+            },
+            {
+              "t": "好",
+              "r": "hǎo",
+              "g": "attributive"
+            },
+            {
+              "t": "快",
+              "r": "kuài",
+              "g": "attributive"
+            },
+            {
+              "t": "走",
+              "r": "zǒu",
+              "g": "predicate"
+            },
+            {
+              "t": "，”"
+            },
+            {
+              "t": "哈",
+              "r": "hā",
+              "g": "object"
+            },
+            {
+              "t": "利",
+              "r": "lì",
+              "g": "object"
+            },
+            {
+              "t": "喘",
+              "r": "chuǎn",
+              "g": "object"
+            },
+            {
+              "t": "着",
+              "r": "zhe",
+              "g": "complement"
+            },
+            {
+              "t": "气",
+              "r": "qì",
+              "g": "object"
+            },
+            {
+              "t": "说",
+              "r": "shuō",
+              "g": "predicate"
+            },
+            {
+              "t": "，"
+            }
+          ],
+          "ja": [
+            {
+              "t": "「シリウス、",
+              "g": "subject"
+            },
+            {
+              "t": "早",
+              "r": "はや",
+              "g": "subject"
+            },
+            {
+              "t": "く",
+              "g": "predicate"
+            },
+            {
+              "t": "行",
+              "r": "い",
+              "g": "object"
+            },
+            {
+              "t": "ったほうがいい」ハリーは",
+              "g": "subject"
+            },
+            {
+              "t": "息",
+              "r": "いき",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "g": "object"
+            },
+            {
+              "t": "切",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "らして",
+              "g": "complement"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "complement"
+            },
+            {
+              "t": "った。",
+              "g": "complement"
+            }
+          ]
+        },
+        {
+          "source_en": "‘They’ll reach Flitwick’s office any moment, they’ll find out you’ve gone.’",
+          "en": [
+            {
+              "t": "‘"
+            },
+            {
+              "t": "They’ll",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "reach",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Flitwick’s",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "office",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "any",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "moment",
+              "g": "subject"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "they’ll",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "find",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "out",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "you’ve",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "gone",
+              "g": "predicate"
+            },
+            {
+              "t": ".’"
+            }
+          ],
+          "zh": [
+            {
+              "t": "“"
+            },
+            {
+              "t": "他",
+              "r": "tā",
+              "g": "subject"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "subject"
+            },
+            {
+              "t": "随",
+              "r": "suí",
+              "g": "subject"
+            },
+            {
+              "t": "时",
+              "r": "shí",
+              "g": "subject"
+            },
+            {
+              "t": "都",
+              "r": "dōu",
+              "g": "adverbial"
+            },
+            {
+              "t": "会",
+              "r": "huì",
+              "g": "attributive"
+            },
+            {
+              "t": "到",
+              "r": "dào",
+              "g": "adverbial"
+            },
+            {
+              "t": "弗",
+              "r": "fú",
+              "g": "attributive"
+            },
+            {
+              "t": "立",
+              "r": "lì",
+              "g": "attributive"
+            },
+            {
+              "t": "维",
+              "r": "wéi",
+              "g": "attributive"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "办",
+              "r": "bàn",
+              "g": "attributive"
+            },
+            {
+              "t": "公",
+              "r": "gōng",
+              "g": "attributive"
+            },
+            {
+              "t": "室",
+              "r": "shì",
+              "g": "attributive"
+            },
+            {
+              "t": "去",
+              "r": "qù",
+              "g": "complement"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "他",
+              "r": "tā",
+              "g": "object"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "object"
+            },
+            {
+              "t": "会",
+              "r": "huì",
+              "g": "object"
+            },
+            {
+              "t": "发",
+              "r": "fā",
+              "g": "object"
+            },
+            {
+              "t": "现",
+              "r": "xiàn",
+              "g": "object"
+            },
+            {
+              "t": "你",
+              "r": "nǐ",
+              "g": "object"
+            },
+            {
+              "t": "跑",
+              "r": "pǎo",
+              "g": "predicate"
+            },
+            {
+              "t": "了",
+              "r": "le",
+              "g": "complement"
+            },
+            {
+              "t": "。”"
+            }
+          ],
+          "ja": [
+            {
+              "t": "「あいつらはもうすぐフリットウィック",
+              "g": "subject"
+            },
+            {
+              "t": "先",
+              "r": "せん",
+              "g": "subject"
+            },
+            {
+              "t": "生",
+              "r": "せい",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "部",
+              "r": "へ",
+              "g": "attributive"
+            },
+            {
+              "t": "屋",
+              "r": "や",
+              "g": "attributive"
+            },
+            {
+              "t": "に",
+              "g": "adverbial"
+            },
+            {
+              "t": "着",
+              "r": "つ",
+              "g": "attributive"
+            },
+            {
+              "t": "く。",
+              "g": "attributive"
+            },
+            {
+              "t": "君",
+              "r": "くん",
+              "g": "attributive"
+            },
+            {
+              "t": "がいなくなったと",
+              "g": "subject"
+            },
+            {
+              "t": "気",
+              "r": "き",
+              "g": "attributive"
+            },
+            {
+              "t": "づくよ」",
+              "g": "complement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harry-potter-3-s025-p04010",
+      "source_en": "Buckbeak pawed the ground, tossing his sharp head.",
+      "units": [
+        {
+          "source_en": "Buckbeak pawed the ground, tossing his sharp head.",
+          "en": [
+            {
+              "t": "Buckbeak",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "pawed",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "ground",
+              "g": "object"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "tossing",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "his",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "sharp",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "head",
+              "g": "object"
+            },
+            {
+              "t": "."
+            }
+          ],
+          "zh": [
+            {
+              "t": "巴",
+              "r": "bā",
+              "g": "subject"
+            },
+            {
+              "t": "克",
+              "r": "kè",
+              "g": "subject"
+            },
+            {
+              "t": "比",
+              "r": "bǐ",
+              "g": "subject"
+            },
+            {
+              "t": "克",
+              "r": "kè",
+              "g": "attributive"
+            },
+            {
+              "t": "脚",
+              "r": "jiǎo",
+              "g": "attributive"
+            },
+            {
+              "t": "爪",
+              "r": "zhǎo",
+              "g": "attributive"
+            },
+            {
+              "t": "抓",
+              "r": "zhuā",
+              "g": "attributive"
+            },
+            {
+              "t": "地",
+              "r": "dì",
+              "g": "attributive"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "扬",
+              "r": "yáng",
+              "g": "topic"
+            },
+            {
+              "t": "起",
+              "r": "qǐ",
+              "g": "complement"
+            },
+            {
+              "t": "它",
+              "r": "tā",
+              "g": "object"
+            },
+            {
+              "t": "那",
+              "r": "nà",
+              "g": "object"
+            },
+            {
+              "t": "尖",
+              "r": "jiān",
+              "g": "object"
+            },
+            {
+              "t": "尖",
+              "r": "jiān",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "脑",
+              "r": "nǎo",
+              "g": "object"
+            },
+            {
+              "t": "袋",
+              "r": "dài",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "バックビークは",
+              "g": "subject"
+            },
+            {
+              "t": "地",
+              "r": "じめ",
+              "g": "subject"
+            },
+            {
+              "t": "面",
+              "r": "ん",
+              "g": "subject"
+            },
+            {
+              "t": "を",
+              "g": "object"
+            },
+            {
+              "t": "前",
+              "r": "まえ",
+              "g": "attributive"
+            },
+            {
+              "t": "脚",
+              "r": "あし",
+              "g": "attributive"
+            },
+            {
+              "t": "でかき、",
+              "g": "adverbial"
+            },
+            {
+              "t": "鋭",
+              "r": "するど",
+              "g": "attributive"
+            },
+            {
+              "t": "い",
+              "g": "attributive"
+            },
+            {
+              "t": "頭",
+              "r": "あたま",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "g": "object"
+            },
+            {
+              "t": "振",
+              "r": "ふ",
+              "g": "attributive"
+            },
+            {
+              "t": "り",
+              "g": "attributive"
+            },
+            {
+              "t": "上",
+              "r": "あ",
+              "g": "attributive"
+            },
+            {
+              "t": "げた。",
+              "g": "complement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harry-potter-3-s025-p04011",
+      "source_en": "‘What happened to the other boy? Ron?’ said Sirius urgently.",
+      "units": [
+        {
+          "source_en": "‘What happened to the other boy? ",
+          "en": [
+            {
+              "t": "‘"
+            },
+            {
+              "t": "What",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "happened",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "to",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "other",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "boy",
+              "g": "adverbial"
+            },
+            {
+              "t": "?"
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "“"
+            },
+            {
+              "t": "另",
+              "r": "lìng",
+              "g": "subject"
+            },
+            {
+              "t": "外",
+              "r": "wài",
+              "g": "subject"
+            },
+            {
+              "t": "一",
+              "r": "yī",
+              "g": "attributive"
+            },
+            {
+              "t": "个",
+              "r": "gè",
+              "g": "attributive"
+            },
+            {
+              "t": "男",
+              "r": "nán",
+              "g": "attributive"
+            },
+            {
+              "t": "孩",
+              "r": "hái",
+              "g": "topic"
+            },
+            {
+              "t": "怎",
+              "r": "zěn",
+              "g": "object"
+            },
+            {
+              "t": "么",
+              "r": "me",
+              "g": "object"
+            },
+            {
+              "t": "样",
+              "r": "yàng",
+              "g": "object"
+            },
+            {
+              "t": "了",
+              "r": "le",
+              "g": "complement"
+            },
+            {
+              "t": "？"
+            }
+          ],
+          "ja": [
+            {
+              "t": "「もう",
+              "g": "predicate"
+            },
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "object"
+            },
+            {
+              "t": "人",
+              "r": "り",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "男",
+              "r": "おとこ",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "子",
+              "r": "のこ",
+              "g": "complement"
+            },
+            {
+              "t": "はどうなった？",
+              "g": "subject"
+            }
+          ]
+        },
+        {
+          "source_en": "Ron?’ ",
+          "en": [
+            {
+              "t": "Ron",
+              "g": "predicate"
+            },
+            {
+              "t": "?’"
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "罗",
+              "r": "luó",
+              "g": "subject"
+            },
+            {
+              "t": "恩",
+              "r": "ēn",
+              "g": "topic"
+            },
+            {
+              "t": "？”"
+            }
+          ],
+          "ja": [
+            {
+              "t": "ロンは？」",
+              "g": "subject"
+            }
+          ]
+        },
+        {
+          "source_en": "said Sirius urgently.",
+          "en": [
+            {
+              "t": "said",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Sirius",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "urgently",
+              "g": "object"
+            },
+            {
+              "t": "."
+            }
+          ],
+          "zh": [
+            {
+              "t": "布",
+              "r": "bù",
+              "g": "subject"
+            },
+            {
+              "t": "莱",
+              "r": "lái",
+              "g": "subject"
+            },
+            {
+              "t": "克",
+              "r": "kè",
+              "g": "attributive"
+            },
+            {
+              "t": "急",
+              "r": "jí",
+              "g": "attributive"
+            },
+            {
+              "t": "切",
+              "r": "qiè",
+              "g": "attributive"
+            },
+            {
+              "t": "地",
+              "r": "dì",
+              "g": "attributive"
+            },
+            {
+              "t": "问",
+              "r": "wèn",
+              "g": "predicate"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "シリウスが",
+              "g": "subject"
+            },
+            {
+              "t": "切",
+              "r": "せっ",
+              "g": "subject"
+            },
+            {
+              "t": "迫",
+              "r": "ぱく",
+              "g": "attributive"
+            },
+            {
+              "t": "した",
+              "g": "predicate"
+            },
+            {
+              "t": "声",
+              "r": "こえ",
+              "g": "object"
+            },
+            {
+              "t": "で",
+              "g": "adverbial"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "complement"
+            },
+            {
+              "t": "った。",
+              "g": "complement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harry-potter-3-s025-p04012",
+      "source_en": "‘He’s going to be OK – he’s still out of it, but Madam Pomfrey says she’ll be able to make him better. Quick – go!’",
+      "units": [
+        {
+          "source_en": "‘He’s going to be OK – he’s still out of it, but Madam Pomfrey says she’ll be able to make him better. ",
+          "en": [
+            {
+              "t": "‘"
+            },
+            {
+              "t": "He’s",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "going",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "to",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "be",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "OK",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "–"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "he’s",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "still",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "out",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "it",
+              "g": "object"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "but",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Madam",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Pomfrey",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "says",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "she’ll",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "be",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "able",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "to",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "make",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "him",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "better",
+              "g": "object"
+            },
+            {
+              "t": "."
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "“"
+            },
+            {
+              "t": "他",
+              "r": "tā",
+              "g": "subject"
+            },
+            {
+              "t": "会",
+              "r": "huì",
+              "g": "subject"
+            },
+            {
+              "t": "没",
+              "r": "méi",
+              "g": "subject"
+            },
+            {
+              "t": "事",
+              "r": "shì",
+              "g": "subject"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "——"
+            },
+            {
+              "t": "他",
+              "r": "tā",
+              "g": "attributive"
+            },
+            {
+              "t": "还",
+              "r": "hái",
+              "g": "adverbial"
+            },
+            {
+              "t": "不",
+              "r": "bù",
+              "g": "attributive"
+            },
+            {
+              "t": "很",
+              "r": "hěn",
+              "g": "attributive"
+            },
+            {
+              "t": "好",
+              "r": "hǎo",
+              "g": "attributive"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "但",
+              "r": "dàn",
+              "g": "attributive"
+            },
+            {
+              "t": "是",
+              "r": "shì",
+              "g": "predicate"
+            },
+            {
+              "t": "庞",
+              "r": "páng",
+              "g": "object"
+            },
+            {
+              "t": "弗",
+              "r": "fú",
+              "g": "object"
+            },
+            {
+              "t": "雷",
+              "r": "léi",
+              "g": "object"
+            },
+            {
+              "t": "夫",
+              "r": "fū",
+              "g": "object"
+            },
+            {
+              "t": "人",
+              "r": "rén",
+              "g": "object"
+            },
+            {
+              "t": "说",
+              "r": "shuō",
+              "g": "predicate"
+            },
+            {
+              "t": "她",
+              "r": "tā",
+              "g": "object"
+            },
+            {
+              "t": "能",
+              "r": "néng",
+              "g": "object"
+            },
+            {
+              "t": "够",
+              "r": "gòu",
+              "g": "object"
+            },
+            {
+              "t": "让",
+              "r": "ràng",
+              "g": "object"
+            },
+            {
+              "t": "他",
+              "r": "tā",
+              "g": "object"
+            },
+            {
+              "t": "好",
+              "r": "hǎo",
+              "g": "object"
+            },
+            {
+              "t": "一",
+              "r": "yī",
+              "g": "object"
+            },
+            {
+              "t": "点",
+              "r": "diǎn",
+              "g": "object"
+            },
+            {
+              "t": "儿",
+              "r": "ér",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "「"
+            },
+            {
+              "t": "大",
+              "r": "だい",
+              "g": "subject"
+            },
+            {
+              "t": "丈",
+              "r": "じょ",
+              "g": "subject"
+            },
+            {
+              "t": "夫",
+              "r": "うぶ",
+              "g": "subject"
+            },
+            {
+              "t": "だよ。まだ",
+              "g": "predicate"
+            },
+            {
+              "t": "意",
+              "r": "い",
+              "g": "object"
+            },
+            {
+              "t": "識",
+              "r": "しき",
+              "g": "object"
+            },
+            {
+              "t": "は",
+              "g": "subject"
+            },
+            {
+              "t": "戻",
+              "r": "もど",
+              "g": "object"
+            },
+            {
+              "t": "っていないけど、マダム・ポンフリーが",
+              "g": "subject"
+            },
+            {
+              "t": "治",
+              "r": "なお",
+              "g": "object"
+            },
+            {
+              "t": "せるって",
+              "g": "complement"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "complement"
+            },
+            {
+              "t": "っていた。",
+              "g": "complement"
+            }
+          ]
+        },
+        {
+          "source_en": "Quick – go!’",
+          "en": [
+            {
+              "t": "Quick",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "–"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "go",
+              "g": "predicate"
+            },
+            {
+              "t": "!’"
+            }
+          ],
+          "zh": [
+            {
+              "t": "快",
+              "r": "kuài",
+              "g": "subject"
+            },
+            {
+              "t": "——"
+            },
+            {
+              "t": "走",
+              "r": "zǒu",
+              "g": "predicate"
+            },
+            {
+              "t": "吧",
+              "r": "ba",
+              "g": "object"
+            },
+            {
+              "t": "！”"
+            }
+          ],
+          "ja": [
+            {
+              "t": "早",
+              "r": "はや",
+              "g": "subject"
+            },
+            {
+              "t": "く、",
+              "g": "attributive"
+            },
+            {
+              "t": "行",
+              "r": "い",
+              "g": "attributive"
+            },
+            {
+              "t": "って！」",
+              "g": "complement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harry-potter-3-s025-p04013",
+      "source_en": "But Black was still staring down at Harry.",
+      "units": [
+        {
+          "source_en": "But Black was still staring down at Harry.",
+          "en": [
+            {
+              "t": "But",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Black",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "was",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "still",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "staring",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "down",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "at",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Harry",
+              "g": "adverbial"
+            },
+            {
+              "t": "."
+            }
+          ],
+          "zh": [
+            {
+              "t": "但",
+              "r": "dàn",
+              "g": "subject"
+            },
+            {
+              "t": "是",
+              "r": "shì",
+              "g": "predicate"
+            },
+            {
+              "t": "布",
+              "r": "bù",
+              "g": "object"
+            },
+            {
+              "t": "莱",
+              "r": "lái",
+              "g": "object"
+            },
+            {
+              "t": "克",
+              "r": "kè",
+              "g": "object"
+            },
+            {
+              "t": "还",
+              "r": "hái",
+              "g": "adverbial"
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "注",
+              "r": "zhù",
+              "g": "object"
+            },
+            {
+              "t": "视",
+              "r": "shì",
+              "g": "object"
+            },
+            {
+              "t": "着",
+              "r": "zhe",
+              "g": "complement"
+            },
+            {
+              "t": "哈",
+              "r": "hā",
+              "g": "object"
+            },
+            {
+              "t": "利",
+              "r": "lì",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "しかしブラックはまだハリーを",
+              "g": "subject"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "attributive"
+            },
+            {
+              "t": "下",
+              "r": "お",
+              "g": "attributive"
+            },
+            {
+              "t": "ろしていた。",
+              "g": "complement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harry-potter-3-s025-p04014",
+      "source_en": "‘How can I ever thank –’",
+      "units": [
+        {
+          "source_en": "‘How can I ever thank –’",
+          "en": [
+            {
+              "t": "‘"
+            },
+            {
+              "t": "How",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "can",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "I",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "ever",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "thank",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "–’"
+            }
+          ],
+          "zh": [
+            {
+              "t": "“"
+            },
+            {
+              "t": "我",
+              "r": "wǒ",
+              "g": "subject"
+            },
+            {
+              "t": "怎",
+              "r": "zěn",
+              "g": "subject"
+            },
+            {
+              "t": "么",
+              "r": "me",
+              "g": "attributive"
+            },
+            {
+              "t": "感",
+              "r": "gǎn",
+              "g": "predicate"
+            },
+            {
+              "t": "谢",
+              "r": "xiè",
+              "g": "object"
+            },
+            {
+              "t": "你",
+              "r": "nǐ",
+              "g": "object"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "object"
+            },
+            {
+              "t": "——”"
+            }
+          ],
+          "ja": [
+            {
+              "t": "「どうやって",
+              "g": "subject"
+            },
+            {
+              "t": "礼",
+              "r": "れい",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "g": "object"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "attributive"
+            },
+            {
+              "t": "えばいいのか――」",
+              "g": "attributive"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harry-potter-3-s025-p04015",
+      "source_en": "‘GO!’ Harry and Hermione shouted together.",
+      "units": [
+        {
+          "source_en": "‘GO!’ ",
+          "en": [
+            {
+              "t": "‘"
+            },
+            {
+              "t": "GO",
+              "g": "predicate"
+            },
+            {
+              "t": "!’"
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "“"
+            },
+            {
+              "t": "走",
+              "r": "zǒu",
+              "g": "predicate"
+            },
+            {
+              "t": "吧",
+              "r": "ba",
+              "g": "object"
+            },
+            {
+              "t": "！”"
+            }
+          ],
+          "ja": [
+            {
+              "t": "「"
+            },
+            {
+              "t": "行",
+              "r": "い",
+              "g": "subject"
+            },
+            {
+              "t": "って！」",
+              "g": "complement"
+            }
+          ]
+        },
+        {
+          "source_en": "Harry and Hermione shouted together.",
+          "en": [
+            {
+              "t": "Harry",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Hermione",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "shouted",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "together",
+              "g": "object"
+            },
+            {
+              "t": "."
+            }
+          ],
+          "zh": [
+            {
+              "t": "哈",
+              "r": "hā",
+              "g": "subject"
+            },
+            {
+              "t": "利",
+              "r": "lì",
+              "g": "subject"
+            },
+            {
+              "t": "和",
+              "r": "hé",
+              "g": "attributive"
+            },
+            {
+              "t": "赫",
+              "r": "hè",
+              "g": "attributive"
+            },
+            {
+              "t": "敏",
+              "r": "mǐn",
+              "g": "attributive"
+            },
+            {
+              "t": "一",
+              "r": "yī",
+              "g": "attributive"
+            },
+            {
+              "t": "起",
+              "r": "qǐ",
+              "g": "predicate"
+            },
+            {
+              "t": "叫",
+              "r": "jiào",
+              "g": "predicate"
+            },
+            {
+              "t": "道",
+              "r": "dào",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "ハリーとハーマイオニーは",
+              "g": "subject"
+            },
+            {
+              "t": "同",
+              "r": "どう",
+              "g": "subject"
+            },
+            {
+              "t": "時",
+              "r": "じ",
+              "g": "attributive"
+            },
+            {
+              "t": "に",
+              "g": "adverbial"
+            },
+            {
+              "t": "叫",
+              "r": "さけ",
+              "g": "attributive"
+            },
+            {
+              "t": "んだ。",
+              "g": "complement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harry-potter-3-s025-p04016",
+      "source_en": "Black wheeled Buckbeak around, facing the open sky.",
+      "units": [
+        {
+          "source_en": "Black wheeled Buckbeak around, facing the open sky.",
+          "en": [
+            {
+              "t": "Black",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "wheeled",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Buckbeak",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "around",
+              "g": "adverbial"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "facing",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "open",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "sky",
+              "g": "object"
+            },
+            {
+              "t": "."
+            }
+          ],
+          "zh": [
+            {
+              "t": "布",
+              "r": "bù",
+              "g": "subject"
+            },
+            {
+              "t": "莱",
+              "r": "lái",
+              "g": "subject"
+            },
+            {
+              "t": "克",
+              "r": "kè",
+              "g": "subject"
+            },
+            {
+              "t": "让",
+              "r": "ràng",
+              "g": "attributive"
+            },
+            {
+              "t": "巴",
+              "r": "bā",
+              "g": "attributive"
+            },
+            {
+              "t": "克",
+              "r": "kè",
+              "g": "attributive"
+            },
+            {
+              "t": "比",
+              "r": "bǐ",
+              "g": "attributive"
+            },
+            {
+              "t": "克",
+              "r": "kè",
+              "g": "topic"
+            },
+            {
+              "t": "调",
+              "r": "diào",
+              "g": "object"
+            },
+            {
+              "t": "转",
+              "r": "zhuǎn",
+              "g": "object"
+            },
+            {
+              "t": "头",
+              "r": "tóu",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "面",
+              "r": "miàn",
+              "g": "object"
+            },
+            {
+              "t": "向",
+              "r": "xiàng",
+              "g": "adverbial"
+            },
+            {
+              "t": "天",
+              "r": "tiān",
+              "g": "object"
+            },
+            {
+              "t": "空",
+              "r": "kōng",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "ブラックはバックビークの",
+              "g": "subject"
+            },
+            {
+              "t": "向",
+              "r": "む",
+              "g": "subject"
+            },
+            {
+              "t": "きを",
+              "g": "object"
+            },
+            {
+              "t": "変",
+              "r": "か",
+              "g": "attributive"
+            },
+            {
+              "t": "え、",
+              "g": "attributive"
+            },
+            {
+              "t": "開",
+              "r": "ひら",
+              "g": "attributive"
+            },
+            {
+              "t": "けた",
+              "g": "predicate"
+            },
+            {
+              "t": "空",
+              "r": "そら",
+              "g": "object"
+            },
+            {
+              "t": "へ",
+              "g": "adverbial"
+            },
+            {
+              "t": "向",
+              "r": "む",
+              "g": "complement"
+            },
+            {
+              "t": "かせた。",
+              "g": "complement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harry-potter-3-s025-p04017",
+      "source_en": "‘We’ll see each other again,’ he said. ‘You are – truly your father’s son, Harry …’",
+      "units": [
+        {
+          "source_en": "‘We’ll see each other again,’ he said. ",
+          "en": [
+            {
+              "t": "‘"
+            },
+            {
+              "t": "We’ll",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "see",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "each",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "other",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "again",
+              "g": "object"
+            },
+            {
+              "t": ",’"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "he",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "said",
+              "g": "predicate"
+            },
+            {
+              "t": "."
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "“"
+            },
+            {
+              "t": "我",
+              "r": "wǒ",
+              "g": "subject"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "subject"
+            },
+            {
+              "t": "会",
+              "r": "huì",
+              "g": "attributive"
+            },
+            {
+              "t": "再",
+              "r": "zài",
+              "g": "attributive"
+            },
+            {
+              "t": "见",
+              "r": "jiàn",
+              "g": "attributive"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "，”"
+            },
+            {
+              "t": "他",
+              "r": "tā",
+              "g": "attributive"
+            },
+            {
+              "t": "说",
+              "r": "shuō",
+              "g": "predicate"
+            },
+            {
+              "t": "，"
+            }
+          ],
+          "ja": [
+            {
+              "t": "「また",
+              "g": "predicate"
+            },
+            {
+              "t": "会",
+              "r": "あ",
+              "g": "object"
+            },
+            {
+              "t": "える」",
+              "g": "object"
+            },
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "object"
+            },
+            {
+              "t": "は",
+              "g": "subject"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "complement"
+            },
+            {
+              "t": "った。",
+              "g": "complement"
+            }
+          ]
+        },
+        {
+          "source_en": "‘You are – truly your father’s son, Harry …’",
+          "en": [
+            {
+              "t": "‘"
+            },
+            {
+              "t": "You",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "are",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "–"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "truly",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "your",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "father’s",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "son",
+              "g": "object"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Harry",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "…’"
+            }
+          ],
+          "zh": [
+            {
+              "t": "“"
+            },
+            {
+              "t": "你",
+              "r": "nǐ",
+              "g": "subject"
+            },
+            {
+              "t": "是",
+              "r": "shì",
+              "g": "predicate"
+            },
+            {
+              "t": "——"
+            },
+            {
+              "t": "你",
+              "r": "nǐ",
+              "g": "object"
+            },
+            {
+              "t": "真",
+              "r": "zhēn",
+              "g": "object"
+            },
+            {
+              "t": "是",
+              "r": "shì",
+              "g": "predicate"
+            },
+            {
+              "t": "你",
+              "r": "nǐ",
+              "g": "object"
+            },
+            {
+              "t": "爸",
+              "r": "bà",
+              "g": "object"
+            },
+            {
+              "t": "爸",
+              "r": "bà",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "好",
+              "r": "hǎo",
+              "g": "object"
+            },
+            {
+              "t": "儿",
+              "r": "ér",
+              "g": "object"
+            },
+            {
+              "t": "子",
+              "r": "zi",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "哈",
+              "r": "hā",
+              "g": "object"
+            },
+            {
+              "t": "利",
+              "r": "lì",
+              "g": "object"
+            },
+            {
+              "t": "。”"
+            }
+          ],
+          "ja": [
+            {
+              "t": "「"
+            },
+            {
+              "t": "君",
+              "r": "くん",
+              "g": "subject"
+            },
+            {
+              "t": "は、",
+              "g": "subject"
+            },
+            {
+              "t": "本",
+              "r": "ほん",
+              "g": "subject"
+            },
+            {
+              "t": "当",
+              "r": "とう",
+              "g": "attributive"
+            },
+            {
+              "t": "に",
+              "g": "adverbial"
+            },
+            {
+              "t": "君",
+              "r": "くん",
+              "g": "attributive"
+            },
+            {
+              "t": "のお",
+              "g": "attributive"
+            },
+            {
+              "t": "父",
+              "r": "とう",
+              "g": "attributive"
+            },
+            {
+              "t": "さんの",
+              "g": "attributive"
+            },
+            {
+              "t": "息",
+              "r": "むす",
+              "g": "attributive"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "attributive"
+            },
+            {
+              "t": "だよ、ハリー……」",
+              "g": "complement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harry-potter-3-s025-p04018",
+      "source_en": "He squeezed Buckbeak’s sides with his heels. Harry and Hermione jumped back as the enormous wings rose once more … the Hippogriff took off into the air … he and his rider became smaller and smaller as Harry gazed after them … then a cloud drifted across the moon … they were gone.",
+      "units": [
+        {
+          "source_en": "He squeezed Buckbeak’s sides with his heels. ",
+          "en": [
+            {
+              "t": "He",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "squeezed",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Buckbeak’s",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "sides",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "with",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "his",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "heels",
+              "g": "adverbial"
+            },
+            {
+              "t": "."
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "他",
+              "r": "tā",
+              "g": "subject"
+            },
+            {
+              "t": "用",
+              "r": "yòng",
+              "g": "subject"
+            },
+            {
+              "t": "脚",
+              "r": "jiǎo",
+              "g": "attributive"
+            },
+            {
+              "t": "跟",
+              "r": "gēn",
+              "g": "attributive"
+            },
+            {
+              "t": "夹",
+              "r": "jiā",
+              "g": "attributive"
+            },
+            {
+              "t": "了",
+              "r": "le",
+              "g": "predicate"
+            },
+            {
+              "t": "夹",
+              "r": "jiā",
+              "g": "attributive"
+            },
+            {
+              "t": "巴",
+              "r": "bā",
+              "g": "topic"
+            },
+            {
+              "t": "克",
+              "r": "kè",
+              "g": "object"
+            },
+            {
+              "t": "比",
+              "r": "bǐ",
+              "g": "object"
+            },
+            {
+              "t": "克",
+              "r": "kè",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "两",
+              "r": "liǎng",
+              "g": "object"
+            },
+            {
+              "t": "胁",
+              "r": "xié",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "はかかとでバックビークの",
+              "g": "subject"
+            },
+            {
+              "t": "脇",
+              "r": "わき",
+              "g": "attributive"
+            },
+            {
+              "t": "腹",
+              "r": "ばら",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "g": "object"
+            },
+            {
+              "t": "締",
+              "r": "し",
+              "g": "attributive"
+            },
+            {
+              "t": "めた。",
+              "g": "complement"
+            }
+          ]
+        },
+        {
+          "source_en": "Harry and Hermione jumped back as the enormous wings rose once more … the Hippogriff took off into the air … he and his rider became smaller and smaller as Harry gazed after them … then a cloud drifted across the moon … they were gone.",
+          "en": [
+            {
+              "t": "Harry",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Hermione",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "jumped",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "back",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "as",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "enormous",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "wings",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "rose",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "once",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "more",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "…"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Hippogriff",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "took",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "off",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "into",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "air",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "…"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "he",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "his",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "rider",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "became",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "smaller",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "smaller",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "as",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Harry",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "gazed",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "after",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "them",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "…"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "then",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "a",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "cloud",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "drifted",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "across",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "moon",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "…"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "they",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "were",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "gone",
+              "g": "predicate"
+            },
+            {
+              "t": "."
+            }
+          ],
+          "zh": [
+            {
+              "t": "巨",
+              "r": "jù",
+              "g": "subject"
+            },
+            {
+              "t": "大",
+              "r": "dà",
+              "g": "subject"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "双",
+              "r": "shuāng",
+              "g": "subject"
+            },
+            {
+              "t": "翼",
+              "r": "yì",
+              "g": "subject"
+            },
+            {
+              "t": "再",
+              "r": "zài",
+              "g": "subject"
+            },
+            {
+              "t": "次",
+              "r": "cì",
+              "g": "subject"
+            },
+            {
+              "t": "展",
+              "r": "zhǎn",
+              "g": "subject"
+            },
+            {
+              "t": "开",
+              "r": "kāi",
+              "g": "predicate"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "哈",
+              "r": "hā",
+              "g": "subject"
+            },
+            {
+              "t": "利",
+              "r": "lì",
+              "g": "subject"
+            },
+            {
+              "t": "和",
+              "r": "hé",
+              "g": "subject"
+            },
+            {
+              "t": "赫",
+              "r": "hè",
+              "g": "subject"
+            },
+            {
+              "t": "敏",
+              "r": "mǐn",
+              "g": "attributive"
+            },
+            {
+              "t": "连",
+              "r": "lián",
+              "g": "attributive"
+            },
+            {
+              "t": "忙",
+              "r": "máng",
+              "g": "attributive"
+            },
+            {
+              "t": "向",
+              "r": "xiàng",
+              "g": "adverbial"
+            },
+            {
+              "t": "后",
+              "r": "hòu",
+              "g": "attributive"
+            },
+            {
+              "t": "跳",
+              "r": "tiào",
+              "g": "attributive"
+            },
+            {
+              "t": "去",
+              "r": "qù",
+              "g": "complement"
+            },
+            {
+              "t": "……"
+            },
+            {
+              "t": "那",
+              "r": "nà",
+              "g": "object"
+            },
+            {
+              "t": "鹰",
+              "r": "yīng",
+              "g": "object"
+            },
+            {
+              "t": "头",
+              "r": "tóu",
+              "g": "object"
+            },
+            {
+              "t": "马",
+              "r": "mǎ",
+              "g": "object"
+            },
+            {
+              "t": "身",
+              "r": "shēn",
+              "g": "object"
+            },
+            {
+              "t": "有",
+              "r": "yǒu",
+              "g": "predicate"
+            },
+            {
+              "t": "翼",
+              "r": "yì",
+              "g": "object"
+            },
+            {
+              "t": "兽",
+              "r": "shòu",
+              "g": "object"
+            },
+            {
+              "t": "飞",
+              "r": "fēi",
+              "g": "object"
+            },
+            {
+              "t": "上",
+              "r": "shàng",
+              "g": "complement"
+            },
+            {
+              "t": "了",
+              "r": "le",
+              "g": "complement"
+            },
+            {
+              "t": "天",
+              "r": "tiān",
+              "g": "object"
+            },
+            {
+              "t": "空",
+              "r": "kōng",
+              "g": "object"
+            },
+            {
+              "t": "……"
+            },
+            {
+              "t": "哈",
+              "r": "hā",
+              "g": "object"
+            },
+            {
+              "t": "利",
+              "r": "lì",
+              "g": "object"
+            },
+            {
+              "t": "目",
+              "r": "mù",
+              "g": "object"
+            },
+            {
+              "t": "送",
+              "r": "sòng",
+              "g": "object"
+            },
+            {
+              "t": "着",
+              "r": "zhe",
+              "g": "complement"
+            },
+            {
+              "t": "他",
+              "r": "tā",
+              "g": "object"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "但",
+              "r": "dàn",
+              "g": "object"
+            },
+            {
+              "t": "见",
+              "r": "jiàn",
+              "g": "object"
+            },
+            {
+              "t": "它",
+              "r": "tā",
+              "g": "object"
+            },
+            {
+              "t": "和",
+              "r": "hé",
+              "g": "object"
+            },
+            {
+              "t": "骑",
+              "r": "qí",
+              "g": "object"
+            },
+            {
+              "t": "它",
+              "r": "tā",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "人",
+              "r": "rén",
+              "g": "object"
+            },
+            {
+              "t": "越",
+              "r": "yuè",
+              "g": "object"
+            },
+            {
+              "t": "来",
+              "r": "lái",
+              "g": "complement"
+            },
+            {
+              "t": "越",
+              "r": "yuè",
+              "g": "object"
+            },
+            {
+              "t": "小",
+              "r": "xiǎo",
+              "g": "object"
+            },
+            {
+              "t": "……"
+            },
+            {
+              "t": "然",
+              "r": "rán",
+              "g": "adverbial"
+            },
+            {
+              "t": "后",
+              "r": "hòu",
+              "g": "object"
+            },
+            {
+              "t": "一",
+              "r": "yī",
+              "g": "object"
+            },
+            {
+              "t": "朵",
+              "r": "duǒ",
+              "g": "object"
+            },
+            {
+              "t": "浮",
+              "r": "fú",
+              "g": "object"
+            },
+            {
+              "t": "云",
+              "r": "yún",
+              "g": "object"
+            },
+            {
+              "t": "掩",
+              "r": "yǎn",
+              "g": "object"
+            },
+            {
+              "t": "住",
+              "r": "zhù",
+              "g": "complement"
+            },
+            {
+              "t": "了",
+              "r": "le",
+              "g": "complement"
+            },
+            {
+              "t": "月",
+              "r": "yuè",
+              "g": "object"
+            },
+            {
+              "t": "亮",
+              "r": "liàng",
+              "g": "object"
+            },
+            {
+              "t": "……"
+            },
+            {
+              "t": "他",
+              "r": "tā",
+              "g": "object"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "object"
+            },
+            {
+              "t": "走",
+              "r": "zǒu",
+              "g": "predicate"
+            },
+            {
+              "t": "了",
+              "r": "le",
+              "g": "complement"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "巨",
+              "r": "きょ",
+              "g": "subject"
+            },
+            {
+              "t": "大",
+              "r": "だい",
+              "g": "subject"
+            },
+            {
+              "t": "な",
+              "g": "subject"
+            },
+            {
+              "t": "翼",
+              "r": "つばさ",
+              "g": "subject"
+            },
+            {
+              "t": "がもう",
+              "g": "subject"
+            },
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "object"
+            },
+            {
+              "t": "度",
+              "r": "ど",
+              "g": "object"
+            },
+            {
+              "t": "持",
+              "r": "も",
+              "g": "object"
+            },
+            {
+              "t": "ち",
+              "g": "object"
+            },
+            {
+              "t": "上",
+              "r": "あ",
+              "g": "object"
+            },
+            {
+              "t": "がり、ハリーとハーマイオニーは",
+              "g": "subject"
+            },
+            {
+              "t": "飛",
+              "r": "と",
+              "g": "object"
+            },
+            {
+              "t": "びのいた……ヒッポグリフは",
+              "g": "subject"
+            },
+            {
+              "t": "空",
+              "r": "そら",
+              "g": "object"
+            },
+            {
+              "t": "へ",
+              "g": "adverbial"
+            },
+            {
+              "t": "飛",
+              "r": "と",
+              "g": "object"
+            },
+            {
+              "t": "び",
+              "g": "object"
+            },
+            {
+              "t": "立",
+              "r": "た",
+              "g": "object"
+            },
+            {
+              "t": "った……ハリーが",
+              "g": "subject"
+            },
+            {
+              "t": "見",
+              "r": "みお",
+              "g": "object"
+            },
+            {
+              "t": "送",
+              "r": "く",
+              "g": "object"
+            },
+            {
+              "t": "るうちに、ヒッポグリフと",
+              "g": "adverbial"
+            },
+            {
+              "t": "乗",
+              "r": "の",
+              "g": "object"
+            },
+            {
+              "t": "り",
+              "g": "object"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "object"
+            },
+            {
+              "t": "はどんどん",
+              "g": "subject"
+            },
+            {
+              "t": "小",
+              "r": "ちー",
+              "g": "object"
+            },
+            {
+              "t": "さくなっていった……やがて",
+              "g": "subject"
+            },
+            {
+              "t": "雲",
+              "r": "くも",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "g": "subject"
+            },
+            {
+              "t": "月",
+              "r": "がつ",
+              "g": "complement"
+            },
+            {
+              "t": "を",
+              "g": "object"
+            },
+            {
+              "t": "横",
+              "r": "よこ",
+              "g": "complement"
+            },
+            {
+              "t": "切",
+              "r": "ぎ",
+              "g": "complement"
+            },
+            {
+              "t": "り……",
+              "g": "complement"
+            },
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "complement"
+            },
+            {
+              "t": "らは",
+              "g": "subject"
+            },
+            {
+              "t": "消",
+              "r": "き",
+              "g": "complement"
+            },
+            {
+              "t": "えた。",
+              "g": "complement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harry-potter-3-s025-p04019",
+      "source_en": "Harry Potter And The Prisoner of Azkaban",
+      "units": [
+        {
+          "source_en": "Harry Potter And The Prisoner of Azkaban",
+          "en": [
+            {
+              "t": "Harry",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Potter",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "And",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "The",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Prisoner",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Azkaban",
+              "g": "object"
+            }
+          ],
+          "zh": [
+            {
+              "t": "哈",
+              "r": "hā",
+              "g": "subject"
+            },
+            {
+              "t": "利",
+              "r": "lì",
+              "g": "subject"
+            },
+            {
+              "t": "·"
+            },
+            {
+              "t": "波",
+              "r": "bō",
+              "g": "attributive"
+            },
+            {
+              "t": "特",
+              "r": "tè",
+              "g": "attributive"
+            },
+            {
+              "t": "与",
+              "r": "yǔ",
+              "g": "attributive"
+            },
+            {
+              "t": "阿",
+              "r": "ā",
+              "g": "attributive"
+            },
+            {
+              "t": "兹",
+              "r": "zī",
+              "g": "topic"
+            },
+            {
+              "t": "卡",
+              "r": "kǎ",
+              "g": "object"
+            },
+            {
+              "t": "班",
+              "r": "bān",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "囚",
+              "r": "qiú",
+              "g": "object"
+            },
+            {
+              "t": "徒",
+              "r": "tú",
+              "g": "object"
+            }
+          ],
+          "ja": [
+            {
+              "t": "ハリー・ポッターとアズカバンの",
+              "g": "adverbial"
+            },
+            {
+              "t": "囚",
+              "r": "しゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "complement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harry-potter-3-s025-p04020",
+      "source_en": "Harry Potter And The Prisoner of Azkaban",
+      "units": [
+        {
+          "source_en": "Harry Potter And The Prisoner of Azkaban",
+          "en": [
+            {
+              "t": "Harry",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Potter",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "And",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "The",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Prisoner",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Azkaban",
+              "g": "object"
+            }
+          ],
+          "zh": [
+            {
+              "t": "哈",
+              "r": "hā",
+              "g": "subject"
+            },
+            {
+              "t": "利",
+              "r": "lì",
+              "g": "subject"
+            },
+            {
+              "t": "·"
+            },
+            {
+              "t": "波",
+              "r": "bō",
+              "g": "attributive"
+            },
+            {
+              "t": "特",
+              "r": "tè",
+              "g": "attributive"
+            },
+            {
+              "t": "与",
+              "r": "yǔ",
+              "g": "attributive"
+            },
+            {
+              "t": "阿",
+              "r": "ā",
+              "g": "attributive"
+            },
+            {
+              "t": "兹",
+              "r": "zī",
+              "g": "topic"
+            },
+            {
+              "t": "卡",
+              "r": "kǎ",
+              "g": "object"
+            },
+            {
+              "t": "班",
+              "r": "bān",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "囚",
+              "r": "qiú",
+              "g": "object"
+            },
+            {
+              "t": "徒",
+              "r": "tú",
+              "g": "object"
+            }
+          ],
+          "ja": [
+            {
+              "t": "ハリー・ポッターとアズカバンの",
+              "g": "adverbial"
+            },
+            {
+              "t": "囚",
+              "r": "しゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "complement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "harry-potter-3-s025-p04021",
+      "source_en": "Harry Potter And The Prisoner of Azkaban",
+      "units": [
+        {
+          "source_en": "Harry Potter And The Prisoner of Azkaban",
+          "en": [
+            {
+              "t": "Harry",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Potter",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "And",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "The",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Prisoner",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Azkaban",
+              "g": "object"
+            }
+          ],
+          "zh": [
+            {
+              "t": "哈",
+              "r": "hā",
+              "g": "subject"
+            },
+            {
+              "t": "利",
+              "r": "lì",
+              "g": "subject"
+            },
+            {
+              "t": "·"
+            },
+            {
+              "t": "波",
+              "r": "bō",
+              "g": "attributive"
+            },
+            {
+              "t": "特",
+              "r": "tè",
+              "g": "attributive"
+            },
+            {
+              "t": "与",
+              "r": "yǔ",
+              "g": "attributive"
+            },
+            {
+              "t": "阿",
+              "r": "ā",
+              "g": "attributive"
+            },
+            {
+              "t": "兹",
+              "r": "zī",
+              "g": "topic"
+            },
+            {
+              "t": "卡",
+              "r": "kǎ",
+              "g": "object"
+            },
+            {
+              "t": "班",
+              "r": "bān",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "囚",
+              "r": "qiú",
+              "g": "object"
+            },
+            {
+              "t": "徒",
+              "r": "tú",
+              "g": "object"
+            }
+          ],
+          "ja": [
+            {
+              "t": "ハリー・ポッターとアズカバンの",
+              "g": "adverbial"
+            },
+            {
+              "t": "囚",
+              "r": "しゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "complement"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
