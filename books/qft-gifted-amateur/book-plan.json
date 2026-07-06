@@ -54,6 +54,7 @@
   "body_start_page": 2,
   "content_page_count": 503,
   "mathpix_required_page_count": 503,
+  "preservation_rules": "references/TECHNICAL_TEXTBOOK_TEX_PRESERVATION_RULES_2026-07-06.md",
   "task_contract": {
     "first_artifact": "open-source pocket facsimile TeX/PDF preserving original formulas and tables visually",
     "preferred_ocr": "Do not run OCR just to get an exact readable pocket PDF. Use scripts/interlinear/compile_textbook_facsimile_pocket.py first. For editable/reflowed TeX, use Mathpix v3/pdf or targeted page OCR only after the facsimile exists and only for pages that need retyping.",

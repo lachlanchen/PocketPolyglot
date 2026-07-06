@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "batch_id": "music-theory-guitar-source-batch",
+  "status": "sources_synced_tasks_prepared_not_started",
+  "prepared_at": "2026-07-06T04:08:00+00:00",
+  "resource_root": "resources/curated-books/music-theory-and-guitar",
+  "generation_policy": [
+    "Modern copyrighted textbook sources are local study references only.",
+    "Do not generate a full-text republication from the PDFs for public distribution.",
+    "Preferred output is a private PocketPolyglot study-note book: original explanations, terminology tables, concise legal quotations only where necessary, and newly written exercises.",
+    "Preserve formulas, diagrams, chord symbols, scale degrees, fretboard examples, and table structure when creating private study notes.",
+    "For guitar technique and music-theory material, keep notation examples, staff fragments, rhythm grids, fretboard diagrams, chord charts, figures, captions, and exercises as structured TeX/figure assets.",
+    "Do not replace technical examples with prose-only summaries; every figure/equation/diagram/table needed for learning must be represented or explicitly marked for manual review.",
+    "Use English as the study spine for the two prepared tasks; use Japanese and Chinese sources as terminology/reference material."
+  ],
+  "source_inventory": [
+    {
+      "title": "Music Theory for Guitarists: Everything You Ever Wanted to Know But Were Afraid to Ask",
+      "language": "en",
+      "role": "recommended primary task",
+      "path": "resources/curated-books/music-theory-and-guitar/recommended/tom-kolb/en/Music Theory for Guitarists_ Everything You Ever Wanted to Know But Were Afraid to Ask.pdf"
+    },
+    {
+      "title": "Berklee Music Theory Book 1",
+      "language": "en",
+      "role": "recommended primary task",
+      "path": "resources/curated-books/music-theory-and-guitar/recommended/berklee/en/Berklee Music Theory Book 1.pdf"
+    },
+    {
+      "title": "Berklee Practice Method: Guitar",
+      "language": "en",
+      "role": "exercise reference",
+      "path": "resources/curated-books/music-theory-and-guitar/berklee-guitar-method/en/Berklee Practice Method_ Guitar.pdf"
+    },
+    {
+      "title": "A Modern Method for Guitar - Volume 1",
+      "language": "en",
+      "role": "exercise reference",
+      "path": "resources/curated-books/music-theory-and-guitar/berklee-guitar-method/en/A Modern Method for Guitar - Volume 1.pdf"
+    },
+    {
+      "title": "A Modern Method for Guitar - Volume 2",
+      "language": "en",
+      "role": "exercise reference",
+      "path": "resources/curated-books/music-theory-and-guitar/berklee-guitar-method/en/A Modern Method for Guitar - Volume 2.pdf"
+    },
+    {
+      "title": "マンガでわかる!音楽理論",
+      "language": "ja",
+      "role": "Japanese terminology/reference",
+      "path": "resources/curated-books/music-theory-and-guitar/ja/music-theory/マンガでわかる!音楽理論.pdf"
+    },
+    {
+      "title": "楽典 音楽の基礎から和声へ",
+      "language": "ja",
+      "role": "Japanese terminology/reference",
+      "path": "resources/curated-books/music-theory-and-guitar/ja/music-theory/楽典 音楽の基礎から和声へ.pdf"
+    },
+    {
+      "title": "カラー 図解音楽事典 dtv-Atlas zur Musik",
+      "language": "ja",
+      "role": "Japanese terminology/reference",
+      "path": "resources/curated-books/music-theory-and-guitar/ja/music-theory/カラー 図解音楽事典 dtv-Atlas zur Musik.pdf"
+    },
+    {
+      "title": "コード編曲法 ~藤巻メソッド~ Chord Arrange -FUJIMAKI Method-",
+      "language": "ja",
+      "role": "Japanese chord-arrangement reference",
+      "path": "resources/curated-books/music-theory-and-guitar/ja/music-theory/コード編曲法 ~藤巻メソッド~ Chord Arrange -FUJIMAKI Method-.pdf"
+    },
+    {
+      "title": "音乐分析法 (Analyse lernen)",
+      "language": "zh",
+      "role": "Chinese terminology/reference",
+      "path": "resources/curated-books/music-theory-and-guitar/zh/music-theory/音乐分析法 (Analyse lernen).pdf"
+    },
+    {
+      "title": "剑桥西方音乐理论发展史",
+      "language": "zh",
+      "role": "Chinese theory/history reference",
+      "path": "resources/curated-books/music-theory-and-guitar/zh/music-theory/剑桥西方音乐理论发展史.pdf"
+    },
+    {
+      "title": "电吉他自学完整教程",
+      "language": "zh",
+      "role": "Chinese guitar-practice reference",
+      "path": "resources/curated-books/music-theory-and-guitar/zh/guitar/电吉他自学完整教程.pdf"
+    }
+  ],
+  "tasks": [
+    {
+      "priority": 1,
+      "book_id": "tom-kolb-music-theory-guitarists",
+      "title_en": "Music Theory for Guitarists",
+      "title_zh": "吉他手音乐理论",
+      "title_ja": "ギタリストのための音楽理論",
+      "author": "Tom Kolb",
+      "source_spine_lang": "en",
+      "task_mode": "trilingual_music_theory_private_study_notes_en_spine_zh_ja_references",
+      "status": "source_ready_not_chunked",
+      "book_plan": "books/tom-kolb-music-theory-guitarists/book-plan.json"
+    },
+    {
+      "priority": 2,
+      "book_id": "berklee-music-theory-book-1",
+      "title_en": "Berklee Music Theory Book 1",
+      "title_zh": "伯克利音乐理论第一册",
+      "title_ja": "バークリー音楽理論 第1巻",
+      "author": "Paul Schmeling",
+      "source_spine_lang": "en",
+      "task_mode": "trilingual_music_theory_private_study_notes_en_spine_zh_ja_references",
+      "status": "source_ready_not_chunked",
+      "book_plan": "books/berklee-music-theory-book-1/book-plan.json"
+    }
+  ]
+}

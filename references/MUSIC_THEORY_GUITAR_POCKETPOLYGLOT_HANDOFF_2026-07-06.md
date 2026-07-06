@@ -2,11 +2,24 @@
 
 Date: 2026-07-06
 
-Source archive lives in the Books repo and is intentionally not copied into this repo:
+Source archive also lives in the Books repo:
 
 `/home/lachlan/ProjectsLFS/Books/resources/curated-books/music-theory-and-guitar/`
 
-Do not commit original PDFs or EPUBs here. Use the archived source paths as local-only inputs when preparing a private PocketPolyglot study workflow.
+The 12 local PDFs have also been copied into ignored storage in this repo:
+
+`resources/curated-books/music-theory-and-guitar/`
+
+Do not commit original PDFs or EPUBs here. Use these archived source paths as local-only inputs when preparing a private PocketPolyglot study workflow.
+
+Tracked task batch:
+
+`data/source-plan/music-theory-guitar-source-batch.json`
+
+Prepared book plans, not launched:
+
+- `books/tom-kolb-music-theory-guitarists/book-plan.json`
+- `books/berklee-music-theory-book-1/book-plan.json`
 
 ## Recommended Study Spine
 
@@ -34,6 +47,10 @@ Do not commit original PDFs or EPUBs here. Use the archived source paths as loca
 ## Build Constraint
 
 These are modern textbook sources. For distributable outputs, do not reproduce full copyrighted text. Use private study notes, original explanations, short legal quotations where appropriate, terminology tables, and newly written exercises.
+
+## Technical Preservation Rule
+
+Music-technique and theory books must keep their instructional structure. Preserve staff notation, rhythmic examples, chord symbols, scale-degree notation, fretboard diagrams, chord charts, tables, figures, captions, and exercise layouts. Use structured TeX/math/table content where possible and referenced figure assets where a diagram is inherently visual. Do not reduce technical examples to prose-only summaries.
 
 Full Books-side reference:
 
