@@ -1,6 +1,7 @@
 # World Poetry PocketPolyglot Tasks - 2026-07-06
 
 Status: sources mirrored locally, task plans created, generation not started.
+Queued after the classical queue by `scripts/interlinear/start_world_poetry_after_classics_tmux.sh`.
 
 Raw assets are under ignored `resources/`; tracked task plans are under `books/<book-id>/book-plan.json` and `data/source-plan/world-poetry-source-batch.json`.
 
@@ -43,3 +44,5 @@ Raw assets are under ignored `resources/`; tracked task plans are under `books/<
 For each task, convert source files to reviewed Markdown first, then split by poem/stanza/line group into `books/<book-id>/work/trilingual/chunks/manifest.json` and `chunks.jsonl`. Only after that should worker generation start.
 
 Recommended first candidates: `tagore-stray-birds`, `gibran-the-prophet`, and `tagore-gitanjali`, because they have clean Wikisource exports plus Chinese references.
+
+The after-classical monitor is conservative: when classical books finish, it starts only the first incomplete poetry book whose `book-plan.json` is `launchable=true` and whose manifest/chunks files exist. If the first poetry book is still source-only, it records `waiting_for_poetry_preparation=<book-id>` and waits instead of skipping ahead.
