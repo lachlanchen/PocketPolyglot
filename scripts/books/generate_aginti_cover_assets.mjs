@@ -36,6 +36,10 @@ const THEME_HINTS = {
     "night train crossing a river of stars, deep blue sky, lantern-lit carriage, quiet celestial railway",
   "sishu-jizhu":
     "Confucian classics, bamboo slips, inkstone, Song dynasty study, austere scholarly texture",
+  "lushi-chunqiu":
+    "Warring States scholarly compendium, bronze ritual vessel, bamboo slips arranged like seasonal calendars, court scholars in a quiet study, cosmological order and practical governance atmosphere, restrained lacquer black, jade green, and warm bronze palette",
+  "sunzi-bingfa":
+    "ancient Chinese military classic, bamboo slips, bronze sword guard, misted mountain passes, strategic map lines without readable text, calm disciplined command atmosphere, restrained ink black, bronze, and muted cinnabar palette",
   "shui-jing-zhu":
     "ancient Chinese river geography, winding waterways through misty mountains, annotated silk map fragments, scholar-geographer's desk with bamboo slips and inkstone, Northern Wei historical atmosphere, refined ink-wash and restrained mineral pigments",
   chuci:
@@ -82,6 +86,8 @@ const THEME_HINTS = {
     "windswept Yorkshire moor, storm clouds, heather, lonely stone farmhouse silhouette, gothic romantic tension, restrained slate green and violet-gray palette",
   "jane-eyre":
     "Victorian manor corridor, rain against tall windows, governess silhouette, candlelit library, restrained gothic romance atmosphere, deep green and warm amber palette",
+  "harry-potter-6":
+    "old magical astronomy tower at twilight, half-lit potion book, silver-green candlelight, dark lake and castle silhouettes, melancholy coming-of-age fantasy atmosphere, restrained emerald, indigo, and antique gold palette",
   "a-game-of-thrones":
     "grim medieval fantasy court intrigue, iron throne silhouette without readable symbols, snow-dark northern forest, dragon-scale texture, red comet glow, austere black, steel, and crimson palette",
   "the-count-of-monte-cristo":
@@ -90,6 +96,10 @@ const THEME_HINTS = {
     "Gothic cathedral towers and rose window light over medieval Paris, stone gargoyles, candlelit shadows, tragic romantic grandeur, deep ultramarine and warm amber palette",
   "les-miserables":
     "nineteenth-century Paris streets at dawn, barricade silhouettes, worn cobblestones, humane revolutionary drama, misty blue-gray atmosphere with small warm lantern lights",
+  "tagore-gitanjali":
+    "Bengal devotional poetry, river at dawn, lotus and flowering branches, quiet manuscript page, warm gold and soft blue, contemplative spiritual lyric mood, no readable text",
+  "tagore-stray-birds":
+    "Tagore aphoristic lyric poems, small birds crossing a wide dawn sky, Bengal riverbank, lotus leaves, floating manuscript pages without readable text, light contemplative mood, pale gold, sky blue, and soft green palette",
 };
 
 function parseArgs(argv) {
