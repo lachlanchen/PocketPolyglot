@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import subprocess
 import time
 from datetime import datetime, timezone
@@ -46,6 +47,7 @@ DEFAULT_CLASSICS = [
     "guiguzi",
     "lushi-chunqiu",
     "sunzi-bingfa",
+    "wuzi",
     "sunbin-bingfa",
     "simafa",
     "weiliaozi",
@@ -80,9 +82,11 @@ def load_plan(book_id: str) -> dict[str, Any] | None:
 def parse_report(text: str) -> dict[str, str]:
     report: dict[str, str] = {}
     for line in text.splitlines():
-        if "=" in line:
-            key, value = line.split("=", 1)
-            report[key.strip()] = value.strip()
+        for match in re.finditer(r"([A-Za-z_][A-Za-z0-9_]*)=(.*?)(?=\s+[A-Za-z_][A-Za-z0-9_]*=|$)", line):
+            key = match.group(1).strip()
+            value = match.group(2).strip()
+            if key:
+                report[key] = value
     return report
 
 

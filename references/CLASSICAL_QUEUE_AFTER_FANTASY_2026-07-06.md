@@ -43,9 +43,11 @@ artifact.
 | 5 | `hanfeizi` | 韓非子 | 20 | 763 |
 | 6 | `guiguzi` | 鬼谷子 | 7 | 128 |
 | 7 | `lushi-chunqiu` | 呂氏春秋 | 26 | 765 |
-| 8 | `sunbin-bingfa` | 孫臏兵法 | 1 | 70 |
-| 9 | `simafa` | 司馬法 | 1 | 68 |
-| 10 | `weiliaozi` | 尉繚子 | 1 | 86 |
+| 8 | `sunzi-bingfa` | 孫子兵法 | 13 | 74 |
+| 9 | `wuzi` | 吳子 | 6 | 44 |
+| 10 | `sunbin-bingfa` | 孫臏兵法 | 1 | 70 |
+| 11 | `simafa` | 司馬法 | 1 | 68 |
+| 12 | `weiliaozi` | 尉繚子 | 1 | 86 |
 
 ## Source Notes
 
@@ -58,3 +60,6 @@ artifact.
   article pages.
 - `mengzi`, `xunzi`, `mozi`, `guiguzi`, and `lushi-chunqiu` use explicit
   canonical sorting in `prepare_classical_quadrilingual_task.py`.
+- `wuzi` is imported from the Books repo's Wu Qi/Wuzi source set and split
+  with six chapter anchors because the Chinese Wikisource source is a single
+  root page.

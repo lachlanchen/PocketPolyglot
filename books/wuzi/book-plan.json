@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "book_id": "wuzi",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "吳子",
+  "book_title_zh": "吴子",
+  "book_title_ja": "呉子",
+  "book_title_en": "Wuzi",
+  "author": "吳起",
+  "author_reading_zh": "wú qǐ",
+  "author_reading_ja": "ご き",
+  "book_description": "吳子 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/chinese-military-classics/wuzi/zh/wikisource",
+    "modern_chinese_reference": "sources/chinese-military-classics/wuzi/zh/吴起兵书.epub",
+    "english_anthology_reference": "sources/chinese-military-classics/anthologies/en/Chinese Martial Code - Sun Tzu Sima Rangju Wu Zi.epub",
+    "english_secondary_reference": "sources/chinese-military-classics/anthologies/en/Military Strategy Classics of Ancient China - English and Chinese.epub",
+    "english_context_reference": "sources/chinese-military-classics/wuzi/wiki-snapshots/wikipedia/en/wikipedia-en-Wuzi.pdf",
+    "japanese_wikisource_reference": "sources/chinese-military-classics/wuzi/jp/wikisource",
+    "japanese_context_reference": "sources/chinese-military-classics/wuzi/wiki-snapshots/wikipedia/ja/wikipedia-ja-呉子.pdf",
+    "wenyan_markdown": "books/wuzi/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/wuzi/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/wuzi/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/wuzi/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/wuzi/work/quadrilingual/preview/wuzi.partial.json",
+  "build_root": "build/wuzi/wenyan-main-quadrilingual",
+  "prepared_at": "2026-07-06T01:55:58.872137+00:00"
+}

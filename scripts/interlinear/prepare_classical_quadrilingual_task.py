@@ -98,6 +98,7 @@ ANTHOLOGY_STANDALONE_BOOKS = {
     "simafa",
     "sunbin-bingfa",
     "tangshi-sanbai",
+    "wuzi",
 }
 CHUCI_SKIP_TITLES = {"楚辭", "楚辭章句", "楚辭補注", "屈原賦注"}
 CHUCI_CANONICAL_ORDER = {
@@ -658,6 +659,17 @@ def excerpt(text: str, limit: int = 4200) -> str:
     return clean_reference_text(text)[:limit]
 
 
+def excerpt_near_keywords(text: str, keywords: list[str], limit: int = 1600, *, pre_context: int = 240) -> str:
+    cleaned = clean_reference_text(text)
+    lowered = cleaned.lower()
+    for keyword in keywords:
+        index = lowered.find(keyword.lower())
+        if index >= 0:
+            start = max(0, index - pre_context)
+            return excerpt(cleaned[start:], limit)
+    return excerpt(cleaned, limit)
+
+
 def pdftotext(path: Path) -> str:
     try:
         return subprocess.check_output(
@@ -804,6 +816,8 @@ def should_skip_source_item(book_id: str, title: str) -> bool:
     if book_id == "hanfeizi" and not re.fullmatch(r"\d{2}", tail):
         return True
     if book_id == "simafa" and tail != "司馬法":
+        return True
+    if book_id == "wuzi" and tail != "吳子":
         return True
     if book_id == "zuozhuan" and tail == "全覽":
         return True
@@ -1685,6 +1699,27 @@ def generic_reference_excerpts(book_id: str, layers: list[dict[str, Any]]) -> di
             "quality": str(layer.get("quality") or ""),
             **item,
         }
+        if book_id == "wuzi":
+            role = str(layer.get("role") or "")
+            if role in {"modern_chinese_reference", "english_anthology_reference", "english_secondary_reference"}:
+                path = ROOT / rel_path
+                text = epub_text(path) if path.suffix.lower() == ".epub" else item.get("excerpt", "")
+                keywords_by_role = {
+                    "modern_chinese_reference": ["第一章 图国篇", "圖國第一", "图国篇"],
+                    "english_anthology_reference": [
+                        "Section I—The Government of a Country",
+                        "Chapter I The Master Wu said",
+                        "Wu Qi said:",
+                    ],
+                    "english_secondary_reference": [
+                        "吴起穿戴",
+                        "Such were Wu Qi's accomplishments",
+                        "Wearing the attire of a Confucian scholar",
+                    ],
+                }
+                keywords = keywords_by_role.get(role, ["Wu Qi", "Wuzi"])
+                pre_context = 0 if role == "modern_chinese_reference" else 240
+                item["excerpt"] = excerpt_near_keywords(text, keywords, 1800, pre_context=pre_context) if text else item.get("excerpt", "")
         refs.setdefault(str(layer.get("layer") or "reference"), []).append(item)
     return refs
 

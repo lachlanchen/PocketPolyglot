@@ -1488,6 +1488,114 @@
       "next_step": "Use the chapterized Chinese Wikisource text as the wenyan spine. Use English Wikisource, downloaded English EPUBs, Japanese Wikisource, and the Chinese commentary EPUB as references; generate aligned English, readable modern Japanese, modern Chinese, ruby/pinyin, and grammar roles."
     },
     {
+      "book_id": "wuzi",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "吳子",
+      "book_title_zh": "吴子",
+      "book_title_ja": "呉子",
+      "book_title_en": "Wuzi",
+      "author": "吳起",
+      "author_reading_zh": "wú qǐ",
+      "author_reading_ja": "ご き",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/chinese-military-classics/wuzi/zh/wikisource",
+          "quality": "Chinese Wikisource single-page source for 吳子兵法; chapter anchors split the six canonical sections"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "modern_chinese_reference",
+          "path": "sources/chinese-military-classics/wuzi/zh/吴起兵书.epub",
+          "quality": "Downloaded Chinese reference EPUB; use for modern Chinese meaning and notes"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_anthology_reference",
+          "path": "sources/chinese-military-classics/anthologies/en/Chinese Martial Code - Sun Tzu Sima Rangju Wu Zi.epub",
+          "quality": "English military classics anthology with Wu Zi material; use matching passages only"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_secondary_reference",
+          "path": "sources/chinese-military-classics/anthologies/en/Military Strategy Classics of Ancient China - English and Chinese.epub",
+          "quality": "Secondary English/Chinese military classics anthology reference"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_context_reference",
+          "path": "sources/chinese-military-classics/wuzi/wiki-snapshots/wikipedia/en/wikipedia-en-Wuzi.pdf",
+          "quality": "English context/reference snapshot"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_wikisource_reference",
+          "path": "sources/chinese-military-classics/wuzi/jp/wikisource",
+          "quality": "Japanese Wikisource 呉子 reference; generate readable modern Japanese where the source is kundoku/classical"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_context_reference",
+          "path": "sources/chinese-military-classics/wuzi/wiki-snapshots/wikipedia/ja/wikipedia-ja-呉子.pdf",
+          "quality": "Japanese context/reference snapshot"
+        }
+      ],
+      "chapter_anchors": [
+        {
+          "starts_with": "吳起儒服以兵機見魏文侯。",
+          "title_wenyan": "圖國第一",
+          "title_zh_modern": "图国第一",
+          "title_ja_modern": "図国 第一",
+          "title_en": "Planning the State"
+        },
+        {
+          "starts_with": "武侯謂吳起曰：「今秦脅吾西",
+          "title_wenyan": "料敵第二",
+          "title_zh_modern": "料敌第二",
+          "title_ja_modern": "敵をはかる 第二",
+          "title_en": "Estimating the Enemy"
+        },
+        {
+          "starts_with": "武侯問曰：「用兵之道何先",
+          "title_wenyan": "治兵第三",
+          "title_zh_modern": "治兵第三",
+          "title_ja_modern": "兵を治める 第三",
+          "title_en": "Ordering the Army"
+        },
+        {
+          "starts_with": "吳子曰：「夫總文武者",
+          "title_wenyan": "論將第四",
+          "title_zh_modern": "论将第四",
+          "title_ja_modern": "将を論ずる 第四",
+          "title_en": "On Generals"
+        },
+        {
+          "starts_with": "武侯問曰：「車堅馬良",
+          "title_wenyan": "應變第五",
+          "title_zh_modern": "应变第五",
+          "title_ja_modern": "変に応ずる 第五",
+          "title_en": "Responding to Change"
+        },
+        {
+          "starts_with": "武侯問曰：「嚴刑明賞",
+          "title_wenyan": "勵士第六",
+          "title_zh_modern": "励士第六",
+          "title_ja_modern": "士を励ます 第六",
+          "title_en": "Encouraging the Soldiers"
+        }
+      ],
+      "next_step": "Use Chinese Wikisource as the six-chapter wenyan spine. Use the Chinese reference EPUB, English military anthologies, and Japanese Wikisource/context references to generate aligned English, readable modern Japanese, modern Chinese, ruby/pinyin, and grammar roles."
+    },
+    {
       "book_id": "daodejing",
       "status": "launchable_task_prepared",
       "priority": "classical_queue",
