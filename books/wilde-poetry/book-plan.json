@@ -29,18 +29,18 @@
   "assembled_json": "books/wilde-poetry/work/trilingual/preview/wilde-poetry.partial.json",
   "build_root": "build/wilde-poetry",
   "cover_image": "assets/covers/wilde-poetry/cover.png",
-  "prepared_at": "2026-07-06T11:12:44.227293+00:00",
+  "prepared_at": "2026-07-06T22:47:39.253895+00:00",
   "preparation_notes": {
     "status": "Chunk manifest prepared and launchable.",
     "chunking": "poem/stanza/line groups; no generated translations are overwritten.",
-    "quality_rule": "Wikisource/EPUB preferred; PDF text used only when no better spine source exists."
+    "quality_rule": "Use provided poem PDFs/EPUBs first. Wikisource text is allowed when it is a real poem text source. Wikipedia and author pages are metadata only, not poem chunks."
   },
   "curated_by": "AgInTiFlow curated",
   "curated_url": "https://flow.lazying.art",
   "powered_by": "powered by LazyingArt",
   "chunk_mode": "poem_stanza_line_group",
-  "reference_scope": "global_ratio_poetry_window",
-  "chunk_count": 217,
+  "reference_scope": "source_edition_poetry_window",
+  "chunk_count": 147,
   "source_extraction": {
     "en": {
       "key": "en_epub",
@@ -48,9 +48,9 @@
       "method": "epub"
     },
     "zh": {
-      "key": "wiki_author_zh",
-      "path": "resources/curated-books/wiki-snapshots/world-poetry/wilde/wikipedia/zh/wikipedia-zh-奥斯卡·王尔德.pdf",
-      "method": "pdf"
+      "key": "zh_en_anthology_reference",
+      "path": "resources/curated-books/world-poetry/anthologies/zh-en/英诗经典名家名译(英汉对照)(套装共23册).epub",
+      "method": "epub"
     }
   }
 }

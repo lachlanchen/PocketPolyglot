@@ -1,28 +1,18 @@
 # The Collected Poems of W. B. Yeats
 
-## DOI 10.1007/978-1-349-12509-8
+## PALGRAVE MACMILLAN
 
 Poems copyright by Anne Yeats
 Revisions and additional poems copyright C> 1983, 1989 by Anne Yeats
 Editorial matter and compilation copyright C> 1g83, 1g89 by
 Macmillan Publishing Company, a division of Macmillan, Inc.
 
-All rights reserved. No part of this book may be reproduced or transmitted
 in any form or by any means, electronic or mechanical, including
 photocopying, recording or by any information storage and retrieval system,
 without permission in writing from the Publisher.
 Collier Books
 Macmillan Publishing Company
 866 Third Avenue, New York, N.Y. 10022
-
-Library of Congress Cataloging-in-Publication Data
-Yeats, W. B. (William Butler), 1865-1939·
-The collected poems of W.B. Yeats.
-Includes indexes.
-1. Finneran, Richard J. II. Title.
-PR5goo.A 3 19 89b 8111 '.8 89-72 34
-
-## ISBN 978-0-02-055650-3
 
 Macmillan books are available at special
 discounts for bulk purchases for sales
@@ -78,16 +68,6 @@ from the Irish Novelists 45
 38 To Some I have Talked with by the Fire 49
 39 To Ireland in the Coming Times 50
 
-The Wind Among the Reeds (18gg)
-40 The Hosting of the Sidhe 55
-41 The Everlasting Voices 55
-42 The Moods 56
-43 The Lover tells of the Rose in his Heart 56
-44 The Host of the Air 56
-45 The Fish 58
-46 The Unappeasable Host 58
-4 7 Into the Twilight 59
-
 48 The Song of Wandering Aengus 59
 49 The Song of the Old Mother 6o
 50 The Heart of the Woman 6o
@@ -117,16 +97,6 @@ Beloved 68
 70 The Lover pleads with his Friend for Old
 Friends 71
 71 The Lover speaks to the Hearers of his Songs in
-
-Coming Days 71
-72 The Poet pleads with the Elemental Powers 72
-73 He wishes his Beloved were Dead 72
-74 He wishes for the Cloths of Heaven 73
-
-vm CONTENTS
-75 He thinks of his Past Greatness when a Part of
-the Constellations of Heaven 73
-76 The Fiddler of Dooney 74
 
 In the Seven Woods (1go4)
 77 In the Seven Woods 77
@@ -184,10 +154,6 @@ if it were proved the People wanted Pictures 107
 117 Paudeen 109
 118 To a Shade 110
 119 When Helen lived Ill
-
-122 The Three Hermits 113
-123 Beggar to Beggar cried 114
-124 Running to Paradise 115
 
 ## X CONTENTS
 
@@ -258,11 +224,6 @@ Drawings 157
 184 The Cat and the Moon 167
 I85 The Saint and the Hunchback I68
 
-xii CONTENTS
-186 Two Songs of a Fool
-187 Another Song of a Fool
-188 The Double Vision of Michael Robartes
-
 Michael Robartes and the Dancer (1921)
 189 Michael Robartes and the Dancer 175
 190 Solomon and the Witch 176
@@ -279,17 +240,6 @@ Michael Robartes and the Dancer (1921)
 201 A Prayer for my Daughter 188
 202 A Meditation in Time of War 190
 203 To be carved on a Stone at Thoor Ballylee 190
-
-The Tower (1928)
-204 Sailing to Byzantium 193
-205 The Tower 194
-Meditations in Time of Civil War:
-206 I. Ancestral Houses 200
-207 II. My House 201
-208 Ill. My Table 202
-209 IV. My Descendants 203
-210 V. The Road at My Door 204
-211 VI. The Stare's Nest by My Window 204
 
 212 VII. I see Phantoms of Hatred and of the
 Heart's Fullness and of the Coming
@@ -390,18 +340,7 @@ A Woman Young and Old:
 293 I. Father and Child 270
 294 II. Before the World was Made 270
 
-295 Ill. A First Confession 271
-296 IV. Her Triumph 271
-297 V. Consolation 272
-298 VI. Chosen 272
-299 VII. Parting 273
-
 ## CONTENTS
-
-300 VIII. Her Vision in the Wood
-301 IX. A Last Confession
-302 X. Meeting
-303 XI. From the 'Antigone'
 
 [Parnell's Funeral and Other Poems (1935)]
 304 Parnell's Funeral 279
@@ -423,14 +362,6 @@ Supernatural Songs:
 318 X. Conjunctions 288
 319 XI. A Needle's Eye 288
 320 XII. Meru 289
-
-New Poems (1938)
-321 The Gyres 293
-322 Lapis Lazuli 294
-323 Imitated from the Japanese 295
-324 Sweet Dancer 296
-325 The Three Bushes 296
-326 The Lady's First Song 299
 
 CONTENTS xvu
 327 The Lady's Second Song 299
@@ -463,10 +394,6 @@ CONTENTS xvu
 354 The Municipal Gallery Re-visited 3 19
 355 Are You Content 321
 
-[Last Poems (1938-1939)]
-356 Under Ben Bulben 325
-357 Three Songs to the One Burden 328
-
 xvm CONTENTS
 358 The Black Tower 331
 359 Cuchulain Comforted 332
@@ -496,17 +423,6 @@ The Shadowy Waters (1906):
 380 The Shadowy Waters
 381 The Two Kings (1914)
 382 The Gift of Harun Al-Rashid (1923)
-
-Appendix A: Yeats's Notes in The Collected Poems (1933) 453
-Notes to Appendix A 464
-Appendix B: Music from New Poems (1938) 471
-
-## CONTENTS XIX
-
-Notes to Appendix B 474
-Explanatory Notes 475
-Index to Titles 521
-Index to First Lines 533
 
 ## PREFACE
 
@@ -607,11 +523,6 @@ ciety; the Henry E. Huntington Library and Art Gallery; the
 Gr«duate Council on Research, Tulane University; and the Na-
 tional Endowment for the Humanities.
 
-I would like to dedicate this edition to Richard and Catherine,
-my constant joy.
-Mandeville, Louisiana R.J.F.
-September 21, 1988
-
 ## A.E.
 
 I The Song of the Happy Shepherd
@@ -671,10 +582,6 @@ Walking ghostly in the dew,
 Pierced by my glad singing through,
 My songs of old earth's dreamy youth:
 
-But ah! she dreams not now; dream thou!
-For fair are poppies on the brow:
-Dream, dream, for this is also sooth.
-
 2 The Sad Shepherd
 There was a man whom Sorrow named his friend,
 And he, of his high comrade Sorrow dreaming,
@@ -705,10 +612,6 @@ And my own whispering words be comforting,
 And lo! my ancient burden may depart.
 Then he sang softly nigh the pearly rim;
 
-But the sad dweller by the sea-ways lone
-Changed all he sang to inarticulate moan
-Among her wildering whirls, forgetting him.
-
 3 The Cloak, the Boat, and the Shoes
 'What do you make so fair and bright?'
 'I make the cloak of Sorrow:
@@ -720,12 +623,6 @@ In all men's sight.'
 0 swift on the seas all day and night
 
 ## IO LYRICAL
-
-'What do you weave with wool so white?'
-'I weave the shoes of Sorrow:
-Soundless shall be the footfall light
-In all men's ears of Sorrow,
-Sudden and light.'
 
 4 Anashuya and Vijaya
 A little Indian temple in the Golden Age. Around it a garden; around that
@@ -899,18 +796,7 @@ How when we die our shades will rove,
 When eve has hushed the feathered ways,
 With vapoury footsole by the water's drowsy blaze. 20
 
-7 The Falling of the Leaves
-Autumn is over the long leaves that love us,
-And over the mice in the barley sheaves;
-Yellow the leaves of the rowan above us,
-And yellow the wet wild-strawberry leaves.
-
 ## CROSSWAYS 15
-
-The hour of the waning of love has beset us,
-And weary and worn are our sad souls now;
-Let us part, ere the season of passion forget us,
-With a kiss and a tear on thy drooping brow.
 
 8 Ephemera
 'Your eyes that once were never weary of mine
@@ -1016,11 +902,6 @@ Our married voices wildly trolled.
 They will not hush, the leaves a-flutter round me, the 6o
 beech leaves old.
 
-I sang how, when day's toil is done,
-Orchil shakes out her long dark hair
-That hides away the dying sun
-And sheds faint odours through the air:
-
 ## LYRICAL
 
 When my hand passed from wire to wire
@@ -1061,12 +942,6 @@ And is anxious in its sleep.
 
 ## CROSSWAYS
 
-Come away, 0 human child!
-To the waters and the wild
-With a faery, hand in hand,
-For the world's more full of weeping than you can
-understand.
-
 Where the wandering water gushes
 From the hills above Glen-Car,
 In pools among the rushes 30
@@ -1098,27 +973,6 @@ From a world more full of weeping than he can
 understand.
 
 ## 20 LYRICAL
-
-II To an Isle in the Water
-Shy one, shy one,
-Shy one of my heart,
-She moves in the firelight
-Pensively apart.
-
-She carries in the dishes,
-And lays them in a row.
-To an isle in the water
-With her would I go.
-
-She carries in the candles,
-And lights the curtained room, 10
-Shy in the doorway
-And shy in the gloom;
-
-And shy as a rabbit,
-Helpful and shy.
-To an isle in the water
-With her would I fly.
 
 I 2 Down by the Salley Gardens
 Down by the salley gardens my love and I did meet;
@@ -1162,43 +1016,6 @@ And he gave them as dowers to his daughters,
 And they married beyond their place.
 But Father John went up,
 And Father John went down; 10
-
-## 22 LYRICAL
-
-All loved him, only the shoneen,
-Whom the devils have by the hair,
-From the wives, and the cats, and the children,
-To the birds in the white of the air.
-
-The birds, for he opened their cages
-As he went up and down;
-And he said with a smile, 'Have peace now';
-And he went his way with a frown. 20
-
-But if when anyone died
-Came keeners hoarser than rooks,
-He bade them give over their keening;
-For he was a man of books.
-
-And these were the works of John,
-When, weeping score by score,
-People came into Coloony;
-For he'd died at ninety-four.
-
-There was no human keening;
-The birds from Knocknarea
-And the world round Knocknashee
-Came keening in that day.
-
-The young birds and old birds
-Came flying, heavy and sad;
-Keening in from Tiraragh,
-Keening from Ballinafad;
-
-Keening from Inishmurray,
-Nor stayed for bite or sup;
-This way were all reproved
-Who dig old customs up.
 
 ## CROSSWAYS 23
 
@@ -1264,12 +1081,6 @@ Ye won't fling stones at me;
 But gather with your shinin' looks
 And pity Moll Magee.
 
-r6 The Ballad of the Foxhunter
-'Lay me in a cushioned chair;
-Carry me, ye four,
-With cushions here and cushions there,
-To see the world once more.
-
 ## CROSSWAYS 25
 
 'To stable and to kennel go;
@@ -1321,9 +1132,6 @@ Lifts slow his wintry head;
 The servants bear the body in;
 The hounds wail for the dead.
 
-'Sero te amavi, Pulchritudo tam antiqua et tam nova! Sero te amavi.'
-S. AuGUSTINE
-
 ## LIONEL JOHNSON
 
 The Rose
@@ -1348,11 +1156,6 @@ The field-mouse running by me in the grass,
 And heavy mortal hopes that toil and pass;
 But seek alone to hear the strange things said
 By God to the bright hearts of those long dead, 20
-
-And learn to chaunt a tongue men do not know.
-Come near; I would, before my time to go,
-Sing of old Eire and the ancient ways:
-Red Rose, proud Rose, sad Rose of all my days.
 
 ## 32 LYRICAL
 
@@ -1431,22 +1234,6 @@ She smote with raddled fist, and where her son
 Herded the cattle came with stumbling feet,
 And cried with angry voice, 'It is not meet 20
 To idle life away, a common herd.'
-
-'I have long waited, mother, for that word:
-But wherefore now?'
-'There is a man to die;
-You have the heaviest arm under the sky.'
-
-'Whether under its daylight or its stars
-My father stands amid his battle-cars.'
-
-'Yet somewhere under starlight or the sun
-My father stands.'
-'Aged, worn out with wars
-On foot, on horseback or in battle-cars.'
-
-'I only ask what way my journey lies,
-For He who made you bitter made you wise.'
 
 'The Red Branch camp in a great company
 Between wood's rim and the horses of the sea.
@@ -1528,16 +1315,6 @@ Like the pale waters in their wintry race,
 Under the passing stars, foam of the sky,
 Lives on this lonely face. 10
 
-Bow down, archangels, in your dim abode:
-Before you were, or any hearts to beat,
-Weary and kind one lingered by His seat;
-He made the world to be a grassy road
-Before her wandering feet.
-
-2I The Rose of Peace
-If Michael, leader of God's host
-When Heaven and Hell are met,
-
 ## THE ROSE 37
 
 Looked down on you from Heaven's door-post
@@ -1612,13 +1389,6 @@ Rest far from men. 10
 
 ## THE ROSE 39
 
-Is anything better, anything better?
-Tell us it then:
-Us who are old, old and gay,
-0 so old!
-Thousands of years, thousands of years,
-If all were told.
-
 24 The Lake Isle of Innisfree
 I will arise and go now, and go to Innisfree,
 And a small cabin build there, of clay and wattles made:
@@ -1635,22 +1405,7 @@ I hear lake water lapping with low sounds by the shore; 10
 While I stand on the roadway, or on the pavements grey,
 I hear it in the deep heart's core.
 
-25 A Cradle Song
-The angels are stooping
-Above your bed;
-They weary of trooping
-With the whimpering dead.
-God's laughing in Heaven
-To see you so good;
-The Sailing Seven
-Are gay with His mood.
-
 ## LYRICAL
-
-I sigh that kiss you,
-For I must own 10
-That I shall miss you
-When you have grown.
 
 26 The Pity of Love
 A pity beyond all telling
@@ -1821,11 +1576,6 @@ That from those fingers glittering summer runs
 
 ## THE ROSE 45
 
-Upon the dancer by the dreamless wave.
-Why should those lovers that no lovers miss
-Dream, until God burn Nature with a kiss?
-The man has found no comfort in the grave.
-
 34 The Dedication to a Book of Stories
 selected from the Irish Novelists
 There was a green branch hung with many a bell
@@ -1847,11 +1597,6 @@ That country where a man can be so crossed;
 Can be so battered, badgered and destroyed
 That he's a loveless man: gay bells bring laughter
 That shakes a mouldering cobweb from the rafter;
-
-Gay bells or sad, they bring you memories
-Of half-forgotten innocent old places:
-We and our bitterness have left no traces
-On Munster grass and Connemara skies.
 
 ## LYRICAL
 
@@ -1886,48 +1631,6 @@ At the moth-hour of eve,
 Another poor man sent for him,
 And he began to grieve.
 
-## THE ROSE 47
-
-'I have no rest, nor joy, nor peace,
-For people die and die'; 10
-And after cried he, 'God forgive!
-My body spake, not I!'
-
-He knelt, and leaning on the chair
-He prayed and fell asleep;
-And the moth-hour went from the fields,
-And stars began to peep.
-
-They slowly into millions grew,
-And leaves shook in the wind;
-And God covered the world with shade,
-And whispered to mankind. 20
-
-Upon the time of sparrow-chirp
-When the moths came once more,
-The old priest Peter Gilligan
-Stood upright on the floor.
-
-'Mavrone, mavrone! the man has died
-While I slept on the chair';
-He roused his horse out of its sleep,
-And rode with little care.
-
-He rode now as he never rode,
-By rocky lane and fen;
-The sick man's wife opened the door:
-'Father! you come again!'
-
-'And is the poor man dead?' he cried.
-'He died an hour ago.'
-The old priest Peter Gilligan
-In grief swayed to and fro.
-
-'When you were gone, he turned and died
-As merry as a bird.'
-The old priest Peter Gilligan
-He knelt him at that word. 40
-
 ## LYRICAL
 
 'He Who hath made the night of stars
@@ -1960,12 +1663,6 @@ Remembering all that shaken hair
 And how the winged sandals dart,
 Thine eyes grow full of tender care:
 Beloved, gaze in thine own heart. 20
-
-Gaze no more in the bitter glass
-The demons, with their subtle guile,
-Lift up before us when they pass,
-Or only gaze a little while;
-For there a fatal image grows
 
 ## THE ROSE 49
 
@@ -2035,12 +1732,6 @@ That hurry from unmeasured mind
 To rant and rage in flood and wind;
 Yet he who treads in measured ways
 
-May surely barter gaze for gaze.
-Man ever journeys on with them
-After the red-rose-bordered hem.
-Ah, faeries, dancing under the moon,
-A Druid land, a Druid tune!
-
 ## THE ROSE 51
 
 While still I may, I write for you
@@ -2089,15 +1780,6 @@ In shaken boughs, in tide on the shore?
 0 sweet everlasting Voices, be still.
 
 ## 56 LYRICAL
-
-42 The Moods
-Time drops in decay,
-Like a candle burnt out,
-And the mountains and woods
-Have their day, have their day;
-What one in the rout
-Of the fire-born moods
-Has fallen away?
 
 43 The Lover tells of the
 Rose in his Heart
@@ -2259,13 +1941,6 @@ The house where I was safe and warm;
 
 ## THE WIND AMONG THE REEDS 61
 
-The shadowy blossom of my hair
-Will hide us from the bitter storm.
-0 hiding hair and dewy eyes,
-I am no more with life and death, 10
-My heart upon his warm heart lies,
-My breath is mixed into his breath.
-
 5I The Lover mourns for the
 Loss of Love
 Pale brows, still hands and dim hair,
@@ -2292,9 +1967,6 @@ I would that the Boar without bristles had come from the 1 o
 West
 
 ## LYRICAL
-
-And had rooted the sun and moon and stars out of the sky
-And lay in the darkness, grunting, and turning to his rest.
 
 53 He bids his Beloved be at Peace
 I hear the Shadowy Horses, their long manes a-shake,
@@ -2357,12 +2029,6 @@ That is brimmed from the pale fire of time:
 White woman with numberless dreams,
 I bring you my passionate rhyme.
 
-57 He gives his Beloved certain Rhymes
-Fasten your hair with a golden pin,
-And bind up every wandering tress;
-I bade my heart build these poor rhymes:
-It worked at them, day out, day in,
-
 ## LYRICAL
 
 Building a sorrowful loveliness
@@ -2398,36 +2064,6 @@ She drew in the heavy casement
 And pushed the latches down.
 
 ## THE WIND AMONG THE REEDS
-
-He bade his heart go to her,
-When the owls called out no more;
-In a red and quivering garment
-It sang to her through the door.
-
-It had grown sweet-tongued by dreaming
-Of a flutter of flower-like hair;
-But she took up her fan from the table
-And waved it off on the air. 20
-
-'I have cap and bells,' he pondered,
-'I will send them to her and die';
-And when the morning whitened
-He left them where she went by.
-
-She laid them upon her bosom,
-Under a cloud of her hair,
-And her red lips sang them a love-song
-Till stars grew out of the air.
-
-She opened her door and her window,
-And the heart and the soul came through, 30
-To her right hand came the red one,
-To her left hand came the blue.
-
-They set up a noise like crickets,
-A chattering wise and sweet,
-And her hair was a folded flower
-And the quiet of love in her feet.
 
 6o The Valley of the Black Pig
 The dews drop slowly and dreams gather: unknown spears
@@ -2605,10 +2241,6 @@ When she rose up to depart?
 Now words that called up the lightning
 Are hurtling through my heart.
 
-69 The Travail of Passion
-When the flaming lute-thronged angelic door is wide;
-When an immortal passion breathes in mortal clay;
-
 ## THE WIND AMONG THE REEDS
 
 Our hearts endure the scourge, the plaited thorns, the way
@@ -2674,12 +2306,6 @@ Nor would you rise and hasten away,
 Though you have the will of the wild birds,
 
 ## THE WIND AMONG THE REEDS 73
-
-But know your hair was bound and wound
-About the stars and moon and sun: 10
-0 would, beloved, that you lay
-Under the dock-leaves in the ground,
-While lights were paling one by one.
 
 74 He wishes for the Cloths of Heaven
 Had I the heavens' embroidered cloths,
@@ -2964,12 +2590,6 @@ I will drive all those lovers out and cry - 1o
 0 my share of the world, 0 yellow hair!
 No one has ever loved but you and I.
 
-88 0 do not Love Too Long
-Sweetheart, do not love too long:
-I loved long and long,
-And grew to be out of fashion
-Like an old song.
-
 ## LYRICAL
 
 All through the years of our youth
@@ -3095,13 +2715,6 @@ Naming it with ecstatic breath,
 Because it had such dignity,
 By the sweet name of Death. 20
 
-92 A Woman Homer sung
-If any man drew near
-When I was young,
-I thought, 'He holds her dear,'
-And shook with hate and fear.
-But 0! 'twas bitter wrong
-
 ## 90 LYRICAL
 
 If he could pass her by
@@ -3168,12 +2781,6 @@ And while we're in our laughing, weeping fit,
 Hurl helmets, crowns, and swords into the pit. 10
 But, dear, cling close to me; since you were gone,
 My barren thoughts have chilled me to the bone.
-
-96 King and no King
-'Would it were anything but merely voice!'
-The No King cried who after that was King,
-Because he had not heard of anything
-That balanced with a word is more than noise;
 
 ## LYRICAL
 
@@ -3243,17 +2850,6 @@ I'll find the stable and pull out the bolt.
 
 ## 94 LYRICAL
 
-That's all we shall know for truth
-Before we grow old and die.
-I lift the glass to my mouth,
-I look at you, and I sigh.
-
-IOI The Coming of Wisdom with Time
-Though leaves are many, the root is one;
-Through all the lying days of my youth
-I swayed my leaves and flowers in the sun;
-Now I may wither into the truth.
-
 I02 On hearing that the Students of our
 New University have joined the Agitation
 against Immoral Literature
@@ -3262,16 +2858,7 @@ That long to give themselves for wage,
 To shake their wicked sides at youth
 Restraining reckless middle-age?
 
-IO] To a Poet, who would have me
-Praise certain Bad Poets,
-Imitators of His and Mine
-You say, as I have often given tongue
-In praise of what another's said or sung,
-
 ## THE GREEN HELMET AND OTHER POEMS 95
-
-'Twere politic to do the like by these;
-But was there ever dog that praised his fleas?
 
 I04 The Mask
 'Put off that mask of burning gold
@@ -3284,12 +2871,6 @@ Love or deceit.'
 'It was the mask engaged your mind,
 And after set your heart to beat,
 Not what's behind.' 10
-
-'But lest you are my enemy,
-I must enquire.'
-'0 no, my dear, let all that be;
-What matter, so there is but fire
-In you, in me?'
 
 I05 Upon a House shaken by the Land
 Agitation
@@ -3305,9 +2886,6 @@ How should their luck run high enough to reach
 The gifts that govern men, and after these 10
 
 ## LYRICAL
-
-To gradual Time's last gift, a written speech
-Wrought of high laughter, loveliness and ease?
 
 Dear Craoibhin Aoibhin, look into our case.
 When we are high and airy hundreds say
@@ -3358,20 +2936,6 @@ Crying aloud as the racecourse is,
 And we find hearteners among men
 That ride upon horses.
 
-A Friend's Illness
-Sickness brought me this
-Thought, in that scale of his:
-Why should I be dismayed
-Though flame had burned the whole
-World, as it were a coal,
-Now I have seen it weighed
-Against a soul?
-
-IIO All Things can tempt Me
-All things can tempt me from this craft of verse:
-One time it was a woman's face, or worse -
-The seeming needs of my fool-driven land;
-
 ## LYRICAL
 
 Now nothing but comes readier to the hand
@@ -3399,11 +2963,6 @@ That is looped in the loops of her hair,
 Till the loops of time had run.'
 Ah, penny, brown penny, brown penny.
 One cannot begin it too soon.
-
-## OLD PLAY
-
-'How am I fallen from myself, for a long time now
-I have not seen the Prince of Chang in my dreams.'
 
 ## II2
 
@@ -3605,12 +3164,6 @@ Indifferent how the rancour ran,
 He gave the hours they had set free
 To Michelozzo's latest plan
 
-For the San Marco Library,
-Whence turbulent Italy should draw
-Delight in Art whose end is peace,
-In logic and in natural law
-By sucking at the dugs of Greece.
-
 ## 108 LYRICAL
 
 Your open hand but shows our loss,
@@ -3718,11 +3271,6 @@ And gather the Glasnevin coverlet
 About your head till the dust stops your ear, 20
 The time for you to taste of that salt breath
 
-And listen at the corners has not come;
-You had enough of sorrow before death -
-Away, away! You are safer in the tomb.
-September 29, 1913
-
 ## RESPONSIBILITIES III
 
 II9 When Helen lived
@@ -3747,13 +3295,6 @@ On every crowded street to stare
 Upon great Juan riding by:
 Even like these to rail and sweat
 Staring upon his sinewy thigh.
-
-I2I The Three Beggars
-'Though to my feathers in the wet,
-I have stood here from break of day,
-I have not found a thing to eat,
-For only rubbish comes my way.
-Am I to live on lebeen-lone?'
 
 ## II2 LYRICAL
 
@@ -3821,14 +3362,6 @@ I've stood as I were made of stone
 And seen the rubbish run about,
 It's certain there are trout somewhere
 And maybe I shall take a trout
-
-I22 The Three Hermits
-Three old hermits took the air
-By a cold and desolate sea,
-First was muttering a prayer,
-Second rummaged for a flea;
-On a windy stone, the third,
-Giddy with his hundredth year,
 
 ## 114 LYRICAL
 
@@ -3962,18 +3495,6 @@ Sick of his grave has wakened me?
 But let him keep his grave for once
 That I may find the sleep I have lost.'
 
-'And I will talk before I sleep
-And drink before I talk.'
-And he
-Had dipped the wooden ladle deep
-Into the sleeper's tub of beer
-Had not the sleeper started up.
-
-'Before you have dipped it in the beer
-I dragged from Goban's mountain-top so
-I'll have assurance that you are able
-To value beer; no half-legged fool
-
 liB LYRICAL
 Shall dip his nose into my ladle
 Merely for stumbling on this hole
@@ -4087,16 +3608,6 @@ That had gone
 With the dragons?
 
 ## RESPONSIBILITIES 121
-
-I28 1. The Witch
-Toil and grow rich,
-What's that but to lie
-With a foul witch
-And after, drained dry,
-To be brought
-To the chamber where
-Lies one long sought
-With despair?
 
 I29 n. The Peacock
 What's riches to him
@@ -4252,10 +3763,6 @@ And the outrageous cannon, 10
 To bundle time away
 That the night come.
 
-IJ8 An Appointment
-Being out of heart with government
-I took a broken root to fling
-
 ## !26 LYRICAL
 
 Where the proud, wayward squirrel went,
@@ -4364,10 +3871,6 @@ Among what rushes will they build,
 
 ## 1)2 LYRICAL
 
-By what lake's edge or pool
-Delight men's eyes when I awake some day
-To find they have flown away? 30
-
 Now that we're almost settled in our house
 I'll name the friends that cannot sup with us
 Beside a fire of turf in th' ancient tower,
@@ -4437,11 +3940,6 @@ The tower set on the stream's edge;
 The ford where drinking cattle make a stir
 Nightly, and startled by that sound
 
-## IJ4 LYRICAL
-
-The water-hen must change her ground;
-He might have been your heartiest welcomer.
-
 ## VIII
 
 When with the Galway foxhounds he would ride
@@ -4473,18 +3971,6 @@ Soldier, scholar, horseman, he,
 And all he did done perfectly
 As though he had but that one trade alone. So
 XI
-
-Some burn damp faggots, others may consume
-The entire combustible world in one small room
-As though dried straw, and if we turn about
-The bare chimney is gone black out
-
-## THE WILD SWANS AT COOLE 1 35
-
-Because the work had finished in that Hare.
-Soldier, scholar, horseman, he,
-As 'twere all life's epitome.
-What made us dream that he could comb grey hair?
 
 ## XII
 
@@ -4588,10 +4074,6 @@ Could like a brace of blackbirds sing.
 
 ## LYRICAL
 
-And snug it in a feather-bed.
-I cannot find the peace of home
-On great-grandfather's battered tomb.'
-
 I49 Solomon to Sheba
 Sang Solomon to Sheba,
 And kissed her dusky face,
@@ -4617,10 +4099,6 @@ Dare match in learning with us two,
 And all day long we have found
 There's not a thing but love can make
 The world a narrow pound.'
-
-I 50 The Living Beauty
-I bade, because the wick and oil are spent
-And frozen are the channels of the blood,
 
 ## THE WILD SWANS AT COOLE 139
 
@@ -4653,11 +4131,6 @@ Laid on the death-bed,
 For who could have foretold
 That the heart grows old?
 
-I 52 To a Young Beauty
-Dear fellow-artist, why so free
-With every sort of company,
-With every Jack and Jill?
-
 ## LYRICAL
 
 Choose your companions from the best;
@@ -4689,11 +4162,6 @@ And has forgot,
 Set all her blood astir 10
 And glittered in her eyes.
 
-I 54 The Scholars
-Bald heads forgetful of their sins,
-Old, learned, respectable bald heads
-Edit and annotate the lines
-
 ## THE WILD SWANS AT COOLE
 
 That young men, tossing on their beds,
@@ -4723,10 +4191,6 @@ Could trumpeter Michael be so brave?'
 Or something of that sort he said,
 'And if my dearest friend were dead
 I'd dance a measure on his grave.'
-
-Shepherd and Goatherd
-Shepherd. That cry's from the first cuckoo of the year.
-I wished before it ceased.
 
 ## LYRICAL
 
@@ -4885,12 +4349,6 @@ Their angry tears, are gone.
 
 ## LYRICAL
 
-The holy centaurs of the hills are vanished;
-I have nothing but the embittered sun;
-Banished heroic mother moon and vanished,
-And now that I have come to fifty years 10
-I must endure the timid sun.
-
 The Dawn
 I would be ignorant as the dawn
 That has looked down
@@ -4994,14 +4452,6 @@ And the down-turn of his wrist
 
 ## THE WILD SWANS AT COOLE 1 49
 
-When the flies drop in the stream;
-A man who does not exist,
-A man who is but a dream;
-And cried, 'Before I am old
-I shall have written him one
-Poem maybe as cold
-And passionate as the dawn.'
-
 I6I The Hawk
 'Call down the hawk from the air;
 Let him be hooded or caged
@@ -5022,16 +4472,7 @@ Dumbfounded before a knave,
 Should give to my friend
 A pretence of wit.'
 
-Memory
-One had a lovely face,
-And two or three had charm,
-But charm and face were in vain
-
 ## IJO LYRICAL
-
-Because the mountain grass
-Cannot but keep the form
-Where the mountain hare has lain.
 
 Her Praise
 She is foremost of those that I would hear praised.
@@ -5210,11 +4651,6 @@ When I clamber to the heights of sleep,
 Or when I grow excited with wine,
 Suddenly I meet your face.
 
-Presences
-This night has been so strange that it seemed
-As if the hair stood up on my head.
-From going-down of the sun I have dreamed
-
 ## THE WILD SWANS AT COOLE 155
 
 That women laughing, or timid or wild,
@@ -5225,37 +4661,7 @@ Returned and yet unrequited love.
 They stood in the door and stood between
 My great wood lectern and the fire 10
 
-Till I could hear their hearts beating:
-One is a harlot, and one a child
-That never looked upon man with desire,
-And one, it may be, a queen.
-
-I70 The Balloon of the Mind
-Hands, do what you're bid:
-Bring the balloon of the mind
-That bellies and drags in the wind
-Into its narrow shed.
-
-I7I To a Squirrel at Kyle-na-no
-Come play with me;
-Why should you run
-Through the shaking tree
-As though I'd a gun
-To strike you dead?
-When all I would do
-Is to scratch your head
-And let you go.
-
-I72 On being asked for a War Poem
-I think it better that in times like these
-A poet's mouth be silent, for in truth
-We have no gift to set a statesman right;
-
 ## LYRICAL
-
-He has had enough of meddling who can please
-A young girl in the indolence of her youth,
-Or an old man upon a winter's night.
 
 I7J In Memory of Alfred Pollexfen
 Five-and-twenty years have gone
@@ -5286,10 +4692,6 @@ A humorous, unambitious man,
 Was buried near the astrologer,
 Yesterday in the tenth year
 Since he who had been contented long,
-
-A nobody in a great throng,
-Decided he must journey home, 30
-Now that his fiftieth year had come,
 
 ## THE WILD SWANS AT COOLE 1 57
 
@@ -5324,10 +4726,6 @@ Over some silken dress
 Cut in the Turkish fashion,
 
 ## LYRICAL
-
-Or, it may be, like a boy's.
-We have given the world our passion, 10
-We have naught for death but toys.
 
 111. She turns the Dolls' Faces
 to the Wall
@@ -5389,12 +4787,6 @@ Till all the boughs are gay,
 And she may look from the bed
 On pretty things that may
 Please a fantastic head.
-
-I6o LYRICAL
-Give her a little grace,
-What if a laughing eye 10
-Have looked into your face?
-It is about to die.
 
 Ego Dominus Tuus
 Hie. On the grey sand beside the shallow stream
@@ -5729,34 +5121,7 @@ Greek Alexander from my flesh, 10
 Augustus Caesar, and after these
 That great rogue Alcibiades.
 
-Hunchback. To all that in your flesh have stood
-And blessed, I give my gratitude,
-Honoured by all in their degrees,
-But most to Alcibiades.
-
 ## THE WILD SWANS AT COOLE
-
-A speckled cat and a tame hare
-Eat at my hearthstone
-And sleep there;
-And both look up to me alone
-For learning and defence
-As I look up to Providence.
-
-I start out of my sleep to think
-Some day I may forget
-Their food and drink;
-Or, the house door left unshut, 10
-
-The hare may run till it's found
-The horn's sweet note and the tooth of the hound.
-
-I bear a burden that might well try
-Men that do all by rule,
-And what can I
-That am a wandering-witted fool
-But pray to God that He ease
-My great responsibilities?
 
 I slept on my three-legged stool by the fire,
 The speckled cat slept on my knee;
@@ -5770,11 +5135,6 @@ To drum with her heel and to leap?
 Had I but awakened from sleep 10
 
 ## 170 LYRICAL
-
-And called her name, she had heard,
-It may be, and had not stirred,
-That now, it may be, has found
-The horn's sweet note and the tooth of the hound.
 
 Another Song of a Fool
 This great purple butterfly,
@@ -5809,11 +5169,6 @@ Obedient to some hidden magical breath.
 They do not even feel, so abstract are they,
 So dead beyond our death,
 Triumph that we obey.
-
-On the grey rock of Cashel I suddenly saw
-A Sphinx with woman breast and lion paw,
-A Buddha, hand at rest,
-Hand lifted up that blest; 20
 
 And right between these two a girl at play
 That, it may be, had danced her life away,
@@ -5928,11 +5283,6 @@ The lineaments that please their view
 When the long looking-glass is full, so
 Even from the foot-sole think it too.
 
-Solomon and the Witch
-And thus declared that Arab lady:
-'Last night, where under the wild moon
-On grassy mattress I had laid me,
-
 ## MICHAEL ROBARTES AND THE DANCER 177
 
 Within my arms great Solomon,
@@ -5962,18 +5312,6 @@ Maybe the bride-bed brings despair,
 For each an imagined image brings
 And finds a real image there;
 Yet the world ends when these two things,
-
-Though several, are a single light,
-When oil and wick are burned in one; 30
-Therefore a blessed moon last night
-Gave Sheba to her Solomon.'
-
-•yet the world stays.'
-'If that be so,
-Your cockerel found us in the wrong
-Although he thought it worth a crow.
-Maybe an image is too strong
-Or maybe is not strong enough.'
 
 ## LYRICAL
 
@@ -6049,11 +5387,6 @@ Upon the open road, near to the Sligo quay-
 No, no, not said, but cried it out - 'You have come again,
 And surely after twenty years it was time to come.'
 
-r8o LYRICAL
-I am thinking of a child's vow sworn in vain
-Never to leave that valley his fathers called their home.
-November 1919
-
 I9J Easter, I9I6
 I have met them at close of day
 Coming with vivid faces
@@ -6120,13 +5453,6 @@ Can make a stone of the heart.
 That is Heaven's part, our part 6o
 To murmur name upon name,
 
-As a mother names her child
-When sleep at last has come
-On limbs that had run wild.
-What is it but nightfall?
-No, no, not night but death;
-Was it needless death after all?
-
 ## LYRICAL
 
 For England may keep faith
@@ -6166,28 +5492,6 @@ That converse bone to bone?
 
 ## MICHAEL ROBARTES AND THE DANCER 183
 
-I95 The Rose Tree
-'0 words are lightly spoken,'
-Said Pearse to Connolly,
-'Maybe a breath of politic words
-Has withered our Rose Tree;
-Or maybe but a wind that blows
-Across the bitter sea.'
-
-'It needs to be but watered,'
-James Connolly replied,
-'To make the green come out again
-And spread on every side, 10
-And shake the blossom from the bud
-To be the garden's pride.'
-
-'But where can we draw water,'
-Said Pearse to Connolly,
-'When all the wells are parched away?
-0 plain as plain can be
-There's nothing but our own red blood
-Can make a right Rose Tree.'
-
 On a Political Prisoner
 She that but little patience knew,
 From childhood on, had now so much
@@ -6195,10 +5499,6 @@ A grey gull lost its fear and flew
 Down to her cell and there alit,
 And there endured her fingers' touch
 And from her fingers ate its bit.
-
-Did she in touching that lone wing
-Recall the years before her mind
-Became a bitter, an abstract thing,
 
 ## LYRICAL
 
@@ -6260,18 +5560,6 @@ Had watched in bitterer sleep
 The marvellous stag of Arthur,
 That lofty white stag, leap
 From mountain steep to steep.
-
-Demon and Beast
-For certain minutes at the least
-That crafty demon and that loud beast
-That plague me day and night
-
-r86 LYRICAL
-Ran out of my sight;
-Though I had long perned in the gyre,
-Between my hatred and desire,
-I saw my freedom won
-And all laugh in the sun.
 
 The glittering eyes in a death's head
 Of old Luke Wadding's portrait said 10
@@ -6436,13 +5724,6 @@ Ceremony's a name for the rich horn,
 And custom for the spreading laurel tree. So
 june 1919
 
-202 A Meditation in Time of War
-For one throb of the artery,
-While on that old grey stone I sat
-Under the old wind-broken tree,
-I knew that One is animate,
-Mankind inanimate phantasy.
-
 203 To be carved on a Stone at
 Thoor Ballylee
 I, the poet William Yeats,
@@ -6545,11 +5826,6 @@ But they mistook the brightness of the moon
 For the prosaic light of day-
 Music had driven their wits astray-
 And one was drowned in the great bog of Cloone.
-
-Strange, but the man who made the song was blind;
-Yet, now I have considered it, I find 50
-That nothing strange; the tragedy began
-With Homer that was a blind man,
 
 ## LYRICAL
 
@@ -6664,11 +5940,6 @@ Made lock, stock and barrel
 Out of his bitter soul,
 Aye, sun and moon and star, all,
 
-And further add to that
-That, being dead, we rise,
-Dream and so create
-Translunar Paradise.
-
 ## THE TOWER 1 99
 
 I have prepared my peace
@@ -6680,23 +5951,6 @@ Memories of the words of women,
 All those things whereof
 Man makes a superhuman
 Mirror-resembling dream.
-
-As at the loophole there
-The claws chatter and scream,
-And drop twigs layer upon layer.
-When they have mounted up,
-The mother bird will rest
-On their hollow top,
-And so warm her wild nest.
-
-I leave both faith and pride
-To young upstanding men
-Climbing the mountain side,
-That under bursting dawn
-They may drop a fly;
-Being of that metal made
-Till it was broken by
-This sedentary trade. 180
 
 Now shall I make my soul,
 Compelling it to study
@@ -6711,11 +5965,6 @@ Of every brilliant eye 190
 That made a catch in the breath -
 
 ## 200 LYRICAL
-
-Seem but the clouds of the sky
-When the horizon fades;
-Or a bird's sleepy cry
-Among the deepening shades.
 
 206 1. Ancestral Houses
 Surely among a rich man's flowering lawns,
@@ -6739,10 +5988,6 @@ Called architect and artist in, that they,
 Bitter and violent men, might rear in stone
 The sweetness that all longed for night and day, 20
 The gentleness none there had ever known;
-
-But when the master's buried mice can play,
-And maybe the great-grandson of that house,
-For all its bronze and marble, 's but a mouse.
 
 ## THE TOWER 201
 
@@ -6783,11 +6028,6 @@ In some like chamber, shadowing forth
 How the daemonic rage
 
 ## 202 LYRICAL
-
-Imagined everything.
-Benighted travellers
-From markets and from fairs
-Have seen his midnight candle glimmering. 20
 
 Two men have founded here. A man-at-arms
 Gathered a score of horse and spent his days
@@ -6861,11 +6101,6 @@ Seeing that love and friendship are enough, 20
 
 ## LYRICAL
 
-For an old neighbour's friendship chose the house
-And decked and altered it for a girl's love,
-And know whatever flourish and decline
-These stones remain their monument and mine.
-
 2IO v. The Road at My Door
 An affable Irregular,
 A heavily-built Falstaffian man,
@@ -6878,12 +6113,6 @@ Stand at my door, and I complain
 Of the foul weather, hail and rain,
 A pear tree broken by the storm. 10
 
-I count those feathered balls of soot
-The moor-hen guides upon the stream,
-To silence the envy in my thought;
-And turn towards my chamber, caught
-In the cold snows of a dream.
-
 2r r VI. The Stare's Nest
 by My Window
 The bees build in the crevices
@@ -6893,12 +6122,6 @@ My wall is loosening; honey-bees,
 Come build in the empty house of the stare.
 
 ## THETOWER 2~
-
-We are closed in, and the key is turned
-On our uncertainty; somewhere
-A man is killed, or a house burned,
-Yet no clear fact to be discerned:
-Come build in the empty house of the stare. 10
 
 A barricade of stone or of wood;
 Some fourteen days of civil war;
@@ -6960,9 +6183,6 @@ It had but made us pine the more. The abstract joy,
 The half-read wisdom of daemonic images,
 Suffice the ageing man as once the growing boy. 40
 
-Many ingenious lovely things are gone
-That seemed sheer miracle to the multitude,
-
 ## THE TOWER
 
 Protected from the circle of the moon
@@ -6998,11 +6218,6 @@ The night can sweat with terror as before
 We pieced our thoughts into philosophy, 30
 And planned to bring the world under a rule,
 Who are but weasels fighting in a hole.
-
-He who can read the signs nor sink unmanned
-Into the half-deceit of some intoxicant
-From shallow wits; who knows no work can stand,
-Whether health, wealth or peace of mind were spent
 
 ## 208 LYRICAL
 
@@ -7067,11 +6282,6 @@ To afflict mankind, but now
 That winds of winter blow
 Learn that we were crack-pated when we dreamed.
 
-We, who seven years ago
-Talked of honour and of truth, go
-Shriek with pleasure if we show
-The weasel's twist, the weasel's tooth.
-
 v
 Come let us mock at the great
 That had such burdens on the mind
@@ -7082,22 +6292,6 @@ Come let us mock at the wise;
 With all those calendars whereon
 
 ## 2IO LYRICAL
-
-They fixed old aching eyes, 100
-They never saw how seasons run,
-And now but gape at the sun.
-
-Come let us mock at the good
-That fancied goodness might be gay,
-And sick of solitude
-Might proclaim a holiday:
-Wind shrieked- and where are they?
-
-Mock mockers after that
-That would not lift a hand maybe
-To help good, wise or great 110
-To bar that foul storm out, for we
-Traffic in mockery.
 
 Violence upon the roads: violence of horses;
 Some few have handsome riders, are garlanded
@@ -7129,12 +6323,6 @@ And after that there's nothing good
 Because the spring-time has not come -
 Nor know what disturbs our blood
 Is but its longing for the tomb.
-
-2I5 Youth and Age
-Much did I rage when young,
-Being by the world oppressed,
-But now with flattering tongue
-It speeds the parting guest.
 
 2I6 The New Faces
 If you, that have grown old, were the first dead,
@@ -7179,10 +6367,6 @@ A woman and a man,
 Unless the Holy Writings lie,
 Hurried through the smooth and rough
 
-And through the fertile and waste, 30
-Protecting, till the danger past,
-With human love.
-
 ## THE TOWER 21)
 
 I saw a staring virgin stand
@@ -7215,24 +6399,7 @@ And vain all Doric discipline.
 Everything that man esteems
 Endures a moment or a day. 10
 
-Love's pleasure drives his love away,
-The painter's brush consumes his dreams;
-The herald's cry, the soldier's tread
-Exhaust his glory and his might:
-
 ## 214 LYRICAL
-
-Locke sank into a swoon;
-The Garden died;
-God took the spinning-jenny
-Out of his side.
-
-Where got I that truth?
-Out of a medium's mouth,
-Out of nothing it came,
-Out of the forest loam,
-Out of dark night where lay
-The crowns of Nineveh.
 
 220 Leda and the Swan
 A sudden blow: the great wings beating still
@@ -7249,10 +6416,6 @@ And Agamemnon dead.
 Being so caught up,
 
 ## THE TOWER 215
-
-So mastered by the brute blood of the air,
-Did she put on his knowledge with his power
-Before the indifferent beak could let her drop?
 
 22 I On a Picture of a Black Centaur by
 Edmund Dulac
@@ -7318,11 +6481,6 @@ And that must sleep, shriek, struggle to escape
 As recollection or the drug decide,
 
 ## THE TOWER 217
-
-Would think her son, did she but see that shape
-With sixty or more winters on its head,
-A compensation for the pang of his birth,
-Or the uncertainty of his setting forth? 40
 
 Plato thought nature but a spume that plays
 Upon a ghostly paradigm of things;
@@ -7428,10 +6586,6 @@ Coagulate of stuff
 
 ## 220 LYRICAL
 
-Transparent like the wind, 10
-I think that I may find
-A faithful love, a faithful love.
-
 A strange thing surely that my Heart, when love had come
 unsought
 Upon the Norman upland or in that poplar shade,
@@ -7461,37 +6615,12 @@ mate in the wild.'
 
 ## THE TOWER 221
 
-I did not find in any cage the woman at my side.
-0 but her heart would break to learn my thoughts are 20
-far away.'
-
 'Speak all your mind,' my Heart sang out, 'speak all your
 mind; who cares,
 Now that your tongue cannot persuade the child till she
 mistake
 Her childish gratitude for love and match your fifty years?
 0 let her choose a young man now and all for his wild sake.'
-
-Though nurtured like the sailing moon
-In beauty's murderous brood,
-She walked awhile and blushed awhile
-And on my pathway stood
-Until I thought her body bore
-A heart of flesh and blood.
-
-But since I laid a hand thereon
-And found a heart of stone
-I have attempted many things
-And not a thing is done, 10
-For every hand is lunatic
-That travels on the moon.
-
-She smiled and that transfigured me
-And left me but a lout,
-Maundering here, and maundering there,
-Emptier of thought
-Than the heavenly circuit of its stars
-When the moon sails out.
 
 ## 222 LYRICAL
 
@@ -7508,29 +6637,7 @@ My heart's agony 10
 To passing bird, but I am dumb
 From human dignity.
 
-A mermaid found a swimming lad,
-Picked him for her own,
-Pressed her body to his body,
-Laughed; and plunging down
-Forgot in cruel happiness
-That even lovers drown.
-
-2)0 IV. The Death of the Hare
-I have pointed out the yelling pack,
-The hare leap to the wood,
-And when I pass a compliment
-Rejoice as lover should
-At the drooping of an eye,
-At the mantling of the blood.
-
 ## THE TOWER 223
-
-Then suddenly my heart is wrung
-By her distracted air
-And I remember wildness lost
-And after, swept from there, 10
-Am set down standing in the wood
-At the death of the hare.
 
 23I v. The Empty Cup
 A crazy man that found a cup,
@@ -7560,13 +6667,6 @@ And yet there beauty lay;
 
 ## 224 LYRICAL
 
-The first of all the tribe lay there
-And did such pleasure take -
-She who had brought great Hector down
-And put all Troy to wreck -
-That she cried into this ear,
-'Strike me if I shriek.'
-
 2]3 VII. The Friends of his Youth
 Laughter not time destroyed my voice
 And put that crack in it,
@@ -7588,11 +6688,6 @@ And then I laugh till tears run down
 And the heart thumps at my side,
 Remembering that her shriek was love
 And that he shrieks from pride. 20
-
-2]4 VIII. Summer and Spring
-We sat under an old thorn-tree
-And talked away the night,
-Told all that had been said or done
 
 ## THE TOWER 225
 
@@ -7617,20 +6712,6 @@ Madge tells me what I dared not think
 When my blood was strong,
 And what had drowned a lover once
 Sounds like an old song.
-
-Though Margery is stricken dumb
-If thrown in Madge's way,
-We three make up a solitude;
-For none alive to-day 10
-Can know the stories that we know
-Or say the things we say:
-
-How such a man pleased women most
-Of all that are gone,
-How such a pair loved many years
-And such a pair but one,
-Stories of the bed of straw
-Or the bed of down.
 
 ## LYRICAL
 
@@ -7665,11 +6746,6 @@ I celebrate the silent kiss that ends short life or long.
 
 ## THE TOWER 227
 
-Never to have lived is best, ancient writers say; 10
-Never to have drawn the breath of life, never to have looked
-into the eye of day;
-The second best's a gay goodnight and quickly turn away.
-
 The Three Monuments
 They hold their public meetings where
 Our most renowned patriots stand,
@@ -7694,9 +6770,6 @@ His element is so fine
 Being sharpened by his death,
 To drink from the wine-breath
 While our gross palates drink from the whole wine. 10
-
-I need some mind that, if the cannon sound
-From every quarter of the world, can stay
 
 ## LYRICAL
 
@@ -7829,12 +6902,6 @@ And strike another till time catch;
 
 ## 2 34 LYRICAL
 
-Should the conflagration climb,
-Run till all the sages know.
-We the great gazebo built,
-They convicted us of guilt;
-Bid me strike a match and blow.
-
 Death
 Nor dread nor hope attend
 A dying animal;
@@ -7894,9 +6961,6 @@ That is to say, ascends to Heaven;
 Only the dead can be forgiven;
 But when I think of that my tongue's a stone. 40
 
-My Self A living man is blind and drinks his drop.
-What matter if the ditches are impure?
-
 ## LYRICAL
 
 What matter if I live it all once more?
@@ -7924,12 +6988,6 @@ A proud woman not kindred of his soul.
 I am content to follow to its source
 Every event in action or in thought;
 Measure the lot; forgive myself the lot!
-
-When such as I cast out remorse
-So great a sweetness flows into the breast
-We must laugh and we must sing,
-We are blest by everything,
-Everything we look upon is blest.
 
 ## THE WINDING STAIR AND OTHER POEMS 237
 
@@ -7963,20 +7021,10 @@ Goldsmith deliberately sipping at the honey-pot of his mind,
 
 ## LYRICAL
 
-And haughtier-headed Burke that proved the State a tree,
-That this unconquerable labyrinth of the birds, century
-after century,
-Cast but dead leaves to mathematical equality;
-
 And God-appointed Berkeley that proved all things a dream,
 That this pragmatical, preposterous pig of a world, its farrow
 that so solid seem,
 Must vanish on the instant if the mind but change its theme;
-
-Saeva Indignatio and the labourer's hire,
-The strength that gives our blood and state magnanimity of
-its own desire;
-Everything that is not God consumed with intellectual fire. 30
 
 ## III
 
@@ -8027,36 +7075,6 @@ Stood in the circuit of a needle's eye.
 Some found a different pole, and where it stood
 A pattern on a napkin dipped in blood.
 
-## LYRICAL
-
-All-destroying sword-blade still
-Carried by the wandering fool.
-Gold-sewn silk on the sword-blade,
-Beauty and fool together laid.
-
-2 47 Spilt Milk
-We that have done and thought,
-That have thought and done,
-Must ramble, and thin out
-Like milk spilt on a stone.
-
-The Nineteenth Century and After
-Though the great song return no more
-There's keen delight in what we have:
-The rattle of pebbles on the shore
-Under the receding wave.
-
-2 49 Statistics
-'Those Platonists are a curse,' he said,
-'God's fire upon the wane,
-A diagram hung there instead,
-More women born than men.'
-
-250 Three Movements
-Shakespearean fish swam the sea, far away from land;
-Romantic fish swam in nets coming to the hand;
-What are all those fish that lie gasping on the strand?
-
 ## THE WINDING STAIR AND OTHER POEMS 241
 
 25I The Seven Sages
@@ -8082,21 +7100,7 @@ The First. American colonies, Ireland, France and India
 Harried, and Burke's great melody against it.
 The Second. Oliver Goldsmith sang what he had seen,
 
-Roads full of beggars, cattle in the fields,
-But never saw the trefoil stained with blood,
-The avenging leaf those fields raised up against it. 20
-
-The Fourth. The tomb of Swift wears it away.
-The Third. A voice
-Soft as the rustle of a reed from Cloyne
-That gathers volume; now a thunder-clap.
-
 ## LYRICAL
-
-The Sixth. What schooling had these four?
-The Seventh. They walked the roads
-Mimicking what they heard, as children mimic;
-They understood that wisdom comes of beggary.
 
 252 The Crazed Moon
 Crazed through much child-bearing
@@ -8150,11 +7154,6 @@ Here, traveller, scholar, poet, take your stand
 When all those rooms and passages are gone,
 When nettles wave upon a shapeless mound
 And saplings root among the broken stone,
-
-And dedicate - eyes bent upon the ground,
-Back turned upon the brightness of the sun 30
-And all the sensuality of the shade -
-A moment's memory to that laurelled head.
 
 2 54 Coole and Ballylee, I93 I
 Under my window-ledge the waters race,
@@ -8233,11 +7232,6 @@ That only God, my dear,
 Could love you for yourself alone
 And not your yellow hair.'
 
-Swift's Epitaph
-Swift has sailed into his rest;
-Savage indignation there
-Cannot lacerate his breast.
-
 ## LYRICAL
 
 2 57At Algeciras -
@@ -8262,18 +7256,7 @@ What He can question, what if questioned I
 Can with a fitting confidence reply.
 November 1928
 
-The Choice
-The intellect of man is forced to choose
-Perfection of the life, or of the work,
-And if it take the second must refuse
-A heavenly mansion, raging in the dark.
-
 ## THE WINDING STAIR AND OTHER POEMS 247
-
-When all that story's finished, what's the news?
-In luck or out the toil has left its mark:
-That old perplexity an empty purse,
-Or the day's vanity, the night's remorse.
 
 2 59 M ohini Chatterjee
 I asked if I should pray,
@@ -8366,21 +7349,7 @@ Chimney corner, garden walk,
 Or rocky cistern where we tread the clothes
 And gather all the talk? 10
 
-What is this flesh I purchased with my pains,
-This fallen star my milk sustains,
-This love that makes my heart's blood stop
-Or strikes a sudden chill into my bones
-And bids my hair stand up?
-
 ## 250 LYRICAL
-
-Comes to destroy
-All those antinomies
-Of day and night;
-The body calls it death,
-The heart remorse.
-But if these be right
-What is joy? 10
 
 A tree there is that from its topmost bough
 Is half all glittering flame and half all green
@@ -8412,18 +7381,6 @@ Proud, open-eyed and laughing to the tomb.
 
 ## THE WINDING STAIR AND OTHER POEMS 251
 
-My fiftieth year had come and gone,
-I sat, a solitary man,
-In a crowded London shop,
-An open book and empty cup
-On the marble table-top.
-
-While on the shop and street I gazed
-My body of a sudden blazed;
-And twenty minutes more or less
-It seemed, so great my happiness,
-That I was blessed and could bless.
-
 v
 Although the summer sunlight gild
 Cloudy leafage of the sky,
@@ -8437,26 +7394,6 @@ But thought that I might say or do,
 Weigh me down, and not a day
 But something is recalled,
 My conscience or my vanity appalled.
-
-A rivery field spread out below,
-An odour of the new-mown hay
-In his nostrils, the great lord of Chou
-Cried, casting off the mountain snow, 6o
-'Let all things pass away.'
-
-## 252 LYRICAL
-
-Wheels by milk-white asses drawn
-Where Babylon or Nineveh
-Rose; some conqueror drew rein
-And cried to battle-weary men,
-'Let all things pass away.'
-
-From man's blood-sodden heart are sprung
-Those branches of the night and day
-Where the gaudy moon is hung.
-What's the meaning of all song? 70
-'Let all things pass away.'
 
 ## VII
 
@@ -8484,12 +7421,6 @@ part.
 
 ## THE WINDING STAIR AND OTHER POEMS 253
 
-Homer is my example and his unchristened heart.
-The lion and the honeycomb, what has Scripture said?
-So get you gone, Von Hugel, though with blessings on your
-head.
-19]2
-
 Quarrel in Old Age
 Where had her sweetness gone?
 What fanatics invent
@@ -8508,14 +7439,6 @@ Lives that lonely thing
 That shone before these eyes
 Targeted, trod like Spring.
 
-The Results of Thought
-Acquaintance; companion;
-One dear brilliant woman;
-The best-endowed, the elect,
-All by their youth undone,
-All, all, by that inhuman
-Bitter glory wrecked.
-
 ## 254 LYRICAL
 
 But I have straightened out
@@ -8532,12 +7455,6 @@ Hesitate or stay?
 What heads shake or nod?
 August 1931
 
-2 65 Gratitude to the Unknown Instructors
-What they undertook to do
-They brought to pass;
-All things hang like a drop of dew
-Upon a blade of grass.
-
 266 Remorse for Intemperate Speech
 I ranted to the knave and fool,
 But outgrew that school,
@@ -8552,13 +7469,6 @@ My fanatic heart. 10
 
 ## THE WINDING STAIR AND OTHER POEMS 255
 
-Out of Ireland have we come.
-Great hatred, little room,
-Maimed us at the start.
-I carry from my mother's womb
-A fanatic heart.
-August 28, 1931
-
 Stream and Sun at Glendalough
 Through intricate motions ran
 Stream and gliding sun
@@ -8570,18 +7480,6 @@ But what am I that dare
 Fancy that I can
 Better conduct myself or have more
 Sense than a common man? 10
-
-What motion of the sun or stream
-Or eyelid shot the gleam
-That pierced my body through?
-What made me live like these that seem
-Self-born, born anew?
-juTII! 1932
-
-268 1. Crazy Jane and the Bishop
-Bring me to the blasted oak
-That I, midnight upon the stroke,
-(All find safety in the tomb.)
 
 ## LYRICAL
 
@@ -8727,10 +7625,6 @@ But Love has pitched his mansion in
 
 ## LYRICAL
 
-The place of excrement;
-For nothing can be sole or whole
-That has not been rent.'
-
 2 74 VII. Crazy Jane Grown Old
 Looks at the Dancers
 I found that ivory image there
@@ -8754,40 +7648,6 @@ Cared not a thraneen for what chanced
 So that I had the limbs to try
 Such a dance as there was danced - 20
 Love is like the lion's tooth.
-
-## THE WINDING STAIR AND OTHER POEMS 261
-
-Another came in sight
-That on a stick relied
-To hold himself upright:
-I sat and cried.
-
-And that was all my song -
-When everything is told, 10
-Saw I an old man young
-Or young man old?
-
-IX. Young Man's Song
-'She will change,' I cried,
-'Into a withered crone.'
-The heart in my side,
-That so still had lain,
-In noble rage replied
-And beat upon the bone:
-
-'Uplift those eyes and throw
-Those glances unafraid:
-She would as bravely show
-Did all the fabric fade; 10
-No withered crone I saw
-Before the world was made.'
-
-Abashed by that report,
-For the heart cannot lie,
-I knelt in the dirt.
-And all shall bend the knee
-To my offended heart
-Until it pardon me.
 
 ## LYRICAL
 
@@ -8844,12 +7704,6 @@ But something bore them out of sight
 In a great tumult of the air,
 And after nailed upon the night
 Berenice's burning hair.
-
-XIV. His Bargain
-Who talks of Plato's spindle;
-What set it whirling round?
-Eternity may dwindle,
-Time is unwound,
 
 ## LYRICAL
 
@@ -8910,11 +7764,6 @@ That we descant and yet again descant
 Upon the supreme theme of Art and Song:
 Bodily decrepitude is wisdom; young
 We loved each other and were ignorant.
-
-XVIII. Mad as the Mist and Snow
-Bolt and bar the shutter,
-For the foul winds blow:
-Our minds are at their best this night,
 
 ## 266 LYRICAL
 
@@ -8991,14 +7840,6 @@ And the trombone,' cried he,
 
 ## LYRICAL
 
-And cocked a malicious eye,
-'But time runs on, runs on.'
-'I am of Ireland,
-And the Holy Land of Ireland,
-And time rum on,' cried she.
-'Come out of charity
-And dance with me in Ireland.'
-
 288 XXI. The Dancer at Cruachan 1
 and Cro-Patrick
 I, proclaiming that there is
@@ -9027,21 +7868,6 @@ That blinked and saw them in a shroud.
 
 ## THE WINDING STAIR AND OTHER POEMS 269
 
-'Whatever stands in field or flood,
-Bird, beast, fish or man,
-Mare or stallion, cock or hen,
-Stands in God's unchanging eye
-In all the vigour of its blood;
-In that faith I live or die.'
-
-XXIII. Tom at Cruachan
-On Cruachan's plain slept he
-That must sing in a rhyme
-What most could shake his soul:
-'The stallion Eternity
-Mounted the mare of Time,
-'Gat the foal of the world.'
-
 XXIV. Old Tom again
 Things out of perfection sail
 And all their swelling canvas wear,
@@ -9050,21 +7876,7 @@ Though fantastic men suppose
 Building-yard and stormy shore,
 Winding-sheet and swaddling-clothes.
 
-xxv. The Delphic Oracle
-upon P lotinus
-Behold that great Plotinus swim
-Buffeted by such seas;
-Bland Rhadamanthus beckons him,
-But the Golden Race looks dim,
-Salt blood blocks his eyes.
-
 ## 270 LYRICAL
-
-Scattered on the level grass
-Or winding through the grove
-Plato there and Minos pass,
-There stately Pythagoras
-And all the choir of Love. 10
 
 2 93 1. Father and Child
 She hears me strike the board and say
@@ -9090,13 +7902,6 @@ As though on my beloved, 10
 
 ## THE WINDING STAIR AND OTHER POEMS 271
 
-And my blood be cold the while
-And my heart unmoved?
-Why should he think me cruel
-Or that he is betrayed?
-I'd have him love the thing that was
-Before the world was made.
-
 I admit the briar
 Entangled in my hair
 Did not injure me;
@@ -9115,12 +7920,6 @@ Why those questioning eyes
 That are fixed upon me?
 What can they do but shun me
 If empty night replies?
-
-IV. Her Triumph
-I did the dragon's will until you came
-Because I had fancied love a casual
-Improvisation, or a settled game
-That followed if I let the kerchief fall:
 
 ## LYRICAL
 
@@ -9181,16 +7980,6 @@ While his loud song reproves
 The murderous stealth of day.
 He. Daylight already flies
 From mountain crest to crest. 10
-
-She. That light is from the moon.
-He. That bird ...
-She. Let him sing on,
-I offer to love's play
-My dark declivities.
-
-]00 VIII. Her Vision in the Wood
-Dry timber under that rich foliage,
-At wine-dark midnight in the sacred wood,
 
 ## 274 LYRICAL
 
@@ -9254,14 +8043,6 @@ Close and cling so tight,
 There's not a bird of day that dare
 Extinguish that delight.
 
-)02 x. Meeting
-Hidden by old age awhile
-In masker's cloak and hood,
-Each hating what the other loved,
-Face to face we stood:
-'That I have met with such,' said he,
-'Bodes me little good.'
-
 ## LYRICAL
 
 'Let others boast their fill,' said I,
@@ -9317,11 +8098,6 @@ What matter for the scene, the scene once gone:
 It had not touched our lives. But popular rage,
 Hysterica passio dragged this quarry down. 20
 
-None shared our guilt; nor did we play a part
-Upon a painted stage when we devoured his heart.
-Come, fix upon me that accusing eye.
-I thirst for accusation. All that was sung,
-
 ## 280 LYRICAL
 
 All that was said in Ireland is a lie
@@ -9330,21 +8106,6 @@ Saving the rhyme rats hear before they die.
 Leave nothing but the nothings that belong
 To this bare soul, let all men judge that can
 Whether it be an animal or a man.
-
-The rest I pass, one sentence I unsay.
-Had de Valera eaten Parnell's heart
-No loose-lipped demagogue had won the day,
-No civil rancour torn the land apart.
-
-Had Cosgrave eaten Parnell's heart, the land's
-Imagination had been satisfied,
-Or lacking that, government in such hands,
-O'Higgins its sole statesman had not died.
-
-Had even O'Duffy - but I name no more -
-Their school a crowd, his master solitude; 10
-Through Jonathan Swift's dark grove he passed, and there
-Plucked bitter wisdom that enriched his blood.
 
 Alternative Song for
 the Severed Head in
@@ -9375,20 +8136,6 @@ The King that could make his people stare,
 Because he had feathers instead of hair. 20
 A slow low note and an iron bell.
 Tum f,y Arthur Duff
-
-My Paistin Finn is my sole desire,
-And I am shrunken to skin and bone,
-For all my heart has had for its hire
-Is what I can whistle alone and alone.
-Oro, oro!
-To-morrow night I will break down the door.
-
-What is the good of a man and he
-Alone and alone, with a speckled shin?
-I would that I drank with my love on my knee,
-Between two barrels at the inn. 1o
-Oro, oro!
-To-morrow night I will break down the door.
 
 ## LYRICAL
 
@@ -9426,27 +8173,6 @@ That can be praised of all;
 For the song's sake a fool?
 
 ## PARNELL'S FUNERAL AND OTHER POEMS 283
-
-I pray - for fashion's word is out
-And prayer comes round again - 10
-That I may seem, though I die old,
-A foolish, passionate man.
-
-J08 Church and State
-Here is fresh matter, poet,
-Matter for old age meet;
-Might of the Church and the State,
-Their mobs put under their feet.
-0 but heart's wine shall run pure,
-Mind's bread grow sweet.
-
-That were a cowardly song,
-Wander in dreams no more;
-What if the Church and the State
-Are the mob that howls at the door! 10
-Wine shall run thick to the end,
-Bread taste sour.
-August 1934
 
 1. Ribh at the Tomb of Baile
 and Aillinn
@@ -9515,12 +8241,6 @@ Godhead. Some shadow fell. My soul forgot
 Those amorous cries that out of quiet come
 And must the common round of day resume.
 
-JI2 IV. There
-There all the barrel-hoops are knit,
-There all the serpent-tails are bit,
-There all the gyres converge in one,
-There all the planets drop in the Sun.
-
 ## 286 LYRICAL
 
 ]I] v. Ribh considers Christian Love
@@ -9547,26 +8267,7 @@ At stroke of midnight soul cannot endure
 A bodily or mental furniture. 20
 What can she take until her Master give!
 
-Where can she look until He make the show!
-What can she know until He bid her know!
-How can she live till in her blood He live!
-
-VI. He and She
-As the moon sidles up
-Must she sidle up,
-As trips the scared moon
-
 ## PARNELL'S FUNERAL AND OTHER POEMS 287
-
-Away must she trip:
-'His light had struck me blind
-Dared I stop'.
-She sings as the moon sings:
-'I am I, am I;
-The greater grows my light
-The further that I fly'. 10
-All creation shivers
-With that sweet cry.
 
 JI5 VII. What Magic Drum?
 He holds him from desire, all but stops his breathing lest
@@ -9603,18 +8304,6 @@ Then he struggled with the mind;
 His proud heart he left behind.
 Now his wars on God begin;
 At stroke of midnight God shall win.
-
-x. Conjunctions
-If jupiter and Saturn meet,
-What a crop of mummy wheat!
-The sword's a cross; thereon He died:
-On breast of Mars the goddess sighed.
-
-XI. A Needle's Eye
-All the stream that's roaring by
-Came out of a needle's eye;
-Things unborn, things that are gone,
-From needle's eye still goad it on.
 
 ## PARNELL'S FUNERAL AND OTHER POEMS 289
 
@@ -9771,22 +8460,6 @@ May creep into your bed,
 
 ## NEW POEMS 2 97
 
-'I love a man in secret,
-Dear chambermaid,' said she,
-'I know that I must drop down dead
-If he stop loving me,
-Yet what could I but drop down dead
-If I lost my chastity?' 20
-0 my dear, 0 my dear.
-
-'So you must lie beside him
-And let him think me there,
-And maybe we are all the same
-Where no candles are,
-And maybe we are all the same
-That strip the body bare.'
-0 my dear, 0 my dear.
-
 But no dogs barked and midnights chimed,
 And through the chime she'd say, 30
 'That was a lucky thought of mine,
@@ -9795,29 +8468,7 @@ But heaved a sigh if the chambermaid
 Looked half asleep all day.
 0 my dear, 0 my dear.
 
-'No, not another song,' said he,
-'Because my lady came
-A year ago for the first time
-At midnight to my room,
-And I must lie between the sheets 40
-When the clock begins to chime.'
-0 my dear, 0 my dear.
-
 ## LYRICAL
-
-Did ever men hear such a song?
-No, but that day they did.
-Did ever man ride such a race?
-No, not until he rode.
-0 my dear, 0 my dear.
-
-But when his horse had put its hoof 50
-Into a rabbit hole
-He dropped upon his head and died.
-His lady saw it all
-And dropped and died thereon, for she
-Loved him with her soul.
-0 my dear, 0 my dear.
 
 The chambermaid lived long, and took
 Their graves into her charge,
@@ -9825,22 +8476,6 @@ And there two bushes planted
 That when they had grown large 6o
 Seemed sprung from but a single root
 So did their roses merge.
-0 my dear, 0 my dear.
-
-When she was old and dying,
-The priest came where she was;
-She made a full confession.
-Long looked he in her face,
-And 0, he was a good man
-And understood her case.
-0 my dear, 0 my dear. 70
-
-He bade them take and bury her
-Beside her lady's man,
-And set a rose-tree on her grave.
-And now none living can
-When they have plucked a rose there
-Know where its roots began.
 0 my dear, 0 my dear.
 
 ## NEW POEMS 2 99
@@ -9879,12 +8514,6 @@ Proper to my breast,
 
 ## )00 LYRICAL
 
-Limbs a love in common
-With every noble beast.
-If soul may look and body touch
-Which is the more blest? 20
-The Lord have mercy upon us.
-
 The Lady's Third Song
 When you and my true lover meet
 And he plays tunes between your feet,
@@ -9899,32 +8528,7 @@ A contrapuntal serpent hiss, 10
 You, should hand explore a thigh,
 All the labouring heavens sigh.
 
-The Lover's Song
-Bird sighs for the air,
-Thought for I know not where,
-For the womb the seed sighs.
-Now sinks the same rest
-On mind, on nest,
-On straining thighs.
-
 ## NEW POEMS JOI
-
-Stranger with stranger,
-On my cold breast.
-What's left to sigh for,
-Strange night has come;
-God's love has hidden him
-Out of all harm,
-Pleasure has made him
-Weak as a worm. 10
-
-]]I The Chambermaid's Second Song
-From pleasure of the bed,
-Dull as a worm,
-His rod and its butting head
-Limp as a worm,
-His spirit that has fled
-Blind as a worm.
 
 33 2 An Acre of Grass
 Picture and book remain,
@@ -9942,40 +8546,6 @@ Can make the truth known.
 Grant me an old man's frenzy.
 Myself must I remake
 Till I am Timon and Lear
-
-## ]02 LYRICAL
-
-A mind Michael Angelo knew
-That can pierce the clouds 20
-Or inspired by frenzy
-Shake the dead in their shrouds;
-Forgotten else by mankind
-An old man's eagle mind.
-
-333 What Then?
-His chosen comrades thought at school
-He must grow a famous man;
-He thought the same and lived by rule,
-All his twenties crammed with toil;
-'What then?' sang Plato's ghost, 'what then?'
-
-Everything he wrote was read,
-After certain years he won
-Sufficient money for his need,
-Friends that have been friends indeed;
-'What then?' sang Plato's ghost, 'what then?' 10
-
-All his happier dreams came true -
-A small old house, wife, daughter, son,
-Grounds where plum and cabbage grew,
-Poets and Wits about him drew;
-'What then?' sang Plato's ghost, 'what then?'
-
-'The work is done,' grown old he thought,
-'According to my boyish plan;
-Let the fools rage, I swerved in nought,
-Something to perfection brought;'
-But louder sang that ghost 'What then?' 20
 
 ## NEW POEMS )OJ
 
@@ -10075,13 +8645,6 @@ Among the dogs and horses that understand my talk. 30
 0 what of that, 0 what of that
 What is there left to say~
 
-Roger Casement
-(After reading The Forged Casement Diaries' by Dr. Maloney)
-I say that Roger Casement
-Did what he had to do,
-He died upon the gallows
-But that is nothing new.
-
 Afraid they might be beaten
 Before the bench of Time
 They turned a trick by forgery
@@ -10098,11 +8661,6 @@ Come Tom and Dick, come all the troop
 That cried it far and wide,
 Come from the forger and his desk,
 Desert the perjurer's side; 20
-
-Come speak your bit in public
-That some amends be made
-To this most gallant gentleman
-That is in quick-lime laid.
 
 339 The Ghost of Roger Casement
 0 what has made that sudden noise?
@@ -10148,19 +8706,7 @@ Draw round and raise a shout;
 The ghost of Roger Casement
 Is beating on the door.
 
-340 The O'Rahilly
-Sing of the O'Rahilly
-Do not deny his right;
-Sing a 'the' before his name;
-
 ## 308 LYRICAL
-
-Allow that he, despite
-All those learned historians,
-Established it for good;
-He wrote out that word himself,
-He christened himself with blood.
-How goes the weather?
 
 Sing of the O'Rahilly 10
 That had such little sense,
@@ -10262,18 +8808,7 @@ Hands that are busy with His beads
 Can never close those eyes.'
 Day-break and a candle end.
 
-'Go your ways, 0 go your ways
-I choose another mark,
-Girls down on the seashore
-Who understand the dark;
-
 ## NEW POEMS JII
-
-Bawdy talk for the fishermen
-A dance for the fisher lads;
-When dark hangs upon the water
-They turn down their beds.'
-Day-break and a candle end.
 
 'A young man in the dark am I
 But a wild old man in the light
@@ -10313,22 +8848,12 @@ A beggar upon horseback lashes a beggar upon foot;
 Hurrah for revolution and cannon come again,
 The beggars have changed places but the lash goes on.
 
-344 Parnell
-Parnell came down the road, he said to a cheering man;
-'Ireland shall get her freedom and you still break stone.'
-
 345 What Was Lost
 I sing what was lost and dread what was won,
 I walk in a battle fought over again,
 My king a lost king, and lost soldiers my men;
 Feet to the Rising and Setting may run
 They always beat on the same small stone.
-
-The Spur
-You think it horrible that lust and rage
-Should dance attendance upon my old age;
-They were not such a plague when I was young;
-What else have I to spur me into song?
 
 347 A Drunken Man's Praise of Sobriety
 Come swish around my pretty punk
@@ -10406,20 +8931,7 @@ For who can say,' he said,
 In a young man's bed.'
 The Colonel went out sailing.
 
-## III
-
-The Colonel met a pedlar,
-Agreed their clothes to swop, 20
-And bought the grandest jewelry
-In a Galway shop,
-Instead of thread and needle
-Put jewelry in the pack,
-
 ## NEW POEMS 315
-
-Bound a thong about his hand,
-Hitched it on his back.
-The Colonel went out sailing.
 
 The Colonel knocked on the rich man's door,
 'I am sorry,' said the maid
@@ -10491,12 +9003,6 @@ That rule because a strong right arm
 
 ## NEW POEMS JI7
 
-Puts all men in a fright,
-And drunk or sober live at ease
-Where none gainsay their right,
-And keep their lovers waiting,
-Keep their lovers waiting.
-
 The Muse is mute when public men
 Applaud a modern throne:
 Those cheers that can be bought or sold
@@ -10527,13 +9033,6 @@ Under the old stone Cross.
 
 ## LYRICAL
 
-They say it is more human
-To shuffle, grunt and groan, 20
-Not knowing what unearthly stuff
-Rounds a mighty scene.
-Said the man in the golden breastplate
-Under the old stone Cross.
-
 35 2 The Spirit Medium
 Poetry, music, I have loved, and yet
 Because of those new dead
@@ -10563,27 +9062,6 @@ I bend my body to the spade
 Or grope with a dirty hand.
 
 ## NEW POEMS JI9
-
-353 Those Images
-What if I bade you leave
-The cavern of the mind?
-There's better exercise
-In the sunlight and wind.
-
-I never bade you go
-To Moscow or to Rome,
-Renounce that drudgery,
-Call the Muses home.
-
-Seek those images
-That constitute the wild, 10
-The lion and the virgin,
-The harlot and the child.
-
-Find in middle air
-An eagle on the wing,
-Recognise the five
-That make the Muses sing.
 
 Around me the images of thirty years;
 An ambush; pilgrims at the water-side;
@@ -10625,17 +9103,7 @@ And I am in despair that time may bring 30
 Approved patterns of women or of men
 But not that selfsame excellence again.
 
-v
-My mediaeval knees lack health until they bend,
-But in that woman, in that household where
-Honour had lived so long, all lacking found.
-Childless I thought 'my children may find here
-
 ## NEW POEMS ]21
-
-Deep-rooted things,' but never foresaw its end,
-And now that end has come I have not wept;
-No fox can foul the lair the badger swept.
 
 (An image out of Spenser and the common tongue.) 40
 John Synge, I and Augusta Gregory, thought
@@ -10781,20 +9249,7 @@ Cast your mind on other days
 That we in coming days may be
 Still the indomitable Irishry.
 
-Under bare Ben Bulben's head
-In Drumcliff churchyard Yeats is laid,
-An ancestor was rector there
-Long years ago; a church stands near,
-
 ## LYRICAL
-
-By the road an ancient Cross.
-No marble, no conventional phrase,
-On limestone quarried near the spot go
-By his command these words are cut:
-Cast a cold eye
-On life, on death.
-Horseman, pass by!
 
 357 Three Songs to the One Burden
 The Roaring Tinker if you like,
@@ -10817,18 +9272,7 @@ His roaring and his ranting
 Best please a wandering man.
 From mountain to mountain ride the fierce horsemen.
 
-Could Crazy Jane put off old age
-And ranting time renew, 20
-Could that old god rise up again
-We'd drink a can or two,
-
 ## LAST POEMS
-
-And out and lay our leadership
-On country and on town,
-Throw likely couples into bed
-And knock the others down.
-From mountain to mountain ride the fierce horsemen.
 
 My name is Henry Middleton
 I have a small demesne,
@@ -10902,11 +9346,6 @@ Lack nothing that a soldier needs,
 That all are oath-bound men;
 Those banners come not in.
 
-There in the tomb stand the dead upright,
-But winds come up from the shore;
-They shake when the winds roar
-Old bones upon the mountain shake. 10
-
 Those banners come to bribe or threaten
 Or whisper that a man's a fool
 Who when his own right king's forgotten
@@ -10924,46 +9363,6 @@ When we hale men lie stretched in slumber
 Swears that he hears the great king's horn.
 But he's a lying hound;
 Stand we on guard oath-bound!
-
-There in the tomb the dark grows blacker,
-But wind comes up from the shore.
-They shake when the winds roar
-Old bones upon the mountain shake.
-
-## 33 2 LYRICAL
-
-359 Cuchulain Comforted
-A man that had six mortal wounds, a man
-Violent and famous, strode among the dead;
-Eyes stared out of the branches and were gone.
-
-Then certain Shrouds that muttered head to head
-Came and were gone. He leant upon a tree
-As though to meditate on wounds and blood.
-
-A Shroud that seemed to have authority
-Among those bird-like things came, and let fall
-A bundle of linen. Shrouds by two and three
-
-Came creeping up because the man was still. 10
-And thereupon that linen-carrier said
-'Your life can grow much sweeter if you will
-
-'Obey our ancient rule and make a shroud;
-Mainly because of what we only know
-The rattle of those arms makes us afraid.
-
-'We thread the needles' eyes and all we do
-All must together do.' That done, the man
-Took up the nearest and began to sew.
-
-'Now we shall sing and sing the best we can
-But first you must be told our character: 20
-Convicted cowards all by kindred slain
-
-'Or driven from home and left to die in fear.'
-They sang, but had nor human notes nor words,
-Though all was done in common as before,
 
 ## LAST POEMS 333
 
@@ -11009,11 +9408,6 @@ Troy backed its Helen, Troy died and adored;
 Great nations blossom above,
 A slave bows down to a slave.
 
-What marches through the mountain pass?
-No, no, my son, not yet;
-That is an airy 1 spot
-And no man knows what treads the grass. 10
-
 We know what rascal might has defiled
 The lofty innocence that it has slain,
 We were not born in the peasant's cot
@@ -11021,24 +9415,12 @@ Where man forgives if the belly gain.
 More dread the life that we live,
 How can the mind forgive?
 
-What marches through the mountain pass?
-No, no, my son, not yet;
-That is an airy spot
-And no man knows what treads the grass. 20
-
 What if there's nothing up there at the top?
 Where are the captains that govern mankind?
 What tears down a tree that has nothing within it?
 A blast of wind, 0 a marching wind,
 March wind, and any old tune,
 March march and how does it run.
-
-What marches through the mountain pass?
-No, no, my son, not yet;
-That is an airy spot
-And no man knows what treads the grass.
-
-''Airy' may be an old pronunciation of 'eerie'. I often heard it in Galway & Sligo.
 
 ## LAST POEMS 335
 
@@ -11049,11 +9431,6 @@ But good strong blows are delights to the mind.'
 There, standing on the cart,
 He sang it from his heart.
 
-Robbers had taken his old tambourine,
-But he took down the moon
-And rattled out a tune;
-Robbers had taken his old tambourine. 10
-
 'A girl I had, but she followed another,
 Money I had, and it went in the night,
 Strong drink I had, and it brought me to sorrow,
@@ -11061,22 +9438,12 @@ But a good strong cause and blows are delight.'
 All there caught up the tune:
 'On, on, my darling man.'
 
-Robbers had taken his old tambourine,
-But he took down the moon
-And rattled out a tune;
-Robbers had taken his old tambourine. 20
-
 'Money is good and a girl might be better,
 No matter what happens and who takes the fall,
 But a good strong cause' - the rope gave a jerk there,
 No more sang he, for his throat was too small;
 But he kicked before he died,
 He did it out of pride.
-
-Robbers had taken his old tambourine,
-But he took down the moon
-And rattled out a tune;
-Robbers had taken his old tambourine.
 
 ## 336 LYRICAL
 
@@ -11142,21 +9509,7 @@ And by its formless, spawning, fury wrecked, 30
 Climb to our proper dark, that we may trace
 The lineaments of a plummet-measured face.
 
-There all the golden codgers lay,
-There the silver dew,
-And the great water sighed for love
-And the wind sighed too.
-Man-picker Niamh leant and sighed
-By Oisin on the grass;
-
 ## LYRICAL
-
-There sighed amid his choir of love
-Tall Pythagoras.
-Plotinus came and looked about,
-The salt flakes on his breast, 10
-And having stretched and yawned awhile
-Lay sighing like the rest.
 
 Straddling each a dolphin's back
 And steadied by a fin
@@ -11251,12 +9604,6 @@ Heroic reverie mocked by clown and knave
 And wondered what was left for massacre to save.
 
 ## LAST POEMS 34 1
-
-]66 A Stick of Incense
-Whence did all that fury come,
-From empty tomb or Virgin womb?
-St Joseph thought the world would melt
-But liked the way his finger smelt.
 
 Hound Voice
 Because we love bare hills and stunted trees
@@ -11373,20 +9720,7 @@ That opens her mystery and fright.
 Fifteen apparitions have I seen;
 The worst a coat upon a coat-hanger.
 
-J7I A Nativity
-What woman hugs her infant there?
-Another star has shot an ear.
-What made the drapery glisten so?
-Not a man but Delacroix.
-
 ## LAST POEMS 345
-
-What made the ceiling waterproof?
-Landor's tarpaulin on the roof.
-What brushes fly and moth aside?
-Irving and his plume of pride.
-What hurries out the knave and dolt?
-Talma and his thunderbolt. 10
 
 37 2 Man and the Echo
 Man. In a cleft that's christened Alt
@@ -11450,9 +9784,6 @@ My circus animals were all on show,
 
 ## LAST POEMS 347
 
-Those stilted boys, that burnished chariot,
-Lion and woman and the Lord knows what.
-
 What can I but enumerate old themes,
 First that sea-rider Oisin led by the nose 10
 Through three enchanted islands, allegorical dreams,
@@ -11475,10 +9806,6 @@ Heart mysteries there, and yet when all is said
 It was the dream itself enchanted me:
 Character isolated by a deed
 
-To engross the present and dominate memory. 30
-Players and painted stage took all my love
-And not those things that they were emblems of.
-
 ## III
 
 Those masterful images because complete
@@ -11487,14 +9814,6 @@ A mound of refuse or the sweepings of a street,
 Old kettles, old bottles, and a broken can,
 Old iron, old bones, old rags, that raving slut
 Who keeps the till. Now that my ladder's gone
-
-## LYRICAL
-
-I must lie down where all the ladders start
-In the foul rag and bone shop of the heart. 40
-
-374 Politics
-'In our time the destiny of man presents its meanings in political terms.'
 
 ## THOMAS MANN.
 
@@ -11510,11 +9829,6 @@ And maybe what they say is true
 Of war and war's alarms, 10
 But 0 that I were young again
 And held her in my arms.
-
-## DRAMATIC
-
-'Give me the world if Thou wilt, but grant me an asylum
-for my affections.' TuLKA
 
 ## BOOK I
 
@@ -11833,13 +10147,6 @@ Nor have hands held a weary tool;
 
 ## THE WANDERINGS OF OISIN
 
-And here there is nor Change nor Death,
-But only kind and merry breath,
-For joy is God and God is joy.'
-With one long glance for girl and boy
-And the pale blossom of the moon,
-He fell into a Druid swoon.
-
 And in a wild and sudden dance 2go
 We mocked at Time and Fate and Chance
 And swept out of the wattled hall
@@ -11915,11 +10222,6 @@ Of bitterns and fish-eating stoats.
 
 ## THE WANDERINGS OF 0/S/N
 
-The gentle Niamh was my wife;
-But now two things devour my life;
-The things that most of all I hate:
-Fasting and prayers.
-
 Oisin. Yes, yes,
 For these were ancient Oisin's fate
 Loosed long ago from Heaven's gate,
@@ -11947,11 +10249,6 @@ With hoofs of the pale findrinny
 Over the glimmering purple sea.
 Under the golden evening light,
 The Immortals moved among the fountains
-
-By rivers and the woods' old night;
-Some danced like shadows on the mountains,
-Some wandered ever hand in hand;
-Or sat in dreams on the pale strand, 390
 
 ## )66 NARRATIVE AND DRAMATIC
 
@@ -12150,10 +10447,6 @@ Out of the sevenfold seas, built the dark hall
 Rooted in foam and clouds, and cried to all
 The mightier masters of a mightier race;
 
-And at his cry there came no milk-pale face
-Under a crown of thorns and dark with blood,
-But only exultant faces.
-
 ## THE WANDERINGS OF 0/S/N
 
 Niamh stood
@@ -12232,10 +10525,6 @@ And wander in the storms and clinging snows,
 Hopeless for ever: ancient Oisin knows,
 For he is weak and poor and blind, and lies
 
-S. Patrick. Be still: the skies
-Are choked with thunder, lightning, and fierce wind,
-For God has heard, and speaks His angry mind;
-
 ## THE WANDERINGS OF OISIN 373
 
 Go cast your body on the stones and pray,
@@ -12275,19 +10564,6 @@ Gather sea-slime and fall the seaward way,
 And the moon goad the waters night and day,
 That all be overthrown.
 
-## 374 NARRATIVE AND DRAMATIC
-
-'But till the moon has taken all, I wage
-War on the mightiest men under the skies,
-And they have fallen or fled, age after age.
-Light is man's love, and lighter is man's rage;
-His purpose drifts and dies.'
-
-And then lost Niamh murmured, 'Love, we go
-To the Island of Forgetfulness, for lo!
-The Islands of Dancing and of Victories
-Are empty of all power.'
-
 ## BOOK III
 
 Fled foam underneath us, and round us, a wandering and
@@ -12305,16 +10581,7 @@ And never a song sang Niamh, and over my finger-tips
 Came now the sliding of tears and sweeping of mist-cold hair,
 And now the warmth of sighs, and after the quiver of lips.
 
-Were we days long or hours long in riding, when, rolled in a
-grisly peace,
-An isle lay level before us, with dripping hazel and oak? 10
-
 ## THE WANDERINGS OF 0/S/N 375
-
-And we stood on a sea's edge we saw not; for whiter than
-new-washed fleece
-Fled foam underneath us, and round us, a wandering and
-milky smoke.
 
 And we rode on the plains of the sea's edge; the sea's edge
 barren and grey,
@@ -12343,16 +10610,7 @@ light,
 And the stars were blotted above us, and the whole of the
 world was one.
 
-Till the horse gave a whinny; for, cumbrous with stems of the
-hazel and oak,
-A valley flowed down from his hoofs, and there in the long
-grass lay,
-
 ## NARRATIVE AND DRAMATIC
-
-Under the starlight and shadow, a monstrous slumbering folk,
-Their naked and gleaming bodies poured out and heaped in
-the way.
 
 And by them were arrow and war-axe, arrow and shield and
 blade;
@@ -12424,16 +10682,7 @@ throat,
 Watched me with mournful wonder out of the wells of his 6o
 eyes.
 
-I cried, 'Come out of the shadow, king of the nails of gold!
-And tell of your goodly household and the goodly works of
-your hands,
-
 ## NARRATIVE AND DRAMATIC
-
-That we may muse in the starlight and talk of the battles of
-old;
-Your questioner, Oisin, is worthy, he comes from the Fenian
-lands.'
 
 Half open his eyes were, and held me, dull with the smoke of
 their dreams;
@@ -12505,17 +10754,7 @@ creatures of dreams,
 In a long iron sleep, as a fish in the water goes dumb as a
 stone.
 
-At times our slumber was lightened. When the sun was on
-silver or gold;
-When brushed with the wings of the owls, in the dimness they
-love going by;
-
 ## )80 NARRATIVE AND DRAMATIC
-
-When a glow-worm was green on a grass-leaf, lured from his
-lair in the mould;
-Half wakening, we lifted our eyelids, and gazed on the 100
-grass with a sigh.
 
 So watched I when, man of the croziers, at the heel of a
 century fell,
@@ -12625,11 +10864,6 @@ When they froze the cloth on my body like armour riveted
 fast,
 For Remembrance, lifting her leanness, keened in the gates of
 my heart.
-
-Till, fattening the winds of the morning, an odour of new-
-mown hay
-Came, and my forehead fell low, and my tears like berries fell
-down;
 
 ## THE WANDERINGS OF 0/S/N )83
 
@@ -12996,10 +11230,6 @@ That all things fell out happily,
 And there, for all that fools had said,
 Baile and Aillinn would be wed.
 
-They found an old man running there:
-He had ragged long grass-coloured hair;
-He had knees that stuck out of his hose;
-
 ## NARRATIVE AND DRAMATIC
 
 He had puddle-water in his shoes;
@@ -13281,10 +11511,6 @@ there are four persons upon the deck. Aibric stands by the tiller. Forgael
 sleeps upon the raised portion of the deck towards the front of the stage.
 Two Sailors are standing near to the mast, on which a harp is hanging.
 
-First Sailor. Has he not led us into these waste seas
-For long enough?
-Second Sailor. Aye, long and long enough.
-
 First Sailor. We have not come upon a shore or ship
 These dozen weeks.
 Second Sailor. And I had thought to make
@@ -13294,15 +11520,6 @@ That has less ups and downs than robbery.
 First Sailor. I am so tired of being a bachelor
 I could give all my heart to that Red Moll
 That had but the one eye. 10
-
-Second Sailor. Can no bewitchment
-Transform these rascal billows into women
-That I may drown myself?
-
-First Sailor. Better steer home,
-Whether he will or no; and better still
-To take him while he sleeps and carry him
-And drop him from the gunnel.
 
 ## NARRATIVE AND DRAMATIC
 
@@ -13419,11 +11636,6 @@ The only riches that have hit my fancy.
 
 ## THE SHADOWY WATERS
 
-Aibric. What riches can you find in this waste sea
-Where no ship sails, where nothing that's alive
-Has ever come but those man-headed birds,
-Knowing it for the world's end? 100
-
 Forgael. Where the world ends
 The mind is made unchanging, for it finds
 Miracle, ecstasy, the impossible hope,
@@ -13487,10 +11699,6 @@ The bed of love, that in the imagination
 Had seemed to be the giver of all peace,
 Is no more than a wine-cup in the tasting, 150
 And as soon finished.
-
-Forgael. Yet never have two lovers kissed but they
-Believed there was some other near at hand,
-And almost wept because they could not find it.
 
 ## THE SHADOWY WATERS
 
@@ -13571,12 +11779,6 @@ And there, in juggleries of sight and sense,
 
 ## THE SHADOWY WATERS
 
-Become one movement, energy, delight,
-Until the overburthened moon is dead.
-[A number of Sailors enter hurriedly.]
-First Sailor. Look there! there in the mist! a ship of spice!
-And we are almost on her! 220
-
 Second Sailor. We had not known
 But for the ambergris and sandalwood.
 First Sailor. No; but opoponax and cinnamon.
@@ -13588,10 +11790,6 @@ To make her fast while we are plundering her.
 First Sailor. There is a king and queen upon her deck,
 And where there is one woman there'll be others.
 Aibric. Speak lower, or they'll hear.
-
-First Sailor. They cannot hear;
-They are too busy with each other. Look!
-He has stooped down and kissed her on the lips. 230
 
 Second Sailor. When she finds out we have better men aboard
 She may not be too sorry in the end.
@@ -13991,10 +12189,6 @@ As I am doing now. [A pause.] Why do you weep?
 
 ## NARRATIVE AND DRAMATIC
 
-Forgael. I weep because I've nothing for your eyes
-But desolate waters and a battered ship.
-Dectora. 0 why do you not lift your eyes to mine?
-
 Forgael. I weep - I weep because bare night's above,
 And not a roof of ivory and gold. 500
 Dectora. I would grow jealous of the ivory roof,
@@ -14018,14 +12212,6 @@ sea, shading his eyes.]
 Why are you looking at the sea?
 Forgael. Look there!
 Dectora. What is there but a troop of ash-grey birds
-
-That fly into the west?
-Forgael. But listen, listen!
-Dectora. What is there but the crying of the birds?
-
-Forgael. If you'll but listen closely to that crying 520
-You'll hear them calling out to one another
-With human voices.
 
 ## THE SHADOWY WATERS
 
@@ -14123,10 +12309,6 @@ When I have said farewell to this man here,
 For neither I nor any living man
 Will look upon his face again.
 [The Sailors go out.]
-
-Forgael [to Dectora]. Go with him,
-For he will shelter you and bring you home. 59°
-Aibric [taking Forgael's hand]. I'll do it for his sake.
 
 Dectora. No. Take this sword
 And cut the rope, for I go on with Forgael.
@@ -14413,10 +12595,6 @@ door
 
 ## THE TWO KINGS
 
-Jostled and shouted those war-wasted men,
-And in the midst King Eochaid's brother stood,
-And bade all welcome, being ignorant.
-
 The Gift of Harun Al-Rashid
 Kusta ben Luka is my name, I write
 To Abd Al-Rabban; fellow-roysterer once,
@@ -14525,10 +12703,6 @@ I would have found the best that life can give,
 Companionship in those mysterious things
 That make a man's soul or a woman's soul
 Itself and not some other soul.'
-
-'That love
-Must needs be in this life and in what follows
-Unchanging and at peace, and it is right
 
 ## NARRATIVE AND DRAMATIC
 
@@ -14639,10 +12813,6 @@ A woman's beauty is a storm-tossed banner;
 Under it wisdom stands, and I alone -
 Of all Arabia's lovers I alone- 190
 
-Nor dazzled by the embroidery, nor lost
-In the confusion of its night-dark folds,
-Can hear the armed man speak.
-
 ## THE SPELLING OF GAELIC NAMES
 
 In this edition of my poems I have adopted Lady Gregory's spelling of Gaelic
@@ -14676,12 +12846,6 @@ the quality symbolized as The Rose differs from the Intellectual Beauty of Shell
 and of Spenser in that I have imagined it as suffering with man and not as
 something pursued and seen from afar. 5 It must have been a thought of my
 generation, for I remember the mystical painter Horton, whose work had little
-
-## 454 APPENDIX A
-
-of his personal charm and real strangeness, writing me these words, 'I met your
-beloved in Russell Square, and she was weeping,' by which he meant that he
-had seen a vision of my neglected soul. 6 - 1925.
 
 ## THE HOSTING OF THE SIDHE
 
@@ -14837,9 +13001,6 @@ he opened the box. He left it in a hole in the wall. The light was great. It was
 twice as much as in the other stables.' The king hears of it, and makes him show
 him the box. The king says, 'You must go and bring me the woman to whom
 
-the hair belongs.' In the end, the young man, and not the king, marries the
-woman.>•- 18gg-1go6.
-
 ## RESPONSIBILITIES. INTRODUCTORY RHYMES
 
 (page 101)
@@ -14916,11 +13077,6 @@ column of smoke from 'the pern mill,' and was told that 'pern' was another
 name for the spool, as I was accustomed to call it, on which thread was wound."
 One could not see the chimney for the trees, and the smoke looked as if it came
 
-## YEATS'S NOTES 459
-
-fmm the mountain, and one day a foreign sea-captain asked me if that was a
-burning mountain.- 1919.
-
 ## MICHAEL ROBARTES AND THE DANCER
 
 (page 17 5)
@@ -14933,12 +13089,6 @@ attributed a turbulent life or death, have quarrelled with me. They take their
 place in a phantasmagoria in which I endeavour to explain my philosophy
 of life and death. To some extent I wrote these poems as a text for
 exposition.- 1922.
-
-## SAILING TO BYZANTIUM
-
-(Stanza IV, page 194)
-I have read somewhere that in the Empemr's palace at Byzantium was a tree
-made of gold and silver, and artificial birds that sang.'"'
 
 ## THE TOWER
 
@@ -15023,11 +13173,6 @@ that these horsemen, now that the times worsen, give way to worse. My last
 symbol, Robert Artisson, was an evil spirit much run after in Kilkenny at the
 start of the fourteenth century. 44 Are not those who travel in the whirling dust
 also in the Platonic Year?" Seep. 208.
-
-## TWO SONGS FROM A PLAY
-
-(page 2 13)
-These songs are sung by the Musicians in my play 'The Resurrection.' 46
 
 ## AMONG SCHOOL CHILDREN
 
@@ -15464,27 +13609,6 @@ the story referred to is "The Adventures of Cian's son Teigue" in Silva
 Gadelica (1892) by the Irish scholar Standish Hayes O'Grady (1832-1915).
 57· The Shadowy Waters was first published not in 1902 but in 1900. It was
 
-performed by the Irish National Theatre Society at Molesworth Hall in
-Dublin on 14January 1904. The revised version was first published in Poems,
-1899-1905 ( 1906) and was produced at the Abbey Theatre on 8 December
-1906.
-
-## TRADITIONAL IRISH AIR 2
-
-4•'•, 5II• J> I J5 } } ) ll J, I J5 J5 } J> I ;d.
-4 J } } I l J. I ~ )J; ) I J. 41 J I
-j''t• }
-
-## TRADITIONAL IRISH AIR'
-
-4;~1. 9 fl I J lJ )I r· F J I:J )J ) I J-:_J ~ I
-4,~>1. r ~ r ~ r· EfJ r J5 uJJ u!__J ~
-
-## TRADITIONAL IRISH AIR 4
-
-_f •l'!. J 1 J ijl r· ~ r r 1 J. JlJ n 1 J J J w 1
-I• J I J I J. } r F I J. }J JJ I J. JJ J I
-
 ## TRADITIONAL IRISH AIR 5
 
 Notes to Appendix B
@@ -15535,9 +13659,6 @@ readers than either the Old Irish "Medb," the Modern Irish "Medhbh" or
 "Maedhbh," or the variants found in Yeats and others, "Maev," "Maiv," or "Maive."
 Cross-references (other than between these notes and Yeats's notes in Ap-
 pendix A) have been held lO a minimum, in the hope that most readers will
-
-prefer some repetitive entries rather than frequent instructions lo look elsewhere
-for the information they may be seeking.
 
 The above policy is of course far easier lo stale than lo implement lo the
 satisfaction of any individual reader. First, given the texture of Yeats's verse,
@@ -15642,9 +13763,6 @@ lysadare and Kilvamet, in the County of Sligo (1878).
 Some Catholics evaded the law against owning landed property by giving
 nominal possession of their holdings to Protestants.
 14.3: a Seoinin is one who apes Englishmen, though Yeats glosses it as "upstarts
-
-and 'big' farmers, who ape the rank of gentlemen."
-14.6: slibhin, "a sly person, a schemer," glossed by Yeats as a "mean fellow."
 
 ## EXPLANATORY NOTES
 
@@ -15768,10 +13886,6 @@ folk tale." Kerry is a county in Ireland.
 38.1: for the Tuatha De Danann, see Yeats's note on "The Hosting of the Sid he,"
 p. 454·
 39·4: Irish rann, a quatrain, verse, or stanza.
-
-39.18: Thomas Davis (1814-45), Irish political leader and writer; James Clar-
-ence Mangan ( 1803-49), Irish poet; Sir Samuel Ferguson ( 1810-86), Irish
-poet and antiquary.
 
 The Wind Among the Reeds: first published in 1899; the order of the poems here
 first used in Poems, Second Series (1909).
@@ -15990,11 +14104,6 @@ me blasmoit, a mon commencement" by the French poet Pierre de Ronsard
 106.1: An Craoibhin Aoibhinn (usually translated "the Pleasant Little Branch,"
 perhaps more correctly "the Delightful Shrub"), the pen-name of Douglas
 
-Hyde ( 1800-1949), Gaelic scholar and folklorist.
-106.11: a minor sea-god in Greek mythology, Proteus is noted for his power to
-take all manner of shapes.
-108: the Galway races are held each summer.
-
 Responsibilities: first published in 1914, including "The Two Kings" and the play
 The Hour-Glass. Contents and order here first established in Later Poems ( 1922).
 The first epigraph remains untraced and may be the work of Yeats and/or
@@ -16054,11 +14163,6 @@ raig), "Paddy."
 to whom the poem is addressed is of course an imaginary person."
 114.9: Ercole d'Este I (1431-1505), Duke of Ferrara, depicted in The Book of
 the Courtier by Baldassare Castiglione (1478-1529) as a patron of the arts.
-
-114.12: Titus Maccius Plautus (ca. 254-184 B.c.), Roman playwright, much
-favored by the Duke of Ferrara.
-114.14: Guidobaldo di Montefehro, Duke of Urbino, also highly praised in The
-Book of the Courtier.
 
 ## EXPLANATORY NOTES
 
@@ -16211,9 +14315,6 @@ Solomon was renowned for his wisdom.
 163.11: the "long war" is presumably World War I.
 164.9-13: Ercole d'Este I (1431-1505), Duke of Ferrara, Guidobaldo di Mon-
 tefeltro (1472-1508), Duke of Urbino, and Elisabetta Gonzaga (1471-1526),
-
-Duchess of Urbino, are favorably depicted in The Book of the Courtier by Bal-
-dassare Castiglione (1478-1529).
 
 ## THE WILD SWANS AT COOLE
 
@@ -16464,13 +14565,7 @@ the smithy fire), usually depicted as lame.
 Rowed with nectar and ambrosia; one of them broke off and was filled with
 fruits and given to Zeus. The cornucopia thus became a symbol of plenty.
 
-203: see Yeats's note on "The Tower," pp. 459-6o.
-203.3: a village in County Galway, near Thoor Ballylee.
-
 ## 494 EXPLANATORY NOTES
-
-203.4: Yeats had married Bertha Georgie Hyde-Lees (1892-1968) on 20 Oc-
-tober 1917.
 
 Til£ Tower: first published in 1928, including "The Gift of Harun Al-Rashid."
 The contents and order here were first established in the Collected Poems ( 1933).
@@ -16668,10 +14763,6 @@ wright Sophocles (ca. 496-4o6 B.c.), first published in the Collected Plays ( 19
 of the worship there of the god Poseidon, who gave the gift of horses to men.
 223.8: Semele was the mother of Dionysus, god of wine and fertility in Greek
 
-mythology.
-223.9-16: the "gymnasts' garden" is the Academy, a park and gymnasium on
-the outskirts of Athens, adjoining Colon us, and the site of the school founded
-
 ## EXPLANATORY NOTES
 
 by Plato (ca. 385 B.c.). The olive was the gift of the goddess Athena to mankind;
@@ -16818,10 +14909,6 @@ and then finding another pebble or prettier shell than ordinary, while the
 great ocean of truth lay all undiscovered before me."
 257.12: Rosses Point, a small seaside village near Sligo.
 
-257.16: presumably God.
-259: Yeats met Mohini Chatterjee, (1858-1936), an Indian Brahmin, or sage,
-in Dublin in 1885 or 1886.
-
 ## THE WINDING STAIR AND OTHER POEMS 501
 
 200: the ancient city of Byzantium was rebuilt as Constantinople by the Roman
@@ -16870,8 +14957,6 @@ Genoa arui Her Friends ( 1908).
 principal saints of the Catholic Church. Her body was said to have remained
 undecayed in her coffin.
 262.84: after death, the Pharaohs, ancient kings of Egypt, were mummified.
-
-262.88: in the Bible, Samson kills a lion and later extracts honey from its carcass;
 
 ## 502 EXPLANATORY NOTES
 
@@ -16959,11 +15044,6 @@ of the souls of man and woman ascending through the Zodiac. In some Neo-
 platonist or Hermatist - whose name I forget - the whorl changes into a
 sphere at one of the points where the Milky Way crosses the Zodiac."
 
-299: see note to poem 298.
-300.19: an artist of fifteenth-century Italy.
-300.20: Andrea Mantegna ( 1431-1506). Italian painter.
-303: a chorus from Antigone by the Greek playwright Sophocles (ca. 496-ca.
-
 ## 406 B.C.).
 
 303.6: in Greek mythology, the mountain Parnassus is sacred to Apollo and
@@ -17022,8 +15102,6 @@ with some of the events in the Fenian Cycle, and Knocknarea is the burial site
 of Queen Maeve of the Ulster Cycle.
 305.5: Rosses Point, a small seaside village near Sligo.
 
-305.9: Cuchulain is the most important warrior in the Ulster Cycle of Irish tales.
-
 ## NEW POEMS 505
 
 305.11: in Irish mythology, Niamh is a woman of the Sid he who entices Oisin
@@ -17071,9 +15149,6 @@ grains found in the tombs in Thebes."
 320: in Hindu mythology, Mount Meru (identified with Mount Kailasa in Tibet)
 is located in the center of Paradise.
 320.9: Mount Everest, on the border of Tibet and Nepal in the Himalayas.
-
-New Poems: first published in 1938.
-321: the "gyres" are a symbol which consists of two intertwined cones, the base
 
 ## EXPLANATORY NOTES
 
@@ -17429,9 +15504,6 @@ Cuchulain is the major hero of the Ulster cycle of Irish stories.
 363.1: "There" is Elysium, to which in Greek mythology certain favored heroes
 are translated by the gods and are exempt from death.
 
-363.5-6: in Irish mythology, Niamh is a woman of the Sidhe who entices Oisin
-into her realm, an event described in poem 375·
-
 ## LAST POEMS 513
 
 363.8: Pythagoras (ca. 582-ca. 507 B.c.), Greek philosopher.
@@ -17526,10 +15598,6 @@ mythology, which also depicts Caoilte and Conan Mail ("the bald" or "crop-
 headed"). For Caoilte, see Yeats's note on "The Secret Rose," pp. 456-7.
 375.1.15: hounds of Finn, although Bran and Sceolan are also his cousins, his
 maternal aunt Uirne having been transformed into a hound while pregnant.
-
-375.1.16: in Irish mythology, the Firbolgs are a race of invaders.
-375.1.18: for Maeve's burial site, see Yeats's note on "The Hosting of the Sidhe,"
-p. 454·
 
 ## NARRATIVE AND DRAMATIC
 
@@ -17628,9 +15696,6 @@ emperor Constantine I (287?-337).
 376.1 1: Maeve's palace was at Cruachan in County Roscommon.
 376.40: Druids were ancient Celtic priests and medicine men.
 376.41: for the Sidhe, see Yeats's note on "The Hosting of the Sidhe," p. 454·
-
-376.57-58: in the "Pillow Talk" prelude added to the Tain B6 Cuailgne in the
-eleventh century, Maeve, angered that her great white-horned bull had gone
 
 ## NARRATIVE AND DRAMATIC 517
 
@@ -17776,11 +15841,6 @@ at the establishment of the dynasty."
 382.9: the ancient city of Byzantium was rebuilt as Constantinople by the Roman
 emperor Constantine I (287?-337).
 
-382.12: Sappho (fl. ca. 610-Ca. 580 B.C.), Greek poet.
-382.16: Parmenides (ca. 514 B.c.-?), Greek philosopher.
-382.22: Bedouin, Arabic for "tent-dwellers," nomad peoples of interior Arabia.
-382.30-32: Harun al-Rashid's vizier from 786-803 was Yahya, of the Baramika,
-
 ## J20 EXPLANATORY NOTES
 
 an Iranian family of secretaries and viziers to the Abbasid caliphs. In 803
@@ -17792,11 +15852,6 @@ licious.
 382.184: the "gyres" are a symbol which consists of two intertwined cones, the
 base of each being the apex of the other. The movement of the gyres in
 opposite directions suggests the inherent conflict in existence.
-
-*
-A stanza break coincides with the end of the following pages. This list does
-not include breaks that are obvious because of stanza numbers or, in dramatic
-verse, a change in speaker-tags.
 
 Acre of Grass, An 301
 Adam's Curse So
@@ -17828,15 +15883,6 @@ Beautiful Lofty Things 303
 Before the World was Made 270
 
 ## 522 INDEX TO TITLES
-
-Beggar to Beggar cried 114
-Black Tower, The 33 1
-Blessed, The 68
-Blood and the Moon 237
-Broken Dreams 1 53
-Bronze Head, A 34°
-Brown Penny 98
-Byzantium 248
 
 Cap and Bells, The 64
 Cat and the Moon, The 167
@@ -17870,14 +15916,6 @@ Crazy Jane Grown Old Looks at the Dancers 260
 
 ## INDEX TO TITLES 523
 
-Crazy Jane on God 258
-Crazy Jane on the Day of Judgment 257
-Crazy Jane Reproved 256
-Crazy Jane Talks with the Bishop 259
-Cuchulain Comforted 332
-Cuchulain's Fight with the Sea 33
-Curse of Cromwell, The 304
-
 Dancer at Cruachan and Cro-Patrick, The 268
 Dawn, The 146
 Death 234
@@ -17894,20 +15932,6 @@ Down by the Salley Gardens 20
 Dream of Death, A 42
 Drinking Song, A 93
 Drunken Man's Praise of Sobriety, A 312
-
-Easter, 1916 180
-Ego Dominus Tuus 160
-Empty Cup, The 223
-End of Day, The 158
-Ephemera 15
-Everlasting Voices, The 55
-
-Faery Song, A 38
-Fallen Majesty 12 3
-Falling of the Leaves, The 14
-Fascination of What's Difficult, The 93
-Father and Child 270
-Fergus and the Druid 32
 
 ## INDEX TO TITLES
 
@@ -17926,14 +15950,6 @@ Friends 124
 Friends of his Youth, The 224
 From 'Oedipus at Colonus' 226
 From the 'Antigone' 276
-
-Ghost of Roger Casement, The 306
-Gift of Harun AI-Rashid, The 443
-Girl's Song 260
-Gratitude to the Unknown Instructors 254
-Great Day, The 312
-Grey Rock, The 103
-Gyres, The 293
 
 Happy Townland, The 85
 Harp of Aengus, The 407
@@ -17992,13 +16008,6 @@ In the Seven Woods 77
 
 ## INDEX TO TITLES
 
-Indian to his Love, The 14
-Indian upon God, The 13
-Into the Twilight 59
-[Introductory Lines] 405
-[Introductory Rhymes] 101
-Irish Airman foresees his Death, An 135
-
 Lady's First Song, The 299
 Lady's Second Song, The 299
 Lady's Third Song, The 300
@@ -18020,12 +16029,6 @@ in Coming Days, The 71
 Lover tells of the Rose in his Heart, The 56
 Lover's Song, The 300
 Lullaby 264
-
-Mad as the Mist and Snow 265
-Madness of King Goll, The 16
-Magi, The 1 26
-Maid Quiet 70
-Man and the Echo 345
 
 ## INDEX TO TITLES 527
 
@@ -18051,22 +16054,6 @@ Municipal Gallery Re-visited, The 319
 My Descendants 203
 My House 201
 My Table 202
-
-Nativity, A 344
-Needle's Eye, A 288
-Never give all the Heart 79
-New Faces, The 211
-News for the Delphic Oracle 337
-Nineteen Hundred and Nineteen 206
-Nineteenth Century and After, The 240
-No Second Troy 91
-
-0 do not Love Too Long 8;s
-Oil and Blood 2 39
-Old Age of Queen Maeve, The 387
-Old Memory 78
-Old Men admiring Themselves in the Water, The 82
-Old Stone Cross, The 3 17
 
 ## INDEX TO TITLES
 
@@ -18146,19 +16133,6 @@ Spirit Medium, The 318
 
 ## 530 INDEX TO TITLES
 
-Spur, The 3I2
-Stare's Nest by My Window, The 204
-Statistics 240
-Statues, The 336
-Stick of Incense, A 34I
-Stolen Child, The I8
-Stream and Sun at Glendalough 255
-Summer and Spring 224
-~~~~~~ 2~
-Sweet Dancer 296
-Swift's Epitaph 245
-Symbols 239
-
 That the Night come I25
 There 285
 These are the Clouds 96
@@ -18217,14 +16191,6 @@ Vacillation
 Valley of the Black Pig, The
 Veronica's Napkin
 
-Wanderings of Oisin, The 35 1
-What Magic Drum? 287
-What Then? 302
-What Was Lost 312
-Wheel, The 211
-When Helen lived 11 1
-When You are Old 41
-
 ## 53 2 INDEX TO TITLES
 
 Whence had they Come? 287
@@ -18266,12 +16232,6 @@ All things can tempt me from this craft of verse: 97
 All things uncomely and broken, all things worn out and
 old, 56
 Although crowds gathered once if she but showed her face,
-
-Although I can see him still, 148
-'Although I'd lie lapped up in linen 137
-Although I shelter from the rain 46
-Although you hide in the ebb and flow 58
-An abstract Greek absurdity has crazed the man, 284
 
 ## 534 INDEX TO FIRST LINES
 
@@ -18325,23 +16285,6 @@ Do you not hear me calling, white deer with no horns? 61
 Down by the salley gardens my love and I did meet; 20
 Dry timber under that rich foliage, 273
 
-Earth in beauty dressed 262
-Edain came out of Midhir's hill, and lay 407
-Endure what life God gives and ask no longer span; 226
-Eternity is passion, girl or boy 287
-
-Far-off, most secret, and inviolate Rose, 69
-Fasten your hair with a golden pin, 63
-Five-and-twenty years have gone 156
-For certain minutes at the least 185
-For one throb of the artery, 190
-From pleasure of the bed, 301
-
-God grant a blessing on this tower and cottage 162
-God guard me from those thoughts men think 282
-Good Father John O'Hart 21
-Grandfather sang it under the gallows: 335
-
 Had I the heavens' embroidered cloths, 73
 Half close your eyelids, loosen your hair, 68
 Hands, do what you're bid: 155
@@ -18388,10 +16331,6 @@ I have heard that hysterical women say 294
 I have heard the pigeons of the Seven Woods 77
 I have met them at close of day 18o
 I have no happiness in dreaming of Brycelinde, 82
-
-I have old women's secrets now 225
-I have pointed out the yelling pack, 222
-I hear the Shadowy Horses, their long manes a-shake, 62
 
 ## INDEX TO FIRST LINES 537
 
@@ -18445,16 +16384,6 @@ In pity for man's darkening thought 2 13
 In tombs of gold and lapis lazuli 239
 Indignant at the fumbling wits, the obscure spite 109
 
-King Eochaid came at sundown to a wood 435
-Know, that I would accounted be 50
-Kusta ben Luka is my name, I write 445
-
-Laughter not time destroyed my voice 224
-'Lay me in a cushioned chair; 24
-Like the moon her kindness is, 222
-Locke sank into a swoon; 214
-'Love is all 257
-
 Many ingenious lovely things are gone 206
 May God be praised for woman 146
 Midnight has come, and the great Christ Church bell 227
@@ -18501,11 +16430,6 @@ Once, when midnight smote the air, 11 1
 One had a lovely face, 149
 One that is ever kind said yesterday: 78
 
-Opinion is not worth a rush; 175
-Others because you did not keep 154
-Out-worn heart, in a time out-worn, 59
-Overcome- 0 bitter sweetness, 276
-
 Pale brows, still hands and dim hair, 61
 Pardon, great enemy, 159
 Pardon, old fathers, if you still remain 1o 1
@@ -18516,15 +16440,6 @@ Poets with whom I learned my trade, 103
 Pour wine and dance if manhood still have pride, 121
 
 ## INDEX TO FIRST LINES
-
-Processions that lack high stilts have nothing that catches
-the eye. 343
-'Put off that mask of burning gold 95
-Pythagoras planned it. Why did the people stare? 336
-
-Red Rose, proud Rose, sad Rose of all my days! 31
-Remember all those renowned generations, 333
-Rose of all Roses, Rose of all the World! 37
 
 Saddle and ride, I heard a man say, 280
 Said lady once to lover, 296
@@ -18550,10 +16465,6 @@ Stand up and lift your hand and bless 168
 Stretch towards the moonless midnight of the trees 304
 Suddenly I saw the cold and rook-delighting heaven 125
 Surely among a rich man's flowering lawns, 200
-
-Swear by what the Sages spoke 325
-Sweetheart, do not love too long: 83
-Swift has sailed into his rest; 245
 
 ## INDEX TO FIRST LINES 541
 
@@ -18630,15 +16541,6 @@ Toil and grow rich, 120
 Turning and turning in the widening gyre 187
 Two heavy trestles, and a board 202
 
-Under my window-ledge the waters race, 243
-Under the Great Comedian's tomb the crowd. 279
-Undying love to buy 262
-
-Was it the double of my dream 185
-We have cried in our despair 111
-We sat together at one summer's end, So
-We sat under an old thorn-tree 224
-
 ## INDEX TO FIRST LINES 543
 
 We should be hidden from their eyes, 223
@@ -18682,9 +16584,6 @@ Wine comes in at the mouth 93
 With the old kindness, the old distinguished grace, 157
 
 ## 544 INDEX TO FIRST LINES
-
-Would I could cast a sail on the water 136
-'Would it were anything but merely voice!' 91
 
 You ask what I have found and far and wide I go, 304
 You gave, but will not give again 107

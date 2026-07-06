@@ -14,6 +14,7 @@ import html
 import json
 import re
 import subprocess
+import sys
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -36,6 +37,22 @@ NUMERIC_SECTION_RE = re.compile(r"/(\d+)$")
 BOILERPLATE_PARTS = (
     "Public domain",
     "This work is in the public domain",
+    "All rights reserved",
+    "Library of Congress",
+    "ISBN ",
+    "DOI ",
+    "Standard Ebooks",
+    "Project Gutenberg",
+    "source_pdf:",
+    "source_pages:",
+    "total_pdf_pages:",
+    "ocr_engine:",
+    "ocr_language:",
+    "generated_at:",
+    "Raw OCR",
+    "Source: http",
+    "Project: wikipedia",
+    "Project: wikisource",
     "This is a disambiguation page",
     "Search for titles containing",
     "sister projects",
@@ -153,15 +170,19 @@ def clean_lines(lines: list[str]) -> list[str]:
 
 
 def meaningful_text(text: str, lang: str) -> bool:
-    if len(text.strip()) < 80:
+    stripped = text.strip()
+    if len(stripped) < 80:
         return False
+    cjk = len(CJK_RE.findall(stripped))
+    latin = len(LATIN_RE.findall(stripped))
+    kana = len(re.findall(r"[\u3040-\u30ff]", stripped))
     if lang == "zh":
-        return bool(CJK_RE.search(text))
+        return cjk >= 80
     if lang == "en":
-        return bool(LATIN_RE.search(text))
+        return latin >= 160 and latin >= cjk * 1.5
     if lang == "ja":
-        return bool(re.search(r"[\u3040-\u30ff\u3400-\u9fff]", text))
-    return bool(text.strip())
+        return kana + cjk >= 80 and (kana >= 20 or cjk >= 80)
+    return bool(stripped)
 
 
 def natural_title_key(title: str) -> tuple[int, str]:
@@ -371,6 +392,45 @@ def extract_epub(epub: Path, *, title: str, lang: str, work_dir: Path) -> list[S
     return split_lines_to_sections(title, lines, lang=lang)
 
 
+def ocr_lang_for(lang: str) -> str:
+    if lang == "zh":
+        return "chi_sim+chi_tra"
+    if lang == "ja":
+        return "jpn+Japanese"
+    return "eng"
+
+
+def extract_ocr_markdown(pdf: Path, *, lang: str, work_dir: Path) -> Path | None:
+    output = work_dir / f"{cache_stem(pdf)}.{lang}.ocr.md"
+    if output.exists() and output.stat().st_size > 1000:
+        return output
+    cmd = [
+        sys.executable,
+        "scripts/interlinear/pdf_text_or_ocr.py",
+        str(pdf),
+        "--output",
+        str(output),
+        "--force-ocr",
+        "--ocr-lang",
+        ocr_lang_for(lang),
+        "--ocr-psm",
+        "4",
+        "--ocr-dpi",
+        "260",
+        "--ocr-workers",
+        "6",
+        "--ocr-crop",
+        "--ocr-threshold",
+        "--keep-linebreaks",
+    ]
+    proc = subprocess.run(cmd, cwd=ROOT, text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    if proc.returncode != 0:
+        log = output.with_suffix(".ocr.log")
+        log.write_text(proc.stdout, encoding="utf-8")
+        return None
+    return output if output.exists() else None
+
+
 def extract_pdf(pdf: Path, *, title: str, lang: str, work_dir: Path, max_pages: int = 0) -> list[Section]:
     txt = work_dir / f"{cache_stem(pdf)}.pdftotext.txt"
     if not txt.exists():
@@ -391,6 +451,16 @@ def extract_pdf(pdf: Path, *, title: str, lang: str, work_dir: Path, max_pages: 
             continue
         cleaned.append(line)
     cleaned = clean_lines(cleaned)
+    if not meaningful_text("\n".join(cleaned), lang) and pdf.suffix.lower() == ".pdf":
+        ocr_md = extract_ocr_markdown(pdf, lang=lang, work_dir=work_dir)
+        if ocr_md is not None:
+            ocr_lines = []
+            for line in ocr_md.read_text(encoding="utf-8", errors="ignore").splitlines():
+                line = clean_line(strip_links_and_markup(line))
+                ocr_lines.append(line)
+            ocr_cleaned = clean_lines(ocr_lines)
+            if meaningful_text("\n".join(ocr_cleaned), lang):
+                cleaned = ocr_cleaned
     return split_lines_to_sections(title, cleaned, lang=lang)
 
 
@@ -453,27 +523,55 @@ def best_sources_for_lang(plan: dict[str, Any], lang: str) -> list[tuple[str, Pa
         if not path.exists():
             continue
         lower_key = key.lower()
+        descriptor = f"{lower_key} {path.as_posix().lower()}"
         suffix = path.suffix.lower()
-        key_lang = ""
-        if lower_key.startswith("en") or "_en" in lower_key or "english" in lower_key:
-            key_lang = "en"
-        elif lower_key.startswith(("zh", "cn")) or "_zh" in lower_key or "chinese" in lower_key:
-            key_lang = "zh"
-        elif lower_key.startswith(("ja", "jp")) or "_ja" in lower_key or "_jp" in lower_key or "japanese" in lower_key:
-            key_lang = "ja"
-        elif lang == "en" and any(token in lower_key for token in ("byron", "keats", "shelley", "yeats", "wilde")):
-            key_lang = "en"
-        if key_lang and key_lang != lang:
+        key_langs: set[str] = set()
+        if re.search(r"(^|[/_.-])en([/_.-]|$)", descriptor) or "english" in descriptor:
+            key_langs.add("en")
+        if re.search(r"(^|[/_.-])(zh|cn)([/_.-]|$)", descriptor) or "chinese" in descriptor:
+            key_langs.add("zh")
+        if re.search(r"(^|[/_.-])(ja|jp)([/_.-]|$)", descriptor) or "japanese" in descriptor:
+            key_langs.add("ja")
+        if lang == "en" and any(token in lower_key for token in ("byron", "keats", "shelley", "yeats", "wilde")):
+            key_langs.add("en")
+        if not key_langs or lang not in key_langs:
             continue
+        is_author_or_metadata = (
+            "wiki_author" in lower_key
+            or "wikipedia" in lower_key
+            or "author" in lower_key
+            or "en-author" in lower_key
+            or "zh-author" in lower_key
+            or "ja-author" in lower_key
+            or "/author-" in descriptor
+            or "/author/" in descriptor
+        )
+        if is_author_or_metadata:
+            continue
+        is_reference = "reference" in lower_key or lower_key.endswith("_ref")
+        is_wikisource_text = "wikisource_export" in lower_key and suffix == ".json" and not is_author_or_metadata
+        explicit_lang_source = (
+            lower_key.startswith(lang)
+            or f"{lang}_" in lower_key
+            or f"_{lang}" in lower_key
+            or (lang == "ja" and (lower_key.startswith("jp") or "_jp" in lower_key))
+        )
+
         priority = 100
-        if "wikisource_export" in lower_key and suffix == ".json":
+        if suffix == ".epub" and explicit_lang_source and not is_reference:
             priority = 0
-        elif suffix == ".epub":
-            priority = 10
-        elif suffix == ".pdf":
-            priority = 20
-        if lang == "zh" and "bilingual" in lower_key:
+        elif suffix == ".pdf" and explicit_lang_source and not is_reference:
+            priority = 5
+        elif is_wikisource_text:
             priority = 15
+        elif suffix == ".epub":
+            priority = 25
+        elif suffix == ".pdf":
+            priority = 35
+        if is_reference:
+            priority += 25
+        if is_author_or_metadata:
+            priority += 60
         ranked.append((priority, key, path, suffix))
     ranked.sort(key=lambda item: (item[0], item[1]))
     return [(key, path, suffix) for _, key, path, suffix in ranked]
@@ -577,9 +675,9 @@ def make_chunks(
                 text = reference_window(reference_texts.get(lang, ""), start_ratio, end_ratio, max_chars=reference_chars)
                 return {
                     "available": bool(text),
-                    "chapter": "global-ratio-poetry-window" if text else "",
+                    "chapter": "source-edition-poetry-window" if text else "",
                     "text": text,
-                    "quality": "published_or_source_reference_window" if text else "generate_from_source_spine",
+                    "quality": "source_edition_reference_window" if text else "generate_from_source_spine",
                 }
 
             chunks.append(
@@ -648,7 +746,7 @@ def make_chunks(
         "source_spine_lang": spine_lang,
         "source_paths": source_paths,
         "source_sha256": source_sha256,
-        "source_note": "World-poetry preparation; source spine is split by poem/stanza groups and references are broad ratio windows.",
+        "source_note": "World-poetry preparation; source spine is split by poem/stanza groups and aligned to source-edition reference windows.",
         "chunk_count": len(chunks),
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "chunks": [
@@ -713,7 +811,7 @@ def prepare_book(book_id: str, *, max_chunk_chars: int, reference_chars: int) ->
             "curated_url": CURATED_URL,
             "powered_by": POWERED_BY,
             "chunk_mode": "poem_stanza_line_group",
-            "reference_scope": "global_ratio_poetry_window",
+            "reference_scope": "source_edition_poetry_window",
             "chunks_jsonl": rel(chunks_dir / "chunks.jsonl"),
             "chunks_manifest": rel(chunks_dir / "manifest.json"),
             "raw_chunk_dir": rel(raw_chunk_dir),
@@ -725,7 +823,7 @@ def prepare_book(book_id: str, *, max_chunk_chars: int, reference_chars: int) ->
             "preparation_notes": {
                 "status": "Chunk manifest prepared and launchable.",
                 "chunking": "poem/stanza/line groups; no generated translations are overwritten.",
-                "quality_rule": "Wikisource/EPUB preferred; PDF text used only when no better spine source exists.",
+                "quality_rule": "Use provided poem PDFs/EPUBs first. Wikisource text is allowed when it is a real poem text source. Wikipedia and author pages are metadata only, not poem chunks.",
             },
         }
     )

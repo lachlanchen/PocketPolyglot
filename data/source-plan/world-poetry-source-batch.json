@@ -101,8 +101,8 @@
       "status": "chunked_launchable",
       "book_plan": "books/shelley-selected-poems/book-plan.json",
       "missing_source_paths": [],
-      "chunk_count": 2105,
-      "prepared_chunks_at": "2026-07-06T11:12:58.987066+00:00"
+      "chunk_count": 1989,
+      "prepared_chunks_at": "2026-07-06T22:47:58.929697+00:00"
     },
     {
       "priority": 6,
@@ -116,8 +116,8 @@
       "status": "chunked_launchable",
       "book_plan": "books/yeats-collected-poems/book-plan.json",
       "missing_source_paths": [],
-      "chunk_count": 634,
-      "prepared_chunks_at": "2026-07-06T11:12:58.987067+00:00"
+      "chunk_count": 607,
+      "prepared_chunks_at": "2026-07-06T22:47:58.929701+00:00"
     },
     {
       "priority": 7,
@@ -131,8 +131,8 @@
       "status": "chunked_launchable",
       "book_plan": "books/ovid-art-of-love/book-plan.json",
       "missing_source_paths": [],
-      "chunk_count": 111,
-      "prepared_chunks_at": "2026-07-06T11:12:58.987067+00:00"
+      "chunk_count": 24,
+      "prepared_chunks_at": "2026-07-06T22:47:58.929702+00:00"
     },
     {
       "priority": 8,
@@ -146,8 +146,8 @@
       "status": "chunked_launchable",
       "book_plan": "books/keats-poems/book-plan.json",
       "missing_source_paths": [],
-      "chunk_count": 56,
-      "prepared_chunks_at": "2026-07-06T11:12:58.987068+00:00"
+      "chunk_count": 286,
+      "prepared_chunks_at": "2026-07-06T22:47:58.929703+00:00"
     },
     {
       "priority": 9,
@@ -161,8 +161,8 @@
       "status": "chunked_launchable",
       "book_plan": "books/wilde-poetry/book-plan.json",
       "missing_source_paths": [],
-      "chunk_count": 217,
-      "prepared_chunks_at": "2026-07-06T11:12:58.987069+00:00"
+      "chunk_count": 147,
+      "prepared_chunks_at": "2026-07-06T22:47:58.929704+00:00"
     },
     {
       "priority": 10,
@@ -173,11 +173,12 @@
       "author": "徐志摩",
       "source_spine_lang": "zh",
       "task_mode": "trilingual_poetry_zh_source_generated_en_ja",
-      "status": "chunked_launchable",
+      "status": "needs_source_review",
       "book_plan": "books/xu-zhimo-poems/book-plan.json",
       "missing_source_paths": [],
-      "chunk_count": 5,
-      "prepared_chunks_at": "2026-07-06T11:12:58.987070+00:00"
+      "chunk_count": 4,
+      "prepared_chunks_at": "2026-07-06T22:47:58.929705+00:00",
+      "blocked_reason": "scanned PDF OCR sample is visibly garbled; needs reviewed OCR before launch"
     },
     {
       "priority": 11,
@@ -191,8 +192,8 @@
       "status": "chunked_launchable",
       "book_plan": "books/tsangyang-gyatso-poems/book-plan.json",
       "missing_source_paths": [],
-      "chunk_count": 10,
-      "prepared_chunks_at": "2026-07-06T11:12:58.987071+00:00"
+      "chunk_count": 9,
+      "prepared_chunks_at": "2026-07-06T22:47:58.929706+00:00"
     },
     {
       "priority": 12,
@@ -203,12 +204,13 @@
       "author": "various authors",
       "source_spine_lang": "en",
       "task_mode": "trilingual_poetry_anthology_zh_en_sources_generated_ja",
-      "status": "chunked_launchable",
+      "status": "needs_source_review",
       "book_plan": "books/english-poetry-anthology/book-plan.json",
       "missing_source_paths": [],
-      "chunk_count": 217,
-      "prepared_chunks_at": "2026-07-06T11:12:58.987071+00:00"
+      "chunk_count": 113,
+      "prepared_chunks_at": "2026-07-06T22:47:58.929707+00:00",
+      "blocked_reason": "mixed bilingual anthology extraction needs reviewed poem-level splitting before launch"
     }
   ],
-  "last_chunk_preparation_at": "2026-07-06T11:16:54.733200+00:00"
+  "last_chunk_preparation_at": "2026-07-06T22:47:58.929708+00:00"
 }

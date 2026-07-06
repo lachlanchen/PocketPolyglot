@@ -38,6 +38,10 @@ const THEME_HINTS = {
     "Confucian classics, bamboo slips, inkstone, Song dynasty study, austere scholarly texture",
   "lushi-chunqiu":
     "Warring States scholarly compendium, bronze ritual vessel, bamboo slips arranged like seasonal calendars, court scholars in a quiet study, cosmological order and practical governance atmosphere, restrained lacquer black, jade green, and warm bronze palette",
+  hanfeizi:
+    "Legalist Warring States classic, austere court archive, bronze law tablets, bamboo slips, black lacquer desk, cold strategic intelligence and political realism, restrained ink black, bronze, jade gray, and muted cinnabar palette",
+  guiguzi:
+    "mysterious Warring States strategy and persuasion classic, secluded mountain pass, bamboo slips, shadowed scholar's cave, diplomatic tokens, mist and hidden pathways, subtle tactical atmosphere, deep ink, muted jade, weathered parchment, and restrained gold",
   "sunzi-bingfa":
     "ancient Chinese military classic, bamboo slips, bronze sword guard, misted mountain passes, strategic map lines without readable text, calm disciplined command atmosphere, restrained ink black, bronze, and muted cinnabar palette",
   wuzi:

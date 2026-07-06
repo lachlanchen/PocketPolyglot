@@ -2,13 +2,7 @@
 
 ## Imprint
 
-This ebook is the product of many hours of hard work by volunteers for Standard Ebooks, and builds on the hard work of other literature lovers made possible by the public domain.
-
-This particular ebook is based on transcriptions from various sources and on digital scans from various sources.
-
 The source text and artwork in this ebook are believed to be in the United States public domain; that is, they are believed to be free of copyright restrictions in the United States. They may still be copyrighted in other countries, so users located outside of the United States must check their local laws before using this ebook. The creators of, and contributors to, this ebook dedicate their contributions to the worldwide public domain via the terms in the CC0 1.0 Universal Public Domain Dedication. For full license information, see the Uncopyright at the end of this ebook.
-
-Standard Ebooks is a volunteer-driven project that produces ebook editions of public domain literature using modern typography, technology, and editorial standards, and distributes them free of cost. You can download this and other ebooks carefully produced for true book lovers at standardebooks.org.
 
 ## Στροφή
 
@@ -50,24 +44,6 @@ And the crash of loud lyres.
 
 ## From Spring Days to Winter
 
-In the glad springtime when leaves were green,
-O merrily the throstle sings!
-I sought, amid the tangled sheen,
-Love whom mine eyes had never seen,
-O the glad dove has golden wings!
-
-Between the blossoms red and white,
-O merrily the throstle sings!
-My love first came into my sight,
-O perfect vision of delight,
-O the glad dove has golden wings!
-
-The yellow apples glowed like fire,
-O merrily the throstle sings!
-O Love too great for lip or lyre,
-Blown rose of love and of desire,
-O the glad dove has golden wings!
-
 But now with snow the tree is grey,
 Ah, sadly now the throstle sings!
 My love is dead: ah! well-a-day,
@@ -75,44 +51,6 @@ See at her silent feet I lay
 A dove with broken wings!
 Ah, Love! ah, Love! that thou wert slain⁠—
 Fond Dove, fond Dove return again!
-
-## A Lament
-
-O well for him who lives at ease
-With garnered gold in wide domain,
-Nor heeds the splashing of the rain,
-The crashing down of forest trees.
-
-O well for him who ne’er hath known
-The travail of the hungry years,
-A father grey with grief and tears,
-A mother weeping all alone.
-
-But well for him whose foot hath trod
-The weary road of toil and strife,
-Yet from the sorrows of his life
-Builds ladders to be nearer God.
-
-## The True Knowledge
-
-Thou knowest all⁠—I seek in vain
-What lands to till or sow with seed⁠—
-The land is black with briar and weed,
-Nor cares for falling tears or rain.
-
-Thou knowest all⁠—I sit and wait
-With blinded eyes and hands that fail,
-Till the last lifting of the veil
-And the first opening of the gate.
-
-Thou knowest all; I cannot see.
-I trust I shall not live in vain,
-I know that we shall meet again
-In some divine eternity.
-
-## Θρηνῳδία
-
-Song sung by captive women of Troy on the sea beach at Aulis, while the Achaeans were there storm-bound through the wrath of dishonoured Achilles, and waiting for a fair wind to bring them home.
 
 ## Στροφή
 
@@ -196,111 +134,6 @@ I shall pass into Hades abhorred,
 To the grave as my chamber of pleasure,
 To death as my Lover and Lord.
 
-## I
-
-There is no peace beneath the noon⁠—
-Ah! in those meadows is there peace
-Where, girdled with a silver fleece,
-As a bright shepherd, strays the moon?
-
-Queen of the gardens of the sky,
-Where stars like lilies, white and fair,
-Shine through the mists of frosty air,
-Oh, tarry, for the dawn is nigh!
-
-Oh, tarry, for the envious day
-Stretches long hands to catch thy feet.
-Alas! but thou art overfleet,
-Alas! I know thou wilt not stay.
-
-## II
-
-Eastward the dawn has broken red,
-The circling mists and shadows flee;
-Aurora rises from the sea,
-And leaves the crocus-flowered bed.
-
-Eastward the silver arrows fall,
-Splintering the veil of holy night:
-And a long wave of yellow light
-Breaks silently on tower and hall.
-
-And speeding wide across the wold
-Wakes into flight some fluttering bird;
-And all the chestnut tops are stirred,
-And all the branches streaked with gold.
-
-## III
-
-To outer senses there is peace,
-A dream-like peace on either hand,
-Deep silence in the shadowy land,
-Deep silence where the shadows cease,
-
-Save for a cry that echoes shrill
-From some lone bird disconsolate;
-A curlew calling to its mate;
-The answer from the distant hill.
-
-And, herald of my love to Him
-Who, waiting for the dawn, doth lie,
-The orbèd maiden leaves the sky,
-And the white firs grow more dim.
-
-## IV
-
-Up sprang the sun to run his race,
-The breeze blew fair on meadow and lea,
-But in the west I seemed to see
-The likeness of a human face.
-
-A linnet on the hawthorn spray
-Sang of the glories of the spring,
-And made the flow’ring copses ring
-With gladness for the new-born day.
-
-A lark from out the grass I trod
-Flew wildly, and was lost to view
-In the great seamless veil of blue
-That hangs before the face of God.
-
-The willow whispered overhead
-That death is but a newer life
-And that with idle words of strife
-We bring dishonour on the dead.
-
-I took a branch from off the tree,
-And hawthorn branches drenched with dew,
-I bound them with a sprig of yew,
-And made a garland fair to see.
-
-I laid the flowers where He lies
-(Warm leaves and flowers on the stones):
-What joy I had to sit alone
-Till evening broke on tired eyes:
-
-Till all the shifting clouds had spun
-A robe of gold for God to wear
-And into seas of purple air
-Sank the bright galley of the sun.
-
-## V
-
-Shall I be gladdened for the day,
-And let my inner heart be stirred
-By murmuring tree or song of bird,
-And sorrow at the wild winds’ play?
-
-Not so, such idle dreams belong
-To souls of lesser depth than mine;
-I feel that I am half divine;
-I know that I am great and strong.
-
-I know that every forest tree
-By labour rises from the root;
-I know that none shall gather fruit
-By sailing on the barren sea.
-
 ## Wasted Days
 
 A fair slim boy not made for this world’s pain,
@@ -312,19 +145,9 @@ Red under-lip drawn in for fear of love,
 And white throat whiter than the breast of dove⁠—
 Alas! Alas! If all should be in vain.
 
-Corn-fields behind, and reapers all a-row
-In weariest labour toiling wearily,
-To no sweet sound of laughter or of lute.
-
-And careless of the crimson sunset-glow,
-The boy still dreams; nor knows that night is night,
-And in the night-time no man gathers fruit.
-
 ## A Fragment from the *Agamemnon* of Aeschylos
 
 The scene is the court-yard of the Palace at Argos. Agamemnon has already entered the House of Doom, and Clytemnestra has followed close on his heels. Cassandra is left alone upon the stage. The conscious terror of death and the burden of prophecy lie heavy upon her; terrible signs and visions greet her approach. She sees blood upon the lintel, and the smell of blood scares her, as some bird, from the door. The ghosts of the murdered children come to mourn with her. Her second sight pierces the Palace walls; she sees the fatal bath, the trammelling net, and the axe sharpened for her own ruin and her lord’s.
-
-But not even in the hour of her last anguish is Apollo merciful; her warnings are unheeded, her prophetic utterances made mock of.
 
 The orchestra is filled with a chorus of old men weak, foolish, irresolute. They do not believe the weird woman of mystery till the hour for help is past, and the cry of Agamemnon echoes from the house, “Oh me! I am stricken with a stroke of death.”
 
@@ -515,10 +338,6 @@ Who bound with crown of thorns thy living brow,
 Hath decked thine empty tomb with laurels now,
 And begs in vain the ashes of her son.
 
-O mightiest exile! all thy grief is done:
-Thy soul walks now beside thy Beatrice;
-Ravenna guards thine ashes: sleep in peace.
-
 ## IV
 
 How lone this palace is; how grey the walls!
@@ -593,9 +412,6 @@ In girlish flight! or lurking in the glade,
 The soft brown limbs, the wanton treacherous face
 Of woodland god! Queen Dian in the chase,
 White-limbed and terrible, with look of pride,
-
-And leash of boar-hounds leaping at her side!
-Or Hylas mirrored in the perfect stream.
 
 O idle heart! O fond Hellenic dream!
 Ere long, with melancholy rise and swell,
@@ -769,16 +585,7 @@ Perchance before I see the Autumn leaves,
 I may behold thy city; and lay down
 Low at thy feet the poet’s laurel crown.
 
-Adieu! Adieu! yon silver lamp, the moon,
-Which turns our midnight into perfect noon,
-Doth surely light thy towers, guarding well
-Where Dante sleeps, where Byron loved to dwell.
-
 ## Sen Artysty
-
-I too have had my dreams: ay, indeed known
-The crowded visions of a fiery youth
-Which haunt me still.
 
 Methought that once I lay
 Within some garden close, what time the Spring
@@ -914,163 +721,6 @@ And I remain unmoved⁠—and yet, and yet,
 These Christs that die upon the barricades,
 God knows it I am with them, in some things.
 
-## Ave Imperatrix
-
-Set in this stormy Northern sea,
-Queen of these restless fields of tide,
-England! what shall men say of thee,
-Before whose feet the worlds divide?
-
-The earth, a brittle globe of glass,
-Lies in the hollow of thy hand,
-And through its heart of crystal pass,
-Like shadows through a twilight land,
-
-The spears of crimson-suited war,
-The long white-crested waves of fight,
-And all the deadly fires which are
-The torches of the lords of Night.
-
-The yellow leopards, strained and lean,
-The treacherous Russian knows so well,
-With gaping blackened jaws are seen
-Leap through the hail of screaming shell.
-
-The strong sea-lion of England’s wars
-Hath left his sapphire cave of sea,
-To battle with the storm that mars
-The stars of England’s chivalry.
-
-The brazen-throated clarion blows
-Across the Pathan’s reedy fen,
-And the high steeps of Indian snows
-Shake to the tread of armèd men.
-
-And many an Afghan chief, who lies
-Beneath his cool pomegranate-trees,
-Clutches his sword in fierce surmise
-When on the mountain-side he sees
-
-The fleet-foot Marri scout, who comes
-To tell how he hath heard afar
-The measured roll of English drums
-Beat at the gates of Kandahar.
-
-For southern wind and east wind meet
-Where, girt and crowned by sword and fire,
-England with bare and bloody feet
-Climbs the steep road of wide empire.
-
-O lonely Himalayan height,
-Grey pillar of the Indian sky,
-Where saw’st thou last in clanging flight
-Our wingèd dogs of Victory?
-
-The almond-groves of Samarcand,
-Bokhara, where red lilies blow,
-And Oxus, by whose yellow sand
-The grave white-turbaned merchants go:
-
-And on from thence to Ispahan,
-The gilded garden of the sun,
-Whence the long dusty caravan
-Brings cedar wood and vermilion;
-
-And that dread city of Cabool
-Set at the mountain’s scarpèd feet,
-Whose marble tanks are ever full
-With water for the noonday heat:
-
-Where through the narrow straight Bazaar
-A little maid Circassian
-Is led, a present from the Czar
-Unto some old and bearded khan⁠—
-
-Here have our wild war-eagles flown,
-And flapped wide wings in fiery fight;
-But the sad dove, that sits alone
-In England⁠—she hath no delight.
-
-In vain the laughing girl will lean
-To greet her love with love-lit eyes:
-Down in some treacherous black ravine,
-Clutching his flag, the dead boy lies.
-
-And many a moon and sun will see
-The lingering wistful children wait
-To climb upon their father’s knee;
-And in each house made desolate
-
-Pale women who have lost their lord
-Will kiss the relics of the slain⁠—
-Some tarnished epaulette⁠—some sword⁠—
-Poor toys to soothe such anguished pain.
-
-For not in quiet English fields
-Are these, our brothers, lain to rest,
-Where we might deck their broken shields
-With all the flowers the dead love best.
-
-For some are by the Delhi walls,
-And many in the Afghan land,
-And many where the Ganges falls
-Through seven mouths of shifting sand.
-
-And some in Russian waters lie,
-And others in the seas which are
-The portals to the East, or by
-The wind-swept heights of Trafalgar.
-
-O wandering graves! O restless sleep!
-O silence of the sunless day!
-O still ravine! O stormy deep!
-Give up your prey! Give up your prey!
-
-And thou whose wounds are never healed,
-Whose weary race is never won,
-O Cromwell’s England! must thou yield
-For every inch of ground a son?
-
-Go! crown with thorns thy gold-crowned head,
-Change thy glad song to song of pain;
-Wind and wild wave have got thy dead,
-And will not yield them back again.
-
-Wave and wild wind and foreign shore
-Possess the flower of English land⁠—
-Lips that thy lips shall kiss no more,
-Hands that shall never clasp thy hand.
-
-What profit now that we have bound
-The whole round world with nets of gold,
-If hidden in our heart is found
-The care that groweth never old?
-
-What profit that our galleys ride,
-Pine-forest-like, on every main?
-Ruin and wreck are at our side,
-Grim warders of the House of pain.
-
-Where are the brave, the strong, the fleet?
-Where is our English chivalry?
-Wild grasses are their burial-sheet,
-And sobbing waves their threnody.
-
-O loved ones lying far away,
-What word of love can dead lips send!
-O wasted dust! O senseless clay!
-Is this the end! is this the end!
-
-Peace, peace! we wrong the noble dead
-To vex their solemn slumber so;
-Though childless, and with thorn-crowned head,
-Up the steep road must England go,
-
-Yet when this fiery web is spun,
-Her watchmen shall descry from far
-The young Republic like a sun
-Rise from these crimson seas of war.
-
 ## To Milton
 
 Milton! I think thy spirit hath passed away
@@ -1087,28 +737,6 @@ By ignorant demagogues is held in fee,
 Who love her not: Dear God! is this the land
 Which bare a triple empire in her hand
 When Cromwell spake the word Democracy!
-
-## Louis Napoleon
-
-Eagle of Austerlitz! where were thy wings
-When far away upon a barbarous strand,
-In fight unequal, by an obscure hand,
-Fell the last scion of thy brood of Kings!
-
-Poor boy! thou shalt not flaunt thy cloak of red,
-Or ride in state through Paris in the van
-Of thy returning legions, but instead
-Thy mother France, free and republican,
-
-Shall on thy dead and crownless forehead place
-The better laurels of a soldier’s crown,
-That not dishonoured should thy soul go down
-To tell the mighty Sire of thy race
-
-That France hath kissed the mouth of Liberty,
-And found it sweeter than his honied bees,
-And that the giant wave Democracy
-Breaks on the shores where Kings lay couched at ease.
 
 ## Sonnet
 
@@ -1502,28 +1130,6 @@ Than could be tested in a crucible!⁠—
 But the air freshens, let us go, why soon
 The woodmen will be here; how we have lived this night of June!
 
-## Requiescat
-
-Tread lightly, she is near
-Under the snow,
-Speak gently, she can hear
-The daisies grow.
-
-All her bright golden hair
-Tarnished with rust,
-She that was young and fair
-Fallen to dust.
-
-Coffin-board, heavy stone,
-Lie on her breast,
-I vex my heart alone,
-She is at rest.
-
-Peace, Peace, she cannot hear
-Lyre or sonnet,
-All my life’s buried here,
-Heap earth upon it.
-
 ## Sonnet on Approaching Italy
 
 I reached the Alps: the soul within me burned,
@@ -1540,28 +1146,6 @@ Was breaking into flakes of blossoming foam:
 But when I knew that far away at Rome
 In evil bonds a second Peter lay,
 I wept to see the land so very fair.
-
-## San Miniato
-
-See, I have climbed the mountain side
-Up to this holy house of God,
-Where once that Angel-Painter trod
-Who saw the heavens opened wide,
-
-And throned upon the crescent moon
-The Virginal white Queen of Grace⁠—
-Mary! could I but see thy face
-Death could not come at all too soon.
-
-O crowned by God with thorns and pain!
-Mother of Christ! O mystic wife!
-My heart is weary of this life
-And over-sad to sing again.
-
-O crowned by God with love and flame!
-O crowned by Christ the Holy One!
-O listen ere the searching sun
-Show to the world my sin and shame.
 
 ## Ave Maria Gratia Plena
 
@@ -1613,84 +1197,6 @@ O come and fill His sepulchre with flowers.”
 Ah, God! Ah, God! those dear Hellenic hours
 Had drowned all memory of Thy bitter pain,
 The Cross, the Crown, the Soldiers and the Spear.
-
-## I
-
-The corn has turned from grey to red,
-Since first my spirit wandered forth
-From the drear cities of the north,
-And to Italia’s mountains fled.
-
-And here I set my face towards home,
-For all my pilgrimage is done,
-Although, methinks, yon blood-red sun
-Marshals the way to Holy Rome.
-
-O Blessed Lady, who dost hold
-Upon the seven hills thy reign!
-O Mother without blot or stain,
-Crowned with bright crowns of triple gold!
-
-O Roma, Roma, at thy feet
-I lay this barren gift of song!
-For, ah! the way is steep and long
-That leads unto thy sacred street.
-
-## II
-
-And yet what joy it were for me
-To turn my feet unto the south,
-And journeying towards the Tiber mouth
-To kneel again at Fiesole!
-
-And wandering through the tangled pines
-That break the gold of Arno’s stream,
-To see the purple mist and gleam
-Of morning on the Apennines
-
-By many a vineyard-hidden home,
-Orchard and olive-garden grey,
-Till from the drear Campagna’s way
-The seven hills bear up the dome!
-
-## III
-
-A pilgrim from the northern seas⁠—
-What joy for me to seek alone
-The wondrous temple and the throne
-Of Him who holds the awful keys!
-
-When, bright with purple and with gold,
-Come priest and holy Cardinal,
-And borne above the heads of all
-The gentle Shepherd of the Fold.
-
-O joy to see before I die
-The only God-anointed King,
-And hear the silver trumpets ring
-A triumph as He passes by!
-
-Or at the brazen-pillared shrine
-Holds high the mystic sacrifice,
-And shows his God to human eyes
-Beneath the veil of bread and wine.
-
-## IV
-
-For lo, what changes time can bring!
-The cycles of revolving years
-May free my heart from all its fears,
-And teach my lips a song to sing.
-
-Before yon field of trembling gold
-Is garnered into dusty sheaves,
-Or ere the autumn’s scarlet leaves
-Flutter as birds adown the wold,
-
-I may have run the glorious race,
-And caught the torch while yet aflame,
-And called upon the holy name
-Of Him who now doth hide His face.
 
 ## Urbs Sacra Aeterna
 
@@ -2314,28 +1820,6 @@ Marks the long High Street of the little town,
 And warns me to return; I must not wait,
 Hark! ’tis the curfew booming from the bell at Christ Church gate.
 
-## Impression du Matin
-
-The Thames nocturne of blue and gold
-Changed to a Harmony in grey:
-A barge with ochre-coloured hay
-Dropt from the wharf: and chill and cold
-
-The yellow fog came creeping down
-The bridges, till the houses’ walls
-Seemed changed to shadows and St. Paul’s
-Loomed like a bubble o’er the town.
-
-Then suddenly arose the clang
-Of waking life; the streets were stirred
-With country wagons: and a bird
-Flew to the glistening roofs and sang.
-
-But one pale woman all alone,
-The daylight kissing her wan hair,
-Loitered beneath the gas lamps’ flare,
-With lips of flame and heart of stone.
-
 ## Magdalen Walks
 
 The little white clouds are racing over the sky,
@@ -2528,70 +2012,6 @@ Why spread that silver pavilion,
 Why wear that veil of drifting mist?
 Ah! thou hast young Endymion,
 Thou hast the lips that should be kissed!
-
-## La Bella Donna Della Mia Mente
-
-My limbs are wasted with a flame,
-My feet are sore with travelling,
-For, calling on my Lady’s name,
-My lips have now forgot to sing.
-
-O Linnet in the wild-rose brake
-Strain for my Love thy melody,
-O Lark sing louder for love’s sake,
-My gentle Lady passeth by.
-
-She is too fair for any man
-To see or hold his heart’s delight,
-Fairer than Queen or courtesan
-Or moonlit water in the night.
-
-Her hair is bound with myrtle leaves,
-(Green leaves upon her golden hair!)
-Green grasses through the yellow sheaves
-Of autumn corn are not more fair.
-
-Her little lips, more made to kiss
-Than to cry bitterly for pain,
-Are tremulous as brook-water is,
-Or roses after evening rain.
-
-Her neck is like white melilote
-Flushing for pleasure of the sun,
-The throbbing of the linnet’s throat
-Is not so sweet to look upon.
-
-As a pomegranate, cut in twain,
-White-seeded, is her crimson mouth,
-Her cheeks are as the fading stain
-Where the peach reddens to the south.
-
-O twining hands! O delicate
-White body made for love and pain!
-O House of love! O desolate
-Pale flower beaten by the rain!
-
-## Chanson
-
-A ring of gold and a milk-white dove
-Are goodly gifts for thee,
-And a hempen rope for your own love
-To hang upon a tree.
-
-For you a House of Ivory,
-(Roses are white in the rose-bower)!
-A narrow bed for me to lie,
-(White, O white, is the hemlock flower)!
-
-Myrtle and jessamine for you,
-(O the red rose is fair to see)!
-For me the cypress and the rue,
-(Fairest of all is rosemary)!
-
-For you three lovers of your hand,
-(Green grass where a man lies dead)!
-For me three paces on the sand,
-(Plant lilies at my head)!
 
 ## I
 
@@ -3376,40 +2796,6 @@ Of too much pleasure, ere Persephone
 Had bade them serve her by the ebon throne
 Of the pale God who in the fields of Enna loosed her zone.
 
-## I
-
-The sea is flecked with bars of grey,
-The dull dead wind is out of tune,
-And like a withered leaf the moon
-Is blown across the stormy bay.
-
-Etched clear upon the pallid sand
-Lies the black boat: a sailor boy
-Clambers aboard in careless joy
-With laughing face and gleaming hand.
-
-And overhead the curlews cry,
-Where through the dusky upland grass
-The young brown-throated reapers pass,
-Like silhouettes against the sky.
-
-## II
-
-To outer senses there is peace,
-A dreamy peace on either hand,
-Deep silence in the shadowy land,
-Deep silence where the shadows cease.
-
-Save for a cry that echoes shrill
-From some lone bird disconsolate;
-A corncrake calling to its mate;
-The answer from the misty hill.
-
-And suddenly the moon withdraws
-Her sickle from the lightening skies,
-And to her sombre cavern flies,
-Wrapped in a veil of yellow gauze.
-
 ## The Grave of Keats
 
 Rid of the world’s injustice, and his pain,
@@ -3426,29 +2812,6 @@ O poet-painter of our English Land!
 Thy name was writ in water⁠—it shall stand:
 And tears like mine will keep thy memory green,
 As Isabella did her Basil-tree.
-
-## Theocritus
-
-Still through the ivy flits the bee
-Where Amaryllis lies in state;
-O Singer of Persephone!
-
-Simaetha calls on Hecate
-And hears the wild dogs at the gate;
-Dost thou remember Sicily?
-
-Still by the light and laughing sea
-Poor Polypheme bemoans his fate;
-O Singer of Persephone!
-
-And still in boyish rivalry
-Young Daphnis challenges his mate;
-Dost thou remember Sicily?
-
-Slim Lacon keeps a goat for thee,
-For thee the jocund shepherds wait;
-O Singer of Persephone!
-Dost thou remember Sicily?
 
 ## In the Gold Room
 
@@ -3472,86 +2835,6 @@ In the swinging lamp of a crimson shrine,
 Or the bleeding wounds of the pomegranate,
 Or the heart of the lotus drenched and wet
 With the spilt-out blood of the rose-red wine.
-
-## Ballade de Marguerite
-
-I am weary of lying within the chase
-When the knights are meeting in market-place.
-
-Nay, go not thou to the red-roofed town
-Lest the hoofs of the war-horse tread thee down.
-
-Will she love me the less that my Father is seen
-Each Martinmas day in a doublet green?
-
-Ah, if she is working the arras bright
-I might ravel the threads by the fire-light.
-
-Perchance she is kneeling in St. Denys,
-(On her soul may our Lady have gramercy!)
-
-Ah, if she is praying in lone chapelle,
-I might swing the censer and ring the bell.
-
-Come in, my son, for you look sae pale,
-The father shall fill thee a stoup of ale.
-
-’Tis the King of England from over sea,
-Who has come unto visit our fair countrie.
-
-Nay, nay, for I see white lilies clear,
-It is no strong man who lies on the bier.
-
-O ’tis old Dame Jeannette that kept the hall,
-I knew she would die at the autumn fall.
-
-Dame Jeannette had not that gold-brown hair,
-Old Jeannette was not a maiden fair.
-
-O ’tis none of our kith and none of our kin,
-(Her soul may our Lady assoil from sin!)
-
-## The Dole of the King’s Daughter
-
-Seven stars in the still water,
-And seven in the sky;
-Seven sins on the King’s daughter,
-Deep in her soul to lie.
-
-Red roses are at her feet,
-(Roses are red in her red-gold hair)
-And O where her bosom and girdle meet
-Red roses are hidden there.
-
-Fair is the knight who lieth slain
-Amid the rush and reed,
-See the lean fishes that are fain
-Upon dead men to feed.
-
-Sweet is the page that lieth there,
-(Cloth of gold is goodly prey,)
-See the black ravens in the air,
-Black, O black as the night are they.
-
-What do they there so stark and dead?
-(There is blood upon her hand)
-Why are the lilies flecked with red?
-(There is blood on the river sand.)
-
-There are two that ride from the south and east,
-And two from the north and west,
-For the black raven a goodly feast,
-For the King’s daughter rest.
-
-There is one man who loves her true,
-(Red, O red, is the stain of gore!)
-He hath duggen a grave by the darksome yew,
-(One grave will do for four.)
-
-No moon in the still heaven,
-In the black water none,
-The sins on her soul are seven,
-The sin upon his is one.
 
 ## Amor Intellectualis
 
@@ -3639,38 +2922,6 @@ But sweeter far for thee a restless tomb
 In the blue cavern of an echoing deep,
 Or where the tall ships founder in the gloom
 Against the rocks of some wave-shattered steep.
-
-## By the Arno
-
-The oleander on the wall
-Grows crimson in the dawning light,
-Though the grey shadows of the night
-Lie yet on Florence like a pall.
-
-The dew is bright upon the hill,
-And bright the blossoms overhead,
-But ah! the grasshoppers have fled,
-The little Attic song is still.
-
-Only the leaves are gently stirred
-By the soft breathing of the gale,
-And in the almond-scented vale
-The lonely nightingale is heard.
-
-The day will make thee silent soon,
-O nightingale sing on for love!
-While yet upon the shadowy grove
-Splinter the arrows of the moon.
-
-Before across the silent lawn
-In sea-green vest the morning steals,
-And to love’s frightened eyes reveals
-The long white fingers of the dawn
-
-Fast climbing up the eastern sky
-To grasp and slay the shuddering night,
-All careless of my heart’s delight,
-Or if the nightingale should die.
 
 ## Fabien Dei Franchi
 
@@ -3971,23 +3222,6 @@ One with our heart, the stealthy creeping years
 Have lost their terrors now, we shall not die,
 The Universe itself shall be our Immortality!
 
-## Impression
-
-The sky is laced with fitful red,
-The circling mists and shadows flee,
-The dawn is rising from the sea,
-Like a white lady from her bed.
-
-And jagged brazen arrows fall
-Athwart the feathers of the night,
-And a long wave of yellow light
-Breaks silently on tower and hall,
-
-And spreading wide across the wold
-Wakes into flight some fluttering bird,
-And all the chestnut tops are stirred,
-And all the branches streaked with gold.
-
 ## At Verona
 
 How steep the stairs within Kings’ houses are
@@ -4005,75 +3239,6 @@ Of his gold city, and eternal day”⁠—
 Nay peace: behind my prison’s blinded bars
 I do possess what none can take away,
 My love, and all the glory of the stars.
-
-## Apologia
-
-Is it thy will that I should wax and wane,
-Barter my cloth of gold for hodden grey,
-And at thy pleasure weave that web of pain
-Whose brightest threads are each a wasted day?
-
-Is it thy will⁠—Love that I love so well⁠—
-That my Soul’s House should be a tortured spot
-Wherein, like evil paramours, must dwell
-The quenchless flame, the worm that dieth not?
-
-Nay, if it be thy will I shall endure,
-And sell ambition at the common mart,
-And let dull failure be my vestiture,
-And sorrow dig its grave within my heart.
-
-Perchance it may be better so⁠—at least
-I have not made my heart a heart of stone,
-Nor starved my boyhood of its goodly feast,
-Nor walked where Beauty is a thing unknown.
-
-Many a man hath done so; sought to fence
-In straitened bonds the soul that should be free,
-Trodden the dusty road of common sense,
-While all the forest sang of liberty,
-
-Not marking how the spotted hawk in flight
-Passed on wide pinion through the lofty air,
-To where some steep untrodden mountain height
-Caught the last tresses of the Sun God’s hair.
-
-Or how the little flower he trod upon,
-The daisy, that white-feathered shield of gold,
-Followed with wistful eyes the wandering sun
-Content if once its leaves were aureoled.
-
-But surely it is something to have been
-The best belovèd for a little while,
-To have walked hand in hand with Love, and seen
-His purple wings flit once across thy smile.
-
-Ay! though the gorgèd asp of passion feed
-On my boy’s heart, yet have I burst the bars,
-Stood face to face with Beauty, known indeed
-The Love which moves the Sun and all the stars!
-
-## Quia Multum Amavi
-
-Dear Heart, I think the young impassioned priest
-When first he takes from out the hidden shrine
-His God imprisoned in the Eucharist,
-And eats the bread, and drinks the dreadful wine,
-
-Feels not such awful wonder as I felt
-When first my smitten eyes beat full on thee,
-And all night long before thy feet I knelt
-Till thou wert wearied of Idolatry.
-
-Ah! hadst thou liked me less and loved me more,
-Through all those summer days of joy and rain,
-I had not now been sorrow’s heritor,
-Or stood a lackey in the House of Pain.
-
-Yet, though remorse, youth’s white-faced seneschal,
-Tread on my heels with all his retinue,
-I am most glad I loved thee⁠—think of all
-The suns that go to make one speedwell blue!
 
 ## Silentium Amoris
 
@@ -4099,14 +3264,6 @@ And I to nurse the barren memory
 Of unkissed kisses, and songs never sung.
 
 ## Her Voice
-
-The wild bee reels from bough to bough
-With his furry coat and his gauzy wing,
-Now in a lily-cup, and now
-Setting a jacinth bell a-swing,
-In his wandering;
-Sit closer love: it was here I trow
-I made that vow,
 
 Swore that two lives should be like one
 As long as the sea-gull loved the sea,
@@ -4139,31 +3296,6 @@ Whose crimson roses burst his frost,
 Ships tempest-tossed
 Will find a harbour in some bay,
 And so we may.
-
-And there is nothing left to do
-But to kiss once again, and part,
-Nay, there is nothing we should rue,
-I have my beauty⁠—you your Art,
-Nay, do not start,
-One world was not enough for two
-Like me and you.
-
-## My Voice
-
-Within this restless, hurried, modern world
-We took our hearts’ full pleasure⁠—You and I,
-And now the white sails of our ship are furled,
-And spent the lading of our argosy.
-
-Wherefore my cheeks before their time are wan,
-For very weeping is my gladness fled,
-Sorrow has paled my young mouth’s vermilion,
-And Ruin draws the curtains of my bed.
-
-But all this crowded life has been to thee
-No more than lyre, or lute, or subtle spell
-Of viols, or the music of the sea
-That sleeps, a mimic echo, in the shell.
 
 ## Taedium Vitae
 
@@ -4695,87 +3827,6 @@ Staunch the red wounds⁠—we shall be whole again,
 No need have we of hyssop-laden rod,
 That which is purely human, that is Godlike, that is God.
 
-## Flower of Love
-
-Sweet, I blame you not, for mine the fault was, had I not been made of common clay
-I had climbed the higher heights unclimbed yet, seen the fuller air, the larger day.
-
-From the wildness of my wasted passion I had struck a better, clearer song,
-Lit some lighter light of freer freedom, battled with some Hydra-headed wrong.
-
-Had my lips been smitten into music by the kisses that but made them bleed,
-You had walked with Bice and the angels on that verdant and enamelled mead.
-
-I had trod the road which Dante treading saw the suns of seven circles shine,
-Ay! perchance had seen the heavens opening, as they opened to the Florentine.
-
-And the mighty nations would have crowned me, who am crownless now and without name,
-And some orient dawn had found me kneeling on the threshold of the House of Fame.
-
-I had sat within that marble circle where the oldest bard is as the young,
-And the pipe is ever dropping honey, and the lyre’s strings are ever strung.
-
-Keats had lifted up his hymeneal curls from out the poppy-seeded wine,
-With ambrosial mouth had kissed my forehead, clasped the hand of noble love in mine.
-
-And at springtide, when the apple-blossoms brush the burnished bosom of the dove,
-Two young lovers lying in an orchard would have read the story of our love.
-
-Would have read the legend of my passion, known the bitter secret of my heart,
-Kissed as we have kissed, but never parted as we two are fated now to part.
-
-For the crimson flower of our life is eaten by the cankerworm of truth,
-And no hand can gather up the fallen withered petals of the rose of youth.
-
-Yet I am not sorry that I loved you⁠—ah! what else had I a boy to do⁠—
-For the hungry teeth of time devour, and the silent-footed years pursue.
-
-Rudderless, we drift athwart a tempest, and when once the storm of youth is past,
-Without lyre, without lute or chorus, Death the silent pilot comes at last.
-
-And within the grave there is no pleasure, for the blindworm battens on the root,
-And Desire shudders into ashes, and the tree of Passion bears no fruit.
-
-Ah! what else had I to do but love you, God’s own mother was less dear to me,
-And less dear the Cytheraean rising like an argent lily from the sea.
-
-I have made my choice, have lived my poems, and, though youth is gone in wasted days,
-I have found the lover’s crown of myrtle better than the poet’s crown of bays.
-
-## I
-
-The lily’s withered chalice falls
-Around its rod of dusty gold,
-And from the beech-trees on the wold
-The last wood-pigeon coos and calls.
-
-The gaudy leonine sunflower
-Hangs black and barren on its stalk,
-And down the windy garden walk
-The dead leaves scatter⁠—hour by hour.
-
-Pale privet-petals white as milk
-Are blown into a snowy mass:
-The roses lie upon the grass
-Like little shreds of crimson silk.
-
-## II
-
-A white mist drifts across the shrouds,
-A wild moon in this wintry sky
-Gleams like an angry lion’s eye
-Out of a mane of tawny clouds.
-
-The muffled steersman at the wheel
-Is but a shadow in the gloom;⁠—
-And in the throbbing engine-room
-Leap the long rods of polished steel.
-
-The shattered storm has left its trace
-Upon this huge and heaving dome,
-For the thin threads of yellow foam
-Float on the waves like ravelled lace.
-
 ## Under the Balcony
 
 O beautiful star with the crimson mouth!
@@ -4814,83 +3865,6 @@ To her little light heart you will go!
 O blossom that hangs in the tremulous air!
 O blossom with lips of snow!
 
-## The Harlot’s House
-
-We caught the tread of dancing feet,
-We loitered down the moonlit street,
-And stopped beneath the harlot’s house.
-
-Inside, above the din and fray,
-We heard the loud musicians play
-The “*Treues Liebes Herz*” of Strauss.
-
-Like strange mechanical grotesques,
-Making fantastic arabesques,
-The shadows raced across the blind.
-
-We watched the ghostly dancers spin
-To sound of horn and violin,
-Like black leaves wheeling in the wind.
-
-Like wire-pulled automatons,
-Slim silhouetted skeletons
-Went sidling through the slow quadrille,
-
-Then took each other by the hand,
-And danced a stately saraband;
-Their laughter echoed thin and shrill.
-
-Sometimes a clockwork puppet pressed
-A phantom lover to her breast,
-Sometimes they seemed to try to sing.
-
-Sometimes a horrible marionette
-Came out, and smoked its cigarette
-Upon the steps like a live thing.
-
-Then, turning to my love, I said,
-“The dead are dancing with the dead,
-The dust is whirling with the dust.”
-
-But she⁠—she heard the violin,
-And left my side, and entered in:
-Love passed into the house of lust.
-
-Then suddenly the tune went false,
-The dancers wearied of the waltz,
-The shadows ceased to wheel and whirl.
-
-And down the long and silent street,
-The dawn, with silver-sandalled feet,
-Crept like a frightened girl.
-
-## Le Jardin des Tuileries
-
-This winter air is keen and cold,
-And keen and cold this winter sun,
-But round my chair the children run
-Like little things of dancing gold.
-
-Sometimes about the painted kiosk
-The mimic soldiers strut and stride,
-Sometimes the blue-eyed brigands hide
-In the bleak tangles of the bosk.
-
-And sometimes, while the old nurse cons
-Her book, they steal across the square,
-And launch their paper navies where
-Huge Triton writhes in greenish bronze.
-
-And now in mimic flight they flee,
-And now they rush, a boisterous band⁠—
-And, tiny hand on tiny hand,
-Climb up the black and leafless tree.
-
-Ah! cruel tree! if I were you,
-And children climbed me, for their sake
-Though it be winter I would break
-Into spring blossoms white and blue!
-
 ## On the Sale by Auction of Keats’ Love Letters
 
 These are the letters which Endymion wrote
@@ -4926,255 +3900,6 @@ It is thy new-found Lord, and he shall kiss
 The yet unravished roses of thy mouth,
 And I shall weep and worship, as before.
 
-## I
-
-Under the rose-tree’s dancing shade
-There stands a little ivory girl,
-Pulling the leaves of pink and pearl
-With pale green nails of polished jade.
-
-The red leaves fall upon the mould,
-The white leaves flutter, one by one,
-Down to a blue bowl where the sun,
-Like a great dragon, writhes in gold.
-
-The white leaves float upon the air,
-The red leaves flutter idly down,
-Some fall upon her yellow gown,
-And some upon her raven hair.
-
-She takes an amber lute and sings,
-And as she sings a silver crane
-Begins his scarlet neck to strain,
-And flap his burnished metal wings.
-
-She takes a lute of amber bright,
-And from the thicket where he lies
-Her lover, with his almond eyes,
-Watches her movements in delight.
-
-And now she gives a cry of fear,
-And tiny tears begin to start:
-A thorn has wounded with its dart
-The pink-veined sea-shell of her ear.
-
-And now she laughs a merry note:
-There has fallen a petal of the rose
-Just where the yellow satin shows
-The blue-veined flower of her throat.
-
-With pale green nails of polished jade,
-Pulling the leaves of pink and pearl,
-There stands a little ivory girl
-Under the rose-tree’s dancing shade.
-
-## II
-
-Against these turbid turquoise skies
-The light and luminous balloons
-Dip and drift like satin moons,
-Drift like silken butterflies;
-
-Reel with every windy gust,
-Rise and reel like dancing girls,
-Float like strange transparent pearls,
-Fall and float like silver dust.
-
-Now to the low leaves they cling,
-Each with coy fantastic pose,
-Each a petal of a rose
-Straining at a gossamer string.
-
-Then to the tall trees they climb,
-Like thin globes of amethyst,
-Wandering opals keeping tryst
-With the rubies of the lime.
-
-## Canzonet
-
-I have no store
-Of gryphon-guarded gold;
-Now, as before,
-Bare is the shepherd’s fold.
-Rubies nor pearls
-Have I to gem thy throat;
-Yet woodland girls
-Have loved the shepherd’s note.
-
-Then, pluck a reed
-And bid me sing to thee,
-For I would feed
-Thine ears with melody,
-Who art more fair
-Than fairest fleur-de-lys,
-More sweet and rare
-Than sweetest ambergris.
-
-What dost thou fear?
-Young Hyacinth is slain,
-Pan is not here,
-And will not come again.
-No hornèd Faun
-Treads down the yellow leas,
-No God at dawn
-Steals through the olive trees.
-
-Hylas is dead,
-Nor will he e’er divine
-Those little red
-Rose-petalled lips of thine.
-On the high hill
-No ivory dryads play,
-Silver and still
-Sinks the sad autumn day.
-
-## Symphony in Yellow
-
-An omnibus across the bridge
-Crawls like a yellow butterfly,
-And, here and there, a passer-by
-Shows like a little restless midge.
-
-Big barges full of yellow hay
-Are moored against the shadowy wharf,
-And, like a yellow silken scarf,
-The thick fog hangs along the quay.
-
-The yellow leaves begin to fade
-And flutter from the Temple elms,
-And at my feet the pale green Thames
-Lies like a rod of rippled jade.
-
-## In the Forest
-
-Out of the mid-wood’s twilight
-Into the meadow’s dawn,
-Ivory limbed and brown-eyed,
-Flashes my Faun!
-
-He skips through the copses singing,
-And his shadow dances along,
-And I know not which I should follow,
-Shadow or song!
-
-O Hunter, snare me his shadow!
-O Nightingale, catch me his strain!
-Else moonstruck with music and madness
-I track him in vain!
-
-## To My Wife
-
-I can write no stately proem
-As a prelude to my lay;
-From a poet to a poem
-I would dare to say.
-
-For if of these fallen petals
-One to you seem fair,
-Love will waft it till it settles
-On your hair.
-
-And when wind and winter harden
-All the loveless land,
-It will whisper of the garden,
-You will understand.
-
-## With a Copy of *A House of Pomegranates*
-
-Go, little book,
-To him who, on a lute with horns of pearl,
-Sang of the white feet of the Golden Girl:
-And bid him look
-Into thy pages: it may hap that he
-May find that golden maidens dance through thee.
-
-## Roses and Rue
-
-Could we dig up this long-buried treasure,
-Were it worth the pleasure,
-We never could learn love’s song,
-We are parted too long.
-
-Could the passionate past that is fled
-Call back its dead,
-Could we live it all over again,
-Were it worth the pain!
-
-I remember we used to meet
-By an ivied seat,
-And you warbled each pretty word
-With the air of a bird;
-
-And your voice had a quaver in it,
-Just like a linnet,
-And shook, as the blackbird’s throat
-With its last big note;
-
-And your eyes, they were green and grey
-Like an April day,
-But lit into amethyst
-When I stooped and kissed;
-
-And your mouth, it would never smile
-For a long, long while,
-Then it rippled all over with laughter
-Five minutes after.
-
-You were always afraid of a shower,
-Just like a flower:
-I remember you started and ran
-When the rain began.
-
-I remember I never could catch you,
-For no one could match you,
-You had wonderful, luminous, fleet,
-Little wings to your feet.
-
-I remember your hair⁠—did I tie it?
-For it always ran riot⁠—
-Like a tangled sunbeam of gold:
-These things are old.
-
-I remember so well the room,
-And the lilac bloom
-That beat at the dripping pane
-In the warm June rain;
-
-And the colour of your gown,
-It was amber-brown,
-And two yellow satin bows
-From your shoulders rose.
-
-And the handkerchief of French lace
-Which you held to your face⁠—
-Had a small tear left a stain?
-Or was it the rain?
-
-On your hand as it waved adieu
-There were veins of blue;
-In your voice as it said good-bye
-Was a petulant cry,
-
-“You have only wasted your life.”
-(Ah, that was the knife!)
-When I rushed through the garden gate
-It was all too late.
-
-Could we live it over again,
-Were it worth the pain,
-Could the passionate past that is fled
-Call back its dead!
-
-Well, if my heart must break,
-Dear love, for your sake,
-It will break in music, I know,
-Poets’ hearts break so.
-
-But strange that I was not told
-That the brain can hold
-In a tiny ivory cell
-God’s heaven and hell.
-
 ## Désespoir
 
 The seasons send their ruin as they go,
@@ -5192,362 +3917,17 @@ Ambition, love and all the thoughts that burn
 We lose too soon, and only find delight
 In withered husks of some dead memory.
 
-## I
-
-O goat-foot God of Arcady!
-This modern world is grey and old,
-And what remains to us of thee?
-
-No more the shepherd lads in glee
-Throw apples at thy wattled fold,
-O goat-foot God of Arcady!
-
-Nor through the laurels can one see
-Thy soft brown limbs, thy beard of gold,
-And what remains to us of thee?
-
-And dull and dead our Thames would be,
-For here the winds are chill and cold,
-O goat-foot God of Arcady!
-
-Then keep the tomb of Helicé,
-Thine olive-woods, thy vine-clad wold,
-And what remains to us of thee?
-
-Though many an unsung elegy
-Sleeps in the reeds our rivers hold,
-O goat-foot God of Arcady!
-Ah, what remains to us of thee?
-
-## II
-
-Ah, leave the hills of Arcady,
-Thy satyrs and their wanton play,
-This modern world hath need of thee.
-
-No nymph or Faun indeed have we,
-For Faun and nymph are old and grey,
-Ah, leave the hills of Arcady!
-
-This is the land where liberty
-Lit grave-browed Milton on his way,
-This modern world hath need of thee!
-
-A land of ancient chivalry
-Where gentle Sidney saw the day,
-Ah, leave the hills of Arcady!
-
-This fierce sea-lion of the sea,
-This England lacks some stronger lay,
-This modern world hath need of thee!
-
-Then blow some trumpet loud and free,
-And give thine oaten pipe away,
-Ah, leave the hills of Arcady!
-This modern world hath need of thee!
-
-## The Sphinx
-
-In a dim corner of my room for longer than my fancy thinks
-A beautiful and silent Sphinx has watched me through the shifting gloom.
-
-Inviolate and immobile she does not rise she does not stir
-For silver moons are naught to her and naught to her the suns that reel.
-
-Red follows grey across the air, the waves of moonlight ebb and flow
-But with the Dawn she does not go and in the night-time she is there.
-
-Dawn follows Dawn and Nights grow old and all the while this curious cat
-Lies couching on the Chinese mat with eyes of satin rimmed with gold.
-
-Upon the mat she lies and leers and on the tawny throat of her
-Flutters the soft and silky fur or ripples to her pointed ears.
-
-Come forth, my lovely seneschal! so somnolent, so statuesque!
-Come forth you exquisite grotesque! half woman and half animal!
-
-Come forth my lovely languorous Sphinx! and put your head upon my knee!
-And let me stroke your throat and see your body spotted like the Lynx!
-
-And let me touch those curving claws of yellow ivory and grasp
-The tail that like a monstrous Asp coils round your heavy velvet paws!
-
-A thousand weary centuries are thine while I have hardly seen
-Some twenty summers cast their green for Autumn’s gaudy liveries.
-
-But you can read the Hieroglyphs on the great sandstone obelisks,
-And you have talked with Basilisks, and you have looked on Hippogriffs.
-
-O tell me, were you standing by when Isis to Osiris knelt?
-And did you watch the Egyptian melt her union for Antony
-
-And drink the jewel-drunken wine and bend her head in mimic awe
-To see the huge proconsul draw the salted tunny from the brine?
-
-And did you mark the Cyprian kiss white Adon on his catafalque?
-And did you follow Amenalk, the God of Heliopolis?
-
-And did you talk with Thoth, and did you hear the moon-horned Io weep?
-And know the painted kings who sleep beneath the wedge-shaped Pyramid?
-
-Lift up your large black satin eyes which are like cushions where one sinks!
-Fawn at my feet, fantastic Sphinx! and sing me all your memories!
-
-Sing to me of the Jewish maid who wandered with the Holy Child,
-And how you led them through the wild, and how they slept beneath your shade.
-
-Sing to me of that odorous green eve when crouching by the marge
-You heard from Adrian’s gilded barge the laughter of Antinous
-
-And lapped the stream and fed your drouth and watched with hot and hungry stare
-The ivory body of that rare young slave with his pomegranate mouth!
-
-Sing to me of the Labyrinth in which the twi-formed bull was stalled!
-Sing to me of the night you crawled across the temple’s granite plinth
-
-When through the purple corridors the screaming scarlet Ibis flew
-In terror, and a horrid dew dripped from the moaning Mandragores,
-
-And the great torpid crocodile within the tank shed slimy tears,
-And tare the jewels from his ears and staggered back into the Nile,
-
-And the priests cursed you with shrill psalms as in your claws you seized their snake
-And crept away with it to slake your passion by the shuddering palms.
-
-Who were your lovers? who were they who wrestled for you in the dust?
-Which was the vessel of your Lust? What Leman had you, every day?
-
-Did giant Lizards come and crouch before you on the reedy banks?
-Did Gryphons with great metal flanks leap on you in your trampled couch?
-
-Did monstrous hippopotami come sidling toward you in the mist?
-Did gilt-scaled dragons writhe and twist with passion as you passed them by?
-
-And from the brick-built Lycian tomb what horrible Chimera came
-With fearful heads and fearful flame to breed new wonders from your womb?
-
-Or had you shameful secret quests and did you harry to your home
-Some Nereid coiled in amber foam with curious rock crystal breasts?
-
-Or did you treading through the froth call to the brown Sidonian
-For tidings of Leviathan, Leviathan or Behemoth?
-
-Or did you when the sun was set climb up the cactus-covered slope
-To meet your swarthy Ethiop whose body was of polished jet?
-
-Or did you while the earthen skiffs dropped down the grey Nilotic flats
-At twilight and the flickering bats flew round the temple’s triple glyphs
-
-Steal to the border of the bar and swim across the silent lake
-And slink into the vault and make the Pyramid your lúpanar
-
-Till from each black sarcophagus rose up the painted swathèd dead?
-Or did you lure unto your bed the ivory-horned Tragelaphos?
-
-Or did you love the god of flies who plagued the Hebrews and was splashed
-With wine unto the waist? or Pasht, who had green beryls for her eyes?
-
-Or that young god, the Tyrian, who was more amorous than the dove
-Of Ashtaroth? or did you love the god of the Assyrian
-
-Whose wings, like strange transparent talc, rose high above his hawk-faced head,
-Painted with silver and with red and ribbed with rods of Oreichalch?
-
-Or did huge Apis from his car leap down and lay before your feet
-Big blossoms of the honey-sweet and honey-coloured nenuphar?
-
-How subtle-secret is your smile! Did you love none then? Nay, I know
-Great Ammon was your bedfellow! He lay with you beside the Nile!
-
-The river-horses in the slime trumpeted when they saw him come
-Odorous with Syrian galbanum and smeared with spikenard and with thyme.
-
-He came along the river bank like some tall galley argent-sailed,
-He strode across the waters, mailed in beauty, and the waters sank.
-
-He strode across the desert sand: he reached the valley where you lay:
-He waited till the dawn of day: then touched your black breasts with his hand.
-
-You kissed his mouth with mouths of flame: you made the hornèd god your own:
-You stood behind him on his throne: you called him by his secret name.
-
-You whispered monstrous oracles into the caverns of his ears:
-With blood of goats and blood of steers you taught him monstrous miracles.
-
-White Ammon was your bedfellow! Your chamber was the steaming Nile!
-And with your curved archaic smile you watched his passion come and go.
-
-With Syrian oils his brows were bright: and wide-spread as a tent at noon
-His marble limbs made pale the moon and lent the day a larger light.
-
-His long hair was nine cubits’ span and coloured like that yellow gem
-Which hidden in their garment’s hem the merchants bring from Kurdistan.
-
-His face was as the must that lies upon a vat of new-made wine:
-The seas could not insapphirine the perfect azure of his eyes.
-
-His thick soft throat was white as milk and threaded with thin veins of blue:
-And curious pearls like frozen dew were broidered on his flowing silk.
-
-On pearl and porphyry pedestalled he was too bright to look upon:
-For on his ivory breast there shone the wondrous ocean-emerald,
-
-That mystic moonlit jewel which some diver of the Colchian caves
-Had found beneath the blackening waves and carried to the Colchian witch.
-
-Before his gilded galiot ran naked vine-wreathed corybants,
-And lines of swaying elephants knelt down to draw his chariot,
-
-And lines of swarthy Nubians bare up his litter as he rode
-Down the great granite-paven road between the nodding peacock-fans.
-
-The merchants brought him steatite from Sidon in their painted ships:
-The meanest cup that touched his lips was fashioned from a chrysolite.
-
-The merchants brought him cedar chests of rich apparel bound with cords:
-His train was borne by Memphian lords: young kings were glad to be his guests.
-
-Ten hundred shaven priests did bow to Ammon’s altar day and night,
-Ten hundred lamps did wave their light through Ammon’s carven house⁠—and now
-
-Foul snake and speckled adder with their young ones crawl from stone to stone
-For ruined is the house and prone the great rose-marble monolith!
-
-Wild ass or trotting jackal comes and couches in the mouldering gates:
-Wild satyrs call unto their mates across the fallen fluted drums.
-
-And on the summit of the pile the blue-faced ape of Horus sits
-And gibbers while the fig-tree splits the pillars of the peristyle.
-
-The god is scattered here and there: deep hidden in the windy sand
-I saw his giant granite hand still clenched in impotent despair.
-
-And many a wandering caravan of stately Negroes silken-shawled,
-Crossing the desert, halts appalled before the neck that none can span.
-
-And many a bearded Bedouin draws back his yellow-striped burnous
-To gaze upon the Titan thews of him who was thy paladin.
-
-Go, seek his fragments on the moor and wash them in the evening dew,
-And from their pieces make anew thy mutilated paramour!
-
-Go, seek them where they lie alone and from their broken pieces make
-Thy bruisèd bedfellow! And wake mad passions in the senseless stone!
-
-Charm his dull ear with Syrian hymns! he loved your body! oh, be kind,
-Pour spikenard on his hair, and wind soft rolls of linen round his limbs!
-
-Wind round his head the figured coins! stain with red fruits those pallid lips!
-Weave purple for his shrunken hips! and purple for his barren loins!
-
-Away to Egypt! Have no fear. Only one God has ever died.
-Only one God has let His side be wounded by a soldier’s spear.
-
-But these, thy lovers, are not dead. Still by the hundred-cubit gate
-Dog-faced Anubis sits in state with lotus-lilies for thy head.
-
-Still from his chair of porphyry gaunt Memnon strains his lidless eyes
-Across the empty land, and cries each yellow morning unto thee.
-
-And Nilus with his broken horn lies in his black and oozy bed
-And till thy coming will not spread his waters on the withering corn.
-
-Your lovers are not dead, I know. They will rise up and hear your voice
-And clash their cymbals and rejoice and run to kiss your mouth! And so,
-
-Set wings upon your argosies! Set horses to your ebon car!
-Back to your Nile! Or if you are grown sick of dead divinities
-
-Follow some roving lion’s spoor across the copper-coloured plain,
-Reach out and hale him by the mane and bid him be your paramour!
-
-Couch by his side upon the grass and set your white teeth in his throat
-And when you hear his dying note lash your long flanks of polished brass
-
-And take a tiger for your mate, whose amber sides are flecked with black,
-And ride upon his gilded back in triumph through the Theban gate,
-
-And toy with him in amorous jests, and when he turns, and snarls, and gnaws,
-O smite him with your jasper claws! and bruise him with your agate breasts!
-
-Why are you tarrying? Get hence! I weary of your sullen ways,
-I weary of your steadfast gaze, your somnolent magnificence.
-
-Your horrible and heavy breath makes the light flicker in the lamp,
-And on my brow I feel the damp and dreadful dews of night and death.
-
-Your eyes are like fantastic moons that shiver in some stagnant lake,
-Your tongue is like a scarlet snake that dances to fantastic tunes,
-
-Your pulse makes poisonous melodies, and your black throat is like the hole
-Left by some torch or burning coal on Saracenic tapestries.
-
-Away! The sulphur-coloured stars are hurrying through the Western gate!
-Away! Or it may be too late to climb their silent silver cars!
-
-See, the dawn shivers round the grey gilt-dialled towers, and the rain
-Streams down each diamonded pane and blurs with tears the wannish day.
-
-What snake-tressed fury fresh from Hell, with uncouth gestures and unclean,
-Stole from the poppy-drowsy queen and led you to a student’s cell?
-
-What songless tongueless ghost of sin crept through the curtains of the night,
-And saw my taper burning bright, and knocked, and bade you enter in?
-
-Are there not others more accursed, whiter with leprosies than I?
-Are Abana and Pharphar dry that you come here to slake your thirst?
-
-Get hence, you loathsome mystery! Hideous animal, get hence!
-You wake in me each bestial sense, you make me what I would not be.
-
-You make my creed a barren sham, you wake foul dreams of sensual life,
-And Atys with his blood-stained knife were better than the thing I am.
-
-False Sphinx! False Sphinx! By reedy Styx old Charon, leaning on his oar,
-Waits for my coin. Go thou before, and leave me to my crucifix,
-
-Whose pallid burden, sick with pain, watches the world with wearied eyes,
-And weeps for every soul that dies, and weeps for every soul in vain.
-
 ## The Artist
 
-One evening there came into his soul the desire to fashion an image of **The Pleasure that abideth for a Moment**. And he went forth into the world to look for bronze. For he could think only in bronze.
-
-But all the bronze of the whole world had disappeared, nor anywhere in the whole world was there any bronze to be found, save only the bronze of the image of **The Sorrow that endureth for Ever**.
-
 Now this image he had himself, and with his own hands, fashioned, and had set it on the tomb of the one thing he had loved in life. On the tomb of the dead thing he had most loved had he set this image of his own fashioning, that it might serve as a sign of the love of man that dieth not, and a symbol of the sorrow of man that endureth forever. And in the whole world there was no other bronze save the bronze of this image.
-
-And he took the image he had fashioned, and set it in a great furnace, and gave it to the fire.
-
-And out of the bronze of the image of **The Sorrow that endureth for Ever** he fashioned an image of **The Pleasure that abideth for a Moment**.
 
 ## The Doer of Good
 
 And when He came near He heard within the city the tread of the feet of joy, and the laughter of the mouth of gladness and the loud noise of many lutes. And He knocked at the gate and certain of the gate-keepers opened to Him.
 
-And He beheld a house that was of marble and had fair pillars of marble before it. The pillars were hung with garlands, and within and without there were torches of cedar. And He entered the house.
-
 And when He had passed through the hall of chalcedony and the hall of jasper, and reached the long hall of feasting, He saw lying on a couch of sea-purple one whose hair was crowned with red roses and whose lips were red with wine.
 
-And He went behind him and touched him on the shoulder and said to him, “Why do you live like this?”
-
-And the young man turned round and recognised Him, and made answer and said, “But I was a leper once, and you healed me. How else should I live?”
-
 And after a little while He saw one whose face and raiment were painted and whose feet were shod with pearls. And behind her came, slowly as a hunter, a young man who wore a cloak of two colours. Now the face of the woman was as the fair face of an idol, and the eyes of the young man were bright with lust.
-
-And He followed swiftly and touched the hand of the young man and said to him, “Why do you look at this woman and in such wise?”
-
-And the young man turned round and recognised Him and said, “But I was blind once, and you gave me sight. At what else should I look?”
-
-And He ran forward and touched the painted raiment of the woman and said to her, “Is there no other way in which to walk save the way of sin?”
-
-And the woman turned round and recognised Him, and laughed and said, “But you forgave me my sins, and the way is a pleasant way.”
-
-And when He had passed out of the city He saw seated by the roadside a young man who was weeping.
-
-And He went towards him and touched the long locks of his hair and said to him, “Why are you weeping?”
-
-And the young man looked up and recognised Him and made answer, “But I was dead once, and you raised me from the dead. What else should I do but weep?”
 
 ## The Disciple
 
@@ -5557,21 +3937,13 @@ And when they saw that the pool had changed from a cup of sweet waters into a cu
 
 “Who should know that better than you?” answered the Oreads. “Us did he ever pass by, but you he sought for, and would lie on your banks and look down at you, and in the mirror of your waters he would mirror his own beauty.”
 
-And the pool answered, “But I loved Narcissus because, as he lay on my banks and looked down at me, in the mirror of his eyes I saw ever my own beauty mirrored.”
-
 ## The Master
 
-Now when the darkness came over the earth Joseph of Arimathea, having lighted a torch of pinewood, passed down from the hill into the valley. For he had business in his own home.
-
 And kneeling on the flint stones of the Valley of Desolation he saw a young man who was naked and weeping. His hair was the colour of honey, and his body was as a white flower, but he had wounded his body with thorns and on his hair had he set ashes as a crown.
-
-And he who had great possessions said to the young man who was naked and weeping, “I do not wonder that your sorrow is so great, for surely He was a just man.”
 
 And the young man answered, “It is not for Him that I am weeping, but for myself. I too have changed water into wine, and I have healed the leper and given sight to the blind. I have walked upon the waters, and from the dwellers in the tombs I have cast out devils. I have fed the hungry in the desert where there was no food, and I have raised the dead from their narrow houses, and at my bidding, and before a great multitude of people, a barren fig-tree withered away. All things that this man has done I have done also. And yet they have not crucified me.”
 
 ## The House of Judgment
-
-And there was silence in the House of Judgment, and the Man came naked before God.
 
 And God said to the Man, “Thy life hath been evil, and thou hast shown cruelty to those who were in need of succour, and to those who lacked help thou hast been bitter and hard of heart. The poor called to thee and thou didst not hearken, and thine ears were closed to the cry of My afflicted. The inheritance of the fatherless thou didst take unto thyself, and thou didst send the foxes into the vineyard of thy neighbour’s field. Thou didst take the bread of the children and give it to the dogs to eat, and My lepers who lived in the marshes, and were at peace and praised Me, thou didst drive forth on to the highways, and on Mine earth out of which I made thee thou didst spill innocent blood.”
 
@@ -5579,23 +3951,11 @@ And God said to the Man, “Thy life hath been evil, and the Beauty I have shown
 
 And God said to the Man, “Evil hath been thy life, and with evil didst thou requite good, and with wrongdoing kindness. The hands that fed thee thou didst wound, and the breasts that gave thee suck thou didst despise. He who came to thee with water went away thirsting, and the outlawed men who hid thee in their tents at night thou didst betray before dawn. Thine enemy who spared thee thou didst snare in an ambush, and the friend who walked with thee thou didst sell for a price, and to those who brought thee Love thou didst ever give Lust in thy turn.”
 
-And God closed the Book of the Life of the Man, and said, “Surely I will send thee into Hell. Even into Hell will I send thee.”
-
-And God said to the Man, “Wherefore can I not send thee to Hell, and for what reason?”
-
-And after a space God spake, and said to the Man, “Seeing that I may not send thee into Hell, surely I will send thee unto Heaven. Even unto Heaven will I send thee.”
-
-And God said to the Man, “Wherefore can I not send thee unto Heaven, and for what reason?”
-
-“Because never, and in no place, have I been able to imagine it,” answered the Man.
-
 ## The Teacher of Wisdom
 
 From his childhood he had been as one filled with the perfect knowledge of God, and even while he was yet but a lad many of the saints, as well as certain holy women who dwelt in the free city of his birth, had been stirred to much wonder by the grave wisdom of his answers.
 
 And when his parents had given him the robe and the ring of manhood he kissed them, and left them and went out into the world, that he might speak to the world about God. For there were at that time many in the world who either knew not God at all, or had but an incomplete knowledge of Him, or worshipped the false gods who dwell in groves and have no care of their worshippers.
-
-And he set his face to the sun and journeyed, walking without sandals, as he had seen the saints walk, and carrying at his girdle a leathern wallet and a little water-bottle of burnt clay.
 
 And as he walked along the highway he was full of the joy that comes from the perfect knowledge of God, and he sang praises unto God without ceasing; and after a time he reached a strange land in which there were many cities.
 
@@ -5609,35 +3969,15 @@ And he bowed his head on his hands and wept, and said to his Soul, “Why is it 
 
 And he wept again, for he knew that his Soul spake truth to him, and that he had given to others the perfect knowledge of God, and that he was as one clinging to the skirts of God, and that his faith was leaving him by reason of the number of those who believed in him.
 
-And he said to himself, “I will talk no more about God. He who giveth away wisdom robbeth himself.”
-
 And after the space of some hours his disciples came near him and bowed themselves to the ground and said, “Master, talk to us about God, for thou hast the perfect knowledge of God, and no man save thee hath this knowledge.”
-
-And he answered them and said, “I will talk to you about all other things that are in heaven and on earth, but about God I will not talk to you. Neither now, nor at any time, will I talk to you about God.”
-
-And they were wroth with him and said to him, “Thou hast led us into the desert that we might hearken to thee. Wilt thou send us away hungry, and the great multitude that thou hast made to follow thee?”
-
-And the multitude murmured against him and said to him, “Thou hast led us into the desert, and hast given us no food to eat. Talk to us about God and it will suffice us.”
-
-But he answered them not a word. For he knew that if he spake to them about God he would give away his treasure.
-
-And his disciples went away sadly, and the multitude of people returned to their own homes. And many died on the way.
 
 And when he was alone he rose up and set his face to the moon, and journeyed for seven moons, speaking to no man nor making any answer. And when the seventh moon had waned he reached that desert which is the desert of the Great River. And having found a cavern in which a Centaur had once dwelt, he took it for his place of dwelling, and made himself a mat of reeds on which to lie, and became a hermit. And every hour the Hermit praised God that He had suffered him to keep some knowledge of Him and of His wonderful greatness.
 
 Now, one evening, as the Hermit was seated before the cavern in which he had made his place of dwelling, he beheld a young man of evil and beautiful face who passed by in mean apparel and with empty hands. Every evening with empty hands the young man passed by, and every morning he returned with his hands full of purple and pearls. He was a robber, and robbed the caravans of the merchants.
 
-And the Hermit looked at him and pitied him. But he spoke not a word. For he knew that he who speaks a word loses his faith.
-
 And one morning, as the young man returned with his hands full of purple and pearls, he stopped and frowned and stamped his foot upon the sand, and said to the Hermit: “Why do you look at me ever in this manner as I pass by? What is it that I see in your eyes? For no man has looked at me before in this manner. And the thing is a thorn and a trouble to me.”
 
-And the Hermit answered him and said, “What you see in my eyes is pity. Pity is what looks out at you from my eyes.”
-
 And the young man laughed with scorn, and cried to the Hermit in a bitter voice, and said to him, “I have purple and pearls in my hands, and you have but a mat of reeds on which to lie. What pity should you have for me? And for what reason have you this pity?”
-
-“Is this knowledge of God a precious thing?” asked the young man, and he came close to the mouth of the cavern.
-
-“It is more precious than all the purple and the pearls of the world,” answered the Hermit.
 
 “Once, indeed,” answered the Hermit, “I possessed the perfect knowledge of God. But in my foolishness I parted with it, and divided it amongst others. Yet even now is such knowledge as remains to me more precious than purple or pearls.”
 
@@ -5651,105 +3991,11 @@ And the Hermit cried out and followed him and besought him. For the space of thr
 
 And ever and anon the young Robber looked back at the Hermit and called to him, and said, “Will you give me this knowledge of God which is more precious than purple and pearls? If you will give me that, I will not enter the city.”
 
-And ever did the Hermit answer, “All things that I have I will give thee, save that one thing only. For that thing it is not lawful for me to give away.”
-
-And in the twilight of the third day they came nigh to the great scarlet gates of the City of the Seven Sins. And from the city there came the sound of much laughter.
-
 And the young Robber laughed in answer, and sought to knock at the gate. And as he did so the Hermit ran forward and caught him by the skirts of his raiment, and said to him: “Stretch forth your hands, and set your arms around my neck, and put your ear close to my lips, and I will give you what remains to me of the knowledge of God.” And the young Robber stopped.
-
-And when the Hermit had given away his knowledge of God, he fell upon the ground and wept, and a great darkness hid from him the city and the young Robber, so that he saw them no more.
 
 And as he lay there weeping he was ware of One who was standing beside him; and He who was standing beside him had feet of brass and hair like fine wool. And He raised the Hermit up, and said to him: “Before this time thou hadst the perfect knowledge of God. Now thou shalt have the perfect love of God. Wherefore art thou weeping?” And he kissed him.
 
-## The Ballad of Reading Gaol
-
-In Memoriam C. T. W. , Sometime Trooper of the Royal Horse Guards, Obiit H.M. Prison, Reading, Berkshire, July 7, 1896
-
 ## I
-
-He did not wear his scarlet coat,
-For blood and wine are red,
-And blood and wine were on his hands
-When they found him with the dead,
-The poor dead woman whom he loved,
-And murdered in her bed.
-
-He walked amongst the Trial Men
-In a suit of shabby grey;
-A cricket cap was on his head,
-And his step seemed light and gay;
-But I never saw a man who looked
-So wistfully at the day.
-
-I never saw a man who looked
-With such a wistful eye
-Upon that little tent of blue
-Which prisoners call the sky,
-And at every drifting cloud that went
-With sails of silver by.
-
-I walked, with other souls in pain,
-Within another ring,
-And was wondering if the man had done
-A great or little thing,
-When a voice behind me whispered low,
-“*That fellow’s got to swing.*”
-
-Dear Christ! the very prison walls
-Suddenly seemed to reel,
-And the sky above my head became
-Like a casque of scorching steel;
-And, though I was a soul in pain,
-My pain I could not feel.
-
-I only knew what hunted thought
-Quickened his step, and why
-He looked upon the garish day
-With such a wistful eye;
-The man had killed the thing he loved,
-And so he had to die.
-
-Yet each man kills the thing he loves,
-By each let this be heard,
-Some do it with a bitter look,
-Some with a flattering word,
-The coward does it with a kiss,
-The brave man with a sword!
-
-Some kill their love when they are young,
-And some when they are old;
-Some strangle with the hands of Lust,
-Some with the hands of Gold:
-The kindest use a knife, because
-The dead so soon grow cold.
-
-Some love too little, some too long,
-Some sell, and others buy;
-Some do the deed with many tears,
-And some without a sigh:
-For each man kills the thing he loves,
-Yet each man does not die.
-
-He does not die a death of shame
-On a day of dark disgrace,
-Nor have a noose about his neck,
-Nor a cloth upon his face,
-Nor drop feet foremost through the floor
-Into an empty space.
-
-He does not sit with silent men
-Who watch him night and day;
-Who watch him when he tries to weep,
-And when he tries to pray;
-Who watch him lest himself should rob
-The prison of its prey.
-
-He does not wake at dawn to see
-Dread figures throng his room,
-The shivering Chaplain robed in white,
-The Sheriff stern with gloom,
-And the Governor all in shiny black,
-With the yellow face of Doom.
 
 He does not rise in piteous haste
 To put on convict-clothes,
@@ -5765,163 +4011,7 @@ Slips through the padded door,
 And binds one with three leathern thongs,
 That the throat may thirst no more.
 
-He does not bend his head to hear
-The Burial Office read,
-Nor, while the terror of his soul
-Tells him he is not dead,
-Cross his own coffin, as he moves
-Into the hideous shed.
-
-He does not stare upon the air
-Through a little roof of glass:
-He does not pray with lips of clay
-For his agony to pass;
-Nor feel upon his shuddering cheek
-The kiss of Caiaphas.
-
-## II
-
-Six weeks our guardsman walked the yard,
-In the suit of shabby grey:
-His cricket cap was on his head,
-And his step seemed light and gay,
-But I never saw a man who looked
-So wistfully at the day.
-
-I never saw a man who looked
-With such a wistful eye
-Upon that little tent of blue
-Which prisoners call the sky,
-And at every wandering cloud that trailed
-Its ravelled fleeces by.
-
-He did not wring his hands, as do
-Those witless men who dare
-To try to rear the changeling Hope
-In the cave of black Despair:
-He only looked upon the sun,
-And drank the morning air.
-
-He did not wring his hands nor weep,
-Nor did he peek or pine,
-But he drank the air as though it held
-Some healthful anodyne;
-With open mouth he drank the sun
-As though it had been wine!
-
-And I and all the souls in pain,
-Who tramped the other ring,
-Forgot if we ourselves had done
-A great or little thing,
-And watched with gaze of dull amaze
-The man who had to swing.
-
-And strange it was to see him pass
-With a step so light and gay,
-And strange it was to see him look
-So wistfully at the day,
-And strange it was to think that he
-Had such a debt to pay.
-
-For oak and elm have pleasant leaves
-That in the springtime shoot:
-But grim to see is the gallows-tree,
-With its adder-bitten root,
-And, green or dry, a man must die
-Before it bears its fruit!
-
-The loftiest place is that seat of grace
-For which all worldlings try:
-But who would stand in hempen band
-Upon a scaffold high,
-And through a murderer’s collar take
-His last look at the sky?
-
-It is sweet to dance to violins
-When Love and Life are fair:
-To dance to flutes, to dance to lutes
-Is delicate and rare:
-But it is not sweet with nimble feet
-To dance upon the air!
-
-So with curious eyes and sick surmise
-We watched him day by day,
-And wondered if each one of us
-Would end the self-same way,
-For none can tell to what red Hell
-His sightless soul may stray.
-
-At last the dead man walked no more
-Amongst the Trial Men,
-And I knew that he was standing up
-In the black dock’s dreadful pen,
-And that never would I see his face
-In God’s sweet world again.
-
-Like two doomed ships that pass in storm
-We had crossed each other’s way:
-But we made no sign, we said no word,
-We had no word to say;
-For we did not meet in the holy night,
-But in the shameful day.
-
-A prison wall was round us both,
-Two outcast men we were:
-The world had thrust us from its heart,
-And God from out His care:
-And the iron gin that waits for Sin
-Had caught us in its snare.
-
 ## III
-
-In Debtors’ Yard the stones are hard,
-And the dripping wall is high,
-So it was there he took the air
-Beneath the leaden sky,
-And by each side a Warder walked,
-For fear the man might die.
-
-Or else he sat with those who watched
-His anguish night and day;
-Who watched him when he rose to weep,
-And when he crouched to pray;
-Who watched him lest himself should rob
-Their scaffold of its prey.
-
-The Governor was strong upon
-The Regulations Act:
-The Doctor said that Death was but
-A scientific fact:
-And twice a day the Chaplain called,
-And left a little tract.
-
-And twice a day he smoked his pipe,
-And drank his quart of beer:
-His soul was resolute, and held
-No hiding-place for fear;
-He often said that he was glad
-The hangman’s hands were near.
-
-But why he said so strange a thing
-No Warder dared to ask:
-For he to whom a watcher’s doom
-Is given as his task,
-Must set a lock upon his lips,
-And make his face a mask.
-
-Or else he might be moved, and try
-To comfort or console:
-And what should Human Pity do
-Pent up in Murderers’ Hole?
-What word of grace in such a place
-Could help a brother’s soul?
-
-With slouch and swing around the ring
-We trod the Fools’ Parade!
-We did not care: we knew we were
-The Devil’s Own Brigade:
-And shaven head and feet of lead
-Make a merry masquerade.
 
 We tore the tarry rope to shreds
 With blunt and bleeding nails;
@@ -5930,83 +4020,6 @@ And cleaned the shining rails:
 And, rank by rank, we soaped the plank,
 And clattered with the pails.
 
-We sewed the sacks, we broke the stones,
-We turned the dusty drill:
-We banged the tins, and bawled the hymns,
-And sweated on the mill:
-But in the heart of every man
-Terror was lying still.
-
-So still it lay that every day
-Crawled like a weed-clogged wave:
-And we forgot the bitter lot
-That waits for fool and knave,
-Till once, as we tramped in from work,
-We passed an open grave.
-
-With yawning mouth the yellow hole
-Gaped for a living thing;
-The very mud cried out for blood
-To the thirsty asphalte ring:
-And we knew that ere one dawn grew fair
-Some prisoner had to swing.
-
-Right in we went, with soul intent
-On Death and Dread and Doom:
-The hangman, with his little bag,
-Went shuffling through the gloom:
-And each man trembled as he crept
-Into his numbered tomb.
-
-That night the empty corridors
-Were full of forms of Fear,
-And up and down the iron town
-Stole feet we could not hear,
-And through the bars that hide the stars
-White faces seemed to peer.
-
-He lay as one who lies and dreams
-In a pleasant meadow-land,
-The watchers watched him as he slept,
-And could not understand
-How one could sleep so sweet a sleep
-With a hangman close at hand.
-
-But there is no sleep when men must weep
-Who never yet have wept:
-So we⁠—the fool, the fraud, the knave⁠—
-That endless vigil kept,
-And through each brain on hands of pain
-Another’s terror crept.
-
-Alas! it is a fearful thing
-To feel another’s guilt!
-For, right within, the sword of Sin
-Pierced to its poisoned hilt,
-And as molten lead were the tears we shed
-For the blood we had not spilt.
-
-The Warders with their shoes of felt
-Crept by each padlocked door,
-And peeped and saw, with eyes of awe,
-Grey figures on the floor,
-And wondered why men knelt to pray
-Who never prayed before.
-
-All through the night we knelt and prayed,
-Mad mourners of a corse!
-The troubled plumes of midnight were
-The plumes upon a hearse:
-And bitter wine upon a sponge
-Was the savour of Remorse.
-
-The grey cock crew, the red cock crew,
-But never came the day:
-And crooked shapes of Terror crouched,
-In the corners where we lay:
-And each evil sprite that walks by night
-Before us seemed to play.
-
 They glided past, they glided fast,
 Like travellers through a mist:
 They mocked the moon in a rigadoon
@@ -6014,26 +4027,12 @@ Of delicate turn and twist,
 And with formal pace and loathsome grace
 The phantoms kept their tryst.
 
-With mop and mow, we saw them go,
-Slim shadows hand in hand:
-About, about, in ghostly rout
-They trod a saraband:
-And the damned grotesques made arabesques,
-Like the wind upon the sand!
-
 With the pirouettes of marionettes,
 They tripped on pointed tread:
 But with flutes of Fear they filled the ear,
 As their grisly masque they led,
 And loud they sang, and long they sang,
 For they sang to wake the dead.
-
-“Oho!” they cried, “The world is wide,
-But fettered limbs go lame!
-And once, or twice, to throw the dice
-Is a gentlemanly game,
-But he does not win who plays with Sin
-In the secret House of Shame.”
 
 No things of air these antics were,
 That frolicked with such glee:
@@ -6049,54 +4048,12 @@ Some sidled up the stairs:
 And with subtle sneer, and fawning leer,
 Each helped us at our prayers.
 
-The morning wind began to moan,
-But still the night went on:
-Through its giant loom the web of gloom
-Crept till each thread was spun:
-And, as we prayed, we grew afraid
-Of the Justice of the Sun.
-
-The moaning wind went wandering round
-The weeping prison-wall:
-Till like a wheel of turning steel
-We felt the minutes crawl:
-O moaning wind! what had we done
-To have such a seneschal?
-
 At last I saw the shadowed bars,
 Like a lattice wrought in lead,
 Move right across the whitewashed wall
 That faced my three-plank bed,
 And I knew that somewhere in the world
 God’s dreadful dawn was red.
-
-At six o’clock we cleaned our cells,
-At seven all was still,
-But the sough and swing of a mighty wing
-The prison seemed to fill,
-For the Lord of Death with icy breath
-Had entered in to kill.
-
-He did not pass in purple pomp,
-Nor ride a moon-white steed.
-Three yards of cord and a sliding board
-Are all the gallows’ need:
-So with rope of shame the Herald came
-To do the secret deed.
-
-We were as men who through a fen
-Of filthy darkness grope:
-We did not dare to breathe a prayer,
-Or to give our anguish scope:
-Something was dead in each of us,
-And what was dead was Hope.
-
-For Man’s grim Justice goes its way,
-And will not swerve aside:
-It slays the weak, it slays the strong,
-It has a deadly stride:
-With iron heel it slays the strong,
-The monstrous parricide!
 
 We waited for the stroke of eight:
 Each tongue was thick with thirst:
@@ -6105,42 +4062,7 @@ That makes a man accursed,
 And Fate will use a running noose
 For the best man and the worst.
 
-We had no other thing to do,
-Save to wait for the sign to come:
-So, like things of stone in a valley lone,
-Quiet we sat and dumb:
-But each man’s heart beat thick and quick,
-Like a madman on a drum!
-
-With sudden shock the prison-clock
-Smote on the shivering air,
-And from all the gaol rose up a wail
-Of impotent despair,
-Like the sound that frightened marshes hear
-From some leper in his lair.
-
-And as one sees most fearful things
-In the crystal of a dream,
-We saw the greasy hempen rope
-Hooked to the blackened beam,
-And heard the prayer the hangman’s snare
-Strangled into a scream.
-
-And all the woe that moved him so
-That he gave that bitter cry,
-And the wild regrets, and the bloody sweats,
-None knew so well as I:
-For he who lives more lives than one
-More deaths than one must die.
-
 ## IV
-
-There is no chapel on the day
-On which they hang a man:
-The Chaplain’s heart is far too sick,
-Or his face is far too wan,
-Or there is that written in his eyes
-Which none should look upon.
 
 So they kept us close till nigh on noon,
 And then they rang the bell,
@@ -6149,47 +4071,12 @@ Opened each listening cell,
 And down the iron stair we tramped,
 Each from his separate Hell.
 
-Out into God’s sweet air we went,
-But not in wonted way,
-For this man’s face was white with fear,
-And that man’s face was grey,
-And I never saw sad men who looked
-So wistfully at the day.
-
-I never saw sad men who looked
-With such a wistful eye
-Upon that little tent of blue
-We prisoners called the sky,
-And at every careless cloud that passed
-In happy freedom by.
-
 But there were those amongst us all
 Who walked with downcast head,
 And knew that, had each got his due,
 They should have died instead:
 He had but killed a thing that lived,
 Whilst they had killed the dead.
-
-For he who sins a second time
-Wakes a dead soul to pain,
-And draws it from its spotted shroud,
-And makes it bleed again,
-And makes it bleed great gouts of blood,
-And makes it bleed in vain!
-
-Like ape or clown, in monstrous garb
-With crooked arrows starred,
-Silently we went round and round
-The slippery asphalte yard;
-Silently we went round and round,
-And no man spoke a word.
-
-Silently we went round and round,
-And through each hollow mind
-The Memory of dreadful things
-Rushed like a dreadful wind,
-And Horror stalked before each man,
-And Terror crept behind.
 
 The Warders strutted up and down,
 And kept their herd of brutes,
@@ -6198,83 +4085,6 @@ And they wore their Sunday suits,
 But we knew the work they had been at,
 By the quicklime on their boots.
 
-For where a grave had opened wide,
-There was no grave at all:
-Only a stretch of mud and sand
-By the hideous prison-wall,
-And a little heap of burning lime,
-That the man should have his pall.
-
-For he has a pall, this wretched man,
-Such as few men can claim:
-Deep down below a prison-yard,
-Naked for greater shame,
-He lies, with fetters on each foot,
-Wrapt in a sheet of flame!
-
-And all the while the burning lime
-Eats flesh and bone away,
-It eats the brittle bone by night,
-And the soft flesh by day,
-It eats the flesh and bone by turns,
-But it eats the heart alway.
-
-For three long years they will not sow
-Or root or seedling there:
-For three long years the unblessed spot
-Will sterile be and bare,
-And look upon the wondering sky
-With unreproachful stare.
-
-They think a murderer’s heart would taint
-Each simple seed they sow.
-It is not true! God’s kindly earth
-Is kindlier than men know,
-And the red rose would but blow more red,
-The white rose whiter blow.
-
-Out of his mouth a red, red rose!
-Out of his heart a white!
-For who can say by what strange way,
-Christ brings His will to light,
-Since the barren staff the pilgrim bore
-Bloomed in the great Pope’s sight?
-
-But neither milk-white rose nor red
-May bloom in prison-air;
-The shard, the pebble, and the flint,
-Are what they give us there:
-For flowers have been known to heal
-A common man’s despair.
-
-So never will wine-red rose or white,
-Petal by petal, fall
-On that stretch of mud and sand that lies
-By the hideous prison-wall,
-To tell the men who tramp the yard
-That God’s Son died for all.
-
-Yet though the hideous prison-wall
-Still hems him round and round,
-And a spirit may not walk by night
-That is with fetters bound,
-And a spirit may but weep that lies
-In such unholy ground,
-
-He is at peace⁠—this wretched man⁠—
-At peace, or will be soon:
-There is no thing to make him mad,
-Nor does Terror walk at noon,
-For the lampless Earth in which he lies
-Has neither Sun nor Moon.
-
-They hanged him as a beast is hanged:
-They did not even toll
-A requiem that might have brought
-Rest to his startled soul,
-But hurriedly they took him out,
-And hid him in a hole.
-
 They stripped him of his canvas clothes,
 And gave him to the flies:
 They mocked the swollen purple throat,
@@ -6282,56 +4092,7 @@ And the stark and staring eyes:
 And with laughter loud they heaped the shroud
 In which their convict lies.
 
-The Chaplain would not kneel to pray
-By his dishonoured grave:
-Nor mark it with that blessed Cross
-That Christ for sinners gave,
-Because the man was one of those
-Whom Christ came down to save.
-
-Yet all is well; he has but passed
-To Life’s appointed bourne:
-And alien tears will fill for him
-Pity’s long-broken urn,
-For his mourners will be outcast men,
-And outcasts always mourn.
-
 ## V
-
-I know not whether Laws be right,
-Or whether Laws be wrong;
-All that we know who lie in gaol
-Is that the wall is strong;
-And that each day is like a year,
-A year whose days are long.
-
-But this I know, that every Law
-That men have made for Man,
-Since first Man took his brother’s life,
-And the sad world began,
-But straws the wheat and saves the chaff
-With a most evil fan.
-
-This too I know⁠—and wise it were
-If each could know the same⁠—
-That every prison that men build
-Is built with bricks of shame,
-And bound with bars lest Christ should see
-How men their brothers maim.
-
-With bars they blur the gracious moon,
-And blind the goodly sun:
-And they do well to hide their Hell,
-For in it things are done
-That Son of God nor son of Man
-Ever should look upon!
-
-The vilest deeds like poison weeds
-Bloom well in prison-air;
-It is only what is good in Man
-That wastes and withers there:
-Pale Anguish keeps the heavy gate,
-And the Warder is Despair.
 
 For they starve the little frightened child
 Till it weeps both night and day:
@@ -6340,75 +4101,12 @@ And gibe the old and grey,
 And some grow mad, and all grow bad,
 And none a word may say.
 
-Each narrow cell in which we dwell
-Is a foul and dark latrine,
-And the fetid breath of living Death
-Chokes up each grated screen,
-And all, but Lust, is turned to dust
-In Humanity’s machine.
-
-The brackish water that we drink
-Creeps with a loathsome slime,
-And the bitter bread they weigh in scales
-Is full of chalk and lime,
-And Sleep will not lie down, but walks
-Wild-eyed, and cries to Time.
-
 But though lean Hunger and green Thirst
 Like asp with adder fight,
 We have little care of prison fare,
 For what chills and kills outright
 Is that every stone one lifts by day
 Becomes one’s heart by night.
-
-With midnight always in one’s heart,
-And twilight in one’s cell,
-We turn the crank, or tear the rope,
-Each in his separate Hell,
-And the silence is more awful far
-Than the sound of a brazen bell.
-
-And never a human voice comes near
-To speak a gentle word:
-And the eye that watches through the door
-Is pitiless and hard:
-And by all forgot, we rot and rot,
-With soul and body marred.
-
-And thus we rust Life’s iron chain
-Degraded and alone:
-And some men curse, and some men weep,
-And some men make no moan:
-But God’s eternal Laws are kind
-And break the heart of stone.
-
-And every human heart that breaks,
-In prison-cell or yard,
-Is as that broken box that gave
-Its treasure to the Lord,
-And filled the unclean leper’s house
-With the scent of costliest nard.
-
-Ah! happy they whose hearts can break
-And peace of pardon win!
-How else may man make straight his plan
-And cleanse his soul from Sin?
-How else but through a broken heart
-May Lord Christ enter in?
-
-And he of the swollen purple throat,
-And the stark and staring eyes,
-Waits for the holy hands that took
-The Thief to Paradise;
-And a broken and a contrite heart
-The Lord will not despise.
-
-The man in red who reads the Law
-Gave him three weeks of life,
-Three little weeks in which to heal
-His soul of his soul’s strife,
-And cleanse from every blot of blood
-The hand that held the knife.
 
 And with tears of blood he cleansed the hand,
 The hand that held the steel:
@@ -6417,39 +4115,7 @@ And only tears can heal:
 And the crimson stain that was of Cain
 Became Christ’s snow-white seal.
 
-## VI
-
-In Reading gaol by Reading town
-There is a pit of shame,
-And in it lies a wretched man
-Eaten by teeth of flame,
-In a burning winding-sheet he lies,
-And his grave has got no name.
-
-And there, till Christ call forth the dead,
-In silence let him lie:
-No need to waste the foolish tear,
-Or heave the windy sigh:
-The man had killed the thing he loved,
-And so he had to die.
-
-And all men kill the thing they love,
-By all let this be heard,
-Some do it with a bitter look,
-Some with a flattering word,
-The coward does it with a kiss,
-The brave man with a sword!
-
 ## Colophon
-
-This ebook was produced for
-Standard Ebooks
-by
-**Christopher Hapka**,
-and is based on transcriptions from
-various sources
-and on digital scans from
-various sources.
 
 The cover page is adapted from
 *Birds*,
@@ -6469,16 +4135,8 @@ The first edition of this ebook was released on
 You can check for updates to this ebook, view its revision history, or download it for different ereading systems at
 standardebooks.org/ebooks/oscar-wilde/poetry.
 
-The volunteer-driven Standard Ebooks project relies on readers like you to submit typos, corrections, and other improvements. Anyone can contribute at standardebooks.org.
-
 ## Uncopyright
 
-> May you do good and not evil.
-> May you find forgiveness for yourself and forgive others.
-> May you share freely, never taking more than you give.
-
 Copyright pages exist to tell you that you *can’t* do something. Unlike them, this Uncopyright page exists to tell you that the writing and artwork in this ebook are believed to be in the United States public domain; that is, they are believed to be free of copyright restrictions in the United States. The United States public domain represents our collective cultural heritage, and items in it are free for anyone in the United States to do almost anything at all with, without having to get permission.
-
-Copyright laws are different all over the world, and the source text or artwork in this ebook may still be copyrighted in other countries. If you’re not located in the United States, you must check your local laws before using this ebook. Standard Ebooks makes no representations regarding the copyright status of the source text or artwork in this ebook in any country other than the United States.
 
 Non-authorship activities performed on items that are in the public domain⁠—so-called “sweat of the brow” work⁠—don’t create a new copyright. That means that nobody can claim a new copyright on an item that is in the public domain for, among other things, work like digitization, markup, or typography. Regardless, the contributors to this ebook release their contributions under the terms in the CC0 1.0 Universal Public Domain Dedication, thus dedicating to the worldwide public domain all of the work they’ve done on this ebook, including but not limited to metadata, the titlepage, imprint, colophon, this Uncopyright, and any changes or enhancements to, or markup on, the original text and artwork. This dedication doesn’t change the copyright status of the source text or artwork. We make this dedication in the interest of enriching our global cultural heritage, to promote free and libre culture around the world, and to give back to the unrestricted culture that has given all of us so much.

@@ -19,9 +19,6 @@ furnish the personal, literary, historical and scientific information necessary 
 reading of Shelley’s richly varied and densely allusive verse, making this an ideal anthology
 for students, classroom use, and anyone approaching Shelley’s poetry for the first time;
 
-however, the level and extent of commentary and annotation will also be of great value for
-researchers and critics.
-
 Kelvin Everest is Emeritus Bradley Professor of Modern Literature at the University of
 Liverpool. He has published extensively on English Romantic poetry, including book-
 length studies of Coleridge and Keats, several edited collections of essays, and numerous
@@ -29,41 +26,11 @@ articles and chapters. He is the co-editor of the Complete Poems of Shelley in t
 Annotated English Poets series. His most recent monograph is Keats and Shelley: Winds of
 Light, published by Oxford University Press in 2021.
 
-## LONGMAN ANNOTATED ENGLISH POETS
-
-General Editors: Paul Hammond, David Hopkins and Michael Rossington
-Founding Editors: F. W. Bateson and John Barnard
-
-## THE POEMS OF ROBERT BROWNING: VOLUME 5
-
-The Ring and the Book, Books 1–6
-Edited by John Woolford, Daniel Karlin and Joseph Phelan (2022)
-
-## THE POEMS OF ROBERT BROWNING: VOLUME 6
-
-The Ring and the Book, Books 7–12
-Edited by John Woolford, Daniel Karlin and Joseph Phelan (2022)
-
-## THE POEMS OF SHELLEY: VOLUME 5
-
-Edited by Carlene Adamson, Will Bowers, Jack Donovan, Kelvin Everest, Mathelinda
-­Nabugodi and Michael Rossington (2023)
-
-## THE POEMS OF SHELLEY, VOLUME 6
-
-Edited by Carlene Adamson, Will Bowers, Jack Donovan, Kelvin Everest, Mathelinda
-­Nabugodi and Michael Rossington (2023)
-
 ## SHELLEY: SELECTED POEMS
 
 Edited by Carlene Adamson, Will Bowers, Jack Donovan, Cian Duffy, Kelvin Everest,
 ­Geoffrey Matthews, Mathelinda Nabugodi, Ralph Pite, and Michael Rossington.
 Selected and Revised by Kelvin Everest (2023)
-
-## THE POEMS OF W. B. YEATS: VOLUME THREE: 1899–1910
-
-For more information about the series, please visit: www.routledge.com/Longman-
-Annotated-English-Poets/book-series/LAEP
 
 ## GEOFFREY MATTHEWS
 
@@ -81,18 +48,17 @@ the editorial material
 The right of Kelvin Everest to be identified as the author of the editorial
 material has been asserted in accordance with sections 77 and 78 of the
 Copyright, Designs and Patents Act 1988.
-All rights reserved. No part of this book may be reprinted or repro-
+
 duced or utilised in any form or by any electronic, mechanical, or other
 means, now known or hereafter invented, including photocopying and
 recording, or in any information storage or retrieval system, without
 permission in writing from the publishers.
-
 Trademark notice: Product or corporate names may be trademarks or
 registered trademarks, and are used only for identification and explana-
 tion without intent to infringe.
 British Library Cataloguing-in-Publication Data
 A catalogue record for this book is available from the British Library
-Library of Congress Cataloging-in-Publication Data
+
 Names: Shelley, Percy Bysshe, 1792–1822. | Adamson, Carlene A., editor. |
 Bowers, Will, editor. | Donovan, Jack, editor. | Duffy, Cian, editor. |
 Everest, Kelvin, editor. | Matthews, Geoffrey, 1920–1984, editor. |
@@ -103,7 +69,6 @@ Title: Shelley : Selected Poems / edited by Carlene Adamson, Will
 ­Matthews, Mathelinda Nabugodi, Ralph Pite, and Michael
 ­Rossington ; selected and revised by Kelvin Everest ; founding editor,
 Geoffrey Matthews.
-
 Description: Abingdon, Oxon ; New York, NY : Routledge, 2022. | “This
 volume presents a substantial selection from the complete Poems of
 Shelley published in the Longman Annotated English Poets series in
@@ -111,25 +76,8 @@ six volumes (1989–2022).” | Includes bibliographical references and
 index.
 Identifiers: LCCN 2022009797 (print)
 Subjects: LCGFT: Poetry.
-Classification: LCC PR5403 .A33 2022 (print) | LCC PR5403 (ebook) |
-DDC 821/.7—dc23/eng/20220422
-LC record available at https://lccn.loc.gov/2022009797
-LC ebook record available at https://lccn.loc.gov/2022009798
-ISBN: 978-0-415-74607-6 (hbk)
-ISBN: 978-1-405-85819-9 (pbk)
-ISBN: 978-1-315-17034-3 (ebk)
 
 ## DOI: 10.4324/9781315170343
-
-Preface ix
-Chronological Table of Shelley’s Life and Publications xiii
-Abbreviations xix
-
-50 ‘Rose leaves, when the rose is dead’
-[To —— (‘Music, when soft voices die’)] 567
-
-72 ‘Bright wanderer, fair coquette of heaven’
-[Lines Written in the Bay of Lerici] 885
 
 This volume presents a substantial selection from the complete Poems of Shelley pub-
 lished in the Longman Annotated English Poets series in six volumes (1989–2023). For a
@@ -166,8 +114,6 @@ in the Selected are by page and poem number in the relevant Longman volume. Poem
 are as in the Longman edition; where a poem has historically been referred to by a different
 title, that title is given in square brackets beneath the editorial title, and these historic titles
 
-I cannot do better than quote the final paragraph of the Preface to Longman ii (p. x):
-
 The principles of the edition remain those set forth in the Introduction to Volume One.
 That Introduction also makes clear that the basic conception of the edition, and most
 of its decisions in matters of dating and editorial approach, originate with Geoffrey
@@ -179,9 +125,6 @@ place of editing as a scholarly activity, in its relation to questions of litera
 theory. The work of such commentators as Jerome McGann and D. F. Mackenzie has
 transformed our understanding of the nature and value of editing. I have nevertheless
 sought to keep always in mind, as I take it that Geoffrey would wish to have stressed,
-
-the editor’s responsibility to shape an image of a body of texts, and to attempt a coher-
-ent representation of the literary past which can live for the present.
 
 Work on the Longman Shelley edition was begun by Geoffrey Matthews in 1964.
 Following his death in 1984, it was taken up by Kelvin Everest at the request of Geoffrey’s
@@ -218,10 +161,6 @@ The British Library (nos. 7, 8, 18, 43, 64, 66); the Syndics of Cambridge Univer
 (no. 63); Centre for Research Collections, University of Edinburgh (no. 62); the Provost
 and Fellows of Eton College (nos. 24, 28, 58, 65); Fondation Martin Bodmer, Cologny
 
-(Genève) (nos. 27, 57); University of Glasgow Archives and Special Collections (no. 66);
-Houghton Library, Harvard University (nos. 6–7, 10, 17, 19, 24, 28, 30, 32–33, 38, 44–45,
-48–49, 57, 65); The Huntington Library, San Marino, California (nos. 13, 43, 56); University
-of Manchester (no. 71); Manuscript Division of the Library of Congress, Washington, DC
 (no. 18); The Morgan Library & Museum (nos. 11, 14, 16, 28, 49, 55, 57); Robert H. Taylor
 Collection of English and American Literature, Rare Book Division, Department of Special
 Collections, Princeton University Library (no. 65); Tinker Collection, Beinecke Rare Book
@@ -522,13 +461,6 @@ RofI = The Revolt of Islam; A Poem, In Twelve Cantos
 SP = The Sensitive-Plant
 TL = The Triumph of Life
 
-WA = The Witch of Atlas
-WJ = The Wandering Jew; or the Victim of the Eternal Avenger
-
-Manuscript Sources
-Box 1 = Bod. MS Shelley adds. c. 4: various dates.
-Box 2 = Bod. MS Shelley adds. c. 5: various dates.
-
 CHPL = The Carl H. Pforzheimer Library (now known as The Carl H.
 Pforzheimer Collection of Shelley and His Circle).
 Esd = The Esdaile Notebook, CHPL SC 372: 1810–14 (fair copies).
@@ -613,12 +545,6 @@ G
 ­ alignani edition).
 1834 = The Works of Percy Bysshe Shelley, [ed. John Ascham], 2 vols, London
 
-1834.
-1839 = The Poetical Works of Percy Bysshe Shelley, ed. Mary Shelley, 4 vols,
-L­ ondon 1839.
-1840 = The Poetical Works of Percy Bysshe Shelley, ed. Mary Shelley, London
-1840 (a revised one-volume edition of 1839; published in 1839).
-
 1840 (ELTF) = Percy Bysshe Shelley, Essays, Letters from Abroad, Translations and
 Fragments, ed. Mary Shelley, 2 vols, London 1840 (published in 1839).
 1846 = The Minor Poems of Percy Bysshe Shelley. A New Edition, London 1846.
@@ -663,10 +589,6 @@ and Box 1);
 vol. ii, Bodleian MS Shelley adds. d. 7, ed. Irving Massey, 1987 (Mary
 Copybk 1)
 vol. iii, Bodleian MS Shelley e. 4, ed. P. M. S. Dawson, 1987 (Nbk 5);
-
-vol. iv, Bodleian MS Shelley d. 1, ed. E. B. Murray, 2 Parts, 1988 (Nbk 16);
-vol. v, The Witch of Atlas Notebook: Bodleian MS Shelley adds. e. 6, ed.
-Carlene A. Adamson, 1997 (Nbk 14);
 
 vol. vi, Shelley’s Pisan Winter Notebook (1820–1821): Bodleian MS Shel-
 ley adds. e. 8, ed. Carlene A. Adamson, 1992 (Nbk 17);
@@ -801,16 +723,7 @@ Forman 1882 = The Poetical Works of Percy Bysshe Shelley, ed. H. Buxton
 Forman, 2 vols, London 1882.
 Forman 1892 = The Poetical Works of Percy Bysshe Shelley, ed. H. Buxton
 
-Forman, 5 vols, London 1892 (the ‘Aldine’ edition).
-Gisborne Jnl = Maria Gisborne & Edward E. Williams, Shelley’s Friends:
-Their Journals and Letters, ed. Frederick L. Jones, Norman,
-
 ## OK 1951.
-
-GM = Geoffrey Matthews.
-GM = Gentleman’s Magazine.
-Godwin Novels = Collected Novels and Memoirs of William Godwin, gen. ed.
-Mark Philp, 8 vols, London 1992.
 
 Godwin Writings = Political and Philosophical Writings of William Godwin,
 gen. ed. Mark Philp, 7 vols, London 1993.
@@ -947,12 +860,6 @@ MWW = The Works of Mary Wollstonecraft, ed. Janet Todd and
 MYRS = The Manuscripts of the Younger Romantics: Shelley, gen. ed.
 Donald H. Reiman, 9 vols, New York 1985–97:
 
-vol. i, The Esdaile Notebook, ed. Donald H. Reiman, 1985
-(Esd);
-vol. ii, The Mask of Anarchy, ed. Donald H. Reiman, 1985;
-vol. iii, Hellas: A Lyrical Drama, ed. Donald H. Reiman,
-1985;
-
 vol. iv, The Mask of Anarchy Draft Notebook: Huntington
 MS HM 2177, ed. Mary A. Quinn, 1990 (Nbk 10);
 vol. v, The Harvard Shelley Poetic Manuscripts, ed. Donald
@@ -996,11 +903,6 @@ Political Justice = William Godwin, Enquiry Concerning Political Justice
 (1793), 3rd edn, 1798, ed. F. E. L. Priestley, 3 vols, ­Toronto
 1946.
 Prose = Shelley’s Prose; or, The Trumpet of a Prophecy, ed. David
-
-Lee Clark (Albuquerque, NM 1954), corr. edn, Albuquer-
-que, NM 1966.
-Prose Works = The Prose Works of Percy Bysshe Shelley, vol. i, ed. E. B.
-Murray, Oxford 1993.
 
 Recollections = E. J. Trelawny, Recollections of the Last Days of Shelley and
 Byron, London 1858.
@@ -1177,10 +1079,6 @@ The blooms of dewy spring shall gleam beneath thy feet:
 15 But thy soul or this world must fade in the frost that binds the dead,
 Ere midnight’s frown and morning’s smile, ere thou and peace may meet.
 
-The cloud shadows of midnight possess their own repose,
-For the weary winds are silent, or the moon is in the deep:
-Some respite to its turbulence unresting ocean knows;
-
 ¶ 1. 1. the moor is dark] Hogg, who had very recently visited Bracknell, described Ascot Heath at night
 as ‘a land of darkness, of thick, black darkness, of solitude, stillness, and silence’ (Hogg ii 523–4).
 2. drank] A common form of the past participle at this date.
@@ -1215,12 +1113,6 @@ of his marriage to Harriet Westbrook, and the poem must date from spring 1814. B
 of one ‘whom he never knew’, it is likely, as Peter Butter suggested, that S. ‘felt, or imagined, an
 affinity with Coleridge, and used his own experience in interpreting the other’s’ (Butter (1970)
 246). The poem’s picture of its subject is very similar to that of Coleridge in PB3 383–7:
-
-. . . a man who might have turned
-Hell into Heaven — and so in gladness
-A Heaven unto himself have earned;
-But he in shadows undiscerned
-Trusted, — and damned himself to madness.
 
 S. may have drawn on other supposed experiences too (see note to lines 13–16 below). As
 Butter also notes, the theme is related to that of Alastor. The Greek title-epigraph is from
@@ -1312,15 +1204,6 @@ well date as late as September–October 1815.
 Text from 1816 67–8.
 Published in 1816.
 
-Poet of Nature, thou hast wept to know
-That things depart which never may return:
-Childhood and youth, friendship and love’s first glow,
-Have fled like sweet dreams, leaving thee to mourn.
-
-¶ 3. 1–4. Wordsworth’s ‘Ode, Intimations of Immortality’, ‘Elegiac Stanzas Suggested by a Picture of Peele
-Castle’, ‘A Complaint’ (all 1807), and ‘Surprised by Joy’ (1815) are among the poems S. probably had in
-mind.
-
 ## DOI: 10.4324/9781315170343-3
 
 5 These common woes I feel. One loss is mine
@@ -1346,16 +1229,6 @@ wake it to sweet melody, but rough cold blasts draw forth discordances & jarring
 but S.’s letters to Hogg in September 1815 contain reflections on mortality likewise in the
 mood of the poem. For the theme of ‘mutability’, the sources are numerous, and include
 
-Ovid’s exposition of the Pythagorean flux, ‘cuncta fluunt . . .’ (Metamorphoses xv 178–355),
-and Spenser’s ‘Two Cantos of Mutabilitie’ (FQ VII vii 13–56).
-Text from 1816 59–60.
-Published in 1816.
-
-We are as clouds that veil the midnight moon;
-How restlessly they speed, and gleam, and quiver,
-Streaking the darkness radiantly! — yet soon
-Night closes round, and they are lost for ever:
-
 7. Thou wert as a lone star] Echoing Wordsworth’s own sonnet on Milton, ‘London, 1802’ 9: ‘Thy soul
 was like a Star and dwelt apart’.
 10. blind and battling multitude] ‘thoughtless followers of the doctrine of self-interest’ rather than the
@@ -1367,21 +1240,6 @@ to his back’ (L i 208–9).
 Liberty’.
 
 ## DOI: 10.4324/9781315170343-4
-
-5 Or like forgotten lyres, whose dissonant strings
-Give various response to each varying blast,
-To whose frail frame no second motion brings
-One mood or modulation like the last.
-
-We rest. — A dream has power to poison sleep;
-10 We rise. — One wandering thought pollutes the day;
-We feel, conceive or reason, laugh or weep;
-Embrace fond woe, or cast our cares away:
-
-It is the same! — For, be it joy or sorrow,
-The path of its departure still is free:
-15 Man’s yesterday may ne’er be like his morrow;
-Nought may endure but Mutability.
 
 5 Alastor; or, The Spirit of Solitude
 Composed at Bishopsgate between 10 September and 14 December 1815 (the date of the
@@ -1472,9 +1330,6 @@ of the poem itself: ‘the poem tends to romanticize what it was supposed to con
 For a convincing account of the relationship between Preface and poem, see Evan K. Gibson,
 ‘Alastor. A Reinterpretation’, PMLA lxii (1947) 1022–42, which argues that ‘what Shelley felt
 he had presented in the poem when he wrote the Preface’ was ‘a tragedy of misdirected genius
-
-brought to inevitable defeat by the innocent neglect of one of the most necessary elements in
-the human soul’ (1026). The poem’s title is explained in a passage of Peacock’s Memoirs of S.:
 
 He was at a loss for a title, and I proposed that which he adopted: Alastor; or, the Spirit
 of Solitude. The Greek word Ἀλάστωρ is an evil genius, κακοδαίμων, though the sense
@@ -1612,11 +1467,6 @@ friends, nor lovers, nor fathers, nor citizens of the world, nor benefactors of 
 Among those who attempt to exist without human sympathy, the pure and tender-hearted
 30 perish through the intensity and passion of their search after its communities, when the
 
-¶ 5. 2. Preface. It represents a youth] The protagonist of the poem is not named, a mark of his failure as a
-poet. Cp. lines 50–66, 669–71.
-15. requisitions] I.e. claims.
-16. prototype] ideal embodiment.
-
 vacancy of their spirit suddenly makes itself felt. All else, selfish, blind, and torpid, are those
 unforeseeing multitudes who constitute, together with their own, the lasting misery and
 loneliness of the world. Those who love not their fellow-beings, live unfruitful lives, and
@@ -1671,10 +1521,6 @@ beings capable of the gentlest and most admirable sympathies should take delight
 convulsions of dying animals’. The hero of Beattie’s Minstrel is similarly described: ‘His heart, from cruel sport
 estranged, would bleed/To work the woe of any living thing’ (XVIII 3–4).
 
-15 And cherished these my kindred; then forgive
-This boast, beloved brethren, and withdraw
-No portion of your wonted favour now!
-
 Mother of this unfathomable world!
 Favour my solemn song, for I have loved
 20 Thee ever, and thee only; I have watched
@@ -1720,9 +1566,6 @@ October 1814: ‘At one of clock Shelley observes that it is the witching time o
 soon after whether it is not horrible to feel the silence of night tingling in our ears . . . We continued
 to sit by the fire at intervals engaging in awful conversation relative to the nature of these mysteries’
 
-(Mary Jnl i 32–3). S. is unlikely, however, to have discussed such things only with Claire.
-38. sanctuary,] sanctuary; 1816.
-
 40 And twilight phantasms, and deep noonday thought,
 Has shone within me, that serenely now
 And moveless, as a long-forgotten lyre
@@ -1751,11 +1594,6 @@ And wasted for fond love of his wild eyes.
 The fire of those soft orbs has ceased to burn,
 65 And Silence, too enamoured of that voice,
 Locks its mute music in her rugged cell.
-
-By solemn vision, and bright silver dream,
-His infancy was nurtured. Every sight
-And sound from the vast earth and ambient air,
-70 Sent to his heart its choicest impulses.
 
 41–9. serenely now . . . deep heart of man] Eds cite the invocation in Wordsworth’s extract from The
 Recluse as prefaced to The Excursion, 83–107, and ‘Tintern Abbey’ 94–100; but the symbols are those
@@ -1815,10 +1653,6 @@ Boil their black billows up . . .
 There from a cave, with torrent force,
 And everlasting roar,
 The black bitumen roll’d. (V xxii 4–5, 10–12)
-
-Cp. Paradise Lost xii 41–2.
-93. Frequent with] abundant with (a Latinism; cp. Paradise Lost i 797).
-104. suspend] I.e. would suspend (from line 100).
 
 His wandering step
 Obedient to high thoughts, has visited
@@ -1997,9 +1831,6 @@ Conduct, O Sleep, to thy delightful realms?
 The insatiate hope which it awakened, stung
 His brain even like despair.
 
-193. blue moon] The moon sheds ‘blue blasted light’ in Landor’s Gebir (1798) v 17–18, a favourite poem
-of S.’s at Oxford (Hogg i 201–2). The colour blue often implies sickness or the unearthly (see note to
-
 ## PU I 170).
 
 196–8. Whither have fled . . . Of yesternight?] A possible echo of Wordsworth’s ‘Immortality Ode’ 56–7;
@@ -2013,9 +1844,6 @@ slips through his hands and is gone, winging its flight along the paths of sleep
 a series of similar questions: ‘Does the dark gate . . . Conduct? Does the bright arch . . . lead? While
 [does] death’s blue vault . . . Conduct?’ The Poet asks: Is physical reality merely a beautiful surface
 concealing nothingness, while death’s hideous surface conceals the true beauty we perceive in dreams?
-
-221–2. The insatiate hope . . . like despair.] If his speculations in lines 211–19 were justified, the Poet’s
-desire could be satisfied only through death.
 
 While daylight held
 The sky, the Poet kept mute conference
@@ -2199,10 +2027,6 @@ That fell, convulsing ocean. Safely fled —
 350 As if that frail and wasted human form
 Had been an elemental god.
 
-At midnight
-The moon arose: and lo! the etherial cliffs
-Of Caucasus, whose icy summits shone
-
 327. ruining] 1816, 1824; running 1839, 1840. An obvious misprint: the word is from Lat. ruere, ‘to fall
 in disorder’, and is so used by Milton: ‘Heav’n ruining from Heav’n’ (PL vi 867–8), and by Wordsworth
 of a waterfall: ‘Ruining from the cliffs the deafening load/Tumbles’ (Descriptive Sketches (1793) 204–5).
@@ -2292,12 +2116,6 @@ Upon his life, as lightning in a cloud
 Gleams, hovering ere it vanish, ere the floods
 Of night close over it.
 
-420 The noonday sun
-Now shone upon the forest, one vast mass
-Of mingling shade, whose brown magnificence
-A narrow vale embosoms. There, huge caves,
-Scooped in the dark base of their aëry rocks
-
 406. yellow flowers] The narcissus was transformed from a youth whose failure to respond to the love of
 others was punished by a passion for his own reflection (Ovid, Met. iii 344–511).
 409. pensive] S.’s sole use of this adjective.
@@ -2328,11 +2146,6 @@ With gentle meanings, and most innocent wiles,
 Fold their beams round the hearts of those that love,
 These twine their tendrils with the wedded boughs
 445 Uniting their close union; the woven leaves
-
-Make net-work of the dark blue light of day,
-And the night’s noontide clearness, mutable
-As shapes in the weird clouds. Soft mossy lawns
-Beneath these canopies extend their swells,
 
 425. Mocking its moans] echoing the forest’s response to the wind. Locock refers its to the torrent of
 line 402.
@@ -2597,9 +2410,6 @@ scene near the Swiss frontier on 18 August 1814: ‘The evening was most beautif
 moon hung in the light of sunset, that threw a glow of unusual depth of redness above the piny
 mountains and the dark deep valleys which they included . . . The moon becomes yellow, hangs
 
-low — close to the woody horizon’ (Mary Jnl i 16).
-613. devastating] Normally accented on the second syllable at this date.
-
 The patriot’s sacred couch, the snowy bed
 Of innocence, the scaffold and the throne,
 A mighty voice invokes thee. Ruin calls
@@ -2786,9 +2596,6 @@ the beach’ superimposed.
 Text from Houghton Library, Harvard University, MS Eng. 258.3 (Mary’s transcript).
 Published by W. E. Peck in The Boston Herald, 21 December 1925, 12; Julian iii 124–6.
 
-720. that are not as they were] Echoing the ‘Ode: Intimations of Immortality’ 5: ‘It is not now as it hath
-been of yore’.
-
 ## DOI: 10.4324/9781315170343-6
 
 I thought of thee, fair Celandine,
@@ -2818,12 +2625,6 @@ Of exile, death and injury
 Thus withering and deforming thee
 Had made a mournful type of thee;
 
-25 A type of that whence I and thou
-Are thus familiar, Celandine —
-A deathless Poet whose young prime
-Was as serene as thine,
-But he is changed and withered now,
-
 ¶ 6. 1–2. The apparent sense, ‘until now I thought the celandine was blue’, must be misleading; it is
 not credible that S., who, according to Mary S., ‘knew every plant by its name’ (1824 Preface), did
 not know that the celandine is yellow. The intended sense is possibly that S. associated the celandine
@@ -2840,10 +2641,6 @@ were, leaning over the brink of the grave’ (Poetical Register for 1802 (1803) 
 29. changed and withered] One of Wordsworth’s Celandines grows grey from age: ‘It cannot help itself in
 its decay;/Stiff in its members, wither’d, changed of hue’ (‘The Small Celandine’ 18–19); Wordsworth’s
 own decay is seen as inward, corrupting the achievement of his prime.
-
-30 Fallen on a cold and evil time;
-His heart is gone — his fame is dim,
-And Infamy sits mocking him.
 
 Celandine! Thou art pale and dead,
 Changed from thy fresh and woodland state.
@@ -2872,11 +2669,6 @@ That with a liar’s inspiration
 55 Her majesty he did disown
 Ere he could overlive his own.
 
-They need them not, for Liberty,
-Justice and philosophic truth
-From his divine and simple song
-60 Shall draw immortal youth
-
 30. Cp. Milton’s description of his own situation after the Restoration: ‘On evil days though fall’n, and evil
 tongues’ (PL vii 26). S. later applied the same phrase to Godwin (LMG 198).
 39. Since meanly he for gold c.d sell draft.
@@ -2888,11 +2680,6 @@ poems in the collection expressed similar sentiments.
 49–56. ‘The hopes he despises were once his own, the reactionary victors of Europe were once his
 enemies, his principles are forgotten; but no matter: it is fitting that he denied the authority of Truth
 before betraying his own poetic powers’.
-
-When he and thou shall cease to be,
-Or be some other thing, so long
-As men may breathe or flowers may blossom
-O’er the wide Earth’s maternal bosom.
 
 65 The stem whence thou wert disunited
 Since thy poor self was banished hither,
@@ -2932,10 +2719,6 @@ transcription in SDMS, was the text sent to Hunt and lost, and as SDMS itself al
 be lost, the text Hunt eventually printed derives from a return, in England, to the hasty but
 clean copy of the poem (missing stanza 4) in S.’s draft notebook, Bod. MS Shelley adds.e.16,
 ff. 57–61 (Nbk 1). The relationship of these versions is discussed in RES xxix (1978) 36–49 by
-
-62–3. so long/As men may breathe] Echoing Shakespeare’s sonnet 18 13–14: ‘So long as men can breathe
-or eyes can see,/So long lives this, and this gives life to thee’.
-67. by] ‘by the agency of ’ (a grammatical shorthand).
 
 ## DOI: 10.4324/9781315170343-7
 
@@ -3024,9 +2807,6 @@ Text A. From SDMS 3–6 (Mary’s hand).
 Text B. From Houghton Library, Harvard University, MS Eng 258.3, ff. 22–3, a clipping
 from The Examiner No. 473 corrected in S.’s hand. Examiner printing identified as Ex, with
 S.’s corrections as Harvard Ex.
-
-Published: A. By Judith Chernaik and Timothy Burnett, RES xxix (1978) 43–5.
-B. The Examiner No. 473 (19 January 1817) 41; 1819.
 
 A. [Hymn to Intellectual Beauty]
 1.
@@ -3129,10 +2909,6 @@ And every form containing thee
 Whom, fleeting power! thy spells did bind
 To fear himself and love all human Kind.
 
-52. the storied dead] Those whose records are inscribed on their tombs, as on Gray’s ‘storied urn’ (Elegy
-in a Country Church-yard 41).
-53. that false name] ‘God’.
-
 B. Hymn to Intellectual Beauty
 1.
 The awful shadow of some unseen Power
@@ -3161,11 +2937,6 @@ Why fear and dream and death and birth
 Cast on the daylight of this earth
 Such gloom, — why man has such a scope
 For love and hate, despondency and hope?
-
-3.
-25 No voice from some sublimer world hath ever
-To sage or poet these responses given —
-Therefore the name of God, and ghosts, and Heaven,
 
 ¶ 7. (Text B). 1. shadow] image, replica.
 6. inconstant glance] See note to lines 18–9, ‘inconstant sun’.
@@ -3205,12 +2976,6 @@ Thou — that to human thought art nourishment,
 Depart not as thy shadow came,
 Depart not — lest the grave should be,
 Like life and fear, a dark reality.
-
-5.
-While yet a boy I sought for ghosts, and sped
-50 Through many a listening chamber, cave and ruin,
-And starlight wood, with fearful steps pursuing
-Hopes of high talk with the departed dead.
 
 33. sent] sent, Ex.
 34. some still instrument] An Aeolian harp. still] unconscious Nbk 1.
@@ -3255,11 +3020,6 @@ Unlinked with hope that thou wouldst free
 70 This world from its dark slavery,
 That thou — O awful LOVELINESS,
 Wouldst give whate’er these words cannot express.
-
-7.
-The day becomes more solemn and serene
-When noon is past — there is a harmony
-75 In autumn, and a lustre in its sky,
 
 53. poisonous names] the false name Nbk 1. Another possible modification by Hunt.
 54. I was not heard —] One of S.’s early correspondents had ‘recommended him to try the effect of
@@ -3430,16 +3190,6 @@ Brun’s ‘Chamouny beym Sonneraufgange: Gedichte’ (1805); see A. P. Rossiter
 28 September 1951, 613). For S. and Byron’s knowledge of and interest in Coleridge and The
 Friend in 1816, see Robinson 32–9, and also Charles E. Robinson, ‘The Shelley Circle and
 
-Coleridge’s The Friend’, ELN viii (1971) 269–74. The tone of Coleridge’s poem is well given
-in the note which accompanied its first publication in the Morning Post, 11 September 1802:
-
-. . . the whole vale, its every light, its every sound, must needs impress every mind not
-utterly callous with the thought — Who would be, who could be an Atheist in this
-valley of Wonders!
-
-The poem itself emphatically and — from S.’s point of view — provokingly celebrates the
-maker of all the components of the scene presented by the valley of the Arve:
-
 GOD! let the Torrents, like a shout of Nations,
 Answer! And let the Ice plains echo, GOD!
 God! sing, ye meadow streams! with gladsome voice!
@@ -3522,9 +3272,6 @@ resentation of nature as metaphorical of consciousness, S.’s poem is comparabl
 Romantic poems which dramatise the mind’s consciousness of itself, such as Wordsworth’s
 ‘Lines written a few miles above Tintern Abbey’ (1798) and Keats’s ‘Ode to Psyche’ (1819).
 The style of ‘Mont Blanc’, broadly Wordsworthian but bleaker and more disturbed, regis-
-
-ters a certain intellectual irresolution as well as excitement. S. appears conscious of this in
-his note on the poem in the Preface to 1817:
 
 The poem entitled ‘Mont Blanc’ . . . was composed under the immediate impressions
 of the deep and powerful feelings excited by the objects which it attempts to describe;
@@ -3626,9 +3373,6 @@ Vast deserts, peopled by the storms alone
 Save when the eagle brings some hunter’s bone
 70 And the wolf watches her — how hideously
 
-31. Their periods] An ambivalence: ‘their times of existence’ or ‘their times of cessation’.
-53. high:] high SDMS, RES.
-
 Its rocks are heaped around, rude, bare and high
 Ghastly and scarred and riven! — is this the scene
 Where the old Earthquake demon taught her young
@@ -3664,19 +3408,6 @@ Teach the adverting mind. — The Glaciers creep
 Like snakes that watch their prey, from their far fountains
 Slow rolling on: — there, many a precipice
 Frost and the Sun in scorn of human power
-
-105 Have piled: dome, pyramid and pinnacle
-A city of death, distinct with many a tower
-And wall impregnable of shining ice . . .
-A city’s phantom . . . but a flood of ruin
-Is there that from the boundaries of the sky
-
-71. rude,] rude SDMS, RES.
-81. doctrine, Mountains,] doctrine Mountains SDMS, RES.
-96. revolve,] revolve SDMS, RES.
-98. inaccessible.] inaccessible, RES.
-101. mind. — The] mind. — the SDMS, RES.
-109. there] there, RES (comma canc. in SDMS).
 
 110 Rolls its eternal stream . . . vast pines are strewing
 Its destined path, or in the mangled soil
@@ -3715,14 +3446,6 @@ Of Heaven is as a column, rests on thee,
 And what were thou and Earth and Stars and Sea
 If to the human mind’s imaginings
 145 Silence and solitude were vacancy?
-
-119. dread, his] dread. his SDMS.
-120. tempest’s] tempests SDMS.
-122. known: —] known — RES.
-133. Mountain —] mountain — RES.
-140. snow. The] snow. the SDMS.
-144. mind’s] minds SDMS.
-145. vacancy?] vacancy SDMS.
 
 I.
 The everlasting universe of things
@@ -3877,9 +3600,6 @@ defence of the word in its usual sense. The emendation ‘upfurled’ in Rossett
 some modern eds, e.g. Harold Bloom (ed.), English Romantic Poetry (New York 1963) 163.
 56. Spread] Speed 1839.
 
-57. spirit fails,] mind is faint/With aspiration, draft canc.
-58. Cp. I visit thee but thou art sadly changed (Longman i 571–2, no. 137) 13 and note.
-
 That vanishes among the viewless gales!
 60 Far, far above, piercing the infinite sky,
 Mont Blanc appears, — still, snowy, and serene —
@@ -4007,11 +3727,6 @@ Vanish, like smoke before the tempest’s stream,
 Shine in the rushing torrents’ restless gleam,
 Which from those secret chasms in tumult welling
 
-Meet in the vale, and one majestic River,
-The breath and blood of distant lands, for ever
-125 Rolls its loud waters to the ocean waves,
-Breathes its swift vapours to the circling air.
-
 103. Frost] [Which canc.] frost draft.
 105. distinct] ‘decorated, adorned’ (a latinism; cp. PU III iii 162).
 107. flood] stream draft canc.
@@ -4130,10 +3845,6 @@ not merely for its size that this work merits approbation, but it is also marvel
 reason of its artistic quality and excellent because of the nature of the stone, since in a
 block of so great a size there is not a single crack or blemish to be seen. The inscription
 upon it runs: ‘King of Kings am I, Osymandias. If anyone would know how great I am
-
-and where I lie, let him surpass one of my works’. There is also another statue of his
-mother standing alone, a monolith twenty cubits high . . .
-(Loeb trans.)
 
 But Diodorus’s account has frequently been attributed by travellers to a different Egyptian
 statue, the Colossus of Memnon at Thebes, renowned in Strabo’s account of the sound it was
@@ -4255,9 +3966,6 @@ Claire Clairmont, ironically, may not have been shown the only version known to 
 to 1969. This is because it exists only in the draft, which Mary S. had been compelled to rely on
 for her reconstruction of the poem in 1824 under her own title ‘To Constantia, Singing’. Edward
 
-Silsbee, who came to own Harvard Nbk 2, noted below this poem — no doubt from Claire herself —
-‘Written at Marlowe 1817 wd not let Mary see it sent it to Oxford Gazette or some Oxford or
-
 6–8. GM: ‘those passions which, preserved on this broken image, still outlive the sculptor’s hand that
 copied (and derided) them, and the king’s living heart that nourished them’; ‘them’ in line 8 is a pro-
 noun for ‘passions’ (from line 6), and the same pronoun is understood after ‘fed’. read] read, Examiner.
@@ -4268,19 +3976,6 @@ Osymandias (the Greek name for Rameses II, 1304–1237 BC, 3rd king of the 19th 
 as follows: Βασιλεὺς βασιλέων Ὀσυμανδύας εἰμί. εἰ δέ τις εἰδέναι βούλεται πηλίκος εἰμὶ καὶ ποῦ κεῖμαι,
 νικάτω τι τω̂ν ἐμω̂ν ἔργων (‘King of Kings am I, Osymandias. If anyone would know how great I am
 and where I lie, let him surpass one of my works’. Loeb trans.). ‘My name is OZYMANDIAS, King of
-
-Kings.’ Examiner; ‘My name is Ozymandias, king of kings: 1819. Works] works Examiner; works, 1819.
-despair!] despair!’ 1819.
-12–14. Cp. Peacock, Palmyra (2nd edition, 1812):
-
-Where shattered forms of ancient monarchs lie,
-Mid grass-grown halls, and falling colonnades
-Beneath the drifting sand, the clustering weed,
-Rest the proud relics of departed power.
-
-12. beside remains.] remains beside. Nbk 5.
-13. colossal Wreck,] Colossal Wreck, Examiner; colossal wreck, 1819. bare] bare, Examiner.
-14. away’ —] away. Examiner, 1819.
 
 ## DOI: 10.4324/9781315170343-10
 
@@ -4322,11 +4017,6 @@ Text from The Oxford University and City Herald, 31 January 1818.
 Published in The Oxford University and City Herald, 31 January 1818, reprinted in TLS 6
 February 1969, p. 140; 1824 143–4 (lines 35–44, 23–33, 1–22, from Nbk 5, ff. 36v–34v), revised
 by Locock, Locock Ex 60–2 (adding line 34); Boston Herald, 21 December 1925, p. 12 (text from
-
-Harvard Nbk 2), corrected in TLS 17 January 1935, p. 33, and 11 April 1935, p. 244; Chernaik, 196–7.
-
-Thy voice, slow rising like a Spirit, lingers
-O′ershadowing me with soft and lulling wings;
 
 ¶ 10. 1. Spirit,] Harvard Nbk 2; spirit, O.
 1–2. (a) Constantia’s voice is on my soul — it lingers/upon the heart like loves oershadowing wings (b)
@@ -4379,11 +4069,6 @@ as he beholds the beauty of this world, is reminded of true beauty, and his wing
 he fain to lift his wings and fly upward; yet he has not the power, but inasmuch as he gazes upward like
 a bird, and cares nothing for the world beneath, men charge it upon him that he is demented’ (Phaedrus
 249e).
-
-30 To follow its sublime career,
-Beyond the mighty moons that wane
-Upon the verge of Nature’s utmost sphere,
-Till the world’s shadowy walls are past, and disappear.
 
 Cease, cease — for such wild lessons madmen learn:
 35 Long thus to sink — thus to be lost and die
@@ -4465,11 +4150,6 @@ inversion of the Petrarchan structure, and in its experimental rhymes.
 Text from 1839 iii 157.
 Published in 1824 225.
 
-Lift not the painted veil which those who live
-Call Life; though unreal shapes be pictured there,
-And it but mimic all we would believe
-With colours idly spread, — behind, lurk Fear
-
 ¶ 11. 1. the painted veil] Identical imagery is used in PU III iv 190–2, with a quite different meaning
 (see B. P. Kurtz, The Pursuit of Death (New York 1933) 180–3): in PU III, the veil is a ‘loathsome mask’
 of false creeds and conventions, discarded after social revolution; here the veil divides the living from
@@ -4477,9 +4157,6 @@ the dead, as in The Voyage (Longman i 247–57, no. 89) 59–62, Mont Blanc 53�
 and the moony smile (Longman i 424–7, no. 93) 25–8. The passage from Barthelemy quoted in the
 headnote above explicitly distinguishes the two meanings. those who live] men deceived Nbk 11 canc.
 4. spread, —] spread: — 1824.
-
-5 And Hope, twin Destinies; who ever weave
-Their shadows, o’er the chasm, sightless and drear.
 
 I knew one who had lifted it — he sought,
 For his lost heart was tender, things to love,
@@ -4536,9 +4213,6 @@ September or early October 1818 (its inclusion by Mary S. among ‘Poems written
 is an error). At the top of f. 13 is a jotted reminder of the epigraph for Alastor: ‘the good die
 first — ’. Between the original opening lines, which are cancelled —
 
-Two genii stood before me in a dream
-Seest thou not the shades of even [BSM xviii reads Wert for Seest] —
-
 S. has inserted the present title, evidently after completing the poem and in a different ink,
 together with headings ‘1st Spirit’ and ‘2nd Spirit’ to the first and second stanzas, respectively,
 also in different ink. As these headings were hasty additions, it may be assumed that similar
@@ -4550,21 +4224,10 @@ I 752, the opposite but hitherto inseparable twins Love and Pain (see headnote t
 Sister mine, Longman ii 423, no. 181). On f. 2 of Nbk 11 are the draft lines: ‘Twin nurslings of
 the [BSM xviii reads this] all sustaining air/Whom one nest sheltered’, a version of PU I 752–4:
 
-Behold’st thou not two shapes from the east and west
-Come, as two doves to one belovèd nest,
-Twin nurslings of the all-sustaining air
-
 — an image deriving from Dante’s Inferno v 82–4, where the doves were Paolo and Franc-
 esca, whose true love had brought only calamity.
 Text from Nbk 11 ff. 13–7. The poem is unpunctuated in MS except at lines 2, 8, 12, 32, 39 and 44.
 Published in 1824 179–80; Chernaik 239–42.
-
-First Spirit
-Thou who plumed with strong desire
-Would float above the Earth — beware!
-Shadow tracks thy flight of fire —
-Night is coming.
-5 Bright are the regions of the air
 
 ¶ 12. 1. Thou] Oh thou 1824; O Thou Chernaik. ‘O Thou’, ‘Floatest’ (line 2), and ‘A shadow’ (line 3) are
 canc. by similar oblique strokes in Nbk 11 (although BSM xviii does not note the canc. of ‘O thou’) and
@@ -4595,13 +4258,6 @@ Yon declining sun have overtaken,
 The clash of the hail sweeps o’er the plain —
 Night is coming.
 
-Second Spirit
-25 I see the black cloud, I hear the sound —
-I’ll sail on the flood of the tempest dark
-With the calm within and light around
-Which make night day;
-And thou when the gloom is deep and stark
-
 6. No rhyme-word in Nbk 11.
 13. gentle] silver Nbk 11 canc.
 Stanzas 3–6 have no speaker headings in Nbk 11.
@@ -4621,10 +4277,6 @@ trées voisines au milieu de l’orage et des plus terribles coups de tonnerre .
 d’en approcher pour mettre Pilate en fureur, et que dans ses transports il excitoit la tempête, la grèle
 et les orages’ (Zurich, iv (1811), 36–7). The second legend (‘Some say . . .’) may be S.’s own invention.
 
-30 Look from thy dull earth slumberbound —
-My moonlike flight thou then mayst mark
-On high, far away.
-
 Some say there is a precipice
 Where one vast pine hangs frozen to ruin
 35 O’er piles of snow and chasms of ice
@@ -4642,10 +4294,6 @@ Which make night day —
 Upborne by her wild and glittering hair,
 And when he awakes on the fragrant grass
 He finds night day.
-
-13 Lines Written among the Euganean
-Hills, October, 1818
-The Advertisement to 1819, dated 20 December 1818, concludes with this paragraph:
 
 I do not know which of the few scattered poems I left in England will be selected by my
 bookseller, to add to this collection. One, which I sent from Italy, was written after a day’s
@@ -4721,9 +4369,6 @@ the waters crystalline’ two verse-paragraphs later, and no English refugee cou
 the Adriatic as a ‘northern sea’. The personal allusion may rather be the same as that to the
 ‘remote and lonely shore’ of Her voice did quiver as we parted (Longman i 550–3, no. 126),
 
-and the sea would then be the Baltic or the Skagerrak, where Mary Wollstonecraft in her
-despair had often longed to die:
-
 How often, passing through the rocks, I have thought, ‘But for this child, I would lay
 my head on one of them, and never open my eyes again!’ With a heart feelingly alive to
 all the affections of my nature — I have never met with one, softer than the stone that
@@ -4739,11 +4384,6 @@ with other Poems, by Thomas Brown, Professor of Moral Philosophy in Edinburgh Un
 who was well informed and who based his imagery, as S. does in lines 1–65, on quotations
 from Mary W.’s letters, such as ‘. . . how can I expect that she [Fanny] will be shielded, when
 my naked bosom has had to brave continually the pitiless storm?’ (Brown p. 50n):
-
-Dim on the prow, what form, with bosom bare
-And step disorder’d, haunts the midnight air;
-As tho’ with passion’s fiercer swell opprest,
-She sought the tempest to her burning breast? (Brown p. 47)
 
 D. H. Reiman (‘Structure, Symbol, and Theme in “Lines Written Among the Euganean Hills” ’,
 PMLA lxxvii (1962) 404–13) takes the whole of lines 1–65 to be about S. himself only, noting
@@ -4766,13 +4406,6 @@ Puttick & Simpson (19 July 1877) and now in the Huntington Library, may help to 
 more than one figure was involved in lines 45–65. It is in Mary S.’s hand, and the verso, contain-
 ing 30 lines, is numbered 4; presumably, p. 1 carried the title so that only the verso pages were
 numbered. Unfortunately, this leaf is damaged, but the first six lines of the recto read:
-
-]?ter was overblown
-] wrecked limbs — but there came none
-Then he laughed in [blank]
-The grey hairs crawled on every limb
-Or the whirlwind up an down
-Howling, like a slaughtered town (HM331r)
 
 Lines 1–4 are cancelled by a vertical line and by many diagonal erasures, probably in S.’s hand.
 Mary S. seems to have been transcribing from an early draft (as she could not decipher some
@@ -4815,13 +4448,6 @@ Text from 1819; lines 56–112 corrected from HM 331, The Huntington Library, Sa
 California (MYRS iii 119–20) and lines 167–205 from Tinker 1897, Beinecke Rare Book and
 Manuscript Library, Yale University (Yale MS; facsimile and transcription in MYRS viii 190–3).
 Published in 1819.
-
-Lines Written among the Euganean Hills, October, 1818
-Many a green isle needs must be
-In the deep wide sea of misery,
-Or the mariner, worn and wan,
-Never thus could voyage on
-5 Day and night, and night and day,
 
 ¶ 13. 1. a green isle] The Colli Euganei form an isolated mountainous group in the plain west of Padua.
 S. in Venice described them as ‘Those famous Euganean hills, which bear,/As seen from Lido through
@@ -4973,11 +4599,6 @@ engulfs them.
 100. behind] I.e. behind Venice, to the East.
 108. with inconstant motion] I.e. quivering in the heated air currents.
 
-As the flames of sacrifice
-From the marble shrines did rise,
-As to pierce the dome of gold
-Where Apollo spoke of old.
-
 115 Sun-girt City, thou hast been
 Ocean’s child, and then his queen;
 Now is come a darker day,
@@ -5120,13 +4741,6 @@ wave/For ever lashes the resounding shore’.
 198. Like Omniscient power] I.e. Shakespeare’s power gives an impression of superhuman understand-
 ing of mortal men and women.
 
-200 As the love from Petrarch’s urn
-Yet amid yon hills doth burn,
-A quenchless lamp by which the heart
-Sees things unearthly; — so thou art
-Mighty spirit — so shall be
-205 The City that did refuge thee.
-
 Lo, the sun floats up the sky
 Like thought-wingèd Liberty,
 Till the universal light
@@ -5165,10 +4779,6 @@ than that of any Italian city . . . She had, in 1816, only 25,000 inhabitants’
 228. foison] Abundance.
 232. ‘Wrong hath but wrong, and blame the due of blame’ (Buckingham in Richard III, V i 9, going to
 deserved execution).
-
-Or worse; but’tis a bitter woe
-That love or reason cannot change
-235 The despot’s rage, the slave’s revenge.
 
 Padua, thou within whose walls
 Those mute guests at festivals,
@@ -5211,10 +4821,6 @@ follows Eustace i 154–5: ‘Of eighteen thousand students six hundred only rem
 sufficient to shew the deserted state of the once crowded Schools of Padua . . . The decrease of numbers
 . . . is to be attributed to the establishment of similar institutions in other countries, and to the general
 multiplication of the means of knowledge over the Christian world’.
-
-258. a meteor] Here, an ignis fatuus.
-260. A line used (of ‘Tomorrow’) apparently in a draft of Lines written in dejection — December 1818,
-near Naples (Nbk 6 ff. 70–71rev).
 
 265 Now new fires from antique light
 Spring beneath the wide world’s might;
@@ -5309,17 +4915,6 @@ livings things (310), and the speaker’s spirit (311).
 318–9. ‘Or if the mind that creates this poem is also creating the reality it perceives’. Cp. Mont
 Blanc 142–4, and L&C II xxx 1–2: ‘For, before Cythna loved it, had my song/Peopled with
 
-thoughts the boundless universe’. All three quotations recall Richard II in prison: ‘And these
-same thoughts people this little world’ (V v 9).
-323. that one star] Venus (see headnote).
-327. morn] morn, 1819.
-
-330 ’Mid remembered agonies,
-The frail bark of this lone being)
-Pass, to other sufferers fleeing,
-And its ancient pilot, Pain,
-Sits beside the helm again.
-
 335 Other flowering isles must be
 In the sea of life and agony:
 Other spirits float and flee
@@ -5407,10 +5002,6 @@ suicide in Naples (see White ii 570–1). S.’s chastened sense of responsibili
 of Clara’s death (see headnotes to Behold, sweet Sister mine (Longman ii 423, no. 181) and The
 Two Spirits), and his reaction to Mary’s own consequent depression, may also have coincided
 with a renewed sense of the injustice and malicious distortions of public attacks on him in the
-
-370. They, not it, would change;] 1839, eds; They, not it would change; 1819. I.e. ‘the multitude would
-change, not the abode’.
-371. ‘Every creature subject to transience’.
 
 ## DOI: 10.4324/9781315170343-14
 
@@ -5572,8 +5163,6 @@ of July 1816). S. was also translating Prometheus Bound in July 1817 (Mary Jnl i
 famously recalled in 1823, when retracing the route taken through the Alps on their journey to
 Italy in March 1818, that S. had conceived the idea of his drama at that time while passing ‘la
 Montagne des Eschelles, whose dark high precipices towering above, gave S — the idea of his
-
-Prometheus’ (Mary L i 357). An entry in S.’s hand in Mary’s jnl for 26 March 1818 bears this out:
 
 After dinner we ascended Les Echelles winding along a road cut thro perpendicular rocks
 of immense elevation by Charles Emmanuel Duke of Savoy in 1582. The rocks which
@@ -5800,8 +5389,6 @@ very beautiful is certainly the most mystic of the four — ’ (Mary L i 121). 
 explaining that the ‘additions’ to PU announced in his previous letter were to be extensive; the
 whole letter is of great interest (it is not in L; the MS is damaged by a burn, and the resulting
 
-gaps are here conjecturally reconstructed by GM. For alternatives see SC vi 1100):
-
 My Prometheus I suppose you [have already begun] printing before this letter reaches
 you — [I am] somewhat doubtful about this said question of pr[oofs.] Who will revise
 the press? If possible, & if there is time, I should be very glad that the printer could divide
@@ -5988,9 +5575,6 @@ which hardly implies that he was doing it himself. It also seems likely that S. 
 to transcribe his fair copy, but to punctuate it; and a further inference must be that while S. was
 very careful in checking and altering the transcript in important places, he nevertheless missed
 
-various errors in Mary’s transcript. It is all but impossible to explain certain features of PU in
-1820 by any other hypothesis; see e.g. II iii 50 and note, IV 208 and note. The situation is still
-
 further complicated by the fact that Mary’s transcript must have been copied from a state of S.’s
 fair copy at least as late as many of the corrections made on it by S., including not just the many
 later added and altered passages which take up initially blank pages, but also the fair number of
@@ -6145,8 +5729,6 @@ of a non-classical character reflects the fact that ‘unlike earlier rebels’,
 have served Shelley’s purpose’ (GM). Demogorgon’s characteristics in PU seem especially
 influenced by Lucan, Pharsalia, a great favourite of S.’s, where he found the conjunction of an
 
-obscure subterranean god with oracular inspiration and utterance, and the legend of Typhon:
-
 Which of the immortals is hidden here? What deity, descending from heaven, deigns to
 dwell pent up in these dark grottoes? What god of heaven endures the weight of earth,
 knowing every secret of the eternal process of events, sharing with the sky the knowledge
@@ -6161,9 +5743,6 @@ it strikes the human soul of the priestess audibly, and unlocks her lips, even a
 of Etna in Sicily boils over from the pressure of the flames; and as Typhoeus, where he lies
 beneath the everlasting mass of Inarime, makes hot the rocks of Campania by his unrest.
 (v 86–101, Loeb trans.)
-
-See also vi 496–9, 742–9, and cp. Nicholas Rowe’s note to vi 794 in his influential trans.
-(Lucan’s Pharsalia, 2 vols, 2nd edn (1722) ii 43):
 
 The Poet seems to allude here to that God whom they called Demogorgon, who was the
 Father and Creator of all the other Gods; who, though he himself was bound in Chains
@@ -6480,10 +6059,6 @@ until 1920.
 
 ## ACT I
 
-Scene, a ravine of icy rocks in the Indian Caucasus. Prometheus is discovered bound to the
-precipice. Panthea and Ione are seated at his feet. Time, night. During the scene, morning
-slowly breaks.
-
 Prometheus
 Monarch of Gods and Dæmons, and all Spirits
 But One, who throng those bright and rolling worlds
@@ -6550,14 +6125,6 @@ to the Magi, one of the Gods [i.e. Oromazes and Arimanios] shall conquer, the ot
 alternately for 3,000 years, for another 3,000 years they shall fight, war, and undo one the works of the
 other; but in the end Hades shall fail, and man shall be happy, neither requiring food nor constructing
 
-shelter . . .’ (Bohn trans.). hours] Nbk 7; hours, 1820, 1839.
-13–15. Cp. J&M 416–19:
-
-As the slow shadows of the pointed grass
-Mark the eternal periods, his pangs pass
-Slow, ever-moving, — making moments be
-As mine seem — each an immortality!
-
 13. moments,] Nbk 7; moments 1820, 1839.
 14. seem] Nbk 7; seemed 1820, 1829, 1839. Prometheus’s torments still continue, as the present tense
 are of line 15 confirms.
@@ -6583,11 +6150,6 @@ Has it not seen? the Sea, in storm or calm
 Heaven’s ever-changing Shadow, spread below,
 Have its deaf waves not heard my agony?
 30 Ah me, alas, pain, pain ever, forever!
-
-The crawling glaciers pierce me with the spears
-Of their moon-freezing crystals; the bright chains
-Eat with their burning cold into my bones.
-Heaven’s wingèd hound, polluting from thy lips
 
 (‘O thou bright sky of heaven, ye swift-winged breezes, ye river-waters, and multitudinous laughter of
 the waves of ocean, O universal mother Earth, and thou, all-seeing orb of the sun, to you I call! Behold
@@ -6719,38 +6281,12 @@ behold, the veil of the temple was rent in twain from the top to the bottom; and
 and the rocks rent’.
 68. thunder] Nbk 7; thunder, 1820, 1839. own] Nbk 7; own, 1820, 1839.
 
-69. world — if] Nbk 7; world! If 1820, 1839. then] ‘temporal, and emphatic’ (Locock 1911).
-72. hate —] Nbk 7; hate, 1820, 1839.
-
-First Voice, from the Mountains
-Thrice three hundred thousand years
-75 O’er the Earthquake’s couch we stood:
-Oft, as men convulsed with fears,
-We trembled in our multitude.
-
-Second Voice, from the Springs
-Thunderbolts had parched our water,
-We had been stained with bitter blood,
-80 And had run mute,’mid shrieks of slaughter,
-Through a city and a solitude.
-
-Third Voice, from the Air
-I had clothed, since Earth uprose,
-Its wastes in colours not their own;
-And oft had my serene repose
-85 Been cloven by many a rending groan.
-
 Fourth Voice, from the Whirlwinds
 We had soared beneath these mountains
 Unresting ages; nor had thunder,
 Nor yon Volcano’s flaming fountains,
 Nor any power above or under
 90 Ever made us mute with wonder.
-
-Second Voice
-Never such a sound before
-To the Indian waves we bore.
-95 A pilot asleep on the howling sea
 
 74. S. implies around one million years for the age of the earth. The line recalls Coleridge’s ‘Fire, Famine,
 and Slaughter’ 23: ‘thrice three hundred thousand men’.
@@ -6762,26 +6298,6 @@ nineteenth century, though their origins were known not to be connected with lig
 lxxxviii (1818) 168–9.
 80. run] ran Nbk 7; presumably a change to the press transcript.
 82–3. Colour is produced by refraction of sunlight in the atmosphere; cp. I 64–5, IV 219–25, and see
-
-S.’s note to Q Mab i 242–3. Rognoni cps. Lucretius, De Re. Nat. ii 730–841.
-88. Volcano’s] Nbk 7; volcano’s 1820, 1839.
-95–8. Cp. Coleridge, ‘Ancient Mariner’ 560–9.
-
-Leaped up from the deck in agony
-And heard, and cried, ‘Ah, woe is me!’
-And died as mad as the wild waves be.
-
-Third Voice
-By such dread words from Earth to Heaven
-100 My still realm was never riven:
-When its wound was closed, there stood
-Darkness o’er the day like blood.
-
-Fourth Voice
-And we shrank back: for dreams of ruin
-To frozen caves our flight pursuing
-105 Made us keep silence — thus — and thus —
-Though silence is as hell to us.
 
 The Earth
 The tongueless caverns of the craggy hills
@@ -6835,9 +6351,6 @@ Fills your dim glens and liquid wildernesses?
 130 Why answer ye not, still? Brethren!
 112ff . The Earth and the elements have two languages, Jupiter and Prometheus only one; see Wasserman
 
-267ff. for searching commentary on this sequence.
-113–17. Cp. Prometheus Bound 234–40:
-
 καὶ τοῖσιν οὐδεὶς ἀντέβαινε πλὴν ἐμοῦ.
 ἐγὼ δ’ ἐτόλμησ’˙ ἐξελνσάμην βροτοὺς
 τὸ μὴ διαρραισθέντας εἰς Ἄιδου μολεῖν.
@@ -6883,12 +6396,6 @@ Subtle thou art and good; and though the Gods
 Hear not this voice, yet thou art more than God
 145 Being wise and kind: earnestly hearken now.
 
-Prometheus
-Obscurely through my brain, like shadows dim,
-Sweep awful thoughts, rapid and thick — I feel
-Faint, like one mingled in entwining love.
-Yet’tis not pleasure.
-
 131. again . . .] Nbk 7; again. 1820, 1839.
 132. Ha,] Nbk 7, 1820; Ha! 1839.
 134. As lightening tingles] I.e. like electricity; according to Priestley (History and Present State of Electricity,
@@ -6906,11 +6413,6 @@ which is responsible for seasonal variation. Cp. also King Lear IV vii 45–8.
 “language of the dead,” in order to see if Prometheus can understand it.’ (Locock 1911).
 147. thick —] Nbk 7; thick. 1820, 1839.148–51. Cp. III iii 110–12.
 148. love.] Nbk 7; love; 1820, 1839.
-
-The Earth
-No, thou canst not hear:
-150 Thou art immortal, and this tongue is known
-Only to those who die . . .
 
 The Earth
 I am the Earth
@@ -6999,10 +6501,6 @@ The Grave (1743) 628, ‘bluest plague’, and Coleridge has ‘blue plague’ i
 176. Cp. III iii 94–5.
 178. contagion] See note to II iii 10.
 179. destroyer —] Nbk 7; destroyer; 1820, 1839.
-
-185. words,] words Nbk 7, 1820, 1829, 1839. The comma was introduced in Foster’s first American edi-
-tion of the Poetical Works (Philadelphia 1845) and retained by Rossetti, Forman, and subsequent eds.
-186. Mother!] Nbk 7; mother! 1820, 1839.
 
 Prometheus
 Venerable Mother!
@@ -7103,12 +6601,6 @@ Typhon’s rebellion, which had volcanic associations (see also Wasserman 334–
 216. Supreme] supreme Nbk 7.
 217–18. The draft of these lines is in Nbk 11, p. 23.
 
-Prometheus
-Mother, let not aught
-Of that which may be evil, pass again
-220 My lips, or those of aught resembling me —
-Phantasm of Jupiter, arise, appear!
-
 Ione
 My wings are folded o’er mine ears:
 My wings are crossed over mine eyes:
@@ -7158,22 +6650,6 @@ Are hovering on my lips, unlike the voice
 With which our pallid race hold ghastly talk
 245 In darkness? And, proud Sufferer, who art thou?
 
-Prometheus
-Tremendous Image, as thou art must be
-He whom thou shadowest forth. I am his foe,
-The Titan. Speak the words which I would hear,
-Although no thought inform thine empty voice.
-
-The Earth
-250 Listen! And though your echoes must be mute,
-Grey mountains, and old woods, and haunted springs,
-Prophetic caves, and isle-surrounding streams,
-Rejoice to hear what yet ye cannot speak.
-
-Phantasm
-A spirit seizes me and speaks within:
-255 It tears me as fire tears a thunder-cloud.
-
 245. Sufferer,] Sufferer Nbk 7; sufferer, 1820, 1839.
 246. Image,] 1820; image, Nbk 7; Image! 1839.
 247. He] Him Nbk 7.
@@ -7185,12 +6661,6 @@ transcript, which was not subsequently copied to Nbk 7 (see headnote).
 256–7. The repetition of Prometheus’s curse by the Phantasm of Jupiter (lines 262–301 below) is here
 preceded by portents similar to those that accompanied the original curse; cp. I 101–2.
 256. heaven] Heaven Nbk 7, 1820, 1839.
-
-Prometheus
-I see the curse on gestures proud and cold,
-And looks of firm defiance, and calm hate,
-260 And such despair as mocks itself with smiles,
-Written as on a scroll . . . yet speak — O speak!
 
 Phantasm
 Fiend, I defy thee! with a calm, fixed mind,
@@ -7237,10 +6707,6 @@ the Gk source myth, Prometheus had helped Zeus (i.e. Jupiter) against his fellow
 the face of the waters.’
 277. Its] Nbk 7; In 1820, 1839 (probably a mistranscription in the press transcript).
 
-The utmost torture of thy hate;
-280 And thus devote to sleepless agony
-This undeclining head while thou must reign on high.
-
 But thou who art the God and Lord — O thou
 Who fillest with thy soul this world of woe,
 To whom all things of Earth and Heaven do bow
@@ -7251,10 +6717,6 @@ Till thine Infinity shall be
 A robe of envenomed agony,
 290 And thine Omnipotence a crown of pain
 To cling like burning gold round thy dissolving brain.
-
-Heap on thy soul by virtue of this Curse
-Ill deeds, then be thou damned, beholding good;
-Both infinite as is this Universe,
 
 280. agony] Nbk 7; agony, 1820, 1839.
 282. God] Altered from [King canc.] in Nbk 7; presumably a correction which preceded despatch of the
@@ -7286,10 +6748,6 @@ mitting more crimes.
 294–5. Rossetti argued that S.’s grammar is radically incoherent in this passage (Rossetti 1870 496–7), and
 prompted a ferocious reply from Swinburne in defence of S. (see Zillman Variorum 148–9). S.’s construction
 
-is latinate (‘Et . . . et’); GM glosses the passage ‘May both be infinite — yourself (doing evil), and your ago-
-nising isolation (seeing good in others)’.
-294. This] Nbk 7; the 1820, 1839, eds. Universe,] Universe Nbk 7; universe, 1820, 1839.
-
 295 And thou, and thy self-torturing solitude.
 An awful Image of calm power
 Though now thou sittest, let the hour
@@ -7297,11 +6755,6 @@ Come, when thou must appear to be
 That which thou art internally,
 300 And after many a false and fruitless crime
 Scorn track thy lagging fall through boundless space and time.
-
-Prometheus
-It doth repent me: words are quick and vain;
-Grief for awhile is blind, and so was mine.
-305 I wish no living thing to suffer pain.
 
 The Earth
 Misery, O misery to me
@@ -7334,13 +6787,6 @@ A Shape comes now,
 Stretching on high from his right hand
 A serpent-cinctured wand.
 
-Ione
-And who are those with hydra tresses
-And iron wings that climb the wind,
-Whom the frowning God represses
-Like vapours steaming up behind,
-330 Clanging loud, an endless crowd —
-
 324. serpent-cinctured wand] Cp. Prometheus Bound 799, δρακοντόμαλλοι (‘serpent-haired’, said of the
 Gorgons). A staff twined with snakes was the emblem of Mercury, messenger of the gods (see next
 note). Peacock uses ‘forest-cinctured’ (see The Philosophy of Melancholy (1812) i 119–20; Melincourt
@@ -7361,22 +6807,6 @@ suggests Satan’s temptation of Christ in the desert (Matthew iv 8–10). heral
 Hercules. The Erinyes (see below, note to line 331) have snake-hair (e.g. in Aeschylus, Eumenides).
 330. clanging] A conventional poetic word for the sound of birds’ wings, but also used for the harsh
 scream or screech of a bird (from Gk κεκλάγξομαι). Aeschylus’s Furies are wingless.
-
-Panthea
-These are Jove’s tempest-walking hounds,
-Whom he gluts with groans and blood,
-When charioted on sulphurous cloud
-He bursts Heaven’s bounds.
-
-Third Fury
-The hope of torturing him smells like a heap
-340 Of corpses to a death-bird after battle.
-
-First Fury
-Darest thou delay, O Herald? take cheer, Hounds
-Of Hell — what if the Son of Maia soon
-Should make us food and sport? Who can please long
-The Omnipotent?
 
 331. Jove’s tempest-walking hounds] The Furies. S.’s Furies derive from the Erinyes of Gk myth, avenging
 spirits of punishment which worked by disturbing the mind (they are embodiments of mental states,
@@ -7472,10 +6902,6 @@ To thee and to none else of living things
 Which may transfer the sceptre of wide Heaven,
 The fear of which perplexes the Supreme:
 
-375 Clothe it in words, and bid it clasp his throne
-In intercession; bend thy soul in prayer,
-And like a suppliant in some gorgeous fane
-
 354. down] Nbk 7; down, 1820, 1839.
 356. Alas,] Nbk 7; Alas! 1820, 1839.
 357–8. Cp. Paradise Lost i 254–5: ‘The mind is its own place, and in itself/Can make a heaven of hell, a
@@ -7497,10 +6923,6 @@ the secret of his Prometheus; the forces leading to Jupiter’s downfall in PU c
 of individual actions.
 372. thee] Nbk 7; thee, 1820, 1839. things] Nbk 7; things, 1820, 1839.
 377. fane] Nbk 7; fane, 1820, 1839.
-
-Let the will kneel within thy haughty heart:
-For benefits and meek submission tame
-380 The fiercest and the mightiest.
 
 Prometheus
 Evil minds
@@ -7558,11 +6980,6 @@ Which since we spake is even nearer now —
 But hark, the hell-hounds clamour: fear delay:
 Behold! Heaven lowers under thy Father’s frown.
 
-Mercury
-410 O that we might be spared — I to inflict,
-And thou to suffer! Once more answer me:
-Thou knowest not the period of Jove’s power?
-
 398–9. The Sicilian was Damocles, who praised to excess the happiness and wealth of the tyrant
 Dionysius I, and was rewarded by being feasted beneath a sword hanging above his head by a single
 hair to symbolise the fear in which rulers live (see Cicero, Tusculan Disputations V xxi 61–2).
@@ -7586,10 +7003,6 @@ ably volcanic — gathering in the background of the dramatic action); ‘lours�
 414. Cp. Prometheus Bound 257, οὐδ’ ἐστὶν ἄθλου τέρμα σοι προκείμενον (‘And is there no end assigned
 thee of thine ordeal?’).
 
-Prometheus
-415 They last while Jove must reign: nor more, nor less
-Do I desire or fear.
-
 Mercury
 Yet pause, and plunge
 Into Eternity, where recorded time,
@@ -7599,16 +7012,6 @@ Seems but a point, and the reluctant mind
 Till it sink, dizzy, blind, lost, shelterless;
 Perchance it has not numbered the slow years
 Which thou must spend in torture, unreprieved.
-
-Mercury
-425 If thou might’st dwell among the Gods the while,
-Lapped in voluptuous joy?
-
-Prometheus
-Pity the self-despising slaves of Heaven,
-430 Not me, within whose mind sits peace serene
-As light in the sun, throned . . . How vain is talk!
-Call up the fiends.
 
 415. reigns] 1820; reign, Nbk 7; reign; 1839.
 420. flight] Nbk 7, 1840; flight, 1820, 1839.
@@ -7629,25 +7032,6 @@ than Jupiter’s power to control. In Nbk 7, a partially canc. stage direction a
 speech reads ‘(thunder & lightning)’.
 432. O] Nbk 7; O, 1820, 1839.
 
-Ione
-O sister, look! White fire
-Has cloven to the roots yon huge snow-loaded cedar;
-How fearfully God’s thunder howls behind!
-
-Mercury
-435 I must obey his words and thine — alas!
-Most heavily remorse hangs at my heart!
-
-Panthea
-See where the child of Heaven with wingèd feet
-Runs down the slanted sunlight of the dawn.
-
-Ione
-Dear sister, close thy plumes over thine eyes
-440 Lest thou behold and die — they come, they come
-Blackening the birth of day with countless wings,
-And hollow underneath, like death.
-
 Prometheus
 He whom some dreadful voice invokes is here,
 445 Prometheus, the chained Titan. Horrible forms,
@@ -7664,10 +7048,6 @@ charge/Returned on that bright beam, whose point now raised/Bore him slope downw
 442. hollow underneath] I.e. the Furies have no form apart from specific forms of human anguish; cp.
 lines 470–2 below. S. recalls Aeneid vi 293.
 448. all-miscreative] Byron uses ‘miscreator’ in Childe Harold’s Pilgrimage iv (1818) st. 125.
-
-Whilst I behold such execrable shapes
-450 Methinks I grow like what I contemplate,
-And laugh and stare in loathsome sympathy.
 
 First Fury
 We are the ministers of pain and fear,
@@ -7728,18 +7108,6 @@ The aerial crimson falls, flushing her cheek,
 The shade which is our form invests us round,
 Else are we shapeless as our mother Night.
 
-Prometheus
-I laugh your power, and his who sent you here,
-To lowest scorn. — Pour forth the cup of pain.
-
-First Fury
-475 Thou thinkest we will rend thee bone from bone,
-And nerve from nerve, working like fire within?
-
-Prometheus
-480 I weigh not what ye do, but what ye suffer,
-Being evil. Cruel was the Power which called
-
 466. so are we] I.e. glad.
 470–2. I.e. these Furies take their form from specific human anxieties; cp. line 442 above.
 471. form] Written above shape canc. in Nbk 7; presumably altered before transcription for the press,
@@ -7764,16 +7132,6 @@ That we will be dread thought beneath thy brain,
 And foul desire round thine astonished heart,
 490 And blood within thy labyrinthine veins
 Crawling like agony?
-
-Prometheus
-Why, ye are thus now;
-Yet am I king over myself, and rule
-The torturing and conflicting throngs within,
-As Jove rules you when Hell grows mutinous.
-
-Chorus of Furies
-495 From the ends of the Earth, from the ends of the Earth,
-Where the night has its grave and the morning its birth,
 
 484. animal life] I.e. ‘nervous feeling’; the sensibility that animate creatures possess (Lat. animalis, ‘of
 the nerves’). S. uses the phrase in Q Mab (see i 142 and note) and R&H (825, 1208). ‘Animal life’ was
@@ -7801,8 +7159,6 @@ human anguish. The Furies which now arrive (and speak from line 525) suggest S.�
 of successive forms of social disaster — war, famine, tyranny, torture and so on — in L&C X iv, v, and
 viii. Note that in both L&C and in PU I, the arrival of a first group is followed by a larger and more
 inclusive second group (perhaps influenced by the escalation of the French wars in Europe following
-
-the British declaration of war in February 1793). Earth, . . . Earth] Nbk 7; earth, . . . earth, 1820, 1839.
 
 Come, come, come!
 O ye who shake hills with the scream of your mirth
@@ -7853,23 +7209,6 @@ Misery — A Fragment (Longman ii 701–5, no. 202).
 515. ye] I.e. the newly-arriving Furies.
 517. come, come!] Come come Nbk 8.
 
-And we burthen the blasts of the atmosphere,
-520 But vainly we toil till ye come here.
-
-Panthea
-These solid mountains quiver with the sound
-Even as the tremulous air: their shadows make
-The space within my plumes more black than night.
-
-First Fury
-525 Your call was as a wingèd car
-Driven on whirlwinds fast and far;
-It rapt us from red gulfs of war.
-
-Fourth Fury
-530 Kingly conclaves stern and cold
-Where blood with gold is bought and sold;
-
 520. In Nbk 8, this line is followed by a canc. stage direction: ‘Enter rushing by groupes of horrible
 forms; they speak as they [rush by canc.] pass in chorus’. The speeches by Ione and Panthea at lines 521–
 4, which replace and incorporate this stage direction, were added later by S. on the facing page in Nbk 8.
@@ -7893,14 +7232,6 @@ of the Princess Charlotte (1817): ‘Kings and their ministers have in every age
 other men by a thirst for expenditure and bloodshed’ (Prose Works i 235); and S.’s letter to Peacock, 17
 July 1816: ‘Leave Mammon and Jehovah to those who delight in wickedness and slavery — their altars
 are stained with blood or polluted with gold, the price of blood’ (L i 490). is] was Nbk 8 (presumably
-
-A Fury
-Speak not — whisper not:
-I know all that ye would tell,
-535 But to speak might break the spell
-Which must bend the Invincible,
-The stern of thought;
-He yet defies the deepest power of Hell.
 
 Chorus
 The pale stars of the morn
@@ -8030,11 +7361,6 @@ And other sights too foul to speak and live
 Were wandering by — let us not tempt worse fear
 By looking forth: those groans are grief enough.
 
-Fury
-Behold, an emblem: those who do endure
-595 Deep wrongs for man, and scorn, and chains, but heap
-Thousandfold torment on themselves and him.
-
 Prometheus
 Remit the anguish of that lighted stare;
 Close those wan lips; let that thorn-wounded brow
@@ -8074,10 +7400,6 @@ Whose sons are kneaded down in common blood
 615 By the red light of their own burning homes —
 
 Fury
-Blood thou canst see, and fire; and canst hear groans;
-Worse things unheard, unseen, remain behind.
-
-Fury
 In each human heart terror survives
 The ravin it has gorged: the loftiest fear
 620 All that they would disdain to think were true:
@@ -8106,17 +7428,6 @@ proof correction (ravin, with a canc. terminal e, is clear in Nbk 8); Mary S. co
 622. fanes] Temples.
 627. love,] Nbk 8; love; 1820, 1839.
 628. Cp. Paradise Lost iv 201–4:
-
-So little knows
-Any, but God alone, to value right
-The good before him, but perverts best things
-To worst abuse, or to their meanest use.
-629. rich, —] Nbk 8; rich, 1820, 1839. just —] Nbk 8; just, 1820, 1839.
-630. fellow men] Nbk 8; fellow-men 1820, 1839.
-
-Prometheus
-Thy words are like a cloud of wingèd snakes;
-And yet, I pity those they torture not.
 
 Prometheus
 Ah woe!
@@ -8165,11 +7476,6 @@ Among them — there was strife, deceit, and fear;
 Tyrants rushed in, and did divide the spoil.
 655 This was the shadow of the truth I saw.
 
-The Earth
-I felt thy torture, Son, with such mixed joy
-As pain and Virtue give. To cheer thy state
-I bid ascend those subtle and fair spirits
-
 647. ‘Don’t make me suffer the same pain twice by describing what I saw’ (GM). speak,] 1820; speak
 Nbk 8, 1839.
 648–54. This account of the failure of the French Revolution echoes a number of similar analyses by
@@ -8212,18 +7518,6 @@ Its world-surrounding ether: they behold
 Beyond that twilight realm, as in a glass,
 The future: may they speak comfort to thee!
 
-Panthea
-Look, Sister, where a troop of spirits gather,
-665 Like flocks of clouds in spring’s delightful weather,
-Thronging in the blue air!
-
-Ione
-And see! more come,
-Like fountain-vapours when the winds are dumb,
-That climb up the ravine in scattered lines.
-And hark! is it the music of the pines?
-670 Is it the lake? Is it the waterfall?
-
 Chorus of Spirits
 From unremembered ages we
 Gentle guides and guardians be
@@ -8249,11 +7543,6 @@ Furies, they do not gloat over it, but lament it’.
 672–91. Kathleen Raine (‘Thomas Taylor, Plato, and the English Romantic Movement’, Sewanee Review
 lxxvi (1968) 230–57, 254–5) cites Apuleius as a source for this Song (253–7).
 
-674. Heaven-oppressed] Nbk 8; heaven-oppressed 1820, 1839.
-677. Dim and dank and grey] Nbk 8; dim, and dank, and grey, 1820, 1839.
-678. day] Nbk 8; day, 1820, 1839.
-682. serene —] Nbk 8; serene; 1820, 1839.
-
 As the birds within the wind,
 As the fish within the wave,
 685 As the thoughts of man’s own mind
@@ -8263,10 +7552,6 @@ Voyaging cloudlike and unpent
 Through the boundless element —
 690 Thence we bear the prophecy
 Which begins and ends in thee!
-
-Ione
-More yet come, one by one: the air around them
-Looks radiant, like the air around a star.
 
 First Spirit
 On a battle-trumpet’s blast
@@ -8318,9 +7603,6 @@ On a great ship lightning-split,
 720 And speeded hither on the sigh
 Of one who gave an enemy
 His plank — then plunged aside to die.
-
-707. After this line in Nbk 8 is a 14-line song for the second spirit, all of which is canc. by two vertical
-lines:
 
 I leaped on the wings of the Earth-star damp
 As it rose on the steam of a slaughtered camp —
@@ -8405,12 +7687,6 @@ Twin nurslings of the all-sustaining air
 755 On swift still wings glide down the atmosphere?
 And hark! their sweet sad voices;’tis despair
 Mingled with love, and then dissolved in sound.
-
-Ione
-Their beauty gives me voice. See how they float
-760 On their sustaining wings of skiey grain,
-Orange and azure deepening into gold:
-Their soft smiles light the air like a star’s fire.
 
 Fifth Spirit
 As over wide dominions
@@ -8518,11 +7794,6 @@ Are to us as soft winds be
 To shepherd-boys — the prophecy
 800 Which begins and ends in thee.
 
-Panthea
-Only a sense
-Remains of them, like the omnipotence
-Of music, when the inspired voice and lute
-
 781. him destroyingly] Nbk 8; him, destroyingly, 1820, 1839.
 782. steed] Nbk 8; steed, 1820, 1839. Cp. Revelation vi 8: ‘And I looked, and behold a pale horse: and his
 name that sat on him was Death’.
@@ -8537,10 +7808,6 @@ name that sat on him was Death’.
 800. This line is followed in Nbk 8 by a stage direction in very light ink: ‘They vanish’.
 801. Spirits] spirits Nbk 8.
 802. omnipotence] Omnipotence Nbk 8.
-
-Languish, ere yet the responses are mute
-805 Which through the deep and labyrinthine soul,
-Like echoes through long caverns, wind and roll.
 
 Prometheus
 How fair these air-born shapes! and yet I feel
@@ -8558,16 +7825,6 @@ Or sink into the original gulf of things . . .
 There is no agony, and no solace left;
 820 Earth can console, Heaven can torment no more.
 
-Panthea
-Hast thou forgotten one who watches thee
-The cold dark night, and never sleeps but when
-The shadow of thy spirit falls on her?
-
-Panthea
-825 Deeply in truth; but the Eastern star looks white,
-And Asia waits in that far Indian vale
-The scene of her sad exile — rugged once
-
 804. responses] ‘Echoes in the mind’ (here, as usually in S., stressed on the first syllable). mute] Nbk 8;
 mute, 1820, 1839.
 807–9. Apparently encouraging an identification of Asia with love; but note that in 765–7, love is
@@ -8582,9 +7839,6 @@ human fecundity’ (GM).
 818. things . . .] Nbk 8; things: 1820, 1839.
 819. agony, and no] agony — no Nbk 8; presumably an alteration to the press transcript.
 825. Eastern] Nbk 8; eastern 1820, 1839. white] wan Nbk 8; probably an alteration by S. to the transcript
-
-of a detail about which he remained uncertain, as Nbk 8 has looks wan written above is pale canc.
-827. exile —] Nbk 8; exile; 1820, 1839.
 
 And desolate and frozen like this ravine;
 But now invested with fair flowers and herbs,
@@ -8657,11 +7911,6 @@ Of woven cloud unravel in pale air . . .
 The Æolian music of her sea-green plumes
 Winnowing the crimson dawn?
 
-Panthea enters.
-I feel, I see
-Those eyes which burn through smiles that fade in tears,
-Like stars half quenched in mists of silver dew.
-
 11. earth,] Earth Nbk 8.
 12. life . . .] Nbk 8; life. 1820, 1839.
 14. mine . . .] Nbk 8; mine, 1820, 1839.
@@ -8675,12 +7924,6 @@ day’ (Butter (1970)). Butter cps. TL 412–31.
 25. sunlight] sunrise Nbk 8 (presumably altered in the press transcript).
 26–7. Perhaps recalling Prometheus Bound 125, πέλας οἰωνῶν; αἰθὴρ δ’ ἐλαϕραἰς (‘The air whirs with
 the light rush of pinions’); cp. also III iv 107 and note, and Paradise Lost:
-
-Down thither prone in flight
-He speeds, and through the vast ethereal sky
-Sails between worlds and worlds, with steady wing
-Now on the polar winds, then with quick fan
-Winnows the buxom air. (v 266–70)
 
 26. Æolian] eolian Nbk 8.
 27. I feel, I see] Asia’s formulation introduces a further new motif; cp. e.g. 109–10 below, II iv 31, and
@@ -8805,11 +8048,6 @@ Of what might be articulate; though still
 I listened through the night when sound was none.
 Ione wakened then, and said to me:
 
-‘Canst thou divine what troubles me to-night?
-95 I always knew what I desired before,
-Nor ever found delight to wish in vain.
-But now I cannot tell thee what I seek;
-
 73–4. Cp. S.’s letter to Peacock from Bologna, 9 November 1818, describing a ‘Christ Beatified’ by Correggio
 which S. had seen in the picture gallery of a Palazzo: ‘It is a half figure rising from a mass of clouds tinged
 with an ethereal rose-like lustre, the arms are expanded, the whole figure seems dilated with expression,
@@ -8849,16 +8087,6 @@ Quivered between our intertwining arms.’
 I answered not, for the Eastern star grew pale,
 But fled to thee.
 
-Asia
-Thou speakest, but thy words
-Are as the air. I feel them not . . . Oh, lift
-110 Thine eyes, that I may read his written soul!
-
-Panthea
-I lift them, though they droop beneath the load
-Of that they would express: what canst thou see
-But thine own fairest shadow imaged there?
-
 98. not —] Nbk 8; not; 1820, 1839.
 99. sister!] Nbk 8; sister; 1820, 1839.
 102. thine; —] Nbk 8; thine: 1820, 1839.
@@ -8890,17 +8118,6 @@ Is ebbing fast — I cannot speak —
 Panthea
 Rest, rest!
 Sleep death annihilation pain! aught else
-
-Asia
-Thine eyes are like the deep, blue, boundless heaven
-115 Contracted to two circles underneath
-Their long, fine lashes; dark, far, measureless, —
-Orb within orb, and line through line inwoven.
-
-Asia
-There is a change; beyond their inmost depth
-120 I see a shade, a shape: ’tis He, arrayed
-In the soft light of his own smiles, which spread
 
 Her lips were parted, and the measured breath
 Was now heard there; — her dark and intricate eyes
@@ -8951,11 +8168,6 @@ Roughens the wind that lifts it, its regard
 Is wild and quick, yet’tis a thing of air
 130 For through its grey robe gleams the golden dew
 Whose stars the noon has quenched not.
-
-Panthea
-It passes now into my mind. Methought
-As we sate here, the flower-enfolding buds
-135 Burst on yon lightning-blasted almond-tree,
 
 122. moon.] moon Nbk 8; morn. 1820, 1839 (very probably a misreading by Mary S. in her transcript;
 the second o of moon in Nbk 8 is ill-formed and resembles an r).
@@ -9034,9 +8246,6 @@ rejoining our guides.’ (MSW iv 7–8).
 142. my] mine Nbk 8 (probably altered in the press transcript).
 143. shapes . . . methought] Nbk 8; shapes. Methought 1820, 1839. these] Nbk 8; the 1820, 1839. Perhaps
 
-miscopied in the transcript; these is slightly obscure in Nbk 8 and has possibly been altered from this.
-146. mountains,] mountains Nbk 8, 1820, 1839.
-
 Shepherded by the slow, unwilling wind;
 And the white dew on the new-bladed grass,
 Just piercing the dark earth, hung silently —
@@ -9053,10 +8262,6 @@ Were heard: O, follow, follow, follow me!
 160 And then I said: ‘Panthea, look on me.’
 But in the depth of those beloved eyes
 Still I saw, follow, follow!
-
-Panthea
-The crags, this clear spring morning, mock our voices,
-As they were spirit-tongued.
 
 149. silently —] Nbk 8; silently; 1820, 1839.
 150. not;] Nbk 8; not: 1820, 1839.
@@ -9079,23 +8284,6 @@ sentence beginning at line 143.
 intended to call the Echoes ‘Voices’; their first line here was inserted on the blank facing page in Nbk 8,
 with the speaker identification ‘Voice’ altered to Echo (see note to line 166).
 165. O] o Nbk 8; O, 1820, 1839.
-
-Echoes (unseen).
-Echoes we: listen!
-We cannot stay:
-As dew-stars glisten
-Then fade away —
-170 Child of Ocean!
-
-Asia
-Hark! Spirits speak! The liquid responses
-Of their aërial tongues yet sound.
-
-Echoes
-O follow, follow,
-As our voice recedeth
-175 Through the caverns hollow,
-Where the forest spreadeth;
 
 [More distant.]
 O follow, follow
@@ -9131,13 +8319,6 @@ for the press.
 186. gently-falling] Nbk 8; gently falling 1820, 1839.
 
 Echoes
-190 In the world unknown
-Sleeps a voice unspoken;
-By thy step alone
-Can its rest be broken,
-Child of Ocean!
-
-Echoes
 O follow, follow
 Through the caverns hollow;
 As the song floats, thou pursue,
@@ -9149,10 +8330,6 @@ Where the Earth reposed from spasms
 On the day when He and thou
 205 Parted — to commingle now,
 Child of Ocean!
-
-Asia
-Come, sweet Panthea, link thy hand in mine,
-And follow, ere the voices fade away.
 
 190. Here and at line 196, the choral Echoes are altered, presumably in the press transcript, from the
 singular Echo of Nbk 8.
@@ -9168,10 +8345,6 @@ November 1818, ‘the many folded Apennines’ (L ii 53). mountains,] mountains 
 Asia exiled (cp. Act I 165–8); see note above to lines 166ff.
 203. spasms] Nbk 8; spasms, 1820, 1839.
 205. Parted —] Nbk 8; Parted, 1820, 1839. now,] now Nbk 8; now; 1820, 1839.
-
-Scene ii
-A forest, intermingled with rocks and caverns. Asia and Panthea pass into it. Two young
-Fauns are sitting on a rock, listening.
 
 Semichorus I of Spirits
 The path through which that lovely twain
@@ -9293,10 +8466,6 @@ Like many a lake-surrounded flute,
 Sounds overflow the listener’s brain
 40 So sweet, that joy is almost pain.
 
-25. noonday;] noonday Nbk 8; noon-day, 1820, 1839. When in the following line is not in apposition
-with noonday.
-26–35. Perhaps recalling Orsino’s opening speech in Twelfth Night:
-
 If music be the food of love, play on,
 Give me excess of it, that, surfeiting,
 The appetite may sicken and so die.
@@ -9305,9 +8474,6 @@ O, it came o’er my ear like the sweet sound
 That breathes upon a bank of violets,
 Stealing and giving odour! Enough, no more;
 Tis not so sweet now as it was before.
-
-27. Ivy was sacred to Bacchus (see Ovid, Fasti iii 767–70), and by the renaissance was associated with
-erotic desire; cp. e.g. Faerie Queene II v 29:
 
 And ouer him, art striuing to compair
 With nature, did an Arber greene dispred,
@@ -9355,29 +8521,10 @@ following their own wishes they are obeying the dictate of historical necessity�
 46. Anticipating the closing lines of Act II scene v.
 48–9. S. repeatedly associates sleep with an unconsciousness of, or unconcern for, pressing social and
 
-Thou who didst waken from his summer dreams
-The blue Mediterranean, where he lay,
-Lulled by the coil of his chrystalline streams,
-
-Beside a pumice isle in Baiæ’s bay,
-And saw in sleep old palaces and towers
-Quivering within the wave’s intenser day,
-
-All overgrown with azure moss and flowers
-So sweet, the sense faints picturing them!
-
-As I lay asleep in Italy
-There came a voice from over the Sea,
-And with great power it forth led me
-To walk in the Visions of Poesy.
-
 50–1. An important crux, affecting the meaning of the scene, and bearing on the poem’s larger the-
 matic preoccupation with human agency in revolutionary change. The lines are mispunctuated in 1820
 (and 1829), and various eds (notably Rossetti 1870 and Hutchinson) have compounded the resulting
 confusion. Nbk 8 reads:
-
-And wakes the destinied [sic] soft emotion,
-Attracts, impels them: those who saw
 
 Attracts, impels them; those who saw
 Say from the breathing Earth behind
@@ -9436,11 +8583,6 @@ We haunt within the least frequented caves
 And closest coverts, and we know these wilds,
 Yet never meet them, though we hear them oft:
 Where may they hide themselves?
-
-Second Faun
-‘Tis hard to tell:
-70 I have heard those more skilled in spirits say,
-The bubbles, which the enchantment of the sun
 
 64–97. This passage was added later on the blank ff. 37r and 38r in Nbk 8. The lines are not included in
 S.’s running line-count, and ‘Fawns’ was probably the last addition to the list of ‘Dramatis Personae’
@@ -9519,10 +8661,6 @@ noun its to their, thus changing the implied referent from fiery air to spirits 
 a new line by adding And bow their burning crests as the first half of a line completed by & glide with
 it, to give:
 
-They ride on it & rein their headlong speed
-And bow their burning crests & glide in fire
-Under the waters of the Earth again
-
 S.’s alteration of its to their is however so placed on the page (and with the extra confusion of another
 their messily cancelled) as to suggest that it could easily have been miscopied in the press transcript as
 a them, replacing the it in They ride on it. See BSM ix 306–7 for a facsimile and transcript of Nbk 8 f.
@@ -9578,14 +8716,6 @@ are Plutarch, Moralia, ‘De defectu oraculorum’, xl, xliii, l; Diodorus Sicul
 of the Cumaean Sybil cp. Aeneid vi 240ff.; S. and Mary visited the landscape of Virgil’s poem during
 their stay in Naples (see L ii 61). On S.’s conception of the vapour itself, see below, note to line 44.
 
-hurled] breathed Nbk 8. The change from Nbk 8 cannot be a mistranscription; S. presumably altered
-the press transcript, perhaps to avoid a repetition of breathing from the previous line.
-
-That maddening wine of life, whose dregs they drain
-To deep intoxication, and uplift,
-Like Mænads who cry loud, Evoe! Evoe!
-10 The voice which is contagion to the world.
-
 Asia
 Fit throne for such a Power! Magnificent!
 How glorious art thou, Earth! and if thou be
@@ -9631,8 +8761,6 @@ spirit 1820, 1839.
 comma, and subsequent eds have introduced a stop after adoreth (e.g. Rossetti 1870, Woodberry 1893,
 Locock 1911). But the dashes in Asia’s speech in this scene appear to come more frequently as she
 approaches the moment of special insight signalled in lines 43–6.
-
-18. Sister —] Nbk 8; sister, 1820, 1839. Asia anticipates the intoxicating effect of the vapour.
 
 Beneath is a wide plain of billowy mist,
 20 As a lake, paving in the morning sky,
@@ -9707,10 +8835,6 @@ Flake after flake: in Heaven-defying minds
 Is loosened, and the nations echo round,
 Shaken to their roots: as do the mountains now.
 
-Panthea
-Look, how the gusty sea of mist is breaking
-In crimson foam, even at our feet! — it rises
-
 29. icy spires] Above pyramids canc. Nbk 8; cp. L i 496, ‘the snowy pyramids which shot into the bright blue sky’.
 33. walls —] Nbk 8; walls, 1820, 1839.
 36–42. Cp. S.’s letter to Peacock from Chamounix, 26 July 1816 (L i 501; included in 1817, Prose Works i
@@ -9746,15 +8870,6 @@ post-revolutionary crimson air.
 43. Look,] Nbk 8; Look 1820, 1839.
 44. feet! —] Nbk 8; feet! 1820, 1839.
 
-45 As Ocean at the enchantment of the moon
-Round foodless men wrecked on some oozy isle.
-
-Asia
-The fragments of the cloud are scattered up —
-The wind that lifts them disentwines my hair —
-Its billows now sweep o’er mine eyes — my brain
-50 Grows dizzy — seest thou shapes within the mist?
-
 46. some] an Nbk 8; presumably a change to the press transcript.
 47–50. The unusually frequent dashes in Nbk 8 are expressive of Asia’s heightening excitement as the
 intoxicating vapour takes effect. Locock 1911 cps. Byron, Manfred (1817) I ii 85–9:
@@ -9771,12 +8886,6 @@ Heap’d with the damn’d like pebbles. — I am giddy.
 when the pronoun precedes a vowel. eyes —] Nbk 8; eyes; 1820, 1839.
 50. This line presents an important textual crux. Nbk 8 at first read:
 
-S. then cancelled I, altered see shapes by placing a caret after see and writing st thou above, and altered
-mist to mist?, to give
-
-Grows dizzy — seest thou shapes within the mist?
-In 1820 (and 1829), the line appeared as
-
 It is difficult to see how S. himself can have produced this reading, as it appears to be a mis-
 reading of the altered MS, which produces an awkward and wholly uncharacteristic ametrical
 line (the strong pause after dizzy makes a possible elision unlikely). The implications are that
@@ -9788,21 +8897,6 @@ the metre, to give
 Grows dizzy; I see shapes within the mist.
 There is a photographic reproduction and transcription of the MS in BSM ix 314–15, with commen-
 tary on 593–4. Neil Fraistat in BSM reads S.’s insert as those rather than thou (but this would have
-
-produced a slightly awkward reading), and entertains the possibility that mist may at some point have
-read mists.
-
-Panthea
-A countenance with beckoning smiles — there burns
-An azure fire within its golden locks —
-Another and another — hark! they speak!
-
-Song of Spirits
-To the Deep, to the Deep,
-55 Down, down!
-Through the shade of Sleep,
-Through the cloudy strife
-Of Death and of Life;
 
 51–2. Grabo (1930) 145 suggests that S. has electricity in mind in these lines, but the Spirit is ‘more
 likely to be gaseous oxide of carbon, described by Davy as burning blue at the base of yellow flames,
@@ -9845,11 +8939,6 @@ ignorant was born the suspicion of a divine presence, a divinity whom they imagi
 the earth, Demogorgon.’
 56. Sleep,] Nbk 8; sleep, 1820, 1839.
 58. Life;] life Nbk 8.
-
-Through the veil and the bar
-60 Of things which seem and are,
-Even to the steps of the remotest Throne,
-Down, down!
 
 While the sound whirls around,
 Down, down!
@@ -9940,12 +9029,6 @@ raised in power’.
 97. snake-like doom] Cp. IV 567.
 98. alone!] Nbk 8; alone. 1820, 1839.
 
-Panthea
-I see a mighty Darkness
-Filling the seat of power; and rays of gloom
-Dart round, as light from the meridian sun,
-5 Ungazed upon and shapeless — neither limb,
-
 II. iv. SD. The arrival of Asia and Panthea at Demogorgon’s cave is crucial in relation to the poem’s
 volcanic symbolism: ‘It is clear what was to be expected, scientifically speaking, if children of Ocean
 were drawn into contact with the magma of a volcanic cavern — a violent eruption, accompanied by the
@@ -9981,16 +9064,6 @@ extremely hot; too hot to be visible. It was known, in Herschel’s own words on
 Demogorgon is, in fact, realised in terms of molten magma, the obscure and terrible volcanic agent
 hidden in the depths of the earth’. Butter (1954) 154 suggests a source in Davy’s Elements of Chemical
 
-Philosophy (1811) II ii.
-3. power;] Nbk 8; power, 1820, 1839.
-4. sun,] Sun Nbk 8.
-5. shapeless —] shapeless — . . . Nbk 8; shapeless; 1820, 1839.
-
-Asia
-Who made all
-10 That it contains — thought, passion, reason, will,
-Imagination?
-
 Asia
 Who made that sense which, when the winds of spring
 In rarest visitation, or the voice
@@ -10010,9 +9083,6 @@ Act II. Cp. S.’s essay ‘On Love’ (1818): ‘There is eloquence in the tong
 flowing brooks and the rustling of reeds beside them, which by their inconceivable relation to some-
 thing within the soul awaken the spirits to dance of breathless rapture, and bring tears of mysterious
 tenderness to the eyes, like the enthusiasm of patriotic success, or the voice of one beloved singing to
-
-you alone . . . So soon as this want or power is dead, Man becomes a living sepulchre of himself, and
-what yet survives is the mere husk of what once he was.’ (SC 488; SC vi 635).
 
 Asia
 And who made terror, madness, crime, remorse,
@@ -10037,19 +9107,10 @@ nif[ic]ence of the architecture around a conflict of sensations allied to madnes
 Italy: moral degradation contrasted with the glory of nature & the arts’ (L ii 93–4). See also Mary L i
 66–7 (qu. in note to Mazenghi, Longman ii 352, no. 166 lines 7–11), Q Mab v 51–2 and note, and J&M
 
-‘Month after month,’ he cried, ‘to bear this load
-And as a jade urged by the whip and goad
-To drag life on, which like a heavy chain
-Lengthens behind with many a link of pain! — ’
-
 22. heavily —] Nbk 8; heavily, 1820, 1839.
 24–5. These lines were added later in Nbk 8 on f. 42r facing the draft on f. 41v (but before the final stanza
 of the ‘Song of Spirits’ from II iii, which is also drafted on f. 42r).
 27–8. S. has cancelled three lines at this point in Nbk 8:
-
-Or looks which tell that while the lips are calm
-And the eyes cold, the spirit weeps within
-Tears like the sanguine sweat of agony;
 
 As various commentators have noted, these lines also appear, slightly modified, in Athanase
 (Detached Passage a, lines 1–3) and The Cenci I i 109–13.
@@ -10060,14 +9121,6 @@ to interrogate her own soul; and Demogorgon can supply no answer that she cannot
 this moment of supreme prophetic consciousness, or for which she has insufficient knowledge even to
 frame the question meaningfully’ (GM). With Demogorgon’s repeated He reigns, cp. Asia’s definition
 of to reign at lines 47–8 below.
-
-Asia
-Utter his name: a world pining in pain
-30 Asks but his name: curses shall drag him down.
-
-Asia
-Who reigns? There was the Heaven and Earth at first,
-And Light and Love; then Saturn, from whose throne
 
 30. curses] Ironically counterpointing Prometheus’s preoccupation with his curse in Act I.
 31. Asia becomes conscious that she is about to be inspired to prophecy (in the long speech which
@@ -10089,9 +9142,6 @@ in Shelley’, in Essays and Studies iv (1913) 72–100, esp. 98–9), and Rouss
 but S.’s primal period is not here idealised: cp. ‘Essay on Christianity’ (1817): ‘The . . . antient Poets . . .
 represented equality as the reign of Saturn, and taught that mankind had gradually degenerated from
 the virtue which enabled them to enjoy or maintain this happy state. Their doctrine was philosophi-
-
-cally false . . . uncivilized man is the most pernicious and miserable of beings . . .’ (Prose Works i 268).
-Cp. also the opening of Virgil’s Eclogue iv:
 
 Ultima Cumaei venit iam carminis aetas;
 magnus ab integro saeculorum nascitur ordo.
@@ -10303,13 +9353,6 @@ dominion like the god/Of this new world . . .’
 107. Cp. Prometheus Bound 6: ἀδαμαντίνων δεσμῶν ἐν ἀρρήκτοις πέδαις (‘adamantine chains that can-
 not be broken’).
 
-Cursed him, he trembled like a slave. Declare
-Who is his master? Is he too a slave?
-
-Demogorgon
-110 All spirits are enslaved which serve things evil:
-Thou knowest if Jupiter be such or no.
-
 Demogorgon
 If the Abysm
 115 Could vomit forth its secrets: — but a voice
@@ -10318,10 +9361,6 @@ For what would it avail to bid thee gaze
 On the revolving world? what to bid speak
 Fate, Time, Occasion, Chance and Change? To these
 120 All things are subject but eternal Love.
-
-Asia
-So much I asked before, and my heart gave
-The response thou hast given; and of such truths
 
 109–16. Cp. the questions and answers between Philocles and Lysis (a Pythagorean) in Barthelemy vi
 24–32: ‘Philocles: Tell me, Lysis, who formed the world?/Lysis: God./. . . Philocles: Is God the author of
@@ -10373,13 +9412,6 @@ and note.
 132. charioteer,] Nbk 9; charioteer 1820, 1839.
 133. Recalling Coleridge, Ancient Mariner (1798) 451–6:
 
-Like one, that on a lonely road
-Doth walk in fear and dread,
-And having once turn’d round, walks on
-And turns no more his head:
-Because he knows, a frightful fiend
-Doth close behind him tread.
-
 135–8. Cp. S.’s description in a letter to Peacock of the Arch of Titus in Rome: ‘There are three arches,
 whose roofs are panelled with fretwork, & their sides adorned with similar reliefs. The keystone of
 these arches is supported each by two winged figures of Victory, whose hair floats on the wind of their
@@ -10387,31 +9419,6 @@ own speed, & whose arms are outstretched bearing trophies, as if impatient to me
 are parted; a delicate mode of indicating the fervour of their desire to arrive at their destined resting
 place, & to express the eager respiration of their speed.’ (To Peacock, 23 March 1819, L ii 86, 89). S. also
 recalls Ariel’s ‘I drink the air before me, and return’, The Tempest V i 102.
-
-And now, even now, they clasped it. Their bright locks
-Stream like a comet’s flashing hair: they all
-140 Sweep onward.
-
-Demogorgon
-These are the immortal Hours,
-Of whom thou didst demand. One waits for thee.
-
-Asia
-A spirit with a dreadful countenance
-Checks its dark chariot by the craggy gulf.
-Unlike thy brethren, ghastly charioteer,
-145 What art thou? Whither wouldst thou bear me? Speak!
-
-Spirit
-I am the shadow of a destiny
-More dread than is my aspect: ere yon planet
-Has set, the Darkness which ascends with me
-Shall wrap in lasting night Heaven’s kingless throne.
-
-Panthea
-That terrible shadow floats
-Up from its throne, as may the lurid smoke
-Of earthquake-ruined cities o’er the sea.
 
 138. locks] hair Nbk 9; altered in the press transcript because of the changes to the following line.
 139. Nbk 9 first read Streams on the blast like meteors & they all. S. then cancelled the line and wrote
@@ -10434,10 +9441,6 @@ the distance, vomiting up flames and smoke, and blasting every thing around with
 151. S. at first wrote as doth the lurid smoke, then cancelled doth and substituted may, and cancelled
 smoke and substituted dust; the reversion to may and smoke in the press transcript was perhaps to
 avoid the near rhyme on doth and dust.
-
-Lo! it ascends the Car . . . the coursers fly
-Terrified: watch its path among the stars
-155 Blackening the night!
 
 Panthea
 See, near the verge, another chariot stays:
@@ -10486,29 +9489,12 @@ We encircle the earth and the moon:
 We shall rest from long labours at noon:
 Then ascend with me, Daughter of Ocean.
 
-Scene v
-The Car pauses within a cloud on the top of a snowy mountain. Asia, Panthea, and the Spirit
-of the Hour.
-
 Spirit
 On the brink of the night and the morning
 My coursers are wont to respire;
 But the Earth has just whispered a warning
 That their flight must be swifter than fire:
 5 They shall drink the hot speed of desire!
-
-Asia
-Thou breathest on their nostrils, but my breath
-Would give them swifter speed.
-
-Panthea
-O Spirit! pause, and tell whence is the light
-Which fills this cloud — the sun is yet unrisen.
-
-169. desire —] Nbk 9; desire: 1820, 1839.
-170. fear —] Nbk 9; fear: 1820, 1839.
-173. at] ere Nbk 9; presumably a change to the press transcript.
-174. Daughter] daughters Nbk 9; daughter 1820, 1839.
 
 II v1–2. See II iv 163–6 and note.
 2. respire] I.e. take breath.
@@ -10521,10 +9507,6 @@ only broken by the frequent flashes of lightning which partially displayed the m
 Review v (1804) 31). S. also suggests the ‘darkness at noon’ of the crucifixion: cp. Matthew xxvii 45,
 ‘Now from the sixth hour there was darkness over all the land unto the ninth hour’; and Joshua x 13:
 ‘And the sun stood still, and the moon stayed, until the people had avenged themselves upon their
-
-enemies . . . So the sun stood still in the midst of heaven, and hasted not to go down about a whole day’.
-8. O] Nbk 9; Oh 1820, 1839.
-9. this cloud —] Nbk 9; the cloud? 1820, 1839.
 
 Spirit
 10 The sun will rise not until noon. Apollo
@@ -10630,9 +9612,6 @@ Make the cold air fire; then screen them
 In those looks where whoso gazes
 Faints, entangled in their mazes.
 
-Child of Light! thy limbs are burning
-55 Through the vest which seems to hide them,
-
 47. List! Spirits speak.] 1820; List, spirits speak Nbk 9; List! Spirits, speak. 1829, 1839. As Taylor 41
 notes, the perpetuation in 1839 of an obvious error introduced in 1829 is evidence that 1829 was
 the copy text for PU in 1839; see headnote, and II i 171 and note. The attribution of this half-line to
@@ -10661,15 +9640,6 @@ est induere nuptam ventum textilem,/palam prostare nudam in nebula linea’ (‘
 clothe herself in woven wind, as stand forth publicly naked under her mist of muslin’).
 54. limbs] Nbk 9, 1839; lips 1820, 1829. S. also corrected the word in his presentation copy of 1820 to
 Leigh Hunt (see BSM ix 610); lips for limbs does not immediately suggest a printer’s error, but it is hard
-
-to believe that Peacock or anyone else could have introduced the mistake in checking proof. Such a
-painfully obvious error will have been in S.’s errata list.
-55. them,] them Nbk 9; them; 1820, 1839.
-
-As the radiant lines of morning
-Through the clouds ere they divide them;
-And this atmosphere divinest
-Shrouds thee wheresoe’er thou shinest.
 
 60 Fair are others; — none beholds thee,
 But thy voice sounds low and tender
@@ -10705,19 +9675,6 @@ transcript, which makes clear that the preceding lines 48–71 are sung by Prome
 lips, thus providing a climax to her intermediary role between the central characters:
 
 Asia
-You said that Spirits spoke but it was thee
-Sweet sister, for even now thy curved lips
-Tremble as if the sound were dying there
-Not dead
-
-Panthea
-Alas it was Prometheus spoke
-Within me, and I know it must be so
-I mixed my own weak nature with his love
-and
-And my thoughts
-
-Asia
 My soul is an enchanted boat
 Which, like a sleeping swan, doth float
 Upon the silver waves of thy sweet singing;
@@ -10740,11 +9697,6 @@ Without a course, without a star,
 90 But by the instinct of sweet music driven;
 Till, through Elysian garden islets
 By thee, most beautiful of pilots,
-
-Are like the many forests of a vale
-Through which the might of whirlwind and of rain
-Had passed they glimmer through the evening light
-As mine do now in thy beloved smile.
 
 The passage is given here with light editorial tidying; for a full diplomatic text, see BSM ix 374–5.
 72–110. This lyric was a late addition in Nbk 9, probably one of the additional passages for PU S. sent
@@ -10854,9 +9806,6 @@ on S.’s errata list.
 15. unsandalled] Timothy Webb (‘Negatives in Prometheus Unbound’, in Shelley Revalued 39) suggests
 that S. adapts this word from the Gk ἀσάνδᾰλος, found for example in Bion, ‘Death of Adonis’ 21 (trans.
 
-by S. in 1819; see Longman ii 697–700, no. 201).
-17. Aspiring . . . unrepressed;] Nbk 9; Aspiring, unrepressed, 1820, 1839.
-
 Even now have I begotten a strange wonder,
 That fatal child, the terror of the earth,
 20 Who waits but till the destined Hour arrive,
@@ -10872,12 +9821,6 @@ I begotten thee’; and Hebrews i 5: ‘For unto which of the angels said he at 
 this day have I begotten thee? And again, I will be to him a Father, and he shall be to me a Son?’
 19. child,] Child, Nbk 9. earth,] Earth, Nbk 9. The pun on fatal, i.e. both ‘destined’ and ‘destructive’, is
 Miltonic; cp. Paradise Lost ii 101–5:
-
-by proof we feel
-Our power sufficient to disturb his heaven,
-And with perpetual inroads to alarm,
-Though inaccessible, his fatal throne;
-Which if not victory is yet revenge.
 
 C. E. Pulos (‘Shelley and Malthus’, PMLA lxvii (1952) 113–24) has persuasively argued that the fatal
 child represents the ideas of Thomas Malthus as set forth in his Essay on the Principle of Population
@@ -11060,8 +10003,6 @@ BSM ix 394–5).
 71. will] shall Nbk 9; presumably S.’s alteration to the press transcript. in] Nbk 9; on 1820, 1839; the i of
 in in Nbk 9 is formed slightly to resemble what could be an o, but the dot above is clear.
 
-72. A recurring image in S. for the battle of good and evil; cp. L&C I vi–xiv and note, Alastor 227–32.
-
 Drop, twisted in inextricable fight,
 Into a shoreless sea. Let hell unlock
 75 Its moulded oceans of tempestuous fire,
@@ -11074,14 +10015,6 @@ Ai! Ai!
 Dizzily down — ever, forever, down;
 And, like a cloud, mine enemy above
 Darkens my fall with victory! Ai! Ai!
-
-Scene ii
-The mouth of a great river in the Island Atlantis. Ocean is discovered reclining near the shore;
-Apollo stands beside him.
-
-Apollo
-Aye, when the strife was ended which made dim
-The orb I rule, and shook the solid stars.
 
 75. oceans] Oceans Nbk 9.
 77. This and thee read The and thou in Nbk 9; presumably S.’s change to the press transcript.
@@ -11107,9 +10040,6 @@ III iv 111–21 and note.
 2–9. As Cameron (1974) 531 notes, these lines imply a considerable passage of time.
 2. dim] Written after pale canc. in Nbk 9.
 3. stars.] Nbk 9; stars, 1820, 1839. Reiman (1977) glosses solid stars as ‘the fixed stars’; but S. probably
-
-intends the planets: cp. Herschel, qu. in Grabo (1930) 83: ‘planets [as distinct from stars] are solid
-opaque bodies, shining only by superficial light, whether it be innate or reflected’.
 
 The terrors of his eye illumined Heaven
 5 With sanguine light, through the thick ragged skirts
@@ -11150,9 +10080,6 @@ cloud, thunder, whirlwind, white lightning and hail all suggest that he sustains
 Demogorgon’s intervention with the phenomena of a major volcanic eruption.
 11. so,] Nbk 9; so 1820, 1839; i.e. ‘like an eagle’, with the verb understood from the preceding line.
 19. I.e. there will be no more naval wars or slavery; cp. lines 29–31 and note below.
-
-22. many-peopled] Nbk 9; many peopled 1820, 1839.
-24. Proteus] See III iii 65 and note. nymphs] Nymphs Nbk 9.
 
 The floating bark of the light-laden moon
 With that white star, its sightless pilot’s crest,
@@ -11209,21 +10136,6 @@ Hastening to grace their mighty sister’s joy.
 [A sound of waves is heard.
 It is the unpastured sea hungering for calm.
 50 Peace, monster; I come now! Farewell.
-
-Scene iii
-Caucasus. Prometheus, Hercules, Ione, the Earth, Spirits, Asia, and Panthea, borne in the
-Car with the Spirit of the Hour.
-
-Hercules
-Most glorious among Spirits, thus doth strength
-To wisdom, courage, and long-suffering love,
-And thee, who art the form they animate,
-Minister, like a slave.
-
-Prometheus
-Thy gentle words
-5 Are sweeter even than freedom long desired
-And long delayed.
 
 46. Cp. L&C II xxix 919–20.
 48. The SD following this line reads The roar of waves is heard; it has been added later in pencil, and was
@@ -11308,11 +10220,6 @@ Which twinkle on the fountain’s brim, and make
 Strange combinations out of common things,
 Like human babes in their brief innocence;
 
-We came at last
-To a small chamber, which with mosses rare
-Was tapestried, where me his soft hands placed
-Upon a couch of grass and oak-leaves interlaced.
-
 Come, let’s away to prison.
 We two alone will sing like birds i’ th’ cage;
 When thou dost ask me blessing, I’ll kneel down
@@ -11371,12 +10278,6 @@ Beyond (1973) 197–9.
 winds, 1820, 1839.
 41–3. The verb is understood from line 41; ‘as bees . . . [meet] . . . at their known island homes’.
 S.’s phrasing probably most directly recalls Paradise Lost iv 268–71:
-
-Not that fair field
-Of Enna, where Proserpine gathering flowers
-Her self a fairer flower by gloomy Dis
-Was gathered, which cost Ceres all that pain
-To seek her through the world . . .
 
 There may also be a recollection of Marvell, ‘Upon Appleton House’ 291: ‘The bee through these
 known alleys hums’. Proserpina was raped by Dis in a high (aerial) flowery meadow near Henna in
@@ -11451,10 +10352,6 @@ Made Asia’s nuptial boon, breathing within it
 A voice to be accomplished, and which thou
 Didst hide in grass under the hollow rock.
 
-Ione
-Thou most desired Hour, more loved and lovely
-70 Than all thy sisters, this is the mystic shell;
-
 60. Cp. II v 40.
 62. fall . . .] Nbk 9; fall: 1820, 1839.
 64–8. This passage appears to include a complex pun on S.’s name and poetic calling, and suggests fur-
@@ -11493,14 +10390,6 @@ old] Nbk 9, 1820; old, 1839.
 ing would imply an erratum noted by S., but here the sense suggests a transcription error in Nbk 9
 perhaps coinciding with an uncaught printer’s error in 1839.
 
-See the pale azure fading into silver
-Lining it with a soft yet glowing light:
-Looks it not like lulled music sleeping there?
-
-Spirit
-It seems in truth the fairest shell of Ocean:
-75 Its sound must be at once both sweet and strange.
-
 Prometheus
 Go, borne over the cities of mankind
 On whirlwind-footed coursers: once again
@@ -11537,10 +10426,6 @@ script. 1820 has a gap between lines 83 and 84, which might suggest a printer’
 I 112ff. and note, and see lines 111–12 and note below.
 85. their touch] Nbk 9; thy touch 1820, 1839; probably a printer’s error uncaught by Mary.
 
-88. And] Nbk 9, 1820; And, 1839.
-91. arms —] arms; Nbk 9, 1820, 1839; dashes here and at line 95 below clarify that the list from lines 91–5
-predicates the many children of line 90 above.
-
 And creeping forms, and insects rainbow-winged,
 And birds, and beasts, and fish, and human shapes,
 Which drew disease and pain from my wan bosom,
@@ -11557,15 +10442,6 @@ Strength for the coming day and all its joy:
 105 And death shall be the last embrace of her
 Who takes the life she gave, even as a mother,
 Folding her child, says, ‘Leave me not again!’
-
-Asia
-O mother! wherefore speak the name of death?
-Cease they to love, and move, and breathe, and speak,
-110 Who die?
-
-The Earth
-It would avail not to reply:
-Thou art immortal, and this tongue is known
 
 93–5. Grabo (1930) cites Darwin’s view in Botanic Garden that ‘contagious atoms’ sent up from the centre of
 the earth by volcanic eruption were the source of pestilence: ‘Those epidemic complaints, which are gener-
@@ -11601,11 +10477,6 @@ Shall clothe the forests and the fields — aye, even
 The crag-built deserts of the barren deep —
 With ever-living leaves, and fruits, and flowers.
 And Thou! There is a Cavern where my spirit
-
-When faith and love which parted from thee never,
-Had ripened thy just soul to dwell with God,
-Meekly thou didst resign this earthy load
-Of death, called life; which us from life doth sever.
 
 Cp. also F. Salignac de la Mothe-Fénelon, Adventures of Telemachus (1699; trans. J. Hawkesworth,
 1784) 179, 184: ‘ “It is here alone,” [in Elysium] says he, “that there is life; the shadow only, and not the
@@ -11668,11 +10539,6 @@ account of a cave at lines 10–24.
 rise of Napoleonic imperialism, following the French Revolution; cp. Childe Harold’s Pilgrimage III
 lxxxi, on Napoleon:
 
-For then he was inspired, and from him came,
-As from the Pythian’s mystic cave of yore,
-Those oracles which set the world in flame,
-Nor ceased to burn till kingdoms were no more . . .
-
 126. who] Nbk 9, 1820; that 1829, 1839; clear evidence that Mary used 1829 as the copy-text for 1839
 (see Taylor 41).
 131–4. The exhalation of a crimson air suggests the ‘nitrous gas’ described by Humphrey Davy and
@@ -11685,9 +10551,6 @@ S.’s change to the press transcript, but possibly altered by the printer or in
 136. Ivy was sacred to Bacchus (Ovid, Fasti iii 767–70); S. thus develops the Dionysian associations of
 the cave, and anticipates the reference of line 154 below.
 137–8. Cp. S.’s description of the Astroni crater near Naples: ‘The willow trees had just begun to put
-
-forth their green & golden buds, and gleamed like points of lambent fire among the wintry forest’ (L
-ii 78).
 
 Which star the winds with points of coloured light
 As they rain through them, and bright, golden globes
@@ -11711,11 +10574,6 @@ star written in pencil on the facing page; a change to the fair copy which must 
 the press transcript. light] Nbk 9; light, 1820, 1839.
 139. bright,] Nbk 9, 1820; bright 1839.
 139–40. Cp. Mazenghi (Longman ii, no. 166) 80–3 (and see note):
-
-it was a feast
-When’er he found those globes of deep red gold
-Which in the woods the strawberry tree doth bear,
-Suspended in their emerald atmosphere.
 
 140. heaven;] Nbk 9; heaven, 1820, 1839; the long sentence lines 124–47 involves from line 135 a series
 of complex clauses all governed by It feeds. S.’s semicolon here (and at line 144) helps better than a
@@ -11762,14 +10620,6 @@ Diodorus Siculus i 15, iii 68). Nysa, variously a mountain, city, or island, was
 to the East of Greece; places were named after the mythic Nysa by adherents of Dionysian cults. S.’s
 geography implies a journey from the Indian Caucasus westwards and north towards Athens and the
 Promethean temple of line 161 below (see Curran (1975) 91). The details may also recall Paradise Lost
-
-iv 275–9 (a passage immediately following that recollected in lines 41–3 above):
-
-that Nyseian isle
-Girt with the river Triton, where old Cham,
-Whom Gentiles Ammon call and Lybian Jove,
-Hid Amalthea and her florid son
-Young Bacchus from his stepdame Rhea’s eye . . .
 
 155. Indus,] Nbk 9; Indus 1820, 1839.
 157. undelaying;] Nbk 9; undelaying, 1820, 1839.
@@ -11839,22 +10689,6 @@ changed and, like runners, pass on the torch of life’, Loeb trans.)
 170. emblem . . .] Nbk 9; emblem; 1820, 1839.
 171–5. In Nbk 9, S. first wrote
 
-Who bear the untransmitted torch of hope
-Into the grave across the night of life . . .
-Beside it is the destined Cave . . . depart!
-
-He then wrote on the facing page the further lines As thou hast borne it most triumphantly/To this High
-[alt. to far] goal of Time . . . depart, farewell!, and corrected line 175 to its received form.
-
-Into the grave, across the night of life,
-As thou hast borne it most triumphantly
-To this far goal of Time. Depart, farewell.
-175 Beside that temple is the destined Cave.
-
-Scene iv
-A forest. In the background, a Cave. Prometheus, Asia, Panthea, Ione, and the Spirit of the
-Earth.
-
 Ione
 Sister, it is not earthly . . . how it glides
 Under the leaves! how on its head there burns
@@ -11862,11 +10696,6 @@ A light like a green star, whose emerald beams
 Are twined with its fair hair! how, as it moves,
 5 The splendour drops in flakes upon the grass!
 Knowest thou it?
-
-Panthea
-It is the delicate spirit
-That guides the earth through heaven. From afar
-The populous constellations call that light
 
 175. Cave.] Cave . . . Nbk 9; cave. 1820, 1839.
 III iv 1–19. This description of the Spirit of the Earth combines various effects of electricity as under-
@@ -11886,12 +10715,6 @@ conforming to contemporary scientific opinion that electricity was emitted from 
 2–4. The details here suggest a Leyden Jar, an instrument very familiar to S., which produces a green
 electric light if the terminals are of copper (see Grabo (1930) 126).
 5. Cp. Coleridge, Ancient Mariner 272–6:
-
-Beyond the shadow of the ship
-I watched the water-snakes:
-They moved in tracks of shining white,
-And when they reared, the elfish light
-Fell off in hoary flakes.
 
 Coleridge is himself thinking here of the phosphorescence of marine life in tropical waters.
 7. heaven.] Heaven. Nbk 9.
@@ -11923,16 +10746,6 @@ May I then hide my eyes in thy soft arms,
 After thy looks have made them tired of joy?
 May I then play beside thee the long noons,
 When work is none in the bright silent air?
-
-Asia
-30 I love thee, gentlest being, and henceforth
-Can cherish thee unenvied. Speak, I pray:
-Thy simple talk once solaced, now delights.
-
-Spirit of the Earth
-Mother, I am grown wiser, though a child
-Cannot be wise like thee, within this day;
-35 And happier too; happier and wiser both.
 
 15–19. The Spirit’s energy is renewed from Asia, who is its mother; cp. III iii 148–52.
 19. dipsas;] Nbk 9; dipsas, 1820, 1839. The dipsas (from Gk διψάω, to thirst’) was a mythical snake
@@ -12011,9 +10824,6 @@ Came — wouldst thou think that toads, and snakes and efts,
 And that with little change of shape or hue:
 All things had put their evil nature off.
 
-65–8. S. perhaps recalls Lucretius, De Re. Nat. iv 24ff., describing the Epicurean ειδωλα or ‘images’, the fine
-atomic films given off from the surfaces of things:
-
 esse ea quae rerum simulacra vocamus;
 quae, quasi membranae summo de corpore rerum
 dereptae, volitant ultroque citroque per auras,
@@ -12033,23 +10843,6 @@ headnote and notes to S.’s sonnet Lift not the painted veil.
 71. changed;] changed — Nbk 9; changed, 1820, 1839.
 74–6. Cp. Coleridge, Ancient Mariner 277–82:
 
-Within the shadow of the ship
-I watched their [i.e. the water-snakes’] rich attire:
-Blue, glossy green, and velvet black,
-They coiled and swam; and every track
-Was a flash of golden fire.
-
-O happy living things! no tongue
-Their beauty might declare:
-A spring of love gushed from my heart,
-And I blessed them unaware:
-Sure my kind saint took pity on me,
-And I blessed them unaware.
-
-74. Came —] Nbk 9; Came, 1820, 1839. snakes] Nbk 9; snakes, 1820, 1839.
-77. off.] off Nbk 9; off: 1820, 1839. Following this line in Nbk 9 is a canc. line: ‘Like an old garment soiled &
-overworn’.
-
 I cannot tell my joy, when o’er a lake,
 Upon a drooping bough with nightshade twined,
 80 I saw two azure halcyons clinging downward
@@ -12058,17 +10851,6 @@ With quick long beaks, and in the deep there lay
 Those lovely forms imaged as in a sky.
 So with my thoughts full of these happy changes,
 85 We meet again, the happiest change of all.
-
-Asia
-And never will we part, till thy chaste sister
-Who guides the frozen and inconstant moon
-Will look on thy more warm and equal light
-Till her heart thaw like flakes of April snow,
-90 And love thee.
-
-Asia
-Peace, wanton! thou art yet not old enough.
-Think ye, by gazing on each other’s eyes
 
 78–83. The halcyons — i.e. kingfishers, from Gk ἀλκυών — are no longer fish-eating but vegetarian,
 and the formerly poisonous berries of the woody nightshade are now edible (see headnote to Passion:
@@ -12099,10 +10881,6 @@ to question why he cannot produce offspring planets whose light would illumine s
 92. Cp. Dante, Convito Treatise III Ch. 12: ‘In other intelligences she [the divine philosophy] exists
 in a lesser way, as though a mistress, of whom no lover has complete enjoyment, but must satisfy his
 longing by gazing on her’ (trans. Philip Wicksteed).
-
-Spirit of the Earth
-95 Nay, Mother, while my sister trims her lamp
-’Tis hard I should go darkling.
 
 Sprit of the Hour
 Soon as the sound had ceased whose thunder filled
@@ -12146,14 +10924,6 @@ And you fair nymphs, looking the love we feel,
 115 In memory of the tidings it has borne;
 Beneath a dome fretted with graven flowers,
 Poised on twelve columns of resplendent stone,
-
-108–10. Cp. Ovid, Met. iv 214–15: ‘Axe sub Hesperio sunt pascua Solis equorum’ (‘Beneath the western
-skies lie the pastures of the Sun’s horses’, Loeb trans.) and Claudian, De Consulato Stilichonis ii 467–70:
-
-Sic fatus croceis rorantes ignibus hortos
-ingreditur vallemque suam, quam flammeus ambit
-rivus et inriguis largum iubar ingerit herbis,
-quas Solis pascuntur equi
 
 (‘So saying he entered his garden starred with fiery dew, the valley round which runs a river of flame
 feeding with its bounteous rays the dripping weeds whereon the horses of the sun do pasture’, Loeb trans.)
@@ -12247,9 +11017,6 @@ Those bitter ashes, a soul self-consumed,
 And the wretch crept, a vampire among men,
 Infecting all with his own hideous ill.
 
-136. abandon,] Nbk 9; abandon 1820, 1839. Recalling the words written on the gate of Hell in Dante,
-Inferno iii 1–9 (trans. Cary):
-
 Through me you pass into the city of woe:
 Through me you pass into eternal pain:
 Through me among the people lost for aye.
@@ -12295,11 +11062,6 @@ Thrones, altars, judgement-seats, and prisons — wherein,
 149–52. The verb in line 150 needs also to be understood in the line following: i.e. ‘that . . . talk which
 makes the heart deny the yes it breathes, yet which also makes the heart question that unmeant hypoc-
 risy . . .’ Cp. Coleridge, Christabel 662–5:
-
-And pleasures flow in so thick and fast
-Upon his heart, that he at last
-Must needs express his love’s excess
-With words of unmeant bitterness.
 
 153–63. S. repeatedly insists that the full equality of women is a necessary condition of a good society;
 see e.g. L&C II xxxiv–xlv, VIII xv.
@@ -12462,12 +11224,6 @@ honour for those honours/That are without him, as place, riches, and favour . . 
 195. tribeless] Nbk 9; tribeless, 1820, 1839.
 196–7. Recalling I 492. Cp. S.’s Sonnet: Political Greatness 10–14:
 
-Man who man would be,
-Must rule the empire of himself; in it
-Must be supreme, establishing his throne
-On vanquished will, — quelling the anarchy
-Of hopes and fears, — being himself alone.
-
 196. degree, — the King] Nbk 9; degree, the king 1820, 1839.
 197. wise: — but man:] Nbk 9; wise: but man 1820, 1839.
 198–9. S. is thinking of such things as sexual jealousy, the moral ostracism of ‘fallen women’ and vene-
@@ -12483,9 +11239,6 @@ also e.g. Virgil, Eclogue vi 31. After this line in Nbk 9, and at the very foot 
 Prometheus, centred as if to indicate a further speech.
 
 ## ACT IV
-
-Scene, — A part of the forest near the Cave of Prometheus. Panthea and Ione are sleeping:
-they awaken gradually during the first Song.
 
 Voice of Unseen Spirits
 The pale stars are gone!
@@ -12530,16 +11283,6 @@ in S.’s Italian trans. of these lines in Nbk 11 46 (though that trans. may wel
 the dark time under Jupiter that is finished, as the poem clearly proceeds to a prospect of future time
 (following line 56 below). The whole conception of Act IV 1–179 implies not that time has ended, but
 
-that in S.’s post-revolutionary vision humanity can bring time under a measure of control. Cp. S.’s note
-to Q Mab viii 203–7 and editorial notes.
-15. Strew, oh strew] Strew oh strew Nbk 7; Strew, oh, strew 1820; Strew, oh! strew 1839.
-
-Hair, not yew!
-Wet the dusty pall with tears, not dew!
-Be the faded flowers
-Of Death’s bare bowers
-20 Spread on the corpse of the King of Hours!
-
 Haste, oh haste!
 As shades are chased,
 Trembling, by day, from heaven’s blue waste,
@@ -12549,12 +11292,6 @@ From the children of a diviner day,
 With the lullaby
 Of winds that die
 On the bosom of their own harmony.
-
-Panthea
-The past Hours weak and grey,
-With the spoil which their toil
-Raked together
-From the conquest but One could foil.
 
 16. Cp. Adonais 91–99: ‘Another clipped her profuse locks, and threw/The wreath upon him, like an
 anadem,/Which frozen tears instead of pearls begem;’ these lines are based on Bion’s ‘Lament for
@@ -12575,11 +11312,6 @@ transcript.
 34. but One] Prometheus. The draft in Nbk 11 49 at first read which none, canc. and replaced with the
 received reading.
 
-Panthea
-They have passed;
-They outspeeded the blast;
-While’tis said, they are fled —
-
 Voice of Unseen Spirits
 40 Bright clouds float in heaven,
 Dew-stars gleam on earth,
@@ -12589,28 +11321,6 @@ By the storm of delight, by the panic of glee!
 45 They shake with emotion,
 They dance in their mirth —
 But where are ye?
-
-The pine boughs are singing
-Old songs with new gladness,
-50 The billows and fountains
-Fresh music are flinging,
-Like the notes of a spirit, from land and from sea;
-The storms mock the mountains
-
-36. blast;] blast, Nbk 7, 1820, 1839.
-37. fled —] Nbk 7; fled: 1820, 1839.
-38. oh] Nbk 7; oh, 1820; oh! 1839.
-40. heaven,] Heaven, Nbk 7.
-41. earth,] Earth, Nbk 7.
-42. ocean,] Ocean, Nbk 7.
-44. storm] Storm Nbk 7. panic] In the Gk sense, from Pan.
-46. mirth —] Nbk 7; mirth. 1820, 1839.
-52. spirit,] spirit Nbk 7, 1820, 1839.
-
-Semichorus of Hours I
-The voice of the Spirits of Air and of Earth
-Have drawn back the figured curtain of sleep
-Which covered our being and darkened our birth
 
 54. gladness —] gladness. Nbk 7, 1820, 1839. The first four words of this line in Nbk 7 are written above
 Both howl in their canc.
@@ -12623,23 +11333,6 @@ the received text; see line 13 and note above).
 58. Have] Attracted into the plural by Spirits; many eds have followed Rossetti 1870 in emending to has,
 but this obviously affects the prosody, and voice could be understood as plural. figured curtain] Cp. III
 iv 190 and note.
-
-Semichorus I
-An hundred ages we had been kept
-Cradled in visions of hate and care,
-And each one who waked as his brother slept
-Found the truth —
-
-Semichorus I
-65 We have heard the lute of Hope in sleep;
-We have known the voice of Love in dreams;
-We have felt the wand of Power, and leap —
-
-Chorus
-Weave the dance on the floor of the breeze,
-70 Pierce with song heaven’s silent light,
-Enchant the Day that too swiftly flees,
-To check its flight ere the cave of Night.
 
 60. deep —] Nbk 7; deep. 1820, 1839. Oh,] 1820; Oh Nbk 7; Oh! 1839.
 61–7. The future hours have existed in potential through the ages of oppression, imagining the evil
@@ -12654,24 +11347,6 @@ result of cramped space).
 68. beams.] beam Nbk 7; beams! 1820, 1839.
 69–72. These lines seem implicitly to suggest a change of emphasis: up to this point, time has been urged to
 pass quickly; now, it is urged to slow down.
-
-70. heaven’s] Heaven’s Nbk 7.
-71. Day] Nbk 7; day 1820, 1839.
-72. check] Written below soothe canc. in Nbk 7. Night.] Night; Nbk 7; night. 1820, 1839.
-73–6. See I 454–7 and note.
-74. Day] Day, Nbk 7; day 1820, 1839.
-
-75 And it limped and stumbled with many wounds
-Through the nightly dells of the desert year.
-
-But now — oh weave the mystic measure
-Of music and dance and shapes of light,
-Let the Hours, and the Spirits of might and pleasure,
-80 Like the clouds and sunbeams, unite.
-
-Panthea
-See, where the Spirits of the human mind
-Wrapped in sweet sounds, as in bright veils, approach.
 
 Chorus of Spirits
 We join the throng
@@ -12713,41 +11388,6 @@ Will ever lead the generations on
 Through higher scenes of being.
 88. half asleep.] Nbk 7, 1820; half-asleep. 1839.
 
-Chorus of Hours
-Whence come ye, so wild and so fleet,
-90 For sandals of lightning are on your feet,
-And your wings are soft and swift as thought,
-And your eyes are as Love which is veiled not?
-
-Chorus of Spirits
-We come from the mind
-Of human kind,
-95 Which was late so dusk, and obscene, and blind;
-Now’tis an ocean
-Of clear emotion,
-A heaven of serene and mighty motion;
-
-From that deep abyss
-100 Of wonder and bliss,
-Whose caverns are crystal palaces;
-From those skiey towers
-Where Thought’s crowned Powers
-Sit watching your dance, ye happy Hours;
-
-105 From the dim recesses
-Of woven caresses,
-Where lovers catch ye by your loose tresses;
-From the azure isles
-Where sweet Wisdom smiles,
-110 Delaying your ships with her siren wiles;
-
-From the temples high
-Of Man’s ear and eye,
-Roofed over Sculpture and Poesy;
-From the murmurings
-115 Of the unsealed springs
-Where Science bedews her daedal wings.
-
 92. Love] Nbk 7; love 1820, 1839.
 96. ocean] Ocean, Nbk 7.
 98. heaven] Heaven Nbk 7. motion;] motion. Nbk 7, 1820, 1839.
@@ -12764,20 +11404,6 @@ Where Science bedews her daedal wings.
 116. her] Nbk 7; his 1820, 1839. The reading in Nbk 7 is not very clear, and Mary possibly mistran-
 scribed; as Zillman Text notes, S. elsewhere refers to Science as feminine. daedal] Dædal Nbk 7, 1820,
 
-Years after years,
-Through blood and tears,
-And a thick hell of hatreds, and hopes, and fears,
-120 We waded and flew,
-And the islets were few
-Where the bud-blighted flowers of happiness grew.
-
-Our feet now, every palm,
-Are sandalled with calm,
-125 And the dew of our wings is a rain of balm;
-And beyond our eyes
-The human love lies
-Which makes all it gazes on, Paradise.
-
 Chorus of Spirits and Hours
 Then weave the web of the mystic measure;
 130 From the depths of the sky and the ends of the earth,
@@ -12785,13 +11411,6 @@ Come, swift Spirits of might and of pleasure,
 Fill the dance and the music of mirth,
 As the waves of a thousand streams rush by
 To an ocean of splendour and harmony!
-
-Chorus of Spirits
-135 Our spoil is won,
-Our task is done,
-We are free to dive, or soar, or run . . .
-Beyond and around,
-Or within the bound
 
 118. blood and tears,] blood and tears Nbk 7; blood, and tears, 1820, 1839.
 119. fears,] Nbk 7; fears; 1820, 1839.
@@ -12814,30 +11433,12 @@ wandering moon’; and see also Milton, Comus 1012–16.
 138. and] In Nbk 7, S. has overwritten an ampersand with or; 1820 and subsequent eds read and, which
 was possibly restored by S. in the press transcript but which could easily be a misreading.
 
-We’ll pass the eyes
-Of the starry skies
-Into the hoar deep to colonize;
-Death, Chaos, and Night,
-145 From the sound of our flight
-Shall flee, like mist from a tempest’s might.
-
 And Earth, Air, and Light,
 And the Spirit of Might,
 Which drives round the stars in their fiery flight;
 150 And Love, Thought, and Breath,
 The powers that quell Death,
 Wherever we soar shall assemble beneath.
-
-And our singing shall build
-In the void’s loose field
-155 A world for the Spirit of Wisdom to wield;
-We will take our plan
-From the new world of man,
-And our work shall be called the Promethean.
-
-Chorus of Hours
-Break the dance, and scatter the song;
-160 Let some depart, and some remain.
 
 140. Cameron (1974) 546 follows Grabo (1930) 165–7 in understanding world to mean ‘the universe’
 here; but beyond in line 138 is incompatible with such a reading, and suggests rather that S. is thinking
@@ -12859,26 +11460,6 @@ Might), and animated by human attributes (Love, Thought and Breath).
 151. Death,] death, Nbk 7.154. void’s] Void’s Nbk 7.
 156–8. Mind is to be the measure of everything.
 161. heaven,] Heaven, Nbk 7. along —] Nbk 7; along: 1820, 1839.
-
-Semichorus I
-Ceaseless and rapid and fierce and free
-With the Spirits which build a new earth and sea,
-165 And a Heaven where yet Heaven could never be —
-
-Semichorus II
-Solemn, and slow, and serene, and bright,
-Leading the Day, and outspeeding the Night,
-With the Powers of a world of perfect light —
-
-Semichorus I
-We whirl, singing loud, round the gathering sphere,
-170 Till the trees, and the beasts, and the clouds appear
-From its chaos made calm by love, not fear —
-
-Semichorus II
-We encircle the oceans and mountains of earth,
-And the happy forms of its death and birth
-Change to the music of our sweet mirth.
 
 Chorus of Hours and Spirits
 175 Break the dance, and scatter the song —
@@ -12908,17 +11489,6 @@ earth, 1820, 1839; the s of Oceans in Nbk 7 is not well-formed and could have be
 176. remain;] remain Nbk 7; remain, 1820, 1839.
 179. Love’s] Nbk 7; love’s 1820, 1839. In Nbk 7, this line is followed by a stage direction, ‘they depart’,
 which was presumably dropped in the press transcript.
-
-Panthea
-As the bare green hill,
-When some soft cloud vanishes into rain,
-Laughs with a thousand drops of sunny water
-To the unpavilioned sky!
-
-Panthea
-’Tis the deep music of the rolling world,
-Kindling within the strings of the waved air
-Æolian modulations.
 
 Ione
 Listen too,
@@ -12961,10 +11531,6 @@ The ocean-like enchantment of strong sound,
 Which flows intenser, keener, deeper yet
 205 Under the ground and through the windless air.
 
-Ione
-I see a chariot like that thinnest boat
-In which the Mother of the Months is borne
-
 194–205. Panthea sees and hears the approach of the spirits of the Moon and the Earth, one within
 a chariot, the other within a sphere. These symbolic visions of the Spirits offer concentrated com-
 plex combinations of qualities and attributes, including a dense scientific allusiveness. The two visions
@@ -12986,14 +11552,6 @@ Some Miltonic Elements in Shelley’, MLQ xvi (1955) 247–57).
 203. ocean-like] Ocean-like Nbk 7.
 206–13. The new moon, appearing as a bright silver crescent with the rest of the moon obscured but still
 visible (lines 210–13), as in Coleridge’s epigraph (from ‘The Ballad of Sir Patrick Spence’) to the ‘Dejection
-
-Ode’: ‘Late, late yestreen I saw the new Moon,/With the old Moon in her arms’. See also TL 72–84.
-207–9. Cp. Samson Agonistes 86–9:
-
-The sun to me is dark
-And silent as the moon,
-When she deserts the night,
-Hid in her vacant interlunar cave.
 
 By ebbing light into her western cave
 When she upsprings from interlunar dreams,
@@ -13172,9 +11730,6 @@ On its own folded wings, and wavy hair,
 265 The Spirit of the Earth is laid asleep,
 And you can see its little lips are moving
 
-Amid the changing light of their own smiles,
-Like one who talks of what he loves in dream.
-
 246. inter-transpicuous;] inter-transpicuous, Nbk 7 (as two unhyphenated words), 1820, 1839. ‘Visible
 through or between each other’; OED gives this occurrence as the only example. Cp. Southey, Curse of
 Kehama vii 9: ‘that etherial Lake whose waters lie/Blue and transpicuous, like another sky’.
@@ -13252,13 +11807,6 @@ refrain, which is among the most famous of Gk drinking-songs, perhaps in a schoo
 274. spokes] Nbk 7, 1839; spoke 1820, 1829; corrected from S.’s errata list (also corrected by S. in Leigh
 Hunt’s presentation copy of 1820).
 275. Orb] orb Nbk 7, 1820, 1839.
-
-276. sunlike lightenings,] sunlike lightenings Nbk 7; sun-like lightnings, 1820, 1839.
-
-Pierce the dark soil, and as they pierce and pass,
-Make bare the secrets of the Earth’s deep heart;
-280 Infinite mines of adamant and gold,
-Valueless stones, and unimagined gems,
 
 279. Earth’s] Earths Nbk 7; earth’s 1820, 1839.
 280–314. As in lines 194–269 above, this passage is shaped around specific literary sources, but adapted
@@ -13360,8 +11908,6 @@ Hitchener, 23 November 1811: ‘Imagination is resistlessly compelled to look ba
 ages whose silent change placed them here, to look back when, perhaps this retirement of peace and
 mountain simplicity, was the Pandemonium of druidical imposture, the scene of Roman Pollution, the
 
-resting place of the savage denizen of these solitudes with the wolf. — Still, still further! — strain thy
-
 Whose population which the Earth grew over
 Was mortal, but not human; see, they lie,
 Their monstrous works and uncouth skeletons,
@@ -13410,12 +11956,6 @@ nearer and nearer to the surface. Perhaps over is to be understood as ‘next in
 deeper’; or the idea of cyclic evolution, integral to Hutton’s ideas and implicit in Cuvier, may be in
 mind (in which case ‘prehistoric’ layerings would recur as later deposits than the relics of previous
 
-civilisations).
-302. these] Nbk 7; these, 1820, 1839.
-304. Cp. Paradise Lost vii 412–15: ‘There Leviathan,/Hugest of living creatures, on the deep/Stretched
-like a promontory sleeps or swims,/And seems a moving land’.
-308. crags; —] Nbk 7; crags; 1820, 1839.
-
 310 Of earth-convulsing behemoth, which once
 Were monarch beasts, and on the slimy shores
 And weed-overgrown continents of Earth
@@ -13425,11 +11965,6 @@ On an abandoned corpse, till the blue globe
 Yelled, gasped, and were abolished; or some God
 Whose throne was in a comet, passed, and cried
 ‘Be not!’ — and like my words they were no more.
-
-The Earth
-The joy, the triumph, the delight, the madness!
-320 The boundless, overflowing, bursting gladness,
-The vaporous exultation, not to be confined!
 
 310. behemoth] See Job xl 15, from which occurrence behemoth has typified the notion of a very large
 and powerful beast; variously interpreted from the Hebrew as either an elephant or a hippopotamus
@@ -13471,10 +12006,6 @@ volcanic activity; cp. e.g. Sir William Hamilton, ‘Account of the Earthquakes 
 commotions of the earth were full of electrical fire, just as the smoke of volcanoes is constantly observed
 to be during violent eruptions . . . Perhaps . . . the whole destruction I have been describing may have
 proceeded simply from the exhalations of confined vapours, generated by the fermentation of such minerals
-
-Ha! ha! the animation of delight
-Which wraps me, like an atmosphere of light,
-And bears me as a cloud is borne by its own wind!
 
 The Moon
 325 Brother mine, calm wanderer,
@@ -13619,9 +12150,6 @@ in the condition of being a sea reflecting love’. The sea reflecting love is t
 many-sided mirror of line 382. In the following stanza, leave is again the governing verb but is under-
 stood intransitively (see note to line 388). The following two stanzas, lines 394–405, then return to a
 
-transitive understanding of leave.
-381. Hate, and Fear, and Pain,] Hate and Fear and Pain, Nbk 7; hate, and fear, and pain, 1820, 1839.
-
 Leave Man — who was a many-sided mirror
 Which could distort to many a shape of error
 This true fair world of things — a sea reflecting Love;
@@ -13722,9 +12250,6 @@ while dependant on it for control and communication; as Cameron (1974) 557 notes
 specifically to Literature (developing the allusions to other arts in this stanza).
 415. Orphic] Orpheus was the mythical father of Gk poetry; the epithet here suggests in general terms
 
-Which rules with daedal harmony a throng
-Of thoughts and forms, which else senseless and shapeless were.
-
 The lightning is his slave; heaven’s utmost deep
 Gives up her stars, and like a flock of sheep
 420 They pass before his eye, are numbered, and roll on!
@@ -13740,12 +12265,6 @@ And through my newly-woven bowers
 Wander happy paramours,
 Less mighty, but as mild as those who keep
 430 Thy vales more deep.
-
-The Earth
-As the dissolving warmth of dawn may fold
-A half-unfrozen dew-globe, green and gold
-And crystalline, till it becomes a wingèd mist,
-And wanders up the vault of the blue day,
 
 416. Which rules] In Nbk 7, these words are canc., and Ruling is written in pencil to the left; S. probably
 restored the original reading in the press transcript, but this could be a change made after despatch of
@@ -13768,9 +12287,6 @@ ing lightning from the clouds into a private room . . .’
 432. half-unfrozen] Nbk 7; half infrozen 1820 (a misprint); half unfrozen 1839. green and gold] Nbk 7;
 green, and gold, 1820, 1839.
 434. day,] Day Nbk 7.
-
-435 Outlives the noon, and on the sun’s last ray
-Hangs o’er the sea, a fleece of fire and amethyst —
 
 The Moon
 Thou art folded, thou art lying
@@ -13917,21 +12433,6 @@ Fragment (see Fragments connected with PU: I; Longman ii 653).
 487. Cp. I 450 and note.
 491–4. The Earth completes the Moon’s quatrain, and in so doing responds directly to her words for
 
-the first time.
-492. snow —] snow. 1820, 1839.
-495. gentle Moon] Gentle moon Nbk 7.
-498. forever] Nbk 7; for ever 1820, 1839.
-499. gentle] Gentle Nbk 7.
-
-500 The caverns of my pride’s deep universe,
-Charming the tiger Joy, whose tramplings fierce
-Made wounds which need thy balm.
-
-Panthea
-I rise as from a bath of sparkling water,
-A bath of azure light, among dark rocks,
-505 Out of the stream of sound.
-
 Ione
 Ah me! sweet sister,
 The stream of sound has ebbed away from us,
@@ -13968,24 +12469,6 @@ spirits described in lines 194–318; but see note to line 319 above.
 modern eds preserve the 1839 reading, but Victorian eds preferred 1820, and it is S.’s usual practice to
 use an before a vowel. words . . . O list!] Nbk 7; words: Oh, list! 1820, 1839.
 
-Demogorgon
-Thou Earth, calm empire of a happy soul,
-520 Sphere of divinest shapes and harmonies,
-Beautiful orb! gathering as thou dost roll
-The Love which paves thy path along the skies:
-
-Demogorgon
-Thou Moon, which gazest on the nightly Earth
-525 With wonder, as it gazes upon thee,
-Whilst each to men, and beasts, and the swift birth
-Of birds, is beauty, love, calm, harmony:
-
-Demogorgon
-Ye Kings of suns and stars, Daemons and Gods,
-530 Etherial Dominations, who possess
-Elysian, windless, fortunate abodes
-Beyond Heaven’s constellated wilderness:
-
 519–53. Demogorgon addresses in turn the Earth (519–23), the Moon (524–8), the stars (529–33), the
 dead (534–8), the atomic constituents of all things (539–43), all living things and active phenomena
 (544–9), and mankind (549–53).
@@ -14002,26 +12485,10 @@ Princedoms, Virtues, Powers’.
 533. hears:] hears . . . Nbk 7; hears, 1820; hears; 1839.
 
 Demogorgon
-Ye happy Dead, whom beams of brightest verse
-535 Are clouds to hide, not colours to portray,
-Whether your nature is that universe
-Which once ye saw and suffered —
-
-Demogorgon
-Ye elemental Genii, who have homes
-540 From man’s high mind even to the central stone
-Of sullen lead; from Heaven’s star-fretted domes
-To the dull weed some sea-worm battens on:
-
-Demogorgon
 Spirits whose homes are flesh; ye beasts and birds;
 545 Ye worms and fish; ye living leaves and buds;
 Lightning and wind; and ye untameable herds,
 Meteors and mists, which throng air’s solitudes:
-
-Demogorgon
-Man, who wert once a despot and a slave;
-550 A dupe and a deceiver; a decay;
 
 534. Dead,] Nbk 7, 1820 (no cap.); dead! 1839.
 536–8. S. preserves his characteristic sceptical reserve about existence after death; i.e. we do not know
@@ -14038,9 +12505,6 @@ in the press transcript, or Mary failed to notice the change; or the change may 
 despatch of the transcript. air’s] Airs Nbk 7.
 550. and] or Nbk 7; presumably a change to the press transcript, but or is smudged and could have been
 
-A traveller from the cradle to the grave
-Through the dim night of this immortal day:
-
 Demogorgon
 This is the day, which down the void abysm
 555 At the Earth-born’s spell yawns for Heaven’s despotism,
@@ -14050,9 +12514,6 @@ In the wise heart, from the last giddy hour
 Of dread endurance, from the slippery, steep,
 560 And narrow verge of crag-like agony, springs
 And folds over the world its healing wings.
-
-Gentleness, Virtue, Wisdom, and Endurance, —
-These are the seals of that most firm assurance
 
 551. traveller] Traveller Nbk 7.
 552. day:] Day Nbk 7.
@@ -14129,9 +12590,6 @@ doubtless eventually need to be repeated.
 574. contemplates;] 1820; contemplates Nbk 7; contemplates: 1839. On S.’s distinctively powerful use of
 the word own, here and elsewhere, see G. R. Hamilton, ‘Shelley’s Own’, English v (1945) 149–53.
 575. falter,] Nbk 7, 1839; flatter, 1820, 1829; probably on S.’s errata list. repent:] repent Nbk 7; repent;
-
-1820, 1839. Cp. Paradise Lost i 94–6: ‘Yet not for those,/Nor what the potent Victor in his rage/Can else
-inflict, do I repent or change’.
 
 ## DOI: 10.4324/9781315170343-16
 
@@ -14308,10 +12766,6 @@ also having biographical content; Tasso was interesting to S. and Byron as a fig
 unjustly persecuted poet, susceptible and possibly driven mad. Their identification with
 him allowed them to explore their own condition via dramatic monologues either explicitly
 
-in Tasso’s voice (as in ‘The Lament of Tasso’) or tacitly so (as in the Maniac’s speeches).
-S.’s Tasso was in part the product of contemporary images of him. Between 1750 and
-1850, Tasso became:
-
 a prototype of the Romantic poet, loving passionately but hopelessly and beyond his station,
 the victim of political oppression, maintaining his dignity and essential nobility of heart
 through intense and prolonged suffering, the hypersensitive artist at odds with society, wan-
@@ -14347,12 +12801,6 @@ Text from the Morgan Library & Museum MA 974 (=Hunt MS), except for epigraph and
 preface from 1824.
 First published in 1824.
 
-Julian and Maddalo: A Conversation
-The meadows with fresh streams, the bees with thyme,
-The goats with the green leaves of budding spring,
-Are saturated not — nor Love with tears.
-VIRGIL’S Gallus
-
 Count Maddalo is a Venetian nobleman of ancient family and of great fortune, who, with-
 out mixing much in the society of his countrymen, resides chiefly at his magnificent palace
 in that city. He is a person of the most consummate genius; and capable, if he would direct
@@ -14372,10 +12820,6 @@ conversation is a sort of intoxication; men are held by it as by a spell. He has
 ¶ 16. Epigraph.] S.’s translation of Virgil, Eclogues x 29–30; see Longman ii 361–2. The Latin reads: ‘nec
 lacrimis crudelis Amor nec gramina riuis/nec cytiso saturantur apes nec frondae capellae.’ Cp. Tasso,
 Aminta I ii 13–15:
-
-Pasce l’agna l’erbette, il lupa l’agne;
-Ma il crudo amor di lagrime si pasce,
-Nè se ne mostra mai satollo
 
 Pref. 1. Count Maddalo] To some extent, a portrait of Lord Byron. S. remarked to Leigh Hunt of the
 poem, ‘two of the characters you will recognize’ (L ii 108), presumably Byron and S. himself as Maddalo
@@ -14414,9 +12858,6 @@ known. Julian, in spite of his heterodox opinions, is conjectured by his friends
 good qualities. How far this is possible, the pious reader will determine. Julian is rather serious.
 Of the Maniac I can give no information. He seems by his own account to have been disap-
 25 pointed in love. He was evidently a very cultivated and amiable person when in his right senses.
-
-His story, told at length, might be like many other stories of the same kind: the unconnected
-exclamations of his agony will perhaps be found a sufficient comment for the text of every heart.
 
 Pref. 16. Julian] Modelled on S. himself. The name may suggest treachery (because of the Roman
 Emperor, Julian the Apostate) and may have been suggested by the Julian Alps, visible from Venice and
@@ -14640,9 +13081,6 @@ Though bent on pleasant pilgrimage, we stood
 65 Looking upon the evening and the flood
 Which lay between the city and the shore
 Paved with the image of the sky . . . the hoar
-
-50. sense . . . kind] Cp. Preface 6ff.: ‘he derives, from a comparison’ etc.
-51. struck . . . blind] Cp. S.’s description of Coleridge in LMG 202–8:
 
 he who sits obscure
 In the exceeding lustre and the pure
@@ -14920,9 +13358,6 @@ sudden and unannounced.
 158. entered. —] entered — Hunt MS; entered. 1824, Locock 1911 past,] Locock 1911; past Hunt MS;
 past: 1824; o’er canc. Nbk 6. In contemporary usage, ‘past’ was a possible spelling of ‘passed’, but S.’s
 
-meaning is clarified by the nbk’s cancelled draft: once salutations were over, Julian spoke.
-163. I] I 1824, Locock 1911.
-
 She spends a happy time with little care
 While we to such sick thoughts subjected are
 170 As came on you last night — it is our will
@@ -14938,10 +13373,6 @@ How vainly to be strong!’ said Maddalo,
 180 I then rejoined, ‘and those who try may find
 How strong the chains are which our spirit bind,
 Brittle perchance as straw . . . We are assured
-
-170. As came on you] As you described Nbk 6, canc. Hunt MS.
-170–3. it is . . . We dream of] A recurrent thought in S.; cp. PU III iv 198–9: ‘Passionless? no — yet free
-from guilt or pain/Which were, for his will made, or suffered them’ and OL 241–5:
 
 He who taught man to vanquish whatsoever
 Can be between the cradle and the grave
@@ -14971,8 +13402,6 @@ thou art in desire?’ (Macbeth I vii 39–41).
 179. You talk] This is canc. Nbk 6. Utopia.’ ‘It] 1824 inserts a paragraph break between the two speeches
 here and, from this point on, wherever there is a change of speaker (except lines 544–6). Earlier con-
 versational exchanges remain (in 1824) within verse-paragraphs. Neither Hunt MS nor Nbk 6 include
-
-paragraph breaks within the poem’s passages of dialogue. know] 1824; see Hunt MS.
 
 Much may be conquered, much may be endured
 Of what degrades and crushes us. We know
@@ -15020,10 +13449,6 @@ creed is as religion’ (canc. Nbk 6).
 201. aspiring theories] Cp. the sarcastic use of a similar phrase in J. H. Frere’s reactionary poem, ‘New
 Morality’ 101–2: ‘Shall a name, a word, a sound, control/Th’aspiring thought, and cramp th’expansive
 
-soul?’ theories.’] Cp. line 179 and note.
-204. “soul of goodness”] Alluding to Henry V IV i 3–4: ‘There is some soul of goodness in things evil/
-Would men observingly distill it out’.
-
 His being — there are some by nature proud,
 Who patient in all else demand but this:
 To love and be beloved with gentleness,
@@ -15056,13 +13481,6 @@ with a hospital and church built 1734–59.
 lash and the increasing howl,/And the half-inarticulate blasphemy’, and iv 9–10: ‘Where cries reply to
 curses, shrieks to blows,/And each is tortured in his separate hell’; cp. Dante, Inferno iii 22–8:
 
-quivi sospiri, pianti e alti guai
-risonovan per l’aere sanza stelle [. . . .]
-Diverse lingue, orribili favelle,
-parole di dolore, accenti d’ira,
-voci alte e fioche, e suon di man con elle
-facevano un tumulto
-
 Here sighs with lamentations and loud moans
 Resounded through the air pierc’d by no star [. . . .]
 Various tongues,
@@ -15070,9 +13488,6 @@ Horrible languages, outcries of woe,
 Accents of anger, voices deep and hoarse,
 With hands together smote that swell’d the sounds,
 Made up a tumult (Cary, The Vision (1814) ‘Hell’ iii 21–7)
-
-218. Moans . . . prayers] 1824 omits this line. Forman 1876–7 suggests the omission is a transcription
-error, but it may have been cautious censorship by Mary.
 
 Accosted us. We climbed the oozy stairs
 220 Into an old court-yard. I heard on high
@@ -15209,20 +13624,6 @@ cheek, yet it was fair’.
 280. a folded] the music Nbk 6.
 280–2. lips . . . motions] Cp. S.’s self-portrait in Adonais 291–7:
 
-a light spear . . .
-Vibrated, as the ever-beating heart
-Shook the weak hand that grasped it; of that crew
-He came the last, neglected and apart;
-A head-abandoned deer struck by the hunter’s dart.
-
-She pin’d in thought;
-And with a green and yellow melancholy
-She sat like Patience on a monument,
-Smiling at grief.
-
-282–4. Hunt MS makes the simile connect both forward and back: the smiling grief visible in the
-Maniac’s lips expresses his passion, and so does his raising his eyes and speaking.
-
 And spoke — sometimes as one who wrote and thought
 His words might move some heart that heeded not
 If sent to distant lands; and then as one
@@ -15260,14 +13661,6 @@ is clearer. The first word is indented however as at lines 320 and 482. In Nbk 6
 at this point; the next two pages are blank, and the poem resumes with a version of line 337 (BSM xv
 97–101).
 302–3. To drag . . . pain] Cp. Q Mab v 50–2: Commerce brings to an early death ‘all that shares the lot of
-
-human life,/Which, poisoned body and soul, scarce drags the chain/That lengthens as it goes and clanks
-behind’; see also PU II iv 19–23:
-
-terror, madness, crime, remorse,
-Which from the links of the great chain of things,
-To every thought within the mind of man
-Sway and drag heavily
 
 Medwin reports that S. (in Pisa, 1818) was ‘very much affected by the sight of the convicts fettered two
 and two, who, escorted by soldiers, sweep the streets, and still more so by the clank of their chains’
@@ -15336,10 +13729,6 @@ My secret groans must be unheard by thee,
 Thou wouldst weep tears bitter as blood to know
 Thy lost friend’s incommunicable woe.
 
-‘Ye few by whom my nature has been weighed
-345 In friendship, let me not that name degrade
-By placing on your hearts the secret load
-
 332–5. My creed . . . gained] Cp. the Maniac’s beliefs to Julian’s (lines 195ff., 236–7). The Maniac speaks
 here as a rejected lover: if, he says, he had been rejected in such a way that tenderness for the loved
 one survived, then he would not regret having fallen in love nor look back on it as a mistake; however,
@@ -15403,14 +13792,6 @@ act/. . . appeared/The careless stillness of a thinking mind/Self-occupied’ an
 199–200: ‘But ever and anon of griefs subdued/There comes a token like a scorpion’s sting’.
 351. full] deep canc. Hunt MS.
 354–6. S.’s view that ridicule or satire were intrinsically ineffective is expressed in A Satire Upon Satire
-
-(Longman iii 269–76, no. 290) 37–8: ‘Suffering makes suffering — ill must follow ill;/Harsh words beget
-hard thoughts’. Cp. James Woodhouse (1735–1820), ‘Ridicule’ (1787) 331–4:
-
-True wisdom knows no raillery can restrain
-Or conquer error, by inflicting pain.
-True policy perceives that jibe and joke
-Never conciliate, constantly provoke.
 
 See 38–9 and note. Cp. Nora Crook and Derek Guiton, S.’s Venomed Melody (1986) 137: ‘S. refers here
 to the homeopathic principle, but warns against a single-minded application of it.’
@@ -15546,15 +13927,6 @@ That your eyes ne’er had lied love in my face —
 That, like some maniac monk, I had torn out
 425 The nerves of manhood by their bleeding root
 
-404. cease to] do not 1824.
-407. pass away] Cp. Adonais 432: ‘And of the past are all that cannot pass away.’ This line ends the frag-
-mentary drafts of the Maniac’s speech in Nbk 6; it is followed by line 511 (BSM xv 107).
-412–14. Cp. Goethe, Faust I 653–5:
-
-Dem Wurme gleich’ ich, der den Staub durchwühlt,
-Den, wie er sich im Staube nährend lebt,
-Des Wandrers Tritt vernichtet und begräbt.
-
 (‘I am like the worm tunnelling through soil which, while it lives nourished by dust, is crushed and
 buried by the foot of a passer-by.’)
 414. dies?] dies: 1824.
@@ -15567,8 +13939,6 @@ I 13–14: ‘And moments, aye divided by keen pangs/Till they seem years’.
 435); each of these possibilities is something his lover wished for and told him that she wished for. The
 punctuation of Hunt MS clarifies this syntax.
 424–6. Self-castration was observed as a symptom of mania; cp. Cabanis, ‘Rapports du physique et du
-
-moral de l’homme’, Oeuvres Complètes 5 vols (Paris 1823–25) iii 343: ‘On voit souvent ces malheureux
 
 With mine own quivering fingers, so that ne’er
 Our hearts had for a moment mingled there
@@ -15592,11 +13962,6 @@ i: ‘They will use every art to disunite you . . . Whom in a mass they fear’.
 frame,/And for a moment all things as they were/Flit by me; they are gone — I am the same.’
 432–4. Cp. Adonais 453–5: ‘and if the seal is set,/Here, on one fountain of a mourning mind,/Break it
 not thou!’ and Childe Harold ii 73–6:
-
-There, thou! — whose love and life together fled,
-Have left me here to love and live in vain —
-Twined with my heart, and can I deem thee dead
-When busy Memory flashes on my brain?
 
 433. ceredst my memory o’er] cearedst my memory oer Hunt MS; seard’st my memory o’er 1824;
 searedst my memory o’er Forman 1876–7. Cp. line 614 where Hunt MS reads ‘ceared over their
@@ -15641,14 +14006,6 @@ Who intend deeds too dreadful for a name
 Henceforth, if an example for the same
 They seek . . . for thou on me lookedst so, and so —
 
-And didst speak thus . . . and thus . . . I live to shew
-How much men bear and die not!
-
-441. hell —] 1824; hell; Hunt MS.
-443. Cp. R&H 721–3: ‘Many then wept, not tears, but gall/Within their hearts, like drops which fall/
-Wasting the fountain-stone away.’
-444. Cp. SP 70–4:
-
 But the Sensitive-plant which could give small fruit
 Of the love which it felt from the leaf to the root,
 Received more than all — it loved more than ever,
@@ -15689,14 +14046,6 @@ Is dim to see that charactered in vain
 On this unfeeling leaf which burns the brain
 480 And eats into it . . . blotting all things fair
 And wise and good which time had written there.
-
-‘Those who inflict must suffer, for they see
-The work of their own hearts and this must be
-
-Life of Life! thy lips enkindle
-With their love the breath between them
-And thy smiles before they dwindle
-Make the cold air fire
 
 471. ‘Except as Love alters those whom it does not favour’.
 471. not] not, Locock 1911. The comma stresses that the Maniac has ‘not dwindled’ after the long
@@ -15747,11 +14096,6 @@ and note.
 Trampled its fires into the dust of death’. Cp. Byron, ‘Ode on Venice’ 131–3: ‘For tyranny of late is cun-
 ning grown,/And in its own good season tramples down/The sparkles of our ashes.’
 501–5. In idea and imagery, cp. Rousseau’s speech in TL 199–204:
-
-Before thy memory
-I feared, loved, hated, suffered, did, and died,
-And if the spark with which Heaven lit my spirit
-Earth had with purer nutriment supplied
 
 503–5. hide . . . consumed me] Reminiscent of Ulysses in Dante’s Inferno xxvi 48 who ‘si fascia di quel
 ch’elli è inceso’ (‘is wrapped or swathed in what burns him’).
@@ -15826,9 +14170,6 @@ Or read in gondolas by day or night
 Having the little brazen lamp alight,
 Unseen, uninterrupted; books are there,
 
-555 Pictures, and casts from all those statues fair
-Which were twin-born with poetry, and all
-
 537. were now] now were 1824.
 539. adorn.] 1824; adorn: Hunt MS.
 540. unworn] unworn; 1824, Forman 1876–7. Because in Hunt MS, the lower dot of the colon after
@@ -15886,21 +14227,12 @@ parenthesis ending at line 574.
 569. and but seldom] and seldom 1824.
 570. beatings of his heart] Cp. R&H 1026–34:
 
-You might hear the beatings of his heart,
-Quick, but not strong; and with my tresses . . .
-Alas! the unquiet life did tingle
-From mine own heart through every vein
-
 Oh! tell me, tell me all thy pain,
 Pour to mine ear thy frenzied strain
 And I will share thy pangs and soothe thy woes!
 Poor Maniac! I will dry thy tears
 And bathe thy wound and calm thy fears,
 And with soft Pity’s balm enchant thee to repose.
-
-571. stubborn] difficult Nbk 6. ‘secret’ and ‘stubborn’ are inserted above ‘difficult’.
-573. mind,] mind Hunt MS.
-574. Cp. Athanase 34: ‘Pitying the tumult of their dark estate.’ his] this Forman 1876–7.
 
 Accomplished not; such dreams of baseless good
 Oft come and go in crowds and solitude
@@ -15997,10 +14329,6 @@ must make/Me weep. What is thy tale? I fear ’twill shake/Thy gentle heart with
 speaker. disdain] Frequent in S.; cp. PU I 51–3: ‘these pale feet, which then might trample thee/If they
 disdained not such a prostrate slave./Disdain? Ah no! I pity thee’ and TL 204–5: ‘nor this disguise/Stain
 
-that within which still disdains to wear it.’ The word has some of the ambiguity of ‘scorn’ in S.’s lexicon;
-cp. line 38 and note.
-614. cered] ceared Hunt MS, cered 1824. Cp. line 433 and note.
-
 ## DOI: 10.4324/9781315170343-17
 
 To Night is a generic hybrid, directly or indirectly deriving from a number of literary models.
@@ -16025,11 +14353,6 @@ thalamium (Chernaik 144–6). For Harold Bloom (Shelley’s Mythmaking (1959) 5�
 embodies a strain of ‘primitive mythopoeic’ verse whose tenor is the composition of verse itself.
 Text from Harvard Nbk 1 69–70. S.’s fair copy, though finished and legible, is not punc-
 
-tuated for the press. Some additions to and modifications of the Harvard and 1824 punc-
-tuation have been made.
-Published in 1824; Huntington Nbks i 108–18; MYRS vi 4–13, 16–17 (facsimile and tran-
-scription of MS).
-
 Swiftly walk o’er the western wave,
 Spirit of Night!
 Out of the misty eastern cave
@@ -16037,11 +14360,6 @@ Where, all the long and lone daylight
 5 Thou wovest dreams of joy and fear,
 Which make thee terrible and dear, —
 Swift be thy flight!
-
-Wrap thy form in a mantle grey,
-Star-inwrought!
-10 Blind with thine hair the eyes of day,
-Kiss her until she be wearied out,
 
 ¶ 17. To Night 1. o’er] over 1824, 1839.
 4–6. An alternative version of the three lines is drafted on the front pastedown of Nbk 12 facing the main draft:
@@ -16051,10 +14369,6 @@ Kiss her until she be wearied out,
 eyes of day’ (3–4 and see note), which he used again in Alastor 337–9. Cp also MA 123.
 11. her . . . she] See note to l. 19.
 
-Then wander o’er city and sea and land
-Touching all with thine opiate wand —
-Come, long-sought!
-
 15 When I arose and saw the dawn
 I sighed for thee;
 When Light rode high, and the dew was gone
@@ -16062,22 +14376,6 @@ And noon lay heavy on flower and tree,
 And the weary Day turned to his rest
 20 Lingering like an unloved guest,
 I sighed for thee.
-
-Thy brother Death came, and cried,
-Wouldst thou me?
-Thy sweet child Sleep, the filmy-eyed,
-25 Murmured like a noontide bee,
-Shall I nestle near thy side?
-Wouldst thou me? And I replied,
-No, not thee!
-
-Death will come when thou art dead,
-30 Soon, too soon —
-Sleep will come when thou art fled;
-Of neither would I ask the boon
-I ask of thee, belovèd Night —
-Swift be thine approaching flight,
-35 Come soon, soon!
 
 14. The line is canc. in Nbk 12 but restored in Harvard Nbk 1.
 19. his] Rossetti 1870 altered the word to her for consistency with l. 11 in which the day is feminine
@@ -16145,9 +14443,6 @@ then called for the aid of the 15th Hussars, regular light cavalry whose presenc
 requested, and instructed them to disperse the meeting; their order was carried out in about
 fifteen minutes with the aid of further volunteer cavalry and some regular infantry. The
 consensus of reliable witnesses was that in the confusion of quickly unfolding events, acts of
-
-unwarranted and violent aggression were first committed by the armed cavalrymen, and that
-bricks, stones and staves were only then resorted to by sections of the crowd in self-defence
 
 ## DOI: 10.4324/9781315170343-18
 
@@ -16235,11 +14530,10 @@ ten; some stanzas in the latter category have the appearance of transcriptions f
 drafts, perhaps from the nbk(s) or loose paper that also held those of the missing early stan-
 zas. From these materials, S. transcribed a fair copy of ninety-three stanzas (Ashley). One
 of these is cancelled, another was omitted (apparently inadvertently) from Mary’s tran-
-scription for the press-copy (MMC-1399, Manuscript Division of the Library of Congress,
+
 Washington, DC; hereafter LC): see notes to ll. 201–4, 278. S. went over Mary’s careful
 transcription, supplying the title and subtitle only at this point, filling in a few lines he had
 left blank in his fair copy, making minor verbal substitutions and adding or altering punc-
-
 tuation. It is not always possible to distinguish his interventions in the MS from hers, but
 those that appear clearly to be his are not extensive, perhaps some three dozen in total. The
 most important alterations to the MS are recorded in the notes below.
@@ -16248,10 +14542,10 @@ A second fair copy was transcribed, probably later in the autumn, into Harvard N
 poems, many of which were sent to England for publication. The Contents at the back of
 Harvard Nbk 1 lists ‘The Mask of Anarchy’ as on pp. 30–8, but as the first forty pages of the
 nbk are missing it is impossible to know whether S. or Mary made the transcription. This
+
 missing copy was probably not transcribed until after the press-copy was sent to Hunt on
 23 September because in the brief time in which the poem was drafted, copied fair, tran-
 scribed for the press and corrected it seems unlikely that another copy could also have been
-
 made, nor would S. and Mary have wished to delay posting MA to Hunt for that purpose,
 there being no obvious need for another fair copy at that moment. The third of the surviv-
 ing fair copies was entered by Mary some time between 1822 and 1824 into Mary Copybk 2,
@@ -16472,26 +14766,11 @@ ics, adopting a style which approximates the sentimental-humanitarian lament of 
 Framework-knitters Petition (The Common Muse, ed. V. de Sola Pinto and A. E. Rodway
 (1967) 119) at one extreme:
 
-Could we obtain our food by work,
-Wou’d labour like the hardy turk;
-But all our hopes from thence are fled,
-And now we pine for want of bread.
-
 and at the other, the boisterous doggerel (carrying a shrewd political charge) of Cobbett’s
 parody in the Political Register for 21 November 1818 of the pious hymns taught to children
 in the schools of the National Society for the Education of the Poor in Accordance with
 the Principles of the Established Church, which Peacock copied out for S. in a letter of 15
 December 1818 (Peacock L i 161; L ii 75):
-
-To hope for bread, to hope for beer,
-To hope for aught your hearts to cheer;
-To hope for clothes your backs to hide,
-Or screen your front or hinder side;
-
-To hope for these, in any way,
-Is hoping less of tax to pay;
-And hoping this, in acts or words,
-High treason is’gainst Borough-lords.
 
 But the greater part of MA, with its biblical allusions, elementary political theory and econ-
 omy, and narrative motifs borrowed from S.’s own earlier verse and prose, adopts a more
@@ -16513,10 +14792,9 @@ genius we reverence’ (707); while the London Literary Gazette 824 (3 November 
 825 (10 November 1832) finds the poem’s denunciation of oppression to be ‘most injuri-
 ous’: ‘We doubt much whether a writer like Shelley does not rather retard than advance any
 cause, however excellent, which he may advocate’ (709).
-Text from MMC-1399, Manuscript Division of the Library of Congress, Washington, DC
+
 (LC). Substantive variants only are noted from S.’s drafts in Nbk 10 and Nbk 11, from his
 holograph fair copy, British Library Ashley MS 4086 (Ashley), from Mary’s transcription of
-
 Ashley in Mary Copybk 2, from the first printed edition (1832), edited by Leigh Hunt, and
 from 1839. Missing punctuation at the end of stanzas has usually been silently supplied; LC’s
 use of double inverted commas to mark reported speech has been regularised: in this edi-
@@ -16524,16 +14802,6 @@ tion, only the first line of a stanza of reported speech is preceded by a single
 Other significant departures from the copy-text have been recorded in the notes.
 Published in The Masque of Anarchy. A Poem By Percy Bysshe Shelley. Now First
 Published, With a Preface By Leigh Hunt. London: Edward Moxon, 1832.
-
-As I lay asleep in Italy
-There came a voice from over the Sea,
-And with great power it forth led me
-To walk in the visions of Poesy.
-
-5 I met Murder on the way —
-He had a mask like Castlereagh —
-Very smooth he looked, yet grim;
-Seven bloodhounds followed him:
 
 ¶ 18. Title and subtitle. S. added both to LC, using the spelling ‘Mask’ as does Mary in letters (Mary L
 i 113, 513), in her transcription in Mary Copybk 2 and on the Contents page of Harvard Nbk 1. Hunt’s
@@ -16575,12 +14843,6 @@ Revelation. The present line recalls the dragon or beast with seven heads and te
 the heads and horns being identified as so many kings, as is the beast itself (xvii 9–12). Contemporary
 allusions have also been detected: (1) to the seven nations that joined England in postponing indefi-
 
-All were fat; and well they might
-10 Be in admirable plight,
-For one by one, and two by two,
-He tossed them human hearts to chew
-Which from his wide cloak he drew.
-
 nitely the abolition of the slave trade in 1815, Austria, France, Prussia, Russia, Portugal, Spain, Sweden
 (1964); (2) to the pro-war party in Pitt’s administration, known as ‘bloodhounds’ (Reiman (2002)).
 10. plight] ‘Bodily or physical condition’ (OED n2 2.a).
@@ -16602,9 +14864,6 @@ stamp in his hand, the other with a laurel on his head, and the third with a sym
 could make nothing of, for it was neither literal nor allegorical, following in the train of the
 Pope and the Inquisition and the Bourbons, and worshipping the mark of the Beast, with the
 
-emblem of the human heart thrown beneath their feet, which they trampled and spit upon!
-(28)
-
 12. hearts] Ashley, LC, 1832, 1839; soulls [sic] Mary Copybk 2.
 15. Eldon] Lord Eldon Mary Copybk 2; Lord — 1832; 1839. In LC ‘Lord’, present in Ashley f. 1r, has
 been cancelled, apparently by S., no doubt for consistency with Castlereagh (6) and Sidmouth (24).
@@ -16622,11 +14881,6 @@ had held a college fellowship, had been appointed High Steward of the University
 most distinguished and powerful member. Against expectation, he had been defeated
 earlier that year in the election for the Chancellorship of the University by the more
 progressive and tolerant Whig Lord Grenville (1759–1834), a defeat that was a continu-
-
-And the little children, who
-Round his feet played to and fro,
-20 Thinking every tear a gem,
-Had their brains knocked out by them.
 
 ing embarrassment to the college. By both family connection and personal inclination
 the young S. was sympathetic to Grenville and his views, so that his expulsion in
@@ -16675,19 +14929,6 @@ duce a bill in Parliament to provide new churches for the increasing population 
 which was withdrawn for lack of funds; though in 1818, Sidmouth supported a similar and this time
 successful bill to raise £1,000,000 for the purpose. See note to ll. 238–41 and 240–41.
 
-And the shadows of the night,
-Like Sidmouth, next, Hypocrisy
-25 On a crocodile rode by.
-
-And many more Destructions played
-In this ghastly masquerade,
-All disguised, even to the eyes,
-Like Bishops, lawyers, peers or spies.
-
-30 Last came Anarchy: he rode
-On a white horse, splashed with blood;
-He was pale even to the lips,
-
 23. shadows] shadow Mary Copybk 2, 1839.
 24. Like Sidmouth] Like * * * 1832, 1839. Henry Addington, first Viscount Sidmouth (1757–1844), Prime
 Minister (1801–4), Home Secretary (1812–22) in the Liverpool administration, was still alive when 1832 and
@@ -16711,14 +14952,6 @@ and with hunger, and with death, and with the beasts of the earth’ (Revelation
 noticed the discrepancy between S.’s pale Death and the Bible’s ‘pale horse’. Despite the comma in both
 Ashley and LC, it remains ambiguous whether it is Anarchy or the horse that is splashed with blood.
 
-S. may have remembered a stanza of The Devil’s Thoughts, jointly authored by Coleridge and Southey,
-which he imitated in The Devil’s Walk (Longman i 230–7, no. 83):
-
-An apothecary on a white horse,
-Rode by on his vocation,
-And the Devil thought of his old friend
-Death, in the Revelation. (1799 version)
-
 The stanza varies slightly in later versions of the ballad. Resemblances have been noted between ll.
 30–53 and Benjamin West’s painting Death on the Pale Horse (reproduced as the jacket illustration to
 Longman iii), three versions of which were exhibited in London between 1784 and 1818: see Helmut
@@ -16730,19 +14963,7 @@ the coat of arms and flag of the Electorate and (from 1814) the Kingdom of Hanov
 the Coat of Arms of the British monarch at the accession of George I (the Elector of Hanover) in 1714
 until removed in 1837. See note to ll. 36–7 and headnote.
 
-30. Anarchy] Anarchy here personifies not the breakdown of order which S., in a letter to Peacock of
-24 August 1819, feared would be ‘the last flash before despotism’ (L ii 115), but rather that despotic
-
-And he wore a kingly crown,
-35 And in his grasp a sceptre shone;
-On his brow this mark I saw —
-
 ## ‘I AM GOD, AND KING, AND LAW.’
-
-With a pace stately and fast,
-Over English land he passed,
-40 Trampling to a mire of blood
-The adoring multitude.
 
 misrule which ensures fundamental disorder and injustice beneath the ‘legitimate’ appearance of sov-
 ereignty. The irony of the crown and sceptre of ll. 34–5 arises from the etymology of the word (from
@@ -16763,36 +14984,6 @@ LORD OF LORDS’. See note to ll. 30–3.
 those poems, as here, signifying a superstitious prostration before the ceremonial display of power. In
 Nbk 10, S. drafted a stanza, apparently to include in the progress of Anarchy (31–54), which he did not
 transcribe into Ashley, but which Mary transcribed later into Nbk 10 (25v):
-
-A red mist like a steam of gore
-His quick footsteps rose before
-And the earth whereon he went
-A cry Like a trampled infant sent
-A piercing scream of loud lament.
-
-See MYRS p. xxvii and SC vi 892–5. The Examiner for 22 August included an article from The Times
-blaming the Yeomanry Cavalry for attacking indiscriminately, including women and children, in
-Manchester (542).
-
-And a mighty troop around,
-With their trampling shook the ground,
-Waving each a bloody sword,
-45 For the service of their Lord.
-
-And with glorious triumph, they
-Rode through England proud and gay,
-Drunk as with intoxication
-Of the wine of desolation.
-
-50 O’er fields and towns, from sea to sea,
-Passed the Pageant swift and free,
-Tearing up, and trampling down;
-Till they came to London town.
-
-And each dweller, panic-stricken,
-55 Felt his heart with terror sicken
-Hearing the tempestuous cry
-Of the triumph of Anarchy.
 
 45. For] In Mary Copybk 2.
 47. England] England, Mary Copybk 2, 1839. gay,] Mary Copybk 2, 1832, 1839; gay LC.
@@ -16818,30 +15009,6 @@ of the Triumph (190). See headnote to TL.
 58. In LC, Mary transcribed only the first two words of the line as it stands in Ashley: ‘For from []
 to meet him came’; S. first deleted her transcription, then wrote the line as given here. came,] Mary
 
-Copybk 2, 1832, 1839; came Ashley, LC.
-59. Clothed . . . flame] Wearing the red coat of the British army, who are the hired murderers of the next
-line.
-
-We have waited, weak and lone
-For thy coming, Mighty One!
-Our purses are empty, our swords are cold,
-65 Give us glory, and blood, and gold.’
-
-Lawyers and priests, a motley crowd,
-To the earth their pale brows bowed;
-Like a bad prayer, not over loud,
-Whispering — ‘Thou art Law and God.’ —
-
-70 Then all cried with one accord,
-‘Thou art King, and God, and Lord;
-Anarchy, to thee we bow,
-Be thy name made holy now!’
-
-And Anarchy, the Skeleton,
-75 Bowed and grinned to every one,
-As well as if his education
-Had cost ten millions to the nation.
-
 68. prayer,] LC only shows the comma.
 70. accord,] Mary Copybk 2, 1832, 1839; accord; LC.
 71. King, and God, and Lord;] king, and law, and God! Mary Copybk 2; King, and Law, and Lord; 1839.
@@ -16864,23 +15031,6 @@ to be the correct reading, crediting the emendation to ‘B.V.’, i.e. the poet
 with whom he corresponded about Shelley. See Thomson’s Shelley, A Poem, with other writings, 1884.
 Although ‘nightly’ makes sense in its way, rightly seems appropriate to the general meaning of the
 stanza: Anarchy, the figure of misrule that truly represents the present government of England, is
-
-therefore the rightful owner of the material prerogatives and symbols of royal power. The draft (Nbk 10
-f. 22v) reveals the basis of Anarchy’s claim, as S. first conceived of it:
-
-So he sent his slaves before
-To seize upon the Bank and Tower,
-And was proceeding with intent
-85 To meet his pensioned Parliament,
-
-When one fled past, a Maniac maid,
-And her name was Hope, she said:
-But she looked more like Despair,
-And she cried out in the air:
-
-Anarchy said the palaces
-Of our kings were rightly his —
-[For all his ancestors had reigned]’.
 
 80. globe] A golden orb, part of the regalia of sovereignty used at a coronation — like the crown and
 sceptre.
@@ -16914,29 +15064,6 @@ manifestation of the Spirit of Good and symbolic representation of the forces of
 Revolution) turns to hope as she apprises the narrator of the true metaphysical and moral foundations
 of the world.
 
-90 ‘My father Time is weak and grey
-With waiting for a better day;
-See how idiot-like he stands,
-Fumbling with his palsied hands!
-
-‘He has had child after child
-95 And the dust of death is piled
-Over every one but me —
-Misery, oh, Misery!’
-
-Then she lay down in the street,
-Right before the horses’ feet,
-100 Expecting, with a patient eye,
-Murder, Fraud and Anarchy.
-
-When between her and her foes
-A mist, a light, an image rose,
-Small at first, and weak, and frail,
-105 Like the vapour of a vale:
-
-90. In the ‘Note on Poems of 1819’ in 1839, Mary recalled: ‘I heard him repeat, and admired those
-[stanzas] beginning, —
-
 before I knew to what poem they were to belong.’
 93. Fumbling] Trembling Mary Copybk 2, 1839.
 97. The Maniac maid borrows her cry of despair from Martha Ray, the bereaved mother of an infant, in
@@ -16960,24 +15087,6 @@ by the clouds] appear to fly over and to draw their shadow afar, sometimes great
 torn from the mountains to go before and to pass by the sun, after them some monster pulling and
 dragging other clouds’.
 107. fast,] fast eds.
-
-110 It grew — a Shape arrayed in mail
-Brighter than the viper’s scale,
-And upborne on wings whose grain
-Was as the light of sunny rain:
-
-On its helm, seen far away,
-115 A planet, like the Morning’s, lay;
-And those plumes its light rained through
-Like a shower of crimson dew.
-
-With step as soft as wind it passed
-O’er the heads of men — so fast
-120 That they knew the presence there,
-And looked, — but all was empty air.
-
-As flowers beneath May’s footstep waken,
-As stars from Night’s loose hair are shaken,
 
 110–17. In these lines, S. recombines language and images he had used to describe the struggle of the
 eagle and the serpent in L&C 175–207. Cp. also Lines Written among the Euganean Hills 80–81: ‘So
@@ -17009,34 +15118,6 @@ Cottle, Reminiscences of S.T. Coleridge and R. Southey (1847) 329. Cp. SP ii 10�
 123. S. is recasting the imagery of Revelation vi 13: ‘And the stars of heaven fell unto the earth, even as
 a fig tree casteth her untimely figs, when she is shaken of a mighty wind.’
 
-As waves arise when loud winds call,
-125 Thoughts sprung where’er that step did fall.
-
-And the prostrate multitude
-Looked — and ankle-deep in blood,
-Hope, that maiden most serene,
-Was walking with a quiet mien:
-
-130 And Anarchy, the ghastly birth,
-Lay dead earth upon the earth;
-The Horse of Death tameless as wind
-Fled, and with his hoofs did grind
-To dust, the murderers thronged behind.
-
-135 A rushing light of clouds and splendour,
-A sense awakening and yet tender
-Was heard and felt — and at its close
-These words of joy and fear arose
-
-As if their own indignant Earth
-140 Which gave the sons of England birth
-Had felt their blood upon her brow,
-And shuddering with a Mother’s throe
-
-Had turned every drop of blood
-By which her face had been bedewed
-145 To an accent unwithstood, —
-
 125. where’er] wherein Ashley, Mary Copybk 2.
 128. Hope, . . . serene,] Mary Copybk 2, 1832, 1839; Hope . . . serene Ashley, LC.
 130–4. S. wrote only the first two lines of this stanza in Ashley f. 5r, leaving space for two more, and later
@@ -17047,11 +15128,6 @@ comma after dust in l. 134.
 133–4. The draft in Nbk 10 (10v) shows that S. first imagined a more elaborately melodramatic defeat
 for the forces of Anarchy:
 
-And Murder skulked out of the fray
-And near the [ ] in ambush [ ]
-And Fraud, less [quickly] to be known
-Threw off E____’s wig & gown.
-
 136. awakening] rousing, stirring.
 139–46. These two stanzas are enclosed in round brackets in 1832. They allude to and revise the curse
 laid upon Cain by God in Genesis iv 10–11: ‘And he said, What hast thou done? the voice of thy
@@ -17059,17 +15135,6 @@ brother’s blood crieth unto me from the ground. And now art thou cursed from t
 opened her mouth to receive thy brother’s blood from thy hand.’
 145. accent] A word, considered as distinctive or characteristic of the speaker. The associations with
 nature, popular education and social responsibility of the voice that speaks from l. 147 are elicited by
-
-‘Men of England, heirs of Glory,
-Heroes of unwritten story,
-Nurslings of one mighty Mother,
-150 Hopes of her, and one another;
-
-‘Rise like Lions after slumber
-In unvanquishable number,
-Shake your chains to Earth like dew
-Which in sleep had fallen on you —
-155 Ye are many — they are few.
 
 Richard Cronin in The Politics of Romantic Poetry (2000) 178–9. unwithstood] OED defines as ‘Not
 withstood or hindered; unopposed’, citing this stanza as one example; but in the imagined scene intro-
@@ -17111,31 +15176,6 @@ finishes at l. 154 in 1832, though without asterisks to signal that l. 155 has b
 to overlook so resonant a line seems unlikely, yet its repetition at line 376 shows that neither Hunt nor
 Edward Moxon, the publisher, objected to including the sentiment expressed. See note to ll. 240–1.
 
-‘What is Freedom? — ye can tell
-That which slavery is, too well —
-For its very name has grown
-To an echo of your own.
-
-160 ‘’Tis to work and have such pay
-As just keeps life from day to day
-In your limbs, as in a cell
-For the tyrants’ use to dwell,
-
-‘So that ye for them are made,
-165 Loom, and plough, and sword, and spade,
-With or without your own will, bent
-To their defence and nourishment.
-
-‘’Tis to see your children weak
-With their mothers pine and peak,
-170 When the winter winds are bleak, —
-They are dying whilst I speak.
-
-‘’Tis to hunger for such diet
-As the rich man in his riot
-Casts to the fat dogs that lie
-175 Surfeiting beneath his eye;
-
 160–75. The miserable conditions endured by the manufacturing poor in Manchester were starkly
 evoked in the Examiner 609 (29 August 1819) in an extract from a pamphlet published by Joseph Hone
 and addressed to Lord Sidmouth: ‘The wretches hunger; their wives and children waste with disease
@@ -17157,27 +15197,6 @@ produce of labour’ (Julian vii 31). The situation he thus characterises issued
 set of political and financial circumstances. In order to fund the American and Napoleonic wars (both
 unjust in S.’s view), the National Debt had grown to more than £900,000,000 by 1815 and the annual
 interest on it to over £30,000,000. Moreover, since 1797 the Bank of England had no longer been
-
-180 ‘Paper coin — that forgery
-Of the title deeds, which ye
-Hold to something of the worth
-Of the inheritance of Earth.
-
-‘’Tis to be a slave in soul
-185 And to hold no strong control
-Over your own wills, but be
-All that others make of ye.
-
-‘And at length when ye complain
-With a murmur weak and vain
-190 ’Tis to see the Tyrant’s crew
-Ride over your wives and you —
-Blood is on the grass like dew.
-
-‘Then it is to feel revenge
-Fiercely thirsting to exchange
-195 Blood for blood — and wrong for wrong —
-Do not thus when ye are strong.
 
 required by law to exchange banknotes for gold; the gold standard would be restored only in 1821. In
 common with Cobbett, notably in the case set out in his Paper Against Gold (1815), S. was persuaded
@@ -17206,26 +15225,6 @@ extorted from the property and labour of the inhabitants of Great Britain’ (Ju
 ously placed in LC, but its capital T requires the singular.
 196. The line is printed in small capitals in 1832.
 
-‘Birds find rest, in narrow nest
-When weary of their wingèd quest;
-Beasts find fare, in woody lair
-200 When storm and snow are in the air.
-
-‘Horses, oxen have a home
-When from daily toil they come;
-Household dogs, when the wind roars,
-Find a home within warm doors.
-
-205 ‘Asses, swine, have litter spread
-And with fitting food are fed;
-All things have a home but one —
-Thou, Oh, Englishman, hast none!
-
-‘This is slavery — savage men,
-210 Or wild beasts within a den
-Would endure not as ye do —
-But such ills they never knew.
-
 198. their] the 1832.
 201–4. This stanza, drafted in Nbk 10 f. 12v, transcribed into Ashley f. 7r and into Mary Copybk 2, was
 omitted from LC and so from 1832. It was restored by Mary in 1839. In the introduction to the fac-
@@ -17248,35 +15247,11 @@ for the stanza’s inclusion.
 205–8. Alluding to Matthew viii 20: ‘And Jesus saith unto him, The foxes have holes, and the birds of the
 air have nests; but the Son of man hath not where to lay his head’; also Luke ix 58.
 
-213–16. In this stanza, S. recombines the elements of L&C 1945–50, 1954.
-213. What art thou Freedom?] What is Freedom? Mary Copybk 2.
-
-‘Thou art not, as impostors say,
-A shadow soon to pass away,
-A superstition, and a name
-220 Echoing from the cave of Fame.
-
-‘For the labourer thou art bread
-And a comely table spread,
-From his daily labour come,
-In a neat and happy home.
-
-225 ‘Thou art clothes, and fire, and food
-For the trampled multitude —
-No — in countries that are free
-Such starvation cannot be
-As in England now we see.
-
 220. cave] caves 1832. Ashley, Mary Copybk 2 and 1839 read ‘cave’; Mary transcribed ‘caves’ in LC, then canc.
 the ‘s’. Fame] rumour, gossip (Latin fama). Ovid represents Rumour as living on a hill where earth, sea and
 sky meet, in a house of echoing brass. This has innumerable entrances and exits and constantly repeats words,
 which arrive as if on the winds, mixing false and true (Met. xii 39 ff). 221–4. The stanza is given as it appears in
 Ashley though with the punctuation of 1839. In LC, it reads:
-
-For the labourer thou art bread,
-And a comely table spread
-From his daily labour come
-To a neat & happy home.
 
 It would appear that in transcribing this from Ashley, which has a mark that might be read as a comma
 at the end of the first line but no other punctuation, Mary substituted ‘To’ for In as the first word of the
@@ -17288,29 +15263,6 @@ qualify spread at the end of line 2, an arrangement that she reproduced in 1839.
 225. clothes, and fire, and food] Webb (1995) cites Hunt’s leading article in the Examiner 608 (22
 August 1819): ‘ “meat, clothes, and fire” [Pope, Moral Essays iii (Epistle to Allen Lord Bathurst) 82].
 These are dear and valuable to the poor; and Reform is dear and valuable to them, in proportion as they
-
-think it will help to restore them’ (531). See notes to ll. 160–75, 278.
-229. At this point in Nbk 10 S. drafted, then canc., a stanza:
-
-Love in his wife’s looks thou art
-And content within his heart
-When his children climb his knee
-On his child [] thy spirit deep’. (14r)
-
-230 ‘To the rich thou art a check;
-When his foot is on the neck
-Of his victim, thou dost make
-That he treads upon a snake.
-
-‘Thou art Justice — ne’er for gold
-235 May thy righteous laws be sold
-As laws are in England — thou
-Shield’st alike the high and low.
-
-‘Thou art Wisdom — Freemen never
-Dream that God will damn for ever
-240 All who think those things untrue
-Of which Priests make such ado.
 
 230. check;] Mary Copybk 2, 1839; the punctuation mark in LC may be a canc. comma, but cannot be
 confidently deciphered; Ashley’s punctuation could be either a full stop or a dash. 1832 places a comma
@@ -17342,21 +15294,6 @@ established religious doctrine. See the following note.
 240–41. Hunt noted on the proofs for 1832: ‘If Mr. Moxon wishes these two lines omitted, their place can be
 supplied by asterisks’ (MYRS ii 104). In the event the lines were printed. See note to l. 155.
 
-‘What if English toil and blood
-Was poured forth, even as a flood?
-It availed, Oh, Liberty!
-To dim, but not extinguish thee.
-
-250 ‘Thou art Love — the rich have kissed
-Thy feet, and like him following Christ,
-Give their substance to the free
-And through the rough world follow thee,
-
-‘Or turn their wealth to arms, and make
-255 War for thy belovèd sake
-On wealth, and war, and fraud — whence they
-Drew the power which is their prey.
-
 244. tyrants] England’s tyrants Nbk 10 f. 15r.
 245. In 1793 Britain joined with Prussia, Russia, Austria, Holland, Spain and Sardinia to form a military
 coalition against Revolutionary France. S. gives an imaginative version of such a league of despotism
@@ -17387,27 +15324,6 @@ wrote a lower-case ‘p’, then canc. it in such a way that it could be misread
 1876–7 noted. This was apparently the source of the error in 1832, though why 1839 follows 1832 is
 not clear.
 
-‘Spirit, Patience, Gentleness,
-All that can adorn and bless
-Art thou — let deeds not words express
-265 Thine exceeding loveliness.
-
-‘Let a great Assembly be
-Of the fearless and the free
-On some spot of English ground
-Where the plains stretch wide around.
-
-270 ‘Let the blue sky overhead,
-The green earth on which ye tread,
-All that must eternal be
-Witness the solemnity.
-
-‘From the corners uttermost
-275 Of the bounds of English coast,
-From every hut, village and town
-Where those who live and suffer, moan
-For others’ misery or their own,
-
 261. Such, they curse their Maker not] In Nbk 10 f. 16r S. wrote ‘So serene, [they canc.] curse it not’, tran-
 scribed the line into Ashley f. 8v, then alt. it to the version given here. LC and 1832 follow the original
 Ashley reading, Mary Copybk 2 and 1839 the alt. one except for a lower-case ‘m’ in ‘maker’. Two expla-
@@ -17428,36 +15344,6 @@ for ‘public meetings throughout the United Kingdom’ to demand ‘justice and
 278. or] and 1832. At this point in Ashley (10r) S. transcribed, then canc., a stanza which he had drafted
 in Nbk 10 f. 17v–18r:
 
-From the cities where from caves
-Like the dead from putrid graves
-Troops of starvelings gliding come
-Living Tenants of a tomb.
-
-‘From the workhouse and the prison
-280 Where pale as corpses newly risen,
-Women, children, young and old
-Groan for pain, and weep for cold —
-
-‘From the haunts of daily life
-Where is waged the daily strife
-285 With common wants and common cares
-Which sows the human heart with tares —
-
-‘Lastly from the palaces
-Where the murmur of distress
-Echoes, like the distant sound
-290 Of a wind alive around
-
-‘Those prison halls of wealth and fashion
-Where some few feel such compassion
-For those who groan, and toil, and wail
-As must make their brethren pale —
-
-295 ‘Ye who suffer woes untold,
-Or to feel, or to behold
-Your lost country bought and sold
-With a price of blood and gold —
-
 It is possible that this is the ‘verse’ which he says (in a letter to Hunt of 27 September 1819) was
 inadvertently omitted from Mary’s transcription in LC; if so, he thought better of including it, hence
 the cancellation. See note to ll. 201–4. The stanza evokes the living conditions of the poor in the
@@ -17477,26 +15363,6 @@ Biblical distinction between the good and the wicked should be replaced with one
 and have-nots.
 290. alive around] Nbk 10 f. 18v, Ashley, LC, 1832; Of a wind, alive around — Mary Copybk 2; Of a
 wind, alive around; 1839.
-
-‘Be your strong and simple words
-Keen to wound as sharpened swords,
-305 And wide as targes let them be,
-With their shade to cover ye.
-
-‘Let the tyrants pour around
-With a quick and startling sound,
-Like the loosening of a sea,
-310 Troops of armed emblazonry.
-
-‘Let the charged artillery drive
-Till the dead air seems alive
-With the clash of clanging wheels,
-And the tramp of horses’ heels.
-
-315 ‘Let the fixèd bayonet
-Gleam with sharp desire to wet
-Its bright point in English blood
-Looking keen as one for food.
 
 301. measured] ne’er said Mary Copybk 2, 1839. In LC, Mary transcribed only the two words Declare
 with from Ashley, leaving the rest of the line blank. S. then added measured words that ye in the blank
@@ -17524,21 +15390,6 @@ respectively. L&C 2371–496 develops just such a scene of massacre of a Greek m
 gathered peacefully to demand its liberation, by the troops of their Turkish oppressors.
 320. sphereless stars] I.e. stars which have wandered from what older astronomers termed the sphere
 of the fixed stars and appeared as comets or meteors. OED cites this as the earliest use of the word. Cp.
-
-‘Stand ye calm and resolute,
-Like a forest close and mute,
-325 With folded arms and looks which are
-Weapons of an unvanquished war,
-
-‘And let Panic, who outspeeds
-The career of armèd steeds
-Pass, a disregarded shade
-330 Through your phalanx undismayed.
-
-‘Let the laws of your own land,
-Good or ill, between ye stand
-Hand to hand, and foot to foot,
-Arbiters of the dispute,
 
 L&C 621 and note and LMG 284–5: ‘a fixed star gone astray/From the silver regions of the Milky Way’.
 323. The 9th article of S.’s A Declaration of Rights (1812) is: ‘No man has a right to disturb the public
@@ -17572,30 +15423,6 @@ Cobbett invoked ‘the example of our Ancestors . . . we want nothing new. We ha
 laws and principles, to which we are immovably attached. We want great alteration, but we want nothing
 new’: Political Register (2 November 1816) 568. See Thompson, 84–96 and Dawson 204–10.
 
-Children of a wiser day;
-And whose solemn voice must be
-Thine own echo — Liberty!
-
-340 ‘On those who first should violate
-Such sacred heralds in their state
-Rest the blood that must ensue,
-And it will not rest on you.
-
-‘And if then the tyrants dare
-345 Let them ride among you there,
-Slash, and stab, and maim, and hew; —
-What they like, that let them do.
-
-‘With folded arms and steady eyes,
-And little fear, and less surprise
-350 Look upon them as they slay
-Till their rage has died away.
-
-‘Then they will return with shame
-To the place from which they came,
-And the blood thus shed will speak
-355 In hot blushes on their cheek.
-
 341. sacred heralds] As messengers or ambassadors between sovereigns or their opposing armies, her-
 alds enjoyed an invulnerable condition that had to be respected; they also arbitrated at tournaments
 and determined precedence in public ceremonies. In S.’s analogy between the laws of England and
@@ -17617,40 +15444,9 @@ and the enemy might be converted into the ally’ (Julian vii 48–9).
 350. slay] stay 1832.
 351. died] passed Mary Copybk 2. There is a canc. stanza at this point in the draft in Nbk 10 f. 21v:
 
-Bethink ye my beloved sons
-All things mortal must die once.
-There will come a destined day
-When the Earth must pass away.
-
 355. hot blushes] Cp. An Address, to the Irish People (1812): ‘do not then cover in darkness wrongs at
 which the face of day, and the tyrants who bask in its warmth ought to blush. Wherever has violence
 succeeded’ (Prose Works 18–19).
-
-‘Every woman in the land
-Will point at them as they stand —
-They will hardly dare to greet
-Their acquaintance in the Street.
-
-360 ‘And the bold, true warriors
-Who have hugged Danger in wars
-Will turn to those who would be free
-Ashamed of such base company.
-
-‘And that slaughter, to the Nation
-365 Shall steam up like inspiration,
-Eloquent, oracular;
-A volcano heard afar.
-
-‘And these words shall then become
-Like oppression’s thundered doom
-370 Ringing through each heart and brain,
-Heard again — again — again —
-
-‘Rise like lions after slumber
-In unvanquishable number —
-Shake your chains to earth like dew
-375 Which in sleep had fallen on you —
-Ye are many — they are few.’
 
 ## THE END
 
@@ -17676,9 +15472,6 @@ in L&C 2892, 3498; Hellas 589.
 364. slaughter,] Nbk 10 f. 22r, Ashley f. 12r; slaughter LC, Mary Copybk 2, 1832, 1839. The comma in
 both draft and fair copy marks a rhetorical pause designed to clarify the reference of the adverbial
 phrase to the Nation.
-
-373. number —] number; Mary Copybk 2; NUMBER! 1832; number! 1839.
-376. YE ARE MANY — THEY ARE FEW. 1832; few — Ashley f. 12v; few! — Mary Copybk 2; few! 1839.
 
 19 Ode to Heaven
 Ode to Heaven was published as one of the Miscellaneous Poems in 1820. S.’s holograph fair
@@ -17818,19 +15611,6 @@ brightly shining’; cp. With a Guitar. To Jane 22, ‘Like a living meteor’, 
 13. Cp. Coleridge, Kubla Khan 12–13: ‘But oh! That deep romantic chasm which slanted/Down the
 green hill athwart a cedarn cover!’
 
-14. Hypothetical earth-like planets throughout the universe, as in Q Mab i 253–67; cp. PU IV 457–62,
-describing the Earth as a planet:
-
-Thou art speeding round the sun,
-Brightest world of many a one,
-Green and azure sphere, which shinest
-With a light which is divinest
-Among all the lamps of heaven
-To whom light and life is given.
-
-17. beyond the Night] I.e. so distant that they are not visible as stars to the human eye at night.
-18. Atoms] Suggesting the atomism of Lucretius in De Re. Nat.; see note to l. 38 below.
-
 Even thy name is as a God,
 20 Heaven! for thou art the abode
 Of that Power which is the glass
@@ -17850,10 +15630,6 @@ Where a world of new delights
 Will make thy best glories seem
 35 But a dim and noonday gleam
 From the shadow of a dream.
-
-Peace! the abyss is wreathed with scorn
-At your presumption, Atom-born!
-What is Heaven? and what are ye
 
 19. S. originally began the stanza as a question: ‘That of which thou art th’abode/Can its name be [ ]
 God . . .’ (Nbk 10 f.42r rev.).
@@ -17943,9 +15719,6 @@ zas were first published in The Athenaeum for 25 August 1832 (554–5), in one o
 of articles that comprise Thomas Medwin’s ‘Memoir of Shelley’, under the title Similes and
 preceded by a note:
 
-Shelley had at command the same weapons which Byron used but he disdained the arm
-of satire, and treated his critics with a noble scorn; he says to one of them —
-
 . . . that Shelley could wield a lash of bronze for others, he proved in Adonais, and not
 excepting even the strongest lines of our English Juvenal, Churchill, perhaps the stanzas
 on Keat’s [sic] Reviewer cut nearer to the bone than any in our language. Among the
@@ -18028,33 +15801,6 @@ undue favour towards the restored monarchies. See headnote to MA and notes to ll
 24; also PB3 note to l. 153 (Longman iii 103–4).
 Text from Nbk 11 pp. 60–1. Apart from the first comma in l. 3, the dashes in ll. 8 and 16
 and the final full stop, all punctuation has been supplied, with reference to 1839 and 1840.
-
-Published in The Athenaeum 25 August 1832 pp. 554–5; BSM xviii pp. 84–5 (facsimile
-and transcription of MS).
-
-As from their ancestral oak
-Two empty ravens wind their clarion,
-Yell by yell, and croak for croak,
-When they scent the noonday smoke
-5 Of fresh human carrion: —
-
-As two gibbering night-birds flit
-From their bower of deadly yew
-Through the night to frighten it —
-When the moon is in a fit,
-10 And the stars are none or few: —
-
-As a shark and dogfish wait
-Under an Atlantic isle
-For the Negro ship whose freight
-Is the theme of their debate,
-15 Wrinkling their red gills the while: —
-
-Are ye — two vultures sick for battle,
-Two scorpions under one wet stone,
-Two bloodless wolves whose dry throats rattle,
-Two crows perched on the murrained cattle,
-20 Two vipers tangled into one.
 
 ¶ 20. 1. their] an Athenaeum 1832, 1839; ancestral] of great antiquity, ironically appropriate to the
 estates of the recently ennobled peers of the realm addressed in the title.
@@ -18327,8 +16073,6 @@ poem, most of them incorporated into stanza two, on the single day he recalls in
 note; he is not necessarily charting the progress of a particular storm. In Italy, he watched
 the atmosphere often and with care (see note to ll. 15–18 below) and may well have brought
 
-together in the Ode phenomena that he noticed on a number of occasions. Even so, it was
-
 not his primary purpose to record weather effects as such but to build them into a poetic
 structure to accommodate the urgent concerns detailed above. The intricate symmetries of
 the poem, from its adaptation of Dantean terza rima to the correspondences between the
@@ -18353,15 +16097,6 @@ bring about personal dissolution as the condition of creative change S. also rec
 from his own earlier work, in fact from the major poem which was the product. L&C
 opens with ‘the rushing of a wind’, agent of a cosmic disruption that is the stimulus
 
-and condition of prophecy. In the lines that S. wrote, then rejected, as a meditative
-prelude to L&C, Fair clouds arrayed in sunlight lose the glory (Longman ii 3–9, no.
-142) he had invoked
-
-a Power whose passive instrument
-Our nature is — a Spirit that with motion
-Invisible and swift its breath hath sent
-Amongst us, like the wind on the wide Ocean. (19–22)
-
 A sacrificial agency is added to the dual force of this destructive and directing spirit/wind
 in the great paean to seasonal change as the ground of fertility and mechanism of renewal
 that Cythna delivers in Canto ix (3631–3747) of L&C. The redemptive rationale she offers
@@ -18375,18 +16110,10 @@ unusual, but (among traditional sonnet structures) prosodic parallels are eviden
 the Spenserian variation on the English (or Shakespearian) sonnet whose iambic pen-
 tameter lines rhyme: abab bcbc cdcd ee. Each employs five rhymes and a final couplet
 
-while continuing rhymes link the tercets of the Ode and the quatrains of the Spenserian
-sonnet.
-
 Text from 1820. The capitalisation of the MSS in Nbks 11 and 14 has been adapted. As
 these MSS were not punctuated for the press, 1820’s punctuation has been followed, though
 it has been somewhat lightened with reference to the MSS and to 1839.
 Published in 1820.
-
-I
-O wild West Wind, thou breath of Autumn’s being,
-Thou, from whose unseen presence the leaves dead
-Are driven, like ghosts from an enchanter fleeing,
 
 * This poem was conceived and chiefly written in a wood that skirts the Arno, near Florence, and on
 a day when that tempestuous wind, whose temperature is at once mild and animating, was collecting
@@ -18419,17 +16146,6 @@ iv 846; Q Mab v 4–6 and nn; L&C 162 and n. In a letter to Peacock of 23–24 J
 the tombs at Pompeii, which the Shelleys visited on 23 December 1818, S. wrote: ‘The wild woods
 surround them on either side . . . you hear the late leaves of autumn shiver & rustle in the stream of the
 inconstant wind as it were like the step of ghosts’ (L ii 74). The leaves–ghosts analogy figures in PU II i
-
-156–9; Ode to Naples (Longman iii 625–49, no. 343) 2–3; Twas the 20th of October (Longman iii 192–3,
-no. 256) 5–7; SP iii 34–37.
-
-Yellow, and black, and pale, and hectic red,
-5 Pestilence-stricken multitudes: O thou
-Who chariotest to their dark wintry bed
-
-The wingèd seeds, where they lie cold and low,
-Each like a corpse within its grave, until
-Thine azure sister of the Spring shall blow
 
 2. unseen presence] The agency of the wind is discernible only in movement in the natural world on
 which it acts. Cp. Hymn to Intellectual Beauty 1–2: ‘The awful shadow of some unseen Power/Floats
@@ -18465,17 +16181,6 @@ S. is combining an allusion to the general resurrection promised in 1 Corinthian
 trumpet shall sound, and the dead shall be raised incorruptible, and we shall all be changed’, with the
 rebirth of plant-life in spring as in SP i 7–8: ‘And each flower and herb on Earth’s dark breast/Rose from
 the dreams of its wintry rest.’
-
-(Driving sweet buds like flocks to feed in air)
-With living hues and odours plain and hill:
-
-Wild Spirit, which art moving every where;
-Destroyer and Preserver; hear, O hear!
-
-II
-15 Thou on whose stream, ’mid the steep sky’s commotion,
-Loose clouds like Earth’s decaying leaves are shed,
-Shook from the tangled boughs of Heaven and Ocean,
 
 11. King-Hele (1971) 215 identifies the botanical basis of the image: ‘Spring is seen driving the sap up
 the trees, forcing out millions of buds to feed on the carbon dioxide of air.’ The complex analogy in the
@@ -18514,21 +16219,6 @@ composed of water evaporated from the sea . . . opposing streams of liquid and v
 15. steep] ‘It is the mountainous thunderheads and lesser towering cumulus elsewhere in the sky whose
 tall flanks prompt the description of the sky as ‘steep’ (Ludlam 508). Cp. ll. 21–2. commotion] Disturbance,
 agitation due to the combined action of rain, wind, and cloud.
-
-Angels of rain and lightning: there are spread
-On the blue surface of thine airy surge,
-20 Like the bright hair uplifted from the head
-
-Of some fierce Maenad, even from the dim verge
-Of the horizon to the Zenith’s height,
-The locks of the approaching storm. Thou Dirge
-
-Of the dying year, to which this closing night
-25 Will be the dome of a vast sepulchre,
-Vaulted with all thy congregated might
-
-Of vapours, from whose solid atmosphere
-Black rain, and fire, and hail will burst: O hear!
 
 18. Angels] Messengers, harbingers. See note to ll. 15–18 above.
 20–21 S. had seen figures of Maenads (from Gk μαίνεσθαι (to be enraged)) sculpted in relief on an
@@ -18571,26 +16261,10 @@ falling night anticipated in ll. 24–7.
 
 ## III
 
-Thou who didst waken from his summer dreams
-30 The blue Mediterranean, where he lay,
-Lulled by the coil of his crystalline streams,
-
-Beside a pumice isle in Baiae’s bay,
-And saw in sleep old palaces and towers
-Quivering within the wave’s intenser day,
-
-35 All overgrown with azure moss and flowers
-So sweet, the sense faints picturing them! Thou
-For whose path the Atlantic’s level powers
-
 31. coil . . . streams] Concordance glosses as ‘confused tumult of waters’, which is hardly possible in the
 context. The suggestion of S. C. Wilcox (N&Q cxcv (1950) 77) ‘lazily meandering sea-currents’, which
 make the sea smooth, is closer to the sense intended. Cp. The Boat on the Serchio (Longman iv 350–68,
 no. 406) 101: ‘In morning’s smile its [the river’s] eddies coil’, and A Vision of the Sea 123–5:
-
-And the fierce winds are sinking with weary wings,
-Lulled by the motion and murmurings
-And the long glassy heave of the rocking sea.
 
 crystalline] clear; transparent. The word is accented on the second syllable.
 32–36. The Shelleys sailed round the coast of Baiae on 8 December 1818 (Mary Jnl i 242). Both Mary’s jnl
@@ -18614,34 +16288,9 @@ air, so that the stones and sand at the bottom seem, as it were, trembling in th
 25–26).
 35. Cp. the description of Venice in Lines Written among the Euganean Hills 129–32:
 
-Save where many a palace gate
-With green sea-flowers overgrown
-Like a rock of ocean’s own,
-Topples o’er the abandoned sea . . .
-
 36. Cp. To a Sky-Lark 54–55.
 37–38. Rogers (1967) 223 detects an allusion in these lines to John Taylor Coleridge’s review of L&C/RofI
 in the Quarterly Review xxi (April 1819) 471. Attacking S.’s militant atheism and predicting his continuing
-
-Cleave themselves into chasms, while far below
-The sea-blooms and the oozy woods which wear
-40 The sapless foliage of the Ocean, know
-
-Thy voice, and suddenly grow grey with fear,
-And tremble and despoil themselves: O hear!
-
-IV
-If I were a dead leaf thou mightest bear;
-If I were a swift cloud to fly with thee;
-45 A wave to pant beneath thy power, and share
-
-The impulse of thy strength, only less free
-Than thou, O Uncontrollable! If even
-I were as in my boyhood, and could be
-
-The comrade of thy wanderings over Heaven,
-50 As then, when to outstrip thy skiey speed
-Scarce seemed a vision, I would ne’er have striven
 
 obscurity as a poet, the review evokes Exodus xiv 21 in which a passage appears through the Red Sea, allow-
 ing the Israelites to escape the pursuing Egyptians, who are drowned by the returning waters.
@@ -18670,29 +16319,6 @@ A solitary gazelle [ ]
 Which in the desert wilderness doth dwell
 Secure in its own swiftness
 
-50. thy] the 1840, 1847; thy Nbk 14.
-51. vision,] 1839, 1840, 1847; vision; 1820.
-
-As thus with thee in prayer in my sore need.
-Oh! lift me as a wave, a leaf, a cloud!
-I fall upon the thorns of life! I bleed!
-
-55 A heavy weight of hours has chained and bowed
-One too like thee: tameless, and swift, and proud.
-
-V
-Make me thy lyre, even as the forest is:
-What if my leaves are falling like its own!
-The tumult of thy mighty harmonies
-
-60 Will take from both a deep, autumnal tone,
-Sweet though in sadness. Be thou, Spirit fierce,
-My spirit! Be thou me, impetuous one!
-
-Drive my dead thoughts over the universe
-Like withered leaves to quicken a new birth!
-65 And, by the incantation of this verse,
-
 52. Against the bond of life, I should not need canc. Nbk 14.
 54. Christ’s crown of thorns and the seed that ‘fell among thorns’ in the parable of the sower (Matthew
 xiii 7) are both recalled. Perhaps also alluding to the nightingale, who was fabled to sing with its breast
@@ -18713,23 +16339,12 @@ like the alternations of an ever-changing wind over an Aeolian lyre’ (Reiman (
 the creation of the Earth [The Birth of Pleasure] (Longman iii 261–2, no. 285) 6–7: ‘airs low-breathing/
 Through Aeolian pines’, and Byron, Childe Harold’s Pilgrimage iv 1228–31:
 
-But there is that within me which shall tire
-Torture and Time, and breath when I expire . . .
-Like the remembered tone of a mute lyre.
-
 59. thy mighty harmonies] Cp. Childe Harold’s Pilgrimage iv 946–47: ‘Then let the winds howl on! their
 harmony/Shall henceforth be my music.’
 63. dead thoughts] His writings — perhaps especially L&C/RofI for which his expectations had been
 high — and which had so far failed to find the readers in whose minds they might live.
 64. leaves to quicken a new birth] Both senses of quicken, ‘to hasten’ and ‘to impart life to’, are appropriate, as
 are the two senses of leaves — of a tree and of a book. Neither would require S.’s ideas to be adopted as such,
-
-Scatter, as from an unextinguished hearth
-Ashes and sparks, my words among mankind!
-Be through my lips to unawakened Earth
-
-The trumpet of a prophecy! O Wind,
-70 If Winter comes, can Spring be far behind?
 
 only that they should assist in the necessary renewal. S. can hardly have failed to think of the infant with
 which Mary was pregnant and who, their son Percy Florence, was to be born on 12 November. He wrote to
@@ -18739,17 +16354,6 @@ iii 70–152); see note to ll. 106–110] & this is, I suspect the last thing sh
 general scope — mental, social and political. See note to l. 70.
 66–7. S. is borrowing an image from the terza rima stanzas he appears to have drafted shortly before
 the Ode; see And what art thou, presumptuous, who profanest (Longman iii 194–7):
-
-[But as my hopes were fire, so my] decay
-[Shall be as ashes covering them.] Oh Earth,
-Oh friends, if when my [] [has ebbed away]
-One spark be unextinguished of that hearth
-Kindled in (19–23).
-
-But in this page a record will I seek.
-Not in the air shall these my words disperse,
-Though I be ashes; a far hour shall wreak
-The deep prophetic fulness of this verse.
 
 69. See l. 10 above and note. Cp. also the address to Freedom in Childe Harold’s Pilgrimage iv 876–77:
 ‘Thy trumpet voice, though broken now and dying,/The loudest still the tempest leaves behind’, and
@@ -18790,11 +16394,6 @@ directly on the transcription in Mary Copybk 1, which, in its present state, is 
 The portions of the poem as it appears in 1824 that survive in Mary’s transcription are: the
 title; stanzas 1, 2 and 5; and ll. 31–2. Her transcription also includes four lines related to
 both ll. 1–4, for which they may be a rejected draft, and 37–40:
-
-It is a woman’s countenance divine
-With everlasting beauty breathing there
-Which from a stormy mountain’s peak, supine
-Gazes into the nights trembling air. (p. 97)
 
 It is a trunkless head, and on its feature
 Death has met life, but there is life in death,
@@ -18924,10 +16523,6 @@ given a metrical value of four syllables.
 13. itself] the gazer’s spirit of l. 10. thought no more can trace] The object of trace appears to be char-
 acters, i.e. distinctive facial features; the elliptical (and appropriately involved) sense of ll. 9–13 would
 
-’Tis the melodious hues of beauty thrown
-15 Athwart the darkness and the glare of pain,
-Which humanize and harmonize the strain.
-
 And from its head as from one body grow,
 As [   ] grass out of a watery rock,
 Hairs which are vipers, and they curl and flow,
@@ -18945,9 +16540,6 @@ Out of the cave this hideous light hath cleft,
 30 And he comes hastening like a moth that hies
 After a taper; and the midnight sky
 Flares, a light more dread than obscurity.
-
-’Tis the tempestuous loveliness of terror;
-For from the serpents gleams a brazen glare
 
 then be: ‘the grace of the Medusa as represented in the painting is such as to engrave her features on
 the gazer’s spirit, thus rendering it incapable of distinguishing them as objects of its own gaze, and/or
@@ -19053,19 +16645,6 @@ Tasso’s pastoral drama Aminta which S. read in 1815 and again in 1818 (Mary Jn
 266). During a celebrated exchange in the first scene (125–64), Dafne chides Silvia for her
 resistance to the love which all nature manifests:
 
-La vite s’avviticchia al suo marito;
-L’abete ama l’abete, il pino il pino . . .
-e l’un per l’altro faggio arde e sospira . . .
-Or tu da meno
-Esser vuoi de le piante,
-Per non esser amante? (153–6, 163–5)
-
-The vine embraces her husband;
-the fir-tree loves the fir-tree, the pine the pine . . .
-one beech-tree for the other burns and sighs with love . . .
-will you, then,
-be lesser than the plants by not being a lover?
-
 In a letter of 20 September 1819, Hunt had told S. that he was translating Tasso’s Aminta, and S. had
 urged him to write original poetry instead in the letter that accompanied this lyric which appeared
 as Love’s Philosophy (L ii 152), but he expressed great admiration for Hunt’s translation (Amyntas, a
@@ -19118,12 +16697,6 @@ this mildly licentious piece. But such resemblances as there are seem insufficie
 securely any relation between the two beyond general and generic ones. Burton R. Pollin in
 K-SMB xix (1968) 35–6 noticed similar, if more ethically elevated, sentiments on universal
 love as model for human behaviour in Godwin’s Mandeville, which S. read at the end of 1817:
-
-Nature is love. See how the bending branches kiss the stream! Each portion of nature
-nourishes its neighbour portion . . . See how the fawns upon yonder hill sport and
-
-gambol and frisk with each other . . . they derive from surer instinct the principle of gai-
-ety and love. And shall man, the lord of the creation, be less tender to his brother, man?
 
 The connection is reinforced by S.’s letter to Godwin of 7 December 1817 (L i 574) which
 singles out the passage in which these lines occur for special praise.
@@ -19274,11 +16847,6 @@ Gaze the wisest into madness
 ¶ 25. 7–10. Sophia Stacey had strikingly large eyes and an intense gaze, ‘almost lycanthropic’ according
 to her great-great-grandson (Bieri II 170), who remarks that ‘a feature of all her pictures is strong and
 
-With soft clear fire, — the winds that fan it
-10 Are those thoughts of tender gladness
-Which, like Zephyrs on the billow,
-Make thy gentle soul their pillow.
-
 If, whatever face thou paintest
 In those eyes, grows pale with pleasure,
 15 If the fainting soul is faintest
@@ -19306,8 +16874,6 @@ fair copy which supplied her text, but there is no necessity to suppose its exis
 in which S. composed the three stanzas that comprise the draft on the facing pages 115–16 is
 not perfectly clear, but as Chernaik 278–80 suggests, he probably first set down on the right-
 
-hand page 116 the following stanza with its several cancelled attempts at a third line:
-
 impressive eyes’ (The Catty Family 1). Her portrait of c. 1818 by Bouton is reproduced in Bieri II 96.
 10. tender] gentle SS Trans, no doubt a mistaken transcription. In his holograph (adds F.1), S. first
 wrote gentle then substituted tender, evidently to avoid repetition with gentle in l. 12.
@@ -19316,12 +16882,6 @@ wrote gentle then substituted tender, evidently to avoid repetition with gentle 
 22. aught] ought SS Trans. — an obvious mistranscription. yet] but Rossetti 1870/1878.
 
 ## DOI: 10.4324/9781315170343-26
-
-[Thy voice dissolves the chain of] Duty
-[binds more tight]
-[But yet seem]
-[Heavy & tight for]
-Whilst thou remainest free
 
 The phrase ‘And lingerest’ follows, possibly the undeveloped beginning of another stanza,
 then the draft of the second stanza of the 1824 text. On the left-hand page 115, the cancelled
@@ -19349,16 +16909,6 @@ Text from 1824.
 Published in 1824. Julian iv 45 prints as ‘unpublished lines’ a version of most of the draft
 material given above. BSM xviii 115–16 (facsimile and transcription of MS).
 
-I fear thy kisses, gentle maiden,
-Thou needest not fear mine;
-My spirit is too deeply laden
-Ever to burden thine.
-
-5 I fear thy mien, thy tones, thy motion,
-Thou needest not fear mine;
-Innocent is the heart’s devotion
-With which I worship thine.
-
 27 On a Dead Violet: To ——
 The textual history of this lyric variation on the traditional theme of love decayed is involved and
 complicated. S. transcribed the fair copy, the text of which is given below, on Mary’s letter of 7
@@ -19369,10 +16919,6 @@ Time Long Past (Longman iii 246–7, no. 275).) A note on the letter introduces 
 I promised you what I cannot perform; a song on singing: — there are only two subjects
 remaining. I have a few old stanzas on one which though simple & rude, look as if they were
 dictated by the heart. — And so — if you tell no one whose they are you are welcome to them.
-
-Pardon these dull verses from one who is dull — but who is not the less ever your’s PBS.
-When you come to Pisa, continue to see us. Casa Frassi Lung’Arno.
-(See ‘Text from’ below)
 
 S.’s remarks indicate that while Sophia was in Florence he had engaged to write a series of songs
 on different topics for her — which no doubt she was to sing — one of which, on singing itself, he
@@ -19391,14 +16937,6 @@ pp. 122 (apparently the beginning of a fair copy which includes the first letter
 word of l. 2) and 152 (another fair copy giving in addition the first two words of l. 2 as
 ‘Which she’) of the nbk. Facing the main draft on p. 113 are lines, also in a mixture of ink
 and pencil, evidently meant to follow on from stanza 3; first two lines in pencil:
-
-Our fortunes are alike, poor blossom
-My?[peace] & thine together
-For from the time we left her bosom
-We both began to wither
-
-Then what has the appearance of a skeletal stanza, perhaps to continue from the above or as
-an alternative to it.
 
 ## DOI: 10.4324/9781315170343-27
 
@@ -19494,21 +17032,6 @@ Published in The Literary Pocket-Book; Or, Companion for the Lover of Nature and
 1821, p. 120, entitled Song. On a faded Violet; MYRS viii 300–01 (facsimile and transcrip-
 tion of MS).
 
-The odour from the flower is gone
-Which like thy kisses breathed on me;
-The colour from the flower is flown
-Which glowed of thee and only thee.
-
-5 A shrivelled, lifeless, vacant form
-It lies on my abandoned breast,
-And mocks the heart which yet is warm
-With its cold, silent rest.
-
-I weep — my tears revive it not,
-10 I sigh — it breathes no more on me;
-Its mute and uncomplaining lot
-Is such as mine should be.
-
 28 Goodnight
 S. inscribed a copy of this love lyric on a blank page in The Literary Pocket-Book for 1819
 which he presented to Sophia Stacey on 28 December 1819, the day before she left Florence.
@@ -19536,17 +17059,6 @@ both 1824 and 1839 is identical to that in LPB, save for one minor difference of
 The position of the draft in Nbk 10 and of the fair copy of stanzas 1 and 2 in Nbk 14 is
 consistent with composition in autumn 1819. Although it is not certain that S. wrote the
 
-The colour from the flower is gone,
-Which like thy sweet eyes smiled on me;
-The odour from the flower is flown,
-Which breathed of thee and only thee!
-
-5. shrivelled] withered Ollier MS, Medwin (1913), 1839.
-7. which] that Medwin (1913).
-8. With cold and silent rest Hunt MS, LPB, 1824, Ollier MS, 1839.
-10. no more on me] none back to me Medwin (1913).
-12. should] must Medwin (1913).
-
 ## DOI: 10.4324/9781315170343-28
 
 poem with Sophia Stacey in mind rather than presenting her with a poem already written,
@@ -19562,36 +17074,12 @@ substance only are given in the notes from other MSS and early printings: Morgan
 Museum MA 3223 is abbreviated as M; The Literary Pocket-Book for 1822 as LPB 1822.
 Published in The Literary Pocket-Book for 1822, p. 123; MYRS viii 292–3 (facsimile and
 
-Goodnight? no love, the night is ill
-Which severs those it should unite;
-Let us remain together still,
-Then it will be — “good night”.
-
-5 How were the night without thee, good
-Though thy sweet wishes wing its flight?
-Be it not said, thought, understood —
-Then it will be — “good night”.
-
-The hearts that on each other beat
-10 From evening close to morning light
-Have nights as good as they are sweet
-But never say “good night”.
-
 ¶ 28. 1. 1 no love] ah no Nbk 14, Harvard Nbk 1, M; ah! no LPB 1822, 1824, 1839. night] hour Harvard
 Nbk 1, 1824, 1839.
 4. good night”] good night Nbk 14, Harvard Nbk 1; good night M, LPB 1822, 1824, 1839.
 5. I cannot call the lone night good Nbk 10, Nbk 14; How can I call the lone night good Harvard Nbk
 
 ## 1, M, LPB 1822, 1824, 1839.
-
-8. “good night”] good, night Nbk 14; good night Harvard Nbk 1, M; good night LPB 1822, 1824, 1839.
-9. The hearts that rest beside each other Nbk 10; To hearts which near each other move Harvard Nbk
-
-## 1, M, LPB 1822, 1824, 1839.
-
-11. The line has only two words in Nbk 10: Find peace. The night is good; because, my love Harvard
-Nbk 1, M, LPB 1822, 1824, 1839.
-12. They never say good night Harvard Nbk 1, M, LPB 1822, 1824, 1839.
 
 29 ‘What men gain fairly, that should
 they possess’
@@ -19638,9 +17126,6 @@ to recover what is theirs unequivocally declared. S. advances more detailed and 
 arguments for these positions in a passage in PVR (Julian vii 37–43) which serves as an
 illuminating commentary on What men gain fairly. Between the poem and the prose trea-
 tise, there is a critical difference, however. In the latter, the only recovery of unjustly held
-
-property which S. countenances is a tax to be levied for the general good in case of ‘pub-
-lic emergency’, while in the poem, the remedy is uncompromising: the possessor may be
 
 ## DOI: 10.4324/9781315170343-29
 
@@ -19721,13 +17206,6 @@ creep upon the earth’ which are considered to be contagiously unclean in Levit
 Text from 1820. The capitalisation of Harvard Nbk 1 has been adopted. Punctuation has been
 slightly modified after consulting the draft in Nbk 10, the Harvard Nbk 1 fair copy, and 1839.
 
-Chameleons feed on light and air:
-Poets’ food is love and fame:
-If in this wide world of care
-Poets could but find the same
-5 With as little toil as they,
-Would they ever change their hue
-
 ¶ 30. 1. According to legend, the chameleon nourished itself on air: cp. Hamlet II ii 93–4: ‘of the cha-
 meleon’s dish. I eat the air’, and Ovid, Met. xv 411.
 4. the same] I.e. love and fame.
@@ -19770,10 +17248,6 @@ said to be a cave under the sea: Theresa M. Kelley, ‘Proteus and Romantic Alle
 18. Poets] poets Harvard Nbk 1.
 23. earthly] S. is punning on the etymology of chameleon, from the Gk καμαί (on the ground, dwarf)
 
-and λέων (lion). Most species of chameleon are tree-dwellers.
-25. sunnier] distant Nbk 10.
-27. refuse] reject Nbk 10. boon] of wealth or power (l. 19).
-
 To the Men of England
 There is an untitled fair copy of this well-known political song in S.’s hand in Box 1 ff.
 75v–76r, on pages originally part of Harvard Nbk 1 from which they were torn out. See
@@ -19782,11 +17256,6 @@ copy into Mary Copybk 2 and published it in 1839 with the present title (see not
 The only drafts of the poem as published in 1839 that are known to survive are versions of
 ll. 29–30 and 32 in Nbk 14 pp. 8, 17. On the latter page, S. also drafted what appears to be a
 discarded stanza intended for the Song, apparently to follow l. 28.
-
-?[O], not to miscreate, — abstain
-From forcing to this world of pain
-The children to whom ye dare not give
-Aught that makes life worth to live.
 
 In composing the Song, S. seems to have drawn largely on his draft of People of England:
 see headnote to no. 281 (Longman iii 253–5) and notes to ll. 6 and 9 below. Discarding sev-
@@ -19821,8 +17290,6 @@ Charles Ollier, whom S. regarded at that time as the principal or only outlets f
 England. Hunt received a number of poems from S. in late 1819, which neither he nor Ollier
 was prepared to publish, among them PB3, MA and England in 1819. Although in a letter to S.
 
-of 2 December 1819, he declared himself ready to arrange for the publication of ‘your political
-
 ## DOI: 10.4324/9781315170343-31
 
 songs & pamphlets’ without the ‘timid’ Ollier (SC vi 1090), Hunt will have been intimidated
@@ -19856,10 +17323,6 @@ From the cradle to the grave
 Those ungrateful drones who would
 Drain your sweat — nay, drink your blood?
 
-Wherefore, Bees of England, forge
-10 Many a weapon, chain and scourge,
-That these stingless drones may spoil
-
 ¶ 31. Title. S.’s holograph in Harvard Nbk 1 is headed ‘Men of England — &c — A Song’ in what is very proba-
 bly Mary’s hand. It is uncertain whether the heading was intended as a formal title or, what seems more likely,
 a short title to identify a poem left untitled by S. Whether it carries his authority is impossible to determine.
@@ -19878,31 +17341,6 @@ What men gain fairly 4 and note. Dawson (51) points out the use of the analogy b
 Wooler and Spence to enforce a political message like that in the present stanza. Cp. People of England 20–26.
 10. scourge] a whip or lash.
 
-Have ye leisure, comfort, calm,
-Shelter, food, love’s gentle balm?
-15 Or what is it ye buy so dear
-With your pain and with your fear?
-
-The seed ye sow, another reaps;
-The wealth ye find, another keeps;
-The robes ye weave, another wears;
-20 The arms ye forge, another bears.
-
-Sow seed — but let no tyrant reap:
-Find wealth — let no impostor heap:
-Weave robes — let not the idle wear:
-Forge arms — in your defence to bear.
-
-25 Shrink to your cellars, holes, and cells —
-In halls ye deck another dwells.
-Why shake the chains ye wrought? Ye see
-The steel ye tempered glance on ye.
-
-With plough and spade and hoe and loom
-30 Trace your grave and build your tomb,
-And weave your winding-sheet — till fair
-England be your Sepulchre.
-
 27–8. Ye see] Box 1 reads ‘when see’, an obviously unfinished phrase which S. apparently left as such
 pending revision. Mary transcribed ‘when we’, then cancelled ‘we’ and wrote ‘see’ above the line (Mary
 Copybk 2), altering this to Ye see in 1839.
@@ -19917,13 +17355,6 @@ on you’, which would be a clear allusion to Peterloo.
 31. weave your winding-sheet] Carl Woodring cites Gray’s The Bard (49–50): ‘ “Weave the warp, and
 weave the woof,/The winding-sheet of Edward’s race” ’: Politics and English Romantic Poetry (1970)
 264. But S. may well be making an ironic revision of stanza II of Byron’s Song for the Luddites (1816):
-
-When the web that we weave is complete,
-And the shuttle exchanged for the sword,
-We will fling the winding sheet
-O’er the despot at our feet,
-And dye it deep in the gore he has pour’d (6–10)
-(Byron PW iv 48).
 
 32. Sepulchre] Box 1 f. 76r; sepulchre Mary Copybk 2, 1839, eds. In Nbk 14, after an earlier draft of the first
 two lines of the discarded stanza quoted in the headnote above, S. continued: ‘So let famed Albions land
@@ -19984,9 +17415,6 @@ punctuated with the care of the press-copy MSS of MA or PB3, this version appear
 
 ## DOI: 10.4324/9781315170343-32
 
-been posted by S. to Charles Ollier from Pisa on 10 November 1820 with particular instruc-
-tions for its publication:
-
 I enclose also another poem, which I do not wish to be printed with Julian & Maddalo, but,
 at the end of the second edition of the Cenci, or of any other of my writings, to which my
 name is affixed, if any other should at present have arrived at a second edition which I do not
@@ -20037,30 +17465,6 @@ been supplied at the end of l. 12, an exclamation mark at the end of l. 21 and a
 Ruin in l. 24. Substantive variants only from other textual witnesses are recorded.
 Published in The Athenaeum (2 December 1832) 724; MYRS v 205–4 (facsimile of MS).
 
-Corpses are cold in the tomb —
-Stones on the pavement are dumb —
-Abortions are dead in the womb
-And their mothers look pale, like the death-white shore
-5 Of Albion, free no more.
-
-Her sons are as stones in the way —
-They are masses of senseless clay —
-They are trodden and move not away —
-The abortion with which she travaileth
-10 Is Liberty, smitten to death.
-
-Then trample and dance, thou Oppressor!
-For thy Victim is no redressor;
-Thou art sole lord and possessor
-Of her corpses and clods and abortions — they pave
-15 Thy path to the grave.
-
-Hearest thou the festival din
-Of Death and Destruction and Sin,
-And Wealth crying havoc! within?
-’Tis the Bacchanal triumph that makes truth dumb —
-20 Thine Epithalamium —
-
 ¶ 32. 3. Abortions] Lifeless foetuses soon to be stillborn, as ll. 9–10 make clear.
 4. death-white] Both the Harvard holographs read thus; death- is careted in above the line in Harvard
 Nbk 1.1839 and Athenaeum 1832 read white, as do the drafts in Nbk 14 and Mary Copybk 1.
@@ -20083,14 +17487,6 @@ Pilgrimage IV (1818): ‘the bacchanal roar of the songs of exultation still yel
 over the carnage of Mont St. Jean, and the betrayal of Genoa, of Italy, of France . . .’ (Byron PW ii 124).
 20. Epithalamium] A song traditionally sung outside the bridal chamber on the night of a wedding.
 Between this and the next stanza, S. has drafted in Nbk 14 three lines which he did not develop further:
-
-‘Lift up thy [?] beaver/Cast off thy dark mask forever —/Impious and hoary Deciever’ (sic).
-
-Aye, marry thy ghastly wife!
-Let Fear and Disquiet and Strife
-Spread thy couch in the chamber of Life:
-Marry Ruin, thou Tyrant, and Hell be thy guide
-25 To the bed of the bride.
 
 33 The Sensitive-Plant
 Date of composition. In 1839, Mary placed SP first among the Poems Written in 1820; her
@@ -20187,9 +17583,6 @@ of the Plants (1789), perhaps also in William Nicholson’s British Encyclopedia
 which he used extensively for the notes to Q Mab (see headnote in Longman i). In the article
 ‘Mimosa’, Nicholson describes mimosa sensitiva (a much larger variety) as the ‘sensitive
 
-plant’ and mimosa pudica as the ‘humble plant’, giving an account of the latter’s sensitivity
-under the entry ‘Botany’:
-
 The irritable nature of some leaves is remarkable, not but that all leaves may truly be
 said to possess irritability with respect to light. The phenomena however to which we
 now allude are of the most striking kind. The sensitive plant, mimosa pudica, com-
@@ -20219,10 +17612,6 @@ annual, a fact of significance for the narrative of SP. Cowper’s comic verse p
 the Oyster, and the Sensitive Plant dramatises a quarrel between the mollusc and the mimosa
 whether one or the other possesses the more exquisite sensitivity; both are then chided for
 egotism by the Poet, who recommends:
-
-pity, sympathy, and love,
-These, these are feelings truly fine,
-And prove their owner half-divine. (62–4)
 
 In a melancholy letter to Claire Clairmont of 11 December 1821 which recounts his current
 aversion to the cold and to any large company, S. describes himself as ‘The Exotic as you
@@ -20334,10 +17723,6 @@ and loosened her hair’ (Nbk 11 p. 139). The loose hair and bare bosom are deta
 rowed from the figure of the woman narrator of L&C 285, 302–4, itself an idealised and
 eroticised image of Mary Wollstonecraft. The affinity is reinforced by the appropriation
 
-of L&C 478–86 in the draft (Nbk 11 p. 140) for SP ii 17–20 (see note) — in particular, the
-phrase ‘the Spirit that clasped her in her repose’, which S. also removed from the finished
-poem.
-
 It is probable that another individual contributed to the figure of the Lady as well. S.’s
 remark in the letter to Hunt of 19 June 1822 (quoted above) on the resemblance between
 her and Jane Williams pays graceful tribute to Jane’s cheerful kindness of disposition and
@@ -20438,19 +17823,6 @@ Published in 1820, MYRS v 47–61, MYRS vi 238–9 (facsimile and transcription 
 
 ## MSS).
 
-A Sensitive-plant in a garden grew,
-And the young winds fed it with silver dew,
-And it opened its fan-like leaves to the light
-And closed them beneath the kisses of night.
-
-5 And the Spring arose on the garden fair
-Like the Spirit of love felt everywhere;
-And each flower and herb on Earth’s dark breast
-Rose from the dreams of its wintry rest.
-
-But none ever trembled and panted with bliss
-10 In the garden, the field or the wilderness,
-
 ¶ 33. i. 3–4. Mimosa pudica has bipinnate leaves which open and close like a fan. In view of the plant’s
 Latin name, these lines carry a suggestion of coyness. Cp. The Woodman and the Nightingale 52–53
 (Longman iv 54–62, no. 377): ‘the loveliness/Of fan-like leaves’. The mimosa responds to a variety of
@@ -20460,13 +17832,6 @@ movements (nyctinastism) common to many varieties of plant. Cp. Darwin II i 307�
 response is reversed in the Conclusion 23–24, in which ‘our’ organs ‘endure/No light’.
 i 6. And the Spirit of Love felt every where 1839; And the Spirit of Love fell every where 1840. Both the
 draft in Nbk 11 134 and Harvard Nbk 1 read as 1820. The conjecture in Forman 1876–7 is persuasive:
-
-that the misprint of And for Like in 1839 led Mary or someone in the printing house to substitute fell
-for felt in 1840 in order to make sense of the line. Cp. Lines Written among the Euganean Hills 366–68:
-
-And the love which heals all strife
-Circling, like the breath of life,
-All things in that sweet abode . . .
 
 S. draws on the literary tradition of a Golden Age when the earth spontaneously brought forth fruit
 and flowers without cultivation as in Metamorphoses I i 89 ff. Milton invokes the tradition in Paradise
@@ -20484,24 +17849,6 @@ notes.
 i 8. Cp. OWW 5–10.
 i 9–12. Priscilla P. St. George, JEGP lxiv (1965) 482 detects an allusion in these lines to the Bride in the
 Song of Songs: ‘My beloved is like a roe or a young hart’ (ii 9).
-
-Like a doe in the noon-tide with love’s sweet want
-As the companionless Sensitive-plant.
-
-The snow-drop and then the violet
-Arose from the ground with warm rain wet,
-15 And their breath was mixed with fresh odour, sent
-From the turf, like the voice and the instrument.
-
-Then the pied wind-flowers and the tulip tall,
-And narcissi, the fairest among them all,
-Who gaze on their eyes in the stream’s recess
-20 Till they die of their own dear loveliness;
-
-And the Naiad-like lily of the vale
-Whom youth makes so fair and passion so pale,
-That the light of its tremulous bells is seen
-Through their pavilions of tender green;
 
 i 15–16. Anticipating similar synaesthetic descriptions in the poem; cp. i 27–28 and note. The breath
 of the flowers mixes with the odour of the turf as a musical instrument accompanies a voice. See S.’s
@@ -20534,21 +17881,6 @@ valleys’ (ii 1).
 i 23–4. The bell-like blossoms of the lily of the valley shine through the canopies (pavilions) of fresh
 spring verdure that enclose them.
 
-25 And the hyacinth purple, and white, and blue
-Which flung from its bells a sweet peal anew
-Of music so delicate, soft and intense,
-It was felt like an odour within the sense;
-
-And the rose like a nymph to the bath addrest,
-30 Which unveiled the depth of her glowing breast,
-Till, fold after fold, to the fainting air
-The soul of her beauty and love lay bare;
-
-And the wand-like lily which lifted up,
-As a Maenad, its moonlight-coloured cup
-35 Till the fiery star, which is its eye,
-Gazed through clear dew on the tender sky;
-
 i 25–28. The Quarterly Review xxvi (1821) 180 specifically dismissed these lines as ‘the tricks of a mere
 poetical harlequin’. Cp. Comus 555–56: ‘At last a soft and solemn-breathing sound/Rose like a steam of
 rich distilled perfumes’, and To Constantia (Thy voice, slow rising like a Spirit, lingers) 38–41.
@@ -20560,22 +17892,6 @@ i. 29–32. Although S. drafted it in Nbk 11 136, this stanza is missing from Ma
 Nbk 1. Probably she inadvertently passed it over in transcribing from S.’s fair copy, which served as
 press copy, or her error was corrected on another copy which served as press copy. The stanza is
 
-included in her later editions. The lines recall Panthea’s commentary on the transfiguration of Asia as
-the embodiment of love and beauty in PU II v 17–20:
-
-I scarce endure
-The radiance of thy beauty. Some good change
-Is working in the elements, which suffer
-Thy presence thus unveiled.
-
-i 29. addrest] Prepared, made ready.
-i 33–34. Cp. PU IV 473–75 in which the Moon’s path around the Earth is likened to the dance of the
-maenad, a female celebrant of Dionysian ecstasy:
-
-Like a Maenad, round the cup
-Which Agave lifted up
-In the weird Cadmaean forest.
-
 moonlight-coloured] Cp. The Question (Longman iii 265–8, no. 288) 18: ‘moonlight-coloured May’.
 i 35–36. Cp. PU IV 485–86: ‘As a violet’s gentle eye/Gazes on the azure sky’ and Ode to Heaven 46–48.
 star] Flowers and stars are frequently associated in S.’s poetry. In SP, the association is developed on a
@@ -20584,26 +17900,6 @@ and Webb 232–33 identify the Spanish poet Calderón’s La Cisma de Inglaterra
 stante as sources of S.’s correlation of stars and flowers in the poem. S. had been learning Spanish with
 Maria Gisborne during his residence in Livorno between June and September 1819. On 4 September,
 the Shelleys were joined at Livorno by Charles Clairmont, whom S. made ‘read Spanish all day long’
-
-And the jessamine faint, and the sweet tuberose,
-The sweetest flower for scent that blows;
-And all rare blossoms from every clime
-40 Grew in that garden in perfect prime.
-
-And on the stream whose inconstant bosom
-Was pranked under boughs of embowering blossom
-With golden and green light, slanting through
-Their Heaven of many a tangled hue,
-
-45 Broad water lilies lay tremulously,
-And starry river-buds glimmered by,
-And around them the soft stream did glide and dance
-With a motion of sweet sound and radiance.
-
-And the sinuous paths of lawn and of moss
-50 Which led through the garden along and across,
-Some open at once to the sun and the breeze,
-Some lost among bowers of blossoming trees,
 
 (L ii 120; see headnote to Within the surface of the fleeting river (Longman iii 198–200, no. 258).) On
 16 November 1819, he wrote to Maria Gisborne: ‘I have been reading Calderon without you. I have
@@ -20642,14 +17938,6 @@ As fair as the fabulous asphodels,
 Fell into pavilions, white, purple, and blue,
 To roof the glow-worm from the evening dew.
 
-And from this undefiled Paradise
-The flowers (as an infant’s awakening eyes
-60 Smile on its mother, whose singing sweet
-Can first lull, and at last must awaken it,)
-
-When Heaven’s blithe winds had unfolded them,
-As mine-lamps enkindle a hidden gem,
-
 i 54. asphodels] The asphodel is a liliaceous plant common to the south of Europe. In Homer’s Odyssey
 xi 539, the asphodel is a native of the Elysian fields (see i 106–9 and note): cp. Paradise Lost ix 1040,
 Pope, Ode for Music on St. Cecilia’s Day 74.
@@ -20684,24 +17972,10 @@ of Agricultural Chemistry (2nd edn 1814) in Nbk 14 seem to date from the first h
 ii 182, Claire Jnl 139–40, and BSM v pp. xlvi–xlvii. enkindle] cause to glow and sparkle as though set on
 fire. Cp. PU II iii 86–87: ‘Like a diamond which shines/On the dark wealth of mines.’ Newton conjec-
 
-tured that the diamond was an inflammable body; it was later discovered to be phosphorescent rather
-than combustible. See Darwin I ii 228n., L&C 586–90 and note, PU II iii 86–7 and note.
-
-Shone smiling to Heaven, and every one
-65 Shared joy in the light of the gentle sun;
-
-For each one was interpenetrated
-With the light and the odour its neighbour shed,
-Like young lovers whom youth and love make dear
-Wrapped and filled by their mutual atmosphere.
-
 70 But the Sensitive-plant which could give small fruit
 Of the love which it felt from the leaf to the root,
 Received more than all — it loved more than ever,
 Where none wanted but it, could belong to the giver.
-
-For the Sensitive-plant has no bright flower;
-75 Radiance and odour are not its dower;
 
 i 64. Shone smiling] S. frequently plays on the ambiguity of the Latin verb ridere, meaning both to
 ‘laugh’ and to ‘shine’. Cp. i 59–60 and note, ii 12 and note, PU II i 121 and note.
@@ -20739,24 +18013,6 @@ i 74–75. These lines do not state that the sensitive-plant has no flower at al
 flower. P.P., N&Q 5th s. vi (1876) 156 and 6th s. xii (1885) 475 point out that the sensitive-plant pro-
 duces a brush-like lilac flower. Nicholson’s Encyclopedia (1807–9) describes mimosa pudica as bearing
 yellow flowers, and mimosa sensitiva (or the mimosa tree) purple flowers.
-
-It loves, even like Love, its deep heart is full,
-It desires what it has not — the beautiful!
-
-The light winds which from unsustaining wings
-Shed the music of many murmurings;
-80 The beams which dart from many a star
-Of the flowers whose hues they bear afar;
-
-The plumèd insects swift and free,
-Like golden boats on a sunny sea,
-Laden with light and odour, which pass
-85 Over the gleam of the living grass;
-
-The unseen clouds of the dew, which lie
-Like fire in the flowers till the Sun rides high,
-Then wander like spirits among the spheres,
-Each cloud faint with the fragrance it bears;
 
 i 76–77. As many commentators have pointed out, these lines allude to the exchange between Socrates
 and Agathon in Plato’s Symposium, which S. read and translated from 7 to 17 July 1818: ‘ “It is con-
@@ -20796,26 +18052,6 @@ concentric spheres, each the proper domain of a celestial body or bodies and pil
 spirit or angel. Cp. Epipsychidion 116–17 and 285–86. S. here likens the clouds of odorous vapour released
 by the sun’s heat from the flowers to such guiding spirits set free from their spheres to wander at will.
 
-90 The quivering vapours of dim noontide,
-Which like a sea o’er the warm earth glide,
-In which every sound, and odour, and beam
-Move, as reeds in a single stream;
-
-Each, and all, like ministering angels were
-95 For the Sensitive-plant sweet joy to bear
-Whilst the lagging hours of the day went by
-Like windless clouds o’er a tender sky.
-
-And when evening descended from Heaven above,
-And the Earth was all rest, and the air was all love,
-100 And delight, though less bright, was far more deep,
-And the day’s veil fell from the world of sleep,
-
-And the beasts, and the birds, and the insects were drowned
-In an ocean of dreams without a sound
-Whose waves never mark, though they ever impress
-105 The light sand which paves it — Consciousness;
-
 i 97. Like bright [alt. soft] clouds over a tender sky Nbk 11 p. 46., S.’s substitution of windless, properly
 qualifying sky rather than clouds seems intended to establish a material analogy for the lagging hours of
 l. 96: the clouds are not driven by the wind but move with the slow speed of the passing summer day.
@@ -20843,21 +18079,6 @@ Virgil places the scenery of the 6th Aeneid’ (L ii 61). Cp. the blissful spiri
 644: ‘pars pedibus plaudunt choreas et carmina dicunt’ (‘Some tread the rhythm of a dance and chant
 songs’).
 
-Ever sang more sweet as the day might fail,
-And snatches of its Elysian chant
-Were mixed with the dreams of the Sensitive-plant).
-
-110 The Sensitive-plant was the earliest
-Upgathered into the bosom of rest;
-A sweet child weary of its delight,
-The feeblest and yet the favourite —
-Cradled within the embrace of night.
-
-There was a Power in this sweet place,
-An Eve in this Eden; a ruling grace
-Which to the flowers did they waken or dream,
-Was as God is to the starry scheme.
-
 i 110–14. It is possible that these lines carry a private reference to William Shelley, who died aged 3 on 7
 June 1819. In a letter to Hogg of 25 July 1819, S. wrote: ‘Your little favourite had improved greatly both
 in mind and body before that fatal fever seized him’ (L ii 104). See iii 111.
@@ -20867,14 +18088,6 @@ the evening and are lowest at night; see W. E. Burge, G. C. Wickwire and H. J. F
 xcvii (1936) 672–77. The feeblest and yet the favourite] Cp. Wordsworth, The Oak and the Broom (1800)
 73–4: ‘Am I not/In truth a favoured plant!’; cp. also To the Daisy (1807) 79–80: ‘thou not in vain/Art
 Nature’s favourite’.
-
-ii 1. Power] The word occurs frequently and with various meanings in S.’s work. The primary sense
-here is genius loci or tutelary spirit (of the garden). Cp. Milton, Arcades, in which the Genius declares:
-
-I am the power
-Of this fair Wood, and live in Oaken bower,
-To nurse the Saplings tall . . .
-And all my Plants I save from nightly ill. (44–8)
 
 S. elsewhere attaches to Power: (1) a metaphysical sense, ‘the capability of any thing to be or act’: A
 Refutation of Deism (1814; Prose Works 121) — and see Mont Blanc, esp. 96–7 and note; and (2) a
@@ -20890,21 +18103,6 @@ ii 4. God] The principal attribute of S.’s female deity is formulated by Mrs M
 governess in Mary Wollstonecraft’s Original Stories from Real Life (1788), who identifies ‘the greatest
 pleasure life affords, — [as] that of resembling God, by doing good’ (MWW iv 368). For S.’s conception
 of God as ‘another word for the essence of the universe’, see L i 101.
-
-5 A Lady, the wonder of her kind,
-Whose form was upborne by a lovely mind
-Which, dilating, had moulded her mien and motion
-Like a sea-flower unfolded beneath the ocean,
-
-Tended the garden from morn to even:
-10 And the meteors of that sublunar Heaven,
-Like the lamps of the air when night walks forth,
-Laughed round her footsteps up from the Earth!
-
-She had no companion of mortal race,
-But her tremulous breath and her flushing face
-15 Told, whilst the morn kissed the sleep from her eyes
-That her dreams were less slumber than Paradise:
 
 ii 5. the wonder of her kind] S. first wrote ‘a Spirit descended from Heaven’ (Nbk 11 137).
 ii 6. lovely mind] Cp. Claire Clairmont’s appreciation of Lady Mountcashell: ‘Her countenance beamed
@@ -20936,34 +18134,6 @@ between the Lady and the Sensitive-plant; the plant is also companionless (i 12)
 under the kisses of night (i 4).
 ii 15. morn] Harvard Nbk 1; moon 1820. The misprint in 1820 was corrected in 1829 and 1839.
 
-As if some bright Spirit for her sweet sake
-Had deserted heaven while the stars were awake,
-As if yet around her he lingering were,
-20 Though the veil of daylight concealed him from her.
-
-Her step seemed to pity the grass it pressed;
-You might hear by the heaving of her breast,
-That the coming and going of the wind
-Brought pleasure there and left passion behind.
-
-25 And wherever her airy footstep trod,
-Her trailing hair from the grassy sod
-Erased its light vestige, with shadowy sweep,
-Like a sunny storm o’er the dark green deep.
-
-I doubt not the flowers of that garden sweet
-30 Rejoiced in the sound of her gentle feet;
-I doubt not they felt the spirit that came
-From her glowing fingers through all their frame.
-
-She sprinkled bright water from the stream
-On those that were faint with the sunny beam;
-35 And out of the cups of the heavy flowers
-She emptied the rain of the thunder showers.
-
-She lifted their heads with her tender hands
-And sustained them with rods and ozier bands;
-
 ii 17–18. some bright Spirit . . . deserted heaven] See i 88 and note, ii 13–20 and note.
 ii 20. The bright Spirit, like the stars which are his realm, cannot be seen by day; his brightness also
 obscures him to human sight, as in the Conclusion, 23–4. Cp. Epipsychidion 199–200: ‘She met me,
@@ -20979,39 +18149,6 @@ the application of an electrical charge. In her Preface to Frankenstein (1818), 
 on the subject of Galvanism between S. and Byron at Lake Geneva in June 1816. Cp. The Magnetic Lady
 to her Patient 5–6: ‘And from my fingers flow/The powers of life.’
 ii 37–8. S. is evidently recalling one of Eve’s gardening labours in Paradise Lost:
-
-oft stooping to support
-Each flower of tender stalk, whose head though gay . . .
-Hung drooping unsustained, them she upstays
-Gently with myrtle band. (ix 427–31)
-
-If the flowers had been her own infants she
-40 Could never have nursed them more tenderly.
-
-And all killing insects and gnawing worms
-And things of obscene and unlovely forms
-She bore, in a basket of Indian woof,
-Into the rough woods far aloof,
-
-45 In a basket of grasses and wild flowers full,
-The freshest her gentle hands could pull
-For the poor banished insects, whose intent,
-Although they did ill, was innocent.
-
-But the bee and the beam-like ephemeris
-50 Whose path is the lightning’s, and soft moths that kiss
-The sweet lips of the flowers, and harm not, did she
-Make her attendant angels be.
-
-And many an antenatal tomb
-Where butterflies dream of the life to come
-55 She left, clinging round the smooth and dark
-Edge of the odorous Cedar bark.
-
-This fairest creature from earliest spring
-Thus moved through the garden ministering
-All the sweet season of summer tide,
-60 And ere the first leaf looked brown — she died!
 
 41–4. Cp. the governess Mrs Mason’s instructions to her young charges in Mary Wollstonecraft’s
 Original Stories from Real Life (1788): ‘Do you know the meaning of the word Goodness? I see you are
@@ -21037,29 +18174,6 @@ ii 51. Echoing Caliban’s words in The Tempest III ii 139: ‘sweet airs, that 
 ii 53. antenatal tomb] I.e. a chrysalis. The case which encloses the mature or ‘perfect’ butterfly rep-
 resents a state prior to (re)birth. See Athanase (Longman ii 311–28, no. 146) 91 and note.
 
-ii 59. All] Through all Nbk 11 (186), Harvard Nbk 1. The absence of Through in 1820 is no doubt owing
-to its removal on the press copy to avoid repetition with through in the previous line.
-
-Three days the flowers of the garden fair,
-Like stars when the moon is awakened, were;
-Or the waves of Baiae, ere luminous
-She floats up through the smoke of Vesuvius.
-
-5 And on the fourth, the Sensitive-Plant
-Felt the sound of the funeral chant
-And the steps of the bearers heavy and slow,
-And the sobs of the mourners deep and low;
-
-The weary sound and the heavy breath
-10 And the silent motions of passing death
-And the smell, cold, oppressive and dank,
-Sent through the pores of the coffin plank;
-
-The dark grass, and the flowers among the grass,
-Were bright with tears as the crowd did pass;
-15 From their sighs the wind caught a mournful tone
-And sate in the pines and gave groan for groan.
-
 The garden once fair became cold and foul
 Like the corpse of her who had been its soul,
 Which at first was lovely as if in sleep,
@@ -21078,51 +18192,12 @@ As Sharon Ruston points out (Shelley and Vitality (2005) 138): ‘In a sense the
 but it is now inanimate matter, likened in this instance to the operations of an animate body’. Cp. ii 64–5.
 iii 13–16. This elegiac scene recalls Milton’s Lycidas, which was to influence Adonais (see headnote to
 
-Bid amaranthus all his beauty shed,
-And daffadillies fill their cups with tears,
-To strew the laureate hearse where Lycid lies. (149–51)
-
 iii 19. lovely] lively 1820; lovely Harvard Nbk 1, 1829, 1839. Most eds have emended 1820 to lovely, and
 its presence in 1829 suggests that it derives from S.’s list of errata for 1820. But 1820’s lively, in the sense of
 ‘life-like, animated or vivid’ (OED a. 3) makes sense, and may possibly have been the reading of the press
 copy.
 iii 20. heap] Given the analogy in the stanza between the dead Lady and the garden, S. might intend a
 play on the early-nineteenth-century sense of the word, ‘a slovenly woman’ (OED n. 1 e).
-
-Swift summer into the autumn flowed,
-And frost in the mist of the morning rode
-Though the noonday sun looked clear and bright,
-25 Mocking the spoil of the secret night.
-
-The rose leaves, like flakes of crimson snow,
-Paved the turf and the moss below:
-The lilies were drooping, and white, and wan,
-Like the head and the skin of a dying man.
-
-30 And Indian plants, of scent and hue
-The sweetest that ever were fed on dew,
-Leaf after leaf, day after day,
-Were massed into the common clay.
-
-And the leaves, brown, yellow, and grey, and red,
-35 And white with the whiteness of what is dead,
-Like troops of ghosts on the dry wind passed;
-Their whistling noise made the birds aghast.
-
-And the gusty winds waked the wingèd seeds
-Out of their birthplace of ugly weeds,
-40 Till they clung round many a sweet flower’s stem
-Which rotted into the earth with them.
-
-The water-blooms under the rivulet
-Fell from the stalks on which they were set;
-And the eddies drove them here and there
-45 As the winds did those of the upper air.
-
-Then the rain came down, and the broken stalks
-Were bent and tangled across the walks;
-And the leafless network of parasite bowers
-Massed into ruin; and all sweet flowers.
 
 iii 23. of the morning] of morning Harvard Nbk 1.
 iii 24–25. Cp. Adonais for similar visions of beauty which mocks or defies death: ‘flowers that mock
@@ -21138,30 +18213,10 @@ iii 44–5. Cp. the correspondence between the wind of the upper air or atmosphe
 beneath the sea in OWW 36–42 and note.
 iii 48. parasite bowers] A parasite is a climbing plant which grows supported by trellis-work, trees,
 
-50 Between the time of the wind and the snow
-All loathliest weeds began to grow,
-Whose coarse leaves were splashed with many a speck
-Like the water-snake’s belly and the toad’s back.
-
-And thistles, and nettles, and darnels rank,
-55 And the dock, and henbane; and hemlock dank
-Stretched out its long and hollow shank
-And stifled the air, till the dead wind stank.
-
-And plants at whose names the verse feels loath
-Filled the place with a monstrous undergrowth,
-60 Prickly, and pulpous, and blistering, and blue,
-Livid, and starred with a lurid dew.
-
 etc. (OED parasite n. 2 b) without necessarily feeding off a host (contrast iii 40–1). Parasite bowers
 are enclosed by or overarched with such plants. iii 50–61. Cp. similar descriptions of infected or dis-
 ease-stricken landscapes in PU I 170–79 and Mazenghi (Longman ii 352–61, no. 166) 86–102. In ll.
 54–7, S. appears to be remembering Cordelia’s description of her mad father in King Lear IV iv 3–6:
-
-Crowned with rank fumitor, and furrow-weeds,
-With burdocks, hemlock, nettles, cuckoo-flowers,
-Darnel, and all the idle weeds that grow
-In our sustaining corn.
 
 iii 54–5. henbane;] Harvard Nbk 1; henbane, 1820, 1839. The five weeds named before the semico-
 lon are apparently the subjects of ‘began to grow’, understood as carried over from l. 51, as Rossetti
@@ -21180,26 +18235,7 @@ of associating disgusting images with the act of the sexual instinct’ (Prose 2
 evokes the disease commonly associated with prostitution. Cp. Cenci’s curse on his daughter Beatrice,
 upon whom he has forced incest, in The Cenci (Longman ii 713–863, no. 209) IV i 130–2:
 
-Heaven, rain upon her head
-The blistering drops of the Maremma’s dew,
-Till she be speckled like a toad.
-
-iii 60. blue] The colour blue is frequently associated with disease and death in S.’s poetry. Cp. L&C 2766,
-
 ## 3964; PU I 170.
-
-And agarics and fungi, with mildew and mould
-Started like mist from the wet ground cold;
-Pale, fleshy, — as if the decaying dead
-65 With a spirit of growth had been animated!
-
-Their mass rotted off them, flake by flake,
-Till the thick stalk stuck like a murderer’s stake,
-Where rags of loose flesh yet tremble on high
-Infecting the winds that wander by.
-
-70 Spawn, weeds and filth, a leprous scum,
-Made the running rivulet thick and dumb,
 
 iii 62. agarics] Fungi of the large genus agaricus — having ‘gills’ bearing seeds on the underside of the
 cap — which include common edible mushrooms as well as poisonous ones. fungi] Mushrooms and/
@@ -21241,27 +18277,6 @@ colds — depression & even fever’ (Mary L i 94). For the unburied dead as sou
 iii 70. Spawn] The fibrous, filament-like substance of the vegetative part of a mushroom or other fun-
 gus (OED spawn n. 7).
 
-And at its outlet flags huge as stakes
-Dammed it up with roots knotted like water-snakes.
-
-And hour by hour, when the air was still,
-75 The vapours arose which have strength to kill:
-At morn they were seen, at noon they were felt,
-At night they were darkness no star could melt.
-
-And unctuous meteors from spray to spray
-Crept and flitted in broad noonday
-80 Unseen; every branch on which they alit
-By a venomous blight was burned and bit.
-
-The Sensitive-plant like one forbid
-Wept, and the tears, within each lid
-Of its folded leaves which together grew,
-85 Were changed to a blight of frozen glue.
-
-For the leaves soon fell, and the branches soon
-By the heavy axe of the blast were hewn;
-
 iii 72. flags] A plant growing in moist areas; applicable to any reed or rush (OED flag n. 1 a).
 iii 78–81. This stanza develops a variation on the view, common in older natural philosophy, that blight
 in plants is caused by a ‘baleful influence of atmospheric or invisible origin’ (OED blight n. 1). See the
@@ -21273,15 +18288,6 @@ and note. Here these luminous vapours are imagined as flitting from plant to pla
 wherever they touch, although like comets (see note to iii 78–81) in the heavens they are invisible
 in daylight. For unctuous as ‘inflammable’, see OED unctuous 3 which cites Sir H. Davy’s Elements of
 
-Chemical Philosophy (1812): ‘unctuous or inflammable gas’. For the present sense of meteors, see OED
-meteor n. 2b.
-iii 82–5. Cp. Darwin II i 317–20:
-
-All wan and shivering in the leafless glade
-The sad ANEMONE reclined her head;
-Grief on her cheeks had paled the roseate hue,
-And her sweet eye-lids dropp’d with pearly dew.
-
 Crook and Guiton (Shelley’s Venomed Melody (1986) 206) note: ‘the effect of this blight on the sensitive
 plant is the nearest thing to a venereal ophthalmia that a plant could be imagined to display’.
 iii 82. forbid] Accursed: cp. Macbeth I iii 20 ‘He shall live a man forbid’, and see note to iii 91.
@@ -21292,65 +18298,12 @@ turgidity of the sap in the vessels or pores of the plant, resulting in the coll
 stalks. The word heart in l. 89 has personifying rather than scientific force. Cp. Darwin I Additional
 Note xxxvi, which observes that, although plants possess a circulatory system, ‘the vegetable circulation
 
-The sap shrank to the root through every pore
-As blood to a heart that will beat no more.
-
-90 For Winter came — the wind was his whip —
-One choppy finger was on his lip:
-He had torn the cataracts from the hills
-And they clanked at his girdle like manacles;
-
-His breath was a chain which without a sound
-95 The earth and the air and the water bound;
-He came, fiercely driven in his Chariot-throne
-By the tenfold blasts of the arctic zone.
-
-Then the weeds which were forms of living death
-Fled from the frost to the Earth beneath.
-100 Their decay and sudden flight from frost
-Was but like the vanishing of a ghost!
-
-And under the roots of the Sensitive-plant
-The moles and the dormice died for want.
-The birds dropped stiff from the frozen air
-105 And were caught in the branches naked and bare.
-
-First there came down a thawing rain
-And its dull drops froze on the boughs again;
-Then there steamed up a freezing dew
-Which to the drops of the thaw-rain grew;
-
-110 And a northern whirlwind, wandering about
-Like a wolf that had smelt a dead child out,
-Shook the boughs thus laden and heavy and stiff
-And snapped them off with his rigid griff.
-
-December came; his aspect stern
-Glared deadly o’er the mountain cairn;
-A polar sheet was round him flung,
-And ice-spears at his girdle hung.
-
 iii 91. choppy] Chapped; cracked. Cp. Macbeth I iii 42–3: ‘By each at once her choppy finger laying/
 Upon her skinny lips’; see note to iii 82.
 iii 100. Their decay, & their sudden flight from [the] frost Harvard Nbk 1.
 iii 102. And under] Under Harvard Nbk 1.
 iii 109. grew] Became united.
 iii 113. griff] Claw (OED griff n.3).
-
-When winter had gone and spring came back
-115 The Sensitive-plant was a leafless wreck;
-But the mandrakes and toadstools and docks and darnels
-Rose like the dead from their ruined charnels.
-
-Whether the Sensitive-plant, or that
-Which within its boughs like a spirit sat
-Ere its outward form had known decay,
-Now felt this change, — I cannot say.
-
-5 Whether that Lady’s gentle mind,
-No longer with the form combined
-Which scattered love, as stars do light,
-Found sadness, where it left delight,
 
 iii 116. mandrakes] brambles Harvard Nbk 1. The mandrake is a poisonous Mediterranean plant for-
 merly used as a narcotic and held to possess magical powers. Its root, thought to resemble a human
@@ -21377,16 +18330,6 @@ endowed with wondrous powers and eagle-eyed genius — so good, so pure, would n
 and dispersed by the Creator; but that the qualities and consciousness that formed him, are not only
 indestructible in themselves, but in the form under which they were united here, and that to become
 worthy of him is to assure the bliss of a reunion’ (i pp. xv–xvi).
-
-It is a modest creed, and yet
-Pleasant if one considers it,
-15 To own that death itself must be,
-Like all the rest, — a mockery.
-
-That Garden sweet, that Lady fair,
-And all sweet shapes and odours there,
-In truth have never passed away —
-20 ’Tis we,’tis ours, are changed — not they.
 
 Concl. 11–12. Cp. The Tempest IV i 156–57: ‘We are such stuff/As dreams are made on.’ The lines also
 seem to allude to the title and principal theme of Calderón’s La vida es sueño (Life is a dream), which
@@ -21660,17 +18603,6 @@ Heracles and mentioned in Met. v 608 as one of the locations through which Areth
 her flight from Alpheus. Pausanias, Description of Greece V vii 1, identifies a stream which rises on
 Erymanthos as a tributary of Alpheios. The glacial setting of lines 19–27 may be expanded from Ovid’s
 
-reference to ‘gelidumque Erymanthon’ (‘icy Erymanthus’) in Met. v 608.
-26. unsealed] concealed 1824.
-30. The bars] Presumably because the springs are frozen.
-
-And the beard and the hair
-Of the river God were
-Seen through the torrent’s sweep,
-As he followed the light
-35 Of the fleet nymph’s flight
-To the brink of the Dorian deep.
-
 ‘Oh, save me! oh, guide me!
 And bid the deep hide me,
 For he grasps me now by the hair!’
@@ -21761,18 +18693,6 @@ Proserpine was abducted by Pluto. S. relocates the sources of Alpheus and Arethu
 Sicily.
 76–77. Like friends . . . hearted] Cp. These are two friends whose lives were undivided (Longman iv
 
-108–9, no. 389)
-84. meadows of Asphodel] Odyssey xxiv 8 mentions ασφόδελόν λειμώνα (‘the mead of asphodel’ (a
-flower native to the Mediterranean)) in Elysium, the heavenly paradise of Greek and Roman myth.
-Cp. also SP i 54 and note.
-
-85 And at night they sleep
-In the rocking deep
-Beneath the Ortygian shore; —
-Like spirits that lie
-In the azure sky
-90 When they love, but live no more.
-
 36 ‘Arethusa was a maiden’
 Drafted in mid–late April 1820 as an ironic counterpart to Arethusa arose, which S. con-
 tributed to Mary’s drama Proserpine. While Arethusa arose remains relatively faithful to
@@ -21803,46 +18723,7 @@ Text from Nbk 14 pp. 150 rev. — 149 rev. (punctuation has been added at the en
 Published in Stand v (1961) 2–3 under the title The Pursued and the Pursuer; and BSM v
 310–13 (facsimile and transcription of the MS).
 
-87. the Ortygian shore] Pausanias and Ovid both assert that Alpheus pursued Arethusa from Greece to
-the island of Ortygia, off the coast of Sicily (see headnote).
-90. When they] Where they Nbk 14.
-
 ## DOI: 10.4324/9781315170343-36
-
-Arethusa was a maiden
-Bred among the rocks,
-And Alpheus, a shepherd, laden
-With the love of her sweet looks.
-5 More than all his flocks
-He loved those sweet looks.
-
-A proud and an ungentle creature,
-In her human form,
-Arethusa was by nature,
-10 And though fair and soft to see,
-Like a winter’s storm
-To her love, was she.
-
-On a flattering fountain
-She would ever stare —
-15 Till the maiden of the Mountain
-Grew the thing she gazed upon
-And, mixed with waters there,
-Fell from stone to stone.
-
-Alpheus would weep and languish
-20 In a dell of dew,
-Till his deep and liquid anguish
-Changed him to a gloomy river
-Whose dark waters must pursue
-Her bright waves, ever!
-
-25 The pursued and the pursuer
-To the salt sea foam,
-Through the rocks and [woods] obscure
-Wound with?[murmur] and with?[motion]
-To the threshold of their home
-30 In the Dorian Ocean —
 
 ¶ 36. 13–16. Echoing the vanity of Narcissus, described in Met. iii 339–510.
 16. Grew . . . upon] Cp. PU IV 483–7:
@@ -21889,9 +18770,6 @@ the draft in Nbk 14 and scrutinised it more attentively, transcribing (as 1840�
 of the two stanzas on p. 21 which are written in ink across the lines for The Cloud. The patchy
 draft of the other she chose not to complete and include. It may be transcribed as follows:
 
-A further stanza is drafted on the following page of the nbk, below the draft for Song of
-Apollo, in a different ink and with a different nib:
-
 ## DOI: 10.4324/9781315170343-37
 
 The order in which S. might have decided to arrange the six complete or nearly complete stan-
@@ -21911,30 +18789,6 @@ vious year, and both words and music were quickly and widely reprinted, while th
 of singing it at the end of a dramatic performance soon caught on in other London and pro-
 vincial theatres. A third stanza was added later in 1745, thus fixing (subject to minor vari-
 ations) the words of the principal part of the anthem up to the present day (Scholes p. 10):
-
-God save great George our King,
-Long live our noble King,
-God save the King.
-Send him victorious,
-Happy and glorious,
-Long to reign over us,
-God save the King.
-
-O Lord our God arise,
-Scatter his enemies,
-And make them fall;
-Confound their Politicks,
-Frustrate their knavish Tricks,
-On Thee our hopes we fix.
-God save us all.
-
-Thy choicest gifts in store
-On him be pleased to pour,
-Long may he reign.
-May he defend our laws,
-And ever give us cause,
-To say with Heart and Voice,
-God save the King.
 
 Through the eighteenth century, stanzas were regularly added to these three in response to con-
 temporary events and circumstances, such as George III’s bouts of mental derangement and his
@@ -21972,22 +18826,6 @@ Published in 1840; BSM v 42–9 (facsimile and transcription of MS). The poem ha
 by various titles: God Save the Queen (Rossetti 1870); National Anthem (Forman 1876–7); A New
 National Anthem, the title in Dowden 1891, has been followed by Hutchinson, Locock 1911, and Julian.
 
-God! prosper, speed and save,
-God! raise from England’s grave
-Her murdered Queen.
-Pave with swift victory
-5 The steps of Liberty
-Whom Britons own to be
-Immortal Queen!
-
-See, she comes throned on high,
-On swift Eternity,
-10 God save the Queen!
-Millions on millions wait
-Firm, rapid, [    ], elate,
-On her?[approaching] state,
-God save the Queen!
-
 ¶ 37. 3. murdered Queen] See England in 1819 l. 13 and note; MA ll. 102–25 and note.
 8. throned on high] The image recalls the apocalyptic visions of ‘the throne of God and of the Lamb’ in
 the new Jerusalem of Revelation xxii 3.
@@ -21995,30 +18833,6 @@ the new Jerusalem of Revelation xxii 3.
 intended to supply a word later.
 13. ?[approaching]] majestic 1840; ?[approvative] BSM v; ?[approaching] Massey. The word, written
 loosely near the edge of the page, is very difficult to decipher.
-
-15 She is thine own pure soul
-?[Moulding] the mighty whole,
-God save our Queen!
-She is thine own deep love
-Rained down from Heaven above
-20 Wherever she rest or move,
-God save our Queen!
-
-Wilder her enemies
-In their own dark disguise,
-God save our Queen!
-25 All earthly things that dare
-Her sacred name to wear,
-Strip them, as Kings [    ] bare;
-God save our Queen!
-
-Be her eternal throne
-30 Built in our hearts alone,
-God save our Queen!
-Let the Oppressor hold
-Canopied seats of gold,
-She sits enthroned of old
-35 O’er our hearts, Queen.
 
 22–3. enemies . . . dark disguise] The oppressors, domestic and foreign, who conceal their true nature
 beneath the robes of established power.
@@ -22032,15 +18846,6 @@ men gain fairly, that should they possess ll. 8–10 and note.
 sion: ‘I am a man of unclean lips, and I dwell in the midst of a people of unclean lips: for mine eyes have
 seen the King, the Lord of hosts. Then flew one of the seraphims unto me, having a live coal in his hand,
 which he had taken with the tongs from off the altar: And he laid it upon my mouth, and said, Lo, this
-
-hath touched thy lips; and thine iniquity is taken away, and thy sin purged.’ S. read Isaiah aloud to Mary
-between 2 and 10 February 1820 (Mary Jnl i 308).
-38. the] S. has left the word out of the draft. See note to l. 42.
-
-Sweet as if Angels sang,
-40 Loud as that [] clang
-Wakening the world’s dead gang,
-God save the Queen!
 
 Published in 1824 without date but included among the Poems Written in 1821 in 1839.
 S.’s holograph fair copy in Harvard Nbk 1 81–3 is the only recorded MS. It evidently served
@@ -22061,18 +18866,6 @@ Text from Harvard Nbk 1 pp. 81–3. S.’s holograph is not punctuated for the p
 punctuation has been supplied after consulting both 1824 and 1839.
 Published in 1824; MYRS v 82–4 (facsimile and transcription of MS).
 
-Rarely, rarely comest thou,
-Spirit of Delight!
-Wherefore hast thou left me now
-Many a day and night?
-5 Many a weary night and day
-’Tis since thou art fled away.
-
-How shall ever one like me
-Win thee back again?
-With the joyous and the free
-10 Thou wilt scoff at pain.
-
 40. In the draft in Nbk 14 p. 21 S. has cancelled a word, which appears to be ‘triumphal’, as BSM v
 suggests, leaving a gap in the line. 1840 reads ‘trumpet’s’; that might well have been S.’s choice had he
 revised the draft, as this and the following line refer to the biblical tradition that at the general resur-
@@ -22081,59 +18874,10 @@ rection the dead will be awakened by the sound of a trumpet: see 1 Corinthians x
 
 ## DOI: 10.4324/9781315170343-38
 
-As a lizard with the shade
-Of a trembling leaf,
-15 Thou with sorrow art dismayed;
-Even the sighs of grief
-Reproach thee, that thou art not near,
-And reproach thou wilt not hear.
-
-Let me set my mournful ditty
-20 To a merry measure;
-Thou wilt never come for pity —
-Thou wilt come for pleasure;
-Pity then will cut away
-Those cruel wings, and thou wilt stay.
-
-25 I love all that thou lovest,
-Spirit of Delight!
-The fresh Earth in new leaves dressed,
-And the starry night,
-Autumn evening, and the morn
-30 When the golden mists are born.
-
-I love snow, and all the forms
-Of the radiant frost;
-I love waves and winds and storms —
-Every thing almost
-35 Which is Nature’s, and may be
-Untainted by man’s misery.
-
-¶ 38. 11. that] thou 1824, 1839.
-13–15. S. may be recalling Horace, Odes I xxiii, an appeal to ‘Chloë’ not to flee the poet like a fawn
-seeking its mother:
-
-nam seu mobilibus veris inhorruit
-adventus foliis, seu virides rubum
-dimovere lacertae,
-et corde et genibus tremit.
-
 (‘For it quivers in heart and limb, if through the light hung leaves hath run the shiver of spring’s
 approach, or the green lizards have pushed aside the bramble’).
 19. ditty] poem (OED ditty n. 2.b).
 20. measure] air, tune, melody (OED measure n. 14).
-
-As is quiet, wise and good;
-40 Between thee and me
-What difference? but thou dost possess
-The things I seek — not love them less.
-
-I love, Love — though he has wings,
-And like light can flee —
-45 But above all other things,
-Spirit, I love thee —
-Thou art Love and Life! O come,
-Make once more my heart thy home.
 
 39 Song of Apollo
 Drafted by S. in Nbk 14, with its companion Song of Pan, for the first act of Midas, one of the
@@ -22157,18 +18901,6 @@ gods rather than sung by them. For this reason, the 1824 titles have been emende
 Adapting Met. xi 146–93, Mary’s Midas opens with Midas arriving at Mt Tmolus (now gen-
 erally identified with Bozdag, in western Turkey) at the beginning of a singing contest between
 Apollo and Pan, which is to be judged by Tmolus, patron-god of the eponymous mountain.
-
-Midas announces that he will favour Pan, his ‘guardian god’ (Mary Nbk f.22r), even before the
-contest begins, but after hearing both gods Tmolus awards victory to Apollo, telling him that:
-
-The Fauns may dance
-To the blithe tune of ever merry Pan:
-But wisdom, beauty, and the power divine
-Of highest poesy lives within thy strain,
-Named by the Gods the king of Melody. (Mary Nbk f.23v)
-
-Wasserman 46–56 suggests that S.’s Apollo and Pan represent the claims of ‘two opposing
-orders’, Apollo championing abstract intellectual values, and Pan the earthly and physical;
 
 ## DOI: 10.4324/9781315170343-39
 
@@ -22204,9 +18936,6 @@ Fly me; and from the glory of my ray
 Good minds, and open actions, take new might
 Until diminished by the reign of night.
 
-I feed the clouds, the rainbows and the flowers
-20 With their ethereal colours; the moon’s globe
-
 ¶ 39. 1. Hours] Recalling the horae of Greek myth, goddesses of the hours and seasons.
 3. the open sky] the sky Mary Nbk. sky,] sky; Nbk 14.
 7–12. Then . . . bare] Cp. the description of sunrise in TL 1–20; and The Cloud 77–84.
@@ -22220,11 +18949,6 @@ ments in lines 33–35). Cp. Could Arethusa to her fountain run (Longman v, no. 
 19–20. Cp. The Cloud 1–4.
 19. clouds,] clouds Nbk 14.
 20. ethereal] Delicate. colours;] colours, Nbk 14.
-
-And the pure stars in their eternal bowers
-Are cinctured with my power as with a robe;
-Whatever lamps on Earth or Heaven may shine
-Are portions of one spirit; which is mine.
 
 25 I stand at noon upon the peak of Heaven;
 Then with unwilling steps, I?[linger] down
@@ -22263,9 +18987,6 @@ the world’s eye’). Apollo’s arrogance is traditional.
 33. and verse] or verse Mary Nbk.
 34. All prophecy, all medicine is mine Mary Nbk.
 36. This line is at the foot of p. 25. The following page is blank, raising the possibility that S. con-
-
-sidered extending Apollo’s song, although it appears complete. Song of Pan begins at the top of
-page 27.
 
 ## DOI: 10.4324/9781315170343-40
 
@@ -22318,9 +19039,6 @@ that S.’s first draft has been retained (Reiman (2002) conjectures ‘Olympus�
 ciated with and often personifying specific natural objects, e.g. rivers (waves) and trees (woods).
 18. fauns,] fawns Nbk 14, but S. clearly means the mythological figures and not young deer (Mary also
 
-transcribed fauns).
-23. Were silent] Were as silent Mary Nbk. now, Apollo,] The commas are editorial.
-
 25 I sang of the dancing stars,
 I sang of the daedal Earth,
 And of Heaven, and the giant wars,
@@ -22365,9 +19083,6 @@ Arkadian mountains but does not name the range.
 30. vales] vale Mary Nbk.
 33. It breaks on] As in lines 7–8, S. here either superimposed on over an original in or vice versa. Mary
 transcribed in, but on seems more likely: Pan, trying to clasp the fleeing Syrinx, instead clasps the reed
-
-(line 33’s It) into which she has been transformed, breaking it against (on) his bosom.
-34. They wept] All wept Mary Nbk. both ye] Apollo and Tmolus.
 
 ## DOI: 10.4324/9781315170343-41
 
@@ -22508,11 +19223,6 @@ small modifications in punctuation have also been introduced after comparison wi
 fair copy; these latter are recorded in the notes.
 Published in 1820; BSM v pp. 47, 67, 75–9 (facsimile and transcription of MSS).
 
-I bring fresh showers for the thirsting flowers,
-From the seas and the streams;
-I bear light shade for the leaves when laid
-In their noonday dreams.
-
 ¶ 41. 1–2. In Aristophanes’ Clouds l. 299 the clouds are παρθένοι ὀμβροφόροι
 (‘rain-bearing maidens’). Cp. Hunt, The Nymphs ii 135–40:
 Ho! We are the Nepheliads, we,
@@ -22532,12 +19242,6 @@ I wield the flail of the lashing hail,
 10 And whiten the green plains under,
 And then again I dissolve it in rain,
 And laugh as I pass in thunder.
-
-I sift the snow on the mountains below,
-And their great pines groan aghast;
-15 And all the night’tis my pillow white,
-While I sleep in the arms of the blast.
-Sublime on the towers of my skiey bowers,
 
 3. shade] shades 1829, 1839.
 5. wings] The Cloud is compared to a bird here and in l. 43.
@@ -22677,14 +19381,6 @@ of the universe or ‘cosmic whirl’, to which Socrates attributes the motion o
 55–8. The moon and stars shining through a gap in the Cloud are reflected in the waters below. Cp.
 
 ## J&M 65–7:
-
-Looking upon the evening and the flood
-Which lay between the city and the shore
-Paved with the image of the sky . . .
-
-Till the calm rivers, lakes, and seas,
-Like strips of the sky fallen through me on high,
-Are each paved with the moon and these.
 
 I bind the Sun’s throne with a burning zone,
 60 And the moon’s with a girdle of pearl;
@@ -22901,9 +19597,6 @@ It trembles but it never fades away;
 Go to the [Indies] [               ]
 You, being changed will find it then as now.
 
-The chasm in which the sun has sunk is shut
-20 By darkest barriers of cinereous cloud
-
 6. one] Written beneath its canc. in Nbk 15. summer] silent 1824, 1839.
 7. is] Written above are canc. in Nbk 15; are 1840. dew] Altered from dews in Nbk 15; dews 1840.
 8. damp within] Written beneath freshness in canc. in Nbk 15. trees] Written above leaves canc. in Nbk 15.
@@ -22935,15 +19628,6 @@ in Nbk 15, Locock 1911 cps. ‘enormous Barrier’ in Wordsworth’s Fidelity in
 (1807) l. 33 and ‘enormous clouds’ in A Night-Piece in Poems (1815) l. 21. ‘Cinereous’, from cinereus
 (Lat.), means ‘resembling ashes, ashen’. On its use to describe colour, see Pliny, Hist. Nat. xiv 42 and
 xxix 87. cloud] The last four letters are covered by an ink blot in Nbk 15.
-
-Like mountain over mountain huddled but
-Growing and moving upwards in a crowd,
-And over it a space of watery blue
-Which the keen evening star is shining through.
-
-25 And overhead hangs many a flaccid fold
-Of lurid thundersmoke most heavily,
-A streak of dun and sulphureous gold
 
 43 Letter to Maria Gisborne
 Date. Mary’s date is ‘Leghorn, July 1, 1820’ in 1824 but ‘Leghorn — June 1820’ beneath her tran-
@@ -23368,9 +20052,6 @@ Published in 1824 59–69 (ll. 1–28, part of 29, 30–196, part of 202, 203–
 295–8, 300–15, part of 316, 317–21, with two additional lines, not certain to be by S., after l.
 271); Forman 1876–7 iii 227–40 (complete, with the two additional lines after l. 271).
 
-The spider spreads her webs, whether she be
-In poet’s tower, cellar or barn or tree;
-
 ¶ 43. Title: Letter to —/— 1824; Letter to Maria Gisborne 1839.
 1–9. ‘The spider and silkworm of the opening introduce several themes — “threads of friendship”,
 “machinery”, and “habitation” — that permeate the poem. These verses are not to catch readers, Shelley
@@ -23410,11 +20091,6 @@ Sphere within Sphere, and form their silken beds . . . .
 Wise to the present, nor to future blind,
 They link the reasoning reptile to mankind!
 
-The silkworm in the dark green mulberry leaves
-His winding sheet and cradle ever weaves;
-— Stoop, selfish Pride! survey thy kindred forms,
-Thy brother Emmets, and thy sister Worms!
-
 Darwin notes that ‘the excellence of the sense of touch in many insects seems to have given them won-
 derful ingenuity so as to equal or even excel mankind in some of their arts and discoveries; many of
 which may have been acquired in situations previous to their present ones, as the great globe itself, and
@@ -23436,9 +20112,6 @@ And write about it, Goddess, and about it:
 So spins the silk-worm small its slender store,
 And labours till it clouds itself all o’er.
 
-The insect is used for self-censure in Edward Young, The Complaint: Or, Night-Thoughts on Life, Death,
-and Immortality (1749) i 156–61:
-
 O how self-fetter’d was my groveling Soul?
 How, like a Worm, was I wrapt round and round
 In silken thought, which reptile Fancy spun,
@@ -23451,11 +20124,6 @@ commonplace. It is found in Thomson, Liberty v 11–12 (‘ “And let the littl
 higher Life intent, its silken Tomb” ’) and the same poet’s The Castle of Indolence i 75–6 (‘ “See her
 bright Robes the Butterfly unfold,/Broke from her wintry Tomb in Prime of May” ’) as well as Samuel
 Rogers, ‘To the Butterfly’, in Poems (1816) ll. 7–10:
-
-— Yet wert thou once a worm, a thing that crept
-On the bare earth, then wrought a tomb and slept!
-And such is man; soon from his cell of clay
-To burst a seraph in the blaze of day!
 
 3–4. Cp. Comus ll. 714–16:
 And set to work millions of spinning worms,
@@ -23560,10 +20228,6 @@ Longman i and ii).
 found in Hobbes, Considerations (1680) 54: ‘not every one that brings from beyond Seas a new Gin,
 or other janty device, is therefore a Philosopher’. S. read Hobbes in March 1820 (Mary Jnl i 311–13)
 though this work is not specified.
-
-20. figured spells] written spells, Nbk 15. I.e. ‘magical calculations’ (GM).
-21. sport] move Nbk 15. therein;] MT, 1824; therein Nbk 15; therein: GT.
-22. engines,] Nbk 15, MT, 1824; engines — GT.
 
 As Vulcan never wrought for Jove to clutch
 Ixion or the Titans: — or the quick
@@ -23872,20 +20536,6 @@ of her childhood in Constantinople (see headnote). de] Nbk 15, MT, 1824; De GT. 
 
 ## 15, GT.
 
-99. some odd volumes] Altered from an odd volume in Nbk 15. chemistry.] 1824; chemistry Nbk 15;
-chemistry — MT; Chemistry — GT.
-100. those] Nbk 15, MT; them 1824; those, GT. thing,] 1824; tin thing Nbk 15; thing MT, GT.
-
-With lead in the middle — I’m conjecturing
-How to make Henry understand — but no,
-I’ll leave, as Spenser says, with many mo
-This secret in the pregnant womb of time,
-105 Too vast a matter for so weak a rhyme.
-
-And here like some weird Archimage sit I,
-Plotting dark spells and devilish enginery,
-The self-impelling steam-wheels of the mind
-
 101. lead] least MT, 1824 (least is corrected to lead in G1824).
 102. but no,] 1964; but, no Nbk 15; but no — MT; but — no, 1824, GT.
 103. with many mo] ‘The sense, of course, is, not “As Spenser and many others say,” but “This and
@@ -23925,9 +20575,6 @@ devilish enginery GT. Satan’s artillery is described as ‘devilish enginery�
 OED 2b).
 108–12. See Keach, Shelley’s Style (1984) 113: ‘ “The self-impelling steam-wheels of the mind”, which
 produce salty antidotes to the grave reviewers’ “self-content”, may sound like deliberate self-parody to a
-
-reader who recalls some of the images of imaginative freedom in Prometheus Unbound (“The vaporous
-exultation, not to be confined”, IV 321).’
 
 Which pump up oaths from clergymen, and grind
 110 The gentle spirit of our meek reviews
@@ -23982,11 +20629,6 @@ above the rest is the hero of streamy Atha: he bends his eye of love on Sul—ma
 She turns, with pride, her face away, and careless bends the bow.’ (The Poems of Ossian and related
 works, ed. Howard Gaskill (1996) 259)
 
-O’er the unquiet world — while such things are,
-How could one worth your friendship heed the war
-130 Of worms? the shriek of the world’s carrion jays,
-Their censure, or their wonder, or their praise?
-
 You are not here . . . the quaint witch Memory sees
 In vacant chairs your absent images,
 And points where once you sat, and now should be
@@ -24028,12 +20670,6 @@ Memory] Nbk 15, 1824; memory MT, GT.
 136. met —] Nbk 15; met, — MT, GT; met; — 1824.
 137. second-sighted] Prophetic.
 140. know] knew (Mathilde Blind’s — questionable — reading of Nbk 15 in Westminster Review xxxviii
-
-(1870) 81).
-141. oracle,] 1824; oracle — MT, GT; oracle Nbk 15.
-142. the sad enchantress] I.e. ‘the quaint witch Memory’ in l. 132. again,] 1824; again Nbk 15, MT, GT.
-144. citing] Nbk 15 (written above acting canc.); acting MT, 1824, GT.
-147. Forman 1876–7 cps. Epipsychidion l. 542.
 
 How I ran home through last year’s thunderstorm,
 And felt the transverse lightning linger warm
@@ -24175,19 +20811,6 @@ mia, who had known him before) will especially interest me — You know, that al
 the only sincere enemy I have in the world, that added years only add to my admiration of his intellec-
 tual powers, & even the moral resources of his character. — ’ (L ii 202–3) S. had introduced himself to
 Godwin in a letter of January 1812 (L i 219–21) and first met him in October of that year.
-
-197. Godwin, —] Nbk 15; G — n, — MT; Godwin — GT.
-198. Though fallen — and fallen on evil times] Godwin’s position is compared to Milton’s during the
-Restoration to which Paradise Lost vii 24–8 alludes:
-
-More safe I sing with mortal voice, unchanged
-To hoarse or mute, though fallen on evil days,
-On evil days though fallen, and evil tongues;
-In darkness, and with dangers compassed round,
-And solitude
-
-The line echoes the treatment of Wordsworth in Verses written on receiving a Celandine in a letter from
-England (Longman i 512–5, no. 117) l. 30.
 
 200 Before the dread tribunal of to come
 The foremost — while Rebuke cowers pale and dumb.
@@ -24350,10 +20973,6 @@ perhaps to-day; and before we meet again, one of us will be married, and we migh
 know, Scythrop.” ’ (Peacock Works iii 83) S. remembered Emilia Viviani in these terms to Hogg in his letter
 of 22 October 1821: ‘I knew a very interesting Italian lady last winter, but she is now married; which, to
 
-quote our friend Peacock, is you know, the same as being dead. — ’ (L ii 360).
-235–6. Indian . . . Hindoo] Allusions to Peacock’s employment at the East India Company which had
-begun in January 1819.
-
 When a man marries, dies, or turns Hindoo,
 His best friends hear no more of him? — but you
 Will see him, and will like him too, I hope,
@@ -24448,11 +21067,6 @@ opinions than his, is a main cause of it, was always one of the subjects that at
 overshadow the liveliest of his moods.’
 257. unpavilioned] In Nbk 15 written above the pavilioned canc. The context of this word in PU IV 184
 suggests that it is here used to mean ‘cloudless’. Cp. OL 65 and note. heaven] MT, 1824; Heaven Nbk 15,
-
-GT. fair] Nbk 15, MT; fair, 1824, GT.
-258. moon,] MT, 1824; moon Nbk 15, GT.
-261. the inverse deep] The sky (an inverted image of the sea).
-263. fast: —] MT; fast —. Nbk 15; fast. 1824; fast; GT.
 
 All this is beautiful in every land. —
 265 But what see you beside? — a shabby stand
@@ -24600,13 +21214,7 @@ from 1765–90 who became Emperor Leopold II in 1790, ‘the most enlightened of
 despots’ in Europe (Harry Hearder, Italy in the Age of the Risorgimento 1790–1870 (1983) 70). S. noted
 Leopold’s legacy to Peacock in a letter of 10 March 1820: ‘We live here under a nominal tyranny,
 
-administered according to the philosophic laws of Leopold, & the mild opinions which are the fashion
-here. Tuscany is unlike all the other Italian states, in this respect.’ (L ii 177) wood] Nbk 15; wood, MT,
-
 ## GT, 1824.
-
-307. weeks’] 1839; weeks Nbk 15, MT, 1824; week’s GT.
-308. talk —] Nbk 15; talk; — MT, 1824, GT.
 
 Oh! there are themes enough for many a bout
 310 Of thought-entangled descant; — as to nerves,
@@ -24621,9 +21229,6 @@ Outlast the leafless time — till buds and flowers
 Warn the obscure inevitable hours
 320 Sweet meeting by sad parting to renew —
 ‘Tomorrow to fresh woods and pastures new.’
-
-* Ἴμερος from which the river Himera was named, is, with some slight shade of difference, a synonym
-of Love. (S.’s note).
 
 310. descant] ‘discourse, discussion’ (Concordance). nerves,] 1964; nerves Nbk 15, MT, 1824, GT.
 311. curves] Nbk 15, MT; curves, 1824, GT.
@@ -24661,11 +21266,6 @@ tree/Last to the condolence that is here fled from me.
 319. Warn] Warm MT. obscure] Nbk 15, MT; obscure, 1824, GT.
 320. Locock 1911 cps PU IV 199.
 321. The final line of Milton’s Lycidas. woods] Nbk 15, MT, 1824; woods, GT.
-
-44 To a Sky-Lark
-Published as one of the Miscellaneous Poems in 1820. Mary described what she regarded
-as the encounter that generated S.’s tribute to the sky-lark in her Note on Poems Written in
-1820 (1839 iv 50):
 
 In the spring we spent a week or two near Leghorn, borrowing the house of some
 friends, who were absent on a journey to England. — It was on a beautiful summer
@@ -24759,12 +21359,6 @@ which is only lightly punctuated. 1820’s punctuation seems excessive in places
 modified with reference to S.’s fair copy.
 Published in 1820, MYRS v 95–100 (facsimile and transcription of MS).
 
-Hail to thee, blithe Spirit!
-Bird thou never wert,
-That from Heaven, or near it,
-Pourest thy full heart
-5 In profuse strains of unpremeditated art.
-
 ¶ 44. Title. Altered from ‘To the Sky-Lark’ in S.’s fair copy in Harvard Nbk 1. The alteration locates the
 address in a specific experience; it also renders the title identical to that of Wordsworth’s poem on the
 bird in Poems, In Two Volumes (1807).
@@ -24775,14 +21369,6 @@ see note to l. 103. blithe] Cp. Wordsworth, To the Cuckoo (1807) 1: ‘O blithe 
 Jnr (SP lxv (1968) 685) notes the similarity between this line and the translation by Charles Abraham Elton
 (1778–1853) of the Gk anacreontic To the Cicada in Specimens of the Classical Poets (1814) 148–9:
 
-HAIL, Cicada! hail to thee
-Nestling in the topmost tree:
-Blithe as a king . . . (1–3)
-
-and between unbodied in l. 15 and the closing lines of Elton’s translation, ‘Thy aerial texture vies/With
-th’unbodied Deities’.
-2. Cp. Wordsworth, To the Cuckoo 14–16:
-
 And see ll. 31–2.
 4–5. S. appears to echo his own poem in a letter to Keats of 27 July 1820: ‘I have lately read your
 Endymion again & ever with a new sense of the treasures of poetry it contains, though treasures
@@ -24791,32 +21377,11 @@ poured forth with indistinct profusion’ (L ii 221).
 5. unpremeditated] Milton’s Paradise Lost ix 20–4 had attached to the word the sense of authentic inspi-
 ration as spontaneously given:
 
-If answerable style I can obtain
-Of my celestial patroness, who deigns
-Her nightly visitation unimplored,
-And dictates to me slumbering, or inspires
-Easy my unpremeditated verse.
-
 The usage had become conventional: cp. the bard in James Thomson’s Castle of Indolence (1748: I lxviii)
 who ‘On virtue still, and nature’s pleasing themes,/Poured forth his unpremeditated strain’, and the
 minstrel in Scott’s Lay of the Last Minstrel (1805: Introduction 18) who ‘No longer . . . pour’d to lord
 and lady gay,/The unpremeditated lay’. S. seems also to be recalling the morning worship of Adam and
 Eve in Paradise Lost v 146–50:
-
-Higher still and higher
-From the earth thou springest
-Like a cloud of fire;
-The blue deep thou wingest,
-10 And singing still dost soar, and soaring ever singest.
-
-In the golden lightning
-Of the sunken Sun,
-O’er which clouds are brightning,
-Thou dost float and run;
-
-Their maker, in fit strains pronounced or sung
-Unmeditated, such prompt eloquence
-Flowed from their lips, in prose or numerous verse.
 
 S. develops the idea of a poetic process rooted in unwilled and unconscious inspiration in DP (Reiman
 (2002) para. 39). Cp. also Hymn to Mercury (Longman iii, no. 336) 69–70: ‘A strain of unpremeditated
@@ -24841,22 +21406,9 @@ but there is no textual authority for emending 1820’s punctuation here. S.’s
 shows no end-line punctuation in the stanza.
 8. cloud of fire] apparently one of the clouds illuminated by the setting sun in ll. 11–13 or as in PU III ii
 
-7–9, but GM also notes an additional resemblance to ‘the cloud of fire that springs from a volcano and
-rains down sparks’. Cp. PU II i 10–12:
-
-like joy which riseth up
-As from the earth, clothing with golden clouds
-The desert of our life . . .
-
 Also PU I 157–8, and see previous note.
 10. S. is recalling the words and rhythm of a Spenserian Alexandrine such as ‘Who flying still did ward,
 and warding fly away’ (VI vi 28) or ‘But flitting still doe flie, and still their places vary’ (VII vii 21).
-
-The pale purple even
-Melts around thy flight;
-Like a star of Heaven
-In the broad daylight
-20 Thou art unseen, but yet I hear thy shrill delight,
 
 15. unbodied joy] See note to l. 1. The phrase became the subject of a critical dispute following the emen-
 dation embodied joy proposed by George L. Craik in his commentary on the poem in A Compendious
@@ -24872,11 +21424,6 @@ by Captain Edward Silsbee, who had obtained it in Florence from Claire Clairmont
 of the holograph revealing unbodied as the true reading was reported in The Athenaeum 2635 (27
 April 1878) 536, in the course of a tongue-in-cheek account of the textual controversy prior to the
 MS coming to light. Wilcox, SP xlvi 567 (see headnote) cps. Byron, Manfred I ii 52–5:
-
-Oh, that I were
-The viewless spirit of a lovely sound,
-A living voice, a breathing harmony,
-A bodiless enjoyment.
 
 race] course of life.
 16–25. The chain of figurative language in these lines has been much commented upon (see references
@@ -24896,22 +21443,6 @@ Although unseen is felt . . .
 22. silver sphere] Venus as the morning star: S. wrote to Peacock on 25 July 1818 from Bagni di Lucca
 of ‘a certain silver and aerial radiance, and soft yet piercing splendour, which belongs, I suppose, to the
 latter planet [Venus] by virtue of its at once divine and female nature’ (L ii 25). Cp. L&C: ‘that planet
-
-Whose intense lamp narrows
-In the white dawn clear,
-25 Until we hardly see — we feel that it is there.
-
-All the earth and air
-With thy voice is loud,
-As when Night is bare
-From one lonely cloud
-30 The moon rains out her beams — and Heaven is overflowed.
-
-What thou art we know not;
-What is most like thee?
-From rainbow clouds there flow not
-Drops so bright to see
-35 As from thy presence showers a rain of melody.
 
 fair . . ./Which cleaves with arrowy beams the dark-red air’ (308–10) and n. In the association of the
 lark’s song with Venus, commentators have found an allusion to the music supposed in older cosmol-
@@ -24935,32 +21466,6 @@ auditors are as men entranced by the melody of an unseen musician, who feel that
 softened, yet know not whence or why’ (Reiman 2002 para. 12).
 38. unbidden] not composed to order or direction. A contrast is implicit with poetry influenced by
 
-commercial motive or political patronage, perhaps especially with the productions of the Poet Laureate.
-
-Like a high-born maiden
-In a palace-tower,
-Soothing her love-laden
-Soul in secret hour,
-45 With music sweet as love — which overflows her bower:
-
-Like a glow-worm golden
-In a dell of dew,
-Scattering unbeholden
-Its aerial hue
-50 Among the flowers and grass which screen it from the view:
-
-Like a rose embowered
-In its own green leaves,
-By warm winds deflowered —
-Till the scent it gives
-55 Makes faint with too much sweet those heavy-wingèd thieves:
-
-Sound of vernal showers
-On the twinkling grass,
-Rain-awakened flowers,
-All that ever was
-60 Joyous and clear and fresh, thy music doth surpass:
-
 41–5. Just such a scene occurs in Scott’s Lay of the Last Minstrel (III xxiv). The nobly born Margaret of
 Branksome Hall, hopelessly in love with Lord Cranstoun of the enemy clan that has slain her father,
 recalls at nightfall a meeting with her lover:
@@ -24979,30 +21484,6 @@ For lovers love the western star. (9–16)
 63. heard] heard, 1820: the comma, which was removed in 1839, is apparently a mistranscription or
 misprint, as Forman 1876–7 pointed out.
 
-Chorus Hymeneal
-Or triumphal chaunt
-Matched with thine, would be all
-But an empty vaunt,
-70 A thing wherein we feel there is some hidden want.
-
-What objects are the fountains
-Of thy happy strain?
-What fields or waves or mountains?
-What shapes of sky or plain?
-75 What love of thine own kind? what ignorance of pain?
-
-With thy clear keen joyance
-Languor cannot be:
-Shadow of annoyance
-Never came near thee:
-80 Thou lovest; but ne’er knew love’s sad satiety.
-
-Waking or asleep,
-Thou of death must deem
-Things more true and deep
-Than we mortals dream,
-85 Or how could thy notes flow in such a crystal stream?
-
 64–5. Cp. Wordsworth, O Nightingale! thou surely art (1807) 5–6: ‘Thou sing’st as if the God of wine/
 Had helped thee to a Valentine’. love or wine] alluding to two of the principal topics of Anacreontic
 verse: see headnote.
@@ -25017,34 +21498,11 @@ full of love/And joyance!’ (42–3).
 78. annoyance] vexation, trouble.
 80. knew] ‘knew’st’, though grammatically correct, would spoil the sound of the line, as commentators
 
-have agreed. satiety] ‘Weariness or dislike of (an object of desire) caused by gratification or attainment’
-
 ## (OED).
 
 86–7. The commonplace reflection has been variously formulated; e.g. in Gray’s Ode on the Pleasure
 Arising from Vicissitude 23–4: ‘’Tis Man alone that Joy descries/With forward and reverted eyes.’ But S.
 appears to be recalling the phrasing of Hamlet IV iv 36–9:
-
-Our sincerest laughter
-With some pain is fraught;
-90 Our sweetest songs are those that tell of saddest thought.
-
-Yet if we could scorn
-Hate and pride and fear;
-If we were things born
-Not to shed a tear,
-95 I know not how thy joy we ever should come near.
-
-Better than all measures
-Of delightful sound,
-Better than all treasures
-That in books are found,
-100 Thy skill to poet were, thou Scorner of the ground!
-
-Sure he that made us with such large discourse,
-Looking before and after, gave us not
-That capability and godlike reason
-To fust in us unused.
 
 S. slightly misquotes Hamlet’s speech in On Life: ‘man is a being of high aspirations “looking both
 before and after,” . . . disclaim[ing] alliance with transience and decay, incapable of imagining to him-
@@ -25062,19 +21520,11 @@ few are fairer [To Sophia] 16, ‘thy harp’s wild measure’; but here (in vie
 signifies poetic metres, as in J&M 541–2: ‘wild language . . ./Such as in measure were called poetry’.
 98–9. Modifying the central opposition of Wordsworth’s The Tables Turned in Lyrical Ballads (1798):
 
-Books! ’tis a dull and endless strife,
-Come, hear the woodland linnet,
-How sweet his music; on my life
-There’s more of wisdom in it. (9–12)
-
 100. Cp. Wordsworth, To a Sky-lark (1807): ‘Joyous as Morning,/Thou art laughing and scorning’
 (16–17).
 103. madness] The furor poeticus or inspired frenzy of the poet was a commonplace of classical literary
 criticism which has been variously formulated — and not always considered a virtue — and has had a
 persistent and protean afterlife. The influence of Plato’s Phaedrus, which S. read in August 1818 (Mary
-
-From my lips would flow,
-105 The world should listen then — as I am listening now.
 
 45 To ——[the Lord Chancellor]
 This poem is dated to summer 1820 following the conclusion of Paul Dawson and Timothy
@@ -25085,9 +21535,6 @@ follows the draft of Hymn to Mercury (Longman iii, no. 336) which was completed 
 That S.’s much-corrected transcription of the poem in Harvard Nbk 1 immediately follows his
 fair copy of Hymn to Mercury in the same nbk tends to confirm a date of composition after
 mid-July 1820. Similarities to I had two babes — a sister and a brother (Longman iii, no. 334; see
-
-Jnl i 222), has been proposed: of particular relevance is Socrates’ reported account of the third type of
-madness, that which derives from the Muses:
 
 But he who without the divine madness comes to the doors of the Muses, confident that he will
 be a good poet by art, meets with no success, and the poetry of the sane man vanishes into noth-
@@ -25110,10 +21557,6 @@ about thee, and joy divine/In that song of thine’. Having long maintained the 
 and the imponderable in the creation of poetry, S. here discovers in the pure exuberant gaiety of the
 sky-lark’s song an essential link between the elusive notion of creative madness and its rhyming partner
 gladness — as in the lines of the Earth’s song in PU IV which he wrote the previous autumn:
-
-The joy, the triumph, the delight, the madness!
-The boundless, overflowing, bursting gladness,
-The vaporous exultation, not to be confined! (319–21)
 
 104. would] should Harvard Nbk 1, evidently altered in 1820 to avoid repetition with should in the
 following line.
@@ -25202,15 +21645,6 @@ Published in 1839 iii 208–9 (lines 17–36, 49–52, 57–60); 1840 252 (compl
 stanza: see note to ll. 40–41); Massey 231–7 (transcript of draft); BSM xiv 188–95 (facsimile and
 transcription of draft); MYRS v 202–4 (facsimile of transcript by Mary corrected by S.).
 
-Thy country’s curse is on thee, darkest Crest
-Of that foul, knotted, many-headed worm
-Which rends our mother’s bosom! — Priestly Pest!
-Masked Resurrection of a buried form!
-
-5 Thy country’s curse is on thee — Justice sold,
-Truth trampled, Nature’s landmarks overthrown,
-And heaps of fraud-accumulated gold
-
 ¶ 46. Title. ‘Lord Chancellor’ is canc. in Harvard Nbk 1 and what appears to be ‘LC’ written above the
 line; in the Contents at the end of the nbk the poem is listed as ‘To Lxxd Exxxn’. This is the title adopted
 in Harvard MSS, then canc. and replaced with the present title, perhaps because S. intended the poem
@@ -25222,37 +21656,6 @@ erence to a ‘threatened resurrection specifically of the ecclesiastical High C
 reign’ (Politics in English Romantic Poetry (1970) 253).
 6. Youth blasted, Age dishonoured, Faith draft canc. Nature’s landmarks] Apparently the same as
 Nature’s high bounds of l. 52. Both seem to be used figuratively for those places and persons best-qual-
-
-ified by Nature to guide the course of a child’s development.
-7. fraud-accumulated gold] At his death in 1838 Lord Eldon left a fortune of over half a million pounds.
-
-And whilst that sure, slow Fate which ever stands
-10 Watching the beck of Mutability
-Delays to execute her high commands
-And, though a nation weeps, spares thine and thee —
-
-O let a father’s curse be on thy soul
-And let a daughter’s hope be on thy tomb;
-15 Be both, on thy grey head, a leaden cowl
-To weigh thee down to thine approaching doom.
-
-I curse thee! By a parent’s outraged love, —
-By hopes long cherished and too lately lost, —
-By gentle feelings thou couldst never prove,
-20 By griefs which thy stern nature never crossed;
-
-By those infantine smiles of happy light
-Which were a fire within a stranger’s hearth
-Quenched even when kindled, in untimely night
-Hiding the promise of a lovely birth —
-
-9–11. Recalling Lycidas 130–1: ‘But that two-handed engine at the door,/Stands ready to smite once,
-and smite no more.’ Between stanzas 3 and 4, draft has:
-
-Thy countrys curse is on thee . . . Freedom store
-Thy mitre & the bloody cross away
-That decent dust yet hide thy path of gore
-Through the delusions of this later day
 
 9. Fate . . . ever] Angel . . . aye Harvard MSS canc.
 14. a daughter’s] Eliza Ianthe S. was nearly four years old. S. had not known Charles, born after his
@@ -25268,36 +21671,6 @@ as qualifying I curse thee!
 been deputed first to the Rev. John Kendall in Warwick, then in summer 1818 to Dr and Mrs Thomas
 Hume. None of these was known to S.
 
-25 By those unpractised accents of young speech
-Which he who is a father thought to frame
-To gentlest lore, such as the wisest teach —
-Thou strike the lyre of mind! — oh grief and shame!
-
-By all the happy see in children’s growth,
-30 That undeveloped flower of budding years —
-Sweetness and sadness interwoven both,
-Source of the sweetest hopes, the saddest fears —
-
-By all the days under a hireling’s care
-Of dull constraint and bitter heaviness —
-35 Oh wretched ye, if any ever were —
-Sadder than orphans — why not fatherless?
-
-By the false cant which on their innocent lips
-Must hang like poison on an opening bloom,
-By the dark creeds which cover with eclipse
-40 Their pathway from the cradle to the tomb —
-
-25–8. By those pure accents, which at my command
-Should have been framed to love & ore divine —
-Now like a lute fretted by some rude hand,
-Uttering harsh discords — they must echo thine. (Harvard Nbk 1 canc.)
-
-by thy smooth slaves who will be thy successors
-And by thy fellow [] who would be thee
-[A senate of impostors & oppressors]
-Whose words are serpents tangled cunningly
-
 35. if any ever] Harvard MSS, draft; if ever any other transcripts. Perhaps an unnoticed slip.
 36. why not fatherless?] yet not fatherless draft, Harvard Nbk 1 and other transcripts; changed
 by S. in Harvard MSS. The change adds another twist to the irony: ‘since they are to lose their
@@ -25306,39 +21679,6 @@ father, why not execute him?’
 With which thou dost infect the infant mind
 A tender flower fed upon poison dew
 That scatters stench, not fragrance, on the wind (draft canc.)
-
-40–1. Between these lines Harvard MSS has an additional stanza — incomplete in the draft but com-
-pleted in Harvard Nbk 1 — which is struck through by S. and marked ‘dele’ (= delete):
-
-By thy most impious Hell, and all its terror,
-By all the grief, the madness, & the guilt
-Which [for Of] thine impostures, which must be their error
-That sand on which thy crumbling Power is built
-
-By thy complicity with lust and hate:
-Thy thirst for tears — thy hunger after gold —
-The ready frauds which ever on thee wait —
-The servile arts in which thou hast grown old. —
-
-45 By thy most killing sneer, and by thy smile —
-By all the snares and nets of thy black den;
-And — (for thou canst outweep the crocodile) —
-By thy false tears — those millstones braining men —
-
-By all the hate which checks a father’s love,
-50 By all the scorn which kills a father’s care,
-By those most impious hands which dared remove
-Nature’s high bounds — by thee — and by despair —
-
-Yes — the despair which bids a father groan
-And cry — ‘My children are no longer mine —
-55 ‘The blood within their veins may be mine own
-‘But, Tyrant, their polluted souls are thine’; —
-
-I curse thee, though I hate thee not. — O, slave!
-If thou couldst quench that earth-consuming Hell
-Of which thou art a daemon, on thy grave
-60 This curse should be a blessing — Fare thee well!
 
 46 To ——[Lines to a Critic]
 This lyric is drafted on pp. 342 rev. and 343 rev. of Nbk 15, where it is entitled ‘A Hate-Song’.
@@ -25404,9 +21744,6 @@ seller William Clark in a pirated edition — in The Investigator x (October 182
 entitled ‘Licentious Productions in High Life’, which also attacks several of Byron’s works as
 well as those of the diplomat and poet Sir Charles Hanbury Williams (1708–59). Passage after
 
-passage of Q Mab is paraded as the execrable and horrid blasphemy of an ‘impious wretch’, and
-S.’s sudden death by drowning is offered as a stroke of retributive justice authored by the Deity:
-
 in the twinkling of an eye, the bark had disappeared, and the atheist had sunk to the
 bottom of a fathomless abyss, either to rot into annihilation there, or but to deposit the
 lifeless body for whose gratification he had lived, that his disencumbered spirit might
@@ -25468,26 +21805,6 @@ copy differs as follows: l. 4: me — l. 8: me. — l. 10: mate — — l. 14: b
 Published in The Liberal no. iii (1823), vol. ii 187–8; BSM xiv 248–9 (facsimile and tran-
 scription of MS).
 
-Honey from silkworms who can gather,
-Or silk from the yellow bee?
-The grass may grow in winter weather
-As soon as hate in me.
-
-5 Hate men who cant, and men who pray,
-And men who rail, like thee;
-An equal passion to repay
-They are not coy — like me.
-
-Or seek some slave of power and gold
-10 To be thy dear heart’s mate;
-Thy love will move that bigot cold
-Sooner than me, thy hate.
-
-A passion like the one I prove
-Cannot divided be;
-15 I hate thy want of truth and love —
-How should I then hate thee?
-
 47 The Witch of Atlas
 Date and circumstances of composition. This poem’s remarkably intense period of compo-
 sition — ‘three days’ — is recorded in l. 36 of its dedicatory stanzas to Mary. Its date may
@@ -25499,8 +21816,6 @@ the territory of Modena, on the evening of Sunday, 13 August. Two days previousl
 a period of ‘warm and delightful’ weather which made ‘[t]he Country . . . delicious’, he,
 Mary, and Claire had made the brief journey to Lucca where they spent the night, the latter
 pair remaining there the next day to look at sites relating to the historical basis of the novel
-
-Mary had begun writing, Valperga (1823), while S. made his weekend excursion (Mary
 
 ¶ 46. 5–8. In the draft in Nbk 15 S. first wrote then canc. ‘Hate Sidmouth, Cobbett Castlereagh’ (342 rev.).
 8. coy] Cp. To — [Lines to a Reviewer] 9–11.
@@ -25529,9 +21844,6 @@ San Pelegrino — a mountain of some height, on the top of which there is a chap
 object, during certain days in the year, of many pilgrimages. The excursion delighted
 him while it lasted, though he exerted himself too much, and the effect was considera-
 ble lassitude and weakness on his return. During the expedition he conceived the idea
-
-and wrote, in the three days immediately succeeding to his return, the Witch of Atlas.
-(1839 iv 50–1)
 
 WA is founded in several kinds of dialogue between S. and Mary, most overtly in its Dedica-
 tion to her concerning the audience of his poetry. But as significant to both of them may be
@@ -25823,9 +22135,6 @@ WA ‘make[s] the connection’ evident in another product of the Marlow summer,
 Rhododaphne: or, The Thessalian Spell, A Poem (1818), ‘between a mythographical god-
 dess, a pagan divinity representing love as the ancients believed in it, and a figure of more
 
-personal significance to the writer, an eternal symbol of art.’ Canto VII of Peacock’s poem,
-in particular, offers a recent poetical model for the exposition of an ‘idolatry’ of love:
-
 Love first in social bonds combined
 The scattered tribes of humankind,
 And bade the wild race cease to roam,
@@ -26026,14 +22335,6 @@ do, Berni, and Ariosto. The ‘Prospectus and Specimen of the National Work by W
 liam and Robert Whistlecraft’ has undoubtedly been suggested by these poems, and
 most particularly by the Morgante Maggiore, of which we shall speak anon; but there
 
-is one important difference between them. The English author has filled his poem with
-sprightly humour, whilst the Italian romantic poets only laugh now and then.
-(498)
-
-Finally, it is worth recording the pronounced echoes of Lucretius throughout WA, probably
-a result of S.’s recent reading of De Re. Nat. with Mary between 28 June and 8 July 1820
-(Mary Jnl i 324–5).
-
 Criticism. Hazlitt established the terms of critical debate about WA in his review of
 1824, preferring it to Alastor: ‘for, though the purport of each is equally perplexing and
 undefined, (both being a sort of mental voyage through the unexplored regions of space
@@ -26091,14 +22392,6 @@ the Dedication, omitted in 1839, have been supplied.
 Published in 1824 27–55 (ll. 49–672); 1839 iv 3–31 (Dedication title, ll. 1–24, 49–672);
 1840 268–74 (complete).
 
-(on her objecting to the following poem, upon
-the score of its containing no human interest)
-
-How, my dear Mary, are you critic-bitten
-(For vipers kill, though dead,) by some review,
-That you condemn these verses I have written,
-Because they tell no story, false or true?
-
 ¶ 47. Dedication Title. For the circumstances referred to, see headnote. John Buxton, Byron and Shelley:
 The History of a Friendship (1968) 129 cps Johnson’s ‘Milton’ where it is observed of Paradise Lost that
 ‘[t]he want of human interest is always felt.’ (The Lives of the Poets, ed. Roger Lonsdale, 4 vols (2006)
@@ -26127,11 +22420,6 @@ back and seeking to gnaw itself, that by its bite it may assuage the burning pai
 struck it.’)
 4. true?] Nbk 16; true! 1839.
 
-5 What, though no mice are caught by a young kitten,
-May it not leap and play as grown cats do,
-Till its claws come? Prithee, for this one time,
-Content thee with a visionary rhyme.
-
 What hand would crush the silken-wingèd fly,
 10 The youngest of inconstant April’s minions,
 Because it cannot climb the purest sky,
@@ -26141,16 +22429,9 @@ When day shall hide within her twilight pinions,
 15 The lucent eyes, and the eternal smile,
 Serene as thine, which lent it life awhile.
 
-To thy fair feet a wingèd Vision came,
-Whose date should have been longer than a day,
-
 5–7. a young kitten . . . Till its claws come?] Turner 279–80 notes that these lines contain ‘the curious
 zoological error that kittens are born without claws . . . Shelley was evidently relying on the authority of
 [Lucretius, De Re. Nat. v 1036–8] (but overlooking the saving word vix)’:
-
-at catuli pantherarum scymnique leonum
-unguibus ac pedibus iam tum morsuque repugnant,
-vix etiam cum sunt dentes unguesque creati
 
 (‘then panthers’ kittens and lions’ cubs already fight with claws and feet and bite, even when teeth and
 claws are as yet scarcely grown.’)
@@ -26217,9 +22498,6 @@ quate) poetical dressing is contrasted with S.’s lightness of touch.
 Bell l. 311 and l. 318.
 40. See King Lear III iv 28–32:
 
-Poor naked wretches, whereso’er you are,
-That bide the pelting of this pitiless storm,
-
 If you strip Peter, you will see a fellow
 Scorched by Hell’s hyperequatorial climate
 Into a kind of a sulphureous yellow:
@@ -26228,9 +22506,6 @@ A lean mark, hardly fit to fling a rhyme at;
 If you unveil my Witch, no Priest or Primate
 Can shrive you of that sin, — if sin there be
 In love, when it becomes idolatry.
-
-Before those cruel Twins, whom at one birth
-50 Incestuous Change bore to her father Time,
 
 How shall your houseless heads and unfed sides,
 Your looped and windowed raggedness, defend you
@@ -26255,19 +22530,6 @@ followed by a downfall associated with the onset of Time. The twin personificati
 appear to allude ironically to the type of righteous Christianity opposed in the last three stanzas of the
 Dedication. The poem’s domain, Love, is one in which right and wrong are transcended, rather as is the
 case with the heroine-nymph of Peacock’s Rhododaphne canto VII:
-
-Love alone, like ocean,
-Filled up with one unshared emotion
-Her soul’s capacity: but right
-And wrong she recked not of, nor owned
-A law beyond her soul’s desire (Peacock Works vii 83)
-
-49–50. whom at one birth . . . bore] Baker, ‘Spenser and The Witch of Atlas’ 472 cps the phrasing with
-Milton, L’Allegro ll. 14–16:
-
-Whom lovely Venus at a birth
-With two sister Graces more
-To ivy-crowned Bacchus bore
 
 Error and Truth, had hunted from the earth
 All those bright natures which adorned its prime,
@@ -26329,10 +22591,6 @@ And then into a meteor, such as caper
 Then into one of those mysterious stars
 Which hide themselves between the Earth and Mars.
 
-Ten times the Mother of the Months had bent
-Her bow beside the folding-star, and bidden
-75 With that bright sign the billows to indent
-
 57. one of the Atlantides] I.e. a daughter of Atlas who was the father of various constellations including
 the Pleiades, referred to as ‘Atlantides’, in Virgil, Georgics i 221.
 58–80. The description of the Witch’s conception has parallels with Panthea’s account of Asia’s birth
@@ -26353,9 +22611,6 @@ usage that accords with OED 4a: ‘a sudden state of inaction’.
 73. Cp. Hymn to Mercury l. 10. the Mother of the Months] I.e. the moon. The wording is also used in
 
 ## PU IV 207.
-
-74. folding-star] Cp. Epipsychidion l. 374. The evening star (Venus) which rises at folding-time, that is,
-when sheep are herded into the fold.
 
 The sea-deserted sand — like children chidden,
 At her command they ever came and went —
@@ -26399,10 +22654,6 @@ Peacock of 23–24 January 1819 prompted by a visit to Pompeii, ‘Their temples
 ter from Rome of 23 March 1819, about the Pantheon, ‘It is open to the sky, & its wide dome is lighted
 by the ever changing illumination of the air. The clouds of noon fly over it and at night the keen stars
 are seen thro the azure darkness hanging immoveably, or driving after the driving moon among the
-
-clouds.’ (L ii 87–8)
-84. temple’s] Rossetti 1878; Temple’s Nbk 16, MT; tempest’s 1824, 1839, 1840, Rossetti 1870.
-85. whirls] I.e. reels with giddiness.
 
 And first the spotted cameleopard came,
 90 And then the wise and fearless elephant;
@@ -26454,11 +22705,6 @@ Paradise Lost vii 464–6 refers to a ‘tawny lion’ shaking ‘his brinded ma
 Note on Shelley and Milton’, MLN lv (1940) 586, there is a parallel with ‘the power of gentleness and
 chastity over wild beasts’ in Comus ll. 440–3:
 
-Hence had the huntress Dian her dread bow
-Fair silver-shafted queen for ever chaste,
-Wherewith she tamed the brinded lioness
-And spotted mountain pard
-
 99–100. the pard unstrung/His sinews] The phrase also expresses pacification in L&C 4402.
 103–4. The final two lines of the rough draft of this stanza in Nbk 14 p. 70 rev. read: ‘The eagle like the
 bloodless swan would be/Rapid and strong and innocent as he’. For a facsimile and full transcription
@@ -26475,16 +22721,6 @@ swift leopards insatiable for deer. Seeing them, she was glad at heart; in their
 ing, and they all lay down in pairs in their shadowy haunts.’)
 105–12. There are parallels here with Rhododaphne’s effect as she and Anthemion ‘recline, . . . before/
 The cave’ in Rhododaphne vii:
-
-Satyrs and Fauns would start around,
-And through their ferny dingles bound,
-To see that nymph, all life and grace
-And radiance, like the huntress-queen (Peacock Works vii 81)
-
-105 And old Silenus, shaking a green stick
-Of lilies, and the wood-gods in a crew
-Came, blithe, as in the olive copses thick
-Cicadae are, drunk with the noonday dew:
 
 105. old Silenus] As in PU II ii 90, Silenus, tutor to Dionysus (Diodorus Siculus, The Library of
 History IV iv 3–4) and father of the satyrs, is here associated with nymphs and other of his votaries.
@@ -26528,16 +22764,6 @@ men were so overcome with delight that they sang and sang, forgetting food and d
 unconsciously they died. From them the locust tribe afterwards arose, and they have this gift from the
 Muses, that from the time of their birth they need no sustenance, but sing continually, without food
 
-or drink, until they die, when they go to the Muses and report who honours each of them on earth.’
-
-And Dryope and Faunus followed quick,
-110 Teazing the God to sing them something new,
-Till in this cave they found the lady lone,
-Sitting upon a seat of emerald stone.
-
-And Universal Pan,’tis said, was there,
-And though none saw him, — through the adamant
-
 109. Dryope] Nbk 16; Driope 1824. The story of Dryope, who is transformed into a lotus-tree, is told in
 Ovid, Met. ix 329–93, where she is described in ll. 330–1 as ‘notissima forma/Oechalidum’ (‘the most
 beautiful of all the Oechalian maids.’) Dryope is said to have borne a son to Faunus in Aeneid x 551 and
@@ -26558,17 +22784,6 @@ Pan who’ (Prose Works 246). The source is Paradise Lost iv 266–8: ‘while u
 the Graces and the Hours in dance/Led on the eternal spring.’ Wordsworth, who acknowledges the
 Miltonic source, uses the phrase in a sonnet, first published in The Friend xviii (21 December 1809),
 then reprinted amongst ‘Sonnets Dedicated to Liberty’ in Poems, 2 vols (1815), that begins:
-
-O’er the wide earth, on mountain and on plain,
-Dwells in the affections and the soul of man
-A Godhead, like the universal PAN,
-But more exalted, with a brighter train.
-
-Pan is Gk for ‘All’, and in ‘Universal’ S. may be recalling the origins of his name in the gods’ reaction to
-the infant Pan in the Homeric Hymn To Pan ll. 45–7:
-
-(‘All the immortals were delighted, especially Bacchic Dionysus; and they took to calling him Pan,
-because he delighted them all (pantes).’)
 
 According to Diodorus Siculus, The Library of History I xviii 2, Pan is ‘held in special honour by the
 Egyptians’. He is referred to in Peacock, Rhododaphne iii, as ‘The life, the intellectual soul/Of vale, and
@@ -26605,14 +22820,6 @@ With all its worlds. Man only does not know
 The universal sabbath, does not join
 With Nature in her homage.
 
-116. want] I.e. ‘desire, longing’ as in SP i 11 (Concordance).
-121–8. Cp. Una’s effect in Faerie Queene I vi 18 ll. 1–4:
-
-The wooddy Nymphes, fair Hamadryades
-Her to behold do thither runne apace,
-And all the troupe of light-foot Naiades,
-Flocke all about to see her louely face
-
 122. every shepherdess of Ocean’s flocks] I.e. one of the ‘three thousand long-ankled daughters’ of
 Oceanus and Tethys referred to in Hesiod, Theogony l. 364. A further pastoralized image of flowing
 water occurs in the description of the Nile in l. 501.
@@ -26621,10 +22828,6 @@ water occurs in the description of the Nile in l. 501.
 is mentioned in Theocritus, Idylls i 21, and in Virgil’s Eclogues vii 33 and Georgics iv 111. The word
 ‘quaint’ here appears to mean ‘of odd appearance’.
 128. Her love] ‘Possibly this means “Their love for her”.’ (Locock 1911)
-
-The herdsmen and the mountain maidens came,
-130 And the rude kings of pastoral Garamant —
-Their spirits shook within them, as a flame
 
 130. the rude kings of pastoral Garamant] The word ‘rude’ to describe the Garamantes, a tribe identified
 with the interior of Libya, is indicative of the classical view that they were backward. See Herodotus,
@@ -26636,23 +22839,12 @@ where the naked Garamantes plough the earth’)), ix 369 and 460. As noted in Ke
 117, in ‘rude kings’ there may be a specific reference to Iarbas, an African lord described in Aeneid iv
 198 as ‘Hammone satus, rapta Garamantide Nympha’ (‘son of Hammon by a ravished Garamantian
 
-Nymph’). ‘Garamant’ is also mentioned in OT (Longman iii, no. 344) I 171. pastoral] in the sense of
-‘from a region used for pasture’.
-131–6. The last six lines of this stanza in Nbk 14 p. 66 rev. read:
-
 And as dry heath when little touched by flame
 They, wild as Atys, the lost Corybant
 Knew not that [     ] they were the same
 They bore within [    ] so [    ] want
 Which made to them [with an untold] [     ]
 As men with [     ] nympholepsy stricken.
-
-There is a reworking of some of the above lines at the foot of the facing page (p. 67 rev.):
-
-Kindled they were to a consuming want
-Wild as the [    ]
-And wild as Atys, the lost Corybant
-With hopeless [    ]
 
 The two passages were first published in V&P 31–2; for MS facsimiles and full transcriptions, see BSM
 v 136–9. The story of Atys, a Phrygian shepherd with whom the goddess Cybele falls in love, is told in
@@ -26779,12 +22971,6 @@ They beat their vans; and each was an adept,
 intentional ambiguity and that ‘things actually seen’ are also referred to (see OED 5, illustrated by
 Winter’s Tale I ii 267–71:
 
-Ha’ not you seen, Camillo?
-(But that’s past doubt: you have, or your eye-glass
-Is thicker than a cuckold’s horn) or heard?
-(For to a vision so apparent rumour
-Cannot be mute) or thought?
-
 The idea of a ‘vision’ as a record of what has been, as well as a dream of what may be, a memory as well
 as a prophecy, resonates with LMG esp. 1–14 and 132.
 164. bliss] Nbk 16, 1847, Locock 1911; bliss; 1824; bliss: 1839, 1840. In support of the 1847 reading
@@ -26809,18 +22995,10 @@ She in her crystal vials did closely keep:
 If men could drink of those clear vials,’tis said
 The living were not envied of the dead.
 
-185 Her cave was stored with scrolls of strange device,
-The works of some Saturnian Archimage,
-
 177. liquors clear and sweet] Cp. Homeric Hymn To Mercury l. 248, trans. by S. as ‘the sweet food
 immortals swallow’ in Hymn to Mercury l. 323. might] ‘invigorating qualities’ (Concordance) but also
 ‘efficacy’ (OED).
 178. Cp. Othello III iii 333–6:
-
-Not poppy nor mandragora
-Nor all the drowsy syrups of the world
-Shall ever medicine thee to that sweet sleep
-Which thou owedst yesterday.
 
 medicine] Cited with the earlier passage in OED to illustrate the now obsolete sense of ‘to bring to a
 certain state by medicinal means’.
@@ -26860,11 +23038,6 @@ And other scrolls whose writings did unbind
 The inmost lore of Love — let the profane
 200 Tremble to ask what secrets they contain.
 
-And wondrous works of substances unknown,
-To which the enchantment of her father’s power
-Had changed those ragged blocks of savage stone,
-Were heaped in the recesses of her bower;
-
 191. gold and blood] A frequent juxtaposition in S.’s poetry, e.g. Q Mab iv 195, L&C 1843 and OL 43.
 194. Cp. PU IV 321: ‘The vaporous exultation, not to be confined!’
 197. man’s imperial will] I.e. man’s capacity to govern himself. Cp. PU III iv 196–7 and Sonnet: Political
@@ -26885,11 +23058,6 @@ of the Witch’s cave S. had in mind Porphyry’s allegorical interpretation of 
 of the Nymphs’. There it is said that ‘the stony bowls . . . and the amphorae . . . are, indeed, the symbols of
 Bacchus’ (Select Works of Porphyry, trans. Thomas Taylor (1823) 179).
 203. Had changed] Transformed Nbk 16. ragged] ‘Rough-edged’ (see OED 2c).
-
-205 Carved lamps and chalices, and phials which shone
-In their own golden beams — each like a flower,
-Out of whose depth a fire-fly shakes his light
-Under a cypress in a starless night.
 
 At first she lived alone in this wild home,
 210 And her own thoughts were each a minister,
@@ -26940,9 +23108,6 @@ Their latest leaf upon the mountains wide;
 230 The boundless ocean, like a drop of dew
 Will be consumed — the stubborn centre must
 Be scattered, like a cloud of summer dust —
-
-‘And ye with them will perish one by one:
-If I must sigh to think that this shall be,
 
 225. maid] Maid Nbk 16 (altered from Maiden).
 226. Naiades] See note to l. 217.
@@ -27023,9 +23188,6 @@ Belongs to each and all who gaze upon.
 The Witch beheld it not, for in her hand
 She held a woof that dimmed the burning brand.
 
-265 This lady never slept, but lay in trance
-All night within the fountain — as in sleep.
-
 249. sate] Nbk 16, MT; sat 1824.
 252–5. The witch’s weaving of a beautiful tapestry has Homeric associations, as in the description of the
 loom in the cave of the Naiads in Odyssey xiii 107–8: ἐν δ’ ἱστοὶ λίθεοι περιμήκεες, ἔνθα τε νύμϕαι/φάρε’
@@ -27088,11 +23250,6 @@ Peacock’s mythological ode, ‘The Spirit of Fire’, which was published in T
 the tenuity of those fine essences continued for ages to be thought nearly similar to that of the soul’
 (Peacock Works vi 259). In Rhododaphne vii Love is described thus:
 
-He kindles in the inmost mind
-One lonely flame — for once — for one
-A vestal fire, which, there enshrined,
-Lives on, till life itself be done. (Peacock Works vii 78)
-
 Within the which she lay when the fierce war
 Of wintry winds shook that innocuous liquor
 In many a mimic moon and bearded star,
@@ -27110,11 +23267,6 @@ And so she sold it, and Apollo bought
 And gave it to this daughter: from a car
 295 Changed to the fairest and the lightest boat
 Which ever upon mortal stream did float.
-
-And others say, that when but three hours old,
-The first-born Love out of his cradle leapt
-
-282. that innocuous liquor] Possibly a reference to the poeticized liquid referred to by ‘The Moon’ in
 
 ## PU IV 356–68.
 
@@ -27145,10 +23297,6 @@ And sowed it in his mother’s star, and kept
 Watering it all the summer with sweet dew,
 And with his wings fanning it as it grew.
 
-305 The plant grew strong and green — the snowy flower
-Fell, and the long and gourd-like fruit began
-To turn the light and dew by inward power
-
 that he is to be honoured as one of the most ancient of the gods, this may serve as a testimony, that
 Love has no parents, nor is there any poet or other person who has ever affirmed that there are such.
 Hesiod says, that first ‘Chaos was produced; then the broad-bosomed Earth, to be a secure founda-
@@ -27170,21 +23318,12 @@ with both the ‘strange boat . . . of rare device’ which carries the narrator
 the moon-like boat that transports Laon, Cythna and their winged child to the Temple of the Spirit at the
 close of L&C 4630–3. Its physical characteristics have affinities with Phaedria’s self-propelled boat in Faerie
 
-A litle Gondelay, bedecked trim
-With boughes and arbours wouen cunningly,
-That like a litle forrest seemed outwardly.
-
 300. an horticultural adept] I.e. one proficient in horticulture. According to OED (B), the Latin ‘adep-
 tus’ was ‘used . . . and assumed by alchemists that professed to have attained the great secret.’ The word
 ‘adept’ is used in Hellas l. 741; cp. also PU I 738.
 302. his mother’s star] I.e. Venus.
 305. green] The colour of the Witch’s boat resembles the Ship of Heaven piloted to the Bower of Bliss
 by the glendoveer in Southey, The Curse of Kehama vii 15–18:
-
-Its hue? . . . Go watch the last green light
-Ere Evening yields the western sky to Night;
-Or fix upon the Sun thy strenuous sight
-Till thou hast reach’d its orb of chrysolite.
 
 To its own substance; woven tracery ran
 Of light firm texture, ribbed and branching, o’er
@@ -27242,9 +23381,6 @@ Through which the harmony of love can pass;
 A living Image, which did far surpass
 In beauty that bright shape of vital stone
 Which drew the heart out of Pygmalion.
-
-A sexless thing it was, and in its growth
-330 It seemed to have developed no defect
 
 321–8. There are literary precedents for moulding people out of snow, but these are usually figures
 associated with evil, e.g. the ‘accursed Hag’ who makes ‘Another [i.e. the ‘False’] Florimell’ out of ‘pur-
@@ -27346,14 +23482,6 @@ shape has several precedents including the angel in S.’s ‘most favourite pas
 160), ‘the Spirit coming over the sea in a boat like Mars rising from the vapours of the horizon’ (L ii
 112), described by Virgil thus in Dante, Purgatorio ii 31–3:
 
-Vedi che sdegna li argomenti umani,
-sì che remo non vuol, né altro velo
-che l’ali sue, tra liti sì lontani.
-
-(‘Lo how all human means he sets at nought!
-So that nor oar he needs, nor other sail
-Except his wings, between such distant shores.’)
-
 On the echoes of this passage in L&C XII, see the note to l. 4624 of that poem. Further to the note to
 L&C 4644, WA broadly recalls the prose outline of Peacock’s Ahrimanes in which a boat bears the lov-
 ers ‘to the dwelling of Oromazes . . . . imaging the course of virtue through the storms of life’ (Peacock
@@ -27396,16 +23524,6 @@ Now lingering on the pools, in which abode
 The calm and darkness of the deep content
 In which they paused; now o’er the shallow road
 
-354. forest-tops] The word is used in Byron, Don Juan II ciii 4.
-360. rift] I.e. ‘opening’ (see OED rift, n.2 2b).
-368. that] the Nbk 16.
-369. prone] downwardly sloping.
-371. on] in MT.
-
-Of white and dancing waters all besprent
-375 With sand and polished pebbles — mortal boat
-In such a shallow rapid could not float.
-
 And down the earthquaking cataracts which shiver
 Their snow-like waters into golden air,
 Or under chasms unfathomable ever
@@ -27423,9 +23541,6 @@ And heavy hue which slumber could extend
 390 Over its lips and eyes, as on the gale
 A rapid shadow from a slope of grass,
 Into the darkness of the stream did pass.
-
-And it unfurled its heaven-coloured pinions,
-With stars of fire spotting the stream below;
 
 374. dancing] shallow MT. besprent] I. e. ‘sprinkled with’. Cp. ‘dew-besprent’ in Milton, Comus l. 541.
 375. pebbles —] pebbles. . Nbk 16; pebbles: — 1824.
@@ -27472,10 +23587,6 @@ Beneath, the billows having vainly striven
 415 Indignant and impetuous, roared to feel
 The swift and steady motion of the keel.
 
-Or, when the weary moon was in the wane,
-Or in the noon of interlunar night,
-The lady-witch in visions could not chain
-
 396. glory] I.e. effulgence of light (see OED 6).
 397. Locock 1911 cps Athanase Detached Passage (b) l. 14.
 398–400. Cp. the snow on tree-branches reflecting moonlight in Coleridge, Frost at Midnight ll. 68–74.
@@ -27495,11 +23606,6 @@ Of shooting stars, and bade extend amain
 Its storm-outspeeding wings, th’Hermaphrodite;
 She to the Austral waters took her way,
 Beyond the fabulous Thamondocana, —
-
-425 Where, like a meadow which no scythe has shaven,
-Which rain could never bend, or whirl-blast shake,
-With the Antarctic constellations paven,
-Canopus and his crew, lay th’Austral lake —
 
 421. amain] ‘with full force’ (OED 1).
 422. Its] MT; His Nbk 16, 1824.
@@ -27542,11 +23648,6 @@ out of which flowed both the Nile and the Niger, referred to as ‘not very dist
 John Barrow in his review of Mungo Park, Journal of a Mission to the Interior of Africa in 1805 (1815)
 in Quarterly Review xiii (April 1815) 145.
 
-There she would build herself a windless haven
-430 Out of the clouds whose moving turrets make
-The bastions of the storm, when through the sky
-The spirits of the tempest thundered by.
-
 A haven beneath whose translucent floor
 The tremulous stars sparkled unfathomably,
 435 And around which, the solid vapours hoar,
@@ -27564,9 +23665,6 @@ Ploughed up the waters, and the flagging wing
 Looked like the wreck of some wind-wandering
 Fragment of inky thunder-smoke — this haven
 Was as a gem to copy Heaven engraven, —
-
-On which that lady played her many pranks,
-450 Circling the image of a shooting star,
 
 429. There]?[Where] Nbk 16 (written above And canc.); Where Locock Ex (reading of Nbk 16);?[There]
 BSM (reading of Nbk 16); When MT.
@@ -27630,12 +23728,6 @@ a soft clear light and without fierce heat’ (OED 1).
 naphtha and asphaltus yielded light/As from a sky.’
 469. cressets] Vessels ‘of iron or the like, made to hold grease or oil, or an iron basket to hold pitched
 
-rope, wood, or coal, to be burnt for light; usually mounted on the top of a pole or building, or suspended
-
-470 Hung there, and on the water for her tread,
-A tapestry of fleece-like mist was strewn,
-Dyed in the beams of the ascending moon.
-
 And on a throne o’erlaid with starlight, caught
 Upon those wandering isles of aery dew,
 475 Which highest shoals of mountain shipwreck not,
@@ -27644,11 +23736,6 @@ Between the earth and moon since they had brought
 The last intelligence — and now she grew
 Pale as that moon lost in the watery night —
 480 And now she wept and now she laughed outright.
-
-These were tame pleasures. — She would often climb
-The steepest ladder of the crudded rack
-Up to some beakèd cape of cloud sublime,
-And like Arion on the dolphin’s back
 
 from a roof ’ (OED). serene] clear, bright sky, from the Latin serenum. Cp. Keats, On First Looking into
 Chapman’s Homer l. 7. Miriam Allott, The Poems of John Keats (1970) 61 cps Coleridge, Hymn before
@@ -27674,11 +23761,6 @@ Arion on the dolphin’s back’ is identical with Twelfth Night I ii 14, but th
 tioned in Ovid, Fasti ii 79–118, Achilles Latius, Leucippe and Clitophon vi 13, Spenser, Amoretti
 xxxviii, Faerie Queene IV xi 23 and Keats, Endymion ii 360.
 
-485 Ride singing through the shoreless air. Oft time
-Following the serpent lightning’s winding track,
-She ran upon the platforms of the wind
-And laughed to hear the fire-balls roar behind.
-
 And sometimes to those streams of upper air
 490 Which whirl the earth in its diurnal round
 She would ascend, and win the spirits there
@@ -27687,9 +23769,6 @@ That on those days the sky was calm and fair,
 And mystic snatches of harmonious sound
 495 Wandered upon the earth where’er she passed,
 And happy thoughts of hope, too sweet to last.
-
-But her choice sport was, in the hours of sleep,
-To glide adown old Nilus, where he threads
 
 485–88. Desmond King-Hele, ‘The influence of Erasmus Darwin on Wordsworth, Coleridge, Keats and
 Shelley’, Le romantisme anglo-américain: Mélanges offerts à Louis Bonnerot (1971) 162, notes parallels
@@ -27767,9 +23846,6 @@ backs, in files,/Plump infant laughers’. Hughes, ‘Shelley’s “Witch of At
 across the stream.’
 507. water-snakes] Cp. Coleridge, The Ancient Mariner l. 273.
 
-Of the great Labyrinth slept both boy and beast,
-Tired with the pomp of their Osirian feast.
-
 And where within the surface of the river
 The shadows of the massy temples lie,
 515 And never are erased — but tremble ever
@@ -27778,10 +23854,6 @@ Through lotus-pav’n canals, and wheresoever
 The works of man pierced that serenest sky
 With tombs, and towers, and fanes,’twas her delight
 520 To wander in the shadow of the night.
-
-With motion like the spirit of that wind
-Whose soft step deepens slumber, her light feet
-Passed through the peopled haunts of human kind,
 
 511. Labyrinth] A reference to the giant labyrinth near lake Moeris described in Diodorus Siculus, The
 Library of History I lxvi 3–6 and Herodotus, Histories ii 148: ‘Moreover they resolved to preserve the
@@ -27856,10 +23928,6 @@ of ivy has Ovidian overtones. Cp. the likening of Salmacis’s entwining of Herm
 546–49. These lines recall Lines Written among the Euganean Hills ll. 1–26.
 547. Where’er] Where in Nbk 16.
 549. wild] wide MT, 1834, 1839, 1840, 1847.
-
-550 But she in the calm depths her way could take,
-Where in bright bowers immortal forms abide,
-Beneath the weltering of the restless tide.
 
 And she saw princes couched under the glow
 Of sunlike gems; and round each temple-court
@@ -28002,10 +24070,6 @@ Of death or life; while they were still arraying
 615 In liveries ever new, the rapid, blind
 And fleeting generations of mankind.
 
-And she would write strange dreams upon the brain
-Of those who were less beautiful, and make
-All harsh and crooked purposes more vain
-
 601. that] when MT.
 602–3. shook . . . of] ‘Borrowed the light from’ (OED).
 602. the embalmer’s ruining] ‘Ruining’ is an ironical way of glossing the Egyptian practice of preserving
@@ -28090,9 +24154,6 @@ Like Cyclopses in Vulcan’s sooty abysm,
 645 Beating their swords to ploughshares; — in a band
 The jailors sent those of the liberal schism
 
-633–40. Baker, ‘Spenser and The Witch of Atlas’ 478 cps the Ape in Spenser, Prosopopoia or Mother
-Hubberds Tale ll. 1059–63 and ll. 1082–5:
-
 Then freely vp those royall spoyles he tooke,
 Yet at the Lyons skin he inly quooke;
 But it dissembled, and vpon his head
@@ -28116,9 +24177,6 @@ Georgics iv 173–5.
 645. Beating their swords to ploughshares] See Isaiah ii 4 and Micah iv 3.
 646. sent] Written above let canc. in Nbk 16. schism] OED identifies this and the use of the word in PB3
 97 as a nonce, meaning ‘a faction, party; a set or class of people’.
-
-Free through the streets of Memphis, much, I wis,
-To the annoyance of king Amasis.
 
 And timid lovers who had been so coy
 650 They hardly knew whether they loved or not,
@@ -28161,9 +24219,6 @@ trans. Gerald Bevan)
 Turner notes that this passage is paraphrased in DMAG: ‘If we consider the facility with which certain
 phenomena connected with sleep, at the age of puberty, associate themselves with those images which
 
-are the objects of our waking desires . . .’ (Notopoulos 411).
-652. inmost] utmost MT.
-
 And then the Witch would let them take no ill:
 Of many thousand schemes which lovers find,
 The Witch found one, — and so they took their fill
@@ -28172,10 +24227,6 @@ Friends who by practice of some envious skill,
 Were torn apart, a wide wound, mind from mind!
 She did unite again with visions clear
 Of deep affection and of truth sincere.
-
-665 These were the pranks she played among the cities
-Of mortal men, and what she did to sprites
-And Gods, entangling them in her sweet ditties
 
 657–64. This stanza presents love as informing friendship but not sexual desire. Cp. the speech of
 Protogenes in Plutarch, Eroticus (‘The Dialogue on Love’) 750d—750e: ‘there normally exists in men
@@ -28301,8 +24352,6 @@ silently kindled was not likely to be extinguished by the inefficient hand of th
 pontifical authority.’ (A Tour through the Southern Provinces of the Kingdom of Naples
 (1821) 448) Soon after the constitutional revolution that began on 1 July (discussed in
 
-the headnote to the Ode to Naples), Andrea Valiante, a hero of the uprising in Benevento
-
 in 1799 (prompted by the Neapolitan revolution of that year), returned to occupy its for-
 tress, and the Papal Delegate fled (Galignani’s Messenger (5 August 1820) 4). However,
 for strategic reasons, the constitutional government in Naples refused the requests
@@ -28380,9 +24429,6 @@ A biographical context for the sonnet has been suggested by Reiman (SC viii 1062
 12) who identifies an echo in ll. 10–11 of S.’s pained and private letter of 11 March 1820
 to the Gisbornes which survives in a transcript by John Gisborne. In it, S. invites Maria
 
-to live with them temporarily as a means of alleviating Mary’s acute dejection since
-William’s death:
-
 Could she suddenly know a person in every way my equal, and hold close and per-
 petual communion with him, as a distinct being from herself; as a friend instead of a
 husband, she would obtain empire over herself that she might not make him misera-
@@ -28399,12 +24445,6 @@ has precedents in the description of man as ‘the King/Over himself ’ (PU III
 OL (Longman iii 378–418, no. 322) stanzas xvi and xvii. It is apparent too in Plato’s Phaedo
 68e — 69e, a text S. translated in 1820 (see headnote to OL). That S. was preoccupied in
 1820–1 with the perils of outward forms of majesty is evident from his transcription in
-
-Nbk 17 p. 1 of the following passage from Hippolytus’ speech to Theseus after he has been
-accused of incest with Phaedra in Euripides’ Hippolytus 1013–5:
-
-(‘But will you say that to be king is a tempting pleasure even to the virtuous? Not at
-all, since kingly power has corrupted the minds of all those who love it.’)
 
 Precedents for the poem’s argument about self-imposed obstacles to genuine liberty are to be
 found in Etienne de la Boétie’s Discours de la servitude volontaire (c. 1553), an essay that Claire
@@ -28438,11 +24478,6 @@ Tirannide (1787), Alfieri condemns political servitude of the kind S. identifies
 (and consequently the strength or the skill to try at least to regain it for themselves, and at the
 same time for others), yet prefer to live in servitude’ (trans. Julius A. Molinaro and Beatrice
 Corrigan (1961) 93). S. would also have been familiar with the way that Staël draws attention
-
-to the hope that Italy will one day free itself from enslavement in Corinne, ou l’Italie (1807):
-
-D’autres peuples, interrompit Corinne, ont supporté le joug comme nous, et ils ont
-de moins l’imagination qui fait rêver une autre destinée:
 
 Nous sommes esclaves, mais des esclaves toujours frémissants, dit Alfiéri, le plus fier de
 nos écrivains modernes. Il y a tant d’ame dans nos beaux arts, que peut-être un jour
@@ -28527,9 +24562,6 @@ English People (1654) in Complete Prose Works (1966) iv, pt I, 684 (‘he who ca
 . . . should not be his own master’); and Algernon Sidney, Discourses concerning Government (1763
 [1698]), 349 (‘the name of slave can belong to no man, unless to him who is either born in the house
 
-of a master, bought, taken, subdued, or willingly gives his ear to be nailed to the post, and subjects
-himself to the will of another.’)
-
 49 ‘Ye hasten to the [grave]!
 What seek ye there’
 No draft of this poem is known to exist. It is placed amongst ‘Poems written in 1820’ in
@@ -28577,9 +24609,6 @@ but so flustered as if the voice of worldly wisdom could at any moment be swept 
 rush of its very own frantic thoughts’).
 Text from the Morgan Library & Museum, MA 3223 f. 2v. A comma has been supplied
 in the first line. Other departures from the MS are recorded in the notes.
-
-Published in The Literary Pocket-Book; or, Companion for the Lover of Nature and Art.
-1823 (1822) 112; MYRS viii 314–15 (facsimile and transcription of MS).
 
 ## DOI: 10.4324/9781315170343-49
 
@@ -28722,21 +24751,11 @@ Herbert, ed., Poems on the Underground: Illustrated Edition (1992) 138 (facsimil
 I i 1–24, which begins ‘Roses, their sharp spines being gone’. The singer’s strewing of flowers may be likened to
 the roses being heaped in l. 2. Locock 1911 ii 519 cps the concluding lines with Shakespeare’s Sonnet liv ll. 10–14:
 
-Sweet roses do not so,
-Of their sweet deaths are sweetest odours made:
-And so of you, beauteous and lovely youth,
-When that shall fade, my verse distills your truth.
-
 1. The cancelled first attempt at this line in Nbk 17 reads A roseleaf when. That flowers symbolise earthly
 transience is emphasised in the opening of the penultimate verse paragraph of Peacock’s ‘Palmyra’ in
 The Genius of the Thames, Palmyra, and Other Poems, 2nd edn (1812) 116: ‘The flower, that drinks the
 morning-dew,/Far on the evening gale shall fly’. See also l. 7 and note.
 2. the beloved’s] Written above a Sultana’s canc. in Nbk 17.
-
-5 Music, when soft voices die,
-Vibrates in the memory. —
-Odours, when [sweet] violets sicken,
-Live within the sense they quicken.
 
 3–4. As elsewhere (e.g. ll. 1–2 and 8), the argument and diction are comparable with OWW esp. ll.
 63–4.
@@ -28747,10 +24766,6 @@ own words” — the essay on Love, quoted at the opening of Epipsychidion’ (G
 of Emilia Viviani’. Whether prose or verse, it is Teresa Viviani’s writings that seem to be referred to.
 5–7. die . . . sicken] There may be an echo of Macbeth IV iii 171–3:
 
-good men’s lives
-Expire before the flowers in their caps,
-Dying or ere they sicken.
-
 5–6. A first, mostly cancelled draft of these lines in Nbk 17 reads: Spirit sweet! from th from [ ]/Melodies
 even when they die. Mary transcribed and cancelled ‘Spirit sweet — when soft voice’ as l. 5 in Mary
 Copybk 2. Cp. the address to Teresa Viviani as ‘Sweet Spirit!’ in Epipsychidion 1. Rognoni 1616 cps PU
@@ -28760,20 +24775,6 @@ Copybk 2. Cp. the address to Teresa Viviani as ‘Sweet Spirit!’ in Epipsychid
 5. Music] Written above Melodies canc. in Nbk 17. soft] Written above sweet canc. in Nbk 17.
 6. Vibrates] Written above Linger canc. in Nbk 17. Cp. Moore’s Ode to Nea XI (‘I found her not — the
 chamber seem’d’) in Epistles, Odes, and Other Poems (1806) ll. 9–12:
-
-There lingers still a trembling breath
-After the note’s luxurious death,
-A shade of song, a spirit air
-Of melodies which had been there!
-
-7. when [sweet] violets sicken] Cp. Henry Wotton’s ‘You meaner beauties’ ll. 6–10, repr. in Thomas
-Percy, Reliques of Ancient English Poetry, 2nd edn (1767) ii 313:
-
-Ye violets that first appeare,
-By your pure purple mantles known
-Like the proud virgins of the yeare,
-As if the Spring were all your own;
-What are you when the Rose is blown?
 
 8. quicken] stimulate. See Ode to the West Wind l. 64 and note.
 9. Written beneath As desire withou canc. in Nbk 17. Tokoo (Shikai 48) reads As desire withers, Chernaik
@@ -28832,11 +24833,6 @@ give me no pleasure that the vulgar should read it. If you have any bookselling 
 
 ## DOI: 10.4324/9781315170343-51
 
-against publishing so small a number as a hundred, merely, distribute copies among
-those to whom you think the poetry would afford any pleasure, and send me, as soon
-as you can, a copy by the post.
-(L ii 263)
-
 In a further letter to Ollier, of 22 February, S. repeated his request that the poem was ‘to be
 printed immediately, and . . . anonymously’ (L ii 269).
 Epipsychidion (1821) was published as an octavo pamphlet, priced at 2 shillings
@@ -28881,9 +24877,6 @@ and alluded to its suppression in a letter (‘Letter from London’) to ‘Chri
 (John Wilson) under the pseudonym of ‘John Johnes’, published in Blackwood’s Edinburgh
 Magazine xi (February 1822) 236–9 (237–8):
 
-Did it ever fall in your way to see a poem with this title, ‘Epipsychidion: Verses addressed
-to the noble and unfortunate Lady Emilia V —, now imprisoned in the convent of — ?’
-
 This little pamphlet is a threefold curiosity, on account of the impenetrable mysticism
 of its greater portion, the delicious beauty of the rest, and the object of the whole,
 which I take to be an endeavour to set aside the divine prohibition, that a man may not
@@ -28917,9 +24910,6 @@ in love with something or other; the error, and I confess it is not easy for spi
 in flesh and blood to avoid it, consists in seeking in a mortal image the likeness of what
 is perhaps eternal. Hogg is very droll and very wicked about this poem, which he says,
 he likes — he praises it and says: —
-
-(L ii 434; the quotation is from Horace, Ars Poetica l. 243 and may be translated as:
-‘such [is] the beauty that may be achieved through commonplace language.’)
 
 The allusion to the myth of Ixion suggests that estrangement from the poem on S.’s part,
 already manifest in the letter of 16 February 1821 to Ollier (‘it is a production of a portion
@@ -29049,10 +25039,6 @@ her marriage to Biondi five days later, she wrote to S. asking for money (Shelle
 iii 691–2 and Viviani della Robbia 131–2; trans. White ii 484–5). In March 1822 Mary told
 Claire that ‘Emilia’ was part of the ‘ill luck’ of the spring of 1821 (Mary L i 226) and gave
 Maria Gisborne the following cool assessment of her and S.’s infatuation:
-
-Emilia married Biondi — we hear that she leads him & his mother (to use a vulgarism)
-a devil of a life — The conclusion of our friendship a la Italiana puts me in mind of a
-nursery rhyme which runs thus —
 
 As I was going down Cranbourne lane,
 Cranbourne lane was dirty,
@@ -29211,10 +25197,6 @@ had been seeking all his life’, adding ‘In a way, Epipsychidion . . . is the
 all Shelley’s works, an extreme concentration of a single element in his genius. But Keats
 would have called it “too smokeable” — too easy to smile at’.
 
-Text from Epipsychidion (1821) with the exception of the alternative readings noted in
-ll. 97, 282, 306 and 334.
-Published in Epipsychidion (1821).
-
 ## EMILIA V ——
 
 ¶ 51. Title. Epipsychidion:] Of the two copies of Epipsychidion (1821) inspected by the editors, the one
@@ -29253,13 +25235,6 @@ which he puns on the compound adjective ‘conchoid’ (= in the form of a shell
 newly born daughter Clara: ‘The Conchoid is well. A Conchoidion or little hermitess has just stept
 forth upon the stage of the world’ (Peacock L i 116). There are fourteen instances of the word ‘soul’ in
 
-the poem (ll. 38, 57, 89, 109, 238 (twice), 311, 407, 455 (twice), 477, 539, 568 and 588); the ‘doubling’
-references in ll. 238 and 455 invoke the title.
-
-L’anima amante si slancia fuori del creato, e si crea nel infinito un Mondo tutto
-per essa, diverso assai da questo oscuro e pauroso baratro.
-her own words.
-
 Epigraph. L’anima . . . baratro.] ‘The loving soul flings itself out of the created world and creates in
 the infinite a world all for itself, quite different from this dark and frightening chasm’. These words are
 quoted, with some omissions, from Teresa Viviani’s essay Il vero Amore. The full text of the passage is
@@ -29281,9 +25256,6 @@ includes a lady by the name of Emilia Pia.
 
 ## ADVERTISEMENT
 
-The Writer of the following Lines died at Florence, as he was preparing for a voyage to one
-of the wildest of the Sporades, which he had bought, and where he had fitted up the ruins of
-
 Adv. 1–8. The Writer . . . character and feelings.] S.’s original conception of ‘the Writer’ is illuminated
 by passages from the three drafts of the Advertisement in Nbk 16. They are edited minimally and
 numbered for convenience. The draft Advertisement was first published in Locock Ex 4–5.
@@ -29299,9 +25271,6 @@ his fate is an additional proof that ‘The tree of knowledge is not that of Lif
 to himself certain opinions, founded no doubt upon the truth of things, but built up to a Babel
 height; they fell [by their own weight canc.], and the thoughts that were their architects, became
 unintelligible one to the other, as men upon whom the confusion of tongues had fallen.
-
-[He had personified the το καλον and sought it in every form and in every opinion fell in love with
-it; without being voluptuous, his favourite idea was, that love, whether of man, woman or canc.]
 
 Those who know the world as it is will collect from the following poem that the only refuge from
 the consequences of such feelings and opinions as it expressed was that which the writer sought:
@@ -29339,10 +25308,6 @@ other class it must ever remain incomprehensible, from a defect of a common orga
 perception for the ideas of which it treats. Not but that, gran vergogna sarebbe a colui, che
 rimasse cosa sotto veste di figura, o di colore rettorico: e domandato non sapesse denudare le
 sue parole da cotal veste, in guisa che avessero verace intendimento.
-
-15 The present poem appears to have been intended by the Writer as the dedication to some
-longer one. The stanza on the opposite page is almost a literal translation from Dante’s
-famous Canzone
 
 In [1], the Ponte della Trinità (The Bridge of the Holy Trinity) refers to a bridge over the river Arno in
 Florence. θνητος ῶν μη θνητα φρονειν is translated in Rogers 75 as ‘being a mortal to aspire to immortal
@@ -29383,10 +25348,6 @@ in rhyme introduced a figure of speech or rhetorical ornament, and then on being
 divest his words of such covering so as to reveal a true meaning’ (trans. Barbara Reynolds). From
 Dante, Vita Nuova xxv. The Italian in the Advertisement corresponds with the text of Delle opere di
 Dante Alighieri, ed. Anton Maria Biscioni, 2 vols (1793) (Biscioni) i 259 (an edition discussed in the
-
-The presumptuous application of the concluding lines to his own composition will raise
-20 a smile at the expense of my unfortunate friend: be it a smile not of contempt, but pity.
-S.
 
 My Song, I fear that thou wilt find but few
 Who fitly shall conceive thy reasoning,
@@ -29441,9 +25402,6 @@ move is base company (l. 5) instead of ‘such company’ (l. 57). The word base
 ll. 8 and 60) of the words tell them that they are dull which are absent in the original. In these respects
 his translation is not entirely faithful to the original, as he acknowledges (almost a literal translation).
 
-Sweet Spirit! Sister of that orphan one,
-Whose empire is the name thou weepest on,
-
 1–4. For the Italian versions of the first two couplets of the poem, which may have been written before the
 English versions of these lines, see Fragments connected with Epipsychidion N and O (Longman iv 187).
 1. Sweet Spirit!] Cp. ‘Spirit sweet!’ in the draft of Rose leaves, when the rose is dead; see the note to ll. 5–6
@@ -29494,11 +25452,6 @@ This song shall be thy rose: its petals pale
 But soft and fragrant is the faded blossom,
 And it has no thorn left to wound thy bosom.
 
-me tabula sacer
-votiva paries indicat uvida
-suspendisse potenti
-vestimenta maris deo.
-
 (‘As for me, a votive tablet on his temple wall records that I have dedicated my drenched clothes to the
 deity who rules the sea.’)
 3. my heart’s temple] Cp. Lucretius, De Re. Nat. i 737: ‘adyto tamquam cordis’ (‘the holy place of the
@@ -29534,11 +25487,6 @@ Stains with dear blood its unmaternal nest!
 I weep vain tears: blood would less bitter be,
 20 Yet poured forth gladlier, could it profit thee.
 
-Seraph of Heaven! too gentle to be human,
-Veiling beneath that radiant form of Woman
-All that is insupportable in thee
-Of light, and love, and immortality!
-
 15. Webb (1995) 422 cps S.’s trans. of Ion: ‘the souls of the poets, . . . arrayed as they are in the plumes of
 rapid imagination, . . . speak truth’ (Julian vii 238). Rognoni 1610 cps OL 7.
 16. shade] ‘unreal state of existence’ (Concordance).
@@ -29563,20 +25511,6 @@ compared with ‘un’angela che’n cielo è coronata’ in l. 29 of the first 
 S. translates in Ye who [ ] the third Heaven move l. 28 as ‘a bright Seraph sitting crowned on high’. See
 also the first of the two sonnets in Dante, Vita Nuova xxvi:
 
-Tanto gentile e tanto onesta pare
-la donna mia quand’ella altrui saluta,
-ch’ogne lingua deven tremando muta,
-e li occhi no l’ardiscon di guardare.
-
-Ella si va, sentendosi laudare,
-benignamente d’umiltà vestuta;
-e par che sia una cosa venuta
-da cielo in terra a miracol mostrare.
-
-Mostrasi sì piacente a chi la mira,
-che dà per li occhi una dolcezza al core,
-che’ntender no la può chi no la prova:
-
 25 Sweet Benediction in the eternal Curse!
 Veiled Glory of this lampless Universe!
 Thou Moon beyond the clouds! Thou living Form
@@ -29587,10 +25521,6 @@ In whom, as in the splendour of the Sun,
 All shapes look glorious which thou gazest on!
 Aye, even the dim words which obscure thee now
 Flash, lightning-like, with unaccustomed glow;
-
-e par che de la sua labbia si mova
-un spirito soave pien d’amore,
-che va dicendo a l’anima: ‘Sospira.’
 
 (‘So gentle and so full of dignity my lady appears when she greets anyone that all tongues tremble and
 fall silent and eyes dare not look at her. She goes on her way, hearing herself praised, graciously clothed
@@ -29701,11 +25631,6 @@ these birds feel that the time has come for them to die, they sing more loudly a
 than they have sung in all their lives before, for joy that they are going away into the pres-
 ence of the god whose servants they are.’
 
-(Trans. Tredennick, in The Collected Dialogues of Plato)
-See also Alastor 275–90 and note.
-55. Time, in his own grey style] Cp. MA 90.
-57. Cp. the account of Beatrice in ll. 15–28 of the canzone of Dante’s Vita Nuova, xix:
-
 Angelo clama in divino intelletto
 e dice: ‘Sire, nel mondo si vede
 maraviglia ne l’atto che procede
@@ -29754,8 +25679,6 @@ Her limbs, as underneath a cloud of dew
 80 Embodied in the windless Heaven of June
 Amid the splendour-wingèd stars, the Moon
 
-65–6. Cp. With a Guitar. To Jane. Locock 1911 ii 455 cps Agathon’s speech in Plato’s Symposium 196e:
-
 ‘every one, even if before he were ever so undisciplined, becomes a poet as soon as he is
 touched by Love; a sufficient proof that Love is a great poet, and well skilled in that sci-
 ence according to the discipline of music.’
@@ -29773,10 +25696,6 @@ upon the draft of Fiordispina ll. 60–2 and 69–114 in Nbk 17 pp. 60–7 (BSM 
 Poet to his death in Alastor.
 77–82. the brightness . . . inextinguishably beautiful] Cp. the description of Asia in PU II v 54–9. Zacchetti,
 
-Quale ne’ plenilunïi sereni
-Trivïa ride tra le ninfe etterne
-che dipingon lo ciel per tutti i seni
-
 Burns, inextinguishably beautiful:
 And from her lips, as from a hyacinth full
 Of honey-dew, a liquid murmur drops,
@@ -29785,17 +25704,6 @@ Of planetary music heard in trance.
 In her mild lights the starry spirits dance,
 The sunbeams of those wells which ever leap
 Under the lightnings of the soul — too deep
-
-(‘As in the calm full moon, when Trivia smiles,
-In peerless beauty,’mid th’ eternal nymphs,
-That paint through all its gulfs the blue profound’)
-
-81–2. the Moon . . . inextinguishably beautiful] Cp. Wordsworth, The Excursion iv 1059–62:
-
-As the ample Moon,
-In the deep stillness of a summer even
-Rising behind a thick and lofty Grove,
-Burns like an unconsuming fire of light
 
 83–5. Ackermann, Shelley’s Epipsychidion und Adonais 66 cps ll. 12–14 of the first of the two sonnets in
 Dante’s Vita Nuova xxvi cited in the note to ll. 21–4.
@@ -29863,9 +25771,6 @@ misread and misprinted as “morning.” I trust therefore that the reader will 
 (Rossetti 1870 ii 551). The reading in Nbk 17 p. 63 (BSM vi 212–13) is clearly morning. As suggested in
 Major Works 796, it may be that ‘In the process of redrafting, Shelley failed to notice the lack of agree-
 
-ment between singular noun and plural verb’. However, Forman justifies the reading in Epipsychidion
-(1821) thus:
-
 I incline to the supposition that the line stands in the first edition as Shelley meant it to
 stand, and that this is another case in which he uses the subjunctive mood after a word
 which is not generally followed by that mood.
@@ -29899,9 +25804,6 @@ That Love makes all things equal: I have heard
 By mine own heart this joyous truth averred:
 The spirit of the worm beneath the sod
 In love and worship, blends itself with God.
-
-130 Spouse! Sister! Angel! Pilot of the Fate
-Whose course has been so starless! O too late
 
 111. bud. —]The dash in Epipsychidion (1821) is noticeably extended.
 113–15. Line 114 appears first to have been inserted between ll. 113 and 115 in Nbk 17 p. 65 (BSM vi
@@ -29979,29 +25881,6 @@ Eryximachus’s speech in Symposium 187c: ‘Music is then the knowledge of that
 in harmony and rhythm. In the very system of harmony and rhythm, it is easy to distinguish love’ (S.’s
 trans., Julian vii 181).
 
-For one another, though dissimilar;
-Such difference without discord, as can make
-145 Those sweetest sounds, in which all spirits shake
-As trembling leaves in a continuous air?
-
-Thy wisdom speaks in me, and bids me dare
-Beacon the rocks on which high hearts are wrecked.
-I never was attached to that great sect,
-
-145–6. shake . . . continuous air] Cp. Purgatorio xxviii 9–11 and S.’s trans. of these lines in Dante’s
-Purgatorio Canto XXVIII, 1–51 (Longman iii 478–83, no. 331):
-
-non di più colpo che soave vento;
-per cui le fronde, tremolando, pronte
-tutte quante piegavano
-(Like the soft stroke of a continuous wind
-In which the passive leaves tremblingly were
-All bent)
-
-airs, vernal airs,
-Breathing the smell of field and grove, attune
-The trembling leaves . . .
-
 147. Shelley, Shelley and Scripture 142 cps Proverbs viii — ix.
 148. Beacon] ‘To furnish with beacons; to mark the position of, by beacons or a ­beacon’ (OED 3). Cp.
 Adonais 495 where ‘Beacons’ is used in a different sense (‘To shine like a beacon’ (OED 4)).
@@ -30025,9 +25904,6 @@ marriage, see the commentary to the Note to Q Mab v 189. This passage is pertine
 pretation of the poem’s title as meaning ‘ “little soul song”, on the analogy of epithalamion to which it
 provides a more liberated alternative’ (Webb (1995) 420; see note on Title).
 
-149–50. that great sect,/Whose doctrine] The connection between S.’s atheism and his ‘anti-matrimonial-
-ism’ is evident as early as his letter to Hogg of 8 May 1811:
-
 Yet marriage is hateful detestable, — a kind of ineffable sickening disgust seizes my mind
 when I think of this most despotic most unrequired fetter which prejudice has forged to
 confine it’s energies. Yet this is Xtianity — & Xt must perish before this can fall; I do {not now}
@@ -30042,13 +25918,6 @@ Who travel to their home among the dead
 By the broad highway of the world, and so
 With one chained friend, perhaps a jealous foe,
 The dreariest and the longest journey go.
-
-160 True Love in this differs from gold and clay,
-That to divide is not to take away.
-
-even speak of Xt as Xt is but {as the} world have made him; for anti-matrimonialism is as
-necessarily connected with infidelity as if Religion & marriage began their course together . . .
-(L i 80)
 
 154. the beaten road] The Godwinian Gwyn describes the institution of marriage thus in George Crabbe’s
 ‘The Gentleman Farmer’ ll. 144–5 in Tales (1812): ‘ “Absurd! That none the beaten road should shun,/But
@@ -30085,9 +25954,6 @@ So closely bind his golden chain,
 That only one fair form may dwell
 In dear remembrance, and in vain
 
-Love is like understanding, that grows bright,
-Gazing on many truths;’tis like thy light,
-
 May other beauty seek to gain
 A place that idol form beside
 In feelings all pre-occupied?
@@ -30120,9 +25986,6 @@ Virtues own loveliness, desiring the happiness of others not from the obligation
 Hell or desiring Heaven, but for pure simple unsophisticated Virtue.
 (L i 173)
 
-On the misreading of True for Free in the draft of this line in Fragments connected with Epipsychidion
-B, see the note to l. 17 of that Fragment.
-
 162–89. Lines 162–72, 174–87 and 189 draw upon Fragments connected with Epipsychidion I (Longman
 iv 181–2) ll.1–19, 21–2 and 24–8.
 162–3. Love . . . grows bright,/Gazing on many truths] As with ll. 149–59, there are echoes in these lines
@@ -30137,10 +26000,6 @@ they are subject to production and decay, it never becomes more or less, or endu
 When any one, ascending from a correct system of Love, begins to contemplate this supreme
 beauty, he already touches the consummation of his labour.’
 (S.’s trans., Julian vii 206)
-
-163–6. thy light . . . mirrors] Rognoni 1611 cps DP (composed at the same time or shortly after
-Epipsychidion): ‘The drama, so long as it continues to express poetry, is as a prismatic and many-sided
-mirror’ (Reiman (2002) para. 17).
 
 Imagination! which from earth and sky,
 165 And from the depths of human fantasy,
@@ -30213,11 +26072,6 @@ trans. F&B).
 200–9. In solitudes . . . all silence.] The beloved is not seen directly but is perceived through the appear-
 ances of nature as is the Spirit of Beauty in Hymn to Intellectual Beauty ll. 1–12.
 203–4. like lips murmuring . . . lulled them there] Cp. Keats, ‘La Belle Dame sans Merci’ ll. 29–34:
-
-She took me to her elfin grot,
-And there she wept and sighed full sore,
-And there I shut her wild wild eyes
-With kisses four.
 
 And from the singing of the summer-birds,
 And from all sounds, all silence. In the words
@@ -30300,14 +26154,6 @@ Vaché (1997) 504. Schulze, ‘The Dantean Quest of Epipsychidion’ 203 suggest
 that marks ‘a departure from Dante’.
 236–8. Cp. Lycidas ll. 91–4:
 
-He asked the waves, and asked the felon winds,
-What hard mishap hath doomed this gentle swain?
-And questioned every gust of rugged wings
-That blows from off each beaked promontory
-
-238. this soul out of my soul] Brooke interprets these words to be S.’s translation of the word ‘Epipsychidion’
-(see note to Title). See the following passage in On Love:
-
 We dimly see within our intellectual nature a miniature as it were of our entire self, yet
 deprived of all that we condemn or despise, the ideal prototype of every thing excellent or
 lovely that we are capable of conceiving as belonging to the nature of man. Not only the
@@ -30328,14 +26174,6 @@ And therefore I went forth, with hope and fear
 And every gentle passion sick to death,
 Feeding my course with expectation’s breath,
 Into the wintry forest of our life;
-
-atque anima est animae proporro totius ipsa.
-...
-. . . atque animae quasi totius ipsa
-proporrost anima et dominatur corpore toto.
-
-(‘it is itself furthermore the spirit of the whole spirit . . . . [It] is furthermore itself as it were the spirit of the
-whole spirit and lords it in all the body.’)
 
 White ii 254–5. notes a comparable instance of this wording in S.’s letter to Godwin of 10 January 1812:
 ‘The sublime interest of poetry, lofty and exalted atchievements, the proselytism of the world, the
@@ -30512,8 +26350,6 @@ Marito disse bene, allorchè disse: che la tua apparente freddezza, non è che l
 cuore affettuoso’ (‘You seem to me a little cold sometimes, and that causes me an uncomfortable feel-
 ing; but I know that your husband said well when he said that your apparent coldness is only the ash
 
-which covers an affectionate heart’) (Bodleian MS. Abinger c. 45 ff. 50v — 51r; this passage is published,
-
 Who makes all beautiful on which she smiles,
 That wandering shrine of soft yet icy flame
 Which ever is transformed, yet still the same,
@@ -30560,11 +26396,6 @@ recall Coleridge, The Ancient Mariner (1817) ll. 193–4 (‘The Night-mare Life
 thicks man’s blood with cold’), and, although the context is different (Mirtillo is lamenting his love-lorn
 state whereas S. is describing a mental crisis), the language of Guarini’s Il Pastor Fido III iii 493–6:
 
-ma son ben solo
-miserabile esempio
-e de’ vivi e de’ morti, non potendo
-né viver né morire.
-
 300 Alas, I then was nor alive nor dead: —
 For at her silver voice came Death and Life,
 Unmindful each of their accustomed strife,
@@ -30581,15 +26412,6 @@ And how my soul was as a lampless sea,
 And who was then its Tempest; and when She,
 The Planet of that hour, was quenched, what frost
 Crept o’er those waters, till from coast to coast
-
-(‘but onely wretched I am tost
-’Twixt life and death; of whom it may be sed,
-That I am neither living, nor yet dead.’
-Trans. Sir Richard Fanshawe)
-
-301–8. These lines appear to refer to Ianthe and Charles (a sister and a brother), S.’s children by Harriet
-Westbrook (one abandoned mother) who committed suicide on 9 November 1816. Cameron explains
-them thus:
 
 Mary’s soothing rationalizations, Shelley seems to be telling us, serve only to bring up the
 conscience-stabbing images of his abandoned wife and children which drive him even
@@ -30698,10 +26520,6 @@ Thou, not eclipsing a remoter light;
 And, through the shadow of the seasons three,
 365 From Spring to Autumn’s sere maturity,
 
-To wean from self each sordid thought —
-A Ray of him who form’d the whole —
-A Glory circling round the soul![’]
-
 342. living light] Weinberg, Shelley’s Italian Experience 149 cps Purgatorio xxxi 139: ‘viva luce etterna’
 (‘sacred light eternal’).
 345. Twin Spheres of light] The Sun and the Moon, ‘Emily’ and Mary. Twin] Thin 1839, 1840.
@@ -30759,25 +26577,10 @@ to whom your absence is too painful for your return ever to be unwelcome’ (L i
 ‘The star that bids the shepherd fold’ (Comus 93) his sheep. See WA 74 and Hellas 1029.
 374–7. Be there . . . last smiles] Cp. the reference to the sun in Paradise Lost vii 364–6:
 
-Hither as to their fountain other stars
-Repairing, in their golden urns draw light,
-And hence the morning planet gilds his horns
-
 376. The ‘horns’ of the moon are its pointed extremities as they appear in her first and last quarters
 (see OED 18 and also Alastor 646–55). The prospect of the Moon’s horn being veiled may be the covert
 expression of a wish that Mary’s periodic hostility towards Claire will abate.
 379–80. as the star of . . . Birth] Cp. With a Guitar. To Jane l. 28.
-
-380 And Birth is worshipped by those sisters wild
-Called Hope and Fear — upon the heart are piled
-Their offerings, — of this sacrifice divine
-A World shall be the altar.
-
-Lady mine,
-Scorn not these flowers of thought, the fading birth
-385 Which from its heart of hearts that plant puts forth
-Whose fruit, made perfect by thy sunny eyes,
-Will be as of the trees of Paradise.
 
 381–3. upon the heart . . . the altar.] Recalling ll. 3–4.
 384. On the association of flowers with thought, see Rose leaves, when the rose is dead ll. 1–4 and the note
@@ -30790,16 +26593,6 @@ Rogers 93, 102 and 244. However, there are more substantial resonances with the 
 to ‘our healing paradise’ in the final verse paragraph of Lines Written among the Euganean Hills ll. 335–
 73. There is strong support for Webb’s suggestion that Dante’s sonnet Guido, i’ vorrei che tu e Lapo ed
 io is ‘one of the shaping factors of Epipsychidion, with its climactic invitation au voyage’ (Webb 281).
-
-S. quotes lines from this sonnet, not altogether accurately, in the draft of a letter to Teresa Viviani early
-on in their friendship in Nbk 17 p. 43b (BSM vi 170–1), introducing them thus:
-
-Eccoci dunque, tu e noi, che siamo legati da una amicizia di pochi giorni, e accolti da qualche
-fortuna strana, dalle estremità della terra, per essere forse un reciproco sollievo.
-
-Fossimo presi per incantamento
-E messi ad un vascel, che ad ogni vento
-Per mare andasse a voler vostro e mio:
 
 (‘Here we are then, bound by a few days’ friendship, gathered together by some strange fortune from
 the ends of the earth to be perhaps a consolation to each other. Let my wish for you and for us be, in
@@ -30876,10 +26669,6 @@ And, for the harbours are not safe and good,
 But for some pastoral people native there,
 Who from the Elysian, clear, and golden air
 Draw the last spirit of the age of gold,
-
-Simple and spirited; innocent and bold.
-430 The blue Aegean girds this chosen home,
-With ever-changing sound and light and foam,
 
 412. halycons] kingfishers. See Ovid, Met. xi 746: ‘incubat Alcyone pendentibus aequore nidis’ (‘Alcyone
 broods upon her nest floating upon the surface of the waters’). foamless isles] The mythological hal-
@@ -30977,11 +26766,6 @@ Which Sun or Moon or zephyr draw aside,
 Till the isle’s beauty, like a naked bride
 475 Glowing at once with love and loveliness,
 
-Blushes and trembles at its own excess:
-Yet, like a buried lamp, a Soul no less
-Burns in the heart of this delicious isle,
-An atom of th’Eternal, whose own smile
-
 455. a soul within the soul] The play upon the word ‘Epipsychidion’ is here as in ll. 477 and 539 focused
 upon the island.
 456. antenatal] See the reference to the Platonic notion of pre-existence in ll. 133–4 and note. This idea
@@ -31025,11 +26809,6 @@ For all the antique and learned imagery
 Has been erased, and in the place of it
 500 The ivy and the wild-vine interknit
 
-The volumes of their many twining stems;
-Parasite flowers illume with dewy gems
-The lampless halls, and when they fade, the sky
-Peeps through their winter-woof of tracery
-
 480. felt] felt, Forman 1876–7.
 491–507. pleasure-house . . . Parian floors] G. Wilson Knight, The Starlit Dome: Studies in the Poetry of
 Vision (1941) 235–6 identifies parallels in this passage with the description of the ‘pleasure-dome’ in
@@ -31041,10 +26820,6 @@ skeleton of her Titanic form’).
 498. imagery] ‘Sculpture’ (Thompson 162).
 499–506. in the place of it . . . day’s intense serene] Cp. Alastor 438–46.
 500. ivy and the wild-vine] Cp. Mary Tighe, Psyche iv 145–7:
-
-In the deep centre of the mazy wood,
-With matted ivy and wild vine o’ergrown,
-A Gothic castle solitary stood
 
 501. volumes] ‘Intertwining coils’ (Thompson 162).
 502. Parasite] Climbing. See Alastor 439 and SP iii 48 and notes.
@@ -31193,13 +26968,6 @@ possible for man to realise continuously while he is shut in by mere phenomena, 
 for a moment, he breaks down, and falls exhausted from the height’ (Epipsychidion: A Type Fac-simile
 p. xxix). Cp. the second Canzone of Dante’s Il Convivio ll. 1–18:
 
-Amor che ne la mente mi ragiona
-de la mia donna disïosamente,
-move cose di lei meco sovente,
-che lo’ntelletto sovr’esse disvia.
-Lo suo parlar sì dolcemente sona,
-che l’anima ch’ascolta e che lo sente
-
 The wingèd words on which my soul would pierce
 Into the height of love’s rare Universe,
 590 Are chains of lead around its flight of fire. —
@@ -31232,19 +27000,6 @@ which lacks the power to record all that Love says.’ Trans. F&B)
 soul (that is my affection) burns to be able to relate this with the tongue. And because I may not
 tell it, I say that the soul laments thereat, saying:
 
-And this is the other source of unutterableness, namely that the tongue cannot completely fol-
-low that which the intellect perceives. And I say:
-
-“heareth” as touching the words; and “feeleth” as touching the sweetness of the sound.’ (Philip
-H. Wicksteed, ed., The Convivio of Dante Alighieri (1903) 151–2)
-
-Webb (1995) 424 cps the ‘collapse of poetic inspiration’ in these lines with the final stanza of OL.
-
-588. wingèd words] A common expression in S.’s poems. Cp. A Satire upon Satire (Longman iii, no. 290)
-l. 25 and note.
-591. Cp. OWW 54.
-592–604. Cp. Vita Nuova xii 35–40:
-
 And say: — ‘We are the masters of thy slave;
 What wouldest thou with us and ours and thine?’
 595 Then call your sisters from Oblivion’s cave,
@@ -31256,22 +27011,10 @@ So shall ye live when I am there. Then haste
 Marina, Vanna, Primus, and the rest,
 And bid them love each other and be blessed:
 
-E di’ a colui ch’è d’ogni pietà chiave,
-avante che sdonnei,
-che le saprà contar mia ragion bona:
-‘Per grazia de la mia nota soave
-reman tu qui con lei,
-e del tuo servo ciò che vuoi ragiona[’]
-
 (‘And — before taking your leave of my lady — say to him who is key of all compassion, to him who
 will know how to plead my good cause: “By means of my sweet music, remain here with her and speak
 as you please of your servant.” ’ Trans. F&B)
 Cp. also the opening lines of the congedo in Vita Nuova xxxi 71–4:
-
-Pietosa mia canzone or va’ piangendo;
-e ritruova le donne e le donzelle
-a cui le tue sorelle
-erano usate di portar letizia
 
 (‘My piteous song, go now weeping and find the ladies and girls to whom your sisters used to bring
 gladness’, trans. F&B)
@@ -31294,9 +27037,6 @@ Rossetti was the first to suggest that since Giovanna is ‘the Italian synonym 
 the reference is to Jane Williams who S. described in a letter of 16 January 1821 to Claire as ‘an extremely
 pretty & gentle woman — apparently not very clever. I like her very much’ (L ii 256–7). Primus] The
 Latin word for ‘first’, ‘foremost’, ‘most distinguished’. A reference to lo mio primo amico (‘my best-loved
-
-And leave the troop which errs, and which reproves,
-And come and be my guest, — for I am Love’s.
 
 52 A Lament (‘O World, O Life, O Time’)
 This celebrated lyric is drafted roughly in ink in Nbk 17 p. 123 rev. (BSM vi 340–1). The
@@ -31396,22 +27136,6 @@ Text from Nbk 18 p. 164 rev. Commas have been supplied in ll. 1, 2, 3 and 7, and
 stops in ll. 5 and 10. A number-heading for the first stanza has been added. Indentation
 follows the MS.
 
-Published in 1824 190; Chernaik 246; Donald H. Reiman, The Norton Anthology of
-English Literature, ed. M. H. Abrams, 5th edn, 2 vols (1986) ii 2496 (transcription of MS);
-BSM xix 310–11 (facsimile and transcription of MS).
-
-O World, O Life, O Time,
-On whose last steps I climb,
-Trembling at that where I had stood before,
-When will return the glory of your prime?
-5 No more, O never more.
-
-Out of the day and night
-A joy has taken flight,
-Fresh spring and summer [   ] and winter hoar
-Move my faint heart with grief, but with delight
-10 No more, O never more.
-
 53 ‘When passion’s trance is overpast’
 Mary included this lyric in 1824 without date and entitled simply ‘To —— ’. In 1839 she
 grouped it with the ‘Poems Written in 1821’. No transcription in her hand is known to
@@ -31422,10 +27146,6 @@ draft and the text that appeared in 1824 — for which see the notes to ll. 10 a
 there is no sufficient reason to suppose that Mary had access to another MS source than
 Nbk 11. Below and partly beneath the untidy, and in places unresolved, draft of the third
 stanza are the pencilled lines:
-
-Alas we know not what we do
-When we speak words — & I to thee
-I [?that] have been false
 
 ¶ 52. 1.World . . . Life . . .Time] The capitals are written over lower case letters in Nbk 18.
 4. your] yr is altered to thy in Nbk 17.
@@ -31494,9 +27214,6 @@ of the style of the recently deceased Keats and of Keats’s negative opinion of
 his reply to Byron of 4 May, S. says that he has sent to Paris for the pamphlet on Pope
 and Bowles (L ii 290); he had been unable to procure it by 16 July (L ii 308), but eventu-
 
-ally read it while visiting Byron in Ravenna in August (L ii 332). In his letter to Mary of
-11 August, S. gives no indication that he knew of the Observations upon ‘Observations’,
-
 Byron’s second letter on Bowles’s treatment of Pope, which was sent to John Murray in
 April 1821 but not published until 1832 (Byron Prose 161–83, 459–91). In the second
 letter Byron defends Eloisa to Abelard against the charge of ‘gross licentiousness’, express-
@@ -31509,27 +27226,6 @@ conversation in the period from early May to August 1821 constitutes circumstant
 dence for dating When passion’s trance within that period, though such evidence does not
 warrant a decisive conclusion.
 
-Text from Nbk 11 pp. 6–7.
-Published in 1824 205; BSM xviii 8–9 (facsimile and transcription of MS).
-
-When passion’s trance is overpast,
-If tenderness and truth could last
-Or live, whilst all wild feelings keep
-Some mortal slumber, dark and deep,
-5 I should not weep, I should not weep!
-
-It were enough to feel, to see
-Thy soft eyes gazing tenderly,
-And dream the rest — and burn and be
-The secret food of fires unseen,
-10 Could thou but be what thou hast been.
-
-After the slumber of the year
-The woodland violets reappear;
-All things revive in field or grove
-And sky and sea, but two, which move
-15 And form all others — life and love.
-
 ¶ 53. 1. trance] Written above storm canc. in Nbk 11.
 8–9. Cp. Misery. — A Fragment 3 (Longman iii, no. 202) 5: ‘While my burning heart lies sleeping’. The
 untidily reworked draft appears to include the cancelled reading: ‘and die/A [?brand] consumed with
@@ -31541,13 +27237,6 @@ of the draft.
 11–15. It is very difficult to distinguish between cancellation and underlining for restoration or reconsider-
 ation in the draft of this stanza, in a mixture of pencil and ink with much overwriting. The text given here
 satisfies sense and prosody, and may represent S.’s final intention, though he might have revised it further had
-
-he made a fair copy. Cp. the fragment beginning ‘When soft winds and sunny skies’ in Unused stanzas for
-Misery. — A Fragment (Longman ii 707, no. 202 Appendix) C.
-
-54 Adonais
-An Elegy On the Death of John Keats,
-Author of Endymion, Hyperion etc.
 
 Background. Keats and S. were first linked (together with John Hamilton Reynolds) in
 Leigh Hunt’s ‘Young Poets’ article published in the Examiner of 1 December 1816. The
@@ -31734,9 +27423,6 @@ presumably for further annotation and revision of DP; a conjunction which striki
 embodies the contrary impulses at play in Adonais (see BSM vii 132–5, 148–51, 156–77
 and 186–207).
 
-On 29 October 1820 S. wrote to Marianne Hunt in terms confirming his high estimation
-of Hyperion, but also sustaining his reserve about Keats’s other work:
-
 the fragment called Hyperion promises for him that he is destined to become one of
 the first writers of the age. — His other things are imperfect enough, & what is worse
 written in the bad sort of style which is becoming fashionable among those who fancy
@@ -31824,10 +27510,6 @@ was little more than an acquaintance. The second anniversary of William’s deat
 composition period of Adonais (for further discussion of the possible association of William
 Shelley’s death and Adonais see BSM xiv p. xix). It is clear that a number of ideas and images
 in this poem are developed in Adonais, and a quickening towards creative synthesis of these
-
-and other themes can be discerned in S.’s important letter to Byron of 4 May. Byron had writ-
-ten on 26 April in response to S.’s letter conveying the news of Keats’s death and blaming the
-Quarterly’s attack:
 
 I am very sorry to hear what you say of Keats—is it actually true? I did not think
 criticism had been so killing. Though I differ from you essentially in your estimate of
@@ -32001,9 +27683,6 @@ proofs. He wrote to John Taaffe on 4 July, almost three weeks after delivering h
 printer, thanking him for his advice to drop from the Preface some version of the highly per-
 sonal remarks on S.’s own treatment by contemporary critics that survive in draft in Nbk 20:
 
-Accept also my thanks for your strictures on Adonais. The first I have adopted, by can-
-celling in the preface the whole passage relating to my private wrongs.–You are right:
-
 I ought not to shew my teeth before I can bite, or when I cannot bite . . . As soon as I get
 a copy I will send it you . . . I consider myself to have been essentially benefited by the
 adoption of the cancel in the preface. (L ii 306)
@@ -32053,9 +27732,6 @@ from the wreck of the Don Juan, a process which at some point must have involved
 plete disassembly, and subsequent erroneous reassembly, leading to complex confusion
 in interpreting its evidence. BSM vii offers a brilliant effort of scholarly reconstruction by
 Reiman and Bruce Barker-Benfield, which establishes with compelling authority the true
-
-order of the nbk, and lends very persuasive support to Reiman’s hypotheses concerning the
-order of composition of its contents. Reiman argues (BSM vii 97–103) that the surviving
 
 drafts in Nbk 20 represent a middle stage of composition, mainly comprising the sequence
 in stanzas xiv–xxi in which the poem develops its contrast between the rebirth of nature
@@ -32152,10 +27828,6 @@ logue 25, July 1918, p. 131, item 1165). Thereafter, S. complained to Ollier in 
 January 1822 ‘I do not know even, whether it [Adonais] has been published, and still less
 whether it has been republished with the alterations I sent’ (L ii 372). Ollier had neither
 published nor ‘republished’, but had simply endeavoured to sell the copies sent from Pisa,
-
-and no ‘alterations’ sent from Italy could be incorporated. What these alterations may
-have comprised is an intriguing question, particularly as S. wrote two months later to John
-Gisborne:
 
 Hunt tells me Adonais has not been published. I hear from another quarter that it has
 been reviewed; I should very much like it to be published, & if any decent number are
@@ -32391,9 +28063,6 @@ exposition of or formal commitment to Platonism or Neoplatonism, however underst
 This is in keeping with S.’s general stance towards Plato, who is consistently honoured as a
 great poet in the inclusive sense of DP, but not as a thinker whose specific doctrines are to
 
-be adhered to as a guiding body of thought. S.’s fragmentary ‘Preface’ to his translation of
-the Symposium puts it succinctly:
-
 [Plato’s] views into the nature of mind and existence are often obscure, only be-
 cause they are profound; and though his theories respecting the government of the
 world, and the elementary laws of moral action, are not always correct, yet there is
@@ -32471,9 +28140,6 @@ right to absolute canonical status. The name thus offers a Platonic pun on the G
 for ‘nightingale’, ἀηδών, in the manner of Socrates’s etymologies in Plato’s Cratylus. Compare
 for example Socrates’s discussion of the derivation of the name of the goddess Hera (Ἥρη):
 
-Hera is the lovely one (ἐρατή), for Zeus, according to tradition, loved and married her;
-possibly also the name may have been given when the legislator was thinking of the heav-
-
 ens, and may be only a disguise of the air (ἀήρ), putting the end in the place of the be-
 ginning. (Cratylus 404c, trans. Benjamin Jowett, in The Collected Dialogues of Plato, ed.
 Edith Hamilton and Huntington Cairns (1961))
@@ -32486,22 +28152,12 @@ her mate with such melodious pain (see the notes to these lines). And the poem�
 stanzas, with their machinery of listening Echoes which are to perform precisely an echoing
 of Keats throughout the poem, invoke
 
-all the fading melodies,
-With which, like flowers that mock the corse beneath,
-He had adorned and hid the coming bulk of death. (ll. 16–18)
-
-Indeed these fading melodies themselves echo the closing lines of Keats’s ‘Ode to a Night-
-ingale’:
-
 Adieu! adieu! thy plaintive anthem fades
 Past the near meadows, over the still stream,
 Up the hill-side; and now’tis buried deep
 In the next valley-glades:
 Was it a vision, or a waking dream?
 Fled is that music — Do I wake or sleep? (ll. 75–80)
-
-Critical Reception. S. considered Adonais one of his best poems, perhaps the best. He wrote
-to the Gisbornes on 5 June 1821:
 
 I have been engaged these last days in composing a poem on the death of Keats, which
 will shortly be finished; and I anticipate the pleasure of reading it to you, as some of
@@ -32519,8 +28175,6 @@ months he wrote on 11 November 1821 ‘I am especially curious to hear the fate 
 — I confess I should be surprised if that Poem were born to an immortality of oblivion. — ’
 (L ii 365). He was still waiting in January, writing to Ollier on 11 January 1822 ‘I cannot but
 express my surprise at the silence you have thought proper to observe’ and going on to reiter-
-
-ate that he remains ‘more than commonly interested in the success of “Adonais”; — I do not
 
 mean the sale, but the effect produced —’ (L ii 371–2). S. despondently asks Hunt in a letter
 of 25 January to find time to establish ‘what effect was produced by Adonais’, and goes on to
@@ -32566,17 +28220,6 @@ SiR xxvi (1987) 600–6). Its overview of the development of critical commentary
 is however valuable and should be consulted, especially on the beginnings of modern criti-
 cal attention in the 1930s (Knerr 119–35).
 
-Text from Adonais (1821), with one verbal amendment from 1829 and two from 1839;
-other minor amendments are recorded in the notes. The layout of stanzas in Adonais (1821)
-is followed here.
-
-## ADONAIS
-
-Percy. B. Shelley
-Αστήρ πρὶν μὲν ἐλαμπες ενι ζῶοισιν εῶος.
-Νυν δε θανῶν, λαμπεις ἔσπερος εν φθίμενοις.
-plato.
-
 ## WITH THE TYPES OF DIDOT
 
 ¶ 54. Motto. A Platonic epigram from the Greek Anthology vii 670. The text is given thus in the Loeb
@@ -32592,12 +28235,6 @@ Adonais recalls this motto at l. 414 and in its closing lines, and more generall
 complex of light and star imagery.
 
 ## PREFACE
-
-Φάρμακον ἧλθε, Βίων, ποτι σον στομα, φάρμακον ἐĭίδες˙
-Πῶς τευ τοῖς χέιλεσσι ποτεδραμε, κοὐκ εγλυκανθη;
-Τις δὲ βροτος τοσσοῦτον ἀνάμερος, ἢ κερασαι τοι,
-Ἤ δοῦναι λαλέοντι το φάρμακον; ἔκφυγεν ὠδαν.
-moschus, epitaph. bion.
 
 It is my intention to subjoin to the London edition of this poem, a criticism upon the
 claims of its lamented object to be classed among the writers of the highest genius who
@@ -32921,10 +28558,6 @@ Pref. 42. prospect] prospect, 1839.
 Pref. 43. Had I known these circumstances] See note to l. 307.
 Pref. 46. “such stuff as dreams are made of.”] Cp. The Tempest IV i 156–8:
 
-We are such stuff
-As dreams are made on; and our little life
-Is rounded with a sleep.
-
 ## ADONAIS
 
 I.
@@ -32968,16 +28601,7 @@ that Adonais may become immortal as a presence in all time. For S.’s use of Ho
 sense of ‘specific moment in time’ (rather than in the Gk sense as one of the Spirits of the Seasons),
 see e.g. PU III iii 69, Hellas 902–3.
 
-And teach them thine own sorrow, say: with me
-Died Adonais; till the Future dares
-Forget the Past, his fate and fame shall be
-An echo and a light unto eternity!
-
 ## II.
-
-10 Where wert thou, mighty Mother, when he lay,
-When thy Son lay, pierced by the shaft which flies
-In darkness? where was lorn Urania
 
 6. sorrow, say:] sorrow; say — Adonais (1829), 1829; sorrow; say: 1839.
 7. Adonais;] Adonais; — Adonais (1829), 1839; Adonais! — 1829.
@@ -33063,9 +28687,6 @@ keep] keep, 1829, 1839.
 fair comes down to thee.’)
 25–6. ‘As fertility god Adonis returns to the upper air in summer, and during winter sleeps in the
 underworld with Persephone, who, falling in love with him, at first refused to let him go. But Adonais
-
-Will yet restore him to the vital air;
-Death feeds on his mute voice, and laughs at our despair.
 
 ## IV.
 
@@ -33195,20 +28816,7 @@ Collins, Smart, Kirke White).
 41. suns perished] Major writers whose works are entirely or mainly lost; cp. DP: ‘Ennius, Varro,
 Pacuvius, and Accius, all great poets, have been lost’ (Reiman (2002) para. 21). Cp. Ecclesiasticus xliv
 
-9: ‘And some there be, which have no memorial; who are perished, as though they had never been;
-and are become as though they had never been born; and their children after them’.
-
-Struck by the envious wrath of man or God,
-Have sunk, extinct in their refulgent prime;
-And some yet live, treading the thorny road,
-45 Which leads, through toil and hate, to Fame’s serene abode.
-
 ## VI.
-
-But now, thy youngest, dearest one, has perished,
-The nursling of thy widowhood, who grew,
-Like a pale flower by some sad maiden cherished,
-And fed with true love tears, instead of dew;
 
 43. refulgent prime] ‘Full powers’ (GM).
 44. some yet live] S.’s living contemporary poets such as Wordsworth, Coleridge, Byron, and perhaps
@@ -33299,10 +28907,6 @@ Of deep and liquid rest, forgetful of all ill.
 
 ## VIII.
 
-65 He will awake no more, oh, never more! —
-Within the twilight chamber spreads apace
-The shadow of white Death, and at the door
-
 55–126. Adonais (1903) 106 points out that in stanzas vii–xiv ‘a progression of time is indicated by
 successive epithets and phrases: —blue Italian day — the twilight chamber — her moonlight wings —
 starry dew — the image at the end of stanza 12 — Morning sought her eastern watch-tower’. The poem’s
@@ -33349,9 +28953,6 @@ Of change, shall o’er his sleep the mortal curtain draw.
 
 ## IX.
 
-O, weep for Adonais! — The quick Dreams,
-The passion-winged Ministers of thought,
-
 68. His . . . her] The shadow of white Death is male, Invisible Corruption female. extreme way] Keats’s
 last journey.
 69. The eternal Hunger] Decomposition (i.e. Invisible Corruption).
@@ -33397,11 +28998,6 @@ Wander no more, from kindling brain to brain,
 But droop there, whence they sprung; and mourn their lot
 80 Round the cold heart, where, after their sweet pain,
 They ne’er will gather strength, or find a home again.
-
-X.
-And one with trembling hands clasps his cold head,
-And fans him with her moonlight wings, and cries;
-“Our love, our hope, our sorrow, is not dead;
 
 To things ye knew not of — were closely wed
 To musty laws lined out with wretched rule
@@ -33476,14 +29072,6 @@ ring a small loss; and was even ready to deaden the fire of love’s arrows agai
 96–7. S. may have seen pictures uncovered in the ruins of Pompeii which show Cupids breaking
 arrows and bows for grief at Venus and Adonis. S. and Mary could have seen such pictures in the
 
-Royal Museum in Naples, and they visited Pompeii on 22 December 1818 (Mary Jnl i 245); see S.’s
-letter to Peacock of 23–24 January 1819 describing the Pompeii visit (L ii 71–5).
-96. would] ‘wished to’.
-
-Her bow and winged reeds, as if to stem
-A greater loss with one which was more weak;
-And dull the barbed fire against his frozen cheek.
-
 ## XII.
 
 100 Another Splendour on his mouth alit,
@@ -33526,11 +29114,6 @@ was itself the context for part of Byron’s hostility to Keats for his attack o
 101–3. That mouth . . . beneath] ‘The mouth that could put the Dream into words, enabling it to reach
 the hearer’s emotions through his rational consciousness’ (GM).
 
-105 Quenched its caress upon his icy lips;
-And, as a dying meteor stains a wreath
-Of moonlight vapour, which the cold night clips,
-It flushed through his pale limbs, and passed to its eclipse.
-
 ## XIII.
 
 And others came . . . Desires and Adorations,
@@ -33544,9 +29127,6 @@ Came in slow pomp; — the moving pomp might seem
 Like pageantry of mist on an autumnal stream.
 
 ## XIV.
-
-All he had loved, and moulded into thought,
-From shape, and hue, and odour, and sweet sound,
 
 105. his] its 1839.
 107. An inversion: ‘vapour which clips (i.e. embraces) the cold night’.
@@ -33668,9 +29248,6 @@ showing that the Since clause goes with the preceding and not the following line
 poetry more even than she loved the lips of Narcissus.
 133. she] they 1834, 1839 (evidence for 1834 as printer’s copy for 1839).
 
-134–5. Echo has ceased to echo sounds, and now only echoes (by repeating his remembered lay (l.
-128)) Keats’s poems. shadow of all sounds] I.e. echo is to sound as shadow to substance.
-
 ## XVI.
 
 Grief made the young Spring wild, and she threw down
@@ -33710,29 +29287,11 @@ Fresh Hyacinthus, Phoebus paramoure,
 And dearest loue,
 Foolish Narcisse, that likes the watry shore,
 
-Sad Amaranthus, made a flowre but late,
-Sad Amaranthus, in whose purple gore
-Me seemes I see Amintas wretched fate,
-To whom sweet Poets verse hath giuen endlesse date.
-140. dear] dear, 1829, 1839.
-
-Thou, Adonais: wan they stand and sere
-Amid the faint companions of their youth,
-With dew all turned to tears; odour, to sighing ruth.
-
 ## XVII.
-
-145 Thy spirit’s sister, the lorn nightingale
-Mourns not her mate with such melodious pain;
 
 142–4. The hyacinth and narcissus are now thought of as actual flowers, drooping for grief amidst
 the other flowers of spring (the faint companions of their youth); their dew serves for tears, and they
 breathe out melancholy sighs instead of perfume. Cp. Keats, ‘Ode on Melancholy’ ll. 11–14:
-
-But when the melancholy fit shall fall
-Sudden from heaven like a weeping cloud,
-That fosters the droop-headed flowers all,
-And hides the green hill in an April shroud
 
 142. Thou,] Thou Adonais (1821), Adonais (1829), 1829, 1839, Knerr; the draft in Nbk 20 is also
 unpunctuated (cp. BSM vii 302–3), but the movement and sense here are better served by a comma.
@@ -33766,22 +29325,10 @@ mournful birds? Nay, so too do we” ’).
 145–9. The linked allusions to ‘Ode to a Nightingale’ and Hyperion in these lines may recall Leigh Hunt’s
 review of Lamia, Isabella, The Eve of St. Agnes, and Other Poems in the Indicator (2 and 9 August 1820),
 
-where these two poems are singled out for sustained attention and quotation; cp. ll. 370–2.
-
-Not so the eagle, who like thee could scale
-Heaven, and could nourish in the sun’s domain
-Her mighty youth with morning, doth complain,
-
-145–6. A compliment to Keats’s ‘Ode to a Nightingale’ (see headnote, discussion of Adonais as title).
-Cp. DP:
-
 A Poet is a nightingale who sits in darkness, and sings to cheer its own solitude with sweet
 sounds; his auditors are as men entranced by the melody of an unseen musician, who feel
 that they are moved and softened, yet know not whence or why.
 (Reiman (2002) para. 12)
-
-Keats’s Ode is perhaps itself an influence on this passage. See also Virgil, Georgics iv 511–15 (a passage
-which is also drawn upon in Orpheus; see headnote to Appendix B, Longman iv 369):
 
 qualis populea maerens philomela sub umbra
 amissos queritur fetus, quos durus arator
@@ -33798,13 +29345,6 @@ Nightingale’ l. 71: ‘Forlorn! the very word is like a bell’. nightingale] 
 146. melodious] Cp. ‘Ode to a Nightingale’ l. 8: ‘In some melodious plot’; also in Endymion, i 789, iv
 80, ‘Isabella’ 491, ‘Lamia’ i 75, and Hyperion iii 49, 81; the word occurs in Lycidas ll. 12–14:
 
-He must not float upon his watery bier
-Unwept, and welter to the parching wind,
-Without the meed of some melodious tear.
-
-147–51. The syntax is complex: ‘the eagle . . . doth . . . not so . . . complain . . . as Albion wails’.
-147–9. As Adonais (1903) 117 first noted, this image recalls a famous passage in Milton’s Areopagitica:
-
 Methinks I see in my mind a noble and puissant Nation rousing herself like a strong
 man after sleep, and shaking her invincible locks: Methinks I see her as an Eagle, muing
 her mighty youth, and kindling her undazl’d eyes at the full midday beam; purging
@@ -33817,11 +29357,6 @@ the eagle’s’.
 147–8. scale/Heaven] A classical pun in compliment to Hyperion; the name literally means ‘going
 aloft’, Gk. ὑπέρ ἰών, hence ‘scaling Heaven’.
 147. eagle] Another favourite bird of Keats’s; see, e.g., Hyperion i 156–7, 182, ii 226, ‘Sleep and Poetry’
-
-150 Soaring and screaming round her empty nest,
-As Albion wails for thee: the curse of Cain
-Light on his head who pierced thy innocent breast,
-And scared the angel soul that was its earthly guest!
 
 (‘uttering from their hearts a great cry for war,
 like birds of prey who, crazed
@@ -33849,14 +29384,6 @@ slay me.
 
 ## XVIII.
 
-Ah woe is me! Winter is come and gone,
-155 But grief returns with the revolving year;
-The airs and streams renew their joyous tone;
-
-154–89. The ironic contrast in stanzas xviii–xxi, between the rebirth of nature in spring and the abso-
-luteness of individual mortality, is a commonplace of pastoral elegy. Cp. Moschus, Lament for Bion
-ll. 99–104:
-
 (‘Alas, when in the garden wither the mallows, the green celery, and the luxuriant curled
 anise, they live again thereafter and spring up another year, but we men, we that are tall and
 strong, we that are wise, when once we die, unhearing sleep in the hollow earth, a long sleep
@@ -33865,10 +29392,6 @@ without end or wakening.’)
 spring.
 154–62. Recalling the archetypal classical statement of this sentiment in the Pervigilium Veneris ll.
 2–4:
-
-ver novum, ver iam canorum, vere natus orbis est;
-vere concordant amores, vere nubunt alites,
-et nemus comam resolvit de maritis imbribus.
 
 (‘The Spring, the new, the warb’ling Spring appears,
 The youthful Season of reviving Years;
@@ -33892,9 +29415,6 @@ Like unimprisoned flames, out of their trance awake.
 
 ## XIX.
 
-Through wood and stream and field and hill and Ocean
-A quickening life from the Earth’s heart has burst
-
 157. swallows] swallows, 1839.
 158. Seasons’] Season’s Adonais (1829), 1829.
 159. brake] thicket.
@@ -33907,9 +29427,6 @@ species of green lizard in Italy, including the large and elegant western Green 
 ata) which is very common in Tuscany. The golden snake is more difficult to identify with any actual
 species indigenous to Italy, and may have a literary origin, but the Aesculapian snake was and is
 still common in Italy and its markings can have a yellowish appearance. Cp. E. D. Clarke, Travels in
-
-Various Countries of Europe Asia and Africa, 4th edn, 11 vols 1817–24) vi, Greece Egypt and the Holy
-Land [1818] II ii 414, describing a snake caught in the valley of Hieron in the Peloponnese:
 
 It was of a bright yellow colour, shining like burnished gold, about a yard in length . . . The
 peasants . . . knew it to be a species of harmless serpent, which they had been accustomed
@@ -33925,11 +29442,6 @@ branch thereof will not cease. Though the root thereof wax old in the earth, and
 thereof die in the ground; Yet through the scent of water it will bud, and bring forth boughs
 like a plant. But man dieth, and wasteth away: yea, man giveth up the ghost, and where is he?
 
-163–71. The stanza perhaps recalls Spenser’s Hymne of Heavenly Beavtie, discussed in the note to ll.
-379–87.
-163. stream and] streamand, 1829. Ocean] Ocean, 1829, 1839.
-164. burst] burst, 1829, 1839.
-
 165 As it has ever done, with change and motion,
 From the great morning of the world when first
 God dawned on Chaos; in its steam immersed
@@ -33939,13 +29451,6 @@ All baser things pant with life’s sacred thirst;
 The beauty and the joy of their renewed might.
 
 ## XX.
-
-The leprous corpse touched by this spirit tender
-Exhales itself in flowers of gentle breath;
-
-In the great Morning of the world
-The spirit of God with might unfurled
-The flag of Freedom over chaos
 
 167. steam immersed] stream immersed Adonais (1829); stream immersed, 1829, 1839. A teasing
 crux. GM preferred stream, as fitting better with the sense of the stanza, although the image of lamps
@@ -33973,8 +29478,6 @@ But thing on earth that is of most availe,
 As vertues braunch and beauties budde,
 Reliuen not for any good.
 
-172. The leprous corpse] I.e. corpses in general. The phrase recalls Keats, ‘Isabella’ stanza xxxv:
-
 It was a vision. — In the drowsy gloom,
 The dull of midnight, at her couch’s foot
 Lorenzo stood, and wept: the forest tomb
@@ -33983,11 +29486,6 @@ Lustre into the sun, and put cold doom
 Upon his lips, and taken the soft lute
 From his lorn voice, and past his loamèd ears
 Had made a miry channel for his tears.
-
-Like incarnations of the stars, when splendour
-175 Is changed to fragrance, they illumine death
-And mock the merry worm that wakes beneath;
-Nought we know, dies. Shall that alone which knows
 
 Cp. also note to ll. 48–9. corpse touched] corpse, touched 1829, 1839. tender] tender, 1829, 1839. this
 spirit tender] I.e. the spirit of spring described in the two preceding stanzas.
@@ -34003,9 +29501,6 @@ Nurture besides, and life, from human fears,
 From the fast mouldering head there shut from view:
 So that the jewel, safely casketed,
 Came forth, and in perfumèd leafits spread.
-
-174–5. For the perfume of flowers conceived as radiant light, Taaffe ‘Annotations’ cps Paradiso xxx
-61–9:
 
 e vidi lume in forma di rivera fulvido di
 fulgore, intra due rive
@@ -34034,10 +29529,6 @@ better, but the draft in Nbk 20 confirms Adonais (1821) (cp. BSM vii 324–5).
 175. death] death, 1829, 1839.
 177–80. The material objects of consciousness do not die but are perpetually recycled in the processes
 of nature (like the corpse made up of matter which is translated into the form of flowers on the grave,
-
-Be as a sword consumed before the sheath
-By sightless lightning? — th’ intense atom glows
-180 A moment, then is quenched in a most cold repose.
 
 ## XXI.
 
@@ -34068,11 +29559,6 @@ S.’s much-cited assertion in DP that ‘Poetry is a sword of lightning, ever u
 the scabbard that would contain it’ (Reiman (2002) para. 18) adapts and transforms the image and
 indeed inverts its sense, as do Byron’s famous lines in ‘So, we’ll go no more a-roving’ ll. 5–8:
 
-For the sword outwears its sheath,
-And the soul wears out the breast,
-And the heart must pause to breathe,
-And love itself have rest.
-
 179. sightless] ‘Invisibly swift’ (GM). th’ intense atom glows] Cp. Ode to Heaven l. 18: ‘Atoms of intens-
 est light!’.
 181–3. It is only in the grief of the mourners that the human consciousness and personality of the
@@ -34083,21 +29569,7 @@ though they had not been’.
 184–5. A possible reminiscence of Macbeth (which is present in the background throughout the first
 half of the poem) V v 24–8:
 
-Life’s but a walking shadow, a poor player,
-That struts and frets his hour upon the stage,
-
-As long as skies are blue, and fields are green,
-Evening must usher night, night urge the morrow,
-Month follow month with woe, and year wake year to sorrow.
-
 ## XXII.
-
-190 He will awake no more, oh, never more!
-“Wake thou”, cried Misery, “childless Mother, rise
-
-And then is heard no more. It is a tale
-Told by an idiot, full of sound and fury,
-Signifying nothing.
 
 Cp. S.’s essay On Life: ‘For what are we? Whence do we come, and whither do we go? Is birth the
 commencement, is death the conclusion of our being? What is birth and death?’ (Reiman (2002)
@@ -34120,10 +29592,6 @@ ploratus mortis comites et funeris atri.
 light; and no night ever followed day, or dawn followed night, that has not heard mingled with their
 sickly wailings the lamentations that attend upon death and the black funeral.’) urge] hurry on.
 191–3. Cp. Bion, Lament for Adonis ll. 3–5:
-
-(‘Sleep no more in thy purple coverlets, O Cyprian. Rouse thee, unhappy one; don sable
-robes, and beat thy breasts, and say to all men, “The fair Adonis is dead.” ’)
-and ll. 16–17:
 
 (‘Cruel, cruel the wound Adonis bears upon his thigh, but deeper the wound Cytherea
 bears within her heart.’)
@@ -34196,22 +29664,6 @@ having established his habitation within the souls and inmost nature of Gods and
 indeed in all souls — for wherever he chances to find a hard and rugged disposition, there
 he will not inhabit, but only where it is most soft and tender. Of needs must he be the most
 delicate of all things, who touches lightly with his feet, only the softest parts of those things
-
-208. secret Paradise] Cp. Lat. secretus, ‘remote, secluded’; for Paradise see note to l. 14. 210–16. Cp.
-Spenser, Epithalamion ll. 48–50:
-
-And let the ground whereas her foot shall tread,
-For feare the stones her tender foot should wrong
-Be strewed with fragrant flowers all along
-
-212. S. uses palm for ‘sole of the foot’ in PU IV 123, TL l. 361, but the word in this sense is otherwise
-very unusual in English. In Italian palme are the webbed feet of waterbirds.
-213. they] they. 1829.
-215–16. Cp. Bion, Lament for Adonis ll. 64–6:
-
-(‘As fast from the Paphian flow tears as from Adonis blood, and both on the ground are
-turned to flowers; of the blood are roses born, and of the tears anemones.’)
-215. young tears] I.e. raindrops.
 
 ## XXV.
 
@@ -34287,25 +29739,7 @@ O let thy breath flow from thy dying soul
 Even to my mouth and heart, that I may suck
 That
 
-226. awhile!] a while! Adonais (1829), 1829, 1839.
-227. so long but as] ‘Only for as long as’ (GM).
-228. heartless] ‘I.e. broken-hearted’ (GM).
-
-Now thou art dead, as if it were a part
-Of thee, my Adonais! I would give
-All that I am to be as thou now art!
-But I am chained to Time, and cannot thence depart!
-
 ## XXVII.
-
-235 “Oh gentle child, beautiful as thou wert,
-Why didst thou leave the trodden paths of men
-Too soon, and with weak hands though mighty heart
-Dare the unpastured dragon in his den?
-
-ἁ δὲ τάλαινα
-ζώω καὶ θεός ἐμμι καὶ οὐ δύναμαί σε διώκειν.
-(‘But I, poor soul, live, and am a goddess and cannot follow thee.’)
 
 ‘Urania is the mother of mortal poets, so her own immortality only binds her for ever to the world of
 change’ (GM). The poetic tradition exists as a property of living human consciousness, but the poets
@@ -34319,21 +29753,10 @@ headnote, on Byron’s criticism of Keats for his attack on Pope and the ‘Fren
 as ‘Sleep and Poetry’ (and cp. ll. 101–4 and note).
 236. the trodden paths of men] ‘Conventional ways of thinking and writing’ (GM).
 
-237. Too soon] S. had expressed frankly to Keats his fear that he had published too early (see head-
-note). With the rest of this line, cp. Henry V II Prologue 16–19:
-
-O England! model to thy inward greatness,
-Like little body with a mighty heart,
-What mightst thou do, that honour would thee do,
-Were all thy children kind and natural!
-
 238. the unpastured dragon] ‘The monster of convention, hungry for victims’ (GM); and perhaps
 specifically the Quarterly’s reviewer, with an insatiable appetite for new victims of his politically moti-
 vated and destructive critical aggression. Cp. Lat. impastus, ‘unfed, ravenous’. The line is modelled on
 Bion, Lament for Adonis ll. 60–1:
-
-(‘Why, rash one, didst thou go hunting? Why, being so fair, wast thou so mad as to pit thy-
-self against the beast?’)
 
 Defenceless as thou wert, oh where was then
 240 Wisdom the mirrored shield, or scorn the spear?
@@ -34347,10 +29770,6 @@ Endymion, which he judged barely readable (see headnote). oh] oh! 1829, 1839.
 slew her by using the burnished shield (given to him by Pallas) as a mirror (see Ovid, Met. iv 782–3,
 Lucan, Pharsalia ix 669–70, and Bacon, De Sapientia Veterum vii). S. uses the image of the mirrored
 shield in Ode to Naples A ll. 78–80:
-
-thy shield is as a mirror
-To make their blind slaves see, and with fierce gleam
-To turn his hungry sword upon the Wearer
 
 Cp. also John Philpot Curran’s speech in defence of Peter Finnerty: ‘that shield of wisdom and of virtue,
 behind which the people are invulnerable; in whose pure and polished convex, ere the lifted blow has
@@ -34433,20 +29852,7 @@ volucres (‘ill-boding birds’). o’er] Adonais (1829), 1829, 1839; oer Adona
 246. The] the, 1829. vultures] vultures, 1839. true] true, 1829, 1839.
 248. Cp. Marlowe, The Jew of Malta II i 1–4:
 
-When like Apollo, from his golden bow,
-250 The Pythian of the age one arrow sped
-And smiled! — The spoilers tempt no second blow,
-They fawn on the proud feet that spurn them lying low.
-
 ## XXIX.
-
-Thus like the sad presaging Raven that tolls
-The sicke mans passeport in her hollow beake,
-And in the shadow of the silent night
-Doth shake contagion from her sable wings
-
-249–51. These lines refer to Byron, and recall Childe Harold’s Pilgrimage IV clxi describing the Apollo
-Belvedere in Rome:
 
 Or view the Lord of the unerring bow,
 The God of life, and poesy, and light —
@@ -34491,14 +29897,6 @@ So is it in the world of living men:
 A godlike mind soars forth, in its delight
 Making earth bare and veiling heaven, and when
 
-Not one Poetick starre durst shew his head;
-Athenian owls fear’d to come forth in verse,
-Untill thy fall darkned the Universe.
-Thy death makes Poets
-
-253. reptiles] Small creeping, crawling creatures rather than lizards. The image of reptiles or insects
-spawned by the sun is familiar and commonplace; cp. e.g. Faerie Queene III vi 8:
-
 Miraculous may seeme to him, that reades
 So straunge ensample of conception,
 But reason teacheth that the fruitfull seades
@@ -34531,9 +29929,6 @@ qui genus humanum ingenio superavit et omnis
 restinxit, stellas exortus ut aetherius sol.
 (‘Epicurus himself died when the light of life had run its course, he whose intellect surpassed
 humanity, who quenched the light of all as the risen sun of heaven quenches the stars.’)
-
-260 It sinks, the swarms that dimmed or shared its light
-Leave to its kindred lamps the spirit’s awful night.”
 
 ## XXX.
 
@@ -34601,15 +29996,6 @@ possible stanzas in this section of the poem see Unused stanzas for Adonais (Lon
 (sere = withered); magic mantles perhaps puns on Gk μάντις, ‘prophet, soothsayer’, as in Hellas l.
 44, in the phrase ‘prophet’s robe’. The phrase possibly also suggests Shakespeare’s Prospero and his
 
-special powers.
-264. The Pilgrim of Eternity] Byron. Peacock (Peacock Works viii 80) recalled of S. that,
-He often repeated to me, as applicable to himself, a . . . passage from Childe Harold: —
-
-— On the sea
-The boldest steer but where their ports invite:
-But there are wanderers o’er Eternity,
-Whose bark drives on and on, and anchor’d ne’er shall be.
-
 Byron’s lines are from Childe Harold’s Pilgrimage III lxx, and themselves recall Paradise Lost ii 148:
 ‘Those thoughts that wander through eternity’. See also lines 488–92 and note. Byron was not in fact
 an admirer of Keats, and was indeed hostile, though after Keats’s death he came to share S.’s admiration
@@ -34627,9 +30013,6 @@ not, because his death is a serious loss to the whole tradition. For S. and Moor
 alist contexts.
 271–4. See Unused stanzas for Adonais S ll. 1–5.
 271. Midst]’Midst Adonais (1829), 1829, 1839. one frail Form] S. himself; cp. Taaffe’s ‘Autobiography’:
-
-His [S.’s] unquenchable courage contrasted strangely with his feeble frame and girlish
-voice . . . Although thin he was not tall and looked about 30 — having the Spirit of an
 
 A phantom among men; companionless
 As the last cloud of an expiring storm
@@ -34681,10 +30064,6 @@ paradoxical proximity of love and despair is a recurring motif in S.; see ll. 20
 283. A metrically odd line. GM suggests it should be ‘stressed The weíght of the súperíncúmbent hóur’.
 superincumbent] I.e. ‘lying upon’.
 285. billow; —] Misprinted in Adonais (1821), where the em dash has dropped to form a low line.
-
-Is it not broken? On the withering flower
-The killing sun smiles brightly: on a cheek
-The life can burn in blood, even while the heart may break.
 
 ## XXXIII.
 
@@ -34768,19 +30147,6 @@ wrote at least two sonnets about the episode, including ‘On Receiving a Laurel
 Hunt’; see John Keats, The Complete Poems, ed. John Barnard, 3rd edn (1988, rptd 2006) 580, and
 Walter Jackson Bate, John Keats (1963) 137–40. overblown] over-blown, Adonais (1829), 1829, 1839.
 
-Within his car, aloft, young Bacchus stood,
-Trifling his ivy-dart, in dancing mood,
-With sidelong laughing
-
-292. rude] rough. ivy tresses] ivy-tresses Adonais (1829), 1829, 1839; distinctly two words in the draft
-in Nbk 15 (cp. BSM xiv 196–7).
-297. The image recalls Cowper’s famous lines in The Task iii 108–11:
-
-I was a stricken deer that left the herd
-Long since; with many an arrow deep infixt
-My panting side was charg’d when I withdrew
-To seek a tranquil death in distant shades.
-
 The description in As You Like It II i 33–4 of ‘a poor sequester’d stag,/That from the hunter’s aim had
 ta’en a hurt’ lies behind Cowper’s image. S.’s own image may have in mind William Hodge’s painting
 of the scene for Boydell’s Shakespeare Gallery, engraved by Samuel Middiman; a copy of the engraving
@@ -34834,17 +30200,7 @@ murmured canc. (cp. BSM xiv 18–19; see headnote). Forman 1876–7, Woodberry 1
 Hutchinson, Webb (1995), Reiman (2002) and Major Works read sung; Rossetti 1870, Rossetti 1878,
 and Butter (1970) read sang. Urania] Urania makes no further appearance in the poem after this line.
 
-The Stranger’s mien, and murmured: “who art thou?”
-He answered not, but with a sudden hand
-305 Made bare his branded and ensanguined brow,
-Which was like Cain’s or Christ’s — Oh! that it should be so!
-
 ## XXXV.
-
-What softer voice is hushed over the dead?
-Athwart what brow is that dark mantle thrown?
-What form leans sadly o’er the white death-bed,
-310 In mockery of monumental stone,
 
 305–6. Made . . . so!] ‘Cain had been branded with the same infamy as Christ — oh, that so little dis-
 tinction should be made between the worst and the best of men! (S. is not claiming to be either, but
@@ -34907,14 +30263,6 @@ allusion to the Greek pastoral poets.
 316. On the various causes of the death of Adonais mentioned in the poem, see note to ll. 11–12.
 Poison, like the draught of woe of l. 318, has Keatsian associations, as in ‘Ode to a Nightingale’ ll. 1–2:
 
-‘My heart aches, and a drowsy numbness pains/My sense, as though of hemlock I had drunk’, and
-‘Ode on Melancholy’ ll. 1–4:
-
-No, no, go not to Lethe, neither twist
-Wolf ’s-bane, tight-rooted, for its poisonous wine:
-Nor suffer thy pale forehead to be kissed
-By nightshade, ruby grape of Proserpine
-
 317. deaf and viperous murderer] The critic in the Quarterly; deaf to Keats’s verse, and viperous
 because poisonously hostile. The adder was conventionally supposed to be deaf; cp. Psalms lviii 4–5:
 ‘Their poison is like the poison of a serpent: they are like the deaf adder that stoppeth her ear; Which
@@ -34946,14 +30294,6 @@ And like a beaten hound tremble thou shalt — as now.
 
 ## XXXVIII.
 
-of Keats’s idea for the design he wished to be engraved on his tombstone (see Ian Jack, Keats and the
-Mirror of Art (1967) 101; the gem is illustrated in Plate IX (d)). silver lyre] Cp. Hyperion iii 99–102:
-
-Point me out the way
-To any one particular beauteous star,
-And I will flit into it with my lyre,
-And make its silvery splendour pant with bliss.
-
 325–8. S. believed the anonymous Quarterly reviewer to be Robert Southey (see headnote), but he
 here declines to secure his fame by naming him in the elegy. The critic must live in the knowledge
 that his attempt to destroy Keats’s stature as a poet will not bring him lasting fame, only anonymous
@@ -34980,15 +30320,6 @@ And yet anon repairs his drooping head,
 And tricks his beams, and with new spangled ore,
 Flames in the forehead of the morning sky
 And ll. 182–3: ‘Now Lycidas the shepherds weep no more;/Henceforth thou art the genius of the shore’.
-
-335 Far from these carrion kites that scream below;
-He wakes or sleeps with the enduring dead;
-Thou canst not soar where he is sitting now. —
-Dust to the dust! but the pure spirit shall flow
-
-match to match I have encount’red him,
-And made a prey for carrion kites and crows
-Even of the bonny beast he lov’d so well.
 
 336. wakes or sleeps] S. is characteristically sceptical about the mode of Keats’s survival, leaving possi-
 bilities open. Cp. Keats, ‘Ode to a Nightingale’ ll. 79–80: ‘Was it a vision, or a waking dream?/Fled is
@@ -35032,15 +30363,7 @@ have refined a metal which has thus returned to its pure original state.
 to ashes, dust to dust’); cp. Ecclesiastes xii 7: ‘Then shall the dust return to the earth as it was: and the
 spirit shall return unto God who gave it’.
 
-Back to the burning fountain whence it came,
-340 A portion of the Eternal, which must glow
-Through time and change, unquenchably the same,
-Whilst thy cold embers choke the sordid hearth of shame.
-
 ## XXXIX.
-
-Peace, peace! he is not dead, he doth not sleep —
-He hath awakened from the dream of life —
 
 the scorch’d mountain, from whose burning breast
 A temporary torturing flame is wrung,
@@ -35048,18 +30371,12 @@ Shines for a night of terror, then repels
 Its fire back to the hell from whence it sprung,
 The hell which in its entrails ever dwells.
 
-Cp. also Southey, The Curse of Kehama x 159: ‘From Heaven it came, to Heaven returneth’, quoted by
-S. in L i 195.
-343–51. The whole of stanza xxxix recalls Spenser, ‘Dolefull Lay of Clorinda’ ll. 85–90:
-
 There liueth he in euerlasting blis,
 Sweet spirit neuer fearing more to die:
 Ne dreading harme from any foes of his,
 Ne fearing saluage beasts more crueltie.
 Whilest we here wretches waile his priuate lack,
 And with vain vowes do often call him back.
-
-This and following stanzas also suggest The Ruines of Time ll. 330–6 (of the dead Sidney):
 
 But now more happie thou, and wretched wee,
 Which want the wonted sweetnes of thy voice,
@@ -35089,21 +30406,12 @@ And cold hopes swarm like worms within our living clay.
 
 ## XL.
 
-He has outsoared the shadow of our night;
-Envy and calumny and hate and pain,
-And that unrest which men miscall delight,
-
 345–8. S. perhaps has in mind the dagger speech in Macbeth II ii 33–49. There is also a curious rem-
 iniscence of the famous episode on the night of 26 February 1813 when S. was apparently attacked
 in his house at Tan-yr-allt by mysterious assailants; there is a good discussion of this much-disputed
 event in Holmes 178–98.
 345. who] who, 1829, 1839.
 347. in mad trance] Cp. Coleridge, France: An Ode ll. 85–8:
-
-The Sensual and the Dark rebel in vain,
-Slaves by their own compulsion! In mad game
-They burst their manacles and wear the name
-Of Freedom, graven on a heavier chain!
 
 corripit hic subita trepidus formidine ferrum
 Aeneas, strictamque aciem venientibus offert;
@@ -35117,14 +30425,6 @@ bodiless lives, flitting under a hollow semblance of form, he would rush upon th
 vainly cleave shadows with steel.’)
 nothings. —] nothings — 1829, 1839.
 352. Cp. Spenser, The Shepheardes Calender, ‘Nouember’ ll. 163–6:
-
-But maugre death, and dreaded sisters deadly spight,
-And gates of hel, and fyrie furies forse:
-She hath the bonds broke of eternall night,
-Her soule vnbodied of the burdenous corpse.
-
-shadow] I.e. the conical shadow cast by the earth out into space (cp. PU IV 444 and note).
-353. calumny] calumny, 1829, 1839.
 
 355 Can touch him not and torture not again;
 From the contagion of the world’s slow stain
@@ -35147,10 +30447,6 @@ Even to the joyous stars which smile on its despair!
 
 ## XLII.
 
-370 He is made one with Nature: there is heard
-His voice in all her music, from the moan
-Of thunder, to the song of night’s sweet bird;
-
 358. Cp. ‘Ode to a Nightingale’ ll. 25–6: ‘Where palsy shakes a few, sad, last grey hairs,/Where youth
 grows pale, and spectre-thin, and dies’. The head grown grey in vain suggests S.’s c­ onception of
 Southey in his apostate middle age.
@@ -35171,14 +30467,6 @@ ance of the dew’.
 370–2. As in stanza xvii (see note to ll. 145–9), S. appears to pair allusions to ‘Ode to a Nightingale’,
 night’s sweet bird, and Hyperion, in which the moan/Of thunder is a recurring motif, e.g. i 39–41:
 
-As if the vanward clouds of evil days
-Had spent their malice, and the sullen rear
-Was with its storèd thunder labouring up.
-Cp. also i 325, ii 121 and iii 103.
-
-370. He is made one with Nature] Perhaps recalling the closing stanza of Keats’s ‘Ode to Psyche’,
-where he sustains a metaphor likening mental interiority to natural and cultivated landscapes.
-
 He is a presence to be felt and known
 In darkness and in light, from herb and stone,
 375 Spreading itself where’er that Power may move
@@ -35198,12 +30486,6 @@ that it has withdrawn his being to its own.
 377. Suggesting the affinity of magnetism with human love; cp. the Moon’s lyric to the Earth in PU
 
 ## IV 463–6:
-
-I, thy crystal paramour,
-Borne beside thee by a power
-Like the polar paradise,
-Magnet-like, of lovers’ eyes
-never wearied] never-wearied 1829.
 
 378. The world is sustained by the Power from beneath by gravity, and from above by the sun.
 379–87. This stanza combines Platonic ideas with stylistic influences from Spenser, Coleridge,
@@ -35230,12 +30512,6 @@ not the best that he, or even inferior intelligence could conceive; but that he 
 reluctant and stubborn materials ready to his hand, into the nearest arrangement possible to
 the perfect archetype existing in his contemplation.
 (Julian vii 88–9)
-
-380 Which once he made more lovely: he doth bear
-His part, while the one Spirit’s plastic stress
-Sweeps through the dull dense world, compelling there,
-
-This stanza is also the passage referred to in S.’s letter to the Gisbornes of 13 July 1821:
 
 I will only remind you of Faust — my impatience for the conclusion of which is only
 exceeded by my desire to welcome you. — Do you observe any traces of him in the Poem
@@ -35310,9 +30586,6 @@ Have bred forth, not pale solitary doves,
 But eagles golden-feathered, who do tower
 Above us in their beauty, and must reign
 
-In right thereof. For’tis the eternal law
-That first in beauty should be first in might.
-
 wear;] wear 1839.
 384–6. All occurrences of its in these lines read it’s in Adonais (1821) (corrected from Adonais (1829)
 on); see headnote.
@@ -35343,23 +30616,12 @@ And move like winds of light on dark and stormy air.
 
 ## XLV.
 
-The inheritors of unfulfilled renown
-Rose from their thrones, built beyond mortal thought,
-Far in the Unapparent. Chatterton
-
-388–96. This stanza may be read as in intentional contradiction of stanza v. Cp. Pope, An Essay on
-Criticism 468–73:
-
 For envied wit, like Sol eclipsed, makes known
 The opposing body’s grossness, not its own.
 When first that sun too powerful beams displays,
 It draws up vapours which obscure its rays;
 But even those clouds at last adorn its way,
 Reflect new glories, and augment the day.
-
-388. ‘Human “stars” in the sky of history’ (GM).
-390. climb] climb, 1829, 1839; climb. Knerr.
-392–6. Cp. S.’s letter of 8 June 1821 to Claire Clairmont:
 
 the only relief I find springs from the composition of poetry, which necessitates contempla-
 tions that lift me above the stormy mist of sensations which are my habitual place of abode.
@@ -35397,12 +30659,6 @@ medicine with his recreational drugs’; Oxford DNB). Keats dedicated Endymion t
 wrote an early sonnet to him (‘To Chatterton’), which, although presumably unknown to S. (it was
 first published in 1848 in Milnes’s Life, Letters, and Literary Remains), has some very striking affinities
 with stanza xliv:
-
-Thou didst die
-A half-blown flower which cold blasts amate.
-But this is past: thou art among the stars
-Of highest Heaven: to the rolling spheres
-Thou sweetly singest (ll. 7–11)
 
 401–4. Sir Philip Sidney (to whom S. was related on his mother’s side) was born in 1554 into a pow-
 erful English family and became a central figure in the sophisticated renaissance court culture of
@@ -35531,14 +30787,6 @@ the poem does cease to address the Fond wretch (see note to ll. 451–9). Fond] 
 417. pendulous] ‘Hanging suspended’ (the Earth is perhaps envisaged as depending like a pendulum
 from its cone of shadow; see note to l. 352). Cp. Paradise Lost iv 999–1001:
 
-Wherein all things created first he weighed,
-The pendulous round earth with balanced air
-In counterpoise
-
-422. light] light, 1829, 1839.
-423. brink;] brink· Adonais (1821); brink. Adonais (1829), 1829, 1839, and all subsequent eds includ-
-ing Knerr. The punctuation mark is oddly misprinted in Adonais (1821) and appears as the top dot of
-
 ## XLVIII.
 
 Or go to Rome, which is the sepulchre
@@ -35552,10 +30800,6 @@ Who waged contention with their time’s decay,
 And of the past are all that cannot pass away.
 
 ## XLIX.
-
-Go thou to Rome, — at once the Paradise,
-The grave, the city, and the wilderness;
-435 And where its wrecks like shattered mountains rise,
 
 a colon or semicolon (see headnote for evidence that the Pisan printer worked with damaged type);
 the following stanza xlviii, beginning Or, can be understood as grammatically continuous with the
@@ -35577,8 +30821,6 @@ of exquisite workmanship, & vast vaults of shattered domes (laquearis) distinct 
 compartments once filled with sculptures of ivory or brass. The temple of Jupiter & Concord, &
 Peace, & the Sun & the Moon, & Vesta are all within a short distance of this spot. Behold the
 
-wrecks of what a great nation once dedicated to the abstractions of the mind. (L ii 59)
-
 425. not of him, but of our joy] I.e. only the bodily Keats, who had been personally known to his grieving
 friends, is buried in Rome, and not the immortal poet, who has now entered a different mode of existence.
 426. religions] religions, 1839.
@@ -35588,9 +30830,6 @@ friends, is buried in Rome, and not the immortal poet, who has now entered a dif
 433–41. With this stanza cp. Ever round around thee flowering (Longman iii 463–4, no. 327).
 435–7. At the time of S.’s visits to Rome in 1818 and 1819 the ruins of the ancient city had been over-
 grown for centuries. S.’s letter to Peacock of December 1818 describes the Coliseum as
-
-changed by time into the image of an amphitheatre of rocky hills overgrown by the wild-ol-
-ive the myrtle & the fig tree, & threaded by little paths which wind among its ruined stairs &
 
 And flowering weeds, and fragrant copses dress
 The bones of Desolation’s nakedness
@@ -35644,11 +30883,6 @@ have transferred the emotional intensity of his grief for his son on to Keats, w
 444–6. The Roman senator Gaius Cestius Epulo is known only for the pyramidal tomb which is his
 memorial; by S.’s day the structure had long since been incorporated into a gate of the city walls,
 
-Like flame transformed to marble; and beneath,
-A field is spread, on which a newer band
-Have pitched in Heaven’s smile their camp of death,
-450 Welcoming him we lose with scarce extinguished breath.
-
 ## LI.
 
 Here pause: these graves are all too young as yet
@@ -35662,9 +30896,6 @@ Seek shelter in the shadow of the tomb.
 What Adonais is, why fear we to become?
 
 ## LII.
-
-460 The One remains, the many change and pass;
-Heaven’s light forever shines, Earth’s shadows fly;
 
 447. Like flame transformed to marble] Cp. Timaeus 56b: ‘Let it be agreed, then, both according to
 strict reason and according to probability, that the pyramid is the solid which is the original element
@@ -35709,11 +30940,6 @@ Flowers, ruins, statues, music, words, are weak
 The glory they transfuse with fitting truth to speak.
 
 ## LIII.
-
-Why linger, why turn back, why shrink, my Heart?
-470 Thy hopes are gone before: from all things here
-
-462–3. The image is a compliment to Keats, ‘The Eve of St Agnes’ 208–25 (stanzas xxiv and xxv):
 
 A casement high and triple-arched there was,
 All garlanded with carven imag’ries
@@ -35785,9 +31011,6 @@ Love, i.e. these are all terms for the same thing understood in its various mode
 ception equating with the Power of l. 375 and Spirit of l. 381). The phrase as each are mirrors of in l.
 484 should in strictly grammatical terms read ‘as each is a mirror of’, with the ‘each’ referring to each
 
-item in the series man and beast and earth and air and sea in l. 483. Cp. the closing stanza of Spenser,
-Hymne of Heavenly Beavtie ll. 295–301:
-
 And looke at last vp to that soueraine light,
 From whose pure beams al perfect beauty springs,
 That kindleth loue in euery godly spright,
@@ -35803,13 +31026,7 @@ in una parte più e meno altrove.
 Pierces the universe, and in one part
 Sheds more resplendence, elsewhere less.’)
 
-485 The fire for which all thirst, now beams on me,
-Consuming the last clouds of cold mortality.
-
 ## LV.
-
-The breath whose might I have invoked in song
-Descends on me; my spirit’s bark is driven
 
 485. thirst,] 1839; thirst; Adonais (1821), Adonais (1829), 1829, Knerr.
 487. This line has been understood as a reference to OWW and its account of poetic inspiration, but it
@@ -35840,19 +31057,9 @@ To my rapt sight the arctic beams reveal.’)
 The passage also suggests the lines from Childe Harold’s Pilgrimage that, according to Peacock, S. ‘often
 repeated . . . as applicable to himself ’ (see note to l. 264):
 
-on the sea,
-The boldest steer but where their ports invite,
-But there are wanderers o’er Eternity
-Whose bark drives on and on, and anchored ne’er shall be.
-
 Cameron (1974) 647 suggests a further possible influence from a passage in Chapman’s Conspiracy
 of Charles Duke of Byron, which S. used as the epigraph to the ‘Dedication’ of L&C (see notes to that
 poem). Cp. also Pope, An Essay on Criticism ll. 645–8:
-
-The mighty Stagyrite first left the shore,
-Spread all his sails, and durst the deeps explore;
-He steered securely, and discovered far,
-Led by the light of the Maeonian star.
 
 Far from the shore, far from the trembling throng
 490 Whose sails were never to the tempest given;
@@ -35982,14 +31189,6 @@ Loved thee and thy sad cry.
 12. downy owl] Locock 1911 i 524 cps Keats, ‘Ode on Melancholy’ l. 7.
 14–15. Cp. Keats, ‘Ode to a Nightingale’ ll. 75–7:
 
-thy plaintive anthem fades
-Past the near meadows, over the still stream,
-Up the hill-side
-
-19. them] they 1839, 1840.
-20–1. Sad aziola, from one moment I/Loved thee & thy sad note. — Box 1; Sad Aziola from that
-moment I/Loved thee and thy sad note Mary Copybk 2.
-
 56 Written on hearing the news of the death of Napoleon
 Napoleon Bonaparte died on St Helena on 5 May 1821. Reports of his death, reproduced
 from London and Paris newspapers dated 5 and 7 July respectively, first appeared in
@@ -36037,9 +31236,6 @@ S.’s view that Napoleon perverted the course of revolutionary change, evident 
 poem’s closing lines, is a continual feature of his writings. He is described as ‘like a meteor
 on the midnight blast,/Or an evil spirit brooding over gore’ in Poetical Essay on the Existing
 State of Things (1811) (Longman vi Appendix A), and as a ‘tyrant’ in To the Emperors of
-
-Russia and Austria (Longman i, no. 44) l. 44 and Feelings of a Republican on the Fall of
-Bonaparte (Longman i, no. 112) l. 1. The assessment in PVR is in a similar vein:
 
 ## DOI: 10.4324/9781315170343-56
 
@@ -36124,13 +31320,6 @@ Library, San Marino, California.
 Published in 1822 59–60; 1829 235–6 (‘LINES | Written on Hearing the News of
 the Death of Napoleon’); MYRS iii 89–90 (facsimile of MS).
 
-What! alive and so bold, oh Earth?
-Art thou not overbold?
-What! leapest thou forth as of old
-
-¶ 56. 1. Here and elsewhere (see the notes to ll. 15 and 34) there appear to be echoes of Byron’s treat-
-ment of Napoleon in Childe Harold’s Pilgrimage III xxxvi — xlv. See, e.g., stanza xxxvii:
-
 Conqueror and captive of the earth art thou!
 She trembles at thee still, and thy wild name
 Was ne’er more bruited in men’s minds than now
@@ -36141,15 +31330,6 @@ A god unto thyself; nor less the same
 To the astounded kingdoms all inert,
 Who deem’d thee for a time whate’er thou didst assert.
 
-Hunt in the Examiner 705 (8 July 1821) 417 commented: ‘The news of this event fell upon the town, as
-if it had been a change in the natural world’. Earth?] earth? 1822.
-
-In the light of thy morning mirth,
-5 The last of the flock of the starry fold?
-Ha! leapest thou forth as of old?
-Are not the limbs still when the ghost is fled,
-And canst thou move, Napoleon being dead?
-
 How! is not thy quick heart cold?
 10 What spark is alive on thy hearth?
 How! is not his death-knell knolled?
@@ -36158,10 +31338,6 @@ Thou wert warming thy fingers old
 O’er the embers covered and cold
 15 Of that most fiery spirit, when it fled —
 What, Mother, do you laugh now he is dead?
-
-‘Who has known me of old,’ replied Earth,
-‘Or who has my story told?
-It is thou who art overbold.’
 
 4–5. Cp. Paradise Lost v 708–9: ‘His countenance, as the morning star that guides/The starry flock,
 allured them’.
@@ -36187,12 +31363,6 @@ Fatal to him who bears, to all who ever bore.
 16. Mother,] 1822; Mother HM 330.
 19. It] 1822; ‘It HM 330. overbold.’] 1822; overbold’ HM 330.
 
-20 And the lightning of scorn laughed forth
-As she sung, ‘To my bosom I fold
-All my sons when their knell is knolled,
-And so with living motion all are fed
-And the quick spring like weeds out of the dead.
-
 25 ‘Still alive and still bold,’ shouted Earth,
 ‘I grow bolder and still more bold.
 The dead fill me ten thousand fold
@@ -36201,11 +31371,6 @@ I was cloudy, and sullen, and cold,
 30 Like a frozen chaos uprolled
 Till by the spirit of the mighty dead
 My heart grew warm. I feed on whom I fed.
-
-‘Aye, alive and still bold,’ muttered Earth,
-‘Napoleon’s fierce spirit rolled
-35 In terror, and blood, and gold,
-A torrent of ruin to death from his birth.
 
 21. To] to HM 330.
 22. All my sons] The souls Nbk 19 (souls is written above spirits canc.). knolled,] 1822; knolled HM 330.
@@ -36231,11 +31396,6 @@ Childe Harold’s Pilgrimage III xxxvii l. 6 (quoted in the note to l. 1). rolle
 further examples.
 36. The draft openings of this line in Nbk 19 are Desolation as a lava stream and A torrent of fire (see
 the note to l. 34). birth.] 1822; birth, HM 330.
-
-Leave the millions who follow, to mould
-The metal before it be cold,
-And weave into his shame, which like the dead
-40 Shrouds me, the hopes from his glory fled.
 
 57 The Indian Girl’s Song
 [Lines to An Indian Air]
@@ -36350,9 +31510,6 @@ just been able to examine. To these Rossetti tentatively adds two further varian
 says, he has seen in ‘what purports to be a verbatim copy of The Indian Serenade, as recov-
 ered from Shelley’s corpse’ (evidently Morgan):
 
-From the first sweet sleep of night — [l. 2]
-Where it must break at last [l. 24]
-
 The first of these clearly differs from Morgan and the other surviving textual witnesses, as
 does the second, though it cannot be decisively compared to Morgan because line 24 (see
 note) has been damaged in that MS. Forman considered the first ‘a clerical error’ and the
@@ -36372,9 +31529,6 @@ thee’ . . . she always accepted as specially written for her, and which she wa
 of singing when they were wedded to Salaman’s beautiful music [published in Six Songs
 (1838) by Charles Kensington Salaman.
 (1814–1901)]
-
-Other conjectures in favour of composition in 1819 could be advanced (see, for example,
-BSM xvi pp. lii-iii), and there is no reason to suspect Sophia Stacey/Catty or her sons of
 
 either inaccurate recollection or deceit. But, resting largely on testimony rather than exist-
 ing MS evidence, their claims can hardly weigh conclusively against those for 1821. That a
@@ -36423,10 +31577,6 @@ The poem is one of S.’s that has been most frequently set to music, Burton R. 
 for Shelley’s Poetry (1974) listing 150 different settings.
 Text from autograph fair copy now in the Fondation Martin Bodmer, Cologny (Genève).
 The apostrophes in the title and in l. 13, the commas in ll. 15 and 18, and the semicolon in
-
-l. 22 have been supplied.
-Published in The Liberal I ii (1823) 397 (entitled Song, Written For an Indian Air); 1824
-163 (entitled Lines to an Indian Air).
 
 I arise from dreams of thee
 In the first sleep of night —
@@ -36477,16 +31627,6 @@ Yale University Library Gazette xxv (1951) 70–72.
 15. Harvard Nbk 1, 1839, 1840, Rossetti 1870, Rossetti 1878, Locock 1911; As I must on thine Morgan,
 Liberal, 1824, Forman 1876–7, Hutchinson; And I must die on thine Nbk 21.
 
-O lift me from the grass!
-I die, I faint, I fail!
-Let thy love in kisses rain
-20 On my lips and eyelids pale.
-
-My cheek is cold and white, alas!
-My heart beats loud and fast;
-O press it close to thine again
-Where it will break at last.
-
 58 Autumn: a Dirge
 This short poem is the most ambitious and most resolved of the meteorological lyrics that
 S. attempted between October 1821 and March 1822, which also include Rough wind that
@@ -36527,9 +31667,6 @@ last Morgan.
 
 ## DOI: 10.4324/9781315170343-58
 
-azure and grey instead of the reading in l. 18. On Nbk 21 p. 141 S. wrote the following heav-
-ily cancelled lines and false starts, which may be an attempt at a third stanza:
-
 The [hoar white] hoar frost is [creeping], [the pale Sun is sleeping] the
 The snow falls
 [Rich]
@@ -36564,8 +31701,6 @@ Lines 18–22 are copied at the top of p. 18 of Mary Copybk 1, which was used by
 between autumn 1822 and autumn 1823 to transcribe S.’s unpublished verse. A collation of
 Mary Copybk 1 by B. C. Barker-Benfield (see BSM ii 244) reveals that four pages preceding
 folio 18 have been removed from this notebook, and presumably the page that immediately
-
-preceded it contained ll. 1–17 of the poem. In Mary Copybk 1, Mary transcribes l. 18 as,
 
 thus presenting the line, first as it appears in Nbk 21 p. 142, and then as it stands in the final
 draft in what is now Box 1. This implies that Mary was unaware of the later draft when she
@@ -36646,10 +31781,6 @@ Follow the bier
 10 Of the dead cold year,
 And like dim shadows watch by her sepulchre.
 
-The chill rain is falling, the nipped worm is crawling,
-The rivers are swelling, the thunder is knelling
-For the year. —
-
 ¶ 58. Title. See headnote.
 3. year] Year BSM.
 4–5. leaves . . . lying] The inversion and the delayed verb recalls Ode to the West Wind 2–3: ‘the leaves
@@ -36661,10 +31792,6 @@ of leaves dead, on the earth her deathbed. the] Written over her in Box 1.
 8. saddest array] See Gray, Elegy Written in a Country Churchyard ll. 113–14: ‘ “The next with dirges
 due in sad array/Slow through the church-way path we saw him borne” ’.
 10–11. Cp. OWW 23–5:
-
-Thou Dirge
-Of the dying year, to which this closing night
-Will be the dome of a vast sepulchre
 
 11. like dim shadows watch] S. first wrote like shadows sit down in Box 1 then cancelled sit down, wrote
 watch above, and inserted dim before shadows. sepulchre.] 1824; sepulchre Box 1.
@@ -36732,20 +31859,6 @@ diem.
 Text from Nbk 21 p. 154. Commas have been supplied at the end of ll. 6 and 19.
 Published in 1824 p. 198.
 
-The flower that smiles today
-Tomorrow dies;
-All that we wish to stay
-Tempts and then flies;
-5 What is this world’s delight?
-Lightning, that mocks the night,
-Brief even as bright. —
-
-Virtue, how frail it is! —
-Friendship, how rare! —
-10 Love, how it sells poor bliss
-For rich despair!
-But these though soon they fall,
-
 ¶ 59. Title. Mutability 1824, eds.
 7. even as] In the draft on p. 2 of Nbk 21 the line reads Brief although bright; S. carried this over to the
 fair copy on p. 154 before substituting even as for although.
@@ -36758,17 +31871,6 @@ copy on p. 154, cancelled it in favour of proud written above the line, then und
 tion. 1824 and eds prefer ‘proud’. The draft also shows the alternative line: [And leaves] despair.
 12–14. Virtue, Friendship, Love ‘outlive the joy which they briefly occasion, and the illusion of posses-
 sion. Love flowers as bliss, but lingers as despair’ (Chernaik 156).
-
-12. these] then Mary Copybk 1; we, 1824, 1839, 1840, eds. Rossetti 1870/1878 considered it ‘almost
-certain’ that the line should read: ‘though soon we fall’ or ‘so soon they fall’.
-
-15 Whilst skies are blue and bright,
-Whilst flowers are gay,
-Whilst eyes that change ere night
-Make glad the day;
-Whilst yet the calm hours creep,
-20 Dream thou — and from thy sleep
-Then wake to weep.
 
 60 ‘A widowed bird sate mourning for her love’
 [A Song]
@@ -36797,10 +31899,6 @@ on the page, Archy’s final speech on the following page (p. 101 reverso; see B
 must have been written slightly later, after S. realised the need to have Archy exit in order
 to leave Charles and Henrietta alone on stage for a closing dialogue to the scene. The draft
 of Archy’s song and his preface to it (see Charles the First ii 475–88) on p. 101 reverso also
-
-20–21. Cp. Caliban’s words in The Tempest III ii 143–6: ‘and then in dreaming/The clouds methought
-would open and show riches/Ready to drop upon me, that when I waked/I cried to dream again’.
-21. to] and Nbk 21 p. 1.
 
 ## DOI: 10.4324/9781315170343-60
 
@@ -36848,21 +31946,6 @@ xii pp. xlvii-xlviii and 127.
 Text from Nbk 19 p. 52 rev. Indentation follows the MS.
 Published in 1824 217 (ll. 1–8 only); Rossetti 1870 ii 394 (ll. 1–8 only); Massey 242 (ll. 1–8
 only); BSM xii 108–9 (facsimile and transcription of MS).
-
-A widowed bird sate mourning for her love
-Upon a wintry bough;
-The frozen wind crept on, above
-The freezing stream below —
-
-5 There was no leaf upon the forest bare,
-No flower upon the ground —
-And little motion in the air,
-Except the mill-wheel’s sound.
-
-And as she sung upon the smooth bright snow
-10 I copied from my heart
-[Her] [name], which [                    ]
-Whose music made me start —
 
 ¶ 60. Title. See headnote.
 1. See To — (‘The serpent is shut out from Paradise’) ll. 4–6 (‘The widowed dove must cease to haunt a
@@ -36928,24 +32011,12 @@ Text from Nbk 19 p. 53 rev. Indentation follows S.’s apparent intentions in th
 Published in 1824 263 (ll. 1–6); Rossetti 1870 ii 340–1 (ll. 1–8); Massey 243 (transcription
 only); BSM xii 110–11 (facsimile and transcription of MS).
 
-Art thou pale for weariness
-Of climbing Heaven, and gazing on the earth,
-Wandering companionless
-Among the stars that have a different birth,
-
 ¶ 61. Title. See headnote.
 1–3. Cp. Tell me star, whose wings of light (Longman vi, no. 454) ll. 5–8.
 1. There is a faint line over the first word and the first two letters of the second word in Nbk 19; it is
 difficult to determine whether it is a cancel stroke or a quill slip.
 
 ## DOI: 10.4324/9781315170343-61
-
-5 And ever changing, like a joyless eye
-That finds no object worth its constancy?
-
-Thou chosen sister of the spirit
-That gazes on thee till in thee it pities
-The woe
 
 General Headnote for S.’s Poems to Jane Williams
 Edward Williams (1793–1822), the son of a Bengal Army officer, was a schoolboy at Eton
@@ -36978,9 +32049,6 @@ earth, — Rossetti 1870
 line in Nbk 19. Thou chosen] Thou [spi] chosen Nbk 19. sister of the spirit] On spiritual sisterhood, see
 Epipsychidion 1 and Adonais 145. The moon is described as the sun’s ‘weak sister’ in Cyprian (Longman
 vi, no. 441) ii 168. spirit] spirit, Rossetti 1870.
-
-8. gazes on thee till in] Written above pitys and loves and canc. in Nbk 19. pities] pities . . . Rossetti 1870.
-9. The woe] These words are cancelled and underlined in Nbk 19 suggesting reinstatement.
 
 ## DOI: 10.4324/9781315170343-62
 
@@ -37201,9 +32269,6 @@ descend without greater, peril, and I am content if the heaven above me is calm 
 passing moment.
 (L ii 435–6)
 
-His feelings for Jane were now growing more reflectively deep; S. wrote on 19 June to Leigh
-Hunt that
-
 Williams [is] one of the best fellows in the world, & Jane his wife a most delightful per-
 son — whom we all agree is the exact antitype of the lady I described in the Sensitive
 plant — though this must have been a pure anticipated cognition as it was written a year
@@ -37360,9 +32425,6 @@ to England were sometimes strained but also often affectionate, until Mary’s d
 eighty-six, remarkably little consulted through the decades following S.’s death given his rise
 to high poetic eminence in the Victorian period (William Michael Rossetti was surprised to
 
-learn from Trelawny in 1871 that she was still alive, and recorded an evening subsequently
-spent with her; Some Reminiscences of William Michael Rossetti, 2 vols (1906) ii 377).
-
 To —— (‘The serpent is shut out from Paradise’)
 The sole textual authority for To —— (‘The serpent is shut out from Paradise’) is a very neat
 copy in S.’s best hand, written in double column on one side of a single sheet and with the
@@ -37375,9 +32437,6 @@ duced in facsimile in MYRS viii 414) to My dear Williams:
 Looking over the portfolio [from] in which my friend used to keep his verses, & [from] in
 which those I sent you the other day were found, — I have lit upon these; which as they
 are too dismal for me to keep I send them you. [who can afford]
-
-If any of the stanza’s should please you, you may read them to Jane, but to no one else, —
-[and yet on second] thought I had rather you would not, [as it is?necessary to ha]
 
 The poem was enclosed in the sheet containing this letter, which was sealed with red wax
 and addressed to Il Signor Williams (who was living in the same small building). As Michael
@@ -37474,9 +32533,6 @@ Text from Edinburgh University Library MS Dc. 1 100/4 (E).
 Published in Fraser’s Magazine vi (November 1832) 599–600 (F); 1834; 1839; 1840;
 Rossetti 1870; Reiman 1977; MYRS viii 412–13 (facsimile and transcription of E); Major
 
-The serpent is shut out from Paradise —
-The wounded deer must seek the herb no more
-
 ¶ 62. Title. To — E. Eds have titled the poem variously, most often by giving the first line, with or
 without inverted commas (see headnote).
 1. Paradise —] paradise — F; paradise. 1839; paradise: Rossetti 1870. The opening line obviously recalls
@@ -37554,12 +32610,6 @@ I scarce can bear; yet I,
 (So deeply is the arrow gone)
 Should quickly perish if it were withdrawn.
 
-25 When I return to my cold home, you ask
-Why I am not as I have lately been?
-You spoil me for the task
-Of acting a forced part in life’s dull scene,
-Of wearing on my brow the idle mask
-
 16. tears,] tears — F; tears, — 1839, Rossetti 1870. its evil, good] its evil good F, 1839. Cp. Satan in
 Paradise Lost iv 110, ‘Evil be thou my good’, and Lucifer in Cain I i 138–140: ‘Souls who dare look the
 Omnipotent tyrant in/His everlasting face, and tell him, that/His evil is not good!’
@@ -37594,15 +32644,6 @@ larly in contrast with Byron, see e.g. his letter to Ollier, 11 November 1821: �
 the Ms.. . .to a Printer, & the moment you get a proof, dispatch it to me. . .Lord Byron has his poems
 sent to him in this manner, and I cannot see that the inferiority in the composition of a Poem can affect
 the powers of a printer in the matter of dispatch. . .’ (L ii 365). This same letter also asks for news of the
-
-30 Of author, great or mean,
-In the world’s carnival. I sought
-Peace thus, and but in you I found it not.
-
-Full half an hour today I tried my lot
-With various flowers, and every one still said
-35 ‘She loves me, loves me, not.’
-And if this meant a Vision long since fled —
 
 reception of Adonais: ‘I should be surprised if that Poem were born to an immortality of oblivion’; but
 such appeared to be the case by January 1822. The idle mask and carnival suggest Byron’s involvement
@@ -37643,15 +32684,6 @@ FAUST. Thou angelic being!
 MARGARET continues. Loves me — not — loves me — not — [plucking off the last leaf with fond
 delight] He loves me! (trans. Hayward 130–31))
 
-36. Vision] vision F, 1839, Rossetti 1870. Cp. S.’s letter to John Gisborne of 22 October 1821: ‘Some of
-us have in a prior existence been in love with an Antigone, & that makes us find no full content in any
-mortal tie’ (L ii 364).
-
-If it meant Fortune, Fame, or Peace of thought —
-If it meant — (but I dread
-To speak what you may know too well) —
-40 Still there was truth in the sad oracle.
-
 The crane o’er seas and forests seeks her home.
 No bird so wild, but has its quiet nest
 When it no more would roam.
@@ -37673,9 +32705,6 @@ her head’, and how he himself had ‘suffered considerably from pain and depre
 41–48. These lines articulate a recurrent lament of S.’s: cp. e.g. Stanzas. — April, 1814 17–20, lines
 themselves recalling Matthew viii 20, ‘The foxes have holes, and the birds of the air have nests; but the
 
-Son of man hath not where to lay his head’.
-41. home.] home; F, 1839, Rossetti 1870. Cp. Goethe, Faust Part I 1092–99:
-
 Doch ist es jedem eingeboren,
 Daß sein Gefühl hinauf und vorwärts dringt,
 Wenn über uns, im blauen Raum verloren,
@@ -37694,9 +32723,6 @@ eagle soars; and, over plain and sea, the crane struggles onwards to her home. (
 44. Ocean’s] Oceans E; ocean’s F, 1839, Rossetti 1870.
 45. Break] Burst F, 1839 (1840 corrects to Break). foam] peace, F, 1839; foam, Rossetti 1870.
 46. And thus at length find rest: 1839, Rossetti 1870.
-
-Doubtless there is a place of peace
-Where my weak heart and all its throbs will cease.
 
 I asked her yesterday if she believed
 50 That I had resolution. One who had
@@ -37834,11 +32860,6 @@ Archives, MS Add. 4444 (C: by permission of the Syndics of Cambridge University 
 Published in The New Anti-Jacobin ii (May 1833) 196–197 (NA-J), 1840, Chernaik,
 Reiman 1977, Major Works, MYRS viii 370–380 (facsimile and transcription of MS).
 
-To Jane. The invitation
-Best and brightest, come away —
-Fairer far than this fair day
-Which like thee to those in sorrow
-
 ¶ 63. Title. LINES WRITTEN IN THE CASCINE AT PISA N-AJ; THE INVITATION 1840. For the
 poem’s genesis in a walk taken by S., Jane Williams, and Mary on 2 February 1822 in the pine woods of
 the Cascine outside Pisa, see headnote. Cp. George Tighe’s description (from his unpublished notes for
@@ -37949,11 +32970,6 @@ grave’.
 but the mark before the hyphen must be a slip of the pen, as a comma after ‘verse’ is impossible);
 verse-reciter, Care — NA-J.
 
-37. grave,] grave C.
-38. ‘I’ll listen to your poetry when I’m dead’ (GM). stave —] stave; NA-J; stave here is in the sense
-‘stanza’; cp. PB3 (Longman iii, no. 239) 618 and note.
-39. off!] off, NA-J.
-
 40 Today is for itself enough —
 Hope, in pity mock not woe
 With smiles, nor follow where I go;
@@ -38018,16 +33034,6 @@ Where the earth and ocean meet
 And all things seem only one
 In the universal Sun. —
 
-64 To Jane——The Recollection
-See headnote to preceding poem, To Jane. The invitation.
-Text from British Library Add MS 37538, ff. 40–41 (BL).
-Published in 1840, MYRS viii 381–391 (facsimile and transcription of MS).
-
-Now the last day of many days,
-All beautiful and bright as thou,
-The loveliest and the last, is dead.
-Rise Memory, and write its praise!
-
 60. hue] hue, NA-J. yet] Written above now canc. in C (confirming the temporal sense of yet; see notes
 to ll. 57–60).
 61. new;] new C, Reiman 1977, Major Works; new, NA-J, Chernaik.
@@ -38052,16 +33058,6 @@ nature of the opening passage, recalling the introductory verses of ‘Il Penser
 1. days,] days; Chernaik; but, as MYRS viii 382 explains, what appears as the upper dot of a semicolon
 
 ## DOI: 10.4324/9781315170343-64
-
-5 Up to thy wonted work! come, trace
-The epitaph of glory fled;
-For now the Earth has changed its face
-A frown is on the Heaven’s brow.
-
-We wandered to the pine forest
-10 That skirts the Ocean foam;
-The lightest wind was in its nest,
-The Tempest in its home;
 
 6. fled;] eds; dead; BL. A repetition of the rhyme on dead would be very uncharacteristic, and is presumably
 a dittography. The reading fled is found in Mary Copybk 1 and 1824 though is of uncertain authority (see
@@ -38139,10 +33135,6 @@ Cascine, near Pisa).
 ocean’.
 38–46. Cp. TL 335–42:
 
-Though it was now broad day, a gentle trace
-Of light diviner than the common Sun
-Sheds on the common Earth, but all the place
-
 40 The calm that round us grew. —
 There seemed from the remotest seat
 Of the white mountain-waste,
@@ -38166,10 +33158,6 @@ Which in the dark earth lay
 More boundless than the depth of night
 60 And purer than the day,
 
-Was filled with many sounds woven into one
-Oblivious melody, confusing sense
-Amid the gliding waves and shadows dun;
-
 42. The mountains of Carrara in the Western Apennines, showing white with their marble quarries
 dating from Roman times, were visible from Pisa; see note to TL 33.
 45. around,] around BL. Cp. Wordsworth, ‘Lines . . . above Tintern Abbey’ ll. 95–96: ‘a sense sublime/
@@ -38188,9 +33176,6 @@ A terris quantum caeli patet altus hiatus,
 Nubila despicere et caelum ut videare et aperta
 Corpora mirande sub terras abdita cernas.
 
-(‘But a puddle of water no more than one finger deep, lying between the stones upon a paved street,
-offers a view downwards under the earth to as great a reach as the open heavens yawn on high, so that
-
 In which the lovely forests grew
 As in the upper air,
 More perfect, both in shape and hue,
@@ -38199,16 +33184,6 @@ Than any spreading there;
 And through the dark green wood
 The white sun twinkling like the dawn
 Out of a speckled cloud.
-
-Sweet views, which in our world above
-70 Can never well be seen
-Were imaged in the water’s love
-Of that fair forest green;
-And all was interfused beneath
-With an Elysian glow,
-
-you seem to look down upon the clouds and heaven, and you see manifest objects miraculously buried
-beneath the earth’.)
 
 hinc atque hinc vastae rupes geminique minantur
 in caelum scopuli, quorum sub vertice late
@@ -38225,8 +33200,6 @@ Why is the reflexion in that canal far more beautiful than the objects it reflec
 are more vivid, & yet blended with more harmony, the openings from within into the soft &
 tender colours of the distant wood & the intersection of the mountain lines surpass & mis-
 represent truth.
-
-(for a facsimile, see BSM xvi 220; this transcription differs from that in BSM xvi 221)
 
 62. air,] air BL.
 68. BL has no space between ll. 68 and 69. Line 68 is the first line on the last page of BL f. 41v, and there is a
@@ -38270,9 +33243,6 @@ showing only such minor variations as might well have been made in transcribing.
 also in S.’s autograph, is written on both sides of a single sheet of paper, which was donated
 in 1907 to Eton College Library by Edward Trelawny’s daughter Mrs Charles F. Call (Eton).
 
-81–84. Clearly implying Mary’s brooding presence on the walk.
-81. Cp. Wordsworth, The Excursion ix 467–473:
-
 Then, with a sigh, sometimes I feel, as now,
 That combinations so serene and bright
 Cannot be lasting in a world like ours,
@@ -38281,14 +33251,7 @@ Like that reflected in yon quiet pool,
 Seems but a fleeting sunbeam’s gift, whose peace
 The sufferance only of a breath of air!
 
-86. green,] green BL.
-87. The name is left blank in BL; ‘Shelley’ is obviously implied, but no one is named within the body of
-either this poem or its companion-piece.
-
 ## DOI: 10.4324/9781315170343-65
-
-Entitled Remembrance, the poem was given or sent by S. to Jane Williams, as an undated
-note below the third stanza, reproduced with a transcription in MYRS viii 358–9, indicates:
 
 Dear Jane — if this melancholy old
 song suits any of your tunes or
@@ -38404,19 +33367,6 @@ aaabcccb is unique among S.’s poems.
 A record of substantial variants among the MS witnesses and important printings fol-
 lows Text A.
 
-Text A published in Forman 1876–7 iv 82–4 with title from Eton via Rossetti 1870;
-MYRS viii 366–9 (facsimile and transcription of MS).
-
-Text B published in Rossetti 1870 ii 274 with variations common to 1824, 1839,
-and 1840 in lines 8 and 20; MYRS viii 356–9 (facsimile and transcription of MS).
-
-Swifter far than summer’s flight —
-Swifter far than youth’s delight —
-Swifter far than happy night,
-Art thou come and gone —
-5 As the wood when leaves are shed,
-As the night when sleep is fled,
-
 ¶ 65. Title. Remembrance Eton, Rossetti 1870, Rossetti 1878, Forman 1876–7; Song Harvard Nbk 1;
 A Lament 1824, 1839. The draft in Nbk 22, like Princeton, is untitled. Mary’s generic titles Song and A
 Lament attenuate the autobiographical resonance of Eton’s Remembrance. The word signifies both an
@@ -38443,13 +33393,6 @@ My heart each day desires the morrow;
 Sleep itself is turned to sorrow;
 15 Vainly would my winter borrow
 Sunny leaves from any bough.
-
-Lilies for a bridal bed —
-Roses for a matron’s head —
-Violets for a maiden dead —
-20 Pansies let my flowers be:
-On the living grave I bear
-Scatter them without a tear —
 
 6–7. The order of the lines in Nbk 22 is: . . . joy is dead . . . sleep is fled.
 6. fled] Nbk 22, Princeton, Forman 1876–7, Rossetti 1878; sped Eton, Harvard Nbk 1, 1824, 1839,
@@ -38517,9 +33460,6 @@ simile and transcription, see BSM xix 290–293 and 296–301), where it is inte
 with drafts for Fragments of an Unfinished Drama (Longman vi, no. 436) for which it
 was probably intended. There are two holograph fair copies, one in the University of
 Glasgow Library (MS. Gen. 505/34; G) and one in the British Library (Add MS 37232,
-
-24. one hope, one fear for me] Princeton, Harvard Nbk 1, 1824, 1839, Forman 1876–7; one hope one fear
-for me Nbk 22; a hope, a fear, for me Eton, Rossetti 1870, Rossetti 1878.
 
 ## DOI: 10.4324/9781315170343-66
 
@@ -38764,27 +33704,12 @@ likeliest, but the speaker may refer to an unspecified addressee.
 26. high —] high; A, 1840; high: 1824, 1839.
 27–28.Bright reason has mock’d thee,/Like the sun from the wintry sky. A. Bright reason will mock
 
-thee,/Like the sun from a wintry sky. 1824, 1839, 1840.
-29–32.Omitted in A. Cp. Timon of Athens IV iii 260–265:
-
 The mouths, the tongues, the eyes, and hearts of men
 At duty, more than I could frame employment;
 That numberless upon me stuck, as leaves
 Do on the oak, have with one winter’s brush
 Fell from their boughs, and left me open, bare
 For every storm that blows
-
-See also A fresh fair child stood by my side, S.’s translation of part of Brunetto Latini’s Il Tesoretto 41–4
-(no. 418):
-
-Between desire and fear, thou wert
-A wretched thing, poor heart . . .
-Sad is the life of him who bears thee in his breast,
-Wild bird for that weak nest
-
-30 Will rot, and thine eagle home
-Leave thee naked to laughter
-When leaves fall and cold winds come.
 
 Written probably in April 1822. The sole source of One word is too often profaned is a tran-
 scription in Mary Copybk 1 p. 15. The MS from which Mary made her copy is unknown,
@@ -38796,15 +33721,6 @@ supported by the fact that there is a stub with a cut edge between p. 151 revers
 reverso in Nbk 18 (see BSM xix 286) was prompted by his observation that One word is too
 often profaned might be understood as ‘glossing’ the Unfinished Drama, ll. 42–47:
 
-Indian
-Loved? O I love. —
-Lady
-Methinks
-This word of love is fit for all the world,
-And that for gentle hearts another name
-Should speak of gentler thoughts [] the world owns. —
-I have loved —
-
 A relationship between S.’s lyric and his drama is credible and invites comparison with the
 textual situation of When the lamp is shattered. Both poems could easily have been written
 out neatly with a mind to their being set to music by Jane Williams for performance by her
@@ -38815,11 +33731,6 @@ dramatic context cautions against assuming any identifiable directly personal Sh
 onance. The poem’s atmosphere is nevertheless suggestive of S.’s developing relationship
 with Jane Williams, and the repeated profaned/profane of its opening lines recalls the note
 accompanying the holograph fair copy of To Jane (‘The keen stars were twinkling’) presented
-
-to Jane Williams: I sate down to write some words for an ariette which might be profane — but
-it was in vain to struggle with the ruling spirit (see headnote).
-
-31. thee] the 1824, 1839 (corrected in 1840). laughter] laughter, 1824, 1839, 1840.
 
 ## DOI: 10.4324/9781315170343-67
 
@@ -38842,12 +33753,6 @@ For prudence to smother,
 And Pity from thee more dear,
 Than that from another.
 
-I can give not what men call love, —
-10 But wilt thou accept not
-The worship the heart lifts above
-And the Heavens reject not?
-The desire of the moth for the star,
-
 ¶ 67. Title. 1824 gives the title as ‘To — ’.
 1–3. One word . . . one feeling] I.e. love; for a possible connection with Fragments of an Unfinished
 Drama, see headnote.
@@ -38860,18 +33765,6 @@ repetition of often (for falsely) from l. 1 is presumably also a transcription e
 12. not?] not, 1824; Mary Copybk 1 has the question-mark here and a full stop at the end of the poem.
 It is a matter for judgement whether the last four lines are inflected interrogatively, or as a statement.
 13–14. The desire of the moth for the star suggests The Woodman and the Nightingale (Longman iv
-
-Which is its cradle, flutters below,
-Aspires (like one who loves too fair, too far)
-To be consumed within the [purest] glow
-
-Of one serene and unapproachèd star,
-As if it were a lamp of earthly light,
-Unconscious, even as wiser lovers are,
-
-Of the night for the morrow,
-15 The devotion to something afar
-From the sphere of our sorrow.
 
 68 With a Guitar. To Jane
 Jane Williams possessed an attractive singing voice and was an accomplished musician,
@@ -38893,9 +33786,6 @@ delay, the grace of my compliment would be lost. — Do not take much trouble ab
 it, but simply take what you find if you [half a line cancelled] are so exceedingly kind as
 to oblige me —
 (L ii 378)
-
-The ‘present’ was evidently intended for Jane Williams, who had celebrated her 24th birth-
-day on the preceding Monday, 21 January (S.’s letter to Smith was written on the same day,
 
 While the sound whirls around,
 Down, down!
@@ -39008,9 +33898,6 @@ cash from the proposal, and it is anyway obvious that he did intend to purchase 
 ment. His original request to Smith also included music for the instrument, at very slight
 cost, which does not make sense in the context of a pretext for raising capital. It is true
 that S. was short of money at the time, but that is more probably an explanation for his
-
-downplaying to members of his circle of the true cost of buying an instrument for Jane (his
-letter to Claire Clairmont of March 24 speaks of ‘6 or 7 napoleons for a musical instrument
 
 which I wished to buy for Jane’, a far smaller sum than the ‘70 to 80 guineas’ he mentions
 to Smith; L ii 400).
@@ -39189,11 +34076,6 @@ ideas would have been long familiar to S., but perhaps newly interesting in ligh
 background of his immediate circle in Pisa, who may have discussed reincarnation in Hinduism; cp.,
 e.g., Medwin’s ‘The Pindarees’ in his Sketches in Hindoostan with Other Poems (1821) (which S. helped
 
-For I was taught to love and spare
-The inhabitants of earth and air;
-To view beast, insect, bird, and tree,
-As spirits in captivity;
-
 Medwin’s note to these lines (p. 93) reads ‘The belief in Metempsychosis is universal’. S.’s Fragments of
 an Unfinished Drama also appears to involve ideas of reincarnation.
 15. happiness,] happiness; — F.
@@ -39224,18 +34106,6 @@ This is all remembered not;
 And now, alas! the poor sprite is
 Imprisoned for some fault of his
 In a body like a grave. —
-
-gift; however, there was also a new moon on 23 March, within the likeliest composition period for the
-poem (see headnote). Cp. Milton, Samson Agonistes 86–9:
-
-The sun to me is dark
-And silent as the moon,
-When she deserts the night
-Hid in her vacant interlunar cave.
-
-25. sadder] S. first wrote darker in B, then cancelled it and continued the line with sadder.
-26. Ariel;] Ariel. F.
-27–39. On reincarnation cp. Hellas 201–210:
 
 But they are still immortal
 Who, through birth’s orient portal
@@ -39288,19 +34158,6 @@ conversant, and which was particularly calculated to please him; for it records 
 favourite old sea-boat to the Dioscuri. The modern poet’s imagination beats the ancient; but Catullus
 equals him in graceful flow: and there is one very Shelleian passage in the original’; Hunt then quotes
 Catullus, Carm. iv 10–12:
-
-Ubi iste, post phaselus, antea fuit
-Comata silva: nam Cytorio in jugo
-Loquente saepe sibilum edidit coma.
-
-(‘where she who was afterwards a pinnace was formerly a leafy forest: for on the height of Cytorus she
-often rustled with talking leaves’)
-
-Hunt translates:
-For of old, what now you see
-A galley, was a leafy tree
-On the Cytorian heights, and there
-Talk’d to the wind with whistling hair.
 
 43. idol] From Gk. εἴδωλον, ‘image, phantom’, such as the delusive shadows cast on the wall in Plato’s
 Myth of the Cave in Republic; the guitar is an earthly image representing the higher reality of ‘all har-
@@ -39406,9 +34263,6 @@ with the voice, whereby they have opened to themselves a way to return to the ce
 as have likewise many others who have employed their sublime genius while on earth in culti-
 vating the divine sciences.
 
-In the post-classical era the concept was Christianised, e.g. in Dryden’s ‘Song for St Cecilia’s Day’ as ‘The
-diapason [i.e. octave] closing full in man’ (l. 15). Cp. Epipsychidion 86 and note.
-
 Which, driven on its diurnal round
 As it floats through boundless day
 Our world enkindles on its way —
@@ -39429,14 +34283,6 @@ It keeps its highest holiest tone
 The sole source for The magnetic lady to her patient is a very careful holograph given, or
 sent, under cover to Jane Williams. This MS (A) was at some point acquired by Trelawny,
 and on his death was inherited by his daughter Laetitia (Mrs Charles F. Call), who donated
-
-76. on] in A. round] round, A, 1840. diurnal round] The daily axial revolution of the Earth: cp.
-Wordsworth, ‘A slumber did my spirit seal’ ll. 5–8:
-
-No motion has she now, no force;
-She neither hears nor sees,
-Rolled round in earth’s diurnal course
-With rocks and stones and trees.
 
 77. day] day, A, 1840. boundless day] The Earth is always in the full light of the Sun as it moves through space.
 78. way —] way. 1840.
@@ -39661,10 +34507,6 @@ substitutions of metrical feet.
 Text from Aberdeen University Library, MS 937 (A: courtesy of the University of
 Aberdeen); indentation inferred from the (inconsistent) MS.
 
-Published in The Athenaeum ccl (11 August 1832) 522–3 (Ath); Medwin (1833) 120–122;
-1839 iv 161–2; 1840 304–5 (ll. 1–41 and 43–45); Rossetti 1870 ii 280–1 (complete); MYRS
-viii 398–401 (facsimile and transcription of MS).
-
 The magnetic lady to her patient
 ‘Sleep, sleep on, forget thy pain —
 My hand is on thy brow,
@@ -39708,10 +34550,6 @@ Hurt not the earth, neither the sea, nor the trees, till we have sealed the serv
 foreheads’. The mark of Cain was a seal to protect him from harm, as in Genesis iv 15: ‘And the Lord
 said unto him, Therefore whosoever slayeth Cain, vengeance shall be taken on him sevenfold. And the
 
-Lord set a mark upon Cain, lest any finding him should kill him’.
-6. sign] sign, Ath, Medwin (1833), 1839, 1840.
-7. woe,] woe: Ath, Medwin (1833), 1839, 1840.
-
 10 ‘Sleep, sleep, sleep on, — I love thee not —
 Yet when I think that he
 Who made and makes my lot
@@ -39721,13 +34559,6 @@ Might have been lost like thee, —
 Might then have charmed his agony
 As I another’s . . . my heart bleeds
 For thine.
-
-‘Sleep, sleep, and with the slumber of
-20   The dead and the unborn . . .
-Forget thy life and love;
-Forget that thou must wake; — forever
-Forget the world’s dull scorn. —
-Forget lost health, and the divine
 
 8–9. As Chernaik 164 notes, ‘Jane is made to say at least three or four times that she pities Shelley but
 cannot love him’.
@@ -39764,10 +34595,6 @@ stanza 6 and notes.
 24. lost health] S. suffered badly throughout his adult life from a variety of medical problems, never
 satisfactorily diagnosed but involving painful ‘spasms’ and a recurrent pain in the side attributed to
 
-25 Feelings which died in youth’s brief morn;
-And forget me, for I can never
-Be thine. —
-
 ‘Like a cloud big with a May shower
 My soul weeps healing rain
 30   On thee, thou withered flower. —
@@ -39778,21 +34605,12 @@ Spreads, like a second youth again —
 35 By mine thy being is to its deep
 Possessed. —
 
-‘The spell is done — how feel you now?’
-‘Better, quite well’, replied
-The sleeper — ‘What would do
-
 kidney stones (see headnote); for detailed speculation on the possible causes of these conditions see
 Nora Crook and Derek Guiton, Shelley’s Venomed Melody (1986).
 25. which died] S. first wrote which fell in A, then cancelled fell and wrote died above with a caret below;
 that die Ath, Medwin (1833); 1839.
 27. thine. —] thine. Ath, Medwin (1833), 1839, 1840.
 28–30. Cp. Keats, ‘Ode on Melancholy’, ll. 11–14:
-
-But when the melancholy fit shall fall
-Sudden from heaven like a weeping cloud,
-That fosters the droop-headed flowers all,
-And hides the green hill in an April shroud
 
 28. shower] shower, Ath, Medwin (1833), 1839, 1840.
 29. rain] rain. Ath; rain, Medwin (1833), 1839.
@@ -39814,13 +34632,6 @@ and could conceivably be a comma).
 38. ‘Better, quite well’,] “Better, quite well” A; Better — Quite well, Ath, Medwin (1833), 1839.
 39. sleeper — ‘What] sleeper — “what A; sleeper. What Ath; sleeper. — What Medwin (1833); sleeper,
 — What 1839; sleeper, — “What 1840.
-
-40 You good when suffering and awake,
-What cure your head and side?’
-‘What would cure that would kill me, Jane,
-And as I must on earth abide
-Awhile yet, tempt me not to break
-45      My chain.
 
 Manuscript Evidence
 The TL MS displays all the characteristics of S.’s difficult rough first drafts. There is an
@@ -39856,9 +34667,6 @@ be moral death; or, more probably, that the name for his disease is mortality, f
 is indeed death’.
 44. Awhile yet,] Awhile, yet Ath, Medwin (1833), 1839, 1840.
 45. Chernaik 165 comments: ‘The “chain” he must not break is the chain of life; also, undoubtedly, it is
-
-the chain of his marriage’. Cp. Pope, ‘Eloisa to Abelard’ l. 173, ‘Death, only death, can break the lasting
-chain’.
 
 ## DOI: 10.4324/9781315170343-70
 
@@ -39953,9 +34761,6 @@ had his papers with him; and much of the “Triumph of Life” was written as he
 weltered on that sea which was soon to engulf him.
 (1839 iv 231)
 
-This confirms her account fifteen years earlier (and so still close in time to the events them-
-selves) of S.’s work on TL:
-
 In the wild but beautiful Bay of Spezia, the winds and waves which he loved became
 his playmates. His days were chiefly spent on the water; the management of his boat,
 its alterations and improvements, were his principal occupation. At night, when the
@@ -40027,8 +34832,6 @@ is placed next to what is the forty-first tercet in the edited text (ending at l
 trunk survived both fruit and flower’) but S.’s calculation reads 42 x 3, giving 126. The other
 calculation is placed next to what is the received tercet forty-three (ending at l. 130, ‘As they
 had touched the world with living flame’); those figures read 44 x 3, giving 132. In both
-
-cases S.’s line-count is off by 2, a circumstance which Donald Reiman explains as follows:
 
 The two multiplications in the left-hand margin show PBS multiplying the number
 of completed tercets by three to learn how many lines he had completed. His count
@@ -40115,10 +34918,6 @@ stitutes the fourth page of a four-page booklet in the Parodi paper, Shelley’s
 stops about three-quarters of the way down the page, with his apparent inability to complete
 the tercet which would become ll. 161–4. As drafted in ink on f. 26v the tercet reads:
 
-Yet ere I could say where the chariot hath
-Past over them; nor other[s canc.] trace remained
-But as of [smoke upon the stream canc.]
-
 S. has written foam in ink above the cancelled smoke, and has torrents cancelled above stream,
 with Oceans uncancelled below. S. has then at some point returned to this broken-off ink
 draft and revised the tercet in pencil, cancelling could and writing can above, establishing a
@@ -40127,14 +34926,6 @@ find, to establish the rhyme word for the next new tercet, which is written at t
 first page of a new four-page booklet. The whole of this new page contains a pencil draft,
 suggesting that the revisions on f. 26v in pencil carried straight on to new composition in
 pencil on f. 27r (S.’s draft as revised is given here in our edited text):
-
-Yet ere I can say where, the chariot hath
-Passed over them; nor other trace I find
-But as of foam after the ocean’s wrath
-
-Is spent upon the desert shore. — Behind,
-Old men and women foully disarrayed
-Shake their grey hair in the insulting wind,
 
 The remaining bottom quarter of the page is taken up with the reverso draft of The earth-
 quake is rocking, also in ink but apparently with a different pen (these lines were probably
@@ -40321,8 +35112,6 @@ the shape all light is still a dim presence in this new vision, but now a triump
 approaches with captives in tow. This triumphal chariot is surrounded by phantoms and
 demons who engage in various macabre actions on and around those humans following
 
-the chariot. As these phantoms toy with them, the humans grow more and more distorted,
-
 some dying and others falling by the wayside. Rousseau confesses that he is one of those
 who fell by the wayside, at which point the narrator interrupts him and asks him what ‘Life’
 is. Rousseau looks into the distance where the chariot has rolled on and is seven words into
@@ -40426,9 +35215,6 @@ n.), the only poets mentioned in TL. The exalted position of Dante in TL is fore
 by S.’s recent interactions with the Italian poet. In DP, written in the spring of 1821, Dante
 is the poet S. refers to more than any other. Dante’s poetry receives expected praise, but it is
 also clear that for S. he is much more than a fine craftsman. Dante is described as among the
-
-philosophers ‘of the very loftiest power’ (para. 8), as ‘the first religious reformer. . .the first
-awakener of entranced Europe’ (para. 29), and as
 
 the second epic poet: that is, the second poet, the series of whose creations bore a
 defined and intelligible relation to the knowledge and sentiment and religion of the age
@@ -40567,16 +35353,6 @@ Confessions for this inability in a letter to Hogg of May 14 1811, claiming that
 are ‘either a disgrace to the confessor or a string of falsehoods, probably the latter’ (L i 84). It
 seems that over a decade later S. thought it was the former and has Rousseau admit as much
 when he sees the
-
-‘The passions which they sung, as by their strain
-May well be known: [their living melody]
-Tempers its own contagion to the vein
-
-‘Of those who are infected with it — I
-Have suffered what I wrote, or viler pain!’ (ll. 274–9)
-
-It is clear from the poem and from S.’s other writings that he admired Rousseau’s attempt to
-break the traditions of ‘Life’ and to put love at the centre of thought, but the pessimistic con-
 
 clusion of TL is that this brought Rousseau little personal happiness and sparked a cult of
 passionate freedom that led first to the Revolution and then to the tyranny of ­Napoleon. As
@@ -40806,12 +35582,6 @@ own tendency to idealise female figures, for example in WA and Epipsychidion, mo
 graphical readings of the poem have hinged on an interlineated phrase at Box 1 f. 52v (the
 final leaf of TL) between l. 541 and l. 542:
 
-And [sank] fell, as I have fallen by the
-wayside,
-Alas I kiss you [?Jane]
-Those soonest, [from whose limbs the]
-from whose forms most shadows passed
-
 The phrase Alas I kiss you [?Jane] is not part of the draft of TL. Its presence among these
 lines in Box 1 led GM to claim that S. was either ‘translating the universalized despair of the
 poem back into the private experience that had helped to generate it, more or less as he went
@@ -41004,10 +35774,6 @@ is predominantly iambic, but on occasions the rhythm of TL is inverted to become
 as in the first foot of the poem, and there are also some spondees, for example in the first
 foot of l. 13 and in the second foot of l. 29.
 
-Criticism
-Some contemporary reviews of 1824 mention TL, but the only substantial engagement with
-the poem is in Hazlitt’s Edinburgh Review article of July 1824:
-
 The poem entitled The Triumph of Life, is in fact a new and terrific Dance of Death;
 but it is thus Mr. Shelley transposes the appellations of the commonest things, and
 subsists only in the violence of contrast. How little this poem is deserving of its title,
@@ -41040,9 +35806,6 @@ figure of ‘Life’, and situates the poem within S.’s verse and prose. Bradl
 form of twelve notes on important figures and textual cruxes in the poem, and several of his
 readings inform the following annotation (see ll. 18–20, 240–3, and notes).
 
-Of the studies after Bradley and before the major revisions to the text in the 1960s,
-Baker gives an introduction to the poem and its analogues, and Harold Bloom Shelley’s
-
 Mythmaking (1959) 220–37, provides an illuminating discussion of S.’s biblical imagery.
 Three seminal articles by GM — TL (GM), ‘Shelley and Jane Williams’ and SN (1962) —
 fundamentally revise the text of TL, offer a reading of the poem which stresses the impor-
@@ -41054,16 +35817,6 @@ review in TL (JEGP).
 Text from Box 1 ff.19r-20r (ll. 1–48); ff. 21r-22r (ll. 49–83); ff. 23r-31r (ll. 84–251); ff. 32r-33r
 (ll. 252–80); ff. 37v-38r (ll. 281–306); ff. 39r-42r (ll. 307–85); f. 43r (ll. 386–91); ff. 44r-45r (ll.
 406–37); f. 46r (ll. 438–50); ff. 47r-48r (ll. 451–78); ff. 49r-53r (ll. 479–548); 1824 (ll. 392–405).
-
-Published in 1824 (ll. 1–132, part of l. 133, ll. 134–280, part of l. 282, ll. 283–493, part
-of l. 494, ll. 495–543, part of l. 544); TL (GM) (complete); TL (Reiman) (complete); BSM i
-136–41, 144–49, 152–85, 188–93, 210–13, 216–29, 232–33, 234–39, 242–3, 246–51, 254–71
-(facsimile and transcription of MS).
-
-The Triumph of Life
-Swift as a spirit hastening to his task
-Of glory and of good, the Sun sprang forth
-Rejoicing in his splendour, and the mask
 
 Fled were the vapours of the night,
 Faint streaks of rosy tinted light
@@ -41091,10 +35844,6 @@ Through the dewy mists they soar
 Like grey shades, till th’eastern heaven
 Bursts, and then, as clouds of even,
 
-Of darkness fell from the awakened Earth.
-5 The smokeless altars of the mountain snows
-Flamed above crimson clouds, and at the birth
-
 Flecked with fire and azure, lie
 In the unfathomable sky,
 So their plumes of purple grain,
@@ -41114,14 +35863,6 @@ From her ambrosial rest the fading Splendour sprung.’
 2–6. the Sun . . . above crimson clouds] See Wordsworth, ‘Composed upon Westminster Bridge, Sept.
 3, 1802’, ll. 8–10:
 
-All bright and glittering in the smokeless air.
-Never did sun more beautifully steep
-In his first splendor valley, rock, or hill;
-
-4. awakened Earth] Cp. OWW 68–9: ‘Be through my lips to unawakened Earth/The trumpet of a
-prophecy!’.
-5–14. Cp. Paradise Lost ix 192–200:
-
 Now when as sacred light began to dawn
 In Eden on the humid flowers, that breathed
 Their morning incense, when all things that breathe,
@@ -41139,17 +35880,6 @@ In this optical illusion the mountain snows are not actually flaming, so the alt
 It is possible that S. is referring to the Apuan Hills, which contain marble the white colour of which
 could appear like ‘mountain snow’ (see note to l. 26). Marble is also used in the production of altars.
 Related images occur in Lines Written among the Euganean Hills ll. 100, 104–14:
-
-Of light, the Ocean’s orison arose
-To which the birds tempered their matin lay.
-All flowers in field or forest which unclose
-
-10 Their trembling eyelids to the kiss of day,
-Swinging their censers in the element,
-With orient incense lit by the new ray
-
-Burned slow and inconsumably, and sent
-Their odorous sighs up to the smiling air,
 
 Lo! the sun upsprings behind. . .
 And before that chasm of light,
@@ -41192,22 +35922,6 @@ in OED (1855). See Epipsychidion l. 579: ‘Ever still burning, yet ever inconsu
 ‘There yawned an inextinguishable well/Of crimson fire’.
 14. air,] air Box 1.
 
-Isle, Ocean, and all things that in them wear
-The form and character of mortal mould
-Rise as the Sun their father rose, to bear
-
-Their portion of the toil which he of old
-20   Took as his own and then imposed on them;
-But I, whom thoughts which must remain untold
-
-Had kept as wakeful as the stars that gem
-The cone of night, now they were laid asleep,
-Stretched my faint limbs beneath the hoary stem
-
-25 Which an old chestnut flung athwart the steep
-Of a green Apennine: before me fled
-The night; behind me rose the day; the Deep
-
 15. Continent,] Continent Box 1.
 18–20. Rise as the Sun . . . then imposed on them] ‘The Earth’s response to the Sun’s appearance in the
 opening is an act of universal hierurgical devotion. . .its human inhabitants accept the Sun as their
@@ -41241,26 +35955,6 @@ Criseyde iii 1415–519, Donne, ‘The Sun Rising’, and Goethe’s Faust.
 27–40. the Deep . . . on my brain was rolled] The narrator’s fall into vision has similarities with Theseus’
 account of poetic inspiration in A Midsummer Night’s Dream V i 12–18:
 
-The poet’s eye, in a fine frenzy rolling,
-Doth glance from heaven to earth, from earth to heaven;
-
-Was at my feet, and Heaven above my head,
-When a strange trance over my fancy grew
-30 Which was not slumber, for the shade it spread
-
-Was so transparent that the scene came through
-As clear as when a veil of light is drawn
-O’er evening hills they glimmer; and I knew
-
-That I had felt the freshness of that dawn,
-35 Bathed in the same cold dew my brow and hair,
-And sate as thus upon that slope of lawn
-
-And as imagination bodies forth
-The forms of things unknown, the poet’s pen
-Turns them to shapes and gives to aery nothing
-A local habitation and a name.
-
 28. head,] head Box 1.
 29. fancy] ‘the faculty of forming mental representations of things not present to the senses’ (OED 4a).
 32–3. as when . . . they glimmer] I.e. as when hills glimmer through the evening light as if through a
@@ -41292,18 +35986,6 @@ Stretch’d out to him my cheeks suffus’d with tears.
 There to my visage he anew restor’d
 That hue, which the dun shades of hell conceal’d.’)
 
-Under the self-same bough, and heard as there
-The birds, the fountains and the Ocean hold
-Sweet talk in music through the enamoured air.
-40 And then a Vision on my brain was rolled . . .
-
-As in that trance of wondrous thought I lay
-This was the tenor of my waking dream: —
-Methought I sate beside a public way
-
-37–9. The natural harmony S. describes is reminiscent of a description in Thomson’s ‘Spring’ ll. 321–2
-where
-
 38. birds,] birds Box 1.
 40–1. Between these two lines of verse in Box 1 are two straight horizontal lines with two wavy lines
 between that are intersected by a vertical line. This clearly signalled break in the MS separates the
@@ -41327,9 +36009,6 @@ Trees, churches, and strange visages express’d
 In the red cinders, while with poring eye
 I gaz’d, myself creating what I saw.
 
-43–6. Methought . . . gleam] Cp. S.’s fragment written between April and June 1821 Methought I was a
-billow in the crowd (Longman iv 6–7, no. 361):
-
 Methought I was a billow in the crowd
 Of common men — that stream without a shore,
 That Ocean which at once is deaf and loud,
@@ -41338,28 +36017,6 @@ By a wayside — which in [ ] aspect bore
 To some imperial metropolis
 Whose misty shapes, pyramid, dome and tower
 Gleamed like a pile of vast crags.
-
-Thick strewn with summer dust, and a great stream
-45 Of people there was hurrying to and fro
-Numerous as gnats upon the evening gleam,
-
-All hastening onward, yet none seemed to know
-Whither he went, or whence he came, or why
-He made one of the multitude, yet so
-
-50 Was borne amid the crowd as through the sky
-One of the million leaves of summer’s bier. —
-Old age and youth, manhood and infancy,
-
-[?Whirled] in one mighty torrent did appear,
-Some flying from the thing they feared and some
-
-43. public way] Petrarch’s Triumph of Death occurs on a ‘publico viaggio’; see ‘Triumphus Mortis’ ii 14.
-The phrase is also found in other works by S. such as the Maniac’s speech in J&M 371–3:
-
-‘poverty and shame may meet and say —
-Halting beside me on the public way —
-That love-devoted youth is ours — ’
 
 A partially cancelled draft of these lines appears to be even more explicitly Petrarchan: ‘I seem to
 [wander canc.] linger on the public way/And hear Oblivion whisper Death, & say’ (Nbk 6 p. 97; BSM
@@ -41390,34 +36047,6 @@ cancelled impulse. All words written above the original line are in a similar ha
 that [?Whirled] was intended to accompany torrent. one mighty torrent] See Childe Harold’s Pilgrimage
 I xix l. 9: ‘mix’d in one mighty scene’. appear,] appear Box 1.
 
-And others as with steps towards the tomb
-Pored on the trodden worms that crawled beneath,
-And others mournfully within the gloom
-
-Of their own shadow walked, and called it death . . .
-60 And some fled from it as it were a ghost,
-Half fainting in the affliction of vain breath.
-
-But more, with motions which each other crossed,
-Pursued or shunned the shadows the clouds threw
-Or birds within the noonday ether lost,
-
-65 Upon that path where flowers never grew,
-And weary with vain toil and faint for thirst
-Heard not the fountains whose melodious dew
-
-Out of their mossy cells forever burst,
-Nor felt the breeze which from the forest told
-70 Of grassy paths, and wood lawns interspersed
-
-With overarching elms, and caverns cold,
-And violet banks where sweet dreams brood, but they
-Pursued their serious folly as of old . . .
-
-And as I gazed methought that in the way
-75 The throng grew wilder, as the woods of June
-When the South wind shakes the extinguished day,
-
 57. Pored] ‘To look intently or fixedly, to gaze’ (OED 1a).
 61. affliction of vain breath] ‘Their tortured breathing as they run’ (GM).
 62–4. Chasing or running away from shadows that have been thrown by clouds or birds, the figures in
@@ -41432,24 +36061,6 @@ Constantia (‘The red Rose that drinks the fountain dew’) (Longman ii 328–9
 71. elms,] elms Box 1. cold,] cold Box 1.
 76. the South wind] Preceded by the [?East] canc. in Box 1 (the second word is read as heat in TL
 (Reiman) and blast in BSM). Reiman (2002) glosses this wind as the libeccio, the Southwest wind, but S.
-
-is surely referring to the South wind (Ital. ostro, Gk νότος, Lat. Auster, Notus), which brings storms to
-
-And a cold glare, intenser than the noon,
-But icy cold, obscured with [ ] light
-The Sun, as he the stars. Like the young Moon
-
-80 When on the sunlit limits of the night
-Her white shell trembles amid crimson air
-And whilst the sleeping tempest gathers might
-
-Doth, as a herald of its coming, bear
-The ghost of her dead mother, whose dim form
-85 Bends in dark ether from her infant’s chair,
-
-So came a chariot on the silent storm
-Of its own rushing splendour, and a Shape
-So sate within as one whom years deform
 
 the Mediterranean in the summer, described in Georgics i 443–4: ‘namque urget ab alto/arboribusque
 satisque Notus pecorique sinister’ (‘from the deep the South Wind is sweeping, foe to tree and crop
@@ -41468,12 +36079,6 @@ opening line of the fragment The lancinated gossamers were glancing (Longman iii
 79–85. Like the young Moon . . . from her infant’s chair] ‘The “old moon in the new moon’s arms”, a sign
 of coming storm’ (GM). See the epigraph to Coleridge, ‘Dejection: An Ode’:
 
-Late, late yestreen I saw the new Moon,
-With the old Moon in her arms;
-And I fear, I fear, my Master dear!
-We shall have a deadly storm.
-Ballad of Sir Patrick Spence
-
 Coleridge has modernised the version of this ballad found in Percy’s Reliques of Ancient Poetry, 4th
 edn (1794) i 80. One contemporary reader of TL made the association with ‘Dejection’: in the copy of
 1824 owned by Fanny Edgeworth, stepsister of the novelist Maria Edgeworth, now in Trinity College
@@ -41485,16 +36090,6 @@ returned to check against the MS in preparing 1839 for the press).
 85. chair,] chair Box 1.
 87–93. a Shape . . . the light] S.’s description of the ‘Shape’ has a number of literary antecedents. The
 earliest of these is the Thessalian witch Erichtho in Lucan, Pharsalia vi 507–626, especially ll. 511–12:
-
-‘desertaque busta/Incolit et tumulos expulsis obtinet umbris’ (‘she inhabited deserted tombs, and
-
-Beneath a dusky hood and double cape
-90 Crouching within the shadow of a tomb;
-And o’er what seemed the head a cloud-like crape
-
-Was bent, a dun and faint etherial gloom
-Tempering the light; upon the chariot’s beam
-A Janus-visaged Shadow did assume
 
 haunted graves from which the ghosts had been driven’), and, after her speech to Sextus Pompey, ll.
 625–6: ‘Maestum tecta caput squalenti nube pererrat/Corpora caesorum tumulis proiecta negatis’
@@ -41534,32 +36129,6 @@ straight forward. As for the likeness of their faces, they four had the face of 
 face of a lion, on the right side: and they four had the face of an ox on the left side; they four
 also had the face of an eagle.
 
-See also the description of the ‘watchful cherubim’ in Paradise Lost xi 128 - 31:
-
-four faces each
-Had, like a double Janus, all their shape
-Spangled with eyes more numerous than those
-Of Argus,
-
-95 The guidance of that wonder-wingèd team;
-The Shapes which drew it in thick lightnings
-Were lost: I heard alone on the air’s soft stream
-
-The music of their ever-moving wings.
-All the four faces of that charioteer
-100 Had their eyes banded . . . little profit brings
-
-Speed in the van and blindness in the rear,
-Nor then avail the beams that quench the Sun
-Or that these banded eyes could pierce the sphere
-
-Of all that is, has been, or will be done —
-105 So ill was the car guided, but it passed
-With solemn speed majestically on . . .
-
-The crowd gave way, and I arose aghast,
-Or seemed to rise, so mighty was the trance,
-
 95. wonder-wingèd] Box 1; wonder-winged eds. There is a mark after the i dot in Box 1 which signals
 the accented second syllable needed for the pentameter. team;] team Box 1.
 96. Shapes] These are the bearers of the chariot — the wonder-wingèd team — not to be confused with
@@ -41585,26 +36154,12 @@ as ‘wi’ and se as ‘th’ to create ‘with’.
 104. done —] done. — Box 1.
 105. car] ‘A chariot, esp. of war, triumph, splendour, or pageantry’ (OED 1b).
 
-106. See the description of the eagle in Pope’s translation of Odyssey xv 184–5: ‘In solemn speed the
-bird majestick flew/Full dexter to the car’.
-107. aghast,] aghast Box 1.
-108. trance,] trance Box 1.
-
-110 The million with fierce song and maniac dance
-Raging around; such seemed the jubilee
-As when to greet some conqueror’s advance
-
 109–10. like clouds . . . The million] A thunder-blast is a peal of thunder, an audible accompaniment to
 the visual phenomenon of lightning. S. is using a periphrastic construction to show that the ‘million’
 appear like clouds in a thunderstorm when viewed from a distance (i.e. swiftly moving and illumi-
 nated in flashes). The imagery returns in the later description of the dancers ‘like two clouds into one
 vale impelled’ (l. 155) and in Rousseau’s narration (ll. 453–5, ll. 530–2, ll. 534–5). This simile recalls
 the chorus in PU IV 77–80:
-
-But now — oh weave the mystic measure
-Of music and dance and shapes of light,
-Let the Hours, and the Spirits of might and pleasure,
-Like the clouds and sunbeams, unite.
 
 ‘I would not be a King: enough’ (Lines connected with Hellas (Longman v, no. 411 Appendix) J ll. 45–51
 show that the association between clouds and the dance also had mystical and pleasurable qualities
@@ -41645,14 +36200,6 @@ seems to require as prisoners are being freed and there is ‘fierce song’. Ge
 1809, the fiftieth year of his reign, with public feasts, illuminations, and fireworks across the country.
 112. greet] meet 1824.
 
-Imperial Rome poured forth her living sea
-From senate-house and prison and theatre
-115 [                  ] upon the free
-
-Had bound a yoke which soon they stooped to bear.
-Nor wanted here the just similitude
-Of a triumphal pageant, for where’er
-
 113. Imperial Rome] The period after the Roman Republic and following the civil wars (c. 130 BC-44
 BC), in which the Emperor was granted greater powers and the Senate was substantially weakened.
 Imperial Rome began in effect with the appointment of Julius Caesar as dictator in 49 BC and was
@@ -41663,10 +36210,6 @@ of mankind’ (SC vi 963). living sea] See the description of the sunken ship in
 (Longman ii 365–78, no. 321) ll. 31–2 ‘the heavy, dead hulk/On the living Sea rolls’. living] Written
 above a cancelled word in Box 1 that is read by GM as ‘fresh’ and in BSM as ‘foul’.
 114–6. Box 1 includes the following drafts towards ll. 114–5:
-
-Of senators & gladiators and slaves
-When Freedom left those who would not be free
-The semblance of
 
 These lines are struck through and beneath the first of them S. wrote From senatehouse & prison & the-
 atre (the idea of gladiators is still present in l. 114 if theatre is taken to mean an open-air location, such
@@ -41688,30 +36231,6 @@ stroke through the last two letters, as noted in TL (JEGP) 603.
 118. a triumphal pageant] In Ancient Rome the highest honour given to a victorious general on his
 return to Rome was a triumphal procession, where he led his army and the subjugated foe through
 Rome. Cp. the ‘triumph of Anarchy’ in MA 51–7:
-
-the Pageant swift and free,
-Tearing up, and trampling down;
-Till they came to London town.
-
-And each dweller, panic-stricken,
-Felt his heart with terror sicken
-Hearing the tempestuous cry
-Of the triumph of Anarchy.
-
-The chariot rolled, a captive multitude
-120 Was driven: all those who had grown old in power
-Or misery, — all who have their age subdued
-
-By action or by suffering, and whose hour
-Was drained to its last sand in weal or woe,
-So that the trunk survived both fruit and flower;
-
-125 All those whose fame or infamy must grow
-Till the great winter lay the form and name
-Of their [?bright] earth with them forever low,
-
-All but the sacred few who could not tame
-Their spirits to the Conqueror, but as soon
 
 119. captive multitude] See Paradise Lost ii 320–3: ‘to remain/In strictest bondage, though thus far
 removed,/Under the inevitable curb, reserved/His captive multitude’. rolled,] rolled Box 1.
@@ -41744,17 +36263,6 @@ changed into a mass of frost’ (L i 499).
 i 143, 323 Satan and Beelzebub call God ‘conqueror’. That S. associated both life and a supernatural
 power with his idea of the Conqueror is suggested in the fragment Why would you overlive your life
 again? (Longman iii 233, no. 270), written in late 1819:
-
-Why would you overlive your life again?
-Ever press onward onward in the train
-Of the great conqueror — till ye climb
-
-Fled back like eagles to their native noon,
-Or those who put aside the diadem
-Of earthly thorns or gems, till the last one
-
-Were there: for they of Athens and Jerusalem
-135 Were neither mid the mighty captives seen
 
 131. ‘Eagles traditionally lived near the blazing sun’ (GM). In the Roman tradition new-born eagles
 were forced to look into the sun: those that could behold it were reared and those that flinched were
@@ -41800,14 +36308,6 @@ uncancelled phrase the octogenerian Aurangzebe is written in Abinger above l. 47
 with The Triumph of Life Appendix D (Longman vi, no. 452 Appendix) and Aurangzebe appears in
 a rejected draft for lines following l. 280 (see headnote to Lines Connected with The Triumph of Life
 
-Or fled before . . . Swift, fierce and obscene
-The wild dance maddens in the van, and those
-Who lead it, fleet as shadows on the green,
-
-140 Outspeed the chariot and without repose
-Mix with each other in tempestuous measure
-To savage music . . . Wilder as it grows,
-
 136. them] them . . . Box 1 (‘the dots survive because [l.] 137 originally began: Meanwhile the dance
 grew wild & more obscene’ (TL (GM)).
 137–158. S. describes a bas-relief on a pedestal of a statue of Minerva in ‘Notes on Sculptures’ (Julian
@@ -41848,17 +36348,6 @@ the men & women & children in ­different bands — the sexes always ­separate 
 night in dancing on the sands close to our door running into the sea then back again and scream-
 ing all the time one perpetuel air — the most detestable in the world (Mary L i 249).
 
-Mary later expanded on these happenings around the Villa Magni in ‘Note on the Poems of 1822’ 1839
-iv 229–30:
-
-They, tortured by the agonizing pleasure,
-Convulsed, and on the rapid whirlwinds spun
-145 Of that fierce spirit whose unholy leisure
-
-Was soothed by mischief since the world begun,
-Throw back their heads and loose their streaming hair,
-And in their dance round her who dims the Sun
-
 The natives were wilder than the place. Our near neighbours, of Sant’ Arenzo, were more like
 savages than any people I ever before saw. Many a night they passed on the beach, singing or
 rather howling, the women dancing about among the waves that broke at their feet, the men
@@ -41894,17 +36383,6 @@ spirit, Box 1.
 why maenads catch beast-eating snakes and drape their tresses with them’). hair,] hair Box 1.
 148. her who dims the Sun] The allegorical figure of Life who is identified in l. 180.
 
-150 As their feet twinkle; now recede, and now,
-Bending within each other’s atmosphere
-
-Kindle invisibly; and as they glow
-Like moths by light attracted and repelled,
-Oft to their bright destruction come and go,
-
-155 Till — like two clouds into one vale impelled
-That shake the mountains when their lightnings mingle,
-And die in rain — the fiery band which held
-
 150. feet twinkle] The image of feet twinkling in the dance comes from Odyssey viii 265: μαρμαρυγὰς
 θηεῖτο ποδῶν, θαύμαζε δὲ θυμῷ (‘[Odysseus] gazed at the flashing of their feet and marvelled in spirit’).
 See also the dance in Gray, The Progress of Poesy: A Pindaric Ode (1757) ll. 25 - 35, esp. ll. 34–5: ‘To brisk
@@ -41914,14 +36392,6 @@ feet so small and sylphlike’ (S. had heard Byron read from Marino Faliero and 
 self in Ravenna, see L ii 308, 330). now recede] S. initially wrote now recede then wrote they in pencil
 between the two words. He then cancelled now they and wrote now above. Editors have opted for ‘they
 recede’ (1824, TL (Reiman)) and ‘now they recede’ (TL (GM)). A document in the hand of GM entitled
-
-“Revisions in Collaboration with Don Reiman, 9 Aug 1971” shows that GM and Reiman agreed that
-the phrase reads now recede and now in Box 1. now,] now Box 1.
-153–7. See Romeo and Juliet II vi 9–11:
-
-These violent delights have violent ends,
-And in their triumph die, like fire and powder,
-Which as they kiss consume.
 
 153–4. The simile of the moth being attracted to the light also occurs in On the Medusa of Leonardo
 da Vinci (Longman iii 218–23, no. 263) ll. 30–1, ‘And he comes hastening like a moth that hies/After a
@@ -41933,48 +36403,13 @@ reading ‘new’ in TL (Reiman) is doubtful.
 155–7. Till — . . . mingle, . . . rain —] Till . . . mingle . . . rain, — Box 1 (Till is in pencil). This imagery
 is anticipated in The Cloud ll. 9–12:
 
-I wield the flail of the lashing hail,
-And whiten the green plains under,
-And then again I dissolve it in rain,
-And laugh as I pass in thunder.
-
 There are sources for the meteorological image in earlier poetry, scientific observations, and travel
 writing. The sexual potency of S.’s simile appears in John Wilmot, Earl of Rochester, ‘A Dialogue
 between Strephon and Daphne’, ll. 33–44:
 
-[Strephon]
-See the heavens in lightnings break,
-Next in storms of thunder speak,
-Till a kind rain from above
-Makes a calm — so ’tis in love.
-
-Their natures, snaps . . . the shock still may tingle;
-One falls and then another in the path
-160 Senseless, nor is the desolation single,
-
-Yet ere I can say where, the chariot hath
-Passed over them; nor other trace I find
-
-Flames begin our first address;
-Like meeting thunder we embrace;
-Then, you know, the showers that fall
-Quench the fire, and quiet all.
-
-Daphne
-How should I these showers forget?
-’Twas so pleasant to be wet!
-They killed love, I knew it well:
-I died all the while they fell.
-
-S.’s image is also in line with contemporary writing on climate, such as Benjamin Franklin, Experiments
-and Observations on Electricity (1751) 42:
-
 if an electrified cloud coming from the sea, meets in the air a cloud raised from the land, and there-
 fore not electrified; the first will flash its fire into the latter, and thereby both clouds shall be made
 suddenly to deposit water.
-
-It is also in keeping with accounts of seeing such a storm, such as James Bruce, Travels, between the
-years 1768 and 1773, through Africa into Abyssinia to discover the source of the Nile (1805) 352–3:
 
 About nine, a small cloud, not above four feet broad, appears in the east, whirling violently
 round as if upon an axis, but, arrived near the zenith, it first abates its motion, then loses its
@@ -41995,18 +36430,6 @@ lations and substitution are in pencil). where,] where Box 1.
 pencil, to remains.
 162–3. trace . . . wrath] See Inferno xxiv 47–51:
 
-‘ché, seggendo in piuma,
-in fama non si vien, né sotto coltre;
-sanza la qual chi sua vita consuma,
-
-Is spent upon the desert shore. — Behind,
-165 Old men and women foully disarrayed
-Shake their grey hair in the insulting wind,
-
-Grasp in the dance and strain with limbs decayed
-To reach the car of light which leaves them still
-Far behind and deeper in the shade . . .
-
 cotal vestigio in terra di sé lascia,
 qual fummo in aere e in acqua la schiuma.’
 (‘ “for sitting down or under blankets none comes to fame, and without it he that consumes his life
@@ -42023,14 +36446,6 @@ it is both the ‘Old men’ and ‘women’ who ‘Shake their grey hair’ but
 disarrayed’. The problem with this reading is that it implies that the ‘women’ have ‘grey hair’ and ‘limbs
 decayed’ but are not ‘Old’. GM’s reading is preferred as it is the least confusing, while it also admits
 some ambiguity. S. may have in mind Euripides’ Bacchae 322–4 (see headnote for this play as a source
-
-for TL), in which Tiresias and Cadmus decide to join the ivy-clad women in their ecstatic dance:
-
-ἐγὼ μὲν οὖν καὶ Κάδμος, ὃν σὺ διαγελᾷς,
-κισσῷ τ᾿ ἐρεψόμεσθα καὶ χορεύσομεν,
-πολιὰ ξυνωρίς, ἀλλ᾿ ὅμως χορευτέον.
-(‘I shall crown my head with ivy and join the dance, and so will Cadmus, whom you mock. We are a
-pair of grayheads, but still we must dance.’)
 
 165. men] men, Box 1. See note to ll. 165–7.
 166. hair] hairs 1824. insulting] Attacking, assaulting, assailing (see OED 4a). wind,] wind Box 1.
@@ -42051,22 +36466,6 @@ better poetry to take “still” as modifying verb rather than adjective, thus 
 mere distance (i.e. “goes on leaving them far behind and deeper — ” rather than “leaves them even
 further behind and deeper — ”).’
 
-170 But not the less with impotence of will
-They move, though ghastly shadows interpose
-Round them and round each other, and fulfil
-
-Their work, and to the dust whence they arose
-Sink, and corruption veils them as they lie,
-175 And frost in these performs what fire in those.
-
-Struck to the heart by this sad pageantry,
-Half to myself I said, ‘And what is this?
-Whose shape is that within the car? And why — ’
-
-I would have added — ‘Is all here amiss?’
-180 But a voice answered — ‘Life’ . . . I turned and knew
-(O Heaven have mercy on such wretchedness!)
-
 171. move,] move Box 1 (only visible through pressure on the leaf; the pencil lead has faded entirely);
 wheel, eds. In Box 1 wheel uncanc. is written above dance canc. with move uncanc. below.
 172. Round them] ‘i.e. round the interposing shadows’ (GM).
@@ -42079,10 +36478,6 @@ difficulty in extracting a reading entirely understandable). those.] those Box 1
 176. This pencilled line in Box 1 is overwritten in ink. pageantry,] pageantry Box 1.
 178. There are a number of cancelled drafts of this line in Box 1, including:
 
-And who, is the mistress of the mystery?
-And who is she, and a voice made reply,
-And a voice said life
-
 179. added —] added Box 1.
 180. answered —] answered. . Box 1. ‘Life’] Rousseau’s first word is the first mention of ‘Life’, the myste-
 rious subject of the triumph mentioned again on ll. 236 and 256, and the subject of the narrator’s final
@@ -42093,23 +36488,6 @@ ainsi dire, en deux fois: l’une pour exister, et l’autre pour vivre; l’une
 species and once for our sex’, trans. Bloom).
 182–3. an old . . . side] Cp. the description in Alastor ll. 529–32 of the ‘rugged slope’ on which ‘nought
 but gnarlèd roots of ancient pines/Branchless and blasted, clenched with grasping roots/the unwilling
-
-We paused amid the pines that stood
-The giants of the waste,
-Tortured by storms to shapes as rude
-As serpents interlaced[.]
-
-185 And that the grass which methought hung so wide
-And white, was but his thin discoloured hair,
-And that the holes it vainly sought to hide
-
-Were or had been eyes. — ‘If thou canst forbear
-To join the dance, which I had well forborne’,
-190 Said the grim Feature, of my thought aware,
-
-‘I will now tell that which to this deep scorn
-Led me and my companions, and relate
-The progress of the pageant since the morn;
 
 The idea of dead humans as trees is found in Inferno xiii 1–39, in which those who committed suicide
 are turned into trees ‘nodosi e’nvolti’ (‘knotted and warped’, trans. Sinclair). Orrin Wang has suggested
@@ -42142,21 +36520,6 @@ relate all then cancelled each word separately probably at the same time as canc
 and writing relate above. The word or words written above relate all canc. are partially blotted and
 cancelled. TL (JEGP), contra TL (Reiman), suggests that S. ‘cancelled relate for unveil; then wrote tell
 on top of the last half of unveil (blotting it), which must reinstate all. There is no now.’
-
-‘If thirst of knowledge doth not then abate,
-195 Follow it thou even to the night, but I
-Am weary’ . . . then like one who with the weight
-
-Of his own words is staggered, wearily
-He paused, and ere he could resume, I cried,
-‘First, who art thou?’ . . . ‘Before thy memory
-
-200 ‘I feared, loved, hated, suffered, did, and died,
-And if the spark with which Heaven lit my spirit
-Earth had with purer nutriment supplied
-
-‘Corruption would not now thus much inherit
-Of what was once Rousseau — nor this disguise
 
 194. doth not then] shall not then 1824; shall not thus TL (GM); doth not thus TL (Reiman). In Box 1
 doth appears to have been cancelled then reinstated (as Reiman notes), and then is written above thus
@@ -42239,9 +36602,6 @@ guished; cp. Lines Written among the Euganean Hills ll. 256–84, and OWW 66–7
 unextinguished hearth/Ashes and sparks, my words among mankind!’ Given that Rousseau’s most
 influential writing was in prose and not poetry, the following passage from DP (Reiman (2002) para.
 
-A thousand beacons from the spark I bore. — ’
-‘And who are those chained to the car?’ ‘The wise,
-
 The parts of a composition may be poetical, without the composition as a whole being a poem.
 A single sentence may be considered as a whole though it may be found in the midst of a series
 of unassimilated portions; a single word even may be a spark of inextinguishable thought.
@@ -42253,10 +36613,6 @@ onde sono allumati più di mille;’
 Those sparkles were the seeds, which I deriv’d
 From the bright fountain of celestial fire
 That feeds unnumber’d lamps” ’)
-
-206. there] there then Box 1.
-208–12. The wise . . . themselves] The depiction of the great has a number of literary analogues. First,
-in Petrarch, ‘Triumphus Mortis’ i 79–84:
 
 Ivi eran quei che fur detti felici:
 pontefici, regnanti, imperadori;
@@ -42270,9 +36626,6 @@ Now are they naked, poor, of all bereft.
 Where now their riches? Where their honours now?
 Where now their gems and scepters, and their crowns,
 The miters, and the purple they had worn?’, trans. Wilkins).
-
-Furthemore, Rousseau’s description of those chained to the car is an inversion of Virgil’s characterisa-
-tion of Dante in his valediction in Purgatorio xxvii 139–42:
 
 ‘Non aspettar mio dir più né mio cenno:
 libero, dritto e sano è tuo arbitrio,
@@ -42289,24 +36642,6 @@ These lines also seem to be influenced by part of Byron’s description of Napol
 in Childe Harold’s Pilgrimage III xxxviii ll. 5–8: ‘An empire thou couldst crush, command, rebuild,/But
 govern not the pettiest passion, nor,/However deeply in men’s spirits skill’d,/Look through thine own’.
 208. wise,] Wise Box 1.
-
-210 Mitres and helms and crowns, or wreaths of light,
-Signs of thought’s empire over thought; their lore
-
-‘Taught them not this — to know themselves; their might
-Could not repress the mutiny within,
-And for the morn of truth they feigned, deep night
-
-209. great,] great Box 1. unforgotten:] unforgotten Box 1.
-210. wreaths of light] ‘Not saintly haloes but emblems of intellectual supremacy’ (GM). light,] light
-Box 1.
-211–3. Cp. Sonnet: Political Greatness ll. 10–4:
-
-Man who man would be,
-Must rule the empire of himself, in it
-Must be supreme, establishing his throne
-On vanquished will; quelling the anarchy
-Of hopes and fears; being himself alone.
 
 212. to know themselves] ‘ “Know thyself ” [γνῶθι σεαυτόν], a Socratic motto, was inscribed over the
 temple of Apollo at Delphi’ (GM). See also the Preface to The Cenci (Longman ii, no. 209) ll. 60–3:
@@ -42331,9 +36666,6 @@ gente, a cui si fa notte inanzi sera.’
 Fierce and relentless; ye are deaf and blind,
 Night falls on you ere’ tis eventide.” ’ trans. Wilkins)
 
-215–24. Who is he . . . Napoleon fell] S.’s description is influenced by Byron’s portrait of Napoleon in
-Childe Harold’s Pilgrimage III xxxvi-xlvi, especially xxxvi-xxxvii:
-
 There sunk the greatest, nor the worst of men,
 Whose spirit antithetically mixt
 One moment of the mightiest, and again
@@ -42343,9 +36675,6 @@ Thy throne had still been thine, or never been;
 For daring made thy rise as fall: thou seek’st
 Even now to re-assume the imperial mien,
 And shake again the world, the Thunderer of the scene!
-
-Upon his breast and hands crossed on his chain?’
-‘The Child of a fierce hour; he sought to win
 
 Conqueror and captive of the earth art thou!
 She trembles at thee still, and thy wild name
@@ -42400,29 +36729,6 @@ united under one person, the child and the champion of Jacobinism, who has been 
 its principles, who has fought its battles; who has systematised its ambition, at once the fiercest
 instrument of its fanaticism, and the gaudiest puppet of its folly!
 
-‘The world, and lost all it did contain
-Of greatness, in its hope destroyed, and more
-220 Of fame and peace than Virtue’s self can gain
-
-‘Without the opportunity which bore
-Him on its eagle’s pinion to the peak
-From which a thousand climbers have before
-
-Fall’n as Napoleon fell.’ — I felt my cheek
-225 Alter to see the great form pass away
-Whose grasp had left the giant world so weak
-
-That every pigmy kicked it as it lay —
-And much I grieved to think how power and will
-In opposition rule our mortal day —
-
-230 And why God made irreconcilable
-Good and the means of good; and for despair
-I half disdained mine eye’s desire to fill
-
-With the spent vision of the times that were
-And scarce have ceased to be . . . ‘Dost thou behold,’
-
 218. all it] all that it 1824.
 219. destroyed,] destroyed; Box 1.
 222. eagle’s pinion] eagle pinions 1824. See note to l. 131. In the days following his coronation in 1804,
@@ -42453,15 +36759,6 @@ Envied, yet how unenviable! what stings
 Are theirs! One breast laid upon were a school
 Which would unteach mankind the lust to shine or rule:
 
-235. Said then my] said my 1824. spoilers spoiled] Edward Duffy, Rousseau in England, 168, claims
-Byron as S.’s source for this phrase, citing the post-script to a letter to John Murray of 20 May 1820:
-
-Do you remember the epitaph on Voltaire?
-“Cy git l’enfant gaté” &c.
-“Here lies the spoilt Child
-Of the World which he spoil’d”
-The original is in Grimm & Diderot &c. &c. &c. (Byron L&J vii 103)
-
 See Friedrich Melchior, Baron Von Grimm, Correspondance littéraire et philosophique (1812) pt. II iv
 355. Voltaire] François-Marie Arouet (1694–1778) wrote under the name Voltaire, a French polymath
 who served as advisor to Frederick II of Prussia from 1750–3. To many Britons of S.’s generation,
@@ -42471,8 +36768,6 @@ philosophique (Philosophical Dic­tionary) (1764), Voltaire was the archetypal E
 who challenged received notions about religion and government. It is clear from Lines Connected with
 The Triumph of Life Appendix H ll. 11–26 that S. had at one point considered a larger role for Voltaire
 in TL (see headnote to Appendix H). In his characterization of Voltaire as a ‘spoiler’, S. seems to have
-
-in mind Byron’s description of Voltaire in Childe Harold’s Pilgrimage III cvi as:
 
 fire and fickleness, a child,
 Most mutable in wishes, but in mind,
@@ -42533,12 +36828,6 @@ Flags wearily through darkness and despair —
 A cloud-encircled meteor of the air,
 A hooded eagle among blinking owls.
 
-See also PB3 378–87. Hazlitt’s 1817 review of Coleridge’s Biographia Literaria in the Edinburgh Review,
-may have been a further source for S.’s sense of Kant:
-
-With [?many] an anarch, demagogue and sage
-Whose name the fresh world thinks already old,
-
 As to the great German oracle Kant, we must take the liberty to say, that his system appears
 to us the most wilful and monstrous absurdity that ever was invented. If the French the-
 ories of the mind were too chemical, this is too mechanical. . .It is an enormous heap of
@@ -42590,21 +36879,6 @@ peculiar to S., who saw these monarchs as tyrants, and all tyranny as essentiall
 chic. See also Lines Written among the Euganean Hills l. 152 and note.
 238. — name the world thinks always old, 1824. old,] old — Box 1.
 
-‘For in the battle Life and they did wage
-240 She remained conqueror — I was overcome
-By my own heart alone, which neither age
-
-‘Nor tears nor infamy nor now the tomb
-Could temper to its object’ — ‘Let them pass’ —
-I cried — ‘the world and its mysterious doom
-
-245 ‘Is not so much more glorious than it was
-That I desire to worship those who drew
-New figures on its false and fragile glass
-
-‘As the old faded.’ — ‘Figures ever new
-Rise on the bubble, paint them how you may;
-
 240–3. I was . . . object] Bradley was the first to probe the grammar and meaning of these lines —
 see Bradley Notes, 451–2 — and seems right in thinking that ‘temper’ means ‘to modify, usually to
 moderate or subdue, this or that so as to make it suitable to this or that’. Although the meaning is by
@@ -42639,18 +36913,6 @@ of the 1st part of the Nouvelle Heloise?’ (L ii 407).
 worthless’ (OED 2), and is describing the ‘world’ of l. 244, in which these ‘figures’ have briefly risen to
 prominence. bubble, . . . may;] bubble . . . may Box 1. how] as 1824.
 
-‘Our shadows on it as it passed away.
-But mark how chained to the triumphal chair
-The mighty phantoms of an elder day —
-
-‘All that is mortal of great Plato there
-255 Expiates the joy and woe his master knew not;
-The star that ruled his doom was far too fair —
-
-‘And Life, where long that flower of Heaven grew not,
-Conquered the heart by love which gold or pain
-Or age or sloth or slavery could subdue not;
-
 250. us threw,] us, threw — Box 1.
 251. as] ere TL (GM). away.] away Box 1.
 252. mark] mark, Box 1.
@@ -42682,13 +36944,6 @@ off letters to an Italian friend ‘Onofrio Davy’ in 1821 and 1825 (see The Co
 Davy, eds Tim Fulford and Sharon Ruston (2020) iii 283, 562). Byron socialised with Davy at Ravenna
 in spring 1820 (see Byron L&J vii 95), and he is probably S.’s source for this portmanteau of Davy’s
 
-The tutor and his pupil, whom Dominion
-Followed as tame as vulture in a chain. —
-
-‘The world was darkened beneath either pinion
-Of him whom from the flock of conquerors
-265 Fame singled as her thunder-bearing minion;
-
 name. Its inclusion at this point in the draft is curious. The placement of the word in a gap suggests
 that S. added the word after he had written the lines in TL. The marginal gloss also carefully avoids TL
 draft and appears to be in a different ink from that used for Srumfredevi, suggesting S. may had added
@@ -42705,11 +36960,6 @@ considered including a figure from modern science in the triumph, and that Davy,
 that he was still living. S. may have been familiar with Davy’s abstract pantheistic poem ‘The Spinosist’,
 which has some resonances with the opening of TL, and was published in the Gentleman’s Magazine
 lxxvi: 2 (1806) p. 1148. The poem begins:
-
-Lo! o’er the earth the kindling spirits pour
-The flames of life, that bounteous Nature gives
-The limpid dew becomes the rosy flower,
-The insensate dust awakes, and moves, and lives.
 
 It is also possible that S. was simply told or reminded of this amusing nickname for Davy while this
 piece of paper was to hand, on which he then wrote Srumfredevi at an available gap. twain,] 1824;
@@ -42733,18 +36983,6 @@ discussed in ll. 216–24.
 265. Fame singled as her] Fame singled out for her 1824 (as is written over for in Box 1; there is no
 authority for ‘out’).
 
-‘The other long outlived both woes and wars
-Throned in new thoughts of men, and still had kept
-The jealous keys of truth’s eternal doors
-
-‘If Bacon’s spirit [          ] had not leapt
-270 Like lightning out of darkness; he compelled
-The Proteus shape of Nature’s as it slept
-
-‘To wake and to unbar the caves that held
-The treasure of the secrets of its reign. —
-See the great bards of old who inly quelled
-
 267. new] the 1824 (new is written above the uncanc. in Box 1).
 268. keys] key 1824.
 269. Bacon’s] Sir Francis Bacon (1561–1626), English philosopher, statesman, and author, was a pro-
@@ -42759,13 +36997,6 @@ cal imposture, and was attended with an extraordinary exertion of the energies o
 power. Shakespeare and Lord Bacon and the great writers of the age of Elizabeth and James
 the 1st were at once the effects of this new spirit in men’s minds, and the causes of its more
 complete development (SC vi 966–7)
-
-Bacon’s spirit] Bacon’s eagle spirit 1824 (there is no authority for eagle in Box 1.)
-270. compelled] Cp. Adonais 381–3:
-
-the one Spirit’s plastic stress
-Sweeps through the dull dense world, compelling there,
-All new successions to the forms they wear;
 
 271. The] That TL (GM). The That preferred by GM is written above The Proteus in Box 1 and is
 cancelled, but appears to be part of a previous incomplete draft of l. 271 beginning If that. Proteus]
@@ -42784,14 +37015,6 @@ could be a reflexive construction meaning ‘Nature’s’ Protean shape.
 273. reign. —] reign — Box 1.
 274. See the great bards of elder time, who quelled 1824.
 274–6. the great . . . known] See Dante’s encounter with his poetic forbears in Inferno iv 79–90, 94–6:
-
-275 ‘The passions which they sung, as by their strain
-May well be known: [their living melody]
-Tempers its own contagion to the vein
-
-‘Of those who are infected with it — I
-Have suffered what I wrote, or viler pain! —
-280 ‘And so my words were seeds of misery —
 
 Intanto voce fu per me udita:
 ‘Onorate l’altissimo poeta;
@@ -42818,12 +37041,6 @@ Who in his right hand bears that falchion keen,
 The other three preceding, as their lord.
 This is that Homer, of all bards supreme:
 
-Flaccus the next in satire’s vein excelling;
-The third is Naso; Lucan is the last.”
-So I beheld united the bright school
-Of him the monarch of sublimest song,
-That o’er the others like an eagle soars.’)
-
 276. known:] known, Box 1. [their living melody]] for their soft melody TL (GM); their living melody
 TL (Reiman) (without brackets). The words their living melody are cancelled in Box 1; for their [?soft]
 are not, but their distribution in the MS and the doubt about soft makes the present reading, also in
@@ -42834,17 +37051,6 @@ follow TL (GM) and TL (Reiman) in opting for an irregular two-line stanza (ll. 2
 a complete rhyming tercet (ll. 280–2). 1824 forms a tercet from ll. 278–280 and then inserts three
 lines of asterisks, before resuming at ‘he pointed to a company’ (l. 282).
 280. my words were seeds of misery] See the opening of Ugolino’s speech at Inferno xxxiii 7–9:
-
-Even as the deeds of others.’ — ‘Not as theirs?’
-I said — he pointed to a company
-
-In which I recognized amid the heirs
-Of Caesar’s crime, from him to Constantine,
-285 The Anarchs old whose force and murderous snares
-
-Had founded many a sceptre-bearing line
-And spread the plague of blood and gold abroad,
-And mitre-cinctured phantoms, men divine
 
 ‘Ma se le mie parole esser dien seme
 che frutti infamia al traditor ch’i’ rodo,
@@ -42886,18 +37092,6 @@ A scoff of impious pride from fiends impure;
 Till human thoughts might kneel alone
 Each before the judgement-throne
 
-Who rose like shadows between Man and god,
-290 Till that eclipse, still hanging under Heaven,
-Was worshipped by the world o’er which they strode,
-
-For the true Sun it quenched. — ‘Their power was given
-But to destroy,’ replied the leader — ‘I
-Am one of those who have created, even
-
-295 ‘If it be but a world of agony.’ —
-‘Whence camest thou and whither goest thou?
-How did thy course begin,’ I said, ‘and why?
-
 Of its own aweless soul, or of the power unknown!
 O, that the words which make the thoughts obscure
 From which they spring, as clouds of glimmering dew
@@ -42936,34 +37130,12 @@ n.) so that the Spanish imperative dime is turned into the string of questions, 
 characteristic of TL. See also Job i 7 ‘And the Lord said unto Satan, “Whence comest thou?” Then Satan
 answered the Lord, and said, “From going to and fro in the earth, and from walking up and down in it”.’
 
-Of people, and my heart of one sad thought. —
-300 Speak.’ — ‘Whence I came partly I seem to know
-
-‘And how and by what paths I have been brought
-To this dread pass, methinks even thou mayst guess;
-Why this should be my mind can compass not —
-
-‘Whither the conqueror hurries me still less.
-305 But follow thou, and from spectator turn
-Actor or victim in this wretchedness
-
-‘And what thou wouldst be taught I then may learn
-From thee — now listen . . . In the April prime
-When all the forest tips began to burn
-
-310 ‘With kindling green, touched by the azure clime
-Of the young year, I found myself asleep
-
 300. Speak!” — “Whence I am, I partly seem to know, 1824.
 302. guess;] guess Box 1.
 304. less.] less Box 1.
 305–6. and from spectator turn/Actor or victim] See Gibbon, ‘Upon the Triumphs of the Romans’,
 Miscellaneous Works (1796) iii 159, where he claims the Roman Triumph ‘converted the spectators into
 actors’. Cp. Adonais 184–6:
-
-Whence are we, and why are we? of what scene
-The actors or spectators? Great and mean
-Meet massed in death, who lends what life must borrow.
 
 307–8. S. first wrote And I from thee may then the secret which he cancelled and wrote the present l.
 307 beneath it. He began the next line From thee — There is a cavern and cancelled all but From thee
@@ -42984,30 +37156,6 @@ stones and trees’, trans. Christopher Kelly).
 ‘The apparent apostrophe after “year”, which (assisted the impossible) 1824 reading, is really a comma
 after “season” above’ (GM). None of year, season, dawn or laid asleep are cancelled in Box 1 so the
 
-‘Had yawned into a cavern high and deep,
-And from it came a gentle rivulet
-315 Whose water like clear air in its calm sweep
-
-‘Bent the soft grass and kept for ever wet
-The stems of the sweet flowers, and filled the grove
-With sound which whoso hears must needs forget
-
-‘All pleasure and all pain, all hate and love,
-320 Which they had known before that hour of rest:
-A sleeping mother then would dream not of
-
-‘The only child who died upon her breast
-At eventide, a king would mourn no more
-The crown of which his brow was dispossessed
-
-325 ‘When the sun lingered o’er the Ocean floor
-To gild his rival’s new prosperity. —
-Thou wouldst forget thus vainly to deplore
-
-‘Ills, which if ills, can find no cure from thee,
-The thought of which no other sleep will quell,
-330 Nor other music blot from memory —
-
 reading in TL (GM) is credible. However, the case for taking year and found myself as S.’s latest draft
 is persuasive.
 313. deep,] deep Box 1.
@@ -43017,28 +37165,6 @@ hear TL (Reiman).
 319. pain, . . . love,] pain . . . love Box 1.
 320. rest:] rest Box 1.
 321–4. See Robert Burns, ‘Lament for James, Earl of Glencairn’, ll. 73–6:
-
-The monarch may forget the crown
-That on his head an hour has been;
-The mother may forget the child
-That smiles sae sweetly on her knee
-
-322. The] Her 1824.
-324. brow] brow, Box 1; brows 1824.
-325. the Ocean] his ocean 1824.
-328. Ills, which if ills] A similar syntax occurs at Paradiso x 113: ‘che, se’l vero è vero’ (‘if truth be truth’).
-thee,] thee Box 1.
-329. quell,] quell Box 1.
-
-‘So sweet and deep is the oblivious spell. —
-Whether my life had been before that sleep
-The Heaven which I imagine, or a Hell
-
-‘Like this harsh world in which I wake to weep,
-335 I know not. I arose and for a space
-
-331–48. Rousseau’s sleep and awakening from the oblivious spell resembles Adam’s Edenic awakening
-in Paradise Lost viii 253–66, 270–1:
 
 As new waked from soundest sleep
 Soft on the flowery herb I found me laid
@@ -43081,25 +37207,6 @@ sion in headnote to May-day Night (Longman vi, no. 440)). weep,] weep Box 1.
 335. not.] not . . . TL (GM). TL (GM) offers a perfectly plausible interpretation of the array of punctu-
 ation marks after not in Box 1; a colon is also possible.
 
-‘Though it was now broad day, a gentle trace
-Of light diviner than the common Sun
-Sheds on the common Earth, but all the place
-
-340 ‘Was filled with many sounds woven into one
-Oblivious melody, confusing sense
-Amid the gliding waves and shadows dun;
-
-‘And as I looked the bright omnipresence
-Of morning through the orient cavern flowed,
-345 And the sun’s image radiantly intense
-
-‘Burned on the waters of the well that glowed
-Like gold, and threaded all the forest maze
-With winding paths of emerald fire — there stood
-
-336–7. keep, . . . day,] keep . . . day Box 1.
-337–9. a gentle . . . common Earth] Cp. Wordsworth ‘Ode: Intimations of Immortality’, ll. 71–6:
-
 The Youth, who daily farther from the East
 Must travel, still is Nature’s Priest,
 And by the vision splendid
@@ -43121,36 +37228,11 @@ note to l. 92.
 344. orient] eastward facing. flowed,] flowed Box 1.
 346. Burned on the waters] See Antony and Cleopatra II ii 191–2: ‘The barge she sat in, like a burnish’d
 
-throne,/Burnt on the water.’ The ‘scene of woods and waters’ and the ‘shape all light’ herself echo
-Enobarbus’s description of Cleopatra (II ii 190–208).
-347. forest] forest’s 1824, TL (GM).
-349. sun,] sun Box 1.
-
-350 Of his own glory, on the vibrating
-Floor of the fountain, paved with flashing rays,
-
-‘A shape all light, which with one hand did fling
-Dew on the earth, as if she were the Dawn
-Whose musical rain forever seemed to sing
-
-355 ‘A silver melody on the mossy lawn,
-And still before her on the dusky grass
-Iris her many-coloured scarf had drawn. —
-
 351. rays,] rays Box 1.
 353–85. The account of the shape all light appearing by a stream, and its power to erase memory, seems
 to be influenced by Dante’s first sight of the lady (who Beatrice subsequently calls Matilda) gathering
 flowers by ‘un rio’ (‘a rill’) in Purgatorio xxviii. S. translated Purgatorio xxviii 1–51 in the summer of
 1820, and gave Matilda’s appearance thus,
-
-And then appeared to me — even like a thing
-Which suddenly for blank astonishment
-Dissolves all other thought,
-
-A solitary woman, and she went
-Singing and gathering flower after flower
-With which her way was painted and besprent.
-(Dante’s Purgatorio Canto XXVIII, 1–51 (Longman iii 478–83, no. 331) ll. 37–43)
 
 352. A shape all light] Cp. WA 81–2, ‘A lovely lady garmented in light/From her own beauty’, and
 137–9, ‘her beauty made/The bright world dim, and every thing beside/Seemed like the fleeting image
@@ -43173,26 +37255,9 @@ Byron’s note to Manfred II ii 1. many-coloured scarf] scarf is here being used
 describe a rainbow which appears in the shape of a broad strip of woven material (see OED 3).
 See also Ceres’ description of the ‘Rich scarf ’ of Iris in The Tempest IV i 82.
 
-Mantling with bright nepenthe; — the fierce splendour
-360 Fell from her as she moved under the mass
-
-‘Of the deep cavern, and with palms so tender
-Their tread broke not the mirror of its billow,
-
-359–66. Cp. Byron’s account of Parnassus in Childe Harold’s Pilgrimage I lxii ll. 6–9:
-
-the Muses’ seat, art now their grave
-Some gentle spirit still pervades the spot,
-Sighs in the gale, keeps silence in the cave,
-And glides with glassy foot o’er yon melodious wave.
-
 359. Mantling] Winking TL (GM). S. seems to be using ‘mantling’ to mean ‘bubbling’, as in Goldsmith,
 The Deserted Village (1770) l. 250: ‘the mantling bliss’ of a cup of ale. A similar use of the term occurs
 in a poem contemporary with TL: Felicia Hemans, The Vespers of Palermo (1823) IV ii 29–31:
-
-In the flowers which wreathe
-Its mantling cup there is a scent unknown,
-Fraught with some strange delirium[.]
 
 nepenthe] ‘A drink, potion, or drug bringing, or supposed to bring, forgetfulness of trouble or grief ’
 (OED 1a), that originates in the pain-banishing Egyptian opiate termed φάρμακον νηπενθές (‘nepen-
@@ -43224,24 +37289,11 @@ And human hearts, which to her aery tread
 Yielding not, wounded the invisible
 Palms of her tender feet where’er they fell[.]
 
-‘Head under the dark boughs, till like a willow
-365 Her fair hair swept the bosom of the stream
-That whispered with delight to be their pillow. —
-
-‘As one enamoured is upborne in dream
-O’er lily-paven lakes mid silver mist
-To music [        ], so this shape might seem
-
 S. also uses palm for ‘sole of the foot’ in PU IV 123–4, ‘Our feet now, every palm,/Are sandalled with
 calm’ and in The bat and the owl like barn-door fowl (Longman vi, no. 442) ll. 42–4: ‘Though our feet
 were well shod/Yet the sunbeams we trod/Were too sharp and too hard for our delicate palms.’ This
 usage is quite unusual in English, although it is used for the sole of the feet of quadrupeds (see OED n.
 2 4a). See also Sabrina’s song in Comus 895–8:
-
-Whilst from off the waters fleet
-Thus I set my printless feet
-O’er the cowslip’s velvet head,
-That bends not as I tread,
 
 363. Glided] She glided 1824.
 366. their] its 1824, GM (TL). 1824 apparently rejects the Box 1 reading on the grounds that the pos-
@@ -43274,22 +37326,6 @@ finest personification of Venus’. It was also thought that Venus was born from
 Lingua Latina v 63 ‘Poetae de Caelo quod semen igneum cecidisse dicunt in mare ac natam “e spumis”
 Venerem’ (‘The poets, in that they say that the fiery seed fell from the Sky into the sea and Venus was
 born “from the foam-masses” ’.) See also Hesiod, Theogony, 188–200.
-
-370 ‘Partly to tread the waves with feet which kissed
-The dancing foam, partly to glide along
-The airs that roughened the moist amethyst
-
-‘Or the first morning beams that fell among
-The trees, or the soft shadows of the trees;
-375 And her feet ever to the ceaseless song
-
-‘Of leaves and winds and waves and birds and bees
-And falling drops, moved in a measure new
-Yet sweet, as on the summer evening breeze
-
-‘Up from the lake a shape of golden dew
-380 Between two rocks, athwart the rising moon,
-Dances i’ the wind where eagle never flew. —
 
 370. feet] palms is written faintly above feet uncanc. in Box 1.
 372. The air which roughened the moist amethyst, 1824. moist amethyst] dewy amethyst TL (GM).
@@ -43324,40 +37360,6 @@ Impenetrable barrier, where all thought
 Is lost; where never yet the eagle flew,
 Nor roam’d so far the white-bear through the waste.
 
-‘And still her feet, no less than the sweet tune
-To which they moved, seemed as they moved, to blot
-The thoughts of him who gazed on them; and soon
-
-385 ‘All that was, seemed as if it had been not,
-As if the gazer’s mind was strewn beneath
-Her feet like embers, and she, thought by thought
-
-‘Trampled its fires into the dust of death,
-As Day upon the threshold of the east
-390 Treads out the lamps of night, until the breath
-
-‘Of darkness reillumine even the least
-Of heaven’s living eyes — like day she came,
-Making the night a dream; and ere she ceased
-
-‘To move, as one between desire and shame
-395 Suspended, I said — “If, as it doth seem,
-Thou comest from the realm without a name,
-
-‘ “Into this valley of perpetual dream,
-Show whence I came, and where I am, and why —
-Pass not away upon the passing stream.”
-
-400 ‘ “Arise and quench thy thirst,” was her reply.
-And as a shut lily, stricken by the wand
-Of dewy morning’s vital alchemy,
-
-382–90. And still . . . of night] See Ginevra (Longman iv 203–17, no. 398) ll. 26–8:
-
-Whose pale bead images her light fair feet
-Erased [as] when fleet footsteps of the [sun]
-Tread out the sparks of night[.]
-
 382. feet,] feet Box 1.
 384. them;] them, Box 1.
 385. not,] not Box 1.
@@ -43371,21 +37373,6 @@ thou wert/A wretched thing’.
 400–4. It is unclear whether Rousseau drinks from the cup, and therefore whether it is his drink-
 ing or his not drinking that leads to the events which culminate in him becoming one of the
 ‘multitude’ at l.
-
-‘I rose; and, bending at her sweet command,
-Touched with faint lips the cup she raised,
-405 And suddenly my brain became as sand
-
-‘Where the first wave had more than half erased
-The track of deer on desert Labrador,
-Whilst the empty wolf from which they fled amazed
-
-‘Leaves his stamp visibly upon the shore
-410   Until the second bursts — so on my sight
-Burst a new Vision never seen before. —
-
-‘And the fair shape waned in the coming light
-As veil by veil the silent splendour drops
 
 405–11. The power of the shape all light to strip the mind and then fill it with different thoughts, and the
 use of snow imagery, is similar to the power of celestial light described by Beatrice at Paradiso ii 106–11:
@@ -43424,14 +37411,6 @@ hunger forces them to seek their food even at the very doors of settlements.
 that empty wolf/Flies at his throat who falls.’ wolf] wolf, Box 1.
 412. shape] shape, Box 1. light,] light Box 1.
 
-415 ‘Of sunrise ere it strike the mountain tops —
-And as the presence of that fairest planet,
-Although unseen, is felt by one who hopes
-
-‘That his day’s path may end as he began it
-In that star’s smile, whose light is like the scent
-420 Of a jonquil when evening breezes fan it
-
 414–23. A series of interwoven images about the planet Venus. Venus is Lucifer and the fairest planet,
 which can be seen at the end and beginning of day as either the Evening Star (Hesperus or Vesper) or
 the Morning Star (Phosphorus or Lucifer). Venus is also known as the folding star, as its appearance in
@@ -43462,26 +37441,6 @@ the last letter of strikes and underlined the word to reinstate it.
 low flowers’ (OED 1). In 1818 S. and Mary visited a meadow and S. complained that an ‘excess of
 sweetness’ in the air caused by jonquils nearly made him faint (see Medwin (1913) 198). See also
 Epipsychidion 450–2 (and note):
-
-And from the moss violets and jonquils peep,
-And dart their arrowy odour through the brain
-Till you might faint with that delicious pain.
-
-‘Or the true note in which his dear lament
-The Brescian shepherd breathes, or the caress
-That turned his weary slumber to content. —
-
-‘So knew I in that light’s severe excess
-425 The presence of that shape which on the stream
-Moved, as I moved along the wilderness,
-
-‘More dimly than a day-appearing dream,
-The ghost of a forgotten form of sleep,
-A light from Heaven whose half-extinguished beam
-
-430 ‘Through the sick day in which we wake to weep
-Glimmers, forever sought, forever lost —
-So did that shape its obscure tenour keep
 
 421–3. In 1824 Mary writes a footnote to this tercet that states: ‘The favourite song, “Stanco di pascolar
 le peccorrelle” is a Brescian national air’. The title is normally given as ‘Stanco di pascolar le pecorelle’
@@ -43521,25 +37480,6 @@ above; soft is uncanc., tune is canc. Beneath sweet notes canc. he wrote true no
 429. from Heaven] of heaven, 1824.
 430. wake to weep] See l. 334 and note.
 
-‘Beside my path, as silent as a ghost;
-But the new Vision and its cold bright car
-435 With solemn speed and stunning music crossed
-
-‘The forest, and as if from some dread war
-Triumphantly returning, the loud million
-Fiercely extolled the fortune of her star. —
-
-‘A moving arch of victory the vermilion
-440 And green and azure plumes of Iris had
-Built high over her wind-winged pavilion
-
-‘And underneath etherial glory clad
-The wilderness, and far before her flew
-The tempest of the splendour which forbade
-
-445 ‘Shadow to fall from leaf or stone; — the crew
-Seemed in that light like atomies that dance
-
 434. its] the 1824. car] See note to l. 105.
 435. With savage music, stunning music, crost TL (Reiman). solemn speed] see l. 106. stunning] ‘That
 stuns or stupefies; dazing, astounding, deafening’ (OED 1). Cp. Paradise Lost ii 952, ‘Of stunning
@@ -43563,41 +37503,6 @@ make one regret it’s non-completion’). Here S. transmutes the beauty and pow
 structures into a mobile colourful arch, which he likens to the curve of a rainbow (Iris is a Greek
 Goddess associated with rainbows, see note to l. 357). There is a similar image of the rainbow as tri-
 umphal arch in The Cloud ll. 67–70:
-
-The triumphal arch, through which I march
-With hurricane, fire, and snow,
-When the Powers of the Air are chained to my chair
-Is the million-coloured Bow;
-
-446–7. Cp. the description of the sylphs in Pope, The Rape of the Lock ii 59–64:
-
-Some to the Sun their Insect-Wings unfold,
-Waft on the Breeze, or sink in Clouds of Gold.
-Transparent Forms, too fine for mortal Sight,
-
-‘Embroidery of flowers that did enhance
-The grassy vesture of the desert, played,
-450 Forgetful of the chariot’s swift advance;
-
-‘Others stood gazing till within the shade
-Of the great mountain its light left them dim. —
-Others outspeeded it, and others made
-
-‘Circles around it like the clouds that swim
-455 Round the high moon in a bright sea of air;
-And more did follow, with exulting hymn,
-
-‘The chariot and the captives fettered there,
-But all like bubbles on an eddying flood
-Fell into the same track at last and were
-
-460 ‘Borne onward. — I among the multitude
-Was swept; me sweetest flowers delayed not long,
-Me not the shadow nor the solitude,
-
-Their fluid Bodies half dissolv’d in Light.
-Loose to the Wind their airy Garments flew,
-Thin glitt’ring Textures of the filmy Dew;
 
 Cp. also Coleridge, ‘The Eolian Harp’ ll. 36–7: ‘Whilst thro’ my half-clos’d eye-lids I behold/The sun-
 beams-dance, like diamonds, on the main’.
@@ -43625,25 +37530,6 @@ subsequent vision is a consequence of this.
 463. the] that 1824. Lethean] Pertaining to the river Lethe in Hades whose water had the ability to
 make the dead forget their existence on earth. song,] song Box 1.
 
-Me not the phantom of that early form
-465 Which moved upon its motion, — but among
-
-‘The thickest billows of the living storm
-I plunged, and bared my bosom to the clime
-Of that cold light, whose airs too fierce deform.
-
-‘Before the chariot had begun to climb
-470 The opposing steep of that mysterious dell,
-Behold a wonder worthy of the rhyme
-
-‘Of him who from the lowest depths of Hell
-Through every Paradise and through all glory
-Love led serene, and who returned to tell
-
-475 ‘In words of hate and awe the wondrous story
-How all things are transfigured, except Love;
-For deaf as is a sea which wrath makes hoary
-
 464. Me not] Me, not Box 1, 1824, TL (GM), TL (Reiman). This is the third consecutive line opening
 Me not, but the only one with a comma in the middle of it. GM and Reiman keep this manuscript
 comma, and Mary goes back to add commas between Me and not in the openings of ll. 463 and 462.
@@ -43670,16 +37556,6 @@ resemble those of Dante’s pilgrim and Virgil.
 476. Love;] Love Box 1.
 478–9. See ll. 1–2 of Dante’s canzone which opens Convivio ii, ‘Voi che’ntendendo il terzo Ciel movete’
 (‘O you who move the third heaven by intellection’, trans. Richard H. Lansing), which S. translated
-
-between 25 August 1820 and 16 February 1821 as: ‘Ye who [ ] the third Heaven move/Hear the dis-
-course which is within my heart’ (Ye who [ ] the third Heaven move (Longman iv, no. 390) ll. 1–2).
-
-The sphere whose light is melody to lovers —
-480 A wonder worthy of his rhyme: the grove
-
-‘Grew dense with shadows to its inmost covers,
-The earth was grey with phantoms, and the air
-Was peopled with dim forms, as when there hovers
 
 479. lovers —] lovers. — Box 1.
 480. rhyme:] TL (GM); rhyme — Box 1. The cancelled first draft of this line reads: Behold I sing a
@@ -43720,21 +37596,6 @@ visions, mountains, ghastly looking cities, fiends, angels, sybilline old women,
 gin brides, mothers and children, princes, patriarchs, dying saints. . .Even in the very rudest
 of pictures, where the souls of the dying are going out of their mouths in the shape of little
 children, there are passages not unworthy of Dante (p. 114).
-
-‘A flock of vampire-bats before the glare
-485 Of the tropic sun, bringing ere evening
-Strange night upon some Indian isle, — thus were
-
-‘Phantoms diffused around, and some did fling
-Shadows of shadows, yet unlike themselves,
-Behind them, some like eaglets on the wing
-
-490 ‘Were lost in the white blaze, others like elves
-Danced in a thousand unimagined shapes
-Upon the sunny streams and grassy shelves;
-
-‘And others sate chattering like restless apes
-On vulgar hands, and voluble as fire;
 
 484–6. A flock . . . isle] See the sonnet ‘To the Bat’ given to Blanche by Emily in Ann Radcliffe, The
 Mysteries of Udolpho, 4 vols (1794) IV, ch. xii, esp. ll. 13–4: ‘From Indian isles thou com’st, with Summer’s
@@ -43778,25 +37639,6 @@ The chatterings of the monkeys.
 voluble like fire. TL (Reiman); hands and voluble like fire. Reiman (2002). None of the endings of the
 several cancelled drafts of this line are punctuated in Box 1.
 
-‘Of kingly mantles, some upon the tiar
-Of pontiffs sate like vultures, others played
-Under the crown which girt with empire
-
-‘A baby’s or an idiot’s brow, and made
-500 Their nests in it; the old anatomies
-Sate hatching their base brood under the shade
-
-‘Of demons’ wings, and laughed from their dead eyes
-To reassume the delegated power
-Arrayed in which these worms did monarchize
-
-505 ‘Who make this earth their charnel. — Others more
-Humble, like falcons sate upon the fist
-Of common men, and round their heads did soar,
-
-‘Or like small gnats and flies, as thick as mist
-On evening marshes, thronged about the brow
-
 496. upon the tiar] across the tire 1824.The tiar is the high diadem encircled with three crowns worn
 by the Pope.
 497. pontiffs] pontiffs, Box 1. sate like vultures] rode, like demons; 1824.
@@ -43823,34 +37665,6 @@ ascertain from Box 1.
 506–7. like falcons . . . common men] Falconry is traditionally a courtly and royal pursuit. In the maca-
 bre last vision of TL, the phantoms (who play with symbols of royalty in ll. 495–500) seem to be
 
-obedient to ‘common men’.
-507. soar,] soar Box 1.
-508–9. small gnats . . . marshes] These lines recall two earlier images at ll. 46 and 377–81.
-509. marshes,] marshes Box 1 (S. has cancelled a comma after marshes in Box 1).
-
-‘And others like discoloured flakes of snow
-On fairest bosoms, and the sunniest hair
-Fell, and were melted by the youthful glow
-
-‘Which they extinguished; for like tears, they were
-515 A veil to those from whose faint lids they rained
-In drops of sorrow. — I became aware
-
-‘Of whence those forms proceeded which thus stained
-The track in which we moved; after brief space
-From every form the beauty slowly waned;
-
-520 ‘From every firmest limb and fairest face
-‘The strength and freshness fell like dust, and left
-The action and the shape without the grace
-
-‘Of life; the marble brow of youth was cleft
-With care, and in the eyes where once hope shone
-525 Desire like a lioness bereft
-
-‘Of its last cub, glared ere it died; each one
-Of that great crowd sent forth incessantly
-
 510. lawyer, statesman, priest and theorist] Cp. the presence in the triumph of Anarchy in MA 66 of
 ‘Lawyers and priests, a motley crowd’. lawyer, statesman,] lawyer statesman (altered from lawyers states-
 men) Box 1. theorist] The term has two meanings — ‘A person who formulates or develops theories. . .
@@ -43875,37 +37689,10 @@ a gallant in the brow of youth’.
 rages when her suckling cub has been stolen from her’).
 526. its] her 1824.
 
-‘In autumn evenings from a poplar tree. —
-530 Each like himself and like each other were
-At first, but soon distorted seemed to be
-
-‘Obscure clouds moulded by the casual air;
-And of this stuff the car’s creative ray
-Wrought all the busy phantoms that were there
-
-535 ‘As the sun shapes the clouds — thus on the way
-Mask after mask fell from the countenance
-And form of all, and long before the day
-
-‘Was old, the joy which waked like Heaven’s glance
-The sleepers in the oblivious valley, died,
-540 And some grew weary of the ghastly dance
-
-‘And fell, as I have fallen by the wayside,
-Those soonest from whose forms most shadows passed
-And least of strength and beauty did abide.’ —
-
 528. shadows] The fifth and sixth letters of shadows are cancelled in Box 1 prompting the speculation
 in TL (GM) that S. may have intended shades.
 529. autumn] Autumn Box 1 evenings] evening 1824, TL (Reiman). tree. —] tree — Box 1.
 530–2. Cp. Virgil’s retort at Inferno vii 52–4:
-
-‘Vano pensiero aduni:
-la sconoscente vita che i fé sozzi,
-ad ogne conoscenza or li fa bruni.’
-
-(‘ “Thou harbourest a vain thought; the undiscerning life that made them foul now makes them
-obscure to all discernment” ’, trans. Sinclair)
 
 530. Each . . . were] Each, . . . were, Box 1.
 531. soon] some 1824.
@@ -43920,9 +37707,6 @@ obscure to all discernment” ’, trans. Sinclair)
 Locock 1911 (see headnote).
 544. what is Life?] The narrator’s question may be inspired by Calderón’s La vida es sueño (‘Life is a
 dream’), which S. first read in 1819, and a passage from which was translated in what appears to be
-
-545 His eye upon the car which now had rolled
-Onward, as if that look must be the last,
 
 Medwin’s hand in Nbk 18 in winter 1821–22 (see headnote to It is a singular world we live in — and
 (Longman vi, Appendix E)). Whether or not S. influenced the Nbk 18 translation is impossible to
@@ -43950,25 +37734,11 @@ To tread, why was a Spirit bound?
 The hymn concludes six verses later,
 O what is Death? — ’tis Life’s last Shore,
 
-Where Vanities are vain no more;
-Where all Pursuits their Goal obtain,
-And Life is all retouched again;
-Where in their bright results shall rise
-Thoughts, Virtues, Friendships, Griefs, and Joys.
-
 544. said] cried.” — 1824.
 546. last,] last Box 1.
 547. answered . . . ] answered . . . . Box 1.
 547–8. Happy those . . . Of] Rousseau’s curtailed reply to the narrator’s ontological question takes the
 form of a beatus ille, a rhetorical formulation made famous by Horace in Epodes ii 1–4:
-
-Beatus ille, qui procul negotiis,
-ut prisca gens mortalium,
-paterna rura bobus exercet suis,
-solutus omni faenore
-
-(‘Happy the man who, far from business concerns, works his ancestral acres with his oxen like the men
-of old, free from every kind of debt’)
 
 71 To Jane (‘The keen stars were twinkling’)
 S.’s draft of To Jane (‘The keen stars were twinkling’) is in Box 1, on three separate pages, f.
@@ -43993,17 +37763,10 @@ The draft of the opening 10 lines of the poem on f. 56r is written on the bottom
 third page of the Parodi bifolium ff. 55r-56v, the top half of which contains draft of S.’s dis-
 carded opening B to TL (see Lines connected with The Triumph of Life (Longman vi, no. 452
 
-Appendix) Appendix B), which was probably written around 28 May (the draft of B covers
-
 See also Horace, Odes iii 29, ll. 41–45 and Virgil, Georgics ii 490. The beatus ille has a long history
 in poetry. Famous instances include: Inferno i 129; Paradise Lost vi 641–49; Pope ‘Ode on Solitude’;
 Cowper, Task ii 161–5; Faust 1064–5; and Wordsworth, ‘Calais, August 15th, 1802’, ll. 12–14. Rousseau’s
 final words also recall the aphoristic ending of Bright wanderer, fair coquette of Heaven ll. 55–8:
-
-Too happy, they whose pleasure sought
-Extinguishes all sense and thought
-Of the regret that pleasure []
-Seeking life alone not peace.
 
 547. fold] An enclosure in which a shepherd keeps his sheep. The term is often used in a Christian
 sense to mean the spiritual enclosure in which God keeps his followers, or flock (e.g. Ezekiel xxxiv 14,
@@ -44125,9 +37888,6 @@ ariette’. ‘Ariette’ is a relatively technical musical term (more common in
 tained and almost nightly immersion in opera of the Pisan circle in 1821 and early 1822,
 and implies that S. intended the lyric to be set to music by Jane for her performance. The
 
-first stanza of ‘The keen stars’ plays on the idea that the guitar is lifeless until informed by the
-soul of Jane’s playing, recalling the closing argument of With a guitar. To Jane (see ll. 59–61,
-
 79–86 and notes). S.’s accompanying note also apologises for (again) failing to produce
 something profane, i.e. irreverent or disrespectful of a sacred subject, with the implication
 that there is in play some kind of ‘sacred’ understanding between Jane, Edward Williams,
@@ -44170,15 +37930,6 @@ and notes.
 the rhyme on ‘among’ in l. 2.
 6. Again. —] Again. 1840.
 7–9. Cp. WA 397–400:
-
-All interwoven with fine feathery snow
-And moonlight splendour of intensest rime
-With which frost paints the pines in winter-time.
-
-Is thrown —
-10   So your voice most tender
-To the strings without soul had then given
-Its own.
 
 The stars will awaken,
 Though the moon sleep a full hour later,
@@ -44456,9 +38207,6 @@ clearly knew extremely well, and which was one major model for TL (see headnote)
 which he was certainly working when he wrote Bright wanderer. In the Trionfo della Morte
 the poet’s idealised love, the resolutely chaste Laura, has died, but returns to him in a vision.
 
-She affirms her abiding love for the poet, even though she had never permitted herself to
-offer a sign of it while alive, in order to protect their good names and honour:
-
 — Deh, madonna, — diss’io — per quella fede
 che vi fu, credo, al tempo manifesta,
 or più nel volto di chi tutto vede,
@@ -44530,9 +38278,6 @@ to Edward Williams, and not divorced from her legal husband either).
 7–14. The new moon is setting into the sea in the evening, and is likened to an albatross with its long
 narrow wings; see headnote for discussion of astronomical and meteorological evidence for the date
 and time of the poem’s setting.
-
-9. dome] path M, Relics; S. first wrote dome, then cancelled it and wrote path above, which is also can-
-celled with dome underlined to indicate reinstatement. steep,] S. first wrote deep with a comma, then
 
 10 And like an albatross asleep,
 Balanced on her wings of light
@@ -44608,10 +38353,6 @@ presence, but not when away from her.
 rows; all but the initial Of is then cancelled, with All passions, and written above the first half of the first
 line, and I lived alone, written between the second half of both lines.
 
-29. passions] The terminal s seems clear in the MS, but BSM i does not record it.
-30. is] Written above was canc. own;] own Box 1.
-31–2. Cp S.’s letter to John Gisborne, 18 June 1822:
-
 Williams is captain, and we drive along this delightful bay in the evening wind, under the
 summer moon, until earth appears another world. Jane brings her guitar, and if the past and
 the future could be obliterated, the present would content me so well that I could say with
@@ -44626,23 +38367,6 @@ not after this line.
 37. sate and watched] sat and watched M; sat and saw Relics.
 38. wide,] wide Box 1. Following this line S. made two attempts at the next, both cancelled: Like char-
 iots of an element [with oer uncanc. above of], and Elysian [?]. Cp. Wordsworth, ‘The Thorn’ ll. 181–5:
-
-For one day with my telescope,
-To view the ocean wide and bright,
-When to this country first I came,
-Ere I had heard of Martha’s name,
-I climbed the mountain’s height:
-
-40 O’er some serenest element
-To ministrations strange and far;
-As if to some Elysian star
-They sailed for drink to medicine
-Such sweet and bitter pain as mine. —
-45 And the wind that winged their flight
-
-40. serenest] Written above diviner canc.
-41. To] Written over On in Box 1; For M, Relics, 1964.
-43–4. Cp. S.’s letter to Trelawny, 18 June 1822:
 
 should you meet with any scientific person capable of preparing the Prussic Acid, or essential oil
 of bitter almonds I should regard it as a great kindness if you could procure me a small quantity.
@@ -44667,8 +38391,6 @@ notte il carro stellato in giro mena,
 e nel suo letto il mar senz’onda giace;
 vegghio, penso, ardo, piango, e chi mi sface
 sempre m’è innanzi per mia dolce pena;
-
-The translation by Henry Howard Earl of Surrey, cited by Keach, is also resonant:
 
 Alas, so all things now do hold their peace!
 Heaven and earth disturbèd in no thing;
@@ -44696,16 +38418,6 @@ Crept, and struck the fish who came
 To worship the delusive flame:
 55 Too happy, they whose pleasure sought
 
-46. light,] light Box 1. Following this line in Box 1 the following cancelled lines (editorially redacted)
-are drafted at the bottom of f. 36r:
-
-So that on the sifted sand
-Which divided sea & land
-Like a thread of moonlight lay
-On the disentangled spray
-
-These are followed at the top of the next page, f. 36v, by two further cancelled lines:
-
 47. sleeping] wingèd Relics.
 49. Of dew, and sweet warmth left by day M, Relics. sweet] Written after light canc.
 50. Was scattered o’er] Were scattered over M, Relics. bay;] bay Box 1. Following this line are two
@@ -44729,10 +38441,6 @@ beauty.
 55–58. ‘The fish, in choosing Life (active enjoyment) rather than peace (mere placid existence), are
 happy because the pleasure they seek blinds them to the price they will pay for it. But Too happy
 cuts both ways, meaning “fatally happy” as well as “enviably happy” ’ (GM). D. H. Reiman however
-
-Extinguishes all sense and thought
-Of the regret that pleasure [        ]
-Seeking life alone not peace.
 
 argues (‘Shelley’s ‘The Triumph of Life’: The Biographical Problem’, PMLA lxxviii (1963) 536–50)
 that whichever of the alternative readings Destroying and Seeking (see note to l. 58) are chosen, ‘the
@@ -44764,9 +38472,6 @@ S. was temporarily halted in work on the poem by running out of space (see headn
 as Chernaik 276 notes the poem’s last four lines read as ‘an unmistakable final quatrain, similar in
 its aphoristic tone to the final quatrain of To Jane — The recollection (a poem which Reiman (2002)
 470–71 also considers incomplete).
-
-A Lament (‘O World, O Life, O Time’) 623 Mutability (‘We are as clouds that veil the
-A Lament (‘Swifter far than summer’s flight’) midnight moon’) 7
 
 A New National Anthem 427 ‘O World, O Life, O Time’ 623
 ‘A widowed bird sate mourning for her love’ 736 ‘O! there are spirits of the air’ 4
@@ -44823,9 +38528,6 @@ To a Sky-Lark 482 With a Guitar. To Jane 779
 To Constantia (‘Thy voice, slow rising like a Written on hearing the news of the death of
 Spirit, lingers’) 66 Napoleon 720
 To Edward Williams 740
-
-To Jane — The Recollection 761 ‘Ye hasten to the [grave]! What seek ye
-To Jane (‘The keen stars were twinkling’) 881 there?’ 566
 
 A Sensitive-plant in a garden grew 398 In day the eternal universe of things 52
 A widowed bird sate mourning for her love 738 It lieth, gazing on the midnight sky 366
