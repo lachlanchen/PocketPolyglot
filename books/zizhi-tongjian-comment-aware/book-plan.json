@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "book_id": "zizhi-tongjian-comment-aware",
+  "status": "derived-from-existing-json",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "資治通鑑（正文注釋辨識版）",
+  "book_title_zh": "资治通鉴（正文注释辨识版）",
+  "book_title_ja": "資治通鑑（本文・注釈識別版）",
+  "book_title_en": "Zizhi Tongjian - Comment-Aware Edition",
+  "author": "司馬光",
+  "author_reading_zh": "sī mǎ guāng",
+  "author_reading_ja": "しば こう",
+  "commentator": "胡三省",
+  "book_description": "Derived from the completed Zizhi Tongjian quadrilingual JSON. The original JSON text is reused without model regeneration; main text and Hu Sanxing commentary are distinguished by aligning the source text to the original PDF font layer.",
+  "source_paths": {
+    "commented_classical_source": "sources/zizhi-tongjian/zh/資治通鑑·繁體橫排版（胡三省注）294卷全.pdf",
+    "base_book_plan": "books/zizhi-tongjian/book-plan.json",
+    "base_raw_chunk_dir": "books/zizhi-tongjian/work/quadrilingual/interlinear/chunks"
+  },
+  "chunks_jsonl": "books/zizhi-tongjian-comment-aware/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/zizhi-tongjian-comment-aware/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/zizhi-tongjian-comment-aware/work/quadrilingual/interlinear/chunks",
+  "comment_sidecar": "books/zizhi-tongjian-comment-aware/work/comment-aware/comment-spans.jsonl",
+  "comment_span_report": "books/zizhi-tongjian-comment-aware/work/comment-aware/comment-span-report.json",
+  "pdf_font_xml_cache": "books/zizhi-tongjian-comment-aware/work/pdf-font-map/zizhi-tongjian.xml",
+  "assembled_json": "books/zizhi-tongjian-comment-aware/work/quadrilingual/preview/zizhi-tongjian-comment-aware.partial.json",
+  "build_root": "build/zizhi-tongjian-comment-aware/maximum-language-large-font/wenyan-main-quadrilingual",
+  "cover_image": "assets/covers/zizhi-tongjian/cover.png",
+  "prepared_at": "2026-07-06T00:00:00+08:00"
+}
+
