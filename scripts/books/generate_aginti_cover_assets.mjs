@@ -40,6 +40,8 @@ const THEME_HINTS = {
     "Warring States scholarly compendium, bronze ritual vessel, bamboo slips arranged like seasonal calendars, court scholars in a quiet study, cosmological order and practical governance atmosphere, restrained lacquer black, jade green, and warm bronze palette",
   "sunzi-bingfa":
     "ancient Chinese military classic, bamboo slips, bronze sword guard, misted mountain passes, strategic map lines without readable text, calm disciplined command atmosphere, restrained ink black, bronze, and muted cinnabar palette",
+  wuzi:
+    "Warring States military classic, austere command tent, bamboo slips, old campaign map lines without readable text, bronze spearhead and inkstone, disciplined strategic atmosphere, muted bronze, black ink, and weathered parchment palette",
   "shui-jing-zhu":
     "ancient Chinese river geography, winding waterways through misty mountains, annotated silk map fragments, scholar-geographer's desk with bamboo slips and inkstone, Northern Wei historical atmosphere, refined ink-wash and restrained mineral pigments",
   chuci:

@@ -9,8 +9,8 @@ This catalog is generated from local build outputs. It selects the richest avail
 
 All compiled editions use the larger PocketPolyglot font profile. Existing source PDFs and JSON are not modified.
 
-- Local compressed/exported PDFs: 172
-- GitHub-tracked PDFs under size cap: 166
+- Local compressed/exported PDFs: 174
+- GitHub-tracked PDFs under size cap: 168
 - Skipped source folders: 4
 
 ## Gallery
@@ -85,6 +85,7 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | <img src="assets/max-language-previews/vimalakirti-sutra.png" width="120" alt="vimalakirti-sutra cover preview"> | `vimalakirti-sutra` | `wenyan-en-jp-zh` | [color](docs/pocketpolyglot/books/wenyan-en-jp-zh/vimalakirti-sutra/wenyan-main-quadrilingual/color/維摩詰所說經（英文・現代日本語・現代中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/wenyan-en-jp-zh/vimalakirti-sutra/wenyan-main-quadrilingual/blackwhite/維摩詰所說經（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/woman-in-the-dunes.png" width="120" alt="woman-in-the-dunes cover preview"> | `woman-in-the-dunes` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/woman-in-the-dunes/en-main-jp-zh/color/The Woman in the Dunes（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/woman-in-the-dunes/en-main-jp-zh/blackwhite/The Woman in the Dunes（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/wuthering-heights.png" width="120" alt="wuthering-heights cover preview"> | `wuthering-heights` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/wuthering-heights/en-main-jp-zh/color/Wuthering Heights（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/wuthering-heights/en-main-jp-zh/blackwhite/Wuthering Heights（日文・中文注・黑白）・最大語種・大字版.pdf) |
+| <img src="assets/max-language-previews/wuzi.png" width="120" alt="wuzi cover preview"> | `wuzi` | `wenyan-en-jp-zh` | [color](docs/pocketpolyglot/books/wenyan-en-jp-zh/wuzi/wenyan-main-quadrilingual/color/吳子（英文・現代日本語・現代中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/wenyan-en-jp-zh/wuzi/wenyan-main-quadrilingual/blackwhite/吳子（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/xixiangji.png" width="120" alt="xixiangji cover preview"> | `xixiangji` | `wenyan-en-jp-zh` | [color](docs/pocketpolyglot/books/wenyan-en-jp-zh/xixiangji/wenyan-main-quadrilingual/color/西廂記（英文・現代日本語・現代中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/wenyan-en-jp-zh/xixiangji/wenyan-main-quadrilingual/blackwhite/西廂記（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/xu-xiake-youji.png" width="120" alt="xu-xiake-youji cover preview"> | `xu-xiake-youji` | `wenyan-en-jp-zh` | [color](docs/pocketpolyglot/books/wenyan-en-jp-zh/xu-xiake-youji/wenyan-main-quadrilingual/color/徐霞客遊記（英文・現代日本語・現代中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/wenyan-en-jp-zh/xu-xiake-youji/wenyan-main-quadrilingual/blackwhite/徐霞客遊記（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/yijing.png" width="120" alt="yijing cover preview"> | `yijing` | `wenyan-en-jp-zh` | [color](docs/pocketpolyglot/books/wenyan-en-jp-zh/yijing/wenyan-main-quadrilingual/color/周易（英文・現代日本語・現代中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/wenyan-en-jp-zh/yijing/wenyan-main-quadrilingual/blackwhite/周易（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
@@ -250,6 +251,8 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | `woman-in-the-dunes` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 1014 | 10.7 | 5.5 | yes | `artifacts/lingualleaf/books/en-jp-zh/woman-in-the-dunes/en-main-jp-zh/blackwhite/The Woman in the Dunes（日文・中文注・黑白）・最大語種・大字版.pdf` |
 | `wuthering-heights` | `en-jp-zh` | `en-main-jp-zh` | `color` | 2106 | 16.7 | 13.3 | yes | `artifacts/lingualleaf/books/en-jp-zh/wuthering-heights/en-main-jp-zh/color/Wuthering Heights（日文・中文注）・最大語種・大字版.pdf` |
 | `wuthering-heights` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 2106 | 15.8 | 10.9 | yes | `artifacts/lingualleaf/books/en-jp-zh/wuthering-heights/en-main-jp-zh/blackwhite/Wuthering Heights（日文・中文注・黑白）・最大語種・大字版.pdf` |
+| `wuzi` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 115 | 10.0 | 1.5 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/wuzi/wenyan-main-quadrilingual/color/吳子（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
+| `wuzi` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 115 | 9.9 | 1.4 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/wuzi/wenyan-main-quadrilingual/blackwhite/吳子（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
 | `xixiangji` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 747 | 8.4 | 6.3 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/xixiangji/wenyan-main-quadrilingual/color/西廂記（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
 | `xixiangji` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 747 | 8.0 | 5.4 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/xixiangji/wenyan-main-quadrilingual/blackwhite/西廂記（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
 | `xu-xiake-youji` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 9544 | 65.6 | 64.6 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/xu-xiake-youji/wenyan-main-quadrilingual/color/徐霞客遊記（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
