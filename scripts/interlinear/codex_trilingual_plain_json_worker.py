@@ -37,6 +37,9 @@ CJK_SENTENCE_END = set("。！？!?；;")
 CJK_CLOSERS = set("」』”’）)]〉》")
 KAKASI = pykakasi.kakasi()
 JA_READING_CACHE: dict[str, str] = {}
+PLAIN_JA_KANA_ERROR_RE = re.compile(r"paragraphs\[(\d+)\]\.units\[(\d+)\]\.ja: Japanese row must contain kana")
+JA_BIBLIO_NOTE_RE = re.compile(r"[『』「」（）()・]|(?:第?\d+)|[巻卷頁页行版訳譯参參照詩诗作品散文序篇章年]")
+SIMPLIFIED_ONLY_RE = re.compile(r"[这们为说对见页卷诗选节后时个尔苏卢马亚德释从]")
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -317,6 +320,36 @@ def validate_plain_chunk(source: dict[str, Any], result: dict[str, Any]) -> list
             ):
                 errors.append(f"{unit_where}.ja: Japanese row must contain kana; pure Han text is usually Chinese, not Japanese")
     return errors
+
+
+def kanji_note_plain_errors_are_promotable(result: dict[str, Any], errors: list[str]) -> bool:
+    """Permit kanji-only Japanese citation notes when strict ruby promotion proves them valid.
+
+    The plain validator rejects long Japanese rows without kana because that
+    usually means Chinese leaked into the Japanese field. Poetry apparatus often
+    has short bibliographic rows such as `（『散文作品』第1巻130頁）。`; after
+    token promotion these rows receive furigana and validate correctly. Keep
+    this exception narrow so ordinary Chinese prose is still rejected.
+    """
+    if not errors:
+        return False
+    for error in errors:
+        match = PLAIN_JA_KANA_ERROR_RE.match(error)
+        if not match:
+            return False
+        paragraph_index = int(match.group(1))
+        unit_index = int(match.group(2))
+        try:
+            ja_text = plain_text(result["paragraphs"][paragraph_index]["units"][unit_index].get("ja", ""))
+        except (IndexError, KeyError, TypeError, AttributeError):
+            return False
+        if not ja_text or KANA_RE.search(ja_text):
+            return False
+        if SIMPLIFIED_ONLY_RE.search(ja_text):
+            return False
+        if not JA_BIBLIO_NOTE_RE.search(ja_text):
+            return False
+    return True
 
 
 def tokenize_en(text: str) -> list[dict[str, str]]:
@@ -681,7 +714,7 @@ def main() -> int:
                     )
                     result = extract_json(message_path.read_text(encoding="utf-8"))
                     errors = validate_plain_chunk(chunk, result)
-                    if not errors:
+                    if not errors or kanji_note_plain_errors_are_promotable(result, errors):
                         strict = promote_plain_chunk(chunk, result)
                         errors = validate_chunk(chunk, strict)
                 except Exception as exc:
