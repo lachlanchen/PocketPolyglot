@@ -15,6 +15,7 @@ import json
 import re
 import subprocess
 import sys
+import zipfile
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -82,6 +83,7 @@ class Section:
     paragraphs: list[str]
     number: int
     part: str = ""
+    references: dict[str, str] | None = None
 
 
 def rel(path: Path) -> str:
@@ -251,6 +253,219 @@ def extract_raw_wiki_lines(path: Path) -> list[str]:
     text = strip_links_and_markup(text)
     lines = text.splitlines()
     return clean_lines(lines)
+
+
+def poem_lines_from_node(node: Any) -> list[str]:
+    node = BeautifulSoup(str(node), "html.parser")
+    for selector in ("style", "script", "sup", ".pagenum", ".mw-editsection", ".variant-tooltip"):
+        for child in node.select(selector):
+            child.decompose()
+    for br in node.find_all("br"):
+        br.replace_with("\n")
+    text = node.get_text("\n")
+    lines = [clean_line(line) for line in text.splitlines()]
+    return clean_lines(lines)
+
+
+def grouped_poem_paragraph(lines: list[str], *, title: str = "") -> str:
+    clean: list[str] = []
+    for line in lines:
+        if not line:
+            clean.append("")
+            continue
+        if title and line.strip("《》").strip() == title.strip("《》").strip() and not clean:
+            continue
+        if re.fullmatch(r"[0-9]{4}", line):
+            continue
+        clean.append(line)
+    while clean and not clean[0]:
+        clean.pop(0)
+    while clean and not clean[-1]:
+        clean.pop()
+    return "\n".join(clean).strip()
+
+
+def extract_xu_zhimo_wikisource_poems(manifest_path: Path) -> tuple[list[Section], dict[str, Any]]:
+    """Extract Xu Zhimo poems from mirrored Wikisource pages.
+
+    The local printed PDF is a useful reference scan, but its automatic OCR is
+    too noisy. The mirrored Wikisource pages expose poem bodies in `.poem`
+    nodes, which lets us prepare launchable chunks without importing author-page
+    metadata or public-domain notices.
+    """
+
+    base = manifest_path.parent
+    manifest_data = load_json(manifest_path)
+    entries = manifest_data.get("pages", manifest_data if isinstance(manifest_data, list) else [])
+    sections: list[Section] = []
+    skipped: list[str] = []
+    for entry in entries:
+        if entry.get("status") != "ok":
+            continue
+        title = str(entry.get("actual_title") or entry.get("title") or "").strip()
+        if not title:
+            continue
+        if title.startswith("Author:"):
+            skipped.append("author metadata root")
+            continue
+        if title.endswith("/序"):
+            skipped.append(title)
+            continue
+        rel_html = entry.get("html")
+        if not isinstance(rel_html, str) or not (base / rel_html).exists():
+            skipped.append(title)
+            continue
+        soup = BeautifulSoup((base / rel_html).read_text(encoding="utf-8", errors="ignore"), "html.parser")
+        poem_nodes = soup.select(".prp-pages-output .poem") or soup.select(".poem")
+        parts: list[str] = []
+        for node in poem_nodes:
+            paragraph = grouped_poem_paragraph(poem_lines_from_node(node), title=title)
+            if paragraph:
+                parts.append(paragraph)
+        if not parts:
+            lines = extract_html_lines(base / rel_html, section_title=title)
+            content: list[str] = []
+            in_source_work = False
+            for line in lines:
+                if line == "本作品收錄於《":
+                    in_source_work = True
+                    continue
+                if in_source_work:
+                    if line == "》":
+                        in_source_work = False
+                    continue
+                if line in {title, "作者：", "徐志摩", "民國時期"}:
+                    continue
+                if re.search(r"版權期限|公有領域|Public domain|这部作品|這部作品", line):
+                    break
+                content.append(line)
+            paragraph = grouped_poem_paragraph(content, title=title)
+            # Avoid treating long prose prefaces as poems.
+            if paragraph and (paragraph.count("\n") >= 3 or len(paragraph) <= 300):
+                parts.append(paragraph)
+        text = "\n\n".join(parts).strip()
+        cjk_count = len(CJK_RE.findall(text))
+        if cjk_count < 20:
+            skipped.append(title)
+            continue
+        sections.append(Section(title=title.split("/")[-1], paragraphs=[text], number=len(sections) + 1))
+
+    return sections, {
+        "key": "zh_wikisource_poems_export",
+        "path": rel(manifest_path),
+        "method": "wikisource_poem_html",
+        "poem_count": len(sections),
+        "skipped_titles": skipped[:12],
+    }
+
+
+def epub_text_by_file(epub: Path, src: str) -> list[str]:
+    with zipfile.ZipFile(epub) as archive:
+        name = src.split("#", 1)[0]
+        if not name.startswith("OEBPS/"):
+            name = f"OEBPS/{name}"
+        soup = BeautifulSoup(archive.read(name), "html.parser")
+    for selector in ("style", "script", "sup", "table", ".mbp_pagebreak"):
+        for node in soup.select(selector):
+            node.decompose()
+    stop = False
+    lines: list[str] = []
+    for node in soup.body.find_all(["p", "blockquote"], recursive=True) if soup.body else []:
+        line = clean_line(node.get_text(" ", strip=True))
+        if not line:
+            continue
+        if line in {"注释", "Notes", "本书相关"}:
+            stop = True
+        if stop:
+            continue
+        if re.fullmatch(r"[①②③④⑤⑥⑦⑧⑨⑩]+", line):
+            continue
+        lines.append(line)
+    return clean_lines(lines)
+
+
+def extract_whitman_bilingual_anthology(plan: dict[str, Any]) -> tuple[dict[str, list[Section]], dict[str, Any]]:
+    """Extract the local bilingual anthology as its actual Whitman volume.
+
+    The EPUB metadata says it belongs to a 23-volume anthology, but the file
+    present here contains one alternating English/Chinese Whitman volume. Pairing
+    adjacent TOC entries avoids a mixed-language fallback and gives exact source
+    translations for each poem.
+    """
+
+    epub_value = (plan.get("source_paths") or {}).get("zh_en_anthology_epub")
+    if not epub_value:
+        return {}, {}
+    epub = ROOT / str(epub_value)
+    if not epub.exists():
+        return {}, {}
+    with zipfile.ZipFile(epub) as archive:
+        toc = BeautifulSoup(archive.read("OEBPS/toc.ncx"), "xml")
+    top = toc.find("navMap").find("navPoint") if toc.find("navMap") else None
+    children = top.find_all("navPoint", recursive=False) if top else []
+    content_points: list[tuple[str, str]] = []
+    started = False
+    for node in children:
+        label_node = node.find("navLabel")
+        content_node = node.find("content")
+        if not label_node or not content_node:
+            continue
+        label = clean_line(label_node.get_text(" ", strip=True))
+        src = str(content_node.get("src") or "")
+        if label == "插图":
+            started = True
+            continue
+        if label == "本书相关":
+            break
+        if started:
+            content_points.append((label, src))
+
+    en_sections: list[Section] = []
+    zh_sections: list[Section] = []
+    skipped_pairs: list[str] = []
+    index = 0
+    while index + 1 < len(content_points):
+        en_title, en_src = content_points[index]
+        zh_title, zh_src = content_points[index + 1]
+        if not LATIN_RE.search(en_title) or not CJK_RE.search(zh_title):
+            skipped_pairs.append(f"{en_title} / {zh_title}")
+            index += 1
+            continue
+        en_lines = epub_text_by_file(epub, en_src)
+        zh_lines = epub_text_by_file(epub, zh_src)
+        if en_lines and en_lines[0].strip() == en_title.strip():
+            en_lines = en_lines[1:]
+        if zh_lines and zh_lines[0].strip() == zh_title.strip():
+            zh_lines = zh_lines[1:]
+        en_text = grouped_poem_paragraph(en_lines, title=en_title)
+        zh_text = grouped_poem_paragraph(zh_lines, title=zh_title)
+        if len(LATIN_RE.findall(en_text)) < 40 or len(CJK_RE.findall(zh_text)) < 20:
+            skipped_pairs.append(f"{en_title} / {zh_title}")
+            index += 2
+            continue
+        number = len(en_sections) + 1
+        en_sections.append(Section(en_title, [en_text], number, references={"zh": zh_text}))
+        zh_sections.append(Section(zh_title, [zh_text], number, references={"en": en_text}))
+        index += 2
+
+    extracted = {"en": en_sections, "zh": zh_sections}
+    return extracted, {
+        "en": {
+            "key": "zh_en_anthology_epub",
+            "path": rel(epub),
+            "method": "epub_toc_alternating_english_chinese",
+            "actual_volume": "Walt Whitman selected poems",
+            "paired_poem_count": len(en_sections),
+            "skipped_pairs": skipped_pairs[:12],
+        },
+        "zh": {
+            "key": "zh_en_anthology_epub",
+            "path": rel(epub),
+            "method": "epub_toc_alternating_english_chinese",
+            "actual_volume": "惠特曼诗选",
+            "paired_poem_count": len(zh_sections),
+        },
+    }
 
 
 def split_lines_to_sections(book_title: str, lines: list[str], *, lang: str) -> list[Section]:
@@ -665,12 +880,20 @@ def make_chunks(
             end_ratio = min(1.0, (pending_start + pending_chars) / total_chars)
 
             def ref_for(lang: str) -> dict[str, Any]:
+                exact_section_ref = (section.references or {}).get(lang, "").strip()
                 if lang == spine_lang:
                     return {
                         "available": True,
                         "chapter": section.title,
                         "text": source_ref,
                         "quality": "source_spine_poetry_text",
+                    }
+                if exact_section_ref:
+                    return {
+                        "available": True,
+                        "chapter": section.title,
+                        "text": exact_section_ref,
+                        "quality": "paired_source_poetry_text",
                     }
                 text = reference_window(reference_texts.get(lang, ""), start_ratio, end_ratio, max_chars=reference_chars)
                 return {
@@ -746,7 +969,7 @@ def make_chunks(
         "source_spine_lang": spine_lang,
         "source_paths": source_paths,
         "source_sha256": source_sha256,
-        "source_note": "World-poetry preparation; source spine is split by poem/stanza groups and aligned to source-edition reference windows.",
+        "source_note": "World-poetry preparation; source spine is split by poem/stanza groups. Exact paired poem references are used when available; otherwise the writer generates missing languages from the clean source spine.",
         "chunk_count": len(chunks),
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "chunks": [
@@ -775,13 +998,38 @@ def prepare_book(book_id: str, *, max_chunk_chars: int, reference_chars: int) ->
     spine_lang = plan.get("source_spine_lang") or "en"
     extracted: dict[str, list[Section]] = {}
     extraction_meta: dict[str, Any] = {}
+    if book_id == "xu-zhimo-poems":
+        poems_manifest = ROOT / (plan.get("source_paths") or {}).get(
+            "zh_wikisource_poems_export",
+            "resources/curated-books/world-poetry/xu-zhimo/poems-zh-wikisource/manifest.json",
+        )
+        if poems_manifest.exists():
+            sections, meta = extract_xu_zhimo_wikisource_poems(poems_manifest)
+            if sections:
+                extracted["zh"] = sections
+                extraction_meta["zh"] = meta
+                plan.setdefault("source_paths", {})["zh_wikisource_poems_export"] = rel(poems_manifest)
+    elif book_id == "english-poetry-anthology":
+        extracted, extraction_meta = extract_whitman_bilingual_anthology(plan)
+        if extracted.get("en"):
+            plan["book_title_en"] = "Walt Whitman: Selected Poems"
+            plan["book_title_zh"] = "惠特曼诗选"
+            plan["book_title_ja"] = "ホイットマン詩選"
+            plan["author"] = "Walt Whitman"
+            plan["author_reading_ja"] = "ウォルト・ホイットマン"
+
     for lang in ("en", "zh", "ja"):
-        sections, meta = extract_lang_sections(plan, lang, work_dir=work_source_dir, required=(lang == spine_lang))
-        if sections:
-            extracted[lang] = sections
-            write_text(markdown_dir / f"{lang}.md", sections_to_markdown(str(plan.get(f"book_title_{lang}") or plan["book_id"]), sections))
-        if meta:
-            extraction_meta[lang] = meta
+        if lang not in extracted:
+            sections, meta = extract_lang_sections(plan, lang, work_dir=work_source_dir, required=(lang == spine_lang))
+            if sections:
+                extracted[lang] = sections
+            if meta:
+                extraction_meta[lang] = meta
+        if lang in extracted:
+            write_text(
+                markdown_dir / f"{lang}.md",
+                sections_to_markdown(str(plan.get(f"book_title_{lang}") or plan["book_id"]), extracted[lang]),
+            )
 
     spine_sections = extracted.get(spine_lang) or []
     if not spine_sections:
@@ -811,7 +1059,7 @@ def prepare_book(book_id: str, *, max_chunk_chars: int, reference_chars: int) ->
             "curated_url": CURATED_URL,
             "powered_by": POWERED_BY,
             "chunk_mode": "poem_stanza_line_group",
-            "reference_scope": "source_edition_poetry_window",
+            "reference_scope": "paired_or_clean_poem_source",
             "chunks_jsonl": rel(chunks_dir / "chunks.jsonl"),
             "chunks_manifest": rel(chunks_dir / "manifest.json"),
             "raw_chunk_dir": rel(raw_chunk_dir),
@@ -830,7 +1078,7 @@ def prepare_book(book_id: str, *, max_chunk_chars: int, reference_chars: int) ->
     plan["markdown"] = {
         lang: rel(markdown_dir / f"{lang}.md")
         for lang in ("en", "zh", "ja")
-        if (markdown_dir / f"{lang}.md").exists()
+        if lang in extracted
     }
     write_json(plan_path, plan)
     return {
@@ -848,9 +1096,17 @@ def update_batch_status(batch_path: Path, results: list[dict[str, Any]]) -> None
     for task in batch.get("tasks", []):
         book_id = task.get("book_id")
         if book_id in by_id:
+            plan_path = ROOT / str(task.get("book_plan", ""))
+            if plan_path.exists():
+                plan = load_json(plan_path)
+                task["title_en"] = plan.get("book_title_en", task.get("title_en", ""))
+                task["title_zh"] = plan.get("book_title_zh", task.get("title_zh", ""))
+                task["title_ja"] = plan.get("book_title_ja", task.get("title_ja", ""))
+                task["author"] = plan.get("author", task.get("author", ""))
             task["status"] = "chunked_launchable"
             task["chunk_count"] = by_id[book_id]["chunks"]
             task["prepared_chunks_at"] = datetime.now(timezone.utc).isoformat()
+            task.pop("blocked_reason", None)
     batch["status"] = "poetry_chunks_prepared"
     batch["last_chunk_preparation_at"] = datetime.now(timezone.utc).isoformat()
     write_json(batch_path, batch)

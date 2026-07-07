@@ -173,12 +173,11 @@
       "author": "徐志摩",
       "source_spine_lang": "zh",
       "task_mode": "trilingual_poetry_zh_source_generated_en_ja",
-      "status": "needs_source_review",
+      "status": "chunked_launchable",
       "book_plan": "books/xu-zhimo-poems/book-plan.json",
       "missing_source_paths": [],
-      "chunk_count": 4,
-      "prepared_chunks_at": "2026-07-06T22:47:58.929705+00:00",
-      "blocked_reason": "scanned PDF OCR sample is visibly garbled; needs reviewed OCR before launch"
+      "chunk_count": 50,
+      "prepared_chunks_at": "2026-07-07T00:02:00.490390+00:00"
     },
     {
       "priority": 11,
@@ -198,19 +197,18 @@
     {
       "priority": 12,
       "book_id": "english-poetry-anthology",
-      "title_en": "Classic English Poetry Anthology",
-      "title_zh": "英诗经典名家名译",
-      "title_ja": "英詩名作選",
-      "author": "various authors",
+      "title_en": "Walt Whitman: Selected Poems",
+      "title_zh": "惠特曼诗选",
+      "title_ja": "ホイットマン詩選",
+      "author": "Walt Whitman",
       "source_spine_lang": "en",
       "task_mode": "trilingual_poetry_anthology_zh_en_sources_generated_ja",
-      "status": "needs_source_review",
+      "status": "chunked_launchable",
       "book_plan": "books/english-poetry-anthology/book-plan.json",
       "missing_source_paths": [],
-      "chunk_count": 113,
-      "prepared_chunks_at": "2026-07-06T22:47:58.929707+00:00",
-      "blocked_reason": "mixed bilingual anthology extraction needs reviewed poem-level splitting before launch"
+      "chunk_count": 92,
+      "prepared_chunks_at": "2026-07-07T00:02:00.490423+00:00"
     }
   ],
-  "last_chunk_preparation_at": "2026-07-06T22:47:58.929708+00:00"
+  "last_chunk_preparation_at": "2026-07-07T00:02:00.490424+00:00"
 }

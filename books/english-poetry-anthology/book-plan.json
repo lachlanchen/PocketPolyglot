@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "book_id": "english-poetry-anthology",
-  "status": "needs_source_review",
-  "launchable": false,
+  "status": "prepared_trilingual",
+  "launchable": true,
   "task_mode": "trilingual_poetry_anthology_zh_en_sources_generated_ja",
   "source_spine_lang": "en",
-  "book_title_en": "Classic English Poetry Anthology",
-  "book_title_zh": "英诗经典名家名译",
-  "book_title_ja": "英詩名作選",
-  "author": "various authors",
+  "book_title_en": "Walt Whitman: Selected Poems",
+  "book_title_zh": "惠特曼诗选",
+  "book_title_ja": "ホイットマン詩選",
+  "author": "Walt Whitman",
   "author_reading_zh": "duō wèi zuò zhě",
-  "author_reading_ja": "ふくすう の さくしゃ",
+  "author_reading_ja": "ウォルト・ホイットマン",
   "source_paths": {
     "zh_en_anthology_epub": "resources/curated-books/world-poetry/anthologies/zh-en/英诗经典名家名译(英汉对照)(套装共23册).epub",
     "byron_reference": "resources/curated-books/world-poetry/byron/en/Selected poems of Lord Byron.pdf",
@@ -30,29 +30,33 @@
   "assembled_json": "books/english-poetry-anthology/work/trilingual/preview/english-poetry-anthology.partial.json",
   "build_root": "build/english-poetry-anthology",
   "cover_image": "assets/covers/english-poetry-anthology/cover.png",
-  "prepared_at": "2026-07-06T22:47:58.929166+00:00",
+  "prepared_at": "2026-07-07T00:02:00.490036+00:00",
   "preparation_notes": {
     "status": "Chunk manifest prepared and launchable.",
     "chunking": "poem/stanza/line groups; no generated translations are overwritten.",
-    "quality_rule": "Use provided poem PDFs/EPUBs first. Wikisource text is allowed when it is a real poem text source. Wikipedia and author pages are metadata only, not poem chunks.",
-    "blocked_reason": "needs bilingual anthology extraction review: source is mixed-language and current spine grouping is not reliable enough"
+    "quality_rule": "Use provided poem PDFs/EPUBs first. Wikisource text is allowed when it is a real poem text source. Wikipedia and author pages are metadata only, not poem chunks."
   },
   "curated_by": "AgInTiFlow curated",
   "curated_url": "https://flow.lazying.art",
   "powered_by": "powered by LazyingArt",
   "chunk_mode": "poem_stanza_line_group",
-  "reference_scope": "source_edition_poetry_window",
-  "chunk_count": 113,
+  "reference_scope": "paired_or_clean_poem_source",
+  "chunk_count": 92,
   "source_extraction": {
     "en": {
       "key": "zh_en_anthology_epub",
       "path": "resources/curated-books/world-poetry/anthologies/zh-en/英诗经典名家名译(英汉对照)(套装共23册).epub",
-      "method": "epub"
+      "method": "epub_toc_alternating_english_chinese",
+      "actual_volume": "Walt Whitman selected poems",
+      "paired_poem_count": 51,
+      "skipped_pairs": []
     },
     "zh": {
       "key": "zh_en_anthology_epub",
       "path": "resources/curated-books/world-poetry/anthologies/zh-en/英诗经典名家名译(英汉对照)(套装共23册).epub",
-      "method": "epub"
+      "method": "epub_toc_alternating_english_chinese",
+      "actual_volume": "惠特曼诗选",
+      "paired_poem_count": 51
     }
   }
 }
