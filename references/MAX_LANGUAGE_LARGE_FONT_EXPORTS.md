@@ -9,8 +9,8 @@ This catalog is generated from local build outputs. It selects the richest avail
 
 All compiled editions use the larger PocketPolyglot font profile. Existing source PDFs and JSON are not modified.
 
-- Local compressed/exported PDFs: 202
-- GitHub-tracked PDFs under size cap: 196
+- Local compressed/exported PDFs: 204
+- GitHub-tracked PDFs under size cap: 198
 - Skipped source folders: 4
 
 ## Gallery
@@ -20,6 +20,7 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | <img src="assets/max-language-previews/a-city-on-mars.png" width="120" alt="a-city-on-mars cover preview"> | `a-city-on-mars` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/a-city-on-mars/en-main-jp-zh/color/A City on Mars（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/a-city-on-mars/en-main-jp-zh/blackwhite/A City on Mars（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/a-clash-of-kings.png" width="120" alt="a-clash-of-kings cover preview"> | `a-clash-of-kings` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/a-clash-of-kings/en-main-jp-zh/color/A Clash of Kings（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/a-clash-of-kings/en-main-jp-zh/blackwhite/A Clash of Kings（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/a-game-of-thrones.png" width="120" alt="a-game-of-thrones cover preview"> | `a-game-of-thrones` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/a-game-of-thrones/en-main-jp-zh/color/A Game of Thrones（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/a-game-of-thrones/en-main-jp-zh/blackwhite/A Game of Thrones（日文・中文注・黑白）・最大語種・大字版.pdf) |
+| <img src="assets/max-language-previews/a-storm-of-swords.png" width="120" alt="a-storm-of-swords cover preview"> | `a-storm-of-swords` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/a-storm-of-swords/en-main-jp-zh/color/A Storm of Swords（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/a-storm-of-swords/en-main-jp-zh/blackwhite/A Storm of Swords（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/bhagavad-gita.png" width="120" alt="bhagavad-gita cover preview"> | `bhagavad-gita` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/bhagavad-gita/en-main-jp-zh/color/The Bhagavad Gita（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/bhagavad-gita/en-main-jp-zh/blackwhite/The Bhagavad Gita（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/bible.png" width="120" alt="bible cover preview"> | `bible` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/bible/en-main-jp-zh/color/The Holy Bible（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/bible/en-main-jp-zh/blackwhite/The Holy Bible（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/botchan.png" width="120" alt="botchan cover preview"> | `botchan` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/botchan/en-main-jp-zh/color/Botchan（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/botchan/en-main-jp-zh/blackwhite/Botchan（日文・中文注・黑白）・最大語種・大字版.pdf) |
@@ -123,6 +124,8 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | `a-clash-of-kings` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 6124 | 30.4 | 26.5 | yes | `artifacts/lingualleaf/books/en-jp-zh/a-clash-of-kings/en-main-jp-zh/blackwhite/A Clash of Kings（日文・中文注・黑白）・最大語種・大字版.pdf` |
 | `a-game-of-thrones` | `en-jp-zh` | `en-main-jp-zh` | `color` | 4560 | 30.0 | 28.2 | yes | `artifacts/lingualleaf/books/en-jp-zh/a-game-of-thrones/en-main-jp-zh/color/A Game of Thrones（日文・中文注）・最大語種・大字版.pdf` |
 | `a-game-of-thrones` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 4560 | 27.8 | 22.8 | yes | `artifacts/lingualleaf/books/en-jp-zh/a-game-of-thrones/en-main-jp-zh/blackwhite/A Game of Thrones（日文・中文注・黑白）・最大語種・大字版.pdf` |
+| `a-storm-of-swords` | `en-jp-zh` | `en-main-jp-zh` | `color` | 7632 | 38.2 | 38.2 | yes | `artifacts/lingualleaf/books/en-jp-zh/a-storm-of-swords/en-main-jp-zh/color/A Storm of Swords（日文・中文注）・最大語種・大字版.pdf` |
+| `a-storm-of-swords` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 7632 | 35.0 | 33.1 | yes | `artifacts/lingualleaf/books/en-jp-zh/a-storm-of-swords/en-main-jp-zh/blackwhite/A Storm of Swords（日文・中文注・黑白）・最大語種・大字版.pdf` |
 | `bhagavad-gita` | `en-jp-zh` | `en-main-jp-zh` | `color` | 278 | 4.7 | 4.7 | yes | `artifacts/lingualleaf/books/en-jp-zh/bhagavad-gita/en-main-jp-zh/color/The Bhagavad Gita（日文・中文注）・最大語種・大字版.pdf` |
 | `bhagavad-gita` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 278 | 4.6 | 4.6 | yes | `artifacts/lingualleaf/books/en-jp-zh/bhagavad-gita/en-main-jp-zh/blackwhite/The Bhagavad Gita（日文・中文注・黑白）・最大語種・大字版.pdf` |
 | `bible` | `en-jp-zh` | `en-main-jp-zh` | `color` | 10285 | 51.9 | 51.9 | yes | `artifacts/lingualleaf/books/en-jp-zh/bible/en-main-jp-zh/color/The Holy Bible（日文・中文注）・最大語種・大字版.pdf` |
