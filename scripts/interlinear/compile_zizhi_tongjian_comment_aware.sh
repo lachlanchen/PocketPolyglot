@@ -56,6 +56,7 @@ source_pdf="$(jq -r '.source_paths.commented_classical_source' "$plan")"
 xml_cache="books/$book_id/work/pdf-font-map/zizhi-tongjian.xml"
 sidecar="books/$book_id/work/comment-aware/comment-spans.jsonl"
 span_report="books/$book_id/work/comment-aware/comment-span-report.json"
+repair_report="books/$book_id/work/comment-aware/comment-span-repair-report.json"
 assembled_json="books/$book_id/work/quadrilingual/preview/$book_id.partial.json"
 build_dir="build/$book_id/maximum-language-large-font/wenyan-main-quadrilingual/$color_mode"
 part_zh=""
@@ -100,6 +101,14 @@ else
     --xml-cache "$xml_cache" \
     --output "$sidecar" \
     --report "$span_report"
+fi
+
+if [[ "${ZIZHI_SKIP_SIDECAR_REPAIR:-0}" != "1" ]]; then
+  python scripts/interlinear/repair_zizhi_tongjian_comment_sidecar.py \
+    --chunks-jsonl "$chunks_jsonl" \
+    --chunk-dir "$chunk_dir" \
+    --sidecar "$sidecar" \
+    --report "$repair_report"
 fi
 
 python scripts/interlinear/assemble_quadrilingual_json.py \

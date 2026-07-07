@@ -46,6 +46,7 @@ source_pdf="$(jq -r '.source_paths.commented_classical_source' "$plan")"
 xml_cache="$(jq -r '.pdf_font_xml_cache' "$plan")"
 sidecar="$(jq -r '.comment_sidecar' "$plan")"
 span_report="$(jq -r '.comment_span_report' "$plan")"
+repair_report="books/$book_id/work/comment-aware/comment-span-repair-report.json"
 
 if [[ ! -s "$sidecar" ]]; then
   echo "==> building full comment sidecar once"
@@ -59,10 +60,17 @@ if [[ ! -s "$sidecar" ]]; then
     --report "$span_report"
 fi
 
+echo "==> repairing structural main-text spans"
+python scripts/interlinear/repair_zizhi_tongjian_comment_sidecar.py \
+  --chunks-jsonl "$chunks_jsonl" \
+  --chunk-dir "$chunk_dir" \
+  --sidecar "$sidecar" \
+  --report "$repair_report"
+
 for part in $parts; do
   for mode in "${modes[@]}"; do
     echo "==> $part $mode"
-    bash scripts/interlinear/compile_zizhi_tongjian_comment_aware.sh \
+    ZIZHI_SKIP_SIDECAR_REPAIR=1 bash scripts/interlinear/compile_zizhi_tongjian_comment_aware.sh \
       --part "$part" \
       --color-mode "$mode" \
       --skip-spans
