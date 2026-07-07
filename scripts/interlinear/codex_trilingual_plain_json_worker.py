@@ -25,6 +25,7 @@ from validate_trilingual_interlinear_json import (
     SINGLE_HAN_RE,
     allows_non_han_zh_fragment,
     allows_non_japanese_ja_fragment,
+    allows_technical_ja_without_kana,
     validate_chunk,
 )
 
@@ -312,6 +313,7 @@ def validate_plain_chunk(source: dict[str, Any], result: dict[str, Any]) -> list
                 and len("".join(ja.split())) > 12
                 and not copied_source_ja
                 and not allows_non_japanese_ja_fragment(source_text, ja)
+                and not allows_technical_ja_without_kana(source_text, ja)
             ):
                 errors.append(f"{unit_where}.ja: Japanese row must contain kana; pure Han text is usually Chinese, not Japanese")
     return errors

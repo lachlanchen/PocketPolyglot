@@ -16,6 +16,7 @@ HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
 KANA_RE = re.compile(r"[\u3040-\u309f\u30a0-\u30fa]")
 LATIN_RE = re.compile(r"[A-Za-z]")
+VISUAL_TECHNICAL_RE = re.compile(r"\b(?:fig(?:ure)?|track)\s*\.?\s*\d|[図圖图]\s*\d", re.IGNORECASE)
 TECHNICAL_NON_HAN_RE = re.compile(
     r"\d|[._/@#%°℃₂₃+-]|[A-Z]{2,}|"
     r"\b(?:sol|jpg|jpeg|ascii|nasa|mav|eva|jpl|capcom|hermes|ares|"
@@ -83,6 +84,20 @@ def allows_non_japanese_ja_fragment(source_text: str, ja_text: str) -> bool:
     if len(text) > 50:
         return False
     return bool(TECHNICAL_NON_HAN_RE.search(text) or TECHNICAL_NON_HAN_RE.search(source))
+
+
+def allows_technical_ja_without_kana(source_text: str, ja_text: str) -> bool:
+    """Allow figure/track-only rows that will receive kanji ruby after promotion."""
+    text = compact(ja_text)
+    source = compact(source_text)
+    if not text or KANA_RE.search(text):
+        return False
+    if not (VISUAL_TECHNICAL_RE.search(source) or VISUAL_TECHNICAL_RE.search(text)):
+        return False
+    prose_words = re.findall(r"\b[A-Za-z]{3,}\b", source)
+    symbol_count = len(re.findall(r"[^A-Za-z0-9\s]", source))
+    digit_count = len(re.findall(r"\d", source))
+    return len(prose_words) <= 8 or symbol_count + digit_count >= 6
 
 
 def validate_token_shape(tokens: Any, where: str, errors: list[str]) -> bool:
@@ -198,7 +213,10 @@ def validate_unit(unit: Any, where: str, errors: list[str]) -> tuple[str, str, s
     en_text = token_text(unit.get("en", []))
     zh_text = token_text(unit.get("zh", []))
     ja_text = token_text(unit.get("ja", []))
-    require_ja = require_content and not allows_non_japanese_ja_fragment(source_basis, ja_text)
+    require_ja = require_content and not (
+        allows_non_japanese_ja_fragment(source_basis, ja_text)
+        or allows_technical_ja_without_kana(source_basis, ja_text)
+    )
     validate_zh_tokens(unit.get("zh", []), f"{where}.zh", errors, require_han=False, allow_kana=allow_zh_kana)
     validate_ja_tokens(unit.get("ja", []), f"{where}.ja", errors, require_japanese=require_ja)
     if require_zh_han and not HAN_RE.search(zh_text) and not allows_non_han_zh_fragment(source_basis, zh_text):
