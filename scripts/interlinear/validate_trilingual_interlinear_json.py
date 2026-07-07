@@ -16,7 +16,10 @@ HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
 KANA_RE = re.compile(r"[\u3040-\u309f\u30a0-\u30fa]")
 LATIN_RE = re.compile(r"[A-Za-z]")
-VISUAL_TECHNICAL_RE = re.compile(r"\b(?:fig(?:ure)?|track)\s*\.?\s*\d|[図圖图]\s*\d", re.IGNORECASE)
+VISUAL_TECHNICAL_RE = re.compile(r"\b(?:figs?|figure|track)\s*\.?\s*\d*|[図圖图]\s*\d*", re.IGNORECASE)
+MUSIC_TABLE_TOKEN_RE = re.compile(
+    r"\b(?:[A-G](?:[#b+>°])?(?:m|maj|min|dim|aug)?\d*|[b#]?(?:I|II|III|IV|V|VI|VII|i|ii|iii|iv|v|vi|vii)|major|minor|dim|aug)\b"
+)
 TECHNICAL_NON_HAN_RE = re.compile(
     r"\d|[._/@#%°℃₂₃+-]|[A-Z]{2,}|"
     r"\b(?:sol|jpg|jpeg|ascii|nasa|mav|eva|jpl|capcom|hermes|ares|"
@@ -58,12 +61,31 @@ def has_language_content(text: str) -> bool:
     return bool(HAN_RE.search(text) or KANA_RE.search(text) or LATIN_RE.search(text))
 
 
+def music_table_token_count(text: str) -> int:
+    return len(MUSIC_TABLE_TOKEN_RE.findall(compact(text)))
+
+
+def allows_latin_music_table_fragment(source_text: str, target_text: str) -> bool:
+    target = compact(target_text)
+    source = compact(source_text)
+    if not target or HAN_RE.search(target) or KANA_RE.search(target):
+        return False
+    if len(target) > 220:
+        return False
+    token_count = music_table_token_count(source + " " + target)
+    prose_words = re.findall(r"\b[A-Za-z]{4,}\b", source + " " + target)
+    symbol_count = len(re.findall(r"[^A-Za-z0-9\s]", source + " " + target))
+    return token_count >= 6 and (symbol_count >= 4 or len(prose_words) <= 18)
+
+
 def allows_non_han_zh_fragment(source_text: str, zh_text: str) -> bool:
     """Allow short technical/proper-name fragments that are naturally non-Han."""
     text = compact(zh_text)
     if not text or HAN_RE.search(text) or KANA_RE.search(text):
         return False
     source = compact(source_text)
+    if allows_latin_music_table_fragment(source, text):
+        return True
     if normalized_latin_fragment(text) and normalized_latin_fragment(text) == normalized_latin_fragment(source):
         return len(text) <= 90
     if len(text) > 50:
@@ -79,6 +101,8 @@ def allows_non_japanese_ja_fragment(source_text: str, ja_text: str) -> bool:
     if not text or HAN_RE.search(text) or KANA_RE.search(text):
         return False
     source = compact(source_text)
+    if allows_latin_music_table_fragment(source, text):
+        return True
     if normalized_latin_fragment(text) and normalized_latin_fragment(text) == normalized_latin_fragment(source):
         return len(text) <= 90
     if len(text) > 50:
