@@ -483,15 +483,38 @@ def tokenize_ja(text: str) -> list[dict[str, str]]:
     return tokens
 
 
+def usable_title(value: Any) -> str:
+    text = plain_text(value)
+    if not text:
+        return ""
+    lowered = text.lower()
+    if lowered in {
+        "source-edition-poetry-window",
+        "source-edition-window",
+        "reference-window",
+        "source-window",
+    }:
+        return ""
+    if lowered.startswith("source-edition-") and lowered.endswith("-window"):
+        return ""
+    return text
+
+
 def chapter_title_text(source: dict[str, Any], lang: str) -> str:
     reference = source.get("reference", {})
     if lang == "en":
-        return str(source.get("chapter_title_en") or f"Chapter {source['chapter_number']}")
+        return usable_title(source.get("chapter_title_en")) or f"Chapter {source['chapter_number']}"
     if lang == "zh":
+        explicit = usable_title(source.get("chapter_title_zh") or source.get("chapter_title_zh_modern"))
+        if explicit:
+            return explicit
         ref = reference.get("zh_primary") or {}
-        return str(ref.get("chapter") or f"第{source['chapter_number']}章")
+        return usable_title(ref.get("chapter")) or f"第{source['chapter_number']}章"
+    explicit = usable_title(source.get("chapter_title_ja") or source.get("chapter_title_jp") or source.get("chapter_title_ja_modern"))
+    if explicit:
+        return explicit
     ref = reference.get("ja") or {}
-    return str(ref.get("chapter") or f"第{source['chapter_number']}章")
+    return usable_title(ref.get("chapter")) or f"第{source['chapter_number']}章"
 
 
 def promote_plain_chunk(source: dict[str, Any], plain: dict[str, Any]) -> dict[str, Any]:
