@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "book_id": "berklee-music-theory-book-1",
-  "status": "source_ready_not_chunked",
-  "launchable": false,
-  "task_mode": "trilingual_music_theory_private_study_notes_en_spine_zh_ja_references",
-  "legal_mode": "private_study_notes_not_full_text_republication",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_music_theory_private_study_notes_en_spine_zh_ja_with_figures",
+  "legal_mode": "private_study_notes_with_source_page_figure_evidence",
   "source_spine_lang": "en",
   "book_title_en": "Berklee Music Theory Book 1",
   "book_title_zh": "伯克利音乐理论第一册",
@@ -12,6 +12,8 @@
   "author": "Paul Schmeling",
   "source_paths": {
     "en_primary": "resources/curated-books/music-theory-and-guitar/recommended/berklee/en/Berklee Music Theory Book 1.pdf",
+    "extracted_markdown": "books/berklee-music-theory-book-1/work/trilingual/source-extract/source-pages.md",
+    "page_images": "books/berklee-music-theory-book-1/work/trilingual/page-images",
     "en_guitar_method_volume_1": "resources/curated-books/music-theory-and-guitar/berklee-guitar-method/en/A Modern Method for Guitar - Volume 1.pdf",
     "en_guitar_method_volume_2": "resources/curated-books/music-theory-and-guitar/berklee-guitar-method/en/A Modern Method for Guitar - Volume 2.pdf",
     "zh_music_theory_reference": "resources/curated-books/music-theory-and-guitar/zh/music-theory/音乐分析法 (Analyse lernen).pdf",
@@ -20,9 +22,7 @@
     "ja_music_dictionary_reference": "resources/curated-books/music-theory-and-guitar/ja/music-theory/カラー 図解音楽事典 dtv-Atlas zur Musik.pdf"
   },
   "markdown": {
-    "en": "books/berklee-music-theory-book-1/markdown/en.md",
-    "zh": "books/berklee-music-theory-book-1/markdown/zh.md",
-    "ja": "books/berklee-music-theory-book-1/markdown/ja.md"
+    "en": "books/berklee-music-theory-book-1/markdown/en.md"
   },
   "chunks_jsonl": "books/berklee-music-theory-book-1/work/trilingual/chunks/chunks.jsonl",
   "chunks_manifest": "books/berklee-music-theory-book-1/work/trilingual/chunks/manifest.json",
@@ -31,11 +31,19 @@
   "assembled_json": "books/berklee-music-theory-book-1/work/trilingual/preview/berklee-music-theory-book-1.partial.json",
   "build_root": "build/berklee-music-theory-book-1",
   "cover_image": "assets/covers/berklee-music-theory-book-1/cover.png",
-  "prepared_at": "2026-07-06T04:08:00+00:00",
+  "prepared_at": "2026-07-07T00:55:59.132822+00:00",
   "preparation_notes": {
-    "status": "Sources are copied locally. Reviewed Markdown and chunk manifest still need to be prepared before workers start.",
-    "recommended_chunking": "lesson-level sections: staff notation, pitch, rhythm, major/minor keys, intervals, triads, seventh chords, harmony, and ear-training/practice prompts",
-    "output_policy": "Produce original multilingual study notes and exercises from the concepts; do not reproduce full copyrighted textbook pages.",
-    "math_music_policy": "Preserve notation vocabulary, chord symbols, staff/rhythm examples, tables, figures, captions, exercises, and examples accurately as structured TeX or referenced figure assets."
-  }
+    "status": "Chunk manifest prepared and launchable.",
+    "workers": 5,
+    "source_handling": "Extracted English page text plus attached page images for notation and diagrams.",
+    "figure_policy": "Every content page chunk carries the original source page image as a required figure block.",
+    "music_policy": "Preserve notation vocabulary, chord symbols, staff/rhythm examples, keyboard diagrams, captions, exercises, and tables."
+  },
+  "book_title_zh_reading": "bó kè lì yīn yuè lǐ lùn dì yī cè",
+  "book_title_ja_reading": "バークリー おんがく りろん だい いっかん",
+  "author_reading_zh": "bǎo luó shī méi líng",
+  "author_reading_ja": "ポール シュメリング",
+  "figure_manifest": "books/berklee-music-theory-book-1/work/trilingual/assets/figure-manifest.json",
+  "chunk_count": 80,
+  "figure_count": 80
 }
