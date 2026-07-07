@@ -12,6 +12,7 @@ Wait for a trilingual writer tmux session to finish, then finalize the book:
   - compile all 12 standard PDFs with ALLOW_MISSING=0
   - generate/prepend a cover page when needed
   - sync the finished PDFs to Nutstore Projects
+  - compile/export/sync the maximum-language large-font edition to Nutstore Share
   - sync durable JSON to data/interlinear/<book-id>/
   - commit the durable JSON artifacts if they changed
 USAGE
@@ -93,6 +94,18 @@ if [[ ! -f 'assets/covers/$book_id/cover.png' ]]; then
 fi
 python scripts/books/prepend_cover_pages.py --book '$book_id' --replace-existing
 python scripts/books/sync_trilingual_pair_book_to_nutstore.py '$book_id'
+for color_mode in color blackwhite; do
+  case '$book_id' in
+    kokin-wakashu|manyoshu)
+      bash scripts/interlinear/compile_trilingual_source_notes_book.sh --book-id '$book_id' --color-mode "\$color_mode"
+      ;;
+    *)
+      bash scripts/interlinear/compile_trilingual_en_notes_book.sh --book-id '$book_id' --color-mode "\$color_mode"
+      ;;
+  esac
+done
+python scripts/interlinear/export_max_language_shiji_catalog.py --book '$book_id' --force-compile --force-compress --no-readme --no-manifest
+python scripts/books/sync_max_language_book_to_nutstore.py '$book_id'
 
 mkdir -p "\$(dirname '$assembled_json')"
 python scripts/interlinear/assemble_trilingual_json.py \\
