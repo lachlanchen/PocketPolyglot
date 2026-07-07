@@ -10,10 +10,12 @@ from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 
+from nutstore_paths import lingualeaf_project_root
+
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_LOCAL_DIR = ROOT / "build" / "books"
-DEFAULT_NUTSTORE_DIR = Path.home() / "Nutstore Files" / "Projects" / "LinguaLeaf" / "books"
+DEFAULT_NUTSTORE_DIR = lingualeaf_project_root() / "books"
 
 FINAL_DIRECTIONS = {"zh-main", "jp-main", "en-main"}
 FINAL_VARIANTS = {"color", "blackwhite"}

@@ -9,9 +9,11 @@ import shutil
 from datetime import datetime, timezone
 from pathlib import Path
 
+from nutstore_paths import lingualeaf_project_root
+
 
 ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_TARGET = Path.home() / "Nutstore Files" / "Projects" / "LinguaLeaf" / "en-main-jp-zh"
+DEFAULT_TARGET = lingualeaf_project_root() / "en-main-jp-zh"
 
 
 def clean_name(text: str) -> str:

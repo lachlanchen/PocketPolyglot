@@ -16,10 +16,12 @@ import shutil
 from collections import Counter
 from pathlib import Path
 
+from nutstore_paths import lingualeaf_project_root, lingualeaf_share_root
+
 
 ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_PROJECT = Path("/home/lachlan/Nutstore Files/Projects/LinguaLeaf")
-DEFAULT_SHARE = Path("/home/lachlan/Nutstore Files/Share/LinguaLeaf")
+DEFAULT_PROJECT = lingualeaf_project_root()
+DEFAULT_SHARE = lingualeaf_share_root()
 
 PAIR_LABELS = {
     "jp-en": "日本語-English",

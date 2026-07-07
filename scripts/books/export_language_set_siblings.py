@@ -14,9 +14,11 @@ from pypdf import PdfReader, PdfWriter
 from reportlab.lib.utils import ImageReader
 from reportlab.pdfgen import canvas
 
+from nutstore_paths import lingualeaf_project_root
+
 
 ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_TARGET_ROOT = Path.home() / "Nutstore Files" / "Projects" / "LinguaLeaf"
+DEFAULT_TARGET_ROOT = lingualeaf_project_root()
 ARCHIVE = DEFAULT_TARGET_ROOT / "book-pdfs-20260525-083406"
 REFERENCE_DOC = ROOT / "references" / "language-set-exports.md"
 COVER_ROOT = ROOT / "assets" / "covers"

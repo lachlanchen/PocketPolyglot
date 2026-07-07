@@ -15,11 +15,13 @@ import shutil
 from collections import Counter
 from pathlib import Path
 
+from nutstore_paths import lingualeaf_project_root, lingualeaf_share_root
+
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_SOURCE = ROOT / "artifacts" / "lingualleaf" / "books"
-DEFAULT_PROJECT = Path("/home/lachlan/Nutstore Files/Projects/LinguaLeaf")
-DEFAULT_SHARE = Path("/home/lachlan/Nutstore Files/Share/LinguaLeaf")
+DEFAULT_PROJECT = lingualeaf_project_root()
+DEFAULT_SHARE = lingualeaf_share_root()
 
 LANGUAGE_LABELS = {
     "wenyan-en-jp-zh": "文言文-English-日本語-中文",
