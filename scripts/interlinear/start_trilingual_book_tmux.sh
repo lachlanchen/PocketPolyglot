@@ -141,7 +141,12 @@ running_count() {
   local count=0
   local pid
   for pid in "\$@"; do
-    if kill -0 "\$pid" 2>/dev/null; then
+    # Exited children can remain as zombies until the final wait loop reaps
+    # them. kill -0 still succeeds for those PIDs, so exclude Z states here
+    # to avoid keeping long-running tmux monitors alive after workers finish.
+    local stat
+    stat="\$(ps -o stat= -p "\$pid" 2>/dev/null || true)"
+    if [[ -n "\$stat" && "\$stat" != Z* ]] && kill -0 "\$pid" 2>/dev/null; then
       count=\$((count + 1))
     fi
   done
