@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "book_id": "tom-kolb-music-theory-guitarists",
-  "status": "source_ready_not_chunked",
-  "launchable": false,
-  "task_mode": "trilingual_music_theory_private_study_notes_en_spine_zh_ja_references",
-  "legal_mode": "private_study_notes_not_full_text_republication",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_music_theory_private_study_notes_en_spine_zh_ja_with_figures",
+  "legal_mode": "private_study_notes_with_source_page_figure_evidence",
   "source_spine_lang": "en",
   "book_title_en": "Music Theory for Guitarists",
   "book_title_zh": "吉他手音乐理论",
@@ -12,16 +12,15 @@
   "author": "Tom Kolb",
   "source_paths": {
     "en_primary": "resources/curated-books/music-theory-and-guitar/recommended/tom-kolb/en/Music Theory for Guitarists_ Everything You Ever Wanted to Know But Were Afraid to Ask.pdf",
+    "ocr_markdown": "books/tom-kolb-music-theory-guitarists/work/trilingual/ocr/source-pages.md",
+    "page_images": "books/tom-kolb-music-theory-guitarists/work/trilingual/page-images",
     "zh_music_theory_reference": "resources/curated-books/music-theory-and-guitar/zh/music-theory/音乐分析法 (Analyse lernen).pdf",
     "zh_guitar_reference": "resources/curated-books/music-theory-and-guitar/zh/guitar/电吉他自学完整教程.pdf",
     "ja_music_theory_reference": "resources/curated-books/music-theory-and-guitar/ja/music-theory/楽典 音楽の基礎から和声へ.pdf",
-    "ja_guitar_chord_reference": "resources/curated-books/music-theory-and-guitar/ja/music-theory/コード編曲法 ~藤巻メソッド~ Chord Arrange -FUJIMAKI Method-.pdf",
-    "en_guitar_exercise_reference": "resources/curated-books/music-theory-and-guitar/berklee-guitar-method/en/Berklee Practice Method_ Guitar.pdf"
+    "ja_guitar_chord_reference": "resources/curated-books/music-theory-and-guitar/ja/music-theory/コード編曲法 ~藤巻メソッド~ Chord Arrange -FUJIMAKI Method-.pdf"
   },
   "markdown": {
-    "en": "books/tom-kolb-music-theory-guitarists/markdown/en.md",
-    "zh": "books/tom-kolb-music-theory-guitarists/markdown/zh.md",
-    "ja": "books/tom-kolb-music-theory-guitarists/markdown/ja.md"
+    "en": "books/tom-kolb-music-theory-guitarists/markdown/en.md"
   },
   "chunks_jsonl": "books/tom-kolb-music-theory-guitarists/work/trilingual/chunks/chunks.jsonl",
   "chunks_manifest": "books/tom-kolb-music-theory-guitarists/work/trilingual/chunks/manifest.json",
@@ -30,11 +29,19 @@
   "assembled_json": "books/tom-kolb-music-theory-guitarists/work/trilingual/preview/tom-kolb-music-theory-guitarists.partial.json",
   "build_root": "build/tom-kolb-music-theory-guitarists",
   "cover_image": "assets/covers/tom-kolb-music-theory-guitarists/cover.png",
-  "prepared_at": "2026-07-06T04:08:00+00:00",
+  "prepared_at": "2026-07-07T00:34:07.541666+00:00",
   "preparation_notes": {
-    "status": "Sources are copied locally. Reviewed Markdown and chunk manifest still need to be prepared before workers start.",
-    "recommended_chunking": "concept-level sections: notation, intervals, scales, keys, chord construction, harmony, rhythm, fretboard applications, and exercises",
-    "output_policy": "Produce original multilingual study notes and exercises from the concepts; do not reproduce full copyrighted textbook pages.",
-    "math_music_policy": "Preserve chord symbols, scale-degree notation, fretboard diagrams, rhythmic values, staff/rhythm examples, figures, captions, exercises, and tables accurately as structured TeX or referenced figure assets."
-  }
+    "status": "Chunk manifest prepared and launchable.",
+    "workers": 5,
+    "source_handling": "OCR English page text plus attached page images for diagrams.",
+    "figure_policy": "Every content page chunk carries the original source page image as a required figure block.",
+    "music_policy": "Preserve fretboard diagrams, staff/tablature fragments, chord symbols, rhythm examples, tables, captions, quizzes, and exercises."
+  },
+  "book_title_zh_reading": "jí tā shǒu yīn yuè lǐ lùn",
+  "book_title_ja_reading": "ギタリスト の ため の おんがく りろん",
+  "author_reading_zh": "tāng mǔ kē ěr bù",
+  "author_reading_ja": "トム コルブ",
+  "figure_manifest": "books/tom-kolb-music-theory-guitarists/work/trilingual/assets/figure-manifest.json",
+  "chunk_count": 101,
+  "figure_count": 101
 }

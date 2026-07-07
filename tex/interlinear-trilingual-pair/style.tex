@@ -247,6 +247,21 @@
   \vspace{0.12em}
 }
 
+\NewDocumentCommand{\TriPairFigure}{m m}{%
+  \Needspace{0.44\textheight}%
+  \begin{center}
+    \IfFileExists{#1}{%
+      \includegraphics[width=\linewidth,height=0.56\textheight,keepaspectratio]{#1}\par
+      \if\relax\detokenize{#2}\relax\else
+        {\sffamily\fontsize{5.6pt}{6.6pt}\selectfont\color{BookNote}#2\par}%
+      \fi
+    }{%
+      {\sffamily\fontsize{5.6pt}{6.6pt}\selectfont\color{BookRed}Missing figure: #1\par}%
+    }%
+  \end{center}
+  \vspace{0.18em}
+}
+
 \NewDocumentCommand{\TriAllPdfMeta}{m m}{%
   \hypersetup{pdftitle={#1 / Japanese and Chinese notes},pdfauthor={#2}}%
 }

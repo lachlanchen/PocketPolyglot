@@ -189,6 +189,21 @@ def render_author(author: str, reading: str) -> str:
     return rf"\jpruby{{{tex_escape(author)}}}{{{tex_escape(reading)}}}"
 
 
+def render_figures(figures: Any) -> list[str]:
+    if not isinstance(figures, list):
+        return []
+    out: list[str] = []
+    for figure in figures:
+        if not isinstance(figure, dict):
+            continue
+        path = str(figure.get("path") or figure.get("image") or "").strip()
+        if not path:
+            continue
+        caption = str(figure.get("caption") or figure.get("title") or "").strip()
+        out.append(rf"\TriPairFigure{{{tex_path_arg(path)}}}{{{tex_escape(caption)}}}")
+    return out
+
+
 def convert(
     data: dict[str, Any],
     *,
@@ -238,6 +253,7 @@ def convert(
                 main = render_lang(unit.get(main_lang, []), main_lang, "main")
                 comment = render_lang(unit.get(comment_lang, []), comment_lang, "comment")
                 out.append("\n".join([r"\TriPairUnit", brace(main), brace(comment), ""]))
+            out.extend(render_figures(paragraph.get("figures")))
             out.append(r"\TriPairParagraphEnd")
             out.append("")
     return "\n".join(out).rstrip() + "\n"

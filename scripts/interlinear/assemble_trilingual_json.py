@@ -132,6 +132,7 @@ def main() -> int:
                 continue
             raise ValueError(f"{chunk_path}: " + "; ".join(errors[:40]))
         assembled_count += 1
+        source_paragraph_by_id = {paragraph["id"]: paragraph for paragraph in source.get("paragraphs", [])}
         chapter_source = chunk["chapter"]
         chapter_id = chapter_source["id"]
         chapter = chapters.setdefault(
@@ -143,7 +144,14 @@ def main() -> int:
                 "paragraphs": [],
             },
         )
-        chapter["paragraphs"].extend(chunk["paragraphs"])
+        for paragraph in chunk["paragraphs"]:
+            if not isinstance(paragraph, dict):
+                continue
+            source_paragraph = source_paragraph_by_id.get(str(paragraph.get("id"))) or {}
+            for key in ("figures", "technical_assets", "source_pages"):
+                if key in source_paragraph and key not in paragraph:
+                    paragraph[key] = source_paragraph[key]
+            chapter["paragraphs"].append(paragraph)
 
     if assembled_count == 0:
         raise RuntimeError("no chunk JSON files were assembled")
