@@ -14,10 +14,13 @@ from typing import Any
 SPACE_RE = re.compile(r"\s+")
 HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
-KANA_RE = re.compile(r"[\u3040-\u30ff]")
+KANA_RE = re.compile(r"[\u3040-\u309f\u30a0-\u30fa]")
 LATIN_RE = re.compile(r"[A-Za-z]")
 TECHNICAL_NON_HAN_RE = re.compile(
-    r"\d|[._/@#%°℃₂₃+-]|[A-Z]{2,}|\b(?:sol|jpg|jpeg|ascii|nasa|mav|eva|jpl|capcom|hermes|ares)\b",
+    r"\d|[._/@#%°℃₂₃+-]|[A-Z]{2,}|"
+    r"\b(?:sol|jpg|jpeg|ascii|nasa|mav|eva|jpl|capcom|hermes|ares|"
+    r"coda|fine|ritard|ritardando|simile|tacet|tutte|piano|forte|fortissimo|pianissimo|"
+    r"lennon|mccartney|guitar|fender|stratocaster|star|licks|hal|leonard|modes|starter|series)\b",
     re.IGNORECASE,
 )
 GRAMMAR_ROLES = {
@@ -40,6 +43,10 @@ def no_space(text: str) -> str:
     return "".join(str(text or "").split())
 
 
+def normalized_latin_fragment(text: str) -> str:
+    return re.sub(r"[^a-z0-9#.+/%°-]+", "", compact(text).lower()).strip(".")
+
+
 def token_text(tokens: Any) -> str:
     if not isinstance(tokens, list):
         return ""
@@ -55,11 +62,26 @@ def allows_non_han_zh_fragment(source_text: str, zh_text: str) -> bool:
     text = compact(zh_text)
     if not text or HAN_RE.search(text) or KANA_RE.search(text):
         return False
-    if len(text) > 40:
+    source = compact(source_text)
+    if normalized_latin_fragment(text) and normalized_latin_fragment(text) == normalized_latin_fragment(source):
+        return len(text) <= 90
+    if len(text) > 50:
         return False
-    if len(LATIN_RE.findall(text)) > 24:
+    if len(LATIN_RE.findall(text)) > 34:
+        return False
+    return bool(TECHNICAL_NON_HAN_RE.search(text) or TECHNICAL_NON_HAN_RE.search(source))
+
+
+def allows_non_japanese_ja_fragment(source_text: str, ja_text: str) -> bool:
+    """Allow Latin music markings, product titles, and other technical fragments."""
+    text = compact(ja_text)
+    if not text or HAN_RE.search(text) or KANA_RE.search(text):
         return False
     source = compact(source_text)
+    if normalized_latin_fragment(text) and normalized_latin_fragment(text) == normalized_latin_fragment(source):
+        return len(text) <= 90
+    if len(text) > 50:
+        return False
     return bool(TECHNICAL_NON_HAN_RE.search(text) or TECHNICAL_NON_HAN_RE.search(source))
 
 
@@ -173,11 +195,12 @@ def validate_unit(unit: Any, where: str, errors: list[str]) -> tuple[str, str, s
     require_zh_han = require_content and (not source_zh or bool(HAN_RE.search(source_zh)))
     allow_zh_kana = bool(source_zh and KANA_RE.search(source_zh))
     validate_en_tokens(unit.get("en", []), f"{where}.en", errors)
-    validate_zh_tokens(unit.get("zh", []), f"{where}.zh", errors, require_han=False, allow_kana=allow_zh_kana)
-    validate_ja_tokens(unit.get("ja", []), f"{where}.ja", errors, require_japanese=require_content)
     en_text = token_text(unit.get("en", []))
     zh_text = token_text(unit.get("zh", []))
     ja_text = token_text(unit.get("ja", []))
+    require_ja = require_content and not allows_non_japanese_ja_fragment(source_basis, ja_text)
+    validate_zh_tokens(unit.get("zh", []), f"{where}.zh", errors, require_han=False, allow_kana=allow_zh_kana)
+    validate_ja_tokens(unit.get("ja", []), f"{where}.ja", errors, require_japanese=require_ja)
     if require_zh_han and not HAN_RE.search(zh_text) and not allows_non_han_zh_fragment(source_basis, zh_text):
         errors.append(f"{where}.zh: Chinese text must contain Han characters")
     if source_en and compact(en_text) != compact(source_en):
