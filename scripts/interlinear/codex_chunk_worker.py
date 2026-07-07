@@ -264,6 +264,8 @@ def run_codex(
 
     wait_seconds = env_int("CODEX_USAGE_LIMIT_WAIT_SECONDS", 3600)
     max_wait_seconds = env_int("CODEX_USAGE_LIMIT_MAX_WAIT_SECONDS", 0)
+    if max_wait_seconds <= 0 and timeout_seconds > 0:
+        max_wait_seconds = timeout_seconds
     waited_seconds = 0
     attempt = 0
     while True:
