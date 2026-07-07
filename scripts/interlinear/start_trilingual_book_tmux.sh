@@ -61,6 +61,8 @@ max_chunks_per_worker="${MAX_CHUNKS_PER_WORKER:-0}"
 model="${MODEL:-gpt-5.5}"
 reasoning="${REASONING:-high}"
 codex_timeout_seconds="${CODEX_TIMEOUT_SECONDS:-7200}"
+usage_limit_wait_seconds="${CODEX_USAGE_LIMIT_WAIT_SECONDS:-3600}"
+usage_limit_max_wait_seconds="${CODEX_USAGE_LIMIT_MAX_WAIT_SECONDS:-0}"
 merge_interval="${MERGE_INTERVAL:-180}"
 compile_interval_seconds="${COMPILE_INTERVAL_SECONDS:-1200}"
 worker_script="${WORKER_SCRIPT:-scripts/interlinear/codex_trilingual_plain_json_worker.py}"
@@ -90,6 +92,8 @@ cat > "$run_script" <<EOF
 #!/usr/bin/env bash
 set -euo pipefail
 cd '$root'
+export CODEX_USAGE_LIMIT_WAIT_SECONDS='$usage_limit_wait_seconds'
+export CODEX_USAGE_LIMIT_MAX_WAIT_SECONDS='$usage_limit_max_wait_seconds'
 mkdir -p '$work_root/logs' '$candidate_dir' '$merged_dir' '$raw_chunk_dir'
 
 gen_pids=()
