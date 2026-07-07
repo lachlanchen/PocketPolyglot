@@ -9,8 +9,8 @@ This catalog is generated from local build outputs. It selects the richest avail
 
 All compiled editions use the larger PocketPolyglot font profile. Existing source PDFs and JSON are not modified.
 
-- Local compressed/exported PDFs: 200
-- GitHub-tracked PDFs under size cap: 194
+- Local compressed/exported PDFs: 202
+- GitHub-tracked PDFs under size cap: 196
 - Skipped source folders: 4
 
 ## Gallery
@@ -23,6 +23,7 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | <img src="assets/max-language-previews/bhagavad-gita.png" width="120" alt="bhagavad-gita cover preview"> | `bhagavad-gita` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/bhagavad-gita/en-main-jp-zh/color/The Bhagavad Gita（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/bhagavad-gita/en-main-jp-zh/blackwhite/The Bhagavad Gita（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/bible.png" width="120" alt="bible cover preview"> | `bible` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/bible/en-main-jp-zh/color/The Holy Bible（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/bible/en-main-jp-zh/blackwhite/The Holy Bible（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/botchan.png" width="120" alt="botchan cover preview"> | `botchan` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/botchan/en-main-jp-zh/color/Botchan（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/botchan/en-main-jp-zh/blackwhite/Botchan（日文・中文注・黑白）・最大語種・大字版.pdf) |
+| <img src="assets/max-language-previews/byron-selected-poems.png" width="120" alt="byron-selected-poems cover preview"> | `byron-selected-poems` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/byron-selected-poems/en-main-jp-zh/color/Selected Poems of Lord Byron（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/byron-selected-poems/en-main-jp-zh/blackwhite/Selected Poems of Lord Byron（日文・中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/chuci.png" width="120" alt="chuci cover preview"> | `chuci` | `wenyan-en-jp-zh` | [color](docs/pocketpolyglot/books/wenyan-en-jp-zh/chuci/wenyan-main-quadrilingual/color/楚辭（英文・現代日本語・現代中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/wenyan-en-jp-zh/chuci/wenyan-main-quadrilingual/blackwhite/楚辭（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/chumon-no-ooi-ryoriten.png" width="120" alt="chumon-no-ooi-ryoriten cover preview"> | `chumon-no-ooi-ryoriten` | `jp-zh` | [color](docs/pocketpolyglot/books/jp-zh/chumon-no-ooi-ryoriten/jp-main/color/注文の多い料理店（中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/jp-zh/chumon-no-ooi-ryoriten/jp-main/blackwhite/注文の多い料理店（中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/fellowship-of-the-ring.png" width="120" alt="fellowship-of-the-ring cover preview"> | `fellowship-of-the-ring` | `en-jp-zh` | [color](docs/pocketpolyglot/books/en-jp-zh/fellowship-of-the-ring/en-main-jp-zh/color/The Fellowship of the Ring（日文・中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/en-jp-zh/fellowship-of-the-ring/en-main-jp-zh/blackwhite/The Fellowship of the Ring（日文・中文注・黑白）・最大語種・大字版.pdf) |
@@ -128,6 +129,8 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | `bible` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 10285 | 47.1 | 45.8 | yes | `artifacts/lingualleaf/books/en-jp-zh/bible/en-main-jp-zh/blackwhite/The Holy Bible（日文・中文注・黑白）・最大語種・大字版.pdf` |
 | `botchan` | `en-jp-zh` | `en-main-jp-zh` | `color` | 751 | 10.4 | 5.4 | yes | `artifacts/lingualleaf/books/en-jp-zh/botchan/en-main-jp-zh/color/Botchan（日文・中文注）・最大語種・大字版.pdf` |
 | `botchan` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 751 | 10.0 | 4.6 | yes | `artifacts/lingualleaf/books/en-jp-zh/botchan/en-main-jp-zh/blackwhite/Botchan（日文・中文注・黑白）・最大語種・大字版.pdf` |
+| `byron-selected-poems` | `en-jp-zh` | `en-main-jp-zh` | `color` | 3553 | 20.4 | 20.4 | yes | `artifacts/lingualleaf/books/en-jp-zh/byron-selected-poems/en-main-jp-zh/color/Selected Poems of Lord Byron（日文・中文注）・最大語種・大字版.pdf` |
+| `byron-selected-poems` | `en-jp-zh` | `en-main-jp-zh` | `blackwhite` | 3553 | 18.7 | 18.3 | yes | `artifacts/lingualleaf/books/en-jp-zh/byron-selected-poems/en-main-jp-zh/blackwhite/Selected Poems of Lord Byron（日文・中文注・黑白）・最大語種・大字版.pdf` |
 | `chuci` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 628 | 10.4 | 5.8 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/chuci/wenyan-main-quadrilingual/color/楚辭（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
 | `chuci` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 628 | 10.1 | 5.1 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/chuci/wenyan-main-quadrilingual/blackwhite/楚辭（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
 | `chumon-no-ooi-ryoriten` | `jp-zh` | `jp-main` | `color` | 38 | 5.5 | 0.6 | yes | `artifacts/lingualleaf/books/jp-zh/chumon-no-ooi-ryoriten/jp-main/color/注文の多い料理店（中文注）・最大語種・大字版.pdf` |
