@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import os
 from pathlib import Path
+import re
 
 
 def _nutstore_root() -> Path:
@@ -54,3 +55,37 @@ def lingualeaf_share_root() -> Path:
         root / "Share" / "LinguaLeaf",
     )
 
+
+_SERVER_UNSAFE_FILENAME_CHARS = str.maketrans(
+    {
+        "<": "＜",
+        ">": "＞",
+        ":": "：",
+        '"': "＂",
+        "/": "／",
+        "\\": "／",
+        "|": "｜",
+        "?": "？",
+        "*": "＊",
+    }
+)
+
+
+def nutstore_safe_filename(name: str) -> str:
+    """Return a filename accepted by Nutstore's upstream server.
+
+    Nutstore accepts local files with Windows/server-unsafe characters such as
+    ASCII ``:`` but then rejects them during upload with ``NotAcceptableByServer``.
+    Keep the title readable by using fullwidth replacements instead of dropping
+    information.
+    """
+
+    safe = name.translate(_SERVER_UNSAFE_FILENAME_CHARS)
+    safe = re.sub(r"[\x00-\x1f\x7f]", "", safe)
+    safe = re.sub(r"\s+", " ", safe).strip()
+    if "." in safe:
+        stem, suffix = safe.rsplit(".", 1)
+        safe = f"{stem.rstrip(' .')}.{suffix}"
+    else:
+        safe = safe.rstrip(" .")
+    return safe or "untitled"

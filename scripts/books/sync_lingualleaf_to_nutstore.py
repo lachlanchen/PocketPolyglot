@@ -8,7 +8,7 @@ import shutil
 from collections import Counter
 from pathlib import Path
 
-from nutstore_paths import lingualeaf_project_root, lingualeaf_share_root
+from nutstore_paths import lingualeaf_project_root, lingualeaf_share_root, nutstore_safe_filename
 
 
 DEFAULT_SOURCE = Path("/home/lachlan/ProjectsLFS/ZhJpBook/artifacts/lingualleaf/books")
@@ -110,7 +110,7 @@ def target_name(record: dict[str, str | Path], title_counts: Counter[str]) -> st
     collision_key = f"{title}｜{language_label}｜{variant_label}"
     if title_counts[collision_key] > 1:
         stem = f"{stem}｜{record['book_id']}"
-    return f"{stem}.pdf"
+    return nutstore_safe_filename(f"{stem}.pdf")
 
 
 def copy_file(src: Path, dst: Path) -> None:

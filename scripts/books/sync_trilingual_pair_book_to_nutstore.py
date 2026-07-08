@@ -16,7 +16,7 @@ import shutil
 from collections import Counter
 from pathlib import Path
 
-from nutstore_paths import lingualeaf_project_root, lingualeaf_share_root
+from nutstore_paths import lingualeaf_project_root, lingualeaf_share_root, nutstore_safe_filename
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -89,7 +89,7 @@ def target_name(record: dict[str, str | Path], title_counts: Counter[str]) -> st
     stem = key
     if title_counts[key] > 1:
         stem = f"{stem}｜{record['pair']}-{record['main_dir']}"
-    return f"{stem}.pdf"
+    return nutstore_safe_filename(f"{stem}.pdf")
 
 
 def write_manifest(path: Path, copied: list[tuple[Path, Path]], source_root: Path) -> None:
