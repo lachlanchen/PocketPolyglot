@@ -1,0 +1,5234 @@
+{
+  "schema_version": "0.1",
+  "mode": "trilingual_standard",
+  "chunk_id": "keats-poems-spark-c0004",
+  "chapter": {
+    "id": "poem-0001",
+    "number": 1,
+    "title": {
+      "en": [
+        {
+          "t": "John",
+          "g": "subject"
+        },
+        {
+          "t": " "
+        },
+        {
+          "t": "Keats",
+          "g": "predicate"
+        },
+        {
+          "t": ":"
+        },
+        {
+          "t": " "
+        },
+        {
+          "t": "Poems",
+          "g": "object"
+        }
+      ],
+      "zh": [
+        {
+          "t": "济",
+          "r": "jì",
+          "g": "subject"
+        },
+        {
+          "t": "慈",
+          "r": "cí",
+          "g": "subject"
+        },
+        {
+          "t": "诗",
+          "r": "shī",
+          "g": "topic"
+        },
+        {
+          "t": "选",
+          "r": "xuǎn",
+          "g": "object"
+        }
+      ],
+      "ja": [
+        {
+          "t": "第",
+          "r": "だい",
+          "g": "subject"
+        },
+        {
+          "t": "1",
+          "g": "attributive"
+        },
+        {
+          "t": "章",
+          "r": "しょう",
+          "g": "complement"
+        }
+      ]
+    }
+  },
+  "paragraphs": [
+    {
+      "id": "keats-poems-spark-s0001-p00007",
+      "source_en": "Bards of Passion and of Mirth, written on the Blank Page before Beaumont and\nFletcher's Tragi-Comedy 'The Fair Maid of the Inn'\nBARDS of Passion and of Mirth,\nYe have left your souls on earth!\n Have ye souls in heaven too,\nDoubled-lived in regions new?\n Yes, and those of heaven commune\nWith the spheres of sun and moon;\nWith the noise of fountains wondrous,\nAnd the parle of voices thund'rous;\nWith the whisper of heaven's trees\nAnd one another, in soft ease\nSeated on Elysian lawns\nBrowsed by none but Dian's fawns;\nUnderneath large blue-bells tented,\nWhere the daisies are rose-scented,\nAnd the rose herself has got\nPerfume which on earth is not;\nWhere the nightingale doth sing\nNot a senseless, tranced thing,\nBut divine melodious truth;\nPhilosophic numbers smooth;\nTales and golden histories\nOf heaven and its mysteries.",
+      "units": [
+        {
+          "source_en": "Bards of Passion and of Mirth, written on the Blank Page before Beaumont and\nFletcher's Tragi-Comedy 'The Fair Maid of the Inn'\nBARDS of Passion and of Mirth,\nYe have left your souls on earth!\n ",
+          "en": [
+            {
+              "t": "Bards",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Passion",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Mirth",
+              "g": "subject"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "written",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "on",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Blank",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Page",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "before",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Beaumont",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "Fletcher's",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Tragi-Comedy",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "'"
+            },
+            {
+              "t": "The",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Fair",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Maid",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Inn",
+              "g": "subject"
+            },
+            {
+              "t": "'"
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "BARDS",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Passion",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Mirth",
+              "g": "subject"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "Ye",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "have",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "left",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "your",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "souls",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "on",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "earth",
+              "g": "adverbial"
+            },
+            {
+              "t": "!"
+            },
+            {
+              "t": "\n "
+            }
+          ],
+          "zh": [
+            {
+              "t": "《"
+            },
+            {
+              "t": "热",
+              "r": "rè",
+              "g": "subject"
+            },
+            {
+              "t": "情",
+              "r": "qíng",
+              "g": "subject"
+            },
+            {
+              "t": "与",
+              "r": "yǔ",
+              "g": "subject"
+            },
+            {
+              "t": "欢",
+              "r": "huān",
+              "g": "subject"
+            },
+            {
+              "t": "愉",
+              "r": "yú",
+              "g": "subject"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "诗",
+              "r": "shī",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "rén",
+              "g": "subject"
+            },
+            {
+              "t": "》，"
+            },
+            {
+              "t": "写",
+              "r": "xiě",
+              "g": "subject"
+            },
+            {
+              "t": "于",
+              "r": "yú",
+              "g": "subject"
+            },
+            {
+              "t": "贝",
+              "r": "bèi",
+              "g": "attributive"
+            },
+            {
+              "t": "蒙",
+              "r": "méng",
+              "g": "attributive"
+            },
+            {
+              "t": "与",
+              "r": "yǔ",
+              "g": "attributive"
+            },
+            {
+              "t": "弗",
+              "r": "fú",
+              "g": "attributive"
+            },
+            {
+              "t": "莱",
+              "r": "lái",
+              "g": "attributive"
+            },
+            {
+              "t": "彻",
+              "r": "chè",
+              "g": "attributive"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "悲",
+              "r": "bēi",
+              "g": "attributive"
+            },
+            {
+              "t": "喜",
+              "r": "xǐ",
+              "g": "attributive"
+            },
+            {
+              "t": "剧",
+              "r": "jù",
+              "g": "attributive"
+            },
+            {
+              "t": "《"
+            },
+            {
+              "t": "客",
+              "r": "kè",
+              "g": "attributive"
+            },
+            {
+              "t": "栈",
+              "r": "zhàn",
+              "g": "attributive"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "佳",
+              "r": "jiā",
+              "g": "attributive"
+            },
+            {
+              "t": "人",
+              "r": "rén",
+              "g": "attributive"
+            },
+            {
+              "t": "》"
+            },
+            {
+              "t": "开",
+              "r": "kāi",
+              "g": "predicate"
+            },
+            {
+              "t": "场",
+              "r": "chǎng",
+              "g": "topic"
+            },
+            {
+              "t": "前",
+              "r": "qián",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "空",
+              "r": "kōng",
+              "g": "object"
+            },
+            {
+              "t": "白",
+              "r": "bái",
+              "g": "object"
+            },
+            {
+              "t": "页",
+              "r": "yè",
+              "g": "object"
+            },
+            {
+              "t": "上",
+              "r": "shàng",
+              "g": "complement"
+            },
+            {
+              "t": "。 "
+            },
+            {
+              "t": "热",
+              "r": "rè",
+              "g": "object"
+            },
+            {
+              "t": "情",
+              "r": "qíng",
+              "g": "object"
+            },
+            {
+              "t": "与",
+              "r": "yǔ",
+              "g": "object"
+            },
+            {
+              "t": "欢",
+              "r": "huān",
+              "g": "object"
+            },
+            {
+              "t": "乐",
+              "r": "lè",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "诗",
+              "r": "shī",
+              "g": "object"
+            },
+            {
+              "t": "人",
+              "r": "rén",
+              "g": "object"
+            },
+            {
+              "t": "啊",
+              "r": "a",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "你",
+              "r": "nǐ",
+              "g": "object"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "object"
+            },
+            {
+              "t": "已",
+              "r": "yǐ",
+              "g": "adverbial"
+            },
+            {
+              "t": "把",
+              "r": "bǎ",
+              "g": "adverbial"
+            },
+            {
+              "t": "灵",
+              "r": "líng",
+              "g": "object"
+            },
+            {
+              "t": "魂",
+              "r": "hún",
+              "g": "object"
+            },
+            {
+              "t": "留",
+              "r": "liú",
+              "g": "object"
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "了",
+              "r": "le",
+              "g": "complement"
+            },
+            {
+              "t": "人",
+              "r": "rén",
+              "g": "object"
+            },
+            {
+              "t": "间",
+              "r": "jiān",
+              "g": "object"
+            },
+            {
+              "t": "！"
+            }
+          ],
+          "ja": [
+            {
+              "t": "情",
+              "r": "じょう",
+              "g": "subject"
+            },
+            {
+              "t": "熱",
+              "r": "ねつ",
+              "g": "subject"
+            },
+            {
+              "t": "と",
+              "g": "adverbial"
+            },
+            {
+              "t": "陽",
+              "r": "よう",
+              "g": "subject"
+            },
+            {
+              "t": "気",
+              "r": "き",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "詩",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "subject"
+            },
+            {
+              "t": "たちよ――ベーモントとフレッチャーの",
+              "g": "adverbial"
+            },
+            {
+              "t": "悲",
+              "r": "ひ",
+              "g": "subject"
+            },
+            {
+              "t": "喜",
+              "r": "き",
+              "g": "attributive"
+            },
+            {
+              "t": "劇",
+              "r": "げき",
+              "g": "attributive"
+            },
+            {
+              "t": "『"
+            },
+            {
+              "t": "宿",
+              "r": "やど",
+              "g": "attributive"
+            },
+            {
+              "t": "屋",
+              "r": "や",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "乙",
+              "r": "おと",
+              "g": "attributive"
+            },
+            {
+              "t": "女",
+              "r": "め",
+              "g": "attributive"
+            },
+            {
+              "t": "』の",
+              "g": "attributive"
+            },
+            {
+              "t": "前",
+              "r": "まえ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "白",
+              "r": "はく",
+              "g": "attributive"
+            },
+            {
+              "t": "紙",
+              "r": "し",
+              "g": "attributive"
+            },
+            {
+              "t": "に",
+              "g": "adverbial"
+            },
+            {
+              "t": "記",
+              "r": "しる",
+              "g": "attributive"
+            },
+            {
+              "t": "せり。 ",
+              "g": "attributive"
+            },
+            {
+              "t": "情",
+              "r": "じょう",
+              "g": "attributive"
+            },
+            {
+              "t": "熱",
+              "r": "ねつ",
+              "g": "attributive"
+            },
+            {
+              "t": "と",
+              "g": "adverbial"
+            },
+            {
+              "t": "喜",
+              "r": "よろこ",
+              "g": "attributive"
+            },
+            {
+              "t": "びの",
+              "g": "attributive"
+            },
+            {
+              "t": "吟",
+              "r": "ぎん",
+              "g": "attributive"
+            },
+            {
+              "t": "遊",
+              "r": "ゆう",
+              "g": "attributive"
+            },
+            {
+              "t": "詩",
+              "r": "し",
+              "g": "attributive"
+            },
+            {
+              "t": "人",
+              "r": "じん",
+              "g": "attributive"
+            },
+            {
+              "t": "たちよ、あなたがたはあなたがたの",
+              "g": "subject"
+            },
+            {
+              "t": "魂",
+              "r": "たましい",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "g": "object"
+            },
+            {
+              "t": "地",
+              "r": "ち",
+              "g": "attributive"
+            },
+            {
+              "t": "上",
+              "r": "じょう",
+              "g": "attributive"
+            },
+            {
+              "t": "に",
+              "g": "adverbial"
+            },
+            {
+              "t": "残",
+              "r": "のこ",
+              "g": "attributive"
+            },
+            {
+              "t": "してきた！",
+              "g": "complement"
+            }
+          ]
+        },
+        {
+          "source_en": "Have ye souls in heaven too,\nDoubled-lived in regions new?\n ",
+          "en": [
+            {
+              "t": "Have",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "ye",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "souls",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "in",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "heaven",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "too",
+              "g": "adverbial"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "Doubled-lived",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "in",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "regions",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "new",
+              "g": "adverbial"
+            },
+            {
+              "t": "?"
+            },
+            {
+              "t": "\n "
+            }
+          ],
+          "zh": [
+            {
+              "t": "你",
+              "r": "nǐ",
+              "g": "subject"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "subject"
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "天",
+              "r": "tiān",
+              "g": "subject"
+            },
+            {
+              "t": "堂",
+              "r": "táng",
+              "g": "attributive"
+            },
+            {
+              "t": "里",
+              "r": "lǐ",
+              "g": "attributive"
+            },
+            {
+              "t": "也",
+              "r": "yě",
+              "g": "adverbial"
+            },
+            {
+              "t": "有",
+              "r": "yǒu",
+              "g": "predicate"
+            },
+            {
+              "t": "灵",
+              "r": "líng",
+              "g": "object"
+            },
+            {
+              "t": "魂",
+              "r": "hún",
+              "g": "object"
+            },
+            {
+              "t": "吗",
+              "r": "ma",
+              "g": "object"
+            },
+            {
+              "t": "？ "
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "全",
+              "r": "quán",
+              "g": "object"
+            },
+            {
+              "t": "新",
+              "r": "xīn",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "地",
+              "r": "dì",
+              "g": "object"
+            },
+            {
+              "t": "域",
+              "r": "yù",
+              "g": "object"
+            },
+            {
+              "t": "中",
+              "r": "zhōng",
+              "g": "object"
+            },
+            {
+              "t": "重",
+              "r": "zhòng",
+              "g": "object"
+            },
+            {
+              "t": "生",
+              "r": "shēng",
+              "g": "predicate"
+            },
+            {
+              "t": "而",
+              "r": "ér",
+              "g": "object"
+            },
+            {
+              "t": "居",
+              "r": "jū",
+              "g": "object"
+            },
+            {
+              "t": "？"
+            }
+          ],
+          "ja": [
+            {
+              "t": "あなたがたには",
+              "g": "subject"
+            },
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "subject"
+            },
+            {
+              "t": "上",
+              "r": "じょう",
+              "g": "subject"
+            },
+            {
+              "t": "にも",
+              "g": "adverbial"
+            },
+            {
+              "t": "魂",
+              "r": "たましい",
+              "g": "attributive"
+            },
+            {
+              "t": "があるのですか。 ",
+              "g": "subject"
+            },
+            {
+              "t": "新",
+              "r": "あたら",
+              "g": "attributive"
+            },
+            {
+              "t": "しき",
+              "g": "attributive"
+            },
+            {
+              "t": "領",
+              "r": "りょう",
+              "g": "attributive"
+            },
+            {
+              "t": "域",
+              "r": "いき",
+              "g": "attributive"
+            },
+            {
+              "t": "で",
+              "g": "adverbial"
+            },
+            {
+              "t": "重",
+              "r": "おも",
+              "g": "attributive"
+            },
+            {
+              "t": "ねて",
+              "g": "attributive"
+            },
+            {
+              "t": "生",
+              "r": "なま",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "g": "object"
+            },
+            {
+              "t": "得",
+              "r": "え",
+              "g": "attributive"
+            },
+            {
+              "t": "ているのでしょうか。",
+              "g": "adverbial"
+            }
+          ]
+        },
+        {
+          "source_en": "Yes, and those of heaven commune\nWith the spheres of sun and moon;\nWith the noise of fountains wondrous,\nAnd the parle of voices thund'rous;\nWith the whisper of heaven's trees\nAnd one another, in soft ease\nSeated on Elysian lawns\nBrowsed by none but Dian's fawns;\nUnderneath large blue-bells tented,\nWhere the daisies are rose-scented,\nAnd the rose herself has got\nPerfume which on earth is not;\nWhere the nightingale doth sing\nNot a senseless, tranced thing,\nBut divine melodious truth;\nPhilosophic numbers smooth;\nTales and golden histories\nOf heaven and its mysteries.",
+          "en": [
+            {
+              "t": "Yes",
+              "g": "subject"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "those",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "heaven",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "commune",
+              "g": "subject"
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "With",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "spheres",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "sun",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "moon",
+              "g": "subject"
+            },
+            {
+              "t": ";"
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "With",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "noise",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "fountains",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "wondrous",
+              "g": "subject"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "And",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "parle",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "voices",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "thund'rous",
+              "g": "subject"
+            },
+            {
+              "t": ";"
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "With",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "whisper",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "heaven's",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "trees",
+              "g": "subject"
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "And",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "one",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "another",
+              "g": "subject"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "in",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "soft",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "ease",
+              "g": "adverbial"
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "Seated",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "on",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Elysian",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "lawns",
+              "g": "adverbial"
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "Browsed",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "by",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "none",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "but",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Dian's",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "fawns",
+              "g": "object"
+            },
+            {
+              "t": ";"
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "Underneath",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "large",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "blue-bells",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "tented",
+              "g": "predicate"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "Where",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "daisies",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "are",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "rose-scented",
+              "g": "predicate"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "And",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "rose",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "herself",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "has",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "got",
+              "g": "predicate"
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "Perfume",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "which",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "on",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "earth",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "is",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "not",
+              "g": "object"
+            },
+            {
+              "t": ";"
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "Where",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "nightingale",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "doth",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "sing",
+              "g": "predicate"
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "Not",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "a",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "senseless",
+              "g": "object"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "tranced",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "thing",
+              "g": "predicate"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "But",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "divine",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "melodious",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "truth",
+              "g": "object"
+            },
+            {
+              "t": ";"
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "Philosophic",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "numbers",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "smooth",
+              "g": "object"
+            },
+            {
+              "t": ";"
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "Tales",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "golden",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "histories",
+              "g": "object"
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "Of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "heaven",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "its",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "mysteries",
+              "g": "object"
+            },
+            {
+              "t": "."
+            }
+          ],
+          "zh": [
+            {
+              "t": "有",
+              "r": "yǒu",
+              "g": "predicate"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "且",
+              "r": "qiě",
+              "g": "object"
+            },
+            {
+              "t": "那",
+              "r": "nà",
+              "g": "object"
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "天",
+              "r": "tiān",
+              "g": "object"
+            },
+            {
+              "t": "堂",
+              "r": "táng",
+              "g": "object"
+            },
+            {
+              "t": "中",
+              "r": "zhōng",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "灵",
+              "r": "líng",
+              "g": "object"
+            },
+            {
+              "t": "魂",
+              "r": "hún",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "与",
+              "r": "yǔ",
+              "g": "object"
+            },
+            {
+              "t": "日",
+              "r": "rì",
+              "g": "object"
+            },
+            {
+              "t": "月",
+              "r": "yuè",
+              "g": "object"
+            },
+            {
+              "t": "两",
+              "r": "liǎng",
+              "g": "object"
+            },
+            {
+              "t": "界",
+              "r": "jiè",
+              "g": "object"
+            },
+            {
+              "t": "相",
+              "r": "xiāng",
+              "g": "object"
+            },
+            {
+              "t": "会",
+              "r": "huì",
+              "g": "object"
+            },
+            {
+              "t": "通",
+              "r": "tōng",
+              "g": "object"
+            },
+            {
+              "t": "语",
+              "r": "yǔ",
+              "g": "object"
+            },
+            {
+              "t": "； "
+            },
+            {
+              "t": "与",
+              "r": "yǔ",
+              "g": "object"
+            },
+            {
+              "t": "奇",
+              "r": "qí",
+              "g": "object"
+            },
+            {
+              "t": "妙",
+              "r": "miào",
+              "g": "object"
+            },
+            {
+              "t": "喷",
+              "r": "pēn",
+              "g": "object"
+            },
+            {
+              "t": "泉",
+              "r": "quán",
+              "g": "object"
+            },
+            {
+              "t": "之",
+              "r": "zhī",
+              "g": "object"
+            },
+            {
+              "t": "声",
+              "r": "shēng",
+              "g": "object"
+            },
+            {
+              "t": "、 "
+            },
+            {
+              "t": "与",
+              "r": "yǔ",
+              "g": "object"
+            },
+            {
+              "t": "雷",
+              "r": "léi",
+              "g": "object"
+            },
+            {
+              "t": "鸣",
+              "r": "míng",
+              "g": "object"
+            },
+            {
+              "t": "般",
+              "r": "bān",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "众",
+              "r": "zhòng",
+              "g": "object"
+            },
+            {
+              "t": "声",
+              "r": "shēng",
+              "g": "object"
+            },
+            {
+              "t": "喧",
+              "r": "xuān",
+              "g": "object"
+            },
+            {
+              "t": "谈",
+              "r": "tán",
+              "g": "object"
+            },
+            {
+              "t": "； "
+            },
+            {
+              "t": "与",
+              "r": "yǔ",
+              "g": "object"
+            },
+            {
+              "t": "天",
+              "r": "tiān",
+              "g": "object"
+            },
+            {
+              "t": "堂",
+              "r": "táng",
+              "g": "object"
+            },
+            {
+              "t": "树",
+              "r": "shù",
+              "g": "object"
+            },
+            {
+              "t": "木",
+              "r": "mù",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "私",
+              "r": "sī",
+              "g": "object"
+            },
+            {
+              "t": "语",
+              "r": "yǔ",
+              "g": "object"
+            },
+            {
+              "t": "相",
+              "r": "xiāng",
+              "g": "object"
+            },
+            {
+              "t": "交",
+              "r": "jiāo",
+              "g": "object"
+            },
+            {
+              "t": "， "
+            },
+            {
+              "t": "又",
+              "r": "yòu",
+              "g": "adverbial"
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "从",
+              "r": "cóng",
+              "g": "adverbial"
+            },
+            {
+              "t": "容",
+              "r": "róng",
+              "g": "object"
+            },
+            {
+              "t": "安",
+              "r": "ān",
+              "g": "object"
+            },
+            {
+              "t": "宁",
+              "r": "níng",
+              "g": "object"
+            },
+            {
+              "t": "中",
+              "r": "zhōng",
+              "g": "object"
+            },
+            {
+              "t": "彼",
+              "r": "bǐ",
+              "g": "object"
+            },
+            {
+              "t": "此",
+              "r": "cǐ",
+              "g": "object"
+            },
+            {
+              "t": "相",
+              "r": "xiāng",
+              "g": "object"
+            },
+            {
+              "t": "向",
+              "r": "xiàng",
+              "g": "adverbial"
+            },
+            {
+              "t": "； "
+            },
+            {
+              "t": "她",
+              "r": "tā",
+              "g": "object"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "object"
+            },
+            {
+              "t": "坐",
+              "r": "zuò",
+              "g": "predicate"
+            },
+            {
+              "t": "于",
+              "r": "yú",
+              "g": "object"
+            },
+            {
+              "t": "埃",
+              "r": "āi",
+              "g": "object"
+            },
+            {
+              "t": "律",
+              "r": "lǜ",
+              "g": "object"
+            },
+            {
+              "t": "西",
+              "r": "xī",
+              "g": "object"
+            },
+            {
+              "t": "翁",
+              "r": "wēng",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "草",
+              "r": "cǎo",
+              "g": "object"
+            },
+            {
+              "t": "坪",
+              "r": "píng",
+              "g": "object"
+            },
+            {
+              "t": "， "
+            },
+            {
+              "t": "唯",
+              "r": "wéi",
+              "g": "object"
+            },
+            {
+              "t": "有",
+              "r": "yǒu",
+              "g": "predicate"
+            },
+            {
+              "t": "狄",
+              "r": "dí",
+              "g": "object"
+            },
+            {
+              "t": "安",
+              "r": "ān",
+              "g": "object"
+            },
+            {
+              "t": "娜",
+              "r": "nà",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "幼",
+              "r": "yòu",
+              "g": "object"
+            },
+            {
+              "t": "鹿",
+              "r": "lù",
+              "g": "object"
+            },
+            {
+              "t": "可",
+              "r": "kě",
+              "g": "object"
+            },
+            {
+              "t": "与",
+              "r": "yǔ",
+              "g": "object"
+            },
+            {
+              "t": "之",
+              "r": "zhī",
+              "g": "object"
+            },
+            {
+              "t": "游",
+              "r": "yóu",
+              "g": "object"
+            },
+            {
+              "t": "荡",
+              "r": "dàng",
+              "g": "object"
+            },
+            {
+              "t": "； "
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "巨",
+              "r": "jù",
+              "g": "object"
+            },
+            {
+              "t": "大",
+              "r": "dà",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "风",
+              "r": "fēng",
+              "g": "object"
+            },
+            {
+              "t": "铃",
+              "r": "líng",
+              "g": "object"
+            },
+            {
+              "t": "草",
+              "r": "cǎo",
+              "g": "object"
+            },
+            {
+              "t": "帐",
+              "r": "zhàng",
+              "g": "object"
+            },
+            {
+              "t": "下",
+              "r": "xià",
+              "g": "complement"
+            },
+            {
+              "t": "， "
+            },
+            {
+              "t": "那",
+              "r": "nà",
+              "g": "object"
+            },
+            {
+              "t": "里",
+              "r": "lǐ",
+              "g": "object"
+            },
+            {
+              "t": "雏",
+              "r": "chú",
+              "g": "object"
+            },
+            {
+              "t": "菊",
+              "r": "jú",
+              "g": "object"
+            },
+            {
+              "t": "带",
+              "r": "dài",
+              "g": "predicate"
+            },
+            {
+              "t": "着",
+              "r": "zhe",
+              "g": "complement"
+            },
+            {
+              "t": "玫",
+              "r": "méi",
+              "g": "object"
+            },
+            {
+              "t": "瑰",
+              "r": "guī",
+              "g": "object"
+            },
+            {
+              "t": "般",
+              "r": "bān",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "芬",
+              "r": "fēn",
+              "g": "object"
+            },
+            {
+              "t": "芳",
+              "r": "fāng",
+              "g": "object"
+            },
+            {
+              "t": "， "
+            },
+            {
+              "t": "而",
+              "r": "ér",
+              "g": "object"
+            },
+            {
+              "t": "玫",
+              "r": "méi",
+              "g": "object"
+            },
+            {
+              "t": "瑰",
+              "r": "guī",
+              "g": "object"
+            },
+            {
+              "t": "本",
+              "r": "běn",
+              "g": "object"
+            },
+            {
+              "t": "身",
+              "r": "shēn",
+              "g": "object"
+            },
+            {
+              "t": "亦",
+              "r": "yì",
+              "g": "object"
+            },
+            {
+              "t": "有",
+              "r": "yǒu",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "世",
+              "r": "shì",
+              "g": "object"
+            },
+            {
+              "t": "间",
+              "r": "jiān",
+              "g": "object"
+            },
+            {
+              "t": "未",
+              "r": "wèi",
+              "g": "object"
+            },
+            {
+              "t": "有",
+              "r": "yǒu",
+              "g": "predicate"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "香",
+              "r": "xiāng",
+              "g": "object"
+            },
+            {
+              "t": "气",
+              "r": "qì",
+              "g": "object"
+            },
+            {
+              "t": "； "
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "夜",
+              "r": "yè",
+              "g": "object"
+            },
+            {
+              "t": "莺",
+              "r": "yīng",
+              "g": "object"
+            },
+            {
+              "t": "吟",
+              "r": "yín",
+              "g": "object"
+            },
+            {
+              "t": "唱",
+              "r": "chàng",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "地",
+              "r": "dì",
+              "g": "object"
+            },
+            {
+              "t": "方",
+              "r": "fāng",
+              "g": "adverbial"
+            },
+            {
+              "t": "， "
+            },
+            {
+              "t": "绝",
+              "r": "jué",
+              "g": "object"
+            },
+            {
+              "t": "非",
+              "r": "fēi",
+              "g": "object"
+            },
+            {
+              "t": "无",
+              "r": "wú",
+              "g": "object"
+            },
+            {
+              "t": "意",
+              "r": "yì",
+              "g": "object"
+            },
+            {
+              "t": "义",
+              "r": "yì",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "恍",
+              "r": "huǎng",
+              "g": "object"
+            },
+            {
+              "t": "惚",
+              "r": "hū",
+              "g": "object"
+            },
+            {
+              "t": "之",
+              "r": "zhī",
+              "g": "object"
+            },
+            {
+              "t": "音",
+              "r": "yīn",
+              "g": "object"
+            },
+            {
+              "t": "， "
+            },
+            {
+              "t": "而",
+              "r": "ér",
+              "g": "object"
+            },
+            {
+              "t": "是",
+              "r": "shì",
+              "g": "predicate"
+            },
+            {
+              "t": "神",
+              "r": "shén",
+              "g": "object"
+            },
+            {
+              "t": "圣",
+              "r": "shèng",
+              "g": "object"
+            },
+            {
+              "t": "和",
+              "r": "hé",
+              "g": "object"
+            },
+            {
+              "t": "谐",
+              "r": "xié",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "真",
+              "r": "zhēn",
+              "g": "object"
+            },
+            {
+              "t": "理",
+              "r": "lǐ",
+              "g": "object"
+            },
+            {
+              "t": "； "
+            },
+            {
+              "t": "哲",
+              "r": "zhé",
+              "g": "object"
+            },
+            {
+              "t": "理",
+              "r": "lǐ",
+              "g": "object"
+            },
+            {
+              "t": "般",
+              "r": "bān",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "旋",
+              "r": "xuán",
+              "g": "object"
+            },
+            {
+              "t": "律",
+              "r": "lǜ",
+              "g": "object"
+            },
+            {
+              "t": "平",
+              "r": "píng",
+              "g": "object"
+            },
+            {
+              "t": "顺",
+              "r": "shùn",
+              "g": "object"
+            },
+            {
+              "t": "流",
+              "r": "liú",
+              "g": "object"
+            },
+            {
+              "t": "淌",
+              "r": "tǎng",
+              "g": "object"
+            },
+            {
+              "t": "； "
+            },
+            {
+              "t": "天",
+              "r": "tiān",
+              "g": "object"
+            },
+            {
+              "t": "国",
+              "r": "guó",
+              "g": "object"
+            },
+            {
+              "t": "与",
+              "r": "yǔ",
+              "g": "object"
+            },
+            {
+              "t": "其",
+              "r": "qí",
+              "g": "object"
+            },
+            {
+              "t": "奥",
+              "r": "ào",
+              "g": "object"
+            },
+            {
+              "t": "秘",
+              "r": "mì",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "故",
+              "r": "gù",
+              "g": "object"
+            },
+            {
+              "t": "事",
+              "r": "shì",
+              "g": "object"
+            },
+            {
+              "t": "与",
+              "r": "yǔ",
+              "g": "object"
+            },
+            {
+              "t": "金",
+              "r": "jīn",
+              "g": "object"
+            },
+            {
+              "t": "色",
+              "r": "sè",
+              "g": "object"
+            },
+            {
+              "t": "史",
+              "r": "shǐ",
+              "g": "object"
+            },
+            {
+              "t": "话",
+              "r": "huà",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "そうです。",
+              "g": "adverbial"
+            },
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "subject"
+            },
+            {
+              "t": "国",
+              "r": "ごく",
+              "g": "subject"
+            },
+            {
+              "t": "のものどももまた ",
+              "g": "attributive"
+            },
+            {
+              "t": "太",
+              "r": "た",
+              "g": "subject"
+            },
+            {
+              "t": "陽",
+              "r": "いよう",
+              "g": "subject"
+            },
+            {
+              "t": "と",
+              "g": "adverbial"
+            },
+            {
+              "t": "月",
+              "r": "がつ",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "球",
+              "r": "きゅう",
+              "g": "subject"
+            },
+            {
+              "t": "体",
+              "r": "たい",
+              "g": "subject"
+            },
+            {
+              "t": "と",
+              "g": "adverbial"
+            },
+            {
+              "t": "交",
+              "r": "まじ",
+              "g": "subject"
+            },
+            {
+              "t": "わり、 ",
+              "g": "subject"
+            },
+            {
+              "t": "不",
+              "r": "ふ",
+              "g": "subject"
+            },
+            {
+              "t": "思",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "議",
+              "r": "ぎ",
+              "g": "subject"
+            },
+            {
+              "t": "な",
+              "g": "subject"
+            },
+            {
+              "t": "泉",
+              "r": "いずみ",
+              "g": "subject"
+            },
+            {
+              "t": "のせせらぎと、 ",
+              "g": "adverbial"
+            },
+            {
+              "t": "雷",
+              "r": "かみなり",
+              "g": "subject"
+            },
+            {
+              "t": "のごとき",
+              "g": "adverbial"
+            },
+            {
+              "t": "声",
+              "r": "こえ",
+              "g": "subject"
+            },
+            {
+              "t": "のざわめきと",
+              "g": "adverbial"
+            },
+            {
+              "t": "語",
+              "r": "かた",
+              "g": "subject"
+            },
+            {
+              "t": "り、 ",
+              "g": "subject"
+            },
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "subject"
+            },
+            {
+              "t": "上",
+              "r": "じょう",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "樹",
+              "r": "きぎ",
+              "g": "subject"
+            },
+            {
+              "t": "々の",
+              "g": "attributive"
+            },
+            {
+              "t": "囁",
+              "r": "ささや",
+              "g": "subject"
+            },
+            {
+              "t": "きと、 ",
+              "g": "adverbial"
+            },
+            {
+              "t": "互",
+              "r": "たが",
+              "g": "attributive"
+            },
+            {
+              "t": "いに",
+              "g": "adverbial"
+            },
+            {
+              "t": "穏",
+              "r": "おだ",
+              "g": "attributive"
+            },
+            {
+              "t": "やかな",
+              "g": "attributive"
+            },
+            {
+              "t": "安",
+              "r": "やす",
+              "g": "attributive"
+            },
+            {
+              "t": "らぎのうちに",
+              "g": "adverbial"
+            },
+            {
+              "t": "寄",
+              "r": "よ",
+              "g": "attributive"
+            },
+            {
+              "t": "り",
+              "g": "attributive"
+            },
+            {
+              "t": "添",
+              "r": "そ",
+              "g": "attributive"
+            },
+            {
+              "t": "います。 ",
+              "g": "attributive"
+            },
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "attributive"
+            },
+            {
+              "t": "らはエリュシオンの",
+              "g": "subject"
+            },
+            {
+              "t": "草",
+              "r": "そう",
+              "g": "attributive"
+            },
+            {
+              "t": "原",
+              "r": "げん",
+              "g": "attributive"
+            },
+            {
+              "t": "に",
+              "g": "adverbial"
+            },
+            {
+              "t": "坐",
+              "r": "ま",
+              "g": "attributive"
+            },
+            {
+              "t": "し、 ディアナの",
+              "g": "attributive"
+            },
+            {
+              "t": "若",
+              "r": "じゃく",
+              "g": "attributive"
+            },
+            {
+              "t": "獣",
+              "r": "けもの",
+              "g": "attributive"
+            },
+            {
+              "t": "しか",
+              "g": "attributive"
+            },
+            {
+              "t": "草",
+              "r": "くさ",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "g": "object"
+            },
+            {
+              "t": "食",
+              "r": "は",
+              "g": "attributive"
+            },
+            {
+              "t": "まぬ",
+              "g": "predicate"
+            },
+            {
+              "t": "場",
+              "r": "ば",
+              "g": "attributive"
+            },
+            {
+              "t": "所",
+              "r": "しょ",
+              "g": "attributive"
+            },
+            {
+              "t": "に、 ",
+              "g": "adverbial"
+            },
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "attributive"
+            },
+            {
+              "t": "きなブルーベルの",
+              "g": "attributive"
+            },
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "attributive"
+            },
+            {
+              "t": "蓋",
+              "r": "がい",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "下",
+              "r": "した",
+              "g": "attributive"
+            },
+            {
+              "t": "で、 ",
+              "g": "adverbial"
+            },
+            {
+              "t": "雛",
+              "r": "ひな",
+              "g": "attributive"
+            },
+            {
+              "t": "菊",
+              "r": "ぎく",
+              "g": "attributive"
+            },
+            {
+              "t": "には",
+              "g": "subject"
+            },
+            {
+              "t": "薔",
+              "r": "ば",
+              "g": "attributive"
+            },
+            {
+              "t": "薇",
+              "r": "ら",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "香",
+              "r": "かお",
+              "g": "attributive"
+            },
+            {
+              "t": "りが",
+              "g": "subject"
+            },
+            {
+              "t": "満",
+              "r": "み",
+              "g": "attributive"
+            },
+            {
+              "t": "ち、 そして",
+              "g": "attributive"
+            },
+            {
+              "t": "薔",
+              "r": "ば",
+              "g": "attributive"
+            },
+            {
+              "t": "薇",
+              "r": "ら",
+              "g": "attributive"
+            },
+            {
+              "t": "そのものが この",
+              "g": "subject"
+            },
+            {
+              "t": "世",
+              "r": "よ",
+              "g": "attributive"
+            },
+            {
+              "t": "にはない",
+              "g": "subject"
+            },
+            {
+              "t": "香",
+              "r": "かおり",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "g": "object"
+            },
+            {
+              "t": "得",
+              "r": "え",
+              "g": "attributive"
+            },
+            {
+              "t": "ています。 そこでは",
+              "g": "subject"
+            },
+            {
+              "t": "夜",
+              "r": "よる",
+              "g": "attributive"
+            },
+            {
+              "t": "鶯",
+              "r": "うぐいす",
+              "g": "attributive"
+            },
+            {
+              "t": "が",
+              "g": "subject"
+            },
+            {
+              "t": "歌",
+              "r": "うた",
+              "g": "attributive"
+            },
+            {
+              "t": "う。 それはただの",
+              "g": "subject"
+            },
+            {
+              "t": "無",
+              "r": "む",
+              "g": "attributive"
+            },
+            {
+              "t": "意",
+              "r": "い",
+              "g": "attributive"
+            },
+            {
+              "t": "味",
+              "r": "み",
+              "g": "attributive"
+            },
+            {
+              "t": "な",
+              "g": "attributive"
+            },
+            {
+              "t": "恍",
+              "r": "こう",
+              "g": "attributive"
+            },
+            {
+              "t": "惚",
+              "r": "こつ",
+              "g": "attributive"
+            },
+            {
+              "t": "のささやきではなく、 ",
+              "g": "subject"
+            },
+            {
+              "t": "神",
+              "r": "しん",
+              "g": "attributive"
+            },
+            {
+              "t": "聖",
+              "r": "せい",
+              "g": "attributive"
+            },
+            {
+              "t": "で",
+              "g": "adverbial"
+            },
+            {
+              "t": "旋",
+              "r": "せん",
+              "g": "attributive"
+            },
+            {
+              "t": "律",
+              "r": "りつ",
+              "g": "attributive"
+            },
+            {
+              "t": "ある",
+              "g": "predicate"
+            },
+            {
+              "t": "真",
+              "r": "しん",
+              "g": "complement"
+            },
+            {
+              "t": "理",
+              "r": "り",
+              "g": "complement"
+            },
+            {
+              "t": "である。 ",
+              "g": "adverbial"
+            },
+            {
+              "t": "哲",
+              "r": "てつ",
+              "g": "complement"
+            },
+            {
+              "t": "学",
+              "r": "がく",
+              "g": "complement"
+            },
+            {
+              "t": "的",
+              "r": "てき",
+              "g": "complement"
+            },
+            {
+              "t": "な",
+              "g": "complement"
+            },
+            {
+              "t": "響",
+              "r": "ひび",
+              "g": "complement"
+            },
+            {
+              "t": "きは",
+              "g": "subject"
+            },
+            {
+              "t": "滑",
+              "r": "なめ",
+              "g": "complement"
+            },
+            {
+              "t": "らかで、 そして",
+              "g": "adverbial"
+            },
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "complement"
+            },
+            {
+              "t": "とその",
+              "g": "adverbial"
+            },
+            {
+              "t": "神",
+              "r": "しん",
+              "g": "complement"
+            },
+            {
+              "t": "秘",
+              "r": "ぴ",
+              "g": "complement"
+            },
+            {
+              "t": "の ",
+              "g": "attributive"
+            },
+            {
+              "t": "物",
+              "r": "もの",
+              "g": "complement"
+            },
+            {
+              "t": "語",
+              "r": "がた",
+              "g": "complement"
+            },
+            {
+              "t": "と",
+              "g": "adverbial"
+            },
+            {
+              "t": "金",
+              "r": "きん",
+              "g": "complement"
+            },
+            {
+              "t": "色",
+              "r": "いろ",
+              "g": "complement"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "歴",
+              "r": "れき",
+              "g": "complement"
+            },
+            {
+              "t": "史",
+              "r": "し",
+              "g": "complement"
+            },
+            {
+              "t": "が",
+              "g": "subject"
+            },
+            {
+              "t": "語",
+              "r": "かた",
+              "g": "complement"
+            },
+            {
+              "t": "られる。",
+              "g": "complement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keats-poems-spark-s0001-p00008",
+      "source_en": "Thus ye live on high, and then\nOn the earth ye live again;\nAnd the souls ye left behind you\nTeach us, here, the way to find you,\nWhere your other souls are joying,\nNever slumber'd, never cloying.\n Here, your earth-born souls still speak\nTo mortals, of their little week;\nOf their sorrows and delights;\nOf their passions and their spites;\nOf their glory and their shame;\nWhat doth strengthen and what maim.\n Thus ye teach us, every day,\nWisdom, though fled far away.",
+      "units": [
+        {
+          "source_en": "Thus ye live on high, and then\nOn the earth ye live again;\nAnd the souls ye left behind you\nTeach us, here, the way to find you,\nWhere your other souls are joying,\nNever slumber'd, never cloying.\n ",
+          "en": [
+            {
+              "t": "Thus",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "ye",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "live",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "on",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "high",
+              "g": "adverbial"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "then",
+              "g": "subject"
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "On",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "earth",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "ye",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "live",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "again",
+              "g": "adverbial"
+            },
+            {
+              "t": ";"
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "And",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "souls",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "ye",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "left",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "behind",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "you",
+              "g": "adverbial"
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "Teach",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "us",
+              "g": "adverbial"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "here",
+              "g": "adverbial"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "way",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "to",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "find",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "you",
+              "g": "adverbial"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "Where",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "your",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "other",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "souls",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "are",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "joying",
+              "g": "predicate"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "Never",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "slumber'd",
+              "g": "object"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "never",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "cloying",
+              "g": "predicate"
+            },
+            {
+              "t": "."
+            },
+            {
+              "t": "\n "
+            }
+          ],
+          "zh": [
+            {
+              "t": "因",
+              "r": "yīn",
+              "g": "adverbial"
+            },
+            {
+              "t": "此",
+              "r": "cǐ",
+              "g": "subject"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "你",
+              "r": "nǐ",
+              "g": "subject"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "subject"
+            },
+            {
+              "t": "高",
+              "r": "gāo",
+              "g": "subject"
+            },
+            {
+              "t": "居",
+              "r": "jū",
+              "g": "subject"
+            },
+            {
+              "t": "天",
+              "r": "tiān",
+              "g": "subject"
+            },
+            {
+              "t": "上",
+              "r": "shàng",
+              "g": "predicate"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "又",
+              "r": "yòu",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "于",
+              "r": "yú",
+              "g": "subject"
+            },
+            {
+              "t": "尘",
+              "r": "chén",
+              "g": "subject"
+            },
+            {
+              "t": "世",
+              "r": "shì",
+              "g": "attributive"
+            },
+            {
+              "t": "重",
+              "r": "zhòng",
+              "g": "attributive"
+            },
+            {
+              "t": "现",
+              "r": "xiàn",
+              "g": "attributive"
+            },
+            {
+              "t": "； "
+            },
+            {
+              "t": "你",
+              "r": "nǐ",
+              "g": "attributive"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "attributive"
+            },
+            {
+              "t": "遗",
+              "r": "yí",
+              "g": "attributive"
+            },
+            {
+              "t": "留",
+              "r": "liú",
+              "g": "attributive"
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "后",
+              "r": "hòu",
+              "g": "attributive"
+            },
+            {
+              "t": "方",
+              "r": "fāng",
+              "g": "adverbial"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "魂",
+              "r": "hún",
+              "g": "attributive"
+            },
+            {
+              "t": "灵",
+              "r": "líng",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "此",
+              "r": "cǐ",
+              "g": "attributive"
+            },
+            {
+              "t": "教",
+              "r": "jiào",
+              "g": "attributive"
+            },
+            {
+              "t": "我",
+              "r": "wǒ",
+              "g": "attributive"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "attributive"
+            },
+            {
+              "t": "如",
+              "r": "rú",
+              "g": "attributive"
+            },
+            {
+              "t": "何",
+              "r": "hé",
+              "g": "attributive"
+            },
+            {
+              "t": "寻",
+              "r": "xún",
+              "g": "attributive"
+            },
+            {
+              "t": "你",
+              "r": "nǐ",
+              "g": "attributive"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "attributive"
+            },
+            {
+              "t": "， "
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "那",
+              "r": "nà",
+              "g": "attributive"
+            },
+            {
+              "t": "里",
+              "r": "lǐ",
+              "g": "attributive"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "你",
+              "r": "nǐ",
+              "g": "attributive"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "attributive"
+            },
+            {
+              "t": "其",
+              "r": "qí",
+              "g": "attributive"
+            },
+            {
+              "t": "余",
+              "r": "yú",
+              "g": "attributive"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "灵",
+              "r": "líng",
+              "g": "attributive"
+            },
+            {
+              "t": "魂",
+              "r": "hún",
+              "g": "attributive"
+            },
+            {
+              "t": "正",
+              "r": "zhèng",
+              "g": "attributive"
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "快",
+              "r": "kuài",
+              "g": "attributive"
+            },
+            {
+              "t": "乐",
+              "r": "lè",
+              "g": "attributive"
+            },
+            {
+              "t": "， "
+            },
+            {
+              "t": "永",
+              "r": "yǒng",
+              "g": "attributive"
+            },
+            {
+              "t": "不",
+              "r": "bù",
+              "g": "attributive"
+            },
+            {
+              "t": "沉",
+              "r": "chén",
+              "g": "attributive"
+            },
+            {
+              "t": "睡",
+              "r": "shuì",
+              "g": "predicate"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "永",
+              "r": "yǒng",
+              "g": "object"
+            },
+            {
+              "t": "不",
+              "r": "bù",
+              "g": "object"
+            },
+            {
+              "t": "厌",
+              "r": "yàn",
+              "g": "object"
+            },
+            {
+              "t": "倦",
+              "r": "juàn",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "さればあなたがたは",
+              "g": "subject"
+            },
+            {
+              "t": "高",
+              "r": "たか",
+              "g": "subject"
+            },
+            {
+              "t": "き",
+              "g": "subject"
+            },
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "subject"
+            },
+            {
+              "t": "に",
+              "g": "adverbial"
+            },
+            {
+              "t": "生",
+              "r": "い",
+              "g": "subject"
+            },
+            {
+              "t": "きつつ、 また",
+              "g": "predicate"
+            },
+            {
+              "t": "地",
+              "r": "ち",
+              "g": "subject"
+            },
+            {
+              "t": "上",
+              "r": "じょう",
+              "g": "subject"
+            },
+            {
+              "t": "でもなお",
+              "g": "adverbial"
+            },
+            {
+              "t": "生",
+              "r": "い",
+              "g": "subject"
+            },
+            {
+              "t": "きている。 そして",
+              "g": "attributive"
+            },
+            {
+              "t": "残",
+              "r": "のこ",
+              "g": "attributive"
+            },
+            {
+              "t": "して",
+              "g": "attributive"
+            },
+            {
+              "t": "去",
+              "r": "さ",
+              "g": "attributive"
+            },
+            {
+              "t": "ったあなたがたの",
+              "g": "subject"
+            },
+            {
+              "t": "魂",
+              "r": "たましい",
+              "g": "attributive"
+            },
+            {
+              "t": "は、 ここで",
+              "g": "subject"
+            },
+            {
+              "t": "我",
+              "r": "われ",
+              "g": "attributive"
+            },
+            {
+              "t": "らにあなたがたを",
+              "g": "subject"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "attributive"
+            },
+            {
+              "t": "出",
+              "r": "だ",
+              "g": "attributive"
+            },
+            {
+              "t": "す",
+              "g": "predicate"
+            },
+            {
+              "t": "道",
+              "r": "みち",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "g": "object"
+            },
+            {
+              "t": "示",
+              "r": "しめ",
+              "g": "object"
+            },
+            {
+              "t": "す。 ",
+              "g": "object"
+            },
+            {
+              "t": "向",
+              "r": "む",
+              "g": "object"
+            },
+            {
+              "t": "こうであなたがたのほかの",
+              "g": "subject"
+            },
+            {
+              "t": "魂",
+              "r": "たましい",
+              "g": "object"
+            },
+            {
+              "t": "は ",
+              "g": "subject"
+            },
+            {
+              "t": "喜",
+              "r": "よろこ",
+              "g": "object"
+            },
+            {
+              "t": "びに",
+              "g": "adverbial"
+            },
+            {
+              "t": "溢",
+              "r": "あふ",
+              "g": "complement"
+            },
+            {
+              "t": "れ、 ",
+              "g": "complement"
+            },
+            {
+              "t": "決",
+              "r": "けっ",
+              "g": "complement"
+            },
+            {
+              "t": "して",
+              "g": "complement"
+            },
+            {
+              "t": "眠",
+              "r": "ねむ",
+              "g": "complement"
+            },
+            {
+              "t": "ることなく、",
+              "g": "adverbial"
+            },
+            {
+              "t": "決",
+              "r": "けっ",
+              "g": "complement"
+            },
+            {
+              "t": "して",
+              "g": "complement"
+            },
+            {
+              "t": "飽",
+              "r": "あ",
+              "g": "complement"
+            },
+            {
+              "t": "きることもない。",
+              "g": "adverbial"
+            }
+          ]
+        },
+        {
+          "source_en": "Here, your earth-born souls still speak\nTo mortals, of their little week;\nOf their sorrows and delights;\nOf their passions and their spites;\nOf their glory and their shame;\nWhat doth strengthen and what maim.\n ",
+          "en": [
+            {
+              "t": "Here",
+              "g": "subject"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "your",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "earth-born",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "souls",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "still",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "speak",
+              "g": "subject"
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "To",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "mortals",
+              "g": "adverbial"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "their",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "little",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "week",
+              "g": "subject"
+            },
+            {
+              "t": ";"
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "Of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "their",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "sorrows",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "delights",
+              "g": "subject"
+            },
+            {
+              "t": ";"
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "Of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "their",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "passions",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "their",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "spites",
+              "g": "object"
+            },
+            {
+              "t": ";"
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "Of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "their",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "glory",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "their",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "shame",
+              "g": "object"
+            },
+            {
+              "t": ";"
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "What",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "doth",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "strengthen",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "what",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "maim",
+              "g": "object"
+            },
+            {
+              "t": "."
+            },
+            {
+              "t": "\n "
+            }
+          ],
+          "zh": [
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "这",
+              "r": "zhè",
+              "g": "subject"
+            },
+            {
+              "t": "里",
+              "r": "lǐ",
+              "g": "subject"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "你",
+              "r": "nǐ",
+              "g": "subject"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "subject"
+            },
+            {
+              "t": "留",
+              "r": "liú",
+              "g": "subject"
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "人",
+              "r": "rén",
+              "g": "subject"
+            },
+            {
+              "t": "间",
+              "r": "jiān",
+              "g": "subject"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "灵",
+              "r": "líng",
+              "g": "subject"
+            },
+            {
+              "t": "魂",
+              "r": "hún",
+              "g": "subject"
+            },
+            {
+              "t": "依",
+              "r": "yī",
+              "g": "subject"
+            },
+            {
+              "t": "旧",
+              "r": "jiù",
+              "g": "attributive"
+            },
+            {
+              "t": "向",
+              "r": "xiàng",
+              "g": "adverbial"
+            },
+            {
+              "t": "尘",
+              "r": "chén",
+              "g": "attributive"
+            },
+            {
+              "t": "世",
+              "r": "shì",
+              "g": "attributive"
+            },
+            {
+              "t": "人",
+              "r": "rén",
+              "g": "attributive"
+            },
+            {
+              "t": "言",
+              "r": "yán",
+              "g": "attributive"
+            },
+            {
+              "t": "说",
+              "r": "shuō",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "他",
+              "r": "tā",
+              "g": "object"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "object"
+            },
+            {
+              "t": "短",
+              "r": "duǎn",
+              "g": "object"
+            },
+            {
+              "t": "暂",
+              "r": "zàn",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "凡",
+              "r": "fán",
+              "g": "object"
+            },
+            {
+              "t": "生",
+              "r": "shēng",
+              "g": "predicate"
+            },
+            {
+              "t": "； "
+            },
+            {
+              "t": "说",
+              "r": "shuō",
+              "g": "predicate"
+            },
+            {
+              "t": "他",
+              "r": "tā",
+              "g": "object"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "悲",
+              "r": "bēi",
+              "g": "object"
+            },
+            {
+              "t": "与",
+              "r": "yǔ",
+              "g": "object"
+            },
+            {
+              "t": "喜",
+              "r": "xǐ",
+              "g": "object"
+            },
+            {
+              "t": "； "
+            },
+            {
+              "t": "说",
+              "r": "shuō",
+              "g": "predicate"
+            },
+            {
+              "t": "他",
+              "r": "tā",
+              "g": "object"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "激",
+              "r": "jī",
+              "g": "object"
+            },
+            {
+              "t": "情",
+              "r": "qíng",
+              "g": "object"
+            },
+            {
+              "t": "与",
+              "r": "yǔ",
+              "g": "object"
+            },
+            {
+              "t": "怨",
+              "r": "yuàn",
+              "g": "object"
+            },
+            {
+              "t": "； "
+            },
+            {
+              "t": "说",
+              "r": "shuō",
+              "g": "predicate"
+            },
+            {
+              "t": "他",
+              "r": "tā",
+              "g": "object"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "荣",
+              "r": "róng",
+              "g": "object"
+            },
+            {
+              "t": "耀",
+              "r": "yào",
+              "g": "object"
+            },
+            {
+              "t": "与",
+              "r": "yǔ",
+              "g": "object"
+            },
+            {
+              "t": "羞",
+              "r": "xiū",
+              "g": "object"
+            },
+            {
+              "t": "耻",
+              "r": "chǐ",
+              "g": "object"
+            },
+            {
+              "t": "； "
+            },
+            {
+              "t": "那",
+              "r": "nà",
+              "g": "object"
+            },
+            {
+              "t": "些",
+              "r": "xiē",
+              "g": "object"
+            },
+            {
+              "t": "使",
+              "r": "shǐ",
+              "g": "predicate"
+            },
+            {
+              "t": "人",
+              "r": "rén",
+              "g": "object"
+            },
+            {
+              "t": "强",
+              "r": "qiáng",
+              "g": "object"
+            },
+            {
+              "t": "健",
+              "r": "jiàn",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "以",
+              "r": "yǐ",
+              "g": "object"
+            },
+            {
+              "t": "及",
+              "r": "jí",
+              "g": "object"
+            },
+            {
+              "t": "那",
+              "r": "nà",
+              "g": "object"
+            },
+            {
+              "t": "些",
+              "r": "xiē",
+              "g": "object"
+            },
+            {
+              "t": "使",
+              "r": "shǐ",
+              "g": "predicate"
+            },
+            {
+              "t": "人",
+              "r": "rén",
+              "g": "object"
+            },
+            {
+              "t": "受",
+              "r": "shòu",
+              "g": "object"
+            },
+            {
+              "t": "损",
+              "r": "sǔn",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "ここでは、あなたがたが",
+              "g": "subject"
+            },
+            {
+              "t": "地",
+              "r": "ち",
+              "g": "subject"
+            },
+            {
+              "t": "上",
+              "r": "じょう",
+              "g": "subject"
+            },
+            {
+              "t": "に",
+              "g": "adverbial"
+            },
+            {
+              "t": "残",
+              "r": "のこ",
+              "g": "subject"
+            },
+            {
+              "t": "した",
+              "g": "predicate"
+            },
+            {
+              "t": "魂",
+              "r": "たましい",
+              "g": "subject"
+            },
+            {
+              "t": "がまだ",
+              "g": "subject"
+            },
+            {
+              "t": "人",
+              "r": "ひとびと",
+              "g": "object"
+            },
+            {
+              "t": "々に",
+              "g": "adverbial"
+            },
+            {
+              "t": "語",
+              "r": "かた",
+              "g": "object"
+            },
+            {
+              "t": "りかける。 ",
+              "g": "object"
+            },
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "object"
+            },
+            {
+              "t": "らの",
+              "g": "attributive"
+            },
+            {
+              "t": "短",
+              "r": "みじか",
+              "g": "object"
+            },
+            {
+              "t": "い",
+              "g": "object"
+            },
+            {
+              "t": "世",
+              "r": "よ",
+              "g": "object"
+            },
+            {
+              "t": "のささやかな",
+              "g": "attributive"
+            },
+            {
+              "t": "週",
+              "r": "しゅう",
+              "g": "object"
+            },
+            {
+              "t": "のことを、 その",
+              "g": "object"
+            },
+            {
+              "t": "悲",
+              "r": "かな",
+              "g": "object"
+            },
+            {
+              "t": "しみと",
+              "g": "adverbial"
+            },
+            {
+              "t": "歓",
+              "r": "かん",
+              "g": "object"
+            },
+            {
+              "t": "びを。 その",
+              "g": "object"
+            },
+            {
+              "t": "情",
+              "r": "じょう",
+              "g": "object"
+            },
+            {
+              "t": "熱",
+              "r": "ねつ",
+              "g": "object"
+            },
+            {
+              "t": "と",
+              "g": "adverbial"
+            },
+            {
+              "t": "憤",
+              "r": "いきどお",
+              "g": "object"
+            },
+            {
+              "t": "りを。 その",
+              "g": "object"
+            },
+            {
+              "t": "栄",
+              "r": "えい",
+              "g": "object"
+            },
+            {
+              "t": "光",
+              "r": "こう",
+              "g": "object"
+            },
+            {
+              "t": "と",
+              "g": "adverbial"
+            },
+            {
+              "t": "恥",
+              "r": "はじ",
+              "g": "object"
+            },
+            {
+              "t": "を。 ",
+              "g": "object"
+            },
+            {
+              "t": "力",
+              "r": "ちから",
+              "g": "object"
+            },
+            {
+              "t": "と",
+              "g": "adverbial"
+            },
+            {
+              "t": "活",
+              "r": "かつ",
+              "g": "complement"
+            },
+            {
+              "t": "力",
+              "r": "りょく",
+              "g": "complement"
+            },
+            {
+              "t": "を",
+              "g": "object"
+            },
+            {
+              "t": "与",
+              "r": "あた",
+              "g": "complement"
+            },
+            {
+              "t": "えるもの、そして",
+              "g": "attributive"
+            },
+            {
+              "t": "傷",
+              "r": "きず",
+              "g": "complement"
+            },
+            {
+              "t": "つけるものが",
+              "g": "subject"
+            },
+            {
+              "t": "何",
+              "r": "なに",
+              "g": "complement"
+            },
+            {
+              "t": "かを。",
+              "g": "object"
+            }
+          ]
+        },
+        {
+          "source_en": "Thus ye teach us, every day,\nWisdom, though fled far away.",
+          "en": [
+            {
+              "t": "Thus",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "ye",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "teach",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "us",
+              "g": "subject"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "every",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "day",
+              "g": "subject"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": "\n"
+            },
+            {
+              "t": "Wisdom",
+              "g": "subject"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "though",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "fled",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "far",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "away",
+              "g": "object"
+            },
+            {
+              "t": "."
+            }
+          ],
+          "zh": [
+            {
+              "t": "如",
+              "r": "rú",
+              "g": "subject"
+            },
+            {
+              "t": "此",
+              "r": "cǐ",
+              "g": "subject"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "你",
+              "r": "nǐ",
+              "g": "subject"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "attributive"
+            },
+            {
+              "t": "每",
+              "r": "měi",
+              "g": "attributive"
+            },
+            {
+              "t": "日",
+              "r": "rì",
+              "g": "attributive"
+            },
+            {
+              "t": "教",
+              "r": "jiào",
+              "g": "attributive"
+            },
+            {
+              "t": "导",
+              "r": "dǎo",
+              "g": "attributive"
+            },
+            {
+              "t": "我",
+              "r": "wǒ",
+              "g": "attributive"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "topic"
+            },
+            {
+              "t": "， "
+            },
+            {
+              "t": "智",
+              "r": "zhì",
+              "g": "object"
+            },
+            {
+              "t": "慧",
+              "r": "huì",
+              "g": "object"
+            },
+            {
+              "t": "——"
+            },
+            {
+              "t": "虽",
+              "r": "suī",
+              "g": "object"
+            },
+            {
+              "t": "已",
+              "r": "yǐ",
+              "g": "adverbial"
+            },
+            {
+              "t": "远",
+              "r": "yuǎn",
+              "g": "object"
+            },
+            {
+              "t": "逝",
+              "r": "shì",
+              "g": "object"
+            },
+            {
+              "t": "于",
+              "r": "yú",
+              "g": "object"
+            },
+            {
+              "t": "彼",
+              "r": "bǐ",
+              "g": "object"
+            },
+            {
+              "t": "方",
+              "r": "fāng",
+              "g": "adverbial"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "そのようにして、あなたがたは",
+              "g": "subject"
+            },
+            {
+              "t": "毎",
+              "r": "まい",
+              "g": "subject"
+            },
+            {
+              "t": "日",
+              "r": "にち",
+              "g": "subject"
+            },
+            {
+              "t": "我",
+              "r": "われ",
+              "g": "subject"
+            },
+            {
+              "t": "らに",
+              "g": "adverbial"
+            },
+            {
+              "t": "教",
+              "r": "おし",
+              "g": "attributive"
+            },
+            {
+              "t": "える。 ",
+              "g": "attributive"
+            },
+            {
+              "t": "遠",
+              "r": "とお",
+              "g": "attributive"
+            },
+            {
+              "t": "く",
+              "g": "predicate"
+            },
+            {
+              "t": "彼",
+              "r": "かな",
+              "g": "object"
+            },
+            {
+              "t": "方",
+              "r": "た",
+              "g": "object"
+            },
+            {
+              "t": "へ",
+              "g": "adverbial"
+            },
+            {
+              "t": "去",
+              "r": "さ",
+              "g": "object"
+            },
+            {
+              "t": "ったとしても、なお",
+              "g": "adverbial"
+            },
+            {
+              "t": "賢",
+              "r": "さとし",
+              "g": "complement"
+            },
+            {
+              "t": "智",
+              "r": "さとる",
+              "g": "complement"
+            },
+            {
+              "t": "を。",
+              "g": "object"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
