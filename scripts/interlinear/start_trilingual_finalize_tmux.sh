@@ -82,10 +82,25 @@ if missing:
 print(f"complete_chunks={len(manifest.get('chunks', []))}")
 PY
 
+case '$book_id' in
+  *poem*|*poetry*|ovid-art-of-love*|tagore-*|gibran-*|keats-*|wilde-*|yeats-*|shelley-*|byron-*|xu-zhimo-*|tsangyang-gyatso-*)
+    python scripts/interlinear/prune_numeric_source_units.py --chunk-dir '$raw_chunk_dir'
+    python scripts/interlinear/repair_poetry_note_fragments.py --chunk-dir '$raw_chunk_dir'
+    python scripts/interlinear/sync_poetry_source_en_from_units.py --chunks-jsonl '$chunks_jsonl' --chunk-dir '$raw_chunk_dir'
+    ;;
+esac
+
 python scripts/interlinear/backfill_trilingual_grammar_roles.py \\
   --chunk-dir '$raw_chunk_dir' \\
   --chunks-jsonl '$chunks_jsonl' \\
   --overwrite-collapsed
+
+case '$book_id' in
+  *poem*|*poetry*|ovid-art-of-love*|tagore-*|gibran-*|keats-*|wilde-*|yeats-*|shelley-*|byron-*|xu-zhimo-*|tsangyang-gyatso-*)
+    python scripts/interlinear/soften_collapsed_grammar_roles.py --chunk-dir '$raw_chunk_dir'
+    python scripts/interlinear/audit_trilingual_book_quality.py --chunk-dir '$raw_chunk_dir' --max-issues 80
+    ;;
+esac
 
 ALLOW_MISSING=0 bash scripts/interlinear/compile_trilingual_book_12_previews.sh '$book_id'
 
