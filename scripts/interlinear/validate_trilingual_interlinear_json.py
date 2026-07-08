@@ -37,6 +37,29 @@ GRAMMAR_ROLES = {
     "topic",
     "function",
 }
+ALLOWED_TEXT_CONTROLS = {"\t", "\n", "\r"}
+
+
+def control_char_positions(text: str) -> list[tuple[int, int]]:
+    return [
+        (index, ord(ch))
+        for index, ch in enumerate(str(text or ""))
+        if ord(ch) < 32 and ch not in ALLOWED_TEXT_CONTROLS
+    ]
+
+
+def validate_no_control_chars(value: Any, where: str, errors: list[str]) -> None:
+    if isinstance(value, str):
+        bad = control_char_positions(value)
+        if bad:
+            preview = ", ".join(f"{index}:U+{code:04X}" for index, code in bad[:8])
+            errors.append(f"{where}: contains forbidden control character(s): {preview}")
+    elif isinstance(value, dict):
+        for key, child in value.items():
+            validate_no_control_chars(child, f"{where}.{key}", errors)
+    elif isinstance(value, list):
+        for index, child in enumerate(value):
+            validate_no_control_chars(child, f"{where}[{index}]", errors)
 
 
 def compact(text: str) -> str:
@@ -260,6 +283,8 @@ def validate_unit(unit: Any, where: str, errors: list[str]) -> tuple[str, str, s
 
 def validate_chunk(source: dict[str, Any], result: dict[str, Any]) -> list[str]:
     errors: list[str] = []
+    validate_no_control_chars(source, "source", errors)
+    validate_no_control_chars(result, "result", errors)
     if result.get("mode") not in {"trilingual_standard", None}:
         errors.append("mode must be trilingual_standard when present")
     if result.get("chunk_id") != source["chunk_id"]:
@@ -309,6 +334,7 @@ def validate_chunk(source: dict[str, Any], result: dict[str, Any]) -> list[str]:
 
 def validate_book(data: dict[str, Any]) -> list[str]:
     errors: list[str] = []
+    validate_no_control_chars(data, "book", errors)
     if data.get("mode") != "trilingual_standard":
         errors.append("mode must be trilingual_standard")
     validate_title(data.get("title", {}), "title", errors)
