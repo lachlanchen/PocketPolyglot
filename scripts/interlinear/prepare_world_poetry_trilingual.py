@@ -134,11 +134,19 @@ def clean_line(line: str) -> str:
 def is_boilerplate(line: str) -> bool:
     if not line:
         return True
+    folded = line.casefold()
     if line in {"|", "—", "←", "→", "Layout 2"}:
         return True
     if line.startswith(("#REDIRECT", "{{", "[[Category:")):
         return True
-    if any(part in line for part in BOILERPLATE_PARTS):
+    if any(part.casefold() in folded for part in BOILERPLATE_PARTS):
+        return True
+    if re.search(
+        r"(source text and artwork|believed to be free of copyright|"
+        r"contributors? to .*public domain|worldwide public domain|"
+        r"creative commons|copyright restrictions)",
+        folded,
+    ):
         return True
     if re.fullmatch(r"[0-9]{6,}\s+.*", line):
         return True
@@ -732,6 +740,7 @@ def reference_window(text: str, start_ratio: float, end_ratio: float, *, max_cha
 
 def best_sources_for_lang(plan: dict[str, Any], lang: str) -> list[tuple[str, Path, str]]:
     paths = plan.get("source_paths") or {}
+    task_mode = str(plan.get("task_mode") or "")
     ranked: list[tuple[int, str, Path, str]] = []
     for key, value in paths.items():
         path = ROOT / str(value)
@@ -764,6 +773,12 @@ def best_sources_for_lang(plan: dict[str, Any], lang: str) -> list[tuple[str, Pa
         if is_author_or_metadata:
             continue
         is_reference = "reference" in lower_key or lower_key.endswith("_ref")
+        # If the task explicitly says a language is generated, do not silently
+        # feed a broad anthology/reference file as if it were a true translation
+        # source. This prevents cross-author contamination such as a Whitman
+        # anthology being used for Keats or Wilde Chinese windows.
+        if is_reference and f"generated_{lang}" in task_mode:
+            continue
         is_wikisource_text = "wikisource_export" in lower_key and suffix == ".json" and not is_author_or_metadata
         explicit_lang_source = (
             lower_key.startswith(lang)

@@ -46,6 +46,11 @@ if [[ "${TRILINGUAL_BACKFILL_GRAMMAR:-1}" != "0" ]]; then
       --chunk-dir "$chunk_dir" \
       --chunks-jsonl "$chunks_jsonl" \
       --overwrite-collapsed
+    case "$book_id" in
+      *poem*|*poetry*|ovid-art-of-love*|tagore-*|gibran-*|keats-*|wilde-*|yeats-*|shelley-*|byron-*|xu-zhimo-*|tsangyang-gyatso-*)
+        python scripts/interlinear/soften_collapsed_grammar_roles.py --chunk-dir "$chunk_dir"
+        ;;
+    esac
   fi
 fi
 

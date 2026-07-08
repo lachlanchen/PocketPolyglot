@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "book_id": "wilde-poetry-spark",
-  "status": "prepared_trilingual_standalone",
+  "status": "prepared_trilingual",
   "launchable": true,
   "task_mode": "trilingual_poetry_en_source_generated_zh_ja",
   "source_spine_lang": "en",
@@ -19,38 +19,31 @@
     "zh_en_anthology_reference": "resources/curated-books/world-poetry/anthologies/zh-en/英诗经典名家名译(英汉对照)(套装共23册).epub"
   },
   "markdown": {
-    "en": "books/wilde-poetry-spark/markdown/en.md",
-    "zh": "books/wilde-poetry-spark/markdown/zh.md"
+    "en": "books/wilde-poetry-spark/markdown/en.md"
   },
   "chunks_jsonl": "books/wilde-poetry-spark/work/trilingual/chunks/chunks.jsonl",
   "chunks_manifest": "books/wilde-poetry-spark/work/trilingual/chunks/manifest.json",
   "raw_chunk_dir": "books/wilde-poetry-spark/work/trilingual/interlinear/chunks",
-  "preview_json": "books/wilde-poetry-spark/work/trilingual/preview/wilde-poetry.partial.json",
-  "assembled_json": "books/wilde-poetry-spark/work/trilingual/preview/wilde-poetry.partial.json",
+  "preview_json": "books/wilde-poetry-spark/work/trilingual/preview/wilde-poetry-spark.partial.json",
+  "assembled_json": "books/wilde-poetry-spark/work/trilingual/preview/wilde-poetry-spark.partial.json",
   "build_root": "build/wilde-poetry-spark",
   "cover_image": "assets/covers/wilde-poetry/cover.png",
-  "prepared_at": "2026-07-06T22:47:39.253895+00:00",
+  "prepared_at": "2026-07-08T03:32:34.408470+00:00",
   "preparation_notes": {
     "status": "Chunk manifest prepared and launchable.",
     "chunking": "poem/stanza/line groups; no generated translations are overwritten.",
-    "quality_rule": "Use provided poem PDFs/EPUBs first. Wikisource text is allowed when it is a real poem text source. Wikipedia and author pages are metadata only, not poem chunks.",
-    "standalone_clone": "Existing accepted chunks were copied; runtime candidates/queues are fresh."
+    "quality_rule": "Use provided poem PDFs/EPUBs first. Wikisource text is allowed when it is a real poem text source. Wikipedia and author pages are metadata only, not poem chunks."
   },
   "curated_by": "AgInTiFlow curated",
   "curated_url": "https://flow.lazying.art",
   "powered_by": "powered by LazyingArt",
   "chunk_mode": "poem_stanza_line_group",
-  "reference_scope": "source_edition_poetry_window",
-  "chunk_count": 147,
+  "reference_scope": "paired_or_clean_poem_source",
+  "chunk_count": 145,
   "source_extraction": {
     "en": {
       "key": "en_epub",
       "path": "resources/curated-books/world-poetry/wilde/en/Poetry.epub",
-      "method": "epub"
-    },
-    "zh": {
-      "key": "zh_en_anthology_reference",
-      "path": "resources/curated-books/world-poetry/anthologies/zh-en/英诗经典名家名译(英汉对照)(套装共23册).epub",
       "method": "epub"
     }
   },

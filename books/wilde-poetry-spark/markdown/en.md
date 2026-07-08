@@ -1,9 +1,5 @@
 # Poetry
 
-## Imprint
-
-The source text and artwork in this ebook are believed to be in the United States public domain; that is, they are believed to be free of copyright restrictions in the United States. They may still be copyrighted in other countries, so users located outside of the United States must check their local laws before using this ebook. The creators of, and contributors to, this ebook dedicate their contributions to the worldwide public domain via the terms in the CC0 1.0 Universal Public Domain Dedication. For full license information, see the Uncopyright at the end of this ebook.
-
 ## Στροφή
 
 Cloud maidens that float on for ever,
@@ -4134,9 +4130,3 @@ The first edition of this ebook was released on
 **January 5, 2024, 7:32 p.m. **
 You can check for updates to this ebook, view its revision history, or download it for different ereading systems at
 standardebooks.org/ebooks/oscar-wilde/poetry.
-
-## Uncopyright
-
-Copyright pages exist to tell you that you *can’t* do something. Unlike them, this Uncopyright page exists to tell you that the writing and artwork in this ebook are believed to be in the United States public domain; that is, they are believed to be free of copyright restrictions in the United States. The United States public domain represents our collective cultural heritage, and items in it are free for anyone in the United States to do almost anything at all with, without having to get permission.
-
-Non-authorship activities performed on items that are in the public domain⁠—so-called “sweat of the brow” work⁠—don’t create a new copyright. That means that nobody can claim a new copyright on an item that is in the public domain for, among other things, work like digitization, markup, or typography. Regardless, the contributors to this ebook release their contributions under the terms in the CC0 1.0 Universal Public Domain Dedication, thus dedicating to the worldwide public domain all of the work they’ve done on this ebook, including but not limited to metadata, the titlepage, imprint, colophon, this Uncopyright, and any changes or enhancements to, or markup on, the original text and artwork. This dedication doesn’t change the copyright status of the source text or artwork. We make this dedication in the interest of enriching our global cultural heritage, to promote free and libre culture around the world, and to give back to the unrestricted culture that has given all of us so much.
