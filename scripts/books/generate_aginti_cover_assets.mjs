@@ -116,6 +116,22 @@ const THEME_HINTS = {
     "Tagore aphoristic lyric poems, small birds crossing a wide dawn sky, Bengal riverbank, lotus leaves, floating manuscript pages without readable text, light contemplative mood, pale gold, sky blue, and soft green palette",
   "gibran-the-prophet":
     "Kahlil Gibran's The Prophet, coastal hill town at dawn, cedar branches, open parchment without readable words, quiet spiritual address and luminous Mediterranean air, restrained gold, blue, and warm stone palette",
+  "yeats-collected-poems-spark":
+    "W. B. Yeats collected poems, Irish lake island twilight, swans over dark water, tower silhouette, Celtic twilight mysticism, refined symbolist lyric atmosphere, silver gray, deep green, muted gold, and ink-blue palette",
+  "shelley-selected-poems-gpt55-low":
+    "Percy Bysshe Shelley selected poems, west wind over storm-lit sea, cloud and skylark motifs, Romantic revolutionary lyric energy, luminous horizon, restrained indigo, pearl gray, and pale gold palette",
+  "ovid-art-of-love-spark":
+    "Ovid Ars Amatoria, ancient Roman poetic love manual, marble garden, laurel, folded parchment without readable letters, elegant classical wit and sensual restraint, warm terracotta, ivory, soft rose, and antique gold palette",
+  "keats-poems-spark":
+    "John Keats poems, Grecian urn silhouette, nightingale in dusky branches, autumn fruit and laurel, sensuous Romantic lyric atmosphere, warm amber, moss green, ivory, and deep violet palette",
+  "wilde-poetry-spark":
+    "Oscar Wilde poetry, aesthetic movement elegance, peacock feather color, lily, velvet theater curtain abstraction, refined decadent wit without readable text, emerald, indigo, antique gold, and ivory palette",
+  "xu-zhimo-poems-spark":
+    "Xu Zhimo poetry, Cambridge river bridge at dusk, willow leaves, drifting cloud, Chinese modern lyric romance, ink wash blended with soft watercolor, pale blue, warm gold, and gentle green palette",
+  "tsangyang-gyatso-poems-spark":
+    "Tsangyang Gyatso poems, Tibetan plateau moonlight, prayer flags as abstract color without readable script, distant monastery silhouette, intimate lyric longing and spiritual solitude, lapis blue, saffron, snow white, and muted crimson palette",
+  "english-poetry-anthology-spark":
+    "English poetry anthology, open old poetry book without readable words, layered seasons, quill, rose, storm cloud, moonlit field, broad lyrical tradition, restrained editorial collage in deep blue, warm parchment, and muted gold",
 };
 
 function parseArgs(argv) {
