@@ -954,12 +954,21 @@ def meaningful_chapter_title(book_id: str, title: str, header_text: str) -> str:
 def is_source_boilerplate_paragraph(text: str) -> bool:
     text = clean_text(text)
     normalized = text.replace("目錄", "目录").replace("頁", "页")
+    lower = text.lower()
     if (
         text.startswith("此作品在全世界都属于公有领域")
         or text.startswith("此先秦作品在全世界都属于公有领域")
         or text.startswith("This work is in the public domain")
         or text.startswith("この作品はパブリックドメイン")
     ):
+        return True
+    if "公有领域" in text and ("作者逝世" in text or "1931年" in text):
+        return True
+    if "公有領域" in text and ("作者逝世" in text or "1931年" in text):
+        return True
+    if "パブリックドメイン" in text and ("1931年" in text or "100年以上" in text):
+        return True
+    if "public domain" in lower and ("author" in lower or "copyright" in lower):
         return True
     if not normalized:
         return True

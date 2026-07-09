@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "book_id": "yantielun",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "鹽鐵論",
+  "book_title_zh": "盐铁论",
+  "book_title_ja": "塩鉄論",
+  "book_title_en": "Discourses on Salt and Iron",
+  "author": "桓寬",
+  "author_reading_zh": "huán kuān",
+  "author_reading_ja": "かん かん",
+  "book_description": "鹽鐵論 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/yantielun/zh/wenyan-wikisource",
+    "wikisource_snapshot_pdf": "sources/yantielun/wiki-snapshots/wikisource/zh/wikisource-zh-鹽鐵論.pdf",
+    "wikisource_export_epub": "sources/yantielun/zh/wenyan-wikisource-export/鹽鐵論-Wikisource.epub",
+    "wikisource_export_pdf": "sources/yantielun/zh/wenyan-wikisource-export/鹽鐵論-Wikisource.pdf",
+    "modern_chinese_context_reference": "sources/yantielun/wiki-snapshots/wikipedia/zh/wikipedia-zh-盐铁论.pdf",
+    "english_context_reference": "sources/yantielun/wiki-snapshots/wikipedia/en/wikipedia-en-Discourses on Salt and Iron.pdf",
+    "japanese_context_reference": "sources/yantielun/wiki-snapshots/wikipedia/ja/wikipedia-ja-塩鉄論.pdf",
+    "wenyan_markdown": "books/yantielun/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/yantielun/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/yantielun/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/yantielun/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/yantielun/work/quadrilingual/preview/yantielun.partial.json",
+  "build_root": "build/yantielun/wenyan-main-quadrilingual",
+  "prepared_at": "2026-07-09T22:13:59.189770+00:00"
+}

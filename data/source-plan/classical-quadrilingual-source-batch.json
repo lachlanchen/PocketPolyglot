@@ -2213,6 +2213,69 @@
           "quality": "Japanese context/reference; generate readable modern Japanese"
         }
       ]
+    },
+    {
+      "book_id": "yantielun",
+      "status": "prepared_sources_only",
+      "priority": "classical_queue",
+      "book_title_wenyan": "鹽鐵論",
+      "book_title_zh": "盐铁论",
+      "book_title_ja": "塩鉄論",
+      "book_title_en": "Discourses on Salt and Iron",
+      "author": "桓寬",
+      "author_reading_zh": "huán kuān",
+      "author_reading_ja": "かん かん",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/yantielun/zh/wenyan-wikisource",
+          "quality": "Chinese Wikisource source tree; use the normal ten-volume spine 鹽鐵論/卷01 through 卷10 as the primary text"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "wikisource_snapshot_pdf",
+          "path": "sources/yantielun/wiki-snapshots/wikisource/zh/wikisource-zh-鹽鐵論.pdf",
+          "quality": "Chinese Wikisource rendered PDF snapshot for source auditing"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "wikisource_export_epub",
+          "path": "sources/yantielun/zh/wenyan-wikisource-export/鹽鐵論-Wikisource.epub",
+          "quality": "Chinese Wikisource EPUB export for source auditing"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "wikisource_export_pdf",
+          "path": "sources/yantielun/zh/wenyan-wikisource-export/鹽鐵論-Wikisource.pdf",
+          "quality": "Combined Chinese Wikisource PDF generated from the ten-volume spine"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "modern_chinese_context_reference",
+          "path": "sources/yantielun/wiki-snapshots/wikipedia/zh/wikipedia-zh-盐铁论.pdf",
+          "quality": "Chinese Wikipedia overview only; generate modern Chinese from the wenyan source"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_context_reference",
+          "path": "sources/yantielun/wiki-snapshots/wikipedia/en/wikipedia-en-Discourses on Salt and Iron.pdf",
+          "quality": "English Wikipedia overview only; no full English Wikisource translation found"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_context_reference",
+          "path": "sources/yantielun/wiki-snapshots/wikipedia/ja/wikipedia-ja-塩鉄論.pdf",
+          "quality": "Japanese Wikipedia overview only; generate readable modern Japanese from the wenyan source"
+        }
+      ]
     }
   ]
 }
