@@ -58,6 +58,8 @@ const THEME_HINTS = {
     "Chu lacquerware elegance, deep southern river mist, orchid and angelica, phoenix-feather curves, bronze bells, silk manuscript fragments, Qu Yuan's exile-poetry atmosphere, dark cinnabar, black, jade green, and restrained gold",
   shijing:
     "ancient songs and fields of the Zhou world, reeds by a riverbank, millet and mulberry leaves, bronze ritual vessel, simple court music, old bamboo-slip anthology, tender folk-song atmosphere, restrained jade green, warm earth, pale gold, and ink-wash texture",
+  huainanzi:
+    "Huainanzi cosmological philosophy, Han dynasty scholarly court, bronze astrolabe, yin-yang cosmogram without readable letters, bamboo slips, jade bi disk, misted mountains and constellations, synthesis of governance, nature, and Daoist thought, deep ink, warm bronze, lapis blue, and restrained gold",
   "tangshi-sanbai":
     "Tang dynasty poetry anthology, moonlit pavilion, distant frontier mountains, river boat, plum blossom and wine cup, scholar's desk with brush and folded paper, luminous regulated-verse elegance, mineral blue, ink black, moon silver, and restrained cinnabar",
   "platform-sutra":

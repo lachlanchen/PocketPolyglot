@@ -1,0 +1,590 @@
+{
+  "schema_version": "0.1",
+  "mode": "quadrilingual_wenyan_main",
+  "chunk_id": "huainanzi-chunk-0101",
+  "chapter": {
+    "id": "huainanzi-chapter-04",
+    "number": 4,
+    "title": {
+      "wenyan": [
+        {
+          "t": "天",
+          "r": "tiān",
+          "g": "subject"
+        },
+        {
+          "t": "文",
+          "r": "wén",
+          "g": "topic"
+        },
+        {
+          "t": "訓",
+          "r": "xùn",
+          "g": "object"
+        }
+      ],
+      "zh_modern": [
+        {
+          "t": "天",
+          "r": "tiān",
+          "g": "subject"
+        },
+        {
+          "t": "文",
+          "r": "wén",
+          "g": "topic"
+        },
+        {
+          "t": "訓",
+          "r": "xùn",
+          "g": "object"
+        }
+      ],
+      "ja_modern": [
+        {
+          "t": "天",
+          "r": "てん",
+          "g": "subject"
+        },
+        {
+          "t": "文",
+          "r": "もん",
+          "g": "attributive"
+        },
+        {
+          "t": "訓",
+          "r": "くん",
+          "g": "complement"
+        }
+      ],
+      "en": [
+        {
+          "t": "Huainanzi",
+          "g": "subject"
+        },
+        {
+          "t": " "
+        },
+        {
+          "t": "4",
+          "g": "predicate"
+        },
+        {
+          "t": ":"
+        },
+        {
+          "t": " "
+        },
+        {
+          "t": "天文訓",
+          "g": "object"
+        }
+      ]
+    }
+  },
+  "paragraphs": [
+    {
+      "id": "huainanzi-chunk-0101-p001",
+      "source_wenyan": "水生於申，壯於子，死於辰，三辰皆水也。",
+      "units": [
+        {
+          "source_wenyan": "水生於申，壯於子，死於辰，三辰皆水也。",
+          "wenyan": [
+            {
+              "t": "水",
+              "r": "shuǐ",
+              "g": "subject"
+            },
+            {
+              "t": "生",
+              "r": "shēng",
+              "g": "predicate"
+            },
+            {
+              "t": "於",
+              "r": "yú",
+              "g": "object"
+            },
+            {
+              "t": "申",
+              "r": "shēn",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "壯",
+              "r": "zhuàng",
+              "g": "object"
+            },
+            {
+              "t": "於",
+              "r": "yú",
+              "g": "object"
+            },
+            {
+              "t": "子",
+              "r": "zi",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "死",
+              "r": "sǐ",
+              "g": "predicate"
+            },
+            {
+              "t": "於",
+              "r": "yú",
+              "g": "object"
+            },
+            {
+              "t": "辰",
+              "r": "chén",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "三",
+              "r": "sān",
+              "g": "object"
+            },
+            {
+              "t": "辰",
+              "r": "chén",
+              "g": "object"
+            },
+            {
+              "t": "皆",
+              "r": "jiē",
+              "g": "object"
+            },
+            {
+              "t": "水",
+              "r": "shuǐ",
+              "g": "object"
+            },
+            {
+              "t": "也",
+              "r": "yě",
+              "g": "adverbial"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "zh_modern": [
+            {
+              "t": "水",
+              "r": "shuǐ",
+              "g": "subject"
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "申",
+              "r": "shēn",
+              "g": "subject"
+            },
+            {
+              "t": "位",
+              "r": "wèi",
+              "g": "subject"
+            },
+            {
+              "t": "产",
+              "r": "chǎn",
+              "g": "subject"
+            },
+            {
+              "t": "生",
+              "r": "shēng",
+              "g": "predicate"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "子",
+              "r": "zi",
+              "g": "object"
+            },
+            {
+              "t": "位",
+              "r": "wèi",
+              "g": "object"
+            },
+            {
+              "t": "旺",
+              "r": "wàng",
+              "g": "object"
+            },
+            {
+              "t": "盛",
+              "r": "shèng",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "辰",
+              "r": "chén",
+              "g": "object"
+            },
+            {
+              "t": "位",
+              "r": "wèi",
+              "g": "object"
+            },
+            {
+              "t": "终",
+              "r": "zhōng",
+              "g": "object"
+            },
+            {
+              "t": "结",
+              "r": "jié",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "这",
+              "r": "zhè",
+              "g": "object"
+            },
+            {
+              "t": "三",
+              "r": "sān",
+              "g": "object"
+            },
+            {
+              "t": "个",
+              "r": "gè",
+              "g": "object"
+            },
+            {
+              "t": "时",
+              "r": "shí",
+              "g": "object"
+            },
+            {
+              "t": "辰",
+              "r": "chén",
+              "g": "object"
+            },
+            {
+              "t": "都",
+              "r": "dōu",
+              "g": "adverbial"
+            },
+            {
+              "t": "属",
+              "r": "shǔ",
+              "g": "object"
+            },
+            {
+              "t": "于",
+              "r": "yú",
+              "g": "object"
+            },
+            {
+              "t": "水",
+              "r": "shuǐ",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja_modern": [
+            {
+              "t": "水",
+              "r": "みず",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "g": "subject"
+            },
+            {
+              "t": "申",
+              "r": "さる",
+              "g": "subject"
+            },
+            {
+              "t": "で",
+              "g": "adverbial"
+            },
+            {
+              "t": "生",
+              "r": "しょう",
+              "g": "subject"
+            },
+            {
+              "t": "じ、",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "attributive"
+            },
+            {
+              "t": "で",
+              "g": "adverbial"
+            },
+            {
+              "t": "盛",
+              "r": "さか",
+              "g": "attributive"
+            },
+            {
+              "t": "んになり、",
+              "g": "adverbial"
+            },
+            {
+              "t": "辰",
+              "r": "たつ",
+              "g": "attributive"
+            },
+            {
+              "t": "で",
+              "g": "adverbial"
+            },
+            {
+              "t": "終",
+              "r": "お",
+              "g": "attributive"
+            },
+            {
+              "t": "わる。この",
+              "g": "attributive"
+            },
+            {
+              "t": "三",
+              "r": "みっ",
+              "g": "attributive"
+            },
+            {
+              "t": "つの",
+              "g": "attributive"
+            },
+            {
+              "t": "辰",
+              "r": "たつ",
+              "g": "attributive"
+            },
+            {
+              "t": "はいずれも",
+              "g": "subject"
+            },
+            {
+              "t": "水",
+              "r": "みず",
+              "g": "attributive"
+            },
+            {
+              "t": "に",
+              "g": "adverbial"
+            },
+            {
+              "t": "属",
+              "r": "ぞく",
+              "g": "attributive"
+            },
+            {
+              "t": "する。",
+              "g": "complement"
+            }
+          ],
+          "en": [
+            {
+              "t": "Water",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "is",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "generated",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "at",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Shen",
+              "g": "adverbial"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "reaches",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "its",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "strength",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "at",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Zi",
+              "g": "adverbial"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "dies",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "at",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Chen",
+              "g": "adverbial"
+            },
+            {
+              "t": ";"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "these",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "three",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "cyclical",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "positions",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "all",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "belong",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "to",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "water",
+              "g": "adverbial"
+            },
+            {
+              "t": "."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

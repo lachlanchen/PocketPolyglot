@@ -1,0 +1,910 @@
+{
+  "schema_version": "0.1",
+  "mode": "quadrilingual_wenyan_main",
+  "chunk_id": "huainanzi-chunk-0212",
+  "chapter": {
+    "id": "huainanzi-chapter-09",
+    "number": 9,
+    "title": {
+      "wenyan": [
+        {
+          "t": "本",
+          "r": "běn",
+          "g": "subject"
+        },
+        {
+          "t": "經",
+          "r": "jīng",
+          "g": "topic"
+        },
+        {
+          "t": "訓",
+          "r": "xùn",
+          "g": "object"
+        }
+      ],
+      "zh_modern": [
+        {
+          "t": "本",
+          "r": "běn",
+          "g": "subject"
+        },
+        {
+          "t": "經",
+          "r": "jīng",
+          "g": "topic"
+        },
+        {
+          "t": "訓",
+          "r": "xùn",
+          "g": "object"
+        }
+      ],
+      "ja_modern": [
+        {
+          "t": "本",
+          "r": "ほん",
+          "g": "subject"
+        },
+        {
+          "t": "經",
+          "r": "きょう",
+          "g": "attributive"
+        },
+        {
+          "t": "訓",
+          "r": "くん",
+          "g": "complement"
+        }
+      ],
+      "en": [
+        {
+          "t": "Huainanzi",
+          "g": "subject"
+        },
+        {
+          "t": " "
+        },
+        {
+          "t": "9",
+          "g": "predicate"
+        },
+        {
+          "t": ":"
+        },
+        {
+          "t": " "
+        },
+        {
+          "t": "本經訓",
+          "g": "object"
+        }
+      ]
+    }
+  },
+  "paragraphs": [
+    {
+      "id": "huainanzi-chunk-0212-p001",
+      "source_wenyan": "詩雲：“不敢暴虎，不敢馮河。人知其一，不知其他。”此之謂也。",
+      "units": [
+        {
+          "source_wenyan": "詩雲：“不敢暴虎，不敢馮河。",
+          "wenyan": [
+            {
+              "t": "詩",
+              "r": "shī",
+              "g": "subject"
+            },
+            {
+              "t": "雲",
+              "r": "yún",
+              "g": "subject"
+            },
+            {
+              "t": "：“"
+            },
+            {
+              "t": "不",
+              "r": "bù",
+              "g": "attributive"
+            },
+            {
+              "t": "敢",
+              "r": "gǎn",
+              "g": "attributive"
+            },
+            {
+              "t": "暴",
+              "r": "bào",
+              "g": "attributive"
+            },
+            {
+              "t": "虎",
+              "r": "hǔ",
+              "g": "topic"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "不",
+              "r": "bù",
+              "g": "object"
+            },
+            {
+              "t": "敢",
+              "r": "gǎn",
+              "g": "object"
+            },
+            {
+              "t": "馮",
+              "r": "féng",
+              "g": "object"
+            },
+            {
+              "t": "河",
+              "r": "hé",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "zh_modern": [
+            {
+              "t": "《"
+            },
+            {
+              "t": "诗",
+              "r": "shī",
+              "g": "subject"
+            },
+            {
+              "t": "经",
+              "r": "jīng",
+              "g": "adverbial"
+            },
+            {
+              "t": "》"
+            },
+            {
+              "t": "说",
+              "r": "shuō",
+              "g": "predicate"
+            },
+            {
+              "t": "：“"
+            },
+            {
+              "t": "不",
+              "r": "bù",
+              "g": "object"
+            },
+            {
+              "t": "敢",
+              "r": "gǎn",
+              "g": "object"
+            },
+            {
+              "t": "空",
+              "r": "kōng",
+              "g": "object"
+            },
+            {
+              "t": "手",
+              "r": "shǒu",
+              "g": "object"
+            },
+            {
+              "t": "去",
+              "r": "qù",
+              "g": "complement"
+            },
+            {
+              "t": "搏",
+              "r": "bó",
+              "g": "object"
+            },
+            {
+              "t": "虎",
+              "r": "hǔ",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "不",
+              "r": "bù",
+              "g": "object"
+            },
+            {
+              "t": "敢",
+              "r": "gǎn",
+              "g": "object"
+            },
+            {
+              "t": "徒",
+              "r": "tú",
+              "g": "object"
+            },
+            {
+              "t": "步",
+              "r": "bù",
+              "g": "object"
+            },
+            {
+              "t": "去",
+              "r": "qù",
+              "g": "complement"
+            },
+            {
+              "t": "渡",
+              "r": "dù",
+              "g": "object"
+            },
+            {
+              "t": "河",
+              "r": "hé",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja_modern": [
+            {
+              "t": "『"
+            },
+            {
+              "t": "詩",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "経",
+              "r": "きょう",
+              "g": "subject"
+            },
+            {
+              "t": "』には、「",
+              "g": "subject"
+            },
+            {
+              "t": "素",
+              "r": "す",
+              "g": "subject"
+            },
+            {
+              "t": "手",
+              "r": "で",
+              "g": "subject"
+            },
+            {
+              "t": "で",
+              "g": "adverbial"
+            },
+            {
+              "t": "虎",
+              "r": "とら",
+              "g": "attributive"
+            },
+            {
+              "t": "に",
+              "g": "adverbial"
+            },
+            {
+              "t": "立",
+              "r": "た",
+              "g": "attributive"
+            },
+            {
+              "t": "ち",
+              "g": "attributive"
+            },
+            {
+              "t": "向",
+              "r": "む",
+              "g": "attributive"
+            },
+            {
+              "t": "かうことはせず、",
+              "g": "subject"
+            },
+            {
+              "t": "歩",
+              "r": "ある",
+              "g": "attributive"
+            },
+            {
+              "t": "いて",
+              "g": "attributive"
+            },
+            {
+              "t": "川",
+              "r": "かわ",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "g": "object"
+            },
+            {
+              "t": "渡",
+              "r": "わた",
+              "g": "attributive"
+            },
+            {
+              "t": "ろうともしない」とある。",
+              "g": "adverbial"
+            }
+          ],
+          "en": [
+            {
+              "t": "The",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Odes",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "says",
+              "g": "predicate"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "“"
+            },
+            {
+              "t": "I",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "dare",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "not",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "attack",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "a",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "tiger",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "barehanded",
+              "g": "predicate"
+            },
+            {
+              "t": ";"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "I",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "dare",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "not",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "cross",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "a",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "river",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "on",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "foot",
+              "g": "adverbial"
+            },
+            {
+              "t": "."
+            }
+          ]
+        },
+        {
+          "source_wenyan": "人知其一，不知其他。”",
+          "wenyan": [
+            {
+              "t": "人",
+              "r": "rén",
+              "g": "subject"
+            },
+            {
+              "t": "知",
+              "r": "zhī",
+              "g": "predicate"
+            },
+            {
+              "t": "其",
+              "r": "qí",
+              "g": "object"
+            },
+            {
+              "t": "一",
+              "r": "yī",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "不",
+              "r": "bù",
+              "g": "object"
+            },
+            {
+              "t": "知",
+              "r": "zhī",
+              "g": "predicate"
+            },
+            {
+              "t": "其",
+              "r": "qí",
+              "g": "object"
+            },
+            {
+              "t": "他",
+              "r": "tā",
+              "g": "object"
+            },
+            {
+              "t": "。”"
+            }
+          ],
+          "zh_modern": [
+            {
+              "t": "人",
+              "r": "rén",
+              "g": "subject"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "subject"
+            },
+            {
+              "t": "只",
+              "r": "zhǐ",
+              "g": "adverbial"
+            },
+            {
+              "t": "知",
+              "r": "zhī",
+              "g": "predicate"
+            },
+            {
+              "t": "道",
+              "r": "dào",
+              "g": "object"
+            },
+            {
+              "t": "其",
+              "r": "qí",
+              "g": "object"
+            },
+            {
+              "t": "中",
+              "r": "zhōng",
+              "g": "object"
+            },
+            {
+              "t": "一",
+              "r": "yī",
+              "g": "object"
+            },
+            {
+              "t": "方",
+              "r": "fāng",
+              "g": "adverbial"
+            },
+            {
+              "t": "面",
+              "r": "miàn",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "却",
+              "r": "què",
+              "g": "object"
+            },
+            {
+              "t": "不",
+              "r": "bù",
+              "g": "object"
+            },
+            {
+              "t": "知",
+              "r": "zhī",
+              "g": "predicate"
+            },
+            {
+              "t": "道",
+              "r": "dào",
+              "g": "object"
+            },
+            {
+              "t": "另",
+              "r": "lìng",
+              "g": "object"
+            },
+            {
+              "t": "外",
+              "r": "wài",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "方",
+              "r": "fāng",
+              "g": "adverbial"
+            },
+            {
+              "t": "面",
+              "r": "miàn",
+              "g": "object"
+            },
+            {
+              "t": "。”"
+            }
+          ],
+          "ja_modern": [
+            {
+              "t": "人",
+              "r": "にん",
+              "g": "subject"
+            },
+            {
+              "t": "はその",
+              "g": "subject"
+            },
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "subject"
+            },
+            {
+              "t": "面",
+              "r": "めん",
+              "g": "attributive"
+            },
+            {
+              "t": "だけを",
+              "g": "object"
+            },
+            {
+              "t": "知",
+              "r": "し",
+              "g": "attributive"
+            },
+            {
+              "t": "っていて、ほかの",
+              "g": "attributive"
+            },
+            {
+              "t": "面",
+              "r": "めん",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "g": "object"
+            },
+            {
+              "t": "知",
+              "r": "し",
+              "g": "attributive"
+            },
+            {
+              "t": "らないのである。",
+              "g": "adverbial"
+            }
+          ],
+          "en": [
+            {
+              "t": "People",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "know",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "one",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "side",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "it",
+              "g": "object"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "but",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "do",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "not",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "know",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "others",
+              "g": "object"
+            },
+            {
+              "t": ".”"
+            }
+          ]
+        },
+        {
+          "source_wenyan": "此之謂也。",
+          "wenyan": [
+            {
+              "t": "此",
+              "r": "cǐ",
+              "g": "subject"
+            },
+            {
+              "t": "之",
+              "r": "zhī",
+              "g": "subject"
+            },
+            {
+              "t": "謂",
+              "r": "wèi",
+              "g": "topic"
+            },
+            {
+              "t": "也",
+              "r": "yě",
+              "g": "adverbial"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "zh_modern": [
+            {
+              "t": "说",
+              "r": "shuō",
+              "g": "predicate"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "就",
+              "r": "jiù",
+              "g": "adverbial"
+            },
+            {
+              "t": "是",
+              "r": "shì",
+              "g": "predicate"
+            },
+            {
+              "t": "这",
+              "r": "zhè",
+              "g": "object"
+            },
+            {
+              "t": "个",
+              "r": "gè",
+              "g": "object"
+            },
+            {
+              "t": "意",
+              "r": "yì",
+              "g": "object"
+            },
+            {
+              "t": "思",
+              "r": "sī",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja_modern": [
+            {
+              "t": "これはまさにそのことを",
+              "g": "subject"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "attributive"
+            },
+            {
+              "t": "っているのである。",
+              "g": "adverbial"
+            }
+          ],
+          "en": [
+            {
+              "t": "This",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "is",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "what",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "it",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "refers",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "to",
+              "g": "adverbial"
+            },
+            {
+              "t": "."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
