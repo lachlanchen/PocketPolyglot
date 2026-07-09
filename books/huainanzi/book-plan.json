@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "book_id": "huainanzi",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "淮南子",
+  "book_title_zh": "淮南子",
+  "book_title_ja": "淮南子",
+  "book_title_en": "Huainanzi",
+  "author": "劉安 編",
+  "author_reading_zh": "liú ān biān",
+  "author_reading_ja": "りゅう あん へん",
+  "book_description": "淮南子 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/huainanzi/zh/wikisource-export",
+    "public_domain_scan_reference": "sources/huainanzi/zh/public-domain/NTUL-9900013603_淮南子.pdf",
+    "modern_chinese_annotated_reference": "sources/huainanzi/zh/modern-reference/[中华经典名著全本全注全译丛书] 陈广忠 译注 - 淮南子 (2011, 中华书局) - libgen.li.pdf",
+    "english_full_translation_reference": "sources/huainanzi/en/modern-reference/[Translations from the Asian classics] Major, John S._Liu, An - The Huainanzi_ a guide to the theory and practice of government in early Han China (2010_2011, Columbia University Press) - libgen.li.epub",
+    "public_domain_english_selection": "sources/huainanzi/en/sacred-texts-tao-great-luminant/Tao_The_Great_Luminant_Huai_Nan_Tzu.pdf",
+    "public_domain_modern_japanese_reference": "sources/huainanzi/jp/public-domain",
+    "chinese_open_reference": "sources/huainanzi/wiki-snapshots/zh-wikipedia",
+    "english_open_reference": "sources/huainanzi/wiki-snapshots/en-wikipedia",
+    "japanese_open_reference": "sources/huainanzi/wiki-snapshots/ja-wikipedia",
+    "wenyan_markdown": "books/huainanzi/markdown/wenyan.md"
+  },
+  "chunks_jsonl": "books/huainanzi/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/huainanzi/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/huainanzi/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/huainanzi/work/quadrilingual/preview/huainanzi.partial.json",
+  "build_root": "build/huainanzi/wenyan-main-quadrilingual",
+  "prepared_at": "2026-07-09T03:04:07.131232+00:00"
+}

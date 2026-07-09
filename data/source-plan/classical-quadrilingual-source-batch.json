@@ -1431,6 +1431,84 @@
       "next_step": "Use the Chinese Wikisource text as the wenyan spine. Use 國語集解 and the alternate 四庫全書本 source as references; generate readable English, modern Japanese, and modern Chinese where no aligned translation source exists. Keep commentary/集解 as notes or reference, not as continuation of the main line."
     },
     {
+      "book_id": "huainanzi",
+      "status": "launchable_task_prepared",
+      "priority": "classical_queue",
+      "book_title_wenyan": "淮南子",
+      "book_title_zh": "淮南子",
+      "book_title_ja": "淮南子",
+      "book_title_en": "Huainanzi",
+      "author": "劉安 編",
+      "author_reading_zh": "liú ān biān",
+      "author_reading_ja": "りゅう あん へん",
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/huainanzi/zh/wikisource-export",
+          "quality": "Chinese Wikisource source tree with raw and HTML pages; use as the exact wenyan spine"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "public_domain_scan_reference",
+          "path": "sources/huainanzi/zh/public-domain/NTUL-9900013603_淮南子.pdf",
+          "quality": "public-domain Chinese scan/reference for source verification"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "modern_chinese_annotated_reference",
+          "path": "sources/huainanzi/zh/modern-reference/[中华经典名著全本全注全译丛书] 陈广忠 译注 - 淮南子 (2011, 中华书局) - libgen.li.pdf",
+          "quality": "modern Chinese annotated translation; use for meaning, terminology, and notes while keeping commentary separate from the wenyan spine"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_full_translation_reference",
+          "path": "sources/huainanzi/en/modern-reference/[Translations from the Asian classics] Major, John S._Liu, An - The Huainanzi_ a guide to the theory and practice of government in early Han China (2010_2011, Columbia University Press) - libgen.li.epub",
+          "quality": "full scholarly English translation/reference; prefer this for English alignment when it matches the current passage"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "public_domain_english_selection",
+          "path": "sources/huainanzi/en/sacred-texts-tao-great-luminant/Tao_The_Great_Luminant_Huai_Nan_Tzu.pdf",
+          "quality": "public-domain English Huainanzi selection; use as secondary reference only"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "public_domain_modern_japanese_reference",
+          "path": "sources/huainanzi/jp/public-domain",
+          "quality": "NDL public-domain Japanese modern translation scans in three parts; OCR/extraction may be required before prompt-time textual use"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "chinese_open_reference",
+          "path": "sources/huainanzi/wiki-snapshots/zh-wikipedia",
+          "quality": "Chinese open reference snapshot"
+        },
+        {
+          "layer": "en",
+          "lang": "en",
+          "role": "english_open_reference",
+          "path": "sources/huainanzi/wiki-snapshots/en-wikipedia",
+          "quality": "English open reference snapshot"
+        },
+        {
+          "layer": "ja_modern",
+          "lang": "ja",
+          "role": "japanese_open_reference",
+          "path": "sources/huainanzi/wiki-snapshots/ja-wikipedia",
+          "quality": "Japanese open reference snapshot"
+        }
+      ],
+      "next_step": "Use the Chinese Wikisource text as the wenyan spine. Use the Chen Guangzhong annotated Chinese PDF, Major/Liu English EPUB, public-domain Japanese translation scans, Sacred Texts English selection, and wiki snapshots as broad references. Generate aligned English, readable modern Japanese, modern Chinese, pinyin/ruby, and grammar roles without merging commentary into the main wenyan line."
+    },
+    {
       "book_id": "sunzi-bingfa",
       "status": "launchable_task_prepared",
       "priority": "classical_queue",

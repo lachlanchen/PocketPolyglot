@@ -401,6 +401,31 @@ LUNYU_CANONICAL_ORDER = {
     "堯曰第二十": 20,
 }
 
+HUAINANZI_CANONICAL_ORDER = {
+    "敘目": 0,
+    "原道訓": 1,
+    "俶真訓": 2,
+    "天文訓": 3,
+    "墬形訓": 4,
+    "時則訓": 5,
+    "覽冥訓": 6,
+    "精神訓": 7,
+    "本經訓": 8,
+    "主術訓": 9,
+    "繆稱訓": 10,
+    "齊俗訓": 11,
+    "道應訓": 12,
+    "氾論訓": 13,
+    "詮言訓": 14,
+    "兵略訓": 15,
+    "說山訓": 16,
+    "說林訓": 17,
+    "人間訓": 18,
+    "脩務訓": 19,
+    "泰族訓": 20,
+    "要略": 21,
+}
+
 ROMAN_TO_INT = {
     "I": 1,
     "II": 2,
@@ -1118,6 +1143,8 @@ def chapter_sort_key(
         return (source_sequence_key(html_name), tail)
     if book_id == "lunyu":
         return (LUNYU_CANONICAL_ORDER.get(tail, 9000 + source_sequence_key(html_name)), tail)
+    if book_id == "huainanzi":
+        return (HUAINANZI_CANONICAL_ORDER.get(tail, 9000 + source_sequence_key(html_name)), tail)
     return (source_sequence_key(html_name), tail)
 
 
