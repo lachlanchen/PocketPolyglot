@@ -90,6 +90,8 @@ def tex_escape(text: str) -> str:
     parts: list[str] = []
     run: list[str] = []
     for ch in str(text):
+        if ch in "\r\n\t":
+            ch = " "
         if ch.isascii() and ch.isalnum():
             run.append(ch)
             continue
@@ -103,7 +105,8 @@ def tex_escape(text: str) -> str:
 
 def tex_escape_en(text: str) -> str:
     """Escape English text while preserving visible inter-word spaces."""
-    return tex_escape(text).replace(" ", r"\space{}")
+    normalized = re.sub(r"\s+", " ", str(text))
+    return tex_escape(normalized).replace(" ", r"\space{}")
 
 
 def tex_path_arg(path: str) -> str:

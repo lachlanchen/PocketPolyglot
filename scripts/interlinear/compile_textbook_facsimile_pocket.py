@@ -124,6 +124,33 @@ def write_source_tex(book_id: str, source_filename: str) -> Path:
 
     title = str(plan.get("book_title_en") or book_id)
     author = str(plan.get("author") or "")
+    cover_image = ""
+    cover_rel = str(plan.get("cover_image") or "")
+    if cover_rel:
+        cover_path = ROOT / cover_rel
+        if cover_path.exists():
+            cover_image = str(cover_path)
+    if cover_image:
+        title_block = rf"""\thispagestyle{{empty}}
+\newgeometry{{margin=0pt}}
+\noindent\includegraphics[width=\paperwidth,height=\paperheight]{{\detokenize{{{cover_image}}}}}
+\restoregeometry
+\clearpage
+"""
+    else:
+        title_block = rf"""\thispagestyle{{empty}}
+\vspace*{{0.17\textheight}}
+\begin{{center}}
+{{\Large {tex_escape(title)}\par}}
+\vspace{{0.9em}}
+{{\normalsize {tex_escape(author)}\par}}
+\vfill
+{{\sffamily\fontsize{{6pt}}{{7.5pt}}\selectfont AgInTiFlow curated\quad https://flow.lazying.art\par powered by LazyingArt\par}}
+\vspace{{0.8em}}
+{{\sffamily\fontsize{{5.6pt}}{{7pt}}\selectfont Open-source exact facsimile pocket TeX edition. Original pages are scaled into pocket format so formulas, tables, and figures remain visually faithful.\par}}
+\end{{center}}
+\clearpage
+"""
     source_tex = out_dir / "source.tex"
     source_tex.write_text(
         rf"""\documentclass[UTF8,fontset=none,10pt,openany]{{ctexbook}}
@@ -132,6 +159,7 @@ def write_source_tex(book_id: str, source_filename: str) -> Path:
 \usepackage{{xeCJK}}
 \usepackage{{xcolor}}
 \usepackage{{hyperref}}
+\usepackage{{graphicx}}
 \usepackage{{pdfpages}}
 \usepackage{{fancyhdr}}
 
@@ -168,18 +196,7 @@ def write_source_tex(book_id: str, source_filename: str) -> Path:
 
 \begin{{document}}
 \frontmatter
-\thispagestyle{{empty}}
-\vspace*{{0.17\textheight}}
-\begin{{center}}
-{{\Large {tex_escape(title)}\par}}
-\vspace{{0.9em}}
-{{\normalsize {tex_escape(author)}\par}}
-\vfill
-{{\sffamily\fontsize{{6pt}}{{7.5pt}}\selectfont AgInTiFlow curated\quad https://flow.lazying.art\par powered by LazyingArt\par}}
-\vspace{{0.8em}}
-{{\sffamily\fontsize{{5.6pt}}{{7pt}}\selectfont Open-source exact facsimile pocket TeX edition. Original pages are scaled into pocket format so formulas, tables, and figures remain visually faithful.\par}}
-\end{{center}}
-\clearpage
+{title_block}
 \tableofcontents
 \clearpage
 \mainmatter

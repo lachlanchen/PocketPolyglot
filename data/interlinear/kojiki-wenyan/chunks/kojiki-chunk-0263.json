@@ -1,0 +1,642 @@
+{
+  "schema_version": "0.1",
+  "mode": "quadrilingual_wenyan_main",
+  "chunk_id": "kojiki-chunk-0263",
+  "chapter": {
+    "id": "kojiki-wenyan-03",
+    "number": 3,
+    "title": {
+      "wenyan": [
+        {
+          "t": "古",
+          "r": "gǔ",
+          "g": "subject"
+        },
+        {
+          "t": "事",
+          "r": "shì",
+          "g": "topic"
+        },
+        {
+          "t": "記",
+          "r": "jì",
+          "g": "object"
+        }
+      ],
+      "zh_modern": [
+        {
+          "t": "古",
+          "r": "gǔ",
+          "g": "subject"
+        },
+        {
+          "t": "事",
+          "r": "shì",
+          "g": "topic"
+        },
+        {
+          "t": "記",
+          "r": "jì",
+          "g": "object"
+        }
+      ],
+      "ja_modern": [
+        {
+          "t": "古",
+          "r": "こ",
+          "g": "subject"
+        },
+        {
+          "t": "事",
+          "r": "じ",
+          "g": "attributive"
+        },
+        {
+          "t": "記",
+          "r": "き",
+          "g": "complement"
+        }
+      ],
+      "en": [
+        {
+          "t": "Volume",
+          "g": "subject"
+        },
+        {
+          "t": " "
+        },
+        {
+          "t": "3",
+          "g": "predicate"
+        }
+      ]
+    }
+  },
+  "paragraphs": [
+    {
+      "id": "kojiki-p00263",
+      "source_wenyan": "之祖也。天皇御年陸拾參歳。御陵在伊邪河之坂上也。",
+      "units": [
+        {
+          "source_wenyan": "之祖也。",
+          "wenyan": [
+            {
+              "t": "之",
+              "r": "zhī",
+              "g": "subject"
+            },
+            {
+              "t": "祖",
+              "r": "zǔ",
+              "g": "topic"
+            },
+            {
+              "t": "也",
+              "r": "yě",
+              "g": "adverbial"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "zh_modern": [
+            {
+              "t": "这",
+              "r": "zhè",
+              "g": "subject"
+            },
+            {
+              "t": "就",
+              "r": "jiù",
+              "g": "adverbial"
+            },
+            {
+              "t": "是",
+              "r": "shì",
+              "g": "predicate"
+            },
+            {
+              "t": "他",
+              "r": "tā",
+              "g": "object"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "祖",
+              "r": "zǔ",
+              "g": "object"
+            },
+            {
+              "t": "先",
+              "r": "xiān",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja_modern": [
+            {
+              "t": "これがその",
+              "g": "subject"
+            },
+            {
+              "t": "祖",
+              "r": "そ",
+              "g": "attributive"
+            },
+            {
+              "t": "先",
+              "r": "せん",
+              "g": "attributive"
+            },
+            {
+              "t": "である。",
+              "g": "adverbial"
+            }
+          ],
+          "en": [
+            {
+              "t": "This",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "is",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "their",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "ancestor",
+              "g": "object"
+            },
+            {
+              "t": "."
+            }
+          ]
+        },
+        {
+          "source_wenyan": "天皇御年陸拾參歳。",
+          "wenyan": [
+            {
+              "t": "天",
+              "r": "tiān",
+              "g": "subject"
+            },
+            {
+              "t": "皇",
+              "r": "huáng",
+              "g": "subject"
+            },
+            {
+              "t": "御",
+              "r": "yù",
+              "g": "attributive"
+            },
+            {
+              "t": "年",
+              "r": "nián",
+              "g": "attributive"
+            },
+            {
+              "t": "陸",
+              "r": "lù",
+              "g": "topic"
+            },
+            {
+              "t": "拾",
+              "r": "shí",
+              "g": "object"
+            },
+            {
+              "t": "參",
+              "r": "cān",
+              "g": "object"
+            },
+            {
+              "t": "歳",
+              "r": "suì",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "zh_modern": [
+            {
+              "t": "天",
+              "r": "tiān",
+              "g": "subject"
+            },
+            {
+              "t": "皇",
+              "r": "huáng",
+              "g": "subject"
+            },
+            {
+              "t": "享",
+              "r": "xiǎng",
+              "g": "attributive"
+            },
+            {
+              "t": "年",
+              "r": "nián",
+              "g": "attributive"
+            },
+            {
+              "t": "六",
+              "r": "liù",
+              "g": "topic"
+            },
+            {
+              "t": "十",
+              "r": "shí",
+              "g": "object"
+            },
+            {
+              "t": "三",
+              "r": "sān",
+              "g": "object"
+            },
+            {
+              "t": "岁",
+              "r": "suì",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja_modern": [
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "subject"
+            },
+            {
+              "t": "皇",
+              "r": "のう",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "御",
+              "r": "お",
+              "g": "attributive"
+            },
+            {
+              "t": "年",
+              "r": "ねん",
+              "g": "attributive"
+            },
+            {
+              "t": "は",
+              "g": "subject"
+            },
+            {
+              "t": "六",
+              "r": "ろく",
+              "g": "attributive"
+            },
+            {
+              "t": "十",
+              "r": "じゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "三",
+              "r": "さん",
+              "g": "attributive"
+            },
+            {
+              "t": "歳",
+              "r": "さい",
+              "g": "attributive"
+            },
+            {
+              "t": "であった。",
+              "g": "adverbial"
+            }
+          ],
+          "en": [
+            {
+              "t": "The",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Heavenly",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Sovereign",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "was",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "sixty-three",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "years",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "old",
+              "g": "object"
+            },
+            {
+              "t": "."
+            }
+          ]
+        },
+        {
+          "source_wenyan": "御陵在伊邪河之坂上也。",
+          "wenyan": [
+            {
+              "t": "御",
+              "r": "yù",
+              "g": "subject"
+            },
+            {
+              "t": "陵",
+              "r": "líng",
+              "g": "subject"
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "伊",
+              "r": "yī",
+              "g": "attributive"
+            },
+            {
+              "t": "邪",
+              "r": "xié",
+              "g": "attributive"
+            },
+            {
+              "t": "河",
+              "r": "hé",
+              "g": "topic"
+            },
+            {
+              "t": "之",
+              "r": "zhī",
+              "g": "object"
+            },
+            {
+              "t": "坂",
+              "r": "bǎn",
+              "g": "object"
+            },
+            {
+              "t": "上",
+              "r": "shàng",
+              "g": "complement"
+            },
+            {
+              "t": "也",
+              "r": "yě",
+              "g": "adverbial"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "zh_modern": [
+            {
+              "t": "他",
+              "r": "tā",
+              "g": "subject"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "陵",
+              "r": "líng",
+              "g": "attributive"
+            },
+            {
+              "t": "墓",
+              "r": "mù",
+              "g": "attributive"
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "伊",
+              "r": "yī",
+              "g": "topic"
+            },
+            {
+              "t": "邪",
+              "r": "xié",
+              "g": "object"
+            },
+            {
+              "t": "河",
+              "r": "hé",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "坡",
+              "r": "pō",
+              "g": "object"
+            },
+            {
+              "t": "上",
+              "r": "shàng",
+              "g": "complement"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja_modern": [
+            {
+              "t": "御",
+              "r": "ごり",
+              "g": "subject"
+            },
+            {
+              "t": "陵",
+              "r": "ょう",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "g": "subject"
+            },
+            {
+              "t": "伊",
+              "r": "い",
+              "g": "attributive"
+            },
+            {
+              "t": "邪",
+              "r": "ざ",
+              "g": "attributive"
+            },
+            {
+              "t": "河",
+              "r": "かわ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "坂",
+              "r": "さか",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "上",
+              "r": "うえ",
+              "g": "attributive"
+            },
+            {
+              "t": "にある。",
+              "g": "adverbial"
+            }
+          ],
+          "en": [
+            {
+              "t": "His",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "mausoleum",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "is",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "on",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "slope",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "above",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Iza",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "River",
+              "g": "adverbial"
+            },
+            {
+              "t": "."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,681 @@
+{
+  "schema_version": "0.1",
+  "mode": "quadrilingual_wenyan_main",
+  "chunk_id": "kojiki-chunk-0121",
+  "chapter": {
+    "id": "kojiki-wenyan-02",
+    "number": 2,
+    "title": {
+      "wenyan": [
+        {
+          "t": "上",
+          "r": "shàng",
+          "g": "predicate"
+        },
+        {
+          "t": "卷",
+          "r": "juǎn",
+          "g": "topic"
+        }
+      ],
+      "zh_modern": [
+        {
+          "t": "上",
+          "r": "shàng",
+          "g": "predicate"
+        },
+        {
+          "t": "卷",
+          "r": "juǎn",
+          "g": "topic"
+        }
+      ],
+      "ja_modern": [
+        {
+          "t": "上",
+          "r": "じょう",
+          "g": "subject"
+        },
+        {
+          "t": "巻",
+          "r": "かん",
+          "g": "complement"
+        }
+      ],
+      "en": [
+        {
+          "t": "Upper",
+          "g": "subject"
+        },
+        {
+          "t": " "
+        },
+        {
+          "t": "Volume",
+          "g": "predicate"
+        }
+      ]
+    }
+  },
+  "paragraphs": [
+    {
+      "id": "kojiki-p00121",
+      "source_wenyan": "還矢之本也 。亦其雉不還，故於今諺曰「雉之頓使」",
+      "units": [
+        {
+          "source_wenyan": "還矢之本也 。",
+          "wenyan": [
+            {
+              "t": "還",
+              "r": "hái",
+              "g": "subject"
+            },
+            {
+              "t": "矢",
+              "r": "shǐ",
+              "g": "subject"
+            },
+            {
+              "t": "之",
+              "r": "zhī",
+              "g": "topic"
+            },
+            {
+              "t": "本",
+              "r": "běn",
+              "g": "object"
+            },
+            {
+              "t": "也",
+              "r": "yě",
+              "g": "adverbial"
+            },
+            {
+              "t": " 。"
+            }
+          ],
+          "zh_modern": [
+            {
+              "t": "这",
+              "r": "zhè",
+              "g": "subject"
+            },
+            {
+              "t": "就",
+              "r": "jiù",
+              "g": "adverbial"
+            },
+            {
+              "t": "是",
+              "r": "shì",
+              "g": "predicate"
+            },
+            {
+              "t": "“"
+            },
+            {
+              "t": "还",
+              "r": "hái",
+              "g": "adverbial"
+            },
+            {
+              "t": "矢",
+              "r": "shǐ",
+              "g": "object"
+            },
+            {
+              "t": "”"
+            },
+            {
+              "t": "这",
+              "r": "zhè",
+              "g": "object"
+            },
+            {
+              "t": "件",
+              "r": "jiàn",
+              "g": "object"
+            },
+            {
+              "t": "事",
+              "r": "shì",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "由",
+              "r": "yóu",
+              "g": "adverbial"
+            },
+            {
+              "t": "来",
+              "r": "lái",
+              "g": "complement"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja_modern": [
+            {
+              "t": "これが、",
+              "g": "subject"
+            },
+            {
+              "t": "矢",
+              "r": "や",
+              "g": "subject"
+            },
+            {
+              "t": "を",
+              "g": "object"
+            },
+            {
+              "t": "返",
+              "r": "かえ",
+              "g": "attributive"
+            },
+            {
+              "t": "すことの",
+              "g": "adverbial"
+            },
+            {
+              "t": "由",
+              "r": "ゆ",
+              "g": "attributive"
+            },
+            {
+              "t": "来",
+              "r": "らい",
+              "g": "attributive"
+            },
+            {
+              "t": "である。",
+              "g": "adverbial"
+            }
+          ],
+          "en": [
+            {
+              "t": "This",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "is",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "origin",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "returning",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "arrow",
+              "g": "object"
+            },
+            {
+              "t": "."
+            }
+          ]
+        },
+        {
+          "source_wenyan": "亦其雉不還，故於今諺曰「雉之頓使」",
+          "wenyan": [
+            {
+              "t": "亦",
+              "r": "yì",
+              "g": "subject"
+            },
+            {
+              "t": "其",
+              "r": "qí",
+              "g": "subject"
+            },
+            {
+              "t": "雉",
+              "r": "zhì",
+              "g": "attributive"
+            },
+            {
+              "t": "不",
+              "r": "bù",
+              "g": "attributive"
+            },
+            {
+              "t": "還",
+              "r": "hái",
+              "g": "attributive"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "故",
+              "r": "gù",
+              "g": "attributive"
+            },
+            {
+              "t": "於",
+              "r": "yú",
+              "g": "attributive"
+            },
+            {
+              "t": "今",
+              "r": "jīn",
+              "g": "attributive"
+            },
+            {
+              "t": "諺",
+              "r": "yàn",
+              "g": "attributive"
+            },
+            {
+              "t": "曰",
+              "r": "yuē",
+              "g": "attributive"
+            },
+            {
+              "t": "「"
+            },
+            {
+              "t": "雉",
+              "r": "zhì",
+              "g": "attributive"
+            },
+            {
+              "t": "之",
+              "r": "zhī",
+              "g": "attributive"
+            },
+            {
+              "t": "頓",
+              "r": "dùn",
+              "g": "attributive"
+            },
+            {
+              "t": "使",
+              "r": "shǐ",
+              "g": "predicate"
+            },
+            {
+              "t": "」"
+            }
+          ],
+          "zh_modern": [
+            {
+              "t": "又",
+              "r": "yòu",
+              "g": "adverbial"
+            },
+            {
+              "t": "因",
+              "r": "yīn",
+              "g": "adverbial"
+            },
+            {
+              "t": "为",
+              "r": "wèi",
+              "g": "subject"
+            },
+            {
+              "t": "那",
+              "r": "nà",
+              "g": "subject"
+            },
+            {
+              "t": "只",
+              "r": "zhǐ",
+              "g": "adverbial"
+            },
+            {
+              "t": "雉",
+              "r": "zhì",
+              "g": "attributive"
+            },
+            {
+              "t": "鸡",
+              "r": "jī",
+              "g": "attributive"
+            },
+            {
+              "t": "没",
+              "r": "méi",
+              "g": "attributive"
+            },
+            {
+              "t": "有",
+              "r": "yǒu",
+              "g": "predicate"
+            },
+            {
+              "t": "回",
+              "r": "huí",
+              "g": "object"
+            },
+            {
+              "t": "来",
+              "r": "lái",
+              "g": "complement"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "所",
+              "r": "suǒ",
+              "g": "object"
+            },
+            {
+              "t": "以",
+              "r": "yǐ",
+              "g": "object"
+            },
+            {
+              "t": "直",
+              "r": "zhí",
+              "g": "object"
+            },
+            {
+              "t": "到",
+              "r": "dào",
+              "g": "adverbial"
+            },
+            {
+              "t": "现",
+              "r": "xiàn",
+              "g": "object"
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "谚",
+              "r": "yàn",
+              "g": "object"
+            },
+            {
+              "t": "语",
+              "r": "yǔ",
+              "g": "object"
+            },
+            {
+              "t": "还",
+              "r": "hái",
+              "g": "adverbial"
+            },
+            {
+              "t": "说",
+              "r": "shuō",
+              "g": "predicate"
+            },
+            {
+              "t": "“"
+            },
+            {
+              "t": "雉",
+              "r": "zhì",
+              "g": "object"
+            },
+            {
+              "t": "之",
+              "r": "zhī",
+              "g": "object"
+            },
+            {
+              "t": "顿",
+              "r": "dùn",
+              "g": "object"
+            },
+            {
+              "t": "使",
+              "r": "shǐ",
+              "g": "predicate"
+            },
+            {
+              "t": "”。"
+            }
+          ],
+          "ja_modern": [
+            {
+              "t": "また、その",
+              "g": "attributive"
+            },
+            {
+              "t": "雉",
+              "r": "きじ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "g": "subject"
+            },
+            {
+              "t": "戻",
+              "r": "もど",
+              "g": "subject"
+            },
+            {
+              "t": "ってこなかったので、",
+              "g": "adverbial"
+            },
+            {
+              "t": "今",
+              "r": "いま",
+              "g": "attributive"
+            },
+            {
+              "t": "でもことわざで「",
+              "g": "adverbial"
+            },
+            {
+              "t": "雉",
+              "r": "きじ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "頓",
+              "r": "とん",
+              "g": "attributive"
+            },
+            {
+              "t": "使",
+              "r": "し",
+              "g": "attributive"
+            },
+            {
+              "t": "」と",
+              "g": "adverbial"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "attributive"
+            },
+            {
+              "t": "う。",
+              "g": "complement"
+            }
+          ],
+          "en": [
+            {
+              "t": "Also",
+              "g": "subject"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "because",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "that",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "pheasant",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "did",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "not",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "return",
+              "g": "object"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "people",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "still",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "say",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "in",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "a",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "proverb",
+              "g": "adverbial"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "“"
+            },
+            {
+              "t": "the",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "pheasant’s",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "one-way",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "messenger",
+              "g": "adverbial"
+            },
+            {
+              "t": ".”"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
