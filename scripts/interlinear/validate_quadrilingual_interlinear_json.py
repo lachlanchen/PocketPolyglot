@@ -24,6 +24,7 @@ BAD_OUTPUT_RE = re.compile(
     r"Google|UNIVERSITY OF MICHIGAN|Digitized by|Page \d+",
     re.IGNORECASE,
 )
+CJK_COMPOSITION_MARK_RE = re.compile(r"<[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]{1,8}>")
 GRAMMAR_ROLES = {
     "subject",
     "predicate",
@@ -55,7 +56,8 @@ def token_text(tokens: Any) -> str:
 
 
 def validate_output_quality(text: str, where: str, errors: list[str]) -> None:
-    if BAD_OUTPUT_RE.search(text):
+    check_text = CJK_COMPOSITION_MARK_RE.sub("", str(text or ""))
+    if BAD_OUTPUT_RE.search(check_text):
         errors.append(f"{where}: contains HTML/wiki/page boilerplate or scanned-book noise")
 
 
