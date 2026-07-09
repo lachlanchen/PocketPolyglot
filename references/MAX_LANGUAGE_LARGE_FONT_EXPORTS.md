@@ -9,8 +9,8 @@ This catalog is generated from local build outputs. It selects the richest avail
 
 All compiled editions use the larger PocketPolyglot font profile. Existing source PDFs and JSON are not modified.
 
-- Local compressed/exported PDFs: 206
-- GitHub-tracked PDFs under size cap: 200
+- Local compressed/exported PDFs: 208
+- GitHub-tracked PDFs under size cap: 202
 - Skipped source folders: 4
 
 ## Gallery
@@ -104,6 +104,7 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | <img src="assets/max-language-previews/xixiangji.png" width="120" alt="xixiangji cover preview"> | `xixiangji` | `wenyan-en-jp-zh` | [color](docs/pocketpolyglot/books/wenyan-en-jp-zh/xixiangji/wenyan-main-quadrilingual/color/西廂記（英文・現代日本語・現代中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/wenyan-en-jp-zh/xixiangji/wenyan-main-quadrilingual/blackwhite/西廂記（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/xu-xiake-youji.png" width="120" alt="xu-xiake-youji cover preview"> | `xu-xiake-youji` | `wenyan-en-jp-zh` | [color](docs/pocketpolyglot/books/wenyan-en-jp-zh/xu-xiake-youji/wenyan-main-quadrilingual/color/徐霞客遊記（英文・現代日本語・現代中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/wenyan-en-jp-zh/xu-xiake-youji/wenyan-main-quadrilingual/blackwhite/徐霞客遊記（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/xunzi.png" width="120" alt="xunzi cover preview"> | `xunzi` | `wenyan-en-jp-zh` | [color](docs/pocketpolyglot/books/wenyan-en-jp-zh/xunzi/wenyan-main-quadrilingual/color/荀子（英文・現代日本語・現代中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/wenyan-en-jp-zh/xunzi/wenyan-main-quadrilingual/blackwhite/荀子（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
+| <img src="assets/max-language-previews/yantielun.png" width="120" alt="yantielun cover preview"> | `yantielun` | `wenyan-en-jp-zh` | [color](docs/pocketpolyglot/books/wenyan-en-jp-zh/yantielun/wenyan-main-quadrilingual/color/鹽鐵論（英文・現代日本語・現代中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/wenyan-en-jp-zh/yantielun/wenyan-main-quadrilingual/blackwhite/鹽鐵論（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/yijing.png" width="120" alt="yijing cover preview"> | `yijing` | `wenyan-en-jp-zh` | [color](docs/pocketpolyglot/books/wenyan-en-jp-zh/yijing/wenyan-main-quadrilingual/color/周易（英文・現代日本語・現代中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/wenyan-en-jp-zh/yijing/wenyan-main-quadrilingual/blackwhite/周易（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/zhanguoce.png" width="120" alt="zhanguoce cover preview"> | `zhanguoce` | `wenyan-en-jp-zh` | [color](docs/pocketpolyglot/books/wenyan-en-jp-zh/zhanguoce/wenyan-main-quadrilingual/color/戰國策（英文・現代日本語・現代中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/wenyan-en-jp-zh/zhanguoce/wenyan-main-quadrilingual/blackwhite/戰國策（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
 | <img src="assets/max-language-previews/zhuangzi.png" width="120" alt="zhuangzi cover preview"> | `zhuangzi` | `wenyan-en-jp-zh` | [color](docs/pocketpolyglot/books/wenyan-en-jp-zh/zhuangzi/wenyan-main-quadrilingual/color/莊子（英文・現代日本語・現代中文注）・最大語種・大字版.pdf) | [black-white](docs/pocketpolyglot/books/wenyan-en-jp-zh/zhuangzi/wenyan-main-quadrilingual/blackwhite/莊子（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf) |
@@ -305,6 +306,8 @@ All compiled editions use the larger PocketPolyglot font profile. Existing sourc
 | `xu-xiake-youji` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 9544 | 60.2 | 52.2 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/xu-xiake-youji/wenyan-main-quadrilingual/blackwhite/徐霞客遊記（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
 | `xunzi` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 2616 | 16.5 | 16.5 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/xunzi/wenyan-main-quadrilingual/color/荀子（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
 | `xunzi` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 2616 | 15.2 | 14.4 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/xunzi/wenyan-main-quadrilingual/blackwhite/荀子（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
+| `yantielun` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 1062 | 12.6 | 9.0 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/yantielun/wenyan-main-quadrilingual/color/鹽鐵論（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
+| `yantielun` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 1062 | 12.0 | 7.6 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/yantielun/wenyan-main-quadrilingual/blackwhite/鹽鐵論（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
 | `yijing` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 1052 | 11.6 | 11.6 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/yijing/wenyan-main-quadrilingual/color/周易（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
 | `yijing` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `blackwhite` | 1052 | 11.1 | 11.1 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/yijing/wenyan-main-quadrilingual/blackwhite/周易（英文・現代日本語・現代中文注・黑白）・最大語種・大字版.pdf` |
 | `zhanguoce` | `wenyan-en-jp-zh` | `wenyan-main-quadrilingual` | `color` | 3190 | 25.5 | 21.7 | yes | `artifacts/lingualleaf/books/wenyan-en-jp-zh/zhanguoce/wenyan-main-quadrilingual/color/戰國策（英文・現代日本語・現代中文注）・最大語種・大字版.pdf` |
