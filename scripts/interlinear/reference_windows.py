@@ -42,6 +42,9 @@ def expand_adjacent_jp_references(chunks: list[dict[str, Any]], *, neighbor_keys
         if key not in key_index:
             expanded.append(chunk)
             continue
+        if not refs_by_key.get(key):
+            expanded.append(chunk)
+            continue
 
         index = key_index[key]
         keys = key_order[max(0, index - neighbor_keys) : index + neighbor_keys + 1]
