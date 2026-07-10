@@ -33,6 +33,7 @@ INLINE_NOTE_REF_RE = re.compile(
 HTML_NOTE_TARGET_RE = re.compile(r"\(?#?part[0-9]+\.html#[A-Za-z]?[0-9]+\)?")
 CIRCLED_NOTE_CHARS = "\u2460-\u2473"
 CIRCLED_NOTE_RE = re.compile(f"[{CIRCLED_NOTE_CHARS}]")
+SIMPLE_PAREN_NOTE_REF_RE = re.compile(r"[（(]\s*[0-9０-９]{1,2}\s*[）)]")
 PAREN_NOTE_REF_RE = re.compile(
     rf"[（(][^（）()]{{0,80}}(?:注|註|译注|譯注|訳注|脚注|注釈|注記)"
     rf"[^（）()]{{0,30}}[{CIRCLED_NOTE_CHARS}][^（）()]{{0,30}}[）)]"
@@ -152,6 +153,7 @@ def strip_reader_note_artifacts(text: str) -> str:
     cleaned = NOTE_REF_PHRASE_RE.sub("", cleaned)
     cleaned = ORPHAN_NOTE_REF_PHRASE_RE.sub("", cleaned)
     cleaned = INLINE_NOTE_REF_RE.sub("", cleaned)
+    cleaned = SIMPLE_PAREN_NOTE_REF_RE.sub("", cleaned)
     cleaned = CIRCLED_NOTE_RE.sub("", cleaned)
     return cleaned
 
