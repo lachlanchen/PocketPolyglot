@@ -1,0 +1,228 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "chumon-no-ooi-ryoriten",
+  "paragraph_id": "chumon-no-ooi-ryoriten-zh-p00522",
+  "source_text": "贪吃猫走了。",
+  "source_sha256": "a5257a8c1658b81cda89c9e2b76afb7997b802c22c9fc0482610ecda5a23a61b",
+  "source_normalized_sha256": "a5257a8c1658b81cda89c9e2b76afb7997b802c22c9fc0482610ecda5a23a61b",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 14,
+    "grammar_token_total": 14,
+    "unit_count": 1
+  },
+  "source_chunk_id": "chumon-no-ooi-ryoriten-chunk-0522",
+  "source_manifest_sha256": "55b839ea38cc607cade92b8ed3037a52e9fb70cd146c3559d9f71bcf686ef039",
+  "section": {
+    "id": "猫儿事务所",
+    "title_zh": [
+      {
+        "t": "猫",
+        "r": "māo",
+        "g": "attributive"
+      },
+      {
+        "t": "儿",
+        "r": "ér",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "object"
+      },
+      {
+        "t": "务",
+        "r": "wù",
+        "g": "object"
+      },
+      {
+        "t": "所",
+        "r": "suǒ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "猫",
+        "r": "ねこ",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "object"
+      },
+      {
+        "t": "務",
+        "r": "む",
+        "g": "object"
+      },
+      {
+        "t": "所",
+        "r": "しょ",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "猫儿事务所-intro",
+    "title_zh": [
+      {
+        "t": "猫",
+        "r": "māo",
+        "g": "attributive"
+      },
+      {
+        "t": "儿",
+        "r": "ér",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "shì",
+        "g": "object"
+      },
+      {
+        "t": "务",
+        "r": "wù",
+        "g": "object"
+      },
+      {
+        "t": "所",
+        "r": "suǒ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "猫",
+        "r": "ねこ",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "事",
+        "r": "じ",
+        "g": "object"
+      },
+      {
+        "t": "務",
+        "r": "む",
+        "g": "object"
+      },
+      {
+        "t": "所",
+        "r": "しょ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "chumon-no-ooi-ryoriten-zh-p00522",
+    "source_text": "贪吃猫走了。",
+    "units": [
+      {
+        "source_text": "贪吃猫走了。",
+        "zh": [
+          {
+            "t": "贪",
+            "r": "tān",
+            "g": "attributive"
+          },
+          {
+            "t": "吃",
+            "r": "chī",
+            "g": "attributive"
+          },
+          {
+            "t": "猫",
+            "r": "māo",
+            "g": "subject"
+          },
+          {
+            "t": "走",
+            "r": "zǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "かま",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "猫",
+              "r": "ねこ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "出",
+              "r": "で",
+              "g": "predicate"
+            },
+            {
+              "t": "て",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "行",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "きました",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

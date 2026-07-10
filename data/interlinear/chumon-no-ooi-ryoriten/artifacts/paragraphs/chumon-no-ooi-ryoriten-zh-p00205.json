@@ -1,0 +1,400 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "chumon-no-ooi-ryoriten",
+  "paragraph_id": "chumon-no-ooi-ryoriten-zh-p00205",
+  "source_text": "“嗯，好的。喂，老陈，闷死人了。能不能让我们稍微透透风啊！”",
+  "source_sha256": "139ba58db011667d729134eab5813fa5185d92c43b8607a163dc12f1fed783d7",
+  "source_normalized_sha256": "139ba58db011667d729134eab5813fa5185d92c43b8607a163dc12f1fed783d7",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 44,
+    "grammar_token_total": 44,
+    "unit_count": 3
+  },
+  "source_chunk_id": "chumon-no-ooi-ryoriten-chunk-0205",
+  "source_manifest_sha256": "55b839ea38cc607cade92b8ed3037a52e9fb70cd146c3559d9f71bcf686ef039",
+  "section": {
+    "id": "山男的四月",
+    "title_zh": [
+      {
+        "t": "山",
+        "r": "shān",
+        "g": "attributive"
+      },
+      {
+        "t": "男",
+        "r": "nán",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "attributive"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "attributive"
+      },
+      {
+        "t": "月",
+        "r": "yuè",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "山",
+        "r": "やま",
+        "g": "attributive"
+      },
+      {
+        "t": "男",
+        "r": "おとこ",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "四",
+        "r": "し",
+        "g": "attributive"
+      },
+      {
+        "t": "月",
+        "r": "がつ",
+        "g": "attributive"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "山男的四月-intro",
+    "title_zh": [
+      {
+        "t": "山",
+        "r": "shān",
+        "g": "attributive"
+      },
+      {
+        "t": "男",
+        "r": "nán",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "attributive"
+      },
+      {
+        "t": "四",
+        "r": "sì",
+        "g": "attributive"
+      },
+      {
+        "t": "月",
+        "r": "yuè",
+        "g": "attributive"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "山",
+        "r": "やま",
+        "g": "attributive"
+      },
+      {
+        "t": "男",
+        "r": "おとこ",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "四",
+        "r": "し",
+        "g": "attributive"
+      },
+      {
+        "t": "月",
+        "r": "がつ",
+        "g": "attributive"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "chumon-no-ooi-ryoriten-zh-p00205",
+    "source_text": "“嗯，好的。喂，老陈，闷死人了。能不能让我们稍微透透风啊！”",
+    "units": [
+      {
+        "source_text": "“嗯，好的。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "嗯",
+            "r": "èn",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「うん。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "よし。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "喂，老陈，闷死人了。",
+        "zh": [
+          {
+            "t": "喂",
+            "r": "wèi",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "老",
+            "r": "lǎo",
+            "g": "function"
+          },
+          {
+            "t": "陈",
+            "r": "chén",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "闷",
+            "r": "mèn",
+            "g": "predicate"
+          },
+          {
+            "t": "死",
+            "r": "sǐ",
+            "g": "complement"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "object"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「おい、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "陳",
+              "r": "ちん",
+              "g": "function"
+            },
+            {
+              "t": "さん。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "どうも",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "むし",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "暑",
+              "r": "あつ",
+              "g": "predicate"
+            },
+            {
+              "t": "くていかんね。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "能不能让我们稍微透透风啊！”",
+        "zh": [
+          {
+            "t": "能",
+            "r": "néng",
+            "g": "predicate"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "predicate"
+          },
+          {
+            "t": "能",
+            "r": "néng",
+            "g": "predicate"
+          },
+          {
+            "t": "让",
+            "r": "ràng",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          },
+          {
+            "t": "稍",
+            "r": "shāo",
+            "g": "adverbial"
+          },
+          {
+            "t": "微",
+            "r": "wēi",
+            "g": "adverbial"
+          },
+          {
+            "t": "透",
+            "r": "tòu",
+            "g": "predicate"
+          },
+          {
+            "t": "透",
+            "r": "tòu",
+            "g": "predicate"
+          },
+          {
+            "t": "风",
+            "r": "fēng",
+            "g": "object"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "すこし",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "風",
+              "r": "かぜ",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "入",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "れてもらいたいな。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
