@@ -33,7 +33,7 @@ CONTENT_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaffぁ-ゟ゠-ヿ
 HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 SENTENCE_END_RE = re.compile(r"[。！？!?]")
 PUNCT_RE = re.compile(r"^[\s，。！？、；：,.!?;:「」『』（）()《》〈〉“”‘’…—-]+$")
-EDITORIAL_NOTE_RE = re.compile(r"^(?:[（(]?\s*\d+\s*[.．、)]|[［\[]\s*\d+\s*[］\]])")
+EDITORIAL_NOTE_RE = re.compile(r"^(?:[（(]?\s*\d+\s*[.．、)）]|[［\[]\s*\d+\s*[］\]])")
 INLINE_NOTE_RE = re.compile(r"[［\[].{4,}?[］\]]")
 REFERENCE_SKELETON_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaffァ-ヿA-Za-z0-9]")
 RUBY_READING_CHARS = r"[ぁ-ゟァ-ヿ]*"
@@ -233,6 +233,11 @@ def review_chunk(source: dict[str, Any], data: dict[str, Any]) -> list[str]:
     errors = validate_chunk(source, data)
     reference_text = normalize("".join(str(item.get("text", "")) for item in source.get("jp_reference", [])))
     reference_skel, reference_skel_positions = reference_skeleton_with_positions(reference_text)
+    source_paragraph_texts = {
+        str(paragraph.get("id", "")): str(paragraph.get("text", ""))
+        for paragraph in source.get("paragraphs", [])
+        if isinstance(paragraph, dict)
+    }
     chunk_counts = {"zh": {}, "ja": {}, "both": {}}
     last_ref_pos = -1
     duplicate_ja: dict[str, int] = {}
@@ -266,7 +271,9 @@ def review_chunk(source: dict[str, Any], data: dict[str, Any]) -> list[str]:
                 errors.append(f"{paragraph_id}: missing corrected_text for OCR source")
             else:
                 errors.extend(ocr_noise_issues(target_text, paragraph_id))
-        paragraph_is_note = is_editorial_note(target_text)
+        paragraph_is_note = is_editorial_note(target_text) or is_editorial_note(
+            source_paragraph_texts.get(str(paragraph_id), "")
+        )
         if not isinstance(units, list):
             continue
         for unit_index, unit in enumerate(units):
