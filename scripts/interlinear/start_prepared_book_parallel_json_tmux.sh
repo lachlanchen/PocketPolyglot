@@ -76,6 +76,12 @@ cat > "$run_script" <<EOF
 #!/usr/bin/env bash
 set -euo pipefail
 cd '$root'
+export CODEX_USAGE_LIMIT_WAIT='${CODEX_USAGE_LIMIT_WAIT:-1}'
+export CODEX_USAGE_LIMIT_WAIT_SECONDS='${CODEX_USAGE_LIMIT_WAIT_SECONDS:-3600}'
+export CODEX_USAGE_LIMIT_MAX_WAIT_SECONDS='${CODEX_USAGE_LIMIT_MAX_WAIT_SECONDS:-0}'
+export CODEX_EXEC_IGNORE_USER_CONFIG='${CODEX_EXEC_IGNORE_USER_CONFIG:-0}'
+export CODEX_EXEC_IGNORE_RULES='${CODEX_EXEC_IGNORE_RULES:-0}'
+export CODEX_EXEC_DISABLE_FEATURES='${CODEX_EXEC_DISABLE_FEATURES:-}'
 mkdir -p '$work_root/logs' '$review_root/logs' '$review_candidate_dir' '$review_merged_dir' '$review_rejected_dir' '$reviewed_chunk_dir'
 rm -f '$review_done_file'
 
@@ -190,7 +196,7 @@ if [[ "${AUTOREPAIR_COMPANION:-1}" != "0" ]]; then
     GUARDIAN_SESSION="${session}-autorepair" \
     WORKER_SESSION="$session" \
     REVIEW_SESSION="$session" \
-    START_COMMAND="MODEL=$model REASONING=$reasoning RETRY_FAILED=1 bash scripts/interlinear/start_prepared_book_parallel_json_tmux.sh $book_id $session" \
+    START_COMMAND="CODEX_USAGE_LIMIT_WAIT='${CODEX_USAGE_LIMIT_WAIT:-1}' CODEX_USAGE_LIMIT_WAIT_SECONDS='${CODEX_USAGE_LIMIT_WAIT_SECONDS:-3600}' CODEX_USAGE_LIMIT_MAX_WAIT_SECONDS='${CODEX_USAGE_LIMIT_MAX_WAIT_SECONDS:-0}' CODEX_EXEC_IGNORE_USER_CONFIG='${CODEX_EXEC_IGNORE_USER_CONFIG:-0}' CODEX_EXEC_IGNORE_RULES='${CODEX_EXEC_IGNORE_RULES:-0}' CODEX_EXEC_DISABLE_FEATURES='${CODEX_EXEC_DISABLE_FEATURES:-}' WORKERS=$workers REVIEW_WORKERS=$review_workers START_INDEX=$start_index MODEL=$model REASONING=$reasoning CODEX_TIMEOUT_SECONDS=$codex_timeout_seconds RETRY_FAILED=1 bash scripts/interlinear/start_prepared_book_parallel_json_tmux.sh $book_id $session" \
     COMPILE_COMMAND="bash scripts/interlinear/compile_prepared_book_both_previews.sh $book_id" \
     COMMIT_COMMAND="bash scripts/interlinear/commit_prepared_book_progress.sh $book_id" \
     INTERVAL_SECONDS="${AUTOREPAIR_INTERVAL_SECONDS:-900}" \

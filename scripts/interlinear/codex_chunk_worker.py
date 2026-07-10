@@ -61,6 +61,12 @@ def ignore_rules_enabled() -> bool:
     return raw in {"1", "true", "yes", "on"}
 
 
+def disabled_features() -> list[str]:
+    raw = os.environ.get("CODEX_EXEC_DISABLE_FEATURES", "")
+    names = raw.replace(",", " ").split()
+    return [name for name in names if name]
+
+
 def log_text_since(path: Path, start_size: int) -> str:
     try:
         with path.open("rb") as handle:
@@ -261,6 +267,9 @@ def run_codex(
         cmd.insert(2, "--ignore-user-config")
     if ignore_rules_enabled():
         cmd.insert(2, "--ignore-rules")
+    for feature in reversed(disabled_features()):
+        cmd.insert(2, "--disable")
+        cmd.insert(3, feature)
 
     wait_seconds = env_int("CODEX_USAGE_LIMIT_WAIT_SECONDS", 3600)
     max_wait_seconds = env_int("CODEX_USAGE_LIMIT_MAX_WAIT_SECONDS", 0)
