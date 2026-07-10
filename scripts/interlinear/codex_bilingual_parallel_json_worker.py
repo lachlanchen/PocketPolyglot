@@ -154,6 +154,7 @@ def main() -> int:
     status_dir = candidate_dir / "status"
     for path in (claim_dir, accepted_dir, rejected_dir, failed_dir, status_dir, work_dir):
         path.mkdir(parents=True, exist_ok=True)
+    retry_failed_remaining = {path.stem for path in failed_dir.glob("*.json")} if args.retry_failed else set()
 
     completed = 0
     failed = 0
@@ -166,11 +167,13 @@ def main() -> int:
             candidate_path = accepted_dir / f"{chunk_id}.json"
             if valid_existing(canonical_path, chunk) or valid_existing(candidate_path, chunk):
                 continue
-            if not args.retry_failed and (failed_dir / f"{chunk_id}.json").exists():
+            failed_path = failed_dir / f"{chunk_id}.json"
+            if failed_path.exists() and chunk_id not in retry_failed_remaining:
                 continue
             if claim_chunk(claim_dir, chunk_id, args.worker_id, args.claim_ttl_seconds):
-                if args.retry_failed:
-                    (failed_dir / f"{chunk_id}.json").unlink(missing_ok=True)
+                if chunk_id in retry_failed_remaining:
+                    failed_path.unlink(missing_ok=True)
+                    retry_failed_remaining.discard(chunk_id)
                 claimed = (index, chunk)
                 break
         if claimed is None:

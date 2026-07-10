@@ -160,6 +160,7 @@ def main() -> int:
     done_file = Path(args.done_file)
     for path in (accepted_dir, rejected_dir, failed_dir, claim_dir, status_dir, work_dir):
         path.mkdir(parents=True, exist_ok=True)
+    retry_failed_remaining = {path.stem for path in failed_dir.glob("*.json")} if args.retry_failed else set()
 
     completed = 0
     selected = iter_selected(chunks, args.start_index, args.end_index)
@@ -174,8 +175,9 @@ def main() -> int:
                 continue
             failed_path = failed_dir / f"{chunk_id}.json"
             if failed_path.exists():
-                if args.retry_failed:
+                if chunk_id in retry_failed_remaining:
                     failed_path.unlink()
+                    retry_failed_remaining.discard(chunk_id)
                 else:
                     continue
             if not (raw_dir / f"{chunk_id}.json").exists():
