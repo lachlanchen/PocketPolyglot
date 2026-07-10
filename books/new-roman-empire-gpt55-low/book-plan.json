@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "book_id": "new-roman-empire-gpt55-low",
+  "status": "prepared_trilingual_gpt55_low_fresh",
+  "launchable": true,
+  "task_mode": "trilingual_en_source_generated_zh_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "en": "sources/world-history/byzantium-new-roman-empire/en/The New Roman Empire - A History of Byzantium.pdf"
+  },
+  "source_sha256": {
+    "en": "19f33c3ac50525fb0487f530bbd93cea95c776937f252c220739901b2c80c9c4"
+  },
+  "source_extraction": {
+    "en_cache": "books/new-roman-empire-gpt55-low/work/source-extraction/en.raw.md",
+    "zh_cache": "",
+    "note": "PDF cache uses embedded text when sufficient and OCR when not."
+  },
+  "markdown": {
+    "en": "books/new-roman-empire-gpt55-low/markdown/en.md"
+  },
+  "book_title_en": "The New Roman Empire: A History of Byzantium",
+  "book_title_zh": "新罗马帝国：拜占庭史",
+  "book_title_ja": "新ローマ帝国：ビザンツの歴史",
+  "book_title_zh_reading": "xīn luó mǎ dì guó bài zhàn tíng shǐ",
+  "book_title_ja_reading": "しんローマていこく ビザンツ の れきし",
+  "author": "Anthony Kaldellis",
+  "author_reading_zh": "ān dōng ní kǎ ěr dé lì sī",
+  "author_reading_ja": "アンソニー カルデリス",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Anthony Kaldellis, The New Roman Empire. English PDF is the complete alignment spine. No published Chinese or Japanese source is configured yet, so Chinese and Japanese are generated as readable modern translations.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "global_ratio_window",
+  "chunks_jsonl": "books/new-roman-empire-gpt55-low/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/new-roman-empire-gpt55-low/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/new-roman-empire-gpt55-low/work/trilingual/interlinear/chunks",
+  "preview_json": "books/new-roman-empire-gpt55-low/work/trilingual/preview/new-roman-empire-gpt55-low.partial.json",
+  "assembled_json": "books/new-roman-empire-gpt55-low/work/trilingual/preview/new-roman-empire-gpt55-low.partial.json",
+  "prepared_at": "2026-07-10T13:13:53.215053+00:00",
+  "chunk_count": 1180,
+  "english_chapter_count": 38,
+  "chinese_reference_paragraph_count": 0,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_world_history_trilingual.py",
+    "english_spine": "English PDF text is the chunk spine.",
+    "chinese_reference": "No Chinese source configured; generate Chinese from English.",
+    "japanese_reference": "No published Japanese source configured; generate natural modern Japanese from English."
+  },
+  "parent_book_id": "new-roman-empire",
+  "generation_profile": {
+    "model": "gpt-5.5",
+    "reasoning": "low",
+    "separate_from": "new-roman-empire",
+    "fresh_run": true
+  }
+}

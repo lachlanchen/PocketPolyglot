@@ -22,6 +22,14 @@ Share exports remain:
 
 `/home/lachlan/Nutstore Files/Share/LinguaLeaf`
 
+## Share Eligibility
+
+Nutstore Share is for maximum-language public editions only. Do not sync
+pair-only fallback PDFs to Share when a richer language layer is expected.
+`chumon-no-ooi-ryoriten` / `要求太多的餐馆` / `注文の多い料理店` specifically
+must wait for an `en-jp-zh` maximum-language export before it is synced to
+Share. Its current `jp-zh` PDFs may remain in Projects only.
+
 ## Environment Overrides
 
 - `NUTSTORE_ROOT`
@@ -32,4 +40,3 @@ Share exports remain:
 
 Current running jobs may still write to the old path if they started before
 this policy existed. New Python sync scripts should follow the resolver.
-

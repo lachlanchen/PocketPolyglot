@@ -48,6 +48,12 @@ FAMILY_PRIORITY = {
     "jp-zh": 1,
 }
 
+BOOK_REQUIRED_FAMILY = {
+    # This title should not be published to Share as a bilingual fallback.
+    # Keep JP-ZH builds in Projects only until the English layer is backfilled.
+    "chumon-no-ooi-ryoriten": "en-jp-zh",
+}
+
 
 def edition_priority(family: str, edition: str) -> int:
     if family == "wayakana-en-jp-zh":
@@ -92,6 +98,11 @@ def discover(source_root: Path, book_id: str) -> list[dict[str, str | Path]]:
         )
     if not records:
         return records
+    required_family = BOOK_REQUIRED_FAMILY.get(book_id)
+    if required_family:
+        records = [record for record in records if record["family"] == required_family]
+        if not records:
+            return records
     best = max(FAMILY_PRIORITY.get(str(record["family"]), 0) for record in records)
     records = [record for record in records if FAMILY_PRIORITY.get(str(record["family"]), 0) == best]
     best_edition = max(edition_priority(str(record["family"]), str(record["edition"])) for record in records)
