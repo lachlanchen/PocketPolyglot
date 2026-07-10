@@ -1,0 +1,213 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "chumon-no-ooi-ryoriten",
+  "paragraph_id": "chumon-no-ooi-ryoriten-zh-p01527",
+  "source_text": "爷爷提起熄灭了的油灯。",
+  "source_sha256": "d7ad02146a89c14be2e9fb7362e2188d5cb8859c3403b80d81b1fed08b7b4fc5",
+  "source_normalized_sha256": "d7ad02146a89c14be2e9fb7362e2188d5cb8859c3403b80d81b1fed08b7b4fc5",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 19,
+    "grammar_token_total": 19,
+    "unit_count": 1
+  },
+  "source_chunk_id": "chumon-no-ooi-ryoriten-chunk-1527",
+  "source_manifest_sha256": "55b839ea38cc607cade92b8ed3037a52e9fb70cd146c3559d9f71bcf686ef039",
+  "section": {
+    "id": "祭之夜",
+    "title_zh": [
+      {
+        "t": "祭",
+        "r": "jì",
+        "g": "attributive"
+      },
+      {
+        "t": "之",
+        "r": "zhī",
+        "g": "function"
+      },
+      {
+        "t": "夜",
+        "r": "yè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祭",
+        "r": "まつ",
+        "g": "attributive"
+      },
+      {
+        "t": "りの",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "夜",
+        "r": "よる",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "祭之夜-intro",
+    "title_zh": [
+      {
+        "t": "祭",
+        "r": "jì",
+        "g": "attributive"
+      },
+      {
+        "t": "之",
+        "r": "zhī",
+        "g": "function"
+      },
+      {
+        "t": "夜",
+        "r": "yè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祭",
+        "r": "まつ",
+        "g": "attributive"
+      },
+      {
+        "t": "りの",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "夜",
+        "r": "よる",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "chumon-no-ooi-ryoriten-zh-p01527",
+    "source_text": "爷爷提起熄灭了的油灯。",
+    "units": [
+      {
+        "source_text": "爷爷提起熄灭了的油灯。",
+        "zh": [
+          {
+            "t": "爷",
+            "r": "yé",
+            "g": "subject"
+          },
+          {
+            "t": "爷",
+            "r": "ye",
+            "g": "subject"
+          },
+          {
+            "t": "提",
+            "r": "tí",
+            "g": "predicate"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "predicate"
+          },
+          {
+            "t": "熄",
+            "r": "xī",
+            "g": "attributive"
+          },
+          {
+            "t": "灭",
+            "r": "miè",
+            "g": "attributive"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "油",
+            "r": "yóu",
+            "g": "object"
+          },
+          {
+            "t": "灯",
+            "r": "dēng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "おじいさんは、",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "消",
+              "r": "き",
+              "g": "attributive"
+            },
+            {
+              "t": "えてしまった",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "ランプを",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "持",
+              "r": "も",
+              "g": "predicate"
+            },
+            {
+              "t": "ち",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "上",
+              "r": "あ",
+              "g": "predicate"
+            },
+            {
+              "t": "げた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

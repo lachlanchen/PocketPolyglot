@@ -1,0 +1,183 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "chumon-no-ooi-ryoriten",
+  "paragraph_id": "chumon-no-ooi-ryoriten-zh-p02574",
+  "source_text": "“一加一等于二。”",
+  "source_sha256": "cc5869ab60435110d227030f07964091893a60709c682e3b9a1a5e8b6b2384ad",
+  "source_normalized_sha256": "cc5869ab60435110d227030f07964091893a60709c682e3b9a1a5e8b6b2384ad",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 19,
+    "grammar_token_total": 19,
+    "unit_count": 1
+  },
+  "source_chunk_id": "chumon-no-ooi-ryoriten-chunk-2574",
+  "source_manifest_sha256": "55b839ea38cc607cade92b8ed3037a52e9fb70cd146c3559d9f71bcf686ef039",
+  "section": {
+    "id": "君鼠",
+    "title_zh": [
+      {
+        "t": "君",
+        "r": "jūn",
+        "g": "attributive"
+      },
+      {
+        "t": "鼠",
+        "r": "shǔ",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "クねずみ",
+        "r": "",
+        "g": "subject"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "君鼠-intro",
+    "title_zh": [
+      {
+        "t": "君",
+        "r": "jūn",
+        "g": "attributive"
+      },
+      {
+        "t": "鼠",
+        "r": "shǔ",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "クねずみ",
+        "r": "",
+        "g": "subject"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "chumon-no-ooi-ryoriten-zh-p02574",
+    "source_text": "“一加一等于二。”",
+    "units": [
+      {
+        "source_text": "“一加一等于二。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "subject"
+          },
+          {
+            "t": "加",
+            "r": "jiā",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "object"
+          },
+          {
+            "t": "等",
+            "r": "děng",
+            "g": "predicate"
+          },
+          {
+            "t": "于",
+            "r": "yú",
+            "g": "predicate"
+          },
+          {
+            "t": "二",
+            "r": "èr",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "subject"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "たすと",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "二",
+              "r": "に",
+              "g": "object"
+            },
+            {
+              "t": "です",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

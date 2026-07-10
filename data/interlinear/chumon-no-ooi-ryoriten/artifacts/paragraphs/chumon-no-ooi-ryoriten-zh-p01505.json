@@ -1,0 +1,505 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "chumon-no-ooi-ryoriten",
+  "paragraph_id": "chumon-no-ooi-ryoriten-zh-p01505",
+  "source_text": "“山男。他是山男。”人们叫喊着，吵吵嚷嚷地跟在后面追了一阵，可汉子已跑得无影无踪。",
+  "source_sha256": "ef4f2effdbea313c9728561355e0fa29a58b18df9fd8f6bf6e3b943de0544589",
+  "source_normalized_sha256": "ef4f2effdbea313c9728561355e0fa29a58b18df9fd8f6bf6e3b943de0544589",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 73,
+    "grammar_token_total": 73,
+    "unit_count": 3
+  },
+  "source_chunk_id": "chumon-no-ooi-ryoriten-chunk-1505",
+  "source_manifest_sha256": "55b839ea38cc607cade92b8ed3037a52e9fb70cd146c3559d9f71bcf686ef039",
+  "section": {
+    "id": "祭之夜",
+    "title_zh": [
+      {
+        "t": "祭",
+        "r": "jì",
+        "g": "attributive"
+      },
+      {
+        "t": "之",
+        "r": "zhī",
+        "g": "function"
+      },
+      {
+        "t": "夜",
+        "r": "yè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "夜",
+        "r": "よる",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "祭之夜-intro",
+    "title_zh": [
+      {
+        "t": "祭",
+        "r": "jì",
+        "g": "attributive"
+      },
+      {
+        "t": "之",
+        "r": "zhī",
+        "g": "function"
+      },
+      {
+        "t": "夜",
+        "r": "yè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "夜",
+        "r": "よる",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "chumon-no-ooi-ryoriten-zh-p01505",
+    "source_text": "“山男。他是山男。”人们叫喊着，吵吵嚷嚷地跟在后面追了一阵，可汉子已跑得无影无踪。",
+    "units": [
+      {
+        "source_text": "“山男。他是山男。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "山",
+            "r": "shān",
+            "g": "predicate"
+          },
+          {
+            "t": "男",
+            "r": "nán",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "他",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "山",
+            "r": "shān",
+            "g": "object"
+          },
+          {
+            "t": "男",
+            "r": "nán",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "山",
+              "r": "やま",
+              "g": "predicate"
+            },
+            {
+              "t": "男",
+              "r": "おとこ",
+              "g": "predicate"
+            },
+            {
+              "t": "だ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "山",
+              "r": "やま",
+              "g": "object"
+            },
+            {
+              "t": "男",
+              "r": "おとこ",
+              "g": "object"
+            },
+            {
+              "t": "だ。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "人们叫喊着，吵吵嚷嚷地跟在后面追了一阵，",
+        "zh": [
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          },
+          {
+            "t": "叫",
+            "r": "jiào",
+            "g": "predicate"
+          },
+          {
+            "t": "喊",
+            "r": "hǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "吵",
+            "r": "chǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "吵",
+            "r": "chǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "嚷",
+            "r": "rǎng",
+            "g": "adverbial"
+          },
+          {
+            "t": "嚷",
+            "r": "rǎng",
+            "g": "adverbial"
+          },
+          {
+            "t": "地",
+            "r": "de",
+            "g": "adverbial"
+          },
+          {
+            "t": "跟",
+            "r": "gēn",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "后",
+            "r": "hòu",
+            "g": "complement"
+          },
+          {
+            "t": "面",
+            "r": "miàn",
+            "g": "complement"
+          },
+          {
+            "t": "追",
+            "r": "zhuī",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "complement"
+          },
+          {
+            "t": "阵",
+            "r": "zhèn",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "subject"
+            },
+            {
+              "t": "々は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "叫",
+              "r": "さけ",
+              "g": "predicate"
+            },
+            {
+              "t": "び、",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "騒",
+              "r": "さわ",
+              "g": "adverbial"
+            },
+            {
+              "t": "ぎながら、",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "後",
+              "r": "うし",
+              "g": "complement"
+            },
+            {
+              "t": "ろについて、",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "しばらく",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "追",
+              "r": "お",
+              "g": "predicate"
+            },
+            {
+              "t": "いかけたが、",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "可汉子已跑得无影无踪。",
+        "zh": [
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "function"
+          },
+          {
+            "t": "汉",
+            "r": "hàn",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "subject"
+          },
+          {
+            "t": "已",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "跑",
+            "r": "pǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "得",
+            "r": "de",
+            "g": "predicate"
+          },
+          {
+            "t": "无",
+            "r": "wú",
+            "g": "complement"
+          },
+          {
+            "t": "影",
+            "r": "yǐng",
+            "g": "complement"
+          },
+          {
+            "t": "无",
+            "r": "wú",
+            "g": "complement"
+          },
+          {
+            "t": "踪",
+            "r": "zōng",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "しかし",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "男",
+              "r": "おとこ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "もう",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "影",
+              "r": "かげ",
+              "g": "complement"
+            },
+            {
+              "t": "も",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "形",
+              "r": "かたち",
+              "g": "complement"
+            },
+            {
+              "t": "もなく",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "走",
+              "r": "はし",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "去",
+              "r": "さ",
+              "g": "predicate"
+            },
+            {
+              "t": "っていた。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

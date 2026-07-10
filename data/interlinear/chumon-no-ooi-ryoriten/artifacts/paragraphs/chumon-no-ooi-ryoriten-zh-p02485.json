@@ -1,0 +1,239 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "chumon-no-ooi-ryoriten",
+  "paragraph_id": "chumon-no-ooi-ryoriten-zh-p02485",
+  "source_text": "“是啊，天气不错。你找到什么好东西了吗？”",
+  "source_sha256": "318394551d0e29b757de25661515ad75ffd076998a667855729a4fbf282f0cde",
+  "source_normalized_sha256": "318394551d0e29b757de25661515ad75ffd076998a667855729a4fbf282f0cde",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 28,
+    "grammar_token_total": 28,
+    "unit_count": 2
+  },
+  "source_chunk_id": "chumon-no-ooi-ryoriten-chunk-2485",
+  "source_manifest_sha256": "55b839ea38cc607cade92b8ed3037a52e9fb70cd146c3559d9f71bcf686ef039",
+  "section": {
+    "id": "君鼠",
+    "title_zh": [
+      {
+        "t": "君",
+        "r": "jūn",
+        "g": "attributive"
+      },
+      {
+        "t": "鼠",
+        "r": "shǔ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "クねずみ",
+        "r": "",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "君鼠-intro",
+    "title_zh": [
+      {
+        "t": "君",
+        "r": "jūn",
+        "g": "attributive"
+      },
+      {
+        "t": "鼠",
+        "r": "shǔ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "クねずみ",
+        "r": "",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "chumon-no-ooi-ryoriten-zh-p02485",
+    "source_text": "“是啊，天气不错。你找到什么好东西了吗？”",
+    "units": [
+      {
+        "source_text": "“是啊，天气不错。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "subject"
+          },
+          {
+            "t": "气",
+            "r": "qì",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bú",
+            "g": "predicate"
+          },
+          {
+            "t": "错",
+            "r": "cuò",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「いいお",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "天",
+              "r": "てん",
+              "g": "subject"
+            },
+            {
+              "t": "気",
+              "r": "き",
+              "g": "subject"
+            },
+            {
+              "t": "です。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "你找到什么好东西了吗？”",
+        "zh": [
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "找",
+            "r": "zhǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "什",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "object"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "东",
+            "r": "dōng",
+            "g": "object"
+          },
+          {
+            "t": "西",
+            "r": "xi",
+            "g": "object"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "なにかいいものを",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "見",
+              "r": "み",
+              "g": "predicate"
+            },
+            {
+              "t": "つけましたか。」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

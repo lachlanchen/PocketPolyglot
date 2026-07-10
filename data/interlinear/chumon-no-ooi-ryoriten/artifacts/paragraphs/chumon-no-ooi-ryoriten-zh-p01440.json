@@ -1,0 +1,243 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "chumon-no-ooi-ryoriten",
+  "paragraph_id": "chumon-no-ooi-ryoriten-zh-p01440",
+  "source_text": "“原来是银片和金片。",
+  "source_sha256": "6bb3dbfb090dc483e6c0238fba3dbe290bba9f07bf4ca9d82c8eac0054c660e8",
+  "source_normalized_sha256": "6bb3dbfb090dc483e6c0238fba3dbe290bba9f07bf4ca9d82c8eac0054c660e8",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 17,
+    "grammar_token_total": 17,
+    "unit_count": 1
+  },
+  "source_chunk_id": "chumon-no-ooi-ryoriten-chunk-1440",
+  "source_manifest_sha256": "55b839ea38cc607cade92b8ed3037a52e9fb70cd146c3559d9f71bcf686ef039",
+  "section": {
+    "id": "黄色的西红柿",
+    "title_zh": [
+      {
+        "t": "黄",
+        "r": "huáng",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "attributive"
+      },
+      {
+        "t": "西",
+        "r": "xī",
+        "g": "object"
+      },
+      {
+        "t": "红",
+        "r": "hóng",
+        "g": "object"
+      },
+      {
+        "t": "柿",
+        "r": "shì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "黄",
+        "r": "き",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "attributive"
+      },
+      {
+        "t": "い",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "トマト",
+        "r": "",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "黄色的西红柿-intro",
+    "title_zh": [
+      {
+        "t": "黄",
+        "r": "huáng",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "attributive"
+      },
+      {
+        "t": "西",
+        "r": "xī",
+        "g": "object"
+      },
+      {
+        "t": "红",
+        "r": "hóng",
+        "g": "object"
+      },
+      {
+        "t": "柿",
+        "r": "shì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "黄",
+        "r": "き",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "attributive"
+      },
+      {
+        "t": "い",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "トマト",
+        "r": "",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "chumon-no-ooi-ryoriten-zh-p01440",
+    "source_text": "“原来是银片和金片。",
+    "units": [
+      {
+        "source_text": "“原来是银片和金片。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "原",
+            "r": "yuán",
+            "g": "adverbial"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "银",
+            "r": "yín",
+            "g": "object"
+          },
+          {
+            "t": "片",
+            "r": "piàn",
+            "g": "object"
+          },
+          {
+            "t": "和",
+            "r": "hé",
+            "g": "object"
+          },
+          {
+            "t": "金",
+            "r": "jīn",
+            "g": "object"
+          },
+          {
+            "t": "片",
+            "r": "piàn",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "もとは",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "銀",
+              "r": "ぎん",
+              "g": "object"
+            },
+            {
+              "t": "のかけらと",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "金",
+              "r": "きん",
+              "g": "object"
+            },
+            {
+              "t": "のかけらだったのです",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

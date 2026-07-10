@@ -1,0 +1,138 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "chumon-no-ooi-ryoriten",
+  "paragraph_id": "chumon-no-ooi-ryoriten-zh-p02483",
+  "source_text": "塌鼠对君鼠说：",
+  "source_sha256": "7f8143ec8dee5a881d28c0bce6d29e48c9406aeff8fadb4ac7baef1ebfbfffac",
+  "source_normalized_sha256": "7f8143ec8dee5a881d28c0bce6d29e48c9406aeff8fadb4ac7baef1ebfbfffac",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 10,
+    "grammar_token_total": 10,
+    "unit_count": 1
+  },
+  "source_chunk_id": "chumon-no-ooi-ryoriten-chunk-2483",
+  "source_manifest_sha256": "55b839ea38cc607cade92b8ed3037a52e9fb70cd146c3559d9f71bcf686ef039",
+  "section": {
+    "id": "君鼠",
+    "title_zh": [
+      {
+        "t": "君",
+        "r": "jūn",
+        "g": "attributive"
+      },
+      {
+        "t": "鼠",
+        "r": "shǔ",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "クねずみ",
+        "r": "",
+        "g": "subject"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "君鼠-intro",
+    "title_zh": [
+      {
+        "t": "君",
+        "r": "jūn",
+        "g": "attributive"
+      },
+      {
+        "t": "鼠",
+        "r": "shǔ",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "クねずみ",
+        "r": "",
+        "g": "subject"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "chumon-no-ooi-ryoriten-zh-p02483",
+    "source_text": "塌鼠对君鼠说：",
+    "units": [
+      {
+        "source_text": "塌鼠对君鼠说：",
+        "zh": [
+          {
+            "t": "塌",
+            "r": "tā",
+            "g": "subject"
+          },
+          {
+            "t": "鼠",
+            "r": "shǔ",
+            "g": "subject"
+          },
+          {
+            "t": "对",
+            "r": "duì",
+            "g": "predicate"
+          },
+          {
+            "t": "君",
+            "r": "jūn",
+            "g": "object"
+          },
+          {
+            "t": "鼠",
+            "r": "shǔ",
+            "g": "object"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "：",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "タねずみは",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "クねずみに",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "いいました。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

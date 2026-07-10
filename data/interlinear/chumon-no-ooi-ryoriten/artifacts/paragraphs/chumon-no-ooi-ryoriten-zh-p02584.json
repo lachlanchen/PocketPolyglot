@@ -1,0 +1,173 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "chumon-no-ooi-ryoriten",
+  "paragraph_id": "chumon-no-ooi-ryoriten-zh-p02584",
+  "source_text": "“一不能被二减。”",
+  "source_sha256": "004d62b4c6db674d27d8fb6c49035701041a1f0de5e964efc5bd7b75212612a5",
+  "source_normalized_sha256": "004d62b4c6db674d27d8fb6c49035701041a1f0de5e964efc5bd7b75212612a5",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 17,
+    "grammar_token_total": 17,
+    "unit_count": 1
+  },
+  "source_chunk_id": "chumon-no-ooi-ryoriten-chunk-2584",
+  "source_manifest_sha256": "55b839ea38cc607cade92b8ed3037a52e9fb70cd146c3559d9f71bcf686ef039",
+  "section": {
+    "id": "君鼠",
+    "title_zh": [
+      {
+        "t": "君",
+        "r": "jūn",
+        "g": "attributive"
+      },
+      {
+        "t": "鼠",
+        "r": "shǔ",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "クねずみ",
+        "r": "",
+        "g": "subject"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "君鼠-intro",
+    "title_zh": [
+      {
+        "t": "君",
+        "r": "jūn",
+        "g": "attributive"
+      },
+      {
+        "t": "鼠",
+        "r": "shǔ",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "クねずみ",
+        "r": "",
+        "g": "subject"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "chumon-no-ooi-ryoriten-zh-p02584",
+    "source_text": "“一不能被二减。”",
+    "units": [
+      {
+        "source_text": "“一不能被二减。”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "subject"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "adverbial"
+          },
+          {
+            "t": "能",
+            "r": "néng",
+            "g": "predicate"
+          },
+          {
+            "t": "被",
+            "r": "bèi",
+            "g": "function"
+          },
+          {
+            "t": "二",
+            "r": "èr",
+            "g": "object"
+          },
+          {
+            "t": "减",
+            "r": "jiǎn",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "subject"
+            },
+            {
+              "t": "から",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "二",
+              "r": "に",
+              "g": "object"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "ひかれません",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,304 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "chumon-no-ooi-ryoriten",
+  "paragraph_id": "chumon-no-ooi-ryoriten-zh-p01513",
+  "source_text": "亮二跟在后面。油灯一下子被风吹灭了。",
+  "source_sha256": "2e8b00bfa2c226b56b80f5c35df5eacf639877683a7f473b3b6a74ccdb9c2ca3",
+  "source_normalized_sha256": "2e8b00bfa2c226b56b80f5c35df5eacf639877683a7f473b3b6a74ccdb9c2ca3",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 35,
+    "grammar_token_total": 35,
+    "unit_count": 2
+  },
+  "source_chunk_id": "chumon-no-ooi-ryoriten-chunk-1513",
+  "source_manifest_sha256": "55b839ea38cc607cade92b8ed3037a52e9fb70cd146c3559d9f71bcf686ef039",
+  "section": {
+    "id": "祭之夜",
+    "title_zh": [
+      {
+        "t": "祭",
+        "r": "jì",
+        "g": "attributive"
+      },
+      {
+        "t": "之",
+        "r": "zhī",
+        "g": "function"
+      },
+      {
+        "t": "夜",
+        "r": "yè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "夜",
+        "r": "よる",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "祭之夜-intro",
+    "title_zh": [
+      {
+        "t": "祭",
+        "r": "jì",
+        "g": "attributive"
+      },
+      {
+        "t": "之",
+        "r": "zhī",
+        "g": "function"
+      },
+      {
+        "t": "夜",
+        "r": "yè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "夜",
+        "r": "よる",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "chumon-no-ooi-ryoriten-zh-p01513",
+    "source_text": "亮二跟在后面。油灯一下子被风吹灭了。",
+    "units": [
+      {
+        "source_text": "亮二跟在后面。",
+        "zh": [
+          {
+            "t": "亮",
+            "r": "liàng",
+            "g": "subject"
+          },
+          {
+            "t": "二",
+            "r": "èr",
+            "g": "subject"
+          },
+          {
+            "t": "跟",
+            "r": "gēn",
+            "g": "predicate"
+          },
+          {
+            "t": "在",
+            "r": "zài",
+            "g": "predicate"
+          },
+          {
+            "t": "后",
+            "r": "hòu",
+            "g": "object"
+          },
+          {
+            "t": "面",
+            "r": "miàn",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "亮",
+              "r": "りょう",
+              "g": "subject"
+            },
+            {
+              "t": "二",
+              "r": "じ",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "後",
+              "r": "うし",
+              "g": "object"
+            },
+            {
+              "t": "ろについていった",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "油灯一下子被风吹灭了。",
+        "zh": [
+          {
+            "t": "油",
+            "r": "yóu",
+            "g": "subject"
+          },
+          {
+            "t": "灯",
+            "r": "dēng",
+            "g": "subject"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "adverbial"
+          },
+          {
+            "t": "下",
+            "r": "xià",
+            "g": "adverbial"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "adverbial"
+          },
+          {
+            "t": "被",
+            "r": "bèi",
+            "g": "function"
+          },
+          {
+            "t": "风",
+            "r": "fēng",
+            "g": "subject"
+          },
+          {
+            "t": "吹",
+            "r": "chuī",
+            "g": "predicate"
+          },
+          {
+            "t": "灭",
+            "r": "miè",
+            "g": "complement"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "油",
+              "r": "あぶら",
+              "g": "subject"
+            },
+            {
+              "t": "灯",
+              "r": "とう",
+              "g": "subject"
+            },
+            {
+              "t": "はたちまち",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "風",
+              "r": "かぜ",
+              "g": "subject"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "吹",
+              "r": "ふ",
+              "g": "predicate"
+            },
+            {
+              "t": "き",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "消",
+              "r": "け",
+              "g": "complement"
+            },
+            {
+              "t": "された",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

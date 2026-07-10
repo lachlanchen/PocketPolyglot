@@ -1,0 +1,209 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "chumon-no-ooi-ryoriten",
+  "paragraph_id": "chumon-no-ooi-ryoriten-zh-p02497",
+  "source_text": "“嗯哼嗯哼！”君鼠又吼起来。",
+  "source_sha256": "6416c67a276a204a1c99147204f087a7eb58b7dfeeb8c2e8fe60f222d84b2bac",
+  "source_normalized_sha256": "6416c67a276a204a1c99147204f087a7eb58b7dfeeb8c2e8fe60f222d84b2bac",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 22,
+    "grammar_token_total": 22,
+    "unit_count": 2
+  },
+  "source_chunk_id": "chumon-no-ooi-ryoriten-chunk-2497",
+  "source_manifest_sha256": "55b839ea38cc607cade92b8ed3037a52e9fb70cd146c3559d9f71bcf686ef039",
+  "section": {
+    "id": "君鼠",
+    "title_zh": [
+      {
+        "t": "君",
+        "r": "jūn",
+        "g": "attributive"
+      },
+      {
+        "t": "鼠",
+        "r": "shǔ",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "クねずみ",
+        "r": "",
+        "g": "subject"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "君鼠-intro",
+    "title_zh": [
+      {
+        "t": "君",
+        "r": "jūn",
+        "g": "attributive"
+      },
+      {
+        "t": "鼠",
+        "r": "shǔ",
+        "g": "subject"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "クねずみ",
+        "r": "",
+        "g": "subject"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "chumon-no-ooi-ryoriten-zh-p02497",
+    "source_text": "“嗯哼嗯哼！”君鼠又吼起来。",
+    "units": [
+      {
+        "source_text": "“嗯哼嗯哼！”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "嗯",
+            "r": "ń",
+            "g": "predicate"
+          },
+          {
+            "t": "哼",
+            "r": "hēng",
+            "g": "predicate"
+          },
+          {
+            "t": "嗯",
+            "r": "ń",
+            "g": "predicate"
+          },
+          {
+            "t": "哼",
+            "r": "hēng",
+            "g": "predicate"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "エヘン",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "エヘン",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "君鼠又吼起来。",
+        "zh": [
+          {
+            "t": "君",
+            "r": "jūn",
+            "g": "subject"
+          },
+          {
+            "t": "鼠",
+            "r": "shǔ",
+            "g": "subject"
+          },
+          {
+            "t": "又",
+            "r": "yòu",
+            "g": "adverbial"
+          },
+          {
+            "t": "吼",
+            "r": "hǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "起",
+            "r": "qǐ",
+            "g": "complement"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "クねずみは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "また",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "どなりました",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

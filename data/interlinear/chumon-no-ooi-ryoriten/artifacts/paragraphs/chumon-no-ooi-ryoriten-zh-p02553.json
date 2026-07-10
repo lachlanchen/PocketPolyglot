@@ -1,0 +1,183 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "chumon-no-ooi-ryoriten",
+  "paragraph_id": "chumon-no-ooi-ryoriten-zh-p02553",
+  "source_text": "“你小子叫什么名字呀？”",
+  "source_sha256": "52fca3d26181bca7765617b13f4fbda7071a6688b814f12b1d58bddb26a7dc1e",
+  "source_normalized_sha256": "52fca3d26181bca7765617b13f4fbda7071a6688b814f12b1d58bddb26a7dc1e",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 19,
+    "grammar_token_total": 19,
+    "unit_count": 1
+  },
+  "source_chunk_id": "chumon-no-ooi-ryoriten-chunk-2553",
+  "source_manifest_sha256": "55b839ea38cc607cade92b8ed3037a52e9fb70cd146c3559d9f71bcf686ef039",
+  "section": {
+    "id": "君鼠",
+    "title_zh": [
+      {
+        "t": "君",
+        "r": "jūn",
+        "g": "attributive"
+      },
+      {
+        "t": "鼠",
+        "r": "shǔ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "クねずみ",
+        "r": "",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "君鼠-intro",
+    "title_zh": [
+      {
+        "t": "君",
+        "r": "jūn",
+        "g": "attributive"
+      },
+      {
+        "t": "鼠",
+        "r": "shǔ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "クねずみ",
+        "r": "",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "chumon-no-ooi-ryoriten-zh-p02553",
+    "source_text": "“你小子叫什么名字呀？”",
+    "units": [
+      {
+        "source_text": "“你小子叫什么名字呀？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "subject"
+          },
+          {
+            "t": "叫",
+            "r": "jiào",
+            "g": "predicate"
+          },
+          {
+            "t": "什",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "object"
+          },
+          {
+            "t": "名",
+            "r": "míng",
+            "g": "object"
+          },
+          {
+            "t": "字",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "呀",
+            "r": "ya",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "きさまは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "なんという",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "もの",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "だ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

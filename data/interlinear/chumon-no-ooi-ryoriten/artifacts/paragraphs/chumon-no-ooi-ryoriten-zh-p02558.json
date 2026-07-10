@@ -1,0 +1,622 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "chumon-no-ooi-ryoriten",
+  "paragraph_id": "chumon-no-ooi-ryoriten-zh-p02558",
+  "source_text": "“呵呵呵，是吗？那可太可怜了。好吧好吧，我来收留你，到我家里来吧。我们家正好刚生了四个孩子，正发愁没有家庭教师呢！走吧。”",
+  "source_sha256": "26c557fab13676883492747496cd11af5d3e4527e300a1766f1a51fedb025b4d",
+  "source_normalized_sha256": "26c557fab13676883492747496cd11af5d3e4527e300a1766f1a51fedb025b4d",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 98,
+    "grammar_token_total": 98,
+    "unit_count": 5
+  },
+  "source_chunk_id": "chumon-no-ooi-ryoriten-chunk-2558",
+  "source_manifest_sha256": "55b839ea38cc607cade92b8ed3037a52e9fb70cd146c3559d9f71bcf686ef039",
+  "section": {
+    "id": "君鼠",
+    "title_zh": [
+      {
+        "t": "君",
+        "r": "jūn",
+        "g": "attributive"
+      },
+      {
+        "t": "鼠",
+        "r": "shǔ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "クねずみ",
+        "r": "",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "君鼠-intro",
+    "title_zh": [
+      {
+        "t": "君",
+        "r": "jūn",
+        "g": "attributive"
+      },
+      {
+        "t": "鼠",
+        "r": "shǔ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "クねずみ",
+        "r": "",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "chumon-no-ooi-ryoriten-zh-p02558",
+    "source_text": "“呵呵呵，是吗？那可太可怜了。好吧好吧，我来收留你，到我家里来吧。我们家正好刚生了四个孩子，正发愁没有家庭教师呢！走吧。”",
+    "units": [
+      {
+        "source_text": "“呵呵呵，是吗？",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "呵",
+            "r": "hē",
+            "g": "predicate"
+          },
+          {
+            "t": "呵",
+            "r": "hē",
+            "g": "predicate"
+          },
+          {
+            "t": "呵",
+            "r": "hē",
+            "g": "predicate"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「フ、フ、フ。",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "そうか",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "那可太可怜了。",
+        "zh": [
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "subject"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "adverbial"
+          },
+          {
+            "t": "太",
+            "r": "tài",
+            "g": "adverbial"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "predicate"
+          },
+          {
+            "t": "怜",
+            "r": "lián",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "それは",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "かあいそうだ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "好吧好吧，我来收留你，到我家里来吧。",
+        "zh": [
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "subject"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "adverbial"
+          },
+          {
+            "t": "收",
+            "r": "shōu",
+            "g": "predicate"
+          },
+          {
+            "t": "留",
+            "r": "liú",
+            "g": "predicate"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "到",
+            "r": "dào",
+            "g": "predicate"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "object"
+          },
+          {
+            "t": "里",
+            "r": "lǐ",
+            "g": "object"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "predicate"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "よしよし",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "おれが",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "ひきうけてやろう",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "おれの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "うちへ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "こい",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "我们家正好刚生了四个孩子，正发愁没有家庭教师呢！",
+        "zh": [
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "attributive"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "attributive"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "subject"
+          },
+          {
+            "t": "正",
+            "r": "zhèng",
+            "g": "adverbial"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "adverbial"
+          },
+          {
+            "t": "刚",
+            "r": "gāng",
+            "g": "adverbial"
+          },
+          {
+            "t": "生",
+            "r": "shēng",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "四",
+            "r": "sì",
+            "g": "object"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "object"
+          },
+          {
+            "t": "孩",
+            "r": "hái",
+            "g": "object"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "正",
+            "r": "zhèng",
+            "g": "adverbial"
+          },
+          {
+            "t": "发",
+            "r": "fā",
+            "g": "predicate"
+          },
+          {
+            "t": "愁",
+            "r": "chóu",
+            "g": "predicate"
+          },
+          {
+            "t": "没",
+            "r": "méi",
+            "g": "object"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "object"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "object"
+          },
+          {
+            "t": "庭",
+            "r": "tíng",
+            "g": "object"
+          },
+          {
+            "t": "教",
+            "r": "jiào",
+            "g": "object"
+          },
+          {
+            "t": "师",
+            "r": "shī",
+            "g": "object"
+          },
+          {
+            "t": "呢",
+            "r": "ne",
+            "g": "function"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ちょうど",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "おれの",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "うちでは",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "子",
+              "r": "こ",
+              "g": "object"
+            },
+            {
+              "t": "どもが",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "四",
+              "r": "よ",
+              "g": "object"
+            },
+            {
+              "t": "人",
+              "r": "にん",
+              "g": "object"
+            },
+            {
+              "t": "できて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "それに",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "家",
+              "r": "か",
+              "g": "object"
+            },
+            {
+              "t": "庭",
+              "r": "てい",
+              "g": "object"
+            },
+            {
+              "t": "教",
+              "r": "きょう",
+              "g": "object"
+            },
+            {
+              "t": "師",
+              "r": "し",
+              "g": "object"
+            },
+            {
+              "t": "がなくて",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "こまっている",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "ところなんだ",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "走吧。”",
+        "zh": [
+          {
+            "t": "走",
+            "r": "zǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "こい",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

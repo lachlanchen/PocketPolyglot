@@ -1,0 +1,320 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "chumon-no-ooi-ryoriten",
+  "paragraph_id": "chumon-no-ooi-ryoriten-zh-p01273",
+  "source_text": "“好吧，谢谢了。您也来一杯吧！天空多美啊！”",
+  "source_sha256": "2880991ab9f8d5ac6aaf374b31512faea7dafc36b1c39aa1eaa9958991b7c121",
+  "source_normalized_sha256": "2880991ab9f8d5ac6aaf374b31512faea7dafc36b1c39aa1eaa9958991b7c121",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 32,
+    "grammar_token_total": 32,
+    "unit_count": 3
+  },
+  "source_chunk_id": "chumon-no-ooi-ryoriten-chunk-1273",
+  "source_manifest_sha256": "55b839ea38cc607cade92b8ed3037a52e9fb70cd146c3559d9f71bcf686ef039",
+  "section": {
+    "id": "郁金香幻术",
+    "title_zh": [
+      {
+        "t": "郁",
+        "r": "yù",
+        "g": "attributive"
+      },
+      {
+        "t": "金",
+        "r": "jīn",
+        "g": "attributive"
+      },
+      {
+        "t": "香",
+        "r": "xiāng",
+        "g": "attributive"
+      },
+      {
+        "t": "幻",
+        "r": "huàn",
+        "g": "object"
+      },
+      {
+        "t": "术",
+        "r": "shù",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "チューリップの",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "幻",
+        "r": "げん",
+        "g": "object"
+      },
+      {
+        "t": "術",
+        "r": "じゅつ",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "郁金香幻术-intro",
+    "title_zh": [
+      {
+        "t": "郁",
+        "r": "yù",
+        "g": "attributive"
+      },
+      {
+        "t": "金",
+        "r": "jīn",
+        "g": "attributive"
+      },
+      {
+        "t": "香",
+        "r": "xiāng",
+        "g": "attributive"
+      },
+      {
+        "t": "幻",
+        "r": "huàn",
+        "g": "object"
+      },
+      {
+        "t": "术",
+        "r": "shù",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "チューリップの",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "幻",
+        "r": "げん",
+        "g": "object"
+      },
+      {
+        "t": "術",
+        "r": "じゅつ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "chumon-no-ooi-ryoriten-zh-p01273",
+    "source_text": "“好吧，谢谢了。您也来一杯吧！天空多美啊！”",
+    "units": [
+      {
+        "source_text": "“好吧，谢谢了。",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "好",
+            "r": "hǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "谢",
+            "r": "xiè",
+            "g": "predicate"
+          },
+          {
+            "t": "谢",
+            "r": "xie",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「よろしい、",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "ありがとうございます。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "您也来一杯吧！",
+        "zh": [
+          {
+            "t": "您",
+            "r": "nín",
+            "g": "subject"
+          },
+          {
+            "t": "也",
+            "r": "yě",
+            "g": "adverbial"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yì",
+            "g": "object"
+          },
+          {
+            "t": "杯",
+            "r": "bēi",
+            "g": "object"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "あなたも",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "一",
+              "r": "いっ",
+              "g": "object"
+            },
+            {
+              "t": "杯",
+              "r": "ぱい",
+              "g": "object"
+            },
+            {
+              "t": "どうぞ！",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "天空多美啊！”",
+        "zh": [
+          {
+            "t": "天",
+            "r": "tiān",
+            "g": "subject"
+          },
+          {
+            "t": "空",
+            "r": "kōng",
+            "g": "subject"
+          },
+          {
+            "t": "多",
+            "r": "duō",
+            "g": "adverbial"
+          },
+          {
+            "t": "美",
+            "r": "měi",
+            "g": "predicate"
+          },
+          {
+            "t": "啊",
+            "r": "a",
+            "g": "function"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "空",
+              "r": "そら",
+              "g": "subject"
+            },
+            {
+              "t": "はなんて",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "美",
+              "r": "うつく",
+              "g": "predicate"
+            },
+            {
+              "t": "しいのでしょう！」",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

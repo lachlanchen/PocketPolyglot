@@ -1,0 +1,525 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "chumon-no-ooi-ryoriten",
+  "paragraph_id": "chumon-no-ooi-ryoriten-zh-p01282",
+  "source_text": "“是桧树吗？那些桧树足足有一个小队吧？全是年轻的投弹兵。”",
+  "source_sha256": "33b858facf7f814598d45b31c28e8ebcad5509a547d6b6ffbd0616e1ddac42f1",
+  "source_normalized_sha256": "33b858facf7f814598d45b31c28e8ebcad5509a547d6b6ffbd0616e1ddac42f1",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 71,
+    "grammar_token_total": 71,
+    "unit_count": 3
+  },
+  "source_chunk_id": "chumon-no-ooi-ryoriten-chunk-1282",
+  "source_manifest_sha256": "55b839ea38cc607cade92b8ed3037a52e9fb70cd146c3559d9f71bcf686ef039",
+  "section": {
+    "id": "郁金香幻术",
+    "title_zh": [
+      {
+        "t": "郁",
+        "r": "yù",
+        "g": "attributive"
+      },
+      {
+        "t": "金",
+        "r": "jīn",
+        "g": "attributive"
+      },
+      {
+        "t": "香",
+        "r": "xiāng",
+        "g": "attributive"
+      },
+      {
+        "t": "幻",
+        "r": "huàn",
+        "g": "predicate"
+      },
+      {
+        "t": "术",
+        "r": "shù",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "チューリップ",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "幻",
+        "r": "げん",
+        "g": "predicate"
+      },
+      {
+        "t": "術",
+        "r": "じゅつ",
+        "g": "predicate"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "郁金香幻术-intro",
+    "title_zh": [
+      {
+        "t": "郁",
+        "r": "yù",
+        "g": "attributive"
+      },
+      {
+        "t": "金",
+        "r": "jīn",
+        "g": "attributive"
+      },
+      {
+        "t": "香",
+        "r": "xiāng",
+        "g": "attributive"
+      },
+      {
+        "t": "幻",
+        "r": "huàn",
+        "g": "predicate"
+      },
+      {
+        "t": "术",
+        "r": "shù",
+        "g": "predicate"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "チューリップ",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "幻",
+        "r": "げん",
+        "g": "predicate"
+      },
+      {
+        "t": "術",
+        "r": "じゅつ",
+        "g": "predicate"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "chumon-no-ooi-ryoriten-zh-p01282",
+    "source_text": "“是桧树吗？那些桧树足足有一个小队吧？全是年轻的投弹兵。”",
+    "units": [
+      {
+        "source_text": "“是桧树吗？",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "桧",
+            "r": "guì",
+            "g": "object"
+          },
+          {
+            "t": "树",
+            "r": "shù",
+            "g": "object"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "桧",
+              "r": "ひのき",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "木",
+              "r": "き",
+              "g": "object"
+            },
+            {
+              "t": "ですか",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "あれ",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "桧",
+              "r": "ひのき",
+              "g": "object"
+            },
+            {
+              "t": "ですか",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "那些桧树足足有一个小队吧？",
+        "zh": [
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "subject"
+          },
+          {
+            "t": "些",
+            "r": "xiē",
+            "g": "subject"
+          },
+          {
+            "t": "桧",
+            "r": "guì",
+            "g": "subject"
+          },
+          {
+            "t": "树",
+            "r": "shù",
+            "g": "subject"
+          },
+          {
+            "t": "足",
+            "r": "zú",
+            "g": "adverbial"
+          },
+          {
+            "t": "足",
+            "r": "zú",
+            "g": "adverbial"
+          },
+          {
+            "t": "有",
+            "r": "yǒu",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yí",
+            "g": "object"
+          },
+          {
+            "t": "个",
+            "r": "gè",
+            "g": "object"
+          },
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "object"
+          },
+          {
+            "t": "队",
+            "r": "duì",
+            "g": "object"
+          },
+          {
+            "t": "吧",
+            "r": "ba",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "あの",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "桧",
+              "r": "ひのき",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "木",
+              "r": "き",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "まるまる",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "一",
+              "r": "いち",
+              "g": "object"
+            },
+            {
+              "t": "小",
+              "r": "しょう",
+              "g": "object"
+            },
+            {
+              "t": "隊",
+              "r": "たい",
+              "g": "object"
+            },
+            {
+              "t": "ほど",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "ありますね",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "全是年轻的投弹兵。”",
+        "zh": [
+          {
+            "t": "全",
+            "r": "quán",
+            "g": "adverbial"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "年",
+            "r": "nián",
+            "g": "attributive"
+          },
+          {
+            "t": "轻",
+            "r": "qīng",
+            "g": "attributive"
+          },
+          {
+            "t": "的",
+            "r": "de",
+            "g": "attributive"
+          },
+          {
+            "t": "投",
+            "r": "tóu",
+            "g": "object"
+          },
+          {
+            "t": "弹",
+            "r": "dàn",
+            "g": "object"
+          },
+          {
+            "t": "兵",
+            "r": "bīng",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "みんな",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "若",
+              "r": "わか",
+              "g": "attributive"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "擲",
+              "r": "てき",
+              "g": "object"
+            },
+            {
+              "t": "弾",
+              "r": "だん",
+              "g": "object"
+            },
+            {
+              "t": "兵",
+              "r": "へい",
+              "g": "object"
+            },
+            {
+              "t": "です",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "全",
+              "r": "ぜん",
+              "g": "adverbial"
+            },
+            {
+              "t": "員",
+              "r": "いん",
+              "g": "adverbial"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "若",
+              "r": "わか",
+              "g": "attributive"
+            },
+            {
+              "t": "い",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "投",
+              "r": "とう",
+              "g": "object"
+            },
+            {
+              "t": "弾",
+              "r": "だん",
+              "g": "object"
+            },
+            {
+              "t": "兵",
+              "r": "へい",
+              "g": "object"
+            },
+            {
+              "t": "なのです",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

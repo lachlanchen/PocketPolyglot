@@ -1,0 +1,243 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "chumon-no-ooi-ryoriten",
+  "paragraph_id": "chumon-no-ooi-ryoriten-zh-p01234",
+  "source_text": "园丁涨红着脸跑来了。",
+  "source_sha256": "53048bcfd031577e932c5d92cb30d7aebb3419bef130a1d49d61d35c26e97ae9",
+  "source_normalized_sha256": "53048bcfd031577e932c5d92cb30d7aebb3419bef130a1d49d61d35c26e97ae9",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 21,
+    "grammar_token_total": 21,
+    "unit_count": 1
+  },
+  "source_chunk_id": "chumon-no-ooi-ryoriten-chunk-1234",
+  "source_manifest_sha256": "55b839ea38cc607cade92b8ed3037a52e9fb70cd146c3559d9f71bcf686ef039",
+  "section": {
+    "id": "郁金香幻术",
+    "title_zh": [
+      {
+        "t": "郁",
+        "r": "yù",
+        "g": "attributive"
+      },
+      {
+        "t": "金",
+        "r": "jīn",
+        "g": "attributive"
+      },
+      {
+        "t": "香",
+        "r": "xiāng",
+        "g": "attributive"
+      },
+      {
+        "t": "幻",
+        "r": "huàn",
+        "g": "object"
+      },
+      {
+        "t": "术",
+        "r": "shù",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "チューリップの",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "幻",
+        "r": "げん",
+        "g": "object"
+      },
+      {
+        "t": "術",
+        "r": "じゅつ",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "郁金香幻术-intro",
+    "title_zh": [
+      {
+        "t": "郁",
+        "r": "yù",
+        "g": "attributive"
+      },
+      {
+        "t": "金",
+        "r": "jīn",
+        "g": "attributive"
+      },
+      {
+        "t": "香",
+        "r": "xiāng",
+        "g": "attributive"
+      },
+      {
+        "t": "幻",
+        "r": "huàn",
+        "g": "object"
+      },
+      {
+        "t": "术",
+        "r": "shù",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "チューリップの",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "幻",
+        "r": "げん",
+        "g": "object"
+      },
+      {
+        "t": "術",
+        "r": "じゅつ",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "chumon-no-ooi-ryoriten-zh-p01234",
+    "source_text": "园丁涨红着脸跑来了。",
+    "units": [
+      {
+        "source_text": "园丁涨红着脸跑来了。",
+        "zh": [
+          {
+            "t": "园",
+            "r": "yuán",
+            "g": "subject"
+          },
+          {
+            "t": "丁",
+            "r": "dīng",
+            "g": "subject"
+          },
+          {
+            "t": "涨",
+            "r": "zhàng",
+            "g": "adverbial"
+          },
+          {
+            "t": "红",
+            "r": "hóng",
+            "g": "adverbial"
+          },
+          {
+            "t": "着",
+            "r": "zhe",
+            "g": "adverbial"
+          },
+          {
+            "t": "脸",
+            "r": "liǎn",
+            "g": "adverbial"
+          },
+          {
+            "t": "跑",
+            "r": "pǎo",
+            "g": "predicate"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "庭",
+              "r": "にわ",
+              "g": "subject"
+            },
+            {
+              "t": "師",
+              "r": "し",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "顔",
+              "r": "かお",
+              "g": "adverbial"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "赤",
+              "r": "あか",
+              "g": "adverbial"
+            },
+            {
+              "t": "くして、",
+              "r": "",
+              "g": "adverbial"
+            }
+          ],
+          [
+            {
+              "t": "走",
+              "r": "はし",
+              "g": "predicate"
+            },
+            {
+              "t": "って",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "来",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "た。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

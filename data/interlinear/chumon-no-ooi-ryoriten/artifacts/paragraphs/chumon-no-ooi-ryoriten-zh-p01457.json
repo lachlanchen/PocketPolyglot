@@ -1,0 +1,632 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "chumon-no-ooi-ryoriten",
+  "paragraph_id": "chumon-no-ooi-ryoriten-zh-p01457",
+  "source_text": "“‘这是什么？小兔崽子。想骗人吗？就这么两只破西红柿，还想混进这大门？快给我滚远点儿，畜生！’",
+  "source_sha256": "2a2118a1467785e33ce2a0d86de767ac64d584613c8348a25cfa6bbc6ad5c089",
+  "source_normalized_sha256": "2a2118a1467785e33ce2a0d86de767ac64d584613c8348a25cfa6bbc6ad5c089",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 86,
+    "grammar_token_total": 86,
+    "unit_count": 5
+  },
+  "source_chunk_id": "chumon-no-ooi-ryoriten-chunk-1457",
+  "source_manifest_sha256": "55b839ea38cc607cade92b8ed3037a52e9fb70cd146c3559d9f71bcf686ef039",
+  "section": {
+    "id": "黄色的西红柿",
+    "title_zh": [
+      {
+        "t": "黄",
+        "r": "huáng",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "function"
+      },
+      {
+        "t": "西",
+        "r": "xī",
+        "g": "object"
+      },
+      {
+        "t": "红",
+        "r": "hóng",
+        "g": "object"
+      },
+      {
+        "t": "柿",
+        "r": "shì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "黄",
+        "r": "き",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "attributive"
+      },
+      {
+        "t": "い",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "トマト",
+        "r": "",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "黄色的西红柿-intro",
+    "title_zh": [
+      {
+        "t": "黄",
+        "r": "huáng",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "sè",
+        "g": "attributive"
+      },
+      {
+        "t": "的",
+        "r": "de",
+        "g": "function"
+      },
+      {
+        "t": "西",
+        "r": "xī",
+        "g": "object"
+      },
+      {
+        "t": "红",
+        "r": "hóng",
+        "g": "object"
+      },
+      {
+        "t": "柿",
+        "r": "shì",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "黄",
+        "r": "き",
+        "g": "attributive"
+      },
+      {
+        "t": "色",
+        "r": "いろ",
+        "g": "attributive"
+      },
+      {
+        "t": "い",
+        "r": "",
+        "g": "attributive"
+      },
+      {
+        "t": "トマト",
+        "r": "",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "chumon-no-ooi-ryoriten-zh-p01457",
+    "source_text": "“‘这是什么？小兔崽子。想骗人吗？就这么两只破西红柿，还想混进这大门？快给我滚远点儿，畜生！’",
+    "units": [
+      {
+        "source_text": "“‘这是什么？",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "‘",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "subject"
+          },
+          {
+            "t": "是",
+            "r": "shì",
+            "g": "predicate"
+          },
+          {
+            "t": "什",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "object"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「『これは",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "何",
+              "r": "なに",
+              "g": "object"
+            },
+            {
+              "t": "だ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "小兔崽子。",
+        "zh": [
+          {
+            "t": "小",
+            "r": "xiǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "兔",
+            "r": "tù",
+            "g": "subject"
+          },
+          {
+            "t": "崽",
+            "r": "zǎi",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "subject"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "attributive"
+            }
+          ],
+          [
+            {
+              "t": "ガキめ",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "想骗人吗？",
+        "zh": [
+          {
+            "t": "想",
+            "r": "xiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "骗",
+            "r": "piàn",
+            "g": "predicate"
+          },
+          {
+            "t": "人",
+            "r": "rén",
+            "g": "object"
+          },
+          {
+            "t": "吗",
+            "r": "ma",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "人",
+              "r": "ひと",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "だます",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "つもりか",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "就这么两只破西红柿，还想混进这大门？",
+        "zh": [
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "attributive"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "attributive"
+          },
+          {
+            "t": "两",
+            "r": "liǎng",
+            "g": "attributive"
+          },
+          {
+            "t": "只",
+            "r": "zhī",
+            "g": "attributive"
+          },
+          {
+            "t": "破",
+            "r": "pò",
+            "g": "attributive"
+          },
+          {
+            "t": "西",
+            "r": "xī",
+            "g": "object"
+          },
+          {
+            "t": "红",
+            "r": "hóng",
+            "g": "object"
+          },
+          {
+            "t": "柿",
+            "r": "shì",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "adverbial"
+          },
+          {
+            "t": "想",
+            "r": "xiǎng",
+            "g": "predicate"
+          },
+          {
+            "t": "混",
+            "r": "hùn",
+            "g": "predicate"
+          },
+          {
+            "t": "进",
+            "r": "jìn",
+            "g": "predicate"
+          },
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "object"
+          },
+          {
+            "t": "大",
+            "r": "dà",
+            "g": "attributive"
+          },
+          {
+            "t": "门",
+            "r": "mén",
+            "g": "object"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "こんな",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "傷",
+              "r": "いた",
+              "g": "attributive"
+            },
+            {
+              "t": "んだトマト",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "二",
+              "r": "ふた",
+              "g": "attributive"
+            },
+            {
+              "t": "つで",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "attributive"
+            },
+            {
+              "t": "門",
+              "r": "もん",
+              "g": "object"
+            },
+            {
+              "t": "に",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "入",
+              "r": "はい",
+              "g": "predicate"
+            },
+            {
+              "t": "り",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "込",
+              "r": "こ",
+              "g": "predicate"
+            },
+            {
+              "t": "む",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "気",
+              "r": "き",
+              "g": "predicate"
+            },
+            {
+              "t": "か",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "快给我滚远点儿，畜生！’",
+        "zh": [
+          {
+            "t": "快",
+            "r": "kuài",
+            "g": "adverbial"
+          },
+          {
+            "t": "给",
+            "r": "gěi",
+            "g": "function"
+          },
+          {
+            "t": "我",
+            "r": "wǒ",
+            "g": "adverbial"
+          },
+          {
+            "t": "滚",
+            "r": "gǔn",
+            "g": "predicate"
+          },
+          {
+            "t": "远",
+            "r": "yuǎn",
+            "g": "complement"
+          },
+          {
+            "t": "点",
+            "r": "diǎn",
+            "g": "complement"
+          },
+          {
+            "t": "儿",
+            "r": "r",
+            "g": "complement"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "畜",
+            "r": "chù",
+            "g": "subject"
+          },
+          {
+            "t": "生",
+            "r": "sheng",
+            "g": "subject"
+          },
+          {
+            "t": "！",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "’",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "さっさと",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "遠",
+              "r": "とお",
+              "g": "complement"
+            },
+            {
+              "t": "くへ",
+              "r": "",
+              "g": "complement"
+            },
+            {
+              "t": "失",
+              "r": "う",
+              "g": "predicate"
+            },
+            {
+              "t": "せろ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "畜",
+              "r": "ちく",
+              "g": "subject"
+            },
+            {
+              "t": "生",
+              "r": "しょう",
+              "g": "subject"
+            },
+            {
+              "t": "め",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "！』",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

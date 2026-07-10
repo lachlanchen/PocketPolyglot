@@ -1,0 +1,204 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "chumon-no-ooi-ryoriten",
+  "paragraph_id": "chumon-no-ooi-ryoriten-zh-p02596",
+  "source_text": "“你们学会什么了？”老猫问。",
+  "source_sha256": "714d9c3a181be8c126b79a038b95772c8e9ab324881f62074b59d0580154603c",
+  "source_normalized_sha256": "714d9c3a181be8c126b79a038b95772c8e9ab324881f62074b59d0580154603c",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 21,
+    "grammar_token_total": 21,
+    "unit_count": 2
+  },
+  "source_chunk_id": "chumon-no-ooi-ryoriten-chunk-2596",
+  "source_manifest_sha256": "55b839ea38cc607cade92b8ed3037a52e9fb70cd146c3559d9f71bcf686ef039",
+  "section": {
+    "id": "君鼠",
+    "title_zh": [
+      {
+        "t": "君",
+        "r": "jūn",
+        "g": "attributive"
+      },
+      {
+        "t": "鼠",
+        "r": "shǔ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "クねずみ",
+        "r": "",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "君鼠-intro",
+    "title_zh": [
+      {
+        "t": "君",
+        "r": "jūn",
+        "g": "attributive"
+      },
+      {
+        "t": "鼠",
+        "r": "shǔ",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "クねずみ",
+        "r": "",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "chumon-no-ooi-ryoriten-zh-p02596",
+    "source_text": "“你们学会什么了？”老猫问。",
+    "units": [
+      {
+        "source_text": "“你们学会什么了？”",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "们",
+            "r": "men",
+            "g": "subject"
+          },
+          {
+            "t": "学",
+            "r": "xué",
+            "g": "predicate"
+          },
+          {
+            "t": "会",
+            "r": "huì",
+            "g": "predicate"
+          },
+          {
+            "t": "什",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "object"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "なにか",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "習",
+              "r": "なら",
+              "g": "predicate"
+            },
+            {
+              "t": "った",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "か。」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "老猫问。",
+        "zh": [
+          {
+            "t": "老",
+            "r": "lǎo",
+            "g": "attributive"
+          },
+          {
+            "t": "猫",
+            "r": "māo",
+            "g": "subject"
+          },
+          {
+            "t": "问",
+            "r": "wèn",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "と",
+              "r": "",
+              "g": "function"
+            }
+          ],
+          [
+            {
+              "t": "ききました。",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

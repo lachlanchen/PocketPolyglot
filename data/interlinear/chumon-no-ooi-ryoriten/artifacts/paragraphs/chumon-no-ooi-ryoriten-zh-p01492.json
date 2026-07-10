@@ -1,0 +1,785 @@
+{
+  "schema_version": "0.1",
+  "kind": "interlinear_paragraph_artifact",
+  "book_id": "chumon-no-ooi-ryoriten",
+  "paragraph_id": "chumon-no-ooi-ryoriten-zh-p01492",
+  "source_text": "“你说什么？就两串？那还用说。两串黏米团子可以饶了你，可俺一听你说话就气不打一处来。你嘟囔什么呢？嗯？这个狗家伙。”",
+  "source_sha256": "93027fc2907dbd99890f42a61818e08c7c9067529956bdd8860798cf157f8e12",
+  "source_normalized_sha256": "93027fc2907dbd99890f42a61818e08c7c9067529956bdd8860798cf157f8e12",
+  "features": {
+    "translation": true,
+    "zh_ruby": true,
+    "ja_ruby": true,
+    "grammar": true,
+    "token_total": 118,
+    "grammar_token_total": 118,
+    "unit_count": 8
+  },
+  "source_chunk_id": "chumon-no-ooi-ryoriten-chunk-1492",
+  "source_manifest_sha256": "55b839ea38cc607cade92b8ed3037a52e9fb70cd146c3559d9f71bcf686ef039",
+  "section": {
+    "id": "祭之夜",
+    "title_zh": [
+      {
+        "t": "祭",
+        "r": "jì",
+        "g": "attributive"
+      },
+      {
+        "t": "之",
+        "r": "zhī",
+        "g": "function"
+      },
+      {
+        "t": "夜",
+        "r": "yè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "夜",
+        "r": "よる",
+        "g": "object"
+      }
+    ]
+  },
+  "subsection": {
+    "id": "main",
+    "title_zh": [],
+    "title_ja": []
+  },
+  "story": {
+    "id": "祭之夜-intro",
+    "title_zh": [
+      {
+        "t": "祭",
+        "r": "jì",
+        "g": "attributive"
+      },
+      {
+        "t": "之",
+        "r": "zhī",
+        "g": "function"
+      },
+      {
+        "t": "夜",
+        "r": "yè",
+        "g": "object"
+      }
+    ],
+    "title_ja": [
+      {
+        "t": "祭",
+        "r": "まつり",
+        "g": "attributive"
+      },
+      {
+        "t": "の",
+        "r": "",
+        "g": "function"
+      },
+      {
+        "t": "夜",
+        "r": "よる",
+        "g": "object"
+      }
+    ],
+    "place_zh": [],
+    "place_ja": []
+  },
+  "paragraph": {
+    "id": "chumon-no-ooi-ryoriten-zh-p01492",
+    "source_text": "“你说什么？就两串？那还用说。两串黏米团子可以饶了你，可俺一听你说话就气不打一处来。你嘟囔什么呢？嗯？这个狗家伙。”",
+    "units": [
+      {
+        "source_text": "“你说什么？",
+        "zh": [
+          {
+            "t": "“",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "什",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "object"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "「",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "おまえ",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "何",
+              "r": "なに",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "っているんだ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "就两串？",
+        "zh": [
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "两",
+            "r": "liǎng",
+            "g": "object"
+          },
+          {
+            "t": "串",
+            "r": "chuàn",
+            "g": "object"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "たった",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "二",
+              "r": "ふた",
+              "g": "object"
+            },
+            {
+              "t": "串",
+              "r": "くし",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "だけだと",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "那还用说。",
+        "zh": [
+          {
+            "t": "那",
+            "r": "nà",
+            "g": "subject"
+          },
+          {
+            "t": "还",
+            "r": "hái",
+            "g": "adverbial"
+          },
+          {
+            "t": "用",
+            "r": "yòng",
+            "g": "predicate"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "predicate"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "そんなこと",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "うまでもない",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "两串黏米团子可以饶了你，",
+        "zh": [
+          {
+            "t": "两",
+            "r": "liǎng",
+            "g": "subject"
+          },
+          {
+            "t": "串",
+            "r": "chuàn",
+            "g": "subject"
+          },
+          {
+            "t": "黏",
+            "r": "nián",
+            "g": "attributive"
+          },
+          {
+            "t": "米",
+            "r": "mǐ",
+            "g": "attributive"
+          },
+          {
+            "t": "团",
+            "r": "tuán",
+            "g": "subject"
+          },
+          {
+            "t": "子",
+            "r": "zi",
+            "g": "subject"
+          },
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "adverbial"
+          },
+          {
+            "t": "以",
+            "r": "yǐ",
+            "g": "adverbial"
+          },
+          {
+            "t": "饶",
+            "r": "ráo",
+            "g": "predicate"
+          },
+          {
+            "t": "了",
+            "r": "le",
+            "g": "predicate"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "object"
+          },
+          {
+            "t": "，",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "もち",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "団",
+              "r": "だん",
+              "g": "subject"
+            },
+            {
+              "t": "子",
+              "r": "ご",
+              "g": "subject"
+            },
+            {
+              "t": "二",
+              "r": "ふた",
+              "g": "subject"
+            },
+            {
+              "t": "串",
+              "r": "くし",
+              "g": "subject"
+            },
+            {
+              "t": "なら",
+              "r": "",
+              "g": "subject"
+            }
+          ],
+          [
+            {
+              "t": "おまえ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "許",
+              "r": "ゆる",
+              "g": "predicate"
+            },
+            {
+              "t": "してやってもいい",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "predicate"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "可俺一听你说话就气不打一处来。",
+        "zh": [
+          {
+            "t": "可",
+            "r": "kě",
+            "g": "function"
+          },
+          {
+            "t": "俺",
+            "r": "ǎn",
+            "g": "subject"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "adverbial"
+          },
+          {
+            "t": "听",
+            "r": "tīng",
+            "g": "adverbial"
+          },
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "object"
+          },
+          {
+            "t": "说",
+            "r": "shuō",
+            "g": "object"
+          },
+          {
+            "t": "话",
+            "r": "huà",
+            "g": "object"
+          },
+          {
+            "t": "就",
+            "r": "jiù",
+            "g": "adverbial"
+          },
+          {
+            "t": "气",
+            "r": "qì",
+            "g": "predicate"
+          },
+          {
+            "t": "不",
+            "r": "bù",
+            "g": "predicate"
+          },
+          {
+            "t": "打",
+            "r": "dǎ",
+            "g": "predicate"
+          },
+          {
+            "t": "一",
+            "r": "yī",
+            "g": "object"
+          },
+          {
+            "t": "处",
+            "r": "chù",
+            "g": "object"
+          },
+          {
+            "t": "来",
+            "r": "lái",
+            "g": "complement"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "だが",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "おれ",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "おまえ",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "話",
+              "r": "はなし",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "聞",
+              "r": "き",
+              "g": "adverbial"
+            },
+            {
+              "t": "いただけで",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "腹",
+              "r": "はら",
+              "g": "predicate"
+            },
+            {
+              "t": "が",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "立",
+              "r": "た",
+              "g": "predicate"
+            },
+            {
+              "t": "ってくる",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "你嘟囔什么呢？",
+        "zh": [
+          {
+            "t": "你",
+            "r": "nǐ",
+            "g": "subject"
+          },
+          {
+            "t": "嘟",
+            "r": "dū",
+            "g": "predicate"
+          },
+          {
+            "t": "囔",
+            "r": "nang",
+            "g": "predicate"
+          },
+          {
+            "t": "什",
+            "r": "shén",
+            "g": "object"
+          },
+          {
+            "t": "么",
+            "r": "me",
+            "g": "object"
+          },
+          {
+            "t": "呢",
+            "r": "ne",
+            "g": "function"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "おまえ",
+              "r": "",
+              "g": "subject"
+            },
+            {
+              "t": "、",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "何",
+              "r": "なに",
+              "g": "object"
+            },
+            {
+              "t": "を",
+              "r": "",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "ぶつぶつ",
+              "r": "",
+              "g": "adverbial"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "predicate"
+            },
+            {
+              "t": "っているんだ",
+              "r": "",
+              "g": "predicate"
+            },
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "嗯？",
+        "zh": [
+          {
+            "t": "嗯",
+            "r": "ńg",
+            "g": "predicate"
+          },
+          {
+            "t": "？",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "ん",
+              "r": "",
+              "g": "predicate"
+            }
+          ],
+          [
+            {
+              "t": "？",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      },
+      {
+        "source_text": "这个狗家伙。”",
+        "zh": [
+          {
+            "t": "这",
+            "r": "zhè",
+            "g": "attributive"
+          },
+          {
+            "t": "个",
+            "r": "ge",
+            "g": "attributive"
+          },
+          {
+            "t": "狗",
+            "r": "gǒu",
+            "g": "attributive"
+          },
+          {
+            "t": "家",
+            "r": "jiā",
+            "g": "object"
+          },
+          {
+            "t": "伙",
+            "r": "huo",
+            "g": "object"
+          },
+          {
+            "t": "。",
+            "r": "",
+            "g": "function"
+          },
+          {
+            "t": "”",
+            "r": "",
+            "g": "function"
+          }
+        ],
+        "ja": [
+          [
+            {
+              "t": "この",
+              "r": "",
+              "g": "attributive"
+            },
+            {
+              "t": "犬",
+              "r": "いぬ",
+              "g": "attributive"
+            },
+            {
+              "t": "野",
+              "r": "や",
+              "g": "object"
+            },
+            {
+              "t": "郎",
+              "r": "ろう",
+              "g": "object"
+            }
+          ],
+          [
+            {
+              "t": "め",
+              "r": "",
+              "g": "object"
+            },
+            {
+              "t": "。",
+              "r": "",
+              "g": "function"
+            },
+            {
+              "t": "」",
+              "r": "",
+              "g": "function"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}
