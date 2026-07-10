@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "book_id": "silk-roads",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_en_zh_sources_generated_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "en": "sources/world-history/silk-roads/en/The Silk Roads - A New History of the World.pdf",
+    "zh": "sources/world-history/silk-roads/zh/丝绸之路：一部全新的世界史.pdf"
+  },
+  "source_sha256": {
+    "en": "0660f60e5575d49319004e26d3d84b203fee52e6f84bff01a6e1f7beefa7ac27",
+    "zh": "fbe62c4fa8f607333119a0502e0237094c5144babdcbbabe25009d2d42dfc686"
+  },
+  "source_extraction": {
+    "en_cache": "books/silk-roads/work/source-extraction/en.raw.md",
+    "zh_cache": "books/silk-roads/work/source-extraction/zh.raw.md",
+    "note": "PDF cache uses embedded text when sufficient and OCR when not."
+  },
+  "markdown": {
+    "en": "books/silk-roads/markdown/en.md",
+    "zh": "books/silk-roads/markdown/zh.md"
+  },
+  "book_title_en": "The Silk Roads: A New History of the World",
+  "book_title_zh": "丝绸之路：一部全新的世界史",
+  "book_title_ja": "シルクロード：新しい世界史",
+  "book_title_zh_reading": "sī chóu zhī lù yī bù quán xīn de shì jiè shǐ",
+  "book_title_ja_reading": "シルクロード あたらしい せかいし",
+  "author": "Peter Frankopan",
+  "author_reading_zh": "bǐ dé fú lán kē pān",
+  "author_reading_ja": "ピーター フランコパン",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Peter Frankopan, The Silk Roads. English PDF is the alignment spine; Chinese scanned PDF is converted to OCR Markdown and used as a broad published translation reference; Japanese is generated in natural modern Japanese.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "global_ratio_window",
+  "chunks_jsonl": "books/silk-roads/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/silk-roads/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/silk-roads/work/trilingual/interlinear/chunks",
+  "preview_json": "books/silk-roads/work/trilingual/preview/silk-roads.partial.json",
+  "assembled_json": "books/silk-roads/work/trilingual/preview/silk-roads.partial.json",
+  "prepared_at": "2026-07-10T12:16:21.937760+00:00",
+  "chunk_count": 568,
+  "english_chapter_count": 27,
+  "chinese_reference_paragraph_count": 2287,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_world_history_trilingual.py",
+    "english_spine": "English PDF text is the chunk spine.",
+    "chinese_reference": "Chinese PDF was converted through text/OCR cache and is used as a broad ratio-window reference.",
+    "japanese_reference": "No published Japanese source configured; generate natural modern Japanese from English."
+  }
+}
