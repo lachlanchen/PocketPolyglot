@@ -522,11 +522,14 @@ def usable_title(value: Any) -> str:
         return ""
     lowered = text.lower()
     if lowered in {
+        "global-ratio-window",
         "source-edition-poetry-window",
         "source-edition-window",
         "reference-window",
         "source-window",
     }:
+        return ""
+    if lowered.startswith("global-") and lowered.endswith("-window"):
         return ""
     if lowered.startswith("source-edition-") and lowered.endswith("-window"):
         return ""

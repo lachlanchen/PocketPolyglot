@@ -15,6 +15,9 @@ Environment:
   CODEX_TIMEOUT_SECONDS=7200
   REPAIR_SLEEP_SECONDS=300
   WORKER_SCRIPT=scripts/interlinear/codex_trilingual_plain_json_worker.py
+  CODEX_EXEC_IGNORE_USER_CONFIG=0
+  CODEX_EXEC_IGNORE_RULES=0
+  CODEX_EXEC_DISABLE_FEATURES=
 USAGE
 }
 
@@ -48,6 +51,9 @@ reasoning="${REASONING:-medium}"
 codex_timeout_seconds="${CODEX_TIMEOUT_SECONDS:-7200}"
 repair_sleep_seconds="${REPAIR_SLEEP_SECONDS:-300}"
 worker_script="${WORKER_SCRIPT:-scripts/interlinear/codex_trilingual_plain_json_worker.py}"
+codex_exec_ignore_user_config="${CODEX_EXEC_IGNORE_USER_CONFIG:-0}"
+codex_exec_ignore_rules="${CODEX_EXEC_IGNORE_RULES:-0}"
+codex_exec_disable_features="${CODEX_EXEC_DISABLE_FEATURES:-}"
 
 work_root="books/$book_id/work/trilingual/stall-repair"
 candidate_dir="books/$book_id/work/trilingual/parallel-json/candidates"
@@ -60,6 +66,9 @@ cat > "$run_script" <<EOF
 #!/usr/bin/env bash
 set -euo pipefail
 cd '$root'
+export CODEX_EXEC_IGNORE_USER_CONFIG='$codex_exec_ignore_user_config'
+export CODEX_EXEC_IGNORE_RULES='$codex_exec_ignore_rules'
+export CODEX_EXEC_DISABLE_FEATURES='$codex_exec_disable_features'
 
 merge_once() {
   python scripts/interlinear/merge_trilingual_json_candidates.py \\
@@ -138,4 +147,7 @@ tmux new-session -d -s "$session" -n stall-repair "bash '$run_script' 2>&1 | tee
 echo "tmux: $session"
 echo "book_id: $book_id"
 echo "writer_session: $writer_session"
+echo "codex_exec_ignore_user_config: $codex_exec_ignore_user_config"
+echo "codex_exec_ignore_rules: $codex_exec_ignore_rules"
+echo "codex_exec_disable_features: $codex_exec_disable_features"
 echo "run_script: $run_script"

@@ -20,6 +20,9 @@ Environment:
   MERGE_INTERVAL=180
   COMPILE_INTERVAL_SECONDS=1200
   WORKER_SCRIPT=scripts/interlinear/codex_trilingual_plain_json_worker.py
+  CODEX_EXEC_IGNORE_USER_CONFIG=0
+  CODEX_EXEC_IGNORE_RULES=0
+  CODEX_EXEC_DISABLE_FEATURES=
   BACKFILL_GRAMMAR_AFTER_MERGE=1
   RETRY_FAILED=0
   FAILED_RETRY_AGE_SECONDS=1800
@@ -66,6 +69,9 @@ usage_limit_max_wait_seconds="${CODEX_USAGE_LIMIT_MAX_WAIT_SECONDS:-0}"
 merge_interval="${MERGE_INTERVAL:-180}"
 compile_interval_seconds="${COMPILE_INTERVAL_SECONDS:-1200}"
 worker_script="${WORKER_SCRIPT:-scripts/interlinear/codex_trilingual_plain_json_worker.py}"
+codex_exec_ignore_user_config="${CODEX_EXEC_IGNORE_USER_CONFIG:-0}"
+codex_exec_ignore_rules="${CODEX_EXEC_IGNORE_RULES:-0}"
+codex_exec_disable_features="${CODEX_EXEC_DISABLE_FEATURES:-}"
 
 work_root="books/$book_id/work/trilingual/parallel-json"
 candidate_dir="$work_root/candidates"
@@ -94,6 +100,9 @@ set -euo pipefail
 cd '$root'
 export CODEX_USAGE_LIMIT_WAIT_SECONDS='$usage_limit_wait_seconds'
 export CODEX_USAGE_LIMIT_MAX_WAIT_SECONDS='$usage_limit_max_wait_seconds'
+export CODEX_EXEC_IGNORE_USER_CONFIG='$codex_exec_ignore_user_config'
+export CODEX_EXEC_IGNORE_RULES='$codex_exec_ignore_rules'
+export CODEX_EXEC_DISABLE_FEATURES='$codex_exec_disable_features'
 mkdir -p '$work_root/logs' '$candidate_dir' '$merged_dir' '$raw_chunk_dir'
 
 gen_pids=()
@@ -201,6 +210,9 @@ if [[ "${START_STALL_REPAIR:-1}" != "0" ]]; then
     MODEL="$model" \
       REASONING="$reasoning" \
       CODEX_TIMEOUT_SECONDS="$codex_timeout_seconds" \
+      CODEX_EXEC_IGNORE_USER_CONFIG="$codex_exec_ignore_user_config" \
+      CODEX_EXEC_IGNORE_RULES="$codex_exec_ignore_rules" \
+      CODEX_EXEC_DISABLE_FEATURES="$codex_exec_disable_features" \
       REPAIR_SLEEP_SECONDS="${REPAIR_SLEEP_SECONDS:-300}" \
       WORKER_SCRIPT="$worker_script" \
       bash scripts/interlinear/start_trilingual_stall_repair_tmux.sh "$book_id" "$session" "$repair_session"
@@ -213,7 +225,7 @@ shell_quote() {
 
 if [[ "${START_AUTOREPAIR_COMPANION:-1}" != "0" ]]; then
   companion_session="${AUTOREPAIR_SESSION:-${session}-autorepair}"
-  restart_cmd="START_AUTOREPAIR_COMPANION=0 START_STALL_REPAIR=1 RETRY_FAILED=1 START_INDEX={first_missing_index} WORKERS=$(shell_quote "$workers") MODEL=$(shell_quote "$model") REASONING=$(shell_quote "$reasoning") CODEX_TIMEOUT_SECONDS=$(shell_quote "$codex_timeout_seconds") MERGE_INTERVAL=$(shell_quote "$merge_interval") COMPILE_INTERVAL_SECONDS=$(shell_quote "$compile_interval_seconds") WORKER_SCRIPT=$(shell_quote "$worker_script") bash scripts/interlinear/start_trilingual_book_tmux.sh $(shell_quote "$book_id") $(shell_quote "$session")"
+  restart_cmd="START_AUTOREPAIR_COMPANION=0 START_STALL_REPAIR=1 RETRY_FAILED=1 START_INDEX={first_missing_index} WORKERS=$(shell_quote "$workers") MODEL=$(shell_quote "$model") REASONING=$(shell_quote "$reasoning") CODEX_TIMEOUT_SECONDS=$(shell_quote "$codex_timeout_seconds") MERGE_INTERVAL=$(shell_quote "$merge_interval") COMPILE_INTERVAL_SECONDS=$(shell_quote "$compile_interval_seconds") WORKER_SCRIPT=$(shell_quote "$worker_script") CODEX_EXEC_IGNORE_USER_CONFIG=$(shell_quote "$codex_exec_ignore_user_config") CODEX_EXEC_IGNORE_RULES=$(shell_quote "$codex_exec_ignore_rules") CODEX_EXEC_DISABLE_FEATURES=$(shell_quote "$codex_exec_disable_features") bash scripts/interlinear/start_trilingual_book_tmux.sh $(shell_quote "$book_id") $(shell_quote "$session")"
   bash scripts/interlinear/start_autorepair_companion_tmux.sh \
     --name "$session" \
     --session "$companion_session" \
@@ -241,6 +253,9 @@ echo "workers: $workers"
 echo "model: $model"
 echo "reasoning: $reasoning"
 echo "worker_script: $worker_script"
+echo "codex_exec_ignore_user_config: $codex_exec_ignore_user_config"
+echo "codex_exec_ignore_rules: $codex_exec_ignore_rules"
+echo "codex_exec_disable_features: $codex_exec_disable_features"
 echo "start_index: $start_index"
 echo "end_index: $end_index"
 echo "max_chunks_per_worker: $max_chunks_per_worker"

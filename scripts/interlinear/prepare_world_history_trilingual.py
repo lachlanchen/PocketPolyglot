@@ -541,7 +541,7 @@ def make_chunks(
                         "english": {"available": True, "chapter": chapter["title"], "text": en_ref},
                         "zh_primary": {
                             "available": bool(zh_ref),
-                            "chapter": "global-ratio-window",
+                            "chapter": "",
                             "text": zh_ref,
                             "quality": "ocr_published_translation_reference" if zh_ref else "generate_from_english_spine",
                         },
@@ -683,7 +683,7 @@ def prepare_book(config: HistoryBook, args: argparse.Namespace) -> dict[str, Any
             "script": "scripts/interlinear/prepare_world_history_trilingual.py",
             "english_spine": "English PDF text is the chunk spine.",
             "chinese_reference": (
-                "Chinese PDF was converted through text/OCR cache and is used as a broad ratio-window reference."
+                "Chinese PDF was converted through text/OCR cache and is used as a bounded ratio-window reference."
                 if zh_paragraphs
                 else "No Chinese source configured; generate Chinese from English."
             ),
@@ -704,7 +704,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--book-id", action="append", choices=sorted(BOOKS), help="Prepare one book; repeatable.")
     parser.add_argument("--max-chunk-chars", type=int, default=2600)
-    parser.add_argument("--reference-chars", type=int, default=9000)
+    parser.add_argument("--reference-chars", type=int, default=3500)
     args = parser.parse_args()
 
     selected = args.book_id or list(BOOKS)
