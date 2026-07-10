@@ -25,10 +25,11 @@ Share exports remain:
 ## Share Eligibility
 
 Nutstore Share is for maximum-language public editions only. Do not sync
-pair-only fallback PDFs to Share when a richer language layer is expected.
-`chumon-no-ooi-ryoriten` / `要求太多的餐馆` / `注文の多い料理店` specifically
-must wait for an `en-jp-zh` maximum-language export before it is synced to
-Share. Its current `jp-zh` PDFs may remain in Projects only.
+lower-priority fallback PDFs when a richer language family already exists for
+the same book. If the richest completed family is `jp-zh`, then `jp-zh` is the
+maximum-language public edition and should be synced to Share. Later, if an
+`en-jp-zh` or quadrilingual edition is completed, remove the older lower-family
+Share PDFs during the new sync.
 
 ## Environment Overrides
 
