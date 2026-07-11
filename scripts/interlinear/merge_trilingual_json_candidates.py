@@ -12,11 +12,15 @@ from pathlib import Path
 from typing import Any
 
 from codex_chunk_worker import load_chunks
-from validate_trilingual_interlinear_json import validate_chunk
+from validate_trilingual_interlinear_json import sanitize_source_controls, validate_chunk
 
 
 def load_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def load_source_chunks(path: Path) -> list[dict[str, Any]]:
+    return [sanitize_source_controls(chunk) for chunk in load_chunks(path)]
 
 
 def is_valid_existing(path: Path, source: dict[str, Any]) -> bool:
@@ -38,7 +42,7 @@ def main() -> int:
     parser.add_argument("--max-merge", type=int, default=0)
     args = parser.parse_args()
 
-    sources = load_chunks(Path(args.chunks_jsonl))
+    sources = load_source_chunks(Path(args.chunks_jsonl))
     candidate_dir = Path(args.candidate_dir) / "accepted"
     canonical_dir = Path(args.canonical_dir)
     merged_dir = Path(args.merged_dir)

@@ -14,7 +14,7 @@ from pathlib import Path
 from typing import Any
 
 from codex_chunk_worker import extract_json, load_chunks, mentions_usage_limit, run_codex
-from validate_trilingual_interlinear_json import validate_chunk
+from validate_trilingual_interlinear_json import sanitize_source_controls, validate_chunk
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -24,6 +24,10 @@ def load_json(path: Path) -> dict[str, Any]:
 def write_json(path: Path, data: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def load_source_chunks(path: Path) -> list[dict[str, Any]]:
+    return [sanitize_source_controls(chunk) for chunk in load_chunks(path)]
 
 
 def status_record(status: str, **extra: Any) -> dict[str, Any]:
@@ -199,7 +203,7 @@ def main() -> int:
     args = parser.parse_args()
 
     cwd = Path.cwd()
-    chunks = load_chunks(Path(args.chunks_jsonl))
+    chunks = load_source_chunks(Path(args.chunks_jsonl))
     canonical_dir = Path(args.canonical_dir)
     candidate_dir = Path(args.candidate_dir)
     work_dir = Path(args.work_dir)

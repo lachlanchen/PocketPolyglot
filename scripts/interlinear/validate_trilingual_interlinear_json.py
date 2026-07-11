@@ -40,6 +40,31 @@ GRAMMAR_ROLES = {
 ALLOWED_TEXT_CONTROLS = {"\t", "\n", "\r"}
 
 
+def strip_forbidden_control_chars(text: str) -> str:
+    return "".join(
+        ch for ch in str(text or "")
+        if ord(ch) >= 32 or ch in ALLOWED_TEXT_CONTROLS
+    )
+
+
+def sanitize_source_controls(value: Any) -> Any:
+    """Return source metadata with forbidden C0 controls removed.
+
+    Source chunks are trusted pipeline inputs. A few PDF extraction paths leak
+    BEL/NUL-style controls into chapter metadata, which makes every generated
+    candidate fail for a reason the model cannot repair. Reader-facing result
+    JSON is still validated strictly by validate_no_control_chars().
+    """
+
+    if isinstance(value, str):
+        return strip_forbidden_control_chars(value)
+    if isinstance(value, list):
+        return [sanitize_source_controls(item) for item in value]
+    if isinstance(value, dict):
+        return {key: sanitize_source_controls(child) for key, child in value.items()}
+    return value
+
+
 def control_char_positions(text: str) -> list[tuple[int, int]]:
     return [
         (index, ord(ch))
@@ -282,6 +307,7 @@ def validate_unit(unit: Any, where: str, errors: list[str]) -> tuple[str, str, s
 
 
 def validate_chunk(source: dict[str, Any], result: dict[str, Any]) -> list[str]:
+    source = sanitize_source_controls(source)
     errors: list[str] = []
     validate_no_control_chars(source, "source", errors)
     validate_no_control_chars(result, "result", errors)
