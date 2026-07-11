@@ -1,0 +1,8455 @@
+{
+  "schema_version": "0.1",
+  "mode": "trilingual_standard",
+  "chunk_id": "good-strategy-bad-strategy-c0167",
+  "chapter": {
+    "id": "chapter-003",
+    "number": 3,
+    "title": {
+      "en": [
+        {
+          "t": "PART",
+          "g": "subject"
+        },
+        {
+          "t": " "
+        },
+        {
+          "t": "II",
+          "g": "predicate"
+        }
+      ],
+      "zh": [
+        {
+          "t": "第",
+          "r": "dì",
+          "g": "subject"
+        },
+        {
+          "t": "3",
+          "g": "topic"
+        },
+        {
+          "t": "章",
+          "r": "zhāng",
+          "g": "object"
+        }
+      ],
+      "ja": [
+        {
+          "t": "第",
+          "r": "だい",
+          "g": "subject"
+        },
+        {
+          "t": "3",
+          "g": "attributive"
+        },
+        {
+          "t": "章",
+          "r": "しょう",
+          "g": "complement"
+        }
+      ]
+    }
+  },
+  "paragraphs": [
+    {
+      "id": "good-strategy-bad-strategy-s003-p00625",
+      "source_en": "As is often the case, restating a general question in specific terms helped. We quickly developed an answer that has since stood up to scrutiny by a number of other technical groups: Good hardware and software engineers are both expensive. The big difference lies in the cost of prototyping, upgrading, and, especially, the cost of fixing a mistake. Design always involves a certain amount of trial and error, and hardware trials and errors are much more costly. If a hardware design doesn’t work correctly, it can mean months of expensive redesign. If software doesn’t work, a software engineer fixes the problem by typing new instructions into a file, recompiling, and trying again in a few minutes or a few days. And software can be quickly fixed and upgraded even after the product has shipped.",
+      "units": [
+        {
+          "source_en": "As is often the case, restating a general question in specific terms helped. ",
+          "en": [
+            {
+              "t": "As",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "is",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "often",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "case",
+              "g": "object"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "restating",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "a",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "general",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "question",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "in",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "specific",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "terms",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "helped",
+              "g": "predicate"
+            },
+            {
+              "t": "."
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "通",
+              "r": "tōng",
+              "g": "subject"
+            },
+            {
+              "t": "常",
+              "r": "cháng",
+              "g": "subject"
+            },
+            {
+              "t": "情",
+              "r": "qíng",
+              "g": "subject"
+            },
+            {
+              "t": "况",
+              "r": "kuàng",
+              "g": "subject"
+            },
+            {
+              "t": "下",
+              "r": "xià",
+              "g": "predicate"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "把",
+              "r": "bǎ",
+              "g": "adverbial"
+            },
+            {
+              "t": "一",
+              "r": "yī",
+              "g": "attributive"
+            },
+            {
+              "t": "个",
+              "r": "gè",
+              "g": "attributive"
+            },
+            {
+              "t": "笼",
+              "r": "lóng",
+              "g": "attributive"
+            },
+            {
+              "t": "统",
+              "r": "tǒng",
+              "g": "attributive"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "问",
+              "r": "wèn",
+              "g": "predicate"
+            },
+            {
+              "t": "题",
+              "r": "tí",
+              "g": "object"
+            },
+            {
+              "t": "重",
+              "r": "zhòng",
+              "g": "object"
+            },
+            {
+              "t": "新",
+              "r": "xīn",
+              "g": "object"
+            },
+            {
+              "t": "表",
+              "r": "biǎo",
+              "g": "object"
+            },
+            {
+              "t": "述",
+              "r": "shù",
+              "g": "object"
+            },
+            {
+              "t": "为",
+              "r": "wèi",
+              "g": "object"
+            },
+            {
+              "t": "具",
+              "r": "jù",
+              "g": "object"
+            },
+            {
+              "t": "体",
+              "r": "tǐ",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "问",
+              "r": "wèn",
+              "g": "predicate"
+            },
+            {
+              "t": "题",
+              "r": "tí",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "会",
+              "r": "huì",
+              "g": "object"
+            },
+            {
+              "t": "有",
+              "r": "yǒu",
+              "g": "predicate"
+            },
+            {
+              "t": "所",
+              "r": "suǒ",
+              "g": "object"
+            },
+            {
+              "t": "帮",
+              "r": "bāng",
+              "g": "object"
+            },
+            {
+              "t": "助",
+              "r": "zhù",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "よくあることだが、",
+              "g": "subject"
+            },
+            {
+              "t": "一",
+              "r": "いっ",
+              "g": "subject"
+            },
+            {
+              "t": "般",
+              "r": "ぱん",
+              "g": "subject"
+            },
+            {
+              "t": "的",
+              "r": "てき",
+              "g": "subject"
+            },
+            {
+              "t": "な",
+              "g": "subject"
+            },
+            {
+              "t": "問",
+              "r": "と",
+              "g": "attributive"
+            },
+            {
+              "t": "いを",
+              "g": "object"
+            },
+            {
+              "t": "具",
+              "r": "ぐた",
+              "g": "attributive"
+            },
+            {
+              "t": "体",
+              "r": "いて",
+              "g": "attributive"
+            },
+            {
+              "t": "的",
+              "r": "き",
+              "g": "attributive"
+            },
+            {
+              "t": "な",
+              "g": "attributive"
+            },
+            {
+              "t": "言",
+              "r": "こと",
+              "g": "attributive"
+            },
+            {
+              "t": "葉",
+              "r": "ば",
+              "g": "attributive"
+            },
+            {
+              "t": "で",
+              "g": "adverbial"
+            },
+            {
+              "t": "言",
+              "r": "い",
+              "g": "attributive"
+            },
+            {
+              "t": "い",
+              "g": "attributive"
+            },
+            {
+              "t": "直",
+              "r": "なお",
+              "g": "attributive"
+            },
+            {
+              "t": "すことが",
+              "g": "subject"
+            },
+            {
+              "t": "助",
+              "r": "たす",
+              "g": "attributive"
+            },
+            {
+              "t": "けになった。",
+              "g": "adverbial"
+            }
+          ]
+        },
+        {
+          "source_en": "We quickly developed an answer that has since stood up to scrutiny by a number of other technical groups: Good hardware and software engineers are both expensive. ",
+          "en": [
+            {
+              "t": "We",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "quickly",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "developed",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "an",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "answer",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "that",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "has",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "since",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "stood",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "up",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "to",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "scrutiny",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "by",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "a",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "number",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "other",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "technical",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "groups",
+              "g": "object"
+            },
+            {
+              "t": ":"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Good",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "hardware",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "software",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "engineers",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "are",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "both",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "expensive",
+              "g": "object"
+            },
+            {
+              "t": "."
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "我",
+              "r": "wǒ",
+              "g": "subject"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "subject"
+            },
+            {
+              "t": "很",
+              "r": "hěn",
+              "g": "subject"
+            },
+            {
+              "t": "快",
+              "r": "kuài",
+              "g": "subject"
+            },
+            {
+              "t": "得",
+              "r": "dé",
+              "g": "predicate"
+            },
+            {
+              "t": "出",
+              "r": "chū",
+              "g": "predicate"
+            },
+            {
+              "t": "了",
+              "r": "le",
+              "g": "predicate"
+            },
+            {
+              "t": "一",
+              "r": "yī",
+              "g": "subject"
+            },
+            {
+              "t": "个",
+              "r": "gè",
+              "g": "subject"
+            },
+            {
+              "t": "答",
+              "r": "dá",
+              "g": "predicate"
+            },
+            {
+              "t": "案",
+              "r": "àn",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "而",
+              "r": "ér",
+              "g": "object"
+            },
+            {
+              "t": "这",
+              "r": "zhè",
+              "g": "object"
+            },
+            {
+              "t": "个",
+              "r": "gè",
+              "g": "object"
+            },
+            {
+              "t": "答",
+              "r": "dá",
+              "g": "predicate"
+            },
+            {
+              "t": "案",
+              "r": "àn",
+              "g": "object"
+            },
+            {
+              "t": "后",
+              "r": "hòu",
+              "g": "object"
+            },
+            {
+              "t": "来",
+              "r": "lái",
+              "g": "complement"
+            },
+            {
+              "t": "经",
+              "r": "jīng",
+              "g": "adverbial"
+            },
+            {
+              "t": "受",
+              "r": "shòu",
+              "g": "object"
+            },
+            {
+              "t": "住",
+              "r": "zhù",
+              "g": "complement"
+            },
+            {
+              "t": "了",
+              "r": "le",
+              "g": "complement"
+            },
+            {
+              "t": "许",
+              "r": "xǔ",
+              "g": "object"
+            },
+            {
+              "t": "多",
+              "r": "duō",
+              "g": "object"
+            },
+            {
+              "t": "其",
+              "r": "qí",
+              "g": "object"
+            },
+            {
+              "t": "他",
+              "r": "tā",
+              "g": "object"
+            },
+            {
+              "t": "技",
+              "r": "jì",
+              "g": "object"
+            },
+            {
+              "t": "术",
+              "r": "shù",
+              "g": "object"
+            },
+            {
+              "t": "团",
+              "r": "tuán",
+              "g": "object"
+            },
+            {
+              "t": "队",
+              "r": "duì",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "审",
+              "r": "shěn",
+              "g": "object"
+            },
+            {
+              "t": "查",
+              "r": "chá",
+              "g": "object"
+            },
+            {
+              "t": "："
+            },
+            {
+              "t": "优",
+              "r": "yōu",
+              "g": "object"
+            },
+            {
+              "t": "秀",
+              "r": "xiù",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "硬",
+              "r": "yìng",
+              "g": "object"
+            },
+            {
+              "t": "件",
+              "r": "jiàn",
+              "g": "object"
+            },
+            {
+              "t": "工",
+              "r": "gōng",
+              "g": "object"
+            },
+            {
+              "t": "程",
+              "r": "chéng",
+              "g": "object"
+            },
+            {
+              "t": "师",
+              "r": "shī",
+              "g": "object"
+            },
+            {
+              "t": "和",
+              "r": "hé",
+              "g": "object"
+            },
+            {
+              "t": "软",
+              "r": "ruǎn",
+              "g": "object"
+            },
+            {
+              "t": "件",
+              "r": "jiàn",
+              "g": "object"
+            },
+            {
+              "t": "工",
+              "r": "gōng",
+              "g": "object"
+            },
+            {
+              "t": "程",
+              "r": "chéng",
+              "g": "object"
+            },
+            {
+              "t": "师",
+              "r": "shī",
+              "g": "object"
+            },
+            {
+              "t": "都",
+              "r": "dōu",
+              "g": "adverbial"
+            },
+            {
+              "t": "很",
+              "r": "hěn",
+              "g": "object"
+            },
+            {
+              "t": "昂",
+              "r": "áng",
+              "g": "object"
+            },
+            {
+              "t": "贵",
+              "r": "guì",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "たちはすぐに",
+              "g": "subject"
+            },
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "subject"
+            },
+            {
+              "t": "つの",
+              "g": "attributive"
+            },
+            {
+              "t": "答",
+              "r": "こた",
+              "g": "subject"
+            },
+            {
+              "t": "えを",
+              "g": "object"
+            },
+            {
+              "t": "導",
+              "r": "みちび",
+              "g": "subject"
+            },
+            {
+              "t": "き",
+              "g": "subject"
+            },
+            {
+              "t": "出",
+              "r": "きだ",
+              "g": "subject"
+            },
+            {
+              "t": "した。その",
+              "g": "attributive"
+            },
+            {
+              "t": "答",
+              "r": "こた",
+              "g": "attributive"
+            },
+            {
+              "t": "えはその",
+              "g": "subject"
+            },
+            {
+              "t": "後",
+              "r": "のち",
+              "g": "attributive"
+            },
+            {
+              "t": "、"
+            },
+            {
+              "t": "多",
+              "r": "おお",
+              "g": "attributive"
+            },
+            {
+              "t": "くのほかの",
+              "g": "attributive"
+            },
+            {
+              "t": "技",
+              "r": "ぎじ",
+              "g": "attributive"
+            },
+            {
+              "t": "術",
+              "r": "ゅつ",
+              "g": "attributive"
+            },
+            {
+              "t": "グループの",
+              "g": "attributive"
+            },
+            {
+              "t": "精",
+              "r": "せい",
+              "g": "attributive"
+            },
+            {
+              "t": "査",
+              "r": "さ",
+              "g": "attributive"
+            },
+            {
+              "t": "にも",
+              "g": "adverbial"
+            },
+            {
+              "t": "耐",
+              "r": "た",
+              "g": "attributive"
+            },
+            {
+              "t": "えてきた。",
+              "g": "attributive"
+            },
+            {
+              "t": "優",
+              "r": "ゆう",
+              "g": "attributive"
+            },
+            {
+              "t": "秀",
+              "r": "しゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "なハードウェア",
+              "g": "attributive"
+            },
+            {
+              "t": "技",
+              "r": "ぎじ",
+              "g": "attributive"
+            },
+            {
+              "t": "術",
+              "r": "ゅつ",
+              "g": "attributive"
+            },
+            {
+              "t": "者",
+              "r": "しゃ",
+              "g": "attributive"
+            },
+            {
+              "t": "もソフトウェア",
+              "g": "attributive"
+            },
+            {
+              "t": "技",
+              "r": "ぎじ",
+              "g": "attributive"
+            },
+            {
+              "t": "術",
+              "r": "ゅつ",
+              "g": "attributive"
+            },
+            {
+              "t": "者",
+              "r": "しゃ",
+              "g": "attributive"
+            },
+            {
+              "t": "も、どちらも",
+              "g": "attributive"
+            },
+            {
+              "t": "高",
+              "r": "たか",
+              "g": "attributive"
+            },
+            {
+              "t": "くつく。",
+              "g": "complement"
+            }
+          ]
+        },
+        {
+          "source_en": "The big difference lies in the cost of prototyping, upgrading, and, especially, the cost of fixing a mistake. ",
+          "en": [
+            {
+              "t": "The",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "big",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "difference",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "lies",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "in",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "cost",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "prototyping",
+              "g": "predicate"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "upgrading",
+              "g": "predicate"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "especially",
+              "g": "object"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "cost",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "fixing",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "a",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "mistake",
+              "g": "object"
+            },
+            {
+              "t": "."
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "最",
+              "r": "zuì",
+              "g": "subject"
+            },
+            {
+              "t": "大",
+              "r": "dà",
+              "g": "subject"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "差",
+              "r": "chà",
+              "g": "subject"
+            },
+            {
+              "t": "别",
+              "r": "bié",
+              "g": "subject"
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "于",
+              "r": "yú",
+              "g": "attributive"
+            },
+            {
+              "t": "原",
+              "r": "yuán",
+              "g": "attributive"
+            },
+            {
+              "t": "型",
+              "r": "xíng",
+              "g": "attributive"
+            },
+            {
+              "t": "制",
+              "r": "zhì",
+              "g": "attributive"
+            },
+            {
+              "t": "作",
+              "r": "zuò",
+              "g": "predicate"
+            },
+            {
+              "t": "、"
+            },
+            {
+              "t": "升",
+              "r": "shēng",
+              "g": "object"
+            },
+            {
+              "t": "级",
+              "r": "jí",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "以",
+              "r": "yǐ",
+              "g": "object"
+            },
+            {
+              "t": "及",
+              "r": "jí",
+              "g": "object"
+            },
+            {
+              "t": "尤",
+              "r": "yóu",
+              "g": "object"
+            },
+            {
+              "t": "其",
+              "r": "qí",
+              "g": "object"
+            },
+            {
+              "t": "是",
+              "r": "shì",
+              "g": "predicate"
+            },
+            {
+              "t": "修",
+              "r": "xiū",
+              "g": "object"
+            },
+            {
+              "t": "正",
+              "r": "zhèng",
+              "g": "object"
+            },
+            {
+              "t": "错",
+              "r": "cuò",
+              "g": "object"
+            },
+            {
+              "t": "误",
+              "r": "wù",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "成",
+              "r": "chéng",
+              "g": "predicate"
+            },
+            {
+              "t": "本",
+              "r": "běn",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "大",
+              "r": "おお",
+              "g": "subject"
+            },
+            {
+              "t": "きな",
+              "g": "subject"
+            },
+            {
+              "t": "違",
+              "r": "ちが",
+              "g": "subject"
+            },
+            {
+              "t": "いは、",
+              "g": "subject"
+            },
+            {
+              "t": "試",
+              "r": "し",
+              "g": "attributive"
+            },
+            {
+              "t": "作",
+              "r": "さく",
+              "g": "attributive"
+            },
+            {
+              "t": "、アップグレード、そしてとりわけ",
+              "g": "adverbial"
+            },
+            {
+              "t": "誤",
+              "r": "あやま",
+              "g": "attributive"
+            },
+            {
+              "t": "りを",
+              "g": "object"
+            },
+            {
+              "t": "修",
+              "r": "しゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "正",
+              "r": "せい",
+              "g": "attributive"
+            },
+            {
+              "t": "するコストにある。",
+              "g": "adverbial"
+            }
+          ]
+        },
+        {
+          "source_en": "Design always involves a certain amount of trial and error, and hardware trials and errors are much more costly. ",
+          "en": [
+            {
+              "t": "Design",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "always",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "involves",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "a",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "certain",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "amount",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "trial",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "error",
+              "g": "subject"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "hardware",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "trials",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "errors",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "are",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "much",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "more",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "costly",
+              "g": "object"
+            },
+            {
+              "t": "."
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "设",
+              "r": "shè",
+              "g": "subject"
+            },
+            {
+              "t": "计",
+              "r": "jì",
+              "g": "subject"
+            },
+            {
+              "t": "总",
+              "r": "zǒng",
+              "g": "subject"
+            },
+            {
+              "t": "是",
+              "r": "shì",
+              "g": "predicate"
+            },
+            {
+              "t": "包",
+              "r": "bāo",
+              "g": "object"
+            },
+            {
+              "t": "含",
+              "r": "hán",
+              "g": "object"
+            },
+            {
+              "t": "一",
+              "r": "yī",
+              "g": "object"
+            },
+            {
+              "t": "定",
+              "r": "dìng",
+              "g": "object"
+            },
+            {
+              "t": "程",
+              "r": "chéng",
+              "g": "object"
+            },
+            {
+              "t": "度",
+              "r": "dù",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "试",
+              "r": "shì",
+              "g": "object"
+            },
+            {
+              "t": "错",
+              "r": "cuò",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "而",
+              "r": "ér",
+              "g": "object"
+            },
+            {
+              "t": "硬",
+              "r": "yìng",
+              "g": "object"
+            },
+            {
+              "t": "件",
+              "r": "jiàn",
+              "g": "object"
+            },
+            {
+              "t": "上",
+              "r": "shàng",
+              "g": "complement"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "试",
+              "r": "shì",
+              "g": "object"
+            },
+            {
+              "t": "错",
+              "r": "cuò",
+              "g": "object"
+            },
+            {
+              "t": "成",
+              "r": "chéng",
+              "g": "predicate"
+            },
+            {
+              "t": "本",
+              "r": "běn",
+              "g": "object"
+            },
+            {
+              "t": "要",
+              "r": "yào",
+              "g": "object"
+            },
+            {
+              "t": "高",
+              "r": "gāo",
+              "g": "object"
+            },
+            {
+              "t": "得",
+              "r": "dé",
+              "g": "complement"
+            },
+            {
+              "t": "多",
+              "r": "duō",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "設",
+              "r": "せっ",
+              "g": "subject"
+            },
+            {
+              "t": "計",
+              "r": "けい",
+              "g": "subject"
+            },
+            {
+              "t": "にはつねにある",
+              "g": "subject"
+            },
+            {
+              "t": "程",
+              "r": "てい",
+              "g": "object"
+            },
+            {
+              "t": "度",
+              "r": "ど",
+              "g": "object"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "試",
+              "r": "しこ",
+              "g": "object"
+            },
+            {
+              "t": "行",
+              "r": "うさ",
+              "g": "object"
+            },
+            {
+              "t": "錯",
+              "r": "く",
+              "g": "object"
+            },
+            {
+              "t": "誤",
+              "r": "ご",
+              "g": "object"
+            },
+            {
+              "t": "が",
+              "g": "subject"
+            },
+            {
+              "t": "伴",
+              "r": "ともな",
+              "g": "object"
+            },
+            {
+              "t": "うが、ハードウェアでの",
+              "g": "subject"
+            },
+            {
+              "t": "試",
+              "r": "しこ",
+              "g": "object"
+            },
+            {
+              "t": "行",
+              "r": "うさ",
+              "g": "object"
+            },
+            {
+              "t": "錯",
+              "r": "く",
+              "g": "complement"
+            },
+            {
+              "t": "誤",
+              "r": "ご",
+              "g": "complement"
+            },
+            {
+              "t": "ははるかに",
+              "g": "subject"
+            },
+            {
+              "t": "高",
+              "r": "たか",
+              "g": "complement"
+            },
+            {
+              "t": "くつく。",
+              "g": "complement"
+            }
+          ]
+        },
+        {
+          "source_en": "If a hardware design doesn’t work correctly, it can mean months of expensive redesign. ",
+          "en": [
+            {
+              "t": "If",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "a",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "hardware",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "design",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "doesn’t",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "work",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "correctly",
+              "g": "adverbial"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "it",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "can",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "mean",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "months",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "expensive",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "redesign",
+              "g": "object"
+            },
+            {
+              "t": "."
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "如",
+              "r": "rú",
+              "g": "subject"
+            },
+            {
+              "t": "果",
+              "r": "guǒ",
+              "g": "subject"
+            },
+            {
+              "t": "一",
+              "r": "yī",
+              "g": "subject"
+            },
+            {
+              "t": "个",
+              "r": "gè",
+              "g": "subject"
+            },
+            {
+              "t": "硬",
+              "r": "yìng",
+              "g": "subject"
+            },
+            {
+              "t": "件",
+              "r": "jiàn",
+              "g": "attributive"
+            },
+            {
+              "t": "设",
+              "r": "shè",
+              "g": "attributive"
+            },
+            {
+              "t": "计",
+              "r": "jì",
+              "g": "attributive"
+            },
+            {
+              "t": "不",
+              "r": "bù",
+              "g": "attributive"
+            },
+            {
+              "t": "能",
+              "r": "néng",
+              "g": "attributive"
+            },
+            {
+              "t": "正",
+              "r": "zhèng",
+              "g": "attributive"
+            },
+            {
+              "t": "常",
+              "r": "cháng",
+              "g": "attributive"
+            },
+            {
+              "t": "工",
+              "r": "gōng",
+              "g": "attributive"
+            },
+            {
+              "t": "作",
+              "r": "zuò",
+              "g": "predicate"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "就",
+              "r": "jiù",
+              "g": "adverbial"
+            },
+            {
+              "t": "可",
+              "r": "kě",
+              "g": "object"
+            },
+            {
+              "t": "能",
+              "r": "néng",
+              "g": "object"
+            },
+            {
+              "t": "意",
+              "r": "yì",
+              "g": "object"
+            },
+            {
+              "t": "味",
+              "r": "wèi",
+              "g": "object"
+            },
+            {
+              "t": "着",
+              "r": "zhe",
+              "g": "complement"
+            },
+            {
+              "t": "数",
+              "r": "shù",
+              "g": "object"
+            },
+            {
+              "t": "月",
+              "r": "yuè",
+              "g": "object"
+            },
+            {
+              "t": "昂",
+              "r": "áng",
+              "g": "object"
+            },
+            {
+              "t": "贵",
+              "r": "guì",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "重",
+              "r": "zhòng",
+              "g": "object"
+            },
+            {
+              "t": "新",
+              "r": "xīn",
+              "g": "object"
+            },
+            {
+              "t": "设",
+              "r": "shè",
+              "g": "object"
+            },
+            {
+              "t": "计",
+              "r": "jì",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "ハードウェアの",
+              "g": "attributive"
+            },
+            {
+              "t": "設",
+              "r": "せっ",
+              "g": "subject"
+            },
+            {
+              "t": "計",
+              "r": "けい",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "g": "subject"
+            },
+            {
+              "t": "正",
+              "r": "ただ",
+              "g": "subject"
+            },
+            {
+              "t": "しく",
+              "g": "predicate"
+            },
+            {
+              "t": "動",
+              "r": "どう",
+              "g": "attributive"
+            },
+            {
+              "t": "作",
+              "r": "さ",
+              "g": "attributive"
+            },
+            {
+              "t": "しなければ、",
+              "g": "attributive"
+            },
+            {
+              "t": "何",
+              "r": "なんか",
+              "g": "attributive"
+            },
+            {
+              "t": "か",
+              "g": "attributive"
+            },
+            {
+              "t": "月",
+              "r": "げつ",
+              "g": "attributive"
+            },
+            {
+              "t": "にも",
+              "g": "adverbial"
+            },
+            {
+              "t": "及",
+              "r": "およ",
+              "g": "attributive"
+            },
+            {
+              "t": "ぶ",
+              "g": "predicate"
+            },
+            {
+              "t": "高",
+              "r": "こう",
+              "g": "object"
+            },
+            {
+              "t": "額",
+              "r": "がく",
+              "g": "object"
+            },
+            {
+              "t": "な",
+              "g": "object"
+            },
+            {
+              "t": "再",
+              "r": "さい",
+              "g": "object"
+            },
+            {
+              "t": "設",
+              "r": "せっ",
+              "g": "complement"
+            },
+            {
+              "t": "計",
+              "r": "けい",
+              "g": "complement"
+            },
+            {
+              "t": "が",
+              "g": "subject"
+            },
+            {
+              "t": "必",
+              "r": "ひつ",
+              "g": "complement"
+            },
+            {
+              "t": "要",
+              "r": "よう",
+              "g": "complement"
+            },
+            {
+              "t": "になることがある。",
+              "g": "subject"
+            }
+          ]
+        },
+        {
+          "source_en": "If software doesn’t work, a software engineer fixes the problem by typing new instructions into a file, recompiling, and trying again in a few minutes or a few days. ",
+          "en": [
+            {
+              "t": "If",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "software",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "doesn’t",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "work",
+              "g": "adverbial"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "a",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "software",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "engineer",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "fixes",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "problem",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "by",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "typing",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "new",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "instructions",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "into",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "a",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "file",
+              "g": "adverbial"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "recompiling",
+              "g": "predicate"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "trying",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "again",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "in",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "a",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "few",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "minutes",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "or",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "a",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "few",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "days",
+              "g": "object"
+            },
+            {
+              "t": "."
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "如",
+              "r": "rú",
+              "g": "subject"
+            },
+            {
+              "t": "果",
+              "r": "guǒ",
+              "g": "subject"
+            },
+            {
+              "t": "软",
+              "r": "ruǎn",
+              "g": "subject"
+            },
+            {
+              "t": "件",
+              "r": "jiàn",
+              "g": "subject"
+            },
+            {
+              "t": "不",
+              "r": "bù",
+              "g": "subject"
+            },
+            {
+              "t": "能",
+              "r": "néng",
+              "g": "subject"
+            },
+            {
+              "t": "工",
+              "r": "gōng",
+              "g": "subject"
+            },
+            {
+              "t": "作",
+              "r": "zuò",
+              "g": "predicate"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "软",
+              "r": "ruǎn",
+              "g": "object"
+            },
+            {
+              "t": "件",
+              "r": "jiàn",
+              "g": "object"
+            },
+            {
+              "t": "工",
+              "r": "gōng",
+              "g": "object"
+            },
+            {
+              "t": "程",
+              "r": "chéng",
+              "g": "object"
+            },
+            {
+              "t": "师",
+              "r": "shī",
+              "g": "object"
+            },
+            {
+              "t": "可",
+              "r": "kě",
+              "g": "object"
+            },
+            {
+              "t": "以",
+              "r": "yǐ",
+              "g": "object"
+            },
+            {
+              "t": "通",
+              "r": "tōng",
+              "g": "object"
+            },
+            {
+              "t": "过",
+              "r": "guò",
+              "g": "complement"
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "文",
+              "r": "wén",
+              "g": "object"
+            },
+            {
+              "t": "件",
+              "r": "jiàn",
+              "g": "object"
+            },
+            {
+              "t": "中",
+              "r": "zhōng",
+              "g": "object"
+            },
+            {
+              "t": "输",
+              "r": "shū",
+              "g": "object"
+            },
+            {
+              "t": "入",
+              "r": "rù",
+              "g": "complement"
+            },
+            {
+              "t": "新",
+              "r": "xīn",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "指",
+              "r": "zhǐ",
+              "g": "object"
+            },
+            {
+              "t": "令",
+              "r": "lìng",
+              "g": "predicate"
+            },
+            {
+              "t": "、"
+            },
+            {
+              "t": "重",
+              "r": "zhòng",
+              "g": "object"
+            },
+            {
+              "t": "新",
+              "r": "xīn",
+              "g": "object"
+            },
+            {
+              "t": "编",
+              "r": "biān",
+              "g": "object"
+            },
+            {
+              "t": "译",
+              "r": "yì",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "并",
+              "r": "bìng",
+              "g": "adverbial"
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "几",
+              "r": "jǐ",
+              "g": "object"
+            },
+            {
+              "t": "分",
+              "r": "fēn",
+              "g": "object"
+            },
+            {
+              "t": "钟",
+              "r": "zhōng",
+              "g": "object"
+            },
+            {
+              "t": "或",
+              "r": "huò",
+              "g": "object"
+            },
+            {
+              "t": "几",
+              "r": "jǐ",
+              "g": "object"
+            },
+            {
+              "t": "天",
+              "r": "tiān",
+              "g": "object"
+            },
+            {
+              "t": "内",
+              "r": "nèi",
+              "g": "object"
+            },
+            {
+              "t": "再",
+              "r": "zài",
+              "g": "object"
+            },
+            {
+              "t": "次",
+              "r": "cì",
+              "g": "object"
+            },
+            {
+              "t": "尝",
+              "r": "cháng",
+              "g": "object"
+            },
+            {
+              "t": "试",
+              "r": "shì",
+              "g": "object"
+            },
+            {
+              "t": "来",
+              "r": "lái",
+              "g": "complement"
+            },
+            {
+              "t": "修",
+              "r": "xiū",
+              "g": "object"
+            },
+            {
+              "t": "正",
+              "r": "zhèng",
+              "g": "object"
+            },
+            {
+              "t": "问",
+              "r": "wèn",
+              "g": "predicate"
+            },
+            {
+              "t": "题",
+              "r": "tí",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "ソフトウェアが",
+              "g": "subject"
+            },
+            {
+              "t": "動",
+              "r": "うご",
+              "g": "subject"
+            },
+            {
+              "t": "かなければ、ソフトウェア",
+              "g": "subject"
+            },
+            {
+              "t": "技",
+              "r": "ぎじ",
+              "g": "subject"
+            },
+            {
+              "t": "術",
+              "r": "ゅつ",
+              "g": "subject"
+            },
+            {
+              "t": "者",
+              "r": "しゃ",
+              "g": "subject"
+            },
+            {
+              "t": "はファイルに",
+              "g": "subject"
+            },
+            {
+              "t": "新",
+              "r": "あたら",
+              "g": "subject"
+            },
+            {
+              "t": "しい",
+              "g": "subject"
+            },
+            {
+              "t": "命",
+              "r": "めい",
+              "g": "attributive"
+            },
+            {
+              "t": "令",
+              "r": "れい",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "g": "object"
+            },
+            {
+              "t": "入",
+              "r": "にゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "力",
+              "r": "りょく",
+              "g": "attributive"
+            },
+            {
+              "t": "し、",
+              "g": "attributive"
+            },
+            {
+              "t": "再",
+              "r": "さい",
+              "g": "attributive"
+            },
+            {
+              "t": "コンパイルして、",
+              "g": "attributive"
+            },
+            {
+              "t": "数",
+              "r": "すう",
+              "g": "attributive"
+            },
+            {
+              "t": "分",
+              "r": "ふん",
+              "g": "attributive"
+            },
+            {
+              "t": "後",
+              "r": "ご",
+              "g": "attributive"
+            },
+            {
+              "t": "あるいは",
+              "g": "subject"
+            },
+            {
+              "t": "数",
+              "r": "すう",
+              "g": "attributive"
+            },
+            {
+              "t": "日",
+              "r": "じつ",
+              "g": "attributive"
+            },
+            {
+              "t": "後",
+              "r": "ご",
+              "g": "attributive"
+            },
+            {
+              "t": "に",
+              "g": "adverbial"
+            },
+            {
+              "t": "再",
+              "r": "さい",
+              "g": "attributive"
+            },
+            {
+              "t": "試",
+              "r": "し",
+              "g": "attributive"
+            },
+            {
+              "t": "行",
+              "r": "こう",
+              "g": "attributive"
+            },
+            {
+              "t": "することで",
+              "g": "adverbial"
+            },
+            {
+              "t": "問",
+              "r": "もん",
+              "g": "attributive"
+            },
+            {
+              "t": "題",
+              "r": "だい",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "g": "object"
+            },
+            {
+              "t": "修",
+              "r": "しゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "正",
+              "r": "せい",
+              "g": "attributive"
+            },
+            {
+              "t": "できる。",
+              "g": "adverbial"
+            }
+          ]
+        },
+        {
+          "source_en": "And software can be quickly fixed and upgraded even after the product has shipped.",
+          "en": [
+            {
+              "t": "And",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "software",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "can",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "be",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "quickly",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "fixed",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "upgraded",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "even",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "after",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "product",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "has",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "shipped",
+              "g": "predicate"
+            },
+            {
+              "t": "."
+            }
+          ],
+          "zh": [
+            {
+              "t": "而",
+              "r": "ér",
+              "g": "subject"
+            },
+            {
+              "t": "且",
+              "r": "qiě",
+              "g": "subject"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "即",
+              "r": "jí",
+              "g": "subject"
+            },
+            {
+              "t": "使",
+              "r": "shǐ",
+              "g": "predicate"
+            },
+            {
+              "t": "产",
+              "r": "chǎn",
+              "g": "object"
+            },
+            {
+              "t": "品",
+              "r": "pǐn",
+              "g": "object"
+            },
+            {
+              "t": "已",
+              "r": "yǐ",
+              "g": "adverbial"
+            },
+            {
+              "t": "经",
+              "r": "jīng",
+              "g": "adverbial"
+            },
+            {
+              "t": "发",
+              "r": "fā",
+              "g": "object"
+            },
+            {
+              "t": "货",
+              "r": "huò",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "软",
+              "r": "ruǎn",
+              "g": "object"
+            },
+            {
+              "t": "件",
+              "r": "jiàn",
+              "g": "object"
+            },
+            {
+              "t": "也",
+              "r": "yě",
+              "g": "adverbial"
+            },
+            {
+              "t": "可",
+              "r": "kě",
+              "g": "object"
+            },
+            {
+              "t": "以",
+              "r": "yǐ",
+              "g": "object"
+            },
+            {
+              "t": "迅",
+              "r": "xùn",
+              "g": "object"
+            },
+            {
+              "t": "速",
+              "r": "sù",
+              "g": "object"
+            },
+            {
+              "t": "修",
+              "r": "xiū",
+              "g": "object"
+            },
+            {
+              "t": "复",
+              "r": "fù",
+              "g": "object"
+            },
+            {
+              "t": "和",
+              "r": "hé",
+              "g": "object"
+            },
+            {
+              "t": "升",
+              "r": "shēng",
+              "g": "object"
+            },
+            {
+              "t": "级",
+              "r": "jí",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "しかもソフトウェアは、",
+              "g": "subject"
+            },
+            {
+              "t": "製",
+              "r": "せい",
+              "g": "subject"
+            },
+            {
+              "t": "品",
+              "r": "ひん",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "g": "subject"
+            },
+            {
+              "t": "出",
+              "r": "しゅ",
+              "g": "attributive"
+            },
+            {
+              "t": "荷",
+              "r": "っか",
+              "g": "attributive"
+            },
+            {
+              "t": "された",
+              "g": "predicate"
+            },
+            {
+              "t": "後",
+              "r": "あと",
+              "g": "attributive"
+            },
+            {
+              "t": "でさえ、すばやく",
+              "g": "adverbial"
+            },
+            {
+              "t": "修",
+              "r": "しゅう",
+              "g": "complement"
+            },
+            {
+              "t": "正",
+              "r": "せい",
+              "g": "complement"
+            },
+            {
+              "t": "しアップグレードすることができる。",
+              "g": "subject"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "good-strategy-bad-strategy-s003-p00626",
+      "source_en": "Thus, software’s advantage comes from the rapidity of the software development cycle—the process of moving from concept to prototype and the process of finding and correcting errors. If engineers never made mistakes, the costs of achieving a complex design in hardware and software might be comparable. But given that they do make mistakes, software became the much-preferred medium (unless the cutting-edge speed of pure hardware was required).",
+      "units": [
+        {
+          "source_en": "Thus, software’s advantage comes from the rapidity of the software development cycle—the process of moving from concept to prototype and the process of finding and correcting errors. ",
+          "en": [
+            {
+              "t": "Thus",
+              "g": "subject"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "software’s",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "advantage",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "comes",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "from",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "rapidity",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "software",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "development",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "cycle",
+              "g": "subject"
+            },
+            {
+              "t": "—"
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "process",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "moving",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "from",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "concept",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "to",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "prototype",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "process",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "finding",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "correcting",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "errors",
+              "g": "object"
+            },
+            {
+              "t": "."
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "因",
+              "r": "yīn",
+              "g": "adverbial"
+            },
+            {
+              "t": "此",
+              "r": "cǐ",
+              "g": "subject"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "软",
+              "r": "ruǎn",
+              "g": "subject"
+            },
+            {
+              "t": "件",
+              "r": "jiàn",
+              "g": "subject"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "优",
+              "r": "yōu",
+              "g": "subject"
+            },
+            {
+              "t": "势",
+              "r": "shì",
+              "g": "subject"
+            },
+            {
+              "t": "来",
+              "r": "lái",
+              "g": "complement"
+            },
+            {
+              "t": "自",
+              "r": "zì",
+              "g": "object"
+            },
+            {
+              "t": "软",
+              "r": "ruǎn",
+              "g": "object"
+            },
+            {
+              "t": "件",
+              "r": "jiàn",
+              "g": "object"
+            },
+            {
+              "t": "开",
+              "r": "kāi",
+              "g": "complement"
+            },
+            {
+              "t": "发",
+              "r": "fā",
+              "g": "object"
+            },
+            {
+              "t": "周",
+              "r": "zhōu",
+              "g": "object"
+            },
+            {
+              "t": "期",
+              "r": "qī",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "快",
+              "r": "kuài",
+              "g": "object"
+            },
+            {
+              "t": "速",
+              "r": "sù",
+              "g": "object"
+            },
+            {
+              "t": "性",
+              "r": "xìng",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "也",
+              "r": "yě",
+              "g": "adverbial"
+            },
+            {
+              "t": "就",
+              "r": "jiù",
+              "g": "adverbial"
+            },
+            {
+              "t": "是",
+              "r": "shì",
+              "g": "predicate"
+            },
+            {
+              "t": "从",
+              "r": "cóng",
+              "g": "adverbial"
+            },
+            {
+              "t": "概",
+              "r": "gài",
+              "g": "object"
+            },
+            {
+              "t": "念",
+              "r": "niàn",
+              "g": "object"
+            },
+            {
+              "t": "推",
+              "r": "tuī",
+              "g": "object"
+            },
+            {
+              "t": "进",
+              "r": "jìn",
+              "g": "object"
+            },
+            {
+              "t": "到",
+              "r": "dào",
+              "g": "adverbial"
+            },
+            {
+              "t": "原",
+              "r": "yuán",
+              "g": "object"
+            },
+            {
+              "t": "型",
+              "r": "xíng",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "过",
+              "r": "guò",
+              "g": "complement"
+            },
+            {
+              "t": "程",
+              "r": "chéng",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "以",
+              "r": "yǐ",
+              "g": "object"
+            },
+            {
+              "t": "及",
+              "r": "jí",
+              "g": "object"
+            },
+            {
+              "t": "发",
+              "r": "fā",
+              "g": "object"
+            },
+            {
+              "t": "现",
+              "r": "xiàn",
+              "g": "object"
+            },
+            {
+              "t": "并",
+              "r": "bìng",
+              "g": "adverbial"
+            },
+            {
+              "t": "纠",
+              "r": "jiū",
+              "g": "object"
+            },
+            {
+              "t": "正",
+              "r": "zhèng",
+              "g": "object"
+            },
+            {
+              "t": "错",
+              "r": "cuò",
+              "g": "object"
+            },
+            {
+              "t": "误",
+              "r": "wù",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "过",
+              "r": "guò",
+              "g": "complement"
+            },
+            {
+              "t": "程",
+              "r": "chéng",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "したがって、ソフトウェアの",
+              "g": "subject"
+            },
+            {
+              "t": "優",
+              "r": "ゆう",
+              "g": "subject"
+            },
+            {
+              "t": "位",
+              "r": "いせ",
+              "g": "subject"
+            },
+            {
+              "t": "性",
+              "r": "い",
+              "g": "subject"
+            },
+            {
+              "t": "は、ソフトウェア",
+              "g": "subject"
+            },
+            {
+              "t": "開",
+              "r": "かい",
+              "g": "subject"
+            },
+            {
+              "t": "発",
+              "r": "はつ",
+              "g": "subject"
+            },
+            {
+              "t": "サイクルの",
+              "g": "attributive"
+            },
+            {
+              "t": "速",
+              "r": "はや",
+              "g": "subject"
+            },
+            {
+              "t": "さ、すなわち",
+              "g": "attributive"
+            },
+            {
+              "t": "構",
+              "r": "こう",
+              "g": "attributive"
+            },
+            {
+              "t": "想",
+              "r": "そう",
+              "g": "attributive"
+            },
+            {
+              "t": "から",
+              "g": "adverbial"
+            },
+            {
+              "t": "試",
+              "r": "し",
+              "g": "attributive"
+            },
+            {
+              "t": "作",
+              "r": "さく",
+              "g": "attributive"
+            },
+            {
+              "t": "品",
+              "r": "ひん",
+              "g": "attributive"
+            },
+            {
+              "t": "へ",
+              "g": "adverbial"
+            },
+            {
+              "t": "進",
+              "r": "すす",
+              "g": "attributive"
+            },
+            {
+              "t": "む",
+              "g": "predicate"
+            },
+            {
+              "t": "過",
+              "r": "か",
+              "g": "attributive"
+            },
+            {
+              "t": "程",
+              "r": "てい",
+              "g": "attributive"
+            },
+            {
+              "t": "と、",
+              "g": "adverbial"
+            },
+            {
+              "t": "誤",
+              "r": "あやま",
+              "g": "attributive"
+            },
+            {
+              "t": "りを",
+              "g": "object"
+            },
+            {
+              "t": "見",
+              "r": "み",
+              "g": "attributive"
+            },
+            {
+              "t": "つけて",
+              "g": "attributive"
+            },
+            {
+              "t": "修",
+              "r": "しゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "正",
+              "r": "せい",
+              "g": "attributive"
+            },
+            {
+              "t": "する",
+              "g": "predicate"
+            },
+            {
+              "t": "過",
+              "r": "か",
+              "g": "complement"
+            },
+            {
+              "t": "程",
+              "r": "てい",
+              "g": "complement"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "速",
+              "r": "はや",
+              "g": "complement"
+            },
+            {
+              "t": "さから",
+              "g": "adverbial"
+            },
+            {
+              "t": "生",
+              "r": "う",
+              "g": "complement"
+            },
+            {
+              "t": "まれる。",
+              "g": "complement"
+            }
+          ]
+        },
+        {
+          "source_en": "If engineers never made mistakes, the costs of achieving a complex design in hardware and software might be comparable. ",
+          "en": [
+            {
+              "t": "If",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "engineers",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "never",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "made",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "mistakes",
+              "g": "object"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "costs",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "achieving",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "a",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "complex",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "design",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "in",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "hardware",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "software",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "might",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "be",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "comparable",
+              "g": "object"
+            },
+            {
+              "t": "."
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "如",
+              "r": "rú",
+              "g": "subject"
+            },
+            {
+              "t": "果",
+              "r": "guǒ",
+              "g": "subject"
+            },
+            {
+              "t": "工",
+              "r": "gōng",
+              "g": "subject"
+            },
+            {
+              "t": "程",
+              "r": "chéng",
+              "g": "subject"
+            },
+            {
+              "t": "师",
+              "r": "shī",
+              "g": "subject"
+            },
+            {
+              "t": "从",
+              "r": "cóng",
+              "g": "adverbial"
+            },
+            {
+              "t": "不",
+              "r": "bù",
+              "g": "attributive"
+            },
+            {
+              "t": "犯",
+              "r": "fàn",
+              "g": "attributive"
+            },
+            {
+              "t": "错",
+              "r": "cuò",
+              "g": "attributive"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "那",
+              "r": "nà",
+              "g": "attributive"
+            },
+            {
+              "t": "么",
+              "r": "me",
+              "g": "attributive"
+            },
+            {
+              "t": "用",
+              "r": "yòng",
+              "g": "attributive"
+            },
+            {
+              "t": "硬",
+              "r": "yìng",
+              "g": "attributive"
+            },
+            {
+              "t": "件",
+              "r": "jiàn",
+              "g": "attributive"
+            },
+            {
+              "t": "和",
+              "r": "hé",
+              "g": "attributive"
+            },
+            {
+              "t": "软",
+              "r": "ruǎn",
+              "g": "attributive"
+            },
+            {
+              "t": "件",
+              "r": "jiàn",
+              "g": "attributive"
+            },
+            {
+              "t": "实",
+              "r": "shí",
+              "g": "attributive"
+            },
+            {
+              "t": "现",
+              "r": "xiàn",
+              "g": "attributive"
+            },
+            {
+              "t": "复",
+              "r": "fù",
+              "g": "attributive"
+            },
+            {
+              "t": "杂",
+              "r": "zá",
+              "g": "attributive"
+            },
+            {
+              "t": "设",
+              "r": "shè",
+              "g": "attributive"
+            },
+            {
+              "t": "计",
+              "r": "jì",
+              "g": "attributive"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "成",
+              "r": "chéng",
+              "g": "predicate"
+            },
+            {
+              "t": "本",
+              "r": "běn",
+              "g": "object"
+            },
+            {
+              "t": "也",
+              "r": "yě",
+              "g": "adverbial"
+            },
+            {
+              "t": "许",
+              "r": "xǔ",
+              "g": "object"
+            },
+            {
+              "t": "会",
+              "r": "huì",
+              "g": "object"
+            },
+            {
+              "t": "相",
+              "r": "xiāng",
+              "g": "object"
+            },
+            {
+              "t": "差",
+              "r": "chà",
+              "g": "object"
+            },
+            {
+              "t": "无",
+              "r": "wú",
+              "g": "object"
+            },
+            {
+              "t": "几",
+              "r": "jǐ",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "もし",
+              "g": "subject"
+            },
+            {
+              "t": "技",
+              "r": "ぎじ",
+              "g": "subject"
+            },
+            {
+              "t": "術",
+              "r": "ゅつ",
+              "g": "subject"
+            },
+            {
+              "t": "者",
+              "r": "しゃ",
+              "g": "subject"
+            },
+            {
+              "t": "が",
+              "g": "subject"
+            },
+            {
+              "t": "決",
+              "r": "けっ",
+              "g": "subject"
+            },
+            {
+              "t": "して",
+              "g": "subject"
+            },
+            {
+              "t": "間",
+              "r": "まち",
+              "g": "attributive"
+            },
+            {
+              "t": "違",
+              "r": "が",
+              "g": "attributive"
+            },
+            {
+              "t": "いを",
+              "g": "object"
+            },
+            {
+              "t": "犯",
+              "r": "おか",
+              "g": "attributive"
+            },
+            {
+              "t": "さないなら、ハードウェアで",
+              "g": "adverbial"
+            },
+            {
+              "t": "複",
+              "r": "ふく",
+              "g": "attributive"
+            },
+            {
+              "t": "雑",
+              "r": "ざつ",
+              "g": "attributive"
+            },
+            {
+              "t": "な",
+              "g": "attributive"
+            },
+            {
+              "t": "設",
+              "r": "せっ",
+              "g": "attributive"
+            },
+            {
+              "t": "計",
+              "r": "けい",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "g": "object"
+            },
+            {
+              "t": "実",
+              "r": "じつ",
+              "g": "attributive"
+            },
+            {
+              "t": "現",
+              "r": "げん",
+              "g": "attributive"
+            },
+            {
+              "t": "するコストと、ソフトウェアで",
+              "g": "adverbial"
+            },
+            {
+              "t": "実",
+              "r": "じつ",
+              "g": "attributive"
+            },
+            {
+              "t": "現",
+              "r": "げん",
+              "g": "attributive"
+            },
+            {
+              "t": "するコストは",
+              "g": "subject"
+            },
+            {
+              "t": "同",
+              "r": "どう",
+              "g": "attributive"
+            },
+            {
+              "t": "程",
+              "r": "てい",
+              "g": "attributive"
+            },
+            {
+              "t": "度",
+              "r": "ど",
+              "g": "attributive"
+            },
+            {
+              "t": "だったかもしれない。",
+              "g": "complement"
+            }
+          ]
+        },
+        {
+          "source_en": "But given that they do make mistakes, software became the much-preferred medium (unless the cutting-edge speed of pure hardware was required).",
+          "en": [
+            {
+              "t": "But",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "given",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "that",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "they",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "do",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "make",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "mistakes",
+              "g": "object"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "software",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "became",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "much-preferred",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "medium",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "("
+            },
+            {
+              "t": "unless",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "cutting-edge",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "speed",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "pure",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "hardware",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "was",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "required",
+              "g": "predicate"
+            },
+            {
+              "t": ")."
+            }
+          ],
+          "zh": [
+            {
+              "t": "但",
+              "r": "dàn",
+              "g": "subject"
+            },
+            {
+              "t": "是",
+              "r": "shì",
+              "g": "predicate"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "既",
+              "r": "jì",
+              "g": "object"
+            },
+            {
+              "t": "然",
+              "r": "rán",
+              "g": "adverbial"
+            },
+            {
+              "t": "他",
+              "r": "tā",
+              "g": "object"
+            },
+            {
+              "t": "们",
+              "r": "men",
+              "g": "object"
+            },
+            {
+              "t": "确",
+              "r": "què",
+              "g": "object"
+            },
+            {
+              "t": "实",
+              "r": "shí",
+              "g": "object"
+            },
+            {
+              "t": "会",
+              "r": "huì",
+              "g": "object"
+            },
+            {
+              "t": "犯",
+              "r": "fàn",
+              "g": "object"
+            },
+            {
+              "t": "错",
+              "r": "cuò",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "软",
+              "r": "ruǎn",
+              "g": "object"
+            },
+            {
+              "t": "件",
+              "r": "jiàn",
+              "g": "object"
+            },
+            {
+              "t": "就",
+              "r": "jiù",
+              "g": "adverbial"
+            },
+            {
+              "t": "成",
+              "r": "chéng",
+              "g": "predicate"
+            },
+            {
+              "t": "了",
+              "r": "le",
+              "g": "complement"
+            },
+            {
+              "t": "更",
+              "r": "gèng",
+              "g": "object"
+            },
+            {
+              "t": "受",
+              "r": "shòu",
+              "g": "object"
+            },
+            {
+              "t": "青",
+              "r": "qīng",
+              "g": "object"
+            },
+            {
+              "t": "睐",
+              "r": "lài",
+              "g": "object"
+            },
+            {
+              "t": "得",
+              "r": "dé",
+              "g": "complement"
+            },
+            {
+              "t": "多",
+              "r": "duō",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "媒",
+              "r": "méi",
+              "g": "object"
+            },
+            {
+              "t": "介",
+              "r": "jiè",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "除",
+              "r": "chú",
+              "g": "object"
+            },
+            {
+              "t": "非",
+              "r": "fēi",
+              "g": "object"
+            },
+            {
+              "t": "必",
+              "r": "bì",
+              "g": "object"
+            },
+            {
+              "t": "须",
+              "r": "xū",
+              "g": "object"
+            },
+            {
+              "t": "依",
+              "r": "yī",
+              "g": "object"
+            },
+            {
+              "t": "靠",
+              "r": "kào",
+              "g": "object"
+            },
+            {
+              "t": "纯",
+              "r": "chún",
+              "g": "object"
+            },
+            {
+              "t": "硬",
+              "r": "yìng",
+              "g": "object"
+            },
+            {
+              "t": "件",
+              "r": "jiàn",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "最",
+              "r": "zuì",
+              "g": "object"
+            },
+            {
+              "t": "前",
+              "r": "qián",
+              "g": "object"
+            },
+            {
+              "t": "沿",
+              "r": "yán",
+              "g": "object"
+            },
+            {
+              "t": "速",
+              "r": "sù",
+              "g": "object"
+            },
+            {
+              "t": "度",
+              "r": "dù",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "しかし",
+              "g": "subject"
+            },
+            {
+              "t": "実",
+              "r": "じっ",
+              "g": "subject"
+            },
+            {
+              "t": "際",
+              "r": "さい",
+              "g": "subject"
+            },
+            {
+              "t": "には",
+              "g": "subject"
+            },
+            {
+              "t": "間",
+              "r": "まち",
+              "g": "subject"
+            },
+            {
+              "t": "違",
+              "r": "が",
+              "g": "subject"
+            },
+            {
+              "t": "いを",
+              "g": "object"
+            },
+            {
+              "t": "犯",
+              "r": "おか",
+              "g": "subject"
+            },
+            {
+              "t": "す",
+              "g": "predicate"
+            },
+            {
+              "t": "以",
+              "r": "い",
+              "g": "attributive"
+            },
+            {
+              "t": "上",
+              "r": "じょう",
+              "g": "attributive"
+            },
+            {
+              "t": "、"
+            },
+            {
+              "t": "純",
+              "r": "じゅん",
+              "g": "attributive"
+            },
+            {
+              "t": "粋",
+              "r": "すい",
+              "g": "attributive"
+            },
+            {
+              "t": "なハードウェアの",
+              "g": "attributive"
+            },
+            {
+              "t": "最",
+              "r": "さい",
+              "g": "attributive"
+            },
+            {
+              "t": "先",
+              "r": "せん",
+              "g": "attributive"
+            },
+            {
+              "t": "端",
+              "r": "たん",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "速",
+              "r": "そく",
+              "g": "attributive"
+            },
+            {
+              "t": "度",
+              "r": "ど",
+              "g": "attributive"
+            },
+            {
+              "t": "が",
+              "g": "subject"
+            },
+            {
+              "t": "必",
+              "r": "ひつ",
+              "g": "attributive"
+            },
+            {
+              "t": "要",
+              "r": "よう",
+              "g": "attributive"
+            },
+            {
+              "t": "な",
+              "g": "attributive"
+            },
+            {
+              "t": "場",
+              "r": "ば",
+              "g": "attributive"
+            },
+            {
+              "t": "合",
+              "r": "あい",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "g": "object"
+            },
+            {
+              "t": "除",
+              "r": "のぞ",
+              "g": "attributive"
+            },
+            {
+              "t": "けば、ソフトウェアははるかに",
+              "g": "subject"
+            },
+            {
+              "t": "好",
+              "r": "この",
+              "g": "attributive"
+            },
+            {
+              "t": "まれる",
+              "g": "predicate"
+            },
+            {
+              "t": "媒",
+              "r": "ばい",
+              "g": "complement"
+            },
+            {
+              "t": "体",
+              "r": "たい",
+              "g": "complement"
+            },
+            {
+              "t": "になった。",
+              "g": "adverbial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "good-strategy-bad-strategy-s003-p00627",
+      "source_en": "In 1996, soon after my conversation with Jean-Bernard Lévy in Paris, Intel chairman Andy Grove published his insightful book Only the Paranoid Survive. Grove drew on his expertise in both business and technology to forcefully describe how “inflection points” can disrupt whole industries. In particular, he described the “inflection” that had transformed the computer industry from a “vertical” to a “horizontal” structure. In the old vertical structure, each computer maker made its own processors, memory, hard drives, keyboards, and monitors, and each wrote its own systems and applications software. The buyer signed up with a maker and bought everything from that manufacturer. You couldn’t plug an HP disk drive into a DEC computer. By contrast, in the new horizontal structure, each of those activities had become an industry in its own right.",
+      "units": [
+        {
+          "source_en": "In 1996, soon after my conversation with Jean-Bernard Lévy in Paris, Intel chairman Andy Grove published his insightful book Only the Paranoid Survive. ",
+          "en": [
+            {
+              "t": "In",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "1996",
+              "g": "adverbial"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "soon",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "after",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "my",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "conversation",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "with",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Jean-Bernard",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "L",
+              "g": "adverbial"
+            },
+            {
+              "t": "é"
+            },
+            {
+              "t": "vy",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "in",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Paris",
+              "g": "adverbial"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Intel",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "chairman",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Andy",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Grove",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "published",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "his",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "insightful",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "book",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Only",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Paranoid",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Survive",
+              "g": "object"
+            },
+            {
+              "t": "."
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "1996",
+              "g": "subject"
+            },
+            {
+              "t": "年",
+              "r": "nián",
+              "g": "subject"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "我",
+              "r": "wǒ",
+              "g": "subject"
+            },
+            {
+              "t": "与",
+              "r": "yǔ",
+              "g": "subject"
+            },
+            {
+              "t": "让",
+              "r": "ràng",
+              "g": "subject"
+            },
+            {
+              "t": "-"
+            },
+            {
+              "t": "贝",
+              "r": "bèi",
+              "g": "subject"
+            },
+            {
+              "t": "尔",
+              "r": "ěr",
+              "g": "subject"
+            },
+            {
+              "t": "纳",
+              "r": "nà",
+              "g": "subject"
+            },
+            {
+              "t": "·"
+            },
+            {
+              "t": "莱",
+              "r": "lái",
+              "g": "subject"
+            },
+            {
+              "t": "维",
+              "r": "wéi",
+              "g": "attributive"
+            },
+            {
+              "t": "于",
+              "r": "yú",
+              "g": "attributive"
+            },
+            {
+              "t": "巴",
+              "r": "bā",
+              "g": "attributive"
+            },
+            {
+              "t": "黎",
+              "r": "lí",
+              "g": "attributive"
+            },
+            {
+              "t": "交",
+              "r": "jiāo",
+              "g": "attributive"
+            },
+            {
+              "t": "谈",
+              "r": "tán",
+              "g": "attributive"
+            },
+            {
+              "t": "后",
+              "r": "hòu",
+              "g": "attributive"
+            },
+            {
+              "t": "不",
+              "r": "bù",
+              "g": "attributive"
+            },
+            {
+              "t": "久",
+              "r": "jiǔ",
+              "g": "attributive"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "英",
+              "r": "yīng",
+              "g": "attributive"
+            },
+            {
+              "t": "特",
+              "r": "tè",
+              "g": "attributive"
+            },
+            {
+              "t": "尔",
+              "r": "ěr",
+              "g": "attributive"
+            },
+            {
+              "t": "董",
+              "r": "dǒng",
+              "g": "attributive"
+            },
+            {
+              "t": "事",
+              "r": "shì",
+              "g": "attributive"
+            },
+            {
+              "t": "长",
+              "r": "zhǎng",
+              "g": "attributive"
+            },
+            {
+              "t": "安",
+              "r": "ān",
+              "g": "attributive"
+            },
+            {
+              "t": "迪",
+              "r": "dí",
+              "g": "attributive"
+            },
+            {
+              "t": "·"
+            },
+            {
+              "t": "格",
+              "r": "gé",
+              "g": "attributive"
+            },
+            {
+              "t": "鲁",
+              "r": "lǔ",
+              "g": "attributive"
+            },
+            {
+              "t": "夫",
+              "r": "fū",
+              "g": "attributive"
+            },
+            {
+              "t": "出",
+              "r": "chū",
+              "g": "predicate"
+            },
+            {
+              "t": "版",
+              "r": "bǎn",
+              "g": "attributive"
+            },
+            {
+              "t": "了",
+              "r": "le",
+              "g": "predicate"
+            },
+            {
+              "t": "他",
+              "r": "tā",
+              "g": "attributive"
+            },
+            {
+              "t": "富",
+              "r": "fù",
+              "g": "attributive"
+            },
+            {
+              "t": "有",
+              "r": "yǒu",
+              "g": "predicate"
+            },
+            {
+              "t": "洞",
+              "r": "dòng",
+              "g": "object"
+            },
+            {
+              "t": "见",
+              "r": "jiàn",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "著",
+              "r": "zhù",
+              "g": "object"
+            },
+            {
+              "t": "作",
+              "r": "zuò",
+              "g": "predicate"
+            },
+            {
+              "t": "《"
+            },
+            {
+              "t": "只",
+              "r": "zhǐ",
+              "g": "adverbial"
+            },
+            {
+              "t": "有",
+              "r": "yǒu",
+              "g": "predicate"
+            },
+            {
+              "t": "偏",
+              "r": "piān",
+              "g": "object"
+            },
+            {
+              "t": "执",
+              "r": "zhí",
+              "g": "object"
+            },
+            {
+              "t": "狂",
+              "r": "kuáng",
+              "g": "object"
+            },
+            {
+              "t": "才",
+              "r": "cái",
+              "g": "adverbial"
+            },
+            {
+              "t": "能",
+              "r": "néng",
+              "g": "object"
+            },
+            {
+              "t": "生",
+              "r": "shēng",
+              "g": "predicate"
+            },
+            {
+              "t": "存",
+              "r": "cún",
+              "g": "object"
+            },
+            {
+              "t": "》。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "1996",
+              "g": "subject"
+            },
+            {
+              "t": "年",
+              "r": "ねん",
+              "g": "subject"
+            },
+            {
+              "t": "、"
+            },
+            {
+              "t": "私",
+              "r": "わたし",
+              "g": "subject"
+            },
+            {
+              "t": "がパリでジャン＝ジャンベルナール・レヴィと",
+              "g": "subject"
+            },
+            {
+              "t": "話",
+              "r": "はなし",
+              "g": "subject"
+            },
+            {
+              "t": "をして",
+              "g": "object"
+            },
+            {
+              "t": "間",
+              "r": "かん",
+              "g": "attributive"
+            },
+            {
+              "t": "もなく、インテル",
+              "g": "attributive"
+            },
+            {
+              "t": "会",
+              "r": "かい",
+              "g": "attributive"
+            },
+            {
+              "t": "長",
+              "r": "ちょう",
+              "g": "attributive"
+            },
+            {
+              "t": "のアンディ・グローブは",
+              "g": "subject"
+            },
+            {
+              "t": "洞",
+              "r": "どう",
+              "g": "attributive"
+            },
+            {
+              "t": "察",
+              "r": "さつ",
+              "g": "attributive"
+            },
+            {
+              "t": "に",
+              "g": "adverbial"
+            },
+            {
+              "t": "富",
+              "r": "と",
+              "g": "attributive"
+            },
+            {
+              "t": "む",
+              "g": "predicate"
+            },
+            {
+              "t": "著",
+              "r": "ちょ",
+              "g": "object"
+            },
+            {
+              "t": "書",
+              "r": "しょ",
+              "g": "complement"
+            },
+            {
+              "t": "『Only the Paranoid Survive』を",
+              "g": "object"
+            },
+            {
+              "t": "出",
+              "r": "しゅっ",
+              "g": "complement"
+            },
+            {
+              "t": "版",
+              "r": "ぱん",
+              "g": "complement"
+            },
+            {
+              "t": "した。",
+              "g": "complement"
+            }
+          ]
+        },
+        {
+          "source_en": "Grove drew on his expertise in both business and technology to forcefully describe how “inflection points” can disrupt whole industries. ",
+          "en": [
+            {
+              "t": "Grove",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "drew",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "on",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "his",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "expertise",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "in",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "both",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "business",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "technology",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "to",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "forcefully",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "describe",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "how",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "“"
+            },
+            {
+              "t": "inflection",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "points",
+              "g": "adverbial"
+            },
+            {
+              "t": "”"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "can",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "disrupt",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "whole",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "industries",
+              "g": "object"
+            },
+            {
+              "t": "."
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "格",
+              "r": "gé",
+              "g": "subject"
+            },
+            {
+              "t": "鲁",
+              "r": "lǔ",
+              "g": "subject"
+            },
+            {
+              "t": "夫",
+              "r": "fū",
+              "g": "subject"
+            },
+            {
+              "t": "运",
+              "r": "yùn",
+              "g": "subject"
+            },
+            {
+              "t": "用",
+              "r": "yòng",
+              "g": "subject"
+            },
+            {
+              "t": "他",
+              "r": "tā",
+              "g": "subject"
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "商",
+              "r": "shāng",
+              "g": "attributive"
+            },
+            {
+              "t": "业",
+              "r": "yè",
+              "g": "attributive"
+            },
+            {
+              "t": "和",
+              "r": "hé",
+              "g": "attributive"
+            },
+            {
+              "t": "技",
+              "r": "jì",
+              "g": "attributive"
+            },
+            {
+              "t": "术",
+              "r": "shù",
+              "g": "attributive"
+            },
+            {
+              "t": "两",
+              "r": "liǎng",
+              "g": "attributive"
+            },
+            {
+              "t": "方",
+              "r": "fāng",
+              "g": "adverbial"
+            },
+            {
+              "t": "面",
+              "r": "miàn",
+              "g": "attributive"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "专",
+              "r": "zhuān",
+              "g": "attributive"
+            },
+            {
+              "t": "长",
+              "r": "zhǎng",
+              "g": "attributive"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "有",
+              "r": "yǒu",
+              "g": "predicate"
+            },
+            {
+              "t": "力",
+              "r": "lì",
+              "g": "object"
+            },
+            {
+              "t": "地",
+              "r": "dì",
+              "g": "object"
+            },
+            {
+              "t": "描",
+              "r": "miáo",
+              "g": "object"
+            },
+            {
+              "t": "述",
+              "r": "shù",
+              "g": "object"
+            },
+            {
+              "t": "了",
+              "r": "le",
+              "g": "complement"
+            },
+            {
+              "t": "“"
+            },
+            {
+              "t": "拐",
+              "r": "guǎi",
+              "g": "object"
+            },
+            {
+              "t": "点",
+              "r": "diǎn",
+              "g": "object"
+            },
+            {
+              "t": "”"
+            },
+            {
+              "t": "如",
+              "r": "rú",
+              "g": "object"
+            },
+            {
+              "t": "何",
+              "r": "hé",
+              "g": "object"
+            },
+            {
+              "t": "能",
+              "r": "néng",
+              "g": "object"
+            },
+            {
+              "t": "够",
+              "r": "gòu",
+              "g": "object"
+            },
+            {
+              "t": "颠",
+              "r": "diān",
+              "g": "object"
+            },
+            {
+              "t": "覆",
+              "r": "fù",
+              "g": "object"
+            },
+            {
+              "t": "整",
+              "r": "zhěng",
+              "g": "object"
+            },
+            {
+              "t": "个",
+              "r": "gè",
+              "g": "object"
+            },
+            {
+              "t": "行",
+              "r": "xíng",
+              "g": "object"
+            },
+            {
+              "t": "业",
+              "r": "yè",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "グローブは、ビジネスと",
+              "g": "subject"
+            },
+            {
+              "t": "技",
+              "r": "ぎじ",
+              "g": "subject"
+            },
+            {
+              "t": "術",
+              "r": "ゅつ",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "双",
+              "r": "そう",
+              "g": "subject"
+            },
+            {
+              "t": "方",
+              "r": "ほう",
+              "g": "subject"
+            },
+            {
+              "t": "における",
+              "g": "adverbial"
+            },
+            {
+              "t": "専",
+              "r": "せん",
+              "g": "subject"
+            },
+            {
+              "t": "門",
+              "r": "もん",
+              "g": "attributive"
+            },
+            {
+              "t": "知",
+              "r": "ち",
+              "g": "attributive"
+            },
+            {
+              "t": "識",
+              "r": "しき",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "g": "object"
+            },
+            {
+              "t": "生",
+              "r": "い",
+              "g": "attributive"
+            },
+            {
+              "t": "かし、「",
+              "g": "attributive"
+            },
+            {
+              "t": "変",
+              "r": "へん",
+              "g": "attributive"
+            },
+            {
+              "t": "曲",
+              "r": "きょく",
+              "g": "attributive"
+            },
+            {
+              "t": "点",
+              "r": "てん",
+              "g": "attributive"
+            },
+            {
+              "t": "」がいかに",
+              "g": "subject"
+            },
+            {
+              "t": "産",
+              "r": "さん",
+              "g": "attributive"
+            },
+            {
+              "t": "業",
+              "r": "ぎょう",
+              "g": "attributive"
+            },
+            {
+              "t": "全",
+              "r": "ぜん",
+              "g": "attributive"
+            },
+            {
+              "t": "体",
+              "r": "たい",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "g": "object"
+            },
+            {
+              "t": "揺",
+              "r": "ゆ",
+              "g": "attributive"
+            },
+            {
+              "t": "るがし",
+              "g": "subject"
+            },
+            {
+              "t": "得",
+              "r": "え",
+              "g": "attributive"
+            },
+            {
+              "t": "るかを",
+              "g": "object"
+            },
+            {
+              "t": "力",
+              "r": "ちから",
+              "g": "attributive"
+            },
+            {
+              "t": "強",
+              "r": "づよ",
+              "g": "attributive"
+            },
+            {
+              "t": "く",
+              "g": "predicate"
+            },
+            {
+              "t": "描",
+              "r": "えが",
+              "g": "complement"
+            },
+            {
+              "t": "いた。",
+              "g": "complement"
+            }
+          ]
+        },
+        {
+          "source_en": "In particular, he described the “inflection” that had transformed the computer industry from a “vertical” to a “horizontal” structure. ",
+          "en": [
+            {
+              "t": "In",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "particular",
+              "g": "adverbial"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "he",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "described",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "“"
+            },
+            {
+              "t": "inflection",
+              "g": "object"
+            },
+            {
+              "t": "”"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "that",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "had",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "transformed",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "computer",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "industry",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "from",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "a",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "“"
+            },
+            {
+              "t": "vertical",
+              "g": "adverbial"
+            },
+            {
+              "t": "”"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "to",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "a",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "“"
+            },
+            {
+              "t": "horizontal",
+              "g": "adverbial"
+            },
+            {
+              "t": "”"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "structure",
+              "g": "adverbial"
+            },
+            {
+              "t": "."
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "尤",
+              "r": "yóu",
+              "g": "subject"
+            },
+            {
+              "t": "其",
+              "r": "qí",
+              "g": "subject"
+            },
+            {
+              "t": "是",
+              "r": "shì",
+              "g": "predicate"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "他",
+              "r": "tā",
+              "g": "object"
+            },
+            {
+              "t": "描",
+              "r": "miáo",
+              "g": "object"
+            },
+            {
+              "t": "述",
+              "r": "shù",
+              "g": "object"
+            },
+            {
+              "t": "了",
+              "r": "le",
+              "g": "complement"
+            },
+            {
+              "t": "把",
+              "r": "bǎ",
+              "g": "adverbial"
+            },
+            {
+              "t": "计",
+              "r": "jì",
+              "g": "object"
+            },
+            {
+              "t": "算",
+              "r": "suàn",
+              "g": "object"
+            },
+            {
+              "t": "机",
+              "r": "jī",
+              "g": "object"
+            },
+            {
+              "t": "产",
+              "r": "chǎn",
+              "g": "object"
+            },
+            {
+              "t": "业",
+              "r": "yè",
+              "g": "object"
+            },
+            {
+              "t": "从",
+              "r": "cóng",
+              "g": "adverbial"
+            },
+            {
+              "t": "“"
+            },
+            {
+              "t": "纵",
+              "r": "zòng",
+              "g": "object"
+            },
+            {
+              "t": "向",
+              "r": "xiàng",
+              "g": "adverbial"
+            },
+            {
+              "t": "”"
+            },
+            {
+              "t": "结",
+              "r": "jié",
+              "g": "object"
+            },
+            {
+              "t": "构",
+              "r": "gòu",
+              "g": "object"
+            },
+            {
+              "t": "转",
+              "r": "zhuǎn",
+              "g": "object"
+            },
+            {
+              "t": "变",
+              "r": "biàn",
+              "g": "predicate"
+            },
+            {
+              "t": "为",
+              "r": "wèi",
+              "g": "object"
+            },
+            {
+              "t": "“"
+            },
+            {
+              "t": "横",
+              "r": "héng",
+              "g": "object"
+            },
+            {
+              "t": "向",
+              "r": "xiàng",
+              "g": "adverbial"
+            },
+            {
+              "t": "”"
+            },
+            {
+              "t": "结",
+              "r": "jié",
+              "g": "object"
+            },
+            {
+              "t": "构",
+              "r": "gòu",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "那",
+              "r": "nà",
+              "g": "object"
+            },
+            {
+              "t": "个",
+              "r": "gè",
+              "g": "object"
+            },
+            {
+              "t": "“"
+            },
+            {
+              "t": "拐",
+              "r": "guǎi",
+              "g": "object"
+            },
+            {
+              "t": "点",
+              "r": "diǎn",
+              "g": "object"
+            },
+            {
+              "t": "”。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "とりわけ",
+              "g": "adverbial"
+            },
+            {
+              "t": "彼",
+              "r": "かれ",
+              "g": "subject"
+            },
+            {
+              "t": "は、コンピューター",
+              "g": "subject"
+            },
+            {
+              "t": "産",
+              "r": "さん",
+              "g": "subject"
+            },
+            {
+              "t": "業",
+              "r": "ぎょう",
+              "g": "subject"
+            },
+            {
+              "t": "を「",
+              "g": "object"
+            },
+            {
+              "t": "垂",
+              "r": "すい",
+              "g": "attributive"
+            },
+            {
+              "t": "直",
+              "r": "ちょく",
+              "g": "attributive"
+            },
+            {
+              "t": "」"
+            },
+            {
+              "t": "構",
+              "r": "こう",
+              "g": "attributive"
+            },
+            {
+              "t": "造",
+              "r": "ぞう",
+              "g": "attributive"
+            },
+            {
+              "t": "から「",
+              "g": "adverbial"
+            },
+            {
+              "t": "水",
+              "r": "すい",
+              "g": "attributive"
+            },
+            {
+              "t": "平",
+              "r": "へい",
+              "g": "attributive"
+            },
+            {
+              "t": "」"
+            },
+            {
+              "t": "構",
+              "r": "こう",
+              "g": "attributive"
+            },
+            {
+              "t": "造",
+              "r": "ぞう",
+              "g": "attributive"
+            },
+            {
+              "t": "へと",
+              "g": "adverbial"
+            },
+            {
+              "t": "変",
+              "r": "か",
+              "g": "attributive"
+            },
+            {
+              "t": "えた「",
+              "g": "attributive"
+            },
+            {
+              "t": "変",
+              "r": "へん",
+              "g": "attributive"
+            },
+            {
+              "t": "曲",
+              "r": "きょく",
+              "g": "attributive"
+            },
+            {
+              "t": "」について",
+              "g": "adverbial"
+            },
+            {
+              "t": "説",
+              "r": "せつ",
+              "g": "attributive"
+            },
+            {
+              "t": "明",
+              "r": "めい",
+              "g": "attributive"
+            },
+            {
+              "t": "した。",
+              "g": "complement"
+            }
+          ]
+        },
+        {
+          "source_en": "In the old vertical structure, each computer maker made its own processors, memory, hard drives, keyboards, and monitors, and each wrote its own systems and applications software. ",
+          "en": [
+            {
+              "t": "In",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "old",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "vertical",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "structure",
+              "g": "adverbial"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "each",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "computer",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "maker",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "made",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "its",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "own",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "processors",
+              "g": "object"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "memory",
+              "g": "object"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "hard",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "drives",
+              "g": "object"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "keyboards",
+              "g": "object"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "monitors",
+              "g": "object"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "each",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "wrote",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "its",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "own",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "systems",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "applications",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "software",
+              "g": "object"
+            },
+            {
+              "t": "."
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "旧",
+              "r": "jiù",
+              "g": "subject"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "纵",
+              "r": "zòng",
+              "g": "subject"
+            },
+            {
+              "t": "向",
+              "r": "xiàng",
+              "g": "adverbial"
+            },
+            {
+              "t": "结",
+              "r": "jié",
+              "g": "subject"
+            },
+            {
+              "t": "构",
+              "r": "gòu",
+              "g": "subject"
+            },
+            {
+              "t": "中",
+              "r": "zhōng",
+              "g": "subject"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "每",
+              "r": "měi",
+              "g": "subject"
+            },
+            {
+              "t": "一",
+              "r": "yī",
+              "g": "subject"
+            },
+            {
+              "t": "家",
+              "r": "jiā",
+              "g": "attributive"
+            },
+            {
+              "t": "计",
+              "r": "jì",
+              "g": "attributive"
+            },
+            {
+              "t": "算",
+              "r": "suàn",
+              "g": "attributive"
+            },
+            {
+              "t": "机",
+              "r": "jī",
+              "g": "attributive"
+            },
+            {
+              "t": "制",
+              "r": "zhì",
+              "g": "attributive"
+            },
+            {
+              "t": "造",
+              "r": "zào",
+              "g": "attributive"
+            },
+            {
+              "t": "商",
+              "r": "shāng",
+              "g": "attributive"
+            },
+            {
+              "t": "都",
+              "r": "dōu",
+              "g": "adverbial"
+            },
+            {
+              "t": "自",
+              "r": "zì",
+              "g": "attributive"
+            },
+            {
+              "t": "行",
+              "r": "xíng",
+              "g": "attributive"
+            },
+            {
+              "t": "制",
+              "r": "zhì",
+              "g": "attributive"
+            },
+            {
+              "t": "造",
+              "r": "zào",
+              "g": "attributive"
+            },
+            {
+              "t": "处",
+              "r": "chù",
+              "g": "attributive"
+            },
+            {
+              "t": "理",
+              "r": "lǐ",
+              "g": "attributive"
+            },
+            {
+              "t": "器",
+              "r": "qì",
+              "g": "attributive"
+            },
+            {
+              "t": "、"
+            },
+            {
+              "t": "内",
+              "r": "nèi",
+              "g": "attributive"
+            },
+            {
+              "t": "存",
+              "r": "cún",
+              "g": "topic"
+            },
+            {
+              "t": "、"
+            },
+            {
+              "t": "硬",
+              "r": "yìng",
+              "g": "object"
+            },
+            {
+              "t": "盘",
+              "r": "pán",
+              "g": "object"
+            },
+            {
+              "t": "、"
+            },
+            {
+              "t": "键",
+              "r": "jiàn",
+              "g": "object"
+            },
+            {
+              "t": "盘",
+              "r": "pán",
+              "g": "object"
+            },
+            {
+              "t": "和",
+              "r": "hé",
+              "g": "object"
+            },
+            {
+              "t": "显",
+              "r": "xiǎn",
+              "g": "object"
+            },
+            {
+              "t": "示",
+              "r": "shì",
+              "g": "object"
+            },
+            {
+              "t": "器",
+              "r": "qì",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "并",
+              "r": "bìng",
+              "g": "adverbial"
+            },
+            {
+              "t": "各",
+              "r": "gè",
+              "g": "object"
+            },
+            {
+              "t": "自",
+              "r": "zì",
+              "g": "object"
+            },
+            {
+              "t": "编",
+              "r": "biān",
+              "g": "object"
+            },
+            {
+              "t": "写",
+              "r": "xiě",
+              "g": "object"
+            },
+            {
+              "t": "自",
+              "r": "zì",
+              "g": "object"
+            },
+            {
+              "t": "己",
+              "r": "jǐ",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "系",
+              "r": "xì",
+              "g": "object"
+            },
+            {
+              "t": "统",
+              "r": "tǒng",
+              "g": "object"
+            },
+            {
+              "t": "软",
+              "r": "ruǎn",
+              "g": "object"
+            },
+            {
+              "t": "件",
+              "r": "jiàn",
+              "g": "object"
+            },
+            {
+              "t": "和",
+              "r": "hé",
+              "g": "object"
+            },
+            {
+              "t": "应",
+              "r": "yīng",
+              "g": "object"
+            },
+            {
+              "t": "用",
+              "r": "yòng",
+              "g": "object"
+            },
+            {
+              "t": "软",
+              "r": "ruǎn",
+              "g": "object"
+            },
+            {
+              "t": "件",
+              "r": "jiàn",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "旧",
+              "r": "きゅう",
+              "g": "subject"
+            },
+            {
+              "t": "来",
+              "r": "らい",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "垂",
+              "r": "すい",
+              "g": "subject"
+            },
+            {
+              "t": "直",
+              "r": "ちょく",
+              "g": "subject"
+            },
+            {
+              "t": "構",
+              "r": "こう",
+              "g": "attributive"
+            },
+            {
+              "t": "造",
+              "r": "ぞう",
+              "g": "attributive"
+            },
+            {
+              "t": "では、",
+              "g": "subject"
+            },
+            {
+              "t": "各",
+              "r": "かく",
+              "g": "attributive"
+            },
+            {
+              "t": "コンピューターメーカーが",
+              "g": "subject"
+            },
+            {
+              "t": "自",
+              "r": "じ",
+              "g": "attributive"
+            },
+            {
+              "t": "社",
+              "r": "しゃ",
+              "g": "attributive"
+            },
+            {
+              "t": "でプロセッサ、メモリ、ハードディスク、キーボード、モニターを",
+              "g": "object"
+            },
+            {
+              "t": "作",
+              "r": "つく",
+              "g": "attributive"
+            },
+            {
+              "t": "り、それぞれが",
+              "g": "subject"
+            },
+            {
+              "t": "自",
+              "r": "じ",
+              "g": "attributive"
+            },
+            {
+              "t": "社",
+              "r": "しゃ",
+              "g": "attributive"
+            },
+            {
+              "t": "のシステムソフトウェアとアプリケーションソフトウェアを",
+              "g": "object"
+            },
+            {
+              "t": "書",
+              "r": "か",
+              "g": "attributive"
+            },
+            {
+              "t": "いていた。",
+              "g": "complement"
+            }
+          ]
+        },
+        {
+          "source_en": "The buyer signed up with a maker and bought everything from that manufacturer. ",
+          "en": [
+            {
+              "t": "The",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "buyer",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "signed",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "up",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "with",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "a",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "maker",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "bought",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "everything",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "from",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "that",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "manufacturer",
+              "g": "object"
+            },
+            {
+              "t": "."
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "买",
+              "r": "mǎi",
+              "g": "subject"
+            },
+            {
+              "t": "方",
+              "r": "fāng",
+              "g": "adverbial"
+            },
+            {
+              "t": "选",
+              "r": "xuǎn",
+              "g": "subject"
+            },
+            {
+              "t": "定",
+              "r": "dìng",
+              "g": "subject"
+            },
+            {
+              "t": "一",
+              "r": "yī",
+              "g": "attributive"
+            },
+            {
+              "t": "家",
+              "r": "jiā",
+              "g": "attributive"
+            },
+            {
+              "t": "制",
+              "r": "zhì",
+              "g": "attributive"
+            },
+            {
+              "t": "造",
+              "r": "zào",
+              "g": "attributive"
+            },
+            {
+              "t": "商",
+              "r": "shāng",
+              "g": "attributive"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "并",
+              "r": "bìng",
+              "g": "adverbial"
+            },
+            {
+              "t": "从",
+              "r": "cóng",
+              "g": "adverbial"
+            },
+            {
+              "t": "那",
+              "r": "nà",
+              "g": "topic"
+            },
+            {
+              "t": "家",
+              "r": "jiā",
+              "g": "object"
+            },
+            {
+              "t": "制",
+              "r": "zhì",
+              "g": "object"
+            },
+            {
+              "t": "造",
+              "r": "zào",
+              "g": "object"
+            },
+            {
+              "t": "商",
+              "r": "shāng",
+              "g": "object"
+            },
+            {
+              "t": "那",
+              "r": "nà",
+              "g": "object"
+            },
+            {
+              "t": "里",
+              "r": "lǐ",
+              "g": "object"
+            },
+            {
+              "t": "购",
+              "r": "gòu",
+              "g": "object"
+            },
+            {
+              "t": "买",
+              "r": "mǎi",
+              "g": "object"
+            },
+            {
+              "t": "一",
+              "r": "yī",
+              "g": "object"
+            },
+            {
+              "t": "切",
+              "r": "qiè",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "買",
+              "r": "かい",
+              "g": "subject"
+            },
+            {
+              "t": "い",
+              "g": "subject"
+            },
+            {
+              "t": "手",
+              "r": "て",
+              "g": "subject"
+            },
+            {
+              "t": "は",
+              "g": "subject"
+            },
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "attributive"
+            },
+            {
+              "t": "つのメーカーと",
+              "g": "adverbial"
+            },
+            {
+              "t": "契",
+              "r": "けい",
+              "g": "attributive"
+            },
+            {
+              "t": "約",
+              "r": "やく",
+              "g": "attributive"
+            },
+            {
+              "t": "し、そのメーカーからすべてを",
+              "g": "object"
+            },
+            {
+              "t": "購",
+              "r": "こう",
+              "g": "attributive"
+            },
+            {
+              "t": "入",
+              "r": "にゅう",
+              "g": "attributive"
+            },
+            {
+              "t": "した。",
+              "g": "complement"
+            }
+          ]
+        },
+        {
+          "source_en": "You couldn’t plug an HP disk drive into a DEC computer. ",
+          "en": [
+            {
+              "t": "You",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "couldn’t",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "plug",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "an",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "HP",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "disk",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "drive",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "into",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "a",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "DEC",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "computer",
+              "g": "adverbial"
+            },
+            {
+              "t": "."
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "你",
+              "r": "nǐ",
+              "g": "subject"
+            },
+            {
+              "t": "不",
+              "r": "bù",
+              "g": "subject"
+            },
+            {
+              "t": "能",
+              "r": "néng",
+              "g": "subject"
+            },
+            {
+              "t": "把",
+              "r": "bǎ",
+              "g": "adverbial"
+            },
+            {
+              "t": "惠",
+              "r": "huì",
+              "g": "attributive"
+            },
+            {
+              "t": "普",
+              "r": "pǔ",
+              "g": "attributive"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "磁",
+              "r": "cí",
+              "g": "attributive"
+            },
+            {
+              "t": "盘",
+              "r": "pán",
+              "g": "attributive"
+            },
+            {
+              "t": "驱",
+              "r": "qū",
+              "g": "attributive"
+            },
+            {
+              "t": "动",
+              "r": "dòng",
+              "g": "topic"
+            },
+            {
+              "t": "器",
+              "r": "qì",
+              "g": "object"
+            },
+            {
+              "t": "插",
+              "r": "chā",
+              "g": "object"
+            },
+            {
+              "t": "到",
+              "r": "dào",
+              "g": "adverbial"
+            },
+            {
+              "t": "DEC",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "计",
+              "r": "jì",
+              "g": "object"
+            },
+            {
+              "t": "算",
+              "r": "suàn",
+              "g": "object"
+            },
+            {
+              "t": "机",
+              "r": "jī",
+              "g": "object"
+            },
+            {
+              "t": "上",
+              "r": "shàng",
+              "g": "complement"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "HPのディスクドライブをDECのコンピューターに",
+              "g": "object"
+            },
+            {
+              "t": "差",
+              "r": "さ",
+              "g": "attributive"
+            },
+            {
+              "t": "し",
+              "g": "attributive"
+            },
+            {
+              "t": "込",
+              "r": "しこ",
+              "g": "attributive"
+            },
+            {
+              "t": "むことはできなかった。",
+              "g": "subject"
+            }
+          ]
+        },
+        {
+          "source_en": "By contrast, in the new horizontal structure, each of those activities had become an industry in its own right.",
+          "en": [
+            {
+              "t": "By",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "contrast",
+              "g": "adverbial"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "in",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "the",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "new",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "horizontal",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "structure",
+              "g": "adverbial"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "each",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "of",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "those",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "activities",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "had",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "become",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "an",
+              "g": "attributive"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "industry",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "in",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "its",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "own",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "right",
+              "g": "adverbial"
+            },
+            {
+              "t": "."
+            }
+          ],
+          "zh": [
+            {
+              "t": "相",
+              "r": "xiāng",
+              "g": "subject"
+            },
+            {
+              "t": "比",
+              "r": "bǐ",
+              "g": "subject"
+            },
+            {
+              "t": "之",
+              "r": "zhī",
+              "g": "subject"
+            },
+            {
+              "t": "下",
+              "r": "xià",
+              "g": "predicate"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "在",
+              "r": "zài",
+              "g": "adverbial"
+            },
+            {
+              "t": "新",
+              "r": "xīn",
+              "g": "subject"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "横",
+              "r": "héng",
+              "g": "attributive"
+            },
+            {
+              "t": "向",
+              "r": "xiàng",
+              "g": "adverbial"
+            },
+            {
+              "t": "结",
+              "r": "jié",
+              "g": "attributive"
+            },
+            {
+              "t": "构",
+              "r": "gòu",
+              "g": "attributive"
+            },
+            {
+              "t": "中",
+              "r": "zhōng",
+              "g": "attributive"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "这",
+              "r": "zhè",
+              "g": "attributive"
+            },
+            {
+              "t": "些",
+              "r": "xiē",
+              "g": "attributive"
+            },
+            {
+              "t": "活",
+              "r": "huó",
+              "g": "predicate"
+            },
+            {
+              "t": "动",
+              "r": "dòng",
+              "g": "object"
+            },
+            {
+              "t": "中",
+              "r": "zhōng",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "每",
+              "r": "měi",
+              "g": "object"
+            },
+            {
+              "t": "一",
+              "r": "yī",
+              "g": "object"
+            },
+            {
+              "t": "项",
+              "r": "xiàng",
+              "g": "object"
+            },
+            {
+              "t": "都",
+              "r": "dōu",
+              "g": "adverbial"
+            },
+            {
+              "t": "已",
+              "r": "yǐ",
+              "g": "adverbial"
+            },
+            {
+              "t": "经",
+              "r": "jīng",
+              "g": "adverbial"
+            },
+            {
+              "t": "成",
+              "r": "chéng",
+              "g": "predicate"
+            },
+            {
+              "t": "为",
+              "r": "wèi",
+              "g": "object"
+            },
+            {
+              "t": "一",
+              "r": "yī",
+              "g": "object"
+            },
+            {
+              "t": "个",
+              "r": "gè",
+              "g": "object"
+            },
+            {
+              "t": "独",
+              "r": "dú",
+              "g": "object"
+            },
+            {
+              "t": "立",
+              "r": "lì",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "产",
+              "r": "chǎn",
+              "g": "object"
+            },
+            {
+              "t": "业",
+              "r": "yè",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "これに",
+              "g": "adverbial"
+            },
+            {
+              "t": "対",
+              "r": "たい",
+              "g": "subject"
+            },
+            {
+              "t": "して",
+              "g": "subject"
+            },
+            {
+              "t": "新",
+              "r": "あたら",
+              "g": "subject"
+            },
+            {
+              "t": "しい",
+              "g": "subject"
+            },
+            {
+              "t": "水",
+              "r": "すい",
+              "g": "subject"
+            },
+            {
+              "t": "平",
+              "r": "へい",
+              "g": "attributive"
+            },
+            {
+              "t": "構",
+              "r": "こう",
+              "g": "attributive"
+            },
+            {
+              "t": "造",
+              "r": "ぞう",
+              "g": "attributive"
+            },
+            {
+              "t": "では、そうした",
+              "g": "subject"
+            },
+            {
+              "t": "活",
+              "r": "かつ",
+              "g": "attributive"
+            },
+            {
+              "t": "動",
+              "r": "どう",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "一",
+              "r": "ひとつ",
+              "g": "attributive"
+            },
+            {
+              "t": "つ",
+              "g": "predicate"
+            },
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "object"
+            },
+            {
+              "t": "つが、それ",
+              "g": "subject"
+            },
+            {
+              "t": "自",
+              "r": "じ",
+              "g": "object"
+            },
+            {
+              "t": "体",
+              "r": "たい",
+              "g": "object"
+            },
+            {
+              "t": "で",
+              "g": "adverbial"
+            },
+            {
+              "t": "一",
+              "r": "ひと",
+              "g": "complement"
+            },
+            {
+              "t": "つの",
+              "g": "attributive"
+            },
+            {
+              "t": "産",
+              "r": "さん",
+              "g": "complement"
+            },
+            {
+              "t": "業",
+              "r": "ぎょう",
+              "g": "complement"
+            },
+            {
+              "t": "になっていた。",
+              "g": "adverbial"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "good-strategy-bad-strategy-s003-p00628",
+      "source_en": "Intel made processors, other firms made memory, others made hard drives, Microsoft made systems software, and so on. Computers were assembled by mixing and matching parts from competing manufacturers.",
+      "units": [
+        {
+          "source_en": "Intel made processors, other firms made memory, others made hard drives, Microsoft made systems software, and so on. ",
+          "en": [
+            {
+              "t": "Intel",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "made",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "processors",
+              "g": "object"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "other",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "firms",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "made",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "memory",
+              "g": "object"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "others",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "made",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "hard",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "drives",
+              "g": "object"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "Microsoft",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "made",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "systems",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "software",
+              "g": "object"
+            },
+            {
+              "t": ","
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "so",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "on",
+              "g": "adverbial"
+            },
+            {
+              "t": "."
+            },
+            {
+              "t": " "
+            }
+          ],
+          "zh": [
+            {
+              "t": "英",
+              "r": "yīng",
+              "g": "subject"
+            },
+            {
+              "t": "特",
+              "r": "tè",
+              "g": "subject"
+            },
+            {
+              "t": "尔",
+              "r": "ěr",
+              "g": "subject"
+            },
+            {
+              "t": "制",
+              "r": "zhì",
+              "g": "subject"
+            },
+            {
+              "t": "造",
+              "r": "zào",
+              "g": "subject"
+            },
+            {
+              "t": "处",
+              "r": "chù",
+              "g": "subject"
+            },
+            {
+              "t": "理",
+              "r": "lǐ",
+              "g": "subject"
+            },
+            {
+              "t": "器",
+              "r": "qì",
+              "g": "attributive"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "其",
+              "r": "qí",
+              "g": "attributive"
+            },
+            {
+              "t": "他",
+              "r": "tā",
+              "g": "attributive"
+            },
+            {
+              "t": "公",
+              "r": "gōng",
+              "g": "attributive"
+            },
+            {
+              "t": "司",
+              "r": "sī",
+              "g": "attributive"
+            },
+            {
+              "t": "制",
+              "r": "zhì",
+              "g": "attributive"
+            },
+            {
+              "t": "造",
+              "r": "zào",
+              "g": "attributive"
+            },
+            {
+              "t": "内",
+              "r": "nèi",
+              "g": "attributive"
+            },
+            {
+              "t": "存",
+              "r": "cún",
+              "g": "attributive"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "另",
+              "r": "lìng",
+              "g": "attributive"
+            },
+            {
+              "t": "一",
+              "r": "yī",
+              "g": "attributive"
+            },
+            {
+              "t": "些",
+              "r": "xiē",
+              "g": "topic"
+            },
+            {
+              "t": "公",
+              "r": "gōng",
+              "g": "object"
+            },
+            {
+              "t": "司",
+              "r": "sī",
+              "g": "object"
+            },
+            {
+              "t": "制",
+              "r": "zhì",
+              "g": "object"
+            },
+            {
+              "t": "造",
+              "r": "zào",
+              "g": "object"
+            },
+            {
+              "t": "硬",
+              "r": "yìng",
+              "g": "object"
+            },
+            {
+              "t": "盘",
+              "r": "pán",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "微",
+              "r": "wēi",
+              "g": "object"
+            },
+            {
+              "t": "软",
+              "r": "ruǎn",
+              "g": "object"
+            },
+            {
+              "t": "制",
+              "r": "zhì",
+              "g": "object"
+            },
+            {
+              "t": "造",
+              "r": "zào",
+              "g": "object"
+            },
+            {
+              "t": "系",
+              "r": "xì",
+              "g": "object"
+            },
+            {
+              "t": "统",
+              "r": "tǒng",
+              "g": "object"
+            },
+            {
+              "t": "软",
+              "r": "ruǎn",
+              "g": "object"
+            },
+            {
+              "t": "件",
+              "r": "jiàn",
+              "g": "object"
+            },
+            {
+              "t": "，"
+            },
+            {
+              "t": "诸",
+              "r": "zhū",
+              "g": "object"
+            },
+            {
+              "t": "如",
+              "r": "rú",
+              "g": "object"
+            },
+            {
+              "t": "此",
+              "r": "cǐ",
+              "g": "object"
+            },
+            {
+              "t": "类",
+              "r": "lèi",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "インテルはプロセッサを",
+              "g": "subject"
+            },
+            {
+              "t": "作",
+              "r": "つく",
+              "g": "subject"
+            },
+            {
+              "t": "り、",
+              "g": "subject"
+            },
+            {
+              "t": "別",
+              "r": "べつ",
+              "g": "subject"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "企",
+              "r": "き",
+              "g": "subject"
+            },
+            {
+              "t": "業",
+              "r": "ぎょう",
+              "g": "attributive"
+            },
+            {
+              "t": "はメモリを",
+              "g": "subject"
+            },
+            {
+              "t": "作",
+              "r": "つく",
+              "g": "attributive"
+            },
+            {
+              "t": "り、さらに",
+              "g": "adverbial"
+            },
+            {
+              "t": "別",
+              "r": "べつ",
+              "g": "attributive"
+            },
+            {
+              "t": "の",
+              "g": "attributive"
+            },
+            {
+              "t": "企",
+              "r": "き",
+              "g": "attributive"
+            },
+            {
+              "t": "業",
+              "r": "ぎょう",
+              "g": "attributive"
+            },
+            {
+              "t": "はハードディスクを",
+              "g": "subject"
+            },
+            {
+              "t": "作",
+              "r": "つく",
+              "g": "attributive"
+            },
+            {
+              "t": "り、マイクロソフトはシステムソフトウェアを",
+              "g": "subject"
+            },
+            {
+              "t": "作",
+              "r": "つく",
+              "g": "attributive"
+            },
+            {
+              "t": "る、という",
+              "g": "adverbial"
+            },
+            {
+              "t": "具",
+              "r": "ぐ",
+              "g": "complement"
+            },
+            {
+              "t": "合",
+              "r": "あい",
+              "g": "complement"
+            },
+            {
+              "t": "である。",
+              "g": "adverbial"
+            }
+          ]
+        },
+        {
+          "source_en": "Computers were assembled by mixing and matching parts from competing manufacturers.",
+          "en": [
+            {
+              "t": "Computers",
+              "g": "subject"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "were",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "assembled",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "by",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "mixing",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "and",
+              "g": "function"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "matching",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "parts",
+              "g": "object"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "from",
+              "g": "adverbial"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "competing",
+              "g": "predicate"
+            },
+            {
+              "t": " "
+            },
+            {
+              "t": "manufacturers",
+              "g": "object"
+            },
+            {
+              "t": "."
+            }
+          ],
+          "zh": [
+            {
+              "t": "计",
+              "r": "jì",
+              "g": "subject"
+            },
+            {
+              "t": "算",
+              "r": "suàn",
+              "g": "subject"
+            },
+            {
+              "t": "机",
+              "r": "jī",
+              "g": "subject"
+            },
+            {
+              "t": "则",
+              "r": "zé",
+              "g": "subject"
+            },
+            {
+              "t": "通",
+              "r": "tōng",
+              "g": "subject"
+            },
+            {
+              "t": "过",
+              "r": "guò",
+              "g": "predicate"
+            },
+            {
+              "t": "混",
+              "r": "hùn",
+              "g": "attributive"
+            },
+            {
+              "t": "合",
+              "r": "hé",
+              "g": "attributive"
+            },
+            {
+              "t": "搭",
+              "r": "dā",
+              "g": "attributive"
+            },
+            {
+              "t": "配",
+              "r": "pèi",
+              "g": "attributive"
+            },
+            {
+              "t": "来",
+              "r": "lái",
+              "g": "complement"
+            },
+            {
+              "t": "自",
+              "r": "zì",
+              "g": "object"
+            },
+            {
+              "t": "相",
+              "r": "xiāng",
+              "g": "object"
+            },
+            {
+              "t": "互",
+              "r": "hù",
+              "g": "object"
+            },
+            {
+              "t": "竞",
+              "r": "jìng",
+              "g": "object"
+            },
+            {
+              "t": "争",
+              "r": "zhēng",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "制",
+              "r": "zhì",
+              "g": "object"
+            },
+            {
+              "t": "造",
+              "r": "zào",
+              "g": "object"
+            },
+            {
+              "t": "商",
+              "r": "shāng",
+              "g": "object"
+            },
+            {
+              "t": "的",
+              "r": "de",
+              "g": "attributive"
+            },
+            {
+              "t": "零",
+              "r": "líng",
+              "g": "object"
+            },
+            {
+              "t": "部",
+              "r": "bù",
+              "g": "object"
+            },
+            {
+              "t": "件",
+              "r": "jiàn",
+              "g": "object"
+            },
+            {
+              "t": "来",
+              "r": "lái",
+              "g": "complement"
+            },
+            {
+              "t": "组",
+              "r": "zǔ",
+              "g": "object"
+            },
+            {
+              "t": "装",
+              "r": "zhuāng",
+              "g": "object"
+            },
+            {
+              "t": "。"
+            }
+          ],
+          "ja": [
+            {
+              "t": "コンピューターは、",
+              "g": "subject"
+            },
+            {
+              "t": "競",
+              "r": "きょう",
+              "g": "subject"
+            },
+            {
+              "t": "合",
+              "r": "ごう",
+              "g": "subject"
+            },
+            {
+              "t": "するメーカーの",
+              "g": "attributive"
+            },
+            {
+              "t": "部",
+              "r": "ぶ",
+              "g": "attributive"
+            },
+            {
+              "t": "品",
+              "r": "ひん",
+              "g": "attributive"
+            },
+            {
+              "t": "を",
+              "g": "object"
+            },
+            {
+              "t": "組",
+              "r": "くみ",
+              "g": "attributive"
+            },
+            {
+              "t": "み",
+              "g": "attributive"
+            },
+            {
+              "t": "合",
+              "r": "あ",
+              "g": "attributive"
+            },
+            {
+              "t": "わせて",
+              "g": "attributive"
+            },
+            {
+              "t": "組",
+              "r": "くみ",
+              "g": "attributive"
+            },
+            {
+              "t": "み",
+              "g": "attributive"
+            },
+            {
+              "t": "立",
+              "r": "た",
+              "g": "attributive"
+            },
+            {
+              "t": "てられるようになった。",
+              "g": "adverbial"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
