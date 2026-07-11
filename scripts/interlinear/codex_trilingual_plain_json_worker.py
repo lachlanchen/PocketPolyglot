@@ -161,6 +161,7 @@ def prompt_for_plain_chunk(chunk: dict[str, Any], previous_errors: list[str] | N
         )
     spine_lang = source_spine_lang(chunk)
     reference = chunk.get("reference", {})
+    translation_contract = chunk.get("translation_contract") or {}
     ja_ref = reference.get("ja", {})
     ja_instruction = (
         "Use the supplied Japanese source window when it matches this chunk."
@@ -243,6 +244,9 @@ def prompt_for_plain_chunk(chunk: dict[str, Any], previous_errors: list[str] | N
 
         Chunk metadata:
         {json.dumps({key: chunk[key] for key in ('chunk_id', 'chapter_id', 'chapter_number', 'chapter_title_en', 'chapter_part_en')}, ensure_ascii=False, indent=2)}
+
+        Translation quality contract:
+        {json.dumps(translation_contract, ensure_ascii=False, indent=2) if translation_contract else "Use accurate, complete, modern, understandable, elegant translation. Do not summarize, omit, or add unsupported facts."}
 
         Source unit plan:
         {json.dumps(source_unit_plan(chunk), ensure_ascii=False, indent=2)}
