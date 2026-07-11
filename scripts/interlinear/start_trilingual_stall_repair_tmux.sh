@@ -96,6 +96,8 @@ manifest = json.loads(Path('$manifest').read_text(encoding='utf-8'))
 chunk_dir = Path('$raw_chunk_dir')
 failed_dir = Path('$candidate_dir') / 'failed'
 accepted_dir = Path('$candidate_dir') / 'accepted'
+status_dir = Path('$candidate_dir') / 'status'
+repairable_statuses = {'attempt_failed', 'failed', 'usage_limit'}
 
 for index, item in enumerate(manifest.get('chunks', []), start=1):
     chunk_id = item['chunk_id']
@@ -105,6 +107,14 @@ for index, item in enumerate(manifest.get('chunks', []), start=1):
         continue
     if (failed_dir / f'{chunk_id}.json').exists():
         print(index, chunk_id)
+    else:
+        status_path = status_dir / f'{chunk_id}.json'
+        try:
+            status = json.loads(status_path.read_text(encoding='utf-8')).get('status')
+        except Exception:
+            status = None
+        if status in repairable_statuses:
+            print(index, chunk_id)
     break
 PY
 }
