@@ -23,6 +23,11 @@ from typing import Any
 from bs4 import BeautifulSoup
 from english_sentence_splitter import sentence_boundary_ends
 
+try:
+    from wordfreq import zipf_frequency
+except Exception:  # pragma: no cover - optional quality dependency
+    zipf_frequency = None
+
 
 ROOT = Path(__file__).resolve().parents[2]
 SPACE_RE = re.compile(r"\s+")
@@ -54,6 +59,63 @@ PAGE_ARTIFACT_RE = re.compile(
     r"^(?:Page\s+\d+|P(?:S|AGE)(?:\s+.+)?|[.$\sA-Z0-9_-]{8,}|"
     r"Trim Size:.+|k(?:\s+k)*|l)$"
 )
+TERMINAL_BACK_MATTER_RE = re.compile(
+    r"\s+(?:"
+    r"N\s*ot\s*e\s*s(?:\s+C\s*h\s*a\s*p\s*t\s*e\s*r|\s+Chapter|\b)|"
+    r"References\b|Bibliography\b|Glossary\b|Index\b|"
+    r"About the Author\b|ALSO BY\b|Copyright\b|Manufactured in China\b|"
+    r"Get personalized book picks\b"
+    r")"
+)
+I_VERBS = r"also|am|was|were|have|had|hope|think|believe|will|would|can|could|shall|should|do|did|must|may|might|owe|thank"
+BROKEN_I_RE = re.compile(rf"(?:(?<=^)|(?<=[\s\"“‘(\[]))[\[|](?=\s*(?:{I_VERBS})\b)")
+STUCK_I_RE = re.compile(rf"\bI(?=(?:{I_VERBS})\b)")
+LOWER_L_I_RE = re.compile(rf"(?:(?<=^)|(?<=[\s\"“‘(\[]))l(?=\s+(?:{I_VERBS})\b)")
+PUNCT_SPACE_RE = re.compile(r"([,.;:!?])(?=([A-Za-z]|\d))")
+SPACED_THOUSAND_RE = re.compile(r"\b(\d)\s+(\d{2})\s*,\s*(\d{3})\b")
+NUM_COMMA_SPACE_RE = re.compile(r"\b(\d{1,3})\s*,\s*(\d{3})\b")
+THOUSANDS_CONTINUATION_SPACE_RE = re.compile(r"(?<=\d{3}),\s+(?=\d{3}\b)")
+SPACED_YEAR_RE = re.compile(r"\b([12])\s+(\d)\s+(\d)\s+(\d)(s?)\b")
+SPACED_SMALL_INT_RE = re.compile(
+    r"\b([1-9])\s+(\d)(?=\s+(?:billion|million|thousand|percent|inch|inches|feet|"
+    r"miles|seconds|years|dimensions|dimensional|centimeters|meters|pages|chapters)\b)"
+)
+SPLIT_WORD_RE = re.compile(r"\b([a-z]{2,})\s+([a-z]{2,})\b")
+SINGLE_HYPHEN_WORD_RE = re.compile(r"(?<!-)\b([A-Za-z]{2,})-([A-Za-z]{2,})\b(?!-)")
+LETTER_SPACED_HEADER_RE = re.compile(r"^(?:[A-Z]\s+){3,}[A-Z](?:\s+(?:[A-Z]\s+){2,}[A-Z])*$")
+CHAPTER_HEADING_RE = re.compile(
+    r"^(?:Part|Book|Chapter|CHAPTER)\s+(?:[IVXLCDM]+|\d+|One|Two|Three|Four|Five|Six|Seven|Eight|Nine|Ten)\b(?:\s*[:.-]?\s+.{2,70})?$",
+    re.I,
+)
+SPECIAL_HEADING_RE = re.compile(r"^(?:Introduction|Preface|Prologue|Epilogue|Conclusion|Afterword|Acknowledg(?:e)?ments)$", re.I)
+NUMERIC_HEADING_RE = re.compile(r"^\d{1,3}[.)]\s+[A-Z][A-Za-z0-9 ,:'\"&-]{2,90}$")
+KEEP_HYPHENATED = {
+    "as-yet",
+    "big-bang",
+    "black-hole",
+    "black-holes",
+    "brain-stimulating",
+    "cutting-edge",
+    "down-to",
+    "earth-like",
+    "far-reaching",
+    "full-fledged",
+    "general-level",
+    "higher-dimensional",
+    "left-right",
+    "long-sought",
+    "mind-bending",
+    "old-fashioned",
+    "page-turning",
+    "paradigm-shaking",
+    "self-consistent",
+    "self-contained",
+    "space-time",
+    "space-based",
+    "three-dimensional",
+    "two-dimensional",
+    "well-known",
+}
 
 CURATED_BY = "AgInTiFlow curated"
 CURATED_URL = "https://flow.lazying.art"
@@ -66,6 +128,110 @@ def run_text(cmd: list[str]) -> str:
 
 def compact(text: str) -> str:
     return SPACE_RE.sub(" ", text.replace("\u00a0", " ").replace("\u3000", " ")).strip()
+
+
+def repair_embedded_text_artifacts(text: str) -> str:
+    """Repair common PDF embedded-text artifacts without rewriting prose.
+
+    This is deliberately conservative. It targets artifacts seen in born-digital
+    nonfiction PDFs: OCR-style `| hope` / `[ have`, missing spaces after
+    punctuation, and dictionary-backed intra-word hyphenation such as
+    `mod-ern` or `math-ematics`. Real compounds are kept.
+    """
+
+    text = BROKEN_I_RE.sub("I", text)
+    text = LOWER_L_I_RE.sub("I", text)
+    text = STUCK_I_RE.sub("I ", text)
+    text = PUNCT_SPACE_RE.sub(r"\1 ", text)
+    text = SPACED_THOUSAND_RE.sub(r"\1\2,\3", text)
+    previous = None
+    while previous != text:
+        previous = text
+        text = NUM_COMMA_SPACE_RE.sub(r"\1,\2", text)
+        text = THOUSANDS_CONTINUATION_SPACE_RE.sub(",", text)
+    text = SPACED_YEAR_RE.sub(r"\1\2\3\4\5", text)
+    text = SPACED_SMALL_INT_RE.sub(r"\1\2", text)
+    text = text.replace(" .", ".").replace(" ,", ",")
+    if text.startswith("uring the last thirty years"):
+        text = "D" + text
+    text = re.sub(r"\bC alling\b", "Calling", text)
+    text = text.replace("al] the way", "all the way")
+    text = text.replace("cach of these", "each of these")
+    text = text.replace("cither small", "either small")
+    text = text.replace("when scen", "when seen")
+    text = text.replace("struc-tureless", "structureless")
+    text = text.replace("experi-mentalists", "experimentalists")
+    if text.startswith("HADN'T EXPECTED MY POPULAR BOOK"):
+        text = "I " + text
+    text = text.replace("W, EACH EXIST", "WE EACH EXIST")
+
+    if zipf_frequency is not None:
+        def dehyphen(match: re.Match[str]) -> str:
+            original = match.group(0)
+            lower = original.casefold()
+            if lower in KEEP_HYPHENATED:
+                return original
+            left, right = match.group(1), match.group(2)
+            joined = left + right
+            if zipf_frequency(joined.casefold(), "en") >= 2.2:
+                return joined
+            return original
+
+        text = SINGLE_HYPHEN_WORD_RE.sub(dehyphen, text)
+
+        def join_split_word(match: re.Match[str]) -> str:
+            left, right = match.group(1), match.group(2)
+            joined = left + right
+            if (
+                zipf_frequency(joined, "en") >= 3.15
+                and min(zipf_frequency(left, "en"), zipf_frequency(right, "en")) <= 2.25
+            ):
+                return joined
+            return match.group(0)
+
+        previous = None
+        while previous != text:
+            previous = text
+            text = SPLIT_WORD_RE.sub(join_split_word, text)
+    split_pair_fixes = {
+        "cos mos": "cosmos",
+        "ques tion": "question",
+        "ques tions": "questions",
+        "descrip tion": "description",
+        "descrip tions": "descriptions",
+        "scien tific": "scientific",
+        "scien tists": "scientists",
+        "experi ments": "experiments",
+        "ex perience": "experience",
+        "ex periments": "experiments",
+        "under standing": "understanding",
+        "elec tron": "electron",
+        "elec trons": "electrons",
+        "pro tons": "protons",
+        "neu trons": "neutrons",
+        "sys tem": "system",
+        "sys tems": "systems",
+        "every thing": "everything",
+        "any thing": "anything",
+        "longterm": "long-term",
+    }
+    for bad, good in split_pair_fixes.items():
+        text = re.sub(rf"\b{re.escape(bad)}\b", good, text)
+    spaced_word_fixes = {
+        "C l assical": "Classical",
+        "R e a l i ty": "Reality",
+        "Re a l i ty": "Reality",
+        "T h e": "The",
+        "T h i s": "This",
+        "W h e n": "When",
+        "O n e": "One",
+        "J a n u a r y": "January",
+        "J u l y": "July",
+        "M e V": "MeV",
+    }
+    for bad, good in spaced_word_fixes.items():
+        text = re.sub(rf"\b{re.escape(bad)}\b", good, text)
+    return compact(text)
 
 
 def sha256(path: Path) -> str:
@@ -226,6 +392,25 @@ def clean_line(line: str, title: str) -> str:
     line = compact(line.replace("\u00ad", ""))
     if not line or PAGE_NUMBER_RE.fullmatch(line):
         return ""
+    if line.startswith("Syntax Warning"):
+        return ""
+    terminal_candidate = re.sub(r"^#{1,6}\s+", "", line).strip().casefold()
+    if terminal_candidate.startswith(
+        (
+            "about the author",
+            "also by",
+            "copyright",
+            "manufactured in china",
+            "get personalized book picks",
+        )
+    ):
+        return line
+    if line.casefold() in {"index", "glossary", "notes", "acknowledgments", "acknowledgements"}:
+        return line
+    if LETTER_SPACED_HEADER_RE.fullmatch(line) or is_probable_spaced_header(line):
+        return ""
+    if is_symbol_noise(line):
+        return ""
     if OCR_METADATA_RE.match(line) or OCR_PAGE_RE.match(line):
         return ""
     if PAGE_ARTIFACT_RE.fullmatch(line):
@@ -241,7 +426,72 @@ def clean_line(line: str, title: str) -> str:
         words = [w for w in re.split(r"\W+", line) if w]
         if 1 <= len(words) <= 5:
             return ""
-    return line
+    return repair_embedded_text_artifacts(line)
+
+
+def is_probable_spaced_header(line: str) -> bool:
+    if len(line) > 90 or any(ch in line for ch in ".?!,;:()[]"):
+        return False
+    single_letters = re.findall(r"\b[A-Za-z]\b", line)
+    letters = re.findall(r"[A-Za-z]", line)
+    return len(single_letters) >= 4 and len(single_letters) / max(len(letters), 1) >= 0.45
+
+
+def is_symbol_noise(line: str) -> bool:
+    if len(line) < 60:
+        return False
+    symbol_count = sum(1 for ch in line if not ch.isalnum() and not ch.isspace() and ch not in ".,;:!?()[]'\"-/–—")
+    ascii_word_count = len(re.findall(r"[A-Za-z]{3,}", line))
+    return symbol_count >= 12 and ascii_word_count <= 12
+
+
+def is_heading_line(line: str, task: dict[str, Any]) -> bool:
+    line = re.sub(r"^#{1,6}\s+", "", line).strip()
+    if len(line) > 100:
+        return False
+    if SPECIAL_HEADING_RE.fullmatch(line):
+        return True
+    if CHAPTER_HEADING_RE.fullmatch(line):
+        # Body prose often says "Chapter 7 (and as we'll see...)"; avoid
+        # turning those references into fake chapters.
+        if "(" in line or re.match(r"^Chapter\s+\d+\.", line, re.I):
+            return False
+        if line.casefold().startswith("chapter ") and len(line.split()) > 4 and ":" not in line:
+            return False
+        return True
+    if task.get("allow_numeric_headings", False) and NUMERIC_HEADING_RE.fullmatch(line):
+        if re.match(r"^\d{1,3}\.\s*\d", line):
+            return False
+        return True
+    return False
+
+
+def drop_repeated_page_headers(lines: list[str]) -> list[str]:
+    """Drop running headers like `Roads to Reality 17`.
+
+    They are not always page numbers alone, so they survive `clean_line()` and
+    can be mistaken for section headings. We only remove bases that recur with
+    page-number suffixes, which avoids deleting a real one-off heading.
+    """
+
+    base_counts: dict[str, int] = {}
+    parsed: list[tuple[str, str] | None] = []
+    for line in lines:
+        match = re.match(r"^(.{4,70}?)\s+\d{1,4}$", line)
+        if match and not SENTENCE_END_RE.search(match.group(1)):
+            base = compact(match.group(1)).casefold()
+            base_counts[base] = base_counts.get(base, 0) + 1
+            parsed.append((base, line))
+        else:
+            parsed.append(None)
+
+    out: list[str] = []
+    for line, marker in zip(lines, parsed):
+        if marker and base_counts.get(marker[0], 0) >= 2:
+            out.append("")
+        else:
+            out.append(line)
+    return out
 
 
 def find_start(lines: list[str], task: dict[str, Any]) -> int:
@@ -258,12 +508,23 @@ def find_start(lines: list[str], task: dict[str, Any]) -> int:
 
 
 def should_stop(line: str, task: dict[str, Any]) -> bool:
-    lower = compact(line).casefold()
+    normalized = re.sub(r"^#{1,6}\s+", "", compact(line)).strip()
+    lower = normalized.casefold()
     for marker in task.get("stop_markers", []):
         wanted = compact(str(marker)).casefold()
         if not wanted:
             continue
         if lower == wanted:
+            return True
+        if re.fullmatch(rf"{re.escape(wanted)}\s+\d{{1,4}}", lower):
+            return True
+        if wanted == "index" and lower.startswith(wanted + " "):
+            return True
+        if wanted in {"notes", "glossary", "index"} and re.fullmatch(rf"(?:\d+\s*)?{re.escape(wanted)}(?:\s+to\s+pages?.*)?", lower):
+            return True
+        if wanted in {"glossary", "index"} and re.fullmatch(rf"\d+(?:\s+\d+)?\s+{re.escape(wanted)}", lower):
+            return True
+        if wanted == "notes" and re.fullmatch(r"notes(?:\s+\d{1,4})?", lower):
             return True
         # Short stop markers such as "Index" or "Notes" are common ordinary
         # words in nonfiction body text. Treat prefixes as terminal only for
@@ -271,6 +532,18 @@ def should_stop(line: str, task: dict[str, Any]) -> bool:
         if len(wanted) >= 12 and lower.startswith(wanted):
             return True
     return False
+
+
+def split_terminal_back_matter(line: str) -> tuple[str, bool]:
+    """Trim terminal back matter when OCR joins it to the final body paragraph."""
+
+    normalized = re.sub(r"^#{1,6}\s+", "", line).strip()
+    if TERMINAL_BACK_MATTER_RE.match(" " + normalized):
+        return "", True
+    match = TERMINAL_BACK_MATTER_RE.search(line)
+    if not match:
+        return line, False
+    return compact(line[: match.start()]), True
 
 
 def split_english_units(text: str, *, max_chars: int) -> list[str]:
@@ -302,6 +575,7 @@ def split_english_units(text: str, *, max_chars: int) -> list[str]:
 def parse_chapters(markdown: Path, task: dict[str, Any], *, max_unit_chars: int) -> list[dict[str, Any]]:
     raw_lines = markdown.read_text(encoding="utf-8", errors="replace").splitlines()
     lines = [clean_line(line, task["title_en"]) for line in raw_lines]
+    lines = drop_repeated_page_headers(lines)
     lines = lines[find_start(lines, task) :]
     chapters: list[dict[str, Any]] = []
     current = {"number": 1, "title": str(task.get("default_chapter_title") or "Main Text"), "paragraphs": []}
@@ -311,19 +585,22 @@ def parse_chapters(markdown: Path, task: dict[str, Any], *, max_unit_chars: int)
         nonlocal buffer
         if not buffer:
             return
-        text = compact(" ".join(buffer))
+        text = repair_embedded_text_artifacts(" ".join(buffer))
         buffer = []
         if len(text) >= 20 and LATIN_RE.search(text):
             current["paragraphs"].extend(split_english_units(text, max_chars=max_unit_chars))
 
     for line in lines:
+        line, terminal_after_line = split_terminal_back_matter(line)
         if should_stop(line, task):
             flush()
             break
         if not line:
             flush()
+            if terminal_after_line:
+                break
             continue
-        heading = bool(HEADING_RE.match(line)) and len(line) <= 120
+        heading = is_heading_line(line, task)
         if heading:
             flush()
             if current["paragraphs"]:
@@ -334,6 +611,9 @@ def parse_chapters(markdown: Path, task: dict[str, Any], *, max_unit_chars: int)
             buffer[-1] = buffer[-1][:-1] + line
         else:
             buffer.append(line)
+        if terminal_after_line:
+            flush()
+            break
         if SENTENCE_END_RE.search(line) and len(" ".join(buffer)) >= max_unit_chars:
             flush()
     flush()

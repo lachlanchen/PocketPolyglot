@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "book_id": "until-end-of-time",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_modern_nonfiction_en_source_generated_zh_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "en": "sources/popular-science/brian-greene/en/Until the End of Time - Brian Greene.pdf"
+  },
+  "source_sha256": {
+    "en": "eb59e1dd2a8294c2ad2d15112a938a37a9285d2c0c7bc76870da3d9f54c7a78a"
+  },
+  "source_extraction": {
+    "en_cache": "books/until-end-of-time/work/source-extraction/en.raw.md",
+    "note": "Modern nonfiction generic extraction. PDF uses pdftotext; EPUB/MOBI uses pandoc."
+  },
+  "markdown": {
+    "en": "books/until-end-of-time/markdown/en.md"
+  },
+  "book_title_en": "Until the End of Time",
+  "book_title_zh": "直到时间的尽头",
+  "book_title_ja": "時の終わりまで",
+  "book_title_zh_reading": "zhí dào shí jiān de jìn tóu",
+  "book_title_ja_reading": "とき の おわり まで",
+  "author": "Brian Greene",
+  "author_reading_zh": "bù lái ēn gé lín",
+  "author_reading_ja": "ブライアン グリーン",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Brian Greene, Until the End of Time. Broad science-and-meaning book, later in queue after core physics texts.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "english_spine_only",
+  "chunks_jsonl": "books/until-end-of-time/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/until-end-of-time/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/until-end-of-time/work/trilingual/interlinear/chunks",
+  "preview_json": "books/until-end-of-time/work/trilingual/preview/until-end-of-time.partial.json",
+  "assembled_json": "books/until-end-of-time/work/trilingual/preview/until-end-of-time.partial.json",
+  "prepared_at": "2026-07-11T12:23:24.976777+00:00",
+  "queue_id": "popular-science-trilingual",
+  "queue_model": "gpt-5.5",
+  "queue_reasoning": "low",
+  "chunk_count": 330,
+  "english_chapter_count": 3,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_modern_nonfiction_trilingual.py",
+    "english_spine": "English source text is the chunk spine.",
+    "chinese_reference": "No published Chinese source configured for this task; generate readable modern Chinese from English.",
+    "japanese_reference": "No published Japanese source configured for this task; generate natural modern Japanese from English."
+  }
+}

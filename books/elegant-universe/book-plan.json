@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "book_id": "elegant-universe",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_modern_nonfiction_en_source_generated_zh_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "en": "sources/popular-science/brian-greene/en/The Elegant Universe - Brian Greene.pdf"
+  },
+  "source_sha256": {
+    "en": "fc467154b110a3d8266e10d15362449b7b4cca837d0cc7e108b23ececb5fb4b4"
+  },
+  "source_extraction": {
+    "en_cache": "books/elegant-universe/work/source-extraction/en.raw.md",
+    "note": "Modern nonfiction generic extraction. PDF uses pdftotext; EPUB/MOBI uses pandoc."
+  },
+  "markdown": {
+    "en": "books/elegant-universe/markdown/en.md"
+  },
+  "book_title_en": "The Elegant Universe",
+  "book_title_zh": "优雅的宇宙",
+  "book_title_ja": "エレガントな宇宙",
+  "book_title_zh_reading": "yōu yǎ de yǔ zhòu",
+  "book_title_ja_reading": "エレガント な うちゅう",
+  "author": "Brian Greene",
+  "author_reading_zh": "bù lái ēn gé lín",
+  "author_reading_ja": "ブライアン グリーン",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Brian Greene, The Elegant Universe. Best first Greene text for a broad, concept-rich physics reading queue.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "english_spine_only",
+  "chunks_jsonl": "books/elegant-universe/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/elegant-universe/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/elegant-universe/work/trilingual/interlinear/chunks",
+  "preview_json": "books/elegant-universe/work/trilingual/preview/elegant-universe.partial.json",
+  "assembled_json": "books/elegant-universe/work/trilingual/preview/elegant-universe.partial.json",
+  "prepared_at": "2026-07-11T12:23:14.762867+00:00",
+  "queue_id": "popular-science-trilingual",
+  "queue_model": "gpt-5.5",
+  "queue_reasoning": "low",
+  "chunk_count": 334,
+  "english_chapter_count": 3,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_modern_nonfiction_trilingual.py",
+    "english_spine": "English source text is the chunk spine.",
+    "chinese_reference": "No published Chinese source configured for this task; generate readable modern Chinese from English.",
+    "japanese_reference": "No published Japanese source configured for this task; generate natural modern Japanese from English."
+  }
+}

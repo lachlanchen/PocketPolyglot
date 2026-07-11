@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "book_id": "fabric-of-the-cosmos",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_modern_nonfiction_en_source_generated_zh_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "en": "sources/popular-science/brian-greene/en/The Fabric of the Cosmos - Brian Greene.pdf"
+  },
+  "source_sha256": {
+    "en": "1da16724f5a910c926ed28f6df56f035bd63de41bef8c6dd1059ddddfe7bd256"
+  },
+  "source_extraction": {
+    "en_cache": "books/fabric-of-the-cosmos/work/source-extraction/en.raw.md",
+    "note": "Modern nonfiction generic extraction. PDF uses pdftotext; EPUB/MOBI uses pandoc."
+  },
+  "markdown": {
+    "en": "books/fabric-of-the-cosmos/markdown/en.md"
+  },
+  "book_title_en": "The Fabric of the Cosmos",
+  "book_title_zh": "宇宙的结构",
+  "book_title_ja": "宇宙の構造",
+  "book_title_zh_reading": "yǔ zhòu de jié gòu",
+  "book_title_ja_reading": "うちゅう の こうぞう",
+  "author": "Brian Greene",
+  "author_reading_zh": "bù lái ēn gé lín",
+  "author_reading_ja": "ブライアン グリーン",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Brian Greene, The Fabric of the Cosmos. Deep and readable follow-up on space, time, and reality.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "english_spine_only",
+  "chunks_jsonl": "books/fabric-of-the-cosmos/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/fabric-of-the-cosmos/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/fabric-of-the-cosmos/work/trilingual/interlinear/chunks",
+  "preview_json": "books/fabric-of-the-cosmos/work/trilingual/preview/fabric-of-the-cosmos.partial.json",
+  "assembled_json": "books/fabric-of-the-cosmos/work/trilingual/preview/fabric-of-the-cosmos.partial.json",
+  "prepared_at": "2026-07-11T12:23:19.133105+00:00",
+  "queue_id": "popular-science-trilingual",
+  "queue_model": "gpt-5.5",
+  "queue_reasoning": "low",
+  "chunk_count": 516,
+  "english_chapter_count": 1,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_modern_nonfiction_trilingual.py",
+    "english_spine": "English source text is the chunk spine.",
+    "chinese_reference": "No published Chinese source configured for this task; generate readable modern Chinese from English.",
+    "japanese_reference": "No published Japanese source configured for this task; generate natural modern Japanese from English."
+  }
+}

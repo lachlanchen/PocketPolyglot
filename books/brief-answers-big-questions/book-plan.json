@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "book_id": "brief-answers-big-questions",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_modern_nonfiction_en_source_generated_zh_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "en": "sources/popular-science/hawking/en/Brief Answers to the Big Questions - Stephen Hawking.epub"
+  },
+  "source_sha256": {
+    "en": "e873e1a89f009e372e8798918f00bab95b8474fc6bb4fb5a5199e521fab8826e"
+  },
+  "source_extraction": {
+    "en_cache": "books/brief-answers-big-questions/work/source-extraction/en.raw.md",
+    "note": "Modern nonfiction generic extraction. PDF uses pdftotext; EPUB/MOBI uses pandoc."
+  },
+  "markdown": {
+    "en": "books/brief-answers-big-questions/markdown/en.md"
+  },
+  "book_title_en": "Brief Answers to the Big Questions",
+  "book_title_zh": "大问题的简明回答",
+  "book_title_ja": "大いなる問いへの簡潔な答え",
+  "book_title_zh_reading": "dà wèn tí de jiǎn míng huí dá",
+  "book_title_ja_reading": "おおいなる とい への かんけつ な こたえ",
+  "author": "Stephen Hawking",
+  "author_reading_zh": "shǐ dì fēn huò jīn",
+  "author_reading_ja": "スティーブン ホーキング",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Stephen Hawking, Brief Answers to the Big Questions. Accessible essay-style late Hawking.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "english_spine_only",
+  "chunks_jsonl": "books/brief-answers-big-questions/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/brief-answers-big-questions/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/brief-answers-big-questions/work/trilingual/interlinear/chunks",
+  "preview_json": "books/brief-answers-big-questions/work/trilingual/preview/brief-answers-big-questions.partial.json",
+  "assembled_json": "books/brief-answers-big-questions/work/trilingual/preview/brief-answers-big-questions.partial.json",
+  "prepared_at": "2026-07-11T12:23:25.463651+00:00",
+  "queue_id": "popular-science-trilingual",
+  "queue_model": "gpt-5.5",
+  "queue_reasoning": "low",
+  "chunk_count": 106,
+  "english_chapter_count": 1,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_modern_nonfiction_trilingual.py",
+    "english_spine": "English source text is the chunk spine.",
+    "chinese_reference": "No published Chinese source configured for this task; generate readable modern Chinese from English.",
+    "japanese_reference": "No published Japanese source configured for this task; generate natural modern Japanese from English."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "book_id": "my-brief-history",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_modern_nonfiction_en_source_generated_zh_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "en": "sources/popular-science/hawking/en/My Brief History - Stephen Hawking.pdf"
+  },
+  "source_sha256": {
+    "en": "52bf1bbc139f81323445b661dadf2ffecbb7d43fbc1a048b40d1fd458be2777f"
+  },
+  "source_extraction": {
+    "en_cache": "books/my-brief-history/work/source-extraction/en.raw.md",
+    "note": "Modern nonfiction generic extraction. PDF uses pdftotext; EPUB/MOBI uses pandoc."
+  },
+  "markdown": {
+    "en": "books/my-brief-history/markdown/en.md"
+  },
+  "book_title_en": "My Brief History",
+  "book_title_zh": "我的简史",
+  "book_title_ja": "私の簡史",
+  "book_title_zh_reading": "wǒ de jiǎn shǐ",
+  "book_title_ja_reading": "わたし の かんし",
+  "author": "Stephen Hawking",
+  "author_reading_zh": "shǐ dì fēn huò jīn",
+  "author_reading_ja": "スティーブン ホーキング",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Stephen Hawking, My Brief History. Biographical value but lower physics-learning priority.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "english_spine_only",
+  "chunks_jsonl": "books/my-brief-history/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/my-brief-history/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/my-brief-history/work/trilingual/interlinear/chunks",
+  "preview_json": "books/my-brief-history/work/trilingual/preview/my-brief-history.partial.json",
+  "assembled_json": "books/my-brief-history/work/trilingual/preview/my-brief-history.partial.json",
+  "prepared_at": "2026-07-11T12:25:09.930975+00:00",
+  "queue_id": "popular-science-trilingual",
+  "queue_model": "gpt-5.5",
+  "queue_reasoning": "low",
+  "chunk_count": 54,
+  "english_chapter_count": 1,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_modern_nonfiction_trilingual.py",
+    "english_spine": "English source text is the chunk spine.",
+    "chinese_reference": "No published Chinese source configured for this task; generate readable modern Chinese from English.",
+    "japanese_reference": "No published Japanese source configured for this task; generate natural modern Japanese from English."
+  }
+}

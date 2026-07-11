@@ -17,7 +17,8 @@ CONTENT_RE = re.compile(r"[\w\u3400-\u4dbf\u4e00-\u9fff\u3040-\u30ff]")
 
 
 def run_text(cmd: list[str]) -> str:
-    return subprocess.check_output(cmd, cwd=ROOT, stderr=subprocess.STDOUT).decode("utf-8", errors="replace")
+    result = subprocess.run(cmd, cwd=ROOT, capture_output=True, check=True)
+    return result.stdout.decode("utf-8", errors="replace")
 
 
 def normalize_text(text: str) -> str:
