@@ -134,6 +134,12 @@ const THEME_HINTS = {
     "Tsangyang Gyatso poems, Tibetan plateau moonlight, prayer flags as abstract color without readable script, distant monastery silhouette, intimate lyric longing and spiritual solitude, lapis blue, saffron, snow white, and muted crimson palette",
   "english-poetry-anthology-spark":
     "English poetry anthology, open old poetry book without readable words, layered seasons, quill, rose, storm cloud, moonlit field, broad lyrical tradition, restrained editorial collage in deep blue, warm parchment, and muted gold",
+  "positioning-battle-for-your-mind":
+    "brand positioning and strategy, abstract market map, compass, clean geometric pathways, layered perception diagrams without readable words, thoughtful business strategy atmosphere, restrained blue, graphite, ivory, and warm gold palette",
+};
+
+const IMAGE_TITLE_OVERRIDES = {
+  "positioning-battle-for-your-mind": "Positioning / 定位 / ポジショニング",
 };
 
 function parseArgs(argv) {
@@ -230,9 +236,10 @@ function discoverPlans(selectedBooks) {
 
 function promptFor(plan) {
   const hint = THEME_HINTS[plan.bookId] || plan.description || `${plan.titleJa} / ${plan.titleZh}`;
+  const imageTitle = IMAGE_TITLE_OVERRIDES[plan.bookId] || `${plan.titleJa} / ${plan.titleZh}`;
   return [
     "Create a refined textless background illustration for a pocket-size bilingual Chinese-Japanese literary book cover.",
-    `Book: ${plan.titleJa} / ${plan.titleZh}. Author: ${plan.author || "unknown"}.`,
+    `Book: ${imageTitle}. Author: ${plan.author || "unknown"}.`,
     `Visual direction: ${hint}.`,
     "Vertical A6 book cover composition, elegant East Asian printmaking and subtle modern editorial design.",
     "Leave a calm central area suitable for overlaid vertical title typography.",
