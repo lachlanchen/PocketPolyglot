@@ -153,6 +153,31 @@ def source_unit_plan(chunk: dict[str, Any]) -> list[dict[str, Any]]:
     return paragraphs
 
 
+def normalize_plain_unit_ids(source: dict[str, Any], result: dict[str, Any]) -> None:
+    """Repair harmless unit-id drift while preserving generated text.
+
+    Models sometimes copy the right unit order but mistype one manifest id, e.g.
+    moving a paragraph number from the previous or next unit. The manifest order
+    is authoritative here; if paragraph ids and unit counts match, rewrite only
+    the unit_id fields before validation.
+    """
+    paragraphs = result.get("paragraphs")
+    if not isinstance(paragraphs, list):
+        return
+    source_plan = source_unit_plan(source)
+    if [p.get("id") for p in paragraphs if isinstance(p, dict)] != [p["id"] for p in source_plan]:
+        return
+    for source_paragraph, paragraph in zip(source_plan, paragraphs):
+        if not isinstance(paragraph, dict):
+            return
+        units = paragraph.get("units")
+        if not isinstance(units, list) or len(units) != len(source_paragraph["units"]):
+            return
+        for expected_unit, unit in zip(source_paragraph["units"], units):
+            if isinstance(unit, dict):
+                unit["unit_id"] = expected_unit["unit_id"]
+
+
 def prompt_for_plain_chunk(chunk: dict[str, Any], previous_errors: list[str] | None = None) -> str:
     error_block = ""
     if previous_errors:
@@ -720,6 +745,7 @@ def main() -> int:
                         timeout_seconds=args.codex_timeout_seconds,
                     )
                     result = extract_json(message_path.read_text(encoding="utf-8"))
+                    normalize_plain_unit_ids(chunk, result)
                     errors = validate_plain_chunk(chunk, result)
                     if not errors or kanji_note_plain_errors_are_promotable(result, errors):
                         strict = promote_plain_chunk(chunk, result)
