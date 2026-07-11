@@ -3,16 +3,17 @@ set -euo pipefail
 
 usage() {
   cat <<'USAGE'
-Usage: prompt_tools/run_modern_nonfiction_trilingual_queues.sh [history|wealth|both]
+Usage: prompt_tools/run_modern_nonfiction_trilingual_queues.sh [history|wealth|science|both|all]
 
 Start prepared modern nonfiction EN-JP-ZH queues in tmux.
 
 Defaults:
   history: MODEL=gpt-5.3-codex-spark REASONING=low WORKERS=10
   wealth:  MODEL=gpt-5.5             REASONING=low WORKERS=10
+  science: MODEL=gpt-5.5             REASONING=low WORKERS=10
 
-Override with HISTORY_WORKERS, WEALTH_WORKERS, INTERVAL_SECONDS,
-MERGE_INTERVAL, COMPILE_INTERVAL_SECONDS, or MAX_ACTIVE_BOOKS.
+Override with HISTORY_WORKERS, WEALTH_WORKERS, POPULAR_SCIENCE_WORKERS,
+INTERVAL_SECONDS, MERGE_INTERVAL, COMPILE_INTERVAL_SECONDS, or MAX_ACTIVE_BOOKS.
 USAGE
 }
 
@@ -98,9 +99,23 @@ case "$target" in
       "${WEALTH_WORKERS:-10}" \
       "${WEALTH_CODEX_EXEC_DISABLE_FEATURES:-}"
     ;;
+  science|popular-science|hawking-greene)
+    start_queue \
+      "popular-science" \
+      "data/source-plan/popular-science-trilingual-queue.json" \
+      "${POPULAR_SCIENCE_MODEL:-gpt-5.5}" \
+      "${POPULAR_SCIENCE_REASONING:-low}" \
+      "${POPULAR_SCIENCE_WORKERS:-10}" \
+      "${POPULAR_SCIENCE_CODEX_EXEC_DISABLE_FEATURES:-}"
+    ;;
   both)
     "$0" history
     "$0" wealth
+    ;;
+  all)
+    "$0" history
+    "$0" wealth
+    "$0" science
     ;;
   *)
     usage >&2
