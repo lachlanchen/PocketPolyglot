@@ -18,6 +18,7 @@ Environment:
   CODEX_EXEC_IGNORE_USER_CONFIG=0
   CODEX_EXEC_IGNORE_RULES=0
   CODEX_EXEC_DISABLE_FEATURES=
+  REPAIR_USAGE_LIMIT_MAX_WAIT_SECONDS=900
 USAGE
 }
 
@@ -54,6 +55,7 @@ worker_script="${WORKER_SCRIPT:-scripts/interlinear/codex_trilingual_plain_json_
 codex_exec_ignore_user_config="${CODEX_EXEC_IGNORE_USER_CONFIG:-0}"
 codex_exec_ignore_rules="${CODEX_EXEC_IGNORE_RULES:-0}"
 codex_exec_disable_features="${CODEX_EXEC_DISABLE_FEATURES:-}"
+repair_usage_limit_max_wait_seconds="${REPAIR_USAGE_LIMIT_MAX_WAIT_SECONDS:-900}"
 
 work_root="books/$book_id/work/trilingual/stall-repair"
 candidate_dir="books/$book_id/work/trilingual/parallel-json/candidates"
@@ -69,6 +71,7 @@ cd '$root'
 export CODEX_EXEC_IGNORE_USER_CONFIG='$codex_exec_ignore_user_config'
 export CODEX_EXEC_IGNORE_RULES='$codex_exec_ignore_rules'
 export CODEX_EXEC_DISABLE_FEATURES='$codex_exec_disable_features'
+export CODEX_USAGE_LIMIT_MAX_WAIT_SECONDS='$repair_usage_limit_max_wait_seconds'
 
 merge_once() {
   python scripts/interlinear/merge_trilingual_json_candidates.py \\

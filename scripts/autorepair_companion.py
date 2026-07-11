@@ -165,6 +165,19 @@ def complete_from_keys(report: dict[str, str], key_values: list[tuple[str, str]]
     return True
 
 
+def progress_fingerprint(args: argparse.Namespace, report: dict[str, str], health_stdout: str, watched_mtime: float, complete: bool) -> dict[str, Any]:
+    if args.progress_key:
+        return {
+            "progress": {key: report.get(key, "") for key in args.progress_key},
+            "complete": complete,
+        }
+    return {
+        "health_hash": sha256_short(health_stdout),
+        "watched_mtime": int(watched_mtime),
+        "complete": complete,
+    }
+
+
 def first_missing_index(report: dict[str, str]) -> str:
     value = report.get("first_missing", "")
     if not value:
@@ -308,13 +321,9 @@ def companion_once(args: argparse.Namespace, state: dict[str, Any]) -> dict[str,
     complete = complete_from_keys(report, args.complete_key, args.complete_key_eq, args.complete_ratio)
     active = tmux_active(args.primary_session)
     watched_mtime = latest_mtime(args.watch)
-    progress_fingerprint = {
-        "health_hash": sha256_short(health_stdout),
-        "watched_mtime": int(watched_mtime),
-        "complete": complete,
-    }
-    if state.get("progress_fingerprint") != progress_fingerprint:
-        state["progress_fingerprint"] = progress_fingerprint
+    fingerprint = progress_fingerprint(args, report, health_stdout, watched_mtime, complete)
+    if state.get("progress_fingerprint") != fingerprint:
+        state["progress_fingerprint"] = fingerprint
         state["progress_since"] = time.time()
     unchanged_for = int(time.time() - float(state.get("progress_since", time.time())))
 
@@ -406,6 +415,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--complete-key", action="append", type=split_assignment, default=[])
     parser.add_argument("--complete-key-eq", action="append", type=split_assignment, default=[])
     parser.add_argument("--complete-ratio", action="append", default=[])
+    parser.add_argument("--progress-key", action="append", default=[], help="Health report keys that define forward progress")
     parser.add_argument("--watch", action="append", default=[])
     parser.add_argument("--log", action="append", default=[])
     parser.add_argument("--py-compile", action="append", default=[])

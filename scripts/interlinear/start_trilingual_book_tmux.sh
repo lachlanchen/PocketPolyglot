@@ -236,6 +236,12 @@ if [[ "${START_AUTOREPAIR_COMPANION:-1}" != "0" ]]; then
     --complete-key missing_chunks=0 \
     --complete-key stale_chunks=0 \
     --complete-key-eq manifest_chunks=valid_chunks \
+    --progress-key manifest_chunks \
+    --progress-key valid_chunks \
+    --progress-key stale_chunks \
+    --progress-key missing_chunks \
+    --progress-key last_valid \
+    --progress-key first_missing \
     --watch "$raw_chunk_dir" \
     --watch "$candidate_dir" \
     --log "$work_root/logs/*.log" \
