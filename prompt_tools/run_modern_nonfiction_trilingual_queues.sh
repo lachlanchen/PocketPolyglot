@@ -60,6 +60,7 @@ start_queue() {
   for book in "${books[@]:1}"; do
     args+=(--book-id "$book")
   done
+  mkdir -p "books/$current/work/trilingual/queue"
 
   tmux new-session -d -s "$session" -n queue \
     "cd '$root' && MODEL='$model' REASONING='$reasoning' WORKERS='$workers' \
