@@ -42,6 +42,7 @@ start_queue() {
   local model="$3"
   local reasoning="$4"
   local workers="$5"
+  local disable_features="${6:-}"
   local session="zhjpbook-${name}-trilingual-queue"
 
   if tmux has-session -t "=$session" 2>/dev/null; then
@@ -64,6 +65,7 @@ start_queue() {
 
   tmux new-session -d -s "$session" -n queue \
     "cd '$root' && MODEL='$model' REASONING='$reasoning' WORKERS='$workers' \
+      CODEX_EXEC_DISABLE_FEATURES='$disable_features' \
       INTERVAL_SECONDS='${INTERVAL_SECONDS:-900}' \
       MERGE_INTERVAL='${MERGE_INTERVAL:-120}' \
       COMPILE_INTERVAL_SECONDS='${COMPILE_INTERVAL_SECONDS:-1800}' \
@@ -84,7 +86,8 @@ case "$target" in
       "data/source-plan/modern-history-trilingual-queue.json" \
       "${HISTORY_MODEL:-gpt-5.3-codex-spark}" \
       "${HISTORY_REASONING:-low}" \
-      "${HISTORY_WORKERS:-10}"
+      "${HISTORY_WORKERS:-10}" \
+      "${HISTORY_CODEX_EXEC_DISABLE_FEATURES:-image_generation}"
     ;;
   wealth)
     start_queue \
@@ -92,7 +95,8 @@ case "$target" in
       "data/source-plan/wealth-success-trilingual-queue.json" \
       "${WEALTH_MODEL:-gpt-5.5}" \
       "${WEALTH_REASONING:-low}" \
-      "${WEALTH_WORKERS:-10}"
+      "${WEALTH_WORKERS:-10}" \
+      "${WEALTH_CODEX_EXEC_DISABLE_FEATURES:-}"
     ;;
   both)
     "$0" history
