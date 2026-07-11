@@ -31,6 +31,12 @@ ERROR_PATTERNS = re.compile(
     r"command not found|jq: error|latex error|emergency stop)"
 )
 
+USAGE_LIMIT_BACKOFF_PATTERNS = re.compile(
+    r"(?i)(codex usage limit detected; sleeping \d+s? before retry|"
+    r"usage limit detected; sleeping|"
+    r"usage limit.*before retry)"
+)
+
 
 def now_iso() -> str:
     return datetime.now(timezone.utc).isoformat()
@@ -114,6 +120,20 @@ def latest_mtime(patterns: list[str]) -> float:
             if item.is_file():
                 latest = max(latest, item.stat().st_mtime)
     return latest
+
+
+def recent_usage_limit_backoff(log_text: str, log_mtime: float, *, active_seconds: int) -> bool:
+    """Return True when workers are recently waiting for external Codex quota.
+
+    Active quota backoff intentionally produces no chunk artifacts for long
+    periods. Treating that as a pipeline stall launches unnecessary repair
+    agents, so suppress only while matching logs are still fresh.
+    """
+    if active_seconds <= 0:
+        return False
+    if not USAGE_LIMIT_BACKOFF_PATTERNS.search(log_text[-8000:]):
+        return False
+    return bool(log_mtime and time.time() - log_mtime <= active_seconds)
 
 
 def tail_logs(patterns: list[str], *, lines: int, max_chars: int) -> str:
@@ -321,6 +341,7 @@ def companion_once(args: argparse.Namespace, state: dict[str, Any]) -> dict[str,
     complete = complete_from_keys(report, args.complete_key, args.complete_key_eq, args.complete_ratio)
     active = tmux_active(args.primary_session)
     watched_mtime = latest_mtime(args.watch)
+    log_mtime = latest_mtime(args.log)
     fingerprint = progress_fingerprint(args, report, health_stdout, watched_mtime, complete)
     if state.get("progress_fingerprint") != fingerprint:
         state["progress_fingerprint"] = fingerprint
@@ -336,6 +357,11 @@ def companion_once(args: argparse.Namespace, state: dict[str, Any]) -> dict[str,
     if not compile_ok:
         failures.append("py_compile_failed")
     recent_logs = tail_logs(args.log, lines=args.evidence_lines, max_chars=args.max_evidence_chars)
+    usage_limit_backoff = recent_usage_limit_backoff(
+        recent_logs,
+        log_mtime,
+        active_seconds=args.usage_limit_active_seconds,
+    )
     error_like = bool(ERROR_PATTERNS.search("\n".join([health_stdout[-4000:], recent_logs[-4000:], compile_output[-4000:]])))
 
     if complete:
@@ -373,6 +399,8 @@ def companion_once(args: argparse.Namespace, state: dict[str, Any]) -> dict[str,
             "failures": failures,
         }
         actions.append(launch_repair(args, state, "health command crashed", facts))
+    elif not complete and usage_limit_backoff and active:
+        actions.append(f"usage_limit_backoff active=1 unchanged_for={unchanged_for}s")
     elif not complete and unchanged_for >= args.active_stall_seconds and active:
         facts = {
             "health": {"returncode": health_returncode, "stdout": truncate(health_stdout, 5000), "parsed": report},
@@ -397,6 +425,8 @@ def companion_once(args: argparse.Namespace, state: dict[str, Any]) -> dict[str,
         "health_returncode": health_returncode,
         "health": report,
         "watched_mtime": watched_mtime,
+        "log_mtime": log_mtime,
+        "usage_limit_backoff": usage_limit_backoff,
         "unchanged_for": unchanged_for,
         "failures": failures,
         "actions": actions,
@@ -428,6 +458,12 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--interval-seconds", type=int, default=int(os.environ.get("AUTOREPAIR_INTERVAL_SECONDS", "600")))
     parser.add_argument("--stall-seconds", type=int, default=int(os.environ.get("AUTOREPAIR_STALL_SECONDS", "1800")))
     parser.add_argument("--active-stall-seconds", type=int, default=int(os.environ.get("AUTOREPAIR_ACTIVE_STALL_SECONDS", "7200")))
+    parser.add_argument(
+        "--usage-limit-active-seconds",
+        type=int,
+        default=int(os.environ.get("AUTOREPAIR_USAGE_LIMIT_ACTIVE_SECONDS", "14400")),
+        help="Suppress active-stall repair while recent logs show Codex usage-limit retry backoff.",
+    )
     parser.add_argument("--repair-cooldown-seconds", type=int, default=int(os.environ.get("AUTOREPAIR_COOLDOWN_SECONDS", "7200")))
     parser.add_argument("--start-cooldown-seconds", type=int, default=int(os.environ.get("AUTOREPAIR_START_COOLDOWN_SECONDS", "1200")))
     parser.add_argument("--health-timeout-seconds", type=int, default=120)
