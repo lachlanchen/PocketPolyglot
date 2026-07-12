@@ -19,6 +19,11 @@ LATIN_RE = re.compile(r"[A-Za-z]")
 VISUAL_TECHNICAL_RE = re.compile(r"\b(?:figs?|figure|track)\s*\.?\s*\d*|[図圖图]\s*\d*", re.IGNORECASE)
 SOURCE_LIST_LABEL_RE = re.compile(r"\b(?:number|noun|person|total|responsible)\b", re.IGNORECASE)
 JA_KANJI_LIST_LABEL_RE = re.compile(r"^[\s、。・／/()（）:：;；数数量名詞名人名合計総計小計責任者担当者]+$")
+GLOSSARY_SOURCE_RE = re.compile(r"^\s*(?:[*_]{1,2})?[A-Z][A-Z0-9/._-]{1,24}(?:[*_]{1,2})?\b")
+JA_KANJI_GLOSSARY_RE = re.compile(r"^[\sA-Za-z0-9/._+\-()（）【】「」、。・:：;；\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]+$")
+SIMPLIFIED_CHINESE_SIGNAL_RE = re.compile(
+    r"[们这为舰战术备认证让进过发导弹员长门间处级]"
+)
 MUSIC_TABLE_TOKEN_RE = re.compile(
     r"\b(?:[A-G](?:[#b+>°])?(?:m|maj|min|dim|aug)?\d*|[b#]?(?:I|II|III|IV|V|VI|VII|i|ii|iii|iv|v|vi|vii)|major|minor|dim|aug)\b"
 )
@@ -166,6 +171,14 @@ def allows_technical_ja_without_kana(source_text: str, ja_text: str) -> bool:
     source = compact(source_text)
     if not text or KANA_RE.search(text):
         return False
+    if (
+        len(no_space(text)) <= 90
+        and GLOSSARY_SOURCE_RE.search(source)
+        and JA_KANJI_GLOSSARY_RE.fullmatch(text)
+        and HAN_RE.search(text)
+        and not SIMPLIFIED_CHINESE_SIGNAL_RE.search(text)
+    ):
+        return True
     if (
         len(no_space(text)) <= 42
         and JA_KANJI_LIST_LABEL_RE.fullmatch(text)
