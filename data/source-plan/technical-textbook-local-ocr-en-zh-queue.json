@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "queue_id": "technical-textbook-local-ocr-en-zh",
+  "status": "prepared_not_started",
+  "description": "Local OCR exact-TeX and EN/ZH JSON queue for formula/table/figure-heavy technical books.",
+  "engine_order": [
+    "marker-surya",
+    "mineru",
+    "docling",
+    "pix2tex-targeted-equations",
+    "mathpix-optional-validator"
+  ],
+  "node_schema": "data/source-plan/technical-textbook-en-zh-node-schema.json",
+  "tool_status": {
+    "gpu": "NVIDIA GeForce RTX 4090 D, 24564 MiB",
+    "qpdf": true,
+    "pdftocairo": true,
+    "pdfimages": true,
+    "mutool": true,
+    "python": "Python 3.10.13",
+    "marker_import": true,
+    "surya_import": true,
+    "pix2tex_import": true,
+    "mineru_import": false,
+    "docling_import": false
+  },
+  "books": [
+    {
+      "book_id": "game-theory",
+      "title_en": "Game Theory",
+      "title_zh": "博弈论",
+      "source_pdf": "sources/game-theory/A Course in Game Theory.pdf",
+      "content_pages": 370,
+      "task_manifest": "books/game-theory/tasks/local-ocr-en-zh/manifest.json",
+      "tasks_jsonl": "books/game-theory/tasks/local-ocr-en-zh/pages.jsonl",
+      "work_root": "books/game-theory/work/exact-tex/local-ocr"
+    },
+    {
+      "book_id": "game-theory-101",
+      "title_en": "Game Theory 101: The Complete Textbook",
+      "title_zh": "博弈论 101",
+      "source_pdf": "sources/game-theory/Game_Theory_101_Complete_Textbook_2011.pdf",
+      "content_pages": 149,
+      "task_manifest": "books/game-theory-101/tasks/local-ocr-en-zh/manifest.json",
+      "tasks_jsonl": "books/game-theory-101/tasks/local-ocr-en-zh/pages.jsonl",
+      "work_root": "books/game-theory-101/work/exact-tex/local-ocr"
+    },
+    {
+      "book_id": "nonlinear-dynamics-and-chaos",
+      "title_en": "Nonlinear Dynamics and Chaos",
+      "title_zh": "非线性动力学与混沌",
+      "source_pdf": "sources/nonlinear-dynamics-and-chaos/Nonlinear Dynamics and Chaos - With Applications to Physics, Biology, Chemistry, and Engineering.pdf",
+      "content_pages": 600,
+      "task_manifest": "books/nonlinear-dynamics-and-chaos/tasks/local-ocr-en-zh/manifest.json",
+      "tasks_jsonl": "books/nonlinear-dynamics-and-chaos/tasks/local-ocr-en-zh/pages.jsonl",
+      "work_root": "books/nonlinear-dynamics-and-chaos/work/exact-tex/local-ocr"
+    },
+    {
+      "book_id": "chaos-making-new-science",
+      "title_en": "Chaos: Making a New Science",
+      "title_zh": "混沌：开创新科学",
+      "source_pdf": "sources/chaos-making-new-science/Chaos_Making_New_Science_2015.pdf",
+      "content_pages": 355,
+      "task_manifest": "books/chaos-making-new-science/tasks/local-ocr-en-zh/manifest.json",
+      "tasks_jsonl": "books/chaos-making-new-science/tasks/local-ocr-en-zh/pages.jsonl",
+      "work_root": "books/chaos-making-new-science/work/exact-tex/local-ocr"
+    },
+    {
+      "book_id": "qft-gifted-amateur",
+      "title_en": "Quantum Field Theory for the Gifted Amateur",
+      "title_zh": "献给有天赋业余者的量子场论",
+      "source_pdf": "sources/quantum-field-theory-gifted-amateur/Quantum_Field_Theory_For_The_Gifted_Amateur.pdf",
+      "content_pages": 503,
+      "task_manifest": "books/qft-gifted-amateur/tasks/local-ocr-en-zh/manifest.json",
+      "tasks_jsonl": "books/qft-gifted-amateur/tasks/local-ocr-en-zh/pages.jsonl",
+      "work_root": "books/qft-gifted-amateur/work/exact-tex/local-ocr"
+    }
+  ],
+  "prepared_at": "2026-07-12T05:15:17.223029+00:00"
+}

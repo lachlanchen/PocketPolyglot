@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "book_id": "qft-gifted-amateur",
+  "status": "prepared_local_ocr_en_zh_not_started",
+  "title_en": "Quantum Field Theory for the Gifted Amateur",
+  "title_zh": "献给有天赋业余者的量子场论",
+  "author": "Tom Lancaster and Stephen J. Blundell",
+  "source_pdf": "sources/quantum-field-theory-gifted-amateur/Quantum_Field_Theory_For_The_Gifted_Amateur.pdf",
+  "source_sha256": "4077246c8126c929b1882038c72c43a1b9711e0cf76eb973e6839a095a0dffe0",
+  "source_pages": 512,
+  "content_pages": 503,
+  "source_references": {
+    "exact_source": "sources/quantum-field-theory-gifted-amateur/Quantum_Field_Theory_For_The_Gifted_Amateur.pdf"
+  },
+  "engine_order": [
+    "marker-surya",
+    "mineru",
+    "docling",
+    "pix2tex-targeted-equations",
+    "mathpix-optional-validator"
+  ],
+  "node_schema": "data/source-plan/technical-textbook-en-zh-node-schema.json",
+  "tool_status": {
+    "gpu": "NVIDIA GeForce RTX 4090 D, 24564 MiB",
+    "qpdf": true,
+    "pdftocairo": true,
+    "pdfimages": true,
+    "mutool": true,
+    "python": "Python 3.10.13",
+    "marker_import": true,
+    "surya_import": true,
+    "pix2tex_import": true,
+    "mineru_import": false,
+    "docling_import": false
+  },
+  "task_contract": {
+    "goal": "Create editable pocket-size TeX and EN/ZH JSON while preserving every equation, figure, diagram, table, caption, and exercise layout.",
+    "primary_engine": "marker-surya in `.venv/ocr` for whole-page structure.",
+    "secondary_engine": "MinerU if installed for cross-checking formula/table/layout extraction.",
+    "formula_fallback": "pix2tex on cropped equations when Marker/MinerU disagree or omit TeX.",
+    "validation": [
+      "run local OCR on page ranges first",
+      "compare structured nodes against source page image",
+      "compile pocket TeX and inspect overfull/missing-image logs",
+      "only generate final EN/ZH JSON after page-node validation"
+    ]
+  },
+  "tasks_jsonl": "books/qft-gifted-amateur/tasks/local-ocr-en-zh/pages.jsonl",
+  "work_root": "books/qft-gifted-amateur/work/exact-tex/local-ocr",
+  "prepared_at": "2026-07-12T05:15:17.216232+00:00"
+}

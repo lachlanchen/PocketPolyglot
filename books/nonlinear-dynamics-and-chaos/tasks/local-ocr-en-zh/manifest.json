@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "book_id": "nonlinear-dynamics-and-chaos",
+  "status": "prepared_local_ocr_en_zh_not_started",
+  "title_en": "Nonlinear Dynamics and Chaos",
+  "title_zh": "非线性动力学与混沌",
+  "author": "Steven H. Strogatz",
+  "source_pdf": "sources/nonlinear-dynamics-and-chaos/Nonlinear Dynamics and Chaos - With Applications to Physics, Biology, Chemistry, and Engineering.pdf",
+  "source_sha256": "8cb52d57ddf6c63dc71042e113c6dd333c4789a3aa4c9fe1ac1eeb2d0daa7579",
+  "source_pages": 616,
+  "content_pages": 600,
+  "source_references": {
+    "exact_source": "sources/nonlinear-dynamics-and-chaos/Nonlinear Dynamics and Chaos - With Applications to Physics, Biology, Chemistry, and Engineering.pdf",
+    "zh_reference": "sources/nonlinear-dynamics-and-chaos/非线性动力学与混沌.pdf"
+  },
+  "engine_order": [
+    "marker-surya",
+    "mineru",
+    "docling",
+    "pix2tex-targeted-equations",
+    "mathpix-optional-validator"
+  ],
+  "node_schema": "data/source-plan/technical-textbook-en-zh-node-schema.json",
+  "tool_status": {
+    "gpu": "NVIDIA GeForce RTX 4090 D, 24564 MiB",
+    "qpdf": true,
+    "pdftocairo": true,
+    "pdfimages": true,
+    "mutool": true,
+    "python": "Python 3.10.13",
+    "marker_import": true,
+    "surya_import": true,
+    "pix2tex_import": true,
+    "mineru_import": false,
+    "docling_import": false
+  },
+  "task_contract": {
+    "goal": "Create editable pocket-size TeX and EN/ZH JSON while preserving every equation, figure, diagram, table, caption, and exercise layout.",
+    "primary_engine": "marker-surya in `.venv/ocr` for whole-page structure.",
+    "secondary_engine": "MinerU if installed for cross-checking formula/table/layout extraction.",
+    "formula_fallback": "pix2tex on cropped equations when Marker/MinerU disagree or omit TeX.",
+    "validation": [
+      "run local OCR on page ranges first",
+      "compare structured nodes against source page image",
+      "compile pocket TeX and inspect overfull/missing-image logs",
+      "only generate final EN/ZH JSON after page-node validation"
+    ]
+  },
+  "tasks_jsonl": "books/nonlinear-dynamics-and-chaos/tasks/local-ocr-en-zh/pages.jsonl",
+  "work_root": "books/nonlinear-dynamics-and-chaos/work/exact-tex/local-ocr",
+  "prepared_at": "2026-07-12T05:15:17.109782+00:00"
+}

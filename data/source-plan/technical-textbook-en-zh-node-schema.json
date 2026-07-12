@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "schema_id": "technical-textbook-en-zh-page-nodes",
+  "description": "Page-level JSON schema contract for technical textbook OCR and EN/ZH pocket output.",
+  "page_object": {
+    "book_id": "string",
+    "page_id": "string",
+    "physical_page": "integer",
+    "source_pdf": "string",
+    "source_sha256": "string",
+    "nodes": [
+      {
+        "id": "stable node id such as p0004-n001",
+        "type": "heading | prose | math | figure | table | exercise | theorem | proof | footnote | bibliography",
+        "source_bbox": "[x0, y0, x1, y1] in source-page coordinates when available",
+        "en": "required for prose-like nodes; exact English source text",
+        "zh": "required for prose-like nodes after translation; accurate modern Chinese",
+        "tex": "required for math/table/theorem environments when editable TeX is available",
+        "locked": "true for equations, diagrams, numeric tables, labels, and source references that must not be translated or paraphrased",
+        "asset": "relative path for extracted figure/diagram/table image fallback",
+        "caption_en": "English caption when present",
+        "caption_zh": "Chinese caption translation when present",
+        "number": "source numbering such as Equation (2.1), Figure 3.4, Proposition 1",
+        "review": {
+          "needed": "boolean",
+          "reason": "missing equation, table mismatch, uncertain OCR, figure-only fallback, etc."
+        }
+      }
+    ],
+    "validation": {
+      "all_equations_preserved": "boolean",
+      "all_figures_preserved": "boolean",
+      "all_tables_preserved": "boolean",
+      "source_page_checked": "boolean",
+      "notes": "string"
+    }
+  },
+  "rules": [
+    "Translate prose nodes only.",
+    "Copy math node TeX unchanged into every language edition.",
+    "Preserve table grid shape and numeric values exactly.",
+    "Keep figures and diagrams as assets unless they can be represented safely as native TeX/TikZ.",
+    "Do not generate final PDFs from pages with unresolved review.needed=true unless explicitly marked as a preview."
+  ]
+}

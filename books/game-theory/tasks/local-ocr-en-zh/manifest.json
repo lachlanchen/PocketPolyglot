@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "book_id": "game-theory",
+  "status": "prepared_local_ocr_en_zh_not_started",
+  "title_en": "Game Theory",
+  "title_zh": "博弈论",
+  "author": "Martin J. Osborne and Ariel Rubinstein",
+  "source_pdf": "sources/game-theory/A Course in Game Theory.pdf",
+  "source_sha256": "ffb9eecb5c1a2e7341704c833cbe063925993a76b9e3a492b10051087f9962da",
+  "source_pages": 373,
+  "content_pages": 370,
+  "source_references": {
+    "exact_source": "sources/game-theory/A Course in Game Theory.pdf",
+    "zh_reference": "sources/game-theory/博弈论教程.pdf",
+    "en_secondary": [
+      "sources/game-theory/Game_Theory_101_Complete_Textbook_2011.pdf"
+    ]
+  },
+  "engine_order": [
+    "marker-surya",
+    "mineru",
+    "docling",
+    "pix2tex-targeted-equations",
+    "mathpix-optional-validator"
+  ],
+  "node_schema": "data/source-plan/technical-textbook-en-zh-node-schema.json",
+  "tool_status": {
+    "gpu": "NVIDIA GeForce RTX 4090 D, 24564 MiB",
+    "qpdf": true,
+    "pdftocairo": true,
+    "pdfimages": true,
+    "mutool": true,
+    "python": "Python 3.10.13",
+    "marker_import": true,
+    "surya_import": true,
+    "pix2tex_import": true,
+    "mineru_import": false,
+    "docling_import": false
+  },
+  "task_contract": {
+    "goal": "Create editable pocket-size TeX and EN/ZH JSON while preserving every equation, figure, diagram, table, caption, and exercise layout.",
+    "primary_engine": "marker-surya in `.venv/ocr` for whole-page structure.",
+    "secondary_engine": "MinerU if installed for cross-checking formula/table/layout extraction.",
+    "formula_fallback": "pix2tex on cropped equations when Marker/MinerU disagree or omit TeX.",
+    "validation": [
+      "run local OCR on page ranges first",
+      "compare structured nodes against source page image",
+      "compile pocket TeX and inspect overfull/missing-image logs",
+      "only generate final EN/ZH JSON after page-node validation"
+    ]
+  },
+  "tasks_jsonl": "books/game-theory/tasks/local-ocr-en-zh/pages.jsonl",
+  "work_root": "books/game-theory/work/exact-tex/local-ocr",
+  "prepared_at": "2026-07-12T05:15:17.062792+00:00"
+}
