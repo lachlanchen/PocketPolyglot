@@ -9,6 +9,8 @@
     "outputs": ["exact-review", "pocket-large-font"],
     "sync": ["nutstore-share-pocketbooks"],
     "preserve": ["figures", "maps", "diagrams", "charts", "formulas", "equations", "tables", "captions"],
+    "forbidden_outputs": ["facsimile", "page-image-only-pdf", "hidden-ocr-layer-only-pdf"],
+    "required_intermediate": "real-tex-body",
     "cover": "clean generated or source-inspired cover with readable overlay",
     "status": "source-copied"
   },
@@ -236,4 +238,3 @@
     }
   ]
 }
-

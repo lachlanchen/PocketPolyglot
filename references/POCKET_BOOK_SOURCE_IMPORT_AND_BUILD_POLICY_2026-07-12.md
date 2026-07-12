@@ -1,7 +1,8 @@
 # Pocket Book Source Import And Build Policy - 2026-07-12
 
 The current stage is not LinguaLeaf multilingual generation.  The goal is a
-clean, high-quality, large-font pocket-size book from each original source.
+clean, high-quality, large-font pocket-size book from each original source,
+built through real TeX.
 
 ## Source Storage
 
@@ -44,3 +45,19 @@ For each book:
 
 Generated `build-pocket` contents are ignored except this task metadata.
 
+## Non-Negotiable Constraint
+
+Do not create facsimile, page-image-only, or hidden-OCR-layer output for this
+queue.  The acceptable route is:
+
+```text
+PDF / EPUB / MOBI / AZW3 source
+  -> real extracted or OCR-corrected TeX body
+  -> exact/review PDF from that TeX
+  -> large-font pocket PDF from the same TeX body
+```
+
+For PDF sources, local Mathpix-like tooling may extract figures as referenced
+image assets, but the book body must remain real text/math/table TeX.  If the
+local toolchain cannot produce a credible TeX body for a book, the runner must
+write a blocked status with logs and validation evidence, not a placeholder PDF.
