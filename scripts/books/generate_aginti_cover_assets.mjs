@@ -32,6 +32,12 @@ const THEME_HINTS = {
     "ancient Japanese imperial chronicle, sacred court scrolls, bronze mirror, mountain shrine mist, early Yamato myth-history atmosphere, refined mineral pigments on aged paper",
   "woman-in-the-dunes":
     "abstract sand dunes, buried wooden house geometry, rope, wind-carved texture, existential modern Japanese mood",
+  "no-longer-human":
+    "Taisho and early Showa modern Japanese literary atmosphere, lonely urban room, rain-dark window, simple chair, empty notebook with blank pages only, restrained gray, indigo, and warm lamplight, introspective alienation without any writing",
+  "snow-country":
+    "snow country mountain hot-spring village, train window, white valley, cedar shadows, distant geisha silhouette, quiet winter melancholy, refined Japanese literary atmosphere, pearl white, ink blue, and muted crimson with no writing",
+  "sichuan-folk-stories-vol1":
+    "Sichuan folk-tale anthology atmosphere, misty mountains, river village, old storyteller's tea table, brocade color accents, paper-cut inspired shapes without symbols or writing, warm human oral-tradition mood, cinnabar, teal, and old gold palette",
   "chumon-no-ooi-ryoriten":
     "mysterious forest restaurant entrance, polished brass signs without readable text, whimsical yet uncanny children's tale mood",
   "ginga-tetsudo":
