@@ -40,6 +40,8 @@ KAKASI = pykakasi.kakasi()
 JA_READING_CACHE: dict[str, str] = {}
 PLAIN_JA_KANA_ERROR_RE = re.compile(r"paragraphs\[(\d+)\]\.units\[(\d+)\]\.ja: Japanese row must contain kana")
 JA_BIBLIO_NOTE_RE = re.compile(r"[『』「」（）()・]|(?:第?\d+)|[巻卷頁页行版訳譯参參照詩诗作品散文序篇章年]")
+JA_FRONTMATTER_NOTE_RE = re.compile(r"(?:目次|目録|内容|著者|訳者|第一部|第二部|第三部|第四部|第五部|第[一二三四五六七八九十百]+部)")
+DOT_LEADER_RE = re.compile(r"(?:[.．。·・]{4,}|…{2,})")
 SIMPLIFIED_ONLY_RE = re.compile(r"[这们为说对见页卷诗选节后时个尔苏卢马亚德释从]")
 
 
@@ -381,7 +383,10 @@ def kanji_note_plain_errors_are_promotable(result: dict[str, Any], errors: list[
             return False
         if SIMPLIFIED_ONLY_RE.search(ja_text):
             return False
-        if not JA_BIBLIO_NOTE_RE.search(ja_text):
+        non_punct_text = re.sub(r"[\d\s.．。·・…,:：;；/\\|\-—–~～()（）［\]\[\]『』「」]+", "", ja_text)
+        is_toc_or_frontmatter = bool(JA_FRONTMATTER_NOTE_RE.search(ja_text))
+        is_short_dot_leader_row = bool(DOT_LEADER_RE.search(ja_text)) and len(non_punct_text) <= 24
+        if not (JA_BIBLIO_NOTE_RE.search(ja_text) or is_toc_or_frontmatter or is_short_dot_leader_row):
             return False
     return True
 

@@ -297,6 +297,12 @@ def run_codex(
                 raise RuntimeError(f"codex timed out after {timeout_seconds}s; see {log_path}") from exc
 
         new_log = log_text_since(log_path, start_size)
+        if output_message.exists() and output_message.stat().st_size > 0:
+            try:
+                extract_json(output_message.read_text(encoding="utf-8"))
+                return
+            except Exception:
+                pass
         if proc.returncode == 0 and not mentions_usage_limit(new_log):
             return
         if mentions_usage_limit(new_log):

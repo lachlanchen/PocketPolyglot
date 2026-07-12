@@ -17,6 +17,8 @@ SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
 KANA_RE = re.compile(r"[\u3040-\u309f\u30a0-\u30fa]")
 LATIN_RE = re.compile(r"[A-Za-z]")
 VISUAL_TECHNICAL_RE = re.compile(r"\b(?:figs?|figure|track)\s*\.?\s*\d*|[図圖图]\s*\d*", re.IGNORECASE)
+SOURCE_LIST_LABEL_RE = re.compile(r"\b(?:number|noun|person|total|responsible)\b", re.IGNORECASE)
+JA_KANJI_LIST_LABEL_RE = re.compile(r"^[\s、。・／/()（）:：;；数数量名詞名人名合計総計小計責任者担当者]+$")
 MUSIC_TABLE_TOKEN_RE = re.compile(
     r"\b(?:[A-G](?:[#b+>°])?(?:m|maj|min|dim|aug)?\d*|[b#]?(?:I|II|III|IV|V|VI|VII|i|ii|iii|iv|v|vi|vii)|major|minor|dim|aug)\b"
 )
@@ -164,6 +166,12 @@ def allows_technical_ja_without_kana(source_text: str, ja_text: str) -> bool:
     source = compact(source_text)
     if not text or KANA_RE.search(text):
         return False
+    if (
+        len(no_space(text)) <= 42
+        and JA_KANJI_LIST_LABEL_RE.fullmatch(text)
+        and (SOURCE_LIST_LABEL_RE.search(source) or re.search(r"[数名詞合計責任者]", text))
+    ):
+        return True
     if not (VISUAL_TECHNICAL_RE.search(source) or VISUAL_TECHNICAL_RE.search(text)):
         return False
     prose_words = re.findall(r"\b[A-Za-z]{3,}\b", source)

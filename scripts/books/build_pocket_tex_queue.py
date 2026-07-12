@@ -127,6 +127,16 @@ def run_capture(cmd: list[str], *, cwd: Path = ROOT, check: bool = False) -> sub
     return result
 
 
+def env_int(name: str, default: int = 0) -> int:
+    value = os.environ.get(name, "").strip()
+    if not value:
+        return default
+    try:
+        return int(value)
+    except ValueError:
+        return default
+
+
 def ensure_header() -> Path:
     DEFAULT_HEADER.parent.mkdir(parents=True, exist_ok=True)
     header = (
@@ -165,7 +175,214 @@ def ensure_header() -> Path:
 
 
 def clean_text(text: str) -> str:
-    return CONTROL_RE.sub("", text).replace("\ufeff", "")
+    return CONTROL_RE.sub("", text).replace("\ufeff", "").replace("\ufffd", "")
+
+
+KNOWN_LATEX_COMMANDS = {
+    "PassOptionsToPackage",
+    "RequirePackage",
+    "IfFileExists",
+    "documentclass",
+    "LaTeX",
+    "XeLaTeX",
+    "TeX",
+    "XeTeX",
+    "usepackage",
+    "ifPDFTeX",
+    "else",
+    "fi",
+    "ifLuaTeX",
+    "ifXeTeX",
+    "setmainfont",
+    "setsansfont",
+    "setmonofont",
+    "newcommand",
+    "renewcommand",
+    "providecommand",
+    "DeclareUnicodeCharacter",
+    "makeatletter",
+    "makeatother",
+    "def",
+    "let",
+    "setkeys",
+    "begin",
+    "end",
+    "frontmatter",
+    "mainmatter",
+    "backmatter",
+    "maketitle",
+    "tableofcontents",
+    "part",
+    "chapter",
+    "section",
+    "subsection",
+    "subsubsection",
+    "paragraph",
+    "subparagraph",
+    "label",
+    "hypertarget",
+    "texorpdfstring",
+    "hyperdef",
+    "phantomsection",
+    "addcontentsline",
+    "bookmarksetup",
+    "includegraphics",
+    "caption",
+    "footnote",
+    "href",
+    "url",
+    "emph",
+    "textbf",
+    "textit",
+    "textsc",
+    "texttt",
+    "textsuperscript",
+    "textsubscript",
+    "textgreater",
+    "textless",
+    "textbar",
+    "textbackslash",
+    "textasciicircum",
+    "textasciitilde",
+    "ldots",
+    "dots",
+    "qquad",
+    "quad",
+    "hspace",
+    "vspace",
+    "noindent",
+    "par",
+    "smallskip",
+    "medskip",
+    "bigskip",
+    "centering",
+    "raggedright",
+    "raggedleft",
+    "arraybackslash",
+    "linewidth",
+    "textheight",
+    "columnwidth",
+    "real",
+    "begingroup",
+    "endgroup",
+    "small",
+    "footnotesize",
+    "scriptsize",
+    "normalsize",
+    "setlength",
+    "setcounter",
+    "arabic",
+    "deflabelenumi",
+    "labelenumi",
+    "labelenumii",
+    "labelenumiii",
+    "labelenumiv",
+    "tabcolsep",
+    "toprule",
+    "midrule",
+    "bottomrule",
+    "endhead",
+    "tightlist",
+    "item",
+    "sloppy",
+    "emergencystretch",
+    "pagestyle",
+    "captionsetup",
+    "maxwidth",
+    "maxheight",
+    "Gin",
+    "ifdim",
+    "else",
+    "fi",
+    "nat",
+    "width",
+    "height",
+    "mathbb",
+    "mathbf",
+    "mathrm",
+    "mathit",
+    "mathcal",
+    "frac",
+    "sqrt",
+    "sum",
+    "prod",
+    "int",
+    "lim",
+    "alpha",
+    "beta",
+    "gamma",
+    "delta",
+    "epsilon",
+    "varepsilon",
+    "theta",
+    "lambda",
+    "mu",
+    "pi",
+    "sigma",
+    "phi",
+    "varphi",
+    "omega",
+    "infty",
+    "partial",
+    "nabla",
+    "times",
+    "cdot",
+    "leq",
+    "geq",
+    "neq",
+    "approx",
+    "left",
+    "right",
+}
+
+
+MALFORMED_SUP_RE = re.compile(r"\\\(<sup>\^\{\\</sup>rm\s*([^}]+)\}\\,?\\\)")
+MALFORMED_SUP_SIMPLE_RE = re.compile(r"\\\(<sup>\^?\{?\s*([^<>{}]+?)\s*\}?</sup>\\\)")
+MALFORMED_SUP_RM_RE = re.compile(r"\\\(<sup>\^\{\\?</sup>rm\s*([^}]+?)\}\\\)")
+ESCAPED_SUP_RE = re.compile(r"\\&lt;sup\\textgreater\s*([A-Za-z0-9]+)")
+HTML_SUP_RE = re.compile(r"<sup>\s*([A-Za-z0-9]+)\s*</sup>")
+LATEX_WORD_COMMAND_RE = re.compile(r"\\([A-Za-z]{2,})(?![A-Za-z])")
+WORD_BACKSLASH_ARTIFACT_RE = re.compile(
+    r"(?<=[^\W\d_])\\"
+    r"(?!(?:textgreater|textless|textasciicircum|textasciitilde|textbackslash)\b)"
+    r"(?=[^\W\d_])"
+)
+
+
+def normalize_malformed_superscripts(text: str) -> str:
+    text = MALFORMED_SUP_RE.sub(lambda match: rf"\textsuperscript{{{match.group(1).strip()}}}", text)
+    text = MALFORMED_SUP_RM_RE.sub(lambda match: rf"\textsuperscript{{{match.group(1).strip()}}}", text)
+    text = MALFORMED_SUP_SIMPLE_RE.sub(lambda match: rf"\textsuperscript{{{match.group(1).strip()}}}", text)
+    text = ESCAPED_SUP_RE.sub(lambda match: rf"\textsuperscript{{{match.group(1).strip()}}}", text)
+    text = HTML_SUP_RE.sub(lambda match: rf"\textsuperscript{{{match.group(1).strip()}}}", text)
+    text = text.replace(r"\&lt;/sup\textgreater", "")
+    text = text.replace(r"\&lt;sup\textgreater", "")
+    return text
+
+
+def strip_unknown_text_commands(text: str) -> str:
+    """Strip OCR-created word commands in already-isolated document text."""
+
+    def repl(match: re.Match[str]) -> str:
+        command = match.group(1)
+        if command in KNOWN_LATEX_COMMANDS:
+            return match.group(0)
+        if len(command) >= 2:
+            return command
+        return match.group(0)
+
+    return LATEX_WORD_COMMAND_RE.sub(repl, text)
+
+
+def repair_body_backslash_artifacts(text: str) -> str:
+    text = re.sub(r"\\Vi\s+thin\b", "Within", text)
+    text = WORD_BACKSLASH_ARTIFACT_RE.sub("", text)
+    text = re.sub(r"(?<=[^\W\d_])\?\\(?=[^\W\d_])", "", text)
+    text = re.sub(r"(?<=[,;:.!?])\\(?=[a-z])", " ", text)
+    for enum_label in ("labelenumi", "labelenumii", "labelenumiii", "labelenumiv"):
+        text = text.replace("\\" + "def" + enum_label, "\\" + "def\\" + enum_label)
+    text = re.sub(r"\bincludesemph\{", r"includes \\emph{", text)
+    return strip_unknown_text_commands(text)
 
 
 def remove_text_backslash_artifacts(text: str) -> str:
@@ -177,7 +394,12 @@ def remove_text_backslash_artifacts(text: str) -> str:
     left alone.
     """
 
-    return re.sub(r"(?<=[A-Za-z])\\(?=[A-Za-z])", "", text)
+    text = normalize_malformed_superscripts(text)
+    marker = r"\begin{document}"
+    if marker in text:
+        before, after = text.split(marker, 1)
+        return before + marker + repair_body_backslash_artifacts(after)
+    return repair_body_backslash_artifacts(text)
 
 
 def normalize_longtable_spec(spec: str) -> str:
@@ -263,6 +485,7 @@ def wrap_wide_display_math(text: str, *, layout: str) -> str:
 def postprocess_tex(tex_path: Path, *, layout: str) -> None:
     text = tex_path.read_text(encoding="utf-8", errors="replace")
     text = clean_text(text)
+    text = remove_text_backslash_artifacts(text)
     text = remove_source_contents_block(text)
     text = INCLUDEGRAPHICS_RE.sub(
         r"\\includegraphics[max width=.94\\linewidth,max totalheight=.70\\textheight,keepaspectratio]\1",
@@ -299,12 +522,50 @@ def rewrite_markdown_image_paths(markdown: str, base: Path) -> str:
     return MARKDOWN_IMAGE_RE.sub(repl, markdown)
 
 
+def pdftotext_to_markdown(source: Path, task_dir: Path) -> Path:
+    """Fallback real-text extraction when Marker cannot finish a large PDF.
+
+    This deliberately produces Markdown/TeX, not page images. It is less rich
+    than Marker because figures and tables may need later manual recovery, but
+    it keeps the exact workflow on a real text path instead of blocking on OOM.
+    """
+
+    if shutil.which("pdftotext") is None:
+        raise RuntimeError("pdftotext is not available for real-text fallback")
+    review_dir = task_dir / "review"
+    review_dir.mkdir(parents=True, exist_ok=True)
+    log_file = review_dir / "pdftotext.log"
+    result = run_capture(["pdftotext", "-layout", "-enc", "UTF-8", str(source), "-"], check=False)
+    log_file.write_text((result.stdout or "") + (result.stderr or ""), encoding="utf-8")
+    if result.returncode:
+        raise RuntimeError(f"pdftotext failed with exit code {result.returncode}; see {log_file}")
+    text = clean_text(result.stdout)
+    text = re.sub(r"\n\s*\f\s*\n", "\n\n", text)
+    pages = [page.strip() for page in text.split("\f") if page.strip()]
+    paragraphs: list[str] = []
+    for page in pages:
+        page = re.sub(r"[ \t]+$", "", page, flags=re.M)
+        page = re.sub(r"\n{3,}", "\n\n", page)
+        paragraphs.append(page)
+    markdown = "\n\n".join(paragraphs).strip() + "\n"
+    prepared = review_dir / "source-from-pdftotext.md"
+    prepared.write_text(markdown, encoding="utf-8")
+    if len(re.sub(r"\s+", "", markdown)) < 500:
+        raise RuntimeError(f"pdftotext output too short to trust: {prepared}")
+    log(f"[fallback] {source.relative_to(ROOT)} -> {prepared.relative_to(ROOT)} using pdftotext real text")
+    return prepared
+
+
 def marker_pdf_to_markdown(source: Path, task_dir: Path, *, force: bool) -> Path:
     marker_root = task_dir / "work/marker"
     marker_root.mkdir(parents=True, exist_ok=True)
     existing = sorted(marker_root.glob("**/*.md"))
     if existing and not force:
         return existing[0]
+
+    extraction_mode = os.environ.get("POCKET_PDF_EXTRACTION", "").strip().lower()
+    if extraction_mode in {"pdftotext", "text"} or os.environ.get("POCKET_SKIP_MARKER") == "1":
+        return pdftotext_to_markdown(source, task_dir)
 
     if shutil.which("marker_single", path=f"{Path.home() / '.local/bin'}:{os.environ.get('PATH', '')}") is None:
         raise RuntimeError("marker_single is not available; cannot run local PDF-to-TeX extraction")
@@ -321,9 +582,13 @@ def marker_pdf_to_markdown(source: Path, task_dir: Path, *, force: bool) -> Path
         "markdown",
         "--disable_multiprocessing",
     ]
+    marker_timeout_seconds = env_int("POCKET_MARKER_TIMEOUT_SECONDS", 0)
+    if marker_timeout_seconds > 0 and shutil.which("timeout") is not None:
+        cmd = ["timeout", f"{marker_timeout_seconds}s", *cmd]
     code = run_stream(cmd, log_file=log_file)
     if code != 0:
-        raise RuntimeError(f"marker_single failed with exit code {code}; see {log_file}")
+        log(f"[warn] marker_single failed with exit code {code}; trying pdftotext real-text fallback")
+        return pdftotext_to_markdown(source, task_dir)
 
     candidates = sorted(marker_root.glob("**/*.md"), key=lambda path: path.stat().st_size, reverse=True)
     if not candidates:
@@ -337,6 +602,109 @@ def marker_pdf_to_markdown(source: Path, task_dir: Path, *, force: bool) -> Path
     if len(re.sub(r"\s+", "", text)) < 500:
         raise RuntimeError(f"marker output too short to trust: {prepared}")
     return prepared
+
+
+def latex_escape_text(text: str) -> str:
+    replacements = {
+        "\\": r"\textbackslash{}",
+        "&": r"\&",
+        "%": r"\%",
+        "$": r"\$",
+        "#": r"\#",
+        "_": r"\_",
+        "{": r"\{",
+        "}": r"\}",
+        "<": r"\textless{}",
+        ">": r"\textgreater{}",
+        "~": r"\textasciitilde{}",
+        "^": r"\textasciicircum{}",
+    }
+    return "".join(replacements.get(char, char) for char in text)
+
+
+def looks_like_plain_heading(text: str) -> bool:
+    compact = re.sub(r"\s+", " ", text).strip()
+    if not compact or len(compact) > 120:
+        return False
+    if re.match(r"^(part|chapter|book)\s+([ivxlcdm]+|\d+)\b", compact, re.I):
+        return True
+    letters = re.sub(r"[^A-Za-z]", "", compact)
+    if len(letters) >= 8 and compact.upper() == compact and not compact.endswith("."):
+        return True
+    return False
+
+
+def plain_text_markdown_to_tex(
+    source: Path,
+    tex_path: Path,
+    *,
+    title: str,
+    author: str,
+    layout: str,
+) -> None:
+    """Build standalone TeX directly from pdftotext output.
+
+    This path is for very large PDFs where Marker/Pandoc can consume tens of GB.
+    It keeps a real text TeX body and intentionally avoids page-image facsimiles.
+    """
+
+    raw = clean_text(source.read_text(encoding="utf-8", errors="replace"))
+    raw = raw.replace("\r\n", "\n").replace("\r", "\n")
+    raw = re.sub(r"\n\s*\f\s*\n", "\n\n", raw)
+    raw = re.sub(r"[ \t]+$", "", raw, flags=re.M)
+    blocks = [block.strip() for block in re.split(r"\n\s*\n+", raw) if block.strip()]
+    if len("".join(blocks)) < 500:
+        raise RuntimeError(f"pdftotext source too short to build TeX: {source}")
+
+    header = ensure_header().read_text(encoding="utf-8")
+    if layout == "exact":
+        geometry = "paperwidth=148mm,paperheight=210mm,inner=14mm,outer=12mm,top=14mm,bottom=16mm"
+        line_stretch = "1.08"
+    elif layout == "pocket":
+        geometry = "paperwidth=105mm,paperheight=148mm,inner=6.5mm,outer=5.5mm,top=8mm,bottom=9mm"
+        line_stretch = "1.12"
+    else:
+        raise ValueError(layout)
+
+    body_lines: list[str] = []
+    for block in blocks:
+        lines = [line.strip() for line in block.splitlines() if line.strip()]
+        if not lines:
+            continue
+        joined = re.sub(r"\s+", " ", " ".join(lines)).strip()
+        joined = re.sub(r"([A-Za-z])-\s+([a-z])", r"\1\2", joined)
+        if not joined:
+            continue
+        escaped = latex_escape_text(joined)
+        if looks_like_plain_heading(joined):
+            heading = escaped[:180]
+            body_lines.append(rf"\chapter*{{{heading}}}")
+            body_lines.append(rf"\addcontentsline{{toc}}{{chapter}}{{{heading}}}")
+        elif joined.startswith(("http://", "https://")):
+            body_lines.append(rf"\noindent \url{{{joined}}}\par")
+        else:
+            body_lines.append(escaped + "\n\n")
+
+    tex = (
+        "\\documentclass[oneside,10pt]{book}\n"
+        f"\\usepackage[{geometry}]{{geometry}}\n"
+        "\\usepackage[hidelinks]{hyperref}\n"
+        "\\usepackage{xurl}\n"
+        + header
+        + f"\\linespread{{{line_stretch}}}\\selectfont\n"
+        + f"\\title{{{latex_escape_text(title)}}}\n"
+        + f"\\author{{{latex_escape_text(author)}}}\n"
+        "\\date{}\n"
+        "\\begin{document}\n"
+        "\\maketitle\n"
+        "\\tableofcontents\n"
+        "\\mainmatter\n"
+        + "\n".join(body_lines)
+        + "\n\\end{document}\n"
+    )
+    tex_path.parent.mkdir(parents=True, exist_ok=True)
+    tex_path.write_text(tex, encoding="utf-8")
+    postprocess_tex(tex_path, layout=layout)
 
 
 def repair_epub_for_pandoc(source: Path, task_dir: Path, *, force: bool) -> Path:
@@ -547,6 +915,12 @@ def repair_undefined_word_command(tex_path: Path, log_file: Path) -> bool:
     lines = tex_path.read_text(encoding="utf-8", errors="replace").splitlines(keepends=True)
     if line_no < 1 or line_no > len(lines):
         return False
+    begin_document_line = next(
+        (index + 1 for index, line in enumerate(lines) if r"\begin{document}" in line),
+        None,
+    )
+    if begin_document_line is not None and line_no < begin_document_line:
+        return False
     old = lines[line_no - 1]
     new = remove_text_backslash_artifacts(old)
     if new == old:
@@ -565,6 +939,10 @@ def repair_undefined_word_command(tex_path: Path, log_file: Path) -> bool:
 def compile_tex(tex_path: Path, out_pdf: Path) -> dict[str, Any]:
     build_dir = tex_path.parent / "latex-build"
     build_dir.mkdir(parents=True, exist_ok=True)
+    for suffix in (".aux", ".toc", ".out", ".log", ".lof", ".lot"):
+        stale = build_dir / f"{tex_path.stem}{suffix}"
+        if stale.exists():
+            stale.unlink()
     log_file = build_dir / "xelatex.log"
     if log_file.exists():
         log_file.unlink()
@@ -794,7 +1172,7 @@ def build_one(
             raise FileNotFoundError(source)
         if source_kind == "pdf":
             body_source = marker_pdf_to_markdown(source, task_dir, force=force)
-            pandoc_format = "markdown"
+            pandoc_format = "pdftotext" if body_source.name == "source-from-pdftotext.md" else "markdown"
         elif source_kind == "epub":
             body_source = repair_epub_for_pandoc(source, task_dir, force=force)
             pandoc_format = "epub"
@@ -805,15 +1183,19 @@ def build_one(
 
         exact_tex = task_dir / "exact/tex/book.tex"
         pocket_tex = task_dir / "pocket-large-font/tex/book.tex"
-        pandoc_to_tex(body_source, exact_tex, title=title, author=author, layout="exact", source_format=pandoc_format)
-        pandoc_to_tex(
-            body_source,
-            pocket_tex,
-            title=title,
-            author=author,
-            layout="pocket",
-            source_format=pandoc_format,
-        )
+        if pandoc_format == "pdftotext":
+            plain_text_markdown_to_tex(body_source, exact_tex, title=title, author=author, layout="exact")
+            plain_text_markdown_to_tex(body_source, pocket_tex, title=title, author=author, layout="pocket")
+        else:
+            pandoc_to_tex(body_source, exact_tex, title=title, author=author, layout="exact", source_format=pandoc_format)
+            pandoc_to_tex(
+                body_source,
+                pocket_tex,
+                title=title,
+                author=author,
+                layout="pocket",
+                source_format=pandoc_format,
+            )
         exact_report = compile_tex(exact_tex, task_dir / "exact/book.pdf")
         pocket_report = compile_tex(pocket_tex, task_dir / "pocket-large-font/book.pdf")
         agent_report: dict[str, Any] = {"ran": False, "mode": "single-final-call"}
