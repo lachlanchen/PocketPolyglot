@@ -15,6 +15,14 @@ This is separate from LinguaLeaf/PocketPolyglot multilingual generation.
   workspace. If the local PDF-to-TeX toolchain cannot recover real text,
   math, tables, and figure references well enough, mark the book blocked with
   evidence instead of generating a fake completion.
+- Deterministic cleanup runs first: remove duplicated source-printed TOCs,
+  normalize tables, constrain figures, and scale long display math by wrapping
+  the actual math in a wider internal TeX box that is reduced to pocket width.
+  If severe layout evidence still remains after this compile, the runner may
+  make exactly one final `codex exec` polish call with `gpt-5.5` / `xhigh`,
+  scoped to generated TeX hotspots only, then recompile once for validation.
+  That subprocess must use Codex's no-sandbox CLI flag; nested workspace
+  sandboxing can fail before the agent can read or edit generated TeX.
 - Final user-facing pocket PDFs sync to:
   `/home/lachlan/Nutstore Files/Share/PocketBooks/`
 

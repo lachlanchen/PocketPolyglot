@@ -31,9 +31,22 @@ DEFAULT_HEADER = ROOT / "build-pocket/_common/pandoc-pocket-header.tex"
 CONTROL_RE = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]")
 MARKDOWN_IMAGE_RE = re.compile(r"(!\[[^\]]*\]\()([^)\n]+)(\))")
 OVERFULL_RE = re.compile(r"Overfull \\hbox \(([-0-9.]+)pt too wide\)")
+OVERFULL_HOTSPOT_RE = re.compile(
+    r"Overfull \\hbox \(([-0-9.]+)pt too wide\)"
+    r"(?: in paragraph at lines (\d+)(?:--(\d+))?| detected at line (\d+))"
+)
 LATEX_ERROR_RE = re.compile(r"^! |Fatal error|Emergency stop|Undefined control sequence", re.M)
 INCLUDEGRAPHICS_RE = re.compile(r"\\includegraphics(?:\[[^\]]*\])?(\{[^}]+\})")
 LONGTABLE_SPEC_RE = re.compile(r"(\\begin\{longtable\}(?:\[[^\]]*\])?\{)([^{}]*(?:@\{\}[^{}]*)?)(\})")
+DISPLAY_MATH_RE = re.compile(r"\\\[(.*?)\\\]", re.S)
+ADJUSTBOX_DISPLAY_MATH_RE = re.compile(
+    r"\\begin\{adjustbox\}\{max width=\\linewidth\}\s*"
+    r"\\begin\{minipage\}\{\\linewidth\}\s*"
+    r"\\\[(.*?)\\\]\s*"
+    r"\\end\{minipage\}\s*"
+    r"\\end\{adjustbox\}",
+    re.S,
+)
 SERVER_UNSAFE_FILENAME_CHARS = str.maketrans(
     {
         "<": "＜",
@@ -186,9 +199,71 @@ def normalize_longtable_spec(spec: str) -> str:
     return prefix + wrapped + suffix
 
 
+def remove_source_contents_block(text: str) -> str:
+    """Remove OCR/Pandoc-extracted printed contents when Pandoc creates a TOC."""
+
+    marker = r"\hypertarget{contents}{%"
+    start = text.find(marker)
+    if start < 0:
+        return text
+    window = text[start : start + 12000]
+    if "Contents" not in window or r"\begin{longtable}" not in window:
+        return text
+    next_match = re.search(r"\n\\hypertarget\{(?:part-|chapter-|section-|[a-z0-9-]+chapter)", text[start + 1 :])
+    if not next_match:
+        return text
+    end = start + 1 + next_match.start()
+    return text[:start] + "\n% Removed source-extracted printed Contents block; Pandoc TOC is used instead.\n" + text[end:]
+
+
+def display_math_scale_factor(body: str) -> float:
+    compact_len = len(re.sub(r"\s+", "", body))
+    if compact_len < 130:
+        return 1.55
+    if compact_len < 220:
+        return 2.20
+    if compact_len < 340:
+        return 2.90
+    return 3.60
+
+
+def scaled_display_math(body: str) -> str:
+    body = body.strip()
+    factor = display_math_scale_factor(body)
+    return (
+        "\n\\begin{center}\n"
+        "\\begin{adjustbox}{max width=\\linewidth}\n"
+        f"\\begin{{minipage}}{{{factor:.2f}\\linewidth}}\n"
+        "\\[\n"
+        + body
+        + "\n\\]\n"
+        "\\end{minipage}\n"
+        "\\end{adjustbox}\n"
+        "\\end{center}\n"
+    )
+
+
+def wrap_wide_display_math(text: str, *, layout: str) -> str:
+    """Constrain long display equations to pocket page width."""
+
+    if layout != "pocket":
+        return text
+    text = ADJUSTBOX_DISPLAY_MATH_RE.sub(lambda match: scaled_display_math(match.group(1)), text)
+
+    def repl(match: re.Match[str]) -> str:
+        body = match.group(1).strip()
+        compact = re.sub(r"\s+", "", body)
+        if len(compact) < 55 and not any(token in body for token in [r"\begin{split}", r"\begin{aligned}", r"\tag{"]):
+            return match.group(0)
+        return scaled_display_math(body)
+
+    return DISPLAY_MATH_RE.sub(repl, text)
+
+
 def postprocess_tex(tex_path: Path, *, layout: str) -> None:
     text = tex_path.read_text(encoding="utf-8", errors="replace")
     text = clean_text(text)
+    text = remove_source_contents_block(text)
     text = INCLUDEGRAPHICS_RE.sub(
         r"\\includegraphics[max width=.94\\linewidth,max totalheight=.70\\textheight,keepaspectratio]\1",
         text,
@@ -208,6 +283,7 @@ def postprocess_tex(tex_path: Path, *, layout: str) -> None:
             r"\begingroup\small\setlength{\tabcolsep}{3pt}\begin{longtable}",
         )
     text = text.replace(r"\end{longtable}", r"\end{longtable}\endgroup")
+    text = wrap_wide_display_math(text, layout=layout)
     tex_path.write_text(text, encoding="utf-8")
 
 
@@ -552,6 +628,126 @@ def validate_pdf(pdf: Path, log_path: Path, tex_path: Path) -> dict[str, Any]:
     }
 
 
+def tex_context(tex_path: Path, line_no: int, *, radius: int = 4) -> str:
+    lines = tex_path.read_text(encoding="utf-8", errors="replace").splitlines()
+    if not lines:
+        return ""
+    start = max(1, line_no - radius)
+    end = min(len(lines), line_no + radius)
+    return "\n".join(f"{idx:05d}: {lines[idx - 1]}" for idx in range(start, end + 1))
+
+
+def collect_overfull_hotspots(
+    tex_path: Path,
+    log_path: Path,
+    *,
+    threshold_pt: float,
+    max_hotspots: int,
+) -> list[dict[str, Any]]:
+    log_text = log_path.read_text(encoding="utf-8", errors="replace") if log_path.exists() else ""
+    hotspots: list[dict[str, Any]] = []
+    for match in OVERFULL_HOTSPOT_RE.finditer(log_text):
+        width = float(match.group(1))
+        if width < threshold_pt:
+            continue
+        line_no = int(match.group(2) or match.group(4) or 1)
+        hotspots.append(
+            {
+                "width_pt": width,
+                "line": line_no,
+                "context": tex_context(tex_path, line_no),
+            }
+        )
+    hotspots.sort(key=lambda item: item["width_pt"], reverse=True)
+    return hotspots[:max_hotspots]
+
+
+def run_codex_agent_optimizer(
+    task_dir: Path,
+    tex_path: Path,
+    log_path: Path,
+    *,
+    model: str,
+    reasoning: str,
+    threshold_pt: float,
+    max_hotspots: int,
+) -> dict[str, Any]:
+    if shutil.which("codex") is None:
+        return {"ran": False, "reason": "codex CLI not found"}
+    hotspots = collect_overfull_hotspots(
+        tex_path,
+        log_path,
+        threshold_pt=threshold_pt,
+        max_hotspots=max_hotspots,
+    )
+    packet_path = task_dir / "review/final-agent-pocket-optimization-packet.md"
+    result_log = task_dir / "review/final-agent-pocket-optimization.log"
+    if not hotspots:
+        packet_path.write_text("No overfull hotspots above threshold.\n", encoding="utf-8")
+        return {"ran": False, "reason": "no hotspots above threshold", "packet": str(packet_path.relative_to(ROOT))}
+
+    hotspot_text = "\n\n".join(
+        [
+            f"## Hotspot {idx}: {item['width_pt']:.2f}pt too wide near line {item['line']}\n\n"
+            "```tex\n"
+            f"{item['context']}\n"
+            "```"
+            for idx, item in enumerate(hotspots, 1)
+        ]
+    )
+    prompt = f"""You are optimizing a generated TeX pocket book in this repository.
+
+Goal: reduce visible overflow and obvious layout mess in the generated pocket TeX while preserving real TeX text, math, tables, figures, diagrams, captions, and source meaning.
+
+Hard rules:
+- Edit only this generated TeX file: {tex_path.relative_to(ROOT)}
+- Do not edit source PDFs/EPUBs/MOBIs.
+- Do not replace text/math/figures with page screenshots or page-image-only output.
+- Do not remove real content just to silence warnings.
+- This is the single final Codex optimization call for this book. Do not spawn or invoke nested Codex/agent sessions, and do not design a loop.
+- Prefer deterministic TeX fixes: remove redundant printed source TOC blocks when Pandoc already provides TOC, wrap/scalebox very wide equations/tables, add sensible manual line breaks in long extracted headings, and preserve equations as TeX.
+- Keep the document compilable with XeLaTeX. The runner will recompile after your edits.
+
+Evidence from the latest XeLaTeX log follows. Fix as many hotspots as practical across the whole book, focusing on the worst visible layout problems first.
+
+{hotspot_text}
+"""
+    packet_path.write_text(prompt, encoding="utf-8")
+    cmd = [
+        "codex",
+        "exec",
+        "--ephemeral",
+        "-C",
+        str(ROOT),
+        "-m",
+        model,
+        "-c",
+        f'model_reasoning_effort="{reasoning}"',
+        "--dangerously-bypass-approvals-and-sandbox",
+        "-",
+    ]
+    result = subprocess.run(
+        cmd,
+        input=prompt,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        cwd=ROOT,
+        check=False,
+    )
+    result_log.write_text(result.stdout, encoding="utf-8", errors="replace")
+    return {
+        "ran": True,
+        "exit_code": result.returncode,
+        "model": model,
+        "reasoning": reasoning,
+        "threshold_pt": threshold_pt,
+        "hotspots": len(hotspots),
+        "packet": str(packet_path.relative_to(ROOT)),
+        "log": str(result_log.relative_to(ROOT)),
+    }
+
+
 def classify_source(source: Path) -> str:
     suffix = source.suffix.lower()
     if suffix == ".pdf":
@@ -563,7 +759,18 @@ def classify_source(source: Path) -> str:
     return "unknown"
 
 
-def build_one(task: dict[str, Any], *, force: bool, sync: bool, share_root: Path) -> dict[str, Any]:
+def build_one(
+    task: dict[str, Any],
+    *,
+    force: bool,
+    sync: bool,
+    share_root: Path,
+    agent_optimize: bool,
+    agent_model: str,
+    agent_reasoning: str,
+    agent_threshold_pt: float,
+    agent_max_hotspots: int,
+) -> dict[str, Any]:
     book_id = task["book_id"]
     task_dir = ROOT / "build-pocket" / book_id
     review_dir = task_dir / "review"
@@ -609,6 +816,19 @@ def build_one(task: dict[str, Any], *, force: bool, sync: bool, share_root: Path
         )
         exact_report = compile_tex(exact_tex, task_dir / "exact/book.pdf")
         pocket_report = compile_tex(pocket_tex, task_dir / "pocket-large-font/book.pdf")
+        agent_report: dict[str, Any] = {"ran": False, "mode": "single-final-call"}
+        if agent_optimize and pocket_report.get("worst_overfull_pt", 0) >= agent_threshold_pt:
+            agent_report = run_codex_agent_optimizer(
+                task_dir,
+                pocket_tex,
+                pocket_tex.parent / "latex-build/book.log",
+                model=agent_model,
+                reasoning=agent_reasoning,
+                threshold_pt=agent_threshold_pt,
+                max_hotspots=agent_max_hotspots,
+            )
+            if agent_report.get("exit_code") == 0:
+                pocket_report = compile_tex(pocket_tex, task_dir / "pocket-large-font/book.pdf")
 
         synced_to = ""
         if sync:
@@ -627,6 +847,7 @@ def build_one(task: dict[str, Any], *, force: bool, sync: bool, share_root: Path
             "finished": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
             "exact": exact_report,
             "pocket": pocket_report,
+            "final_agent_optimization": agent_report,
             "synced_to": synced_to,
             "policy": "real TeX body only; no page-image-only output",
         }
@@ -663,6 +884,11 @@ def main() -> int:
     parser.add_argument("--sync", action="store_true")
     parser.add_argument("--continue-on-blocked", action="store_true")
     parser.add_argument("--share-root", type=Path, default=Path("/home/lachlan/Nutstore Files/Share/PocketBooks"))
+    parser.add_argument("--agent-optimize", action="store_true", help="Run one final Codex optimization call after deterministic compile validation.")
+    parser.add_argument("--agent-model", default="gpt-5.5")
+    parser.add_argument("--agent-reasoning", default="xhigh")
+    parser.add_argument("--agent-threshold-pt", type=float, default=24.0)
+    parser.add_argument("--agent-max-hotspots", type=int, default=24)
     args = parser.parse_args()
 
     queue = read_json(args.queue)
@@ -676,7 +902,17 @@ def main() -> int:
     complete = 0
     blocked = 0
     for task in tasks:
-        status = build_one(task, force=args.force, sync=args.sync, share_root=args.share_root)
+        status = build_one(
+            task,
+            force=args.force,
+            sync=args.sync,
+            share_root=args.share_root,
+            agent_optimize=args.agent_optimize,
+            agent_model=args.agent_model,
+            agent_reasoning=args.agent_reasoning,
+            agent_threshold_pt=args.agent_threshold_pt,
+            agent_max_hotspots=args.agent_max_hotspots,
+        )
         if status.get("status") == "complete":
             complete += 1
         else:

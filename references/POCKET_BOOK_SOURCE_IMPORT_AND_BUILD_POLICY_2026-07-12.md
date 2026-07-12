@@ -41,7 +41,15 @@ For each book:
    `build-pocket/<book-id>/pocket-large-font/`.
 5. Generate or compose a clean cover.
 6. Validate PDF, TOC, text extraction, overfull lines, and representative pages.
-7. Sync only final pocket PDFs to the Nutstore Share `PocketBooks` folder.
+7. Deterministically remove duplicated source-printed TOCs, normalize tables,
+   constrain figures, and scale long display math to the pocket width.
+8. If severe layout evidence remains, optionally run one final scoped
+   `codex exec` pass using `gpt-5.5` with `xhigh` reasoning. This pass receives
+   only generated-TeX hotspots and must not spawn nested agents or loop. Invoke
+   it with Codex's no-sandbox CLI flag so the subprocess can actually read and
+   edit the generated TeX instead of failing inside nested workspace sandboxing.
+9. Recompile once after that final pass and validate the evidence again.
+10. Sync only final pocket PDFs to the Nutstore Share `PocketBooks` folder.
 
 Generated `build-pocket` contents are ignored except this task metadata.
 
