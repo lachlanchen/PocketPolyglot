@@ -21,7 +21,7 @@ const THEME_HINTS = {
   "izu-no-odori":
     "Izu mountain road after rain, travel cloak, lantern glow, distant dancer silhouette, lyrical early modern Japanese atmosphere",
   kinkakuji:
-    "gold pavilion reflected on dark water, black pine, restrained winter light, psychological modernist tension",
+    "serene golden pavilion reflected on still water, black pine, restrained winter light, quiet Kyoto garden atmosphere, refined literary architecture cover, no fire, no violence",
   "rashomon-stories":
     "ancient Kyoto gate in rain, worn timber, twilight clouds, moral ambiguity, literary short-story atmosphere",
   kojiki:
@@ -136,10 +136,14 @@ const THEME_HINTS = {
     "English poetry anthology, open old poetry book without readable words, layered seasons, quill, rose, storm cloud, moonlit field, broad lyrical tradition, restrained editorial collage in deep blue, warm parchment, and muted gold",
   "positioning-battle-for-your-mind":
     "brand positioning and strategy, abstract market map, compass, clean geometric pathways, layered perception diagrams without readable words, thoughtful business strategy atmosphere, restrained blue, graphite, ivory, and warm gold palette",
+  "mans-search-for-meaning":
+    "abstract philosophical memoir background about resilience and purpose, quiet dawn path toward an open horizon, small warm lantern, distant mountains, empty landscape, humane contemplative atmosphere, no people, no historical scenes, no uniforms, no fences",
 };
 
 const IMAGE_TITLE_OVERRIDES = {
   "positioning-battle-for-your-mind": "Positioning / 定位 / ポジショニング",
+  kinkakuji: "Japanese literary novel with a golden pavilion motif",
+  "mans-search-for-meaning": "Philosophical memoir about resilience and purpose",
 };
 
 function parseArgs(argv) {
