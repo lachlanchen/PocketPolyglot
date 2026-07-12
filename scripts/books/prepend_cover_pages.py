@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
@@ -23,7 +24,13 @@ ROOT = Path(__file__).resolve().parents[2]
 COVER_EXTENSIONS = (".png", ".jpg", ".jpeg")
 LEGACY_COVER_DIRS = {
     "kokoro": "kokoro-jp-main",
+    "sanguozhi-pei-zhu": "sanguozhi",
+    "zizhi-tongjian-comment-aware": "zizhi-tongjian",
 }
+
+
+def base_book_id(book_id: str) -> str:
+    return re.sub(r"-part-\d+$", "", book_id)
 
 
 def final_pdfs(build_dir: Path, book_id: str) -> list[Path]:
@@ -50,8 +57,11 @@ def discover_books(build_dir: Path) -> list[str]:
 
 
 def resolve_cover(assets_dir: Path, book_id: str) -> Path | None:
+    base_id = base_book_id(book_id)
     candidates = [assets_dir / book_id]
-    legacy = LEGACY_COVER_DIRS.get(book_id)
+    if base_id != book_id:
+        candidates.append(assets_dir / base_id)
+    legacy = LEGACY_COVER_DIRS.get(book_id) or LEGACY_COVER_DIRS.get(base_id)
     if legacy:
         candidates.append(assets_dir / legacy)
     for cover_dir in candidates:

@@ -172,9 +172,12 @@ def make_cover_pdf(cover_image: Path, width: float, height: float, target: Path)
     c.save()
 
 
-def ensure_cover(pdf: Path, book_id: str) -> bool:
+def ensure_cover(pdf: Path, book_id: str, *, replace_existing: bool = True) -> bool:
     cover = resolve_cover(book_id)
-    if cover is None or first_page_has_image(pdf):
+    if cover is None:
+        return False
+    has_image_cover = first_page_has_image(pdf)
+    if has_image_cover and not replace_existing:
         return False
     reader = PdfReader(str(pdf))
     if not reader.pages:
@@ -190,7 +193,8 @@ def ensure_cover(pdf: Path, book_id: str) -> bool:
         cover_reader = PdfReader(str(cover_pdf))
         writer = PdfWriter()
         writer.add_page(cover_reader.pages[0])
-        for page in reader.pages:
+        start_index = 1 if has_image_cover and replace_existing else 0
+        for page in reader.pages[start_index:]:
             writer.add_page(page)
         with output_pdf.open("wb") as handle:
             writer.write(handle)

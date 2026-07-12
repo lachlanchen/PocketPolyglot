@@ -126,7 +126,7 @@ def make_cover_pdf(cover_image: Path, width: float, height: float, target: Path)
     c.save()
 
 
-def prepend_cover(pdf: Path, cover_image: Path) -> None:
+def prepend_cover(pdf: Path, cover_image: Path, *, replace_existing: bool = False) -> None:
     reader = PdfReader(str(pdf))
     if not reader.pages:
         raise RuntimeError(f"{pdf} has no pages")
@@ -143,7 +143,8 @@ def prepend_cover(pdf: Path, cover_image: Path) -> None:
         cover_reader = PdfReader(str(cover_pdf))
         writer = PdfWriter()
         writer.add_page(cover_reader.pages[0])
-        for page in reader.pages:
+        start_index = 1 if replace_existing else 0
+        for page in reader.pages[start_index:]:
             writer.add_page(page)
         with output_pdf.open("wb") as handle:
             writer.write(handle)
@@ -189,14 +190,15 @@ def copy_category(category: str, config: dict[str, object], target_root: Path, n
             used[variant].add(filename)
             output = variant_dir / filename
             shutil.copy2(source, output)
+            has_image_cover = first_page_has_image(output)
             cover_status = "already-present"
-            if not first_page_has_image(output):
-                if cover is None:
+            if cover is None:
+                if not has_image_cover:
                     cover_status = "missing-cover-asset"
                     missing_covers.append({"book_id": book_id, "pdf": str(output.relative_to(target))})
-                else:
-                    prepend_cover(output, cover)
-                    cover_status = "prepended"
+            else:
+                prepend_cover(output, cover, replace_existing=has_image_cover)
+                cover_status = "replaced" if has_image_cover else "prepended"
             item = dict(item)
             item["output"] = str(output.relative_to(target))
             item["size_bytes"] = output.stat().st_size

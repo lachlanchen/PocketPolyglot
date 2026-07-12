@@ -44,10 +44,15 @@ def draw_centered(
     xy: tuple[int, int],
     font_obj: ImageFont.FreeTypeFont,
     fill: tuple[int, int, int, int],
+    *,
+    shadow_fill: tuple[int, int, int, int] | None = None,
+    shadow_offset: int = 2,
 ) -> None:
     bbox = draw.textbbox((0, 0), text, font=font_obj)
     x = xy[0] - (bbox[2] - bbox[0]) / 2
     y = xy[1] - (bbox[3] - bbox[1]) / 2
+    if shadow_fill:
+        draw.text((x + shadow_offset, y + shadow_offset), text, font=font_obj, fill=shadow_fill)
     draw.text((x, y), text, font=font_obj, fill=fill)
 
 
@@ -62,6 +67,7 @@ def draw_centered_fit(
     *,
     max_width: int,
     min_size: int,
+    shadow_fill: tuple[int, int, int, int] | None = None,
 ) -> None:
     fitted = font(font_path, size, index=index)
     while size > min_size:
@@ -70,7 +76,72 @@ def draw_centered_fit(
             break
         size -= 1
         fitted = font(font_path, size, index=index)
-    draw_centered(draw, text, xy, fitted, fill)
+    draw_centered(draw, text, xy, fitted, fill, shadow_fill=shadow_fill)
+
+
+def wrap_latin_lines(
+    draw: ImageDraw.ImageDraw,
+    text: str,
+    font_obj: ImageFont.FreeTypeFont,
+    max_width: int,
+    max_lines: int,
+) -> list[str]:
+    words = " ".join(text.split()).split()
+    if not words:
+        return []
+    lines: list[str] = []
+    line = words[0]
+    for index, word in enumerate(words[1:], start=1):
+        candidate = f"{line} {word}"
+        if text_width(draw, candidate, font_obj) <= max_width:
+            line = candidate
+            continue
+        lines.append(line)
+        line = word
+        if len(lines) == max_lines:
+            lines[-1] = f"{lines[-1]} {' '.join(words[index:])}"
+            return lines
+    lines.append(line)
+    return lines
+
+
+def draw_centered_multiline_fit(
+    draw: ImageDraw.ImageDraw,
+    text: str,
+    xy: tuple[int, int],
+    font_path: str,
+    size: int,
+    index: int,
+    fill: tuple[int, int, int, int],
+    *,
+    max_width: int,
+    max_height: int,
+    min_size: int,
+    max_lines: int,
+    shadow_fill: tuple[int, int, int, int] | None = None,
+) -> None:
+    if not text:
+        return
+    fitted = font(font_path, size, index=index)
+    lines = wrap_latin_lines(draw, text, fitted, max_width, max_lines)
+    while size > min_size:
+        fitted = font(font_path, size, index=index)
+        lines = wrap_latin_lines(draw, text, fitted, max_width, max_lines)
+        line_boxes = [draw.textbbox((0, 0), line, font=fitted) for line in lines]
+        widths = [box[2] - box[0] for box in line_boxes]
+        heights = [box[3] - box[1] for box in line_boxes]
+        total_height = sum(heights) + max(0, len(lines) - 1) * max(4, int(size * 0.25))
+        if widths and max(widths) <= max_width and total_height <= max_height:
+            break
+        size -= 1
+    gap = max(4, int(size * 0.25))
+    line_boxes = [draw.textbbox((0, 0), line, font=fitted) for line in lines]
+    heights = [box[3] - box[1] for box in line_boxes]
+    total_height = sum(heights) + max(0, len(lines) - 1) * gap
+    y = xy[1] - total_height / 2
+    for line, height in zip(lines, heights):
+        draw_centered(draw, line, (xy[0], int(y + height / 2)), fitted, fill, shadow_fill=shadow_fill)
+        y += height + gap
 
 
 def text_width(draw: ImageDraw.ImageDraw, text: str, font_obj: ImageFont.FreeTypeFont) -> int:
@@ -122,6 +193,8 @@ def draw_vertical(
     fill: tuple[int, int, int, int],
     gap: int,
     max_bottom: int,
+    shadow_fill: tuple[int, int, int, int] | None = None,
+    shadow_offset: int = 2,
 ) -> None:
     chars = list(text)
     heights = []
@@ -133,6 +206,13 @@ def draw_vertical(
         y = max(int(HEIGHT * 0.095), max_bottom - total)
     cursor = y
     for ch, (w, h) in zip(chars, heights):
+        if shadow_fill:
+            draw.text(
+                (x - w / 2 + shadow_offset, cursor + shadow_offset),
+                ch,
+                font=font_obj,
+                fill=shadow_fill,
+            )
         draw.text((x - w / 2, cursor), ch, font=font_obj, fill=fill)
         cursor += h + gap
 
@@ -187,8 +267,24 @@ def main() -> int:
 
     plan = load_plan(args.plan)
     title_suffix = args.title_suffix.strip()
-    title_ja = (plan.get("book_title_ja") or plan.get("book_title_zh") or args.book_id) + title_suffix
-    title_zh = (plan.get("book_title_zh") or title_ja) + title_suffix
+    title_en = (plan.get("book_title_en") or "").strip()
+    title_ja = (plan.get("book_title_ja") or "").strip()
+    title_zh = (plan.get("book_title_zh") or "").strip()
+    title_wenyan = (plan.get("book_title_wenyan") or "").strip()
+    if title_suffix:
+        title_en = f"{title_en}{title_suffix}" if title_en else ""
+        title_ja = f"{title_ja}{title_suffix}" if title_ja else ""
+        title_zh = f"{title_zh}{title_suffix}" if title_zh else ""
+        title_wenyan = f"{title_wenyan}{title_suffix}" if title_wenyan else ""
+    if plan.get("source_language") == "wenyan" and title_wenyan:
+        primary_cjk = title_wenyan
+    else:
+        primary_cjk = title_ja or title_zh or title_wenyan or title_en or args.book_id
+    side_cjk = ""
+    for candidate in (title_zh, title_ja, title_wenyan):
+        if candidate and candidate != primary_cjk:
+            side_cjk = candidate
+            break
     author = plan.get("author") or ""
     author_reading = plan.get("author_reading_ja") or plan.get("author_reading_zh") or ""
 
@@ -196,29 +292,22 @@ def main() -> int:
     overlay = Image.new("RGBA", image.size, (0, 0, 0, 0))
     draw = ImageDraw.Draw(overlay)
 
-    panel_left = int(WIDTH * 0.315)
-    panel_right = int(WIDTH * 0.685)
-    panel_top = int(HEIGHT * 0.082)
-    panel_bottom = int(HEIGHT * 0.915)
+    panel_left = int(WIDTH * 0.355)
+    panel_right = int(WIDTH * 0.645)
+    panel_top = int(HEIGHT * 0.080)
+    panel_bottom = int(HEIGHT * 0.710)
     draw.rounded_rectangle(
         (panel_left, panel_top, panel_right, panel_bottom),
-        radius=18,
-        fill=(246, 235, 210, 112),
-        outline=(42, 31, 24, 155),
-        width=3,
-    )
-    inset = 28
-    draw.rounded_rectangle(
-        (panel_left + inset, panel_top + inset, panel_right - inset, panel_bottom - inset),
-        radius=8,
-        outline=(42, 31, 24, 80),
+        radius=26,
+        fill=(250, 244, 226, 42),
+        outline=(255, 252, 240, 34),
         width=1,
     )
 
-    title_max_height = int(HEIGHT * 0.535)
+    title_max_height = int(HEIGHT * 0.510)
     title_font, title_gap = fit_vertical_font(
         draw,
-        title_ja,
+        primary_cjk,
         SERIF_BOLD,
         int(HEIGHT * 0.061),
         0,
@@ -227,43 +316,58 @@ def main() -> int:
     )
     side_font = font(SERIF_REGULAR, int(HEIGHT * 0.024), index=2)
     small_font = font(SERIF_REGULAR, int(HEIGHT * 0.020), index=0)
-    latin_font = font(SERIF_REGULAR, int(HEIGHT * 0.015), index=2)
-    seal_font = font(SERIF_BOLD, int(HEIGHT * 0.020), index=2)
 
     ink = (28, 22, 17, 255)
     muted = (70, 54, 43, 238)
-    seal = (150, 42, 30, 238)
+    soft_shadow = (255, 250, 235, 164)
 
     if args.book_id == "yijing":
         draw_yijing_trigrams(draw, fill=(28, 22, 17, 185))
 
     draw_vertical(
         draw,
-        title_ja,
+        primary_cjk,
         WIDTH // 2,
-        int(HEIGHT * 0.13),
+        int(HEIGHT * 0.122),
         title_font,
         fill=ink,
         gap=title_gap,
-        max_bottom=int(HEIGHT * 0.67),
+        max_bottom=int(HEIGHT * 0.665),
+        shadow_fill=soft_shadow,
     )
-    if title_zh != title_ja:
+    if side_cjk:
         draw_vertical(
             draw,
-            title_zh,
+            side_cjk,
             int(WIDTH * 0.36),
             int(HEIGHT * 0.20),
             side_font,
             fill=muted,
             gap=5,
             max_bottom=int(HEIGHT * 0.66),
+            shadow_fill=soft_shadow,
         )
 
-    panel_text_width = panel_right - panel_left - inset * 2
+    text_width_limit = int(WIDTH * 0.72)
+    if title_en:
+        draw_centered_multiline_fit(
+            draw,
+            title_en,
+            (WIDTH // 2, int(HEIGHT * 0.735)),
+            SERIF_BOLD,
+            int(HEIGHT * 0.029),
+            0,
+            ink,
+            max_width=text_width_limit,
+            max_height=int(HEIGHT * 0.090),
+            min_size=int(HEIGHT * 0.014),
+            max_lines=3,
+            shadow_fill=soft_shadow,
+        )
 
     author_line = f"{author}（{author_reading}）" if author_reading else author
-    author_y = int(HEIGHT * 0.715)
-    if author and author_reading and text_width(draw, author_line, small_font) > panel_text_width:
+    author_y = int(HEIGHT * 0.812 if title_en else HEIGHT * 0.750)
+    if author and author_reading and text_width(draw, author_line, small_font) > text_width_limit:
         draw_centered_fit(
             draw,
             author,
@@ -272,8 +376,9 @@ def main() -> int:
             int(HEIGHT * 0.018),
             0,
             muted,
-            max_width=panel_text_width,
+            max_width=text_width_limit,
             min_size=int(HEIGHT * 0.011),
+            shadow_fill=soft_shadow,
         )
         draw_centered_fit(
             draw,
@@ -283,8 +388,9 @@ def main() -> int:
             int(HEIGHT * 0.013),
             0,
             muted,
-            max_width=panel_text_width,
+            max_width=text_width_limit,
             min_size=int(HEIGHT * 0.008),
+            shadow_fill=soft_shadow,
         )
     else:
         draw_centered_fit(
@@ -295,64 +401,58 @@ def main() -> int:
             int(HEIGHT * 0.020),
             0,
             muted,
-            max_width=panel_text_width,
+            max_width=text_width_limit,
             min_size=int(HEIGHT * 0.010),
+            shadow_fill=soft_shadow,
         )
     draw_centered_fit(
         draw,
         edition_label(plan),
-        (WIDTH // 2, int(HEIGHT * 0.765)),
+        (WIDTH // 2, int(HEIGHT * 0.858 if title_en else HEIGHT * 0.802)),
         SERIF_REGULAR,
-        int(HEIGHT * 0.024),
+        int(HEIGHT * 0.019),
         2,
         muted,
-        max_width=panel_text_width,
+        max_width=text_width_limit,
         min_size=int(HEIGHT * 0.010),
+        shadow_fill=soft_shadow,
     )
     draw_centered_fit(
         draw,
         "AgInTiFlow curated",
-        (WIDTH // 2, int(HEIGHT * 0.830)),
+        (WIDTH // 2, int(HEIGHT * 0.913)),
         SERIF_REGULAR,
         int(HEIGHT * 0.015),
         2,
         muted,
-        max_width=panel_text_width,
+        max_width=text_width_limit,
         min_size=int(HEIGHT * 0.009),
+        shadow_fill=soft_shadow,
     )
     draw_centered_fit(
         draw,
         "https://flow.lazying.art",
-        (WIDTH // 2, int(HEIGHT * 0.858)),
+        (WIDTH // 2, int(HEIGHT * 0.938)),
         SERIF_REGULAR,
         int(HEIGHT * 0.015),
         2,
         muted,
-        max_width=panel_text_width,
+        max_width=text_width_limit,
         min_size=int(HEIGHT * 0.009),
+        shadow_fill=soft_shadow,
     )
     draw_centered_fit(
         draw,
         "powered by LazyingArt",
-        (WIDTH // 2, int(HEIGHT * 0.886)),
+        (WIDTH // 2, int(HEIGHT * 0.963)),
         SERIF_REGULAR,
         int(HEIGHT * 0.015),
         2,
         muted,
-        max_width=panel_text_width,
+        max_width=text_width_limit,
         min_size=int(HEIGHT * 0.009),
+        shadow_fill=soft_shadow,
     )
-
-    seal_size = int(WIDTH * 0.075)
-    seal_x = int(WIDTH * 0.61)
-    seal_y = int(HEIGHT * 0.64)
-    draw.rounded_rectangle(
-        (seal_x, seal_y, seal_x + seal_size, seal_y + seal_size),
-        radius=7,
-        outline=seal,
-        width=4,
-    )
-    draw_centered(draw, "流", (seal_x + seal_size // 2, seal_y + seal_size // 2), seal_font, seal)
 
     composed = Image.alpha_composite(image, overlay)
     args.output.parent.mkdir(parents=True, exist_ok=True)

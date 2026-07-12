@@ -197,6 +197,7 @@ function normalizePlan(plan, bookId) {
   return {
     bookId,
     planPath: plan.__path,
+    titleEn: plan.book_title_en || "",
     titleZh: plan.book_title_zh || bookId,
     titleJa: plan.book_title_ja || plan.book_title_zh || bookId,
     author: plan.author || "",
@@ -236,14 +237,16 @@ function discoverPlans(selectedBooks) {
 
 function promptFor(plan) {
   const hint = THEME_HINTS[plan.bookId] || plan.description || `${plan.titleJa} / ${plan.titleZh}`;
-  const imageTitle = IMAGE_TITLE_OVERRIDES[plan.bookId] || `${plan.titleJa} / ${plan.titleZh}`;
+  const titleParts = [plan.titleEn, plan.titleJa, plan.titleZh].filter(Boolean);
+  const imageTitle = IMAGE_TITLE_OVERRIDES[plan.bookId] || titleParts.join(" / ");
   return [
-    "Create a refined textless background illustration for a pocket-size bilingual Chinese-Japanese literary book cover.",
+    "Create a refined textless background illustration for a pocket-size multilingual LinguaLeaf book cover.",
     `Book: ${imageTitle}. Author: ${plan.author || "unknown"}.`,
     `Visual direction: ${hint}.`,
     "Vertical A6 book cover composition, elegant East Asian printmaking and subtle modern editorial design.",
     "Leave a calm central area suitable for overlaid vertical title typography.",
-    "No readable words, no letters, no calligraphy, no captions, no logo, no watermark, no frame text.",
+    "The image itself must contain no readable words, no letters, no title, no subtitle, no calligraphy, no captions, no logo, no watermark, and no frame text.",
+    "Do not include seal stamps, red stamp squares, pseudo-writing, single kanji/hanzi marks, or decorative text-like symbols.",
     "High-resolution, rich but restrained color, suitable for XeLaTeX cover art.",
   ].join("\n");
 }

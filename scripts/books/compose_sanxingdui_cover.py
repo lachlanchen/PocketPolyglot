@@ -114,7 +114,6 @@ def compose_one(slug: str, title: str, background: Path, output: Path) -> None:
     title_font = font(SERIF_BOLD, 94, index=2)
     latin_font = font(SERIF_REGULAR, 26, index=2)
     credit_font = font(SERIF_REGULAR, 24, index=2)
-    seal_font = font(SERIF_BOLD, 44, index=2)
 
     title_text = normalize_title(title)
     lines = wrap_cjk(draw, title_text, title_font, int(WIDTH * 0.72))
@@ -124,7 +123,6 @@ def compose_one(slug: str, title: str, background: Path, output: Path) -> None:
 
     ink = (28, 21, 16, 255)
     muted = (72, 53, 40, 242)
-    seal = (142, 42, 28, 242)
     title_line_height = int(title_font.size * 1.28)
     total_title_height = title_line_height * len(lines)
 
@@ -138,9 +136,9 @@ def compose_one(slug: str, title: str, background: Path, output: Path) -> None:
     draw.rounded_rectangle(
         (panel_left, panel_top, panel_right, panel_bottom),
         radius=24,
-        fill=(245, 234, 210, 110),
-        outline=(64, 43, 30, 145),
-        width=3,
+        fill=(245, 234, 210, 72),
+        outline=(255, 247, 226, 70),
+        width=1,
     )
     draw.line(
         (panel_left + 38, panel_top + 30, panel_right - 38, panel_top + 30),
@@ -167,12 +165,6 @@ def compose_one(slug: str, title: str, background: Path, output: Path) -> None:
     )
     draw_centered(draw, "AgInTiFlow curated · https://flow.lazying.art", (WIDTH // 2, credit_y), credit_font, muted)
     draw_centered(draw, "powered by LazyingArt", (WIDTH // 2, credit_y + 42), credit_font, muted)
-
-    seal_size = int(WIDTH * 0.066)
-    seal_x = int(WIDTH * 0.81)
-    seal_y = int(HEIGHT * 0.78)
-    draw.rounded_rectangle((seal_x, seal_y, seal_x + seal_size, seal_y + seal_size), radius=7, outline=seal, width=4)
-    draw_centered(draw, "流", (seal_x + seal_size // 2, seal_y + seal_size // 2), seal_font, seal)
 
     composed = Image.alpha_composite(image, overlay)
     output.parent.mkdir(parents=True, exist_ok=True)
