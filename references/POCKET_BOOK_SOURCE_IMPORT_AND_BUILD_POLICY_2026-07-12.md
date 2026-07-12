@@ -1,0 +1,46 @@
+# Pocket Book Source Import And Build Policy - 2026-07-12
+
+The current stage is not LinguaLeaf multilingual generation.  The goal is a
+clean, high-quality, large-font pocket-size book from each original source.
+
+## Source Storage
+
+All newly supplied books were copied into ignored `sources/` folders.  Original
+files in `/home/lachlan/Downloads` were not moved.
+
+Tracked task manifest:
+
+`build-pocket/tasks/source-queue-2026-07-12.json`
+
+Local build workspace:
+
+`build-pocket/`
+
+Nutstore Share destination for final pocket PDFs:
+
+`/home/lachlan/Nutstore Files/Share/PocketBooks/`
+
+## New Main Groups
+
+| Group | New source set |
+| --- | --- |
+| History left / world history | China dynastic history, Iran, Arab peoples, Middle East, Europe, Habsburgs, Ottomans, Japan, Ancient Egypt, Central Asia |
+| Leonard Susskind | `The Cosmic Landscape`; `An Introduction to Black Holes, Information and the String Theory Revolution` |
+| Mars | `Green Mars`; `Blue Mars` |
+| Historical / world literature | `I, Claudius`, `Wolf Hall`, `The Cairo Trilogy`, `The Bridge on the Drina`, `Shahnameh`, `The Janissary Tree`, `My Name Is Red` |
+
+## Build Rule
+
+For each book:
+
+1. Keep the original source under `sources/`.
+2. Produce an exact/review TeX edition under `build-pocket/<book-id>/exact/`.
+3. Preserve figures, maps, diagrams, charts, equations, tables, and captions.
+4. Produce a large-font pocket edition under
+   `build-pocket/<book-id>/pocket-large-font/`.
+5. Generate or compose a clean cover.
+6. Validate PDF, TOC, text extraction, overfull lines, and representative pages.
+7. Sync only final pocket PDFs to the Nutstore Share `PocketBooks` folder.
+
+Generated `build-pocket` contents are ignored except this task metadata.
+

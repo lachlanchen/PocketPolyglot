@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "created": "2026-07-12",
+  "purpose": "High-quality exact/review and large-font pocket-size books. Not LinguaLeaf multilingual generation yet.",
+  "source_root": "sources",
+  "workspace_root": "build-pocket",
+  "nutstore_share_root": "/home/lachlan/Nutstore Files/Share/PocketBooks",
+  "defaults": {
+    "outputs": ["exact-review", "pocket-large-font"],
+    "sync": ["nutstore-share-pocketbooks"],
+    "preserve": ["figures", "maps", "diagrams", "charts", "formulas", "equations", "tables", "captions"],
+    "cover": "clean generated or source-inspired cover with readable overlay",
+    "status": "source-copied"
+  },
+  "tasks": [
+    {
+      "book_id": "holy-roman-empire-thousand-years",
+      "category": "history",
+      "title": "The Holy Roman Empire: A Thousand Years of Europe's History",
+      "author": "Peter H. Wilson",
+      "source": "sources/world-history/holy-roman-empire/en/The Holy Roman Empire - A Thousand Years of Europe History - Peter H Wilson.epub",
+      "note": "Likely alternate edition/source for the existing Holy Roman Empire work; keep as exact-pocket source."
+    },
+    {
+      "book_id": "cosmic-landscape",
+      "category": "popular-science",
+      "title": "The Cosmic Landscape",
+      "author": "Leonard Susskind",
+      "source": "sources/popular-science/leonard-susskind/en/The Cosmic Landscape - Leonard Susskind.epub"
+    },
+    {
+      "book_id": "black-holes-string-theory-revolution",
+      "category": "popular-science",
+      "title": "An Introduction to Black Holes, Information and the String Theory Revolution",
+      "author": "Leonard Susskind and James Lindesay",
+      "source": "sources/popular-science/leonard-susskind/en/An Introduction to Black Holes Information and the String Theory Revolution - Susskind Lindesay.pdf",
+      "note": "Formula-heavy; exact/review stage must preserve equations."
+    },
+    {
+      "book_id": "green-mars",
+      "category": "science-fiction",
+      "title": "Green Mars",
+      "author": "Kim Stanley Robinson",
+      "source": "sources/mars/science-fiction/en/Green Mars - Kim Stanley Robinson.pdf"
+    },
+    {
+      "book_id": "blue-mars",
+      "category": "science-fiction",
+      "title": "Blue Mars",
+      "author": "Kim Stanley Robinson",
+      "source": "sources/mars/science-fiction/en/Blue Mars - Kim Stanley Robinson.epub"
+    },
+    {
+      "book_id": "i-claudius",
+      "category": "historical-fiction",
+      "title": "I, Claudius",
+      "author": "Robert Graves",
+      "source": "sources/world-literature/i-claudius/en/I Claudius - Robert Graves.pdf"
+    },
+    {
+      "book_id": "wolf-hall",
+      "category": "historical-fiction",
+      "title": "Wolf Hall",
+      "author": "Hilary Mantel",
+      "source": "sources/world-literature/wolf-hall/en/Wolf Hall - Hilary Mantel.epub"
+    },
+    {
+      "book_id": "cairo-trilogy-1-palace-walk",
+      "category": "historical-fiction",
+      "title": "Palace Walk",
+      "author": "Naguib Mahfouz",
+      "source": "sources/world-literature/cairo-trilogy/en/Palace Walk - Cairo Trilogy Vol 1 - Naguib Mahfouz.mobi"
+    },
+    {
+      "book_id": "cairo-trilogy-2-palace-of-desire",
+      "category": "historical-fiction",
+      "title": "Palace of Desire",
+      "author": "Naguib Mahfouz",
+      "source": "sources/world-literature/cairo-trilogy/en/Palace of Desire - Cairo Trilogy Vol 2 - Naguib Mahfouz.mobi"
+    },
+    {
+      "book_id": "cairo-trilogy-3-sugar-street",
+      "category": "historical-fiction",
+      "title": "Sugar Street",
+      "author": "Naguib Mahfouz",
+      "source": "sources/world-literature/cairo-trilogy/en/Sugar Street - Cairo Trilogy Vol 3 - Naguib Mahfouz.mobi"
+    },
+    {
+      "book_id": "bridge-on-the-drina",
+      "category": "historical-fiction",
+      "title": "The Bridge on the Drina",
+      "author": "Ivo Andric",
+      "source": "sources/world-literature/bridge-on-the-drina/en/The Bridge on the Drina - Ivo Andric.pdf"
+    },
+    {
+      "book_id": "shahnameh",
+      "category": "world-literature",
+      "title": "Shahnameh: The Persian Book of Kings",
+      "author": "Abolqasem Ferdowsi, translated by Dick Davis",
+      "source": "sources/world-literature/shahnameh/en/Shahnameh - The Persian Book of Kings - Ferdowsi Dick Davis.epub"
+    },
+    {
+      "book_id": "janissary-tree",
+      "category": "historical-fiction",
+      "title": "The Janissary Tree",
+      "author": "Jason Goodwin",
+      "source": "sources/world-literature/janissary-tree/en/The Janissary Tree - Jason Goodwin.pdf"
+    },
+    {
+      "book_id": "my-name-is-red",
+      "category": "historical-fiction",
+      "title": "My Name Is Red",
+      "author": "Orhan Pamuk",
+      "source": "sources/world-literature/my-name-is-red/en/My Name Is Red - Orhan Pamuk.pdf"
+    },
+    {
+      "book_id": "cambridge-history-iran-vol5",
+      "category": "history",
+      "title": "The Cambridge History of Iran, Volume 5: The Saljuq and Mongol Periods",
+      "author": "J. A. Boyle",
+      "source": "sources/world-history/iran/en/The Cambridge History of Iran Vol 5 - The Saljuq and Mongol Periods.pdf"
+    },
+    {
+      "book_id": "cambridge-illustrated-history-china",
+      "category": "history",
+      "title": "The Cambridge Illustrated History of China",
+      "author": "Patricia Buckley Ebrey and Kwang-ching Liu",
+      "source": "sources/world-history/china/en/The Cambridge Illustrated History of China - Ebrey Liu.pdf"
+    },
+    {
+      "book_id": "age-of-confucian-rule",
+      "category": "history",
+      "title": "The Age of Confucian Rule: The Song Transformation of China",
+      "author": "Dieter Kuhn",
+      "source": "sources/world-history/china/en/The Age of Confucian Rule - Song Transformation of China - Dieter Kuhn.pdf"
+    },
+    {
+      "book_id": "habsburg-empire-judson",
+      "category": "history",
+      "title": "The Habsburg Empire: A New History",
+      "author": "Pieter M. Judson",
+      "source": "sources/world-history/habsburgs/en/The Habsburg Empire - A New History - Pieter M Judson.pdf"
+    },
+    {
+      "book_id": "sasanian-persia",
+      "category": "history",
+      "title": "Sasanian Persia: The Rise and Fall of an Empire",
+      "author": "Touraj Daryaee",
+      "source": "sources/world-history/iran/en/Sasanian Persia - The Rise and Fall of an Empire - Touraj Daryaee.pdf"
+    },
+    {
+      "book_id": "history-of-arab-peoples",
+      "category": "history",
+      "title": "A History of the Arab Peoples",
+      "author": "Albert Hourani",
+      "source": "sources/world-history/arab-peoples/en/A History of the Arab Peoples - Albert Hourani.pdf"
+    },
+    {
+      "book_id": "modern-middle-east",
+      "category": "history",
+      "title": "A History of the Modern Middle East",
+      "author": "William L. Cleveland and Martin Bunton",
+      "source": "sources/world-history/modern-middle-east/en/A History of the Modern Middle East - Cleveland Bunton.pdf"
+    },
+    {
+      "book_id": "osmans-dream",
+      "category": "history",
+      "title": "Osman's Dream: The Story of the Ottoman Empire 1300-1923",
+      "author": "Caroline Finkel",
+      "source": "sources/world-history/ottomans/en/Osmans Dream - The Story of the Ottoman Empire 1300-1923 - Caroline Finkel.azw3"
+    },
+    {
+      "book_id": "europe-history-davies",
+      "category": "history",
+      "title": "Europe: A History",
+      "author": "Norman Davies",
+      "source": "sources/world-history/europe/en/Europe - A History - Norman Davies.pdf"
+    },
+    {
+      "book_id": "chinas-last-empire-qing",
+      "category": "history",
+      "title": "China's Last Empire: The Great Qing",
+      "author": "William T. Rowe",
+      "source": "sources/world-history/china/en/Chinas Last Empire - The Great Qing - William T Rowe.pdf"
+    },
+    {
+      "book_id": "troubled-empire-yuan-ming",
+      "category": "history",
+      "title": "The Troubled Empire: China in the Yuan and Ming Dynasties",
+      "author": "Timothy Brook",
+      "source": "sources/world-history/china/en/The Troubled Empire - China in the Yuan and Ming Dynasties - Timothy Brook.pdf"
+    },
+    {
+      "book_id": "china-between-empires",
+      "category": "history",
+      "title": "China between Empires: The Northern and Southern Dynasties",
+      "author": "Mark Edward Lewis",
+      "source": "sources/world-history/china/en/China between Empires - Northern and Southern Dynasties - Mark Edward Lewis.pdf"
+    },
+    {
+      "book_id": "chinas-cosmopolitan-empire-tang",
+      "category": "history",
+      "title": "China's Cosmopolitan Empire: The Tang Dynasty",
+      "author": "Mark Edward Lewis",
+      "source": "sources/world-history/china/en/Chinas Cosmopolitan Empire - The Tang Dynasty - Mark Edward Lewis.pdf"
+    },
+    {
+      "book_id": "early-chinese-empires-qin-han",
+      "category": "history",
+      "title": "The Early Chinese Empires: Qin and Han",
+      "author": "Mark Edward Lewis and Timothy Brook",
+      "source": "sources/world-history/china/en/The Early Chinese Empires - Qin and Han - Lewis Brook.pdf",
+      "alternate_source": "sources/world-history/china/en/The Early Chinese Empires - Qin and Han - Lewis Brook.epub"
+    },
+    {
+      "book_id": "new-cambridge-history-japan-vol3",
+      "category": "history",
+      "title": "The New Cambridge History of Japan, Volume 3: The Modern Japanese Nation and Empire",
+      "author": "Laura Hein",
+      "source": "sources/world-history/japan/en/The New Cambridge History of Japan Vol 3 - The Modern Japanese Nation and Empire.pdf"
+    },
+    {
+      "book_id": "rise-fall-ancient-egypt-wilkinson",
+      "category": "history",
+      "title": "The Rise and Fall of Ancient Egypt",
+      "author": "Toby Wilkinson",
+      "source": "sources/world-history/ancient-egypt/en/The Rise and Fall of Ancient Egypt - Toby Wilkinson.pdf",
+      "note": "Already present before this import; included here as an exact-pocket candidate."
+    },
+    {
+      "book_id": "lost-enlightenment-central-asia",
+      "category": "history",
+      "title": "Lost Enlightenment: Central Asia's Golden Age from the Arab Conquest to Tamerlane",
+      "author": "S. Frederick Starr",
+      "source": "sources/world-history/central-asia/en/Lost Enlightenment - Central Asias Golden Age - S Frederick Starr.pdf"
+    }
+  ]
+}
+
