@@ -262,7 +262,96 @@
       "chunk_count": 419,
       "english_chapter_count": 7,
       "prepared_chunks_at": "2026-07-11T02:59:54.278746+00:00"
+    },
+    {
+      "priority": 10,
+      "book_id": "rise-fall-ancient-egypt",
+      "title_en": "The Rise and Fall of Ancient Egypt",
+      "title_zh": "古埃及的兴衰",
+      "title_ja": "古代エジプトの興亡",
+      "title_zh_reading": "",
+      "title_ja_reading": "",
+      "author": "Toby Wilkinson",
+      "author_reading_zh": "",
+      "author_reading_ja": "",
+      "source_path": "sources/world-history/ancient-egypt/en/The Rise and Fall of Ancient Egypt - Toby Wilkinson.pdf",
+      "reference_paths": {},
+      "reference_notes": "Supplemental files were copied from ../Books when available. The English spine remains the only chunk-alignment source until a later reference-alignment pass is explicitly run.",
+      "stop_markers": [
+        "Notes",
+        "Endnotes",
+        "Bibliography",
+        "References",
+        "Further Reading",
+        "Acknowledgments",
+        "Acknowledgements",
+        "Index"
+      ],
+      "description": "Toby Wilkinson, The Rise and Fall of Ancient Egypt. English source is the alignment spine; generate modern Japanese and Chinese.",
+      "min_chunk_count": 120,
+      "task_mode": "trilingual_modern_nonfiction_en_source_generated_zh_ja",
+      "translation_contract": {
+        "style": "Accurate, complete, modern, readable historical translation.",
+        "alignment": "Translate each source unit faithfully; keep chronology, names, dates, and causal claims precise.",
+        "japanese": "Use natural modern Japanese. Do not output Chinese prose in the Japanese field.",
+        "chinese": "Use natural modern Chinese. Preserve specialized historical terms and provide readable equivalents.",
+        "grammar": "Grammar-role analysis is required later; keep sentence units clear for role tagging."
+      },
+      "status": "chunked_launchable",
+      "book_plan": "books/rise-fall-ancient-egypt/book-plan.json",
+      "chunks_manifest": "books/rise-fall-ancient-egypt/work/trilingual/chunks/manifest.json",
+      "chunk_count": 456,
+      "english_chapter_count": 2,
+      "prepared_chunks_at": "2026-07-12T03:35:07.782359+00:00",
+      "queue_note": "Appended from imported-history-trilingual-20260712 at the end of the main history queue."
+    },
+    {
+      "priority": 11,
+      "book_id": "lost-enlightenment-central-asia",
+      "title_en": "Lost Enlightenment: Central Asia's Golden Age from the Arab Conquest to Tamerlane",
+      "title_zh": "失落的启蒙：从阿拉伯征服到帖木儿时代的中亚黄金时代",
+      "title_ja": "失われた啓蒙：アラブ征服からティムールまでの中央アジア黄金時代",
+      "title_zh_reading": "",
+      "title_ja_reading": "",
+      "author": "S. Frederick Starr",
+      "author_reading_zh": "",
+      "author_reading_ja": "",
+      "source_path": "sources/world-history/central-asia/en/Lost Enlightenment - S Frederick Starr.pdf",
+      "reference_paths": {},
+      "reference_notes": "Supplemental files were copied from ../Books when available. The English spine remains the only chunk-alignment source until a later reference-alignment pass is explicitly run.",
+      "stop_markers": [
+        "Notes",
+        "Endnotes",
+        "Bibliography",
+        "References",
+        "Further Reading",
+        "Acknowledgments",
+        "Acknowledgements",
+        "Index"
+      ],
+      "description": "S. Frederick Starr, Lost Enlightenment: Central Asia's Golden Age from the Arab Conquest to Tamerlane. English source is the alignment spine; generate modern Japanese and Chinese.",
+      "min_chunk_count": 160,
+      "task_mode": "trilingual_modern_nonfiction_en_source_generated_zh_ja",
+      "translation_contract": {
+        "style": "Accurate, complete, modern, readable historical translation.",
+        "alignment": "Translate each source unit faithfully; keep chronology, names, dates, and causal claims precise.",
+        "japanese": "Use natural modern Japanese. Do not output Chinese prose in the Japanese field.",
+        "chinese": "Use natural modern Chinese. Preserve specialized historical terms and provide readable equivalents.",
+        "grammar": "Grammar-role analysis is required later; keep sentence units clear for role tagging."
+      },
+      "body_start_markers": [
+        "The Center of the World"
+      ],
+      "status": "chunked_launchable",
+      "book_plan": "books/lost-enlightenment-central-asia/book-plan.json",
+      "chunks_manifest": "books/lost-enlightenment-central-asia/work/trilingual/chunks/manifest.json",
+      "chunk_count": 541,
+      "english_chapter_count": 1,
+      "prepared_chunks_at": "2026-07-12T03:35:07.782363+00:00",
+      "queue_note": "Appended from imported-history-trilingual-20260712 at the end of the main history queue."
     }
   ],
-  "last_chunk_preparation_at": "2026-07-11T02:59:54.278747+00:00"
+  "last_chunk_preparation_at": "2026-07-11T02:59:54.278747+00:00",
+  "last_queue_update_at": "2026-07-12T06:12:29.752497+00:00",
+  "queue_update_note": "Imported history books appended at the end: rise-fall-ancient-egypt, lost-enlightenment-central-asia"
 }
