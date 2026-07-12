@@ -12,11 +12,14 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import posixpath
 import re
 import shutil
 import subprocess
 import sys
 import time
+import zipfile
+import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import Any
 
@@ -260,6 +263,59 @@ def marker_pdf_to_markdown(source: Path, task_dir: Path, *, force: bool) -> Path
     return prepared
 
 
+def repair_epub_for_pandoc(source: Path, task_dir: Path, *, force: bool) -> Path:
+    """Create a Pandoc-friendly EPUB copy without parent-relative manifest hrefs."""
+
+    repaired = task_dir / "work/repaired-for-pandoc.epub"
+    if repaired.exists() and not force:
+        return repaired
+
+    with zipfile.ZipFile(source) as zin:
+        names = set(zin.namelist())
+        container = zin.read("META-INF/container.xml")
+        root = ET.fromstring(container)
+        rootfile = root.find(".//{urn:oasis:names:tc:opendocument:xmlns:container}rootfile")
+        if rootfile is None:
+            return source
+        opf_path = rootfile.attrib.get("full-path", "")
+        if not opf_path or opf_path not in names:
+            return source
+        opf_dir = posixpath.dirname(opf_path)
+        opf_text = zin.read(opf_path).decode("utf-8", errors="replace")
+        extra_entries: dict[str, bytes] = {}
+
+        def href_repl(match: re.Match[str]) -> str:
+            href = match.group(1)
+            if not href.startswith("../"):
+                return match.group(0)
+            normalized = posixpath.normpath(posixpath.join(opf_dir, href))
+            if normalized not in names:
+                return match.group(0)
+            clean_name = posixpath.basename(normalized)
+            target = posixpath.join(opf_dir, clean_name) if opf_dir else clean_name
+            extra_entries[target] = zin.read(normalized)
+            return f'href="{clean_name}"'
+
+        fixed_opf = re.sub(r'href="([^"]+)"', href_repl, opf_text)
+        if fixed_opf == opf_text and not extra_entries:
+            return source
+
+        repaired.parent.mkdir(parents=True, exist_ok=True)
+        with zipfile.ZipFile(repaired, "w") as zout:
+            if "mimetype" in names:
+                zout.writestr("mimetype", zin.read("mimetype"), compress_type=zipfile.ZIP_STORED)
+            for info in zin.infolist():
+                if info.filename == "mimetype":
+                    continue
+                data = fixed_opf.encode("utf-8") if info.filename == opf_path else zin.read(info.filename)
+                zout.writestr(info, data)
+            for name, data in extra_entries.items():
+                if name not in names:
+                    zout.writestr(name, data)
+    log(f"[repair] {source.relative_to(ROOT)} -> {repaired.relative_to(ROOT)} for Pandoc EPUB paths")
+    return repaired
+
+
 def pandoc_layout_args(layout: str) -> list[str]:
     common = [
         "-V",
@@ -493,7 +549,7 @@ def build_one(task: dict[str, Any], *, force: bool, sync: bool, share_root: Path
             body_source = marker_pdf_to_markdown(source, task_dir, force=force)
             pandoc_format = "markdown"
         elif source_kind == "epub":
-            body_source = source
+            body_source = repair_epub_for_pandoc(source, task_dir, force=force)
             pandoc_format = "epub"
         elif source_kind in {"mobi", "azw3"}:
             raise RuntimeError(
