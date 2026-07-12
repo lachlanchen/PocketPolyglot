@@ -61,8 +61,10 @@ Allowed public Share families:
 
 In these labels, `jp` and `zh` mean modern Japanese and modern Chinese unless
 an explicit source layer such as `wenyan`, `wayakana`, or `ar` is present.
-Pair-only PDFs may be copied to `/home/lachlan/Nutstore Files/Projects/LinguaLeaf`
-for archival browsing, but Share should stay maximum-language only.
+Pair-only PDFs may be copied to
+`/home/lachlan/Nutstore Files/NoSync/Projects/LinguaLeaf` for archival
+browsing, but Share should stay maximum-language only. Do not recreate
+`/home/lachlan/Nutstore Files/Projects/LinguaLeaf`.
 
 For `wayakana-*` books, the public maximum-language edition must not use
 English as the main text. The original Japanese source layer, such as waka/kana

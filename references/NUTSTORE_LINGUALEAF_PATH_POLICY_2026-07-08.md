@@ -1,22 +1,23 @@
 # Nutstore LinguaLeaf Path Policy - 2026-07-08
 
-The user plans to move the Nutstore Projects LinguaLeaf export folder into a
-Nutstore `NOSync` area. Do not hardcode only:
+The LinguaLeaf project export folder has been moved into Nutstore `NoSync`:
 
-`/home/lachlan/Nutstore Files/Projects/LinguaLeaf`
+`/home/lachlan/Nutstore Files/NoSync/Projects/LinguaLeaf`
 
 Use `scripts/books/nutstore_paths.py` for new sync/export scripts.
 
+Do not use or recreate the old synced project path:
+
+`/home/lachlan/Nutstore Files/Projects/LinguaLeaf`
+
 ## Default Resolution
 
-Project exports prefer the first existing path:
+Project exports prefer the first existing path, and default to the `NoSync`
+path when none exists:
 
-1. `/home/lachlan/Nutstore Files/NOSync/Projects/LinguaLeaf`
-2. `/home/lachlan/Nutstore Files/NoSync/Projects/LinguaLeaf`
+1. `/home/lachlan/Nutstore Files/NoSync/Projects/LinguaLeaf`
+2. `/home/lachlan/Nutstore Files/NOSync/Projects/LinguaLeaf`
 3. `/home/lachlan/Nutstore Files/No Sync/Projects/LinguaLeaf`
-4. `/home/lachlan/Nutstore Files/Projects/NOSync/LinguaLeaf`
-5. `/home/lachlan/Nutstore Files/Projects/NoSync/LinguaLeaf`
-6. `/home/lachlan/Nutstore Files/Projects/LinguaLeaf`
 
 Share exports remain:
 
@@ -40,4 +41,4 @@ Share PDFs during the new sync.
 - `LINGUALEAF_SHARE_ROOT`
 
 Current running jobs may still write to the old path if they started before
-this policy existed. New Python sync scripts should follow the resolver.
+this policy was updated. New Python sync scripts must follow the resolver.

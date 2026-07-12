@@ -16,6 +16,7 @@ HEIGHT = round(WIDTH * 148 / 105)
 SERIF_REGULAR = "/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc"
 SERIF_BOLD = "/usr/share/fonts/opentype/noto/NotoSerifCJK-Bold.ttc"
 SYMBOL_FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+DEFAULT_TEXT_STROKE = (255, 255, 248, 214)
 
 
 def font(path: str, size: int, index: int = 2) -> ImageFont.FreeTypeFont:
@@ -47,13 +48,29 @@ def draw_centered(
     *,
     shadow_fill: tuple[int, int, int, int] | None = None,
     shadow_offset: int = 2,
+    stroke_fill: tuple[int, int, int, int] | None = None,
+    stroke_width: int = 0,
 ) -> None:
     bbox = draw.textbbox((0, 0), text, font=font_obj)
     x = xy[0] - (bbox[2] - bbox[0]) / 2
     y = xy[1] - (bbox[3] - bbox[1]) / 2
     if shadow_fill:
-        draw.text((x + shadow_offset, y + shadow_offset), text, font=font_obj, fill=shadow_fill)
-    draw.text((x, y), text, font=font_obj, fill=fill)
+        draw.text(
+            (x + shadow_offset, y + shadow_offset),
+            text,
+            font=font_obj,
+            fill=shadow_fill,
+            stroke_width=stroke_width,
+            stroke_fill=stroke_fill or shadow_fill,
+        )
+    draw.text(
+        (x, y),
+        text,
+        font=font_obj,
+        fill=fill,
+        stroke_width=stroke_width,
+        stroke_fill=stroke_fill or fill,
+    )
 
 
 def draw_centered_fit(
@@ -68,6 +85,8 @@ def draw_centered_fit(
     max_width: int,
     min_size: int,
     shadow_fill: tuple[int, int, int, int] | None = None,
+    stroke_fill: tuple[int, int, int, int] | None = None,
+    stroke_width: int | None = None,
 ) -> None:
     fitted = font(font_path, size, index=index)
     while size > min_size:
@@ -76,7 +95,18 @@ def draw_centered_fit(
             break
         size -= 1
         fitted = font(font_path, size, index=index)
-    draw_centered(draw, text, xy, fitted, fill, shadow_fill=shadow_fill)
+    if stroke_width is None:
+        stroke_width = max(1, int(size * 0.035)) if stroke_fill else 0
+    draw_centered(
+        draw,
+        text,
+        xy,
+        fitted,
+        fill,
+        shadow_fill=shadow_fill,
+        stroke_fill=stroke_fill,
+        stroke_width=stroke_width,
+    )
 
 
 def wrap_latin_lines(
@@ -119,6 +149,8 @@ def draw_centered_multiline_fit(
     min_size: int,
     max_lines: int,
     shadow_fill: tuple[int, int, int, int] | None = None,
+    stroke_fill: tuple[int, int, int, int] | None = None,
+    stroke_width: int | None = None,
 ) -> None:
     if not text:
         return
@@ -139,8 +171,19 @@ def draw_centered_multiline_fit(
     heights = [box[3] - box[1] for box in line_boxes]
     total_height = sum(heights) + max(0, len(lines) - 1) * gap
     y = xy[1] - total_height / 2
+    if stroke_width is None:
+        stroke_width = max(1, int(size * 0.035)) if stroke_fill else 0
     for line, height in zip(lines, heights):
-        draw_centered(draw, line, (xy[0], int(y + height / 2)), fitted, fill, shadow_fill=shadow_fill)
+        draw_centered(
+            draw,
+            line,
+            (xy[0], int(y + height / 2)),
+            fitted,
+            fill,
+            shadow_fill=shadow_fill,
+            stroke_fill=stroke_fill,
+            stroke_width=stroke_width,
+        )
         y += height + gap
 
 
@@ -195,6 +238,8 @@ def draw_vertical(
     max_bottom: int,
     shadow_fill: tuple[int, int, int, int] | None = None,
     shadow_offset: int = 2,
+    stroke_fill: tuple[int, int, int, int] | None = None,
+    stroke_width: int = 0,
 ) -> None:
     chars = list(text)
     heights = []
@@ -212,8 +257,17 @@ def draw_vertical(
                 ch,
                 font=font_obj,
                 fill=shadow_fill,
+                stroke_width=stroke_width,
+                stroke_fill=stroke_fill or shadow_fill,
             )
-        draw.text((x - w / 2, cursor), ch, font=font_obj, fill=fill)
+        draw.text(
+            (x - w / 2, cursor),
+            ch,
+            font=font_obj,
+            fill=fill,
+            stroke_width=stroke_width,
+            stroke_fill=stroke_fill or fill,
+        )
         cursor += h + gap
 
 
@@ -320,6 +374,7 @@ def main() -> int:
     ink = (28, 22, 17, 255)
     muted = (70, 54, 43, 238)
     soft_shadow = (255, 250, 235, 164)
+    text_outline = DEFAULT_TEXT_STROKE
 
     if args.book_id == "yijing":
         draw_yijing_trigrams(draw, fill=(28, 22, 17, 185))
@@ -334,6 +389,8 @@ def main() -> int:
         gap=title_gap,
         max_bottom=int(HEIGHT * 0.665),
         shadow_fill=soft_shadow,
+        stroke_fill=text_outline,
+        stroke_width=max(2, int(title_font.size * 0.045)),
     )
     if side_cjk:
         draw_vertical(
@@ -346,6 +403,8 @@ def main() -> int:
             gap=5,
             max_bottom=int(HEIGHT * 0.66),
             shadow_fill=soft_shadow,
+            stroke_fill=text_outline,
+            stroke_width=max(1, int(side_font.size * 0.035)),
         )
 
     text_width_limit = int(WIDTH * 0.72)
@@ -363,6 +422,7 @@ def main() -> int:
             min_size=int(HEIGHT * 0.014),
             max_lines=3,
             shadow_fill=soft_shadow,
+            stroke_fill=text_outline,
         )
 
     author_line = f"{author}（{author_reading}）" if author_reading else author
@@ -379,6 +439,7 @@ def main() -> int:
             max_width=text_width_limit,
             min_size=int(HEIGHT * 0.011),
             shadow_fill=soft_shadow,
+            stroke_fill=text_outline,
         )
         draw_centered_fit(
             draw,
@@ -391,6 +452,7 @@ def main() -> int:
             max_width=text_width_limit,
             min_size=int(HEIGHT * 0.008),
             shadow_fill=soft_shadow,
+            stroke_fill=text_outline,
         )
     else:
         draw_centered_fit(
@@ -404,6 +466,7 @@ def main() -> int:
             max_width=text_width_limit,
             min_size=int(HEIGHT * 0.010),
             shadow_fill=soft_shadow,
+            stroke_fill=text_outline,
         )
     draw_centered_fit(
         draw,
@@ -416,6 +479,7 @@ def main() -> int:
         max_width=text_width_limit,
         min_size=int(HEIGHT * 0.010),
         shadow_fill=soft_shadow,
+        stroke_fill=text_outline,
     )
     draw_centered_fit(
         draw,
@@ -428,6 +492,8 @@ def main() -> int:
         max_width=text_width_limit,
         min_size=int(HEIGHT * 0.009),
         shadow_fill=soft_shadow,
+        stroke_fill=text_outline,
+        stroke_width=1,
     )
     draw_centered_fit(
         draw,
@@ -440,6 +506,8 @@ def main() -> int:
         max_width=text_width_limit,
         min_size=int(HEIGHT * 0.009),
         shadow_fill=soft_shadow,
+        stroke_fill=text_outline,
+        stroke_width=1,
     )
     draw_centered_fit(
         draw,
@@ -452,6 +520,8 @@ def main() -> int:
         max_width=text_width_limit,
         min_size=int(HEIGHT * 0.009),
         shadow_fill=soft_shadow,
+        stroke_fill=text_outline,
+        stroke_width=1,
     )
 
     composed = Image.alpha_composite(image, overlay)

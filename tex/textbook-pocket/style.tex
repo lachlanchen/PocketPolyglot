@@ -103,6 +103,15 @@
   \hypersetup{pdftitle={#1},pdfauthor={#2},pdfsubject={#3}}%
 }
 
+\newcommand{\TextbookTitleCreditBlock}[3]{%
+  {\ExactSans\fontsize{6.2pt}{8pt}\selectfont\color{BookNote}
+    #1\par
+    \vspace{0.16em}
+    \href{#2}{#2}\par
+    \vspace{0.16em}
+    #3\par}%
+}
+
 \newcommand{\TextbookTitlePage}[6]{%
   \frontmatter
   \thispagestyle{empty}
@@ -112,8 +121,10 @@
     \vspace{0.8em}
     {\normalsize #2\par}
     \vfill
-    {\ExactSans\fontsize{6.2pt}{8pt}\selectfont #3\quad #4\par #5\par}
-    \vspace{0.8em}
+    \textcolor{BookRule}{\rule{0.42\linewidth}{0.28pt}}\par
+    \vspace{0.75em}
+    \TextbookTitleCreditBlock{#3}{#4}{#5}\par
+    \vspace{0.9em}
     {\ExactSans\fontsize{5.8pt}{7pt}\selectfont #6\par}
   }
   \clearpage

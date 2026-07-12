@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[2]
 SERIF_CJK_BOLD = Path("/usr/share/fonts/opentype/noto/NotoSerifCJK-Bold.ttc")
 SERIF_CJK_REGULAR = Path("/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc")
 SERIF_LATIN = Path("/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf")
+TEXT_OUTLINE = (255, 255, 248, 218)
 
 
 def load_font(path: Path, size: int) -> ImageFont.FreeTypeFont:
@@ -39,9 +40,18 @@ def draw_centered(
     font: ImageFont.FreeTypeFont,
     *,
     fill: tuple[int, int, int, int],
+    stroke_fill: tuple[int, int, int, int] | None = None,
+    stroke_width: int = 0,
 ) -> None:
     w, h = text_size(draw, text, font)
-    draw.text((xy[0] - w / 2, xy[1] - h / 2), text, font=font, fill=fill)
+    draw.text(
+        (xy[0] - w / 2, xy[1] - h / 2),
+        text,
+        font=font,
+        fill=fill,
+        stroke_width=stroke_width,
+        stroke_fill=stroke_fill or fill,
+    )
 
 
 def draw_vertical(
@@ -53,11 +63,20 @@ def draw_vertical(
     *,
     fill: tuple[int, int, int, int],
     line_gap: int,
+    stroke_fill: tuple[int, int, int, int] | None = None,
+    stroke_width: int = 0,
 ) -> None:
     y = top_y
     for char in text:
         w, h = text_size(draw, char, font)
-        draw.text((center_x - w / 2, y), char, font=font, fill=fill)
+        draw.text(
+            (center_x - w / 2, y),
+            char,
+            font=font,
+            fill=fill,
+            stroke_width=stroke_width,
+            stroke_fill=stroke_fill or fill,
+        )
         y += h + line_gap
 
 
@@ -129,6 +148,8 @@ def main() -> int:
         title_font,
         fill=(24, 22, 18, 255),
         line_gap=title_gap,
+        stroke_fill=TEXT_OUTLINE,
+        stroke_width=max(2, round(title_size * 0.045)),
     )
 
     footer_font = load_font(SERIF_LATIN, max(23, round(width * 0.021)))
@@ -142,6 +163,8 @@ def main() -> int:
             args.author,
             meta_font,
             fill=(80, 67, 48, 255),
+            stroke_fill=TEXT_OUTLINE,
+            stroke_width=1,
         )
     if args.subtitle:
         draw_centered(
@@ -150,6 +173,8 @@ def main() -> int:
             args.subtitle,
             subtitle_font,
             fill=(78, 66, 48, 255),
+            stroke_fill=TEXT_OUTLINE,
+            stroke_width=1,
         )
 
     footer_lines = [args.curated_by, args.url, args.powered_by]
@@ -161,6 +186,8 @@ def main() -> int:
             line,
             footer_font,
             fill=(80, 67, 48, 235),
+            stroke_fill=TEXT_OUTLINE,
+            stroke_width=1,
         )
         footer_y += footer_font.size * 1.45
 

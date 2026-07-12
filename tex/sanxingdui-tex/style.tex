@@ -146,10 +146,17 @@
   \restoregeometry
 }
 
+\NewDocumentCommand{\SXTitleCreditBlock}{m}{%
+  {\zhsans\SXMetaFont\color{SXMuted}
+    \textcolor{SXRule}{\rule{0.42\linewidth}{0.28pt}}\par
+    \vspace{0.75em}
+    #1\par}%
+}
+
 \NewDocumentCommand{\SXTitle}{m m m m}{%
   \frontmatter
   \thispagestyle{empty}
-  \vspace*{0.11\textheight}
+  \vspace*{0.13\textheight}
   {\centering
     {\zhfont\bfseries\SXTitleFont #1\par}
     \vspace{1.2em}
@@ -159,7 +166,7 @@
       {\zhsans\SXMetaFont #3\par}
     \fi
     \vfill
-    {\zhsans\SXMetaFont #4\par}
+    \SXTitleCreditBlock{#4}\par
   }
   \clearpage
   \begingroup

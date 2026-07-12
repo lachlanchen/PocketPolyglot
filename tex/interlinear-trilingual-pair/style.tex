@@ -177,6 +177,15 @@
   \hypersetup{pdftitle={#1 / #2},pdfauthor={#3}}%
 }
 
+\NewDocumentCommand{\TriTitleCreditBlock}{m m m}{%
+  {\sffamily\fontsize{6.2pt}{8pt}\selectfont\color{BookNote}
+    #1\par
+    \vspace{0.16em}
+    \href{#2}{#2}\par
+    \vspace{0.16em}
+    #3\par}%
+}
+
 \NewDocumentCommand{\TriPairTitle}{m m m m m m m m m}{%
   \frontmatter
   \thispagestyle{empty}
@@ -200,8 +209,10 @@
     \vspace{0.9em}
     {\normalsize #5\par}
     \vfill
-    {\sffamily\fontsize{6.2pt}{8pt}\selectfont #6\quad #7\par #8\par}
-    \vspace{0.8em}
+    \textcolor{BookRule}{\rule{0.42\linewidth}{0.28pt}}\par
+    \vspace{0.75em}
+    \TriTitleCreditBlock{#6}{#7}{#8}\par
+    \vspace{0.9em}
     \GrammarLegend\par
   }
   \clearpage
@@ -291,8 +302,10 @@
     \vspace{0.9em}
     {\normalsize #4\par}
     \vfill
-    {\sffamily\fontsize{6.2pt}{8pt}\selectfont #5\quad #6\par #7\par}
-    \vspace{0.8em}
+    \textcolor{BookRule}{\rule{0.42\linewidth}{0.28pt}}\par
+    \vspace{0.75em}
+    \TriTitleCreditBlock{#5}{#6}{#7}\par
+    \vspace{0.9em}
     \GrammarLegend\par
   }
   \clearpage
@@ -374,8 +387,10 @@
     \vspace{0.9em}
     {\normalsize #4\par}
     \vfill
-    {\sffamily\fontsize{6.2pt}{8pt}\selectfont #5\quad #6\par #7\par}
-    \vspace{0.8em}
+    \textcolor{BookRule}{\rule{0.42\linewidth}{0.28pt}}\par
+    \vspace{0.75em}
+    \TriTitleCreditBlock{#5}{#6}{#7}\par
+    \vspace{0.9em}
     \GrammarLegend\par
   }
   \clearpage

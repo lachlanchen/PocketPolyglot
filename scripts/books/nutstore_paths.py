@@ -23,11 +23,11 @@ def _first_existing_or_default(candidates: list[Path], default: Path) -> Path:
 
 
 def lingualeaf_project_root() -> Path:
-    """Return the preferred Nutstore Projects/LinguaLeaf root.
+    """Return the preferred Nutstore NoSync Projects/LinguaLeaf root.
 
-    The user plans to move the project export folder under Nutstore NOSync.
-    Prefer that location once it exists, while keeping the current synced
-    Projects path as the default until the move actually happens.
+    Project PDFs are intentionally large. Keep the private project export under
+    Nutstore NoSync and do not fall back to the synced Projects/LinguaLeaf path.
+    Public flat exports still use :func:`lingualeaf_share_root`.
     """
 
     raw = os.environ.get("LINGUALEAF_NUTSTORE_PROJECT") or os.environ.get("LINGUALEAF_PROJECT_ROOT")
@@ -35,14 +35,11 @@ def lingualeaf_project_root() -> Path:
         return Path(raw).expanduser()
     root = _nutstore_root()
     candidates = [
-        root / "NOSync" / "Projects" / "LinguaLeaf",
         root / "NoSync" / "Projects" / "LinguaLeaf",
+        root / "NOSync" / "Projects" / "LinguaLeaf",
         root / "No Sync" / "Projects" / "LinguaLeaf",
-        root / "Projects" / "NOSync" / "LinguaLeaf",
-        root / "Projects" / "NoSync" / "LinguaLeaf",
-        root / "Projects" / "LinguaLeaf",
     ]
-    return _first_existing_or_default(candidates, root / "Projects" / "LinguaLeaf")
+    return _first_existing_or_default(candidates, root / "NoSync" / "Projects" / "LinguaLeaf")
 
 
 def lingualeaf_share_root() -> Path:

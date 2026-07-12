@@ -55,5 +55,7 @@ Validation on 2026-07-02:
 - `validate_quran_arabic_quadrilingual_json.py`: passed.
 - Color PDF: `3014` pages, `0` overfull boxes, `0` fatal TeX errors.
 - Black-white PDF: `3014` pages, `0` overfull boxes, `0` fatal TeX errors.
-- Synced to Nutstore `Share/LinguaLeaf` and
-  `Projects/LinguaLeaf/final-pdfs/العربية-English-日本語-中文/quran/`.
+- Synced to Nutstore `Share/LinguaLeaf` and the project export tree. The
+  current project export root is
+  `/home/lachlan/Nutstore Files/NoSync/Projects/LinguaLeaf`; do not recreate
+  the old synced `Projects/LinguaLeaf` path.

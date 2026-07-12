@@ -176,6 +176,15 @@
   \hypersetup{pdftitle={#1 / #2},pdfauthor={#3}}%
 }
 
+\NewDocumentCommand{\JpMainTitleCreditBlock}{m m m}{%
+  {\sffamily\fontsize{6pt}{8pt}\selectfont\color{BookNote}
+    #1\par
+    \vspace{0.16em}
+    \href{#2}{#2}\par
+    \vspace{0.16em}
+    #3\par}%
+}
+
 \NewDocumentCommand{\JpMainTitle}{m m m m m m m}{%
   \frontmatter
   \thispagestyle{empty}%
@@ -202,8 +211,19 @@
   \fi
   \restoregeometry
   \thispagestyle{empty}
-  \vspace*{0.20\textheight}
-  {\centering{\jpfont\Huge #1\par}\vspace{0.55em}{\zhfont\Large #2\par}\vspace{1.5em}{\jpfont #3\par}\vfill\GrammarLegend\par\vspace{1.2em}{\sffamily\fontsize{6pt}{8pt}\selectfont #4\par\href{#5}{#5}\par #6\par}}
+  \vspace*{0.18\textheight}
+  {\centering
+    {\jpfont\Huge #1\par}
+    \vspace{0.55em}
+    {\zhfont\Large #2\par}
+    \vspace{1.5em}
+    {\jpfont #3\par}
+    \vfill
+    \textcolor{BookRule}{\rule{0.42\linewidth}{0.28pt}}\par
+    \vspace{0.75em}
+    \JpMainTitleCreditBlock{#4}{#5}{#6}\par
+    \vspace{1.0em}
+    \GrammarLegend\par}
   \clearpage
   \mainmatter
 }

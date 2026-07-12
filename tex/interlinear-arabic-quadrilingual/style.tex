@@ -197,6 +197,15 @@
   \hypersetup{pdftitle={#1},pdfauthor={#2}}%
 }
 
+\NewDocumentCommand{\QuranTitleCreditBlock}{m m m}{%
+  {\sffamily\fontsize{6.2pt}{8pt}\selectfont\color{BookNote}
+    #1\par
+    \vspace{0.16em}
+    \href{#2}{#2}\par
+    \vspace{0.16em}
+    #3\par}%
+}
+
 \NewDocumentCommand{\QuranTitle}{m m m m m m m}{%
   \frontmatter
   \thispagestyle{empty}
@@ -214,7 +223,7 @@
     \restoregeometry
   \fi
   \thispagestyle{empty}
-  \vspace*{0.10\textheight}
+  \vspace*{0.12\textheight}
   {\centering
     {\Large #1\par}
     \vspace{0.55em}
@@ -222,8 +231,10 @@
     \vspace{0.8em}
     {\small #3\par}
     \vfill
-    {\sffamily\fontsize{6.2pt}{8pt}\selectfont #4\quad #5\par #6\par}
-    \vspace{0.8em}
+    \textcolor{BookRule}{\rule{0.42\linewidth}{0.28pt}}\par
+    \vspace{0.75em}
+    \QuranTitleCreditBlock{#4}{#5}{#6}\par
+    \vspace{0.9em}
     \GrammarLegend\par
   }
   \clearpage

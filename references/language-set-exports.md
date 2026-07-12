@@ -1,7 +1,7 @@
 # Language Set Exports
 
 Generated at: `2026-06-21T01:25:24.367271+00:00`
-Nutstore root: `/home/lachlan/Nutstore Files/Projects/LinguaLeaf`
+Nutstore root: `/home/lachlan/Nutstore Files/NoSync/Projects/LinguaLeaf`
 
 | Set | Folder | Books | PDFs | Color | Black-white | Notes |
 | --- | --- | ---: | ---: | ---: | ---: | --- |
