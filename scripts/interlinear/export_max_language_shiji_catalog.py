@@ -54,6 +54,13 @@ MANIFEST = ROOT / "references" / "MAX_LANGUAGE_LARGE_FONT_EXPORTS.md"
 MANIFEST_JSON = ROOT / "references" / "max-language-large-font-exports.json"
 GITHUB_MAX_BYTES = 95 * 1024 * 1024
 COVER_ROOT = ROOT / "assets" / "covers"
+BIG_BOOK_HINTS = (
+    "hou-han-shu",
+    "houhanshu",
+    "zizhi-tongjian",
+    "zizhitongjian",
+    "zizhi",
+)
 
 
 FAMILY_PRIORITY = {
@@ -130,12 +137,26 @@ def first_pdf(directory: Path) -> Path | None:
     return pdfs[0] if pdfs else None
 
 
+def book_order_key(book_id: str) -> tuple[int, str]:
+    normalized = book_id.lower().replace("_", "-")
+    return (1 if any(hint in normalized for hint in BIG_BOOK_HINTS) else 0, normalized)
+
+
+def edition_order_key(edition: Edition) -> tuple[int, str, str, str, int, str]:
+    mode_rank = {"color": 0, "blackwhite": 1}
+    return (
+        *book_order_key(edition.book_id),
+        edition.family,
+        edition.edition,
+        mode_rank.get(edition.mode, 9),
+        edition.mode,
+    )
+
+
 def resolve_cover(book_id: str) -> Path | None:
     candidates = [COVER_ROOT / book_id]
     if book_id == "kokoro":
         candidates.append(COVER_ROOT / "kokoro-jp-main")
-    if book_id == "sanguozhi-pei-zhu":
-        candidates.append(COVER_ROOT / "sanguozhi")
     for cover_dir in candidates:
         direct = cover_dir / "cover.png"
         if direct.exists():
@@ -628,7 +649,7 @@ def markdown_table(rows: list[dict[str, object]]) -> str:
     by_book: dict[str, list[dict[str, object]]] = {}
     for row in rows:
         by_book.setdefault(str(row["book_id"]), []).append(row)
-    for book_id, items in sorted(by_book.items()):
+    for book_id, items in sorted(by_book.items(), key=lambda item: book_order_key(item[0])):
         color = next((item for item in items if item["mode"] == "color" and item.get("tracked_pdf")), None)
         bw = next((item for item in items if item["mode"] == "blackwhite" and item.get("tracked_pdf")), None)
         any_item = color or bw or items[0]
@@ -656,7 +677,7 @@ def html_gallery(rows: list[dict[str, object]]) -> str:
         "  </div>",
         '  <div class="pocketpolyglot-grid">',
     ]
-    for book_id, items in sorted(by_book.items()):
+    for book_id, items in sorted(by_book.items(), key=lambda item: book_order_key(item[0])):
         color = next((item for item in items if item["mode"] == "color" and item.get("tracked_pdf")), None)
         bw = next((item for item in items if item["mode"] == "blackwhite" and item.get("tracked_pdf")), None)
         any_item = color or bw or items[0]
@@ -770,7 +791,7 @@ def sort_rows(rows: list[dict[str, object]]) -> list[dict[str, object]]:
     return sorted(
         rows,
         key=lambda row: (
-            str(row.get("book_id", "")),
+            *book_order_key(str(row.get("book_id", ""))),
             str(row.get("family", "")),
             str(row.get("edition", "")),
             mode_rank.get(str(row.get("mode", "")), 9),
@@ -818,6 +839,7 @@ def main() -> int:
     args = parser.parse_args()
 
     editions = discover_editions()
+    editions = sorted(editions, key=edition_order_key)
     if args.book:
         wanted = set(args.book)
         editions = [edition for edition in editions if edition.book_id in wanted]
