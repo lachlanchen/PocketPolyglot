@@ -189,6 +189,7 @@ def progress_fingerprint(args: argparse.Namespace, report: dict[str, str], healt
     if args.progress_key:
         return {
             "progress": {key: report.get(key, "") for key in args.progress_key},
+            "watched_mtime": int(watched_mtime),
             "complete": complete,
         }
     return {
