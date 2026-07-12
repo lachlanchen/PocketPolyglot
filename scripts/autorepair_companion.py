@@ -65,6 +65,19 @@ def run_args(command: list[str], *, timeout: int | None = None) -> subprocess.Co
     )
 
 
+def process_snapshot(pattern: str, *, timeout: int = 30) -> str:
+    proc = run_args(["ps", "-eo", "pid,ppid,stat,etime,cmd"], timeout=timeout)
+    if proc.returncode:
+        return proc.stdout
+    needle = pattern.lower()
+    lines = [
+        line
+        for line in proc.stdout.splitlines()
+        if needle in line.lower() or line.lstrip().startswith("PID ")
+    ]
+    return "\n".join(lines) + ("\n" if lines else "")
+
+
 def tmux_active(session: str) -> bool:
     if not session:
         return False
@@ -409,7 +422,7 @@ def companion_once(args: argparse.Namespace, state: dict[str, Any]) -> dict[str,
             "unchanged_for": unchanged_for,
             "watched_paths": args.watch,
             "logs": recent_logs,
-            "ps": run_shell(f"ps -eo pid,ppid,stat,etime,cmd | rg {shlex.quote(args.name)} || true", timeout=30).stdout,
+            "ps": process_snapshot(args.name, timeout=30),
         }
         actions.append(launch_repair(args, state, "active stall without artifact progress", facts))
     elif not complete and unchanged_for >= args.stall_seconds:
