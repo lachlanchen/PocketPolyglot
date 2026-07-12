@@ -420,7 +420,7 @@ def main() -> int:
     draw_centered_fit(
         draw,
         "AgInTiFlow curated",
-        (WIDTH // 2, int(HEIGHT * 0.913)),
+        (WIDTH // 2, int(HEIGHT * 0.895)),
         SERIF_REGULAR,
         int(HEIGHT * 0.015),
         2,
@@ -432,7 +432,7 @@ def main() -> int:
     draw_centered_fit(
         draw,
         "https://flow.lazying.art",
-        (WIDTH // 2, int(HEIGHT * 0.938)),
+        (WIDTH // 2, int(HEIGHT * 0.921)),
         SERIF_REGULAR,
         int(HEIGHT * 0.015),
         2,
@@ -444,7 +444,7 @@ def main() -> int:
     draw_centered_fit(
         draw,
         "powered by LazyingArt",
-        (WIDTH // 2, int(HEIGHT * 0.963)),
+        (WIDTH // 2, int(HEIGHT * 0.947)),
         SERIF_REGULAR,
         int(HEIGHT * 0.015),
         2,
