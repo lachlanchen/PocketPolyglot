@@ -14,6 +14,8 @@ const DEFAULT_AGINTI_ROOT = path.resolve(ROOT, "../Agent/AgInTiFlow");
 const THEME_HINTS = {
   "shiji-aginti":
     "ancient Chinese historian's desk, bamboo slips, bronze vessel, jade ornament, ink wash mountains, dignified Han dynasty atmosphere",
+  kokoro:
+    "Meiji-era Japanese literary atmosphere, quiet tatami room, shoji window looking toward a distant seashore memory, inkstone and blank folded paper with absolutely no marks, restrained indigo and warm paper, solitude and moral reflection, no books or letters with writing",
   "genji-modern":
     "Heian court elegance, moonlit palace screens, wisteria, silk fan, subtle gold and indigo pigments, classical Japanese refinement",
   "the-old-capital":
@@ -210,6 +212,7 @@ function normalizePlan(plan, bookId) {
 }
 
 function discoverPlans(selectedBooks) {
+  const selectedSet = new Set(selectedBooks);
   const planFiles = fs
     .readdirSync(path.join(ROOT, "books"), { withFileTypes: true })
     .filter((entry) => entry.isDirectory())
@@ -218,9 +221,10 @@ function discoverPlans(selectedBooks) {
   const plans = [];
   for (const file of planFiles) {
     const plan = readJson(file);
-    if (plan.launchable !== true) continue;
     plan.__path = file;
-    plans.push(normalizePlan(plan, plan.book_id || path.basename(path.dirname(file))));
+    const bookId = plan.book_id || path.basename(path.dirname(file));
+    if (plan.launchable !== true && !selectedSet.has(bookId)) continue;
+    plans.push(normalizePlan(plan, bookId));
   }
   const shijiPlanPath = path.join(ROOT, "books", "shiji", "book-plan.json");
   if (fs.existsSync(shijiPlanPath)) {
@@ -250,7 +254,8 @@ function promptFor(plan) {
     "Vertical A6 book cover composition, elegant East Asian printmaking and subtle modern editorial design.",
     "Leave a calm central area suitable for overlaid vertical title typography.",
     "The image itself must contain no readable words, no letters, no title, no subtitle, no calligraphy, no captions, no logo, no watermark, and no frame text.",
-    "Do not include seal stamps, red stamp squares, pseudo-writing, single kanji/hanzi marks, or decorative text-like symbols.",
+    "Do not include seal stamps, red stamp squares, pseudo-writing, single kanji/hanzi marks, decorative text-like symbols, numerals, labels, or glyph-like marks.",
+    "Any paper, scroll, book, slip, plaque, sign, screen, map, or page surface must be blank or texture-only, with no writing strokes at all.",
     "High-resolution, rich but restrained color, suitable for XeLaTeX cover art.",
   ].join("\n");
 }

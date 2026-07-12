@@ -25,7 +25,6 @@ BIG_BOOK_HINTS = (
     "zizhi",
 )
 COVER_ALIASES = {
-    "kokoro": "kokoro-jp-main",
     "sanguozhi-pei-zhu": "sanguozhi",
     "shiji-aginti": "shiji-aginti",
     "zizhi-tongjian-comment-aware": "zizhi-tongjian",
