@@ -316,6 +316,44 @@ def repair_epub_for_pandoc(source: Path, task_dir: Path, *, force: bool) -> Path
     return repaired
 
 
+def extract_mobi_to_source(source: Path, task_dir: Path, *, force: bool) -> tuple[Path, str]:
+    """Extract MOBI/AZW3 to a real EPUB or HTML source using KindleUnpack."""
+
+    extract_root = task_dir / "work/mobi-extract"
+    marker = extract_root / ".source.json"
+    if marker.exists() and not force:
+        data = read_json(marker)
+        candidate = ROOT / data["path"]
+        if candidate.exists():
+            return candidate, data["format"]
+    if extract_root.exists():
+        shutil.rmtree(extract_root)
+    extract_root.mkdir(parents=True, exist_ok=True)
+
+    try:
+        from mobi.extract import extract as mobi_extract
+    except Exception as exc:  # pragma: no cover - depends on local optional tool
+        raise RuntimeError("Python mobi/KindleUnpack is not available for real MOBI extraction") from exc
+
+    temp_dir, extracted = mobi_extract(str(source))
+    temp_path = Path(temp_dir)
+    extracted_path = Path(extracted)
+    shutil.copytree(temp_path, extract_root, dirs_exist_ok=True)
+    local_extracted = extract_root / extracted_path.relative_to(temp_path)
+    if local_extracted.suffix.lower() == ".epub":
+        source_format = "epub"
+    elif local_extracted.suffix.lower() in {".html", ".htm"}:
+        source_format = "html"
+    elif local_extracted.suffix.lower() == ".pdf":
+        raise RuntimeError("MOBI extraction yielded PDF only; refusing page-image-only fallback")
+    else:
+        raise RuntimeError(f"MOBI extraction yielded unsupported source: {local_extracted}")
+    write_json(marker, {"path": str(local_extracted.relative_to(ROOT)), "format": source_format})
+    shutil.rmtree(temp_path, ignore_errors=True)
+    log(f"[extract] {source.relative_to(ROOT)} -> {local_extracted.relative_to(ROOT)}")
+    return local_extracted, source_format
+
+
 def pandoc_layout_args(layout: str) -> list[str]:
     common = [
         "-V",
@@ -405,6 +443,8 @@ def pandoc_to_tex(
     ]
     if source_format == "markdown":
         cmd[1:1] = ["--from", "markdown+tex_math_dollars+tex_math_single_backslash+raw_tex"]
+    elif source_format == "html":
+        cmd[1:1] = ["--from", "html"]
     cmd.extend(pandoc_layout_args(layout))
     result = run_capture(cmd)
     if result.returncode:
@@ -552,9 +592,7 @@ def build_one(task: dict[str, Any], *, force: bool, sync: bool, share_root: Path
             body_source = repair_epub_for_pandoc(source, task_dir, force=force)
             pandoc_format = "epub"
         elif source_kind in {"mobi", "azw3"}:
-            raise RuntimeError(
-                f"{source_kind} requires a real ebook-to-TeX converter; calibre is not installed in this environment"
-            )
+            body_source, pandoc_format = extract_mobi_to_source(source, task_dir, force=force)
         else:
             raise RuntimeError(f"Unsupported source format: {source.suffix}")
 
