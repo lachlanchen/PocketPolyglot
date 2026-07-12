@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "book_id": "oliver-twist",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_world_literature_en_source_generated_zh_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "en": "sources/world-literature/oliver-twist/en/Oliver Twist.epub"
+  },
+  "source_reference_paths": {
+    "Charles Dickens - Oliver Twist - Oakshot Press": "sources/world-literature/oliver-twist/en/reference/Charles Dickens - Oliver Twist - Oakshot Press.epub"
+  },
+  "source_sha256": {
+    "en": "befb2494f499ea95bc88d3fc16446ab7c9692b8562c13c31f35298243e0dc7f7"
+  },
+  "source_extraction": {
+    "en_cache": "books/oliver-twist/work/source-extraction/en.raw.md",
+    "note": "Modern nonfiction generic extraction. PDF uses pdftotext; EPUB/MOBI uses pandoc."
+  },
+  "markdown": {
+    "en": "books/oliver-twist/markdown/en.md"
+  },
+  "book_title_en": "Oliver Twist",
+  "book_title_zh": "雾都孤儿",
+  "book_title_ja": "オリバー・ツイスト",
+  "book_title_zh_reading": "",
+  "book_title_ja_reading": "",
+  "author": "Charles Dickens",
+  "author_reading_zh": "",
+  "author_reading_ja": "",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Charles Dickens, Oliver Twist. English source is the alignment spine; generate modern Japanese and Chinese.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "english_spine_only",
+  "chunks_jsonl": "books/oliver-twist/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/oliver-twist/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/oliver-twist/work/trilingual/interlinear/chunks",
+  "preview_json": "books/oliver-twist/work/trilingual/preview/oliver-twist.partial.json",
+  "assembled_json": "books/oliver-twist/work/trilingual/preview/oliver-twist.partial.json",
+  "prepared_at": "2026-07-12T03:53:28.943438+00:00",
+  "queue_id": "imported-world-classics-trilingual-20260712",
+  "queue_model": "gpt-5.5",
+  "queue_reasoning": "low",
+  "chunk_count": 380,
+  "english_chapter_count": 21,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_modern_nonfiction_trilingual.py",
+    "english_spine": "English source text is the chunk spine.",
+    "supplemental_sources": "Optional local references are recorded in source_reference_paths; they are not used as chunk spine text unless a later project-specific pass aligns them.",
+    "chinese_reference": "No published Chinese source configured for this task; generate readable modern Chinese from English.",
+    "japanese_reference": "No published Japanese source configured for this task; generate natural modern Japanese from English.",
+    "reference_notes": "Supplemental files were copied from ../Books when available. The English spine remains the only chunk-alignment source until a later reference-alignment pass is explicitly run."
+  }
+}

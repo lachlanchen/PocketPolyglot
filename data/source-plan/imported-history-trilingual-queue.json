@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "queue_id": "imported-history-trilingual-20260712",
+  "status": "chunked_launchable",
+  "model": "gpt-5.3-codex-spark",
+  "reasoning": "low",
+  "workers": 10,
+  "task_family": "modern_en_jp_zh_imported_20260712",
+  "source_spine_lang": "en",
+  "output_languages": [
+    "en",
+    "ja",
+    "zh"
+  ],
+  "generation_contract": {
+    "translation_quality": "Accurate, complete, modern, understandable, polished Japanese and Chinese. Do not summarize or omit nuance.",
+    "grammar_analysis": "Required. Use normalized grammar roles so color and black-white outputs can be compiled from the same JSON.",
+    "source_quality": "Use cleaned extracted Markdown as the chunk spine. Keep supplemental sources as references, not as unaligned duplicate text.",
+    "final_outputs": "After generation, compile maximum-language large-font color and black-white PDFs with cover and TOC.",
+    "batch_note": "History books imported from ../Books on 2026-07-12. Generate EN-JP-ZH modern trilingual PocketPolyglot tasks."
+  },
+  "created_at": "2026-07-12T03:29:35.276803+00:00",
+  "tasks": [
+    {
+      "priority": 1,
+      "book_id": "rise-fall-ancient-egypt",
+      "title_en": "The Rise and Fall of Ancient Egypt",
+      "title_zh": "古埃及的兴衰",
+      "title_ja": "古代エジプトの興亡",
+      "title_zh_reading": "",
+      "title_ja_reading": "",
+      "author": "Toby Wilkinson",
+      "author_reading_zh": "",
+      "author_reading_ja": "",
+      "source_path": "sources/world-history/ancient-egypt/en/The Rise and Fall of Ancient Egypt - Toby Wilkinson.pdf",
+      "reference_paths": {},
+      "reference_notes": "Supplemental files were copied from ../Books when available. The English spine remains the only chunk-alignment source until a later reference-alignment pass is explicitly run.",
+      "stop_markers": [
+        "Notes",
+        "Endnotes",
+        "Bibliography",
+        "References",
+        "Further Reading",
+        "Acknowledgments",
+        "Acknowledgements",
+        "Index"
+      ],
+      "description": "Toby Wilkinson, The Rise and Fall of Ancient Egypt. English source is the alignment spine; generate modern Japanese and Chinese.",
+      "min_chunk_count": 120,
+      "task_mode": "trilingual_modern_nonfiction_en_source_generated_zh_ja",
+      "translation_contract": {
+        "style": "Accurate, complete, modern, readable historical translation.",
+        "alignment": "Translate each source unit faithfully; keep chronology, names, dates, and causal claims precise.",
+        "japanese": "Use natural modern Japanese. Do not output Chinese prose in the Japanese field.",
+        "chinese": "Use natural modern Chinese. Preserve specialized historical terms and provide readable equivalents.",
+        "grammar": "Grammar-role analysis is required later; keep sentence units clear for role tagging."
+      },
+      "status": "chunked_launchable",
+      "book_plan": "books/rise-fall-ancient-egypt/book-plan.json",
+      "chunks_manifest": "books/rise-fall-ancient-egypt/work/trilingual/chunks/manifest.json",
+      "chunk_count": 456,
+      "english_chapter_count": 2,
+      "prepared_chunks_at": "2026-07-12T03:35:07.782359+00:00"
+    },
+    {
+      "priority": 2,
+      "book_id": "lost-enlightenment-central-asia",
+      "title_en": "Lost Enlightenment: Central Asia's Golden Age from the Arab Conquest to Tamerlane",
+      "title_zh": "失落的启蒙：从阿拉伯征服到帖木儿时代的中亚黄金时代",
+      "title_ja": "失われた啓蒙：アラブ征服からティムールまでの中央アジア黄金時代",
+      "title_zh_reading": "",
+      "title_ja_reading": "",
+      "author": "S. Frederick Starr",
+      "author_reading_zh": "",
+      "author_reading_ja": "",
+      "source_path": "sources/world-history/central-asia/en/Lost Enlightenment - S Frederick Starr.pdf",
+      "reference_paths": {},
+      "reference_notes": "Supplemental files were copied from ../Books when available. The English spine remains the only chunk-alignment source until a later reference-alignment pass is explicitly run.",
+      "stop_markers": [
+        "Notes",
+        "Endnotes",
+        "Bibliography",
+        "References",
+        "Further Reading",
+        "Acknowledgments",
+        "Acknowledgements",
+        "Index"
+      ],
+      "description": "S. Frederick Starr, Lost Enlightenment: Central Asia's Golden Age from the Arab Conquest to Tamerlane. English source is the alignment spine; generate modern Japanese and Chinese.",
+      "min_chunk_count": 160,
+      "task_mode": "trilingual_modern_nonfiction_en_source_generated_zh_ja",
+      "translation_contract": {
+        "style": "Accurate, complete, modern, readable historical translation.",
+        "alignment": "Translate each source unit faithfully; keep chronology, names, dates, and causal claims precise.",
+        "japanese": "Use natural modern Japanese. Do not output Chinese prose in the Japanese field.",
+        "chinese": "Use natural modern Chinese. Preserve specialized historical terms and provide readable equivalents.",
+        "grammar": "Grammar-role analysis is required later; keep sentence units clear for role tagging."
+      },
+      "body_start_markers": [
+        "The Center of the World"
+      ],
+      "status": "chunked_launchable",
+      "book_plan": "books/lost-enlightenment-central-asia/book-plan.json",
+      "chunks_manifest": "books/lost-enlightenment-central-asia/work/trilingual/chunks/manifest.json",
+      "chunk_count": 541,
+      "english_chapter_count": 1,
+      "prepared_chunks_at": "2026-07-12T03:35:07.782363+00:00"
+    }
+  ],
+  "last_chunk_preparation_at": "2026-07-12T03:35:07.782365+00:00"
+}

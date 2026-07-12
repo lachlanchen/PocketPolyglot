@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "book_id": "gullivers-travels",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_world_literature_en_source_generated_zh_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "en": "sources/world-literature/gullivers-travels/en/Gulliver's Travels.epub"
+  },
+  "source_reference_paths": {
+    "Jonathan Swift - Gullivers Travels - Oxford Worlds Classics 2005": "sources/world-literature/gullivers-travels/en/reference/Jonathan Swift - Gullivers Travels - Oxford Worlds Classics 2005.pdf"
+  },
+  "source_sha256": {
+    "en": "35c8495c668681f3d42d9975be36b7d932c38f78be210cd9c9d44332f92c84b0"
+  },
+  "source_extraction": {
+    "en_cache": "books/gullivers-travels/work/source-extraction/en.raw.md",
+    "note": "Modern nonfiction generic extraction. PDF uses pdftotext; EPUB/MOBI uses pandoc."
+  },
+  "markdown": {
+    "en": "books/gullivers-travels/markdown/en.md"
+  },
+  "book_title_en": "Gulliver's Travels",
+  "book_title_zh": "格列佛游记",
+  "book_title_ja": "ガリヴァー旅行記",
+  "book_title_zh_reading": "",
+  "book_title_ja_reading": "",
+  "author": "Jonathan Swift",
+  "author_reading_zh": "",
+  "author_reading_ja": "",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Jonathan Swift, Gulliver's Travels. English source is the alignment spine; generate modern Japanese and Chinese.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "english_spine_only",
+  "chunks_jsonl": "books/gullivers-travels/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/gullivers-travels/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/gullivers-travels/work/trilingual/interlinear/chunks",
+  "preview_json": "books/gullivers-travels/work/trilingual/preview/gullivers-travels.partial.json",
+  "assembled_json": "books/gullivers-travels/work/trilingual/preview/gullivers-travels.partial.json",
+  "prepared_at": "2026-07-12T03:54:24.738948+00:00",
+  "queue_id": "imported-world-classics-trilingual-20260712",
+  "queue_model": "gpt-5.5",
+  "queue_reasoning": "low",
+  "chunk_count": 262,
+  "english_chapter_count": 5,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_modern_nonfiction_trilingual.py",
+    "english_spine": "English source text is the chunk spine.",
+    "supplemental_sources": "Optional local references are recorded in source_reference_paths; they are not used as chunk spine text unless a later project-specific pass aligns them.",
+    "chinese_reference": "No published Chinese source configured for this task; generate readable modern Chinese from English.",
+    "japanese_reference": "No published Japanese source configured for this task; generate natural modern Japanese from English.",
+    "reference_notes": "Supplemental files were copied from ../Books when available. The English spine remains the only chunk-alignment source until a later reference-alignment pass is explicitly run."
+  }
+}

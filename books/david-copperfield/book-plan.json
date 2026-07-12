@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "book_id": "david-copperfield",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_world_literature_en_source_generated_zh_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "en": "sources/world-literature/david-copperfield/en/David Copperfield.epub"
+  },
+  "source_reference_paths": {
+    "Charles Dickens - David Copperfield - 1997": "sources/world-literature/david-copperfield/en/reference/Charles Dickens - David Copperfield - 1997.pdf"
+  },
+  "source_sha256": {
+    "en": "60efd9a70e79894cfb5950832d1df29c87c997c414f5ba4a05b65d5b7cb945a5"
+  },
+  "source_extraction": {
+    "en_cache": "books/david-copperfield/work/source-extraction/en.raw.md",
+    "note": "Modern nonfiction generic extraction. PDF uses pdftotext; EPUB/MOBI uses pandoc."
+  },
+  "markdown": {
+    "en": "books/david-copperfield/markdown/en.md"
+  },
+  "book_title_en": "David Copperfield",
+  "book_title_zh": "大卫·科波菲尔",
+  "book_title_ja": "デイヴィッド・コパフィールド",
+  "book_title_zh_reading": "",
+  "book_title_ja_reading": "",
+  "author": "Charles Dickens",
+  "author_reading_zh": "",
+  "author_reading_ja": "",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Charles Dickens, David Copperfield. English source is the alignment spine; generate modern Japanese and Chinese.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "english_spine_only",
+  "chunks_jsonl": "books/david-copperfield/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/david-copperfield/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/david-copperfield/work/trilingual/interlinear/chunks",
+  "preview_json": "books/david-copperfield/work/trilingual/preview/david-copperfield.partial.json",
+  "assembled_json": "books/david-copperfield/work/trilingual/preview/david-copperfield.partial.json",
+  "prepared_at": "2026-07-12T03:54:34.504066+00:00",
+  "queue_id": "imported-world-classics-trilingual-20260712",
+  "queue_model": "gpt-5.5",
+  "queue_reasoning": "low",
+  "chunk_count": 808,
+  "english_chapter_count": 1,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_modern_nonfiction_trilingual.py",
+    "english_spine": "English source text is the chunk spine.",
+    "supplemental_sources": "Optional local references are recorded in source_reference_paths; they are not used as chunk spine text unless a later project-specific pass aligns them.",
+    "chinese_reference": "No published Chinese source configured for this task; generate readable modern Chinese from English.",
+    "japanese_reference": "No published Japanese source configured for this task; generate natural modern Japanese from English.",
+    "reference_notes": "Supplemental files were copied from ../Books when available. The English spine remains the only chunk-alignment source until a later reference-alignment pass is explicitly run."
+  }
+}

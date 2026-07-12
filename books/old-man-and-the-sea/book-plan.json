@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "book_id": "old-man-and-the-sea",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_world_literature_en_source_generated_zh_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "en": "sources/world-literature/old-man-and-the-sea/en/The Old Man and the Sea.pdf"
+  },
+  "source_reference_paths": {},
+  "source_sha256": {
+    "en": "7ec2f7048a73ccf8b2906693ae4e2368e9c68c444863ca0672d718cd5d320a9c"
+  },
+  "source_extraction": {
+    "en_cache": "books/old-man-and-the-sea/work/source-extraction/en.raw.md",
+    "note": "Modern nonfiction generic extraction. PDF uses pdftotext; EPUB/MOBI uses pandoc."
+  },
+  "markdown": {
+    "en": "books/old-man-and-the-sea/markdown/en.md"
+  },
+  "book_title_en": "The Old Man and the Sea",
+  "book_title_zh": "老人与海",
+  "book_title_ja": "老人と海",
+  "book_title_zh_reading": "",
+  "book_title_ja_reading": "",
+  "author": "Ernest Hemingway",
+  "author_reading_zh": "",
+  "author_reading_ja": "",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Ernest Hemingway, The Old Man and the Sea. English source is the alignment spine; generate modern Japanese and Chinese.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "english_spine_only",
+  "chunks_jsonl": "books/old-man-and-the-sea/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/old-man-and-the-sea/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/old-man-and-the-sea/work/trilingual/interlinear/chunks",
+  "preview_json": "books/old-man-and-the-sea/work/trilingual/preview/old-man-and-the-sea.partial.json",
+  "assembled_json": "books/old-man-and-the-sea/work/trilingual/preview/old-man-and-the-sea.partial.json",
+  "prepared_at": "2026-07-12T03:54:16.010754+00:00",
+  "queue_id": "imported-world-classics-trilingual-20260712",
+  "queue_model": "gpt-5.5",
+  "queue_reasoning": "low",
+  "chunk_count": 61,
+  "english_chapter_count": 1,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_modern_nonfiction_trilingual.py",
+    "english_spine": "English source text is the chunk spine.",
+    "supplemental_sources": "Optional local references are recorded in source_reference_paths; they are not used as chunk spine text unless a later project-specific pass aligns them.",
+    "chinese_reference": "No published Chinese source configured for this task; generate readable modern Chinese from English.",
+    "japanese_reference": "No published Japanese source configured for this task; generate natural modern Japanese from English.",
+    "reference_notes": "Supplemental files were copied from ../Books when available. The English spine remains the only chunk-alignment source until a later reference-alignment pass is explicitly run."
+  }
+}

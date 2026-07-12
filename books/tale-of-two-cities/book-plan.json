@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "book_id": "tale-of-two-cities",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_world_literature_en_source_generated_zh_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "en": "sources/world-literature/tale-of-two-cities/en/A Tale of Two Cities.epub"
+  },
+  "source_reference_paths": {
+    "Charles Dickens - A Tale of Two Cities - Bunny Books 2010": "sources/world-literature/tale-of-two-cities/en/reference/Charles Dickens - A Tale of Two Cities - Bunny Books 2010.pdf"
+  },
+  "source_sha256": {
+    "en": "a99bbdf4495411b46f346d7804d5eebfd9134aa64d99d2ab95de9af5496caf2a"
+  },
+  "source_extraction": {
+    "en_cache": "books/tale-of-two-cities/work/source-extraction/en.raw.md",
+    "note": "Modern nonfiction generic extraction. PDF uses pdftotext; EPUB/MOBI uses pandoc."
+  },
+  "markdown": {
+    "en": "books/tale-of-two-cities/markdown/en.md"
+  },
+  "book_title_en": "A Tale of Two Cities",
+  "book_title_zh": "双城记",
+  "book_title_ja": "二都物語",
+  "book_title_zh_reading": "",
+  "book_title_ja_reading": "",
+  "author": "Charles Dickens",
+  "author_reading_zh": "",
+  "author_reading_ja": "",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Charles Dickens, A Tale of Two Cities. English source is the alignment spine; generate modern Japanese and Chinese.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "english_spine_only",
+  "chunks_jsonl": "books/tale-of-two-cities/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/tale-of-two-cities/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/tale-of-two-cities/work/trilingual/interlinear/chunks",
+  "preview_json": "books/tale-of-two-cities/work/trilingual/preview/tale-of-two-cities.partial.json",
+  "assembled_json": "books/tale-of-two-cities/work/trilingual/preview/tale-of-two-cities.partial.json",
+  "prepared_at": "2026-07-12T03:54:37.769083+00:00",
+  "queue_id": "imported-world-classics-trilingual-20260712",
+  "queue_model": "gpt-5.5",
+  "queue_reasoning": "low",
+  "chunk_count": 334,
+  "english_chapter_count": 46,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_modern_nonfiction_trilingual.py",
+    "english_spine": "English source text is the chunk spine.",
+    "supplemental_sources": "Optional local references are recorded in source_reference_paths; they are not used as chunk spine text unless a later project-specific pass aligns them.",
+    "chinese_reference": "No published Chinese source configured for this task; generate readable modern Chinese from English.",
+    "japanese_reference": "No published Japanese source configured for this task; generate natural modern Japanese from English.",
+    "reference_notes": "Supplemental files were copied from ../Books when available. The English spine remains the only chunk-alignment source until a later reference-alignment pass is explicitly run."
+  }
+}

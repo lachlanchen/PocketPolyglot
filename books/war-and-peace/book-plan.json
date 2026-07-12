@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "book_id": "war-and-peace",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_world_literature_en_source_generated_zh_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "en": "sources/world-literature/war-and-peace/en/War and Peace.epub"
+  },
+  "source_reference_paths": {
+    "Leo Tolstoy - War and Peace - 1968": "sources/world-literature/war-and-peace/en/reference/Leo Tolstoy - War and Peace - 1968.pdf"
+  },
+  "source_sha256": {
+    "en": "e50c6e888077e9960f0a5003ca238bfa2dee36689b546a8883e6df8ebb7887f1"
+  },
+  "source_extraction": {
+    "en_cache": "books/war-and-peace/work/source-extraction/en.raw.md",
+    "note": "Modern nonfiction generic extraction. PDF uses pdftotext; EPUB/MOBI uses pandoc."
+  },
+  "markdown": {
+    "en": "books/war-and-peace/markdown/en.md"
+  },
+  "book_title_en": "War and Peace",
+  "book_title_zh": "战争与和平",
+  "book_title_ja": "戦争と平和",
+  "book_title_zh_reading": "",
+  "book_title_ja_reading": "",
+  "author": "Leo Tolstoy",
+  "author_reading_zh": "",
+  "author_reading_ja": "",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Leo Tolstoy, War and Peace. English source is the alignment spine; generate modern Japanese and Chinese.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "english_spine_only",
+  "chunks_jsonl": "books/war-and-peace/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/war-and-peace/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/war-and-peace/work/trilingual/interlinear/chunks",
+  "preview_json": "books/war-and-peace/work/trilingual/preview/war-and-peace.partial.json",
+  "assembled_json": "books/war-and-peace/work/trilingual/preview/war-and-peace.partial.json",
+  "prepared_at": "2026-07-12T03:55:33.582345+00:00",
+  "queue_id": "imported-world-classics-trilingual-20260712",
+  "queue_model": "gpt-5.5",
+  "queue_reasoning": "low",
+  "chunk_count": 1490,
+  "english_chapter_count": 366,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_modern_nonfiction_trilingual.py",
+    "english_spine": "English source text is the chunk spine.",
+    "supplemental_sources": "Optional local references are recorded in source_reference_paths; they are not used as chunk spine text unless a later project-specific pass aligns them.",
+    "chinese_reference": "No published Chinese source configured for this task; generate readable modern Chinese from English.",
+    "japanese_reference": "No published Japanese source configured for this task; generate natural modern Japanese from English.",
+    "reference_notes": "Supplemental files were copied from ../Books when available. The English spine remains the only chunk-alignment source until a later reference-alignment pass is explicitly run."
+  }
+}

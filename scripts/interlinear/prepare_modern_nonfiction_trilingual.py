@@ -446,6 +446,7 @@ def is_symbol_noise(line: str) -> bool:
 
 
 def is_heading_line(line: str, task: dict[str, Any]) -> bool:
+    has_markdown_heading = line.lstrip().startswith("#")
     line = re.sub(r"^#{1,6}\s+", "", line).strip()
     if len(line) > 100:
         return False
@@ -456,7 +457,7 @@ def is_heading_line(line: str, task: dict[str, Any]) -> bool:
         # turning those references into fake chapters.
         if "(" in line or re.match(r"^Chapter\s+\d+\.", line, re.I):
             return False
-        if line.casefold().startswith("chapter ") and len(line.split()) > 4 and ":" not in line:
+        if not has_markdown_heading and line.casefold().startswith("chapter ") and len(line.split()) > 4 and ":" not in line:
             return False
         return True
     if task.get("allow_numeric_headings", False) and NUMERIC_HEADING_RE.fullmatch(line):
@@ -477,6 +478,9 @@ def drop_repeated_page_headers(lines: list[str]) -> list[str]:
     base_counts: dict[str, int] = {}
     parsed: list[tuple[str, str] | None] = []
     for line in lines:
+        if line.lstrip().startswith("#"):
+            parsed.append(None)
+            continue
         match = re.match(r"^(.{4,70}?)\s+\d{1,4}$", line)
         if match and not SENTENCE_END_RE.search(match.group(1)):
             base = compact(match.group(1)).casefold()
@@ -500,6 +504,56 @@ def find_start(lines: list[str], task: dict[str, Any]) -> int:
         needle = compact(marker).casefold()
         for index, line in enumerate(lines):
             if needle in compact(line).casefold():
+                return index
+    body_markers = task.get(
+        "body_start_markers",
+        [
+            "Introduction",
+            "INTRODUCTION",
+            "Foreword",
+            "FOREWORD",
+            "Prologue",
+            "PROLOGUE",
+            "Preface",
+            "PREFACE",
+            "Chapter 1",
+            "CHAPTER 1",
+            "Chapter One",
+            "CHAPTER ONE",
+            "Part I",
+            "PART I",
+            "Book I",
+            "BOOK I",
+        ],
+    )
+    front_matter_last = 0
+    for index, line in enumerate(lines[:700]):
+        normalized = re.sub(r"^#{1,6}\s+", "", compact(line)).strip()
+        lower = normalized.casefold()
+        if (
+            lower in {"contents", "illustrations", "figures", "maps", "plates", "timeline", "chronology", "dramatis personae"}
+            or lower.endswith(" contents")
+            or lower.endswith(" illustrations")
+            or lower.startswith(("list of illustrations", "list of figures", "list of maps", "list of plates"))
+            or lower in {"cover", "title page", "dedication", "copyright", "about the author", "about the publisher"}
+            or re.fullmatch(r"(?:notes|endnotes|index|acknowledg(?:e)?ments|appendix [a-z]).*", lower)
+            or ("about the author" in lower and len(lower) <= 120)
+        ):
+            front_matter_last = index
+    for index, line in enumerate(lines):
+        if index < max(10, front_matter_last + 1):
+            continue
+        normalized = re.sub(r"^#{1,6}\s+", "", compact(line)).strip()
+        if not normalized:
+            continue
+        for body_marker in body_markers:
+            body_marker = str(body_marker)
+            if normalized == body_marker:
+                return index
+            if normalized.startswith(body_marker + " "):
+                tail = normalized[len(body_marker) :].strip()
+                if re.fullmatch(r"(?:[ivxlcdm]{1,10}|\d{1,4})", tail, re.I):
+                    continue
                 return index
     for index, line in enumerate(lines):
         if HEADING_RE.match(line) or (len(line) > 80 and LATIN_RE.search(line)):
@@ -538,12 +592,26 @@ def split_terminal_back_matter(line: str) -> tuple[str, bool]:
     """Trim terminal back matter when OCR joins it to the final body paragraph."""
 
     normalized = re.sub(r"^#{1,6}\s+", "", line).strip()
+    if re.fullmatch(r"notes\s*:\s*", normalized, re.I):
+        return line, False
     if TERMINAL_BACK_MATTER_RE.match(" " + normalized):
         return "", True
     match = TERMINAL_BACK_MATTER_RE.search(line)
     if not match:
         return line, False
     return compact(line[: match.start()]), True
+
+
+def is_notes_heading(line: str) -> bool:
+    normalized = re.sub(r"^#{1,6}\s+", "", compact(line)).strip().casefold()
+    return normalized in {"notes", "endnotes"} or re.fullmatch(r"notes\s+\d{1,4}", normalized) is not None
+
+
+def has_later_chapter_heading(lines: list[str], start_index: int, task: dict[str, Any], *, window: int = 120) -> bool:
+    for later in lines[start_index + 1 : start_index + 1 + window]:
+        if is_heading_line(later, task):
+            return True
+    return False
 
 
 def split_english_units(text: str, *, max_chars: int) -> list[str]:
@@ -580,6 +648,9 @@ def parse_chapters(markdown: Path, task: dict[str, Any], *, max_unit_chars: int)
     chapters: list[dict[str, Any]] = []
     current = {"number": 1, "title": str(task.get("default_chapter_title") or "Main Text"), "paragraphs": []}
     buffer: list[str] = []
+    body_chars_seen = 0
+    min_body_chars_before_terminal = int(task.get("min_body_chars_before_terminal", 20000))
+    skipping_intermediate_notes = False
 
     def flush() -> None:
         nonlocal buffer
@@ -590,9 +661,39 @@ def parse_chapters(markdown: Path, task: dict[str, Any], *, max_unit_chars: int)
         if len(text) >= 20 and LATIN_RE.search(text):
             current["paragraphs"].extend(split_english_units(text, max_chars=max_unit_chars))
 
-    for line in lines:
-        line, terminal_after_line = split_terminal_back_matter(line)
-        if should_stop(line, task):
+    for line_index, line in enumerate(lines):
+        if skipping_intermediate_notes:
+            if is_heading_line(line, task):
+                skipping_intermediate_notes = False
+            else:
+                continue
+        if (
+            body_chars_seen >= min_body_chars_before_terminal
+            and is_notes_heading(line)
+            and has_later_chapter_heading(lines, line_index, task)
+        ):
+            flush()
+            skipping_intermediate_notes = True
+            continue
+        if (
+            body_chars_seen >= min_body_chars_before_terminal
+            and "copyright" in compact(line).casefold()
+            and has_later_chapter_heading(lines, line_index, task)
+        ):
+            flush()
+            continue
+        if (
+            body_chars_seen >= min_body_chars_before_terminal
+            and has_later_chapter_heading(lines, line_index, task)
+            and TERMINAL_BACK_MATTER_RE.search(line)
+            and not should_stop(line, task)
+        ):
+            terminal_after_line = False
+        elif body_chars_seen >= min_body_chars_before_terminal:
+            line, terminal_after_line = split_terminal_back_matter(line)
+        else:
+            terminal_after_line = False
+        if body_chars_seen >= min_body_chars_before_terminal and should_stop(line, task):
             flush()
             break
         if not line:
@@ -611,6 +712,7 @@ def parse_chapters(markdown: Path, task: dict[str, Any], *, max_unit_chars: int)
             buffer[-1] = buffer[-1][:-1] + line
         else:
             buffer.append(line)
+            body_chars_seen += len(line) + 1
         if terminal_after_line:
             flush()
             break
@@ -627,6 +729,7 @@ def parse_chapters(markdown: Path, task: dict[str, Any], *, max_unit_chars: int)
 def build_chunks(task: dict[str, Any], chapters: list[dict[str, Any]], *, max_chunk_chars: int) -> tuple[dict[str, Any], list[dict[str, Any]]]:
     chunks: list[dict[str, Any]] = []
     paragraph_index = 0
+    supplemental_sources = task.get("reference_paths", {})
     translation_contract = task.get(
         "translation_contract",
         {
@@ -668,6 +771,8 @@ def build_chunks(task: dict[str, Any], chapters: list[dict[str, Any]], *, max_ch
                         "zh_primary": {"available": False, "chapter": "", "text": "", "quality": "generate_from_english_spine"},
                         "zh_secondary": {"available": False, "chapter": "", "text": ""},
                         "ja": {"available": False, "chapter": "", "text": ""},
+                        "supplemental_sources": supplemental_sources,
+                        "reference_notes": task.get("reference_notes", ""),
                     },
                     "translation_contract": translation_contract,
                 }
@@ -702,8 +807,10 @@ def build_chunks(task: dict[str, Any], chapters: list[dict[str, Any]], *, max_ch
         "powered_by": POWERED_BY,
         "source_spine_lang": "en",
         "source_paths": {"en": task["source_path"]},
+        "source_reference_paths": supplemental_sources,
         "source_sha256": {"en": sha256(source_path)},
         "source_note": task.get("description", ""),
+        "reference_notes": task.get("reference_notes", ""),
         "chunk_count": len(chunks),
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "chunks": [
@@ -758,6 +865,7 @@ def write_book(task: dict[str, Any], queue: dict[str, Any], args: argparse.Names
         "task_mode": task.get("task_mode", "trilingual_modern_nonfiction_en_source_generated_zh_ja"),
         "source_spine_lang": "en",
         "source_paths": manifest["source_paths"],
+        "source_reference_paths": manifest["source_reference_paths"],
         "source_sha256": manifest["source_sha256"],
         "source_extraction": {
             "en_cache": str(raw_md.relative_to(ROOT)),
@@ -792,8 +900,10 @@ def write_book(task: dict[str, Any], queue: dict[str, Any], args: argparse.Names
         "preparation_notes": {
             "script": "scripts/interlinear/prepare_modern_nonfiction_trilingual.py",
             "english_spine": "English source text is the chunk spine.",
+            "supplemental_sources": "Optional local references are recorded in source_reference_paths; they are not used as chunk spine text unless a later project-specific pass aligns them.",
             "chinese_reference": "No published Chinese source configured for this task; generate readable modern Chinese from English.",
             "japanese_reference": "No published Japanese source configured for this task; generate natural modern Japanese from English.",
+            "reference_notes": task.get("reference_notes", ""),
         },
     }
     write_json(book_root / "book-plan.json", plan)

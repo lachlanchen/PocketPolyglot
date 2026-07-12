@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "book_id": "red-and-black",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_world_literature_en_source_generated_zh_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "en": "sources/world-literature/red-and-black/en/The Red and the Black.epub"
+  },
+  "source_reference_paths": {
+    "Stendhal - The Red and the Black - Modern Library 2004": "sources/world-literature/red-and-black/en/reference/Stendhal - The Red and the Black - Modern Library 2004.pdf"
+  },
+  "source_sha256": {
+    "en": "7f99664b9639919142b5edab51fee4a776a2387de84274cb012420bd3e0eb063"
+  },
+  "source_extraction": {
+    "en_cache": "books/red-and-black/work/source-extraction/en.raw.md",
+    "note": "Modern nonfiction generic extraction. PDF uses pdftotext; EPUB/MOBI uses pandoc."
+  },
+  "markdown": {
+    "en": "books/red-and-black/markdown/en.md"
+  },
+  "book_title_en": "The Red and the Black",
+  "book_title_zh": "红与黑",
+  "book_title_ja": "赤と黒",
+  "book_title_zh_reading": "",
+  "book_title_ja_reading": "",
+  "author": "Stendhal",
+  "author_reading_zh": "",
+  "author_reading_ja": "",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Stendhal, The Red and the Black. English source is the alignment spine; generate modern Japanese and Chinese.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "english_spine_only",
+  "chunks_jsonl": "books/red-and-black/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/red-and-black/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/red-and-black/work/trilingual/interlinear/chunks",
+  "preview_json": "books/red-and-black/work/trilingual/preview/red-and-black.partial.json",
+  "assembled_json": "books/red-and-black/work/trilingual/preview/red-and-black.partial.json",
+  "prepared_at": "2026-07-12T03:54:57.757297+00:00",
+  "queue_id": "imported-world-classics-trilingual-20260712",
+  "queue_model": "gpt-5.5",
+  "queue_reasoning": "low",
+  "chunk_count": 481,
+  "english_chapter_count": 76,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_modern_nonfiction_trilingual.py",
+    "english_spine": "English source text is the chunk spine.",
+    "supplemental_sources": "Optional local references are recorded in source_reference_paths; they are not used as chunk spine text unless a later project-specific pass aligns them.",
+    "chinese_reference": "No published Chinese source configured for this task; generate readable modern Chinese from English.",
+    "japanese_reference": "No published Japanese source configured for this task; generate natural modern Japanese from English.",
+    "reference_notes": "Supplemental files were copied from ../Books when available. The English spine remains the only chunk-alignment source until a later reference-alignment pass is explicitly run."
+  }
+}

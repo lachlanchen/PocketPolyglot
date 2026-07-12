@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "book_id": "lost-enlightenment-central-asia",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_modern_nonfiction_en_source_generated_zh_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "en": "sources/world-history/central-asia/en/Lost Enlightenment - S Frederick Starr.pdf"
+  },
+  "source_reference_paths": {},
+  "source_sha256": {
+    "en": "72578798fc487a471a65d3ef26644c9928a5af4c4f10038f422924a8121ab0a9"
+  },
+  "source_extraction": {
+    "en_cache": "books/lost-enlightenment-central-asia/work/source-extraction/en.raw.md",
+    "note": "Modern nonfiction generic extraction. PDF uses pdftotext; EPUB/MOBI uses pandoc."
+  },
+  "markdown": {
+    "en": "books/lost-enlightenment-central-asia/markdown/en.md"
+  },
+  "book_title_en": "Lost Enlightenment: Central Asia's Golden Age from the Arab Conquest to Tamerlane",
+  "book_title_zh": "失落的启蒙：从阿拉伯征服到帖木儿时代的中亚黄金时代",
+  "book_title_ja": "失われた啓蒙：アラブ征服からティムールまでの中央アジア黄金時代",
+  "book_title_zh_reading": "",
+  "book_title_ja_reading": "",
+  "author": "S. Frederick Starr",
+  "author_reading_zh": "",
+  "author_reading_ja": "",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "S. Frederick Starr, Lost Enlightenment: Central Asia's Golden Age from the Arab Conquest to Tamerlane. English source is the alignment spine; generate modern Japanese and Chinese.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "english_spine_only",
+  "chunks_jsonl": "books/lost-enlightenment-central-asia/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/lost-enlightenment-central-asia/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/lost-enlightenment-central-asia/work/trilingual/interlinear/chunks",
+  "preview_json": "books/lost-enlightenment-central-asia/work/trilingual/preview/lost-enlightenment-central-asia.partial.json",
+  "assembled_json": "books/lost-enlightenment-central-asia/work/trilingual/preview/lost-enlightenment-central-asia.partial.json",
+  "prepared_at": "2026-07-12T03:35:07.781704+00:00",
+  "queue_id": "imported-history-trilingual-20260712",
+  "queue_model": "gpt-5.3-codex-spark",
+  "queue_reasoning": "low",
+  "chunk_count": 541,
+  "english_chapter_count": 1,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_modern_nonfiction_trilingual.py",
+    "english_spine": "English source text is the chunk spine.",
+    "supplemental_sources": "Optional local references are recorded in source_reference_paths; they are not used as chunk spine text unless a later project-specific pass aligns them.",
+    "chinese_reference": "No published Chinese source configured for this task; generate readable modern Chinese from English.",
+    "japanese_reference": "No published Japanese source configured for this task; generate natural modern Japanese from English.",
+    "reference_notes": "Supplemental files were copied from ../Books when available. The English spine remains the only chunk-alignment source until a later reference-alignment pass is explicitly run."
+  }
+}

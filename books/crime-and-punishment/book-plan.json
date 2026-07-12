@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "book_id": "crime-and-punishment",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_world_literature_en_source_generated_zh_ja",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "en": "sources/world-literature/crime-and-punishment/en/Crime and Punishment.epub"
+  },
+  "source_reference_paths": {
+    "Fyodor Dostoevsky - Crime and Punishment - Barnes and Noble 1994": "sources/world-literature/crime-and-punishment/en/reference/Fyodor Dostoevsky - Crime and Punishment - Barnes and Noble 1994.pdf"
+  },
+  "source_sha256": {
+    "en": "a057f27e961a23431b958ae9756125421a95798724ee3abc93f8f2417fedcefe"
+  },
+  "source_extraction": {
+    "en_cache": "books/crime-and-punishment/work/source-extraction/en.raw.md",
+    "note": "Modern nonfiction generic extraction. PDF uses pdftotext; EPUB/MOBI uses pandoc."
+  },
+  "markdown": {
+    "en": "books/crime-and-punishment/markdown/en.md"
+  },
+  "book_title_en": "Crime and Punishment",
+  "book_title_zh": "罪与罚",
+  "book_title_ja": "罪と罰",
+  "book_title_zh_reading": "",
+  "book_title_ja_reading": "",
+  "author": "Fyodor Dostoevsky",
+  "author_reading_zh": "",
+  "author_reading_ja": "",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Fyodor Dostoevsky, Crime and Punishment. English source is the alignment spine; generate modern Japanese and Chinese.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "english_spine_only",
+  "chunks_jsonl": "books/crime-and-punishment/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/crime-and-punishment/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/crime-and-punishment/work/trilingual/interlinear/chunks",
+  "preview_json": "books/crime-and-punishment/work/trilingual/preview/crime-and-punishment.partial.json",
+  "assembled_json": "books/crime-and-punishment/work/trilingual/preview/crime-and-punishment.partial.json",
+  "prepared_at": "2026-07-12T03:54:53.207288+00:00",
+  "queue_id": "imported-world-classics-trilingual-20260712",
+  "queue_model": "gpt-5.5",
+  "queue_reasoning": "low",
+  "chunk_count": 502,
+  "english_chapter_count": 41,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_modern_nonfiction_trilingual.py",
+    "english_spine": "English source text is the chunk spine.",
+    "supplemental_sources": "Optional local references are recorded in source_reference_paths; they are not used as chunk spine text unless a later project-specific pass aligns them.",
+    "chinese_reference": "No published Chinese source configured for this task; generate readable modern Chinese from English.",
+    "japanese_reference": "No published Japanese source configured for this task; generate natural modern Japanese from English.",
+    "reference_notes": "Supplemental files were copied from ../Books when available. The English spine remains the only chunk-alignment source until a later reference-alignment pass is explicitly run."
+  }
+}
