@@ -133,6 +133,7 @@ def ensure_header() -> Path:
 \setlength{\parskip}{0.22em}
 \emergencystretch=3em
 \sloppy
+\pagestyle{plain}
 \captionsetup{font=small,labelfont=bf}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -149,6 +150,18 @@ def ensure_header() -> Path:
 
 def clean_text(text: str) -> str:
     return CONTROL_RE.sub("", text).replace("\ufeff", "")
+
+
+def remove_text_backslash_artifacts(text: str) -> str:
+    r"""Repair OCR backslashes inside ordinary words.
+
+    Local PDF extraction sometimes turns a letter into a stray backslash inside a
+    word, for example ``sla\es``. That must not become a TeX command. The rule is
+    deliberately narrow so real commands such as ``\alpha`` and ``\section`` are
+    left alone.
+    """
+
+    return re.sub(r"(?<=[A-Za-z])\\(?=[A-Za-z])", "", text)
 
 
 def normalize_longtable_spec(spec: str) -> str:
@@ -173,6 +186,7 @@ def normalize_longtable_spec(spec: str) -> str:
 def postprocess_tex(tex_path: Path, *, layout: str) -> None:
     text = tex_path.read_text(encoding="utf-8", errors="replace")
     text = clean_text(text)
+    text = remove_text_backslash_artifacts(text)
     text = INCLUDEGRAPHICS_RE.sub(
         r"\\includegraphics[max width=.94\\linewidth,max totalheight=.70\\textheight,keepaspectratio]\1",
         text,
@@ -238,6 +252,7 @@ def marker_pdf_to_markdown(source: Path, task_dir: Path, *, force: bool) -> Path
         raise RuntimeError(f"marker_single produced no Markdown under {marker_root}")
     raw_md = candidates[0]
     text = clean_text(raw_md.read_text(encoding="utf-8", errors="replace"))
+    text = remove_text_backslash_artifacts(text)
     text = rewrite_markdown_image_paths(text, raw_md.parent)
     prepared = task_dir / "review/source-from-marker.md"
     prepared.parent.mkdir(parents=True, exist_ok=True)
