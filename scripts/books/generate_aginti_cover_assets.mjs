@@ -306,6 +306,15 @@ async function main() {
       continue;
     }
     if (!result.ok) throw new Error(`generate_image failed for ${plan.bookId}: ${JSON.stringify(result)}`);
+    if (result.manifestPath) {
+      const manifestPath = path.join(ROOT, result.manifestPath);
+      if (fs.existsSync(manifestPath)) {
+        const manifest = readJson(manifestPath);
+        if (manifest.status === "failed") {
+          throw new Error(`generate_image failed for ${plan.bookId}: ${manifest.failureReason || "manifest status failed"}`);
+        }
+      }
+    }
     const imagePath = result.imagePaths?.[0] ? path.join(ROOT, result.imagePaths[0]) : newestGeneratedImage(path.join(ROOT, rawDir));
     if (!imagePath || !fs.existsSync(imagePath)) throw new Error(`No generated image found for ${plan.bookId}`);
     await fsp.copyFile(imagePath, backgroundPath);
