@@ -363,11 +363,15 @@ def repair_undefined_word_command(tex_path: Path, log_file: Path) -> bool:
     log_text = log_file.read_text(encoding="utf-8", errors="replace") if log_file.exists() else ""
     if "Undefined control sequence" not in log_text:
         return False
-    path_pattern = re.escape(str(tex_path))
-    matches = list(re.finditer(rf"{path_pattern}:(\d+): Undefined control sequence\.", log_text))
-    if not matches:
-        return False
-    line_no = int(matches[-1].group(1))
+    matches = list(re.finditer(r"\nl\.(\d+)\s", log_text))
+    if matches:
+        line_no = int(matches[-1].group(1))
+    else:
+        path_pattern = re.escape(str(tex_path))
+        matches = list(re.finditer(rf"{path_pattern}:(\d+): Undefined control sequence\.", log_text))
+        if not matches:
+            return False
+        line_no = int(matches[-1].group(1))
     lines = tex_path.read_text(encoding="utf-8", errors="replace").splitlines(keepends=True)
     if line_no < 1 or line_no > len(lines):
         return False
@@ -377,7 +381,12 @@ def repair_undefined_word_command(tex_path: Path, log_file: Path) -> bool:
         return False
     lines[line_no - 1] = new
     tex_path.write_text("".join(lines), encoding="utf-8")
-    log(f"[repair] {tex_path.relative_to(ROOT)}:{line_no} removed OCR backslash artifact")
+    display_path = tex_path.resolve()
+    try:
+        display_path = display_path.relative_to(ROOT)
+    except ValueError:
+        pass
+    log(f"[repair] {display_path}:{line_no} removed OCR backslash artifact")
     return True
 
 
