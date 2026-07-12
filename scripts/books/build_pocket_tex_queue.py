@@ -186,7 +186,6 @@ def normalize_longtable_spec(spec: str) -> str:
 def postprocess_tex(tex_path: Path, *, layout: str) -> None:
     text = tex_path.read_text(encoding="utf-8", errors="replace")
     text = clean_text(text)
-    text = remove_text_backslash_artifacts(text)
     text = INCLUDEGRAPHICS_RE.sub(
         r"\\includegraphics[max width=.94\\linewidth,max totalheight=.70\\textheight,keepaspectratio]\1",
         text,
@@ -252,7 +251,6 @@ def marker_pdf_to_markdown(source: Path, task_dir: Path, *, force: bool) -> Path
         raise RuntimeError(f"marker_single produced no Markdown under {marker_root}")
     raw_md = candidates[0]
     text = clean_text(raw_md.read_text(encoding="utf-8", errors="replace"))
-    text = remove_text_backslash_artifacts(text)
     text = rewrite_markdown_image_paths(text, raw_md.parent)
     prepared = task_dir / "review/source-from-marker.md"
     prepared.parent.mkdir(parents=True, exist_ok=True)
@@ -359,6 +357,30 @@ def pandoc_to_tex(
     postprocess_tex(tex_path, layout=layout)
 
 
+def repair_undefined_word_command(tex_path: Path, log_file: Path) -> bool:
+    """Repair one OCR-created backslash-in-word after a concrete XeLaTeX error."""
+
+    log_text = log_file.read_text(encoding="utf-8", errors="replace") if log_file.exists() else ""
+    if "Undefined control sequence" not in log_text:
+        return False
+    path_pattern = re.escape(str(tex_path))
+    matches = list(re.finditer(rf"{path_pattern}:(\d+): Undefined control sequence\.", log_text))
+    if not matches:
+        return False
+    line_no = int(matches[-1].group(1))
+    lines = tex_path.read_text(encoding="utf-8", errors="replace").splitlines(keepends=True)
+    if line_no < 1 or line_no > len(lines):
+        return False
+    old = lines[line_no - 1]
+    new = remove_text_backslash_artifacts(old)
+    if new == old:
+        return False
+    lines[line_no - 1] = new
+    tex_path.write_text("".join(lines), encoding="utf-8")
+    log(f"[repair] {tex_path.relative_to(ROOT)}:{line_no} removed OCR backslash artifact")
+    return True
+
+
 def compile_tex(tex_path: Path, out_pdf: Path) -> dict[str, Any]:
     build_dir = tex_path.parent / "latex-build"
     build_dir.mkdir(parents=True, exist_ok=True)
@@ -374,10 +396,18 @@ def compile_tex(tex_path: Path, out_pdf: Path) -> dict[str, Any]:
         str(build_dir),
         str(tex_path),
     ]
-    for _ in range(2):
+    passes = 0
+    attempts = 0
+    while passes < 2 and attempts < 6:
+        attempts += 1
         code = run_stream(cmd, log_file=log_file)
         if code != 0:
+            if repair_undefined_word_command(tex_path, log_file):
+                continue
             raise RuntimeError(f"xelatex failed for {tex_path}; see {log_file}")
+        passes += 1
+    if passes < 2:
+        raise RuntimeError(f"xelatex did not finish two clean passes for {tex_path}; see {log_file}")
     produced = build_dir / f"{tex_path.stem}.pdf"
     if not produced.exists():
         raise RuntimeError(f"xelatex did not produce {produced}")
