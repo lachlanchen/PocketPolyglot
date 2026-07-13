@@ -333,6 +333,22 @@ def numeric_signature(text: str) -> list[str]:
     return NUMBER_RE.findall(text)
 
 
+def numeric_source_is_preserved(source: Iterable[str], candidate: Iterable[str]) -> bool:
+    """Require every source digit atom without banning valid translation forms.
+
+    A translated language can conventionally render an English number word or
+    Roman ordinal with Arabic digits (for example, ``Leopold I`` as
+    ``レオポルト1世``).  Exact Counter equality therefore rejects faithful
+    translations.  Source-language transcription remains exact elsewhere;
+    translated output must contain every explicit source digit atom at least
+    as many times, while the semantic reviewer rejects invented numeric facts.
+    """
+
+    expected = Counter(source)
+    actual = Counter(candidate)
+    return all(actual[value] >= count for value, count in expected.items())
+
+
 def japanese_kana_required(source_tex: str, source_plain: str) -> bool:
     """Return whether kana is required to prove prose is actually Japanese."""
     if len(source_plain) < 40:
@@ -537,6 +553,7 @@ def validate_chunk_output(task: dict[str, Any], result: dict[str, Any]) -> list[
         errors.append("segment IDs/order do not exactly match source")
         return errors
 
+    source_language = task.get("source_language", "en")
     for source, output in zip(expected, actual):
         segment_id = source["segment_id"]
         prefix = f"{segment_id}: "
@@ -559,11 +576,15 @@ def validate_chunk_output(task: dict[str, Any], result: dict[str, Any]) -> list[
             elif command_signature(candidate) != source["command_signature"]:
                 errors.append(prefix + f"{language}_tex changed TeX command sequence")
             candidate_numbers = numeric_signature(candidate)
-            if technical_exact and language == "ja":
-                if set(candidate_numbers) != set(source["numeric_signature"]):
-                    errors.append(prefix + "ja_tex changed the set of numeric facts")
-            elif Counter(candidate_numbers) != Counter(source["numeric_signature"]):
+            same_language_transcription = source_language == "en" and language == "en"
+            if same_language_transcription and Counter(candidate_numbers) != Counter(
+                source["numeric_signature"]
+            ):
                 errors.append(prefix + f"{language}_tex changed numeric facts/counts")
+            elif not same_language_transcription and not numeric_source_is_preserved(
+                source["numeric_signature"], candidate_numbers
+            ):
+                errors.append(prefix + f"{language}_tex omitted or altered source numeric facts")
             if source["kind"] == "table" and table_signature(candidate) != source["table_signature"]:
                 errors.append(prefix + f"{language}_tex changed table structure")
             if candidate.count("{") != candidate.count("}"):
@@ -578,7 +599,6 @@ def validate_chunk_output(task: dict[str, Any], result: dict[str, Any]) -> list[
         en_plain = visible(en_tex)
         ja_plain = visible(ja_tex)
         source_len = max(1, len(source_plain))
-        source_language = task.get("source_language", "en")
         if source_language == "en":
             if len(en_plain) < source_len * 0.62 or len(en_plain) > source_len * 1.45:
                 errors.append(prefix + "English length suggests omission or unsupported expansion")

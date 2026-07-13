@@ -112,7 +112,7 @@ Required work:
 2. For ja_tex, provide complete, natural, modern, readable Japanese faithful to every claim and qualification in the English source. Do not omit or add facts.
 3. {protected_instruction}
 4. {structure_instruction}
-   Keep written number words written as words in translation; do not introduce new Arabic digits (for example, translate "Fifth" as 第五, not 第5).
+   Preserve every Arabic digit sequence already present in the source. Do not invent numerical facts. A conventional target-language rendering of a written number or Roman ordinal may use digits only when its value is unambiguous (for example, "Leopold I" may be レオポルト1世); the semantic reviewer will verify it against the source.
 5. Do not invent missing words. If source damage cannot be resolved from context with high confidence, preserve it and list the uncertainty in unresolved.
 6. {change_instruction}
 7. Return only JSON matching the supplied schema. Do not edit files and do not call another agent.
@@ -138,9 +138,9 @@ def reviewer_prompt(task: dict[str, Any], candidate: dict[str, Any]) -> str:
         )
     return f"""Act as a strict bilingual textual editor validating a proposed English/Japanese TeX chunk against its source.
 
-Accept only if all source content is retained in order, English changes are definite corrections, Japanese is complete/natural/accurate, and no claim, name, number, qualification, table relation, equation reference, or protected TeX object is added, removed, or altered.
+Accept only if all source content is retained in order, English changes are definite corrections, Japanese is complete/natural/accurate, and no claim, name, numerical fact, qualification, table relation, equation reference, or protected TeX object is added, removed, or altered.
 
-Do not demand stylistic rewrites. Do not reject faithful literal terminology merely because another translation is possible. Reject factual invention, omissions, mistranslation, unresolved OCR silently guessed, garbled Japanese, or structural corruption. Return only JSON matching the review schema.
+Do not demand stylistic rewrites. Do not reject faithful literal terminology merely because another translation is possible. A navigation anchor such as hypertarget/hyperlink may move within the same segment when target-language word order requires it; accept that when the anchor content and command order are unchanged. Likewise, accept conventional numeral-format translation such as an English Roman ordinal rendered with an equivalent Japanese digit, but reject a changed or unsupported value. Content-bearing figures, equations, citations, labels, and references must remain attached to the corresponding content. Reject factual invention, omissions, mistranslation, unresolved OCR silently guessed, garbled Japanese, or structural corruption. Return only JSON matching the review schema.
 {technical_instruction}
 
 Source task:
