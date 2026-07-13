@@ -5,6 +5,8 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
+import unicodedata
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
@@ -16,7 +18,81 @@ HEIGHT = round(WIDTH * 148 / 105)
 SERIF_REGULAR = "/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc"
 SERIF_BOLD = "/usr/share/fonts/opentype/noto/NotoSerifCJK-Bold.ttc"
 SYMBOL_FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
-DEFAULT_TEXT_STROKE = (255, 255, 248, 214)
+TEXT_INK = (0, 0, 0, 255)
+TEXT_OUTLINE = (255, 255, 255, 255)
+TEXT_HALO = (0, 0, 0, 150)
+
+# Cover titles often differ only by simplified/traditional orthography.  This
+# compact canonicalization prevents the compositor from printing both forms as
+# if they were distinct titles.  It is intentionally limited to common title
+# characters rather than changing the displayed text.
+TITLE_CANONICAL_MAP = str.maketrans(
+    {
+        "國": "国",
+        "學": "学",
+        "書": "书",
+        "經": "经",
+        "傳": "传",
+        "記": "记",
+        "誌": "志",
+        "註": "注",
+        "釋": "释",
+        "義": "义",
+        "詩": "诗",
+        "禮": "礼",
+        "樂": "乐",
+        "漢": "汉",
+        "晉": "晋",
+        "後": "后",
+        "戰": "战",
+        "錄": "录",
+        "說": "说",
+        "語": "语",
+        "選": "选",
+        "編": "编",
+        "譯": "译",
+        "續": "续",
+        "體": "体",
+        "總": "总",
+        "集": "集",
+    }
+)
+
+
+def canonical_title(text: str) -> str:
+    normalized = unicodedata.normalize("NFKC", text).translate(TITLE_CANONICAL_MAP)
+    return re.sub(r"[^\w\u3040-\u30ff\u3400-\u9fff]", "", normalized).casefold()
+
+
+def equivalent_title(left: str, right: str) -> bool:
+    return bool(left and right and canonical_title(left) == canonical_title(right))
+
+
+def draw_halo_text(
+    draw: ImageDraw.ImageDraw,
+    position: tuple[float, float],
+    text: str,
+    font_obj: ImageFont.FreeTypeFont,
+    *,
+    halo_fill: tuple[int, int, int, int],
+    radius: int,
+) -> None:
+    """Draw a restrained subtitle-style dark halo behind crisp outlined text."""
+    if radius <= 0:
+        return
+    x, y = position
+    offsets = (
+        (-radius, 0),
+        (radius, 0),
+        (0, -radius),
+        (0, radius),
+        (-radius, -radius),
+        (-radius, radius),
+        (radius, -radius),
+        (radius, radius),
+    )
+    for dx, dy in offsets:
+        draw.text((x + dx, y + dy), text, font=font_obj, fill=halo_fill)
 
 
 def font(path: str, size: int, index: int = 2) -> ImageFont.FreeTypeFont:
@@ -55,13 +131,13 @@ def draw_centered(
     x = xy[0] - (bbox[2] - bbox[0]) / 2
     y = xy[1] - (bbox[3] - bbox[1]) / 2
     if shadow_fill:
-        draw.text(
-            (x + shadow_offset, y + shadow_offset),
+        draw_halo_text(
+            draw,
+            (x, y),
             text,
-            font=font_obj,
-            fill=shadow_fill,
-            stroke_width=stroke_width,
-            stroke_fill=stroke_fill or shadow_fill,
+            font_obj,
+            halo_fill=shadow_fill,
+            radius=max(shadow_offset, stroke_width + 1),
         )
     draw.text(
         (x, y),
@@ -96,7 +172,7 @@ def draw_centered_fit(
         size -= 1
         fitted = font(font_path, size, index=index)
     if stroke_width is None:
-        stroke_width = max(1, int(size * 0.035)) if stroke_fill else 0
+        stroke_width = max(2, int(size * 0.055)) if stroke_fill else 0
     draw_centered(
         draw,
         text,
@@ -172,7 +248,7 @@ def draw_centered_multiline_fit(
     total_height = sum(heights) + max(0, len(lines) - 1) * gap
     y = xy[1] - total_height / 2
     if stroke_width is None:
-        stroke_width = max(1, int(size * 0.035)) if stroke_fill else 0
+        stroke_width = max(2, int(size * 0.055)) if stroke_fill else 0
     for line, height in zip(lines, heights):
         draw_centered(
             draw,
@@ -252,13 +328,13 @@ def draw_vertical(
     cursor = y
     for ch, (w, h) in zip(chars, heights):
         if shadow_fill:
-            draw.text(
-                (x - w / 2 + shadow_offset, cursor + shadow_offset),
+            draw_halo_text(
+                draw,
+                (x - w / 2, cursor),
                 ch,
-                font=font_obj,
-                fill=shadow_fill,
-                stroke_width=stroke_width,
-                stroke_fill=stroke_fill or shadow_fill,
+                font_obj,
+                halo_fill=shadow_fill,
+                radius=max(shadow_offset, stroke_width + 1),
             )
         draw.text(
             (x - w / 2, cursor),
@@ -336,7 +412,7 @@ def main() -> int:
         primary_cjk = title_ja or title_zh or title_wenyan or title_en or args.book_id
     side_cjk = ""
     for candidate in (title_zh, title_ja, title_wenyan):
-        if candidate and candidate != primary_cjk:
+        if candidate and not equivalent_title(candidate, primary_cjk):
             side_cjk = candidate
             break
     author = plan.get("author") or ""
@@ -353,8 +429,8 @@ def main() -> int:
     draw.rounded_rectangle(
         (panel_left, panel_top, panel_right, panel_bottom),
         radius=26,
-        fill=(250, 244, 226, 42),
-        outline=(255, 252, 240, 34),
+        fill=(255, 255, 255, 24),
+        outline=(255, 255, 255, 48),
         width=1,
     )
 
@@ -371,10 +447,10 @@ def main() -> int:
     side_font = font(SERIF_REGULAR, int(HEIGHT * 0.024), index=2)
     small_font = font(SERIF_REGULAR, int(HEIGHT * 0.020), index=0)
 
-    ink = (28, 22, 17, 255)
-    muted = (70, 54, 43, 238)
-    soft_shadow = (255, 250, 235, 164)
-    text_outline = DEFAULT_TEXT_STROKE
+    ink = TEXT_INK
+    muted = TEXT_INK
+    soft_shadow = TEXT_HALO
+    text_outline = TEXT_OUTLINE
 
     if args.book_id == "yijing":
         draw_yijing_trigrams(draw, fill=(28, 22, 17, 185))
@@ -390,7 +466,7 @@ def main() -> int:
         max_bottom=int(HEIGHT * 0.665),
         shadow_fill=soft_shadow,
         stroke_fill=text_outline,
-        stroke_width=max(2, int(title_font.size * 0.045)),
+        stroke_width=max(4, int(title_font.size * 0.065)),
     )
     if side_cjk:
         draw_vertical(
@@ -404,7 +480,7 @@ def main() -> int:
             max_bottom=int(HEIGHT * 0.66),
             shadow_fill=soft_shadow,
             stroke_fill=text_outline,
-            stroke_width=max(1, int(side_font.size * 0.035)),
+            stroke_width=max(3, int(side_font.size * 0.055)),
         )
 
     text_width_limit = int(WIDTH * 0.72)
@@ -493,7 +569,7 @@ def main() -> int:
         min_size=int(HEIGHT * 0.009),
         shadow_fill=soft_shadow,
         stroke_fill=text_outline,
-        stroke_width=1,
+        stroke_width=2,
     )
     draw_centered_fit(
         draw,
@@ -507,7 +583,7 @@ def main() -> int:
         min_size=int(HEIGHT * 0.009),
         shadow_fill=soft_shadow,
         stroke_fill=text_outline,
-        stroke_width=1,
+        stroke_width=2,
     )
     draw_centered_fit(
         draw,
@@ -521,7 +597,7 @@ def main() -> int:
         min_size=int(HEIGHT * 0.009),
         shadow_fill=soft_shadow,
         stroke_fill=text_outline,
-        stroke_width=1,
+        stroke_width=2,
     )
 
     composed = Image.alpha_composite(image, overlay)

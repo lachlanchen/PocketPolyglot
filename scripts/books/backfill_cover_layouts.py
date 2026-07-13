@@ -98,6 +98,7 @@ def process_book(
     apply_pdfs: bool,
     dry_run: bool,
     use_cover_as_background: bool,
+    audit_background_text: bool,
 ) -> bool:
     plan = resolve_plan(book_id)
     cover_dir = resolve_cover_dir(book_id)
@@ -121,6 +122,24 @@ def process_book(
         else:
             event["status"] = "missing-background"
             print(f"missing background: {book_id}")
+            log_event(log_path, event)
+            return False
+
+    if audit_background_text:
+        audit_cmd = [
+            "python3",
+            "scripts/books/audit_cover_background_text.py",
+            "--book",
+            book_id,
+        ]
+        audit = run_command(audit_cmd, dry_run=dry_run)
+        if audit and audit.returncode != 0:
+            event["status"] = "background-text-audit-failed"
+            event["stdout"] = audit.stdout[-2000:]
+            event["stderr"] = audit.stderr[-2000:]
+            print(f"background text audit failed: {book_id}")
+            if audit.stdout:
+                print(audit.stdout.strip())
             log_event(log_path, event)
             return False
 
@@ -185,9 +204,16 @@ def main() -> int:
         action="store_true",
         help="fallback for legacy assets without background.png; may retain old embedded text",
     )
+    parser.add_argument(
+        "--skip-background-text-audit",
+        action="store_true",
+        help="bypass the title-in-background OCR gate (use only after manual inspection)",
+    )
     args = parser.parse_args()
 
     log_path = args.log or ROOT / "logs" / f"cover-backfill-{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')}.jsonl"
+    if not log_path.is_absolute():
+        log_path = ROOT / log_path
     books = args.books or discover_books(args.build_dir)
     print(f"books={len(books)} log={log_path.relative_to(ROOT)}")
     ok = 0
@@ -200,6 +226,7 @@ def main() -> int:
             apply_pdfs=not args.no_apply_pdfs,
             dry_run=args.dry_run,
             use_cover_as_background=args.use_cover_as_background,
+            audit_background_text=not args.skip_background_text_audit,
         ):
             ok += 1
         else:
