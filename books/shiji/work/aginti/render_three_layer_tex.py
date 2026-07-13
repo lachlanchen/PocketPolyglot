@@ -41,7 +41,7 @@ def tex_escape(text: str) -> str:
     return "".join(replacements.get(ch, ch) for ch in text)
 
 
-def render_tokens(tokens: list[dict], ruby_cmd: str) -> str:
+def render_tokens(tokens: list[dict], ruby_cmd: str, *, grammar: bool = True) -> str:
     parts = []
     for tok in tokens:
         t = tok.get("t", "")
@@ -51,13 +51,13 @@ def render_tokens(tokens: list[dict], ruby_cmd: str) -> str:
             inner = rf"\{ruby_cmd}{{{tex_escape(t)}}}{{{tex_escape(r)}}}"
         else:
             inner = tex_escape(t)
-        if g and g in GRAM_COLORS:
+        if grammar and g and g in GRAM_COLORS:
             inner = rf"\{GRAM_COLORS[g]}{{{inner}}}"
         parts.append(inner + r"\allowbreak{}")
     return "".join(parts)
 
 
-def render_unit(unit: dict, direction: str) -> str:
+def render_unit(unit: dict, direction: str, commentary: list[dict] | None = None) -> str:
     """direction: 'jp_main' or 'zh_main'"""
     lines = []
 
@@ -70,6 +70,12 @@ def render_unit(unit: dict, direction: str) -> str:
         lines.append(r"\ZhOrigLine{" + render_tokens(zh_orig, "zhcnruby") + "}")
     else:
         lines.append(r"\ZhMainLine{" + render_tokens(zh_orig, "zhcnruby") + "}")
+        for note in commentary or []:
+            label = tex_escape(str(note.get("label") or "注"))
+            tokens = note.get("tokens") if isinstance(note.get("tokens"), list) else []
+            lines.append(
+                r"\ZhuLine{" + label + "}{" + render_tokens(tokens, "zhcnruby", grammar=False) + "}"
+            )
         lines.append(r"\JaCommentLine{" + render_tokens(ja, "jpruby") + "}")
 
     lines.append(r"\ZhModernLine{" + render_tokens(zh_mod, "zhcnruby") + "}")
@@ -80,7 +86,13 @@ def tex_path(path: str) -> str:
     return tex_escape(path.replace("\\", "/"))
 
 
-def produce_tex(chunk_ids: list[str], direction: str, bw: bool, cover_image: str = "") -> str:
+def produce_tex(
+    chunk_ids: list[str],
+    direction: str,
+    bw: bool,
+    cover_image: str = "",
+    commentary: dict[str, list[dict]] | None = None,
+) -> str:
     """Produce complete LaTeX document."""
     tex_lines = [r"\documentclass[10pt]{book}", r"\input{style.tex}"]
     if bw:
@@ -120,9 +132,10 @@ def produce_tex(chunk_ids: list[str], direction: str, bw: bool, cover_image: str
             tex_lines.append(r"\section{" + tex_escape(sec_id) + "}")
             last_section_id = sec_id
 
-        for para in data.get("paragraphs", []):
-            for unit in para.get("units", []):
-                tex_lines.append(render_unit(unit, direction))
+        for paragraph_index, para in enumerate(data.get("paragraphs", [])):
+            for unit_index, unit in enumerate(para.get("units", [])):
+                key = f"{cid}#p{paragraph_index:04d}#u{unit_index:04d}"
+                tex_lines.append(render_unit(unit, direction, (commentary or {}).get(key, [])))
                 tex_lines.append(r"\vspace{0.3em}")
             tex_lines.append(r"\vspace{0.5em}")
 
@@ -215,6 +228,7 @@ def write_style_tex(out_dir: Path) -> None:
 \NewDocumentCommand{\ZhOrigLine}{m}{\noindent{\normalsize\zhfont\LineBreakTuning #1}\par}
 \NewDocumentCommand{\JaCommentLine}{m}{\noindent{\normalsize\jpfont\LineBreakTuning #1}\par}
 \NewDocumentCommand{\ZhModernLine}{m}{\noindent{\footnotesize\zhfont\LineBreakTuning #1}\par}
+\NewDocumentCommand{\ZhuLine}{m m}{\noindent{\zhfont\fontsize{10.4pt}{14.9pt}\selectfont\color{black}\textbf{#1}\thinspace\LineBreakTuning #2}\par}
 """
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "style.tex").write_text(style, encoding="utf-8")
@@ -228,6 +242,7 @@ def main() -> int:
     parser.add_argument("--limit", type=int, default=1)
     parser.add_argument("--out-dir", help="Output directory for TeX")
     parser.add_argument("--cover-image", default="", help="Workspace-relative or absolute cover image path")
+    parser.add_argument("--commentary-sidecar", default="", help="Optional JSONL commentary keyed by chunk/paragraph/unit")
     args = parser.parse_args()
 
     ids = [f"shiji-chunk-{n:04d}" for n in range(args.start, args.start + args.limit)]
@@ -240,13 +255,20 @@ def main() -> int:
     write_style_tex(out_dir)
 
     cover_image = ""
-    if args.cover_image and not args.bw:
+    if args.cover_image:
         cover = Path(args.cover_image)
         if not cover.is_absolute():
             cover = Path.cwd() / cover
         if cover.exists():
             cover_image = os.path.relpath(cover, out_dir)
-    tex = produce_tex(ids, args.direction, args.bw, cover_image)
+    commentary: dict[str, list[dict]] = {}
+    if args.commentary_sidecar:
+        for line in Path(args.commentary_sidecar).read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            record = json.loads(line)
+            commentary[str(record["key"])] = list(record.get("notes", []))
+    tex = produce_tex(ids, args.direction, args.bw, cover_image, commentary)
     tex_path = out_dir / "book.tex"
     tex_path.write_text(tex, encoding="utf-8")
     print(f"Wrote {tex_path}")

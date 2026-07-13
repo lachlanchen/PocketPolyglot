@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "book_id": "shiji-sanjiazhu-comment-aware",
+  "status": "prepared-from-existing-json-and-public-commentary",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main_with_commentary",
+  "source_language": "wenyan",
+  "book_title_wenyan": "史記三家注",
+  "book_title_zh": "史记三家注",
+  "book_title_ja": "史記三家注",
+  "book_title_en": "Records of the Grand Historian with the Three Commentaries",
+  "author": "司馬遷",
+  "author_reading_zh": "sī mǎ qiān",
+  "author_reading_ja": "しば せん",
+  "commentators": [
+    {"label": "集解", "author": "裴駰"},
+    {"label": "索隱", "author": "司馬貞"},
+    {"label": "正義", "author": "張守節"}
+  ],
+  "data_policy": {
+    "base_json": "immutable_reuse",
+    "commentary": "source_only_no_model_generation",
+    "ambiguous_alignment": "reject_to_review_log",
+    "display_role": "zhu_between_wenyan_main_and_translations",
+    "display_prefix": "commentator_label_or_注",
+    "display_size": "between_main_and_translation_note",
+    "grammar_color": false,
+    "pinyin_ruby": true
+  },
+  "source_paths": {
+    "base_chunk_dir": "data/interlinear/shiji-aginti/chunks",
+    "wikisource_html_dir": "sources/shiji/commentaries/wikisource-combined/wikisource/html",
+    "wikisource_combined_json": "sources/shiji/commentaries/wikisource-combined/shiji-sanjiazhu-wikisource-pages.json",
+    "wikisource_combined_pdf": "sources/shiji/commentaries/wikisource-combined/shiji-sanjiazhu-wikisource.pdf",
+    "sanjiazhu_1959_pdf": "sources/shiji/commentaries/sanjiazhu/1959/史記三家注 - 中華書局 - 1959.pdf",
+    "huizhu_kaozheng_1955_pdf": "sources/shiji/commentaries/huizhu-kaozheng/1955/史記會注考證 - 瀧川資言 - 1955.pdf",
+    "huizhu_kaozheng_2015_pdf": "sources/shiji/commentaries/huizhu-kaozheng/2015/史記會注考證 - 瀧川資言 楊海崢 - 2015.pdf",
+    "jianzhen_2004_pdf": "sources/shiji/commentaries/jianzheng/2004/史記箋證 第一冊 - 韓兆琦 - 2004.pdf"
+  },
+  "commentary_sidecar": "books/shiji-sanjiazhu-comment-aware/work/commentary/commentary-sidecar.jsonl",
+  "alignment_report": "books/shiji-sanjiazhu-comment-aware/work/commentary/alignment-report.json",
+  "review_queue": "books/shiji-sanjiazhu-comment-aware/work/commentary/unmatched-review.jsonl",
+  "assembled_json": "books/shiji-sanjiazhu-comment-aware/work/preview/shiji-sanjiazhu-comment-aware.json",
+  "build_root": "build/shiji-sanjiazhu-comment-aware/maximum-language-large-font/wenyan-main-quadrilingual",
+  "cover_image": "assets/covers/shiji-aginti/cover.png"
+}
