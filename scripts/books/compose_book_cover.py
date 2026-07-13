@@ -292,14 +292,25 @@ def fit_vertical_font(
     max_height: int,
     min_size: int,
 ) -> tuple[ImageFont.FreeTypeFont, int]:
-    while size > min_size:
+    hard_floor = max(8, min(min_size, size))
+    while size >= hard_floor:
         gap = max(2, int(size * 0.10))
         fitted = font(font_path, size, index=index)
         if vertical_text_height(draw, text, fitted, gap) <= max_height:
             return fitted, gap
         size -= 2
-    gap = max(2, int(size * 0.10))
-    return font(font_path, size, index=index), gap
+
+    # Preserve unusually long multilingual titles instead of letting them run
+    # into the horizontal title, author, or credits below the title panel.
+    while size >= 8:
+        gap = max(1, int(size * 0.08))
+        fitted = font(font_path, size, index=index)
+        if vertical_text_height(draw, text, fitted, gap) <= max_height:
+            return fitted, gap
+        size -= 1
+
+    fitted = font(font_path, 8, index=index)
+    return fitted, 1
 
 
 def draw_vertical(
@@ -444,7 +455,15 @@ def main() -> int:
         max_height=title_max_height,
         min_size=int(HEIGHT * 0.030),
     )
-    side_font = font(SERIF_REGULAR, int(HEIGHT * 0.024), index=2)
+    side_font, side_gap = fit_vertical_font(
+        draw,
+        side_cjk,
+        SERIF_REGULAR,
+        int(HEIGHT * 0.024),
+        2,
+        max_height=int(HEIGHT * (0.660 - 0.200)),
+        min_size=int(HEIGHT * 0.010),
+    )
     small_font = font(SERIF_REGULAR, int(HEIGHT * 0.020), index=0)
 
     ink = TEXT_INK
@@ -476,7 +495,7 @@ def main() -> int:
             int(HEIGHT * 0.20),
             side_font,
             fill=muted,
-            gap=5,
+            gap=side_gap,
             max_bottom=int(HEIGHT * 0.66),
             shadow_fill=soft_shadow,
             stroke_fill=text_outline,
