@@ -71,7 +71,8 @@ def render_unit(unit: dict, direction: str, commentary: list[dict] | None = None
     else:
         lines.append(r"\ZhMainLine{" + render_tokens(zh_orig, "zhcnruby") + "}")
         for note in commentary or []:
-            label = tex_escape(str(note.get("label") or "注"))
+            source_label = str(note.get("label") or "").strip()
+            label = tex_escape("注" if not source_label or source_label == "注" else f"注·{source_label}")
             tokens = note.get("tokens") if isinstance(note.get("tokens"), list) else []
             lines.append(
                 r"\ZhuLine{" + label + "}{" + render_tokens(tokens, "zhcnruby", grammar=False) + "}"
@@ -193,6 +194,11 @@ def write_style_tex(out_dir: Path) -> None:
 
 \titleformat{\section}{\normalfont\normalsize\bfseries\jpfont}{\thesection}{0.5em}{}
 \titlespacing*{\section}{0pt}{0.65em}{0.25em}
+\setcounter{secnumdepth}{0}
+\makeatletter
+\renewcommand{\@pnumwidth}{3.2em}
+\renewcommand{\@tocrmarg}{3.8em}
+\makeatother
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}

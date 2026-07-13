@@ -32,6 +32,7 @@ T2S = OpenCC("t2s")
 @dataclass(frozen=True)
 class UnitRef:
     chunk_id: str
+    section_id: str
     paragraph_index: int
     unit_index: int
     source_text: str
@@ -168,6 +169,9 @@ def extract_html_notes(path: Path) -> list[dict[str, Any]]:
                 records.append(
                     {
                         "source_page": path.stem,
+                        "source_section": clean_text(
+                            (soup.find(["h2", "h3"]).get_text("", strip=True) if soup.find(["h2", "h3"]) else "")
+                        ),
                         "label": label,
                         "text": commentary,
                         "anchor_before": normalized_anchor(before)[-32:],
@@ -187,12 +191,13 @@ def load_units(chunk_dir: Path) -> list[UnitRef]:
     for path in sorted(chunk_dir.glob("*.json"), key=chunk_number):
         data = json.loads(path.read_text(encoding="utf-8"))
         chunk_id = str(data.get("chunk_id") or path.stem)
+        section_id = str(data.get("section", {}).get("id") or "")
         for paragraph_index, paragraph in enumerate(data.get("paragraphs", [])):
             for unit_index, unit in enumerate(paragraph.get("units", [])):
                 source = str(unit.get("source_text") or unit.get("source_wenyan") or "")
                 normalized = normalized_anchor(source)
                 if normalized:
-                    units.append(UnitRef(chunk_id, paragraph_index, unit_index, source, normalized))
+                    units.append(UnitRef(chunk_id, section_id, paragraph_index, unit_index, source, normalized))
     return units
 
 
@@ -205,6 +210,55 @@ def build_stream(units: list[UnitRef]) -> tuple[str, list[int]]:
         cursor += len(unit.normalized)
         ends.append(cursor)
     return "".join(parts), ends
+
+
+def section_ranges(units: list[UnitRef], ends: list[int]) -> dict[str, tuple[int, int]]:
+    ranges: dict[str, tuple[int, int]] = {}
+    for index, unit in enumerate(units):
+        key = normalized_anchor(unit.section_id)
+        if not key:
+            continue
+        start = ends[index - 1] if index else 0
+        if key not in ranges:
+            ranges[key] = (start, ends[index])
+        else:
+            ranges[key] = (ranges[key][0], ends[index])
+    return ranges
+
+
+def matching_section_range(
+    source_section: str,
+    ranges: dict[str, tuple[int, int]],
+) -> tuple[int, int] | None:
+    source = normalized_anchor(source_section)
+    candidates = [
+        (key, bounds)
+        for key, bounds in ranges.items()
+        if len(key) >= 2 and (source.startswith(key) or key.startswith(source))
+    ]
+    if not candidates:
+        return None
+    candidates.sort(key=lambda item: len(item[0]), reverse=True)
+    return candidates[0][1]
+
+
+def find_unique_in_range(
+    stream: str,
+    anchor: str,
+    bounds: tuple[int, int],
+    *,
+    from_end: bool,
+) -> tuple[int, int]:
+    start, end = bounds
+    window = stream[start:end]
+    for length in (32, 24, 18, 12):
+        needle = anchor[-length:] if from_end else anchor[:length]
+        if len(needle) < length:
+            continue
+        first = window.find(needle)
+        if first >= 0 and window.find(needle, first + 1) < 0:
+            return start + first, length
+    return -1, 0
 
 
 def find_anchor(
@@ -251,6 +305,7 @@ def main() -> int:
 
     units = load_units(ROOT / args.chunk_dir)
     stream, ends = build_stream(units)
+    ranges = section_ranges(units, ends)
     html_paths = sorted((ROOT / args.html_dir).glob("*.html"))
     if args.page_limit:
         html_paths = html_paths[: args.page_limit]
@@ -272,6 +327,30 @@ def main() -> int:
                 position, anchor_length, scope = find_anchor(stream, after, cursor, from_end=False)
                 target_offset = position if position >= 0 else -1
                 method = "anchor_after" if position >= 0 else "unmatched"
+            if position < 0:
+                bounds = matching_section_range(record.get("source_section", ""), ranges)
+                if bounds:
+                    position, anchor_length = find_unique_in_range(
+                        stream,
+                        record["anchor_before"],
+                        bounds,
+                        from_end=True,
+                    )
+                    if position >= 0:
+                        target_offset = position + anchor_length
+                        method = "section_anchor_before"
+                        scope = "section_unique"
+                    else:
+                        position, anchor_length = find_unique_in_range(
+                            stream,
+                            record["anchor_after"],
+                            bounds,
+                            from_end=False,
+                        )
+                        if position >= 0:
+                            target_offset = position
+                            method = "section_anchor_after"
+                            scope = "section_unique"
             if position < 0:
                 unmatched.append(record)
                 counts["unmatched"] += 1

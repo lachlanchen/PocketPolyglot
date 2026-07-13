@@ -38,6 +38,9 @@ OVERFULL_HOTSPOT_RE = re.compile(
 LATEX_ERROR_RE = re.compile(r"^! |Fatal error|Emergency stop|Undefined control sequence", re.M)
 INCLUDEGRAPHICS_RE = re.compile(r"\\includegraphics(?:\[[^\]]*\])?(\{[^}]+\})")
 LONGTABLE_SPEC_RE = re.compile(r"(\\begin\{longtable\}(?:\[[^\]]*\])?\{)([^{}]*(?:@\{\}[^{}]*)?)(\})")
+SIMPLE_LONGTABLE_SPEC_RE = re.compile(
+    r"(\\begin\{longtable\}(?:\[[^\]]*\])?\{@\{\})([lcrX]{2,})(@\{\}\})"
+)
 DISPLAY_MATH_RE = re.compile(r"\\\[(.*?)\\\]", re.S)
 ADJUSTBOX_DISPLAY_MATH_RE = re.compile(
     r"\\begin\{adjustbox\}\{max width=\\linewidth\}\s*"
@@ -164,6 +167,8 @@ def ensure_header() -> Path:
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>.72\textheight .72\textheight\else\Gin@nat@height\fi}
+\renewcommand{\@pnumwidth}{3.2em}
+\renewcommand{\@tocrmarg}{3.8em}
 \makeatother
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 """.strip()
@@ -339,17 +344,26 @@ KNOWN_LATEX_COMMANDS = {
 MALFORMED_SUP_RE = re.compile(r"\\\(<sup>\^\{\\</sup>rm\s*([^}]+)\}\\,?\\\)")
 MALFORMED_SUP_SIMPLE_RE = re.compile(r"\\\(<sup>\^?\{?\s*([^<>{}]+?)\s*\}?</sup>\\\)")
 MALFORMED_SUP_RM_RE = re.compile(r"\\\(<sup>\^\{\\?</sup>rm\s*([^}]+?)\}\\\)")
+MALFORMED_SUP_COMMAND_RE = re.compile(
+    r"\\\(<sup>\\</sup>(dagger|ast)\\,\s*mathrm\{([^}]+)\}\\\)"
+)
 ESCAPED_SUP_RE = re.compile(r"\\&lt;sup\\textgreater\s*([A-Za-z0-9]+)")
 HTML_SUP_RE = re.compile(r"<sup>\s*([A-Za-z0-9]+)\s*</sup>")
 LATEX_WORD_COMMAND_RE = re.compile(r"\\([A-Za-z]{2,})(?![A-Za-z])")
 WORD_BACKSLASH_ARTIFACT_RE = re.compile(
     r"(?<=[^\W\d_])\\"
-    r"(?!(?:textgreater|textless|textasciicircum|textasciitilde|textbackslash)\b)"
+    r"(?!(?:arraybackslash|allowbreak|linewidth|textheight|columnwidth|"
+    r"textgreater|textless|textasciicircum|textasciitilde|textbackslash)\b)"
     r"(?=[^\W\d_])"
 )
 
 
 def normalize_malformed_superscripts(text: str) -> str:
+    symbols = {"dagger": "†", "ast": "*"}
+    text = MALFORMED_SUP_COMMAND_RE.sub(
+        lambda match: rf"\textsuperscript{{{symbols[match.group(1)]}}} {match.group(2)}",
+        text,
+    )
     text = MALFORMED_SUP_RE.sub(lambda match: rf"\textsuperscript{{{match.group(1).strip()}}}", text)
     text = MALFORMED_SUP_RM_RE.sub(lambda match: rf"\textsuperscript{{{match.group(1).strip()}}}", text)
     text = MALFORMED_SUP_SIMPLE_RE.sub(lambda match: rf"\textsuperscript{{{match.group(1).strip()}}}", text)
@@ -375,6 +389,12 @@ def strip_unknown_text_commands(text: str) -> str:
 
 
 def repair_body_backslash_artifacts(text: str) -> str:
+    text = text.replace(
+        r">{raggedrightarraybackslash}",
+        r">{\raggedright\arraybackslash}",
+    )
+    text = re.sub(r"(?m)^hypersetup\{", r"\\hypersetup{", text)
+    text = re.sub(r"(?m)^setstretch\{", r"\\setstretch{", text)
     text = re.sub(r"\\Vi\s+thin\b", "Within", text)
     text = WORD_BACKSLASH_ARTIFACT_RE.sub("", text)
     text = re.sub(r"(?<=[^\W\d_])\?\\(?=[^\W\d_])", "", text)
@@ -421,6 +441,16 @@ def normalize_longtable_spec(spec: str) -> str:
     return prefix + wrapped + suffix
 
 
+def normalize_simple_longtable_specs(text: str) -> str:
+    def repl(match: re.Match[str]) -> str:
+        count = len(match.group(2))
+        width = max(0.08, min(0.44, 0.92 / count))
+        columns = "".join(rf"p{{{width:.3f}\linewidth}}" for _ in range(count))
+        return match.group(1) + columns + match.group(3)
+
+    return SIMPLE_LONGTABLE_SPEC_RE.sub(repl, text)
+
+
 def remove_source_contents_block(text: str) -> str:
     """Remove OCR/Pandoc-extracted printed contents when Pandoc creates a TOC."""
 
@@ -428,14 +458,14 @@ def remove_source_contents_block(text: str) -> str:
     start = text.find(marker)
     if start < 0:
         return text
-    window = text[start : start + 12000]
+    window = text[start : start + 100000]
     if "Contents" not in window or r"\begin{longtable}" not in window:
         return text
     # Only accept a nearby structural boundary. Searching the entire remaining
     # document can delete real front matter and early chapters when OCR assigns
     # those headings unexpected identifiers.
     next_match = re.search(
-        r"\n\\hypertarget\{(?:part-|chapter-|section-|[a-z0-9-]+chapter)",
+        r"\n\\hypertarget\{(?:maps|tables|preface(?:-[a-z0-9-]+)?|part-|chapter-|section-|[a-z0-9-]+chapter)\}\{%",
         window[1:],
     )
     if not next_match:
@@ -501,6 +531,7 @@ def postprocess_tex(tex_path: Path, *, layout: str) -> None:
         lambda match: match.group(1) + normalize_longtable_spec(match.group(2)) + match.group(3),
         text,
     )
+    text = normalize_simple_longtable_specs(text)
     if layout == "pocket":
         text = text.replace(
             r"\begin{longtable}",
