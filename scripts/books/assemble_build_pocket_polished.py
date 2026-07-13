@@ -21,6 +21,7 @@ from pocket_polished_common import (
     OUTPUT_ROOT,
     ROOT,
     compare_inventory,
+    inventory,
     read_json,
     read_jsonl,
     restored_segment_output,
@@ -30,10 +31,25 @@ from pocket_polished_common import (
 
 
 INCLUDEGRAPHICS_RE = re.compile(
-    r"(?P<prefix>\\includegraphics(?:\[[^\]]*\])?\{)(?P<path>[^{}]+)(?P<suffix>\})"
+    r"(?P<prefix>\\includegraphics(?:\[[^\]]*\])?\{)"
+    r"(?:(?P<detokenize>\\detokenize\{(?P<detokenized_path>[^{}]+)\})|(?P<path>[^{}]+))"
+    r"(?P<suffix>\})"
 )
 EXACT_GEOMETRY_RE = re.compile(
     r"\\usepackage\[paperwidth=148mm,paperheight=210mm,inner=14mm,outer=12mm,top=14mm,bottom=16mm\]\{geometry\}"
+)
+GEOMETRY_COMMAND_RE = re.compile(r"\\geometry\{[^{}]*paperwidth=[^{}]+\}")
+GEOMETRY_PACKAGE_RE = re.compile(
+    r"\\usepackage\[[^\]]*paperwidth=[^\]]+\]\{geometry\}"
+)
+FULL_BLEED_IMAGE_RE = re.compile(
+    r"(?m)^(?P<indent>[ \t]*)\\noindent"
+    r"(?P<image>\\includegraphics\[[^\]]*\\paperwidth[^\]]*\]\{(?:\\detokenize\{)?[^\n]+\})[ \t]*$"
+)
+STANDALONE_IMAGE_RE = re.compile(
+    r"^(?P<indent>[ \t]*)(?:\\noindent[ \t]*)?"
+    r"(?P<image>\\includegraphics(?:\[[^\]]*\])?\{[^{}]+\})"
+    r"(?P<tail>(?:[ \t]*\\(?:par|smallskip|medskip|bigskip))*)[ \t]*$"
 )
 
 
@@ -42,7 +58,7 @@ def copy_and_rewrite_figures(tex: str, destination: Path) -> str:
     copied: dict[Path, Path] = {}
 
     def replace(match: re.Match[str]) -> str:
-        raw = match.group("path")
+        raw = match.group("detokenized_path") or match.group("path")
         source = Path(raw)
         if not source.is_absolute():
             source = (ROOT / source).resolve()
@@ -54,25 +70,89 @@ def copy_and_rewrite_figures(tex: str, destination: Path) -> str:
             if not target.exists():
                 shutil.copy2(source, target)
             copied[source] = target
-        return match.group("prefix") + copied[source].resolve().as_posix() + match.group("suffix")
+        rendered = copied[source].resolve().as_posix()
+        if match.group("detokenize"):
+            rendered = rf"\detokenize{{{rendered}}}"
+        return match.group("prefix") + rendered + match.group("suffix")
 
     return INCLUDEGRAPHICS_RE.sub(replace, tex)
 
 
+def center_standalone_figures(tex: str) -> tuple[str, int]:
+    lines = tex.splitlines(keepends=True)
+    centered = 0
+    protected_depth = 0
+    result: list[str] = []
+    protected_environments = ("center", "figure", "figure*", "table", "table*", "longtable", "tabular", "tabularx")
+    for line in lines:
+        depth_before = protected_depth
+        for environment in protected_environments:
+            protected_depth += line.count(rf"\begin{{{environment}}}")
+            protected_depth -= line.count(rf"\end{{{environment}}}")
+        match = STANDALONE_IMAGE_RE.match(line.rstrip("\r\n"))
+        if (
+            match
+            and depth_before == 0
+            and r"\paperwidth" not in line
+            and r"\paperheight" not in line
+            and "assets/covers/" not in line
+        ):
+            newline = "\r\n" if line.endswith("\r\n") else "\n"
+            indent = match.group("indent")
+            result.extend(
+                [
+                    f"{indent}\\begin{{center}}{newline}",
+                    f"{indent}{match.group('image')}{match.group('tail')}{newline}",
+                    f"{indent}\\end{{center}}{newline}",
+                ]
+            )
+            centered += 1
+        else:
+            result.append(line)
+    return "".join(result), centered
+
+
+def normalize_full_bleed_images(tex: str) -> tuple[str, int]:
+    """Keep intentional cover bleed centered without an overfull-box warning."""
+
+    def replace(match: re.Match[str]) -> str:
+        indent = match.group("indent")
+        image = match.group("image")
+        return f"{indent}\\noindent\\makebox[\\textwidth][c]{{{image}}}"
+
+    return FULL_BLEED_IMAGE_RE.subn(replace, tex)
+
+
 def pocket_layout(tex: str) -> str:
-    pocket_geometry = (
+    pocket_geometry_package = (
         r"\usepackage[paperwidth=105mm,paperheight=148mm,inner=6.5mm,"
         r"outer=5.5mm,top=8mm,bottom=12mm]{geometry}"
     )
-    text, count = EXACT_GEOMETRY_RE.subn(lambda _match: pocket_geometry, tex, count=1)
+    pocket_geometry_command = (
+        r"\geometry{paperwidth=105mm,paperheight=148mm,inner=6.5mm,"
+        r"outer=5.5mm,top=8mm,bottom=12mm}"
+    )
+    text, count = GEOMETRY_COMMAND_RE.subn(
+        lambda _match: pocket_geometry_command,
+        tex,
+        count=1,
+    )
     if not count:
-        text = re.sub(
-            r"\\usepackage\[[^\]]*paperwidth=[^\]]+\]\{geometry\}",
-            lambda _match: pocket_geometry,
+        text, count = EXACT_GEOMETRY_RE.subn(
+            lambda _match: pocket_geometry_package,
             text,
             count=1,
         )
+    if not count:
+        text, count = GEOMETRY_PACKAGE_RE.subn(
+            lambda _match: pocket_geometry_package,
+            text,
+            count=1,
+        )
+    if not count:
+        raise ValueError("cannot derive pocket layout: source geometry was not recognized")
     text = re.sub(r"\\setstretch\{1\.0?8\}", lambda _match: r"\setstretch{1.12}", text)
+    text = re.sub(r"\\linespread\{1\.0[0-9]\}", lambda _match: r"\linespread{1.10}", text)
     text = text.replace(
         r"\begingroup\small\setlength{\tabcolsep}{3pt}\begin{longtable}",
         r"\begingroup\footnotesize\setlength{\tabcolsep}{2pt}\begin{longtable}",
@@ -81,15 +161,35 @@ def pocket_layout(tex: str) -> str:
     return apply_pocket_footer_defaults(text)
 
 
-def compile_variant(book_root: Path, language: str, layout: str, tex: str, cover: Path | None) -> dict[str, Any]:
+def compile_variant(
+    book_root: Path,
+    language: str,
+    layout: str,
+    tex: str,
+    cover: Path | None,
+    *,
+    expected_graphics: int,
+) -> dict[str, Any]:
     variant_root = book_root / layout / language
     tex_path = variant_root / "tex/book.tex"
     tex_path.parent.mkdir(parents=True, exist_ok=True)
     tex_path.write_text(tex, encoding="utf-8")
+    injected_cover_count = 0
     if cover and cover.exists():
-        inject_cover_page(tex_path, cover)
+        injected_cover_count = int(inject_cover_page(tex_path, cover))
     report = compile_tex(tex_path, variant_root / "book.pdf")
-    report["layout_clean"] = not report.get("latex_error_markers") and report.get("worst_overfull_pt", 0) <= 2.0
+    rendered_expected = expected_graphics
+    report["source_includegraphics_count"] = expected_graphics
+    report["injected_cover_count"] = injected_cover_count
+    report["expected_includegraphics_count"] = rendered_expected
+    report["objects_complete"] = report.get("includegraphics_count") == rendered_expected
+    report["searchable_text_present"] = report.get("text_chars", 0) >= 1000
+    report["layout_clean"] = (
+        not report.get("latex_error_markers")
+        and report.get("worst_overfull_pt", 0) <= 2.0
+        and report["objects_complete"]
+        and report["searchable_text_present"]
+    )
     return report
 
 
@@ -99,6 +199,8 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
     segments = read_jsonl(book_root / "source/segments.jsonl")
     tasks = read_jsonl(book_root / "tasks/chunks.jsonl")
     source_tex = Path(ROOT / manifest["source_exact_tex"]).read_text(encoding="utf-8")
+    validation_profile = manifest.get("validation_profile", "prose_exact")
+    source_inventory = inventory(source_tex)
     task_segment_map: dict[str, dict[str, Any]] = {}
     output_segment_map: dict[str, dict[str, Any]] = {}
     missing: list[str] = []
@@ -179,6 +281,17 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
         },
     )
 
+    centered_figures: dict[str, int] = {"en": 0, "ja": 0}
+    normalized_full_bleed: dict[str, int] = {"en": 0, "ja": 0}
+    if validation_profile == "technical_exact":
+        for language in ("en", "ja"):
+            assembled[language], centered_figures[language] = center_standalone_figures(
+                assembled[language]
+            )
+            assembled[language], normalized_full_bleed[language] = normalize_full_bleed_images(
+                assembled[language]
+            )
+
     figure_root = book_root / "assets/figures"
     assembled = {
         language: copy_and_rewrite_figures(tex, figure_root)
@@ -200,6 +313,7 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
                 "exact",
                 assembled[language],
                 cover,
+                expected_graphics=source_inventory["includegraphics"],
             )
             reports[f"pocket_{language}"] = compile_variant(
                 book_root,
@@ -207,6 +321,7 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
                 "pocket-large-font",
                 pocket_layout(assembled[language]),
                 cover,
+                expected_graphics=source_inventory["includegraphics"],
             )
     else:
         for language in ("en", "ja"):
@@ -227,6 +342,10 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
         "reports": reports,
         "layout_issues": layout_issues,
         "source_inventory_verified": True,
+        "source_inventory": source_inventory,
+        "validation_profile": validation_profile,
+        "centered_standalone_figures": centered_figures,
+        "normalized_full_bleed_images": normalized_full_bleed,
         "assembled_at": datetime.now(timezone.utc).isoformat(),
     }
     write_json(book_root / "status.json", status)

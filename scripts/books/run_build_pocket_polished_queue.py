@@ -75,17 +75,18 @@ def run_workers(
     return complete == total
 
 
-def write_queue_status(payload: dict) -> None:
+def write_queue_status(path: Path, payload: dict) -> None:
     payload["updated_at"] = datetime.now(timezone.utc).isoformat()
-    write_json(OUTPUT_ROOT / "status.json", payload)
+    write_json(path, payload)
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--queue", type=Path, default=OUTPUT_ROOT / "tasks/queue.json")
+    parser.add_argument("--status", type=Path, default=OUTPUT_ROOT / "status.json")
     parser.add_argument("--book-id", action="append", default=[])
     parser.add_argument("--start-book", default="")
-    parser.add_argument("--workers", type=int, default=2)
+    parser.add_argument("--workers", type=int, default=5)
     parser.add_argument("--model", default="gpt-5.6-sol")
     parser.add_argument("--reasoning", default="low")
     parser.add_argument("--retries", type=int, default=4)
@@ -122,12 +123,12 @@ def main() -> int:
             if prior.get("status") == "complete":
                 print(f"[{index}/{len(books)}] {book_id}: already complete", flush=True)
                 state["books"][book_id] = {"status": "already_complete"}
-                write_queue_status(state)
+                write_queue_status(args.status, state)
                 continue
         print(f"[{index}/{len(books)}] {book_id}: polishing", flush=True)
         state["current_book"] = book_id
         state["books"][book_id] = {"status": "running"}
-        write_queue_status(state)
+        write_queue_status(args.status, state)
         complete = False
         previous = progress(book_id)[0]
         for pass_index in range(1, args.retry_passes + 1):
@@ -151,7 +152,7 @@ def main() -> int:
         if not complete:
             valid, total = progress(book_id)
             state["books"][book_id] = {"status": "blocked_chunks", "valid": valid, "total": total}
-            write_queue_status(state)
+            write_queue_status(args.status, state)
             print(f"{book_id}: blocked at {valid}/{total}; queue stopped for repair", flush=True)
             return 1
 
@@ -162,13 +163,13 @@ def main() -> int:
         )
         status = read_json(OUTPUT_ROOT / book_id / "status.json")
         state["books"][book_id] = status
-        write_queue_status(state)
+        write_queue_status(args.status, state)
         if result.returncode or status.get("status") != "complete":
             print(f"{book_id}: assembly/layout validation blocked; queue stopped for repair", flush=True)
             return 1
     state.pop("current_book", None)
     state["status"] = "complete"
-    write_queue_status(state)
+    write_queue_status(args.status, state)
     return 0
 
 

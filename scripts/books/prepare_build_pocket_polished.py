@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -23,22 +24,67 @@ from pocket_polished_common import (
 )
 
 
+INPUT_RE = re.compile(r"\\input\{(?P<path>[^{}]+)\}")
+
+
+def source_paths(task: dict) -> tuple[Path, Path | None]:
+    if task.get("source_exact_tex"):
+        exact = ROOT / task["source_exact_tex"]
+    else:
+        exact = ROOT / "build-pocket" / task["book_id"] / "exact/tex/book.tex"
+    body = ROOT / task["source_body_tex"] if task.get("source_body_tex") else None
+    return exact, body
+
+
+def flatten_source(task: dict, destination: Path) -> tuple[str, Path, Path | None]:
+    exact, body = source_paths(task)
+    if not exact.exists():
+        raise FileNotFoundError(f"missing exact source TeX: {exact}")
+    text = exact.read_text(encoding="utf-8", errors="strict")
+    if body is not None:
+        if not body.exists():
+            raise FileNotFoundError(f"missing source body TeX: {body}")
+        body_text = body.read_text(encoding="utf-8", errors="strict")
+        matches = list(INPUT_RE.finditer(text))
+        matching = [
+            match
+            for match in matches
+            if (ROOT / match.group("path")).resolve() == body.resolve()
+        ]
+        if len(matching) != 1:
+            raise ValueError(
+                f"expected one input of {body.relative_to(ROOT)} in {exact.relative_to(ROOT)}, "
+                f"found {len(matching)}"
+            )
+        match = matching[0]
+        text = text[: match.start()] + body_text + text[match.end() :]
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_text(text, encoding="utf-8")
+    return text, exact, body
+
+
 def prepare_book(task: dict, *, max_chars: int, force: bool) -> dict:
     book_id = task["book_id"]
-    source_tex = ROOT / "build-pocket" / book_id / "exact/tex/book.tex"
-    if not source_tex.exists():
-        raise FileNotFoundError(f"missing exact source TeX: {source_tex}")
     book_root = OUTPUT_ROOT / book_id
     manifest_path = book_root / "tasks/manifest.json"
-    source_text = source_tex.read_text(encoding="utf-8", errors="strict")
+    source_tex = book_root / "source/exact-flattened.tex"
+    source_text, upstream_exact, upstream_body = flatten_source(task, source_tex)
     source_hash = sha256_text(source_text)
-    source_language = detect_source_language(source_text)
+    validation_profile = task.get("validation_profile", "prose_exact")
+    source_language = detect_source_language(
+        source_text,
+        validation_profile=validation_profile,
+    )
     if manifest_path.exists() and not force:
         current = __import__("json").loads(manifest_path.read_text(encoding="utf-8"))
         if current.get("source_tex_sha256") == source_hash and current.get("max_chunk_chars") == max_chars:
             return current
 
-    segments = split_tex_segments(source_text, book_id)
+    segments = split_tex_segments(
+        source_text,
+        book_id,
+        validation_profile=validation_profile,
+    )
     chunks = make_review_chunks(
         segments,
         book_id=book_id,
@@ -46,7 +92,10 @@ def prepare_book(task: dict, *, max_chars: int, force: bool) -> dict:
         source=task["source"],
         source_language=source_language,
         max_chars=max_chars,
+        validation_profile=validation_profile,
     )
+    for chunk in chunks:
+        chunk["validation_profile"] = validation_profile
     write_jsonl(book_root / "source/segments.jsonl", segments)
     write_jsonl(book_root / "tasks/chunks.jsonl", chunks)
     manifest = {
@@ -57,17 +106,30 @@ def prepare_book(task: dict, *, max_chars: int, force: bool) -> dict:
         "source": task["source"],
         "source_language": source_language,
         "source_exact_tex": str(source_tex.relative_to(ROOT)),
+        "upstream_exact_tex": str(upstream_exact.relative_to(ROOT)),
+        "upstream_body_tex": (
+            str(upstream_body.relative_to(ROOT)) if upstream_body is not None else None
+        ),
         "source_tex_sha256": source_hash,
         "segment_count": len(segments),
-        "review_segment_count": sum(item["kind"] in {"text", "table"} for item in segments),
+        "review_segment_count": sum(
+            item["kind"]
+            in (
+                {"text", "table", "math"}
+                if validation_profile == "technical_exact"
+                else {"text", "table"}
+            )
+            for item in segments
+        ),
         "protected_segment_count": sum(item["kind"] == "protected" for item in segments),
         "chunk_count": len(chunks),
         "max_chunk_chars": max_chars,
         "prepared_at": datetime.now(timezone.utc).isoformat(),
+        "validation_profile": validation_profile,
         "policy": {
             "source_is_immutable": True,
             "no_facsimile": True,
-                "languages": ["en", "ja"],
+            "languages": ["en", "ja"],
             "semantic_review_required": True,
             "protected_objects": ["figures", "equations", "references", "labels", "numeric_facts"],
         },
@@ -82,6 +144,12 @@ def main() -> int:
     parser.add_argument("--book-id", action="append", default=[])
     parser.add_argument("--max-chars", type=int, default=7000)
     parser.add_argument("--force", action="store_true")
+    parser.add_argument(
+        "--output-queue",
+        type=Path,
+        default=OUTPUT_ROOT / "tasks/queue.json",
+        help="Write the runnable prepared queue to this path.",
+    )
     args = parser.parse_args()
     if args.max_chars < 1500:
         parser.error("--max-chars must be at least 1500")
@@ -110,7 +178,7 @@ def main() -> int:
             flush=True,
         )
     write_json(
-        OUTPUT_ROOT / "tasks/queue.json",
+        args.output_queue,
         {
             "schema_version": 1,
             "model": "gpt-5.6-sol",

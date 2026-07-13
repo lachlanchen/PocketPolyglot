@@ -36,6 +36,69 @@ The compile target is not just “a PDF exists”. The quality target is:
      indentation, modest paragraph spacing, relaxed baseline, plain page style,
      and constrained figures.
 
+## Evidence-Gated Exact Polishing Queue
+
+Use the `build-pocket-polished` workflow when a real exact TeX body already
+exists but still needs page/chunk-level OCR repair, English cleanup, readable
+modern Japanese, and stricter publication validation.
+
+Each source task declares an immutable wrapper and body:
+
+```json
+{
+  "book_id": "example-mathpix-exact-book",
+  "source_exact_tex": "build/example/exact/source.tex",
+  "source_body_tex": "build/example/work/body.tex",
+  "validation_profile": "technical_exact"
+}
+```
+
+Prepare a reusable queue without modifying either upstream file:
+
+```bash
+python scripts/books/prepare_build_pocket_polished.py \
+  --queue data/source-plan/technical-exact-polished-queue.json \
+  --output-queue build-pocket-polished/tasks/technical-exact-queue.json
+```
+
+Start or resume it in an isolated tmux session:
+
+```bash
+WORKERS=5 MODEL=gpt-5.6-sol REASONING=low \
+  bash scripts/books/start_technical_exact_polished_tmux.sh
+```
+
+The runner performs these gates:
+
+1. Flatten the wrapper and body into a new standalone evidence snapshot.
+2. Verify the split is byte-lossless and record its SHA-256 digest.
+3. Keep figures, diagrams, notation images, citations, labels, references, and
+   URLs immutable.
+4. Permit mathematical TeX repair only for grounded OCR defects, with an exact
+   before/after change record. English and Japanese must retain the same math
+   atom multiset even when Japanese grammar reorders clauses.
+5. Preserve table rows/columns, numbers, structural commands, technical
+   environments, object counts, paths, and ordering through deterministic
+   validation.
+6. Require a separate semantic reviewer to accept every chunk.
+7. Center standalone figures and derive a true A6 pocket layout from either
+   `\geometry{...}` or package-option geometry syntax.
+8. Compile exact and pocket English/Japanese PDFs with XeLaTeX. Missing assets,
+   non-searchable output, TeX errors, object-count changes, or overflow above
+   the configured gate stop the queue for repair instead of producing a false
+   completion claim.
+
+The default output/status paths are:
+
+```text
+build-pocket-polished/<book-id>/
+build-pocket-polished/status-technical-exact.json
+```
+
+Set `PREPARE_FORCE=1` only after changing segmentation or validation policy.
+Accepted JSON remains resumable; failed-attempt evidence stays under the
+book-local `work/` directory.
+
 ## Reusable Commands
 
 Raw compiler:
@@ -94,4 +157,3 @@ python3 scripts/interlinear/compile_textbook_exact_autorepair.py \
 - severe overfull lines are either fixed or logged as review tasks;
 - spot-check cover, early body page, formula/table page, figure-heavy page, and
   pocket text spacing.
-

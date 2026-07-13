@@ -71,15 +71,48 @@ def writer_prompt(task: dict[str, Any], feedback: list[str]) -> str:
         else "changes records are only for definite corrections to damaged source text; ordinary translation "
         "does not need a changes record. Never silently guess damaged source text."
     )
+    technical_instruction = ""
+    protected_instruction = (
+        "Keep every @@PROTECTED_NNNN@@ token exactly once and in the same order. They represent equations, "
+        "figures, citations, labels, URLs, or inline math."
+    )
+    structure_instruction = (
+        "Preserve the exact TeX command sequence, braces, table rows/columns, numbers, equation references, "
+        "names, dates, units, and ordering."
+    )
+    if task.get("validation_profile") == "technical_exact":
+        technical_instruction = (
+            "This is an exact technical-book pass. Treat equations, figures, diagrams, flowcharts, tables, "
+            "captions, exercises, music notation, chord diagrams, and fretboards as first-class source content. "
+            "Never rewrite mathematical expressions or visual-object tokens from memory. Mathematical TeX is "
+            "visible so that definite OCR/transcription defects can be repaired; apply such a repair only when "
+            "the supplied source and local context make it unambiguous, record it in changes, and use the exact "
+            "same corrected mathematical atoms and duplicate counts in en_tex and ja_tex; Japanese may reorder "
+            "expressions or split a semicolon-separated expression only where its natural grammar requires it. "
+            "In editable tables, preserve "
+            "every row, column, symbol, "
+            "unit, and relation while correcting only evidence-clear OCR text."
+        )
+        protected_instruction = (
+            "Keep every @@PROTECTED_NNNN@@ token exactly once and in the same order. They represent immutable "
+            "figures, citations, labels, references, or URLs."
+        )
+        structure_instruction = (
+            "Preserve structural TeX commands, braces, table rows/columns, numbers, equation references, names, "
+            "dates, units, and ordering. Mathematical commands may change only for a definite, grounded OCR "
+            "repair and must then be preserved exactly in both en_tex and ja_tex."
+        )
     return f"""You are producing a source-faithful, publication-quality English/Japanese edition of one technical or scholarly book chunk.
 
 This is transcription repair and translation, not creative writing. The supplied exact TeX is the authority.
+{technical_instruction}
 
 Required work:
 1. {english_instruction}
 2. For ja_tex, provide complete, natural, modern, readable Japanese faithful to every claim and qualification in the English source. Do not omit or add facts.
-3. Keep every @@PROTECTED_NNNN@@ token exactly once and in the same order. They represent equations, figures, citations, labels, URLs, or inline math.
-4. Preserve the exact TeX command sequence, braces, table rows/columns, numbers, equation references, names, dates, units, and ordering.
+3. {protected_instruction}
+4. {structure_instruction}
+   Keep written number words written as words in translation; do not introduce new Arabic digits (for example, translate "Fifth" as 第五, not 第5).
 5. Do not invent missing words. If source damage cannot be resolved from context with high confidence, preserve it and list the uncertainty in unresolved.
 6. {change_instruction}
 7. Return only JSON matching the supplied schema. Do not edit files and do not call another agent.
@@ -93,11 +126,22 @@ Task JSON:
 
 
 def reviewer_prompt(task: dict[str, Any], candidate: dict[str, Any]) -> str:
+    technical_instruction = ""
+    if task.get("validation_profile") == "technical_exact":
+        technical_instruction = (
+            "For this exact technical edition, independently verify that editable table structure and all visible "
+            "technical labels remain complete, and that no equation, figure, diagram, flowchart, music notation, "
+            "exercise, unit, or symbol has been inferred or silently omitted. The mathematical-expression multiset "
+            "must be identical between en_tex and ja_tex, though Japanese may reorder complete expressions; accept "
+            "a mathematical correction only when it is an unambiguous source OCR "
+            "repair with a grounded changes record."
+        )
     return f"""Act as a strict bilingual textual editor validating a proposed English/Japanese TeX chunk against its source.
 
 Accept only if all source content is retained in order, English changes are definite corrections, Japanese is complete/natural/accurate, and no claim, name, number, qualification, table relation, equation reference, or protected TeX object is added, removed, or altered.
 
 Do not demand stylistic rewrites. Do not reject faithful literal terminology merely because another translation is possible. Reject factual invention, omissions, mistranslation, unresolved OCR silently guessed, garbled Japanese, or structural corruption. Return only JSON matching the review schema.
+{technical_instruction}
 
 Source task:
 {json.dumps(task, ensure_ascii=False, indent=2)}
@@ -175,12 +219,35 @@ def valid_existing(task: dict[str, Any], path: Path) -> bool:
     return not validate_chunk_output(task, result)
 
 
+def process_is_alive(pid: int) -> bool:
+    try:
+        os.kill(pid, 0)
+    except ProcessLookupError:
+        return False
+    except PermissionError:
+        return True
+    return True
+
+
 def acquire_lock(path: Path) -> int | None:
     path.parent.mkdir(parents=True, exist_ok=True)
     try:
         return os.open(path, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o644)
     except FileExistsError:
-        return None
+        try:
+            match = re.search(r"\bpid=(\d+)\b", path.read_text(encoding="utf-8"))
+        except OSError:
+            return None
+        if not match or process_is_alive(int(match.group(1))):
+            return None
+        try:
+            path.unlink()
+        except FileNotFoundError:
+            pass
+        try:
+            return os.open(path, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o644)
+        except FileExistsError:
+            return None
 
 
 def process_chunk(
@@ -195,7 +262,9 @@ def process_chunk(
 ) -> bool:
     chunk_id = task["chunk_id"]
     output_path = book_root / "json" / f"{chunk_id}.json"
+    failed_path = book_root / "work/failed" / f"{chunk_id}.json"
     if valid_existing(task, output_path):
+        failed_path.unlink(missing_ok=True)
         print(f"skip valid {chunk_id}", flush=True)
         return True
     lock_path = book_root / "work/locks" / f"{chunk_id}.lock"
@@ -280,10 +349,11 @@ def process_chunk(
             output_path.parent.mkdir(parents=True, exist_ok=True)
             write_json(output_path, candidate)
             write_json(book_root / "review" / f"{chunk_id}.json", review)
+            failed_path.unlink(missing_ok=True)
             print(f"accepted {chunk_id}", flush=True)
             return True
         write_json(
-            book_root / "work/failed" / f"{chunk_id}.json",
+            failed_path,
             {"chunk_id": chunk_id, "attempts": retries, "last_feedback": feedback},
         )
         print(f"failed {chunk_id} after {retries} attempts", flush=True)

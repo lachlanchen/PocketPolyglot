@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "queue_id": "technical-exact-polished",
+  "model": "gpt-5.6-sol",
+  "reasoning": "low",
+  "workers": 5,
+  "output_root": "build-pocket-polished",
+  "contract": {
+    "source_policy": "Treat exact wrapper and body TeX as immutable evidence; flatten into a new standalone snapshot.",
+    "content_policy": "Correct only evidence-supported OCR or transcription defects. Do not summarize, omit, invent, or alter technical meaning.",
+    "object_policy": "Preserve equations, figures, diagrams, flowcharts, tables, captions, exercises, music notation, chord diagrams, and fretboards.",
+    "layout_policy": "Center standalone figures, constrain objects to the text area, compile exact and pocket editions, and reject missing assets, TeX errors, or severe overflow.",
+    "languages": [
+      "en",
+      "ja"
+    ]
+  },
+  "tasks": [
+    {
+      "book_id": "game-theory-mathpix-exact-book",
+      "title": "Game Theory",
+      "author": "Martin J. Osborne and Ariel Rubinstein",
+      "source": "build/game-theory-mathpix-exact-book/exact/game-theory-mathpix-exact.pdf",
+      "source_exact_tex": "build/game-theory-mathpix-exact-book/exact/source.tex",
+      "source_body_tex": "build/game-theory-mathpix-exact-book/work/body.tex",
+      "validation_profile": "technical_exact"
+    },
+    {
+      "book_id": "game-theory-101-mathpix-exact-book",
+      "title": "Game Theory 101: The Complete Textbook",
+      "author": "William Spaniel",
+      "source": "build/game-theory-101-mathpix-exact-book/exact/game-theory-101-mathpix-exact.pdf",
+      "source_exact_tex": "build/game-theory-101-mathpix-exact-book/exact/source.tex",
+      "source_body_tex": "build/game-theory-101-mathpix-exact-book/work/body.tex",
+      "validation_profile": "technical_exact"
+    },
+    {
+      "book_id": "qft-gifted-amateur-mathpix-exact-book",
+      "title": "Quantum Field Theory for the Gifted Amateur",
+      "author": "Tom Lancaster and Stephen J. Blundell",
+      "source": "build/qft-gifted-amateur-mathpix-exact-book/exact/qft-gifted-amateur-mathpix-exact.pdf",
+      "source_exact_tex": "build/qft-gifted-amateur-mathpix-exact-book/exact/source.tex",
+      "source_body_tex": "build/qft-gifted-amateur-mathpix-exact-book/work/body.tex",
+      "validation_profile": "technical_exact"
+    },
+    {
+      "book_id": "chaos-making-new-science-mathpix-exact-book",
+      "title": "Chaos: Making a New Science",
+      "author": "James Gleick",
+      "source": "build/chaos-making-new-science-mathpix-exact-book/exact/chaos-making-new-science-mathpix-exact.pdf",
+      "source_exact_tex": "build/chaos-making-new-science-mathpix-exact-book/exact/source.tex",
+      "source_body_tex": "build/chaos-making-new-science-mathpix-exact-book/work/body.tex",
+      "validation_profile": "technical_exact"
+    },
+    {
+      "book_id": "berklee-music-theory-book-1-local-exact-book",
+      "title": "Berklee Music Theory Book 1",
+      "author": "Paul Schmeling",
+      "source": "build/berklee-music-theory-book-1-local-exact-book/exact/berklee-music-theory-book-1-local-exact.pdf",
+      "source_exact_tex": "build/berklee-music-theory-book-1-local-exact-book/exact/source.tex",
+      "source_body_tex": "build/berklee-music-theory-book-1-local-exact-book/work/body.tex",
+      "validation_profile": "technical_exact"
+    },
+    {
+      "book_id": "nonlinear-dynamics-and-chaos-mathpix-exact-book",
+      "title": "Nonlinear Dynamics and Chaos",
+      "author": "Steven H. Strogatz",
+      "source": "build/nonlinear-dynamics-and-chaos-mathpix-exact-book/exact/nonlinear-dynamics-and-chaos-mathpix-exact.pdf",
+      "source_exact_tex": "build/nonlinear-dynamics-and-chaos-mathpix-exact-book/exact/source.tex",
+      "source_body_tex": "build/nonlinear-dynamics-and-chaos-mathpix-exact-book/work/body.tex",
+      "validation_profile": "technical_exact"
+    },
+    {
+      "book_id": "tom-kolb-music-theory-guitarists-local-exact-book",
+      "title": "Music Theory for Guitarists",
+      "author": "Tom Kolb",
+      "source": "build/tom-kolb-music-theory-guitarists-local-exact-book/exact/tom-kolb-music-theory-guitarists-local-exact.pdf",
+      "source_exact_tex": "build/tom-kolb-music-theory-guitarists-local-exact-book/exact/source.tex",
+      "source_body_tex": "build/tom-kolb-music-theory-guitarists-local-exact-book/work/body.tex",
+      "validation_profile": "technical_exact"
+    }
+  ]
+}

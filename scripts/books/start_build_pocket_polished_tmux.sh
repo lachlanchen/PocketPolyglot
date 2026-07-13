@@ -5,11 +5,18 @@ root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$root"
 
 session="${1:-zhjpbook-build-pocket-polished}"
-workers="${WORKERS:-2}"
+workers="${WORKERS:-5}"
 model="${MODEL:-gpt-5.6-sol}"
 reasoning="${REASONING:-low}"
 start_book="${START_BOOK:-}"
 smoke_book="${SMOKE_BOOK:-black-holes-string-theory-revolution}"
+queue="${QUEUE:-build-pocket-polished/tasks/queue.json}"
+status="${STATUS:-build-pocket-polished/status.json}"
+
+if [[ ! -f "$queue" ]]; then
+  echo "missing prepared queue: $queue" >&2
+  exit 1
+fi
 
 if tmux has-session -t "=$session" 2>/dev/null; then
   echo "tmux session already exists: $session"
@@ -29,6 +36,8 @@ cd '$root' && \
   --worker-index 1 --workers 1 --max-chunks 1 \
   --model '$model' --reasoning '$reasoning' && \
 python -u scripts/books/run_build_pocket_polished_queue.py \
+  --queue '$queue' \
+  --status '$status' \
   --workers '$workers' \
   --model '$model' \
   --reasoning '$reasoning' \
@@ -40,4 +49,6 @@ echo "workers: $workers"
 echo "model: $model"
 echo "reasoning: $reasoning"
 echo "smoke_book: $smoke_book"
+echo "queue: $queue"
+echo "status: $status"
 echo "log: $log"

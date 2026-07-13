@@ -22,15 +22,54 @@ ATOMIC_ENV_RE = re.compile(
     r"lstlisting|adjustbox)\}(?P<body>.*?)\\end\{(?P=env)\}",
     re.S,
 )
-DISPLAY_MATH_RE = re.compile(r"\\\[(?:.|\n)*?\\\]", re.S)
+DISPLAY_MATH_RE = re.compile(r"\\\[.*?\\\]", re.S)
+INCLUDEGRAPHICS_TOKEN_RE = re.compile(
+    r"\\includegraphics(?:\[[^\]]*\])?"
+    r"\{(?P<argument>\\detokenize\{[^{}]*\}|[^{}]*)\}"
+)
 INLINE_PROTECTED_RE = re.compile(
-    r"\\includegraphics(?:\[[^\]]*\])?\{[^{}]*\}"
-    r"|\\(?:label|ref|pageref|eqref|cite|url)\{[^{}]*\}"
-    r"|\\\((?:.|\n)*?\\\)"
-    r"|(?<!\\)\$(?:\\.|[^$\n])*?(?<!\\)\$",
+    INCLUDEGRAPHICS_TOKEN_RE.pattern
+    + r"|\\(?:label|ref|pageref|eqref|cite|url)\{[^{}]*\}"
+    + r"|\\\(.*?\\\)"
+    + r"|(?<!\\)\$(?:\\.|[^$\n])*?(?<!\\)\$",
+    re.S,
+)
+NON_MATH_INLINE_PROTECTED_RE = re.compile(
+    INCLUDEGRAPHICS_TOKEN_RE.pattern
+    + r"|\\(?:label|ref|pageref|eqref|cite|url)\{[^{}]*\}",
     re.S,
 )
 COMMAND_RE = re.compile(r"\\[A-Za-z@]+\*?|\\.")
+STRUCTURAL_COMMAND_RE = re.compile(
+    r"\\(?:begin|end)\{[^{}]+\}"
+    r"|\\(?:part|chapter|section|subsection|subsubsection|paragraph|"
+    r"item|frontmatter|mainmatter|backmatter|appendix|clearpage|cleardoublepage|"
+    r"newpage|tableofcontents|addcontentsline|setcounter|label|ref|pageref|"
+    r"eqref|cite|includegraphics)\*?"
+)
+INLINE_MATH_RE = re.compile(
+    r"\\\[(?P<display>.*?)\\\]"
+    r"|\\\((?P<paren>.*?)\\\)"
+    r"|(?<!\\)\$(?P<dollar>(?:\\.|[^$\n])*?)(?<!\\)\$",
+    re.S,
+)
+MATH_ENV_RE = re.compile(
+    r"\\begin\{(?P<env>equation\*?|align\*?|gather\*?|multline\*?|displaymath|math)\}"
+    r"(?P<body>.*?)\\end\{(?P=env)\}",
+    re.S,
+)
+MATH_ENVIRONMENTS = {
+    "equation",
+    "equation*",
+    "align",
+    "align*",
+    "gather",
+    "gather*",
+    "multline",
+    "multline*",
+    "displaymath",
+    "math",
+}
 NUMBER_RE = re.compile(r"\d+")
 KANA_RE = re.compile(r"[\u3040-\u30ff]")
 CJK_RE = re.compile(r"[\u3400-\u9fff]")
@@ -100,19 +139,49 @@ def visible_text(tex: str) -> str:
     return text.strip()
 
 
-def detect_source_language(tex: str) -> str:
-    plain = visible_text(tex)
+def visible_text_with_math(tex: str) -> str:
+    """Extract prose while retaining words accidentally fused into math OCR."""
+
+    text = re.sub(r"(?m)%.*$", " ", tex)
+    text = NON_MATH_INLINE_PROTECTED_RE.sub(" ", text)
+    text = COMMAND_RE.sub(" ", text)
+    text = text.replace("{", " ").replace("}", " ").replace("&", " ")
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
+
+
+def detect_source_language(
+    tex: str,
+    *,
+    validation_profile: str = "prose_exact",
+) -> str:
+    plain = (
+        visible_text_with_math(tex)
+        if validation_profile == "technical_exact"
+        else visible_text(tex)
+    )
     cjk = len(re.findall(r"[\u3400-\u9fff]", plain))
     latin = len(re.findall(r"[A-Za-z]", plain))
     return "zh" if cjk > max(200, latin * 0.7) else "en"
 
 
-def classify_segment(tex: str, environment: str = "") -> str:
+def classify_segment(
+    tex: str,
+    environment: str = "",
+    *,
+    validation_profile: str = "prose_exact",
+) -> str:
     if environment in {"longtable", "tabular", "tabular*", "tabularx"}:
         return "table"
+    if validation_profile == "technical_exact" and environment in MATH_ENVIRONMENTS:
+        return "math"
     if environment:
         return "protected"
-    plain = visible_text(tex)
+    plain = (
+        visible_text_with_math(tex)
+        if validation_profile == "technical_exact"
+        else visible_text(tex)
+    )
     if not plain or sum(char.isalpha() for char in plain) < 5:
         return "protected"
     if STRUCTURAL_ONLY_RE.match(tex):
@@ -122,12 +191,25 @@ def classify_segment(tex: str, environment: str = "") -> str:
     return "text"
 
 
-def split_non_atomic(text: str) -> list[tuple[str, str]]:
+def split_non_atomic(
+    text: str,
+    *,
+    validation_profile: str,
+) -> list[tuple[str, str]]:
     parts = re.split(r"(\n[ \t]*\n+)", text)
-    return [(classify_segment(part), part) for part in parts if part]
+    return [
+        (classify_segment(part, validation_profile=validation_profile), part)
+        for part in parts
+        if part
+    ]
 
 
-def split_tex_segments(tex: str, book_id: str) -> list[dict[str, Any]]:
+def split_tex_segments(
+    tex: str,
+    book_id: str,
+    *,
+    validation_profile: str = "prose_exact",
+) -> list[dict[str, Any]]:
     begin = tex.find(r"\begin{document}")
     end = tex.rfind(r"\end{document}")
     if begin < 0 or end < begin:
@@ -147,13 +229,32 @@ def split_tex_segments(tex: str, book_id: str) -> list[dict[str, Any]]:
         occupied_until = match.end()
     for match in selected:
         if match.start() > cursor:
-            raw_parts.extend(split_non_atomic(body[cursor : match.start()]))
+            raw_parts.extend(
+                split_non_atomic(
+                    body[cursor : match.start()],
+                    validation_profile=validation_profile,
+                )
+            )
         block = match.group(0)
         environment = match.groupdict().get("env") or "displaymath"
-        raw_parts.append((classify_segment(block, environment), block))
+        raw_parts.append(
+            (
+                classify_segment(
+                    block,
+                    environment,
+                    validation_profile=validation_profile,
+                ),
+                block,
+            )
+        )
         cursor = match.end()
     if cursor < len(body):
-        raw_parts.extend(split_non_atomic(body[cursor:]))
+        raw_parts.extend(
+            split_non_atomic(
+                body[cursor:],
+                validation_profile=validation_profile,
+            )
+        )
     raw_parts.append(("protected", tex[end:]))
 
     segments: list[dict[str, Any]] = []
@@ -176,7 +277,11 @@ def split_tex_segments(tex: str, book_id: str) -> list[dict[str, Any]]:
     return segments
 
 
-def protect_inline(tex: str) -> tuple[str, list[dict[str, str]]]:
+def protect_inline(
+    tex: str,
+    *,
+    protect_math: bool = True,
+) -> tuple[str, list[dict[str, str]]]:
     protected: list[dict[str, str]] = []
 
     def replace(match: re.Match[str]) -> str:
@@ -184,7 +289,8 @@ def protect_inline(tex: str) -> tuple[str, list[dict[str, str]]]:
         protected.append({"token": token, "tex": match.group(0)})
         return token
 
-    return INLINE_PROTECTED_RE.sub(replace, tex), protected
+    pattern = INLINE_PROTECTED_RE if protect_math else NON_MATH_INLINE_PROTECTED_RE
+    return pattern.sub(replace, tex), protected
 
 
 def restore_inline(tex: str, protected: list[dict[str, str]]) -> str:
@@ -200,6 +306,24 @@ def protected_token_sequence(text: str) -> list[str]:
 
 def command_signature(text: str) -> list[str]:
     return COMMAND_RE.findall(text)
+
+
+def structural_command_signature(text: str) -> list[str]:
+    return STRUCTURAL_COMMAND_RE.findall(text)
+
+
+def inline_math_signature(text: str) -> list[str]:
+    positioned: list[tuple[int, str]] = []
+    for match in MATH_ENV_RE.finditer(text):
+        body = re.sub(r"\s+", " ", match.group("body")).strip()
+        positioned.append((match.start(), f"{match.group('env')}:{body}"))
+    for match in INLINE_MATH_RE.finditer(text):
+        body = match.group("display") or match.group("paren") or match.group("dollar") or ""
+        normalized = re.sub(r"\s+", " ", body).strip()
+        atoms = [item.strip() for item in re.split(r"(?<!\\);", normalized) if item.strip()]
+        positioned.extend((match.start(), item) for item in atoms)
+    positioned.sort(key=lambda item: item[0])
+    return [value for _position, value in positioned]
 
 
 def numeric_signature(text: str) -> list[str]:
@@ -260,8 +384,12 @@ def make_review_chunks(
     source: str,
     source_language: str,
     max_chars: int,
+    validation_profile: str = "prose_exact",
 ) -> list[dict[str, Any]]:
-    review = [item for item in segments if item["kind"] in {"text", "table"}]
+    review_kinds = {"text", "table"}
+    if validation_profile == "technical_exact":
+        review_kinds.add("math")
+    review = [item for item in segments if item["kind"] in review_kinds]
     chunks: list[list[dict[str, Any]]] = []
     current: list[dict[str, Any]] = []
     current_chars = 0
@@ -280,7 +408,10 @@ def make_review_chunks(
     for index, group in enumerate(chunks, start=1):
         task_segments: list[dict[str, Any]] = []
         for segment in group:
-            protected_tex, protected = protect_inline(segment["source_tex"])
+            protected_tex, protected = protect_inline(
+                segment["source_tex"],
+                protect_math=validation_profile != "technical_exact",
+            )
             task_segments.append(
                 {
                     "segment_id": segment["segment_id"],
@@ -289,6 +420,7 @@ def make_review_chunks(
                     "source_tex": protected_tex,
                     "protected": protected,
                     "command_signature": command_signature(protected_tex),
+                    "structural_command_signature": structural_command_signature(protected_tex),
                     "numeric_signature": numeric_signature(protected_tex),
                     "table_signature": table_signature(protected_tex),
                 }
@@ -301,6 +433,7 @@ def make_review_chunks(
                 "title": title,
                 "source": source,
                 "source_language": source_language,
+                "validation_profile": validation_profile,
                 "chunk_id": chunk_id,
                 "chunk_index": index,
                 "segment_count": len(task_segments),
@@ -414,29 +547,47 @@ def validate_chunk_output(task: dict[str, Any], result: dict[str, Any]) -> list[
         if not isinstance(en_tex, str) or not isinstance(ja_tex, str):
             errors.append(prefix + "en_tex and ja_tex must be strings")
             continue
+        technical_exact = task.get("validation_profile") == "technical_exact"
         for language, candidate in (("en", en_tex), ("ja", ja_tex)):
             if "\ufffd" in candidate or HTML_RE.search(candidate):
                 errors.append(prefix + f"{language}_tex contains replacement/HTML text")
             if protected_token_sequence(candidate) != protected_token_sequence(source["source_tex"]):
                 errors.append(prefix + f"{language}_tex changed protected token sequence")
-            if command_signature(candidate) != source["command_signature"]:
+            if technical_exact:
+                if structural_command_signature(candidate) != source["structural_command_signature"]:
+                    errors.append(prefix + f"{language}_tex changed structural TeX command sequence")
+            elif command_signature(candidate) != source["command_signature"]:
                 errors.append(prefix + f"{language}_tex changed TeX command sequence")
-            if Counter(numeric_signature(candidate)) != Counter(source["numeric_signature"]):
+            candidate_numbers = numeric_signature(candidate)
+            if technical_exact and language == "ja":
+                if set(candidate_numbers) != set(source["numeric_signature"]):
+                    errors.append(prefix + "ja_tex changed the set of numeric facts")
+            elif Counter(candidate_numbers) != Counter(source["numeric_signature"]):
                 errors.append(prefix + f"{language}_tex changed numeric facts/counts")
             if source["kind"] == "table" and table_signature(candidate) != source["table_signature"]:
                 errors.append(prefix + f"{language}_tex changed table structure")
             if candidate.count("{") != candidate.count("}"):
                 errors.append(prefix + f"{language}_tex has unbalanced braces")
+        if technical_exact and Counter(inline_math_signature(en_tex)) != Counter(
+            inline_math_signature(ja_tex)
+        ):
+            errors.append(prefix + "English/Japanese math inventory differs")
 
-        source_plain = visible_text(source["source_tex"])
-        en_plain = visible_text(en_tex)
-        ja_plain = visible_text(ja_tex)
+        visible = visible_text_with_math if technical_exact else visible_text
+        source_plain = visible(source["source_tex"])
+        en_plain = visible(en_tex)
+        ja_plain = visible(ja_tex)
         source_len = max(1, len(source_plain))
         source_language = task.get("source_language", "en")
         if source_language == "en":
             if len(en_plain) < source_len * 0.62 or len(en_plain) > source_len * 1.45:
                 errors.append(prefix + "English length suggests omission or unsupported expansion")
-            similarity = SequenceMatcher(None, source_plain.lower(), en_plain.lower()).ratio()
+            similarity = SequenceMatcher(
+                None,
+                source_plain.lower(),
+                en_plain.lower(),
+                autojunk=False,
+            ).ratio()
             if source_len >= 80 and similarity < 0.52:
                 errors.append(prefix + f"English is not conservative enough (similarity={similarity:.3f})")
         elif source_len >= 40 and (len(en_plain) < source_len * 0.20 or len(en_plain) > source_len * 4.0):
@@ -444,7 +595,8 @@ def validate_chunk_output(task: dict[str, Any], result: dict[str, Any]) -> list[
         if source_len >= 40 and (len(ja_plain) < source_len * 0.20 or len(ja_plain) > source_len * 3.20):
             errors.append(prefix + "Japanese length suggests omission or unsupported expansion")
         if (
-            source_len >= 40
+            source["kind"] != "math"
+            and source_len >= 40
             and not japanese_translation_optional(source_plain)
             and not KANA_RE.search(ja_plain)
         ):
@@ -483,13 +635,30 @@ def restored_segment_output(task_segment: dict[str, Any], output: dict[str, Any]
 
 
 def inventory(tex: str) -> dict[str, Any]:
+    graphics: list[str] = []
+    for match in INCLUDEGRAPHICS_TOKEN_RE.finditer(tex):
+        argument = match.group("argument")
+        detokenized = re.fullmatch(r"\\detokenize\{([^{}]*)\}", argument)
+        graphics.append(detokenized.group(1) if detokenized else argument)
+    environments = Counter(
+        re.findall(
+            r"\\begin\{(longtable|tabular\*?|tabularx|equation\*?|align\*?|"
+            r"gather\*?|multline\*?|displaymath|tikzpicture|picture|figure\*?|"
+            r"lstlisting)\}",
+            tex,
+        )
+    )
     return {
         "includegraphics": tex.count(r"\includegraphics"),
+        "graphics_paths": sorted(graphics),
+        "captions": tex.count(r"\caption"),
         "longtable": tex.count(r"\begin{longtable}"),
         "tabular": tex.count(r"\begin{tabular}"),
         "display_math": tex.count(r"\[") + len(re.findall(r"\\begin\{(?:equation|align|gather|multline)", tex)),
+        "technical_environments": dict(sorted(environments.items())),
         "labels": sorted(re.findall(r"\\label\{([^{}]+)\}", tex)),
         "refs": sorted(re.findall(r"\\(?:ref|eqref|pageref)\{([^{}]+)\}", tex)),
+        "citations": sorted(re.findall(r"\\cite(?:\[[^\]]*\])?\{([^{}]+)\}", tex)),
     }
 
 
