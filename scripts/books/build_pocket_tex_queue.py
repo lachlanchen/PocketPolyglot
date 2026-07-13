@@ -431,7 +431,13 @@ def remove_source_contents_block(text: str) -> str:
     window = text[start : start + 12000]
     if "Contents" not in window or r"\begin{longtable}" not in window:
         return text
-    next_match = re.search(r"\n\\hypertarget\{(?:part-|chapter-|section-|[a-z0-9-]+chapter)", text[start + 1 :])
+    # Only accept a nearby structural boundary. Searching the entire remaining
+    # document can delete real front matter and early chapters when OCR assigns
+    # those headings unexpected identifiers.
+    next_match = re.search(
+        r"\n\\hypertarget\{(?:part-|chapter-|section-|[a-z0-9-]+chapter)",
+        window[1:],
+    )
     if not next_match:
         return text
     end = start + 1 + next_match.start()
