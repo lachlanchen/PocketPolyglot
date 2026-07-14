@@ -36,7 +36,62 @@
       "title": "An Introduction to Black Holes, Information and the String Theory Revolution",
       "author": "Leonard Susskind and James Lindesay",
       "source": "sources/popular-science/leonard-susskind/en/An Introduction to Black Holes Information and the String Theory Revolution - Susskind Lindesay.pdf",
-      "note": "Formula-heavy; exact/review stage must preserve equations."
+      "validation_profile": "technical_exact",
+      "note": "Formula-heavy; exact/review stage must preserve equations.",
+      "polish_source_normalizations": [
+        {
+          "type": "drop_exact_running_header",
+          "tex": "\\emph{Strings} 153",
+          "expected_count": 1,
+          "reason": "Printed running header between body text and Figure 14.1."
+        },
+        {
+          "type": "drop_exact_running_header",
+          "tex": "\\emph{Conclusions} 177",
+          "expected_count": 1,
+          "reason": "Printed running header between consecutive conclusion paragraphs."
+        },
+        {
+          "type": "drop_exact_running_header",
+          "tex": "Strings 157",
+          "expected_count": 1,
+          "reason": "Printed running header inside Chapter 14 body text."
+        },
+        {
+          "type": "drop_exact_running_header",
+          "tex": "Strings 159",
+          "expected_count": 1,
+          "reason": "Printed running header inside Chapter 14 body text."
+        },
+        {
+          "type": "drop_exact_running_header",
+          "tex": "Strings 161",
+          "expected_count": 1,
+          "reason": "Printed running header before Section 14.4."
+        },
+        {
+          "type": "drop_exact_running_header",
+          "tex": "Strings 163",
+          "expected_count": 1,
+          "reason": "Printed running header before the Chapter 14 supplement."
+        }
+      ],
+      "polish_source_replacements": [
+        {
+          "type": "replace_exact_running_header",
+          "before": "an Strings 155\n\nexperiment",
+          "after": "an experiment",
+          "expected_count": 1,
+          "reason": "Printed running header inserted inside a sentence."
+        },
+        {
+          "type": "replace_exact_ocr",
+          "before": "where ∆ is the space-like separation between the points (X, Y, Z) and (X , Y , Z )",
+          "after": "where ∆ is the space-like separation between the points (X, Y, Z) and (X', Y', Z')",
+          "expected_count": 1,
+          "reason": "Equations 3.2.5 and 3.2.6 immediately adjacent to this sentence independently show the second coordinate triple with prime marks."
+        }
+      ]
     },
     {
       "book_id": "green-mars",
@@ -250,6 +305,7 @@
       "title": "The Black Hole War: My Battle with Stephen Hawking to Make the World Safe for Quantum Mechanics",
       "author": "Leonard Susskind",
       "source": "sources/popular-science/leonard-susskind/en/The Black Hole War - Leonard Susskind.pdf",
+      "validation_profile": "technical_exact",
       "note": "Science source; exact/review stage must preserve equations, diagrams, captions, and technical notation where present."
     },
     {

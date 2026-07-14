@@ -36,6 +36,7 @@ def run_workers(
     model: str,
     reasoning: str,
     retries: int,
+    review_retries: int,
     timeout: int,
     backoff: int,
 ) -> bool:
@@ -60,6 +61,8 @@ def run_workers(
             reasoning,
             "--retries",
             str(retries),
+            "--review-retries",
+            str(review_retries),
             "--timeout",
             str(timeout),
             "--backoff",
@@ -89,11 +92,12 @@ def main() -> int:
     parser.add_argument("--workers", type=int, default=5)
     parser.add_argument("--model", default="gpt-5.6-sol")
     parser.add_argument("--reasoning", default="low")
-    parser.add_argument("--retries", type=int, default=4)
+    parser.add_argument("--retries", type=int, default=3)
+    parser.add_argument("--review-retries", type=int, default=3)
     parser.add_argument("--timeout", type=int, default=7200)
     parser.add_argument("--backoff", type=int, default=600)
     parser.add_argument("--max-books", type=int, default=0)
-    parser.add_argument("--retry-passes", type=int, default=2)
+    parser.add_argument("--retry-passes", type=int, default=1)
     args = parser.parse_args()
 
     queue = read_json(args.queue)
@@ -138,6 +142,7 @@ def main() -> int:
                 model=args.model,
                 reasoning=args.reasoning,
                 retries=args.retries,
+                review_retries=args.review_retries,
                 timeout=args.timeout,
                 backoff=args.backoff,
             )

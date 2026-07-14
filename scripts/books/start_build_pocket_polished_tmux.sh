@@ -12,6 +12,7 @@ start_book="${START_BOOK:-}"
 smoke_book="${SMOKE_BOOK:-black-holes-string-theory-revolution}"
 queue="${QUEUE:-build-pocket-polished/tasks/queue.json}"
 status="${STATUS:-build-pocket-polished/status.json}"
+retry_passes="${RETRY_PASSES:-1}"
 
 if [[ ! -f "$queue" ]]; then
   echo "missing prepared queue: $queue" >&2
@@ -41,6 +42,7 @@ python -u scripts/books/run_build_pocket_polished_queue.py \
   --workers '$workers' \
   --model '$model' \
   --reasoning '$reasoning' \
+  --retry-passes '$retry_passes' \
   $start_arg; } \
   2>&1 | tee -a '$log'"
 
@@ -51,4 +53,5 @@ echo "reasoning: $reasoning"
 echo "smoke_book: $smoke_book"
 echo "queue: $queue"
 echo "status: $status"
+echo "retry_passes: $retry_passes"
 echo "log: $log"

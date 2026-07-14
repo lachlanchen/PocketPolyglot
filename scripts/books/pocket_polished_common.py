@@ -7,6 +7,7 @@ import hashlib
 import json
 import re
 from collections import Counter
+from copy import deepcopy
 from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any, Iterable
@@ -71,6 +72,7 @@ MATH_ENVIRONMENTS = {
     "math",
 }
 NUMBER_RE = re.compile(r"\d+")
+PROTECTED_TOKEN_RE = re.compile(r"@@PROTECTED_\d{4}@@")
 KANA_RE = re.compile(r"[\u3040-\u30ff]")
 CJK_RE = re.compile(r"[\u3400-\u9fff]")
 HTML_RE = re.compile(r"</?[A-Za-z][^>]*>|&(?:nbsp|amp|lt|gt|quot);", re.I)
@@ -79,6 +81,15 @@ STRUCTURAL_ONLY_RE = re.compile(
     r"tableofcontents|clearpage|cleardoublepage|newpage|appendix|thispagestyle|"
     r"setcounter|hypersetup|addcontentsline|phantomsection|begin|end)\b[^\n]*\s*)+$",
     re.S,
+)
+RUNNING_HEADER_TEX_RE = re.compile(
+    r"\s*(?:"
+    r"\\(?:emph|textit)\{[^{}\n]{1,64}\}\s+"
+    r"(?:\d{1,4}|[ivxlcdm]{1,10})"
+    r"|(?:\d{1,4}|[ivxlcdm]{1,10})\s+"
+    r"\\(?:emph|textit)\{[^{}\n]{1,64}\}"
+    r")\s*",
+    re.I,
 )
 
 
@@ -139,6 +150,195 @@ def visible_text(tex: str) -> str:
     return text.strip()
 
 
+def normalize_page_boundary_artifacts(
+    tex: str,
+) -> tuple[str, list[dict[str, Any]]]:
+    """Remove evidence-clear running headers inside a split sentence.
+
+    PDF-to-TeX tools sometimes emit ``paragraph / running header / paragraph``
+    at a page boundary.  This pass is deliberately narrow: the text before the
+    marker must end mid-sentence, the text after it must begin with a lowercase
+    continuation, and the middle paragraph must look like a short page marker.
+    The untouched flattened source remains available separately as evidence.
+    """
+
+    parts = re.split(r"(\n[ \t]*\n+)", tex)
+    changes: list[dict[str, Any]] = []
+    index = 0
+    while index + 4 < len(parts):
+        before, first_gap, marker, second_gap, after = parts[index : index + 5]
+        if not first_gap.strip() and not second_gap.strip():
+            before_plain = visible_text(before)
+            marker_plain = visible_text(marker)
+            after_plain = visible_text(after)
+            marker_words = marker_plain.split()
+            marker_is_running_header = bool(RUNNING_HEADER_TEX_RE.fullmatch(marker))
+            before_is_open = bool(
+                before_plain
+                and re.search(r"[A-Za-z0-9)'\"]$", before_plain)
+                and not re.search(r"[.!?:;][)'\"]?$", before_plain)
+            )
+            after_is_continuation = bool(re.match(r"[a-z]", after_plain))
+            if (
+                marker_is_running_header
+                and before_is_open
+                and after_is_continuation
+            ):
+                joiner = "" if before.rstrip().endswith("-") else " "
+                merged = before.rstrip() + joiner + after.lstrip()
+                changes.append(
+                    {
+                        "type": "page-boundary-running-header",
+                        "marker_tex": marker.strip(),
+                        "marker_text": marker_plain,
+                        "before_tail": before_plain[-120:],
+                        "after_head": after_plain[:120],
+                    }
+                )
+                parts[index : index + 5] = [merged]
+                continue
+        index += 2
+    return "".join(parts), changes
+
+
+def apply_exact_paragraph_drops(
+    tex: str,
+    rules: Iterable[dict[str, Any]],
+) -> tuple[str, list[dict[str, Any]]]:
+    """Apply task-local, evidence-reviewed removal of exact artifact paragraphs."""
+
+    parts = re.split(r"(\n[ \t]*\n+)", tex)
+    changes: list[dict[str, Any]] = []
+    for rule_index, rule in enumerate(rules, start=1):
+        needle = rule.get("tex") if isinstance(rule, dict) else None
+        expected = rule.get("expected_count", 1) if isinstance(rule, dict) else 1
+        reason = rule.get("reason", "Evidence-reviewed source artifact.") if isinstance(rule, dict) else ""
+        if not isinstance(needle, str) or not needle.strip():
+            raise ValueError(f"source normalization rule {rule_index} has no exact tex")
+        matches = [
+            index
+            for index in range(0, len(parts), 2)
+            if parts[index].strip() == needle.strip()
+        ]
+        if len(matches) != expected:
+            raise ValueError(
+                f"source normalization rule {rule_index} expected {expected} exact "
+                f"paragraphs, found {len(matches)}: {needle!r}"
+            )
+        for index in matches:
+            digest = sha256_text(parts[index].strip())[:16]
+            parts[index] = (
+                "% Removed evidence-reviewed source artifact "
+                f"sha256={digest}"
+            )
+            changes.append(
+                {
+                    "type": "configured-exact-paragraph-drop",
+                    "marker_tex": needle.strip(),
+                    "marker_text": visible_text(needle),
+                    "reason": str(reason),
+                    "sha256": sha256_text(needle.strip()),
+                }
+            )
+    return "".join(parts), changes
+
+
+def apply_exact_text_replacements(
+    tex: str,
+    rules: Iterable[dict[str, Any]],
+) -> tuple[str, list[dict[str, Any]]]:
+    """Apply evidence-reviewed exact source repairs with cardinality checks."""
+
+    repaired = tex
+    changes: list[dict[str, Any]] = []
+    for rule_index, rule in enumerate(rules, start=1):
+        before = rule.get("before") if isinstance(rule, dict) else None
+        after = rule.get("after") if isinstance(rule, dict) else None
+        expected = rule.get("expected_count", 1) if isinstance(rule, dict) else 1
+        reason = rule.get("reason", "Evidence-reviewed exact source repair.") if isinstance(rule, dict) else ""
+        if not isinstance(before, str) or not before:
+            raise ValueError(f"source replacement rule {rule_index} has no before text")
+        if not isinstance(after, str):
+            raise ValueError(f"source replacement rule {rule_index} has no after text")
+        found = repaired.count(before)
+        if found != expected:
+            raise ValueError(
+                f"source replacement rule {rule_index} expected {expected} exact "
+                f"matches, found {found}: {before!r}"
+            )
+        repaired = repaired.replace(before, after)
+        changes.append(
+            {
+                "type": "configured-exact-text-replacement",
+                "before": before,
+                "after": after,
+                "expected_count": expected,
+                "reason": str(reason),
+                "before_sha256": sha256_text(before),
+            }
+        )
+    return repaired, changes
+
+
+def normalize_split_prose_paragraphs(
+    tex: str,
+) -> tuple[str, list[dict[str, Any]]]:
+    """Join evidence-clear prose paragraphs split only by a PDF page break."""
+
+    parts = re.split(r"(\n[ \t]*\n+)", tex)
+    changes: list[dict[str, Any]] = []
+    index = 0
+    excluded_prefix = re.compile(r"^(?:fig(?:ure)?\.?|table|plate)\s", re.I)
+    structural = re.compile(
+        r"\\(?:begin|end|part|chapter|section|subsection|subsubsection|"
+        r"hypertarget|includegraphics)\b|\\\[|\\\]"
+    )
+    while index + 2 < len(parts):
+        before, gap, after = parts[index : index + 3]
+        if gap.strip():
+            index += 2
+            continue
+        before_plain = visible_text(before)
+        after_plain = visible_text(after)
+        before_letters = sum(char.isalpha() for char in before_plain)
+        after_letters = sum(char.isalpha() for char in after_plain)
+        uppercase_ratio = (
+            sum(char.isupper() for char in before_plain if char.isalpha())
+            / before_letters
+            if before_letters
+            else 0.0
+        )
+        before_is_open = bool(
+            before_plain
+            and re.search(r"[A-Za-z0-9)'\"]$", before_plain)
+            and not re.search(r"[.!?:;][)'\"]?$", before_plain)
+        )
+        after_is_continuation = bool(re.match(r"[a-z]", after_plain))
+        safe_prose = (
+            before_letters >= 24
+            and after_letters >= 12
+            and not excluded_prefix.match(before_plain)
+            and not structural.search(before)
+            and not structural.search(after)
+            and not before.lstrip().startswith("% Removed evidence-reviewed")
+            and not before_plain.lstrip().startswith(("-", "—"))
+            and uppercase_ratio < 0.70
+        )
+        if before_is_open and after_is_continuation and safe_prose:
+            joiner = "" if before.rstrip().endswith("-") else " "
+            parts[index : index + 3] = [before.rstrip() + joiner + after.lstrip()]
+            changes.append(
+                {
+                    "type": "split-prose-page-boundary",
+                    "before_tail": before_plain[-120:],
+                    "after_head": after_plain[:120],
+                }
+            )
+            continue
+        index += 2
+    return "".join(parts), changes
+
+
 def visible_text_with_math(tex: str) -> str:
     """Extract prose while retaining words accidentally fused into math OCR."""
 
@@ -173,8 +373,10 @@ def classify_segment(
 ) -> str:
     if environment in {"longtable", "tabular", "tabular*", "tabularx"}:
         return "table"
-    if validation_profile == "technical_exact" and environment in MATH_ENVIRONMENTS:
-        return "math"
+    if environment in MATH_ENVIRONMENTS:
+        # Equations are source evidence, not translation prose.  Keep them
+        # immutable and translate only their surrounding explanation/caption.
+        return "protected"
     if environment:
         return "protected"
     plain = (
@@ -258,14 +460,19 @@ def split_tex_segments(
     raw_parts.append(("protected", tex[end:]))
 
     segments: list[dict[str, Any]] = []
+    hash_occurrences: Counter[str] = Counter()
     offset = 0
     for index, (kind, source_tex) in enumerate(raw_parts, start=1):
-        segment_id = f"{book_id}-s{index:06d}"
+        source_hash = sha256_text(source_tex)
+        hash_occurrences[source_hash] += 1
+        segment_id = (
+            f"{book_id}-s{source_hash[:12]}-{hash_occurrences[source_hash]:02d}"
+        )
         segment = {
             "segment_id": segment_id,
             "index": index,
             "kind": kind,
-            "source_sha256": sha256_text(source_tex),
+            "source_sha256": source_hash,
             "source_tex": source_tex,
             "start_offset": offset,
             "end_offset": offset + len(source_tex),
@@ -330,7 +537,8 @@ def numeric_signature(text: str) -> list[str]:
     # Compare numeric atoms rather than punctuation-bound groups.  This keeps
     # factual digit order strict while permitting definite OCR repairs such as
     # ``94305- 4060`` -> ``94305-4060``.
-    return NUMBER_RE.findall(text)
+    # Placeholder serials are implementation details, not numeric facts.
+    return NUMBER_RE.findall(PROTECTED_TOKEN_RE.sub("", text))
 
 
 def numeric_source_is_preserved(source: Iterable[str], candidate: Iterable[str]) -> bool:
@@ -347,6 +555,138 @@ def numeric_source_is_preserved(source: Iterable[str], candidate: Iterable[str])
     expected = Counter(source)
     actual = Counter(candidate)
     return all(actual[value] >= count for value, count in expected.items())
+
+
+def conservative_english_repair(tex: str) -> tuple[str, list[dict[str, Any]]]:
+    """Apply only context-independent OCR fixes to English source TeX."""
+
+    repaired = tex
+    changes: list[dict[str, Any]] = []
+
+    def replace_literal(before: str, after: str, reason: str) -> None:
+        nonlocal repaired
+        if before not in repaired:
+            return
+        repaired = repaired.replace(before, after)
+        changes.append(
+            {
+                "before": before,
+                "after": after,
+                "reason": reason,
+                "confidence": 0.99,
+            }
+        )
+
+    for before, after in {
+        "ﬀ": "ff",
+        "ﬁ": "fi",
+        "ﬂ": "fl",
+        "ﬃ": "ffi",
+        "ﬄ": "ffl",
+        "undoubtably": "undoubtedly",
+    }.items():
+        reason = (
+            "Expanded a Unicode presentation ligature."
+            if before in {"ﬀ", "ﬁ", "ﬂ", "ﬃ", "ﬄ"}
+            else "Corrected a definite English spelling error."
+        )
+        replace_literal(before, after, reason)
+
+    substitutions = (
+        (
+            re.compile(
+                r"(?P<left>\b[A-Za-z][A-Za-z'-]{1,})(?P<mark>[.!?])"
+                r"(?P<right>[A-Z][A-Za-z'-]{1,}\b)"
+            ),
+            lambda match: (
+                match.group("left") + match.group("mark") + " " + match.group("right")
+            ),
+            "Restored missing whitespace after sentence punctuation.",
+        ),
+        (
+            re.compile(r"(?P<first>\d{5})-[ \t]+(?P<last>\d{4})"),
+            lambda match: f"{match.group('first')}-{match.group('last')}",
+            "Removed OCR whitespace inside a postal-code digit group.",
+        ),
+    )
+    for pattern, replacement, reason in substitutions:
+        pieces: list[str] = []
+        cursor = 0
+        changed = False
+        for match in pattern.finditer(repaired):
+            before = match.group(0)
+            after = replacement(match)
+            if before == after:
+                continue
+            pieces.extend((repaired[cursor : match.start()], after))
+            cursor = match.end()
+            changed = True
+            changes.append(
+                {
+                    "before": before,
+                    "after": after,
+                    "reason": reason,
+                    "confidence": 0.99,
+                }
+            )
+        if changed:
+            pieces.append(repaired[cursor:])
+            repaired = "".join(pieces)
+    return repaired, changes
+
+
+def apply_grounded_english_repairs(
+    source_tex: str,
+    repairs: Iterable[dict[str, Any]],
+) -> tuple[str, list[dict[str, Any]], list[str]]:
+    """Build English deterministically from source plus exact, auditable patches."""
+
+    repaired, changes = conservative_english_repair(source_tex)
+    errors: list[str] = []
+    for index, repair in enumerate(repairs, start=1):
+        if not isinstance(repair, dict):
+            errors.append(f"repair {index} is not an object")
+            continue
+        before = repair.get("before")
+        after = repair.get("after")
+        reason = repair.get("reason")
+        confidence = repair.get("confidence")
+        if not isinstance(before, str) or not before:
+            errors.append(f"repair {index} has no exact before text")
+            continue
+        if not isinstance(after, str) or not after:
+            errors.append(f"repair {index} has no replacement text")
+            continue
+        if before not in source_tex:
+            errors.append(f"repair {index} before text is not grounded in source")
+            continue
+        occurrence_count = repaired.count(before)
+        if occurrence_count == 0 and after in repaired:
+            # The deterministic pre-pass may already have applied the same
+            # repair.  Treat a matching model patch as idempotent rather than
+            # rejecting an otherwise valid segment and regenerating it.
+            continue
+        if occurrence_count != 1:
+            errors.append(
+                f"repair {index} before text must occur exactly once after automatic repair"
+            )
+            continue
+        if not isinstance(confidence, (int, float)) or confidence < 0.90:
+            errors.append(f"repair {index} confidence must be at least 0.90")
+            continue
+        if protected_token_sequence(before) != protected_token_sequence(after):
+            errors.append(f"repair {index} changes an immutable protected token")
+            continue
+        repaired = repaired.replace(before, after, 1)
+        changes.append(
+            {
+                "before": before,
+                "after": after,
+                "reason": str(reason or "Grounded OCR correction."),
+                "confidence": float(confidence),
+            }
+        )
+    return repaired, changes, errors
 
 
 def japanese_kana_required(source_tex: str, source_plain: str) -> bool:
@@ -400,18 +740,19 @@ def make_review_chunks(
     source: str,
     source_language: str,
     max_chars: int,
+    max_segments: int = 16,
     validation_profile: str = "prose_exact",
 ) -> list[dict[str, Any]]:
     review_kinds = {"text", "table"}
-    if validation_profile == "technical_exact":
-        review_kinds.add("math")
     review = [item for item in segments if item["kind"] in review_kinds]
     chunks: list[list[dict[str, Any]]] = []
     current: list[dict[str, Any]] = []
     current_chars = 0
     for segment in review:
         size = len(segment["source_tex"])
-        if current and current_chars + size > max_chars:
+        if current and (
+            current_chars + size > max_chars or len(current) >= max_segments
+        ):
             chunks.append(current)
             current = []
             current_chars = 0
@@ -426,7 +767,7 @@ def make_review_chunks(
         for segment in group:
             protected_tex, protected = protect_inline(
                 segment["source_tex"],
-                protect_math=validation_profile != "technical_exact",
+                protect_math=True,
             )
             task_segments.append(
                 {
@@ -457,6 +798,75 @@ def make_review_chunks(
             }
         )
     return tasks
+
+
+def chunk_subset(task: dict[str, Any], segment_ids: Iterable[str]) -> dict[str, Any]:
+    """Return a schema-compatible task containing only selected segments."""
+
+    selected = set(segment_ids)
+    subset = deepcopy(task)
+    subset["segments"] = [
+        segment for segment in task["segments"] if segment["segment_id"] in selected
+    ]
+    subset["segment_count"] = len(subset["segments"])
+    return subset
+
+
+def source_english_writer_schema() -> dict[str, Any]:
+    """Compact model schema for an English source.
+
+    English is reconstructed deterministically from the immutable source plus
+    grounded repair patches, so the model returns it neither verbatim nor as a
+    free rewrite.  This materially lowers output tokens and variance.
+    """
+
+    return {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "additionalProperties": False,
+        "required": ["schema_version", "book_id", "chunk_id", "segments"],
+        "properties": {
+            "schema_version": {"type": "integer", "const": 3},
+            "book_id": {"type": "string"},
+            "chunk_id": {"type": "string"},
+            "segments": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": False,
+                    "required": [
+                        "segment_id",
+                        "ja_tex",
+                        "repairs",
+                        "unresolved",
+                    ],
+                    "properties": {
+                        "segment_id": {"type": "string"},
+                        "ja_tex": {"type": "string"},
+                        "repairs": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "additionalProperties": False,
+                                "required": ["before", "after", "reason", "confidence"],
+                                "properties": {
+                                    "before": {"type": "string"},
+                                    "after": {"type": "string"},
+                                    "reason": {"type": "string"},
+                                    "confidence": {
+                                        "type": "number",
+                                        "minimum": 0,
+                                        "maximum": 1,
+                                    },
+                                },
+                            },
+                        },
+                        "unresolved": {"type": "array", "items": {"type": "string"}},
+                    },
+                },
+            },
+        },
+    }
 
 
 def output_schema() -> dict[str, Any]:
@@ -514,7 +924,7 @@ def reviewer_schema() -> dict[str, Any]:
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "object",
         "additionalProperties": False,
-        "required": ["accept", "issues", "summary"],
+        "required": ["accept", "issues", "corrections", "summary"],
         "properties": {
             "accept": {"type": "boolean"},
             "issues": {
@@ -530,9 +940,167 @@ def reviewer_schema() -> dict[str, Any]:
                     },
                 },
             },
+            "corrections": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": False,
+                    "required": [
+                        "segment_id",
+                        "ja_tex",
+                        "repairs",
+                        "unresolved",
+                    ],
+                    "properties": {
+                        "segment_id": {"type": "string"},
+                        "ja_tex": {"type": "string"},
+                        "repairs": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "additionalProperties": False,
+                                "required": ["before", "after", "reason", "confidence"],
+                                "properties": {
+                                    "before": {"type": "string"},
+                                    "after": {"type": "string"},
+                                    "reason": {"type": "string"},
+                                    "confidence": {
+                                        "type": "number",
+                                        "minimum": 0,
+                                        "maximum": 1,
+                                    },
+                                },
+                            },
+                        },
+                        "unresolved": {"type": "array", "items": {"type": "string"}},
+                    },
+                },
+            },
             "summary": {"type": "string"},
         },
     }
+
+
+def validate_segment_output(
+    task: dict[str, Any],
+    source: dict[str, Any],
+    output: dict[str, Any],
+) -> list[str]:
+    """Validate one segment without invalidating unrelated work."""
+
+    errors: list[str] = []
+    segment_id = source["segment_id"]
+    prefix = f"{segment_id}: "
+    if output.get("segment_id") != segment_id:
+        return [prefix + "segment_id mismatch"]
+    if output.get("source_sha256") != source["source_sha256"]:
+        errors.append(prefix + "source_sha256 mismatch")
+    en_tex = output.get("en_tex")
+    ja_tex = output.get("ja_tex")
+    if not isinstance(en_tex, str) or not isinstance(ja_tex, str):
+        return errors + [prefix + "en_tex and ja_tex must be strings"]
+
+    source_language = task.get("source_language", "en")
+    technical_exact = task.get("validation_profile") == "technical_exact"
+    expected_protected = protected_token_sequence(source["source_tex"])
+    for language, candidate in (("en", en_tex), ("ja", ja_tex)):
+        if "\ufffd" in candidate or HTML_RE.search(candidate):
+            errors.append(prefix + f"{language}_tex contains replacement/HTML text")
+        candidate_protected = protected_token_sequence(candidate)
+        if language == "en":
+            if candidate_protected != expected_protected:
+                errors.append(prefix + "en_tex changed protected token sequence")
+        elif Counter(candidate_protected) != Counter(expected_protected):
+            errors.append(prefix + "ja_tex changed protected token inventory")
+        if technical_exact:
+            if structural_command_signature(candidate) != source["structural_command_signature"]:
+                errors.append(prefix + f"{language}_tex changed structural TeX command sequence")
+        elif command_signature(candidate) != source["command_signature"]:
+            errors.append(prefix + f"{language}_tex changed TeX command sequence")
+        candidate_numbers = numeric_signature(candidate)
+        same_language_transcription = source_language == "en" and language == "en"
+        if same_language_transcription and Counter(candidate_numbers) != Counter(
+            source["numeric_signature"]
+        ):
+            errors.append(prefix + f"{language}_tex changed numeric facts/counts")
+        # A translated number can be faithfully reformatted (2.87 million ->
+        # 287万).  Its semantic value is checked by the reviewer rather than by
+        # raw digit equality, which caused large false-positive retry storms.
+        if source["kind"] == "table" and table_signature(candidate) != source["table_signature"]:
+            errors.append(prefix + f"{language}_tex changed table structure")
+        if candidate.count("{") != candidate.count("}"):
+            errors.append(prefix + f"{language}_tex has unbalanced braces")
+    if technical_exact and Counter(inline_math_signature(en_tex)) != Counter(
+        inline_math_signature(ja_tex)
+    ):
+        errors.append(prefix + "English/Japanese math inventory differs")
+
+    visible = visible_text_with_math if technical_exact else visible_text
+    source_plain = visible(source["source_tex"])
+    en_plain = visible(en_tex)
+    ja_plain = visible(ja_tex)
+    source_len = max(1, len(source_plain))
+    if source_language == "en":
+        if len(en_plain) < source_len * 0.62 or len(en_plain) > source_len * 1.45:
+            errors.append(prefix + "English length suggests omission or unsupported expansion")
+        similarity = SequenceMatcher(
+            None,
+            source_plain.lower(),
+            en_plain.lower(),
+            autojunk=False,
+        ).ratio()
+        if source_len >= 80 and similarity < 0.52:
+            errors.append(prefix + f"English is not conservative enough (similarity={similarity:.3f})")
+    elif source_len >= 40 and (len(en_plain) < source_len * 0.20 or len(en_plain) > source_len * 4.0):
+        errors.append(prefix + "translated English length suggests omission or unsupported expansion")
+    if source_len >= 40 and (len(ja_plain) < source_len * 0.20 or len(ja_plain) > source_len * 3.20):
+        errors.append(prefix + "Japanese length suggests omission or unsupported expansion")
+    if (
+        source_len >= 40
+        and not japanese_translation_optional(source_plain)
+        and not KANA_RE.search(ja_plain)
+    ):
+        if not CJK_RE.search(ja_plain):
+            errors.append(prefix + "Japanese output contains no Japanese script")
+        elif japanese_kana_required(source["source_tex"], source_plain):
+            errors.append(prefix + "Japanese prose contains no kana")
+
+    changes = output.get("changes")
+    if not isinstance(changes, list):
+        errors.append(prefix + "changes must be an array")
+    else:
+        replayed_english = source["source_tex"]
+        replay_errors = False
+        for change in changes:
+            if not isinstance(change, dict):
+                errors.append(prefix + "change entry is not an object")
+                replay_errors = True
+                continue
+            before = change.get("before", "")
+            after = change.get("after", "")
+            confidence = change.get("confidence")
+            if not before or before not in source["source_tex"]:
+                errors.append(prefix + "change.before is not grounded in source_tex")
+                replay_errors = True
+            if not after:
+                errors.append(prefix + "change.after is empty")
+                replay_errors = True
+            if before and after and before in replayed_english:
+                replayed_english = replayed_english.replace(before, after)
+            elif before and after and after not in replayed_english:
+                errors.append(prefix + "change cannot be replayed in declared order")
+                replay_errors = True
+            if not isinstance(confidence, (int, float)) or confidence < 0.85:
+                errors.append(prefix + "English corrections require confidence >= 0.85")
+                replay_errors = True
+        if source_language == "en" and changes and not replay_errors and replayed_english != en_tex:
+            errors.append(prefix + "ordered English repair replay does not equal en_tex")
+        if source_language == "en" and en_tex != source["source_tex"] and not changes:
+            errors.append(prefix + "changed English lacks an evidence record")
+    unresolved = output.get("unresolved")
+    if not isinstance(unresolved, list):
+        errors.append(prefix + "unresolved must be an array")
+    return errors
 
 
 def validate_chunk_output(task: dict[str, Any], result: dict[str, Any]) -> list[str]:
@@ -552,102 +1120,38 @@ def validate_chunk_output(task: dict[str, Any], result: dict[str, Any]) -> list[
     ]:
         errors.append("segment IDs/order do not exactly match source")
         return errors
-
-    source_language = task.get("source_language", "en")
     for source, output in zip(expected, actual):
-        segment_id = source["segment_id"]
-        prefix = f"{segment_id}: "
-        if output.get("source_sha256") != source["source_sha256"]:
-            errors.append(prefix + "source_sha256 mismatch")
-        en_tex = output.get("en_tex")
-        ja_tex = output.get("ja_tex")
-        if not isinstance(en_tex, str) or not isinstance(ja_tex, str):
-            errors.append(prefix + "en_tex and ja_tex must be strings")
-            continue
-        technical_exact = task.get("validation_profile") == "technical_exact"
-        for language, candidate in (("en", en_tex), ("ja", ja_tex)):
-            if "\ufffd" in candidate or HTML_RE.search(candidate):
-                errors.append(prefix + f"{language}_tex contains replacement/HTML text")
-            if protected_token_sequence(candidate) != protected_token_sequence(source["source_tex"]):
-                errors.append(prefix + f"{language}_tex changed protected token sequence")
-            if technical_exact:
-                if structural_command_signature(candidate) != source["structural_command_signature"]:
-                    errors.append(prefix + f"{language}_tex changed structural TeX command sequence")
-            elif command_signature(candidate) != source["command_signature"]:
-                errors.append(prefix + f"{language}_tex changed TeX command sequence")
-            candidate_numbers = numeric_signature(candidate)
-            same_language_transcription = source_language == "en" and language == "en"
-            if same_language_transcription and Counter(candidate_numbers) != Counter(
-                source["numeric_signature"]
-            ):
-                errors.append(prefix + f"{language}_tex changed numeric facts/counts")
-            elif not same_language_transcription and not numeric_source_is_preserved(
-                source["numeric_signature"], candidate_numbers
-            ):
-                errors.append(prefix + f"{language}_tex omitted or altered source numeric facts")
-            if source["kind"] == "table" and table_signature(candidate) != source["table_signature"]:
-                errors.append(prefix + f"{language}_tex changed table structure")
-            if candidate.count("{") != candidate.count("}"):
-                errors.append(prefix + f"{language}_tex has unbalanced braces")
-        if technical_exact and Counter(inline_math_signature(en_tex)) != Counter(
-            inline_math_signature(ja_tex)
-        ):
-            errors.append(prefix + "English/Japanese math inventory differs")
-
-        visible = visible_text_with_math if technical_exact else visible_text
-        source_plain = visible(source["source_tex"])
-        en_plain = visible(en_tex)
-        ja_plain = visible(ja_tex)
-        source_len = max(1, len(source_plain))
-        if source_language == "en":
-            if len(en_plain) < source_len * 0.62 or len(en_plain) > source_len * 1.45:
-                errors.append(prefix + "English length suggests omission or unsupported expansion")
-            similarity = SequenceMatcher(
-                None,
-                source_plain.lower(),
-                en_plain.lower(),
-                autojunk=False,
-            ).ratio()
-            if source_len >= 80 and similarity < 0.52:
-                errors.append(prefix + f"English is not conservative enough (similarity={similarity:.3f})")
-        elif source_len >= 40 and (len(en_plain) < source_len * 0.20 or len(en_plain) > source_len * 4.0):
-            errors.append(prefix + "translated English length suggests omission or unsupported expansion")
-        if source_len >= 40 and (len(ja_plain) < source_len * 0.20 or len(ja_plain) > source_len * 3.20):
-            errors.append(prefix + "Japanese length suggests omission or unsupported expansion")
-        if (
-            source["kind"] != "math"
-            and source_len >= 40
-            and not japanese_translation_optional(source_plain)
-            and not KANA_RE.search(ja_plain)
-        ):
-            if not CJK_RE.search(ja_plain):
-                errors.append(prefix + "Japanese output contains no Japanese script")
-            elif japanese_kana_required(source["source_tex"], source_plain):
-                errors.append(prefix + "Japanese prose contains no kana")
-
-        changes = output.get("changes")
-        if not isinstance(changes, list):
-            errors.append(prefix + "changes must be an array")
-        else:
-            for change in changes:
-                if not isinstance(change, dict):
-                    errors.append(prefix + "change entry is not an object")
-                    continue
-                before = change.get("before", "")
-                after = change.get("after", "")
-                confidence = change.get("confidence")
-                if not before or before not in source["source_tex"]:
-                    errors.append(prefix + "change.before is not grounded in source_tex")
-                if not after or after not in en_tex:
-                    errors.append(prefix + "change.after is not present in en_tex")
-                if not isinstance(confidence, (int, float)) or confidence < 0.85:
-                    errors.append(prefix + "English corrections require confidence >= 0.85")
-            if source_language == "en" and en_tex != source["source_tex"] and not changes:
-                errors.append(prefix + "changed English lacks an evidence record")
-        unresolved = output.get("unresolved")
-        if not isinstance(unresolved, list):
-            errors.append(prefix + "unresolved must be an array")
+        errors.extend(validate_segment_output(task, source, output))
     return errors
+
+
+def machine_review_observations(
+    task: dict[str, Any],
+    result: dict[str, Any],
+) -> list[dict[str, str]]:
+    """Surface semantic risks without turning them into retry-causing guesses."""
+
+    observations: list[dict[str, str]] = []
+    actual = result.get("segments", [])
+    if not isinstance(actual, list):
+        return observations
+    for source, output in zip(task["segments"], actual):
+        if not isinstance(output, dict) or not isinstance(output.get("ja_tex"), str):
+            continue
+        source_numbers = source["numeric_signature"]
+        target_numbers = numeric_signature(output["ja_tex"])
+        if Counter(source_numbers) != Counter(target_numbers):
+            observations.append(
+                {
+                    "segment_id": source["segment_id"],
+                    "message": (
+                        "Japanese numeric notation differs from the source digit inventory; "
+                        f"verify semantic values explicitly (source={source_numbers}, "
+                        f"target={target_numbers})."
+                    ),
+                }
+            )
+    return observations
 
 
 def restored_segment_output(task_segment: dict[str, Any], output: dict[str, Any], language: str) -> str:
