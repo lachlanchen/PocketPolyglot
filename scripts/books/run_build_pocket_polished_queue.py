@@ -83,6 +83,18 @@ def write_queue_status(path: Path, payload: dict) -> None:
     write_json(path, payload)
 
 
+def sync_to_nutstore(book_id: str, share_root: Path | None) -> bool:
+    cmd = [
+        sys.executable,
+        "-u",
+        "scripts/books/sync_build_pocket_polished_to_nutstore.py",
+        book_id,
+    ]
+    if share_root is not None:
+        cmd.extend(("--share-root", str(share_root)))
+    return subprocess.run(cmd, cwd=ROOT, check=False).returncode == 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--queue", type=Path, default=OUTPUT_ROOT / "tasks/queue.json")
@@ -98,6 +110,8 @@ def main() -> int:
     parser.add_argument("--backoff", type=int, default=600)
     parser.add_argument("--max-books", type=int, default=0)
     parser.add_argument("--retry-passes", type=int, default=1)
+    parser.add_argument("--no-nutstore-sync", action="store_true")
+    parser.add_argument("--nutstore-share-root", type=Path)
     args = parser.parse_args()
 
     queue = read_json(args.queue)
@@ -128,6 +142,9 @@ def main() -> int:
                 print(f"[{index}/{len(books)}] {book_id}: already complete", flush=True)
                 state["books"][book_id] = {"status": "already_complete"}
                 write_queue_status(args.status, state)
+                if not args.no_nutstore_sync and not sync_to_nutstore(book_id, args.nutstore_share_root):
+                    print(f"{book_id}: Nutstore sync blocked", flush=True)
+                    return 1
                 continue
         print(f"[{index}/{len(books)}] {book_id}: polishing", flush=True)
         state["current_book"] = book_id
@@ -171,6 +188,9 @@ def main() -> int:
         write_queue_status(args.status, state)
         if result.returncode or status.get("status") != "complete":
             print(f"{book_id}: assembly/layout validation blocked; queue stopped for repair", flush=True)
+            return 1
+        if not args.no_nutstore_sync and not sync_to_nutstore(book_id, args.nutstore_share_root):
+            print(f"{book_id}: Nutstore sync blocked", flush=True)
             return 1
     state.pop("current_book", None)
     state["status"] = "complete"
