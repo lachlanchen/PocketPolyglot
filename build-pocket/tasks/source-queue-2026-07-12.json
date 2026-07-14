@@ -306,6 +306,14 @@
       "author": "Leonard Susskind",
       "source": "sources/popular-science/leonard-susskind/en/The Black Hole War - Leonard Susskind.pdf",
       "validation_profile": "technical_exact",
+      "polish_source_replacements": [
+        {
+          "before": "\\item\n  em.\n\\end{enumerate}",
+          "after": "\\item\n  cm.\n\\end{enumerate}",
+          "expected_count": 1,
+          "reason": "Source PDF page 4 visibly reads the Library of Congress catalog abbreviation 'p. cm.'; OCR misread c as e."
+        }
+      ],
       "note": "Science source; exact/review stage must preserve equations, diagrams, captions, and technical notation where present."
     },
     {

@@ -604,6 +604,7 @@ def load_pending_review_segments(
         reverse=True,
     )
     recovered: dict[str, dict[str, Any]] = {}
+    reviewed_keys: set[tuple[str, str]] = set()
     for path in candidates:
         try:
             payload = read_json(path)
@@ -636,13 +637,67 @@ def load_pending_review_segments(
         for row in payload["segments"]:
             if not isinstance(row, dict):
                 continue
+            segment_id = row.get("segment_id")
+            source_hash = row.get("source_sha256")
+            if isinstance(segment_id, str) and isinstance(source_hash, str):
+                reviewed_keys.add((segment_id, source_hash))
             if reject_all or row.get("segment_id") in blocking_ids:
                 continue
             source = current_by_id.get(row.get("segment_id"))
-            source_hash = row.get("source_sha256")
             if source is not None and source_hash != source["source_sha256"]:
                 source = None
             if source is None and isinstance(source_hash, str):
+                matches = current_by_hash.get(source_hash, [])
+                if len(matches) == 1:
+                    source = matches[0]
+            if source is None or source["segment_id"] in recovered:
+                continue
+            migrated = dict(row)
+            migrated["segment_id"] = source["segment_id"]
+            migrated["source_sha256"] = source["source_sha256"]
+            if not validate_segment_output(task, source, migrated):
+                recovered[source["segment_id"]] = migrated
+
+    # A stricter old validator may have rejected a canonical writer result
+    # before semantic review.  After a validator upgrade, recover that exact
+    # result and send it to review instead of spending another writer call.
+    # Anything that previously reached semantic review is excluded here: the
+    # pending-review path above either recovered it or intentionally preserved
+    # the reviewer's rejection.
+    canonical_pattern = (
+        f"work/runs/*/attempts/{task['chunk_id']}/"
+        "attempt-*.writer-canonical.json"
+    )
+    canonical_candidates = sorted(
+        book_root.glob(canonical_pattern),
+        key=lambda path: path.stat().st_mtime,
+        reverse=True,
+    )
+    for path in canonical_candidates:
+        try:
+            payload = read_json(path)
+        except (OSError, ValueError, json.JSONDecodeError):
+            continue
+        if (
+            not isinstance(payload, dict)
+            or payload.get("book_id") != task["book_id"]
+            or payload.get("chunk_id") != task["chunk_id"]
+            or not isinstance(payload.get("segments"), list)
+        ):
+            continue
+        for row in payload["segments"]:
+            if not isinstance(row, dict):
+                continue
+            row_id = row.get("segment_id")
+            source_hash = row.get("source_sha256")
+            if not isinstance(row_id, str) or not isinstance(source_hash, str):
+                continue
+            if (row_id, source_hash) in reviewed_keys:
+                continue
+            source = current_by_id.get(row_id)
+            if source is not None and source_hash != source["source_sha256"]:
+                source = None
+            if source is None:
                 matches = current_by_hash.get(source_hash, [])
                 if len(matches) == 1:
                     source = matches[0]

@@ -18,6 +18,8 @@ from build_pocket_tex_queue import (
     wrap_wide_display_math,
 )
 from pocket_polished_common import (
+    INLINE_MATH_RE,
+    MATH_ENV_RE,
     OUTPUT_ROOT,
     ROOT,
     compare_inventory,
@@ -51,6 +53,119 @@ STANDALONE_IMAGE_RE = re.compile(
     r"(?P<image>\\includegraphics(?:\[[^\]]*\])?\{[^{}]+\})"
     r"(?P<tail>(?:[ \t]*\\(?:par|smallskip|medskip|bigskip))*)[ \t]*$"
 )
+PLAIN_LOG_EXPRESSION_RE = re.compile(
+    r"(?<![\\$A-Za-z0-9_])(?P<lhs>[A-Za-z]+_[A-Za-z0-9]+)\s*=\s*"
+    r"(?P<sign>[+-]?)log\s*(?P<argument>[ερλχσθαβγδA-Za-z][A-Za-z0-9_]*)"
+)
+PLAIN_POWER_INEQUALITY_RE = re.compile(
+    r"(?P<left>[A-Za-z]+\^\{[^{}\n]+\})\s*"
+    r"\\textless\{\}\s*(?P<right>[A-Za-z]+\^\{[^{}\n]+\})"
+)
+PLAIN_SCALE_FACTOR_RE = re.compile(r"a\(t\)\s*=\s*a₀tᵖ")
+PLAIN_GREEK_POWER_RE = re.compile(r"φ\(r\)\s*∼\s*r\^\{(?P<exponent>[^{}\n]+)\}Φ")
+PLAIN_NUMERIC_POWER_RE = re.compile(
+    r"(?<![\\$A-Za-z0-9_])"
+    r"(?:(?P<coefficient>\d+(?:\.\d+)?)\s*(?:×|[xX]|\\times)\s*)?"
+    r"10\^(?P<exponent>[+-]?\d+|[A-Za-z]+)(?![A-Za-z0-9_])"
+)
+GREEK_MATH_COMMANDS = {
+    "ε": r"\epsilon",
+    "ρ": r"\rho",
+    "λ": r"\lambda",
+    "χ": r"\chi",
+    "σ": r"\sigma",
+    "θ": r"\theta",
+    "α": r"\alpha",
+    "β": r"\beta",
+    "γ": r"\gamma",
+    "δ": r"\delta",
+}
+
+
+def normalize_unwrapped_math_fragments(tex: str) -> tuple[str, int]:
+    """Typeset evidence-clear plain OCR math without rewriting prose.
+
+    A grounded repair can restore a subscript or Greek symbol while leaving
+    the resulting expression outside math mode (for example
+    ``u_o = log ε``).  Such text is invalid TeX because of the underscore.
+    This narrow pass recognizes only a variable-with-subscript logarithm
+    relation and preserves its exact symbols in proper TeX math.
+    """
+
+    def replace(match: re.Match[str]) -> str:
+        argument = GREEK_MATH_COMMANDS.get(
+            match.group("argument"), match.group("argument")
+        )
+        return (
+            rf"\({match.group('lhs')} = {match.group('sign')}\log {argument}\)"
+        )
+
+    def replace_plain(plain: str) -> tuple[str, int]:
+        count = 0
+        plain, changed = PLAIN_LOG_EXPRESSION_RE.subn(replace, plain)
+        count += changed
+        plain, changed = PLAIN_POWER_INEQUALITY_RE.subn(
+            lambda match: rf"\({match.group('left')} < {match.group('right')}\)",
+            plain,
+        )
+        count += changed
+        plain, changed = PLAIN_SCALE_FACTOR_RE.subn(
+            lambda _match: r"\(a(t) = a_0 t^p\)", plain
+        )
+        count += changed
+        plain, changed = PLAIN_GREEK_POWER_RE.subn(
+            lambda match: rf"\(\phi(r) \sim r^{{{match.group('exponent')}}}\Phi\)",
+            plain,
+        )
+        count += changed
+        plain, changed = PLAIN_NUMERIC_POWER_RE.subn(
+            lambda match: (
+                r"\("
+                + (
+                    rf"{match.group('coefficient')} \times "
+                    if match.group("coefficient")
+                    else ""
+                )
+                + "10^{"
+                + (
+                    match.group("exponent")
+                    if re.fullmatch(r"[+-]?\d+", match.group("exponent"))
+                    else rf"\mathrm{{{match.group('exponent')}}}"
+                )
+                + r"}\)"
+            ),
+            plain,
+        )
+        count += changed
+        plain, changed = re.subn(r"(?<=[})∞])\.(?=[A-Z])", ". ", plain)
+        count += changed
+        return plain, count
+
+    spans = [
+        (match.start(), match.end())
+        for pattern in (INLINE_MATH_RE, MATH_ENV_RE)
+        for match in pattern.finditer(tex)
+    ]
+    spans.sort()
+    merged: list[tuple[int, int]] = []
+    for start, end in spans:
+        if merged and start <= merged[-1][1]:
+            merged[-1] = (merged[-1][0], max(merged[-1][1], end))
+        else:
+            merged.append((start, end))
+
+    parts: list[str] = []
+    cursor = 0
+    count = 0
+    for start, end in merged:
+        plain, replacements = replace_plain(tex[cursor:start])
+        parts.extend((plain, tex[start:end]))
+        count += replacements
+        cursor = end
+    plain, replacements = replace_plain(tex[cursor:])
+    parts.append(plain)
+    count += replacements
+    return "".join(parts), count
 
 
 def copy_and_rewrite_figures(tex: str, destination: Path) -> str:
@@ -227,6 +342,7 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
         }
 
     assembled: dict[str, str] = {}
+    normalized_math_fragments: dict[str, int] = {"en": 0, "ja": 0}
     merged_rows: list[dict[str, Any]] = []
     for language in ("en", "ja"):
         parts: list[str] = []
@@ -240,6 +356,8 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
                     output_segment_map[segment_id],
                     language,
                 )
+                rendered, count = normalize_unwrapped_math_fragments(rendered)
+                normalized_math_fragments[language] += count
             parts.append(rendered)
         assembled[language] = "".join(parts)
         differences = compare_inventory(source_tex, assembled[language])
@@ -258,11 +376,17 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
         else:
             output = output_segment_map[segment_id]
             task_segment = task_segment_map[segment_id]
+            en_tex, _ = normalize_unwrapped_math_fragments(
+                restored_segment_output(task_segment, output, "en")
+            )
+            ja_tex, _ = normalize_unwrapped_math_fragments(
+                restored_segment_output(task_segment, output, "ja")
+            )
             row.update(
                 {
                     "source_tex": segment["source_tex"],
-                    "en_tex": restored_segment_output(task_segment, output, "en"),
-                    "ja_tex": restored_segment_output(task_segment, output, "ja"),
+                    "en_tex": en_tex,
+                    "ja_tex": ja_tex,
                     "changes": output["changes"],
                     "unresolved": output["unresolved"],
                 }
@@ -290,6 +414,9 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
             )
             assembled[language], normalized_full_bleed[language] = normalize_full_bleed_images(
                 assembled[language]
+            )
+            assembled[language] = wrap_wide_display_math(
+                assembled[language], layout="exact"
             )
 
     figure_root = book_root / "assets/figures"
@@ -346,6 +473,7 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
         "validation_profile": validation_profile,
         "centered_standalone_figures": centered_figures,
         "normalized_full_bleed_images": normalized_full_bleed,
+        "normalized_unwrapped_math_fragments": normalized_math_fragments,
         "assembled_at": datetime.now(timezone.utc).isoformat(),
     }
     write_json(book_root / "status.json", status)

@@ -16,6 +16,7 @@ from codex_pocket_polish_worker import (
     sanitize_reviewer_corrections,
     save_cached_segment,
 )
+from assemble_build_pocket_polished import normalize_unwrapped_math_fragments
 from pocket_polished_common import (
     apply_exact_paragraph_drops,
     apply_exact_text_replacements,
@@ -25,6 +26,7 @@ from pocket_polished_common import (
     normalize_page_boundary_artifacts,
     normalize_split_prose_paragraphs,
     numeric_signature,
+    numeric_signature_matches,
     sha256_text,
     split_tex_segments,
     structural_command_signature,
@@ -245,7 +247,48 @@ class PocketPolishPipelineTest(unittest.TestCase):
             base.with_suffix(".review.json").write_text(
                 json.dumps(review), encoding="utf-8"
             )
+            base.with_suffix(".writer-canonical.json").write_text(
+                json.dumps(candidate), encoding="utf-8"
+            )
             self.assertFalse(load_pending_review_segments(task, root))
+
+    def test_validator_upgrade_recovers_unreviewed_canonical_segment(self) -> None:
+        source = source_segment(
+            "book-snumeric",
+            "These concepts are ordina1ily introduced in college.",
+        )
+        task = dict(self.task, segments=[source], segment_count=1)
+        output = {
+            "segment_id": source["segment_id"],
+            "source_sha256": source["source_sha256"],
+            "en_tex": "These concepts are ordinarily introduced in college.",
+            "ja_tex": "これらの概念は通常、大学で初めて学ぶ。",
+            "changes": [
+                {
+                    "before": "ordina1ily",
+                    "after": "ordinarily",
+                    "reason": "Repair an OCR substitution of one for lowercase l.",
+                    "confidence": 0.99,
+                }
+            ],
+            "unresolved": [],
+        }
+        candidate = {
+            "schema_version": 1,
+            "book_id": "book",
+            "chunk_id": "book-p00001",
+            "segments": [output],
+        }
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            path = (
+                root
+                / "work/runs/older/attempts/book-p00001/attempt-01.writer-canonical.json"
+            )
+            path.parent.mkdir(parents=True)
+            path.write_text(json.dumps(candidate), encoding="utf-8")
+            recovered = load_pending_review_segments(task, root)
+            self.assertEqual(recovered, {source["segment_id"]: output})
 
     def test_legacy_ambiguous_spacing_evidence_is_migrated(self) -> None:
         output = {
@@ -300,6 +343,224 @@ class PocketPolishPipelineTest(unittest.TestCase):
 
     def test_placeholder_serial_is_not_a_numeric_fact(self) -> None:
         self.assertEqual(numeric_signature("x @@PROTECTED_0001@@ 1905"), ["1905"])
+
+    def test_flattened_ocr_exponents_match_only_when_digits_are_preserved(self) -> None:
+        self.assertTrue(
+            numeric_signature_matches(
+                ["1000", "10", "5", "3", "105", "3"],
+                r"1000 K, 10^{-5}, \lambda^3, [R\times 10^5]^3",
+            )
+        )
+        self.assertTrue(
+            numeric_signature_matches(
+                ["1051", "1028"],
+                r"R\sim 10^{51}\,\mathrm{cm}; 10^{28}\,\mathrm{cm}",
+            )
+        )
+        self.assertFalse(
+            numeric_signature_matches(
+                ["1051", "1028"],
+                r"R\sim 10^{50}\,\mathrm{cm}; 10^{28}\,\mathrm{cm}",
+            )
+        )
+
+    def test_grounded_numeric_ocr_repair_reaches_semantic_review(self) -> None:
+        source = source_segment(
+            "book-snumeric",
+            "These concepts are ordina1ily introduced in college.",
+        )
+        task = dict(self.task, segments=[source], segment_count=1)
+        output = {
+            "segment_id": source["segment_id"],
+            "source_sha256": source["source_sha256"],
+            "en_tex": "These concepts are ordinarily introduced in college.",
+            "ja_tex": "これらの概念は通常、大学で初めて学ぶ。",
+            "changes": [
+                {
+                    "before": "ordina1ily",
+                    "after": "ordinarily",
+                    "reason": "Repair an OCR substitution of one for lowercase l.",
+                    "confidence": 0.99,
+                }
+            ],
+            "unresolved": [],
+        }
+        self.assertFalse(validate_segment_output(task, source, output))
+
+    def test_short_catalog_control_fragment_need_not_invent_japanese(self) -> None:
+        source_tex = (
+            "\\begin{enumerate}\n"
+            "\\def\\labelenumi{alph{enumi}.}\n"
+            "\\setcounter{enumi}{15}\n"
+            "\\tightlist\n"
+            "\\item\n"
+            "  cm.\n"
+            "\\end{enumerate}"
+        )
+        source = source_segment("book-scatalog", source_tex)
+        task = dict(
+            self.task,
+            segments=[source],
+            segment_count=1,
+            validation_profile="technical_exact",
+        )
+        output = {
+            "segment_id": source["segment_id"],
+            "source_sha256": source["source_sha256"],
+            "en_tex": source_tex,
+            "ja_tex": source_tex,
+            "changes": [],
+            "unresolved": [],
+        }
+        self.assertFalse(validate_segment_output(task, source, output))
+
+    def test_automatic_repair_remains_idempotent_after_overlapping_patch(self) -> None:
+        from pocket_polished_common import apply_grounded_english_repairs
+
+        repaired, _changes, errors = apply_grounded_english_repairs(
+            "Photons have wavelength 10−5 cm.Then continue.",
+            [
+                {
+                    "before": "10−5 cm",
+                    "after": r"\(10^{-5}\,\mathrm{cm}\)",
+                    "reason": "Restore the exponent and unit markup.",
+                    "confidence": 0.99,
+                },
+                {
+                    "before": "cm.Then",
+                    "after": "cm. Then",
+                    "reason": "Restore sentence spacing.",
+                    "confidence": 0.99,
+                },
+            ],
+        )
+        self.assertFalse(errors)
+        self.assertEqual(
+            repaired,
+            r"Photons have wavelength \(10^{-5}\,\mathrm{cm}\). Then continue.",
+        )
+
+    def test_plain_subscript_log_relation_is_typeset_as_math(self) -> None:
+        repaired, count = normalize_unwrapped_math_fragments(
+            "Introduce a cutoff at u_o = log ε and continue."
+        )
+        self.assertEqual(count, 1)
+        self.assertEqual(
+            repaired,
+            r"Introduce a cutoff at \(u_o = \log \epsilon\) and continue.",
+        )
+        repaired, count = normalize_unwrapped_math_fragments(
+            "ある点u_o = log εにカットオフを置く。"
+        )
+        self.assertEqual(count, 1)
+        self.assertEqual(
+            repaired,
+            r"ある点\(u_o = \log \epsilon\)にカットオフを置く。",
+        )
+        unchanged, count = normalize_unwrapped_math_fragments(
+            r"Already \(u_o = \log \epsilon\)."
+        )
+        self.assertEqual(count, 0)
+        self.assertEqual(unchanged, r"Already \(u_o = \log \epsilon\).")
+        unchanged, count = normalize_unwrapped_math_fragments(
+            r"Already \(u = u_1 = -log k\)."
+        )
+        self.assertEqual(count, 0)
+        self.assertEqual(unchanged, r"Already \(u = u_1 = -log k\).")
+
+    def test_plain_technical_power_expressions_are_typeset_as_math(self) -> None:
+        source = (
+            "Assume a(t) = a₀tᵖ. Then "
+            r"t^{(1-p)d} \textless{} t^{d-1}.This follows when "
+            "φ(r) ∼ r^{-4}Φ as r → ∞.It is finite."
+        )
+        repaired, count = normalize_unwrapped_math_fragments(source)
+        self.assertEqual(count, 5)
+        self.assertEqual(
+            repaired,
+            "Assume "
+            r"\(a(t) = a_0 t^p\). Then "
+            r"\(t^{(1-p)d} < t^{d-1}\). This follows when "
+            r"\(\phi(r) \sim r^{-4}\Phi\) as r → ∞. It is finite.",
+        )
+
+    def test_plain_numeric_powers_are_typeset_without_nested_math(self) -> None:
+        source = (
+            "There are 10^90 photons; an electron weighs "
+            "9 × 10^-31 kilograms; a googolplex is 10^googol."
+        )
+        repaired, count = normalize_unwrapped_math_fragments(source)
+        self.assertEqual(count, 3)
+        self.assertEqual(
+            repaired,
+            "There are "
+            r"\(10^{90}\) photons; an electron weighs "
+            r"\(9 \times 10^{-31}\) kilograms; a googolplex is "
+            r"\(10^{\mathrm{googol}}\).",
+        )
+
+    def test_numeric_math_wrapping_difference_is_not_equation_loss(self) -> None:
+        source = source_segment(
+            "book-snumeric-power",
+            "The total number of photons is about 1090.",
+        )
+        task = dict(
+            self.task,
+            segments=[source],
+            segment_count=1,
+            validation_profile="technical_exact",
+        )
+        output = {
+            "segment_id": source["segment_id"],
+            "source_sha256": source["source_sha256"],
+            "en_tex": "The total number of photons is about 10^90.",
+            "ja_tex": "光子の総数はおよそ $10^{90}$ 個である。",
+            "changes": [
+                {
+                    "before": "1090",
+                    "after": "10^90",
+                    "reason": "Restore a flattened exponent.",
+                    "confidence": 0.99,
+                }
+            ],
+            "unresolved": [],
+        }
+        self.assertFalse(validate_segment_output(task, source, output))
+
+    def test_technical_math_inventory_allows_unit_wrapper_and_variable_placement(self) -> None:
+        source_tex = (
+            r"Photons of wavelength 10−5 cm satisfy "
+            r"Nγ ∼ V λ3 ∼ R(cm) ⊗ 105 3."
+        )
+        source = source_segment("book-tech", source_tex)
+        task = {
+            "schema_version": 1,
+            "book_id": "book",
+            "chunk_id": "book-p00001",
+            "source_language": "en",
+            "validation_profile": "technical_exact",
+            "segment_count": 1,
+            "segments": [source],
+        }
+        output = {
+            "segment_id": source["segment_id"],
+            "source_sha256": source["source_sha256"],
+            "en_tex": (
+                r"Photons of wavelength \(10^{-5}\) cm satisfy "
+                r"\(N_\gamma \sim V/\lambda^3 \sim [R(\mathrm{cm})\times 10^5]^3\)."
+            ),
+            "ja_tex": (
+                r"波長 \(10^{-5}\,\mathrm{cm}\) の光子について、半径 \(R\) の体積では "
+                r"\(N_\gamma \sim V/\lambda^3 \sim [R(\mathrm{cm})\times 10^5]^3\) となる。"
+            ),
+            "changes": [],
+            "unresolved": [],
+        }
+        errors = validate_segment_output(task, source, output)
+        self.assertNotIn(
+            "book-tech: English/Japanese math inventory differs", errors
+        )
+        self.assertNotIn("book-tech: en_tex changed numeric facts/counts", errors)
 
     def test_reviewer_japanese_patch_note_does_not_force_regeneration(self) -> None:
         correction = {

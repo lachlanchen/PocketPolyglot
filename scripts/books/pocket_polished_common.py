@@ -72,6 +72,9 @@ MATH_ENVIRONMENTS = {
     "math",
 }
 NUMBER_RE = re.compile(r"\d+")
+NUMERIC_POWER_RE = re.compile(
+    r"(?P<base>\d+)\s*\^\s*(?:\{(?P<braced>[+-]?\d+)\}|(?P<plain>[+-]?\d+))"
+)
 PROTECTED_TOKEN_RE = re.compile(r"@@PROTECTED_\d{4}@@")
 KANA_RE = re.compile(r"[\u3040-\u30ff]")
 CJK_RE = re.compile(r"[\u3400-\u9fff]")
@@ -541,6 +544,131 @@ def numeric_signature(text: str) -> list[str]:
     return NUMBER_RE.findall(PROTECTED_TOKEN_RE.sub("", text))
 
 
+def numeric_signature_matches(source: Iterable[str], candidate: str) -> bool:
+    """Compare digit facts while allowing evidence-grounded exponent markup.
+
+    OCR frequently flattens ``10^{51}`` into ``1051``.  The English repair
+    path remains grounded by exact before/after patches and semantic review;
+    this guard only recognizes the two digit-preserving tokenizations of a
+    TeX numeric power.  It therefore accepts ``1051`` -> ``10^{51}`` but still
+    rejects ``10^{50}``, dropped numbers, duplicated numbers, or reordering
+    that changes the numeric multiset.
+    """
+
+    expected = Counter(source)
+    cleaned = PROTECTED_TOKEN_RE.sub("", candidate)
+    matches = list(NUMERIC_POWER_RE.finditer(cleaned))
+    if not matches:
+        return Counter(numeric_signature(cleaned)) == expected
+
+    variants: list[list[str]] = [[]]
+    cursor = 0
+    for match in matches:
+        fixed = NUMBER_RE.findall(cleaned[cursor : match.start()])
+        exponent = (match.group("braced") or match.group("plain")).lstrip("+-")
+        alternatives = (
+            [match.group("base"), exponent],
+            [match.group("base") + exponent],
+        )
+        variants = [
+            existing + fixed + alternative
+            for existing in variants
+            for alternative in alternatives
+        ]
+        # Technical prose rarely contains many editable numeric powers in one
+        # segment.  Bound pathological inputs without weakening the exact
+        # comparison: the unflattened and all-flattened paths are retained.
+        if len(variants) > 256:
+            variants = variants[:255] + [
+                NUMBER_RE.findall(cleaned[: match.end()])
+            ]
+        cursor = match.end()
+    suffix = NUMBER_RE.findall(cleaned[cursor:])
+    return any(Counter(variant + suffix) == expected for variant in variants)
+
+
+def has_grounded_numeric_repair(
+    source_tex: str,
+    changes: Any,
+) -> bool:
+    """Return whether a declared source-grounded repair changes OCR digits.
+
+    Numeric OCR errors often substitute a letter and a digit (``lC``/``10``
+    or ``ordina1ily``/``ordinarily``).  Such edits cannot satisfy a raw digit
+    inventory check, but they are still auditable: the English result is
+    reconstructed from exact patches and the independent reviewer receives a
+    numeric-difference warning.  This predicate only lets that reviewed path
+    run; ordered repair replay below remains the final deterministic guard.
+    """
+
+    if not isinstance(changes, list):
+        return False
+    for change in changes:
+        if not isinstance(change, dict):
+            continue
+        before = change.get("before")
+        after = change.get("after")
+        confidence = change.get("confidence")
+        if (
+            isinstance(before, str)
+            and isinstance(after, str)
+            and before
+            and before in source_tex
+            and isinstance(confidence, (int, float))
+            and confidence >= 0.90
+            and numeric_signature(before) != numeric_signature(after)
+        ):
+            return True
+    return False
+
+
+MATH_SPACING_RE = re.compile(r"\\(?:,|!|;|:|quad|qquad)\s*")
+MATH_UNIT_RE = re.compile(
+    r"\\(?:mathrm|text)\{(?:"
+    r"cm|mm|km|m|kg|g|s|ms|K|Hz|kHz|MHz|GHz|eV|keV|MeV|GeV|TeV"
+    r")\}",
+    re.I,
+)
+SIMPLE_MATH_ATOM_RE = re.compile(
+    r"^(?:\d+|[A-Za-z]|\\[A-Za-z]+)"
+    r"(?:_\{?(?:\d+|[A-Za-z]|\\[A-Za-z]+)\}?)?$"
+)
+PURE_NUMERIC_POWER_RE = re.compile(
+    r"^(?:\d+(?:\.\d+)?\\times)?10\^(?:"
+    r"\{(?:[+-]?\d+|[A-Za-z]+|\\text\{[A-Za-z]+\})\}"
+    r"|[+-]?\d+|[A-Za-z]+)$"
+)
+
+
+def normalized_substantive_math_signature(text: str) -> list[str]:
+    """Return equations while ignoring harmless inline-wrapper placement.
+
+    Translation may put a unit or a standalone variable inside ``\(...\)``
+    where English leaves it outside.  Requiring identical raw math spans made
+    correct technical chunks retry indefinitely.  Nontrivial expressions are
+    still compared exactly after removing TeX spacing and a conservative list
+    of unit-formatting wrappers; standalone variables are reviewed
+    semantically with their surrounding prose.
+    """
+
+    result: list[str] = []
+    for expression in inline_math_signature(text):
+        normalized = expression
+        normalized = normalized.replace(r"\left", "").replace(r"\right", "")
+        normalized = MATH_SPACING_RE.sub("", normalized)
+        normalized = MATH_UNIT_RE.sub("", normalized)
+        normalized = re.sub(r"\s+", "", normalized)
+        normalized = normalized.replace("−", "-").replace("×", r"\times")
+        if (
+            not normalized
+            or SIMPLE_MATH_ATOM_RE.fullmatch(normalized)
+            or PURE_NUMERIC_POWER_RE.fullmatch(normalized)
+        ):
+            continue
+        result.append(normalized)
+    return result
+
+
 def numeric_source_is_preserved(source: Iterable[str], candidate: Iterable[str]) -> bool:
     """Require every source digit atom without banning valid translation forms.
 
@@ -661,10 +789,18 @@ def apply_grounded_english_repairs(
             errors.append(f"repair {index} before text is not grounded in source")
             continue
         occurrence_count = repaired.count(before)
-        if occurrence_count == 0 and after in repaired:
+        already_applied_automatically = any(
+            change.get("before") == before and change.get("after") == after
+            for change in changes
+        )
+        if occurrence_count == 0 and (
+            after in repaired or already_applied_automatically
+        ):
             # The deterministic pre-pass may already have applied the same
-            # repair.  Treat a matching model patch as idempotent rather than
-            # rejecting an otherwise valid segment and regenerating it.
+            # repair.  A later grounded patch can alter the surrounding text,
+            # so the replacement itself need not remain as one literal span.
+            # Treat matching evidence as idempotent rather than regenerating
+            # an otherwise valid segment.
             continue
         if occurrence_count != 1:
             errors.append(
@@ -691,6 +827,21 @@ def apply_grounded_english_repairs(
 
 def japanese_kana_required(source_tex: str, source_plain: str) -> bool:
     """Return whether kana is required to prove prose is actually Japanese."""
+    # TeX control lines can make a tiny catalog fragment look long after a
+    # naive text extraction (for example an enumerate wrapper around ``cm.``).
+    # Measure the actual non-command payload before requiring a translation.
+    probe_lines: list[str] = []
+    ignorable_control = re.compile(
+        r"^\\(?:begin|end|def|setcounter|tightlist|item|label|hypertarget)\b"
+    )
+    for line in source_tex.splitlines():
+        stripped = line.strip()
+        if not stripped or ignorable_control.match(stripped):
+            continue
+        probe_lines.append(line)
+    probe_plain = visible_text_with_math("\n".join(probe_lines))
+    if len(probe_plain) < 40:
+        return False
     if len(source_plain) < 40:
         return False
     if re.search(
@@ -1019,8 +1170,12 @@ def validate_segment_output(
             errors.append(prefix + f"{language}_tex changed TeX command sequence")
         candidate_numbers = numeric_signature(candidate)
         same_language_transcription = source_language == "en" and language == "en"
-        if same_language_transcription and Counter(candidate_numbers) != Counter(
-            source["numeric_signature"]
+        if (
+            same_language_transcription
+            and not numeric_signature_matches(source["numeric_signature"], candidate)
+            and not has_grounded_numeric_repair(
+                source["source_tex"], output.get("changes")
+            )
         ):
             errors.append(prefix + f"{language}_tex changed numeric facts/counts")
         # A translated number can be faithfully reformatted (2.87 million ->
@@ -1030,9 +1185,9 @@ def validate_segment_output(
             errors.append(prefix + f"{language}_tex changed table structure")
         if candidate.count("{") != candidate.count("}"):
             errors.append(prefix + f"{language}_tex has unbalanced braces")
-    if technical_exact and Counter(inline_math_signature(en_tex)) != Counter(
-        inline_math_signature(ja_tex)
-    ):
+    if technical_exact and Counter(
+        normalized_substantive_math_signature(en_tex)
+    ) != Counter(normalized_substantive_math_signature(ja_tex)):
         errors.append(prefix + "English/Japanese math inventory differs")
 
     visible = visible_text_with_math if technical_exact else visible_text
@@ -1058,6 +1213,7 @@ def validate_segment_output(
     if (
         source_len >= 40
         and not japanese_translation_optional(source_plain)
+        and japanese_kana_required(source["source_tex"], source_plain)
         and not KANA_RE.search(ja_plain)
     ):
         if not CJK_RE.search(ja_plain):

@@ -502,16 +502,17 @@ def scaled_display_math(body: str) -> str:
 
 
 def wrap_wide_display_math(text: str, *, layout: str) -> str:
-    """Constrain long display equations to pocket page width."""
+    """Constrain long display equations to the selected page width."""
 
-    if layout != "pocket":
+    if layout not in {"exact", "pocket"}:
         return text
     text = ADJUSTBOX_DISPLAY_MATH_RE.sub(lambda match: scaled_display_math(match.group(1)), text)
+    minimum_length = 55 if layout == "pocket" else 95
 
     def repl(match: re.Match[str]) -> str:
         body = match.group(1).strip()
         compact = re.sub(r"\s+", "", body)
-        if len(compact) < 55 and not any(token in body for token in [r"\begin{split}", r"\begin{aligned}", r"\tag{"]):
+        if len(compact) < minimum_length and not any(token in body for token in [r"\begin{split}", r"\begin{aligned}", r"\tag{"]):
             return match.group(0)
         return scaled_display_math(body)
 
