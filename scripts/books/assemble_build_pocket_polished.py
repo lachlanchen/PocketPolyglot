@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import os
 import re
 import shutil
 from datetime import datetime, timezone
@@ -17,6 +18,7 @@ from build_pocket_tex_queue import (
     inject_cover_page,
     wrap_wide_display_math,
 )
+from japanese_tex_furigana import FuriganaStats, annotate_japanese_tex
 from pocket_polished_common import (
     INLINE_MATH_RE,
     MATH_ENV_RE,
@@ -80,6 +82,56 @@ GREEK_MATH_COMMANDS = {
     "γ": r"\gamma",
     "δ": r"\delta",
 }
+HEADING_COMMAND_RE = re.compile(
+    r"\\(?P<command>part|chapter|section|subsection|subsubsection|paragraph)\*?\s*\{"
+)
+SHARED_CONTROL_MARKERS = (
+    r"\tableofcontents",
+    r"\frontmatter",
+    r"\mainmatter",
+    r"\backmatter",
+    r"\maketitle",
+)
+FUSION_PREAMBLE = r"""
+% BUILD_POCKET_POLISHED_FUSION_BEGIN
+\definecolor{JpSecondaryInk}{RGB}{62,68,76}
+\IfFontExistsTF{Noto Serif CJK JP}{%
+  \newCJKfontfamily\JpSecondaryFont{Noto Serif CJK JP}%
+}{%
+  \newcommand{\JpSecondaryFont}{}%
+}
+\newcommand{\JpRubyReadingFont}{\fontsize{4.1pt}{4.4pt}\selectfont}
+\NewDocumentCommand{\JpRuby}{m m}{%
+  \leavevmode
+  \begingroup
+    \setbox0=\hbox{{\JpSecondaryFont #1}}%
+    \setbox1=\hbox{{\JpSecondaryFont\JpRubyReadingFont #2}}%
+    \dimen0=\wd0
+    \ifdim\wd1>\dimen0 \dimen0=\wd1\fi
+    \vbox{%
+      \offinterlineskip
+      \hbox to \dimen0{\hss\box1\hss}%
+      \kern0.10ex
+      \hbox to \dimen0{\hss\box0\hss}%
+    }%
+  \endgroup
+  \allowbreak{}%
+}
+\newenvironment{JpSecondary}{%
+  \par\nopagebreak[2]\vspace{0.12em}%
+  \begingroup\JpSecondaryFont\fontsize{8.6pt}{14.2pt}\selectfont\color{JpSecondaryInk}%
+  \leftskip=1.25em\relax\rightskip=0pt plus .6em\relax
+  \parindent=0pt\relax
+}{%
+  \par\endgroup\vspace{0.38em}%
+}
+\newcommand{\JpSecondaryHeading}[1]{%
+  \par\nopagebreak[4]\vspace{0.08em}%
+  {\JpSecondaryFont\fontsize{9pt}{14.5pt}\selectfont\color{JpSecondaryInk}\leftskip=1.25em\relax
+   \noindent #1\par}\vspace{0.35em}%
+}
+% BUILD_POCKET_POLISHED_FUSION_END
+"""
 
 
 def normalize_unwrapped_math_fragments(tex: str) -> tuple[str, int]:
@@ -166,6 +218,99 @@ def normalize_unwrapped_math_fragments(tex: str) -> tuple[str, int]:
     parts.append(plain)
     count += replacements
     return "".join(parts), count
+
+
+def braced_argument(tex: str, opening_brace: int) -> tuple[str, int]:
+    if opening_brace >= len(tex) or tex[opening_brace] != "{":
+        raise ValueError("expected opening brace")
+    depth = 0
+    escaped = False
+    for index in range(opening_brace, len(tex)):
+        char = tex[index]
+        if escaped:
+            escaped = False
+            continue
+        if char == "\\":
+            escaped = True
+            continue
+        if char == "{":
+            depth += 1
+        elif char == "}":
+            depth -= 1
+            if depth == 0:
+                return tex[opening_brace + 1 : index], index + 1
+    raise ValueError("unbalanced TeX argument")
+
+
+def unwrap_texorpdfstring(tex: str) -> str:
+    stripped = tex.strip()
+    command = r"\texorpdfstring"
+    if not stripped.startswith(command):
+        return stripped
+    cursor = len(command)
+    while cursor < len(stripped) and stripped[cursor].isspace():
+        cursor += 1
+    display, _ = braced_argument(stripped, cursor)
+    return display.strip()
+
+
+def translated_heading_title(tex: str) -> str | None:
+    match = HEADING_COMMAND_RE.search(tex)
+    if not match:
+        return None
+    title, _ = braced_argument(tex, match.end() - 1)
+    return unwrap_texorpdfstring(title)
+
+
+def strip_shared_document_controls(en_tex: str, ja_tex: str) -> str:
+    common = os.path.commonprefix((en_tex, ja_tex))
+    if not common or not any(marker in common for marker in SHARED_CONTROL_MARKERS):
+        return ja_tex
+    newline = common.rfind("\n")
+    if newline < 0:
+        return ja_tex
+    return ja_tex[newline + 1 :]
+
+
+def inject_fusion_preamble(tex: str) -> str:
+    marker = r"\begin{document}"
+    if FUSION_PREAMBLE.strip() in tex or "BUILD_POCKET_POLISHED_FUSION_BEGIN" in tex:
+        return tex
+    if marker not in tex:
+        raise ValueError("cannot add bilingual fusion macros: missing document start")
+    return tex.replace(marker, FUSION_PREAMBLE + "\n" + marker, 1)
+
+
+def fuse_english_main_japanese_secondary(
+    segments: list[dict[str, Any]],
+) -> tuple[str, FuriganaStats]:
+    parts: list[str] = []
+    furigana = FuriganaStats()
+    for segment in segments:
+        if segment["kind"] == "protected":
+            parts.append(segment["source_tex"])
+            continue
+        en_tex = segment["en_tex"]
+        ja_tex = segment["ja_tex"]
+        if en_tex.strip() == ja_tex.strip() or not ja_tex.strip():
+            parts.append(en_tex)
+            continue
+        parts.append(en_tex)
+        heading = translated_heading_title(ja_tex)
+        if heading is not None:
+            heading, current = annotate_japanese_tex(heading)
+            furigana.merge(current)
+            parts.append(f"\n\\JpSecondaryHeading{{{heading}}}\n")
+            continue
+        secondary = strip_shared_document_controls(en_tex, ja_tex).strip()
+        if secondary:
+            secondary, current = annotate_japanese_tex(secondary)
+            furigana.merge(current)
+            parts.append(f"\n\\begin{{JpSecondary}}\n{secondary}\n\\end{{JpSecondary}}\n")
+    if furigana.unknown_tokens:
+        examples = ", ".join(dict.fromkeys(furigana.unknown_tokens[:12]))
+        raise ValueError(f"Japanese furigana missing for: {examples}")
+    return inject_fusion_preamble("".join(parts)), furigana
 
 
 def copy_and_rewrite_figures(tex: str, destination: Path) -> str:
@@ -405,25 +550,16 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
         },
     )
 
-    centered_figures: dict[str, int] = {"en": 0, "ja": 0}
-    normalized_full_bleed: dict[str, int] = {"en": 0, "ja": 0}
+    fused, furigana = fuse_english_main_japanese_secondary(merged_rows)
+    centered_figures: dict[str, int] = {"en-main-ja": 0}
+    normalized_full_bleed: dict[str, int] = {"en-main-ja": 0}
     if validation_profile == "technical_exact":
-        for language in ("en", "ja"):
-            assembled[language], centered_figures[language] = center_standalone_figures(
-                assembled[language]
-            )
-            assembled[language], normalized_full_bleed[language] = normalize_full_bleed_images(
-                assembled[language]
-            )
-            assembled[language] = wrap_wide_display_math(
-                assembled[language], layout="exact"
-            )
+        fused, centered_figures["en-main-ja"] = center_standalone_figures(fused)
+        fused, normalized_full_bleed["en-main-ja"] = normalize_full_bleed_images(fused)
+        fused = wrap_wide_display_math(fused, layout="exact")
 
     figure_root = book_root / "assets/figures"
-    assembled = {
-        language: copy_and_rewrite_figures(tex, figure_root)
-        for language, tex in assembled.items()
-    }
+    fused = copy_and_rewrite_figures(fused, figure_root)
     source_cover = ROOT / "build-pocket" / book_id / "cover/cover.png"
     cover: Path | None = None
     if source_cover.exists():
@@ -433,31 +569,18 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
 
     reports: dict[str, Any] = {}
     if compile_pdfs:
-        for language in ("en", "ja"):
-            reports[f"exact_{language}"] = compile_variant(
-                book_root,
-                language,
-                "exact",
-                assembled[language],
-                cover,
-                expected_graphics=source_inventory["includegraphics"],
-            )
-            reports[f"pocket_{language}"] = compile_variant(
-                book_root,
-                language,
-                "pocket-large-font",
-                pocket_layout(assembled[language]),
-                cover,
-                expected_graphics=source_inventory["includegraphics"],
-            )
+        reports["pocket_en_main_ja"] = compile_variant(
+            book_root,
+            "en-main-ja",
+            "pocket-large-font",
+            pocket_layout(fused),
+            cover,
+            expected_graphics=source_inventory["includegraphics"],
+        )
     else:
-        for language in ("en", "ja"):
-            exact_tex = book_root / "exact" / language / "tex/book.tex"
-            pocket_tex = book_root / "pocket-large-font" / language / "tex/book.tex"
-            exact_tex.parent.mkdir(parents=True, exist_ok=True)
-            pocket_tex.parent.mkdir(parents=True, exist_ok=True)
-            exact_tex.write_text(assembled[language], encoding="utf-8")
-            pocket_tex.write_text(pocket_layout(assembled[language]), encoding="utf-8")
+        pocket_tex = book_root / "pocket-large-font/en-main-ja/tex/book.tex"
+        pocket_tex.parent.mkdir(parents=True, exist_ok=True)
+        pocket_tex.write_text(pocket_layout(fused), encoding="utf-8")
 
     layout_issues = [key for key, report in reports.items() if not report.get("layout_clean")]
     status = {
@@ -466,6 +589,15 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
         "chunk_count": len(tasks),
         "segment_count": len(segments),
         "languages": ["en", "ja"],
+        "main_language": "en",
+        "secondary_languages": ["ja"],
+        "edition": "english_main_japanese_secondary",
+        "furigana": {
+            "ruby_count": furigana.ruby_count,
+            "fallback_count": furigana.fallback_count,
+            "unknown_count": len(furigana.unknown_tokens),
+            "method": "fugashi-unidic-lite-local-word-level",
+        },
         "reports": reports,
         "layout_issues": layout_issues,
         "source_inventory_verified": True,

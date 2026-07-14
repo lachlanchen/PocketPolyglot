@@ -20,7 +20,6 @@ from nutstore_paths import nutstore_safe_filename
 ROOT = Path(__file__).resolve().parents[2]
 OUTPUT_ROOT = ROOT / "build-pocket-polished"
 DEFAULT_SHARE_ROOT = Path.home() / "Nutstore Files/Share/PocketPolished"
-LANGUAGE_LABELS = {"en": "English", "ja": "日本語"}
 
 
 def read_json(path: Path) -> dict[str, Any]:
@@ -76,7 +75,7 @@ def sync_book(book_id: str, share_root: Path) -> dict[str, Any]:
         }
 
     reports = status.get("reports", {})
-    required_keys = ("pocket_en", "pocket_ja")
+    required_keys = ("pocket_en_main_ja",)
     if not all(report_is_publishable(reports.get(key, {})) for key in required_keys):
         if try_reassemble_with_existing_cover(book_id):
             status = read_json(status_path)
@@ -91,33 +90,38 @@ def sync_book(book_id: str, share_root: Path) -> dict[str, Any]:
     data_path = book_root / "data/book.json"
     title = read_json(data_path).get("title", book_id) if data_path.exists() else book_id
     share_root.mkdir(parents=True, exist_ok=True)
-    copied: list[dict[str, Any]] = []
-    for language, report_key in (("en", "pocket_en"), ("ja", "pocket_ja")):
-        source = ROOT / reports[report_key]["pdf"]
-        if not source.is_file():
-            return {"book_id": book_id, "status": "error", "reason": f"missing PDF: {source}"}
-        filename = nutstore_safe_filename(
-            f"{title}｜{LANGUAGE_LABELS[language]}｜Polished Pocket Large Font.pdf"
-        )
-        destination = share_root / filename
-        source_hash = sha256(source)
-        changed = not destination.exists() or sha256(destination) != source_hash
-        if changed:
-            shutil.copy2(source, destination)
-        destination_hash = sha256(destination)
-        if source_hash != destination_hash:
-            destination.unlink(missing_ok=True)
-            return {"book_id": book_id, "status": "error", "reason": f"checksum mismatch: {destination}"}
-        copied.append(
-            {
-                "language": language,
-                "source": str(source),
-                "destination": str(destination),
-                "sha256": source_hash,
-                "bytes": destination.stat().st_size,
-                "changed": changed,
-            }
-        )
+    report = reports["pocket_en_main_ja"]
+    source = ROOT / report["pdf"]
+    if not source.is_file():
+        return {"book_id": book_id, "status": "error", "reason": f"missing PDF: {source}"}
+    filename = nutstore_safe_filename(
+        f"{title}｜English-日本語｜Polished Pocket Large Font.pdf"
+    )
+    destination = share_root / filename
+    source_hash = sha256(source)
+    changed = not destination.exists() or sha256(destination) != source_hash
+    if changed:
+        shutil.copy2(source, destination)
+    destination_hash = sha256(destination)
+    if source_hash != destination_hash:
+        destination.unlink(missing_ok=True)
+        return {"book_id": book_id, "status": "error", "reason": f"checksum mismatch: {destination}"}
+    copied = [
+        {
+            "languages": ["en", "ja"],
+            "main_language": "en",
+            "source": str(source),
+            "destination": str(destination),
+            "sha256": source_hash,
+            "bytes": destination.stat().st_size,
+            "changed": changed,
+        }
+    ]
+    for obsolete in (
+        share_root / nutstore_safe_filename(f"{title}｜English｜Polished Pocket Large Font.pdf"),
+        share_root / nutstore_safe_filename(f"{title}｜日本語｜Polished Pocket Large Font.pdf"),
+    ):
+        obsolete.unlink(missing_ok=True)
 
     result = {
         "book_id": book_id,
