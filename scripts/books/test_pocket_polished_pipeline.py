@@ -116,7 +116,7 @@ class PocketPolishPipelineTest(unittest.TestCase):
         )
         self.assertEqual(count, 1)
         self.assertIn(body, rendered)
-        self.assertIn(r"\adjustbox{max width=\linewidth}", rendered)
+        self.assertIn(r"\adjustbox{max width=.70\linewidth}", rendered)
 
     def test_cover_handoff_copies_only_exact_reported_generated_image(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
