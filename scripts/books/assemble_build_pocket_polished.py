@@ -489,6 +489,16 @@ def restore_secondary_list_scaffold(en_tex: str, ja_tex: str) -> str:
 
     if not re.search(r"(?m)^\s*\\item\b", ja_tex):
         return ja_tex
+    for existing in ("itemize", "enumerate", "description"):
+        begin = rf"\begin{{{existing}}}"
+        end = rf"\end{{{existing}}}"
+        if begin not in ja_tex or end not in ja_tex:
+            continue
+        prefix, body = ja_tex.split(begin, 1)
+        inner, suffix = body.split(end, 1)
+        if inner.strip() and not inner.lstrip().startswith(r"\item"):
+            inner = "\n\\item " + inner.lstrip()
+        return prefix + begin + inner + end + suffix
     environments = [
         match.group("environment")
         for match in ENVIRONMENT_COMMAND_RE.finditer(en_tex)
@@ -500,16 +510,7 @@ def restore_secondary_list_scaffold(en_tex: str, ja_tex: str) -> str:
     environment = environments[0]
     begin = rf"\begin{{{environment}}}"
     end = rf"\end{{{environment}}}"
-    if begin not in ja_tex:
-        return f"{begin}\n{ja_tex.strip()}\n{end}"
-    prefix, body = ja_tex.split(begin, 1)
-    if end in body:
-        inner, suffix = body.split(end, 1)
-    else:
-        inner, suffix = body, ""
-    if inner.strip() and not inner.lstrip().startswith(r"\item"):
-        inner = "\n\\item " + inner.lstrip()
-    return prefix + begin + inner + (end + suffix if end in body else "")
+    return f"{begin}\n{ja_tex.strip()}\n{end}"
 
 
 def demote_secondary_captions(tex: str) -> str:
@@ -618,6 +619,7 @@ def fuse_english_main_japanese_secondary(
         parts.append(en_tex)
         secondary = secondary.strip()
         if secondary:
+            secondary = restore_secondary_list_scaffold(en_tex, secondary)
             secondary = demote_secondary_captions(secondary)
             secondary, current = annotate_japanese_tex(secondary)
             furigana.merge(current)
