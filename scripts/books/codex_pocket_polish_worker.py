@@ -9,6 +9,7 @@ import os
 import re
 import subprocess
 import time
+from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -16,6 +17,7 @@ from typing import Any
 from pocket_polished_resource_gate import codex_call_slot
 from pocket_polished_common import (
     OUTPUT_ROOT,
+    PROTECTED_TOKEN_RE,
     ROOT,
     apply_grounded_english_repairs,
     chunk_subset,
@@ -395,6 +397,7 @@ def canonicalize_writer_result(
             if not isinstance(unresolved, list):
                 errors[segment_id].append("unresolved must be an array")
                 continue
+            ja_tex = remove_surplus_protected_tokens(source["source_tex"], ja_tex)
             en_tex, changes, repair_errors = apply_grounded_english_repairs(
                 source["source_tex"], repairs
             )
@@ -410,6 +413,33 @@ def canonicalize_writer_result(
         else:
             canonical[segment_id] = row
     return canonical, errors
+
+
+def remove_surplus_protected_tokens(source_tex: str, translated_tex: str) -> str:
+    """Remove model-duplicated placeholders without changing source inventory.
+
+    Japanese may omit an English pronoun, but a writer sometimes replaces it
+    with the preceding protected antecedent.  Keep the source multiplicity of
+    every atom and remove only surplus occurrences, latest first.  Missing
+    atoms remain untouched so the strict inventory validator still rejects
+    them.
+    """
+
+    expected = Counter(PROTECTED_TOKEN_RE.findall(source_tex))
+    seen = Counter(PROTECTED_TOKEN_RE.findall(translated_tex))
+    surplus = seen - expected
+    if not surplus:
+        return translated_tex
+    kept: Counter[str] = Counter()
+
+    def keep_source_multiplicity(match: re.Match[str]) -> str:
+        token = match.group(0)
+        if kept[token] >= expected[token]:
+            return ""
+        kept[token] += 1
+        return token
+
+    return PROTECTED_TOKEN_RE.sub(keep_source_multiplicity, translated_tex)
 
 
 def sanitize_reviewer_corrections(

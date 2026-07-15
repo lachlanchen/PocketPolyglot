@@ -13,6 +13,7 @@ from codex_pocket_polish_worker import (
     load_cached_segment,
     load_pending_review_segments,
     migrate_legacy_cached_output,
+    remove_surplus_protected_tokens,
     sanitize_reviewer_corrections,
     salvage_reviewed_chunk_segments,
     save_cached_segment,
@@ -161,6 +162,31 @@ class PocketPolishPipelineTest(unittest.TestCase):
         }
         subset = chunk_subset(self.task, [self.first["segment_id"]])
         self.assertEqual(len(machine_review_observations(subset, candidate)), 1)
+
+    def test_surplus_antecedent_placeholder_is_removed_without_weakening_inventory(self) -> None:
+        source = source_segment(
+            "book-protected",
+            "player @@PROTECTED_0006@@'s payoff when he plays @@PROTECTED_0007@@",
+        )
+        translated = (
+            "プレイヤー@@PROTECTED_0006@@の利得。"
+            "プレイヤー@@PROTECTED_0006@@が@@PROTECTED_0007@@を用いる。"
+        )
+        repaired = remove_surplus_protected_tokens(source["source_tex"], translated)
+        self.assertEqual(
+            repaired,
+            "プレイヤー@@PROTECTED_0006@@の利得。プレイヤーが@@PROTECTED_0007@@を用いる。",
+        )
+        output = {
+            "segment_id": source["segment_id"],
+            "source_sha256": source["source_sha256"],
+            "en_tex": source["source_tex"],
+            "ja_tex": repaired,
+            "changes": [],
+            "unresolved": [],
+        }
+        task = {**self.task, "segments": [source], "validation_profile": "prose_exact"}
+        self.assertFalse(validate_segment_output(task, source, output))
 
     def test_segment_cache_is_source_hash_gated(self) -> None:
         output = {
