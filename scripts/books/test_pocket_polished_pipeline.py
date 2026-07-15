@@ -21,6 +21,7 @@ from codex_pocket_polish_worker import (
 )
 from assemble_build_pocket_polished import (
     fit_short_simple_longtables,
+    fuse_english_main_japanese_secondary,
     normalize_unwrapped_math_fragments,
 )
 from build_pocket_tex_queue import inject_cover_page
@@ -958,6 +959,33 @@ class PocketPolishPipelineTest(unittest.TestCase):
         fitted, count = fit_short_simple_longtables(source)
         self.assertEqual(count, 0)
         self.assertEqual(fitted, source)
+
+    def test_fusion_reconciles_protected_table_openers_with_translated_caption_closers(self) -> None:
+        rows = [
+            {
+                "kind": "protected",
+                "source_tex": "\\documentclass{book}\n\\begin{document}\n",
+            },
+            {
+                "kind": "protected",
+                "source_tex": "\\begin{table}[h]\n\\begin{center}\n",
+            },
+            {
+                "kind": "protected",
+                "source_tex": "\\begin{tabular}{cc}A&B\\\\\\n\\end{tabular}",
+            },
+            {
+                "kind": "text",
+                "en_tex": "\n\\caption{Full figure caption.}\n\\end{center}\n\\end{table}",
+                "ja_tex": "\n\\caption{図の完全なキャプション。}\n\\end{center}\n\\end{table}",
+            },
+            {"kind": "protected", "source_tex": "\n\\end{document}\n"},
+        ]
+        fused, _ = fuse_english_main_japanese_secondary(rows)
+        self.assertEqual(fused.count(r"\begin{table}"), 1)
+        self.assertEqual(fused.count(r"\end{table}"), 1)
+        self.assertIn("Full figure caption.", fused)
+        self.assertIn("キャプション。", fused)
 
     def test_cover_injection_preserves_document_paper_geometry(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

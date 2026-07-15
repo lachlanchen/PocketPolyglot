@@ -454,6 +454,20 @@ def strip_shared_document_controls(en_tex: str, ja_tex: str) -> str:
     return ja_tex[newline + 1 :]
 
 
+def strip_shared_environment_scaffold(en_tex: str, ja_tex: str) -> str:
+    """Remove identical outer rows around a translated cross-row environment."""
+
+    en_lines = en_tex.splitlines(keepends=True)
+    ja_lines = ja_tex.splitlines(keepends=True)
+    while en_lines and ja_lines and en_lines[0] == ja_lines[0]:
+        en_lines.pop(0)
+        ja_lines.pop(0)
+    while en_lines and ja_lines and en_lines[-1] == ja_lines[-1]:
+        en_lines.pop()
+        ja_lines.pop()
+    return "".join(ja_lines)
+
+
 def inject_fusion_preamble(tex: str) -> str:
     marker = r"\begin{document}"
     if FUSION_PREAMBLE.strip() in tex or "BUILD_POCKET_POLISHED_FUSION_BEGIN" in tex:
@@ -487,12 +501,16 @@ def fuse_english_main_japanese_secondary(
     pending_en: list[str] = []
     pending_ja: list[str] = []
     open_environments: list[str] = []
+    pending_crosses_environment = False
 
     def emit_pending() -> None:
+        nonlocal pending_crosses_environment
         if not pending_en:
             return
         en_tex = "".join(pending_en)
         ja_tex = "".join(pending_ja)
+        crosses_environment = pending_crosses_environment
+        pending_crosses_environment = False
         pending_en.clear()
         pending_ja.clear()
         if en_tex.strip() == ja_tex.strip() or not ja_tex.strip():
@@ -505,7 +523,10 @@ def fuse_english_main_japanese_secondary(
             furigana.merge(current)
             parts.append(f"\n\\JpSecondaryHeading{{{annotated}}}\n")
             return
-        secondary = strip_shared_document_controls(en_tex, ja_tex).strip()
+        secondary = strip_shared_document_controls(en_tex, ja_tex)
+        if crosses_environment:
+            secondary = strip_shared_environment_scaffold(en_tex, secondary)
+        secondary = secondary.strip()
         if secondary:
             secondary, current = annotate_japanese_tex(secondary)
             furigana.merge(current)
@@ -515,12 +536,21 @@ def fuse_english_main_japanese_secondary(
 
     for segment in segments:
         if segment["kind"] == "protected":
-            if open_environments:
-                pending_en.append(segment["source_tex"])
-                pending_ja.append(segment["source_tex"])
+            source_tex = segment["source_tex"]
+            environment_commands = list(ENVIRONMENT_COMMAND_RE.finditer(source_tex))
+            crosses_environment_boundary = bool(open_environments) or bool(
+                any(match.group("environment") != "document" for match in environment_commands)
+            )
+            if crosses_environment_boundary:
+                pending_crosses_environment = True
+                pending_en.append(source_tex)
+                pending_ja.append(source_tex)
+                update_open_environments(source_tex, open_environments)
+                if not open_environments:
+                    emit_pending()
             else:
                 emit_pending()
-                parts.append(segment["source_tex"])
+                parts.append(source_tex)
             continue
         en_tex = segment["en_tex"]
         ja_tex = segment["ja_tex"]
