@@ -491,10 +491,15 @@ def restore_split_optional_linebreaks(tex: str) -> str:
         lambda match: rf"\\[{match.group('space')}]",
         tex,
     )
-    return re.sub(
+    tex = re.sub(
         r"(?P<caption>\\caption\{[^{}\n]*)\}"
         r"(?P<break>\\\\\[\d+(?:\.\d+)?(?:pt|mm|cm|em|ex)\])",
         lambda match: match.group("caption") + match.group("break"),
+        tex,
+    )
+    return re.sub(
+        r"\\\\(?P<space>\s*)\[(?!\d+(?:\.\d+)?(?:pt|mm|cm|em|ex)\])",
+        lambda match: r"\\{}" + match.group("space") + "[",
         tex,
     )
 

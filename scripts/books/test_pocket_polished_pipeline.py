@@ -996,6 +996,7 @@ class PocketPolishPipelineTest(unittest.TestCase):
         rendered = wrap_wide_display_math(source, layout="pocket")
         self.assertIn(r"\caption{Title\\[0pt]", rendered)
         self.assertEqual(rendered.count(r"\begin{adjustbox}"), 1)
+        self.assertEqual(restore_split_optional_linebreaks("\\\\\n[0,1]"), "\\\\{}\n[0,1]")
 
     def test_cover_injection_preserves_document_paper_geometry(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
