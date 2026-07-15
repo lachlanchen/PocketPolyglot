@@ -576,7 +576,10 @@ def fuse_english_main_japanese_secondary(
             if crosses_environment_boundary:
                 pending_crosses_environment = True
                 pending_en.append(source_tex)
-                pending_ja.append(source_tex)
+                # Protected structural/object rows belong only to the source
+                # stream. The secondary stream receives translated text rows;
+                # shared closing scaffolds are removed before insertion.
+                pending_ja.append("")
                 update_open_environments(source_tex, open_environments)
                 if not open_environments:
                     emit_pending()
