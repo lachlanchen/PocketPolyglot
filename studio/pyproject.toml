@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pocketpolyglot-studio"
+version = "0.1.0"
+description = "Local control plane for LinguaLeaf, PDF-to-TeX, and pocket-book workflows"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.104",
+  "pydantic>=2.5",
+  "uvicorn>=0.24",
+  "PyYAML>=6.0",
+]
+
+[project.scripts]
+pocketpolyglot = "pocketpolyglot_studio.cli:main"
+pocketpolyglot-studio = "pocketpolyglot_studio.cli:main"
+
+[tool.setuptools]
+packages = ["pocketpolyglot_studio"]

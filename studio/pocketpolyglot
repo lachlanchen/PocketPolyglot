@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+export PYTHONPATH="$root/studio${PYTHONPATH:+:$PYTHONPATH}"
+python_bin="$root/.pocketpolyglot-studio/venv/bin/python"
+if [[ ! -x "$python_bin" ]]; then
+  python_bin="$(command -v python)"
+fi
+exec "$python_bin" -m pocketpolyglot_studio.cli "$@"

@@ -121,3 +121,9 @@ data/interlinear/*/assembled/*.quadrilingual.json
 .aginti/codebase-map.json
 
 .local-backups/
+
+# PocketPolyglot Studio local runtime and web build
+.pocketpolyglot-studio/
+studio/web/node_modules/
+studio/web/dist/
+studio/web/*.tsbuildinfo

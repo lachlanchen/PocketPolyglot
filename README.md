@@ -15,6 +15,27 @@ PocketPolyglot turns bilingual texts into ruby, pinyin, grammar-colored, line-al
 
 The repository is a toolkit: TeX templates, Python scripts, JSON schemas, preview assets, and sample data. Bring your own rights-cleared source texts before publishing full generated books.
 
+## PocketPolyglot Studio
+
+PocketPolyglot Studio turns the repository's separate LinguaLeaf, OCR,
+PDF-to-TeX, PocketPolished, validation, cover, and export commands into one
+local work surface. It includes a responsive web app and a Codex-style CLI,
+with `gpt-5.6-sol` low reasoning as the responsive chat default and automatic
+reasoning escalation for repair and audit work.
+
+```sh
+make studio-install
+make studio
+# open http://127.0.0.1:8765
+```
+
+Jobs run in independent tmux sessions, persist in SQLite, and are only marked
+complete after their declared evidence checks pass. The Studio does not replace
+the existing book engines; it orchestrates them, so improvements to the scripts
+under `scripts/` and `prompt_tools/` are immediately available through the UI
+and CLI. See [the Studio guide](studio/README.md) for project creation, source
+registration, chat, model routing, pipeline stages, and recovery behavior.
+
 <!-- POCKETPOLYGLOT_MAX_LANGUAGE:START -->
 ## Maximum-Language Pocket Editions
 

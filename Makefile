@@ -12,7 +12,7 @@ JP_MAIN_URL ?= https://flow.lazying.art
 JP_MAIN_POWERED_BY ?= powered by LazyingArt
 JP_MAIN_COVER ?=
 
-.PHONY: sample paired interlinear interlinear-run interlinear-jp-main compare export-books readme-previews edition-comparison sentence-showcase readme-assets kokoro-md kokoro-tmux kokoro-bilingual-md kokoro-bilingual-tmux kokoro-compile kokoro-jp-ocr-md snow-country-prepare snow-country-tmux snow-country-after-kokoro snow-country-compile sanxingdui-tex sanxingdui-polished-tex sanxingdui-polish-tmux ocr-sample ocr-all clean
+.PHONY: sample paired interlinear interlinear-run interlinear-jp-main compare export-books readme-previews edition-comparison sentence-showcase readme-assets studio studio-install studio-doctor studio-test kokoro-md kokoro-tmux kokoro-bilingual-md kokoro-bilingual-tmux kokoro-compile kokoro-jp-ocr-md snow-country-prepare snow-country-tmux snow-country-after-kokoro snow-country-compile sanxingdui-tex sanxingdui-polished-tex sanxingdui-polish-tmux ocr-sample ocr-all clean
 
 sample: paired
 
@@ -39,6 +39,22 @@ sentence-showcase: export-books
 	python scripts/books/generate_sentence_showcase.py
 
 readme-assets: readme-previews edition-comparison sentence-showcase
+
+studio:
+	bash studio/start.sh
+
+studio-install:
+	python -m venv .pocketpolyglot-studio/venv
+	.pocketpolyglot-studio/venv/bin/python -m pip install -e studio
+	npm --prefix studio/web install
+	npm --prefix studio/web run build
+
+studio-doctor:
+	bash studio/pocketpolyglot doctor
+
+studio-test:
+	PYTHONPATH=studio python -m unittest discover -s studio/tests -v
+	npm --prefix studio/web run build
 
 kokoro-md:
 	python scripts/books/epub_to_markdown.py sources/心.epub --raw-output books/kokoro/markdown/book.raw.md --clean-output books/kokoro/markdown/book.md --start-heading 总序

@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: pocketpolyglot-studio
+Version: 0.1.0
+Summary: Local control plane for LinguaLeaf, PDF-to-TeX, and pocket-book workflows
+Requires-Python: >=3.10
+Requires-Dist: fastapi>=0.104
+Requires-Dist: pydantic>=2.5
+Requires-Dist: uvicorn>=0.24
+Requires-Dist: PyYAML>=6.0
