@@ -19,6 +19,7 @@ from pocket_polished_common import (
     normalize_page_boundary_artifacts,
     normalize_split_prose_paragraphs,
     output_schema,
+    read_json,
     reviewer_schema,
     sha256_text,
     source_english_writer_schema,
@@ -68,6 +69,22 @@ def flatten_source(task: dict, destination: Path) -> tuple[str, Path, Path | Non
     return text, exact, body
 
 
+def source_replacement_rules(task: dict) -> list[dict]:
+    """Load task-local evidence repairs without embedding them in shared code."""
+
+    rules = list(task.get("polish_source_replacements", []))
+    plan_name = task.get("polish_source_replacements_file")
+    if not plan_name:
+        return rules
+    plan_path = ROOT / str(plan_name)
+    payload = read_json(plan_path)
+    file_rules = payload.get("replacements") if isinstance(payload, dict) else None
+    if not isinstance(file_rules, list):
+        raise ValueError(f"source replacement plan has no replacements array: {plan_path}")
+    rules.extend(file_rules)
+    return rules
+
+
 def prepare_book(
     task: dict,
     *,
@@ -93,7 +110,7 @@ def prepare_book(
     source_normalizations.extend(configured_normalizations)
     source_text, configured_replacements = apply_exact_text_replacements(
         source_text,
-        task.get("polish_source_replacements", []),
+        source_replacement_rules(task),
     )
     source_normalizations.extend(configured_replacements)
     source_text, prose_join_normalizations = normalize_split_prose_paragraphs(
@@ -165,6 +182,7 @@ def prepare_book(
         "upstream_flattened_tex": str(upstream_flattened.relative_to(ROOT)),
         "upstream_flattened_sha256": sha256_text(upstream_text),
         "source_normalization_count": len(source_normalizations),
+        "source_replacement_plan": task.get("polish_source_replacements_file"),
         "segment_count": len(segments),
         "review_segment_count": sum(
             item["kind"]

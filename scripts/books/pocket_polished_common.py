@@ -219,7 +219,10 @@ def normalize_page_boundary_artifacts(
                 and re.search(r"[A-Za-z0-9)'\"]$", before_plain)
                 and not re.search(r"[.!?:;][)'\"]?$", before_plain)
             )
-            after_is_continuation = bool(re.match(r"[a-z]", after_plain))
+            after_is_continuation = bool(
+                re.match(r"[a-z]", after_plain)
+                or re.match(r"\s*(?:\\\(|\$)", after)
+            )
             page_break_is_safe = bool(
                 marker_is_page_break
                 and sum(char.isalpha() for char in before_plain) >= 24
@@ -933,7 +936,14 @@ def japanese_translation_optional(source_plain: str) -> bool:
         and len(compact) >= 8
         and re.fullmatch(r"[HTF01→←.·…\-]+", compact, re.I)
     )
-    return symbolic_sequence or bool(
+    bibliography_entry = bool(
+        re.fullmatch(
+            r"[A-Z][A-Za-z'’.-]+,\s*(?:[A-Z]\.(?:\s*|$)){1,4}"
+            r"\(\d{4}[a-z]?\),\s*[\"“].+[\"”],\s*.+\[\d+\]",
+            source_plain.strip(),
+        )
+    )
+    return symbolic_sequence or bibliography_entry or bool(
         re.search(
             r"\b(?:copyright|isbn|issn|publisher|publishing|printed|office|"
             r"address|street|suite|road|avenue|university press)\b",

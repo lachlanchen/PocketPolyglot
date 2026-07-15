@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "book_id": "game-theory-mathpix-exact-book",
+  "evidence": [
+    "sources/game-theory/A Course in Game Theory.pdf",
+    "sources/game-theory/A Course in Game Theory - clean alternate.pdf"
+  ],
+  "policy": "Exact, cardinality-checked repairs of defects confirmed against the clean alternate scan of the same edition.",
+  "replacements": [
+    {
+      "before": "\\(a ^ { 8 }\\)",
+      "after": "\\(a ^ { * }\\)",
+      "expected_count": 1,
+      "reason": "Alternate scan page 20 shows the equilibrium profile a*; Mathpix read the star as 8."
+    },
+    {
+      "before": "\\(\\boldsymbol { a } ^ { \\boldsymbol { * } } \\boldsymbol { \\in } \\boldsymbol { B } _ { \\left( \\boldsymbol { a } ^ { \\boldsymbol { * } } \\right) \\text {. The fixed point theorem that we use is the following (due to } }\\)",
+      "after": "\\(\\boldsymbol { a } ^ { \\boldsymbol { * } } \\in \\boldsymbol { B } \\left( \\boldsymbol { a } ^ { \\boldsymbol { * } } \\right)\\). The fixed point theorem that we use is the following (due to",
+      "expected_count": 1,
+      "reason": "Alternate scan page 20 shows a complete fixed-point expression followed by prose; Mathpix absorbed the prose into a subscript."
+    },
+    {
+      "before": "\\left\\langle \\{ \\mathbf { 1 } , \\mathbf { 2 } \\} , \\left( \\boldsymbol { A } _ { \\boldsymbol { i } } \\right) , \\left( \\boldsymbol { \\chi } _ { i } \\right) \\right\\rangle",
+      "after": "\\left\\langle \\{ \\mathbf { 1 } , \\mathbf { 2 } \\} , \\left( \\boldsymbol { A } _ { \\boldsymbol { i } } \\right) , \\left( \\succsim _ { i } \\right) \\right\\rangle",
+      "expected_count": 1,
+      "reason": "Definition 21.1 in the alternate scan uses the players' preference relations."
+    },
+    {
+      "before": "\\(\\boldsymbol { a } \\boldsymbol { \\chi } _ { \\mathbf { 1 } }\\)",
+      "after": "\\(\\boldsymbol { a } \\succsim _ { 1 } \\boldsymbol { b }\\)",
+      "expected_count": 1,
+      "reason": "Definition 21.1 in the alternate scan reads a >=_1 b, reciprocal to b >=_2 a."
+    },
+    {
+      "before": "\\(\\max _ { y } \\min _ { x } = u _ { 2 } ( x , y )\\)",
+      "after": "\\(\\max _ { y } \\min _ { x } u _ { 2 } ( x , y )\\)",
+      "expected_count": 1,
+      "reason": "Alternate scan page 22 has no equals sign between min_x and u_2(x,y)."
+    },
+    {
+      "before": "Let .gif\">. (Note that each player has infinitely many types.)",
+      "after": "Let \\(G = \\langle N,(A_i),(u_i)\\rangle\\) be a finite strategic game and let \\(\\epsilon=(\\epsilon_i(a))_{i\\in N,a\\in A}\\) be a collection of random variables with range \\([-1,1]\\), where \\(\\epsilon_i=(\\epsilon_i(a))_{a\\in A}\\) has a continuously differentiable density function and an absolutely continuous distribution function, and the random vectors \\((\\epsilon_i)_{i\\in N}\\) are independent. Consider a family of perturbed games in which each player \\(i\\)'s payoff at the outcome \\(a\\) is subject to the small random variation \\(\\epsilon_i(a)\\), each player \\(i\\) knowing the realization \\((\\epsilon_i(a))_{a\\in A}\\) of \\(\\epsilon_i\\) but not the realizations of the other players' random variables. That is, consider the Bayesian game \\(G(\\epsilon)\\) in which the set of states of nature is the set of all possible values of the realizations of \\(\\epsilon\\), the (common) prior belief of each player is the probability distribution specified by \\(\\epsilon\\), the signal function of player \\(i\\) informs him only of the realizations \\((\\epsilon_i(a))_{a\\in A}\\), and the payoff of player \\(i\\) at the outcome \\(a\\) and state \\(\\epsilon\\) is \\(u_i(a)+\\epsilon_i(a)\\). (Note that each player has infinitely many types.)",
+      "expected_count": 1,
+      "reason": "Restore the complete perturbed-game construction from alternate scan pages 41-42; the Mathpix source retained only a .gif placeholder."
+    },
+    {
+      "before": "\\sigma > _ { 2 } ( y )",
+      "after": "\\sigma _ { 2 } ( y )",
+      "expected_count": 1,
+      "reason": "Figure 47.1 discussion in the alternate scan reads sigma_2(y)=L; the greater-than sign is OCR noise."
+    },
+    {
+      "before": "The action \\(\\boldsymbol { a } _ { \\boldsymbol { i } } \\in \\boldsymbol { A } _ { \\boldsymbol { i } }\\) of player \\(i\\) in the strategic game \\(\\left\\langle \\boldsymbol { N } , \\left( \\boldsymbol { A } _ { \\boldsymbol { i } } \\right) , \\left( \\boldsymbol { u } _ { \\boldsymbol { i } } \\right) \\right\\rangle\\) is weakly dominated if there is a mixed strategy \\(a _ { i }\\) of player \\(i\\) such that \\(\\boldsymbol { U } _ { \\boldsymbol { i } } \\left( \\boldsymbol { a } _ { - \\boldsymbol { i } } , \\boldsymbol { \\alpha } _ { \\boldsymbol { i } } \\right) \\geq \\boldsymbol { u } _ { \\boldsymbol { i } } \\left( \\boldsymbol { a } _ { - \\boldsymbol { i } } , \\boldsymbol { a } _ { \\boldsymbol { i } } \\right)\\) for all \\(\\boldsymbol { a } _ { - \\boldsymbol { i } } \\in \\boldsymbol { A } _ { - \\boldsymbol { i } }\\) and \\(U _ { i } \\left( a _ { - i } , a _ { i } > u _ { i } \\left( a _ { - i } , a _ { i } \\right) \\right.\\) for some \\(\\boldsymbol { a } _ { - \\boldsymbol { i } } \\in \\boldsymbol { A } _ { - \\boldsymbol { i } }\\), where \\(U _ { i } \\left( a _ { - i } , a _ { i } \\right)\\) is the payoff of player \\(i\\) if he uses the mixed strategy \\(a _ { i }\\) and the other players' vector of actions is \\(a _ { - i }\\).",
+      "after": "The action \\(a_i \\in A_i\\) of player \\(i\\) in the strategic game \\(\\langle N,(A_i),(u_i)\\rangle\\) is weakly dominated if there is a mixed strategy \\(\\alpha_i\\) of player \\(i\\) such that \\(U_i(a_{-i},\\alpha_i) \\geq u_i(a_{-i},a_i)\\) for all \\(a_{-i} \\in A_{-i}\\) and \\(U_i(a_{-i},\\alpha_i) > u_i(a_{-i},a_i)\\) for some \\(a_{-i} \\in A_{-i}\\), where \\(U_i(a_{-i},\\alpha_i)\\) is the payoff of player \\(i\\) if he uses the mixed strategy \\(\\alpha_i\\) and the other players' vector of actions is \\(a_{-i}\\).",
+      "expected_count": 1,
+      "reason": "Restore Definition 62.1 exactly from alternate scan page 62; Mathpix substituted a_i for alpha_i and malformed the strict inequality."
+    },
+    {
+      "before": "\\(Q = \\{\\) Out, (In, c), (In, F)\\}",
+      "after": "\\(Q = \\{\\mathrm{Out},(\\mathrm{In},C),(\\mathrm{In},F)\\}\\)",
+      "expected_count": 1,
+      "reason": "Alternate scan page 105 shows the complete outcome set inside one math object."
+    },
+    {
+      "before": "Formally, the set of histories in the game consists of all sequences \\(C ( t ) = ( C , . . , C )\\) of length \\(t\\), for \\(\\mathbf { 0 } \\leq \\boldsymbol { t } \\leq \\boldsymbol { T }\\), and all sequences \\(S ( t ) = ( C , \\ldots , C , S )\\) consisting of \\(t - 1\\) repetitions of \\(C\\) followed by a single \\(S\\), for \\(\\mathbf { 1 } \\leq t \\leq T\\). The player function is defined by \\(P ( C ( t ) ) = 1\\) if \\(t\\) is even and \\(\\boldsymbol { t } \\leq \\boldsymbol { T } - \\mathbf { 2 }\\) and \\(P ( C ( t ) ) = 2\\) if \\(t\\) is odd. Player \\(P ( C ( t ) )\\) prefers \\(S ( t +\\) 2) to \\(S ( t )\\) to \\(S ( t + 1 )\\) for \\(\\boldsymbol { t } \\leq \\boldsymbol { T } - \\mathbf { 2 }\\), player I prefers \\(C ( T )\\) to \\(S ( T - 1 )\\) to \\(S ( T )\\), and player 2 prefers \\(S ( T )\\) to \\(C ( T )\\).",
+      "after": "Formally, the set of histories in the game consists of all sequences \\(C(t)=(C,\\ldots,C)\\) of length \\(t\\), for \\(0\\leq t\\leq T\\), and all sequences \\(S(t)=(C,\\ldots,C,S)\\) consisting of \\(t-1\\) repetitions of \\(C\\) followed by a single \\(S\\), for \\(1\\leq t\\leq T\\). The player function is defined by \\(P(C(t))=1\\) if \\(t\\) is even and \\(t\\leq T-2\\), and \\(P(C(t))=2\\) if \\(t\\) is odd. Player \\(P(C(t))\\) prefers \\(S(t+3)\\) to \\(S(t+1)\\) to \\(S(t+2)\\) for \\(t\\leq T-3\\), player 1 prefers \\(C(T)\\) to \\(S(T-1)\\) to \\(S(T)\\), and player 2 prefers \\(S(T)\\) to \\(C(T)\\).",
+      "expected_count": 1,
+      "reason": "Restore the centipede-game histories and preference ordering from alternate scan page 107; Mathpix split S(t+2) and changed the three offsets."
+    },
+    {
+      "before": "By A2 we have \\(\\delta u _ { 2 } \\left( b ^ { 1 } \\right) = u _ { 2 } \\left( b ^ { 1 } \\right)\\), so that \\(u _ { 2 } \\left( b ^ { 1 } = 0 \\right.\\); by A3 and the definition of \\(\\varphi\\) we have \\(\\delta \\varphi \\left( \\delta u _ { 1 } \\left( b ^ { 1 } \\right) \\right) > 0 = u _ { 2 } \\left( b ^ { 1 } \\right) = \\varphi\\) ( \\(u _ { 1 } \\left( b ^ { 1 } \\right)\\). Since is decreasing we conclude that \\(u _ { 1 } \\left( b ^ { 1 } \\right) > \\varphi ^ { - 1 } \\left( \\delta \\varphi \\left( \\delta u _ { 1 } \\left( b ^ { 1 } \\right) \\right) \\right)\\). Now, by (123.2) and (124.1) we have .gif\">.",
+      "after": "By A2 we have \\(\\delta u_2(b^1)=u_2(b^1)\\), so that \\(u_2(b^1)=0\\); by A3 and the definition of \\(\\varphi\\) we have \\(\\delta\\varphi(\\delta u_1(b^1))>0=u_2(b^1)=\\varphi(u_1(b^1))\\). Since \\(\\varphi\\) is decreasing we conclude that \\(u_1(b^1)>\\varphi^{-1}(\\delta\\varphi(\\delta u_1(b^1)))\\). Now, by (123.2) and (124.1) we have \\(M_1(G_1)\\leq\\varphi^{-1}(\\delta\\varphi(\\delta M_1(G_1)))\\).",
+      "expected_count": 1,
+      "reason": "Restore the complete inequality chain from alternate scan page 124; the local source has unbalanced formulas and a missing final inequality."
+    },
+    {
+      "before": "\\(r . \\operatorname { gif } ^ { \\prime \\prime k } ( h , a )\\)",
+      "after": "\\(r ^ { \\prime \\prime k } ( h , a )\\)",
+      "expected_count": 1,
+      "reason": "Alternate scan page 154 repeats the convergent subsequence r''k(h,a); .gif is OCR residue."
+    },
+    {
+      "before": "\\(€\\)",
+      "after": "\\(\\epsilon\\)",
+      "expected_count": 1,
+      "reason": "Proposition 160.1 in the alternate scan uses epsilon, not the euro symbol."
+    },
+    {
+      "before": "\\boldsymbol { \\operatorname { m a x } } _ { \\boldsymbol { \\theta } _ { \\boldsymbol { j } } } \\boldsymbol { U } _ { \\boldsymbol { j } }",
+      "after": "\\max _ { \\boldsymbol { s } _ { \\boldsymbol { j } } } \\boldsymbol { U } _ { \\boldsymbol { j } }",
+      "expected_count": 1,
+      "reason": "Lemma 168.2 in the alternate scan maximizes over strategy s_j; theta_j is an OCR substitution."
+    },
+    {
+      "before": "\\(\\left( \\boldsymbol { M } _ { \\boldsymbol { i } } ^ { \\boldsymbol { * } } ( \\boldsymbol { q } ) \\right.\\)",
+      "after": "\\(\\boldsymbol { M } _ { \\boldsymbol { i } } ^ { \\boldsymbol { * } } ( \\boldsymbol { q } )\\)",
+      "expected_count": 1,
+      "reason": "Alternate scan page 168 uses the complete machine expression M_i*(q), with no unmatched delimiter."
+    },
+    {
+      "before": "If \\({ \\left. \\boldsymbol { ( } \\boldsymbol { M } _ { \\mathbf { 1 } } ^ { \\boldsymbol { * } } , \\boldsymbol { M } _ { \\mathbf { 2 } } ^ { \\boldsymbol { * } } \\right) \\text { is a Nash equilibrium of a machine game then there is a one-to-one correspondence between the } }\\) actions of player 1 and player 2 prescribed by \\(\\boldsymbol { M } _ { \\mathbf { 1 } } ^ { \\boldsymbol { * } }\\) and \\(\\boldsymbol { M } _ { \\mathbf { 2 } } ^ { \\boldsymbol { * } }\\) : if \\(\\boldsymbol { a } _ { \\mathbf { i } } ^ { \\boldsymbol { t } } \\left( \\boldsymbol { M } _ { \\mathbf { 1 } } ^ { \\boldsymbol { * } } , \\boldsymbol { M } _ { \\mathbf { 2 } } ^ { \\boldsymbol { * } } \\right) = \\boldsymbol { a } _ { \\mathbf { i } } ^ { \\boldsymbol { * } } \\left( \\boldsymbol { M } _ { \\mathbf { 1 } } ^ { \\boldsymbol { * } } , \\boldsymbol { M } _ { \\mathbf { 2 } } ^ { \\boldsymbol { * } } \\right)\\) for some \\(\\boldsymbol { t } \\neq \\boldsymbol { s }\\) then \\(a _ { j } ^ { t } \\left( M _ { 1 } ^ { * } , M _ { 2 } ^ { * } \\right) = a _ { j } ^ { s } \\left( M _ { 1 } ^ { * } , M _ { 2 } ^ { * } \\right)\\).",
+      "after": "If \\((M_1^*,M_2^*)\\) is a Nash equilibrium of a machine game then there is a one-to-one correspondence between the actions of player 1 and player 2 prescribed by \\(M_1^*\\) and \\(M_2^*\\): if \\(a_i^t(M_1^*,M_2^*)=a_i^s(M_1^*,M_2^*)\\) for some \\(t\\neq s\\) then \\(a_j^t(M_1^*,M_2^*)=a_j^s(M_1^*,M_2^*)\\).",
+      "expected_count": 1,
+      "reason": "Restore Lemma 170.1 from alternate scan page 170; Mathpix embedded English prose in a math object and changed the second time index."
+    },
+    {
+      "before": "The Gibbard-Satterthwaite theorem (181.2) applies to an environment .gif\"> is the cost of the project.",
+      "after": "The Gibbard-Satterthwaite theorem (181.2) applies to an environment \\(\\langle N,C,P,G\\rangle\\) in which \\(P\\) is the set of all possible preference profiles. There are environments in which \\(P\\) does not contain all possible preference profiles for which we can construct game forms that DSE-implement nondegenerate choice rules. The most well-known such game forms are those studied by Clarke (1971) and Groves (1973), which are designed for a situation in which a set of individuals has to decide whether or not to pursue some costly joint project and, if they decide to go ahead, how to assign the expenses. Clarke and Groves take the set \\(C\\) of outcomes to consist of all pairs \\((x,(m_i))\\) where \\(x=1\\) or \\(0\\) according to whether or not the project is undertaken and \\(m_i\\) is a payment by individual \\(i\\). They impose the condition that the preference relation over \\(C\\) of each player \\(i\\) be represented by a utility function of the form \\(\\theta_i x-m_i\\) for some \\(\\theta_i\\in\\mathbb{R}\\); under this assumption we can identify the set \\(P\\) of preference profiles with the set \\(\\mathbb{R}^N\\) of profiles of real numbers. The aim of the game forms that Clarke and Groves construct is to implement choice functions \\(f:\\mathbb{R}^N\\to C\\) with the property that the project is undertaken if and only if \\(\\sum_{i\\in N}\\theta_i\\geq\\gamma\\), where \\(\\gamma\\geq0\\) is the cost of the project.",
+      "expected_count": 1,
+      "reason": "Restore the complete Clarke-Groves environment from alternate scan pages 183-184; Mathpix collapsed it into a .gif placeholder."
+    },
+    {
+      "before": "\\(N o \\}\\)",
+      "after": "\\(\\mathrm { No }\\}\\)",
+      "expected_count": 1,
+      "reason": "Example 189.1 in the alternate scan gives the action set {Yes, No}; Mathpix split No."
+    },
+    {
+      "before": "Then \\(\\Gamma\\) is equivalent to the game \\(\\Gamma\\) ' that differs from \\(\\Gamma\\) only in that (i) all histories of the form ( \\(h , c , h ^ { \\prime }\\) ) for .gif\">, and let \\(a\\) be one of the actions of player 2.)",
+      "after": "Then \\(\\Gamma\\) is equivalent to the game \\(\\Gamma'\\) that differs from \\(\\Gamma\\) only in that (i) all histories of the form \\((h,c,h')\\) for \\(c\\in A(h)\\) are replaced by the single history \\((h,h')\\), (ii) if the information set \\(I_i\\) that contains the history \\(h\\) in \\(\\Gamma\\) is not a singleton then \\(h\\) is excluded from \\(I_i\\) in \\(\\Gamma'\\), (iii) the player who is assigned to the history \\((h,h')\\) in \\(\\Gamma'\\) is the one who is assigned to \\((h,a,h')\\) in \\(\\Gamma\\), (iv) \\((h,h')\\) and \\((h,h'')\\) are in the same information set of \\(\\Gamma'\\) if and only if \\((h,a,h')\\) and \\((h,a,h'')\\) are in the same information set of \\(\\Gamma\\), and (v) the players' preferences are modified accordingly. (Note that \\(\\Gamma\\) is the game that has the superfluous move, which is removed to create \\(\\Gamma'\\). To relate the definition to \\(\\Gamma_1\\) and \\(\\Gamma_3\\), let \\(\\Gamma=\\Gamma_3\\), \\(\\Gamma'=\\Gamma_1\\), \\(i=2\\), and \\(h=\\ell\\), and let \\(a\\) be one of the actions of player 2.)",
+      "expected_count": 1,
+      "reason": "Restore the complete coalescing-of-moves transformation from alternate scan page 207."
+    },
+    {
+      "before": "For any profile .gif\"> (where for \\(k = 0\\) the history ( \\(a ^ { 1 } , \\ldots , a ^ { k }\\) ) is the initial history).",
+      "after": "For any profile \\(\\sigma=(\\sigma_i)_{i\\in N}\\) of either mixed or behavioral strategies in an extensive game, we define the outcome \\(O(\\sigma)\\) of \\(\\sigma\\) to be the probability distribution over the terminal histories that results when each player \\(i\\) follows the precepts of \\(\\sigma_i\\). For a finite game this outcome is defined precisely as follows. For any history \\(h=(a^1,\\ldots,a^k)\\) define a pure strategy \\(s_i\\) of player \\(i\\) to be consistent with \\(h\\) if for every subhistory \\((a^1,\\ldots,a^\\ell)\\) of \\(h\\) for which \\(P(a^1,\\ldots,a^\\ell)=i\\) we have \\(s_i(a^1,\\ldots,a^\\ell)=a^{\\ell+1}\\). For any history \\(h\\) let \\(\\pi_i(h)\\) be the sum of the probabilities according to \\(\\sigma_i\\) of all the pure strategies of player \\(i\\) that are consistent with \\(h\\). (Thus, for example, if \\(h\\) is a history in which player \\(i\\) never moves then \\(\\pi_i(h)=1\\).) Then for any profile \\(\\sigma\\) of mixed strategies the probability that \\(O(\\sigma)\\) assigns to any terminal history \\(h\\) is \\(\\prod_{i\\in N\\cup\\{c\\}}\\pi_i(h)\\). For any profile \\(\\beta\\) of behavioral strategies the probability that \\(O(\\beta)\\) assigns to the terminal history \\(h=(a^1,\\ldots,a^K)\\) is \\(\\prod_{k=0}^{K-1}\\beta_{P(a^1,\\ldots,a^k)}(a^1,\\ldots,a^k)(a^{k+1})\\) (where for \\(k=0\\) the history \\((a^1,\\ldots,a^k)\\) is the initial history).",
+      "expected_count": 1,
+      "reason": "Restore the outcome definitions for mixed and behavioral profiles from alternate scan pages 213-214."
+    },
+    {
+      "before": "We first argue that, in a set of games that includes all those with perfect recall, for any behavioral strategy there is an outcome-equivalent mixed strategy. Consider an extensive game in which no information set contains both some history \\(h\\) and a history of the form ( \\(h , h ^ { \\prime }\\) ) for some .gif\" \\(>\\) to \\(a\\) generates the outcomes ( \\(a , a\\) ), ( \\(a , b\\) ), and \\(b\\) with probabilities \\(p ^ { 2 } , p ( \\mathrm { l } - p )\\), and \\(1 - p\\) respectively, a distribution that cannot be duplicated by any mixed strategy.)",
+      "after": "We first argue that, in a set of games that includes all those with perfect recall, for any behavioral strategy there is an outcome-equivalent mixed strategy. Consider an extensive game in which no information set contains both some history \\(h\\) and a history of the form \\((h,h')\\) for some \\(h'\\neq\\varnothing\\). (Note that this condition is satisfied by any game with perfect recall; it is often included as part of the definition of an extensive game.) For every behavioral strategy \\(\\beta_i\\) of any player \\(i\\) in such a game, the mixed strategy defined as follows is outcome-equivalent: the probability assigned to any pure strategy \\(s_i\\) (which specifies an action \\(s_i(I_i)\\) for every information set \\(I_i\\in\\mathcal{I}_i\\)) is \\(\\prod_{I_i\\in\\mathcal{I}_i}\\beta_i(I_i)(s_i(I_i))\\). (Note that the derivation of this mixed strategy relies on the assumption that the collection \\((\\beta_i(I_i))_{I_i\\in\\mathcal{I}_i}\\) is independent. Note also that in a game in which some information set contains histories of the form \\(h\\) and \\((h,h')\\) with \\(h'\\neq\\varnothing\\) there may be a behavioral strategy for which there is no equivalent mixed strategy: in the game in Figure 214.1, for example, the behavioral strategy that assigns probability \\(p\\in(0,1)\\) to \\(a\\) generates the outcomes \\((a,a)\\), \\((a,b)\\), and \\(b\\) with probabilities \\(p^2\\), \\(p(1-p)\\), and \\(1-p\\) respectively, a distribution that cannot be duplicated by any mixed strategy.)",
+      "expected_count": 1,
+      "reason": "Restore the complete behavioral-to-mixed construction and counterexample from alternate scan page 214."
+    },
+    {
+      "before": "\\begin{itemize}\n  \\item \\(O ( \\beta , \\mu \\backslash I ) \\left( h ^ { * } \\right) = 0\\) if there is no subhistory of \\(h ^ { * }\\) in \\(I\\) (i.e. the information that the game has reached \\(I\\) rules out \\(h ^ { * }\\) )\\\\\n. \\(O ( \\beta , \\mu \\mid I ) \\left( h ^ { * } \\right) = \\mu ( I ) ( h ) \\cdot \\Pi _ { k = L } ^ { K - 1 } \\beta _ { P \\left( a ^ { 1 } , \\ldots , a ^ { k } \\right) } \\left( a ^ { 1 } , \\ldots , a ^ { k } \\right) \\left( a ^ { k + 1 } \\right)\\) if the subhistory \\(h = \\left( a 1 , \\ldots , a ^ { L } \\right)\\) of \\(h ^ { * }\\) is in \\(I\\), where \\(L < K\\).\\\\\n(If \\(I\\) is the information set consisting of the initial history then \\(O ( \\beta , \\mu \\mid I )\\) is just the outcome \\(O ( \\beta )\\) defined in Section 11.4.) Note that the assumption of perfect recall implies that there is at most one subhistory of \\(h ^ { * }\\) in \\(I\\). Note also that the rationale for taking the product in the second case is that by perfect recall the histories ( \\(a ^ { 1 } , \\ldots , a ^ { k }\\) ) for \\(k = L , \\ldots , K - 1\\) lie in different information sets, and thus for \\(k = L , \\ldots , K - 1\\) the events \\(\\left\\{ a ^ { k + 1 } \\right.\\) follows ( \\(a ^ { 1 } , \\ldots , a ^ { k }\\) ) conditional on ( \\(a ^ { 1 } , \\ldots , a ^ { k }\\) ) occurring\\} are independent.\n\\end{itemize}",
+      "after": "\\begin{itemize}\n  \\item \\(O(\\beta,\\mu\\mid I)(h^*)=0\\) if there is no subhistory of \\(h^*\\) in \\(I\\) (i.e. the information that the game has reached \\(I\\) rules out \\(h^*\\)).\n  \\item \\(O(\\beta,\\mu\\mid I)(h^*)=\\mu(I)(h)\\cdot\\prod_{k=L}^{K-1}\\beta_{P(a^1,\\ldots,a^k)}(a^1,\\ldots,a^k)(a^{k+1})\\) if the subhistory \\(h=(a^1,\\ldots,a^L)\\) of \\(h^*\\) is in \\(I\\), where \\(L<K\\).\n\\end{itemize}\n(If \\(I\\) is the information set consisting of the initial history then \\(O(\\beta,\\mu\\mid I)\\) is just the outcome \\(O(\\beta)\\) defined in Section 11.4.) Note that the assumption of perfect recall implies that there is at most one subhistory of \\(h^*\\) in \\(I\\). Note also that the rationale for taking the product in the second case is that by perfect recall the histories \\((a^1,\\ldots,a^k)\\) for \\(k=L,\\ldots,K-1\\) lie in different information sets, and thus for \\(k=L,\\ldots,K-1\\) the events \\{\\(a^{k+1}\\) follows \\((a^1,\\ldots,a^k)\\) conditional on \\((a^1,\\ldots,a^k)\\) occurring\\} are independent.",
+      "expected_count": 1,
+      "reason": "Restore the two-item conditional-outcome definition from alternate scan page 223 and balance its TeX structure."
+    },
+    {
+      "before": "\\begin{itemize}\n  \\item \\(\\Gamma = \\langle N , H , P \\rangle\\) is an extensive game form with perfect information and simultaneous moves\\\\\nand for each player \\(\\boldsymbol { i } \\in \\boldsymbol { N }\\)\n  \\item \\(\\boldsymbol { \\Theta } _ { \\boldsymbol { i } }\\) is a finite set (the set \\(\\boldsymbol { \\Theta } = \\mathbf { x } _ { \\boldsymbol { i } \\in \\boldsymbol { N } } \\boldsymbol { \\Theta } _ { \\boldsymbol { i } }\\)\n  \\item \\(\\boldsymbol { \\Theta } _ { \\boldsymbol { i } }\\) is a finite set (the set of possible types of player \\(i\\) ); we write\n\\end{itemize}",
+      "after": "\\begin{itemize}\n  \\item \\(\\Gamma=\\langle N,H,P\\rangle\\) is an extensive game form with perfect information and simultaneous moves.\n\\end{itemize}\nFor each player \\(i\\in N\\):\n\\begin{itemize}\n  \\item \\(\\Theta_i\\) is a finite set (the set of possible types of player \\(i\\)); we write \\(\\Theta=\\prod_{i\\in N}\\Theta_i\\).\n\\end{itemize}",
+      "expected_count": 1,
+      "reason": "Restore Definition 231.1 from alternate scan pages 231-232; Mathpix duplicated Theta_i, omitted text, and malformed the utility item."
+    },
+    {
+      "before": "\\begin{itemize}\n  \\item \\(X = \\left\\{ \\left( x _ { i } \\right) _ { i \\in N } : x _ { i } \\in \\mathbb { R } _ { + } ^ { \\ell } \\right.\\) for all \\(\\left. i \\in N \\right\\}\\);\\\\\n. \\(V ( S ) = \\left\\{ \\left( x _ { i } \\right) _ { i \\in N } \\in X : \\sum _ { i \\in S } x _ { i } = \\sum _ { i \\in S } \\omega _ { i } \\right.\\) and \\(x _ { j } = \\omega _ { j }\\) for all \\(\\left. j \\in N \\backslash S \\right\\}\\) for each coalition \\(S\\);\n  \\item each preference relation \\(\\succsim _ { i }\\) is defined by \\(\\left( \\boldsymbol { x } _ { \\boldsymbol { j } } \\right) _ { \\boldsymbol { j } \\in \\boldsymbol { N } } \\succsim _ { \\boldsymbol { i } } \\left( \\boldsymbol { y } _ { \\boldsymbol { j } } \\right) _ { \\boldsymbol { j } \\in \\boldsymbol { N } }\\) if and only if \\(\\boldsymbol { x } _ { \\boldsymbol { i } } \\succsim _ { \\boldsymbol { i } } \\boldsymbol { y } _ { \\boldsymbol { i } }\\).\n\\end{itemize}",
+      "after": "\\begin{itemize}\n  \\item \\(X=\\{(x_i)_{i\\in N}:x_i\\in\\mathbb{R}_+^\\ell\\text{ for all }i\\in N\\}\\);\n  \\item \\(V(S)=\\{(x_i)_{i\\in N}\\in X:\\sum_{i\\in S}x_i=\\sum_{i\\in S}\\omega_i\\text{ and }x_j=\\omega_j\\text{ for all }j\\in N\\backslash S\\}\\) for each coalition \\(S\\);\n  \\item each preference relation \\(\\succsim_i\\) is defined by \\((x_j)_{j\\in N}\\succsim_i(y_j)_{j\\in N}\\) if and only if \\(x_i\\succsim_i y_i\\).\n\\end{itemize}",
+      "expected_count": 1,
+      "reason": "Restore the exchange-economy coalitional-game list structure and brace scope from the alternate scan."
+    },
+    {
+      "before": "the coalitions \\(\\{ 2,3,4 \\}\\) or \\(\\{ 1 , i \\}\\) for .gif\">.",
+      "after": "the coalitions \\(\\{2,3,4\\}\\) or \\(\\{1,i\\}\\) for \\(i\\in\\{2,3,4\\}\\).",
+      "expected_count": 1,
+      "reason": "Example 282.3 in the alternate scan supplies the missing player-index domain."
+    },
+    {
+      "before": "Let .gif\">, so that ( \\(z , T\\) ) is a counterobjection to ( \\(y , s\\) ).",
+      "after": "Let \\(\\langle N,v\\rangle\\) be a coalitional game with transferable payoff, let \\(x\\) be an imputation in the kernel, and let \\((y,S)\\) be an objection in the sense of the bargaining set of player \\(i\\) against \\(j\\) to \\(x\\): \\(i\\in S\\), \\(j\\in N\\backslash S\\), \\(y(S)=v(S)\\), and \\(y_k>x_k\\) for all \\(k\\in S\\). If \\(x_j=v(\\{j\\})\\) then \\((z,\\{j\\})\\) with \\(z_j=v(\\{j\\})\\) is a counterobjection to \\((y,S)\\). If \\(x_j>v(\\{j\\})\\) then since \\(x\\) is in the kernel we have \\(s_{ji}(x)\\geq s_{ij}(x)\\geq v(S)-x(S)=y(S)-x(S)\\). Let \\(T\\) be a coalition that contains \\(j\\) but not \\(i\\) for which \\(s_{ji}(x)=v(T)-x(T)\\). Then \\(v(T)-x(T)\\geq y(S)-x(S)\\), so that \\(v(T)>y(S\\cap T)+x(T\\backslash S)\\). Thus there exists a \\(T\\)-feasible payoff vector \\(z\\) with \\(z_k\\geq x_k\\) for all \\(k\\in T\\backslash S\\) and \\(z_k\\geq y_k\\) for all \\(k\\in T\\cap S\\), so that \\((z,T)\\) is a counterobjection to \\((y,S)\\).",
+      "expected_count": 1,
+      "reason": "Restore the complete proof of Lemma 285.1 from alternate scan page 285; the Mathpix source retained only its last clause."
+    },
+    {
+      "before": "\\(\\left| B _ { k } { } ^ { * } ( x ) \\right| < \\mid B _ { k } { } ^ { * } ( y ( \\mid\\)",
+      "after": "\\(\\left|B_{k^*}(x)\\right|<\\left|B_{k^*}(y)\\right|\\)",
+      "expected_count": 1,
+      "reason": "Definition of lexicographic order in the alternate scan has balanced absolute values and arguments."
+    },
+    {
+      "before": "\\(\\Psi \\left( N \\backslash \\{ i \\} , v ^ { N / \\{ i \\} } \\right)\\)",
+      "after": "\\(\\Psi_j\\left(N\\backslash\\{i\\},v^{N\\backslash\\{i\\}}\\right)\\)",
+      "expected_count": 1,
+      "reason": "First Shapley-value objection in the alternate scan uses psi_j and set difference in both arguments."
+    },
+    {
+      "before": "\\(\\Psi _ { i } \\left( N \\backslash \\{ j \\} , v ^ { M \\backslash j \\} ) - x i } \\right.\\)",
+      "after": "\\(\\Psi_i\\left(N\\backslash\\{j\\},v^{N\\backslash\\{j\\}}\\right)-x_i\\)",
+      "expected_count": 1,
+      "reason": "Second Shapley-value objection in the alternate scan has N\\{j}, a balanced value expression, and x_i."
+    },
+    {
+      "before": "Given our assumptions on the players' preferences we can associate with any bargaining problem .gif\"> a bargaining problem contains more information than such a pair.",
+      "after": "Given our assumptions on the players' preferences we can associate with any bargaining problem \\(\\langle X,D,\\succsim_1,\\succsim_2\\rangle\\) and any von Neumann--Morgenstern utility functions \\(u_1\\) and \\(u_2\\) that represent \\(\\succsim_1\\) and \\(\\succsim_2\\) a pair \\(\\langle U,d\\rangle\\) in which \\(U=\\{(u_1(x),u_2(x)):x\\in X\\}\\) and \\(d=(u_1(D),u_2(D))\\); we can choose \\(u_1\\) and \\(u_2\\) so that \\(d=(0,0)\\). Our assumptions imply that \\(U\\) is compact and convex and contains a point \\(y\\) for which \\(y_i>d_i\\) for \\(i=1,2\\). In the standard treatment of the Nash solution such a pair \\(\\langle U,d\\rangle\\), rather than a description like \\(\\langle X,D,\\succsim_1,\\succsim_2\\rangle\\) of the physical agreements and the players' preferences, is taken as the primitive; we find the language of agreements and preferences more natural. Note that bargaining problems with different agreement sets and preference relations can lead to the same pair \\(\\langle U,d\\rangle\\): a bargaining problem contains more information than such a pair.",
+      "expected_count": 1,
+      "reason": "Restore the utility-space representation of a bargaining problem from alternate scan page 301."
+    }
+  ]
+}

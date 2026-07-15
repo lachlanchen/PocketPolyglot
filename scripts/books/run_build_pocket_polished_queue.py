@@ -49,6 +49,7 @@ def detailed_progress(book_id: str) -> dict[str, int | float | str | bool]:
             cached_hashes.add(source_hash)
     valid_chunks = 0
     invalid_chunks = 0
+    unresolved_chunk_ids: set[str] = set()
     accepted_segments = 0
     total_segments = sum(len(task.get("segments", [])) for task in tasks)
     for task in tasks:
@@ -63,6 +64,7 @@ def detailed_progress(book_id: str) -> dict[str, int | float | str | bool]:
             valid_chunks += 1
             accepted_segments += len(task.get("segments", []))
         else:
+            unresolved_chunk_ids.add(task["chunk_id"])
             if path.exists():
                 invalid_chunks += 1
             accepted_segments += sum(
@@ -71,7 +73,8 @@ def detailed_progress(book_id: str) -> dict[str, int | float | str | bool]:
                 for source in task.get("segments", [])
             )
     failed_chunks = sum(
-        1 for _path in (book_root / "work/failed").glob("*.json")
+        path.stem in unresolved_chunk_ids
+        for path in (book_root / "work/failed").glob("*.json")
     )
     fraction = accepted_segments / total_segments if total_segments else 0.0
     status_path = book_root / "status.json"

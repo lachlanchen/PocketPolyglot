@@ -681,6 +681,40 @@ class PocketPolishPipelineTest(unittest.TestCase):
         self.assertEqual(changes[0]["type"], "page-boundary-command")
         self.assertEqual(changes[0]["marker_tex"], "\\clearpage")
 
+    def test_clearpage_before_inline_math_continuation_is_joined(self) -> None:
+        source = (
+            "The outcome is defined for each\n\n"
+            "\\clearpage\n\n"
+            "\\(p \\in P\\). The result follows.\n"
+        )
+        normalized, changes = normalize_page_boundary_artifacts(source)
+        self.assertEqual(
+            normalized,
+            "The outcome is defined for each \\(p \\in P\\). The result follows.\n",
+        )
+        self.assertEqual(len(changes), 1)
+
+    def test_bibliography_entry_may_remain_in_source_script(self) -> None:
+        source = source_segment(
+            "book-sbibliography",
+            'Geanakoplos, J. (1992), "Common Knowledge", Journal of Economic Perspectives 6, 53-82. [85]',
+        )
+        task = dict(
+            self.task,
+            segments=[source],
+            segment_count=1,
+            validation_profile="technical_exact",
+        )
+        output = {
+            "segment_id": source["segment_id"],
+            "source_sha256": source["source_sha256"],
+            "en_tex": source["source_tex"],
+            "ja_tex": source["source_tex"],
+            "changes": [],
+            "unresolved": [],
+        }
+        self.assertFalse(validate_segment_output(task, source, output))
+
     def test_clearpage_before_heading_is_preserved(self) -> None:
         source = (
             "This introductory discussion leads to\n\n"
