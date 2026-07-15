@@ -335,10 +335,6 @@ def canonicalize_writer_result(
     header_errors: list[str] = []
     if result.get("schema_version") != expected_schema:
         header_errors.append(f"schema_version must be {expected_schema}")
-    if result.get("book_id") != task["book_id"]:
-        header_errors.append("book_id mismatch")
-    if result.get("chunk_id") != task["chunk_id"]:
-        header_errors.append("chunk_id mismatch")
     rows = result.get("segments")
     if not isinstance(rows, list):
         header_errors.append("segments must be an array")
@@ -357,6 +353,20 @@ def canonicalize_writer_result(
     unexpected = sorted(set(actual) - set(expected_ids))
     if unexpected:
         header_errors.append(f"unexpected segment IDs: {unexpected}")
+    exact_segment_identity = (
+        [row.get("segment_id") for row in rows if isinstance(row, dict)]
+        == expected_ids
+        and not duplicates
+    )
+    # The task and exact ordered segment IDs are authoritative.  Models
+    # occasionally echo a stale book/chunk header while returning precisely
+    # the requested segment set; accepting only that provable case avoids a
+    # needless retry without weakening content or coverage validation.
+    if not exact_segment_identity:
+        if result.get("book_id") != task["book_id"]:
+            header_errors.append("book_id mismatch")
+        if result.get("chunk_id") != task["chunk_id"]:
+            header_errors.append("chunk_id mismatch")
     if header_errors:
         for segment_id in expected_ids:
             errors[segment_id].extend(header_errors)

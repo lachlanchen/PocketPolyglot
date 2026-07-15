@@ -186,6 +186,48 @@
       "after": "Given our assumptions on the players' preferences we can associate with any bargaining problem \\(\\langle X,D,\\succsim_1,\\succsim_2\\rangle\\) and any von Neumann--Morgenstern utility functions \\(u_1\\) and \\(u_2\\) that represent \\(\\succsim_1\\) and \\(\\succsim_2\\) a pair \\(\\langle U,d\\rangle\\) in which \\(U=\\{(u_1(x),u_2(x)):x\\in X\\}\\) and \\(d=(u_1(D),u_2(D))\\); we can choose \\(u_1\\) and \\(u_2\\) so that \\(d=(0,0)\\). Our assumptions imply that \\(U\\) is compact and convex and contains a point \\(y\\) for which \\(y_i>d_i\\) for \\(i=1,2\\). In the standard treatment of the Nash solution such a pair \\(\\langle U,d\\rangle\\), rather than a description like \\(\\langle X,D,\\succsim_1,\\succsim_2\\rangle\\) of the physical agreements and the players' preferences, is taken as the primitive; we find the language of agreements and preferences more natural. Note that bargaining problems with different agreement sets and preference relations can lead to the same pair \\(\\langle U,d\\rangle\\): a bargaining problem contains more information than such a pair.",
       "expected_count": 1,
       "reason": "Restore the utility-space representation of a bargaining problem from alternate scan page 301."
+    },
+    {
+      "before": "\\(\\boldsymbol { \\alpha } ^ { \\boldsymbol { * } } \\in \\mathbf { x } _ { \\boldsymbol { i } \\in \\boldsymbol { N } } \\boldsymbol { \\Delta } \\left( \\boldsymbol { A } _ { \\boldsymbol { i } } \\right)\\)",
+      "after": "\\(\\boldsymbol { \\alpha } ^ { \\boldsymbol { * } } \\in \\prod _ { \\boldsymbol { i } \\in \\boldsymbol { N } } \\boldsymbol { \\Delta } \\left( \\boldsymbol { A } _ { \\boldsymbol { i } } \\right)\\)",
+      "expected_count": 1,
+      "reason": "Alternate scan page 33 uses the Cartesian-product operator in Lemma 33.2; Mathpix read it as a bold x."
+    },
+    {
+      "before": "\\(\\boldsymbol { \\alpha } _ { \\boldsymbol { - } \\mathbf { i } \\text {. } }\\)",
+      "after": "\\(\\boldsymbol { \\alpha } _ { - \\boldsymbol { i } } ^ { \\boldsymbol { * } }\\)",
+      "expected_count": 1,
+      "reason": "Alternate scan page 33 shows the equilibrium opponents' profile alpha star subscript minus i; Mathpix absorbed punctuation into the subscript."
+    },
+    {
+      "before": "\\(\\boldsymbol { \\alpha } _ { - \\boldsymbol { i } \\cdot } ^ { \\boldsymbol { * } }\\)",
+      "after": "\\(\\boldsymbol { \\alpha } _ { - \\boldsymbol { i } } ^ { \\boldsymbol { * } }\\)",
+      "expected_count": 1,
+      "reason": "Alternate scan page 34 has no dot in the opponents' profile subscript."
+    },
+    {
+      "before": "\\(\\boldsymbol { \\alpha } _ { \\boldsymbol { - } } ^ { * }\\)",
+      "after": "\\(\\boldsymbol { \\alpha } _ { - \\boldsymbol { i } } ^ { * }\\)",
+      "expected_count": 1,
+      "reason": "Alternate scan page 34 identifies the opponents' equilibrium profile with the player index i."
+    },
+    {
+      "before": "For each .gif\">.",
+      "after": "For each \\(j\\in N\\), the state \\(C(j)\\) is a state of reconciliation that is entered after any punishment of player \\(j\\) is complete; in this state the action profile chosen is \\(a(j)\\). For each player \\(j\\) and period \\(t\\) between 1 and a number \\(L\\) specified below, the state \\(P(j,t)\\) is one in which \\(t\\) periods remain in which player \\(j\\) is to be punished; in this state every player \\(i\\neq j\\) takes the action \\((p_{-j})_i\\), which holds \\(j\\) down to his minmax payoff. If any player \\(i\\) deviates in any state, there is a transition to \\(P(i,L)\\). If none of the \\(L\\) punishment periods contains a deviation by a single punisher, the state changes to \\(C(i)\\). The states \\(\\{C(i)\\}\\) punish players who misbehave during a punishment phase: if player \\(i\\) does not punish player \\(j\\) as prescribed, then instead of entering \\(C(j)\\), in which the outcome is \\(a(j)\\), player \\(i\\) is punished for \\(L\\) periods, after which the state becomes \\(C(i)\\), in which \\(a(i)\\prec_i a(j)\\).",
+      "expected_count": 1,
+      "reason": "Restore the complete machine-state construction from the clean alternate scan pages 151-152; the Mathpix source retained only an HTML image fragment."
+    },
+    {
+      "before": "\\section*{Exercise 185.1}\nIn an environment like that in the previous proposition, show that if a choice function \\(f\\) with \\(f ( \\theta ) - ( x ( \\theta ) , m ( \\theta ) )\\) and \\(x\\) (θ) = 1 if and only if \\(\\boldsymbol { \\sum } _ { \\boldsymbol { i } \\in \\boldsymbol { N } } \\boldsymbol { \\theta } _ { \\boldsymbol { i } } \\geq \\boldsymbol { \\gamma }\\) is truthfully DSE-implementable then for each \\(\\boldsymbol { j } \\in \\boldsymbol { N }\\) there is a function \\(h _ { j }\\) such that \\(\\boldsymbol { m } _ { \\boldsymbol { j } } ( \\boldsymbol { \\theta } ) = \\boldsymbol { x } ( \\boldsymbol { \\theta } ) \\left( \\boldsymbol { \\gamma } - \\boldsymbol { \\sum } _ { \\boldsymbol { i } \\in \\boldsymbol { N } \\backslash \\{ \\boldsymbol { j } \\} } \\boldsymbol { \\theta } _ { \\boldsymbol { i } } \\right) - \\boldsymbol { h } _ { \\boldsymbol { j } } \\left( \\boldsymbol { \\theta } _ { - \\boldsymbol { j } } \\right)\\) for all \\(\\boldsymbol { \\theta } \\in \\mathbf { R } ^ { \\boldsymbol { N } }\\). [You need to show that whenever \\(x \\left( \\theta _ { - j } , \\theta _ { j } \\right) = 1\\) and \\(x \\left( \\theta _ { - j } \\right.\\), \\(\\left. \\theta _ { j } ^ { \\prime } \\right) = 0\\) then \\(\\left. m _ { j } \\left( \\theta _ { - j } , \\theta _ { j } \\right) - m _ { j } \\left( \\theta _ { - j } , \\theta _ { j } ^ { \\prime } \\right) = \\gamma - \\sum _ { i \\in N \\backslash \\{ j \\} } \\theta _ { i \\cdot } \\right]\\)",
+      "after": "\\section*{Exercise 185.1}\nIn an environment like that in the previous proposition, show that if a choice function \\(f\\) with \\(f(\\theta)=(x(\\theta),m(\\theta))\\) and \\(x(\\theta)=1\\) if and only if \\(\\sum_{i\\in N}\\theta_i\\geq\\gamma\\) is truthfully DSE-implementable, then for each \\(j\\in N\\) there is a function \\(h_j\\) such that \\(m_j(\\theta)=x(\\theta)(\\gamma-\\sum_{i\\in N\\backslash\\{j\\}}\\theta_i)-h_j(\\theta_{-j})\\) for all \\(\\theta\\in\\mathbb{R}^N\\). [You need to show that whenever \\(x(\\theta_{-j},\\theta_j)=1\\) and \\(x(\\theta_{-j},\\theta'_j)=0\\), then \\(m_j(\\theta_{-j},\\theta_j)-m_j(\\theta_{-j},\\theta'_j)=\\gamma-\\sum_{i\\in N\\backslash\\{j\\}}\\theta_i\\).]",
+      "expected_count": 1,
+      "reason": "Restore Exercise 185.1 exactly from the clean alternate scan page 185, including the equality defining f, balanced arguments, and the undamaged theta_i subscript."
+    },
+    {
+      "before": "the height\n\n\\footnotetext{\\({ } ^ { 1 }\\) Arrow and Hahn's result is for the more general notion of an economy with production. To apply it here, let the production set of each firm \\(f\\) be \\(Y _ { j } = \\{ 0 \\}\\). Note that if every agent's preference relation is increasing then every agent is resource related (in the sense of Arrow and Hahn) to every other agent.\n}\\clearpage\n\nof the box is the total endowment of good 2 . Thus each point",
+      "after": "the height of the box is the total endowment of good 2.\n\n\\footnotetext{\\({ } ^ { 1 }\\) Arrow and Hahn's result is for the more general notion of an economy with production. To apply it here, let the production set of each firm \\(f\\) be \\(Y _ { j } = \\{ 0 \\}\\). Note that if every agent's preference relation is increasing then every agent is resource related (in the sense of Arrow and Hahn) to every other agent.\n}\\clearpage\n\nThus each point",
+      "expected_count": 1,
+      "reason": "Join the page-split Edgeworth-box sentence using the adjacent page text in the clean alternate scan while preserving the complete Arrow-Hahn footnote and page boundary."
     }
   ]
 }

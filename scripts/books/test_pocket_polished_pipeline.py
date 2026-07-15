@@ -106,6 +106,36 @@ class PocketPolishPipelineTest(unittest.TestCase):
             )
         )
 
+    def test_stale_writer_header_is_repaired_when_segment_identity_is_exact(self) -> None:
+        raw = {
+            "schema_version": 3,
+            "book_id": "stale-book",
+            "chunk_id": "stale-book-p00009",
+            "segments": [
+                {
+                    "segment_id": source["segment_id"],
+                    "ja_tex": "正確な訳。",
+                    "repairs": [],
+                    "unresolved": [],
+                }
+                for source in self.task["segments"]
+            ],
+        }
+        canonical, errors = canonicalize_writer_result(self.task, raw)
+        self.assertEqual(list(canonical), [self.first["segment_id"], self.second["segment_id"]])
+        self.assertFalse(any(errors.values()))
+
+    def test_stale_writer_header_is_rejected_when_segment_identity_is_not_exact(self) -> None:
+        raw = {
+            "schema_version": 3,
+            "book_id": "stale-book",
+            "chunk_id": "stale-book-p00009",
+            "segments": [],
+        }
+        _canonical, errors = canonicalize_writer_result(self.task, raw)
+        self.assertIn("book_id mismatch", errors[self.first["segment_id"]])
+        self.assertIn("chunk_id mismatch", errors[self.first["segment_id"]])
+
     def test_japanese_numeric_reformat_is_semantic_observation_not_rejection(self) -> None:
         output = {
             "segment_id": self.first["segment_id"],
