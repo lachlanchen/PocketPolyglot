@@ -553,7 +553,8 @@ def fit_short_simple_longtables(tex: str, *, max_rows: int = 12) -> tuple[str, i
     Pandoc emits even small tables as ``longtable``. On A6 paper, simple
     multi-column tables with long cells can overflow badly because ``l/c/r``
     columns never wrap. Compact tables are safe to render as ``tabular`` in an
-    ``adjustbox``; larger tables stay as ``longtable`` so they can span pages.
+    fixed-width ``tabular``; larger tables stay as ``longtable`` so they can
+    span pages.
     """
 
     converted = 0
