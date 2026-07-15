@@ -466,6 +466,8 @@ def split_shared_environment_scaffold(en_tex: str, ja_tex: str) -> tuple[str, st
     while en_lines and ja_lines and en_lines[-1] == ja_lines[-1]:
         shared_suffix.insert(0, en_lines.pop())
         ja_lines.pop()
+    shared_source_lines = set(en_lines)
+    ja_lines = [line for line in ja_lines if line not in shared_source_lines]
     suffix = "".join(shared_suffix)
     if suffix:
         en_body = en_tex[: -len(suffix)]
@@ -589,6 +591,8 @@ def fuse_english_main_japanese_secondary(
             continue
         en_tex = segment["en_tex"]
         ja_tex = segment["ja_tex"]
+        if ENVIRONMENT_COMMAND_RE.search(en_tex):
+            pending_crosses_environment = True
         pending_en.append(en_tex)
         pending_ja.append(ja_tex)
         update_open_environments(en_tex, open_environments)
