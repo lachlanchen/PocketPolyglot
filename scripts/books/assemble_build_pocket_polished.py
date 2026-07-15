@@ -483,6 +483,16 @@ def inject_fusion_preamble(tex: str) -> str:
     return tex.replace(marker, FUSION_PREAMBLE + "\n" + marker, 1)
 
 
+def restore_split_optional_linebreaks(tex: str) -> str:
+    """Restore caption ``\\[dimension]`` when segmentation split its slashes."""
+
+    return re.sub(
+        r"(?<!\\)\\\[(?P<space>\d+(?:\.\d+)?(?:pt|mm|cm|em|ex))\]",
+        lambda match: rf"\\[{match.group('space')}]",
+        tex,
+    )
+
+
 def update_open_environments(tex: str, stack: list[str]) -> None:
     """Track source environments that cross translation-segment boundaries."""
 
@@ -579,7 +589,7 @@ def fuse_english_main_japanese_secondary(
     if furigana.unknown_tokens:
         examples = ", ".join(dict.fromkeys(furigana.unknown_tokens[:12]))
         raise ValueError(f"Japanese furigana missing for: {examples}")
-    return inject_fusion_preamble("".join(parts)), furigana
+    return inject_fusion_preamble(restore_split_optional_linebreaks("".join(parts))), furigana
 
 
 def copy_and_rewrite_figures(tex: str, destination: Path) -> str:
