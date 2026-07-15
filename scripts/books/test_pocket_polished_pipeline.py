@@ -23,9 +23,8 @@ from assemble_build_pocket_polished import (
     fit_short_simple_longtables,
     fuse_english_main_japanese_secondary,
     normalize_unwrapped_math_fragments,
-    restore_optional_linebreak_escape,
 )
-from build_pocket_tex_queue import inject_cover_page
+from build_pocket_tex_queue import inject_cover_page, wrap_wide_display_math
 from ensure_textless_pocket_polished_cover import cover_sandbox, recover_generated_cover
 from pocket_polished_common import (
     apply_exact_paragraph_drops,
@@ -989,13 +988,11 @@ class PocketPolishPipelineTest(unittest.TestCase):
         self.assertIn("キャプション。", fused)
         self.assertLess(fused.index("キャプション。"), fused.index(r"\end{table}"))
 
-    def test_lost_optional_linebreak_slash_is_restored_without_touching_display_math(self) -> None:
-        repaired, count = restore_optional_linebreak_escape(
-            "\\caption{Title\\[0pt]\nText}\\n\\[x+y\\]"
-        )
-        self.assertEqual(count, 1)
-        self.assertIn(r"Title\\[0pt]", repaired)
-        self.assertIn(r"\[x+y\]", repaired)
+    def test_wide_math_wrapper_ignores_caption_optional_linebreak_spacing(self) -> None:
+        source = "\\caption{Title\\\\[0pt]\nText}\n\\[" + ("x+" * 60) + "y\\]"
+        rendered = wrap_wide_display_math(source, layout="pocket")
+        self.assertIn(r"Title\\[0pt]", rendered)
+        self.assertEqual(rendered.count(r"\begin{adjustbox}"), 1)
 
     def test_cover_injection_preserves_document_paper_geometry(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

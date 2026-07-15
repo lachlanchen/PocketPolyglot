@@ -41,7 +41,7 @@ LONGTABLE_SPEC_RE = re.compile(r"(\\begin\{longtable\}(?:\[[^\]]*\])?\{)([^{}]*(
 SIMPLE_LONGTABLE_SPEC_RE = re.compile(
     r"(\\begin\{longtable\}(?:\[[^\]]*\])?\{@\{\})([lcrX]{2,})(@\{\}\})"
 )
-DISPLAY_MATH_RE = re.compile(r"\\\[(.*?)\\\]", re.S)
+DISPLAY_MATH_RE = re.compile(r"(?<!\\)\\\[(.*?)(?<!\\)\\\]", re.S)
 ADJUSTBOX_DISPLAY_MATH_RE = re.compile(
     r"\\begin\{adjustbox\}\{max width=\\linewidth\}\s*"
     r"\\begin\{minipage\}\{\\linewidth\}\s*"

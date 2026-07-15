@@ -179,16 +179,6 @@ FUSION_PREAMBLE = r"""
 """
 
 
-def restore_optional_linebreak_escape(tex: str) -> tuple[str, int]:
-    """Restore a lost slash in ``\\[dimension]`` split-row source evidence."""
-
-    return re.subn(
-        r"(?<!\\)\\\[(?P<space>\d+(?:\.\d+)?(?:pt|mm|cm|em|ex))\]",
-        lambda match: rf"\\[{match.group('space')}]",
-        tex,
-    )
-
-
 def inject_polished_cover_page(
     tex_path: Path,
     cover_path: Path,
@@ -825,8 +815,6 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
                 )
                 rendered, count = normalize_unwrapped_math_fragments(rendered)
                 normalized_math_fragments[language] += count
-            rendered, count = restore_optional_linebreak_escape(rendered)
-            normalized_math_fragments[language] += count
             parts.append(rendered)
         assembled[language] = "".join(parts)
         differences = compare_inventory(source_tex, assembled[language])
@@ -841,8 +829,7 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
             "source_sha256": segment["source_sha256"],
         }
         if segment["kind"] == "protected":
-            restored, _ = restore_optional_linebreak_escape(segment["source_tex"])
-            row.update({"source_tex": segment["source_tex"], "en_tex": restored, "ja_tex": restored})
+            row.update({"source_tex": segment["source_tex"], "en_tex": segment["source_tex"], "ja_tex": segment["source_tex"]})
         else:
             output = output_segment_map[segment_id]
             task_segment = task_segment_map[segment_id]
