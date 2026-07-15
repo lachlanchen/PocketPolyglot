@@ -42,6 +42,7 @@ SIMPLE_LONGTABLE_SPEC_RE = re.compile(
     r"(\\begin\{longtable\}(?:\[[^\]]*\])?\{@\{\})([lcrX]{2,})(@\{\}\})"
 )
 DISPLAY_MATH_RE = re.compile(r"(?<!\\)\\\[(.*?)(?<!\\)\\\]", re.S)
+INLINE_MATH_RE = re.compile(r"(?<!\\)\\\((.*?)(?<!\\)\\\)", re.S)
 ADJUSTBOX_DISPLAY_MATH_RE = re.compile(
     r"\\begin\{adjustbox\}\{max width=\\linewidth\}\s*"
     r"\\begin\{minipage\}\{\\linewidth\}\s*"
@@ -518,6 +519,34 @@ def wrap_wide_display_math(text: str, *, layout: str) -> str:
         return scaled_display_math(body)
 
     return DISPLAY_MATH_RE.sub(repl, text)
+
+
+def wrap_wide_inline_math(text: str, *, layout: str) -> tuple[str, int]:
+    """Move oversized indivisible inline math atoms onto fitted lines."""
+
+    if layout not in {"exact", "pocket"}:
+        return text, 0
+    text_atom_length = 120 if layout == "exact" else 90
+    absolute_length = 320 if layout == "exact" else 240
+    fitted = 0
+
+    def repl(match: re.Match[str]) -> str:
+        nonlocal fitted
+        body = match.group(1).strip()
+        compact_length = len(re.sub(r"\s+", "", body))
+        if compact_length < absolute_length and not (
+            r"\text" in body and compact_length >= text_atom_length
+        ):
+            return match.group(0)
+        fitted += 1
+        return (
+            "\\par\\noindent"
+            "\\adjustbox{max width=\\linewidth}{\\(\\displaystyle "
+            + body
+            + "\\)}\\par"
+        )
+
+    return INLINE_MATH_RE.sub(repl, text), fitted
 
 
 def postprocess_tex(tex_path: Path, *, layout: str) -> None:

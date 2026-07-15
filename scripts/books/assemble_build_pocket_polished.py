@@ -17,6 +17,7 @@ from build_pocket_tex_queue import (
     compile_tex,
     latex_escape_text,
     wrap_wide_display_math,
+    wrap_wide_inline_math,
 )
 from japanese_tex_furigana import FuriganaStats, annotate_japanese_tex
 from pocket_polished_common import (
@@ -954,11 +955,15 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
     centered_figures: dict[str, int] = {"en-main-ja": 0}
     normalized_full_bleed: dict[str, int] = {"en-main-ja": 0}
     fitted_short_tables: dict[str, int] = {"en-main-ja": 0}
+    fitted_inline_math: dict[str, int] = {"en-main-ja": 0}
     if validation_profile == "technical_exact":
         fused, centered_figures["en-main-ja"] = center_standalone_figures(fused)
         fused, normalized_full_bleed["en-main-ja"] = normalize_full_bleed_images(fused)
         fused, fitted_short_tables["en-main-ja"] = fit_short_simple_longtables(fused)
         fused = wrap_wide_display_math(fused, layout="exact")
+        fused, fitted_inline_math["en-main-ja"] = wrap_wide_inline_math(
+            fused, layout="exact"
+        )
 
     figure_root = book_root / "assets/figures"
     fused = copy_and_rewrite_figures(fused, figure_root)
@@ -1010,6 +1015,7 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
         "centered_standalone_figures": centered_figures,
         "normalized_full_bleed_images": normalized_full_bleed,
         "fitted_short_simple_longtables": fitted_short_tables,
+        "fitted_oversized_inline_math": fitted_inline_math,
         "normalized_unwrapped_math_fragments": normalized_math_fragments,
         "assembled_at": datetime.now(timezone.utc).isoformat(),
     }

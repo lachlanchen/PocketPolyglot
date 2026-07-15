@@ -27,7 +27,11 @@ from assemble_build_pocket_polished import (
     restore_secondary_list_scaffold,
     restore_split_optional_linebreaks,
 )
-from build_pocket_tex_queue import inject_cover_page, wrap_wide_display_math
+from build_pocket_tex_queue import (
+    inject_cover_page,
+    wrap_wide_display_math,
+    wrap_wide_inline_math,
+)
 from ensure_textless_pocket_polished_cover import cover_sandbox, recover_generated_cover
 from pocket_polished_common import (
     apply_exact_paragraph_drops,
@@ -104,6 +108,15 @@ class PocketPolishPipelineTest(unittest.TestCase):
         restored = demote_secondary_captions(translated)
         self.assertNotIn(r"\caption", restored)
         self.assertEqual(restored, r"\textit{\JpRuby{図}{ず}235.1}")
+
+    def test_oversized_inline_math_is_fitted_without_changing_atom(self) -> None:
+        body = r"x_1+" * 80 + "x_n"
+        rendered, count = wrap_wide_inline_math(
+            f"Before \\({body}\\) after.", layout="exact"
+        )
+        self.assertEqual(count, 1)
+        self.assertIn(body, rendered)
+        self.assertIn(r"\adjustbox{max width=\linewidth}", rendered)
 
     def test_cover_handoff_copies_only_exact_reported_generated_image(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
