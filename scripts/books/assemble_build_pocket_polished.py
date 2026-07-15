@@ -484,11 +484,17 @@ def inject_fusion_preamble(tex: str) -> str:
 
 
 def restore_split_optional_linebreaks(tex: str) -> str:
-    """Restore caption ``\\[dimension]`` when segmentation split its slashes."""
+    """Restore caption boundaries split immediately before ``\\[dimension]``."""
 
-    return re.sub(
+    tex = re.sub(
         r"(?<!\\)\\\[(?P<space>\d+(?:\.\d+)?(?:pt|mm|cm|em|ex))\]",
         lambda match: rf"\\[{match.group('space')}]",
+        tex,
+    )
+    return re.sub(
+        r"(?P<caption>\\caption\{[^{}\n]*)\}"
+        r"(?P<break>\\\\\[\d+(?:\.\d+)?(?:pt|mm|cm|em|ex)\])",
+        lambda match: match.group("caption") + match.group("break"),
         tex,
     )
 
