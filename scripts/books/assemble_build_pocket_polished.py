@@ -503,6 +503,24 @@ def restore_secondary_list_scaffold(en_tex: str, ja_tex: str) -> str:
     return f"\\begin{{{environment}}}\n{ja_tex.strip()}\n\\end{{{environment}}}"
 
 
+def demote_secondary_captions(tex: str) -> str:
+    """Keep translated caption text without emitting a second float caption."""
+
+    marker = r"\caption{"
+    cursor = 0
+    parts: list[str] = []
+    while True:
+        start = tex.find(marker, cursor)
+        if start < 0:
+            parts.append(tex[cursor:])
+            break
+        parts.append(tex[cursor:start])
+        caption, end = braced_argument(tex, start + len(r"\caption"))
+        parts.append(r"\textit{" + caption + "}")
+        cursor = end
+    return "".join(parts)
+
+
 def inject_fusion_preamble(tex: str) -> str:
     marker = r"\begin{document}"
     if FUSION_PREAMBLE.strip() in tex or "BUILD_POCKET_POLISHED_FUSION_BEGIN" in tex:
@@ -591,6 +609,7 @@ def fuse_english_main_japanese_secondary(
         parts.append(en_tex)
         secondary = secondary.strip()
         if secondary:
+            secondary = demote_secondary_captions(secondary)
             secondary, current = annotate_japanese_tex(secondary)
             furigana.merge(current)
             parts.append(

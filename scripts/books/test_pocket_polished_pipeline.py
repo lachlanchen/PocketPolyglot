@@ -20,6 +20,7 @@ from codex_pocket_polish_worker import (
     save_cached_segment,
 )
 from assemble_build_pocket_polished import (
+    demote_secondary_captions,
     fit_short_simple_longtables,
     fuse_english_main_japanese_secondary,
     normalize_unwrapped_math_fragments,
@@ -90,6 +91,12 @@ class PocketPolishPipelineTest(unittest.TestCase):
         self.assertEqual(restored.count(r"\begin{itemize}"), 1)
         self.assertEqual(restored.count(r"\end{itemize}"), 1)
         self.assertEqual(restored.count(r"\item"), 2)
+
+    def test_secondary_caption_keeps_text_without_duplicate_float_command(self) -> None:
+        translated = r"\caption{\JpRuby{図}{ず}235.1}"
+        restored = demote_secondary_captions(translated)
+        self.assertNotIn(r"\caption", restored)
+        self.assertEqual(restored, r"\textit{\JpRuby{図}{ず}235.1}")
 
     def test_cover_handoff_copies_only_exact_reported_generated_image(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
