@@ -7,6 +7,7 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from codex_pocket_polish_worker import (
     canonicalize_writer_result,
@@ -23,6 +24,7 @@ from assemble_build_pocket_polished import (
     normalize_unwrapped_math_fragments,
 )
 from build_pocket_tex_queue import inject_cover_page
+from ensure_textless_pocket_polished_cover import cover_sandbox, recover_generated_cover
 from pocket_polished_common import (
     apply_exact_paragraph_drops,
     apply_exact_text_replacements,
@@ -68,6 +70,38 @@ class PocketPolishPipelineTest(unittest.TestCase):
             "segment_count": 2,
             "segments": [self.first, self.second],
         }
+
+    def test_cover_sandbox_falls_back_after_failed_probe(self) -> None:
+        with patch(
+            "ensure_textless_pocket_polished_cover.workspace_sandbox_available",
+            return_value=(False, "RTM_NEWADDR denied"),
+        ):
+            sandbox, reason = cover_sandbox()
+        self.assertEqual(sandbox, "danger-full-access")
+        self.assertIn("RTM_NEWADDR denied", reason)
+
+    def test_cover_handoff_copies_only_exact_reported_generated_image(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            generated = root / ".codex/generated_images/session/exact.png"
+            generated.parent.mkdir(parents=True)
+            generated.write_bytes(b"png")
+            target = root / "assets/covers/book/cover.png"
+            output = f"Generated image: `{generated}`\n"
+            with patch(
+                "ensure_textless_pocket_polished_cover.valid_cover",
+                side_effect=lambda path: path == generated,
+            ):
+                self.assertTrue(recover_generated_cover(output, target))
+            self.assertEqual(target.read_bytes(), b"png")
+
+            unrelated = root / ".codex/generated_images/session/unrelated.png"
+            unrelated.write_bytes(b"other")
+            ambiguous = output + f"Also: `{unrelated}`\n"
+            with patch(
+                "ensure_textless_pocket_polished_cover.valid_cover", return_value=True
+            ):
+                self.assertFalse(recover_generated_cover(ambiguous, target))
 
     def test_compact_writer_is_canonicalized_without_english_rewrite(self) -> None:
         raw = {
