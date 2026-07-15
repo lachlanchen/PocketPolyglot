@@ -183,6 +183,7 @@ def prepare_book(
         "upstream_flattened_sha256": sha256_text(upstream_text),
         "source_normalization_count": len(source_normalizations),
         "source_replacement_plan": task.get("polish_source_replacements_file"),
+        "layout_replacement_plan": task.get("polish_layout_replacements_file"),
         "segment_count": len(segments),
         "review_segment_count": sum(
             item["kind"]

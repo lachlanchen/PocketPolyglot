@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "book_id": "game-theory-mathpix-exact-book",
+  "evidence": [
+    "sources/game-theory/A Course in Game Theory - clean alternate.pdf#page=258-259",
+    "sources/game-theory/A Course in Game Theory - clean alternate.pdf#page=351"
+  ],
+  "policy": "Cardinality-checked post-fusion repairs for accepted protected atoms whose Mathpix grouping is disproved by the cited source pages.",
+  "replacements": [
+    {
+      "before": "\\(\\mu _ { C S } ( h ) ( R ) \\cdot \\sigma _ { \\mathrm { CS } } ( R ) ( h ) ( F ) + \\mu _ { C S } ( h ) ( T ) \\cdot 1 = \\left( 1 - b ^ { K - } \\right. \\left. { } ^ { k + 1 } \\right) \\left[ \\left( 1 - b ^ { K - k } \\right) b ^ { K - k + 1 } \\right] / \\left[ \\left( 1 - b ^ { K - k + 1 } \\right) b ^ { K - k } \\right] +\\) \\(b ^ { K - k + 1 = b \\text {, making challenger } \\mathrm { k } \\text { indifferent between entering and staying out. The probability with which the } }\\)",
+      "after": "\\(\\mu_{CS}(h)(R)\\cdot\\sigma_{CS}(R)(h)(F)+\\mu_{CS}(h)(T)\\cdot1=(1-b^{K-k+1})[(1-b^{K-k})b^{K-k+1}]/[(1-b^{K-k+1})b^{K-k}]+b^{K-k+1}=b\\), making challenger k indifferent between entering and staying out. The probability with which the",
+      "expected_count": 2,
+      "reason": "Clean alternate PDF pages 258-259 show one complete identity ending '= b', followed by ordinary prose; apply once to English and once to the accepted Japanese overlay."
+    },
+    {
+      "before": ", making challenger k indifferent between entering and staying out. The probability with which the \\JpRuby{挑戦}{ちょうせん}\\JpRuby{者}{しゃ}が",
+      "after": "となり、\\JpRuby{挑戦}{ちょうせん}\\JpRuby{者}{しゃ} k は\\JpRuby{参入}{さんにゅう}するか\\JpRuby{否}{いな}かの\\JpRuby{間}{あいだ}で\\JpRuby{無}{む}\\JpRuby{差別}{さべつ}になる。\\JpRuby{挑戦}{ちょうせん}\\JpRuby{者}{しゃ}が",
+      "expected_count": 1,
+      "reason": "Remove prose that Mathpix incorrectly protected from the Japanese overlay while retaining the accepted Japanese continuation and explicit ruby annotations."
+    },
+    {
+      "before": "\\({ } ^ { . R u b i n s t e i n , ~ A . , ~ Z . ~ S a f r a , ~ a n d ~ W . ~ T h o m s o n ~ ( 1992 ) , ~ \" O n ~ t h e ~ I n t e r p r e t a t i o n ~ o f ~ t h e ~ N a s h ~ B a r g a i n i n g ~ S o l u t i o n ~ a n d ~ I t s ~ }\\)",
+      "after": "Rubinstein, A., Z. Safra, and W. Thomson (1992), \"On the Interpretation of the Nash Bargaining Solution and Its",
+      "expected_count": 2,
+      "reason": "Clean alternate PDF page 351 shows a bibliography entry in prose, not a superscript math expression; apply once to English and once to the accepted Japanese overlay."
+    },
+    {
+      "before": "Rubinstein, A., Z. Safra, and W. Thomson (1992), \"On the Interpretation of the Nash Bargaining Solution and Its\\JpRuby{非}{ひ}",
+      "after": "Rubinstein, A., Z. Safra, and W. Thomson (1992), 「ナッシュ\\JpRuby{交渉}{こうしょう}\\JpRuby{解}{かい}の\\JpRuby{解釈}{かいしゃく}とその\\JpRuby{非}{ひ}",
+      "expected_count": 1,
+      "reason": "Restore the accepted Japanese bibliography title after converting the malformed protected superscript into prose."
+    }
+  ]
+}

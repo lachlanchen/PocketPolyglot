@@ -21,6 +21,7 @@ from build_pocket_tex_queue import (
 )
 from japanese_tex_furigana import FuriganaStats, annotate_japanese_tex
 from pocket_polished_common import (
+    apply_exact_text_replacements,
     INLINE_MATH_RE,
     MATH_ENV_RE,
     OUTPUT_ROOT,
@@ -952,6 +953,16 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
     )
 
     fused, furigana = fuse_english_main_japanese_secondary(merged_rows)
+    layout_replacement_plan = manifest.get("layout_replacement_plan")
+    layout_replacement_count = 0
+    if layout_replacement_plan:
+        plan_path = ROOT / str(layout_replacement_plan)
+        plan = read_json(plan_path)
+        rules = plan.get("replacements") if isinstance(plan, dict) else None
+        if not isinstance(rules, list):
+            raise ValueError(f"layout replacement plan has no replacements array: {plan_path}")
+        fused, layout_changes = apply_exact_text_replacements(fused, rules)
+        layout_replacement_count = len(layout_changes)
     centered_figures: dict[str, int] = {"en-main-ja": 0}
     normalized_full_bleed: dict[str, int] = {"en-main-ja": 0}
     fitted_short_tables: dict[str, int] = {"en-main-ja": 0}
@@ -1017,6 +1028,7 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
         "fitted_short_simple_longtables": fitted_short_tables,
         "fitted_oversized_inline_math": fitted_inline_math,
         "normalized_unwrapped_math_fragments": normalized_math_fragments,
+        "evidence_backed_layout_replacements": layout_replacement_count,
         "assembled_at": datetime.now(timezone.utc).isoformat(),
     }
     write_json(book_root / "status.json", status)

@@ -116,7 +116,33 @@ class PocketPolishPipelineTest(unittest.TestCase):
         )
         self.assertEqual(count, 1)
         self.assertIn(body, rendered)
-        self.assertIn(r"\adjustbox{max width=.70\linewidth}", rendered)
+        self.assertIn(r"\penalty0\hspace{0pt}", rendered)
+        self.assertIn(r"\adjustbox{max width=.60\linewidth}", rendered)
+
+    def test_evidence_layout_repair_restores_split_probability_identity(self) -> None:
+        malformed = r"\(a +\) \(b^{1=b\text{, making prose}}) continuation"
+        repaired, changes = apply_exact_text_replacements(
+            malformed,
+            [{
+                "before": r"\(a +\) \(b^{1=b\text{, making prose}})",
+                "after": r"\(a+b^1=b\)",
+                "expected_count": 1,
+            }],
+        )
+        self.assertEqual(repaired, r"\(a+b^1=b\) continuation")
+        self.assertEqual(len(changes), 1)
+
+    def test_evidence_layout_repair_restores_bibliography_prose(self) -> None:
+        malformed = r"Before \({}^{R u b i n s t e i n}\) Extension after"
+        repaired, _ = apply_exact_text_replacements(
+            malformed,
+            [{
+                "before": r"\({}^{R u b i n s t e i n}\)",
+                "after": "Rubinstein",
+                "expected_count": 1,
+            }],
+        )
+        self.assertEqual(repaired, "Before Rubinstein Extension after")
 
     def test_cover_handoff_copies_only_exact_reported_generated_image(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:

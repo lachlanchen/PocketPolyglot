@@ -540,7 +540,7 @@ def wrap_wide_inline_math(text: str, *, layout: str) -> tuple[str, int]:
             return match.group(0)
         fitted += 1
         return (
-            "\\mbox{\\adjustbox{max width=.70\\linewidth}{\\(\\displaystyle "
+            "\\penalty0\\hspace{0pt}\\mbox{\\adjustbox{max width=.60\\linewidth}{\\(\\displaystyle "
             + body
             + "\\)}}"
         )
