@@ -454,18 +454,24 @@ def strip_shared_document_controls(en_tex: str, ja_tex: str) -> str:
     return ja_tex[newline + 1 :]
 
 
-def strip_shared_environment_scaffold(en_tex: str, ja_tex: str) -> str:
-    """Remove identical outer rows around a translated cross-row environment."""
+def split_shared_environment_scaffold(en_tex: str, ja_tex: str) -> tuple[str, str, str]:
+    """Separate translated inner rows from identical environment closing rows."""
 
     en_lines = en_tex.splitlines(keepends=True)
     ja_lines = ja_tex.splitlines(keepends=True)
     while en_lines and ja_lines and en_lines[0] == ja_lines[0]:
         en_lines.pop(0)
         ja_lines.pop(0)
+    shared_suffix: list[str] = []
     while en_lines and ja_lines and en_lines[-1] == ja_lines[-1]:
-        en_lines.pop()
+        shared_suffix.insert(0, en_lines.pop())
         ja_lines.pop()
-    return "".join(ja_lines)
+    suffix = "".join(shared_suffix)
+    if suffix:
+        en_body = en_tex[: -len(suffix)]
+    else:
+        en_body = en_tex
+    return en_body, suffix, "".join(ja_lines)
 
 
 def inject_fusion_preamble(tex: str) -> str:
@@ -516,16 +522,20 @@ def fuse_english_main_japanese_secondary(
         if en_tex.strip() == ja_tex.strip() or not ja_tex.strip():
             parts.append(en_tex)
             return
-        parts.append(en_tex)
         heading = translated_heading_title(ja_tex)
         if heading is not None:
+            parts.append(en_tex)
             annotated, current = annotate_japanese_tex(heading)
             furigana.merge(current)
             parts.append(f"\n\\JpSecondaryHeading{{{annotated}}}\n")
             return
         secondary = strip_shared_document_controls(en_tex, ja_tex)
+        trailing_scaffold = ""
         if crosses_environment:
-            secondary = strip_shared_environment_scaffold(en_tex, secondary)
+            en_tex, trailing_scaffold, secondary = split_shared_environment_scaffold(
+                en_tex, secondary
+            )
+        parts.append(en_tex)
         secondary = secondary.strip()
         if secondary:
             secondary, current = annotate_japanese_tex(secondary)
@@ -533,6 +543,7 @@ def fuse_english_main_japanese_secondary(
             parts.append(
                 f"\n\\begin{{JpSecondary}}\n{secondary}\n\\end{{JpSecondary}}\n"
             )
+        parts.append(trailing_scaffold)
 
     for segment in segments:
         if segment["kind"] == "protected":

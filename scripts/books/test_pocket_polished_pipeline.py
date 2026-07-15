@@ -986,6 +986,7 @@ class PocketPolishPipelineTest(unittest.TestCase):
         self.assertEqual(fused.count(r"\end{table}"), 1)
         self.assertIn("Full figure caption.", fused)
         self.assertIn("キャプション。", fused)
+        self.assertLess(fused.index("キャプション。"), fused.index(r"\end{table}"))
 
     def test_cover_injection_preserves_document_paper_geometry(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
