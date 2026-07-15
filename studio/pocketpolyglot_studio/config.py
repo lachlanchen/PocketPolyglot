@@ -22,6 +22,7 @@ class Settings:
     chat_model: str
     worker_model: str
     default_reasoning: str
+    agent_sandbox: str = "auto"
 
     @classmethod
     def load(cls) -> "Settings":
@@ -40,7 +41,12 @@ class Settings:
             chat_model=os.environ.get("POCKETPOLYGLOT_CHAT_MODEL", "gpt-5.6-sol"),
             worker_model=os.environ.get("POCKETPOLYGLOT_WORKER_MODEL", "gpt-5.6-sol"),
             default_reasoning=os.environ.get("POCKETPOLYGLOT_REASONING", "low"),
+            agent_sandbox=os.environ.get("POCKETPOLYGLOT_AGENT_SANDBOX", "auto"),
         )
+        if settings.agent_sandbox not in {"auto", "workspace-write", "danger-full-access"}:
+            raise ValueError(
+                "POCKETPOLYGLOT_AGENT_SANDBOX must be auto, workspace-write, or danger-full-access"
+            )
         settings.ensure_directories()
         return settings
 

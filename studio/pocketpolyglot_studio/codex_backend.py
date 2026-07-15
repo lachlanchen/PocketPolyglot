@@ -2,14 +2,63 @@ from __future__ import annotations
 
 import asyncio
 import json
+import shutil
+import subprocess
 from collections.abc import AsyncIterator
 from datetime import datetime, timezone
+from functools import lru_cache
 from typing import Any
 
 from .config import Settings
 from .db import Database
 from .jobs import JobManager
 from .model_router import ModelChoice, choose_model
+
+
+@lru_cache(maxsize=1)
+def workspace_sandbox_probe() -> tuple[bool, str]:
+    """Check whether Codex's Bubblewrap network namespace can start on this host."""
+    bubblewrap = shutil.which("bwrap")
+    if not bubblewrap:
+        return True, "Bubblewrap is not installed; defer sandbox selection to Codex."
+    try:
+        result = subprocess.run(
+            [
+                bubblewrap,
+                "--unshare-net",
+                "--ro-bind",
+                "/",
+                "/",
+                "--proc",
+                "/proc",
+                "--dev",
+                "/dev",
+                "/bin/true",
+            ],
+            capture_output=True,
+            text=True,
+            timeout=5,
+            check=False,
+        )
+    except (OSError, subprocess.TimeoutExpired) as error:
+        return False, f"Bubblewrap probe failed: {error}"
+    detail = (result.stderr or result.stdout).strip()
+    return result.returncode == 0, detail or f"Bubblewrap exited {result.returncode}."
+
+
+def chat_sandbox(settings: Settings, agent_mode: bool) -> tuple[str, str]:
+    if not agent_mode:
+        return "read-only", "Read-only mode uses the Codex read-only sandbox."
+    if settings.agent_sandbox != "auto":
+        return settings.agent_sandbox, f"Configured by POCKETPOLYGLOT_AGENT_SANDBOX={settings.agent_sandbox}."
+    available, detail = workspace_sandbox_probe()
+    if available:
+        return "workspace-write", "Bubblewrap workspace sandbox probe passed."
+    return (
+        "danger-full-access",
+        "Workspace sandbox bootstrap is unavailable; local Agent mode is using the explicit "
+        f"unsandboxed fallback. Probe: {detail}",
+    )
 
 
 def build_prompt(
@@ -112,6 +161,7 @@ async def stream_chat(
     history = database.list_messages(project["id"], limit=20)
     sources = database.list_sources(project["id"])
     runtime = runtime_snapshot(settings, database, project["id"])
+    sandbox, sandbox_reason = chat_sandbox(settings, agent_mode)
     database.add_message(
         {
             "project_id": project["id"],
@@ -136,7 +186,7 @@ async def stream_chat(
         "-c",
         'approval_policy="never"',
         "-s",
-        "workspace-write" if agent_mode else "read-only",
+        sandbox,
         "-",
     ]
     yield {
@@ -145,7 +195,11 @@ async def stream_chat(
         "reasoning": choice.reasoning,
         "profile": choice.profile,
         "reason": choice.reason,
+        "sandbox": sandbox,
+        "sandbox_reason": sandbox_reason,
     }
+    if sandbox == "danger-full-access":
+        yield {"type": "activity", "text": sandbox_reason}
     process = await asyncio.create_subprocess_exec(
         *command,
         cwd=settings.repo_root,

@@ -4,9 +4,10 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from pocketpolyglot_studio.capabilities import build_job_spec, list_capabilities
-from pocketpolyglot_studio.codex_backend import build_prompt
+from pocketpolyglot_studio.codex_backend import build_prompt, chat_sandbox
 from pocketpolyglot_studio.config import Settings
 from pocketpolyglot_studio.db import Database
 from pocketpolyglot_studio.evidence import evaluate_all
@@ -75,6 +76,19 @@ class StudioCoreTests(unittest.TestCase):
         self.assertIn("Authoritative Studio runtime snapshot", prompt)
         self.assertIn('"progress": 0.5', prompt)
         self.assertIn("Do not run shell commands", prompt)
+
+    def test_agent_sandbox_falls_back_only_after_failed_probe(self) -> None:
+        with patch(
+            "pocketpolyglot_studio.codex_backend.workspace_sandbox_probe",
+            return_value=(False, "bwrap: loopback: operation not permitted"),
+        ):
+            sandbox, reason = chat_sandbox(self.settings, agent_mode=True)
+        self.assertEqual(sandbox, "danger-full-access")
+        self.assertIn("unsandboxed fallback", reason)
+
+    def test_read_only_chat_never_uses_unsandboxed_fallback(self) -> None:
+        sandbox, _reason = chat_sandbox(self.settings, agent_mode=False)
+        self.assertEqual(sandbox, "read-only")
 
     def test_evidence_requires_exit_and_artifact(self) -> None:
         artifact = self.settings.repo_root / "output.json"

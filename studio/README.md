@@ -66,6 +66,14 @@ deletes the browser profile. `browser progress` and `browser chat` operate
 through the visible Studio page over CDP, so they exercise the same interface
 the user sees.
 
+Studio Agent mode normally uses Codex's `workspace-write` sandbox. With the
+default `POCKETPOLYGLOT_AGENT_SANDBOX=auto`, Studio first probes whether the
+host can create Bubblewrap's network namespace. If the host rejects sandbox
+startup before commands can run, the explicitly selected local Agent mode uses
+`danger-full-access` and reports that fallback in the activity stream. Read-only
+mode never receives this fallback. Set `POCKETPOLYGLOT_AGENT_SANDBOX` to
+`workspace-write` or `danger-full-access` to require either behavior.
+
 ## CLI
 
 Use the source-tree launcher without installing anything globally:
