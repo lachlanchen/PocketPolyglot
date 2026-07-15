@@ -23,6 +23,7 @@ from assemble_build_pocket_polished import (
     fit_short_simple_longtables,
     fuse_english_main_japanese_secondary,
     normalize_unwrapped_math_fragments,
+    restore_secondary_list_scaffold,
     restore_split_optional_linebreaks,
 )
 from build_pocket_tex_queue import inject_cover_page, wrap_wide_display_math
@@ -81,6 +82,14 @@ class PocketPolishPipelineTest(unittest.TestCase):
             sandbox, reason = cover_sandbox()
         self.assertEqual(sandbox, "danger-full-access")
         self.assertIn("RTM_NEWADDR denied", reason)
+
+    def test_secondary_items_restore_source_list_scaffold(self) -> None:
+        source = "\\begin{itemize}\n  \\item First.\n  \\item Second.\n\\end{itemize}\n"
+        translated = "\\item 一つ目。\n  \\item 二つ目。"
+        restored = restore_secondary_list_scaffold(source, translated)
+        self.assertEqual(restored.count(r"\begin{itemize}"), 1)
+        self.assertEqual(restored.count(r"\end{itemize}"), 1)
+        self.assertEqual(restored.count(r"\item"), 2)
 
     def test_cover_handoff_copies_only_exact_reported_generated_image(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:

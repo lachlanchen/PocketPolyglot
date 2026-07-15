@@ -484,6 +484,25 @@ def split_shared_environment_scaffold(en_tex: str, ja_tex: str) -> tuple[str, st
     return en_body, suffix, "".join(ja_lines)
 
 
+def restore_secondary_list_scaffold(en_tex: str, ja_tex: str) -> str:
+    """Wrap translated list items when source-only structural rows were filtered."""
+
+    if not re.search(r"(?m)^\s*\\item\b", ja_tex):
+        return ja_tex
+    environments = [
+        match.group("environment")
+        for match in ENVIRONMENT_COMMAND_RE.finditer(en_tex)
+        if match.group("action") == "begin"
+        and match.group("environment") in {"itemize", "enumerate", "description"}
+    ]
+    if len(environments) != 1:
+        return ja_tex
+    environment = environments[0]
+    if re.search(rf"\\begin\{{{re.escape(environment)}\}}", ja_tex):
+        return ja_tex
+    return f"\\begin{{{environment}}}\n{ja_tex.strip()}\n\\end{{{environment}}}"
+
+
 def inject_fusion_preamble(tex: str) -> str:
     marker = r"\begin{document}"
     if FUSION_PREAMBLE.strip() in tex or "BUILD_POCKET_POLISHED_FUSION_BEGIN" in tex:
@@ -565,6 +584,9 @@ def fuse_english_main_japanese_secondary(
         if crosses_environment:
             en_tex, trailing_scaffold, secondary = split_shared_environment_scaffold(
                 en_tex, secondary
+            )
+            secondary = restore_secondary_list_scaffold(
+                en_tex + trailing_scaffold, secondary
             )
         parts.append(en_tex)
         secondary = secondary.strip()
