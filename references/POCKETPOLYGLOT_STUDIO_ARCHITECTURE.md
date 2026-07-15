@@ -20,6 +20,7 @@ covers, artifact inspection, and export.
 | Capability registry | Stable user operations and workflow-compatible parameters |
 | Existing engines | LinguaLeaf JSON, OCR, exact TeX, PocketPolished, XeLaTeX, covers, sync |
 | Codex backend | Adaptive preparation, interactive execution, diagnosis, final audit |
+| Resource gate | Cross-process Codex slots, network/load/memory telemetry, adaptive concurrency |
 
 ## Core Invariants
 
@@ -79,6 +80,35 @@ their established output trees.
 - Existing repository autorepair companions may remain active inside a
   LinguaLeaf worker; Studio monitors their manifest outcome rather than
   duplicating their internal repair loop.
+
+## Technical Polish Queue
+
+The reusable `pocket.polish.queue` capability owns the complete transition
+from immutable exact-TeX inputs to accepted PocketPolished exports:
+
+1. Promote independently valid segments from reviewed legacy chunks into a
+   content-addressed cache.
+2. Prepare source-linked tasks with protected TeX structures and bounded chunk
+   size.
+3. Dispatch only unresolved segments to the writer and semantic reviewer.
+4. Validate equations, numeric signatures, figures, tables, diagrams, labels,
+   references, and source evidence deterministically before accepting a chunk.
+5. Assemble the English-main/Japanese-secondary pocket edition, inject a
+   textless generated cover with deterministic title overlay, compile, and run
+   layout/searchability checks.
+6. Sync only accepted books to the configured `PocketPolished` Nutstore tree.
+
+The shared resource gate is runtime infrastructure rather than book policy.
+All worker processes acquire slots from one atomic state file. It normally
+allows the configured concurrency, but can lower the desired slot count when
+host load, available memory, or aggregate network throughput indicates
+contention. The queue writes a schema-versioned atomic status file containing
+per-book chunk and segment coverage plus the same runtime telemetry. Studio
+stores that progress in its job ledger and presents it directly in the UI.
+
+This design avoids retry amplification: a failed segment does not regenerate
+already accepted text, and a changed manifest can reuse cache entries whenever
+the protected source segment hash is unchanged.
 
 ## Extension Rule
 

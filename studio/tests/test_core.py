@@ -85,6 +85,19 @@ class StudioCoreTests(unittest.TestCase):
         self.assertIn("5", spec.command)
         self.assertTrue(any(check["type"] == "json_field" for check in spec.acceptance))
 
+    def test_queue_capability_exposes_progress_and_adaptive_workers(self) -> None:
+        project = self.create_project("custom")
+        spec = build_job_spec(
+            self.settings,
+            project,
+            "pocket.polish.queue",
+            {"workers": 5, "network_limit_mbps": 75},
+        )
+        self.assertIn("pocket-polish-queue", spec.command)
+        self.assertIn("5", spec.command)
+        self.assertIn("75.0", spec.command)
+        self.assertTrue(spec.environment["POCKETPOLYGLOT_PROGRESS_PATH"].endswith("status-studio-technical-seven.json"))
+
     def test_default_pipeline_uses_wenyan_lingualeaf_adapter(self) -> None:
         project = self.create_project("lingualeaf", "wenyan")
         pipeline = default_pipeline(self.settings, project)
@@ -100,6 +113,7 @@ class StudioCoreTests(unittest.TestCase):
                 "lingualeaf.generate",
                 "pocket.exact",
                 "pocket.polish.run",
+                "pocket.polish.queue",
                 "project.validate",
                 "cover.generate",
                 "export.nutstore",

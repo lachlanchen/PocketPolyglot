@@ -94,6 +94,15 @@ RUNNING_HEADER_TEX_RE = re.compile(
     r")\s*",
     re.I,
 )
+PAGE_BREAK_TEX_RE = re.compile(
+    r"\s*(?:\\(?:clearpage|cleardoublepage|newpage)\s*)+\s*",
+    re.I,
+)
+HEADING_START_TEX_RE = re.compile(
+    r"\s*\\(?:part|chapter|section|subsection|subsubsection|paragraph|"
+    r"begin|includegraphics)\b",
+    re.I,
+)
 
 
 def sha256_text(text: str) -> str:
@@ -183,13 +192,14 @@ def visible_text(tex: str) -> str:
 def normalize_page_boundary_artifacts(
     tex: str,
 ) -> tuple[str, list[dict[str, Any]]]:
-    """Remove evidence-clear running headers inside a split sentence.
+    """Remove evidence-clear page markers inside a split sentence.
 
     PDF-to-TeX tools sometimes emit ``paragraph / running header / paragraph``
-    at a page boundary.  This pass is deliberately narrow: the text before the
-    marker must end mid-sentence, the text after it must begin with a lowercase
-    continuation, and the middle paragraph must look like a short page marker.
-    The untouched flattened source remains available separately as evidence.
+    or ``paragraph / clearpage / paragraph`` at a page boundary. This pass is
+    deliberately narrow: the text before the marker must end mid-sentence, the
+    text after it must begin with a lowercase continuation, and the middle
+    paragraph must be a known page marker. The untouched flattened source
+    remains available separately as evidence.
     """
 
     parts = re.split(r"(\n[ \t]*\n+)", tex)
@@ -203,14 +213,22 @@ def normalize_page_boundary_artifacts(
             after_plain = visible_text(after)
             marker_words = marker_plain.split()
             marker_is_running_header = bool(RUNNING_HEADER_TEX_RE.fullmatch(marker))
+            marker_is_page_break = bool(PAGE_BREAK_TEX_RE.fullmatch(marker))
             before_is_open = bool(
                 before_plain
                 and re.search(r"[A-Za-z0-9)'\"]$", before_plain)
                 and not re.search(r"[.!?:;][)'\"]?$", before_plain)
             )
             after_is_continuation = bool(re.match(r"[a-z]", after_plain))
+            page_break_is_safe = bool(
+                marker_is_page_break
+                and sum(char.isalpha() for char in before_plain) >= 24
+                and sum(char.isalpha() for char in after_plain) >= 12
+                and not HEADING_START_TEX_RE.match(after)
+                and not HEADING_START_TEX_RE.match(before)
+            )
             if (
-                marker_is_running_header
+                (marker_is_running_header or page_break_is_safe)
                 and before_is_open
                 and after_is_continuation
             ):
@@ -218,7 +236,11 @@ def normalize_page_boundary_artifacts(
                 merged = before.rstrip() + joiner + after.lstrip()
                 changes.append(
                     {
-                        "type": "page-boundary-running-header",
+                        "type": (
+                            "page-boundary-running-header"
+                            if marker_is_running_header
+                            else "page-boundary-command"
+                        ),
                         "marker_tex": marker.strip(),
                         "marker_text": marker_plain,
                         "before_tail": before_plain[-120:],

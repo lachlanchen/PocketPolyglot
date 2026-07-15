@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import json
 import shlex
 import signal
 import subprocess
@@ -136,7 +137,20 @@ class JobManager:
 
     def get(self, job_id: str) -> dict[str, Any] | None:
         job = self.database.get_job(job_id)
-        return self.reconcile(job) if job else None
+        if not job:
+            return None
+        job = self.reconcile(job)
+        progress_path_value = job.get("environment", {}).get(
+            "POCKETPOLYGLOT_PROGRESS_PATH", ""
+        )
+        if progress_path_value:
+            try:
+                job["progress_detail"] = json.loads(
+                    Path(progress_path_value).read_text(encoding="utf-8")
+                )
+            except (OSError, ValueError, json.JSONDecodeError, AttributeError):
+                pass
+        return job
 
     def list(self, project_id: str | None = None, limit: int = 100) -> list[dict[str, Any]]:
         return [self.reconcile(job) for job in self.database.list_jobs(project_id, limit)]

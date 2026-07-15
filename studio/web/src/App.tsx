@@ -95,6 +95,37 @@ type Job = {
   started_at?: string
   finished_at?: string
   evidence?: Evidence[]
+  progress_detail?: QueueProgress
+}
+
+type QueueBookProgress = {
+  status: string
+  valid_chunks?: number
+  total_chunks?: number
+  accepted_segments?: number
+  total_segments?: number
+  progress?: number
+  active_workers?: number
+}
+
+type QueueProgress = {
+  status: string
+  progress: number
+  current_book?: string
+  accepted_segments?: number
+  total_segments?: number
+  books?: Record<string, QueueBookProgress>
+  runtime?: {
+    active_codex_calls?: number
+    desired_concurrency?: number
+    max_concurrency?: number
+    network_mbps?: number
+    network_state?: string
+    load_ratio?: number
+    memory_available_mb?: number
+    jammed?: boolean
+    jam_reasons?: string[]
+  }
 }
 
 type Artifact = {
@@ -332,6 +363,21 @@ function App() {
       setError(reason instanceof Error ? reason.message : String(reason))
     }
   }
+
+  useEffect(() => {
+    if (!jobDetail || !ACTIVE_STATUSES.has(jobDetail.status)) return
+    const timer = window.setInterval(async () => {
+      try {
+        const detail = await api<Job>(`/api/jobs/${jobDetail.id}`)
+        const log = await fetch(`/api/jobs/${jobDetail.id}/log?tail=500`).then((response) => response.text())
+        setJobDetail(detail)
+        setJobLog(log)
+      } catch {
+        // The global refresh surfaces persistent errors without closing the drawer.
+      }
+    }, 5000)
+    return () => window.clearInterval(timer)
+  }, [jobDetail?.id, jobDetail?.status])
 
   async function cancelJob(job: Job) {
     await api(`/api/jobs/${job.id}/cancel`, { method: 'POST' })
@@ -706,6 +752,7 @@ function CapabilityIcon({ id }: { id: string }) {
   if (id === 'shield-check') return <CheckCircle2 {...props} />
   if (id === 'terminal') return <Terminal {...props} />
   if (id === 'book-open-check') return <BookOpen {...props} />
+  if (id === 'gauge') return <Gauge {...props} />
   return <Sparkles {...props} />
 }
 
@@ -953,12 +1000,32 @@ function CreateProjectModal({ onClose, onCreated }: { onClose: () => void; onCre
 }
 
 function JobDrawer({ job, log, onClose, onRefresh, onCancel, onRetry }: { job: Job; log: string; onClose: () => void; onRefresh: () => void; onCancel: () => void; onRetry: () => void }) {
+  const queue = job.progress_detail
+  const queuePercent = Math.round((queue?.progress || job.progress || 0) * 100)
   return (
     <div className="drawer-backdrop" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose() }}>
       <aside className="job-drawer">
         <div className="drawer-header"><div><span className="section-kicker">Job {job.id.slice(0, 12)}</span><h2>{job.title}</h2></div><button className="icon-button" onClick={onClose}><X size={18} /></button></div>
         <div className="job-summary"><StatusMark status={job.status} /><span><Clock3 size={14} /> {relativeTime(job.started_at || job.created_at)}</span><span><Terminal size={14} /> {job.tmux_session || 'session closed'}</span></div>
         {job.error && <div className="drawer-error"><CircleAlert size={17} /><span>{job.error}</span></div>}
+        {queue && (
+          <section className="drawer-section queue-progress-section">
+            <div className="drawer-section-title"><h3>Queue progress</h3><strong>{queuePercent}%</strong></div>
+            <div className="queue-progress-track"><span style={{ width: `${queuePercent}%` }} /></div>
+            <div className="queue-runtime-strip">
+              <span><strong>{queue.current_book || 'Preparing'}</strong><small>current book</small></span>
+              <span><strong>{queue.accepted_segments || 0}/{queue.total_segments || 0}</strong><small>segments</small></span>
+              <span><strong>{queue.runtime?.active_codex_calls || 0}/{queue.runtime?.desired_concurrency || queue.runtime?.max_concurrency || 0}</strong><small>Codex calls</small></span>
+              <span className={queue.runtime?.jammed ? 'runtime-busy' : ''}><strong>{(queue.runtime?.network_mbps || 0).toFixed(1)} Mbps</strong><small>{queue.runtime?.jammed ? `throttled: ${(queue.runtime.jam_reasons || []).join(', ')}` : 'network clear'}</small></span>
+            </div>
+            <div className="queue-book-list">
+              {Object.entries(queue.books || {}).map(([bookId, item]) => {
+                const percent = Math.round((item.progress || 0) * 100)
+                return <div className="queue-book-row" key={bookId}><span><strong>{bookId}</strong><small>{item.valid_chunks || 0}/{item.total_chunks || 0} chunks · {item.accepted_segments || 0}/{item.total_segments || 0} segments</small></span><div><StatusMark status={item.status || 'waiting'} /><b>{percent}%</b></div></div>
+              })}
+            </div>
+          </section>
+        )}
         <section className="drawer-section"><div className="drawer-section-title"><h3>Acceptance evidence</h3><button className="icon-button" onClick={onRefresh}><RefreshCw size={16} /></button></div><div className="evidence-list">{(job.evidence || []).map((item) => <div className={item.passed ? 'passed' : 'failed'} key={item.id}>{item.passed ? <CheckCircle2 size={17} /> : <CircleAlert size={17} />}<span><strong>{item.label}</strong><small>{item.detail}</small></span></div>)}{!job.evidence?.length && <p className="drawer-empty">Evidence is evaluated when the command exits.</p>}</div></section>
         <section className="drawer-section log-section"><div className="drawer-section-title"><h3>Log</h3><span>{job.log_path}</span></div><pre>{log || 'Waiting for output…'}</pre></section>
         <div className="drawer-actions">

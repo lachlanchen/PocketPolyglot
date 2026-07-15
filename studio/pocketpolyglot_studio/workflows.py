@@ -179,7 +179,7 @@ def default_pipeline(settings: Settings, project: dict[str, Any]) -> dict[str, A
                         "--book-id",
                         book_id,
                         "--workers",
-                        "3",
+                        "5",
                         "--model",
                         settings.worker_model,
                         "--reasoning",
@@ -551,6 +551,106 @@ Hard requirements:
     return process.returncode
 
 
+def repository_relative_path(settings: Settings, value: str) -> Path:
+    path = (settings.repo_root / value).resolve()
+    if settings.repo_root not in path.parents:
+        raise SystemExit(f"Path must stay inside the repository: {value}")
+    return path
+
+
+def run_pocket_polish_queue(
+    settings: Settings,
+    *,
+    source_queue_value: str,
+    queue_value: str,
+    status_value: str,
+    workers: int,
+    model: str,
+    reasoning: str,
+    adaptive: bool,
+    network_limit_mbps: float,
+) -> int:
+    """Prepare and execute one evidence-gated technical polish queue."""
+
+    source_queue = repository_relative_path(settings, source_queue_value)
+    prepared_queue = repository_relative_path(settings, queue_value)
+    status = repository_relative_path(settings, status_value)
+    if not source_queue.is_file():
+        raise SystemExit(f"Missing source queue: {source_queue}")
+    payload = json.loads(source_queue.read_text(encoding="utf-8"))
+    book_ids = [
+        str(task["book_id"])
+        for task in payload.get("tasks", [])
+        if isinstance(task, dict) and task.get("book_id")
+    ]
+    if not book_ids:
+        raise SystemExit(f"Source queue contains no books: {source_queue}")
+
+    # Preserve valid historical language work before a schema upgrade or
+    # content-addressed rechunk changes the current task identifiers.
+    migration = subprocess.run(
+        [
+            sys.executable,
+            "-u",
+            "scripts/books/migrate_reviewed_pocket_polish_segments.py",
+            *book_ids,
+        ],
+        cwd=settings.repo_root,
+        check=False,
+    )
+    if migration.returncode:
+        return migration.returncode
+
+    preparation = subprocess.run(
+        [
+            sys.executable,
+            "-u",
+            "scripts/books/prepare_build_pocket_polished.py",
+            "--queue",
+            str(source_queue),
+            "--output-queue",
+            str(prepared_queue),
+            "--max-chars",
+            "7000",
+            "--max-segments",
+            "16",
+        ],
+        cwd=settings.repo_root,
+        check=False,
+    )
+    if preparation.returncode:
+        return preparation.returncode
+
+    command = [
+        sys.executable,
+        "-u",
+        "scripts/books/run_build_pocket_polished_queue.py",
+        "--queue",
+        str(prepared_queue),
+        "--status",
+        str(status),
+        "--workers",
+        str(max(1, workers)),
+        "--model",
+        model,
+        "--reasoning",
+        reasoning,
+        "--retries",
+        "2",
+        "--review-retries",
+        "2",
+        "--retry-passes",
+        "2",
+        "--network-limit-mbps",
+        str(network_limit_mbps),
+        "--cover-reasoning",
+        "low",
+    ]
+    if not adaptive:
+        command.append("--no-adaptive")
+    return subprocess.run(command, cwd=settings.repo_root, check=False).returncode
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="PocketPolyglot Studio workflow adapters.")
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -571,6 +671,19 @@ def main() -> int:
     cover_parser = subparsers.add_parser("cover")
     cover_parser.add_argument("project_id")
     cover_parser.add_argument("--reasoning", default="medium", choices=["low", "medium", "high"])
+    polish_queue_parser = subparsers.add_parser("pocket-polish-queue")
+    polish_queue_parser.add_argument("--source-queue", required=True)
+    polish_queue_parser.add_argument("--queue", required=True)
+    polish_queue_parser.add_argument("--status", required=True)
+    polish_queue_parser.add_argument("--workers", type=int, default=5)
+    polish_queue_parser.add_argument("--model", default="gpt-5.6-sol")
+    polish_queue_parser.add_argument("--reasoning", default="low", choices=["low", "medium", "high", "xhigh"])
+    polish_queue_parser.add_argument("--network-limit-mbps", type=float, default=100.0)
+    polish_queue_parser.add_argument(
+        "--adaptive",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+    )
     args = parser.parse_args()
 
     settings = Settings.load()
@@ -590,6 +703,18 @@ def main() -> int:
         return 0 if json.loads(report.read_text(encoding="utf-8"))["accepted"] else 1
     if args.command == "cover":
         return generate_cover(settings, database, args.project_id, args.reasoning)
+    if args.command == "pocket-polish-queue":
+        return run_pocket_polish_queue(
+            settings,
+            source_queue_value=args.source_queue,
+            queue_value=args.queue,
+            status_value=args.status,
+            workers=args.workers,
+            model=args.model,
+            reasoning=args.reasoning,
+            adaptive=args.adaptive,
+            network_limit_mbps=args.network_limit_mbps,
+        )
     return 2
 
 

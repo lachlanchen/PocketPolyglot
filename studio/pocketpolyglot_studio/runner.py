@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import signal
 import subprocess
@@ -38,6 +39,11 @@ def main() -> int:
 
     interrupted = False
     child: subprocess.Popen[str] | None = None
+    progress_path_value = job.get("environment", {}).get(
+        "POCKETPOLYGLOT_PROGRESS_PATH", ""
+    )
+    progress_path = Path(progress_path_value) if progress_path_value else None
+    last_progress_signature = ""
 
     def stop_child(_signum: int, _frame: object) -> None:
         nonlocal interrupted
@@ -62,7 +68,41 @@ def main() -> int:
             )
             database.update_job(job["id"], {"pid": child.pid})
             while child.poll() is None:
-                database.update_job(job["id"], {"heartbeat_at": utc_now()})
+                updates: dict[str, object] = {"heartbeat_at": utc_now()}
+                if progress_path and progress_path.is_file():
+                    try:
+                        detail = json.loads(progress_path.read_text(encoding="utf-8"))
+                        current_progress = max(
+                            0.0,
+                            min(1.0, float(detail.get("progress", 0.0))),
+                        )
+                        updates["progress"] = current_progress
+                        signature = json.dumps(
+                            {
+                                "status": detail.get("status"),
+                                "current_book": detail.get("current_book"),
+                                "progress": round(current_progress, 4),
+                                "runtime": detail.get("runtime", {}).get(
+                                    "desired_concurrency"
+                                ),
+                            },
+                            sort_keys=True,
+                        )
+                        if signature != last_progress_signature:
+                            database.add_event(
+                                job["id"],
+                                "progress",
+                                {
+                                    "path": str(progress_path),
+                                    "status": detail.get("status"),
+                                    "current_book": detail.get("current_book"),
+                                    "progress": current_progress,
+                                },
+                            )
+                            last_progress_signature = signature
+                    except (OSError, ValueError, json.JSONDecodeError, AttributeError):
+                        pass
+                database.update_job(job["id"], updates)
                 database.add_event(job["id"], "heartbeat", {"pid": child.pid})
                 time.sleep(5)
             exit_code = int(child.returncode or 0)

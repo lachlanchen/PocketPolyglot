@@ -94,8 +94,37 @@ CAPABILITIES = (
         ("pocket_polished",),
         "sparkles",
         (
-            {"name": "workers", "type": "number", "default": 3, "minimum": 1, "maximum": 20},
+            {"name": "workers", "type": "number", "default": 5, "minimum": 1, "maximum": 20},
             {"name": "reasoning", "type": "select", "default": "low", "options": ["low", "medium", "high", "xhigh"]},
+        ),
+    ),
+    Capability(
+        "pocket.polish.queue",
+        "Run technical polish queue",
+        "PocketPolished",
+        "Prepare and run a resumable multi-book queue with segment caching, adaptive Codex concurrency, covers, validation, and Nutstore sync.",
+        ("pocket_polished", "custom"),
+        "gauge",
+        (
+            {
+                "name": "source_queue",
+                "type": "text",
+                "default": "data/source-plan/technical-exact-polished-queue.json",
+            },
+            {
+                "name": "queue",
+                "type": "text",
+                "default": "build-pocket-polished/tasks/studio-technical-seven-queue.json",
+            },
+            {
+                "name": "status",
+                "type": "text",
+                "default": "build-pocket-polished/status-studio-technical-seven.json",
+            },
+            {"name": "workers", "type": "number", "default": 5, "minimum": 1, "maximum": 20},
+            {"name": "reasoning", "type": "select", "default": "low", "options": ["low", "medium", "high", "xhigh"]},
+            {"name": "adaptive", "type": "boolean", "default": True},
+            {"name": "network_limit_mbps", "type": "number", "default": 100, "minimum": 1},
         ),
     ),
     Capability(
@@ -289,7 +318,7 @@ def build_job_spec(
         )
 
     if capability_id == "pocket.polish.run":
-        workers = max(1, min(int(parameters.get("workers", 3)), 20))
+        workers = max(1, min(int(parameters.get("workers", 5)), 20))
         reasoning = str(parameters.get("reasoning", "low"))
         return JobSpec(
             capability.name,
@@ -320,6 +349,67 @@ def build_job_spec(
                     "pattern": f"build-pocket-polished/{book_id}/**/*.pdf",
                     "minimum": 1,
                 },
+            ],
+        )
+
+    if capability_id == "pocket.polish.queue":
+        workers = max(1, min(int(parameters.get("workers", 5)), 20))
+        reasoning = str(parameters.get("reasoning", "low"))
+        source_queue = str(
+            parameters.get(
+                "source_queue",
+                "data/source-plan/technical-exact-polished-queue.json",
+            )
+        )
+        queue = str(
+            parameters.get(
+                "queue",
+                "build-pocket-polished/tasks/studio-technical-seven-queue.json",
+            )
+        )
+        status = str(
+            parameters.get(
+                "status",
+                "build-pocket-polished/status-studio-technical-seven.json",
+            )
+        )
+        adaptive = bool(parameters.get("adaptive", True))
+        network_limit = max(1.0, float(parameters.get("network_limit_mbps", 100)))
+        environment["POCKETPOLYGLOT_PROGRESS_PATH"] = str(
+            (settings.repo_root / status).resolve()
+        )
+        command = _module_command(
+            "workflows",
+            "pocket-polish-queue",
+            "--source-queue",
+            source_queue,
+            "--queue",
+            queue,
+            "--status",
+            status,
+            "--workers",
+            str(workers),
+            "--model",
+            settings.worker_model,
+            "--reasoning",
+            reasoning,
+            "--network-limit-mbps",
+            str(network_limit),
+        )
+        if not adaptive:
+            command.append("--no-adaptive")
+        return JobSpec(
+            capability.name,
+            command,
+            environment,
+            [
+                {
+                    "type": "json_field",
+                    "label": "All queued books passed assembly and export",
+                    "path": status,
+                    "field": "status",
+                    "equals": "complete",
+                }
             ],
         )
 

@@ -15,7 +15,7 @@ from typing import Any
 from build_pocket_tex_queue import (
     apply_pocket_footer_defaults,
     compile_tex,
-    inject_cover_page,
+    latex_escape_text,
     wrap_wide_display_math,
 )
 from japanese_tex_furigana import FuriganaStats, annotate_japanese_tex
@@ -177,6 +177,70 @@ FUSION_PREAMBLE = r"""
 }
 % BUILD_POCKET_POLISHED_FUSION_END
 """
+
+
+def inject_polished_cover_page(
+    tex_path: Path,
+    cover_path: Path,
+    *,
+    title: str,
+    author: str,
+) -> bool:
+    """Insert a textless bitmap with a deterministic English/Japanese overlay."""
+
+    if not cover_path.is_file():
+        return False
+    text = tex_path.read_text(encoding="utf-8", errors="replace")
+    if r"\usepackage{tikz}" not in text:
+        text = text.replace(
+            r"\begin{document}",
+            r"\usepackage{tikz}" + "\n" + r"\begin{document}",
+            1,
+        )
+    begin = "% BUILD_POCKET_COVER_BEGIN"
+    end = "% BUILD_POCKET_COVER_END"
+    safe_title = latex_escape_text(title)
+    safe_author = latex_escape_text(author)
+    author_line = (
+        rf"{{\fontsize{{9.4pt}}{{12pt}}\selectfont {safe_author}}}\\[2.4mm]"
+        if safe_author
+        else ""
+    )
+    cover_block = (
+        begin
+        + "\n"
+        + r"\clearpage\thispagestyle{empty}%"
+        + "\n"
+        + r"\begin{tikzpicture}[remember picture,overlay]"
+        + "\n"
+        + rf"\node[inner sep=0pt] at (current page.center) "
+        + rf"{{\includegraphics[width=\paperwidth,height=\paperheight]"
+        + rf"{{\detokenize{{{cover_path.resolve().as_posix()}}}}}}};"
+        + "\n"
+        + r"\node[align=center,text=white,fill=black,fill opacity=.42,text opacity=1,"
+        + r"inner xsep=4mm,inner ysep=4mm,text width=.80\paperwidth] "
+        + r"at ([yshift=-.04\paperheight]current page.center) {"
+        + "\n"
+        + rf"{{\sffamily\bfseries\fontsize{{18pt}}{{22pt}}\selectfont {safe_title}}}\\[3mm]"
+        + "\n"
+        + author_line
+        + r"{\sffamily\fontsize{8.6pt}{11pt}\selectfont English $\cdot$ 日本語}"
+        + "\n};\n"
+        + r"\end{tikzpicture}\null\clearpage"
+        + "\n"
+        + end
+    )
+    block_re = re.compile(re.escape(begin) + r".*?" + re.escape(end), re.S)
+    if block_re.search(text):
+        text = block_re.sub(lambda _match: cover_block, text, count=1)
+    else:
+        text = text.replace(
+            r"\begin{document}",
+            r"\begin{document}" + "\n" + cover_block,
+            1,
+        )
+    tex_path.write_text(text, encoding="utf-8")
+    return True
 
 
 def normalize_unwrapped_math_fragments(tex: str) -> tuple[str, int]:
@@ -627,6 +691,8 @@ def compile_variant(
     cover: Path | None,
     *,
     expected_graphics: int,
+    title: str,
+    author: str,
 ) -> dict[str, Any]:
     variant_root = book_root / layout / language
     tex_path = variant_root / "tex/book.tex"
@@ -634,9 +700,16 @@ def compile_variant(
     tex_path.write_text(tex, encoding="utf-8")
     injected_cover_count = 0
     if cover and cover.exists():
-        injected_cover_count = int(inject_cover_page(tex_path, cover))
+        injected_cover_count = int(
+            inject_polished_cover_page(
+                tex_path,
+                cover,
+                title=title,
+                author=author,
+            )
+        )
     report = compile_tex(tex_path, variant_root / "book.pdf")
-    rendered_expected = expected_graphics
+    rendered_expected = expected_graphics + injected_cover_count
     report["source_includegraphics_count"] = expected_graphics
     report["injected_cover_count"] = injected_cover_count
     report["expected_includegraphics_count"] = rendered_expected
@@ -776,6 +849,8 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
             pocket_layout(fused),
             cover,
             expected_graphics=source_inventory["includegraphics"],
+            title=manifest["title"],
+            author=manifest.get("author", ""),
         )
     else:
         pocket_tex = book_root / "pocket-large-font/en-main-ja/tex/book.tex"

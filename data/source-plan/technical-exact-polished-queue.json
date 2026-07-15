@@ -21,9 +21,29 @@
       "title": "Game Theory",
       "author": "Martin J. Osborne and Ariel Rubinstein",
       "source": "build/game-theory-mathpix-exact-book/exact/game-theory-mathpix-exact.pdf",
+      "source_references": [
+        "sources/game-theory/A Course in Game Theory.pdf",
+        "sources/game-theory/A Course in Game Theory - clean alternate.pdf"
+      ],
       "source_exact_tex": "build/game-theory-mathpix-exact-book/exact/source.tex",
       "source_body_tex": "build/game-theory-mathpix-exact-book/work/body.tex",
-      "validation_profile": "technical_exact"
+      "source_route": "mathpix",
+      "source_cache_immutable": true,
+      "validation_profile": "technical_exact",
+      "polish_source_replacements": [
+        {
+          "before": "A binary relation .gif\"> is convex; it is strictly quasi-concave if every such set is strictly convex.\\\\",
+          "after": "A binary relation \\(\\succeq\\) on a set \\(A\\) is complete if \\(a \\succeq b\\) or \\(b \\succeq a\\) for every \\(a \\in A\\) and \\(b \\in A\\), reflexive if \\(a \\succeq a\\) for every \\(a \\in A\\), and transitive if \\(a \\succeq c\\) whenever \\(a \\succeq b\\) and \\(b \\succeq c\\). A preference relation is a complete reflexive transitive binary relation. If \\(a \\succeq b\\) but not \\(b \\succeq a\\) then we write \\(a \\succ b\\); if \\(a \\succeq b\\) and \\(b \\succeq a\\) then we write \\(a \\sim b\\). A preference relation \\(\\succeq\\) on \\(A\\) is continuous if \\(a \\succeq b\\) whenever there are sequences \\((a_k)_k\\) and \\((b_k)_k\\) in \\(A\\) that converge to \\(a\\) and \\(b\\) respectively for which \\(a_k \\succeq b_k\\) for all \\(k\\). A preference relation \\(\\succeq\\) on \\(\\mathbb { R } ^ n\\) is quasi-concave if for every \\(b \\in \\mathbb { R } ^ n\\) the set \\(\\{a \\in \\mathbb { R } ^ n : a \\succeq b\\}\\) is convex; it is strictly quasi-concave if every such set is strictly convex.",
+          "expected_count": 1,
+          "reason": "Restore the complete definition from an alternate complete scan of the same edition; the local PDF page 7 contains a literal broken .gif HTML fragment."
+        },
+        {
+          "before": "for all \\(\\boldsymbol { i } \\in \\boldsymbol { N } ; \\boldsymbol { x } \\in \\boldsymbol { X }\\) is strongly Pareto efficient",
+          "after": "for all \\(\\boldsymbol { i } \\in \\boldsymbol { N }\\); \\(\\boldsymbol { x } \\in \\boldsymbol { X }\\) is strongly Pareto efficient",
+          "expected_count": 1,
+          "reason": "Move sentence punctuation outside inline math to match the visible source page and keep the two Pareto definitions structurally separate."
+        }
+      ]
     },
     {
       "book_id": "game-theory-101-mathpix-exact-book",
@@ -32,6 +52,8 @@
       "source": "build/game-theory-101-mathpix-exact-book/exact/game-theory-101-mathpix-exact.pdf",
       "source_exact_tex": "build/game-theory-101-mathpix-exact-book/exact/source.tex",
       "source_body_tex": "build/game-theory-101-mathpix-exact-book/work/body.tex",
+      "source_route": "mathpix",
+      "source_cache_immutable": true,
       "validation_profile": "technical_exact"
     },
     {
@@ -41,6 +63,8 @@
       "source": "build/qft-gifted-amateur-mathpix-exact-book/exact/qft-gifted-amateur-mathpix-exact.pdf",
       "source_exact_tex": "build/qft-gifted-amateur-mathpix-exact-book/exact/source.tex",
       "source_body_tex": "build/qft-gifted-amateur-mathpix-exact-book/work/body.tex",
+      "source_route": "mathpix",
+      "source_cache_immutable": true,
       "validation_profile": "technical_exact"
     },
     {
@@ -50,15 +74,8 @@
       "source": "build/chaos-making-new-science-mathpix-exact-book/exact/chaos-making-new-science-mathpix-exact.pdf",
       "source_exact_tex": "build/chaos-making-new-science-mathpix-exact-book/exact/source.tex",
       "source_body_tex": "build/chaos-making-new-science-mathpix-exact-book/work/body.tex",
-      "validation_profile": "technical_exact"
-    },
-    {
-      "book_id": "berklee-music-theory-book-1-local-exact-book",
-      "title": "Berklee Music Theory Book 1",
-      "author": "Paul Schmeling",
-      "source": "build/berklee-music-theory-book-1-local-exact-book/exact/berklee-music-theory-book-1-local-exact.pdf",
-      "source_exact_tex": "build/berklee-music-theory-book-1-local-exact-book/exact/source.tex",
-      "source_body_tex": "build/berklee-music-theory-book-1-local-exact-book/work/body.tex",
+      "source_route": "mathpix",
+      "source_cache_immutable": true,
       "validation_profile": "technical_exact"
     },
     {
@@ -68,6 +85,19 @@
       "source": "build/nonlinear-dynamics-and-chaos-mathpix-exact-book/exact/nonlinear-dynamics-and-chaos-mathpix-exact.pdf",
       "source_exact_tex": "build/nonlinear-dynamics-and-chaos-mathpix-exact-book/exact/source.tex",
       "source_body_tex": "build/nonlinear-dynamics-and-chaos-mathpix-exact-book/work/body.tex",
+      "source_route": "mathpix",
+      "source_cache_immutable": true,
+      "validation_profile": "technical_exact"
+    },
+    {
+      "book_id": "berklee-music-theory-book-1-local-exact-book",
+      "title": "Berklee Music Theory Book 1",
+      "author": "Paul Schmeling",
+      "source": "build/berklee-music-theory-book-1-local-exact-book/exact/berklee-music-theory-book-1-local-exact.pdf",
+      "source_exact_tex": "build/berklee-music-theory-book-1-local-exact-book/exact/source.tex",
+      "source_body_tex": "build/berklee-music-theory-book-1-local-exact-book/work/body.tex",
+      "source_route": "local-hybrid",
+      "source_cache_immutable": true,
       "validation_profile": "technical_exact"
     },
     {
@@ -77,6 +107,8 @@
       "source": "build/tom-kolb-music-theory-guitarists-local-exact-book/exact/tom-kolb-music-theory-guitarists-local-exact.pdf",
       "source_exact_tex": "build/tom-kolb-music-theory-guitarists-local-exact-book/exact/source.tex",
       "source_body_tex": "build/tom-kolb-music-theory-guitarists-local-exact-book/work/body.tex",
+      "source_route": "local-hybrid",
+      "source_cache_immutable": true,
       "validation_profile": "technical_exact"
     }
   ]

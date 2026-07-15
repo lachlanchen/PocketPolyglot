@@ -13,6 +13,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from pocket_polished_resource_gate import codex_call_slot
 from pocket_polished_common import (
     OUTPUT_ROOT,
     ROOT,
@@ -246,16 +247,17 @@ def run_codex(
         "-",
     ]
     try:
-        result = subprocess.run(
-            cmd,
-            input=prompt,
-            text=True,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.STDOUT,
-            cwd=ROOT,
-            timeout=timeout,
-            check=False,
-        )
+        with codex_call_slot(os.environ.get("POCKET_POLYGLOT_GATE_STATE")):
+            result = subprocess.run(
+                cmd,
+                input=prompt,
+                text=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT,
+                cwd=ROOT,
+                timeout=timeout,
+                check=False,
+            )
         output = result.stdout or ""
         log.write_text(output, encoding="utf-8", errors="replace")
         return result.returncode, output
@@ -577,6 +579,65 @@ def save_cached_segment(
     )
 
 
+def salvage_reviewed_chunk_segments(
+    task: dict[str, Any],
+    output_path: Path,
+    book_root: Path,
+) -> int:
+    """Promote independently valid segments from an older reviewed chunk.
+
+    Validator improvements can make one segment invalidate an otherwise useful
+    historical chunk.  A prior positive semantic review is sufficient evidence
+    to retain every segment that still passes the current deterministic gate;
+    only the failing segment is sent back to the model.
+    """
+
+    review_path = book_root / "review" / f"{task['chunk_id']}.json"
+    try:
+        candidate = read_json(output_path)
+        review = read_json(review_path)
+    except (OSError, ValueError, json.JSONDecodeError):
+        return 0
+    if not isinstance(review, dict) or not review.get("accept"):
+        return 0
+    try:
+        source_review = str(review_path.relative_to(ROOT))
+    except ValueError:
+        source_review = str(review_path)
+    rows = candidate.get("segments") if isinstance(candidate, dict) else None
+    if not isinstance(rows, list):
+        return 0
+    outputs = {
+        row.get("segment_id"): row
+        for row in rows
+        if isinstance(row, dict) and isinstance(row.get("segment_id"), str)
+    }
+    promoted = 0
+    for source in task["segments"]:
+        output = outputs.get(source["segment_id"])
+        if not isinstance(output, dict):
+            continue
+        if validate_segment_output(task, source, output):
+            continue
+        cache_path = segment_cache_path(book_root, source["segment_id"])
+        if cache_path.exists():
+            continue
+        save_cached_segment(
+            task,
+            source,
+            output,
+            {
+                "accept": True,
+                "issues": [],
+                "summary": "Promoted from a previously accepted chunk after current per-segment validation.",
+                "source_review": source_review,
+            },
+            book_root,
+        )
+        promoted += 1
+    return promoted
+
+
 def load_pending_review_segments(
     task: dict[str, Any], book_root: Path
 ) -> dict[str, dict[str, Any]]:
@@ -730,6 +791,9 @@ def process_chunk(
     chunk_id = task["chunk_id"]
     output_path = book_root / "json" / f"{chunk_id}.json"
     failed_path = book_root / "work/failed" / f"{chunk_id}.json"
+    promoted = salvage_reviewed_chunk_segments(task, output_path, book_root)
+    if promoted:
+        print(f"salvaged {promoted} reviewed segments from {chunk_id}", flush=True)
     if valid_existing(task, output_path):
         failed_path.unlink(missing_ok=True)
         print(f"skip valid {chunk_id}", flush=True)

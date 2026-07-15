@@ -48,6 +48,20 @@ Use the source-tree launcher without installing anything globally:
 ./studio/pocketpolyglot chat my-book
 ```
 
+Run a prepared multi-book technical polish queue through the same durable job
+ledger:
+
+```sh
+./studio/pocketpolyglot run technical-pocket-polished-seven pocket.polish.queue \
+  --param source_queue=data/source-plan/technical-exact-polished-queue.json \
+  --param queue=build-pocket-polished/tasks/studio-technical-seven-queue.json \
+  --param status=build-pocket-polished/status-studio-technical-seven.json \
+  --param workers=5 \
+  --param reasoning=low \
+  --param adaptive=true \
+  --param network_limit_mbps=100
+```
+
 An editable install also exposes `pocketpolyglot` and
 `pocketpolyglot-studio` on `PATH`:
 
@@ -77,6 +91,16 @@ facsimile-only PDF never passes the acceptance contract.
 The polish workflow splits exact TeX into protected source-linked chunks,
 keeps structural TeX immutable, corrects prose and layout, assembles the full
 book, checks compilation and overflows, and exports only after evidence passes.
+
+`pocket.polish.queue` is the resumable multi-book form. It migrates valid
+reviewed segments into a content-addressed cache before rechunking, limits
+model work to unresolved segments, and bounds writer/reviewer retries. A
+cross-process resource gate keeps at most the requested number of Codex calls
+active and reduces concurrency when network throughput, load, or available
+memory crosses configured limits. Its atomic queue status records accepted
+segments, current book, worker slots, network throughput, throttling reasons,
+assembly, covers, and Nutstore export; the Studio job drawer renders this data
+without parsing terminal logs.
 
 ### Covers And Validation
 

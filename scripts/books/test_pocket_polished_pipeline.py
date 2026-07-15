@@ -14,6 +14,7 @@ from codex_pocket_polish_worker import (
     load_pending_review_segments,
     migrate_legacy_cached_output,
     sanitize_reviewer_corrections,
+    salvage_reviewed_chunk_segments,
     save_cached_segment,
 )
 from assemble_build_pocket_polished import (
@@ -178,6 +179,53 @@ class PocketPolishPipelineTest(unittest.TestCase):
             reused = load_cached_segment(task, migrated, root)
             self.assertIsNotNone(reused)
             self.assertEqual(reused["segment_id"], migrated["segment_id"])
+
+    def test_reviewed_chunk_salvages_only_currently_valid_segments(self) -> None:
+        first_output = {
+            "segment_id": self.first["segment_id"],
+            "source_sha256": self.first["source_sha256"],
+            "en_tex": "It ended. Then 287 million remained.",
+            "ja_tex": "それは終わった。その後、287万が残った。",
+            "changes": [],
+            "unresolved": [],
+        }
+        second_output = {
+            "segment_id": self.second["segment_id"],
+            "source_sha256": self.second["source_sha256"],
+            "en_tex": self.second["source_tex"],
+            "ja_tex": "その値は1905だった。",
+            "changes": [],
+            "unresolved": [],
+        }
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            output_path = root / "json/book-p00001.json"
+            review_path = root / "review/book-p00001.json"
+            output_path.parent.mkdir(parents=True)
+            review_path.parent.mkdir(parents=True)
+            output_path.write_text(
+                json.dumps(
+                    {
+                        "schema_version": 1,
+                        "book_id": "book",
+                        "chunk_id": "book-p00001",
+                        "segments": [first_output, second_output],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            review_path.write_text(
+                json.dumps({"accept": True, "issues": [], "summary": "reviewed"}),
+                encoding="utf-8",
+            )
+            promoted = salvage_reviewed_chunk_segments(
+                self.task, output_path, root
+            )
+            self.assertEqual(promoted, 1)
+            self.assertIsNone(load_cached_segment(self.task, self.first, root))
+            self.assertEqual(
+                load_cached_segment(self.task, self.second, root), second_output
+            )
 
     def test_pending_review_survives_content_addressed_id_migration(self) -> None:
         migrated = dict(self.second, segment_id="book-scontenthash-01")
@@ -616,6 +664,32 @@ class PocketPolishPipelineTest(unittest.TestCase):
         )
         self.assertEqual(len(changes), 1)
         self.assertEqual(changes[0]["marker_text"], "Preface xi")
+
+    def test_clearpage_between_sentence_halves_is_removed_with_evidence(self) -> None:
+        source = (
+            "We denote the vectors of nonnegative real numbers by the set of\n\n"
+            "\\clearpage\n\n"
+            "vectors whose coordinates are all nonnegative.\n"
+        )
+        normalized, changes = normalize_page_boundary_artifacts(source)
+        self.assertEqual(
+            normalized,
+            "We denote the vectors of nonnegative real numbers by the set of "
+            "vectors whose coordinates are all nonnegative.\n",
+        )
+        self.assertEqual(len(changes), 1)
+        self.assertEqual(changes[0]["type"], "page-boundary-command")
+        self.assertEqual(changes[0]["marker_tex"], "\\clearpage")
+
+    def test_clearpage_before_heading_is_preserved(self) -> None:
+        source = (
+            "This introductory discussion leads to\n\n"
+            "\\clearpage\n\n"
+            "\\section*{definitions}\n"
+        )
+        normalized, changes = normalize_page_boundary_artifacts(source)
+        self.assertEqual(normalized, source)
+        self.assertFalse(changes)
 
     def test_real_heading_is_not_removed(self) -> None:
         source = "A complete sentence.\n\n\\textbf{Chapter 1}\n\nnext paragraph.\n"

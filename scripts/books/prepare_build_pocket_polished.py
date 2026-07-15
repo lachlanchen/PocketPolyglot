@@ -153,6 +153,8 @@ def prepare_book(
         "title": task.get("title", book_id),
         "author": task.get("author", ""),
         "source": task["source"],
+        "source_route": task.get("source_route", "unspecified"),
+        "source_cache_immutable": bool(task.get("source_cache_immutable", True)),
         "source_language": source_language,
         "source_exact_tex": str(source_tex.relative_to(ROOT)),
         "upstream_exact_tex": str(upstream_exact.relative_to(ROOT)),
