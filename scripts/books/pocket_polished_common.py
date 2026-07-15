@@ -78,7 +78,19 @@ NUMERIC_POWER_RE = re.compile(
 PROTECTED_TOKEN_RE = re.compile(r"@@PROTECTED_\d{4}@@")
 KANA_RE = re.compile(r"[\u3040-\u30ff]")
 CJK_RE = re.compile(r"[\u3400-\u9fff]")
-HTML_RE = re.compile(r"</?[A-Za-z][^>]*>|&(?:nbsp|amp|lt|gt|quot);", re.I)
+# Restrict tag detection to actual transport/markup tags.  Technical game
+# theory prose legitimately uses angle profiles such as ``<up, left>``;
+# treating every alphabetic angle span as HTML caused deterministic retries.
+HTML_RE = re.compile(
+    r"</?(?:html|head|body|div|span|p|br|hr|sup|sub|em|strong|b|i|u|"
+    r"table|thead|tbody|tfoot|tr|td|th|ul|ol|li|a|img|figure|figcaption)"
+    r"(?:\s+[^<>]*)?/?>|&(?:nbsp|amp|lt|gt|quot);",
+    re.I,
+)
+PLAIN_STRATEGY_PROFILE_RE = re.compile(
+    r"(?:<\s*[^<>\n,，、]+(?:\s*[,，、]\s*[^<>\n,，、]+)+\s*>"
+    r"|〈\s*[^〈〉\n,，、]+(?:\s*[,，、]\s*[^〈〉\n,，、]+)+\s*〉)"
+)
 STRUCTURAL_ONLY_RE = re.compile(
     r"^\s*(?:%[^\n]*\n\s*)*(?:\\(?:frontmatter|mainmatter|backmatter|maketitle|"
     r"tableofcontents|clearpage|cleardoublepage|newpage|appendix|thispagestyle|"
@@ -682,8 +694,9 @@ MATH_UNIT_RE = re.compile(
     re.I,
 )
 SIMPLE_MATH_ATOM_RE = re.compile(
-    r"^(?:\d+|[A-Za-z]|\\[A-Za-z]+)"
-    r"(?:_\{?(?:\d+|[A-Za-z]|\\[A-Za-z]+)\}?)?$"
+    r"^[+-]?(?:\d+(?:\.\d+)?|[A-Za-z]|\\[A-Za-z]+)"
+    r"(?:_\{?(?:\d+|[A-Za-z]|\\[A-Za-z]+)\}?)?"
+    r"(?:[+-](?:\d+(?:\.\d+)?|[A-Za-z]))?$"
 )
 PURE_NUMERIC_POWER_RE = re.compile(
     r"^(?:\d+(?:\.\d+)?\\times)?10\^(?:"
@@ -703,7 +716,14 @@ def normalized_substantive_math_signature(text: str) -> list[str]:
     semantically with their surrounding prose.
     """
 
-    result: list[str] = []
+    # Strategy/action profiles are semantic identities whose labels are
+    # translated (``up`` -> ``上``).  Compare their arity and multiplicity,
+    # whether represented as textbook angle prose or TeX, while leaving the
+    # independent reviewer responsible for label translation accuracy.
+    result: list[str] = [
+        f"strategy-profile:{match.group(0).count(',') + match.group(0).count('，') + match.group(0).count('、') + 1}"
+        for match in PLAIN_STRATEGY_PROFILE_RE.finditer(text)
+    ]
     for expression in inline_math_signature(text):
         normalized = expression
         normalized = normalized.replace(r"\left", "").replace(r"\right", "")
@@ -711,6 +731,9 @@ def normalized_substantive_math_signature(text: str) -> list[str]:
         normalized = MATH_UNIT_RE.sub("", normalized)
         normalized = re.sub(r"\s+", "", normalized)
         normalized = normalized.replace("−", "-").replace("×", r"\times")
+        if r"\langle" in normalized and r"\rangle" in normalized:
+            result.append(f"strategy-profile:{normalized.count(',') + 1}")
+            continue
         if (
             not normalized
             or SIMPLE_MATH_ATOM_RE.fullmatch(normalized)

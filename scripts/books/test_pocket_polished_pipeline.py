@@ -768,6 +768,63 @@ class PocketPolishPipelineTest(unittest.TestCase):
         )
         self.assertNotIn("book-tech: en_tex changed numeric facts/counts", errors)
 
+    def test_angle_strategy_profile_is_not_html_and_translated_labels_match(self) -> None:
+        source = source_segment("book-profile", "The equilibrium is <up, left>.")
+        task = dict(
+            self.task,
+            segments=[source],
+            segment_count=1,
+            validation_profile="technical_exact",
+        )
+        output = {
+            "segment_id": source["segment_id"],
+            "source_sha256": source["source_sha256"],
+            "en_tex": "The equilibrium is <up, left>.",
+            "ja_tex": r"均衡は \(\langle\text{上},\text{左}\rangle\) である。",
+            "changes": [],
+            "unresolved": [],
+        }
+        errors = validate_segment_output(task, source, output)
+        self.assertNotIn("book-profile: en_tex contains replacement/HTML text", errors)
+        self.assertNotIn("book-profile: English/Japanese math inventory differs", errors)
+
+    def test_real_html_is_still_rejected(self) -> None:
+        source = source_segment("book-html", "Choose up.")
+        task = dict(self.task, segments=[source], segment_count=1)
+        output = {
+            "segment_id": source["segment_id"],
+            "source_sha256": source["source_sha256"],
+            "en_tex": "Choose <span>up</span>.",
+            "ja_tex": "上を選ぶ。",
+            "changes": [],
+            "unresolved": [],
+        }
+        self.assertIn(
+            "book-html: en_tex contains replacement/HTML text",
+            validate_segment_output(task, source, output),
+        )
+
+    def test_signed_scalar_math_wrapper_is_presentation_only(self) -> None:
+        source = source_segment("book-signed", "The payoff is -2.")
+        task = dict(
+            self.task,
+            segments=[source],
+            segment_count=1,
+            validation_profile="technical_exact",
+        )
+        output = {
+            "segment_id": source["segment_id"],
+            "source_sha256": source["source_sha256"],
+            "en_tex": "The payoff is -2.",
+            "ja_tex": r"利得は \(-2\) である。",
+            "changes": [],
+            "unresolved": [],
+        }
+        self.assertNotIn(
+            "book-signed: English/Japanese math inventory differs",
+            validate_segment_output(task, source, output),
+        )
+
     def test_reviewer_japanese_patch_note_does_not_force_regeneration(self) -> None:
         correction = {
             "segment_id": self.first["segment_id"],
