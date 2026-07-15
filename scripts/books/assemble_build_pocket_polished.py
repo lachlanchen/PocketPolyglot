@@ -467,7 +467,15 @@ def split_shared_environment_scaffold(en_tex: str, ja_tex: str) -> tuple[str, st
         shared_suffix.insert(0, en_lines.pop())
         ja_lines.pop()
     shared_source_lines = set(en_lines)
-    ja_lines = [line for line in ja_lines if line not in shared_source_lines]
+    shared_source_stripped = {line.strip() for line in en_lines}
+    ja_lines = [
+        line
+        for line in ja_lines
+        if line not in shared_source_lines
+        and not (
+            r"\includegraphics" in line and line.strip() in shared_source_stripped
+        )
+    ]
     suffix = "".join(shared_suffix)
     if suffix:
         en_body = en_tex[: -len(suffix)]
