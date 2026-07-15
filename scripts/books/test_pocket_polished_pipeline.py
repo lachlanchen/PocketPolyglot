@@ -92,6 +92,13 @@ class PocketPolishPipelineTest(unittest.TestCase):
         self.assertEqual(restored.count(r"\end{itemize}"), 1)
         self.assertEqual(restored.count(r"\item"), 2)
 
+    def test_secondary_existing_list_gets_missing_first_item(self) -> None:
+        source = "\\begin{itemize}\n\\item First.\n\\item Second.\n\\end{itemize}"
+        translated = "\\begin{itemize}\n一つ目。\n\\item 二つ目。\n\\end{itemize}"
+        restored = restore_secondary_list_scaffold(source, translated)
+        self.assertIn("\\begin{itemize}\n\\item 一つ目。", restored)
+        self.assertEqual(restored.count(r"\item"), 2)
+
     def test_secondary_caption_keeps_text_without_duplicate_float_command(self) -> None:
         translated = r"\caption{\JpRuby{図}{ず}235.1}"
         restored = demote_secondary_captions(translated)

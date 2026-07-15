@@ -498,9 +498,18 @@ def restore_secondary_list_scaffold(en_tex: str, ja_tex: str) -> str:
     if len(environments) != 1:
         return ja_tex
     environment = environments[0]
-    if re.search(rf"\\begin\{{{re.escape(environment)}\}}", ja_tex):
-        return ja_tex
-    return f"\\begin{{{environment}}}\n{ja_tex.strip()}\n\\end{{{environment}}}"
+    begin = rf"\begin{{{environment}}}"
+    end = rf"\end{{{environment}}}"
+    if begin not in ja_tex:
+        return f"{begin}\n{ja_tex.strip()}\n{end}"
+    prefix, body = ja_tex.split(begin, 1)
+    if end in body:
+        inner, suffix = body.split(end, 1)
+    else:
+        inner, suffix = body, ""
+    if inner.strip() and not inner.lstrip().startswith(r"\item"):
+        inner = "\n\\item " + inner.lstrip()
+    return prefix + begin + inner + (end + suffix if end in body else "")
 
 
 def demote_secondary_captions(tex: str) -> str:
