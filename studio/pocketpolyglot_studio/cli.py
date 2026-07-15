@@ -122,11 +122,120 @@ def main() -> int:
     chat.add_argument("message", nargs="*")
     chat.add_argument("--profile", choices=["auto", "fast", "balanced", "deep", "ultra"], default="auto")
     chat.add_argument("--read-only", action="store_true")
+
+    browser = subparsers.add_parser("browser", help="Operate the persistent Studio noVNC/CDP browser.")
+    browser_sub = browser.add_subparsers(dest="browser_command", required=True)
+    browser_start = browser_sub.add_parser("start", help="Start or reuse the managed browser.")
+    browser_start.add_argument("--studio-url")
+    browser_start.add_argument("--display")
+    browser_start.add_argument("--vnc-port", type=int)
+    browser_start.add_argument("--novnc-port", type=int)
+    browser_start.add_argument("--cdp-port", type=int)
+    browser_start.add_argument("--browser-profile", type=Path)
+    browser_start.add_argument("--session")
+    browser_start.add_argument("--resolution")
+    browser_start.add_argument("--wait", type=float, default=40)
+    browser_sub.add_parser("status", help="Show browser, noVNC, CDP, and Studio health.")
+    browser_sub.add_parser("stop", help="Stop the managed browser without deleting its profile.")
+    browser_sub.add_parser("pages", help="List CDP pages in the managed browser.")
+    browser_refresh = browser_sub.add_parser("refresh", help="Reload the visible Studio page through CDP.")
+    browser_refresh.add_argument("--project")
+    browser_progress = browser_sub.add_parser("progress", help="Inspect active jobs through the Studio web app.")
+    browser_progress.add_argument("--project")
+    browser_screenshot = browser_sub.add_parser("screenshot", help="Capture the visible Studio page through CDP.")
+    browser_screenshot.add_argument("--project")
+    browser_screenshot.add_argument("--output", type=Path)
+    browser_chat = browser_sub.add_parser("chat", help="Send a message through the visible Studio chat UI.")
+    browser_chat.add_argument("project")
+    browser_chat.add_argument("message", nargs="+")
+    browser_chat.add_argument("--profile", choices=["auto", "fast", "balanced", "deep", "ultra"], default="fast")
+    browser_chat.add_argument("--read-only", action="store_true")
+    browser_chat.add_argument("--timeout", type=float, default=600)
+    browser_chat.add_argument("--screenshot", type=Path)
     args = parser.parse_args()
 
     settings = Settings.load()
     database = Database(settings.database_path)
     manager = JobManager(settings, database)
+
+    if args.command == "browser":
+        from .browser_control import (
+            BrowserConfig,
+            browser_status,
+            chat_in_ui,
+            inspect_progress,
+            list_pages,
+            select_project,
+            start_browser,
+            stop_browser,
+            studio_page,
+            summarize_progress,
+        )
+
+        overrides: dict[str, Any] = {}
+        if args.browser_command == "start":
+            overrides = {
+                "studio_url": args.studio_url,
+                "display": args.display,
+                "vnc_port": args.vnc_port,
+                "novnc_port": args.novnc_port,
+                "cdp_port": args.cdp_port,
+                "profile": args.browser_profile,
+                "session": args.session,
+                "resolution": args.resolution,
+            }
+        config = BrowserConfig.load(settings, overrides)
+        if args.browser_command == "start":
+            print(json.dumps(start_browser(config, args.wait), ensure_ascii=False, indent=2))
+            return 0
+        if args.browser_command == "status":
+            print(json.dumps(browser_status(config), ensure_ascii=False, indent=2))
+            return 0
+        if args.browser_command == "stop":
+            print(json.dumps(stop_browser(config), ensure_ascii=False, indent=2))
+            return 0
+        if args.browser_command == "pages":
+            print(json.dumps(list_pages(config), ensure_ascii=False, indent=2))
+            return 0
+        if not browser_status(config)["healthy"]:
+            raise SystemExit("Studio browser is not healthy; run `pocketpolyglot browser start`.")
+        page = studio_page(config)
+        try:
+            if args.browser_command == "progress":
+                if args.project:
+                    select_project(page, project_from_ref(database, args.project)["title"])
+                print(json.dumps(summarize_progress(inspect_progress(page)), ensure_ascii=False, indent=2))
+                return 0
+            if args.browser_command == "refresh":
+                page.reload()
+                if args.project:
+                    select_project(page, project_from_ref(database, args.project)["title"])
+                print(json.dumps(inspect_progress(page), ensure_ascii=False, indent=2))
+                return 0
+            if args.browser_command == "screenshot":
+                if args.project:
+                    select_project(page, project_from_ref(database, args.project)["title"])
+                output = (args.output or (config.state_dir / "studio.png")).expanduser().resolve()
+                print(page.screenshot(output))
+                return 0
+            if args.browser_command == "chat":
+                project = project_from_ref(database, args.project)
+                result = chat_in_ui(
+                    page,
+                    project["title"],
+                    " ".join(args.message),
+                    args.profile,
+                    not args.read_only,
+                    args.timeout,
+                )
+                screenshot = (args.screenshot or (config.state_dir / "last-chat.png")).expanduser().resolve()
+                page.screenshot(screenshot)
+                result["screenshot"] = str(screenshot)
+                print(json.dumps(result, ensure_ascii=False, indent=2))
+                return 0
+        finally:
+            page.close()
+        return 2
 
     if args.command == "doctor":
         return cmd_doctor(settings)

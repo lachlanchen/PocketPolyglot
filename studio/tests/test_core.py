@@ -6,6 +6,7 @@ import unittest
 from pathlib import Path
 
 from pocketpolyglot_studio.capabilities import build_job_spec, list_capabilities
+from pocketpolyglot_studio.codex_backend import build_prompt
 from pocketpolyglot_studio.config import Settings
 from pocketpolyglot_studio.db import Database
 from pocketpolyglot_studio.evidence import evaluate_all
@@ -62,6 +63,18 @@ class StudioCoreTests(unittest.TestCase):
         ultra = choose_model(self.settings, "Perform a final audit and prove correctness", "auto")
         self.assertEqual((fast.model, fast.reasoning), ("gpt-5.6-sol", "low"))
         self.assertEqual(ultra.reasoning, "xhigh")
+
+    def test_chat_prompt_contains_authoritative_runtime_evidence(self) -> None:
+        prompt = build_prompt(
+            {"id": "project-1", "title": "Queue"},
+            [],
+            {"jobs": [{"id": "job-1", "status": "running", "progress": 0.5}]},
+            [],
+            "What is the progress?",
+        )
+        self.assertIn("Authoritative Studio runtime snapshot", prompt)
+        self.assertIn('"progress": 0.5', prompt)
+        self.assertIn("Do not run shell commands", prompt)
 
     def test_evidence_requires_exit_and_artifact(self) -> None:
         artifact = self.settings.repo_root / "output.json"

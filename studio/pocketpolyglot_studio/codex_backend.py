@@ -3,16 +3,19 @@ from __future__ import annotations
 import asyncio
 import json
 from collections.abc import AsyncIterator
+from datetime import datetime, timezone
 from typing import Any
 
 from .config import Settings
 from .db import Database
+from .jobs import JobManager
 from .model_router import ModelChoice, choose_model
 
 
 def build_prompt(
     project: dict[str, Any],
     sources: list[dict[str, Any]],
+    runtime: dict[str, Any],
     history: list[dict[str, Any]],
     message: str,
 ) -> str:
@@ -28,6 +31,9 @@ Current project:
 Registered sources:
 {json.dumps(sources, ensure_ascii=False, indent=2)}
 
+Authoritative Studio runtime snapshot:
+{json.dumps(runtime, ensure_ascii=False, indent=2)}
+
 Recent Studio conversation:
 {json.dumps(context_messages, ensure_ascii=False, indent=2)}
 
@@ -40,9 +46,40 @@ Operating contract:
 - Treat manifest coverage and validators as truth; a partial PDF is not completion evidence.
 - For long work, create or launch a resumable PocketPolyglot Studio/tmux job. Do not keep a fragile foreground loop alive in this chat call.
 - Diagnose deterministic failures before escalating model reasoning. Keep shared code general; put book-specific instructions in project metadata or project-local plans.
+- For progress, status, queue-health, worker, or evidence questions, answer from the authoritative Studio runtime snapshot. Do not run shell commands merely to rediscover data already present in that snapshot.
 - Never claim completion without naming the artifact and the validator/evidence that proves it.
 - Answer directly and briefly after performing the requested work.
 """
+
+
+def runtime_snapshot(settings: Settings, database: Database, project_id: str) -> dict[str, Any]:
+    manager = JobManager(settings, database)
+    jobs: list[dict[str, Any]] = []
+    for listed in manager.list(project_id, limit=20):
+        job = manager.get(listed["id"]) or listed
+        jobs.append(
+            {
+                key: job.get(key)
+                for key in (
+                    "id",
+                    "capability_id",
+                    "title",
+                    "status",
+                    "progress",
+                    "heartbeat_at",
+                    "finished_at",
+                    "error",
+                    "progress_detail",
+                )
+                if job.get(key) not in (None, "")
+            }
+            | {"evidence": database.list_evidence(job["id"])}
+        )
+    return {
+        "captured_at": datetime.now(timezone.utc).isoformat(),
+        "jobs": jobs,
+        "artifacts": database.list_artifacts(project_id),
+    }
 
 
 def extract_event_text(event: dict[str, Any]) -> tuple[str, str] | None:
@@ -74,6 +111,7 @@ async def stream_chat(
     choice: ModelChoice = choose_model(settings, message, profile)
     history = database.list_messages(project["id"], limit=20)
     sources = database.list_sources(project["id"])
+    runtime = runtime_snapshot(settings, database, project["id"])
     database.add_message(
         {
             "project_id": project["id"],
@@ -83,7 +121,7 @@ async def stream_chat(
             "reasoning": choice.reasoning,
         }
     )
-    prompt = build_prompt(project, sources, history, message)
+    prompt = build_prompt(project, sources, runtime, history, message)
     command = [
         "codex",
         "exec",

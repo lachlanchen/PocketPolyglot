@@ -12,7 +12,7 @@ JP_MAIN_URL ?= https://flow.lazying.art
 JP_MAIN_POWERED_BY ?= powered by LazyingArt
 JP_MAIN_COVER ?=
 
-.PHONY: sample paired interlinear interlinear-run interlinear-jp-main compare export-books readme-previews edition-comparison sentence-showcase readme-assets studio studio-install studio-doctor studio-test kokoro-md kokoro-tmux kokoro-bilingual-md kokoro-bilingual-tmux kokoro-compile kokoro-jp-ocr-md snow-country-prepare snow-country-tmux snow-country-after-kokoro snow-country-compile sanxingdui-tex sanxingdui-polished-tex sanxingdui-polish-tmux ocr-sample ocr-all clean
+.PHONY: sample paired interlinear interlinear-run interlinear-jp-main compare export-books readme-previews edition-comparison sentence-showcase readme-assets studio studio-install studio-doctor studio-test studio-browser studio-browser-status studio-browser-stop kokoro-md kokoro-tmux kokoro-bilingual-md kokoro-bilingual-tmux kokoro-compile kokoro-jp-ocr-md snow-country-prepare snow-country-tmux snow-country-after-kokoro snow-country-compile sanxingdui-tex sanxingdui-polished-tex sanxingdui-polish-tmux ocr-sample ocr-all clean
 
 sample: paired
 
@@ -55,6 +55,15 @@ studio-doctor:
 studio-test:
 	PYTHONPATH=studio python -m unittest discover -s studio/tests -v
 	npm --prefix studio/web run build
+
+studio-browser:
+	bash studio/pocketpolyglot browser start
+
+studio-browser-status:
+	bash studio/pocketpolyglot browser status
+
+studio-browser-stop:
+	bash studio/pocketpolyglot browser stop
 
 kokoro-md:
 	python scripts/books/epub_to_markdown.py sources/心.epub --raw-output books/kokoro/markdown/book.raw.md --clean-output books/kokoro/markdown/book.md --start-heading 总序

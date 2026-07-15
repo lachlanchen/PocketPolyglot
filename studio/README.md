@@ -32,6 +32,40 @@ Local runtime state and the isolated Python environment are stored under
 the repository's base Conda environment. Closing the web app does not stop a
 running job.
 
+## Persistent Browser
+
+Studio can run in its own persistent virtual desktop with a reusable Chrome
+profile, localhost-only noVNC, and a CDP operator endpoint. The first start
+saves the selected display, ports, profile, and Studio URL; later commands
+attach to the same browser instead of creating another profile.
+
+```sh
+./studio/pocketpolyglot browser start \
+  --studio-url http://127.0.0.1:8766 \
+  --display :95 --vnc-port 5925 --novnc-port 6125 --cdp-port 9365 \
+  --browser-profile ~/.cache/pocketpolyglot-studio-chrome
+
+./studio/pocketpolyglot browser status
+./studio/pocketpolyglot browser refresh --project technical-pocket-polished-seven
+./studio/pocketpolyglot browser progress --project technical-pocket-polished-seven
+./studio/pocketpolyglot browser screenshot
+./studio/pocketpolyglot browser chat technical-pocket-polished-seven \
+  --read-only --profile fast \
+  "Check the active queue and report whether it is healthy."
+```
+
+The persistent local viewer is:
+
+```text
+http://127.0.0.1:6125/vnc_lite.html?host=127.0.0.1&port=6125&autoconnect=1&resize=remote
+```
+
+The supervisor runs in tmux as `pocketpolyglot-studio-browser`. It restarts the
+Xvfb, x11vnc, noVNC, and Chrome stack after a component failure, but never
+deletes the browser profile. `browser progress` and `browser chat` operate
+through the visible Studio page over CDP, so they exercise the same interface
+the user sees.
+
 ## CLI
 
 Use the source-tree launcher without installing anything globally:
