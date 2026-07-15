@@ -8,6 +8,8 @@ It does not duplicate the book engines. Commands still run from `scripts/`,
 `prompt_tools/`, and the established TeX templates, so a pipeline repair in the
 repository is immediately available to Studio projects.
 
+![PocketPolyglot Studio showing a live technical-book polish queue](docs/images/pocketpolyglot-studio-queue.png)
+
 ## Start
 
 ```sh
