@@ -23,6 +23,7 @@ from assemble_build_pocket_polished import (
     fit_short_simple_longtables,
     fuse_english_main_japanese_secondary,
     normalize_unwrapped_math_fragments,
+    restore_optional_linebreak_escape,
 )
 from build_pocket_tex_queue import inject_cover_page
 from ensure_textless_pocket_polished_cover import cover_sandbox, recover_generated_cover
@@ -987,6 +988,14 @@ class PocketPolishPipelineTest(unittest.TestCase):
         self.assertIn("Full figure caption.", fused)
         self.assertIn("キャプション。", fused)
         self.assertLess(fused.index("キャプション。"), fused.index(r"\end{table}"))
+
+    def test_lost_optional_linebreak_slash_is_restored_without_touching_display_math(self) -> None:
+        repaired, count = restore_optional_linebreak_escape(
+            "\\caption{Title\\[0pt]\nText}\\n\\[x+y\\]"
+        )
+        self.assertEqual(count, 1)
+        self.assertIn(r"Title\\[0pt]", repaired)
+        self.assertIn(r"\[x+y\]", repaired)
 
     def test_cover_injection_preserves_document_paper_geometry(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
