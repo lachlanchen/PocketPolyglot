@@ -591,7 +591,7 @@ def fuse_english_main_japanese_secondary(
             continue
         en_tex = segment["en_tex"]
         ja_tex = segment["ja_tex"]
-        if ENVIRONMENT_COMMAND_RE.search(en_tex):
+        if ENVIRONMENT_COMMAND_RE.search(en_tex) or r"\includegraphics" in en_tex:
             pending_crosses_environment = True
         pending_en.append(en_tex)
         pending_ja.append(ja_tex)
