@@ -26,6 +26,7 @@ from pocket_polished_common import (
     ROOT,
     compare_inventory,
     inventory,
+    normalize_transport_formatting,
     read_json,
     read_jsonl,
     restored_segment_output,
@@ -55,6 +56,12 @@ STANDALONE_IMAGE_RE = re.compile(
     r"(?P<image>\\includegraphics(?:\[[^\]]*\])?\{[^{}]+\})"
     r"(?P<tail>(?:[ \t]*\\(?:par|smallskip|medskip|bigskip))*)[ \t]*$"
 )
+SIMPLE_LONGTABLE_RE = re.compile(
+    r"\\begin\{longtable\}\[\]\{@\{\}(?P<columns>[lcr]+)@\{\}\}"
+    r"(?P<body>.*?)"
+    r"\\end\{longtable\}",
+    re.S,
+)
 PLAIN_LOG_EXPRESSION_RE = re.compile(
     r"(?<![\\$A-Za-z0-9_])(?P<lhs>[A-Za-z]+_[A-Za-z0-9]+)\s*=\s*"
     r"(?P<sign>[+-]?)log\s*(?P<argument>[ερλχσθαβγδA-Za-z][A-Za-z0-9_]*)"
@@ -70,6 +77,41 @@ PLAIN_NUMERIC_POWER_RE = re.compile(
     r"(?:(?P<coefficient>\d+(?:\.\d+)?)\s*(?:×|[xX]|\\times)\s*)?"
     r"10\^(?P<exponent>[+-]?\d+|[A-Za-z]+)(?![A-Za-z0-9_])"
 )
+PLAIN_BRACED_NUMERIC_POWER_RE = re.compile(
+    r"(?<![\\$A-Za-z0-9_])"
+    r"(?:(?P<coefficient>\d+(?:\.\d+)?)\s*(?:×|[xX]|\\times)\s*)?"
+    r"10\^\{(?P<exponent>[+-]?\d+|[A-Za-z]+)\}"
+)
+SUPERSCRIPT_VALUE = str.maketrans(
+    "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻",
+    "0123456789+-",
+)
+SUBSCRIPT_VALUE = str.maketrans(
+    "₀₁₂₃₄₅₆₇₈₉₊₋ₐₑₕᵢⱼₖₗₘₙₒₚᵣₛₜᵤᵥₓ",
+    "0123456789+-aehijklmnoprstuvx",
+)
+PLAIN_SCIENTIFIC_SUPERSCRIPT_RE = re.compile(
+    r"(?<![\\A-Za-z0-9])"
+    r"(?P<coefficient>\d+(?:\.\d+)?)\s*(?:×|[xX])\s*10"
+    r"(?P<superscript>[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]+)"
+)
+PLAIN_SHORT_POWER_RE = re.compile(
+    r"(?<![A-Za-z0-9Α-Ωα-ω])"
+    r"(?P<base>(?:\d+(?:\.\d+)?|[A-Za-zΑ-Ωα-ω]{1,3}))"
+    r"(?P<superscript>[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]+)"
+)
+PLAIN_SHORT_SUBSCRIPT_RE = re.compile(
+    r"(?<![A-Za-z0-9Α-Ωα-ω])"
+    r"(?P<base>[A-Za-zΑ-Ωα-ω]{1,3})"
+    r"(?P<subscript>[₀₁₂₃₄₅₆₇₈₉₊₋ₐₑₕᵢⱼₖₗₘₙₒₚᵣₛₜᵤᵥₓ]+)"
+)
+PLAIN_ASCII_SHORT_POWER_RE = re.compile(
+    r"(?<![A-Za-z0-9\\])"
+    r"(?P<base>[A-Za-zΑ-Ωα-ω]{1,3})\^(?P<exponent>[+-]?\d+)"
+    r"(?![A-Za-z0-9{}])"
+)
+REMAINING_SUPERSCRIPT_RE = re.compile(r"[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]+")
+REMAINING_SUBSCRIPT_RE = re.compile(r"[₀₁₂₃₄₅₆₇₈₉₊₋ₐₑₕᵢⱼₖₗₘₙₒₚᵣₛₜᵤᵥₓ]+")
 GREEK_MATH_COMMANDS = {
     "ε": r"\epsilon",
     "ρ": r"\rho",
@@ -84,6 +126,9 @@ GREEK_MATH_COMMANDS = {
 }
 HEADING_COMMAND_RE = re.compile(
     r"\\(?P<command>part|chapter|section|subsection|subsubsection|paragraph)\*?\s*\{"
+)
+ENVIRONMENT_COMMAND_RE = re.compile(
+    r"\\(?P<action>begin|end)\{(?P<environment>[A-Za-z*@]+)\}"
 )
 SHARED_CONTROL_MARKERS = (
     r"\tableofcontents",
@@ -141,7 +186,10 @@ def normalize_unwrapped_math_fragments(tex: str) -> tuple[str, int]:
     the resulting expression outside math mode (for example
     ``u_o = log ε``).  Such text is invalid TeX because of the underscore.
     This narrow pass recognizes only a variable-with-subscript logarithm
-    relation and preserves its exact symbols in proper TeX math.
+    relation and preserves its exact symbols in proper TeX math. It also
+    normalizes Unicode super/subscripts and short ``unit^-2`` fragments outside
+    existing math spans. Longer prose words retain residual superscripts as
+    text footnote markers rather than being reinterpreted as equations.
     """
 
     def replace(match: re.Match[str]) -> str:
@@ -170,6 +218,25 @@ def normalize_unwrapped_math_fragments(tex: str) -> tuple[str, int]:
             plain,
         )
         count += changed
+        plain, changed = PLAIN_BRACED_NUMERIC_POWER_RE.subn(
+            lambda match: (
+                r"\("
+                + (
+                    rf"{match.group('coefficient')} \times "
+                    if match.group("coefficient")
+                    else ""
+                )
+                + "10^{"
+                + (
+                    match.group("exponent")
+                    if re.fullmatch(r"[+-]?\d+", match.group("exponent"))
+                    else rf"\mathrm{{{match.group('exponent')}}}"
+                )
+                + r"}\)"
+            ),
+            plain,
+        )
+        count += changed
         plain, changed = PLAIN_NUMERIC_POWER_RE.subn(
             lambda match: (
                 r"\("
@@ -189,10 +256,61 @@ def normalize_unwrapped_math_fragments(tex: str) -> tuple[str, int]:
             plain,
         )
         count += changed
+        plain, changed = PLAIN_SCIENTIFIC_SUPERSCRIPT_RE.subn(
+            lambda match: (
+                rf"\({match.group('coefficient')} \times 10^{{"
+                + match.group("superscript").translate(SUPERSCRIPT_VALUE)
+                + r"}\)"
+            ),
+            plain,
+        )
+        count += changed
+        plain, changed = PLAIN_SHORT_POWER_RE.subn(
+            lambda match: (
+                rf"\({match.group('base')}^{{"
+                + match.group("superscript").translate(SUPERSCRIPT_VALUE)
+                + r"}\)"
+            ),
+            plain,
+        )
+        count += changed
+        plain, changed = PLAIN_SHORT_SUBSCRIPT_RE.subn(
+            lambda match: (
+                rf"\({match.group('base')}_{{"
+                + match.group("subscript").translate(SUBSCRIPT_VALUE)
+                + r"}\)"
+            ),
+            plain,
+        )
+        count += changed
+        plain, changed = PLAIN_ASCII_SHORT_POWER_RE.subn(
+            lambda match: rf"\({match.group('base')}^{{{match.group('exponent')}}}\)",
+            plain,
+        )
+        count += changed
+        plain, changed = REMAINING_SUPERSCRIPT_RE.subn(
+            lambda match: (
+                r"\textsuperscript{"
+                + match.group(0).translate(SUPERSCRIPT_VALUE)
+                + "}"
+            ),
+            plain,
+        )
+        count += changed
+        plain, changed = REMAINING_SUBSCRIPT_RE.subn(
+            lambda match: (
+                r"\textsubscript{"
+                + match.group(0).translate(SUBSCRIPT_VALUE)
+                + "}"
+            ),
+            plain,
+        )
+        count += changed
         plain, changed = re.subn(r"(?<=[})∞])\.(?=[A-Z])", ". ", plain)
         count += changed
         return plain, count
 
+    tex, transport_changes = normalize_transport_formatting(tex)
     spans = [
         (match.start(), match.end())
         for pattern in (INLINE_MATH_RE, MATH_ENV_RE)
@@ -208,7 +326,7 @@ def normalize_unwrapped_math_fragments(tex: str) -> tuple[str, int]:
 
     parts: list[str] = []
     cursor = 0
-    count = 0
+    count = transport_changes
     for start, end in merged:
         plain, replacements = replace_plain(tex[cursor:start])
         parts.extend((plain, tex[start:end]))
@@ -281,32 +399,78 @@ def inject_fusion_preamble(tex: str) -> str:
     return tex.replace(marker, FUSION_PREAMBLE + "\n" + marker, 1)
 
 
+def update_open_environments(tex: str, stack: list[str]) -> None:
+    """Track source environments that cross translation-segment boundaries."""
+
+    for match in ENVIRONMENT_COMMAND_RE.finditer(tex):
+        environment = match.group("environment")
+        if match.group("action") == "begin":
+            stack.append(environment)
+            continue
+        if not stack or stack[-1] != environment:
+            current = stack[-1] if stack else "none"
+            raise ValueError(
+                f"malformed source environment: closing {environment} while {current} is open"
+            )
+        stack.pop()
+
+
 def fuse_english_main_japanese_secondary(
     segments: list[dict[str, Any]],
 ) -> tuple[str, FuriganaStats]:
     parts: list[str] = []
     furigana = FuriganaStats()
-    for segment in segments:
-        if segment["kind"] == "protected":
-            parts.append(segment["source_tex"])
-            continue
-        en_tex = segment["en_tex"]
-        ja_tex = segment["ja_tex"]
+    pending_en: list[str] = []
+    pending_ja: list[str] = []
+    open_environments: list[str] = []
+
+    def emit_pending() -> None:
+        if not pending_en:
+            return
+        en_tex = "".join(pending_en)
+        ja_tex = "".join(pending_ja)
+        pending_en.clear()
+        pending_ja.clear()
         if en_tex.strip() == ja_tex.strip() or not ja_tex.strip():
             parts.append(en_tex)
-            continue
+            return
         parts.append(en_tex)
         heading = translated_heading_title(ja_tex)
         if heading is not None:
-            heading, current = annotate_japanese_tex(heading)
+            annotated, current = annotate_japanese_tex(heading)
             furigana.merge(current)
-            parts.append(f"\n\\JpSecondaryHeading{{{heading}}}\n")
-            continue
+            parts.append(f"\n\\JpSecondaryHeading{{{annotated}}}\n")
+            return
         secondary = strip_shared_document_controls(en_tex, ja_tex).strip()
         if secondary:
             secondary, current = annotate_japanese_tex(secondary)
             furigana.merge(current)
-            parts.append(f"\n\\begin{{JpSecondary}}\n{secondary}\n\\end{{JpSecondary}}\n")
+            parts.append(
+                f"\n\\begin{{JpSecondary}}\n{secondary}\n\\end{{JpSecondary}}\n"
+            )
+
+    for segment in segments:
+        if segment["kind"] == "protected":
+            if open_environments:
+                pending_en.append(segment["source_tex"])
+                pending_ja.append(segment["source_tex"])
+            else:
+                emit_pending()
+                parts.append(segment["source_tex"])
+            continue
+        en_tex = segment["en_tex"]
+        ja_tex = segment["ja_tex"]
+        pending_en.append(en_tex)
+        pending_ja.append(ja_tex)
+        update_open_environments(en_tex, open_environments)
+        if not open_environments:
+            emit_pending()
+    if open_environments:
+        raise ValueError(
+            "unclosed source environments at fusion end: "
+            + ", ".join(open_environments)
+        )
+    emit_pending()
     if furigana.unknown_tokens:
         examples = ", ".join(dict.fromkeys(furigana.unknown_tokens[:12]))
         raise ValueError(f"Japanese furigana missing for: {examples}")
@@ -381,6 +545,39 @@ def normalize_full_bleed_images(tex: str) -> tuple[str, int]:
         return f"{indent}\\noindent\\makebox[\\textwidth][c]{{{image}}}"
 
     return FULL_BLEED_IMAGE_RE.subn(replace, tex)
+
+
+def fit_short_simple_longtables(tex: str, *, max_rows: int = 12) -> tuple[str, int]:
+    """Width-fit compact OCR tables that do not need page breaking.
+
+    Pandoc emits even small tables as ``longtable``. On A6 paper, simple
+    multi-column tables with long cells can overflow badly because ``l/c/r``
+    columns never wrap. Compact tables are safe to render as ``tabular`` in an
+    ``adjustbox``; larger tables stay as ``longtable`` so they can span pages.
+    """
+
+    converted = 0
+
+    def replace(match: re.Match[str]) -> str:
+        nonlocal converted
+        body = match.group("body")
+        row_count = body.count(r"\\")
+        if row_count > max_rows:
+            return match.group(0)
+        body = re.sub(r"(?m)^\s*\\endhead\s*$\n?", "", body)
+        columns = match.group("columns")
+        converted += 1
+        return (
+            "\\begin{center}\n"
+            "\\resizebox{.84\\paperwidth}{!}{%\n"
+            f"\\begin{{tabular}}{{@{{}}{columns}@{{}}}}"
+            f"{body}"
+            "\\end{tabular}%\n"
+            "}\n"
+            "\\end{center}"
+        )
+
+    return SIMPLE_LONGTABLE_RE.sub(replace, tex), converted
 
 
 def pocket_layout(tex: str) -> str:
@@ -553,9 +750,11 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
     fused, furigana = fuse_english_main_japanese_secondary(merged_rows)
     centered_figures: dict[str, int] = {"en-main-ja": 0}
     normalized_full_bleed: dict[str, int] = {"en-main-ja": 0}
+    fitted_short_tables: dict[str, int] = {"en-main-ja": 0}
     if validation_profile == "technical_exact":
         fused, centered_figures["en-main-ja"] = center_standalone_figures(fused)
         fused, normalized_full_bleed["en-main-ja"] = normalize_full_bleed_images(fused)
+        fused, fitted_short_tables["en-main-ja"] = fit_short_simple_longtables(fused)
         fused = wrap_wide_display_math(fused, layout="exact")
 
     figure_root = book_root / "assets/figures"
@@ -605,6 +804,7 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
         "validation_profile": validation_profile,
         "centered_standalone_figures": centered_figures,
         "normalized_full_bleed_images": normalized_full_bleed,
+        "fitted_short_simple_longtables": fitted_short_tables,
         "normalized_unwrapped_math_fragments": normalized_math_fragments,
         "assembled_at": datetime.now(timezone.utc).isoformat(),
     }

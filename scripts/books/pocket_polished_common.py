@@ -100,6 +100,33 @@ def sha256_text(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
+ANSI_ITALIC_RE = re.compile(r"\x1b\[3m(?P<body>.*?)\x1b\[0m", re.DOTALL)
+ANSI_BOLD_RE = re.compile(r"\x1b\[1m(?P<body>.*?)\x1b\[0m", re.DOTALL)
+ANSI_SGR_RE = re.compile(r"\x1b\[[0-9;]*m")
+INVALID_TRANSPORT_CONTROL_RE = re.compile(
+    r"[\x00-\x08\x0b\x0c\x0e-\x1a\x1c-\x1f\x7f]"
+)
+
+
+def normalize_transport_formatting(text: str) -> tuple[str, int]:
+    """Convert leaked terminal styling to TeX and drop invalid control bytes."""
+
+    changes = 0
+    text, changed = ANSI_ITALIC_RE.subn(
+        lambda match: rf"\emph{{{match.group('body')}}}", text
+    )
+    changes += changed
+    text, changed = ANSI_BOLD_RE.subn(
+        lambda match: rf"\textbf{{{match.group('body')}}}", text
+    )
+    changes += changed
+    text, changed = ANSI_SGR_RE.subn("", text)
+    changes += changed
+    text, changed = INVALID_TRANSPORT_CONTROL_RE.subn("", text)
+    changes += changed
+    return text, changes
+
+
 def read_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -727,7 +754,22 @@ def conservative_english_repair(tex: str) -> tuple[str, list[dict[str, Any]]]:
                 r"(?P<right>[A-Z][A-Za-z'-]{1,}\b)"
             ),
             lambda match: (
-                match.group("left") + match.group("mark") + " " + match.group("right")
+                match.group(0)
+                if (
+                    match.group("mark") == "."
+                    and (
+                        match.group("left").lower() in {"www", "http", "https"}
+                        or re.match(
+                            r"(?:com|org|net|edu|gov|io|co|jp|uk)\b",
+                            match.group("right"),
+                            re.I,
+                        )
+                    )
+                )
+                else match.group("left")
+                + match.group("mark")
+                + " "
+                + match.group("right")
             ),
             "Restored missing whitespace after sentence punctuation.",
         ),
@@ -861,8 +903,15 @@ def japanese_kana_required(source_tex: str, source_plain: str) -> bool:
 
 
 def japanese_translation_optional(source_plain: str) -> bool:
-    """Allow invariant publisher/address metadata to remain in its source form."""
-    return bool(
+    """Allow invariant metadata and nonlinguistic notation to remain unchanged."""
+
+    compact = re.sub(r"\s+", "", source_plain)
+    symbolic_sequence = bool(
+        compact
+        and len(compact) >= 8
+        and re.fullmatch(r"[HTF01→←.·…\-]+", compact, re.I)
+    )
+    return symbolic_sequence or bool(
         re.search(
             r"\b(?:copyright|isbn|issn|publisher|publishing|printed|office|"
             r"address|street|suite|road|avenue|university press)\b",

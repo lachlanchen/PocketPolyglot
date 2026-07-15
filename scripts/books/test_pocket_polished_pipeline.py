@@ -16,7 +16,11 @@ from codex_pocket_polish_worker import (
     sanitize_reviewer_corrections,
     save_cached_segment,
 )
-from assemble_build_pocket_polished import normalize_unwrapped_math_fragments
+from assemble_build_pocket_polished import (
+    fit_short_simple_longtables,
+    normalize_unwrapped_math_fragments,
+)
+from build_pocket_tex_queue import inject_cover_page
 from pocket_polished_common import (
     apply_exact_paragraph_drops,
     apply_exact_text_replacements,
@@ -736,6 +740,38 @@ class PocketPolishPipelineTest(unittest.TestCase):
             "unresolved": [],
         }
         self.assertFalse(validate_segment_output(task, source, output))
+
+    def test_short_simple_longtable_is_width_fitted_without_page_breaking(self) -> None:
+        source = (
+            r"\begin{longtable}[]{@{}ll@{}}" "\n"
+            r"A & B \\" "\n"
+            r"C & D \\" "\n"
+            r"\end{longtable}"
+        )
+        fitted, count = fit_short_simple_longtables(source)
+        self.assertEqual(count, 1)
+        self.assertNotIn(r"\begin{longtable}", fitted)
+        self.assertIn(r"\resizebox{.84\paperwidth}{!}", fitted)
+        self.assertIn(r"\begin{tabular}{@{}ll@{}}", fitted)
+
+    def test_long_simple_longtable_keeps_page_breaking(self) -> None:
+        body = "\n".join(f"{index} & value \\\\" for index in range(13))
+        source = r"\begin{longtable}[]{@{}ll@{}}" + "\n" + body + "\n" + r"\end{longtable}"
+        fitted, count = fit_short_simple_longtables(source)
+        self.assertEqual(count, 0)
+        self.assertEqual(fitted, source)
+
+    def test_cover_injection_preserves_document_paper_geometry(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            tex_path = root / "book.tex"
+            cover_path = root / "cover.png"
+            tex_path.write_text(r"\documentclass{book}\begin{document}Text\end{document}", encoding="utf-8")
+            cover_path.write_bytes(b"test-cover")
+            self.assertTrue(inject_cover_page(tex_path, cover_path))
+            rendered = tex_path.read_text(encoding="utf-8")
+            self.assertNotIn("fitpaper=true", rendered)
+            self.assertIn(r"width=\paperwidth,height=\paperheight", rendered)
 
 
 if __name__ == "__main__":

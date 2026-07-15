@@ -19,6 +19,9 @@ from fugashi import GenericTagger
 
 
 KANJI_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff々〆]")
+FURIGANA_REQUIRED_RE = re.compile(
+    r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]"
+)
 JAPANESE_RUN_RE = re.compile(
     r"[\u3040-\u30ff\u31f0-\u31ff\u3400-\u4dbf\u4e00-\u9fff"
     r"\uf900-\ufaff々〆〇ヶヵー]+"
@@ -134,7 +137,11 @@ def fallback_reading(surface: str) -> str:
 
 
 def annotate_word(surface: str, raw_reading: str) -> tuple[str, bool, bool]:
-    if not KANJI_RE.search(surface):
+    # Iteration marks inherit the preceding character's reading.  UniDic
+    # normally keeps forms such as 人々 together, but may emit a standalone
+    # 々 for uncommon compounds such as 岩々.  Such a mark must not be treated
+    # as an unknown independent kanji.
+    if not FURIGANA_REQUIRED_RE.search(surface):
         return surface, False, False
     reading = katakana_to_hiragana(raw_reading) if raw_reading and raw_reading != "*" else ""
     used_fallback = False
@@ -177,7 +184,7 @@ def annotate_japanese_run(text: str) -> tuple[str, FuriganaStats]:
         rendered.append(annotated)
         if changed:
             stats.ruby_count += 1
-        elif KANJI_RE.search(word.surface):
+        elif FURIGANA_REQUIRED_RE.search(word.surface):
             stats.unknown_tokens.append(word.surface)
         if fallback:
             stats.fallback_count += 1

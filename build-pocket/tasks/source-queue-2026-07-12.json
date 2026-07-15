@@ -312,6 +312,126 @@
           "after": "\\item\n  cm.\n\\end{enumerate}",
           "expected_count": 1,
           "reason": "Source PDF page 4 visibly reads the Library of Congress catalog abbreviation 'p. cm.'; OCR misread c as e."
+        },
+        {
+          "before": "synchronized to it Picture",
+          "after": "synchronized to it. Picture",
+          "expected_count": 1,
+          "reason": "Source PDF physical page 64 visibly has a period after 'it'."
+        },
+        {
+          "before": "fi!Jed",
+          "after": "filled",
+          "expected_count": 1,
+          "reason": "Source PDF physical page 64 visibly reads 'filled'."
+        },
+        {
+          "before": "smal.l",
+          "after": "small",
+          "expected_count": 1,
+          "reason": "Source PDF physical page 64 visibly reads 'small'."
+        },
+        {
+          "before": "in ills immediate neighborhood",
+          "after": "in his immediate neighborhood",
+          "expected_count": 1,
+          "reason": "Source PDF physical page 64 visibly reads 'his immediate neighborhood'."
+        },
+        {
+          "before": "at ills own pocket watch",
+          "after": "at his own pocket watch",
+          "expected_count": 1,
+          "reason": "Source PDF physical page 64 visibly reads 'his own pocket watch'."
+        },
+        {
+          "before": "HHHHHHHTTTTTTTTTTTTHHHHHHHHH HHHHTTTTT . ..",
+          "after": "\\[\n\\mathrm{H\\,H\\,H\\,H\\,H\\,H\\,H\\,T\\,T\\,T\\,T\\,T\\,T\\,T\\,T\\,T\\,T\\,T\\,T\\,H\\,H\\,H\\,H\\,H\\,H\\,H\\,H\\,H}\n\\]\n\\[\n\\mathrm{H\\,H\\,H\\,H\\,T\\,T\\,T\\,T\\,T\\,\\ldots}\n\\]",
+          "expected_count": 1,
+          "reason": "Source PDF physical page 89 shows this as a two-line symbolic heads/tails history, not prose or OCR debris."
+        },
+        {
+          "before": "Tn the heads-tails world of a single coin, a purely deterministic law would ensure that information is perfectly conserved. For example, if the law is\n\nboth the past and the future can be perfectly predicted.",
+          "after": "In the heads-tails world of a single coin, a purely deterministic law would ensure that information is perfectly conserved. For example, if the law is\n\n\\[\nH \\to T \\qquad T \\to H\n\\]\n\nboth the past and the future can be perfectly predicted.",
+          "expected_count": 1,
+          "reason": "Source PDF physical page 91 shows the omitted centered law H to T, T to H between the two prose fragments and visibly reads 'In'."
+        },
+        {
+          "before": "\\hypertarget{mavtu.-h}{%\n\\section*{mAvtu. \\textgreater{} h}\\label{mavtu.-h}}",
+          "after": "\\[\nm\\,\\Delta v\\,\\Delta x > h\n\\]",
+          "expected_count": 1,
+          "reason": "Source PDF physical page 99 shows a centered uncertainty relation, not a section heading: m Delta-v Delta-x > h."
+        },
+        {
+          "before": "part T witnessed",
+          "after": "part I witnessed",
+          "expected_count": 1,
+          "reason": "Source PDF physical page 169 visibly reads 'part I witnessed'."
+        },
+        {
+          "before": "It was ``Stephen says this'' and .. Stephen says that.\"",
+          "after": "It was ``Stephen says this'' and ``Stephen says that.''",
+          "expected_count": 1,
+          "reason": "Source PDF physical page 169 shows two complete quoted clauses."
+        },
+        {
+          "before": "impression a1 the end",
+          "after": "impression at the end",
+          "expected_count": 1,
+          "reason": "Source PDF physical page 169 visibly reads 'at the end'."
+        },
+        {
+          "before": "fee.Jing",
+          "after": "feeling",
+          "expected_count": 1,
+          "reason": "Source PDF physical page 254 visibly reads 'feeling'."
+        },
+        {
+          "before": "information Leaks out",
+          "after": "information leaks out",
+          "expected_count": 1,
+          "reason": "Source PDF physical page 254 uses lowercase 'leaks' within the sentence."
+        },
+        {
+          "before": "almost as famous as E = mc2",
+          "after": "almost as famous as \\(E = mc^2\\)",
+          "expected_count": 1,
+          "reason": "Source PDF physical page 51 visibly prints Einstein's equation with a superscript 2; OCR flattened the exponent and omitted TeX math delimiters."
+        },
+        {
+          "before": "mass isM",
+          "after": "mass is M",
+          "expected_count": 1,
+          "reason": "Source PDF physical page 51 visibly has a word space before the variable M."
+        },
+        {
+          "before": "6 X 1024 kilograms",
+          "after": "\\(6 \\times 10^{24}\\) kilograms",
+          "expected_count": 2,
+          "reason": "Source PDF physical pages 33 and 51 visibly print 6 times 10 to the 24th kilograms; OCR flattened both superscripts."
+        },
+        {
+          "before": "7 x 1022 kilograms",
+          "after": "\\(7 \\times 10^{22}\\) kilograms",
+          "expected_count": 1,
+          "reason": "Source PDF physical page 51 visibly prints 7 times 10 to the 22nd kilograms; OCR flattened the superscript."
+        },
+        {
+          "before": "4 X 108meters",
+          "after": "\\(4 \\times 10^{8}\\) meters",
+          "expected_count": 1,
+          "reason": "Source PDF physical page 51 visibly prints 4 times 10 to the 8th meters; OCR flattened the superscript and lost a word space."
+        },
+        {
+          "before": "· \\textbf{..} ···\\textasciitilde·NBM \\textbf{.. .\\_\\ldots{}} a---••··\\textsubscript{·N·H·.---}-\\textsubscript{--}·H·M·····----\\textasciitilde·M···--------)\\{",
+          "after": "\\includegraphics[max width=.94\\linewidth,max totalheight=.18\\textheight,keepaspectratio]{/home/lachlan/ProjectsLFS/ZhJpBook/build-pocket/black-hole-war/exact/figures/lineland-beads-page-340.png}",
+          "expected_count": 1,
+          "reason": "Source PDF physical page 340 shows a Lineland bead diagram; the extracted text is OCR noise from that diagram."
+        },
+        {
+          "before": "flabby - .The best",
+          "after": "flabby $\\sim$. The best",
+          "expected_count": 1,
+          "reason": "Source PDF physical page 387 visibly shows a proportionality tilde followed by a sentence break."
         }
       ],
       "note": "Science source; exact/review stage must preserve equations, diagrams, captions, and technical notation where present."

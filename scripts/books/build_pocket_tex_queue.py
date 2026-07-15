@@ -160,6 +160,7 @@ def ensure_header() -> Path:
 \IfFontExistsTF{Noto Serif CJK SC}{\setCJKmainfont{Noto Serif CJK SC}}{}
 \setlength{\parindent}{1.2em}
 \setlength{\parskip}{0.22em}
+\setlength{\footskip}{6mm}
 \emergencystretch=3em
 \sloppy
 \pagestyle{plain}
@@ -545,7 +546,54 @@ def postprocess_tex(tex_path: Path, *, layout: str) -> None:
         )
     text = text.replace(r"\end{longtable}", r"\end{longtable}\endgroup")
     text = wrap_wide_display_math(text, layout=layout)
+    if layout == "pocket":
+        text = apply_pocket_footer_defaults(text)
     tex_path.write_text(text, encoding="utf-8")
+
+
+def apply_pocket_footer_defaults(text: str) -> str:
+    """Keep the A6 page number comfortably inside the physical page."""
+
+    text = re.sub(
+        r"(paperwidth=105mm,paperheight=148mm,inner=6\.5mm,outer=5\.5mm,top=8mm,)bottom=(?:9|10|11|12)mm",
+        r"\1bottom=12mm",
+        text,
+    )
+    footskip = r"\setlength{\footskip}{6mm}"
+    if footskip not in text:
+        marker = r"\pagestyle{plain}"
+        if marker in text:
+            text = text.replace(marker, marker + "\n" + footskip, 1)
+        else:
+            text = text.replace(r"\begin{document}", footskip + "\n" + r"\begin{document}", 1)
+    return text
+
+
+def inject_cover_page(tex_path: Path, cover_path: Path) -> bool:
+    """Insert one full-page cover before the generated title page."""
+
+    if not cover_path.exists():
+        return False
+    text = tex_path.read_text(encoding="utf-8", errors="replace")
+    package = r"\usepackage{pdfpages}"
+    if package not in text:
+        text = text.replace(r"\begin{document}", package + "\n" + r"\begin{document}", 1)
+    begin = "% BUILD_POCKET_COVER_BEGIN"
+    end = "% BUILD_POCKET_COVER_END"
+    cover_block = (
+        begin
+        + "\n"
+        + rf"\includepdf[pages=1,pagecommand={{}},width=\paperwidth,height=\paperheight]{{{cover_path.resolve().as_posix()}}}"
+        + "\n"
+        + end
+    )
+    block_re = re.compile(re.escape(begin) + r".*?" + re.escape(end), re.S)
+    if block_re.search(text):
+        text = block_re.sub(lambda _match: cover_block, text, count=1)
+    else:
+        text = text.replace(r"\begin{document}", r"\begin{document}" + "\n" + cover_block, 1)
+    tex_path.write_text(text, encoding="utf-8")
+    return True
 
 
 def rewrite_markdown_image_paths(markdown: str, base: Path) -> str:
@@ -699,7 +747,7 @@ def plain_text_markdown_to_tex(
         geometry = "paperwidth=148mm,paperheight=210mm,inner=14mm,outer=12mm,top=14mm,bottom=16mm"
         line_stretch = "1.08"
     elif layout == "pocket":
-        geometry = "paperwidth=105mm,paperheight=148mm,inner=6.5mm,outer=5.5mm,top=8mm,bottom=9mm"
+        geometry = "paperwidth=105mm,paperheight=148mm,inner=6.5mm,outer=5.5mm,top=8mm,bottom=12mm"
         line_stretch = "1.12"
     else:
         raise ValueError(layout)
@@ -883,7 +931,7 @@ def pandoc_layout_args(layout: str) -> list[str]:
             "-V",
             "geometry:top=8mm",
             "-V",
-            "geometry:bottom=9mm",
+            "geometry:bottom=12mm",
             "-V",
             "linestretch=1.12",
         ]
@@ -1234,6 +1282,10 @@ def build_one(
                 layout="pocket",
                 source_format=pandoc_format,
             )
+        cover_path = task_dir / "cover/cover.png"
+        if cover_path.exists():
+            inject_cover_page(exact_tex, cover_path)
+            inject_cover_page(pocket_tex, cover_path)
         exact_report = compile_tex(exact_tex, task_dir / "exact/book.pdf")
         pocket_report = compile_tex(pocket_tex, task_dir / "pocket-large-font/book.pdf")
         agent_report: dict[str, Any] = {"ran": False, "mode": "single-final-call"}

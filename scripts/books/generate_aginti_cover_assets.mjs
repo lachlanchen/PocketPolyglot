@@ -116,6 +116,8 @@ const THEME_HINTS = {
     "grim medieval fantasy court intrigue, iron throne silhouette without readable symbols, snow-dark northern forest, dragon-scale texture, red comet glow, austere black, steel, and crimson palette",
   "the-count-of-monte-cristo":
     "Mediterranean prison fortress and sea cliffs, hidden treasure chest glow, elegant nineteenth-century adventure intrigue, moonlit blue and antique gold palette",
+  "red-and-black":
+    "Restoration-era France, an ambitious young provincial man seen in restrained silhouette between a dark clerical interior and a distant crimson military world, severe social hierarchy, psychological conflict, elegant nineteenth-century realism, black, ivory, muted crimson, and antique gold palette",
   "notre-dame-de-paris":
     "Gothic cathedral towers and rose window light over medieval Paris, stone gargoyles, candlelit shadows, tragic romantic grandeur, deep ultramarine and warm amber palette",
   "les-miserables":
