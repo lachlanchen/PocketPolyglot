@@ -10,6 +10,18 @@ PocketPolyglot 可以把双语文本转换成带注音、拼音、语法颜色�
 
 项目本身是工具包，不是原始图书仓库。它包含 TeX 模板、Python 脚本、JSON 示例、预览图和流水线说明。公开发布完整图书前，请确认原文和译文都有可再分发权利。
 
+## 支持 PocketPolyglot
+
+| Donate | PayPal | Stripe |
+| --- | --- | --- |
+| [![Donate](https://img.shields.io/badge/Donate-LazyingArt-0EA5E9?style=for-the-badge&logo=kofi&logoColor=white)](https://chat.lazying.art/donate) | [![PayPal](https://img.shields.io/badge/PayPal-RongzhouChen-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/RongzhouChen) | [![Stripe](https://img.shields.io/badge/Stripe-Donate-635BFF?style=for-the-badge&logo=stripe&logoColor=white)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
+
+## PocketPolyglot Studio
+
+Studio 把 LinguaLeaf、OCR、PDF 转 TeX、验证和导出整合到本地网页应用与 CLI 中。可恢复的 tmux 任务只有在证据检查通过后才会标记为完成。
+
+[![正在运行技术图书队列的 PocketPolyglot Studio](../studio/docs/images/pocketpolyglot-studio-queue.png)](../studio/docs/images/pocketpolyglot-studio-queue.png)
+
 ## 单句全宽示例
 
 《心》的日文主文示例：日文主文带假名，中文注释带拼音，并保留逐词语法颜色。
@@ -65,3 +77,16 @@ make readme-assets
 | `build/` | 生成的 PDF 和中间文件，Git 忽略 |
 
 网站：[learn.lazying.art](https://learn.lazying.art)
+
+## 引用
+
+如果在研究或教学中使用 PocketPolyglot，请引用本仓库。GitHub 会读取 [CITATION.cff](../CITATION.cff) 并显示 **Cite this repository**。
+
+```bibtex
+@software{chen_pocketpolyglot_2026,
+  author = {Chen, Lachlan},
+  title = {PocketPolyglot: Multilingual Interlinear Pocket-Book Studio},
+  year = {2026},
+  url = {https://github.com/lachlanchen/PocketPolyglot}
+}
+```

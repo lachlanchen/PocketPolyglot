@@ -10,6 +10,18 @@ PocketPolyglot は、二言語テキストをルビ、ふりがな、ピンイ�
 
 このリポジトリは原典テキストの配布場所ではなく、テンプレート、スクリプト、サンプル、プレビュー、制作手順をまとめたものです。完全な書籍 PDF を公開する場合は、原文と翻訳の再配布権を確認してください。
 
+## PocketPolyglot を支援する
+
+| Donate | PayPal | Stripe |
+| --- | --- | --- |
+| [![Donate](https://img.shields.io/badge/Donate-LazyingArt-0EA5E9?style=for-the-badge&logo=kofi&logoColor=white)](https://chat.lazying.art/donate) | [![PayPal](https://img.shields.io/badge/PayPal-RongzhouChen-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/RongzhouChen) | [![Stripe](https://img.shields.io/badge/Stripe-Donate-635BFF?style=for-the-badge&logo=stripe&logoColor=white)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
+
+## PocketPolyglot Studio
+
+Studio は LinguaLeaf、OCR、PDF から TeX への変換、検証、書き出しをローカルの Web アプリと CLI に統合します。再開可能な tmux ジョブは、根拠に基づく検証を通過してから完了になります。
+
+[![技術書の処理キューを実行中の PocketPolyglot Studio](../studio/docs/images/pocketpolyglot-studio-queue.png)](../studio/docs/images/pocketpolyglot-studio-queue.png)
+
 ## 一文を横幅いっぱいに表示
 
 『こころ』の日本語本文例です。本文にはふりがな、中国語注にはピンインを載せ、対応語の文法色も残しています。
@@ -65,3 +77,16 @@ make readme-assets
 | `build/` | 生成 PDF と中間ファイル、Git では無視 |
 
 Website: [learn.lazying.art](https://learn.lazying.art)
+
+## 引用
+
+研究や教育で PocketPolyglot を利用する場合は、このリポジトリを引用してください。GitHub は [CITATION.cff](../CITATION.cff) を読み取り、**Cite this repository** を表示します。
+
+```bibtex
+@software{chen_pocketpolyglot_2026,
+  author = {Chen, Lachlan},
+  title = {PocketPolyglot: Multilingual Interlinear Pocket-Book Studio},
+  year = {2026},
+  url = {https://github.com/lachlanchen/PocketPolyglot}
+}
+```

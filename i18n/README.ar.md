@@ -10,6 +10,18 @@ PocketPolyglot يحول النصوص الثنائية اللغة إلى ملفا
 
 هذا المستودع هو مجموعة أدوات: قوالب TeX، وسكربتات Python، وعينات JSON، وصور معاينة، وملاحظات pipeline. انشر الكتب الكاملة فقط عندما تكون حقوق النص والترجمة واضحة وقابلة لإعادة التوزيع.
 
+## دعم PocketPolyglot
+
+| Donate | PayPal | Stripe |
+| --- | --- | --- |
+| [![Donate](https://img.shields.io/badge/Donate-LazyingArt-0EA5E9?style=for-the-badge&logo=kofi&logoColor=white)](https://chat.lazying.art/donate) | [![PayPal](https://img.shields.io/badge/PayPal-RongzhouChen-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/RongzhouChen) | [![Stripe](https://img.shields.io/badge/Stripe-Donate-635BFF?style=for-the-badge&logo=stripe&logoColor=white)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
+
+## PocketPolyglot Studio
+
+يجمع Studio عمليات LinguaLeaf وOCR وتحويل PDF إلى TeX والتحقق والتصدير في تطبيق ويب وواجهة CLI محلية، مع وظائف tmux قابلة للاستئناف وتحقق قائم على الأدلة.
+
+[![PocketPolyglot Studio مع طابور تلميع تقني مباشر](../studio/docs/images/pocketpolyglot-studio-queue.png)](../studio/docs/images/pocketpolyglot-studio-queue.png)
+
 ## جملة واحدة بعرض كامل
 
 مثال JP-main من Kokoro: نص ياباني مع furigana، وتعليق صيني مع pinyin، وألوان نحوية على الكلمات المتقابلة.
@@ -48,3 +60,16 @@ make readme-assets
 ```
 
 الموقع: [learn.lazying.art](https://learn.lazying.art)
+
+## الاستشهاد
+
+إذا استخدمت PocketPolyglot في البحث أو التدريس، فاستشهد بالمستودع. يقرأ GitHub ملف [CITATION.cff](../CITATION.cff) ويعرض خيار **Cite this repository**.
+
+```bibtex
+@software{chen_pocketpolyglot_2026,
+  author = {Chen, Lachlan},
+  title = {PocketPolyglot: Multilingual Interlinear Pocket-Book Studio},
+  year = {2026},
+  url = {https://github.com/lachlanchen/PocketPolyglot}
+}
+```

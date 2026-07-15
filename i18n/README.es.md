@@ -10,6 +10,18 @@ PocketPolyglot convierte textos bilingües en pequeños PDF con ruby, furigana, 
 
 Este repositorio es una caja de herramientas: plantillas TeX, scripts Python, JSON de ejemplo, vistas previas y notas de flujo. Publica libros completos solo cuando los textos y traducciones tengan derechos claros de redistribución.
 
+## Apoya PocketPolyglot
+
+| Donate | PayPal | Stripe |
+| --- | --- | --- |
+| [![Donate](https://img.shields.io/badge/Donate-LazyingArt-0EA5E9?style=for-the-badge&logo=kofi&logoColor=white)](https://chat.lazying.art/donate) | [![PayPal](https://img.shields.io/badge/PayPal-RongzhouChen-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/RongzhouChen) | [![Stripe](https://img.shields.io/badge/Stripe-Donate-635BFF?style=for-the-badge&logo=stripe&logoColor=white)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
+
+## PocketPolyglot Studio
+
+Studio reúne LinguaLeaf, OCR, PDF a TeX, validación y exportación en una aplicación web y CLI locales. Los trabajos reanudables de tmux solo terminan cuando pasan sus comprobaciones de evidencia.
+
+[![PocketPolyglot Studio con una cola técnica activa](../studio/docs/images/pocketpolyglot-studio-queue.png)](../studio/docs/images/pocketpolyglot-studio-queue.png)
+
 ## Una Frase A Todo Ancho
 
 Ejemplo JP-main de Kokoro: texto japonés con furigana, comentario chino con pinyin y color gramatical en las palabras alineadas.
@@ -48,3 +60,16 @@ make readme-assets
 ```
 
 Sitio: [learn.lazying.art](https://learn.lazying.art)
+
+## Cita
+
+Si usas PocketPolyglot en investigación o docencia, cita este repositorio. GitHub lee [CITATION.cff](../CITATION.cff) y muestra **Cite this repository**.
+
+```bibtex
+@software{chen_pocketpolyglot_2026,
+  author = {Chen, Lachlan},
+  title = {PocketPolyglot: Multilingual Interlinear Pocket-Book Studio},
+  year = {2026},
+  url = {https://github.com/lachlanchen/PocketPolyglot}
+}
+```

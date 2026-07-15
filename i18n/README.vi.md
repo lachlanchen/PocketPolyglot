@@ -10,6 +10,18 @@ PocketPolyglot biến văn bản song ngữ thành PDF nhỏ có ruby, furigana,
 
 Kho này là bộ công cụ, không phải nơi phân phối văn bản gốc. Nó gồm mẫu TeX, script Python, JSON mẫu, ảnh xem trước và ghi chú pipeline. Chỉ xuất bản sách đầy đủ khi văn bản và bản dịch có quyền phân phối rõ ràng.
 
+## Ủng hộ PocketPolyglot
+
+| Donate | PayPal | Stripe |
+| --- | --- | --- |
+| [![Donate](https://img.shields.io/badge/Donate-LazyingArt-0EA5E9?style=for-the-badge&logo=kofi&logoColor=white)](https://chat.lazying.art/donate) | [![PayPal](https://img.shields.io/badge/PayPal-RongzhouChen-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/RongzhouChen) | [![Stripe](https://img.shields.io/badge/Stripe-Donate-635BFF?style=for-the-badge&logo=stripe&logoColor=white)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
+
+## PocketPolyglot Studio
+
+Studio hợp nhất LinguaLeaf, OCR, chuyển PDF sang TeX, kiểm định và xuất bản trong ứng dụng web và CLI cục bộ. Các tác vụ tmux có thể tiếp tục chỉ hoàn tất sau khi vượt qua kiểm tra bằng chứng.
+
+[![PocketPolyglot Studio đang chạy hàng đợi sách kỹ thuật](../studio/docs/images/pocketpolyglot-studio-queue.png)](../studio/docs/images/pocketpolyglot-studio-queue.png)
+
 ## Một Câu Toàn Chiều Rộng
 
 Ví dụ JP-main từ Kokoro: văn bản Nhật có furigana, chú thích tiếng Trung có pinyin và màu ngữ pháp trên các từ đã căn hàng.
@@ -48,3 +60,16 @@ make readme-assets
 ```
 
 Trang web: [learn.lazying.art](https://learn.lazying.art)
+
+## Trích dẫn
+
+Nếu dùng PocketPolyglot trong nghiên cứu hoặc giảng dạy, hãy trích dẫn kho này. GitHub đọc [CITATION.cff](../CITATION.cff) và hiển thị **Cite this repository**.
+
+```bibtex
+@software{chen_pocketpolyglot_2026,
+  author = {Chen, Lachlan},
+  title = {PocketPolyglot: Multilingual Interlinear Pocket-Book Studio},
+  year = {2026},
+  url = {https://github.com/lachlanchen/PocketPolyglot}
+}
+```

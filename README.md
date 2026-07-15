@@ -10,10 +10,17 @@ Generate beautiful pocket-size interlinear books for language learning.
 [![TeX](https://img.shields.io/badge/XeLaTeX-pocket%20books-0f766e)](https://www.tug.org/xetex/)
 [![Python](https://img.shields.io/badge/Python-pipeline-3776ab)](scripts/)
 [![JSON](https://img.shields.io/badge/JSON-line%20aligned-f59e0b)](data/interlinear/sample.json)
+[![GitHub Sponsors](https://img.shields.io/github/sponsors/lachlanchen?style=flat&logo=githubsponsors&label=Sponsor)](https://github.com/sponsors/lachlanchen)
 
 PocketPolyglot turns bilingual texts into ruby, pinyin, grammar-colored, line-aligned pocket books. The current production workflow focuses on Chinese/Japanese editions, but the data model is language-pair neutral: EN-JP, ZH-EN, classical-modern, and other paired reading formats can use the same structure.
 
 The repository is a toolkit: TeX templates, Python scripts, JSON schemas, preview assets, and sample data. Bring your own rights-cleared source texts before publishing full generated books.
+
+## Support PocketPolyglot
+
+| Donate | PayPal | Stripe |
+| --- | --- | --- |
+| [![Donate](https://img.shields.io/badge/Donate-LazyingArt-0EA5E9?style=for-the-badge&logo=kofi&logoColor=white)](https://chat.lazying.art/donate) | [![PayPal](https://img.shields.io/badge/PayPal-RongzhouChen-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/RongzhouChen) | [![Stripe](https://img.shields.io/badge/Stripe-Donate-635BFF?style=for-the-badge&logo=stripe&logoColor=white)](https://buy.stripe.com/aFadR8gIaflgfQV6T4fw400) |
 
 ## PocketPolyglot Studio
 
@@ -22,6 +29,8 @@ PDF-to-TeX, PocketPolished, validation, cover, and export commands into one
 local work surface. It includes a responsive web app and a Codex-style CLI,
 with `gpt-5.6-sol` low reasoning as the responsive chat default and automatic
 reasoning escalation for repair and audit work.
+
+[![PocketPolyglot Studio showing a live technical-book polish queue](studio/docs/images/pocketpolyglot-studio-queue.png)](studio/docs/images/pocketpolyglot-studio-queue.png)
 
 ```sh
 make studio-install
@@ -358,3 +367,18 @@ Stable token fields:
 PocketPolyglot is designed for language learners, teachers, and book builders who want maintainable bilingual editions rather than manually aligned TeX. Keep source rights clear: publish templates, samples, and previews freely; publish full book PDFs only when the source text and translation can be redistributed.
 
 Project site: [learn.lazying.art](https://learn.lazying.art)
+
+## Citation
+
+If you use PocketPolyglot in research or teaching, cite the repository. GitHub
+reads [CITATION.cff](CITATION.cff) and provides a **Cite this repository**
+panel on the project page.
+
+```bibtex
+@software{chen_pocketpolyglot_2026,
+  author = {Chen, Lachlan},
+  title = {PocketPolyglot: Multilingual Interlinear Pocket-Book Studio},
+  year = {2026},
+  url = {https://github.com/lachlanchen/PocketPolyglot}
+}
+```
