@@ -1238,6 +1238,18 @@ class PocketPolishPipelineTest(unittest.TestCase):
         self.assertIn(r"\caption{Title\\[0pt]", rendered)
         self.assertEqual(rendered.count(r"\begin{adjustbox}"), 1)
         self.assertEqual(restore_split_optional_linebreaks("\\\\\n[0,1]"), "\\\\{}\n[0,1]")
+        self.assertEqual(
+            restore_split_optional_linebreaks(
+                "\\end{JpSecondary}\n\\\\[0pt]\nAfter"
+            ),
+            "\\end{JpSecondary}\n\\par\nAfter",
+        )
+        self.assertEqual(
+            restore_split_optional_linebreaks(
+                "\\caption{Title\n\\\\[0pt]\ncontinued}"
+            ),
+            "\\caption{Title\n\\\\[0pt]\ncontinued}",
+        )
 
     def test_cover_injection_preserves_document_paper_geometry(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

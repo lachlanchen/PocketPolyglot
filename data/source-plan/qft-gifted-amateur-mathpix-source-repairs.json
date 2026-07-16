@@ -63,6 +63,12 @@
       "reason": "PDF page 204 shows the complete Feynman-rule item and figure reference; the zero-point linebreak was misparsed as truncated TeX."
     },
     {
+      "before": "\\caption{Fig. 42.3 (a) Order in the superfluid corresponds to a uniform phase angle across the entire system. This is represented on a lattice here. (b) A gradient in the phase \\(\\boldsymbol { \\nabla } \\theta ( x )\\) results in a current in the superfluid.\\\\\n\\({ } ^ { 9 }\\) Note that \\(\\Phi ^ { \\dagger } = \\sqrt { \\rho } \\mathrm { e } ^ { - \\mathrm { i } \\theta }\\) and so\n\\[\\partial _ { 0 } \\Phi = \\mathrm { i } \\partial _ { 0 } \\theta \\sqrt { \\rho } \\mathrm { e } ^ { \\mathrm { i } \\theta } + \\frac { 1 } { 2 \\sqrt { \\rho } } \\mathrm { e } ^ { \\mathrm { i } \\theta } \\partial _ { 0 } \\rho\\]}\n\\end{center}\n\\end{figure}",
+      "after": "\\caption{Fig. 42.3 (a) Order in the superfluid corresponds to a uniform phase angle across the entire system. This is represented on a lattice here. (b) A gradient in the phase \\(\\boldsymbol { \\nabla } \\theta ( x )\\) results in a current in the superfluid.}\n\\end{center}\n\\end{figure}\n\n\\({ } ^ { 9 }\\) Note that \\(\\Phi ^ { \\dagger } = \\sqrt { \\rho } \\mathrm { e } ^ { - \\mathrm { i } \\theta }\\) and so\n\n\\[\\partial _ { 0 } \\Phi = \\mathrm { i } \\partial _ { 0 } \\theta \\sqrt { \\rho } \\mathrm { e } ^ { \\mathrm { i } \\theta } + \\frac { 1 } { 2 \\sqrt { \\rho } } \\mathrm { e } ^ { \\mathrm { i } \\theta } \\partial _ { 0 } \\rho\\]",
+      "expected_count": 1,
+      "reason": "PDF page 375 shows Fig. 42.3's caption ending after 'current in the superfluid'; sidenote 9 and its display equation are separate content below the figure. Mathpix omitted the caption brace and swallowed both into the float."
+    },
+    {
       "before": "shown in Fig. 32.2. Since\\\\\n",
       "after": "shown in Fig. 32.2. Since the counterterm is proportional to \\(\\phi ^ { 4 }\\), it has the same behaviour as the \\(\\frac { \\lambda } { 4! } \\phi ^ { 4 }\\) term.\\\\\n",
       "expected_count": 1,

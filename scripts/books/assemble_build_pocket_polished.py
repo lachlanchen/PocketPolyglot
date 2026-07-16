@@ -544,6 +544,12 @@ def restore_split_optional_linebreaks(tex: str) -> str:
     """Restore caption boundaries split immediately before ``\\[dimension]``."""
 
     tex = re.sub(
+        r"(?m)(?P<prefix>\\end\{JpSecondary\}[ \t]*\n)"
+        r"[ \t]*\\\\\[\d+(?:\.\d+)?(?:pt|mm|cm|em|ex)\][ \t]*$",
+        lambda match: match.group("prefix") + r"\par",
+        tex,
+    )
+    tex = re.sub(
         r"(?<!\\)\\\[(?P<space>\d+(?:\.\d+)?(?:pt|mm|cm|em|ex))\]",
         lambda match: rf"\\[{match.group('space')}]",
         tex,
@@ -667,7 +673,13 @@ def fuse_english_main_japanese_secondary(
     if furigana.unknown_tokens:
         examples = ", ".join(dict.fromkeys(furigana.unknown_tokens[:12]))
         raise ValueError(f"Japanese furigana missing for: {examples}")
-    return inject_fusion_preamble(restore_split_optional_linebreaks("".join(parts))), furigana
+    fused = restore_split_optional_linebreaks("".join(parts))
+    fused = inject_fusion_preamble(fused)
+    # Environment fusion can move a formerly inline optional line break onto
+    # its own line when the Japanese secondary block is inserted. Normalize
+    # once more against the final structure so XeLaTeX never sees a bare
+    # ``\\[0pt]`` command.
+    return restore_split_optional_linebreaks(fused), furigana
 
 
 def copy_and_rewrite_figures(tex: str, destination: Path) -> str:
