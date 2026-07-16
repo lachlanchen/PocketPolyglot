@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "book_id": "game-theory-101-mathpix-exact-book",
+  "replacements": [
+    {"before": "player 2's payoffs for these outcomes are 2,3 , and \\(9 . - 1,2\\), and 5 are all distinct numbers.", "after": "player 2's payoffs for these outcomes are 2, 3, and 9. -1, 2, and 5 are all distinct numbers.", "expected_count": 1, "reason": "PDF page 204 shows player 2's list ending at 9 and the next sentence beginning with player 1's distinct payoffs -1, 2, and 5."},
+    {"before": "\\(1 / 3 ^ { \\prime \\prime }\\) is insufficient", "after": "\\(1 / 3\\)\" is insufficient", "expected_count": 1, "reason": "PDF page 306 shows a closing quotation mark OCR-fused into the probability as double primes."},
+    {"before": "if x is not equal to \\(0 , \\mathrm { x }\\) and y must both", "after": "if x is not equal to \\(0\\), x and y must both", "expected_count": 1, "reason": "PDF page 308 visibly reads: if x is not equal to 0, x and y must both."},
+    {"before": "Now he earns -y with probability \\(\\sigma _ { \\text {rock } } , z\\) with probability \\(\\sigma _ { \\text {paper } }\\)", "after": "Now he earns -y with probability \\(\\sigma _ { \\text {rock } }\\), z with probability \\(\\sigma _ { \\text {paper } }\\)", "expected_count": 1, "reason": "PDF page 390 and the adjacent expected-utility equation establish separate payoff z and paper-probability atoms."},
+    {"before": "\\\\\n3 ) Players sometimes have incentive", "after": "\n  \\item Players sometimes have incentive", "expected_count": 1, "reason": "PDF page 269 shows the third Takeaway Point; restore its list item structure without changing prose."},
+    {"before": "  \\item Forward induction assumes all past play was rational. 2) The inferences players make", "after": "  \\item Forward induction assumes all past play was rational.\n  \\item The inferences players make", "expected_count": 1, "reason": "PDF page 302 shows two numbered Takeaway Points fused onto one extracted line."}
+  ]
+}

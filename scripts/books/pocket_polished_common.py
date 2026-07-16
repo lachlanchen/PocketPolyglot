@@ -20,7 +20,8 @@ OUTPUT_ROOT = ROOT / "build-pocket-polished"
 ATOMIC_ENV_RE = re.compile(
     r"\\begin\{(?P<env>longtable|tabular\*?|tabularx|equation\*?|align\*?|"
     r"gather\*?|multline\*?|displaymath|math|tikzpicture|picture|verbatim|"
-    r"lstlisting|adjustbox)\}(?P<body>.*?)\\end\{(?P=env)\}",
+    r"lstlisting|adjustbox|center(?=\}(?:(?!\\end\{center\}).){0,4000}\\multirow))\}"
+    r"(?P<body>.*?)\\end\{(?P=env)\}",
     re.S,
 )
 DISPLAY_MATH_RE = re.compile(r"\\\[.*?\\\]", re.S)
@@ -974,6 +975,16 @@ def japanese_translation_optional(source_plain: str) -> bool:
             re.I,
         )
     )
+
+
+def source_is_notation_only(source_tex: str) -> bool:
+    """Return true for protected/structural rows with no translatable prose."""
+
+    without_tokens = PROTECTED_TOKEN_RE.sub("", source_tex)
+    without_tokens = re.sub(r"\\(?:begin|end)\{[^{}]+\}", "", without_tokens)
+    without_commands = re.sub(r"\\[A-Za-z@]+(?:\[[^\]]*\])?", "", without_tokens)
+    without_braces = re.sub(r"[{}\\]", "", without_commands)
+    return not re.search(r"[A-Za-z]{2,}", without_braces)
 
 
 def table_signature(text: str) -> dict[str, int]:

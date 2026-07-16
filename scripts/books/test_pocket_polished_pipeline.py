@@ -66,6 +66,23 @@ def source_segment(segment_id: str, source_tex: str) -> dict:
 
 
 class PocketPolishPipelineTest(unittest.TestCase):
+    def test_center_wrapped_nested_table_is_one_atomic_segment(self):
+        from pocket_polished_common import split_tex_segments
+
+        tex = r"\begin{document}\begin{center}\begin{adjustbox}{max width=\linewidth}\begin{tabular}{lll}\multirow{2}{*}{A} & B & C \\\\ \multicolumn{3}{l}{text}\end{tabular}\end{adjustbox}\end{center}\end{document}"
+        segments = split_tex_segments(tex, "nested", validation_profile="technical_exact")
+        body = [row for row in segments if "multicolumn" in row["source_tex"]]
+        self.assertEqual(len(body), 1)
+        self.assertIn(r"\begin{center}", body[0]["source_tex"])
+        self.assertIn(r"\end{center}", body[0]["source_tex"])
+
+    def test_notation_only_source_excludes_prose_labels(self):
+        from pocket_polished_common import source_is_notation_only
+
+        self.assertTrue(source_is_notation_only(r"@@PROTECTED_0001@@ (2) @@PROTECTED_0002@@"))
+        self.assertTrue(source_is_notation_only(r"\begin{Verbatim}@@PROTECTED_0001@@\end{Verbatim}"))
+        self.assertFalse(source_is_notation_only(r"Result: @@PROTECTED_0001@@"))
+
     def setUp(self) -> None:
         self.first = source_segment("book-s000001", "It ended.Then 2.87 million remained.")
         self.second = source_segment("book-s000002", "The value was 1905.")

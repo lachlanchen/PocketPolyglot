@@ -25,6 +25,7 @@ from pocket_polished_common import (
     machine_review_observations,
     read_json,
     read_jsonl,
+    source_is_notation_only,
     validate_chunk_output,
     validate_segment_output,
     write_json,
@@ -398,6 +399,10 @@ def canonicalize_writer_result(
                 errors[segment_id].append("unresolved must be an array")
                 continue
             ja_tex = remove_surplus_protected_tokens(source["source_tex"], ja_tex)
+            if source_is_notation_only(source["source_tex"]):
+                # Language-invariant equations, labels, and protected
+                # structural blocks must not acquire invented connective text.
+                ja_tex = source["source_tex"]
             en_tex, changes, repair_errors = apply_grounded_english_repairs(
                 source["source_tex"], repairs
             )
