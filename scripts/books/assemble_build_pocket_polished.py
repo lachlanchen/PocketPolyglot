@@ -22,6 +22,7 @@ from build_pocket_tex_queue import (
 from japanese_tex_furigana import FuriganaStats, annotate_japanese_tex
 from pocket_polished_common import (
     apply_exact_text_replacements,
+    ENVIRONMENT_COMMAND_RE,
     INLINE_MATH_RE,
     MATH_ENV_RE,
     OUTPUT_ROOT,
@@ -128,9 +129,6 @@ GREEK_MATH_COMMANDS = {
 }
 HEADING_COMMAND_RE = re.compile(
     r"\\(?P<command>part|chapter|section|subsection|subsubsection|paragraph)\*?\s*\{"
-)
-ENVIRONMENT_COMMAND_RE = re.compile(
-    r"\\(?P<action>begin|end)\{(?P<environment>[A-Za-z*@]+)\}"
 )
 SHARED_CONTROL_MARKERS = (
     r"\tableofcontents",

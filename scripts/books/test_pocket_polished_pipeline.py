@@ -48,6 +48,7 @@ from pocket_polished_common import (
     structural_command_signature,
     table_signature,
     validate_segment_output,
+    validate_tex_environment_balance,
 )
 
 
@@ -66,6 +67,23 @@ def source_segment(segment_id: str, source_tex: str) -> dict:
 
 
 class PocketPolishPipelineTest(unittest.TestCase):
+    def test_source_environment_validation_rejects_crossed_closures(self):
+        with self.assertRaisesRegex(
+            ValueError,
+            "closing adjustbox while Verbatim is open",
+        ):
+            validate_tex_environment_balance(
+                r"\\begin{Verbatim}D\\begin{tabular}{cc}x&y\\end{tabular}"
+                r"\\end{adjustbox}\\end{Verbatim}"
+            )
+
+    def test_source_environment_validation_accepts_nested_table(self):
+        validate_tex_environment_balance(
+            r"\\begin{center}\\begin{adjustbox}{max width=\\linewidth}"
+            r"\\begin{tabular}{cc}x&y\\end{tabular}"
+            r"\\end{adjustbox}\\end{center}"
+        )
+
     def test_center_wrapped_nested_table_is_one_atomic_segment(self):
         from pocket_polished_common import split_tex_segments
 

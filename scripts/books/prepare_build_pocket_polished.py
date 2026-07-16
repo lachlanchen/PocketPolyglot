@@ -25,6 +25,7 @@ from pocket_polished_common import (
     source_english_writer_schema,
     source_tasks,
     split_tex_segments,
+    validate_tex_environment_balance,
     write_json,
     write_jsonl,
 )
@@ -117,6 +118,7 @@ def prepare_book(
         source_text
     )
     source_normalizations.extend(prose_join_normalizations)
+    validate_tex_environment_balance(source_text)
     source_tex.parent.mkdir(parents=True, exist_ok=True)
     source_tex.write_text(source_text, encoding="utf-8")
     write_json(

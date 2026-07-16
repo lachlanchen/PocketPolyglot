@@ -116,10 +116,37 @@ HEADING_START_TEX_RE = re.compile(
     r"begin|includegraphics)\b",
     re.I,
 )
+ENVIRONMENT_COMMAND_RE = re.compile(
+    r"\\(?P<action>begin|end)\{(?P<environment>[A-Za-z*@]+)\}"
+)
 
 
 def sha256_text(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def validate_tex_environment_balance(tex: str) -> None:
+    """Reject mismatched TeX environments before splitting model tasks."""
+
+    stack: list[tuple[str, int]] = []
+    for match in ENVIRONMENT_COMMAND_RE.finditer(tex):
+        environment = match.group("environment")
+        line = tex.count("\n", 0, match.start()) + 1
+        if match.group("action") == "begin":
+            stack.append((environment, line))
+            continue
+        if not stack or stack[-1][0] != environment:
+            current = stack[-1][0] if stack else "none"
+            raise ValueError(
+                "malformed source environment at line "
+                f"{line}: closing {environment} while {current} is open"
+            )
+        stack.pop()
+    if stack:
+        environment, line = stack[-1]
+        raise ValueError(
+            f"malformed source environment: unclosed {environment} from line {line}"
+        )
 
 
 ANSI_ITALIC_RE = re.compile(r"\x1b\[3m(?P<body>.*?)\x1b\[0m", re.DOTALL)
