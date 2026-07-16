@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "book_id": "qft-gifted-amateur-mathpix-exact-book",
+  "replacements": [
+    {
+      "before": "17.1 The field propagator in out155 line 155",
+      "after": "17.1 The field propagator in outline 155",
+      "expected_count": 1,
+      "reason": "PDF page 173 shows the chapter entry '17.1 The field propagator in outline' followed by page 155; Mathpix fused the wrapped word and page number."
+    },
+    {
+      "before": "\\begin{Verbatim}[breaklines=true,breakanywhere=true,fontsize=\\scriptsize]\nInteracting and non-interacting theories\n\n\\begin{tabular} { c c } \nNon-interacting & Interacting \\\\\n\\(\\hat { H } _ { 0 }\\) & \\(\\hat { H } = \\hat { H } _ { 0 } + \\hat { H } ^ { \\prime }\\) \\\\\n\\(| 0 \\rangle\\) & \\(| \\Omega \\rangle\\) \\\\\n\\(G _ { 0 } ( x , y )\\) & \\(G ( x , y )\\) \\\\\nNo scattering & Scattering\n\\end{tabular}\\end{adjustbox}\n\\end{Verbatim}",
+      "after": "\\begin{center}\n\\textbf{Interacting and non-interacting theories}\\par\\smallskip\n\\begin{adjustbox}{max width=\\linewidth}\n\\begin{tabular}{cc}\nNon-interacting & Interacting \\\\\n\\(\\hat { H } _ { 0 }\\) & \\(\\hat { H } = \\hat { H } _ { 0 } + \\hat { H } ^ { \\prime }\\) \\\\\n\\(| 0 \\rangle\\) & \\(| \\Omega \\rangle\\) \\\\\n\\(G _ { 0 } ( x , y )\\) & \\(G ( x , y )\\) \\\\\nNo scattering & Scattering \\\\\n\\end{tabular}\n\\end{adjustbox}\n\\end{center}",
+      "expected_count": 1,
+      "reason": "PDF page 173 shows a titled two-column comparison table. Mathpix opened Verbatim and emitted an unmatched adjustbox close instead of preserving the table structure."
+    }
+  ]
+}
