@@ -468,14 +468,21 @@ def split_shared_environment_scaffold(en_tex: str, ja_tex: str) -> tuple[str, st
         ja_lines.pop()
     shared_source_lines = set(en_lines)
     shared_source_stripped = {line.strip() for line in en_lines}
-    ja_lines = [
-        line
-        for line in ja_lines
-        if line not in shared_source_lines
-        and not (
-            r"\includegraphics" in line and line.strip() in shared_source_stripped
-        )
-    ]
+    filtered_ja_lines: list[str] = []
+    for line in ja_lines:
+        if r"\includegraphics" in line and line.strip() in shared_source_stripped:
+            continue
+        if line not in shared_source_lines:
+            filtered_ja_lines.append(line)
+            continue
+        # Remove shared environment scaffolding without discarding adjacent
+        # syntax that closes a translated command argument. Mathpix commonly
+        # emits ``}\begin{itemize}`` on one line after a sidenote; dropping
+        # the whole line leaves the translated ``\footnotetext{...`` open.
+        residual = ENVIRONMENT_COMMAND_RE.sub("", line)
+        if residual.strip():
+            filtered_ja_lines.append(residual)
+    ja_lines = filtered_ja_lines
     suffix = "".join(shared_suffix)
     if suffix:
         en_body = en_tex[: -len(suffix)]
@@ -510,7 +517,13 @@ def restore_secondary_list_scaffold(en_tex: str, ja_tex: str) -> str:
     environment = environments[0]
     begin = rf"\begin{{{environment}}}"
     end = rf"\end{{{environment}}}"
-    return f"{begin}\n{ja_tex.strip()}\n{end}"
+    first_item = re.search(r"(?m)^\s*\\item\b", ja_tex)
+    if first_item is None:
+        return ja_tex
+    prefix = ja_tex[: first_item.start()].rstrip()
+    items = ja_tex[first_item.start() :].strip()
+    wrapped = f"{begin}\n{items}\n{end}"
+    return f"{prefix}\n{wrapped}" if prefix else wrapped
 
 
 def demote_secondary_captions(tex: str) -> str:

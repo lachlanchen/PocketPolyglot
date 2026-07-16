@@ -26,6 +26,7 @@ from assemble_build_pocket_polished import (
     normalize_unwrapped_math_fragments,
     restore_secondary_list_scaffold,
     restore_split_optional_linebreaks,
+    split_shared_environment_scaffold,
 )
 from build_pocket_tex_queue import (
     inject_cover_page,
@@ -224,6 +225,24 @@ class PocketPolishPipelineTest(unittest.TestCase):
         restored = restore_secondary_list_scaffold(source, translated)
         self.assertIn("\\begin{itemize}\n\\item 一つ目。", restored)
         self.assertEqual(restored.count(r"\item"), 2)
+
+    def test_secondary_list_preserves_translated_prefix_before_items(self) -> None:
+        source = (
+            "\\footnotetext{Note.\n}\\begin{itemize}\n"
+            "\\item First.\n\\end{itemize}"
+        )
+        translated = (
+            "\\footnotetext{注。\n}\\begin{itemize}\n"
+            "\\item 一つ目。\n\\end{itemize}"
+        )
+        en_body, suffix, secondary = split_shared_environment_scaffold(
+            source, translated
+        )
+        restored = restore_secondary_list_scaffold(en_body + suffix, secondary)
+        self.assertTrue(restored.startswith("\\footnotetext{注。\n}\n"))
+        self.assertIn("\\begin{itemize}\n\\item 一つ目。", restored)
+        self.assertEqual(restored.count(r"\begin{itemize}"), 1)
+        self.assertEqual(restored.count(r"\end{itemize}"), 1)
 
     def test_secondary_caption_keeps_text_without_duplicate_float_command(self) -> None:
         translated = r"\caption{\JpRuby{図}{ず}235.1}"

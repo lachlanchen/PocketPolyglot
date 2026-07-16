@@ -69,6 +69,18 @@
       "reason": "PDF page 375 shows Fig. 42.3's caption ending after 'current in the superfluid'; sidenote 9 and its display equation are separate content below the figure. Mathpix omitted the caption brace and swallowed both into the float."
     },
     {
+      "before": "\\caption{Fig. 49.4 The hedgehog solution.\\\\\n",
+      "after": "\\caption{Fig. 49.4 The hedgehog solution.}\n\\end{center}\n\\end{figure}\n\n",
+      "expected_count": 1,
+      "reason": "PDF page 454 shows the Fig. 49.4 caption ending after 'The hedgehog solution.'; sidenote 7 begins below it and is not part of the caption."
+    },
+    {
+      "before": "the \\(S O ( 3 )\\) theory will be sufficient for examining monopoles solutions.)}\n\\end{center}\n\\end{figure}",
+      "after": "the \\(S O ( 3 )\\) theory will be sufficient for examining monopole solutions.)",
+      "expected_count": 1,
+      "reason": "Move the former Fig. 49.4 caption tail into standalone sidenote 7 after closing the float, and correct the visible grammatical typo 'monopoles solutions' without altering its meaning."
+    },
+    {
       "before": "shown in Fig. 32.2. Since\\\\\n",
       "after": "shown in Fig. 32.2. Since the counterterm is proportional to \\(\\phi ^ { 4 }\\), it has the same behaviour as the \\(\\frac { \\lambda } { 4! } \\phi ^ { 4 }\\) term.\\\\\n",
       "expected_count": 1,
