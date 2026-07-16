@@ -81,7 +81,43 @@ class PocketPolishPipelineTest(unittest.TestCase):
 
         self.assertTrue(source_is_notation_only(r"@@PROTECTED_0001@@ (2) @@PROTECTED_0002@@"))
         self.assertTrue(source_is_notation_only(r"\begin{Verbatim}@@PROTECTED_0001@@\end{Verbatim}"))
+        self.assertTrue(
+            source_is_notation_only(
+                r"\begin{Verbatim}[breaklines=true]\(\mathrm{EU}_{\text{left}}=4\)\end{Verbatim}"
+            )
+        )
+        self.assertTrue(
+            source_is_notation_only(
+                r"\(\mathrm{EU}_{\text{up}}=\mathrm{EU}_{\text{down}}\) (2) \(7\sigma=3\)"
+            )
+        )
         self.assertFalse(source_is_notation_only(r"Result: @@PROTECTED_0001@@"))
+
+    def test_notation_only_source_does_not_require_japanese_script(self):
+        source = source_segment(
+            "book-notation",
+            r"\(\mathrm{EU}_{\text{up}}=\mathrm{EU}_{\text{down}}\) (2) \(7\sigma_{\text{left}}=3\)",
+        )
+        task = dict(
+            self.task,
+            segments=[source],
+            segment_count=1,
+            validation_profile="technical_exact",
+        )
+        output = {
+            "segment_id": source["segment_id"],
+            "source_sha256": source["source_sha256"],
+            "en_tex": source["source_tex"],
+            "ja_tex": source["source_tex"],
+            "changes": [],
+            "unresolved": [],
+        }
+        errors = validate_segment_output(task, source, output)
+        self.assertNotIn(
+            "book-notation: Japanese output contains no Japanese script",
+            errors,
+        )
+        self.assertNotIn("book-notation: Japanese prose contains no kana", errors)
 
     def setUp(self) -> None:
         self.first = source_segment("book-s000001", "It ended.Then 2.87 million remained.")

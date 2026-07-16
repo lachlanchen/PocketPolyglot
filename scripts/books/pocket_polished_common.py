@@ -981,7 +981,13 @@ def source_is_notation_only(source_tex: str) -> bool:
     """Return true for protected/structural rows with no translatable prose."""
 
     without_tokens = PROTECTED_TOKEN_RE.sub("", source_tex)
-    without_tokens = re.sub(r"\\(?:begin|end)\{[^{}]+\}", "", without_tokens)
+    without_tokens = INLINE_MATH_RE.sub("", without_tokens)
+    without_tokens = MATH_ENV_RE.sub("", without_tokens)
+    without_tokens = re.sub(
+        r"\\(?:begin|end)\{[^{}]+\}(?:\[[^\]]*\])?",
+        "",
+        without_tokens,
+    )
     without_commands = re.sub(r"\\[A-Za-z@]+(?:\[[^\]]*\])?", "", without_tokens)
     without_braces = re.sub(r"[{}\\]", "", without_commands)
     return not re.search(r"[A-Za-z]{2,}", without_braces)
@@ -1327,6 +1333,7 @@ def validate_segment_output(
         errors.append(prefix + "Japanese length suggests omission or unsupported expansion")
     if (
         source_len >= 40
+        and not source_is_notation_only(source["source_tex"])
         and not japanese_translation_optional(source_plain)
         and japanese_kana_required(source["source_tex"], source_plain)
         and not KANA_RE.search(ja_plain)
