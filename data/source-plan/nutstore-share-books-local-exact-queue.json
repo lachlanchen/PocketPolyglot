@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "queue_id": "nutstore-share-books-local-exact-2026-07-17",
+  "source_root": "sources/nutstore-share-books",
+  "workspace_root": "build-pocket",
+  "conversion_policy": {
+    "mathpix": false,
+    "body": "real TeX only",
+    "pdf_engine": "Marker/Surya local GPU extraction in resumable page shards",
+    "formula_fallback": "local pix2tex on explicitly reviewed equation crops only",
+    "layouts": [
+      "exact",
+      "pocket-large-font"
+    ],
+    "facsimile_completion": false
+  },
+  "tasks": [
+    {
+      "book_id": "history-of-western-philosophy-russell-local-exact",
+      "category": "philosophy",
+      "title": "History of Western Philosophy",
+      "author": "Bertrand Russell",
+      "source": "sources/nutstore-share-books/history-of-western-philosophy/en/History of Western Philosophy - Bertrand Russell.epub",
+      "validation_profile": "prose_exact",
+      "max_overfull_pt": 18.0
+    },
+    {
+      "book_id": "theoretical-minimum-classical-mechanics-local-exact",
+      "category": "physics",
+      "title": "The Theoretical Minimum: Classical Mechanics",
+      "author": "Leonard Susskind and George Hrabovsky",
+      "source": "sources/nutstore-share-books/theoretical-minimum-classical-mechanics/en/The Theoretical Minimum - Classical Mechanics (2014).pdf",
+      "validation_profile": "technical_exact",
+      "marker_shard_pages": 32,
+      "minimum_math_blocks": 5,
+      "max_overfull_pt": 18.0
+    },
+    {
+      "book_id": "theoretical-minimum-quantum-mechanics-local-exact",
+      "category": "physics",
+      "title": "Quantum Mechanics: The Theoretical Minimum",
+      "author": "Leonard Susskind and Art Friedman",
+      "source": "sources/nutstore-share-books/theoretical-minimum-quantum-mechanics/en/Quantum Mechanics - The Theoretical Minimum (2014).pdf",
+      "validation_profile": "technical_exact",
+      "marker_shard_pages": 32,
+      "minimum_math_blocks": 5,
+      "max_overfull_pt": 18.0
+    },
+    {
+      "book_id": "theoretical-minimum-general-relativity-local-exact",
+      "category": "physics",
+      "title": "General Relativity: The Theoretical Minimum",
+      "author": "Leonard Susskind and Andre Cabannes",
+      "source": "sources/nutstore-share-books/theoretical-minimum-general-relativity/en/General Relativity - The Theoretical Minimum (2023).pdf",
+      "validation_profile": "technical_exact",
+      "marker_shard_pages": 32,
+      "minimum_math_blocks": 5,
+      "max_overfull_pt": 18.0
+    },
+    {
+      "book_id": "elements-of-information-theory-local-exact",
+      "category": "information-theory",
+      "title": "Elements of Information Theory",
+      "author": "Thomas M. Cover and Joy A. Thomas",
+      "source": "sources/nutstore-share-books/elements-of-information-theory/en/Elements of Information Theory (2006).pdf",
+      "validation_profile": "technical_exact",
+      "marker_shard_pages": 32,
+      "minimum_math_blocks": 5,
+      "minimum_source_text_coverage_ratio": 0.55,
+      "max_overfull_pt": 18.0
+    },
+    {
+      "book_id": "first-course-in-string-theory-local-exact",
+      "category": "physics",
+      "title": "A First Course in String Theory",
+      "author": "Barton Zwiebach",
+      "source": "sources/nutstore-share-books/first-course-in-string-theory/en/A First Course in String Theory (2009).pdf",
+      "validation_profile": "technical_exact",
+      "marker_shard_pages": 32,
+      "minimum_math_blocks": 5,
+      "minimum_source_text_coverage_ratio": 0.55,
+      "max_overfull_pt": 18.0
+    },
+    {
+      "book_id": "essentials-of-computational-chemistry-local-exact",
+      "category": "computational-chemistry",
+      "title": "Essentials of Computational Chemistry: Theories and Models",
+      "author": "Christopher J. Cramer",
+      "source": "sources/nutstore-share-books/essentials-of-computational-chemistry/en/Essentials of Computational Chemistry (2004).pdf",
+      "validation_profile": "technical_exact",
+      "marker_shard_pages": 32,
+      "minimum_math_blocks": 5,
+      "minimum_source_text_coverage_ratio": 0.55,
+      "max_overfull_pt": 18.0
+    },
+    {
+      "book_id": "introduction-to-computational-chemistry-local-exact",
+      "category": "computational-chemistry",
+      "title": "Introduction to Computational Chemistry",
+      "author": "Frank Jensen",
+      "source": "sources/nutstore-share-books/introduction-to-computational-chemistry/en/Introduction to Computational Chemistry (2017).pdf",
+      "validation_profile": "technical_exact",
+      "marker_shard_pages": 32,
+      "minimum_math_blocks": 5,
+      "minimum_source_text_coverage_ratio": 0.55,
+      "max_overfull_pt": 18.0
+    }
+  ]
+}

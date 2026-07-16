@@ -10,6 +10,7 @@ an image-only placeholder.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import posixpath
@@ -159,6 +160,14 @@ def env_int(name: str, default: int = 0) -> int:
         return int(value)
     except ValueError:
         return default
+
+
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
 
 
 def ensure_header() -> Path:
@@ -329,12 +338,34 @@ KNOWN_LATEX_COMMANDS = {
     "mathrm",
     "mathit",
     "mathcal",
+    "text",
+    "operatorname",
+    "displaystyle",
     "frac",
     "sqrt",
     "sum",
     "prod",
     "int",
     "lim",
+    "log",
+    "ln",
+    "exp",
+    "sin",
+    "cos",
+    "tan",
+    "max",
+    "min",
+    "det",
+    "tag",
+    "overline",
+    "underline",
+    "vec",
+    "hat",
+    "bar",
+    "dot",
+    "ddot",
+    "bra",
+    "ket",
     "alpha",
     "beta",
     "gamma",
@@ -418,13 +449,16 @@ def repair_body_backslash_artifacts(text: str) -> str:
     text = re.sub(r"(?m)^hypersetup\{", r"\\hypersetup{", text)
     text = re.sub(r"(?m)^setstretch\{", r"\\setstretch{", text)
     text = re.sub(r"\\Vi\s+thin\b", "Within", text)
-    text = WORD_BACKSLASH_ARTIFACT_RE.sub("", text)
-    text = re.sub(r"(?<=[^\W\d_])\?\\(?=[^\W\d_])", "", text)
-    text = re.sub(r"(?<=[,;:.!?])\\(?=[a-z])", " ", text)
     for enum_label in ("labelenumi", "labelenumii", "labelenumiii", "labelenumiv"):
         text = text.replace("\\" + "def" + enum_label, "\\" + "def\\" + enum_label)
     text = re.sub(r"\bincludesemph\{", r"includes \\emph{", text)
-    return strip_unknown_text_commands(text)
+    # Preserve unknown commands here. Technical OCR emits valid domain macros
+    # such as \log, \operatorname, \tag, \text, \ket, and \bra. Removing a
+    # command merely because it is absent from a hand-maintained allow-list can
+    # silently change an equation while still producing a compilable PDF.
+    # Concrete undefined commands are handled later from XeLaTeX evidence by
+    # repair_undefined_word_command().
+    return text
 
 
 def remove_text_backslash_artifacts(text: str) -> str:
@@ -527,18 +561,13 @@ def transform_outside_wide_math_wrappers(text: str, transform: Any) -> str:
 
 def scaled_display_math(body: str) -> str:
     body = body.strip()
-    factor = display_math_scale_factor(body)
     return (
         "\n"
         + WIDE_MATH_BEGIN
-        + "\n\\begin{center}\n"
-        "\\begin{adjustbox}{max width=\\linewidth}\n"
-        f"\\begin{{minipage}}{{{factor:.2f}\\linewidth}}\n"
-        "\\[\n"
+        + "\n\\Needspace{6\\baselineskip}\n\\begin{center}\n"
+        "\\resizebox{.94\\linewidth}{!}{\\(\\displaystyle\n"
         + body
-        + "\n\\]\n"
-        "\\end{minipage}\n"
-        "\\end{adjustbox}\n"
+        + "\n\\)}\n"
         "\\end{center}\n"
         + WIDE_MATH_END
         + "\n"
@@ -560,9 +589,15 @@ def wrap_wide_display_math(text: str, *, layout: str) -> str:
         def repl(match: re.Match[str]) -> str:
             body = match.group(1).strip()
             compact = re.sub(r"\s+", "", body)
+            # ``\tag`` is valid in an amsmath display but not inside the
+            # horizontal math box used for deterministic width fitting.
+            # Keep tagged displays intact instead of silently damaging their
+            # numbering semantics.
+            if r"\tag{" in body:
+                return match.group(0)
             if len(compact) < minimum_length and not any(
                 token in body
-                for token in [r"\begin{split}", r"\begin{aligned}", r"\tag{"]
+                for token in [r"\begin{split}", r"\begin{aligned}"]
             ):
                 return match.group(0)
             return scaled_display_math(body)
@@ -597,7 +632,7 @@ def wrap_wide_math_environments(text: str, *, layout: str) -> tuple[str, int]:
             return (
                 "\n"
                 + WIDE_MATH_BEGIN
-                + "\n\\begin{center}\n"
+                + "\n\\Needspace{6\\baselineskip}\n\\begin{center}\n"
                 + "\\begin{adjustbox}{max width=\\linewidth}\n"
                 + f"\\begin{{minipage}}{{{factor:.2f}\\linewidth}}\n"
                 + f"\\begin{{{environment}}}"
@@ -787,7 +822,223 @@ def pdftotext_to_markdown(source: Path, task_dir: Path) -> Path:
     return prepared
 
 
-def marker_pdf_to_markdown(source: Path, task_dir: Path, *, force: bool) -> Path:
+def marker_executable() -> Path:
+    candidates = [
+        ROOT / ".venv/ocr/bin/marker_single",
+        Path.home() / ".local/bin/marker_single",
+    ]
+    resolved = shutil.which("marker_single", path=f"{Path.home() / '.local/bin'}:{os.environ.get('PATH', '')}")
+    if resolved:
+        candidates.append(Path(resolved))
+    for candidate in candidates:
+        if candidate.exists() and os.access(candidate, os.X_OK):
+            return candidate
+    raise RuntimeError("marker_single is not available; cannot run structured local PDF extraction")
+
+
+def source_pdf_pages(source: Path) -> int:
+    result = run_capture(["pdfinfo", str(source)], check=True)
+    match = re.search(r"^Pages:\s+(\d+)\s*$", result.stdout, re.M)
+    if not match:
+        raise RuntimeError(f"cannot determine PDF page count: {source}")
+    return int(match.group(1))
+
+
+def marker_markdown(root: Path) -> Path | None:
+    candidates = sorted(root.glob("**/*.md"), key=lambda path: path.stat().st_size, reverse=True)
+    return candidates[0] if candidates else None
+
+
+def merge_marker_shard(
+    markdown: str,
+    *,
+    markdown_dir: Path,
+    media_dir: Path,
+    shard_id: str,
+) -> tuple[str, int]:
+    copied = 0
+    media_dir.mkdir(parents=True, exist_ok=True)
+
+    def repl(match: re.Match[str]) -> str:
+        nonlocal copied
+        prefix, raw, suffix = match.groups()
+        target = raw.strip().strip("<>")
+        if re.match(r"^[a-zA-Z][a-zA-Z0-9+.-]*:", target):
+            return match.group(0)
+        source_image = Path(target)
+        if not source_image.is_absolute():
+            source_image = (markdown_dir / source_image).resolve()
+        if not source_image.is_file():
+            return match.group(0)
+        safe_basename = re.sub(r"[^A-Za-z0-9._-]+", "-", source_image.name).strip("-")
+        destination = media_dir / f"{shard_id}-{safe_basename}"
+        if not destination.exists() or destination.stat().st_size != source_image.stat().st_size:
+            shutil.copy2(source_image, destination)
+        copied += 1
+        return f"{prefix}{destination.resolve().as_posix()}{suffix}"
+
+    return MARKDOWN_IMAGE_RE.sub(repl, markdown), copied
+
+
+def marker_pdf_to_markdown_sharded(
+    source: Path,
+    task_dir: Path,
+    *,
+    force: bool,
+    shard_pages: int,
+) -> Path:
+    marker_bin = marker_executable()
+    source_hash = sha256_file(source)
+    page_count = source_pdf_pages(source)
+    shard_root = task_dir / "work/marker-shards"
+    media_dir = task_dir / "work/marker-merged/media"
+    prepared = task_dir / "review/source-from-marker.md"
+    merged_status_path = task_dir / "review/marker-merge-status.json"
+
+    if force:
+        shutil.rmtree(shard_root, ignore_errors=True)
+        shutil.rmtree(media_dir.parent, ignore_errors=True)
+        prepared.unlink(missing_ok=True)
+        merged_status_path.unlink(missing_ok=True)
+    elif prepared.exists() and merged_status_path.exists():
+        status = read_json(merged_status_path)
+        if (
+            status.get("source_sha256") == source_hash
+            and status.get("page_count") == page_count
+            and status.get("shard_pages") == shard_pages
+            and status.get("status") == "complete"
+        ):
+            return prepared
+
+    shard_root.mkdir(parents=True, exist_ok=True)
+    parts: list[str] = []
+    shard_reports: list[dict[str, Any]] = []
+    total_images = 0
+    for page_start in range(1, page_count + 1, shard_pages):
+        page_end = min(page_count, page_start + shard_pages - 1)
+        shard_id = f"pages-{page_start:04d}-{page_end:04d}"
+        shard_dir = shard_root / shard_id
+        status_path = shard_dir / "status.json"
+        markdown_path = marker_markdown(shard_dir)
+        reusable = False
+        if status_path.exists() and markdown_path is not None:
+            prior = read_json(status_path)
+            reusable = (
+                prior.get("status") == "complete"
+                and prior.get("source_sha256") == source_hash
+                and prior.get("page_start") == page_start
+                and prior.get("page_end") == page_end
+            )
+        if not reusable:
+            shutil.rmtree(shard_dir, ignore_errors=True)
+            shard_dir.mkdir(parents=True, exist_ok=True)
+            log_file = shard_dir / "marker.log"
+            command = [
+                str(marker_bin),
+                str(source),
+                "--page_range",
+                f"{page_start - 1}-{page_end - 1}",
+                "--output_dir",
+                str(shard_dir),
+                "--output_format",
+                "markdown",
+                "--disable_multiprocessing",
+                "--disable_tqdm",
+                "--highres_image_dpi",
+                "240",
+            ]
+            marker_timeout_seconds = env_int("POCKET_MARKER_SHARD_TIMEOUT_SECONDS", 1800)
+            if marker_timeout_seconds > 0 and shutil.which("timeout") is not None:
+                command = ["timeout", f"{marker_timeout_seconds}s", *command]
+            log(f"[marker] {source.name} pages {page_start}-{page_end}/{page_count}")
+            code = run_stream(command, log_file=log_file)
+            markdown_path = marker_markdown(shard_dir)
+            if code != 0 or markdown_path is None:
+                write_json(
+                    status_path,
+                    {
+                        "status": "blocked",
+                        "source_sha256": source_hash,
+                        "page_start": page_start,
+                        "page_end": page_end,
+                        "exit_code": code,
+                    },
+                )
+                raise RuntimeError(
+                    f"Marker failed for source pages {page_start}-{page_end}; see {log_file}"
+                )
+            write_json(
+                status_path,
+                {
+                    "status": "complete",
+                    "source_sha256": source_hash,
+                    "page_start": page_start,
+                    "page_end": page_end,
+                    "exit_code": code,
+                    "markdown": str(markdown_path.relative_to(ROOT)),
+                },
+            )
+
+        assert markdown_path is not None
+        shard_text = clean_text(markdown_path.read_text(encoding="utf-8", errors="replace"))
+        shard_text, image_count = merge_marker_shard(
+            shard_text,
+            markdown_dir=markdown_path.parent,
+            media_dir=media_dir,
+            shard_id=shard_id,
+        )
+        if len(re.sub(r"\s+", "", shard_text)) < 20 and page_end - page_start >= 2:
+            raise RuntimeError(f"Marker shard is unexpectedly empty: {shard_id}")
+        total_images += image_count
+        parts.append(f"<!-- source-pages:{page_start}-{page_end} -->\n\n{shard_text.strip()}")
+        shard_reports.append(
+            {
+                "shard": shard_id,
+                "page_start": page_start,
+                "page_end": page_end,
+                "markdown": str(markdown_path.relative_to(ROOT)),
+                "text_chars": len(re.sub(r"\s+", "", shard_text)),
+                "image_references": image_count,
+            }
+        )
+
+    merged = "\n\n".join(parts).strip() + "\n"
+    prepared.parent.mkdir(parents=True, exist_ok=True)
+    prepared.write_text(merged, encoding="utf-8")
+    if len(re.sub(r"\s+", "", merged)) < max(500, page_count * 80):
+        raise RuntimeError(f"merged Marker output too short to trust: {prepared}")
+    write_json(
+        merged_status_path,
+        {
+            "status": "complete",
+            "engine": "marker-surya-local-sharded",
+            "source_sha256": source_hash,
+            "page_count": page_count,
+            "shard_pages": shard_pages,
+            "shards": shard_reports,
+            "merged_markdown": str(prepared.relative_to(ROOT)),
+            "text_chars": len(re.sub(r"\s+", "", merged)),
+            "image_references": total_images,
+        },
+    )
+    return prepared
+
+
+def marker_pdf_to_markdown(
+    source: Path,
+    task_dir: Path,
+    *,
+    force: bool,
+    shard_pages: int = 0,
+    allow_text_fallback: bool = True,
+) -> Path:
+    if shard_pages > 0:
+        return marker_pdf_to_markdown_sharded(
+            source,
+            task_dir,
+            force=force,
+            shard_pages=shard_pages,
+        )
     marker_root = task_dir / "work/marker"
     marker_root.mkdir(parents=True, exist_ok=True)
     existing = sorted(marker_root.glob("**/*.md"))
@@ -796,16 +1047,17 @@ def marker_pdf_to_markdown(source: Path, task_dir: Path, *, force: bool) -> Path
 
     extraction_mode = os.environ.get("POCKET_PDF_EXTRACTION", "").strip().lower()
     if extraction_mode in {"pdftotext", "text"} or os.environ.get("POCKET_SKIP_MARKER") == "1":
+        if not allow_text_fallback:
+            raise RuntimeError("technical_exact tasks require structured local extraction; pdftotext is not sufficient")
         return pdftotext_to_markdown(source, task_dir)
 
-    if shutil.which("marker_single", path=f"{Path.home() / '.local/bin'}:{os.environ.get('PATH', '')}") is None:
-        raise RuntimeError("marker_single is not available; cannot run local PDF-to-TeX extraction")
+    marker_bin = marker_executable()
 
     log_file = task_dir / "review/marker.log"
     if log_file.exists():
         log_file.unlink()
     cmd = [
-        "marker_single",
+        str(marker_bin),
         str(source),
         "--output_dir",
         str(marker_root),
@@ -818,6 +1070,8 @@ def marker_pdf_to_markdown(source: Path, task_dir: Path, *, force: bool) -> Path
         cmd = ["timeout", f"{marker_timeout_seconds}s", *cmd]
     code = run_stream(cmd, log_file=log_file)
     if code != 0:
+        if not allow_text_fallback:
+            raise RuntimeError(f"marker_single failed with exit code {code}; see {log_file}")
         log(f"[warn] marker_single failed with exit code {code}; trying pdftotext real-text fallback")
         return pdftotext_to_markdown(source, task_dir)
 
@@ -1155,6 +1409,16 @@ def repair_undefined_word_command(tex_path: Path, log_file: Path) -> bool:
     old = lines[line_no - 1]
     new = remove_text_backslash_artifacts(old)
     if new == old:
+        # Repair only an OCR-created command embedded inside a word, and only
+        # after XeLaTeX has proved the line contains an undefined control
+        # sequence. Adjacent valid commands such as ``\log\frac`` are retained
+        # because ``frac`` is in the command set.
+        for candidate in re.finditer(r"(?<=[^\W\d_])\\([A-Za-z]{2,})", old):
+            if candidate.group(1) in KNOWN_LATEX_COMMANDS:
+                continue
+            new = old[: candidate.start()] + old[candidate.start() + 1 :]
+            break
+    if new == old:
         return False
     lines[line_no - 1] = new
     tex_path.write_text("".join(lines), encoding="utf-8")
@@ -1235,6 +1499,94 @@ def validate_pdf(pdf: Path, log_path: Path, tex_path: Path) -> dict[str, Any]:
         "worst_overfull_pt": max(overfull) if overfull else 0,
         "latex_error_markers": LATEX_ERROR_RE.findall(log_text)[:20],
     }
+
+
+def pdf_embedded_image_count(pdf: Path) -> int:
+    result = run_capture(["pdfimages", "-list", str(pdf)], check=False)
+    if result.returncode:
+        return -1
+    return sum(1 for line in result.stdout.splitlines() if re.match(r"^\s*\d+\s+\d+\s+", line))
+
+
+def generated_structure_report(source: Path, exact_report: dict[str, Any]) -> dict[str, Any]:
+    tex_path = ROOT / exact_report["tex"]
+    tex = tex_path.read_text(encoding="utf-8", errors="replace")
+    source_report: dict[str, Any] = {
+        "kind": classify_source(source),
+        "sha256": sha256_file(source),
+        "size_bytes": source.stat().st_size,
+    }
+    if source.suffix.lower() == ".pdf":
+        source_report.update(
+            {
+                "pages": source_pdf_pages(source),
+                "text_chars": pdf_text_chars(source),
+                "embedded_images": pdf_embedded_image_count(source),
+            }
+        )
+    return {
+        "source": source_report,
+        "generated": {
+            "text_chars": exact_report.get("text_chars", 0),
+            "includegraphics_count": exact_report.get("includegraphics_count", 0),
+            "display_math_count": len(DISPLAY_MATH_RE.findall(tex))
+            + len(DISPLAY_MATH_ENV_RE.findall(tex)),
+            "inline_math_count": len(INLINE_MATH_RE.findall(tex)),
+            "has_toc": r"\tableofcontents" in tex,
+        },
+    }
+
+
+def completion_issues(
+    task: dict[str, Any],
+    source: Path,
+    exact_report: dict[str, Any],
+    pocket_report: dict[str, Any],
+) -> tuple[list[str], dict[str, Any]]:
+    profile = str(task.get("validation_profile") or "basic")
+    structure = generated_structure_report(source, exact_report)
+    generated = structure["generated"]
+    source_report = structure["source"]
+    issues: list[str] = []
+
+    for layer_name, report in (("exact", exact_report), ("pocket", pocket_report)):
+        if report.get("latex_error_markers"):
+            issues.append(f"{layer_name} TeX log contains LaTeX error markers")
+        max_overfull = float(task.get("max_overfull_pt", 18.0))
+        if float(report.get("worst_overfull_pt", 0)) > max_overfull:
+            issues.append(
+                f"{layer_name} worst overfull line is {report.get('worst_overfull_pt')}pt "
+                f"(limit {max_overfull}pt)"
+            )
+    if not generated["has_toc"]:
+        issues.append("generated exact TeX has no table of contents")
+
+    minimum_chars = int(task.get("minimum_generated_text_chars", 5000))
+    if profile == "technical_exact" and source_report.get("pages"):
+        minimum_chars = max(minimum_chars, int(source_report["pages"]) * 80)
+    if int(generated["text_chars"]) < minimum_chars:
+        issues.append(
+            f"generated text is too short: {generated['text_chars']} chars (minimum {minimum_chars})"
+        )
+
+    if profile == "technical_exact":
+        source_text_chars = int(source_report.get("text_chars") or 0)
+        if source_text_chars >= 5000:
+            ratio = int(generated["text_chars"]) / source_text_chars
+            structure["generated"]["source_text_coverage_ratio"] = round(ratio, 4)
+            minimum_ratio = float(task.get("minimum_source_text_coverage_ratio", 0.55))
+            if ratio < minimum_ratio:
+                issues.append(
+                    f"generated/source text coverage is {ratio:.3f} (minimum {minimum_ratio:.3f})"
+                )
+        if int(source_report.get("embedded_images") or 0) > 0 and int(generated["includegraphics_count"]) == 0:
+            issues.append("technical source has embedded images but generated TeX references none")
+        minimum_math = int(task.get("minimum_math_blocks", 5))
+        math_count = int(generated["display_math_count"]) + int(generated["inline_math_count"])
+        if math_count < minimum_math:
+            issues.append(f"technical TeX has only {math_count} math blocks (minimum {minimum_math})")
+
+    return issues, structure
 
 
 def tex_context(tex_path: Path, line_no: int, *, radius: int = 4) -> str:
@@ -1402,7 +1754,14 @@ def build_one(
         if not source.exists():
             raise FileNotFoundError(source)
         if source_kind == "pdf":
-            body_source = marker_pdf_to_markdown(source, task_dir, force=force)
+            validation_profile = str(task.get("validation_profile") or "basic")
+            body_source = marker_pdf_to_markdown(
+                source,
+                task_dir,
+                force=force,
+                shard_pages=int(task.get("marker_shard_pages") or 0),
+                allow_text_fallback=validation_profile != "technical_exact",
+            )
             pandoc_format = "pdftotext" if body_source.name == "source-from-pdftotext.md" else "markdown"
         elif source_kind == "epub":
             body_source = repair_epub_for_pandoc(source, task_dir, force=force)
@@ -1447,8 +1806,15 @@ def build_one(
             if agent_report.get("exit_code") == 0:
                 pocket_report = compile_tex(pocket_tex, task_dir / "pocket-large-font/book.pdf")
 
+        validation_issues, structure_report = completion_issues(
+            task,
+            source,
+            exact_report,
+            pocket_report,
+        )
+
         synced_to = ""
-        if sync:
+        if sync and not validation_issues:
             share_root.mkdir(parents=True, exist_ok=True)
             filename = safe_name(f"{title} - pocket large font.pdf")
             dest = share_root / filename
@@ -1457,17 +1823,22 @@ def build_one(
 
         status = {
             "book_id": book_id,
-            "status": "complete",
+            "status": "blocked" if validation_issues else "complete",
             "source": str(source.relative_to(ROOT)),
             "source_kind": source_kind,
             "started": started,
             "finished": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
             "exact": exact_report,
             "pocket": pocket_report,
+            "validation_profile": task.get("validation_profile", "basic"),
+            "validation_issues": validation_issues,
+            "structure_evidence": structure_report,
             "final_agent_optimization": agent_report,
             "synced_to": synced_to,
             "policy": "real TeX body only; no page-image-only output",
         }
+        if validation_issues:
+            status["reason"] = "; ".join(validation_issues)
     except Exception as exc:
         status = {
             "book_id": book_id,
