@@ -24,6 +24,7 @@ from assemble_build_pocket_polished import (
     fit_short_simple_longtables,
     fuse_english_main_japanese_secondary,
     normalize_unwrapped_math_fragments,
+    pocket_layout,
     remove_legacy_full_page_cover,
     restore_secondary_list_scaffold,
     restore_split_optional_linebreaks,
@@ -245,6 +246,14 @@ class PocketPolishPipelineTest(unittest.TestCase):
         self.assertIn("\\begin{itemize}\n\\item 一つ目。", restored)
         self.assertEqual(restored.count(r"\begin{itemize}"), 1)
         self.assertEqual(restored.count(r"\end{itemize}"), 1)
+
+    def test_secondary_stream_does_not_duplicate_shared_inline_graphic(self) -> None:
+        graphic = r"\includegraphics[width=1em]{shared-arrow.png}"
+        source = graphic + " source continuation"
+        translated = graphic + " 翻訳の続き"
+        _, _, secondary = split_shared_environment_scaffold(source, translated)
+        self.assertNotIn(r"\includegraphics", secondary)
+        self.assertIn("翻訳の続き", secondary)
 
     def test_secondary_caption_keeps_text_without_duplicate_float_command(self) -> None:
         translated = r"\caption{\JpRuby{図}{ず}235.1}"
@@ -1309,6 +1318,22 @@ class PocketPolishPipelineTest(unittest.TestCase):
         self.assertNotIn("cover.png", cleaned)
         self.assertIn("\\frontmatter", cleaned)
         self.assertIn("\\mainmatter", cleaned)
+
+    def test_pocket_layout_makes_self_labeled_urls_breakable(self) -> None:
+        source = (
+            "\\documentclass{book}\n\\usepackage{geometry}\n"
+            "\\usepackage{hyperref}\n"
+            "\\geometry{paperwidth=210mm,paperheight=297mm,inner=18mm,"
+            "outer=18mm,top=18mm,bottom=20mm,footskip=10mm}\n"
+            "\\begin{document}"
+            "\\href{https://example.com/a/very/long/path}"
+            "{https://example.com/a/very/long/path}"
+            "\\end{document}"
+        )
+        rendered = pocket_layout(source)
+        self.assertIn(r"\usepackage{xurl}", rendered)
+        self.assertIn(r"\url{https://example.com/a/very/long/path}", rendered)
+        self.assertNotIn(r"\href{https://example.com/a/very/long/path}", rendered)
 
     def test_cover_injection_preserves_document_paper_geometry(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

@@ -66,6 +66,10 @@ SIMPLE_LONGTABLE_RE = re.compile(
     r"\\end\{longtable\}",
     re.S,
 )
+SELF_LABELED_HREF_RE = re.compile(
+    r"\\href\{(?P<target>https?://[^{}\s]+)\}"
+    r"\{(?P<label>https?://[^{}\s]+)\}"
+)
 PLAIN_LOG_EXPRESSION_RE = re.compile(
     r"(?<![\\$A-Za-z0-9_])(?P<lhs>[A-Za-z]+_[A-Za-z0-9]+)\s*=\s*"
     r"(?P<sign>[+-]?)log\s*(?P<argument>[ερλχσθαβγδA-Za-z][A-Za-z0-9_]*)"
@@ -479,6 +483,18 @@ def strip_shared_document_controls(en_tex: str, ja_tex: str) -> str:
 def split_shared_environment_scaffold(en_tex: str, ja_tex: str) -> tuple[str, str, str]:
     """Separate translated inner rows from identical environment closing rows."""
 
+    source_graphics = {
+        match.group("detokenized_path") or match.group("path")
+        for match in INCLUDEGRAPHICS_RE.finditer(en_tex)
+    }
+    if source_graphics:
+        ja_tex = INCLUDEGRAPHICS_RE.sub(
+            lambda match: ""
+            if (match.group("detokenized_path") or match.group("path"))
+            in source_graphics
+            else match.group(0),
+            ja_tex,
+        )
     en_lines = en_tex.splitlines(keepends=True)
     ja_lines = ja_tex.splitlines(keepends=True)
     while en_lines and ja_lines and en_lines[0] == ja_lines[0]:
@@ -849,6 +865,25 @@ def pocket_layout(tex: str) -> str:
         )
     if not count:
         raise ValueError("cannot derive pocket layout: source geometry was not recognized")
+    text = SELF_LABELED_HREF_RE.sub(
+        lambda match: rf"\url{{{match.group('target')}}}"
+        if match.group("target") == match.group("label")
+        else match.group(0),
+        text,
+    )
+    if r"\usepackage{xurl}" not in text:
+        if r"\usepackage{hyperref}" in text:
+            text = text.replace(
+                r"\usepackage{hyperref}",
+                r"\usepackage{xurl}" + "\n" + r"\usepackage{hyperref}",
+                1,
+            )
+        else:
+            text = text.replace(
+                r"\begin{document}",
+                r"\usepackage{xurl}" + "\n" + r"\begin{document}",
+                1,
+            )
     text = re.sub(r"\\setstretch\{1\.0?8\}", lambda _match: r"\setstretch{1.12}", text)
     text = re.sub(r"\\linespread\{1\.0[0-9]\}", lambda _match: r"\linespread{1.10}", text)
     text = text.replace(
