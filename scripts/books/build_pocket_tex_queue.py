@@ -1361,6 +1361,8 @@ def pandoc_to_tex(
         f"title={title}",
         "--metadata",
         f"author={author}",
+        "--metadata",
+        "date=",
         "--include-in-header",
         str(header),
         "--extract-media",
