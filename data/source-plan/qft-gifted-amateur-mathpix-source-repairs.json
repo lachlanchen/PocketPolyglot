@@ -33,6 +33,12 @@
       "reason": "PDF page 103 shows 'on rotations.' only as the continuation of the running header 'Quantum mechanical transformations'; it is not body prose."
     },
     {
+      "before": "\\frac { \\partial H } { \\partial \\boldsymbol { p } } \\right) (\\) eqn 5.15).",
+      "after": "\\frac { \\partial H } { \\partial \\boldsymbol { p } } \\right)\\) (eqn 5.15).",
+      "expected_count": 1,
+      "reason": "The Fig. 5.1 caption identifies the complete gradient formula followed by the prose reference '(eqn 5.15)'; Mathpix placed the reference's opening parenthesis inside math mode."
+    },
+    {
       "before": "the Hamiltonian density \\(\\mathcal { H }\\) is now an operator \\(\\hat { \\mathcal { H } }\\) which acts on\\\\\n",
       "after": "the Hamiltonian density \\(\\mathcal { H }\\) is now an operator \\(\\hat { \\mathcal { H } }\\) which acts on state vectors.\\\\\n",
       "expected_count": 1,

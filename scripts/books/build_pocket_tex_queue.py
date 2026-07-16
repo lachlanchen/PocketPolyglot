@@ -35,7 +35,11 @@ OVERFULL_HOTSPOT_RE = re.compile(
     r"Overfull \\hbox \(([-0-9.]+)pt too wide\)"
     r"(?: in paragraph at lines (\d+)(?:--(\d+))?| detected at line (\d+))"
 )
-LATEX_ERROR_RE = re.compile(r"^! |Fatal error|Emergency stop|Undefined control sequence", re.M)
+LATEX_ERROR_RE = re.compile(
+    r"^! (?:LaTeX|Package|Class|File ended|Missing |Extra |Undefined |Emergency |Fatal )"
+    r"|Fatal error|Emergency stop|Undefined control sequence",
+    re.M,
+)
 INCLUDEGRAPHICS_RE = re.compile(r"\\includegraphics(?:\[[^\]]*\])?(\{[^}]+\})")
 LONGTABLE_SPEC_RE = re.compile(r"(\\begin\{longtable\}(?:\[[^\]]*\])?\{)([^{}]*(?:@\{\}[^{}]*)?)(\})")
 SIMPLE_LONGTABLE_SPEC_RE = re.compile(
@@ -50,6 +54,22 @@ ADJUSTBOX_DISPLAY_MATH_RE = re.compile(
     r"\\end\{minipage\}\s*"
     r"\\end\{adjustbox\}",
     re.S,
+)
+DISPLAY_MATH_ENV_RE = re.compile(
+    r"\\begin\{(?P<environment>equation\*?|align\*?|gather\*?|multline\*?)\}"
+    r"(?P<body>.*?)"
+    r"\\end\{(?P=environment)\}",
+    re.S,
+)
+WIDE_MATH_BEGIN = "% BUILD_POCKET_WIDE_MATH_BEGIN"
+WIDE_MATH_END = "% BUILD_POCKET_WIDE_MATH_END"
+WIDE_MATH_WRAPPER_RE = re.compile(
+    re.escape(WIDE_MATH_BEGIN) + r".*?" + re.escape(WIDE_MATH_END),
+    re.S,
+)
+MOVING_ARGUMENT_RE = re.compile(
+    r"\\(?:caption|chapter|section|subsection|subsubsection|footnote|footnotetext)"
+    r"(?:\[[^\]]*\])?\{"
 )
 SERVER_UNSAFE_FILENAME_CHARS = str.maketrans(
     {
@@ -477,21 +497,41 @@ def remove_source_contents_block(text: str) -> str:
 
 
 def display_math_scale_factor(body: str) -> float:
-    compact_len = len(re.sub(r"\s+", "", body))
-    if compact_len < 130:
+    rows = re.split(r"\\\\(?:\[[^\]]*\])?", body)
+    compact_len = max((len(re.sub(r"\s+", "", row)) for row in rows), default=0)
+    if compact_len < 100:
         return 1.55
-    if compact_len < 220:
-        return 2.20
-    if compact_len < 340:
-        return 2.90
-    return 3.60
+    if compact_len < 180:
+        return 2.30
+    if compact_len < 300:
+        return 3.40
+    if compact_len < 450:
+        return 4.80
+    if compact_len < 700:
+        return 6.50
+    return 9.00
+
+
+def transform_outside_wide_math_wrappers(text: str, transform: Any) -> str:
+    """Apply a TeX transform without nesting generated width wrappers."""
+
+    parts: list[str] = []
+    cursor = 0
+    for match in WIDE_MATH_WRAPPER_RE.finditer(text):
+        parts.append(transform(text[cursor : match.start()]))
+        parts.append(match.group(0))
+        cursor = match.end()
+    parts.append(transform(text[cursor:]))
+    return "".join(parts)
 
 
 def scaled_display_math(body: str) -> str:
     body = body.strip()
     factor = display_math_scale_factor(body)
     return (
-        "\n\\begin{center}\n"
+        "\n"
+        + WIDE_MATH_BEGIN
+        + "\n\\begin{center}\n"
         "\\begin{adjustbox}{max width=\\linewidth}\n"
         f"\\begin{{minipage}}{{{factor:.2f}\\linewidth}}\n"
         "\\[\n"
@@ -500,6 +540,8 @@ def scaled_display_math(body: str) -> str:
         "\\end{minipage}\n"
         "\\end{adjustbox}\n"
         "\\end{center}\n"
+        + WIDE_MATH_END
+        + "\n"
     )
 
 
@@ -508,17 +550,69 @@ def wrap_wide_display_math(text: str, *, layout: str) -> str:
 
     if layout not in {"exact", "pocket"}:
         return text
-    text = ADJUSTBOX_DISPLAY_MATH_RE.sub(lambda match: scaled_display_math(match.group(1)), text)
     minimum_length = 55 if layout == "pocket" else 95
 
-    def repl(match: re.Match[str]) -> str:
-        body = match.group(1).strip()
-        compact = re.sub(r"\s+", "", body)
-        if len(compact) < minimum_length and not any(token in body for token in [r"\begin{split}", r"\begin{aligned}", r"\tag{"]):
-            return match.group(0)
-        return scaled_display_math(body)
+    def transform(fragment: str) -> str:
+        fragment = ADJUSTBOX_DISPLAY_MATH_RE.sub(
+            lambda match: scaled_display_math(match.group(1)), fragment
+        )
 
-    return DISPLAY_MATH_RE.sub(repl, text)
+        def repl(match: re.Match[str]) -> str:
+            body = match.group(1).strip()
+            compact = re.sub(r"\s+", "", body)
+            if len(compact) < minimum_length and not any(
+                token in body
+                for token in [r"\begin{split}", r"\begin{aligned}", r"\tag{"]
+            ):
+                return match.group(0)
+            return scaled_display_math(body)
+
+        return DISPLAY_MATH_RE.sub(repl, fragment)
+
+    return transform_outside_wide_math_wrappers(text, transform)
+
+
+def wrap_wide_math_environments(text: str, *, layout: str) -> tuple[str, int]:
+    """Fit long equation/align/gather environments without changing their TeX."""
+
+    if layout not in {"exact", "pocket"}:
+        return text, 0
+    minimum_length = 55 if layout == "pocket" else 95
+    fitted = 0
+
+    def transform(fragment: str) -> str:
+        def repl(match: re.Match[str]) -> str:
+            nonlocal fitted
+            body = match.group("body")
+            rows = re.split(r"\\\\(?:\[[^\]]*\])?", body)
+            longest = max(
+                (len(re.sub(r"\s+", "", row)) for row in rows),
+                default=0,
+            )
+            if longest < minimum_length and r"\tag{" not in body:
+                return match.group(0)
+            fitted += 1
+            factor = display_math_scale_factor(body)
+            environment = match.group("environment")
+            return (
+                "\n"
+                + WIDE_MATH_BEGIN
+                + "\n\\begin{center}\n"
+                + "\\begin{adjustbox}{max width=\\linewidth}\n"
+                + f"\\begin{{minipage}}{{{factor:.2f}\\linewidth}}\n"
+                + f"\\begin{{{environment}}}"
+                + body
+                + f"\\end{{{environment}}}\n"
+                + "\\end{minipage}\n"
+                + "\\end{adjustbox}\n"
+                + "\\end{center}\n"
+                + WIDE_MATH_END
+                + "\n"
+            )
+
+        return DISPLAY_MATH_ENV_RE.sub(repl, fragment)
+
+    return transform_outside_wide_math_wrappers(text, transform), fitted
 
 
 def wrap_wide_inline_math(text: str, *, layout: str) -> tuple[str, int]:
@@ -527,11 +621,30 @@ def wrap_wide_inline_math(text: str, *, layout: str) -> tuple[str, int]:
     if layout not in {"exact", "pocket"}:
         return text, 0
     text_atom_length = 120 if layout == "exact" else 90
-    absolute_length = 320 if layout == "exact" else 240
+    absolute_length = 180 if layout == "exact" else 100
     fitted = 0
+    moving_spans: list[tuple[int, int]] = []
+    for command in MOVING_ARGUMENT_RE.finditer(text):
+        depth = 1
+        cursor = command.end()
+        escaped = False
+        while cursor < len(text) and depth:
+            char = text[cursor]
+            if escaped:
+                escaped = False
+            elif char == "\\":
+                escaped = True
+            elif char == "{":
+                depth += 1
+            elif char == "}":
+                depth -= 1
+            cursor += 1
+        moving_spans.append((command.start(), cursor))
 
     def repl(match: re.Match[str]) -> str:
         nonlocal fitted
+        if any(start <= match.start() < end for start, end in moving_spans):
+            return match.group(0)
         body = match.group(1).strip()
         compact_length = len(re.sub(r"\s+", "", body))
         if compact_length < absolute_length and not (

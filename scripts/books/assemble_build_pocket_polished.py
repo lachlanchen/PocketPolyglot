@@ -18,6 +18,7 @@ from build_pocket_tex_queue import (
     latex_escape_text,
     wrap_wide_display_math,
     wrap_wide_inline_math,
+    wrap_wide_math_environments,
 )
 from japanese_tex_furigana import FuriganaStats, annotate_japanese_tex
 from pocket_polished_common import (
@@ -191,6 +192,7 @@ def inject_polished_cover_page(
     if not cover_path.is_file():
         return False
     text = tex_path.read_text(encoding="utf-8", errors="replace")
+    text, _ = remove_legacy_full_page_cover(text)
     if r"\usepackage{tikz}" not in text:
         text = text.replace(
             r"\begin{document}",
@@ -241,6 +243,26 @@ def inject_polished_cover_page(
         )
     tex_path.write_text(text, encoding="utf-8")
     return True
+
+
+def remove_legacy_full_page_cover(tex: str) -> tuple[str, int]:
+    """Replace, rather than duplicate, a legacy full-page frontmatter cover."""
+
+    frontmatter = re.search(r"\\frontmatter\s*", tex)
+    if frontmatter is None:
+        return tex, 0
+    clearpage = tex.find(r"\clearpage", frontmatter.end())
+    if clearpage < 0 or clearpage - frontmatter.end() > 2400:
+        return tex, 0
+    candidate = tex[frontmatter.end() : clearpage]
+    if candidate.count(r"\includegraphics") != 1:
+        return tex, 0
+    if not all(
+        marker in candidate
+        for marker in (r"\thispagestyle{empty}", r"\paperwidth", r"\paperheight")
+    ):
+        return tex, 0
+    return tex[: frontmatter.end()] + tex[clearpage + len(r"\clearpage") :], 1
 
 
 def normalize_unwrapped_math_fragments(tex: str) -> tuple[str, int]:
@@ -834,6 +856,7 @@ def pocket_layout(tex: str) -> str:
         r"\begingroup\footnotesize\setlength{\tabcolsep}{2pt}\begin{longtable}",
     )
     text = wrap_wide_display_math(text, layout="pocket")
+    text, _ = wrap_wide_math_environments(text, layout="pocket")
     return apply_pocket_footer_defaults(text)
 
 
@@ -852,6 +875,7 @@ def compile_variant(
     tex_path = variant_root / "tex/book.tex"
     tex_path.parent.mkdir(parents=True, exist_ok=True)
     tex_path.write_text(tex, encoding="utf-8")
+    graphics_before_cover = tex.count(r"\includegraphics")
     injected_cover_count = 0
     if cover and cover.exists():
         injected_cover_count = int(
@@ -862,10 +886,13 @@ def compile_variant(
                 author=author,
             )
         )
+    rendered_tex = tex_path.read_text(encoding="utf-8", errors="replace")
+    cover_graphics_delta = rendered_tex.count(r"\includegraphics") - graphics_before_cover
     report = compile_tex(tex_path, variant_root / "book.pdf")
-    rendered_expected = expected_graphics + injected_cover_count
+    rendered_expected = expected_graphics + cover_graphics_delta
     report["source_includegraphics_count"] = expected_graphics
     report["injected_cover_count"] = injected_cover_count
+    report["cover_graphics_delta"] = cover_graphics_delta
     report["expected_includegraphics_count"] = rendered_expected
     report["objects_complete"] = report.get("includegraphics_count") == rendered_expected
     report["searchable_text_present"] = report.get("text_chars", 0) >= 1000
@@ -994,9 +1021,8 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
         fused, centered_figures["en-main-ja"] = center_standalone_figures(fused)
         fused, normalized_full_bleed["en-main-ja"] = normalize_full_bleed_images(fused)
         fused, fitted_short_tables["en-main-ja"] = fit_short_simple_longtables(fused)
-        fused = wrap_wide_display_math(fused, layout="exact")
         fused, fitted_inline_math["en-main-ja"] = wrap_wide_inline_math(
-            fused, layout="exact"
+            fused, layout="pocket"
         )
 
     figure_root = book_root / "assets/figures"

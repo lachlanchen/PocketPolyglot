@@ -24,6 +24,7 @@ from assemble_build_pocket_polished import (
     fit_short_simple_longtables,
     fuse_english_main_japanese_secondary,
     normalize_unwrapped_math_fragments,
+    remove_legacy_full_page_cover,
     restore_secondary_list_scaffold,
     restore_split_optional_linebreaks,
     split_shared_environment_scaffold,
@@ -32,6 +33,7 @@ from build_pocket_tex_queue import (
     inject_cover_page,
     wrap_wide_display_math,
     wrap_wide_inline_math,
+    wrap_wide_math_environments,
 )
 from ensure_textless_pocket_polished_cover import cover_sandbox, recover_generated_cover
 from pocket_polished_common import (
@@ -259,6 +261,14 @@ class PocketPolishPipelineTest(unittest.TestCase):
         self.assertIn(body, rendered)
         self.assertIn(r"\penalty0\hspace{0pt}", rendered)
         self.assertIn(r"\adjustbox{max width=.60\linewidth}", rendered)
+
+    def test_oversized_inline_math_is_not_wrapped_inside_caption(self) -> None:
+        body = r"x_1+" * 80 + "x_n"
+        caption = rf"\caption{{Long formula \({body}\).}}"
+        rendered, count = wrap_wide_inline_math(caption, layout="pocket")
+        self.assertEqual(count, 0)
+        self.assertEqual(rendered, caption)
+        self.assertNotIn(r"\adjustbox", rendered)
 
     def test_evidence_layout_repair_restores_split_probability_identity(self) -> None:
         malformed = r"\(a +\) \(b^{1=b\text{, making prose}}) continuation"
@@ -1269,6 +1279,36 @@ class PocketPolishPipelineTest(unittest.TestCase):
             ),
             "\\caption{Title\n\\\\[0pt]\ncontinued}",
         )
+
+    def test_wide_math_environment_wrapper_is_idempotent(self) -> None:
+        equation = (
+            r"\begin{equation*}"
+            + (r"\frac{x_1+x_2+x_3}{y_1+y_2+y_3}+" * 12)
+            + r"z\tag{1}\end{equation*}"
+        )
+        rendered, fitted = wrap_wide_math_environments(equation, layout="pocket")
+        repeated, repeated_fitted = wrap_wide_math_environments(
+            rendered, layout="pocket"
+        )
+        self.assertEqual(fitted, 1)
+        self.assertEqual(repeated_fitted, 0)
+        self.assertEqual(repeated, rendered)
+        self.assertEqual(rendered.count("BUILD_POCKET_WIDE_MATH_BEGIN"), 1)
+        self.assertIn(equation, rendered)
+
+    def test_legacy_full_page_cover_is_replaced_not_duplicated(self) -> None:
+        source = (
+            "\\begin{document}\n\\frontmatter\n\n"
+            "\\thispagestyle{empty}\n"
+            "\\noindent\\makebox[\\textwidth][c]{"
+            "\\includegraphics[width=\\paperwidth,height=\\paperheight]{cover.png}}\n"
+            "\\clearpage\n\\mainmatter\nBody\n\\end{document}"
+        )
+        cleaned, removed = remove_legacy_full_page_cover(source)
+        self.assertEqual(removed, 1)
+        self.assertNotIn("cover.png", cleaned)
+        self.assertIn("\\frontmatter", cleaned)
+        self.assertIn("\\mainmatter", cleaned)
 
     def test_cover_injection_preserves_document_paper_geometry(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
