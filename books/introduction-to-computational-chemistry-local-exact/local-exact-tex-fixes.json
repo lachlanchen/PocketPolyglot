@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "policy": "Every replacement is transcribed from the cited source page; do not infer missing mathematics.",
+  "markdown_replacements": [
+    {
+      "from": " $\\begin{array}{lll} v & & & & & & & & & & & & & & & & & &$ ",
+      "to": " $\\nu$ Vibrational frequency\n\n $n_i$ Orbital occupation number\n\n $N$ Number of particles\n\n $N_A$ Avogadro's number ",
+      "regex": false,
+      "expected_min": 1,
+      "source_evidence": "Introduction to Computational Chemistry, 3rd ed., physical PDF page 634, printed page 611, Appendix A symbol list",
+      "note": "Restore four symbol-list rows that Marker collapsed into an empty 18-cell array."
+    },
+    {
+      "from": "$M_{\\Delta}$ Nuclear mass",
+      "to": "$M_A$ Nuclear mass",
+      "regex": false,
+      "flexible_whitespace": true,
+      "expected_min": 1,
+      "source_evidence": "Introduction to Computational Chemistry, 3rd ed., physical PDF page 634, printed page 611, Appendix A symbol list",
+      "note": "Restore the source subscript A in the nuclear-mass symbol."
+    },
+    {
+      "from": "$$\\mathbf{X} = \\{ \\mathbf{x}_{1} \\quad \\mathbf{x}_{2} \\quad \\mathbf{x}_{3} \\quad \\cdots \\quad \\mathbf{x}_{M} \\} = \\begin{cases} x_{1,1} & x_{2,1} & x_{3,1} & \\cdots & x_{M,1} \\\\ x_{1,2} & x_{2,2} & x_{3,2} & \\cdots & x_{M,2} \\\\ x_{1,3} & x_{2,3} & x_{3,3} & \\cdots & x_{M,3} \\\\ \\vdots & \\vdots & \\vdots & \\ddots & \\vdots \\\\ x_{1,N} & x_{2,N} & x_{3,N} & \\cdots & x_{M,N} \\end{cases}$$",
+      "to": "$$\\mathbf{X}=\\{\\mathbf{x}_1 \\quad \\mathbf{x}_2 \\quad \\mathbf{x}_3 \\quad \\cdots \\quad \\mathbf{x}_M\\}=\\left\\{\\begin{array}{ccccc}x_{1,1}&x_{2,1}&x_{3,1}&\\cdots&x_{M,1}\\\\x_{1,2}&x_{2,2}&x_{3,2}&\\cdots&x_{M,2}\\\\x_{1,3}&x_{2,3}&x_{3,3}&\\cdots&x_{M,3}\\\\\\vdots&\\vdots&\\vdots&\\ddots&\\vdots\\\\x_{1,N}&x_{2,N}&x_{3,N}&\\cdots&x_{M,N}\\end{array}\\right\\}$$",
+      "regex": false,
+      "expected_min": 1,
+      "source_evidence": "Introduction to Computational Chemistry, 3rd ed., physical PDF page 611, printed page 588, equation (18.13)",
+      "note": "Restore the brace-enclosed N-by-M descriptor matrix; Marker misclassified it as a cases environment."
+    },
+    {
+      "from": "$$\\mathbf{G}^{R} = \\sum_{\\alpha=1}^{R} \\left( \\chi_{i} \\chi_{j} \\left| \\chi_{\\alpha}' \\right) \\left( \\chi_{\\alpha}' \\left| \\chi_{k} \\chi_{l} \\right. \\right)$$",
+      "to": "$$\\mathbf{G}^{R}=\\sum_{\\alpha=1}^{R}\\bigl(\\chi_i\\chi_j\\mid\\chi'_{\\alpha}\\bigr)\\bigl(\\chi'_{\\alpha}\\mid\\chi_k\\chi_l\\bigr)$$",
+      "regex": false,
+      "expected_min": 1,
+      "source_evidence": "Introduction to Computational Chemistry, 3rd ed., physical PDF page 599, printed page 576, equation (17.134)",
+      "note": "Restore both three-index integral factors without OCR-created unmatched left/right delimiters."
+    },
+    {
+      "from": "$$\\mathbf{G}^{R} = \\sum_{\\alpha\\beta=1}^{R} \\left( \\chi_{i} \\chi_{j} \\left| \\chi_{\\alpha}' \\right) \\left( \\chi_{\\alpha}' \\left| \\chi_{\\beta}' \\right)^{-1} \\left( \\chi_{\\beta}' \\left| \\chi_{k} \\chi_{l} \\right. \\right) \\right.$$",
+      "to": "$$\\mathbf{G}^{R}=\\sum_{\\alpha\\beta=1}^{R}\\bigl(\\chi_i\\chi_j\\mid\\chi'_{\\alpha}\\bigr)\\bigl(\\chi'_{\\alpha}\\mid\\chi'_{\\beta}\\bigr)^{-1}\\bigl(\\chi'_{\\beta}\\mid\\chi_k\\chi_l\\bigr)$$",
+      "regex": false,
+      "expected_min": 1,
+      "source_evidence": "Introduction to Computational Chemistry, 3rd ed., physical PDF page 599, printed page 576, first row of equation (17.135)",
+      "note": "Restore the resolution-of-identity factorization without a spurious trailing invisible delimiter."
+    },
+    {
+      "from": "$$= \\sum_{\\alpha\\beta=1}^{R} \\left[ \\left( \\chi_{i} \\chi_{j} \\left| \\chi_{\\alpha}' \\right) \\left( \\chi_{\\alpha}' \\left| \\chi_{\\beta}' \\right)^{-1/2} \\right] \\left[ \\left( \\chi_{\\alpha}' \\left| \\chi_{\\beta}' \\right)^{-1/2} \\left( \\chi_{\\beta}' \\left| \\chi_{k} \\chi_{l} \\right. \\right) \\right]$$",
+      "to": "$$=\\sum_{\\alpha\\beta=1}^{R}\\left[\\bigl(\\chi_i\\chi_j\\mid\\chi'_{\\alpha}\\bigr)\\bigl(\\chi'_{\\alpha}\\mid\\chi'_{\\beta}\\bigr)^{-1/2}\\right]\\left[\\bigl(\\chi'_{\\alpha}\\mid\\chi'_{\\beta}\\bigr)^{-1/2}\\bigl(\\chi'_{\\beta}\\mid\\chi_k\\chi_l\\bigr)\\right]$$",
+      "regex": false,
+      "expected_min": 1,
+      "source_evidence": "Introduction to Computational Chemistry, 3rd ed., physical PDF page 599, printed page 576, second row of equation (17.135)",
+      "note": "Restore the split inverse metric factors and balanced square brackets."
+    },
+    {
+      "from": "\\$\\$\\\\begin\\{array\\}\\{c\\|cccc\\}.*?\\*\\*Figure \\.\\*\\* The Diels[–-]Alder, SN2 and Claisen reactions\\.",
+      "to": "![]({{TASK_DIR}}/review/source-crops/figure-14-4.png)\n\n**Figure 14.4.** The Diels–Alder, SN2 and Claisen reactions.",
+      "regex": true,
+      "dotall": true,
+      "expected_min": 1,
+      "source_evidence": "Introduction to Computational Chemistry, 3rd ed., physical PDF page 484, printed page 461, Figure 14.4",
+      "note": "Restore all three reaction diagrams from the source figure; Marker reduced the structures to an invalid empty array."
+    },
+    {
+      "from": "\\$\\$\\\\begin\\{array\\}\\{c\\|ccccccccccccccccccccccccccccccccccc\\$\\$\\s+Figure 17\\.5 Possibilities for second derivatives of multidimensional functions, with I indicating an invalid combination\\.",
+      "to": "![]({{TASK_DIR}}/review/source-crops/figure-17-5.png)\n\n**Figure 17.5.** Possibilities for second derivatives of multidimensional functions, with I indicating an invalid combination.",
+      "regex": true,
+      "dotall": true,
+      "expected_min": 1,
+      "source_evidence": "Introduction to Computational Chemistry, 3rd ed., physical PDF page 586, printed page 563, Figure 17.5",
+      "note": "Restore the scalar/vector differential-operator diagram; Marker retained only an unterminated array declaration."
+    },
+    {
+      "from": "$\\left\\langle \\left\\langle \\mathbf{\\mu};\\mathbf{m} \\right\\rangle \\right\\rangle_{\\omega} \\ \\left\\langle \\left\\langle \\mathbf{\\mu};\\mathbf{\\Theta} \\right\\rangle \\right\\rangle_{\\omega}$",
+      "to": "$\\left\\langle \\left\\langle \\mathbf{\\mu};\\mathbf{m} \\right\\rangle \\right\\rangle_{\\omega}$<br>$\\left\\langle \\left\\langle \\mathbf{\\mu};\\mathbf{\\Theta} \\right\\rangle \\right\\rangle_{\\omega}$",
+      "regex": false,
+      "expected_min": 1,
+      "source_evidence": "Introduction to Computational Chemistry, 3rd ed., physical PDF page 397, printed page 374, Table 11.3",
+      "note": "Keep the ECD/OR response functions readable as two source-authentic table lines."
+    },
+    {
+      "from": "$\\langle\\langle \\boldsymbol{\\mu}; \\mathbf{m}, \\mathbf{m} \\rangle\\rangle_{\\omega,0} \\ \\langle\\langle \\boldsymbol{\\mu}; \\boldsymbol{\\Theta}, \\mathbf{m} \\rangle\\rangle_{\\omega,0}$",
+      "to": "$\\langle\\langle \\boldsymbol{\\mu}; \\mathbf{m}, \\mathbf{m} \\rangle\\rangle_{\\omega,0}$<br>$\\langle\\langle \\boldsymbol{\\mu}; \\boldsymbol{\\Theta}, \\mathbf{m} \\rangle\\rangle_{\\omega,0}$",
+      "regex": false,
+      "expected_min": 1,
+      "source_evidence": "Introduction to Computational Chemistry, 3rd ed., physical PDF page 398, printed page 375, Table 11.3",
+      "note": "Keep the two magnetochiral-birefringence response functions readable on separate source-authentic table lines."
+    },
+    {
+      "from": "$\\langle\\langle \\boldsymbol{\\mu}; \\boldsymbol{\\mu}, \\boldsymbol{\\Theta} \\rangle\\rangle_{\\omega,0} \\ \\langle\\langle \\boldsymbol{\\mu}; \\boldsymbol{\\Theta}, \\boldsymbol{\\mu} \\rangle\\rangle_{\\omega,0} \\ \\langle\\langle \\boldsymbol{\\mu}; \\boldsymbol{m}, \\boldsymbol{\\mu} \\rangle\\rangle_{\\omega,0}$",
+      "to": "$\\langle\\langle \\boldsymbol{\\mu}; \\boldsymbol{\\mu}, \\boldsymbol{\\Theta} \\rangle\\rangle_{\\omega,0}$<br>$\\langle\\langle \\boldsymbol{\\mu}; \\boldsymbol{\\Theta}, \\boldsymbol{\\mu} \\rangle\\rangle_{\\omega,0}$<br>$\\langle\\langle \\boldsymbol{\\mu}; \\boldsymbol{m}, \\boldsymbol{\\mu} \\rangle\\rangle_{\\omega,0}$",
+      "regex": false,
+      "expected_min": 1,
+      "source_evidence": "Introduction to Computational Chemistry, 3rd ed., physical PDF page 398, printed page 375, Table 11.3",
+      "note": "Keep the three highest-order Buckingham-effect response functions readable as separate table lines."
+    },
+    {
+      "from": "$\\langle\\langle \\boldsymbol{\\mu}; \\boldsymbol{\\mu} \\rangle\\rangle_{\\omega} \\ \\langle\\langle \\boldsymbol{\\mu}; \\boldsymbol{m} \\rangle\\rangle_{\\omega} \\ \\langle\\langle \\boldsymbol{\\mu}; \\boldsymbol{\\Theta} \\rangle\\rangle_{\\omega}$",
+      "to": "$\\langle\\langle \\boldsymbol{\\mu}; \\boldsymbol{\\mu} \\rangle\\rangle_{\\omega}$<br>$\\langle\\langle \\boldsymbol{\\mu}; \\boldsymbol{m} \\rangle\\rangle_{\\omega}$<br>$\\langle\\langle \\boldsymbol{\\mu}; \\boldsymbol{\\Theta} \\rangle\\rangle_{\\omega}$",
+      "regex": false,
+      "expected_min": 1,
+      "source_evidence": "Introduction to Computational Chemistry, 3rd ed., physical PDF page 398, printed page 375, Table 11.3",
+      "note": "Keep the three lower-order Buckingham-effect response functions readable as separate table lines."
+    },
+    {
+      "from": "$$\\begin{array}{cccccccccccccccccccccccccccccccccccc$$\n\n**Figure D.** Atom numbering for acetonitrile including a dummy atom.",
+      "to": "\\begin{figure}[H]\n\\centering\n\\includegraphics[width=.88\\linewidth,max height=.60\\textheight,keepaspectratio]{{{TASK_DIR}}/review/source-crops/figure-d-3.png}\n\\caption*{\\textbf{Figure D.3.} Atom numbering for acetonitrile including a dummy atom.}\n\\end{figure}",
+      "regex": false,
+      "expected_min": 1,
+      "source_evidence": "Introduction to Computational Chemistry, 3rd ed., physical PDF page 645, printed page 622, Figure D.3",
+      "note": "Restore the source molecular diagram and correct its figure number; Marker retained only an unterminated array declaration."
+    }
+  ],
+  "replacements": [
+    {
+      "from": "\\middle\\rangle}{\\left\\langle",
+      "to": "\\right\\rangle}{\\left\\langle",
+      "regex": false,
+      "expected_min": 1,
+      "source_evidence": "Introduction to Computational Chemistry, 3rd ed., physical PDF page 182, printed page 159, equation (4.70)",
+      "note": "Close the numerator bra-ket before opening the denominator."
+    },
+    {
+      "from": "\\middle\\rangle}",
+      "to": "\\right\\rangle}",
+      "regex": false,
+      "expected_min": 1,
+      "source_evidence": "Introduction to Computational Chemistry, 3rd ed., physical PDF page 182, printed page 159, equation (4.70)",
+      "note": "Close the denominator bra-ket with a right delimiter."
+    },
+    {
+      "from": "\\\\begin\\{aligned\\}\\n\\\\varepsilon_\\{c\\}\\^\\{LYP\\}.*?\\\\end\\{aligned\\}",
+      "to": "\\begin{aligned}\n\\varepsilon_{c}^{\\mathrm{LYP}} &= -4a\\frac{\\rho_{\\alpha}\\rho_{\\beta}}{\\rho^2(1+d\\rho^{-1/3})} \\\\\n&\\quad -ab\\omega\\left\\{\\begin{aligned}\n&\\frac{\\rho_{\\alpha}\\rho_{\\beta}}{18}\\left[144(2^{2/3})C_F(\\rho_{\\alpha}^{8/3}+\\rho_{\\beta}^{8/3})+(47-7\\delta)|\\nabla\\rho|^2\\right. \\\\\n&\\left.\\quad -(45-\\delta)(|\\nabla\\rho_{\\alpha}|^2+|\\nabla\\rho_{\\beta}|^2)+2\\rho^{-1}(11-\\delta)(\\rho_{\\alpha}|\\nabla\\rho_{\\alpha}|^2+\\rho_{\\beta}|\\nabla\\rho_{\\beta}|^2)\\right] \\\\\n&\\quad +\\frac{2}{3}\\rho^2(|\\nabla\\rho_{\\alpha}|^2+|\\nabla\\rho_{\\beta}|^2-|\\nabla\\rho|^2)-(\\rho_{\\alpha}^2|\\nabla\\rho_{\\beta}|^2+\\rho_{\\beta}^2|\\nabla\\rho_{\\alpha}|^2)\n\\end{aligned}\\right\\}, \\\\\n\\omega &= \\frac{e^{-c\\rho^{-1/3}}}{\\rho^{14/3}(1+d\\rho^{-1/3})},\\qquad\n\\delta=c\\rho^{-1/3}+\\frac{d\\rho^{-1/3}}{1+d\\rho^{-1/3}}\n\\end{aligned}",
+      "regex": true,
+      "dotall": true,
+      "expected_min": 1,
+      "source_evidence": "Introduction to Computational Chemistry, 3rd ed., physical PDF page 272, printed page 249, equation (6.57)",
+      "note": "Restore the LYP correlation functional with the outer brace enclosing all three source terms and with row-local delimiters."
+    },
+    {
+      "from": "\\nerf(x)",
+      "to": "\\operatorname{erf}(x)",
+      "regex": false,
+      "expected_min": 1,
+      "source_evidence": "Introduction to Computational Chemistry, 3rd ed., physical PDF page 277, printed page 254, equation (6.72)",
+      "note": "Restore the standard error-function operator; Marker emitted an undefined control sequence."
+    },
+    {
+      "from": "\\mathbf{F}_i \\symbfit{\\phi}_i' = \\symbfit{\\varepsilon}_i \\symbfit{\\phi}_i'",
+      "to": "\\mathbf{F}_i \\phi_i' = \\varepsilon_i \\phi_i'",
+      "regex": false,
+      "flexible_whitespace": true,
+      "expected_min": 1,
+      "source_evidence": "Introduction to Computational Chemistry, 3rd ed., physical PDF page 122, printed page 99, equation (3.43)",
+      "note": "Restore scalar orbital and eigenvalue symbols; Marker incorrectly applied boldsymbol and triggered an invalid Unicode math alphabet."
+    },
+    {
+      "from": "\\nabla f(x, y, z) = \\begin{cases} \\frac{\\partial f}{\\partial x} & \\frac{\\partial f}{\\partial y} & \\frac{\\partial f}{\\partial z} \\end{cases} = \\{1 + y + z \\quad 2y + x \\quad 3z^{2} + x\\}",
+      "to": "\\nabla f(x,y,z)=\\left\\{\\begin{array}{ccc}\\frac{\\partial f}{\\partial x} & \\frac{\\partial f}{\\partial y} & \\frac{\\partial f}{\\partial z}\\end{array}\\right\\}=\\{1+y+z \\quad 2y+x \\quad 3z^2+x\\}",
+      "regex": false,
+      "flexible_whitespace": true,
+      "expected_min": 1,
+      "source_evidence": "Introduction to Computational Chemistry, 3rd ed., physical PDF page 585, printed page 562, equation (17.77)",
+      "note": "Restore the horizontal three-component gradient vector; Marker misclassified the source brace as a cases environment."
+    }
+  ]
+}

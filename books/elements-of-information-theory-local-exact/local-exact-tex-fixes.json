@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "policy": "Every replacement is transcribed from the cited source page; do not infer missing mathematics.",
+  "markdown_replacements": [
+    {
+      "from": "$$Z \\sim \\mathcal{N} \\Bigg( 0, \\left[ \\begin{array}{cccc} 1 & 0 & 1 \\ 0 & 1 & 1 \\ 1 & 1 & 2 \\end{array} \\right] \\Bigg) \\, .$$",
+      "to": "$$Z \\sim \\mathcal{N}\\!\\left(0,\\begin{bmatrix}1 & 0 & 1 \\\\ 0 & 1 & 1 \\\\ 1 & 1 & 2\\end{bmatrix}\\right).$$",
+      "regex": false,
+      "expected_min": 1,
+      "source_evidence": "Elements of Information Theory, 2nd ed., physical PDF page 319, printed page 293, Problem 9.9",
+      "note": "Restore the covariance matrix before generic array normalization changes the OCR-created declaration."
+    },
+    {
+      "from": "$$A_{\\epsilon}^{*(n)} = \\left\\{ \\mathbf{x} \\in \\mathcal{X}^n : \\begin{vmatrix} \\frac{1}{n} N(a|\\mathbf{x}) - P(a) \\end{vmatrix} < \\frac{\\epsilon}{|\\mathcal{X}|}, & \\text{if } P(a) > 0 \\\\ N(a|\\mathbf{x}) = 0 & \\text{if } P(a) = 0 \\end{vmatrix} \\right\\}.$$",
+      "to": "$$A_{\\epsilon}^{*(n)} = \\left\\{\\begin{array}{ll} \\mathbf{x} \\in \\mathcal{X}^n : \\left|\\frac{1}{n}N(a|\\mathbf{x})-P(a)\\right| < \\frac{\\epsilon}{|\\mathcal{X}|}, & \\text{if }P(a)>0 \\\\ N(a|\\mathbf{x})=0, & \\text{if }P(a)=0 \\end{array}\\right\\}.$$",
+      "regex": false,
+      "expected_min": 1,
+      "source_evidence": "Elements of Information Theory, 2nd ed., physical PDF page 383, printed page 357, equation (11.71)",
+      "note": "Restore the two-row strongly typical-set definition before width fitting."
+    }
+  ],
+  "replacements": [
+    {
+      "from": "\\[\\begin{array}{cccccccccccccccccccccccccccccccccccc\\]",
+      "to": "\\begin{equation}\n\\resizebox{.82\\linewidth}{!}{$\\displaystyle\n\\begin{array}{c@{\\qquad}cc@{\\qquad}cc}\n& \\multicolumn{2}{c}{C_{m-1}^{*}(\\mathbf{p}')} & \\multicolumn{2}{c}{C_m(\\mathbf{p})} \\\\\np_1 & w_1' & l_1' & w_1 = w_1' & l_1 = l_1' \\\\\np_2 & w_2' & l_2' & w_2 = w_2' & l_2 = l_2' \\\\\n\\vdots & \\vdots & \\vdots & \\vdots & \\vdots \\\\\np_{m-2} & w_{m-2}' & l_{m-2}' & w_{m-2} = w_{m-2}' & l_{m-2} = l_{m-2}' \\\\\np_{m-1}+p_m & w_{m-1}' & l_{m-1}' & w_{m-1} = w_{m-1}'0 & l_{m-1} = l_{m-1}'+1 \\\\\n& & & w_m = w_{m-1}'1 & l_m = l_{m-1}'+1\n\\end{array}\n$}\n\\tag{5.65}\n\\end{equation}",
+      "regex": false,
+      "expected_min": 1,
+      "source_evidence": "Elements of Information Theory, 2nd ed., physical PDF page 152, printed page 126, equation (5.65)",
+      "note": "Restore the Huffman extension-code construction table; Marker retained only an unterminated array column declaration."
+    },
+    {
+      "from": "\\\\begin\\{longtable\\}(?:(?!\\\\end\\{longtable\\}).)*0\\.071790(?:(?!\\\\end\\{longtable\\}).)*1\\.673567(?:(?!\\\\end\\{longtable\\}).)*\\\\end\\{longtable\\}",
+      "to": "\\begin{center}\n\\setlength{\\tabcolsep}{2pt}\n\\renewcommand{\\arraystretch}{1.05}\n\\resizebox{\\linewidth}{!}{%\n\\begin{tabular}{@{}rrrr@{}}\n\\toprule\n$k$ & $\\binom{n}{k}$ & $\\binom{n}{k}p^k(1-p)^{n-k}$ & $-\\frac{1}{n}\\log p(x^n)$ \\\\\n\\midrule\n0 & 1 & 0.071790 & 0.152003 \\\\\n1 & 25 & 0.199416 & 0.278800 \\\\\n2 & 300 & 0.265888 & 0.405597 \\\\\n3 & 2300 & 0.226497 & 0.532394 \\\\\n4 & 12650 & 0.138415 & 0.659191 \\\\\n5 & 53130 & 0.064594 & 0.785988 \\\\\n6 & 177100 & 0.023924 & 0.912785 \\\\\n7 & 480700 & 0.007215 & 1.039582 \\\\\n8 & 1081575 & 0.001804 & 1.166379 \\\\\n9 & 2042975 & 0.000379 & 1.293176 \\\\\n10 & 3268760 & 0.000067 & 1.419973 \\\\\n11 & 4457400 & 0.000010 & 1.546770 \\\\\n12 & 5200300 & 0.000001 & 1.673567 \\\\\n\\bottomrule\n\\end{tabular}%\n}\n\\end{center}",
+      "regex": true,
+      "dotall": true,
+      "expected_min": 1,
+      "source_evidence": "Elements of Information Theory, 2nd ed., physical PDF page 255, printed page 229, Problem 7.39(d)",
+      "note": "Restore the 13-row binomial probability table; Marker duplicated and shifted rows into a malformed longtable."
+    },
+    {
+      "from": "2^{2^{2^{2^{2^{2^{2^{2^{2^{2^{2^{2^{2^{1}}}}}}}}}}",
+      "to": "2^{2^{2^{2^{2^{2}}}}}",
+      "regex": false,
+      "expected_min": 1,
+      "source_evidence": "Elements of Information Theory, 2nd ed., physical PDF page 502, printed page 476, Section 14.5",
+      "note": "Restore the printed six-level power tower; Marker invented extra levels, changed the top exponent to 1, and omitted closing braces."
+    },
+    {
+      "from": "% BUILD_POCKET_WIDE_MATH_BEGIN(?:(?!% BUILD_POCKET_WIDE_MATH_END).)*E_\\{12\\}(?:(?!% BUILD_POCKET_WIDE_MATH_END).)*% BUILD_POCKET_WIDE_MATH_END\\s*=.*?\\(15\\.170\\)",
+      "to": "\\begin{equation}\n\\resizebox{.94\\linewidth}{!}{$\\displaystyle\\begin{aligned}\nE_{12} = \\{\\exists(\\mathbf{x}',\\mathbf{y}') : \\mathbf{x}' \\ne \\mathbf{X},\\; \\mathbf{y}' \\ne \\mathbf{Y},\\; f_1(\\mathbf{x}') \\\\n= f_1(\\mathbf{X}),\\; f_2(\\mathbf{y}') = f_2(\\mathbf{Y}) \\text{ and } (\\mathbf{x}',\\mathbf{y}') \\in A_{\\epsilon}^{(n)}\\}.\n\\end{aligned}$}\n\\tag{15.170}\n\\end{equation}",
+      "regex": true,
+      "dotall": true,
+      "expected_min": 1,
+      "source_evidence": "Elements of Information Theory, 2nd ed., physical PDF page 580, printed page 554, equation (15.170)",
+      "note": "Rejoin the two printed rows of E12; Marker closed display math after the first row and emitted the second as prose."
+    },
+    {
+      "from": "\\\\begin\\{longtable\\}(?:(?!\\\\end\\{longtable\\}).)*U_1(?:(?!\\\\end\\{longtable\\}).)*m - 1(?:(?!\\\\end\\{longtable\\}).)*\\\\end\\{longtable\\}",
+      "to": "\\begin{center}\n\\setlength{\\tabcolsep}{3pt}\n\\renewcommand{\\arraystretch}{1.12}\n\\resizebox{\\linewidth}{!}{%\n\\begin{tabular}{@{}c|ccccc@{}}\n\\toprule\n$U_1\\backslash U_2$ & $0$ & $1$ & $2$ & $\\cdots$ & $m-1$ \\\\\n\\midrule\n$0$ & $\\alpha$ & $\\frac{\\beta}{m-1}$ & $\\frac{\\beta}{m-1}$ & $\\cdots$ & $\\frac{\\beta}{m-1}$ \\\\\n$1$ & $\\frac{\\gamma}{m-1}$ & $0$ & $0$ & $\\cdots$ & $0$ \\\\\n$2$ & $\\frac{\\gamma}{m-1}$ & $0$ & $0$ & $\\cdots$ & $0$ \\\\\n$\\vdots$ & $\\vdots$ & $\\vdots$ & $\\vdots$ & $\\ddots$ & $\\vdots$ \\\\\n$m-1$ & $\\frac{\\gamma}{m-1}$ & $0$ & $0$ & $\\cdots$ & $0$ \\\\\n\\bottomrule\n\\end{tabular}%\n}\n\\end{center}",
+      "regex": true,
+      "dotall": true,
+      "expected_min": 1,
+      "source_evidence": "Elements of Information Theory, 2nd ed., physical PDF page 629, printed page 603, Problem 15.19",
+      "note": "Restore the Slepian-Wolf joint-distribution table; Marker collapsed row labels and lost array wrappers in several cells."
+    },
+    {
+      "from": "\\\\textbf\\{TABLE 17\\.1\\} Differential Entropiesa.*?Source: Lazo and Rathie \\{\\[\\}543\\{\\]\\}\\.",
+      "to": "\\clearpage\n\\begin{landscape}\n\\thispagestyle{plain}\n\\begin{center}\n\\includegraphics[width=.96\\linewidth,height=.90\\textheight,keepaspectratio]{{{TASK_DIR}}/review/source-crops/table-17-1-page-1.png}\n\\end{center}\n\\end{landscape}\n\\clearpage\n\\begin{landscape}\n\\thispagestyle{plain}\n\\begin{center}\n\\includegraphics[width=.96\\linewidth,height=.90\\textheight,keepaspectratio]{{{TASK_DIR}}/review/source-crops/table-17-1-page-2.png}\n\\end{center}\n\\end{landscape}\n\\clearpage",
+      "regex": true,
+      "dotall": true,
+      "expected_min": 1,
+      "source_evidence": "Elements of Information Theory, 2nd ed., physical PDF pages 687-688, printed pages 661-662, Table 17.1",
+      "note": "Restore the complete two-page differential-entropy table from clean source crops; Marker corrupted distribution names and formulas."
+    },
+    {
+      "from": "% BUILD_POCKET_WIDE_MATH_BEGIN(?:(?!% BUILD_POCKET_WIDE_MATH_END).)*\\\\frac\\{1\\}\\{2\\}\\\\log 2\\\\pi e \\\\frac\\{\\|A_n \\+ B_n\\|\\}.*?\\nwhere\\n",
+      "to": "\\begin{equation}\\resizebox{.94\\linewidth}{!}{$\\displaystyle \\frac{1}{2}\\log\\left(2\\pi e\\frac{|A_n+B_n|}{|A_{n-1}+B_{n-1}|}\\right) \\stackrel{\\mathrm{(a)}}{=} h(Z_n\\mid Z_{n-1},\\ldots,Z_1)$}\\tag{17.149}\\end{equation}\n\\begin{equation}\\resizebox{.94\\linewidth}{!}{$\\displaystyle \\stackrel{\\mathrm{(b)}}{\\ge} h(Z_n\\mid Z_{n-1},\\ldots,Z_1,X_{n-1},\\ldots,X_1,Y_{n-1},\\ldots,Y_1)$}\\tag{17.150}\\end{equation}\n\\begin{equation}\\resizebox{.94\\linewidth}{!}{$\\displaystyle \\stackrel{\\mathrm{(c)}}{=} h(X_n+Y_n\\mid X_{n-1},\\ldots,X_1,Y_{n-1},\\ldots,Y_1)$}\\tag{17.151}\\end{equation}\n\\begin{equation}\\resizebox{.94\\linewidth}{!}{$\\displaystyle \\stackrel{\\mathrm{(d)}}{=} \\mathbb{E}\\,\\frac{1}{2}\\log\\!\\left[2\\pi e\\,\\operatorname{Var}(X_n+Y_n\\mid X_{n-1},\\ldots,X_1,Y_{n-1},\\ldots,Y_1)\\right]$}\\tag{17.152}\\end{equation}\n\\begin{equation}\\resizebox{.94\\linewidth}{!}{$\\displaystyle \\stackrel{\\mathrm{(e)}}{=} \\mathbb{E}\\,\\frac{1}{2}\\log\\!\\left[2\\pi e\\left(\\operatorname{Var}(X_n\\mid X_{n-1},\\ldots,X_1)+\\operatorname{Var}(Y_n\\mid Y_{n-1},\\ldots,Y_1)\\right)\\right]$}\\tag{17.153}\\end{equation}\n\\begin{equation}\\resizebox{.94\\linewidth}{!}{$\\displaystyle \\stackrel{\\mathrm{(f)}}{=} \\mathbb{E}\\,\\frac{1}{2}\\log\\!\\left[2\\pi e\\left(\\frac{|A_n|}{|A_{n-1}|}+\\frac{|B_n|}{|B_{n-1}|}\\right)\\right]$}\\tag{17.154}\\end{equation}\n\\begin{equation}\\resizebox{.94\\linewidth}{!}{$\\displaystyle =\\frac{1}{2}\\log\\!\\left[2\\pi e\\left(\\frac{|A_n|}{|A_{n-1}|}+\\frac{|B_n|}{|B_{n-1}|}\\right)\\right]$}\\tag{17.155}\\end{equation}\nwhere\n",
+      "regex": true,
+      "dotall": true,
+      "expected_min": 1,
+      "source_evidence": "Elements of Information Theory, 2nd ed., physical PDF pages 710-711, printed pages 684-685, equations (17.149)-(17.155)",
+      "note": "Restore the determinant-inequality chain; Marker repeated one conditioning variable hundreds of times and split equations (17.152)-(17.153)."
+    },
+    {
+      "from": "\\\\begin\\{longtable\\}(?:(?!\\\\end\\{longtable\\}).)*\\\\overline\\{F\\}\\(x\\)(?:(?!\\\\end\\{longtable\\}).)*0\\.9375(?:(?!\\\\end\\{longtable\\}).)*\\\\end\\{longtable\\}",
+      "to": "\\begin{center}\\setlength{\\tabcolsep}{5pt}\\renewcommand{\\arraystretch}{1.18}\\resizebox{.96\\linewidth}{!}{\\begin{tabular}{@{}rrrrrrl@{}}\\toprule $x$ & $p(x)$ & $F(x)$ & $\\overline{F}(x)$ & $\\overline{F}(x)$ in binary & $l(x)=\\lceil\\log(1/p(x))\\rceil+1$ & Codeword \\\\\\midrule 1&0.25&0.25&0.125&0.001&3&001\\\\2&0.5&0.75&0.5&0.10&2&10\\\\3&0.125&0.875&0.8125&0.1101&4&1101\\\\4&0.125&1.0&0.9375&0.1111&4&1111\\\\\\bottomrule\\end{tabular}}\\end{center}",
+      "regex": true,
+      "dotall": true,
+      "expected_min": 1,
+      "source_evidence": "Elements of Information Theory, 2nd ed., physical PDF page 155, printed page 129, Example 5.9.1",
+      "note": "Restore the first Shannon-Fano-Elias coding table as readable real TeX and correct the OCR-confused x label."
+    },
+    {
+      "from": "\\\\begin\\{longtable\\}(?:(?!\\\\end\\{longtable\\}).)*F(?:(?!\\\\end\\{longtable\\}).)*Binary(?:(?!\\\\end\\{longtable\\}).)*0\\.925(?:(?!\\\\end\\{longtable\\}).)*\\\\end\\{longtable\\}",
+      "to": "\\begin{center}\\setlength{\\tabcolsep}{5pt}\\renewcommand{\\arraystretch}{1.18}\\resizebox{.96\\linewidth}{!}{\\begin{tabular}{@{}rrrrrrl@{}}\\toprule $x$ & $p(x)$ & $F(x)$ & $\\overline{F}(x)$ & $\\overline{F}(x)$ in binary & $l(x)=\\lceil\\log(1/p(x))\\rceil+1$ & Codeword \\\\\\midrule 1&0.25&0.25&0.125&0.001&3&001\\\\2&0.25&0.5&0.375&0.011&3&011\\\\3&0.2&0.7&0.6&0.10011&4&1001\\\\4&0.15&0.85&0.775&0.1100011&4&1100\\\\5&0.15&1.0&0.925&0.1110110&4&1110\\\\\\bottomrule\\end{tabular}}\\end{center}",
+      "regex": true,
+      "dotall": true,
+      "expected_min": 1,
+      "source_evidence": "Elements of Information Theory, 2nd ed., physical PDF page 156, printed page 130, Example 5.9.2",
+      "note": "Restore the second Shannon-Fano-Elias coding table as readable real TeX with its correct formula header."
+    }
+  ]
+}

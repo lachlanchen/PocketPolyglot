@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "policy": "Every replacement is transcribed from the cited source page; do not infer missing mathematics.",
+  "markdown_replacements": [
+    {
+      "from": "\\| The second of the second.*?\\*\\*Table 7\\.3\\*\\* Singlet.triplet splittings \\(kcal mol<sup>-1</sup>\\) for p-benzyne and N-protonated 2,5-pyridyne<sup>a</sup>",
+      "to": "\\begin{table}[htbp]\n\\centering\n\\small\n\\caption{Singlet--triplet splittings ($\\mathrm{kcal\\,mol^{-1}}$) for $p$-benzyne and $N$-protonated 2,5-pyridyne\\textsuperscript{a}}\n\\label{tab:singlet-triplet-splittings}\n\\setlength{\\tabcolsep}{4pt}\n\\renewcommand{\\arraystretch}{1.08}\n\\resizebox{\\linewidth}{!}{%\n\\begin{tabular}{@{}lrr@{}}\n\\toprule\nLevel of theory & $p$-Benzyne & $N$-Protonated 2,5-pyridyne \\\\\n\\midrule\nHF & 87.8 & 87.4 \\\\\nMP2 & -25.3 & -4.1 \\\\\nMP2 (cc-pVTZ) & -27.8 & 11.4 \\\\\nMP3 & 22.8 & 42.0 \\\\\nMP4SDQ & 14.3 & 10.1 \\\\\nMP4 & -20.9 & -21.0 \\\\\nCCSD & 16.8 & 17.3 \\\\\nCCSD (cc-pVTZ) & 18.4 & 18.9 \\\\\nCCSD(T) & -4.5 & -29.4 \\\\\nQCISD & 16.2 & 4.7 \\\\\nQCISD(T) & -4.1 & -5.9 \\\\\nBD & 17.0 & 17.0 \\\\\nBD(T) & -4.1 & -5.1 \\\\\nCAS(8,8) & -2.7 & -2.4 \\\\\nCASPT2(8,8) & -5.1 & -5.1 \\\\\nExperiment or best estimate & -4.2 & -5.0 \\\\\n\\bottomrule\n\\end{tabular}%\n}\n\\end{table}",
+      "regex": true,
+      "dotall": true,
+      "expected_min": 1,
+      "source_evidence": "Essentials of Computational Chemistry, 2nd ed., physical PDF page 253, printed page 233, Table 7.3",
+      "note": "Restore the three-column singlet-triplet table; Marker invented repeated prose and four empty columns."
+    },
+    {
+      "from": "\\(\\*continued overleaf\\* \\)\\s+\\*\\*Table 2\\.1\\*\\* Force fields.*?<sup>a</sup>Kcal mol<sup>-1</sup>\\. From Gundertofte \\*et al\\.\\* \\(1991, 1996\\); see text\\.",
+      "to": "\\clearpage\n\\begin{landscape}\n\\thispagestyle{plain}\n\\begin{center}\n\\resizebox{\\linewidth}{!}{\\includegraphics{{{TASK_DIR}}/review/source-crops/table-2-1-page-1.png}}\n\\end{center}\n\\end{landscape}\n\\clearpage\n\\begin{landscape}\n\\thispagestyle{plain}\n\\begin{center}\n\\resizebox{\\linewidth}{!}{\\includegraphics{{{TASK_DIR}}/review/source-crops/table-2-1-page-2.png}}\n\\end{center}\n\\end{landscape}\n\\clearpage\n\\begin{landscape}\n\\thispagestyle{plain}\n\\begin{center}\n\\resizebox{\\linewidth}{!}{\\includegraphics{{{TASK_DIR}}/review/source-crops/table-2-1-page-3.png}}\n\\end{center}\n\\end{landscape}\n\\clearpage\n\\begin{landscape}\n\\thispagestyle{plain}\n\\begin{center}\n\\resizebox{\\linewidth}{!}{\\includegraphics{{{TASK_DIR}}/review/source-crops/table-2-1-page-4.png}}\n\\end{center}\n\\end{landscape}\n\\clearpage\n\\begin{landscape}\n\\thispagestyle{plain}\n\\begin{center}\n\\resizebox{\\linewidth}{!}{\\includegraphics{{{TASK_DIR}}/review/source-crops/table-2-1-page-5.png}}\n\\end{center}\n\\end{landscape}\n\\clearpage\n\\begin{landscape}\n\\thispagestyle{plain}\n\\begin{center}\n\\resizebox{\\linewidth}{!}{\\includegraphics{{{TASK_DIR}}/review/source-crops/table-2-1-page-6.png}}\n\\end{center}\n\\end{landscape}\n\\clearpage\n\\begin{landscape}\n\\thispagestyle{plain}\n\\begin{center}\n\\resizebox{\\linewidth}{!}{\\includegraphics{{{TASK_DIR}}/review/source-crops/table-2-1-page-7.png}}\n\\end{center}\n\\end{landscape}\n\\clearpage\n\\begin{landscape}\n\\thispagestyle{plain}\n\\begin{center}\n\\resizebox{\\linewidth}{!}{\\includegraphics{{{TASK_DIR}}/review/source-crops/table-2-1-page-8.png}}\n\\end{center}\n\\end{landscape}\n\\clearpage\n\n*Table 2.1. Force fields. Source: Gundertofte et al. (1991, 1996). Values and references are reproduced from the printed table.*",
+      "regex": true,
+      "dotall": true,
+      "expected_min": 1,
+      "source_evidence": "Essentials of Computational Chemistry, 2nd ed., physical PDF pages 72-79, printed pages 51-58, Table 2.1",
+      "note": "Restore the complete eight-page force-field table from clean source panels; the sideways printed table defeated OCR column reconstruction."
+    },
+    {
+      "from": "\\$\\$\\\\begin\\{array\\}\\{c\\|c\\}.*?\\$\\$",
+      "to": "![]({{TASK_DIR}}/review/source-crops/equation-10-38.png)",
+      "regex": true,
+      "dotall": true,
+      "expected_min": 1,
+      "source_evidence": "Essentials of Computational Chemistry, 2nd ed., physical PDF page 391, printed page 373, equation (10.38)",
+      "note": "Restore the 6-methylquinoline isodesmic reaction scheme before Pandoc interprets the OCR-created array."
+    },
+    {
+      "from": "\\$\\$\\\\begin\\{array\\}\\{c\\|ccccccccccccccccccccccccccccccccccc\\$\\$(?=\\n\\nWhile this reaction)",
+      "to": "![]({{TASK_DIR}}/review/source-crops/equation-10-39.png)",
+      "regex": true,
+      "dotall": false,
+      "expected_min": 1,
+      "source_evidence": "Essentials of Computational Chemistry, 2nd ed., physical PDF page 391, printed page 373, equation (10.39)",
+      "note": "Restore the second isodesmic reaction scheme."
+    },
+    {
+      "from": "$$17 H_2 +$$",
+      "to": "![]({{TASK_DIR}}/review/source-crops/equation-10-40.png)",
+      "regex": false,
+      "expected_min": 1,
+      "source_evidence": "Essentials of Computational Chemistry, 2nd ed., physical PDF page 391, printed page 373, equation (10.40)",
+      "note": "Restore the complete bond-separation reaction that OCR reduced to its leftmost text."
+    },
+    {
+      "from": "\\$\\$\\\\begin\\{array\\}\\{cccccccccccccccccccccccccccccccccccc\\$\\$.*?\\$\\$\\\\begin\\{array\\}\\{cccccccccccccccccccccccccccccccccccc\\$\\$(?=\\n\\nThe issue of isogyricity)",
+      "to": "![]({{TASK_DIR}}/review/source-crops/equations-10-41-10-43.png)",
+      "regex": true,
+      "dotall": true,
+      "expected_min": 1,
+      "source_evidence": "Essentials of Computational Chemistry, 2nd ed., physical PDF page 392, printed page 374, equations (10.41)-(10.43)",
+      "note": "Restore all three p-benzyne isodesmic reaction schemes as one source panel."
+    },
+    {
+      "from": "\\$\\$\\\\begin\\{array\\}\\{cccccccccccccccccccccccccccccccccccc\\$\\$(?=\\n\\n\\*\\*Figure 11\\.9\\*\\*)",
+      "to": "![]({{TASK_DIR}}/review/source-crops/figure-11-9.png)",
+      "regex": true,
+      "dotall": false,
+      "expected_min": 1,
+      "source_evidence": "Essentials of Computational Chemistry, 2nd ed., physical PDF page 430, printed page 412, Figure 11.9",
+      "note": "Restore the Born-Haber free-energy cycle while retaining its Markdown caption."
+    },
+    {
+      "from": "\\$\\$\\\\begin\\{array\\}\\{cccccccccccccccccccccccccccccccccccc\\$\\$(?=\\n\\nHowever, if the theoretical target)",
+      "to": "![]({{TASK_DIR}}/review/source-crops/equation-11-26.png)",
+      "regex": true,
+      "dotall": false,
+      "expected_min": 1,
+      "source_evidence": "Essentials of Computational Chemistry, 2nd ed., physical PDF page 431, printed page 413, equation (11.26)",
+      "note": "Restore the substituted-anilinium aqueous reaction."
+    },
+    {
+      "from": "\\$\\$\\\\begin\\{array\\}\\{cccccccccccccccccccccccccccccccccccc\\$\\$(?=\\n\\none may well expect)",
+      "to": "![]({{TASK_DIR}}/review/source-crops/equation-11-27.png)",
+      "regex": true,
+      "dotall": false,
+      "expected_min": 1,
+      "source_evidence": "Essentials of Computational Chemistry, 2nd ed., physical PDF page 431, printed page 413, equation (11.27)",
+      "note": "Restore the pKa isodesmic reference reaction."
+    },
+    {
+      "from": "\\$\\$\\\\begin\\{array\\}\\{cccccccccccccccccccccccccccccccccccc\\$\\$(?=\\n\\nthen the free energy change)",
+      "to": "![]({{TASK_DIR}}/review/source-crops/equation-11-28.png)",
+      "regex": true,
+      "dotall": false,
+      "expected_min": 1,
+      "source_evidence": "Essentials of Computational Chemistry, 2nd ed., physical PDF page 431, printed page 413, equation (11.28)",
+      "note": "Restore the unsubstituted experimental reference reaction."
+    },
+    {
+      "from": "\\$\\$\\\\begin\\{array\\}\\{c\\}\\s*O \\\\\\\\.*?E \\\\bullet S2\\s*\\\\end\\{array\\}\\$\\$(?=\\n\\n\\*\\*Figure 12\\.6\\*\\*)",
+      "to": "![]({{TASK_DIR}}/review/source-crops/figure-12-6.png)",
+      "regex": true,
+      "dotall": true,
+      "expected_min": 1,
+      "source_evidence": "Essentials of Computational Chemistry, 2nd ed., physical PDF page 470, printed page 453, Figure 12.6",
+      "note": "Restore the complete biotin/avidin free-energy cycle in place of six disconnected OCR arrays."
+    }
+  ],
+  "replacements": [
+    {
+      "from": "\\((3N-6=3 \\text{ coordinate degrees of freedom plus one dimension for energy).",
+      "to": "(\\(3N-6=3\\) coordinate degrees of freedom plus one dimension for energy).",
+      "regex": false,
+      "expected_min": 1,
+      "source_evidence": "Essentials of Computational Chemistry, 2nd ed., Figure 1.3 caption",
+      "note": "Close math after 3N-6=3 instead of treating the rest of the caption as an unterminated text command."
+    },
+    {
+      "from": "equilibrium value for the global minimum)\\)",
+      "to": "equilibrium value for the global minimum)",
+      "regex": false,
+      "expected_min": 1,
+      "source_evidence": "Essentials of Computational Chemistry, 2nd ed., Figure 1.3 caption",
+      "note": "Remove the stale closing math delimiter left at the end of the caption after restoring the local formula boundary."
+    },
+    {
+      "from": "\\\\\\[\\\\begin\\{array\\}\\{c\\|ccccccccccccccccccccccccccccccccccc\\\\\\](?=\\n\\n\\\\textbf\\{Figure 6\\.13\\})",
+      "to": "\\begin{center}\\includegraphics[width=.96\\linewidth,height=.38\\textheight,keepaspectratio]{{{TASK_DIR}}/review/source-crops/figure-6-13.png}\\end{center}",
+      "regex": true,
+      "dotall": false,
+      "expected_min": 1,
+      "source_evidence": "Essentials of Computational Chemistry, 2nd ed., physical PDF page 220, printed page 200, Figure 6.13",
+      "note": "Restore the reaction diagram that Marker reduced to an unterminated empty array. The caption remains editable TeX."
+    },
+    {
+      "from": "One measure of the resonance component of radical stability in polymerizations.*?(?=\\n\\nThe authors also considered)",
+      "to": "One measure of the resonance component of radical stability in polymerizations is the so-called \\(Q\\) value of the monomer, which quantifies the resonance stabilization of the radical (Stevens 1990). However, the experimentally determined value of \\(Q\\) can be influenced by other factors unrelated to resonance. To evaluate the extent to which their measured \\(Q\\) values were consistent with resonance stabilization of the monomer radical, the authors compared isodesmic energies from Eq. (6.14) to measured \\(Q\\) values for \\(R = \\mathrm{Me}, \\mathrm{tBu}, \\mathrm{PhO}, \\mathrm{CN}, \\mathrm{Ph}, \\text{vinyl},\\) and \\(\\text{phenylethynyl}\\). The largest stabilization energy was computed for the \\(R = \\text{phenylethynyl}\\) case, about \\(101\\,\\mathrm{kJ\\,mol^{-1}}\\), although at the HF/3-21G level the expected linear correlation between \\(\\log Q\\) and stabilization energy was only fair (\\(R^2 = 0.86\\); a better correlation for the non-phenylethynyl substituents had been obtained previously at a higher level of theory).",
+      "regex": true,
+      "dotall": true,
+      "expected_min": 1,
+      "source_evidence": "Essentials of Computational Chemistry, 2nd ed., physical PDF page 220, printed page 200, paragraph below Figure 6.13",
+      "note": "Replace Marker repetition of 'Q values' with the complete source paragraph."
+    },
+    {
+      "from": "\\Psi'_{RHF} = |\\cdots \\pi'_{1}^{2} \\pi'_{2}^{0} \\pi'_{3}^{2}\\rangle",
+      "to": "\\Psi'_{\\mathrm{RHF}} = |\\cdots \\pi_{1}^{\\prime\\,2} \\pi_{2}^{\\prime\\,0} \\pi_{3}^{\\prime\\,2}\\rangle",
+      "regex": false,
+      "flexible_whitespace": true,
+      "expected_min": 1,
+      "source_evidence": "Essentials of Computational Chemistry, 2nd ed., physical PDF page 225, printed page 205, equation (7.4)",
+      "note": "Combine each orbital prime and occupation number into one superscript, avoiding OCR-created double superscripts."
+    },
+    {
+      "from": "\\\\begin\\{longtable\\}(?:(?!\\\\end\\{longtable\\}).)*\\\\Psi_\\{\\\\text\\{HF\\}\\}(?:(?!\\\\end\\{longtable\\}).)*extremely sparse(?:(?!\\\\end\\{longtable\\}).)*\\\\end\\{longtable\\}",
+      "to": "\\begin{center}\\includegraphics[width=.92\\linewidth,height=.60\\textheight,keepaspectratio]{{{TASK_DIR}}/review/source-crops/figure-7-4.png}\\end{center}",
+      "regex": true,
+      "dotall": true,
+      "expected_min": 1,
+      "source_evidence": "Essentials of Computational Chemistry, 2nd ed., physical PDF page 233, printed page 213, Figure 7.4",
+      "note": "Restore the CI matrix diagram; Marker misclassified it as a table and corrupted determinant labels and sparsity cells."
+    },
+    {
+      "from": "\\Psi_{0} = \\left. \\Psi_{0}^{(0)} + \\lambda \\frac{\\partial \\Psi_{0}^{(0)}}{\\partial \\lambda} \\right|_{\\lambda=0} + \\frac{1}{2!} \\lambda^{2} \\frac{\\partial^{2} \\Psi_{0}^{(0)}}{\\partial \\lambda^{2}} \\right|_{\\lambda=0} + \\frac{1}{3!} \\lambda^{3} \\frac{\\partial^{3} \\Psi_{0}^{(0)}}{\\partial \\lambda^{3}} \\right|_{\\lambda=0} + \\cdots",
+      "to": "\\Psi_{0} = \\Psi_{0}^{(0)} + \\lambda\\left.\\frac{\\partial \\Psi_{0}^{(0)}}{\\partial \\lambda}\\right|_{\\lambda=0} + \\frac{1}{2!}\\lambda^{2}\\left.\\frac{\\partial^{2}\\Psi_{0}^{(0)}}{\\partial \\lambda^{2}}\\right|_{\\lambda=0} + \\frac{1}{3!}\\lambda^{3}\\left.\\frac{\\partial^{3}\\Psi_{0}^{(0)}}{\\partial \\lambda^{3}}\\right|_{\\lambda=0} + \\cdots",
+      "regex": false,
+      "flexible_whitespace": true,
+      "expected_min": 1,
+      "source_evidence": "Essentials of Computational Chemistry, 2nd ed., physical PDF page 237, printed page 217, equation (7.20)",
+      "note": "Attach a local evaluation bar to each Taylor derivative; Marker emitted two unmatched right delimiters."
+    },
+    {
+      "from": "\\begin{description} \\item[ISBN 0-470-09181-9 (cloth : alk. paper) -- ISBN 0-470-09182-7 (pbk.] alk. paper) \\end{description}",
+      "to": "\\noindent ISBN 0-470-09181-9 (cloth: alk. paper); ISBN 0-470-09182-7 (pbk.: alk. paper).",
+      "regex": false,
+      "flexible_whitespace": true,
+      "expected_min": 1,
+      "source_evidence": "Essentials of Computational Chemistry, 2nd ed., copyright/cataloguing page",
+      "note": "Rejoin the second ISBN medium qualifier that OCR split out of the description label."
+    },
+    {
+      "from": "9-\\allowbreak{}Methylhypoxanthine",
+      "to": "9-\\allowbreak{}Methyl\\allowbreak{}hypoxanthine",
+      "regex": false,
+      "expected_min": 2,
+      "source_evidence": "Essentials of Computational Chemistry, 2nd ed., Tables 11.3 and 11.4",
+      "note": "Add an invisible pocket-page break opportunity inside the unchanged compound name."
+    }
+  ]
+}

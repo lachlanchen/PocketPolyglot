@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "policy": "Every replacement is transcribed from the cited source pages; do not infer missing mathematics.",
+  "replacements": [
+    {
+      "from": "g_{mn} = \\left( \\begin{array}{ccccc} g_{11} & g_{12} & g_{13} & g_{14} \\ g_{12} & g_{22} & g_{23} & g_{24} \\ g_{13} & g_{23} & g_{33} & g_{34} \\ g_{14} & g_{24} & g_{34} & g_{44} \\end{array} \\right)",
+      "to": "g_{mn} = \\begin{pmatrix} g_{11} & g_{12} & g_{13} & g_{14} \\\\ g_{12} & g_{22} & g_{23} & g_{24} \\\\ g_{13} & g_{23} & g_{33} & g_{34} \\\\ g_{14} & g_{24} & g_{34} & g_{44} \\end{pmatrix}",
+      "expected_min": 1,
+      "source_evidence": "General Relativity: The Theoretical Minimum, physical PDF page 95, printed page 82",
+      "note": "Restore the symmetric 4x4 metric matrix; Marker lost row separators and emitted five columns."
+    },
+    {
+      "from": "expressions ofthe same quadratic form in the dVp's",
+      "to": "expressions of the same quadratic form in the \\(dY^p\\)'s",
+      "expected_min": 1,
+      "source_evidence": "Physical PDF page 94, printed page 81, paragraph below equation (32)",
+      "note": "Repair spacing and the Y/p differential notation."
+    },
+    {
+      "from": "\\[g^{-1}\\]\n\\(g =\\) the unit matrix",
+      "to": "\\[g^{-1}g = \\text{the unit matrix}.\\]",
+      "expected_min": 1,
+      "source_evidence": "Physical PDF page 95, printed page 82",
+      "note": "Join the matrix-inverse identity that Marker split into display and prose fragments."
+    },
+    {
+      "from": "where 5\\^{} is the identity matrix.",
+      "to": "where \\(\\delta_m^p\\) is the identity matrix.",
+      "expected_min": 1,
+      "source_evidence": "Physical PDF page 96, printed page 83, line below equation (34)",
+      "note": "Restore the Kronecker delta."
+    },
+    {
+      "from": "Kronecker-delta 5\\^{}",
+      "to": "Kronecker delta \\(\\delta_m^p\\)",
+      "expected_min": 1,
+      "source_evidence": "Physical PDF page 96, printed page 83",
+      "note": "Restore the repeated Kronecker-delta notation."
+    },
+    {
+      "from": "\\emph{gnp}",
+      "to": "\\(g^{np}\\)",
+      "expected_min": 1,
+      "source_evidence": "Physical PDF page 96, printed page 83",
+      "note": "Restore the contravariant metric components."
+    },
+    {
+      "from": "In fact the three tensors 8 Similarly, we saw that a rank-1 tensor, i.e., what we called in lecture 1 an abstract vector, has a contravariant form and a covariant form.",
+      "to": "In fact the three tensors \\(g_{mn}\\), \\(g^{mn}\\), and \\(g_m^n\\) are really just a single tensor written in three forms\\footnote{Similarly, we saw that a rank-1 tensor, i.e., what we called in lecture 1 an abstract vector, has a contravariant form and a covariant form.}: the first with two covariant indices, the second with two contravariant indices, and the third with a covariant and a contravariant index.\n\n\\emph{The fact that there is a metric tensor with downstairs indices and a metric tensor with upstairs indices will play an important role.}\n\nSo far everything we have seen on tensors was easy. It is essentially learning and getting accustomed to the notation.\n\nThis lecture was about tensor algebra. The next lecture deals with tensor calculus: in particular with the dark art of parallel transporting tensors, differentiating tensors, and most importantly building a curvature tensor from the derivatives.\n\nIt is the curvature tensor that will tell us if a geometry is flat or curved, and in general relativity whether a gravitational field exerts tidal forces.",
+      "expected_min": 1,
+      "source_evidence": "Physical PDF page 96, printed page 83, including footnote 8",
+      "note": "Restore the paragraph and footnote swallowed by malformed OCR HTML."
+    },
+    {
+      "from": "Iri that case, the area, or ``volume,'' is obtained from the \\emph{determinant} of the matrix expressed in (35). For a 2 x 2 matrix, the reader remembers that the determinant is \\emph{gXx9yy --- 9xy9yx-} For 3 x 3, it is a bit more complicated; it is given by Cramer's rule. For 4x4, it is obtained as a linear combination of 3 x 3, etc. But we don't need to know the formulas. The notation for the determinant is \\emph{\\g.} And the general formula for the volume in figure 8 is",
+      "to": "In that case, the area, or ``volume,'' is obtained from the \\emph{determinant} of the matrix expressed in (35). For a \\(2 \\times 2\\) matrix, the reader remembers that the determinant is \\(g_{xx}g_{yy} - g_{xy}g_{yx}\\). For \\(3 \\times 3\\), it is a bit more complicated; it is given by Cramer's rule. For \\(4 \\times 4\\), it is obtained as a linear combination of \\(3 \\times 3\\), etc. But we don't need to know the formulas. The notation for the determinant is \\(|g|\\). And the general formula for the volume in figure 8 is",
+      "expected_min": 1,
+      "source_evidence": "General Relativity: The Theoretical Minimum, physical PDF page 372, printed page 361, paragraph below equation (36)",
+      "note": "Restore determinant notation, subscripts, multiplication signs, and the opening word from the source page."
+    },
+    {
+      "from": "its signature is ---I- ++.",
+      "to": "its signature is \\(-+++\\).",
+      "expected_min": 1,
+      "source_evidence": "General Relativity: The Theoretical Minimum, physical PDF page 372, printed page 361, final paragraph",
+      "note": "Restore the Minkowski signature from the printed source."
+    },
+    {
+      "from": "Other quantities that will be invariant under change of coordinates are based on \\textbar\\#\\textbar. If we take, for instance, the volume element \\emph{y/\\g~dt dx dy dz} and integrate it multiplied by any scalar \\emph{S(t,} X), where \\emph{X} stands for \\emph{x y z,}",
+      "to": "Other quantities that will be invariant under change of coordinates are based on \\(|g|\\). If we take, for instance, the volume element \\(\\sqrt{|g|}\\,dt\\,dx\\,dy\\,dz\\) and integrate it multiplied by any scalar \\(S(t,X)\\), where \\(X\\) stands for \\(x,y,z\\),",
+      "expected_min": 1,
+      "source_evidence": "General Relativity: The Theoretical Minimum, physical PDF page 373, printed page 362, paragraph above equation (41)",
+      "note": "Restore determinant and four-dimensional volume-element notation."
+    }
+  ]
+}

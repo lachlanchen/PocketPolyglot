@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "policy": "Every replacement is transcribed from the cited source page; do not infer missing mathematics.",
+  "markdown_replacements": [
+    {
+      "from": "\\| <br>Table 13\\.1.*?(?=\\n\\nThis constraint)",
+      "to": "\\begin{table}[htbp]\n\\centering\n\\small\n\\caption{The states with $N^{\\perp}+\\bar N^{\\perp}\\leq 2$ in the closed string spectrum}\n\\label{tab:closed-string-spectrum-low-levels}\n\\setlength{\\tabcolsep}{3pt}\n\\renewcommand{\\arraystretch}{1.15}\n\\resizebox{\\linewidth}{!}{%\n\\begin{tabular}{@{}ccccc@{}}\n\\toprule\n$N^{\\perp},\\bar N^{\\perp}$ & $|\\lambda,\\bar\\lambda\\rangle$ & $\\frac12\\alpha' M^2$ & Number of states & Wavefunction \\\\\n\\midrule\n$0,0$ & $|p^+,\\vec p_T\\rangle$ & $-2$ & $1$ & $\\psi(\\tau,p^+,\\vec p_T)$ \\\\\n$1,1$ & $a_1^{I\\dagger}\\bar a_1^{J\\dagger}|p^+,\\vec p_T\\rangle$ & $0$ & $(D-2)^2$ & $\\psi_{IJ}(\\tau,p^+,\\vec p_T)$ \\\\\n\\bottomrule\n\\end{tabular}%\n}\n\\end{table}",
+      "regex": true,
+      "dotall": true,
+      "expected_min": 1,
+      "source_evidence": "A First Course in String Theory, 2nd ed., physical PDF page 315, printed page 291, Table 13.1",
+      "note": "Restore the two-row closed-string spectrum table as real TeX; Marker split symbols into HTML fragments and invented empty columns."
+    }
+  ],
+  "replacements": [
+    {
+      "from": "\\left. \\int_{\\tau_{i}}^{\\tau_{f}} d\\tau \\left(",
+      "to": "\\int_{\\tau_{i}}^{\\tau_{f}} d\\tau \\left(",
+      "regex": false,
+      "flexible_whitespace": true,
+      "expected_min": 1,
+      "source_evidence": "A First Course in String Theory, 2nd ed., physical PDF page 138, printed page 114, equation (6.54)",
+      "note": "Remove the invisible delimiter inserted only to balance the OCR-created extra closing parenthesis repaired below."
+    },
+    {
+      "from": "- \\delta X^{1}(\\tau, 0) \\mathcal{P}_{1}^{\\sigma}(\\tau, 0) \\right) \\\\ \\vdots",
+      "to": "- \\delta X^{1}(\\tau, 0) \\mathcal{P}_{1}^{\\sigma}(\\tau, 0) \\\\ \\vdots",
+      "regex": false,
+      "flexible_whitespace": true,
+      "expected_min": 1,
+      "source_evidence": "A First Course in String Theory, 2nd ed., physical PDF page 138, printed page 114, equation (6.54)",
+      "note": "Remove the OCR-inserted parenthesis close after the first row; the source closes the large parenthesis only after the final row."
+    },
+    {
+      "from": "\\begin{aligned} \\int_{\\tau_{i}}^{\\tau_{f}} d\\tau \\left(",
+      "to": "\\int_{\\tau_{i}}^{\\tau_{f}} d\\tau \\left(\\begin{aligned}",
+      "regex": false,
+      "flexible_whitespace": true,
+      "expected_min": 1,
+      "source_evidence": "A First Course in String Theory, 2nd ed., physical PDF page 138, printed page 114, equation (6.54)",
+      "note": "Place the multiline alignment inside the source's large parenthesis so TeX does not split a left-right pair across rows."
+    },
+    {
+      "from": "- \\delta X^{d}(\\tau, 0) \\mathcal{P}_{d}^{\\sigma}(\\tau, 0) \\right). \\end{aligned}",
+      "to": "- \\delta X^{d}(\\tau, 0) \\mathcal{P}_{d}^{\\sigma}(\\tau, 0) \\end{aligned}\\right).",
+      "regex": false,
+      "flexible_whitespace": true,
+      "expected_min": 1,
+      "source_evidence": "A First Course in String Theory, 2nd ed., physical PDF page 138, printed page 114, equation (6.54)",
+      "note": "Close the inner alignment before the source's final large parenthesis."
+    },
+    {
+      "from": "\\underbrace{\\frac{3(\\mathbf{1},\\mathbf{2})_{1/2}}{[25]} + \\underbrace{\\frac{3(\\mathbf{1},\\mathbf{1})_0}{[35]} + \\underbrace{\\frac{3(\\mathbf{1},\\mathbf{1})_{-1}}{[56]}}.}",
+      "to": "\\underbrace{3(\\mathbf{1},\\mathbf{2})_{1/2}}_{[25]} + \\underbrace{3(\\mathbf{1},\\mathbf{1})_0}_{[35]} + \\underbrace{3(\\mathbf{1},\\mathbf{1})_{-1}}_{[56]}.",
+      "regex": false,
+      "flexible_whitespace": true,
+      "expected_min": 1,
+      "source_evidence": "A First Course in String Theory, 2nd ed., physical PDF page 500, printed page 476, equation (21.61)",
+      "note": "Restore three separately underbraced lepton representations and their intersection labels."
+    },
+    {
+      "from": "\\begin{array}{ccccccccccccccccccccccccccccccccccc",
+      "to": "\\begin{aligned} &\\overbrace{x^0\\;x^1\\;x^2\\;x^3\\;r}^{\\mathrm{AdS}_5} \\quad \\overbrace{y^1\\;y^2\\;y^3\\;y^4\\;y^5}^{S^5} \\\\ &\\underbrace{x^0\\;x^1\\;x^2\\;x^3}_{\\text{D3 tangential}} \\quad \\underbrace{x^4\\;x^5\\;x^6\\;x^7\\;x^8\\;x^9}_{\\text{D3 transverse}} \\end{aligned} \\tag{23.55}",
+      "regex": false,
+      "expected_min": 1,
+      "source_evidence": "A First Course in String Theory, 2nd ed., physical PDF page 564, printed page 540, equation (23.55)",
+      "note": "Restore the AdS5/S5 and D3 tangential/transverse coordinate grouping; Marker retained only an unterminated array declaration."
+    },
+    {
+      "from": "% BUILD_POCKET_WIDE_MATH_BEGIN(?:(?!% BUILD_POCKET_WIDE_MATH_END).)*\\\\mathcal\\{F\\}_0(?:(?!% BUILD_POCKET_WIDE_MATH_END).)*% BUILD_POCKET_WIDE_MATH_END\\s*further restriction.*?\\(26\\.31\\)",
+      "to": "\\begin{equation}\n\\resizebox{.94\\linewidth}{!}{$\\displaystyle \\mathcal{F}_0 \\equiv \\left\\{\\begin{aligned} -\\frac{1}{2} < \\Re(\\tau) \\le \\frac{1}{2},\\; \\Im(\\tau)>0,\\; |\\tau|\\ge 1,\\quad \\text{with the} \\\\ \\text{further restriction } \\Re(\\tau)\\ge 0 \\text{ if } |\\tau|=1 \\end{aligned}\\right\\}. $}\n\\tag{26.31}\n\\end{equation}",
+      "regex": true,
+      "dotall": true,
+      "expected_min": 1,
+      "source_evidence": "A First Course in String Theory, 2nd ed., physical PDF page 676, printed page 652, equation (26.31)",
+      "note": "Rejoin the two printed rows of the fundamental-domain definition; Marker emitted the second row as prose."
+    }
+  ]
+}

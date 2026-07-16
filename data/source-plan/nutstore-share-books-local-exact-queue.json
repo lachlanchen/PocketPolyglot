@@ -31,6 +31,7 @@
       "author": "Leonard Susskind and George Hrabovsky",
       "source": "sources/nutstore-share-books/theoretical-minimum-classical-mechanics/en/The Theoretical Minimum - Classical Mechanics (2014).pdf",
       "validation_profile": "technical_exact",
+      "tex_fixes": "books/theoretical-minimum-classical-mechanics-local-exact/local-exact-tex-fixes.json",
       "marker_shard_pages": 32,
       "minimum_math_blocks": 5,
       "max_overfull_pt": 18.0
@@ -53,6 +54,7 @@
       "author": "Leonard Susskind and Andre Cabannes",
       "source": "sources/nutstore-share-books/theoretical-minimum-general-relativity/en/General Relativity - The Theoretical Minimum (2023).pdf",
       "validation_profile": "technical_exact",
+      "tex_fixes": "books/theoretical-minimum-general-relativity-local-exact/local-exact-tex-fixes.json",
       "marker_shard_pages": 32,
       "minimum_math_blocks": 5,
       "max_overfull_pt": 18.0
@@ -64,6 +66,23 @@
       "author": "Thomas M. Cover and Joy A. Thomas",
       "source": "sources/nutstore-share-books/elements-of-information-theory/en/Elements of Information Theory (2006).pdf",
       "validation_profile": "technical_exact",
+      "tex_fixes": "books/elements-of-information-theory-local-exact/local-exact-tex-fixes.json",
+      "source_crops": [
+        {
+          "page": 687,
+          "clip_points": [58, 66, 385, 628],
+          "dpi": 300,
+          "output": "review/source-crops/table-17-1-page-1.png",
+          "source_evidence": "Physical PDF page 687, printed page 661, Table 17.1"
+        },
+        {
+          "page": 688,
+          "clip_points": [55, 67, 385, 607],
+          "dpi": 300,
+          "output": "review/source-crops/table-17-1-page-2.png",
+          "source_evidence": "Physical PDF page 688, printed page 662, continuation of Table 17.1"
+        }
+      ],
       "marker_shard_pages": 32,
       "minimum_math_blocks": 5,
       "minimum_source_text_coverage_ratio": 0.55,
@@ -76,6 +95,7 @@
       "author": "Barton Zwiebach",
       "source": "sources/nutstore-share-books/first-course-in-string-theory/en/A First Course in String Theory (2009).pdf",
       "validation_profile": "technical_exact",
+      "tex_fixes": "books/first-course-in-string-theory-local-exact/local-exact-tex-fixes.json",
       "marker_shard_pages": 32,
       "minimum_math_blocks": 5,
       "minimum_source_text_coverage_ratio": 0.55,
@@ -88,6 +108,150 @@
       "author": "Christopher J. Cramer",
       "source": "sources/nutstore-share-books/essentials-of-computational-chemistry/en/Essentials of Computational Chemistry (2004).pdf",
       "validation_profile": "technical_exact",
+      "tex_fixes": "books/essentials-of-computational-chemistry-local-exact/local-exact-tex-fixes.json",
+      "source_crops": [
+        {
+          "page": 72,
+          "clip_points": [35, 15, 445, 676],
+          "dpi": 300,
+          "rotate_degrees": 90,
+          "output": "review/source-crops/table-2-1-page-1.png",
+          "source_evidence": "Physical PDF page 72, printed page 51, Table 2.1 force fields"
+        },
+        {
+          "page": 73,
+          "clip_points": [35, 15, 445, 676],
+          "dpi": 300,
+          "rotate_degrees": 90,
+          "output": "review/source-crops/table-2-1-page-2.png",
+          "source_evidence": "Physical PDF page 73, printed page 52, Table 2.1 force fields"
+        },
+        {
+          "page": 74,
+          "clip_points": [35, 15, 445, 676],
+          "dpi": 300,
+          "rotate_degrees": 90,
+          "output": "review/source-crops/table-2-1-page-3.png",
+          "source_evidence": "Physical PDF page 74, printed page 53, Table 2.1 force fields"
+        },
+        {
+          "page": 75,
+          "clip_points": [35, 15, 445, 676],
+          "dpi": 300,
+          "rotate_degrees": 90,
+          "output": "review/source-crops/table-2-1-page-4.png",
+          "source_evidence": "Physical PDF page 75, printed page 54, Table 2.1 force fields"
+        },
+        {
+          "page": 76,
+          "clip_points": [35, 15, 445, 676],
+          "dpi": 300,
+          "rotate_degrees": 90,
+          "output": "review/source-crops/table-2-1-page-5.png",
+          "source_evidence": "Physical PDF page 76, printed page 55, Table 2.1 force fields"
+        },
+        {
+          "page": 77,
+          "clip_points": [35, 15, 445, 676],
+          "dpi": 300,
+          "rotate_degrees": 90,
+          "output": "review/source-crops/table-2-1-page-6.png",
+          "source_evidence": "Physical PDF page 77, printed page 56, Table 2.1 force fields"
+        },
+        {
+          "page": 78,
+          "clip_points": [35, 15, 445, 676],
+          "dpi": 300,
+          "rotate_degrees": 90,
+          "output": "review/source-crops/table-2-1-page-7.png",
+          "source_evidence": "Physical PDF page 78, printed page 57, Table 2.1 force fields"
+        },
+        {
+          "page": 79,
+          "clip_points": [35, 15, 445, 676],
+          "dpi": 300,
+          "rotate_degrees": 90,
+          "output": "review/source-crops/table-2-1-page-8.png",
+          "source_evidence": "Physical PDF page 79, printed page 58, Table 2.1 force fields"
+        },
+        {
+          "page": 220,
+          "clip_points": [48, 62, 392, 215],
+          "dpi": 300,
+          "output": "review/source-crops/figure-6-13.png",
+          "source_evidence": "Physical PDF page 220, printed page 200, Figure 6.13 reaction diagram"
+        },
+        {
+          "page": 233,
+          "clip_points": [80, 190, 350, 490],
+          "dpi": 300,
+          "output": "review/source-crops/figure-7-4.png",
+          "source_evidence": "Physical PDF page 233, printed page 213, Figure 7.4 CI matrix structure"
+        },
+        {
+          "page": 391,
+          "clip_points": [55, 125, 390, 165],
+          "dpi": 300,
+          "output": "review/source-crops/equation-10-38.png",
+          "source_evidence": "Physical PDF page 391, printed page 373, chemical equation (10.38)"
+        },
+        {
+          "page": 391,
+          "clip_points": [70, 300, 390, 348],
+          "dpi": 300,
+          "output": "review/source-crops/equation-10-39.png",
+          "source_evidence": "Physical PDF page 391, printed page 373, chemical equation (10.39)"
+        },
+        {
+          "page": 391,
+          "clip_points": [110, 410, 390, 454],
+          "dpi": 300,
+          "output": "review/source-crops/equation-10-40.png",
+          "source_evidence": "Physical PDF page 391, printed page 373, chemical equation (10.40)"
+        },
+        {
+          "page": 392,
+          "clip_points": [76, 224, 393, 437],
+          "dpi": 300,
+          "output": "review/source-crops/equations-10-41-10-43.png",
+          "source_evidence": "Physical PDF page 392, printed page 374, chemical equations (10.41)-(10.43)"
+        },
+        {
+          "page": 430,
+          "clip_points": [145, 58, 290, 134],
+          "dpi": 300,
+          "output": "review/source-crops/figure-11-9.png",
+          "source_evidence": "Physical PDF page 430, printed page 412, Figure 11.9 free-energy cycle"
+        },
+        {
+          "page": 431,
+          "clip_points": [134, 112, 388, 175],
+          "dpi": 300,
+          "output": "review/source-crops/equation-11-26.png",
+          "source_evidence": "Physical PDF page 431, printed page 413, chemical equation (11.26)"
+        },
+        {
+          "page": 431,
+          "clip_points": [104, 202, 388, 260],
+          "dpi": 300,
+          "output": "review/source-crops/equation-11-27.png",
+          "source_evidence": "Physical PDF page 431, printed page 413, chemical equation (11.27)"
+        },
+        {
+          "page": 431,
+          "clip_points": [147, 314, 388, 369],
+          "dpi": 300,
+          "output": "review/source-crops/equation-11-28.png",
+          "source_evidence": "Physical PDF page 431, printed page 413, chemical equation (11.28)"
+        },
+        {
+          "page": 470,
+          "clip_points": [93, 57, 327, 221],
+          "dpi": 300,
+          "output": "review/source-crops/figure-12-6.png",
+          "source_evidence": "Physical PDF page 470, printed page 453, Figure 12.6 free-energy cycle"
+        }
+      ],
       "marker_shard_pages": 32,
       "minimum_math_blocks": 5,
       "minimum_source_text_coverage_ratio": 0.55,
@@ -100,6 +264,29 @@
       "author": "Frank Jensen",
       "source": "sources/nutstore-share-books/introduction-to-computational-chemistry/en/Introduction to Computational Chemistry (2017).pdf",
       "validation_profile": "technical_exact",
+      "tex_fixes": "books/introduction-to-computational-chemistry-local-exact/local-exact-tex-fixes.json",
+      "source_crops": [
+        {
+          "page": 484,
+          "clip_points": [170, 490, 365, 620],
+          "output": "review/source-crops/figure-14-4.png",
+          "source_evidence": "Physical PDF page 484, printed page 461, Figure 14.4 reaction diagrams"
+        },
+        {
+          "page": 586,
+          "clip_points": [195, 65, 340, 165],
+          "dpi": 300,
+          "output": "review/source-crops/figure-17-5.png",
+          "source_evidence": "Physical PDF page 586, printed page 563, Figure 17.5 differential-operator diagram"
+        },
+        {
+          "page": 645,
+          "clip_points": [205, 420, 345, 515],
+          "dpi": 300,
+          "output": "review/source-crops/figure-d-3.png",
+          "source_evidence": "Physical PDF page 645, printed page 622, Figure D.3 acetonitrile dummy-atom diagram"
+        }
+      ],
       "marker_shard_pages": 32,
       "minimum_math_blocks": 5,
       "minimum_source_text_coverage_ratio": 0.55,

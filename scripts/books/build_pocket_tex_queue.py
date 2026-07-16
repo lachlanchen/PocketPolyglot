@@ -10,6 +10,7 @@ an image-only placeholder.
 from __future__ import annotations
 
 import argparse
+import collections
 import hashlib
 import json
 import os
@@ -31,6 +32,25 @@ DEFAULT_HEADER = ROOT / "build-pocket/_common/pandoc-pocket-header.tex"
 
 CONTROL_RE = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]")
 MARKDOWN_IMAGE_RE = re.compile(r"(!\[[^\]]*\]\()([^)\n]+)(\))")
+SPACED_INLINE_MATH_RE = re.compile(
+    r"(?<!\\)\$(?!\$)(?P<open>[ \t]*)(?P<body>[^$\n]*?)(?P<close>[ \t]*)\$(?!\$)"
+)
+ESCAPED_CLOSING_INLINE_MATH_RE = re.compile(
+    r"(?<!\\)\$(?!\$)(?P<body>[^$\n]*?)\\\$(?!\$)"
+)
+ESCAPED_CLOSING_DISPLAY_MATH_RE = re.compile(
+    r"^(?P<open>[ \t]*\$\$)(?P<body>.+?)\\\$\$(?P<tail>[ \t]*)$",
+    re.M,
+)
+MARKER_ESCAPED_SUP_RE = re.compile(r"<sup>&</sup>lt;sup>(?P<value>\d+)</sup>")
+MARKER_FOOTNOTE_MATH_RE = re.compile(
+    r"\$<sup>\{\}\^(?P<footnote>\d+)\\</sup>"
+    r"(?P<command>[A-Za-z]+)(?P<body>[^$]*)\$"
+)
+MARKDOWN_DISPLAY_MATH_RE = re.compile(
+    r"(?<!\\)\$\$(?P<body>.*?)(?<!\\)\$\$",
+    re.S,
+)
 OVERFULL_RE = re.compile(r"Overfull \\hbox \(([-0-9.]+)pt too wide\)")
 OVERFULL_HOTSPOT_RE = re.compile(
     r"Overfull \\hbox \(([-0-9.]+)pt too wide\)"
@@ -46,8 +66,24 @@ LONGTABLE_SPEC_RE = re.compile(r"(\\begin\{longtable\}(?:\[[^\]]*\])?\{)([^{}]*(
 SIMPLE_LONGTABLE_SPEC_RE = re.compile(
     r"(\\begin\{longtable\}(?:\[[^\]]*\])?\{@\{\})([lcrX]{2,})(@\{\}\})"
 )
+LONGTABLE_BLOCK_RE = re.compile(r"\\begin\{longtable\}.*?\\end\{longtable\}", re.S)
+SIMPLE_ARRAY_RE = re.compile(
+    r"\\begin\{array\}\{(?P<spec>[lcr]+)\}(?P<body>.*?)\\end\{array\}",
+    re.S,
+)
+PLAIN_URL_RE = re.compile(
+    r"(?<!\\url\{)(?<!\\href\{)https?://[A-Za-z0-9][A-Za-z0-9._~:/?#\[\]@!$&'()*+,;=%-]*"
+)
 DISPLAY_MATH_RE = re.compile(r"(?<!\\)\\\[(.*?)(?<!\\)\\\]", re.S)
+DISPLAY_MATH_PUNCTUATION_RE = re.compile(
+    r"(?<!\\)\\\[(?P<body>.*?)(?<!\\)\\\]\s*\n\s*(?P<punct>[.,;:])(?=\s*\n)",
+    re.S,
+)
 INLINE_MATH_RE = re.compile(r"(?<!\\)\\\((.*?)(?<!\\)\\\)", re.S)
+DESCRIPTION_DISPLAY_LABEL_RE = re.compile(
+    r"\\item\[\s*\\\[(?P<body>.*?)\\\]\s*\]",
+    re.S,
+)
 ADJUSTBOX_DISPLAY_MATH_RE = re.compile(
     r"\\begin\{adjustbox\}\{max width=\\linewidth\}\s*"
     r"\\begin\{minipage\}\{\\linewidth\}\s*"
@@ -179,11 +215,17 @@ def ensure_header() -> Path:
 \usepackage{graphicx}
 \usepackage[export]{adjustbox}
 \usepackage{booktabs}
+\usepackage{bm}
 \usepackage{longtable}
 \usepackage{array}
+\usepackage{ragged2e}
 \usepackage{float}
 \usepackage{caption}
+\usepackage{pdflscape}
 \usepackage{needspace}
+\usepackage{titlesec}
+\usepackage{fvextra}
+\usepackage{xurl}
 \setmainfont{TeX Gyre Pagella}
 \setsansfont{TeX Gyre Heros}
 \setmonofont{DejaVu Sans Mono}
@@ -212,6 +254,126 @@ def ensure_header() -> Path:
 
 def clean_text(text: str) -> str:
     return CONTROL_RE.sub("", text).replace("\ufeff", "").replace("\ufffd", "")
+
+
+OCR_CONFUSABLE_TRANSLATION = str.maketrans(
+    {
+        # Marker preserves the source PDF's private-use digit glyphs. They are
+        # semantically ordinary digits but have no glyph in the book fonts.
+        "\uf639": "0",
+        "\uf6dc": "1",
+        "\uf63a": "2",
+        "\uf63b": "3",
+        "\uf63c": "4",
+        "\uf63d": "5",
+        "\uf63e": "6",
+        "\uf63f": "7",
+        "\uf640": "8",
+        "\uf641": "9",
+        # OCR sometimes chooses visually identical Cyrillic glyphs in English
+        # technical tables (for example "Туре" instead of "Type").
+        "\u0412": "B",
+        "\u0415": "E",
+        "\u041d": "H",
+        "\u0421": "C",
+        "\u0422": "T",
+        "\u0430": "a",
+        "\u0435": "e",
+        "\u0440": "p",
+        "\u0443": "y",
+        "\u0445": "x",
+    }
+)
+
+UNICODE_MATH_GREEK = {
+    "𝚯": r"\Theta",
+    "𝛩": r"\Theta",
+    "𝛬": r"\Lambda",
+    "𝛷": r"\Phi",
+    "𝛺": r"\Omega",
+    "𝛼": r"\alpha",
+    "𝛾": r"\gamma",
+    "𝛿": r"\delta",
+    "𝜀": r"\epsilon",
+    "𝜂": r"\eta",
+    "𝜃": r"\theta",
+    "𝜅": r"\kappa",
+    "𝜇": r"\mu",
+    "𝜌": r"\rho",
+    "𝜎": r"\sigma",
+    "𝜏": r"\tau",
+    "𝜒": r"\chi",
+    "𝜔": r"\omega",
+    "𝝎": r"\symbf{\omega}",
+    "ф": r"\Phi",
+    "ẋ": r"\dot{x}",
+    "₃": r"{}_{3}",
+}
+
+
+def normalize_ocr_unicode_for_tex(text: str) -> str:
+    """Map verified OCR-only glyphs to portable TeX without changing meaning."""
+
+    text = text.translate(OCR_CONFUSABLE_TRANSLATION)
+
+    def replace_symbols(value: str) -> str:
+        for source, target in UNICODE_MATH_GREEK.items():
+            value = value.replace(source, target)
+        return value
+
+    # Preserve the surrounding math mode so commands nested in \symbf,
+    # \mathbf, arrays, or display equations remain true mathematical glyphs.
+    text = DISPLAY_MATH_ENV_RE.sub(
+        lambda match: (
+            rf"\begin{{{match.group('environment')}}}"
+            + replace_symbols(match.group("body"))
+            + rf"\end{{{match.group('environment')}}}"
+        ),
+        text,
+    )
+    text = DISPLAY_MATH_RE.sub(
+        lambda match: r"\[" + replace_symbols(match.group(1)) + r"\]",
+        text,
+    )
+    text = INLINE_MATH_RE.sub(
+        lambda match: r"\(" + replace_symbols(match.group(1)) + r"\)",
+        text,
+    )
+    # Any remaining symbols came from OCR text or table labels rather than a
+    # math span. Give each one an explicit local math context.
+    for source, target in UNICODE_MATH_GREEK.items():
+        text = text.replace(source, r"\(" + target + r"\)")
+    return text
+
+
+GREEK_COMMAND_PATTERN = (
+    r"(?:alpha|beta|gamma|delta|epsilon|varepsilon|zeta|eta|theta|vartheta|"
+    r"iota|kappa|lambda|mu|nu|xi|pi|varpi|rho|varrho|sigma|varsigma|tau|"
+    r"upsilon|phi|varphi|chi|psi|omega|Gamma|Delta|Theta|Lambda|Xi|Pi|"
+    r"Sigma|Upsilon|Phi|Psi|Omega)"
+)
+
+
+def normalize_bold_greek_commands(text: str) -> str:
+    """Use unicode-math native bold commands instead of incompatible legacy ones."""
+
+    text = text.replace(r"\boldsymbol{", r"\symbfit{")
+    text = text.replace(r"\bm{", r"\symbfit{")
+    return re.sub(
+        rf"\\mathbf\{{(\\{GREEK_COMMAND_PATTERN})\}}",
+        r"\\symbfit{\1}",
+        text,
+    )
+
+
+def normalize_escaped_html_fragments(text: str) -> str:
+    """Restore simple superscripts that OCR escaped before Pandoc saw them."""
+
+    return re.sub(
+        r"\\&\s*lt;sup\\textgreater\s*([A-Za-z0-9]+)",
+        r"\\textsuperscript{\1}",
+        text,
+    )
 
 
 KNOWN_LATEX_COMMANDS = {
@@ -490,8 +652,14 @@ def normalize_longtable_spec(spec: str) -> str:
     cols = re.findall(r"[lcrX]", body)
     if len(cols) < 2:
         return spec
-    width = max(0.10, min(0.44, 0.92 / len(cols)))
-    wrapped = "".join([rf"p{{{width:.3f}\linewidth}}" for _ in cols])
+    count = len(cols)
+    intercolumn_space = 2 * (count - 1)
+    wrapped = "".join(
+        [
+            rf"p{{\dimexpr(\linewidth-{intercolumn_space}\tabcolsep)/{count}\relax}}"
+            for _ in cols
+        ]
+    )
     prefix = "@{}" if spec.startswith("@{}") else ""
     suffix = "@{}" if spec.endswith("@{}") else ""
     return prefix + wrapped + suffix
@@ -500,11 +668,130 @@ def normalize_longtable_spec(spec: str) -> str:
 def normalize_simple_longtable_specs(text: str) -> str:
     def repl(match: re.Match[str]) -> str:
         count = len(match.group(2))
-        width = max(0.08, min(0.44, 0.92 / count))
-        columns = "".join(rf"p{{{width:.3f}\linewidth}}" for _ in range(count))
+        intercolumn_space = 2 * (count - 1)
+        columns = "".join(
+            rf"p{{\dimexpr(\linewidth-{intercolumn_space}\tabcolsep)/{count}\relax}}"
+            for _ in range(count)
+        )
         return match.group(1) + columns + match.group(3)
 
     return SIMPLE_LONGTABLE_SPEC_RE.sub(repl, text)
+
+
+def add_longtable_break_opportunities(text: str) -> str:
+    """Permit wrapping in OCR-concatenated table and index entries.
+
+    Printed indexes are frequently recognized without spaces, for example
+    ``polarcoordinates,140Ostrogradskytheorem``.  Adding a discretionary break
+    after existing punctuation changes no visible text but prevents a single
+    damaged index token from overflowing an otherwise valid technical book.
+    """
+
+    def repl(match: re.Match[str]) -> str:
+        block = match.group(0)
+        head, marker, body = block.partition(r"\endhead")
+        if not marker:
+            return block
+        body = re.sub(r"([,;/])(?=\S)", r"\1\\allowbreak{}", body)
+        body = re.sub(r"(?<=[A-Za-z0-9])-(?=[A-Za-z0-9])", r"-\\allowbreak{}", body)
+        return head + marker + body
+
+    return LONGTABLE_BLOCK_RE.sub(repl, text)
+
+
+def rebalance_longtable_column_fractions(text: str) -> str:
+    """Prevent OCR-derived Pandoc tables from assigning unusably thin columns."""
+
+    def repl(match: re.Match[str]) -> str:
+        block = match.group(0)
+        head, marker, body = block.partition(r"\toprule")
+        values = [float(value) for value in re.findall(r"\\real\{([0-9.]+)\}", head)]
+        if not values or len(values) > 6:
+            return block
+        floor = 0.12 if len(values) <= 4 else 0.08
+        if min(values) >= floor:
+            return block
+        total = sum(values)
+        raised = [max(value, floor) for value in values]
+        excess = sum(raised) - total
+        reducible = sum(max(0.0, value - floor) for value in values)
+        if excess <= 0 or reducible <= excess:
+            return block
+        balanced = [
+            value - excess * max(0.0, value - floor) / reducible
+            if value > floor
+            else floor
+            for value in raised
+        ]
+        iterator = iter(balanced)
+        head = re.sub(
+            r"\\real\{[0-9.]+\}",
+            lambda _match: rf"\real{{{next(iterator):.4f}}}",
+            head,
+        )
+        return head + marker + body
+
+    return LONGTABLE_BLOCK_RE.sub(repl, text)
+
+
+def landscape_wide_longtables(text: str) -> str:
+    """Give wide or mathematically dense technical tables the long page edge."""
+
+    def repl(match: re.Match[str]) -> str:
+        block = match.group(0)
+        head = block.partition(r"\toprule")[0]
+        columns = head.count(r"\arraybackslash")
+        if not columns:
+            columns = len(re.findall(r"p\{", head))
+        math_heavy_five_column = columns == 5 and (
+            block.count(r"\langle") >= 4
+            or block.count(r"\left\langle") >= 4
+            or block.count(r"\symbf{") >= 4
+        )
+        if columns < 6 and not math_heavy_five_column:
+            return block
+        return (
+            "\n\\clearpage\n\\begin{landscape}\n"
+            + block
+            + "\n\\end{landscape}\n\\clearpage\n"
+        )
+
+    return LONGTABLE_BLOCK_RE.sub(repl, text)
+
+
+def wrap_plain_urls(text: str) -> str:
+    """Make extracted bare URLs break safely without changing their address."""
+
+    def repl(match: re.Match[str]) -> str:
+        value = match.group(0)
+        trailing = ""
+        while value and value[-1] in ".,;:)":
+            trailing = value[-1] + trailing
+            value = value[:-1]
+        return rf"\url{{{value}}}" + trailing
+
+    return PLAIN_URL_RE.sub(repl, text)
+
+
+def normalize_simple_array_column_counts(text: str) -> str:
+    """Reconcile simple OCR arrays whose declared column count lost columns."""
+
+    def repl(match: re.Match[str]) -> str:
+        body = match.group("body")
+        if r"\begin{" in body or r"\multicolumn" in body:
+            return match.group(0)
+        rows = re.split(r"\\\\(?:\[[^\]]*\])?", body)
+        actual_columns = max(
+            (len(re.findall(r"(?<!\\)&", row)) + 1 for row in rows if row.strip()),
+            default=0,
+        )
+        spec = match.group("spec")
+        if actual_columns <= len(spec) or actual_columns > 24:
+            return match.group(0)
+        repaired_spec = spec + spec[-1] * (actual_columns - len(spec))
+        return rf"\begin{{array}}{{{repaired_spec}}}" + body + r"\end{array}"
+
+    return SIMPLE_ARRAY_RE.sub(repl, text)
 
 
 def remove_source_contents_block(text: str) -> str:
@@ -528,6 +815,28 @@ def remove_source_contents_block(text: str) -> str:
         return text
     end = start + 1 + next_match.start()
     return text[:start] + "\n% Removed source-extracted printed Contents block; Pandoc TOC is used instead.\n" + text[end:]
+
+
+def merge_display_math_punctuation(text: str) -> str:
+    """Keep punctuation OCR placed after a display with that display."""
+
+    def repl(match: re.Match[str]) -> str:
+        body = match.group("body").rstrip()
+        punct = match.group("punct")
+        if body.endswith(tuple(".,;:")):
+            punct = ""
+        return "\\[" + body + punct + "\\]\n"
+
+    return DISPLAY_MATH_PUNCTUATION_RE.sub(repl, text)
+
+
+def normalize_description_math_labels(text: str) -> str:
+    """Keep display-math definition terms valid inside item labels."""
+
+    return DESCRIPTION_DISPLAY_LABEL_RE.sub(
+        lambda match: r"\item[\(\displaystyle " + match.group("body").strip() + r"\)]",
+        text,
+    )
 
 
 def display_math_scale_factor(body: str) -> float:
@@ -559,8 +868,25 @@ def transform_outside_wide_math_wrappers(text: str, transform: Any) -> str:
     return "".join(parts)
 
 
-def scaled_display_math(body: str) -> str:
+def align_multiline_math_body(body: str) -> str:
     body = body.strip()
+    # Split is valid only in display math. Width fitting uses a boxed math
+    # expression, where aligned preserves the same row layout.
+    body = body.replace(r"\begin{split}", r"\begin{aligned}")
+    body = body.replace(r"\end{split}", r"\end{aligned}")
+    if r"\\" in body and not re.search(
+        r"\\begin\{(?:aligned|alignedat|array|bmatrix|Bmatrix|cases|gathered|matrix|pmatrix|smallmatrix|split|vmatrix|Vmatrix)\}",
+        body,
+    ):
+        # OCR commonly preserves deliberate display row breaks but omits the
+        # surrounding alignment environment. A bare ``\\`` is invalid inside
+        # the inline math box used for width fitting.
+        body = "\\begin{aligned}\n" + body + "\n\\end{aligned}"
+    return body
+
+
+def scaled_display_math(body: str) -> str:
+    body = align_multiline_math_body(body)
     return (
         "\n"
         + WIDE_MATH_BEGIN
@@ -574,12 +900,53 @@ def scaled_display_math(body: str) -> str:
     )
 
 
+def scaled_tagged_display_math(body: str, tag: str) -> str:
+    body = align_multiline_math_body(body)
+    return (
+        "\n"
+        + WIDE_MATH_BEGIN
+        + "\n\\Needspace{6\\baselineskip}\n\\begin{equation}\n"
+        "\\resizebox{.94\\linewidth}{!}{\\(\\displaystyle\n"
+        + body
+        + "\n\\)}\n"
+        + rf"\tag{{{tag}}}"
+        + "\n\\end{equation}\n"
+        + WIDE_MATH_END
+        + "\n"
+    )
+
+
+def tex_fragment_is_structurally_balanced(fragment: str) -> bool:
+    """Return false when OCR left braces or environments structurally open."""
+
+    depth = 0
+    escaped = False
+    for char in fragment:
+        if escaped:
+            escaped = False
+            continue
+        if char == "\\":
+            escaped = True
+        elif char == "{":
+            depth += 1
+        elif char == "}":
+            depth -= 1
+            if depth < 0:
+                return False
+    if depth:
+        return False
+
+    begins = collections.Counter(re.findall(r"\\begin\{([^{}]+)\}", fragment))
+    ends = collections.Counter(re.findall(r"\\end\{([^{}]+)\}", fragment))
+    return begins == ends
+
+
 def wrap_wide_display_math(text: str, *, layout: str) -> str:
     """Constrain long display equations to the selected page width."""
 
     if layout not in {"exact", "pocket"}:
         return text
-    minimum_length = 55 if layout == "pocket" else 95
+    minimum_length = 42 if layout == "pocket" else 60
 
     def transform(fragment: str) -> str:
         fragment = ADJUSTBOX_DISPLAY_MATH_RE.sub(
@@ -588,18 +955,17 @@ def wrap_wide_display_math(text: str, *, layout: str) -> str:
 
         def repl(match: re.Match[str]) -> str:
             body = match.group(1).strip()
-            compact = re.sub(r"\s+", "", body)
-            # ``\tag`` is valid in an amsmath display but not inside the
-            # horizontal math box used for deterministic width fitting.
-            # Keep tagged displays intact instead of silently damaging their
-            # numbering semantics.
-            if r"\tag{" in body:
+            if not tex_fragment_is_structurally_balanced(body):
                 return match.group(0)
-            if len(compact) < minimum_length and not any(
-                token in body
-                for token in [r"\begin{split}", r"\begin{aligned}"]
-            ):
+            tag_match = re.search(r"\\tag\{(?P<tag>[^{}]+)\}\s*$", body)
+            math_body = body[: tag_match.start()].rstrip() if tag_match else body
+            compact = re.sub(r"\s+", "", math_body)
+            # Multiline blocks are converted from split to aligned by the
+            # width-fitting helper so their deliberate row breaks survive.
+            if len(compact) < minimum_length:
                 return match.group(0)
+            if tag_match:
+                return scaled_tagged_display_math(math_body, tag_match.group("tag"))
             return scaled_display_math(body)
 
         return DISPLAY_MATH_RE.sub(repl, fragment)
@@ -659,7 +1025,7 @@ def wrap_wide_inline_math(text: str, *, layout: str) -> tuple[str, int]:
     # Pocket lines cannot hold long decimal/index runs even when the atom is
     # slightly under 100 compact characters. Fit those predictably instead of
     # discovering them only after a costly full-book compile.
-    absolute_length = 180 if layout == "exact" else 80
+    absolute_length = 180 if layout == "exact" else 70
     fitted_width = ".60" if layout == "exact" else ".56"
     fitted = 0
     moving_spans: list[tuple[int, int]] = []
@@ -679,20 +1045,39 @@ def wrap_wide_inline_math(text: str, *, layout: str) -> tuple[str, int]:
                 depth -= 1
             cursor += 1
         moving_spans.append((command.start(), cursor))
+    generated_wrapper_spans = [
+        (match.start(), match.end()) for match in WIDE_MATH_WRAPPER_RE.finditer(text)
+    ]
+    longtable_spans = [
+        (match.start(), match.end()) for match in LONGTABLE_BLOCK_RE.finditer(text)
+    ]
 
     def repl(match: re.Match[str]) -> str:
         nonlocal fitted
         if any(start <= match.start() < end for start, end in moving_spans):
             return match.group(0)
+        if any(start <= match.start() < end for start, end in generated_wrapper_spans):
+            return match.group(0)
         body = match.group(1).strip()
+        if not tex_fragment_is_structurally_balanced(body):
+            return match.group(0)
         compact_length = len(re.sub(r"\s+", "", body))
-        if compact_length < absolute_length and not (
+        inside_longtable = any(
+            start <= match.start() < end for start, end in longtable_spans
+        )
+        effective_absolute_length = max(absolute_length, 180) if inside_longtable else absolute_length
+        if compact_length < effective_absolute_length and not (
             r"\text" in body and compact_length >= text_atom_length
         ):
             return match.group(0)
         fitted += 1
+        max_width = (
+            r"\linewidth"
+            if inside_longtable
+            else fitted_width + r"\linewidth"
+        )
         return (
-            f"\\penalty0\\hspace{{0pt}}\\mbox{{\\adjustbox{{max width={fitted_width}\\linewidth}}{{\\(\\displaystyle "
+            f"\\penalty0\\hspace{{0pt}}\\mbox{{\\adjustbox{{max width={max_width}}}{{\\(\\displaystyle "
             + body
             + "\\)}}"
         )
@@ -703,8 +1088,16 @@ def wrap_wide_inline_math(text: str, *, layout: str) -> tuple[str, int]:
 def postprocess_tex(tex_path: Path, *, layout: str) -> None:
     text = tex_path.read_text(encoding="utf-8", errors="replace")
     text = clean_text(text)
+    text = normalize_ocr_unicode_for_tex(text)
+    text = normalize_escaped_html_fragments(text)
     text = remove_text_backslash_artifacts(text)
     text = remove_source_contents_block(text)
+    # Greek vectors need math bolding. \mathbf and unicode-math's \symbf can
+    # select mathematical Unicode through the text font, leaving blank glyphs.
+    text = normalize_bold_greek_commands(text)
+    text = merge_display_math_punctuation(text)
+    text = normalize_description_math_labels(text)
+    text = normalize_simple_array_column_counts(text)
     text = INCLUDEGRAPHICS_RE.sub(
         r"\\includegraphics[max width=.94\\linewidth,max totalheight=.70\\textheight,keepaspectratio]\1",
         text,
@@ -714,19 +1107,47 @@ def postprocess_tex(tex_path: Path, *, layout: str) -> None:
         text,
     )
     text = normalize_simple_longtable_specs(text)
+    text = rebalance_longtable_column_fractions(text)
+    text = landscape_wide_longtables(text)
+    # Pandoc's plain \raggedright disables hyphenation inside paragraph
+    # columns. Ragged2e keeps the same visual alignment while allowing long
+    # technical terms and chemical names to wrap on narrow pocket pages.
+    text = text.replace(r"\raggedright\arraybackslash", r"\RaggedRight\arraybackslash")
+    text = add_longtable_break_opportunities(text)
+    text = wrap_plain_urls(text)
+    # Pandoc emits literal blocks as the standard verbatim environment, whose
+    # lines cannot wrap.  Technical prose frequently uses these blocks for
+    # definitions and pseudocode, so keep the content literal while allowing
+    # it to fit both the exact and pocket page widths.
+    text = text.replace(
+        r"\begin{verbatim}",
+        r"\begin{Verbatim}[breaklines=true,breakanywhere=true]",
+    )
+    text = text.replace(r"\end{verbatim}", r"\end{Verbatim}")
     if layout == "pocket":
         text = text.replace(
             r"\begin{longtable}",
-            r"\begingroup\footnotesize\setlength{\tabcolsep}{2pt}\begin{longtable}",
+            r"\begingroup\scriptsize\setlength{\tabcolsep}{1.5pt}\begin{longtable}",
         )
     else:
         text = text.replace(
             r"\begin{longtable}",
-            r"\begingroup\small\setlength{\tabcolsep}{3pt}\begin{longtable}",
+            r"\begingroup\footnotesize\setlength{\tabcolsep}{2pt}\begin{longtable}",
         )
     text = text.replace(r"\end{longtable}", r"\end{longtable}\endgroup")
+    text, _ = wrap_wide_math_environments(text, layout=layout)
     text = wrap_wide_display_math(text, layout=layout)
+    text, _ = wrap_wide_inline_math(text, layout=layout)
     if layout == "pocket":
+        heading_style = (
+            "\n"
+            r"\titleformat{\chapter}[hang]{\normalfont\Large\bfseries\raggedright}"
+            r"{\thechapter}{.7em}{}"
+            "\n"
+            r"\titlespacing*{\chapter}{0pt}{0pt}{1.2\baselineskip}"
+            "\n"
+        )
+        text = text.replace(r"\begin{document}", heading_style + r"\begin{document}", 1)
         text = apply_pocket_footer_defaults(text)
     tex_path.write_text(text, encoding="utf-8")
 
@@ -786,6 +1207,94 @@ def rewrite_markdown_image_paths(markdown: str, base: Path) -> str:
         return f"{prefix}{path}{suffix}"
 
     return MARKDOWN_IMAGE_RE.sub(repl, markdown)
+
+
+def normalize_marker_markdown_math(markdown: str) -> str:
+    """Normalize Marker math delimiters that Pandoc otherwise escapes in tables."""
+
+    # Pandoc strips raw HTML line breaks inside pipe-table cells. Preserve the
+    # source's row grouping as portable raw TeX before conversion; otherwise
+    # entries such as MEC99<br>MFF98 become one overflowing token.
+    def preserve_table_linebreaks(line: str) -> str:
+        tag = r"<br\s*/?>"
+        # A break at a cell boundary has no semantic line before/after it and
+        # produces "There's no line here to end" in TeX. Internal runs denote
+        # one visual row break, even when OCR emitted several adjacent tags.
+        line = re.sub(rf"(?<=\|)\s*(?:{tag}\s*)+", " ", line, flags=re.I)
+        line = re.sub(rf"(?:\s*{tag})+\s*(?=\|)", " ", line, flags=re.I)
+        return re.sub(rf"(?:{tag}\s*)+", r"\\linebreak{}", line, flags=re.I)
+
+    markdown = "\n".join(
+        preserve_table_linebreaks(line)
+        if line.lstrip().startswith("|") and line.rstrip().endswith("|")
+        else line
+        for line in markdown.splitlines()
+    )
+
+    # Marker can nest an escaped HTML superscript inside a math span when a
+    # footnote marker immediately precedes an equation.  Recover the footnote
+    # marker and the TeX command separately; leaving the HTML inside math makes
+    # Pandoc emit an undefined ``\</sup>nabla`` control sequence.
+    markdown = MARKER_ESCAPED_SUP_RE.sub(
+        lambda match: f"<sup>{match.group('value')}</sup>",
+        markdown,
+    )
+    markdown = MARKER_FOOTNOTE_MATH_RE.sub(
+        lambda match: (
+            f"<sup>{match.group('footnote')}</sup> "
+            f"$\\{match.group('command')}{match.group('body').strip()}$"
+        ),
+        markdown,
+    )
+    markdown = re.sub(r"</sup>(?=[A-Za-z])", "</sup> ", markdown)
+
+    # Marker occasionally escapes the first dollar of a closing display
+    # delimiter (``\$$``). Restrict the repair to lines that began with ``$$``
+    # so prose currency and intentional ``\$`` remain unchanged.
+    markdown = ESCAPED_CLOSING_DISPLAY_MATH_RE.sub(
+        lambda match: match.group("open") + match.group("body") + "$$" + match.group("tail"),
+        markdown,
+    )
+
+    def balance_display(match: re.Match[str]) -> str:
+        body = match.group("body")
+        # Inside an existing ``$$...$$`` display, nested ``\[``/``\]`` cannot
+        # be delimiters. Marker uses them for literal commutator brackets;
+        # retain those brackets as scalable TeX delimiters.
+        body = body.replace(r"\[", r"\left[").replace(r"\]", r"\right]")
+        left_count = len(re.findall(r"\\left\b", body))
+        right_count = len(re.findall(r"\\right\b", body))
+        if left_count == right_count + 1:
+            body = body.rstrip() + r" \right."
+        elif right_count == left_count + 1:
+            body = r"\left. " + body.lstrip()
+        return "$$" + body + "$$"
+
+    # Marker sometimes splits one visually braced definition across several
+    # numbered displays.  Invisible counterparts keep each display valid while
+    # preserving the brace that is visible in the source.
+    markdown = MARKDOWN_DISPLAY_MATH_RE.sub(balance_display, markdown)
+
+    def repair_escaped_closer(match: re.Match[str]) -> str:
+        body = match.group("body")
+        if not re.search(r"[\\_^{}]", body):
+            return match.group(0)
+        return "$" + body + "$"
+
+    # A frequent OCR artifact is a valid opening math dollar paired with an
+    # escaped closing ``\$``.  Repair only TeX-looking spans, leaving ordinary
+    # prose currency escapes untouched.
+    markdown = ESCAPED_CLOSING_INLINE_MATH_RE.sub(repair_escaped_closer, markdown)
+
+    def repl(match: re.Match[str]) -> str:
+        body = match.group("body").strip()
+        if not match.group("open") and not match.group("close"):
+            return match.group(0)
+        if not re.search(r"[\\_^{}]", body):
+            return match.group(0)
+        return "$" + body + "$"
+
+    return SPACED_INLINE_MATH_RE.sub(repl, markdown)
 
 
 def pdftotext_to_markdown(source: Path, task_dir: Path) -> Path:
@@ -1350,9 +1859,16 @@ def pandoc_to_tex(
     header = ensure_header()
     figures_dir = tex_path.parents[1] / "figures"
     figures_dir.mkdir(parents=True, exist_ok=True)
+    pandoc_source = source
+    if source_format == "markdown":
+        normalized_markdown = normalize_marker_markdown_math(
+            source.read_text(encoding="utf-8", errors="replace")
+        )
+        pandoc_source = tex_path.parent / "source-normalized.md"
+        pandoc_source.write_text(normalized_markdown, encoding="utf-8")
     cmd = [
         "pandoc",
-        str(source),
+        str(pandoc_source),
         "--standalone",
         "--toc",
         "--top-level-division=chapter",
@@ -1368,7 +1884,7 @@ def pandoc_to_tex(
         "--extract-media",
         str(figures_dir),
         "--resource-path",
-        f"{source.parent}:{ROOT}",
+        f"{source.parent}:{pandoc_source.parent}:{ROOT}",
         "-o",
         str(tex_path),
     ]
@@ -1382,6 +1898,193 @@ def pandoc_to_tex(
         (tex_path.parent / "pandoc.log").write_text(result.stdout, encoding="utf-8")
         raise RuntimeError(f"pandoc failed for {source}; see {tex_path.parent / 'pandoc.log'}")
     postprocess_tex(tex_path, layout=layout)
+
+
+def apply_task_tex_fixes(tex_path: Path, task: dict[str, Any], *, layout: str) -> None:
+    """Apply narrow, source-evidenced repairs after deterministic conversion."""
+
+    raw_path = str(task.get("tex_fixes") or "").strip()
+    if not raw_path:
+        return
+    fix_path = Path(raw_path)
+    if not fix_path.is_absolute():
+        fix_path = ROOT / fix_path
+    data = read_json(fix_path)
+    text = tex_path.read_text(encoding="utf-8", errors="replace")
+    report_rows: list[dict[str, Any]] = []
+    for index, item in enumerate(data.get("replacements", []), start=1):
+        source = str(item.get("from") or "")
+        target = str(item.get("to") or "")
+        target = target.replace("{{TASK_DIR}}", tex_path.parents[2].resolve().as_posix())
+        if not source:
+            continue
+        if item.get("regex"):
+            flags = re.DOTALL if item.get("dotall", True) else 0
+            text, count = re.subn(source, lambda _match: target, text, flags=flags)
+        elif item.get("flexible_whitespace"):
+            # Pandoc formats the same display differently between full-size
+            # and pocket templates. Match the source-evidenced TeX tokens
+            # exactly while allowing only whitespace to vary.
+            pattern = r"\s*".join(re.escape(token) for token in source.split())
+            text, count = re.subn(pattern, lambda _match: target, text, flags=re.DOTALL)
+        else:
+            count = text.count(source)
+            text = text.replace(source, target)
+        expected_min = int(item.get("expected_min", 1))
+        if count < expected_min:
+            raise RuntimeError(
+                f"required TeX fix {index} matched {count} times (expected at least {expected_min}): {fix_path}"
+            )
+        report_rows.append(
+            {
+                "index": index,
+                "matches": count,
+                "source_evidence": item.get("source_evidence", ""),
+                "note": item.get("note", ""),
+            }
+        )
+    # A source-evidenced repair may insert display math after the normal Pandoc
+    # post-processing pass. Inline math has already been fitted, so do not run
+    # that pass again and create nested adjustboxes around existing content.
+    text = normalize_simple_array_column_counts(text)
+    text, _ = wrap_wide_math_environments(text, layout=layout)
+    text = wrap_wide_display_math(text, layout=layout)
+    tex_path.write_text(text, encoding="utf-8")
+    task_dir = tex_path.parents[2]
+    report_path = task_dir / "review/tex-fix-report.json"
+    report = read_json(report_path) if report_path.exists() else {}
+    report[layout] = {
+        "fix_file": str(fix_path.relative_to(ROOT)),
+        "replacements": report_rows,
+    }
+    write_json(report_path, report)
+
+
+def extract_task_source_crops(source: Path, task: dict[str, Any], task_dir: Path) -> None:
+    """Render narrow, source-evidenced PDF regions used to repair lost figures/tables."""
+
+    crops = task.get("source_crops") or []
+    if not crops:
+        return
+    if source.suffix.lower() != ".pdf":
+        raise RuntimeError("source_crops are supported only for PDF sources")
+    try:
+        import fitz
+    except ImportError as exc:
+        raise RuntimeError("PyMuPDF is required for source-evidenced PDF crops") from exc
+
+    source_hash = sha256_file(source)
+    report_rows: list[dict[str, Any]] = []
+    document = fitz.open(source)
+    try:
+        for index, item in enumerate(crops, start=1):
+            page_number = int(item["page"])
+            if page_number < 1 or page_number > document.page_count:
+                raise RuntimeError(f"source crop {index} page out of range: {page_number}")
+            clip_values = item.get("clip_points") or []
+            if len(clip_values) != 4:
+                raise RuntimeError(f"source crop {index} requires four clip_points")
+            page = document.load_page(page_number - 1)
+            clip = fitz.Rect(*(float(value) for value in clip_values))
+            if clip.is_empty or not page.rect.contains(clip):
+                raise RuntimeError(
+                    f"source crop {index} clip {list(clip)} is outside page {page_number} bounds {list(page.rect)}"
+                )
+            relative_output = Path(str(item["output"]))
+            if relative_output.is_absolute() or ".." in relative_output.parts:
+                raise RuntimeError(f"source crop {index} output must stay inside the task directory")
+            output = task_dir / relative_output
+            output.parent.mkdir(parents=True, exist_ok=True)
+            dpi = int(item.get("dpi") or 300)
+            rotation = int(item.get("rotate_degrees") or 0)
+            if rotation % 90:
+                raise RuntimeError(f"source crop {index} rotation must be a multiple of 90 degrees")
+            matrix = fitz.Matrix(dpi / 72.0, dpi / 72.0).prerotate(rotation)
+            pixmap = page.get_pixmap(matrix=matrix, clip=clip, alpha=False)
+            pixmap.save(output)
+            if output.stat().st_size < 1024:
+                raise RuntimeError(f"source crop {index} produced an implausibly small asset: {output}")
+            report_rows.append(
+                {
+                    "index": index,
+                    "page": page_number,
+                    "clip_points": [float(value) for value in clip_values],
+                    "dpi": dpi,
+                    "rotate_degrees": rotation,
+                    "output": str(output.relative_to(task_dir)),
+                    "bytes": output.stat().st_size,
+                    "source_evidence": item.get("source_evidence", ""),
+                }
+            )
+    finally:
+        document.close()
+    write_json(
+        task_dir / "review/source-crop-report.json",
+        {
+            "source": str(source.relative_to(ROOT)),
+            "source_sha256": source_hash,
+            "crops": report_rows,
+        },
+    )
+
+
+def apply_task_markdown_fixes(source: Path, task: dict[str, Any], task_dir: Path) -> Path:
+    """Apply source-evidenced repairs before Pandoc changes Markdown structure."""
+
+    raw_path = str(task.get("tex_fixes") or "").strip()
+    if not raw_path:
+        return source
+    fix_path = Path(raw_path)
+    if not fix_path.is_absolute():
+        fix_path = ROOT / fix_path
+    data = read_json(fix_path)
+    replacements = data.get("markdown_replacements") or []
+    if not replacements:
+        return source
+
+    text = source.read_text(encoding="utf-8", errors="replace")
+    report_rows: list[dict[str, Any]] = []
+    for index, item in enumerate(replacements, start=1):
+        pattern = str(item.get("from") or "")
+        target = str(item.get("to") or "")
+        target = target.replace("{{TASK_DIR}}", task_dir.resolve().as_posix())
+        if not pattern:
+            continue
+        if item.get("regex"):
+            flags = re.DOTALL if item.get("dotall", True) else 0
+            text, count = re.subn(pattern, lambda _match: target, text, flags=flags)
+        elif item.get("flexible_whitespace"):
+            flexible = r"\s*".join(re.escape(token) for token in pattern.split())
+            text, count = re.subn(flexible, lambda _match: target, text, flags=re.DOTALL)
+        else:
+            count = text.count(pattern)
+            text = text.replace(pattern, target)
+        expected_min = int(item.get("expected_min", 1))
+        if count < expected_min:
+            raise RuntimeError(
+                f"required Markdown fix {index} matched {count} times "
+                f"(expected at least {expected_min}): {fix_path}"
+            )
+        report_rows.append(
+            {
+                "index": index,
+                "matches": count,
+                "source_evidence": item.get("source_evidence", ""),
+                "note": item.get("note", ""),
+            }
+        )
+
+    prepared = task_dir / "review/source-with-fixes.md"
+    prepared.write_text(text, encoding="utf-8")
+    write_json(
+        task_dir / "review/markdown-fix-report.json",
+        {
+            "source": str(source.relative_to(task_dir)),
+            "fix_file": str(fix_path.relative_to(ROOT)),
+            "replacements": report_rows,
+        },
+    )
+    return prepared
 
 
 def repair_undefined_word_command(tex_path: Path, log_file: Path) -> bool:
@@ -1726,6 +2429,7 @@ def build_one(
     task: dict[str, Any],
     *,
     force: bool,
+    rebuild_complete: bool,
     sync: bool,
     share_root: Path,
     agent_optimize: bool,
@@ -1739,7 +2443,7 @@ def build_one(
     review_dir = task_dir / "review"
     review_dir.mkdir(parents=True, exist_ok=True)
     status_path = review_dir / "status.json"
-    if status_path.exists() and not force:
+    if status_path.exists() and not force and not rebuild_complete:
         prior = read_json(status_path)
         if prior.get("status") == "complete":
             log(f"[skip] {book_id} already complete")
@@ -1773,6 +2477,10 @@ def build_one(
         else:
             raise RuntimeError(f"Unsupported source format: {source.suffix}")
 
+        extract_task_source_crops(source, task, task_dir)
+        if pandoc_format == "markdown":
+            body_source = apply_task_markdown_fixes(body_source, task, task_dir)
+
         exact_tex = task_dir / "exact/tex/book.tex"
         pocket_tex = task_dir / "pocket-large-font/tex/book.tex"
         if pandoc_format == "pdftotext":
@@ -1788,6 +2496,8 @@ def build_one(
                 layout="pocket",
                 source_format=pandoc_format,
             )
+        apply_task_tex_fixes(exact_tex, task, layout="exact")
+        apply_task_tex_fixes(pocket_tex, task, layout="pocket")
         cover_path = task_dir / "cover/cover.png"
         if cover_path.exists():
             inject_cover_page(exact_tex, cover_path)
@@ -1871,6 +2581,11 @@ def main() -> int:
     parser.add_argument("--book-id", action="append", default=[])
     parser.add_argument("--limit", type=int, default=0)
     parser.add_argument("--force", action="store_true")
+    parser.add_argument(
+        "--rebuild-complete",
+        action="store_true",
+        help="Rebuild TeX/PDF for completed tasks while reusing cached extraction.",
+    )
     parser.add_argument("--sync", action="store_true")
     parser.add_argument("--continue-on-blocked", action="store_true")
     parser.add_argument("--share-root", type=Path, default=Path("/home/lachlan/Nutstore Files/Share/PocketBooks"))
@@ -1895,6 +2610,7 @@ def main() -> int:
         status = build_one(
             task,
             force=args.force,
+            rebuild_complete=args.rebuild_complete,
             sync=args.sync,
             share_root=args.share_root,
             agent_optimize=args.agent_optimize,

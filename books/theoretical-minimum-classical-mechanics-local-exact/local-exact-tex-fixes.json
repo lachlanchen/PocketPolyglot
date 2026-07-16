@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "policy": "Every replacement is transcribed from the cited source page; do not infer missing mathematics.",
+  "replacements": [
+    {
+      "from": "\\[\\chi(t) = \\chi_0 + \\nu_{\\chi}(0)t - \\frac{1}{2}gt^2.\\]",
+      "to": "\\[z(t) = z_0 + v_z(0)t - \\frac{1}{2}gt^2.\\]",
+      "expected_min": 1,
+      "source_evidence": "The Theoretical Minimum - Classical Mechanics (2014), physical PDF page 86, printed page 72, equation (5)",
+      "note": "Marker misread z and v_z as Greek chi and nu_chi."
+    },
+    {
+      "from": "\\[\\begin{array}{l}\n.. & k \\\\\nx = -\\frac{k}{x}, \\\\\nm\n\\end{array}\\]",
+      "to": "\\[\\ddot{x} = -\\frac{k}{m}x.\\]",
+      "expected_min": 1,
+      "source_evidence": "The Theoretical Minimum - Classical Mechanics (2014), physical PDF page 86, printed page 72, unnumbered equation after the harmonic-oscillator force law",
+      "note": "Marker converted the fraction and double-dot accent into a malformed one-column array."
+    },
+    {
+      "from": "\\[\\overset{\\cdot \\cdot }{\\times} = -\\omega^2 \\times . \\tag{6}\\]",
+      "to": "\\[\\ddot{x} = -\\omega^2 x. \\tag{6}\\]",
+      "expected_min": 1,
+      "source_evidence": "The Theoretical Minimum - Classical Mechanics (2014), physical PDF page 86, printed page 72, equation (6)",
+      "note": "Marker misread x with a double dot as a multiplication sign."
+    },
+    {
+      "from": "(?m)^\\s*(?:Dynamics|Energy) \\d{1,3}\\s*$",
+      "to": "",
+      "regex": true,
+      "dotall": false,
+      "expected_min": 10,
+      "source_evidence": "Repeated page furniture in the scan; examples include physical PDF page 86 (printed running header Dynamics 73) and the Energy chapter headers.",
+      "note": "Remove running heads and printed page numbers that Marker inserted into paragraph flow."
+    },
+    {
+      "from": "\\zeta",
+      "to": "z",
+      "expected_min": 5,
+      "source_evidence": "Physical PDF page 85 (printed page 71) uses z, v_z, and F_z; the later Poisson-bracket passage explicitly displays L_z immediately before referring to rotation about the z axis.",
+      "note": "The scan typeface caused Marker to misread the Latin coordinate z as Greek zeta in five occurrences."
+    },
+    {
+      "from": "evan",
+      "to": "even",
+      "expected_min": 1,
+      "source_evidence": "The Theoretical Minimum - Classical Mechanics (2014), physical PDF page 23, sentence beginning 'As strange as it seems'; the source says 'an even number of times'.",
+      "note": "Correct a scan OCR vowel error in ordinary prose."
+    }
+  ]
+}
