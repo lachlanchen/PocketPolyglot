@@ -13,6 +13,114 @@
       "after": "\\begin{center}\n\\textbf{Interacting and non-interacting theories}\\par\\smallskip\n\\begin{adjustbox}{max width=\\linewidth}\n\\begin{tabular}{cc}\nNon-interacting & Interacting \\\\\n\\(\\hat { H } _ { 0 }\\) & \\(\\hat { H } = \\hat { H } _ { 0 } + \\hat { H } ^ { \\prime }\\) \\\\\n\\(| 0 \\rangle\\) & \\(| \\Omega \\rangle\\) \\\\\n\\(G _ { 0 } ( x , y )\\) & \\(G ( x , y )\\) \\\\\nNo scattering & Scattering \\\\\n\\end{tabular}\n\\end{adjustbox}\n\\end{center}",
       "expected_count": 1,
       "reason": "PDF page 173 shows a titled two-column comparison table. Mathpix opened Verbatim and emitted an unmatched adjustbox close instead of preserving the table structure."
+    },
+    {
+      "before": "\\(E = \\left( n + \\frac { 1 } { 2 } \\right) \\overline { \\hbar \\omega \\text { with } n \\text { being some integer. Dropping the zero-point energy } }\\)",
+      "after": "\\(E = \\left( n + \\frac { 1 } { 2 } \\right) \\hbar \\omega\\) with \\(n\\) being some integer. Dropping the zero-point energy",
+      "expected_count": 1,
+      "reason": "PDF page 49 shows E=(n+1/2) hbar omega, followed by ordinary prose beginning 'with n being some integer'; Mathpix absorbed the prose into a spurious overline."
+    },
+    {
+      "before": "\\(\\hat { a } _ { p _ { , , , } } ^ { \\dagger }\\)",
+      "after": "\\(\\hat { a } _ { p _ { m } } ^ { \\dagger }\\)",
+      "expected_count": 1,
+      "reason": "PDF page 50 shows the creation operator subscript p_m; Mathpix rendered m as three commas."
+    },
+    {
+      "before": "on rotations. Any rotation",
+      "after": "Any rotation",
+      "expected_count": 1,
+      "reason": "PDF page 103 shows 'on rotations.' only as the continuation of the running header 'Quantum mechanical transformations'; it is not body prose."
+    },
+    {
+      "before": "the Hamiltonian density \\(\\mathcal { H }\\) is now an operator \\(\\hat { \\mathcal { H } }\\) which acts on\\\\\n",
+      "after": "the Hamiltonian density \\(\\mathcal { H }\\) is now an operator \\(\\hat { \\mathcal { H } }\\) which acts on state vectors.\\\\\n",
+      "expected_count": 1,
+      "reason": "PDF pages 118-119 split the sentence at the page boundary; page 119 begins with the continuation 'state vectors.'"
+    },
+    {
+      "before": "\\\\\nstate vectors. This is all well and good",
+      "after": "\\\\\nThis is all well and good",
+      "expected_count": 1,
+      "reason": "PDF pages 118-119 establish that 'state vectors.' completes the preceding sentence; remove the duplicated detached continuation after restoring it there."
+    },
+    {
+      "before": "\\(3 _ { \\text {which may be helpfully rewritten as } }\\)",
+      "after": "\\({ } ^ { 3 }\\) which may be helpfully rewritten as",
+      "expected_count": 1,
+      "reason": "PDF page 118 shows sidenote marker 3 followed by prose; Mathpix absorbed the prose into a mathematical subscript."
+    },
+    {
+      "before": "in such a way as to make whatever we're\\\\\n",
+      "after": "in such a way as to make whatever we're describing as simple as possible.\\\\\n",
+      "expected_count": 1,
+      "reason": "PDF pages 148-149 split this sentence; page 149 begins 'describing as simple as possible.'"
+    },
+    {
+      "before": "External lines contribute a factor 1\\\\[0pt]",
+      "after": "External lines contribute a factor 1 [Fig. 19.10(c)].",
+      "expected_count": 1,
+      "reason": "PDF page 204 shows the complete Feynman-rule item and figure reference; the zero-point linebreak was misparsed as truncated TeX."
+    },
+    {
+      "before": "shown in Fig. 32.2. Since\\\\\n",
+      "after": "shown in Fig. 32.2. Since the counterterm is proportional to \\(\\phi ^ { 4 }\\), it has the same behaviour as the \\(\\frac { \\lambda } { 4! } \\phi ^ { 4 }\\) term.\\\\\n",
+      "expected_count": 1,
+      "reason": "PDF pages 306-307 split the sentence after 'Since'; page 307 supplies the complete counterterm comparison."
+    },
+    {
+      "before": "\\({ } ^ { 9 } \\mu \\frac { \\mathrm {~d} \\beta } { \\mathrm {~d} \\mu } = | e | ^ { 3 } / 12 \\pi ^ { 2 }\\)",
+      "after": "\\({ } ^ { 9 }\\) \\(\\mu \\frac { \\mathrm {~d} e } { \\mathrm {~d} \\mu } = | e | ^ { 3 } / 12 \\pi ^ { 2 }\\)",
+      "expected_count": 1,
+      "reason": "PDF page 326 visibly differentiates e, not beta, and places sidenote marker 9 before the equation."
+    },
+    {
+      "before": "\\(B = \\partial _ { 1 } A ^ { 2 } - \\partial _ { 2 } A ^ { 2 }\\)",
+      "after": "\\(B = \\partial _ { 1 } A ^ { 2 } - \\partial _ { 2 } A ^ { 1 }\\)",
+      "expected_count": 1,
+      "reason": "The second component must be A^1, as established by the book's own component formula on PDF page 290 and the antisymmetric definition used in equation 45.35."
+    },
+    {
+      "before": "tum field theory [see Aitchison",
+      "after": "Quantum field theory [see Aitchison",
+      "expected_count": 1,
+      "reason": "PDF pages 486-487 split 'quantum' as 'quan-' and 'tum' across the page boundary."
+    },
+    {
+      "before": "Binney, Newman Dowrick and Fisher",
+      "after": "Binney, Newman, Dowrick and Fisher",
+      "expected_count": 1,
+      "reason": "PDF further-reading prose lists four authors; restore the missing comma after Newman."
+    },
+    {
+      "before": "S . Coleman",
+      "after": "S. Coleman",
+      "expected_count": 2,
+      "reason": "Remove Mathpix's spurious space inside the author's initial in both occurrences."
+    },
+    {
+      "before": "Bolgoliubov's",
+      "after": "Bogoliubov's",
+      "expected_count": 1,
+      "reason": "Restore the physicist Bogoliubov's correctly spelled surname from the further-reading page."
+    },
+    {
+      "before": "Page 180 eqn (180): change a\\_lmatbf\\{p\\} to a\\_lmathbf\\{q\\}.",
+      "after": "Page 180, eqn (180): change \\texttt{a\\_\\textbackslash matbf\\{p\\}} to \\texttt{a\\_\\textbackslash mathbf\\{q\\}}.",
+      "expected_count": 1,
+      "reason": "PDF page 505 prints these as literal TeX commands; preserve them as code rather than OCR-corrupted prose."
+    },
+    {
+      "before": "Page 258, eqn (28.23): the last term in the exponent should read \\textbackslash barlpsi(x)\\textbackslash eta(x). Equation \\(\\underline { ( 28.24 ) }\\) is missing an \\textbackslash int \\(d ^ { \\wedge } 4 x \\operatorname { int } d ^ { \\wedge } 4 y\\) in the exponent.",
+      "after": "Page 258, eqn (28.23): the last term in the exponent should read \\(\\bar { \\psi } ( x ) \\eta ( x )\\). Equation (28.24) is missing \\(\\int d ^ { 4 } x \\int d ^ { 4 } y\\) in the exponent.",
+      "expected_count": 1,
+      "reason": "PDF page 505 visibly gives bar-psi times eta and two four-dimensional integrals; restore mathematical TeX from the printed errata."
+    },
+    {
+      "before": "Page 350, last Feynman rule: \\textbackslash epsilon\\^{}\\textit{\\_\\{lmullambda\\}-> \\textbackslash epsilon\\^{}}\\_\\{Inullambda\\}.",
+      "after": "Page 350, last Feynman rule: replace \\(\\epsilon ^ { * } _ { \\mu \\lambda }\\) with \\(\\epsilon ^ { * } _ { \\nu \\lambda }\\).",
+      "expected_count": 1,
+      "reason": "PDF page 505 visibly reads epsilon-star sub mu-lambda to epsilon-star sub nu-lambda; Mathpix confused Greek letters with Latin OCR strings."
     }
   ]
 }

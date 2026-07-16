@@ -945,6 +945,17 @@ def apply_grounded_english_repairs(
 
 def japanese_kana_required(source_tex: str, source_plain: str) -> bool:
     """Return whether kana is required to prove prose is actually Japanese."""
+
+    if (
+        r"\begin{figure}" in source_tex
+        and r"\caption" in source_tex
+        and source_tex.count(r"\begin{figure}") == source_tex.count(r"\end{figure}") == 1
+    ):
+        # Short technical captions such as "dispersion relation" naturally
+        # translate to valid kanji-only Japanese (e.g. 分散関係). Semantic
+        # review still checks the caption; requiring kana here is a false
+        # positive that cannot be fixed by regenerating the same translation.
+        return False
     # TeX control lines can make a tiny catalog fragment look long after a
     # naive text extraction (for example an enumerate wrapper around ``cm.``).
     # Measure the actual non-command payload before requiring a translation.
@@ -1331,8 +1342,10 @@ def validate_segment_output(
         # raw digit equality, which caused large false-positive retry storms.
         if source["kind"] == "table" and table_signature(candidate) != source["table_signature"]:
             errors.append(prefix + f"{language}_tex changed table structure")
-        if candidate.count("{") != candidate.count("}"):
-            errors.append(prefix + f"{language}_tex has unbalanced braces")
+        source_brace_delta = source["source_tex"].count("{") - source["source_tex"].count("}")
+        candidate_brace_delta = candidate.count("{") - candidate.count("}")
+        if candidate_brace_delta != source_brace_delta:
+            errors.append(prefix + f"{language}_tex changed brace balance")
     if technical_exact and Counter(
         normalized_substantive_math_signature(en_tex)
     ) != Counter(normalized_substantive_math_signature(ja_tex)):

@@ -137,6 +137,57 @@ class PocketPolishPipelineTest(unittest.TestCase):
         )
         self.assertNotIn("book-notation: Japanese prose contains no kana", errors)
 
+    def test_kanji_only_technical_figure_caption_does_not_require_kana(self):
+        source = source_segment(
+            "book-figure-caption",
+            "\\begin{figure}[h]\\caption{The dispersion relation.}\\end{figure}",
+        )
+        task = dict(
+            self.task,
+            segments=[source],
+            segment_count=1,
+            validation_profile="technical_exact",
+        )
+        output = {
+            "segment_id": source["segment_id"],
+            "source_sha256": source["source_sha256"],
+            "en_tex": source["source_tex"],
+            "ja_tex": "\\begin{figure}[h]\\caption{分散関係。}\\end{figure}",
+            "changes": [],
+            "unresolved": [],
+        }
+        errors = validate_segment_output(task, source, output)
+        self.assertNotIn(
+            "book-figure-caption: Japanese prose contains no kana",
+            errors,
+        )
+
+    def test_cross_segment_closing_brace_must_preserve_source_delta(self):
+        source = source_segment("book-closing-fragment", "}\\end{center}\\end{figure}")
+        task = dict(
+            self.task,
+            segments=[source],
+            segment_count=1,
+            validation_profile="technical_exact",
+        )
+        output = {
+            "segment_id": source["segment_id"],
+            "source_sha256": source["source_sha256"],
+            "en_tex": source["source_tex"],
+            "ja_tex": source["source_tex"],
+            "changes": [],
+            "unresolved": [],
+        }
+        errors = validate_segment_output(task, source, output)
+        self.assertNotIn(
+            "book-closing-fragment: en_tex changed brace balance",
+            errors,
+        )
+        self.assertNotIn(
+            "book-closing-fragment: ja_tex changed brace balance",
+            errors,
+        )
+
     def setUp(self) -> None:
         self.first = source_segment("book-s000001", "It ended.Then 2.87 million remained.")
         self.second = source_segment("book-s000002", "The value was 1905.")
