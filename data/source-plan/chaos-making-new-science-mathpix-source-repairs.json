@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "book_id": "chaos-making-new-science-mathpix-exact-book",
+  "replacements": [
+    {
+      "before": "Such models seemed to have Bernardo A. Huberman and Tad Hogg, \"Phase Transitions in Artificial Intelligence Systems,\" preprint, Xerox Palo Alto Research Center, Palo Alto, California, 1986.",
+      "after": "\"SUCH MODELS SEEMED TO HAVE\" Bernardo A. Huberman and Tad Hogg, \"Phase Transitions in Artificial Intelligence Systems,\" preprint, Xerox Palo Alto Research Center, Palo Alto, California, 1986.",
+      "expected_count": 1,
+      "reason": "Original PDF page 337 shows SUCH MODELS SEEMED TO HAVE as the endnote's quoted anchor, followed by the Huberman-Hogg citation; Mathpix fused the anchor into an incomplete prose sentence."
+    },
+    {
+      "before": "Schaffer IS USING e.g., William M. Schaffer and Mark Kot, \"Nearly One Dimensional Dynamics in an Epidemic,\" Journal of Theoretical Biology 112",
+      "after": "\"SCHAFFER IS USING\" e.g., William M. Schaffer and Mark Kot, \"Nearly One-Dimensional Dynamics in an Epidemic,\" Journal of Theoretical Biology 112 (1985), pp. 403--27.",
+      "expected_count": 1,
+      "reason": "Original PDF pages 339-340 show SCHAFFER IS USING as the quoted endnote anchor and continue the citation with (1985), pp. 403-27 on the next page."
+    },
+    {
+      "before": "\\(\\underline { \\mathrm { F } } | \\underline { \\mathrm { G } } | \\underline { \\mathrm { H } } | \\underline { \\mathrm { I } } | \\underline { \\mathrm { I } }\\)",
+      "after": "\\(\\underline { \\mathrm { F } } | \\underline { \\mathrm { G } } | \\underline { \\mathrm { H } } | \\underline { \\mathrm { I } } | \\underline { \\mathrm { J } }\\)",
+      "expected_count": 1,
+      "reason": "The alphabetical index navigation is A through Y; Mathpix duplicated I and omitted J."
+    },
+    {
+      "before": "\\section*{open (1) road}\n\\section*{INTEGRATED MEDIA}\n\\section*{Find a full list of our authors and titles at www.openroadmedia.com}\n\\section*{FOLLOW US:}\n\\section*{fyo to}\n\\clearpage",
+      "after": "\\section*{OPEN ROAD INTEGRATED MEDIA}\n\\section*{Find a full list of our authors and titles at www.openroadmedia.com}\n\\section*{FOLLOW US:}\n\\section*{Facebook | Twitter | Instagram | Tumblr}\n\\clearpage",
+      "expected_count": 1,
+      "reason": "Original PDF pages 369-370 visibly show the OPEN ROAD INTEGRATED MEDIA logo, the website line, FOLLOW US, and Facebook, Twitter, Instagram, and Tumblr icons; Mathpix OCR corrupted the logo and icon row."
+    },
+    {
+      "before": "\\(\\underline { Y E T , O D D ~ A S , ~ I T ~ S E E M S ~ A m o n g ~ m a n y ~ a n a l y s e s ~ o f ~ t h e ~ p o s s i b l e ~ c o m p l i c a t i o n s ~ o f ~ a ~ }\\) simple driven pendulum, a good summary is",
+      "after": "\"YET, ODD AS IT SEEMS\" Among many analyses of the possible complications of a simple driven pendulum, a good summary is",
+      "expected_count": 1,
+      "reason": "Original endnote page separates the quoted anchor YET, ODD AS IT SEEMS from ordinary prose beginning 'Among many analyses'; Mathpix absorbed both into one underlined letter-spaced math expression."
+    }
+  ]
+}

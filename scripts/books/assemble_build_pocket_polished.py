@@ -567,6 +567,11 @@ def restore_secondary_list_scaffold(en_tex: str, ja_tex: str) -> str:
 def demote_secondary_captions(tex: str) -> str:
     """Keep translated caption text without emitting a second float caption."""
 
+    tex = re.sub(
+        r"\\captionsetup(?:\[[^\]]*\])?\{[^{}]*\}\s*",
+        "",
+        tex,
+    )
     marker = r"\caption{"
     cursor = 0
     parts: list[str] = []
@@ -636,6 +641,8 @@ def update_open_environments(tex: str, stack: list[str]) -> None:
 
 def fuse_english_main_japanese_secondary(
     segments: list[dict[str, Any]],
+    *,
+    furigana_overrides: dict[str, str] | None = None,
 ) -> tuple[str, FuriganaStats]:
     parts: list[str] = []
     furigana = FuriganaStats()
@@ -643,6 +650,16 @@ def fuse_english_main_japanese_secondary(
     pending_ja: list[str] = []
     open_environments: list[str] = []
     pending_crosses_environment = False
+    furigana_overrides = furigana_overrides or {}
+
+    def apply_furigana_overrides(tex: str) -> str:
+        for surface, reading in furigana_overrides.items():
+            if not isinstance(surface, str) or not surface:
+                raise ValueError("furigana override has an empty surface form")
+            if not isinstance(reading, str) or not reading:
+                raise ValueError(f"furigana override has no reading: {surface}")
+            tex = tex.replace(surface, rf"\JpRuby{{{surface}}}{{{reading}}}")
+        return tex
 
     def emit_pending() -> None:
         nonlocal pending_crosses_environment
@@ -660,6 +677,7 @@ def fuse_english_main_japanese_secondary(
         heading = translated_heading_title(ja_tex)
         if heading is not None:
             parts.append(en_tex)
+            heading = apply_furigana_overrides(heading)
             annotated, current = annotate_japanese_tex(heading)
             furigana.merge(current)
             parts.append(f"\n\\JpSecondaryHeading{{{annotated}}}\n")
@@ -675,9 +693,18 @@ def fuse_english_main_japanese_secondary(
             )
         parts.append(en_tex)
         secondary = secondary.strip()
+        # A translated caption is useful prose but must not enlarge the
+        # source figure float. Close a figure before emitting its Japanese
+        # secondary block; this keeps the image/caption float bounded while
+        # preserving reading order immediately below it. Tables retain their
+        # existing in-environment translation structure.
+        if trailing_scaffold and r"\end{figure}" in trailing_scaffold:
+            parts.append(trailing_scaffold)
+            trailing_scaffold = ""
         if secondary:
             secondary = restore_secondary_list_scaffold(en_tex, secondary)
             secondary = demote_secondary_captions(secondary)
+            secondary = apply_furigana_overrides(secondary)
             secondary, current = annotate_japanese_tex(secondary)
             furigana.merge(current)
             parts.append(
@@ -1037,7 +1064,10 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
         },
     )
 
-    fused, furigana = fuse_english_main_japanese_secondary(merged_rows)
+    fused, furigana = fuse_english_main_japanese_secondary(
+        merged_rows,
+        furigana_overrides=manifest.get("furigana_overrides", {}),
+    )
     layout_replacement_plan = manifest.get("layout_replacement_plan")
     layout_replacement_count = 0
     if layout_replacement_plan:

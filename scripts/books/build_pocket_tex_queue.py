@@ -621,7 +621,11 @@ def wrap_wide_inline_math(text: str, *, layout: str) -> tuple[str, int]:
     if layout not in {"exact", "pocket"}:
         return text, 0
     text_atom_length = 120 if layout == "exact" else 90
-    absolute_length = 180 if layout == "exact" else 100
+    # Pocket lines cannot hold long decimal/index runs even when the atom is
+    # slightly under 100 compact characters. Fit those predictably instead of
+    # discovering them only after a costly full-book compile.
+    absolute_length = 180 if layout == "exact" else 80
+    fitted_width = ".60" if layout == "exact" else ".56"
     fitted = 0
     moving_spans: list[tuple[int, int]] = []
     for command in MOVING_ARGUMENT_RE.finditer(text):
@@ -653,7 +657,7 @@ def wrap_wide_inline_math(text: str, *, layout: str) -> tuple[str, int]:
             return match.group(0)
         fitted += 1
         return (
-            "\\penalty0\\hspace{0pt}\\mbox{\\adjustbox{max width=.60\\linewidth}{\\(\\displaystyle "
+            f"\\penalty0\\hspace{{0pt}}\\mbox{{\\adjustbox{{max width={fitted_width}\\linewidth}}{{\\(\\displaystyle "
             + body
             + "\\)}}"
         )

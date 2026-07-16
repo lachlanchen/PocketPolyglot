@@ -113,6 +113,17 @@ class PocketPolishPipelineTest(unittest.TestCase):
                 r"\(\mathrm{EU}_{\text{up}}=\mathrm{EU}_{\text{down}}\) (2) \(7\sigma=3\)"
             )
         )
+        self.assertTrue(
+            source_is_notation_only(
+                r"\graphicspath{{build/book/exact/images/}{build/book/work/images/}}"
+                "\n"
+                r"\captionsetup{singlelinecheck=false}"
+                "\n"
+                r"\begin{center}\noindent"
+                r"\includegraphics[max width=.96\linewidth]{build/book/work/images/page-001.jpg}"
+                r"\end{center}"
+            )
+        )
         self.assertFalse(source_is_notation_only(r"Result: @@PROTECTED_0001@@"))
 
     def test_notation_only_source_does_not_require_japanese_script(self):
@@ -140,6 +151,26 @@ class PocketPolishPipelineTest(unittest.TestCase):
             errors,
         )
         self.assertNotIn("book-notation: Japanese prose contains no kana", errors)
+
+    def test_task_specific_furigana_override_handles_rare_proper_name(self):
+        rows = [
+            {
+                "kind": "protected",
+                "source_tex": "\\documentclass{book}\n\\begin{document}\n",
+            },
+            {
+                "kind": "text",
+                "en_tex": "Yoshisuke Ueda discovered a strange attractor.",
+                "ja_tex": "上田睆亮がストレンジ・アトラクターを発見した。",
+            },
+            {"kind": "protected", "source_tex": "\n\\end{document}\n"},
+        ]
+        fused, stats = fuse_english_main_japanese_secondary(
+            rows,
+            furigana_overrides={"上田睆亮": "うえだよしすけ"},
+        )
+        self.assertIn(r"\JpRuby{上田睆亮}{うえだよしすけ}", fused)
+        self.assertNotIn("睆亮", stats.unknown_tokens)
 
     def test_kanji_only_technical_figure_caption_does_not_require_kana(self):
         source = source_segment(
@@ -278,6 +309,15 @@ class PocketPolishPipelineTest(unittest.TestCase):
         self.assertEqual(count, 0)
         self.assertEqual(rendered, caption)
         self.assertNotIn(r"\adjustbox", rendered)
+
+    def test_long_pocket_decimal_run_is_fitted(self) -> None:
+        body = ", ".join(f".{6290 + index}" for index in range(14))
+        rendered, count = wrap_wide_inline_math(
+            f"Values converge to \\({body}\\).", layout="pocket"
+        )
+        self.assertEqual(count, 1)
+        self.assertIn(body, rendered)
+        self.assertIn(r"\adjustbox{max width=.56\linewidth}", rendered)
 
     def test_evidence_layout_repair_restores_split_probability_identity(self) -> None:
         malformed = r"\(a +\) \(b^{1=b\text{, making prose}}) continuation"
@@ -1267,6 +1307,29 @@ class PocketPolishPipelineTest(unittest.TestCase):
         self.assertIn("Full figure caption.", fused)
         self.assertIn("キャプション。", fused)
         self.assertLess(fused.index("キャプション。"), fused.index(r"\end{table}"))
+
+    def test_fusion_places_translated_caption_after_source_figure_float(self) -> None:
+        rows = [
+            {
+                "kind": "protected",
+                "source_tex": "\\documentclass{book}\n\\begin{document}\n",
+            },
+            {
+                "kind": "protected",
+                "source_tex": "\\begin{figure}[h]\n\\begin{center}\n",
+            },
+            {
+                "kind": "text",
+                "en_tex": "\\caption{Full figure caption.}\n\\end{center}\n\\end{figure}",
+                "ja_tex": "\\caption{図の完全なキャプション。}\n\\end{center}\n\\end{figure}",
+            },
+            {"kind": "protected", "source_tex": "\n\\end{document}\n"},
+        ]
+        fused, _ = fuse_english_main_japanese_secondary(rows)
+        self.assertEqual(fused.count(r"\begin{figure}"), 1)
+        self.assertEqual(fused.count(r"\end{figure}"), 1)
+        self.assertIn("キャプション。", fused)
+        self.assertLess(fused.index(r"\end{figure}"), fused.index("キャプション。"))
 
     def test_wide_math_wrapper_ignores_caption_optional_linebreak_spacing(self) -> None:
         source = restore_split_optional_linebreaks(

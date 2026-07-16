@@ -1019,6 +1019,25 @@ def source_is_notation_only(source_tex: str) -> bool:
     """Return true for protected/structural rows with no translatable prose."""
 
     without_tokens = PROTECTED_TOKEN_RE.sub("", source_tex)
+    # Asset-only rows can carry long file paths and layout options even though
+    # they contain no prose. Strip complete graphics/layout commands before
+    # checking for lexical text so an image is not sent through futile
+    # Japanese-regeneration loops.
+    without_tokens = re.sub(
+        r"\\graphicspath\s*\{(?:\{[^{}]*\})+\}",
+        "",
+        without_tokens,
+    )
+    without_tokens = re.sub(
+        r"\\includegraphics(?:\[[^\]]*\])?\{[^{}]*\}",
+        "",
+        without_tokens,
+    )
+    without_tokens = re.sub(
+        r"\\captionsetup(?:\[[^\]]*\])?\{[^{}]*\}",
+        "",
+        without_tokens,
+    )
     without_tokens = INLINE_MATH_RE.sub("", without_tokens)
     without_tokens = MATH_ENV_RE.sub("", without_tokens)
     without_tokens = re.sub(

@@ -80,7 +80,11 @@
       "source_body_tex": "build/chaos-making-new-science-mathpix-exact-book/work/body.tex",
       "source_route": "mathpix",
       "source_cache_immutable": true,
-      "validation_profile": "technical_exact"
+      "validation_profile": "technical_exact",
+      "polish_source_replacements_file": "data/source-plan/chaos-making-new-science-mathpix-source-repairs.json",
+      "polish_furigana_overrides": {
+        "上田睆亮": "うえだよしすけ"
+      }
     },
     {
       "book_id": "nonlinear-dynamics-and-chaos-mathpix-exact-book",
