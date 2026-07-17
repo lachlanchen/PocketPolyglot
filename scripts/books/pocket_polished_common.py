@@ -1172,6 +1172,10 @@ _NOTE_CHORD_TOKEN_RE = re.compile(
     r"(?![A-Za-z])"
     r"|(?<![A-Za-z])"
     r"[A-G](?:[#b♭♯])?\d+(?:[#b♭♯+°]\d*)?"
+    r"(?:alt)?"
+    r"(?![A-Za-z])"
+    r"|(?<![A-Za-z])"
+    r"[A-G](?:[#b♭♯])?(?:[+°]\d*)?"
     r"(?![A-Za-z])"
 )
 _ROMAN_CHORD_TOKEN_RE = re.compile(
@@ -1179,6 +1183,7 @@ _ROMAN_CHORD_TOKEN_RE = re.compile(
     r"[#b♭♯]?[ivIV]+"
     r"(?:maj|min|mai|m|dim|aug|sus|add|alt|dom)?\d*"
     r"(?:[#b♭♯+°]\d*)?"
+    r"(?:alt)?"
     r"(?![A-Za-z])"
 )
 _CHORD_QUALITY_TOKEN_RE = re.compile(
@@ -1199,11 +1204,24 @@ def musical_notation_only(source_plain: str) -> bool:
     residue may remain.  Semantic review still checks notation correctness.
     """
 
+    probe = PROTECTED_TOKEN_RE.sub(" ", source_plain)
+    # ``visible_text_with_math`` intentionally keeps enough TeX context for
+    # validation, which means table environments can leave lexical-looking
+    # residue such as ``longtable @ llllllll@``.  Those are structure, not
+    # prose.  Remove only conventional environment names and pure column
+    # specifications before classifying the musical payload.
+    probe = re.sub(
+        r"\b(?:longtable|tabularx?|array|toprule|midrule|bottomrule|endhead)\b",
+        " ",
+        probe,
+        flags=re.I,
+    )
+    probe = re.sub(r"(?<![A-Za-z])@?[lcrxpmb]{2,}@?(?![A-Za-z])", " ", probe, flags=re.I)
     probe = re.sub(
         r"\b(?:Fig(?:s|ures?)?\.?\s*\d+[A-Za-z]?(?:\s*[-–]\s*\d+[A-Za-z]?)?"
         r"|Harmony|Formula|Construction)\b\s*:?",
         " ",
-        source_plain,
+        probe,
         flags=re.I,
     )
     patterns = (

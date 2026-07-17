@@ -204,6 +204,86 @@ class PocketPolishPipelineTest(unittest.TestCase):
             errors,
         )
 
+    def test_protected_roman_chord_progression_is_not_treated_as_prose(self):
+        source = source_segment(
+            "book-protected-chords",
+            "i(maj7)-ii7@@PROTECTED_0001@@-@@PROTECTED_0002@@IIImaj7"
+            "@@PROTECTED_0003@@-iv7-V7-@@PROTECTED_0004@@VImaj7-vii°7",
+        )
+        task = dict(
+            self.task,
+            segments=[source],
+            segment_count=1,
+            validation_profile="technical_exact",
+        )
+        output = {
+            "segment_id": source["segment_id"],
+            "source_sha256": source["source_sha256"],
+            "en_tex": source["source_tex"],
+            "ja_tex": source["source_tex"],
+            "changes": [],
+            "unresolved": [],
+        }
+        errors = validate_segment_output(task, source, output)
+        self.assertNotIn(
+            "book-protected-chords: Japanese output contains no Japanese script",
+            errors,
+        )
+
+    def test_chord_table_structure_is_not_treated_as_prose(self):
+        source = source_segment(
+            "book-chord-table",
+            "\\begin{longtable}[]{@{}llllllll@{}}\n"
+            "i & ii° & @@PROTECTED_0001@@III & iv & v & ♭VI & ♭VII & \\\\\n"
+            "Am & B° & C & Dm & Em & F & G & \\\\\n"
+            "\\end{longtable}",
+        )
+        source["kind"] = "table"
+        task = dict(
+            self.task,
+            segments=[source],
+            segment_count=1,
+            validation_profile="technical_exact",
+        )
+        output = {
+            "segment_id": source["segment_id"],
+            "source_sha256": source["source_sha256"],
+            "en_tex": source["source_tex"],
+            "ja_tex": source["source_tex"],
+            "changes": [],
+            "unresolved": [],
+        }
+        errors = validate_segment_output(task, source, output)
+        self.assertNotIn(
+            "book-chord-table: Japanese output contains no Japanese script",
+            errors,
+        )
+
+    def test_altered_figure_chords_are_not_treated_as_prose(self):
+        source = source_segment(
+            "book-altered-chords",
+            "Fig. 7 i7 iv7 Cm7 Fm7 V7alt VImaj7 G+7 Abmaj7",
+        )
+        task = dict(
+            self.task,
+            segments=[source],
+            segment_count=1,
+            validation_profile="technical_exact",
+        )
+        output = {
+            "segment_id": source["segment_id"],
+            "source_sha256": source["source_sha256"],
+            "en_tex": source["source_tex"],
+            "ja_tex": source["source_tex"],
+            "changes": [],
+            "unresolved": [],
+        }
+        errors = validate_segment_output(task, source, output)
+        self.assertNotIn(
+            "book-altered-chords: Japanese output contains no Japanese script",
+            errors,
+        )
+
     def test_music_prose_still_requires_a_japanese_translation(self):
         source = source_segment(
             "book-chord-prose",
