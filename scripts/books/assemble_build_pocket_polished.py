@@ -162,6 +162,9 @@ PLAIN_ASCII_SHORT_POWER_RE = re.compile(
 )
 REMAINING_SUPERSCRIPT_RE = re.compile(r"[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]+")
 REMAINING_SUBSCRIPT_RE = re.compile(r"[₀₁₂₃₄₅₆₇₈₉₊₋ₐₑₕᵢⱼₖₗₘₙₒₚᵣₛₜᵤᵥₓ]+")
+TEXT_SUPERSCRIPT_ACCIDENTAL_RE = re.compile(
+    r"\\textsuperscript\{(?P<symbols>(?:\\(?:flat|sharp|natural)){1,2})\}"
+)
 GREEK_MATH_COMMANDS = {
     "ε": r"\epsilon",
     "ρ": r"\rho",
@@ -338,6 +341,15 @@ def normalize_unwrapped_math_fragments(tex: str) -> tuple[str, int]:
 
     def replace_plain(plain: str) -> tuple[str, int]:
         count = 0
+        # Music writers sometimes emit math-only accidental commands inside a
+        # text superscript.  XeLaTeX rejects ``\textsuperscript{\flat}``
+        # because ``\flat`` requires math mode.  Preserve the visible
+        # accidental and its ordering by moving only that symbol into inline
+        # math; no source wording or musical fact changes.
+        plain, changed = TEXT_SUPERSCRIPT_ACCIDENTAL_RE.subn(
+            lambda match: rf"\({match.group('symbols')}\)", plain
+        )
+        count += changed
         plain, changed = PLAIN_LOG_EXPRESSION_RE.subn(replace, plain)
         count += changed
         plain, changed = PLAIN_POWER_INEQUALITY_RE.subn(
@@ -1066,35 +1078,76 @@ def fit_short_complex_longtables(tex: str, *, max_rows: int = 12) -> tuple[str, 
     return "".join(parts), converted
 
 
-def wrap_long_simple_longtables(tex: str, *, min_rows: int = 13) -> tuple[str, int]:
-    """Give long simple tables wrapping columns while retaining page breaks."""
+CHORD_TABLE_SEPARATOR_RE = re.compile(
+    r"(?<=[A-G0-9♭♯°#])(?P<separator>--|[-−])"
+    r"(?=(?:[A-G0-9♭♯°#]|\\#))"
+)
 
-    wrapped = 0
+
+def add_chord_table_breakpoints(body: str) -> tuple[str, int]:
+    """Add invisible line-break opportunities inside pitch/formula lists."""
+
+    return CHORD_TABLE_SEPARATOR_RE.subn(
+        lambda match: match.group("separator") + r"\allowbreak{}",
+        body,
+    )
+
+
+def longtable_content_widths(body: str, column_count: int) -> list[float]:
+    """Allocate wrapping columns from visible cell content on pocket pages."""
 
     def visible_length(cell: str) -> int:
         cell = re.sub(r"\\[A-Za-z@]+\*?(?:\[[^\]]*\])?", "", cell)
         cell = re.sub(r"[{}~]", "", cell)
         return len(re.sub(r"\s+", " ", cell).strip())
 
-    def widths_for(body: str, column_count: int) -> list[float]:
-        maxima = [1] * column_count
-        for row in re.split(r"\\\\(?:\[[^\]]*\])?\s*(?:\n|$)", body):
-            if row.count("&") != column_count - 1:
-                continue
-            cells = re.split(r"(?<!\\)&", row)
-            for index, cell in enumerate(cells):
-                maxima[index] = max(maxima[index], visible_length(cell))
-        total_width = 0.92 if column_count == 2 else 0.88 if column_count == 3 else 0.84
-        minimum = 0.10 if column_count == 2 else 0.07
-        flexible = total_width - minimum * column_count
-        weight_sum = sum(maxima)
-        widths = [minimum + flexible * value / weight_sum for value in maxima]
-        if column_count == 2:
-            dominant = 0 if maxima[0] >= maxima[1] else 1
-            if maxima[dominant] >= 2.5 * maxima[1 - dominant]:
-                widths[dominant] = 0.80
-                widths[1 - dominant] = total_width - 0.80
-        return widths
+    maxima = [1] * column_count
+    for row in re.split(r"\\\\(?:\[[^\]]*\])?\s*(?:\n|$)", body):
+        if row.count("&") != column_count - 1:
+            continue
+        cells = re.split(r"(?<!\\)&", row)
+        for index, cell in enumerate(cells):
+            maxima[index] = max(maxima[index], visible_length(cell))
+    total_width = 0.92 if column_count == 2 else 0.88 if column_count == 3 else 0.84
+    minimum = 0.10 if column_count == 2 else 0.07
+    flexible = total_width - minimum * column_count
+    weight_sum = sum(maxima)
+    widths = [minimum + flexible * value / weight_sum for value in maxima]
+    if column_count == 2:
+        dominant = 0 if maxima[0] >= maxima[1] else 1
+        if maxima[dominant] >= 2.5 * maxima[1 - dominant]:
+            widths[dominant] = 0.80
+            widths[1 - dominant] = total_width - 0.80
+    return widths
+
+
+def compact_longtable(body: str, columns: str, *, widths: list[float]) -> str:
+    """Render a page-breaking table with explicit A6-safe spacing."""
+
+    alignments = {
+        "l": r">{\raggedright\arraybackslash}",
+        "c": r">{\centering\arraybackslash}",
+        "r": r">{\raggedleft\arraybackslash}",
+    }
+    body, _ = add_chord_table_breakpoints(body)
+    cells = [
+        f"{alignments[column]}p{{{width:.3f}\\linewidth}}"
+        for column, width in zip(columns, widths)
+    ]
+    specification = "@{}" + r"@{\hspace{1pt}}".join(cells) + "@{}"
+    size = r"\scriptsize" if len(columns) >= 6 else r"\footnotesize"
+    return (
+        f"\\begingroup{size}\\setlength{{\\tabcolsep}}{{1pt}}"
+        f"\\begin{{longtable}}[]{{{specification}}}"
+        f"{body}"
+        "\\end{longtable}\\endgroup"
+    )
+
+
+def wrap_long_simple_longtables(tex: str, *, min_rows: int = 13) -> tuple[str, int]:
+    """Give long simple tables wrapping columns while retaining page breaks."""
+
+    wrapped = 0
 
     def replace(match: re.Match[str]) -> str:
         nonlocal wrapped
@@ -1103,24 +1156,88 @@ def wrap_long_simple_longtables(tex: str, *, min_rows: int = 13) -> tuple[str, i
         columns = match.group("columns")
         if row_count < min_rows or len(columns) < 2:
             return match.group(0)
-        widths = widths_for(body, len(columns))
-        alignments = {
-            "l": r">{\raggedright\arraybackslash}",
-            "c": r">{\centering\arraybackslash}",
-            "r": r">{\raggedleft\arraybackslash}",
-        }
-        specification = "".join(
-            f"{alignments[column]}p{{{width:.3f}\\linewidth}}"
-            for column, width in zip(columns, widths)
-        )
+        widths = longtable_content_widths(body, len(columns))
         wrapped += 1
-        return (
-            f"\\begin{{longtable}}[]{{@{{}}{specification}@{{}}}}"
-            f"{body}"
-            "\\end{longtable}"
-        )
+        return compact_longtable(body, columns, widths=widths)
 
     return SIMPLE_LONGTABLE_RE.sub(replace, tex), wrapped
+
+
+def wrap_long_complex_longtables(tex: str, *, min_rows: int = 13) -> tuple[str, int]:
+    """Reflow long Pandoc p-column tables without losing page breaks."""
+
+    marker = r"\begin{longtable}[]"
+    end_marker = r"\end{longtable}"
+    wrapped = 0
+    cursor = 0
+    parts: list[str] = []
+
+    def column_count(spec: str) -> int:
+        count = 0
+        depth = 0
+        escaped = False
+        for index, char in enumerate(spec):
+            if escaped:
+                escaped = False
+                continue
+            if char == "\\":
+                escaped = True
+                continue
+            if char == "{":
+                depth += 1
+                continue
+            if char == "}":
+                depth = max(0, depth - 1)
+                continue
+            if depth == 0 and char in "lcr":
+                count += 1
+            elif (
+                depth == 0
+                and char in "pmb"
+                and index + 1 < len(spec)
+                and spec[index + 1] == "{"
+            ):
+                count += 1
+        return count
+
+    while True:
+        start = tex.find(marker, cursor)
+        if start < 0:
+            parts.append(tex[cursor:])
+            break
+        parts.append(tex[cursor:start])
+        spec_start = start + len(marker)
+        while spec_start < len(tex) and tex[spec_start].isspace():
+            spec_start += 1
+        if spec_start >= len(tex) or tex[spec_start] != "{":
+            parts.append(tex[start : start + len(marker)])
+            cursor = start + len(marker)
+            continue
+        try:
+            spec, body_start = braced_argument(tex, spec_start)
+        except ValueError:
+            parts.append(tex[start : start + len(marker)])
+            cursor = start + len(marker)
+            continue
+        end = tex.find(end_marker, body_start)
+        if end < 0:
+            parts.append(tex[start:])
+            break
+        body = tex[body_start:end]
+        row_count = body.count(r"\\")
+        columns = column_count(spec)
+        if (
+            row_count < min_rows
+            or columns < 2
+            or re.fullmatch(r"@\{\}[lcr]+@\{\}", spec)
+        ):
+            parts.append(tex[start : end + len(end_marker)])
+        else:
+            widths = longtable_content_widths(body, columns)
+            parts.append(compact_longtable(body, "l" * columns, widths=widths))
+            wrapped += 1
+        cursor = end + len(end_marker)
+    return "".join(parts), wrapped
 
 
 def pocket_layout(tex: str) -> str:
@@ -1374,6 +1491,8 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
         fused, complex_short_tables = fit_short_complex_longtables(fused)
         fitted_short_tables["en-main-ja"] += complex_short_tables
         fused, wrapped_long_tables["en-main-ja"] = wrap_long_simple_longtables(fused)
+        fused, complex_long_tables = wrap_long_complex_longtables(fused)
+        wrapped_long_tables["en-main-ja"] += complex_long_tables
         fused, fitted_inline_math["en-main-ja"] = wrap_wide_inline_math(
             fused, layout="pocket"
         )

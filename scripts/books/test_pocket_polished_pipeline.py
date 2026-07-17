@@ -28,6 +28,7 @@ from assemble_build_pocket_polished import (
     pocket_layout,
     remove_legacy_full_page_cover,
     restore_secondary_list_scaffold,
+    wrap_long_complex_longtables,
     wrap_long_simple_longtables,
     restore_split_optional_linebreaks,
     split_shared_environment_scaffold,
@@ -1104,6 +1105,17 @@ class PocketPolishPipelineTest(unittest.TestCase):
         self.assertEqual(count, 0)
         self.assertEqual(unchanged, r"Already \(u = u_1 = -log k\).")
 
+    def test_text_superscript_music_accidentals_are_moved_into_math_mode(self) -> None:
+        repaired, count = normalize_unwrapped_math_fragments(
+            r"Intervals: 1-\textsuperscript{\flat}3 and "
+            r"1-\textsuperscript{\flat\flat}7."
+        )
+        self.assertEqual(count, 2)
+        self.assertEqual(
+            repaired,
+            r"Intervals: 1-\(\flat\)3 and 1-\(\flat\flat\)7.",
+        )
+
     def test_plain_technical_power_expressions_are_typeset_as_math(self) -> None:
         source = (
             "Assume a(t) = a₀tᵖ. Then "
@@ -1549,6 +1561,41 @@ class PocketPolishPipelineTest(unittest.TestCase):
         self.assertEqual(count, 1)
         self.assertIn(r"\begin{longtable}", fitted)
         self.assertIn(r">{\raggedright\arraybackslash}p{", fitted)
+        self.assertIn(r"@{\hspace{1pt}}", fitted)
+        self.assertIn(r"\footnotesize", fitted)
+
+    def test_long_complex_longtable_rebalances_narrow_pandoc_columns(self) -> None:
+        rows = [f"Chapter {index} & {index} & {index + 1} \\\\" for index in range(13)]
+        source = (
+            r"\begin{longtable}[]{@{}"
+            r">{\raggedright\arraybackslash}p{.82\columnwidth}"
+            r">{\raggedright\arraybackslash}p{.08\columnwidth}"
+            r">{\raggedright\arraybackslash}p{.10\columnwidth}@{}}"
+            + "\n"
+            + "\n".join(rows)
+            + "\n"
+            + r"\end{longtable}"
+        )
+        fitted, count = wrap_long_complex_longtables(source)
+        self.assertEqual(count, 1)
+        self.assertIn(r"\begin{longtable}", fitted)
+        self.assertIn(r"\footnotesize", fitted)
+        self.assertIn(r"@{\hspace{1pt}}", fitted)
+        self.assertNotIn(r".08\columnwidth", fitted)
+
+    def test_long_chord_table_receives_invisible_breakpoints(self) -> None:
+        rows = [f"C7 & 1-3-5-b7 & C-E-G-B \\\\" for _ in range(13)]
+        source = (
+            r"\begin{longtable}[]{@{}lll@{}}"
+            + "\n"
+            + "\n".join(rows)
+            + "\n"
+            + r"\end{longtable}"
+        )
+        fitted, count = wrap_long_simple_longtables(source)
+        self.assertEqual(count, 1)
+        self.assertIn(r"1-\allowbreak{}3-\allowbreak{}5", fitted)
+        self.assertIn(r"C-\allowbreak{}E-\allowbreak{}G", fitted)
 
     def test_fusion_reconciles_protected_table_openers_with_translated_caption_closers(self) -> None:
         rows = [
