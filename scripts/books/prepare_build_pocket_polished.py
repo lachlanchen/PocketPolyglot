@@ -146,6 +146,14 @@ def prepare_book(
             and current.get("pipeline_schema_version") == 3
         ):
             return current
+        existing_outputs = list((book_root / "json").glob("*.json"))
+        existing_cache = list((book_root / "work/accepted-segments").glob("*.json"))
+        if existing_outputs or existing_cache:
+            raise RuntimeError(
+                f"refusing to rechunk {book_id} with existing reviewed work "
+                f"({len(existing_outputs)} chunk outputs, {len(existing_cache)} cached segments); "
+                "rerun with --force only after preserving or migrating the existing evidence"
+            )
 
     segments = split_tex_segments(
         source_text,
