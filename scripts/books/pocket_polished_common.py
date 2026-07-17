@@ -348,28 +348,76 @@ def apply_exact_text_replacements(
     changes: list[dict[str, Any]] = []
     for rule_index, rule in enumerate(rules, start=1):
         before = rule.get("before") if isinstance(rule, dict) else None
+        span_start = rule.get("span_start") if isinstance(rule, dict) else None
+        span_end = rule.get("span_end") if isinstance(rule, dict) else None
         after = rule.get("after") if isinstance(rule, dict) else None
         expected = rule.get("expected_count", 1) if isinstance(rule, dict) else 1
         reason = rule.get("reason", "Evidence-reviewed exact source repair.") if isinstance(rule, dict) else ""
-        if not isinstance(before, str) or not before:
-            raise ValueError(f"source replacement rule {rule_index} has no before text")
         if not isinstance(after, str):
             raise ValueError(f"source replacement rule {rule_index} has no after text")
-        found = repaired.count(before)
+        if not isinstance(expected, int) or expected < 1:
+            raise ValueError(
+                f"source replacement rule {rule_index} has invalid expected_count"
+            )
+        if isinstance(before, str) and before:
+            found = repaired.count(before)
+            if found != expected:
+                raise ValueError(
+                    f"source replacement rule {rule_index} expected {expected} exact "
+                    f"matches, found {found}: {before!r}"
+                )
+            repaired = repaired.replace(before, after)
+            changes.append(
+                {
+                    "type": "configured-exact-text-replacement",
+                    "before": before,
+                    "after": after,
+                    "expected_count": expected,
+                    "reason": str(reason),
+                    "before_sha256": sha256_text(before),
+                }
+            )
+            continue
+        if not (
+            isinstance(span_start, str)
+            and span_start
+            and isinstance(span_end, str)
+            and span_end
+        ):
+            raise ValueError(
+                f"source replacement rule {rule_index} needs before text or "
+                "non-empty span_start/span_end markers"
+            )
+        found = repaired.count(span_start)
         if found != expected:
             raise ValueError(
-                f"source replacement rule {rule_index} expected {expected} exact "
-                f"matches, found {found}: {before!r}"
+                f"source replacement rule {rule_index} expected {expected} span "
+                f"starts, found {found}: {span_start!r}"
             )
-        repaired = repaired.replace(before, after)
+        spans: list[tuple[int, int, str]] = []
+        cursor = 0
+        for _ in range(expected):
+            start = repaired.find(span_start, cursor)
+            end_marker = repaired.find(span_end, start + len(span_start))
+            if end_marker < 0:
+                raise ValueError(
+                    f"source replacement rule {rule_index} has no span_end after "
+                    f"offset {start}: {span_end!r}"
+                )
+            end = end_marker + len(span_end)
+            spans.append((start, end, repaired[start:end]))
+            cursor = end
+        for start, end, _matched in reversed(spans):
+            repaired = repaired[:start] + after + repaired[end:]
         changes.append(
             {
-                "type": "configured-exact-text-replacement",
-                "before": before,
+                "type": "configured-exact-span-replacement",
+                "span_start": span_start,
+                "span_end": span_end,
                 "after": after,
                 "expected_count": expected,
                 "reason": str(reason),
-                "before_sha256": sha256_text(before),
+                "before_sha256": [sha256_text(matched) for _, _, matched in spans],
             }
         )
     return repaired, changes
@@ -989,8 +1037,65 @@ def japanese_kana_required(source_tex: str, source_plain: str) -> bool:
     return True
 
 
-def japanese_translation_optional(source_plain: str) -> bool:
-    """Allow invariant metadata and nonlinguistic notation to remain unchanged."""
+_STANDALONE_CAPTION_RE = re.compile(
+    r"\\caption\{(?P<label>Figure|Fig\.?|Table|Equation)\s+"
+    r"(?P<number>\d+(?:\.\d+)*)\}",
+    re.I,
+)
+
+
+def deterministic_japanese_caption(source_tex: str) -> str | None:
+    """Translate a caption-only technical object without a model retry.
+
+    Exact-book sources often wrap a diagram or equation in a structural block
+    whose only translatable text is ``Figure 11.3.5``.  A language model can
+    turn that label into an incomplete phrase such as ``図11.3.5に示す``.
+    Canonicalize only this provably narrow case; any additional prose keeps the
+    segment on the normal translation and semantic-review path.
+    """
+
+    matches = list(_STANDALONE_CAPTION_RE.finditer(source_tex))
+    if len(matches) != 1:
+        return None
+
+    residue = _STANDALONE_CAPTION_RE.sub("", source_tex)
+    residue = PROTECTED_TOKEN_RE.sub("", residue)
+    residue = re.sub(r"\\\((?:.|\n)*?\\\)", "", residue)
+    residue = re.sub(r"\\\[(?:.|\n)*?\\\]", "", residue)
+    structural_line = re.compile(
+        r"(?:\\(?:begin|end)\{[^{}]+\}(?:\[[^\]]*\])?"
+        r"|\\captionsetup(?:\[[^\]]*\])?\{[^{}]*\}"
+        r"|\\noindent)\s*$"
+    )
+    for line in residue.splitlines():
+        stripped = line.strip()
+        if not stripped or structural_line.fullmatch(stripped):
+            continue
+        return None
+
+    match = matches[0]
+    label = match.group("label").lower().rstrip(".")
+    translated_label = {
+        "figure": "図",
+        "fig": "図",
+        "table": "表",
+        "equation": "式",
+    }[label]
+    replacement = rf"\caption{{{translated_label}{match.group('number')}}}"
+    return source_tex[: match.start()] + replacement + source_tex[match.end() :]
+
+
+def japanese_translation_optional(
+    source_plain: str,
+    source_tex: str | None = None,
+) -> bool:
+    """Allow invariant metadata, references, and indexes to remain unchanged.
+
+    Bibliographies and indexes are lookup structures: translating author names,
+    titles, or index headwords breaks their relationship to the English body.
+    Detect them conservatively from their conventional locator-heavy shape so
+    ordinary prose still requires a real Japanese translation.
+    """
 
     compact = re.sub(r"\s+", "", source_plain)
     symbolic_sequence = bool(
@@ -1000,17 +1105,58 @@ def japanese_translation_optional(source_plain: str) -> bool:
     )
     bibliography_entry = bool(
         re.fullmatch(
-            r"[A-Z][A-Za-z'’.-]+,\s*(?:[A-Z]\.(?:\s*|$)){1,4}"
-            r"\(\d{4}[a-z]?\),\s*[\"“].+[\"”],\s*.+\[\d+\]",
+            r"[A-Z][A-Za-z'’.-]+,\s*(?:[A-Z]\.\s*){1,4}"
+            r"\(\d{4}[a-z]?\)\s+.+(?:\.|,)\s+.+\d+\.?",
             source_plain.strip(),
         )
     )
-    return symbolic_sequence or bibliography_entry or bool(
+
+    raw_lines = re.split(r"\\\\|\n", source_tex or source_plain)
+    reference_lines = [
+        visible_text_with_math(line).strip()
+        for line in raw_lines
+        if visible_text_with_math(line).strip()
+    ]
+    author_locator = re.compile(
+        r"^[A-Z][A-Za-z'’.-]+(?:,\s*(?:[A-Z]\.\s*){1,4})?"
+        r"\s*\(\d{4}[a-z]?\),\s*\d+(?:\s*,\s*\d+)*$"
+    )
+    citation_index = bool(reference_lines) and all(
+        author_locator.fullmatch(line) for line in reference_lines
+    )
+
+    locator_tail = re.compile(
+        r"(?:^|[,\s])\d+(?:\s*[-–]\s*\d+)?"
+        r"(?:\s*,\s*\d+(?:\s*[-–]\s*\d+)?)*\s*[.]?$"
+    )
+    locator_lines = sum(bool(locator_tail.search(line)) for line in reference_lines)
+    sentence_lines = sum(bool(re.search(r"[?!]|\.(?:\s|$)", line)) for line in reference_lines)
+    average_line_length = (
+        sum(len(line) for line in reference_lines) / len(reference_lines)
+        if reference_lines
+        else 0.0
+    )
+    subject_index = bool(
+        len(reference_lines) >= 12
+        and (source_tex or "").count(r"\\") >= 10
+        and locator_lines / len(reference_lines) >= 0.45
+        and sentence_lines / len(reference_lines) <= 0.15
+        and average_line_length <= 100
+    )
+
+    return (
+        deterministic_japanese_caption(source_tex or "") is not None
+        or symbolic_sequence
+        or bibliography_entry
+        or citation_index
+        or subject_index
+        or bool(
         re.search(
             r"\b(?:copyright|isbn|issn|publisher|publishing|printed|office|"
             r"address|street|suite|road|avenue|university press)\b",
             source_plain,
             re.I,
+        )
         )
     )
 
@@ -1393,7 +1539,7 @@ def validate_segment_output(
     if (
         source_len >= 40
         and not source_is_notation_only(source["source_tex"])
-        and not japanese_translation_optional(source_plain)
+        and not japanese_translation_optional(source_plain, source["source_tex"])
         and japanese_kana_required(source["source_tex"], source_plain)
         and not KANA_RE.search(ja_plain)
     ):

@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "book_id": "nonlinear-dynamics-and-chaos-mathpix-exact-book",
+  "evidence": [
+    "sources/nonlinear-dynamics-and-chaos/Nonlinear Dynamics and Chaos - With Applications to Physics, Biology, Chemistry, and Engineering.pdf"
+  ],
+  "policy": "Exact, cardinality-checked repairs confirmed against the visible source PDF; no mathematical or bibliographic fact is inferred without page evidence.",
+  "replacements": [
+    {
+      "before": "2.1.4 (Exact solution of \\(\\dot { x } = \\sin x )\\) As shown",
+      "after": "2.1.4 (Exact solution of \\(\\dot { x } = \\sin x\\)) As shown",
+      "expected_count": 1,
+      "reason": "Source exercise 2.1.4 closes the exercise-title parenthesis after the inline equation; Mathpix placed that parenthesis inside math mode."
+    },
+    {
+      "before": "Maps are easy and fast to simulate on",
+      "after": "Maps are easy and fast to simulate on digital computers where time is inherently discrete.",
+      "expected_count": 1,
+      "reason": "Printed pages 385-386 continue this sentence across a page and intervening figure. Restore the complete sentence before the figure."
+    },
+    {
+      "before": "digital computers where time is inherently discrete. Such computer experiments",
+      "after": "Such computer experiments",
+      "expected_count": 1,
+      "reason": "The sentence continuation was moved before the intervening figure by the preceding repair; remove only that now-duplicated continuation."
+    },
+    {
+      "before": "the fixed point is \\(\\boldsymbol { u } \\boldsymbol { n s t a }\\) table.",
+      "after": "the fixed point is unstable.",
+      "expected_count": 1,
+      "reason": "Printed page 387 reads 'the fixed point is unstable'; Mathpix split the word into a malformed math atom plus 'table'."
+    },
+    {
+      "before": "differential equationsrecall Section 2.4.",
+      "after": "differential equations---recall Section 2.4.",
+      "expected_count": 1,
+      "reason": "Printed page 387 has a sentence dash before 'recall'; restore the missing punctuation without changing content."
+    },
+    {
+      "before": "Consider the forced pendu\\(\\operatorname { lum } \\ddot { \\theta } + b \\dot { \\theta } + \\sin \\theta = F \\cos t\\)",
+      "after": "Consider the forced pendulum \\(\\ddot { \\theta } + b \\dot { \\theta } + \\sin \\theta = F \\cos t\\)",
+      "expected_count": 1,
+      "reason": "Printed exercise 12.5.4 reads 'forced pendulum' followed by the equation; Mathpix fused the final syllable into the math expression."
+    },
+    {
+      "before": "cobweb diagram, 392, 396, 416, 423, 427 codes, secret, 370\\\\",
+      "after": "cobweb diagram, 392, 396, 416, 423, 427\\\\\ncodes, secret, 370\\\\",
+      "expected_count": 1,
+      "reason": "Subject Index page 579 shows 'cobweb diagram' and 'codes, secret' as separate entries."
+    },
+    {
+      "before": "delay, for attractor reconstruction, 477449\\\\",
+      "after": "delay, for attractor reconstruction, 477, 449\\\\",
+      "expected_count": 1,
+      "reason": "Subject Index page 580 visibly prints two locator values, 477 and 449; Mathpix fused them into one number."
+    },
+    {
+      "before": "driven pendulum (constant torque), 291 existence of closed orbit, 293\\\\",
+      "after": "driven pendulum (constant torque), 291\\\\\nexistence of closed orbit, 293\\\\",
+      "expected_count": 1,
+      "reason": "Subject Index pages 580-581 place the continuation 'existence of closed orbit' on a new row; retain the row boundary across the page break."
+    },
+    {
+      "before": "evolutionary dynamics, 44, 204 exact derivative, 176\\\\",
+      "after": "evolutionary dynamics, 44, 204\\\\\nexact derivative, 176\\\\",
+      "expected_count": 1,
+      "reason": "Subject Index pages 581-582 separate 'evolutionary dynamics' from 'exact derivative'; retain the row boundary."
+    },
+    {
+      "before": "flow, 17, 107 fluid flow\\\\",
+      "after": "flow, 17, 107\\\\\nfluid flow\\\\",
+      "expected_count": 1,
+      "reason": "Subject Index pages 582-583 separate the 'flow' entry from the 'fluid flow' heading."
+    },
+    {
+      "before": "globally attracting, 143 globally coupled oscillators, 333, 499\\\\",
+      "after": "globally attracting, 143\\\\\nglobally coupled oscillators, 333, 499\\\\",
+      "expected_count": 1,
+      "reason": "Subject Index pages 583-584 separate 'globally attracting' from 'globally coupled oscillators'."
+    },
+    {
+      "before": "heteroclinic trajectory, 183 188, 213",
+      "after": "heteroclinic trajectory, 183, 188, 213",
+      "expected_count": 1,
+      "reason": "Subject Index page 584 visibly lists three locators; restore the missing comma between 183 and 188."
+    },
+    {
+      "before": "and cusp catastrophe, 80 bifurcation diagram for, 79\\\\",
+      "after": "and cusp catastrophe, 80\\\\\nbifurcation diagram for, 79\\\\",
+      "expected_count": 1,
+      "reason": "Subject Index pages 584-585 separate the 'and cusp catastrophe' subentry from 'bifurcation diagram for'."
+    },
+    {
+      "before": "\\frac { \\partial f } { \\partial x } & \\frac { \\partial f } { \\partial y }  \\tag{1}\\\\\n\\frac { \\partial g } { \\partial x } & \\frac { \\partial g } { \\partial y }\n\\end{array} \\right) \\binom { u } { v } + \\text { quadratic terms. }\\]",
+      "after": "\\frac { \\partial f } { \\partial x } & \\frac { \\partial f } { \\partial y } \\\\\n\\frac { \\partial g } { \\partial x } & \\frac { \\partial g } { \\partial y }\n\\end{array} \\right) \\binom { u } { v } + \\text { quadratic terms. } \\tag{1}\\]",
+      "expected_count": 1,
+      "reason": "Printed page 167 labels the complete deviation system as equation (1); Mathpix incorrectly placed the tag inside the first row of the nested matrix array, which is invalid TeX."
+    },
+    {
+      "before": "\\frac { \\partial f } { \\partial x } & \\frac { \\partial f } { \\partial y }  \\tag{2}\\\\\n\\frac { \\partial g } { \\partial x } & \\frac { \\partial g } { \\partial y }\n\\end{array} \\right) \\binom { u } { v }\\]",
+      "after": "\\frac { \\partial f } { \\partial x } & \\frac { \\partial f } { \\partial y } \\\\\n\\frac { \\partial g } { \\partial x } & \\frac { \\partial g } { \\partial y }\n\\end{array} \\right) \\binom { u } { v } \\tag{2}\\]",
+      "expected_count": 1,
+      "reason": "Printed page 167 labels the complete linearized system as equation (2); move the tag out of the nested matrix row while preserving the full expression."
+    },
+    {
+      "before": "\\tag{8а}",
+      "after": "\\tag{8a}",
+      "expected_count": 1,
+      "reason": "The printed paired equation labels are (8a) and (8b); Mathpix substituted a Cyrillic lookalike for Latin a."
+    },
+    {
+      "before": "\\tag{3а}",
+      "after": "\\tag{3a}",
+      "expected_count": 1,
+      "reason": "The printed paired equation labels are (3a) and (3b); Mathpix substituted a Cyrillic lookalike for Latin a."
+    },
+    {
+      "before": "\\[\\begin{array} { l l } \nO ( 1 ) : & \\ddot { x } _ { 0 } + x _ { 0 } = 0 \\\\\nO ( \\varepsilon ) : & \\ddot { x } _ { 1 } + 2 \\dot { x } _ { 0 } + x _ { 1 } = 0 . \\tag{11}\n\\end{array}\\]",
+      "after": "\\[\\begin{array} { l l } \nO ( 1 ) : & \\ddot { x } _ { 0 } + x _ { 0 } = 0 \\\\\nO ( \\varepsilon ) : & \\ddot { x } _ { 1 } + 2 \\dot { x } _ { 0 } + x _ { 1 } = 0 .\n\\end{array} \\tag{11}\\]",
+      "expected_count": 1,
+      "reason": "Printed equation (11) labels the complete two-row perturbation system; move the tag outside the nested array while preserving both equations."
+    },
+    {
+      "before": "\\[\\begin{array} { l l } \nO ( 1 ) : & \\partial _ { \\tau \\tau } x _ { 0 } + x _ { 0 } = 0 \\\\\nO ( \\varepsilon ) : & \\partial _ { \\tau \\tau } x _ { 1 } + 2 \\partial _ { T \\tau } x _ { 0 } + 2 \\partial _ { \\tau } x _ { 0 } + x _ { 1 } = 0 \\tag{25}\n\\end{array}\\]",
+      "after": "\\[\\begin{array} { l l } \nO ( 1 ) : & \\partial _ { \\tau \\tau } x _ { 0 } + x _ { 0 } = 0 \\\\\nO ( \\varepsilon ) : & \\partial _ { \\tau \\tau } x _ { 1 } + 2 \\partial _ { T \\tau } x _ { 0 } + 2 \\partial _ { \\tau } x _ { 0 } + x _ { 1 } = 0\n\\end{array} \\tag{25}\\]",
+      "expected_count": 1,
+      "reason": "Printed equation (25) labels the complete two-timing system; move the tag outside the nested array."
+    },
+    {
+      "before": "\\[\\begin{array} { l l } \nO ( 1 ) : & \\partial _ { \\tau \\tau } x _ { 0 } + x _ { 0 } = 0 \\\\\nO ( \\varepsilon ) : & \\partial _ { \\tau \\tau } x _ { 1 } + x _ { 1 } = - 2 \\partial _ { \\tau T } x _ { 0 } - \\left( x _ { 0 } ^ { 2 } - 1 \\right) \\partial _ { \\tau } x _ { 0 } \\tag{35}\n\\end{array}\\]",
+      "after": "\\[\\begin{array} { l l } \nO ( 1 ) : & \\partial _ { \\tau \\tau } x _ { 0 } + x _ { 0 } = 0 \\\\\nO ( \\varepsilon ) : & \\partial _ { \\tau \\tau } x _ { 1 } + x _ { 1 } = - 2 \\partial _ { \\tau T } x _ { 0 } - \\left( x _ { 0 } ^ { 2 } - 1 \\right) \\partial _ { \\tau } x _ { 0 }\n\\end{array} \\tag{35}\\]",
+      "expected_count": 1,
+      "reason": "Printed equation (35) labels the complete van der Pol perturbation system; move the tag outside the nested array."
+    },
+    {
+      "before": "\\[\\begin{array} { l l } \nO ( 1 ) : & \\partial _ { \\tau \\tau } x _ { 0 } + x _ { 0 } = 0 \\\\\nO ( \\varepsilon ) : & \\partial _ { \\tau \\tau } x _ { 1 } + x _ { 1 } = - 2 \\partial _ { \\tau T } x _ { 0 } - h \\tag{47}\n\\end{array}\\]",
+      "after": "\\[\\begin{array} { l l } \nO ( 1 ) : & \\partial _ { \\tau \\tau } x _ { 0 } + x _ { 0 } = 0 \\\\\nO ( \\varepsilon ) : & \\partial _ { \\tau \\tau } x _ { 1 } + x _ { 1 } = - 2 \\partial _ { \\tau T } x _ { 0 } - h\n\\end{array} \\tag{47}\\]",
+      "expected_count": 1,
+      "reason": "Printed equation (47) labels the complete averaged-equation system; move the tag outside the nested array."
+    },
+    {
+      "span_start": "\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{|l|l|l|l|l|l|l|}\n\\hline\n\\multicolumn{7}{|c|}{Number of variables}",
+      "span_end": " &  &  &  &  & Economics &  \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}",
+      "after": "\\includegraphics[max width=.98\\linewidth,max totalheight=.82\\textheight,keepaspectratio]{assets/technical-source-repairs/nonlinear-dynamics-and-chaos/figure-1.3.1.png}",
+      "expected_count": 1,
+      "reason": "Source PDF page 25 contains Figure 1.3.1 as a single landscape diagram. Mathpix incorrectly reconstructed it as a garbled table with missing entries, malformed labels, and an overfull multirow. Preserve the exact source diagram as a referenced figure asset."
+    }
+  ]
+}

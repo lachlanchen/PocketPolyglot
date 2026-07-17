@@ -22,12 +22,15 @@ from pocket_polished_common import (
     apply_grounded_english_repairs,
     chunk_subset,
     conservative_english_repair,
+    deterministic_japanese_caption,
+    japanese_translation_optional,
     machine_review_observations,
     read_json,
     read_jsonl,
     source_is_notation_only,
     validate_chunk_output,
     validate_segment_output,
+    visible_text_with_math,
     write_json,
 )
 
@@ -80,6 +83,13 @@ def model_task_view(task: dict[str, Any], *, source_english: bool) -> dict[str, 
         if source_english:
             _baseline, automatic = conservative_english_repair(segment["source_tex"])
             row["automatic_en_repairs"] = automatic
+            if deterministic_japanese_caption(segment["source_tex"]) is not None:
+                row["japanese_policy"] = "deterministic_label_caption"
+            elif japanese_translation_optional(
+                visible_text_with_math(segment["source_tex"]),
+                segment["source_tex"],
+            ):
+                row["japanese_policy"] = "source_invariant_reference"
         segments.append(row)
     return {
         "schema_version": task.get("schema_version", 1),
@@ -104,7 +114,7 @@ This is a constrained transcription/translation pass, not creative writing.
 
 Rules:
 1. Return each requested segment exactly once and in the supplied order.
-2. ja_tex must be complete, natural, readable modern Japanese. Preserve every claim, qualification, name, date, numeric value, unit, ordering relation, and technical term.
+2. ja_tex must be complete, natural, readable modern Japanese. Preserve every claim, qualification, name, date, numeric value, unit, ordering relation, and technical term. For a segment marked japanese_policy=source_invariant_reference, preserve its repaired English bibliography/index text unchanged so locators continue to match the English body.
 3. Keep every @@PROTECTED_NNNN@@ token exactly once and in the same order. Protected values are immutable equations, figures, references, labels, URLs, or inline math; never reconstruct them.
 4. Preserve structural TeX commands, balanced braces, table rows/columns, and object placement. Translate only human-readable text.
 5. Audit every English source segment for definite OCR defects: fused words or sentences, missing spaces, presentation ligatures, obvious misspellings, duplicated running headers, and damaged punctuation. Do not return a rewritten English copy. The program reconstructs English from the immutable source. Use repairs only for a definite defect not already listed in automatic_en_repairs. Each repair.before must be an exact unique source_tex substring, confidence must be at least 0.90, and the repair must not touch a protected token.
@@ -200,7 +210,7 @@ def reviewer_prompt(task: dict[str, Any], candidate: dict[str, Any]) -> str:
     observations = machine_review_observations(task, candidate)
     return f"""Act as a strict bilingual textual editor validating proposed English/Japanese TeX segments against their source.
 
-Accept only if all source content is retained in order, English changes are definite corrections, Japanese is complete/natural/accurate, and no claim, name, numerical fact, qualification, table relation, equation reference, or protected TeX object is added, removed, or altered.
+Accept only if all source content is retained in order, English changes are definite corrections, Japanese is complete/natural/accurate, and no claim, name, numerical fact, qualification, table relation, equation reference, or protected TeX object is added, removed, or altered. A segment marked japanese_policy=source_invariant_reference must retain the repaired English bibliography/index text unchanged in ja_tex; this is intentional because its locators target the English body.
 
 Do not demand stylistic rewrites. Do not reject faithful literal terminology merely because another translation is possible. A navigation anchor such as hypertarget/hyperlink may move within the same segment when target-language word order requires it; accept that when the anchor content and command order are unchanged. Accept equivalent natural Japanese numeral notation only after verifying the value. Content-bearing figures, equations, citations, labels, and references must remain attached to the corresponding content. Reject factual invention, omissions, mistranslation, unresolved OCR silently guessed, garbled Japanese, or structural corruption.
 
@@ -398,14 +408,28 @@ def canonicalize_writer_result(
             if not isinstance(unresolved, list):
                 errors[segment_id].append("unresolved must be an array")
                 continue
-            ja_tex = remove_surplus_protected_tokens(source["source_tex"], ja_tex)
-            if source_is_notation_only(source["source_tex"]):
-                # Language-invariant equations, labels, and protected
-                # structural blocks must not acquire invented connective text.
-                ja_tex = source["source_tex"]
             en_tex, changes, repair_errors = apply_grounded_english_repairs(
                 source["source_tex"], repairs
             )
+            ja_tex = remove_surplus_protected_tokens(source["source_tex"], ja_tex)
+            deterministic_caption = deterministic_japanese_caption(en_tex)
+            if deterministic_caption is not None:
+                # Caption-only technical objects have one canonical Japanese
+                # label.  Apply it after grounded English repairs and avoid a
+                # retry for model-added connective prose.
+                ja_tex = deterministic_caption
+            elif source_is_notation_only(source["source_tex"]):
+                # Language-invariant equations, labels, and protected
+                # structural blocks must not acquire invented connective text.
+                ja_tex = source["source_tex"]
+            elif japanese_translation_optional(
+                visible_text_with_math(source["source_tex"]),
+                source["source_tex"],
+            ):
+                # Bibliographies and indexes must keep English headwords and
+                # locators aligned with the English body. Apply the same
+                # grounded repairs, but do not spend retries translating them.
+                ja_tex = en_tex
             errors[segment_id].extend(repair_errors)
             canonical[segment_id] = {
                 "segment_id": segment_id,

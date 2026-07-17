@@ -49,9 +49,6 @@ def report_is_publishable(report: dict[str, Any]) -> bool:
 
 
 def try_reassemble_with_existing_cover(book_id: str) -> bool:
-    cover = ROOT / "build-pocket" / book_id / "cover/cover.png"
-    if not cover.exists():
-        return False
     result = subprocess.run(
         [sys.executable, "-u", "scripts/books/assemble_build_pocket_polished.py", book_id],
         cwd=ROOT,

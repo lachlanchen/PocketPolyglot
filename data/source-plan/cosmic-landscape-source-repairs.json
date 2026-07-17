@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "book_id": "cosmic-landscape",
+  "evidence": [
+    "sources/popular-science/leonard-susskind/en/The Cosmic Landscape - Leonard Susskind.epub",
+    "build-pocket/cosmic-landscape/exact/figures/images/Art_P244.jpg",
+    "build-pocket/cosmic-landscape/exact/figures/images/Art_P244a.jpg",
+    "build-pocket/cosmic-landscape/exact/figures/images/Art_P245.jpg"
+  ],
+  "policy": "Restore mirrored inline terms omitted by the EPUB HTML and explicit sugar handedness established by the surrounding source text and embedded artwork.",
+  "replacements": [
+    {
+      "before": "It's like no real human being. Let's call it a .",
+      "after": "It's like no real human being. Let's call it a \\reflectbox{human}.",
+      "expected_count": 1,
+      "reason": "The adjacent source artwork labels the reflected person with mirror writing; restore the omitted mirrored singular term as live TeX."
+    },
+    {
+      "before": "Now the original would be a .",
+      "after": "Now the original would be a \\reflectbox{human}.",
+      "expected_count": 1,
+      "reason": "Restore the same mirrored singular term used by the immediately preceding definition and figure."
+    },
+    {
+      "before": "Does the work?",
+      "after": "Does the \\reflectbox{human} work?",
+      "expected_count": 1,
+      "reason": "Restore the omitted subject established in the two preceding sentences."
+    },
+    {
+      "before": "Humans can metabolize only sugar. A can metabolize only .",
+      "after": "Humans can metabolize only left-handed sugar. A \\reflectbox{human} can metabolize only right-handed sugar.",
+      "expected_count": 1,
+      "reason": "The following sentence explicitly identifies levulose as the left-handed sugar humans eat and dextrose as the right-handed sugar they do not metabolize."
+    },
+    {
+      "before": "The technical names for sugar and are of course levulose",
+      "after": "The technical names for left-handed sugar and right-handed sugar are of course levulose",
+      "expected_count": 1,
+      "reason": "Restore the two handedness labels explicitly defined in the same paragraph."
+    },
+    {
+      "before": "ordinary matter that s would not notice at all.",
+      "after": "ordinary matter that \\reflectbox{humans} would not notice at all.",
+      "expected_count": 1,
+      "reason": "The surrounding reflected-human example and embedded mirrored 'humans' artwork establish the omitted plural subject."
+    }
+  ]
+}

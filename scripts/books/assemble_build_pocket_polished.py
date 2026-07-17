@@ -56,7 +56,7 @@ FULL_BLEED_IMAGE_RE = re.compile(
     r"(?P<image>\\includegraphics\[[^\]]*\\paperwidth[^\]]*\]\{(?:\\detokenize\{)?[^\n]+\})[ \t]*$"
 )
 STANDALONE_IMAGE_RE = re.compile(
-    r"^(?P<indent>[ \t]*)(?:\\noindent[ \t]*)?"
+    r"^(?P<indent>[ \t]*)(?:~[ \t]*)*(?:\\noindent[ \t]*)?"
     r"(?P<image>\\includegraphics(?:\[[^\]]*\])?\{[^{}]+\})"
     r"(?P<tail>(?:[ \t]*\\(?:par|smallskip|medskip|bigskip))*)[ \t]*$"
 )
@@ -74,6 +74,48 @@ PLAIN_LOG_EXPRESSION_RE = re.compile(
     r"(?<![\\$A-Za-z0-9_])(?P<lhs>[A-Za-z]+_[A-Za-z0-9]+)\s*=\s*"
     r"(?P<sign>[+-]?)log\s*(?P<argument>[ερλχσθαβγδA-Za-z][A-Za-z0-9_]*)"
 )
+
+TECHNICAL_BOOK_ID_SUFFIXES = (
+    "-mathpix-exact-book",
+    "-local-exact-book",
+    "-exact-book",
+)
+
+
+def resolve_cover_source(book_id: str, manifest: dict[str, Any]) -> Path | None:
+    """Find an explicit or reusable project cover for a polished book."""
+    candidates: list[Path] = []
+    configured_cover = manifest.get("cover_image") or manifest.get("cover")
+    if configured_cover:
+        configured_path = Path(str(configured_cover)).expanduser()
+        candidates.append(
+            configured_path if configured_path.is_absolute() else ROOT / configured_path
+        )
+
+    cover_ids = [book_id]
+    for suffix in TECHNICAL_BOOK_ID_SUFFIXES:
+        if book_id.endswith(suffix):
+            cover_ids.append(book_id[: -len(suffix)])
+            break
+    for cover_id in cover_ids:
+        candidates.extend(
+            (
+                ROOT / "build-pocket" / cover_id / "cover/background.png",
+                ROOT / "build-pocket" / cover_id / "cover/cover.png",
+                ROOT / "assets/covers" / cover_id / "background.png",
+                ROOT / "assets/covers" / cover_id / "cover.png",
+            )
+        )
+
+    seen: set[Path] = set()
+    for candidate in candidates:
+        candidate = candidate.resolve()
+        if candidate in seen:
+            continue
+        seen.add(candidate)
+        if candidate.is_file():
+            return candidate
+    return None
 PLAIN_POWER_INEQUALITY_RE = re.compile(
     r"(?P<left>[A-Za-z]+\^\{[^{}\n]+\})\s*"
     r"\\textless\{\}\s*(?P<right>[A-Za-z]+\^\{[^{}\n]+\})"
@@ -142,6 +184,7 @@ SHARED_CONTROL_MARKERS = (
     r"\backmatter",
     r"\maketitle",
 )
+TABLE_ENVIRONMENTS = {"table", "table*", "longtable", "tabular", "tabularx"}
 FUSION_PREAMBLE = r"""
 % BUILD_POCKET_POLISHED_FUSION_BEGIN
 \definecolor{JpSecondaryInk}{RGB}{62,68,76}
@@ -206,6 +249,7 @@ def inject_polished_cover_page(
     begin = "% BUILD_POCKET_COVER_BEGIN"
     end = "% BUILD_POCKET_COVER_END"
     safe_title = latex_escape_text(title)
+    wrapped_title = " ".join(rf"\mbox{{{word}}}" for word in safe_title.split())
     safe_author = latex_escape_text(author)
     author_line = (
         rf"{{\fontsize{{9.4pt}}{{12pt}}\selectfont {safe_author}}}\\[2.4mm]"
@@ -227,7 +271,8 @@ def inject_polished_cover_page(
         + r"inner xsep=4mm,inner ysep=4mm,text width=.80\paperwidth] "
         + r"at ([yshift=-.04\paperheight]current page.center) {"
         + "\n"
-        + rf"{{\sffamily\bfseries\fontsize{{18pt}}{{22pt}}\selectfont {safe_title}}}\\[3mm]"
+        + rf"{{\sffamily\bfseries\hyphenpenalty=10000\exhyphenpenalty=10000"
+        + rf"\fontsize{{16pt}}{{20pt}}\selectfont {wrapped_title}}}\\[3mm]"
         + "\n"
         + author_line
         + r"{\sffamily\fontsize{8.6pt}{11pt}\selectfont English $\cdot$ 日本語}"
@@ -682,6 +727,32 @@ def fuse_english_main_japanese_secondary(
             furigana.merge(current)
             parts.append(f"\n\\JpSecondaryHeading{{{annotated}}}\n")
             return
+        # A paragraph-style secondary environment cannot begin between table
+        # rows: its leading \par/\nopagebreak expands to \noalign and XeTeX
+        # rejects it. Keep each language as a complete table instead. This also
+        # covers Mathpix tables whose protected opening scaffold and translated
+        # closing rows were split into adjacent source segments.
+        has_complete_en_table = any(
+            rf"\begin{{{environment}}}" in en_tex
+            for environment in TABLE_ENVIRONMENTS
+        )
+        has_complete_ja_table = any(
+            rf"\begin{{{environment}}}" in ja_tex
+            for environment in TABLE_ENVIRONMENTS
+        )
+        if has_complete_en_table and has_complete_ja_table:
+            parts.append(en_tex)
+            secondary = apply_furigana_overrides(ja_tex.strip())
+            secondary, current = annotate_japanese_tex(secondary)
+            furigana.merge(current)
+            parts.append(
+                "\n\\begingroup\n"
+                "\\JpSecondaryFont\\fontsize{8.6pt}{14.2pt}\\selectfont"
+                "\\color{JpSecondaryInk}\n"
+                f"{secondary}\n"
+                "\\endgroup\n"
+            )
+            return
         secondary = strip_shared_document_controls(en_tex, ja_tex)
         trailing_scaffold = ""
         if crosses_environment:
@@ -716,16 +787,23 @@ def fuse_english_main_japanese_secondary(
         if segment["kind"] == "protected":
             source_tex = segment["source_tex"]
             environment_commands = list(ENVIRONMENT_COMMAND_RE.finditer(source_tex))
+            table_scaffold = any(
+                environment in TABLE_ENVIRONMENTS for environment in open_environments
+            ) or any(
+                match.group("action") == "begin"
+                and match.group("environment") in TABLE_ENVIRONMENTS
+                for match in environment_commands
+            )
             crosses_environment_boundary = bool(open_environments) or bool(
                 any(match.group("environment") != "document" for match in environment_commands)
             )
             if crosses_environment_boundary:
                 pending_crosses_environment = True
                 pending_en.append(source_tex)
-                # Protected structural/object rows belong only to the source
-                # stream. The secondary stream receives translated text rows;
-                # shared closing scaffolds are removed before insertion.
-                pending_ja.append("")
+                # Figures and other protected objects remain source-only. Table
+                # scaffolds must exist in both streams so translated alignment
+                # rows are never emitted outside a tabular/longtable context.
+                pending_ja.append(source_tex if table_scaffold else "")
                 update_open_environments(source_tex, open_environments)
                 if not open_environments:
                     emit_pending()
@@ -825,7 +903,12 @@ def normalize_full_bleed_images(tex: str) -> tuple[str, int]:
     def replace(match: re.Match[str]) -> str:
         indent = match.group("indent")
         image = match.group("image")
-        return f"{indent}\\noindent\\makebox[\\textwidth][c]{{{image}}}"
+        return (
+            f"{indent}\\newgeometry{{margin=0pt}}\n"
+            f"{indent}\\thispagestyle{{empty}}\n"
+            f"{indent}\\noindent{image}\n"
+            f"{indent}\\restoregeometry"
+        )
 
     return FULL_BLEED_IMAGE_RE.subn(replace, tex)
 
@@ -911,14 +994,39 @@ def pocket_layout(tex: str) -> str:
                 r"\usepackage{xurl}" + "\n" + r"\begin{document}",
                 1,
             )
+    if r"\usepackage{seqsplit}" not in text:
+        text = text.replace(
+            r"\begin{document}",
+            r"\usepackage{seqsplit}" + "\n" + r"\begin{document}",
+            1,
+        )
+    # Preserve every source digit while allowing extreme exact decimals to
+    # wrap on A6 pages.  Scientific re-expression would change the source;
+    # seqsplit changes only line-breaking behavior.
+    text = re.sub(
+        r"(?<![\\\w])(?P<number>\.\d{40,}|\d{50,})(?!\d)",
+        lambda match: rf"\seqsplit{{{match.group('number')}}}",
+        text,
+    )
     text = re.sub(r"\\setstretch\{1\.0?8\}", lambda _match: r"\setstretch{1.12}", text)
     text = re.sub(r"\\linespread\{1\.0[0-9]\}", lambda _match: r"\linespread{1.10}", text)
+    text = text.replace(
+        r"\begin{adjustbox}{max width=\linewidth}\begin{tabular}",
+        r"\begin{adjustbox}{max width=\linewidth,max totalheight=.92\textheight,"
+        r"keepaspectratio}\begin{tabular}",
+    )
     text = text.replace(
         r"\begingroup\small\setlength{\tabcolsep}{3pt}\begin{longtable}",
         r"\begingroup\footnotesize\setlength{\tabcolsep}{2pt}\begin{longtable}",
     )
     text = wrap_wide_display_math(text, layout="pocket")
     text, _ = wrap_wide_math_environments(text, layout="pocket")
+    if r"\Needspace" in text and r"\usepackage{needspace}" not in text:
+        text = text.replace(
+            r"\begin{document}",
+            r"\usepackage{needspace}" + "\n" + r"\begin{document}",
+            1,
+        )
     return apply_pocket_footer_defaults(text)
 
 
@@ -1092,9 +1200,9 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
 
     figure_root = book_root / "assets/figures"
     fused = copy_and_rewrite_figures(fused, figure_root)
-    source_cover = ROOT / "build-pocket" / book_id / "cover/cover.png"
+    source_cover = resolve_cover_source(book_id, manifest)
     cover: Path | None = None
-    if source_cover.exists():
+    if source_cover is not None:
         cover = book_root / "cover/cover.png"
         cover.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source_cover, cover)

@@ -51,7 +51,9 @@ MARKDOWN_DISPLAY_MATH_RE = re.compile(
     r"(?<!\\)\$\$(?P<body>.*?)(?<!\\)\$\$",
     re.S,
 )
-OVERFULL_RE = re.compile(r"Overfull \\hbox \(([-0-9.]+)pt too wide\)")
+OVERFULL_RE = re.compile(
+    r"Overfull \\[hv]box \(([-0-9.]+)pt too (?:wide|high)\)"
+)
 OVERFULL_HOTSPOT_RE = re.compile(
     r"Overfull \\hbox \(([-0-9.]+)pt too wide\)"
     r"(?: in paragraph at lines (\d+)(?:--(\d+))?| detected at line (\d+))"
@@ -1160,6 +1162,9 @@ def apply_pocket_footer_defaults(text: str) -> str:
         r"\1bottom=12mm",
         text,
     )
+    page_style = r"\pagestyle{plain}"
+    if page_style not in text:
+        text = text.replace(r"\begin{document}", page_style + "\n" + r"\begin{document}", 1)
     footskip = r"\setlength{\footskip}{6mm}"
     if footskip not in text:
         marker = r"\pagestyle{plain}"
