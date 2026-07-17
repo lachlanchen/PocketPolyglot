@@ -1098,6 +1098,7 @@ def japanese_translation_optional(
     """
 
     compact = re.sub(r"\s+", "", source_plain)
+    music_notation = musical_notation_only(source_plain)
     symbolic_sequence = bool(
         compact
         and len(compact) >= 8
@@ -1147,6 +1148,7 @@ def japanese_translation_optional(
 
     return (
         deterministic_japanese_caption(source_tex or "") is not None
+        or music_notation
         or symbolic_sequence
         or bibliography_entry
         or citation_index
@@ -1160,6 +1162,62 @@ def japanese_translation_optional(
         )
         )
     )
+
+
+_NOTE_CHORD_TOKEN_RE = re.compile(
+    r"(?<![A-Za-z])"
+    r"[A-G](?:[#b♭♯])?"
+    r"(?:maj|min|mai|m|dim|aug|sus|add|alt|dom)\d*"
+    r"(?:[#b♭♯+°]\d*)?"
+    r"(?![A-Za-z])"
+    r"|(?<![A-Za-z])"
+    r"[A-G](?:[#b♭♯])?\d+(?:[#b♭♯+°]\d*)?"
+    r"(?![A-Za-z])"
+)
+_ROMAN_CHORD_TOKEN_RE = re.compile(
+    r"(?<![A-Za-z])"
+    r"[#b♭♯]?[ivIV]+"
+    r"(?:maj|min|mai|m|dim|aug|sus|add|alt|dom)?\d*"
+    r"(?:[#b♭♯+°]\d*)?"
+    r"(?![A-Za-z])"
+)
+_CHORD_QUALITY_TOKEN_RE = re.compile(
+    r"(?<![A-Za-z])(?:maj|min|m|dim|aug|sus|alt|dom)\d+(?:[#b♭♯]\d*)?"
+    r"(?![A-Za-z])",
+    re.I,
+)
+
+
+def musical_notation_only(source_plain: str) -> bool:
+    """Recognize chord charts and progressions that are language-invariant.
+
+    Music OCR frequently emits a long line of chord symbols as a text segment.
+    Requiring kana makes a writer add unsupported prose such as ``コード進行``
+    or repeatedly regenerate an otherwise exact chart.  This detector remains
+    conservative: at least two notation tokens must be present and, after
+    removing conventional figure/field labels, at most one short lexical OCR
+    residue may remain.  Semantic review still checks notation correctness.
+    """
+
+    probe = re.sub(
+        r"\b(?:Fig(?:s|ures?)?\.?\s*\d+[A-Za-z]?(?:\s*[-–]\s*\d+[A-Za-z]?)?"
+        r"|Harmony|Formula|Construction)\b\s*:?",
+        " ",
+        source_plain,
+        flags=re.I,
+    )
+    patterns = (
+        _NOTE_CHORD_TOKEN_RE,
+        _ROMAN_CHORD_TOKEN_RE,
+        _CHORD_QUALITY_TOKEN_RE,
+    )
+    marker_count = sum(len(pattern.findall(probe)) for pattern in patterns)
+    residue = probe
+    for pattern in patterns:
+        residue = pattern.sub(" ", residue)
+    residue = re.sub(r"[\d\s_#♭♯+°()\[\]{}/\\:;,.|*→←=\-–—]+", " ", residue)
+    words = re.findall(r"[A-Za-z]+", residue)
+    return marker_count >= 2 and len(words) <= 1 and sum(map(len, words)) <= 8
 
 
 def source_is_notation_only(source_tex: str) -> bool:

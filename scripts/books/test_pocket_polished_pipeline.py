@@ -154,6 +154,80 @@ class PocketPolishPipelineTest(unittest.TestCase):
         )
         self.assertNotIn("book-notation: Japanese prose contains no kana", errors)
 
+    def test_chord_progression_does_not_require_artificial_japanese_prose(self):
+        source = source_segment(
+            "book-chords",
+            "Em7 Cmaj7 Am7 Bm7 Em7 i7 VImaj7 iv7 v7 i7",
+        )
+        task = dict(
+            self.task,
+            segments=[source],
+            segment_count=1,
+            validation_profile="technical_exact",
+        )
+        output = {
+            "segment_id": source["segment_id"],
+            "source_sha256": source["source_sha256"],
+            "en_tex": source["source_tex"],
+            "ja_tex": source["source_tex"],
+            "changes": [],
+            "unresolved": [],
+        }
+        errors = validate_segment_output(task, source, output)
+        self.assertNotIn(
+            "book-chords: Japanese output contains no Japanese script",
+            errors,
+        )
+
+    def test_figure_chord_chart_accepts_kanji_only_figure_label(self):
+        source = source_segment(
+            "book-chord-figure",
+            "Fig. 5 G7 Am7 Bm7b5 Cmaj7 Dm7 Em7 Fmaj7 Am7",
+        )
+        task = dict(
+            self.task,
+            segments=[source],
+            segment_count=1,
+            validation_profile="technical_exact",
+        )
+        output = {
+            "segment_id": source["segment_id"],
+            "source_sha256": source["source_sha256"],
+            "en_tex": source["source_tex"],
+            "ja_tex": "図5 G7 Am7 Bm7b5 Cmaj7 Dm7 Em7 Fmaj7 Am7",
+            "changes": [],
+            "unresolved": [],
+        }
+        errors = validate_segment_output(task, source, output)
+        self.assertNotIn(
+            "book-chord-figure: Japanese prose contains no kana",
+            errors,
+        )
+
+    def test_music_prose_still_requires_a_japanese_translation(self):
+        source = source_segment(
+            "book-chord-prose",
+            "The G7 chord creates tension and normally resolves to a C major chord.",
+        )
+        task = dict(
+            self.task,
+            segments=[source],
+            segment_count=1,
+            validation_profile="technical_exact",
+        )
+        output = {
+            "segment_id": source["segment_id"],
+            "source_sha256": source["source_sha256"],
+            "en_tex": source["source_tex"],
+            "ja_tex": source["source_tex"],
+            "changes": [],
+            "unresolved": [],
+        }
+        self.assertIn(
+            "book-chord-prose: Japanese output contains no Japanese script",
+            validate_segment_output(task, source, output),
+        )
+
     def test_task_specific_furigana_override_handles_rare_proper_name(self):
         rows = [
             {

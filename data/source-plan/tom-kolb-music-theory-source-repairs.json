@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "book_id": "tom-kolb-music-theory-guitarists-local-exact-book",
+  "evidence_source": "resources/curated-books/music-theory-and-guitar/recommended/tom-kolb/en/Music Theory for Guitarists_ Everything You Ever Wanted to Know But Were Afraid to Ask.pdf",
+  "replacements": [
+    {
+      "before": "Fig.\n16 shows voicings of a G7 chord with a \\#5th, \\(\\flat5\\)th, \\(\\flat9\\)th, and \\(\\flat9\\)th.",
+      "after": "Fig.\n16 shows voicings of a G7 chord with a \\#5th, \\(\\flat5\\)th, \\(\\flat9\\)th, and \\(\\sharp9\\)th.",
+      "expected_count": 1,
+      "reason": "Source PDF page 46 shows the fourth altered dominant voicing as sharp nine, not a duplicated flat nine."
+    },
+    {
+      "before": "i & ii° & PIII & iv & v & ♭VI & ♭VII & \\\\",
+      "after": "i & ii° & \\(\\flat\\)III & iv & v & ♭VI & ♭VII & \\\\",
+      "expected_count": 1,
+      "reason": "The A-minor diatonic table and source scan show flat III; P is an OCR substitution for the flat sign."
+    },
+    {
+      "before": "Fig. 5 G7 Am7 Bm7b5 Cmai7 Dm7 Em7 Fmaj7 Am7 VII7 HIImaj7 VImaj7 i7 ii765\niv7 v7 i7 m7 m765 m7 maj7 dom7 m7 maj7 m7",
+      "after": "Fig. 5 G7 Am7 Bm7b5 Cmaj7 Dm7 Em7 Fmaj7 Am7 VII7 IIImaj7 VImaj7 i7 ii7b5\niv7 v7 i7 m7 m7b5 m7 maj7 dom7 m7 maj7 m7",
+      "expected_count": 1,
+      "reason": "Correct definite chord-symbol OCR substitutions using the adjacent labels and source figure."
+    },
+    {
+      "before": "Fig. 7 i7 iv7 \\textbf{i}7 Cm7 Cm7 Fm7 i7 iv7 Cm7 Fm7 i7 V7alt VImai7 G+7\nCm7 Abmai 7",
+      "after": "Fig. 7 i7 iv7 \\textbf{i}7 Cm7 Cm7 Fm7 i7 iv7 Cm7 Fm7 i7 V7alt VImaj7 G+7\nCm7 Abmaj7",
+      "expected_count": 1,
+      "reason": "Correct the repeated maj7 OCR spelling in the source chord chart."
+    },
+    {
+      "before": "Harmony: I7-ii7-iii7-5-IVmaj7-v7-vi7-VIImaj7",
+      "after": "Harmony: I7-ii7-iii7\\(\\flat5\\)-IVmaj7-v7-vi7-\\(\\flat\\)VIImaj7",
+      "expected_count": 1,
+      "reason": "Source PDF page 75 shows iii7-flat5 and flat-VIImaj7 in the Mixolydian harmony row."
+    },
+    {
+      "before": "i7b5-bIlmai7-biii7-iv7-bVmai7-bVI7-bvii7",
+      "after": "i7\\(\\flat5\\)-\\(\\flat\\)IImaj7-\\(\\flat\\)iii7-iv7-\\(\\flat\\)Vmaj7-\\(\\flat\\)VI7-\\(\\flat\\)vii7",
+      "expected_count": 1,
+      "reason": "Source PDF page 77 clearly shows the Locrian harmony sequence and its flat signs."
+    },
+    {
+      "before": "i(maj7)-ii7-b111maj7\\#5-IV7-V7-vi7b5-vii7b5",
+      "after": "i(maj7)-ii7\\(\\flat5\\)-\\(\\flat\\)IIImaj7\\(\\sharp5\\)-IV7-V7-vi7\\(\\flat5\\)-vii7\\(\\flat5\\)",
+      "expected_count": 1,
+      "reason": "Source PDF page 80 shows flat-five and flat-III/sharp-five symbols; OCR flattened them into letters and digits."
+    },
+    {
+      "before": "\\begin{longtable}[]{@{}llllllllllll@{}}\n\\toprule\n1. Emaj & & & & & & & & & & & \\\\\n\\midrule\n\\endhead\n6 \\#8 & \\#\\#8 & \\(\\rightarrow\\) 8 & Pp.8 & \\(\\rightarrow\\) 8 & 8 & \\#\\#8 & 18 &\n№8 & \\# \\#8 & \\#*8 & 1000 \\\\\n\\bottomrule\n\\end{longtable}",
+      "after": "% Removed duplicate OCR debris for the preserved full musical answer figure on source PDF page 97.",
+      "expected_count": 1,
+      "reason": "The preceding extracted figure preserves the complete score; this table is an erroneous OCR duplicate of staff and tablature glyphs."
+    },
+    {
+      "span_start": "\\hypertarget{answers-for-quiz-10}{%",
+      "span_end": "\\hypertarget{answers-for-ear-training-drill-7}{%",
+      "after": "\\hypertarget{chapter-10-answers}{%\n\\section{CHAPTER 10}\\label{chapter-10-answers}}\n\n\\hypertarget{answers-for-quiz-10}{%\n\\subsection{Answers for Quiz \\#10}\\label{answers-for-quiz-10}}\n\\begin{enumerate}\n\\item The IV chord\n\\item In measure 2\n\\item In measures 11 and 12\n\\item Five\n\\item None\n\\item Six\n\\item The IV chord\n\\item 1-2-3-5-6\n\\item Dominant seventh\n\\item C major\n\\item A major\n\\end{enumerate}\n\n\\hypertarget{answers-for-ear-training-drill-5}{%\n\\subsection{Answers for Ear Training Drill \\#5}\\label{answers-for-ear-training-drill-5}}\n\\begin{enumerate}\n\\item minor pentatonic\n\\item major pentatonic\n\\item blues scale\n\\item major pentatonic\n\\item blues scale\n\\item minor pentatonic\n\\item minor pentatonic\n\\item blues scale\n\\item major pentatonic\n\\item blues scale\n\\item major pentatonic\n\\item minor pentatonic\n\\end{enumerate}\n\n\\hypertarget{chapter-11}{%\n\\section{CHAPTER 11}\\label{chapter-11}}\n\\hypertarget{answers-for-quiz-11}{%\n\\subsection{Answers for Quiz \\#11}\\label{answers-for-quiz-11}}\n\\begin{enumerate}\n\\item F major\n\\item D major\n\\item G major\n\\item True\n\\item True\n\\item Mixolydian\n\\item Phrygian and Locrian\n\\item Lydian\n\\item 6th\n\\item Ionian\n\\item True\n\\item True\n\\end{enumerate}\n\n\\hypertarget{answers-for-ear-training-drill-6}{%\n\\subsection{Answers for Ear Training Drill \\#6}\\label{answers-for-ear-training-drill-6}}\n\\begin{enumerate}\n\\item Ionian\n\\item Dorian\n\\item Aeolian\n\\item Lydian\n\\item Mixolydian\n\\item Mixolydian\n\\item Locrian\n\\item Dorian\n\\item Aeolian\n\\item Lydian\n\\end{enumerate}\n\n\\hypertarget{chapter-12}{%\n\\section{CHAPTER 12}\\label{chapter-12}}\n\\hypertarget{answers-for-quiz-12}{%\n\\subsection{Answers for Quiz \\#12}\\label{answers-for-quiz-12}}\n\\begin{enumerate}\n\\item True\n\\item False\n\\item True\n\\item True\n\\item False\n\\item True\n\\item False\n\\item True\n\\item False\n\\item True\n\\item True\n\\end{enumerate}\n\n\\hypertarget{answers-for-ear-training-drill-7}{%",
+      "expected_count": 1,
+      "reason": "Reconstruct the two-column answer page in reading order from source PDF page 101; the local extractor interleaved columns and detached item numbers."
+    }
+  ]
+}
