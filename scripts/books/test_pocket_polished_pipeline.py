@@ -22,11 +22,13 @@ from codex_pocket_polish_worker import (
 from assemble_build_pocket_polished import (
     demote_secondary_captions,
     fit_short_simple_longtables,
+    fit_short_complex_longtables,
     fuse_english_main_japanese_secondary,
     normalize_unwrapped_math_fragments,
     pocket_layout,
     remove_legacy_full_page_cover,
     restore_secondary_list_scaffold,
+    wrap_long_simple_longtables,
     restore_split_optional_linebreaks,
     split_shared_environment_scaffold,
 )
@@ -321,6 +323,44 @@ class PocketPolishPipelineTest(unittest.TestCase):
         _, _, secondary = split_shared_environment_scaffold(source, translated)
         self.assertNotIn(r"\includegraphics", secondary)
         self.assertIn("翻訳の続き", secondary)
+
+    def test_fusion_keeps_cross_segment_nested_lists_as_sibling_blocks(self) -> None:
+        rows = [
+            {
+                "kind": "protected",
+                "source_tex": "\\documentclass{book}\n\\begin{document}\n",
+            },
+            {
+                "kind": "text",
+                "en_tex": (
+                    "\\begin{itemize}\n\\item\n\\begin{enumerate}\n"
+                    "\\item Listen.\n\\end{enumerate}\n"
+                ),
+                "ja_tex": (
+                    "\\begin{itemize}\n\\item\n\\begin{enumerate}\n"
+                    "\\item 聴きなさい。\n\\end{enumerate}\n"
+                ),
+            },
+            {
+                "kind": "text",
+                "en_tex": (
+                    "\\item\n\\begin{enumerate}\n\\item Continue.\n"
+                    "\\end{enumerate}\n\\end{itemize}\n"
+                ),
+                "ja_tex": (
+                    "\\item\n\\begin{enumerate}\n\\item 続けなさい。\n"
+                    "\\end{enumerate}\n\\end{itemize}\n"
+                ),
+            },
+            {"kind": "protected", "source_tex": "\\end{document}\n"},
+        ]
+        fused, _ = fuse_english_main_japanese_secondary(rows)
+        secondary_start = fused.index(r"\begin{JpSecondary}")
+        self.assertLess(fused.index(r"\end{itemize}"), secondary_start)
+        self.assertEqual(fused.count(r"\begin{itemize}"), 2)
+        self.assertEqual(fused.count(r"\end{itemize}"), 2)
+        self.assertEqual(fused.count(r"\begin{enumerate}"), 4)
+        self.assertEqual(fused.count(r"\end{enumerate}"), 4)
 
     def test_secondary_caption_keeps_text_without_duplicate_float_command(self) -> None:
         translated = r"\caption{\JpRuby{図}{ず}235.1}"
@@ -1327,6 +1367,34 @@ class PocketPolishPipelineTest(unittest.TestCase):
         fitted, count = fit_short_simple_longtables(source)
         self.assertEqual(count, 0)
         self.assertEqual(fitted, source)
+
+    def test_short_complex_longtable_is_width_fitted(self) -> None:
+        source = (
+            r"\begin{longtable}[]{@{}"
+            r">{\raggedright\arraybackslash}p{.3\columnwidth}"
+            r">{\centering\arraybackslash}p{.2\columnwidth}@{}}"
+            "\nA & B \\\\\nC & D \\\\\n\\endhead\n"
+            r"\end{longtable}"
+        )
+        fitted, count = fit_short_complex_longtables(source)
+        self.assertEqual(count, 1)
+        self.assertNotIn(r"\begin{longtable}", fitted)
+        self.assertIn(r"\resizebox{.84\paperwidth}{!}", fitted)
+        self.assertNotIn(r"\endhead", fitted)
+
+    def test_long_simple_longtable_gets_wrapping_columns(self) -> None:
+        rows = [f"{index}. & A deliberately long table description \\\\" for index in range(13)]
+        source = (
+            r"\begin{longtable}[]{@{}ll@{}}"
+            + "\n"
+            + "\n".join(rows)
+            + "\n"
+            + r"\end{longtable}"
+        )
+        fitted, count = wrap_long_simple_longtables(source)
+        self.assertEqual(count, 1)
+        self.assertIn(r"\begin{longtable}", fitted)
+        self.assertIn(r">{\raggedright\arraybackslash}p{", fitted)
 
     def test_fusion_reconciles_protected_table_openers_with_translated_caption_closers(self) -> None:
         rows = [

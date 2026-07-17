@@ -185,6 +185,7 @@ SHARED_CONTROL_MARKERS = (
     r"\maketitle",
 )
 TABLE_ENVIRONMENTS = {"table", "table*", "longtable", "tabular", "tabularx"}
+LIST_ENVIRONMENTS = {"itemize", "enumerate", "description"}
 FUSION_PREAMBLE = r"""
 % BUILD_POCKET_POLISHED_FUSION_BEGIN
 \definecolor{JpSecondaryInk}{RGB}{62,68,76}
@@ -684,6 +685,19 @@ def update_open_environments(tex: str, stack: list[str]) -> None:
         stack.pop()
 
 
+def has_balanced_complete_environment(tex: str, environments: set[str]) -> bool:
+    """Return true when ``tex`` contains and balances a target environment."""
+
+    if not any(rf"\begin{{{environment}}}" in tex for environment in environments):
+        return False
+    stack: list[str] = []
+    try:
+        update_open_environments(tex, stack)
+    except ValueError:
+        return False
+    return not stack
+
+
 def fuse_english_main_japanese_secondary(
     segments: list[dict[str, Any]],
     *,
@@ -751,6 +765,25 @@ def fuse_english_main_japanese_secondary(
                 "\\color{JpSecondaryInk}\n"
                 f"{secondary}\n"
                 "\\endgroup\n"
+            )
+            return
+        # Lists that span source segments must be emitted as two complete,
+        # sibling structures. Filtering shared list commands line by line can
+        # remove a nested ``\begin{enumerate}`` while retaining its closing
+        # command, and inserting the secondary prose before the source list
+        # closes creates illegal cross-environment nesting.
+        if (
+            crosses_environment
+            and has_balanced_complete_environment(en_tex, LIST_ENVIRONMENTS)
+            and has_balanced_complete_environment(ja_tex, LIST_ENVIRONMENTS)
+        ):
+            parts.append(en_tex)
+            secondary = demote_secondary_captions(ja_tex.strip())
+            secondary = apply_furigana_overrides(secondary)
+            secondary, current = annotate_japanese_tex(secondary)
+            furigana.merge(current)
+            parts.append(
+                f"\n\\begin{{JpSecondary}}\n{secondary}\n\\end{{JpSecondary}}\n"
             )
             return
         secondary = strip_shared_document_controls(en_tex, ja_tex)
@@ -945,6 +978,149 @@ def fit_short_simple_longtables(tex: str, *, max_rows: int = 12) -> tuple[str, i
         )
 
     return SIMPLE_LONGTABLE_RE.sub(replace, tex), converted
+
+
+def fit_short_complex_longtables(tex: str, *, max_rows: int = 12) -> tuple[str, int]:
+    """Width-fit compact longtables whose column spec contains nested braces."""
+
+    marker = r"\begin{longtable}[]"
+    end_marker = r"\end{longtable}"
+    converted = 0
+    cursor = 0
+    parts: list[str] = []
+
+    def column_count(spec: str) -> int:
+        count = 0
+        depth = 0
+        escaped = False
+        for index, char in enumerate(spec):
+            if escaped:
+                escaped = False
+                continue
+            if char == "\\":
+                escaped = True
+                continue
+            if char == "{":
+                depth += 1
+                continue
+            if char == "}":
+                depth = max(0, depth - 1)
+                continue
+            if depth == 0 and char in "lcr":
+                count += 1
+            elif (
+                depth == 0
+                and char in "pmb"
+                and index + 1 < len(spec)
+                and spec[index + 1] == "{"
+            ):
+                count += 1
+        return count
+
+    while True:
+        start = tex.find(marker, cursor)
+        if start < 0:
+            parts.append(tex[cursor:])
+            break
+        parts.append(tex[cursor:start])
+        spec_start = start + len(marker)
+        while spec_start < len(tex) and tex[spec_start].isspace():
+            spec_start += 1
+        if spec_start >= len(tex) or tex[spec_start] != "{":
+            parts.append(tex[start : start + len(marker)])
+            cursor = start + len(marker)
+            continue
+        try:
+            spec, body_start = braced_argument(tex, spec_start)
+        except ValueError:
+            parts.append(tex[start : start + len(marker)])
+            cursor = start + len(marker)
+            continue
+        end = tex.find(end_marker, body_start)
+        if end < 0:
+            parts.append(tex[start:])
+            break
+        body = tex[body_start:end]
+        row_count = body.count(r"\\")
+        if row_count > max_rows or re.fullmatch(r"@\{\}[lcr]+@\{\}", spec):
+            parts.append(tex[start : end + len(end_marker)])
+        else:
+            body = re.sub(r"(?m)^\s*\\endhead\s*$\n?", "", body)
+            columns = column_count(spec)
+            fitted_spec = (
+                "@{}" + "l" + "c" * (columns - 1) + "@{}"
+                if columns > 0
+                else spec
+            )
+            parts.append(
+                "\\begin{center}\n"
+                "\\resizebox{.84\\paperwidth}{!}{%\n"
+                f"\\begin{{tabular}}{{{fitted_spec}}}"
+                f"{body}"
+                "\\end{tabular}%\n"
+                "}\n"
+                "\\end{center}"
+            )
+            converted += 1
+        cursor = end + len(end_marker)
+    return "".join(parts), converted
+
+
+def wrap_long_simple_longtables(tex: str, *, min_rows: int = 13) -> tuple[str, int]:
+    """Give long simple tables wrapping columns while retaining page breaks."""
+
+    wrapped = 0
+
+    def visible_length(cell: str) -> int:
+        cell = re.sub(r"\\[A-Za-z@]+\*?(?:\[[^\]]*\])?", "", cell)
+        cell = re.sub(r"[{}~]", "", cell)
+        return len(re.sub(r"\s+", " ", cell).strip())
+
+    def widths_for(body: str, column_count: int) -> list[float]:
+        maxima = [1] * column_count
+        for row in re.split(r"\\\\(?:\[[^\]]*\])?\s*(?:\n|$)", body):
+            if row.count("&") != column_count - 1:
+                continue
+            cells = re.split(r"(?<!\\)&", row)
+            for index, cell in enumerate(cells):
+                maxima[index] = max(maxima[index], visible_length(cell))
+        total_width = 0.92 if column_count == 2 else 0.88 if column_count == 3 else 0.84
+        minimum = 0.10 if column_count == 2 else 0.07
+        flexible = total_width - minimum * column_count
+        weight_sum = sum(maxima)
+        widths = [minimum + flexible * value / weight_sum for value in maxima]
+        if column_count == 2:
+            dominant = 0 if maxima[0] >= maxima[1] else 1
+            if maxima[dominant] >= 2.5 * maxima[1 - dominant]:
+                widths[dominant] = 0.80
+                widths[1 - dominant] = total_width - 0.80
+        return widths
+
+    def replace(match: re.Match[str]) -> str:
+        nonlocal wrapped
+        body = match.group("body")
+        row_count = body.count(r"\\")
+        columns = match.group("columns")
+        if row_count < min_rows or len(columns) < 2:
+            return match.group(0)
+        widths = widths_for(body, len(columns))
+        alignments = {
+            "l": r">{\raggedright\arraybackslash}",
+            "c": r">{\centering\arraybackslash}",
+            "r": r">{\raggedleft\arraybackslash}",
+        }
+        specification = "".join(
+            f"{alignments[column]}p{{{width:.3f}\\linewidth}}"
+            for column, width in zip(columns, widths)
+        )
+        wrapped += 1
+        return (
+            f"\\begin{{longtable}}[]{{@{{}}{specification}@{{}}}}"
+            f"{body}"
+            "\\end{longtable}"
+        )
+
+    return SIMPLE_LONGTABLE_RE.sub(replace, tex), wrapped
 
 
 def pocket_layout(tex: str) -> str:
@@ -1189,11 +1365,15 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
     centered_figures: dict[str, int] = {"en-main-ja": 0}
     normalized_full_bleed: dict[str, int] = {"en-main-ja": 0}
     fitted_short_tables: dict[str, int] = {"en-main-ja": 0}
+    wrapped_long_tables: dict[str, int] = {"en-main-ja": 0}
     fitted_inline_math: dict[str, int] = {"en-main-ja": 0}
     if validation_profile == "technical_exact":
         fused, centered_figures["en-main-ja"] = center_standalone_figures(fused)
         fused, normalized_full_bleed["en-main-ja"] = normalize_full_bleed_images(fused)
         fused, fitted_short_tables["en-main-ja"] = fit_short_simple_longtables(fused)
+        fused, complex_short_tables = fit_short_complex_longtables(fused)
+        fitted_short_tables["en-main-ja"] += complex_short_tables
+        fused, wrapped_long_tables["en-main-ja"] = wrap_long_simple_longtables(fused)
         fused, fitted_inline_math["en-main-ja"] = wrap_wide_inline_math(
             fused, layout="pocket"
         )
@@ -1248,6 +1428,7 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
         "centered_standalone_figures": centered_figures,
         "normalized_full_bleed_images": normalized_full_bleed,
         "fitted_short_simple_longtables": fitted_short_tables,
+        "wrapped_long_simple_longtables": wrapped_long_tables,
         "fitted_oversized_inline_math": fitted_inline_math,
         "normalized_unwrapped_math_fragments": normalized_math_fragments,
         "evidence_backed_layout_replacements": layout_replacement_count,
