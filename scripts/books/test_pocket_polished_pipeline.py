@@ -223,6 +223,42 @@ class PocketPolishPipelineTest(unittest.TestCase):
             errors,
         )
 
+    def test_grounded_repair_may_balance_malformed_source_brace(self):
+        source = source_segment(
+            "book-malformed-brace",
+            r"The actions are \{Yes and No.",
+        )
+        task = dict(
+            self.task,
+            segments=[source],
+            segment_count=1,
+            validation_profile="technical_exact",
+        )
+        output = {
+            "segment_id": source["segment_id"],
+            "source_sha256": source["source_sha256"],
+            "en_tex": "The actions are Yes and No.",
+            "ja_tex": "行動はYesとNoである。",
+            "changes": [
+                {
+                    "before": r"\{Yes",
+                    "after": "Yes",
+                    "reason": "Remove an unmatched OCR brace.",
+                    "confidence": 0.99,
+                }
+            ],
+            "unresolved": [],
+        }
+        errors = validate_segment_output(task, source, output)
+        self.assertNotIn(
+            "book-malformed-brace: en_tex changed brace balance",
+            errors,
+        )
+        self.assertNotIn(
+            "book-malformed-brace: ja_tex changed brace balance",
+            errors,
+        )
+
     def setUp(self) -> None:
         self.first = source_segment("book-s000001", "It ended.Then 2.87 million remained.")
         self.second = source_segment("book-s000002", "The value was 1905.")
@@ -1125,6 +1161,18 @@ class PocketPolishPipelineTest(unittest.TestCase):
             "unresolved": [],
         }
         self.assertFalse(validate_segment_output(task, source, output))
+
+        translated = dict(
+            output,
+            ja_tex=(
+                "Geanakoplos, J.（1992）「共通知識」"
+                "『Journal of Economic Perspectives』第6巻、53--82頁。[85]"
+            ),
+        )
+        self.assertNotIn(
+            "book-sbibliography: Japanese prose contains no kana",
+            validate_segment_output(task, source, translated),
+        )
 
     def test_clearpage_before_heading_is_preserved(self) -> None:
         source = (

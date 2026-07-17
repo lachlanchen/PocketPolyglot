@@ -1106,7 +1106,8 @@ def japanese_translation_optional(
     bibliography_entry = bool(
         re.fullmatch(
             r"[A-Z][A-Za-z'’.-]+,\s*(?:[A-Z]\.\s*){1,4}"
-            r"\(\d{4}[a-z]?\)\s+.+(?:\.|,)\s+.+\d+\.?",
+            r"\(\d{4}[a-z]?\),?\s+.+"
+            r"(?:\[\s*\d+(?:\s*,\s*\d+)*\s*\]|\d+\.?)",
             source_plain.strip(),
         )
     )
@@ -1477,6 +1478,38 @@ def validate_segment_output(
 
     source_language = task.get("source_language", "en")
     technical_exact = task.get("validation_profile") == "technical_exact"
+    source_brace_delta = source["source_tex"].count("{") - source["source_tex"].count("}")
+    expected_brace_delta = source_brace_delta
+    declared_changes = output.get("changes")
+    if source_language == "en" and source_brace_delta and isinstance(declared_changes, list):
+        # Exact-book extraction can split a malformed source brace from its
+        # mate.  Permit a model to restore balance only when its complete
+        # English output is reproducible from grounded, ordered repairs.  A
+        # balanced source may never be made unbalanced, and unrelated
+        # cross-segment brace fragments must still preserve their source delta.
+        replayed = source["source_tex"]
+        grounded = True
+        for change in declared_changes:
+            if not isinstance(change, dict):
+                grounded = False
+                break
+            before = change.get("before")
+            after = change.get("after")
+            confidence = change.get("confidence")
+            if (
+                not isinstance(before, str)
+                or not before
+                or not isinstance(after, str)
+                or not after
+                or not isinstance(confidence, (int, float))
+                or confidence < 0.85
+                or before not in replayed
+            ):
+                grounded = False
+                break
+            replayed = replayed.replace(before, after, 1)
+        if grounded and replayed == en_tex and en_tex.count("{") == en_tex.count("}"):
+            expected_brace_delta = 0
     expected_protected = protected_token_sequence(source["source_tex"])
     for language, candidate in (("en", en_tex), ("ja", ja_tex)):
         if "\ufffd" in candidate or HTML_RE.search(candidate):
@@ -1507,9 +1540,8 @@ def validate_segment_output(
         # raw digit equality, which caused large false-positive retry storms.
         if source["kind"] == "table" and table_signature(candidate) != source["table_signature"]:
             errors.append(prefix + f"{language}_tex changed table structure")
-        source_brace_delta = source["source_tex"].count("{") - source["source_tex"].count("}")
         candidate_brace_delta = candidate.count("{") - candidate.count("}")
-        if candidate_brace_delta != source_brace_delta:
+        if candidate_brace_delta != expected_brace_delta:
             errors.append(prefix + f"{language}_tex changed brace balance")
     if technical_exact and Counter(
         normalized_substantive_math_signature(en_tex)
