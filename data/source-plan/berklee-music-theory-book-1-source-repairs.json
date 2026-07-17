@@ -3,8 +3,12 @@
   "book_id": "berklee-music-theory-book-1-local-exact-book",
   "evidence": {
     "source_pdf": "/home/lachlan/Downloads/Berklee Music Theory Book 1.pdf",
-    "page": 1,
-    "method": "Reconstruct a back-cover testimonial whose two print columns were interleaved by local extraction. The replacement follows the visible page and its embedded text layer."
+    "pages": [
+      1,
+      14,
+      36
+    ],
+    "method": "Apply narrowly scoped repairs verified against the visible source pages and their embedded text layer. These repairs restore reading order, table relationships, or remove a printed page number without rewriting the surrounding content."
   },
   "replacements": [
     {
@@ -18,6 +22,12 @@
       "after": "  1. Listen to whole steps and half steps, then circle the correct",
       "expected_count": 1,
       "reason": "Remove printed page number 30 fused before Ear Training exercise 1; page 30 of the same source PDF visibly shows the page number in the outer margin."
+    },
+    {
+      "before": "Measure:You hear:Corresponds & 1click & (silence) & click & (silence) &\n2click & click & click & click \\\\\n\\midrule\n\\endhead\nto count: & 1 & 2 & 3 & 4 & 1 & 2 & 3 & 4 \\\\",
+      "after": "Measure: & 1 & & & & 2 & & & \\\\\nYou hear: & click & (silence) & click & (silence) & click & click & click & click \\\\\n\\midrule\n\\endhead\nCorresponds to count: & 1 & 2 & 3 & 4 & 1 & 2 & 3 & 4 \\\\",
+      "expected_count": 1,
+      "reason": "Restore the three-row, nine-column countoff table from PDF page 14. The local extractor fused the row headings, measure numbers, and click labels even though the visible source clearly separates them."
     }
   ]
 }
