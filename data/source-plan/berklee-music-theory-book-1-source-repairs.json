@@ -12,6 +12,12 @@
       "after": "\\emph{``If you've been looking for a basic music theory book, your search is over.} \\textbf{Berklee Music Theory} \\emph{is the `go to' volume---clear, concise, and complete. Paul Schmeling's explanations of the fundamentals of music provide a strong foundation for the aspiring musician, and is a valuable resource for teachers as well.} \\textbf{Berklee Music Theory} \\emph{effectively integrates examples with exercises and ear training.} \\textbf{This essential volume should be required reading in music schools and universities. Highly recommended!''}",
       "expected_count": 1,
       "reason": "Restore the complete testimonial in reading order from page 1 of the same source PDF; the local extractor interleaved the right-hand quote with the left-hand back-cover column."
+    },
+    {
+      "before": "  30 1. Listen to whole steps and half steps, then circle the correct",
+      "after": "  1. Listen to whole steps and half steps, then circle the correct",
+      "expected_count": 1,
+      "reason": "Remove printed page number 30 fused before Ear Training exercise 1; page 30 of the same source PDF visibly shows the page number in the outer margin."
     }
   ]
 }
