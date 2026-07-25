@@ -57,9 +57,36 @@ cat > "$run_script" <<EOF
 set -euo pipefail
 cd '$root'
 
+report_progress() {
+  python scripts/interlinear/report_trilingual_progress.py --manifest '$manifest' --chunk-dir '$raw_chunk_dir' || true
+}
+
+report_complete() {
+  local report_text="\$1"
+  local manifest_chunks valid_chunks missing_chunks stale_chunks
+  manifest_chunks="\$(printf '%s\n' "\$report_text" | awk -F= '/^manifest_chunks=/{print \$2; exit}')"
+  valid_chunks="\$(printf '%s\n' "\$report_text" | awk -F= '/^valid_chunks=/{print \$2; exit}')"
+  missing_chunks="\$(printf '%s\n' "\$report_text" | awk -F= '/^missing_chunks=/{print \$2; exit}')"
+  stale_chunks="\$(printf '%s\n' "\$report_text" | awk -F= '/^stale_chunks=/{print \$2; exit}')"
+  [[ -n "\$manifest_chunks" && "\$manifest_chunks" = "\$valid_chunks" && "\$missing_chunks" = "0" && "\$stale_chunks" = "0" ]]
+}
+
+writer_process_count() {
+  local run_matches worker_matches
+  run_matches="\$(ps -eo cmd= | grep -F "books/$book_id/work/trilingual/parallel-json/$writer_session.run.sh" | grep -v grep | wc -l | tr -d ' ')"
+  worker_matches="\$(ps -eo cmd= | grep -F "codex_trilingual_plain_json_worker.py --chunks-jsonl books/$book_id/work/trilingual/chunks/chunks.jsonl" | grep -v grep | wc -l | tr -d ' ')"
+  printf '%s\n' "\$((run_matches + worker_matches))"
+}
+
 while tmux has-session -t '=$writer_session' 2>/dev/null; do
   echo "waiting_for_writer=$writer_session at \$(date -Is)"
-  python scripts/interlinear/report_trilingual_progress.py --manifest '$manifest' --chunk-dir '$raw_chunk_dir' || true
+  report_text="\$(report_progress)"
+  printf '%s\n' "\$report_text"
+  if [[ "\$(writer_process_count)" -eq 0 ]] && report_complete "\$report_text"; then
+    echo "writer_session_stale_complete=$writer_session"
+    tmux kill-session -t '=$writer_session' 2>/dev/null || true
+    break
+  fi
   sleep 300
 done
 
