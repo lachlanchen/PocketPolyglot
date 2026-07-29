@@ -197,7 +197,7 @@ def render_author(author: str, reading: str) -> str:
     return rf"\jpruby{{{tex_escape(author)}}}{{{tex_escape(reading)}}}"
 
 
-def render_figures(figures: Any) -> list[str]:
+def render_figures(figures: Any, *, macro: str = "TriPairFigure") -> list[str]:
     if not isinstance(figures, list):
         return []
     out: list[str] = []
@@ -208,7 +208,9 @@ def render_figures(figures: Any) -> list[str]:
         if not path:
             continue
         caption = str(figure.get("caption") or figure.get("title") or "").strip()
-        out.append(rf"\TriPairFigure{{{tex_path_arg(path)}}}{{{tex_escape(caption)}}}")
+        out.append(
+            rf"\{macro}{{{tex_path_arg(path)}}}{{{tex_escape(caption)}}}"
+        )
     return out
 
 

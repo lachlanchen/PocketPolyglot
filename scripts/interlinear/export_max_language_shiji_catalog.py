@@ -154,6 +154,19 @@ def edition_order_key(edition: Edition) -> tuple[int, str, str, str, int, str]:
 
 
 def resolve_cover(book_id: str) -> Path | None:
+    plan_path = ROOT / "books" / book_id / "book-plan.json"
+    if plan_path.exists():
+        try:
+            plan = json.loads(plan_path.read_text(encoding="utf-8"))
+            plan_cover = str(plan.get("cover_image") or "").strip()
+            if plan_cover:
+                path = Path(plan_cover)
+                if not path.is_absolute():
+                    path = ROOT / path
+                if path.is_file():
+                    return path
+        except (OSError, json.JSONDecodeError):
+            pass
     candidates = [COVER_ROOT / book_id]
     if book_id == "kokoro":
         candidates.append(COVER_ROOT / "kokoro-jp-main")

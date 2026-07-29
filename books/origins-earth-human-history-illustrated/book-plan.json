@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "book_id": "origins-earth-human-history-illustrated",
+  "status": "prepared_illustrated_from_complete_trilingual",
+  "launchable": false,
+  "task_mode": "trilingual_illustrated_edition_reusing_validated_json",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "en": "sources/sahara/earth-and-human-history/en/Origins - How Earth's History Shaped Human History - Lewis Dartnell.pdf"
+  },
+  "source_reference_paths": {},
+  "source_sha256": {
+    "en": "fe97f296dbc44fab6c826e8b6e11da21fafcfb255b15d405ba0a628e337925b9"
+  },
+  "source_extraction": {
+    "en_cache": "build-pocket/origins-earth-human-history/review/source-reviewed.md",
+    "note": "Illustrated nonfiction uses the validated exact Marker Markdown and preserves ordered figure anchors; ordinary PDF uses pdftotext and EPUB/MOBI uses pandoc."
+  },
+  "markdown": {
+    "en": "books/origins-earth-human-history/markdown/en.md"
+  },
+  "book_title_en": "Origins: How Earth's History Shaped Human History",
+  "book_title_zh": "起源：地球历史如何塑造人类历史",
+  "book_title_ja": "オリジンズ：地球史が人類史を形づくった",
+  "book_title_zh_reading": "",
+  "book_title_ja_reading": "",
+  "author": "Lewis Dartnell",
+  "author_reading_zh": "",
+  "author_reading_ja": "",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "english_spine_only",
+  "chunks_jsonl": "books/origins-earth-human-history/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/origins-earth-human-history/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/origins-earth-human-history/work/trilingual/interlinear/chunks",
+  "preview_json": "books/origins-earth-human-history-illustrated/work/trilingual/preview/origins-earth-human-history-illustrated.partial.json",
+  "assembled_json": "books/origins-earth-human-history-illustrated/work/trilingual/preview/origins-earth-human-history-illustrated.partial.json",
+  "prepared_at": "2026-07-29T23:00:15.121097+00:00",
+  "queue_id": "sahara-trilingual-after-exact-2026-07-29",
+  "queue_model": "gpt-5.6-sol",
+  "queue_reasoning": "low",
+  "chunk_count": 260,
+  "figure_count": 28,
+  "figure_manifest": "books/origins-earth-human-history/work/trilingual/assets/figure-manifest.json",
+  "english_chapter_count": 74,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_modern_nonfiction_trilingual.py",
+    "english_spine": "English source text is the chunk spine.",
+    "supplemental_sources": "Optional local references are recorded in source_reference_paths; they are not used as chunk spine text unless a later project-specific pass aligns them.",
+    "chinese_reference": "No published Chinese source configured for this task; generate readable modern Chinese from English.",
+    "japanese_reference": "No published Japanese source configured for this task; generate natural modern Japanese from English.",
+    "reference_notes": "",
+    "illustrated_edition": "Reuses the completed source-book chunks without model calls. Figures are rendered from paragraph anchors already retained in the assembled JSON.",
+    "source_plan": "books/origins-earth-human-history/book-plan.json"
+  },
+  "source_book_id": "origins-earth-human-history",
+  "cover_image": "assets/covers/origins-earth-human-history-illustrated/cover.png",
+  "cover_background_source": "assets/covers/origins-earth-human-history/cover.png",
+  "cover_title_en": "Origins: How Earth's History Shaped Human History — Illustrated Edition",
+  "cover_title_ja": "オリジンズ：地球史が人類史を形づくった・図版収録版",
+  "cover_title_zh": "起源：地球历史如何塑造人类历史・图文版",
+  "edition": {
+    "kind": "illustrated",
+    "label_en": "Illustrated Edition",
+    "label_ja": "図版収録版",
+    "label_zh": "图文版",
+    "output_layout": "en-main-jp-zh",
+    "font_profile": "large-font",
+    "translation_reuse": true,
+    "source_ordered_figures": true
+  }
+}

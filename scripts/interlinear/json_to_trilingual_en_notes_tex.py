@@ -13,6 +13,7 @@ from json_to_trilingual_pair_tex import (
     brace,
     optional_arg_text,
     render_author,
+    render_figures,
     render_lang,
     short_toc_title,
     tex_escape,
@@ -31,6 +32,7 @@ def convert(
     curated_url: str,
     powered_by: str,
     cover_image: str,
+    include_figures: bool = False,
 ) -> str:
     title = data.get("title", {})
     title_en_plain = token_text(title.get("en", []))
@@ -73,6 +75,13 @@ def convert(
                 ja = render_lang(unit.get("ja", []), "ja", "comment")
                 zh = render_lang(unit.get("zh", []), "zh", "comment")
                 out.append("\n".join([r"\TriAllUnit", brace(en), brace(ja), brace(zh), ""]))
+            if include_figures:
+                out.extend(
+                    render_figures(
+                        paragraph.get("figures"),
+                        macro="TriAllFigure",
+                    )
+                )
             out.append(r"\TriAllParagraphEnd")
             out.append("")
     return "\n".join(out).rstrip() + "\n"
@@ -89,6 +98,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--curated-url", default="https://flow.lazying.art")
     parser.add_argument("--powered-by", default="powered by LazyingArt")
     parser.add_argument("--cover-image", default="")
+    parser.add_argument(
+        "--include-figures",
+        action="store_true",
+        help="Render source-ordered figure anchors retained in paragraph JSON.",
+    )
     args = parser.parse_args(argv)
 
     data = json.loads(Path(args.source).read_text(encoding="utf-8"))
@@ -101,6 +115,7 @@ def main(argv: list[str] | None = None) -> int:
         curated_url=args.curated_url,
         powered_by=args.powered_by,
         cover_image=args.cover_image,
+        include_figures=args.include_figures,
     )
     if args.output:
         out = Path(args.output)

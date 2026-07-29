@@ -408,10 +408,12 @@ def main() -> int:
 
     plan = load_plan(args.plan)
     title_suffix = args.title_suffix.strip()
-    title_en = (plan.get("book_title_en") or "").strip()
-    title_ja = (plan.get("book_title_ja") or "").strip()
-    title_zh = (plan.get("book_title_zh") or "").strip()
-    title_wenyan = (plan.get("book_title_wenyan") or "").strip()
+    title_en = (plan.get("cover_title_en") or plan.get("book_title_en") or "").strip()
+    title_ja = (plan.get("cover_title_ja") or plan.get("book_title_ja") or "").strip()
+    title_zh = (plan.get("cover_title_zh") or plan.get("book_title_zh") or "").strip()
+    title_wenyan = (
+        plan.get("cover_title_wenyan") or plan.get("book_title_wenyan") or ""
+    ).strip()
     if title_suffix:
         title_en = f"{title_en}{title_suffix}" if title_en else ""
         title_ja = f"{title_ja}{title_suffix}" if title_ja else ""

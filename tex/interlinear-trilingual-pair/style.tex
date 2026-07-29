@@ -273,6 +273,12 @@
   \vspace{0.18em}
 }
 
+% Three-language English-main editions use the same source-ordered,
+% non-floating figure treatment as pair editions.
+\NewDocumentCommand{\TriAllFigure}{m m}{%
+  \TriPairFigure{#1}{#2}%
+}
+
 \NewDocumentCommand{\TriAllPdfMeta}{m m}{%
   \hypersetup{pdftitle={#1 / Japanese and Chinese notes},pdfauthor={#2}}%
 }

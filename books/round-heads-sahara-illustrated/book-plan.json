@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "book_id": "round-heads-sahara-illustrated",
+  "status": "prepared_illustrated_from_complete_trilingual",
+  "launchable": false,
+  "task_mode": "trilingual_illustrated_edition_reusing_validated_json",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "en": "sources/sahara/rock-art/en/Round Heads - The Earliest Rock Paintings in the Sahara - Jitka Soukopova.pdf"
+  },
+  "source_reference_paths": {},
+  "source_sha256": {
+    "en": "652c640898e9d21849108b6a12b1b89ebf25c1d6280627701bdb32142cb4b694"
+  },
+  "source_extraction": {
+    "en_cache": "build-pocket/round-heads-sahara/review/source-reviewed.md",
+    "note": "Illustrated nonfiction uses the validated exact Marker Markdown and preserves ordered figure anchors; ordinary PDF uses pdftotext and EPUB/MOBI uses pandoc."
+  },
+  "markdown": {
+    "en": "books/round-heads-sahara/markdown/en.md"
+  },
+  "book_title_en": "Round Heads: The Earliest Rock Paintings in the Sahara",
+  "book_title_zh": "圆头人：撒哈拉最早的岩画",
+  "book_title_ja": "サハラ最古の岩絵「ラウンドヘッド」",
+  "book_title_zh_reading": "",
+  "book_title_ja_reading": "",
+  "author": "Jitka Soukopova",
+  "author_reading_zh": "",
+  "author_reading_ja": "",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "english_spine_only",
+  "chunks_jsonl": "books/round-heads-sahara/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/round-heads-sahara/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/round-heads-sahara/work/trilingual/interlinear/chunks",
+  "preview_json": "books/round-heads-sahara-illustrated/work/trilingual/preview/round-heads-sahara-illustrated.partial.json",
+  "assembled_json": "books/round-heads-sahara-illustrated/work/trilingual/preview/round-heads-sahara-illustrated.partial.json",
+  "prepared_at": "2026-07-29T23:00:14.937430+00:00",
+  "queue_id": "sahara-trilingual-after-exact-2026-07-29",
+  "queue_model": "gpt-5.6-sol",
+  "queue_reasoning": "low",
+  "chunk_count": 171,
+  "figure_count": 47,
+  "figure_manifest": "books/round-heads-sahara/work/trilingual/assets/figure-manifest.json",
+  "english_chapter_count": 60,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_modern_nonfiction_trilingual.py",
+    "english_spine": "English source text is the chunk spine.",
+    "supplemental_sources": "Optional local references are recorded in source_reference_paths; they are not used as chunk spine text unless a later project-specific pass aligns them.",
+    "chinese_reference": "No published Chinese source configured for this task; generate readable modern Chinese from English.",
+    "japanese_reference": "No published Japanese source configured for this task; generate natural modern Japanese from English.",
+    "reference_notes": "",
+    "illustrated_edition": "Reuses the completed source-book chunks without model calls. Figures are rendered from paragraph anchors already retained in the assembled JSON.",
+    "source_plan": "books/round-heads-sahara/book-plan.json"
+  },
+  "source_book_id": "round-heads-sahara",
+  "cover_image": "assets/covers/round-heads-sahara-illustrated/cover.png",
+  "cover_background_source": "assets/covers/round-heads-sahara/cover.png",
+  "cover_title_en": "Round Heads: The Earliest Rock Paintings in the Sahara — Illustrated Edition",
+  "cover_title_ja": "サハラ最古の岩絵「ラウンドヘッド」・図版収録版",
+  "cover_title_zh": "圆头人：撒哈拉最早的岩画・图文版",
+  "edition": {
+    "kind": "illustrated",
+    "label_en": "Illustrated Edition",
+    "label_ja": "図版収録版",
+    "label_zh": "图文版",
+    "output_layout": "en-main-jp-zh",
+    "font_profile": "large-font",
+    "translation_reuse": true,
+    "source_ordered_figures": true
+  }
+}
