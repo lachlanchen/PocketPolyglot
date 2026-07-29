@@ -116,13 +116,17 @@ def validate_ja(tokens: Any, where: str, errors: list[str], *, require_japanese:
     for index, token in enumerate(tokens):
         t = str(token.get("t", ""))
         r = str(token.get("r", ""))
-        is_single_kanji = bool(SINGLE_HAN_RE.fullmatch(t))
-        if HAN_RE.search(t) and not is_single_kanji:
-            errors.append(f"{where}[{index}]: Japanese kanji tokens must be one character")
-        if is_single_kanji and not r:
-            errors.append(f"{where}[{index}]: kanji token needs furigana")
-        if r and not is_single_kanji:
-            errors.append(f"{where}[{index}]: furigana may only attach to one kanji")
+        has_kanji = bool(HAN_RE.search(t))
+        if has_kanji and not r:
+            errors.append(f"{where}[{index}]: Japanese kanji-bearing token needs furigana")
+        if r and not has_kanji:
+            errors.append(
+                f"{where}[{index}]: furigana may only attach to a Japanese kanji-bearing token"
+            )
+        if r and (len(t) > 18 or any(char.isspace() for char in t)):
+            errors.append(
+                f"{where}[{index}]: ruby base must be a short word or stem, not a long phrase"
+            )
 
 
 def validate_en(tokens: Any, where: str, errors: list[str], *, require_latin: bool = False) -> None:
