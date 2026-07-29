@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "queue_id": "three-caos-quadrilingual-2026-07-29",
-  "status": "prepared_not_started",
+  "status": "running",
   "description": "Sequential PocketPolyglot queue for the complete public-domain collections of Cao Cao, Cao Pi, and Cao Zhi.",
   "model": "gpt-5.6-sol",
   "reasoning": "low",
@@ -9,7 +9,10 @@
   "execution": {
     "mode": "one_book_at_a_time",
     "auto_continue": true,
-    "started": false,
+    "started": true,
+    "started_at": "2026-07-29T23:34:54+08:00",
+    "queue_session": "zhjpbook-three-caos-queue",
+    "runtime_state": "books/_queues/three-caos/state.json",
     "launch_template": "WORKERS=10 MODEL=gpt-5.6-sol REASONING=low MAIN_LAYERS=wenyan bash scripts/interlinear/start_quadrilingual_wenyan_tmux.sh <book_id> <session_name>"
   },
   "task_mode": "quadrilingual_wenyan_main",
@@ -40,7 +43,7 @@
       "chunks_jsonl": "books/cao-cao-wei-wudi-ji/work/quadrilingual/chunks/chunks.jsonl",
       "chapter_count": 170,
       "chunk_count": 260,
-      "status": "prepared_not_started"
+      "status": "running"
     },
     {
       "priority": 2,
@@ -52,7 +55,7 @@
       "chunks_jsonl": "books/cao-pi-wei-wendi-ji/work/quadrilingual/chunks/chunks.jsonl",
       "chapter_count": 52,
       "chunk_count": 76,
-      "status": "prepared_not_started"
+      "status": "queued"
     },
     {
       "priority": 3,
@@ -64,7 +67,7 @@
       "chunks_jsonl": "books/cao-zhi-cao-zijian-ji/work/quadrilingual/chunks/chunks.jsonl",
       "chapter_count": 219,
       "chunk_count": 289,
-      "status": "prepared_not_started"
+      "status": "queued"
     }
   ],
   "prepared_at": "2026-07-29T23:11:23+08:00"

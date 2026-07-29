@@ -5,7 +5,8 @@ prepared as independent PocketPolyglot tasks. Each task uses the original
 wenyan text as the immutable main layer and requests English, readable modern
 Japanese, and modern Chinese.
 
-The queue is prepared but has not been started:
+The queue was started on 2026-07-29 with ten `gpt-5.6-sol` low-reasoning
+workers. It runs one book at a time in Cao Cao, Cao Pi, Cao Zhi order:
 
 `data/source-plan/three-caos-quadrilingual-queue.json`
 
@@ -72,4 +73,5 @@ Regression coverage is in:
 
 `scripts/interlinear/test_prepare_classical_quadrilingual_task.py`
 
-Generation, covers, TeX compilation, and PDF export have not been started.
+Runtime state is written to `books/_queues/three-caos/state.json`. Covers and
+final PDF export remain post-generation work.
