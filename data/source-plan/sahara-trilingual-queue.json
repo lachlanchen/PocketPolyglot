@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "queue_id": "sahara-trilingual-after-exact-2026-07-29",
+  "status": "prepared_waiting_for_exact_tex",
+  "model": "gpt-5.6-sol",
+  "reasoning": "low",
+  "workers": 3,
+  "task_family": "illustrated_nonfiction_en_jp_zh",
+  "source_spine_lang": "en",
+  "output_languages": [
+    "en",
+    "ja",
+    "zh"
+  ],
+  "generation_contract": {
+    "dependency": "Do not prepare multilingual chunks until the matching exact TeX task is complete and validated.",
+    "text_spine": "Use the reviewed exact TeX body as the English alignment spine. The original PDF remains page evidence.",
+    "translation_quality": "Complete, accurate, natural modern Japanese and modern Chinese; retain names, dates, archaeological terminology, quotations, notes, and factual nuance.",
+    "figure_policy": "Carry figure, photograph, map, table, and caption anchors from exact TeX into the multilingual TeX output. Never send binary figures through the language model.",
+    "grammar_analysis": "Required for English, Japanese, and Chinese with normalized color roles. Preserve English spaces and add Japanese furigana only to kanji-bearing tokens.",
+    "final_outputs": "English-main Japanese/Chinese maximum-language large-font color and black-white PDFs with cover, TOC, and source-ordered figures.",
+    "rights": "These are private study tasks based on user-supplied modern editions. Public distribution requires permission."
+  },
+  "tasks": [
+    {
+      "priority": 1,
+      "book_id": "sahara-cultural-history",
+      "title_en": "The Sahara: A Cultural History",
+      "title_ja": "サハラ文化史",
+      "title_zh": "撒哈拉文化史",
+      "author": "Eamonn Gearon",
+      "task_mode": "trilingual_illustrated_nonfiction_en_source_generated_zh_ja",
+      "source_path": "sources/sahara/cultural-history/en/The Sahara - A Cultural History - Eamonn Gearon.pdf",
+      "source_exact_tex": "build-pocket/sahara-cultural-history/exact/tex/book.tex",
+      "source_exact_pdf": "build-pocket/sahara-cultural-history/exact/book.pdf",
+      "source_pocket_pdf": "build-pocket/sahara-cultural-history/pocket-large-font/book.pdf",
+      "depends_on": {
+        "queue": "data/source-plan/sahara-exact-pocket-queue.json",
+        "book_id": "sahara-cultural-history",
+        "required_status": "complete"
+      },
+      "status": "waiting_for_exact_tex",
+      "launchable": false,
+      "min_chunk_count": 140
+    },
+    {
+      "priority": 2,
+      "book_id": "round-heads-sahara",
+      "title_en": "Round Heads: The Earliest Rock Paintings in the Sahara",
+      "title_ja": "サハラ最古の岩絵「ラウンドヘッド」",
+      "title_zh": "圆头人：撒哈拉最早的岩画",
+      "author": "Jitka Soukopova",
+      "task_mode": "trilingual_illustrated_nonfiction_en_source_generated_zh_ja",
+      "source_path": "sources/sahara/rock-art/en/Round Heads - The Earliest Rock Paintings in the Sahara - Jitka Soukopova.pdf",
+      "source_exact_tex": "build-pocket/round-heads-sahara/exact/tex/book.tex",
+      "source_exact_pdf": "build-pocket/round-heads-sahara/exact/book.pdf",
+      "source_pocket_pdf": "build-pocket/round-heads-sahara/pocket-large-font/book.pdf",
+      "source_references": [
+        "sources/sahara/rock-art/open-access-en/ICOMOS-Rock-Art-of-Sahara-and-North-Africa-2007.pdf"
+      ],
+      "depends_on": {
+        "queue": "data/source-plan/sahara-exact-pocket-queue.json",
+        "book_id": "round-heads-sahara",
+        "required_status": "complete"
+      },
+      "status": "waiting_for_exact_tex",
+      "launchable": false,
+      "min_chunk_count": 100
+    },
+    {
+      "priority": 3,
+      "book_id": "origins-earth-human-history",
+      "title_en": "Origins: How Earth's History Shaped Human History",
+      "title_ja": "オリジンズ：地球史が人類史を形づくった",
+      "title_zh": "起源：地球历史如何塑造人类历史",
+      "author": "Lewis Dartnell",
+      "task_mode": "trilingual_illustrated_nonfiction_en_source_generated_zh_ja",
+      "source_path": "sources/sahara/earth-and-human-history/en/Origins - How Earth's History Shaped Human History - Lewis Dartnell.pdf",
+      "source_exact_tex": "build-pocket/origins-earth-human-history/exact/tex/book.tex",
+      "source_exact_pdf": "build-pocket/origins-earth-human-history/exact/book.pdf",
+      "source_pocket_pdf": "build-pocket/origins-earth-human-history/pocket-large-font/book.pdf",
+      "depends_on": {
+        "queue": "data/source-plan/sahara-exact-pocket-queue.json",
+        "book_id": "origins-earth-human-history",
+        "required_status": "complete"
+      },
+      "status": "waiting_for_exact_tex",
+      "launchable": false,
+      "min_chunk_count": 170
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "queue_id": "ming-qing-multilingual-2026-07-29",
+  "status": "source_prepared_not_started",
+  "model": "gpt-5.6-sol",
+  "reasoning": "low",
+  "workers": 5,
+  "source_spine_lang": "zh",
+  "generation_contract": {
+    "source_fidelity": "Preserve the original Chinese wording, chapter order, prefaces, poems, commentary, and traditional/simplified evidence. Do not silently rewrite the source into modern Chinese.",
+    "translation_quality": "Generate complete, readable modern Japanese and accurate idiomatic English from the Chinese source layer. Do not summarize or censor source passages.",
+    "wenyan_policy": "Only texts classified as substantially classical use the wenyan schema and receive an additional modern Chinese layer.",
+    "vernacular_policy": "Premodern vernacular novels keep original Chinese as the source layer and add English and modern Japanese. Modern Chinese is optional explanatory material, not a replacement source.",
+    "grammar_analysis": "Use normalized token roles for color-capable JSON. Add pinyin to matching Chinese tokens and furigana only to kanji-bearing Japanese tokens.",
+    "layout": "Compile maximum-language large-font color and black-white editions with cover, TOC, and chapter starts on new pages.",
+    "content_metadata": "These works may contain explicit sexual material. Preserve the text faithfully and mark final editions for mature readers."
+  },
+  "tasks": [
+    {
+      "priority": 1,
+      "book_id": "sunu-jing",
+      "title_zh": "素女經",
+      "title_en": "The Classic of the Plain Girl",
+      "title_ja": "素女経",
+      "author": "佚名",
+      "task_mode": "quadrilingual_wenyan_main",
+      "language_family": "wenyan-en-jp-zh",
+      "output_layers": [
+        "wenyan",
+        "en",
+        "ja_modern",
+        "zh_modern"
+      ],
+      "source_spine": "sources/sunu-jing/zh-wikisource/raw/0001-素女經.wiki",
+      "source_references": [
+        "sources/sunu-jing/zh-wikisource/wikisource-zh-素女經.pdf",
+        "sources/sunu-jing/zh/素女经.pdf"
+      ],
+      "extraction_route": "wikisource_raw_with_searchable_pdf_witness",
+      "status": "prepared_source_ready",
+      "launchable": false,
+      "next_action": "Clean the Wikisource raw text, verify section boundaries against both PDFs, then prepare wenyan chunks."
+    },
+    {
+      "priority": 2,
+      "book_id": "jinpingmei-cihua",
+      "title_zh": "金瓶梅詞話",
+      "title_en": "The Plum in the Golden Vase",
+      "title_ja": "金瓶梅",
+      "author": "蘭陵笑笑生",
+      "task_mode": "trilingual_premodern_vernacular_zh_source_generated_en_ja",
+      "language_family": "en-jp-zh",
+      "output_layers": [
+        "zh_original",
+        "en",
+        "ja_modern"
+      ],
+      "source_spine": "sources/jinpingmei/zh-wikisource/wikisource-zh-金瓶梅.pdf",
+      "source_references": [
+        "sources/jinpingmei/zh-wikisource/wikisource-zh-金瓶梅.json",
+        "sources/jinpingmei/zh/金瓶梅词话.pdf"
+      ],
+      "extraction_route": "wikisource_pdf_text_spine_with_scan_witness",
+      "status": "prepared_source_ready",
+      "launchable": false,
+      "next_action": "Extract all 100 chapters from the Wikisource PDF and use the 1,748-page scan only as page evidence."
+    },
+    {
+      "priority": 3,
+      "book_id": "rouputuan",
+      "title_zh": "肉蒲團",
+      "title_en": "The Carnal Prayer Mat",
+      "title_ja": "肉蒲団",
+      "author": "李漁",
+      "task_mode": "trilingual_premodern_vernacular_zh_source_generated_en_ja",
+      "language_family": "en-jp-zh",
+      "output_layers": [
+        "zh_original",
+        "en",
+        "ja_modern"
+      ],
+      "source_spine": "sources/rouputuan/zh-wikisource/wikisource-zh-肉蒲團.pdf",
+      "source_references": [
+        "sources/rouputuan/zh-wikisource/wikisource-zh-肉蒲團.json",
+        "sources/rouputuan/zh/肉蒲团.pdf"
+      ],
+      "extraction_route": "wikisource_pdf_text_spine_with_scan_witness",
+      "status": "prepared_source_ready",
+      "launchable": false,
+      "next_action": "Extract and verify 20 chapters before semantic chunking."
+    },
+    {
+      "priority": 4,
+      "book_id": "pinhuabaojian",
+      "title_zh": "品花寶鑒",
+      "title_en": "A Precious Mirror for Appraising Flowers",
+      "title_ja": "品花宝鑑",
+      "author": "陳森",
+      "task_mode": "trilingual_premodern_vernacular_zh_source_generated_en_ja",
+      "language_family": "en-jp-zh",
+      "output_layers": [
+        "zh_original",
+        "en",
+        "ja_modern"
+      ],
+      "source_spine": "sources/pinhuabaojian/zh/品花宝鉴-简体中文版.epub",
+      "source_references": [
+        "sources/pinhuabaojian/zh-wikisource/wikisource-zh-品花寶鑒.pdf",
+        "sources/pinhuabaojian/zh-wikisource/wikisource-zh-品花寶鑒.json"
+      ],
+      "extraction_route": "epub_spine_with_wikisource_traditional_reference",
+      "status": "prepared_source_ready",
+      "launchable": false,
+      "next_action": "Extract 61 EPUB sections and reconcile the simplified text against the traditional Wikisource edition."
+    },
+    {
+      "priority": 5,
+      "book_id": "chipozizhuan",
+      "title_zh": "癡婆子傳",
+      "title_en": "The Tale of the Infatuated Woman",
+      "title_ja": "痴婆子伝",
+      "author": "芙蓉主人",
+      "task_mode": "trilingual_premodern_vernacular_zh_source_generated_en_ja",
+      "language_family": "en-jp-zh",
+      "output_layers": [
+        "zh_original",
+        "en",
+        "ja_modern"
+      ],
+      "source_spine": "sources/chipozizhuan/zh/痴婆子传-UTF8.txt",
+      "source_references": [
+        "sources/chipozizhuan/zh/痴婆子传-京都大学藏本.pdf",
+        "sources/chipozizhuan/zh-wikisource/wikisource-zh-癡婆子傳.pdf",
+        "sources/chipozizhuan/zh/痴婆子传.txt",
+        "sources/chipozizhuan/zh/痴婆子传-source.7z"
+      ],
+      "extraction_route": "utf8_transcription_with_scan_and_wikisource_witnesses",
+      "status": "prepared_source_ready",
+      "launchable": false,
+      "next_action": "Normalize the UTF-8 transcription without altering wording and compare uncertain characters against the Kyoto scan."
+    },
+    {
+      "priority": 6,
+      "book_id": "shenlouzhi",
+      "title_zh": "蜃樓志",
+      "title_en": "The Mirage Tower",
+      "title_ja": "蜃楼志",
+      "author": "庾嶺勞人",
+      "task_mode": "trilingual_premodern_vernacular_zh_source_generated_en_ja",
+      "language_family": "en-jp-zh",
+      "output_layers": [
+        "zh_original",
+        "en",
+        "ja_modern"
+      ],
+      "source_spine": "sources/shenlouzhi/zh-wikisource/wikisource-zh-蜃樓志.pdf",
+      "source_references": [
+        "sources/shenlouzhi/zh-wikisource/wikisource-zh-蜃樓志.json",
+        "sources/shenlouzhi/zh/蜃楼志全传.pdf"
+      ],
+      "extraction_route": "wikisource_pdf_text_spine_with_searchable_edition_reference",
+      "status": "prepared_source_ready",
+      "launchable": false,
+      "next_action": "Extract and verify 25 sections, removing Wikisource page chrome before chunking."
+    },
+    {
+      "priority": 7,
+      "book_id": "naohuacong",
+      "title_zh": "鬧花叢",
+      "title_en": "Amid the Tumult of Flowers",
+      "title_ja": "鬧花叢",
+      "author": "癡情士",
+      "task_mode": "trilingual_premodern_vernacular_zh_source_generated_en_ja",
+      "language_family": "en-jp-zh",
+      "output_layers": [
+        "zh_original",
+        "en",
+        "ja_modern"
+      ],
+      "source_spine": "sources/naohuacong/zh/闹花丛.epub",
+      "source_references": [],
+      "extraction_route": "epub_spine",
+      "status": "prepared_source_ready",
+      "launchable": false,
+      "next_action": "Extract 14 XHTML sections, validate chapter boundaries, and retain traditional source wording."
+    },
+    {
+      "priority": 8,
+      "book_id": "xiutayeshi",
+      "title_zh": "繡榻野史",
+      "title_en": "An Unofficial History of the Embroidered Couch",
+      "title_ja": "繡榻野史",
+      "author": "作者未詳",
+      "task_mode": "trilingual_premodern_vernacular_zh_source_generated_en_ja",
+      "language_family": "en-jp-zh",
+      "output_layers": [
+        "zh_original",
+        "en",
+        "ja_modern"
+      ],
+      "source_spine": "sources/xiutayeshi/zh-wikisource/wikisource-zh-繡榻野史.pdf",
+      "source_references": [
+        "sources/xiutayeshi/zh/绣榻野史.pdf",
+        "sources/xiutayeshi/zh-wikisource/wikisource-zh-繡榻野史.json"
+      ],
+      "extraction_route": "wikisource_pdf_text_spine_with_scan_witness",
+      "status": "prepared_source_ready",
+      "launchable": false,
+      "next_action": "Extract Wikisource text and use the 121-page scan to verify headings and uncertain characters."
+    },
+    {
+      "priority": 9,
+      "book_id": "zaihuachuan",
+      "title_zh": "載花船",
+      "title_en": "The Flower-Laden Boat",
+      "title_ja": "載花船",
+      "author": "作者未詳",
+      "task_mode": "trilingual_premodern_vernacular_zh_source_generated_en_ja",
+      "language_family": "en-jp-zh",
+      "output_layers": [
+        "zh_original",
+        "en",
+        "ja_modern"
+      ],
+      "source_spine": "sources/zaihuachuan/zh/载花船-思无邪汇宝09.pdf",
+      "source_references": [],
+      "extraction_route": "page_aware_ocr_required",
+      "status": "prepared_waiting_for_ocr",
+      "launchable": false,
+      "next_action": "OCR all 234 pages with page evidence, then correct text and headings before chunking."
+    },
+    {
+      "priority": 10,
+      "book_id": "zhulinyeshi",
+      "title_zh": "株林野史",
+      "title_en": "An Unofficial History of Zhulin",
+      "title_ja": "株林野史",
+      "author": "作者未詳",
+      "task_mode": "trilingual_premodern_vernacular_zh_source_generated_en_ja",
+      "language_family": "en-jp-zh",
+      "output_layers": [
+        "zh_original",
+        "en",
+        "ja_modern"
+      ],
+      "source_spine": "sources/zhulinyeshi/zh/株林野史.pdf",
+      "source_references": [],
+      "extraction_route": "page_aware_ocr_required_garbled_text_layer",
+      "status": "prepared_waiting_for_ocr",
+      "launchable": false,
+      "next_action": "Ignore the garbled embedded text layer, OCR all 75 pages, and manually review character-level uncertainty."
+    },
+    {
+      "priority": 11,
+      "book_id": "lvyexianzong",
+      "title_zh": "綠野仙蹤",
+      "title_en": "The Wizard of the Green Wilds",
+      "title_ja": "緑野仙踪",
+      "author": "李百川",
+      "task_mode": "trilingual_premodern_vernacular_zh_source_generated_en_ja",
+      "language_family": "en-jp-zh",
+      "output_layers": [
+        "zh_original",
+        "en",
+        "ja_modern"
+      ],
+      "source_spine": "sources/lvyexianzong/zh/绿野仙踪.pdf",
+      "source_references": [
+        "sources/lvyexianzong/zh-wikisource/wikisource-zh-綠野仙蹤-第01-43回-未完.pdf",
+        "sources/lvyexianzong/zh-wikisource/wikisource-zh-綠野仙蹤.json"
+      ],
+      "extraction_route": "full_scan_page_aware_ocr_with_partial_wikisource_reference",
+      "status": "prepared_waiting_for_ocr",
+      "launchable": false,
+      "next_action": "OCR the complete 2,513-page scan and use Wikisource chapters 1-43 as calibration, never as proof of full coverage."
+    }
+  ]
+}

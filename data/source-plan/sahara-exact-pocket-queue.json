@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "queue_id": "sahara-exact-pocket-2026-07-29",
+  "status": "prepared_not_started",
+  "source_root": "sources/sahara",
+  "workspace_root": "build-pocket",
+  "runner": "scripts/books/build_pocket_tex_queue.py",
+  "conversion_policy": {
+    "mathpix": false,
+    "body": "real TeX text and structure",
+    "preferred_engine": "Marker/Surya local GPU extraction in resumable page shards",
+    "layouts": [
+      "exact",
+      "pocket-large-font"
+    ],
+    "preserve": [
+      "figures",
+      "photographs",
+      "maps",
+      "diagrams",
+      "charts",
+      "tables",
+      "captions",
+      "footnotes",
+      "chapter structure"
+    ],
+    "forbidden_outputs": [
+      "facsimile",
+      "page-image-only-pdf",
+      "hidden-ocr-layer-only-pdf"
+    ],
+    "completion_contract": "The exact edition must contain real selectable text and every meaningful non-text object anchored in source order. The pocket edition must be generated from the same reviewed TeX body."
+  },
+  "tasks": [
+    {
+      "priority": 1,
+      "book_id": "sahara-cultural-history",
+      "category": "history",
+      "title": "The Sahara: A Cultural History",
+      "author": "Eamonn Gearon",
+      "source": "sources/sahara/cultural-history/en/The Sahara - A Cultural History - Eamonn Gearon.pdf",
+      "source_sha256": "c4e210952d658d830f2ff6549c8c254372f832b5a7664802b39a74d022be8596",
+      "source_pages": 287,
+      "source_text_chars": 448877,
+      "source_embedded_images": 56,
+      "validation_profile": "technical_exact",
+      "marker_shard_pages": 24,
+      "minimum_math_blocks": 0,
+      "minimum_source_text_coverage_ratio": 0.75,
+      "max_overfull_pt": 18.0,
+      "rights_note": "Modern commercial edition supplied by the user. Use as a private source and do not publish a full derivative without permission."
+    },
+    {
+      "priority": 2,
+      "book_id": "round-heads-sahara",
+      "category": "archaeology",
+      "title": "Round Heads: The Earliest Rock Paintings in the Sahara",
+      "author": "Jitka Soukopova",
+      "source": "sources/sahara/rock-art/en/Round Heads - The Earliest Rock Paintings in the Sahara - Jitka Soukopova.pdf",
+      "source_references": [
+        "sources/sahara/rock-art/open-access-en/ICOMOS-Rock-Art-of-Sahara-and-North-Africa-2007.pdf"
+      ],
+      "source_sha256": "652c640898e9d21849108b6a12b1b89ebf25c1d6280627701bdb32142cb4b694",
+      "source_pages": 199,
+      "source_text_chars": 337057,
+      "source_embedded_images": 175,
+      "validation_profile": "technical_exact",
+      "marker_shard_pages": 20,
+      "minimum_math_blocks": 0,
+      "minimum_source_text_coverage_ratio": 0.7,
+      "max_overfull_pt": 18.0,
+      "rights_note": "Modern commercial edition supplied by the user. The ICOMOS comparison source is CC BY-NC-SA and may be used according to that license."
+    },
+    {
+      "priority": 3,
+      "book_id": "origins-earth-human-history",
+      "category": "earth-history",
+      "title": "Origins: How Earth's History Shaped Human History",
+      "author": "Lewis Dartnell",
+      "source": "sources/sahara/earth-and-human-history/en/Origins - How Earth's History Shaped Human History - Lewis Dartnell.pdf",
+      "source_sha256": "fe97f296dbc44fab6c826e8b6e11da21fafcfb255b15d405ba0a628e337925b9",
+      "source_pages": 311,
+      "source_text_chars": 551029,
+      "source_embedded_images": 38,
+      "validation_profile": "technical_exact",
+      "marker_shard_pages": 24,
+      "minimum_math_blocks": 0,
+      "minimum_source_text_coverage_ratio": 0.75,
+      "max_overfull_pt": 18.0,
+      "rights_note": "Modern commercial edition supplied by the user. Use as a private source and do not publish a full derivative without permission."
+    }
+  ]
+}
