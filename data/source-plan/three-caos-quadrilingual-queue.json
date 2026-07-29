@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "queue_id": "three-caos-quadrilingual-2026-07-29",
+  "status": "prepared_not_started",
+  "description": "Sequential PocketPolyglot queue for the complete public-domain collections of Cao Cao, Cao Pi, and Cao Zhi.",
+  "model": "gpt-5.6-sol",
+  "reasoning": "low",
+  "workers": 10,
+  "execution": {
+    "mode": "one_book_at_a_time",
+    "auto_continue": true,
+    "started": false,
+    "launch_template": "WORKERS=10 MODEL=gpt-5.6-sol REASONING=low MAIN_LAYERS=wenyan bash scripts/interlinear/start_quadrilingual_wenyan_tmux.sh <book_id> <session_name>"
+  },
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_spine_lang": "wenyan",
+  "output_layers": [
+    "wenyan",
+    "en",
+    "ja_modern",
+    "zh_modern"
+  ],
+  "generation_contract": {
+    "source_fidelity": "Preserve the authoritative Wikisource wenyan text, collection order, work titles, source citations, and verse-line relationships. Do not modernize or silently correct the source spine.",
+    "english": "Produce complete, accurate, literary but understandable modern English without summary or invented interpretation.",
+    "japanese": "Produce complete, natural contemporary Japanese with kana and normal Japanese inflection; reject kanbun-like Chinese strings presented as Japanese.",
+    "modern_chinese": "Produce complete, clear modern Chinese that explains the classical meaning without merely repeating the wenyan wording.",
+    "references": "Use the private annotated scans only when alignment is evidenced. Never copy modern editorial prose wholesale, and never claim an English or Japanese source edition that is not locally present.",
+    "grammar_analysis": "Populate normalized grammar roles for color-capable JSON; pinyin belongs only on matching Chinese tokens and furigana only on kanji-bearing Japanese tokens.",
+    "finalization": "After full manifest coverage, compile maximum-language large-font wenyan-main color and black-white PDFs with cover, meaningful TOC, and chapter starts on new pages."
+  },
+  "books": [
+    {
+      "priority": 1,
+      "book_id": "cao-cao-wei-wudi-ji",
+      "title_wenyan": "魏武帝集",
+      "title_en": "Collected Works of Cao Cao",
+      "book_plan": "books/cao-cao-wei-wudi-ji/book-plan.json",
+      "chunks_manifest": "books/cao-cao-wei-wudi-ji/work/quadrilingual/chunks/manifest.json",
+      "chunks_jsonl": "books/cao-cao-wei-wudi-ji/work/quadrilingual/chunks/chunks.jsonl",
+      "chapter_count": 170,
+      "chunk_count": 260,
+      "status": "prepared_not_started"
+    },
+    {
+      "priority": 2,
+      "book_id": "cao-pi-wei-wendi-ji",
+      "title_wenyan": "魏文帝集",
+      "title_en": "Collected Works of Cao Pi",
+      "book_plan": "books/cao-pi-wei-wendi-ji/book-plan.json",
+      "chunks_manifest": "books/cao-pi-wei-wendi-ji/work/quadrilingual/chunks/manifest.json",
+      "chunks_jsonl": "books/cao-pi-wei-wendi-ji/work/quadrilingual/chunks/chunks.jsonl",
+      "chapter_count": 52,
+      "chunk_count": 76,
+      "status": "prepared_not_started"
+    },
+    {
+      "priority": 3,
+      "book_id": "cao-zhi-cao-zijian-ji",
+      "title_wenyan": "曹子建集",
+      "title_en": "Collected Works of Cao Zhi",
+      "book_plan": "books/cao-zhi-cao-zijian-ji/book-plan.json",
+      "chunks_manifest": "books/cao-zhi-cao-zijian-ji/work/quadrilingual/chunks/manifest.json",
+      "chunks_jsonl": "books/cao-zhi-cao-zijian-ji/work/quadrilingual/chunks/chunks.jsonl",
+      "chapter_count": 219,
+      "chunk_count": 289,
+      "status": "prepared_not_started"
+    }
+  ],
+  "prepared_at": "2026-07-29T23:11:23+08:00"
+}

@@ -281,6 +281,9 @@ def prompt_for_plain_chunk(chunk: dict[str, Any], previous_errors: list[str] | N
         Chunk metadata:
         {json.dumps({k: chunk.get(k) for k in ("chunk_id", "chapter_id", "chapter_number", "chapter_title_wenyan", "section_title_wenyan")}, ensure_ascii=False, indent=2)}
 
+        Task-specific translation policy:
+        {json.dumps(chunk.get("translation_policy", {}), ensure_ascii=False, indent=2)}
+
         Source unit plan:
         {json.dumps(source_unit_plan(chunk), ensure_ascii=False, indent=2)}
 

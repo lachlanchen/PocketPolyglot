@@ -2276,6 +2276,165 @@
           "quality": "Japanese Wikipedia overview only; generate readable modern Japanese from the wenyan source"
         }
       ]
+    },
+    {
+      "book_id": "cao-cao-wei-wudi-ji",
+      "status": "launchable_task_prepared",
+      "priority": "three_caos_queue",
+      "sectioned_html": true,
+      "book_title_wenyan": "魏武帝集",
+      "book_title_zh": "曹操集",
+      "book_title_ja": "曹操集",
+      "book_title_en": "Collected Works of Cao Cao",
+      "author": "曹操",
+      "author_reading_zh": "cáo cāo",
+      "author_reading_ja": "そう そう",
+      "reference_policy": "The sectioned Chinese Wikisource collection is the authoritative wenyan spine. The modern annotated scan is a private collation and commentary reference only: consult it for variants and interpretation when clearly aligned, but never copy its editorial prose wholesale or treat it as a ready-made modern translation.",
+      "translation_policy": {
+        "scope": "Complete public-domain collection, including poetry and prose.",
+        "wenyan": "Preserve every source character, work title, order, source citation, and stanza boundary exactly.",
+        "en": "Write accurate, literary but understandable modern English; preserve imagery, register, names, dates, and rhetorical force.",
+        "ja_modern": "Write natural contemporary Japanese with kana and normal inflection, not kanbun or a Han-character transcription.",
+        "zh_modern": "Write clear modern Chinese that explains the source meaning without merely paraphrasing word by word.",
+        "poetry": "Preserve line relationships and stanza logic; do not flatten verse into unrelated fragments.",
+        "notes": "Keep source citations distinguishable from Cao Cao's text and do not invent commentary."
+      },
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/jianan-literature/cao-cao/wenyan/wikisource",
+          "quality": "Complete sectioned Chinese Wikisource collection with raw wikitext, rendered HTML, and manifest"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "public_pdf_witness",
+          "path": "sources/jianan-literature/cao-cao/wenyan/book/魏武帝集-曹操.pdf",
+          "quality": "Searchable 36-page public-domain witness built from the same source tree"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "source_build_record",
+          "path": "sources/jianan-literature/cao-cao/wenyan/book/魏武帝集-曹操.json",
+          "quality": "Public-book build record and provenance"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "collation_annotation_reference",
+          "path": "sources/jianan-literature/cao-cao/zh-modern/annotated-reference/建安文学全书-曹操集校注.pdf",
+          "quality": "Private scan with modern collation and annotation; OCR/alignment required before textual use"
+        }
+      ]
+    },
+    {
+      "book_id": "cao-pi-wei-wendi-ji",
+      "status": "launchable_task_prepared",
+      "priority": "three_caos_queue",
+      "sectioned_html": true,
+      "book_title_wenyan": "魏文帝集",
+      "book_title_zh": "曹丕集",
+      "book_title_ja": "曹丕集",
+      "book_title_en": "Collected Works of Cao Pi",
+      "author": "曹丕",
+      "author_reading_zh": "cáo pī",
+      "author_reading_ja": "そう ひ",
+      "reference_policy": "The sectioned Chinese Wikisource collection is the authoritative wenyan spine. The modern annotated scan is a private collation and commentary reference only: consult it for variants and interpretation when clearly aligned, but never copy its editorial prose wholesale or treat it as a ready-made modern translation.",
+      "translation_policy": {
+        "scope": "Complete public-domain collection, including poems, letters, essays, and Dianlun material present in the source.",
+        "wenyan": "Preserve every source character, work title, order, source citation, and stanza boundary exactly.",
+        "en": "Write accurate, literary but understandable modern English; preserve imagery, argument, register, names, and dates.",
+        "ja_modern": "Write natural contemporary Japanese with kana and normal inflection, not kanbun or a Han-character transcription.",
+        "zh_modern": "Write clear modern Chinese that explains the source meaning without merely restating the classical wording.",
+        "poetry": "Preserve line relationships and stanza logic; keep multi-part poems explicitly separated.",
+        "notes": "Keep source citations distinguishable from Cao Pi's text and do not invent commentary."
+      },
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/jianan-literature/cao-pi/wenyan/wikisource",
+          "quality": "Complete sectioned Chinese Wikisource root-page collection with raw wikitext, rendered HTML, and manifest"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "public_pdf_witness",
+          "path": "sources/jianan-literature/cao-pi/wenyan/book/魏文帝集-曹丕.pdf",
+          "quality": "Searchable 19-page public-domain witness built from the same source tree"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "source_build_record",
+          "path": "sources/jianan-literature/cao-pi/wenyan/book/魏文帝集-曹丕.json",
+          "quality": "Public-book build record and provenance"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "collation_annotation_reference",
+          "path": "sources/jianan-literature/cao-pi/zh-modern/annotated-reference/建安文学全书-曹丕集校注.pdf",
+          "quality": "Private scan with modern collation and annotation; OCR/alignment required before textual use"
+        }
+      ]
+    },
+    {
+      "book_id": "cao-zhi-cao-zijian-ji",
+      "status": "launchable_task_prepared",
+      "priority": "three_caos_queue",
+      "sectioned_html": true,
+      "book_title_wenyan": "曹子建集",
+      "book_title_zh": "曹植集",
+      "book_title_ja": "曹植集",
+      "book_title_en": "Collected Works of Cao Zhi",
+      "author": "曹植",
+      "author_reading_zh": "cáo zhí",
+      "author_reading_ja": "そう しょく",
+      "reference_policy": "The ten-volume Chinese Wikisource tree is the authoritative wenyan spine. The modern 汇校汇注汇评 scan is a private collation, annotation, and reception-history reference only: consult it for variants and interpretation when clearly aligned, but never copy its editorial prose wholesale or treat it as a ready-made modern translation.",
+      "translation_policy": {
+        "scope": "Complete ten-volume public-domain collection; do not reduce the task to only volumes five and six.",
+        "wenyan": "Preserve every source character, volume, work title, order, source citation, and stanza boundary exactly.",
+        "en": "Write accurate, literary but understandable modern English; preserve imagery, prosody-related structure, allusion, register, names, and dates.",
+        "ja_modern": "Write natural contemporary Japanese with kana and normal inflection, not kanbun or a Han-character transcription.",
+        "zh_modern": "Write clear modern Chinese that explains the source meaning and allusions without merely restating the classical wording.",
+        "poetry": "Preserve line relationships, parallelism, and stanza logic; keep sequences and numbered parts explicitly separated.",
+        "notes": "Keep source citations and later editorial matter distinguishable from Cao Zhi's text and do not invent commentary."
+      },
+      "source_layers": [
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "classical_source",
+          "path": "sources/jianan-literature/cao-zhi/wenyan/wikisource",
+          "quality": "Complete ten-volume Chinese Wikisource source tree plus root index, with raw wikitext, rendered HTML, and manifest"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "public_pdf_witness",
+          "path": "sources/jianan-literature/cao-zhi/wenyan/book/曹子建集-曹植.pdf",
+          "quality": "Searchable 110-page public-domain witness built from the same source tree"
+        },
+        {
+          "layer": "wenyan",
+          "lang": "zh",
+          "role": "source_build_record",
+          "path": "sources/jianan-literature/cao-zhi/wenyan/book/曹子建集-曹植.json",
+          "quality": "Public-book build record and provenance"
+        },
+        {
+          "layer": "zh_modern",
+          "lang": "zh",
+          "role": "collation_annotation_reference",
+          "path": "sources/jianan-literature/cao-zhi/zh-modern/annotated-reference/曹植全集-汇校汇注汇评.pdf",
+          "quality": "Private scan with comprehensive collation, annotation, and historical commentary; OCR/alignment required before textual use"
+        }
+      ]
     }
   ]
 }

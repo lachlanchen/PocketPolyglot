@@ -15,7 +15,7 @@ from pathlib import Path
 from typing import Any
 from zipfile import ZipFile
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, NavigableString
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -29,6 +29,9 @@ PDF_REFERENCE_PAGE_LINE_RE = re.compile(r"^\s*(?:\f?\s*Page\s+\d+|\d+|[ivxlcdm]{
 PDF_REFERENCE_UPPER_HEADER_RE = re.compile(r"^[A-Z][A-Z0-9 ,.;:'\"!?()\-­]{18,}$")
 SANGUOZHI_VOLUME_RE = re.compile(r"卷\s*0*(\d+)")
 CLASSICAL_VOLUME_RE = re.compile(r"卷\s*0*(\d+)\s*([上中下])?")
+CLASSICAL_VOLUME_LABEL_RE = re.compile(
+    r"卷\s*([一二三四五六七八九十百〇零0-9]+)\s*([上中下])?"
+)
 SOURCE_FILE_PREFIX_RE = re.compile(r"(?:^|/)(\d+)-")
 CHAPTER_ORDINAL_RE = re.compile(r"([一二三四五六七八九十百〇零]+)$")
 WIKI_LINK_RE = re.compile(r"\[\[([^]\|#]+)(?:#[^]\|]*)?(?:\|([^]\n]+))?\]\]")
@@ -810,6 +813,17 @@ def zh_number_to_int(text: str) -> int:
     return total
 
 
+def classical_volume_number(text: str) -> tuple[int, str] | None:
+    """Parse Arabic or Chinese-numbered classical volume labels."""
+
+    match = CLASSICAL_VOLUME_LABEL_RE.search(text)
+    if not match:
+        return None
+    raw_number = match.group(1)
+    number = int(raw_number) if raw_number.isdigit() else zh_number_to_int(raw_number)
+    return number, match.group(2) or ""
+
+
 def title_tail(title: str) -> str:
     return title.split("/")[-1].strip()
 
@@ -1169,6 +1183,7 @@ def clean_soup_for_source(content: BeautifulSoup, *, drop_small: bool) -> None:
         "sup",
         "link",
         "figure",
+        "rt",
     ]
     for selector in selectors:
         for tag in content.select(selector):
@@ -1192,6 +1207,95 @@ def extract_html_paragraphs(path: Path, *, drop_small: bool) -> tuple[str, list[
             continue
         paragraphs.append(text)
     return header_text, paragraphs
+
+
+def html_paragraph_text(node: Any) -> str:
+    """Preserve meaningful verse lines while cleaning one HTML paragraph."""
+
+    lines: list[str] = []
+    buffer: list[str] = []
+    for descendant in node.descendants:
+        if isinstance(descendant, NavigableString):
+            buffer.append(str(descendant))
+            continue
+        if getattr(descendant, "name", "") != "br":
+            continue
+        line = clean_text("".join(buffer))
+        buffer = []
+        if line:
+            lines.append(line)
+    tail = clean_text("".join(buffer))
+    if tail:
+        lines.append(tail)
+    return "\n".join(lines)
+
+
+def extract_sectioned_html(
+    path: Path,
+    *,
+    parent_label: str = "",
+    drop_small: bool,
+) -> tuple[str, list[dict[str, Any]]]:
+    """Extract titled works from a collection or volume stored on one page.
+
+    Wikisource often stores a complete anthology in one HTML page. Flattening
+    all ``p`` nodes loses poem, essay, and nested-part titles. This extractor
+    retains the heading hierarchy and keeps source ``br`` boundaries inside a
+    stanza without turning browser layout into arbitrary prose paragraphs.
+    """
+
+    soup = BeautifulSoup(path.read_text(encoding="utf-8", errors="replace"), "html.parser")
+    content = soup.select_one(".mw-parser-output") or soup
+    clean_soup_for_source(content, drop_small=drop_small)
+    header_text = clean_text(
+        "".join(item.get_text("", strip=True) for item in soup.find_all("title")[:1])
+    )
+    parent_label = clean_text(parent_label)
+    parent_is_volume = classical_volume_number(parent_label) is not None
+    heading_stack: dict[int, str] = {}
+    sections: list[dict[str, Any]] = []
+    current: dict[str, Any] | None = None
+
+    for node in content.find_all(["h2", "h3", "h4", "h5", "h6", "p"]):
+        if node.name != "p":
+            title = clean_text(node.get_text("", strip=False)).lstrip("○●")
+            if not title:
+                continue
+            level = int(node.name[1])
+            for old_level in [item for item in heading_stack if item >= level]:
+                del heading_stack[old_level]
+            heading_stack[level] = title
+            title_parts = [heading_stack[item] for item in sorted(heading_stack)]
+            if parent_is_volume and (not title_parts or title_parts[0] != parent_label):
+                title_parts.insert(0, parent_label)
+            current = {
+                "chapter_title": " · ".join(title_parts),
+                "paragraphs": [],
+            }
+            sections.append(current)
+            continue
+
+        paragraph = html_paragraph_text(node)
+        if (
+            current is None
+            or not paragraph
+            or not HAN_RE.search(paragraph)
+            or is_source_boilerplate_paragraph(paragraph)
+        ):
+            continue
+        current["paragraphs"].append(paragraph)
+
+    return header_text, [section for section in sections if section["paragraphs"]]
+
+
+def sectioned_source_order(title: str, source_name: str) -> int:
+    """Return a stable parent-page order for sectioned source collections."""
+
+    volume = classical_volume_number(title)
+    if volume:
+        number, part = volume
+        return number * 10 + VOLUME_PART_ORDER.get(part, 0)
+    return source_sequence_key(source_name)
 
 
 def remove_balanced_templates(text: str) -> str:
@@ -1319,9 +1423,14 @@ def manifest_items(book: dict[str, Any]) -> list[dict[str, Any]]:
     root_order = root_wiki_link_order(book["book_id"], source_dir, items, book["book_title_wenyan"])
     prepared = []
     seen_titles: set[str] = set()
+    sectioned_html = bool(book.get("sectioned_html"))
     for item in items:
         title = str(item.get("title", ""))
-        if "/" not in title and book["book_id"] not in ANTHOLOGY_STANDALONE_BOOKS:
+        if (
+            "/" not in title
+            and book["book_id"] not in ANTHOLOGY_STANDALONE_BOOKS
+            and not sectioned_html
+        ):
             continue
         if root_order and not any(key in root_order for key in title_order_keys(title)):
             continue
@@ -1339,6 +1448,37 @@ def manifest_items(book: dict[str, Any]) -> list[dict[str, Any]]:
         html_path = source_dir / html_rel if html_rel else Path()
         raw_path = source_dir / raw_rel if raw_rel else Path()
         raw_header_text = extract_raw_wiki_header_section(raw_path) if raw_path.exists() else ""
+        if sectioned_html and html_rel and html_path.exists():
+            parent_label = normalize_chapter_title(book["book_id"], title)
+            header_text, sections = extract_sectioned_html(
+                html_path,
+                parent_label=parent_label,
+                drop_small=bool(book.get("drop_small_source_notes", False)),
+            )
+            parent_order = sectioned_source_order(title, html_path.name)
+            for section_number, section in enumerate(sections, start=1):
+                paragraphs = [
+                    paragraph
+                    for paragraph in section["paragraphs"]
+                    if not is_source_boilerplate_paragraph(paragraph)
+                ]
+                if not paragraphs:
+                    continue
+                chapter_title = str(section["chapter_title"])
+                prepared.append(
+                    {
+                        **item,
+                        "chapter_title": chapter_title,
+                        "source_path": html_path,
+                        "header_text": header_text,
+                        "paragraphs": paragraphs,
+                        "sort_key": (
+                            parent_order * 100000 + section_number,
+                            chapter_title,
+                        ),
+                    }
+                )
+            continue
         if book["book_id"] == "yijing" and raw_rel and raw_path.exists():
             source_path = raw_path
             header_text, paragraphs = extract_raw_wiki_paragraphs(raw_path)
@@ -1724,6 +1864,12 @@ def file_reference_excerpt(book_id: str, rel_path: str, limit: int = 1600) -> di
 def generic_reference_excerpts(book_id: str, layers: list[dict[str, Any]]) -> dict[str, list[dict[str, str]]]:
     refs: dict[str, list[dict[str, str]]] = OrderedDict()
     for layer in layers:
+        if str(layer.get("role") or "") in {
+            "public_pdf_witness",
+            "source_audit_pdf",
+            "source_build_record",
+        }:
+            continue
         rel_path = str(layer.get("path") or "")
         if not rel_path:
             continue
@@ -1868,7 +2014,13 @@ def broad_references(book: dict[str, Any], chapter_number: int) -> dict[str, Any
             }
         )
     reference: dict[str, Any] = {
-        "scope": "References are broad chapter/source references. Preserve the wenyan source exactly and only use references when they clearly match.",
+        "scope": str(
+            book.get("reference_policy")
+            or (
+                "References are broad chapter/source references. Preserve the wenyan "
+                "source exactly and only use references when they clearly match."
+            )
+        ),
         "paths": paths_by_layer,
     }
     extracted_refs = generic_reference_excerpts(book["book_id"], layers)
@@ -1994,6 +2146,7 @@ def prepare(book_id: str, *, max_chars: int, force: bool) -> None:
                         "section_title_wenyan": f"{chapter_title_wenyan}{section_suffix}",
                         "source_spine_lang": "wenyan",
                         "paragraphs": [{"id": paragraph_id, "wenyan": piece}],
+                        "translation_policy": book.get("translation_policy", {}),
                         "reference": broad_references(book, chapter_number),
                     }
                 )
@@ -2022,6 +2175,12 @@ def prepare(book_id: str, *, max_chars: int, force: bool) -> None:
         "chunks": [{"chunk_id": chunk["chunk_id"], "chapter_number": chunk["chapter_number"]} for chunk in chunks],
         "source_paths": source_paths | {"wenyan_markdown": str(markdown.relative_to(ROOT))},
         "source_sha256": {str(markdown.relative_to(ROOT)): sha256(markdown)},
+        "source_structure": {
+            "sectioned_html": bool(book.get("sectioned_html")),
+            "preserves_nested_headings": bool(book.get("sectioned_html")),
+            "preserves_verse_line_boundaries": bool(book.get("sectioned_html")),
+        },
+        "translation_policy": book.get("translation_policy", {}),
         "prepared_at": datetime.now(timezone.utc).isoformat(),
     }
     write_json(manifest_path, manifest)
@@ -2047,6 +2206,8 @@ def prepare(book_id: str, *, max_chars: int, force: bool) -> None:
         "author_reading_ja": manifest["author_reading_ja"],
         "book_description": f"{book['book_title_wenyan']} with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
         "source_paths": manifest["source_paths"],
+        "source_structure": manifest["source_structure"],
+        "translation_policy": manifest["translation_policy"],
         "chunks_jsonl": str(chunks_jsonl.relative_to(ROOT)),
         "chunks_manifest": str(manifest_path.relative_to(ROOT)),
         "raw_chunk_dir": f"books/{book_id}/work/quadrilingual/interlinear/chunks",

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "book_id": "cao-zhi-cao-zijian-ji",
+  "status": "launchable",
+  "launchable": true,
+  "task_mode": "quadrilingual_wenyan_main",
+  "source_language": "wenyan",
+  "default_note_order": {
+    "wenyan": [
+      "en",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "en": [
+      "wenyan",
+      "ja_modern",
+      "zh_modern"
+    ],
+    "ja_modern": [
+      "wenyan",
+      "en",
+      "zh_modern"
+    ],
+    "zh_modern": [
+      "wenyan",
+      "en",
+      "ja_modern"
+    ]
+  },
+  "book_title_wenyan": "曹子建集",
+  "book_title_zh": "曹植集",
+  "book_title_ja": "曹植集",
+  "book_title_en": "Collected Works of Cao Zhi",
+  "author": "曹植",
+  "author_reading_zh": "cáo zhí",
+  "author_reading_ja": "そう しょく",
+  "book_description": "曹子建集 with classical Chinese as the main text and English, modern Japanese, and modern Chinese overlays.",
+  "source_paths": {
+    "classical_source": "sources/jianan-literature/cao-zhi/wenyan/wikisource",
+    "public_pdf_witness": "sources/jianan-literature/cao-zhi/wenyan/book/曹子建集-曹植.pdf",
+    "source_build_record": "sources/jianan-literature/cao-zhi/wenyan/book/曹子建集-曹植.json",
+    "collation_annotation_reference": "sources/jianan-literature/cao-zhi/zh-modern/annotated-reference/曹植全集-汇校汇注汇评.pdf",
+    "wenyan_markdown": "books/cao-zhi-cao-zijian-ji/markdown/wenyan.md"
+  },
+  "source_structure": {
+    "sectioned_html": true,
+    "preserves_nested_headings": true,
+    "preserves_verse_line_boundaries": true
+  },
+  "translation_policy": {
+    "scope": "Complete ten-volume public-domain collection; do not reduce the task to only volumes five and six.",
+    "wenyan": "Preserve every source character, volume, work title, order, source citation, and stanza boundary exactly.",
+    "en": "Write accurate, literary but understandable modern English; preserve imagery, prosody-related structure, allusion, register, names, and dates.",
+    "ja_modern": "Write natural contemporary Japanese with kana and normal inflection, not kanbun or a Han-character transcription.",
+    "zh_modern": "Write clear modern Chinese that explains the source meaning and allusions without merely restating the classical wording.",
+    "poetry": "Preserve line relationships, parallelism, and stanza logic; keep sequences and numbered parts explicitly separated.",
+    "notes": "Keep source citations and later editorial matter distinguishable from Cao Zhi's text and do not invent commentary."
+  },
+  "chunks_jsonl": "books/cao-zhi-cao-zijian-ji/work/quadrilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/cao-zhi-cao-zijian-ji/work/quadrilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/cao-zhi-cao-zijian-ji/work/quadrilingual/interlinear/chunks",
+  "assembled_json": "books/cao-zhi-cao-zijian-ji/work/quadrilingual/preview/cao-zhi-cao-zijian-ji.partial.json",
+  "build_root": "build/cao-zhi-cao-zijian-ji/wenyan-main-quadrilingual",
+  "prepared_at": "2026-07-29T15:08:51.476254+00:00"
+}
