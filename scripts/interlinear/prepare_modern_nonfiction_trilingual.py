@@ -33,6 +33,13 @@ ROOT = Path(__file__).resolve().parents[2]
 SPACE_RE = re.compile(r"\s+")
 LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]+\)")
 TAG_RE = re.compile(r"<[^>]+>")
+MARKDOWN_IMAGE_LINE_RE = re.compile(
+    r"^\s*!\[(?P<caption>[^\]]*)\]\((?P<path>[^)\n]+)\)\s*$"
+)
+MARKDOWN_IMAGE_RE = re.compile(
+    r"!\[(?P<caption>[^\]]*)\]\((?P<path>[^)\n]+)\)"
+)
+MARKER_PAGE_RE = re.compile(r"(?:^|[-_/])_?page_(?P<page>\d+)(?:_|[-/.])", re.I)
 PAGE_NUMBER_RE = re.compile(r"^(?:[-–—]?\s*)?(?:\d{1,5}|[ivxlcdm]{1,10})(?:\s*[-–—]?)?$", re.I)
 LATIN_RE = re.compile(r"[A-Za-z]{3,}")
 SENTENCE_END_RE = re.compile(r'[.!?]["”’)\]]*$')
@@ -244,6 +251,26 @@ def write_json(path: Path, data: dict[str, Any]) -> None:
 
 
 def source_to_markdown(task: dict[str, Any]) -> Path:
+    exact_markdown = str(task.get("source_exact_markdown") or "").strip()
+    if exact_markdown:
+        exact_path = ROOT / exact_markdown
+        exact_status = str(task.get("source_exact_status") or "").strip()
+        if exact_status:
+            status_path = ROOT / exact_status
+            if not status_path.exists():
+                raise RuntimeError(
+                    f"{task['book_id']} exact conversion status is missing: {status_path}"
+                )
+            status = json.loads(status_path.read_text(encoding="utf-8"))
+            if status.get("status") != "complete":
+                raise RuntimeError(
+                    f"{task['book_id']} exact conversion is not complete: "
+                    f"{status.get('status', 'unknown')} {status.get('reason', '')}".strip()
+                )
+        if not exact_path.exists():
+            raise FileNotFoundError(exact_path)
+        return exact_path
+
     source = ROOT / task["source_path"]
     if not source.exists():
         raise FileNotFoundError(source)
@@ -388,8 +415,28 @@ def normalize_raw_text(text: str) -> str:
     return re.sub(r"\n{3,}", "\n\n", "\n".join(lines)).strip()
 
 
+def clean_markdown_line(line: str) -> str:
+    """Keep heading structure while removing extraction-only inline markup."""
+
+    literal_asterisk = "POCKETPOLYGLOT_LITERAL_ASTERISK"
+    match = re.match(r"^(?P<prefix>\s*#{1,6}\s+)(?P<body>.*)$", line)
+    prefix = match.group("prefix") if match else ""
+    body = match.group("body") if match else line
+    body = html.unescape(body)
+    body = LINK_RE.sub(r"\1", body)
+    body = TAG_RE.sub("", body)
+    body = body.replace(r"\*", literal_asterisk)
+    body = body.replace("**", "").replace("__", "").replace("`", "")
+    body = re.sub(r"(?<!\w)[*_](?=\S)|(?<=\S)[*_](?!\w)", "", body)
+    # Marker escapes literal note marks as ``\*``. Keep the visible marker,
+    # but discard the Markdown-only escape character.
+    body = body.replace(literal_asterisk, "*")
+    body = body.replace(r"\(", "(").replace(r"\)", ")")
+    return prefix + compact(body)
+
+
 def clean_line(line: str, title: str) -> str:
-    line = compact(line.replace("\u00ad", ""))
+    line = clean_markdown_line(line.replace("\u00ad", ""))
     if not line or PAGE_NUMBER_RE.fullmatch(line):
         return ""
     if line.startswith("Syntax Warning"):
@@ -464,6 +511,13 @@ def is_heading_line(line: str, task: dict[str, Any]) -> bool:
         if re.match(r"^\d{1,3}\.\s*\d", line):
             return False
         return True
+    if (
+        has_markdown_heading
+        and task.get("allow_markdown_headings", False)
+        and 2 <= len(line) <= 100
+        and LATIN_RE.search(line)
+    ):
+        return True
     return False
 
 
@@ -498,13 +552,75 @@ def drop_repeated_page_headers(lines: list[str]) -> list[str]:
     return out
 
 
+def join_proven_page_continuations(lines: list[str]) -> list[str]:
+    """Join prose paragraphs split only by a source-page boundary.
+
+    Marker occasionally emits the second half of a page-spanning paragraph as
+    a new Markdown paragraph. A join is safe only when the preceding prose has
+    no terminal punctuation and the continuation begins with a lowercase
+    letter. Structural Markdown, figures, lists, tables, and quotes are never
+    joined.
+    """
+
+    def structural(line: str) -> bool:
+        stripped = line.lstrip()
+        return (
+            not stripped
+            or stripped.startswith(("#", "|", ">", "```", "~~~"))
+            or re.match(r"^(?:[-+*]|\d+[.)])\s+", stripped) is not None
+            or stripped.startswith("POCKETPOLYGLOT_FIGURE_ANCHOR_")
+        )
+
+    def can_join(previous: str, following: str) -> bool:
+        if structural(previous) or structural(following):
+            return False
+        if len(previous) < 24 or len(following) < 8:
+            return False
+        if SENTENCE_END_RE.search(previous):
+            return False
+        first_letter = next((char for char in following if char.isalpha()), "")
+        return bool(first_letter and first_letter.islower())
+
+    joined: list[str] = []
+    index = 0
+    while index < len(lines):
+        line = lines[index]
+        if line or not joined:
+            joined.append(line)
+            index += 1
+            continue
+
+        next_index = index + 1
+        while next_index < len(lines) and not lines[next_index]:
+            next_index += 1
+        if (
+            joined
+            and next_index < len(lines)
+            and can_join(joined[-1], lines[next_index])
+        ):
+            joined[-1] = compact(f"{joined[-1]} {lines[next_index]}")
+            index = next_index + 1
+            continue
+
+        joined.append(line)
+        index += 1
+    return joined
+
+
 def find_start(lines: list[str], task: dict[str, Any]) -> int:
     marker = str(task.get("start_marker") or "").strip()
     if marker:
         needle = compact(marker).casefold()
+        exact = bool(task.get("start_marker_exact", False))
+        occurrence = max(1, int(task.get("start_marker_occurrence") or 1))
+        seen = 0
         for index, line in enumerate(lines):
-            if needle in compact(line).casefold():
-                return index
+            candidate = re.sub(r"^#{1,6}\s+", "", compact(line)).strip().casefold()
+            matched = candidate == needle if exact else needle in candidate
+            if matched:
+                seen += 1
+                if seen == occurrence:
+                    return index
     body_markers = task.get(
         "body_start_markers",
         [
@@ -640,28 +756,126 @@ def split_english_units(text: str, *, max_chars: int) -> list[str]:
     return out
 
 
+def markdown_figure_from_parts(
+    caption: str,
+    raw_path: str,
+    markdown: Path,
+) -> dict[str, Any]:
+    raw_path = raw_path.strip().strip("<>")
+    if re.match(r"^[a-zA-Z][a-zA-Z0-9+.-]*:", raw_path):
+        path = raw_path
+    else:
+        candidate = Path(raw_path)
+        if not candidate.is_absolute():
+            candidate = (markdown.parent / candidate).resolve()
+        try:
+            path = str(candidate.relative_to(ROOT))
+        except ValueError:
+            path = str(candidate)
+    page_match = MARKER_PAGE_RE.search(path)
+    figure: dict[str, Any] = {
+        "path": path,
+        "caption": compact(caption),
+        "source_order": 0,
+    }
+    if page_match:
+        figure["source_page_index"] = int(page_match.group("page"))
+    return figure
+
+
+def markdown_figure(raw_line: str, markdown: Path) -> dict[str, Any] | None:
+    match = MARKDOWN_IMAGE_LINE_RE.fullmatch(raw_line.strip())
+    if not match:
+        return None
+    return markdown_figure_from_parts(
+        match.group("caption"),
+        match.group("path"),
+        markdown,
+    )
+
+
+def split_markdown_line_figures(
+    raw_line: str,
+    markdown: Path,
+) -> list[str | dict[str, Any]]:
+    """Return every ordered image anchor plus any surrounding source text."""
+
+    parts: list[str | dict[str, Any]] = []
+    cursor = 0
+    for match in MARKDOWN_IMAGE_RE.finditer(raw_line):
+        prefix = raw_line[cursor : match.start()].strip()
+        if prefix:
+            parts.append(prefix)
+        parts.append(
+            markdown_figure_from_parts(
+                match.group("caption"),
+                match.group("path"),
+                markdown,
+            )
+        )
+        cursor = match.end()
+    suffix = raw_line[cursor:].strip()
+    if suffix:
+        parts.append(suffix)
+    return parts or [raw_line]
+
+
 def parse_chapters(markdown: Path, task: dict[str, Any], *, max_unit_chars: int) -> list[dict[str, Any]]:
     raw_lines = markdown.read_text(encoding="utf-8", errors="replace").splitlines()
-    lines = [clean_line(line, task["title_en"]) for line in raw_lines]
+    figure_tokens: dict[str, dict[str, Any]] = {}
+    lines: list[str] = []
+    for raw_line in raw_lines:
+        for part in split_markdown_line_figures(raw_line, markdown):
+            if isinstance(part, str):
+                lines.append(clean_line(part, task["title_en"]))
+                continue
+            token = f"POCKETPOLYGLOT_FIGURE_ANCHOR_{len(figure_tokens) + 1:06d}"
+            part["source_order"] = len(figure_tokens) + 1
+            figure_tokens[token] = part
+            lines.append(token)
     lines = drop_repeated_page_headers(lines)
-    lines = lines[find_start(lines, task) :]
+    start_index = find_start(lines, task)
+    preserved_front_figures = []
+    if task.get("preserve_front_matter_figures", False):
+        preserved_front_figures = [
+            figure_tokens[line]
+            for line in lines[:start_index]
+            if line in figure_tokens
+        ]
+    lines = lines[start_index:]
+    if task.get("join_page_continuations", True):
+        lines = join_proven_page_continuations(lines)
     chapters: list[dict[str, Any]] = []
     current = {"number": 1, "title": str(task.get("default_chapter_title") or "Main Text"), "paragraphs": []}
     buffer: list[str] = []
+    pending_figures: list[dict[str, Any]] = list(preserved_front_figures)
     body_chars_seen = 0
     min_body_chars_before_terminal = int(task.get("min_body_chars_before_terminal", 20000))
     skipping_intermediate_notes = False
 
     def flush() -> None:
-        nonlocal buffer
+        nonlocal buffer, pending_figures
         if not buffer:
             return
         text = repair_embedded_text_artifacts(" ".join(buffer))
         buffer = []
         if len(text) >= 20 and LATIN_RE.search(text):
-            current["paragraphs"].extend(split_english_units(text, max_chars=max_unit_chars))
+            for unit in split_english_units(text, max_chars=max_unit_chars):
+                paragraph: dict[str, Any] = {"text": unit}
+                if pending_figures:
+                    paragraph["figures"] = pending_figures
+                    pending_figures = []
+                current["paragraphs"].append(paragraph)
 
     for line_index, line in enumerate(lines):
+        if line in figure_tokens:
+            flush()
+            figure = figure_tokens[line]
+            if current["paragraphs"]:
+                current["paragraphs"][-1].setdefault("figures", []).append(figure)
+            else:
+                pending_figures.append(figure)
+            continue
         if skipping_intermediate_notes:
             if is_heading_line(line, task):
                 skipping_intermediate_notes = False
@@ -719,6 +933,9 @@ def parse_chapters(markdown: Path, task: dict[str, Any], *, max_unit_chars: int)
         if SENTENCE_END_RE.search(line) and len(" ".join(buffer)) >= max_unit_chars:
             flush()
     flush()
+    if pending_figures and current["paragraphs"]:
+        current["paragraphs"][-1].setdefault("figures", []).extend(pending_figures)
+        pending_figures = []
     if current["paragraphs"]:
         chapters.append(current)
     if not chapters:
@@ -780,12 +997,28 @@ def build_chunks(task: dict[str, Any], chapters: list[dict[str, Any]], *, max_ch
             pending = []
             pending_chars = 0
 
-        for paragraph in chapter["paragraphs"]:
+        for paragraph_entry in chapter["paragraphs"]:
+            if isinstance(paragraph_entry, dict):
+                paragraph = str(paragraph_entry.get("text") or "")
+                figures = list(paragraph_entry.get("figures") or [])
+            else:
+                paragraph = str(paragraph_entry)
+                figures = []
             paragraph_index += 1
             paragraph_id = f"{task['book_id']}-s{chapter['number']:03d}-p{paragraph_index:05d}"
             if pending and pending_chars + len(paragraph) > max_chunk_chars:
                 flush()
-            pending.append({"id": paragraph_id, "en": paragraph})
+            prepared_paragraph: dict[str, Any] = {"id": paragraph_id, "en": paragraph}
+            if figures:
+                prepared_paragraph["figures"] = figures
+                prepared_paragraph["source_pages"] = sorted(
+                    {
+                        int(figure["source_page_index"])
+                        for figure in figures
+                        if "source_page_index" in figure
+                    }
+                )
+            pending.append(prepared_paragraph)
             pending_chars += len(paragraph) + 1
         flush()
 
@@ -811,6 +1044,11 @@ def build_chunks(task: dict[str, Any], chapters: list[dict[str, Any]], *, max_ch
         "source_sha256": {"en": sha256(source_path)},
         "source_note": task.get("description", ""),
         "reference_notes": task.get("reference_notes", ""),
+        "figure_count": sum(
+            len(paragraph.get("figures") or [])
+            for chunk in chunks
+            for paragraph in chunk.get("paragraphs", [])
+        ),
         "chunk_count": len(chunks),
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "chunks": [
@@ -835,7 +1073,15 @@ def write_book(task: dict[str, Any], queue: dict[str, Any], args: argparse.Names
     markdown_out = [f"# {task['title_en']}", ""]
     for chapter in chapters:
         markdown_out.extend([f"## {chapter['title']}", ""])
-        markdown_out.extend(chapter["paragraphs"])
+        for paragraph_entry in chapter["paragraphs"]:
+            if isinstance(paragraph_entry, dict):
+                markdown_out.append(str(paragraph_entry.get("text") or ""))
+                for figure in paragraph_entry.get("figures") or []:
+                    markdown_out.append(
+                        f"![{figure.get('caption', '')}]({figure.get('path', '')})"
+                    )
+            else:
+                markdown_out.append(str(paragraph_entry))
         markdown_out.append("")
     markdown_path.write_text("\n".join(markdown_out).strip() + "\n", encoding="utf-8")
 
@@ -857,6 +1103,27 @@ def write_book(task: dict[str, Any], queue: dict[str, Any], args: argparse.Names
         encoding="utf-8",
     )
     write_json(chunks_dir / "manifest.json", manifest)
+    figures = [
+        {
+            "chunk_id": chunk["chunk_id"],
+            "paragraph_id": paragraph["id"],
+            **figure,
+        }
+        for chunk in chunks
+        for paragraph in chunk.get("paragraphs", [])
+        for figure in paragraph.get("figures") or []
+    ]
+    figure_manifest_path = book_root / "work/trilingual/assets/figure-manifest.json"
+    write_json(
+        figure_manifest_path,
+        {
+            "schema_version": 1,
+            "book_id": task["book_id"],
+            "source_exact_markdown": task.get("source_exact_markdown", ""),
+            "figure_count": len(figures),
+            "figures": figures,
+        },
+    )
     plan = {
         "schema_version": 1,
         "book_id": task["book_id"],
@@ -869,7 +1136,12 @@ def write_book(task: dict[str, Any], queue: dict[str, Any], args: argparse.Names
         "source_sha256": manifest["source_sha256"],
         "source_extraction": {
             "en_cache": str(raw_md.relative_to(ROOT)),
-            "note": "Modern nonfiction generic extraction. PDF uses pdftotext; EPUB/MOBI uses pandoc.",
+            "note": (
+                "Illustrated nonfiction uses the validated exact Marker Markdown and preserves "
+                "ordered figure anchors; ordinary PDF uses pdftotext and EPUB/MOBI uses pandoc."
+                if task.get("source_exact_markdown")
+                else "Modern nonfiction generic extraction. PDF uses pdftotext; EPUB/MOBI uses pandoc."
+            ),
         },
         "markdown": {"en": str(markdown_path.relative_to(ROOT))},
         "book_title_en": task["title_en"],
@@ -896,6 +1168,8 @@ def write_book(task: dict[str, Any], queue: dict[str, Any], args: argparse.Names
         "queue_model": queue.get("model", ""),
         "queue_reasoning": queue.get("reasoning", ""),
         "chunk_count": len(chunks),
+        "figure_count": len(figures),
+        "figure_manifest": str(figure_manifest_path.relative_to(ROOT)),
         "english_chapter_count": len(chapters),
         "preparation_notes": {
             "script": "scripts/interlinear/prepare_modern_nonfiction_trilingual.py",
@@ -948,6 +1222,7 @@ def main() -> int:
             if not summary:
                 continue
             task["status"] = "chunked_launchable"
+            task["launchable"] = True
             task["book_plan"] = summary["book_plan"]
             task["chunks_manifest"] = summary["manifest"]
             task["chunk_count"] = summary["chunks"]

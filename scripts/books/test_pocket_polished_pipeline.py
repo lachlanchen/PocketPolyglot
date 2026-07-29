@@ -34,7 +34,18 @@ from assemble_build_pocket_polished import (
     split_shared_environment_scaffold,
 )
 from build_pocket_tex_queue import (
+    apply_task_markdown_fixes,
+    fit_chapter_opening_figures,
     inject_cover_page,
+    merge_split_url_tildes,
+    normalize_index_verbatim_blocks,
+    normalize_marker_merged_markdown,
+    rebalance_longtable_column_fractions,
+    repair_split_uppercase_table_words,
+    repair_undefined_word_command,
+    tex_figure_inventory,
+    unwrap_source_page_hyperlinks,
+    wrap_plain_urls,
     wrap_wide_display_math,
     wrap_wide_inline_math,
     wrap_wide_math_environments,
@@ -1726,6 +1737,247 @@ class PocketPolishPipelineTest(unittest.TestCase):
             rendered = tex_path.read_text(encoding="utf-8")
             self.assertNotIn("fitpaper=true", rendered)
             self.assertIn(r"width=\paperwidth,height=\paperheight", rendered)
+
+    def test_marker_normalizer_rejoins_prose_before_floating_figure(self) -> None:
+        source = (
+            "The manuscript preserves the word\n\n"
+            "<!-- source-pages:1-24 -->\n\n"
+            "![](/tmp/map.png)\n\n"
+            "Map of the route\n\n"
+            "of God and the treasures carried south."
+        )
+        rendered, report = normalize_marker_merged_markdown(source)
+        self.assertIn(
+            "The manuscript preserves the word of God and the treasures carried south.",
+            rendered,
+        )
+        self.assertGreater(
+            rendered.index("carried south."),
+            rendered.index("The manuscript"),
+        )
+        self.assertGreater(rendered.index("![](/tmp/map.png)"), rendered.index("carried south."))
+        self.assertEqual(report["boundaries_removed"], 1)
+        self.assertEqual(report["joined_continuations"], 1)
+
+    def test_reviewed_markdown_applies_only_evidenced_task_fix(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            task_dir = Path(temporary) / "book"
+            source = task_dir / "review/source-from-marker.md"
+            source.parent.mkdir(parents=True)
+            source.write_text(
+                "Before.\n\n| Broken | Table |\n|---|---|\n| x | y |\n\nAfter.\n",
+                encoding="utf-8",
+            )
+            crop = task_dir / "review/source-crops/table.png"
+            crop.parent.mkdir(parents=True)
+            crop.write_bytes(b"source-evidenced-crop")
+            fixes = Path(temporary) / "fixes.json"
+            fixes.write_text(
+                json.dumps(
+                    {
+                        "markdown_replacements": [
+                            {
+                                "regex": True,
+                                "from": (
+                                    r"(?ms)^\| Broken \| Table \|\n"
+                                    r"\|---\|---\|\n\| x \| y \|$"
+                                ),
+                                "to": (
+                                    "![Verified table]"
+                                    "({{TASK_DIR}}/review/source-crops/table.png)"
+                                ),
+                                "expected_min": 1,
+                                "source_evidence": "source PDF page 7",
+                            }
+                        ]
+                    }
+                ),
+                encoding="utf-8",
+            )
+            reviewed = apply_task_markdown_fixes(
+                source,
+                {"source_fixes": str(fixes)},
+                task_dir,
+            )
+            self.assertEqual(reviewed.name, "source-reviewed.md")
+            self.assertIn("Verified table", reviewed.read_text(encoding="utf-8"))
+            self.assertIn("Broken", source.read_text(encoding="utf-8"))
+            report = json.loads(
+                (task_dir / "review/markdown-fix-report.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(report["replacements"][0]["matches"], 1)
+            self.assertEqual(report["replacements"][0]["source_evidence"], "source PDF page 7")
+
+    def test_reviewed_markdown_can_use_a_file_backed_replacement(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            task_dir = root / "book"
+            source = task_dir / "review/source-from-marker.md"
+            source.parent.mkdir(parents=True)
+            source.write_text("Body.\n\n## INDEX\n\nBroken index.\n", encoding="utf-8")
+            replacement = root / "verified-index.md"
+            replacement.write_text("## INDEX\n\n- **Term**; 1; 2\n", encoding="utf-8")
+            fixes = root / "fixes.json"
+            fixes.write_text(
+                json.dumps(
+                    {
+                        "markdown_replacements": [
+                            {
+                                "regex": True,
+                                "from": r"(?ms)^## INDEX\s*$.*\Z",
+                                "to_file": str(replacement),
+                                "source_evidence": "source PDF pages 10-11",
+                            }
+                        ]
+                    }
+                ),
+                encoding="utf-8",
+            )
+            reviewed = apply_task_markdown_fixes(
+                source,
+                {"source_fixes": str(fixes)},
+                task_dir,
+            )
+            self.assertIn("**Term**", reviewed.read_text(encoding="utf-8"))
+            report = json.loads(
+                (task_dir / "review/markdown-fix-report.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(report["replacements"][0]["target_file"], str(replacement))
+            self.assertEqual(len(report["replacements"][0]["target_sha256"]), 64)
+
+    def test_undefined_ocr_command_repair_preserves_math_commands(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            tex_path = root / "book.tex"
+            log_path = root / "xelatex.log"
+            tex_path.write_text(
+                "\\begin{document}\n"
+                "214\\nengravings; $2\\nu$ and $\\nabla f$\n"
+                "\\end{document}\n",
+                encoding="utf-8",
+            )
+            log_path.write_text(
+                f"{tex_path}:2: Undefined control sequence.\n"
+                "l.2 214\\nengravings\n",
+                encoding="utf-8",
+            )
+            self.assertTrue(repair_undefined_word_command(tex_path, log_path))
+            rendered = tex_path.read_text(encoding="utf-8")
+            self.assertIn("214nengravings", rendered)
+            self.assertIn(r"$2\nu$", rendered)
+            self.assertIn(r"$\nabla f$", rendered)
+
+    def test_figure_inventory_hashes_the_full_ordered_sequence(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            first = root / "first.png"
+            second = root / "second.png"
+            first.write_bytes(b"first")
+            second.write_bytes(b"second")
+            tex_path = root / "book.tex"
+            tex_path.write_text(
+                "\\includegraphics{first.png}\n"
+                "\\includegraphics{second.png}\n"
+                "\\includegraphics{first.png}\n",
+                encoding="utf-8",
+            )
+            inventory = tex_figure_inventory(tex_path)
+            self.assertEqual(inventory["referenced_count"], 3)
+            self.assertEqual(inventory["unique_content_count"], 2)
+            self.assertEqual(inventory["missing_paths"], [])
+            self.assertNotEqual(inventory["sequence_sha256"], "")
+
+    def test_source_page_links_are_unwrapped_before_bare_urls(self) -> None:
+        source = (
+            r"\protect\hyperlink{page-154-0}{(h}"
+            r"ttps://commons.wikimedia.org/wiki/File:Map\_of\_the\_Great\_Wall.jpg) "
+            r"and (www.example.org/a/long/path.html). "
+            r"\url{https://already.example/path}"
+        )
+        rendered = wrap_plain_urls(unwrap_source_page_hyperlinks(source))
+        self.assertIn(
+            r"(\url{https://commons.wikimedia.org/wiki/File:Map\_of\_the\_Great\_Wall.jpg})",
+            rendered,
+        )
+        self.assertIn(r"(\url{www.example.org/a/long/path.html})", rendered)
+        self.assertEqual(rendered.count(r"\url{https://already.example/path}"), 1)
+
+    def test_chapter_opening_figure_reserves_footer_space(self) -> None:
+        source = (
+            "\\chapter{A Long Chapter Title}\n\n"
+            "\\includegraphics[max width=.94\\linewidth,"
+            "max totalheight=.70\\textheight,keepaspectratio]{opening.jpg}\n\n"
+            "Opening caption\n\n"
+            "\\includegraphics[max width=.94\\linewidth,"
+            "max totalheight=.70\\textheight,keepaspectratio]{ordinary.jpg}\n"
+        )
+        rendered = fit_chapter_opening_figures(source, layout="exact")
+        self.assertIn(r"max totalheight=.60\textheight", rendered)
+        self.assertEqual(rendered.count(r"max totalheight=.70\textheight"), 1)
+
+    def test_long_taxonomy_labels_receive_a_readable_table_column(self) -> None:
+        source = (
+            "\\begin{longtable}[]{@{}\n"
+            "p{\\real{0.1200}\\linewidth}p{\\real{0.8800}\\linewidth}@{}}\n"
+            "\\toprule\n"
+            "ANTHROPOMORP\\linebreak{}HIC FIGURES & Site list \\\\\n"
+            "\\endhead\n"
+            "Body painting & Long description \\\\\n"
+            "\\end{longtable}"
+        )
+        rendered = rebalance_longtable_column_fractions(source)
+        self.assertIn(r"\real{0.2400}", rendered)
+        self.assertIn(r"\real{0.7600}", rendered)
+
+    def test_uppercase_table_word_is_not_split_midword(self) -> None:
+        source = (
+            "\\begin{longtable}{ll}\n"
+            "ANTHROPOMORP\\linebreak{}HIC FIGURES & Site list \\\\\n"
+            "TWO\\linebreak{} WORDS & Preserved \\\\\n"
+            "\\end{longtable}"
+        )
+        rendered = repair_split_uppercase_table_words(source)
+        self.assertIn(
+            r"\resizebox{\linewidth}{!}{ANTHROPOMORPHIC} FIGURES",
+            rendered,
+        )
+        self.assertIn(r"TWO\linebreak{} WORDS", rendered)
+
+    def test_index_verbatim_cleanup_does_not_touch_source_code(self) -> None:
+        index_lines = ["P"] + [
+            f"{' ' * 48}painting; {number}; {number + 1}"
+            for number in range(1, 22)
+        ]
+        index = (
+            "\\begin{Verbatim}[breaklines=true,breakanywhere=true]\n"
+            + "\n".join(index_lines)
+            + "\n\\end{Verbatim}"
+        )
+        rendered = normalize_index_verbatim_blocks(index, layout="pocket")
+        self.assertNotIn(" " * 48, rendered)
+        self.assertIn(r"fontsize=\scriptsize", rendered)
+
+        source_code = (
+            "\\begin{Verbatim}[breaklines=true,breakanywhere=true]\n"
+            "def main():\n"
+            "    return 0\n"
+            "\\end{Verbatim}"
+        )
+        self.assertEqual(
+            normalize_index_verbatim_blocks(source_code, layout="pocket"),
+            source_code,
+        )
+
+    def test_split_home_directory_url_is_rejoined(self) -> None:
+        source = (
+            r"\url{http://www.ucl.ac.uk/}\textasciitilde "
+            "ucfbrxs/Homepage/walks/PortlandFossils.pdf."
+        )
+        rendered = merge_split_url_tildes(source)
+        self.assertEqual(
+            rendered,
+            r"\url{http://www.ucl.ac.uk/~ucfbrxs/Homepage/walks/PortlandFossils.pdf}.",
+        )
 
 
 if __name__ == "__main__":

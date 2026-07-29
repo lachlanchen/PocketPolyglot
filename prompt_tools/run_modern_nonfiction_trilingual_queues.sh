@@ -3,7 +3,7 @@ set -euo pipefail
 
 usage() {
   cat <<'USAGE'
-Usage: prompt_tools/run_modern_nonfiction_trilingual_queues.sh [history|wealth|science|both|all]
+Usage: prompt_tools/run_modern_nonfiction_trilingual_queues.sh [history|wealth|science|sahara|both|all]
 
 Start prepared modern nonfiction EN-JP-ZH queues in tmux.
 
@@ -11,6 +11,7 @@ Defaults:
   history: MODEL=gpt-5.3-codex-spark REASONING=low WORKERS=10
   wealth:  MODEL=gpt-5.5             REASONING=low WORKERS=10
   science: MODEL=gpt-5.5             REASONING=low WORKERS=10
+  sahara:  MODEL=gpt-5.6-sol         REASONING=low WORKERS=3
 
 Override with HISTORY_WORKERS, WEALTH_WORKERS, POPULAR_SCIENCE_WORKERS,
 INTERVAL_SECONDS, MERGE_INTERVAL, COMPILE_INTERVAL_SECONDS, or MAX_ACTIVE_BOOKS.
@@ -44,6 +45,8 @@ start_queue() {
   local reasoning="$4"
   local workers="$5"
   local disable_features="${6:-}"
+  local ignore_user_config="${7:-0}"
+  local ignore_rules="${8:-0}"
   local session="zhjpbook-${name}-trilingual-queue"
 
   if tmux has-session -t "=$session" 2>/dev/null; then
@@ -67,6 +70,8 @@ start_queue() {
   tmux new-session -d -s "$session" -n queue \
     "cd '$root' && MODEL='$model' REASONING='$reasoning' WORKERS='$workers' \
       CODEX_EXEC_DISABLE_FEATURES='$disable_features' \
+      CODEX_EXEC_IGNORE_USER_CONFIG='$ignore_user_config' \
+      CODEX_EXEC_IGNORE_RULES='$ignore_rules' \
       INTERVAL_SECONDS='${INTERVAL_SECONDS:-900}' \
       MERGE_INTERVAL='${MERGE_INTERVAL:-120}' \
       COMPILE_INTERVAL_SECONDS='${COMPILE_INTERVAL_SECONDS:-1800}' \
@@ -77,6 +82,7 @@ start_queue() {
   echo "started_session=$session"
   echo "queue_json=$queue_json"
   echo "model=$model reasoning=$reasoning workers=$workers"
+  echo "ignore_user_config=$ignore_user_config ignore_rules=$ignore_rules"
   echo "current=$current queued=${books[*]:1}"
 }
 
@@ -107,6 +113,17 @@ case "$target" in
       "${POPULAR_SCIENCE_REASONING:-low}" \
       "${POPULAR_SCIENCE_WORKERS:-10}" \
       "${POPULAR_SCIENCE_CODEX_EXEC_DISABLE_FEATURES:-}"
+    ;;
+  sahara)
+    start_queue \
+      "sahara" \
+      "data/source-plan/sahara-trilingual-queue.json" \
+      "${SAHARA_MODEL:-gpt-5.6-sol}" \
+      "${SAHARA_REASONING:-low}" \
+      "${SAHARA_WORKERS:-3}" \
+      "${SAHARA_CODEX_EXEC_DISABLE_FEATURES:-image_generation}" \
+      "${SAHARA_CODEX_EXEC_IGNORE_USER_CONFIG:-1}" \
+      "${SAHARA_CODEX_EXEC_IGNORE_RULES:-1}"
     ;;
   both)
     "$0" history

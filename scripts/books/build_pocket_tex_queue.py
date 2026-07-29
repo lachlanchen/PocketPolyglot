@@ -32,6 +32,11 @@ DEFAULT_HEADER = ROOT / "build-pocket/_common/pandoc-pocket-header.tex"
 
 CONTROL_RE = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]")
 MARKDOWN_IMAGE_RE = re.compile(r"(!\[[^\]]*\]\()([^)\n]+)(\))")
+MARKDOWN_IMAGE_BLOCK_RE = re.compile(r"^\s*!\[[^\]]*\]\([^)]+\)\s*$", re.S)
+MARKER_SHARD_BOUNDARY_RE = re.compile(
+    r"^\s*<!--\s*source-pages:\d+-\d+\s*-->\s*$",
+    re.I,
+)
 SPACED_INLINE_MATH_RE = re.compile(
     r"(?<!\\)\$(?!\$)(?P<open>[ \t]*)(?P<body>[^$\n]*?)(?P<close>[ \t]*)\$(?!\$)"
 )
@@ -64,17 +69,33 @@ LATEX_ERROR_RE = re.compile(
     re.M,
 )
 INCLUDEGRAPHICS_RE = re.compile(r"\\includegraphics(?:\[[^\]]*\])?(\{[^}]+\})")
+INCLUDEGRAPHICS_PATH_RE = re.compile(
+    r"\\includegraphics(?:\[[^\]]*\])?\{"
+    r"(?:\\detokenize\{(?P<detokenized>[^{}]+)\}|(?P<plain>[^{}]+))"
+    r"\}"
+)
 LONGTABLE_SPEC_RE = re.compile(r"(\\begin\{longtable\}(?:\[[^\]]*\])?\{)([^{}]*(?:@\{\}[^{}]*)?)(\})")
 SIMPLE_LONGTABLE_SPEC_RE = re.compile(
     r"(\\begin\{longtable\}(?:\[[^\]]*\])?\{@\{\})([lcrX]{2,})(@\{\}\})"
 )
 LONGTABLE_BLOCK_RE = re.compile(r"\\begin\{longtable\}.*?\\end\{longtable\}", re.S)
+VERBATIM_BLOCK_RE = re.compile(
+    r"(?P<begin>\\begin\{Verbatim\}\[[^\]]*\]\s*\n)"
+    r"(?P<body>.*?)"
+    r"(?P<end>\n\\end\{Verbatim\})",
+    re.S,
+)
 SIMPLE_ARRAY_RE = re.compile(
     r"\\begin\{array\}\{(?P<spec>[lcr]+)\}(?P<body>.*?)\\end\{array\}",
     re.S,
 )
 PLAIN_URL_RE = re.compile(
-    r"(?<!\\url\{)(?<!\\href\{)https?://[A-Za-z0-9][A-Za-z0-9._~:/?#\[\]@!$&'()*+,;=%-]*"
+    r"(?<!\\url\{)(?<!\\href\{)(?<![A-Za-z0-9/.:_-])"
+    r"(?:https?://|www\.)"
+    r"[A-Za-z0-9](?:(?:\\[_%#&])|[A-Za-z0-9._~:/?#\[\]@!$&'()*+,;=%-])*"
+)
+SOURCE_PAGE_HYPERLINK_RE = re.compile(
+    r"\\protect\\hyperlink\{page-[^{}]+\}\{(?P<text>[^{}]*)\}"
 )
 DISPLAY_MATH_RE = re.compile(r"(?<!\\)\\\[(.*?)(?<!\\)\\\]", re.S)
 DISPLAY_MATH_PUNCTUATION_RE = re.compile(
@@ -123,6 +144,7 @@ SERVER_UNSAFE_FILENAME_CHARS = str.maketrans(
         "*": "＊",
     }
 )
+MARKER_MERGE_NORMALIZER_VERSION = 2
 
 
 def log(message: str) -> None:
@@ -136,6 +158,16 @@ def read_json(path: Path) -> dict[str, Any]:
 def write_json(path: Path, data: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def portable_path(path: Path, *, base: Path = ROOT) -> str:
+    """Return a repository-relative path when possible, otherwise an absolute path."""
+
+    resolved = path.resolve()
+    try:
+        return str(resolved.relative_to(base.resolve()))
+    except ValueError:
+        return str(resolved)
 
 
 def safe_name(name: str) -> str:
@@ -536,14 +568,40 @@ KNOWN_LATEX_COMMANDS = {
     "delta",
     "epsilon",
     "varepsilon",
+    "zeta",
+    "eta",
     "theta",
+    "vartheta",
+    "iota",
+    "kappa",
     "lambda",
     "mu",
+    "nu",
+    "xi",
     "pi",
+    "varpi",
+    "rho",
+    "varrho",
     "sigma",
+    "varsigma",
+    "tau",
+    "upsilon",
     "phi",
     "varphi",
+    "chi",
+    "psi",
     "omega",
+    "Gamma",
+    "Delta",
+    "Theta",
+    "Lambda",
+    "Xi",
+    "Pi",
+    "Sigma",
+    "Upsilon",
+    "Phi",
+    "Psi",
+    "Omega",
     "infty",
     "partial",
     "nabla",
@@ -701,6 +759,24 @@ def add_longtable_break_opportunities(text: str) -> str:
     return LONGTABLE_BLOCK_RE.sub(repl, text)
 
 
+def repair_split_uppercase_table_words(text: str) -> str:
+    """Rejoin OCR line breaks inserted inside an uppercase table word."""
+
+    def repl(match: re.Match[str]) -> str:
+        block = match.group(0)
+        return re.sub(
+            r"(?P<left>[A-Z]{3,})\\linebreak\{\}(?P<right>[A-Z]{2,})",
+            lambda word: (
+                rf"\resizebox{{\linewidth}}{{!}}{{{word.group('left')}{word.group('right')}}}"
+                if len(word.group("left") + word.group("right")) >= 12
+                else word.group("left") + word.group("right")
+            ),
+            block,
+        )
+
+    return LONGTABLE_BLOCK_RE.sub(repl, text)
+
+
 def rebalance_longtable_column_fractions(text: str) -> str:
     """Prevent OCR-derived Pandoc tables from assigning unusably thin columns."""
 
@@ -711,6 +787,18 @@ def rebalance_longtable_column_fractions(text: str) -> str:
         if not values or len(values) > 6:
             return block
         floor = 0.12 if len(values) <= 4 else 0.08
+        if len(values) == 2:
+            first_cells = re.findall(r"(?m)^(?P<cell>[^&\n]+?)\s*&", body)
+            first_cell_text = " ".join(first_cells).replace(r"\linebreak{}", "")
+            first_cell_text = re.sub(r"\\[A-Za-z]+(?:\{[^{}]*\})?", "", first_cell_text)
+            longest_label = max(
+                (len(token) for token in re.findall(r"[A-Za-z]{2,}", first_cell_text)),
+                default=0,
+            )
+            if longest_label >= 12:
+                floor = 0.24
+            elif longest_label >= 9:
+                floor = 0.20
         if min(values) >= floor:
             return block
         total = sum(values)
@@ -734,6 +822,31 @@ def rebalance_longtable_column_fractions(text: str) -> str:
         return head + marker + body
 
     return LONGTABLE_BLOCK_RE.sub(repl, text)
+
+
+def normalize_index_verbatim_blocks(text: str, *, layout: str) -> str:
+    """Remove scanned-column indentation from index-like literal blocks."""
+
+    def repl(match: re.Match[str]) -> str:
+        body = match.group("body")
+        lines = body.splitlines()
+        index_lines = sum(
+            1
+            for line in lines
+            if re.search(r";\s*\d", line) or re.match(r"\s*[A-Z]\s*$", line)
+        )
+        if len(lines) < 20 or index_lines < 8:
+            return match.group(0)
+        normalized = "\n".join(line.lstrip(" \t") for line in lines)
+        font_size = r"\footnotesize" if layout == "exact" else r"\scriptsize"
+        begin = re.sub(
+            r"\]$",
+            lambda _match: f",fontsize={font_size}]",
+            match.group("begin").rstrip("\n"),
+        )
+        return begin + "\n" + normalized + match.group("end")
+
+    return VERBATIM_BLOCK_RE.sub(repl, text)
 
 
 def landscape_wide_longtables(text: str) -> str:
@@ -773,6 +886,64 @@ def wrap_plain_urls(text: str) -> str:
         return rf"\url{{{value}}}" + trailing
 
     return PLAIN_URL_RE.sub(repl, text)
+
+
+def merge_split_url_tildes(text: str) -> str:
+    """Rejoin URLs that Pandoc split at a literal home-directory tilde."""
+
+    pattern = re.compile(
+        r"\\url\{(?P<base>https?://[^{}]+/)\}"
+        r"\\textasciitilde\s*"
+        r"(?P<path>[A-Za-z0-9][A-Za-z0-9._~:/?#\[\]@!$&'()*+,;=%/-]*)"
+    )
+
+    def repl(match: re.Match[str]) -> str:
+        path = match.group("path")
+        trailing = ""
+        while path and path[-1] in ".,;:)":
+            trailing = path[-1] + trailing
+            path = path[:-1]
+        return rf"\url{{{match.group('base')}~{path}}}" + trailing
+
+    return pattern.sub(repl, text)
+
+
+def unwrap_source_page_hyperlinks(text: str) -> str:
+    """Remove extraction-only page links without changing visible source text.
+
+    Marker sometimes wraps a few letters from the source PDF in internal links,
+    including the first letter of a URL. Those wrappers split ordinary words
+    and prevent ``xurl`` from finding the complete address. Only generated
+    ``page-*`` destinations are unwrapped; real external and document links are
+    retained.
+    """
+
+    return SOURCE_PAGE_HYPERLINK_RE.sub(lambda match: match.group("text"), text)
+
+
+def fit_chapter_opening_figures(text: str, *, layout: str) -> str:
+    """Reserve room for a chapter title, opening figure, caption, and footer."""
+
+    max_height = ".60" if layout == "exact" else ".55"
+    lines = text.splitlines(keepends=True)
+    after_chapter = 0
+    for index, line in enumerate(lines):
+        if r"\chapter{" in line or r"\chapter[" in line:
+            after_chapter = 12
+            continue
+        if after_chapter <= 0:
+            continue
+        after_chapter -= 1
+        if r"\includegraphics[" not in line:
+            continue
+        lines[index] = re.sub(
+            r"max totalheight=\.[0-9]+\\textheight",
+            lambda _match: f"max totalheight={max_height}" + r"\textheight",
+            line,
+            count=1,
+        )
+        after_chapter = 0
+    return "".join(lines)
 
 
 def normalize_simple_array_column_counts(text: str) -> str:
@@ -893,9 +1064,11 @@ def scaled_display_math(body: str) -> str:
         "\n"
         + WIDE_MATH_BEGIN
         + "\n\\Needspace{6\\baselineskip}\n\\begin{center}\n"
-        "\\resizebox{.94\\linewidth}{!}{\\(\\displaystyle\n"
+        "\\begin{adjustbox}{max width=.94\\linewidth}\n"
+        "\\(\\displaystyle\n"
         + body
-        + "\n\\)}\n"
+        + "\n\\)\n"
+        "\\end{adjustbox}\n"
         "\\end{center}\n"
         + WIDE_MATH_END
         + "\n"
@@ -1104,6 +1277,7 @@ def postprocess_tex(tex_path: Path, *, layout: str) -> None:
         r"\\includegraphics[max width=.94\\linewidth,max totalheight=.70\\textheight,keepaspectratio]\1",
         text,
     )
+    text = fit_chapter_opening_figures(text, layout=layout)
     text = LONGTABLE_SPEC_RE.sub(
         lambda match: match.group(1) + normalize_longtable_spec(match.group(2)) + match.group(3),
         text,
@@ -1116,7 +1290,10 @@ def postprocess_tex(tex_path: Path, *, layout: str) -> None:
     # technical terms and chemical names to wrap on narrow pocket pages.
     text = text.replace(r"\raggedright\arraybackslash", r"\RaggedRight\arraybackslash")
     text = add_longtable_break_opportunities(text)
+    text = repair_split_uppercase_table_words(text)
+    text = unwrap_source_page_hyperlinks(text)
     text = wrap_plain_urls(text)
+    text = merge_split_url_tildes(text)
     # Pandoc emits literal blocks as the standard verbatim environment, whose
     # lines cannot wrap.  Technical prose frequently uses these blocks for
     # definitions and pseudocode, so keep the content literal while allowing
@@ -1126,6 +1303,7 @@ def postprocess_tex(tex_path: Path, *, layout: str) -> None:
         r"\begin{Verbatim}[breaklines=true,breakanywhere=true]",
     )
     text = text.replace(r"\end{verbatim}", r"\end{Verbatim}")
+    text = normalize_index_verbatim_blocks(text, layout=layout)
     if layout == "pocket":
         text = text.replace(
             r"\begin{longtable}",
@@ -1394,6 +1572,158 @@ def merge_marker_shard(
     return MARKDOWN_IMAGE_RE.sub(repl, markdown), copied
 
 
+def marker_block_kind(block: str) -> str:
+    stripped = block.strip()
+    if MARKER_SHARD_BOUNDARY_RE.fullmatch(stripped):
+        return "boundary"
+    if MARKDOWN_IMAGE_BLOCK_RE.fullmatch(stripped):
+        return "image"
+    if (
+        stripped.startswith(("#", "```", "~~~", "|", "- ", "* ", "+ ", "> "))
+        or re.match(r"^\d+[.)]\s", stripped)
+        or re.search(r"^\s*\|?[-:]{3,}(?:\|[-: ]{3,})+\|?\s*$", stripped, re.M)
+    ):
+        return "structure"
+    return "text"
+
+
+def looks_like_marker_caption(block: str) -> bool:
+    text = re.sub(r"\s+", " ", block).strip()
+    if not text or len(text) > 180:
+        return False
+    if re.match(r"^(?:fig(?:ure)?|plate|map|table|photo(?:graph)?|source|credit)\b", text, re.I):
+        return True
+    words = re.findall(r"[A-Za-z0-9À-ÖØ-öø-ÿ'’-]+", text)
+    return len(words) <= 10 and not re.search(r"[.!?][\"'”’)\]]?\s*$", text)
+
+
+def marker_text_continues(previous: str, following: str) -> bool:
+    """Return true only for boundary-evidenced prose continuations."""
+
+    left = re.sub(r"\s+", " ", previous).strip()
+    right = re.sub(r"\s+", " ", following).strip()
+    if not left or not right:
+        return False
+    if re.search(r"[.!?:;][\"'”’)\]]?\s*$", left):
+        return False
+    if marker_block_kind(following) != "text":
+        return False
+    if right[0].islower() or right[0] in ",.;:!?)]}”’":
+        return True
+    dangling = re.search(
+        r"\b(?:a|an|and|as|at|because|but|by|for|from|if|in|into|nor|of|on|or|"
+        r"over|than|that|the|their|then|through|to|under|upon|when|where|which|"
+        r"while|who|whose|with|without)\s*$",
+        left,
+        re.I,
+    )
+    return dangling is not None
+
+
+def join_marker_text(previous: str, following: str) -> str:
+    left = previous.rstrip()
+    right = following.lstrip()
+    if re.search(r"[A-Za-z]-$", left) and right[:1].islower():
+        return left[:-1] + right
+    return left + " " + right
+
+
+def normalize_marker_merged_markdown(markdown: str) -> tuple[str, dict[str, Any]]:
+    """Repair only page/shard-evidenced paragraph splits around figures.
+
+    The raw Marker output is retained separately. This pass never rewrites
+    ordinary paragraph boundaries: it joins prose only when a shard marker or
+    a floating image demonstrably interrupted an unfinished sentence.
+    """
+
+    blocks = [block.strip() for block in re.split(r"\n\s*\n+", markdown) if block.strip()]
+    output: list[str] = []
+    pending_text = ""
+    deferred_figures: list[str] = []
+    boundary_seen = False
+    figure_seen = False
+    joins: list[dict[str, Any]] = []
+    moved_figure_blocks = 0
+    boundaries_removed = 0
+
+    def flush() -> None:
+        nonlocal pending_text, deferred_figures, boundary_seen, figure_seen
+        if pending_text:
+            output.append(pending_text)
+        if deferred_figures:
+            output.extend(deferred_figures)
+        pending_text = ""
+        deferred_figures = []
+        boundary_seen = False
+        figure_seen = False
+
+    index = 0
+    while index < len(blocks):
+        block = blocks[index]
+        kind = marker_block_kind(block)
+        if kind == "boundary":
+            boundary_seen = True
+            boundaries_removed += 1
+            index += 1
+            continue
+        if kind == "image":
+            deferred_figures.append(block)
+            figure_seen = True
+            if index + 1 < len(blocks) and looks_like_marker_caption(blocks[index + 1]):
+                deferred_figures.append(blocks[index + 1])
+                index += 1
+            index += 1
+            continue
+        if kind == "structure":
+            flush()
+            output.append(block)
+            index += 1
+            continue
+
+        if not pending_text:
+            pending_text = block
+            index += 1
+            continue
+        if (boundary_seen or figure_seen) and marker_text_continues(pending_text, block):
+            before_tail = re.sub(r"\s+", " ", pending_text)[-120:]
+            after_head = re.sub(r"\s+", " ", block)[:120]
+            pending_text = join_marker_text(pending_text, block)
+            joins.append(
+                {
+                    "reason": (
+                        "shard-boundary-and-figure"
+                        if boundary_seen and figure_seen
+                        else "shard-boundary"
+                        if boundary_seen
+                        else "floating-figure"
+                    ),
+                    "before_tail": before_tail,
+                    "after_head": after_head,
+                    "deferred_figure_blocks": len(deferred_figures),
+                }
+            )
+            moved_figure_blocks += len(deferred_figures)
+            boundary_seen = False
+            figure_seen = bool(deferred_figures)
+            index += 1
+            continue
+        flush()
+        pending_text = block
+        index += 1
+    flush()
+
+    normalized = "\n\n".join(output).strip() + "\n"
+    return normalized, {
+        "version": MARKER_MERGE_NORMALIZER_VERSION,
+        "input_blocks": len(blocks),
+        "output_blocks": len(output),
+        "boundaries_removed": boundaries_removed,
+        "joined_continuations": len(joins),
+        "moved_figure_blocks": moved_figure_blocks,
+        "joins": joins,
+    }
+
+
 def marker_pdf_to_markdown_sharded(
     source: Path,
     task_dir: Path,
@@ -1407,12 +1737,16 @@ def marker_pdf_to_markdown_sharded(
     shard_root = task_dir / "work/marker-shards"
     media_dir = task_dir / "work/marker-merged/media"
     prepared = task_dir / "review/source-from-marker.md"
+    raw_prepared = task_dir / "review/source-from-marker.raw.md"
+    normalization_report_path = task_dir / "review/marker-normalization-report.json"
     merged_status_path = task_dir / "review/marker-merge-status.json"
 
     if force:
         shutil.rmtree(shard_root, ignore_errors=True)
         shutil.rmtree(media_dir.parent, ignore_errors=True)
         prepared.unlink(missing_ok=True)
+        raw_prepared.unlink(missing_ok=True)
+        normalization_report_path.unlink(missing_ok=True)
         merged_status_path.unlink(missing_ok=True)
     elif prepared.exists() and merged_status_path.exists():
         status = read_json(merged_status_path)
@@ -1421,6 +1755,7 @@ def marker_pdf_to_markdown_sharded(
             and status.get("page_count") == page_count
             and status.get("shard_pages") == shard_pages
             and status.get("status") == "complete"
+            and status.get("normalizer_version") == MARKER_MERGE_NORMALIZER_VERSION
         ):
             return prepared
 
@@ -1516,9 +1851,12 @@ def marker_pdf_to_markdown_sharded(
             }
         )
 
-    merged = "\n\n".join(parts).strip() + "\n"
+    raw_merged = "\n\n".join(parts).strip() + "\n"
+    merged, normalization_report = normalize_marker_merged_markdown(raw_merged)
     prepared.parent.mkdir(parents=True, exist_ok=True)
+    raw_prepared.write_text(raw_merged, encoding="utf-8")
     prepared.write_text(merged, encoding="utf-8")
+    write_json(normalization_report_path, normalization_report)
     if len(re.sub(r"\s+", "", merged)) < max(500, page_count * 80):
         raise RuntimeError(f"merged Marker output too short to trust: {prepared}")
     write_json(
@@ -1529,8 +1867,11 @@ def marker_pdf_to_markdown_sharded(
             "source_sha256": source_hash,
             "page_count": page_count,
             "shard_pages": shard_pages,
+            "normalizer_version": MARKER_MERGE_NORMALIZER_VERSION,
             "shards": shard_reports,
+            "raw_merged_markdown": str(raw_prepared.relative_to(ROOT)),
             "merged_markdown": str(prepared.relative_to(ROOT)),
+            "normalization_report": str(normalization_report_path.relative_to(ROOT)),
             "text_chars": len(re.sub(r"\s+", "", merged)),
             "image_references": total_images,
         },
@@ -1905,15 +2246,22 @@ def pandoc_to_tex(
     postprocess_tex(tex_path, layout=layout)
 
 
+def task_fix_path(task: dict[str, Any]) -> Path | None:
+    """Resolve optional source/TeX correction data with backward compatibility."""
+
+    raw_path = str(task.get("source_fixes") or task.get("tex_fixes") or "").strip()
+    if not raw_path:
+        return None
+    path = Path(raw_path)
+    return path if path.is_absolute() else ROOT / path
+
+
 def apply_task_tex_fixes(tex_path: Path, task: dict[str, Any], *, layout: str) -> None:
     """Apply narrow, source-evidenced repairs after deterministic conversion."""
 
-    raw_path = str(task.get("tex_fixes") or "").strip()
-    if not raw_path:
+    fix_path = task_fix_path(task)
+    if fix_path is None:
         return
-    fix_path = Path(raw_path)
-    if not fix_path.is_absolute():
-        fix_path = ROOT / fix_path
     data = read_json(fix_path)
     text = tex_path.read_text(encoding="utf-8", errors="replace")
     report_rows: list[dict[str, Any]] = []
@@ -1959,7 +2307,7 @@ def apply_task_tex_fixes(tex_path: Path, task: dict[str, Any], *, layout: str) -
     report_path = task_dir / "review/tex-fix-report.json"
     report = read_json(report_path) if report_path.exists() else {}
     report[layout] = {
-        "fix_file": str(fix_path.relative_to(ROOT)),
+        "fix_file": portable_path(fix_path),
         "replacements": report_rows,
     }
     write_json(report_path, report)
@@ -2034,24 +2382,34 @@ def extract_task_source_crops(source: Path, task: dict[str, Any], task_dir: Path
 
 
 def apply_task_markdown_fixes(source: Path, task: dict[str, Any], task_dir: Path) -> Path:
-    """Apply source-evidenced repairs before Pandoc changes Markdown structure."""
+    """Create the immutable-to-reviewed source boundary used by later stages.
 
-    raw_path = str(task.get("tex_fixes") or "").strip()
-    if not raw_path:
-        return source
-    fix_path = Path(raw_path)
-    if not fix_path.is_absolute():
-        fix_path = ROOT / fix_path
-    data = read_json(fix_path)
-    replacements = data.get("markdown_replacements") or []
-    if not replacements:
-        return source
+    The normalized extractor output is never edited in place. Task-specific
+    corrections must live in a JSON data file and cite their source evidence.
+    Even tasks without corrections receive ``source-reviewed.md`` so exact TeX
+    and multilingual generation consume one explicit, auditable contract.
+    """
 
     text = source.read_text(encoding="utf-8", errors="replace")
+    fix_path = task_fix_path(task)
+    data = read_json(fix_path) if fix_path is not None else {}
+    replacements = data.get("markdown_replacements") or []
     report_rows: list[dict[str, Any]] = []
     for index, item in enumerate(replacements, start=1):
         pattern = str(item.get("from") or "")
-        target = str(item.get("to") or "")
+        target_file = str(item.get("to_file") or "").strip()
+        target_path: Path | None = None
+        if target_file:
+            target_path = Path(target_file)
+            if not target_path.is_absolute():
+                target_path = ROOT / target_path
+            if not target_path.exists():
+                raise RuntimeError(
+                    f"Markdown fix {index} replacement file does not exist: {target_path}"
+                )
+            target = target_path.read_text(encoding="utf-8", errors="replace")
+        else:
+            target = str(item.get("to") or "")
         target = target.replace("{{TASK_DIR}}", task_dir.resolve().as_posix())
         if not pattern:
             continue
@@ -2074,18 +2432,24 @@ def apply_task_markdown_fixes(source: Path, task: dict[str, Any], task_dir: Path
             {
                 "index": index,
                 "matches": count,
+                "target_file": portable_path(target_path) if target_path is not None else "",
+                "target_sha256": sha256_file(target_path) if target_path is not None else "",
                 "source_evidence": item.get("source_evidence", ""),
                 "note": item.get("note", ""),
             }
         )
 
-    prepared = task_dir / "review/source-with-fixes.md"
+    prepared = task_dir / "review/source-reviewed.md"
+    prepared.parent.mkdir(parents=True, exist_ok=True)
     prepared.write_text(text, encoding="utf-8")
     write_json(
         task_dir / "review/markdown-fix-report.json",
         {
-            "source": str(source.relative_to(task_dir)),
-            "fix_file": str(fix_path.relative_to(ROOT)),
+            "source": portable_path(source),
+            "source_sha256": sha256_file(source),
+            "reviewed_markdown": portable_path(prepared),
+            "reviewed_sha256": sha256_file(prepared),
+            "fix_file": portable_path(fix_path) if fix_path is not None else "",
             "replacements": report_rows,
         },
     )
@@ -2123,7 +2487,7 @@ def repair_undefined_word_command(tex_path: Path, log_file: Path) -> bool:
         # after XeLaTeX has proved the line contains an undefined control
         # sequence. Adjacent valid commands such as ``\log\frac`` are retained
         # because ``frac`` is in the command set.
-        for candidate in re.finditer(r"(?<=[^\W\d_])\\([A-Za-z]{2,})", old):
+        for candidate in re.finditer(r"(?<=[^\W_])\\([A-Za-z]{2,})", old):
             if candidate.group(1) in KNOWN_LATEX_COMMANDS:
                 continue
             new = old[: candidate.start()] + old[candidate.start() + 1 :]
@@ -2195,16 +2559,76 @@ def pdf_text_chars(pdf: Path) -> int:
     return len(re.sub(r"\s+", "", result.stdout))
 
 
+def tex_figure_inventory(tex_path: Path) -> dict[str, Any]:
+    """Return ordered, source-verifiable evidence for every TeX figure.
+
+    A nonzero ``\includegraphics`` count is not enough for figure-rich books:
+    one surviving image could otherwise let a mostly stripped conversion pass.
+    Record each path, verify it exists, and hash the ordered content so exact
+    and pocket layouts can prove that they contain the same figure sequence.
+    """
+
+    tex_text = tex_path.read_text(encoding="utf-8", errors="replace")
+    figures: list[dict[str, Any]] = []
+    missing: list[str] = []
+    ordered_hashes: list[str] = []
+    for match in INCLUDEGRAPHICS_PATH_RE.finditer(tex_text):
+        raw_path = (match.group("detokenized") or match.group("plain") or "").strip()
+        # Pandoc normally emits plain paths. Handle its common TeX escapes
+        # conservatively without interpreting arbitrary TeX commands.
+        filesystem_path = (
+            raw_path.replace(r"\_", "_")
+            .replace(r"\%", "%")
+            .replace(r"\#", "#")
+            .replace(r"\&", "&")
+        )
+        candidate = Path(filesystem_path)
+        if not candidate.is_absolute():
+            candidate = (tex_path.parent / candidate).resolve()
+        exists = candidate.is_file()
+        row: dict[str, Any] = {
+            "index": len(figures) + 1,
+            "tex_path": raw_path,
+            "exists": exists,
+        }
+        if exists:
+            digest = sha256_file(candidate)
+            ordered_hashes.append(digest)
+            row.update(
+                {
+                    "resolved_path": str(candidate),
+                    "size_bytes": candidate.stat().st_size,
+                    "sha256": digest,
+                }
+            )
+        else:
+            missing.append(raw_path)
+        figures.append(row)
+    sequence_sha256 = hashlib.sha256(
+        "\n".join(ordered_hashes).encode("ascii")
+    ).hexdigest()
+    return {
+        "referenced_count": len(figures),
+        "existing_count": len(figures) - len(missing),
+        "missing_count": len(missing),
+        "missing_paths": missing,
+        "unique_content_count": len(set(ordered_hashes)),
+        "sequence_sha256": sequence_sha256,
+        "figures": figures,
+    }
+
+
 def validate_pdf(pdf: Path, log_path: Path, tex_path: Path) -> dict[str, Any]:
     log_text = log_path.read_text(encoding="utf-8", errors="replace") if log_path.exists() else ""
     overfull = [float(match.group(1)) for match in OVERFULL_RE.finditer(log_text)]
-    tex_text = tex_path.read_text(encoding="utf-8", errors="replace")
+    figure_inventory = tex_figure_inventory(tex_path)
     return {
         "pdf": str(pdf.relative_to(ROOT)),
         "pdfinfo": pdf_info(pdf),
         "text_chars": pdf_text_chars(pdf),
         "tex": str(tex_path.relative_to(ROOT)),
-        "includegraphics_count": tex_text.count("\\includegraphics"),
+        "includegraphics_count": figure_inventory["referenced_count"],
+        "figure_inventory": figure_inventory,
         "overfull_count": len(overfull),
         "worst_overfull_pt": max(overfull) if overfull else 0,
         "latex_error_markers": LATEX_ERROR_RE.findall(log_text)[:20],
@@ -2291,6 +2715,41 @@ def completion_issues(
                 )
         if int(source_report.get("embedded_images") or 0) > 0 and int(generated["includegraphics_count"]) == 0:
             issues.append("technical source has embedded images but generated TeX references none")
+        exact_figures = exact_report.get("figure_inventory") or {}
+        pocket_figures = pocket_report.get("figure_inventory") or {}
+        for layer_name, inventory in (("exact", exact_figures), ("pocket", pocket_figures)):
+            if int(inventory.get("missing_count") or 0):
+                issues.append(
+                    f"{layer_name} TeX has {inventory.get('missing_count')} missing figure paths"
+                )
+        if (
+            exact_figures.get("sequence_sha256")
+            and pocket_figures.get("sequence_sha256")
+            and exact_figures["sequence_sha256"] != pocket_figures["sequence_sha256"]
+        ):
+            issues.append("exact and pocket TeX do not preserve the same ordered figure sequence")
+
+        task_dir = (ROOT / exact_report["tex"]).parents[2]
+        marker_status_path = task_dir / "review/marker-merge-status.json"
+        if marker_status_path.exists():
+            marker_status = read_json(marker_status_path)
+            extracted_references = int(marker_status.get("image_references") or 0)
+            structure["marker_extraction"] = {
+                "status": marker_status.get("status", ""),
+                "image_references": extracted_references,
+                "text_chars": marker_status.get("text_chars", 0),
+                "shards": len(marker_status.get("shards") or []),
+            }
+            minimum_figure_ratio = float(task.get("minimum_extracted_figure_retention_ratio", 1.0))
+            for layer_name, inventory in (("exact", exact_figures), ("pocket", pocket_figures)):
+                retained = int(inventory.get("existing_count") or 0)
+                ratio = retained / extracted_references if extracted_references else 1.0
+                inventory["marker_reference_retention_ratio"] = round(ratio, 4)
+                if extracted_references and ratio < minimum_figure_ratio:
+                    issues.append(
+                        f"{layer_name} retains {retained}/{extracted_references} Marker figure "
+                        f"references ({ratio:.3f}; minimum {minimum_figure_ratio:.3f})"
+                    )
         minimum_math = int(task.get("minimum_math_blocks", 5))
         math_count = int(generated["display_math_count"]) + int(generated["inline_math_count"])
         if math_count < minimum_math:
@@ -2543,6 +3002,10 @@ def build_one(
             "status": "blocked" if validation_issues else "complete",
             "source": str(source.relative_to(ROOT)),
             "source_kind": source_kind,
+            "reviewed_source": portable_path(body_source) if pandoc_format == "markdown" else "",
+            "reviewed_source_sha256": (
+                sha256_file(body_source) if pandoc_format == "markdown" else ""
+            ),
             "started": started,
             "finished": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
             "exact": exact_report,

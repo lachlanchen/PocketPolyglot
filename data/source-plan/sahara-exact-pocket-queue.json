@@ -1,10 +1,24 @@
 {
   "schema_version": 1,
   "queue_id": "sahara-exact-pocket-2026-07-29",
-  "status": "prepared_not_started",
+  "status": "complete",
   "source_root": "sources/sahara",
   "workspace_root": "build-pocket",
   "runner": "scripts/books/build_pocket_tex_queue.py",
+  "completion_evidence": {
+    "status_files": [
+      "build-pocket/sahara-cultural-history/review/status.json",
+      "build-pocket/round-heads-sahara/review/status.json",
+      "build-pocket/origins-earth-human-history/review/status.json"
+    ],
+    "exact_pages": 796,
+    "pocket_pages": 1325,
+    "retained_figure_references": 138,
+    "missing_figure_references": 0,
+    "overfull_lines": 0,
+    "latex_error_markers": 0,
+    "validation_issues": 0
+  },
   "conversion_policy": {
     "mathpix": false,
     "body": "real TeX text and structure",
@@ -65,6 +79,7 @@
       "source_text_chars": 337057,
       "source_embedded_images": 175,
       "validation_profile": "technical_exact",
+      "source_fixes": "data/source-plan/sahara-exact-tex-fixes/round-heads-sahara.json",
       "marker_shard_pages": 20,
       "minimum_math_blocks": 0,
       "minimum_source_text_coverage_ratio": 0.7,
@@ -87,6 +102,21 @@
       "minimum_math_blocks": 0,
       "minimum_source_text_coverage_ratio": 0.75,
       "max_overfull_pt": 18.0,
+      "source_crops": [
+        {
+          "page": 38,
+          "clip_points": [
+            50,
+            70,
+            550,
+            705
+          ],
+          "dpi": 300,
+          "output": "review/source-crops/geological-timescale.png",
+          "source_evidence": "Source PDF page 38 is a designed geological-timescale chart. Marker flattened its merged cells, arrows, vertical labels, and chronology into a damaged table."
+        }
+      ],
+      "source_fixes": "data/source-plan/sahara-exact-tex-fixes/origins-earth-human-history.json",
       "rights_note": "Modern commercial edition supplied by the user. Use as a private source and do not publish a full derivative without permission."
     }
   ]

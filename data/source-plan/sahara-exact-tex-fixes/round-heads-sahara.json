@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "book_id": "round-heads-sahara",
+  "markdown_replacements": [
+    {
+      "regex": true,
+      "dotall": true,
+      "from": "(?m)^- Williams, M\\. A\\. J\\., 1984\\. Late Quaternary Prehistoric Environments in the\\s*\\n\\s*-\\s*Sahara\\. In",
+      "to": "- Williams, M. A. J., 1984. Late Quaternary Prehistoric Environments in the Sahara. In",
+      "expected_min": 1,
+      "source_evidence": "Round Heads source PDF pages 194-195",
+      "note": "Join one bibliography entry split at the source-page boundary."
+    },
+    {
+      "regex": true,
+      "dotall": true,
+      "from": "(?ms)^## INDEX\\s*$.*\\Z",
+      "to_file": "data/source-plan/sahara-exact-tex-fixes/round-heads-sahara-index.md",
+      "expected_min": 1,
+      "source_evidence": "Round Heads source PDF pages 196-199, embedded text blocks",
+      "note": "Replace Marker’s damaged two-column index with all 69 source-evidenced semantic entries."
+    }
+  ]
+}

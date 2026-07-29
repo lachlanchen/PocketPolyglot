@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "book_id": "origins-earth-human-history",
+  "markdown_replacements": [
+    {
+      "regex": true,
+      "dotall": true,
+      "from": "(?m)^\\|\\s*Era\\s*\\|\\s*Period\\s*\\|\\s*Epoch\\s*\\|\\s*Millions of years ago\\s*\\|\\n^\\|[-| ]+\\|\\n(?:^\\|[^\\n]*\\|\\n)+\\s*^Divisions of Earth's geological history\\s*$",
+      "to": "![Divisions of Earth's geological history]({{TASK_DIR}}/review/source-crops/geological-timescale.png)",
+      "expected_min": 1,
+      "source_evidence": "sources/sahara/earth-and-human-history/en/Origins - How Earth's History Shaped Human History - Lewis Dartnell.pdf, page 38",
+      "note": "Replace Marker’s damaged flattened table with the high-resolution source-page chart before both exact TeX and multilingual preparation."
+    }
+  ]
+}

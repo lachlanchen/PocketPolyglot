@@ -9,6 +9,7 @@ import re
 import shutil
 import textwrap
 import time
+from copy import deepcopy
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -19,6 +20,7 @@ from pypinyin import Style, pinyin
 from codex_chunk_worker import compact, extract_json, load_chunks, mentions_usage_limit, run_codex
 from codex_trilingual_parallel_json_worker import claim_chunk, iter_selected, release_claim, valid_existing
 from english_sentence_splitter import sentence_boundary_ends
+from japanese_ruby import tokenize_japanese
 from validate_trilingual_interlinear_json import (
     HAN_RE,
     KANA_RE,
@@ -541,18 +543,7 @@ def tokenize_ja_segment(orig: str, hira: str) -> list[dict[str, str]]:
 
 
 def tokenize_ja(text: str) -> list[dict[str, str]]:
-    tokens: list[dict[str, str]] = []
-    try:
-        segments = KAKASI.convert(str(text))
-    except Exception:
-        segments = [{"orig": str(text), "hira": japanese_reading_for_text(str(text))}]
-    for segment in segments:
-        for token in tokenize_ja_segment(str(segment.get("orig") or ""), str(segment.get("hira") or "")):
-            if "r" in token:
-                tokens.append(token)
-            else:
-                append_ja_text(tokens, token.get("t", ""))
-    return tokens
+    return tokenize_japanese(text)
 
 
 def usable_title(value: Any) -> str:
@@ -621,6 +612,9 @@ def promote_plain_chunk(source: dict[str, Any], plain: dict[str, Any]) -> dict[s
             "source_en": source_paragraph.get("en", ""),
             "units": [],
         }
+        for key in ("figures", "technical_assets", "source_pages"):
+            if key in source_paragraph:
+                strict_paragraph[key] = deepcopy(source_paragraph[key])
         if source_paragraph.get("zh"):
             strict_paragraph["source_zh"] = source_paragraph["zh"]
         if source_paragraph.get("ja"):

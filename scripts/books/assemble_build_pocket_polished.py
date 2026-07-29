@@ -645,6 +645,30 @@ def demote_secondary_captions(tex: str) -> str:
     return "".join(parts)
 
 
+def contains_only_captions(tex: str) -> bool:
+    """Return true when a translated table remainder contains only captions."""
+
+    residual = re.sub(
+        r"\\captionsetup(?:\[[^\]]*\])?\{[^{}]*\}\s*",
+        "",
+        tex,
+    )
+    marker = r"\caption{"
+    cursor = 0
+    found = False
+    while True:
+        start = residual.find(marker, cursor)
+        if start < 0:
+            return found and not residual[cursor:].strip()
+        if residual[cursor:start].strip():
+            return False
+        try:
+            _, cursor = braced_argument(residual, start + len(r"\caption"))
+        except ValueError:
+            return False
+        found = True
+
+
 def inject_fusion_preamble(tex: str) -> str:
     marker = r"\begin{document}"
     if FUSION_PREAMBLE.strip() in tex or "BUILD_POCKET_POLISHED_FUSION_BEGIN" in tex:
@@ -767,6 +791,25 @@ def fuse_english_main_japanese_secondary(
             for environment in TABLE_ENVIRONMENTS
         )
         if has_complete_en_table and has_complete_ja_table:
+            en_body, trailing_scaffold, caption_secondary = (
+                split_shared_environment_scaffold(en_tex, ja_tex)
+            )
+            if trailing_scaffold and contains_only_captions(caption_secondary):
+                parts.append(en_body)
+                secondary = demote_secondary_captions(caption_secondary.strip())
+                secondary = apply_furigana_overrides(secondary)
+                secondary, current = annotate_japanese_tex(secondary)
+                furigana.merge(current)
+                parts.append(
+                    "\n\\par\\smallskip\n"
+                    "\\begingroup\n"
+                    "\\JpSecondaryFont\\fontsize{8.6pt}{14.2pt}\\selectfont"
+                    "\\color{JpSecondaryInk}\n"
+                    f"{secondary}\\par\n"
+                    "\\endgroup\n"
+                )
+                parts.append(trailing_scaffold)
+                return
             parts.append(en_tex)
             secondary = apply_furigana_overrides(ja_tex.strip())
             secondary, current = annotate_japanese_tex(secondary)

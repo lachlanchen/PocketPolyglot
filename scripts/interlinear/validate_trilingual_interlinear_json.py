@@ -269,13 +269,14 @@ def validate_ja_tokens(tokens: Any, where: str, errors: list[str], *, require_ja
         if reading:
             furigana_parts.append(reading)
         has_kanji = bool(HAN_RE.search(text))
-        is_single_kanji = bool(SINGLE_HAN_RE.fullmatch(text))
-        if has_kanji and not is_single_kanji:
-            errors.append(f"{where}[{token_index}]: Japanese kanji tokens must be exactly one kanji character")
-        if is_single_kanji and not reading:
-            errors.append(f"{where}[{token_index}]: Japanese kanji token needs furigana")
-        if reading and not is_single_kanji:
-            errors.append(f"{where}[{token_index}]: furigana may only be attached to one Japanese kanji character")
+        if has_kanji and not reading:
+            errors.append(f"{where}[{token_index}]: Japanese kanji-bearing token needs furigana")
+        if reading and not has_kanji:
+            errors.append(f"{where}[{token_index}]: furigana may only be attached to a Japanese kanji-bearing token")
+        if reading and (len(text) > 18 or any(char.isspace() for char in text)):
+            errors.append(
+                f"{where}[{token_index}]: ruby base must be a short word or stem, not a long phrase"
+            )
     text = "".join(text_parts)
     readings = "".join(furigana_parts)
     if require_japanese and not (KANA_RE.search(text) or KANA_RE.search(readings)):

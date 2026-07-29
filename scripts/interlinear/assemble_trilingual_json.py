@@ -13,6 +13,7 @@ from typing import Any
 import pykakasi
 from pypinyin import Style, pinyin
 
+from japanese_ruby import tokenize_japanese
 from validate_trilingual_interlinear_json import validate_chunk
 
 
@@ -63,31 +64,7 @@ def append_ja_text(tokens: list[dict[str, str]], text: str) -> None:
 
 
 def tokenize_ja_title(text: str) -> list[dict[str, str]]:
-    tokens: list[dict[str, str]] = []
-    try:
-        segments = KAKASI.convert(str(text))
-    except Exception:
-        segments = [{"orig": str(text), "hira": ""}]
-    for segment in segments:
-        orig = str(segment.get("orig") or "")
-        hira = str(segment.get("hira") or "")
-        if not HAN_RE.search(orig):
-            append_ja_text(tokens, orig)
-            continue
-        kanji_count = sum(1 for char in orig if SINGLE_HAN_RE.fullmatch(char))
-        reading_parts = [hira] if kanji_count == 1 and hira else (list(hira) if len(hira) >= kanji_count else [])
-        reading_index = 0
-        for char in orig:
-            if SINGLE_HAN_RE.fullmatch(char):
-                if reading_parts:
-                    reading = reading_parts[min(reading_index, len(reading_parts) - 1)]
-                else:
-                    reading = str(KAKASI.convert(char)[0].get("hira") or "よみ")
-                tokens.append({"t": char, "r": reading})
-                reading_index += 1
-            else:
-                append_ja_text(tokens, char)
-    return tokens or plain_title(text)
+    return tokenize_japanese(text)
 
 
 def title_tokens(manifest: dict[str, Any], lang: str) -> list[dict[str, str]]:

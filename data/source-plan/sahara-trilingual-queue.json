@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "queue_id": "sahara-trilingual-after-exact-2026-07-29",
-  "status": "prepared_waiting_for_exact_tex",
+  "status": "chunked_launchable",
   "model": "gpt-5.6-sol",
   "reasoning": "low",
   "workers": 3,
@@ -15,6 +15,7 @@
   "generation_contract": {
     "dependency": "Do not prepare multilingual chunks until the matching exact TeX task is complete and validated.",
     "text_spine": "Use the reviewed exact TeX body as the English alignment spine. The original PDF remains page evidence.",
+    "multilingual_scope": "Translate the source-ordered reading body, captions, maps, tables, and figure anchors between each task's start and stop markers. The exact and exact-derived pocket editions remain the complete archival editions, including front matter, bibliography, notes, and index.",
     "translation_quality": "Complete, accurate, natural modern Japanese and modern Chinese; retain names, dates, archaeological terminology, quotations, notes, and factual nuance.",
     "figure_policy": "Carry figure, photograph, map, table, and caption anchors from exact TeX into the multilingual TeX output. Never send binary figures through the language model.",
     "grammar_analysis": "Required for English, Japanese, and Chinese with normalized color roles. Preserve English spaces and add Japanese furigana only to kanji-bearing tokens.",
@@ -31,17 +32,31 @@
       "author": "Eamonn Gearon",
       "task_mode": "trilingual_illustrated_nonfiction_en_source_generated_zh_ja",
       "source_path": "sources/sahara/cultural-history/en/The Sahara - A Cultural History - Eamonn Gearon.pdf",
+      "source_exact_markdown": "build-pocket/sahara-cultural-history/review/source-reviewed.md",
+      "source_exact_status": "build-pocket/sahara-cultural-history/review/status.json",
       "source_exact_tex": "build-pocket/sahara-cultural-history/exact/tex/book.tex",
       "source_exact_pdf": "build-pocket/sahara-cultural-history/exact/book.pdf",
       "source_pocket_pdf": "build-pocket/sahara-cultural-history/pocket-large-font/book.pdf",
+      "allow_markdown_headings": true,
+      "start_marker": "Preface and Acknowledgments",
+      "start_marker_exact": true,
+      "stop_markers": [
+        "Further Reading",
+        "Index"
+      ],
       "depends_on": {
         "queue": "data/source-plan/sahara-exact-pocket-queue.json",
         "book_id": "sahara-cultural-history",
         "required_status": "complete"
       },
-      "status": "waiting_for_exact_tex",
-      "launchable": false,
-      "min_chunk_count": 140
+      "status": "chunked_launchable",
+      "launchable": true,
+      "min_chunk_count": 140,
+      "book_plan": "books/sahara-cultural-history/book-plan.json",
+      "chunks_manifest": "books/sahara-cultural-history/work/trilingual/chunks/manifest.json",
+      "chunk_count": 250,
+      "english_chapter_count": 62,
+      "prepared_chunks_at": "2026-07-29T14:15:26.179290+00:00"
     },
     {
       "priority": 2,
@@ -52,9 +67,18 @@
       "author": "Jitka Soukopova",
       "task_mode": "trilingual_illustrated_nonfiction_en_source_generated_zh_ja",
       "source_path": "sources/sahara/rock-art/en/Round Heads - The Earliest Rock Paintings in the Sahara - Jitka Soukopova.pdf",
+      "source_exact_markdown": "build-pocket/round-heads-sahara/review/source-reviewed.md",
+      "source_exact_status": "build-pocket/round-heads-sahara/review/status.json",
       "source_exact_tex": "build-pocket/round-heads-sahara/exact/tex/book.tex",
       "source_exact_pdf": "build-pocket/round-heads-sahara/exact/book.pdf",
       "source_pocket_pdf": "build-pocket/round-heads-sahara/pocket-large-font/book.pdf",
+      "allow_markdown_headings": true,
+      "start_marker": "CENTRAL SAHARA: CLIMATE AND ARCHAEOLOGY",
+      "start_marker_exact": true,
+      "stop_markers": [
+        "Bibliography",
+        "Index"
+      ],
       "source_references": [
         "sources/sahara/rock-art/open-access-en/ICOMOS-Rock-Art-of-Sahara-and-North-Africa-2007.pdf"
       ],
@@ -63,9 +87,14 @@
         "book_id": "round-heads-sahara",
         "required_status": "complete"
       },
-      "status": "waiting_for_exact_tex",
-      "launchable": false,
-      "min_chunk_count": 100
+      "status": "chunked_launchable",
+      "launchable": true,
+      "min_chunk_count": 100,
+      "book_plan": "books/round-heads-sahara/book-plan.json",
+      "chunks_manifest": "books/round-heads-sahara/work/trilingual/chunks/manifest.json",
+      "chunk_count": 171,
+      "english_chapter_count": 60,
+      "prepared_chunks_at": "2026-07-29T14:15:26.179299+00:00"
     },
     {
       "priority": 3,
@@ -76,17 +105,33 @@
       "author": "Lewis Dartnell",
       "task_mode": "trilingual_illustrated_nonfiction_en_source_generated_zh_ja",
       "source_path": "sources/sahara/earth-and-human-history/en/Origins - How Earth's History Shaped Human History - Lewis Dartnell.pdf",
+      "source_exact_markdown": "build-pocket/origins-earth-human-history/review/source-reviewed.md",
+      "source_exact_status": "build-pocket/origins-earth-human-history/review/status.json",
       "source_exact_tex": "build-pocket/origins-earth-human-history/exact/tex/book.tex",
       "source_exact_pdf": "build-pocket/origins-earth-human-history/exact/book.pdf",
       "source_pocket_pdf": "build-pocket/origins-earth-human-history/pocket-large-font/book.pdf",
+      "allow_markdown_headings": true,
+      "start_marker": "Introduction",
+      "start_marker_exact": true,
+      "stop_markers": [
+        "Acknowledgements",
+        "Index"
+      ],
       "depends_on": {
         "queue": "data/source-plan/sahara-exact-pocket-queue.json",
         "book_id": "origins-earth-human-history",
         "required_status": "complete"
       },
-      "status": "waiting_for_exact_tex",
-      "launchable": false,
-      "min_chunk_count": 170
+      "status": "chunked_launchable",
+      "launchable": true,
+      "min_chunk_count": 170,
+      "book_plan": "books/origins-earth-human-history/book-plan.json",
+      "chunks_manifest": "books/origins-earth-human-history/work/trilingual/chunks/manifest.json",
+      "chunk_count": 260,
+      "english_chapter_count": 74,
+      "prepared_chunks_at": "2026-07-29T14:15:26.179303+00:00"
     }
-  ]
+  ],
+  "multilingual_scope_note": "The three exact TeX and exact-derived pocket books are complete source reconstructions. The trilingual queue is a source-ordered reading edition and does not claim translated bibliography/index apparatus unless a later explicit apparatus task adds it.",
+  "last_chunk_preparation_at": "2026-07-29T14:15:26.179306+00:00"
 }
