@@ -47,7 +47,10 @@ JA_BIBLIO_NOTE_RE = re.compile(r"[『』「」（）()・]|(?:第?\d+)|[巻卷�
 JA_FRONTMATTER_NOTE_RE = re.compile(r"(?:目次|目録|内容|著者|訳者|第一部|第二部|第三部|第四部|第五部|第[一二三四五六七八九十百]+部)")
 DOT_LEADER_RE = re.compile(r"(?:[.．。·・]{4,}|…{2,})")
 RECOVERED_INDEX_ENTRY_RE = re.compile(r".{2,180}\s+—\s+\d{1,4}")
-SIMPLIFIED_ONLY_RE = re.compile(r"[这们为说对见页卷诗选节后时个尔苏卢马亚德释从]")
+# Keep this to characters that are strong simplified-Chinese signals in modern
+# Japanese. Characters such as 后, 卷, and 德 also occur in legitimate Japanese
+# names, historical titles, and bibliography rows.
+SIMPLIFIED_ONLY_RE = re.compile(r"[这们为说对见页诗选节时个尔苏卢马亚释从]")
 
 
 def load_ja_reading_overrides(path_value: str = "") -> dict[str, str]:

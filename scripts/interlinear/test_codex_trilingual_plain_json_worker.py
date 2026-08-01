@@ -6,6 +6,7 @@ from __future__ import annotations
 import unittest
 
 from codex_trilingual_plain_json_worker import (
+    kanji_note_plain_errors_are_promotable,
     promote_plain_chunk,
     prompt_for_plain_chunk,
     source_unit_plan,
@@ -204,6 +205,57 @@ class TrilingualPlainPromotionTest(unittest.TestCase):
         }
 
         self.assertEqual(validate_plain_chunk(source, plain), [])
+
+    def test_all_kanji_japanese_bibliography_is_promotable(self) -> None:
+        source = {
+            "chunk_id": "fixture-c0001",
+            "chapter_id": "chapter-001",
+            "chapter_number": 1,
+            "source_spine_lang": "en",
+            "paragraphs": [
+                {
+                    "id": "fixture-p0001",
+                    "en": "Gien Jugo nikki, volume 1, page 219.",
+                }
+            ],
+        }
+        plain = {
+            "chunk_id": "fixture-c0001",
+            "paragraphs": [
+                {
+                    "id": "fixture-p0001",
+                    "units": [
+                        {
+                            "unit_id": "fixture-p0001-u001",
+                            "ja": "『義演准后日記』第1巻、219頁。",
+                            "zh": "《义演准后日记》第一卷，第219页。",
+                        }
+                    ],
+                }
+            ],
+        }
+
+        errors = validate_plain_chunk(source, plain)
+        self.assertTrue(errors)
+        self.assertTrue(kanji_note_plain_errors_are_promotable(plain, errors))
+
+    def test_simplified_chinese_leak_is_not_promotable_as_japanese_bibliography(self) -> None:
+        plain = {
+            "paragraphs": [
+                {
+                    "units": [
+                        {
+                            "ja": "『这本书』第1卷、219页。",
+                        }
+                    ],
+                }
+            ],
+        }
+        errors = [
+            "paragraphs[0].units[0].ja: Japanese row must contain kana; pure Han text is usually Chinese, not Japanese"
+        ]
+
+        self.assertFalse(kanji_note_plain_errors_are_promotable(plain, errors))
 
     def test_japanese_tokenizer_preserves_latin_diacritics_exactly(self) -> None:
         text = "GyūichiとShima Shōzō、Tçuzzuが記した。"
