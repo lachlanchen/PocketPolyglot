@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "queue_id": "sengoku-history-trilingual-2026-08-01",
-  "status": "running_first_book",
+  "status": "validating_repaired_first_book_pilot",
   "description": "Quality-ranked PocketPolyglot queue for user-supplied Sengoku history, primary-source translation, reference works, and historical novels.",
   "model": "gpt-5.6-sol",
   "reasoning": "low",
@@ -308,10 +308,10 @@
           "zh": "信长"
         }
       ],
-      "status": "running_trilingual_generation",
+      "status": "prepared_repaired_pilot_required",
       "launchable": true,
-      "quality_gate_status": "passed repaired chunks 3-8 with gpt-5.6-sol low; chunk 8 regenerated in isolation with 弾正台, 弾正忠, 御史, and 霜台 verified before bulk resume",
-      "active_session": "zhjpbook-sengoku-chronicle-gpt56",
+      "quality_gate_status": "source spine rebuilt after monitoring found alternating prefix/suffix running headers and overlong chronology units; shared cleanup now removes both header directions and losslessly bounds every source unit to 900 characters; fresh chunks 11-15 pilot required before bulk resume",
+      "active_session": null,
       "pilot_valid_chunks": [
         3,
         4,
@@ -321,9 +321,9 @@
       ],
       "book_plan": "books/chronicle-lord-nobunaga/book-plan.json",
       "chunks_manifest": "books/chronicle-lord-nobunaga/work/trilingual/chunks/manifest.json",
-      "chunk_count": 464,
+      "chunk_count": 472,
       "english_chapter_count": 18,
-      "prepared_chunks_at": "2026-08-01T14:18:51.920558+00:00"
+      "prepared_chunks_at": "2026-08-01T15:12:53.463380+00:00"
     },
     {
       "priority": 2,

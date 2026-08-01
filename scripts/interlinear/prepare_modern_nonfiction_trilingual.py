@@ -655,11 +655,14 @@ def promote_task_markdown_heading(raw_line: str, task: dict[str, Any]) -> str:
 
 
 def drop_repeated_page_headers(lines: list[str]) -> list[str]:
-    """Drop running headers like `Roads to Reality 17`.
+    """Drop repeated running headers on left- and right-facing pages.
 
-    They are not always page numbers alone, so they survive `clean_line()` and
-    can be mistaken for section headings. We only remove bases that recur with
-    page-number suffixes, which avoids deleting a real one-off heading.
+    Running heads alternate between forms such as `Roads to Reality 17` and
+    `18 Roads to Reality`. They are not always page numbers alone, so they
+    survive `clean_line()` and can be joined into page-spanning prose. Remove
+    only exact header bases that recur with decimal page numbers. Requiring a
+    repeated base avoids deleting one-off dates, numbered list items, or real
+    chapter headings such as `BOOK I`.
     """
 
     base_counts: dict[str, int] = {}
@@ -668,9 +671,13 @@ def drop_repeated_page_headers(lines: list[str]) -> list[str]:
         if line.lstrip().startswith("#"):
             parsed.append(None)
             continue
-        match = re.match(r"^(.{4,70}?)\s+\d{1,4}$", line)
-        if match and not SENTENCE_END_RE.search(match.group(1)):
-            base = compact(match.group(1)).casefold()
+        suffix_match = re.match(r"^(.{4,70}?)\s+\d{1,4}$", line)
+        prefix_match = re.match(r"^\d{1,4}\s+(.{4,70}?)$", line)
+        header = suffix_match.group(1) if suffix_match else (
+            prefix_match.group(1) if prefix_match else ""
+        )
+        if header and not SENTENCE_END_RE.search(header):
+            base = compact(header).casefold()
             base_counts[base] = base_counts.get(base, 0) + 1
             parsed.append((base, line))
         else:
@@ -902,6 +909,39 @@ def english_line_has_terminal_boundary(text: str) -> bool:
     return any(end == len(sentinel) for end in sentence_boundary_ends(sentinel))
 
 
+def split_overlong_english_piece(text: str, *, max_chars: int) -> list[str]:
+    """Losslessly split long timeline/list prose at the strongest nearby boundary."""
+
+    remaining = text.strip()
+    out: list[str] = []
+    minimum_cut = max(1, int(max_chars * 0.55))
+    while len(remaining) > max_chars:
+        window = remaining[: max_chars + 1]
+        candidates: list[int] = []
+        for match in re.finditer(r"\s+(?=(?:1[0-9]{3}|20[0-9]{2})\s+[—–-]\s)", window):
+            candidates.append(match.start())
+        for match in re.finditer(r"(?:[;.!?]|\s[—–])\s+", window):
+            candidates.append(match.end())
+        for match in re.finditer(r"[,)]\s+", window):
+            candidates.append(match.end())
+        candidates = [position for position in candidates if minimum_cut <= position <= max_chars]
+        if candidates:
+            cut = max(candidates)
+        else:
+            whitespace = [match.start() for match in re.finditer(r"\s+", window)]
+            usable = [position for position in whitespace if minimum_cut <= position <= max_chars]
+            cut = max(usable) if usable else max_chars
+        piece = remaining[:cut].strip()
+        if not piece:
+            piece = remaining[:max_chars]
+            cut = max_chars
+        out.append(piece)
+        remaining = remaining[cut:].strip()
+    if remaining:
+        out.append(remaining)
+    return out
+
+
 def split_cjk_units(text: str, *, max_chars: int) -> list[str]:
     sentence_ends = set("。！？!?；;")
     closers = set("」』”’）)]】〉》")
@@ -939,7 +979,13 @@ def split_cjk_units(text: str, *, max_chars: int) -> list[str]:
 
 
 def split_source_units(text: str, lang: str, *, max_chars: int) -> list[str]:
-    return split_english_units(text, max_chars=max_chars) if lang == "en" else split_cjk_units(text, max_chars=max_chars)
+    if lang != "en":
+        return split_cjk_units(text, max_chars=max_chars)
+    return [
+        segment
+        for piece in split_english_units(text, max_chars=max_chars)
+        for segment in split_overlong_english_piece(piece, max_chars=max_chars)
+    ]
 
 
 def markdown_figure_from_parts(

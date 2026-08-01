@@ -13,7 +13,7 @@ historical evidence.
 
 | Priority | Book | Role / quality | Preparation status | Chunks | Chapters |
 | ---: | --- | --- | --- | ---: | ---: |
-| 1 | `The Chronicle of Lord Nobunaga` / `信長公記` | A+ scholarly English translation of a primary source | Running after repaired `gpt-5.6-sol` low pilot passed; 6/464 accepted at launch | 464 | 18 |
+| 1 | `The Chronicle of Lord Nobunaga` / `信長公記` | A+ scholarly English translation of a primary source | Rebuilt after source-cleaning repair; 10/472 retained and a fresh chunks 11--15 pilot is required before bulk resume | 472 | 18 |
 | 2 | `Japan Emerging: Premodern History to 1850` | A modern academic survey | Blocked: page-aware outline segmentation required | 0 | 0 |
 | 3 | Mary Elizabeth Berry, `Hideyoshi` | A scholarly monograph | Launchable | 292 | 9 |
 | 4 | George Sansom, `A History of Japan, 1334-1615` | A- classic synthesis; dated in places | Launchable | 521 | 26 |
@@ -119,6 +119,20 @@ novels must never be used to fill gaps in scholarly claims.
   `総代` / `总代`. The run was stopped after chunk 10. The per-book terminology
   contract now requires `霜台`, retains `弾正台`, `弾正忠`, and `御史`, and
   regenerates only affected chunk 8 rather than discarding valid work.
+- Monitoring the next bulk sample exposed an extraction defect rather than a
+  translation defect: alternating page headers occurred both as `header 17`
+  and `18 header`, while the old shared cleaner recognized only the first
+  direction. The run was stopped before further promotion. The generic cleaner
+  now removes only repeated exact bases in both directions, with a regression
+  test that preserves real headings such as `BOOK I`.
+- Chronology and list paragraphs used em dashes rather than sentence-final
+  punctuation, producing source units as long as 10,459 characters. The shared
+  splitter now uses lossless boundary-aware subdivision. The rebuilt manifest
+  has 472 chunks and 2,253 source units, every unit is at most 900 characters,
+  and concatenating the split units reproduces the cleaned source text.
+- Valid chunks 1--10 remain current. Pre-repair candidates, rejected attempts,
+  and stale chunks 11--12 are archived under the book work tree; no generated
+  translation was silently deleted or reused against a changed source unit.
 - Name authority checks use the National Diet Library/CiNii records for
   [土橋八千太](https://id.ndl.go.jp/auth/ndlna/00086909) and
   [Japanese Chronological Tables](https://ci.nii.ac.jp/ncid/BA14297025).
@@ -141,7 +155,10 @@ A local Marker/Surya sample was run over the preface pages and compared with
 embedded `pdftotext` extraction. Marker preserved emphasis and joined
 page-spanning prose, but also inserted running headers such as `preface xi` and
 `xii preface` into sentences. For this born-digital prose book, cleaned embedded
-text is therefore the higher-fidelity translation spine. The shared structured
+text is therefore the higher-fidelity translation spine. The cleaner now
+recognizes repeated page heads whether the page number precedes or follows the
+header, and long timeline/list units are losslessly bounded before model calls.
+The shared structured
 local extraction remains required for two-column, scanned, illustrated, and
 figure-bearing books later in the queue.
 

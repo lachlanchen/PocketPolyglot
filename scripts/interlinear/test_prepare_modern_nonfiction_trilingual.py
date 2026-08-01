@@ -11,6 +11,7 @@ from prepare_modern_nonfiction_trilingual import (
     canonical_chapter_title,
     clean_line,
     clean_markdown_line,
+    drop_repeated_page_headers,
     english_line_has_terminal_boundary,
     find_start,
     is_heading_line,
@@ -27,6 +28,40 @@ class IllustratedNonfictionPreparationTest(unittest.TestCase):
             with self.subTest(header=header):
                 self.assertEqual(clean_line(header, "A Book"), "")
         self.assertEqual(clean_line("BOOK XV", "A Book"), "BOOK XV")
+
+    def test_repeated_page_headers_are_removed_in_both_directions(self) -> None:
+        self.assertEqual(
+            drop_repeated_page_headers(
+                [
+                    "Previous prose continues",
+                    "4 chronology & dramatis personae",
+                    "on the next page.",
+                    "chronology & dramatis personae 5",
+                    "6 chronology & dramatis personae",
+                    "52 [“initial book”]",
+                    "Body text.",
+                    "54 [“initial book”]",
+                    "what happened before Nobunaga’s march on Kyoto 53",
+                    "More body text.",
+                    "what happened before Nobunaga’s march on Kyoto 55",
+                    "BOOK I",
+                ]
+            ),
+            [
+                "Previous prose continues",
+                "",
+                "on the next page.",
+                "",
+                "",
+                "",
+                "Body text.",
+                "",
+                "",
+                "More body text.",
+                "",
+                "BOOK I",
+            ],
+        )
 
     def test_all_caps_chapter_heading_survives_artifact_filter(self) -> None:
         self.assertEqual(clean_line("CHAPTER I", "A Book"), "CHAPTER I")
@@ -87,6 +122,20 @@ class IllustratedNonfictionPreparationTest(unittest.TestCase):
         )
         self.assertFalse(english_line_has_terminal_boundary("Looking up the Vocabvlario s. v."))
         self.assertTrue(english_line_has_terminal_boundary("Tôzan corrected the reading."))
+
+    def test_overlong_timeline_is_split_losslessly_at_entry_boundaries(self) -> None:
+        text = " ".join(
+            [
+                "1534 — Nobunaga is born; the family remains in Owari",
+                "1542 — Nobuhide campaigns in Mikawa; the army returns",
+                "1544 — The campaign moves into Mino; resistance continues",
+                "1546 — Kichibōshi celebrates his coming of age",
+            ]
+        )
+        units = split_source_units(text, "en", max_chars=95)
+        self.assertGreater(len(units), 1)
+        self.assertTrue(all(len(unit) <= 95 for unit in units))
+        self.assertEqual(" ".join(units), text)
 
     def test_chinese_markdown_spine_preserves_body_and_headings(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
