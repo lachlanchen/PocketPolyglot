@@ -137,6 +137,9 @@ novels must never be used to fill gaps in scholarly claims.
   Verified first-book spellings such as `織田吉法師`, `今川義元`, `斎藤道三`,
   `足利義昭`, `朝倉義景`, and `浅井長政` live in the project terminology sheet,
   not in shared worker code.
+- The chronology pilot additionally resolves `Yamaguchi Kurōjirō` as
+  `山口九郎二郎`. The spelling is present in `信長公記`-based source evidence;
+  the superficially plausible `山口九郎次郎` is rejected for this book.
 - Flattened dot-leader lists are now reconstructed deterministically before
   model calls: for example, `Map 1. Owari Province ... 52` becomes one clean
   indivisible source unit, rather than shifting page 52 onto the following map
