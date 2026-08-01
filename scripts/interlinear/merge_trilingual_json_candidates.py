@@ -8,6 +8,7 @@ import json
 import os
 import shutil
 import subprocess
+from copy import deepcopy
 from pathlib import Path
 from typing import Any
 
@@ -32,6 +33,43 @@ def is_valid_existing(path: Path, source: dict[str, Any]) -> bool:
         return False
 
 
+def canonicalize_chapter_title(
+    data: dict[str, Any],
+    source: dict[str, Any],
+    canonical_titles: dict[str, dict[str, Any]],
+) -> bool:
+    """Keep one validated multilingual title for every manifest chapter.
+
+    Parallel workers may produce equally valid but slightly different title
+    translations for consecutive chunks in one chapter. Manifest order is
+    authoritative: the first validated chunk establishes the title, and later
+    chunks reuse it without another model call.
+    """
+    chapter = data.get("chapter")
+    if not isinstance(chapter, dict):
+        return False
+    title = chapter.get("title")
+    if not isinstance(title, dict):
+        return False
+    chapter_id = str(source.get("chapter_id") or chapter.get("id") or "").strip()
+    if not chapter_id:
+        return False
+    canonical = canonical_titles.get(chapter_id)
+    if canonical is None:
+        canonical_titles[chapter_id] = deepcopy(title)
+        return False
+    if title == canonical:
+        return False
+    chapter["title"] = deepcopy(canonical)
+    return True
+
+
+def write_atomic_json(path: Path, data: dict[str, Any]) -> None:
+    tmp_path = path.with_suffix(".tmp")
+    tmp_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    tmp_path.replace(path)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--chunks-jsonl", required=True)
@@ -53,6 +91,7 @@ def main() -> int:
 
     merged = 0
     merged_ids: list[str] = []
+    canonical_titles: dict[str, dict[str, Any]] = {}
     known_ids = {chunk["chunk_id"] for chunk in sources}
     for stray_path in sorted(candidate_dir.glob("*.json")):
         if stray_path.stem not in known_ids:
@@ -61,14 +100,35 @@ def main() -> int:
     for source in sources:
         chunk_id = source["chunk_id"]
         canonical_path = canonical_dir / f"{chunk_id}.json"
-        if is_valid_existing(canonical_path, source):
-            continue
+        if canonical_path.exists():
+            try:
+                canonical_data = load_json(canonical_path)
+                canonical_errors = validate_chunk(source, canonical_data)
+            except Exception:
+                canonical_errors = ["could not load existing canonical chunk"]
+            if not canonical_errors:
+                title_changed = canonicalize_chapter_title(
+                    canonical_data,
+                    source,
+                    canonical_titles,
+                )
+                if title_changed:
+                    normalized_errors = validate_chunk(source, canonical_data)
+                    if normalized_errors:
+                        raise RuntimeError(
+                            f"canonical title normalization invalidated {chunk_id}: "
+                            + "; ".join(normalized_errors[:10])
+                        )
+                    write_atomic_json(canonical_path, canonical_data)
+                    print(f"normalized_chapter_title {chunk_id}")
+                continue
         candidate_path = candidate_dir / f"{chunk_id}.json"
         if not candidate_path.exists():
             print(f"waiting_for={chunk_id}")
             break
         try:
             data = load_json(candidate_path)
+            canonicalize_chapter_title(data, source, canonical_titles)
             errors = validate_chunk(source, data)
         except Exception as exc:
             errors = [str(exc)]
@@ -78,9 +138,7 @@ def main() -> int:
             (reject_path.with_suffix(".errors.txt")).write_text("\n".join(errors) + "\n", encoding="utf-8")
             print(f"rejected {chunk_id}: {'; '.join(errors[:10])}")
             break
-        tmp_path = canonical_path.with_suffix(".tmp")
-        tmp_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        tmp_path.replace(canonical_path)
+        write_atomic_json(canonical_path, data)
         shutil.move(str(candidate_path), merged_dir / candidate_path.name)
         merged += 1
         merged_ids.append(chunk_id)

@@ -96,6 +96,8 @@ const THEME_HINTS = {
     "Taisho-era elegance, falling snow, white camellia, aristocratic mansion garden, restrained romantic melancholy, refined Japanese literary cover",
   "inugami-curse":
     "misty lakeside estate, old family crest impression without readable symbols, dark water, inheritance mystery, classic Japanese detective atmosphere",
+  "chronicle-lord-nobunaga":
+    "Azuchi-Momoyama chronicle atmosphere, Owari landscape and distant castle at dawn, black lacquer armor silhouette, folding-screen mineral pigments, restrained campaign-map geometry without labels or symbols, disciplined historical gravitas, deep ink, muted gold, verdigris, and small cinnabar accents",
   "i-am-a-cat":
     "Meiji study room, scholar's desk, amused cat perspective, ink books and tatami, witty Japanese literary mood",
   botchan:

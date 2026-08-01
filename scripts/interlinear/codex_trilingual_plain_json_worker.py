@@ -238,6 +238,7 @@ def prompt_for_plain_chunk(chunk: dict[str, Any], previous_errors: list[str] | N
           "schema_version": "0.1-plain",
           "mode": "trilingual_plain_alignment",
           "chunk_id": "{chunk_id}",
+          "chapter_title": {{"en": "...", "zh": "...", "ja": "..."}},
           "paragraphs": [
             {{
               "id": "source paragraph id",
@@ -267,6 +268,7 @@ def prompt_for_plain_chunk(chunk: dict[str, Any], previous_errors: list[str] | N
           "schema_version": "0.1-plain",
           "mode": "trilingual_plain_alignment",
           "chunk_id": "{chunk_id}",
+          "chapter_title": {{"en": "...", "zh": "...", "ja": "..."}},
           "paragraphs": [
             {{
               "id": "source paragraph id",
@@ -301,6 +303,7 @@ def prompt_for_plain_chunk(chunk: dict[str, Any], previous_errors: list[str] | N
         Hard requirements:
         - Preserve paragraph ids and order exactly.
         - Preserve unit_id values and order exactly.
+        - When translated chapter titles are required, return the complete descriptive title in English, Chinese, and Japanese. Copy the source-spine title exactly in its own language; translate its descriptive words into the other two languages. Do not reduce a descriptive title to only "Chapter N" or "第N章".
         - If a supplied source unit contains an exact "zh" or "ja" value, copy that field exactly into the corresponding output field.
         - Obey every required and forbidden rendering in the terminology section of the translation quality contract. Entries with "enforcement": "preferred" are style guidance: use them when natural, but do not distort a sentence merely to force them.
         - In Chinese, preserve an unmapped Latin-script personal name exactly as written in the source. Never invent a Chinese-character spelling for it. Translate or transparently transliterate institutions and places without adding unsupported details.
@@ -314,7 +317,7 @@ def prompt_for_plain_chunk(chunk: dict[str, Any], previous_errors: list[str] | N
         {error_block}
 
         Chunk metadata:
-        {json.dumps({key: chunk[key] for key in ('chunk_id', 'chapter_id', 'chapter_number', 'chapter_title_en', 'chapter_part_en')}, ensure_ascii=False, indent=2)}
+        {json.dumps({key: chunk.get(key, "") for key in ('chunk_id', 'chapter_id', 'chapter_number', 'source_spine_lang', 'chapter_title_en', 'chapter_title_zh', 'chapter_title_ja', 'chapter_part_en', 'require_translated_chapter_titles')}, ensure_ascii=False, indent=2)}
 
         Translation quality contract:
         {json.dumps(translation_contract, ensure_ascii=False, indent=2) if translation_contract else "Use accurate, complete, modern, understandable, elegant translation. Do not summarize, omit, or add unsupported facts."}
@@ -334,6 +337,38 @@ def validate_plain_chunk(source: dict[str, Any], result: dict[str, Any]) -> list
         errors.append(f"chunk_id mismatch: expected {source['chunk_id']!r}")
     if result.get("mode") not in {"trilingual_plain_alignment", None}:
         errors.append("mode must be trilingual_plain_alignment when present")
+    if source.get("require_translated_chapter_titles"):
+        titles = result.get("chapter_title")
+        if not isinstance(titles, dict):
+            errors.append("chapter_title must be an object with en, zh, and ja")
+        else:
+            for lang in ("en", "zh", "ja"):
+                if not plain_text(titles.get(lang, "")):
+                    errors.append(f"chapter_title.{lang}: empty")
+            spine_lang = source_spine_lang(source)
+            source_title = plain_text(source.get(f"chapter_title_{spine_lang}", ""))
+            if source_title and plain_text(titles.get(spine_lang, "")) != source_title:
+                errors.append(
+                    f"chapter_title.{spine_lang}: source-spine title must be copied exactly"
+                )
+            descriptive = source_title and not re.fullmatch(
+                r"(?:Chapter|第)\s*[一二三四五六七八九十百千0-9]+\s*(?:章)?",
+                source_title,
+                re.I,
+            )
+            if descriptive:
+                for lang in ("en", "zh", "ja"):
+                    if lang == spine_lang:
+                        continue
+                    target = plain_text(titles.get(lang, ""))
+                    if re.fullmatch(
+                        r"(?:Chapter|第)\s*[一二三四五六七八九十百千0-9]+\s*(?:章)?",
+                        target,
+                        re.I,
+                    ):
+                        errors.append(
+                            f"chapter_title.{lang}: descriptive source title was reduced to a generic chapter number"
+                        )
     paragraphs = result.get("paragraphs")
     if not isinstance(paragraphs, list):
         return errors + ["paragraphs must be a list"]
@@ -614,8 +649,21 @@ def usable_title(value: Any) -> str:
     return text
 
 
-def chapter_title_text(source: dict[str, Any], lang: str) -> str:
+def chapter_title_text(
+    source: dict[str, Any],
+    lang: str,
+    plain: dict[str, Any] | None = None,
+) -> str:
     reference = source.get("reference", {})
+    spine_lang = source_spine_lang(source)
+    generated_titles = (plain or {}).get("chapter_title")
+    generated = (
+        usable_title(generated_titles.get(lang))
+        if isinstance(generated_titles, dict)
+        else ""
+    )
+    if lang != spine_lang and source.get("require_translated_chapter_titles") and generated:
+        return generated
     if lang == "en":
         return usable_title(source.get("chapter_title_en")) or f"Chapter {source['chapter_number']}"
     if lang == "zh":
@@ -647,10 +695,10 @@ def promote_plain_chunk(
             "id": source["chapter_id"],
             "number": source["chapter_number"],
             "title": {
-                "en": tokenize_en(chapter_title_text(source, "en")),
-                "zh": tokenize_zh(chapter_title_text(source, "zh")),
+                "en": tokenize_en(chapter_title_text(source, "en", plain)),
+                "zh": tokenize_zh(chapter_title_text(source, "zh", plain)),
                 "ja": tokenize_ja(
-                    chapter_title_text(source, "ja"),
+                    chapter_title_text(source, "ja", plain),
                     ja_reading_overrides,
                 ),
             },

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "queue_id": "sengoku-history-trilingual-2026-08-01",
-  "status": "running_first_book",
+  "status": "quality_gated_running",
   "description": "Quality-ranked PocketPolyglot queue for user-supplied Sengoku history, primary-source translation, reference works, and historical novels.",
   "model": "gpt-5.6-sol",
   "reasoning": "low",
@@ -449,10 +449,10 @@
           "zh": "比叡山"
         }
       ],
-      "status": "running_bulk_after_repaired_pilot",
-      "launchable": true,
-      "quality_gate_status": "passed repaired chunks 10-16 pilot with gpt-5.6-sol low after manual source-to-translation review; authoritative Japanese ruby and historical-name overrides are project data; bulk resumes at chunk 17",
-      "active_session": "zhjpbook-sengoku-chronicle-gpt56-low",
+      "status": "complete_finalized_synced",
+      "launchable": false,
+      "quality_gate_status": "passed repaired chunks 10-16 pilot with gpt-5.6-sol low after manual source-to-translation review; all 475 manifest chunks, standard PDFs, maximum-language large-font exports, cover, and Nutstore sync completed",
+      "active_session": null,
       "pilot_valid_chunks": [
         3,
         4,
@@ -517,6 +517,40 @@
       "source_spine_lang": "en",
       "task_mode": "trilingual_scholarly_biography_en_spine",
       "source_path": "sources/japan-history/sengoku/biographies/hideyoshi/en/Hideyoshi - Mary Elizabeth Berry.pdf",
+      "source_exact_markdown": "books/hideyoshi-berry/work/source-extraction/marker-surya-hybrid/hybrid.md",
+      "source_exact_status": "books/hideyoshi-berry/work/source-extraction/marker-surya-hybrid/status.json",
+      "source_exact_replacements": [
+        {
+          "before": "Hidevoshi",
+          "after": "Hideyoshi",
+          "expected_count": 7,
+          "evidence": "The printed name, title, and hundreds of correctly recognized occurrences establish Hideyoshi; both OCR engines confused the same y glyph with v at seven body locations."
+        },
+        {
+          "before": "Heian-ky6",
+          "after": "Heian-kyō",
+          "expected_count": 1,
+          "evidence": "The same work prints Heian-kyō correctly elsewhere, including the notes; the embedded font map emitted final long-o as digit 6."
+        },
+        {
+          "before": "incompatibilty",
+          "after": "incompatibility",
+          "expected_count": 1,
+          "evidence": "Visual inspection of printed page 49 confirms the complete word incompatibility; both OCR outputs omitted the second i."
+        },
+        {
+          "before": "imagination. Hideyoshi",
+          "after": "imagination, Hideyoshi",
+          "expected_count": 1,
+          "evidence": "Visual inspection of printed page 2 confirms a comma after imagination; both OCR engines misclassified it as a period."
+        },
+        {
+          "before": "the no theater",
+          "after": "the nō theater",
+          "expected_count": 1,
+          "evidence": "Visual inspection of printed page 3 confirms the romanized Japanese term nō; the long-o diacritic was lost in both OCR outputs."
+        }
+      ],
       "reference_paths": {
         "ja_primary_searchable": "sources/japan-history/sengoku/primary-sources/taikoki/ja-book/太閤記-小瀬甫庵.pdf",
         "ja_wikisource_manifest": "sources/japan-history/sengoku/primary-sources/taikoki/ja-wikisource/manifest.json"
@@ -529,7 +563,7 @@
       ],
       "allow_numeric_headings": false,
       "chapter_heading_patterns": [
-        "^(?:THE TOYOTOMI PEACE|A WORLD WITHOUT A CENTER|THE TERROR|CONQUEST AND CONCILIATION|THE NEW ORDER|FEDERATION AND ITS MOTIVES|THE PURSUIT OF LEGITIMACY|THE LAST YEARS|AFTERWORD)$"
+        "^(?:THE TOYOTOMI PEACE|A WORLD WITHOUT A CENTER|THE TERROR|CONQUEST AND CONCILIATION|TOYOTOMI POLICY: SHAPING THE NEW ORDER|THE NEW ORDER|FEDERATION AND ITS MOTIVES|THE PURSUIT OF LEGITIMACY|THE LAST YEARS|AFTERWORD)$"
       ],
       "chapter_heading_mode": "configured_only",
       "chapter_heading_case_sensitive": true,
@@ -539,15 +573,16 @@
       "min_chunk_count": 200,
       "min_content_chars": 500000,
       "split_terminal_back_matter": false,
-      "source_preparation": "born-digital text with maps and plates; preserve figure anchors for illustrated export",
+      "source_preparation": "Marker layout and figure anchors fused with full-book Surya OCR; strict evidence-ledger corrections repair shared OCR defects before chunking.",
       "reference_notes": "Berry is the scholarly spine. The early-modern Taikōki is contextual primary literature, not a sentence-equivalent modern Japanese edition.",
-      "status": "chunked_launchable",
-      "launchable": true,
+      "status": "prepared_source_qa_required",
+      "launchable": false,
+      "preparation_blocker": "The Marker/Surya hybrid is complete and chunked, but the evidence-ledger source QA must finish repairing remaining romanization and OCR word errors before the two-chunk model pilot.",
       "book_plan": "books/hideyoshi-berry/book-plan.json",
       "chunks_manifest": "books/hideyoshi-berry/work/trilingual/chunks/manifest.json",
-      "chunk_count": 292,
+      "chunk_count": 280,
       "english_chapter_count": 9,
-      "prepared_chunks_at": "2026-08-01T13:54:25.553869+00:00"
+      "prepared_chunks_at": "2026-08-01T22:45:27.616178+00:00"
     },
     {
       "priority": 4,
@@ -582,8 +617,9 @@
       "split_terminal_back_matter": false,
       "source_preparation": "born-digital text with known embedded-text spacing defects and many maps/plates; deterministic cleanup plus figure-preserving pass required",
       "reference_notes": "A detailed classic synthesis whose scholarship and romanization are historically situated. Translate faithfully without silently updating its claims from later scholarship.",
-      "status": "chunked_launchable",
-      "launchable": true,
+      "status": "prepared_ocr_repair_required",
+      "launchable": false,
+      "preparation_blocker": "The first-page audit found severe embedded-text spacing defects such as T he, b anishment, and cap ital. Re-extract with the figure-preserving Marker/Surya pipeline before translation.",
       "book_plan": "books/history-japan-1334-1615/book-plan.json",
       "chunks_manifest": "books/history-japan-1334-1615/work/trilingual/chunks/manifest.json",
       "chunk_count": 521,
@@ -836,8 +872,9 @@
         "grammar": "Keep English spaces and produce normalized grammar roles after alignment."
       },
       "reference_notes": "Yoshikawa's Taiko is distinct from Oze Hoan's early-modern Taikōki. The latter is contextual only, not the Japanese original of this English edition.",
-      "status": "chunked_launchable",
-      "launchable": true,
+      "status": "prepared_source_text_repair_required",
+      "launchable": false,
+      "preparation_blocker": "The EPUB spine is complete, but the audit found split glossary entries and several missing-word or punctuation defects in early prose. Repair and rechunk before the model pilot.",
       "book_plan": "books/taiko-yoshikawa/book-plan.json",
       "chunks_manifest": "books/taiko-yoshikawa/work/trilingual/chunks/manifest.json",
       "chunk_count": 1093,
@@ -881,14 +918,17 @@
         "grammar": "Produce normalized grammar roles for all three languages after alignment."
       },
       "reference_notes": "The supplied spine is a Chinese translation of Yamaoka's novel. Generated Japanese is explicitly a Chinese-based retranslation, not a reconstruction of the unavailable Japanese original.",
-      "status": "chunked_launchable",
+      "status": "running_bulk_after_repaired_pilot",
       "launchable": true,
+      "quality_gate_status": "passed two-chunk gpt-5.6-sol low pilot after exact Chinese preservation, modern Japanese/English review, positional-numeral ruby repair, and deterministic multilingual chapter-title canonicalization",
+      "active_session": "zhjpbook-tokugawa-ieyasu-yamaoka-gpt56-low",
+      "finalizer_session": "zhjpbook-tokugawa-ieyasu-yamaoka-finalize",
       "book_plan": "books/tokugawa-ieyasu-yamaoka/book-plan.json",
       "chunks_manifest": "books/tokugawa-ieyasu-yamaoka/work/trilingual/chunks/manifest.json",
       "chunk_count": 1054,
       "english_chapter_count": 445,
-      "prepared_chunks_at": "2026-08-01T13:54:25.553876+00:00"
+      "prepared_chunks_at": "2026-08-01T22:54:51.247278+00:00"
     }
   ],
-  "last_chunk_preparation_at": "2026-08-01T16:20:09.098566+00:00"
+  "last_chunk_preparation_at": "2026-08-01T22:54:51.247301+00:00"
 }

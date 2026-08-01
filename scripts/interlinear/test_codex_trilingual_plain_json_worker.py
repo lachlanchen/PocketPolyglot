@@ -158,6 +158,57 @@ class TrilingualPlainPromotionTest(unittest.TestCase):
         self.assertNotIn("さば", ruby.values())
         self.assertNotIn("ょか", ruby.values())
 
+    def test_positional_cjk_year_uses_arabic_digits_before_ruby(self) -> None:
+        tokens = tokenize_ja("天文十年、西暦一五四一年。")
+
+        self.assertEqual(
+            "".join(token["t"] for token in tokens),
+            "天文十年、西暦1541年。",
+        )
+        self.assertNotIn("よいち", {token.get("r") for token in tokens})
+
+    def test_translated_descriptive_chapter_title_is_promoted(self) -> None:
+        source = {
+            "chunk_id": "fixture-c0001",
+            "chapter_id": "chapter-001",
+            "chapter_number": 1,
+            "chapter_title_en": "Chapter 1",
+            "chapter_title_zh": "一 乱世破晓",
+            "chapter_title_ja": "",
+            "require_translated_chapter_titles": True,
+            "source_spine_lang": "zh",
+            "reference": {},
+            "paragraphs": [{"id": "fixture-p0001", "zh": "天文十年。"}],
+        }
+        plain = {
+            "chunk_id": "fixture-c0001",
+            "chapter_title": {
+                "en": "1. Dawn of a Warring Age",
+                "zh": "一 乱世破晓",
+                "ja": "一 乱世の夜明け",
+            },
+            "paragraphs": [
+                {
+                    "id": "fixture-p0001",
+                    "units": [
+                        {
+                            "unit_id": "fixture-p0001-u001",
+                            "en": "The tenth year of Tenbun.",
+                            "zh": "天文十年。",
+                            "ja": "天文十年。",
+                        }
+                    ],
+                }
+            ],
+        }
+
+        self.assertEqual(validate_plain_chunk(source, plain), [])
+        promoted = promote_plain_chunk(source, plain)
+        title = promoted["chapter"]["title"]
+        self.assertEqual("".join(token["t"] for token in title["en"]), "1. Dawn of a Warring Age")
+        self.assertEqual("".join(token["t"] for token in title["zh"]), "一 乱世破晓")
+        self.assertEqual("".join(token["t"] for token in title["ja"]), "一 乱世の夜明け")
+
     def test_project_reading_overrides_replace_ambiguous_compounds(self) -> None:
         tokens = tokenize_ja(
             "本訳では吉川弘文館を参照した。",

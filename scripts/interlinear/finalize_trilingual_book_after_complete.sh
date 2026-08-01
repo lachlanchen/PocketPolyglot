@@ -11,6 +11,7 @@ Wait until a trilingual book reaches full manifest coverage, then compile the
 Environment:
   POLL_SECONDS=300
   COMMIT_AFTER_SYNC=0
+  SKIP_PAIR_COMPILE=0       reuse an already-validated 12-PDF pair set
 USAGE
 }
 
@@ -79,7 +80,57 @@ case "$book_id" in
     ;;
 esac
 
-ALLOW_MISSING=0 bash scripts/interlinear/compile_trilingual_book_12_previews.sh "$book_id"
+if [[ "${SKIP_PAIR_COMPILE:-0}" != "1" ]]; then
+  ALLOW_MISSING=0 bash scripts/interlinear/compile_trilingual_book_12_previews.sh "$book_id"
+else
+  python - "$book_id" <<'PY'
+import subprocess
+import sys
+from pathlib import Path
+
+book_id = sys.argv[1]
+root = Path("build") / book_id
+pair_directions = (
+    ("jp-en", "en-main"),
+    ("jp-en", "jp-main"),
+    ("zh-en", "en-main"),
+    ("zh-en", "zh-main"),
+    ("zh-jp", "jp-main"),
+    ("zh-jp", "zh-main"),
+)
+pdfs = []
+missing = []
+for pair, direction in pair_directions:
+    for color_mode in ("color", "blackwhite"):
+        leaf = root / pair / direction / color_mode
+        matches = sorted(path for path in leaf.glob("*.pdf") if path.name != "book.pdf")
+        if len(matches) != 1:
+            missing.append(f"{leaf}:{len(matches)}")
+        else:
+            pdfs.extend(matches)
+if missing:
+    raise SystemExit("invalid_pair_pdf_set=" + ",".join(missing))
+bad = []
+for pdf in pdfs:
+    result = subprocess.run(["pdfinfo", str(pdf)], text=True, capture_output=True)
+    pages = 0
+    for line in result.stdout.splitlines():
+        if line.startswith("Pages:"):
+            pages = int(line.split(":", 1)[1].strip())
+            break
+    if result.returncode or pages <= 1:
+        bad.append(f"{pdf}:{pages}")
+if bad:
+    raise SystemExit("invalid_pair_pdfs=" + ",".join(bad))
+print(f"reused_pair_pdfs={len(pdfs)}")
+PY
+fi
+
+if [[ ! -f "assets/covers/$book_id/cover.png" ]]; then
+  node scripts/books/generate_aginti_cover_assets.mjs --book "$book_id"
+fi
+python scripts/books/prepend_cover_pages.py --book "$book_id" --replace-existing
+
 for color_mode in color blackwhite; do
   case "$book_id" in
     kokin-wakashu|manyoshu)

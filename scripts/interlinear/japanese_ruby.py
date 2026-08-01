@@ -15,6 +15,26 @@ JAPANESE_RUN_RE = re.compile(
     r"[\u3040-\u309f\u30a0-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff々〻ヵヶー]+"
 )
 KAKASI = pykakasi.kakasi()
+CJK_DIGIT_MAP = str.maketrans(
+    {
+        "〇": "0",
+        "零": "0",
+        "一": "1",
+        "二": "2",
+        "三": "3",
+        "四": "4",
+        "五": "5",
+        "六": "6",
+        "七": "7",
+        "八": "8",
+        "九": "9",
+    }
+)
+CJK_POSITIONAL_NUMBER_RE = re.compile(
+    r"(?<![〇零一二三四五六七八九])"
+    r"([〇零一二三四五六七八九]{2,})"
+    r"(?=(?:年|年度|月|日|歳|頁|ページ|巻|章|話|回|号|円|里|石))"
+)
 
 
 def kana_to_hira(text: str) -> str:
@@ -39,6 +59,21 @@ def append_plain(tokens: list[dict[str, str]], text: str) -> None:
 
 def is_ruby_base_char(char: str) -> bool:
     return bool(HAN_RE.fullmatch(char)) or char in RUBY_BASE_MARKS
+
+
+def normalize_positional_cjk_numbers(text: str) -> str:
+    """Use Arabic digits for positional CJK numerals before ruby generation.
+
+    Modern Japanese commonly writes a year such as ``一五四一年`` as ``1541年``.
+    Pykakasi can otherwise segment the final ``四一`` as the name reading
+    ``よいち``. Numerals containing 十/百/千 are left untouched because their
+    lexical Japanese reading is handled correctly by the normal tokenizer.
+    """
+
+    return CJK_POSITIONAL_NUMBER_RE.sub(
+        lambda match: match.group(1).translate(CJK_DIGIT_MAP),
+        text,
+    )
 
 
 def tokenize_segment(orig: str, hira: str) -> list[dict[str, str]]:
@@ -115,6 +150,8 @@ def tokenize_japanese(
             cursor = match.end()
         tokens.extend(tokenize_japanese(original[cursor:]))
         return tokens or [{"t": original}]
+
+    original = normalize_positional_cjk_numbers(original)
 
     tokens = []
     cursor = 0

@@ -211,6 +211,11 @@ def repair_embedded_text_artifacts(text: str) -> str:
 
     text = INLINE_URL_RE.sub(protect_url, text)
     text = PUNCT_SPACE_RE.sub(r"\1 ", text)
+    text = re.sub(
+        r"(?P<punct>[.!?][\"”’]?)(?P<note>\d{1,3})(?=\s+[A-Z])",
+        lambda match: f"{match.group('punct')}[{match.group('note')}]",
+        text,
+    )
     text = SPACED_THOUSAND_RE.sub(r"\1\2,\3", text)
     previous = None
     while previous != text:
@@ -220,6 +225,7 @@ def repair_embedded_text_artifacts(text: str) -> str:
     text = SPACED_YEAR_RE.sub(r"\1\2\3\4\5", text)
     text = SPACED_SMALL_INT_RE.sub(r"\1\2", text)
     text = text.replace(" .", ".").replace(" ,", ",")
+    text = re.sub(r"(\[\d{1,3}\])(?=[A-Za-z])", r"\1 ", text)
     if text.startswith("uring the last thirty years"):
         text = "D" + text
     text = re.sub(r"\bC alling\b", "Calling", text)
@@ -241,7 +247,9 @@ def repair_embedded_text_artifacts(text: str) -> str:
                 return original
             left, right = match.group(1), match.group(2)
             joined = left + right
-            if zipf_frequency(joined.casefold(), "en") >= 2.2:
+            joined_frequency = zipf_frequency(joined.casefold(), "en")
+            hyphenated_frequency = zipf_frequency(lower, "en")
+            if joined_frequency >= 2.2 and joined_frequency >= hyphenated_frequency + 0.75:
                 return joined
             return original
 
@@ -1173,6 +1181,57 @@ def markdown_figure(raw_line: str, markdown: Path) -> dict[str, Any] | None:
     )
 
 
+def apply_source_exact_replacements(text: str, task: dict[str, Any]) -> str:
+    """Apply evidence-ledger source repairs with strict occurrence checks."""
+
+    rules = task.get("source_exact_replacements", [])
+    if not rules:
+        return text
+    report_rows: list[dict[str, Any]] = []
+    for index, rule in enumerate(rules, start=1):
+        if not isinstance(rule, dict):
+            raise ValueError(f"source exact replacement {index} must be an object")
+        before = str(rule.get("before") or "")
+        after = str(rule.get("after") or "")
+        evidence = str(rule.get("evidence") or "").strip()
+        if not before or not after:
+            raise ValueError(f"source exact replacement {index} needs before and after text")
+        if not evidence:
+            raise ValueError(f"source exact replacement {index} needs source evidence")
+        expected = int(rule.get("expected_count", 1))
+        actual = text.count(before)
+        if actual != expected:
+            raise RuntimeError(
+                f"source exact replacement {index} expected {expected} occurrences of "
+                f"{before!r}, found {actual}"
+            )
+        text = text.replace(before, after)
+        report_rows.append(
+            {
+                "before": before,
+                "after": after,
+                "count": actual,
+                "evidence": evidence,
+            }
+        )
+    report_path = (
+        ROOT
+        / "books"
+        / str(task["book_id"])
+        / "work/source-extraction/source-correction-report.json"
+    )
+    write_json(
+        report_path,
+        {
+            "schema_version": 1,
+            "book_id": task["book_id"],
+            "generated_at": datetime.now(timezone.utc).isoformat(),
+            "replacements": report_rows,
+        },
+    )
+    return text
+
+
 def split_markdown_line_figures(
     raw_line: str,
     markdown: Path,
@@ -1202,7 +1261,9 @@ def split_markdown_line_figures(
 def parse_chapters(markdown: Path, task: dict[str, Any], *, max_unit_chars: int) -> list[dict[str, Any]]:
     spine_lang = source_spine_lang(task)
     title = source_title(task)
-    raw_lines = markdown.read_text(encoding="utf-8", errors="replace").splitlines()
+    source_text = markdown.read_text(encoding="utf-8", errors="replace")
+    source_text = apply_source_exact_replacements(source_text, task)
+    raw_lines = source_text.splitlines()
     figure_tokens: dict[str, dict[str, Any]] = {}
     lines: list[str] = []
     for raw_line in raw_lines:
@@ -1401,6 +1462,9 @@ def build_chunks(task: dict[str, Any], chapters: list[dict[str, Any]], *, max_ch
                     "chapter_title_en": chapter["title"] if spine_lang == "en" else f"Chapter {chapter['number']}",
                     "chapter_title_zh": chapter["title"] if spine_lang == "zh" else "",
                     "chapter_title_ja": chapter["title"] if spine_lang == "ja" else "",
+                    "require_translated_chapter_titles": bool(
+                        task.get("require_translated_chapter_titles", True)
+                    ),
                     "chapter_part_en": "",
                     "paragraph_ids": [item["id"] for item in pending],
                     "paragraphs": pending,

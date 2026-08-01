@@ -6,8 +6,10 @@ from __future__ import annotations
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from prepare_modern_nonfiction_trilingual import (
+    apply_source_exact_replacements,
     canonical_chapter_title,
     clean_line,
     clean_markdown_line,
@@ -28,6 +30,32 @@ from prepare_modern_nonfiction_trilingual import (
 
 
 class IllustratedNonfictionPreparationTest(unittest.TestCase):
+    def test_source_exact_replacements_require_evidence_and_expected_count(self) -> None:
+        task = {
+            "book_id": "test-book",
+            "source_exact_replacements": [
+                {
+                    "before": "Hidevoshi",
+                    "after": "Hideyoshi",
+                    "expected_count": 2,
+                    "evidence": "Two readings checked against the printed page.",
+                }
+            ],
+        }
+        with tempfile.TemporaryDirectory() as temp_dir:
+            with patch("prepare_modern_nonfiction_trilingual.ROOT", Path(temp_dir)):
+                repaired = apply_source_exact_replacements(
+                    "Hidevoshi and Hidevoshi", task
+                )
+                self.assertEqual(repaired, "Hideyoshi and Hideyoshi")
+                report = (
+                    Path(temp_dir)
+                    / "books/test-book/work/source-extraction/source-correction-report.json"
+                )
+                self.assertTrue(report.exists())
+                with self.assertRaises(RuntimeError):
+                    apply_source_exact_replacements("Hidevoshi", task)
+
     def test_running_page_headers_are_not_joined_into_prose(self) -> None:
         for header in ("x preface", "preface xi", "18 introduction", "476 book xv"):
             with self.subTest(header=header):
@@ -60,6 +88,26 @@ class IllustratedNonfictionPreparationTest(unittest.TestCase):
                 "The source is http:// example.test and map.yahoo.co.jp remains readable."
             ),
             "The source is http://example.test and map.yahoo.co.jp remains readable.",
+        )
+
+    def test_dehyphenation_preserves_real_compounds(self) -> None:
+        self.assertEqual(
+            repair_embedded_text_artifacts(
+                "A part-time soldier used a well-known mod-ern method."
+            ),
+            "A part-time soldier used a well-known modern method.",
+        )
+
+    def test_printed_superscript_note_is_normalized_without_touching_years(self) -> None:
+        self.assertEqual(
+            repair_embedded_text_artifacts(
+                'The country was supplied with everything."4 Architect of renewal.'
+            ),
+            'The country was supplied with everything."[4] Architect of renewal.',
+        )
+        self.assertEqual(
+            repair_embedded_text_artifacts("The year was 1598. Another era began."),
+            "The year was 1598. Another era began.",
         )
 
     def test_repeated_page_headers_are_removed_in_both_directions(self) -> None:
