@@ -207,6 +207,39 @@
           "zh": "牛一"
         },
         {
+          "source": "Censorial Board",
+          "ja": "弾正台",
+          "zh": "弹正台"
+        },
+        {
+          "source": "Danjōdai",
+          "ja": "弾正台",
+          "zh": "弹正台"
+        },
+        {
+          "source": "Danjō no Jō",
+          "ja": "弾正忠",
+          "zh": "弹正忠"
+        },
+        {
+          "source": "Gyoshi",
+          "ja": "御史",
+          "zh": "御史"
+        },
+        {
+          "source": "Sōtai",
+          "ja": "霜台",
+          "zh": "霜台",
+          "forbidden": {
+            "ja": [
+              "総代"
+            ],
+            "zh": [
+              "总代"
+            ]
+          }
+        },
+        {
           "source": "Japanese Chronological Tables from 601 to 1872 A. D.",
           "ja": "『邦暦西暦対照表』",
           "zh": "《日本历法对照表（601—1872）》"
@@ -277,13 +310,14 @@
       ],
       "status": "running_trilingual_generation",
       "launchable": true,
-      "quality_gate_status": "passed repaired chunks 3-6 with gpt-5.6-sol low; deterministic schema, script, abbreviation, terminology, and semantic spot checks passed",
+      "quality_gate_status": "passed repaired chunks 3-8 with gpt-5.6-sol low; chunk 8 regenerated in isolation with 弾正台, 弾正忠, 御史, and 霜台 verified before bulk resume",
       "active_session": "zhjpbook-sengoku-chronicle-gpt56",
       "pilot_valid_chunks": [
         3,
         4,
         5,
-        6
+        6,
+        8
       ],
       "book_plan": "books/chronicle-lord-nobunaga/book-plan.json",
       "chunks_manifest": "books/chronicle-lord-nobunaga/work/trilingual/chunks/manifest.json",

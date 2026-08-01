@@ -114,6 +114,11 @@ novels must never be used to fill gaps in scholarly claims.
   Chinese, emitted no unrelated scripts, and reconstructed macron-bearing Latin
   names exactly. A manual authority review caught and repaired `Hino Hiroshi`
   as `日埜博司` before the bulk tmux run was approved.
+- The first bulk semantic sample found `Sōtai`, the Chinese-derived name for
+  the Censorial Board (`弾正台`), mistranslated as the unrelated word
+  `総代` / `总代`. The run was stopped after chunk 10. The per-book terminology
+  contract now requires `霜台`, retains `弾正台`, `弾正忠`, and `御史`, and
+  regenerates only affected chunk 8 rather than discarding valid work.
 - Name authority checks use the National Diet Library/CiNii records for
   [土橋八千太](https://id.ndl.go.jp/auth/ndlna/00086909) and
   [Japanese Chronological Tables](https://ci.nii.ac.jp/ncid/BA14297025).
@@ -121,6 +126,10 @@ novels must never be used to fill gaps in scholarly claims.
   [日埜博司](https://ndlsearch.ndl.go.jp/search?cs=bib&from=0&q-author=%22%E6%97%A5%E5%9F%9C%2C+%E5%8D%9A%E5%8F%B8%22&size=20),
   and [大塚光信](https://ndlsearch.ndl.go.jp/books/R100000147-I900023643)
   rather than allowing the model to invent kanji spellings.
+- The `Sōtai` correction is authority-checked against the
+  [Kotobank entry for 霜台](https://kotobank.jp/word/%E9%9C%9C%E5%8F%B0-2056642).
+  The historical reading and spelling of `Danjō no Jō` are checked against the
+  [Kotobank entry for 弾正の忠](https://kotobank.jp/word/%E5%BC%BE%E6%AD%A3%E3%81%AE%E5%BF%A0-2061026).
 
 Pilot archives are preserved under
 `books/chronicle-lord-nobunaga/work/trilingual/parallel-json.pilot-*` so model
