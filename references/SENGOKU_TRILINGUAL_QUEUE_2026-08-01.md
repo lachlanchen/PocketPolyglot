@@ -139,7 +139,8 @@ novels must never be used to fill gaps in scholarly claims.
   not in shared worker code.
 - Flattened dot-leader lists are now reconstructed deterministically before
   model calls: for example, `Map 1. Owari Province ... 52` becomes one clean
-  source unit, rather than shifting page 52 onto the following map entry.
+  indivisible source unit, rather than shifting page 52 onto the following map
+  entry or splitting `Map 1.` away from its title.
 - Valid chunks 1--10 remain current. Pre-repair candidates, rejected attempts,
   and stale chunks 11--12 are archived under the book work tree; no generated
   translation was silently deleted or reused against a changed source unit.

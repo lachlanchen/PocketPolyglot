@@ -741,6 +741,10 @@ def expand_dot_leader_index_lines(lines: list[str]) -> list[str]:
     return out
 
 
+def is_recovered_index_entry(text: str) -> bool:
+    return re.fullmatch(r".{2,180}\s+—\s+\d{1,4}", text) is not None
+
+
 def join_proven_page_continuations(lines: list[str]) -> list[str]:
     """Join prose paragraphs split only by a source-page boundary.
 
@@ -1047,6 +1051,8 @@ def split_cjk_units(text: str, *, max_chars: int) -> list[str]:
 def split_source_units(text: str, lang: str, *, max_chars: int) -> list[str]:
     if lang != "en":
         return split_cjk_units(text, max_chars=max_chars)
+    if is_recovered_index_entry(text):
+        return [text]
     return [
         segment
         for sentence_group in split_english_units(text, max_chars=max_chars)
@@ -1242,7 +1248,7 @@ def parse_chapters(markdown: Path, task: dict[str, Any], *, max_unit_chars: int)
                 "paragraphs": [],
             }
             continue
-        if re.fullmatch(r".{2,180}\s+—\s+\d{1,4}", line):
+        if is_recovered_index_entry(line):
             flush()
             buffer.append(line)
             body_chars_seen += len(line) + 1

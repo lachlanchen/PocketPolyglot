@@ -8,12 +8,27 @@ import unittest
 from codex_trilingual_plain_json_worker import (
     promote_plain_chunk,
     prompt_for_plain_chunk,
+    source_unit_plan,
     tokenize_ja,
 )
 from validate_trilingual_interlinear_json import validate_chunk
 
 
 class TrilingualPlainPromotionTest(unittest.TestCase):
+    def test_recovered_map_entry_remains_one_alignment_unit(self) -> None:
+        source = {
+            "chunk_id": "fixture-c0001",
+            "source_spine_lang": "en",
+            "paragraphs": [
+                {"id": "fixture-p0001", "en": "Map 1. Owari Province — 52"}
+            ],
+        }
+
+        plan = source_unit_plan(source)
+
+        self.assertEqual(len(plan[0]["units"]), 1)
+        self.assertEqual(plan[0]["units"][0]["en"], "Map 1. Owari Province — 52")
+
     def test_prompt_preserves_unmapped_latin_names(self) -> None:
         source = {
             "chunk_id": "fixture-c0001",

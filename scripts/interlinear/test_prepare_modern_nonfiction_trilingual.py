@@ -16,6 +16,7 @@ from prepare_modern_nonfiction_trilingual import (
     expand_dot_leader_index_lines,
     find_start,
     is_heading_line,
+    is_recovered_index_entry,
     join_proven_page_continuations,
     parse_chapters,
     split_english_timeline_entries,
@@ -82,6 +83,9 @@ class IllustratedNonfictionPreparationTest(unittest.TestCase):
                 "BOOK I",
             ],
         )
+        recovered = "Map 1. Owari Province — 52"
+        self.assertTrue(is_recovered_index_entry(recovered))
+        self.assertEqual(split_source_units(recovered, "en", max_chars=900), [recovered])
 
     def test_all_caps_chapter_heading_survives_artifact_filter(self) -> None:
         self.assertEqual(clean_line("CHAPTER I", "A Book"), "CHAPTER I")

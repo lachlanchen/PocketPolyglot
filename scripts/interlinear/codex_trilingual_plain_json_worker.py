@@ -44,6 +44,7 @@ PLAIN_JA_KANA_ERROR_RE = re.compile(r"paragraphs\[(\d+)\]\.units\[(\d+)\]\.ja: J
 JA_BIBLIO_NOTE_RE = re.compile(r"[『』「」（）()・]|(?:第?\d+)|[巻卷頁页行版訳譯参參照詩诗作品散文序篇章年]")
 JA_FRONTMATTER_NOTE_RE = re.compile(r"(?:目次|目録|内容|著者|訳者|第一部|第二部|第三部|第四部|第五部|第[一二三四五六七八九十百]+部)")
 DOT_LEADER_RE = re.compile(r"(?:[.．。·・]{4,}|…{2,})")
+RECOVERED_INDEX_ENTRY_RE = re.compile(r".{2,180}\s+—\s+\d{1,4}")
 SIMPLIFIED_ONLY_RE = re.compile(r"[这们为说对见页卷诗选节后时个尔苏卢马亚德释从]")
 
 
@@ -127,6 +128,8 @@ def paragraph_source_text(paragraph: dict[str, Any], spine_lang: str) -> str:
 
 def split_source_units(text: str, lang: str) -> list[str]:
     if lang == "en":
+        if RECOVERED_INDEX_ENTRY_RE.fullmatch(text):
+            return [text]
         return split_english_units(text)
     return split_cjk_units(text)
 
