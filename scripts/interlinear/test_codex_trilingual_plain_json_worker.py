@@ -36,6 +36,9 @@ class TrilingualPlainPromotionTest(unittest.TestCase):
         self.assertIn("preserve an unmapped Latin-script personal name", prompt)
         self.assertIn("Never invent a Chinese-character spelling", prompt)
         self.assertIn("Never invent kanji for an unmapped personal name", prompt)
+        self.assertIn("Japanese historical people and titles", prompt)
+        self.assertIn("Do not spell a well-known Japanese historical name wholly in katakana", prompt)
+        self.assertIn("Preserve the source romanization when uncertain", prompt)
 
     def test_terminology_contract_rejects_wrong_historical_title(self) -> None:
         source = {

@@ -13,10 +13,12 @@ from prepare_modern_nonfiction_trilingual import (
     clean_markdown_line,
     drop_repeated_page_headers,
     english_line_has_terminal_boundary,
+    expand_dot_leader_index_lines,
     find_start,
     is_heading_line,
     join_proven_page_continuations,
     parse_chapters,
+    split_english_timeline_entries,
     split_source_units,
     split_markdown_line_figures,
 )
@@ -59,6 +61,24 @@ class IllustratedNonfictionPreparationTest(unittest.TestCase):
                 "",
                 "More body text.",
                 "",
+                "BOOK I",
+            ],
+        )
+
+    def test_dot_leader_index_entries_are_recovered_across_lines(self) -> None:
+        self.assertEqual(
+            expand_dot_leader_index_lines(
+                [
+                    "Map 1. Owari Province.......... 52 Map 2. Ōmi Province.......... 119 Map 10.",
+                    "The Western Front.......... 288 Map 11. Settsu Province.......... 304",
+                    "BOOK I",
+                ]
+            ),
+            [
+                "Map 1. Owari Province — 52",
+                "Map 2. Ōmi Province — 119",
+                "Map 10. The Western Front — 288",
+                "Map 11. Settsu Province — 304",
                 "BOOK I",
             ],
         )
@@ -136,6 +156,20 @@ class IllustratedNonfictionPreparationTest(unittest.TestCase):
         self.assertGreater(len(units), 1)
         self.assertTrue(all(len(unit) <= 95 for unit in units))
         self.assertEqual(" ".join(units), text)
+
+    def test_timeline_entries_split_even_when_each_entry_is_short(self) -> None:
+        text = (
+            "1534 — Nobunaga is born 1542 — Nobuhide campaigns in Mikawa "
+            "1544 — The army enters Mino"
+        )
+        self.assertEqual(
+            split_english_timeline_entries(text),
+            [
+                "1534 — Nobunaga is born",
+                "1542 — Nobuhide campaigns in Mikawa",
+                "1544 — The army enters Mino",
+            ],
+        )
 
     def test_chinese_markdown_spine_preserves_body_and_headings(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

@@ -274,6 +274,8 @@ def prompt_for_plain_chunk(chunk: dict[str, Any], previous_errors: list[str] | N
         - Obey every required and forbidden rendering in the terminology section of the translation quality contract. Entries with "enforcement": "preferred" are style guidance: use them when natural, but do not distort a sentence merely to force them.
         - In Chinese, preserve an unmapped Latin-script personal name exactly as written in the source. Never invent a Chinese-character spelling for it. Translate or transparently transliterate institutions and places without adding unsupported details.
         - In Japanese, use a stable katakana rendering for an unmapped non-Japanese personal name, or preserve the Latin spelling when uncertain. Never invent kanji for an unmapped personal name.
+        - For Japanese historical people and titles written in Latin transcription, use their established conventional Japanese kanji/kana form when it is confidently identifiable from supplied references or standard usage. Do not spell a well-known Japanese historical name wholly in katakana merely because the source romanizes it; preserve the romanization when the identification is uncertain.
+        - In Chinese, use the established Chinese-character form for a confidently identified Japanese historical person or title. Preserve the source romanization when uncertain rather than guessing characters.
         - Keep each proper name consistent throughout the chunk. A supplied terminology rendering always overrides these fallback rules.
         {spine_requirements.format(ja_instruction=ja_instruction)}
         - Do not include ruby, pinyin, token arrays, grammar colors, Markdown, commentary, or footnotes.

@@ -306,11 +306,141 @@
           "source": "Nobunaga",
           "ja": "信長",
           "zh": "信长"
+        },
+        {
+          "source": "Oda Kichibōshi",
+          "ja": "織田吉法師",
+          "zh": "织田吉法师"
+        },
+        {
+          "source": "Kichibōshi",
+          "ja": "吉法師",
+          "zh": "吉法师"
+        },
+        {
+          "source": "Oda Danjō no Jō Nobuhide",
+          "ja": "織田弾正忠信秀",
+          "zh": "织田弹正忠信秀"
+        },
+        {
+          "source": "Nobuhide",
+          "ja": "信秀",
+          "zh": "信秀"
+        },
+        {
+          "source": "Oda Yamato no Kami",
+          "ja": "織田大和守",
+          "zh": "织田大和守"
+        },
+        {
+          "source": "Imagawa Yoshimoto",
+          "ja": "今川義元",
+          "zh": "今川义元"
+        },
+        {
+          "source": "Saitō Dōsan",
+          "ja": "斎藤道三",
+          "zh": "斋藤道三"
+        },
+        {
+          "source": "Oda Saburō Nobunaga",
+          "ja": "織田三郎信長",
+          "zh": "织田三郎信长"
+        },
+        {
+          "source": "Shiba Yoshimune",
+          "ja": "斯波義統",
+          "zh": "斯波义统"
+        },
+        {
+          "source": "Saitō Yoshitatsu",
+          "ja": "斎藤義龍",
+          "zh": "斋藤义龙"
+        },
+        {
+          "source": "Oda Kanjūrō Nobukatsu",
+          "ja": "織田勘十郎信勝",
+          "zh": "织田勘十郎信胜"
+        },
+        {
+          "source": "Ashikaga Yoshiteru",
+          "ja": "足利義輝",
+          "zh": "足利义辉"
+        },
+        {
+          "source": "Kakkei",
+          "ja": "覚慶",
+          "zh": "觉庆"
+        },
+        {
+          "source": "Ashikaga Yoshiaki",
+          "ja": "足利義昭",
+          "zh": "足利义昭"
+        },
+        {
+          "source": "Saitō Tatsuoki",
+          "ja": "斎藤龍興",
+          "zh": "斋藤龙兴"
+        },
+        {
+          "source": "Sasaki Jōtei",
+          "ja": "佐々木承禎",
+          "zh": "佐佐木承祯"
+        },
+        {
+          "source": "Miyoshi Triumvirs",
+          "ja": "三好三人衆",
+          "zh": "三好三人众"
+        },
+        {
+          "source": "Honkokuji",
+          "ja": "本圀寺",
+          "zh": "本圀寺"
+        },
+        {
+          "source": "Kitabatake Tomonori",
+          "ja": "北畠具教",
+          "zh": "北畠具教"
+        },
+        {
+          "source": "Asakura Yoshikage",
+          "ja": "朝倉義景",
+          "zh": "朝仓义景"
+        },
+        {
+          "source": "Azai Nagamasa",
+          "ja": "浅井長政",
+          "zh": "浅井长政"
+        },
+        {
+          "source": "Tokugawa Ieyasu",
+          "ja": "徳川家康",
+          "zh": "德川家康"
+        },
+        {
+          "source": "Honganji of Ozaka",
+          "ja": "大坂本願寺",
+          "zh": "大坂本愿寺"
+        },
+        {
+          "source": "Single-Minded sect",
+          "ja": "一向宗",
+          "zh": "一向宗"
+        },
+        {
+          "source": "Enryakuji",
+          "ja": "延暦寺",
+          "zh": "延历寺"
+        },
+        {
+          "source": "Mount Hiei",
+          "ja": "比叡山",
+          "zh": "比叡山"
         }
       ],
       "status": "prepared_repaired_pilot_required",
       "launchable": true,
-      "quality_gate_status": "source spine rebuilt after monitoring found alternating prefix/suffix running headers and overlong chronology units; shared cleanup now removes both header directions and losslessly bounds every source unit to 900 characters; fresh chunks 11-15 pilot required before bulk resume",
+      "quality_gate_status": "source spine rebuilt after monitoring found alternating prefix/suffix running headers, flattened dot-leader map entries, overlong chronology units, and katakana-only historical names; shared cleanup and name policy are repaired; fresh chunks 12-16 pilot required before bulk resume",
       "active_session": null,
       "pilot_valid_chunks": [
         3,
@@ -321,9 +451,9 @@
       ],
       "book_plan": "books/chronicle-lord-nobunaga/book-plan.json",
       "chunks_manifest": "books/chronicle-lord-nobunaga/work/trilingual/chunks/manifest.json",
-      "chunk_count": 472,
+      "chunk_count": 471,
       "english_chapter_count": 18,
-      "prepared_chunks_at": "2026-08-01T15:12:53.463380+00:00"
+      "prepared_chunks_at": "2026-08-01T15:28:27.958666+00:00"
     },
     {
       "priority": 2,

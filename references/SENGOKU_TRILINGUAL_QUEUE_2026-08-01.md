@@ -13,7 +13,7 @@ historical evidence.
 
 | Priority | Book | Role / quality | Preparation status | Chunks | Chapters |
 | ---: | --- | --- | --- | ---: | ---: |
-| 1 | `The Chronicle of Lord Nobunaga` / `信長公記` | A+ scholarly English translation of a primary source | Rebuilt after source-cleaning repair; 10/472 retained and a fresh chunks 11--15 pilot is required before bulk resume | 472 | 18 |
+| 1 | `The Chronicle of Lord Nobunaga` / `信長公記` | A+ scholarly English translation of a primary source | Rebuilt after source-cleaning repair; 11/471 retained and a fresh chunks 12--16 pilot is required before bulk resume | 471 | 18 |
 | 2 | `Japan Emerging: Premodern History to 1850` | A modern academic survey | Blocked: page-aware outline segmentation required | 0 | 0 |
 | 3 | Mary Elizabeth Berry, `Hideyoshi` | A scholarly monograph | Launchable | 292 | 9 |
 | 4 | George Sansom, `A History of Japan, 1334-1615` | A- classic synthesis; dated in places | Launchable | 521 | 26 |
@@ -128,8 +128,18 @@ novels must never be used to fill gaps in scholarly claims.
 - Chronology and list paragraphs used em dashes rather than sentence-final
   punctuation, producing source units as long as 10,459 characters. The shared
   splitter now uses lossless boundary-aware subdivision. The rebuilt manifest
-  has 472 chunks and 2,253 source units, every unit is at most 900 characters,
+  has 471 chunks and 2,252 source units, every unit is at most 900 characters,
   and concatenating the split units reproduces the cleaned source text.
+- The same pilot showed that a structurally valid translation could still spell
+  familiar Japanese historical names wholly in katakana. Shared model guidance
+  now requires conventional kanji/kana for confidently identified Japanese
+  historical people and titles, while preserving romanization when uncertain.
+  Verified first-book spellings such as `織田吉法師`, `今川義元`, `斎藤道三`,
+  `足利義昭`, `朝倉義景`, and `浅井長政` live in the project terminology sheet,
+  not in shared worker code.
+- Flattened dot-leader lists are now reconstructed deterministically before
+  model calls: for example, `Map 1. Owari Province ... 52` becomes one clean
+  source unit, rather than shifting page 52 onto the following map entry.
 - Valid chunks 1--10 remain current. Pre-repair candidates, rejected attempts,
   and stale chunks 11--12 are archived under the book work tree; no generated
   translation was silently deleted or reused against a changed source unit.

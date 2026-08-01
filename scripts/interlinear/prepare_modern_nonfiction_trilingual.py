@@ -692,6 +692,55 @@ def drop_repeated_page_headers(lines: list[str]) -> list[str]:
     return out
 
 
+def expand_dot_leader_index_lines(lines: list[str]) -> list[str]:
+    """Recover source-ordered index entries from flattened dot-leader lines.
+
+    Born-digital PDF extraction often flattens an entire list of maps, figures,
+    or tables into one line and may split an entry title across source pages.
+    Convert only long dot-leader/page-number pairs, retaining an incomplete
+    structural prefix such as ``Map 10.`` for the following line.
+    """
+
+    entry_re = re.compile(
+        r"(?P<label>.*?)(?P<leader>\.{8,})\s*(?P<page>\d{1,4})(?=\s|$)"
+    )
+    carry_re = re.compile(
+        r"(?:Map|Figure|Plate|Table)\s+\d+(?:[A-Za-z])?[.:]?",
+        re.I,
+    )
+    out: list[str] = []
+    carry = ""
+    for original in lines:
+        candidate = compact(f"{carry} {original}") if carry else original
+        matches = list(entry_re.finditer(candidate))
+        if not matches:
+            if carry:
+                out.append(carry)
+                carry = ""
+                if original:
+                    out.append(original)
+            else:
+                out.append(original)
+            continue
+
+        carry = ""
+        cursor = 0
+        for match in matches:
+            label = compact(match.group("label")).strip(" .")
+            if label:
+                out.append(f"{label} — {match.group('page')}")
+            cursor = match.end()
+        tail = compact(candidate[cursor:])
+        if tail:
+            if carry_re.fullmatch(tail):
+                carry = tail
+            else:
+                out.append(tail)
+    if carry:
+        out.append(carry)
+    return out
+
+
 def join_proven_page_continuations(lines: list[str]) -> list[str]:
     """Join prose paragraphs split only by a source-page boundary.
 
@@ -942,6 +991,23 @@ def split_overlong_english_piece(text: str, *, max_chars: int) -> list[str]:
     return out
 
 
+def split_english_timeline_entries(text: str) -> list[str]:
+    """Split a flattened chronology at explicit ``YEAR —`` boundaries."""
+
+    starts = [
+        match.start()
+        for match in re.finditer(r"(?<!\S)(?:1[0-9]{3}|20[0-9]{2})\s+[—–-]\s", text)
+    ]
+    if len(starts) < 2:
+        return [text]
+    boundaries = [0, *starts[1:], len(text)]
+    return [
+        text[start:end].strip()
+        for start, end in zip(boundaries, boundaries[1:])
+        if text[start:end].strip()
+    ]
+
+
 def split_cjk_units(text: str, *, max_chars: int) -> list[str]:
     sentence_ends = set("。！？!?；;")
     closers = set("」』”’）)]】〉》")
@@ -983,8 +1049,9 @@ def split_source_units(text: str, lang: str, *, max_chars: int) -> list[str]:
         return split_cjk_units(text, max_chars=max_chars)
     return [
         segment
-        for piece in split_english_units(text, max_chars=max_chars)
-        for segment in split_overlong_english_piece(piece, max_chars=max_chars)
+        for sentence_group in split_english_units(text, max_chars=max_chars)
+        for timeline_entry in split_english_timeline_entries(sentence_group)
+        for segment in split_overlong_english_piece(timeline_entry, max_chars=max_chars)
     ]
 
 
@@ -1069,6 +1136,7 @@ def parse_chapters(markdown: Path, task: dict[str, Any], *, max_unit_chars: int)
             figure_tokens[token] = part
             lines.append(token)
     lines = drop_repeated_page_headers(lines)
+    lines = expand_dot_leader_index_lines(lines)
     start_index = find_start(lines, task)
     preserved_front_figures = []
     if task.get("preserve_front_matter_figures", False):
@@ -1173,6 +1241,12 @@ def parse_chapters(markdown: Path, task: dict[str, Any], *, max_unit_chars: int)
                 "title": canonical_chapter_title(line, task),
                 "paragraphs": [],
             }
+            continue
+        if re.fullmatch(r".{2,180}\s+—\s+\d{1,4}", line):
+            flush()
+            buffer.append(line)
+            body_chars_seen += len(line) + 1
+            flush()
             continue
         if spine_lang == "en" and buffer and buffer[-1].endswith("-") and line and line[0].islower():
             buffer[-1] = buffer[-1][:-1] + line
