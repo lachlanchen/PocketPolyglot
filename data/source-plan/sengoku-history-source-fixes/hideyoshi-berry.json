@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "description": "Source-evidenced Hideyoshi figure repair. Remove OCR-captured repeating chapter ornaments and restore the portrait, plates, and maps listed by the source's MAPS and FIGURES inventory.",
+  "markdown_replacements": [
+    {
+      "from": "(?m)^!\\[\\]\\(assets/page-[^)]+\\)\\s*$",
+      "to": "",
+      "regex": true,
+      "dotall": false,
+      "expected_min": 10,
+      "source_evidence": "The ten hybrid assets are repeated chapter ornaments, not the six listed maps/figures; verified by contact-sheet review against source PDF pages 2, 16, 44, 211, 213, and 226."
+    },
+    {
+      "from": "<!-- source_page_index=1 -->",
+      "to": "<!-- source_page_index=1 -->\n\n![]({{TASK_DIR}}/review/source-figures/frontispiece-hideyoshi.jpg)\n\n*Frontispiece: Portrait of Hideyoshi, with an inscription dated the eighteenth day of the eighth month, 1598, in the collection of Kōdaiji, Kyoto.*",
+      "expected_min": 1,
+      "source_evidence": "Source PDF page 2."
+    },
+    {
+      "from": "<!-- source_page_index=15 -->",
+      "to": "<!-- source_page_index=15 -->\n\n![]({{TASK_DIR}}/review/source-figures/figure-1-hideyoshi-mausoleum.jpg)\n\n*Fig. 1. Hideyoshi's mausoleum, a detail from Higashiyama meisho-zu, a screen in the collection of Yoshimatsu Tsuruki, Kyoto.*",
+      "expected_min": 1,
+      "source_evidence": "Source PDF page 16."
+    },
+    {
+      "from": "<!-- source_page_index=43 -->",
+      "to": "<!-- source_page_index=43 -->\n\n![]({{TASK_DIR}}/review/source-figures/map-1-provinces-of-japan.jpg)\n\n*Map 1. The provinces of Japan and sites associated with Hideyoshi; inset: the provinces surrounding Kyoto.*",
+      "expected_min": 1,
+      "source_evidence": "Source PDF page 44."
+    },
+    {
+      "from": "<!-- source_page_index=210 -->",
+      "to": "<!-- source_page_index=210 -->\n\n![]({{TASK_DIR}}/review/source-figures/figure-2-jurakutei.jpg)\n\n*Fig. 2. Jurakutei, a detail from Jurakutei-zu, a screen in the collection of the Mitsui Bunko, Tokyo.*",
+      "expected_min": 1,
+      "source_evidence": "Source PDF page 211."
+    },
+    {
+      "from": "<!-- source_page_index=212 -->",
+      "to": "<!-- source_page_index=212 -->\n\n![]({{TASK_DIR}}/review/source-figures/map-2-hideyoshi-kyoto.jpg)\n\n*Map 2. Hideyoshi's Kyoto.*",
+      "expected_min": 1,
+      "source_evidence": "Source PDF page 213."
+    },
+    {
+      "from": "<!-- source_page_index=225 -->",
+      "to": "<!-- source_page_index=225 -->\n\n![]({{TASK_DIR}}/review/source-figures/map-3-korea.jpg)\n\n*Map 3. The provinces of Korea and sites associated with the Japanese invasions.*",
+      "expected_min": 1,
+      "source_evidence": "Source PDF page 226."
+    }
+  ]
+}

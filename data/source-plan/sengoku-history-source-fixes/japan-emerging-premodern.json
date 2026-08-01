@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "description": "Source-evidenced repair for Japan Emerging figure 2.1. Marker interpreted the graphical periodization chart as a five-column table and lost its cell boundaries, line breaks, and several letters. Preserve the source figure as an image with an editable caption instead of publishing corrupted OCR.",
+  "markdown_replacements": [
+    {
+      "from": "(?ms)^\\| 1500<br>1400.*?^\\*\\*Figure 2\\.1\\. Periodization schemes for Japanese history\\.\\*\\*$",
+      "to": "![]({{TASK_DIR}}/review/source-figures/figure-2-1-periodization-schemes.png)\n\n**Figure 2.1. Periodization schemes for Japanese history.**",
+      "regex": true,
+      "expected_min": 1,
+      "source_evidence": "Source PDF page 37 (printed page 18). The object is a shaded graphical timeline whose visual cell boundaries carry meaning; the OCR table collapsed those boundaries and concatenated its labels."
+    }
+  ]
+}

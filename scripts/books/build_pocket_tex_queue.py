@@ -145,6 +145,7 @@ SERVER_UNSAFE_FILENAME_CHARS = str.maketrans(
     }
 )
 MARKER_MERGE_NORMALIZER_VERSION = 2
+STRUCTURED_PDF_PROFILES = {"technical_exact", "illustrated_exact"}
 
 
 def log(message: str) -> None:
@@ -863,7 +864,7 @@ def landscape_wide_longtables(text: str) -> str:
             or block.count(r"\left\langle") >= 4
             or block.count(r"\symbf{") >= 4
         )
-        if columns < 6 and not math_heavy_five_column:
+        if columns < 5 and not math_heavy_five_column:
             return block
         return (
             "\n\\clearpage\n\\begin{landscape}\n"
@@ -981,13 +982,24 @@ def remove_source_contents_block(text: str) -> str:
     # document can delete real front matter and early chapters when OCR assigns
     # those headings unexpected identifiers.
     next_match = re.search(
-        r"\n\\hypertarget\{(?:maps|tables|preface(?:-[a-z0-9-]+)?|part-|chapter-|section-|[a-z0-9-]+chapter)\}\{%",
+        r"\n\\hypertarget\{(?:maps|tables|preface(?:-[a-z0-9-]+)?|introduction|prologue|chronology|part-|chapter-|section-|[a-z0-9-]+chapter)\}\{%",
         window[1:],
     )
     if not next_match:
         return text
     end = start + 1 + next_match.start()
-    return text[:start] + "\n% Removed source-extracted printed Contents block; Pandoc TOC is used instead.\n" + text[end:]
+    removed = text[start:end]
+    preserved_illustration = ""
+    if "List of Illustrations" in removed or "FIGURES" in removed:
+        image_matches = list(re.finditer(r"(?m)^\\includegraphics(?:\[[^]]*\])?\{[^}]+\}\s*$", removed))
+        if image_matches and len(removed) - image_matches[-1].start() <= 8000:
+            preserved_illustration = removed[image_matches[-1].start() :].strip() + "\n"
+    return (
+        text[:start]
+        + "\n% Removed source-extracted printed Contents block; Pandoc TOC is used instead.\n"
+        + preserved_illustration
+        + text[end:]
+    )
 
 
 def merge_display_math_punctuation(text: str) -> str:
@@ -1392,7 +1404,11 @@ def rewrite_markdown_image_paths(markdown: str, base: Path) -> str:
     return MARKDOWN_IMAGE_RE.sub(repl, markdown)
 
 
-def normalize_marker_markdown_math(markdown: str) -> str:
+def normalize_marker_markdown_math(
+    markdown: str,
+    *,
+    preserve_html_table_breaks: bool = False,
+) -> str:
     """Normalize Marker math delimiters that Pandoc otherwise escapes in tables."""
 
     # Pandoc strips raw HTML line breaks inside pipe-table cells. Preserve the
@@ -1407,12 +1423,13 @@ def normalize_marker_markdown_math(markdown: str) -> str:
         line = re.sub(rf"(?:\s*{tag})+\s*(?=\|)", " ", line, flags=re.I)
         return re.sub(rf"(?:{tag}\s*)+", r"\\linebreak{}", line, flags=re.I)
 
-    markdown = "\n".join(
-        preserve_table_linebreaks(line)
-        if line.lstrip().startswith("|") and line.rstrip().endswith("|")
-        else line
-        for line in markdown.splitlines()
-    )
+    if not preserve_html_table_breaks:
+        markdown = "\n".join(
+            preserve_table_linebreaks(line)
+            if line.lstrip().startswith("|") and line.rstrip().endswith("|")
+            else line
+            for line in markdown.splitlines()
+        )
 
     # Marker can nest an escaped HTML superscript inside a math span when a
     # footnote marker immediately precedes an equation.  Recover the footnote
@@ -1903,7 +1920,10 @@ def marker_pdf_to_markdown(
     extraction_mode = os.environ.get("POCKET_PDF_EXTRACTION", "").strip().lower()
     if extraction_mode in {"pdftotext", "text"} or os.environ.get("POCKET_SKIP_MARKER") == "1":
         if not allow_text_fallback:
-            raise RuntimeError("technical_exact tasks require structured local extraction; pdftotext is not sufficient")
+            raise RuntimeError(
+                "structured PDF tasks require local layout extraction; "
+                "pdftotext is not sufficient"
+            )
         return pdftotext_to_markdown(source, task_dir)
 
     marker_bin = marker_executable()
@@ -2200,6 +2220,7 @@ def pandoc_to_tex(
     author: str,
     layout: str,
     source_format: str,
+    markdown_reader: str = "",
 ) -> None:
     tex_path.parent.mkdir(parents=True, exist_ok=True)
     header = ensure_header()
@@ -2207,8 +2228,14 @@ def pandoc_to_tex(
     figures_dir.mkdir(parents=True, exist_ok=True)
     pandoc_source = source
     if source_format == "markdown":
+        source_text = source.read_text(encoding="utf-8", errors="replace")
+        if source_text.startswith("---\n"):
+            closing = source_text.find("\n---\n", 4, 8192)
+            if closing >= 0:
+                source_text = source_text[closing + 5 :]
         normalized_markdown = normalize_marker_markdown_math(
-            source.read_text(encoding="utf-8", errors="replace")
+            source_text,
+            preserve_html_table_breaks=markdown_reader.startswith(("commonmark", "gfm")),
         )
         pandoc_source = tex_path.parent / "source-normalized.md"
         pandoc_source.write_text(normalized_markdown, encoding="utf-8")
@@ -2235,7 +2262,8 @@ def pandoc_to_tex(
         str(tex_path),
     ]
     if source_format == "markdown":
-        cmd[1:1] = ["--from", "markdown+tex_math_dollars+tex_math_single_backslash+raw_tex"]
+        reader = markdown_reader or "markdown+tex_math_dollars+tex_math_single_backslash+raw_tex"
+        cmd[1:1] = ["--from", reader]
     elif source_format == "html":
         cmd[1:1] = ["--from", "html"]
     cmd.extend(pandoc_layout_args(layout))
@@ -2381,6 +2409,65 @@ def extract_task_source_crops(source: Path, task: dict[str, Any], task_dir: Path
     )
 
 
+def flatten_markdown_tables_after_heading(
+    markdown: str,
+    *,
+    heading_pattern: str,
+) -> tuple[str, int]:
+    """Flatten OCR-created index tables while retaining every cell's text.
+
+    Scanned two- and three-column indexes are visual columns, not semantic
+    tables. Marker can join an entire page into one enormous table row, which
+    cannot break across a TeX page. Once the configured heading is reached,
+    emit each table column in source order as ordinary paragraphs.
+    """
+
+    heading_re = re.compile(heading_pattern)
+    lines = markdown.splitlines()
+    output: list[str] = []
+    in_target_section = False
+    flattened = 0
+    index = 0
+    separator_re = re.compile(r"^\s*:?-{3,}:?\s*$")
+    break_re = re.compile(r"<br\s*/?>", re.I)
+    while index < len(lines):
+        line = lines[index]
+        if heading_re.search(line):
+            in_target_section = True
+        is_table_line = line.lstrip().startswith("|") and line.rstrip().endswith("|")
+        if not in_target_section or not is_table_line:
+            output.append(line)
+            index += 1
+            continue
+
+        table_lines: list[str] = []
+        while index < len(lines):
+            candidate = lines[index]
+            if not (candidate.lstrip().startswith("|") and candidate.rstrip().endswith("|")):
+                break
+            table_lines.append(candidate)
+            index += 1
+
+        rows = [[cell.strip() for cell in row.strip().strip("|").split("|")] for row in table_lines]
+        column_count = max((len(row) for row in rows), default=0)
+        columns: list[list[str]] = [[] for _ in range(column_count)]
+        for row in rows:
+            if row and all(not cell or separator_re.fullmatch(cell) for cell in row):
+                continue
+            for column_index, cell in enumerate(row):
+                cell = break_re.sub(" ", cell)
+                cell = re.sub(r"\s+", " ", cell).strip()
+                if cell:
+                    columns[column_index].append(cell)
+        output.append("")
+        for column in columns:
+            for cell in column:
+                output.extend((cell, ""))
+        flattened += 1
+
+    return "\n".join(output).rstrip() + "\n", flattened
+
+
 def apply_task_markdown_fixes(source: Path, task: dict[str, Any], task_dir: Path) -> Path:
     """Create the immutable-to-reviewed source boundary used by later stages.
 
@@ -2439,6 +2526,34 @@ def apply_task_markdown_fixes(source: Path, task: dict[str, Any], task_dir: Path
             }
         )
 
+    flattened_index_tables = 0
+    flatten_after = str(task.get("flatten_markdown_tables_after_heading") or "").strip()
+    if flatten_after:
+        text, flattened_index_tables = flatten_markdown_tables_after_heading(
+            text,
+            heading_pattern=flatten_after,
+        )
+
+    # The reviewed copy lives in another directory. Rebase local image paths
+    # first so copying the Markdown cannot silently detach its figure assets.
+    text = rewrite_markdown_image_paths(text, source.parent)
+    local_images: list[str] = []
+    missing_images: list[str] = []
+    for match in MARKDOWN_IMAGE_RE.finditer(text):
+        target = match.group(2).strip().strip("<>")
+        if re.match(r"^[a-zA-Z][a-zA-Z0-9+.-]*:", target):
+            continue
+        image_path = Path(target)
+        if image_path.is_file():
+            local_images.append(str(image_path))
+        else:
+            missing_images.append(target)
+    if missing_images and str(task.get("validation_profile") or "") in STRUCTURED_PDF_PROFILES:
+        raise RuntimeError(
+            "reviewed Markdown has missing local figure assets: "
+            + ", ".join(missing_images[:10])
+        )
+
     prepared = task_dir / "review/source-reviewed.md"
     prepared.parent.mkdir(parents=True, exist_ok=True)
     prepared.write_text(text, encoding="utf-8")
@@ -2451,6 +2566,9 @@ def apply_task_markdown_fixes(source: Path, task: dict[str, Any], task_dir: Path
             "reviewed_sha256": sha256_file(prepared),
             "fix_file": portable_path(fix_path) if fix_path is not None else "",
             "replacements": report_rows,
+            "flattened_index_tables": flattened_index_tables,
+            "local_image_references": len(local_images),
+            "missing_image_references": missing_images,
         },
     )
     return prepared
@@ -2696,14 +2814,15 @@ def completion_issues(
         issues.append("generated exact TeX has no table of contents")
 
     minimum_chars = int(task.get("minimum_generated_text_chars", 5000))
-    if profile == "technical_exact" and source_report.get("pages"):
+    structured_pdf = profile in STRUCTURED_PDF_PROFILES
+    if structured_pdf and source_report.get("pages"):
         minimum_chars = max(minimum_chars, int(source_report["pages"]) * 80)
     if int(generated["text_chars"]) < minimum_chars:
         issues.append(
             f"generated text is too short: {generated['text_chars']} chars (minimum {minimum_chars})"
         )
 
-    if profile == "technical_exact":
+    if structured_pdf:
         source_text_chars = int(source_report.get("text_chars") or 0)
         if source_text_chars >= 5000:
             ratio = int(generated["text_chars"]) / source_text_chars
@@ -2714,7 +2833,7 @@ def completion_issues(
                     f"generated/source text coverage is {ratio:.3f} (minimum {minimum_ratio:.3f})"
                 )
         if int(source_report.get("embedded_images") or 0) > 0 and int(generated["includegraphics_count"]) == 0:
-            issues.append("technical source has embedded images but generated TeX references none")
+            issues.append("illustrated source has embedded images but generated TeX references none")
         exact_figures = exact_report.get("figure_inventory") or {}
         pocket_figures = pocket_report.get("figure_inventory") or {}
         for layer_name, inventory in (("exact", exact_figures), ("pocket", pocket_figures)):
@@ -2750,6 +2869,41 @@ def completion_issues(
                         f"{layer_name} retains {retained}/{extracted_references} Marker figure "
                         f"references ({ratio:.3f}; minimum {minimum_figure_ratio:.3f})"
                     )
+
+        minimum_figures = int(task.get("minimum_generated_figure_count", 0))
+        for layer_name, inventory in (("exact", exact_figures), ("pocket", pocket_figures)):
+            retained = int(inventory.get("existing_count") or 0)
+            if retained < minimum_figures:
+                issues.append(
+                    f"{layer_name} TeX retains only {retained} figures "
+                    f"(minimum {minimum_figures})"
+                )
+
+        required_figure_files = task.get("required_generated_figure_files") or []
+        required_hashes: dict[str, str] = {}
+        for raw_path in required_figure_files:
+            required_path = Path(str(raw_path))
+            if not required_path.is_absolute():
+                required_path = task_dir / required_path
+            if not required_path.is_file():
+                issues.append(f"required source-evidenced figure is missing: {required_path}")
+                continue
+            required_hashes[str(raw_path)] = sha256_file(required_path)
+        structure["required_figures"] = {
+            "count": len(required_hashes),
+            "files": required_hashes,
+        }
+        for layer_name, inventory in (("exact", exact_figures), ("pocket", pocket_figures)):
+            generated_hashes = {
+                str(item.get("sha256") or "") for item in inventory.get("figures") or []
+            }
+            for raw_path, digest in required_hashes.items():
+                if digest not in generated_hashes:
+                    issues.append(
+                        f"{layer_name} TeX omits required source-evidenced figure: {raw_path}"
+                    )
+
+    if profile == "technical_exact":
         minimum_math = int(task.get("minimum_math_blocks", 5))
         math_count = int(generated["display_math_count"]) + int(generated["inline_math_count"])
         if math_count < minimum_math:
@@ -2889,6 +3043,24 @@ def classify_source(source: Path) -> str:
     return "unknown"
 
 
+def resolve_prepared_markdown(task: dict[str, Any]) -> Path | None:
+    """Resolve an optional reviewed Markdown transcription for a PDF task."""
+
+    raw_path = str(task.get("prepared_markdown") or "").strip()
+    if not raw_path:
+        return None
+    path = Path(raw_path)
+    path = path if path.is_absolute() else ROOT / path
+    path = path.resolve()
+    if path.suffix.lower() not in {".md", ".markdown"}:
+        raise RuntimeError(f"prepared_markdown must be Markdown: {path}")
+    if not path.is_file():
+        raise FileNotFoundError(path)
+    if len(re.sub(r"\s+", "", path.read_text(encoding="utf-8", errors="replace"))) < 500:
+        raise RuntimeError(f"prepared_markdown is too short to trust: {path}")
+    return path
+
+
 def build_one(
     task: dict[str, Any],
     *,
@@ -2925,13 +3097,17 @@ def build_one(
             raise FileNotFoundError(source)
         if source_kind == "pdf":
             validation_profile = str(task.get("validation_profile") or "basic")
-            body_source = marker_pdf_to_markdown(
-                source,
-                task_dir,
-                force=force,
-                shard_pages=int(task.get("marker_shard_pages") or 0),
-                allow_text_fallback=validation_profile != "technical_exact",
-            )
+            body_source = resolve_prepared_markdown(task)
+            if body_source is None:
+                body_source = marker_pdf_to_markdown(
+                    source,
+                    task_dir,
+                    force=force,
+                    shard_pages=int(task.get("marker_shard_pages") or 0),
+                    allow_text_fallback=validation_profile not in STRUCTURED_PDF_PROFILES,
+                )
+            else:
+                log(f"[reuse] {book_id} reviewed Markdown: {portable_path(body_source)}")
             pandoc_format = "pdftotext" if body_source.name == "source-from-pdftotext.md" else "markdown"
         elif source_kind == "epub":
             body_source = repair_epub_for_pandoc(source, task_dir, force=force)
@@ -2951,7 +3127,16 @@ def build_one(
             plain_text_markdown_to_tex(body_source, exact_tex, title=title, author=author, layout="exact")
             plain_text_markdown_to_tex(body_source, pocket_tex, title=title, author=author, layout="pocket")
         else:
-            pandoc_to_tex(body_source, exact_tex, title=title, author=author, layout="exact", source_format=pandoc_format)
+            markdown_reader = str(task.get("markdown_reader") or "")
+            pandoc_to_tex(
+                body_source,
+                exact_tex,
+                title=title,
+                author=author,
+                layout="exact",
+                source_format=pandoc_format,
+                markdown_reader=markdown_reader,
+            )
             pandoc_to_tex(
                 body_source,
                 pocket_tex,
@@ -2959,6 +3144,7 @@ def build_one(
                 author=author,
                 layout="pocket",
                 source_format=pandoc_format,
+                markdown_reader=markdown_reader,
             )
         apply_task_tex_fixes(exact_tex, task, layout="exact")
         apply_task_tex_fixes(pocket_tex, task, layout="pocket")
@@ -3037,7 +3223,8 @@ def build_one(
 
 
 def iter_tasks(queue: dict[str, Any], book_ids: set[str] | None) -> list[dict[str, Any]]:
-    tasks = list(queue.get("tasks", []))
+    defaults = dict(queue.get("task_defaults") or {})
+    tasks = [{**defaults, **task} for task in queue.get("tasks", [])]
     if book_ids:
         tasks = [task for task in tasks if task.get("book_id") in book_ids]
     return tasks
