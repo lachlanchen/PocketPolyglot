@@ -13,7 +13,7 @@ historical evidence.
 
 | Priority | Book | Role / quality | Preparation status | Chunks | Chapters |
 | ---: | --- | --- | --- | ---: | ---: |
-| 1 | `The Chronicle of Lord Nobunaga` / `信長公記` | A+ scholarly English translation of a primary source | Rebuilt after source-cleaning repair; 11/471 retained and a fresh chunks 12--16 pilot is required before bulk resume | 471 | 18 |
+| 1 | `The Chronicle of Lord Nobunaga` / `信長公記` | A+ scholarly English translation of a primary source | Rebuilt after source-cleaning repair; 9/475 retained and a fresh chunks 10--16 pilot is required before bulk resume | 475 | 18 |
 | 2 | `Japan Emerging: Premodern History to 1850` | A modern academic survey | Blocked: page-aware outline segmentation required | 0 | 0 |
 | 3 | Mary Elizabeth Berry, `Hideyoshi` | A scholarly monograph | Launchable | 292 | 9 |
 | 4 | George Sansom, `A History of Japan, 1334-1615` | A- classic synthesis; dated in places | Launchable | 521 | 26 |
@@ -127,9 +127,16 @@ novels must never be used to fill gaps in scholarly claims.
   test that preserves real headings such as `BOOK I`.
 - Chronology and list paragraphs used em dashes rather than sentence-final
   punctuation, producing source units as long as 10,459 characters. The shared
-  splitter now uses lossless boundary-aware subdivision. The rebuilt manifest
-  has 471 chunks and 2,252 source units, every unit is at most 900 characters,
-  and concatenating the split units reproduces the cleaned source text.
+  splitter now uses lossless boundary-aware subdivision and keeps all fragments
+  from one chronology year in the same chunk whenever that year fits the chunk
+  budget. The rebuilt manifest has 475 chunks and 2,241 source units, every unit
+  is at most 900 characters, and concatenating the split units reproduces the
+  cleaned source text.
+- URL-bearing source lines were previously treated as publication boilerplate.
+  This silently spliced `it would have been` to a later clause beginning with
+  `order`. Boilerplate detection is now whole-line and conservative; prose and
+  wrapped domain names are retained without punctuation repair inserting spaces
+  inside URLs.
 - The same pilot showed that a structurally valid translation could still spell
   familiar Japanese historical names wholly in katakana. Shared model guidance
   now requires conventional kanji/kana for confidently identified Japanese
@@ -144,8 +151,8 @@ novels must never be used to fill gaps in scholarly claims.
   model calls: for example, `Map 1. Owari Province ... 52` becomes one clean
   indivisible source unit, rather than shifting page 52 onto the following map
   entry or splitting `Map 1.` away from its title.
-- Valid chunks 1--10 remain current. Pre-repair candidates, rejected attempts,
-  and stale chunks 11--12 are archived under the book work tree; no generated
+- Valid chunks 1--9 remain current. Pre-repair candidates, rejected attempts,
+  and stale chunks 10--12 are archived under the book work tree; no generated
   translation was silently deleted or reused against a changed source unit.
 - Name authority checks use the National Diet Library/CiNii records for
   [土橋八千太](https://id.ndl.go.jp/auth/ndlna/00086909) and

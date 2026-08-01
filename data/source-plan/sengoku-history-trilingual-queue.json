@@ -445,7 +445,7 @@
       ],
       "status": "prepared_repaired_pilot_required",
       "launchable": true,
-      "quality_gate_status": "source spine rebuilt after monitoring found alternating prefix/suffix running headers, flattened dot-leader map entries, overlong chronology units, and katakana-only historical names; shared cleanup and name policy are repaired; fresh chunks 12-16 pilot required before bulk resume",
+      "quality_gate_status": "source spine rebuilt after monitoring found alternating prefix/suffix running headers, flattened dot-leader map entries, dropped URL-bearing prose, chronology years split across chunks, and katakana-only historical names; shared cleanup, grouping, and name policy are repaired; fresh chunks 10-16 pilot required before bulk resume",
       "active_session": null,
       "pilot_valid_chunks": [
         3,
@@ -456,9 +456,9 @@
       ],
       "book_plan": "books/chronicle-lord-nobunaga/book-plan.json",
       "chunks_manifest": "books/chronicle-lord-nobunaga/work/trilingual/chunks/manifest.json",
-      "chunk_count": 471,
+      "chunk_count": 475,
       "english_chapter_count": 18,
-      "prepared_chunks_at": "2026-08-01T15:41:45.058896+00:00"
+      "prepared_chunks_at": "2026-08-01T15:57:34.685880+00:00"
     },
     {
       "priority": 2,
@@ -875,5 +875,5 @@
       "prepared_chunks_at": "2026-08-01T13:54:25.553876+00:00"
     }
   ],
-  "last_chunk_preparation_at": "2026-08-01T14:18:51.920573+00:00"
+  "last_chunk_preparation_at": "2026-08-01T15:57:34.685880+00:00"
 }

@@ -19,7 +19,9 @@ from prepare_modern_nonfiction_trilingual import (
     is_recovered_index_entry,
     join_proven_page_continuations,
     parse_chapters,
+    repair_embedded_text_artifacts,
     split_english_timeline_entries,
+    split_source_units_grouped,
     split_source_units,
     split_markdown_line_figures,
 )
@@ -31,6 +33,34 @@ class IllustratedNonfictionPreparationTest(unittest.TestCase):
             with self.subTest(header=header):
                 self.assertEqual(clean_line(header, "A Book"), "")
         self.assertEqual(clean_line("BOOK XV", "A Book"), "BOOK XV")
+
+    def test_page_continuation_after_preposition_joins_uppercase_place(self) -> None:
+        self.assertEqual(
+            join_proven_page_continuations(
+                [
+                    "The repelled army forced Nobunaga to hasten to",
+                    "",
+                    "Kyoto and order a fortified residence to be built.",
+                ]
+            ),
+            [
+                "The repelled army forced Nobunaga to hasten to Kyoto and order a fortified residence to be built."
+            ],
+        )
+
+    def test_url_bearing_prose_is_not_discarded_as_boilerplate(self) -> None:
+        line = "The two useful sites are http://example.test and another source."
+
+        self.assertEqual(clean_line(line, "A Book"), line)
+        self.assertEqual(clean_line("https://example.test", "A Book"), "")
+
+    def test_pdf_wrapped_url_scheme_is_rejoined(self) -> None:
+        self.assertEqual(
+            repair_embedded_text_artifacts(
+                "The source is http:// example.test and map.yahoo.co.jp remains readable."
+            ),
+            "The source is http://example.test and map.yahoo.co.jp remains readable.",
+        )
 
     def test_repeated_page_headers_are_removed_in_both_directions(self) -> None:
         self.assertEqual(
@@ -174,6 +204,25 @@ class IllustratedNonfictionPreparationTest(unittest.TestCase):
                 "1544 — The army enters Mino",
             ],
         )
+
+    def test_overlong_entry_prefers_early_semicolon_to_arbitrary_word_cut(self) -> None:
+        prefix = "1569 — The attacking army is repelled;"
+        text = f"{prefix} " + " ".join(["Nobunaga"] * 80)
+
+        units = split_source_units(text, "en", max_chars=220)
+
+        self.assertEqual(units[0], prefix)
+        self.assertTrue(all(len(unit) <= 220 for unit in units))
+        self.assertEqual(" ".join(units), text)
+
+    def test_timeline_fragments_share_a_keep_together_group(self) -> None:
+        text = "1573 — " + " ".join(["campaign"] * 180)
+
+        grouped = split_source_units_grouped(text, "en", max_chars=220)
+
+        self.assertGreater(len(grouped), 1)
+        self.assertEqual({group for _unit, group in grouped}, {"timeline:1573"})
+        self.assertEqual(" ".join(unit for unit, _group in grouped), text)
 
     def test_chinese_markdown_spine_preserves_body_and_headings(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

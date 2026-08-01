@@ -62,10 +62,23 @@ HEADING_RE = re.compile(
     r")$",
     re.I,
 )
-BOILERPLATE_RE = re.compile(
-    r"(copyright|all rights reserved|isbn|published by|printed in|library of congress|"
-    r"www\.|http[s]?://|ebook|cover design|permissions|random house|penguin|"
-    r"basic books|oxford university press|mcgraw-hill|wiley)",
+BOILERPLATE_PREFIX_RE = re.compile(
+    r"^(?:copyright|all rights reserved|isbn|published by|printed in|"
+    r"library of congress|cover design|permissions)\b",
+    re.I,
+)
+PUBLISHER_ONLY_RE = re.compile(
+    r"^(?:random house|penguin|basic books|oxford university press|"
+    r"mcgraw-hill|wiley|ebook(?: edition)?)\W*$",
+    re.I,
+)
+URL_ONLY_RE = re.compile(
+    r"^(?:(?:https?://|www\.)\S+[,.]?\s*)+$",
+    re.I,
+)
+INLINE_URL_RE = re.compile(
+    r"(?:https?://|www\.)[^\s<>\[\]{}\"']+|"
+    r"\b(?:[A-Za-z0-9-]{2,}\.)+[A-Za-z]{2,}(?:/[^\s<>\[\]{}\"']*)?",
     re.I,
 )
 OCR_METADATA_RE = re.compile(
@@ -189,6 +202,14 @@ def repair_embedded_text_artifacts(text: str) -> str:
     text = BROKEN_I_RE.sub("I", text)
     text = LOWER_L_I_RE.sub("I", text)
     text = STUCK_I_RE.sub("I ", text)
+    text = re.sub(r"\b(https?://)\s+(?=[A-Za-z0-9])", r"\1", text)
+    protected_urls: list[str] = []
+
+    def protect_url(match: re.Match[str]) -> str:
+        protected_urls.append(match.group(0))
+        return f"POCKETPOLYGLOTURLTOKEN{len(protected_urls) - 1}ENDTOKEN"
+
+    text = INLINE_URL_RE.sub(protect_url, text)
     text = PUNCT_SPACE_RE.sub(r"\1 ", text)
     text = SPACED_THOUSAND_RE.sub(r"\1\2,\3", text)
     previous = None
@@ -278,6 +299,8 @@ def repair_embedded_text_artifacts(text: str) -> str:
     }
     for bad, good in spaced_word_fixes.items():
         text = re.sub(rf"\b{re.escape(bad)}\b", good, text)
+    for index, url in enumerate(protected_urls):
+        text = text.replace(f"POCKETPOLYGLOTURLTOKEN{index}ENDTOKEN", url)
     return compact(text)
 
 
@@ -549,7 +572,14 @@ def clean_line(
         and not matches_configured_heading(line, task)
     ):
         return ""
-    if BOILERPLATE_RE.search(line):
+    # Drop actual publication furniture, not arbitrary prose that happens to
+    # mention a publisher or URL. Whole-line URL filtering previously removed
+    # clauses from page-spanning paragraphs and silently joined unrelated text.
+    if (
+        BOILERPLATE_PREFIX_RE.search(line)
+        or PUBLISHER_ONLY_RE.fullmatch(line)
+        or URL_ONLY_RE.fullmatch(line)
+    ):
         return ""
     if line.casefold() == title.casefold():
         return ""
@@ -772,7 +802,13 @@ def join_proven_page_continuations(lines: list[str]) -> list[str]:
         if SENTENCE_END_RE.search(previous):
             return False
         first_letter = next((char for char in following if char.isalpha()), "")
-        return bool(first_letter and first_letter.islower())
+        if first_letter and first_letter.islower():
+            return True
+        return re.search(
+            r"\b(?:a|an|and|as|at|but|by|for|from|in|into|of|on|or|the|to|under|with)\s*$",
+            previous,
+            re.I,
+        ) is not None
 
     joined: list[str] = []
     index = 0
@@ -967,22 +1003,37 @@ def split_overlong_english_piece(text: str, *, max_chars: int) -> list[str]:
 
     remaining = text.strip()
     out: list[str] = []
-    minimum_cut = max(1, int(max_chars * 0.55))
+    strong_minimum_cut = max(24, int(max_chars * 0.10))
+    weak_minimum_cut = max(1, int(max_chars * 0.55))
     while len(remaining) > max_chars:
         window = remaining[: max_chars + 1]
-        candidates: list[int] = []
+        strong_candidates: list[int] = []
+        weak_candidates: list[int] = []
         for match in re.finditer(r"\s+(?=(?:1[0-9]{3}|20[0-9]{2})\s+[—–-]\s)", window):
-            candidates.append(match.start())
-        for match in re.finditer(r"(?:[;.!?]|\s[—–])\s+", window):
-            candidates.append(match.end())
+            strong_candidates.append(match.start())
+        for match in re.finditer(r"[;.!?]\s+", window):
+            strong_candidates.append(match.end())
+        for match in re.finditer(r"\s+[—–]\s+", window):
+            strong_candidates.append(match.start())
         for match in re.finditer(r"[,)]\s+", window):
-            candidates.append(match.end())
-        candidates = [position for position in candidates if minimum_cut <= position <= max_chars]
-        if candidates:
-            cut = max(candidates)
+            weak_candidates.append(match.end())
+        strong_candidates = [
+            position
+            for position in strong_candidates
+            if strong_minimum_cut <= position <= max_chars
+        ]
+        weak_candidates = [
+            position
+            for position in weak_candidates
+            if weak_minimum_cut <= position <= max_chars
+        ]
+        if strong_candidates:
+            cut = max(strong_candidates)
+        elif weak_candidates:
+            cut = max(weak_candidates)
         else:
             whitespace = [match.start() for match in re.finditer(r"\s+", window)]
-            usable = [position for position in whitespace if minimum_cut <= position <= max_chars]
+            usable = [position for position in whitespace if weak_minimum_cut <= position <= max_chars]
             cut = max(usable) if usable else max_chars
         piece = remaining[:cut].strip()
         if not piece:
@@ -1048,16 +1099,39 @@ def split_cjk_units(text: str, *, max_chars: int) -> list[str]:
     return out
 
 
-def split_source_units(text: str, lang: str, *, max_chars: int) -> list[str]:
+def split_source_units_grouped(
+    text: str,
+    lang: str,
+    *,
+    max_chars: int,
+) -> list[tuple[str, str]]:
     if lang != "en":
-        return split_cjk_units(text, max_chars=max_chars)
+        return [(unit, "") for unit in split_cjk_units(text, max_chars=max_chars)]
     if is_recovered_index_entry(text):
-        return [text]
+        return [(text, "")]
+    grouped: list[tuple[str, str]] = []
+    for sentence_group in split_english_units(text, max_chars=max_chars):
+        for timeline_entry in split_english_timeline_entries(sentence_group):
+            year = re.match(r"((?:1[0-9]{3}|20[0-9]{2}))\s+[—–-]\s", timeline_entry)
+            group = f"timeline:{year.group(1)}" if year else ""
+            grouped.extend(
+                (segment, group)
+                for segment in split_overlong_english_piece(
+                    timeline_entry,
+                    max_chars=max_chars,
+                )
+            )
+    return grouped
+
+
+def split_source_units(text: str, lang: str, *, max_chars: int) -> list[str]:
     return [
-        segment
-        for sentence_group in split_english_units(text, max_chars=max_chars)
-        for timeline_entry in split_english_timeline_entries(sentence_group)
-        for segment in split_overlong_english_piece(timeline_entry, max_chars=max_chars)
+        unit
+        for unit, _group in split_source_units_grouped(
+            text,
+            lang,
+            max_chars=max_chars,
+        )
     ]
 
 
@@ -1177,8 +1251,14 @@ def parse_chapters(markdown: Path, task: dict[str, Any], *, max_unit_chars: int)
             task.get("min_paragraph_chars", 20 if spine_lang == "en" else 4)
         )
         if len(text) >= min_paragraph_chars and has_language_content(text, spine_lang):
-            for unit in split_source_units(text, spine_lang, max_chars=max_unit_chars):
+            for unit, keep_together in split_source_units_grouped(
+                text,
+                spine_lang,
+                max_chars=max_unit_chars,
+            ):
                 paragraph: dict[str, Any] = {"text": unit}
+                if keep_together:
+                    paragraph["keep_together"] = keep_together
                 if pending_figures:
                     paragraph["figures"] = pending_figures
                     pending_figures = []
@@ -1298,7 +1378,7 @@ def build_chunks(task: dict[str, Any], chapters: list[dict[str, Any]], *, max_ch
     if task.get("terminology"):
         translation_contract["terminology"] = task["terminology"]
     for chapter in chapters:
-        pending: list[dict[str, str]] = []
+        pending: list[dict[str, Any]] = []
         pending_chars = 0
 
         def flush() -> None:
@@ -1353,17 +1433,18 @@ def build_chunks(task: dict[str, Any], chapters: list[dict[str, Any]], *, max_ch
             pending = []
             pending_chars = 0
 
+        prepared_entries: list[tuple[dict[str, Any], str]] = []
         for paragraph_entry in chapter["paragraphs"]:
             if isinstance(paragraph_entry, dict):
                 paragraph = str(paragraph_entry.get("text") or "")
                 figures = list(paragraph_entry.get("figures") or [])
+                keep_together = str(paragraph_entry.get("keep_together") or "")
             else:
                 paragraph = str(paragraph_entry)
                 figures = []
+                keep_together = ""
             paragraph_index += 1
             paragraph_id = f"{task['book_id']}-s{chapter['number']:03d}-p{paragraph_index:05d}"
-            if pending and pending_chars + len(paragraph) > max_chunk_chars:
-                flush()
             prepared_paragraph: dict[str, Any] = {"id": paragraph_id, spine_lang: paragraph}
             if figures:
                 prepared_paragraph["figures"] = figures
@@ -1374,8 +1455,33 @@ def build_chunks(task: dict[str, Any], chapters: list[dict[str, Any]], *, max_ch
                         if "source_page_index" in figure
                     }
                 )
-            pending.append(prepared_paragraph)
-            pending_chars += len(paragraph) + 1
+            prepared_entries.append((prepared_paragraph, keep_together))
+
+        cursor = 0
+        while cursor < len(prepared_entries):
+            item, keep_together = prepared_entries[cursor]
+            end = cursor + 1
+            if keep_together:
+                while (
+                    end < len(prepared_entries)
+                    and prepared_entries[end][1] == keep_together
+                ):
+                    end += 1
+            group = [entry for entry, _key in prepared_entries[cursor:end]]
+            group_chars = sum(len(str(entry[spine_lang])) + 1 for entry in group)
+            if pending and pending_chars + group_chars > max_chunk_chars:
+                flush()
+            if group_chars <= max_chunk_chars:
+                pending.extend(group)
+                pending_chars += group_chars
+            else:
+                for entry in group:
+                    entry_chars = len(str(entry[spine_lang])) + 1
+                    if pending and pending_chars + entry_chars > max_chunk_chars:
+                        flush()
+                    pending.append(entry)
+                    pending_chars += entry_chars
+            cursor = end
         flush()
 
     source_path = ROOT / task["source_path"]
