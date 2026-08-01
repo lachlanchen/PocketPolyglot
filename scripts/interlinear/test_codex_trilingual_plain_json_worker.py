@@ -138,6 +138,81 @@ class TrilingualPlainPromotionTest(unittest.TestCase):
         self.assertNotIn("さば", ruby.values())
         self.assertNotIn("ょか", ruby.values())
 
+    def test_japanese_tokenizer_preserves_latin_diacritics_exactly(self) -> None:
+        text = "GyūichiとShima Shōzō、Tçuzzuが記した。"
+        tokens = tokenize_ja(text)
+
+        self.assertEqual("".join(token["t"] for token in tokens), text)
+        self.assertEqual(sum(token["t"].count("Gyūichi") for token in tokens), 1)
+        self.assertEqual(sum(token["t"].count("Shima Shōzō") for token in tokens), 1)
+        self.assertEqual(sum(token["t"].count("Tçuzzu") for token in tokens), 1)
+
+    def test_validator_rejects_unrelated_script_introduced_into_japanese(self) -> None:
+        source = {
+            "chunk_id": "fixture-c0001",
+            "chapter_id": "chapter-001",
+            "chapter_number": 1,
+            "chapter_title_en": "Preface",
+            "source_spine_lang": "en",
+            "reference": {},
+            "paragraphs": [{"id": "fixture-p0001", "en": "On one topic, the text expands."}],
+        }
+        plain = {
+            "chunk_id": "fixture-c0001",
+            "paragraphs": [
+                {
+                    "id": "fixture-p0001",
+                    "units": [
+                        {
+                            "unit_id": "fixture-p0001-u001",
+                            "ja": "ある一つの विषयでは、本文が拡充されている。",
+                            "zh": "在一个主题上，正文有所扩充。",
+                        }
+                    ],
+                }
+            ],
+        }
+
+        promoted = promote_plain_chunk(source, plain)
+        errors = validate_chunk(source, promoted)
+
+        self.assertTrue(any("unexpected Devanagari script" in error for error in errors))
+
+    def test_validator_allows_short_japanese_terms_quoted_in_chinese(self) -> None:
+        source = {
+            "chunk_id": "fixture-c0001",
+            "chapter_id": "chapter-001",
+            "chapter_number": 1,
+            "chapter_title_en": "Preface",
+            "source_spine_lang": "en",
+            "reference": {},
+            "paragraphs": [
+                {
+                    "id": "fixture-p0001",
+                    "en": "The opening passage contains the phrase gotōzan nasare.",
+                }
+            ],
+        }
+        plain = {
+            "chunk_id": "fixture-c0001",
+            "paragraphs": [
+                {
+                    "id": "fixture-p0001",
+                    "units": [
+                        {
+                            "unit_id": "fixture-p0001-u001",
+                            "ja": "冒頭の一節には「御登山なされ」という表現がある。",
+                            "zh": "开篇第一段出现「御登山なされ」一语。",
+                        }
+                    ],
+                }
+            ],
+        }
+
+        promoted = promote_plain_chunk(source, plain)
+
+        self.assertEqual(validate_chunk(source, promoted), [])
+
     def test_promotion_preserves_source_figure_metadata(self) -> None:
         source = {
             "chunk_id": "fixture-c0001",

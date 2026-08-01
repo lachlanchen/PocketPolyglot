@@ -13,7 +13,7 @@ historical evidence.
 
 | Priority | Book | Role / quality | Preparation status | Chunks | Chapters |
 | ---: | --- | --- | --- | ---: | ---: |
-| 1 | `The Chronicle of Lord Nobunaga` / `信長公記` | A+ scholarly English translation of a primary source | Launchable | 465 | 18 |
+| 1 | `The Chronicle of Lord Nobunaga` / `信長公記` | A+ scholarly English translation of a primary source | Running after repaired `gpt-5.6-sol` low pilot passed; 6/464 accepted at launch | 464 | 18 |
 | 2 | `Japan Emerging: Premodern History to 1850` | A modern academic survey | Blocked: page-aware outline segmentation required | 0 | 0 |
 | 3 | Mary Elizabeth Berry, `Hideyoshi` | A scholarly monograph | Launchable | 292 | 9 |
 | 4 | George Sansom, `A History of Japan, 1334-1615` | A- classic synthesis; dated in places | Launchable | 521 | 26 |
@@ -85,14 +85,14 @@ novels must never be used to fill gaps in scholarly claims.
 
 ## Model And Escalation Policy
 
-1. Pilot two chunks with one worker before bulk generation.
-2. Start with `gpt-5.4-mini` at low reasoning only when the pilot is both
-   structurally valid and semantically consistent.
-3. If low reasoning drifts in terminology or naturalness, use
-   `gpt-5.4-mini` at medium for that book.
-4. Escalate only failed or semantically uncertain chunks to `gpt-5.6-sol` low;
-   never regenerate a whole accepted book merely because one unit needs repair.
-5. Bulk generation runs one book at a time with three claim-safe workers.
+1. Pilot repaired failure-boundary chunks with one worker before bulk generation.
+2. The `gpt-5.4-mini` low and medium pilots are rejected for this queue.
+3. Use `gpt-5.6-sol` at low reasoning for the new pilot and bulk work only after
+   semantic inspection passes; use `gpt-5.5` low only as an availability fallback.
+4. Regenerate only failed or semantically uncertain chunks; never regenerate a
+   whole accepted book merely because one unit needs repair.
+5. Bulk generation runs one book at a time with three claim-safe workers in an
+   observable, resumable tmux session.
 
 ## Pilot Evidence
 
@@ -104,13 +104,37 @@ novels must never be used to fill gaps in scholarly claims.
 - A medium-reasoning pilot improved naturalness and consistency, but exposed a
   general unsafe-name behavior in Chinese. The worker now explicitly forbids
   invented character spellings for unmapped Latin names.
+- The first bulk attempt exposed three additional quality failures: `s. v.
+  Tôzan` was split at an abbreviation boundary, one Japanese unit introduced
+  Devanagari `विषय`, and ruby promotion duplicated Latin names containing
+  macrons or cedillas. The queue was stopped before further generation. Shared
+  deterministic repairs and regression tests now cover all three cases.
+- The repaired `gpt-5.6-sol` low pilot passed chunks 3--6. It restored `年表`,
+  kept `s. v. Tôzan` together, preserved quoted Japanese source phrases in
+  Chinese, emitted no unrelated scripts, and reconstructed macron-bearing Latin
+  names exactly. A manual authority review caught and repaired `Hino Hiroshi`
+  as `日埜博司` before the bulk tmux run was approved.
 - Name authority checks use the National Diet Library/CiNii records for
   [土橋八千太](https://id.ndl.go.jp/auth/ndlna/00086909) and
   [Japanese Chronological Tables](https://ci.nii.ac.jp/ncid/BA14297025).
+- The repaired pilot also authority-checks [島正三](https://ci.nii.ac.jp/ncid/BN06202998),
+  [日埜博司](https://ndlsearch.ndl.go.jp/search?cs=bib&from=0&q-author=%22%E6%97%A5%E5%9F%9C%2C+%E5%8D%9A%E5%8F%B8%22&size=20),
+  and [大塚光信](https://ndlsearch.ndl.go.jp/books/R100000147-I900023643)
+  rather than allowing the model to invent kanji spellings.
 
 Pilot archives are preserved under
 `books/chronicle-lord-nobunaga/work/trilingual/parallel-json.pilot-*` so model
 selection remains auditable.
+
+## Local Extraction Preflight
+
+A local Marker/Surya sample was run over the preface pages and compared with
+embedded `pdftotext` extraction. Marker preserved emphasis and joined
+page-spanning prose, but also inserted running headers such as `preface xi` and
+`xii preface` into sentences. For this born-digital prose book, cleaned embedded
+text is therefore the higher-fidelity translation spine. The shared structured
+local extraction remains required for two-column, scanned, illustrated, and
+figure-bearing books later in the queue.
 
 ## Validation
 

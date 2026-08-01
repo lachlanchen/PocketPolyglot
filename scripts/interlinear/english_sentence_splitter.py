@@ -18,14 +18,18 @@ ABBREVIATION_STEMS = {
     "col",
     "corp",
     "dr",
+    "ed",
+    "eds",
     "e",
     "eg",
     "etc",
     "fig",
+    "ff",
     "gen",
     "gov",
     "hon",
     "i",
+    "ibid",
     "ie",
     "inc",
     "jr",
@@ -41,6 +45,8 @@ ABBREVIATION_STEMS = {
     "ms",
     "mt",
     "no",
+    "p",
+    "pp",
     "prof",
     "rep",
     "rev",
@@ -48,14 +54,32 @@ ABBREVIATION_STEMS = {
     "sgt",
     "sr",
     "st",
+    "trans",
+    "vol",
+    "vols",
     "vs",
 }
+
+SCHOLARLY_ABBREVIATION_RE = re.compile(
+    r"(?:\b(?:s\s*\.\s*v|op\s*\.\s*cit|loc\s*\.\s*cit)\.)$",
+    re.IGNORECASE,
+)
 
 
 def is_abbreviation_boundary(text: str, end: int) -> bool:
     """Return true when a regex boundary is only an abbreviation like ``Mr.``."""
     before = text[:end].rstrip()
     before = re.sub(r'["”’)\]}]+$', "", before).rstrip()
+    if SCHOLARLY_ABBREVIATION_RE.search(before):
+        return True
+    # ``s. v.`` (sub voce) is often spaced by PDF cleanup.  The regex sees
+    # each dot independently, so protect both the ``s.`` and ``v.`` boundary.
+    if re.search(r"\bs\.$", before, re.IGNORECASE):
+        after = text[end:].lstrip()
+        if re.match(r"v\.", after, re.IGNORECASE):
+            return True
+    if re.search(r"\bs\.\s*v\.$", before, re.IGNORECASE):
+        return True
     if re.search(r"(?:\b[A-Za-z]\.){2,}$", before):
         return True
     match = re.search(r"\b([A-Za-z]{1,12})\.$", before)

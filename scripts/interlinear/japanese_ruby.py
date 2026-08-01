@@ -11,6 +11,9 @@ import pykakasi
 
 HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 RUBY_BASE_MARKS = {"々", "〻", "ヵ", "ヶ"}
+JAPANESE_RUN_RE = re.compile(
+    r"[\u3040-\u309f\u30a0-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff々〻ヵヶー]+"
+)
 KAKASI = pykakasi.kakasi()
 
 
@@ -79,17 +82,31 @@ def tokenize_segment(orig: str, hira: str) -> list[dict[str, str]]:
 
 
 def tokenize_japanese(text: Any) -> list[dict[str, str]]:
+    """Tokenize Japanese while preserving every non-Japanese codepoint.
+
+    Pykakasi can duplicate Latin spans around extended characters such as the
+    macrons in ``Gyūichi`` or the cedilla in ``Tçuzzu``.  Feed it only genuine
+    Japanese runs and append all other text verbatim.
+    """
+
     tokens: list[dict[str, str]] = []
-    try:
-        segments = KAKASI.convert(str(text))
-    except Exception:
-        segments = [{"orig": str(text), "hira": ""}]
-    for segment in segments:
-        orig = str(segment.get("orig") or "")
-        hira = str(segment.get("hira") or "")
-        for token in tokenize_segment(orig, hira):
-            if token.get("r"):
-                tokens.append(token)
-            else:
-                append_plain(tokens, token.get("t", ""))
-    return tokens or [{"t": str(text)}]
+    original = str(text)
+    cursor = 0
+    for run in JAPANESE_RUN_RE.finditer(original):
+        append_plain(tokens, original[cursor : run.start()])
+        run_text = run.group(0)
+        try:
+            segments = KAKASI.convert(run_text)
+        except Exception:
+            segments = [{"orig": run_text, "hira": ""}]
+        for segment in segments:
+            orig = str(segment.get("orig") or "")
+            hira = str(segment.get("hira") or "")
+            for token in tokenize_segment(orig, hira):
+                if token.get("r"):
+                    tokens.append(token)
+                else:
+                    append_plain(tokens, token.get("t", ""))
+        cursor = run.end()
+    append_plain(tokens, original[cursor:])
+    return tokens or [{"t": original}]

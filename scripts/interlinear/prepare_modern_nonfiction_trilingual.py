@@ -893,6 +893,15 @@ def split_english_units(text: str, *, max_chars: int) -> list[str]:
     return out
 
 
+def english_line_has_terminal_boundary(text: str) -> bool:
+    """Return true when the line ends at a real English sentence boundary."""
+
+    if not text.strip():
+        return False
+    sentinel = text.rstrip() + " "
+    return any(end == len(sentinel) for end in sentence_boundary_ends(sentinel))
+
+
 def split_cjk_units(text: str, *, max_chars: int) -> list[str]:
     sentence_ends = set("。！？!?；;")
     closers = set("」』”’）)]】〉》")
@@ -1127,7 +1136,11 @@ def parse_chapters(markdown: Path, task: dict[str, Any], *, max_unit_chars: int)
         if terminal_after_line:
             flush()
             break
-        sentence_ended = SENTENCE_END_RE.search(line) if spine_lang == "en" else CJK_SENTENCE_END_RE.search(line)
+        sentence_ended = (
+            english_line_has_terminal_boundary(line)
+            if spine_lang == "en"
+            else CJK_SENTENCE_END_RE.search(line)
+        )
         if sentence_ended and len(" ".join(buffer)) >= max_unit_chars:
             flush()
     flush()

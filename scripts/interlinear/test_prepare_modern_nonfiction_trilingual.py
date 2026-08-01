@@ -11,6 +11,7 @@ from prepare_modern_nonfiction_trilingual import (
     canonical_chapter_title,
     clean_line,
     clean_markdown_line,
+    english_line_has_terminal_boundary,
     find_start,
     is_heading_line,
     join_proven_page_continuations,
@@ -77,6 +78,15 @@ class IllustratedNonfictionPreparationTest(unittest.TestCase):
             split_source_units("乱世破晓。群雄并起！家康仍在等待。", "zh", max_chars=12),
             ["乱世破晓。群雄并起！", "家康仍在等待。"],
         )
+
+    def test_scholarly_sub_voce_abbreviation_is_not_a_sentence_boundary(self) -> None:
+        text = "Looking up the Vocabvlario s. v. Tôzan corrected the reading. Next sentence."
+        self.assertEqual(
+            split_source_units(text, "en", max_chars=900),
+            ["Looking up the Vocabvlario s. v. Tôzan corrected the reading. Next sentence."],
+        )
+        self.assertFalse(english_line_has_terminal_boundary("Looking up the Vocabvlario s. v."))
+        self.assertTrue(english_line_has_terminal_boundary("Tôzan corrected the reading."))
 
     def test_chinese_markdown_spine_preserves_body_and_headings(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

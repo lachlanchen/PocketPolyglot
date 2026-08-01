@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "queue_id": "sengoku-history-trilingual-2026-08-01",
-  "status": "partially_chunked",
+  "status": "running_first_book",
   "description": "Quality-ranked PocketPolyglot queue for user-supplied Sengoku history, primary-source translation, reference works, and historical novels.",
-  "model": "gpt-5.4-mini",
+  "model": "gpt-5.6-sol",
   "reasoning": "low",
   "workers": 3,
   "execution": {
@@ -14,16 +14,24 @@
     "quality_gate_required": true,
     "escalation_order": [
       {
-        "model": "gpt-5.4-mini",
-        "reasoning": "low"
-      },
-      {
-        "model": "gpt-5.4-mini",
-        "reasoning": "medium"
-      },
-      {
         "model": "gpt-5.6-sol",
         "reasoning": "low"
+      },
+      {
+        "model": "gpt-5.5",
+        "reasoning": "low"
+      }
+    ],
+    "rejected_pilot_models": [
+      {
+        "model": "gpt-5.4-mini",
+        "reasoning": "low",
+        "reason": "semantic title and terminology drift"
+      },
+      {
+        "model": "gpt-5.4-mini",
+        "reasoning": "medium",
+        "reason": "invented names and unrelated-script intrusion"
       }
     ]
   },
@@ -54,7 +62,7 @@
       "HTML, page-header, OCR-noise, and boilerplate rejection"
     ],
     "sample_review": "Review the first two accepted chunks for factual fidelity, natural modern Japanese, accurate modern Chinese, alignment, and unsupported additions.",
-    "promotion_rule": "Continue at low only after the pilot passes. Retry only failed units at medium; escalate to gpt-5.6-sol low only when medium still fails semantic or language-quality checks."
+    "promotion_rule": "The gpt-5.4-mini low and medium pilots are rejected for this queue. Continue only after a gpt-5.6-sol low pilot passes; use gpt-5.5 low only as an availability fallback."
   },
   "reference_root": "sources/japan-history/sengoku/primary-sources",
   "tasks": [
@@ -68,8 +76,8 @@
       "author": "Ōta Gyūichi; translated and edited by J. S. A. Elisonas and Jeroen P. Lamers",
       "source_spine_lang": "en",
       "task_mode": "trilingual_translated_primary_source_en_spine",
-      "model": "gpt-5.4-mini",
-      "reasoning": "medium",
+      "model": "gpt-5.6-sol",
+      "reasoning": "low",
       "source_path": "sources/japan-history/sengoku/primary-source-translations/shincho-koki/en/The Chronicle of Lord Nobunaga - Ota Gyuichi.pdf",
       "reference_paths": {
         "ja_primary_searchable": "sources/japan-history/sengoku/primary-sources/shincho-koki/ja-book/信長公記-太田牛一.pdf",
@@ -92,7 +100,7 @@
       "min_chunk_count": 300,
       "min_content_chars": 500000,
       "split_terminal_back_matter": false,
-      "source_preparation": "born-digital text; retain scholarly notes and use Japanese primary text only where correspondence is evidenced",
+      "source_preparation": "born-digital embedded text selected after a local Marker/Surya comparison; deterministic cleanup removes running headers and repairs scholarly-abbreviation continuations; retain notes and use Japanese primary text only where correspondence is evidenced",
       "reference_notes": "The English book contains a scholarly introduction, translation, and notes. The Japanese public source is authoritative source evidence but is not automatically sentence-aligned. Preserve uncertainty and note apparatus.",
       "terminology": [
         {
@@ -171,9 +179,42 @@
           }
         },
         {
+          "source": "Ōtsuka Mitsunobu",
+          "ja": "大塚光信",
+          "zh": "大塚光信"
+        },
+        {
+          "source": "Shima Shōzō",
+          "ja": "島正三",
+          "zh": "岛正三"
+        },
+        {
+          "source": "Hino Hiroshi",
+          "ja": "日埜博司",
+          "zh": "日埜博司",
+          "forbidden": {
+            "ja": [
+              "日野寛"
+            ],
+            "zh": [
+              "日野宽"
+            ]
+          }
+        },
+        {
+          "source": "Gyūichi",
+          "ja": "牛一",
+          "zh": "牛一"
+        },
+        {
           "source": "Japanese Chronological Tables from 601 to 1872 A. D.",
           "ja": "『邦暦西暦対照表』",
           "zh": "《日本历法对照表（601—1872）》"
+        },
+        {
+          "source": "Chronology",
+          "ja": "年表",
+          "zh": "年表"
         },
         {
           "source": "Leiden University",
@@ -234,11 +275,19 @@
           "zh": "信长"
         }
       ],
-      "status": "chunked_launchable",
+      "status": "running_trilingual_generation",
       "launchable": true,
+      "quality_gate_status": "passed repaired chunks 3-6 with gpt-5.6-sol low; deterministic schema, script, abbreviation, terminology, and semantic spot checks passed",
+      "active_session": "zhjpbook-sengoku-chronicle-gpt56",
+      "pilot_valid_chunks": [
+        3,
+        4,
+        5,
+        6
+      ],
       "book_plan": "books/chronicle-lord-nobunaga/book-plan.json",
       "chunks_manifest": "books/chronicle-lord-nobunaga/work/trilingual/chunks/manifest.json",
-      "chunk_count": 465,
+      "chunk_count": 464,
       "english_chapter_count": 18,
       "prepared_chunks_at": "2026-08-01T14:18:51.920558+00:00"
     },

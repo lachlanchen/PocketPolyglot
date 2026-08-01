@@ -15,6 +15,7 @@ SPACE_RE = re.compile(r"\s+")
 HAN_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 SINGLE_HAN_RE = re.compile(r"^[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]$")
 KANA_RE = re.compile(r"[\u3040-\u309f\u30a0-\u30fa]")
+QUOTED_JAPANESE_RE = re.compile(r"[「『][^」』\n]{1,80}[」』]")
 LATIN_RE = re.compile(r"[A-Za-z]")
 VISUAL_TECHNICAL_RE = re.compile(r"\b(?:figs?|figure|track)\s*\.?\s*\d*|[図圖图]\s*\d*", re.IGNORECASE)
 SOURCE_LIST_LABEL_RE = re.compile(r"\b(?:number|noun|person|total|responsible)\b", re.IGNORECASE)
@@ -45,6 +46,19 @@ GRAMMAR_ROLES = {
     "function",
 }
 ALLOWED_TEXT_CONTROLS = {"\t", "\n", "\r"}
+UNEXPECTED_SCRIPT_BLOCKS = (
+    ("Arabic", re.compile(r"[\u0600-\u06ff\u0750-\u077f\u08a0-\u08ff]")),
+    ("Hebrew", re.compile(r"[\u0590-\u05ff]")),
+    ("Devanagari", re.compile(r"[\u0900-\u097f]")),
+    ("Bengali", re.compile(r"[\u0980-\u09ff]")),
+    ("other Indic", re.compile(r"[\u0a00-\u0dff]")),
+    ("Thai/Lao", re.compile(r"[\u0e00-\u0eff]")),
+    ("Tibetan", re.compile(r"[\u0f00-\u0fff]")),
+    ("Myanmar", re.compile(r"[\u1000-\u109f\uaa60-\uaa7f]")),
+    ("Georgian", re.compile(r"[\u10a0-\u10ff]")),
+    ("Hangul", re.compile(r"[\u1100-\u11ff\u3130-\u318f\uac00-\ud7af]")),
+    ("Cyrillic", re.compile(r"[\u0400-\u052f]")),
+)
 
 
 def strip_forbidden_control_chars(text: str) -> str:
@@ -92,6 +106,25 @@ def validate_no_control_chars(value: Any, where: str, errors: list[str]) -> None
     elif isinstance(value, list):
         for index, child in enumerate(value):
             validate_no_control_chars(child, f"{where}[{index}]", errors)
+
+
+def validate_no_introduced_scripts(
+    source_text: str,
+    target_text: str,
+    where: str,
+    errors: list[str],
+) -> None:
+    """Reject unrelated scripts invented by translation output.
+
+    A quoted foreign script remains valid when that script is present in the
+    source unit.  This catches accidental cross-language substitutions without
+    blocking Arabic, Indic, or Korean source books that intentionally preserve
+    their original script.
+    """
+
+    for name, pattern in UNEXPECTED_SCRIPT_BLOCKS:
+        if pattern.search(target_text) and not pattern.search(source_text):
+            errors.append(f"{where}: introduced unexpected {name} script absent from source")
 
 
 def compact(text: str) -> str:
@@ -211,6 +244,19 @@ def allows_non_han_zh_fragment(source_text: str, zh_text: str) -> bool:
     if len(LATIN_RE.findall(text)) > 34:
         return False
     return bool(TECHNICAL_NON_HAN_RE.search(text) or TECHNICAL_NON_HAN_RE.search(source))
+
+
+def allows_quoted_japanese_in_chinese(text: str) -> bool:
+    """Allow short Japanese source terms quoted inside otherwise Chinese prose."""
+
+    target = compact(text)
+    if not KANA_RE.search(target) or not HAN_RE.search(target):
+        return False
+    kana_count = len(KANA_RE.findall(target))
+    if kana_count > 80:
+        return False
+    outside_quotes = QUOTED_JAPANESE_RE.sub("", target)
+    return not KANA_RE.search(outside_quotes)
 
 
 def allows_non_japanese_ja_fragment(source_text: str, ja_text: str) -> bool:
@@ -365,17 +411,22 @@ def validate_unit(unit: Any, where: str, errors: list[str]) -> tuple[str, str, s
     source_basis = source_zh or source_ja or source_en
     require_content = has_language_content(source_basis)
     require_zh_han = require_content and (not source_zh or bool(HAN_RE.search(source_zh)))
-    allow_zh_kana = bool(source_zh and KANA_RE.search(source_zh))
     validate_en_tokens(unit.get("en", []), f"{where}.en", errors)
     en_text = token_text(unit.get("en", []))
     zh_text = token_text(unit.get("zh", []))
     ja_text = token_text(unit.get("ja", []))
+    allow_zh_kana = bool(
+        (source_zh and KANA_RE.search(source_zh))
+        or allows_quoted_japanese_in_chinese(zh_text)
+    )
     require_ja = require_content and not (
         allows_non_japanese_ja_fragment(source_basis, ja_text)
         or allows_technical_ja_without_kana(source_basis, ja_text)
     )
     validate_zh_tokens(unit.get("zh", []), f"{where}.zh", errors, require_han=False, allow_kana=allow_zh_kana)
     validate_ja_tokens(unit.get("ja", []), f"{where}.ja", errors, require_japanese=require_ja)
+    validate_no_introduced_scripts(source_basis, zh_text, f"{where}.zh", errors)
+    validate_no_introduced_scripts(source_basis, ja_text, f"{where}.ja", errors)
     if require_zh_han and not HAN_RE.search(zh_text) and not allows_non_han_zh_fragment(source_basis, zh_text):
         errors.append(f"{where}.zh: Chinese text must contain Han characters")
     if source_en and compact(en_text) != compact(source_en):
