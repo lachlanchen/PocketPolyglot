@@ -81,16 +81,42 @@ def tokenize_segment(orig: str, hira: str) -> list[dict[str, str]]:
     return tokens
 
 
-def tokenize_japanese(text: Any) -> list[dict[str, str]]:
+def tokenize_japanese(
+    text: Any,
+    reading_overrides: dict[str, str] | None = None,
+) -> list[dict[str, str]]:
     """Tokenize Japanese while preserving every non-Japanese codepoint.
 
     Pykakasi can duplicate Latin spans around extended characters such as the
     macrons in ``Gyūichi`` or the cedilla in ``Tçuzzu``.  Feed it only genuine
-    Japanese runs and append all other text verbatim.
+    Japanese runs and append all other text verbatim. Optional phrase readings
+    let a project supply authoritative pronunciations for proper names and
+    compounds that a general dictionary cannot disambiguate.
     """
 
-    tokens: list[dict[str, str]] = []
     original = str(text)
+    overrides = {
+        str(surface): kana_to_hira(str(reading))
+        for surface, reading in (reading_overrides or {}).items()
+        if surface and reading and HAN_RE.search(str(surface))
+    }
+    if overrides:
+        pattern = re.compile(
+            "|".join(
+                re.escape(surface)
+                for surface in sorted(overrides, key=len, reverse=True)
+            )
+        )
+        tokens: list[dict[str, str]] = []
+        cursor = 0
+        for match in pattern.finditer(original):
+            tokens.extend(tokenize_japanese(original[cursor : match.start()]))
+            tokens.append({"t": match.group(0), "r": overrides[match.group(0)]})
+            cursor = match.end()
+        tokens.extend(tokenize_japanese(original[cursor:]))
+        return tokens or [{"t": original}]
+
+    tokens = []
     cursor = 0
     for run in JAPANESE_RUN_RE.finditer(original):
         append_plain(tokens, original[cursor : run.start()])

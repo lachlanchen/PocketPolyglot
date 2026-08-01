@@ -13,7 +13,7 @@ historical evidence.
 
 | Priority | Book | Role / quality | Preparation status | Chunks | Chapters |
 | ---: | --- | --- | --- | ---: | ---: |
-| 1 | `The Chronicle of Lord Nobunaga` / `信長公記` | A+ scholarly English translation of a primary source | Rebuilt after source-cleaning repair; 9/475 retained and a fresh chunks 10--16 pilot is required before bulk resume | 475 | 18 |
+| 1 | `The Chronicle of Lord Nobunaga` / `信長公記` | A+ scholarly English translation of a primary source | Rebuilt after source-cleaning repair; repaired chunks 10--16 passed one-worker generation and manual review; three-worker bulk resumes at chunk 17 | 475 | 18 |
 | 2 | `Japan Emerging: Premodern History to 1850` | A modern academic survey | Blocked: page-aware outline segmentation required | 0 | 0 |
 | 3 | Mary Elizabeth Berry, `Hideyoshi` | A scholarly monograph | Launchable | 292 | 9 |
 | 4 | George Sansom, `A History of Japan, 1334-1615` | A- classic synthesis; dated in places | Launchable | 521 | 26 |
@@ -114,6 +114,11 @@ novels must never be used to fill gaps in scholarly claims.
   Chinese, emitted no unrelated scripts, and reconstructed macron-bearing Latin
   names exactly. A manual authority review caught and repaired `Hino Hiroshi`
   as `日埜博司` before the bulk tmux run was approved.
+- A final repaired pilot generated chunks 14--16 on the first attempt with
+  `gpt-5.6-sol` low. Manual comparison against the English source found no
+  omissions, unsupported additions, historical-name drift, or malformed
+  Japanese. All 16 current chunks validate with complete grammar-role coverage
+  and no stale source signatures; bulk generation therefore resumes at chunk 17.
 - The first bulk semantic sample found `Sōtai`, the Chinese-derived name for
   the Censorial Board (`弾正台`), mistranslated as the unrelated word
   `総代` / `总代`. The run was stopped after chunk 10. The per-book terminology
@@ -147,6 +152,15 @@ novels must never be used to fill gaps in scholarly claims.
 - The chronology pilot additionally resolves `Yamaguchi Kurōjirō` as
   `山口九郎二郎`. The spelling is present in `信長公記`-based source evidence;
   the superficially plausible `山口九郎次郎` is rejected for this book.
+- The English edition indexes `Oda Nobukata, Ise no Kami` separately from
+  `Oda Nobuyasu, Ise no Kami`. [Iwakura City](https://www.city.iwakura.aichi.jp/brand/0000003070.html)
+  identifies `織田信賢` with the reading `のぶかた`, so the first-book contract now
+  requires `織田伊勢守信賢` / `织田伊势守信贤` rather than leaving the
+  name in Latin or katakana.
+- Deterministic ruby promotion now accepts an optional project reading map.
+  This keeps historical names and publishers authoritative without hardcoding
+  book-specific vocabulary in the shared tokenizer, and existing accepted
+  translations can be re-promoted without another model call.
 - Flattened dot-leader lists are now reconstructed deterministically before
   model calls: for example, `Map 1. Owari Province ... 52` becomes one clean
   indivisible source unit, rather than shifting page 52 onto the following map

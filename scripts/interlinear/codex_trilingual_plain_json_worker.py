@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import shutil
 import textwrap
@@ -27,6 +28,7 @@ from validate_trilingual_interlinear_json import (
     SINGLE_HAN_RE,
     allows_non_han_zh_fragment,
     allows_non_japanese_ja_fragment,
+    allows_quoted_japanese_in_chinese,
     allows_technical_ja_without_kana,
     sanitize_source_controls,
     validate_chunk,
@@ -46,6 +48,29 @@ JA_FRONTMATTER_NOTE_RE = re.compile(r"(?:目次|目録|内容|著者|訳者|第�
 DOT_LEADER_RE = re.compile(r"(?:[.．。·・]{4,}|…{2,})")
 RECOVERED_INDEX_ENTRY_RE = re.compile(r".{2,180}\s+—\s+\d{1,4}")
 SIMPLIFIED_ONLY_RE = re.compile(r"[这们为说对见页卷诗选节后时个尔苏卢马亚德释从]")
+
+
+def load_ja_reading_overrides(path_value: str = "") -> dict[str, str]:
+    path_text = path_value or os.environ.get("JA_READING_OVERRIDES", "")
+    if not path_text:
+        return {}
+    path = Path(path_text).expanduser()
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError, TypeError):
+        return {}
+    if isinstance(payload, dict) and isinstance(payload.get("readings"), dict):
+        payload = payload["readings"]
+    if not isinstance(payload, dict):
+        return {}
+    return {
+        str(surface): str(reading)
+        for surface, reading in payload.items()
+        if str(surface).strip() and str(reading).strip()
+    }
+
+
+JA_READING_OVERRIDES = load_ja_reading_overrides()
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -353,7 +378,12 @@ def validate_plain_chunk(source: dict[str, Any], result: dict[str, Any]) -> list
             source_text = plain_text(source_unit.get(spine_lang, ""))
             if zh_required and zh and not HAN_RE.search(zh) and not allows_non_han_zh_fragment(source_text, zh):
                 errors.append(f"{unit_where}.zh: Chinese text must contain Han characters")
-            if zh_required and zh and KANA_RE.search(zh):
+            if (
+                zh_required
+                and zh
+                and KANA_RE.search(zh)
+                and not allows_quoted_japanese_in_chinese(zh)
+            ):
                 errors.append(f"{unit_where}.zh: Chinese row contains Japanese kana")
             copied_source_ja = bool(source_unit.get("ja")) and no_space(ja) == no_space(source_unit.get("ja"))
             if (
@@ -551,8 +581,14 @@ def tokenize_ja_segment(orig: str, hira: str) -> list[dict[str, str]]:
     return tokens
 
 
-def tokenize_ja(text: str) -> list[dict[str, str]]:
-    return tokenize_japanese(text)
+def tokenize_ja(
+    text: str,
+    reading_overrides: dict[str, str] | None = None,
+) -> list[dict[str, str]]:
+    return tokenize_japanese(
+        text,
+        JA_READING_OVERRIDES if reading_overrides is None else reading_overrides,
+    )
 
 
 def usable_title(value: Any) -> str:
@@ -592,7 +628,11 @@ def chapter_title_text(source: dict[str, Any], lang: str) -> str:
     return usable_title(ref.get("chapter")) or f"第{source['chapter_number']}章"
 
 
-def promote_plain_chunk(source: dict[str, Any], plain: dict[str, Any]) -> dict[str, Any]:
+def promote_plain_chunk(
+    source: dict[str, Any],
+    plain: dict[str, Any],
+    ja_reading_overrides: dict[str, str] | None = None,
+) -> dict[str, Any]:
     spine_lang = source_spine_lang(source)
     source_paragraphs = {paragraph["id"]: paragraph for paragraph in source["paragraphs"]}
     unit_plan_by_paragraph = {paragraph["id"]: paragraph["units"] for paragraph in source_unit_plan(source)}
@@ -606,7 +646,10 @@ def promote_plain_chunk(source: dict[str, Any], plain: dict[str, Any]) -> dict[s
             "title": {
                 "en": tokenize_en(chapter_title_text(source, "en")),
                 "zh": tokenize_zh(chapter_title_text(source, "zh")),
-                "ja": tokenize_ja(chapter_title_text(source, "ja")),
+                "ja": tokenize_ja(
+                    chapter_title_text(source, "ja"),
+                    ja_reading_overrides,
+                ),
             },
         },
         "paragraphs": [],
@@ -645,7 +688,7 @@ def promote_plain_chunk(source: dict[str, Any], plain: dict[str, Any]) -> dict[s
                 "source_en": en,
                 "en": tokenize_en(en),
                 "zh": tokenize_zh(zh),
-                "ja": tokenize_ja(ja),
+                "ja": tokenize_ja(ja, ja_reading_overrides),
             }
             if source_unit.get("zh"):
                 strict_unit["source_zh"] = source_unit["zh"]

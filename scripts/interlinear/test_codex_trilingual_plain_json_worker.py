@@ -10,6 +10,7 @@ from codex_trilingual_plain_json_worker import (
     prompt_for_plain_chunk,
     source_unit_plan,
     tokenize_ja,
+    validate_plain_chunk,
 )
 from validate_trilingual_interlinear_json import validate_chunk
 
@@ -155,6 +156,54 @@ class TrilingualPlainPromotionTest(unittest.TestCase):
         self.assertEqual(ruby["荒々"], "あらあら")
         self.assertNotIn("さば", ruby.values())
         self.assertNotIn("ょか", ruby.values())
+
+    def test_project_reading_overrides_replace_ambiguous_compounds(self) -> None:
+        tokens = tokenize_ja(
+            "本訳では吉川弘文館を参照した。",
+            {
+                "本訳": "ほんやく",
+                "吉川弘文館": "よしかわこうぶんかん",
+            },
+        )
+        ruby = {token["t"]: token["r"] for token in tokens if token.get("r")}
+
+        self.assertEqual(ruby["本訳"], "ほんやく")
+        self.assertEqual(ruby["吉川弘文館"], "よしかわこうぶんかん")
+        self.assertEqual(
+            "".join(token["t"] for token in tokens),
+            "本訳では吉川弘文館を参照した。",
+        )
+
+    def test_plain_validator_allows_short_quoted_japanese_in_chinese(self) -> None:
+        source = {
+            "chunk_id": "fixture-c0001",
+            "chapter_id": "chapter-001",
+            "chapter_number": 1,
+            "source_spine_lang": "en",
+            "paragraphs": [
+                {
+                    "id": "fixture-p0001",
+                    "en": "The phrase gotōzan nasare occurs here.",
+                }
+            ],
+        }
+        plain = {
+            "chunk_id": "fixture-c0001",
+            "paragraphs": [
+                {
+                    "id": "fixture-p0001",
+                    "units": [
+                        {
+                            "unit_id": "fixture-p0001-u001",
+                            "ja": "ここには「御登山なされ」という表現がある。",
+                            "zh": "这里出现了「御登山なされ」这一表达。",
+                        }
+                    ],
+                }
+            ],
+        }
+
+        self.assertEqual(validate_plain_chunk(source, plain), [])
 
     def test_japanese_tokenizer_preserves_latin_diacritics_exactly(self) -> None:
         text = "GyūichiとShima Shōzō、Tçuzzuが記した。"
