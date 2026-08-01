@@ -8,15 +8,130 @@ import unittest
 from pathlib import Path
 
 from prepare_modern_nonfiction_trilingual import (
+    canonical_chapter_title,
+    clean_line,
     clean_markdown_line,
     find_start,
+    is_heading_line,
     join_proven_page_continuations,
     parse_chapters,
+    split_source_units,
     split_markdown_line_figures,
 )
 
 
 class IllustratedNonfictionPreparationTest(unittest.TestCase):
+    def test_running_page_headers_are_not_joined_into_prose(self) -> None:
+        for header in ("x preface", "preface xi", "18 introduction", "476 book xv"):
+            with self.subTest(header=header):
+                self.assertEqual(clean_line(header, "A Book"), "")
+        self.assertEqual(clean_line("BOOK XV", "A Book"), "BOOK XV")
+
+    def test_all_caps_chapter_heading_survives_artifact_filter(self) -> None:
+        self.assertEqual(clean_line("CHAPTER I", "A Book"), "CHAPTER I")
+        self.assertEqual(clean_line("CHAPTER ONE", "A Book"), "CHAPTER ONE")
+        self.assertEqual(clean_line("FOREWORD", "A Book"), "FOREWORD")
+
+    def test_spaced_roman_chapter_number_is_normalized(self) -> None:
+        self.assertEqual(clean_markdown_line("CHAPTER XV II"), "CHAPTER XVII")
+        self.assertEqual(clean_markdown_line("CHAPTER XV III"), "CHAPTER XVIII")
+
+    def test_configured_heading_rules_can_exclude_running_headers(self) -> None:
+        task = {
+            "source_spine_lang": "en",
+            "chapter_heading_patterns": [r"^(?:PREFACE|BOOK [IVXLCDM]+)$"],
+            "chapter_heading_mode": "configured_only",
+            "chapter_heading_case_sensitive": True,
+        }
+        self.assertTrue(is_heading_line("BOOK XI", task))
+        self.assertFalse(is_heading_line("book xi", task))
+        self.assertFalse(is_heading_line("Conclusion", task))
+        self.assertEqual(
+            clean_line("PREFACE", "A Book", "en", task),
+            "PREFACE",
+        )
+
+    def test_configured_heading_title_map_is_applied(self) -> None:
+        task = {
+            "chapter_title_map": {
+                "Background to war": "Background to war — Loyalty to the shogun collapses"
+            }
+        }
+        self.assertEqual(
+            canonical_chapter_title("Background to war", task),
+            "Background to war — Loyalty to the shogun collapses",
+        )
+
+    def test_explicit_missing_start_marker_fails_closed(self) -> None:
+        with self.assertRaisesRegex(ValueError, "start marker not found"):
+            find_start(
+                ["Front matter", "CHAPTER ONE", "Body"],
+                {
+                    "start_marker": "INTRODUCTION",
+                    "start_marker_exact": True,
+                },
+            )
+
+    def test_chinese_source_units_split_on_cjk_sentence_boundaries(self) -> None:
+        self.assertEqual(
+            split_source_units("乱世破晓。群雄并起！家康仍在等待。", "zh", max_chars=12),
+            ["乱世破晓。群雄并起！", "家康仍在等待。"],
+        )
+
+    def test_chinese_markdown_spine_preserves_body_and_headings(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            markdown = Path(temporary) / "zh.md"
+            markdown.write_text(
+                "# 德川家康\n\n## 第一章 乱世破晓\n\n"
+                "这是足够长的第一段正文，用来验证中文源文本不会被英文字符检查误删。\n\n"
+                "这是第二段正文，也应当完整保留并作为同一章节中的独立段落。\n",
+                encoding="utf-8",
+            )
+            task = {
+                "book_id": "zh-fixture",
+                "source_spine_lang": "zh",
+                "title_en": "Tokugawa Ieyasu",
+                "title_zh": "德川家康",
+                "title_ja": "徳川家康",
+                "start_marker": "第一章 乱世破晓",
+                "start_marker_exact": True,
+                "allow_markdown_headings": True,
+            }
+            chapters = parse_chapters(markdown, task, max_unit_chars=900)
+            self.assertEqual(chapters[0]["title"], "第一章 乱世破晓")
+            self.assertEqual(len(chapters[0]["paragraphs"]), 2)
+            self.assertIn("中文源文本", chapters[0]["paragraphs"][0]["text"])
+
+    def test_bold_cjk_chapter_titles_can_be_promoted_without_list_false_positives(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            markdown = Path(temporary) / "zh.md"
+            markdown.write_text(
+                "**一 乱世破晓**\n\n"
+                "这是足够长的正文，用来确认真正的粗体章节标题能够被保留。\n\n"
+                "六、占高台院西苑为居所。\n\n"
+                "这是同一章节的后续正文，不应被误判成一个新的章节。\n\n"
+                "**二 嫁途风波**\n\n"
+                "这是第二章的完整正文，也应当被正确划分。\n",
+                encoding="utf-8",
+            )
+            task = {
+                "book_id": "zh-bold-fixture",
+                "source_spine_lang": "zh",
+                "title_en": "Fixture",
+                "title_zh": "测试",
+                "title_ja": "テスト",
+                "start_marker": "一 乱世破晓",
+                "start_marker_exact": True,
+                "bold_lines_as_headings": True,
+                "bold_heading_patterns": [
+                    r"^[〇零一二三四五六七八九十百千万两兩○]+\s+[^，。！？；：]{1,30}$"
+                ],
+                "allow_markdown_headings": True,
+            }
+            chapters = parse_chapters(markdown, task, max_unit_chars=900)
+            self.assertEqual([chapter["title"] for chapter in chapters], ["一 乱世破晓", "二 嫁途风波"])
+            self.assertIn("六、占高台院西苑为居所。", chapters[0]["paragraphs"][1]["text"])
+
     def test_clean_heading_keeps_level_and_removes_extraction_markup(self) -> None:
         source = '### <span id="page-7-0"></span>**[Introduction](#page-4-0)**'
         self.assertEqual(clean_markdown_line(source), "### Introduction")

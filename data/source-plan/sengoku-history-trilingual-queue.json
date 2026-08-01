@@ -1,0 +1,661 @@
+{
+  "schema_version": 1,
+  "queue_id": "sengoku-history-trilingual-2026-08-01",
+  "status": "partially_chunked",
+  "description": "Quality-ranked PocketPolyglot queue for user-supplied Sengoku history, primary-source translation, reference works, and historical novels.",
+  "model": "gpt-5.4-mini",
+  "reasoning": "low",
+  "workers": 3,
+  "execution": {
+    "mode": "one_book_at_a_time",
+    "auto_continue": true,
+    "pilot_chunks": 2,
+    "pilot_workers": 1,
+    "quality_gate_required": true,
+    "escalation_order": [
+      {
+        "model": "gpt-5.4-mini",
+        "reasoning": "low"
+      },
+      {
+        "model": "gpt-5.4-mini",
+        "reasoning": "medium"
+      },
+      {
+        "model": "gpt-5.6-sol",
+        "reasoning": "low"
+      }
+    ]
+  },
+  "output_languages": [
+    "en",
+    "ja",
+    "zh"
+  ],
+  "generation_contract": {
+    "source_fidelity": "Preserve the declared source spine exactly. Translate every source unit completely and in order; never summarize, silently omit, modernize facts, or invent connective material.",
+    "japanese": "Use natural, readable contemporary Japanese with ordinary inflection and kana. Add furigana only to kanji-bearing tokens during token promotion; reject Chinese prose presented as Japanese.",
+    "chinese": "Use accurate, idiomatic modern Chinese. Preserve dates, names, ranks, quotations, uncertainty, citations, and distinctions between evidence and author interpretation.",
+    "english": "When English is generated from a Chinese spine, use complete natural modern English and preserve literary voice without adding historical claims.",
+    "historical_method": "Keep primary source, modern scholarship, popular synthesis, disputed thesis, and historical fiction explicitly distinct. Translation must not silently endorse, correct, or merge their claims.",
+    "grammar_analysis": "Populate normalized grammar roles for English, Japanese, and Chinese so the same JSON supports color and black-white rendering while preserving English spaces.",
+    "figures": "For image-rich sources, structured local extraction and source-ordered figure anchors are required before full generation. Never infer a caption that is not evidenced by the source.",
+    "final_outputs": "Maximum-language large-font English/Japanese/Chinese color and black-white PDFs with cover and meaningful TOC. Chinese-spine fiction may additionally compile a Chinese-main edition."
+  },
+  "quality_gate": {
+    "deterministic": [
+      "strict schema validation",
+      "source text exact preservation",
+      "paragraph and unit coverage",
+      "real Japanese with kana",
+      "modern Chinese script validation",
+      "English whitespace preservation",
+      "grammar-role coverage",
+      "HTML, page-header, OCR-noise, and boilerplate rejection"
+    ],
+    "sample_review": "Review the first two accepted chunks for factual fidelity, natural modern Japanese, accurate modern Chinese, alignment, and unsupported additions.",
+    "promotion_rule": "Continue at low only after the pilot passes. Retry only failed units at medium; escalate to gpt-5.6-sol low only when medium still fails semantic or language-quality checks."
+  },
+  "reference_root": "sources/japan-history/sengoku/primary-sources",
+  "tasks": [
+    {
+      "priority": 1,
+      "quality_tier": "A+ translated primary source",
+      "book_id": "chronicle-lord-nobunaga",
+      "title_en": "The Chronicle of Lord Nobunaga",
+      "title_ja": "信長公記",
+      "title_zh": "信长公记",
+      "author": "Ōta Gyūichi; translated and edited by J. S. A. Elisonas and Jeroen P. Lamers",
+      "source_spine_lang": "en",
+      "task_mode": "trilingual_translated_primary_source_en_spine",
+      "model": "gpt-5.4-mini",
+      "reasoning": "medium",
+      "source_path": "sources/japan-history/sengoku/primary-source-translations/shincho-koki/en/The Chronicle of Lord Nobunaga - Ota Gyuichi.pdf",
+      "reference_paths": {
+        "ja_primary_searchable": "sources/japan-history/sengoku/primary-sources/shincho-koki/ja-book/信長公記-太田牛一.pdf",
+        "ja_wikisource_manifest": "sources/japan-history/sengoku/primary-sources/shincho-koki/ja-wikisource/manifest.json",
+        "modern_scholarship": "sources/japan-history/sengoku/biographies/nobunaga/en/Japonius Tyrannus - Jeroen P Lamers.pdf"
+      },
+      "start_marker": "PREFACE",
+      "start_marker_exact": true,
+      "start_marker_occurrence": 1,
+      "stop_markers": [
+        "Bibliography",
+        "Index"
+      ],
+      "allow_numeric_headings": false,
+      "chapter_heading_patterns": [
+        "^(?:PREFACE|INTRODUCTION|\\[“INITIAL BOOK”\\]|BOOK [IVXLCDM]+)$"
+      ],
+      "chapter_heading_mode": "configured_only",
+      "chapter_heading_case_sensitive": true,
+      "min_chunk_count": 300,
+      "min_content_chars": 500000,
+      "split_terminal_back_matter": false,
+      "source_preparation": "born-digital text; retain scholarly notes and use Japanese primary text only where correspondence is evidenced",
+      "reference_notes": "The English book contains a scholarly introduction, translation, and notes. The Japanese public source is authoritative source evidence but is not automatically sentence-aligned. Preserve uncertainty and note apparatus.",
+      "terminology": [
+        {
+          "source": "Lord Nobunaga",
+          "ja": "信長公",
+          "zh": "信长公",
+          "forbidden": {
+            "ja": [
+              "信長公爵"
+            ],
+            "zh": [
+              "信长公爵"
+            ]
+          }
+        },
+        {
+          "source": "Jeroen Lamers",
+          "ja": "イェルン・ラメルス",
+          "zh": "Jeroen Lamers",
+          "enforcement": "preferred"
+        },
+        {
+          "source": "Lamers",
+          "ja": "ラメルス",
+          "zh": "Lamers",
+          "enforcement": "preferred"
+        },
+        {
+          "source": "Jurgis Elisonas",
+          "ja": "ユルギス・エリソナス",
+          "zh": "Jurgis Elisonas",
+          "enforcement": "preferred"
+        },
+        {
+          "source": "Elisonas",
+          "ja": "エリソナス",
+          "zh": "Elisonas",
+          "enforcement": "preferred"
+        },
+        {
+          "source": "Willem Boot",
+          "ja": "ウィレム・ブート",
+          "zh": "Willem Boot",
+          "enforcement": "preferred"
+        },
+        {
+          "source": "Wim Boot",
+          "ja": "ウィム・ブート",
+          "zh": "Wim Boot",
+          "enforcement": "preferred"
+        },
+        {
+          "source": "Initial Book",
+          "ja": "首巻",
+          "zh": "首卷",
+          "forbidden": {
+            "ja": [
+              "初本",
+              "初編"
+            ],
+            "zh": [
+              "初本",
+              "初编"
+            ]
+          }
+        },
+        {
+          "source": "Paul Yachita Tsuchihashi",
+          "ja": "土橋八千太",
+          "zh": "土桥八千太",
+          "forbidden": {
+            "zh": [
+              "八一田",
+              "筑桥"
+            ]
+          }
+        },
+        {
+          "source": "Japanese Chronological Tables from 601 to 1872 A. D.",
+          "ja": "『邦暦西暦対照表』",
+          "zh": "《日本历法对照表（601—1872）》"
+        },
+        {
+          "source": "Leiden University",
+          "ja": "ライデン大学",
+          "zh": "莱顿大学",
+          "enforcement": "preferred"
+        },
+        {
+          "source": "Leiden",
+          "ja": "ライデン",
+          "zh": "莱顿",
+          "enforcement": "preferred"
+        },
+        {
+          "source": "Centre for Japanese and Korean Studies",
+          "ja": "日本・朝鮮研究センター",
+          "zh": "日本与朝鲜研究中心",
+          "enforcement": "preferred"
+        },
+        {
+          "source": "Isaac Alfred Ailion Foundation",
+          "ja": "アイザック・アルフレッド・アイリオン財団",
+          "zh": "艾萨克·阿尔弗雷德·艾利昂基金会",
+          "enforcement": "preferred"
+        },
+        {
+          "source": "Netherlands Association for Japanese Studies",
+          "ja": "オランダ日本研究学会",
+          "zh": "荷兰日本研究学会",
+          "enforcement": "preferred"
+        },
+        {
+          "source": "International Institute for Asian Studies",
+          "ja": "国際アジア研究所",
+          "zh": "国际亚洲研究所",
+          "enforcement": "preferred"
+        },
+        {
+          "source": "Arsenaal",
+          "ja": "アーセナール",
+          "zh": "Arsenaal",
+          "enforcement": "preferred"
+        },
+        {
+          "source": "Witte Singel",
+          "ja": "ウィッテ・シンゲル",
+          "zh": "维特辛格尔",
+          "enforcement": "preferred"
+        },
+        {
+          "source": "Oda Nobunaga",
+          "ja": "織田信長",
+          "zh": "织田信长"
+        },
+        {
+          "source": "Nobunaga",
+          "ja": "信長",
+          "zh": "信长"
+        }
+      ],
+      "status": "chunked_launchable",
+      "launchable": true,
+      "book_plan": "books/chronicle-lord-nobunaga/book-plan.json",
+      "chunks_manifest": "books/chronicle-lord-nobunaga/work/trilingual/chunks/manifest.json",
+      "chunk_count": 465,
+      "english_chapter_count": 18,
+      "prepared_chunks_at": "2026-08-01T14:18:51.920558+00:00"
+    },
+    {
+      "priority": 2,
+      "quality_tier": "A modern academic survey",
+      "book_id": "japan-emerging-premodern",
+      "title_en": "Japan Emerging: Premodern History to 1850",
+      "title_ja": "日本の形成：先史時代から1850年まで",
+      "title_zh": "日本的形成：从史前时代到1850年",
+      "author": "Karl F. Friday, editor",
+      "source_spine_lang": "en",
+      "task_mode": "trilingual_academic_history_en_spine",
+      "source_path": "sources/japan-history/sengoku/surveys/en/Japan Emerging - Premodern History to 1850 - Karl F Friday.pdf",
+      "reference_paths": {
+        "period_primary_sources": "sources/japan-history/sengoku/primary-sources",
+        "sengoku_synthesis": "sources/japan-history/sengoku/surveys/en/A History of Japan 1334-1615 - George Sansom.pdf"
+      },
+      "start_marker": "Japan’s Natural Setting",
+      "start_marker_exact": true,
+      "stop_markers": [
+        "Bibliography",
+        "About the Authors",
+        "Index"
+      ],
+      "allow_numeric_headings": false,
+      "min_chunk_count": 450,
+      "min_content_chars": 900000,
+      "source_preparation": "born-digital text with maps, figures, and one table; structured figure extraction required before final illustrated export",
+      "reference_notes": "A multi-author academic survey. Preserve each chapter author's attribution and terminology; do not homogenize differing interpretations.",
+      "status": "prepared_outline_required",
+      "launchable": false,
+      "preparation_blocker": "The PDF has a complete outline, but body chapter titles are split across multiple extraction lines. Use page-aware outline segmentation before launch so all 38 chapter titles and per-chapter notes remain distinct."
+    },
+    {
+      "priority": 3,
+      "quality_tier": "A scholarly monograph",
+      "book_id": "hideyoshi-berry",
+      "title_en": "Hideyoshi",
+      "title_ja": "豊臣秀吉",
+      "title_zh": "丰臣秀吉",
+      "author": "Mary Elizabeth Berry",
+      "source_spine_lang": "en",
+      "task_mode": "trilingual_scholarly_biography_en_spine",
+      "source_path": "sources/japan-history/sengoku/biographies/hideyoshi/en/Hideyoshi - Mary Elizabeth Berry.pdf",
+      "reference_paths": {
+        "ja_primary_searchable": "sources/japan-history/sengoku/primary-sources/taikoki/ja-book/太閤記-小瀬甫庵.pdf",
+        "ja_wikisource_manifest": "sources/japan-history/sengoku/primary-sources/taikoki/ja-wikisource/manifest.json"
+      },
+      "start_marker": "THE TOYOTOMI PEACE",
+      "start_marker_exact": true,
+      "stop_markers": [
+        "Notes",
+        "Index"
+      ],
+      "allow_numeric_headings": false,
+      "chapter_heading_patterns": [
+        "^(?:THE TOYOTOMI PEACE|A WORLD WITHOUT A CENTER|THE TERROR|CONQUEST AND CONCILIATION|THE NEW ORDER|FEDERATION AND ITS MOTIVES|THE PURSUIT OF LEGITIMACY|THE LAST YEARS|AFTERWORD)$"
+      ],
+      "chapter_heading_mode": "configured_only",
+      "chapter_heading_case_sensitive": true,
+      "chapter_title_map": {
+        "THE NEW ORDER": "TOYOTOMI POLICY: SHAPING THE NEW ORDER"
+      },
+      "min_chunk_count": 200,
+      "min_content_chars": 500000,
+      "split_terminal_back_matter": false,
+      "source_preparation": "born-digital text with maps and plates; preserve figure anchors for illustrated export",
+      "reference_notes": "Berry is the scholarly spine. The early-modern Taikōki is contextual primary literature, not a sentence-equivalent modern Japanese edition.",
+      "status": "chunked_launchable",
+      "launchable": true,
+      "book_plan": "books/hideyoshi-berry/book-plan.json",
+      "chunks_manifest": "books/hideyoshi-berry/work/trilingual/chunks/manifest.json",
+      "chunk_count": 292,
+      "english_chapter_count": 9,
+      "prepared_chunks_at": "2026-08-01T13:54:25.553869+00:00"
+    },
+    {
+      "priority": 4,
+      "quality_tier": "A- classic synthesis, dated in places",
+      "book_id": "history-japan-1334-1615",
+      "title_en": "A History of Japan, 1334–1615",
+      "title_ja": "日本史 1334–1615",
+      "title_zh": "日本史：1334–1615",
+      "author": "George Sansom",
+      "source_spine_lang": "en",
+      "task_mode": "trilingual_classic_history_en_spine",
+      "source_path": "sources/japan-history/sengoku/surveys/en/A History of Japan 1334-1615 - George Sansom.pdf",
+      "reference_paths": {
+        "modern_survey": "sources/japan-history/sengoku/surveys/en/Japan Emerging - Premodern History to 1850 - Karl F Friday.pdf",
+        "period_primary_sources": "sources/japan-history/sengoku/primary-sources"
+      },
+      "start_marker": "CHAPTER I",
+      "start_marker_exact": true,
+      "stop_markers": [
+        "BIBLIOGRAPHICAL NOTE",
+        "GLOSSARY",
+        "INDEX"
+      ],
+      "allow_numeric_headings": false,
+      "chapter_heading_patterns": [
+        "^CHAPTER [IVXLCDM]+$"
+      ],
+      "chapter_heading_mode": "configured_only",
+      "chapter_heading_case_sensitive": true,
+      "min_chunk_count": 400,
+      "min_content_chars": 800000,
+      "split_terminal_back_matter": false,
+      "source_preparation": "born-digital text with known embedded-text spacing defects and many maps/plates; deterministic cleanup plus figure-preserving pass required",
+      "reference_notes": "A detailed classic synthesis whose scholarship and romanization are historically situated. Translate faithfully without silently updating its claims from later scholarship.",
+      "status": "chunked_launchable",
+      "launchable": true,
+      "book_plan": "books/history-japan-1334-1615/book-plan.json",
+      "chunks_manifest": "books/history-japan-1334-1615/work/trilingual/chunks/manifest.json",
+      "chunk_count": 521,
+      "english_chapter_count": 26,
+      "prepared_chunks_at": "2026-08-01T13:54:25.553871+00:00"
+    },
+    {
+      "priority": 5,
+      "quality_tier": "A- focused modern scholarship",
+      "book_id": "japonius-tyrannus",
+      "title_en": "Japonius Tyrannus: The Japanese Warlord Oda Nobunaga Reconsidered",
+      "title_ja": "日本の暴君：織田信長再考",
+      "title_zh": "日本暴君：重新审视织田信长",
+      "author": "Jeroen P. Lamers",
+      "source_spine_lang": "en",
+      "task_mode": "trilingual_scholarly_history_ocr_en_spine",
+      "source_path": "sources/japan-history/sengoku/biographies/nobunaga/en/Japonius Tyrannus - Jeroen P Lamers.pdf",
+      "reference_paths": {
+        "translated_primary_source": "sources/japan-history/sengoku/primary-source-translations/shincho-koki/en/The Chronicle of Lord Nobunaga - Ota Gyuichi.pdf",
+        "ja_primary_searchable": "sources/japan-history/sengoku/primary-sources/shincho-koki/ja-book/信長公記-太田牛一.pdf"
+      },
+      "force_ocr": true,
+      "ocr_lang": "eng",
+      "ocr_dpi": 260,
+      "ocr_workers": 8,
+      "min_chunk_count": 120,
+      "min_content_chars": 150000,
+      "allow_numeric_headings": true,
+      "source_preparation": "image-only scan; page-aware OCR and heading review required before launch",
+      "reference_notes": "Use the translated Chronicle and Japanese primary source to check names and quotations, but preserve Lamers's own argument as argument.",
+      "status": "prepared_ocr_required",
+      "launchable": false
+    },
+    {
+      "priority": 6,
+      "quality_tier": "A- scholarly biography",
+      "book_id": "tokugawa-ieyasu-totman",
+      "title_en": "Tokugawa Ieyasu: Shogun",
+      "title_ja": "徳川家康：将軍",
+      "title_zh": "德川家康：将军",
+      "author": "Conrad D. Totman",
+      "source_spine_lang": "en",
+      "task_mode": "trilingual_scholarly_biography_ocr_en_spine",
+      "source_path": "sources/japan-history/sengoku/biographies/tokugawa-ieyasu/en/Tokugawa Ieyasu - Shogun - Conrad Totman.pdf",
+      "reference_paths": {
+        "broader_synthesis": "sources/japan-history/sengoku/surveys/en/A History of Japan 1334-1615 - George Sansom.pdf",
+        "chinese_historical_novel": "sources/japan-history/sengoku/historical-fiction/tokugawa-ieyasu/zh/德川家康大全集 - 山冈庄八.epub"
+      },
+      "force_ocr": true,
+      "ocr_lang": "eng",
+      "ocr_dpi": 260,
+      "ocr_workers": 8,
+      "min_chunk_count": 160,
+      "min_content_chars": 220000,
+      "allow_numeric_headings": true,
+      "source_preparation": "image-only scan; page-aware OCR and heading review required before launch",
+      "reference_notes": "The Chinese Yamaoka novel is not evidence for Totman's biography and must never be used to fill scholarly claims; it is only a terminology/name reference.",
+      "status": "prepared_ocr_required",
+      "launchable": false
+    },
+    {
+      "priority": 7,
+      "quality_tier": "B+ comprehensive illustrated reference",
+      "book_id": "samurai-sourcebook",
+      "title_en": "The Samurai Sourcebook",
+      "title_ja": "サムライ資料事典",
+      "title_zh": "武士资料全书",
+      "author": "Stephen Turnbull",
+      "source_spine_lang": "en",
+      "task_mode": "trilingual_illustrated_reference_ocr_en_spine",
+      "source_path": "sources/japan-history/sengoku/reference-works/en/The Samurai Sourcebook - Stephen Turnbull.pdf",
+      "reference_paths": {
+        "koyo_gunkan": "sources/japan-history/sengoku/primary-sources/koyo-gunkan/ja-book/甲陽軍鑑.pdf",
+        "period_history": "sources/japan-history/sengoku/military-history/en/War in Japan 1467-1615 - Stephen Turnbull.pdf"
+      },
+      "force_ocr": true,
+      "ocr_lang": "eng",
+      "ocr_dpi": 260,
+      "ocr_workers": 8,
+      "min_chunk_count": 220,
+      "min_content_chars": 300000,
+      "allow_numeric_headings": true,
+      "source_preparation": "image-only illustrated scan; structured OCR must preserve maps, tables, heraldry, diagrams, captions, and source order",
+      "reference_notes": "Treat entries as a reference work. Keep captions, tabular organization, proper names, dates, and cross-references; do not flatten diagrams or lists into invented prose.",
+      "status": "prepared_structured_ocr_required",
+      "launchable": false
+    },
+    {
+      "priority": 8,
+      "quality_tier": "B+ concise illustrated military history",
+      "book_id": "war-in-japan-1467-1615",
+      "title_en": "War in Japan 1467–1615",
+      "title_ja": "日本の戦争 1467–1615",
+      "title_zh": "日本战争：1467–1615",
+      "author": "Stephen Turnbull",
+      "source_spine_lang": "en",
+      "task_mode": "trilingual_illustrated_history_en_spine",
+      "source_path": "sources/japan-history/sengoku/military-history/en/War in Japan 1467-1615 - Stephen Turnbull.pdf",
+      "reference_paths": {
+        "koyo_gunkan": "sources/japan-history/sengoku/primary-sources/koyo-gunkan/ja-book/甲陽軍鑑.pdf",
+        "modern_survey": "sources/japan-history/sengoku/surveys/en/Japan Emerging - Premodern History to 1850 - Karl F Friday.pdf"
+      },
+      "start_marker": "Introduction",
+      "start_marker_exact": true,
+      "stop_markers": [
+        "Further reading",
+        "Index"
+      ],
+      "min_chunk_count": 60,
+      "min_content_chars": 150000,
+      "split_terminal_back_matter": false,
+      "allow_numeric_headings": false,
+      "chapter_heading_patterns": [
+        "^(?:Introduction|Chronology|Background to war|Warring sides|Outbreak|The fighting|Portrait of a soldier|The world around war|Portrait of a civilian|How the war ended|Conclusion and consequences|Appendices)$"
+      ],
+      "chapter_heading_mode": "configured_only",
+      "source_line_replacements": {
+        "H o w the war ended": "How the war ended"
+      },
+      "chapter_title_map": {
+        "Background to war": "Background to war — Loyalty to the shogun collapses",
+        "Warring sides": "Warring sides — Rival samurai armies",
+        "Outbreak": "Outbreak — The age of fission",
+        "The fighting": "The fighting — Samurai at war",
+        "Portrait of a soldier": "Portrait of a soldier — Katō Kiyomasa (1562–1611)",
+        "The world around war": "The world around war — The end of the farmer-warrior",
+        "Portrait of a civilian": "Portrait of a civilian — Sen Rikyū (1522–1591)",
+        "How the war ended": "How the war ended — The triumph of the Tokugawa",
+        "Conclusion and consequences": "Conclusion and consequences — Japan closes its doors",
+        "Appendices": "Appendices — Technical details"
+      },
+      "source_preparation": "born-digital two-column illustrated text; structured extraction required to preserve captions, maps, and chronology",
+      "reference_notes": "Preserve the concise military-history presentation and distinguish narrative, captions, chronology, and appendices.",
+      "status": "prepared_structured_layout_required",
+      "launchable": false,
+      "preparation_blocker": "The embedded text follows two visual columns and interleaves body prose with captions. Run page-aware structured extraction before model translation; the existing provisional chunks are not launchable.",
+      "provisional_book_plan": "books/war-in-japan-1467-1615/book-plan.json",
+      "provisional_chunks_manifest": "books/war-in-japan-1467-1615/work/trilingual/chunks/manifest.json",
+      "provisional_chunk_count": 79,
+      "provisional_chapter_count": 4,
+      "provisional_chunks_at": "2026-08-01T13:33:03.120850+00:00"
+    },
+    {
+      "priority": 9,
+      "quality_tier": "B illustrated thematic overview",
+      "book_id": "samurai-world-warrior",
+      "title_en": "Samurai: The World of the Warrior",
+      "title_ja": "サムライ：武士の世界",
+      "title_zh": "武士：武士的世界",
+      "author": "Stephen Turnbull",
+      "source_spine_lang": "en",
+      "task_mode": "trilingual_illustrated_history_en_spine",
+      "source_path": "sources/japan-history/sengoku/military-history/en/Samurai - The World of the Warrior - Stephen Turnbull.pdf",
+      "reference_paths": {
+        "samurai_sourcebook": "sources/japan-history/sengoku/reference-works/en/The Samurai Sourcebook - Stephen Turnbull.pdf",
+        "koyo_gunkan": "sources/japan-history/sengoku/primary-sources/koyo-gunkan/ja-book/甲陽軍鑑.pdf"
+      },
+      "start_marker": "CHAPTER ONE",
+      "start_marker_exact": true,
+      "start_marker_occurrence": 2,
+      "stop_markers": [
+        "GLOSSARY",
+        "BIBLIOGRAPHY",
+        "INDEX"
+      ],
+      "min_chunk_count": 130,
+      "min_content_chars": 250000,
+      "split_terminal_back_matter": false,
+      "allow_numeric_headings": false,
+      "chapter_heading_patterns": [
+        "^CHAPTER (?:ONE|TWO|THREE|FOUR|FIVE|SIX|SEVEN|EIGHT|NINE)$"
+      ],
+      "chapter_heading_mode": "configured_only",
+      "chapter_heading_case_sensitive": true,
+      "source_preparation": "born-digital illustrated two-column text; structured extraction required for images and captions",
+      "reference_notes": "Preserve thematic organization and captions. Avoid repeating page headers or merging sidebar captions into body sentences.",
+      "status": "prepared_structured_layout_required",
+      "launchable": false,
+      "preparation_blocker": "The illustrated two-column PDF needs page-aware reading-order and caption extraction before model translation. The source text is available, but plain pdftotext chunks are not launchable."
+    },
+    {
+      "priority": 10,
+      "quality_tier": "B readable but historically disputed thesis",
+      "book_id": "giving-up-the-gun",
+      "title_en": "Giving Up the Gun: Japan’s Reversion to the Sword, 1543–1879",
+      "title_ja": "鉄砲を捨てた日本：1543–1879",
+      "title_zh": "放弃枪炮：日本重归刀剑之路，1543–1879",
+      "author": "Noel Perrin",
+      "source_spine_lang": "en",
+      "task_mode": "trilingual_popular_history_en_spine",
+      "source_path": "sources/japan-history/sengoku/military-history/en/Giving Up the Gun - Noel Perrin.pdf",
+      "reference_paths": {
+        "modern_survey": "sources/japan-history/sengoku/surveys/en/Japan Emerging - Premodern History to 1850 - Karl F Friday.pdf",
+        "war_history": "sources/japan-history/sengoku/military-history/en/War in Japan 1467-1615 - Stephen Turnbull.pdf"
+      },
+      "start_marker": "FOREWORD",
+      "start_marker_exact": true,
+      "start_marker_occurrence": 1,
+      "stop_markers": [
+        "BIBLIOGRAPHY",
+        "Bibliography"
+      ],
+      "min_chunk_count": 55,
+      "min_content_chars": 120000,
+      "split_terminal_back_matter": false,
+      "allow_numeric_headings": false,
+      "chapter_heading_patterns": [
+        "^FOREWORD$"
+      ],
+      "chapter_heading_mode": "configured_only",
+      "chapter_heading_case_sensitive": true,
+      "source_preparation": "born-digital text with illustrations and moderate extraction noise",
+      "reference_notes": "Translate Perrin's thesis faithfully but attribute it to the author. Do not silently turn a debated interpretation into uncontested fact or rewrite it using later scholarship.",
+      "status": "prepared_heading_review_required",
+      "launchable": false,
+      "preparation_blocker": "The scan preserves the body text but loses the printed ONE and SIX chapter labels and separates figure captions from images. Review page-aware chapter and illustration anchors before launch."
+    },
+    {
+      "priority": 11,
+      "quality_tier": "A historical novel, not historical evidence",
+      "book_id": "taiko-yoshikawa",
+      "title_en": "Taiko: An Epic Novel of War and Glory in Feudal Japan",
+      "title_ja": "新書太閤記",
+      "title_zh": "太阁记：日本战国风云",
+      "author": "Eiji Yoshikawa",
+      "source_spine_lang": "en",
+      "task_mode": "trilingual_historical_novel_en_spine",
+      "source_path": "sources/japan-history/sengoku/historical-fiction/taiko/en/Taiko - Eiji Yoshikawa.epub",
+      "reference_paths": {
+        "early_modern_taikoki": "sources/japan-history/sengoku/primary-sources/taikoki/ja-book/太閤記-小瀬甫庵.pdf",
+        "scholarly_hideyoshi": "sources/japan-history/sengoku/biographies/hideyoshi/en/Hideyoshi - Mary Elizabeth Berry.pdf"
+      },
+      "start_marker": "1 FIFTH YEAR OF TEMMON 1536",
+      "start_marker_exact": true,
+      "stop_markers": [
+        "FB2 document info",
+        "About",
+        "About the Author",
+        "Copyright"
+      ],
+      "allow_markdown_headings": true,
+      "min_chunk_count": 700,
+      "min_content_chars": 1500000,
+      "split_terminal_back_matter": false,
+      "source_preparation": "EPUB direct-spine extraction; reject duplicated annotation/front matter and preserve chapter hierarchy",
+      "translation_contract": {
+        "style": "Complete, natural literary translation with readable modern Japanese and modern Chinese; preserve voice, dialogue, scene rhythm, and paragraph boundaries.",
+        "alignment": "Translate every source unit without summary, omission, censorship, or invented historical explanation.",
+        "historical_role": "This is a twentieth-century historical novel. Never present its invented dialogue or characterization as primary-source evidence.",
+        "grammar": "Keep English spaces and produce normalized grammar roles after alignment."
+      },
+      "reference_notes": "Yoshikawa's Taiko is distinct from Oze Hoan's early-modern Taikōki. The latter is contextual only, not the Japanese original of this English edition.",
+      "status": "chunked_launchable",
+      "launchable": true,
+      "book_plan": "books/taiko-yoshikawa/book-plan.json",
+      "chunks_manifest": "books/taiko-yoshikawa/work/trilingual/chunks/manifest.json",
+      "chunk_count": 1093,
+      "english_chapter_count": 56,
+      "prepared_chunks_at": "2026-08-01T13:54:25.553875+00:00"
+    },
+    {
+      "priority": 12,
+      "quality_tier": "A historical novel in Chinese translation, not historical evidence",
+      "book_id": "tokugawa-ieyasu-yamaoka",
+      "title_en": "Tokugawa Ieyasu",
+      "title_ja": "徳川家康",
+      "title_zh": "德川家康大全集",
+      "author": "Yamaoka Sōhachi; Chinese translation edition",
+      "source_spine_lang": "zh",
+      "task_mode": "trilingual_historical_novel_zh_spine",
+      "source_path": "sources/japan-history/sengoku/historical-fiction/tokugawa-ieyasu/zh/德川家康大全集 - 山冈庄八.epub",
+      "reference_paths": {
+        "scholarly_biography": "sources/japan-history/sengoku/biographies/tokugawa-ieyasu/en/Tokugawa Ieyasu - Shogun - Conrad Totman.pdf"
+      },
+      "start_marker": "一 乱世破晓",
+      "start_marker_exact": true,
+      "stop_markers": [
+        "版权信息"
+      ],
+      "allow_markdown_headings": true,
+      "allow_cjk_numbered_headings": false,
+      "bold_lines_as_headings": true,
+      "bold_heading_patterns": [
+        "^[〇零一二三四五六七八九十百千万两兩○]+\\s+[^，。！？；：]{1,30}$"
+      ],
+      "min_chunk_count": 900,
+      "min_content_chars": 2000000,
+      "split_terminal_back_matter": false,
+      "source_preparation": "Chinese EPUB spine; preserve thirteen-volume structure and reject marketing/front-matter duplication",
+      "translation_contract": {
+        "style": "Preserve the Chinese edition exactly as source and generate complete, natural literary English and contemporary Japanese.",
+        "alignment": "Translate every source unit without summary, omission, or invented connective material.",
+        "japanese": "This is a retranslation from the supplied Chinese edition because the Japanese original is not locally available. Use natural modern Japanese and never claim textual identity with Yamaoka's original wording.",
+        "historical_role": "This is historical fiction. Keep invented scenes and dialogue distinct from scholarship.",
+        "grammar": "Produce normalized grammar roles for all three languages after alignment."
+      },
+      "reference_notes": "The supplied spine is a Chinese translation of Yamaoka's novel. Generated Japanese is explicitly a Chinese-based retranslation, not a reconstruction of the unavailable Japanese original.",
+      "status": "chunked_launchable",
+      "launchable": true,
+      "book_plan": "books/tokugawa-ieyasu-yamaoka/book-plan.json",
+      "chunks_manifest": "books/tokugawa-ieyasu-yamaoka/work/trilingual/chunks/manifest.json",
+      "chunk_count": 1054,
+      "english_chapter_count": 445,
+      "prepared_chunks_at": "2026-08-01T13:54:25.553876+00:00"
+    }
+  ],
+  "last_chunk_preparation_at": "2026-08-01T14:18:51.920573+00:00"
+}

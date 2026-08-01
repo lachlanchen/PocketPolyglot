@@ -271,6 +271,10 @@ def prompt_for_plain_chunk(chunk: dict[str, Any], previous_errors: list[str] | N
         - Preserve paragraph ids and order exactly.
         - Preserve unit_id values and order exactly.
         - If a supplied source unit contains an exact "zh" or "ja" value, copy that field exactly into the corresponding output field.
+        - Obey every required and forbidden rendering in the terminology section of the translation quality contract. Entries with "enforcement": "preferred" are style guidance: use them when natural, but do not distort a sentence merely to force them.
+        - In Chinese, preserve an unmapped Latin-script personal name exactly as written in the source. Never invent a Chinese-character spelling for it. Translate or transparently transliterate institutions and places without adding unsupported details.
+        - In Japanese, use a stable katakana rendering for an unmapped non-Japanese personal name, or preserve the Latin spelling when uncertain. Never invent kanji for an unmapped personal name.
+        - Keep each proper name consistent throughout the chunk. A supplied terminology rendering always overrides these fallback rules.
         {spine_requirements.format(ja_instruction=ja_instruction)}
         - Do not include ruby, pinyin, token arrays, grammar colors, Markdown, commentary, or footnotes.
         - Keep chunk id and paragraph ids exactly as provided.

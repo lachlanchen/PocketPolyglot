@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Prepare modern nonfiction EN-JP-ZH trilingual PocketPolyglot tasks.
+"""Prepare modern prose EN-JP-ZH trilingual PocketPolyglot tasks.
 
-The input is a queue JSON under data/source-plan/. Each task uses an English
-source as the alignment spine and prepares launchable chunk manifests for the
-standard trilingual writer. This script does not start model workers.
+The input is a queue JSON under data/source-plan/. Each task uses one declared
+English, Japanese, or Chinese source as the alignment spine and prepares
+launchable chunk manifests for the standard trilingual writer. This script does
+not start model workers.
 """
 
 from __future__ import annotations
@@ -41,11 +42,21 @@ MARKDOWN_IMAGE_RE = re.compile(
 )
 MARKER_PAGE_RE = re.compile(r"(?:^|[-_/])_?page_(?P<page>\d+)(?:_|[-/.])", re.I)
 PAGE_NUMBER_RE = re.compile(r"^(?:[-–—]?\s*)?(?:\d{1,5}|[ivxlcdm]{1,10})(?:\s*[-–—]?)?$", re.I)
+RUNNING_HEADER_RE = re.compile(
+    r"^(?:"
+    r"(?:\d{1,4}|[ivxlcdm]{1,10})\s+(?:preface|introduction|prologue|epilogue|book\s+[ivxlcdm]+|chapter\s+(?:\d+|[ivxlcdm]+))|"
+    r"(?:preface|introduction|prologue|epilogue|book\s+[ivxlcdm]+|chapter\s+(?:\d+|[ivxlcdm]+))\s+(?:\d{1,4}|[ivxlcdm]{1,10})"
+    r")$",
+    re.I,
+)
 LATIN_RE = re.compile(r"[A-Za-z]{3,}")
+CJK_RE = re.compile(r"[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
+KANA_RE = re.compile(r"[\u3040-\u30ff]")
 SENTENCE_END_RE = re.compile(r'[.!?]["”’)\]]*$')
+CJK_SENTENCE_END_RE = re.compile(r'[。！？!?；;][」』”’）)\]】〉》]*$')
 HEADING_RE = re.compile(
     r"^(?:#{1,6}\s+)?(?:"
-    r"Introduction|Preface|Prologue|Epilogue|Conclusion|Afterword|Acknowledg(?:e)?ments|"
+    r"Introduction|Foreword|Preface|Prologue|Epilogue|Conclusion|Afterword|Acknowledg(?:e)?ments|"
     r"(?:Part|Book|Chapter|CHAPTER)\s+(?:[IVXLCDM]+|\d+|One|Two|Three|Four|Five|Six|Seven|Eight|Nine|Ten)\b.*|"
     r"\d{1,3}[.)]\s+.{2,90}"
     r")$",
@@ -94,8 +105,13 @@ CHAPTER_HEADING_RE = re.compile(
     r"^(?:Part|Book|Chapter|CHAPTER)\s+(?:[IVXLCDM]+|\d+|One|Two|Three|Four|Five|Six|Seven|Eight|Nine|Ten)\b(?:\s*[:.-]?\s+.{2,70})?$",
     re.I,
 )
-SPECIAL_HEADING_RE = re.compile(r"^(?:Introduction|Preface|Prologue|Epilogue|Conclusion|Afterword|Acknowledg(?:e)?ments)$", re.I)
+SPECIAL_HEADING_RE = re.compile(r"^(?:Introduction|Foreword|Preface|Prologue|Epilogue|Conclusion|Afterword|Acknowledg(?:e)?ments)$", re.I)
 NUMERIC_HEADING_RE = re.compile(r"^\d{1,3}[.)]\s+[A-Z][A-Za-z0-9 ,:'\"&-]{2,90}$")
+CJK_HEADING_RE = re.compile(
+    r"^(?:第[〇零一二三四五六七八九十百千万两兩\d]+[卷巻部篇章回節节]|"
+    r"[〇零一二三四五六七八九十百千万两兩\d]+[、.．\s]+|"
+    r"\S.{0,60}\s+第[〇零一二三四五六七八九十百千万两兩\d]+部$)\S*.{0,88}$"
+)
 KEEP_HYPHENATED = {
     "as-yet",
     "big-bang",
@@ -127,6 +143,30 @@ KEEP_HYPHENATED = {
 CURATED_BY = "AgInTiFlow curated"
 CURATED_URL = "https://flow.lazying.art"
 POWERED_BY = "powered by LazyingArt"
+
+
+def source_spine_lang(task: dict[str, Any]) -> str:
+    lang = str(task.get("source_spine_lang") or "en").strip().lower()
+    if lang not in {"en", "ja", "zh"}:
+        raise ValueError(f"unsupported source_spine_lang: {lang!r}")
+    return lang
+
+
+def source_title(task: dict[str, Any]) -> str:
+    lang = source_spine_lang(task)
+    return str(task.get(f"title_{lang}") or task.get("title_en") or task["book_id"])
+
+
+def has_language_content(text: str, lang: str) -> bool:
+    if lang == "en":
+        return bool(LATIN_RE.search(text))
+    if lang == "ja":
+        return bool(KANA_RE.search(text) or CJK_RE.search(text))
+    return bool(CJK_RE.search(text))
+
+
+def visible_content_chars(text: str) -> int:
+    return len(re.sub(r"\s+", "", text))
 
 
 def run_text(cmd: list[str]) -> str:
@@ -274,7 +314,9 @@ def source_to_markdown(task: dict[str, Any]) -> Path:
     source = ROOT / task["source_path"]
     if not source.exists():
         raise FileNotFoundError(source)
-    out = ROOT / "books" / task["book_id"] / "work/source-extraction/en.raw.md"
+    spine_lang = source_spine_lang(task)
+    title = source_title(task)
+    out = ROOT / "books" / task["book_id"] / f"work/source-extraction/{spine_lang}.raw.md"
     if out.exists() and not task.get("force_extract", False):
         return out
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -287,7 +329,7 @@ def source_to_markdown(task: dict[str, Any]) -> Path:
             "--output",
             str(out.relative_to(ROOT)),
             "--title",
-            task["title_en"],
+            title,
             "--min-content-chars",
             str(task.get("min_content_chars", 5000)),
             "--ocr-lang",
@@ -319,13 +361,23 @@ def source_to_markdown(task: dict[str, Any]) -> Path:
     else:
         raise ValueError(f"unsupported source type for {source}")
     body = normalize_raw_text(text)
+    min_content_chars = int(task.get("min_content_chars", 5000))
+    if suffix == ".epub" and visible_content_chars(body) < min_content_chars:
+        text = epub_to_markdown_fallback(source)
+        body = normalize_raw_text(text)
+        method = "epub-html-fallback-after-empty-pandoc"
+    if visible_content_chars(body) < min_content_chars:
+        raise RuntimeError(
+            f"{task['book_id']} extracted only {visible_content_chars(body)} content characters; "
+            f"expected at least {min_content_chars}"
+        )
     out.write_text(
         "---\n"
         f"source_file: {source.name}\n"
         f"conversion: {method}\n"
         f"generated_at: {datetime.now(timezone.utc).isoformat()}\n"
         "---\n\n"
-        f"# {task['title_en']}\n\n"
+        f"# {title}\n\n"
         f"{body}\n",
         encoding="utf-8",
     )
@@ -432,12 +484,43 @@ def clean_markdown_line(line: str) -> str:
     # but discard the Markdown-only escape character.
     body = body.replace(literal_asterisk, "*")
     body = body.replace(r"\(", "(").replace(r"\)", ")")
+    spaced_roman = re.fullmatch(
+        r"((?:Part|Book|Chapter)\s+)([IVXLCDM]+(?:\s+[IVXLCDM]+)+)",
+        body,
+        re.I,
+    )
+    if spaced_roman:
+        body = spaced_roman.group(1) + re.sub(r"\s+", "", spaced_roman.group(2))
     return prefix + compact(body)
 
 
-def clean_line(line: str, title: str) -> str:
+def matches_configured_heading(line: str, task: dict[str, Any] | None) -> bool:
+    if not task:
+        return False
+    line = re.sub(r"^#{1,6}\s+", "", line).strip()
+    flags = 0 if task.get("chapter_heading_case_sensitive", False) else re.I
+    for pattern in task.get("chapter_heading_exclude_patterns", []):
+        if re.fullmatch(str(pattern), line, flags):
+            return False
+    return any(
+        re.fullmatch(str(pattern), line, flags)
+        for pattern in task.get("chapter_heading_patterns", [])
+    )
+
+
+def clean_line(
+    line: str,
+    title: str,
+    lang: str = "en",
+    task: dict[str, Any] | None = None,
+) -> str:
+    if task:
+        replacements = task.get("source_line_replacements", {})
+        compact_source = compact(line)
+        if compact_source in replacements:
+            line = str(replacements[compact_source])
     line = clean_markdown_line(line.replace("\u00ad", ""))
-    if not line or PAGE_NUMBER_RE.fullmatch(line):
+    if not line or PAGE_NUMBER_RE.fullmatch(line) or RUNNING_HEADER_RE.fullmatch(line):
         return ""
     if line.startswith("Syntax Warning"):
         return ""
@@ -460,16 +543,25 @@ def clean_line(line: str, title: str) -> str:
         return ""
     if OCR_METADATA_RE.match(line) or OCR_PAGE_RE.match(line):
         return ""
-    if PAGE_ARTIFACT_RE.fullmatch(line):
+    if (
+        PAGE_ARTIFACT_RE.fullmatch(line)
+        and not HEADING_RE.fullmatch(line)
+        and not matches_configured_heading(line, task)
+    ):
         return ""
     if BOILERPLATE_RE.search(line):
         return ""
     if line.casefold() == title.casefold():
         return ""
-    if len(line) <= 3 and not LATIN_RE.search(line):
+    if len(line) <= 3 and not has_language_content(line, lang):
         return ""
     # Drop isolated running headers but keep useful all-caps chapter headings.
-    if re.fullmatch(r"[A-Z][A-Z .,'&:-]{3,70}", line) and not HEADING_RE.match(line):
+    if (
+        lang == "en"
+        and re.fullmatch(r"[A-Z][A-Z .,'&:-]{3,70}", line)
+        and not HEADING_RE.match(line)
+        and not matches_configured_heading(line, task)
+    ):
         words = [w for w in re.split(r"\W+", line) if w]
         if 1 <= len(words) <= 5:
             return ""
@@ -493,9 +585,20 @@ def is_symbol_noise(line: str) -> bool:
 
 
 def is_heading_line(line: str, task: dict[str, Any]) -> bool:
+    lang = source_spine_lang(task)
     has_markdown_heading = line.lstrip().startswith("#")
     line = re.sub(r"^#{1,6}\s+", "", line).strip()
     if len(line) > 100:
+        return False
+    flags = 0 if task.get("chapter_heading_case_sensitive", False) else re.I
+    for pattern in task.get("chapter_heading_exclude_patterns", []):
+        if re.fullmatch(str(pattern), line, flags):
+            return False
+    configured_patterns = task.get("chapter_heading_patterns", [])
+    for pattern in configured_patterns:
+        if re.fullmatch(str(pattern), line, flags):
+            return True
+    if configured_patterns and task.get("chapter_heading_mode") == "configured_only":
         return False
     if SPECIAL_HEADING_RE.fullmatch(line):
         return True
@@ -507,6 +610,8 @@ def is_heading_line(line: str, task: dict[str, Any]) -> bool:
         if not has_markdown_heading and line.casefold().startswith("chapter ") and len(line.split()) > 4 and ":" not in line:
             return False
         return True
+    if lang != "en" and task.get("allow_cjk_numbered_headings", False) and CJK_HEADING_RE.fullmatch(line):
+        return True
     if task.get("allow_numeric_headings", False) and NUMERIC_HEADING_RE.fullmatch(line):
         if re.match(r"^\d{1,3}\.\s*\d", line):
             return False
@@ -515,10 +620,38 @@ def is_heading_line(line: str, task: dict[str, Any]) -> bool:
         has_markdown_heading
         and task.get("allow_markdown_headings", False)
         and 2 <= len(line) <= 100
-        and LATIN_RE.search(line)
+        and has_language_content(line, lang)
     ):
         return True
     return False
+
+
+def canonical_chapter_title(line: str, task: dict[str, Any]) -> str:
+    title = re.sub(r"^#{1,6}\s+", "", line).strip()
+    title_map = task.get("chapter_title_map", {})
+    if title in title_map:
+        return str(title_map[title])
+    folded = title.casefold()
+    for source, replacement in title_map.items():
+        if str(source).casefold() == folded:
+            return str(replacement)
+    return title
+
+
+def promote_task_markdown_heading(raw_line: str, task: dict[str, Any]) -> str:
+    """Promote source-proven bold-only EPUB chapter titles when configured."""
+
+    if not task.get("bold_lines_as_headings", False):
+        return raw_line
+    match = re.fullmatch(r"\s*\*\*(?P<title>[^*\n]+)\*\*\s*", raw_line)
+    if not match:
+        return raw_line
+    title = compact(match.group("title"))
+    patterns = task.get("bold_heading_patterns", [])
+    flags = 0 if task.get("chapter_heading_case_sensitive", False) else re.I
+    if patterns and not any(re.fullmatch(str(pattern), title, flags) for pattern in patterns):
+        return raw_line
+    return f"## {title}"
 
 
 def drop_repeated_page_headers(lines: list[str]) -> list[str]:
@@ -621,6 +754,10 @@ def find_start(lines: list[str], task: dict[str, Any]) -> int:
                 seen += 1
                 if seen == occurrence:
                     return index
+        raise ValueError(
+            f"start marker not found: {marker!r} "
+            f"(occurrence={occurrence}, exact={exact})"
+        )
     body_markers = task.get(
         "body_start_markers",
         [
@@ -756,6 +893,46 @@ def split_english_units(text: str, *, max_chars: int) -> list[str]:
     return out
 
 
+def split_cjk_units(text: str, *, max_chars: int) -> list[str]:
+    sentence_ends = set("。！？!?；;")
+    closers = set("」』”’）)]】〉》")
+    pieces: list[str] = []
+    start = 0
+    index = 0
+    while index < len(text):
+        if text[index] not in sentence_ends:
+            index += 1
+            continue
+        end = index + 1
+        while end < len(text) and text[end] in closers:
+            end += 1
+        piece = text[start:end].strip()
+        if piece:
+            pieces.append(piece)
+        start = end
+        index = end
+    tail = text[start:].strip()
+    if tail:
+        pieces.append(tail)
+    if not pieces:
+        pieces = [text]
+    out: list[str] = []
+    pending = ""
+    for piece in pieces:
+        if pending and len(pending) + len(piece) > max_chars:
+            out.append(pending)
+            pending = piece
+        else:
+            pending += piece
+    if pending:
+        out.append(pending)
+    return out
+
+
+def split_source_units(text: str, lang: str, *, max_chars: int) -> list[str]:
+    return split_english_units(text, max_chars=max_chars) if lang == "en" else split_cjk_units(text, max_chars=max_chars)
+
+
 def markdown_figure_from_parts(
     caption: str,
     raw_path: str,
@@ -821,13 +998,16 @@ def split_markdown_line_figures(
 
 
 def parse_chapters(markdown: Path, task: dict[str, Any], *, max_unit_chars: int) -> list[dict[str, Any]]:
+    spine_lang = source_spine_lang(task)
+    title = source_title(task)
     raw_lines = markdown.read_text(encoding="utf-8", errors="replace").splitlines()
     figure_tokens: dict[str, dict[str, Any]] = {}
     lines: list[str] = []
     for raw_line in raw_lines:
+        raw_line = promote_task_markdown_heading(raw_line, task)
         for part in split_markdown_line_figures(raw_line, markdown):
             if isinstance(part, str):
-                lines.append(clean_line(part, task["title_en"]))
+                lines.append(clean_line(part, title, spine_lang, task))
                 continue
             token = f"POCKETPOLYGLOT_FIGURE_ANCHOR_{len(figure_tokens) + 1:06d}"
             part["source_order"] = len(figure_tokens) + 1
@@ -846,7 +1026,12 @@ def parse_chapters(markdown: Path, task: dict[str, Any], *, max_unit_chars: int)
     if task.get("join_page_continuations", True):
         lines = join_proven_page_continuations(lines)
     chapters: list[dict[str, Any]] = []
-    current = {"number": 1, "title": str(task.get("default_chapter_title") or "Main Text"), "paragraphs": []}
+    default_titles = {"en": "Main Text", "ja": "本文", "zh": "正文"}
+    current = {
+        "number": 1,
+        "title": str(task.get("default_chapter_title") or default_titles[spine_lang]),
+        "paragraphs": [],
+    }
     buffer: list[str] = []
     pending_figures: list[dict[str, Any]] = list(preserved_front_figures)
     body_chars_seen = 0
@@ -859,8 +1044,11 @@ def parse_chapters(markdown: Path, task: dict[str, Any], *, max_unit_chars: int)
             return
         text = repair_embedded_text_artifacts(" ".join(buffer))
         buffer = []
-        if len(text) >= 20 and LATIN_RE.search(text):
-            for unit in split_english_units(text, max_chars=max_unit_chars):
+        min_paragraph_chars = int(
+            task.get("min_paragraph_chars", 20 if spine_lang == "en" else 4)
+        )
+        if len(text) >= min_paragraph_chars and has_language_content(text, spine_lang):
+            for unit in split_source_units(text, spine_lang, max_chars=max_unit_chars):
                 paragraph: dict[str, Any] = {"text": unit}
                 if pending_figures:
                     paragraph["figures"] = pending_figures
@@ -897,13 +1085,18 @@ def parse_chapters(markdown: Path, task: dict[str, Any], *, max_unit_chars: int)
             flush()
             continue
         if (
+            task.get("split_terminal_back_matter", True)
+            and
             body_chars_seen >= min_body_chars_before_terminal
             and has_later_chapter_heading(lines, line_index, task)
             and TERMINAL_BACK_MATTER_RE.search(line)
             and not should_stop(line, task)
         ):
             terminal_after_line = False
-        elif body_chars_seen >= min_body_chars_before_terminal:
+        elif (
+            task.get("split_terminal_back_matter", True)
+            and body_chars_seen >= min_body_chars_before_terminal
+        ):
             line, terminal_after_line = split_terminal_back_matter(line)
         else:
             terminal_after_line = False
@@ -920,9 +1113,13 @@ def parse_chapters(markdown: Path, task: dict[str, Any], *, max_unit_chars: int)
             flush()
             if current["paragraphs"]:
                 chapters.append(current)
-            current = {"number": len(chapters) + 1, "title": re.sub(r"^#{1,6}\s+", "", line), "paragraphs": []}
+            current = {
+                "number": len(chapters) + 1,
+                "title": canonical_chapter_title(line, task),
+                "paragraphs": [],
+            }
             continue
-        if buffer and buffer[-1].endswith("-") and line and line[0].islower():
+        if spine_lang == "en" and buffer and buffer[-1].endswith("-") and line and line[0].islower():
             buffer[-1] = buffer[-1][:-1] + line
         else:
             buffer.append(line)
@@ -930,7 +1127,8 @@ def parse_chapters(markdown: Path, task: dict[str, Any], *, max_unit_chars: int)
         if terminal_after_line:
             flush()
             break
-        if SENTENCE_END_RE.search(line) and len(" ".join(buffer)) >= max_unit_chars:
+        sentence_ended = SENTENCE_END_RE.search(line) if spine_lang == "en" else CJK_SENTENCE_END_RE.search(line)
+        if sentence_ended and len(" ".join(buffer)) >= max_unit_chars:
             flush()
     flush()
     if pending_figures and current["paragraphs"]:
@@ -944,10 +1142,11 @@ def parse_chapters(markdown: Path, task: dict[str, Any], *, max_unit_chars: int)
 
 
 def build_chunks(task: dict[str, Any], chapters: list[dict[str, Any]], *, max_chunk_chars: int) -> tuple[dict[str, Any], list[dict[str, Any]]]:
+    spine_lang = source_spine_lang(task)
     chunks: list[dict[str, Any]] = []
     paragraph_index = 0
     supplemental_sources = task.get("reference_paths", {})
-    translation_contract = task.get(
+    translation_contract = dict(task.get(
         "translation_contract",
         {
             "style": "Accurate, complete, modern, understandable, elegant nonfiction translation.",
@@ -956,7 +1155,9 @@ def build_chunks(task: dict[str, Any], chapters: list[dict[str, Any]], *, max_ch
             "chinese": "Use natural modern Chinese with precise terminology; preserve names, dates, causal claims, and distinctions.",
             "grammar": "Grammar-role analysis is required later in the pipeline; keep sentence structure clear enough for subject/predicate/object/topic/function tagging.",
         },
-    )
+    ))
+    if task.get("terminology"):
+        translation_contract["terminology"] = task["terminology"]
     for chapter in chapters:
         pending: list[dict[str, str]] = []
         pending_chars = 0
@@ -967,27 +1168,43 @@ def build_chunks(task: dict[str, Any], chapters: list[dict[str, Any]], *, max_ch
                 return
             index = len(chunks) + 1
             chunk_id = f"{task['book_id']}-c{index:04d}"
-            en_ref = "\n".join(item["en"] for item in pending)
+            source_ref = "\n".join(item[spine_lang] for item in pending)
             chunks.append(
                 {
                     "schema_version": 1,
                     "mode": "trilingual_standard",
                     "book_id": task["book_id"],
-                    "source_spine_lang": "en",
+                    "source_spine_lang": spine_lang,
                     "chunk_id": chunk_id,
                     "chunk_index": index,
                     "chapter_id": f"chapter-{chapter['number']:03d}",
                     "chapter_number": chapter["number"],
-                    "chapter_title_en": chapter["title"],
-                    "chapter_title_zh": "",
+                    "chapter_title_en": chapter["title"] if spine_lang == "en" else f"Chapter {chapter['number']}",
+                    "chapter_title_zh": chapter["title"] if spine_lang == "zh" else "",
+                    "chapter_title_ja": chapter["title"] if spine_lang == "ja" else "",
                     "chapter_part_en": "",
                     "paragraph_ids": [item["id"] for item in pending],
                     "paragraphs": pending,
                     "reference": {
-                        "english": {"available": True, "chapter": chapter["title"], "text": en_ref},
-                        "zh_primary": {"available": False, "chapter": "", "text": "", "quality": "generate_from_english_spine"},
+                        "english": {
+                            "available": spine_lang == "en",
+                            "chapter": chapter["title"] if spine_lang == "en" else "",
+                            "text": source_ref if spine_lang == "en" else "",
+                            "quality": "source_spine" if spine_lang == "en" else f"generate_from_{spine_lang}_spine",
+                        },
+                        "zh_primary": {
+                            "available": spine_lang == "zh",
+                            "chapter": chapter["title"] if spine_lang == "zh" else "",
+                            "text": source_ref if spine_lang == "zh" else "",
+                            "quality": "source_spine" if spine_lang == "zh" else f"generate_from_{spine_lang}_spine",
+                        },
                         "zh_secondary": {"available": False, "chapter": "", "text": ""},
-                        "ja": {"available": False, "chapter": "", "text": ""},
+                        "ja": {
+                            "available": spine_lang == "ja",
+                            "chapter": chapter["title"] if spine_lang == "ja" else "",
+                            "text": source_ref if spine_lang == "ja" else "",
+                            "quality": "source_spine" if spine_lang == "ja" else f"generate_from_{spine_lang}_spine",
+                        },
                         "supplemental_sources": supplemental_sources,
                         "reference_notes": task.get("reference_notes", ""),
                     },
@@ -1008,7 +1225,7 @@ def build_chunks(task: dict[str, Any], chapters: list[dict[str, Any]], *, max_ch
             paragraph_id = f"{task['book_id']}-s{chapter['number']:03d}-p{paragraph_index:05d}"
             if pending and pending_chars + len(paragraph) > max_chunk_chars:
                 flush()
-            prepared_paragraph: dict[str, Any] = {"id": paragraph_id, "en": paragraph}
+            prepared_paragraph: dict[str, Any] = {"id": paragraph_id, spine_lang: paragraph}
             if figures:
                 prepared_paragraph["figures"] = figures
                 prepared_paragraph["source_pages"] = sorted(
@@ -1038,10 +1255,10 @@ def build_chunks(task: dict[str, Any], chapters: list[dict[str, Any]], *, max_ch
         "curated_by": CURATED_BY,
         "curated_url": CURATED_URL,
         "powered_by": POWERED_BY,
-        "source_spine_lang": "en",
-        "source_paths": {"en": task["source_path"]},
+        "source_spine_lang": spine_lang,
+        "source_paths": {spine_lang: task["source_path"]},
         "source_reference_paths": supplemental_sources,
-        "source_sha256": {"en": sha256(source_path)},
+        "source_sha256": {spine_lang: sha256(source_path)},
         "source_note": task.get("description", ""),
         "reference_notes": task.get("reference_notes", ""),
         "figure_count": sum(
@@ -1065,12 +1282,13 @@ def build_chunks(task: dict[str, Any], chapters: list[dict[str, Any]], *, max_ch
 
 
 def write_book(task: dict[str, Any], queue: dict[str, Any], args: argparse.Namespace) -> dict[str, Any]:
+    spine_lang = source_spine_lang(task)
     raw_md = source_to_markdown(task)
     chapters = parse_chapters(raw_md, task, max_unit_chars=args.max_unit_chars)
     book_root = ROOT / "books" / task["book_id"]
-    markdown_path = book_root / "markdown/en.md"
+    markdown_path = book_root / f"markdown/{spine_lang}.md"
     markdown_path.parent.mkdir(parents=True, exist_ok=True)
-    markdown_out = [f"# {task['title_en']}", ""]
+    markdown_out = [f"# {source_title(task)}", ""]
     for chapter in chapters:
         markdown_out.extend([f"## {chapter['title']}", ""])
         for paragraph_entry in chapter["paragraphs"]:
@@ -1130,7 +1348,7 @@ def write_book(task: dict[str, Any], queue: dict[str, Any], args: argparse.Names
         "status": "prepared_trilingual",
         "launchable": True,
         "task_mode": task.get("task_mode", "trilingual_modern_nonfiction_en_source_generated_zh_ja"),
-        "source_spine_lang": "en",
+        "source_spine_lang": spine_lang,
         "source_paths": manifest["source_paths"],
         "source_reference_paths": manifest["source_reference_paths"],
         "source_sha256": manifest["source_sha256"],
@@ -1143,7 +1361,7 @@ def write_book(task: dict[str, Any], queue: dict[str, Any], args: argparse.Names
                 else "Modern nonfiction generic extraction. PDF uses pdftotext; EPUB/MOBI uses pandoc."
             ),
         },
-        "markdown": {"en": str(markdown_path.relative_to(ROOT))},
+        "markdown": {spine_lang: str(markdown_path.relative_to(ROOT))},
         "book_title_en": task["title_en"],
         "book_title_zh": task["title_zh"],
         "book_title_ja": task["title_ja"],
@@ -1157,7 +1375,7 @@ def write_book(task: dict[str, Any], queue: dict[str, Any], args: argparse.Names
         "powered_by": POWERED_BY,
         "book_description": task.get("description", ""),
         "chunk_mode": "paragraph_sentence_group",
-        "reference_scope": "english_spine_only",
+        "reference_scope": f"{spine_lang}_spine_with_declared_supplemental_references",
         "chunks_jsonl": str((chunks_dir / "chunks.jsonl").relative_to(ROOT)),
         "chunks_manifest": str((chunks_dir / "manifest.json").relative_to(ROOT)),
         "raw_chunk_dir": str(raw_chunk_dir.relative_to(ROOT)),
@@ -1165,18 +1383,18 @@ def write_book(task: dict[str, Any], queue: dict[str, Any], args: argparse.Names
         "assembled_json": str((preview_dir / f"{task['book_id']}.partial.json").relative_to(ROOT)),
         "prepared_at": datetime.now(timezone.utc).isoformat(),
         "queue_id": queue.get("queue_id", ""),
-        "queue_model": queue.get("model", ""),
-        "queue_reasoning": queue.get("reasoning", ""),
+        "queue_model": task.get("model", queue.get("model", "")),
+        "queue_reasoning": task.get("reasoning", queue.get("reasoning", "")),
         "chunk_count": len(chunks),
         "figure_count": len(figures),
         "figure_manifest": str(figure_manifest_path.relative_to(ROOT)),
         "english_chapter_count": len(chapters),
         "preparation_notes": {
             "script": "scripts/interlinear/prepare_modern_nonfiction_trilingual.py",
-            "english_spine": "English source text is the chunk spine.",
+            "source_spine": f"{spine_lang} source text is the immutable chunk spine.",
             "supplemental_sources": "Optional local references are recorded in source_reference_paths; they are not used as chunk spine text unless a later project-specific pass aligns them.",
-            "chinese_reference": "No published Chinese source configured for this task; generate readable modern Chinese from English.",
-            "japanese_reference": "No published Japanese source configured for this task; generate natural modern Japanese from English.",
+            "chinese_reference": "Preserve a Chinese source spine exactly when configured; otherwise generate readable modern Chinese from the declared spine.",
+            "japanese_reference": "Preserve a Japanese source spine exactly when configured; otherwise generate natural modern Japanese from the declared spine.",
             "reference_notes": task.get("reference_notes", ""),
         },
     }
@@ -1228,7 +1446,12 @@ def main() -> int:
             task["chunk_count"] = summary["chunks"]
             task["english_chapter_count"] = summary["chapters"]
             task["prepared_chunks_at"] = datetime.now(timezone.utc).isoformat()
-        queue["status"] = "chunked_launchable"
+        task_statuses = [str(task.get("status") or "") for task in queue.get("tasks", [])]
+        queue["status"] = (
+            "chunked_launchable"
+            if task_statuses and all(status == "chunked_launchable" for status in task_statuses)
+            else "partially_chunked"
+        )
         queue["last_chunk_preparation_at"] = datetime.now(timezone.utc).isoformat()
         write_json(queue_path, queue)
     return 0

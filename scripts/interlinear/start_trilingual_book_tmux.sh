@@ -17,6 +17,7 @@ Environment:
   MODEL=gpt-5.5
   REASONING=high
   CODEX_TIMEOUT_SECONDS=7200
+  WORKER_RETRIES=2
   MERGE_INTERVAL=180
   COMPILE_INTERVAL_SECONDS=1200
   WORKER_SCRIPT=scripts/interlinear/codex_trilingual_plain_json_worker.py
@@ -64,6 +65,7 @@ max_chunks_per_worker="${MAX_CHUNKS_PER_WORKER:-0}"
 model="${MODEL:-gpt-5.5}"
 reasoning="${REASONING:-high}"
 codex_timeout_seconds="${CODEX_TIMEOUT_SECONDS:-7200}"
+worker_retries="${WORKER_RETRIES:-2}"
 usage_limit_wait_seconds="${CODEX_USAGE_LIMIT_WAIT_SECONDS:-3600}"
 usage_limit_max_wait_seconds="${CODEX_USAGE_LIMIT_MAX_WAIT_SECONDS:-0}"
 merge_interval="${MERGE_INTERVAL:-180}"
@@ -121,7 +123,7 @@ for i in \$(seq 1 '$workers'); do
     --max-chunks '$max_chunks_per_worker' \
     --codex-timeout-seconds '$codex_timeout_seconds' \
     ${retry_failed_arg[*]} \
-    --retries 4 \
+    --retries '$worker_retries' \
     > "$work_root/logs/\$worker_id.log" 2>&1 &
   gen_pids+=("\$!")
 done

@@ -112,6 +112,69 @@ def token_text(tokens: Any) -> str:
     return "".join(str(token.get("t", "")) for token in tokens if isinstance(token, dict))
 
 
+def contains_term(text: str, term: str) -> bool:
+    return compact(term).casefold() in compact(text).casefold()
+
+
+def validate_terminology_contract(
+    source: dict[str, Any],
+    result: dict[str, Any],
+    errors: list[str],
+) -> None:
+    contract = source.get("translation_contract") or {}
+    terminology = contract.get("terminology") or []
+    if not isinstance(terminology, list) or not terminology:
+        return
+    result_paragraphs = {
+        paragraph.get("id"): paragraph
+        for paragraph in result.get("paragraphs", [])
+        if isinstance(paragraph, dict) and paragraph.get("id")
+    }
+    for source_paragraph in source.get("paragraphs", []):
+        if not isinstance(source_paragraph, dict):
+            continue
+        paragraph_id = source_paragraph.get("id")
+        result_paragraph = result_paragraphs.get(paragraph_id)
+        if not isinstance(result_paragraph, dict):
+            continue
+        source_text = " ".join(
+            str(source_paragraph.get(lang) or "") for lang in ("en", "zh", "ja")
+        )
+        target_text = {
+            lang: "".join(
+                token_text(unit.get(lang, []))
+                for unit in result_paragraph.get("units", [])
+                if isinstance(unit, dict)
+            )
+            for lang in ("en", "zh", "ja")
+        }
+        for term_index, entry in enumerate(terminology):
+            if not isinstance(entry, dict):
+                errors.append(f"translation_contract.terminology[{term_index}]: must be an object")
+                continue
+            source_term = str(entry.get("source") or "").strip()
+            applies = bool(source_term and contains_term(source_text, source_term))
+            enforcement = str(entry.get("enforcement") or "required").strip().lower()
+            if applies and enforcement != "preferred":
+                for lang in ("en", "zh", "ja"):
+                    required = str(entry.get(lang) or "").strip()
+                    if required and not contains_term(target_text[lang], required):
+                        errors.append(
+                            f"{paragraph_id}: terminology {source_term!r} requires {lang} rendering {required!r}"
+                        )
+            forbidden = entry.get("forbidden") or {}
+            if isinstance(forbidden, dict):
+                for lang in ("en", "zh", "ja"):
+                    values = forbidden.get(lang) or []
+                    if isinstance(values, str):
+                        values = [values]
+                    for value in values:
+                        if str(value).strip() and contains_term(target_text[lang], str(value)):
+                            errors.append(
+                                f"{paragraph_id}: forbidden {lang} terminology {str(value)!r}"
+                            )
+
+
 def has_language_content(text: str) -> bool:
     return bool(HAN_RE.search(text) or KANA_RE.search(text) or LATIN_RE.search(text))
 
@@ -377,6 +440,7 @@ def validate_chunk(source: dict[str, Any], result: dict[str, Any]) -> list[str]:
         expected_rebuilt_en = expected_en or paragraph_source_en
         if expected_rebuilt_en and compact("".join(rebuilt_en_parts)) != compact(expected_rebuilt_en):
             errors.append(f"{paragraph_id}: units do not reconstruct paragraph English")
+    validate_terminology_contract(source, result, errors)
     return errors
 
 
