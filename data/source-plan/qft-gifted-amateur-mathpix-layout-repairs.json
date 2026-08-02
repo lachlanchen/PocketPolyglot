@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "book_id": "qft-gifted-amateur-mathpix-exact-book",
+  "evidence": [
+    "sources/quantum-field-theory-gifted-amateur/Quantum_Field_Theory_For_The_Gifted_Amateur.pdf#page=23",
+    "sources/quantum-field-theory-gifted-amateur/Quantum_Field_Theory_For_The_Gifted_Amateur.pdf#page=257"
+  ],
+  "policy": "Cardinality-checked post-fusion repairs for protected Mathpix structures whose layout is disproved by the cited source page.",
+  "replacements": [
+    {
+      "before": "\\[\\quad \\left( \\begin{array} { c } \n\\bar { t }  \\tag{5}\\\\\n\\bar { x } \\\\\n\\bar { y } \\\\\n\\bar { z }\n\\end{array} \\right) = \\left( \\begin{array} { c c c c } \n\\gamma & - \\beta \\gamma & 0 & 0 \\\\\n- \\beta \\gamma & \\gamma & 0 & 0 \\\\\n0 & 0 & 1 & 0 \\\\\n0 & 0 & 0 & 1\n\\end{array} \\right) \\left( \\begin{array} { l } \nt \\\\\nx \\\\\ny \\\\\nz\n\\end{array} \\right) ,\n\\]",
+      "after": "\\[\\quad \\left( \\begin{array} { c } \n\\bar { t } \\\\\n\\bar { x } \\\\\n\\bar { y } \\\\\n\\bar { z }\n\\end{array} \\right) = \\left( \\begin{array} { c c c c } \n\\gamma & - \\beta \\gamma & 0 & 0 \\\\\n- \\beta \\gamma & \\gamma & 0 & 0 \\\\\n0 & 0 & 1 & 0 \\\\\n0 & 0 & 0 & 1\n\\end{array} \\right) \\left( \\begin{array} { l } \nt \\\\\nx \\\\\ny \\\\\nz\n\\end{array} \\right) , \\tag{5}\n\\]",
+      "expected_count": 1,
+      "reason": "Original PDF page 23 places equation number (5) beside the complete Lorentz-transformation matrix, not inside the first row of its left column vector."
+    },
+    {
+      "before": "\\begin{figure}[h]\n\\begin{center}\n\\captionsetup{labelformat=empty}\n\\caption{（a）}\n  \\noindent\\includegraphics[max width=.96\\linewidth,max totalheight=.66\\textheight,keepaspectratio]{build/qft-gifted-amateur-mathpix-exact-book/work/images/5233f227-a928-4afb-b3e3-37ea0a281189-257_197_110_700_138.jpg}\n\\end{center}\n\\end{figure}\n\n\\begin{center}\n\\noindent\\includegraphics[max width=.96\\linewidth,max totalheight=.66\\textheight,keepaspectratio]{build/qft-gifted-amateur-mathpix-exact-book/work/images/5233f227-a928-4afb-b3e3-37ea0a281189-257_196_128_703_276.jpg}\n\\end{center}\n\n\\begin{figure}[h]\n\\begin{center}\n\\captionsetup{labelformat=empty}\n\\caption{（c）}\n  \\noindent\\includegraphics[max width=.96\\linewidth,max totalheight=.66\\textheight,keepaspectratio]{build/qft-gifted-amateur-mathpix-exact-book/work/images/5233f227-a928-4afb-b3e3-37ea0a281189-257_196_94_703_476.jpg}\n\\end{center}\n\\end{figure}",
+      "after": "% BUILD_POCKET_THREE_PANEL_ROW QFT_FIG_26_3\n\\begin{figure}[htbp]\n\\centering\n\\begin{minipage}[t]{.30\\linewidth}\n\\centering (a)\\par\\smallskip\n\\includegraphics[width=.82\\linewidth,max totalheight=.27\\textheight,keepaspectratio]{build/qft-gifted-amateur-mathpix-exact-book/work/images/5233f227-a928-4afb-b3e3-37ea0a281189-257_197_110_700_138.jpg}\n\\end{minipage}\\hfill\n\\begin{minipage}[t]{.30\\linewidth}\n\\centering (b)\\par\\smallskip\n\\includegraphics[width=.82\\linewidth,max totalheight=.27\\textheight,keepaspectratio]{build/qft-gifted-amateur-mathpix-exact-book/work/images/5233f227-a928-4afb-b3e3-37ea0a281189-257_196_128_703_276.jpg}\n\\end{minipage}\\hfill\n\\begin{minipage}[t]{.30\\linewidth}\n\\centering (c)\\par\\smallskip\n\\includegraphics[width=.82\\linewidth,max totalheight=.27\\textheight,keepaspectratio]{build/qft-gifted-amateur-mathpix-exact-book/work/images/5233f227-a928-4afb-b3e3-37ea0a281189-257_196_94_703_476.jpg}\n\\end{minipage}\n\\end{figure}",
+      "expected_count": 1,
+      "reason": "Original PDF page 257 prints Fig. 26.3 panels (a), (b), and (c) in one horizontal row. Mathpix split the row into two floats and one near-full-height standalone image, causing a 67.5775pt overfull page in the pocket layout."
+    }
+  ],
+  "forbidden_substrings": [
+    "\\bar { t }  \\tag{5}\\\\",
+    "\\caption{（a）}\n  \\noindent\\includegraphics[max width=.96\\linewidth,max totalheight=.66\\textheight,keepaspectratio]{build/qft-gifted-amateur-mathpix-exact-book/work/images/5233f227-a928-4afb-b3e3-37ea0a281189-257_197_110_700_138.jpg}"
+  ],
+  "required_substrings": [
+    "\\end{array} \\right) , \\tag{5}",
+    "% BUILD_POCKET_THREE_PANEL_ROW QFT_FIG_26_3"
+  ]
+}

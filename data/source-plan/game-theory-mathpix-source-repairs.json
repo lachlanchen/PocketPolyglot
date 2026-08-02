@@ -228,6 +228,12 @@
       "after": "the height of the box is the total endowment of good 2.\n\n\\footnotetext{\\({ } ^ { 1 }\\) Arrow and Hahn's result is for the more general notion of an economy with production. To apply it here, let the production set of each firm \\(f\\) be \\(Y _ { j } = \\{ 0 \\}\\). Note that if every agent's preference relation is increasing then every agent is resource related (in the sense of Arrow and Hahn) to every other agent.\n}\\clearpage\n\nThus each point",
       "expected_count": 1,
       "reason": "Join the page-split Edgeworth-box sentence using the adjacent page text in the clean alternate scan while preserving the complete Arrow-Hahn footnote and page boundary."
+    },
+    {
+      "before": "\\(\\boldsymbol { e } \\boldsymbol { F } _ { \\boldsymbol { * } } \\boldsymbol { e } ^ { \\boldsymbol { * } }\\)",
+      "after": "\\(e \\neq e ^ { * }\\)",
+      "expected_count": 1,
+      "reason": "The clean alternate scan printed page 237 states that the wage applies for education e different from e*, rendered in the scan as e != e*; Mathpix misread the not-equal sign as a bold F with a star subscript."
     }
   ]
 }

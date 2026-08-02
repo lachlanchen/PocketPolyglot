@@ -24,7 +24,11 @@ ATOMIC_ENV_RE = re.compile(
     r"(?P<body>.*?)\\end\{(?P=env)\}",
     re.S,
 )
-DISPLAY_MATH_RE = re.compile(r"\\\[.*?\\\]", re.S)
+DISPLAY_MATH_RE = re.compile(r"(?<!\\)\\\[.*?(?<!\\)\\\]", re.S)
+ORPHAN_LINE_SPACING_DISPLAY_RE = re.compile(
+    r"^\s*\\\[(?:[+-]?(?:\d+(?:\.\d*)?|\.\d+)"
+    r"(?:pt|mm|cm|in|ex|em|bp|pc|dd|cc|sp))?\]"
+)
 INCLUDEGRAPHICS_TOKEN_RE = re.compile(
     r"\\includegraphics(?:\[[^\]]*\])?"
     r"\{(?P<argument>\\detokenize\{[^{}]*\}|[^{}]*)\}"
@@ -50,7 +54,7 @@ STRUCTURAL_COMMAND_RE = re.compile(
     r"eqref|cite|includegraphics)\*?"
 )
 INLINE_MATH_RE = re.compile(
-    r"\\\[(?P<display>.*?)\\\]"
+    r"(?<!\\)\\\[(?P<display>.*?)(?<!\\)\\\]"
     r"|\\\((?P<paren>.*?)\\\)"
     r"|(?<!\\)\$(?P<dollar>(?:\\.|[^$\n])*?)(?<!\\)\$",
     re.S,
@@ -227,6 +231,63 @@ def visible_text(tex: str) -> str:
     text = text.replace("{", " ").replace("}", " ").replace("&", " ")
     text = re.sub(r"\s+", " ", text)
     return text.strip()
+
+
+def protected_segment_structure_issues(
+    segments: Iterable[dict[str, Any]],
+    *,
+    max_protected_chars: int = 8000,
+    max_protected_prose_words: int = 120,
+) -> list[dict[str, Any]]:
+    """Identify source prose that was accidentally classified as protected TeX.
+
+    TeX line spacing such as ``\\\\[0pt]`` must not be interpreted as the
+    opening ``\\[`` of display math.  The broken parse starts a protected
+    segment with the invalid fragment ``\\[0pt]`` and can hide many pages from
+    translation.  That signature is deterministic and fatal.  Very large,
+    prose-rich protected segments are reported as warnings for manual audit;
+    some legitimate technical objects can be large, so they are not rejected
+    solely by size.
+    """
+
+    issues: list[dict[str, Any]] = []
+    for segment in segments:
+        if segment.get("kind") != "protected":
+            continue
+        source_tex = segment.get("source_tex")
+        if not isinstance(source_tex, str):
+            continue
+        segment_id = str(segment.get("segment_id", "unknown"))
+        if ORPHAN_LINE_SPACING_DISPLAY_RE.match(source_tex):
+            issues.append(
+                {
+                    "severity": "error",
+                    "code": "orphan-line-spacing-display",
+                    "segment_id": segment_id,
+                    "source_chars": len(source_tex),
+                    "message": (
+                        "protected segment starts with a TeX line-spacing "
+                        "argument misread as display math"
+                    ),
+                }
+            )
+            continue
+        if len(source_tex) <= max_protected_chars:
+            continue
+        prose_words = re.findall(r"\b[A-Za-z]{3,}\b", visible_text(source_tex))
+        if len(prose_words) <= max_protected_prose_words:
+            continue
+        issues.append(
+            {
+                "severity": "warning",
+                "code": "large-prose-rich-protected-segment",
+                "segment_id": segment_id,
+                "source_chars": len(source_tex),
+                "prose_words": len(prose_words),
+                "message": "large protected segment contains substantial prose",
+            }
+        )
+    return issues
 
 
 def normalize_page_boundary_artifacts(
@@ -1749,10 +1810,38 @@ def restored_segment_output(task_segment: dict[str, Any], output: dict[str, Any]
     return restore_inline(output[f"{language}_tex"], task_segment["protected"])
 
 
+def strip_tex_comments(tex: str) -> str:
+    """Remove TeX comments before counting executable document structure."""
+
+    lines: list[str] = []
+    for line in tex.splitlines(keepends=True):
+        cursor = 0
+        while True:
+            marker = line.find("%", cursor)
+            if marker < 0:
+                lines.append(line)
+                break
+            preceding_backslashes = 0
+            index = marker - 1
+            while index >= 0 and line[index] == "\\":
+                preceding_backslashes += 1
+                index -= 1
+            if preceding_backslashes % 2:
+                cursor = marker + 1
+                continue
+            newline = "\n" if line.endswith("\n") else ""
+            lines.append(line[:marker] + newline)
+            break
+    return "".join(lines)
+
+
 def inventory(tex: str) -> dict[str, Any]:
+    tex = strip_tex_comments(tex)
     graphics: list[str] = []
     for match in INCLUDEGRAPHICS_TOKEN_RE.finditer(tex):
         argument = match.group("argument")
+        if not argument:
+            continue
         detokenized = re.fullmatch(r"\\detokenize\{([^{}]*)\}", argument)
         graphics.append(detokenized.group(1) if detokenized else argument)
     environments = Counter(
@@ -1764,7 +1853,7 @@ def inventory(tex: str) -> dict[str, Any]:
         )
     )
     return {
-        "includegraphics": tex.count(r"\includegraphics"),
+        "includegraphics": len(graphics),
         "graphics_paths": sorted(graphics),
         "captions": tex.count(r"\caption"),
         "longtable": tex.count(r"\begin{longtable}"),

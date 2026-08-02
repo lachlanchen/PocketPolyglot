@@ -125,6 +125,28 @@ DISPLAY_MATH_ENV_RE = re.compile(
     r"\\end\{(?P=environment)\}",
     re.S,
 )
+MATH_TAG_RE = re.compile(r"\\tag\{(?P<tag>[^{}]+)\}")
+MATH_ENVIRONMENT_TOKEN_RE = re.compile(
+    r"\\(?P<kind>begin|end)\{(?P<environment>[^{}]+)\}"
+    r"|\\tag\{(?P<tag>[^{}]+)\}"
+)
+NESTED_UNTAGGABLE_MATH_ENVIRONMENTS = {
+    "array",
+    "matrix",
+    "pmatrix",
+    "bmatrix",
+    "Bmatrix",
+    "vmatrix",
+    "Vmatrix",
+    "smallmatrix",
+    "cases",
+    "dcases",
+    "aligned",
+    "alignedat",
+    "gathered",
+    "split",
+    "subarray",
+}
 WIDE_MATH_BEGIN = "% BUILD_POCKET_WIDE_MATH_BEGIN"
 WIDE_MATH_END = "% BUILD_POCKET_WIDE_MATH_END"
 WIDE_MATH_WRAPPER_RE = re.compile(
@@ -394,13 +416,20 @@ GREEK_COMMAND_PATTERN = (
 
 
 def normalize_bold_greek_commands(text: str) -> str:
-    """Use unicode-math native bold commands instead of incompatible legacy ones."""
+    r"""Keep bold Greek in math fonts instead of legacy text-font slots.
 
-    text = text.replace(r"\boldsymbol{", r"\symbfit{")
-    text = text.replace(r"\bm{", r"\symbfit{")
+    Mathpix commonly inserts spaces between a command and its braces, for
+    example ``\mathbf { \Omega }``.  ``\mathbf`` routes uppercase Greek
+    through low OT1 slots, which XeTeX reports as U+0000/U+0008/U+000A.  Use
+    ``\boldsymbol`` for Greek and normalize ``\bm`` to the same portable AMS
+    command.  The patterns intentionally accept OCR-added whitespace.
+    """
+
+    text = re.sub(r"\\boldsymbol\s*\{", r"\\boldsymbol{", text)
+    text = re.sub(r"\\bm\s*\{", r"\\boldsymbol{", text)
     return re.sub(
-        rf"\\mathbf\{{(\\{GREEK_COMMAND_PATTERN})\}}",
-        r"\\symbfit{\1}",
+        rf"\\mathbf\s*\{{\s*(\\{GREEK_COMMAND_PATTERN})\s*\}}",
+        r"\\boldsymbol{\1}",
         text,
     )
 
@@ -1125,6 +1154,75 @@ def align_multiline_math_body(body: str) -> str:
     return body
 
 
+def relocate_nested_math_tags(text: str) -> tuple[str, int]:
+    """Move an OCR-displaced equation tag to the enclosing display.
+
+    Mathpix-style TeX sometimes puts the number of an entire matrix on its
+    first row, for example ``\\begin{array} ... \\tag{13}\\\\``.  AMSMath
+    rejects ``\\tag`` inside nested arrays, matrices, cases, or aligned
+    helpers.  A display with exactly one tag has an unambiguous repair: remove
+    that tag from the nested helper and append it to the display body.  More
+    than one nested tag is left as a hard error instead of guessing which rows
+    the numbers belong to.
+    """
+
+    relocated = 0
+
+    def repair_body(body: str) -> str:
+        nonlocal relocated
+        stack: list[str] = []
+        nested_tags: list[re.Match[str]] = []
+        all_tags: list[re.Match[str]] = []
+        for token in MATH_ENVIRONMENT_TOKEN_RE.finditer(body):
+            kind = token.group("kind")
+            environment = token.group("environment")
+            if kind == "begin" and environment:
+                stack.append(environment)
+                continue
+            if kind == "end" and environment:
+                if stack and stack[-1] == environment:
+                    stack.pop()
+                elif environment in stack:
+                    # Preserve deterministic recovery for malformed OCR while
+                    # allowing the structural validator to report the mismatch.
+                    reverse_index = stack[::-1].index(environment)
+                    del stack[len(stack) - 1 - reverse_index :]
+                continue
+            all_tags.append(token)
+            if any(env in NESTED_UNTAGGABLE_MATH_ENVIRONMENTS for env in stack):
+                nested_tags.append(token)
+
+        if not nested_tags:
+            return body
+        if len(all_tags) != 1 or len(nested_tags) != 1:
+            tags = ", ".join(match.group("tag") or "?" for match in nested_tags)
+            raise ValueError(
+                "cannot deterministically relocate multiple nested equation "
+                f"tags: {tags}"
+            )
+
+        match = nested_tags[0]
+        tag = match.group(0)
+        repaired = (body[: match.start()] + body[match.end() :]).rstrip()
+        relocated += 1
+        return repaired + " " + tag
+
+    def repair_display(match: re.Match[str]) -> str:
+        return r"\[" + repair_body(match.group(1)) + r"\]"
+
+    def repair_environment(match: re.Match[str]) -> str:
+        environment = match.group("environment")
+        return (
+            f"\\begin{{{environment}}}"
+            + repair_body(match.group("body"))
+            + f"\\end{{{environment}}}"
+        )
+
+    text = DISPLAY_MATH_RE.sub(repair_display, text)
+    text = DISPLAY_MATH_ENV_RE.sub(repair_environment, text)
+    return text, relocated
+
+
 def scaled_display_math(body: str) -> str:
     body = align_multiline_math_body(body)
     return (
@@ -1318,10 +1416,14 @@ def wrap_wide_inline_math(text: str, *, layout: str) -> tuple[str, int]:
             if inside_longtable
             else fitted_width + r"\linewidth"
         )
+        # ``adjustbox`` already creates a horizontal box, so an additional
+        # ``\mbox`` and nested ``\(...\)`` wrapper are redundant and fragile.
+        # Plain math shifts keep the fitted atom self-contained without
+        # changing its mathematical content.
         return (
-            f"\\penalty0\\hspace{{0pt}}\\mbox{{\\adjustbox{{max width={max_width}}}{{\\(\\displaystyle "
+            f"\\penalty0\\hspace{{0pt}}\\adjustbox{{max width={max_width}}}{{$\\displaystyle "
             + body
-            + "\\)}}"
+            + "$}"
         )
 
     return INLINE_MATH_RE.sub(repl, text), fitted

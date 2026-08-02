@@ -1,0 +1,293 @@
+{
+  "schema_version": 2,
+  "book_id": "game-theory-101-mathpix-exact-book",
+  "policy": "Evidence-locked repairs preserve accepted prose while reconstructing payoff matrices and equations from cited source pages.",
+  "segment_repairs": [
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s34399255cca7-01",
+      "source_sha256": "34399255cca7981bb761edc394791f09883734874e35249463bf8f245a9ee464",
+      "expected_en_sha256": "34399255cca7981bb761edc394791f09883734874e35249463bf8f245a9ee464",
+      "expected_ja_sha256": "6d8b7c7bd885fba58c8bfb364e1a484ad735722927a055e17e74ed3711d3da80",
+      "en_tex": "Now for down:\n\n\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | c | }\n\\hline\n & Left & Right \\\\\n\\hline\nDown & \\(2, ?\\) & \\(1, ?\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}\n\nHere, he earns 2 with probability \\(\\sigma_{\\text{left}}\\) and 1 with probability \\(1-\\sigma_{\\text{left}}\\), or:\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{down}} &= \\sigma_{\\text{left}}(2)+(1-\\sigma_{\\text{left}})(1)\n\\end{aligned}\n\\]\n\nCombining these together yields the following:\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{up}} &= \\mathrm{EU}_{\\text{down}} \\\\\n\\mathrm{EU}_{\\text{up}} &= \\sigma_{\\text{left}}(3)+(1-\\sigma_{\\text{left}})(0) \\\\\n\\mathrm{EU}_{\\text{down}} &= \\sigma_{\\text{left}}(2)+(1-\\sigma_{\\text{left}})(1) \\\\\n\\sigma_{\\text{left}}(3)+(1-\\sigma_{\\text{left}})(0) &= \\sigma_{\\text{left}}(2)+(1-\\sigma_{\\text{left}})(1) \\\\\n3\\sigma_{\\text{left}} &= \\sigma_{\\text{left}}+1 \\\\\n2\\sigma_{\\text{left}} &= 1 \\\\\n\\sigma_{\\text{left}} &= \\frac12\n\\end{aligned}\n\\]",
+      "ja_tex": "次に、下を選ぶ場合を考える。\n\n\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | c | }\n\\hline\n & 左 & 右 \\\\\n\\hline\n下 & \\(2, ?\\) & \\(1, ?\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}\n\nここで、プレイヤー1は確率 \\(\\sigma_{\\text{left}}\\) で2を、確率 \\(1-\\sigma_{\\text{left}}\\) で1を得る。すなわち、\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{down}} &= \\sigma_{\\text{left}}(2)+(1-\\sigma_{\\text{left}})(1)\n\\end{aligned}\n\\]\n\nこれらをまとめると、次のようになる。\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{up}} &= \\mathrm{EU}_{\\text{down}} \\\\\n\\mathrm{EU}_{\\text{up}} &= \\sigma_{\\text{left}}(3)+(1-\\sigma_{\\text{left}})(0) \\\\\n\\mathrm{EU}_{\\text{down}} &= \\sigma_{\\text{left}}(2)+(1-\\sigma_{\\text{left}})(1) \\\\\n\\sigma_{\\text{left}}(3)+(1-\\sigma_{\\text{left}})(0) &= \\sigma_{\\text{left}}(2)+(1-\\sigma_{\\text{left}})(1) \\\\\n3\\sigma_{\\text{left}} &= \\sigma_{\\text{left}}+1 \\\\\n2\\sigma_{\\text{left}} &= 1 \\\\\n\\sigma_{\\text{left}} &= \\frac12\n\\end{aligned}\n\\]",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=97"
+      ],
+      "reason": "Restore the Down payoff row as a native matrix and separate the displayed derivation exactly as printed."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-se575d31bdf1a-01",
+      "source_sha256": "e575d31bdf1a69da3e22644a81499826440e47e1bf41974bee225f3640a0a478",
+      "expected_en_sha256": "e575d31bdf1a69da3e22644a81499826440e47e1bf41974bee225f3640a0a478",
+      "expected_ja_sha256": "e575d31bdf1a69da3e22644a81499826440e47e1bf41974bee225f3640a0a478",
+      "en_tex": "\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{left}} &= \\mathrm{EU}_{\\text{right}} \\\\\n\\mathrm{EU}_{\\text{left}} &= \\sigma_{\\text{up}}(4)+(1-\\sigma_{\\text{up}})(0) \\\\\n\\mathrm{EU}_{\\text{right}} &= \\sigma_{\\text{up}}(2)+(1-\\sigma_{\\text{up}})(1) \\\\\n4\\sigma_{\\text{up}} &= 2\\sigma_{\\text{up}}+1-\\sigma_{\\text{up}} \\\\\n4\\sigma_{\\text{up}} &= \\sigma_{\\text{up}}+1 \\\\\n3\\sigma_{\\text{up}} &= 1 \\\\\n\\sigma_{\\text{up}} &= \\frac13\n\\end{aligned}\n\\]",
+      "ja_tex": "\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{left}} &= \\mathrm{EU}_{\\text{right}} \\\\\n\\mathrm{EU}_{\\text{left}} &= \\sigma_{\\text{up}}(4)+(1-\\sigma_{\\text{up}})(0) \\\\\n\\mathrm{EU}_{\\text{right}} &= \\sigma_{\\text{up}}(2)+(1-\\sigma_{\\text{up}})(1) \\\\\n4\\sigma_{\\text{up}} &= 2\\sigma_{\\text{up}}+1-\\sigma_{\\text{up}} \\\\\n4\\sigma_{\\text{up}} &= \\sigma_{\\text{up}}+1 \\\\\n3\\sigma_{\\text{up}} &= 1 \\\\\n\\sigma_{\\text{up}} &= \\frac13\n\\end{aligned}\n\\]",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=100"
+      ],
+      "reason": "Replace Mathpix Verbatim leakage with a native aligned derivation."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s8c670c5bdeb5-01",
+      "source_sha256": "8c670c5bdeb58dd1d539de77ddaa26a49ec6b46d73e6ef213f374413f3e83ffd",
+      "expected_en_sha256": "8c670c5bdeb58dd1d539de77ddaa26a49ec6b46d73e6ef213f374413f3e83ffd",
+      "expected_ja_sha256": "1db2baec17f1bfc0e7edc08ec72ef7f1cbafe0018088b166865fc7719d7a78f7",
+      "en_tex": "\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & Quiet \\\\\n\\hline\nQuiet & \\(?, -1\\) \\\\\nConfess & \\(?, -12\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}\n\nIf player 2 selects left as a pure strategy, she earns -1 with probability \\(\\sigma_{\\text{up}}\\) and -12 with probability \\(1-\\sigma_{\\text{up}}\\). Thus, her expected utility equals:\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{left}} &= \\sigma_{\\text{up}}(-1)+(1-\\sigma_{\\text{up}})(-12)\n\\end{aligned}\n\\]\n\nNow isolate player 2's payoffs for playing right (confess):",
+      "ja_tex": "\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & 黙秘 \\\\\n\\hline\n黙秘 & \\(?, -1\\) \\\\\n自白 & \\(?, -12\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}\n\nプレイヤー2が純粋戦略として左を選ぶ場合、確率 \\(\\sigma_{\\text{up}}\\) で-1を、確率 \\(1-\\sigma_{\\text{up}}\\) で-12を得る。したがって、その期待効用は次のようになる。\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{left}} &= \\sigma_{\\text{up}}(-1)+(1-\\sigma_{\\text{up}})(-12)\n\\end{aligned}\n\\]\n\n次に、プレイヤー2が右（自白）を選んだ場合の利得だけを取り出す。",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=103"
+      ],
+      "reason": "Quiet is a matrix column heading, not a section heading."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s8ebb8b5d2b38-01",
+      "source_sha256": "8ebb8b5d2b38f830967d92cffdf0252888efff279c23655265f039c70fd4c23d",
+      "expected_en_sha256": "bf2b4cdf3b75a13d9613bfe960c2cc8a86163997ac6fdc9965762daa0b7ea68c",
+      "expected_ja_sha256": "13f56a1242c5d67e910564e6ceb54c24fda8656dc64cae3c9d6f8b2c4c60dc7a",
+      "en_tex": "Next, we need to find her expected utility for right against that same mixed strategy:\n\n\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & Right \\\\\n\\hline\nUp & \\(?, 1\\) \\\\\nDown & \\(?, -1\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}\n\nHere, she earns 1 with probability \\(\\sigma_{\\text{up}}\\) and -1 with probability \\(1-\\sigma_{\\text{up}}\\). As an equation:\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{right}} &= \\sigma_{\\text{up}}(1)+(1-\\sigma_{\\text{up}})(-1)\n\\end{aligned}\n\\]\n\nTo finish, we set the expected utility for left equal to the expected utility for right and solve for \\(\\sigma_{\\text{up}}\\):\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{left}} &= \\mathrm{EU}_{\\text{right}} \\\\\n\\sigma_{\\text{up}}(-1)+(1-\\sigma_{\\text{up}})(2) &= \\sigma_{\\text{up}}(1)+(1-\\sigma_{\\text{up}})(-1) \\\\\n-3\\sigma_{\\text{up}}+2 &= 2\\sigma_{\\text{up}}-1 \\\\\n5\\sigma_{\\text{up}} &= 3 \\\\\n\\sigma_{\\text{up}} &= \\frac35\n\\end{aligned}\n\\]\n\nSo player 1 picks up with probability \\(3/5\\) and down with probability \\(2/5\\) in the MSNE.",
+      "ja_tex": "次に、同じ混合戦略に対して、彼女が右を選んだ場合の期待効用を求める。\n\n\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & 右 \\\\\n\\hline\n上 & \\(?, 1\\) \\\\\n下 & \\(?, -1\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}\n\nここでは、彼女は確率 \\(\\sigma_{\\text{up}}\\) で1を、確率 \\(1-\\sigma_{\\text{up}}\\) で-1を得る。式で表すと次のようになる。\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{right}} &= \\sigma_{\\text{up}}(1)+(1-\\sigma_{\\text{up}})(-1)\n\\end{aligned}\n\\]\n\n最後に、左と右の期待効用を等しいと置き、\\(\\sigma_{\\text{up}}\\) について解く。\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{left}} &= \\mathrm{EU}_{\\text{right}} \\\\\n\\sigma_{\\text{up}}(-1)+(1-\\sigma_{\\text{up}})(2) &= \\sigma_{\\text{up}}(1)+(1-\\sigma_{\\text{up}})(-1) \\\\\n-3\\sigma_{\\text{up}}+2 &= 2\\sigma_{\\text{up}}-1 \\\\\n5\\sigma_{\\text{up}} &= 3 \\\\\n\\sigma_{\\text{up}} &= \\frac35\n\\end{aligned}\n\\]\n\nしたがって、MSNEではプレイヤー1は確率 \\(3/5\\) で上を、確率 \\(2/5\\) で下を選ぶ。",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=129"
+      ],
+      "reason": "Restore the Right payoff matrix, correct row order, and displayed calculation."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-sc7d7363f4310-01",
+      "source_sha256": "c7d7363f4310cad4063bae1f7066dade6ccd381dd8c58fe14043f031d8d9c72e",
+      "expected_en_sha256": "63a8494fee9e40b447df20ecfb65de023429675f1a6632db763651b0ff8a73a1",
+      "expected_ja_sha256": "830e6122c0e48f2a2cbb17d45efc300a2b90de45a4b18f1945f659b9c3d3cc11",
+      "en_tex": "Now we match those probabilities with player 1's payoffs for each of the outcomes:\n\n\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | c | }\n\\hline\n & Left & Right \\\\\n\\hline\nUp & \\(3, ?\\) & \\(-1, ?\\) \\\\\nDown & \\(-1, ?\\) & \\(2, ?\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}\n\nWe now combine this information together as a formula:\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_1 &= \\frac35\\frac37(3)+\\frac25\\frac37(-1)+\\frac35\\frac47(-1)+\\frac25\\frac47(2) \\\\\n&= \\frac9{35}(3)+\\frac6{35}(-1)+\\frac{12}{35}(-1)+\\frac8{35}(2) \\\\\n&= \\frac{27}{35}-\\frac6{35}-\\frac{12}{35}+\\frac{16}{35} \\\\\n&= \\frac{25}{35}=\\frac57\n\\end{aligned}\n\\]\n\nAnd, sure enough, his expected utility of \\(5/7\\) in the MSNE is better than the 0 he would receive for middle as a pure strategy.",
+      "ja_tex": "次に、これらの確率を、それぞれの結果におけるプレイヤー1の利得と対応させる。\n\n\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | c | }\n\\hline\n & 左 & 右 \\\\\n\\hline\n上 & \\(3, ?\\) & \\(-1, ?\\) \\\\\n下 & \\(-1, ?\\) & \\(2, ?\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}\n\nこの情報をまとめて数式にすると、次のようになる。\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_1 &= \\frac35\\frac37(3)+\\frac25\\frac37(-1)+\\frac35\\frac47(-1)+\\frac25\\frac47(2) \\\\\n&= \\frac9{35}(3)+\\frac6{35}(-1)+\\frac{12}{35}(-1)+\\frac8{35}(2) \\\\\n&= \\frac{27}{35}-\\frac6{35}-\\frac{12}{35}+\\frac{16}{35} \\\\\n&= \\frac{25}{35}=\\frac57\n\\end{aligned}\n\\]\n\n予想どおり、MSNEにおける期待効用 \\(5/7\\) は、純粋戦略として中央を選んだ場合の0より大きい。",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=131"
+      ],
+      "reason": "Restore the omitted two-by-two payoff matrix and native expected-utility calculation."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-sf357428dbdbb-01",
+      "source_sha256": "f357428dbdbbddd6963f7960306e9e1bb0b2405c44b9c2a85d25d7d6aaebda04",
+      "expected_en_sha256": "f357428dbdbbddd6963f7960306e9e1bb0b2405c44b9c2a85d25d7d6aaebda04",
+      "expected_ja_sha256": "ef2106454346a2775f6ca356954dee33e2acfd96b0377ec2bb4b7b8a111676cb",
+      "en_tex": "\\begin{center}",
+      "ja_tex": "\\begin{center}",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=287"
+      ],
+      "reason": "Hawk is the following matrix's column heading, not a section."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s9d981ddc49e9-01",
+      "source_sha256": "9d981ddc49e99addac3376c1134ab42597d0e98f4a4f190e73d710183167de7d",
+      "expected_en_sha256": "9d981ddc49e99addac3376c1134ab42597d0e98f4a4f190e73d710183167de7d",
+      "expected_ja_sha256": "9d981ddc49e99addac3376c1134ab42597d0e98f4a4f190e73d710183167de7d",
+      "en_tex": "\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ c | c }\n & Hawk \\\\\nHawk & \\(v/2-c, ?\\) \\\\\nDove & \\(0, ?\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}",
+      "ja_tex": "\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ c | c }\n & Hawk \\\\\nHawk & \\(v/2-c, ?\\) \\\\\nDove & \\(0, ?\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=287"
+      ],
+      "reason": "Insert the visible Hawk column heading into the native matrix.",
+      "source_tex": "\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ c | c }\n & Hawk \\\\\nHawk & \\(v/2-c, ?\\) \\\\\nDove & \\(0, ?\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}"
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s0a203efee5dc-01",
+      "source_sha256": "0a203efee5dc6906a650af25aa72150dfef6a3c010c32410be121196333b4b84",
+      "expected_en_sha256": "0a203efee5dc6906a650af25aa72150dfef6a3c010c32410be121196333b4b84",
+      "expected_ja_sha256": "89b8fd87c5bb3cf09a2d96af7675871085526c1d06bb29e4100ad3b512063a29",
+      "en_tex": "reduced game:\n\n\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & T Fast \\\\\n\\hline\nG Fast & \\(1, -1\\) \\\\\nG Curve & \\(0, 0\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}",
+      "ja_tex": "縮約ゲーム：\n\n\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & T 速球 \\\\\n\\hline\nG 速球 & \\(1, -1\\) \\\\\nG カーブ & \\(0, 0\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=312"
+      ],
+      "reason": "Restore the reduced baseball game as a native matrix."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s5c06a4869240-01",
+      "source_sha256": "5c06a486924079df9e21582d5784d3e916fc854c6c6b384f6d5c6b275ed9939a",
+      "expected_en_sha256": "5c06a486924079df9e21582d5784d3e916fc854c6c6b384f6d5c6b275ed9939a",
+      "expected_ja_sha256": "a26352477eeae928c0e79077e3f6c7a88b16e0fc7f0f388dda23987afb16a13d",
+      "en_tex": "a fastball:\n\n\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & T Fast \\\\\n\\hline\nG Fast & \\(?, -1\\) \\\\\nG Curve & \\(?, 0\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}",
+      "ja_tex": "速球について：\n\n\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & T 速球 \\\\\n\\hline\nG 速球 & \\(?, -1\\) \\\\\nG カーブ & \\(?, 0\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=313"
+      ],
+      "reason": "Restore the pitcher's fastball payoff column as a native matrix."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s1506eceb5f21-01",
+      "source_sha256": "1506eceb5f217ec7e609b3ff1d94ee367c85fba3d2428c07f65ef778ac6fc575",
+      "expected_en_sha256": "2e6d5d47a3e895d503dc496543a39366b4f9b3ee55c60dd1f0807b4533a426aa",
+      "expected_ja_sha256": "a90022ca55b1879de6512900c2d944b450a1d4070f364a36f7bef5e60ecc44cc",
+      "en_tex": "curveball:\n\n\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & T Curve \\\\\n\\hline\nG Fast & \\(?, -x\\) \\\\\nG Curve & \\(?, -1-x\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}\n\nHere, she earns \\(-x\\) with probability \\(\\sigma_{\\mathrm{GF}}\\) and \\(-1-x\\) with probability \\(1-\\sigma_{\\mathrm{GF}}\\). As an equation:\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\mathrm{TC}} &= \\sigma_{\\mathrm{GF}}(-x)+(1-\\sigma_{\\mathrm{GF}})(-1-x)\n\\end{aligned}\n\\]\n\nAs always, we set those expected utilities equal to each other and solve for the mixed strategy:\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\mathrm{TF}} &= \\mathrm{EU}_{\\mathrm{TC}} \\\\\n-\\sigma_{\\mathrm{GF}} &= -x\\sigma_{\\mathrm{GF}}+(1-\\sigma_{\\mathrm{GF}})(-1-x) \\\\\n-\\sigma_{\\mathrm{GF}} &= -1-x+\\sigma_{\\mathrm{GF}} \\\\\n2\\sigma_{\\mathrm{GF}} &= 1+x \\\\\n\\sigma_{\\mathrm{GF}} &= \\frac{1+x}{2}\n\\end{aligned}\n\\]\n\nThus, the batter guesses fastball with probability \\((1+x)/2\\) and curveball with probability \\((1-x)/2\\). These are valid probability distributions because \\(0<x<1\\).",
+      "ja_tex": "カーブについて：\n\n\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & T カーブ \\\\\n\\hline\nG 速球 & \\(?, -x\\) \\\\\nG カーブ & \\(?, -1-x\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}\n\nここで、彼女は確率 \\(\\sigma_{\\mathrm{GF}}\\) で \\(-x\\) を、確率 \\(1-\\sigma_{\\mathrm{GF}}\\) で \\(-1-x\\) を得る。式で表すと次のようになる。\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\mathrm{TC}} &= \\sigma_{\\mathrm{GF}}(-x)+(1-\\sigma_{\\mathrm{GF}})(-1-x)\n\\end{aligned}\n\\]\n\nいつものように、二つの期待効用を等しいと置き、混合戦略について解く。\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\mathrm{TF}} &= \\mathrm{EU}_{\\mathrm{TC}} \\\\\n-\\sigma_{\\mathrm{GF}} &= -x\\sigma_{\\mathrm{GF}}+(1-\\sigma_{\\mathrm{GF}})(-1-x) \\\\\n-\\sigma_{\\mathrm{GF}} &= -1-x+\\sigma_{\\mathrm{GF}} \\\\\n2\\sigma_{\\mathrm{GF}} &= 1+x \\\\\n\\sigma_{\\mathrm{GF}} &= \\frac{1+x}{2}\n\\end{aligned}\n\\]\n\nしたがって、打者は確率 \\((1+x)/2\\) で速球を、確率 \\((1-x)/2\\) でカーブを予想する。\\(0<x<1\\) なので、これらは有効な確率分布である。",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=313"
+      ],
+      "reason": "Restore the curveball payoff column and the visibly printed algebraic line structure."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-sc8c8f4bade8e-01",
+      "source_sha256": "c8c8f4bade8e03525e2b748dc12f19ac650ddf7753b6b34d487b77129ce61665",
+      "expected_en_sha256": "c8c8f4bade8e03525e2b748dc12f19ac650ddf7753b6b34d487b77129ce61665",
+      "expected_ja_sha256": "cc43134a72a319bfb7cea8d01c2fc4848689c25098b1978146667a57f43ea52e",
+      "en_tex": "Now suppose player 2 moved right:\n\n\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & Right \\\\\n\\hline\nUp & \\(?, 2\\) \\\\\nMiddle & \\(?, 3\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}\n\nThis time, she earns 2 with probability \\(\\sigma_{\\text{left}}\\) and 3 with probability \\(1-\\sigma_{\\text{left}}\\). As an equation:\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{right}} &= \\sigma_{\\text{left}}(2)+(1-\\sigma_{\\text{left}})(3)\n\\end{aligned}\n\\]\n\nPlayer 2 is willing to play left as a pure strategy if her expected utility for left is at least as great as her expected utility for right:\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{left}} &\\geq \\mathrm{EU}_{\\text{right}} \\\\\n\\sigma_{\\text{left}}(1)+(1-\\sigma_{\\text{left}})(3) &\\geq \\sigma_{\\text{left}}(2)+(1-\\sigma_{\\text{left}})(3) \\\\\n\\sigma_{\\text{left}}(1) &\\geq \\sigma_{\\text{left}}(2)\n\\end{aligned}\n\\]",
+      "ja_tex": "次に、プレイヤー2が右を選んだと仮定しよう。\n\n\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & 右 \\\\\n\\hline\n上 & \\(?, 2\\) \\\\\n中央 & \\(?, 3\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}\n\n今回は、彼女は確率 \\(\\sigma_{\\text{left}}\\) で2を、確率 \\(1-\\sigma_{\\text{left}}\\) で3を得る。式で表すと、\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{right}} &= \\sigma_{\\text{left}}(2)+(1-\\sigma_{\\text{left}})(3)\n\\end{aligned}\n\\]\n\nプレイヤー2が左を純粋戦略として選ぶのは、左の期待効用が右の期待効用以上である場合である。\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{left}} &\\geq \\mathrm{EU}_{\\text{right}} \\\\\n\\sigma_{\\text{left}}(1)+(1-\\sigma_{\\text{left}})(3) &\\geq \\sigma_{\\text{left}}(2)+(1-\\sigma_{\\text{left}})(3) \\\\\n\\sigma_{\\text{left}}(1) &\\geq \\sigma_{\\text{left}}(2)\n\\end{aligned}\n\\]",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=328"
+      ],
+      "reason": "Right is a matrix column heading, not a section; restore the table and inequalities."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s6ebe92eeaf0a-01",
+      "source_sha256": "6ebe92eeaf0a4fb9849709e79579501c6bb6561dceaa5b2e85e7a42153305ebd",
+      "expected_kind": "protected",
+      "kind": "text",
+      "expected_en_sha256": "6ebe92eeaf0a4fb9849709e79579501c6bb6561dceaa5b2e85e7a42153305ebd",
+      "expected_ja_sha256": "6ebe92eeaf0a4fb9849709e79579501c6bb6561dceaa5b2e85e7a42153305ebd",
+      "en_tex": "\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & Confess \\\\\n\\hline\nQuiet & \\(1, ?\\) \\\\\nConfess & \\(2, ?\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}\n\nLikewise, suppose player 2 confessed:\n\nThen player 1 should still confess, as 2 beats 1.\n\nThe same is true for player 2. First, suppose player 1 kept quiet:\n\n\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | c | }\n\\hline\n & Quiet & Confess \\\\\n\\hline\nQuiet & \\(?, 3\\) & \\(?, 4\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}\n\nPlayer 2 ought to confess, since 4 beats 3. Alternatively, if player 1 confessed:\n\n\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | c | }\n\\hline\n & Quiet & Confess \\\\\n\\hline\nConfess & \\(?, 1\\) & \\(?, 2\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}\n\nPlayer 2 should confess as well, as 2 is greater than 1. Thus, regardless of what the other player does, each player's best strategy is to confess.\n\nTo be clear, this preference ordering exclusively over time spent in jail is just one way the players may interpret the situation. Suppose you and a friend were actually arrested and the interrogator offered you a similar deal. The results here do not generally tell you what to do in that situation, unless you and your friend only cared about jail time. Perhaps your friendship is strong, and both of you value it more than avoiding jail time. Since confessing might destroy the friendship, you could prefer to keep quiet if your partner kept quiet, which changes the ranking of your outcomes. Your preferences here are perfectly rational. However, we do not yet have the tools to solve the corresponding game. We will reconsider these alternative sets of preferences in Lesson 1.3.",
+      "ja_tex": "\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & 自白 \\\\\n\\hline\n黙秘 & \\(1, ?\\) \\\\\n自白 & \\(2, ?\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}\n\n同様に、プレイヤー2が自白した場合を考えよう。\n\nこの場合も、2は1より大きいので、プレイヤー1は自白すべきである。\n\nプレイヤー2についても同じことがいえる。まず、プレイヤー1が黙秘した場合を考える。\n\n\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | c | }\n\\hline\n & 黙秘 & 自白 \\\\\n\\hline\n黙秘 & \\(?, 3\\) & \\(?, 4\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}\n\n4は3より大きいので、プレイヤー2は自白すべきである。次に、プレイヤー1が自白した場合を考える。\n\n\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | c | }\n\\hline\n & 黙秘 & 自白 \\\\\n\\hline\n自白 & \\(?, 1\\) & \\(?, 2\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}\n\nこの場合も、2は1より大きいので、プレイヤー2は自白すべきである。したがって、相手が何を選んでも、各プレイヤーにとって最善の戦略は自白することである。\n\nただし、ここで用いた、刑務所で過ごす時間だけにもとづく選好順位は、プレイヤーがこの状況を解釈する一つの方法にすぎない。実際にあなたと友人が逮捕され、取調官から同じような取引を提示されたとしよう。あなたと友人が刑期だけを気にしているのでないかぎり、ここで得た結論が、その状況で一般に何をすべきかを示すわけではない。二人の友情が強く、刑期を短くすることよりも友情を大切にしているかもしれない。自白すれば友情が壊れる可能性があるため、相手が黙秘したなら自分も黙秘したいと考えることもあり、その場合は結果の順位が変わる。このような選好も完全に合理的である。しかし、そのゲームを解くための道具はまだ導入していない。別の選好をもつ場合については、第1.3課であらためて考察する。",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=12"
+      ],
+      "reason": "Reconstruct the remaining three payoff-matrix examples and their intervening prose from the source page instead of one malformed OCR table."
+    }
+  ],
+  "expected_includegraphics_delta": -11,
+  "replacements": [
+    {
+      "before": "\\noindent\\includegraphics[max width=.96\\linewidth,max totalheight=.66\\textheight,keepaspectratio]{build/game-theory-101-mathpix-exact-book/work/images/052546c9-aff1-4d5d-828d-066701d80edb-008_249_435_1985_847.jpg}",
+      "after": "\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & Quiet \\\\\n\\hline\nQuiet & \\(-1, ?\\) \\\\\nConfess & \\(0, ?\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}",
+      "expected_count": 1,
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=8"
+      ],
+      "reason": "Replace a verified payoff-matrix crop with an equivalent native TeX table; retain genuine game-tree and timeline figures."
+    },
+    {
+      "before": "\\noindent\\includegraphics[max width=.96\\linewidth,max totalheight=.66\\textheight,keepaspectratio]{build/game-theory-101-mathpix-exact-book/work/images/052546c9-aff1-4d5d-828d-066701d80edb-081_260_432_369_529.jpg}",
+      "after": "\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & Left \\\\\n\\hline\nUp & \\(1, 1\\) \\\\\nDown & \\(0, 3\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}",
+      "expected_count": 1,
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=81"
+      ],
+      "reason": "Replace a verified payoff-matrix crop with an equivalent native TeX table; retain genuine game-tree and timeline figures."
+    },
+    {
+      "before": "\\noindent\\includegraphics[max width=.96\\linewidth,max totalheight=.66\\textheight,keepaspectratio]{build/game-theory-101-mathpix-exact-book/work/images/052546c9-aff1-4d5d-828d-066701d80edb-099_260_437_1943_687.jpg}",
+      "after": "\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & Left \\\\\n\\hline\nUp & \\(?, 4\\) \\\\\nDown & \\(?, 0\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}",
+      "expected_count": 1,
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=99"
+      ],
+      "reason": "Replace a verified payoff-matrix crop with an equivalent native TeX table; retain genuine game-tree and timeline figures."
+    },
+    {
+      "before": "\\noindent\\includegraphics[max width=.96\\linewidth,max totalheight=.66\\textheight,keepaspectratio]{build/game-theory-101-mathpix-exact-book/work/images/052546c9-aff1-4d5d-828d-066701d80edb-110_263_441_1509_712.jpg}",
+      "after": "\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & Right \\\\\n\\hline\nUp & \\(?, -2\\) \\\\\nDown & \\(?, 0\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}",
+      "expected_count": 1,
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=110"
+      ],
+      "reason": "Replace a verified payoff-matrix crop with an equivalent native TeX table; retain genuine game-tree and timeline figures."
+    },
+    {
+      "before": "\\noindent\\includegraphics[max width=.96\\linewidth,max totalheight=.66\\textheight,keepaspectratio]{build/game-theory-101-mathpix-exact-book/work/images/052546c9-aff1-4d5d-828d-066701d80edb-119_257_432_1904_721.jpg}",
+      "after": "\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & Right \\\\\n\\hline\nUp & \\(?, 0\\) \\\\\nDown & \\(?, 1\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}",
+      "expected_count": 1,
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=119"
+      ],
+      "reason": "Replace a verified payoff-matrix crop with an equivalent native TeX table; retain genuine game-tree and timeline figures."
+    },
+    {
+      "before": "\\noindent\\includegraphics[max width=.96\\linewidth,max totalheight=.66\\textheight,keepaspectratio]{build/game-theory-101-mathpix-exact-book/work/images/052546c9-aff1-4d5d-828d-066701d80edb-140_261_435_1247_1412.jpg}",
+      "after": "\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & Left \\\\\n\\hline\nUp & \\(2, 2\\) \\\\\nDown & \\(2, 3\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}",
+      "expected_count": 1,
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=140"
+      ],
+      "reason": "Replace a verified payoff-matrix crop with an equivalent native TeX table; retain genuine game-tree and timeline figures."
+    },
+    {
+      "before": "\\noindent\\includegraphics[max width=.96\\linewidth,max totalheight=.66\\textheight,keepaspectratio]{build/game-theory-101-mathpix-exact-book/work/images/052546c9-aff1-4d5d-828d-066701d80edb-268_257_429_318_814.jpg}",
+      "after": "\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & Right \\\\\n\\hline\nUp & \\(?, 0\\) \\\\\nDown & \\(?, 1\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}",
+      "expected_count": 1,
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=268"
+      ],
+      "reason": "Replace a verified payoff-matrix crop with an equivalent native TeX table; retain genuine game-tree and timeline figures."
+    },
+    {
+      "before": "\\noindent\\includegraphics[max width=.96\\linewidth,max totalheight=.66\\textheight,keepaspectratio]{build/game-theory-101-mathpix-exact-book/work/images/052546c9-aff1-4d5d-828d-066701d80edb-272_252_432_518_850.jpg}",
+      "after": "\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & Right \\\\\n\\hline\nUp & \\(?, c\\) \\\\\nDown & \\(?, b\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}",
+      "expected_count": 1,
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=272"
+      ],
+      "reason": "Replace a verified payoff-matrix crop with an equivalent native TeX table; retain genuine game-tree and timeline figures."
+    },
+    {
+      "before": "\\noindent\\includegraphics[max width=.96\\linewidth,max totalheight=.66\\textheight,keepaspectratio]{build/game-theory-101-mathpix-exact-book/work/images/052546c9-aff1-4d5d-828d-066701d80edb-277_260_429_369_1287.jpg}",
+      "after": "\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & Right \\\\\n\\hline\nUp & \\(S, ?\\) \\\\\nDown & \\(P, ?\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}",
+      "expected_count": 1,
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=277"
+      ],
+      "reason": "Replace a verified payoff-matrix crop with an equivalent native TeX table; retain genuine game-tree and timeline figures."
+    },
+    {
+      "before": "\\noindent\\includegraphics[max width=.96\\linewidth,max totalheight=.66\\textheight,keepaspectratio]{build/game-theory-101-mathpix-exact-book/work/images/052546c9-aff1-4d5d-828d-066701d80edb-278_260_432_371_599.jpg}",
+      "after": "\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & Left \\\\\n\\hline\nUp & \\(?, r\\) \\\\\nDown & \\(?, s\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}",
+      "expected_count": 1,
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=278"
+      ],
+      "reason": "Replace a verified payoff-matrix crop with an equivalent native TeX table; retain genuine game-tree and timeline figures."
+    },
+    {
+      "before": "\\noindent\\includegraphics[max width=.96\\linewidth,max totalheight=.66\\textheight,keepaspectratio]{build/game-theory-101-mathpix-exact-book/work/images/052546c9-aff1-4d5d-828d-066701d80edb-278_263_434_839_890.jpg}",
+      "after": "\\begin{center}\n\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{ | r | c | }\n\\hline\n & Right \\\\\n\\hline\nUp & \\(?, t\\) \\\\\nDown & \\(?, p\\) \\\\\n\\hline\n\\end{tabular}\\end{adjustbox}\n\\end{center}",
+      "expected_count": 1,
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=278"
+      ],
+      "reason": "Replace a verified payoff-matrix crop with an equivalent native TeX table; retain genuine game-tree and timeline figures."
+    },
+    {
+      "before": "\\noindent\\includegraphics[max width=.96\\linewidth,max totalheight=.66\\textheight,keepaspectratio]{build/game-theory-101-mathpix-exact-book/work/images/052546c9-aff1-4d5d-828d-066701d80edb-216_251_43_369_698.jpg}",
+      "after": "\\includegraphics[height=23mm,keepaspectratio]{build/game-theory-101-mathpix-exact-book/work/images/052546c9-aff1-4d5d-828d-066701d80edb-216_251_43_369_698.jpg}",
+      "expected_count": 1,
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=216"
+      ],
+      "reason": "Fit the vertical SPE Proposal label to the five-row table instead of scaling it to page height."
+    },
+    {
+      "before": "\\noindent\\includegraphics[max width=.96\\linewidth,max totalheight=.66\\textheight,keepaspectratio]{build/game-theory-101-mathpix-exact-book/work/images/052546c9-aff1-4d5d-828d-066701d80edb-217_256_46_1744_695.jpg}",
+      "after": "\\includegraphics[height=23mm,keepaspectratio]{build/game-theory-101-mathpix-exact-book/work/images/052546c9-aff1-4d5d-828d-066701d80edb-217_256_46_1744_695.jpg}",
+      "expected_count": 1,
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=217"
+      ],
+      "reason": "Fit the vertical SPE Proposal label to the five-row table instead of scaling it to page height."
+    }
+  ],
+  "forbidden_substrings": [
+    "\\begin{Verbatim}[breaklines=true,breakanywhere=true,fontsize=\\scriptsize]",
+    "\\section*{Quiet}",
+    "\\section*{Hawk}",
+    "\\section*{T Fast}",
+    "\\section*{G Fast ?, -1}",
+    "\\section*{Right \\\\",
+    "Now for down: Down 2,? 1,?",
+    "for each of the outcomes: Down -1, ? 2,?",
+    "\\multirow{3}{*}{\\begin{adjustbox}{max width=\\linewidth}\\begin{tabular}{l}",
+    "\\multicolumn{3}{|c|}{To be clear, this preference ordering"
+  ],
+  "required_substrings": [
+    "\\mathrm{EU}_{\\mathrm{TF}} &= \\mathrm{EU}_{\\mathrm{TC}}",
+    "\\mathrm{EU}_1 &= \\frac35\\frac37(3)",
+    " & Hawk \\\\",
+    "The same is true for player 2. First, suppose player 1 kept quiet:",
+    "\\includegraphics[height=23mm,keepaspectratio]{build/game-theory-101-mathpix-exact-book/work/images/052546c9-aff1-4d5d-828d-066701d80edb-216_251_43_369_698.jpg}"
+  ]
+}

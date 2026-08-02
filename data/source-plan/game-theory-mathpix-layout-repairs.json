@@ -30,6 +30,12 @@
       "after": "Rubinstein, A., Z. Safra, and W. Thomson (1992), 「ナッシュ\\JpRuby{交渉}{こうしょう}\\JpRuby{解}{かい}の\\JpRuby{解釈}{かいしゃく}とその\\JpRuby{非}{ひ}",
       "expected_count": 1,
       "reason": "Restore the accepted Japanese bibliography title after converting the malformed protected superscript into prose."
+    },
+    {
+      "before": "\\[\\left\\{ \\begin{array} { l } x ( a ) = 1 \\text { if and only if } \\sum _ { i \\in N } a _ { i } \\geq \\gamma  \\tag{184.1}\\\\ m _ { j } ( a ) = x ( a ) \\left( \\gamma - \\sum _ { i \\in N \\backslash j \\} } a _ { i } \\right) + h _ { j } \\left( a _ { - j } \\right) \\text { for each } j \\in N . \\end{array} \\right.\\]",
+      "after": "\\[\\left\\{ \\begin{array} { l } x ( a ) = 1 \\text { if and only if } \\sum _ { i \\in N } a _ { i } \\geq \\gamma \\\\ m _ { j } ( a ) = x ( a ) \\left( \\gamma - \\sum _ { i \\in N \\backslash \\{ j \\} } a _ { i } \\right) + h _ { j } \\left( a _ { - j } \\right) \\text { for each } j \\in N . \\end{array} \\right. \\tag{184.1}\\]",
+      "expected_count": 1,
+      "reason": "Clean alternate PDF page 200 shows one two-line brace system with equation number 184.1 applying to the whole display and the second sum indexed by i in N excluding j."
     }
   ]
 }

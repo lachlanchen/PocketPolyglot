@@ -16,6 +16,8 @@ from build_pocket_tex_queue import (
     apply_pocket_footer_defaults,
     compile_tex,
     latex_escape_text,
+    normalize_bold_greek_commands,
+    relocate_nested_math_tags,
     wrap_wide_display_math,
     wrap_wide_inline_math,
     wrap_wide_math_environments,
@@ -166,7 +168,32 @@ TEXT_SUPERSCRIPT_ACCIDENTAL_RE = re.compile(
     r"\\textsuperscript\{(?P<symbols>(?:\\(?:flat|sharp|natural)){1,2})\}"
 )
 GREEK_MATH_COMMANDS = {
+    "Α": r"\mathrm{A}",
+    "Β": r"\mathrm{B}",
+    "Γ": r"\Gamma",
+    "Δ": r"\Delta",
+    "Ε": r"\mathrm{E}",
+    "Ζ": r"\mathrm{Z}",
+    "Η": r"\mathrm{H}",
+    "Θ": r"\Theta",
+    "Ι": r"\mathrm{I}",
+    "Κ": r"\mathrm{K}",
+    "Λ": r"\Lambda",
+    "Μ": r"\mathrm{M}",
+    "Ν": r"\mathrm{N}",
+    "Ξ": r"\Xi",
+    "Ο": r"\mathrm{O}",
+    "Π": r"\Pi",
+    "Ρ": r"\mathrm{P}",
+    "Σ": r"\Sigma",
+    "Τ": r"\mathrm{T}",
+    "Υ": r"\Upsilon",
+    "Φ": r"\Phi",
+    "Χ": r"\mathrm{X}",
+    "Ψ": r"\Psi",
+    "Ω": r"\Omega",
     "ε": r"\epsilon",
+    "ϵ": r"\epsilon",
     "ρ": r"\rho",
     "λ": r"\lambda",
     "χ": r"\chi",
@@ -176,9 +203,36 @@ GREEK_MATH_COMMANDS = {
     "β": r"\beta",
     "γ": r"\gamma",
     "δ": r"\delta",
+    "ζ": r"\zeta",
+    "η": r"\eta",
+    "ι": r"\iota",
+    "κ": r"\kappa",
+    "μ": r"\mu",
+    "ν": r"\nu",
+    "ξ": r"\xi",
+    "ο": r"\mathrm{o}",
+    "π": r"\pi",
+    "τ": r"\tau",
+    "υ": r"\upsilon",
+    "φ": r"\phi",
+    "ϕ": r"\varphi",
+    "ψ": r"\psi",
+    "ω": r"\omega",
+}
+CYRILLIC_RUN_RE = re.compile(r"[\u0400-\u052f]+")
+TEXT_SYMBOL_REPLACEMENTS = {
+    "◇": r"\(\diamond\)",
 }
 HEADING_COMMAND_RE = re.compile(
     r"\\(?P<command>part|chapter|section|subsection|subsubsection|paragraph)\*?\s*\{"
+)
+LABEL_COMMAND_RE = re.compile(r"\\label\{[^{}]*\}")
+SECONDARY_PAGE_CONTROL_RE = re.compile(
+    r"\\(?:clearpage|newpage|pagebreak|nopagebreak|frontmatter|mainmatter|backmatter)"
+    r"(?:\[[^\]]*\])?\s*"
+)
+JAPANESE_SCRIPT_RE = re.compile(
+    r"[\u3040-\u30ff\u31f0-\u31ff\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff々〆〇ヶヵ]"
 )
 SHARED_CONTROL_MARKERS = (
     r"\tableofcontents",
@@ -189,9 +243,151 @@ SHARED_CONTROL_MARKERS = (
 )
 TABLE_ENVIRONMENTS = {"table", "table*", "longtable", "tabular", "tabularx"}
 LIST_ENVIRONMENTS = {"itemize", "enumerate", "description"}
+MATH_CONTENT_ENVIRONMENTS = {
+    "align",
+    "align*",
+    "aligned",
+    "alignedat",
+    "alignedat*",
+    "alignat",
+    "alignat*",
+    "array",
+    "bmatrix",
+    "Bmatrix",
+    "cases",
+    "dcases",
+    "displaymath",
+    "equation",
+    "equation*",
+    "flalign",
+    "flalign*",
+    "gather",
+    "gather*",
+    "gathered",
+    "math",
+    "matrix",
+    "multline",
+    "multline*",
+    "pmatrix",
+    "smallmatrix",
+    "split",
+    "subarray",
+    "vmatrix",
+    "Vmatrix",
+}
+
+
+def tex_sha256(tex: str) -> str:
+    return hashlib.sha256(tex.encode("utf-8")).hexdigest()
+
+
+def apply_evidence_segment_repairs(
+    segments: list[dict[str, Any]], rules: list[dict[str, Any]]
+) -> list[dict[str, Any]]:
+    """Apply project-local structural repairs without invalidating model work.
+
+    Repairs are locked to a segment id plus source and accepted-output hashes.
+    This permits an OCR table or equation to be reconstructed after semantic
+    review while preventing a stale repair from touching newly generated text.
+    """
+
+    by_id = {row.get("segment_id"): row for row in segments}
+    changes: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for index, rule in enumerate(rules, start=1):
+        segment_id = rule.get("segment_id")
+        if not isinstance(segment_id, str) or not segment_id:
+            raise ValueError(f"segment repair {index} has no segment_id")
+        if segment_id in seen:
+            raise ValueError(f"duplicate segment repair for {segment_id}")
+        seen.add(segment_id)
+        row = by_id.get(segment_id)
+        if row is None:
+            raise ValueError(f"segment repair target does not exist: {segment_id}")
+
+        expected_source = rule.get("source_sha256")
+        if expected_source != row.get("source_sha256"):
+            raise ValueError(
+                f"segment repair source hash mismatch for {segment_id}: "
+                f"expected {expected_source}, found {row.get('source_sha256')}"
+            )
+        replacement_kind = rule.get("kind")
+        if replacement_kind is not None:
+            expected_kind = rule.get("expected_kind")
+            if expected_kind != row.get("kind"):
+                raise ValueError(
+                    f"segment repair kind mismatch for {segment_id}: "
+                    f"expected {expected_kind}, found {row.get('kind')}"
+                )
+            if replacement_kind not in {"text", "table"}:
+                raise ValueError(
+                    f"segment repair {segment_id} has unsupported kind "
+                    f"{replacement_kind!r}"
+                )
+            row["kind"] = replacement_kind
+        for language in ("en", "ja"):
+            current = row.get(f"{language}_tex")
+            replacement = rule.get(f"{language}_tex")
+            expected_hash = rule.get(f"expected_{language}_sha256")
+            if not isinstance(current, str) or not isinstance(replacement, str):
+                raise ValueError(
+                    f"segment repair {segment_id} needs {language}_tex strings"
+                )
+            if expected_hash != tex_sha256(current):
+                raise ValueError(
+                    f"segment repair accepted {language} hash mismatch for {segment_id}"
+                )
+            row[f"{language}_tex"] = replacement
+
+        if "source_tex" in rule:
+            source_replacement = rule.get("source_tex")
+            if not isinstance(source_replacement, str):
+                raise ValueError(
+                    f"segment repair {segment_id} source_tex must be a string"
+                )
+            row["source_tex"] = source_replacement
+        changes.append(
+            {
+                "segment_id": segment_id,
+                "kind": row.get("kind"),
+                "reason": str(rule.get("reason", "Evidence-backed structural repair.")),
+                "evidence": rule.get("evidence", []),
+            }
+        )
+    return changes
+
+
+def validate_layout_plan_assertions(tex: str, plan: dict[str, Any]) -> dict[str, int]:
+    """Reject known malformed constructs after evidence repairs are applied."""
+
+    forbidden = plan.get("forbidden_substrings", [])
+    required = plan.get("required_substrings", [])
+    if not isinstance(forbidden, list) or not isinstance(required, list):
+        raise ValueError("layout repair assertions must be arrays")
+    for marker in forbidden:
+        if not isinstance(marker, str) or not marker:
+            raise ValueError("forbidden layout markers must be non-empty strings")
+        if marker in tex:
+            raise ValueError(f"forbidden malformed layout remains: {marker!r}")
+    for marker in required:
+        if not isinstance(marker, str) or not marker:
+            raise ValueError("required layout markers must be non-empty strings")
+        if marker not in tex:
+            raise ValueError(f"required repaired layout is missing: {marker!r}")
+    return {
+        "forbidden_markers_absent": len(forbidden),
+        "required_markers_present": len(required),
+    }
 FUSION_PREAMBLE = r"""
 % BUILD_POCKET_POLISHED_FUSION_BEGIN
 \definecolor{JpSecondaryInk}{RGB}{62,68,76}
+\IfFontExistsTF{Noto Serif}{%
+  \newfontfamily\PocketUnicodeTextFont{Noto Serif}%
+}{%
+  \newcommand{\PocketUnicodeTextFont}{\rmfamily}%
+}
+\DeclareRobustCommand{\PocketUnicodeText}[1]{{\PocketUnicodeTextFont #1}}
+\pdfstringdefDisableCommands{\def\PocketUnicodeText#1{#1}}
 \IfFontExistsTF{Noto Serif CJK JP}{%
   \newCJKfontfamily\JpSecondaryFont{Noto Serif CJK JP}%
 }{%
@@ -486,6 +682,82 @@ def normalize_unwrapped_math_fragments(tex: str) -> tuple[str, int]:
     return "".join(parts), count
 
 
+def normalize_unicode_math_symbols(tex: str) -> tuple[str, int]:
+    """Replace raw Unicode Greek only inside existing TeX math spans."""
+
+    spans = [
+        (match.start(), match.end())
+        for pattern in (INLINE_MATH_RE, MATH_ENV_RE)
+        for match in pattern.finditer(tex)
+    ]
+    spans.sort()
+    merged: list[tuple[int, int]] = []
+    for start, end in spans:
+        if merged and start <= merged[-1][1]:
+            merged[-1] = (merged[-1][0], max(merged[-1][1], end))
+        else:
+            merged.append((start, end))
+
+    parts: list[str] = []
+    cursor = 0
+    changed = 0
+    for start, end in merged:
+        parts.append(tex[cursor:start])
+        math = tex[start:end]
+        for symbol, command in GREEK_MATH_COMMANDS.items():
+            count = math.count(symbol)
+            if count:
+                math = math.replace(symbol, command)
+                changed += count
+        parts.append(math)
+        cursor = end
+    parts.append(tex[cursor:])
+    return "".join(parts), changed
+
+
+def normalize_unicode_text_fallbacks(tex: str) -> tuple[str, int]:
+    """Use deterministic TeX/font fallbacks outside existing math spans."""
+
+    spans = [
+        (match.start(), match.end())
+        for pattern in (INLINE_MATH_RE, MATH_ENV_RE)
+        for match in pattern.finditer(tex)
+    ]
+    spans.sort()
+    merged: list[tuple[int, int]] = []
+    for start, end in spans:
+        if merged and start <= merged[-1][1]:
+            merged[-1] = (merged[-1][0], max(merged[-1][1], end))
+        else:
+            merged.append((start, end))
+
+    def replace_plain(plain: str) -> tuple[str, int]:
+        changed = 0
+        plain, count = CYRILLIC_RUN_RE.subn(
+            lambda match: rf"\PocketUnicodeText{{{match.group(0)}}}", plain
+        )
+        changed += count
+        for symbol, replacement in TEXT_SYMBOL_REPLACEMENTS.items():
+            count = plain.count(symbol)
+            if count:
+                plain = plain.replace(symbol, replacement)
+                changed += count
+        return plain, changed
+
+    parts: list[str] = []
+    cursor = 0
+    changed = 0
+    for start, end in merged:
+        plain, count = replace_plain(tex[cursor:start])
+        parts.extend((plain, tex[start:end]))
+        changed += count
+        cursor = end
+    plain, count = replace_plain(tex[cursor:])
+    parts.append(plain)
+    changed += count
+    return "".join(parts), changed
+
+
 def braced_argument(tex: str, opening_brace: int) -> tuple[str, int]:
     if opening_brace >= len(tex) or tex[opening_brace] != "{":
         raise ValueError("expected opening brace")
@@ -520,12 +792,168 @@ def unwrap_texorpdfstring(tex: str) -> str:
     return display.strip()
 
 
-def translated_heading_title(tex: str) -> str | None:
-    match = HEADING_COMMAND_RE.search(tex)
-    if not match:
-        return None
-    title, _ = braced_argument(tex, match.end() - 1)
-    return unwrap_texorpdfstring(title)
+def unwrap_heading_hypertargets(tex: str) -> str:
+    """Remove Pandoc navigation wrappers while preserving translated headings.
+
+    Pandoc commonly emits ``\\hypertarget{id}{% \\section{...}\\label{id}}``.
+    The English heading already owns the PDF destination, so repeating that
+    wrapper in the Japanese secondary stream creates duplicate anchors.  The
+    visible heading and any adjacent translated prose must nevertheless remain.
+    """
+
+    marker = r"\hypertarget"
+    cursor = 0
+    parts: list[str] = []
+    while True:
+        start = tex.find(marker, cursor)
+        if start < 0:
+            parts.append(tex[cursor:])
+            break
+        parts.append(tex[cursor:start])
+        first_open = start + len(marker)
+        while first_open < len(tex) and tex[first_open].isspace():
+            first_open += 1
+        try:
+            _, first_end = braced_argument(tex, first_open)
+            second_open = first_end
+            while second_open < len(tex) and tex[second_open].isspace():
+                second_open += 1
+            inner, second_end = braced_argument(tex, second_open)
+        except ValueError:
+            parts.append(marker)
+            cursor = start + len(marker)
+            continue
+        if HEADING_COMMAND_RE.search(inner):
+            inner = LABEL_COMMAND_RE.sub("", inner)
+            inner = re.sub(r"(?m)^\s*%\s*$\n?", "", inner)
+            parts.append(inner)
+        else:
+            parts.append(tex[start:second_end])
+        cursor = second_end
+    return "".join(parts)
+
+
+def split_translated_heading_blocks(tex: str) -> list[tuple[str, str]]:
+    """Split translated TeX into ordered ``heading`` and ``body`` blocks.
+
+    A generated segment can contain several headings followed by prose, lists,
+    captions, or exercises.  Returning only the first title silently discarded
+    that content.  This parser consumes balanced heading arguments and retains
+    every byte outside the heading commands for secondary rendering.
+    """
+
+    tex = unwrap_heading_hypertargets(tex)
+    blocks: list[tuple[str, str]] = []
+    cursor = 0
+    while True:
+        match = HEADING_COMMAND_RE.search(tex, cursor)
+        if match is None:
+            if tex[cursor:]:
+                blocks.append(("body", tex[cursor:]))
+            break
+        if match.start() > cursor:
+            blocks.append(("body", tex[cursor : match.start()]))
+        title, end = braced_argument(tex, match.end() - 1)
+        blocks.append(("heading", unwrap_texorpdfstring(title)))
+        cursor = end
+    return blocks
+
+
+def remove_shared_graphics(en_tex: str, secondary_tex: str) -> tuple[str, int]:
+    """Remove source graphics repeated verbatim in a secondary-language block."""
+
+    source_graphics = {
+        match.group("detokenized_path") or match.group("path")
+        for match in INCLUDEGRAPHICS_RE.finditer(en_tex)
+    }
+    removed_graphics = 0
+
+    def remove_shared_graphic(match: re.Match[str]) -> str:
+        nonlocal removed_graphics
+        path = match.group("detokenized_path") or match.group("path")
+        if path not in source_graphics:
+            return match.group(0)
+        removed_graphics += 1
+        return ""
+
+    return INCLUDEGRAPHICS_RE.sub(remove_shared_graphic, secondary_tex), removed_graphics
+
+
+def clean_heading_secondary_body(en_tex: str, body: str) -> tuple[str, int]:
+    """Remove only source-owned scaffolding from a translated heading body."""
+
+    body, removed_graphics = remove_shared_graphics(en_tex, body)
+    body = re.sub(r"(?m)^\s*\\graphicspath\{.*\}\s*$\n?", "", body)
+    body = re.sub(
+        r"\\captionsetup(?:\[[^\]]*\])?\{[^{}]*\}\s*",
+        "",
+        body,
+    )
+    body = LABEL_COMMAND_RE.sub("", body)
+    body = SECONDARY_PAGE_CONTROL_RE.sub("", body)
+    body = re.sub(
+        r"(?m)^\s*\\noindent\s*(?:\\par\s*)?(?:\\smallskip\s*)?$\n?",
+        "",
+        body,
+    )
+    # A translated caption belongs below the already-emitted source figure. If
+    # every shared graphic was removed, retain the caption text but not an empty
+    # duplicate float or its centering scaffold.
+    if removed_graphics and r"\includegraphics" not in body:
+        body = re.sub(r"\\begin\{figure\*?\}(?:\[[^\]]*\])?", "", body)
+        body = re.sub(r"\\end\{figure\*?\}", "", body)
+        body = re.sub(r"\\begin\{center\}|\\end\{center\}", "", body)
+    body = re.sub(r"(?m)^\s*%\s*$\n?", "", body)
+    return body.strip(), removed_graphics
+
+
+def japanese_surface_stream(tex: str) -> str:
+    """Return visible Japanese script while excluding generated ruby readings."""
+
+    previous = None
+    while tex != previous:
+        previous = tex
+        tex = re.sub(r"\\JpRuby\{([^{}]*)\}\{[^{}]*\}", r"\1", tex)
+    return "".join(JAPANESE_SCRIPT_RE.findall(tex))
+
+
+def validate_heading_secondary_coverage(
+    segments: list[dict[str, Any]], fused: str
+) -> dict[str, int]:
+    """Prove that Japanese outside translated heading commands reached output."""
+
+    rendered = japanese_surface_stream(fused)
+    cursor = 0
+    expected = 0
+    matched = 0
+    for segment in segments:
+        if segment.get("kind") == "protected":
+            continue
+        en_tex = segment.get("en_tex", "")
+        ja_tex = segment.get("ja_tex", "")
+        blocks = split_translated_heading_blocks(ja_tex)
+        if not any(kind == "heading" for kind, _ in blocks):
+            continue
+        for kind, value in blocks:
+            if kind != "body":
+                continue
+            secondary, _ = clean_heading_secondary_body(en_tex, value)
+            signature = japanese_surface_stream(secondary)
+            if not signature:
+                continue
+            expected += 1
+            found = rendered.find(signature, cursor)
+            if found < 0:
+                raise ValueError(
+                    "missing Japanese post-heading content after fusion: "
+                    f"{segment.get('segment_id', 'unknown')}"
+                )
+            matched += 1
+            cursor = found + len(signature)
+    return {
+        "expected_japanese_heading_bodies": expected,
+        "matched_japanese_heading_bodies": matched,
+    }
 
 
 def strip_shared_document_controls(en_tex: str, ja_tex: str) -> str:
@@ -541,25 +969,40 @@ def strip_shared_document_controls(en_tex: str, ja_tex: str) -> str:
 def split_shared_environment_scaffold(en_tex: str, ja_tex: str) -> tuple[str, str, str]:
     """Separate translated inner rows from identical environment closing rows."""
 
-    source_graphics = {
-        match.group("detokenized_path") or match.group("path")
-        for match in INCLUDEGRAPHICS_RE.finditer(en_tex)
-    }
-    if source_graphics:
-        ja_tex = INCLUDEGRAPHICS_RE.sub(
-            lambda match: ""
-            if (match.group("detokenized_path") or match.group("path"))
-            in source_graphics
-            else match.group(0),
-            ja_tex,
+    def remove_layout_environment_commands(line: str) -> str:
+        return ENVIRONMENT_COMMAND_RE.sub(
+            lambda match: (
+                match.group(0)
+                if match.group("environment") in MATH_CONTENT_ENVIRONMENTS
+                else ""
+            ),
+            line,
         )
+
+    def contains_math_content_environment(line: str) -> bool:
+        return any(
+            match.group("environment") in MATH_CONTENT_ENVIRONMENTS
+            for match in ENVIRONMENT_COMMAND_RE.finditer(line)
+        )
+
+    ja_tex, _ = remove_shared_graphics(en_tex, ja_tex)
     en_lines = en_tex.splitlines(keepends=True)
     ja_lines = ja_tex.splitlines(keepends=True)
-    while en_lines and ja_lines and en_lines[0] == ja_lines[0]:
+    while (
+        en_lines
+        and ja_lines
+        and en_lines[0] == ja_lines[0]
+        and not contains_math_content_environment(en_lines[0])
+    ):
         en_lines.pop(0)
         ja_lines.pop(0)
     shared_suffix: list[str] = []
-    while en_lines and ja_lines and en_lines[-1] == ja_lines[-1]:
+    while (
+        en_lines
+        and ja_lines
+        and en_lines[-1] == ja_lines[-1]
+        and not contains_math_content_environment(en_lines[-1])
+    ):
         shared_suffix.insert(0, en_lines.pop())
         ja_lines.pop()
     shared_source_lines = set(en_lines)
@@ -575,7 +1018,11 @@ def split_shared_environment_scaffold(en_tex: str, ja_tex: str) -> tuple[str, st
         # syntax that closes a translated command argument. Mathpix commonly
         # emits ``}\begin{itemize}`` on one line after a sidenote; dropping
         # the whole line leaves the translated ``\footnotetext{...`` open.
-        residual = ENVIRONMENT_COMMAND_RE.sub("", line)
+        # Mathematical environments are semantic content, not page scaffolds.
+        # Removing ``cases``/``matrix`` while retaining their ``&`` cells
+        # creates invalid TeX and silently drops structure from the Japanese
+        # stream. Preserve those commands byte-for-byte.
+        residual = remove_layout_environment_commands(line)
         if residual.strip():
             filtered_ja_lines.append(residual)
     ja_lines = filtered_ja_lines
@@ -721,6 +1168,32 @@ def update_open_environments(tex: str, stack: list[str]) -> None:
         stack.pop()
 
 
+def update_secondary_open_environments(tex: str, stack: list[str]) -> None:
+    """Track wrappers emitted into the secondary stream.
+
+    Source-only floats can end inside a translated caption even though their
+    opening commands were deliberately not copied into the secondary stream.
+    Ignore those unmatched closers, but keep strict nesting for wrappers that
+    the secondary stream actually opened.
+    """
+
+    for match in ENVIRONMENT_COMMAND_RE.finditer(tex):
+        environment = match.group("environment")
+        if match.group("action") == "begin":
+            stack.append(environment)
+            continue
+        if not stack:
+            continue
+        if stack[-1] != environment:
+            if environment not in stack:
+                continue
+            raise ValueError(
+                "malformed secondary environment: closing "
+                f"{environment} while {stack[-1]} is open"
+            )
+        stack.pop()
+
+
 def has_balanced_complete_environment(tex: str, environments: set[str]) -> bool:
     """Return true when ``tex`` contains and balances a target environment."""
 
@@ -734,18 +1207,46 @@ def has_balanced_complete_environment(tex: str, environments: set[str]) -> bool:
     return not stack
 
 
+def tables_are_semantically_identical(en_tex: str, ja_tex: str) -> bool:
+    """Return true when both streams carry the same source-owned table.
+
+    Segment boundaries can leave ``center`` in the source stream while the
+    secondary stream contains only the protected ``tabular`` object.  Those
+    wrappers do not make a second table useful.  Compare after removing only
+    presentation wrappers; translated labels or cells still make the tables
+    distinct and therefore render in both languages.
+    """
+
+    if not has_balanced_complete_environment(en_tex, TABLE_ENVIRONMENTS):
+        return False
+    if not has_balanced_complete_environment(ja_tex, TABLE_ENVIRONMENTS):
+        return False
+
+    def canonical(tex: str) -> str:
+        tex = re.sub(r"\\begin\{center\}|\\end\{center\}", "", tex)
+        return re.sub(r"\s+", "", tex)
+
+    return canonical(en_tex) == canonical(ja_tex)
+
+
 def fuse_english_main_japanese_secondary(
     segments: list[dict[str, Any]],
     *,
     furigana_overrides: dict[str, str] | None = None,
+    fusion_metrics: dict[str, int] | None = None,
 ) -> tuple[str, FuriganaStats]:
     parts: list[str] = []
     furigana = FuriganaStats()
     pending_en: list[str] = []
     pending_ja: list[str] = []
     open_environments: list[str] = []
+    secondary_open_environments: list[str] = []
     pending_crosses_environment = False
     furigana_overrides = furigana_overrides or {}
+    heading_segment_count = 0
+    translated_heading_count = 0
+    rendered_heading_body_count = 0
+    stripped_heading_graphics = 0
 
     def apply_furigana_overrides(tex: str) -> str:
         for surface, reading in furigana_overrides.items():
@@ -756,8 +1257,39 @@ def fuse_english_main_japanese_secondary(
             tex = tex.replace(surface, rf"\JpRuby{{{surface}}}{{{reading}}}")
         return tex
 
+    def append_heading_secondary_body(en_tex: str, body: str) -> None:
+        nonlocal rendered_heading_body_count, stripped_heading_graphics
+        raw_has_japanese = bool(JAPANESE_SCRIPT_RE.search(body))
+        secondary, removed_graphics = clean_heading_secondary_body(en_tex, body)
+        stripped_heading_graphics += removed_graphics
+        if raw_has_japanese and not JAPANESE_SCRIPT_RE.search(secondary):
+            raise ValueError(
+                "heading-adjacent Japanese content was removed with source scaffolding"
+            )
+        if not secondary:
+            return
+        secondary = restore_secondary_list_scaffold(en_tex, secondary)
+        secondary = demote_secondary_captions(secondary)
+        secondary = apply_furigana_overrides(secondary)
+        secondary, current = annotate_japanese_tex(secondary)
+        furigana.merge(current)
+        if has_balanced_complete_environment(secondary, TABLE_ENVIRONMENTS):
+            parts.append(
+                "\n\\begingroup\n"
+                "\\JpSecondaryFont\\fontsize{8.6pt}{14.2pt}\\selectfont"
+                "\\color{JpSecondaryInk}\n"
+                f"{secondary}\n"
+                "\\endgroup\n"
+            )
+        else:
+            parts.append(
+                f"\n\\begin{{JpSecondary}}\n{secondary}\n\\end{{JpSecondary}}\n"
+            )
+        rendered_heading_body_count += 1
+
     def emit_pending() -> None:
         nonlocal pending_crosses_environment
+        nonlocal heading_segment_count, translated_heading_count
         if not pending_en:
             return
         en_tex = "".join(pending_en)
@@ -769,13 +1301,19 @@ def fuse_english_main_japanese_secondary(
         if en_tex.strip() == ja_tex.strip() or not ja_tex.strip():
             parts.append(en_tex)
             return
-        heading = translated_heading_title(ja_tex)
-        if heading is not None:
+        heading_blocks = split_translated_heading_blocks(ja_tex)
+        if any(kind == "heading" for kind, _ in heading_blocks):
             parts.append(en_tex)
-            heading = apply_furigana_overrides(heading)
-            annotated, current = annotate_japanese_tex(heading)
-            furigana.merge(current)
-            parts.append(f"\n\\JpSecondaryHeading{{{annotated}}}\n")
+            heading_segment_count += 1
+            for kind, value in heading_blocks:
+                if kind == "body":
+                    append_heading_secondary_body(en_tex, value)
+                    continue
+                heading = apply_furigana_overrides(value)
+                annotated, current = annotate_japanese_tex(heading)
+                furigana.merge(current)
+                parts.append(f"\n\\JpSecondaryHeading{{{annotated}}}\n")
+                translated_heading_count += 1
             return
         # A paragraph-style secondary environment cannot begin between table
         # rows: its leading \par/\nopagebreak expands to \noalign and XeTeX
@@ -791,6 +1329,9 @@ def fuse_english_main_japanese_secondary(
             for environment in TABLE_ENVIRONMENTS
         )
         if has_complete_en_table and has_complete_ja_table:
+            if tables_are_semantically_identical(en_tex, ja_tex):
+                parts.append(en_tex)
+                return
             en_body, trailing_scaffold, caption_secondary = (
                 split_shared_environment_scaffold(en_tex, ja_tex)
             )
@@ -811,7 +1352,8 @@ def fuse_english_main_japanese_secondary(
                 parts.append(trailing_scaffold)
                 return
             parts.append(en_tex)
-            secondary = apply_furigana_overrides(ja_tex.strip())
+            secondary, _ = remove_shared_graphics(en_tex, ja_tex)
+            secondary = apply_furigana_overrides(secondary.strip())
             secondary, current = annotate_japanese_tex(secondary)
             furigana.merge(current)
             parts.append(
@@ -833,7 +1375,8 @@ def fuse_english_main_japanese_secondary(
             and has_balanced_complete_environment(ja_tex, LIST_ENVIRONMENTS)
         ):
             parts.append(en_tex)
-            secondary = demote_secondary_captions(ja_tex.strip())
+            secondary, _ = remove_shared_graphics(en_tex, ja_tex)
+            secondary = demote_secondary_captions(secondary.strip())
             secondary = apply_furigana_overrides(secondary)
             secondary, current = annotate_japanese_tex(secondary)
             furigana.merge(current)
@@ -891,9 +1434,30 @@ def fuse_english_main_japanese_secondary(
                 # Figures and other protected objects remain source-only. Table
                 # scaffolds must exist in both streams so translated alignment
                 # rows are never emitted outside a tabular/longtable context.
-                pending_ja.append(source_tex if table_scaffold else "")
+                # Also copy a protected closing wrapper when its opening was
+                # emitted by a translated segment.  Without this, a common
+                # ``text: \\begin{center}`` + protected table + protected
+                # ``\\end{center}`` split leaves the Japanese table unclosed.
+                closes_secondary_wrapper = any(
+                    match.group("action") == "end"
+                    and match.group("environment") in secondary_open_environments
+                    for match in environment_commands
+                )
+                secondary_source = (
+                    source_tex if table_scaffold or closes_secondary_wrapper else ""
+                )
+                pending_ja.append(secondary_source)
+                if secondary_source:
+                    update_secondary_open_environments(
+                        secondary_source, secondary_open_environments
+                    )
                 update_open_environments(source_tex, open_environments)
                 if not open_environments:
+                    if secondary_open_environments:
+                        raise ValueError(
+                            "unclosed secondary environments before fusion: "
+                            + ", ".join(secondary_open_environments)
+                        )
                     emit_pending()
             else:
                 emit_pending()
@@ -901,17 +1465,32 @@ def fuse_english_main_japanese_secondary(
             continue
         en_tex = segment["en_tex"]
         ja_tex = segment["ja_tex"]
-        if ENVIRONMENT_COMMAND_RE.search(en_tex) or r"\includegraphics" in en_tex:
+        has_layout_environment = any(
+            match.group("environment") not in MATH_CONTENT_ENVIRONMENTS
+            for match in ENVIRONMENT_COMMAND_RE.finditer(en_tex)
+        )
+        if has_layout_environment or r"\includegraphics" in en_tex:
             pending_crosses_environment = True
         pending_en.append(en_tex)
         pending_ja.append(ja_tex)
         update_open_environments(en_tex, open_environments)
+        update_secondary_open_environments(ja_tex, secondary_open_environments)
         if not open_environments:
+            if secondary_open_environments:
+                raise ValueError(
+                    "unclosed secondary environments before fusion: "
+                    + ", ".join(secondary_open_environments)
+                )
             emit_pending()
     if open_environments:
         raise ValueError(
             "unclosed source environments at fusion end: "
             + ", ".join(open_environments)
+        )
+    if secondary_open_environments:
+        raise ValueError(
+            "unclosed secondary environments at fusion end: "
+            + ", ".join(secondary_open_environments)
         )
     emit_pending()
     if furigana.unknown_tokens:
@@ -923,6 +1502,15 @@ def fuse_english_main_japanese_secondary(
     # its own line when the Japanese secondary block is inserted. Normalize
     # once more against the final structure so XeLaTeX never sees a bare
     # ``\\[0pt]`` command.
+    if fusion_metrics is not None:
+        fusion_metrics.update(
+            {
+                "heading_segments": heading_segment_count,
+                "translated_headings": translated_heading_count,
+                "rendered_heading_bodies": rendered_heading_body_count,
+                "stripped_duplicate_heading_graphics": stripped_heading_graphics,
+            }
+        )
     return restore_split_optional_linebreaks(fused), furigana
 
 
@@ -1311,6 +1899,23 @@ def pocket_layout(tex: str) -> str:
         )
     if not count:
         raise ValueError("cannot derive pocket layout: source geometry was not recognized")
+    # Exact-book wrappers scope body typography with a document-spanning
+    # \begingroup immediately after \mainmatter. Nothing follows the body, and
+    # carrying that group through thousands of translated blocks can leave
+    # XeTeX reporting it at \end{document}. Remove only this exact outer pair;
+    # all local table/ruby groups remain untouched.
+    text = re.sub(
+        r"(\\mainmatter\s*)\\begingroup\s*",
+        r"\1",
+        text,
+        count=1,
+    )
+    text = re.sub(
+        r"\\endgroup\s*(\\end\{document\}\s*)$",
+        r"\1",
+        text,
+        count=1,
+    )
     text = SELF_LABELED_HREF_RE.sub(
         lambda match: rf"\url{{{match.group('target')}}}"
         if match.group("target") == match.group("label")
@@ -1404,6 +2009,7 @@ def compile_variant(
     report["searchable_text_present"] = report.get("text_chars", 0) >= 1000
     report["layout_clean"] = (
         not report.get("latex_error_markers")
+        and not report.get("missing_character_markers")
         and report.get("worst_overfull_pt", 0) <= 2.0
         and report["objects_complete"]
         and report["searchable_text_present"]
@@ -1495,6 +2101,21 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
                 }
             )
         merged_rows.append(row)
+    layout_replacement_plan = manifest.get("layout_replacement_plan")
+    layout_plan: dict[str, Any] = {}
+    if layout_replacement_plan:
+        plan_path = ROOT / str(layout_replacement_plan)
+        loaded_plan = read_json(plan_path)
+        if not isinstance(loaded_plan, dict):
+            raise ValueError(f"layout replacement plan is not an object: {plan_path}")
+        layout_plan = loaded_plan
+    segment_repair_rules = layout_plan.get("segment_repairs", [])
+    if not isinstance(segment_repair_rules, list):
+        raise ValueError("layout replacement plan segment_repairs must be an array")
+    segment_repair_changes = apply_evidence_segment_repairs(
+        merged_rows, segment_repair_rules
+    )
+
     write_json(
         book_root / "data/book.json",
         {
@@ -1508,26 +2129,44 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
         },
     )
 
+    fusion_metrics: dict[str, int] = {}
     fused, furigana = fuse_english_main_japanese_secondary(
         merged_rows,
         furigana_overrides=manifest.get("furigana_overrides", {}),
+        fusion_metrics=fusion_metrics,
     )
-    layout_replacement_plan = manifest.get("layout_replacement_plan")
+    heading_coverage = validate_heading_secondary_coverage(merged_rows, fused)
+    fused, unicode_math_symbol_count = normalize_unicode_math_symbols(fused)
+    fused = normalize_bold_greek_commands(fused)
+    fused, unicode_text_fallback_count = normalize_unicode_text_fallbacks(fused)
     layout_replacement_count = 0
-    if layout_replacement_plan:
-        plan_path = ROOT / str(layout_replacement_plan)
-        plan = read_json(plan_path)
-        rules = plan.get("replacements") if isinstance(plan, dict) else None
-        if not isinstance(rules, list):
-            raise ValueError(f"layout replacement plan has no replacements array: {plan_path}")
-        fused, layout_changes = apply_exact_text_replacements(fused, rules)
+    layout_rules = layout_plan.get("replacements", [])
+    if not isinstance(layout_rules, list):
+        raise ValueError("layout replacement plan replacements must be an array")
+    if layout_rules:
+        fused, layout_changes = apply_exact_text_replacements(fused, layout_rules)
         layout_replacement_count = len(layout_changes)
+    expected_graphics_delta = layout_plan.get("expected_includegraphics_delta", 0)
+    if not isinstance(expected_graphics_delta, int):
+        raise ValueError("expected_includegraphics_delta must be an integer")
+    expected_content_graphics = (
+        source_inventory["includegraphics"] + expected_graphics_delta
+    )
+    actual_content_graphics = len(list(INCLUDEGRAPHICS_RE.finditer(fused)))
+    if actual_content_graphics != expected_content_graphics:
+        raise ValueError(
+            f"{book_id} repaired figure inventory mismatch: expected "
+            f"{expected_content_graphics}, found {actual_content_graphics}"
+        )
+    layout_assertions = validate_layout_plan_assertions(fused, layout_plan)
     centered_figures: dict[str, int] = {"en-main-ja": 0}
     normalized_full_bleed: dict[str, int] = {"en-main-ja": 0}
     fitted_short_tables: dict[str, int] = {"en-main-ja": 0}
     wrapped_long_tables: dict[str, int] = {"en-main-ja": 0}
     fitted_inline_math: dict[str, int] = {"en-main-ja": 0}
+    relocated_nested_math_tags = 0
     if validation_profile == "technical_exact":
+        fused, relocated_nested_math_tags = relocate_nested_math_tags(fused)
         fused, centered_figures["en-main-ja"] = center_standalone_figures(fused)
         fused, normalized_full_bleed["en-main-ja"] = normalize_full_bleed_images(fused)
         fused, fitted_short_tables["en-main-ja"] = fit_short_simple_longtables(fused)
@@ -1557,7 +2196,7 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
             "pocket-large-font",
             pocket_layout(fused),
             cover,
-            expected_graphics=source_inventory["includegraphics"],
+            expected_graphics=expected_content_graphics,
             title=manifest["title"],
             author=manifest.get("author", ""),
         )
@@ -1582,6 +2221,8 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
             "unknown_count": len(furigana.unknown_tokens),
             "method": "fugashi-unidic-lite-local-word-level",
         },
+        "fusion_metrics": fusion_metrics,
+        "heading_secondary_coverage": heading_coverage,
         "reports": reports,
         "layout_issues": layout_issues,
         "source_inventory_verified": True,
@@ -1592,8 +2233,15 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
         "fitted_short_simple_longtables": fitted_short_tables,
         "wrapped_long_simple_longtables": wrapped_long_tables,
         "fitted_oversized_inline_math": fitted_inline_math,
+        "relocated_nested_math_tags": relocated_nested_math_tags,
         "normalized_unwrapped_math_fragments": normalized_math_fragments,
+        "normalized_unicode_math_symbols": unicode_math_symbol_count,
+        "normalized_unicode_text_fallbacks": unicode_text_fallback_count,
+        "evidence_backed_segment_repairs": len(segment_repair_changes),
         "evidence_backed_layout_replacements": layout_replacement_count,
+        "expected_includegraphics_delta": expected_graphics_delta,
+        "repaired_content_includegraphics": actual_content_graphics,
+        "layout_plan_assertions": layout_assertions,
         "assembled_at": datetime.now(timezone.utc).isoformat(),
     }
     write_json(book_root / "status.json", status)

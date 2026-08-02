@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import re
 import tempfile
 import unittest
 from pathlib import Path
@@ -20,27 +21,38 @@ from codex_pocket_polish_worker import (
     save_cached_segment,
 )
 from assemble_build_pocket_polished import (
+    apply_evidence_segment_repairs,
+    clean_heading_secondary_body,
+    compile_variant,
     demote_secondary_captions,
     fit_short_simple_longtables,
     fit_short_complex_longtables,
     fuse_english_main_japanese_secondary,
     normalize_unwrapped_math_fragments,
+    normalize_unicode_math_symbols,
+    normalize_unicode_text_fallbacks,
     pocket_layout,
     remove_legacy_full_page_cover,
     restore_secondary_list_scaffold,
     wrap_long_complex_longtables,
     wrap_long_simple_longtables,
     restore_split_optional_linebreaks,
+    split_translated_heading_blocks,
     split_shared_environment_scaffold,
+    tables_are_semantically_identical,
+    validate_heading_secondary_coverage,
+    validate_layout_plan_assertions,
 )
 from build_pocket_tex_queue import (
     apply_task_markdown_fixes,
     fit_chapter_opening_figures,
     inject_cover_page,
     merge_split_url_tildes,
+    normalize_bold_greek_commands,
     normalize_index_verbatim_blocks,
     normalize_marker_merged_markdown,
     rebalance_longtable_column_fractions,
+    relocate_nested_math_tags,
     repair_split_uppercase_table_words,
     repair_undefined_word_command,
     tex_figure_inventory,
@@ -56,11 +68,13 @@ from pocket_polished_common import (
     apply_exact_text_replacements,
     chunk_subset,
     command_signature,
+    inventory,
     machine_review_observations,
     normalize_page_boundary_artifacts,
     normalize_split_prose_paragraphs,
     numeric_signature,
     numeric_signature_matches,
+    protected_segment_structure_issues,
     sha256_text,
     split_tex_segments,
     structural_command_signature,
@@ -85,6 +99,10 @@ def source_segment(segment_id: str, source_tex: str) -> dict:
 
 
 class PocketPolishPipelineTest(unittest.TestCase):
+    @staticmethod
+    def without_furigana(tex: str) -> str:
+        return re.sub(r"\\JpRuby\{([^{}]*)\}\{[^{}]*\}", r"\1", tex)
+
     def test_source_environment_validation_rejects_crossed_closures(self):
         with self.assertRaisesRegex(
             ValueError,
@@ -102,6 +120,31 @@ class PocketPolishPipelineTest(unittest.TestCase):
             r"\\end{adjustbox}\\end{center}"
         )
 
+    def test_inventory_ignores_commented_includegraphics_example(self):
+        tex = (
+            "% example: \\includegraphics[width=1cm]{}\n"
+            "\\includegraphics{real-figure.png}\n"
+            "Escaped percent: \\% remains text.\n"
+        )
+        result = inventory(tex)
+        self.assertEqual(result["includegraphics"], 1)
+        self.assertEqual(result["graphics_paths"], ["real-figure.png"])
+
+    def test_pocket_layout_removes_only_document_spanning_body_group(self):
+        source = (
+            r"\documentclass{book}"
+            r"\usepackage[paperwidth=148mm,paperheight=210mm,inner=14mm,"
+            r"outer=12mm,top=14mm,bottom=16mm]{geometry}"
+            r"\begin{document}\mainmatter\begingroup "
+            r"Body \begingroup local\endgroup "
+            r"\endgroup\end{document}"
+        )
+        rendered = pocket_layout(source)
+        self.assertNotIn(r"\mainmatter\begingroup", rendered)
+        self.assertIn(r"\begingroup local\endgroup", rendered)
+        self.assertEqual(rendered.count(r"\begingroup"), 1)
+        self.assertEqual(rendered.count(r"\endgroup"), 1)
+
     def test_center_wrapped_nested_table_is_one_atomic_segment(self):
         from pocket_polished_common import split_tex_segments
 
@@ -111,6 +154,64 @@ class PocketPolishPipelineTest(unittest.TestCase):
         self.assertEqual(len(body), 1)
         self.assertIn(r"\begin{center}", body[0]["source_tex"])
         self.assertIn(r"\end{center}", body[0]["source_tex"])
+
+    def test_caption_line_spacing_does_not_open_display_math(self):
+        tex = (
+            r"\documentclass{book}\begin{document}"
+            "\n\\begin{figure}[h]\n\\begin{center}\n"
+            r"\includegraphics{diagram.png}"
+            "\n\\caption{Figure 1.1\\\\[0pt]\nA complete caption.}\n"
+            "\\end{center}\n\\end{figure}\n\n"
+            "Following prose must remain translatable.\n\n"
+            "\\[x+y=z\\]\n"
+            r"\end{document}"
+        )
+        segments = split_tex_segments(
+            tex, "caption-spacing", validation_profile="technical_exact"
+        )
+        caption_segments = [
+            row for row in segments if "A complete caption." in row["source_tex"]
+        ]
+        following_segments = [
+            row
+            for row in segments
+            if "Following prose must remain translatable." in row["source_tex"]
+        ]
+        display_segments = [
+            row for row in segments if row["source_tex"].strip() == r"\[x+y=z\]"
+        ]
+        self.assertEqual(len(caption_segments), 1)
+        self.assertEqual(caption_segments[0]["kind"], "text")
+        self.assertEqual(len(following_segments), 1)
+        self.assertEqual(following_segments[0]["kind"], "text")
+        self.assertEqual(len(display_segments), 1)
+        self.assertEqual(display_segments[0]["kind"], "protected")
+
+    def test_orphan_line_spacing_display_is_a_fatal_structure_issue(self):
+        issues = protected_segment_structure_issues(
+            [
+                {
+                    "segment_id": "broken-caption",
+                    "kind": "protected",
+                    "source_tex": r"\[0pt] Caption prose hidden from translation.\]",
+                }
+            ]
+        )
+        self.assertEqual(len(issues), 1)
+        self.assertEqual(issues[0]["severity"], "error")
+        self.assertEqual(issues[0]["code"], "orphan-line-spacing-display")
+
+    def test_line_spacing_inside_text_is_not_a_structure_issue(self):
+        issues = protected_segment_structure_issues(
+            [
+                {
+                    "segment_id": "valid-caption",
+                    "kind": "text",
+                    "source_tex": r"\caption{Figure 1\\[0pt] A complete caption.}",
+                }
+            ]
+        )
+        self.assertEqual(issues, [])
 
     def test_notation_only_source_excludes_prose_labels(self):
         from pocket_polished_common import source_is_notation_only
@@ -340,6 +441,330 @@ class PocketPolishPipelineTest(unittest.TestCase):
         self.assertIn(r"\JpRuby{上田睆亮}{うえだよしすけ}", fused)
         self.assertNotIn("睆亮", stats.unknown_tokens)
 
+    def test_heading_segment_keeps_translated_opening_paragraph(self):
+        rows = [
+            {
+                "kind": "protected",
+                "source_tex": "\\documentclass{book}\n\\begin{document}\n",
+            },
+            {
+                "kind": "text",
+                "en_tex": "\\section*{Introduction}\nThis paragraph must remain.",
+                "ja_tex": "\\section*{序論}\nこの導入段落は必ず残る。",
+            },
+            {"kind": "protected", "source_tex": "\n\\end{document}\n"},
+        ]
+        metrics: dict[str, int] = {}
+        fused, _ = fuse_english_main_japanese_secondary(
+            rows, fusion_metrics=metrics
+        )
+        self.assertIn(r"\JpSecondaryHeading", fused)
+        visible = self.without_furigana(fused)
+        self.assertIn("この", visible)
+        self.assertIn("必ず", visible)
+        self.assertEqual(metrics["heading_segments"], 1)
+        self.assertEqual(metrics["translated_headings"], 1)
+        self.assertEqual(metrics["rendered_heading_bodies"], 1)
+        self.assertEqual(
+            validate_heading_secondary_coverage(rows, fused),
+            {
+                "expected_japanese_heading_bodies": 1,
+                "matched_japanese_heading_bodies": 1,
+            },
+        )
+
+    def test_heading_coverage_rejects_dropped_japanese_intro(self):
+        rows = [
+            {
+                "kind": "text",
+                "segment_id": "book-heading-intro",
+                "en_tex": "\\section*{Introduction}\nOpening text.",
+                "ja_tex": "\\section*{序論}\n導入文である。",
+            }
+        ]
+        with self.assertRaisesRegex(
+            ValueError, "book-heading-intro"
+        ):
+            validate_heading_secondary_coverage(rows, "\\section*{Introduction}")
+
+    def test_multiple_translated_headings_and_body_are_preserved_in_order(self):
+        blocks = split_translated_heading_blocks(
+            "\\section*{第一部}\n"
+            "\\subsection*{第一章}\n"
+            "章の導入。\n"
+            "\\begin{enumerate}\\item 一つ目。\\end{enumerate}"
+        )
+        self.assertEqual([kind for kind, _ in blocks], ["heading", "body", "heading", "body"])
+        rows = [
+            {
+                "kind": "protected",
+                "source_tex": "\\documentclass{book}\n\\begin{document}\n",
+            },
+            {
+                "kind": "text",
+                "en_tex": "\\section*{Part I}\n\\subsection*{Chapter 1}\nOpening.\n",
+                "ja_tex": (
+                    "\\section*{第一部}\n\\subsection*{第一章}\n"
+                    "章の導入。\n\\begin{enumerate}\\item 一つ目。\\end{enumerate}"
+                ),
+            },
+            {"kind": "protected", "source_tex": "\n\\end{document}\n"},
+        ]
+        fused, _ = fuse_english_main_japanese_secondary(rows)
+        visible = self.without_furigana(fused)
+        self.assertEqual(fused.count(r"\JpSecondaryHeading"), 3)
+        self.assertLess(visible.index("第一部"), visible.index("第一章"))
+        self.assertLess(visible.index("第一章"), visible.index("導入"))
+        self.assertIn(r"\begin{enumerate}", fused)
+
+    def test_pandoc_heading_wrapper_keeps_body_without_duplicate_anchor(self):
+        rows = [
+            {
+                "kind": "protected",
+                "source_tex": "\\documentclass{book}\n\\begin{document}\n",
+            },
+            {
+                "kind": "text",
+                "en_tex": (
+                    "\\hypertarget{intro}{%\n\\section*{Introduction}\\label{intro}}\n"
+                    "Opening text."
+                ),
+                "ja_tex": (
+                    "\\hypertarget{intro}{%\n\\section*{序論}\\label{intro}}\n"
+                    "導入文である。"
+                ),
+            },
+            {"kind": "protected", "source_tex": "\n\\end{document}\n"},
+        ]
+        fused, _ = fuse_english_main_japanese_secondary(rows)
+        self.assertEqual(fused.count(r"\hypertarget{intro}"), 1)
+        self.assertEqual(fused.count(r"\label{intro}"), 1)
+        self.assertIn("導入文", self.without_furigana(fused))
+
+    def test_heading_body_removes_shared_figure_but_keeps_japanese_caption(self):
+        image = r"build/book/work/images/page-010.jpg"
+        en_tex = (
+            r"\section*{A Figure}"
+            "\n\\begin{figure}[h]\\begin{center}\n"
+            rf"\includegraphics{{{image}}}\n"
+            r"\caption{A useful diagram.}\end{center}\end{figure}"
+        )
+        ja_body = (
+            "\\begin{figure}[h]\\begin{center}\n"
+            rf"\includegraphics{{{image}}}\n"
+            r"\caption{重要な図。}\end{center}\end{figure}"
+        )
+        cleaned, removed = clean_heading_secondary_body(en_tex, ja_body)
+        self.assertEqual(removed, 1)
+        self.assertNotIn(r"\includegraphics", cleaned)
+        self.assertNotIn(r"\begin{figure}", cleaned)
+        self.assertIn("重要な図", cleaned)
+
+    def test_complete_parallel_list_emits_shared_figure_only_once(self):
+        image = r"build/book/work/images/list-note.jpg"
+        en_list = (
+            r"\begin{itemize}"
+            r"\item First item.\\"
+            rf"\includegraphics{{{image}}}"
+            r"\end{itemize}"
+        )
+        ja_list = (
+            r"\begin{itemize}"
+            r"\item 第一項。\\"
+            rf"\includegraphics{{{image}}}"
+            r"\end{itemize}"
+        )
+        rows = [
+            {
+                "kind": "protected",
+                "source_tex": "\\documentclass{book}\n\\begin{document}\n",
+            },
+            {"kind": "text", "en_tex": en_list, "ja_tex": ja_list},
+            {"kind": "protected", "source_tex": "\n\\end{document}\n"},
+        ]
+        fused, _ = fuse_english_main_japanese_secondary(rows)
+        self.assertEqual(fused.count(image), 1)
+        self.assertIn("第一項", self.without_furigana(fused))
+
+    def test_fusion_preserves_inline_cases_in_japanese_secondary(self):
+        cases = (
+            r"\(f(i)=\begin{cases}1 & \text{if } i\in S \\ "
+            r"0 & \text{otherwise}\end{cases}\)"
+        )
+        rows = [
+            {
+                "kind": "protected",
+                "source_tex": "\\documentclass{book}\n\\begin{document}\n",
+            },
+            {
+                "kind": "text",
+                "en_tex": (
+                    "\\begin{center}\nThe characteristic function is\n"
+                    + cases
+                    + "\n\\end{center}\n"
+                ),
+                "ja_tex": (
+                    "\\begin{center}\n特性関数は次のとおりである。\n"
+                    + cases
+                    + "\n\\end{center}\n"
+                ),
+            },
+            {"kind": "protected", "source_tex": "\\end{document}\n"},
+        ]
+        fused, _ = fuse_english_main_japanese_secondary(rows)
+        self.assertEqual(fused.count(r"\begin{cases}"), 2)
+        self.assertEqual(fused.count(r"\end{cases}"), 2)
+        self.assertIn("特性", self.without_furigana(fused))
+        validate_tex_environment_balance(fused)
+
+    def test_translated_table_wrapper_gets_protected_closing_scaffold(self):
+        rows = [
+            {
+                "kind": "protected",
+                "source_tex": "\\documentclass{book}\n\\begin{document}\n",
+            },
+            {
+                "kind": "text",
+                "en_tex": "\\section*{Hawk}\n\\begin{center}\n",
+                "ja_tex": "\\section*{タカ}\n\\begin{center}\n",
+            },
+            {
+                "kind": "protected",
+                "source_tex": (
+                    "\\begin{tabular}{cc}Hawk & 1 \\\\\n"
+                    "Dove & 0 \\\\\n\\end{tabular}"
+                ),
+            },
+            {"kind": "protected", "source_tex": "\n\\end{center}"},
+            {"kind": "protected", "source_tex": "\n\\end{document}\n"},
+        ]
+        fused, _ = fuse_english_main_japanese_secondary(rows)
+        self.assertEqual(fused.count(r"\begin{center}"), 2)
+        self.assertEqual(fused.count(r"\end{center}"), 2)
+        validate_tex_environment_balance(fused)
+
+    def test_source_owned_table_is_not_duplicated_for_secondary_stream(self):
+        table = (
+            "\\begin{tabular}{cc}Quiet & Confess \\\\\n"
+            "3 & 4 \\\\\n\\end{tabular}"
+        )
+        self.assertTrue(
+            tables_are_semantically_identical(
+                "\\begin{center}\n" + table + "\n\\end{center}", table
+            )
+        )
+        rows = [
+            {
+                "kind": "protected",
+                "source_tex": "\\documentclass{book}\n\\begin{document}\n",
+            },
+            {"kind": "protected", "source_tex": "\\begin{center}\n"},
+            {"kind": "protected", "source_tex": table},
+            {"kind": "protected", "source_tex": "\n\\end{center}"},
+            {"kind": "protected", "source_tex": "\n\\end{document}\n"},
+        ]
+        fused, _ = fuse_english_main_japanese_secondary(rows)
+        self.assertEqual(fused.count(r"\begin{tabular}"), 1)
+
+    def test_translated_table_labels_still_render_as_a_second_table(self):
+        english = r"\begin{tabular}{cc}Quiet & Confess \\ 3 & 4 \\ \end{tabular}"
+        japanese = r"\begin{tabular}{cc}黙秘 & 自白 \\ 3 & 4 \\ \end{tabular}"
+        self.assertFalse(tables_are_semantically_identical(english, japanese))
+
+    def test_evidence_segment_repair_is_locked_to_source_and_output_hashes(self):
+        source = "Malformed table fragment"
+        rows = [
+            {
+                "segment_id": "book-segment-1",
+                "kind": "text",
+                "source_sha256": __import__("hashlib").sha256(
+                    source.encode("utf-8")
+                ).hexdigest(),
+                "source_tex": source,
+                "en_tex": source,
+                "ja_tex": "壊れた表断片",
+            }
+        ]
+        digest = lambda value: __import__("hashlib").sha256(
+            value.encode("utf-8")
+        ).hexdigest()
+        changes = apply_evidence_segment_repairs(
+            rows,
+            [
+                {
+                    "segment_id": "book-segment-1",
+                    "source_sha256": digest(source),
+                    "expected_en_sha256": digest(source),
+                    "expected_ja_sha256": digest("壊れた表断片"),
+                    "en_tex": r"\begin{tabular}{cc}A&B\end{tabular}",
+                    "ja_tex": r"\begin{tabular}{cc}甲&乙\end{tabular}",
+                    "reason": "Visible source evidence.",
+                }
+            ],
+        )
+        self.assertEqual(len(changes), 1)
+        self.assertIn(r"\begin{tabular}", rows[0]["en_tex"])
+        with self.assertRaisesRegex(ValueError, "accepted en hash mismatch"):
+            apply_evidence_segment_repairs(
+                rows,
+                [
+                    {
+                        "segment_id": "book-segment-1",
+                        "source_sha256": digest(source),
+                        "expected_en_sha256": digest(source),
+                        "expected_ja_sha256": digest("壊れた表断片"),
+                        "en_tex": "unused",
+                        "ja_tex": "unused",
+                    }
+                ],
+            )
+
+    def test_evidence_segment_repair_can_promote_misclassified_protected_content(self):
+        source = r"\begin{tabular}{cc}Prose&flattened\end{tabular}"
+        digest = lambda value: __import__("hashlib").sha256(
+            value.encode("utf-8")
+        ).hexdigest()
+        rows = [
+            {
+                "segment_id": "book-protected-table",
+                "kind": "protected",
+                "source_sha256": digest(source),
+                "source_tex": source,
+                "en_tex": source,
+                "ja_tex": source,
+            }
+        ]
+        changes = apply_evidence_segment_repairs(
+            rows,
+            [
+                {
+                    "segment_id": "book-protected-table",
+                    "source_sha256": digest(source),
+                    "expected_kind": "protected",
+                    "kind": "text",
+                    "expected_en_sha256": digest(source),
+                    "expected_ja_sha256": digest(source),
+                    "en_tex": "Recovered prose.",
+                    "ja_tex": "復元した本文。",
+                }
+            ],
+        )
+        self.assertEqual(rows[0]["kind"], "text")
+        self.assertEqual(changes[0]["kind"], "text")
+
+    def test_layout_assertions_reject_known_malformed_constructs(self):
+        plan = {
+            "forbidden_substrings": [r"\section*{Quiet}"],
+            "required_substrings": [r"\begin{tabular}"],
+        }
+        with self.assertRaisesRegex(ValueError, "forbidden malformed layout"):
+            validate_layout_plan_assertions(
+                r"\section*{Quiet}\begin{tabular}", plan
+            )
+        result = validate_layout_plan_assertions(r"\begin{tabular}", plan)
+        self.assertEqual(result["forbidden_markers_absent"], 1)
+        self.assertEqual(result["required_markers_present"], 1)
+
     def test_kanji_only_technical_figure_caption_does_not_require_kana(self):
         source = source_segment(
             "book-figure-caption",
@@ -543,6 +968,20 @@ class PocketPolishPipelineTest(unittest.TestCase):
         self.assertIn(body, rendered)
         self.assertIn(r"\penalty0\hspace{0pt}", rendered)
         self.assertIn(r"\adjustbox{max width=.60\linewidth}", rendered)
+        self.assertNotIn(r"\mbox{\adjustbox", rendered)
+        self.assertIn(r"{$\displaystyle ", rendered)
+
+    def test_spaced_mathbf_greek_uses_math_bold_without_control_slots(self) -> None:
+        source = (
+            r"\mathbf { \Omega } + \mathbf{\Gamma} + "
+            r"\boldsymbol { \sigma } + \bm { \theta } + \mathbf { A }"
+        )
+        normalized = normalize_bold_greek_commands(source)
+        self.assertEqual(
+            normalized,
+            r"\boldsymbol{\Omega} + \boldsymbol{\Gamma} + "
+            r"\boldsymbol{ \sigma } + \boldsymbol{ \theta } + \mathbf { A }",
+        )
 
     def test_oversized_inline_math_is_not_wrapped_inside_caption(self) -> None:
         body = r"x_1+" * 80 + "x_n"
@@ -1115,6 +1554,74 @@ class PocketPolishPipelineTest(unittest.TestCase):
         )
         self.assertEqual(count, 0)
         self.assertEqual(unchanged, r"Already \(u = u_1 = -log k\).")
+
+    def test_unicode_greek_is_normalized_only_inside_math(self) -> None:
+        source = r"State Ω has \(A \times Ω\) and \(\eta / (\eta + ζ)\)."
+        repaired, count = normalize_unicode_math_symbols(source)
+        self.assertEqual(count, 2)
+        self.assertIn("State Ω has", repaired)
+        self.assertIn(r"A \times \Omega", repaired)
+        self.assertIn(r"\eta + \zeta", repaired)
+
+    def test_cyrillic_and_text_diamond_use_visible_fallbacks(self) -> None:
+        source = r"Бондарева, ◇ 27.1, but \(◇\) remains mathematical."
+        repaired, count = normalize_unicode_text_fallbacks(source)
+        self.assertEqual(count, 2)
+        self.assertIn(r"\PocketUnicodeText{Бондарева}", repaired)
+        self.assertIn(r"\(\diamond\) 27.1", repaired)
+        self.assertIn(r"\(◇\)", repaired)
+
+    def test_missing_glyph_warning_prevents_clean_compile_report(self) -> None:
+        report = {
+            "includegraphics_count": 0,
+            "text_chars": 1200,
+            "latex_error_markers": [],
+            "missing_character_markers": ["Missing character: test"],
+            "worst_overfull_pt": 0.0,
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            with patch(
+                "assemble_build_pocket_polished.compile_tex", return_value=report
+            ):
+                compiled = compile_variant(
+                    Path(tmp),
+                    "en-main-ja",
+                    "pocket-large-font",
+                    r"\documentclass{book}\begin{document}text\end{document}",
+                    None,
+                    expected_graphics=0,
+                    title="Test",
+                    author="",
+                )
+        self.assertFalse(compiled["layout_clean"])
+
+    def test_nested_matrix_tag_moves_to_enclosing_display(self) -> None:
+        source = (
+            "\\[g = \\left(\\begin{array}{cc}\n"
+            "1 & 0 \\tag{13}\\\\\n0 & -1\n"
+            "\\end{array}\\right).\\]"
+        )
+        repaired, count = relocate_nested_math_tags(source)
+        self.assertEqual(count, 1)
+        self.assertNotIn(r"\tag{13}\\", repaired)
+        self.assertIn(r"\end{array}\right). \tag{13}\]", repaired)
+        wrapped = wrap_wide_display_math(repaired, layout="pocket")
+        self.assertIn(r"\begin{equation}", wrapped)
+        self.assertIn(r"\tag{13}", wrapped)
+        self.assertLess(wrapped.index(r"\)"), wrapped.index(r"\tag{13}"))
+
+    def test_nested_tag_repair_refuses_ambiguous_multiple_tags(self) -> None:
+        source = (
+            r"\[\begin{array}{c}a\tag{1}\\b\tag{2}\end{array}\]"
+        )
+        with self.assertRaisesRegex(ValueError, "multiple nested equation tags"):
+            relocate_nested_math_tags(source)
+
+    def test_top_level_equation_tag_is_unchanged(self) -> None:
+        source = r"\begin{equation*}x+y=z\tag{4}\end{equation*}"
+        repaired, count = relocate_nested_math_tags(source)
+        self.assertEqual(count, 0)
+        self.assertEqual(repaired, source)
 
     def test_text_superscript_music_accidentals_are_moved_into_math_mode(self) -> None:
         repaired, count = normalize_unwrapped_math_fragments(

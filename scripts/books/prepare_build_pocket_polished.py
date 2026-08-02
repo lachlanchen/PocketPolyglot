@@ -19,6 +19,7 @@ from pocket_polished_common import (
     normalize_page_boundary_artifacts,
     normalize_split_prose_paragraphs,
     output_schema,
+    protected_segment_structure_issues,
     read_json,
     reviewer_schema,
     sha256_text,
@@ -145,6 +146,21 @@ def prepare_book(
             and current.get("validation_profile", "prose_exact") == validation_profile
             and current.get("pipeline_schema_version") == 3
         ):
+            # Repair plans and furigana overrides do not alter chunk identity.
+            # Refresh this metadata without forcing expensive reviewed work to
+            # be rechunked or regenerated.
+            metadata = {
+                "source_replacement_plan": task.get(
+                    "polish_source_replacements_file"
+                ),
+                "layout_replacement_plan": task.get(
+                    "polish_layout_replacements_file"
+                ),
+                "furigana_overrides": task.get("polish_furigana_overrides", {}),
+            }
+            if any(current.get(key) != value for key, value in metadata.items()):
+                current.update(metadata)
+                write_json(manifest_path, current)
             return current
         existing_outputs = list((book_root / "json").glob("*.json"))
         existing_cache = list((book_root / "work/accepted-segments").glob("*.json"))
@@ -160,6 +176,18 @@ def prepare_book(
         book_id,
         validation_profile=validation_profile,
     )
+    segment_structure_issues = protected_segment_structure_issues(segments)
+    fatal_segment_issues = [
+        issue
+        for issue in segment_structure_issues
+        if issue.get("severity") == "error"
+    ]
+    if fatal_segment_issues:
+        summary = "; ".join(
+            f"{issue['segment_id']}: {issue['code']}"
+            for issue in fatal_segment_issues
+        )
+        raise ValueError(f"unsafe protected-segment classification: {summary}")
     chunks = make_review_chunks(
         segments,
         book_id=book_id,
@@ -206,6 +234,11 @@ def prepare_book(
             for item in segments
         ),
         "protected_segment_count": sum(item["kind"] == "protected" for item in segments),
+        "segment_structure_warnings": [
+            issue
+            for issue in segment_structure_issues
+            if issue.get("severity") == "warning"
+        ],
         "chunk_count": len(chunks),
         "max_chunk_chars": max_chars,
         "max_chunk_segments": max_segments,
