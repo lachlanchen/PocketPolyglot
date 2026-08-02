@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "book_id": "chronicle-lord-nobunaga-illustrated",
+  "status": "prepared_illustrated_from_complete_trilingual",
+  "launchable": false,
+  "task_mode": "trilingual_illustrated_edition_reusing_validated_json",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "en": "sources/japan-history/sengoku/primary-source-translations/shincho-koki/en/The Chronicle of Lord Nobunaga - Ota Gyuichi.pdf"
+  },
+  "source_reference_paths": {
+    "ja_primary_searchable": "sources/japan-history/sengoku/primary-sources/shincho-koki/ja-book/信長公記-太田牛一.pdf",
+    "ja_wikisource_manifest": "sources/japan-history/sengoku/primary-sources/shincho-koki/ja-wikisource/manifest.json",
+    "modern_scholarship": "sources/japan-history/sengoku/biographies/nobunaga/en/Japonius Tyrannus - Jeroen P Lamers.pdf"
+  },
+  "source_sha256": {
+    "en": "6bc9f445dc807891adf87d0fc79d252e45492b8548304907d6c273d5d13dd1bd"
+  },
+  "source_extraction": {
+    "en_cache": "books/chronicle-lord-nobunaga/work/source-extraction/en.raw.md",
+    "note": "Modern nonfiction generic extraction. PDF uses pdftotext; EPUB/MOBI uses pandoc."
+  },
+  "markdown": {
+    "en": "books/chronicle-lord-nobunaga/markdown/en.md"
+  },
+  "book_title_en": "The Chronicle of Lord Nobunaga",
+  "book_title_zh": "信长公记",
+  "book_title_ja": "信長公記",
+  "book_title_zh_reading": "",
+  "book_title_ja_reading": "",
+  "author": "Ōta Gyūichi; translated and edited by J. S. A. Elisonas and Jeroen P. Lamers",
+  "author_reading_zh": "",
+  "author_reading_ja": "",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "en_spine_with_declared_supplemental_references",
+  "chunks_jsonl": "books/chronicle-lord-nobunaga/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/chronicle-lord-nobunaga/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/chronicle-lord-nobunaga/work/trilingual/interlinear/chunks",
+  "preview_json": "books/chronicle-lord-nobunaga-illustrated/work/trilingual/preview/chronicle-lord-nobunaga-illustrated.partial.json",
+  "assembled_json": "books/chronicle-lord-nobunaga-illustrated/work/trilingual/preview/chronicle-lord-nobunaga-illustrated.partial.json",
+  "prepared_at": "2026-08-02T01:56:48.571357+00:00",
+  "queue_id": "sengoku-history-trilingual-2026-08-01",
+  "queue_model": "gpt-5.6-sol",
+  "queue_reasoning": "low",
+  "chunk_count": 475,
+  "figure_count": 15,
+  "figure_manifest": "books/chronicle-lord-nobunaga-illustrated/work/trilingual/assets/figure-manifest.json",
+  "english_chapter_count": 18,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_modern_nonfiction_trilingual.py",
+    "source_spine": "en source text is the immutable chunk spine.",
+    "supplemental_sources": "Optional local references are recorded in source_reference_paths; they are not used as chunk spine text unless a later project-specific pass aligns them.",
+    "chinese_reference": "Preserve a Chinese source spine exactly when configured; otherwise generate readable modern Chinese from the declared spine.",
+    "japanese_reference": "Preserve a Japanese source spine exactly when configured; otherwise generate natural modern Japanese from the declared spine.",
+    "reference_notes": "The English book contains a scholarly introduction, translation, and notes. The Japanese public source is authoritative source evidence but is not automatically sentence-aligned. Preserve uncertainty and note apparatus.",
+    "illustrated_edition": "Reuses the completed source-book chunks without model calls. Figures are rendered from paragraph anchors already retained in the assembled JSON.",
+    "source_plan": "books/chronicle-lord-nobunaga/book-plan.json"
+  },
+  "source_book_id": "chronicle-lord-nobunaga",
+  "cover_image": "assets/covers/chronicle-lord-nobunaga/cover.png",
+  "cover_background_source": "assets/covers/chronicle-lord-nobunaga/cover.png",
+  "cover_title_en": "The Chronicle of Lord Nobunaga",
+  "cover_title_ja": "信長公記",
+  "cover_title_zh": "信长公记",
+  "edition": {
+    "kind": "illustrated",
+    "label_en": "Illustrated Edition",
+    "label_ja": "図版収録版",
+    "label_zh": "图文版",
+    "output_layout": "en-main-jp-zh",
+    "font_profile": "large-font",
+    "translation_reuse": true,
+    "source_ordered_figures": true,
+    "label_in_filename": false
+  }
+}

@@ -43,6 +43,7 @@ chunks_jsonl="$(jq -r '.chunks_jsonl' "$plan")"
 chunk_dir="$(jq -r '.raw_chunk_dir' "$plan")"
 assembled_json="$(jq -r '.assembled_json' "$plan")"
 figure_count="$(jq -r '.figure_count' "$plan")"
+figure_manifest="$(jq -r '.figure_manifest' "$plan")"
 title_en="$(jq -r '.book_title_en' "$plan")"
 author="$(jq -r '.author // ""' "$plan")"
 author_reading="$(jq -r '.author_reading_ja // ""' "$plan")"
@@ -59,6 +60,9 @@ python scripts/interlinear/assemble_trilingual_json.py \
   --chunks-jsonl "$chunks_jsonl" \
   --chunk-dir "$chunk_dir" \
   --output "$assembled_json"
+python scripts/interlinear/apply_trilingual_figure_manifest.py \
+  "$assembled_json" \
+  --manifest "$figure_manifest"
 python scripts/interlinear/validate_trilingual_interlinear_json.py "$assembled_json"
 python scripts/interlinear/validate_trilingual_figure_assets.py \
   "$assembled_json" \
@@ -87,7 +91,14 @@ cat > "$build_dir/book.tex" <<EOF
 \\input{tex/interlinear-trilingual-en-notes/book.tex}
 EOF
 
-base_title="${title_en}（図版収録・日文・中文注）"
+label_in_filename="$(
+  jq -r '.edition | if has("label_in_filename") then .label_in_filename else true end' "$plan"
+)"
+if [[ "$label_in_filename" == "true" ]]; then
+  base_title="${title_en}（図版収録・日文・中文注）"
+else
+  base_title="${title_en}（日文・中文注）"
+fi
 if [[ "$color_mode" == "blackwhite" ]]; then
   base_title="${base_title%）}・黑白）"
 fi
