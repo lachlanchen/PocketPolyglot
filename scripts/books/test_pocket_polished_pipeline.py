@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import tempfile
@@ -21,7 +22,10 @@ from codex_pocket_polish_worker import (
     save_cached_segment,
 )
 from assemble_build_pocket_polished import (
+    apply_evidence_math_block_reflows,
+    apply_evidence_math_reflows,
     apply_evidence_segment_repairs,
+    apply_segment_text_replacements,
     clean_heading_secondary_body,
     compile_variant,
     demote_secondary_captions,
@@ -42,6 +46,8 @@ from assemble_build_pocket_polished import (
     tables_are_semantically_identical,
     validate_heading_secondary_coverage,
     validate_layout_plan_assertions,
+    suspicious_dangling_math_rows,
+    suspicious_run_on_inline_math,
 )
 from build_pocket_tex_queue import (
     apply_task_markdown_fixes,
@@ -719,6 +725,50 @@ class PocketPolishPipelineTest(unittest.TestCase):
                 ],
             )
 
+    def test_segment_text_repair_is_hash_and_cardinality_locked(self):
+        original = r"The condition is \(x>\) 1."
+        digest = lambda value: hashlib.sha256(value.encode()).hexdigest()
+        rows = [
+            {
+                "segment_id": "book-segment-1",
+                "kind": "text",
+                "source_sha256": "source-hash",
+                "en_tex": original,
+                "ja_tex": original,
+            }
+        ]
+        rules = [
+            {
+                "segment_id": "book-segment-1",
+                "source_sha256": "source-hash",
+                "expected_en_sha256": digest(original),
+                "expected_ja_sha256": digest(original),
+                "en_replacements": [
+                    {
+                        "before": r"\(x>\) 1",
+                        "after": r"\(x>1\)",
+                        "expected_count": 1,
+                    }
+                ],
+                "ja_replacements": [
+                    {
+                        "before": r"\(x>\) 1",
+                        "after": r"\(x>1\)",
+                        "expected_count": 1,
+                    }
+                ],
+            }
+        ]
+        changes = apply_evidence_segment_repairs(rows, rules)
+        self.assertEqual(len(changes), 1)
+        self.assertEqual(rows[0]["en_tex"], r"The condition is \(x>1\).")
+        with self.assertRaisesRegex(ValueError, "expected 1 occurrences, found 0"):
+            apply_segment_text_replacements(
+                original,
+                [{"before": "missing", "after": "fixed", "expected_count": 1}],
+                context="test",
+            )
+
     def test_evidence_segment_repair_can_promote_misclassified_protected_content(self):
         source = r"\begin{tabular}{cc}Prose&flattened\end{tabular}"
         digest = lambda value: __import__("hashlib").sha256(
@@ -967,7 +1017,7 @@ class PocketPolishPipelineTest(unittest.TestCase):
         self.assertEqual(count, 1)
         self.assertIn(body, rendered)
         self.assertIn(r"\penalty0\hspace{0pt}", rendered)
-        self.assertIn(r"\adjustbox{max width=.60\linewidth}", rendered)
+        self.assertIn(r"\adjustbox{max width=.94\linewidth}", rendered)
         self.assertNotIn(r"\mbox{\adjustbox", rendered)
         self.assertIn(r"{$\displaystyle ", rendered)
 
@@ -998,7 +1048,150 @@ class PocketPolishPipelineTest(unittest.TestCase):
         )
         self.assertEqual(count, 1)
         self.assertIn(body, rendered)
-        self.assertIn(r"\adjustbox{max width=.56\linewidth}", rendered)
+        self.assertIn(r"\adjustbox{max width=.94\linewidth}", rendered)
+
+    def test_evidence_math_reflow_preserves_tokens_and_aligns_relations(self) -> None:
+        body = r"EU_L=EU_R EU_L=3\sigma+1 2\sigma=1"
+        rows = [r"EU_L=EU_R", r"EU_L=3\sigma+1", r"2\sigma=1"]
+        rendered, changes = apply_evidence_math_reflows(
+            rf"Before \({body}\) after.",
+            [
+                {
+                    "before": body,
+                    "rows": rows,
+                    "expected_count": 1,
+                    "source_sha256": hashlib.sha256(body.encode("utf-8")).hexdigest(),
+                }
+            ],
+        )
+        self.assertEqual(len(changes), 1)
+        self.assertIn(r"\begin{aligned}", rendered)
+        self.assertIn(r"EU_L&=EU_R", rendered)
+        self.assertIn(r"2\sigma&=1", rendered)
+        self.assertEqual(suspicious_run_on_inline_math(rendered), [])
+
+    def test_evidence_math_reflow_consumes_attached_forced_break(self) -> None:
+        body = r"EU_L=EU_R 2\sigma=1"
+        rendered, changes = apply_evidence_math_reflows(
+            rf"Before \({body}\)\\\\\nAfter.",
+            [
+                {
+                    "before": body,
+                    "rows": [r"EU_L=EU_R", r"2\sigma=1"],
+                    "expected_count": 1,
+                    "source_sha256": hashlib.sha256(body.encode("utf-8")).hexdigest(),
+                }
+            ],
+        )
+        self.assertEqual(len(changes), 1)
+        self.assertIn(r"\begin{aligned}", rendered)
+        self.assertNotIn("\\]\\n\\\\", rendered)
+        self.assertIn("After.", rendered)
+
+    def test_evidence_math_block_reflow_recovers_plain_math_fragment(self) -> None:
+        before = r"\(EU_d=(\sigma)(-1)\)\\" + "\n" + r"+(1-\sigma)(0) \(6\sigma=2\)"
+        rows = [r"EU_d=(\sigma)(-1)+(1-\sigma)(0)", r"6\sigma=2"]
+        rendered, changes = apply_evidence_math_block_reflows(
+            f"Before\n{before}\nAfter",
+            [
+                {
+                    "before": before,
+                    "rows": rows,
+                    "expected_count": 1,
+                    "source_sha256": hashlib.sha256(before.encode("utf-8")).hexdigest(),
+                }
+            ],
+        )
+        self.assertEqual(len(changes), 1)
+        self.assertIn(r"EU_d&=(\sigma)(-1)+(1-\sigma)(0)", rendered)
+        self.assertNotIn("+(1-", rendered.split(r"\end{aligned}", 1)[1])
+
+    def test_evidence_math_block_reflow_rejects_token_rewrite(self) -> None:
+        before = r"\(x=1\)\\" + "\n" + r"\(y=2\)"
+        with self.assertRaisesRegex(ValueError, "changes mathematical tokens"):
+            apply_evidence_math_block_reflows(
+                before,
+                [
+                    {
+                        "before": before,
+                        "rows": ["x=1", "y=3"],
+                        "expected_count": 1,
+                        "source_sha256": hashlib.sha256(before.encode("utf-8")).hexdigest(),
+                    }
+                ],
+            )
+
+    def test_dangling_math_validator_rejects_split_equation_rows(self) -> None:
+        tex = (
+            r"\[\begin{aligned}A &= B -\\ C &= D\end{aligned}\] "
+            r"and \(x +\)"
+        )
+        findings = suspicious_dangling_math_rows(tex)
+        self.assertEqual(len(findings), 2)
+        self.assertTrue(any(finding.endswith("B -") for finding in findings))
+        self.assertTrue(any(finding.endswith("x +") for finding in findings))
+
+    def test_dangling_math_validator_accepts_complete_and_unary_rows(self) -> None:
+        tex = (
+            r"\[\begin{aligned}-x &= y\\ a &= b = c\end{aligned}\] "
+            r"and \(A-C\)"
+        )
+        self.assertEqual(suspicious_dangling_math_rows(tex), [])
+
+    def test_run_on_validator_checks_each_display_alignment_row(self) -> None:
+        fused = (
+            r"\[\begin{aligned}"
+            r"EU_L=EU_R EU_L=3\sigma_L+(1-\sigma_L)(7) "
+            r"EU_R=2\sigma_L+(1-\sigma_L)(4)+\delta\\"
+            r"2\sigma=1"
+            r"\end{aligned}\]"
+        )
+        clean = (
+            r"\[\begin{aligned}"
+            r"EU_L&=EU_R\\ EU_L&=3\sigma+1\\ EU_R&=2\sigma+4"
+            r"\end{aligned}\]"
+        )
+        self.assertEqual(len(suspicious_run_on_inline_math(fused)), 1)
+        self.assertEqual(suspicious_run_on_inline_math(clean), [])
+
+    def test_run_on_validator_accepts_valid_multi_relation_notation(self) -> None:
+        tex = (
+            r"\[\begin{aligned}"
+            r"&< (\mathrm{Go},\sigma_{\mathrm{up}}=1/6),"
+            r"\sigma_{\mathrm{left}}=1/3 >\\"
+            r"\mathrm{EU}_{A}&=(\sigma_1)[\mathrm{EU}_{A,1}]"
+            r"+(\sigma_2)[\mathrm{EU}_{A,2}]+\cdots"
+            r"+(\sigma_n)[\mathrm{EU}_{A,n}]\\"
+            r"\mathrm{EU}_{\text{rock}}&=\mathrm{EU}_{\text{paper}}"
+            r"=\mathrm{EU}_{\text{scissors}}"
+            r"\end{aligned}\]"
+        )
+        self.assertEqual(suspicious_run_on_inline_math(tex), [])
+
+    def test_run_on_validator_rejects_repeated_expected_utility_lhs(self) -> None:
+        tex = (
+            r"\[\begin{aligned}"
+            r"\mathrm{EU}_{\text{left}}=\mathrm{EU}_{\text{right}} "
+            r"\mathrm{EU}_{\text{left}}=3\sigma+(1-\sigma)(2) "
+            r"\mathrm{EU}_{\text{right}}=\sigma+(1-\sigma)(4)"
+            r"\end{aligned}\]"
+        )
+        self.assertEqual(len(suspicious_run_on_inline_math(tex)), 1)
+
+    def test_evidence_math_reflow_rejects_token_rewrite(self) -> None:
+        body = r"x=1 y=2"
+        with self.assertRaisesRegex(ValueError, "changes mathematical tokens"):
+            apply_evidence_math_reflows(
+                rf"\({body}\)",
+                [
+                    {
+                        "before": body,
+                        "rows": [r"x=1", r"y=3"],
+                        "expected_count": 1,
+                        "source_sha256": hashlib.sha256(body.encode("utf-8")).hexdigest(),
+                    }
+                ],
+            )
 
     def test_evidence_layout_repair_restores_split_probability_identity(self) -> None:
         malformed = r"\(a +\) \(b^{1=b\text{, making prose}}) continuation"
@@ -2185,6 +2378,14 @@ class PocketPolishPipelineTest(unittest.TestCase):
                 "\\caption{Title\n\\\\[0pt]\ncontinued}"
             ),
             "\\caption{Title\n\\\\[0pt]\ncontinued}",
+        )
+
+    def test_wide_math_wrapper_consumes_its_redundant_trailing_break(self) -> None:
+        source = "Before\n\\[" + ("x+" * 60) + "y\\]\n\\\\\nAfter"
+        rendered = wrap_wide_display_math(source, layout="pocket")
+        self.assertIn("After", rendered)
+        self.assertIsNone(
+            re.search(r"% BUILD_POCKET_WIDE_MATH_END\s*\\\\", rendered)
         )
 
     def test_wide_math_environment_wrapper_is_idempotent(self) -> None:

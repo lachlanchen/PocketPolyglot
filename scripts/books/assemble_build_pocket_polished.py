@@ -281,6 +281,39 @@ def tex_sha256(tex: str) -> str:
     return hashlib.sha256(tex.encode("utf-8")).hexdigest()
 
 
+def apply_segment_text_replacements(
+    tex: str, replacements: list[dict[str, Any]], *, context: str
+) -> str:
+    """Apply cardinality-checked local edits inside one hash-locked segment."""
+
+    if not replacements:
+        raise ValueError(f"{context} needs at least one text replacement")
+    seen: set[str] = set()
+    for index, replacement in enumerate(replacements, start=1):
+        before = replacement.get("before")
+        after = replacement.get("after")
+        expected_count = replacement.get("expected_count")
+        if not isinstance(before, str) or not before:
+            raise ValueError(f"{context} replacement {index} needs before text")
+        if before in seen:
+            raise ValueError(f"{context} has duplicate before text")
+        seen.add(before)
+        if not isinstance(after, str):
+            raise ValueError(f"{context} replacement {index} needs after text")
+        if not isinstance(expected_count, int) or expected_count < 1:
+            raise ValueError(
+                f"{context} replacement {index} needs expected_count >= 1"
+            )
+        found = tex.count(before)
+        if found != expected_count:
+            raise ValueError(
+                f"{context} replacement {index} expected {expected_count} "
+                f"occurrences, found {found}"
+            )
+        tex = tex.replace(before, after)
+    return tex
+
+
 def apply_evidence_segment_repairs(
     segments: list[dict[str, Any]], rules: list[dict[str, Any]]
 ) -> list[dict[str, Any]]:
@@ -328,16 +361,31 @@ def apply_evidence_segment_repairs(
         for language in ("en", "ja"):
             current = row.get(f"{language}_tex")
             replacement = rule.get(f"{language}_tex")
+            text_replacements = rule.get(f"{language}_replacements")
             expected_hash = rule.get(f"expected_{language}_sha256")
-            if not isinstance(current, str) or not isinstance(replacement, str):
+            if not isinstance(current, str):
                 raise ValueError(
-                    f"segment repair {segment_id} needs {language}_tex strings"
+                    f"segment repair {segment_id} needs a current {language}_tex string"
                 )
             if expected_hash != tex_sha256(current):
                 raise ValueError(
                     f"segment repair accepted {language} hash mismatch for {segment_id}"
                 )
-            row[f"{language}_tex"] = replacement
+            has_full_replacement = isinstance(replacement, str)
+            has_text_replacements = isinstance(text_replacements, list)
+            if has_full_replacement == has_text_replacements:
+                raise ValueError(
+                    f"segment repair {segment_id} needs exactly one of "
+                    f"{language}_tex or {language}_replacements"
+                )
+            if has_full_replacement:
+                row[f"{language}_tex"] = replacement
+            else:
+                row[f"{language}_tex"] = apply_segment_text_replacements(
+                    current,
+                    text_replacements,
+                    context=f"segment repair {segment_id}/{language}",
+                )
 
         if "source_tex" in rule:
             source_replacement = rule.get("source_tex")
@@ -355,6 +403,294 @@ def apply_evidence_segment_repairs(
             }
         )
     return changes
+
+
+MATH_REFLOW_RELATION_RE = re.compile(
+    r"(?<!\\)="
+    r"|\\(?:geq|leq|neq|approx|sim|simeq|equiv|propto|in|notin|subseteq|supseteq)\b"
+    r"|(?<!\\)[<>]"
+)
+
+
+def is_strategy_profile_math(row: str) -> bool:
+    """Return whether angle brackets delimit a strategy profile, not an inequality."""
+
+    compact = row.strip().lstrip("&").strip()
+    return (
+        compact.startswith("<")
+        and compact.endswith(">")
+        or compact.startswith(r"\langle")
+        and compact.endswith(r"\rangle")
+    )
+
+
+def normalized_math_token_stream(tex: str) -> str:
+    """Return the immutable token stream used by layout-only math repairs."""
+
+    return re.sub(r"\s+", "", tex)
+
+
+def normalized_math_block_token_stream(tex: str) -> str:
+    """Return math tokens after removing only source layout delimiters."""
+
+    tex = tex.replace(r"\(", "").replace(r"\)", "")
+    tex = re.sub(r"\\\\(?:\[[^\]]+\])?", "", tex)
+    return normalized_math_token_stream(tex)
+
+
+def align_math_reflow_row(row: str) -> str:
+    """Add one visual alignment point without changing mathematical tokens."""
+
+    relation = MATH_REFLOW_RELATION_RE.search(row)
+    if relation is not None:
+        return row[: relation.start()] + "&" + row[relation.start() :]
+    if row.lstrip().startswith(("+", "-")):
+        return r"&\quad {}" + row.lstrip()
+    return r"&\quad " + row
+
+
+def apply_evidence_math_block_reflows(
+    tex: str, rules: list[dict[str, Any]]
+) -> tuple[str, list[dict[str, Any]]]:
+    """Join OCR-split math spans into native aligned display blocks.
+
+    Unlike a normal equation reflow, these rules may span several ``\(...\)``
+    atoms and short math fragments that Mathpix accidentally emitted as prose.
+    The source span is hash-locked and its complete token stream must equal the
+    concatenated output rows after removing only math delimiters, forced line
+    breaks, and whitespace.
+    """
+
+    changes: list[dict[str, Any]] = []
+    seen_sources: set[str] = set()
+    for index, rule in enumerate(rules, start=1):
+        before = rule.get("before")
+        rows = rule.get("rows")
+        expected_count = rule.get("expected_count")
+        expected_sha256 = rule.get("source_sha256")
+        if not isinstance(before, str) or not before:
+            raise ValueError(f"math block reflow {index} needs a non-empty before string")
+        if before in seen_sources:
+            raise ValueError(f"duplicate math block reflow source at rule {index}")
+        seen_sources.add(before)
+        if expected_sha256 != tex_sha256(before):
+            raise ValueError(f"math block reflow {index} source hash mismatch")
+        if not isinstance(expected_count, int) or expected_count < 1:
+            raise ValueError(f"math block reflow {index} needs expected_count >= 1")
+        if not isinstance(rows, list) or not rows or not all(
+            isinstance(row, str) and row.strip() for row in rows
+        ):
+            raise ValueError(f"math block reflow {index} needs non-empty string rows")
+        for row in rows:
+            if any(marker in row for marker in (r"\\", r"\[", r"\]", r"\begin", r"\end", "&")):
+                raise ValueError(
+                    f"math block reflow {index} row contains caller-owned layout syntax"
+                )
+        if normalized_math_block_token_stream(before) != normalized_math_token_stream(
+            "".join(rows)
+        ):
+            raise ValueError(f"math block reflow {index} changes mathematical tokens")
+        found = tex.count(before)
+        if found != expected_count:
+            raise ValueError(
+                f"math block reflow {index} expected {expected_count} occurrences, found {found}"
+            )
+        aligned_rows = " \\\\\n".join(align_math_reflow_row(row.strip()) for row in rows)
+        replacement = (
+            "\n\\[\n\\begin{aligned}\n"
+            + aligned_rows
+            + "\n\\end{aligned}\n\\]\n"
+        )
+        tex = tex.replace(before, replacement)
+        changes.append(
+            {
+                "source_sha256": expected_sha256,
+                "occurrences": found,
+                "rows": len(rows),
+                "reason": str(rule.get("reason", "Evidence-backed equation block reflow.")),
+                "evidence": rule.get("evidence", []),
+            }
+        )
+    return tex, changes
+
+
+def apply_evidence_math_reflows(
+    tex: str, rules: list[dict[str, Any]]
+) -> tuple[str, list[dict[str, Any]]]:
+    """Reflow fused inline derivations while preserving every math token.
+
+    The project-local plan supplies only row boundaries.  A rule is accepted
+    when its source hash and occurrence count match and concatenating its rows
+    reproduces the exact non-whitespace token stream.  This lets narrow-page
+    books repair Mathpix line fusion without silently rewriting equations.
+    """
+
+    changes: list[dict[str, Any]] = []
+    seen_sources: set[str] = set()
+    for index, rule in enumerate(rules, start=1):
+        before = rule.get("before")
+        rows = rule.get("rows")
+        expected_count = rule.get("expected_count")
+        expected_sha256 = rule.get("source_sha256")
+        if not isinstance(before, str) or not before:
+            raise ValueError(f"math reflow {index} needs a non-empty before string")
+        if before in seen_sources:
+            raise ValueError(f"duplicate math reflow source at rule {index}")
+        seen_sources.add(before)
+        if expected_sha256 != tex_sha256(before):
+            raise ValueError(f"math reflow {index} source hash mismatch")
+        if not isinstance(expected_count, int) or expected_count < 1:
+            raise ValueError(f"math reflow {index} needs expected_count >= 1")
+        if not isinstance(rows, list) or not rows or not all(
+            isinstance(row, str) and row.strip() for row in rows
+        ):
+            raise ValueError(f"math reflow {index} needs non-empty string rows")
+        for row in rows:
+            if any(marker in row for marker in (r"\\", r"\[", r"\]", r"\begin", r"\end", "&")):
+                raise ValueError(
+                    f"math reflow {index} row contains caller-owned layout syntax"
+                )
+        if normalized_math_token_stream(before) != normalized_math_token_stream(
+            "".join(rows)
+        ):
+            raise ValueError(f"math reflow {index} changes mathematical tokens")
+
+        target = r"\(" + before + r"\)"
+        found = tex.count(target)
+        if found != expected_count:
+            raise ValueError(
+                f"math reflow {index} expected {expected_count} occurrences, found {found}"
+            )
+        aligned_rows = " \\\\\n".join(align_math_reflow_row(row.strip()) for row in rows)
+        replacement = (
+            "\n\\[\n\\begin{aligned}\n"
+            + aligned_rows
+            + "\n\\end{aligned}\n\\]\n"
+        )
+        # A source inline equation often ends with ``\\\\``.  Once promoted
+        # to display math that forced break is redundant; leaving it after a
+        # centered/boxed display creates an empty-line ``\\\\`` and can make
+        # XeLaTeX fail with "There's no line here to end."  Consume only the
+        # break immediately attached to this exact, hash-locked equation.
+        target_with_break = re.compile(
+            re.escape(target) + r"[ \t]*\\\\(?:\[[^\]]+\])?"
+        )
+        tex, replaced_with_break = target_with_break.subn(
+            lambda _match: replacement, tex
+        )
+        tex, replaced_without_break = re.subn(
+            re.escape(target), lambda _match: replacement, tex
+        )
+        if replaced_with_break + replaced_without_break != found:
+            raise ValueError(
+                f"math reflow {index} replacement cardinality changed during application"
+            )
+        changes.append(
+            {
+                "source_sha256": expected_sha256,
+                "occurrences": found,
+                "rows": len(rows),
+                "reason": str(rule.get("reason", "Evidence-backed equation reflow.")),
+                "evidence": rule.get("evidence", []),
+            }
+        )
+    return tex, changes
+
+
+def suspicious_run_on_inline_math(tex: str) -> list[str]:
+    """Return inline derivations that would become illegibly scaled boxes."""
+
+    eu_symbol = re.compile(
+        r"(?:\\mathrm\s*\{\s*EU\s*\}|E\s*U)\s*_\s*"
+        r"(?:\{(?:[^{}]|\{[^{}]*\})*\}|[A-Za-z0-9]+)",
+        flags=re.I,
+    )
+    eu_lhs = re.compile(
+        eu_symbol.pattern
+        + r"\s*&?\s*(?:=|\\(?:geq|leq|neq|approx|sim|simeq|equiv)\b|[<>])",
+        flags=re.I,
+    )
+
+    def is_simple_eu_equality_chain(row: str) -> bool:
+        compact = row.replace("&", "").strip()
+        if any(token in compact for token in ("<", ">", r"\geq", r"\leq")):
+            return False
+        terms = re.split(r"(?<!\\)=", compact)
+        return len(terms) >= 3 and all(
+            eu_symbol.fullmatch(term.strip()) is not None for term in terms
+        )
+
+    findings: list[str] = []
+    for match in INLINE_MATH_RE.finditer(tex):
+        body = match.group("display") or match.group("paren") or match.group("dollar")
+        if body is None:
+            continue
+        aligned = re.search(
+            r"\\begin\{aligned\*?\}(?P<body>.*?)\\end\{aligned\*?\}",
+            body,
+            flags=re.S,
+        )
+        rows = (
+            re.split(r"\\\\(?:\[[^\]]+\])?", aligned.group("body"))
+            if aligned is not None
+            else [body]
+        )
+        for row in rows:
+            if is_strategy_profile_math(row) or is_simple_eu_equality_chain(row):
+                continue
+            relation_count = len(MATH_REFLOW_RELATION_RE.findall(row))
+            eu_lhs_count = len(eu_lhs.findall(row))
+            compact_length = len(normalized_math_token_stream(row))
+            if relation_count >= 2 and compact_length >= 70:
+                findings.append(row)
+            elif eu_lhs_count >= 2 and relation_count >= 1 and compact_length >= 70:
+                findings.append(row)
+    return findings
+
+
+DANGLING_MATH_TAIL_RE = re.compile(
+    r"(?:=|\+|-|<|>|\\(?:geq|leq|neq|approx|sim|simeq|equiv|propto))\s*$"
+)
+ALIGNED_BODY_RE = re.compile(
+    r"\\begin\{aligned\*?\}(?P<body>.*?)\\end\{aligned\*?\}", re.S
+)
+
+
+def suspicious_dangling_math_rows(tex: str) -> list[str]:
+    """Return math atoms or aligned rows ending in an unfinished operation."""
+
+    findings: list[str] = []
+    seen: set[str] = set()
+
+    def inspect(body: str) -> None:
+        aligned_matches = list(ALIGNED_BODY_RE.finditer(body))
+        candidates: list[str] = []
+        if aligned_matches:
+            for aligned in aligned_matches:
+                candidates.extend(
+                    re.split(r"\\\\(?:\[[^\]]+\])?", aligned.group("body"))
+                )
+        else:
+            candidates.append(body)
+        for candidate in candidates:
+            candidate = re.sub(r"%[^\n]*", "", candidate).strip()
+            candidate = candidate.rstrip("&").strip()
+            if is_strategy_profile_math(candidate):
+                continue
+            if not candidate or not DANGLING_MATH_TAIL_RE.search(candidate):
+                continue
+            compact = " ".join(candidate.split())
+            if compact not in seen:
+                seen.add(compact)
+                findings.append(compact)
+
+    for match in INLINE_MATH_RE.finditer(tex):
+        body = match.group("display") or match.group("paren") or match.group("dollar")
+        if body is not None:
+            inspect(body)
+    for match in MATH_ENV_RE.finditer(tex):
+        inspect(match.group("body"))
+    return findings
 
 
 def validate_layout_plan_assertions(tex: str, plan: dict[str, Any]) -> dict[str, int]:
@@ -2146,6 +2482,34 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
     if layout_rules:
         fused, layout_changes = apply_exact_text_replacements(fused, layout_rules)
         layout_replacement_count = len(layout_changes)
+    math_block_reflow_rules = layout_plan.get("math_block_reflows", [])
+    if not isinstance(math_block_reflow_rules, list):
+        raise ValueError("layout replacement plan math_block_reflows must be an array")
+    fused, math_block_reflow_changes = apply_evidence_math_block_reflows(
+        fused, math_block_reflow_rules
+    )
+    math_reflow_rules = layout_plan.get("math_reflows", [])
+    if not isinstance(math_reflow_rules, list):
+        raise ValueError("layout replacement plan math_reflows must be an array")
+    fused, math_reflow_changes = apply_evidence_math_reflows(
+        fused, math_reflow_rules
+    )
+    unresolved_run_on_math = suspicious_run_on_inline_math(fused)
+    if unresolved_run_on_math:
+        preview = "; ".join(
+            " ".join(body.split())[:180] for body in unresolved_run_on_math[:4]
+        )
+        raise ValueError(
+            f"{book_id} still has {len(unresolved_run_on_math)} fused inline "
+            f"derivations after evidence reflow: {preview}"
+        )
+    dangling_math = suspicious_dangling_math_rows(fused)
+    if dangling_math:
+        preview = "; ".join(dangling_math[:6])
+        raise ValueError(
+            f"{book_id} still has {len(dangling_math)} dangling equation "
+            f"rows after evidence repair: {preview}"
+        )
     expected_graphics_delta = layout_plan.get("expected_includegraphics_delta", 0)
     if not isinstance(expected_graphics_delta, int):
         raise ValueError("expected_includegraphics_delta must be an integer")
@@ -2239,6 +2603,14 @@ def assemble(book_id: str, *, compile_pdfs: bool) -> dict[str, Any]:
         "normalized_unicode_text_fallbacks": unicode_text_fallback_count,
         "evidence_backed_segment_repairs": len(segment_repair_changes),
         "evidence_backed_layout_replacements": layout_replacement_count,
+        "evidence_backed_math_block_reflows": len(math_block_reflow_changes),
+        "reflowed_math_block_occurrences": sum(
+            int(change["occurrences"]) for change in math_block_reflow_changes
+        ),
+        "evidence_backed_math_reflows": len(math_reflow_changes),
+        "reflowed_math_occurrences": sum(
+            int(change["occurrences"]) for change in math_reflow_changes
+        ),
         "expected_includegraphics_delta": expected_graphics_delta,
         "repaired_content_includegraphics": actual_content_graphics,
         "layout_plan_assertions": layout_assertions,

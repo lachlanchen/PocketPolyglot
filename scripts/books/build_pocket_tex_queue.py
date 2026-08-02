@@ -1310,7 +1310,17 @@ def wrap_wide_display_math(text: str, *, layout: str) -> str:
 
         return DISPLAY_MATH_RE.sub(repl, fragment)
 
-    return transform_outside_wide_math_wrappers(text, transform)
+    wrapped = transform_outside_wide_math_wrappers(text, transform)
+    # A source display often ends with ``\\\\`` because Mathpix treated it
+    # like a prose line.  Once wrapped as a standalone centered display, that
+    # break has no line to terminate and can stop XeLaTeX.  Consume only a
+    # break immediately following a wrapper created by this function.
+    return re.sub(
+        rf"({re.escape(WIDE_MATH_END)})(?P<spacing>[ \t]*(?:\r?\n[ \t]*)*)"
+        r"\\\\(?:\[[^\]]+\])?",
+        lambda match: match.group(1) + match.group("spacing"),
+        wrapped,
+    )
 
 
 def wrap_wide_math_environments(text: str, *, layout: str) -> tuple[str, int]:
@@ -1366,7 +1376,10 @@ def wrap_wide_inline_math(text: str, *, layout: str) -> tuple[str, int]:
     # slightly under 100 compact characters. Fit those predictably instead of
     # discovering them only after a costly full-book compile.
     absolute_length = 180 if layout == "exact" else 70
-    fitted_width = ".60" if layout == "exact" else ".56"
+    # A break opportunity is inserted immediately before the fitted atom, so
+    # a long formula can occupy its own line.  Restricting pocket equations to
+    # 56% of that line made valid TeX look like a tiny raster thumbnail.
+    fitted_width = ".94"
     fitted = 0
     moving_spans: list[tuple[int, int]] = []
     for command in MOVING_ARGUMENT_RE.finditer(text):

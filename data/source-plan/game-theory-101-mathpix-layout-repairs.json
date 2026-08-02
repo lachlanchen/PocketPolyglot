@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 5,
   "book_id": "game-theory-101-mathpix-exact-book",
   "policy": "Evidence-locked repairs preserve accepted prose while reconstructing payoff matrices and equations from cited source pages.",
   "segment_repairs": [
@@ -149,6 +149,613 @@
         "Game_Theory_101_Complete_Textbook_2011.pdf#page=12"
       ],
       "reason": "Reconstruct the remaining three payoff-matrix examples and their intervening prose from the source page instead of one malformed OCR table."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s147b5695fd69-01",
+      "source_sha256": "147b5695fd692cd86a49c235c5b789803caf7e8190520c06f098d05ac9037cab",
+      "expected_en_sha256": "862aed364293a31bf91315566bbeff6356c1675e38220a7dc7f37767491e5b2b",
+      "expected_ja_sha256": "9dcb270c9dc0b3087675c584f91b428f8a0569bb3ac9429c242d5516cdb8c475",
+      "en_tex": "As before, we group all terms with \\(\\sigma_{\\text{left}}\\) on one side and the remaining terms on the other:\n\n\\[\n\\begin{aligned}\nB\\sigma_{\\text{left}}+C-C\\sigma_{\\text{left}} &= C\\sigma_{\\text{left}}+A-A\\sigma_{\\text{left}} \\\\\nA\\sigma_{\\text{left}}+B\\sigma_{\\text{left}}-2C\\sigma_{\\text{left}} &= A-C\n\\end{aligned}\n\\]",
+      "ja_tex": "前と同様に、\\(\\sigma_{\\text{left}}\\) を含むすべての項を一方の辺にまとめ、残りの項をもう一方の辺にまとめる。\n\n\\[\n\\begin{aligned}\nB\\sigma_{\\text{left}}+C-C\\sigma_{\\text{left}} &= C\\sigma_{\\text{left}}+A-A\\sigma_{\\text{left}} \\\\\nA\\sigma_{\\text{left}}+B\\sigma_{\\text{left}}-2C\\sigma_{\\text{left}} &= A-C\n\\end{aligned}\n\\]",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=274"
+      ],
+      "reason": "Join the OCR-split A-C term and restore the two printed algebra rows."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s7cc026d90873-01",
+      "source_sha256": "7cc026d908736cb763f4b4bbde8982965e623e3be6f8797bd33082ab10fce7a5",
+      "expected_en_sha256": "7cc026d908736cb763f4b4bbde8982965e623e3be6f8797bd33082ab10fce7a5",
+      "expected_ja_sha256": "7cc026d908736cb763f4b4bbde8982965e623e3be6f8797bd33082ab10fce7a5",
+      "en_tex": "\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{hawk}} &= \\mathrm{EU}_{\\text{dove}} \\\\\n\\mathrm{EU}_{\\text{hawk}} &= \\sigma_{\\text{hawk}}\\left(\\frac{v}{2}-c\\right)+(1-\\sigma_{\\text{hawk}})v \\\\\n\\mathrm{EU}_{\\text{dove}} &= \\sigma_{\\text{hawk}}(0)+(1-\\sigma_{\\text{hawk}})\\frac{v}{2}\n\\end{aligned}\n\\]",
+      "ja_tex": "\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{hawk}} &= \\mathrm{EU}_{\\text{dove}} \\\\\n\\mathrm{EU}_{\\text{hawk}} &= \\sigma_{\\text{hawk}}\\left(\\frac{v}{2}-c\\right)+(1-\\sigma_{\\text{hawk}})v \\\\\n\\mathrm{EU}_{\\text{dove}} &= \\sigma_{\\text{hawk}}(0)+(1-\\sigma_{\\text{hawk}})\\frac{v}{2}\n\\end{aligned}\n\\]",
+      "source_tex": "\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{hawk}} &= \\mathrm{EU}_{\\text{dove}} \\\\\n\\mathrm{EU}_{\\text{hawk}} &= \\sigma_{\\text{hawk}}\\left(\\frac{v}{2}-c\\right)+(1-\\sigma_{\\text{hawk}})v \\\\\n\\mathrm{EU}_{\\text{dove}} &= \\sigma_{\\text{hawk}}(0)+(1-\\sigma_{\\text{hawk}})\\frac{v}{2}\n\\end{aligned}\n\\]",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=289"
+      ],
+      "reason": "Separate the hawk and dove expected-utility definitions before the source page break."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-sf851578d835e-01",
+      "source_sha256": "f851578d835e609b68c25d6b889b551431697ddb87468c42a6c78bac7b4214c6",
+      "expected_en_sha256": "f851578d835e609b68c25d6b889b551431697ddb87468c42a6c78bac7b4214c6",
+      "expected_ja_sha256": "f851578d835e609b68c25d6b889b551431697ddb87468c42a6c78bac7b4214c6",
+      "en_tex": "\\[\n\\begin{aligned}\n\\sigma_{\\text{hawk}}\\left(\\frac{v}{2}-c\\right)+(1-\\sigma_{\\text{hawk}})v &= (1-\\sigma_{\\text{hawk}})\\frac{v}{2} \\\\\n\\frac{v\\sigma_{\\text{hawk}}}{2}-c\\sigma_{\\text{hawk}}+v-v\\sigma_{\\text{hawk}} &= \\frac{v}{2}-\\frac{v\\sigma_{\\text{hawk}}}{2} \\\\\n-c\\sigma_{\\text{hawk}}+v &= \\frac{v}{2} \\\\\nc\\sigma_{\\text{hawk}} &= \\frac{v}{2} \\\\\n\\sigma_{\\text{hawk}} &= \\frac{v}{2c}\n\\end{aligned}\n\\]",
+      "ja_tex": "\\[\n\\begin{aligned}\n\\sigma_{\\text{hawk}}\\left(\\frac{v}{2}-c\\right)+(1-\\sigma_{\\text{hawk}})v &= (1-\\sigma_{\\text{hawk}})\\frac{v}{2} \\\\\n\\frac{v\\sigma_{\\text{hawk}}}{2}-c\\sigma_{\\text{hawk}}+v-v\\sigma_{\\text{hawk}} &= \\frac{v}{2}-\\frac{v\\sigma_{\\text{hawk}}}{2} \\\\\n-c\\sigma_{\\text{hawk}}+v &= \\frac{v}{2} \\\\\nc\\sigma_{\\text{hawk}} &= \\frac{v}{2} \\\\\n\\sigma_{\\text{hawk}} &= \\frac{v}{2c}\n\\end{aligned}\n\\]",
+      "source_tex": "\\[\n\\begin{aligned}\n\\sigma_{\\text{hawk}}\\left(\\frac{v}{2}-c\\right)+(1-\\sigma_{\\text{hawk}})v &= (1-\\sigma_{\\text{hawk}})\\frac{v}{2} \\\\\n\\frac{v\\sigma_{\\text{hawk}}}{2}-c\\sigma_{\\text{hawk}}+v-v\\sigma_{\\text{hawk}} &= \\frac{v}{2}-\\frac{v\\sigma_{\\text{hawk}}}{2} \\\\\n-c\\sigma_{\\text{hawk}}+v &= \\frac{v}{2} \\\\\nc\\sigma_{\\text{hawk}} &= \\frac{v}{2} \\\\\n\\sigma_{\\text{hawk}} &= \\frac{v}{2c}\n\\end{aligned}\n\\]",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=290"
+      ],
+      "reason": "Restore the continuation of the hawk-dove derivation with correct subscripts and fraction grouping."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s95240c09a1de-01",
+      "source_sha256": "95240c09a1de339b428e9a174455af055a92353190daedad018416ec995a40cf",
+      "expected_en_sha256": "95240c09a1de339b428e9a174455af055a92353190daedad018416ec995a40cf",
+      "expected_ja_sha256": "95240c09a1de339b428e9a174455af055a92353190daedad018416ec995a40cf",
+      "en_tex": "\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{hawk}} &\\geq \\mathrm{EU}_{\\text{dove}} \\\\\n\\mathrm{EU}_{\\text{hawk}} &= \\sigma_{\\text{hawk}}(0)+(1-\\sigma_{\\text{hawk}})v \\\\\n\\mathrm{EU}_{\\text{dove}} &= \\sigma_{\\text{hawk}}(0)+(1-\\sigma_{\\text{hawk}})\\frac{v}{2} \\\\\n(1-\\sigma_{\\text{hawk}})v &\\geq (1-\\sigma_{\\text{hawk}})\\frac{v}{2} \\\\\nv-v\\sigma_{\\text{hawk}} &\\geq \\frac{v}{2}-\\frac{v\\sigma_{\\text{hawk}}}{2} \\\\\n\\frac{v}{2} &\\geq \\frac{v\\sigma_{\\text{hawk}}}{2} \\\\\n\\sigma_{\\text{hawk}} &\\leq 1\n\\end{aligned}\n\\]",
+      "ja_tex": "\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{hawk}} &\\geq \\mathrm{EU}_{\\text{dove}} \\\\\n\\mathrm{EU}_{\\text{hawk}} &= \\sigma_{\\text{hawk}}(0)+(1-\\sigma_{\\text{hawk}})v \\\\\n\\mathrm{EU}_{\\text{dove}} &= \\sigma_{\\text{hawk}}(0)+(1-\\sigma_{\\text{hawk}})\\frac{v}{2} \\\\\n(1-\\sigma_{\\text{hawk}})v &\\geq (1-\\sigma_{\\text{hawk}})\\frac{v}{2} \\\\\nv-v\\sigma_{\\text{hawk}} &\\geq \\frac{v}{2}-\\frac{v\\sigma_{\\text{hawk}}}{2} \\\\\n\\frac{v}{2} &\\geq \\frac{v\\sigma_{\\text{hawk}}}{2} \\\\\n\\sigma_{\\text{hawk}} &\\leq 1\n\\end{aligned}\n\\]",
+      "source_tex": "\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{hawk}} &\\geq \\mathrm{EU}_{\\text{dove}} \\\\\n\\mathrm{EU}_{\\text{hawk}} &= \\sigma_{\\text{hawk}}(0)+(1-\\sigma_{\\text{hawk}})v \\\\\n\\mathrm{EU}_{\\text{dove}} &= \\sigma_{\\text{hawk}}(0)+(1-\\sigma_{\\text{hawk}})\\frac{v}{2} \\\\\n(1-\\sigma_{\\text{hawk}})v &\\geq (1-\\sigma_{\\text{hawk}})\\frac{v}{2} \\\\\nv-v\\sigma_{\\text{hawk}} &\\geq \\frac{v}{2}-\\frac{v\\sigma_{\\text{hawk}}}{2} \\\\\n\\frac{v}{2} &\\geq \\frac{v\\sigma_{\\text{hawk}}}{2} \\\\\n\\sigma_{\\text{hawk}} &\\leq 1\n\\end{aligned}\n\\]",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=292"
+      ],
+      "reason": "Separate the fused best-response inequality into the seven printed steps."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s2851f8a01513-01",
+      "source_sha256": "2851f8a015138bc3feb21e14f1f389949a9adfb09b5741025d46eaa83342b4be",
+      "expected_en_sha256": "2851f8a015138bc3feb21e14f1f389949a9adfb09b5741025d46eaa83342b4be",
+      "expected_ja_sha256": "0f29acf9ac831186a1ad36704d2f78930a45514c02dcb5b46de166370704ea82",
+      "en_tex": "This time, the goalie earns \\(-x\\) with probability \\(\\sigma_{\\mathrm{KL}}\\) and 0 with probability \\(1-\\sigma_{\\mathrm{KL}}\\). Thus,\n\n\\[\n\\mathrm{EU}_{\\mathrm{DR}}=\\sigma_{\\mathrm{KL}}(-x)+(1-\\sigma_{\\mathrm{KL}})(0)\n\\]\n\nAs before, set the expected utilities equal and solve for \\(\\sigma_{\\mathrm{KL}}\\):\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\mathrm{DL}} &= \\mathrm{EU}_{\\mathrm{DR}} \\\\\n\\mathrm{EU}_{\\mathrm{DL}} &= \\sigma_{\\mathrm{KL}}(0)+(1-\\sigma_{\\mathrm{KL}})(-1) \\\\\n\\mathrm{EU}_{\\mathrm{DR}} &= \\sigma_{\\mathrm{KL}}(-x)+(1-\\sigma_{\\mathrm{KL}})(0) \\\\\n(1-\\sigma_{\\mathrm{KL}})(-1) &= -x\\sigma_{\\mathrm{KL}} \\\\\n-1+\\sigma_{\\mathrm{KL}} &= -x\\sigma_{\\mathrm{KL}} \\\\\n\\sigma_{\\mathrm{KL}}+x\\sigma_{\\mathrm{KL}} &= 1 \\\\\n\\sigma_{\\mathrm{KL}}(1+x) &= 1 \\\\\n\\sigma_{\\mathrm{KL}} &= \\frac{1}{1+x}\n\\end{aligned}\n\\]",
+      "ja_tex": "今回は、ゴールキーパーは確率 \\(\\sigma_{\\mathrm{KL}}\\) で \\(-x\\)、確率 \\(1-\\sigma_{\\mathrm{KL}}\\) で 0 の利得を得る。したがって、\n\n\\[\n\\mathrm{EU}_{\\mathrm{DR}}=\\sigma_{\\mathrm{KL}}(-x)+(1-\\sigma_{\\mathrm{KL}})(0)\n\\]\n\n先ほどと同様に、二つの期待効用を等しいと置き、\\(\\sigma_{\\mathrm{KL}}\\) について解く。\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\mathrm{DL}} &= \\mathrm{EU}_{\\mathrm{DR}} \\\\\n\\mathrm{EU}_{\\mathrm{DL}} &= \\sigma_{\\mathrm{KL}}(0)+(1-\\sigma_{\\mathrm{KL}})(-1) \\\\\n\\mathrm{EU}_{\\mathrm{DR}} &= \\sigma_{\\mathrm{KL}}(-x)+(1-\\sigma_{\\mathrm{KL}})(0) \\\\\n(1-\\sigma_{\\mathrm{KL}})(-1) &= -x\\sigma_{\\mathrm{KL}} \\\\\n-1+\\sigma_{\\mathrm{KL}} &= -x\\sigma_{\\mathrm{KL}} \\\\\n\\sigma_{\\mathrm{KL}}+x\\sigma_{\\mathrm{KL}} &= 1 \\\\\n\\sigma_{\\mathrm{KL}}(1+x) &= 1 \\\\\n\\sigma_{\\mathrm{KL}} &= \\frac{1}{1+x}\n\\end{aligned}\n\\]",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=302",
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=303"
+      ],
+      "reason": "Join the source-page continuation and restore the complete goalie indifference calculation."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s587196fc4c56-01",
+      "source_sha256": "587196fc4c56e37acec6e76ba3f84a833eb68812ef16c0b6127516054e752766",
+      "expected_en_sha256": "587196fc4c56e37acec6e76ba3f84a833eb68812ef16c0b6127516054e752766",
+      "expected_ja_sha256": "36fe6adce19b07ea4e6e722875d884eeb77d77b8d8c77d2a81864301305bb15b",
+      "en_tex": "This is a valid probability distribution: 1 and \\(1+x\\) are positive, and \\(1+x>1\\).",
+      "ja_tex": "これは有効な確率分布である。1 と \\(1+x\\) はともに正であり、\\(1+x>1\\) である。",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=303"
+      ],
+      "reason": "Remove only the duplicated page-continuation algebra after moving it into the preceding source-locked segment."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s11d622c6c932-01",
+      "source_sha256": "11d622c6c932924c715b72757598d6d2e5a0245ad4bf6a0464cc5d9a94ac723d",
+      "expected_en_sha256": "11d622c6c932924c715b72757598d6d2e5a0245ad4bf6a0464cc5d9a94ac723d",
+      "expected_ja_sha256": "a14628dfbb0875009c4054a278f9ab882e8397534cdbbbdf77ea6a594b93c541",
+      "en_tex": "This time, he earns 0 with probability \\(\\sigma_{\\mathrm{TF}}\\) and \\(1+x\\) with probability \\(1-\\sigma_{\\mathrm{TF}}\\). Thus,\n\n\\[\n\\mathrm{EU}_{\\mathrm{GC}}=\\sigma_{\\mathrm{TF}}(0)+(1-\\sigma_{\\mathrm{TF}})(1+x)\n\\]\n\nSet the two expected utilities equal and solve for \\(\\sigma_{\\mathrm{TF}}\\):\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\mathrm{GF}} &= \\mathrm{EU}_{\\mathrm{GC}} \\\\\n\\mathrm{EU}_{\\mathrm{GF}} &= \\sigma_{\\mathrm{TF}}(1)+(1-\\sigma_{\\mathrm{TF}})x \\\\\n\\mathrm{EU}_{\\mathrm{GC}} &= \\sigma_{\\mathrm{TF}}(0)+(1-\\sigma_{\\mathrm{TF}})(1+x) \\\\\n\\sigma_{\\mathrm{TF}}+x-x\\sigma_{\\mathrm{TF}} &= 1-\\sigma_{\\mathrm{TF}}+x-x\\sigma_{\\mathrm{TF}} \\\\\n\\sigma_{\\mathrm{TF}} &= 1-\\sigma_{\\mathrm{TF}} \\\\\n2\\sigma_{\\mathrm{TF}} &= 1 \\\\\n\\sigma_{\\mathrm{TF}} &= \\frac12\n\\end{aligned}\n\\]\n\nSo when the pitcher throws fastballs half the time and curveballs the other half, the batter is indifferent between the two guesses. The parameter \\(x\\) disappears, so the pitcher's optimal strategy is constant on this interval. Whether \\(x=.01\\) or \\(x=.99\\), she throws curveballs at the same frequency; when \\(x>1\\), she stops throwing them altogether.",
+      "ja_tex": "今回は、確率 \\(\\sigma_{\\mathrm{TF}}\\) で利得は0となり、確率 \\(1-\\sigma_{\\mathrm{TF}}\\) で利得は \\(1+x\\) となる。したがって、\n\n\\[\n\\mathrm{EU}_{\\mathrm{GC}}=\\sigma_{\\mathrm{TF}}(0)+(1-\\sigma_{\\mathrm{TF}})(1+x)\n\\]\n\n二つの期待効用を等しいと置き、\\(\\sigma_{\\mathrm{TF}}\\) について解く。\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\mathrm{GF}} &= \\mathrm{EU}_{\\mathrm{GC}} \\\\\n\\mathrm{EU}_{\\mathrm{GF}} &= \\sigma_{\\mathrm{TF}}(1)+(1-\\sigma_{\\mathrm{TF}})x \\\\\n\\mathrm{EU}_{\\mathrm{GC}} &= \\sigma_{\\mathrm{TF}}(0)+(1-\\sigma_{\\mathrm{TF}})(1+x) \\\\\n\\sigma_{\\mathrm{TF}}+x-x\\sigma_{\\mathrm{TF}} &= 1-\\sigma_{\\mathrm{TF}}+x-x\\sigma_{\\mathrm{TF}} \\\\\n\\sigma_{\\mathrm{TF}} &= 1-\\sigma_{\\mathrm{TF}} \\\\\n2\\sigma_{\\mathrm{TF}} &= 1 \\\\\n\\sigma_{\\mathrm{TF}} &= \\frac12\n\\end{aligned}\n\\]\n\nしたがって、投手が半分の確率で速球を、残りの半分でカーブを投げるとき、打者は二つの予想の間で無差別になる。式から \\(x\\) が消えるため、この区間では投手の最適戦略は変化しない。\\(x=.01\\) でも \\(x=.99\\) でもカーブの頻度は同じであり、\\(x>1\\) になるとカーブをまったく投げなくなる。",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=314"
+      ],
+      "reason": "Restore the baseball derivation as complete aligned rows and retain the source conclusion."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-sa12083f0cbb0-01",
+      "source_sha256": "a12083f0cbb0b6e0ec0b419ed5fb57a963bb90f4dce72e90b36ccae1ef353edd",
+      "expected_en_sha256": "a12083f0cbb0b6e0ec0b419ed5fb57a963bb90f4dce72e90b36ccae1ef353edd",
+      "expected_ja_sha256": "a12083f0cbb0b6e0ec0b419ed5fb57a963bb90f4dce72e90b36ccae1ef353edd",
+      "en_tex": "\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{right}} &\\geq \\mathrm{EU}_{\\text{left}} \\\\\n\\mathrm{EU}_{\\text{right}} &= \\sigma_{\\text{middle}}(3)+(1-\\sigma_{\\text{middle}})(-1) \\\\\n\\mathrm{EU}_{\\text{left}} &= \\sigma_{\\text{middle}}(3)+(1-\\sigma_{\\text{middle}})(2) \\\\\n(1-\\sigma_{\\text{middle}})(-1) &\\geq (1-\\sigma_{\\text{middle}})(2)\n\\end{aligned}\n\\]",
+      "ja_tex": "\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{right}} &\\geq \\mathrm{EU}_{\\text{left}} \\\\\n\\mathrm{EU}_{\\text{right}} &= \\sigma_{\\text{middle}}(3)+(1-\\sigma_{\\text{middle}})(-1) \\\\\n\\mathrm{EU}_{\\text{left}} &= \\sigma_{\\text{middle}}(3)+(1-\\sigma_{\\text{middle}})(2) \\\\\n(1-\\sigma_{\\text{middle}})(-1) &\\geq (1-\\sigma_{\\text{middle}})(2)\n\\end{aligned}\n\\]",
+      "source_tex": "\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{right}} &\\geq \\mathrm{EU}_{\\text{left}} \\\\\n\\mathrm{EU}_{\\text{right}} &= \\sigma_{\\text{middle}}(3)+(1-\\sigma_{\\text{middle}})(-1) \\\\\n\\mathrm{EU}_{\\text{left}} &= \\sigma_{\\text{middle}}(3)+(1-\\sigma_{\\text{middle}})(2) \\\\\n(1-\\sigma_{\\text{middle}})(-1) &\\geq (1-\\sigma_{\\text{middle}})(2)\n\\end{aligned}\n\\]",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=329"
+      ],
+      "reason": "Separate the fused right-versus-left best-response inequality."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-sa2c273d5621b-01",
+      "source_sha256": "a2c273d5621b7c2fba1db9834ed96f18cb5dee86ce41ce4c668a9ac297999d79",
+      "expected_en_sha256": "d6f1eedbb2d640b357b61a12923b25b52c81633e23acd53eb0adbf14e8e9ee5b",
+      "expected_ja_sha256": "b248163d1ac439eaad1eb48a0b8e8c03c758f471da7b2eaa262ea20e163851aa",
+      "en_tex": "Because player 1 is genuinely mixing, \\(1-\\sigma_{\\text{middle}}>0\\), so we may divide by it:\n\n\\[\n-1 \\geq 2\n\\]",
+      "ja_tex": "プレイヤー1は実際に混合しているので \\(1-\\sigma_{\\text{middle}}>0\\) であり、これで割ることができる。\n\n\\[\n-1 \\geq 2\n\\]",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=329"
+      ],
+      "reason": "Restore the omitted 1-sigma term and separate the contradiction from the preceding inequality."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-sd2976796cba8-01",
+      "source_sha256": "d2976796cba88fd7fd12679b90ee41956631bf24612d6cbf35c583bbb7a8604c",
+      "expected_en_sha256": "d2976796cba88fd7fd12679b90ee41956631bf24612d6cbf35c583bbb7a8604c",
+      "expected_ja_sha256": "aac76e0157bad2a7afcc4ca5c9a187fe1e6156df4f4ecc25e35f7ac5d29653f1",
+      "en_tex": "We seek \\(\\sigma_{\\text{rock}}\\) and \\(\\sigma_{\\text{paper}}\\) that leave player 1 indifferent among all three strategies. Set the expected utilities equal:\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{rock}} &= \\mathrm{EU}_{\\text{paper}} = \\mathrm{EU}_{\\text{scissors}} \\\\\n\\mathrm{EU}_{\\text{rock}} &= \\sigma_{\\text{rock}}(0)+\\sigma_{\\text{paper}}(-x)+(1-\\sigma_{\\text{rock}}-\\sigma_{\\text{paper}})y \\\\\n&= -x\\sigma_{\\text{paper}}+y-y\\sigma_{\\text{rock}}-y\\sigma_{\\text{paper}} \\\\\n\\mathrm{EU}_{\\text{paper}} &= \\sigma_{\\text{rock}}x+\\sigma_{\\text{paper}}(0)+(1-\\sigma_{\\text{rock}}-\\sigma_{\\text{paper}})(-z) \\\\\n&= x\\sigma_{\\text{rock}}-z+z\\sigma_{\\text{rock}}+z\\sigma_{\\text{paper}} \\\\\n\\mathrm{EU}_{\\text{scissors}} &= \\sigma_{\\text{rock}}(-y)+\\sigma_{\\text{paper}}z+(1-\\sigma_{\\text{rock}}-\\sigma_{\\text{paper}})(0) \\\\\n&= -y\\sigma_{\\text{rock}}+z\\sigma_{\\text{paper}}\n\\end{aligned}\n\\]\n\nThe simplified scissors utility has only two terms. Its \\(\\sigma_{\\text{rock}}\\) term matches rock's, and its \\(\\sigma_{\\text{paper}}\\) term matches paper's. We can therefore pair scissors with rock to solve for \\(\\sigma_{\\text{paper}}\\), and scissors with paper to solve for \\(\\sigma_{\\text{rock}}\\).",
+      "ja_tex": "プレイヤー1が三つの戦略すべての間で無差別になる \\(\\sigma_{\\text{rock}}\\) と \\(\\sigma_{\\text{paper}}\\) を求める。期待効用を互いに等しいと置く。\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{rock}} &= \\mathrm{EU}_{\\text{paper}} = \\mathrm{EU}_{\\text{scissors}} \\\\\n\\mathrm{EU}_{\\text{rock}} &= \\sigma_{\\text{rock}}(0)+\\sigma_{\\text{paper}}(-x)+(1-\\sigma_{\\text{rock}}-\\sigma_{\\text{paper}})y \\\\\n&= -x\\sigma_{\\text{paper}}+y-y\\sigma_{\\text{rock}}-y\\sigma_{\\text{paper}} \\\\\n\\mathrm{EU}_{\\text{paper}} &= \\sigma_{\\text{rock}}x+\\sigma_{\\text{paper}}(0)+(1-\\sigma_{\\text{rock}}-\\sigma_{\\text{paper}})(-z) \\\\\n&= x\\sigma_{\\text{rock}}-z+z\\sigma_{\\text{rock}}+z\\sigma_{\\text{paper}} \\\\\n\\mathrm{EU}_{\\text{scissors}} &= \\sigma_{\\text{rock}}(-y)+\\sigma_{\\text{paper}}z+(1-\\sigma_{\\text{rock}}-\\sigma_{\\text{paper}})(0) \\\\\n&= -y\\sigma_{\\text{rock}}+z\\sigma_{\\text{paper}}\n\\end{aligned}\n\\]\n\n単純化したチョキの期待効用は二項だけである。\\(\\sigma_{\\text{rock}}\\) の項はグーの式と、\\(\\sigma_{\\text{paper}}\\) の項はパーの式と一致する。したがって、チョキとグーを組み合わせて \\(\\sigma_{\\text{paper}}\\) を、チョキとパーを組み合わせて \\(\\sigma_{\\text{rock}}\\) を求められる。",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=344"
+      ],
+      "reason": "Restore all three generalized rock-paper-scissors expected-utility definitions as native aligned math."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s86996a19215d-01",
+      "source_sha256": "86996a19215d6c4ee30ef815e82c32eae4a18bb46be4571aa2edb3bb78e28c9a",
+      "expected_en_sha256": "86996a19215d6c4ee30ef815e82c32eae4a18bb46be4571aa2edb3bb78e28c9a",
+      "expected_ja_sha256": "062813f2a6bb7a839641dcd5bf80a8f8c92c8154bfac95ed850d16296be4e739",
+      "en_tex": "The algebra is straightforward. First solve for \\(\\sigma_{\\text{paper}}\\):\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{rock}} &= \\mathrm{EU}_{\\text{scissors}} \\\\\n-y\\sigma_{\\text{rock}}+z\\sigma_{\\text{paper}} &= -x\\sigma_{\\text{paper}}+y-y\\sigma_{\\text{rock}}-y\\sigma_{\\text{paper}} \\\\\nz\\sigma_{\\text{paper}} &= -x\\sigma_{\\text{paper}}+y-y\\sigma_{\\text{paper}} \\\\\n(x+y+z)\\sigma_{\\text{paper}} &= y \\\\\n\\sigma_{\\text{paper}} &= \\frac{y}{x+y+z}\n\\end{aligned}\n\\]",
+      "ja_tex": "実際の計算は単純である。まず \\(\\sigma_{\\text{paper}}\\) を求める。\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{rock}} &= \\mathrm{EU}_{\\text{scissors}} \\\\\n-y\\sigma_{\\text{rock}}+z\\sigma_{\\text{paper}} &= -x\\sigma_{\\text{paper}}+y-y\\sigma_{\\text{rock}}-y\\sigma_{\\text{paper}} \\\\\nz\\sigma_{\\text{paper}} &= -x\\sigma_{\\text{paper}}+y-y\\sigma_{\\text{paper}} \\\\\n(x+y+z)\\sigma_{\\text{paper}} &= y \\\\\n\\sigma_{\\text{paper}} &= \\frac{y}{x+y+z}\n\\end{aligned}\n\\]",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=344",
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=345"
+      ],
+      "reason": "Join the page-split paper-probability derivation and preserve every printed algebra step."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-scaeabaa5921e-01",
+      "source_sha256": "caeabaa5921ee533d372f996868de022917a018fb0eac76b2fc29e79895eea94",
+      "expected_en_sha256": "caeabaa5921ee533d372f996868de022917a018fb0eac76b2fc29e79895eea94",
+      "expected_ja_sha256": "caeabaa5921ee533d372f996868de022917a018fb0eac76b2fc29e79895eea94",
+      "en_tex": "",
+      "ja_tex": "",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=345"
+      ],
+      "reason": "The source-page continuation is now included once in the preceding repaired segment."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s43883d26c32f-01",
+      "source_sha256": "43883d26c32fdc292ef20e27e58dc34b59d392eca273bc2580a428ffa0fdc031",
+      "expected_en_sha256": "43883d26c32fdc292ef20e27e58dc34b59d392eca273bc2580a428ffa0fdc031",
+      "expected_ja_sha256": "577b8579fe33f541a611dcbf234255f854d9d99aea99e226d4ddcf855ff7ec85",
+      "en_tex": "Now solve for \\(\\sigma_{\\text{rock}}\\). Equating the scissors and paper utilities eliminates \\(\\sigma_{\\text{paper}}\\):\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{paper}} &= \\mathrm{EU}_{\\text{scissors}} \\\\\n-y\\sigma_{\\text{rock}}+z\\sigma_{\\text{paper}} &= x\\sigma_{\\text{rock}}-z+z\\sigma_{\\text{rock}}+z\\sigma_{\\text{paper}} \\\\\n-y\\sigma_{\\text{rock}} &= x\\sigma_{\\text{rock}}-z+z\\sigma_{\\text{rock}} \\\\\n(x+y+z)\\sigma_{\\text{rock}} &= z \\\\\n\\sigma_{\\text{rock}} &= \\frac{z}{x+y+z}\n\\end{aligned}\n\\]",
+      "ja_tex": "次に \\(\\sigma_{\\text{rock}}\\) を求める。チョキとパーの期待効用を等しく置けば \\(\\sigma_{\\text{paper}}\\) を消去できる。\n\n\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{paper}} &= \\mathrm{EU}_{\\text{scissors}} \\\\\n-y\\sigma_{\\text{rock}}+z\\sigma_{\\text{paper}} &= x\\sigma_{\\text{rock}}-z+z\\sigma_{\\text{rock}}+z\\sigma_{\\text{paper}} \\\\\n-y\\sigma_{\\text{rock}} &= x\\sigma_{\\text{rock}}-z+z\\sigma_{\\text{rock}} \\\\\n(x+y+z)\\sigma_{\\text{rock}} &= z \\\\\n\\sigma_{\\text{rock}} &= \\frac{z}{x+y+z}\n\\end{aligned}\n\\]",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=345"
+      ],
+      "reason": "Correct the OCR-capitalized variables and separate the rock-probability algebra."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s18d80735518f-01",
+      "source_sha256": "18d80735518f08cc39eb8a6b8a3c18dbf5150a1f9b9cccf628592f470dd1310d",
+      "expected_en_sha256": "18d80735518f08cc39eb8a6b8a3c18dbf5150a1f9b9cccf628592f470dd1310d",
+      "expected_ja_sha256": "18d80735518f08cc39eb8a6b8a3c18dbf5150a1f9b9cccf628592f470dd1310d",
+      "en_tex": "\\[\n\\begin{aligned}\n\\sigma_{\\text{scissors}} &= 1-\\sigma_{\\text{rock}}-\\sigma_{\\text{paper}} \\\\\n\\sigma_{\\text{rock}} &= \\frac{z}{x+y+z} \\\\\n\\sigma_{\\text{paper}} &= \\frac{y}{x+y+z} \\\\\n\\sigma_{\\text{scissors}} &= 1-\\frac{z}{x+y+z}-\\frac{y}{x+y+z} \\\\\n&= \\frac{x+y+z}{x+y+z}-\\frac{z}{x+y+z}-\\frac{y}{x+y+z} \\\\\n&= \\frac{x}{x+y+z}\n\\end{aligned}\n\\]",
+      "ja_tex": "\\[\n\\begin{aligned}\n\\sigma_{\\text{scissors}} &= 1-\\sigma_{\\text{rock}}-\\sigma_{\\text{paper}} \\\\\n\\sigma_{\\text{rock}} &= \\frac{z}{x+y+z} \\\\\n\\sigma_{\\text{paper}} &= \\frac{y}{x+y+z} \\\\\n\\sigma_{\\text{scissors}} &= 1-\\frac{z}{x+y+z}-\\frac{y}{x+y+z} \\\\\n&= \\frac{x+y+z}{x+y+z}-\\frac{z}{x+y+z}-\\frac{y}{x+y+z} \\\\\n&= \\frac{x}{x+y+z}\n\\end{aligned}\n\\]",
+      "source_tex": "\\[\n\\begin{aligned}\n\\sigma_{\\text{scissors}} &= 1-\\sigma_{\\text{rock}}-\\sigma_{\\text{paper}} \\\\\n\\sigma_{\\text{rock}} &= \\frac{z}{x+y+z} \\\\\n\\sigma_{\\text{paper}} &= \\frac{y}{x+y+z} \\\\\n\\sigma_{\\text{scissors}} &= 1-\\frac{z}{x+y+z}-\\frac{y}{x+y+z} \\\\\n&= \\frac{x+y+z}{x+y+z}-\\frac{z}{x+y+z}-\\frac{y}{x+y+z} \\\\\n&= \\frac{x}{x+y+z}\n\\end{aligned}\n\\]",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=345",
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=346"
+      ],
+      "reason": "Restore the complete scissors probability identity across the source page boundary."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-sda97838fc846-01",
+      "source_sha256": "da97838fc846dc792e896578118aee2974ea19b1e4ccac8ea14367299503e657",
+      "expected_en_sha256": "da97838fc846dc792e896578118aee2974ea19b1e4ccac8ea14367299503e657",
+      "expected_ja_sha256": "da97838fc846dc792e896578118aee2974ea19b1e4ccac8ea14367299503e657",
+      "en_tex": "",
+      "ja_tex": "",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=346"
+      ],
+      "reason": "The continuation is now represented once in the preceding protected equation block."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-sd79b93031cb3-01",
+      "source_sha256": "d79b93031cb3bec4a0a0930473bcfde44d1dbad326e73a40c5717bd35f248177",
+      "expected_en_sha256": "d79b93031cb3bec4a0a0930473bcfde44d1dbad326e73a40c5717bd35f248177",
+      "expected_ja_sha256": "d79b93031cb3bec4a0a0930473bcfde44d1dbad326e73a40c5717bd35f248177",
+      "en_tex": "\\[\n\\begin{aligned}\n\\sigma_{\\text{scissors}} &= \\frac{x}{x+y+z} \\\\\n\\sigma'_{\\text{scissors}} &= \\left(\\frac{x}{x+y+z}\\right)' \\\\\n&= \\frac{x'(x+y+z)-x(x+y+z)'}{(x+y+z)^2} \\\\\n&= \\frac{x+y+z-x}{(x+y+z)^2} \\\\\n&= \\frac{y+z}{(x+y+z)^2}\n\\end{aligned}\n\\]",
+      "ja_tex": "\\[\n\\begin{aligned}\n\\sigma_{\\text{scissors}} &= \\frac{x}{x+y+z} \\\\\n\\sigma'_{\\text{scissors}} &= \\left(\\frac{x}{x+y+z}\\right)' \\\\\n&= \\frac{x'(x+y+z)-x(x+y+z)'}{(x+y+z)^2} \\\\\n&= \\frac{x+y+z-x}{(x+y+z)^2} \\\\\n&= \\frac{y+z}{(x+y+z)^2}\n\\end{aligned}\n\\]",
+      "source_tex": "\\[\n\\begin{aligned}\n\\sigma_{\\text{scissors}} &= \\frac{x}{x+y+z} \\\\\n\\sigma'_{\\text{scissors}} &= \\left(\\frac{x}{x+y+z}\\right)' \\\\\n&= \\frac{x'(x+y+z)-x(x+y+z)'}{(x+y+z)^2} \\\\\n&= \\frac{x+y+z-x}{(x+y+z)^2} \\\\\n&= \\frac{y+z}{(x+y+z)^2}\n\\end{aligned}\n\\]",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=347"
+      ],
+      "reason": "Separate the quotient-rule setup and render its fractions and derivative consistently."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s507d3ea2772c-01",
+      "source_sha256": "507d3ea2772c8833ec7a0ae41cee64d6f54f9a2e121b082032ccace2be1336b3",
+      "expected_en_sha256": "507d3ea2772c8833ec7a0ae41cee64d6f54f9a2e121b082032ccace2be1336b3",
+      "expected_ja_sha256": "507d3ea2772c8833ec7a0ae41cee64d6f54f9a2e121b082032ccace2be1336b3",
+      "en_tex": "\\[\n\\begin{aligned}\n\\sigma_{\\text{up}}(-3)+\\sigma_{\\text{down}}(1) &= \\sigma_{\\text{up}}(2)+\\sigma_{\\text{down}}(0) \\\\\n\\sigma_{\\text{down}} &= 1-\\sigma_{\\text{up}} \\\\\n\\sigma_{\\text{up}}(-3)+(1-\\sigma_{\\text{up}})(1) &= \\sigma_{\\text{up}}(2)+(1-\\sigma_{\\text{up}})(0)\n\\end{aligned}\n\\]",
+      "ja_tex": "\\[\n\\begin{aligned}\n\\sigma_{\\text{up}}(-3)+\\sigma_{\\text{down}}(1) &= \\sigma_{\\text{up}}(2)+\\sigma_{\\text{down}}(0) \\\\\n\\sigma_{\\text{down}} &= 1-\\sigma_{\\text{up}} \\\\\n\\sigma_{\\text{up}}(-3)+(1-\\sigma_{\\text{up}})(1) &= \\sigma_{\\text{up}}(2)+(1-\\sigma_{\\text{up}})(0)\n\\end{aligned}\n\\]",
+      "source_tex": "\\[\n\\begin{aligned}\n\\sigma_{\\text{up}}(-3)+\\sigma_{\\text{down}}(1) &= \\sigma_{\\text{up}}(2)+\\sigma_{\\text{down}}(0) \\\\\n\\sigma_{\\text{down}} &= 1-\\sigma_{\\text{up}} \\\\\n\\sigma_{\\text{up}}(-3)+(1-\\sigma_{\\text{up}})(1) &= \\sigma_{\\text{up}}(2)+(1-\\sigma_{\\text{up}})(0)\n\\end{aligned}\n\\]",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=91"
+      ],
+      "reason": "Separate the substitution identity from the two indifference equations."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s68505d1912bf-01",
+      "source_sha256": "68505d1912bffce84c7b5a0f2d5c84dba8acc1c3c76438c0ee439f62694ea068",
+      "expected_en_sha256": "68505d1912bffce84c7b5a0f2d5c84dba8acc1c3c76438c0ee439f62694ea068",
+      "expected_ja_sha256": "68505d1912bffce84c7b5a0f2d5c84dba8acc1c3c76438c0ee439f62694ea068",
+      "en_tex": "\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{left}} &= \\mathrm{EU}_{\\text{right}} \\\\\n\\mathrm{EU}_{\\text{left}} &= \\sigma_{\\text{up}}(-1)+(1-\\sigma_{\\text{up}})(-12) \\\\\n\\mathrm{EU}_{\\text{right}} &= \\sigma_{\\text{up}}(0)+(1-\\sigma_{\\text{up}})(-8) \\\\\n\\sigma_{\\text{up}}(-1)+(1-\\sigma_{\\text{up}})(-12) &= \\sigma_{\\text{up}}(0)+(1-\\sigma_{\\text{up}})(-8) \\\\\n-\\sigma_{\\text{up}}-12+12\\sigma_{\\text{up}} &= -8+8\\sigma_{\\text{up}} \\\\\n-12+11\\sigma_{\\text{up}} &= -8+8\\sigma_{\\text{up}} \\\\\n3\\sigma_{\\text{up}} &= 4 \\\\\n\\sigma_{\\text{up}} &= \\frac{4}{3}\n\\end{aligned}\n\\]",
+      "ja_tex": "\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{left}} &= \\mathrm{EU}_{\\text{right}} \\\\\n\\mathrm{EU}_{\\text{left}} &= \\sigma_{\\text{up}}(-1)+(1-\\sigma_{\\text{up}})(-12) \\\\\n\\mathrm{EU}_{\\text{right}} &= \\sigma_{\\text{up}}(0)+(1-\\sigma_{\\text{up}})(-8) \\\\\n\\sigma_{\\text{up}}(-1)+(1-\\sigma_{\\text{up}})(-12) &= \\sigma_{\\text{up}}(0)+(1-\\sigma_{\\text{up}})(-8) \\\\\n-\\sigma_{\\text{up}}-12+12\\sigma_{\\text{up}} &= -8+8\\sigma_{\\text{up}} \\\\\n-12+11\\sigma_{\\text{up}} &= -8+8\\sigma_{\\text{up}} \\\\\n3\\sigma_{\\text{up}} &= 4 \\\\\n\\sigma_{\\text{up}} &= \\frac{4}{3}\n\\end{aligned}\n\\]",
+      "source_tex": "\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{left}} &= \\mathrm{EU}_{\\text{right}} \\\\\n\\mathrm{EU}_{\\text{left}} &= \\sigma_{\\text{up}}(-1)+(1-\\sigma_{\\text{up}})(-12) \\\\\n\\mathrm{EU}_{\\text{right}} &= \\sigma_{\\text{up}}(0)+(1-\\sigma_{\\text{up}})(-8) \\\\\n\\sigma_{\\text{up}}(-1)+(1-\\sigma_{\\text{up}})(-12) &= \\sigma_{\\text{up}}(0)+(1-\\sigma_{\\text{up}})(-8) \\\\\n-\\sigma_{\\text{up}}-12+12\\sigma_{\\text{up}} &= -8+8\\sigma_{\\text{up}} \\\\\n-12+11\\sigma_{\\text{up}} &= -8+8\\sigma_{\\text{up}} \\\\\n3\\sigma_{\\text{up}} &= 4 \\\\\n\\sigma_{\\text{up}} &= \\frac{4}{3}\n\\end{aligned}\n\\]",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=103"
+      ],
+      "reason": "Restore the prisoner-dilemma indifference calculation as eight complete aligned rows."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s8438c5af2ab8-01",
+      "source_sha256": "8438c5af2ab813f9dc096da03ba28db0e5be29ccfacbec3860ae3ea505e592fa",
+      "expected_en_sha256": "8438c5af2ab813f9dc096da03ba28db0e5be29ccfacbec3860ae3ea505e592fa",
+      "expected_ja_sha256": "8438c5af2ab813f9dc096da03ba28db0e5be29ccfacbec3860ae3ea505e592fa",
+      "en_tex": "\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{up}} &\\leq \\mathrm{EU}_{\\text{down}} \\\\\n\\mathrm{EU}_{\\text{up}} &= 3\\sigma_{\\text{left}} \\\\\n\\mathrm{EU}_{\\text{down}} &= 2 \\\\\n3\\sigma_{\\text{left}} &\\leq 2 \\\\\n\\sigma_{\\text{left}} &\\leq \\frac{2}{3}\n\\end{aligned}\n\\]",
+      "ja_tex": "\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{up}} &\\leq \\mathrm{EU}_{\\text{down}} \\\\\n\\mathrm{EU}_{\\text{up}} &= 3\\sigma_{\\text{left}} \\\\\n\\mathrm{EU}_{\\text{down}} &= 2 \\\\\n3\\sigma_{\\text{left}} &\\leq 2 \\\\\n\\sigma_{\\text{left}} &\\leq \\frac{2}{3}\n\\end{aligned}\n\\]",
+      "source_tex": "\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{up}} &\\leq \\mathrm{EU}_{\\text{down}} \\\\\n\\mathrm{EU}_{\\text{up}} &= 3\\sigma_{\\text{left}} \\\\\n\\mathrm{EU}_{\\text{down}} &= 2 \\\\\n3\\sigma_{\\text{left}} &\\leq 2 \\\\\n\\sigma_{\\text{left}} &\\leq \\frac{2}{3}\n\\end{aligned}\n\\]",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=145"
+      ],
+      "reason": "Separate the two expected-utility definitions from the best-response inequality."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s2711aaf5b156-01",
+      "source_sha256": "2711aaf5b156bb84a1e60fb8f9df8417679d51a3af7f650047b630815302b1a2",
+      "expected_en_sha256": "2711aaf5b156bb84a1e60fb8f9df8417679d51a3af7f650047b630815302b1a2",
+      "expected_ja_sha256": "2711aaf5b156bb84a1e60fb8f9df8417679d51a3af7f650047b630815302b1a2",
+      "en_tex": "\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{up}} &= \\mathrm{EU}_{\\text{down}} \\\\\n\\mathrm{EU}_{\\text{up}} &= \\sigma_{\\text{left}}(1)+(1-\\sigma_{\\text{left}})(0) \\\\\n\\mathrm{EU}_{\\text{down}} &= \\sigma_{\\text{left}}(0)+(1-\\sigma_{\\text{left}})(4) \\\\\n\\sigma_{\\text{left}}(1)+(1-\\sigma_{\\text{left}})(0) &= \\sigma_{\\text{left}}(0)+(1-\\sigma_{\\text{left}})(4) \\\\\n\\sigma_{\\text{left}} &= 4-4\\sigma_{\\text{left}} \\\\\n5\\sigma_{\\text{left}} &= 4 \\\\\n\\sigma_{\\text{left}} &= \\frac{4}{5}\n\\end{aligned}\n\\]",
+      "ja_tex": "\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{up}} &= \\mathrm{EU}_{\\text{down}} \\\\\n\\mathrm{EU}_{\\text{up}} &= \\sigma_{\\text{left}}(1)+(1-\\sigma_{\\text{left}})(0) \\\\\n\\mathrm{EU}_{\\text{down}} &= \\sigma_{\\text{left}}(0)+(1-\\sigma_{\\text{left}})(4) \\\\\n\\sigma_{\\text{left}}(1)+(1-\\sigma_{\\text{left}})(0) &= \\sigma_{\\text{left}}(0)+(1-\\sigma_{\\text{left}})(4) \\\\\n\\sigma_{\\text{left}} &= 4-4\\sigma_{\\text{left}} \\\\\n5\\sigma_{\\text{left}} &= 4 \\\\\n\\sigma_{\\text{left}} &= \\frac{4}{5}\n\\end{aligned}\n\\]",
+      "source_tex": "\\[\n\\begin{aligned}\n\\mathrm{EU}_{\\text{up}} &= \\mathrm{EU}_{\\text{down}} \\\\\n\\mathrm{EU}_{\\text{up}} &= \\sigma_{\\text{left}}(1)+(1-\\sigma_{\\text{left}})(0) \\\\\n\\mathrm{EU}_{\\text{down}} &= \\sigma_{\\text{left}}(0)+(1-\\sigma_{\\text{left}})(4) \\\\\n\\sigma_{\\text{left}}(1)+(1-\\sigma_{\\text{left}})(0) &= \\sigma_{\\text{left}}(0)+(1-\\sigma_{\\text{left}})(4) \\\\\n\\sigma_{\\text{left}} &= 4-4\\sigma_{\\text{left}} \\\\\n5\\sigma_{\\text{left}} &= 4 \\\\\n\\sigma_{\\text{left}} &= \\frac{4}{5}\n\\end{aligned}\n\\]",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=269"
+      ],
+      "reason": "Restore all seven printed rows of the modified battle-of-the-sexes calculation."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-sd6c1d7aa1841-01",
+      "source_sha256": "d6c1d7aa1841fd7c9665be39921d8cf260390f06633f8aad8592b1667bb831fc",
+      "expected_en_sha256": "d6c1d7aa1841fd7c9665be39921d8cf260390f06633f8aad8592b1667bb831fc",
+      "expected_ja_sha256": "db12413b81414adaa56ec9d4fc235176850988099ee285e1779458596bd1d093",
+      "en_tex": "\\[\nr+p-s-t=0\n\\]\n\nLet's start with the tricky one. When \\(r+p-s-t=0\\), we cannot divide by it to solve for \\(\\sigma_{\\text{up}}\\). However, substituting zero into the equation reveals the contradiction:\n\n\\[\n\\begin{aligned}\n\\sigma_{\\text{up}}(r+p-s-t) &= p-s \\\\\nr+p-s-t &= 0 \\\\\n\\sigma_{\\text{up}}(0) &= p-s \\\\\n0 &= p-s \\\\\ns &= p\n\\end{aligned}\n\\]",
+      "ja_tex": "\\[\nr+p-s-t=0\n\\]\n\nまず、扱いの難しい場合から始めよう。\\(r+p-s-t=0\\) のとき、それで割って \\(\\sigma_{\\text{up}}\\) について解くことはできない。しかし、式に0を代入すると矛盾が明らかになる。\n\n\\[\n\\begin{aligned}\n\\sigma_{\\text{up}}(r+p-s-t) &= p-s \\\\\nr+p-s-t &= 0 \\\\\n\\sigma_{\\text{up}}(0) &= p-s \\\\\n0 &= p-s \\\\\ns &= p\n\\end{aligned}\n\\]",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=279"
+      ],
+      "reason": "Correct the OCR-fused p-s boundary and restore the five printed contradiction steps."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s600652be450f-01",
+      "source_sha256": "600652be450fd5f58f1aef61792f1cc107100e815e1242ef9ef713d94c986059",
+      "expected_en_sha256": "600652be450fd5f58f1aef61792f1cc107100e815e1242ef9ef713d94c986059",
+      "expected_ja_sha256": "5a91b38a02aa83e3b5860bd48822d5a51a07429ac444e5eea586bda06235447e",
+      "en_replacements": [
+        {
+          "before": "\\(< 0\\), \\(0 > , < 0,3 > , < 3,0 >\\), and \\(< 3,3 >\\)",
+          "after": "\\(\\langle 0,0\\rangle\\), \\(\\langle 0,3\\rangle\\), \\(\\langle 3,0\\rangle\\), and \\(\\langle 3,3\\rangle\\)",
+          "expected_count": 1
+        }
+      ],
+      "ja_replacements": [
+        {
+          "before": "\\(< 0\\)、\\(0 > , < 0,3 > , < 3,0 >\\)、および\\(< 3,3 >\\)",
+          "after": "\\(\\langle 0,0\\rangle\\)、\\(\\langle 0,3\\rangle\\)、\\(\\langle 3,0\\rangle\\)、および\\(\\langle 3,3\\rangle\\)",
+          "expected_count": 1
+        }
+      ],
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=61"
+      ],
+      "reason": "Join four OCR-split strategy profiles into complete angle-bracket expressions."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-sd3dba1dfeff4-01",
+      "source_sha256": "d3dba1dfeff490bed8a7bcb96e86917f86d7e4c1a3002bb024139843de6de867",
+      "expected_en_sha256": "d3dba1dfeff490bed8a7bcb96e86917f86d7e4c1a3002bb024139843de6de867",
+      "expected_ja_sha256": "d874838a1f8e8ad80219bd6a28cc22a9f2dc9e4acea1722cd65100c63c7e611e",
+      "en_replacements": [
+        {
+          "before": "\\(< \\sigma _ { \\text {split } }\\), \\(\\left( \\right.\\) accept, \\(\\left. \\sigma _ { \\text {allow } } = 1 / 2 \\right) >\\)",
+          "after": "\\(\\langle \\sigma_{\\text{split}},(\\text{accept},\\sigma_{\\text{allow}}=1/2)\\rangle\\)",
+          "expected_count": 1
+        }
+      ],
+      "ja_replacements": [
+        {
+          "before": "\\(< \\sigma _ { \\text {split } }\\)、\\(\\left( \\right.\\) 受諾、\\(\\left. \\sigma _ { \\text {allow } } = 1 / 2 \\right) >\\)",
+          "after": "\\(\\langle \\sigma_{\\text{split}},(\\text{受諾},\\sigma_{\\text{allow}}=1/2)\\rangle\\)",
+          "expected_count": 1
+        }
+      ],
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=184"
+      ],
+      "reason": "Keep the complete SPE profile inside one math atom."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s6d5cdb8b205e-01",
+      "source_sha256": "6d5cdb8b205e5e926cfdc17593036e06c77c2e50c593ebadbdeda3f44776d1aa",
+      "expected_en_sha256": "d6496d8139ecf182b33d20c7eeab02859fbdfc94031b8932233b9d8b2608e25a",
+      "expected_ja_sha256": "668d27ad0659825057722e9a9593462c104a8cc07239db8067afd09456377eca",
+      "en_replacements": [
+        {
+          "before": "\\(<\\) (Stay, \\(\\sigma _ { \\text {up } } = 1 / 6\\) ), \\(\\sigma _ { \\text {left } } = 1 / 3 >\\)",
+          "after": "\\(\\langle(\\text{Stay},\\sigma_{\\text{up}}=1/6),\\sigma_{\\text{left}}=1/3\\rangle\\)",
+          "expected_count": 1
+        }
+      ],
+      "ja_replacements": [
+        {
+          "before": "\\(<\\)（留まる、\\(\\sigma _ { \\text {up } } = 1 / 6\\)）、\\(\\sigma _ { \\text {left } } = 1 / 3 >\\)",
+          "after": "\\(\\langle(\\text{留まる},\\sigma_{\\text{up}}=1/6),\\sigma_{\\text{left}}=1/3\\rangle\\)",
+          "expected_count": 1
+        }
+      ],
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=189"
+      ],
+      "reason": "Join the source-page-split Stay strategy profile."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s248cfdd80b8b-01",
+      "source_sha256": "248cfdd80b8b9c5ae47fffef9e990167f42845e20b11f8721fa061a5acd92741",
+      "expected_en_sha256": "58d36aff4479d680cffda68c0d694c2662af4907c440010f04fdcdd745a0f67a",
+      "expected_ja_sha256": "6bd850a706aa8a961bb5387289963fc53eedcbca360617e6b5964438d10d95e6",
+      "en_replacements": [
+        {
+          "before": "\\(\\mathrm { a } > \\mathrm { b } >\\) \\(\\mathrm { c }\\)",
+          "after": "\\(a>b>c\\)",
+          "expected_count": 1
+        }
+      ],
+      "ja_replacements": [
+        {
+          "before": "\\(\\mathrm { a } > \\mathrm { b } >\\) \\(\\mathrm { c }\\)",
+          "after": "\\(a>b>c\\)",
+          "expected_count": 1
+        }
+      ],
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=270"
+      ],
+      "reason": "Keep the complete lowercase payoff ordering inside math mode."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s3ba7e8b64037-01",
+      "source_sha256": "3ba7e8b64037020279fe7024bfb9a52d669a29dd1b8e894dab64c426bdca403e",
+      "expected_en_sha256": "2485740c776cb1c236df83780dcea5d8b6286db68bc50e4b809609a850a72054",
+      "expected_ja_sha256": "bc0358ab4a2c8da64015d026c31ee4f15de072f6c349b4cd61d36155a59796fc",
+      "en_replacements": [
+        {
+          "before": "\\(r + p - s - t <\\) 0",
+          "after": "\\(r+p-s-t<0\\)",
+          "expected_count": 1
+        }
+      ],
+      "ja_replacements": [
+        {
+          "before": "\\(r + p - s - t <\\) 0",
+          "after": "\\(r+p-s-t<0\\)",
+          "expected_count": 1
+        }
+      ],
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=279"
+      ],
+      "reason": "Move the zero back inside the negative-case inequality."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-sc663548535e6-01",
+      "source_sha256": "c663548535e6ab03fa467089f55758cba5e11ddba579670e42054ba67e18770d",
+      "expected_en_sha256": "c663548535e6ab03fa467089f55758cba5e11ddba579670e42054ba67e18770d",
+      "expected_ja_sha256": "28f2d01b5240cd7b535d4bdc7ca1eb21c3d900c27e7005619760bcf6932c14d3",
+      "en_replacements": [
+        {
+          "before": "\\(\\mathrm { v } / 2 =\\) c",
+          "after": "\\(v/2=c\\)",
+          "expected_count": 1
+        }
+      ],
+      "ja_replacements": [
+        {
+          "before": "\\(\\mathrm { v } / 2 =\\) c",
+          "after": "\\(v/2=c\\)",
+          "expected_count": 1
+        }
+      ],
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=288"
+      ],
+      "reason": "Move c back inside the equality for the third hawk-dove case."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s0a6de9eef68c-01",
+      "source_sha256": "0a6de9eef68c447437579e312528d61f65e97bb595bbc943bd271d0fefca266c",
+      "expected_en_sha256": "93f8706cf0a62dd862510471321aa7063a51ef356a166c3e1a65bceca38c8607",
+      "expected_ja_sha256": "c0ab4b466f504843b6fd21a2e8bee0baf39a9ad89a043d1eacaa28b46366a775",
+      "en_replacements": [
+        {
+          "before": "<take, \\(\\sigma _ { \\text {take } } >\\) and \\(< \\sigma _ { \\text {take } }\\), take>",
+          "after": "\\(\\langle\\text{take},\\sigma_{\\text{take}}\\rangle\\) and \\(\\langle\\sigma_{\\text{take}},\\text{take}\\rangle\\)",
+          "expected_count": 1
+        },
+        {
+          "before": "where 0 \\(< \\sigma _ { \\text {take } } < 1\\)",
+          "after": "where \\(0<\\sigma_{\\text{take}}<1\\)",
+          "expected_count": 1
+        }
+      ],
+      "ja_replacements": [
+        {
+          "before": "<「取る」, \\(\\sigma _ { \\text {take } } >\\) および \\(< \\sigma _ { \\text {take } }\\), 「取る」>",
+          "after": "\\(\\langle\\text{取る},\\sigma_{\\text{take}}\\rangle\\) および \\(\\langle\\sigma_{\\text{take}},\\text{取る}\\rangle\\)",
+          "expected_count": 1
+        },
+        {
+          "before": "ここで 0 \\(< \\sigma _ { \\text {take } } < 1\\)",
+          "after": "ここで \\(0<\\sigma_{\\text{take}}<1\\)",
+          "expected_count": 1
+        }
+      ],
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=316"
+      ],
+      "reason": "Keep both partially mixed profiles and their probability range in complete math atoms."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s85299f4f2f87-01",
+      "source_sha256": "85299f4f2f871c7b307d351e763c64e850d1a91704d032b94a1b8ad0a9c4e955",
+      "expected_en_sha256": "85299f4f2f871c7b307d351e763c64e850d1a91704d032b94a1b8ad0a9c4e955",
+      "expected_ja_sha256": "f262aedc545eeec10c6a380b35945a18a6b52da558a71da48bdcc5b46a3a1d6c",
+      "en_replacements": [
+        {
+          "before": "\\(< \\mathrm { d } _ { 1 } { } ^ { * }\\), \\(\\mathrm { d } _ { 2 } { } ^ { * } >\\)",
+          "after": "\\(\\langle d_1^*,d_2^*\\rangle\\)",
+          "expected_count": 1
+        }
+      ],
+      "ja_replacements": [
+        {
+          "before": "\\(< \\mathrm { d } _ { 1 } { } ^ { * }\\)、\\(\\mathrm { d } _ { 2 } { } ^ { * } >\\)",
+          "after": "\\(\\langle d_1^*,d_2^*\\rangle\\)",
+          "expected_count": 1
+        }
+      ],
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=363"
+      ],
+      "reason": "Join the alleged-equilibrium strategy profile into one expression."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s77f8e7fdcb07-01",
+      "source_sha256": "77f8e7fdcb0750b22ab139eabfbdc4e790f2f7b11954de88bb64134147373bb0",
+      "expected_en_sha256": "77f8e7fdcb0750b22ab139eabfbdc4e790f2f7b11954de88bb64134147373bb0",
+      "expected_ja_sha256": "fd2862aefd4c94d2a170ae77173964bd74e6456a7546e036f793ac2c40c8f183",
+      "en_replacements": [
+        {
+          "before": "\\(\\mathrm { a } _ { 1 } \\left( \\mathrm {~d} ^ { * } \\right) + \\mathrm { a } _ { 2 } \\left( \\mathrm {~d} ^ { * } \\right) \\geq\\) 1",
+          "after": "\\(a_1(d^*)+a_2(d^*)\\geq 1\\)",
+          "expected_count": 1
+        }
+      ],
+      "ja_replacements": [
+        {
+          "before": "\\(\\mathrm { a } _ { 1 } \\left( \\mathrm {~d} ^ { * } \\right) + \\mathrm { a } _ { 2 } \\left( \\mathrm {~d} ^ { * } \\right) \\geq\\) 1",
+          "after": "\\(a_1(d^*)+a_2(d^*)\\geq 1\\)",
+          "expected_count": 1
+        }
+      ],
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=364"
+      ],
+      "reason": "Move the right-hand side back inside the duel inequality."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-sfce0f1f06485-01",
+      "source_sha256": "fce0f1f06485abaff173d3f7222527e504c2e710a8fa95451acb935d0ce4084b",
+      "expected_en_sha256": "18ac273e42026b2eac58912e3bb2b8e1c86ed7da31c0344554398a1302ffaa42",
+      "expected_ja_sha256": "6c7a6d7b5d6541e2000f1ce593371c2ee3a9ac3047894776da056cdb81a735dd",
+      "en_replacements": [
+        {
+          "before": "\\(\\mathrm { EU } _ { 1 } \\left( \\mathrm { q } _ { 1 } , \\mathrm { q } _ { 2 } \\right) =\\) [sale price][Firm 1's quantity] - [Firm 1's cost][Firm 1's quantity]",
+          "after": "\\[\n\\begin{aligned}\n\\mathrm{EU}_1(q_1,q_2) &= [\\text{sale price}][\\text{Firm 1 quantity}] \\\\\n&\\quad -[\\text{Firm 1 unit cost}][\\text{Firm 1 quantity}]\n\\end{aligned}\n\\]",
+          "expected_count": 1
+        }
+      ],
+      "ja_replacements": [
+        {
+          "before": "\\(\\mathrm { EU } _ { 1 } \\left( \\mathrm { q } _ { 1 } , \\mathrm { q } _ { 2 } \\right) =\\) ［販売価格］［企業1の数量］-［企業1の費用］［企業1の数量］",
+          "after": "\\[\n\\begin{aligned}\n\\mathrm{EU}_1(q_1,q_2) &= [\\text{販売価格}][\\text{企業1の数量}] \\\\\n&\\quad -[\\text{企業1の単位費用}][\\text{企業1の数量}]\n\\end{aligned}\n\\]",
+          "expected_count": 1
+        }
+      ],
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=367"
+      ],
+      "reason": "Render Firm 1's symbolic profit identity as a wrapped native equation."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s0db2f25f9d53-01",
+      "source_sha256": "0db2f25f9d53f89c7f4a6cf3f0ec0e37d218066d359a7a97b714720efdef2c70",
+      "expected_en_sha256": "bace00cdbe6e1397ae209f54aa71ee2982b8824d49b5603b8bba56614899a45c",
+      "expected_ja_sha256": "5929f28feecacf063d5c95bdd7c4dcc3ebe27027c8322957381ad50998714dfb",
+      "en_replacements": [
+        {
+          "before": "\\(900 - \\left( \\mathrm { q } _ { 1 } + \\right. \\mathrm { q } _ { 2 }\\) )",
+          "after": "\\(900-(q_1+q_2)\\)",
+          "expected_count": 1
+        },
+        {
+          "before": "\\(\\mathrm { EU } _ { 2 } \\left( \\mathrm { q } _ { 1 } , \\mathrm { q } _ { 2 } \\right) =\\) [sale price][Firm 2's quantity] - [Firm 2's cost][Firm 2's quantity]",
+          "after": "\\[\n\\begin{aligned}\n\\mathrm{EU}_2(q_1,q_2) &= [\\text{sale price}][\\text{Firm 2 quantity}] \\\\\n&\\quad -[\\text{Firm 2 unit cost}][\\text{Firm 2 quantity}]\n\\end{aligned}\n\\]",
+          "expected_count": 1
+        },
+        {
+          "before": "\\\\\n\\(\\mathrm { EU } _ { 2 } \\left( \\mathrm { q } _ { 1 } , \\mathrm { q } _ { 2 } \\right) = \\left[ 900 - \\left( \\mathrm { q } _ { 1 } + \\mathrm { q } _ { 2 } \\right) \\right] \\left( \\mathrm { q } _ { 2 } \\right) - 24 \\mathrm { q } _ { 2 }\\)\\\\\n\\(\\mathrm { EU } _ { 2 } \\left( \\mathrm { q } _ { 1 } , \\mathrm { q } _ { 2 } \\right) = \\left( 900 - \\mathrm { q } _ { 1 } - \\mathrm { q } _ { 2 } \\right) \\left( \\mathrm { q } _ { 2 } \\right) - 24 \\mathrm { q } _ { 2 }\\)\\\\\n\\(\\operatorname { EU } _ { 2 } \\left( q _ { 1 } , q _ { 2 } \\right) = 900 q _ { 2 } - q _ { 1 } q _ { 2 } - q _ { 2 } ^ { 2 } - 24 q _ { 2 }\\)\\\\\n\\(E U _ { 2 } \\left( q _ { 1 } , q _ { 2 } \\right) = 876 q _ { 2 } - q _ { 1 } q _ { 2 } - q _ { 2 } ^ { 2 }\\)\\\\\n",
+          "after": "\n\\[\n\\begin{aligned}\n\\mathrm{EU}_2(q_1,q_2) &= [900-(q_1+q_2)]q_2-24q_2 \\\\\n&= (900-q_1-q_2)q_2-24q_2 \\\\\n&= 900q_2-q_1q_2-q_2^2-24q_2 \\\\\n&= 876q_2-q_1q_2-q_2^2\n\\end{aligned}\n\\]\n",
+          "expected_count": 1
+        }
+      ],
+      "ja_replacements": [
+        {
+          "before": "\\(900 - \\left( \\mathrm { q } _ { 1 } + \\right. \\mathrm { q } _ { 2 }\\)",
+          "after": "\\(900-(q_1+q_2)\\)",
+          "expected_count": 1
+        },
+        {
+          "before": "\\(\\mathrm { EU } _ { 2 } \\left( \\mathrm { q } _ { 1 } , \\mathrm { q } _ { 2 } \\right) =\\)［販売価格］［企業2の生産量］－［企業2の費用］［企業2の生産量］",
+          "after": "\\[\n\\begin{aligned}\n\\mathrm{EU}_2(q_1,q_2) &= [\\text{販売価格}][\\text{企業2の生産量}] \\\\\n&\\quad -[\\text{企業2の単位費用}][\\text{企業2の生産量}]\n\\end{aligned}\n\\]",
+          "expected_count": 1
+        },
+        {
+          "before": "\\\\\n\\(\\mathrm { EU } _ { 2 } \\left( \\mathrm { q } _ { 1 } , \\mathrm { q } _ { 2 } \\right) = \\left[ 900 - \\left( \\mathrm { q } _ { 1 } + \\mathrm { q } _ { 2 } \\right) \\right] \\left( \\mathrm { q } _ { 2 } \\right) - 24 \\mathrm { q } _ { 2 }\\)\\\\\n\\(\\mathrm { EU } _ { 2 } \\left( \\mathrm { q } _ { 1 } , \\mathrm { q } _ { 2 } \\right) = \\left( 900 - \\mathrm { q } _ { 1 } - \\mathrm { q } _ { 2 } \\right) \\left( \\mathrm { q } _ { 2 } \\right) - 24 \\mathrm { q } _ { 2 }\\)\\\\\n\\(\\operatorname { EU } _ { 2 } \\left( q _ { 1 } , q _ { 2 } \\right) = 900 q _ { 2 } - q _ { 1 } q _ { 2 } - q _ { 2 } ^ { 2 } - 24 q _ { 2 }\\)\\\\\n\\(E U _ { 2 } \\left( q _ { 1 } , q _ { 2 } \\right) = 876 q _ { 2 } - q _ { 1 } q _ { 2 } - q _ { 2 } ^ { 2 }\\)\\\\\n",
+          "after": "\n\\[\n\\begin{aligned}\n\\mathrm{EU}_2(q_1,q_2) &= [900-(q_1+q_2)]q_2-24q_2 \\\\\n&= (900-q_1-q_2)q_2-24q_2 \\\\\n&= 900q_2-q_1q_2-q_2^2-24q_2 \\\\\n&= 876q_2-q_1q_2-q_2^2\n\\end{aligned}\n\\]\n",
+          "expected_count": 1
+        }
+      ],
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=368"
+      ],
+      "reason": "Repair the split price parenthesis and render Firm 2's complete profit derivation as wrapped native aligned math."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s5b47961d760d-01",
+      "source_sha256": "5b47961d760d800c95a2fd03544ad67cf40d16c582af09c8526708dbbbaf241b",
+      "expected_en_sha256": "5b47961d760d800c95a2fd03544ad67cf40d16c582af09c8526708dbbbaf241b",
+      "expected_ja_sha256": "0ea220380c1be1b8ac895fa57a99fb9ddcd9f316cb1c36dc827ddb2bbe75035a",
+      "en_replacements": [
+        {
+          "before": "\\(A + B -\\) 2 C",
+          "after": "\\(A+B-2C\\)",
+          "expected_count": 1
+        }
+      ],
+      "ja_replacements": [
+        {
+          "before": "\\(A + B -\\) 2 C",
+          "after": "\\(A+B-2C\\)",
+          "expected_count": 1
+        }
+      ],
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=274"
+      ],
+      "reason": "Move 2C back inside the positive-denominator expression."
+    },
+    {
+      "segment_id": "game-theory-101-mathpix-exact-book-s210ef9405ef9-01",
+      "source_sha256": "210ef9405ef9f9dbf4f3614f1e01a9ae3ed63b4466decaa25aa3e26dff4912f3",
+      "expected_en_sha256": "210ef9405ef9f9dbf4f3614f1e01a9ae3ed63b4466decaa25aa3e26dff4912f3",
+      "expected_ja_sha256": "f06178dec71c679691b0bc31e04621d0a220e4985e5b85adfccc56c9e22b1b55",
+      "en_replacements": [
+        {
+          "before": "\\(\\mathrm { x } >\\) 0",
+          "after": "\\(x>0\\)",
+          "expected_count": 1
+        }
+      ],
+      "ja_replacements": [
+        {
+          "before": "\\(\\mathrm { x } >\\) 0",
+          "after": "\\(x>0\\)",
+          "expected_count": 1
+        }
+      ],
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=342"
+      ],
+      "reason": "Move zero back inside the positive-payoff inequality."
     }
   ],
   "expected_includegraphics_delta": -11,
@@ -289,5 +896,742 @@
     " & Hawk \\\\",
     "The same is true for player 2. First, suppose player 1 kept quiet:",
     "\\includegraphics[height=23mm,keepaspectratio]{build/game-theory-101-mathpix-exact-book/work/images/052546c9-aff1-4d5d-828d-066701d80edb-216_251_43_369_698.jpg}"
+  ],
+  "math_reflows": [
+    {
+      "before": "E U _ { \\text {left } } = E U _ { \\text {right } } \\left( \\sigma _ { \\text {up } } \\right) ( - 3 ) + \\left( \\sigma _ { \\text {down } } \\right) ( 1 ) = \\left( \\sigma _ { \\text {up } } \\right) ( 2 ) + \\left( \\sigma _ { \\text {down } } \\right) ( 0 )",
+      "rows": [
+        "E U _ { \\text {left } } = E U _ { \\text {right } }",
+        "\\left( \\sigma _ { \\text {up } } \\right) ( - 3 ) + \\left( \\sigma _ { \\text {down } } \\right) ( 1 ) = \\left( \\sigma _ { \\text {up } } \\right) ( 2 ) + \\left( \\sigma _ { \\text {down } } \\right) ( 0 )"
+      ],
+      "expected_count": 2,
+      "source_sha256": "35ce04d2555ea917850662dcd0b027b12d0abd1e192fe9565db44376082b13e0",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=91"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\left( \\sigma _ { u p } \\right) ( - 3 ) + \\left( 1 - \\sigma _ { u p } \\right) ( 1 ) = \\left( \\sigma _ { u p } \\right) ( 2 ) + \\left( 1 - \\sigma _ { u p } \\right) ( 0 ) - 3 \\sigma _ { u p } + 1 - \\sigma _ { u p } = 2 \\sigma _ { \\text {up } } 1 - 4 \\sigma _ { \\text {up } } = 2 \\sigma _ { \\text {up } } 6 \\sigma _ { \\text {up } } = 1",
+      "rows": [
+        "\\left( \\sigma _ { u p } \\right) ( - 3 ) + \\left( 1 - \\sigma _ { u p } \\right) ( 1 ) = \\left( \\sigma _ { u p } \\right) ( 2 ) + \\left( 1 - \\sigma _ { u p } \\right) ( 0 )",
+        "- 3 \\sigma _ { u p } + 1 - \\sigma _ { u p } = 2 \\sigma _ { \\text {up } }",
+        "1 - 4 \\sigma _ { \\text {up } } = 2 \\sigma _ { \\text {up } }",
+        "6 \\sigma _ { \\text {up } } = 1"
+      ],
+      "expected_count": 2,
+      "source_sha256": "1921c2465f5695a45a5d285e1998dc94ffc01d045a6f18abff48a9d90170549b",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=91"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { \\text {up } } = ( 0.33 ) ( 3 ) + ( 0.67 ) ( - 2 ) \\mathrm { EU } _ { \\text {up } } = 0.99 - 1.34",
+      "rows": [
+        "\\mathrm { EU } _ { \\text {up } } = ( 0.33 ) ( 3 ) + ( 0.67 ) ( - 2 )",
+        "\\mathrm { EU } _ { \\text {up } } = 0.99 - 1.34"
+      ],
+      "expected_count": 2,
+      "source_sha256": "cf9a50c979f649a1d175a33863268b01c6751703c016d8c36f0c6402ba8a72ff",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=94"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { \\text {left } } = \\mathrm { EU } _ { \\text {right } } \\mathrm { EU } _ { \\text {left } } = \\left( \\sigma _ { \\text {up } } \\right) ( 3 ) + \\left( 1 - \\sigma _ { \\text {up } } \\right) ( 0 ) \\mathrm { EU } _ { \\text {right } } = \\left( \\sigma _ { \\text {up } } \\right) ( 2 ) + \\left( 1 - \\sigma _ { u p } \\right) ( 1 ) \\left( \\sigma _ { u p } \\right) ( 3 ) + \\left( 1 - \\sigma _ { u p } \\right) ( 0 ) = \\left( \\sigma _ { u p } \\right) ( 2 ) + \\left( 1 - \\sigma _ { u p } \\right) ( 1 ) 3 \\sigma _ { u p } = 2 \\sigma _ { \\text {up } } + 1 - \\sigma _ { \\text {up } } 3 \\sigma _ { \\text {up } } = \\sigma _ { \\text {up } } + 1",
+      "rows": [
+        "\\mathrm { EU } _ { \\text {left } } = \\mathrm { EU } _ { \\text {right } }",
+        "\\mathrm { EU } _ { \\text {left } } = \\left( \\sigma _ { \\text {up } } \\right) ( 3 ) + \\left( 1 - \\sigma _ { \\text {up } } \\right) ( 0 )",
+        "\\mathrm { EU } _ { \\text {right } } = \\left( \\sigma _ { \\text {up } } \\right) ( 2 ) + \\left( 1 - \\sigma _ { u p } \\right) ( 1 )",
+        "\\left( \\sigma _ { u p } \\right) ( 3 ) + \\left( 1 - \\sigma _ { u p } \\right) ( 0 ) = \\left( \\sigma _ { u p } \\right) ( 2 ) + \\left( 1 - \\sigma _ { u p } \\right) ( 1 )",
+        "3 \\sigma _ { u p } = 2 \\sigma _ { \\text {up } } + 1 - \\sigma _ { \\text {up } }",
+        "3 \\sigma _ { \\text {up } } = \\sigma _ { \\text {up } } + 1"
+      ],
+      "expected_count": 2,
+      "source_sha256": "1c0b553d38e43e2c35c2910a3dde5e3280ae061fa5d69a314d620b4634758726",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=97"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { \\text {up } } = \\mathrm { EU } _ { \\text {down } } \\mathrm { EU } _ { \\text {up } } = \\left( \\sigma _ { \\text {left } } \\right) ( 3 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 4 ) \\mathrm { EU } _ { \\text {down } } = \\left( \\sigma _ { \\text {left } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 2 ) \\left( \\sigma _ { \\text {left } } \\right) ( 3 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 4 ) = \\left( \\sigma _ { \\text {left } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 2 ) 3 \\sigma _ { \\text {left } } + 4 - 4 \\sigma _ { \\text {left } } = \\sigma _ { \\text {left } } + 2 - 2 \\sigma _ { \\text {left } } - \\sigma _ { \\text {left } } + 4 = - \\sigma _ { \\text {left } } + 2 2 = 0",
+      "rows": [
+        "\\mathrm { EU } _ { \\text {up } } = \\mathrm { EU } _ { \\text {down } }",
+        "\\mathrm { EU } _ { \\text {up } } = \\left( \\sigma _ { \\text {left } } \\right) ( 3 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 4 )",
+        "\\mathrm { EU } _ { \\text {down } } = \\left( \\sigma _ { \\text {left } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 2 )",
+        "\\left( \\sigma _ { \\text {left } } \\right) ( 3 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 4 ) = \\left( \\sigma _ { \\text {left } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 2 )",
+        "3 \\sigma _ { \\text {left } } + 4 - 4 \\sigma _ { \\text {left } } = \\sigma _ { \\text {left } } + 2 - 2 \\sigma _ { \\text {left } }",
+        "- \\sigma _ { \\text {left } } + 4 = - \\sigma _ { \\text {left } } + 2",
+        "2 = 0"
+      ],
+      "expected_count": 2,
+      "source_sha256": "fc2c5234eefcd16cd911403e5659c139449938189229ecfdd787a7e348b7ca25",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=101"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { \\text {left } } = \\mathrm { EU } _ { \\text {right } } \\mathrm { EU } _ { \\text {left } } = \\left( \\sigma _ { \\text {up } } \\right) ( - 10 ) + \\left( 1 - \\sigma _ { \\text {up } } \\right) ( 2 ) \\mathrm { EU } _ { \\text {right } } = \\left( \\sigma _ { \\text {up } } \\right) ( - 2 )",
+      "rows": [
+        "\\mathrm { EU } _ { \\text {left } } = \\mathrm { EU } _ { \\text {right } }",
+        "\\mathrm { EU } _ { \\text {left } } = \\left( \\sigma _ { \\text {up } } \\right) ( - 10 ) + \\left( 1 - \\sigma _ { \\text {up } } \\right) ( 2 )",
+        "\\mathrm { EU } _ { \\text {right } } = \\left( \\sigma _ { \\text {up } } \\right) ( - 2 )"
+      ],
+      "expected_count": 2,
+      "source_sha256": "18dec54637251659419a1371e5a1e7c943c6db28f6f3f2d5773c48e387a69cd8",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=110"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "- 10 \\sigma _ { \\text {up } } + 2 - 2 \\sigma _ { \\text {up } } = - 2 \\sigma _ { \\text {up } } - 12 \\sigma _ { \\text {up } } + 2 = - 2 \\sigma _ { \\text {up } } 10 \\sigma _ { \\text {up } } = 2",
+      "rows": [
+        "- 10 \\sigma _ { \\text {up } } + 2 - 2 \\sigma _ { \\text {up } } = - 2 \\sigma _ { \\text {up } }",
+        "- 12 \\sigma _ { \\text {up } } + 2 = - 2 \\sigma _ { \\text {up } }",
+        "10 \\sigma _ { \\text {up } } = 2"
+      ],
+      "expected_count": 2,
+      "source_sha256": "729a53ff6cc93d413b99befd58f85ae0001161382b6a2ae6896fff44ba688f7f",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=110"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { \\text {left } } = \\mathrm { EU } _ { \\text {right } } \\mathrm { EU } _ { \\text {left } } = \\left( \\sigma _ { \\text {up } } \\right) ( 2 ) + \\left( 1 - \\sigma _ { \\text {up } } \\right) ( 0 ) \\mathrm { EU } _ { \\text {right } } = \\left( \\sigma _ { \\text {up } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { u p } \\right) ( 1 ) \\left( \\sigma _ { u p } \\right) ( 2 ) + \\left( 1 - \\sigma _ { u p } \\right) ( 0 ) = \\left( \\sigma _ { u p } \\right) ( 0 ) + \\left( 1 - \\sigma _ { u p } \\right) ( 1 ) 2 \\sigma _ { u p } = 1 - \\sigma _ { \\mathrm { up } } 3 \\sigma _ { \\mathrm { up } } = 1",
+      "rows": [
+        "\\mathrm { EU } _ { \\text {left } } = \\mathrm { EU } _ { \\text {right } }",
+        "\\mathrm { EU } _ { \\text {left } } = \\left( \\sigma _ { \\text {up } } \\right) ( 2 ) + \\left( 1 - \\sigma _ { \\text {up } } \\right) ( 0 )",
+        "\\mathrm { EU } _ { \\text {right } } = \\left( \\sigma _ { \\text {up } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { u p } \\right) ( 1 )",
+        "\\left( \\sigma _ { u p } \\right) ( 2 ) + \\left( 1 - \\sigma _ { u p } \\right) ( 0 ) = \\left( \\sigma _ { u p } \\right) ( 0 ) + \\left( 1 - \\sigma _ { u p } \\right) ( 1 )",
+        "2 \\sigma _ { u p } = 1 - \\sigma _ { \\mathrm { up } }",
+        "3 \\sigma _ { \\mathrm { up } } = 1"
+      ],
+      "expected_count": 2,
+      "source_sha256": "3a7a3d0daf1122adb0fdd7051df9429aaa5b1875d8225754b8fd05566a08dbff",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=115"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { \\text {up } } = \\mathrm { EU } _ { \\text {down } } \\mathrm { EU } _ { \\text {up } } = \\left( \\sigma _ { \\text {left } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 0 ) \\mathrm { EU } _ { \\text {down } } = \\left( \\sigma _ { \\text {left } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 2 ) \\left( \\sigma _ { \\text {left } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 0 ) = \\left( \\sigma _ { \\text {left } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 2 ) \\sigma _ { \\text {left } } = 2 - 2 \\sigma _ { \\text {left } } 3 \\sigma _ { \\text {left } } = 2 \\sigma _ { \\text {left } } = 2 / 3",
+      "rows": [
+        "\\mathrm { EU } _ { \\text {up } } = \\mathrm { EU } _ { \\text {down } }",
+        "\\mathrm { EU } _ { \\text {up } } = \\left( \\sigma _ { \\text {left } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 0 )",
+        "\\mathrm { EU } _ { \\text {down } } = \\left( \\sigma _ { \\text {left } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 2 )",
+        "\\left( \\sigma _ { \\text {left } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 0 ) = \\left( \\sigma _ { \\text {left } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 2 )",
+        "\\sigma _ { \\text {left } } = 2 - 2 \\sigma _ { \\text {left } }",
+        "3 \\sigma _ { \\text {left } } = 2",
+        "\\sigma _ { \\text {left } } = 2 / 3"
+      ],
+      "expected_count": 2,
+      "source_sha256": "a4804181e44906dff9aeb5a0f24d9c7a5791c012db9581a858a85ae1847a511c",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=116"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { 1 } = ( 1 / 3 ) ( 2 / 3 ) ( 1 ) + ( 2 / 3 ) ( 2 / 3 ) ( 0 ) + ( 1 / 3 ) ( 1 / 3 ) ( 0 ) + ( 2 / 3 ) ( 1 / 3 ) ( 2 ) \\mathrm { EU } _ { 1 } = ( 2 / 9 ) ( 1 ) + ( 4 / 9 ) ( 0 ) + ( 1 / 9 ) ( 0 ) + ( 2 / 9 ) ( 2 ) \\mathrm { EU } _ { 1 } = 2 / 9 + 4 / 9",
+      "rows": [
+        "\\mathrm { EU } _ { 1 } = ( 1 / 3 ) ( 2 / 3 ) ( 1 ) + ( 2 / 3 ) ( 2 / 3 ) ( 0 )",
+        "+ ( 1 / 3 ) ( 1 / 3 ) ( 0 ) + ( 2 / 3 ) ( 1 / 3 ) ( 2 )",
+        "\\mathrm { EU } _ { 1 } = ( 2 / 9 ) ( 1 ) + ( 4 / 9 ) ( 0 ) + ( 1 / 9 ) ( 0 ) + ( 2 / 9 ) ( 2 )",
+        "\\mathrm { EU } _ { 1 } = 2 / 9 + 4 / 9"
+      ],
+      "expected_count": 2,
+      "source_sha256": "2432a9a01729e968633e585813f33070a86d153e1e65b77e72e5df1262d96e26",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=117"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { \\text {left } } = \\mathrm { EU } _ { \\text {right } } \\mathrm { EU } _ { \\text {left } } = \\left( \\sigma _ { \\text {up } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\text {up } } \\right) ( 0 ) \\mathrm { EU } _ { \\text {right } } = \\left( \\sigma _ { \\text {up } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\text {up } } \\right) ( 1 ) \\left( \\sigma _ { \\text {up } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\text {up } } \\right) ( 0 ) = \\left( \\sigma _ { \\text {up } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\text {up } } \\right) ( 1 ) \\sigma _ { \\text {up } } = 1 - \\sigma _ { \\mathrm { up } } 2 \\sigma _ { \\mathrm { up } } = 1",
+      "rows": [
+        "\\mathrm { EU } _ { \\text {left } } = \\mathrm { EU } _ { \\text {right } }",
+        "\\mathrm { EU } _ { \\text {left } } = \\left( \\sigma _ { \\text {up } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\text {up } } \\right) ( 0 )",
+        "\\mathrm { EU } _ { \\text {right } } = \\left( \\sigma _ { \\text {up } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\text {up } } \\right) ( 1 )",
+        "\\left( \\sigma _ { \\text {up } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\text {up } } \\right) ( 0 ) = \\left( \\sigma _ { \\text {up } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\text {up } } \\right) ( 1 )",
+        "\\sigma _ { \\text {up } } = 1 - \\sigma _ { \\mathrm { up } }",
+        "2 \\sigma _ { \\mathrm { up } } = 1"
+      ],
+      "expected_count": 2,
+      "source_sha256": "25be67b01ffdeae898b73232a39d00a04d915d15da5e86f10538cb2dacfcd4d8",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=120"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { \\text {up } } = \\mathrm { EU } _ { \\text {down } } \\mathrm { EU } _ { \\text {up } } = \\left( \\sigma _ { \\text {left } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 0 ) \\mathrm { EU } _ { \\text {down } } = \\left( \\sigma _ { \\text {left } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 1 ) \\left( \\sigma _ { \\text {left } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 0 ) = \\left( \\sigma _ { \\text {left } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 1 )",
+      "rows": [
+        "\\mathrm { EU } _ { \\text {up } } = \\mathrm { EU } _ { \\text {down } }",
+        "\\mathrm { EU } _ { \\text {up } } = \\left( \\sigma _ { \\text {left } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 0 )",
+        "\\mathrm { EU } _ { \\text {down } } = \\left( \\sigma _ { \\text {left } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 1 )",
+        "\\left( \\sigma _ { \\text {left } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 0 ) = \\left( \\sigma _ { \\text {left } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 1 )"
+      ],
+      "expected_count": 2,
+      "source_sha256": "60f9b667da2ec9625f594f13e1b20f82f78b9833bcb27c5868a1d5e3e337fe42",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=120"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { \\mathrm { up } } = ( 1 / 3 ) ( 3 ) + ( 2 / 3 ) ( - 2 ) \\mathrm { EU } _ { \\mathrm { up } } = 3 / 3 + - 4 / 3 \\mathrm { EU } _ { \\mathrm { up } } = - 1 / 3",
+      "rows": [
+        "\\mathrm { EU } _ { \\mathrm { up } } = ( 1 / 3 ) ( 3 ) + ( 2 / 3 ) ( - 2 )",
+        "\\mathrm { EU } _ { \\mathrm { up } } = 3 / 3 + - 4 / 3",
+        "\\mathrm { EU } _ { \\mathrm { up } } = - 1 / 3"
+      ],
+      "expected_count": 2,
+      "source_sha256": "a58c0e1454469a5862a34bb0cde0dab13f280950cb79946973df44cf93eb0848",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=124"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { \\text {left } } = \\left( \\sigma _ { \\mathrm { up } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\mathrm { up } } \\right) ( 0 ) \\mathrm { EU } _ { \\text {left } } = \\sigma _ { \\mathrm { up } }",
+      "rows": [
+        "\\mathrm { EU } _ { \\text {left } } = \\left( \\sigma _ { \\mathrm { up } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\mathrm { up } } \\right) ( 0 )",
+        "\\mathrm { EU } _ { \\text {left } } = \\sigma _ { \\mathrm { up } }"
+      ],
+      "expected_count": 2,
+      "source_sha256": "7255276e618db340462b9a2f1215d9cf57ca20b8904dafe63e8f731613b5a350",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=139"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { \\text {right } } = \\left( \\sigma _ { \\mathrm { up } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\mathrm { up } } \\right) ( 0 ) \\mathrm { EU } _ { \\text {right } } = 0",
+      "rows": [
+        "\\mathrm { EU } _ { \\text {right } } = \\left( \\sigma _ { \\mathrm { up } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\mathrm { up } } \\right) ( 0 )",
+        "\\mathrm { EU } _ { \\text {right } } = 0"
+      ],
+      "expected_count": 2,
+      "source_sha256": "c4890f6570fc286ec04ca6bee84ee964e6aa115bf381b88bc33b05723c86c47a",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=139"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { \\text {up } } = \\left( \\sigma _ { \\text {left } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 0 ) \\mathrm { EU } _ { \\text {up } } = \\sigma _ { \\text {left } }",
+      "rows": [
+        "\\mathrm { EU } _ { \\text {up } } = \\left( \\sigma _ { \\text {left } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 0 )",
+        "\\mathrm { EU } _ { \\text {up } } = \\sigma _ { \\text {left } }"
+      ],
+      "expected_count": 2,
+      "source_sha256": "dbd7fee9c87a2fa0d1dcb4b03eea3951c533054f73746b35d764e75c1bf38cc7",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=139"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "E U _ { \\text {down } } = \\left( \\sigma _ { \\text {left } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 0 ) E U _ { \\text {down } } = 0",
+      "rows": [
+        "E U _ { \\text {down } } = \\left( \\sigma _ { \\text {left } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 0 )",
+        "E U _ { \\text {down } } = 0"
+      ],
+      "expected_count": 2,
+      "source_sha256": "998f207a7723aa674dff67c5b223f0bf4ca9bbac2c26271f048d35370245c7de",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=139"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { 1 } = \\left( \\sigma _ { \\mathrm { up } } \\right) ( 2 ) + \\left( 1 - \\sigma _ { \\mathrm { up } } \\right) ( 2 ) \\mathrm { EU } _ { 1 } = 2 \\sigma _ { \\mathrm { up } } + 2 - 2 \\sigma _ { \\mathrm { up } } \\mathrm { EU } _ { 1 } = 2",
+      "rows": [
+        "\\mathrm { EU } _ { 1 } = \\left( \\sigma _ { \\mathrm { up } } \\right) ( 2 ) + \\left( 1 - \\sigma _ { \\mathrm { up } } \\right) ( 2 )",
+        "\\mathrm { EU } _ { 1 } = 2 \\sigma _ { \\mathrm { up } } + 2 - 2 \\sigma _ { \\mathrm { up } }",
+        "\\mathrm { EU } _ { 1 } = 2"
+      ],
+      "expected_count": 2,
+      "source_sha256": "f607d02d3155050c53faf8ea61998ca0b55afd38bb8420fffbd26f7b284fc3c6",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=141"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { \\text {up } } \\geq \\mathrm { EU } _ { \\text {down } } \\mathrm { EU } _ { \\text {up } } = ( 2 ) \\left( \\sigma _ { \\text {left } } \\right) + ( 4 ) \\left( 1 - \\sigma _ { \\text {left } } \\right) \\mathrm { EU } _ { \\text {down } } = ( 3 ) \\left( \\sigma _ { \\text {left } } \\right) + ( 1 ) \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 2 ) \\left( \\sigma _ { \\text {left } } \\right) + ( 4 ) \\left( 1 - \\sigma _ { \\text {left } } \\right) \\geq ( 3 ) \\left( \\sigma _ { \\text {left } } \\right) + ( 1 ) \\left( 1 - \\sigma _ { \\text {left } } \\right) 2 \\sigma _ { \\text {left } } + 4 - 4 \\sigma _ { \\text {left } } \\geq 3 \\sigma _ { \\text {left } } + 1 - \\sigma _ { \\text {left } } - 2 \\sigma _ { \\text {left } } + 4 \\geq 2 \\sigma _ { \\text {left } } + 1 4 \\sigma _ { \\text {left } } \\leq 3",
+      "rows": [
+        "\\mathrm { EU } _ { \\text {up } } \\geq \\mathrm { EU } _ { \\text {down } }",
+        "\\mathrm { EU } _ { \\text {up } } = ( 2 ) \\left( \\sigma _ { \\text {left } } \\right) + ( 4 ) \\left( 1 - \\sigma _ { \\text {left } } \\right)",
+        "\\mathrm { EU } _ { \\text {down } } = ( 3 ) \\left( \\sigma _ { \\text {left } } \\right) + ( 1 ) \\left( 1 - \\sigma _ { \\text {left } } \\right)",
+        "( 2 ) \\left( \\sigma _ { \\text {left } } \\right) + ( 4 ) \\left( 1 - \\sigma _ { \\text {left } } \\right) \\geq ( 3 ) \\left( \\sigma _ { \\text {left } } \\right) + ( 1 ) \\left( 1 - \\sigma _ { \\text {left } } \\right)",
+        "2 \\sigma _ { \\text {left } } + 4 - 4 \\sigma _ { \\text {left } } \\geq 3 \\sigma _ { \\text {left } } + 1 - \\sigma _ { \\text {left } }",
+        "- 2 \\sigma _ { \\text {left } } + 4 \\geq 2 \\sigma _ { \\text {left } } + 1",
+        "4 \\sigma _ { \\text {left } } \\leq 3"
+      ],
+      "expected_count": 2,
+      "source_sha256": "18c0fbed3db2344558aef57a9fbcbc69f305b6638809d9a1dca1862dc9d72c92",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=143"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "E U _ { \\text {up } } = ( 3 ) \\left( \\sigma _ { \\text {left } } \\right) + ( 0 ) \\left( 1 - \\sigma _ { \\text {left } } \\right) E U _ { \\text {up } } = 3 \\sigma _ { \\text {left } }",
+      "rows": [
+        "E U _ { \\text {up } } = ( 3 ) \\left( \\sigma _ { \\text {left } } \\right) + ( 0 ) \\left( 1 - \\sigma _ { \\text {left } } \\right)",
+        "E U _ { \\text {up } } = 3 \\sigma _ { \\text {left } }"
+      ],
+      "expected_count": 2,
+      "source_sha256": "c1b9ecb45d27f290a7d3f55712e135c36bf89f481b87404f7bdbb6eda2703e97",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=145"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { \\text {take } } = \\left( \\sigma _ { \\text {allow } } \\right) ( 2 ) + \\left( 1 - \\sigma _ { \\text {allow } } \\right) ( 0 ) \\mathrm { EU } _ { \\text {take } } = 2 \\sigma _ { \\text {allow } }",
+      "rows": [
+        "\\mathrm { EU } _ { \\text {take } } = \\left( \\sigma _ { \\text {allow } } \\right) ( 2 ) + \\left( 1 - \\sigma _ { \\text {allow } } \\right) ( 0 )",
+        "\\mathrm { EU } _ { \\text {take } } = 2 \\sigma _ { \\text {allow } }"
+      ],
+      "expected_count": 2,
+      "source_sha256": "957d32ebbce52988705cbf837ff4a9887275d9d9f12252bd407e660c0d5a23c9",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=183"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { \\text {take } } = 2 \\sigma _ { \\text {allow } } \\mathrm { EU } _ { \\text {take } } > \\mathrm { EU } _ { \\text {split } } 2 \\sigma _ { \\text {allow } } > 1",
+      "rows": [
+        "\\mathrm { EU } _ { \\text {take } } = 2 \\sigma _ { \\text {allow } }",
+        "\\mathrm { EU } _ { \\text {take } } > \\mathrm { EU } _ { \\text {split } }",
+        "2 \\sigma _ { \\text {allow } } > 1"
+      ],
+      "expected_count": 2,
+      "source_sha256": "3c71f435f7a70a9ecb6695524563ddcca844570d30789171cdc46ebce1225834",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=183"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { \\text {take } } = 2 \\sigma _ { \\text {allow } } \\mathrm { EU } _ { \\text {take } } < \\mathrm { EU } _ { \\text {split } } 2 \\sigma _ { \\text {allow } } < 1",
+      "rows": [
+        "\\mathrm { EU } _ { \\text {take } } = 2 \\sigma _ { \\text {allow } }",
+        "\\mathrm { EU } _ { \\text {take } } < \\mathrm { EU } _ { \\text {split } }",
+        "2 \\sigma _ { \\text {allow } } < 1"
+      ],
+      "expected_count": 2,
+      "source_sha256": "3efbb38977f9edec8f50eb018d6a5d712c85c51cbcf0845777393d8ced0caa5f",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=183"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { \\text {take } } = 2 \\sigma _ { \\text {allow } } \\mathrm { EU } _ { \\text {take } } = \\mathrm { EU } _ { \\text {split } } 2 \\sigma _ { \\text {allow } } = 1",
+      "rows": [
+        "\\mathrm { EU } _ { \\text {take } } = 2 \\sigma _ { \\text {allow } }",
+        "\\mathrm { EU } _ { \\text {take } } = \\mathrm { EU } _ { \\text {split } }",
+        "2 \\sigma _ { \\text {allow } } = 1"
+      ],
+      "expected_count": 2,
+      "source_sha256": "e4b7917e1e362c72d4d2d5051556e2344b1d4ad6d12b551e428f6fc1c35eb459",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=183"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "< \\left( \\mathrm { Go } , \\sigma _ { \\mathrm { up } } = 1 / 6 \\right) , \\sigma _ { \\text {left } } = 1 / 3 >",
+      "rows": [
+        "< \\left( \\mathrm { Go } , \\sigma _ { \\mathrm { up } } = 1 / 6 \\right) , \\sigma _ { \\text {left } } = 1 / 3 >"
+      ],
+      "expected_count": 2,
+      "source_sha256": "04ba1b51e78d511ba77a8ad48b9b0f880293945fc6ad8a0d71ab59f389e87ead",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=188"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "< \\left( \\sigma _ { \\mathrm { go } } , \\sigma _ { \\mathrm { up } } = 1 / 6 \\right) , \\sigma _ { \\text {left } } = 1 / 3 >",
+      "rows": [
+        "< \\left( \\sigma _ { \\mathrm { go } } , \\sigma _ { \\mathrm { up } } = 1 / 6 \\right) , \\sigma _ { \\text {left } } = 1 / 3 >"
+      ],
+      "expected_count": 2,
+      "source_sha256": "fe1f104d2cdfe0f579f3c4e25836bc4b49ed2ef3fdf96ca9892a93e192619dac",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=189"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { \\text {left } } = \\mathrm { EU } _ { \\text {right } } \\mathrm { EU } _ { \\text {left } } = \\left( \\sigma _ { \\text {up } } \\right) ( \\mathrm { a } ) + \\left( 1 - \\sigma _ { \\text {up } } \\right) ( \\mathrm { c } ) \\mathrm { EU } _ { \\text {right } } = \\left( \\sigma _ { \\text {up } } \\right) ( \\mathrm { c } ) + \\left( 1 - \\sigma _ { u p } \\right) ( b ) \\left( \\sigma _ { u p } \\right) ( a ) + \\left( 1 - \\sigma _ { u p } \\right) ( c ) = \\left( \\sigma _ { u p } \\right) ( c ) + \\left( 1 - \\sigma _ { u p } \\right) ( b ) a \\sigma _ { u p } + \\mathrm { c } - \\mathrm { co } _ { \\mathrm { up } } = \\mathrm { co } _ { \\mathrm { up } } + \\mathrm { b } - \\mathrm { b } \\mathrm { \\sigma } _ { \\mathrm { up } }",
+      "rows": [
+        "\\mathrm { EU } _ { \\text {left } } = \\mathrm { EU } _ { \\text {right } }",
+        "\\mathrm { EU } _ { \\text {left } } = \\left( \\sigma _ { \\text {up } } \\right) ( \\mathrm { a } ) + \\left( 1 - \\sigma _ { \\text {up } } \\right) ( \\mathrm { c } )",
+        "\\mathrm { EU } _ { \\text {right } } = \\left( \\sigma _ { \\text {up } } \\right) ( \\mathrm { c } ) + \\left( 1 - \\sigma _ { u p } \\right) ( b )",
+        "\\left( \\sigma _ { u p } \\right) ( a ) + \\left( 1 - \\sigma _ { u p } \\right) ( c ) = \\left( \\sigma _ { u p } \\right) ( c ) + \\left( 1 - \\sigma _ { u p } \\right) ( b )",
+        "a \\sigma _ { u p } + \\mathrm { c } - \\mathrm { co } _ { \\mathrm { up } } = \\mathrm { co } _ { \\mathrm { up } } + \\mathrm { b } - \\mathrm { b } \\mathrm { \\sigma } _ { \\mathrm { up } }"
+      ],
+      "expected_count": 2,
+      "source_sha256": "4447e1862a7c08d53a69e5f5d1abc78d48b75b679522e071cde5d83627aabfde",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=272"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { a } \\sigma _ { \\text {up } } + \\mathrm { c } - \\mathrm { c } \\mathrm { \\sigma } _ { \\text {up } } = \\mathrm { c } \\sigma _ { \\text {up } } + \\mathrm { b } - \\mathrm { b } \\mathrm { \\sigma } _ { \\text {up } } \\mathrm { a } \\sigma _ { \\text {up } } + \\mathrm { b } \\sigma _ { \\text {up } } - 2 \\mathrm { c } \\sigma _ { \\text {up } } = \\mathrm { b } - \\mathrm { c }",
+      "rows": [
+        "\\mathrm { a } \\sigma _ { \\text {up } } + \\mathrm { c } - \\mathrm { c } \\mathrm { \\sigma } _ { \\text {up } } = \\mathrm { c } \\sigma _ { \\text {up } } + \\mathrm { b } - \\mathrm { b } \\mathrm { \\sigma } _ { \\text {up } }",
+        "\\mathrm { a } \\sigma _ { \\text {up } } + \\mathrm { b } \\sigma _ { \\text {up } } - 2 \\mathrm { c } \\sigma _ { \\text {up } } = \\mathrm { b } - \\mathrm { c }"
+      ],
+      "expected_count": 2,
+      "source_sha256": "06eb9b441be98e2460cf31b112c92de7eba92b730f7d75396e7ae7bc6147cd06",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=272"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { a } \\sigma _ { \\text {up } } + \\mathrm { b } \\sigma _ { \\text {up } } - 2 \\sigma _ { \\text {up } } = \\mathrm { b } - \\mathrm { c } \\sigma _ { \\text {up } } ( \\mathrm { a } + \\mathrm { b } - 2 \\mathrm { c } ) = \\mathrm { b } - \\mathrm { c }",
+      "rows": [
+        "\\mathrm { a } \\sigma _ { \\text {up } } + \\mathrm { b } \\sigma _ { \\text {up } } - 2 \\sigma _ { \\text {up } } = \\mathrm { b } - \\mathrm { c }",
+        "\\sigma _ { \\text {up } } ( \\mathrm { a } + \\mathrm { b } - 2 \\mathrm { c } ) = \\mathrm { b } - \\mathrm { c }"
+      ],
+      "expected_count": 2,
+      "source_sha256": "5ee6f31e31d97b00cf47e52dbdb6513ce155ad1f8a04aacbafcb0336ab0f2a5b",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=272"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\sigma _ { \\text {down } } = 1 - \\sigma _ { \\text {up } } \\sigma _ { \\text {up } } = ( \\mathrm { b } - \\mathrm { c } ) / ( \\mathrm { a } + \\mathrm { b } - 2 \\mathrm { c } ) \\sigma _ { \\text {down } } = 1 - ( \\mathrm { b } - \\mathrm { c } ) / ( \\mathrm { a } + \\mathrm { b } - 2 \\mathrm { c } ) \\sigma _ { \\text {down } } = ( \\mathrm { a } + \\mathrm { b } - 2 \\mathrm { c } ) / ( \\mathrm { a } + \\mathrm { b } - 2 \\mathrm { c } ) - ( \\mathrm { b } - \\mathrm { c } ) / ( \\mathrm { a } + \\mathrm { b } - 2 \\mathrm { c } )",
+      "rows": [
+        "\\sigma _ { \\text {down } } = 1 - \\sigma _ { \\text {up } }",
+        "\\sigma _ { \\text {up } } = ( \\mathrm { b } - \\mathrm { c } ) / ( \\mathrm { a } + \\mathrm { b } - 2 \\mathrm { c } )",
+        "\\sigma _ { \\text {down } } = 1 - ( \\mathrm { b } - \\mathrm { c } ) / ( \\mathrm { a } + \\mathrm { b } - 2 \\mathrm { c } )",
+        "\\sigma _ { \\text {down } } = ( \\mathrm { a } + \\mathrm { b } - 2 \\mathrm { c } ) / ( \\mathrm { a } + \\mathrm { b } - 2 \\mathrm { c } )",
+        "- ( \\mathrm { b } - \\mathrm { c } ) / ( \\mathrm { a } + \\mathrm { b } - 2 \\mathrm { c } )"
+      ],
+      "expected_count": 1,
+      "source_sha256": "75f6514c03dfd8842560fb71167ee177cb9e65b48abd965207a56b24b4a8590e",
+      "evidence": [
+        "Generated TeX equation inventory audit; source token stream preserved exactly."
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "E U _ { \\text {up } } = E U _ { \\text {down } } E U _ { \\text {up } } = ( B ) \\left( \\sigma _ { \\text {left } } \\right) + ( C ) \\left( 1 - \\sigma _ { \\text {left } } \\right) E U _ { \\text {down } } = ( C ) \\left( \\sigma _ { \\text {left } } \\right) + ( A ) \\left( 1 - \\sigma _ { \\text {left } } \\right) ( B ) \\left( \\sigma _ { \\text {left } } \\right) + ( C ) \\left( 1 - \\sigma _ { \\text {left } } \\right) = ( C ) \\left( \\sigma _ { \\text {left } } \\right) + ( A ) \\left( 1 - \\sigma _ { \\text {left } } \\right) \\mathrm { B } \\sigma _ { \\text {left } } + \\mathrm { C } - \\mathrm { C } \\sigma _ { \\text {left } } = \\mathrm { C } \\sigma _ { \\text {left } } + \\mathrm { A } - \\mathrm { A } \\sigma _ { \\text {left } }",
+      "rows": [
+        "E U _ { \\text {up } } = E U _ { \\text {down } }",
+        "E U _ { \\text {up } } = ( B ) \\left( \\sigma _ { \\text {left } } \\right) + ( C ) \\left( 1 - \\sigma _ { \\text {left } } \\right)",
+        "E U _ { \\text {down } } = ( C ) \\left( \\sigma _ { \\text {left } } \\right) + ( A ) \\left( 1 - \\sigma _ { \\text {left } } \\right)",
+        "( B ) \\left( \\sigma _ { \\text {left } } \\right) + ( C ) \\left( 1 - \\sigma _ { \\text {left } } \\right) = ( C ) \\left( \\sigma _ { \\text {left } } \\right) + ( A ) \\left( 1 - \\sigma _ { \\text {left } } \\right)",
+        "\\mathrm { B } \\sigma _ { \\text {left } } + \\mathrm { C } - \\mathrm { C } \\sigma _ { \\text {left } } = \\mathrm { C } \\sigma _ { \\text {left } } + \\mathrm { A } - \\mathrm { A } \\sigma _ { \\text {left } }"
+      ],
+      "expected_count": 2,
+      "source_sha256": "fadef711e8f8b7ad28c2a17cdb04ce9ef49457812f2f5f70200e043a5fbf014f",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=274"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { \\text {left } } = \\mathrm { EU } _ { \\text {right } } \\mathrm { EU } _ { \\text {left } } = ( \\mathrm { r } ) \\left( \\sigma _ { \\text {up } } \\right) + ( \\mathrm { s } ) \\left( 1 - \\sigma _ { \\text {up } } \\right) \\mathrm { EU } _ { \\text {right } } = ( \\mathrm { t } ) \\left( \\sigma _ { \\text {up } } \\right) + ( p ) \\left( 1 - \\sigma _ { \\text {up } } \\right) ( r ) \\left( \\sigma _ { \\text {up } } \\right) + ( s ) \\left( 1 - \\sigma _ { \\text {up } } \\right) = ( t ) \\left( \\sigma _ { \\text {up } } \\right) + ( p ) \\left( 1 - \\sigma _ { \\text {up } } \\right) r \\sigma _ { \\text {up } } + \\mathrm { s } - \\mathrm { s } _ { \\mathrm { up } } = \\mathrm { t } \\sigma _ { \\mathrm { up } } + \\mathrm { p } - \\mathrm { p } \\sigma _ { \\mathrm { up } } \\mathrm { r } \\sigma _ { \\mathrm { up } } + \\mathrm { p } \\sigma _ { \\mathrm { up } } - \\mathrm { s } \\sigma _ { \\mathrm { up } } - \\mathrm { t } \\sigma _ { \\mathrm { up } } = \\mathrm { p } - \\mathrm { s } \\sigma _ { \\text {up } } ( \\mathrm { r } + \\mathrm { p } - \\mathrm { s } - \\mathrm { t } ) = \\mathrm { p } - \\mathrm { s }",
+      "rows": [
+        "\\mathrm { EU } _ { \\text {left } } = \\mathrm { EU } _ { \\text {right } }",
+        "\\mathrm { EU } _ { \\text {left } } = ( \\mathrm { r } ) \\left( \\sigma _ { \\text {up } } \\right) + ( \\mathrm { s } ) \\left( 1 - \\sigma _ { \\text {up } } \\right)",
+        "\\mathrm { EU } _ { \\text {right } } = ( \\mathrm { t } ) \\left( \\sigma _ { \\text {up } } \\right) + ( p ) \\left( 1 - \\sigma _ { \\text {up } } \\right)",
+        "( r ) \\left( \\sigma _ { \\text {up } } \\right) + ( s ) \\left( 1 - \\sigma _ { \\text {up } } \\right) = ( t ) \\left( \\sigma _ { \\text {up } } \\right) + ( p ) \\left( 1 - \\sigma _ { \\text {up } } \\right)",
+        "r \\sigma _ { \\text {up } } + \\mathrm { s } - \\mathrm { s } _ { \\mathrm { up } } = \\mathrm { t } \\sigma _ { \\mathrm { up } } + \\mathrm { p } - \\mathrm { p } \\sigma _ { \\mathrm { up } }",
+        "\\mathrm { r } \\sigma _ { \\mathrm { up } } + \\mathrm { p } \\sigma _ { \\mathrm { up } } - \\mathrm { s } \\sigma _ { \\mathrm { up } } - \\mathrm { t } \\sigma _ { \\mathrm { up } } = \\mathrm { p } - \\mathrm { s }",
+        "\\sigma _ { \\text {up } } ( \\mathrm { r } + \\mathrm { p } - \\mathrm { s } - \\mathrm { t } ) = \\mathrm { p } - \\mathrm { s }"
+      ],
+      "expected_count": 2,
+      "source_sha256": "4ac2dc485c373654d8e38114c03ff5b1a7b7adf33ce00233be70b6f144053968",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=278"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\sigma _ { \\mathrm { up } } ( \\mathrm { r } + \\mathrm { p } - \\mathrm { s } - \\mathrm { t } ) = \\mathrm { p } - \\mathrm { s } \\sigma _ { \\mathrm { up } } = ( \\mathrm { p } - \\mathrm { s } ) / ( \\mathrm { r } + \\mathrm { p } - \\mathrm { s } - \\mathrm { t } )",
+      "rows": [
+        "\\sigma _ { \\mathrm { up } } ( \\mathrm { r } + \\mathrm { p } - \\mathrm { s } - \\mathrm { t } ) = \\mathrm { p } - \\mathrm { s }",
+        "\\sigma _ { \\mathrm { up } } = ( \\mathrm { p } - \\mathrm { s } ) / ( \\mathrm { r } + \\mathrm { p } - \\mathrm { s } - \\mathrm { t } )"
+      ],
+      "expected_count": 4,
+      "source_sha256": "0f4a45eeed533253f2f3974300cbe288537834bc4f08b074b53c8289f0a1d041",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=279"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { p } - \\mathrm { s } < \\mathrm { r } + \\mathrm { p } - \\mathrm { s } - \\mathrm { t } 0 < \\mathrm { r } - \\mathrm { t } \\mathrm { t } < \\mathrm { r }",
+      "rows": [
+        "\\mathrm { p } - \\mathrm { s } < \\mathrm { r } + \\mathrm { p } - \\mathrm { s } - \\mathrm { t }",
+        "0 < \\mathrm { r } - \\mathrm { t }",
+        "\\mathrm { t } < \\mathrm { r }"
+      ],
+      "expected_count": 2,
+      "source_sha256": "9812c580b7cb03f1a3a3c225e61285e29f2cf6b01bde789aeb312c40f389d36d",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=279"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "E U _ { \\text {up } } = E U _ { \\text {down } } E U _ { \\text {up } } = \\left( \\sigma _ { \\text {left } } \\right) ( R ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( T ) E U _ { \\text {down } } = \\left( \\sigma _ { \\text {left } } \\right) ( S ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( \\mathrm { P } ) \\left( \\sigma _ { \\text {left } } \\right) ( \\mathrm { R } ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( \\mathrm { T } ) = \\left( \\sigma _ { \\text {left } } \\right) ( \\mathrm { S } ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( \\mathrm { P } ) R \\sigma _ { \\text {left } } + T - T \\sigma _ { \\text {left } } = S \\sigma _ { \\text {left } } + P - P \\sigma _ { \\text {left } } R \\sigma _ { \\text {left } } + P \\sigma _ { \\text {left } } - T \\sigma _ { \\text {left } } - S \\sigma _ { \\text {left } } = \\mathrm { P } - \\mathrm { T }",
+      "rows": [
+        "E U _ { \\text {up } } = E U _ { \\text {down } }",
+        "E U _ { \\text {up } } = \\left( \\sigma _ { \\text {left } } \\right) ( R ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( T )",
+        "E U _ { \\text {down } } = \\left( \\sigma _ { \\text {left } } \\right) ( S ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( \\mathrm { P } )",
+        "\\left( \\sigma _ { \\text {left } } \\right) ( \\mathrm { R } ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( \\mathrm { T } ) = \\left( \\sigma _ { \\text {left } } \\right) ( \\mathrm { S } ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( \\mathrm { P } )",
+        "R \\sigma _ { \\text {left } } + T - T \\sigma _ { \\text {left } } = S \\sigma _ { \\text {left } } + P - P \\sigma _ { \\text {left } }",
+        "R \\sigma _ { \\text {left } } + P \\sigma _ { \\text {left } } - T \\sigma _ { \\text {left } } - S \\sigma _ { \\text {left } } = \\mathrm { P } - \\mathrm { T }"
+      ],
+      "expected_count": 2,
+      "source_sha256": "82ed4328372d1670326f5d20c591576dafd80c6eb6b2ad001c7d0cd799bac91d",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=282"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { \\mathrm { KL } } = \\left( \\sigma _ { \\mathrm { DL } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\mathrm { DL } } \\right) ( \\mathrm { x } ) \\mathrm { EU } _ { \\mathrm { KR } } = \\left( \\sigma _ { \\mathrm { DL } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\mathrm { DL } } \\right) ( 0 ) \\left( \\sigma _ { \\mathrm { DL } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\mathrm { DL } } \\right) ( \\mathrm { x } ) = \\left( \\sigma _ { \\mathrm { DL } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\mathrm { DL } } \\right) ( 0 ) \\left( 1 - \\sigma _ { \\mathrm { DL } } \\right) ( \\mathrm { x } ) = \\left( \\sigma _ { \\mathrm { DL } } \\right) ( 1 ) \\mathrm { x } - \\mathrm { x } \\sigma _ { \\mathrm { DL } } = \\sigma _ { \\mathrm { DL } }",
+      "rows": [
+        "\\mathrm { EU } _ { \\mathrm { KL } } = \\left( \\sigma _ { \\mathrm { DL } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\mathrm { DL } } \\right) ( \\mathrm { x } )",
+        "\\mathrm { EU } _ { \\mathrm { KR } } = \\left( \\sigma _ { \\mathrm { DL } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\mathrm { DL } } \\right) ( 0 )",
+        "\\left( \\sigma _ { \\mathrm { DL } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\mathrm { DL } } \\right) ( \\mathrm { x } ) = \\left( \\sigma _ { \\mathrm { DL } } \\right) ( 1 ) + \\left( 1 - \\sigma _ { \\mathrm { DL } } \\right) ( 0 )",
+        "\\left( 1 - \\sigma _ { \\mathrm { DL } } \\right) ( \\mathrm { x } ) = \\left( \\sigma _ { \\mathrm { DL } } \\right) ( 1 )",
+        "\\mathrm { x } - \\mathrm { x } \\sigma _ { \\mathrm { DL } } = \\sigma _ { \\mathrm { DL } }"
+      ],
+      "expected_count": 2,
+      "source_sha256": "3739f53acb47bd0ed0a4d5aae6024a1411d2802435923a30740f2c6798efc6d5",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=302"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { f } ( \\mathrm { x } ) = 1 / ( 1 + \\mathrm { x } ) \\mathrm { f } ^ { \\prime } ( \\mathrm { x } ) = \\left[ ( 1 ) ^ { \\prime } ( 1 + \\mathrm { x } ) - ( 1 ) ( 1 + \\mathrm { x } ) ^ { \\prime } \\right] / ( 1 + \\mathrm { x } ) ^ { 2 } \\mathrm { f } ^ { \\prime } ( \\mathrm { x } ) = [ ( 0 ) ( 1 + \\mathrm { x } ) - ( 1 ) ( 1 ) ] / ( 1 + \\mathrm { x } ) ^ { 2 } f ^ { \\prime } ( x ) = - 1 / ( 1 + x ) ^ { 2 }",
+      "rows": [
+        "\\mathrm { f } ( \\mathrm { x } ) = 1 / ( 1 + \\mathrm { x } )",
+        "\\mathrm { f } ^ { \\prime } ( \\mathrm { x } ) = \\left[ ( 1 ) ^ { \\prime } ( 1 + \\mathrm { x } ) - ( 1 ) ( 1 + \\mathrm { x } ) ^ { \\prime } \\right] / ( 1 + \\mathrm { x } ) ^ { 2 }",
+        "\\mathrm { f } ^ { \\prime } ( \\mathrm { x } ) = [ ( 0 ) ( 1 + \\mathrm { x } ) - ( 1 ) ( 1 ) ] / ( 1 + \\mathrm { x } ) ^ { 2 }",
+        "f ^ { \\prime } ( x ) = - 1 / ( 1 + x ) ^ { 2 }"
+      ],
+      "expected_count": 2,
+      "source_sha256": "a42d94dd5ff669d2daed5ef60c169cf67959bb13a4d0d364bb5a5211837c0ff6",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=303"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { \\text {ignore } } = \\mathrm { EU } _ { \\text {call } } \\mathrm { EU } _ { \\text {ignore } } = \\left( \\sigma _ { \\text {ignore } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\text {ignore } } \\right) ( 1 ) \\mathrm { EU } _ { \\text {call } } = 1 - \\mathrm { c } \\left( \\sigma _ { \\text {ignore } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\text {ignore } } \\right) ( 1 ) = 1 - \\mathrm { c } 1 - \\sigma _ { \\text {ignore } } = 1 - \\mathrm { c } \\sigma _ { \\text {ignore } } = \\mathrm { c }",
+      "rows": [
+        "\\mathrm { EU } _ { \\text {ignore } } = \\mathrm { EU } _ { \\text {call } }",
+        "\\mathrm { EU } _ { \\text {ignore } } = \\left( \\sigma _ { \\text {ignore } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\text {ignore } } \\right) ( 1 )",
+        "\\mathrm { EU } _ { \\text {call } } = 1 - \\mathrm { c }",
+        "\\left( \\sigma _ { \\text {ignore } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { \\text {ignore } } \\right) ( 1 ) = 1 - \\mathrm { c }",
+        "1 - \\sigma _ { \\text {ignore } } = 1 - \\mathrm { c }",
+        "\\sigma _ { \\text {ignore } } = \\mathrm { c }"
+      ],
+      "expected_count": 2,
+      "source_sha256": "d67fee9adde1c36823dc4badc9bd1a6ca6dc9834f9b5bec5a61783b28e1cbcc8",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=306"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "E U _ { A } = \\left( \\sigma _ { 1 } \\right) \\left[ E U _ { A , 1 } \\right] + \\left( \\sigma _ { 2 } \\right) \\left[ E U _ { A , 2 } \\right] + \\ldots + \\left( \\sigma _ { n } \\right) \\left[ E U _ { A , n } \\right]",
+      "rows": [
+        "E U _ { A } = \\left( \\sigma _ { 1 } \\right) \\left[ E U _ { A , 1 } \\right] + \\left( \\sigma _ { 2 } \\right) \\left[ E U _ { A , 2 } \\right]",
+        "+ \\ldots + \\left( \\sigma _ { n } \\right) \\left[ E U _ { A , n } \\right]"
+      ],
+      "expected_count": 2,
+      "source_sha256": "6efbf894fdef113843178d8a8b53142fb23ea7a3e32b4d30ccea4c9f24ed6d98",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=324"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\mathrm { EU } _ { \\mathrm { A } , 1 } \\geq \\mathrm { EU } _ { \\mathrm { B } , 1 } , \\mathrm { EU } _ { \\mathrm { A } , 2 } \\geq \\mathrm { EU } _ { \\mathrm { B } , 2 }",
+      "rows": [
+        "\\mathrm { EU } _ { \\mathrm { A } , 1 } \\geq \\mathrm { EU } _ { \\mathrm { B } , 1 } ,",
+        "\\mathrm { EU } _ { \\mathrm { A } , 2 } \\geq \\mathrm { EU } _ { \\mathrm { B } , 2 }"
+      ],
+      "expected_count": 2,
+      "source_sha256": "b8df94e2861fbd6261da1f4d60b1fa9a1f621b94a232ab9f59b2c2e3d10aa5aa",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=324"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\left( \\sigma _ { 1 } \\right) \\mathrm { EU } _ { \\mathrm { A } , 1 } \\geq \\left( \\sigma _ { 1 } \\right) \\mathrm { EU } _ { \\mathrm { B } , 1 } , \\left( \\sigma _ { 1 } \\right) \\mathrm { EU } _ { \\mathrm { A } , 2 } \\geq \\left( \\sigma _ { 1 } \\right) \\mathrm { EU } _ { \\mathrm { B } , 2 }",
+      "rows": [
+        "\\left( \\sigma _ { 1 } \\right) \\mathrm { EU } _ { \\mathrm { A } , 1 } \\geq \\left( \\sigma _ { 1 } \\right) \\mathrm { EU } _ { \\mathrm { B } , 1 } ,",
+        "\\left( \\sigma _ { 1 } \\right) \\mathrm { EU } _ { \\mathrm { A } , 2 } \\geq \\left( \\sigma _ { 1 } \\right) \\mathrm { EU } _ { \\mathrm { B } , 2 }"
+      ],
+      "expected_count": 2,
+      "source_sha256": "7405a9d1eb2737146a957640aedb46fe98accdac9df24c9b632b8442355e2941",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=324"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\left( \\sigma _ { \\text {left } } \\right) ( 1 ) \\geq \\left( \\sigma _ { \\text {left } } \\right) ( 2 ) 1 \\geq 2",
+      "rows": [
+        "\\left( \\sigma _ { \\text {left } } \\right) ( 1 ) \\geq \\left( \\sigma _ { \\text {left } } \\right) ( 2 )",
+        "1 \\geq 2"
+      ],
+      "expected_count": 2,
+      "source_sha256": "3410ccc71b5749a85f7d038fcddb4bad49a3bf91f374356551ab3c90492cf8ef",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=328"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    },
+    {
+      "before": "\\sigma _ { \\text {rock } } = z / ( x + y + z ) , \\sigma _ { \\text {paper } } = \\mathrm { y } / ( \\mathrm { x } + \\mathrm { y } + \\mathrm { z } )",
+      "rows": [
+        "\\sigma _ { \\text {rock } } = z / ( x + y + z ) ,",
+        "\\sigma _ { \\text {paper } } = \\mathrm { y } / ( \\mathrm { x } + \\mathrm { y } + \\mathrm { z } )"
+      ],
+      "expected_count": 2,
+      "source_sha256": "3f577a377484797bc61d3a967461240b7f24ec6f6e013f3fc0bc5eb2ed918874",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=350"
+      ],
+      "reason": "Reflow a Mathpix-fused or oversized inline derivation as native aligned TeX without changing its mathematical token stream."
+    }
+  ],
+  "math_block_reflows": [
+    {
+      "before": "\\(\\mathrm { EU } _ { \\text {up } } = \\mathrm { EU } _ { \\text {down } } \\mathrm { EU } _ { \\text {up } } = \\left( \\sigma _ { \\text {left } } \\right) ( 3 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( - 2 ) \\mathrm { EU } _ { \\text {down } } = \\left( \\sigma _ { \\text {left } } \\right) ( - 1 )\\)\\\\\n\\(+ \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 0 ) \\left( \\sigma _ { \\text {left } } \\right) ( 3 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( - 2 ) = \\left( \\sigma _ { \\text {left } } \\right) ( - 1 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right)\\)\\\\\n(0) \\(3 \\sigma _ { \\text {left } } - 2 + 2 \\sigma _ { \\text {left } } = - \\sigma _ { \\text {left } } 5 \\sigma _ { \\text {left } } - 2 = - \\sigma _ { \\text {left } } 6 \\sigma _ { \\text {left } } = 2\\)\\\\\n\\(\\sigma _ { \\text {left } } = 1 / 3\\)",
+      "rows": [
+        "\\mathrm { EU } _ { \\text {up } } = \\mathrm { EU } _ { \\text {down } }",
+        "\\mathrm { EU } _ { \\text {up } } = \\left( \\sigma _ { \\text {left } } \\right) ( 3 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( - 2 )",
+        "\\mathrm { EU } _ { \\text {down } } = \\left( \\sigma _ { \\text {left } } \\right) ( - 1 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 0 )",
+        "\\left( \\sigma _ { \\text {left } } \\right) ( 3 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( - 2 ) = \\left( \\sigma _ { \\text {left } } \\right) ( - 1 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) (0)",
+        "3 \\sigma _ { \\text {left } } - 2 + 2 \\sigma _ { \\text {left } } = - \\sigma _ { \\text {left } }",
+        "5 \\sigma _ { \\text {left } } - 2 = - \\sigma _ { \\text {left } }",
+        "6 \\sigma _ { \\text {left } } = 2",
+        "\\sigma _ { \\text {left } } = 1 / 3"
+      ],
+      "expected_count": 2,
+      "source_sha256": "bfc0be07a17803d1c4a40d7c838e4522151e178ecd0703a5a1c63f4db7050029",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=92"
+      ],
+      "reason": "Rejoin a Mathpix-split derivation as native aligned TeX while preserving its complete mathematical token stream."
+    },
+    {
+      "before": "\\(\\mathrm { EU } _ { \\text {up } } = \\mathrm { EU } _ { \\text {down } } \\mathrm { EU } _ { \\text {up } } = \\left( \\sigma _ { \\text {left } } \\right) ( - 10 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 2 ) \\mathrm { EU } _ { \\text {down } } = \\left( \\sigma _ { \\text {left } } \\right) ( - 2 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 0 ) \\left( \\sigma _ { \\text {left } } \\right) ( - 10 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 2 ) = \\left( \\sigma _ { \\text {left } } \\right) ( - 2 ) + ( 1 - \\left. \\sigma _ { \\text {left } } \\right) ( 0 ) - 10 \\sigma _ { \\text {left } } + 2 - 2 \\sigma _ { \\text {left } } = - 2 \\sigma _ { \\text {left } } - 12 \\sigma _ { \\text {left } } + 2 = - 2 \\sigma _ { \\text {left } } 10 \\sigma _ { \\text {left } } =\\) 2\\\\\n\\(\\sigma _ { \\text {left } } = 1 / 5\\)\\\\",
+      "rows": [
+        "\\mathrm { EU } _ { \\text {up } } = \\mathrm { EU } _ { \\text {down } }",
+        "\\mathrm { EU } _ { \\text {up } } = \\left( \\sigma _ { \\text {left } } \\right) ( - 10 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 2 )",
+        "\\mathrm { EU } _ { \\text {down } } = \\left( \\sigma _ { \\text {left } } \\right) ( - 2 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 0 )",
+        "\\left( \\sigma _ { \\text {left } } \\right) ( - 10 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 2 ) = \\left( \\sigma _ { \\text {left } } \\right) ( - 2 ) + ( 1 - \\left. \\sigma _ { \\text {left } } \\right) ( 0 )",
+        "- 10 \\sigma _ { \\text {left } } + 2 - 2 \\sigma _ { \\text {left } } = - 2 \\sigma _ { \\text {left } }",
+        "- 12 \\sigma _ { \\text {left } } + 2 = - 2 \\sigma _ { \\text {left } }",
+        "10 \\sigma _ { \\text {left } } = 2",
+        "\\sigma _ { \\text {left } } = 1 / 5"
+      ],
+      "expected_count": 2,
+      "source_sha256": "76f5f6a87addbbbd99ce8583354fa8847ca39a34282a07ea710406a94403ccbe",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=111"
+      ],
+      "reason": "Rejoin a Mathpix-split derivation as native aligned TeX while preserving its complete mathematical token stream."
+    },
+    {
+      "before": "\\(\\mathrm { EU } _ { 1 } = ( 1 / 5 ) ( 1 / 5 ) ( - 10 ) + ( 4 / 5 ) ( 1 / 5 ) ( - 2 ) + ( 1 / 5 ) ( 4 / 5 ) ( 2 ) + ( 4 / 5 ) ( 4 / 5 ) ( 0 ) \\mathrm { EU } _ { 1 } = ( 1 / 25 ) ( - 10 ) + ( 4 / 25 ) ( - 2 ) + ( 4 / 25 ) ( 2 ) + ( 16 / 25 )\\) (0) \\(\\mathrm { EU } _ { 1 } = - 10 / 25 - 8 / 25 + 8 / 25 + 0\\)\\\\\n\\(\\mathrm { EU } _ { 1 } = - 10 / 25\\)\\\\\n\\(\\mathrm { EU } _ { 1 } = - 2 / 5\\)\\\\",
+      "rows": [
+        "\\mathrm { EU } _ { 1 } = ( 1 / 5 ) ( 1 / 5 ) ( - 10 ) + ( 4 / 5 ) ( 1 / 5 ) ( - 2 )",
+        "+ ( 1 / 5 ) ( 4 / 5 ) ( 2 ) + ( 4 / 5 ) ( 4 / 5 ) ( 0 )",
+        "\\mathrm { EU } _ { 1 } = ( 1 / 25 ) ( - 10 ) + ( 4 / 25 ) ( - 2 ) + ( 4 / 25 ) ( 2 ) + ( 16 / 25 ) (0)",
+        "\\mathrm { EU } _ { 1 } = - 10 / 25 - 8 / 25 + 8 / 25 + 0",
+        "\\mathrm { EU } _ { 1 } = - 10 / 25",
+        "\\mathrm { EU } _ { 1 } = - 2 / 5"
+      ],
+      "expected_count": 2,
+      "source_sha256": "c0f040a37cb5d999c988b210c01458490fffb84eba294aa989357ff555575b83",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=112"
+      ],
+      "reason": "Rejoin a Mathpix-split derivation as native aligned TeX while preserving its complete mathematical token stream."
+    },
+    {
+      "before": "\\(\\mathrm { EU } _ { 1 } = ( 1 / 3 ) ( 2 / 3 ) ( 2 ) + ( 2 / 3 ) ( 2 / 3 ) ( 0 ) + ( 1 / 3 ) ( 1 / 3 ) ( 0 ) + ( 2 / 3 )\\)\\\\\n\\(( 1 / 3 ) ( 1 ) \\mathrm { EU } _ { 1 } = ( 2 / 9 ) ( 2 ) + ( 4 / 9 ) ( 0 ) + ( 1 / 9 ) ( 0 ) + ( 2 / 9 ) ( 1 ) \\mathrm { EU } _ { 1 } =\\)\\\\\n\\(4 / 9 + 2 / 9\\)\\\\\n\\(\\mathrm { EU } _ { 1 } = 6 / 9\\)\\\\\n\\(\\mathrm { EU } _ { 1 } = 2 / 3\\)\\\\",
+      "rows": [
+        "\\mathrm { EU } _ { 1 } = ( 1 / 3 ) ( 2 / 3 ) ( 2 ) + ( 2 / 3 ) ( 2 / 3 ) ( 0 ) + ( 1 / 3 ) ( 1 / 3 ) ( 0 ) + ( 2 / 3 ) ( 1 / 3 ) ( 1 )",
+        "\\mathrm { EU } _ { 1 } = ( 2 / 9 ) ( 2 ) + ( 4 / 9 ) ( 0 ) + ( 1 / 9 ) ( 0 ) + ( 2 / 9 ) ( 1 )",
+        "\\mathrm { EU } _ { 1 } = 4 / 9 + 2 / 9",
+        "\\mathrm { EU } _ { 1 } = 6 / 9",
+        "\\mathrm { EU } _ { 1 } = 2 / 3"
+      ],
+      "expected_count": 2,
+      "source_sha256": "f009a594e97b46a55b004d82917511c222fef98c13380fc6d98388b98c45c1e4",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=117"
+      ],
+      "reason": "Rejoin a Mathpix-split derivation as native aligned TeX while preserving its complete mathematical token stream."
+    },
+    {
+      "before": "\\(\\mathrm { EU } _ { \\text {up } } = \\mathrm { EU } _ { \\text {down } } \\mathrm { EU } _ { \\text {up } } = \\left( \\sigma _ { \\text {left } } \\right) ( 3 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( - 1 ) \\mathrm { EU } _ { \\text {down } } = \\left( \\sigma _ { \\text {left } } \\right) ( - 1 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 2 ) \\left( \\sigma _ { \\text {left } } \\right) ( 3 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( - 1 ) = \\left( \\sigma _ { \\text {left } } \\right) ( - 1 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right)\\) (2) \\(3 \\sigma _ { \\text {left } } - 1 + \\sigma _ { \\text {left } } = - \\sigma _ { \\text {left } } + 2 - 2 \\sigma _ { \\text {left } } 4 \\sigma _ { \\text {left } } - 1 = - 3 \\sigma _ { \\text {left } } + 2 7 \\sigma _ { \\text {left } } = 3 \\sigma _ { \\text {left } } = 3 / 7\\)",
+      "rows": [
+        "\\mathrm { EU } _ { \\text {up } } = \\mathrm { EU } _ { \\text {down } }",
+        "\\mathrm { EU } _ { \\text {up } } = \\left( \\sigma _ { \\text {left } } \\right) ( 3 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( - 1 )",
+        "\\mathrm { EU } _ { \\text {down } } = \\left( \\sigma _ { \\text {left } } \\right) ( - 1 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( 2 )",
+        "\\left( \\sigma _ { \\text {left } } \\right) ( 3 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) ( - 1 ) = \\left( \\sigma _ { \\text {left } } \\right) ( - 1 ) + \\left( 1 - \\sigma _ { \\text {left } } \\right) (2)",
+        "3 \\sigma _ { \\text {left } } - 1 + \\sigma _ { \\text {left } } = - \\sigma _ { \\text {left } } + 2 - 2 \\sigma _ { \\text {left } }",
+        "4 \\sigma _ { \\text {left } } - 1 = - 3 \\sigma _ { \\text {left } } + 2",
+        "7 \\sigma _ { \\text {left } } = 3",
+        "\\sigma _ { \\text {left } } = 3 / 7"
+      ],
+      "expected_count": 1,
+      "source_sha256": "8c4872836f9d720bc18f8c8e7b941a360e84db8bb8da28a713952b38a045ff04",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=130"
+      ],
+      "reason": "Rejoin a Mathpix-split derivation as native aligned TeX while preserving its complete mathematical token stream."
+    },
+    {
+      "before": "\\(\\mathrm { EU } _ { \\text {left } } = \\mathrm { EU } _ { \\text {right } } \\mathrm { EU } _ { \\text {left } } = \\left( \\sigma _ { \\text {up } } \\right) ( 4 ) + \\left( 1 - \\sigma _ { \\text {up } } \\right) ( 0 ) \\mathrm { EU } _ { \\text {right } } = \\left( \\sigma _ { \\text {up } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { u p } \\right) ( 1 ) \\left( \\sigma _ { u p } \\right) ( 4 ) + \\left( 1 - \\sigma _ { u p } \\right) ( 0 ) = \\left( \\sigma _ { u p } \\right) ( 0 ) + \\left( 1 - \\sigma _ { u p } \\right) ( 1 ) 4 \\sigma _ { u p }\\)\\\\\n\\(= 1 - \\sigma _ { \\mathrm { up } } 5 \\sigma _ { \\mathrm { up } } = 1\\)\\\\\n\\(\\sigma _ { \\text {up } } = 1 / 5\\)\\\\",
+      "rows": [
+        "\\mathrm { EU } _ { \\text {left } } = \\mathrm { EU } _ { \\text {right } }",
+        "\\mathrm { EU } _ { \\text {left } } = \\left( \\sigma _ { \\text {up } } \\right) ( 4 ) + \\left( 1 - \\sigma _ { \\text {up } } \\right) ( 0 )",
+        "\\mathrm { EU } _ { \\text {right } } = \\left( \\sigma _ { \\text {up } } \\right) ( 0 ) + \\left( 1 - \\sigma _ { u p } \\right) ( 1 )",
+        "\\left( \\sigma _ { u p } \\right) ( 4 ) + \\left( 1 - \\sigma _ { u p } \\right) ( 0 ) = \\left( \\sigma _ { u p } \\right) ( 0 ) + \\left( 1 - \\sigma _ { u p } \\right) ( 1 )",
+        "4 \\sigma _ { u p } = 1 - \\sigma _ { \\mathrm { up } }",
+        "5 \\sigma _ { \\mathrm { up } } = 1",
+        "\\sigma _ { \\text {up } } = 1 / 5"
+      ],
+      "expected_count": 2,
+      "source_sha256": "64aad446cc81b36a325b5440278cf79508d8475b1ed79a48dceae3f3a30eb39f",
+      "evidence": [
+        "Game_Theory_101_Complete_Textbook_2011.pdf#page=268"
+      ],
+      "reason": "Rejoin a Mathpix-split derivation as native aligned TeX while preserving its complete mathematical token stream."
+    }
   ]
 }
