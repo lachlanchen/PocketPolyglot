@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "description": "Source-evidenced repairs for localized Samurai Sourcebook OCR failures.",
+  "markdown_replacements": [
+    {
+      "from": "## IAPANESE FAMILY NAMES.*?(?=\\n\\ndesians:)",
+      "to_file": "data/source-plan/sengoku-history-source-fixes/samurai-sourcebook-family-names.md",
+      "regex": true,
+      "dotall": true,
+      "expected_min": 1,
+      "source_evidence": "Source PDF page 21, printed page 21. Marker inserted the family-name table in the middle of the preceding two-column prose and corrupted the lower half of its Japanese cells.",
+      "note": "Restore source reading order and retain the dense multilingual table as a 600-dpi source crop."
+    },
+    {
+      "from": "desians: 1\\..*?including Kobayakawa\\.",
+      "to": "",
+      "regex": true,
+      "dotall": false,
+      "expected_min": 1,
+      "source_evidence": "Source PDF page 22, printed page 22. This is the detached body of the 'Mon and other heraldic designs' caption, which is restored in source order after its figure by the next replacement.",
+      "note": "Remove the corrupted duplicate caption from before the figure."
+    },
+    {
+      "from": "Mon and other heroldic",
+      "to": "Mon and other heraldic designs: 1. The rindō mon attributed to the Minamoto family. 2. The butterfly mon attributed to the Taira, and later used by the Ikeda. 3. The imperial chrysanthemum floating on the water, used by the great loyalist Kusunoki Masashige. 4. A detail from Ehon Taikōki showing a monk army's use of wooden shields with mon and bonji (Sanskrit characters) painted on. 5. The kiri mon (paulownia) associated with the Ashikaga family, and later used by Toyotomi Hideyoshi. 6. The bizarre flag of Matsuno Hirochika, who killed a young enemy in 1615, and had the flag painted as earnest of his attempts to pray for the soul of his victim. The man's severed head is shown. 7. The hata-jirushi standard of Ashikaga Yoshiaki. 8. The sashimono flag of Hachisuka Iemasa, bearing a swastika, a very ancient Buddhist symbol. 9. The flag of the Jōdo sect of Buddhism used by Tokugawa Ieyasu. It bears the slogan, 'Renounce this filthy world and attain the Pure Land'. 10. The mon of aoi (hollyhock) leaves in a circle, used by the Tokugawa family. 11. Akechi Mitsuhide is shown here accompanied by foot soldiers, one of whom is carrying his standard, which is a large stiffened flag bearing the kikuyō mon. This design also appears on the back of Mitsuhide's surcoat. 12. The triple tomoe design, used by several families including Kobayakawa.",
+      "expected_min": 1,
+      "source_evidence": "Direct transcription of the caption on source PDF page 22, printed page 22, checked against the 600-dpi source crop.",
+      "note": "Restore the full caption immediately after its retained source figure."
+    },
+    {
+      "from": "## Glossary of terms for major styles of armour [^\\n]+",
+      "to": "## Glossary of terms for major styles of armour\n\n![Armour styles glossary]({{TASK_DIR}}/review/source-figures/glossary-major-styles-armour.png)",
+      "regex": true,
+      "dotall": false,
+      "expected_min": 1,
+      "source_evidence": "Source PDF page 103, printed page 103. The source contains a boxed three-column glossary figure; Marker treated all labels and recognition noise as one level-two heading.",
+      "note": "Retain the glossary as a high-resolution source crop and use only its actual title as the structural heading."
+    },
+    {
+      "from": "Nobuyuki was originally a hostage of the Tokugawa, but married Honda Tadakatsu's daughter, and in 1600 sided fully with the Tokugawa cause. In 1622 he received the fief of Matsushiro (Shinano - 100 000 koku)\n\n- 00,000 коки). banner: red band on white\n- great standard: black with six white coin\n- designs\n- sashimono: red band on white\n  - lesser standard: gold fan messengers' sashimono: horō, white, red, white\n  - ashigaru: two white flags with red band",
+      "to": "Nobuyuki was originally a hostage of the Tokugawa, but married Honda Tadakatsu's daughter, and in 1600 sided fully with the Tokugawa cause. In 1622 he received the fief of Matsushiro (Shinano - 100,000 koku).\n\n- banner: red band on white\n- great standard: black with six white coin designs\n- sashimono: red band on white\n- lesser standard: gold fan\n- messengers' sashimono: horō, white, red, white\n- ashigaru: two white flags with red band",
+      "expected_min": 1,
+      "source_evidence": "Source PDF page 76, printed page 76, Sanada Nobuyuki entry. The source has one prose sentence followed by six heraldry lines; the OCR duplicated the end of '100,000 koku' in Cyrillic and split one line incorrectly.",
+      "note": "Restore punctuation and source line grouping without adding content."
+    },
+    {
+      "from": "\"Today the reputation of our army binds us all in joy. When we consider the bravery of our soldiers and the quality of the military exploits, the conduct of Momoda Töbei, Fukukita Shögen, Mori Shiroʻza'emon, Machii Kiyobei, Nimi Hiöe, Yokoyama Jinsuke and Yamada Kanshiroʻ have lifted them above the common herd. Due to their talents which are of the highest quality we name them the Seven Spears of Hiiwaman.\"",
+      "to": "\"Today the reputation of our army binds us all in joy. When we consider the bravery of our soldiers and the quality of the military exploits, the conduct of Momoda Tōbei, Fukukita Shōgen, Mori Shirōza'emon, Machii Kiyobei, Nimi Hiōe, Yokoyama Jinsuke and Yamada Kanshirō have lifted them above the common herd. Due to their talents which are of the highest quality we name them the Seven Spears of Hijiyama.\"",
+      "expected_min": 1,
+      "source_evidence": "Source PDF page 195, printed page 195, lower-right quotation. The scan clearly supplies the macrons, apostrophe, and place name restored here.",
+      "note": "Replace OCR modifier-letter artifacts and restore the source romanization."
+    },
+    {
+      "from": "Nuinobe dō is another name for the overall style of armour made from [^\\n]+",
+      "to": "Nuinobe dō is another name for the overall style of armour made from iyozane.",
+      "regex": true,
+      "dotall": false,
+      "expected_min": 1,
+      "source_evidence": "Source PDF page 100, printed page 100, first column. The sentence ends with 'made from iyozane.'; the hundreds of following 'hyzane' tokens have no source counterpart.",
+      "note": "Remove one localized OCR repetition loop without changing adjacent source prose."
+    },
+    {
+      "from": "## INDEX.*?(?=\\n\\n## THE SAMURAL SOURCEBOOK)",
+      "to_file": "data/source-plan/sengoku-history-source-fixes/samurai-sourcebook-index.md",
+      "regex": true,
+      "dotall": true,
+      "expected_min": 1,
+      "source_evidence": "Source PDF pages 313-320, printed index pages 313-320. The replacement was OCRed at 600 dpi in five explicit columns per page so reading order cannot cross columns; its header records source SHA-256 and OCR parameters.",
+      "note": "Replace mixed-column Marker output and repetition loops with deterministic column-ordered OCR."
+    },
+    {
+      "from": "## THE SAMURAL SOURCEBOOK",
+      "to": "## THE SAMURAI SOURCEBOOK {.unnumbered .unlisted}",
+      "expected_min": 1,
+      "source_evidence": "Source PDF page 321, back-cover heading, clearly reads 'THE SAMURAI SOURCEBOOK'.",
+      "note": "Correct one heading OCR substitution and keep the back-cover marketing heading out of the navigational TOC."
+    },
+    {
+      "from": "samural",
+      "to": "samurai",
+      "expected_min": 70,
+      "source_evidence": "Representative source checks on PDF pages 21, 100, 195, and 321 confirm that the final vertical stroke is the letter i in the recurring word 'samurai'; Marker consistently misread it as lowercase l throughout the same scan/font family.",
+      "note": "Correct the systematic lowercase OCR substitution without changing surrounding prose."
+    },
+    {
+      "from": "Samural",
+      "to": "Samurai",
+      "expected_min": 1,
+      "source_evidence": "The source consistently prints the title-case word 'Samurai'; the scan/font family caused the same i-to-l OCR substitution as the lowercase form.",
+      "note": "Correct the title-case form while retaining capitalization."
+    },
+    {
+      "from": "SAMURAL",
+      "to": "SAMURAI",
+      "expected_min": 9,
+      "source_evidence": "Source headings and captions, including PDF page 321, print uppercase 'SAMURAI'; Marker consistently confused the terminal I with L.",
+      "note": "Correct the uppercase form while retaining capitalization."
+    },
+    {
+      "from": "HERALORY",
+      "to": "HERALDRY",
+      "expected_min": 1,
+      "source_evidence": "Source PDF page 22 and its contents entry use 'HERALDRY'; the OCR dropped the D and substituted O in the catalogue heading.",
+      "note": "Restore the source heading spelling."
+    }
+  ]
+}

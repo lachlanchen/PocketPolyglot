@@ -1,0 +1,29 @@
+{
+  "markdown_replacements": [
+    {
+      "from": "# IEYASU'S OFFSPRING\\s+\\| Marriage or Adoption \\(Main Fief\\).*?The lady Kawamura is sometimes recorded as being from the Yamada family\\.",
+      "to_file": "data/source-plan/sengoku-history-source-fixes/tokugawa-ieyasu-offspring-table.md",
+      "regex": true,
+      "dotall": true,
+      "expected_min": 1,
+      "source_evidence": "Direct transcription of the rotated genealogy table on source PDF page 207, printed page 191, checked against the original scan.",
+      "note": "Restore the six source columns and sixteen rows that Marker collapsed into two concatenated columns."
+    },
+    {
+      "from": "Нојо",
+      "to": "Hōjō",
+      "expected_min": 1,
+      "source_evidence": "Source PDF page 219, printed index page 203, clearly prints the entry as 'Hōjō'.",
+      "note": "Replace three OCR Cyrillic lookalikes with the source's Latin romanization."
+    }
+  ],
+  "markdown_image_exclusions": [
+    {
+      "min_width": 400,
+      "max_height": 150,
+      "min_aspect_ratio": 3.8,
+      "source_evidence": "Visual audit of the source scan and Marker contact sheet, independently confirmed with Tesseract OCR on sampled strips: every repeated 487-509 by 90-110 pixel strip reads 'Digitized by Google'; historical maps and illustrations are substantially taller.",
+      "note": "Exclude scanner-service watermark strips while retaining maps, portraits, crests, and source illustrations. Every excluded path, size, and SHA-256 digest is recorded in markdown-fix-report.json."
+    }
+  ]
+}

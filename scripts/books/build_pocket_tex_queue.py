@@ -11,6 +11,8 @@ from __future__ import annotations
 
 import argparse
 import collections
+import contextlib
+import fcntl
 import hashlib
 import json
 import os
@@ -29,6 +31,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_QUEUE = ROOT / "build-pocket/tasks/source-queue-2026-07-12.json"
 DEFAULT_HEADER = ROOT / "build-pocket/_common/pandoc-pocket-header.tex"
+DEFAULT_MARKER_LOCK_DIR = Path("/tmp/pocketpolyglot-marker-slots")
 
 CONTROL_RE = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]")
 MARKDOWN_IMAGE_RE = re.compile(r"(!\[[^\]]*\]\()([^)\n]+)(\))")
@@ -68,6 +71,7 @@ LATEX_ERROR_RE = re.compile(
     r"|Fatal error|Emergency stop|Undefined control sequence",
     re.M,
 )
+MISSING_CHARACTER_RE = re.compile(r"^Missing character:.*$", re.M)
 INCLUDEGRAPHICS_RE = re.compile(r"\\includegraphics(?:\[[^\]]*\])?(\{[^}]+\})")
 INCLUDEGRAPHICS_PATH_RE = re.compile(
     r"\\includegraphics(?:\[[^\]]*\])?\{"
@@ -760,6 +764,22 @@ def add_longtable_break_opportunities(text: str) -> str:
     return LONGTABLE_BLOCK_RE.sub(repl, text)
 
 
+def restore_longtable_linebreaks(text: str) -> str:
+    """Restore reviewed table breaks after commonmark escapes raw TeX.
+
+    ``normalize_marker_markdown_math`` replaces source ``<br>`` tags with a
+    portable marker before Pandoc. Commonmark safely escapes that marker in a
+    table cell, so restore it only inside the resulting longtable. This avoids
+    interpreting matching prose outside tables as TeX.
+    """
+
+    escaped = r"\textbackslash linebreak\{\}"
+    return LONGTABLE_BLOCK_RE.sub(
+        lambda match: match.group(0).replace(escaped, r"\linebreak{}"),
+        text,
+    )
+
+
 def repair_split_uppercase_table_words(text: str) -> str:
     """Rejoin OCR line breaks inserted inside an uppercase table word."""
 
@@ -848,6 +868,24 @@ def normalize_index_verbatim_blocks(text: str, *, layout: str) -> str:
         return begin + "\n" + normalized + match.group("end")
 
     return VERBATIM_BLOCK_RE.sub(repl, text)
+
+
+def stabilize_unnumbered_heading_toc_anchors(text: str) -> str:
+    """Give each unnumbered Pandoc heading its own PDF destination.
+
+    The template disables section numbering globally.  Hyperref can therefore
+    leave ``section`` through ``paragraph`` TOC entries pointing at the most
+    recent list item, table, or parent chapter.  Pandoc already wraps headings
+    in a named ``hypertarget``; inserting ``phantomsection`` inside that wrapper
+    refreshes Hyperref's current destination without changing visible text.
+    Starred, explicitly unlisted headings are intentionally left alone.
+    """
+
+    pattern = re.compile(
+        r"(\\hypertarget\{[^{}\n]+\}\{%\n)"
+        r"(?=\\(?:section|subsection|subsubsection|paragraph)\{)"
+    )
+    return pattern.sub(r"\1\\phantomsection\n", text)
 
 
 def landscape_wide_longtables(text: str) -> str:
@@ -990,10 +1028,27 @@ def remove_source_contents_block(text: str) -> str:
     end = start + 1 + next_match.start()
     removed = text[start:end]
     preserved_illustration = ""
-    if "List of Illustrations" in removed or "FIGURES" in removed:
-        image_matches = list(re.finditer(r"(?m)^\\includegraphics(?:\[[^]]*\])?\{[^}]+\}\s*$", removed))
-        if image_matches and len(removed) - image_matches[-1].start() <= 8000:
-            preserved_illustration = removed[image_matches[-1].start() :].strip() + "\n"
+    table_end = removed.rfind(r"\end{longtable}")
+    trailing = removed[table_end + len(r"\end{longtable}") :] if table_end >= 0 else ""
+    image_matches = list(
+        re.finditer(r"(?m)^\\includegraphics(?:\[[^]]*\])?\{[^}]+\}\s*$", trailing)
+    )
+    if image_matches:
+        # OCR sometimes places real maps/plates between the printed contents
+        # table and the first chapter. Preserve the complete trailing figure
+        # section, not merely its final image. Start at the closest structural
+        # heading before the first image when one exists; otherwise preserve
+        # from that image so stray contents-page text is still discarded.
+        first_image = image_matches[0].start()
+        heading_matches = list(
+            re.finditer(
+                r"(?m)^\\hypertarget\{[^{}]+\}\{%\s*\n"
+                r"\\(?:chapter|section|subsection|subsubsection)\{[^\n]+\}\s*$",
+                trailing[:first_image],
+            )
+        )
+        preserve_start = heading_matches[-1].start() if heading_matches else first_image
+        preserved_illustration = trailing[preserve_start:].strip() + "\n"
     return (
         text[:start]
         + "\n% Removed source-extracted printed Contents block; Pandoc TOC is used instead.\n"
@@ -1301,6 +1356,7 @@ def postprocess_tex(tex_path: Path, *, layout: str) -> None:
     # columns. Ragged2e keeps the same visual alignment while allowing long
     # technical terms and chemical names to wrap on narrow pocket pages.
     text = text.replace(r"\raggedright\arraybackslash", r"\RaggedRight\arraybackslash")
+    text = restore_longtable_linebreaks(text)
     text = add_longtable_break_opportunities(text)
     text = repair_split_uppercase_table_words(text)
     text = unwrap_source_page_hyperlinks(text)
@@ -1316,6 +1372,7 @@ def postprocess_tex(tex_path: Path, *, layout: str) -> None:
     )
     text = text.replace(r"\end{verbatim}", r"\end{Verbatim}")
     text = normalize_index_verbatim_blocks(text, layout=layout)
+    text = stabilize_unnumbered_heading_toc_anchors(text)
     if layout == "pocket":
         text = text.replace(
             r"\begin{longtable}",
@@ -1404,6 +1461,110 @@ def rewrite_markdown_image_paths(markdown: str, base: Path) -> str:
     return MARKDOWN_IMAGE_RE.sub(repl, markdown)
 
 
+IMAGE_EXCLUSION_DIMENSION_KEYS = {
+    "min_width",
+    "max_width",
+    "min_height",
+    "max_height",
+    "min_aspect_ratio",
+    "max_aspect_ratio",
+}
+
+
+def exclude_source_evidenced_markdown_images(
+    markdown: str,
+    rules: list[dict[str, Any]],
+) -> tuple[str, list[dict[str, Any]]]:
+    """Remove reviewed scanner artifacts while retaining an auditable record.
+
+    This is intentionally opt-in through a task's source-fix data. A rule must
+    cite evidence and specify at least one dimension, digest, or filename
+    condition. All configured conditions must match, which keeps broad global
+    image heuristics out of the extraction pipeline.
+    """
+
+    if not rules:
+        return markdown, []
+
+    from PIL import Image
+
+    normalized_rules: list[dict[str, Any]] = []
+    for index, raw_rule in enumerate(rules, start=1):
+        rule = dict(raw_rule)
+        evidence = str(rule.get("source_evidence") or "").strip()
+        if not evidence:
+            raise RuntimeError(f"Markdown image exclusion rule {index} has no source evidence")
+        has_condition = bool(
+            IMAGE_EXCLUSION_DIMENSION_KEYS.intersection(rule)
+            or str(rule.get("sha256") or "").strip()
+            or str(rule.get("filename_regex") or "").strip()
+        )
+        if not has_condition:
+            raise RuntimeError(
+                f"Markdown image exclusion rule {index} has no matching condition"
+            )
+        normalized_rules.append(rule)
+
+    excluded: list[dict[str, Any]] = []
+
+    def replacement(match: re.Match[str]) -> str:
+        target = match.group(2).strip().strip("<>")
+        if re.match(r"^[a-zA-Z][a-zA-Z0-9+.-]*:", target):
+            return match.group(0)
+        image_path = Path(target)
+        if not image_path.is_file():
+            return match.group(0)
+        try:
+            with Image.open(image_path) as image:
+                width, height = image.size
+        except Exception:
+            return match.group(0)
+        aspect_ratio = width / height if height else 0.0
+        digest = ""
+
+        for index, rule in enumerate(normalized_rules, start=1):
+            checks: list[bool] = []
+            if "min_width" in rule:
+                checks.append(width >= int(rule["min_width"]))
+            if "max_width" in rule:
+                checks.append(width <= int(rule["max_width"]))
+            if "min_height" in rule:
+                checks.append(height >= int(rule["min_height"]))
+            if "max_height" in rule:
+                checks.append(height <= int(rule["max_height"]))
+            if "min_aspect_ratio" in rule:
+                checks.append(aspect_ratio >= float(rule["min_aspect_ratio"]))
+            if "max_aspect_ratio" in rule:
+                checks.append(aspect_ratio <= float(rule["max_aspect_ratio"]))
+            filename_pattern = str(rule.get("filename_regex") or "").strip()
+            if filename_pattern:
+                checks.append(bool(re.search(filename_pattern, image_path.name)))
+            expected_digest = str(rule.get("sha256") or "").strip().lower()
+            if expected_digest:
+                digest = digest or sha256_file(image_path)
+                checks.append(digest.lower() == expected_digest)
+            if checks and all(checks):
+                digest = digest or sha256_file(image_path)
+                excluded.append(
+                    {
+                        "rule": index,
+                        "path": portable_path(image_path),
+                        "sha256": digest,
+                        "width": width,
+                        "height": height,
+                        "aspect_ratio": round(aspect_ratio, 4),
+                        "source_evidence": rule["source_evidence"],
+                        "note": rule.get("note", ""),
+                    }
+                )
+                return ""
+        return match.group(0)
+
+    filtered = MARKDOWN_IMAGE_RE.sub(replacement, markdown)
+    filtered = re.sub(r"\n{4,}", "\n\n\n", filtered)
+    return filtered, excluded
+
+
 def normalize_marker_markdown_math(
     markdown: str,
     *,
@@ -1423,7 +1584,7 @@ def normalize_marker_markdown_math(
         line = re.sub(rf"(?:\s*{tag})+\s*(?=\|)", " ", line, flags=re.I)
         return re.sub(rf"(?:{tag}\s*)+", r"\\linebreak{}", line, flags=re.I)
 
-    if not preserve_html_table_breaks:
+    if preserve_html_table_breaks:
         markdown = "\n".join(
             preserve_table_linebreaks(line)
             if line.lstrip().startswith("|") and line.rstrip().endswith("|")
@@ -1543,6 +1704,73 @@ def marker_executable() -> Path:
         if candidate.exists() and os.access(candidate, os.X_OK):
             return candidate
     raise RuntimeError("marker_single is not available; cannot run structured local PDF extraction")
+
+
+@contextlib.contextmanager
+def marker_execution_slot(source_name: str):
+    """Serialize GPU-heavy Marker calls across independent queue processes.
+
+    Marker loads the full Surya model set for every shard. Several otherwise
+    independent book runners can therefore exhaust GPU memory before any one
+    of them finishes a page. File locks keep orchestration parallel while
+    bounding only the GPU-heavy section. Set ``POCKET_MARKER_GPU_SLOTS`` above
+    one only after confirming the available GPU can hold that many model sets.
+    """
+
+    slot_count = max(1, env_int("POCKET_MARKER_GPU_SLOTS", 1))
+    poll_seconds = max(0.1, float(os.environ.get("POCKET_MARKER_SLOT_POLL_SECONDS", "2")))
+    timeout_seconds = max(0, env_int("POCKET_MARKER_SLOT_TIMEOUT_SECONDS", 0))
+    lock_dir = Path(os.environ.get("POCKET_MARKER_LOCK_DIR", str(DEFAULT_MARKER_LOCK_DIR)))
+    lock_dir.mkdir(parents=True, exist_ok=True)
+    started = time.monotonic()
+    wait_logged = False
+
+    while True:
+        for slot_index in range(slot_count):
+            lock_path = lock_dir / f"slot-{slot_index + 1:02d}.lock"
+            handle = lock_path.open("a+", encoding="utf-8")
+            try:
+                fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+            except BlockingIOError:
+                handle.close()
+                continue
+
+            waited = time.monotonic() - started
+            handle.seek(0)
+            handle.truncate()
+            handle.write(
+                json.dumps(
+                    {
+                        "pid": os.getpid(),
+                        "source": source_name,
+                        "acquired": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
+                    },
+                    ensure_ascii=False,
+                )
+                + "\n"
+            )
+            handle.flush()
+            if waited >= poll_seconds:
+                log(f"[marker-slot] acquired {slot_index + 1}/{slot_count} after {waited:.1f}s: {source_name}")
+            try:
+                yield slot_index + 1
+            finally:
+                handle.seek(0)
+                handle.truncate()
+                handle.flush()
+                fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
+                handle.close()
+            return
+
+        waited = time.monotonic() - started
+        if timeout_seconds and waited >= timeout_seconds:
+            raise RuntimeError(
+                f"timed out after {waited:.1f}s waiting for a Marker GPU slot: {source_name}"
+            )
+        if not wait_logged:
+            log(f"[marker-slot] waiting for an available GPU slot: {source_name}")
+            wait_logged = True
+        time.sleep(poll_seconds)
 
 
 def source_pdf_pages(source: Path) -> int:
@@ -1817,7 +2045,8 @@ def marker_pdf_to_markdown_sharded(
             if marker_timeout_seconds > 0 and shutil.which("timeout") is not None:
                 command = ["timeout", f"{marker_timeout_seconds}s", *command]
             log(f"[marker] {source.name} pages {page_start}-{page_end}/{page_count}")
-            code = run_stream(command, log_file=log_file)
+            with marker_execution_slot(source.name):
+                code = run_stream(command, log_file=log_file)
             markdown_path = marker_markdown(shard_dir)
             if code != 0 or markdown_path is None:
                 write_json(
@@ -1943,7 +2172,8 @@ def marker_pdf_to_markdown(
     marker_timeout_seconds = env_int("POCKET_MARKER_TIMEOUT_SECONDS", 0)
     if marker_timeout_seconds > 0 and shutil.which("timeout") is not None:
         cmd = ["timeout", f"{marker_timeout_seconds}s", *cmd]
-    code = run_stream(cmd, log_file=log_file)
+    with marker_execution_slot(source.name):
+        code = run_stream(cmd, log_file=log_file)
     if code != 0:
         if not allow_text_fallback:
             raise RuntimeError(f"marker_single failed with exit code {code}; see {log_file}")
@@ -2225,7 +2455,7 @@ def pandoc_to_tex(
     tex_path.parent.mkdir(parents=True, exist_ok=True)
     header = ensure_header()
     figures_dir = tex_path.parents[1] / "figures"
-    figures_dir.mkdir(parents=True, exist_ok=True)
+    prepare_generated_media_directory(figures_dir)
     pandoc_source = source
     if source_format == "markdown":
         source_text = source.read_text(encoding="utf-8", errors="replace")
@@ -2272,6 +2502,17 @@ def pandoc_to_tex(
         (tex_path.parent / "pandoc.log").write_text(result.stdout, encoding="utf-8")
         raise RuntimeError(f"pandoc failed for {source}; see {tex_path.parent / 'pandoc.log'}")
     postprocess_tex(tex_path, layout=layout)
+
+
+def prepare_generated_media_directory(figures_dir: Path) -> None:
+    """Reset one renderer-owned media directory before Pandoc extraction."""
+
+    figures_dir.mkdir(parents=True, exist_ok=True)
+    for path in figures_dir.iterdir():
+        if path.is_dir() and not path.is_symlink():
+            shutil.rmtree(path)
+        else:
+            path.unlink()
 
 
 def task_fix_path(task: dict[str, Any]) -> Path | None:
@@ -2537,6 +2778,10 @@ def apply_task_markdown_fixes(source: Path, task: dict[str, Any], task_dir: Path
     # The reviewed copy lives in another directory. Rebase local image paths
     # first so copying the Markdown cannot silently detach its figure assets.
     text = rewrite_markdown_image_paths(text, source.parent)
+    text, excluded_images = exclude_source_evidenced_markdown_images(
+        text,
+        data.get("markdown_image_exclusions") or [],
+    )
     local_images: list[str] = []
     missing_images: list[str] = []
     for match in MARKDOWN_IMAGE_RE.finditer(text):
@@ -2567,6 +2812,11 @@ def apply_task_markdown_fixes(source: Path, task: dict[str, Any], task_dir: Path
             "fix_file": portable_path(fix_path) if fix_path is not None else "",
             "replacements": report_rows,
             "flattened_index_tables": flattened_index_tables,
+            "excluded_image_references": len(excluded_images),
+            "excluded_unique_images": len(
+                {str(item.get("sha256") or "") for item in excluded_images}
+            ),
+            "excluded_images": excluded_images,
             "local_image_references": len(local_images),
             "missing_image_references": missing_images,
         },
@@ -2750,6 +3000,7 @@ def validate_pdf(pdf: Path, log_path: Path, tex_path: Path) -> dict[str, Any]:
         "overfull_count": len(overfull),
         "worst_overfull_pt": max(overfull) if overfull else 0,
         "latex_error_markers": LATEX_ERROR_RE.findall(log_text)[:20],
+        "missing_character_markers": MISSING_CHARACTER_RE.findall(log_text)[:20],
     }
 
 
@@ -2804,6 +3055,8 @@ def completion_issues(
     for layer_name, report in (("exact", exact_report), ("pocket", pocket_report)):
         if report.get("latex_error_markers"):
             issues.append(f"{layer_name} TeX log contains LaTeX error markers")
+        if report.get("missing_character_markers"):
+            issues.append(f"{layer_name} TeX log contains missing-character warnings")
         max_overfull = float(task.get("max_overfull_pt", 18.0))
         if float(report.get("worst_overfull_pt", 0)) > max_overfull:
             issues.append(
@@ -2852,9 +3105,20 @@ def completion_issues(
         marker_status_path = task_dir / "review/marker-merge-status.json"
         if marker_status_path.exists():
             marker_status = read_json(marker_status_path)
-            extracted_references = int(marker_status.get("image_references") or 0)
+            raw_extracted_references = int(marker_status.get("image_references") or 0)
+            fix_report_path = task_dir / "review/markdown-fix-report.json"
+            fix_report = read_json(fix_report_path) if fix_report_path.exists() else {}
+            excluded_references = int(fix_report.get("excluded_image_references") or 0)
+            if excluded_references > raw_extracted_references:
+                issues.append(
+                    "review excludes more image references than Marker extracted: "
+                    f"{excluded_references}/{raw_extracted_references}"
+                )
+            extracted_references = max(0, raw_extracted_references - excluded_references)
             structure["marker_extraction"] = {
                 "status": marker_status.get("status", ""),
+                "raw_image_references": raw_extracted_references,
+                "source_evidenced_exclusions": excluded_references,
                 "image_references": extracted_references,
                 "text_chars": marker_status.get("text_chars", 0),
                 "shards": len(marker_status.get("shards") or []),

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "description": "Source-evidenced correction for one unsupported OCR glyph in the index. The scan reads the standard note abbreviation 'n.', not Cyrillic pe.",
+  "markdown_replacements": [
+    {
+      "from": "Jurakudai (Mansion of Pleasure), 341, 364, 366, 383 п.",
+      "to": "Jurakudai (Mansion of Pleasure), 341, 364, 366, 383 n.",
+      "expected_min": 1,
+      "source_evidence": "Source PDF printed index page 431 (PDF page 467), entry for Jurakudai. The final character is the abbreviation 'n.' for note."
+    }
+  ]
+}

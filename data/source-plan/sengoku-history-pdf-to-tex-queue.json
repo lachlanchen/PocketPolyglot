@@ -1,7 +1,18 @@
 {
   "schema_version": 1,
   "queue_id": "sengoku-history-pdf-to-tex-2026-08-02",
-  "status": "ready",
+  "status": "complete",
+  "completed_at": "2026-08-02T09:24:32+08:00",
+  "completion_evidence": {
+    "tasks_complete": 9,
+    "tasks_blocked": 0,
+    "pdfs_validated": 18,
+    "facsimile_tex_commands": 0,
+    "missing_figure_references": 0,
+    "missing_character_markers": 0,
+    "stale_or_duplicate_toc_destinations": 0,
+    "report": "references/SENGOKU_PDF_TO_TEX_OCR_STATUS_2026-08-02.md"
+  },
   "description": "Advance local OCR/layout extraction for every PDF-gated Sengoku queue item. Each task must produce searchable exact TeX and a pocket-size TeX/PDF from the same reviewed body while preserving source-ordered figures and captions. Facsimile output is forbidden.",
   "execution": {
     "mode": "single_gpu_worker_sequential",
@@ -161,6 +172,7 @@
       "title": "Tokugawa Ieyasu: Shogun",
       "author": "Conrad Totman",
       "source": "sources/japan-history/sengoku/biographies/tokugawa-ieyasu/en/Tokugawa Ieyasu - Shogun - Conrad Totman.pdf",
+      "source_fixes": "data/source-plan/sengoku-history-source-fixes/tokugawa-ieyasu-totman.json",
       "validation_profile": "illustrated_exact",
       "marker_shard_pages": 12,
       "minimum_generated_text_chars": 150000,
@@ -173,6 +185,7 @@
       "title": "A History of Japan, 1334-1615",
       "author": "George Sansom",
       "source": "sources/japan-history/sengoku/surveys/en/A History of Japan 1334-1615 - George Sansom.pdf",
+      "source_fixes": "data/source-plan/sengoku-history-source-fixes/history-japan-1334-1615.json",
       "validation_profile": "illustrated_exact",
       "marker_shard_pages": 16,
       "minimum_generated_text_chars": 750000,
@@ -186,6 +199,27 @@
       "title": "The Samurai Sourcebook",
       "author": "Stephen Turnbull",
       "source": "sources/japan-history/sengoku/reference-works/en/The Samurai Sourcebook - Stephen Turnbull.pdf",
+      "source_fixes": "data/source-plan/sengoku-history-source-fixes/samurai-sourcebook.json",
+      "source_crops": [
+        {
+          "page": 21,
+          "clip_points": [10, 82, 197, 260],
+          "dpi": 600,
+          "output": "review/source-figures/japanese-family-names-table.png",
+          "source_evidence": "Source PDF page 21, printed page 21; preserve the eight-column Japanese family-name table that Marker split and corrupted."
+        },
+        {
+          "page": 103,
+          "clip_points": [0, 15, 207, 96],
+          "dpi": 600,
+          "output": "review/source-figures/glossary-major-styles-armour.png",
+          "source_evidence": "Source PDF page 103, printed page 103; the boxed glossary is a source figure that Marker incorrectly flattened into one noisy heading."
+        }
+      ],
+      "required_generated_figure_files": [
+        "review/source-figures/japanese-family-names-table.png",
+        "review/source-figures/glossary-major-styles-armour.png"
+      ],
       "validation_profile": "illustrated_exact",
       "marker_shard_pages": 8,
       "minimum_generated_text_chars": 240000,
