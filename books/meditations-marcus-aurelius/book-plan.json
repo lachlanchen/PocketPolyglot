@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "book_id": "meditations-marcus-aurelius",
+  "status": "prepared_trilingual",
+  "launchable": true,
+  "task_mode": "trilingual_philosophy_en_source_generated_ja_zh",
+  "source_spine_lang": "en",
+  "source_paths": {
+    "en": "sources/philosophy/stoicism/meditations/en/Meditations - George Long - Project Gutenberg.epub"
+  },
+  "source_reference_paths": {
+    "gutenberg_pdf": "sources/philosophy/stoicism/meditations/en/Meditations - George Long - Project Gutenberg.pdf",
+    "gutenberg_html": "sources/philosophy/stoicism/meditations/en/Meditations - George Long - Project Gutenberg.html",
+    "chinese_english_scan": "sources/philosophy/stoicism/meditations/zh-en/沉思录 - 中英双语典藏本.pdf"
+  },
+  "source_sha256": {
+    "en": "963f8b817a94986bb999caa1f9cd200b328690379fb3df17c08d557c356aad72"
+  },
+  "source_extraction": {
+    "en_cache": "books/meditations-marcus-aurelius/work/source-extraction/en.raw.md",
+    "note": "Modern nonfiction generic extraction. PDF uses pdftotext; EPUB/MOBI uses pandoc."
+  },
+  "markdown": {
+    "en": "books/meditations-marcus-aurelius/markdown/en.md"
+  },
+  "book_title_en": "Meditations",
+  "book_title_zh": "沉思录",
+  "book_title_ja": "自省録",
+  "book_title_zh_reading": "chén sī lù",
+  "book_title_ja_reading": "じせいろく",
+  "author": "Marcus Aurelius; translated by George Long",
+  "author_reading_zh": "",
+  "author_reading_ja": "マルクス・アウレリウス",
+  "curated_by": "AgInTiFlow curated",
+  "curated_url": "https://flow.lazying.art",
+  "powered_by": "powered by LazyingArt",
+  "book_description": "Marcus Aurelius, Meditations, Books I-XII. English is the preserved main layer; generate complete readable modern Japanese and modern Chinese aligned to every aphoristic unit.",
+  "chunk_mode": "paragraph_sentence_group",
+  "reference_scope": "en_spine_with_declared_supplemental_references",
+  "chunks_jsonl": "books/meditations-marcus-aurelius/work/trilingual/chunks/chunks.jsonl",
+  "chunks_manifest": "books/meditations-marcus-aurelius/work/trilingual/chunks/manifest.json",
+  "raw_chunk_dir": "books/meditations-marcus-aurelius/work/trilingual/interlinear/chunks",
+  "preview_json": "books/meditations-marcus-aurelius/work/trilingual/preview/meditations-marcus-aurelius.partial.json",
+  "assembled_json": "books/meditations-marcus-aurelius/work/trilingual/preview/meditations-marcus-aurelius.partial.json",
+  "prepared_at": "2026-08-03T08:55:29.493737+00:00",
+  "queue_id": "meditations-trilingual-20260803",
+  "queue_model": "gpt-5.6-sol",
+  "queue_reasoning": "low",
+  "chunk_count": 144,
+  "figure_count": 0,
+  "figure_manifest": "books/meditations-marcus-aurelius/work/trilingual/assets/figure-manifest.json",
+  "english_chapter_count": 12,
+  "preparation_notes": {
+    "script": "scripts/interlinear/prepare_modern_nonfiction_trilingual.py",
+    "source_spine": "en source text is the immutable chunk spine.",
+    "supplemental_sources": "Optional local references are recorded in source_reference_paths; they are not used as chunk spine text unless a later project-specific pass aligns them.",
+    "chinese_reference": "Preserve a Chinese source spine exactly when configured; otherwise generate readable modern Chinese from the declared spine.",
+    "japanese_reference": "Preserve a Japanese source spine exactly when configured; otherwise generate natural modern Japanese from the declared spine.",
+    "reference_notes": "The Chinese-English edition is an image-only scan (433 pages; pdftotext yields only page breaks). Keep it as page evidence for a later OCR/alignment review. The prepared task remains source-complete because its immutable spine is the validated public-domain English EPUB."
+  }
+}

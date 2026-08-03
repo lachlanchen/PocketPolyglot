@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "queue_id": "meditations-trilingual-20260803",
+  "status": "chunked_launchable",
+  "execution_status": "not_started",
+  "autostart": false,
+  "model": "gpt-5.6-sol",
+  "reasoning": "low",
+  "workers": 3,
+  "task_family": "philosophy_en_jp_zh",
+  "source_spine_lang": "en",
+  "output_languages": [
+    "en",
+    "ja",
+    "zh"
+  ],
+  "generation_contract": {
+    "translation_quality": "Translate every source unit completely and accurately into readable modern Japanese and modern Chinese. Preserve the reflective, concise Stoic voice without summarizing, embellishing, or inventing explanations.",
+    "source_integrity": "The George Long Project Gutenberg English text is the immutable alignment spine. Preserve book and numbered-section order. Exclude Gutenberg boilerplate, the editor's introduction, appendix, notes, glossary, and license from the main work.",
+    "references": "Use the local Gutenberg PDF/HTML for textual cross-checking. The 433-page Chinese-English scan is a valuable visual reference but has no usable text layer; do not inject unreviewed OCR from it into generated chunks.",
+    "grammar_analysis": "Required. Use normalized grammar roles and preserve spaces in English so the same JSON supports color and black-white rendering.",
+    "final_outputs": "After generation and validation, compile the maximum-language English-main/Japanese/Chinese large-font color and black-white editions with a cover and table of contents."
+  },
+  "created_at": "2026-08-03T00:00:00+08:00",
+  "tasks": [
+    {
+      "priority": 1,
+      "queue_position": 1,
+      "book_id": "meditations-marcus-aurelius",
+      "title_en": "Meditations",
+      "title_zh": "沉思录",
+      "title_ja": "自省録",
+      "title_zh_reading": "chén sī lù",
+      "title_ja_reading": "じせいろく",
+      "author": "Marcus Aurelius; translated by George Long",
+      "author_reading_zh": "",
+      "author_reading_ja": "マルクス・アウレリウス",
+      "source_path": "sources/philosophy/stoicism/meditations/en/Meditations - George Long - Project Gutenberg.epub",
+      "reference_paths": {
+        "gutenberg_pdf": "sources/philosophy/stoicism/meditations/en/Meditations - George Long - Project Gutenberg.pdf",
+        "gutenberg_html": "sources/philosophy/stoicism/meditations/en/Meditations - George Long - Project Gutenberg.html",
+        "chinese_english_scan": "sources/philosophy/stoicism/meditations/zh-en/沉思录 - 中英双语典藏本.pdf"
+      },
+      "reference_notes": "The Chinese-English edition is an image-only scan (433 pages; pdftotext yields only page breaks). Keep it as page evidence for a later OCR/alignment review. The prepared task remains source-complete because its immutable spine is the validated public-domain English EPUB.",
+      "start_marker": "THE FIRST BOOK",
+      "start_marker_exact": true,
+      "chapter_heading_mode": "configured_only",
+      "chapter_heading_patterns": [
+        "THE (?:FIRST|SECOND|THIRD|FOURTH|FIFTH|SIXTH|SEVENTH|EIGHTH|NINTH|TENTH|ELEVENTH|TWELFTH) BOOK"
+      ],
+      "stop_markers": [
+        "APPENDIX",
+        "NOTES",
+        "GLOSSARY",
+        "*** END OF THE PROJECT GUTENBERG EBOOK MEDITATIONS ***"
+      ],
+      "description": "Marcus Aurelius, Meditations, Books I-XII. English is the preserved main layer; generate complete readable modern Japanese and modern Chinese aligned to every aphoristic unit.",
+      "min_chunk_count": 30,
+      "task_mode": "trilingual_philosophy_en_source_generated_ja_zh",
+      "translation_contract": {
+        "alignment": "Keep all twelve books and every numbered reflection in source order. Never merge away, skip, summarize, or duplicate a reflection.",
+        "japanese": "Use natural modern Japanese, stable Stoic terminology, and furigana only on kanji-bearing tokens. Avoid pseudo-classical Japanese unless the English meaning requires a solemn register.",
+        "chinese": "Use clear modern Chinese with stable philosophical terminology. The result is a modern translation, not classical Chinese imitation.",
+        "style": "Retain the terse, introspective force of the source while resolving archaic George Long syntax accurately.",
+        "grammar": "Assign normalized grammar roles to all three languages; keep English word spacing intact.",
+        "validation": "Reject missing numbered sections, Gutenberg boilerplate, editorial back matter, HTML fragments, non-Japanese Japanese output, ungrounded commentary, and source-order changes."
+      },
+      "status": "chunked_launchable",
+      "launchable": true,
+      "execution_status": "not_started",
+      "autostart": false,
+      "book_plan": "books/meditations-marcus-aurelius/book-plan.json",
+      "chunks_manifest": "books/meditations-marcus-aurelius/work/trilingual/chunks/manifest.json",
+      "chunk_count": 144,
+      "english_chapter_count": 12,
+      "prepared_chunks_at": "2026-08-03T08:55:29.494335+00:00"
+    }
+  ],
+  "last_chunk_preparation_at": "2026-08-03T08:55:29.494343+00:00"
+}
